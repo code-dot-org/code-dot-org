@@ -1,0 +1,7129 @@
+{
+  "script": {
+    "name": "course3",
+    "wrapup_video_id": null,
+    "hidden": false,
+    "login_required": false,
+    "properties": {
+      "project_widget_types": [
+        "playlab",
+        "artist"
+      ],
+      "project_widget_visible": true,
+      "has_lesson_plan": true,
+      "curriculum_path": "https://code.org/curriculum/course3/{LESSON}/Teacher",
+      "curriculum_umbrella": "CSF",
+      "tts": true,
+      "lesson_extras_available": true,
+      "hideable_lessons": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "seeding_key": {
+      "script.name": "course3"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Computational Thinking",
+      "name": "Computational Thinking",
+      "absolute_position": 1,
+      "lockable": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Computational Thinking",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "key": "Maze",
+      "name": "Maze",
+      "absolute_position": 2,
+      "lockable": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Maze",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "key": "Artist",
+      "name": "Artist",
+      "absolute_position": 3,
+      "lockable": false,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Artist",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "key": "Functional Suncatchers",
+      "name": "Functional Suncatchers",
+      "absolute_position": 4,
+      "lockable": false,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Functional Suncatchers",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "key": "Artist: Functions",
+      "name": "Artist: Functions",
+      "absolute_position": 5,
+      "lockable": false,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Artist: Functions",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "key": "Bee: Functions",
+      "name": "Bee: Functions",
+      "absolute_position": 6,
+      "lockable": false,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Bee: Functions",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "key": "Bee: Conditionals",
+      "name": "Bee: Conditionals",
+      "absolute_position": 7,
+      "lockable": false,
+      "relative_position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Bee: Conditionals",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "key": "Maze: Conditionals",
+      "name": "Maze: Conditionals",
+      "absolute_position": 8,
+      "lockable": false,
+      "relative_position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Maze: Conditionals",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "key": "Songwriting",
+      "name": "Songwriting",
+      "absolute_position": 9,
+      "lockable": false,
+      "relative_position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Songwriting",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "key": "Dice Race",
+      "name": "Dice Race",
+      "absolute_position": 10,
+      "lockable": false,
+      "relative_position": 10,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Dice Race",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "key": "Artist: Nested Loops",
+      "name": "Artist: Nested Loops",
+      "absolute_position": 11,
+      "lockable": false,
+      "relative_position": 11,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Artist: Nested Loops",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "key": "Farmer: While Loops",
+      "name": "Farmer: While Loops",
+      "absolute_position": 12,
+      "lockable": false,
+      "relative_position": 12,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Farmer: While Loops",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "key": "Bee: Nested Loops",
+      "name": "Bee: Nested Loops",
+      "absolute_position": 13,
+      "lockable": false,
+      "relative_position": 13,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Bee: Nested Loops",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "key": "Bee: Debugging",
+      "name": "Bee: Debugging",
+      "absolute_position": 14,
+      "lockable": false,
+      "relative_position": 14,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Bee: Debugging",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "key": "Bounce",
+      "name": "Bounce",
+      "absolute_position": 15,
+      "lockable": false,
+      "relative_position": 15,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Bounce",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "key": "Studio: Create a Story",
+      "name": "Play Lab: Create a Story",
+      "absolute_position": 16,
+      "lockable": false,
+      "relative_position": 16,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Studio: Create a Story",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "key": "Studio: Create a Game",
+      "name": "Play Lab: Create a Game",
+      "absolute_position": 17,
+      "lockable": false,
+      "relative_position": 17,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Studio: Create a Game",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "key": "Internet",
+      "name": "Internet",
+      "absolute_position": 18,
+      "lockable": false,
+      "relative_position": 18,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Internet",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "key": "Crowdsourcing",
+      "name": "Crowdsourcing",
+      "absolute_position": 19,
+      "lockable": false,
+      "relative_position": 19,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Crowdsourcing",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "key": "Digital Citizenship",
+      "name": "Digital Citizenship",
+      "absolute_position": 20,
+      "lockable": false,
+      "relative_position": 20,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Digital Citizenship",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "key": "Artist: Patterns",
+      "name": "Artist: Patterns",
+      "absolute_position": 21,
+      "lockable": false,
+      "relative_position": 21,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Artist: Patterns",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ComputationalThinking"
+        ],
+        "script_level.chapter": 1,
+        "script_level.position": 1,
+        "lesson.key": "Computational Thinking",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "ComputationalThinking"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 Computational Thinking Multi 1"
+        ],
+        "script_level.chapter": 2,
+        "script_level.position": 2,
+        "lesson.key": "Computational Thinking",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 Computational Thinking Multi 1"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 Computational Thinking Match 1"
+        ],
+        "script_level.chapter": 3,
+        "script_level.position": 3,
+        "lesson.key": "Computational Thinking",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 Computational Thinking Match 1"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 Maze 1"
+        ],
+        "script_level.chapter": 4,
+        "script_level.position": 1,
+        "lesson.key": "Maze",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 Maze 1"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 Maze 2"
+        ],
+        "script_level.chapter": 5,
+        "script_level.position": 2,
+        "lesson.key": "Maze",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 Maze 2"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 3,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 Maze 3"
+        ],
+        "script_level.chapter": 6,
+        "script_level.position": 3,
+        "lesson.key": "Maze",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 Maze 3"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 4,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 Maze 4"
+        ],
+        "script_level.chapter": 7,
+        "script_level.position": 4,
+        "lesson.key": "Maze",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 Maze 4"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 5,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 Maze 5"
+        ],
+        "script_level.chapter": 8,
+        "script_level.position": 5,
+        "lesson.key": "Maze",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 Maze 5"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 6,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 Maze 6"
+        ],
+        "script_level.chapter": 9,
+        "script_level.position": 6,
+        "lesson.key": "Maze",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 Maze 6"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 7,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 Maze 7"
+        ],
+        "script_level.chapter": 10,
+        "script_level.position": 7,
+        "lesson.key": "Maze",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 Maze 7"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 8,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 Maze 8"
+        ],
+        "script_level.chapter": 11,
+        "script_level.position": 8,
+        "lesson.key": "Maze",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 Maze 8"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 9,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 Maze 9"
+        ],
+        "script_level.chapter": 12,
+        "script_level.position": 9,
+        "lesson.key": "Maze",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 Maze 9"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 10,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 Maze 10"
+        ],
+        "script_level.chapter": 13,
+        "script_level.position": 10,
+        "lesson.key": "Maze",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 Maze 10"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 11,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 Maze 11"
+        ],
+        "script_level.chapter": 14,
+        "script_level.position": 11,
+        "lesson.key": "Maze",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 Maze 11"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 12,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 Maze 12"
+        ],
+        "script_level.chapter": 15,
+        "script_level.position": 12,
+        "lesson.key": "Maze",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 Maze 12"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 13,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 Maze Assessment 1"
+        ],
+        "script_level.chapter": 16,
+        "script_level.position": 13,
+        "lesson.key": "Maze",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 Maze Assessment 1"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 14,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 maze match 1"
+        ],
+        "script_level.chapter": 17,
+        "script_level.position": 14,
+        "lesson.key": "Maze",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 maze match 1"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 15,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 maze multi 1"
+        ],
+        "script_level.chapter": 18,
+        "script_level.position": 15,
+        "lesson.key": "Maze",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 maze multi 1"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 16,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "course3_maze_debugging_challenge1"
+        ],
+        "script_level.chapter": 19,
+        "script_level.position": 16,
+        "lesson.key": "Maze",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "course3_maze_debugging_challenge1"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 17,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "course3_maze_debugging_challenge2"
+        ],
+        "script_level.chapter": 20,
+        "script_level.position": 17,
+        "lesson.key": "Maze",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "course3_maze_debugging_challenge2"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 Artist 1"
+        ],
+        "script_level.chapter": 21,
+        "script_level.position": 1,
+        "lesson.key": "Artist",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 Artist 1"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 Artist 2"
+        ],
+        "script_level.chapter": 22,
+        "script_level.position": 2,
+        "lesson.key": "Artist",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 Artist 2"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 3,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 Artist 3"
+        ],
+        "script_level.chapter": 23,
+        "script_level.position": 3,
+        "lesson.key": "Artist",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 Artist 3"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 4,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 Artist 3.5"
+        ],
+        "script_level.chapter": 24,
+        "script_level.position": 4,
+        "lesson.key": "Artist",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 Artist 3.5"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 5,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 Artist 4"
+        ],
+        "script_level.chapter": 25,
+        "script_level.position": 5,
+        "lesson.key": "Artist",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 Artist 4"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 6,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 Artist 5"
+        ],
+        "script_level.chapter": 26,
+        "script_level.position": 6,
+        "lesson.key": "Artist",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 Artist 5"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 7,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 Artist 6"
+        ],
+        "script_level.chapter": 27,
+        "script_level.position": 7,
+        "lesson.key": "Artist",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 Artist 6"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 8,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 Artist 7"
+        ],
+        "script_level.chapter": 28,
+        "script_level.position": 8,
+        "lesson.key": "Artist",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 Artist 7"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 9,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 Artist 8"
+        ],
+        "script_level.chapter": 29,
+        "script_level.position": 9,
+        "lesson.key": "Artist",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 Artist 8"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 10,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 Artist 9"
+        ],
+        "script_level.chapter": 30,
+        "script_level.position": 10,
+        "lesson.key": "Artist",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 Artist 9"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 11,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 Artist 11"
+        ],
+        "script_level.chapter": 31,
+        "script_level.position": 11,
+        "lesson.key": "Artist",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 Artist 11"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 12,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 Artist Assessment 1"
+        ],
+        "script_level.chapter": 32,
+        "script_level.position": 12,
+        "lesson.key": "Artist",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 Artist Assessment 1"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 13,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 artist multi 1"
+        ],
+        "script_level.chapter": 33,
+        "script_level.position": 13,
+        "lesson.key": "Artist",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 artist multi 1"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 14,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 artist multi 2"
+        ],
+        "script_level.chapter": 34,
+        "script_level.position": 14,
+        "lesson.key": "Artist",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 artist multi 2"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 15,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 Artist Free Draw 1"
+        ],
+        "script_level.chapter": 35,
+        "script_level.position": 15,
+        "lesson.key": "Artist",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 Artist Free Draw 1"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "FunctionalSuncatchers"
+        ],
+        "script_level.chapter": 36,
+        "script_level.position": 1,
+        "lesson.key": "Functional Suncatchers",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "FunctionalSuncatchers"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 Suncatchers Multi 1"
+        ],
+        "script_level.chapter": 37,
+        "script_level.position": 2,
+        "lesson.key": "Functional Suncatchers",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 Suncatchers Multi 1"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 3,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 Suncatchers Match 1"
+        ],
+        "script_level.chapter": 38,
+        "script_level.position": 3,
+        "lesson.key": "Functional Suncatchers",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 Suncatchers Match 1"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "2-3 Artist Functions 1"
+        ],
+        "script_level.chapter": 39,
+        "script_level.position": 1,
+        "lesson.key": "Artist: Functions",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "2-3 Artist Functions 1"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "2-3 Artist Functions 2"
+        ],
+        "script_level.chapter": 40,
+        "script_level.position": 2,
+        "lesson.key": "Artist: Functions",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "2-3 Artist Functions 2"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 3,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "2-3 Artist Functions 3"
+        ],
+        "script_level.chapter": 41,
+        "script_level.position": 3,
+        "lesson.key": "Artist: Functions",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "2-3 Artist Functions 3"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 4,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "2-3 Artist Functions 4"
+        ],
+        "script_level.chapter": 42,
+        "script_level.position": 4,
+        "lesson.key": "Artist: Functions",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "2-3 Artist Functions 4"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 5,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "2-3 Artist Functions 11"
+        ],
+        "script_level.chapter": 43,
+        "script_level.position": 5,
+        "lesson.key": "Artist: Functions",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "2-3 Artist Functions 11"
+      ]
+    },
+    {
+      "chapter": 44,
+      "position": 6,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "2-3 Artist Functions 11.5"
+        ],
+        "script_level.chapter": 44,
+        "script_level.position": 6,
+        "lesson.key": "Artist: Functions",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "2-3 Artist Functions 11.5"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 7,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "2-3 Artist Functions 12"
+        ],
+        "script_level.chapter": 45,
+        "script_level.position": 7,
+        "lesson.key": "Artist: Functions",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "2-3 Artist Functions 12"
+      ]
+    },
+    {
+      "chapter": 46,
+      "position": 8,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "2-3 Artist Functions 9"
+        ],
+        "script_level.chapter": 46,
+        "script_level.position": 8,
+        "lesson.key": "Artist: Functions",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "2-3 Artist Functions 9"
+      ]
+    },
+    {
+      "chapter": 47,
+      "position": 9,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "2-3 Artist Functions 10"
+        ],
+        "script_level.chapter": 47,
+        "script_level.position": 9,
+        "lesson.key": "Artist: Functions",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "2-3 Artist Functions 10"
+      ]
+    },
+    {
+      "chapter": 48,
+      "position": 10,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "2-3 artist functions multi 1"
+        ],
+        "script_level.chapter": 48,
+        "script_level.position": 10,
+        "lesson.key": "Artist: Functions",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "2-3 artist functions multi 1"
+      ]
+    },
+    {
+      "chapter": 49,
+      "position": 11,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "course3_artist_functions_challenge1"
+        ],
+        "script_level.chapter": 49,
+        "script_level.position": 11,
+        "lesson.key": "Artist: Functions",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "course3_artist_functions_challenge1"
+      ]
+    },
+    {
+      "chapter": 50,
+      "position": 12,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "course3_artist_functions_challenge2"
+        ],
+        "script_level.chapter": 50,
+        "script_level.position": 12,
+        "lesson.key": "Artist: Functions",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "course3_artist_functions_challenge2"
+      ]
+    },
+    {
+      "chapter": 51,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "2-3 Bee Functions 3"
+        ],
+        "script_level.chapter": 51,
+        "script_level.position": 1,
+        "lesson.key": "Bee: Functions",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "2-3 Bee Functions 3"
+      ]
+    },
+    {
+      "chapter": 52,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "2-3 Bee Functions 1"
+        ],
+        "script_level.chapter": 52,
+        "script_level.position": 2,
+        "lesson.key": "Bee: Functions",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "2-3 Bee Functions 1"
+      ]
+    },
+    {
+      "chapter": 53,
+      "position": 3,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "2-3 Bee Functions 2"
+        ],
+        "script_level.chapter": 53,
+        "script_level.position": 3,
+        "lesson.key": "Bee: Functions",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "2-3 Bee Functions 2"
+      ]
+    },
+    {
+      "chapter": 54,
+      "position": 4,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "2-3 Bee Functions 4"
+        ],
+        "script_level.chapter": 54,
+        "script_level.position": 4,
+        "lesson.key": "Bee: Functions",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "2-3 Bee Functions 4"
+      ]
+    },
+    {
+      "chapter": 55,
+      "position": 5,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "2-3 Bee Functions 5"
+        ],
+        "script_level.chapter": 55,
+        "script_level.position": 5,
+        "lesson.key": "Bee: Functions",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "2-3 Bee Functions 5"
+      ]
+    },
+    {
+      "chapter": 56,
+      "position": 6,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "2-3 Bee Functions 6"
+        ],
+        "script_level.chapter": 56,
+        "script_level.position": 6,
+        "lesson.key": "Bee: Functions",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "2-3 Bee Functions 6"
+      ]
+    },
+    {
+      "chapter": 57,
+      "position": 7,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "2-3 Bee Functions 8"
+        ],
+        "script_level.chapter": 57,
+        "script_level.position": 7,
+        "lesson.key": "Bee: Functions",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "2-3 Bee Functions 8"
+      ]
+    },
+    {
+      "chapter": 58,
+      "position": 8,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "2-3 Bee Functions 9"
+        ],
+        "script_level.chapter": 58,
+        "script_level.position": 8,
+        "lesson.key": "Bee: Functions",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "2-3 Bee Functions 9"
+      ]
+    },
+    {
+      "chapter": 59,
+      "position": 9,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "2-3 Bee Functions 10"
+        ],
+        "script_level.chapter": 59,
+        "script_level.position": 9,
+        "lesson.key": "Bee: Functions",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "2-3 Bee Functions 10"
+      ]
+    },
+    {
+      "chapter": 60,
+      "position": 10,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "2-3 Bee Functions Assessment 1"
+        ],
+        "script_level.chapter": 60,
+        "script_level.position": 10,
+        "lesson.key": "Bee: Functions",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "2-3 Bee Functions Assessment 1"
+      ]
+    },
+    {
+      "chapter": 61,
+      "position": 11,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "2-3 Bee Functions Assessment 2"
+        ],
+        "script_level.chapter": 61,
+        "script_level.position": 11,
+        "lesson.key": "Bee: Functions",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "2-3 Bee Functions Assessment 2"
+      ]
+    },
+    {
+      "chapter": 62,
+      "position": 12,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "course3_bee_functions_challenge1"
+        ],
+        "script_level.chapter": 62,
+        "script_level.position": 12,
+        "lesson.key": "Bee: Functions",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "course3_bee_functions_challenge1"
+      ]
+    },
+    {
+      "chapter": 63,
+      "position": 13,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "course3_bee_functions_challenge2"
+        ],
+        "script_level.chapter": 63,
+        "script_level.position": 13,
+        "lesson.key": "Bee: Functions",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "course3_bee_functions_challenge2"
+      ]
+    },
+    {
+      "chapter": 64,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 Bee Conditionals 1"
+        ],
+        "script_level.chapter": 64,
+        "script_level.position": 1,
+        "lesson.key": "Bee: Conditionals",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 Bee Conditionals 1"
+      ]
+    },
+    {
+      "chapter": 65,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 Bee Conditionals 2"
+        ],
+        "script_level.chapter": 65,
+        "script_level.position": 2,
+        "lesson.key": "Bee: Conditionals",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 Bee Conditionals 2"
+      ]
+    },
+    {
+      "chapter": 66,
+      "position": 3,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 Bee Conditionals 3"
+        ],
+        "script_level.chapter": 66,
+        "script_level.position": 3,
+        "lesson.key": "Bee: Conditionals",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 Bee Conditionals 3"
+      ]
+    },
+    {
+      "chapter": 67,
+      "position": 4,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 Bee Conditionals 4"
+        ],
+        "script_level.chapter": 67,
+        "script_level.position": 4,
+        "lesson.key": "Bee: Conditionals",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 Bee Conditionals 4"
+      ]
+    },
+    {
+      "chapter": 68,
+      "position": 5,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 Bee Conditionals 5"
+        ],
+        "script_level.chapter": 68,
+        "script_level.position": 5,
+        "lesson.key": "Bee: Conditionals",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 Bee Conditionals 5"
+      ]
+    },
+    {
+      "chapter": 69,
+      "position": 6,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 Bee Conditionals 6"
+        ],
+        "script_level.chapter": 69,
+        "script_level.position": 6,
+        "lesson.key": "Bee: Conditionals",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 Bee Conditionals 6"
+      ]
+    },
+    {
+      "chapter": 70,
+      "position": 7,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 Bee Conditionals 7"
+        ],
+        "script_level.chapter": 70,
+        "script_level.position": 7,
+        "lesson.key": "Bee: Conditionals",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 Bee Conditionals 7"
+      ]
+    },
+    {
+      "chapter": 71,
+      "position": 8,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 Bee Conditionals 8"
+        ],
+        "script_level.chapter": 71,
+        "script_level.position": 8,
+        "lesson.key": "Bee: Conditionals",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 Bee Conditionals 8"
+      ]
+    },
+    {
+      "chapter": 72,
+      "position": 9,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 Bee Conditionals Assessment 1"
+        ],
+        "script_level.chapter": 72,
+        "script_level.position": 9,
+        "lesson.key": "Bee: Conditionals",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 Bee Conditionals Assessment 1"
+      ]
+    },
+    {
+      "chapter": 73,
+      "position": 10,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 bee conditionals multi 1"
+        ],
+        "script_level.chapter": 73,
+        "script_level.position": 10,
+        "lesson.key": "Bee: Conditionals",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 bee conditionals multi 1"
+      ]
+    },
+    {
+      "chapter": 74,
+      "position": 11,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "course3_farmer_condLoops_challenge1"
+        ],
+        "script_level.chapter": 74,
+        "script_level.position": 11,
+        "lesson.key": "Bee: Conditionals",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "course3_farmer_condLoops_challenge1"
+      ]
+    },
+    {
+      "chapter": 75,
+      "position": 12,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "course3_farmer_condLoops_challenge2"
+        ],
+        "script_level.chapter": 75,
+        "script_level.position": 12,
+        "lesson.key": "Bee: Conditionals",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "course3_farmer_condLoops_challenge2"
+      ]
+    },
+    {
+      "chapter": 76,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 Maze Conditionals 1"
+        ],
+        "script_level.chapter": 76,
+        "script_level.position": 1,
+        "lesson.key": "Maze: Conditionals",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 Maze Conditionals 1"
+      ]
+    },
+    {
+      "chapter": 77,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 Maze Conditionals 2"
+        ],
+        "script_level.chapter": 77,
+        "script_level.position": 2,
+        "lesson.key": "Maze: Conditionals",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 Maze Conditionals 2"
+      ]
+    },
+    {
+      "chapter": 78,
+      "position": 3,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 Maze Conditionals 3"
+        ],
+        "script_level.chapter": 78,
+        "script_level.position": 3,
+        "lesson.key": "Maze: Conditionals",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 Maze Conditionals 3"
+      ]
+    },
+    {
+      "chapter": 79,
+      "position": 4,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 Maze Conditionals 4"
+        ],
+        "script_level.chapter": 79,
+        "script_level.position": 4,
+        "lesson.key": "Maze: Conditionals",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 Maze Conditionals 4"
+      ]
+    },
+    {
+      "chapter": 80,
+      "position": 5,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 Maze Conditionals 5"
+        ],
+        "script_level.chapter": 80,
+        "script_level.position": 5,
+        "lesson.key": "Maze: Conditionals",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 Maze Conditionals 5"
+      ]
+    },
+    {
+      "chapter": 81,
+      "position": 6,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 Maze Conditionals 6"
+        ],
+        "script_level.chapter": 81,
+        "script_level.position": 6,
+        "lesson.key": "Maze: Conditionals",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 Maze Conditionals 6"
+      ]
+    },
+    {
+      "chapter": 82,
+      "position": 7,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 Maze Conditionals 7"
+        ],
+        "script_level.chapter": 82,
+        "script_level.position": 7,
+        "lesson.key": "Maze: Conditionals",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 Maze Conditionals 7"
+      ]
+    },
+    {
+      "chapter": 83,
+      "position": 8,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 Maze Conditionals 8"
+        ],
+        "script_level.chapter": 83,
+        "script_level.position": 8,
+        "lesson.key": "Maze: Conditionals",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 Maze Conditionals 8"
+      ]
+    },
+    {
+      "chapter": 84,
+      "position": 9,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 Maze Conditionals 9"
+        ],
+        "script_level.chapter": 84,
+        "script_level.position": 9,
+        "lesson.key": "Maze: Conditionals",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 Maze Conditionals 9"
+      ]
+    },
+    {
+      "chapter": 85,
+      "position": 10,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 Maze Conditionals 10"
+        ],
+        "script_level.chapter": 85,
+        "script_level.position": 10,
+        "lesson.key": "Maze: Conditionals",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 Maze Conditionals 10"
+      ]
+    },
+    {
+      "chapter": 86,
+      "position": 11,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 Maze Conditionals Assessment 1"
+        ],
+        "script_level.chapter": 86,
+        "script_level.position": 11,
+        "lesson.key": "Maze: Conditionals",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 Maze Conditionals Assessment 1"
+      ]
+    },
+    {
+      "chapter": 87,
+      "position": 12,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 maze conditionals multi 1"
+        ],
+        "script_level.chapter": 87,
+        "script_level.position": 12,
+        "lesson.key": "Maze: Conditionals",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 maze conditionals multi 1"
+      ]
+    },
+    {
+      "chapter": 88,
+      "position": 13,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "course3_maze_until_challenge1"
+        ],
+        "script_level.chapter": 88,
+        "script_level.position": 13,
+        "lesson.key": "Maze: Conditionals",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "course3_maze_until_challenge1"
+      ]
+    },
+    {
+      "chapter": 89,
+      "position": 14,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "course3_farmer_until_challenge2"
+        ],
+        "script_level.chapter": 89,
+        "script_level.position": 14,
+        "lesson.key": "Maze: Conditionals",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "course3_farmer_until_challenge2"
+      ]
+    },
+    {
+      "chapter": 90,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SongwritingParameters"
+        ],
+        "script_level.chapter": 90,
+        "script_level.position": 1,
+        "lesson.key": "Songwriting",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "SongwritingParameters"
+      ]
+    },
+    {
+      "chapter": 91,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 Songwriting Multi 1"
+        ],
+        "script_level.chapter": 91,
+        "script_level.position": 2,
+        "lesson.key": "Songwriting",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 Songwriting Multi 1"
+      ]
+    },
+    {
+      "chapter": 92,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "DiceRace"
+        ],
+        "script_level.chapter": 92,
+        "script_level.position": 1,
+        "lesson.key": "Dice Race",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "DiceRace"
+      ]
+    },
+    {
+      "chapter": 93,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 Algorithms Match 1"
+        ],
+        "script_level.chapter": 93,
+        "script_level.position": 2,
+        "lesson.key": "Dice Race",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 Algorithms Match 1"
+      ]
+    },
+    {
+      "chapter": 94,
+      "position": 3,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 Algorithms Multi 1"
+        ],
+        "script_level.chapter": 94,
+        "script_level.position": 3,
+        "lesson.key": "Dice Race",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 Algorithms Multi 1"
+      ]
+    },
+    {
+      "chapter": 95,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 Nested Loops 1"
+        ],
+        "script_level.chapter": 95,
+        "script_level.position": 1,
+        "lesson.key": "Artist: Nested Loops",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 Nested Loops 1"
+      ]
+    },
+    {
+      "chapter": 96,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 Nested Loops 2"
+        ],
+        "script_level.chapter": 96,
+        "script_level.position": 2,
+        "lesson.key": "Artist: Nested Loops",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 Nested Loops 2"
+      ]
+    },
+    {
+      "chapter": 97,
+      "position": 3,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 Nested Loops 6"
+        ],
+        "script_level.chapter": 97,
+        "script_level.position": 3,
+        "lesson.key": "Artist: Nested Loops",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 Nested Loops 6"
+      ]
+    },
+    {
+      "chapter": 98,
+      "position": 4,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 Nested Loops 9"
+        ],
+        "script_level.chapter": 98,
+        "script_level.position": 4,
+        "lesson.key": "Artist: Nested Loops",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 Nested Loops 9"
+      ]
+    },
+    {
+      "chapter": 99,
+      "position": 5,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 Nested Loops 3"
+        ],
+        "script_level.chapter": 99,
+        "script_level.position": 5,
+        "lesson.key": "Artist: Nested Loops",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 Nested Loops 3"
+      ]
+    },
+    {
+      "chapter": 100,
+      "position": 6,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 Nested Loops 5"
+        ],
+        "script_level.chapter": 100,
+        "script_level.position": 6,
+        "lesson.key": "Artist: Nested Loops",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 Nested Loops 5"
+      ]
+    },
+    {
+      "chapter": 101,
+      "position": 7,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 Nested Loops 7"
+        ],
+        "script_level.chapter": 101,
+        "script_level.position": 7,
+        "lesson.key": "Artist: Nested Loops",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 Nested Loops 7"
+      ]
+    },
+    {
+      "chapter": 102,
+      "position": 8,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 Nested Loops 11"
+        ],
+        "script_level.chapter": 102,
+        "script_level.position": 8,
+        "lesson.key": "Artist: Nested Loops",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 Nested Loops 11"
+      ]
+    },
+    {
+      "chapter": 103,
+      "position": 9,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 Nested Loops 8"
+        ],
+        "script_level.chapter": 103,
+        "script_level.position": 9,
+        "lesson.key": "Artist: Nested Loops",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 Nested Loops 8"
+      ]
+    },
+    {
+      "chapter": 104,
+      "position": 10,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 Nested Loops 12"
+        ],
+        "script_level.chapter": 104,
+        "script_level.position": 10,
+        "lesson.key": "Artist: Nested Loops",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 Nested Loops 12"
+      ]
+    },
+    {
+      "chapter": 105,
+      "position": 11,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 Nested Loops Assessment 1"
+        ],
+        "script_level.chapter": 105,
+        "script_level.position": 11,
+        "lesson.key": "Artist: Nested Loops",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 Nested Loops Assessment 1"
+      ]
+    },
+    {
+      "chapter": 106,
+      "position": 12,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 artist loops multi 1"
+        ],
+        "script_level.chapter": 106,
+        "script_level.position": 12,
+        "lesson.key": "Artist: Nested Loops",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 artist loops multi 1"
+      ]
+    },
+    {
+      "chapter": 107,
+      "position": 13,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "course2_artist_nestedLoops_challenge1"
+        ],
+        "script_level.chapter": 107,
+        "script_level.position": 13,
+        "lesson.key": "Artist: Nested Loops",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "course2_artist_nestedLoops_challenge1"
+      ]
+    },
+    {
+      "chapter": 108,
+      "position": 14,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "course2_artist_nestedLoops_challenge2"
+        ],
+        "script_level.chapter": 108,
+        "script_level.position": 14,
+        "lesson.key": "Artist: Nested Loops",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "course2_artist_nestedLoops_challenge2"
+      ]
+    },
+    {
+      "chapter": 109,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 While Loops 1"
+        ],
+        "script_level.chapter": 109,
+        "script_level.position": 1,
+        "lesson.key": "Farmer: While Loops",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 While Loops 1"
+      ]
+    },
+    {
+      "chapter": 110,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 While Loops 2"
+        ],
+        "script_level.chapter": 110,
+        "script_level.position": 2,
+        "lesson.key": "Farmer: While Loops",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 While Loops 2"
+      ]
+    },
+    {
+      "chapter": 111,
+      "position": 3,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 While Loops 3"
+        ],
+        "script_level.chapter": 111,
+        "script_level.position": 3,
+        "lesson.key": "Farmer: While Loops",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 While Loops 3"
+      ]
+    },
+    {
+      "chapter": 112,
+      "position": 4,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 While Loops 4"
+        ],
+        "script_level.chapter": 112,
+        "script_level.position": 4,
+        "lesson.key": "Farmer: While Loops",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 While Loops 4"
+      ]
+    },
+    {
+      "chapter": 113,
+      "position": 5,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 While Loops 5"
+        ],
+        "script_level.chapter": 113,
+        "script_level.position": 5,
+        "lesson.key": "Farmer: While Loops",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 While Loops 5"
+      ]
+    },
+    {
+      "chapter": 114,
+      "position": 6,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 While Loops 6"
+        ],
+        "script_level.chapter": 114,
+        "script_level.position": 6,
+        "lesson.key": "Farmer: While Loops",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 While Loops 6"
+      ]
+    },
+    {
+      "chapter": 115,
+      "position": 7,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 While Loops 7"
+        ],
+        "script_level.chapter": 115,
+        "script_level.position": 7,
+        "lesson.key": "Farmer: While Loops",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 While Loops 7"
+      ]
+    },
+    {
+      "chapter": 116,
+      "position": 8,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 While Loops 8"
+        ],
+        "script_level.chapter": 116,
+        "script_level.position": 8,
+        "lesson.key": "Farmer: While Loops",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 While Loops 8"
+      ]
+    },
+    {
+      "chapter": 117,
+      "position": 9,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 While Loops Assessment 1"
+        ],
+        "script_level.chapter": 117,
+        "script_level.position": 9,
+        "lesson.key": "Farmer: While Loops",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 While Loops Assessment 1"
+      ]
+    },
+    {
+      "chapter": 118,
+      "position": 10,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "course3_bee_functions_challenge3"
+        ],
+        "script_level.chapter": 118,
+        "script_level.position": 10,
+        "lesson.key": "Farmer: While Loops",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "course3_bee_functions_challenge3"
+      ]
+    },
+    {
+      "chapter": 119,
+      "position": 11,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "course3_bee_functions_challenge4"
+        ],
+        "script_level.chapter": 119,
+        "script_level.position": 11,
+        "lesson.key": "Farmer: While Loops",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "course3_bee_functions_challenge4"
+      ]
+    },
+    {
+      "chapter": 120,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 Bee Nested Loops 1"
+        ],
+        "script_level.chapter": 120,
+        "script_level.position": 1,
+        "lesson.key": "Bee: Nested Loops",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 Bee Nested Loops 1"
+      ]
+    },
+    {
+      "chapter": 121,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 Bee Nested Loops 2"
+        ],
+        "script_level.chapter": 121,
+        "script_level.position": 2,
+        "lesson.key": "Bee: Nested Loops",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 Bee Nested Loops 2"
+      ]
+    },
+    {
+      "chapter": 122,
+      "position": 3,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 Bee Nested Loops 3"
+        ],
+        "script_level.chapter": 122,
+        "script_level.position": 3,
+        "lesson.key": "Bee: Nested Loops",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 Bee Nested Loops 3"
+      ]
+    },
+    {
+      "chapter": 123,
+      "position": 4,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 Bee Nested Loops 5"
+        ],
+        "script_level.chapter": 123,
+        "script_level.position": 4,
+        "lesson.key": "Bee: Nested Loops",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 Bee Nested Loops 5"
+      ]
+    },
+    {
+      "chapter": 124,
+      "position": 5,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 Bee Nested Loops 4"
+        ],
+        "script_level.chapter": 124,
+        "script_level.position": 5,
+        "lesson.key": "Bee: Nested Loops",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 Bee Nested Loops 4"
+      ]
+    },
+    {
+      "chapter": 125,
+      "position": 6,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "2-3 Bee Loops 8"
+        ],
+        "script_level.chapter": 125,
+        "script_level.position": 6,
+        "lesson.key": "Bee: Nested Loops",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "2-3 Bee Loops 8"
+      ]
+    },
+    {
+      "chapter": 126,
+      "position": 7,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 Bee Nested Loops 7"
+        ],
+        "script_level.chapter": 126,
+        "script_level.position": 7,
+        "lesson.key": "Bee: Nested Loops",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 Bee Nested Loops 7"
+      ]
+    },
+    {
+      "chapter": 127,
+      "position": 8,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "2-3 Bee Loops 10"
+        ],
+        "script_level.chapter": 127,
+        "script_level.position": 8,
+        "lesson.key": "Bee: Nested Loops",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "2-3 Bee Loops 10"
+      ]
+    },
+    {
+      "chapter": 128,
+      "position": 9,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 Bee Nested Loops 9"
+        ],
+        "script_level.chapter": 128,
+        "script_level.position": 9,
+        "lesson.key": "Bee: Nested Loops",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 Bee Nested Loops 9"
+      ]
+    },
+    {
+      "chapter": 129,
+      "position": 10,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 Bee Nested Loops Rows"
+        ],
+        "script_level.chapter": 129,
+        "script_level.position": 10,
+        "lesson.key": "Bee: Nested Loops",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 Bee Nested Loops Rows"
+      ]
+    },
+    {
+      "chapter": 130,
+      "position": 11,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "2-3 Bee Loops Assessment 1"
+        ],
+        "script_level.chapter": 130,
+        "script_level.position": 11,
+        "lesson.key": "Bee: Nested Loops",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "2-3 Bee Loops Assessment 1"
+      ]
+    },
+    {
+      "chapter": 131,
+      "position": 12,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 Bee Nested Loops Assessment 1"
+        ],
+        "script_level.chapter": 131,
+        "script_level.position": 12,
+        "lesson.key": "Bee: Nested Loops",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 Bee Nested Loops Assessment 1"
+      ]
+    },
+    {
+      "chapter": 132,
+      "position": 13,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 bee loops multi 1"
+        ],
+        "script_level.chapter": 132,
+        "script_level.position": 13,
+        "lesson.key": "Bee: Nested Loops",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 bee loops multi 1"
+      ]
+    },
+    {
+      "chapter": 133,
+      "position": 14,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "course3_bee_debugging_challenge1"
+        ],
+        "script_level.chapter": 133,
+        "script_level.position": 14,
+        "lesson.key": "Bee: Nested Loops",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "course3_bee_debugging_challenge1"
+      ]
+    },
+    {
+      "chapter": 134,
+      "position": 15,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "course3_collector_debugging_challenge2"
+        ],
+        "script_level.chapter": 134,
+        "script_level.position": 15,
+        "lesson.key": "Bee: Nested Loops",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "course3_collector_debugging_challenge2"
+      ]
+    },
+    {
+      "chapter": 135,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 Bee Debugging 1"
+        ],
+        "script_level.chapter": 135,
+        "script_level.position": 1,
+        "lesson.key": "Bee: Debugging",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 Bee Debugging 1"
+      ]
+    },
+    {
+      "chapter": 136,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 Bee Debugging 2"
+        ],
+        "script_level.chapter": 136,
+        "script_level.position": 2,
+        "lesson.key": "Bee: Debugging",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 Bee Debugging 2"
+      ]
+    },
+    {
+      "chapter": 137,
+      "position": 3,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 Bee Debugging 3"
+        ],
+        "script_level.chapter": 137,
+        "script_level.position": 3,
+        "lesson.key": "Bee: Debugging",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 Bee Debugging 3"
+      ]
+    },
+    {
+      "chapter": 138,
+      "position": 4,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 Bee Debugging 4"
+        ],
+        "script_level.chapter": 138,
+        "script_level.position": 4,
+        "lesson.key": "Bee: Debugging",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 Bee Debugging 4"
+      ]
+    },
+    {
+      "chapter": 139,
+      "position": 5,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 Bee Debugging 5"
+        ],
+        "script_level.chapter": 139,
+        "script_level.position": 5,
+        "lesson.key": "Bee: Debugging",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 Bee Debugging 5"
+      ]
+    },
+    {
+      "chapter": 140,
+      "position": 6,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 Bee Debugging 6"
+        ],
+        "script_level.chapter": 140,
+        "script_level.position": 6,
+        "lesson.key": "Bee: Debugging",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 Bee Debugging 6"
+      ]
+    },
+    {
+      "chapter": 141,
+      "position": 7,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 Bee Debugging 7"
+        ],
+        "script_level.chapter": 141,
+        "script_level.position": 7,
+        "lesson.key": "Bee: Debugging",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 Bee Debugging 7"
+      ]
+    },
+    {
+      "chapter": 142,
+      "position": 8,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 Bee Debugging 8"
+        ],
+        "script_level.chapter": 142,
+        "script_level.position": 8,
+        "lesson.key": "Bee: Debugging",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 Bee Debugging 8"
+      ]
+    },
+    {
+      "chapter": 143,
+      "position": 9,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 Bee Debugging 9"
+        ],
+        "script_level.chapter": 143,
+        "script_level.position": 9,
+        "lesson.key": "Bee: Debugging",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 Bee Debugging 9"
+      ]
+    },
+    {
+      "chapter": 144,
+      "position": 10,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 Bee Debugging 10"
+        ],
+        "script_level.chapter": 144,
+        "script_level.position": 10,
+        "lesson.key": "Bee: Debugging",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 Bee Debugging 10"
+      ]
+    },
+    {
+      "chapter": 145,
+      "position": 11,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 Bee Debugging 11"
+        ],
+        "script_level.chapter": 145,
+        "script_level.position": 11,
+        "lesson.key": "Bee: Debugging",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 Bee Debugging 11"
+      ]
+    },
+    {
+      "chapter": 146,
+      "position": 12,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 Bee Debugging Assessment 1"
+        ],
+        "script_level.chapter": 146,
+        "script_level.position": 12,
+        "lesson.key": "Bee: Debugging",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 Bee Debugging Assessment 1"
+      ]
+    },
+    {
+      "chapter": 147,
+      "position": 13,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 bee debug multi 1"
+        ],
+        "script_level.chapter": 147,
+        "script_level.position": 13,
+        "lesson.key": "Bee: Debugging",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 bee debug multi 1"
+      ]
+    },
+    {
+      "chapter": 148,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "bounce_1"
+        ],
+        "script_level.chapter": 148,
+        "script_level.position": 1,
+        "lesson.key": "Bounce",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "bounce_1"
+      ]
+    },
+    {
+      "chapter": 149,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "bounce_2"
+        ],
+        "script_level.chapter": 149,
+        "script_level.position": 2,
+        "lesson.key": "Bounce",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "bounce_2"
+      ]
+    },
+    {
+      "chapter": 150,
+      "position": 3,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "bounce_3"
+        ],
+        "script_level.chapter": 150,
+        "script_level.position": 3,
+        "lesson.key": "Bounce",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "bounce_3"
+      ]
+    },
+    {
+      "chapter": 151,
+      "position": 4,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "bounce_4"
+        ],
+        "script_level.chapter": 151,
+        "script_level.position": 4,
+        "lesson.key": "Bounce",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "bounce_4"
+      ]
+    },
+    {
+      "chapter": 152,
+      "position": 5,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "bounce_5"
+        ],
+        "script_level.chapter": 152,
+        "script_level.position": 5,
+        "lesson.key": "Bounce",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "bounce_5"
+      ]
+    },
+    {
+      "chapter": 153,
+      "position": 6,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "bounce_6"
+        ],
+        "script_level.chapter": 153,
+        "script_level.position": 6,
+        "lesson.key": "Bounce",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "bounce_6"
+      ]
+    },
+    {
+      "chapter": 154,
+      "position": 7,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "bounce_7"
+        ],
+        "script_level.chapter": 154,
+        "script_level.position": 7,
+        "lesson.key": "Bounce",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "bounce_7"
+      ]
+    },
+    {
+      "chapter": 155,
+      "position": 8,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "bounce_10"
+        ],
+        "script_level.chapter": 155,
+        "script_level.position": 8,
+        "lesson.key": "Bounce",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "bounce_10"
+      ]
+    },
+    {
+      "chapter": 156,
+      "position": 9,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "bounce_11"
+        ],
+        "script_level.chapter": 156,
+        "script_level.position": 9,
+        "lesson.key": "Bounce",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "bounce_11"
+      ]
+    },
+    {
+      "chapter": 157,
+      "position": 10,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "bounce_12"
+        ],
+        "script_level.chapter": 157,
+        "script_level.position": 10,
+        "lesson.key": "Bounce",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "bounce_12"
+      ]
+    },
+    {
+      "chapter": 158,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:Studio:c3_story_1"
+        ],
+        "script_level.chapter": 158,
+        "script_level.position": 1,
+        "lesson.key": "Studio: Create a Story",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "blockly:Studio:c3_story_1"
+      ]
+    },
+    {
+      "chapter": 159,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:Studio:c3_story_2"
+        ],
+        "script_level.chapter": 159,
+        "script_level.position": 2,
+        "lesson.key": "Studio: Create a Story",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "blockly:Studio:c3_story_2"
+      ]
+    },
+    {
+      "chapter": 160,
+      "position": 3,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:Studio:c3_story_3"
+        ],
+        "script_level.chapter": 160,
+        "script_level.position": 3,
+        "lesson.key": "Studio: Create a Story",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "blockly:Studio:c3_story_3"
+      ]
+    },
+    {
+      "chapter": 161,
+      "position": 4,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:Studio:c3_story_4"
+        ],
+        "script_level.chapter": 161,
+        "script_level.position": 4,
+        "lesson.key": "Studio: Create a Story",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "blockly:Studio:c3_story_4"
+      ]
+    },
+    {
+      "chapter": 162,
+      "position": 5,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:Studio:c3_story_5"
+        ],
+        "script_level.chapter": 162,
+        "script_level.position": 5,
+        "lesson.key": "Studio: Create a Story",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "blockly:Studio:c3_story_5"
+      ]
+    },
+    {
+      "chapter": 163,
+      "position": 6,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:Studio:c3_story_6"
+        ],
+        "script_level.chapter": 163,
+        "script_level.position": 6,
+        "lesson.key": "Studio: Create a Story",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "blockly:Studio:c3_story_6"
+      ]
+    },
+    {
+      "chapter": 164,
+      "position": 7,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "course3_playLab_challenge1"
+        ],
+        "script_level.chapter": 164,
+        "script_level.position": 7,
+        "lesson.key": "Studio: Create a Story",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "course3_playLab_challenge1"
+      ]
+    },
+    {
+      "chapter": 165,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:Studio:c3_game_1"
+        ],
+        "script_level.chapter": 165,
+        "script_level.position": 1,
+        "lesson.key": "Studio: Create a Game",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "blockly:Studio:c3_game_1"
+      ]
+    },
+    {
+      "chapter": 166,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:Studio:c3_game_2"
+        ],
+        "script_level.chapter": 166,
+        "script_level.position": 2,
+        "lesson.key": "Studio: Create a Game",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "blockly:Studio:c3_game_2"
+      ]
+    },
+    {
+      "chapter": 167,
+      "position": 3,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:Studio:c3_game_3"
+        ],
+        "script_level.chapter": 167,
+        "script_level.position": 3,
+        "lesson.key": "Studio: Create a Game",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "blockly:Studio:c3_game_3"
+      ]
+    },
+    {
+      "chapter": 168,
+      "position": 4,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:Studio:c3_game_4"
+        ],
+        "script_level.chapter": 168,
+        "script_level.position": 4,
+        "lesson.key": "Studio: Create a Game",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "blockly:Studio:c3_game_4"
+      ]
+    },
+    {
+      "chapter": 169,
+      "position": 5,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:Studio:c3_game_5"
+        ],
+        "script_level.chapter": 169,
+        "script_level.position": 5,
+        "lesson.key": "Studio: Create a Game",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "blockly:Studio:c3_game_5"
+      ]
+    },
+    {
+      "chapter": 170,
+      "position": 6,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:Studio:c3_game_6"
+        ],
+        "script_level.chapter": 170,
+        "script_level.position": 6,
+        "lesson.key": "Studio: Create a Game",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "blockly:Studio:c3_game_6"
+      ]
+    },
+    {
+      "chapter": 171,
+      "position": 7,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:Studio:c3_game_7"
+        ],
+        "script_level.chapter": 171,
+        "script_level.position": 7,
+        "lesson.key": "Studio: Create a Game",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "blockly:Studio:c3_game_7"
+      ]
+    },
+    {
+      "chapter": 172,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Internet"
+        ],
+        "script_level.chapter": 172,
+        "script_level.position": 1,
+        "lesson.key": "Internet",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "Internet"
+      ]
+    },
+    {
+      "chapter": 173,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 Internet Multi 1"
+        ],
+        "script_level.chapter": 173,
+        "script_level.position": 2,
+        "lesson.key": "Internet",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 Internet Multi 1"
+      ]
+    },
+    {
+      "chapter": 174,
+      "position": 3,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 Internet Multi 2"
+        ],
+        "script_level.chapter": 174,
+        "script_level.position": 3,
+        "lesson.key": "Internet",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 Internet Multi 2"
+      ]
+    },
+    {
+      "chapter": 175,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Crowdsourcing"
+        ],
+        "script_level.chapter": 175,
+        "script_level.position": 1,
+        "lesson.key": "Crowdsourcing",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "Crowdsourcing"
+      ]
+    },
+    {
+      "chapter": 176,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 Crowdsourcing Multi 1"
+        ],
+        "script_level.chapter": 176,
+        "script_level.position": 2,
+        "lesson.key": "Crowdsourcing",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 Crowdsourcing Multi 1"
+      ]
+    },
+    {
+      "chapter": 177,
+      "position": 3,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 Crowdsourcing Multi 2"
+        ],
+        "script_level.chapter": 177,
+        "script_level.position": 3,
+        "lesson.key": "Crowdsourcing",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 Crowdsourcing Multi 2"
+      ]
+    },
+    {
+      "chapter": 178,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "DigitalCitizenship"
+        ],
+        "script_level.chapter": 178,
+        "script_level.position": 1,
+        "lesson.key": "Digital Citizenship",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "DigitalCitizenship"
+      ]
+    },
+    {
+      "chapter": 179,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 Digital Footprint Multi 1"
+        ],
+        "script_level.chapter": 179,
+        "script_level.position": 2,
+        "lesson.key": "Digital Citizenship",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 Digital Footprint Multi 1"
+      ]
+    },
+    {
+      "chapter": 180,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 Artist Patterns 1"
+        ],
+        "script_level.chapter": 180,
+        "script_level.position": 1,
+        "lesson.key": "Artist: Patterns",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 Artist Patterns 1"
+      ]
+    },
+    {
+      "chapter": 181,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 Artist Patterns 2"
+        ],
+        "script_level.chapter": 181,
+        "script_level.position": 2,
+        "lesson.key": "Artist: Patterns",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 Artist Patterns 2"
+      ]
+    },
+    {
+      "chapter": 182,
+      "position": 3,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 Artist Patterns 3"
+        ],
+        "script_level.chapter": 182,
+        "script_level.position": 3,
+        "lesson.key": "Artist: Patterns",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 Artist Patterns 3"
+      ]
+    },
+    {
+      "chapter": 183,
+      "position": 4,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 Artist Patterns 4"
+        ],
+        "script_level.chapter": 183,
+        "script_level.position": 4,
+        "lesson.key": "Artist: Patterns",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 Artist Patterns 4"
+      ]
+    },
+    {
+      "chapter": 184,
+      "position": 5,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 Artist Patterns 5"
+        ],
+        "script_level.chapter": 184,
+        "script_level.position": 5,
+        "lesson.key": "Artist: Patterns",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 Artist Patterns 5"
+      ]
+    },
+    {
+      "chapter": 185,
+      "position": 6,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 Artist Patterns 6"
+        ],
+        "script_level.chapter": 185,
+        "script_level.position": 6,
+        "lesson.key": "Artist: Patterns",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 Artist Patterns 6"
+      ]
+    },
+    {
+      "chapter": 186,
+      "position": 7,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 Artist Patterns 7"
+        ],
+        "script_level.chapter": 186,
+        "script_level.position": 7,
+        "lesson.key": "Artist: Patterns",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 Artist Patterns 7"
+      ]
+    },
+    {
+      "chapter": 187,
+      "position": 8,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 Artist Patterns 8"
+        ],
+        "script_level.chapter": 187,
+        "script_level.position": 8,
+        "lesson.key": "Artist: Patterns",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 Artist Patterns 8"
+      ]
+    },
+    {
+      "chapter": 188,
+      "position": 9,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 Artist Patterns 9"
+        ],
+        "script_level.chapter": 188,
+        "script_level.position": 9,
+        "lesson.key": "Artist: Patterns",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 Artist Patterns 9"
+      ]
+    },
+    {
+      "chapter": 189,
+      "position": 10,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 Artist Patterns 9.5"
+        ],
+        "script_level.chapter": 189,
+        "script_level.position": 10,
+        "lesson.key": "Artist: Patterns",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 Artist Patterns 9.5"
+      ]
+    },
+    {
+      "chapter": 190,
+      "position": 11,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 Artist Patterns 10"
+        ],
+        "script_level.chapter": 190,
+        "script_level.position": 11,
+        "lesson.key": "Artist: Patterns",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 Artist Patterns 10"
+      ]
+    },
+    {
+      "chapter": 191,
+      "position": 12,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 Artist Patterns 11"
+        ],
+        "script_level.chapter": 191,
+        "script_level.position": 12,
+        "lesson.key": "Artist: Patterns",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 Artist Patterns 11"
+      ]
+    },
+    {
+      "chapter": 192,
+      "position": 13,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 Artist Patterns 12"
+        ],
+        "script_level.chapter": 192,
+        "script_level.position": 13,
+        "lesson.key": "Artist: Patterns",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 Artist Patterns 12"
+      ]
+    },
+    {
+      "chapter": 193,
+      "position": 14,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 Artist Patterns 13"
+        ],
+        "script_level.chapter": 193,
+        "script_level.position": 14,
+        "lesson.key": "Artist: Patterns",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 Artist Patterns 13"
+      ]
+    },
+    {
+      "chapter": 194,
+      "position": 15,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 Artist Patterns Free Play"
+        ],
+        "script_level.chapter": 194,
+        "script_level.position": 15,
+        "lesson.key": "Artist: Patterns",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      },
+      "level_keys": [
+        "4-5 Artist Patterns Free Play"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "ComputationalThinking",
+        "script_level.level_keys": [
+          "ComputationalThinking"
+        ],
+        "script_level.chapter": 1,
+        "script_level.position": 1,
+        "lesson.key": "Computational Thinking",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 Computational Thinking Multi 1",
+        "script_level.level_keys": [
+          "4-5 Computational Thinking Multi 1"
+        ],
+        "script_level.chapter": 2,
+        "script_level.position": 2,
+        "lesson.key": "Computational Thinking",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 Computational Thinking Match 1",
+        "script_level.level_keys": [
+          "4-5 Computational Thinking Match 1"
+        ],
+        "script_level.chapter": 3,
+        "script_level.position": 3,
+        "lesson.key": "Computational Thinking",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 Maze 1",
+        "script_level.level_keys": [
+          "4-5 Maze 1"
+        ],
+        "script_level.chapter": 4,
+        "script_level.position": 1,
+        "lesson.key": "Maze",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 Maze 2",
+        "script_level.level_keys": [
+          "4-5 Maze 2"
+        ],
+        "script_level.chapter": 5,
+        "script_level.position": 2,
+        "lesson.key": "Maze",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 Maze 3",
+        "script_level.level_keys": [
+          "4-5 Maze 3"
+        ],
+        "script_level.chapter": 6,
+        "script_level.position": 3,
+        "lesson.key": "Maze",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 Maze 4",
+        "script_level.level_keys": [
+          "4-5 Maze 4"
+        ],
+        "script_level.chapter": 7,
+        "script_level.position": 4,
+        "lesson.key": "Maze",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 Maze 5",
+        "script_level.level_keys": [
+          "4-5 Maze 5"
+        ],
+        "script_level.chapter": 8,
+        "script_level.position": 5,
+        "lesson.key": "Maze",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 Maze 6",
+        "script_level.level_keys": [
+          "4-5 Maze 6"
+        ],
+        "script_level.chapter": 9,
+        "script_level.position": 6,
+        "lesson.key": "Maze",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 Maze 7",
+        "script_level.level_keys": [
+          "4-5 Maze 7"
+        ],
+        "script_level.chapter": 10,
+        "script_level.position": 7,
+        "lesson.key": "Maze",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 Maze 8",
+        "script_level.level_keys": [
+          "4-5 Maze 8"
+        ],
+        "script_level.chapter": 11,
+        "script_level.position": 8,
+        "lesson.key": "Maze",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 Maze 9",
+        "script_level.level_keys": [
+          "4-5 Maze 9"
+        ],
+        "script_level.chapter": 12,
+        "script_level.position": 9,
+        "lesson.key": "Maze",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 Maze 10",
+        "script_level.level_keys": [
+          "4-5 Maze 10"
+        ],
+        "script_level.chapter": 13,
+        "script_level.position": 10,
+        "lesson.key": "Maze",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 Maze 11",
+        "script_level.level_keys": [
+          "4-5 Maze 11"
+        ],
+        "script_level.chapter": 14,
+        "script_level.position": 11,
+        "lesson.key": "Maze",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 Maze 12",
+        "script_level.level_keys": [
+          "4-5 Maze 12"
+        ],
+        "script_level.chapter": 15,
+        "script_level.position": 12,
+        "lesson.key": "Maze",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 Maze Assessment 1",
+        "script_level.level_keys": [
+          "4-5 Maze Assessment 1"
+        ],
+        "script_level.chapter": 16,
+        "script_level.position": 13,
+        "lesson.key": "Maze",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 maze match 1",
+        "script_level.level_keys": [
+          "4-5 maze match 1"
+        ],
+        "script_level.chapter": 17,
+        "script_level.position": 14,
+        "lesson.key": "Maze",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 maze multi 1",
+        "script_level.level_keys": [
+          "4-5 maze multi 1"
+        ],
+        "script_level.chapter": 18,
+        "script_level.position": 15,
+        "lesson.key": "Maze",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "course3_maze_debugging_challenge1",
+        "script_level.level_keys": [
+          "course3_maze_debugging_challenge1"
+        ],
+        "script_level.chapter": 19,
+        "script_level.position": 16,
+        "lesson.key": "Maze",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "course3_maze_debugging_challenge2",
+        "script_level.level_keys": [
+          "course3_maze_debugging_challenge2"
+        ],
+        "script_level.chapter": 20,
+        "script_level.position": 17,
+        "lesson.key": "Maze",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 Artist 1",
+        "script_level.level_keys": [
+          "4-5 Artist 1"
+        ],
+        "script_level.chapter": 21,
+        "script_level.position": 1,
+        "lesson.key": "Artist",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 Artist 2",
+        "script_level.level_keys": [
+          "4-5 Artist 2"
+        ],
+        "script_level.chapter": 22,
+        "script_level.position": 2,
+        "lesson.key": "Artist",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 Artist 3",
+        "script_level.level_keys": [
+          "4-5 Artist 3"
+        ],
+        "script_level.chapter": 23,
+        "script_level.position": 3,
+        "lesson.key": "Artist",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 Artist 3.5",
+        "script_level.level_keys": [
+          "4-5 Artist 3.5"
+        ],
+        "script_level.chapter": 24,
+        "script_level.position": 4,
+        "lesson.key": "Artist",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 Artist 4",
+        "script_level.level_keys": [
+          "4-5 Artist 4"
+        ],
+        "script_level.chapter": 25,
+        "script_level.position": 5,
+        "lesson.key": "Artist",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 Artist 5",
+        "script_level.level_keys": [
+          "4-5 Artist 5"
+        ],
+        "script_level.chapter": 26,
+        "script_level.position": 6,
+        "lesson.key": "Artist",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 Artist 6",
+        "script_level.level_keys": [
+          "4-5 Artist 6"
+        ],
+        "script_level.chapter": 27,
+        "script_level.position": 7,
+        "lesson.key": "Artist",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 Artist 7",
+        "script_level.level_keys": [
+          "4-5 Artist 7"
+        ],
+        "script_level.chapter": 28,
+        "script_level.position": 8,
+        "lesson.key": "Artist",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 Artist 8",
+        "script_level.level_keys": [
+          "4-5 Artist 8"
+        ],
+        "script_level.chapter": 29,
+        "script_level.position": 9,
+        "lesson.key": "Artist",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 Artist 9",
+        "script_level.level_keys": [
+          "4-5 Artist 9"
+        ],
+        "script_level.chapter": 30,
+        "script_level.position": 10,
+        "lesson.key": "Artist",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 Artist 11",
+        "script_level.level_keys": [
+          "4-5 Artist 11"
+        ],
+        "script_level.chapter": 31,
+        "script_level.position": 11,
+        "lesson.key": "Artist",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 Artist Assessment 1",
+        "script_level.level_keys": [
+          "4-5 Artist Assessment 1"
+        ],
+        "script_level.chapter": 32,
+        "script_level.position": 12,
+        "lesson.key": "Artist",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 artist multi 1",
+        "script_level.level_keys": [
+          "4-5 artist multi 1"
+        ],
+        "script_level.chapter": 33,
+        "script_level.position": 13,
+        "lesson.key": "Artist",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 artist multi 2",
+        "script_level.level_keys": [
+          "4-5 artist multi 2"
+        ],
+        "script_level.chapter": 34,
+        "script_level.position": 14,
+        "lesson.key": "Artist",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 Artist Free Draw 1",
+        "script_level.level_keys": [
+          "4-5 Artist Free Draw 1"
+        ],
+        "script_level.chapter": 35,
+        "script_level.position": 15,
+        "lesson.key": "Artist",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "FunctionalSuncatchers",
+        "script_level.level_keys": [
+          "FunctionalSuncatchers"
+        ],
+        "script_level.chapter": 36,
+        "script_level.position": 1,
+        "lesson.key": "Functional Suncatchers",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 Suncatchers Multi 1",
+        "script_level.level_keys": [
+          "4-5 Suncatchers Multi 1"
+        ],
+        "script_level.chapter": 37,
+        "script_level.position": 2,
+        "lesson.key": "Functional Suncatchers",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 Suncatchers Match 1",
+        "script_level.level_keys": [
+          "4-5 Suncatchers Match 1"
+        ],
+        "script_level.chapter": 38,
+        "script_level.position": 3,
+        "lesson.key": "Functional Suncatchers",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "2-3 Artist Functions 1",
+        "script_level.level_keys": [
+          "2-3 Artist Functions 1"
+        ],
+        "script_level.chapter": 39,
+        "script_level.position": 1,
+        "lesson.key": "Artist: Functions",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "2-3 Artist Functions 2",
+        "script_level.level_keys": [
+          "2-3 Artist Functions 2"
+        ],
+        "script_level.chapter": 40,
+        "script_level.position": 2,
+        "lesson.key": "Artist: Functions",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "2-3 Artist Functions 3",
+        "script_level.level_keys": [
+          "2-3 Artist Functions 3"
+        ],
+        "script_level.chapter": 41,
+        "script_level.position": 3,
+        "lesson.key": "Artist: Functions",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "2-3 Artist Functions 4",
+        "script_level.level_keys": [
+          "2-3 Artist Functions 4"
+        ],
+        "script_level.chapter": 42,
+        "script_level.position": 4,
+        "lesson.key": "Artist: Functions",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "2-3 Artist Functions 11",
+        "script_level.level_keys": [
+          "2-3 Artist Functions 11"
+        ],
+        "script_level.chapter": 43,
+        "script_level.position": 5,
+        "lesson.key": "Artist: Functions",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "2-3 Artist Functions 11.5",
+        "script_level.level_keys": [
+          "2-3 Artist Functions 11.5"
+        ],
+        "script_level.chapter": 44,
+        "script_level.position": 6,
+        "lesson.key": "Artist: Functions",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "2-3 Artist Functions 12",
+        "script_level.level_keys": [
+          "2-3 Artist Functions 12"
+        ],
+        "script_level.chapter": 45,
+        "script_level.position": 7,
+        "lesson.key": "Artist: Functions",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "2-3 Artist Functions 9",
+        "script_level.level_keys": [
+          "2-3 Artist Functions 9"
+        ],
+        "script_level.chapter": 46,
+        "script_level.position": 8,
+        "lesson.key": "Artist: Functions",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "2-3 Artist Functions 10",
+        "script_level.level_keys": [
+          "2-3 Artist Functions 10"
+        ],
+        "script_level.chapter": 47,
+        "script_level.position": 9,
+        "lesson.key": "Artist: Functions",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "2-3 artist functions multi 1",
+        "script_level.level_keys": [
+          "2-3 artist functions multi 1"
+        ],
+        "script_level.chapter": 48,
+        "script_level.position": 10,
+        "lesson.key": "Artist: Functions",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "course3_artist_functions_challenge1",
+        "script_level.level_keys": [
+          "course3_artist_functions_challenge1"
+        ],
+        "script_level.chapter": 49,
+        "script_level.position": 11,
+        "lesson.key": "Artist: Functions",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "course3_artist_functions_challenge2",
+        "script_level.level_keys": [
+          "course3_artist_functions_challenge2"
+        ],
+        "script_level.chapter": 50,
+        "script_level.position": 12,
+        "lesson.key": "Artist: Functions",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "2-3 Bee Functions 3",
+        "script_level.level_keys": [
+          "2-3 Bee Functions 3"
+        ],
+        "script_level.chapter": 51,
+        "script_level.position": 1,
+        "lesson.key": "Bee: Functions",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "2-3 Bee Functions 1",
+        "script_level.level_keys": [
+          "2-3 Bee Functions 1"
+        ],
+        "script_level.chapter": 52,
+        "script_level.position": 2,
+        "lesson.key": "Bee: Functions",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "2-3 Bee Functions 2",
+        "script_level.level_keys": [
+          "2-3 Bee Functions 2"
+        ],
+        "script_level.chapter": 53,
+        "script_level.position": 3,
+        "lesson.key": "Bee: Functions",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "2-3 Bee Functions 4",
+        "script_level.level_keys": [
+          "2-3 Bee Functions 4"
+        ],
+        "script_level.chapter": 54,
+        "script_level.position": 4,
+        "lesson.key": "Bee: Functions",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "2-3 Bee Functions 5",
+        "script_level.level_keys": [
+          "2-3 Bee Functions 5"
+        ],
+        "script_level.chapter": 55,
+        "script_level.position": 5,
+        "lesson.key": "Bee: Functions",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "2-3 Bee Functions 6",
+        "script_level.level_keys": [
+          "2-3 Bee Functions 6"
+        ],
+        "script_level.chapter": 56,
+        "script_level.position": 6,
+        "lesson.key": "Bee: Functions",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "2-3 Bee Functions 8",
+        "script_level.level_keys": [
+          "2-3 Bee Functions 8"
+        ],
+        "script_level.chapter": 57,
+        "script_level.position": 7,
+        "lesson.key": "Bee: Functions",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "2-3 Bee Functions 9",
+        "script_level.level_keys": [
+          "2-3 Bee Functions 9"
+        ],
+        "script_level.chapter": 58,
+        "script_level.position": 8,
+        "lesson.key": "Bee: Functions",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "2-3 Bee Functions 10",
+        "script_level.level_keys": [
+          "2-3 Bee Functions 10"
+        ],
+        "script_level.chapter": 59,
+        "script_level.position": 9,
+        "lesson.key": "Bee: Functions",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "2-3 Bee Functions Assessment 1",
+        "script_level.level_keys": [
+          "2-3 Bee Functions Assessment 1"
+        ],
+        "script_level.chapter": 60,
+        "script_level.position": 10,
+        "lesson.key": "Bee: Functions",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "2-3 Bee Functions Assessment 2",
+        "script_level.level_keys": [
+          "2-3 Bee Functions Assessment 2"
+        ],
+        "script_level.chapter": 61,
+        "script_level.position": 11,
+        "lesson.key": "Bee: Functions",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "course3_bee_functions_challenge1",
+        "script_level.level_keys": [
+          "course3_bee_functions_challenge1"
+        ],
+        "script_level.chapter": 62,
+        "script_level.position": 12,
+        "lesson.key": "Bee: Functions",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "course3_bee_functions_challenge2",
+        "script_level.level_keys": [
+          "course3_bee_functions_challenge2"
+        ],
+        "script_level.chapter": 63,
+        "script_level.position": 13,
+        "lesson.key": "Bee: Functions",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 Bee Conditionals 1",
+        "script_level.level_keys": [
+          "4-5 Bee Conditionals 1"
+        ],
+        "script_level.chapter": 64,
+        "script_level.position": 1,
+        "lesson.key": "Bee: Conditionals",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 Bee Conditionals 2",
+        "script_level.level_keys": [
+          "4-5 Bee Conditionals 2"
+        ],
+        "script_level.chapter": 65,
+        "script_level.position": 2,
+        "lesson.key": "Bee: Conditionals",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 Bee Conditionals 3",
+        "script_level.level_keys": [
+          "4-5 Bee Conditionals 3"
+        ],
+        "script_level.chapter": 66,
+        "script_level.position": 3,
+        "lesson.key": "Bee: Conditionals",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 Bee Conditionals 4",
+        "script_level.level_keys": [
+          "4-5 Bee Conditionals 4"
+        ],
+        "script_level.chapter": 67,
+        "script_level.position": 4,
+        "lesson.key": "Bee: Conditionals",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 Bee Conditionals 5",
+        "script_level.level_keys": [
+          "4-5 Bee Conditionals 5"
+        ],
+        "script_level.chapter": 68,
+        "script_level.position": 5,
+        "lesson.key": "Bee: Conditionals",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 Bee Conditionals 6",
+        "script_level.level_keys": [
+          "4-5 Bee Conditionals 6"
+        ],
+        "script_level.chapter": 69,
+        "script_level.position": 6,
+        "lesson.key": "Bee: Conditionals",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 Bee Conditionals 7",
+        "script_level.level_keys": [
+          "4-5 Bee Conditionals 7"
+        ],
+        "script_level.chapter": 70,
+        "script_level.position": 7,
+        "lesson.key": "Bee: Conditionals",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 Bee Conditionals 8",
+        "script_level.level_keys": [
+          "4-5 Bee Conditionals 8"
+        ],
+        "script_level.chapter": 71,
+        "script_level.position": 8,
+        "lesson.key": "Bee: Conditionals",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 Bee Conditionals Assessment 1",
+        "script_level.level_keys": [
+          "4-5 Bee Conditionals Assessment 1"
+        ],
+        "script_level.chapter": 72,
+        "script_level.position": 9,
+        "lesson.key": "Bee: Conditionals",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 bee conditionals multi 1",
+        "script_level.level_keys": [
+          "4-5 bee conditionals multi 1"
+        ],
+        "script_level.chapter": 73,
+        "script_level.position": 10,
+        "lesson.key": "Bee: Conditionals",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "course3_farmer_condLoops_challenge1",
+        "script_level.level_keys": [
+          "course3_farmer_condLoops_challenge1"
+        ],
+        "script_level.chapter": 74,
+        "script_level.position": 11,
+        "lesson.key": "Bee: Conditionals",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "course3_farmer_condLoops_challenge2",
+        "script_level.level_keys": [
+          "course3_farmer_condLoops_challenge2"
+        ],
+        "script_level.chapter": 75,
+        "script_level.position": 12,
+        "lesson.key": "Bee: Conditionals",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 Maze Conditionals 1",
+        "script_level.level_keys": [
+          "4-5 Maze Conditionals 1"
+        ],
+        "script_level.chapter": 76,
+        "script_level.position": 1,
+        "lesson.key": "Maze: Conditionals",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 Maze Conditionals 2",
+        "script_level.level_keys": [
+          "4-5 Maze Conditionals 2"
+        ],
+        "script_level.chapter": 77,
+        "script_level.position": 2,
+        "lesson.key": "Maze: Conditionals",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 Maze Conditionals 3",
+        "script_level.level_keys": [
+          "4-5 Maze Conditionals 3"
+        ],
+        "script_level.chapter": 78,
+        "script_level.position": 3,
+        "lesson.key": "Maze: Conditionals",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 Maze Conditionals 4",
+        "script_level.level_keys": [
+          "4-5 Maze Conditionals 4"
+        ],
+        "script_level.chapter": 79,
+        "script_level.position": 4,
+        "lesson.key": "Maze: Conditionals",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 Maze Conditionals 5",
+        "script_level.level_keys": [
+          "4-5 Maze Conditionals 5"
+        ],
+        "script_level.chapter": 80,
+        "script_level.position": 5,
+        "lesson.key": "Maze: Conditionals",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 Maze Conditionals 6",
+        "script_level.level_keys": [
+          "4-5 Maze Conditionals 6"
+        ],
+        "script_level.chapter": 81,
+        "script_level.position": 6,
+        "lesson.key": "Maze: Conditionals",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 Maze Conditionals 7",
+        "script_level.level_keys": [
+          "4-5 Maze Conditionals 7"
+        ],
+        "script_level.chapter": 82,
+        "script_level.position": 7,
+        "lesson.key": "Maze: Conditionals",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 Maze Conditionals 8",
+        "script_level.level_keys": [
+          "4-5 Maze Conditionals 8"
+        ],
+        "script_level.chapter": 83,
+        "script_level.position": 8,
+        "lesson.key": "Maze: Conditionals",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 Maze Conditionals 9",
+        "script_level.level_keys": [
+          "4-5 Maze Conditionals 9"
+        ],
+        "script_level.chapter": 84,
+        "script_level.position": 9,
+        "lesson.key": "Maze: Conditionals",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 Maze Conditionals 10",
+        "script_level.level_keys": [
+          "4-5 Maze Conditionals 10"
+        ],
+        "script_level.chapter": 85,
+        "script_level.position": 10,
+        "lesson.key": "Maze: Conditionals",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 Maze Conditionals Assessment 1",
+        "script_level.level_keys": [
+          "4-5 Maze Conditionals Assessment 1"
+        ],
+        "script_level.chapter": 86,
+        "script_level.position": 11,
+        "lesson.key": "Maze: Conditionals",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 maze conditionals multi 1",
+        "script_level.level_keys": [
+          "4-5 maze conditionals multi 1"
+        ],
+        "script_level.chapter": 87,
+        "script_level.position": 12,
+        "lesson.key": "Maze: Conditionals",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "course3_maze_until_challenge1",
+        "script_level.level_keys": [
+          "course3_maze_until_challenge1"
+        ],
+        "script_level.chapter": 88,
+        "script_level.position": 13,
+        "lesson.key": "Maze: Conditionals",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "course3_farmer_until_challenge2",
+        "script_level.level_keys": [
+          "course3_farmer_until_challenge2"
+        ],
+        "script_level.chapter": 89,
+        "script_level.position": 14,
+        "lesson.key": "Maze: Conditionals",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SongwritingParameters",
+        "script_level.level_keys": [
+          "SongwritingParameters"
+        ],
+        "script_level.chapter": 90,
+        "script_level.position": 1,
+        "lesson.key": "Songwriting",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 Songwriting Multi 1",
+        "script_level.level_keys": [
+          "4-5 Songwriting Multi 1"
+        ],
+        "script_level.chapter": 91,
+        "script_level.position": 2,
+        "lesson.key": "Songwriting",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "DiceRace",
+        "script_level.level_keys": [
+          "DiceRace"
+        ],
+        "script_level.chapter": 92,
+        "script_level.position": 1,
+        "lesson.key": "Dice Race",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 Algorithms Match 1",
+        "script_level.level_keys": [
+          "4-5 Algorithms Match 1"
+        ],
+        "script_level.chapter": 93,
+        "script_level.position": 2,
+        "lesson.key": "Dice Race",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 Algorithms Multi 1",
+        "script_level.level_keys": [
+          "4-5 Algorithms Multi 1"
+        ],
+        "script_level.chapter": 94,
+        "script_level.position": 3,
+        "lesson.key": "Dice Race",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 Nested Loops 1",
+        "script_level.level_keys": [
+          "4-5 Nested Loops 1"
+        ],
+        "script_level.chapter": 95,
+        "script_level.position": 1,
+        "lesson.key": "Artist: Nested Loops",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 Nested Loops 2",
+        "script_level.level_keys": [
+          "4-5 Nested Loops 2"
+        ],
+        "script_level.chapter": 96,
+        "script_level.position": 2,
+        "lesson.key": "Artist: Nested Loops",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 Nested Loops 6",
+        "script_level.level_keys": [
+          "4-5 Nested Loops 6"
+        ],
+        "script_level.chapter": 97,
+        "script_level.position": 3,
+        "lesson.key": "Artist: Nested Loops",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 Nested Loops 9",
+        "script_level.level_keys": [
+          "4-5 Nested Loops 9"
+        ],
+        "script_level.chapter": 98,
+        "script_level.position": 4,
+        "lesson.key": "Artist: Nested Loops",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 Nested Loops 3",
+        "script_level.level_keys": [
+          "4-5 Nested Loops 3"
+        ],
+        "script_level.chapter": 99,
+        "script_level.position": 5,
+        "lesson.key": "Artist: Nested Loops",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 Nested Loops 5",
+        "script_level.level_keys": [
+          "4-5 Nested Loops 5"
+        ],
+        "script_level.chapter": 100,
+        "script_level.position": 6,
+        "lesson.key": "Artist: Nested Loops",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 Nested Loops 7",
+        "script_level.level_keys": [
+          "4-5 Nested Loops 7"
+        ],
+        "script_level.chapter": 101,
+        "script_level.position": 7,
+        "lesson.key": "Artist: Nested Loops",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 Nested Loops 11",
+        "script_level.level_keys": [
+          "4-5 Nested Loops 11"
+        ],
+        "script_level.chapter": 102,
+        "script_level.position": 8,
+        "lesson.key": "Artist: Nested Loops",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 Nested Loops 8",
+        "script_level.level_keys": [
+          "4-5 Nested Loops 8"
+        ],
+        "script_level.chapter": 103,
+        "script_level.position": 9,
+        "lesson.key": "Artist: Nested Loops",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 Nested Loops 12",
+        "script_level.level_keys": [
+          "4-5 Nested Loops 12"
+        ],
+        "script_level.chapter": 104,
+        "script_level.position": 10,
+        "lesson.key": "Artist: Nested Loops",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 Nested Loops Assessment 1",
+        "script_level.level_keys": [
+          "4-5 Nested Loops Assessment 1"
+        ],
+        "script_level.chapter": 105,
+        "script_level.position": 11,
+        "lesson.key": "Artist: Nested Loops",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 artist loops multi 1",
+        "script_level.level_keys": [
+          "4-5 artist loops multi 1"
+        ],
+        "script_level.chapter": 106,
+        "script_level.position": 12,
+        "lesson.key": "Artist: Nested Loops",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "course2_artist_nestedLoops_challenge1",
+        "script_level.level_keys": [
+          "course2_artist_nestedLoops_challenge1"
+        ],
+        "script_level.chapter": 107,
+        "script_level.position": 13,
+        "lesson.key": "Artist: Nested Loops",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "course2_artist_nestedLoops_challenge2",
+        "script_level.level_keys": [
+          "course2_artist_nestedLoops_challenge2"
+        ],
+        "script_level.chapter": 108,
+        "script_level.position": 14,
+        "lesson.key": "Artist: Nested Loops",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 While Loops 1",
+        "script_level.level_keys": [
+          "4-5 While Loops 1"
+        ],
+        "script_level.chapter": 109,
+        "script_level.position": 1,
+        "lesson.key": "Farmer: While Loops",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 While Loops 2",
+        "script_level.level_keys": [
+          "4-5 While Loops 2"
+        ],
+        "script_level.chapter": 110,
+        "script_level.position": 2,
+        "lesson.key": "Farmer: While Loops",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 While Loops 3",
+        "script_level.level_keys": [
+          "4-5 While Loops 3"
+        ],
+        "script_level.chapter": 111,
+        "script_level.position": 3,
+        "lesson.key": "Farmer: While Loops",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 While Loops 4",
+        "script_level.level_keys": [
+          "4-5 While Loops 4"
+        ],
+        "script_level.chapter": 112,
+        "script_level.position": 4,
+        "lesson.key": "Farmer: While Loops",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 While Loops 5",
+        "script_level.level_keys": [
+          "4-5 While Loops 5"
+        ],
+        "script_level.chapter": 113,
+        "script_level.position": 5,
+        "lesson.key": "Farmer: While Loops",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 While Loops 6",
+        "script_level.level_keys": [
+          "4-5 While Loops 6"
+        ],
+        "script_level.chapter": 114,
+        "script_level.position": 6,
+        "lesson.key": "Farmer: While Loops",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 While Loops 7",
+        "script_level.level_keys": [
+          "4-5 While Loops 7"
+        ],
+        "script_level.chapter": 115,
+        "script_level.position": 7,
+        "lesson.key": "Farmer: While Loops",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 While Loops 8",
+        "script_level.level_keys": [
+          "4-5 While Loops 8"
+        ],
+        "script_level.chapter": 116,
+        "script_level.position": 8,
+        "lesson.key": "Farmer: While Loops",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 While Loops Assessment 1",
+        "script_level.level_keys": [
+          "4-5 While Loops Assessment 1"
+        ],
+        "script_level.chapter": 117,
+        "script_level.position": 9,
+        "lesson.key": "Farmer: While Loops",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "course3_bee_functions_challenge3",
+        "script_level.level_keys": [
+          "course3_bee_functions_challenge3"
+        ],
+        "script_level.chapter": 118,
+        "script_level.position": 10,
+        "lesson.key": "Farmer: While Loops",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "course3_bee_functions_challenge4",
+        "script_level.level_keys": [
+          "course3_bee_functions_challenge4"
+        ],
+        "script_level.chapter": 119,
+        "script_level.position": 11,
+        "lesson.key": "Farmer: While Loops",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 Bee Nested Loops 1",
+        "script_level.level_keys": [
+          "4-5 Bee Nested Loops 1"
+        ],
+        "script_level.chapter": 120,
+        "script_level.position": 1,
+        "lesson.key": "Bee: Nested Loops",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 Bee Nested Loops 2",
+        "script_level.level_keys": [
+          "4-5 Bee Nested Loops 2"
+        ],
+        "script_level.chapter": 121,
+        "script_level.position": 2,
+        "lesson.key": "Bee: Nested Loops",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 Bee Nested Loops 3",
+        "script_level.level_keys": [
+          "4-5 Bee Nested Loops 3"
+        ],
+        "script_level.chapter": 122,
+        "script_level.position": 3,
+        "lesson.key": "Bee: Nested Loops",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 Bee Nested Loops 5",
+        "script_level.level_keys": [
+          "4-5 Bee Nested Loops 5"
+        ],
+        "script_level.chapter": 123,
+        "script_level.position": 4,
+        "lesson.key": "Bee: Nested Loops",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 Bee Nested Loops 4",
+        "script_level.level_keys": [
+          "4-5 Bee Nested Loops 4"
+        ],
+        "script_level.chapter": 124,
+        "script_level.position": 5,
+        "lesson.key": "Bee: Nested Loops",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "2-3 Bee Loops 8",
+        "script_level.level_keys": [
+          "2-3 Bee Loops 8"
+        ],
+        "script_level.chapter": 125,
+        "script_level.position": 6,
+        "lesson.key": "Bee: Nested Loops",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 Bee Nested Loops 7",
+        "script_level.level_keys": [
+          "4-5 Bee Nested Loops 7"
+        ],
+        "script_level.chapter": 126,
+        "script_level.position": 7,
+        "lesson.key": "Bee: Nested Loops",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "2-3 Bee Loops 10",
+        "script_level.level_keys": [
+          "2-3 Bee Loops 10"
+        ],
+        "script_level.chapter": 127,
+        "script_level.position": 8,
+        "lesson.key": "Bee: Nested Loops",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 Bee Nested Loops 9",
+        "script_level.level_keys": [
+          "4-5 Bee Nested Loops 9"
+        ],
+        "script_level.chapter": 128,
+        "script_level.position": 9,
+        "lesson.key": "Bee: Nested Loops",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 Bee Nested Loops Rows",
+        "script_level.level_keys": [
+          "4-5 Bee Nested Loops Rows"
+        ],
+        "script_level.chapter": 129,
+        "script_level.position": 10,
+        "lesson.key": "Bee: Nested Loops",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "2-3 Bee Loops Assessment 1",
+        "script_level.level_keys": [
+          "2-3 Bee Loops Assessment 1"
+        ],
+        "script_level.chapter": 130,
+        "script_level.position": 11,
+        "lesson.key": "Bee: Nested Loops",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 Bee Nested Loops Assessment 1",
+        "script_level.level_keys": [
+          "4-5 Bee Nested Loops Assessment 1"
+        ],
+        "script_level.chapter": 131,
+        "script_level.position": 12,
+        "lesson.key": "Bee: Nested Loops",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 bee loops multi 1",
+        "script_level.level_keys": [
+          "4-5 bee loops multi 1"
+        ],
+        "script_level.chapter": 132,
+        "script_level.position": 13,
+        "lesson.key": "Bee: Nested Loops",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "course3_bee_debugging_challenge1",
+        "script_level.level_keys": [
+          "course3_bee_debugging_challenge1"
+        ],
+        "script_level.chapter": 133,
+        "script_level.position": 14,
+        "lesson.key": "Bee: Nested Loops",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "course3_collector_debugging_challenge2",
+        "script_level.level_keys": [
+          "course3_collector_debugging_challenge2"
+        ],
+        "script_level.chapter": 134,
+        "script_level.position": 15,
+        "lesson.key": "Bee: Nested Loops",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 Bee Debugging 1",
+        "script_level.level_keys": [
+          "4-5 Bee Debugging 1"
+        ],
+        "script_level.chapter": 135,
+        "script_level.position": 1,
+        "lesson.key": "Bee: Debugging",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 Bee Debugging 2",
+        "script_level.level_keys": [
+          "4-5 Bee Debugging 2"
+        ],
+        "script_level.chapter": 136,
+        "script_level.position": 2,
+        "lesson.key": "Bee: Debugging",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 Bee Debugging 3",
+        "script_level.level_keys": [
+          "4-5 Bee Debugging 3"
+        ],
+        "script_level.chapter": 137,
+        "script_level.position": 3,
+        "lesson.key": "Bee: Debugging",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 Bee Debugging 4",
+        "script_level.level_keys": [
+          "4-5 Bee Debugging 4"
+        ],
+        "script_level.chapter": 138,
+        "script_level.position": 4,
+        "lesson.key": "Bee: Debugging",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 Bee Debugging 5",
+        "script_level.level_keys": [
+          "4-5 Bee Debugging 5"
+        ],
+        "script_level.chapter": 139,
+        "script_level.position": 5,
+        "lesson.key": "Bee: Debugging",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 Bee Debugging 6",
+        "script_level.level_keys": [
+          "4-5 Bee Debugging 6"
+        ],
+        "script_level.chapter": 140,
+        "script_level.position": 6,
+        "lesson.key": "Bee: Debugging",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 Bee Debugging 7",
+        "script_level.level_keys": [
+          "4-5 Bee Debugging 7"
+        ],
+        "script_level.chapter": 141,
+        "script_level.position": 7,
+        "lesson.key": "Bee: Debugging",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 Bee Debugging 8",
+        "script_level.level_keys": [
+          "4-5 Bee Debugging 8"
+        ],
+        "script_level.chapter": 142,
+        "script_level.position": 8,
+        "lesson.key": "Bee: Debugging",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 Bee Debugging 9",
+        "script_level.level_keys": [
+          "4-5 Bee Debugging 9"
+        ],
+        "script_level.chapter": 143,
+        "script_level.position": 9,
+        "lesson.key": "Bee: Debugging",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 Bee Debugging 10",
+        "script_level.level_keys": [
+          "4-5 Bee Debugging 10"
+        ],
+        "script_level.chapter": 144,
+        "script_level.position": 10,
+        "lesson.key": "Bee: Debugging",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 Bee Debugging 11",
+        "script_level.level_keys": [
+          "4-5 Bee Debugging 11"
+        ],
+        "script_level.chapter": 145,
+        "script_level.position": 11,
+        "lesson.key": "Bee: Debugging",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 Bee Debugging Assessment 1",
+        "script_level.level_keys": [
+          "4-5 Bee Debugging Assessment 1"
+        ],
+        "script_level.chapter": 146,
+        "script_level.position": 12,
+        "lesson.key": "Bee: Debugging",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 bee debug multi 1",
+        "script_level.level_keys": [
+          "4-5 bee debug multi 1"
+        ],
+        "script_level.chapter": 147,
+        "script_level.position": 13,
+        "lesson.key": "Bee: Debugging",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "bounce_1",
+        "script_level.level_keys": [
+          "bounce_1"
+        ],
+        "script_level.chapter": 148,
+        "script_level.position": 1,
+        "lesson.key": "Bounce",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "bounce_2",
+        "script_level.level_keys": [
+          "bounce_2"
+        ],
+        "script_level.chapter": 149,
+        "script_level.position": 2,
+        "lesson.key": "Bounce",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "bounce_3",
+        "script_level.level_keys": [
+          "bounce_3"
+        ],
+        "script_level.chapter": 150,
+        "script_level.position": 3,
+        "lesson.key": "Bounce",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "bounce_4",
+        "script_level.level_keys": [
+          "bounce_4"
+        ],
+        "script_level.chapter": 151,
+        "script_level.position": 4,
+        "lesson.key": "Bounce",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "bounce_5",
+        "script_level.level_keys": [
+          "bounce_5"
+        ],
+        "script_level.chapter": 152,
+        "script_level.position": 5,
+        "lesson.key": "Bounce",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "bounce_6",
+        "script_level.level_keys": [
+          "bounce_6"
+        ],
+        "script_level.chapter": 153,
+        "script_level.position": 6,
+        "lesson.key": "Bounce",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "bounce_7",
+        "script_level.level_keys": [
+          "bounce_7"
+        ],
+        "script_level.chapter": 154,
+        "script_level.position": 7,
+        "lesson.key": "Bounce",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "bounce_10",
+        "script_level.level_keys": [
+          "bounce_10"
+        ],
+        "script_level.chapter": 155,
+        "script_level.position": 8,
+        "lesson.key": "Bounce",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "bounce_11",
+        "script_level.level_keys": [
+          "bounce_11"
+        ],
+        "script_level.chapter": 156,
+        "script_level.position": 9,
+        "lesson.key": "Bounce",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "bounce_12",
+        "script_level.level_keys": [
+          "bounce_12"
+        ],
+        "script_level.chapter": 157,
+        "script_level.position": 10,
+        "lesson.key": "Bounce",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:Studio:c3_story_1",
+        "script_level.level_keys": [
+          "blockly:Studio:c3_story_1"
+        ],
+        "script_level.chapter": 158,
+        "script_level.position": 1,
+        "lesson.key": "Studio: Create a Story",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:Studio:c3_story_2",
+        "script_level.level_keys": [
+          "blockly:Studio:c3_story_2"
+        ],
+        "script_level.chapter": 159,
+        "script_level.position": 2,
+        "lesson.key": "Studio: Create a Story",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:Studio:c3_story_3",
+        "script_level.level_keys": [
+          "blockly:Studio:c3_story_3"
+        ],
+        "script_level.chapter": 160,
+        "script_level.position": 3,
+        "lesson.key": "Studio: Create a Story",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:Studio:c3_story_4",
+        "script_level.level_keys": [
+          "blockly:Studio:c3_story_4"
+        ],
+        "script_level.chapter": 161,
+        "script_level.position": 4,
+        "lesson.key": "Studio: Create a Story",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:Studio:c3_story_5",
+        "script_level.level_keys": [
+          "blockly:Studio:c3_story_5"
+        ],
+        "script_level.chapter": 162,
+        "script_level.position": 5,
+        "lesson.key": "Studio: Create a Story",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:Studio:c3_story_6",
+        "script_level.level_keys": [
+          "blockly:Studio:c3_story_6"
+        ],
+        "script_level.chapter": 163,
+        "script_level.position": 6,
+        "lesson.key": "Studio: Create a Story",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "course3_playLab_challenge1",
+        "script_level.level_keys": [
+          "course3_playLab_challenge1"
+        ],
+        "script_level.chapter": 164,
+        "script_level.position": 7,
+        "lesson.key": "Studio: Create a Story",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:Studio:c3_game_1",
+        "script_level.level_keys": [
+          "blockly:Studio:c3_game_1"
+        ],
+        "script_level.chapter": 165,
+        "script_level.position": 1,
+        "lesson.key": "Studio: Create a Game",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:Studio:c3_game_2",
+        "script_level.level_keys": [
+          "blockly:Studio:c3_game_2"
+        ],
+        "script_level.chapter": 166,
+        "script_level.position": 2,
+        "lesson.key": "Studio: Create a Game",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:Studio:c3_game_3",
+        "script_level.level_keys": [
+          "blockly:Studio:c3_game_3"
+        ],
+        "script_level.chapter": 167,
+        "script_level.position": 3,
+        "lesson.key": "Studio: Create a Game",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:Studio:c3_game_4",
+        "script_level.level_keys": [
+          "blockly:Studio:c3_game_4"
+        ],
+        "script_level.chapter": 168,
+        "script_level.position": 4,
+        "lesson.key": "Studio: Create a Game",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:Studio:c3_game_5",
+        "script_level.level_keys": [
+          "blockly:Studio:c3_game_5"
+        ],
+        "script_level.chapter": 169,
+        "script_level.position": 5,
+        "lesson.key": "Studio: Create a Game",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:Studio:c3_game_6",
+        "script_level.level_keys": [
+          "blockly:Studio:c3_game_6"
+        ],
+        "script_level.chapter": 170,
+        "script_level.position": 6,
+        "lesson.key": "Studio: Create a Game",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:Studio:c3_game_7",
+        "script_level.level_keys": [
+          "blockly:Studio:c3_game_7"
+        ],
+        "script_level.chapter": 171,
+        "script_level.position": 7,
+        "lesson.key": "Studio: Create a Game",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Internet",
+        "script_level.level_keys": [
+          "Internet"
+        ],
+        "script_level.chapter": 172,
+        "script_level.position": 1,
+        "lesson.key": "Internet",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 Internet Multi 1",
+        "script_level.level_keys": [
+          "4-5 Internet Multi 1"
+        ],
+        "script_level.chapter": 173,
+        "script_level.position": 2,
+        "lesson.key": "Internet",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 Internet Multi 2",
+        "script_level.level_keys": [
+          "4-5 Internet Multi 2"
+        ],
+        "script_level.chapter": 174,
+        "script_level.position": 3,
+        "lesson.key": "Internet",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Crowdsourcing",
+        "script_level.level_keys": [
+          "Crowdsourcing"
+        ],
+        "script_level.chapter": 175,
+        "script_level.position": 1,
+        "lesson.key": "Crowdsourcing",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 Crowdsourcing Multi 1",
+        "script_level.level_keys": [
+          "4-5 Crowdsourcing Multi 1"
+        ],
+        "script_level.chapter": 176,
+        "script_level.position": 2,
+        "lesson.key": "Crowdsourcing",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 Crowdsourcing Multi 2",
+        "script_level.level_keys": [
+          "4-5 Crowdsourcing Multi 2"
+        ],
+        "script_level.chapter": 177,
+        "script_level.position": 3,
+        "lesson.key": "Crowdsourcing",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "DigitalCitizenship",
+        "script_level.level_keys": [
+          "DigitalCitizenship"
+        ],
+        "script_level.chapter": 178,
+        "script_level.position": 1,
+        "lesson.key": "Digital Citizenship",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 Digital Footprint Multi 1",
+        "script_level.level_keys": [
+          "4-5 Digital Footprint Multi 1"
+        ],
+        "script_level.chapter": 179,
+        "script_level.position": 2,
+        "lesson.key": "Digital Citizenship",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 Artist Patterns 1",
+        "script_level.level_keys": [
+          "4-5 Artist Patterns 1"
+        ],
+        "script_level.chapter": 180,
+        "script_level.position": 1,
+        "lesson.key": "Artist: Patterns",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 Artist Patterns 2",
+        "script_level.level_keys": [
+          "4-5 Artist Patterns 2"
+        ],
+        "script_level.chapter": 181,
+        "script_level.position": 2,
+        "lesson.key": "Artist: Patterns",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 Artist Patterns 3",
+        "script_level.level_keys": [
+          "4-5 Artist Patterns 3"
+        ],
+        "script_level.chapter": 182,
+        "script_level.position": 3,
+        "lesson.key": "Artist: Patterns",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 Artist Patterns 4",
+        "script_level.level_keys": [
+          "4-5 Artist Patterns 4"
+        ],
+        "script_level.chapter": 183,
+        "script_level.position": 4,
+        "lesson.key": "Artist: Patterns",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 Artist Patterns 5",
+        "script_level.level_keys": [
+          "4-5 Artist Patterns 5"
+        ],
+        "script_level.chapter": 184,
+        "script_level.position": 5,
+        "lesson.key": "Artist: Patterns",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 Artist Patterns 6",
+        "script_level.level_keys": [
+          "4-5 Artist Patterns 6"
+        ],
+        "script_level.chapter": 185,
+        "script_level.position": 6,
+        "lesson.key": "Artist: Patterns",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 Artist Patterns 7",
+        "script_level.level_keys": [
+          "4-5 Artist Patterns 7"
+        ],
+        "script_level.chapter": 186,
+        "script_level.position": 7,
+        "lesson.key": "Artist: Patterns",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 Artist Patterns 8",
+        "script_level.level_keys": [
+          "4-5 Artist Patterns 8"
+        ],
+        "script_level.chapter": 187,
+        "script_level.position": 8,
+        "lesson.key": "Artist: Patterns",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 Artist Patterns 9",
+        "script_level.level_keys": [
+          "4-5 Artist Patterns 9"
+        ],
+        "script_level.chapter": 188,
+        "script_level.position": 9,
+        "lesson.key": "Artist: Patterns",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 Artist Patterns 9.5",
+        "script_level.level_keys": [
+          "4-5 Artist Patterns 9.5"
+        ],
+        "script_level.chapter": 189,
+        "script_level.position": 10,
+        "lesson.key": "Artist: Patterns",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 Artist Patterns 10",
+        "script_level.level_keys": [
+          "4-5 Artist Patterns 10"
+        ],
+        "script_level.chapter": 190,
+        "script_level.position": 11,
+        "lesson.key": "Artist: Patterns",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 Artist Patterns 11",
+        "script_level.level_keys": [
+          "4-5 Artist Patterns 11"
+        ],
+        "script_level.chapter": 191,
+        "script_level.position": 12,
+        "lesson.key": "Artist: Patterns",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 Artist Patterns 12",
+        "script_level.level_keys": [
+          "4-5 Artist Patterns 12"
+        ],
+        "script_level.chapter": 192,
+        "script_level.position": 13,
+        "lesson.key": "Artist: Patterns",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 Artist Patterns 13",
+        "script_level.level_keys": [
+          "4-5 Artist Patterns 13"
+        ],
+        "script_level.chapter": 193,
+        "script_level.position": 14,
+        "lesson.key": "Artist: Patterns",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 Artist Patterns Free Play",
+        "script_level.level_keys": [
+          "4-5 Artist Patterns Free Play"
+        ],
+        "script_level.chapter": 194,
+        "script_level.position": 15,
+        "lesson.key": "Artist: Patterns",
+        "lesson_group.key": "",
+        "script.name": "course3"
+      }
+    }
+  ]
+}
