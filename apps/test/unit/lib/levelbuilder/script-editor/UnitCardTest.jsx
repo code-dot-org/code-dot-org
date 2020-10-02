@@ -17,13 +17,15 @@ const defaultProps = {
           id: 100,
           name: 'A',
           key: 'lesson-1',
-          position: 1
+          position: 1,
+          levels: []
         },
         {
           name: 'B',
           key: 'lesson-2',
           id: 101,
-          position: 2
+          position: 2,
+          levels: []
         }
       ]
     },
@@ -37,13 +39,15 @@ const defaultProps = {
           id: 100,
           key: 'lesson-3',
           name: 'A',
-          position: 1
+          position: 1,
+          levels: []
         },
         {
           name: 'B',
           key: 'lesson-4',
           id: 101,
-          position: 2
+          position: 2,
+          levels: []
         }
       ]
     }

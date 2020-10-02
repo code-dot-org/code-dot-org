@@ -119,15 +119,7 @@ class UnitCard extends Component {
     }
     s.push(t);
     lesson.levels.forEach(level => {
-      if (level.ids.length > 1) {
-        s.push('variants');
-        level.ids.forEach(id => {
-          s = s.concat(this.serializeLevel(id, level, level.activeId === id));
-        });
-        s.push('endvariants');
-      } else {
-        s = s.concat(this.serializeLevel(level.ids[0], level));
-      }
+      s = s.concat(this.serializeLevel(level.ids[0], level));
     });
     s.push('');
     return s.join('\n');
