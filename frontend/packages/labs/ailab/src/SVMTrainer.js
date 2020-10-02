@@ -6,6 +6,7 @@ import { store } from "./index.js";
 import {
   setPrediction,
   getUniqueOptions,
+  getCategoricalColumns,
   getSelectedCategoricalColumns,
   setFeatureNumberKey
 } from "./redux";
@@ -37,7 +38,10 @@ export default class SVMTrainer {
 
   buildFeatureToNumberKey(state) {
     let optionsMappedToNumbersByFeature = {};
-    getSelectedCategoricalColumns(state).forEach(
+    const categoricalColumnsToConvert = getSelectedCategoricalColumns(
+      state
+    ).concat(this.state.labelColumn);
+    categoricalColumnsToConvert.forEach(
       feature =>
         (optionsMappedToNumbersByFeature[
           feature
@@ -47,12 +51,12 @@ export default class SVMTrainer {
   }
 
   extractLabels = row => {
-    return parseInt(row[this.state.labelColumn]);
+    return this.convertValue(this.state.labelColumn, row);
   };
 
   convertValue = (feature, row) => {
     const updatedState = store.getState();
-    return getSelectedCategoricalColumns(updatedState).includes(feature)
+    return getCategoricalColumns(updatedState).includes(feature)
       ? updatedState.featureNumberKey[feature][row[feature]]
       : parseInt(row[feature]);
   };

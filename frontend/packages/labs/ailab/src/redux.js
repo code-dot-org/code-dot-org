@@ -151,6 +151,13 @@ export function getSelectableFeatures(state) {
     .filter(column => column !== state.labelColumn);
 }
 
+// Right the SVM model we're using only supports binary classification.
+export function getSelectableLabels(state) {
+  return getCategoricalColumns(state).filter(
+    column => getUniqueOptions(state, column).length === 2
+  );
+}
+
 export function getUniqueOptions(state, column) {
   return Array.from(new Set(state.data.map(row => row[column])));
 }

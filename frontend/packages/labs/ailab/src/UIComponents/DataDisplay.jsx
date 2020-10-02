@@ -9,8 +9,8 @@ import {
   setColumnsByDataType,
   getFeatures,
   ColumnTypes,
-  getCategoricalColumns,
-  getSelectableFeatures
+  getSelectableFeatures,
+  getSelectableLabels
 } from "../redux";
 
 class DataDisplay extends Component {
@@ -24,8 +24,8 @@ class DataDisplay extends Component {
     setShowPredict: PropTypes.func.isRequired,
     columnsByDataType: PropTypes.object,
     setColumnsByDataType: PropTypes.func.isRequired,
-    categoricalColumns: PropTypes.array,
-    selectableFeatures: PropTypes.array
+    selectableFeatures: PropTypes.array,
+    selectableLabels: PropTypes.array
   };
 
   constructor(props) {
@@ -139,7 +139,7 @@ class DataDisplay extends Component {
                 );
               })}
             </form>
-            {this.props.categoricalColumns.length > 0 && (
+            {this.props.selectableLabels.length > 0 && (
               <form>
                 <label>
                   <h2>Which column contains the labels for your dataset?</h2>
@@ -149,12 +149,13 @@ class DataDisplay extends Component {
                     features) is most likely to belong to. Labels are
                     categorical.
                   </p>
+                  <p>The current model only supports binary classification.</p>
                   <select
                     value={this.props.labelColumn}
                     onChange={this.handleChangeSelect}
                   >
                     <option>{""}</option>
-                    {this.props.categoricalColumns.map((feature, index) => {
+                    {this.props.selectableLabels.map((feature, index) => {
                       return (
                         <option key={index} value={feature}>
                           {feature}
@@ -203,8 +204,8 @@ export default connect(
     selectedFeatures: state.selectedFeatures,
     features: getFeatures(state),
     columnsByDataType: state.columnsByDataType,
-    categoricalColumns: getCategoricalColumns(state),
-    selectableFeatures: getSelectableFeatures(state)
+    selectableFeatures: getSelectableFeatures(state),
+    selectableLabels: getSelectableLabels(state)
   }),
   dispatch => ({
     setColumnsByDataType(column, dataType) {
