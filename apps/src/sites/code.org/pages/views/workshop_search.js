@@ -18,6 +18,23 @@ function initializeMap() {
     center: [-95.665, 37.6],
     zoom: 3
   });
+
+  map.dragRotate.disable();
+  map.scrollZoom.disable();
+  map.dragPan.disable();
+  map.addControl(
+    new mapboxgl.NavigationControl({showCompass: false}),
+    'bottom-right'
+  );
+  const enableMouseControls = () => {
+    map.scrollZoom.enable();
+    map.dragPan.enable();
+  };
+  // Enable mouse controls when the map is clicked
+  map.on('click', enableMouseControls);
+  // Enable mouse controls when the zoom (+/-) buttons are pressed
+  map.on('zoom', enableMouseControls);
+
   var geocoder = new MapboxGeocoder({
     accessToken: mapboxgl.accessToken,
     mapboxgl: mapboxgl,
