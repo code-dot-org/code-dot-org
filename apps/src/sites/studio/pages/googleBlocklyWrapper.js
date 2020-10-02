@@ -52,6 +52,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('BlockValueType');
   blocklyWrapper.wrapReadOnlyProperty('common_locale');
   blocklyWrapper.wrapReadOnlyProperty('Connection');
+  blocklyWrapper.wrapReadOnlyProperty('ContextMenu');
   blocklyWrapper.wrapReadOnlyProperty('contractEditor');
   blocklyWrapper.wrapReadOnlyProperty('createSvgElement');
   blocklyWrapper.wrapReadOnlyProperty('Css');
@@ -210,6 +211,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
       ...opt_options,
       theme: CdoTheme
     };
+    blocklyWrapper.editBlocks = opt_options.editBlocks;
     return blocklyWrapper.blockly_.inject(container, options);
   };
 
