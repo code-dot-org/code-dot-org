@@ -661,6 +661,8 @@ describe('entry tests', () => {
       './src/sites/code.org/pages/views/professional_learning_apply_banner.js',
     'code.org/views/at_home_banner':
       './src/sites/code.org/pages/views/at_home_banner.js',
+    'code.org/views/virtual_hoc_banner':
+      './src/sites/code.org/pages/views/virtual_hoc_banner.js',
 
     'pd/_jotform_loader': './src/sites/studio/pages/pd/_jotform_loader.js',
     'pd/_jotform_embed': './src/sites/studio/pages/pd/_jotform_embed.js',
