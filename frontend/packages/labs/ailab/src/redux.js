@@ -1,9 +1,7 @@
-import _ from "lodash";
-
 // Action types
 
 const SET_IMPORTED_DATA = "SET_IMPORTED_DATA";
-const SET_METADATA_BY_COLUMN = "SET_METADATA_BY_COLUMN";
+const SET_COLUMNS_BY_DATA_TYPE = "SET_COLUMNS_BY_DATA_TYPE";
 const SET_SELECTED_FEATURES = "SET_SELECTED_FEATURES";
 const SET_LABEL_COLUMN = "SET_LABEL_COLUMN";
 const SET_SHOW_PREDICT = "SET_SHOW_PREDICT";
@@ -16,11 +14,10 @@ export function setImportedData(data) {
   return { type: SET_IMPORTED_DATA, data };
 }
 
-export const setMetaDataByColumn = (column, metadataField, value) => ({
-  type: SET_METADATA_BY_COLUMN,
+export const setColumnsByDataType = (column, dataType) => ({
+  type: SET_COLUMNS_BY_DATA_TYPE,
   column,
-  metadataField,
-  value
+  dataType
 });
 
 export function setSelectedFeatures(selectedFeatures) {
@@ -45,7 +42,7 @@ export function setPrediction(prediction) {
 
 const initialState = {
   data: [],
-  metaDataByColumn: {},
+  columnsByDataType: {},
   selectedFeatures: [],
   labelColumn: undefined,
   showPredict: false,
@@ -62,15 +59,12 @@ export default function rootReducer(state = initialState, action) {
       data: action.data
     };
   }
-  if (action.type === SET_METADATA_BY_COLUMN) {
+  if (action.type === SET_COLUMNS_BY_DATA_TYPE) {
     return {
       ...state,
-      metaDataByColumn: {
-        ...state.metaDataByColumn,
-        [action.column]: {
-          ...state.metaDataByColumn[action.column],
-          [action.metadataField]: action.value
-        }
+      columnsByDataType: {
+        ...state.columnsByDataType,
+        [action.column]: action.dataType
       }
     };
   }
@@ -112,17 +106,9 @@ export function getFeatures(state) {
 }
 
 function filterColumnsByType(state, columnType) {
-  let columnsOfType = [];
-  if (!_.isEmpty(state.metaDataByColumn)) {
-    var filteredObject = _.pickBy(state.metaDataByColumn, function(
-      columnMetaData,
-      column
-    ) {
-      return columnMetaData["dataType"] === columnType;
-    });
-    columnsOfType = Object.keys(filteredObject);
-  }
-  return columnsOfType;
+  return Object.keys(state.columnsByDataType).filter(
+    column => state.columnsByDataType[column] === columnType
+  );
 }
 
 export function getCategoricalColumns(state) {
@@ -148,10 +134,9 @@ export function getContinuousColumns(state) {
 }
 
 export function getSelectableFeatures(state) {
-  return _.pull(
-    getContinuousColumns(state).concat(getCategoricalColumns(state)),
-    state.labelColumn
-  );
+  return getContinuousColumns(state)
+    .concat(getCategoricalColumns(state))
+    .filter(column => column !== state.labelColumn);
 }
 
 function getUniqueOptions(state, column) {
