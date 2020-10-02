@@ -176,4 +176,44 @@ class LessonsControllerTest < ActionController::TestCase
 
     assert_equal 0, LessonActivity.where(id: id_b).count
   end
+
+  test 'add activity section via lesson update' do
+    sign_in @levelbuilder
+
+    old_activity = @lesson.lesson_activities.create(
+      name: 'activity name',
+      position: 1,
+      seeding_key: 'activity-key'
+    )
+
+    @update_params['activities'] = [
+      {
+        id: old_activity.id,
+        name: 'activity name',
+        position: 1,
+        activitySections: [
+          {
+            name: 'section name',
+            position: 1
+          }
+        ]
+      }
+    ].to_json
+
+    put :update, params: @update_params
+
+    assert_redirected_to "/lessons/#{@lesson.id}"
+    @lesson.reload
+
+    assert_equal 1, @lesson.lesson_activities.count
+    new_activity = @lesson.lesson_activities.first
+    assert_equal 'activity name', new_activity.name
+    assert_equal 1, new_activity.position
+    assert_equal old_activity.id, new_activity.id
+
+    assert_equal 1, new_activity.activity_sections.count
+    section = new_activity.activity_sections.first
+    assert_equal 'section name', section.name
+    assert_equal 1, section.position
+  end
 end
