@@ -60,7 +60,9 @@ class ScriptSeedTest < ActiveSupport::TestCase
     ScriptSeed.seed_from_json(ScriptSeed.serialize_seeding_json(script))
 
     assert_equal counts_before, get_counts
-    assert_script_trees_equal(script, Script.find_by!(name: script.name))
+    script_after_seed = Script.find_by!(name: script.name)
+    assert_script_trees_equal(script, script_after_seed)
+    assert_equal script.script_levels.map(&:id), script_after_seed.script_levels.map(&:id)
   end
 
   test 'seed updates lesson groups' do
@@ -171,6 +173,7 @@ class ScriptSeedTest < ActiveSupport::TestCase
   test 'seed deletes script_levels' do
     script = create_script_tree
     original_counts = get_counts
+    original_script_level_ids = script.script_levels.map(&:id)
 
     script_with_deletion, json, script_levels_with_deletion = get_script_and_json_with_change_and_rollback(script) do
       script.script_levels.first.destroy!
@@ -189,6 +192,8 @@ class ScriptSeedTest < ActiveSupport::TestCase
     expected_counts['ScriptLevel'] -= 1
     expected_counts['LevelsScriptLevel'] -= 1
     assert_equal expected_counts, get_counts
+    # We need to preserve the script level ids of the remaining script levels, since teacher feedbacks reference them.
+    assert_equal original_script_level_ids.slice(1, original_script_level_ids.length), script.script_levels.map(&:id)
   end
 
   def frozen_script_levels_with_levels(script)
