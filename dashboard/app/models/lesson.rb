@@ -94,16 +94,8 @@ class Lesson < ActiveRecord::Base
       lesson.reload
 
       Lesson.prevent_multi_page_assessment_outside_final_level(lesson)
-      Lesson.prevent_level_in_lesson_multiple_times(script, lesson)
 
       lesson
-    end
-  end
-
-  def self.prevent_level_in_lesson_multiple_times(script, lesson)
-    script_levels_by_level_ids = lesson.script_levels.group_by {|sl| sl.levels.map(&:id).sort}
-    if script_levels_by_level_ids.any? {|_, v| v.length > 1}
-      raise "Level cannot be added multiple times to one lesson. Lesson key: #{lesson.key} Script name: #{script.name}"
     end
   end
 

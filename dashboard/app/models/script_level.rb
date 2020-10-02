@@ -77,7 +77,7 @@ class ScriptLevel < ActiveRecord::Base
   def self.add_script_levels(script, lesson, raw_script_levels, counters, new_suffix, editor_experiment)
     script_level_position = 0
 
-    raw_script_levels.map do |raw_script_level|
+    script_levels = raw_script_levels.map do |raw_script_level|
       raw_script_level.symbolize_keys!
 
       # variants are deprecated. when cloning a script, retain only the first
@@ -112,6 +112,16 @@ class ScriptLevel < ActiveRecord::Base
       script_level.properties = properties
       script_level.save! if script_level.changed?
       script_level
+    end
+
+    ScriptLevel.prevent_level_in_lesson_multiple_times(script, lesson, script_levels)
+    script_levels
+  end
+
+  def self.prevent_level_in_lesson_multiple_times(script, lesson, script_levels)
+    script_levels_by_level_ids = script_levels.group_by {|sl| sl.levels.map(&:id).sort}
+    if script_levels_by_level_ids.any? {|_, v| v.length > 1}
+      raise "Level cannot be added multiple times to one lesson. Lesson key: #{lesson.key} Script name: #{script.name}"
     end
   end
 
