@@ -64,16 +64,6 @@ export const activityShape = PropTypes.shape({
   activitySections: PropTypes.arrayOf(activitySectionShape)
 });
 
-export const lessonGroupShape = PropTypes.shape({
-  key: PropTypes.string,
-  display_name: PropTypes.string,
-  position: PropTypes.number,
-  user_facing: PropTypes.bool,
-  big_questions: PropTypes.string,
-  description: PropTypes.string,
-  lessons: PropTypes.arrayOf(lessonShape)
-});
-
 export const lessonShape = PropTypes.shape({
   id: PropTypes.number,
   key: PropTypes.string,
@@ -84,4 +74,14 @@ export const lessonShape = PropTypes.shape({
   assessment: PropTypes.bool,
   relativePosition: PropTypes.number,
   levels: PropTypes.arrayOf(levelShape)
+});
+
+export const lessonGroupShape = PropTypes.shape({
+  key: PropTypes.string,
+  display_name: PropTypes.string,
+  position: PropTypes.number,
+  user_facing: PropTypes.bool,
+  big_questions: PropTypes.string,
+  description: PropTypes.string,
+  lessons: PropTypes.arrayOf(lessonShape)
 });
