@@ -1,0 +1,27 @@
+{
+  "script": {
+    "name": "hoc2015",
+    "wrapup_video_id": 140,
+    "hidden": true,
+    "login_required": false,
+    "properties": {
+    },
+    "new_name": null,
+    "family_name": null,
+    "seeding_key": {
+      "script.name": "hoc2015"
+    }
+  },
+  "lesson_groups": [
+
+  ],
+  "lessons": [
+
+  ],
+  "script_levels": [
+
+  ],
+  "levels_script_levels": [
+
+  ]
+}
