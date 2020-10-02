@@ -101,5 +101,26 @@ class LessonsControllerTest < ActionController::TestCase
     @lesson.reload
     assert_equal 'new overview', @lesson.overview
     assert_equal 'new student overview', @lesson.student_overview
+    assert_equal 0, @lesson.lesson_activities.count
+  end
+
+  test 'add activity via lesson update' do
+    sign_in @levelbuilder
+
+    @update_params['activities'] = [
+      name: 'activity name',
+      position: 1
+    ].to_json
+
+    put :update, params: @update_params
+
+    assert_redirected_to "/lessons/#{@lesson.id}"
+    @lesson.reload
+    assert_equal 'new overview', @lesson.overview
+    assert_equal 'new student overview', @lesson.student_overview
+    assert_equal 1, @lesson.lesson_activities.count
+    activity = @lesson.lesson_activities.first
+    assert_equal 'activity name', activity.name
+    assert_equal 1, activity.position
   end
 end
