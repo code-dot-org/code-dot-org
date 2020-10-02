@@ -7,7 +7,8 @@ import {getStore, registerReducers} from '@cdo/apps/redux';
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import getScriptData from '@cdo/apps/util/getScriptData';
 import reducers, {
-  init
+  init,
+  empty_non_user_facing_group
 } from '@cdo/apps/lib/levelbuilder/script-editor/scriptEditorRedux';
 import ScriptEditor from '@cdo/apps/lib/levelbuilder/script-editor/ScriptEditor';
 import {valueOr} from '@cdo/apps/utils';
@@ -38,17 +39,7 @@ export default function initPage(scriptEditorData) {
         }))
     }));
   if (lesson_groups.length === 0) {
-    lesson_groups = [
-      {
-        key: `non-user-facing-lg`,
-        display_name: null,
-        user_facing: false,
-        position: 1,
-        big_questions: '',
-        description: '',
-        lessons: []
-      }
-    ];
+    lesson_groups = [empty_non_user_facing_group];
   }
 
   const locales = scriptEditorData.locales;
