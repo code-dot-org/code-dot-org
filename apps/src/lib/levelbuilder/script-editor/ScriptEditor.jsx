@@ -520,7 +520,7 @@ export default class ScriptEditor extends React.Component {
           </label>
         </CollapsibleEditorSection>
 
-        <CollapsibleEditorSection title="Lessons and Levels">
+        <CollapsibleEditorSection title="Lesson Groups and Lessons">
           {this.props.beta ? (
             <UnitCard />
           ) : (
