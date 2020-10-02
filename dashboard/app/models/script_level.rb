@@ -587,9 +587,7 @@ class ScriptLevel < ActiveRecord::Base
   # @return [Hash<String, String>] all information needed to uniquely identify this object across environments.
   def seeding_key(seed_context, use_existing_level_keys = true)
     my_key = {
-      'script_level.level_keys': get_level_keys(seed_context, use_existing_level_keys),
-      'script_level.chapter': chapter,
-      'script_level.position': position
+      'script_level.level_keys': get_level_keys(seed_context, use_existing_level_keys)
     }
 
     my_lesson = seed_context.lessons.select {|l| l.id == stage_id}.first
