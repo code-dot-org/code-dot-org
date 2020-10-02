@@ -36,6 +36,7 @@ $(document).ready(function() {
         purpose={lessonData.purpose}
         preparation={lessonData.preparation}
         announcements={lessonData.announcements || []}
+        resources={lessonData.resources}
       />
     </Provider>,
     document.getElementById('edit-container')

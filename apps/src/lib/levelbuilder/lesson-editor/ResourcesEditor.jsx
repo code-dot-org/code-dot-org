@@ -1,20 +1,26 @@
+import PropTypes from 'prop-types';
 import React, {Component} from 'react';
+import {resourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
 
 export default class ResourcesEditor extends Component {
+  static propTypes = {
+    resources: PropTypes.arrayOf(resourceShape)
+  };
+
   constructor(props) {
     super(props);
 
+    console.log(props);
     this.state = {
-      resources: [],
+      resources: props.resources || [],
       resourceInput: ''
     };
   }
 
   addResource = e => {
-    console.log('why');
     e.preventDefault();
     var {resources, resourceInput} = this.state;
-    resources.push(resourceInput);
+    resources.push({key: resourceInput});
     this.setState({resources});
   };
 
@@ -28,14 +34,8 @@ export default class ResourcesEditor extends Component {
         <input
           type="hidden"
           name="resources"
-          value={JSON.stringify(this.state.resources)}
+          value={JSON.stringify(this.state.resources.map(r => r.key))}
         />
-        {this.state.resources.map((resource, index) => (
-          <span key={index}>
-            {resource}
-            {'\n'}
-          </span>
-        ))}
         <label>Select a resource or add a new one</label>
         <input
           type="text"
@@ -45,6 +45,24 @@ export default class ResourcesEditor extends Component {
         <button onClick={this.addResource} type="button">
           Add
         </button>
+        <table style={{width: '100%'}}>
+          <thead>
+            <tr>
+              <th style={{width: '20%'}}>Key</th>
+              <th style={{width: '35%'}}>Name</th>
+              <th style={{width: '45%'}}>URL</th>
+            </tr>
+          </thead>
+          <tbody>
+            {this.state.resources.map((resource, index) => (
+              <tr key={resource.key}>
+                <td>{resource.key}</td>
+                <td>{resource.name}</td>
+                <td>{resource.url}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
       </div>
     );
   }

@@ -63,3 +63,9 @@ export const activityShape = PropTypes.shape({
   duration: PropTypes.number,
   activitySections: PropTypes.arrayOf(activitySectionShape)
 });
+
+export const resourceShape = PropTypes.shape({
+  key: PropTypes.string,
+  name: PropTypes.string,
+  url: PropTypes.string
+});
