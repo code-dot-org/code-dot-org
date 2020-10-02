@@ -1795,6 +1795,29 @@ class ScriptTest < ActiveSupport::TestCase
     assert Script.valid_scripts(levelbuilder).any?(&:pilot?)
   end
 
+  test "self.valid_scripts: pilot experiment results not cached" do
+    # This test is a regression test for LP-1578 where Script.valid_scripts
+    # accidentally added pilot courses to the cached results which were then
+    # returned to non-pilot teachers.
+
+    # Start with an empty scripts table and empty cache
+    Plc::CourseUnit.delete_all  # Delete rows that reference script table
+    Script.delete_all
+    Script.clear_cache
+
+    teacher = create :teacher
+    pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
+    coursea_2019 = create :script, name: 'coursea-2019'
+    coursea_2020 = create :script, name: 'coursea-2020', hidden: true, pilot_experiment: 'my-experiment'
+
+    assert_equal [coursea_2019], Script.valid_scripts(teacher)
+    assert_equal [coursea_2019, coursea_2020], Script.valid_scripts(pilot_teacher)
+
+    # This call to valid_scripts will hit the cache; verify that the call to
+    # Script.valid_scripts(pilot_teacher) did not alter the cache.
+    assert_equal [coursea_2019], Script.valid_scripts(teacher)
+  end
+
   test "get_assessment_script_levels returns an empty list if no level groups" do
     script = create(:script, name: 'test-no-levels')
     level_group_script_level = script.get_assessment_script_levels
