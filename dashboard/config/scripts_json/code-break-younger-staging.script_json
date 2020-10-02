@@ -195,8 +195,6 @@
         "script_level.level_keys": [
           "CodeBreak Episode Placeholder"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Episode 1 - Algorithms with Hill Harper",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -218,8 +216,6 @@
         "script_level.level_keys": [
           "Episode 1 Instructions"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Episode 1 - Algorithms with Hill Harper",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -241,8 +237,6 @@
         "script_level.level_keys": [
           "CodeBreak E01 Practice"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "Episode 1 - Algorithms with Hill Harper",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -264,8 +258,6 @@
         "script_level.level_keys": [
           "Episode 1 Challenge Instructions"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "Episode 1 - Algorithms with Hill Harper",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -287,8 +279,6 @@
         "script_level.level_keys": [
           "CodeBreak E01 Challenges"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 5,
         "lesson.key": "Episode 1 - Algorithms with Hill Harper",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -310,8 +300,6 @@
         "script_level.level_keys": [
           "Episode 1 Share"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 6,
         "lesson.key": "Episode 1 - Algorithms with Hill Harper",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -333,8 +321,6 @@
         "script_level.level_keys": [
           "CodeBreak Episode 2 Placeholder"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 1,
         "lesson.key": "Episode 2 - Prototypes with Mark Cuban & Lyndsey Scott",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -356,8 +342,6 @@
         "script_level.level_keys": [
           "Episode 2 Instructions"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 2,
         "lesson.key": "Episode 2 - Prototypes with Mark Cuban & Lyndsey Scott",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -379,8 +363,6 @@
         "script_level.level_keys": [
           "Episode 2 Challenge Instructions"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 3,
         "lesson.key": "Episode 2 - Prototypes with Mark Cuban & Lyndsey Scott",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -402,8 +384,6 @@
         "script_level.level_keys": [
           "CodeBreak E02 Challenges"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 4,
         "lesson.key": "Episode 2 - Prototypes with Mark Cuban & Lyndsey Scott",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -425,8 +405,6 @@
         "script_level.level_keys": [
           "Episode 2 Share"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 5,
         "lesson.key": "Episode 2 - Prototypes with Mark Cuban & Lyndsey Scott",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -448,8 +426,6 @@
         "script_level.level_keys": [
           "CodeBreak Episode 3 Placeholder"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 1,
         "lesson.key": "Episode 3 - Encryption with Ashton Kutcher & Mia Gil Epner",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -471,8 +447,6 @@
         "script_level.level_keys": [
           "Episode 3 Instructions"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 2,
         "lesson.key": "Episode 3 - Encryption with Ashton Kutcher & Mia Gil Epner",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -494,8 +468,6 @@
         "script_level.level_keys": [
           "CodeBreak E03 Practice"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 3,
         "lesson.key": "Episode 3 - Encryption with Ashton Kutcher & Mia Gil Epner",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -517,8 +489,6 @@
         "script_level.level_keys": [
           "CodeBreak Episode 3 Video"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 4,
         "lesson.key": "Episode 3 - Encryption with Ashton Kutcher & Mia Gil Epner",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -540,8 +510,6 @@
         "script_level.level_keys": [
           "Episode 3 Challenge Instructions"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 5,
         "lesson.key": "Episode 3 - Encryption with Ashton Kutcher & Mia Gil Epner",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -563,8 +531,6 @@
         "script_level.level_keys": [
           "CodeBreak E03 Int Challenge"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 6,
         "lesson.key": "Episode 3 - Encryption with Ashton Kutcher & Mia Gil Epner",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -586,8 +552,6 @@
         "script_level.level_keys": [
           "Episode 3 Share"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 7,
         "lesson.key": "Episode 3 - Encryption with Ashton Kutcher & Mia Gil Epner",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -609,8 +573,6 @@
         "script_level.level_keys": [
           "CodeBreak Episode 4 Placeholder"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 1,
         "lesson.key": "Episode 4 - Digital Information with Mike Krieger & Alice Keeler",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -632,8 +594,6 @@
         "script_level.level_keys": [
           "Episode 4 Instructions"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 2,
         "lesson.key": "Episode 4 - Digital Information with Mike Krieger & Alice Keeler",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -655,8 +615,6 @@
         "script_level.level_keys": [
           "CodeBreak E04 Practice"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 3,
         "lesson.key": "Episode 4 - Digital Information with Mike Krieger & Alice Keeler",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -678,8 +636,6 @@
         "script_level.level_keys": [
           "Episode 4 Challenge Instructions"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 4,
         "lesson.key": "Episode 4 - Digital Information with Mike Krieger & Alice Keeler",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -701,8 +657,6 @@
         "script_level.level_keys": [
           "CodeBreak E04 Challenges"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 5,
         "lesson.key": "Episode 4 - Digital Information with Mike Krieger & Alice Keeler",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -724,8 +678,6 @@
         "script_level.level_keys": [
           "Episode 4 Share"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 6,
         "lesson.key": "Episode 4 - Digital Information with Mike Krieger & Alice Keeler",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -747,8 +699,6 @@
         "script_level.level_keys": [
           "CodeBreak Episode 5 Placeholder"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 1,
         "lesson.key": "Episode 5 - Simulations & Data with Bill Gates",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -770,8 +720,6 @@
         "script_level.level_keys": [
           "Episode 5 Instructions - Younger"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 2,
         "lesson.key": "Episode 5 - Simulations & Data with Bill Gates",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -793,8 +741,6 @@
         "script_level.level_keys": [
           "CodeBreak E05 Beg Practice"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 3,
         "lesson.key": "Episode 5 - Simulations & Data with Bill Gates",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -816,8 +762,6 @@
         "script_level.level_keys": [
           "Episode 5 Challenge Instructions Younger"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 4,
         "lesson.key": "Episode 5 - Simulations & Data with Bill Gates",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -839,8 +783,6 @@
         "script_level.level_keys": [
           "CodeBreak E05 Challenges Younger"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 5,
         "lesson.key": "Episode 5 - Simulations & Data with Bill Gates",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -862,8 +804,6 @@
         "script_level.level_keys": [
           "Episode 5 Share"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 6,
         "lesson.key": "Episode 5 - Simulations & Data with Bill Gates",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -885,8 +825,6 @@
         "script_level.level_keys": [
           "CodeBreak Episode 6 Placeholder"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 1,
         "lesson.key": "The Internet with Keegan-Michael Key & Vint Cerf",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -908,8 +846,6 @@
         "script_level.level_keys": [
           "Episode 6 Instructions younger"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 2,
         "lesson.key": "The Internet with Keegan-Michael Key & Vint Cerf",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -931,8 +867,6 @@
         "script_level.level_keys": [
           "Episode 6 Challenge Instructions younger"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 3,
         "lesson.key": "The Internet with Keegan-Michael Key & Vint Cerf",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -954,8 +888,6 @@
         "script_level.level_keys": [
           "Episode 6 Share"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 4,
         "lesson.key": "The Internet with Keegan-Michael Key & Vint Cerf",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -977,8 +909,6 @@
         "script_level.level_keys": [
           "CodeBreak Episode 7 Placeholder"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 1,
         "lesson.key": "Conditionals with Sal Khan and Flo Vaughn",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -1000,8 +930,6 @@
         "script_level.level_keys": [
           "Episode 7 Instructions - younger"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 2,
         "lesson.key": "Conditionals with Sal Khan and Flo Vaughn",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -1023,8 +951,6 @@
         "script_level.level_keys": [
           "courseD_bee_conditionalsVid1_2019"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 3,
         "lesson.key": "Conditionals with Sal Khan and Flo Vaughn",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -1046,8 +972,6 @@
         "script_level.level_keys": [
           "courseD_bee_conditionals1_predict1_2019"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 4,
         "lesson.key": "Conditionals with Sal Khan and Flo Vaughn",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -1069,8 +993,6 @@
         "script_level.level_keys": [
           "courseD_bee_conditionals2_2019"
         ],
-        "script_level.chapter": 39,
-        "script_level.position": 5,
         "lesson.key": "Conditionals with Sal Khan and Flo Vaughn",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -1092,8 +1014,6 @@
         "script_level.level_keys": [
           "courseD_bee_conditionals3_2019"
         ],
-        "script_level.chapter": 40,
-        "script_level.position": 6,
         "lesson.key": "Conditionals with Sal Khan and Flo Vaughn",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -1115,8 +1035,6 @@
         "script_level.level_keys": [
           "courseD_bee_conditionals4_2019"
         ],
-        "script_level.chapter": 41,
-        "script_level.position": 7,
         "lesson.key": "Conditionals with Sal Khan and Flo Vaughn",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -1138,8 +1056,6 @@
         "script_level.level_keys": [
           "courseD_bee_conditionals5_2019"
         ],
-        "script_level.chapter": 42,
-        "script_level.position": 8,
         "lesson.key": "Conditionals with Sal Khan and Flo Vaughn",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -1161,8 +1077,6 @@
         "script_level.level_keys": [
           "courseD_bee_conditionals6_2019"
         ],
-        "script_level.chapter": 43,
-        "script_level.position": 9,
         "lesson.key": "Conditionals with Sal Khan and Flo Vaughn",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -1184,8 +1098,6 @@
         "script_level.level_keys": [
           "courseD_bee_conditionals7_2019"
         ],
-        "script_level.chapter": 44,
-        "script_level.position": 10,
         "lesson.key": "Conditionals with Sal Khan and Flo Vaughn",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -1207,8 +1119,6 @@
         "script_level.level_keys": [
           "courseD_bee_conditionals7_predict2_2019"
         ],
-        "script_level.chapter": 45,
-        "script_level.position": 11,
         "lesson.key": "Conditionals with Sal Khan and Flo Vaughn",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -1231,8 +1141,6 @@
         "script_level.level_keys": [
           "courseD_bee_conditionals8_2019"
         ],
-        "script_level.chapter": 46,
-        "script_level.position": 12,
         "lesson.key": "Conditionals with Sal Khan and Flo Vaughn",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -1254,8 +1162,6 @@
         "script_level.level_keys": [
           "courseD_bee_conditionals9_2019"
         ],
-        "script_level.chapter": 47,
-        "script_level.position": 13,
         "lesson.key": "Conditionals with Sal Khan and Flo Vaughn",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -1277,8 +1183,6 @@
         "script_level.level_keys": [
           "courseD_bee_conditionals10_2019"
         ],
-        "script_level.chapter": 48,
-        "script_level.position": 14,
         "lesson.key": "Conditionals with Sal Khan and Flo Vaughn",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -1300,8 +1204,6 @@
         "script_level.level_keys": [
           "courseD_bee_conditionalsVidIfElse_2019"
         ],
-        "script_level.chapter": 49,
-        "script_level.position": 15,
         "lesson.key": "Conditionals with Sal Khan and Flo Vaughn",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -1323,8 +1225,6 @@
         "script_level.level_keys": [
           "courseD_bee_conditionals_challenge1_2019"
         ],
-        "script_level.chapter": 50,
-        "script_level.position": 16,
         "lesson.key": "Conditionals with Sal Khan and Flo Vaughn",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -1346,8 +1246,6 @@
         "script_level.level_keys": [
           "courseD_bee_conditionals_challenge2_2019"
         ],
-        "script_level.chapter": 51,
-        "script_level.position": 17,
         "lesson.key": "Conditionals with Sal Khan and Flo Vaughn",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -1369,8 +1267,6 @@
         "script_level.level_keys": [
           "Episode 7 Challenge Instructions - younger"
         ],
-        "script_level.chapter": 52,
-        "script_level.position": 18,
         "lesson.key": "Conditionals with Sal Khan and Flo Vaughn",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -1392,8 +1288,6 @@
         "script_level.level_keys": [
           "Episode 7 Share"
         ],
-        "script_level.chapter": 53,
-        "script_level.position": 19,
         "lesson.key": "Conditionals with Sal Khan and Flo Vaughn",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -1415,8 +1309,6 @@
         "script_level.level_keys": [
           "CodeBreak Episode 8 Placeholder"
         ],
-        "script_level.chapter": 54,
-        "script_level.position": 1,
         "lesson.key": "Variables with Yara Shahidi & Fuzzy Khosrowshahi",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -1438,8 +1330,6 @@
         "script_level.level_keys": [
           "Episode 8 Instructions younger"
         ],
-        "script_level.chapter": 55,
-        "script_level.position": 2,
         "lesson.key": "Variables with Yara Shahidi & Fuzzy Khosrowshahi",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -1461,8 +1351,6 @@
         "script_level.level_keys": [
           "courseF_bee_variables_1_2019"
         ],
-        "script_level.chapter": 56,
-        "script_level.position": 3,
         "lesson.key": "Variables with Yara Shahidi & Fuzzy Khosrowshahi",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -1484,8 +1372,6 @@
         "script_level.level_keys": [
           "courseF_bee_variables_2_2019"
         ],
-        "script_level.chapter": 57,
-        "script_level.position": 4,
         "lesson.key": "Variables with Yara Shahidi & Fuzzy Khosrowshahi",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -1507,8 +1393,6 @@
         "script_level.level_keys": [
           "courseF_bee_variables_3_2019"
         ],
-        "script_level.chapter": 58,
-        "script_level.position": 5,
         "lesson.key": "Variables with Yara Shahidi & Fuzzy Khosrowshahi",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -1530,8 +1414,6 @@
         "script_level.level_keys": [
           "courseF_bee_variables_4_2019"
         ],
-        "script_level.chapter": 59,
-        "script_level.position": 6,
         "lesson.key": "Variables with Yara Shahidi & Fuzzy Khosrowshahi",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -1553,8 +1435,6 @@
         "script_level.level_keys": [
           "courseF_bee_variables_5_2019"
         ],
-        "script_level.chapter": 60,
-        "script_level.position": 7,
         "lesson.key": "Variables with Yara Shahidi & Fuzzy Khosrowshahi",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -1577,8 +1457,6 @@
         "script_level.level_keys": [
           "courseF_bee_variables_6_2019"
         ],
-        "script_level.chapter": 61,
-        "script_level.position": 8,
         "lesson.key": "Variables with Yara Shahidi & Fuzzy Khosrowshahi",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -1600,8 +1478,6 @@
         "script_level.level_keys": [
           "courseF_bee_variables_7_2019"
         ],
-        "script_level.chapter": 62,
-        "script_level.position": 9,
         "lesson.key": "Variables with Yara Shahidi & Fuzzy Khosrowshahi",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -1623,8 +1499,6 @@
         "script_level.level_keys": [
           "courseF_bee_variables_8_2019"
         ],
-        "script_level.chapter": 63,
-        "script_level.position": 10,
         "lesson.key": "Variables with Yara Shahidi & Fuzzy Khosrowshahi",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -1646,8 +1520,6 @@
         "script_level.level_keys": [
           "Episode 8 Challenge Instructions younger"
         ],
-        "script_level.chapter": 64,
-        "script_level.position": 11,
         "lesson.key": "Variables with Yara Shahidi & Fuzzy Khosrowshahi",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -1669,8 +1541,6 @@
         "script_level.level_keys": [
           "CodeBreak E08 Beg Challenge 2"
         ],
-        "script_level.chapter": 65,
-        "script_level.position": 12,
         "lesson.key": "Variables with Yara Shahidi & Fuzzy Khosrowshahi",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -1692,8 +1562,6 @@
         "script_level.level_keys": [
           "Episode 8 Share"
         ],
-        "script_level.chapter": 66,
-        "script_level.position": 13,
         "lesson.key": "Variables with Yara Shahidi & Fuzzy Khosrowshahi",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -1715,8 +1583,6 @@
         "script_level.level_keys": [
           "CodeBreak Episode 9 Placeholder"
         ],
-        "script_level.chapter": 67,
-        "script_level.position": 1,
         "lesson.key": "Events with Macklemore & Scott Forstall",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -1738,8 +1604,6 @@
         "script_level.level_keys": [
           "Episode 9 Instructions younger"
         ],
-        "script_level.chapter": 68,
-        "script_level.position": 2,
         "lesson.key": "Events with Macklemore & Scott Forstall",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -1761,8 +1625,6 @@
         "script_level.level_keys": [
           "CourseD_Dance_Party_01"
         ],
-        "script_level.chapter": 69,
-        "script_level.position": 3,
         "lesson.key": "Events with Macklemore & Scott Forstall",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -1784,8 +1646,6 @@
         "script_level.level_keys": [
           "CourseD_Dance_Party_02"
         ],
-        "script_level.chapter": 70,
-        "script_level.position": 4,
         "lesson.key": "Events with Macklemore & Scott Forstall",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -1807,8 +1667,6 @@
         "script_level.level_keys": [
           "CourseD_Dance_Party_03"
         ],
-        "script_level.chapter": 71,
-        "script_level.position": 5,
         "lesson.key": "Events with Macklemore & Scott Forstall",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -1830,8 +1688,6 @@
         "script_level.level_keys": [
           "CourseD_Dance_Party_04"
         ],
-        "script_level.chapter": 72,
-        "script_level.position": 6,
         "lesson.key": "Events with Macklemore & Scott Forstall",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -1853,8 +1709,6 @@
         "script_level.level_keys": [
           "CourseD_Dance_Party_05"
         ],
-        "script_level.chapter": 73,
-        "script_level.position": 7,
         "lesson.key": "Events with Macklemore & Scott Forstall",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -1876,8 +1730,6 @@
         "script_level.level_keys": [
           "CourseD_Dance_Party_06"
         ],
-        "script_level.chapter": 74,
-        "script_level.position": 8,
         "lesson.key": "Events with Macklemore & Scott Forstall",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -1899,8 +1751,6 @@
         "script_level.level_keys": [
           "CourseD_Dance_Party_08"
         ],
-        "script_level.chapter": 75,
-        "script_level.position": 9,
         "lesson.key": "Events with Macklemore & Scott Forstall",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -1922,8 +1772,6 @@
         "script_level.level_keys": [
           "CourseD_Dance_Party_09"
         ],
-        "script_level.chapter": 76,
-        "script_level.position": 10,
         "lesson.key": "Events with Macklemore & Scott Forstall",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -1945,8 +1793,6 @@
         "script_level.level_keys": [
           "CourseD_Dance_Party_10"
         ],
-        "script_level.chapter": 77,
-        "script_level.position": 11,
         "lesson.key": "Events with Macklemore & Scott Forstall",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -1968,8 +1814,6 @@
         "script_level.level_keys": [
           "CourseD_Dance_Party_11"
         ],
-        "script_level.chapter": 78,
-        "script_level.position": 12,
         "lesson.key": "Events with Macklemore & Scott Forstall",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -1991,8 +1835,6 @@
         "script_level.level_keys": [
           "CourseD_Dance_Party_11b"
         ],
-        "script_level.chapter": 79,
-        "script_level.position": 13,
         "lesson.key": "Events with Macklemore & Scott Forstall",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -2014,8 +1856,6 @@
         "script_level.level_keys": [
           "CourseD_Dance_Party_11_5"
         ],
-        "script_level.chapter": 80,
-        "script_level.position": 14,
         "lesson.key": "Events with Macklemore & Scott Forstall",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -2037,8 +1877,6 @@
         "script_level.level_keys": [
           "Episode 9 Challenge Instructions younger"
         ],
-        "script_level.chapter": 81,
-        "script_level.position": 15,
         "lesson.key": "Events with Macklemore & Scott Forstall",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -2060,8 +1898,6 @@
         "script_level.level_keys": [
           "CodeBreak Dance Party Challenge"
         ],
-        "script_level.chapter": 82,
-        "script_level.position": 16,
         "lesson.key": "Events with Macklemore & Scott Forstall",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -2083,8 +1919,6 @@
         "script_level.level_keys": [
           "Episode 9 Share"
         ],
-        "script_level.chapter": 83,
-        "script_level.position": 17,
         "lesson.key": "Events with Macklemore & Scott Forstall",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -2106,8 +1940,6 @@
         "script_level.level_keys": [
           "CodeBreak Episode 11 Placeholder"
         ],
-        "script_level.chapter": 84,
-        "script_level.position": 1,
         "lesson.key": "Abstraction with Susan Wojcicki & China Anne McClain",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -2129,8 +1961,6 @@
         "script_level.level_keys": [
           "Episode 11 Instructions"
         ],
-        "script_level.chapter": 85,
-        "script_level.position": 2,
         "lesson.key": "Abstraction with Susan Wojcicki & China Anne McClain",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -2152,8 +1982,6 @@
         "script_level.level_keys": [
           "MC_HOC_2017_01_RETRY_2019"
         ],
-        "script_level.chapter": 86,
-        "script_level.position": 3,
         "lesson.key": "Abstraction with Susan Wojcicki & China Anne McClain",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -2175,8 +2003,6 @@
         "script_level.level_keys": [
           "MC_HOC_2017_02_Cole_2019"
         ],
-        "script_level.chapter": 87,
-        "script_level.position": 4,
         "lesson.key": "Abstraction with Susan Wojcicki & China Anne McClain",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -2198,8 +2024,6 @@
         "script_level.level_keys": [
           "MC_HOC_2017_03_Cole_2019"
         ],
-        "script_level.chapter": 88,
-        "script_level.position": 5,
         "lesson.key": "Abstraction with Susan Wojcicki & China Anne McClain",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -2221,8 +2045,6 @@
         "script_level.level_keys": [
           "MC_HOC_2017_04_Cole_2019"
         ],
-        "script_level.chapter": 89,
-        "script_level.position": 6,
         "lesson.key": "Abstraction with Susan Wojcicki & China Anne McClain",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -2244,8 +2066,6 @@
         "script_level.level_keys": [
           "MC_HOC_2017_04POINT5_RYAN_2019"
         ],
-        "script_level.chapter": 90,
-        "script_level.position": 7,
         "lesson.key": "Abstraction with Susan Wojcicki & China Anne McClain",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -2267,8 +2087,6 @@
         "script_level.level_keys": [
           "MC_HOC_2017_05_Cole_2019"
         ],
-        "script_level.chapter": 91,
-        "script_level.position": 8,
         "lesson.key": "Abstraction with Susan Wojcicki & China Anne McClain",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -2290,8 +2108,6 @@
         "script_level.level_keys": [
           "MC_HOC_2017_06_Cole_2019"
         ],
-        "script_level.chapter": 92,
-        "script_level.position": 9,
         "lesson.key": "Abstraction with Susan Wojcicki & China Anne McClain",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -2313,8 +2129,6 @@
         "script_level.level_keys": [
           "Function intro Ryan_2019"
         ],
-        "script_level.chapter": 93,
-        "script_level.position": 10,
         "lesson.key": "Abstraction with Susan Wojcicki & China Anne McClain",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -2336,8 +2150,6 @@
         "script_level.level_keys": [
           "MC_HOC_2017_07_Cole_2019"
         ],
-        "script_level.chapter": 94,
-        "script_level.position": 11,
         "lesson.key": "Abstraction with Susan Wojcicki & China Anne McClain",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -2359,8 +2171,6 @@
         "script_level.level_keys": [
           "MC_HOC_2017_10_RETRY_2019"
         ],
-        "script_level.chapter": 95,
-        "script_level.position": 12,
         "lesson.key": "Abstraction with Susan Wojcicki & China Anne McClain",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -2382,8 +2192,6 @@
         "script_level.level_keys": [
           "MC_HOC_2017_Ali_2019"
         ],
-        "script_level.chapter": 96,
-        "script_level.position": 13,
         "lesson.key": "Abstraction with Susan Wojcicki & China Anne McClain",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -2405,8 +2213,6 @@
         "script_level.level_keys": [
           "MC_HOC_2017_FP20x20_2019"
         ],
-        "script_level.chapter": 97,
-        "script_level.position": 14,
         "lesson.key": "Abstraction with Susan Wojcicki & China Anne McClain",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -2428,8 +2234,6 @@
         "script_level.level_keys": [
           "Episode 11 Challenge Instructions younger"
         ],
-        "script_level.chapter": 98,
-        "script_level.position": 15,
         "lesson.key": "Abstraction with Susan Wojcicki & China Anne McClain",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -2451,8 +2255,6 @@
         "script_level.level_keys": [
           "CodeBreak E11 Beg Challeng"
         ],
-        "script_level.chapter": 99,
-        "script_level.position": 16,
         "lesson.key": "Abstraction with Susan Wojcicki & China Anne McClain",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -2474,8 +2276,6 @@
         "script_level.level_keys": [
           "Episode 11 Share"
         ],
-        "script_level.chapter": 100,
-        "script_level.position": 17,
         "lesson.key": "Abstraction with Susan Wojcicki & China Anne McClain",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -2497,8 +2297,6 @@
         "script_level.level_keys": [
           "CodeBreak Episode 12 Placeholder"
         ],
-        "script_level.chapter": 101,
-        "script_level.position": 1,
         "lesson.key": "Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia Mineya",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -2520,8 +2318,6 @@
         "script_level.level_keys": [
           "Episode 12 Instructions"
         ],
-        "script_level.chapter": 102,
-        "script_level.position": 2,
         "lesson.key": "Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia Mineya",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -2543,8 +2339,6 @@
         "script_level.level_keys": [
           "CodeBreak E12 Practice Mike2"
         ],
-        "script_level.chapter": 103,
-        "script_level.position": 3,
         "lesson.key": "Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia Mineya",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -2566,8 +2360,6 @@
         "script_level.level_keys": [
           "Episode 12 Challenge Instructions younger"
         ],
-        "script_level.chapter": 104,
-        "script_level.position": 4,
         "lesson.key": "Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia Mineya",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -2589,8 +2381,6 @@
         "script_level.level_keys": [
           "CodeBreak E12 Practice Mike"
         ],
-        "script_level.chapter": 105,
-        "script_level.position": 5,
         "lesson.key": "Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia Mineya",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -2612,8 +2402,6 @@
         "script_level.level_keys": [
           "Episode 12 Share"
         ],
-        "script_level.chapter": 106,
-        "script_level.position": 6,
         "lesson.key": "Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia Mineya",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -2630,8 +2418,6 @@
         "script_level.level_keys": [
           "CodeBreak Episode Placeholder"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Episode 1 - Algorithms with Hill Harper",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -2643,8 +2429,6 @@
         "script_level.level_keys": [
           "Episode 1 Instructions"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Episode 1 - Algorithms with Hill Harper",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -2656,8 +2440,6 @@
         "script_level.level_keys": [
           "CodeBreak E01 Practice"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "Episode 1 - Algorithms with Hill Harper",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -2669,8 +2451,6 @@
         "script_level.level_keys": [
           "Episode 1 Challenge Instructions"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "Episode 1 - Algorithms with Hill Harper",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -2682,8 +2462,6 @@
         "script_level.level_keys": [
           "CodeBreak E01 Challenges"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 5,
         "lesson.key": "Episode 1 - Algorithms with Hill Harper",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -2695,8 +2473,6 @@
         "script_level.level_keys": [
           "Episode 1 Share"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 6,
         "lesson.key": "Episode 1 - Algorithms with Hill Harper",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -2708,8 +2484,6 @@
         "script_level.level_keys": [
           "CodeBreak Episode 2 Placeholder"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 1,
         "lesson.key": "Episode 2 - Prototypes with Mark Cuban & Lyndsey Scott",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -2721,8 +2495,6 @@
         "script_level.level_keys": [
           "Episode 2 Instructions"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 2,
         "lesson.key": "Episode 2 - Prototypes with Mark Cuban & Lyndsey Scott",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -2734,8 +2506,6 @@
         "script_level.level_keys": [
           "Episode 2 Challenge Instructions"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 3,
         "lesson.key": "Episode 2 - Prototypes with Mark Cuban & Lyndsey Scott",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -2747,8 +2517,6 @@
         "script_level.level_keys": [
           "CodeBreak E02 Challenges"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 4,
         "lesson.key": "Episode 2 - Prototypes with Mark Cuban & Lyndsey Scott",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -2760,8 +2528,6 @@
         "script_level.level_keys": [
           "Episode 2 Share"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 5,
         "lesson.key": "Episode 2 - Prototypes with Mark Cuban & Lyndsey Scott",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -2773,8 +2539,6 @@
         "script_level.level_keys": [
           "CodeBreak Episode 3 Placeholder"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 1,
         "lesson.key": "Episode 3 - Encryption with Ashton Kutcher & Mia Gil Epner",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -2786,8 +2550,6 @@
         "script_level.level_keys": [
           "Episode 3 Instructions"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 2,
         "lesson.key": "Episode 3 - Encryption with Ashton Kutcher & Mia Gil Epner",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -2799,8 +2561,6 @@
         "script_level.level_keys": [
           "CodeBreak E03 Practice"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 3,
         "lesson.key": "Episode 3 - Encryption with Ashton Kutcher & Mia Gil Epner",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -2812,8 +2572,6 @@
         "script_level.level_keys": [
           "CodeBreak Episode 3 Video"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 4,
         "lesson.key": "Episode 3 - Encryption with Ashton Kutcher & Mia Gil Epner",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -2825,8 +2583,6 @@
         "script_level.level_keys": [
           "Episode 3 Challenge Instructions"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 5,
         "lesson.key": "Episode 3 - Encryption with Ashton Kutcher & Mia Gil Epner",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -2838,8 +2594,6 @@
         "script_level.level_keys": [
           "CodeBreak E03 Int Challenge"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 6,
         "lesson.key": "Episode 3 - Encryption with Ashton Kutcher & Mia Gil Epner",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -2851,8 +2605,6 @@
         "script_level.level_keys": [
           "Episode 3 Share"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 7,
         "lesson.key": "Episode 3 - Encryption with Ashton Kutcher & Mia Gil Epner",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -2864,8 +2616,6 @@
         "script_level.level_keys": [
           "CodeBreak Episode 4 Placeholder"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 1,
         "lesson.key": "Episode 4 - Digital Information with Mike Krieger & Alice Keeler",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -2877,8 +2627,6 @@
         "script_level.level_keys": [
           "Episode 4 Instructions"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 2,
         "lesson.key": "Episode 4 - Digital Information with Mike Krieger & Alice Keeler",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -2890,8 +2638,6 @@
         "script_level.level_keys": [
           "CodeBreak E04 Practice"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 3,
         "lesson.key": "Episode 4 - Digital Information with Mike Krieger & Alice Keeler",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -2903,8 +2649,6 @@
         "script_level.level_keys": [
           "Episode 4 Challenge Instructions"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 4,
         "lesson.key": "Episode 4 - Digital Information with Mike Krieger & Alice Keeler",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -2916,8 +2660,6 @@
         "script_level.level_keys": [
           "CodeBreak E04 Challenges"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 5,
         "lesson.key": "Episode 4 - Digital Information with Mike Krieger & Alice Keeler",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -2929,8 +2671,6 @@
         "script_level.level_keys": [
           "Episode 4 Share"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 6,
         "lesson.key": "Episode 4 - Digital Information with Mike Krieger & Alice Keeler",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -2942,8 +2682,6 @@
         "script_level.level_keys": [
           "CodeBreak Episode 5 Placeholder"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 1,
         "lesson.key": "Episode 5 - Simulations & Data with Bill Gates",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -2955,8 +2693,6 @@
         "script_level.level_keys": [
           "Episode 5 Instructions - Younger"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 2,
         "lesson.key": "Episode 5 - Simulations & Data with Bill Gates",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -2968,8 +2704,6 @@
         "script_level.level_keys": [
           "CodeBreak E05 Beg Practice"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 3,
         "lesson.key": "Episode 5 - Simulations & Data with Bill Gates",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -2981,8 +2715,6 @@
         "script_level.level_keys": [
           "Episode 5 Challenge Instructions Younger"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 4,
         "lesson.key": "Episode 5 - Simulations & Data with Bill Gates",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -2994,8 +2726,6 @@
         "script_level.level_keys": [
           "CodeBreak E05 Challenges Younger"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 5,
         "lesson.key": "Episode 5 - Simulations & Data with Bill Gates",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -3007,8 +2737,6 @@
         "script_level.level_keys": [
           "Episode 5 Share"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 6,
         "lesson.key": "Episode 5 - Simulations & Data with Bill Gates",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -3020,8 +2748,6 @@
         "script_level.level_keys": [
           "CodeBreak Episode 6 Placeholder"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 1,
         "lesson.key": "The Internet with Keegan-Michael Key & Vint Cerf",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -3033,8 +2759,6 @@
         "script_level.level_keys": [
           "Episode 6 Instructions younger"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 2,
         "lesson.key": "The Internet with Keegan-Michael Key & Vint Cerf",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -3046,8 +2770,6 @@
         "script_level.level_keys": [
           "Episode 6 Challenge Instructions younger"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 3,
         "lesson.key": "The Internet with Keegan-Michael Key & Vint Cerf",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -3059,8 +2781,6 @@
         "script_level.level_keys": [
           "Episode 6 Share"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 4,
         "lesson.key": "The Internet with Keegan-Michael Key & Vint Cerf",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -3072,8 +2792,6 @@
         "script_level.level_keys": [
           "CodeBreak Episode 7 Placeholder"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 1,
         "lesson.key": "Conditionals with Sal Khan and Flo Vaughn",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -3085,8 +2803,6 @@
         "script_level.level_keys": [
           "Episode 7 Instructions - younger"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 2,
         "lesson.key": "Conditionals with Sal Khan and Flo Vaughn",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -3098,8 +2814,6 @@
         "script_level.level_keys": [
           "courseD_bee_conditionalsVid1_2019"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 3,
         "lesson.key": "Conditionals with Sal Khan and Flo Vaughn",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -3111,8 +2825,6 @@
         "script_level.level_keys": [
           "courseD_bee_conditionals1_predict1_2019"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 4,
         "lesson.key": "Conditionals with Sal Khan and Flo Vaughn",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -3124,8 +2836,6 @@
         "script_level.level_keys": [
           "courseD_bee_conditionals2_2019"
         ],
-        "script_level.chapter": 39,
-        "script_level.position": 5,
         "lesson.key": "Conditionals with Sal Khan and Flo Vaughn",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -3137,8 +2847,6 @@
         "script_level.level_keys": [
           "courseD_bee_conditionals3_2019"
         ],
-        "script_level.chapter": 40,
-        "script_level.position": 6,
         "lesson.key": "Conditionals with Sal Khan and Flo Vaughn",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -3150,8 +2858,6 @@
         "script_level.level_keys": [
           "courseD_bee_conditionals4_2019"
         ],
-        "script_level.chapter": 41,
-        "script_level.position": 7,
         "lesson.key": "Conditionals with Sal Khan and Flo Vaughn",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -3163,8 +2869,6 @@
         "script_level.level_keys": [
           "courseD_bee_conditionals5_2019"
         ],
-        "script_level.chapter": 42,
-        "script_level.position": 8,
         "lesson.key": "Conditionals with Sal Khan and Flo Vaughn",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -3176,8 +2880,6 @@
         "script_level.level_keys": [
           "courseD_bee_conditionals6_2019"
         ],
-        "script_level.chapter": 43,
-        "script_level.position": 9,
         "lesson.key": "Conditionals with Sal Khan and Flo Vaughn",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -3189,8 +2891,6 @@
         "script_level.level_keys": [
           "courseD_bee_conditionals7_2019"
         ],
-        "script_level.chapter": 44,
-        "script_level.position": 10,
         "lesson.key": "Conditionals with Sal Khan and Flo Vaughn",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -3202,8 +2902,6 @@
         "script_level.level_keys": [
           "courseD_bee_conditionals7_predict2_2019"
         ],
-        "script_level.chapter": 45,
-        "script_level.position": 11,
         "lesson.key": "Conditionals with Sal Khan and Flo Vaughn",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -3215,8 +2913,6 @@
         "script_level.level_keys": [
           "courseD_bee_conditionals8_2019"
         ],
-        "script_level.chapter": 46,
-        "script_level.position": 12,
         "lesson.key": "Conditionals with Sal Khan and Flo Vaughn",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -3228,8 +2924,6 @@
         "script_level.level_keys": [
           "courseD_bee_conditionals9_2019"
         ],
-        "script_level.chapter": 47,
-        "script_level.position": 13,
         "lesson.key": "Conditionals with Sal Khan and Flo Vaughn",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -3241,8 +2935,6 @@
         "script_level.level_keys": [
           "courseD_bee_conditionals10_2019"
         ],
-        "script_level.chapter": 48,
-        "script_level.position": 14,
         "lesson.key": "Conditionals with Sal Khan and Flo Vaughn",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -3254,8 +2946,6 @@
         "script_level.level_keys": [
           "courseD_bee_conditionalsVidIfElse_2019"
         ],
-        "script_level.chapter": 49,
-        "script_level.position": 15,
         "lesson.key": "Conditionals with Sal Khan and Flo Vaughn",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -3267,8 +2957,6 @@
         "script_level.level_keys": [
           "courseD_bee_conditionals_challenge1_2019"
         ],
-        "script_level.chapter": 50,
-        "script_level.position": 16,
         "lesson.key": "Conditionals with Sal Khan and Flo Vaughn",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -3280,8 +2968,6 @@
         "script_level.level_keys": [
           "courseD_bee_conditionals_challenge2_2019"
         ],
-        "script_level.chapter": 51,
-        "script_level.position": 17,
         "lesson.key": "Conditionals with Sal Khan and Flo Vaughn",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -3293,8 +2979,6 @@
         "script_level.level_keys": [
           "Episode 7 Challenge Instructions - younger"
         ],
-        "script_level.chapter": 52,
-        "script_level.position": 18,
         "lesson.key": "Conditionals with Sal Khan and Flo Vaughn",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -3306,8 +2990,6 @@
         "script_level.level_keys": [
           "Episode 7 Share"
         ],
-        "script_level.chapter": 53,
-        "script_level.position": 19,
         "lesson.key": "Conditionals with Sal Khan and Flo Vaughn",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -3319,8 +3001,6 @@
         "script_level.level_keys": [
           "CodeBreak Episode 8 Placeholder"
         ],
-        "script_level.chapter": 54,
-        "script_level.position": 1,
         "lesson.key": "Variables with Yara Shahidi & Fuzzy Khosrowshahi",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -3332,8 +3012,6 @@
         "script_level.level_keys": [
           "Episode 8 Instructions younger"
         ],
-        "script_level.chapter": 55,
-        "script_level.position": 2,
         "lesson.key": "Variables with Yara Shahidi & Fuzzy Khosrowshahi",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -3345,8 +3023,6 @@
         "script_level.level_keys": [
           "courseF_bee_variables_1_2019"
         ],
-        "script_level.chapter": 56,
-        "script_level.position": 3,
         "lesson.key": "Variables with Yara Shahidi & Fuzzy Khosrowshahi",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -3358,8 +3034,6 @@
         "script_level.level_keys": [
           "courseF_bee_variables_2_2019"
         ],
-        "script_level.chapter": 57,
-        "script_level.position": 4,
         "lesson.key": "Variables with Yara Shahidi & Fuzzy Khosrowshahi",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -3371,8 +3045,6 @@
         "script_level.level_keys": [
           "courseF_bee_variables_3_2019"
         ],
-        "script_level.chapter": 58,
-        "script_level.position": 5,
         "lesson.key": "Variables with Yara Shahidi & Fuzzy Khosrowshahi",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -3384,8 +3056,6 @@
         "script_level.level_keys": [
           "courseF_bee_variables_4_2019"
         ],
-        "script_level.chapter": 59,
-        "script_level.position": 6,
         "lesson.key": "Variables with Yara Shahidi & Fuzzy Khosrowshahi",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -3397,8 +3067,6 @@
         "script_level.level_keys": [
           "courseF_bee_variables_5_2019"
         ],
-        "script_level.chapter": 60,
-        "script_level.position": 7,
         "lesson.key": "Variables with Yara Shahidi & Fuzzy Khosrowshahi",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -3410,8 +3078,6 @@
         "script_level.level_keys": [
           "courseF_bee_variables_6_2019"
         ],
-        "script_level.chapter": 61,
-        "script_level.position": 8,
         "lesson.key": "Variables with Yara Shahidi & Fuzzy Khosrowshahi",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -3423,8 +3089,6 @@
         "script_level.level_keys": [
           "courseF_bee_variables_7_2019"
         ],
-        "script_level.chapter": 62,
-        "script_level.position": 9,
         "lesson.key": "Variables with Yara Shahidi & Fuzzy Khosrowshahi",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -3436,8 +3100,6 @@
         "script_level.level_keys": [
           "courseF_bee_variables_8_2019"
         ],
-        "script_level.chapter": 63,
-        "script_level.position": 10,
         "lesson.key": "Variables with Yara Shahidi & Fuzzy Khosrowshahi",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -3449,8 +3111,6 @@
         "script_level.level_keys": [
           "Episode 8 Challenge Instructions younger"
         ],
-        "script_level.chapter": 64,
-        "script_level.position": 11,
         "lesson.key": "Variables with Yara Shahidi & Fuzzy Khosrowshahi",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -3462,8 +3122,6 @@
         "script_level.level_keys": [
           "CodeBreak E08 Beg Challenge 2"
         ],
-        "script_level.chapter": 65,
-        "script_level.position": 12,
         "lesson.key": "Variables with Yara Shahidi & Fuzzy Khosrowshahi",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -3475,8 +3133,6 @@
         "script_level.level_keys": [
           "Episode 8 Share"
         ],
-        "script_level.chapter": 66,
-        "script_level.position": 13,
         "lesson.key": "Variables with Yara Shahidi & Fuzzy Khosrowshahi",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -3488,8 +3144,6 @@
         "script_level.level_keys": [
           "CodeBreak Episode 9 Placeholder"
         ],
-        "script_level.chapter": 67,
-        "script_level.position": 1,
         "lesson.key": "Events with Macklemore & Scott Forstall",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -3501,8 +3155,6 @@
         "script_level.level_keys": [
           "Episode 9 Instructions younger"
         ],
-        "script_level.chapter": 68,
-        "script_level.position": 2,
         "lesson.key": "Events with Macklemore & Scott Forstall",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -3514,8 +3166,6 @@
         "script_level.level_keys": [
           "CourseD_Dance_Party_01"
         ],
-        "script_level.chapter": 69,
-        "script_level.position": 3,
         "lesson.key": "Events with Macklemore & Scott Forstall",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -3527,8 +3177,6 @@
         "script_level.level_keys": [
           "CourseD_Dance_Party_02"
         ],
-        "script_level.chapter": 70,
-        "script_level.position": 4,
         "lesson.key": "Events with Macklemore & Scott Forstall",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -3540,8 +3188,6 @@
         "script_level.level_keys": [
           "CourseD_Dance_Party_03"
         ],
-        "script_level.chapter": 71,
-        "script_level.position": 5,
         "lesson.key": "Events with Macklemore & Scott Forstall",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -3553,8 +3199,6 @@
         "script_level.level_keys": [
           "CourseD_Dance_Party_04"
         ],
-        "script_level.chapter": 72,
-        "script_level.position": 6,
         "lesson.key": "Events with Macklemore & Scott Forstall",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -3566,8 +3210,6 @@
         "script_level.level_keys": [
           "CourseD_Dance_Party_05"
         ],
-        "script_level.chapter": 73,
-        "script_level.position": 7,
         "lesson.key": "Events with Macklemore & Scott Forstall",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -3579,8 +3221,6 @@
         "script_level.level_keys": [
           "CourseD_Dance_Party_06"
         ],
-        "script_level.chapter": 74,
-        "script_level.position": 8,
         "lesson.key": "Events with Macklemore & Scott Forstall",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -3592,8 +3232,6 @@
         "script_level.level_keys": [
           "CourseD_Dance_Party_08"
         ],
-        "script_level.chapter": 75,
-        "script_level.position": 9,
         "lesson.key": "Events with Macklemore & Scott Forstall",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -3605,8 +3243,6 @@
         "script_level.level_keys": [
           "CourseD_Dance_Party_09"
         ],
-        "script_level.chapter": 76,
-        "script_level.position": 10,
         "lesson.key": "Events with Macklemore & Scott Forstall",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -3618,8 +3254,6 @@
         "script_level.level_keys": [
           "CourseD_Dance_Party_10"
         ],
-        "script_level.chapter": 77,
-        "script_level.position": 11,
         "lesson.key": "Events with Macklemore & Scott Forstall",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -3631,8 +3265,6 @@
         "script_level.level_keys": [
           "CourseD_Dance_Party_11"
         ],
-        "script_level.chapter": 78,
-        "script_level.position": 12,
         "lesson.key": "Events with Macklemore & Scott Forstall",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -3644,8 +3276,6 @@
         "script_level.level_keys": [
           "CourseD_Dance_Party_11b"
         ],
-        "script_level.chapter": 79,
-        "script_level.position": 13,
         "lesson.key": "Events with Macklemore & Scott Forstall",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -3657,8 +3287,6 @@
         "script_level.level_keys": [
           "CourseD_Dance_Party_11_5"
         ],
-        "script_level.chapter": 80,
-        "script_level.position": 14,
         "lesson.key": "Events with Macklemore & Scott Forstall",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -3670,8 +3298,6 @@
         "script_level.level_keys": [
           "Episode 9 Challenge Instructions younger"
         ],
-        "script_level.chapter": 81,
-        "script_level.position": 15,
         "lesson.key": "Events with Macklemore & Scott Forstall",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -3683,8 +3309,6 @@
         "script_level.level_keys": [
           "CodeBreak Dance Party Challenge"
         ],
-        "script_level.chapter": 82,
-        "script_level.position": 16,
         "lesson.key": "Events with Macklemore & Scott Forstall",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -3696,8 +3320,6 @@
         "script_level.level_keys": [
           "Episode 9 Share"
         ],
-        "script_level.chapter": 83,
-        "script_level.position": 17,
         "lesson.key": "Events with Macklemore & Scott Forstall",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -3709,8 +3331,6 @@
         "script_level.level_keys": [
           "CodeBreak Episode 11 Placeholder"
         ],
-        "script_level.chapter": 84,
-        "script_level.position": 1,
         "lesson.key": "Abstraction with Susan Wojcicki & China Anne McClain",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -3722,8 +3342,6 @@
         "script_level.level_keys": [
           "Episode 11 Instructions"
         ],
-        "script_level.chapter": 85,
-        "script_level.position": 2,
         "lesson.key": "Abstraction with Susan Wojcicki & China Anne McClain",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -3735,8 +3353,6 @@
         "script_level.level_keys": [
           "MC_HOC_2017_01_RETRY_2019"
         ],
-        "script_level.chapter": 86,
-        "script_level.position": 3,
         "lesson.key": "Abstraction with Susan Wojcicki & China Anne McClain",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -3748,8 +3364,6 @@
         "script_level.level_keys": [
           "MC_HOC_2017_02_Cole_2019"
         ],
-        "script_level.chapter": 87,
-        "script_level.position": 4,
         "lesson.key": "Abstraction with Susan Wojcicki & China Anne McClain",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -3761,8 +3375,6 @@
         "script_level.level_keys": [
           "MC_HOC_2017_03_Cole_2019"
         ],
-        "script_level.chapter": 88,
-        "script_level.position": 5,
         "lesson.key": "Abstraction with Susan Wojcicki & China Anne McClain",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -3774,8 +3386,6 @@
         "script_level.level_keys": [
           "MC_HOC_2017_04_Cole_2019"
         ],
-        "script_level.chapter": 89,
-        "script_level.position": 6,
         "lesson.key": "Abstraction with Susan Wojcicki & China Anne McClain",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -3787,8 +3397,6 @@
         "script_level.level_keys": [
           "MC_HOC_2017_04POINT5_RYAN_2019"
         ],
-        "script_level.chapter": 90,
-        "script_level.position": 7,
         "lesson.key": "Abstraction with Susan Wojcicki & China Anne McClain",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -3800,8 +3408,6 @@
         "script_level.level_keys": [
           "MC_HOC_2017_05_Cole_2019"
         ],
-        "script_level.chapter": 91,
-        "script_level.position": 8,
         "lesson.key": "Abstraction with Susan Wojcicki & China Anne McClain",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -3813,8 +3419,6 @@
         "script_level.level_keys": [
           "MC_HOC_2017_06_Cole_2019"
         ],
-        "script_level.chapter": 92,
-        "script_level.position": 9,
         "lesson.key": "Abstraction with Susan Wojcicki & China Anne McClain",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -3826,8 +3430,6 @@
         "script_level.level_keys": [
           "Function intro Ryan_2019"
         ],
-        "script_level.chapter": 93,
-        "script_level.position": 10,
         "lesson.key": "Abstraction with Susan Wojcicki & China Anne McClain",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -3839,8 +3441,6 @@
         "script_level.level_keys": [
           "MC_HOC_2017_07_Cole_2019"
         ],
-        "script_level.chapter": 94,
-        "script_level.position": 11,
         "lesson.key": "Abstraction with Susan Wojcicki & China Anne McClain",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -3852,8 +3452,6 @@
         "script_level.level_keys": [
           "MC_HOC_2017_10_RETRY_2019"
         ],
-        "script_level.chapter": 95,
-        "script_level.position": 12,
         "lesson.key": "Abstraction with Susan Wojcicki & China Anne McClain",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -3865,8 +3463,6 @@
         "script_level.level_keys": [
           "MC_HOC_2017_Ali_2019"
         ],
-        "script_level.chapter": 96,
-        "script_level.position": 13,
         "lesson.key": "Abstraction with Susan Wojcicki & China Anne McClain",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -3878,8 +3474,6 @@
         "script_level.level_keys": [
           "MC_HOC_2017_FP20x20_2019"
         ],
-        "script_level.chapter": 97,
-        "script_level.position": 14,
         "lesson.key": "Abstraction with Susan Wojcicki & China Anne McClain",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -3891,8 +3485,6 @@
         "script_level.level_keys": [
           "Episode 11 Challenge Instructions younger"
         ],
-        "script_level.chapter": 98,
-        "script_level.position": 15,
         "lesson.key": "Abstraction with Susan Wojcicki & China Anne McClain",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -3904,8 +3496,6 @@
         "script_level.level_keys": [
           "CodeBreak E11 Beg Challeng"
         ],
-        "script_level.chapter": 99,
-        "script_level.position": 16,
         "lesson.key": "Abstraction with Susan Wojcicki & China Anne McClain",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -3917,8 +3507,6 @@
         "script_level.level_keys": [
           "Episode 11 Share"
         ],
-        "script_level.chapter": 100,
-        "script_level.position": 17,
         "lesson.key": "Abstraction with Susan Wojcicki & China Anne McClain",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -3930,8 +3518,6 @@
         "script_level.level_keys": [
           "CodeBreak Episode 12 Placeholder"
         ],
-        "script_level.chapter": 101,
-        "script_level.position": 1,
         "lesson.key": "Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia Mineya",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -3943,8 +3529,6 @@
         "script_level.level_keys": [
           "Episode 12 Instructions"
         ],
-        "script_level.chapter": 102,
-        "script_level.position": 2,
         "lesson.key": "Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia Mineya",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -3956,8 +3540,6 @@
         "script_level.level_keys": [
           "CodeBreak E12 Practice Mike2"
         ],
-        "script_level.chapter": 103,
-        "script_level.position": 3,
         "lesson.key": "Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia Mineya",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -3969,8 +3551,6 @@
         "script_level.level_keys": [
           "Episode 12 Challenge Instructions younger"
         ],
-        "script_level.chapter": 104,
-        "script_level.position": 4,
         "lesson.key": "Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia Mineya",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -3982,8 +3562,6 @@
         "script_level.level_keys": [
           "CodeBreak E12 Practice Mike"
         ],
-        "script_level.chapter": 105,
-        "script_level.position": 5,
         "lesson.key": "Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia Mineya",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"
@@ -3995,8 +3573,6 @@
         "script_level.level_keys": [
           "Episode 12 Share"
         ],
-        "script_level.chapter": 106,
-        "script_level.position": 6,
         "lesson.key": "Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia Mineya",
         "lesson_group.key": "",
         "script.name": "code-break-younger-staging"

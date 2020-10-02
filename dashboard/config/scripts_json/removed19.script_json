@@ -82,8 +82,6 @@
         "script_level.level_keys": [
           "courseB_video_Unspotted_2019"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Debugging: Unspotted Bugs",
         "lesson_group.key": "",
         "script.name": "removed19"
@@ -104,8 +102,6 @@
         "script_level.level_keys": [
           "courseA_video_Stevie_2019"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 1,
         "lesson.key": "Persistence & Frustration: Stevie and the Big Project",
         "lesson_group.key": "",
         "script.name": "removed19"
@@ -126,8 +122,6 @@
         "script_level.level_keys": [
           "PlantASeed_2019"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 1,
         "lesson.key": "Real-life Algorithms: Plant a Seed",
         "lesson_group.key": "",
         "script.name": "removed19"
@@ -144,8 +138,6 @@
         "script_level.level_keys": [
           "courseB_video_Unspotted_2019"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Debugging: Unspotted Bugs",
         "lesson_group.key": "",
         "script.name": "removed19"
@@ -157,8 +149,6 @@
         "script_level.level_keys": [
           "courseA_video_Stevie_2019"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 1,
         "lesson.key": "Persistence & Frustration: Stevie and the Big Project",
         "lesson_group.key": "",
         "script.name": "removed19"
@@ -170,8 +160,6 @@
         "script_level.level_keys": [
           "PlantASeed_2019"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 1,
         "lesson.key": "Real-life Algorithms: Plant a Seed",
         "lesson_group.key": "",
         "script.name": "removed19"

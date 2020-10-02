@@ -70,8 +70,6 @@
         "script_level.level_keys": [
           "equity Intro"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Necessary Background",
         "lesson_group.key": "",
         "script.name": "equity-pd"
@@ -92,8 +90,6 @@
         "script_level.level_keys": [
           "equity v equality"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Necessary Background",
         "lesson_group.key": "",
         "script.name": "equity-pd"
@@ -114,8 +110,6 @@
         "script_level.level_keys": [
           "equity is more"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "Necessary Background",
         "lesson_group.key": "",
         "script.name": "equity-pd"
@@ -136,8 +130,6 @@
         "script_level.level_keys": [
           "equity in CS"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "Necessary Background",
         "lesson_group.key": "",
         "script.name": "equity-pd"
@@ -158,8 +150,6 @@
         "script_level.level_keys": [
           "equity lead 1"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 1,
         "lesson.key": "Code.org Equity PD",
         "lesson_group.key": "",
         "script.name": "equity-pd"
@@ -180,8 +170,6 @@
         "script_level.level_keys": [
           "equity activity"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 2,
         "lesson.key": "Code.org Equity PD",
         "lesson_group.key": "",
         "script.name": "equity-pd"
@@ -202,8 +190,6 @@
         "script_level.level_keys": [
           "equity vids"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 3,
         "lesson.key": "Code.org Equity PD",
         "lesson_group.key": "",
         "script.name": "equity-pd"
@@ -224,8 +210,6 @@
         "script_level.level_keys": [
           "equity expect"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 4,
         "lesson.key": "Code.org Equity PD",
         "lesson_group.key": "",
         "script.name": "equity-pd"
@@ -246,8 +230,6 @@
         "script_level.level_keys": [
           "equity discuss"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 5,
         "lesson.key": "Code.org Equity PD",
         "lesson_group.key": "",
         "script.name": "equity-pd"
@@ -268,8 +250,6 @@
         "script_level.level_keys": [
           "Equity Resources"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 6,
         "lesson.key": "Code.org Equity PD",
         "lesson_group.key": "",
         "script.name": "equity-pd"
@@ -286,8 +266,6 @@
         "script_level.level_keys": [
           "equity Intro"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Necessary Background",
         "lesson_group.key": "",
         "script.name": "equity-pd"
@@ -299,8 +277,6 @@
         "script_level.level_keys": [
           "equity v equality"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Necessary Background",
         "lesson_group.key": "",
         "script.name": "equity-pd"
@@ -312,8 +288,6 @@
         "script_level.level_keys": [
           "equity is more"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "Necessary Background",
         "lesson_group.key": "",
         "script.name": "equity-pd"
@@ -325,8 +299,6 @@
         "script_level.level_keys": [
           "equity in CS"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "Necessary Background",
         "lesson_group.key": "",
         "script.name": "equity-pd"
@@ -338,8 +310,6 @@
         "script_level.level_keys": [
           "equity lead 1"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 1,
         "lesson.key": "Code.org Equity PD",
         "lesson_group.key": "",
         "script.name": "equity-pd"
@@ -351,8 +321,6 @@
         "script_level.level_keys": [
           "equity activity"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 2,
         "lesson.key": "Code.org Equity PD",
         "lesson_group.key": "",
         "script.name": "equity-pd"
@@ -364,8 +332,6 @@
         "script_level.level_keys": [
           "equity vids"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 3,
         "lesson.key": "Code.org Equity PD",
         "lesson_group.key": "",
         "script.name": "equity-pd"
@@ -377,8 +343,6 @@
         "script_level.level_keys": [
           "equity expect"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 4,
         "lesson.key": "Code.org Equity PD",
         "lesson_group.key": "",
         "script.name": "equity-pd"
@@ -390,8 +354,6 @@
         "script_level.level_keys": [
           "equity discuss"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 5,
         "lesson.key": "Code.org Equity PD",
         "lesson_group.key": "",
         "script.name": "equity-pd"
@@ -403,8 +365,6 @@
         "script_level.level_keys": [
           "Equity Resources"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 6,
         "lesson.key": "Code.org Equity PD",
         "lesson_group.key": "",
         "script.name": "equity-pd"

@@ -112,8 +112,6 @@
         "script_level.level_keys": [
           "CSPPD3-u2 Welcome"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
         "script.name": "CSPPD3-Unit2"
@@ -134,8 +132,6 @@
         "script_level.level_keys": [
           "CSPPD3-u2 overivew"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
         "script.name": "CSPPD3-Unit2"
@@ -156,8 +152,6 @@
         "script_level.level_keys": [
           "CSPPD3-u2 tips for prep"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
         "script.name": "CSPPD3-Unit2"
@@ -178,8 +172,6 @@
         "script_level.level_keys": [
           "CSPPD3-u2 plan"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
         "script.name": "CSPPD3-Unit2"
@@ -200,8 +192,6 @@
         "script_level.level_keys": [
           "CSPPD3-u2 unit 2 overview"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 1,
         "lesson.key": "Unit 2 Overview",
         "lesson_group.key": "",
         "script.name": "CSPPD3-Unit2"
@@ -222,8 +212,6 @@
         "script_level.level_keys": [
           "CSPPD3-u2 breakdown of u2 chunks"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 2,
         "lesson.key": "Unit 2 Overview",
         "lesson_group.key": "",
         "script.name": "CSPPD3-Unit2"
@@ -244,8 +232,6 @@
         "script_level.level_keys": [
           "CSPPD3-u2 unit overview checkin"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 3,
         "lesson.key": "Unit 2 Overview",
         "lesson_group.key": "",
         "script.name": "CSPPD3-Unit2"
@@ -266,8 +252,6 @@
         "script_level.level_keys": [
           "CSPPD3-u2 chunk 1 concepts"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 4,
         "lesson.key": "Unit 2 Overview",
         "lesson_group.key": "",
         "script.name": "CSPPD3-Unit2"
@@ -288,8 +272,6 @@
         "script_level.level_keys": [
           "CSPPD3-u2 chunk 1 resources"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 5,
         "lesson.key": "Unit 2 Overview",
         "lesson_group.key": "",
         "script.name": "CSPPD3-Unit2"
@@ -310,8 +292,6 @@
         "script_level.level_keys": [
           "CSPPD3-u2 chunk 1 checkin"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 6,
         "lesson.key": "Unit 2 Overview",
         "lesson_group.key": "",
         "script.name": "CSPPD3-Unit2"
@@ -332,8 +312,6 @@
         "script_level.level_keys": [
           "CSPPD3-u2 chunk 2 concepts"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 7,
         "lesson.key": "Unit 2 Overview",
         "lesson_group.key": "",
         "script.name": "CSPPD3-Unit2"
@@ -354,8 +332,6 @@
         "script_level.level_keys": [
           "CSPPD3-u2 chunk 2 resources"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 8,
         "lesson.key": "Unit 2 Overview",
         "lesson_group.key": "",
         "script.name": "CSPPD3-Unit2"
@@ -376,8 +352,6 @@
         "script_level.level_keys": [
           "CSPPD3-u2 chunk 2 checkin"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 9,
         "lesson.key": "Unit 2 Overview",
         "lesson_group.key": "",
         "script.name": "CSPPD3-Unit2"
@@ -398,8 +372,6 @@
         "script_level.level_keys": [
           "CSPPD3-u2 pt overview"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 10,
         "lesson.key": "Unit 2 Overview",
         "lesson_group.key": "",
         "script.name": "CSPPD3-Unit2"
@@ -420,8 +392,6 @@
         "script_level.level_keys": [
           "CSPPD3-u2 checkin"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 11,
         "lesson.key": "Unit 2 Overview",
         "lesson_group.key": "",
         "script.name": "CSPPD3-Unit2"
@@ -442,8 +412,6 @@
         "script_level.level_keys": [
           "CSPPD3-u2 challenge overview"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 1,
         "lesson.key": "Challenge Overview",
         "lesson_group.key": "",
         "script.name": "CSPPD3-Unit2"
@@ -464,8 +432,6 @@
         "script_level.level_keys": [
           "CSPPD3-u2 what is a challenge"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 2,
         "lesson.key": "Challenge Overview",
         "lesson_group.key": "",
         "script.name": "CSPPD3-Unit2"
@@ -486,8 +452,6 @@
         "script_level.level_keys": [
           "CSPPD3-u2 completing the challenge"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 3,
         "lesson.key": "Challenge Overview",
         "lesson_group.key": "",
         "script.name": "CSPPD3-Unit2"
@@ -508,8 +472,6 @@
         "script_level.level_keys": [
           "CSPPD3-u2 list of challenges"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 4,
         "lesson.key": "Challenge Overview",
         "lesson_group.key": "",
         "script.name": "CSPPD3-Unit2"
@@ -530,8 +492,6 @@
         "script_level.level_keys": [
           "CSPPD3-u2 expectations"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 5,
         "lesson.key": "Challenge Overview",
         "lesson_group.key": "",
         "script.name": "CSPPD3-Unit2"
@@ -552,8 +512,6 @@
         "script_level.level_keys": [
           "CSPPD3-u2 pick a challenge"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 6,
         "lesson.key": "Challenge Overview",
         "lesson_group.key": "",
         "script.name": "CSPPD3-Unit2"
@@ -574,8 +532,6 @@
         "script_level.level_keys": [
           "CSPPD3-u2 complete the challenge overview"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 1,
         "lesson.key": "Complete the Challenge",
         "lesson_group.key": "",
         "script.name": "CSPPD3-Unit2"
@@ -596,8 +552,6 @@
         "script_level.level_keys": [
           "CSPPD3-u2 do the challenge"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 2,
         "lesson.key": "Complete the Challenge",
         "lesson_group.key": "",
         "script.name": "CSPPD3-Unit2"
@@ -618,8 +572,6 @@
         "script_level.level_keys": [
           "CSPPD3-u2 create your extension"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 3,
         "lesson.key": "Complete the Challenge",
         "lesson_group.key": "",
         "script.name": "CSPPD3-Unit2"
@@ -640,8 +592,6 @@
         "script_level.level_keys": [
           "CSPPD3-u2 reflect on challenge"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 4,
         "lesson.key": "Complete the Challenge",
         "lesson_group.key": "",
         "script.name": "CSPPD3-Unit2"
@@ -662,8 +612,6 @@
         "script_level.level_keys": [
           "CSPPD3-u2 share out overview"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 1,
         "lesson.key": "Share out and Submit",
         "lesson_group.key": "",
         "script.name": "CSPPD3-Unit2"
@@ -684,8 +632,6 @@
         "script_level.level_keys": [
           "CSPPD3-u2 post to forum"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 2,
         "lesson.key": "Share out and Submit",
         "lesson_group.key": "",
         "script.name": "CSPPD3-Unit2"
@@ -706,8 +652,6 @@
         "script_level.level_keys": [
           "CSPPD3-u2 submit forum link"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 3,
         "lesson.key": "Share out and Submit",
         "lesson_group.key": "",
         "script.name": "CSPPD3-Unit2"
@@ -728,8 +672,6 @@
         "script_level.level_keys": [
           "CSPPD3-u2 final progress check"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 4,
         "lesson.key": "Share out and Submit",
         "lesson_group.key": "",
         "script.name": "CSPPD3-Unit2"
@@ -750,8 +692,6 @@
         "script_level.level_keys": [
           "CSPPD3-u2 post survey"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 5,
         "lesson.key": "Share out and Submit",
         "lesson_group.key": "",
         "script.name": "CSPPD3-Unit2"
@@ -768,8 +708,6 @@
         "script_level.level_keys": [
           "CSPPD3-u2 Welcome"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
         "script.name": "CSPPD3-Unit2"
@@ -781,8 +719,6 @@
         "script_level.level_keys": [
           "CSPPD3-u2 overivew"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
         "script.name": "CSPPD3-Unit2"
@@ -794,8 +730,6 @@
         "script_level.level_keys": [
           "CSPPD3-u2 tips for prep"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
         "script.name": "CSPPD3-Unit2"
@@ -807,8 +741,6 @@
         "script_level.level_keys": [
           "CSPPD3-u2 plan"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
         "script.name": "CSPPD3-Unit2"
@@ -820,8 +752,6 @@
         "script_level.level_keys": [
           "CSPPD3-u2 unit 2 overview"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 1,
         "lesson.key": "Unit 2 Overview",
         "lesson_group.key": "",
         "script.name": "CSPPD3-Unit2"
@@ -833,8 +763,6 @@
         "script_level.level_keys": [
           "CSPPD3-u2 breakdown of u2 chunks"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 2,
         "lesson.key": "Unit 2 Overview",
         "lesson_group.key": "",
         "script.name": "CSPPD3-Unit2"
@@ -846,8 +774,6 @@
         "script_level.level_keys": [
           "CSPPD3-u2 unit overview checkin"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 3,
         "lesson.key": "Unit 2 Overview",
         "lesson_group.key": "",
         "script.name": "CSPPD3-Unit2"
@@ -859,8 +785,6 @@
         "script_level.level_keys": [
           "CSPPD3-u2 chunk 1 concepts"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 4,
         "lesson.key": "Unit 2 Overview",
         "lesson_group.key": "",
         "script.name": "CSPPD3-Unit2"
@@ -872,8 +796,6 @@
         "script_level.level_keys": [
           "CSPPD3-u2 chunk 1 resources"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 5,
         "lesson.key": "Unit 2 Overview",
         "lesson_group.key": "",
         "script.name": "CSPPD3-Unit2"
@@ -885,8 +807,6 @@
         "script_level.level_keys": [
           "CSPPD3-u2 chunk 1 checkin"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 6,
         "lesson.key": "Unit 2 Overview",
         "lesson_group.key": "",
         "script.name": "CSPPD3-Unit2"
@@ -898,8 +818,6 @@
         "script_level.level_keys": [
           "CSPPD3-u2 chunk 2 concepts"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 7,
         "lesson.key": "Unit 2 Overview",
         "lesson_group.key": "",
         "script.name": "CSPPD3-Unit2"
@@ -911,8 +829,6 @@
         "script_level.level_keys": [
           "CSPPD3-u2 chunk 2 resources"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 8,
         "lesson.key": "Unit 2 Overview",
         "lesson_group.key": "",
         "script.name": "CSPPD3-Unit2"
@@ -924,8 +840,6 @@
         "script_level.level_keys": [
           "CSPPD3-u2 chunk 2 checkin"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 9,
         "lesson.key": "Unit 2 Overview",
         "lesson_group.key": "",
         "script.name": "CSPPD3-Unit2"
@@ -937,8 +851,6 @@
         "script_level.level_keys": [
           "CSPPD3-u2 pt overview"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 10,
         "lesson.key": "Unit 2 Overview",
         "lesson_group.key": "",
         "script.name": "CSPPD3-Unit2"
@@ -950,8 +862,6 @@
         "script_level.level_keys": [
           "CSPPD3-u2 checkin"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 11,
         "lesson.key": "Unit 2 Overview",
         "lesson_group.key": "",
         "script.name": "CSPPD3-Unit2"
@@ -963,8 +873,6 @@
         "script_level.level_keys": [
           "CSPPD3-u2 challenge overview"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 1,
         "lesson.key": "Challenge Overview",
         "lesson_group.key": "",
         "script.name": "CSPPD3-Unit2"
@@ -976,8 +884,6 @@
         "script_level.level_keys": [
           "CSPPD3-u2 what is a challenge"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 2,
         "lesson.key": "Challenge Overview",
         "lesson_group.key": "",
         "script.name": "CSPPD3-Unit2"
@@ -989,8 +895,6 @@
         "script_level.level_keys": [
           "CSPPD3-u2 completing the challenge"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 3,
         "lesson.key": "Challenge Overview",
         "lesson_group.key": "",
         "script.name": "CSPPD3-Unit2"
@@ -1002,8 +906,6 @@
         "script_level.level_keys": [
           "CSPPD3-u2 list of challenges"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 4,
         "lesson.key": "Challenge Overview",
         "lesson_group.key": "",
         "script.name": "CSPPD3-Unit2"
@@ -1015,8 +917,6 @@
         "script_level.level_keys": [
           "CSPPD3-u2 expectations"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 5,
         "lesson.key": "Challenge Overview",
         "lesson_group.key": "",
         "script.name": "CSPPD3-Unit2"
@@ -1028,8 +928,6 @@
         "script_level.level_keys": [
           "CSPPD3-u2 pick a challenge"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 6,
         "lesson.key": "Challenge Overview",
         "lesson_group.key": "",
         "script.name": "CSPPD3-Unit2"
@@ -1041,8 +939,6 @@
         "script_level.level_keys": [
           "CSPPD3-u2 complete the challenge overview"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 1,
         "lesson.key": "Complete the Challenge",
         "lesson_group.key": "",
         "script.name": "CSPPD3-Unit2"
@@ -1054,8 +950,6 @@
         "script_level.level_keys": [
           "CSPPD3-u2 do the challenge"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 2,
         "lesson.key": "Complete the Challenge",
         "lesson_group.key": "",
         "script.name": "CSPPD3-Unit2"
@@ -1067,8 +961,6 @@
         "script_level.level_keys": [
           "CSPPD3-u2 create your extension"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 3,
         "lesson.key": "Complete the Challenge",
         "lesson_group.key": "",
         "script.name": "CSPPD3-Unit2"
@@ -1080,8 +972,6 @@
         "script_level.level_keys": [
           "CSPPD3-u2 reflect on challenge"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 4,
         "lesson.key": "Complete the Challenge",
         "lesson_group.key": "",
         "script.name": "CSPPD3-Unit2"
@@ -1093,8 +983,6 @@
         "script_level.level_keys": [
           "CSPPD3-u2 share out overview"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 1,
         "lesson.key": "Share out and Submit",
         "lesson_group.key": "",
         "script.name": "CSPPD3-Unit2"
@@ -1106,8 +994,6 @@
         "script_level.level_keys": [
           "CSPPD3-u2 post to forum"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 2,
         "lesson.key": "Share out and Submit",
         "lesson_group.key": "",
         "script.name": "CSPPD3-Unit2"
@@ -1119,8 +1005,6 @@
         "script_level.level_keys": [
           "CSPPD3-u2 submit forum link"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 3,
         "lesson.key": "Share out and Submit",
         "lesson_group.key": "",
         "script.name": "CSPPD3-Unit2"
@@ -1132,8 +1016,6 @@
         "script_level.level_keys": [
           "CSPPD3-u2 final progress check"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 4,
         "lesson.key": "Share out and Submit",
         "lesson_group.key": "",
         "script.name": "CSPPD3-Unit2"
@@ -1145,8 +1027,6 @@
         "script_level.level_keys": [
           "CSPPD3-u2 post survey"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 5,
         "lesson.key": "Share out and Submit",
         "lesson_group.key": "",
         "script.name": "CSPPD3-Unit2"

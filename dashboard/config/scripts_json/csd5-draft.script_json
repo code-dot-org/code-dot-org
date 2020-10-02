@@ -263,8 +263,6 @@
         "script_level.level_keys": [
           "CSD-U5-SFLP Representation Matters"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Representation Matters",
         "lesson_group.key": "csd5_1",
         "script.name": "csd5-draft"
@@ -285,8 +283,6 @@
         "script_level.level_keys": [
           "CSD-U5-SFLP Patterns and Representation"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 1,
         "lesson.key": "Patterns and Representation",
         "lesson_group.key": "csd5_1",
         "script.name": "csd5-draft"
@@ -307,8 +303,6 @@
         "script_level.level_keys": [
           "CSD-U5-SFLP ASCII and Binary Representation"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 1,
         "lesson.key": "ASCII and Binary Representation",
         "lesson_group.key": "csd5_1",
         "script.name": "csd5-draft"
@@ -329,8 +323,6 @@
         "script_level.level_keys": [
           "CSD-U5-SFLP Representing Images"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 1,
         "lesson.key": "Representing Images",
         "lesson_group.key": "csd5_1",
         "script.name": "csd5-draft"
@@ -352,8 +344,6 @@
         "script_level.level_keys": [
           "CSD U5 black white images pixelation"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 2,
         "lesson.key": "Representing Images",
         "lesson_group.key": "csd5_1",
         "script.name": "csd5-draft"
@@ -375,8 +365,6 @@
         "script_level.level_keys": [
           "CSD U5 black white images pixelation 2"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 3,
         "lesson.key": "Representing Images",
         "lesson_group.key": "csd5_1",
         "script.name": "csd5-draft"
@@ -398,8 +386,6 @@
         "script_level.level_keys": [
           "CSD U5 black white images pixelation 3"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 4,
         "lesson.key": "Representing Images",
         "lesson_group.key": "csd5_1",
         "script.name": "csd5-draft"
@@ -421,8 +407,6 @@
         "script_level.level_keys": [
           "CSD U5 black white images pixelation 4"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 5,
         "lesson.key": "Representing Images",
         "lesson_group.key": "csd5_1",
         "script.name": "csd5-draft"
@@ -444,8 +428,6 @@
         "script_level.level_keys": [
           "CSD U5 black white images pixelation 5"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 6,
         "lesson.key": "Representing Images",
         "lesson_group.key": "csd5_1",
         "script.name": "csd5-draft"
@@ -466,8 +448,6 @@
         "script_level.level_keys": [
           "CSD-U5-SFLP Representing Numbers Part 1"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 1,
         "lesson.key": "Representing Numbers",
         "lesson_group.key": "csd5_1",
         "script.name": "csd5-draft"
@@ -489,8 +469,6 @@
         "script_level.level_keys": [
           "CSD U5 binary 1"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 2,
         "lesson.key": "Representing Numbers",
         "lesson_group.key": "csd5_1",
         "script.name": "csd5-draft"
@@ -512,8 +490,6 @@
         "script_level.level_keys": [
           "CSD U5 binary 2"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 3,
         "lesson.key": "Representing Numbers",
         "lesson_group.key": "csd5_1",
         "script.name": "csd5-draft"
@@ -535,8 +511,6 @@
         "script_level.level_keys": [
           "CSD U5 binary 4-new"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 4,
         "lesson.key": "Representing Numbers",
         "lesson_group.key": "csd5_1",
         "script.name": "csd5-draft"
@@ -558,8 +532,6 @@
         "script_level.level_keys": [
           "CSD U5 binary 5-new"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 5,
         "lesson.key": "Representing Numbers",
         "lesson_group.key": "csd5_1",
         "script.name": "csd5-draft"
@@ -581,8 +553,6 @@
         "script_level.level_keys": [
           "CSD U5 binary 6-new"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 6,
         "lesson.key": "Representing Numbers",
         "lesson_group.key": "csd5_1",
         "script.name": "csd5-draft"
@@ -604,8 +574,6 @@
         "script_level.level_keys": [
           "CSD U5 binary 7-new"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 7,
         "lesson.key": "Representing Numbers",
         "lesson_group.key": "csd5_1",
         "script.name": "csd5-draft"
@@ -626,8 +594,6 @@
         "script_level.level_keys": [
           "CSD-U5-SFLP Representing Numbers Part 2"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 1,
         "lesson.key": "Encryption",
         "lesson_group.key": "csd5_1",
         "script.name": "csd5-draft"
@@ -648,8 +614,6 @@
         "script_level.level_keys": [
           "CSD-U5-SFLP Combining Representations"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 1,
         "lesson.key": "Combining Representations",
         "lesson_group.key": "csd5_1",
         "script.name": "csd5-draft"
@@ -671,8 +635,6 @@
         "script_level.level_keys": [
           "CSD U3 combining rep"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 2,
         "lesson.key": "Combining Representations",
         "lesson_group.key": "csd5_1",
         "script.name": "csd5-draft"
@@ -694,8 +656,6 @@
         "script_level.level_keys": [
           "CSD U5 student record"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 3,
         "lesson.key": "Combining Representations",
         "lesson_group.key": "csd5_1",
         "script.name": "csd5-draft"
@@ -716,8 +676,6 @@
         "script_level.level_keys": [
           "CSD-U5-SFLP Create a Representation"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 1,
         "lesson.key": "Project - Create a Representation",
         "lesson_group.key": "csd5_1",
         "script.name": "csd5-draft"
@@ -739,8 +697,6 @@
         "script_level.level_keys": [
           "csd-pulse-check-survey-1-levelgroup U5Ch1"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 2,
         "lesson.key": "Project - Create a Representation",
         "lesson_group.key": "csd5_1",
         "script.name": "csd5-draft"
@@ -761,8 +717,6 @@
         "script_level.level_keys": [
           "CSD-U5-SFLP Problem Solving and Data"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 1,
         "lesson.key": "Problem Solving and Data",
         "lesson_group.key": "csd5_2",
         "script.name": "csd5-draft"
@@ -783,8 +737,6 @@
         "script_level.level_keys": [
           "CSD-U5-SFLP Problem Solving with Big Data"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 1,
         "lesson.key": "Problem Solving with Big Data",
         "lesson_group.key": "csd5_2",
         "script.name": "csd5-draft"
@@ -806,8 +758,6 @@
         "script_level.level_keys": [
           "CSD U5 video2"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 2,
         "lesson.key": "Problem Solving with Big Data",
         "lesson_group.key": "csd5_2",
         "script.name": "csd5-draft"
@@ -829,8 +779,6 @@
         "script_level.level_keys": [
           "CSD U5 collection UPS2"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 3,
         "lesson.key": "Problem Solving with Big Data",
         "lesson_group.key": "csd5_2",
         "script.name": "csd5-draft"
@@ -852,8 +800,6 @@
         "script_level.level_keys": [
           "CSD U5 collection ads2"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 4,
         "lesson.key": "Problem Solving with Big Data",
         "lesson_group.key": "csd5_2",
         "script.name": "csd5-draft"
@@ -874,8 +820,6 @@
         "script_level.level_keys": [
           "CSD-U5-SFLP Interpreting Data"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 1,
         "lesson.key": "Structuring Data",
         "lesson_group.key": "csd5_2",
         "script.name": "csd5-draft"
@@ -897,8 +841,6 @@
         "script_level.level_keys": [
           "CSD U5 data visualization"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 2,
         "lesson.key": "Structuring Data",
         "lesson_group.key": "csd5_2",
         "script.name": "csd5-draft"
@@ -920,8 +862,6 @@
         "script_level.level_keys": [
           "CSD U5 Pizza"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 3,
         "lesson.key": "Structuring Data",
         "lesson_group.key": "csd5_2",
         "script.name": "csd5-draft"
@@ -943,8 +883,6 @@
         "script_level.level_keys": [
           "CSD U5 Pizza 2"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 4,
         "lesson.key": "Structuring Data",
         "lesson_group.key": "csd5_2",
         "script.name": "csd5-draft"
@@ -965,8 +903,6 @@
         "script_level.level_keys": [
           "CSD-U5-SFLP Making Decisions with Data"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 1,
         "lesson.key": "Making Decisions with Data",
         "lesson_group.key": "csd5_2",
         "script.name": "csd5-draft"
@@ -987,8 +923,6 @@
         "script_level.level_keys": [
           "CSD U5 L13 SFLP Interpreting Data"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 1,
         "lesson.key": "Interpreting Data",
         "lesson_group.key": "csd5_2",
         "script.name": "csd5-draft"
@@ -1010,8 +944,6 @@
         "script_level.level_keys": [
           "CSD U5 data visualization"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 2,
         "lesson.key": "Interpreting Data",
         "lesson_group.key": "csd5_2",
         "script.name": "csd5-draft"
@@ -1033,8 +965,6 @@
         "script_level.level_keys": [
           "CSD U5 Pizza"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 3,
         "lesson.key": "Interpreting Data",
         "lesson_group.key": "csd5_2",
         "script.name": "csd5-draft"
@@ -1056,8 +986,6 @@
         "script_level.level_keys": [
           "CSD U5 Pizza 2"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 4,
         "lesson.key": "Interpreting Data",
         "lesson_group.key": "csd5_2",
         "script.name": "csd5-draft"
@@ -1078,8 +1006,6 @@
         "script_level.level_keys": [
           "CSD-U5-SFLP Automating Data Decisions"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 1,
         "lesson.key": "Automating Data Decisions",
         "lesson_group.key": "csd5_2",
         "script.name": "csd5-draft"
@@ -1100,8 +1026,6 @@
         "script_level.level_keys": [
           "CSD-U5-SFLP Solve a Data Problem"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 1,
         "lesson.key": "Project - Solve a Data Problem",
         "lesson_group.key": "csd5_2",
         "script.name": "csd5-draft"
@@ -1123,8 +1047,6 @@
         "script_level.level_keys": [
           "csd-pulse-check-survey-1-levelgroup U5Ch2"
         ],
-        "script_level.chapter": 39,
-        "script_level.position": 2,
         "lesson.key": "Project - Solve a Data Problem",
         "lesson_group.key": "csd5_2",
         "script.name": "csd5-draft"
@@ -1141,8 +1063,6 @@
         "script_level.level_keys": [
           "CSD-U5-SFLP Representation Matters"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Representation Matters",
         "lesson_group.key": "csd5_1",
         "script.name": "csd5-draft"
@@ -1154,8 +1074,6 @@
         "script_level.level_keys": [
           "CSD-U5-SFLP Patterns and Representation"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 1,
         "lesson.key": "Patterns and Representation",
         "lesson_group.key": "csd5_1",
         "script.name": "csd5-draft"
@@ -1167,8 +1085,6 @@
         "script_level.level_keys": [
           "CSD-U5-SFLP ASCII and Binary Representation"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 1,
         "lesson.key": "ASCII and Binary Representation",
         "lesson_group.key": "csd5_1",
         "script.name": "csd5-draft"
@@ -1180,8 +1096,6 @@
         "script_level.level_keys": [
           "CSD-U5-SFLP Representing Images"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 1,
         "lesson.key": "Representing Images",
         "lesson_group.key": "csd5_1",
         "script.name": "csd5-draft"
@@ -1193,8 +1107,6 @@
         "script_level.level_keys": [
           "CSD U5 black white images pixelation"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 2,
         "lesson.key": "Representing Images",
         "lesson_group.key": "csd5_1",
         "script.name": "csd5-draft"
@@ -1206,8 +1118,6 @@
         "script_level.level_keys": [
           "CSD U5 black white images pixelation 2"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 3,
         "lesson.key": "Representing Images",
         "lesson_group.key": "csd5_1",
         "script.name": "csd5-draft"
@@ -1219,8 +1129,6 @@
         "script_level.level_keys": [
           "CSD U5 black white images pixelation 3"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 4,
         "lesson.key": "Representing Images",
         "lesson_group.key": "csd5_1",
         "script.name": "csd5-draft"
@@ -1232,8 +1140,6 @@
         "script_level.level_keys": [
           "CSD U5 black white images pixelation 4"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 5,
         "lesson.key": "Representing Images",
         "lesson_group.key": "csd5_1",
         "script.name": "csd5-draft"
@@ -1245,8 +1151,6 @@
         "script_level.level_keys": [
           "CSD U5 black white images pixelation 5"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 6,
         "lesson.key": "Representing Images",
         "lesson_group.key": "csd5_1",
         "script.name": "csd5-draft"
@@ -1258,8 +1162,6 @@
         "script_level.level_keys": [
           "CSD-U5-SFLP Representing Numbers Part 1"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 1,
         "lesson.key": "Representing Numbers",
         "lesson_group.key": "csd5_1",
         "script.name": "csd5-draft"
@@ -1271,8 +1173,6 @@
         "script_level.level_keys": [
           "CSD U5 binary 1"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 2,
         "lesson.key": "Representing Numbers",
         "lesson_group.key": "csd5_1",
         "script.name": "csd5-draft"
@@ -1284,8 +1184,6 @@
         "script_level.level_keys": [
           "CSD U5 binary 2"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 3,
         "lesson.key": "Representing Numbers",
         "lesson_group.key": "csd5_1",
         "script.name": "csd5-draft"
@@ -1297,8 +1195,6 @@
         "script_level.level_keys": [
           "CSD U5 binary 4-new"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 4,
         "lesson.key": "Representing Numbers",
         "lesson_group.key": "csd5_1",
         "script.name": "csd5-draft"
@@ -1310,8 +1206,6 @@
         "script_level.level_keys": [
           "CSD U5 binary 5-new"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 5,
         "lesson.key": "Representing Numbers",
         "lesson_group.key": "csd5_1",
         "script.name": "csd5-draft"
@@ -1323,8 +1217,6 @@
         "script_level.level_keys": [
           "CSD U5 binary 6-new"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 6,
         "lesson.key": "Representing Numbers",
         "lesson_group.key": "csd5_1",
         "script.name": "csd5-draft"
@@ -1336,8 +1228,6 @@
         "script_level.level_keys": [
           "CSD U5 binary 7-new"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 7,
         "lesson.key": "Representing Numbers",
         "lesson_group.key": "csd5_1",
         "script.name": "csd5-draft"
@@ -1349,8 +1239,6 @@
         "script_level.level_keys": [
           "CSD-U5-SFLP Representing Numbers Part 2"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 1,
         "lesson.key": "Encryption",
         "lesson_group.key": "csd5_1",
         "script.name": "csd5-draft"
@@ -1362,8 +1250,6 @@
         "script_level.level_keys": [
           "CSD-U5-SFLP Combining Representations"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 1,
         "lesson.key": "Combining Representations",
         "lesson_group.key": "csd5_1",
         "script.name": "csd5-draft"
@@ -1375,8 +1261,6 @@
         "script_level.level_keys": [
           "CSD U3 combining rep"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 2,
         "lesson.key": "Combining Representations",
         "lesson_group.key": "csd5_1",
         "script.name": "csd5-draft"
@@ -1388,8 +1272,6 @@
         "script_level.level_keys": [
           "CSD U5 student record"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 3,
         "lesson.key": "Combining Representations",
         "lesson_group.key": "csd5_1",
         "script.name": "csd5-draft"
@@ -1401,8 +1283,6 @@
         "script_level.level_keys": [
           "CSD-U5-SFLP Create a Representation"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 1,
         "lesson.key": "Project - Create a Representation",
         "lesson_group.key": "csd5_1",
         "script.name": "csd5-draft"
@@ -1414,8 +1294,6 @@
         "script_level.level_keys": [
           "csd-pulse-check-survey-1-levelgroup U5Ch1"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 2,
         "lesson.key": "Project - Create a Representation",
         "lesson_group.key": "csd5_1",
         "script.name": "csd5-draft"
@@ -1427,8 +1305,6 @@
         "script_level.level_keys": [
           "CSD-U5-SFLP Problem Solving and Data"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 1,
         "lesson.key": "Problem Solving and Data",
         "lesson_group.key": "csd5_2",
         "script.name": "csd5-draft"
@@ -1440,8 +1316,6 @@
         "script_level.level_keys": [
           "CSD-U5-SFLP Problem Solving with Big Data"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 1,
         "lesson.key": "Problem Solving with Big Data",
         "lesson_group.key": "csd5_2",
         "script.name": "csd5-draft"
@@ -1453,8 +1327,6 @@
         "script_level.level_keys": [
           "CSD U5 video2"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 2,
         "lesson.key": "Problem Solving with Big Data",
         "lesson_group.key": "csd5_2",
         "script.name": "csd5-draft"
@@ -1466,8 +1338,6 @@
         "script_level.level_keys": [
           "CSD U5 collection UPS2"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 3,
         "lesson.key": "Problem Solving with Big Data",
         "lesson_group.key": "csd5_2",
         "script.name": "csd5-draft"
@@ -1479,8 +1349,6 @@
         "script_level.level_keys": [
           "CSD U5 collection ads2"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 4,
         "lesson.key": "Problem Solving with Big Data",
         "lesson_group.key": "csd5_2",
         "script.name": "csd5-draft"
@@ -1492,8 +1360,6 @@
         "script_level.level_keys": [
           "CSD-U5-SFLP Interpreting Data"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 1,
         "lesson.key": "Structuring Data",
         "lesson_group.key": "csd5_2",
         "script.name": "csd5-draft"
@@ -1505,8 +1371,6 @@
         "script_level.level_keys": [
           "CSD U5 data visualization"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 2,
         "lesson.key": "Structuring Data",
         "lesson_group.key": "csd5_2",
         "script.name": "csd5-draft"
@@ -1518,8 +1382,6 @@
         "script_level.level_keys": [
           "CSD U5 Pizza"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 3,
         "lesson.key": "Structuring Data",
         "lesson_group.key": "csd5_2",
         "script.name": "csd5-draft"
@@ -1531,8 +1393,6 @@
         "script_level.level_keys": [
           "CSD U5 Pizza 2"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 4,
         "lesson.key": "Structuring Data",
         "lesson_group.key": "csd5_2",
         "script.name": "csd5-draft"
@@ -1544,8 +1404,6 @@
         "script_level.level_keys": [
           "CSD-U5-SFLP Making Decisions with Data"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 1,
         "lesson.key": "Making Decisions with Data",
         "lesson_group.key": "csd5_2",
         "script.name": "csd5-draft"
@@ -1557,8 +1415,6 @@
         "script_level.level_keys": [
           "CSD U5 L13 SFLP Interpreting Data"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 1,
         "lesson.key": "Interpreting Data",
         "lesson_group.key": "csd5_2",
         "script.name": "csd5-draft"
@@ -1570,8 +1426,6 @@
         "script_level.level_keys": [
           "CSD U5 data visualization"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 2,
         "lesson.key": "Interpreting Data",
         "lesson_group.key": "csd5_2",
         "script.name": "csd5-draft"
@@ -1583,8 +1437,6 @@
         "script_level.level_keys": [
           "CSD U5 Pizza"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 3,
         "lesson.key": "Interpreting Data",
         "lesson_group.key": "csd5_2",
         "script.name": "csd5-draft"
@@ -1596,8 +1448,6 @@
         "script_level.level_keys": [
           "CSD U5 Pizza 2"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 4,
         "lesson.key": "Interpreting Data",
         "lesson_group.key": "csd5_2",
         "script.name": "csd5-draft"
@@ -1609,8 +1459,6 @@
         "script_level.level_keys": [
           "CSD-U5-SFLP Automating Data Decisions"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 1,
         "lesson.key": "Automating Data Decisions",
         "lesson_group.key": "csd5_2",
         "script.name": "csd5-draft"
@@ -1622,8 +1470,6 @@
         "script_level.level_keys": [
           "CSD-U5-SFLP Solve a Data Problem"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 1,
         "lesson.key": "Project - Solve a Data Problem",
         "lesson_group.key": "csd5_2",
         "script.name": "csd5-draft"
@@ -1635,8 +1481,6 @@
         "script_level.level_keys": [
           "csd-pulse-check-survey-1-levelgroup U5Ch2"
         ],
-        "script_level.chapter": 39,
-        "script_level.position": 2,
         "lesson.key": "Project - Solve a Data Problem",
         "lesson_group.key": "csd5_2",
         "script.name": "csd5-draft"

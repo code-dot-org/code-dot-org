@@ -96,8 +96,6 @@
         "script_level.level_keys": [
           "duino battery led"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Basic Circuits",
         "lesson_group.key": "",
         "script.name": "duino"
@@ -118,8 +116,6 @@
         "script_level.level_keys": [
           "duino button led"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Basic Circuits",
         "lesson_group.key": "",
         "script.name": "duino"
@@ -140,8 +136,6 @@
         "script_level.level_keys": [
           "duino multi leds"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 1,
         "lesson.key": "Blinky Lights",
         "lesson_group.key": "",
         "script.name": "duino"
@@ -162,8 +156,6 @@
         "script_level.level_keys": [
           "duino pov"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 2,
         "lesson.key": "Blinky Lights",
         "lesson_group.key": "",
         "script.name": "duino"
@@ -184,8 +176,6 @@
         "script_level.level_keys": [
           "duino music"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 1,
         "lesson.key": "Making Music",
         "lesson_group.key": "",
         "script.name": "duino"
@@ -206,8 +196,6 @@
         "script_level.level_keys": [
           "duino auduino"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 2,
         "lesson.key": "Making Music",
         "lesson_group.key": "",
         "script.name": "duino"
@@ -228,8 +216,6 @@
         "script_level.level_keys": [
           "duino junkbot build"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 1,
         "lesson.key": "JunkBot",
         "lesson_group.key": "",
         "script.name": "duino"
@@ -250,8 +236,6 @@
         "script_level.level_keys": [
           "duino junkbot software"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 2,
         "lesson.key": "JunkBot",
         "lesson_group.key": "",
         "script.name": "duino"
@@ -268,8 +252,6 @@
         "script_level.level_keys": [
           "duino battery led"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Basic Circuits",
         "lesson_group.key": "",
         "script.name": "duino"
@@ -281,8 +263,6 @@
         "script_level.level_keys": [
           "duino button led"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Basic Circuits",
         "lesson_group.key": "",
         "script.name": "duino"
@@ -294,8 +274,6 @@
         "script_level.level_keys": [
           "duino multi leds"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 1,
         "lesson.key": "Blinky Lights",
         "lesson_group.key": "",
         "script.name": "duino"
@@ -307,8 +285,6 @@
         "script_level.level_keys": [
           "duino pov"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 2,
         "lesson.key": "Blinky Lights",
         "lesson_group.key": "",
         "script.name": "duino"
@@ -320,8 +296,6 @@
         "script_level.level_keys": [
           "duino music"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 1,
         "lesson.key": "Making Music",
         "lesson_group.key": "",
         "script.name": "duino"
@@ -333,8 +307,6 @@
         "script_level.level_keys": [
           "duino auduino"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 2,
         "lesson.key": "Making Music",
         "lesson_group.key": "",
         "script.name": "duino"
@@ -346,8 +318,6 @@
         "script_level.level_keys": [
           "duino junkbot build"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 1,
         "lesson.key": "JunkBot",
         "lesson_group.key": "",
         "script.name": "duino"
@@ -359,8 +329,6 @@
         "script_level.level_keys": [
           "duino junkbot software"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 2,
         "lesson.key": "JunkBot",
         "lesson_group.key": "",
         "script.name": "duino"
