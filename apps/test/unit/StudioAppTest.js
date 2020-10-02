@@ -22,36 +22,34 @@ describe('StudioApp', () => {
   sandboxDocumentBody();
 
   describe('StudioApp.singleton', () => {
-    beforeEach(stubStudioApp);
-    afterEach(restoreStudioApp);
-
     let containerDiv, codeWorkspaceDiv;
+
     beforeEach(() => {
+      stubStudioApp();
+      stubRedux();
+      registerReducers(commonReducers);
+
       codeWorkspaceDiv = document.createElement('div');
       codeWorkspaceDiv.id = 'codeWorkspace';
       document.body.appendChild(codeWorkspaceDiv);
-
       containerDiv = document.createElement('div');
       containerDiv.id = 'foo';
       containerDiv.innerHTML = `
-  <button id="runButton" />
-  <button id="resetButton" />
-  <div id="visualizationColumn" />
-  <div id="toolbox-header" />
-  `;
+      <button id="runButton" />
+      <button id="resetButton" />
+      <div id="visualizationColumn" />
+      <div id="toolbox-header" />
+      `;
       document.body.appendChild(containerDiv);
     });
 
     afterEach(() => {
+      restoreStudioApp();
+      restoreRedux();
+
       document.body.removeChild(codeWorkspaceDiv);
       document.body.removeChild(containerDiv);
     });
-
-    beforeEach(() => {
-      stubRedux();
-      registerReducers(commonReducers);
-    });
-    afterEach(restoreRedux);
 
     describe('the init() method', () => {
       let files;
