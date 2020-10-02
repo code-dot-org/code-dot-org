@@ -185,6 +185,7 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal 1, first.absolute_position
     assert_equal 2, second.absolute_position
     assert_equal 3, third.absolute_position
+    original_script_level_ids = script.script_levels.map(&:id)
 
     # Reupload a script of the same filename / name, but lacking the middle lesson.
     script_names, _ = Script.setup([script_file_middle_missing_reversed])
@@ -198,6 +199,10 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal 2, second.absolute_position
     assert_equal 'lesson3', first.name
     assert_equal 'lesson1', second.name
+    # One Lesson / ScriptLevel removed, the rest reordered
+    expected_script_level_ids = [original_script_level_ids[3], original_script_level_ids[4],
+                                 original_script_level_ids[0], original_script_level_ids[1]]
+    assert_equal expected_script_level_ids, script.script_levels.map(&:id)
   end
 
   test 'all fields can be set and then removed on reseed' do
@@ -1676,7 +1681,7 @@ class ScriptTest < ActiveSupport::TestCase
 
     assert_equal("fake-script *", assignable_info[:name])
     assert_equal("fake-script", assignable_info[:script_name])
-    assert_equal("other", assignable_info[:category])
+    assert_equal("Other", assignable_info[:category])
     assert(assignable_info[:lesson_extras_available])
   end
 
@@ -1704,6 +1709,36 @@ class ScriptTest < ActiveSupport::TestCase
 
     assert_equal('CSP Unit 1 Test', assignable_info[:name])
     assert_equal('CSP Test', assignable_info[:category])
+  end
+
+  # This test checks that all categories that may show up in the UI have
+  # translation strings.
+  test 'all visible categories have translations' do
+    I18n.locale = 'en-US'
+
+    # A course can belong to more than one category and only the first
+    # category is shown in the UI (and thus needs a translation).
+
+    # To determine the set of categories that must be translated, we first
+    # collect the list of all scripts that are mapped to categories in
+    # ScriptConstants::CATEGORIES.
+    all_scripts = ScriptConstants::CATEGORIES.reduce(Set.new) do |scripts, (_, scripts_in_category)|
+      scripts | scripts_in_category
+    end
+
+    # Add a script that is not in any category so that the 'other' category
+    # will be tested.
+    all_scripts |= ['uncategorized-script']
+
+    untranslated_categories = Set.new
+    all_scripts.each do |script|
+      category = ScriptConstants.categories(script)[0] || ScriptConstants::OTHER_CATEGORY_NAME
+      translation = I18n.t("data.script.category.#{category}_category_name", default: nil)
+      untranslated_categories.add(category) if translation.nil?
+    end
+
+    assert untranslated_categories.empty?,
+      "The following categories are missing translations in scripts.en.yml '#{untranslated_categories}'"
   end
 
   test "self.valid_scripts: does not return hidden scripts when user is a student" do
@@ -2555,6 +2590,24 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal script.lesson_groups[0].lessons[1].absolute_position, 2
     assert_equal script.lesson_groups[1].lessons[0], script.lessons[2]
     assert_equal script.lesson_groups[1].lessons[0].absolute_position, 3
+  end
+
+  test 'level can only be added once to a lesson' do
+    level = create :level
+    dsl = <<~SCRIPT
+      lesson 'lesson1', display_name: 'lesson1'
+      level '#{level.name}'
+      level '#{level.name}'
+    SCRIPT
+
+    error = assert_raises do
+      Script.add_script(
+        {name: 'level-included-multiple-times'},
+        ScriptDSL.parse(dsl, 'a filename')[0][:lesson_groups]
+      )
+    end
+    expected_message = 'Level cannot be added multiple times to one lesson. Lesson key: lesson1 Script name: level-included-multiple-times'
+    assert_equal expected_message, error.message
   end
 
   test 'seeding_key' do
