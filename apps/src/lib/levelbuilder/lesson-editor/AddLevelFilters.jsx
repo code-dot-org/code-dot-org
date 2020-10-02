@@ -12,6 +12,9 @@ const styles = {
   dropdown: {
     width: 125,
     margin: 5
+  },
+  label: {
+    marginRight: 15
   }
 };
 
@@ -63,7 +66,7 @@ export default class AddLevelFilters extends Component {
   render() {
     return (
       <div style={styles.filters}>
-        <label>
+        <label style={styles.label}>
           By Name:
           <input
             style={styles.dropdown}
@@ -71,7 +74,7 @@ export default class AddLevelFilters extends Component {
             value={this.state.levelName}
           />
         </label>
-        <label>
+        <label style={styles.label}>
           By Type:
           <select
             style={styles.dropdown}
@@ -85,7 +88,7 @@ export default class AddLevelFilters extends Component {
             ))}
           </select>
         </label>
-        <label>
+        <label style={styles.label}>
           By Script:
           <select
             style={styles.dropdown}
@@ -99,7 +102,7 @@ export default class AddLevelFilters extends Component {
             ))}
           </select>
         </label>
-        <label>
+        <label style={styles.label}>
           By Owner:
           <select
             style={styles.dropdown}
