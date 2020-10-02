@@ -142,6 +142,17 @@ describe('StudioApp', () => {
         expect(studio.clearHighlighting).to.have.not.been.called;
       });
 
+      it('no-ops if editDuringRunAlert is not undefined', () => {
+        sinon.stub(studio, 'isRunning').returns(true);
+        sinon.stub(studio, 'getCode').returns(mockCode + '<xml>more xml</xml'); // code has changed
+        studio.editDuringRunAlert = '<div/>';
+
+        studio.editDuringRunAlertHandler();
+
+        // Make sure clearHighlighting() was never called to confirm no-op.
+        expect(studio.clearHighlighting).to.have.not.been.called;
+      });
+
       it('clears block highlighting', () => {
         sinon.stub(studio, 'isRunning').returns(true);
         sinon.stub(studio, 'getCode').returns(mockCode + '<xml>more xml</xml'); // code has changed
