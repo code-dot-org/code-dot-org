@@ -13,8 +13,7 @@ import {
   removeGroup,
   setLessonGroup,
   reorderLesson,
-  updateLessonGroupField,
-  convertGroupToUserFacing
+  updateLessonGroupField
 } from '@cdo/apps/lib/levelbuilder/script-editor/scriptEditorRedux';
 import LessonToken from '@cdo/apps/lib/levelbuilder/script-editor/LessonToken';
 
@@ -34,7 +33,8 @@ const styles = {
   },
   lessonGroupCardHeader: {
     color: '#5b6770',
-    marginBottom: 15
+    marginBottom: 15,
+    minHeight: 10
   },
   bottomControls: {
     height: 30
@@ -77,7 +77,6 @@ class LessonGroupCard extends Component {
     removeLesson: PropTypes.func.isRequired,
     setLessonGroup: PropTypes.func.isRequired,
     reorderLesson: PropTypes.func.isRequired,
-    convertGroupToUserFacing: PropTypes.func.isRequired,
     updateLessonGroupField: PropTypes.func.isRequired
   };
 
@@ -236,20 +235,6 @@ class LessonGroupCard extends Component {
     }
   };
 
-  handleMakeUserFacing = lessonGroupPosition => {
-    const newLessonGroupKey = prompt('Enter new lesson group key');
-    const newLessonGroupDisplayName = prompt(
-      'Enter new lesson group display name'
-    );
-    if (newLessonGroupKey && newLessonGroupDisplayName) {
-      this.props.convertGroupToUserFacing(
-        lessonGroupPosition,
-        newLessonGroupKey,
-        newLessonGroupDisplayName
-      );
-    }
-  };
-
   handleChangeDescription = event => {
     this.props.updateLessonGroupField(
       this.props.lessonGroup.position,
@@ -296,9 +281,6 @@ class LessonGroupCard extends Component {
                 style={{width: 300}}
               />
             </span>
-          )}
-          {!lessonGroup.user_facing && (
-            <span>Lesson Group: Not User Facing (No Display Name)</span>
           )}
           <OrderControls
             name={lessonGroup.key || '(none)'}
@@ -364,21 +346,8 @@ class LessonGroupCard extends Component {
             type="button"
           >
             <i style={{marginRight: 7}} className="fa fa-plus-circle" />
-            Add Lesson
+            Lesson
           </button>
-          {!this.props.lessonGroup.user_facing && (
-            <button
-              onMouseDown={this.handleMakeUserFacing.bind(
-                null,
-                lessonGroup.position
-              )}
-              className="btn"
-              style={styles.addButton}
-              type="button"
-            >
-              Make User Facing
-            </button>
-          )}
         </div>
       </div>
     );
@@ -395,7 +364,6 @@ export default connect(
     removeLesson,
     removeGroup,
     addLesson,
-    convertGroupToUserFacing,
     setLessonGroup,
     reorderLesson,
     updateLessonGroupField
