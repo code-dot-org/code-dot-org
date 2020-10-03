@@ -7,7 +7,8 @@ import {getStore, registerReducers} from '@cdo/apps/redux';
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import getScriptData from '@cdo/apps/util/getScriptData';
 import reducers, {
-  init
+  init,
+  empty_non_user_facing_group
 } from '@cdo/apps/lib/levelbuilder/script-editor/scriptEditorRedux';
 import ScriptEditor from '@cdo/apps/lib/levelbuilder/script-editor/ScriptEditor';
 import {valueOr} from '@cdo/apps/utils';
@@ -15,7 +16,7 @@ import {valueOr} from '@cdo/apps/utils';
 export default function initPage(scriptEditorData) {
   const scriptData = scriptEditorData.script;
   const lessonLevelData = scriptEditorData.lessonLevelData;
-  const lesson_groups = (scriptData.lesson_groups || [])
+  let lesson_groups = (scriptData.lesson_groups || [])
     .filter(lesson_group => lesson_group.id)
     .map(lesson_group => ({
       key: lesson_group.key,
@@ -54,6 +55,10 @@ export default function initPage(scriptEditorData) {
             }))
         }))
     }));
+  if (lesson_groups.length === 0) {
+    lesson_groups = [empty_non_user_facing_group];
+  }
+
   const locales = scriptEditorData.locales;
 
   registerReducers({...reducers, isRtl});
