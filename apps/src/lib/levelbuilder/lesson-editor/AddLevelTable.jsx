@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import PropTypes from 'prop-types';
+import {NEW_LEVEL_ID} from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
 
 const styles = {
   orderIcon: {
@@ -21,8 +22,13 @@ export default class AddLevelTable extends Component {
     this.props.addLevel(level);
   };
 
-  handleCloneAndAddLevel = () => {
-    console.log('Clone and Add');
+  handleCloneAndAddLevel = level => {
+    const newLevelName = prompt('Enter new level name');
+    if (newLevelName) {
+      level.name = newLevelName;
+      level.id = NEW_LEVEL_ID;
+    }
+    this.props.addLevel(level);
   };
 
   render() {
@@ -50,7 +56,7 @@ export default class AddLevelTable extends Component {
                   </button>
                   <button
                     type="button"
-                    onClick={this.handleCloneAndAddLevel.bind()}
+                    onClick={this.handleCloneAndAddLevel.bind(this, level)}
                   >
                     <FontAwesome icon="files-o" />
                   </button>
