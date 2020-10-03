@@ -13,8 +13,7 @@ import {
   updateActivitySectionField,
   reorderLevel,
   moveLevelToActivitySection,
-  addLevel,
-  NEW_LEVEL_ID
+  addLevel
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
 import LevelToken from '@cdo/apps/lib/levelbuilder/lesson-editor/LevelToken';
 import RemoveLevelDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/RemoveLevelDialog';
@@ -294,19 +293,18 @@ class ActivitySectionCard extends Component {
     e.preventDefault();
   }
 
-  //TODO: Hook up being able to actually pick a level to add instead of holding place level
-  handleAddLevel = () => {
+  handleAddLevel = level => {
     const newLevelPosition = this.props.activitySection.levels.length + 1;
     this.props.addLevel(
       this.props.activityPosition,
       this.props.activitySection.position,
       {
-        ids: [NEW_LEVEL_ID],
-        activeId: NEW_LEVEL_ID,
+        ids: [level.id],
+        activeId: level.id,
         status: 'not started',
-        url: 'https://levelbuilder-studio.code.org/levels/598/edit',
+        url: `https://levelbuilder-studio.code.org/levels/${level.id}/edit`,
         icon: 'fa-desktop',
-        name: `Level ${newLevelPosition}`,
+        name: level.name,
         isUnplugged: false,
         levelNumber: newLevelPosition,
         isCurrentLevel: false,
