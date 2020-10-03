@@ -1,7 +1,6 @@
 /* globals mapboxgl, MapboxGeocoder */
 
 import $ from 'jquery';
-import {SubjectNames} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 import colors from '@cdo/apps/util/color';
 
 var map;
@@ -55,7 +54,10 @@ function loadWorkshops() {
     data: url,
     cluster: true,
     clusterRadius: 20,
-    clusterMaxZoom: 12
+    clusterMaxZoom: 12,
+    clusterProperties: {
+      clustered_workshop_count: ['+', ['get', 'workshop_count']]
+    }
   });
 
   placeClusters();
@@ -81,7 +83,7 @@ function placeClusters() {
     source: 'workshops',
     filter: ['has', 'point_count'],
     layout: {
-      'text-field': '{point_count_abbreviated}',
+      'text-field': ['get', 'clustered_workshop_count'],
       'text-font': ['DIN Offc Pro Medium', 'Arial Unicode MS Bold'],
       'text-size': 12,
       'text-allow-overlap': true
@@ -126,7 +128,7 @@ function placeIntroWorkshops() {
         source: 'workshops',
         filter: [
           'all',
-          ['!=', 'subject', SubjectNames.SUBJECT_CSF_201],
+          ['==', 'show_deep_dive_marker', 'false'],
           ['!has', 'point_count']
         ],
         layout: {
@@ -159,7 +161,7 @@ function placeDeepDiveWorkshops() {
         source: 'workshops',
         filter: [
           'all',
-          ['==', 'subject', SubjectNames.SUBJECT_CSF_201],
+          ['==', 'show_deep_dive_marker', 'true'],
           ['!has', 'point_count']
         ],
         layout: {
@@ -179,8 +181,8 @@ function placeDeepDiveWorkshops() {
 
 function onMarkerClick(e) {
   var coordinates = e.features[0].geometry.coordinates.slice();
-  var workshop = e.features[0].properties;
-  const description = compileHtml(workshop, false);
+  var workshops = JSON.parse(e.features[0].properties['workshops']);
+  const description = compileHtml(workshops, false);
 
   new mapboxgl.Popup()
     .setLngLat(coordinates)
@@ -188,43 +190,46 @@ function onMarkerClick(e) {
     .addTo(map);
 }
 
-function compileHtml(workshop, first) {
+function compileHtml(workshops, first) {
   // Compile HTML.
   var html = '';
 
-  if (first) {
-    html += '<div class="workshop-item workshop-item-first">';
-  } else {
-    html += '<div class="workshop-item">';
-  }
-  html +=
-    '<div class="workshop-location-name"><strong>' +
-    workshop.location_name +
-    '</strong></div>';
-
-  // Add the workshop subject
-  html +=
-    '<div class="workshop-subject">' + workshop.subject + ' Workshop</div>';
-
-  // Add the date(s).
-  html += '<div class="workshop-dates">';
-  const sessions = JSON.parse(workshop.sessions);
-  $.each(sessions, function(i, session) {
+  workshops.forEach((workshop, i) => {
+    if (i === 0) {
+      html += '<div class="workshop-item workshop-item-first">';
+    } else {
+      html += '<div class="workshop-item">';
+    }
     html +=
-      '<div class="workshop-date" style="white-space: nowrap;">' +
-      session +
-      '</div>';
+      '<div class="workshop-location-name"><strong>' +
+      workshop.location_name +
+      '</strong></div>';
+
+    // Add the workshop subject
+    html +=
+      '<div class="workshop-subject">' + workshop.subject + ' Workshop</div>';
+
+    // Add the date(s).
+    html += '<div class="workshop-dates">';
+    const sessions = workshop.sessions;
+    $.each(sessions, function(i, session) {
+      html +=
+        '<div class="workshop-date" style="white-space: nowrap;">' +
+        session +
+        '</div>';
+    });
+    html += '</div>';
+
+    var code_studio_root = $('#properties').attr('data-studio-url');
+    var url = code_studio_root + '/pd/workshops/' + workshop.id + '/enroll';
+    if (workshop.id) {
+      html +=
+        '<div class="workshop-link"><a style="" href=' +
+        url +
+        '>Info and Signup</a></div>';
+    }
   });
-  html += '</div>';
 
-  var code_studio_root = $('#properties').attr('data-studio-url');
-  var url = code_studio_root + '/pd/workshops/' + workshop.id + '/enroll';
-  if (workshop.id) {
-    html +=
-      '<div class="workshop-link"><a style="" href=' +
-      url +
-      '>Info and Signup</a></div>';
-  }
   html += '</div>';
 
   return html;
