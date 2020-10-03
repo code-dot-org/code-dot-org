@@ -17,6 +17,14 @@ export default class AddLevelTable extends Component {
     levels: PropTypes.array
   };
 
+  handleAddLevel = level => {
+    this.props.addLevel(level);
+  };
+
+  handleCloneAndAddLevel = () => {
+    console.log('Clone and Add');
+  };
+
   render() {
     return (
       <div>
@@ -35,18 +43,14 @@ export default class AddLevelTable extends Component {
               <tr key={level.id}>
                 <td>
                   <button
+                    onClick={this.handleAddLevel.bind(this, level)}
                     type="button"
-                    onClick={() => {
-                      console.log('Add');
-                    }}
                   >
                     <FontAwesome icon="plus" />
                   </button>
                   <button
                     type="button"
-                    onClick={() => {
-                      console.log('Clone and Add');
-                    }}
+                    onClick={this.handleCloneAndAddLevel.bind()}
                   >
                     <FontAwesome icon="files-o" />
                   </button>
