@@ -6,7 +6,9 @@ import reducers, {
   moveLesson,
   setLessonGroup,
   reorderLesson,
-  updateLessonGroupField
+  updateLessonGroupField,
+  removeGroup,
+  empty_non_user_facing_group
 } from '@cdo/apps/lib/levelbuilder/script-editor/scriptEditorRedux';
 import _ from 'lodash';
 
@@ -38,6 +40,20 @@ const getInitialState = () => ({
           position: 3
         }
       ]
+    },
+    {
+      key: 'lg-key-2',
+      display_name: 'Display Name 2',
+      position: 2,
+      user_facing: true,
+      lessons: [
+        {
+          id: 104,
+          key: 'd',
+          name: 'D',
+          position: 4
+        }
+      ]
     }
   ]
 });
@@ -52,7 +68,25 @@ describe('scriptEditorRedux reducer tests', () => {
     const nextState = reducer(initialState, addGroup(2, 'key', 'Display Name'))
       .lessonGroups;
     assert.equal(nextState[nextState.length - 1].display_name, 'Display Name');
+    assert.equal(nextState[nextState.length - 1].user_facing, true);
   });
+
+  it('remove group', () => {
+    // Remove lesson group when there are 2 lessons groups
+    let nextState = reducer(initialState, removeGroup(1));
+    let lessonGroups = nextState.lessonGroups;
+    assert.equal(lessonGroups.length, 1);
+    assert.equal(lessonGroups[0].key, 'lg-key-2');
+
+    // Remove lesson group when there is only one lesson group left
+    // a non-user facing lesson group should be added
+    nextState = reducer(nextState, removeGroup(1));
+    lessonGroups = nextState.lessonGroups;
+    assert.equal(lessonGroups.length, 1);
+    assert.equal(lessonGroups[0].key, empty_non_user_facing_group.key);
+    assert.equal(lessonGroups[0].user_facing, false);
+  });
+
   it('add lesson', () => {
     const nextState = reducer(
       initialState,
