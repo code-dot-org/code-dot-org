@@ -10,8 +10,8 @@ import {
   updateActivitySectionField,
   reorderLevel,
   moveLevelToActivitySection,
-  addLevel,
-  NEW_LEVEL_ID
+  NEW_LEVEL_ID,
+  addLevel
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
 import LevelToken from '@cdo/apps/lib/levelbuilder/lesson-editor/LevelToken';
 import RemoveLevelDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/RemoveLevelDialog';
@@ -293,8 +293,7 @@ class ActivitySectionCard extends Component {
     e.preventDefault();
   }
 
-  //TODO: Hook up being able to actually pick a level to add instead of holding place level
-  handleAddLevel = () => {
+  handleAddLevel = level => {
     const newLevelPosition = this.props.activitySection.scriptLevels.length + 1;
     this.props.addLevel(
       this.props.activityPosition,
@@ -303,19 +302,19 @@ class ActivitySectionCard extends Component {
         id: NEW_LEVEL_ID,
         levels: [
           {
-            id: NEW_LEVEL_ID,
-            name: `Level ${newLevelPosition}`,
-            url: `https://levelbuilder-studio.code.org/levels/598/edit`,
-            icon: 'fa-desktop',
-            isUnplugged: false,
-            isConceptLevel: false,
-            skin: null,
-            videoKey: null,
-            concepts: '',
-            conceptDifficulty: ''
+            id: level.id,
+            name: level.name,
+            url: `https://levelbuilder-studio.code.org/levels/${level.id}/edit`,
+            icon: level.icon || 'fa-desktop',
+            isUnplugged: level.isUnplugged,
+            isConceptLevel: level.isConceptLevel,
+            skin: level.skin,
+            videoKey: level.videoKey,
+            concepts: level.concepts,
+            conceptDifficulty: level.conceptDifficulty
           }
         ],
-        activeId: NEW_LEVEL_ID,
+        activeId: level.id,
         position: newLevelPosition,
         kind: 'puzzle',
         bonus: false,
