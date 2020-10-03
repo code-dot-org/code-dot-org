@@ -56,11 +56,7 @@ export default class AddLevelTable extends Component {
                   </button>
                   <button
                     type="button"
-<<<<<<< HEAD
                     onClick={this.handleCloneAndAddLevel.bind(this, level)}
-=======
-                    onClick={this.handleCloneAndAddLevel.bind()}
->>>>>>> Start to be able to add a real level
                   >
                     <FontAwesome icon="files-o" />
                   </button>
