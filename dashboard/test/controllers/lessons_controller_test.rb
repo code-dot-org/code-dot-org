@@ -130,31 +130,30 @@ class LessonsControllerTest < ActionController::TestCase
     sign_in @levelbuilder
 
     id_a = @lesson.lesson_activities.create(
-      name: 'A',
+      name: 'activity A',
       position: 1,
-      seeding_key: 'keyA'
+      seeding_key: 'key_a'
     ).id
     id_b = @lesson.lesson_activities.create(
-      name: 'B',
+      name: 'activity B',
       position: 2,
-      seeding_key: 'keyB'
+      seeding_key: 'key_b'
     ).id
     id_c = @lesson.lesson_activities.create(
-      name: 'C',
+      name: 'activity C',
       position: 3,
-      seeding_key: 'keyC'
+      seeding_key: 'key_c'
     ).id
-    assert_equal ['A', 'B', 'C'], @lesson.lesson_activities.map(&:name)
 
     @update_params['activities'] = [
       {
         id: id_a,
-        name: 'A',
+        name: 'activity A',
         position: 1
       },
       {
         id: id_c,
-        name: 'C',
+        name: 'activity C',
         position: 2
       },
     ].to_json
@@ -166,11 +165,11 @@ class LessonsControllerTest < ActionController::TestCase
     assert_equal 2, @lesson.lesson_activities.count
     activities = @lesson.lesson_activities
 
-    assert_equal 'A', activities.first.name
+    assert_equal 'activity A', activities.first.name
     assert_equal 1, activities.first.position
     assert_equal id_a, activities.first.id
 
-    assert_equal 'C', activities.last.name
+    assert_equal 'activity C', activities.last.name
     assert_equal 2, activities.last.position
     assert_equal id_c, activities.last.id
 
@@ -225,27 +224,26 @@ class LessonsControllerTest < ActionController::TestCase
       position: 1,
       seeding_key: 'activity-key'
     )
-    activity.activity_sections.create(
-      name: 'section one',
+    id_a = activity.activity_sections.create(
+      name: 'section A',
       position: 1,
-      seeding_key: 'key one'
-    )
-    activity.activity_sections.create(
-      name: 'section two',
+      seeding_key: 'key_a'
+    ).id
+    id_b = activity.activity_sections.create(
+      name: 'section B',
       position: 2,
-      seeding_key: 'key two'
-    )
-    old_section_ids = activity.activity_sections.map(&:id)
+      seeding_key: 'key_b'
+    ).id
 
     @update_params['activities'] = [
       {
         id: activity.id,
-        name: 'A',
+        name: 'activity name',
         position: 1,
         activitySections: [
           {
-            id: old_section_ids[1], # section two's original id
-            name: 'section two',
+            id: id_b,
+            name: 'section B',
             position: 1
           }
         ]
@@ -261,10 +259,10 @@ class LessonsControllerTest < ActionController::TestCase
     assert_equal 1, activity.activity_sections.count
     section = activity.activity_sections.first
 
-    assert_equal 'section two', section.name
+    assert_equal 'section B', section.name
     assert_equal 1, section.position
-    assert_equal old_section_ids[1], section.id
+    assert_equal id_b, section.id
 
-    assert_equal 0, LessonActivity.where(id: old_section_ids[0]).count
+    assert_equal 0, LessonActivity.where(id: id_a).count
   end
 end
