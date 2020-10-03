@@ -4,6 +4,29 @@ import {expect} from '../../../../util/reconfiguredChai';
 import {UnconnectedLessonGroupCard as LessonGroupCard} from '@cdo/apps/lib/levelbuilder/script-editor/LessonGroupCard';
 import sinon from 'sinon';
 
+export const nonUserFacingGroup = {
+  key: 'lg-key',
+  display_name: null,
+  position: 1,
+  user_facing: false,
+  description: '',
+  big_questions: '',
+  lessons: [
+    {
+      id: 100,
+      name: 'A',
+      position: 1,
+      key: 'lesson-1'
+    },
+    {
+      name: 'B',
+      id: 101,
+      position: 2,
+      key: 'lesson-2'
+    }
+  ]
+};
+
 describe('LessonGroupCard', () => {
   let defaultProps,
     addLesson,
@@ -64,7 +87,7 @@ describe('LessonGroupCard', () => {
     };
   });
 
-  it('displays LessonGroupCard correctly', () => {
+  it('displays LessonGroupCard correctly when user facing', () => {
     const wrapper = mount(<LessonGroupCard {...defaultProps} />);
 
     expect(wrapper.find('OrderControls')).to.have.lengthOf(1);
@@ -89,6 +112,22 @@ describe('LessonGroupCard', () => {
         .at(1)
         .props().value
     ).to.equal('Big questions');
+  });
+
+  it('displays LessonGroupCard correctly when not user facing', () => {
+    const wrapper = mount(
+      <LessonGroupCard {...defaultProps} lessonGroup={nonUserFacingGroup} />
+    );
+
+    expect(wrapper.find('OrderControls')).to.have.lengthOf(1);
+    expect(wrapper.find('LessonToken')).to.have.lengthOf(2);
+    expect(wrapper.find('button')).to.have.lengthOf(1);
+    expect(wrapper.find('input')).to.have.lengthOf(0);
+    expect(wrapper.find('textarea')).to.have.lengthOf(0);
+
+    expect(wrapper.contains('Lesson Group Name:')).to.be.false;
+    expect(wrapper.contains('Big Questions')).to.be.false;
+    expect(wrapper.contains('Description')).to.be.false;
   });
 
   it('adds lesson when button pressed', () => {
