@@ -292,6 +292,13 @@ EEA_COUNTRY_CODES = EU_COUNTRY_CODES +
     NO
   )
 
+LATAM_COUNTRY_CODES = %w(
+  AR
+  BR
+  CO
+  PE
+)
+
 # Returns the name of the country whose two character country code is code.
 # If code is not a valid two character country code, returns code.
 def country_name_from_code(code)
@@ -312,4 +319,8 @@ end
 def gdpr_country_code?(code)
   return false if code.nil?
   EEA_COUNTRY_CODES.include?(code.to_s.strip.upcase)
+end
+
+def latam_country_code?(code)
+  LATAM_COUNTRY_CODES.include? code.to_s.strip.upcase
 end
