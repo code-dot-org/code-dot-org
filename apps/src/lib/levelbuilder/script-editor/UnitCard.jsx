@@ -169,36 +169,27 @@ class UnitCard extends Component {
             />
           ))}
           <div style={styles.addGroupWithWarning}>
-            <button
-              onMouseDown={this.handleAddLessonGroup}
-              className="btn"
-              type="button"
-              style={{
-                ...styles.addGroup,
-                ...(!this.props.lessonGroups[0].user_facing && {
-                  display: 'none'
-                })
-              }}
-            >
-              <i style={{marginRight: 7}} className="fa fa-plus-circle" />
-              Add Lesson Group
-            </button>
-            {this.props.lessonGroups.length > 0 &&
-              !this.props.lessonGroups[0].user_facing && (
-                <button
-                  onMouseDown={this.handleMakeUserFacing}
-                  className="btn"
-                  style={{
-                    ...styles.addGroup,
-                    ...(this.props.lessonGroups[0].user_facing && {
-                      display: 'none'
-                    })
-                  }}
-                  type="button"
-                >
-                  Enable Lesson Groups
-                </button>
-              )}
+            {this.props.lessonGroups[0].user_facing && (
+              <button
+                onMouseDown={this.handleAddLessonGroup}
+                className="btn"
+                type="button"
+                style={styles.addGroup}
+              >
+                <i style={{marginRight: 7}} className="fa fa-plus-circle" />
+                Add Lesson Group
+              </button>
+            )}
+            {!this.props.lessonGroups[0].user_facing && (
+              <button
+                onMouseDown={this.handleMakeUserFacing}
+                className="btn"
+                style={styles.addGroup}
+                type="button"
+              >
+                Enable Lesson Groups
+              </button>
+            )}
           </div>
         </div>
         <input
