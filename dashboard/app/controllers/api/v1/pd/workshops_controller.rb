@@ -110,17 +110,33 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
 
   def to_geojson(workshops)
     locations = []
-    workshops.each do |workshop|
-      next unless workshop.processed_location
-      workshop_location = JSON.parse(workshop.processed_location)
-      next unless workshop_location['latitude'] && workshop_location['longitude']
-      workshop_properties = workshop.attributes
-      workshop_properties['sessions'] = workshop.sessions.map(&:formatted_date_with_start_and_end_times)
+    grouped_workshops = workshops.group_by do |w|
+      location = JSON.parse(w.processed_location)
+      [location['longitude'].round(3), location['latitude'].round(3)]
+    end
+    puts grouped_workshops
+    grouped_workshops.each do |location, workshop_list|
+      next if location.blank?
+      next unless location.length == 2
+      properties = {
+        show_deep_dive_marker: workshop_list.any? {|w| w.subject == Pd::Workshop::SUBJECT_CSF_201}.to_s,
+        workshop_count: workshop_list.count
+      }
+      properties['workshops'] = workshop_list.map do |w|
+        {
+          id: w.id,
+          location_name: w.location_name,
+          subject: w.subject,
+          sessions: w.sessions.map(&:formatted_date_with_start_and_end_times)
+        }
+      end
       locations.append(
-        {type: "Feature",
-         geometry: { type: "Point",
-                     coordinates:[workshop_location['longitude'], workshop_location['latitude']] },
-         properties: workshop_properties })
+        {
+          type: "Feature",
+          geometry: {type: "Point", coordinates: location},
+          properties: properties
+        }
+      )
     end
     {type: 'FeatureCollection', features: locations}.to_json
   end
