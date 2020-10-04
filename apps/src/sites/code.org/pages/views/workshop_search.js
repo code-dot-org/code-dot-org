@@ -12,7 +12,7 @@ $(document).ready(function() {
 
 function initializeMap() {
   map = new mapboxgl.Map({
-    container: 'gmap',
+    container: 'mapbox-map',
     style: 'mapbox://styles/mapbox/streets-v11',
     center: [-95.665, 37.6],
     zoom: 3
