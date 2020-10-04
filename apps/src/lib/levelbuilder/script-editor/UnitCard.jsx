@@ -94,9 +94,11 @@ class UnitCard extends Component {
         }
         s.push(t);
       }
-      lessonGroup.lessons.forEach(lesson => {
-        s = s.concat(this.serializeLesson(lesson));
-      });
+      if (lessonGroup.lessons) {
+        lessonGroup.lessons.forEach(lesson => {
+          s = s.concat(this.serializeLesson(lesson));
+        });
+      }
     });
 
     s.push('');
@@ -121,9 +123,11 @@ class UnitCard extends Component {
       t += ', visible_after: true';
     }
     s.push(t);
-    lesson.levels.forEach(level => {
-      s = s.concat(this.serializeLevel(level.ids[0], level));
-    });
+    if (lesson.levels) {
+      lesson.levels.forEach(level => {
+        s = s.concat(this.serializeLevel(level.ids[0], level));
+      });
+    }
     s.push('');
     return s.join('\n');
   };
