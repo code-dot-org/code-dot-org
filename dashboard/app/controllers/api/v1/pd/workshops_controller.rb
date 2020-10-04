@@ -114,7 +114,6 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
       location = JSON.parse(w.processed_location)
       [location['longitude'].round(3), location['latitude'].round(3)]
     end
-    puts grouped_workshops
     grouped_workshops.each do |location, workshop_list|
       next if location.blank?
       next unless location.length == 2
