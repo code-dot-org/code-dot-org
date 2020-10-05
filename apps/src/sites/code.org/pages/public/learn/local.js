@@ -226,7 +226,7 @@ function loadMap(locations) {
           activeItem.classList.remove('active');
         }
         viewAll.classList.add('active');
-        clearPopUps();
+        clearPopUp();
         gmap.flyTo({
           center: [lng, lat],
           zoom: 10
@@ -299,7 +299,7 @@ function flyToStore(currentFeature) {
 }
 
 function createPopUp(currentFeature) {
-  clearPopUps();
+  clearPopUp();
   new mapboxgl.Popup()
     .setLngLat(currentFeature.geometry.coordinates)
     .setHTML(currentFeature.properties.description)
@@ -307,9 +307,8 @@ function createPopUp(currentFeature) {
   setDetailsTrigger();
 }
 
-function clearPopUps() {
+function clearPopUp() {
   var popUps = document.getElementsByClassName('mapboxgl-popup');
-  /** Check if there is already a popup on the map and if so, remove it */
   if (popUps[0]) {
     popUps[0].remove();
   }
