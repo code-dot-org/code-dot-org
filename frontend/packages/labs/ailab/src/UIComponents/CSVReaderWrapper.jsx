@@ -3,12 +3,12 @@ import PropTypes from "prop-types";
 import React, { Component } from "react";
 import Papa from "papaparse";
 import { connect } from "react-redux";
-import { setImportedData, setMetaDataByColumn, ColumnTypes } from "../redux";
+import { setImportedData, setColumnsByDataType, ColumnTypes } from "../redux";
 
 class CSVReaderWrapper extends Component {
   static propTypes = {
     setImportedData: PropTypes.func.isRequired,
-    setMetaDataByColumn: PropTypes.func.isRequired
+    setColumnsByDataType: PropTypes.func.isRequired
   };
 
   constructor(props) {
@@ -37,12 +37,12 @@ class CSVReaderWrapper extends Component {
   updateData = result => {
     var data = result.data;
     this.props.setImportedData(data);
-    this.updateMetaData(data);
+    this.setDefaultColumnDataType(data);
   };
 
-  updateMetaData = data => {
+  setDefaultColumnDataType = data => {
     Object.keys(data[0]).map(column =>
-      this.props.setMetaDataByColumn(column, "dataType", ColumnTypes.OTHER)
+      this.props.setColumnsByDataType(column, ColumnTypes.OTHER)
     );
   };
 
@@ -75,8 +75,8 @@ export default connect(
     setImportedData(data) {
       dispatch(setImportedData(data));
     },
-    setMetaDataByColumn(column, metadataField, value) {
-      dispatch(setMetaDataByColumn(column, metadataField, value));
+    setColumnsByDataType(column, dataType) {
+      dispatch(setColumnsByDataType(column, dataType));
     }
   })
 )(CSVReaderWrapper);

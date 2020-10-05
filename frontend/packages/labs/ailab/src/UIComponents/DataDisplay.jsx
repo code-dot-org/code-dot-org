@@ -6,9 +6,11 @@ import {
   setLabelColumn,
   setSelectedFeatures,
   setShowPredict,
-  setMetaDataByColumn,
+  setColumnsByDataType,
   getFeatures,
-  ColumnTypes
+  ColumnTypes,
+  getCategoricalColumns,
+  getSelectableFeatures
 } from "../redux";
 
 class DataDisplay extends Component {
@@ -20,8 +22,10 @@ class DataDisplay extends Component {
     selectedFeatures: PropTypes.array,
     setSelectedFeatures: PropTypes.func.isRequired,
     setShowPredict: PropTypes.func.isRequired,
-    metaDataByColumn: PropTypes.object,
-    setMetaDataByColumn: PropTypes.func.isRequired
+    columnsByDataType: PropTypes.object,
+    setColumnsByDataType: PropTypes.func.isRequired,
+    categoricalColumns: PropTypes.array,
+    selectableFeatures: PropTypes.array
   };
 
   constructor(props) {
@@ -40,7 +44,26 @@ class DataDisplay extends Component {
 
   handleChangeDataType = (event, feature) => {
     event.preventDefault();
-    this.props.setMetaDataByColumn(feature, "dataType", event.target.value);
+    this.props.setColumnsByDataType(feature, event.target.value);
+    this.resetSelections(event.target.value, feature);
+  };
+
+  resetSelections = (dataType, feature) => {
+    if (
+      dataType !== ColumnTypes.CATEGORICAL &&
+      this.props.labelColumn === feature
+    ) {
+      this.props.setLabelColumn("");
+    }
+    if (
+      dataType === ColumnTypes.OTHER &&
+      this.props.selectedFeatures.includes(feature)
+    ) {
+      let remainingSelectedFeatures = this.props.selectedFeatures.filter(
+        selectedFeature => selectedFeature !== feature
+      );
+      this.props.setSelectedFeatures(remainingSelectedFeatures);
+    }
   };
 
   handleChangeSelect = event => {
@@ -91,16 +114,14 @@ class DataDisplay extends Component {
               {this.props.features.map((feature, index) => {
                 return (
                   <div key={index}>
-                    {this.props.metaDataByColumn[feature] && (
+                    {this.props.columnsByDataType[feature] && (
                       <label>
                         {feature}:
                         <select
                           onChange={event =>
                             this.handleChangeDataType(event, feature)
                           }
-                          value={
-                            this.props.metaDataByColumn[feature]["dataType"]
-                          }
+                          value={this.props.columnsByDataType[feature]}
                         >
                           {Object.values(ColumnTypes).map((option, index) => {
                             return (
@@ -118,50 +139,56 @@ class DataDisplay extends Component {
                 );
               })}
             </form>
-            <form>
-              <label>
-                <h2>Which column contains the labels for your dataset?</h2>
-                <p>
-                  The model will be trained to predict which catgegory from the
-                  label column an example (a set of attributes or features) is
-                  most likely to belong to.
-                </p>
-                <select
-                  value={this.props.labelColumn}
-                  onChange={this.handleChangeSelect}
-                >
-                  {this.props.features.map((feature, index) => {
-                    return (
-                      <option key={index} value={feature}>
-                        {feature}
-                      </option>
-                    );
-                  })}
-                </select>
-              </label>
-            </form>
-            <form>
-              <label>
-                <h2>Which features are you interested in training on?</h2>
-                <p>
-                  Features are the attributes the model will use to make a
-                  prediction.
-                </p>
-                <select
-                  multiple={true}
-                  value={this.props.selectedFeatures}
-                  onChange={this.handleChangeMultiSelect}
-                >
-                  {this.props.features.map((feature, index) => {
-                    return (
-                      <option key={index} value={feature}>
-                        {feature}
-                      </option>
-                    );
-                  })}
-                </select>
-              </label>
-            </form>
+            {this.props.categoricalColumns.length > 0 && (
+              <form>
+                <label>
+                  <h2>Which column contains the labels for your dataset?</h2>
+                  <p>
+                    The model will be trained to predict which catgegory from
+                    the label column an example (a set of attributes or
+                    features) is most likely to belong to. Labels are
+                    categorical.
+                  </p>
+                  <select
+                    value={this.props.labelColumn}
+                    onChange={this.handleChangeSelect}
+                  >
+                    <option>{""}</option>
+                    {this.props.categoricalColumns.map((feature, index) => {
+                      return (
+                        <option key={index} value={feature}>
+                          {feature}
+                        </option>
+                      );
+                    })}
+                  </select>
+                </label>
+              </form>
+            )}
+            {this.props.selectableFeatures.length > 0 && (
+              <form>
+                <label>
+                  <h2>Which features are you interested in training on?</h2>
+                  <p>
+                    Features are the attributes the model will use to make a
+                    prediction. Features can be categorical or continuous.
+                  </p>
+                  <select
+                    multiple={true}
+                    value={this.props.selectedFeatures}
+                    onChange={this.handleChangeMultiSelect}
+                  >
+                    {this.props.selectableFeatures.map((feature, index) => {
+                      return (
+                        <option key={index} value={feature}>
+                          {feature}
+                        </option>
+                      );
+                    })}
+                  </select>
+                </label>
+              </form>
+            )}
           </div>
         )}
       </div>
@@ -175,11 +202,13 @@ export default connect(
     labelColumn: state.labelColumn,
     selectedFeatures: state.selectedFeatures,
     features: getFeatures(state),
-    metaDataByColumn: state.metaDataByColumn
+    columnsByDataType: state.columnsByDataType,
+    categoricalColumns: getCategoricalColumns(state),
+    selectableFeatures: getSelectableFeatures(state)
   }),
   dispatch => ({
-    setMetaDataByColumn(column, metadataField, value) {
-      dispatch(setMetaDataByColumn(column, metadataField, value));
+    setColumnsByDataType(column, dataType) {
+      dispatch(setColumnsByDataType(column, dataType));
     },
     setSelectedFeatures(selectedFeatures) {
       dispatch(setSelectedFeatures(selectedFeatures));
