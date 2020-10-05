@@ -16,6 +16,8 @@ theme: responsive
 %script{type: "text/javascript", src: "/js/jquery.geocomplete.min.js"}
 %script{type: "text/javascript", src: "/js/jquery.colorbox-min.js"}
 %script{type: "text/javascript", src: "/js/jquery.sticky.js"}
+%link{href:'https://api.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.css', rel:'stylesheet'}
+%script{src:'https://api.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.js'}
 %script{type: "text/javascript", src: webpack_asset_path('js/code.org/public/learn/local.js')}
 %link{rel: "stylesheet", type: "text/css", href: "/css/selectize.bootstrap3.css"}/
 %link{rel: "stylesheet", type: "text/css", href: "/css/colorbox.css"}/
@@ -80,3 +82,5 @@ theme: responsive
   #class-search-error.col-xs-12{style: 'margin-top: 2em; display: none;'}
 
 #location-details{style: 'display: none'}
+:javascript
+    mapboxgl.accessToken = "#{CDO.mapbox_access_token}";
