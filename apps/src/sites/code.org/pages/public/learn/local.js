@@ -8,7 +8,7 @@ var gmap_loc;
 var selectize;
 
 // This is for older browsers that don't support remove.
-// We need this to clear the popups when the user clicks "View All" to see all classes
+// We need this to clear the popups when the user clicks "View All" to see all classes or when a different class is selected in the results list.
 if (!('remove' in Element.prototype)) {
   Element.prototype.remove = function() {
     if (this.parentNode) {
@@ -128,11 +128,12 @@ function loadMap(locations) {
   // Reset the map.
   $('#gmap').html('');
   if (window.location.search.includes('mapbox')) {
-    const featureList = locations.map(location => ({
+    const featureList = locations.map((location, index) => ({
       type: 'Feature',
       properties: {
         description: location.html,
-        title: location.title
+        title: location.title,
+        index
       },
       geometry: {
         type: 'Point',
@@ -184,6 +185,13 @@ function loadMap(locations) {
             while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
               coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
             }
+            var activeItem = document.querySelector('li.active');
+            if (activeItem) {
+              activeItem.classList.remove('active');
+            }
+            document
+              .querySelector(`#control-${e.features[0].properties.index}`)
+              .classList.add('active');
             createPopUp(e.features[0]);
           });
 
@@ -217,11 +225,8 @@ function loadMap(locations) {
         if (activeItem) {
           activeItem.classList.remove('active');
         }
-        var popUps = document.getElementsByClassName('mapboxgl-popup');
-        /** Check if there is already a popup on the map and if so, remove it */
-        if (popUps[0]) {
-          popUps[0].remove();
-        }
+        viewAll.classList.add('active');
+        clearPopUps();
         gmap.flyTo({
           center: [lng, lat],
           zoom: 10
@@ -232,8 +237,9 @@ function loadMap(locations) {
       viewAllLink.append(titleSpan);
       viewAll.append(viewAllLink);
       controlList.append(viewAll);
-      featureList.forEach(feature => {
+      featureList.forEach((feature, index) => {
         var listItem = document.createElement('li');
+        listItem.id = `control-${index}`;
         var link = document.createElement('a');
         link.style = linkStyle;
         var titleSpan = document.createElement('span');
@@ -293,9 +299,18 @@ function flyToStore(currentFeature) {
 }
 
 function createPopUp(currentFeature) {
+  clearPopUps();
   new mapboxgl.Popup()
     .setLngLat(currentFeature.geometry.coordinates)
     .setHTML(currentFeature.properties.description)
     .addTo(gmap);
   setDetailsTrigger();
+}
+
+function clearPopUps() {
+  var popUps = document.getElementsByClassName('mapboxgl-popup');
+  /** Check if there is already a popup on the map and if so, remove it */
+  if (popUps[0]) {
+    popUps[0].remove();
+  }
 }
