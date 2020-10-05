@@ -9,7 +9,7 @@ import PrivacyDialog from '../PrivacyDialog';
 import {PrivacyDialogMode} from '../../constants';
 import SchoolAutocompleteDropdown from '@cdo/apps/templates/SchoolAutocompleteDropdown';
 import {isInt, isPercent, isZipCode} from '@cdo/apps/util/formatValidation';
-import {styles} from '../teacher/TeacherApplicationConstants';
+import {YEAR, styles} from '../teacher/TeacherApplicationConstants';
 
 const MANUAL_SCHOOL_FIELDS = [
   'schoolName',
@@ -51,7 +51,6 @@ const REPLACE_COURSE_FIELDS = [
   'replaceWhichCourseCsp',
   'replaceWhichCourseCsd'
 ];
-const YEAR = '2020-21';
 const YES = 'Yes';
 
 export default class PrincipalApprovalComponent extends LabeledFormComponent {
@@ -245,7 +244,7 @@ export default class PrincipalApprovalComponent extends LabeledFormComponent {
               required: false,
               label: `I am authorized to release student data and give permission for the College
               Board to send de-identified AP scores for Code.org classes directly to Code.org for
-              the 2019 to 2021 school years. I understand that the de-identified data cannot be
+              the 2019 to 2022 school years. I understand that the de-identified data cannot be
               tied to individual students, will not be used to evaluate teachers, and will greatly
               help Code.org evaluate its program effectiveness.`
             })}
@@ -299,8 +298,17 @@ export default class PrincipalApprovalComponent extends LabeledFormComponent {
           <a href={`https://code.org/educate/${courseSuffix}`} target="_blank">
             {this.props.teacherApplication.course} curriculum
           </a>{' '}
-          during the {YEAR} school year. Your approval is required for the
-          teacher's application to be considered.
+          during the {YEAR} school year. We know that administrative support is
+          essential to a teacher’s ability to fully commit to a) participating
+          in a yearlong Professional Learning program and b) teaching a new
+          course. That’s why your approval is required for the teacher's
+          application to be considered.
+        </p>
+        <p>
+          To help us measure our progress towards expanding access and providing
+          resources where they’re needed most, we ask that you confirm
+          demographic information about your school as well as how the course
+          will be implemented during the upcoming school year.
         </p>
         {this.selectFor('title', {
           required: false,
@@ -310,16 +318,11 @@ export default class PrincipalApprovalComponent extends LabeledFormComponent {
         {this.inputFor('lastName')}
         {this.inputFor('email')}
         <p>
-          Teachers should attend the minimum number of workshops that correspond
-          to the number of units they intend to teach, which include:
+          Participating teachers are asked to commit to Code.org’s yearlong
+          Professional Learning Program starting in the summer and concluding in
+          the spring. Workshops can either be held in-person, virtually, or as a
+          combination of both throughout the year.
         </p>
-        <ul>
-          <li>One summer workshop in 2020</li>
-          <li>
-            Up to four one-day workshops during the {YEAR} school year
-            (typically held on Saturdays)
-          </li>
-        </ul>
         {this.radioButtonsWithAdditionalTextFieldsFor(
           'doYouApprove',
           {

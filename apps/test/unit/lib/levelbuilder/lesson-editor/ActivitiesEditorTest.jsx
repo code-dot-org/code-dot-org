@@ -17,7 +17,7 @@ describe('ActivitiesEditor', () => {
 
   it('renders default props', () => {
     const wrapper = shallow(<ActivitiesEditor {...defaultProps} />);
-    expect(wrapper.contains('Preview'));
+    expect(wrapper.contains('Preview')).to.be.true;
     expect(wrapper.find('button').length).to.equal(1);
     expect(wrapper.find('Connect(ActivityCard)').length).to.equal(1);
     expect(wrapper.find('Activity').length).to.equal(1);
