@@ -1,7 +1,7 @@
 import GoogleBlockly from 'blockly/core';
 
 export default class CdoTrashcan extends GoogleBlockly.Trashcan {
-  /** Use our trash png and add ⃠ for undeletable blocks
+  /** Use our trash png and add circle with line through it for undeletable blocks
    * @override
    */
   createDom() {
@@ -18,6 +18,7 @@ export default class CdoTrashcan extends GoogleBlockly.Trashcan {
       }
     });
 
+    // not allowed symbol for undeletable blocks. Circle with line through it
     this.notAllowed_ = Blockly.utils.dom.createSvgElement(
       'g',
       {},
@@ -36,7 +37,7 @@ export default class CdoTrashcan extends GoogleBlockly.Trashcan {
     return this.svgGroup_;
   }
 
-  /** Also dispose of ⃠ elements
+  /** Also dispose of circle with line through it element
    * @override
    */
   dispose() {
