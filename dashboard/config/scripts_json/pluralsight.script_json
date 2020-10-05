@@ -54,8 +54,6 @@
         "script_level.level_keys": [
           "Pluralsight for CSP"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Pluralsight LevelGroup",
         "lesson_group.key": "",
         "script.name": "pluralsight"
@@ -72,8 +70,6 @@
         "script_level.level_keys": [
           "Pluralsight for CSP"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Pluralsight LevelGroup",
         "lesson_group.key": "",
         "script.name": "pluralsight"

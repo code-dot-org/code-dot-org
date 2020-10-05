@@ -87,8 +87,6 @@
         "script_level.level_keys": [
           "Deeper Learning Overview"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Deeper Learning Overview",
         "lesson_group.key": "required",
         "script.name": "csd3-dlp-18"
@@ -110,8 +108,6 @@
         "script_level.level_keys": [
           "csd deeper learning timeline 2018-2019"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Deeper Learning Overview",
         "lesson_group.key": "required",
         "script.name": "csd3-dlp-18"
@@ -133,8 +129,6 @@
         "script_level.level_keys": [
           "dlp supports - csd"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "Deeper Learning Overview",
         "lesson_group.key": "required",
         "script.name": "csd3-dlp-18"
@@ -156,8 +150,6 @@
         "script_level.level_keys": [
           "peer review recommendations 18-19"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "Deeper Learning Overview",
         "lesson_group.key": "required",
         "script.name": "csd3-dlp-18"
@@ -178,8 +170,6 @@
         "script_level.level_keys": [
           "csd3dlp-q1"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 1,
         "lesson.key": "Complete Unit 3 Deeper Learning Reflections",
         "lesson_group.key": "content",
         "script.name": "csd3-dlp-18"
@@ -200,8 +190,6 @@
         "script_level.level_keys": [
           "csd3dlp-q2"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 2,
         "lesson.key": "Complete Unit 3 Deeper Learning Reflections",
         "lesson_group.key": "content",
         "script.name": "csd3-dlp-18"
@@ -222,8 +210,6 @@
         "script_level.level_keys": [
           "csd3dlp-q3"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 3,
         "lesson.key": "Complete Unit 3 Deeper Learning Reflections",
         "lesson_group.key": "content",
         "script.name": "csd3-dlp-18"
@@ -240,8 +226,6 @@
         "script_level.level_keys": [
           "Deeper Learning Overview"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Deeper Learning Overview",
         "lesson_group.key": "required",
         "script.name": "csd3-dlp-18"
@@ -253,8 +237,6 @@
         "script_level.level_keys": [
           "csd deeper learning timeline 2018-2019"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Deeper Learning Overview",
         "lesson_group.key": "required",
         "script.name": "csd3-dlp-18"
@@ -266,8 +248,6 @@
         "script_level.level_keys": [
           "dlp supports - csd"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "Deeper Learning Overview",
         "lesson_group.key": "required",
         "script.name": "csd3-dlp-18"
@@ -279,8 +259,6 @@
         "script_level.level_keys": [
           "peer review recommendations 18-19"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "Deeper Learning Overview",
         "lesson_group.key": "required",
         "script.name": "csd3-dlp-18"
@@ -292,8 +270,6 @@
         "script_level.level_keys": [
           "csd3dlp-q1"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 1,
         "lesson.key": "Complete Unit 3 Deeper Learning Reflections",
         "lesson_group.key": "content",
         "script.name": "csd3-dlp-18"
@@ -305,8 +281,6 @@
         "script_level.level_keys": [
           "csd3dlp-q2"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 2,
         "lesson.key": "Complete Unit 3 Deeper Learning Reflections",
         "lesson_group.key": "content",
         "script.name": "csd3-dlp-18"
@@ -318,8 +292,6 @@
         "script_level.level_keys": [
           "csd3dlp-q3"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 3,
         "lesson.key": "Complete Unit 3 Deeper Learning Reflections",
         "lesson_group.key": "content",
         "script.name": "csd3-dlp-18"

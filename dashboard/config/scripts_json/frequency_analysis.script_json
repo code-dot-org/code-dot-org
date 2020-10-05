@@ -55,8 +55,6 @@
         "script_level.level_keys": [
           "Frequency Analysis"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Frequency Analysis",
         "lesson_group.key": "",
         "script.name": "frequency_analysis"
@@ -73,8 +71,6 @@
         "script_level.level_keys": [
           "Frequency Analysis"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Frequency Analysis",
         "lesson_group.key": "",
         "script.name": "frequency_analysis"

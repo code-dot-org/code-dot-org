@@ -358,8 +358,6 @@
         "script_level.level_keys": [
           "CSP U4 My Pet Rock Example App"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Variables Explore",
         "lesson_group.key": "csp_variables",
         "script.name": "cspplayground"
@@ -381,8 +379,6 @@
         "script_level.level_keys": [
           "U4 L01 Poetry App"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Variables Explore",
         "lesson_group.key": "csp_variables",
         "script.name": "cspplayground"
@@ -404,8 +400,6 @@
         "script_level.level_keys": [
           "U4 L01 Thermostat App"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "Variables Explore",
         "lesson_group.key": "csp_variables",
         "script.name": "cspplayground"
@@ -427,8 +421,6 @@
         "script_level.level_keys": [
           "U1 L02 CYU MC"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "Variables Explore",
         "lesson_group.key": "csp_variables",
         "script.name": "cspplayground"
@@ -450,8 +442,6 @@
         "script_level.level_keys": [
           "U4 L02 Thermostat App v1"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 1,
         "lesson.key": "Variables Investigate",
         "lesson_group.key": "csp_variables",
         "script.name": "cspplayground"
@@ -473,8 +463,6 @@
         "script_level.level_keys": [
           "U4 L02 Thermostat App v1 Code"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 2,
         "lesson.key": "Variables Investigate",
         "lesson_group.key": "csp_variables",
         "script.name": "cspplayground"
@@ -496,8 +484,6 @@
         "script_level.level_keys": [
           "U4 L02 Thermostat App v2"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 3,
         "lesson.key": "Variables Investigate",
         "lesson_group.key": "csp_variables",
         "script.name": "cspplayground"
@@ -519,8 +505,6 @@
         "script_level.level_keys": [
           "U4 L02 Thermostat App v3"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 4,
         "lesson.key": "Variables Investigate",
         "lesson_group.key": "csp_variables",
         "script.name": "cspplayground"
@@ -542,8 +526,6 @@
         "script_level.level_keys": [
           "U4 L02 Thermostat App v3 pt2"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 5,
         "lesson.key": "Variables Investigate",
         "lesson_group.key": "csp_variables",
         "script.name": "cspplayground"
@@ -565,8 +547,6 @@
         "script_level.level_keys": [
           "U4 L02 Thermostat App v3 pt3"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 6,
         "lesson.key": "Variables Investigate",
         "lesson_group.key": "csp_variables",
         "script.name": "cspplayground"
@@ -588,8 +568,6 @@
         "script_level.level_keys": [
           "U4 L02 CYU Exit Ticket"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 7,
         "lesson.key": "Variables Investigate",
         "lesson_group.key": "csp_variables",
         "script.name": "cspplayground"
@@ -611,8 +589,6 @@
         "script_level.level_keys": [
           "U4 L03 Variables numbers practice 1"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 1,
         "lesson.key": "Variables Practice",
         "lesson_group.key": "csp_variables",
         "script.name": "cspplayground"
@@ -634,8 +610,6 @@
         "script_level.level_keys": [
           "U4 L03 Variables numbers practice 4"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 2,
         "lesson.key": "Variables Practice",
         "lesson_group.key": "csp_variables",
         "script.name": "cspplayground"
@@ -657,8 +631,6 @@
         "script_level.level_keys": [
           "U4 L03 Variables operator practice 1"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 3,
         "lesson.key": "Variables Practice",
         "lesson_group.key": "csp_variables",
         "script.name": "cspplayground"
@@ -680,8 +652,6 @@
         "script_level.level_keys": [
           "U4 L03 Variables operator practice 3"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 4,
         "lesson.key": "Variables Practice",
         "lesson_group.key": "csp_variables",
         "script.name": "cspplayground"
@@ -703,8 +673,6 @@
         "script_level.level_keys": [
           "U4 L03 Variables operator practice 2"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 5,
         "lesson.key": "Variables Practice",
         "lesson_group.key": "csp_variables",
         "script.name": "cspplayground"
@@ -726,8 +694,6 @@
         "script_level.level_keys": [
           "U4 L03 Variables operator practice 5"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 6,
         "lesson.key": "Variables Practice",
         "lesson_group.key": "csp_variables",
         "script.name": "cspplayground"
@@ -749,8 +715,6 @@
         "script_level.level_keys": [
           "U4 L03 Variables operator practice 6"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 7,
         "lesson.key": "Variables Practice",
         "lesson_group.key": "csp_variables",
         "script.name": "cspplayground"
@@ -772,8 +736,6 @@
         "script_level.level_keys": [
           "U4 L03 Variable Scope: Local vs. Global"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 8,
         "lesson.key": "Variables Practice",
         "lesson_group.key": "csp_variables",
         "script.name": "cspplayground"
@@ -795,8 +757,6 @@
         "script_level.level_keys": [
           "U4 L03 Scope Issue"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 9,
         "lesson.key": "Variables Practice",
         "lesson_group.key": "csp_variables",
         "script.name": "cspplayground"
@@ -818,8 +778,6 @@
         "script_level.level_keys": [
           "U4 L03 Variables operator practice 4"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 10,
         "lesson.key": "Variables Practice",
         "lesson_group.key": "csp_variables",
         "script.name": "cspplayground"
@@ -841,8 +799,6 @@
         "script_level.level_keys": [
           "U4 L04 Variables Make Project Sample"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 1,
         "lesson.key": "Variables Make",
         "lesson_group.key": "csp_variables",
         "script.name": "cspplayground"
@@ -864,8 +820,6 @@
         "script_level.level_keys": [
           "U4 L04 Variables Make Project 1"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 2,
         "lesson.key": "Variables Make",
         "lesson_group.key": "csp_variables",
         "script.name": "cspplayground"
@@ -887,8 +841,6 @@
         "script_level.level_keys": [
           "U4 L04 Variables Make Project 2"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 3,
         "lesson.key": "Variables Make",
         "lesson_group.key": "csp_variables",
         "script.name": "cspplayground"
@@ -910,8 +862,6 @@
         "script_level.level_keys": [
           "U4 L04 Variables Make Project 3"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 4,
         "lesson.key": "Variables Make",
         "lesson_group.key": "csp_variables",
         "script.name": "cspplayground"
@@ -933,8 +883,6 @@
         "script_level.level_keys": [
           "U4 L04 Variables Make Project 4"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 5,
         "lesson.key": "Variables Make",
         "lesson_group.key": "csp_variables",
         "script.name": "cspplayground"
@@ -956,8 +904,6 @@
         "script_level.level_keys": [
           "Pilot Student Survey"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 1,
         "lesson.key": "Student Survey (Variables)",
         "lesson_group.key": "csp_variables",
         "script.name": "cspplayground"
@@ -979,8 +925,6 @@
         "script_level.level_keys": [
           "Pilot Teacher Surveys CSP2021"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 1,
         "lesson.key": "Teacher Surveys (Variables)",
         "lesson_group.key": "csp_variables",
         "script.name": "cspplayground"
@@ -1001,8 +945,6 @@
         "script_level.level_keys": [
           "U4 L06 Introduction to Conditionals: Boolean Expressions"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 1,
         "lesson.key": "Conditionals Explore",
         "lesson_group.key": "csp_conditionals",
         "script.name": "cspplayground"
@@ -1024,8 +966,6 @@
         "script_level.level_keys": [
           "U4 L05 CYU Exit Ticket"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 2,
         "lesson.key": "Conditionals Explore",
         "lesson_group.key": "csp_conditionals",
         "script.name": "cspplayground"
@@ -1047,8 +987,6 @@
         "script_level.level_keys": [
           "U4L06 Introduction to Conditionals: if Statements"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 1,
         "lesson.key": "Conditionals Investigate",
         "lesson_group.key": "csp_conditionals",
         "script.name": "cspplayground"
@@ -1070,8 +1008,6 @@
         "script_level.level_keys": [
           "U4 L06 Thermostat App v4"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 2,
         "lesson.key": "Conditionals Investigate",
         "lesson_group.key": "csp_conditionals",
         "script.name": "cspplayground"
@@ -1093,8 +1029,6 @@
         "script_level.level_keys": [
           "U4 L06 Thermostat App v4 Code"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 3,
         "lesson.key": "Conditionals Investigate",
         "lesson_group.key": "csp_conditionals",
         "script.name": "cspplayground"
@@ -1116,8 +1050,6 @@
         "script_level.level_keys": [
           "U4L06 Introduction to Conditionals: if-else Statements"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 4,
         "lesson.key": "Conditionals Investigate",
         "lesson_group.key": "csp_conditionals",
         "script.name": "cspplayground"
@@ -1139,8 +1071,6 @@
         "script_level.level_keys": [
           "U4L06 Introduction to Conditionals: if-else-if Statements"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 5,
         "lesson.key": "Conditionals Investigate",
         "lesson_group.key": "csp_conditionals",
         "script.name": "cspplayground"
@@ -1162,8 +1092,6 @@
         "script_level.level_keys": [
           "U4 L06 Thermostat App v5"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 6,
         "lesson.key": "Conditionals Investigate",
         "lesson_group.key": "csp_conditionals",
         "script.name": "cspplayground"
@@ -1185,8 +1113,6 @@
         "script_level.level_keys": [
           "U4 L06 Thermostat App v5 Code"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 7,
         "lesson.key": "Conditionals Investigate",
         "lesson_group.key": "csp_conditionals",
         "script.name": "cspplayground"
@@ -1208,8 +1134,6 @@
         "script_level.level_keys": [
           "U4L06 Introduction to Conditionals: Compound Boolean Expressions"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 8,
         "lesson.key": "Conditionals Investigate",
         "lesson_group.key": "csp_conditionals",
         "script.name": "cspplayground"
@@ -1231,8 +1155,6 @@
         "script_level.level_keys": [
           "U4 L06 Thermostat App v6"
         ],
-        "script_level.chapter": 39,
-        "script_level.position": 9,
         "lesson.key": "Conditionals Investigate",
         "lesson_group.key": "csp_conditionals",
         "script.name": "cspplayground"
@@ -1254,8 +1176,6 @@
         "script_level.level_keys": [
           "U4 L06 Thermostat App v6 Code"
         ],
-        "script_level.chapter": 40,
-        "script_level.position": 10,
         "lesson.key": "Conditionals Investigate",
         "lesson_group.key": "csp_conditionals",
         "script.name": "cspplayground"
@@ -1277,8 +1197,6 @@
         "script_level.level_keys": [
           "Checking Multiple Conditions with If-elseif"
         ],
-        "script_level.chapter": 41,
-        "script_level.position": 11,
         "lesson.key": "Conditionals Investigate",
         "lesson_group.key": "csp_conditionals",
         "script.name": "cspplayground"
@@ -1300,8 +1218,6 @@
         "script_level.level_keys": [
           "U4 L06 CYU Exit Ticket"
         ],
-        "script_level.chapter": 42,
-        "script_level.position": 12,
         "lesson.key": "Conditionals Investigate",
         "lesson_group.key": "csp_conditionals",
         "script.name": "cspplayground"
@@ -1323,8 +1239,6 @@
         "script_level.level_keys": [
           "U4 L07 Conditionals Practice 1"
         ],
-        "script_level.chapter": 43,
-        "script_level.position": 1,
         "lesson.key": "Conditionals Practice",
         "lesson_group.key": "csp_conditionals",
         "script.name": "cspplayground"
@@ -1346,8 +1260,6 @@
         "script_level.level_keys": [
           "U4 L07 Conditionals Practice 2"
         ],
-        "script_level.chapter": 44,
-        "script_level.position": 2,
         "lesson.key": "Conditionals Practice",
         "lesson_group.key": "csp_conditionals",
         "script.name": "cspplayground"
@@ -1369,8 +1281,6 @@
         "script_level.level_keys": [
           "U4 L07 Conditionals Practice 3"
         ],
-        "script_level.chapter": 45,
-        "script_level.position": 3,
         "lesson.key": "Conditionals Practice",
         "lesson_group.key": "csp_conditionals",
         "script.name": "cspplayground"
@@ -1392,8 +1302,6 @@
         "script_level.level_keys": [
           "U4 L07 Conditionals Practice 10"
         ],
-        "script_level.chapter": 46,
-        "script_level.position": 4,
         "lesson.key": "Conditionals Practice",
         "lesson_group.key": "csp_conditionals",
         "script.name": "cspplayground"
@@ -1415,8 +1323,6 @@
         "script_level.level_keys": [
           "U4 L07 Conditionals Practice 4"
         ],
-        "script_level.chapter": 47,
-        "script_level.position": 5,
         "lesson.key": "Conditionals Practice",
         "lesson_group.key": "csp_conditionals",
         "script.name": "cspplayground"
@@ -1438,8 +1344,6 @@
         "script_level.level_keys": [
           "U4 L07 Conditionals Practice 5"
         ],
-        "script_level.chapter": 48,
-        "script_level.position": 6,
         "lesson.key": "Conditionals Practice",
         "lesson_group.key": "csp_conditionals",
         "script.name": "cspplayground"
@@ -1461,8 +1365,6 @@
         "script_level.level_keys": [
           "U4 L07 Conditionals Practice 6"
         ],
-        "script_level.chapter": 49,
-        "script_level.position": 7,
         "lesson.key": "Conditionals Practice",
         "lesson_group.key": "csp_conditionals",
         "script.name": "cspplayground"
@@ -1484,8 +1386,6 @@
         "script_level.level_keys": [
           "U4 L07 Conditionals Practice 7"
         ],
-        "script_level.chapter": 50,
-        "script_level.position": 8,
         "lesson.key": "Conditionals Practice",
         "lesson_group.key": "csp_conditionals",
         "script.name": "cspplayground"
@@ -1507,8 +1407,6 @@
         "script_level.level_keys": [
           "U4 L07 Conditionals Practice 8"
         ],
-        "script_level.chapter": 51,
-        "script_level.position": 9,
         "lesson.key": "Conditionals Practice",
         "lesson_group.key": "csp_conditionals",
         "script.name": "cspplayground"
@@ -1530,8 +1428,6 @@
         "script_level.level_keys": [
           "U4 L07 Conditionals Practice 9"
         ],
-        "script_level.chapter": 52,
-        "script_level.position": 10,
         "lesson.key": "Conditionals Practice",
         "lesson_group.key": "csp_conditionals",
         "script.name": "cspplayground"
@@ -1553,8 +1449,6 @@
         "script_level.level_keys": [
           "U4 L08 Conditionals Make Project Sample"
         ],
-        "script_level.chapter": 53,
-        "script_level.position": 1,
         "lesson.key": "Conditional Make",
         "lesson_group.key": "csp_conditionals",
         "script.name": "cspplayground"
@@ -1576,8 +1470,6 @@
         "script_level.level_keys": [
           "U4 L08 Conditionals Make Project Flowchart"
         ],
-        "script_level.chapter": 54,
-        "script_level.position": 2,
         "lesson.key": "Conditional Make",
         "lesson_group.key": "csp_conditionals",
         "script.name": "cspplayground"
@@ -1599,8 +1491,6 @@
         "script_level.level_keys": [
           "U4L08 Museum Ticket Generator 1"
         ],
-        "script_level.chapter": 55,
-        "script_level.position": 3,
         "lesson.key": "Conditional Make",
         "lesson_group.key": "csp_conditionals",
         "script.name": "cspplayground"
@@ -1622,8 +1512,6 @@
         "script_level.level_keys": [
           "U4L08 Museum Ticket Generator 2"
         ],
-        "script_level.chapter": 56,
-        "script_level.position": 4,
         "lesson.key": "Conditional Make",
         "lesson_group.key": "csp_conditionals",
         "script.name": "cspplayground"
@@ -1645,8 +1533,6 @@
         "script_level.level_keys": [
           "U4L08 Museum Ticket Generator 4"
         ],
-        "script_level.chapter": 57,
-        "script_level.position": 5,
         "lesson.key": "Conditional Make",
         "lesson_group.key": "csp_conditionals",
         "script.name": "cspplayground"
@@ -1668,8 +1554,6 @@
         "script_level.level_keys": [
           "U4L08 Museum Ticket Generator 5"
         ],
-        "script_level.chapter": 58,
-        "script_level.position": 6,
         "lesson.key": "Conditional Make",
         "lesson_group.key": "csp_conditionals",
         "script.name": "cspplayground"
@@ -1691,8 +1575,6 @@
         "script_level.level_keys": [
           "Pilot Student Survey Conditionals"
         ],
-        "script_level.chapter": 59,
-        "script_level.position": 1,
         "lesson.key": "Student Survey (Conditionals)",
         "lesson_group.key": "csp_conditionals",
         "script.name": "cspplayground"
@@ -1714,8 +1596,6 @@
         "script_level.level_keys": [
           "Pilot Teacher Surveys Conditionals CSP2021"
         ],
-        "script_level.chapter": 60,
-        "script_level.position": 1,
         "lesson.key": "Teacher Surveys (Conditionals)",
         "lesson_group.key": "csp_conditionals",
         "script.name": "cspplayground"
@@ -1737,8 +1617,6 @@
         "script_level.level_keys": [
           "U4 L09 Functions Song"
         ],
-        "script_level.chapter": 61,
-        "script_level.position": 1,
         "lesson.key": "Functions Explore / Investigate",
         "lesson_group.key": "csp_functions",
         "script.name": "cspplayground"
@@ -1760,8 +1638,6 @@
         "script_level.level_keys": [
           "U4L09 Intro to Functions Video"
         ],
-        "script_level.chapter": 62,
-        "script_level.position": 2,
         "lesson.key": "Functions Explore / Investigate",
         "lesson_group.key": "csp_functions",
         "script.name": "cspplayground"
@@ -1783,8 +1659,6 @@
         "script_level.level_keys": [
           "U4 L09 Score Clicker Investigate"
         ],
-        "script_level.chapter": 63,
-        "script_level.position": 3,
         "lesson.key": "Functions Explore / Investigate",
         "lesson_group.key": "csp_functions",
         "script.name": "cspplayground"
@@ -1806,8 +1680,6 @@
         "script_level.level_keys": [
           "U4 L09 Thermostat App v7"
         ],
-        "script_level.chapter": 64,
-        "script_level.position": 4,
         "lesson.key": "Functions Explore / Investigate",
         "lesson_group.key": "csp_functions",
         "script.name": "cspplayground"
@@ -1829,8 +1701,6 @@
         "script_level.level_keys": [
           "updateScreen Pattern"
         ],
-        "script_level.chapter": 65,
-        "script_level.position": 5,
         "lesson.key": "Functions Explore / Investigate",
         "lesson_group.key": "csp_functions",
         "script.name": "cspplayground"
@@ -1852,8 +1722,6 @@
         "script_level.level_keys": [
           "U4 L10 Functions Practice Calling Functions 1"
         ],
-        "script_level.chapter": 66,
-        "script_level.position": 1,
         "lesson.key": "Functions Practice",
         "lesson_group.key": "csp_functions",
         "script.name": "cspplayground"
@@ -1875,8 +1743,6 @@
         "script_level.level_keys": [
           "U4 L10 Functions Practice 1"
         ],
-        "script_level.chapter": 67,
-        "script_level.position": 2,
         "lesson.key": "Functions Practice",
         "lesson_group.key": "csp_functions",
         "script.name": "cspplayground"
@@ -1898,8 +1764,6 @@
         "script_level.level_keys": [
           "U4 L10 Functions Practice 2"
         ],
-        "script_level.chapter": 68,
-        "script_level.position": 3,
         "lesson.key": "Functions Practice",
         "lesson_group.key": "csp_functions",
         "script.name": "cspplayground"
@@ -1921,8 +1785,6 @@
         "script_level.level_keys": [
           "U4 L10 Functions Practice 3"
         ],
-        "script_level.chapter": 69,
-        "script_level.position": 4,
         "lesson.key": "Functions Practice",
         "lesson_group.key": "csp_functions",
         "script.name": "cspplayground"
@@ -1944,8 +1806,6 @@
         "script_level.level_keys": [
           "U4 L10 Functions Build Practice 2"
         ],
-        "script_level.chapter": 70,
-        "script_level.position": 5,
         "lesson.key": "Functions Practice",
         "lesson_group.key": "csp_functions",
         "script.name": "cspplayground"
@@ -1967,8 +1827,6 @@
         "script_level.level_keys": [
           "Debugging Variable Scope and Functions"
         ],
-        "script_level.chapter": 71,
-        "script_level.position": 6,
         "lesson.key": "Functions Practice",
         "lesson_group.key": "csp_functions",
         "script.name": "cspplayground"
@@ -1990,8 +1848,6 @@
         "script_level.level_keys": [
           "U4 L10 Functions Scope Practice 1 v2"
         ],
-        "script_level.chapter": 72,
-        "script_level.position": 7,
         "lesson.key": "Functions Practice",
         "lesson_group.key": "csp_functions",
         "script.name": "cspplayground"
@@ -2013,8 +1869,6 @@
         "script_level.level_keys": [
           "When to Make Functions Map"
         ],
-        "script_level.chapter": 73,
-        "script_level.position": 8,
         "lesson.key": "Functions Practice",
         "lesson_group.key": "csp_functions",
         "script.name": "cspplayground"
@@ -2036,8 +1890,6 @@
         "script_level.level_keys": [
           "U4 L10 Making Functions Practice"
         ],
-        "script_level.chapter": 74,
-        "script_level.position": 9,
         "lesson.key": "Functions Practice",
         "lesson_group.key": "csp_functions",
         "script.name": "cspplayground"
@@ -2059,8 +1911,6 @@
         "script_level.level_keys": [
           "U4 L11 Functions Make 1"
         ],
-        "script_level.chapter": 75,
-        "script_level.position": 1,
         "lesson.key": "Functions Make",
         "lesson_group.key": "csp_functions",
         "script.name": "cspplayground"
@@ -2082,8 +1932,6 @@
         "script_level.level_keys": [
           "U4 L11 Functions Make 2"
         ],
-        "script_level.chapter": 76,
-        "script_level.position": 2,
         "lesson.key": "Functions Make",
         "lesson_group.key": "csp_functions",
         "script.name": "cspplayground"
@@ -2105,8 +1953,6 @@
         "script_level.level_keys": [
           "U4 L11 Functions Make 3"
         ],
-        "script_level.chapter": 77,
-        "script_level.position": 3,
         "lesson.key": "Functions Make",
         "lesson_group.key": "csp_functions",
         "script.name": "cspplayground"
@@ -2128,8 +1974,6 @@
         "script_level.level_keys": [
           "U4 L11 Functions Make 4"
         ],
-        "script_level.chapter": 78,
-        "script_level.position": 4,
         "lesson.key": "Functions Make",
         "lesson_group.key": "csp_functions",
         "script.name": "cspplayground"
@@ -2151,8 +1995,6 @@
         "script_level.level_keys": [
           "U4 L11 Functions Make 4.5"
         ],
-        "script_level.chapter": 79,
-        "script_level.position": 5,
         "lesson.key": "Functions Make",
         "lesson_group.key": "csp_functions",
         "script.name": "cspplayground"
@@ -2174,8 +2016,6 @@
         "script_level.level_keys": [
           "U4 L11 Functions Make 4.75"
         ],
-        "script_level.chapter": 80,
-        "script_level.position": 6,
         "lesson.key": "Functions Make",
         "lesson_group.key": "csp_functions",
         "script.name": "cspplayground"
@@ -2197,8 +2037,6 @@
         "script_level.level_keys": [
           "U4 L11 Functions Make 5"
         ],
-        "script_level.chapter": 81,
-        "script_level.position": 7,
         "lesson.key": "Functions Make",
         "lesson_group.key": "csp_functions",
         "script.name": "cspplayground"
@@ -2220,8 +2058,6 @@
         "script_level.level_keys": [
           "U4 L11 Functions Make 6"
         ],
-        "script_level.chapter": 82,
-        "script_level.position": 8,
         "lesson.key": "Functions Make",
         "lesson_group.key": "csp_functions",
         "script.name": "cspplayground"
@@ -2243,8 +2079,6 @@
         "script_level.level_keys": [
           "U4 L12 Practice PT 1"
         ],
-        "script_level.chapter": 83,
-        "script_level.position": 1,
         "lesson.key": "Practice PT Part 1",
         "lesson_group.key": "csp_project",
         "script.name": "cspplayground"
@@ -2266,8 +2100,6 @@
         "script_level.level_keys": [
           "U4 L12 Practice PT 2"
         ],
-        "script_level.chapter": 84,
-        "script_level.position": 2,
         "lesson.key": "Practice PT Part 1",
         "lesson_group.key": "csp_project",
         "script.name": "cspplayground"
@@ -2289,8 +2121,6 @@
         "script_level.level_keys": [
           "U4 L13 Practice PT 1"
         ],
-        "script_level.chapter": 85,
-        "script_level.position": 1,
         "lesson.key": "Practice PT Part 2",
         "lesson_group.key": "csp_project",
         "script.name": "cspplayground"
@@ -2312,8 +2142,6 @@
         "script_level.level_keys": [
           "U4 L13 Practice PT 2"
         ],
-        "script_level.chapter": 86,
-        "script_level.position": 2,
         "lesson.key": "Practice PT Part 2",
         "lesson_group.key": "csp_project",
         "script.name": "cspplayground"
@@ -2335,8 +2163,6 @@
         "script_level.level_keys": [
           "U4 L13 Practice PT 3"
         ],
-        "script_level.chapter": 87,
-        "script_level.position": 3,
         "lesson.key": "Practice PT Part 2",
         "lesson_group.key": "csp_project",
         "script.name": "cspplayground"
@@ -2358,8 +2184,6 @@
         "script_level.level_keys": [
           "U4 L13 Practice PT 4"
         ],
-        "script_level.chapter": 88,
-        "script_level.position": 4,
         "lesson.key": "Practice PT Part 2",
         "lesson_group.key": "csp_project",
         "script.name": "cspplayground"
@@ -2381,8 +2205,6 @@
         "script_level.level_keys": [
           "U4 L14 Practice PT 1"
         ],
-        "script_level.chapter": 89,
-        "script_level.position": 1,
         "lesson.key": "Practice PT Part 3",
         "lesson_group.key": "csp_project",
         "script.name": "cspplayground"
@@ -2404,8 +2226,6 @@
         "script_level.level_keys": [
           "U4 L14 Practice PT 2"
         ],
-        "script_level.chapter": 90,
-        "script_level.position": 2,
         "lesson.key": "Practice PT Part 3",
         "lesson_group.key": "csp_project",
         "script.name": "cspplayground"
@@ -2426,8 +2246,6 @@
         "script_level.level_keys": [
           "CSP 20-21 Unit 4 Assessment"
         ],
-        "script_level.chapter": 91,
-        "script_level.position": 1,
         "lesson.key": "Unit 4 Assessment",
         "lesson_group.key": "csp_project",
         "script.name": "cspplayground"
@@ -2449,8 +2267,6 @@
         "script_level.level_keys": [
           "U5 L01 Introduction to Lists"
         ],
-        "script_level.chapter": 92,
-        "script_level.position": 1,
         "lesson.key": "Lists Explore",
         "lesson_group.key": "csp_project",
         "script.name": "cspplayground"
@@ -2467,8 +2283,6 @@
         "script_level.level_keys": [
           "CSP U4 My Pet Rock Example App"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Variables Explore",
         "lesson_group.key": "csp_variables",
         "script.name": "cspplayground"
@@ -2480,8 +2294,6 @@
         "script_level.level_keys": [
           "U4 L01 Poetry App"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Variables Explore",
         "lesson_group.key": "csp_variables",
         "script.name": "cspplayground"
@@ -2493,8 +2305,6 @@
         "script_level.level_keys": [
           "U4 L01 Thermostat App"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "Variables Explore",
         "lesson_group.key": "csp_variables",
         "script.name": "cspplayground"
@@ -2506,8 +2316,6 @@
         "script_level.level_keys": [
           "U1 L02 CYU MC"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "Variables Explore",
         "lesson_group.key": "csp_variables",
         "script.name": "cspplayground"
@@ -2519,8 +2327,6 @@
         "script_level.level_keys": [
           "U4 L02 Thermostat App v1"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 1,
         "lesson.key": "Variables Investigate",
         "lesson_group.key": "csp_variables",
         "script.name": "cspplayground"
@@ -2532,8 +2338,6 @@
         "script_level.level_keys": [
           "U4 L02 Thermostat App v1 Code"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 2,
         "lesson.key": "Variables Investigate",
         "lesson_group.key": "csp_variables",
         "script.name": "cspplayground"
@@ -2545,8 +2349,6 @@
         "script_level.level_keys": [
           "U4 L02 Thermostat App v2"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 3,
         "lesson.key": "Variables Investigate",
         "lesson_group.key": "csp_variables",
         "script.name": "cspplayground"
@@ -2558,8 +2360,6 @@
         "script_level.level_keys": [
           "U4 L02 Thermostat App v3"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 4,
         "lesson.key": "Variables Investigate",
         "lesson_group.key": "csp_variables",
         "script.name": "cspplayground"
@@ -2571,8 +2371,6 @@
         "script_level.level_keys": [
           "U4 L02 Thermostat App v3 pt2"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 5,
         "lesson.key": "Variables Investigate",
         "lesson_group.key": "csp_variables",
         "script.name": "cspplayground"
@@ -2584,8 +2382,6 @@
         "script_level.level_keys": [
           "U4 L02 Thermostat App v3 pt3"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 6,
         "lesson.key": "Variables Investigate",
         "lesson_group.key": "csp_variables",
         "script.name": "cspplayground"
@@ -2597,8 +2393,6 @@
         "script_level.level_keys": [
           "U4 L02 CYU Exit Ticket"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 7,
         "lesson.key": "Variables Investigate",
         "lesson_group.key": "csp_variables",
         "script.name": "cspplayground"
@@ -2610,8 +2404,6 @@
         "script_level.level_keys": [
           "U4 L03 Variables numbers practice 1"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 1,
         "lesson.key": "Variables Practice",
         "lesson_group.key": "csp_variables",
         "script.name": "cspplayground"
@@ -2623,8 +2415,6 @@
         "script_level.level_keys": [
           "U4 L03 Variables numbers practice 4"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 2,
         "lesson.key": "Variables Practice",
         "lesson_group.key": "csp_variables",
         "script.name": "cspplayground"
@@ -2636,8 +2426,6 @@
         "script_level.level_keys": [
           "U4 L03 Variables operator practice 1"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 3,
         "lesson.key": "Variables Practice",
         "lesson_group.key": "csp_variables",
         "script.name": "cspplayground"
@@ -2649,8 +2437,6 @@
         "script_level.level_keys": [
           "U4 L03 Variables operator practice 3"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 4,
         "lesson.key": "Variables Practice",
         "lesson_group.key": "csp_variables",
         "script.name": "cspplayground"
@@ -2662,8 +2448,6 @@
         "script_level.level_keys": [
           "U4 L03 Variables operator practice 2"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 5,
         "lesson.key": "Variables Practice",
         "lesson_group.key": "csp_variables",
         "script.name": "cspplayground"
@@ -2675,8 +2459,6 @@
         "script_level.level_keys": [
           "U4 L03 Variables operator practice 5"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 6,
         "lesson.key": "Variables Practice",
         "lesson_group.key": "csp_variables",
         "script.name": "cspplayground"
@@ -2688,8 +2470,6 @@
         "script_level.level_keys": [
           "U4 L03 Variables operator practice 6"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 7,
         "lesson.key": "Variables Practice",
         "lesson_group.key": "csp_variables",
         "script.name": "cspplayground"
@@ -2701,8 +2481,6 @@
         "script_level.level_keys": [
           "U4 L03 Variable Scope: Local vs. Global"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 8,
         "lesson.key": "Variables Practice",
         "lesson_group.key": "csp_variables",
         "script.name": "cspplayground"
@@ -2714,8 +2492,6 @@
         "script_level.level_keys": [
           "U4 L03 Scope Issue"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 9,
         "lesson.key": "Variables Practice",
         "lesson_group.key": "csp_variables",
         "script.name": "cspplayground"
@@ -2727,8 +2503,6 @@
         "script_level.level_keys": [
           "U4 L03 Variables operator practice 4"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 10,
         "lesson.key": "Variables Practice",
         "lesson_group.key": "csp_variables",
         "script.name": "cspplayground"
@@ -2740,8 +2514,6 @@
         "script_level.level_keys": [
           "U4 L04 Variables Make Project Sample"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 1,
         "lesson.key": "Variables Make",
         "lesson_group.key": "csp_variables",
         "script.name": "cspplayground"
@@ -2753,8 +2525,6 @@
         "script_level.level_keys": [
           "U4 L04 Variables Make Project 1"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 2,
         "lesson.key": "Variables Make",
         "lesson_group.key": "csp_variables",
         "script.name": "cspplayground"
@@ -2766,8 +2536,6 @@
         "script_level.level_keys": [
           "U4 L04 Variables Make Project 2"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 3,
         "lesson.key": "Variables Make",
         "lesson_group.key": "csp_variables",
         "script.name": "cspplayground"
@@ -2779,8 +2547,6 @@
         "script_level.level_keys": [
           "U4 L04 Variables Make Project 3"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 4,
         "lesson.key": "Variables Make",
         "lesson_group.key": "csp_variables",
         "script.name": "cspplayground"
@@ -2792,8 +2558,6 @@
         "script_level.level_keys": [
           "U4 L04 Variables Make Project 4"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 5,
         "lesson.key": "Variables Make",
         "lesson_group.key": "csp_variables",
         "script.name": "cspplayground"
@@ -2805,8 +2569,6 @@
         "script_level.level_keys": [
           "Pilot Student Survey"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 1,
         "lesson.key": "Student Survey (Variables)",
         "lesson_group.key": "csp_variables",
         "script.name": "cspplayground"
@@ -2818,8 +2580,6 @@
         "script_level.level_keys": [
           "Pilot Teacher Surveys CSP2021"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 1,
         "lesson.key": "Teacher Surveys (Variables)",
         "lesson_group.key": "csp_variables",
         "script.name": "cspplayground"
@@ -2831,8 +2591,6 @@
         "script_level.level_keys": [
           "U4 L06 Introduction to Conditionals: Boolean Expressions"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 1,
         "lesson.key": "Conditionals Explore",
         "lesson_group.key": "csp_conditionals",
         "script.name": "cspplayground"
@@ -2844,8 +2602,6 @@
         "script_level.level_keys": [
           "U4 L05 CYU Exit Ticket"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 2,
         "lesson.key": "Conditionals Explore",
         "lesson_group.key": "csp_conditionals",
         "script.name": "cspplayground"
@@ -2857,8 +2613,6 @@
         "script_level.level_keys": [
           "U4L06 Introduction to Conditionals: if Statements"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 1,
         "lesson.key": "Conditionals Investigate",
         "lesson_group.key": "csp_conditionals",
         "script.name": "cspplayground"
@@ -2870,8 +2624,6 @@
         "script_level.level_keys": [
           "U4 L06 Thermostat App v4"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 2,
         "lesson.key": "Conditionals Investigate",
         "lesson_group.key": "csp_conditionals",
         "script.name": "cspplayground"
@@ -2883,8 +2635,6 @@
         "script_level.level_keys": [
           "U4 L06 Thermostat App v4 Code"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 3,
         "lesson.key": "Conditionals Investigate",
         "lesson_group.key": "csp_conditionals",
         "script.name": "cspplayground"
@@ -2896,8 +2646,6 @@
         "script_level.level_keys": [
           "U4L06 Introduction to Conditionals: if-else Statements"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 4,
         "lesson.key": "Conditionals Investigate",
         "lesson_group.key": "csp_conditionals",
         "script.name": "cspplayground"
@@ -2909,8 +2657,6 @@
         "script_level.level_keys": [
           "U4L06 Introduction to Conditionals: if-else-if Statements"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 5,
         "lesson.key": "Conditionals Investigate",
         "lesson_group.key": "csp_conditionals",
         "script.name": "cspplayground"
@@ -2922,8 +2668,6 @@
         "script_level.level_keys": [
           "U4 L06 Thermostat App v5"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 6,
         "lesson.key": "Conditionals Investigate",
         "lesson_group.key": "csp_conditionals",
         "script.name": "cspplayground"
@@ -2935,8 +2679,6 @@
         "script_level.level_keys": [
           "U4 L06 Thermostat App v5 Code"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 7,
         "lesson.key": "Conditionals Investigate",
         "lesson_group.key": "csp_conditionals",
         "script.name": "cspplayground"
@@ -2948,8 +2690,6 @@
         "script_level.level_keys": [
           "U4L06 Introduction to Conditionals: Compound Boolean Expressions"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 8,
         "lesson.key": "Conditionals Investigate",
         "lesson_group.key": "csp_conditionals",
         "script.name": "cspplayground"
@@ -2961,8 +2701,6 @@
         "script_level.level_keys": [
           "U4 L06 Thermostat App v6"
         ],
-        "script_level.chapter": 39,
-        "script_level.position": 9,
         "lesson.key": "Conditionals Investigate",
         "lesson_group.key": "csp_conditionals",
         "script.name": "cspplayground"
@@ -2974,8 +2712,6 @@
         "script_level.level_keys": [
           "U4 L06 Thermostat App v6 Code"
         ],
-        "script_level.chapter": 40,
-        "script_level.position": 10,
         "lesson.key": "Conditionals Investigate",
         "lesson_group.key": "csp_conditionals",
         "script.name": "cspplayground"
@@ -2987,8 +2723,6 @@
         "script_level.level_keys": [
           "Checking Multiple Conditions with If-elseif"
         ],
-        "script_level.chapter": 41,
-        "script_level.position": 11,
         "lesson.key": "Conditionals Investigate",
         "lesson_group.key": "csp_conditionals",
         "script.name": "cspplayground"
@@ -3000,8 +2734,6 @@
         "script_level.level_keys": [
           "U4 L06 CYU Exit Ticket"
         ],
-        "script_level.chapter": 42,
-        "script_level.position": 12,
         "lesson.key": "Conditionals Investigate",
         "lesson_group.key": "csp_conditionals",
         "script.name": "cspplayground"
@@ -3013,8 +2745,6 @@
         "script_level.level_keys": [
           "U4 L07 Conditionals Practice 1"
         ],
-        "script_level.chapter": 43,
-        "script_level.position": 1,
         "lesson.key": "Conditionals Practice",
         "lesson_group.key": "csp_conditionals",
         "script.name": "cspplayground"
@@ -3026,8 +2756,6 @@
         "script_level.level_keys": [
           "U4 L07 Conditionals Practice 2"
         ],
-        "script_level.chapter": 44,
-        "script_level.position": 2,
         "lesson.key": "Conditionals Practice",
         "lesson_group.key": "csp_conditionals",
         "script.name": "cspplayground"
@@ -3039,8 +2767,6 @@
         "script_level.level_keys": [
           "U4 L07 Conditionals Practice 3"
         ],
-        "script_level.chapter": 45,
-        "script_level.position": 3,
         "lesson.key": "Conditionals Practice",
         "lesson_group.key": "csp_conditionals",
         "script.name": "cspplayground"
@@ -3052,8 +2778,6 @@
         "script_level.level_keys": [
           "U4 L07 Conditionals Practice 10"
         ],
-        "script_level.chapter": 46,
-        "script_level.position": 4,
         "lesson.key": "Conditionals Practice",
         "lesson_group.key": "csp_conditionals",
         "script.name": "cspplayground"
@@ -3065,8 +2789,6 @@
         "script_level.level_keys": [
           "U4 L07 Conditionals Practice 4"
         ],
-        "script_level.chapter": 47,
-        "script_level.position": 5,
         "lesson.key": "Conditionals Practice",
         "lesson_group.key": "csp_conditionals",
         "script.name": "cspplayground"
@@ -3078,8 +2800,6 @@
         "script_level.level_keys": [
           "U4 L07 Conditionals Practice 5"
         ],
-        "script_level.chapter": 48,
-        "script_level.position": 6,
         "lesson.key": "Conditionals Practice",
         "lesson_group.key": "csp_conditionals",
         "script.name": "cspplayground"
@@ -3091,8 +2811,6 @@
         "script_level.level_keys": [
           "U4 L07 Conditionals Practice 6"
         ],
-        "script_level.chapter": 49,
-        "script_level.position": 7,
         "lesson.key": "Conditionals Practice",
         "lesson_group.key": "csp_conditionals",
         "script.name": "cspplayground"
@@ -3104,8 +2822,6 @@
         "script_level.level_keys": [
           "U4 L07 Conditionals Practice 7"
         ],
-        "script_level.chapter": 50,
-        "script_level.position": 8,
         "lesson.key": "Conditionals Practice",
         "lesson_group.key": "csp_conditionals",
         "script.name": "cspplayground"
@@ -3117,8 +2833,6 @@
         "script_level.level_keys": [
           "U4 L07 Conditionals Practice 8"
         ],
-        "script_level.chapter": 51,
-        "script_level.position": 9,
         "lesson.key": "Conditionals Practice",
         "lesson_group.key": "csp_conditionals",
         "script.name": "cspplayground"
@@ -3130,8 +2844,6 @@
         "script_level.level_keys": [
           "U4 L07 Conditionals Practice 9"
         ],
-        "script_level.chapter": 52,
-        "script_level.position": 10,
         "lesson.key": "Conditionals Practice",
         "lesson_group.key": "csp_conditionals",
         "script.name": "cspplayground"
@@ -3143,8 +2855,6 @@
         "script_level.level_keys": [
           "U4 L08 Conditionals Make Project Sample"
         ],
-        "script_level.chapter": 53,
-        "script_level.position": 1,
         "lesson.key": "Conditional Make",
         "lesson_group.key": "csp_conditionals",
         "script.name": "cspplayground"
@@ -3156,8 +2866,6 @@
         "script_level.level_keys": [
           "U4 L08 Conditionals Make Project Flowchart"
         ],
-        "script_level.chapter": 54,
-        "script_level.position": 2,
         "lesson.key": "Conditional Make",
         "lesson_group.key": "csp_conditionals",
         "script.name": "cspplayground"
@@ -3169,8 +2877,6 @@
         "script_level.level_keys": [
           "U4L08 Museum Ticket Generator 1"
         ],
-        "script_level.chapter": 55,
-        "script_level.position": 3,
         "lesson.key": "Conditional Make",
         "lesson_group.key": "csp_conditionals",
         "script.name": "cspplayground"
@@ -3182,8 +2888,6 @@
         "script_level.level_keys": [
           "U4L08 Museum Ticket Generator 2"
         ],
-        "script_level.chapter": 56,
-        "script_level.position": 4,
         "lesson.key": "Conditional Make",
         "lesson_group.key": "csp_conditionals",
         "script.name": "cspplayground"
@@ -3195,8 +2899,6 @@
         "script_level.level_keys": [
           "U4L08 Museum Ticket Generator 4"
         ],
-        "script_level.chapter": 57,
-        "script_level.position": 5,
         "lesson.key": "Conditional Make",
         "lesson_group.key": "csp_conditionals",
         "script.name": "cspplayground"
@@ -3208,8 +2910,6 @@
         "script_level.level_keys": [
           "U4L08 Museum Ticket Generator 5"
         ],
-        "script_level.chapter": 58,
-        "script_level.position": 6,
         "lesson.key": "Conditional Make",
         "lesson_group.key": "csp_conditionals",
         "script.name": "cspplayground"
@@ -3221,8 +2921,6 @@
         "script_level.level_keys": [
           "Pilot Student Survey Conditionals"
         ],
-        "script_level.chapter": 59,
-        "script_level.position": 1,
         "lesson.key": "Student Survey (Conditionals)",
         "lesson_group.key": "csp_conditionals",
         "script.name": "cspplayground"
@@ -3234,8 +2932,6 @@
         "script_level.level_keys": [
           "Pilot Teacher Surveys Conditionals CSP2021"
         ],
-        "script_level.chapter": 60,
-        "script_level.position": 1,
         "lesson.key": "Teacher Surveys (Conditionals)",
         "lesson_group.key": "csp_conditionals",
         "script.name": "cspplayground"
@@ -3247,8 +2943,6 @@
         "script_level.level_keys": [
           "U4 L09 Functions Song"
         ],
-        "script_level.chapter": 61,
-        "script_level.position": 1,
         "lesson.key": "Functions Explore / Investigate",
         "lesson_group.key": "csp_functions",
         "script.name": "cspplayground"
@@ -3260,8 +2954,6 @@
         "script_level.level_keys": [
           "U4L09 Intro to Functions Video"
         ],
-        "script_level.chapter": 62,
-        "script_level.position": 2,
         "lesson.key": "Functions Explore / Investigate",
         "lesson_group.key": "csp_functions",
         "script.name": "cspplayground"
@@ -3273,8 +2965,6 @@
         "script_level.level_keys": [
           "U4 L09 Score Clicker Investigate"
         ],
-        "script_level.chapter": 63,
-        "script_level.position": 3,
         "lesson.key": "Functions Explore / Investigate",
         "lesson_group.key": "csp_functions",
         "script.name": "cspplayground"
@@ -3286,8 +2976,6 @@
         "script_level.level_keys": [
           "U4 L09 Thermostat App v7"
         ],
-        "script_level.chapter": 64,
-        "script_level.position": 4,
         "lesson.key": "Functions Explore / Investigate",
         "lesson_group.key": "csp_functions",
         "script.name": "cspplayground"
@@ -3299,8 +2987,6 @@
         "script_level.level_keys": [
           "updateScreen Pattern"
         ],
-        "script_level.chapter": 65,
-        "script_level.position": 5,
         "lesson.key": "Functions Explore / Investigate",
         "lesson_group.key": "csp_functions",
         "script.name": "cspplayground"
@@ -3312,8 +2998,6 @@
         "script_level.level_keys": [
           "U4 L10 Functions Practice Calling Functions 1"
         ],
-        "script_level.chapter": 66,
-        "script_level.position": 1,
         "lesson.key": "Functions Practice",
         "lesson_group.key": "csp_functions",
         "script.name": "cspplayground"
@@ -3325,8 +3009,6 @@
         "script_level.level_keys": [
           "U4 L10 Functions Practice 1"
         ],
-        "script_level.chapter": 67,
-        "script_level.position": 2,
         "lesson.key": "Functions Practice",
         "lesson_group.key": "csp_functions",
         "script.name": "cspplayground"
@@ -3338,8 +3020,6 @@
         "script_level.level_keys": [
           "U4 L10 Functions Practice 2"
         ],
-        "script_level.chapter": 68,
-        "script_level.position": 3,
         "lesson.key": "Functions Practice",
         "lesson_group.key": "csp_functions",
         "script.name": "cspplayground"
@@ -3351,8 +3031,6 @@
         "script_level.level_keys": [
           "U4 L10 Functions Practice 3"
         ],
-        "script_level.chapter": 69,
-        "script_level.position": 4,
         "lesson.key": "Functions Practice",
         "lesson_group.key": "csp_functions",
         "script.name": "cspplayground"
@@ -3364,8 +3042,6 @@
         "script_level.level_keys": [
           "U4 L10 Functions Build Practice 2"
         ],
-        "script_level.chapter": 70,
-        "script_level.position": 5,
         "lesson.key": "Functions Practice",
         "lesson_group.key": "csp_functions",
         "script.name": "cspplayground"
@@ -3377,8 +3053,6 @@
         "script_level.level_keys": [
           "Debugging Variable Scope and Functions"
         ],
-        "script_level.chapter": 71,
-        "script_level.position": 6,
         "lesson.key": "Functions Practice",
         "lesson_group.key": "csp_functions",
         "script.name": "cspplayground"
@@ -3390,8 +3064,6 @@
         "script_level.level_keys": [
           "U4 L10 Functions Scope Practice 1 v2"
         ],
-        "script_level.chapter": 72,
-        "script_level.position": 7,
         "lesson.key": "Functions Practice",
         "lesson_group.key": "csp_functions",
         "script.name": "cspplayground"
@@ -3403,8 +3075,6 @@
         "script_level.level_keys": [
           "When to Make Functions Map"
         ],
-        "script_level.chapter": 73,
-        "script_level.position": 8,
         "lesson.key": "Functions Practice",
         "lesson_group.key": "csp_functions",
         "script.name": "cspplayground"
@@ -3416,8 +3086,6 @@
         "script_level.level_keys": [
           "U4 L10 Making Functions Practice"
         ],
-        "script_level.chapter": 74,
-        "script_level.position": 9,
         "lesson.key": "Functions Practice",
         "lesson_group.key": "csp_functions",
         "script.name": "cspplayground"
@@ -3429,8 +3097,6 @@
         "script_level.level_keys": [
           "U4 L11 Functions Make 1"
         ],
-        "script_level.chapter": 75,
-        "script_level.position": 1,
         "lesson.key": "Functions Make",
         "lesson_group.key": "csp_functions",
         "script.name": "cspplayground"
@@ -3442,8 +3108,6 @@
         "script_level.level_keys": [
           "U4 L11 Functions Make 2"
         ],
-        "script_level.chapter": 76,
-        "script_level.position": 2,
         "lesson.key": "Functions Make",
         "lesson_group.key": "csp_functions",
         "script.name": "cspplayground"
@@ -3455,8 +3119,6 @@
         "script_level.level_keys": [
           "U4 L11 Functions Make 3"
         ],
-        "script_level.chapter": 77,
-        "script_level.position": 3,
         "lesson.key": "Functions Make",
         "lesson_group.key": "csp_functions",
         "script.name": "cspplayground"
@@ -3468,8 +3130,6 @@
         "script_level.level_keys": [
           "U4 L11 Functions Make 4"
         ],
-        "script_level.chapter": 78,
-        "script_level.position": 4,
         "lesson.key": "Functions Make",
         "lesson_group.key": "csp_functions",
         "script.name": "cspplayground"
@@ -3481,8 +3141,6 @@
         "script_level.level_keys": [
           "U4 L11 Functions Make 4.5"
         ],
-        "script_level.chapter": 79,
-        "script_level.position": 5,
         "lesson.key": "Functions Make",
         "lesson_group.key": "csp_functions",
         "script.name": "cspplayground"
@@ -3494,8 +3152,6 @@
         "script_level.level_keys": [
           "U4 L11 Functions Make 4.75"
         ],
-        "script_level.chapter": 80,
-        "script_level.position": 6,
         "lesson.key": "Functions Make",
         "lesson_group.key": "csp_functions",
         "script.name": "cspplayground"
@@ -3507,8 +3163,6 @@
         "script_level.level_keys": [
           "U4 L11 Functions Make 5"
         ],
-        "script_level.chapter": 81,
-        "script_level.position": 7,
         "lesson.key": "Functions Make",
         "lesson_group.key": "csp_functions",
         "script.name": "cspplayground"
@@ -3520,8 +3174,6 @@
         "script_level.level_keys": [
           "U4 L11 Functions Make 6"
         ],
-        "script_level.chapter": 82,
-        "script_level.position": 8,
         "lesson.key": "Functions Make",
         "lesson_group.key": "csp_functions",
         "script.name": "cspplayground"
@@ -3533,8 +3185,6 @@
         "script_level.level_keys": [
           "U4 L12 Practice PT 1"
         ],
-        "script_level.chapter": 83,
-        "script_level.position": 1,
         "lesson.key": "Practice PT Part 1",
         "lesson_group.key": "csp_project",
         "script.name": "cspplayground"
@@ -3546,8 +3196,6 @@
         "script_level.level_keys": [
           "U4 L12 Practice PT 2"
         ],
-        "script_level.chapter": 84,
-        "script_level.position": 2,
         "lesson.key": "Practice PT Part 1",
         "lesson_group.key": "csp_project",
         "script.name": "cspplayground"
@@ -3559,8 +3207,6 @@
         "script_level.level_keys": [
           "U4 L13 Practice PT 1"
         ],
-        "script_level.chapter": 85,
-        "script_level.position": 1,
         "lesson.key": "Practice PT Part 2",
         "lesson_group.key": "csp_project",
         "script.name": "cspplayground"
@@ -3572,8 +3218,6 @@
         "script_level.level_keys": [
           "U4 L13 Practice PT 2"
         ],
-        "script_level.chapter": 86,
-        "script_level.position": 2,
         "lesson.key": "Practice PT Part 2",
         "lesson_group.key": "csp_project",
         "script.name": "cspplayground"
@@ -3585,8 +3229,6 @@
         "script_level.level_keys": [
           "U4 L13 Practice PT 3"
         ],
-        "script_level.chapter": 87,
-        "script_level.position": 3,
         "lesson.key": "Practice PT Part 2",
         "lesson_group.key": "csp_project",
         "script.name": "cspplayground"
@@ -3598,8 +3240,6 @@
         "script_level.level_keys": [
           "U4 L13 Practice PT 4"
         ],
-        "script_level.chapter": 88,
-        "script_level.position": 4,
         "lesson.key": "Practice PT Part 2",
         "lesson_group.key": "csp_project",
         "script.name": "cspplayground"
@@ -3611,8 +3251,6 @@
         "script_level.level_keys": [
           "U4 L14 Practice PT 1"
         ],
-        "script_level.chapter": 89,
-        "script_level.position": 1,
         "lesson.key": "Practice PT Part 3",
         "lesson_group.key": "csp_project",
         "script.name": "cspplayground"
@@ -3624,8 +3262,6 @@
         "script_level.level_keys": [
           "U4 L14 Practice PT 2"
         ],
-        "script_level.chapter": 90,
-        "script_level.position": 2,
         "lesson.key": "Practice PT Part 3",
         "lesson_group.key": "csp_project",
         "script.name": "cspplayground"
@@ -3637,8 +3273,6 @@
         "script_level.level_keys": [
           "CSP 20-21 Unit 4 Assessment"
         ],
-        "script_level.chapter": 91,
-        "script_level.position": 1,
         "lesson.key": "Unit 4 Assessment",
         "lesson_group.key": "csp_project",
         "script.name": "cspplayground"
@@ -3650,8 +3284,6 @@
         "script_level.level_keys": [
           "U5 L01 Introduction to Lists"
         ],
-        "script_level.chapter": 92,
-        "script_level.position": 1,
         "lesson.key": "Lists Explore",
         "lesson_group.key": "csp_project",
         "script.name": "cspplayground"

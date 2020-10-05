@@ -198,8 +198,6 @@
         "script_level.level_keys": [
           "CSPU5_HOC_virtual1"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Intro to App Lab",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -221,8 +219,6 @@
         "script_level.level_keys": [
           "CSPU5_HOC_virtual2"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Intro to App Lab",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -244,8 +240,6 @@
         "script_level.level_keys": [
           "CSPU5_HOC_virtual3"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "Intro to App Lab",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -267,8 +261,6 @@
         "script_level.level_keys": [
           "CSPU5_HOC_virtual4"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "Intro to App Lab",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -290,8 +282,6 @@
         "script_level.level_keys": [
           "CSPU5_HOC_virtual5"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 5,
         "lesson.key": "Intro to App Lab",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -313,8 +303,6 @@
         "script_level.level_keys": [
           "CSPU5_HOC_virtual6"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 6,
         "lesson.key": "Intro to App Lab",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -336,8 +324,6 @@
         "script_level.level_keys": [
           "CSPU5_HOC_virtual7"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 7,
         "lesson.key": "Intro to App Lab",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -359,8 +345,6 @@
         "script_level.level_keys": [
           "CSPU5_HOC_virtual8"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 8,
         "lesson.key": "Intro to App Lab",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -382,8 +366,6 @@
         "script_level.level_keys": [
           "CSPU5_HOC_virtual9"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 9,
         "lesson.key": "Intro to App Lab",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -405,8 +387,6 @@
         "script_level.level_keys": [
           "CSPU5_HOC_virtual10"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 10,
         "lesson.key": "Intro to App Lab",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -428,8 +408,6 @@
         "script_level.level_keys": [
           "CSPU5_HOC_virtual11"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 11,
         "lesson.key": "Intro to App Lab",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -451,8 +429,6 @@
         "script_level.level_keys": [
           "CSPU5_HOC_virtual12"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 12,
         "lesson.key": "Intro to App Lab",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -474,8 +450,6 @@
         "script_level.level_keys": [
           "CSPU5_HOC_virtual13"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 13,
         "lesson.key": "Intro to App Lab",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -497,8 +471,6 @@
         "script_level.level_keys": [
           "CSPU5_HOC_virtual15"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 14,
         "lesson.key": "Intro to App Lab",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -520,8 +492,6 @@
         "script_level.level_keys": [
           "CSPU5_video_new_debugging_virtual"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 1,
         "lesson.key": "Buttons and Events",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -543,8 +513,6 @@
         "script_level.level_keys": [
           "CSPU5_predict_applab_onEventWithWrongID_virtual"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 2,
         "lesson.key": "Buttons and Events",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -566,8 +534,6 @@
         "script_level.level_keys": [
           "CSPU5_Debugging predict unexpected behavior - two onEvents to _virtual"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 3,
         "lesson.key": "Buttons and Events",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -589,8 +555,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L13 - Debugging IDs case sensitive_virtual"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 4,
         "lesson.key": "Buttons and Events",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -612,8 +576,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L13 - Debugging 3_virtual"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 5,
         "lesson.key": "Buttons and Events",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -635,8 +597,6 @@
         "script_level.level_keys": [
           "How setPosition and screen dimensions work_2018_2019_virtual"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 6,
         "lesson.key": "Buttons and Events",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -658,8 +618,6 @@
         "script_level.level_keys": [
           "CSPU5_setPosition to fixed location_virtual"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 7,
         "lesson.key": "Buttons and Events",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -681,8 +639,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L16 - setPosition to move button_virtual"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 8,
         "lesson.key": "Buttons and Events",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -704,8 +660,6 @@
         "script_level.level_keys": [
           "CSPU5_AddLabelToChaserGame_virtual"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 9,
         "lesson.key": "Buttons and Events",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -727,8 +681,6 @@
         "script_level.level_keys": [
           "CSPU5_playWithEventTypes_virtual"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 10,
         "lesson.key": "Buttons and Events",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -750,8 +702,6 @@
         "script_level.level_keys": [
           "How Images Work_2018_2019_virtual"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 11,
         "lesson.key": "Buttons and Events",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -773,8 +723,6 @@
         "script_level.level_keys": [
           "Finalize Your Chaser Game v.1_virtual"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 12,
         "lesson.key": "Buttons and Events",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -796,8 +744,6 @@
         "script_level.level_keys": [
           "CSPU5 First Time Console.log_virtual"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 1,
         "lesson.key": "Multi-screen Apps",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -819,8 +765,6 @@
         "script_level.level_keys": [
           "CSPU5 console.log in event v. global_virtual"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 2,
         "lesson.key": "Multi-screen Apps",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -842,8 +786,6 @@
         "script_level.level_keys": [
           "CSPU5 console.log debug when mouse events happen_virtual"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 3,
         "lesson.key": "Multi-screen Apps",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -865,8 +807,6 @@
         "script_level.level_keys": [
           "CSPU5 Debugging Overlapping Objects and Screen Events_virtual"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 4,
         "lesson.key": "Multi-screen Apps",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -888,8 +828,6 @@
         "script_level.level_keys": [
           "Debugging with Console.log_2018_2019_virtual"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 5,
         "lesson.key": "Multi-screen Apps",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -911,8 +849,6 @@
         "script_level.level_keys": [
           "Tips For Working on Your Own_2018_2019_virtual"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 6,
         "lesson.key": "Multi-screen Apps",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -934,8 +870,6 @@
         "script_level.level_keys": [
           "Making a Multi Screen Chaser Game v.2_2018_2019_virtual"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 7,
         "lesson.key": "Multi-screen Apps",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -957,8 +891,6 @@
         "script_level.level_keys": [
           "CSPU5 Add welcome screen to chaser game_virtual"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 8,
         "lesson.key": "Multi-screen Apps",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -980,8 +912,6 @@
         "script_level.level_keys": [
           "CSPU5 Add full screen image to bg of chaser game_virtual"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 9,
         "lesson.key": "Multi-screen Apps",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -1003,8 +933,6 @@
         "script_level.level_keys": [
           "CSPU5 Add game over screen_virtual"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 10,
         "lesson.key": "Multi-screen Apps",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -1026,8 +954,6 @@
         "script_level.level_keys": [
           "Introduction to Variables - Part 1_virtual"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 1,
         "lesson.key": "Variables",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -1049,8 +975,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L19 - three basic ops of variables_virtual"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 2,
         "lesson.key": "Variables",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -1072,8 +996,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L19 - fix the var name syntax error v2_virtual"
         ],
-        "script_level.chapter": 39,
-        "script_level.position": 3,
         "lesson.key": "Variables",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -1095,8 +1017,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L19 - write var and string with same name v2_virtual"
         ],
-        "script_level.chapter": 40,
-        "script_level.position": 4,
         "lesson.key": "Variables",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -1118,8 +1038,6 @@
         "script_level.level_keys": [
           "CSPU5_U3- Variables - Create And Assign_virtual"
         ],
-        "script_level.chapter": 41,
-        "script_level.position": 5,
         "lesson.key": "Variables",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -1141,8 +1059,6 @@
         "script_level.level_keys": [
           "CSPU5_U3- Variables - Text Mode_virtual"
         ],
-        "script_level.chapter": 42,
-        "script_level.position": 6,
         "lesson.key": "Variables",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -1164,8 +1080,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Variables - Set to Expression_virtual"
         ],
-        "script_level.chapter": 43,
-        "script_level.position": 7,
         "lesson.key": "Variables",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -1187,8 +1101,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L14 - concatenate simple_virtual"
         ],
-        "script_level.chapter": 44,
-        "script_level.position": 8,
         "lesson.key": "Variables",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -1210,8 +1122,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L14 - concatenate simple2_virtual"
         ],
-        "script_level.chapter": 45,
-        "script_level.position": 9,
         "lesson.key": "Variables",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -1233,8 +1143,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Variables - Set to Expression with Other Variables_virtual"
         ],
-        "script_level.chapter": 46,
-        "script_level.position": 10,
         "lesson.key": "Variables",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -1256,8 +1164,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L14 - Assigning Random Value_virtual"
         ],
-        "script_level.chapter": 47,
-        "script_level.position": 11,
         "lesson.key": "Variables",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -1279,8 +1185,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L14 - Mini Calculator embed_virtual"
         ],
-        "script_level.chapter": 48,
-        "script_level.position": 12,
         "lesson.key": "Variables",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -1302,8 +1206,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L14 - User Input Division calculator_virtual"
         ],
-        "script_level.chapter": 49,
-        "script_level.position": 13,
         "lesson.key": "Variables",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -1325,8 +1227,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L19 - test reassignment of two vars_virtual"
         ],
-        "script_level.chapter": 50,
-        "script_level.position": 14,
         "lesson.key": "Variables",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -1348,8 +1248,6 @@
         "script_level.level_keys": [
           "Introduction to Variables - Part 2_virtual"
         ],
-        "script_level.chapter": 51,
-        "script_level.position": 15,
         "lesson.key": "Variables",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -1371,8 +1269,6 @@
         "script_level.level_keys": [
           "The Mental Model for Variables_2018_2019_virtual"
         ],
-        "script_level.chapter": 52,
-        "script_level.position": 16,
         "lesson.key": "Variables",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -1394,8 +1290,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L14 - Variable ReAssignment pt2_virtual"
         ],
-        "script_level.chapter": 53,
-        "script_level.position": 17,
         "lesson.key": "Variables",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -1417,8 +1311,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L19 - variable reassignment challenge pt2_virtual"
         ],
-        "script_level.chapter": 54,
-        "script_level.position": 18,
         "lesson.key": "Variables",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -1440,8 +1332,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 full clicker demo_virtual"
         ],
-        "script_level.chapter": 55,
-        "script_level.position": 1,
         "lesson.key": "Building an App: Clicker Game",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -1463,8 +1353,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L15 - practice with setText_virtual"
         ],
-        "script_level.chapter": 56,
-        "script_level.position": 2,
         "lesson.key": "Building an App: Clicker Game",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -1486,8 +1374,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L15 - DEMO up down count practice app_virtual"
         ],
-        "script_level.chapter": 57,
-        "script_level.position": 3,
         "lesson.key": "Building an App: Clicker Game",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -1509,8 +1395,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L15 - global var example count up_virtual"
         ],
-        "script_level.chapter": 58,
-        "script_level.position": 4,
         "lesson.key": "Building an App: Clicker Game",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -1532,8 +1416,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L15 - variable scoping problem debugging_virtual"
         ],
-        "script_level.chapter": 59,
-        "script_level.position": 5,
         "lesson.key": "Building an App: Clicker Game",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -1555,8 +1437,6 @@
         "script_level.level_keys": [
           "Variable Scope: Local vs. Global_2018_2019_virtual"
         ],
-        "script_level.chapter": 60,
-        "script_level.position": 6,
         "lesson.key": "Building an App: Clicker Game",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -1578,8 +1458,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L15 - add code to make count down work_virtual"
         ],
-        "script_level.chapter": 61,
-        "script_level.position": 7,
         "lesson.key": "Building an App: Clicker Game",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -1601,8 +1479,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L15 - count upDown bug forget to set text_virtual"
         ],
-        "script_level.chapter": 62,
-        "script_level.position": 8,
         "lesson.key": "Building an App: Clicker Game",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -1624,8 +1500,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L15 - count upDown bug logic error wrong update_virtual"
         ],
-        "script_level.chapter": 63,
-        "script_level.position": 9,
         "lesson.key": "Building an App: Clicker Game",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -1647,8 +1521,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L15 - mini clicker update score_virtual"
         ],
-        "script_level.chapter": 64,
-        "script_level.position": 10,
         "lesson.key": "Building an App: Clicker Game",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -1670,8 +1542,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L15 click add lives_virtual"
         ],
-        "script_level.chapter": 65,
-        "script_level.position": 11,
         "lesson.key": "Building an App: Clicker Game",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -1693,8 +1563,6 @@
         "script_level.level_keys": [
           "Simple Decisions with if-statements_2018_2019_virtual"
         ],
-        "script_level.chapter": 66,
-        "script_level.position": 1,
         "lesson.key": "If-Statements",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -1716,8 +1584,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L15 - Simple If-statements in UpDown App_virtual"
         ],
-        "script_level.chapter": 67,
-        "script_level.position": 2,
         "lesson.key": "If-Statements",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -1739,8 +1605,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L15 - Add reset button to UpDown app_virtual"
         ],
-        "script_level.chapter": 68,
-        "script_level.position": 3,
         "lesson.key": "If-Statements",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -1762,8 +1626,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L15 - Debugging Simple If-statements =v==_virtual"
         ],
-        "script_level.chapter": 69,
-        "script_level.position": 4,
         "lesson.key": "If-Statements",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -1785,8 +1647,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L15 - Debug forget to update var on reset in UpDown ap_virtual"
         ],
-        "script_level.chapter": 70,
-        "script_level.position": 5,
         "lesson.key": "If-Statements",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -1808,8 +1668,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L16 Mad Lib Demo_virtual"
         ],
-        "script_level.chapter": 71,
-        "script_level.position": 1,
         "lesson.key": "User Input and Strings",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -1831,8 +1689,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L16 - introStrings_virtual"
         ],
-        "script_level.chapter": 72,
-        "script_level.position": 2,
         "lesson.key": "User Input and Strings",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -1854,8 +1710,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L16 - doubleQuotes_virtual"
         ],
-        "script_level.chapter": 73,
-        "script_level.position": 3,
         "lesson.key": "User Input and Strings",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -1877,8 +1731,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L16 - textInput getText write_virtual"
         ],
-        "script_level.chapter": 74,
-        "script_level.position": 4,
         "lesson.key": "User Input and Strings",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -1900,8 +1752,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L16 - intro getText_virtual"
         ],
-        "script_level.chapter": 75,
-        "script_level.position": 5,
         "lesson.key": "User Input and Strings",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -1923,8 +1773,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - User Input - Save getText To Variable_virtual"
         ],
-        "script_level.chapter": 76,
-        "script_level.position": 6,
         "lesson.key": "User Input and Strings",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -1946,8 +1794,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L16 - outputWithTextArea_virtual"
         ],
-        "script_level.chapter": 77,
-        "script_level.position": 7,
         "lesson.key": "User Input and Strings",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -1969,8 +1815,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L16 Mad Lib Student Setup_virtual"
         ],
-        "script_level.chapter": 78,
-        "script_level.position": 8,
         "lesson.key": "User Input and Strings",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -1992,8 +1836,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L16 Mad Lib setText_virtual"
         ],
-        "script_level.chapter": 79,
-        "script_level.position": 9,
         "lesson.key": "User Input and Strings",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -2015,8 +1857,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L16 Mad Lib getText_virtual"
         ],
-        "script_level.chapter": 80,
-        "script_level.position": 10,
         "lesson.key": "User Input and Strings",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -2038,8 +1878,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L16 Mad Lib Clear Input_virtual"
         ],
-        "script_level.chapter": 81,
-        "script_level.position": 11,
         "lesson.key": "User Input and Strings",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -2061,8 +1899,6 @@
         "script_level.level_keys": [
           "Introduction to Conditionals: Boolean Expressions_virtual"
         ],
-        "script_level.chapter": 82,
-        "script_level.position": 1,
         "lesson.key": "Boolean Expressions and \"If\" Statements",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -2084,8 +1920,6 @@
         "script_level.level_keys": [
           "Boolean Expressions and Comparison Operators_2018_2019_virtual"
         ],
-        "script_level.chapter": 83,
-        "script_level.position": 2,
         "lesson.key": "Boolean Expressions and \"If\" Statements",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -2107,8 +1941,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L18 comparison operators_virtual"
         ],
-        "script_level.chapter": 84,
-        "script_level.position": 3,
         "lesson.key": "Boolean Expressions and \"If\" Statements",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -2130,8 +1962,6 @@
         "script_level.level_keys": [
           "Introduction to Conditionals: if Statements_virtual"
         ],
-        "script_level.chapter": 85,
-        "script_level.position": 4,
         "lesson.key": "Boolean Expressions and \"If\" Statements",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -2153,8 +1983,6 @@
         "script_level.level_keys": [
           "How If Statements Work pt 1_2018_2019_virtual"
         ],
-        "script_level.chapter": 86,
-        "script_level.position": 5,
         "lesson.key": "Boolean Expressions and \"If\" Statements",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -2176,8 +2004,6 @@
         "script_level.level_keys": [
           "CSPU5_basic if - check driving age_virtual"
         ],
-        "script_level.chapter": 87,
-        "script_level.position": 6,
         "lesson.key": "Boolean Expressions and \"If\" Statements",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -2199,8 +2025,6 @@
         "script_level.level_keys": [
           "CSPU5_basic if - DIY secret number_virtual"
         ],
-        "script_level.chapter": 88,
-        "script_level.position": 7,
         "lesson.key": "Boolean Expressions and \"If\" Statements",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -2222,8 +2046,6 @@
         "script_level.level_keys": [
           "U5 Check Password if statement lock image_virtual"
         ],
-        "script_level.chapter": 89,
-        "script_level.position": 8,
         "lesson.key": "Boolean Expressions and \"If\" Statements",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -2245,8 +2067,6 @@
         "script_level.level_keys": [
           "Introduction to Conditionals: if-else Statements_virtual"
         ],
-        "script_level.chapter": 90,
-        "script_level.position": 9,
         "lesson.key": "Boolean Expressions and \"If\" Statements",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -2268,8 +2088,6 @@
         "script_level.level_keys": [
           "How If-Else Statements Work_2018_2019_virtual"
         ],
-        "script_level.chapter": 91,
-        "script_level.position": 10,
         "lesson.key": "Boolean Expressions and \"If\" Statements",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -2291,8 +2109,6 @@
         "script_level.level_keys": [
           "U5 if-else simple movie ratings example_virtual"
         ],
-        "script_level.chapter": 92,
-        "script_level.position": 11,
         "lesson.key": "Boolean Expressions and \"If\" Statements",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -2314,8 +2130,6 @@
         "script_level.level_keys": [
           "CSPU5_basic if-else - driving age_virtual"
         ],
-        "script_level.chapter": 93,
-        "script_level.position": 12,
         "lesson.key": "Boolean Expressions and \"If\" Statements",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -2337,8 +2151,6 @@
         "script_level.level_keys": [
           "U5 Check Password if-else string_virtual"
         ],
-        "script_level.chapter": 94,
-        "script_level.position": 13,
         "lesson.key": "Boolean Expressions and \"If\" Statements",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -2360,8 +2172,6 @@
         "script_level.level_keys": [
           "How Dropdown Menus Work_2018_2019_virtual"
         ],
-        "script_level.chapter": 95,
-        "script_level.position": 14,
         "lesson.key": "Boolean Expressions and \"If\" Statements",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -2383,8 +2193,6 @@
         "script_level.level_keys": [
           "U5 if-else dropdown movie checker_virtual"
         ],
-        "script_level.chapter": 96,
-        "script_level.position": 15,
         "lesson.key": "Boolean Expressions and \"If\" Statements",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -2406,8 +2214,6 @@
         "script_level.level_keys": [
           "U5 if-else dropdown guess dice_virtual"
         ],
-        "script_level.chapter": 97,
-        "script_level.position": 16,
         "lesson.key": "Boolean Expressions and \"If\" Statements",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -2429,8 +2235,6 @@
         "script_level.level_keys": [
           "Introduction to Conditionals: if-else-if Statements_virtual"
         ],
-        "script_level.chapter": 98,
-        "script_level.position": 1,
         "lesson.key": "\"if-else-if\" and Conditional Logic",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -2452,8 +2256,6 @@
         "script_level.level_keys": [
           "How \"if-else-if\" Works_2018_2019_virtual"
         ],
-        "script_level.chapter": 99,
-        "script_level.position": 2,
         "lesson.key": "\"if-else-if\" and Conditional Logic",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -2475,8 +2277,6 @@
         "script_level.level_keys": [
           "U5 if-else-if movie example_virtual"
         ],
-        "script_level.chapter": 100,
-        "script_level.position": 3,
         "lesson.key": "\"if-else-if\" and Conditional Logic",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -2498,8 +2298,6 @@
         "script_level.level_keys": [
           "U5 if-else-if quiz grade_virtual"
         ],
-        "script_level.chapter": 101,
-        "script_level.position": 4,
         "lesson.key": "\"if-else-if\" and Conditional Logic",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -2521,8 +2319,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - High Low - Else if_virtual"
         ],
-        "script_level.chapter": 102,
-        "script_level.position": 5,
         "lesson.key": "\"if-else-if\" and Conditional Logic",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -2544,8 +2340,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - High Low - Debug_virtual"
         ],
-        "script_level.chapter": 103,
-        "script_level.position": 6,
         "lesson.key": "\"if-else-if\" and Conditional Logic",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -2567,8 +2361,6 @@
         "script_level.level_keys": [
           "Introduction to Conditionals: Compound Boolean Expressions_virtual"
         ],
-        "script_level.chapter": 104,
-        "script_level.position": 7,
         "lesson.key": "\"if-else-if\" and Conditional Logic",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -2590,8 +2382,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Conditionals - Simple OR_virtual"
         ],
-        "script_level.chapter": 105,
-        "script_level.position": 8,
         "lesson.key": "\"if-else-if\" and Conditional Logic",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -2613,8 +2403,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Conditionals - Simple AND_virtual"
         ],
-        "script_level.chapter": 106,
-        "script_level.position": 9,
         "lesson.key": "\"if-else-if\" and Conditional Logic",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -2636,8 +2424,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Conditionals - Combine AND OR Simple_virtual"
         ],
-        "script_level.chapter": 107,
-        "script_level.position": 10,
         "lesson.key": "\"if-else-if\" and Conditional Logic",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -2659,8 +2445,6 @@
         "script_level.level_keys": [
           "U5 compound boolean museum example_virtual"
         ],
-        "script_level.chapter": 108,
-        "script_level.position": 11,
         "lesson.key": "\"if-else-if\" and Conditional Logic",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -2682,8 +2466,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Conditionals - Combine AND OR and NOT_virtual"
         ],
-        "script_level.chapter": 109,
-        "script_level.position": 12,
         "lesson.key": "\"if-else-if\" and Conditional Logic",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -2705,8 +2487,6 @@
         "script_level.level_keys": [
           "CSPU5 Color Sleuth Demo_virtual"
         ],
-        "script_level.chapter": 110,
-        "script_level.position": 1,
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -2728,8 +2508,6 @@
         "script_level.level_keys": [
           "CSP5 virtual RGB intro_virtual"
         ],
-        "script_level.chapter": 111,
-        "script_level.position": 2,
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -2751,8 +2529,6 @@
         "script_level.level_keys": [
           "How Set Property Works_2018_2019_virtual"
         ],
-        "script_level.chapter": 112,
-        "script_level.position": 3,
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -2774,8 +2550,6 @@
         "script_level.level_keys": [
           "U5 ColorSleuth part 1_virtual"
         ],
-        "script_level.chapter": 113,
-        "script_level.position": 4,
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -2797,8 +2571,6 @@
         "script_level.level_keys": [
           "U5 ColorSleuth part 2 small color change_virtual"
         ],
-        "script_level.chapter": 114,
-        "script_level.position": 5,
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -2820,8 +2592,6 @@
         "script_level.level_keys": [
           "U5 ColorSleuth part 3 pick random button_virtual"
         ],
-        "script_level.chapter": 115,
-        "script_level.position": 6,
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -2843,8 +2613,6 @@
         "script_level.level_keys": [
           "U5 ColorSleuth part 4 make random RGB string_virtual"
         ],
-        "script_level.chapter": 116,
-        "script_level.position": 7,
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -2866,8 +2634,6 @@
         "script_level.level_keys": [
           "csp_applab_functions_virtual"
         ],
-        "script_level.chapter": 117,
-        "script_level.position": 8,
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -2889,8 +2655,6 @@
         "script_level.level_keys": [
           "U5 ColorSleuth part 5 make setBoard function_virtual"
         ],
-        "script_level.chapter": 118,
-        "script_level.position": 9,
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -2912,8 +2676,6 @@
         "script_level.level_keys": [
           "U5 ColorSleuth add global var correct plus console.log_virtual"
         ],
-        "script_level.chapter": 119,
-        "script_level.position": 10,
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -2935,8 +2697,6 @@
         "script_level.level_keys": [
           "U5 ColorSleuth checkCorrect make global var_virtual"
         ],
-        "script_level.chapter": 120,
-        "script_level.position": 11,
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -2958,8 +2718,6 @@
         "script_level.level_keys": [
           "U5 ColorSleuth checkCorrect part1 link to event handlers_virtual"
         ],
-        "script_level.chapter": 121,
-        "script_level.position": 12,
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -2981,8 +2739,6 @@
         "script_level.level_keys": [
           "U5 ColorSleuth checkCorrect part2 add if statement to check co_virtual"
         ],
-        "script_level.chapter": 122,
-        "script_level.position": 13,
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -3004,8 +2760,6 @@
         "script_level.level_keys": [
           "U5 ColorSleuth nextTurn pt1 add var and function and console.l_virtual"
         ],
-        "script_level.chapter": 123,
-        "script_level.position": 14,
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -3027,8 +2781,6 @@
         "script_level.level_keys": [
           "U5 ColorSleuth nextTurn pt2 update UI to indicate turn_virtual"
         ],
-        "script_level.chapter": 124,
-        "script_level.position": 15,
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -3050,8 +2802,6 @@
         "script_level.level_keys": [
           "U5 ColorSleuth scoring pt1 vars function stub console_virtual"
         ],
-        "script_level.chapter": 125,
-        "script_level.position": 16,
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -3073,8 +2823,6 @@
         "script_level.level_keys": [
           "U5 ColorSleuth scoring pt3 update UI for scoring_virtual"
         ],
-        "script_level.chapter": 126,
-        "script_level.position": 17,
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -3096,8 +2844,6 @@
         "script_level.level_keys": [
           "Project: Finish Color Sleuth_virtual"
         ],
-        "script_level.chapter": 127,
-        "script_level.position": 18,
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -3118,8 +2864,6 @@
         "script_level.level_keys": [
           "csp5 virtual bubblechoice"
         ],
-        "script_level.chapter": 128,
-        "script_level.position": 1,
         "lesson.key": "Keep Going!",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -3140,8 +2884,6 @@
         "script_level.level_keys": [
           "csp5 virtual ending"
         ],
-        "script_level.chapter": 129,
-        "script_level.position": 2,
         "lesson.key": "Keep Going!",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -3158,8 +2900,6 @@
         "script_level.level_keys": [
           "CSPU5_HOC_virtual1"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Intro to App Lab",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -3171,8 +2911,6 @@
         "script_level.level_keys": [
           "CSPU5_HOC_virtual2"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Intro to App Lab",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -3184,8 +2922,6 @@
         "script_level.level_keys": [
           "CSPU5_HOC_virtual3"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "Intro to App Lab",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -3197,8 +2933,6 @@
         "script_level.level_keys": [
           "CSPU5_HOC_virtual4"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "Intro to App Lab",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -3210,8 +2944,6 @@
         "script_level.level_keys": [
           "CSPU5_HOC_virtual5"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 5,
         "lesson.key": "Intro to App Lab",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -3223,8 +2955,6 @@
         "script_level.level_keys": [
           "CSPU5_HOC_virtual6"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 6,
         "lesson.key": "Intro to App Lab",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -3236,8 +2966,6 @@
         "script_level.level_keys": [
           "CSPU5_HOC_virtual7"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 7,
         "lesson.key": "Intro to App Lab",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -3249,8 +2977,6 @@
         "script_level.level_keys": [
           "CSPU5_HOC_virtual8"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 8,
         "lesson.key": "Intro to App Lab",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -3262,8 +2988,6 @@
         "script_level.level_keys": [
           "CSPU5_HOC_virtual9"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 9,
         "lesson.key": "Intro to App Lab",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -3275,8 +2999,6 @@
         "script_level.level_keys": [
           "CSPU5_HOC_virtual10"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 10,
         "lesson.key": "Intro to App Lab",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -3288,8 +3010,6 @@
         "script_level.level_keys": [
           "CSPU5_HOC_virtual11"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 11,
         "lesson.key": "Intro to App Lab",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -3301,8 +3021,6 @@
         "script_level.level_keys": [
           "CSPU5_HOC_virtual12"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 12,
         "lesson.key": "Intro to App Lab",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -3314,8 +3032,6 @@
         "script_level.level_keys": [
           "CSPU5_HOC_virtual13"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 13,
         "lesson.key": "Intro to App Lab",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -3327,8 +3043,6 @@
         "script_level.level_keys": [
           "CSPU5_HOC_virtual15"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 14,
         "lesson.key": "Intro to App Lab",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -3340,8 +3054,6 @@
         "script_level.level_keys": [
           "CSPU5_video_new_debugging_virtual"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 1,
         "lesson.key": "Buttons and Events",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -3353,8 +3065,6 @@
         "script_level.level_keys": [
           "CSPU5_predict_applab_onEventWithWrongID_virtual"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 2,
         "lesson.key": "Buttons and Events",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -3366,8 +3076,6 @@
         "script_level.level_keys": [
           "CSPU5_Debugging predict unexpected behavior - two onEvents to _virtual"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 3,
         "lesson.key": "Buttons and Events",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -3379,8 +3087,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L13 - Debugging IDs case sensitive_virtual"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 4,
         "lesson.key": "Buttons and Events",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -3392,8 +3098,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L13 - Debugging 3_virtual"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 5,
         "lesson.key": "Buttons and Events",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -3405,8 +3109,6 @@
         "script_level.level_keys": [
           "How setPosition and screen dimensions work_2018_2019_virtual"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 6,
         "lesson.key": "Buttons and Events",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -3418,8 +3120,6 @@
         "script_level.level_keys": [
           "CSPU5_setPosition to fixed location_virtual"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 7,
         "lesson.key": "Buttons and Events",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -3431,8 +3131,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L16 - setPosition to move button_virtual"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 8,
         "lesson.key": "Buttons and Events",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -3444,8 +3142,6 @@
         "script_level.level_keys": [
           "CSPU5_AddLabelToChaserGame_virtual"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 9,
         "lesson.key": "Buttons and Events",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -3457,8 +3153,6 @@
         "script_level.level_keys": [
           "CSPU5_playWithEventTypes_virtual"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 10,
         "lesson.key": "Buttons and Events",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -3470,8 +3164,6 @@
         "script_level.level_keys": [
           "How Images Work_2018_2019_virtual"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 11,
         "lesson.key": "Buttons and Events",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -3483,8 +3175,6 @@
         "script_level.level_keys": [
           "Finalize Your Chaser Game v.1_virtual"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 12,
         "lesson.key": "Buttons and Events",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -3496,8 +3186,6 @@
         "script_level.level_keys": [
           "CSPU5 First Time Console.log_virtual"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 1,
         "lesson.key": "Multi-screen Apps",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -3509,8 +3197,6 @@
         "script_level.level_keys": [
           "CSPU5 console.log in event v. global_virtual"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 2,
         "lesson.key": "Multi-screen Apps",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -3522,8 +3208,6 @@
         "script_level.level_keys": [
           "CSPU5 console.log debug when mouse events happen_virtual"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 3,
         "lesson.key": "Multi-screen Apps",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -3535,8 +3219,6 @@
         "script_level.level_keys": [
           "CSPU5 Debugging Overlapping Objects and Screen Events_virtual"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 4,
         "lesson.key": "Multi-screen Apps",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -3548,8 +3230,6 @@
         "script_level.level_keys": [
           "Debugging with Console.log_2018_2019_virtual"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 5,
         "lesson.key": "Multi-screen Apps",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -3561,8 +3241,6 @@
         "script_level.level_keys": [
           "Tips For Working on Your Own_2018_2019_virtual"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 6,
         "lesson.key": "Multi-screen Apps",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -3574,8 +3252,6 @@
         "script_level.level_keys": [
           "Making a Multi Screen Chaser Game v.2_2018_2019_virtual"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 7,
         "lesson.key": "Multi-screen Apps",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -3587,8 +3263,6 @@
         "script_level.level_keys": [
           "CSPU5 Add welcome screen to chaser game_virtual"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 8,
         "lesson.key": "Multi-screen Apps",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -3600,8 +3274,6 @@
         "script_level.level_keys": [
           "CSPU5 Add full screen image to bg of chaser game_virtual"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 9,
         "lesson.key": "Multi-screen Apps",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -3613,8 +3285,6 @@
         "script_level.level_keys": [
           "CSPU5 Add game over screen_virtual"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 10,
         "lesson.key": "Multi-screen Apps",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -3626,8 +3296,6 @@
         "script_level.level_keys": [
           "Introduction to Variables - Part 1_virtual"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 1,
         "lesson.key": "Variables",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -3639,8 +3307,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L19 - three basic ops of variables_virtual"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 2,
         "lesson.key": "Variables",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -3652,8 +3318,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L19 - fix the var name syntax error v2_virtual"
         ],
-        "script_level.chapter": 39,
-        "script_level.position": 3,
         "lesson.key": "Variables",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -3665,8 +3329,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L19 - write var and string with same name v2_virtual"
         ],
-        "script_level.chapter": 40,
-        "script_level.position": 4,
         "lesson.key": "Variables",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -3678,8 +3340,6 @@
         "script_level.level_keys": [
           "CSPU5_U3- Variables - Create And Assign_virtual"
         ],
-        "script_level.chapter": 41,
-        "script_level.position": 5,
         "lesson.key": "Variables",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -3691,8 +3351,6 @@
         "script_level.level_keys": [
           "CSPU5_U3- Variables - Text Mode_virtual"
         ],
-        "script_level.chapter": 42,
-        "script_level.position": 6,
         "lesson.key": "Variables",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -3704,8 +3362,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Variables - Set to Expression_virtual"
         ],
-        "script_level.chapter": 43,
-        "script_level.position": 7,
         "lesson.key": "Variables",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -3717,8 +3373,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L14 - concatenate simple_virtual"
         ],
-        "script_level.chapter": 44,
-        "script_level.position": 8,
         "lesson.key": "Variables",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -3730,8 +3384,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L14 - concatenate simple2_virtual"
         ],
-        "script_level.chapter": 45,
-        "script_level.position": 9,
         "lesson.key": "Variables",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -3743,8 +3395,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Variables - Set to Expression with Other Variables_virtual"
         ],
-        "script_level.chapter": 46,
-        "script_level.position": 10,
         "lesson.key": "Variables",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -3756,8 +3406,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L14 - Assigning Random Value_virtual"
         ],
-        "script_level.chapter": 47,
-        "script_level.position": 11,
         "lesson.key": "Variables",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -3769,8 +3417,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L14 - Mini Calculator embed_virtual"
         ],
-        "script_level.chapter": 48,
-        "script_level.position": 12,
         "lesson.key": "Variables",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -3782,8 +3428,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L14 - User Input Division calculator_virtual"
         ],
-        "script_level.chapter": 49,
-        "script_level.position": 13,
         "lesson.key": "Variables",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -3795,8 +3439,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L19 - test reassignment of two vars_virtual"
         ],
-        "script_level.chapter": 50,
-        "script_level.position": 14,
         "lesson.key": "Variables",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -3808,8 +3450,6 @@
         "script_level.level_keys": [
           "Introduction to Variables - Part 2_virtual"
         ],
-        "script_level.chapter": 51,
-        "script_level.position": 15,
         "lesson.key": "Variables",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -3821,8 +3461,6 @@
         "script_level.level_keys": [
           "The Mental Model for Variables_2018_2019_virtual"
         ],
-        "script_level.chapter": 52,
-        "script_level.position": 16,
         "lesson.key": "Variables",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -3834,8 +3472,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L14 - Variable ReAssignment pt2_virtual"
         ],
-        "script_level.chapter": 53,
-        "script_level.position": 17,
         "lesson.key": "Variables",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -3847,8 +3483,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L19 - variable reassignment challenge pt2_virtual"
         ],
-        "script_level.chapter": 54,
-        "script_level.position": 18,
         "lesson.key": "Variables",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -3860,8 +3494,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 full clicker demo_virtual"
         ],
-        "script_level.chapter": 55,
-        "script_level.position": 1,
         "lesson.key": "Building an App: Clicker Game",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -3873,8 +3505,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L15 - practice with setText_virtual"
         ],
-        "script_level.chapter": 56,
-        "script_level.position": 2,
         "lesson.key": "Building an App: Clicker Game",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -3886,8 +3516,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L15 - DEMO up down count practice app_virtual"
         ],
-        "script_level.chapter": 57,
-        "script_level.position": 3,
         "lesson.key": "Building an App: Clicker Game",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -3899,8 +3527,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L15 - global var example count up_virtual"
         ],
-        "script_level.chapter": 58,
-        "script_level.position": 4,
         "lesson.key": "Building an App: Clicker Game",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -3912,8 +3538,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L15 - variable scoping problem debugging_virtual"
         ],
-        "script_level.chapter": 59,
-        "script_level.position": 5,
         "lesson.key": "Building an App: Clicker Game",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -3925,8 +3549,6 @@
         "script_level.level_keys": [
           "Variable Scope: Local vs. Global_2018_2019_virtual"
         ],
-        "script_level.chapter": 60,
-        "script_level.position": 6,
         "lesson.key": "Building an App: Clicker Game",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -3938,8 +3560,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L15 - add code to make count down work_virtual"
         ],
-        "script_level.chapter": 61,
-        "script_level.position": 7,
         "lesson.key": "Building an App: Clicker Game",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -3951,8 +3571,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L15 - count upDown bug forget to set text_virtual"
         ],
-        "script_level.chapter": 62,
-        "script_level.position": 8,
         "lesson.key": "Building an App: Clicker Game",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -3964,8 +3582,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L15 - count upDown bug logic error wrong update_virtual"
         ],
-        "script_level.chapter": 63,
-        "script_level.position": 9,
         "lesson.key": "Building an App: Clicker Game",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -3977,8 +3593,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L15 - mini clicker update score_virtual"
         ],
-        "script_level.chapter": 64,
-        "script_level.position": 10,
         "lesson.key": "Building an App: Clicker Game",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -3990,8 +3604,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L15 click add lives_virtual"
         ],
-        "script_level.chapter": 65,
-        "script_level.position": 11,
         "lesson.key": "Building an App: Clicker Game",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -4003,8 +3615,6 @@
         "script_level.level_keys": [
           "Simple Decisions with if-statements_2018_2019_virtual"
         ],
-        "script_level.chapter": 66,
-        "script_level.position": 1,
         "lesson.key": "If-Statements",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -4016,8 +3626,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L15 - Simple If-statements in UpDown App_virtual"
         ],
-        "script_level.chapter": 67,
-        "script_level.position": 2,
         "lesson.key": "If-Statements",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -4029,8 +3637,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L15 - Add reset button to UpDown app_virtual"
         ],
-        "script_level.chapter": 68,
-        "script_level.position": 3,
         "lesson.key": "If-Statements",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -4042,8 +3648,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L15 - Debugging Simple If-statements =v==_virtual"
         ],
-        "script_level.chapter": 69,
-        "script_level.position": 4,
         "lesson.key": "If-Statements",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -4055,8 +3659,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L15 - Debug forget to update var on reset in UpDown ap_virtual"
         ],
-        "script_level.chapter": 70,
-        "script_level.position": 5,
         "lesson.key": "If-Statements",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -4068,8 +3670,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L16 Mad Lib Demo_virtual"
         ],
-        "script_level.chapter": 71,
-        "script_level.position": 1,
         "lesson.key": "User Input and Strings",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -4081,8 +3681,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L16 - introStrings_virtual"
         ],
-        "script_level.chapter": 72,
-        "script_level.position": 2,
         "lesson.key": "User Input and Strings",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -4094,8 +3692,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L16 - doubleQuotes_virtual"
         ],
-        "script_level.chapter": 73,
-        "script_level.position": 3,
         "lesson.key": "User Input and Strings",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -4107,8 +3703,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L16 - textInput getText write_virtual"
         ],
-        "script_level.chapter": 74,
-        "script_level.position": 4,
         "lesson.key": "User Input and Strings",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -4120,8 +3714,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L16 - intro getText_virtual"
         ],
-        "script_level.chapter": 75,
-        "script_level.position": 5,
         "lesson.key": "User Input and Strings",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -4133,8 +3725,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - User Input - Save getText To Variable_virtual"
         ],
-        "script_level.chapter": 76,
-        "script_level.position": 6,
         "lesson.key": "User Input and Strings",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -4146,8 +3736,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L16 - outputWithTextArea_virtual"
         ],
-        "script_level.chapter": 77,
-        "script_level.position": 7,
         "lesson.key": "User Input and Strings",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -4159,8 +3747,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L16 Mad Lib Student Setup_virtual"
         ],
-        "script_level.chapter": 78,
-        "script_level.position": 8,
         "lesson.key": "User Input and Strings",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -4172,8 +3758,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L16 Mad Lib setText_virtual"
         ],
-        "script_level.chapter": 79,
-        "script_level.position": 9,
         "lesson.key": "User Input and Strings",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -4185,8 +3769,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L16 Mad Lib getText_virtual"
         ],
-        "script_level.chapter": 80,
-        "script_level.position": 10,
         "lesson.key": "User Input and Strings",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -4198,8 +3780,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L16 Mad Lib Clear Input_virtual"
         ],
-        "script_level.chapter": 81,
-        "script_level.position": 11,
         "lesson.key": "User Input and Strings",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -4211,8 +3791,6 @@
         "script_level.level_keys": [
           "Introduction to Conditionals: Boolean Expressions_virtual"
         ],
-        "script_level.chapter": 82,
-        "script_level.position": 1,
         "lesson.key": "Boolean Expressions and \"If\" Statements",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -4224,8 +3802,6 @@
         "script_level.level_keys": [
           "Boolean Expressions and Comparison Operators_2018_2019_virtual"
         ],
-        "script_level.chapter": 83,
-        "script_level.position": 2,
         "lesson.key": "Boolean Expressions and \"If\" Statements",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -4237,8 +3813,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L18 comparison operators_virtual"
         ],
-        "script_level.chapter": 84,
-        "script_level.position": 3,
         "lesson.key": "Boolean Expressions and \"If\" Statements",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -4250,8 +3824,6 @@
         "script_level.level_keys": [
           "Introduction to Conditionals: if Statements_virtual"
         ],
-        "script_level.chapter": 85,
-        "script_level.position": 4,
         "lesson.key": "Boolean Expressions and \"If\" Statements",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -4263,8 +3835,6 @@
         "script_level.level_keys": [
           "How If Statements Work pt 1_2018_2019_virtual"
         ],
-        "script_level.chapter": 86,
-        "script_level.position": 5,
         "lesson.key": "Boolean Expressions and \"If\" Statements",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -4276,8 +3846,6 @@
         "script_level.level_keys": [
           "CSPU5_basic if - check driving age_virtual"
         ],
-        "script_level.chapter": 87,
-        "script_level.position": 6,
         "lesson.key": "Boolean Expressions and \"If\" Statements",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -4289,8 +3857,6 @@
         "script_level.level_keys": [
           "CSPU5_basic if - DIY secret number_virtual"
         ],
-        "script_level.chapter": 88,
-        "script_level.position": 7,
         "lesson.key": "Boolean Expressions and \"If\" Statements",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -4302,8 +3868,6 @@
         "script_level.level_keys": [
           "U5 Check Password if statement lock image_virtual"
         ],
-        "script_level.chapter": 89,
-        "script_level.position": 8,
         "lesson.key": "Boolean Expressions and \"If\" Statements",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -4315,8 +3879,6 @@
         "script_level.level_keys": [
           "Introduction to Conditionals: if-else Statements_virtual"
         ],
-        "script_level.chapter": 90,
-        "script_level.position": 9,
         "lesson.key": "Boolean Expressions and \"If\" Statements",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -4328,8 +3890,6 @@
         "script_level.level_keys": [
           "How If-Else Statements Work_2018_2019_virtual"
         ],
-        "script_level.chapter": 91,
-        "script_level.position": 10,
         "lesson.key": "Boolean Expressions and \"If\" Statements",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -4341,8 +3901,6 @@
         "script_level.level_keys": [
           "U5 if-else simple movie ratings example_virtual"
         ],
-        "script_level.chapter": 92,
-        "script_level.position": 11,
         "lesson.key": "Boolean Expressions and \"If\" Statements",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -4354,8 +3912,6 @@
         "script_level.level_keys": [
           "CSPU5_basic if-else - driving age_virtual"
         ],
-        "script_level.chapter": 93,
-        "script_level.position": 12,
         "lesson.key": "Boolean Expressions and \"If\" Statements",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -4367,8 +3923,6 @@
         "script_level.level_keys": [
           "U5 Check Password if-else string_virtual"
         ],
-        "script_level.chapter": 94,
-        "script_level.position": 13,
         "lesson.key": "Boolean Expressions and \"If\" Statements",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -4380,8 +3934,6 @@
         "script_level.level_keys": [
           "How Dropdown Menus Work_2018_2019_virtual"
         ],
-        "script_level.chapter": 95,
-        "script_level.position": 14,
         "lesson.key": "Boolean Expressions and \"If\" Statements",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -4393,8 +3945,6 @@
         "script_level.level_keys": [
           "U5 if-else dropdown movie checker_virtual"
         ],
-        "script_level.chapter": 96,
-        "script_level.position": 15,
         "lesson.key": "Boolean Expressions and \"If\" Statements",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -4406,8 +3956,6 @@
         "script_level.level_keys": [
           "U5 if-else dropdown guess dice_virtual"
         ],
-        "script_level.chapter": 97,
-        "script_level.position": 16,
         "lesson.key": "Boolean Expressions and \"If\" Statements",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -4419,8 +3967,6 @@
         "script_level.level_keys": [
           "Introduction to Conditionals: if-else-if Statements_virtual"
         ],
-        "script_level.chapter": 98,
-        "script_level.position": 1,
         "lesson.key": "\"if-else-if\" and Conditional Logic",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -4432,8 +3978,6 @@
         "script_level.level_keys": [
           "How \"if-else-if\" Works_2018_2019_virtual"
         ],
-        "script_level.chapter": 99,
-        "script_level.position": 2,
         "lesson.key": "\"if-else-if\" and Conditional Logic",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -4445,8 +3989,6 @@
         "script_level.level_keys": [
           "U5 if-else-if movie example_virtual"
         ],
-        "script_level.chapter": 100,
-        "script_level.position": 3,
         "lesson.key": "\"if-else-if\" and Conditional Logic",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -4458,8 +4000,6 @@
         "script_level.level_keys": [
           "U5 if-else-if quiz grade_virtual"
         ],
-        "script_level.chapter": 101,
-        "script_level.position": 4,
         "lesson.key": "\"if-else-if\" and Conditional Logic",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -4471,8 +4011,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - High Low - Else if_virtual"
         ],
-        "script_level.chapter": 102,
-        "script_level.position": 5,
         "lesson.key": "\"if-else-if\" and Conditional Logic",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -4484,8 +4022,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - High Low - Debug_virtual"
         ],
-        "script_level.chapter": 103,
-        "script_level.position": 6,
         "lesson.key": "\"if-else-if\" and Conditional Logic",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -4497,8 +4033,6 @@
         "script_level.level_keys": [
           "Introduction to Conditionals: Compound Boolean Expressions_virtual"
         ],
-        "script_level.chapter": 104,
-        "script_level.position": 7,
         "lesson.key": "\"if-else-if\" and Conditional Logic",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -4510,8 +4044,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Conditionals - Simple OR_virtual"
         ],
-        "script_level.chapter": 105,
-        "script_level.position": 8,
         "lesson.key": "\"if-else-if\" and Conditional Logic",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -4523,8 +4055,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Conditionals - Simple AND_virtual"
         ],
-        "script_level.chapter": 106,
-        "script_level.position": 9,
         "lesson.key": "\"if-else-if\" and Conditional Logic",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -4536,8 +4066,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Conditionals - Combine AND OR Simple_virtual"
         ],
-        "script_level.chapter": 107,
-        "script_level.position": 10,
         "lesson.key": "\"if-else-if\" and Conditional Logic",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -4549,8 +4077,6 @@
         "script_level.level_keys": [
           "U5 compound boolean museum example_virtual"
         ],
-        "script_level.chapter": 108,
-        "script_level.position": 11,
         "lesson.key": "\"if-else-if\" and Conditional Logic",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -4562,8 +4088,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Conditionals - Combine AND OR and NOT_virtual"
         ],
-        "script_level.chapter": 109,
-        "script_level.position": 12,
         "lesson.key": "\"if-else-if\" and Conditional Logic",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -4575,8 +4099,6 @@
         "script_level.level_keys": [
           "CSPU5 Color Sleuth Demo_virtual"
         ],
-        "script_level.chapter": 110,
-        "script_level.position": 1,
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -4588,8 +4110,6 @@
         "script_level.level_keys": [
           "CSP5 virtual RGB intro_virtual"
         ],
-        "script_level.chapter": 111,
-        "script_level.position": 2,
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -4601,8 +4121,6 @@
         "script_level.level_keys": [
           "How Set Property Works_2018_2019_virtual"
         ],
-        "script_level.chapter": 112,
-        "script_level.position": 3,
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -4614,8 +4132,6 @@
         "script_level.level_keys": [
           "U5 ColorSleuth part 1_virtual"
         ],
-        "script_level.chapter": 113,
-        "script_level.position": 4,
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -4627,8 +4143,6 @@
         "script_level.level_keys": [
           "U5 ColorSleuth part 2 small color change_virtual"
         ],
-        "script_level.chapter": 114,
-        "script_level.position": 5,
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -4640,8 +4154,6 @@
         "script_level.level_keys": [
           "U5 ColorSleuth part 3 pick random button_virtual"
         ],
-        "script_level.chapter": 115,
-        "script_level.position": 6,
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -4653,8 +4165,6 @@
         "script_level.level_keys": [
           "U5 ColorSleuth part 4 make random RGB string_virtual"
         ],
-        "script_level.chapter": 116,
-        "script_level.position": 7,
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -4666,8 +4176,6 @@
         "script_level.level_keys": [
           "csp_applab_functions_virtual"
         ],
-        "script_level.chapter": 117,
-        "script_level.position": 8,
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -4679,8 +4187,6 @@
         "script_level.level_keys": [
           "U5 ColorSleuth part 5 make setBoard function_virtual"
         ],
-        "script_level.chapter": 118,
-        "script_level.position": 9,
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -4692,8 +4198,6 @@
         "script_level.level_keys": [
           "U5 ColorSleuth add global var correct plus console.log_virtual"
         ],
-        "script_level.chapter": 119,
-        "script_level.position": 10,
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -4705,8 +4209,6 @@
         "script_level.level_keys": [
           "U5 ColorSleuth checkCorrect make global var_virtual"
         ],
-        "script_level.chapter": 120,
-        "script_level.position": 11,
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -4718,8 +4220,6 @@
         "script_level.level_keys": [
           "U5 ColorSleuth checkCorrect part1 link to event handlers_virtual"
         ],
-        "script_level.chapter": 121,
-        "script_level.position": 12,
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -4731,8 +4231,6 @@
         "script_level.level_keys": [
           "U5 ColorSleuth checkCorrect part2 add if statement to check co_virtual"
         ],
-        "script_level.chapter": 122,
-        "script_level.position": 13,
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -4744,8 +4242,6 @@
         "script_level.level_keys": [
           "U5 ColorSleuth nextTurn pt1 add var and function and console.l_virtual"
         ],
-        "script_level.chapter": 123,
-        "script_level.position": 14,
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -4757,8 +4253,6 @@
         "script_level.level_keys": [
           "U5 ColorSleuth nextTurn pt2 update UI to indicate turn_virtual"
         ],
-        "script_level.chapter": 124,
-        "script_level.position": 15,
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -4770,8 +4264,6 @@
         "script_level.level_keys": [
           "U5 ColorSleuth scoring pt1 vars function stub console_virtual"
         ],
-        "script_level.chapter": 125,
-        "script_level.position": 16,
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -4783,8 +4275,6 @@
         "script_level.level_keys": [
           "U5 ColorSleuth scoring pt3 update UI for scoring_virtual"
         ],
-        "script_level.chapter": 126,
-        "script_level.position": 17,
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -4796,8 +4286,6 @@
         "script_level.level_keys": [
           "Project: Finish Color Sleuth_virtual"
         ],
-        "script_level.chapter": 127,
-        "script_level.position": 18,
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -4809,8 +4297,6 @@
         "script_level.level_keys": [
           "csp5 virtual bubblechoice"
         ],
-        "script_level.chapter": 128,
-        "script_level.position": 1,
         "lesson.key": "Keep Going!",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"
@@ -4822,8 +4308,6 @@
         "script_level.level_keys": [
           "csp5 virtual ending"
         ],
-        "script_level.chapter": 129,
-        "script_level.position": 2,
         "lesson.key": "Keep Going!",
         "lesson_group.key": "",
         "script.name": "csp5-virtual"

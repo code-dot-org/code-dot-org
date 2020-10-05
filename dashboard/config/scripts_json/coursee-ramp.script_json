@@ -82,8 +82,6 @@
         "script_level.level_keys": [
           "DiceRace"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Real Life Algorithms: Dice Race",
         "lesson_group.key": "",
         "script.name": "coursee-ramp"
@@ -104,8 +102,6 @@
         "script_level.level_keys": [
           "courseE_video_ramp1"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 1,
         "lesson.key": "Introduction",
         "lesson_group.key": "",
         "script.name": "coursee-ramp"
@@ -126,8 +122,6 @@
         "script_level.level_keys": [
           "courseE_maze_ramp1"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 2,
         "lesson.key": "Introduction",
         "lesson_group.key": "",
         "script.name": "coursee-ramp"
@@ -148,8 +142,6 @@
         "script_level.level_keys": [
           "courseE_maze_ramp2"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 3,
         "lesson.key": "Introduction",
         "lesson_group.key": "",
         "script.name": "coursee-ramp"
@@ -170,8 +162,6 @@
         "script_level.level_keys": [
           "courseE_maze_ramp3"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 4,
         "lesson.key": "Introduction",
         "lesson_group.key": "",
         "script.name": "coursee-ramp"
@@ -192,8 +182,6 @@
         "script_level.level_keys": [
           "courseE_maze_ramp4"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 5,
         "lesson.key": "Introduction",
         "lesson_group.key": "",
         "script.name": "coursee-ramp"
@@ -214,8 +202,6 @@
         "script_level.level_keys": [
           "courseE_maze_ramp5"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 6,
         "lesson.key": "Introduction",
         "lesson_group.key": "",
         "script.name": "coursee-ramp"
@@ -236,8 +222,6 @@
         "script_level.level_keys": [
           "courseE_maze_predict1"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 7,
         "lesson.key": "Introduction",
         "lesson_group.key": "",
         "script.name": "coursee-ramp"
@@ -258,8 +242,6 @@
         "script_level.level_keys": [
           "courseD_maze_video_Loops"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 8,
         "lesson.key": "Introduction",
         "lesson_group.key": "",
         "script.name": "coursee-ramp"
@@ -280,8 +262,6 @@
         "script_level.level_keys": [
           "courseE_maze_ramp6"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 9,
         "lesson.key": "Introduction",
         "lesson_group.key": "",
         "script.name": "coursee-ramp"
@@ -302,8 +282,6 @@
         "script_level.level_keys": [
           "courseE_maze_ramp7"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 10,
         "lesson.key": "Introduction",
         "lesson_group.key": "",
         "script.name": "coursee-ramp"
@@ -324,8 +302,6 @@
         "script_level.level_keys": [
           "courseE_artist_ramp8"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 11,
         "lesson.key": "Introduction",
         "lesson_group.key": "",
         "script.name": "coursee-ramp"
@@ -346,8 +322,6 @@
         "script_level.level_keys": [
           "courseC_video_angles"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 12,
         "lesson.key": "Introduction",
         "lesson_group.key": "",
         "script.name": "coursee-ramp"
@@ -368,8 +342,6 @@
         "script_level.level_keys": [
           "courseE_artist_ramp9"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 13,
         "lesson.key": "Introduction",
         "lesson_group.key": "",
         "script.name": "coursee-ramp"
@@ -390,8 +362,6 @@
         "script_level.level_keys": [
           "courseE_artist_predict1"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 14,
         "lesson.key": "Introduction",
         "lesson_group.key": "",
         "script.name": "coursee-ramp"
@@ -412,8 +382,6 @@
         "script_level.level_keys": [
           "courseD_video_nestedLoopsArtist"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 15,
         "lesson.key": "Introduction",
         "lesson_group.key": "",
         "script.name": "coursee-ramp"
@@ -434,8 +402,6 @@
         "script_level.level_keys": [
           "courseE_artist_ramp10"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 16,
         "lesson.key": "Introduction",
         "lesson_group.key": "",
         "script.name": "coursee-ramp"
@@ -456,8 +422,6 @@
         "script_level.level_keys": [
           "courseE_farmer_ramp11"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 17,
         "lesson.key": "Introduction",
         "lesson_group.key": "",
         "script.name": "coursee-ramp"
@@ -478,8 +442,6 @@
         "script_level.level_keys": [
           "courseE_maze_ramp13"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 18,
         "lesson.key": "Introduction",
         "lesson_group.key": "",
         "script.name": "coursee-ramp"
@@ -500,8 +462,6 @@
         "script_level.level_keys": [
           "courseE_external_ramp14"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 19,
         "lesson.key": "Introduction",
         "lesson_group.key": "",
         "script.name": "coursee-ramp"
@@ -522,8 +482,6 @@
         "script_level.level_keys": [
           "courseD_video_whileIntro"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 1,
         "lesson.key": "Conditionals",
         "lesson_group.key": "",
         "script.name": "coursee-ramp"
@@ -544,8 +502,6 @@
         "script_level.level_keys": [
           "courseE_farmer_ramp11a"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 2,
         "lesson.key": "Conditionals",
         "lesson_group.key": "",
         "script.name": "coursee-ramp"
@@ -566,8 +522,6 @@
         "script_level.level_keys": [
           "courseE_farmer_ramp12"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 3,
         "lesson.key": "Conditionals",
         "lesson_group.key": "",
         "script.name": "coursee-ramp"
@@ -588,8 +542,6 @@
         "script_level.level_keys": [
           "courseE_farmer_predict1"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 4,
         "lesson.key": "Conditionals",
         "lesson_group.key": "",
         "script.name": "coursee-ramp"
@@ -610,8 +562,6 @@
         "script_level.level_keys": [
           "courseE_video_ifElse"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 5,
         "lesson.key": "Conditionals",
         "lesson_group.key": "",
         "script.name": "coursee-ramp"
@@ -632,8 +582,6 @@
         "script_level.level_keys": [
           "courseE_farmer_ramp12a"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 6,
         "lesson.key": "Conditionals",
         "lesson_group.key": "",
         "script.name": "coursee-ramp"
@@ -654,8 +602,6 @@
         "script_level.level_keys": [
           "courseE_farmer_ramp13"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 7,
         "lesson.key": "Conditionals",
         "lesson_group.key": "",
         "script.name": "coursee-ramp"
@@ -676,8 +622,6 @@
         "script_level.level_keys": [
           "courseE_bee_ramp14"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 8,
         "lesson.key": "Conditionals",
         "lesson_group.key": "",
         "script.name": "coursee-ramp"
@@ -698,8 +642,6 @@
         "script_level.level_keys": [
           "courseE_farmer_predict2"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 9,
         "lesson.key": "Conditionals",
         "lesson_group.key": "",
         "script.name": "coursee-ramp"
@@ -720,8 +662,6 @@
         "script_level.level_keys": [
           "courseD_video_repeatUntil"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 10,
         "lesson.key": "Conditionals",
         "lesson_group.key": "",
         "script.name": "coursee-ramp"
@@ -742,8 +682,6 @@
         "script_level.level_keys": [
           "courseE_farmer_ramp15"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 11,
         "lesson.key": "Conditionals",
         "lesson_group.key": "",
         "script.name": "coursee-ramp"
@@ -764,8 +702,6 @@
         "script_level.level_keys": [
           "courseE_farmer_ramp16"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 12,
         "lesson.key": "Conditionals",
         "lesson_group.key": "",
         "script.name": "coursee-ramp"
@@ -786,8 +722,6 @@
         "script_level.level_keys": [
           "courseE_bee_ramp17"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 13,
         "lesson.key": "Conditionals",
         "lesson_group.key": "",
         "script.name": "coursee-ramp"
@@ -804,8 +738,6 @@
         "script_level.level_keys": [
           "DiceRace"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Real Life Algorithms: Dice Race",
         "lesson_group.key": "",
         "script.name": "coursee-ramp"
@@ -817,8 +749,6 @@
         "script_level.level_keys": [
           "courseE_video_ramp1"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 1,
         "lesson.key": "Introduction",
         "lesson_group.key": "",
         "script.name": "coursee-ramp"
@@ -830,8 +760,6 @@
         "script_level.level_keys": [
           "courseE_maze_ramp1"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 2,
         "lesson.key": "Introduction",
         "lesson_group.key": "",
         "script.name": "coursee-ramp"
@@ -843,8 +771,6 @@
         "script_level.level_keys": [
           "courseE_maze_ramp2"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 3,
         "lesson.key": "Introduction",
         "lesson_group.key": "",
         "script.name": "coursee-ramp"
@@ -856,8 +782,6 @@
         "script_level.level_keys": [
           "courseE_maze_ramp3"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 4,
         "lesson.key": "Introduction",
         "lesson_group.key": "",
         "script.name": "coursee-ramp"
@@ -869,8 +793,6 @@
         "script_level.level_keys": [
           "courseE_maze_ramp4"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 5,
         "lesson.key": "Introduction",
         "lesson_group.key": "",
         "script.name": "coursee-ramp"
@@ -882,8 +804,6 @@
         "script_level.level_keys": [
           "courseE_maze_ramp5"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 6,
         "lesson.key": "Introduction",
         "lesson_group.key": "",
         "script.name": "coursee-ramp"
@@ -895,8 +815,6 @@
         "script_level.level_keys": [
           "courseE_maze_predict1"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 7,
         "lesson.key": "Introduction",
         "lesson_group.key": "",
         "script.name": "coursee-ramp"
@@ -908,8 +826,6 @@
         "script_level.level_keys": [
           "courseD_maze_video_Loops"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 8,
         "lesson.key": "Introduction",
         "lesson_group.key": "",
         "script.name": "coursee-ramp"
@@ -921,8 +837,6 @@
         "script_level.level_keys": [
           "courseE_maze_ramp6"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 9,
         "lesson.key": "Introduction",
         "lesson_group.key": "",
         "script.name": "coursee-ramp"
@@ -934,8 +848,6 @@
         "script_level.level_keys": [
           "courseE_maze_ramp7"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 10,
         "lesson.key": "Introduction",
         "lesson_group.key": "",
         "script.name": "coursee-ramp"
@@ -947,8 +859,6 @@
         "script_level.level_keys": [
           "courseE_artist_ramp8"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 11,
         "lesson.key": "Introduction",
         "lesson_group.key": "",
         "script.name": "coursee-ramp"
@@ -960,8 +870,6 @@
         "script_level.level_keys": [
           "courseC_video_angles"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 12,
         "lesson.key": "Introduction",
         "lesson_group.key": "",
         "script.name": "coursee-ramp"
@@ -973,8 +881,6 @@
         "script_level.level_keys": [
           "courseE_artist_ramp9"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 13,
         "lesson.key": "Introduction",
         "lesson_group.key": "",
         "script.name": "coursee-ramp"
@@ -986,8 +892,6 @@
         "script_level.level_keys": [
           "courseE_artist_predict1"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 14,
         "lesson.key": "Introduction",
         "lesson_group.key": "",
         "script.name": "coursee-ramp"
@@ -999,8 +903,6 @@
         "script_level.level_keys": [
           "courseD_video_nestedLoopsArtist"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 15,
         "lesson.key": "Introduction",
         "lesson_group.key": "",
         "script.name": "coursee-ramp"
@@ -1012,8 +914,6 @@
         "script_level.level_keys": [
           "courseE_artist_ramp10"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 16,
         "lesson.key": "Introduction",
         "lesson_group.key": "",
         "script.name": "coursee-ramp"
@@ -1025,8 +925,6 @@
         "script_level.level_keys": [
           "courseE_farmer_ramp11"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 17,
         "lesson.key": "Introduction",
         "lesson_group.key": "",
         "script.name": "coursee-ramp"
@@ -1038,8 +936,6 @@
         "script_level.level_keys": [
           "courseE_maze_ramp13"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 18,
         "lesson.key": "Introduction",
         "lesson_group.key": "",
         "script.name": "coursee-ramp"
@@ -1051,8 +947,6 @@
         "script_level.level_keys": [
           "courseE_external_ramp14"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 19,
         "lesson.key": "Introduction",
         "lesson_group.key": "",
         "script.name": "coursee-ramp"
@@ -1064,8 +958,6 @@
         "script_level.level_keys": [
           "courseD_video_whileIntro"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 1,
         "lesson.key": "Conditionals",
         "lesson_group.key": "",
         "script.name": "coursee-ramp"
@@ -1077,8 +969,6 @@
         "script_level.level_keys": [
           "courseE_farmer_ramp11a"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 2,
         "lesson.key": "Conditionals",
         "lesson_group.key": "",
         "script.name": "coursee-ramp"
@@ -1090,8 +980,6 @@
         "script_level.level_keys": [
           "courseE_farmer_ramp12"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 3,
         "lesson.key": "Conditionals",
         "lesson_group.key": "",
         "script.name": "coursee-ramp"
@@ -1103,8 +991,6 @@
         "script_level.level_keys": [
           "courseE_farmer_predict1"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 4,
         "lesson.key": "Conditionals",
         "lesson_group.key": "",
         "script.name": "coursee-ramp"
@@ -1116,8 +1002,6 @@
         "script_level.level_keys": [
           "courseE_video_ifElse"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 5,
         "lesson.key": "Conditionals",
         "lesson_group.key": "",
         "script.name": "coursee-ramp"
@@ -1129,8 +1013,6 @@
         "script_level.level_keys": [
           "courseE_farmer_ramp12a"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 6,
         "lesson.key": "Conditionals",
         "lesson_group.key": "",
         "script.name": "coursee-ramp"
@@ -1142,8 +1024,6 @@
         "script_level.level_keys": [
           "courseE_farmer_ramp13"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 7,
         "lesson.key": "Conditionals",
         "lesson_group.key": "",
         "script.name": "coursee-ramp"
@@ -1155,8 +1035,6 @@
         "script_level.level_keys": [
           "courseE_bee_ramp14"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 8,
         "lesson.key": "Conditionals",
         "lesson_group.key": "",
         "script.name": "coursee-ramp"
@@ -1168,8 +1046,6 @@
         "script_level.level_keys": [
           "courseE_farmer_predict2"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 9,
         "lesson.key": "Conditionals",
         "lesson_group.key": "",
         "script.name": "coursee-ramp"
@@ -1181,8 +1057,6 @@
         "script_level.level_keys": [
           "courseD_video_repeatUntil"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 10,
         "lesson.key": "Conditionals",
         "lesson_group.key": "",
         "script.name": "coursee-ramp"
@@ -1194,8 +1068,6 @@
         "script_level.level_keys": [
           "courseE_farmer_ramp15"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 11,
         "lesson.key": "Conditionals",
         "lesson_group.key": "",
         "script.name": "coursee-ramp"
@@ -1207,8 +1079,6 @@
         "script_level.level_keys": [
           "courseE_farmer_ramp16"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 12,
         "lesson.key": "Conditionals",
         "lesson_group.key": "",
         "script.name": "coursee-ramp"
@@ -1220,8 +1090,6 @@
         "script_level.level_keys": [
           "courseE_bee_ramp17"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 13,
         "lesson.key": "Conditionals",
         "lesson_group.key": "",
         "script.name": "coursee-ramp"

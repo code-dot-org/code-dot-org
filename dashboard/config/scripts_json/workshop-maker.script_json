@@ -96,8 +96,6 @@
         "script_level.level_keys": [
           "CSD Review: Design Mode, IDs, and Events"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "App Lab Basics",
         "lesson_group.key": "",
         "script.name": "workshop-maker"
@@ -118,8 +116,6 @@
         "script_level.level_keys": [
           "CSD: Review Events"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "App Lab Basics",
         "lesson_group.key": "",
         "script.name": "workshop-maker"
@@ -140,8 +136,6 @@
         "script_level.level_keys": [
           "CSD - Getters and Setters"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "App Lab Basics",
         "lesson_group.key": "",
         "script.name": "workshop-maker"
@@ -163,8 +157,6 @@
         "script_level.level_keys": [
           "CSDU6 - UI and Inputs - setText"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "App Lab Basics",
         "lesson_group.key": "",
         "script.name": "workshop-maker"
@@ -186,8 +178,6 @@
         "script_level.level_keys": [
           "CSDU6 - UI and Inputs - hide show"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 5,
         "lesson.key": "App Lab Basics",
         "lesson_group.key": "",
         "script.name": "workshop-maker"
@@ -208,8 +198,6 @@
         "script_level.level_keys": [
           "Circuit Playground Map: LEDS"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 1,
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "",
         "script.name": "workshop-maker"
@@ -231,8 +219,6 @@
         "script_level.level_keys": [
           "CSDU6 Circuit Playground Test"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 2,
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "",
         "script.name": "workshop-maker"
@@ -254,8 +240,6 @@
         "script_level.level_keys": [
           "CSDU6 LED basics led.on"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 3,
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "",
         "script.name": "workshop-maker"
@@ -277,8 +261,6 @@
         "script_level.level_keys": [
           "CSDU6 LED basics onEvent"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 4,
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "",
         "script.name": "workshop-maker"
@@ -300,8 +282,6 @@
         "script_level.level_keys": [
           "CSDU6 LED basics led.off()"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 5,
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "",
         "script.name": "workshop-maker"
@@ -323,8 +303,6 @@
         "script_level.level_keys": [
           "CSDU6 LED predict"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 6,
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "",
         "script.name": "workshop-maker"
@@ -346,8 +324,6 @@
         "script_level.level_keys": [
           "CSDU6 LED alarm silent"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 7,
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "",
         "script.name": "workshop-maker"
@@ -368,8 +344,6 @@
         "script_level.level_keys": [
           "Circuit Playground Map: Buzzer"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 8,
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "",
         "script.name": "workshop-maker"
@@ -391,8 +365,6 @@
         "script_level.level_keys": [
           "CSDU6 buzzer freq"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 9,
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "",
         "script.name": "workshop-maker"
@@ -414,8 +386,6 @@
         "script_level.level_keys": [
           "CSDU6 buzzer stop"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 10,
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "",
         "script.name": "workshop-maker"
@@ -437,8 +407,6 @@
         "script_level.level_keys": [
           "CSDU6 buzzer alarm"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 11,
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "",
         "script.name": "workshop-maker"
@@ -459,8 +427,6 @@
         "script_level.level_keys": [
           "Challenge: Buzzer and LED"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 12,
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "",
         "script.name": "workshop-maker"
@@ -481,8 +447,6 @@
         "script_level.level_keys": [
           "CSD Map: onBoardEvent"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 1,
         "lesson.key": "Physical Input",
         "lesson_group.key": "",
         "script.name": "workshop-maker"
@@ -504,8 +468,6 @@
         "script_level.level_keys": [
           "CSDU6 - button screen buttonL"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 2,
         "lesson.key": "Physical Input",
         "lesson_group.key": "",
         "script.name": "workshop-maker"
@@ -527,8 +489,6 @@
         "script_level.level_keys": [
           "CSDU6 - button screen buttonR"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 3,
         "lesson.key": "Physical Input",
         "lesson_group.key": "",
         "script.name": "workshop-maker"
@@ -549,8 +509,6 @@
         "script_level.level_keys": [
           "CSD Map: Board Buttons"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 4,
         "lesson.key": "Physical Input",
         "lesson_group.key": "",
         "script.name": "workshop-maker"
@@ -572,8 +530,6 @@
         "script_level.level_keys": [
           "CSDU6 - button toggle"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 5,
         "lesson.key": "Physical Input",
         "lesson_group.key": "",
         "script.name": "workshop-maker"
@@ -595,8 +551,6 @@
         "script_level.level_keys": [
           "CSDU6 - button on off"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 6,
         "lesson.key": "Physical Input",
         "lesson_group.key": "",
         "script.name": "workshop-maker"
@@ -618,8 +572,6 @@
         "script_level.level_keys": [
           "CSDU6 - button up down predict"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 7,
         "lesson.key": "Physical Input",
         "lesson_group.key": "",
         "script.name": "workshop-maker"
@@ -641,8 +593,6 @@
         "script_level.level_keys": [
           "CSDU6 - button up down"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 8,
         "lesson.key": "Physical Input",
         "lesson_group.key": "",
         "script.name": "workshop-maker"
@@ -664,8 +614,6 @@
         "script_level.level_keys": [
           "CSDU6 - button tug o war right button"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 9,
         "lesson.key": "Physical Input",
         "lesson_group.key": "",
         "script.name": "workshop-maker"
@@ -687,8 +635,6 @@
         "script_level.level_keys": [
           "CSDU6 - button tug o war left button"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 10,
         "lesson.key": "Physical Input",
         "lesson_group.key": "",
         "script.name": "workshop-maker"
@@ -710,8 +656,6 @@
         "script_level.level_keys": [
           "CSDU6 - button tug o war challenge"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 11,
         "lesson.key": "Physical Input",
         "lesson_group.key": "",
         "script.name": "workshop-maker"
@@ -732,8 +676,6 @@
         "script_level.level_keys": [
           "CSDU6 - sensors experiment"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 1,
         "lesson.key": "Analog Input",
         "lesson_group.key": "",
         "script.name": "workshop-maker"
@@ -754,8 +696,6 @@
         "script_level.level_keys": [
           "CSD Map: Board Sensors"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 2,
         "lesson.key": "Analog Input",
         "lesson_group.key": "",
         "script.name": "workshop-maker"
@@ -777,8 +717,6 @@
         "script_level.level_keys": [
           "CSDU6 - sensors sound"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 3,
         "lesson.key": "Analog Input",
         "lesson_group.key": "",
         "script.name": "workshop-maker"
@@ -800,8 +738,6 @@
         "script_level.level_keys": [
           "CSDU6 - sensors light"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 4,
         "lesson.key": "Analog Input",
         "lesson_group.key": "",
         "script.name": "workshop-maker"
@@ -823,8 +759,6 @@
         "script_level.level_keys": [
           "CSDU6 - sensors temp"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 5,
         "lesson.key": "Analog Input",
         "lesson_group.key": "",
         "script.name": "workshop-maker"
@@ -846,8 +780,6 @@
         "script_level.level_keys": [
           "CSDU6 - sensors predict"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 6,
         "lesson.key": "Analog Input",
         "lesson_group.key": "",
         "script.name": "workshop-maker"
@@ -868,8 +800,6 @@
         "script_level.level_keys": [
           "CSD Map: Polling Events"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 7,
         "lesson.key": "Analog Input",
         "lesson_group.key": "",
         "script.name": "workshop-maker"
@@ -891,8 +821,6 @@
         "script_level.level_keys": [
           "CSDU6 - sensors temp f c"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 8,
         "lesson.key": "Analog Input",
         "lesson_group.key": "",
         "script.name": "workshop-maker"
@@ -913,8 +841,6 @@
         "script_level.level_keys": [
           "CSDU6 light sensor alarm"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 9,
         "lesson.key": "Analog Input",
         "lesson_group.key": "",
         "script.name": "workshop-maker"
@@ -935,8 +861,6 @@
         "script_level.level_keys": [
           "maker workshop final"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 10,
         "lesson.key": "Analog Input",
         "lesson_group.key": "",
         "script.name": "workshop-maker"
@@ -953,8 +877,6 @@
         "script_level.level_keys": [
           "CSD Review: Design Mode, IDs, and Events"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "App Lab Basics",
         "lesson_group.key": "",
         "script.name": "workshop-maker"
@@ -966,8 +888,6 @@
         "script_level.level_keys": [
           "CSD: Review Events"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "App Lab Basics",
         "lesson_group.key": "",
         "script.name": "workshop-maker"
@@ -979,8 +899,6 @@
         "script_level.level_keys": [
           "CSD - Getters and Setters"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "App Lab Basics",
         "lesson_group.key": "",
         "script.name": "workshop-maker"
@@ -992,8 +910,6 @@
         "script_level.level_keys": [
           "CSDU6 - UI and Inputs - setText"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "App Lab Basics",
         "lesson_group.key": "",
         "script.name": "workshop-maker"
@@ -1005,8 +921,6 @@
         "script_level.level_keys": [
           "CSDU6 - UI and Inputs - hide show"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 5,
         "lesson.key": "App Lab Basics",
         "lesson_group.key": "",
         "script.name": "workshop-maker"
@@ -1018,8 +932,6 @@
         "script_level.level_keys": [
           "Circuit Playground Map: LEDS"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 1,
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "",
         "script.name": "workshop-maker"
@@ -1031,8 +943,6 @@
         "script_level.level_keys": [
           "CSDU6 Circuit Playground Test"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 2,
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "",
         "script.name": "workshop-maker"
@@ -1044,8 +954,6 @@
         "script_level.level_keys": [
           "CSDU6 LED basics led.on"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 3,
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "",
         "script.name": "workshop-maker"
@@ -1057,8 +965,6 @@
         "script_level.level_keys": [
           "CSDU6 LED basics onEvent"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 4,
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "",
         "script.name": "workshop-maker"
@@ -1070,8 +976,6 @@
         "script_level.level_keys": [
           "CSDU6 LED basics led.off()"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 5,
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "",
         "script.name": "workshop-maker"
@@ -1083,8 +987,6 @@
         "script_level.level_keys": [
           "CSDU6 LED predict"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 6,
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "",
         "script.name": "workshop-maker"
@@ -1096,8 +998,6 @@
         "script_level.level_keys": [
           "CSDU6 LED alarm silent"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 7,
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "",
         "script.name": "workshop-maker"
@@ -1109,8 +1009,6 @@
         "script_level.level_keys": [
           "Circuit Playground Map: Buzzer"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 8,
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "",
         "script.name": "workshop-maker"
@@ -1122,8 +1020,6 @@
         "script_level.level_keys": [
           "CSDU6 buzzer freq"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 9,
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "",
         "script.name": "workshop-maker"
@@ -1135,8 +1031,6 @@
         "script_level.level_keys": [
           "CSDU6 buzzer stop"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 10,
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "",
         "script.name": "workshop-maker"
@@ -1148,8 +1042,6 @@
         "script_level.level_keys": [
           "CSDU6 buzzer alarm"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 11,
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "",
         "script.name": "workshop-maker"
@@ -1161,8 +1053,6 @@
         "script_level.level_keys": [
           "Challenge: Buzzer and LED"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 12,
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "",
         "script.name": "workshop-maker"
@@ -1174,8 +1064,6 @@
         "script_level.level_keys": [
           "CSD Map: onBoardEvent"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 1,
         "lesson.key": "Physical Input",
         "lesson_group.key": "",
         "script.name": "workshop-maker"
@@ -1187,8 +1075,6 @@
         "script_level.level_keys": [
           "CSDU6 - button screen buttonL"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 2,
         "lesson.key": "Physical Input",
         "lesson_group.key": "",
         "script.name": "workshop-maker"
@@ -1200,8 +1086,6 @@
         "script_level.level_keys": [
           "CSDU6 - button screen buttonR"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 3,
         "lesson.key": "Physical Input",
         "lesson_group.key": "",
         "script.name": "workshop-maker"
@@ -1213,8 +1097,6 @@
         "script_level.level_keys": [
           "CSD Map: Board Buttons"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 4,
         "lesson.key": "Physical Input",
         "lesson_group.key": "",
         "script.name": "workshop-maker"
@@ -1226,8 +1108,6 @@
         "script_level.level_keys": [
           "CSDU6 - button toggle"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 5,
         "lesson.key": "Physical Input",
         "lesson_group.key": "",
         "script.name": "workshop-maker"
@@ -1239,8 +1119,6 @@
         "script_level.level_keys": [
           "CSDU6 - button on off"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 6,
         "lesson.key": "Physical Input",
         "lesson_group.key": "",
         "script.name": "workshop-maker"
@@ -1252,8 +1130,6 @@
         "script_level.level_keys": [
           "CSDU6 - button up down predict"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 7,
         "lesson.key": "Physical Input",
         "lesson_group.key": "",
         "script.name": "workshop-maker"
@@ -1265,8 +1141,6 @@
         "script_level.level_keys": [
           "CSDU6 - button up down"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 8,
         "lesson.key": "Physical Input",
         "lesson_group.key": "",
         "script.name": "workshop-maker"
@@ -1278,8 +1152,6 @@
         "script_level.level_keys": [
           "CSDU6 - button tug o war right button"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 9,
         "lesson.key": "Physical Input",
         "lesson_group.key": "",
         "script.name": "workshop-maker"
@@ -1291,8 +1163,6 @@
         "script_level.level_keys": [
           "CSDU6 - button tug o war left button"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 10,
         "lesson.key": "Physical Input",
         "lesson_group.key": "",
         "script.name": "workshop-maker"
@@ -1304,8 +1174,6 @@
         "script_level.level_keys": [
           "CSDU6 - button tug o war challenge"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 11,
         "lesson.key": "Physical Input",
         "lesson_group.key": "",
         "script.name": "workshop-maker"
@@ -1317,8 +1185,6 @@
         "script_level.level_keys": [
           "CSDU6 - sensors experiment"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 1,
         "lesson.key": "Analog Input",
         "lesson_group.key": "",
         "script.name": "workshop-maker"
@@ -1330,8 +1196,6 @@
         "script_level.level_keys": [
           "CSD Map: Board Sensors"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 2,
         "lesson.key": "Analog Input",
         "lesson_group.key": "",
         "script.name": "workshop-maker"
@@ -1343,8 +1207,6 @@
         "script_level.level_keys": [
           "CSDU6 - sensors sound"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 3,
         "lesson.key": "Analog Input",
         "lesson_group.key": "",
         "script.name": "workshop-maker"
@@ -1356,8 +1218,6 @@
         "script_level.level_keys": [
           "CSDU6 - sensors light"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 4,
         "lesson.key": "Analog Input",
         "lesson_group.key": "",
         "script.name": "workshop-maker"
@@ -1369,8 +1229,6 @@
         "script_level.level_keys": [
           "CSDU6 - sensors temp"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 5,
         "lesson.key": "Analog Input",
         "lesson_group.key": "",
         "script.name": "workshop-maker"
@@ -1382,8 +1240,6 @@
         "script_level.level_keys": [
           "CSDU6 - sensors predict"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 6,
         "lesson.key": "Analog Input",
         "lesson_group.key": "",
         "script.name": "workshop-maker"
@@ -1395,8 +1251,6 @@
         "script_level.level_keys": [
           "CSD Map: Polling Events"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 7,
         "lesson.key": "Analog Input",
         "lesson_group.key": "",
         "script.name": "workshop-maker"
@@ -1408,8 +1262,6 @@
         "script_level.level_keys": [
           "CSDU6 - sensors temp f c"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 8,
         "lesson.key": "Analog Input",
         "lesson_group.key": "",
         "script.name": "workshop-maker"
@@ -1421,8 +1273,6 @@
         "script_level.level_keys": [
           "CSDU6 light sensor alarm"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 9,
         "lesson.key": "Analog Input",
         "lesson_group.key": "",
         "script.name": "workshop-maker"
@@ -1434,8 +1284,6 @@
         "script_level.level_keys": [
           "maker workshop final"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 10,
         "lesson.key": "Analog Input",
         "lesson_group.key": "",
         "script.name": "workshop-maker"

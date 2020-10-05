@@ -140,8 +140,6 @@
         "script_level.level_keys": [
           "welcome-novice-18"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Novice Reflection Overview",
         "lesson_group.key": "required",
         "script.name": "csd-novice-18"
@@ -162,8 +160,6 @@
         "script_level.level_keys": [
           "novice-monday-1"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 1,
         "lesson.key": "Day 1",
         "lesson_group.key": "content",
         "script.name": "csd-novice-18"
@@ -184,8 +180,6 @@
         "script_level.level_keys": [
           "novice-monday-2"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 2,
         "lesson.key": "Day 1",
         "lesson_group.key": "content",
         "script.name": "csd-novice-18"
@@ -206,8 +200,6 @@
         "script_level.level_keys": [
           "csd-pushDL-unit1"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 3,
         "lesson.key": "Day 1",
         "lesson_group.key": "content",
         "script.name": "csd-novice-18"
@@ -228,8 +220,6 @@
         "script_level.level_keys": [
           "novice-tuesday-1"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 1,
         "lesson.key": "Day 2",
         "lesson_group.key": "content",
         "script.name": "csd-novice-18"
@@ -250,8 +240,6 @@
         "script_level.level_keys": [
           "novice-tuesday-2"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 2,
         "lesson.key": "Day 2",
         "lesson_group.key": "content",
         "script.name": "csd-novice-18"
@@ -272,8 +260,6 @@
         "script_level.level_keys": [
           "csd-pushDL-unit2"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 3,
         "lesson.key": "Day 2",
         "lesson_group.key": "content",
         "script.name": "csd-novice-18"
@@ -294,8 +280,6 @@
         "script_level.level_keys": [
           "novice-wednesday-1"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 1,
         "lesson.key": "Day 3",
         "lesson_group.key": "content",
         "script.name": "csd-novice-18"
@@ -316,8 +300,6 @@
         "script_level.level_keys": [
           "novice-wednesday-2"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 2,
         "lesson.key": "Day 3",
         "lesson_group.key": "content",
         "script.name": "csd-novice-18"
@@ -338,8 +320,6 @@
         "script_level.level_keys": [
           "csd-pushDL-unit2"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 3,
         "lesson.key": "Day 3",
         "lesson_group.key": "content",
         "script.name": "csd-novice-18"
@@ -360,8 +340,6 @@
         "script_level.level_keys": [
           "novice-thursday-1"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 1,
         "lesson.key": "Day 4",
         "lesson_group.key": "content",
         "script.name": "csd-novice-18"
@@ -382,8 +360,6 @@
         "script_level.level_keys": [
           "novice-thursday-2"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 2,
         "lesson.key": "Day 4",
         "lesson_group.key": "content",
         "script.name": "csd-novice-18"
@@ -404,8 +380,6 @@
         "script_level.level_keys": [
           "csd-pushDL-unit3"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 3,
         "lesson.key": "Day 4",
         "lesson_group.key": "content",
         "script.name": "csd-novice-18"
@@ -426,8 +400,6 @@
         "script_level.level_keys": [
           "novice-congrats"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 1,
         "lesson.key": "Wrap Up",
         "lesson_group.key": "content",
         "script.name": "csd-novice-18"
@@ -444,8 +416,6 @@
         "script_level.level_keys": [
           "welcome-novice-18"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Novice Reflection Overview",
         "lesson_group.key": "required",
         "script.name": "csd-novice-18"
@@ -457,8 +427,6 @@
         "script_level.level_keys": [
           "novice-monday-1"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 1,
         "lesson.key": "Day 1",
         "lesson_group.key": "content",
         "script.name": "csd-novice-18"
@@ -470,8 +438,6 @@
         "script_level.level_keys": [
           "novice-monday-2"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 2,
         "lesson.key": "Day 1",
         "lesson_group.key": "content",
         "script.name": "csd-novice-18"
@@ -483,8 +449,6 @@
         "script_level.level_keys": [
           "csd-pushDL-unit1"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 3,
         "lesson.key": "Day 1",
         "lesson_group.key": "content",
         "script.name": "csd-novice-18"
@@ -496,8 +460,6 @@
         "script_level.level_keys": [
           "novice-tuesday-1"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 1,
         "lesson.key": "Day 2",
         "lesson_group.key": "content",
         "script.name": "csd-novice-18"
@@ -509,8 +471,6 @@
         "script_level.level_keys": [
           "novice-tuesday-2"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 2,
         "lesson.key": "Day 2",
         "lesson_group.key": "content",
         "script.name": "csd-novice-18"
@@ -522,8 +482,6 @@
         "script_level.level_keys": [
           "csd-pushDL-unit2"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 3,
         "lesson.key": "Day 2",
         "lesson_group.key": "content",
         "script.name": "csd-novice-18"
@@ -535,8 +493,6 @@
         "script_level.level_keys": [
           "novice-wednesday-1"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 1,
         "lesson.key": "Day 3",
         "lesson_group.key": "content",
         "script.name": "csd-novice-18"
@@ -548,8 +504,6 @@
         "script_level.level_keys": [
           "novice-wednesday-2"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 2,
         "lesson.key": "Day 3",
         "lesson_group.key": "content",
         "script.name": "csd-novice-18"
@@ -561,8 +515,6 @@
         "script_level.level_keys": [
           "csd-pushDL-unit2"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 3,
         "lesson.key": "Day 3",
         "lesson_group.key": "content",
         "script.name": "csd-novice-18"
@@ -574,8 +526,6 @@
         "script_level.level_keys": [
           "novice-thursday-1"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 1,
         "lesson.key": "Day 4",
         "lesson_group.key": "content",
         "script.name": "csd-novice-18"
@@ -587,8 +537,6 @@
         "script_level.level_keys": [
           "novice-thursday-2"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 2,
         "lesson.key": "Day 4",
         "lesson_group.key": "content",
         "script.name": "csd-novice-18"
@@ -600,8 +548,6 @@
         "script_level.level_keys": [
           "csd-pushDL-unit3"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 3,
         "lesson.key": "Day 4",
         "lesson_group.key": "content",
         "script.name": "csd-novice-18"
@@ -613,8 +559,6 @@
         "script_level.level_keys": [
           "novice-congrats"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 1,
         "lesson.key": "Wrap Up",
         "lesson_group.key": "content",
         "script.name": "csd-novice-18"

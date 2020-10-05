@@ -126,8 +126,6 @@
         "script_level.level_keys": [
           "CSD U1L04 TFMD_pilot"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "What is a Computer?",
         "lesson_group.key": "csd1_2",
         "script.name": "csd4-pilot"
@@ -148,8 +146,6 @@
         "script_level.level_keys": [
           "CSD What Makes a Computer a Computer Video_pilot"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "What is a Computer?",
         "lesson_group.key": "csd1_2",
         "script.name": "csd4-pilot"
@@ -170,8 +166,6 @@
         "script_level.level_keys": [
           "CSD U1L05 TFMD_pilot"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 1,
         "lesson.key": "Input and Output",
         "lesson_group.key": "csd1_2",
         "script.name": "csd4-pilot"
@@ -192,8 +186,6 @@
         "script_level.level_keys": [
           "csd wiac pet chooser"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 2,
         "lesson.key": "Input and Output",
         "lesson_group.key": "csd1_2",
         "script.name": "csd4-pilot"
@@ -214,8 +206,6 @@
         "script_level.level_keys": [
           "csd wiac mad libs"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 3,
         "lesson.key": "Input and Output",
         "lesson_group.key": "csd1_2",
         "script.name": "csd4-pilot"
@@ -236,8 +226,6 @@
         "script_level.level_keys": [
           "CSD U1L06 TFMD_pilot"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 1,
         "lesson.key": "Processing",
         "lesson_group.key": "csd1_2",
         "script.name": "csd4-pilot"
@@ -258,8 +246,6 @@
         "script_level.level_keys": [
           "CSD U1L07 TFMD_pilot"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 1,
         "lesson.key": "Apps and Storage",
         "lesson_group.key": "csd1_2",
         "script.name": "csd4-pilot"
@@ -280,8 +266,6 @@
         "script_level.level_keys": [
           "CSD U1L09 TFMD_pilot"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 1,
         "lesson.key": "Project - Propose an App",
         "lesson_group.key": "csd1_2",
         "script.name": "csd4-pilot"
@@ -303,8 +287,6 @@
         "script_level.level_keys": [
           "csd-pulse-check-survey-1-levelgroup U1Ch2_2018_2019_pilot"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 2,
         "lesson.key": "Project - Propose an App",
         "lesson_group.key": "csd1_2",
         "script.name": "csd4-pilot"
@@ -325,8 +307,6 @@
         "script_level.level_keys": [
           "CSD U1 Test_pilot"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 1,
         "lesson.key": "Post-Project Test",
         "lesson_group.key": "csd1_2",
         "script.name": "csd4-pilot"
@@ -343,8 +323,6 @@
         "script_level.level_keys": [
           "CSD U1L04 TFMD_pilot"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "What is a Computer?",
         "lesson_group.key": "csd1_2",
         "script.name": "csd4-pilot"
@@ -356,8 +334,6 @@
         "script_level.level_keys": [
           "CSD What Makes a Computer a Computer Video_pilot"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "What is a Computer?",
         "lesson_group.key": "csd1_2",
         "script.name": "csd4-pilot"
@@ -369,8 +345,6 @@
         "script_level.level_keys": [
           "CSD U1L05 TFMD_pilot"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 1,
         "lesson.key": "Input and Output",
         "lesson_group.key": "csd1_2",
         "script.name": "csd4-pilot"
@@ -382,8 +356,6 @@
         "script_level.level_keys": [
           "csd wiac pet chooser"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 2,
         "lesson.key": "Input and Output",
         "lesson_group.key": "csd1_2",
         "script.name": "csd4-pilot"
@@ -395,8 +367,6 @@
         "script_level.level_keys": [
           "csd wiac mad libs"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 3,
         "lesson.key": "Input and Output",
         "lesson_group.key": "csd1_2",
         "script.name": "csd4-pilot"
@@ -408,8 +378,6 @@
         "script_level.level_keys": [
           "CSD U1L06 TFMD_pilot"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 1,
         "lesson.key": "Processing",
         "lesson_group.key": "csd1_2",
         "script.name": "csd4-pilot"
@@ -421,8 +389,6 @@
         "script_level.level_keys": [
           "CSD U1L07 TFMD_pilot"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 1,
         "lesson.key": "Apps and Storage",
         "lesson_group.key": "csd1_2",
         "script.name": "csd4-pilot"
@@ -434,8 +400,6 @@
         "script_level.level_keys": [
           "CSD U1L09 TFMD_pilot"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 1,
         "lesson.key": "Project - Propose an App",
         "lesson_group.key": "csd1_2",
         "script.name": "csd4-pilot"
@@ -447,8 +411,6 @@
         "script_level.level_keys": [
           "csd-pulse-check-survey-1-levelgroup U1Ch2_2018_2019_pilot"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 2,
         "lesson.key": "Project - Propose an App",
         "lesson_group.key": "csd1_2",
         "script.name": "csd4-pilot"
@@ -460,8 +422,6 @@
         "script_level.level_keys": [
           "CSD U1 Test_pilot"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 1,
         "lesson.key": "Post-Project Test",
         "lesson_group.key": "csd1_2",
         "script.name": "csd4-pilot"

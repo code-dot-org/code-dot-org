@@ -57,8 +57,6 @@
         "script_level.level_keys": [
           "csp-post-survey-2017-levelgroup_2018"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "CSP Mid-year survey",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp-mid-survey"
@@ -75,8 +73,6 @@
         "script_level.level_keys": [
           "csp-post-survey-2017-levelgroup_2018"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "CSP Mid-year survey",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp-mid-survey"

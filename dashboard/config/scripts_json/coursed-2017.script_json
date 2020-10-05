@@ -306,8 +306,6 @@
         "script_level.level_keys": [
           "GraphPaperProgramming"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Algorithms: Graph Paper Programming",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -328,8 +326,6 @@
         "script_level.level_keys": [
           "courseD_video_ramp1"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 1,
         "lesson.key": "Introduction",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -350,8 +346,6 @@
         "script_level.level_keys": [
           "courseD_maze_ramp1"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 2,
         "lesson.key": "Introduction",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -372,8 +366,6 @@
         "script_level.level_keys": [
           "courseD_maze_ramp2"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 3,
         "lesson.key": "Introduction",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -394,8 +386,6 @@
         "script_level.level_keys": [
           "courseD_maze_ramp3"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 4,
         "lesson.key": "Introduction",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -416,8 +406,6 @@
         "script_level.level_keys": [
           "courseD_maze_ramp4"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 5,
         "lesson.key": "Introduction",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -438,8 +426,6 @@
         "script_level.level_keys": [
           "courseD_maze_ramp5"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 6,
         "lesson.key": "Introduction",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -460,8 +446,6 @@
         "script_level.level_keys": [
           "courseCDEF_video_AngryBirdLoops"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 7,
         "lesson.key": "Introduction",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -482,8 +466,6 @@
         "script_level.level_keys": [
           "courseD_maze_ramp6"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 8,
         "lesson.key": "Introduction",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -504,8 +486,6 @@
         "script_level.level_keys": [
           "courseD_maze_ramp7"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 9,
         "lesson.key": "Introduction",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -526,8 +506,6 @@
         "script_level.level_keys": [
           "courseD_collector_ramp8"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 10,
         "lesson.key": "Introduction",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -548,8 +526,6 @@
         "script_level.level_keys": [
           "courseD_collector_ramp9"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 11,
         "lesson.key": "Introduction",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -570,8 +546,6 @@
         "script_level.level_keys": [
           "courseD_collector_ramp10"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 12,
         "lesson.key": "Introduction",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -592,8 +566,6 @@
         "script_level.level_keys": [
           "courseD_artist_ramp11"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 13,
         "lesson.key": "Introduction",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -614,8 +586,6 @@
         "script_level.level_keys": [
           "courseC_video_angles"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 14,
         "lesson.key": "Introduction",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -636,8 +606,6 @@
         "script_level.level_keys": [
           "courseD_artist_ramp12"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 15,
         "lesson.key": "Introduction",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -658,8 +626,6 @@
         "script_level.level_keys": [
           "courseD_farmer_ramp13"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 16,
         "lesson.key": "Introduction",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -680,8 +646,6 @@
         "script_level.level_keys": [
           "bounce_1"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 1,
         "lesson.key": "Events in Bounce",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -702,8 +666,6 @@
         "script_level.level_keys": [
           "bounce_2"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 2,
         "lesson.key": "Events in Bounce",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -724,8 +686,6 @@
         "script_level.level_keys": [
           "bounce_3"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 3,
         "lesson.key": "Events in Bounce",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -746,8 +706,6 @@
         "script_level.level_keys": [
           "bounce_4"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 4,
         "lesson.key": "Events in Bounce",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -768,8 +726,6 @@
         "script_level.level_keys": [
           "bounce_5"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 5,
         "lesson.key": "Events in Bounce",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -790,8 +746,6 @@
         "script_level.level_keys": [
           "bounce_6"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 6,
         "lesson.key": "Events in Bounce",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -812,8 +766,6 @@
         "script_level.level_keys": [
           "bounce_7"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 7,
         "lesson.key": "Events in Bounce",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -834,8 +786,6 @@
         "script_level.level_keys": [
           "bounce_10"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 8,
         "lesson.key": "Events in Bounce",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -856,8 +806,6 @@
         "script_level.level_keys": [
           "bounce_11"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 9,
         "lesson.key": "Events in Bounce",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -878,8 +826,6 @@
         "script_level.level_keys": [
           "bounce_12"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 10,
         "lesson.key": "Events in Bounce",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -900,8 +846,6 @@
         "script_level.level_keys": [
           "courseD_bee_nestedLoops1"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 1,
         "lesson.key": "Nested Loops",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -922,8 +866,6 @@
         "script_level.level_keys": [
           "courseD_video_nestedLoops"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 2,
         "lesson.key": "Nested Loops",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -944,8 +886,6 @@
         "script_level.level_keys": [
           "courseD_bee_nestedLoops2_predict1"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 3,
         "lesson.key": "Nested Loops",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -966,8 +906,6 @@
         "script_level.level_keys": [
           "courseD_bee_nestedLoops2"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 4,
         "lesson.key": "Nested Loops",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -988,8 +926,6 @@
         "script_level.level_keys": [
           "courseD_maze_nestedLoops3"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 5,
         "lesson.key": "Nested Loops",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -1010,8 +946,6 @@
         "script_level.level_keys": [
           "courseD_maze_nestedLoops4"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 6,
         "lesson.key": "Nested Loops",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -1032,8 +966,6 @@
         "script_level.level_keys": [
           "courseD_maze_nestedLoops5"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 7,
         "lesson.key": "Nested Loops",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -1054,8 +986,6 @@
         "script_level.level_keys": [
           "courseD_maze_nestedLoops6"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 8,
         "lesson.key": "Nested Loops",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -1077,8 +1007,6 @@
         "script_level.level_keys": [
           "courseD_bee_nestedLoops7"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 9,
         "lesson.key": "Nested Loops",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -1099,8 +1027,6 @@
         "script_level.level_keys": [
           "courseD_bee_nestedLoops8"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 10,
         "lesson.key": "Nested Loops",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -1121,8 +1047,6 @@
         "script_level.level_keys": [
           "courseD_bee_nestedLoops9"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 11,
         "lesson.key": "Nested Loops",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -1143,8 +1067,6 @@
         "script_level.level_keys": [
           "courseD_bee_nestedLoops9_predict2"
         ],
-        "script_level.chapter": 39,
-        "script_level.position": 12,
         "lesson.key": "Nested Loops",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -1165,8 +1087,6 @@
         "script_level.level_keys": [
           "courseD_harvester_nested_loops_challenge1"
         ],
-        "script_level.chapter": 40,
-        "script_level.position": 13,
         "lesson.key": "Nested Loops",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -1187,8 +1107,6 @@
         "script_level.level_keys": [
           "courseD_collector_nested_loops_challenge2a"
         ],
-        "script_level.chapter": 41,
-        "script_level.position": 14,
         "lesson.key": "Nested Loops",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -1209,8 +1127,6 @@
         "script_level.level_keys": [
           "courseD_artist_nestedLoops1"
         ],
-        "script_level.chapter": 42,
-        "script_level.position": 1,
         "lesson.key": "Nested Loops in Artist",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -1231,8 +1147,6 @@
         "script_level.level_keys": [
           "courseD_artist_nestedLoops1a"
         ],
-        "script_level.chapter": 43,
-        "script_level.position": 2,
         "lesson.key": "Nested Loops in Artist",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -1253,8 +1167,6 @@
         "script_level.level_keys": [
           "courseD_video_nestedLoopsArtist"
         ],
-        "script_level.chapter": 44,
-        "script_level.position": 3,
         "lesson.key": "Nested Loops in Artist",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -1275,8 +1187,6 @@
         "script_level.level_keys": [
           "courseD_artist_nestedLoops2"
         ],
-        "script_level.chapter": 45,
-        "script_level.position": 4,
         "lesson.key": "Nested Loops in Artist",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -1297,8 +1207,6 @@
         "script_level.level_keys": [
           "courseD_artist_nestedLoops3"
         ],
-        "script_level.chapter": 46,
-        "script_level.position": 5,
         "lesson.key": "Nested Loops in Artist",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -1319,8 +1227,6 @@
         "script_level.level_keys": [
           "courseD_artist_nestedLoops4"
         ],
-        "script_level.chapter": 47,
-        "script_level.position": 6,
         "lesson.key": "Nested Loops in Artist",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -1341,8 +1247,6 @@
         "script_level.level_keys": [
           "courseD_artist_nestedLoops5"
         ],
-        "script_level.chapter": 48,
-        "script_level.position": 7,
         "lesson.key": "Nested Loops in Artist",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -1363,8 +1267,6 @@
         "script_level.level_keys": [
           "courseD_artist_nestedLoops7"
         ],
-        "script_level.chapter": 49,
-        "script_level.position": 8,
         "lesson.key": "Nested Loops in Artist",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -1385,8 +1287,6 @@
         "script_level.level_keys": [
           "courseD_artist_nestedLoops8"
         ],
-        "script_level.chapter": 50,
-        "script_level.position": 9,
         "lesson.key": "Nested Loops in Artist",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -1408,8 +1308,6 @@
         "script_level.level_keys": [
           "courseD_artist_nestedLoops9"
         ],
-        "script_level.chapter": 51,
-        "script_level.position": 10,
         "lesson.key": "Nested Loops in Artist",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -1430,8 +1328,6 @@
         "script_level.level_keys": [
           "courseD_artist_nestedLoops10"
         ],
-        "script_level.chapter": 52,
-        "script_level.position": 11,
         "lesson.key": "Nested Loops in Artist",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -1452,8 +1348,6 @@
         "script_level.level_keys": [
           "courseD_artist_nestedLoops9_predict1"
         ],
-        "script_level.chapter": 53,
-        "script_level.position": 12,
         "lesson.key": "Nested Loops in Artist",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -1474,8 +1368,6 @@
         "script_level.level_keys": [
           "courseD_artist_nestedLoopsFP"
         ],
-        "script_level.chapter": 54,
-        "script_level.position": 13,
         "lesson.key": "Nested Loops in Artist",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -1496,8 +1388,6 @@
         "script_level.level_keys": [
           "courseD_artist_nestedLoops_challenge1"
         ],
-        "script_level.chapter": 55,
-        "script_level.position": 14,
         "lesson.key": "Nested Loops in Artist",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -1518,8 +1408,6 @@
         "script_level.level_keys": [
           "courseD_artist_nestedLoops_challenge2"
         ],
-        "script_level.chapter": 56,
-        "script_level.position": 15,
         "lesson.key": "Nested Loops in Artist",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -1540,8 +1428,6 @@
         "script_level.level_keys": [
           "courseD_artist_project1"
         ],
-        "script_level.chapter": 57,
-        "script_level.position": 1,
         "lesson.key": "Nested Loops Project in Artist",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -1562,8 +1448,6 @@
         "script_level.level_keys": [
           "courseD_artist_project2"
         ],
-        "script_level.chapter": 58,
-        "script_level.position": 2,
         "lesson.key": "Nested Loops Project in Artist",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -1584,8 +1468,6 @@
         "script_level.level_keys": [
           "courseD_artist_project3"
         ],
-        "script_level.chapter": 59,
-        "script_level.position": 3,
         "lesson.key": "Nested Loops Project in Artist",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -1606,8 +1488,6 @@
         "script_level.level_keys": [
           "courseD_artist_project4"
         ],
-        "script_level.chapter": 60,
-        "script_level.position": 4,
         "lesson.key": "Nested Loops Project in Artist",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -1628,8 +1508,6 @@
         "script_level.level_keys": [
           "courseD_artist_project5"
         ],
-        "script_level.chapter": 61,
-        "script_level.position": 5,
         "lesson.key": "Nested Loops Project in Artist",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -1650,8 +1528,6 @@
         "script_level.level_keys": [
           "courseD_artist_project1a"
         ],
-        "script_level.chapter": 62,
-        "script_level.position": 6,
         "lesson.key": "Nested Loops Project in Artist",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -1672,8 +1548,6 @@
         "script_level.level_keys": [
           "courseD_artist_project2a"
         ],
-        "script_level.chapter": 63,
-        "script_level.position": 7,
         "lesson.key": "Nested Loops Project in Artist",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -1694,8 +1568,6 @@
         "script_level.level_keys": [
           "courseD_artist_project3a"
         ],
-        "script_level.chapter": 64,
-        "script_level.position": 8,
         "lesson.key": "Nested Loops Project in Artist",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -1716,8 +1588,6 @@
         "script_level.level_keys": [
           "courseD_artist_project4a"
         ],
-        "script_level.chapter": 65,
-        "script_level.position": 9,
         "lesson.key": "Nested Loops Project in Artist",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -1738,8 +1608,6 @@
         "script_level.level_keys": [
           "RelayProgramming"
         ],
-        "script_level.chapter": 66,
-        "script_level.position": 1,
         "lesson.key": "Algorithms: Relay Programming",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -1760,8 +1628,6 @@
         "script_level.level_keys": [
           "courseD_video_debugging"
         ],
-        "script_level.chapter": 67,
-        "script_level.position": 1,
         "lesson.key": "Debugging in Collector",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -1782,8 +1648,6 @@
         "script_level.level_keys": [
           "courseD_collector_debugging1"
         ],
-        "script_level.chapter": 68,
-        "script_level.position": 2,
         "lesson.key": "Debugging in Collector",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -1804,8 +1668,6 @@
         "script_level.level_keys": [
           "courseD_collector_debugging2"
         ],
-        "script_level.chapter": 69,
-        "script_level.position": 3,
         "lesson.key": "Debugging in Collector",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -1826,8 +1688,6 @@
         "script_level.level_keys": [
           "courseD_collector_debugging3"
         ],
-        "script_level.chapter": 70,
-        "script_level.position": 4,
         "lesson.key": "Debugging in Collector",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -1848,8 +1708,6 @@
         "script_level.level_keys": [
           "courseD_collector_debugging4"
         ],
-        "script_level.chapter": 71,
-        "script_level.position": 5,
         "lesson.key": "Debugging in Collector",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -1870,8 +1728,6 @@
         "script_level.level_keys": [
           "courseD_collector_debugging5"
         ],
-        "script_level.chapter": 72,
-        "script_level.position": 6,
         "lesson.key": "Debugging in Collector",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -1893,8 +1749,6 @@
         "script_level.level_keys": [
           "courseD_collector_debugging6"
         ],
-        "script_level.chapter": 73,
-        "script_level.position": 7,
         "lesson.key": "Debugging in Collector",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -1915,8 +1769,6 @@
         "script_level.level_keys": [
           "courseD_collector_debugging8"
         ],
-        "script_level.chapter": 74,
-        "script_level.position": 8,
         "lesson.key": "Debugging in Collector",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -1937,8 +1789,6 @@
         "script_level.level_keys": [
           "courseD_collector_debugging9"
         ],
-        "script_level.chapter": 75,
-        "script_level.position": 9,
         "lesson.key": "Debugging in Collector",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -1959,8 +1809,6 @@
         "script_level.level_keys": [
           "courseD_collector_debugging10_predict1"
         ],
-        "script_level.chapter": 76,
-        "script_level.position": 10,
         "lesson.key": "Debugging in Collector",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -1981,8 +1829,6 @@
         "script_level.level_keys": [
           "courseD_bee_debugging_challenge1a"
         ],
-        "script_level.chapter": 77,
-        "script_level.position": 11,
         "lesson.key": "Debugging in Collector",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -2003,8 +1849,6 @@
         "script_level.level_keys": [
           "courseD_collector_debugging_challenge2"
         ],
-        "script_level.chapter": 78,
-        "script_level.position": 12,
         "lesson.key": "Debugging in Collector",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -2025,8 +1869,6 @@
         "script_level.level_keys": [
           "courseD_farmer_while1"
         ],
-        "script_level.chapter": 79,
-        "script_level.position": 1,
         "lesson.key": "While Loops in Farmer",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -2047,8 +1889,6 @@
         "script_level.level_keys": [
           "courseD_farmer_while2"
         ],
-        "script_level.chapter": 80,
-        "script_level.position": 2,
         "lesson.key": "While Loops in Farmer",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -2069,8 +1909,6 @@
         "script_level.level_keys": [
           "courseD_farmer_while3"
         ],
-        "script_level.chapter": 81,
-        "script_level.position": 3,
         "lesson.key": "While Loops in Farmer",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -2091,8 +1929,6 @@
         "script_level.level_keys": [
           "courseD_video_whileIntro"
         ],
-        "script_level.chapter": 82,
-        "script_level.position": 4,
         "lesson.key": "While Loops in Farmer",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -2113,8 +1949,6 @@
         "script_level.level_keys": [
           "courseD_farmer_while4_predict1"
         ],
-        "script_level.chapter": 83,
-        "script_level.position": 5,
         "lesson.key": "While Loops in Farmer",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -2135,8 +1969,6 @@
         "script_level.level_keys": [
           "courseD_farmer_while4"
         ],
-        "script_level.chapter": 84,
-        "script_level.position": 6,
         "lesson.key": "While Loops in Farmer",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -2157,8 +1989,6 @@
         "script_level.level_keys": [
           "courseD_farmer_while5"
         ],
-        "script_level.chapter": 85,
-        "script_level.position": 7,
         "lesson.key": "While Loops in Farmer",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -2179,8 +2009,6 @@
         "script_level.level_keys": [
           "courseD_farmer_while6"
         ],
-        "script_level.chapter": 86,
-        "script_level.position": 8,
         "lesson.key": "While Loops in Farmer",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -2201,8 +2029,6 @@
         "script_level.level_keys": [
           "courseD_farmer_while7"
         ],
-        "script_level.chapter": 87,
-        "script_level.position": 9,
         "lesson.key": "While Loops in Farmer",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -2224,8 +2050,6 @@
         "script_level.level_keys": [
           "courseD_farmer_while8"
         ],
-        "script_level.chapter": 88,
-        "script_level.position": 10,
         "lesson.key": "While Loops in Farmer",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -2246,8 +2070,6 @@
         "script_level.level_keys": [
           "courseD_farmer_while9"
         ],
-        "script_level.chapter": 89,
-        "script_level.position": 11,
         "lesson.key": "While Loops in Farmer",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -2268,8 +2090,6 @@
         "script_level.level_keys": [
           "courseD_farmer_while10"
         ],
-        "script_level.chapter": 90,
-        "script_level.position": 12,
         "lesson.key": "While Loops in Farmer",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -2290,8 +2110,6 @@
         "script_level.level_keys": [
           "courseD_farmer_while10_predict2"
         ],
-        "script_level.chapter": 91,
-        "script_level.position": 13,
         "lesson.key": "While Loops in Farmer",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -2312,8 +2130,6 @@
         "script_level.level_keys": [
           "courseD_farmer_while_challenge1"
         ],
-        "script_level.chapter": 92,
-        "script_level.position": 14,
         "lesson.key": "While Loops in Farmer",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -2334,8 +2150,6 @@
         "script_level.level_keys": [
           "courseD_farmer_while_challenge2"
         ],
-        "script_level.chapter": 93,
-        "script_level.position": 15,
         "lesson.key": "While Loops in Farmer",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -2356,8 +2170,6 @@
         "script_level.level_keys": [
           "Conditionals"
         ],
-        "script_level.chapter": 94,
-        "script_level.position": 1,
         "lesson.key": "Conditionals with Cards",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -2378,8 +2190,6 @@
         "script_level.level_keys": [
           "courseD_bee_conditionalsVid1"
         ],
-        "script_level.chapter": 95,
-        "script_level.position": 1,
         "lesson.key": "Conditionals in Bee",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -2400,8 +2210,6 @@
         "script_level.level_keys": [
           "courseD_bee_conditionals1_predict1"
         ],
-        "script_level.chapter": 96,
-        "script_level.position": 2,
         "lesson.key": "Conditionals in Bee",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -2422,8 +2230,6 @@
         "script_level.level_keys": [
           "courseD_bee_conditionals2"
         ],
-        "script_level.chapter": 97,
-        "script_level.position": 3,
         "lesson.key": "Conditionals in Bee",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -2444,8 +2250,6 @@
         "script_level.level_keys": [
           "courseD_bee_conditionals3"
         ],
-        "script_level.chapter": 98,
-        "script_level.position": 4,
         "lesson.key": "Conditionals in Bee",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -2466,8 +2270,6 @@
         "script_level.level_keys": [
           "courseD_bee_conditionals4"
         ],
-        "script_level.chapter": 99,
-        "script_level.position": 5,
         "lesson.key": "Conditionals in Bee",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -2488,8 +2290,6 @@
         "script_level.level_keys": [
           "courseD_bee_conditionals5"
         ],
-        "script_level.chapter": 100,
-        "script_level.position": 6,
         "lesson.key": "Conditionals in Bee",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -2510,8 +2310,6 @@
         "script_level.level_keys": [
           "courseD_bee_conditionals6"
         ],
-        "script_level.chapter": 101,
-        "script_level.position": 7,
         "lesson.key": "Conditionals in Bee",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -2532,8 +2330,6 @@
         "script_level.level_keys": [
           "courseD_bee_conditionalsVidIfElse"
         ],
-        "script_level.chapter": 102,
-        "script_level.position": 8,
         "lesson.key": "Conditionals in Bee",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -2554,8 +2350,6 @@
         "script_level.level_keys": [
           "courseD_bee_conditionals7"
         ],
-        "script_level.chapter": 103,
-        "script_level.position": 9,
         "lesson.key": "Conditionals in Bee",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -2576,8 +2370,6 @@
         "script_level.level_keys": [
           "courseD_bee_conditionals7_predict2"
         ],
-        "script_level.chapter": 104,
-        "script_level.position": 10,
         "lesson.key": "Conditionals in Bee",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -2599,8 +2391,6 @@
         "script_level.level_keys": [
           "courseD_bee_conditionals8"
         ],
-        "script_level.chapter": 105,
-        "script_level.position": 11,
         "lesson.key": "Conditionals in Bee",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -2621,8 +2411,6 @@
         "script_level.level_keys": [
           "courseD_bee_conditionals9"
         ],
-        "script_level.chapter": 106,
-        "script_level.position": 12,
         "lesson.key": "Conditionals in Bee",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -2643,8 +2431,6 @@
         "script_level.level_keys": [
           "courseD_bee_conditionals10"
         ],
-        "script_level.chapter": 107,
-        "script_level.position": 13,
         "lesson.key": "Conditionals in Bee",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -2665,8 +2451,6 @@
         "script_level.level_keys": [
           "courseD_bee_conditionals_challenge1"
         ],
-        "script_level.chapter": 108,
-        "script_level.position": 14,
         "lesson.key": "Conditionals in Bee",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -2687,8 +2471,6 @@
         "script_level.level_keys": [
           "courseD_bee_conditionals_challenge2"
         ],
-        "script_level.chapter": 109,
-        "script_level.position": 15,
         "lesson.key": "Conditionals in Bee",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -2709,8 +2491,6 @@
         "script_level.level_keys": [
           "courseD_maze_until1"
         ],
-        "script_level.chapter": 110,
-        "script_level.position": 1,
         "lesson.key": "Conditionals & Loops in Maze",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -2731,8 +2511,6 @@
         "script_level.level_keys": [
           "courseD_video_repeatUntil"
         ],
-        "script_level.chapter": 111,
-        "script_level.position": 2,
         "lesson.key": "Conditionals & Loops in Maze",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -2753,8 +2531,6 @@
         "script_level.level_keys": [
           "courseD_maze_until2_predict1"
         ],
-        "script_level.chapter": 112,
-        "script_level.position": 3,
         "lesson.key": "Conditionals & Loops in Maze",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -2775,8 +2551,6 @@
         "script_level.level_keys": [
           "courseD_maze_until3"
         ],
-        "script_level.chapter": 113,
-        "script_level.position": 4,
         "lesson.key": "Conditionals & Loops in Maze",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -2797,8 +2571,6 @@
         "script_level.level_keys": [
           "courseD_maze_until4"
         ],
-        "script_level.chapter": 114,
-        "script_level.position": 5,
         "lesson.key": "Conditionals & Loops in Maze",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -2819,8 +2591,6 @@
         "script_level.level_keys": [
           "courseD_maze_until5"
         ],
-        "script_level.chapter": 115,
-        "script_level.position": 6,
         "lesson.key": "Conditionals & Loops in Maze",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -2841,8 +2611,6 @@
         "script_level.level_keys": [
           "courseD_maze_until6"
         ],
-        "script_level.chapter": 116,
-        "script_level.position": 7,
         "lesson.key": "Conditionals & Loops in Maze",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -2863,8 +2631,6 @@
         "script_level.level_keys": [
           "courseD_maze_until7"
         ],
-        "script_level.chapter": 117,
-        "script_level.position": 8,
         "lesson.key": "Conditionals & Loops in Maze",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -2885,8 +2651,6 @@
         "script_level.level_keys": [
           "courseD_video_ifElse"
         ],
-        "script_level.chapter": 118,
-        "script_level.position": 9,
         "lesson.key": "Conditionals & Loops in Maze",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -2907,8 +2671,6 @@
         "script_level.level_keys": [
           "courseD_maze_until8"
         ],
-        "script_level.chapter": 119,
-        "script_level.position": 10,
         "lesson.key": "Conditionals & Loops in Maze",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -2930,8 +2692,6 @@
         "script_level.level_keys": [
           "courseD_maze_until9"
         ],
-        "script_level.chapter": 120,
-        "script_level.position": 11,
         "lesson.key": "Conditionals & Loops in Maze",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -2952,8 +2712,6 @@
         "script_level.level_keys": [
           "courseD_maze_until10"
         ],
-        "script_level.chapter": 121,
-        "script_level.position": 12,
         "lesson.key": "Conditionals & Loops in Maze",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -2974,8 +2732,6 @@
         "script_level.level_keys": [
           "courseD_maze_until10_predict2"
         ],
-        "script_level.chapter": 122,
-        "script_level.position": 13,
         "lesson.key": "Conditionals & Loops in Maze",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -2996,8 +2752,6 @@
         "script_level.level_keys": [
           "courseD_maze_until_challenge1"
         ],
-        "script_level.chapter": 123,
-        "script_level.position": 14,
         "lesson.key": "Conditionals & Loops in Maze",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -3018,8 +2772,6 @@
         "script_level.level_keys": [
           "courseD_farmer_until_challenge2"
         ],
-        "script_level.chapter": 124,
-        "script_level.position": 15,
         "lesson.key": "Conditionals & Loops in Maze",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -3040,8 +2792,6 @@
         "script_level.level_keys": [
           "courseD_farmer_condLoops1"
         ],
-        "script_level.chapter": 125,
-        "script_level.position": 1,
         "lesson.key": "Conditionals & Loops in Farmer",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -3062,8 +2812,6 @@
         "script_level.level_keys": [
           "courseD_farmer_condLoops2"
         ],
-        "script_level.chapter": 126,
-        "script_level.position": 2,
         "lesson.key": "Conditionals & Loops in Farmer",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -3084,8 +2832,6 @@
         "script_level.level_keys": [
           "courseD_farmer_condLoops3"
         ],
-        "script_level.chapter": 127,
-        "script_level.position": 3,
         "lesson.key": "Conditionals & Loops in Farmer",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -3106,8 +2852,6 @@
         "script_level.level_keys": [
           "courseD_farmer_condLoops4"
         ],
-        "script_level.chapter": 128,
-        "script_level.position": 4,
         "lesson.key": "Conditionals & Loops in Farmer",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -3128,8 +2872,6 @@
         "script_level.level_keys": [
           "courseD_farmer_condLoops5"
         ],
-        "script_level.chapter": 129,
-        "script_level.position": 5,
         "lesson.key": "Conditionals & Loops in Farmer",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -3150,8 +2892,6 @@
         "script_level.level_keys": [
           "courseD_farmer_condLoops6"
         ],
-        "script_level.chapter": 130,
-        "script_level.position": 6,
         "lesson.key": "Conditionals & Loops in Farmer",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -3173,8 +2913,6 @@
         "script_level.level_keys": [
           "courseD_farmer_condLoops7"
         ],
-        "script_level.chapter": 131,
-        "script_level.position": 7,
         "lesson.key": "Conditionals & Loops in Farmer",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -3195,8 +2933,6 @@
         "script_level.level_keys": [
           "courseD_farmer_condLoops8"
         ],
-        "script_level.chapter": 132,
-        "script_level.position": 8,
         "lesson.key": "Conditionals & Loops in Farmer",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -3217,8 +2953,6 @@
         "script_level.level_keys": [
           "courseD_farmer_condLoops9"
         ],
-        "script_level.chapter": 133,
-        "script_level.position": 9,
         "lesson.key": "Conditionals & Loops in Farmer",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -3239,8 +2973,6 @@
         "script_level.level_keys": [
           "courseD_farmer_condLoops9_predict1"
         ],
-        "script_level.chapter": 134,
-        "script_level.position": 10,
         "lesson.key": "Conditionals & Loops in Farmer",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -3261,8 +2993,6 @@
         "script_level.level_keys": [
           "courseD_farmer_condLoops_challenge1"
         ],
-        "script_level.chapter": 135,
-        "script_level.position": 11,
         "lesson.key": "Conditionals & Loops in Farmer",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -3283,8 +3013,6 @@
         "script_level.level_keys": [
           "courseD_farmer_condLoops_challenge2"
         ],
-        "script_level.chapter": 136,
-        "script_level.position": 12,
         "lesson.key": "Conditionals & Loops in Farmer",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -3305,8 +3033,6 @@
         "script_level.level_keys": [
           "courseD_unplugged_digitalCitizenship"
         ],
-        "script_level.chapter": 137,
-        "script_level.position": 1,
         "lesson.key": "Digital Citizenship",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -3327,8 +3053,6 @@
         "script_level.level_keys": [
           "courseD_playLab_cond1"
         ],
-        "script_level.chapter": 138,
-        "script_level.position": 1,
         "lesson.key": "Build a Play Lab Game",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -3349,8 +3073,6 @@
         "script_level.level_keys": [
           "courseD_playLab_cond2"
         ],
-        "script_level.chapter": 139,
-        "script_level.position": 2,
         "lesson.key": "Build a Play Lab Game",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -3371,8 +3093,6 @@
         "script_level.level_keys": [
           "courseD_playLab_cond3"
         ],
-        "script_level.chapter": 140,
-        "script_level.position": 3,
         "lesson.key": "Build a Play Lab Game",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -3393,8 +3113,6 @@
         "script_level.level_keys": [
           "courseD_playLab_cond3a"
         ],
-        "script_level.chapter": 141,
-        "script_level.position": 4,
         "lesson.key": "Build a Play Lab Game",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -3415,8 +3133,6 @@
         "script_level.level_keys": [
           "courseD_playLab_cond4"
         ],
-        "script_level.chapter": 142,
-        "script_level.position": 5,
         "lesson.key": "Build a Play Lab Game",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -3437,8 +3153,6 @@
         "script_level.level_keys": [
           "courseD_playLab_cond5"
         ],
-        "script_level.chapter": 143,
-        "script_level.position": 6,
         "lesson.key": "Build a Play Lab Game",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -3459,8 +3173,6 @@
         "script_level.level_keys": [
           "courseD_playLab_cond6"
         ],
-        "script_level.chapter": 144,
-        "script_level.position": 7,
         "lesson.key": "Build a Play Lab Game",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -3481,8 +3193,6 @@
         "script_level.level_keys": [
           "courseD_playLab_cond6a"
         ],
-        "script_level.chapter": 145,
-        "script_level.position": 8,
         "lesson.key": "Build a Play Lab Game",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -3503,8 +3213,6 @@
         "script_level.level_keys": [
           "courseD_playLab_condFP"
         ],
-        "script_level.chapter": 146,
-        "script_level.position": 9,
         "lesson.key": "Build a Play Lab Game",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -3525,8 +3233,6 @@
         "script_level.level_keys": [
           "BinaryImages"
         ],
-        "script_level.chapter": 147,
-        "script_level.position": 1,
         "lesson.key": "Unplugged: Binary",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -3547,8 +3253,6 @@
         "script_level.level_keys": [
           "courseD_external_binary1"
         ],
-        "script_level.chapter": 148,
-        "script_level.position": 1,
         "lesson.key": "Artist Binary",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -3569,8 +3273,6 @@
         "script_level.level_keys": [
           "courseD_artist_binary1"
         ],
-        "script_level.chapter": 149,
-        "script_level.position": 2,
         "lesson.key": "Artist Binary",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -3591,8 +3293,6 @@
         "script_level.level_keys": [
           "courseD_artist_binary2"
         ],
-        "script_level.chapter": 150,
-        "script_level.position": 3,
         "lesson.key": "Artist Binary",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -3613,8 +3313,6 @@
         "script_level.level_keys": [
           "courseD_artist_binary3"
         ],
-        "script_level.chapter": 151,
-        "script_level.position": 4,
         "lesson.key": "Artist Binary",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -3635,8 +3333,6 @@
         "script_level.level_keys": [
           "courseD_artist_binary4"
         ],
-        "script_level.chapter": 152,
-        "script_level.position": 5,
         "lesson.key": "Artist Binary",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -3657,8 +3353,6 @@
         "script_level.level_keys": [
           "courseD_artist_binary5"
         ],
-        "script_level.chapter": 153,
-        "script_level.position": 6,
         "lesson.key": "Artist Binary",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -3679,8 +3373,6 @@
         "script_level.level_keys": [
           "courseD_artist_binary6"
         ],
-        "script_level.chapter": 154,
-        "script_level.position": 7,
         "lesson.key": "Artist Binary",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -3701,8 +3393,6 @@
         "script_level.level_keys": [
           "courseD_artist_binary7"
         ],
-        "script_level.chapter": 155,
-        "script_level.position": 8,
         "lesson.key": "Artist Binary",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -3723,8 +3413,6 @@
         "script_level.level_keys": [
           "courseD_artist_binary8"
         ],
-        "script_level.chapter": 156,
-        "script_level.position": 9,
         "lesson.key": "Artist Binary",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -3745,8 +3433,6 @@
         "script_level.level_keys": [
           "courseD_artist_binary8_predict1"
         ],
-        "script_level.chapter": 157,
-        "script_level.position": 10,
         "lesson.key": "Artist Binary",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -3767,8 +3453,6 @@
         "script_level.level_keys": [
           "courseD_artist_binaryFP8"
         ],
-        "script_level.chapter": 158,
-        "script_level.position": 11,
         "lesson.key": "Artist Binary",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -3789,8 +3473,6 @@
         "script_level.level_keys": [
           "courseD_artist_binaryFP"
         ],
-        "script_level.chapter": 159,
-        "script_level.position": 12,
         "lesson.key": "Artist Binary",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -3807,8 +3489,6 @@
         "script_level.level_keys": [
           "GraphPaperProgramming"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Algorithms: Graph Paper Programming",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -3820,8 +3500,6 @@
         "script_level.level_keys": [
           "courseD_video_ramp1"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 1,
         "lesson.key": "Introduction",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -3833,8 +3511,6 @@
         "script_level.level_keys": [
           "courseD_maze_ramp1"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 2,
         "lesson.key": "Introduction",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -3846,8 +3522,6 @@
         "script_level.level_keys": [
           "courseD_maze_ramp2"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 3,
         "lesson.key": "Introduction",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -3859,8 +3533,6 @@
         "script_level.level_keys": [
           "courseD_maze_ramp3"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 4,
         "lesson.key": "Introduction",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -3872,8 +3544,6 @@
         "script_level.level_keys": [
           "courseD_maze_ramp4"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 5,
         "lesson.key": "Introduction",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -3885,8 +3555,6 @@
         "script_level.level_keys": [
           "courseD_maze_ramp5"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 6,
         "lesson.key": "Introduction",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -3898,8 +3566,6 @@
         "script_level.level_keys": [
           "courseCDEF_video_AngryBirdLoops"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 7,
         "lesson.key": "Introduction",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -3911,8 +3577,6 @@
         "script_level.level_keys": [
           "courseD_maze_ramp6"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 8,
         "lesson.key": "Introduction",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -3924,8 +3588,6 @@
         "script_level.level_keys": [
           "courseD_maze_ramp7"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 9,
         "lesson.key": "Introduction",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -3937,8 +3599,6 @@
         "script_level.level_keys": [
           "courseD_collector_ramp8"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 10,
         "lesson.key": "Introduction",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -3950,8 +3610,6 @@
         "script_level.level_keys": [
           "courseD_collector_ramp9"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 11,
         "lesson.key": "Introduction",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -3963,8 +3621,6 @@
         "script_level.level_keys": [
           "courseD_collector_ramp10"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 12,
         "lesson.key": "Introduction",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -3976,8 +3632,6 @@
         "script_level.level_keys": [
           "courseD_artist_ramp11"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 13,
         "lesson.key": "Introduction",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -3989,8 +3643,6 @@
         "script_level.level_keys": [
           "courseC_video_angles"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 14,
         "lesson.key": "Introduction",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -4002,8 +3654,6 @@
         "script_level.level_keys": [
           "courseD_artist_ramp12"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 15,
         "lesson.key": "Introduction",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -4015,8 +3665,6 @@
         "script_level.level_keys": [
           "courseD_farmer_ramp13"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 16,
         "lesson.key": "Introduction",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -4028,8 +3676,6 @@
         "script_level.level_keys": [
           "bounce_1"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 1,
         "lesson.key": "Events in Bounce",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -4041,8 +3687,6 @@
         "script_level.level_keys": [
           "bounce_2"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 2,
         "lesson.key": "Events in Bounce",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -4054,8 +3698,6 @@
         "script_level.level_keys": [
           "bounce_3"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 3,
         "lesson.key": "Events in Bounce",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -4067,8 +3709,6 @@
         "script_level.level_keys": [
           "bounce_4"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 4,
         "lesson.key": "Events in Bounce",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -4080,8 +3720,6 @@
         "script_level.level_keys": [
           "bounce_5"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 5,
         "lesson.key": "Events in Bounce",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -4093,8 +3731,6 @@
         "script_level.level_keys": [
           "bounce_6"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 6,
         "lesson.key": "Events in Bounce",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -4106,8 +3742,6 @@
         "script_level.level_keys": [
           "bounce_7"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 7,
         "lesson.key": "Events in Bounce",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -4119,8 +3753,6 @@
         "script_level.level_keys": [
           "bounce_10"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 8,
         "lesson.key": "Events in Bounce",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -4132,8 +3764,6 @@
         "script_level.level_keys": [
           "bounce_11"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 9,
         "lesson.key": "Events in Bounce",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -4145,8 +3775,6 @@
         "script_level.level_keys": [
           "bounce_12"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 10,
         "lesson.key": "Events in Bounce",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -4158,8 +3786,6 @@
         "script_level.level_keys": [
           "courseD_bee_nestedLoops1"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 1,
         "lesson.key": "Nested Loops",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -4171,8 +3797,6 @@
         "script_level.level_keys": [
           "courseD_video_nestedLoops"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 2,
         "lesson.key": "Nested Loops",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -4184,8 +3808,6 @@
         "script_level.level_keys": [
           "courseD_bee_nestedLoops2_predict1"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 3,
         "lesson.key": "Nested Loops",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -4197,8 +3819,6 @@
         "script_level.level_keys": [
           "courseD_bee_nestedLoops2"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 4,
         "lesson.key": "Nested Loops",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -4210,8 +3830,6 @@
         "script_level.level_keys": [
           "courseD_maze_nestedLoops3"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 5,
         "lesson.key": "Nested Loops",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -4223,8 +3841,6 @@
         "script_level.level_keys": [
           "courseD_maze_nestedLoops4"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 6,
         "lesson.key": "Nested Loops",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -4236,8 +3852,6 @@
         "script_level.level_keys": [
           "courseD_maze_nestedLoops5"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 7,
         "lesson.key": "Nested Loops",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -4249,8 +3863,6 @@
         "script_level.level_keys": [
           "courseD_maze_nestedLoops6"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 8,
         "lesson.key": "Nested Loops",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -4262,8 +3874,6 @@
         "script_level.level_keys": [
           "courseD_bee_nestedLoops7"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 9,
         "lesson.key": "Nested Loops",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -4275,8 +3885,6 @@
         "script_level.level_keys": [
           "courseD_bee_nestedLoops8"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 10,
         "lesson.key": "Nested Loops",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -4288,8 +3896,6 @@
         "script_level.level_keys": [
           "courseD_bee_nestedLoops9"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 11,
         "lesson.key": "Nested Loops",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -4301,8 +3907,6 @@
         "script_level.level_keys": [
           "courseD_bee_nestedLoops9_predict2"
         ],
-        "script_level.chapter": 39,
-        "script_level.position": 12,
         "lesson.key": "Nested Loops",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -4314,8 +3918,6 @@
         "script_level.level_keys": [
           "courseD_harvester_nested_loops_challenge1"
         ],
-        "script_level.chapter": 40,
-        "script_level.position": 13,
         "lesson.key": "Nested Loops",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -4327,8 +3929,6 @@
         "script_level.level_keys": [
           "courseD_collector_nested_loops_challenge2a"
         ],
-        "script_level.chapter": 41,
-        "script_level.position": 14,
         "lesson.key": "Nested Loops",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -4340,8 +3940,6 @@
         "script_level.level_keys": [
           "courseD_artist_nestedLoops1"
         ],
-        "script_level.chapter": 42,
-        "script_level.position": 1,
         "lesson.key": "Nested Loops in Artist",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -4353,8 +3951,6 @@
         "script_level.level_keys": [
           "courseD_artist_nestedLoops1a"
         ],
-        "script_level.chapter": 43,
-        "script_level.position": 2,
         "lesson.key": "Nested Loops in Artist",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -4366,8 +3962,6 @@
         "script_level.level_keys": [
           "courseD_video_nestedLoopsArtist"
         ],
-        "script_level.chapter": 44,
-        "script_level.position": 3,
         "lesson.key": "Nested Loops in Artist",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -4379,8 +3973,6 @@
         "script_level.level_keys": [
           "courseD_artist_nestedLoops2"
         ],
-        "script_level.chapter": 45,
-        "script_level.position": 4,
         "lesson.key": "Nested Loops in Artist",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -4392,8 +3984,6 @@
         "script_level.level_keys": [
           "courseD_artist_nestedLoops3"
         ],
-        "script_level.chapter": 46,
-        "script_level.position": 5,
         "lesson.key": "Nested Loops in Artist",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -4405,8 +3995,6 @@
         "script_level.level_keys": [
           "courseD_artist_nestedLoops4"
         ],
-        "script_level.chapter": 47,
-        "script_level.position": 6,
         "lesson.key": "Nested Loops in Artist",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -4418,8 +4006,6 @@
         "script_level.level_keys": [
           "courseD_artist_nestedLoops5"
         ],
-        "script_level.chapter": 48,
-        "script_level.position": 7,
         "lesson.key": "Nested Loops in Artist",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -4431,8 +4017,6 @@
         "script_level.level_keys": [
           "courseD_artist_nestedLoops7"
         ],
-        "script_level.chapter": 49,
-        "script_level.position": 8,
         "lesson.key": "Nested Loops in Artist",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -4444,8 +4028,6 @@
         "script_level.level_keys": [
           "courseD_artist_nestedLoops8"
         ],
-        "script_level.chapter": 50,
-        "script_level.position": 9,
         "lesson.key": "Nested Loops in Artist",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -4457,8 +4039,6 @@
         "script_level.level_keys": [
           "courseD_artist_nestedLoops9"
         ],
-        "script_level.chapter": 51,
-        "script_level.position": 10,
         "lesson.key": "Nested Loops in Artist",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -4470,8 +4050,6 @@
         "script_level.level_keys": [
           "courseD_artist_nestedLoops10"
         ],
-        "script_level.chapter": 52,
-        "script_level.position": 11,
         "lesson.key": "Nested Loops in Artist",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -4483,8 +4061,6 @@
         "script_level.level_keys": [
           "courseD_artist_nestedLoops9_predict1"
         ],
-        "script_level.chapter": 53,
-        "script_level.position": 12,
         "lesson.key": "Nested Loops in Artist",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -4496,8 +4072,6 @@
         "script_level.level_keys": [
           "courseD_artist_nestedLoopsFP"
         ],
-        "script_level.chapter": 54,
-        "script_level.position": 13,
         "lesson.key": "Nested Loops in Artist",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -4509,8 +4083,6 @@
         "script_level.level_keys": [
           "courseD_artist_nestedLoops_challenge1"
         ],
-        "script_level.chapter": 55,
-        "script_level.position": 14,
         "lesson.key": "Nested Loops in Artist",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -4522,8 +4094,6 @@
         "script_level.level_keys": [
           "courseD_artist_nestedLoops_challenge2"
         ],
-        "script_level.chapter": 56,
-        "script_level.position": 15,
         "lesson.key": "Nested Loops in Artist",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -4535,8 +4105,6 @@
         "script_level.level_keys": [
           "courseD_artist_project1"
         ],
-        "script_level.chapter": 57,
-        "script_level.position": 1,
         "lesson.key": "Nested Loops Project in Artist",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -4548,8 +4116,6 @@
         "script_level.level_keys": [
           "courseD_artist_project2"
         ],
-        "script_level.chapter": 58,
-        "script_level.position": 2,
         "lesson.key": "Nested Loops Project in Artist",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -4561,8 +4127,6 @@
         "script_level.level_keys": [
           "courseD_artist_project3"
         ],
-        "script_level.chapter": 59,
-        "script_level.position": 3,
         "lesson.key": "Nested Loops Project in Artist",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -4574,8 +4138,6 @@
         "script_level.level_keys": [
           "courseD_artist_project4"
         ],
-        "script_level.chapter": 60,
-        "script_level.position": 4,
         "lesson.key": "Nested Loops Project in Artist",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -4587,8 +4149,6 @@
         "script_level.level_keys": [
           "courseD_artist_project5"
         ],
-        "script_level.chapter": 61,
-        "script_level.position": 5,
         "lesson.key": "Nested Loops Project in Artist",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -4600,8 +4160,6 @@
         "script_level.level_keys": [
           "courseD_artist_project1a"
         ],
-        "script_level.chapter": 62,
-        "script_level.position": 6,
         "lesson.key": "Nested Loops Project in Artist",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -4613,8 +4171,6 @@
         "script_level.level_keys": [
           "courseD_artist_project2a"
         ],
-        "script_level.chapter": 63,
-        "script_level.position": 7,
         "lesson.key": "Nested Loops Project in Artist",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -4626,8 +4182,6 @@
         "script_level.level_keys": [
           "courseD_artist_project3a"
         ],
-        "script_level.chapter": 64,
-        "script_level.position": 8,
         "lesson.key": "Nested Loops Project in Artist",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -4639,8 +4193,6 @@
         "script_level.level_keys": [
           "courseD_artist_project4a"
         ],
-        "script_level.chapter": 65,
-        "script_level.position": 9,
         "lesson.key": "Nested Loops Project in Artist",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -4652,8 +4204,6 @@
         "script_level.level_keys": [
           "RelayProgramming"
         ],
-        "script_level.chapter": 66,
-        "script_level.position": 1,
         "lesson.key": "Algorithms: Relay Programming",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -4665,8 +4215,6 @@
         "script_level.level_keys": [
           "courseD_video_debugging"
         ],
-        "script_level.chapter": 67,
-        "script_level.position": 1,
         "lesson.key": "Debugging in Collector",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -4678,8 +4226,6 @@
         "script_level.level_keys": [
           "courseD_collector_debugging1"
         ],
-        "script_level.chapter": 68,
-        "script_level.position": 2,
         "lesson.key": "Debugging in Collector",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -4691,8 +4237,6 @@
         "script_level.level_keys": [
           "courseD_collector_debugging2"
         ],
-        "script_level.chapter": 69,
-        "script_level.position": 3,
         "lesson.key": "Debugging in Collector",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -4704,8 +4248,6 @@
         "script_level.level_keys": [
           "courseD_collector_debugging3"
         ],
-        "script_level.chapter": 70,
-        "script_level.position": 4,
         "lesson.key": "Debugging in Collector",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -4717,8 +4259,6 @@
         "script_level.level_keys": [
           "courseD_collector_debugging4"
         ],
-        "script_level.chapter": 71,
-        "script_level.position": 5,
         "lesson.key": "Debugging in Collector",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -4730,8 +4270,6 @@
         "script_level.level_keys": [
           "courseD_collector_debugging5"
         ],
-        "script_level.chapter": 72,
-        "script_level.position": 6,
         "lesson.key": "Debugging in Collector",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -4743,8 +4281,6 @@
         "script_level.level_keys": [
           "courseD_collector_debugging6"
         ],
-        "script_level.chapter": 73,
-        "script_level.position": 7,
         "lesson.key": "Debugging in Collector",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -4756,8 +4292,6 @@
         "script_level.level_keys": [
           "courseD_collector_debugging8"
         ],
-        "script_level.chapter": 74,
-        "script_level.position": 8,
         "lesson.key": "Debugging in Collector",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -4769,8 +4303,6 @@
         "script_level.level_keys": [
           "courseD_collector_debugging9"
         ],
-        "script_level.chapter": 75,
-        "script_level.position": 9,
         "lesson.key": "Debugging in Collector",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -4782,8 +4314,6 @@
         "script_level.level_keys": [
           "courseD_collector_debugging10_predict1"
         ],
-        "script_level.chapter": 76,
-        "script_level.position": 10,
         "lesson.key": "Debugging in Collector",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -4795,8 +4325,6 @@
         "script_level.level_keys": [
           "courseD_bee_debugging_challenge1a"
         ],
-        "script_level.chapter": 77,
-        "script_level.position": 11,
         "lesson.key": "Debugging in Collector",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -4808,8 +4336,6 @@
         "script_level.level_keys": [
           "courseD_collector_debugging_challenge2"
         ],
-        "script_level.chapter": 78,
-        "script_level.position": 12,
         "lesson.key": "Debugging in Collector",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -4821,8 +4347,6 @@
         "script_level.level_keys": [
           "courseD_farmer_while1"
         ],
-        "script_level.chapter": 79,
-        "script_level.position": 1,
         "lesson.key": "While Loops in Farmer",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -4834,8 +4358,6 @@
         "script_level.level_keys": [
           "courseD_farmer_while2"
         ],
-        "script_level.chapter": 80,
-        "script_level.position": 2,
         "lesson.key": "While Loops in Farmer",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -4847,8 +4369,6 @@
         "script_level.level_keys": [
           "courseD_farmer_while3"
         ],
-        "script_level.chapter": 81,
-        "script_level.position": 3,
         "lesson.key": "While Loops in Farmer",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -4860,8 +4380,6 @@
         "script_level.level_keys": [
           "courseD_video_whileIntro"
         ],
-        "script_level.chapter": 82,
-        "script_level.position": 4,
         "lesson.key": "While Loops in Farmer",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -4873,8 +4391,6 @@
         "script_level.level_keys": [
           "courseD_farmer_while4_predict1"
         ],
-        "script_level.chapter": 83,
-        "script_level.position": 5,
         "lesson.key": "While Loops in Farmer",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -4886,8 +4402,6 @@
         "script_level.level_keys": [
           "courseD_farmer_while4"
         ],
-        "script_level.chapter": 84,
-        "script_level.position": 6,
         "lesson.key": "While Loops in Farmer",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -4899,8 +4413,6 @@
         "script_level.level_keys": [
           "courseD_farmer_while5"
         ],
-        "script_level.chapter": 85,
-        "script_level.position": 7,
         "lesson.key": "While Loops in Farmer",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -4912,8 +4424,6 @@
         "script_level.level_keys": [
           "courseD_farmer_while6"
         ],
-        "script_level.chapter": 86,
-        "script_level.position": 8,
         "lesson.key": "While Loops in Farmer",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -4925,8 +4435,6 @@
         "script_level.level_keys": [
           "courseD_farmer_while7"
         ],
-        "script_level.chapter": 87,
-        "script_level.position": 9,
         "lesson.key": "While Loops in Farmer",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -4938,8 +4446,6 @@
         "script_level.level_keys": [
           "courseD_farmer_while8"
         ],
-        "script_level.chapter": 88,
-        "script_level.position": 10,
         "lesson.key": "While Loops in Farmer",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -4951,8 +4457,6 @@
         "script_level.level_keys": [
           "courseD_farmer_while9"
         ],
-        "script_level.chapter": 89,
-        "script_level.position": 11,
         "lesson.key": "While Loops in Farmer",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -4964,8 +4468,6 @@
         "script_level.level_keys": [
           "courseD_farmer_while10"
         ],
-        "script_level.chapter": 90,
-        "script_level.position": 12,
         "lesson.key": "While Loops in Farmer",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -4977,8 +4479,6 @@
         "script_level.level_keys": [
           "courseD_farmer_while10_predict2"
         ],
-        "script_level.chapter": 91,
-        "script_level.position": 13,
         "lesson.key": "While Loops in Farmer",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -4990,8 +4490,6 @@
         "script_level.level_keys": [
           "courseD_farmer_while_challenge1"
         ],
-        "script_level.chapter": 92,
-        "script_level.position": 14,
         "lesson.key": "While Loops in Farmer",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -5003,8 +4501,6 @@
         "script_level.level_keys": [
           "courseD_farmer_while_challenge2"
         ],
-        "script_level.chapter": 93,
-        "script_level.position": 15,
         "lesson.key": "While Loops in Farmer",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -5016,8 +4512,6 @@
         "script_level.level_keys": [
           "Conditionals"
         ],
-        "script_level.chapter": 94,
-        "script_level.position": 1,
         "lesson.key": "Conditionals with Cards",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -5029,8 +4523,6 @@
         "script_level.level_keys": [
           "courseD_bee_conditionalsVid1"
         ],
-        "script_level.chapter": 95,
-        "script_level.position": 1,
         "lesson.key": "Conditionals in Bee",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -5042,8 +4534,6 @@
         "script_level.level_keys": [
           "courseD_bee_conditionals1_predict1"
         ],
-        "script_level.chapter": 96,
-        "script_level.position": 2,
         "lesson.key": "Conditionals in Bee",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -5055,8 +4545,6 @@
         "script_level.level_keys": [
           "courseD_bee_conditionals2"
         ],
-        "script_level.chapter": 97,
-        "script_level.position": 3,
         "lesson.key": "Conditionals in Bee",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -5068,8 +4556,6 @@
         "script_level.level_keys": [
           "courseD_bee_conditionals3"
         ],
-        "script_level.chapter": 98,
-        "script_level.position": 4,
         "lesson.key": "Conditionals in Bee",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -5081,8 +4567,6 @@
         "script_level.level_keys": [
           "courseD_bee_conditionals4"
         ],
-        "script_level.chapter": 99,
-        "script_level.position": 5,
         "lesson.key": "Conditionals in Bee",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -5094,8 +4578,6 @@
         "script_level.level_keys": [
           "courseD_bee_conditionals5"
         ],
-        "script_level.chapter": 100,
-        "script_level.position": 6,
         "lesson.key": "Conditionals in Bee",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -5107,8 +4589,6 @@
         "script_level.level_keys": [
           "courseD_bee_conditionals6"
         ],
-        "script_level.chapter": 101,
-        "script_level.position": 7,
         "lesson.key": "Conditionals in Bee",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -5120,8 +4600,6 @@
         "script_level.level_keys": [
           "courseD_bee_conditionalsVidIfElse"
         ],
-        "script_level.chapter": 102,
-        "script_level.position": 8,
         "lesson.key": "Conditionals in Bee",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -5133,8 +4611,6 @@
         "script_level.level_keys": [
           "courseD_bee_conditionals7"
         ],
-        "script_level.chapter": 103,
-        "script_level.position": 9,
         "lesson.key": "Conditionals in Bee",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -5146,8 +4622,6 @@
         "script_level.level_keys": [
           "courseD_bee_conditionals7_predict2"
         ],
-        "script_level.chapter": 104,
-        "script_level.position": 10,
         "lesson.key": "Conditionals in Bee",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -5159,8 +4633,6 @@
         "script_level.level_keys": [
           "courseD_bee_conditionals8"
         ],
-        "script_level.chapter": 105,
-        "script_level.position": 11,
         "lesson.key": "Conditionals in Bee",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -5172,8 +4644,6 @@
         "script_level.level_keys": [
           "courseD_bee_conditionals9"
         ],
-        "script_level.chapter": 106,
-        "script_level.position": 12,
         "lesson.key": "Conditionals in Bee",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -5185,8 +4655,6 @@
         "script_level.level_keys": [
           "courseD_bee_conditionals10"
         ],
-        "script_level.chapter": 107,
-        "script_level.position": 13,
         "lesson.key": "Conditionals in Bee",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -5198,8 +4666,6 @@
         "script_level.level_keys": [
           "courseD_bee_conditionals_challenge1"
         ],
-        "script_level.chapter": 108,
-        "script_level.position": 14,
         "lesson.key": "Conditionals in Bee",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -5211,8 +4677,6 @@
         "script_level.level_keys": [
           "courseD_bee_conditionals_challenge2"
         ],
-        "script_level.chapter": 109,
-        "script_level.position": 15,
         "lesson.key": "Conditionals in Bee",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -5224,8 +4688,6 @@
         "script_level.level_keys": [
           "courseD_maze_until1"
         ],
-        "script_level.chapter": 110,
-        "script_level.position": 1,
         "lesson.key": "Conditionals & Loops in Maze",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -5237,8 +4699,6 @@
         "script_level.level_keys": [
           "courseD_video_repeatUntil"
         ],
-        "script_level.chapter": 111,
-        "script_level.position": 2,
         "lesson.key": "Conditionals & Loops in Maze",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -5250,8 +4710,6 @@
         "script_level.level_keys": [
           "courseD_maze_until2_predict1"
         ],
-        "script_level.chapter": 112,
-        "script_level.position": 3,
         "lesson.key": "Conditionals & Loops in Maze",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -5263,8 +4721,6 @@
         "script_level.level_keys": [
           "courseD_maze_until3"
         ],
-        "script_level.chapter": 113,
-        "script_level.position": 4,
         "lesson.key": "Conditionals & Loops in Maze",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -5276,8 +4732,6 @@
         "script_level.level_keys": [
           "courseD_maze_until4"
         ],
-        "script_level.chapter": 114,
-        "script_level.position": 5,
         "lesson.key": "Conditionals & Loops in Maze",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -5289,8 +4743,6 @@
         "script_level.level_keys": [
           "courseD_maze_until5"
         ],
-        "script_level.chapter": 115,
-        "script_level.position": 6,
         "lesson.key": "Conditionals & Loops in Maze",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -5302,8 +4754,6 @@
         "script_level.level_keys": [
           "courseD_maze_until6"
         ],
-        "script_level.chapter": 116,
-        "script_level.position": 7,
         "lesson.key": "Conditionals & Loops in Maze",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -5315,8 +4765,6 @@
         "script_level.level_keys": [
           "courseD_maze_until7"
         ],
-        "script_level.chapter": 117,
-        "script_level.position": 8,
         "lesson.key": "Conditionals & Loops in Maze",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -5328,8 +4776,6 @@
         "script_level.level_keys": [
           "courseD_video_ifElse"
         ],
-        "script_level.chapter": 118,
-        "script_level.position": 9,
         "lesson.key": "Conditionals & Loops in Maze",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -5341,8 +4787,6 @@
         "script_level.level_keys": [
           "courseD_maze_until8"
         ],
-        "script_level.chapter": 119,
-        "script_level.position": 10,
         "lesson.key": "Conditionals & Loops in Maze",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -5354,8 +4798,6 @@
         "script_level.level_keys": [
           "courseD_maze_until9"
         ],
-        "script_level.chapter": 120,
-        "script_level.position": 11,
         "lesson.key": "Conditionals & Loops in Maze",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -5367,8 +4809,6 @@
         "script_level.level_keys": [
           "courseD_maze_until10"
         ],
-        "script_level.chapter": 121,
-        "script_level.position": 12,
         "lesson.key": "Conditionals & Loops in Maze",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -5380,8 +4820,6 @@
         "script_level.level_keys": [
           "courseD_maze_until10_predict2"
         ],
-        "script_level.chapter": 122,
-        "script_level.position": 13,
         "lesson.key": "Conditionals & Loops in Maze",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -5393,8 +4831,6 @@
         "script_level.level_keys": [
           "courseD_maze_until_challenge1"
         ],
-        "script_level.chapter": 123,
-        "script_level.position": 14,
         "lesson.key": "Conditionals & Loops in Maze",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -5406,8 +4842,6 @@
         "script_level.level_keys": [
           "courseD_farmer_until_challenge2"
         ],
-        "script_level.chapter": 124,
-        "script_level.position": 15,
         "lesson.key": "Conditionals & Loops in Maze",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -5419,8 +4853,6 @@
         "script_level.level_keys": [
           "courseD_farmer_condLoops1"
         ],
-        "script_level.chapter": 125,
-        "script_level.position": 1,
         "lesson.key": "Conditionals & Loops in Farmer",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -5432,8 +4864,6 @@
         "script_level.level_keys": [
           "courseD_farmer_condLoops2"
         ],
-        "script_level.chapter": 126,
-        "script_level.position": 2,
         "lesson.key": "Conditionals & Loops in Farmer",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -5445,8 +4875,6 @@
         "script_level.level_keys": [
           "courseD_farmer_condLoops3"
         ],
-        "script_level.chapter": 127,
-        "script_level.position": 3,
         "lesson.key": "Conditionals & Loops in Farmer",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -5458,8 +4886,6 @@
         "script_level.level_keys": [
           "courseD_farmer_condLoops4"
         ],
-        "script_level.chapter": 128,
-        "script_level.position": 4,
         "lesson.key": "Conditionals & Loops in Farmer",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -5471,8 +4897,6 @@
         "script_level.level_keys": [
           "courseD_farmer_condLoops5"
         ],
-        "script_level.chapter": 129,
-        "script_level.position": 5,
         "lesson.key": "Conditionals & Loops in Farmer",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -5484,8 +4908,6 @@
         "script_level.level_keys": [
           "courseD_farmer_condLoops6"
         ],
-        "script_level.chapter": 130,
-        "script_level.position": 6,
         "lesson.key": "Conditionals & Loops in Farmer",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -5497,8 +4919,6 @@
         "script_level.level_keys": [
           "courseD_farmer_condLoops7"
         ],
-        "script_level.chapter": 131,
-        "script_level.position": 7,
         "lesson.key": "Conditionals & Loops in Farmer",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -5510,8 +4930,6 @@
         "script_level.level_keys": [
           "courseD_farmer_condLoops8"
         ],
-        "script_level.chapter": 132,
-        "script_level.position": 8,
         "lesson.key": "Conditionals & Loops in Farmer",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -5523,8 +4941,6 @@
         "script_level.level_keys": [
           "courseD_farmer_condLoops9"
         ],
-        "script_level.chapter": 133,
-        "script_level.position": 9,
         "lesson.key": "Conditionals & Loops in Farmer",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -5536,8 +4952,6 @@
         "script_level.level_keys": [
           "courseD_farmer_condLoops9_predict1"
         ],
-        "script_level.chapter": 134,
-        "script_level.position": 10,
         "lesson.key": "Conditionals & Loops in Farmer",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -5549,8 +4963,6 @@
         "script_level.level_keys": [
           "courseD_farmer_condLoops_challenge1"
         ],
-        "script_level.chapter": 135,
-        "script_level.position": 11,
         "lesson.key": "Conditionals & Loops in Farmer",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -5562,8 +4974,6 @@
         "script_level.level_keys": [
           "courseD_farmer_condLoops_challenge2"
         ],
-        "script_level.chapter": 136,
-        "script_level.position": 12,
         "lesson.key": "Conditionals & Loops in Farmer",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -5575,8 +4985,6 @@
         "script_level.level_keys": [
           "courseD_unplugged_digitalCitizenship"
         ],
-        "script_level.chapter": 137,
-        "script_level.position": 1,
         "lesson.key": "Digital Citizenship",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -5588,8 +4996,6 @@
         "script_level.level_keys": [
           "courseD_playLab_cond1"
         ],
-        "script_level.chapter": 138,
-        "script_level.position": 1,
         "lesson.key": "Build a Play Lab Game",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -5601,8 +5007,6 @@
         "script_level.level_keys": [
           "courseD_playLab_cond2"
         ],
-        "script_level.chapter": 139,
-        "script_level.position": 2,
         "lesson.key": "Build a Play Lab Game",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -5614,8 +5018,6 @@
         "script_level.level_keys": [
           "courseD_playLab_cond3"
         ],
-        "script_level.chapter": 140,
-        "script_level.position": 3,
         "lesson.key": "Build a Play Lab Game",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -5627,8 +5029,6 @@
         "script_level.level_keys": [
           "courseD_playLab_cond3a"
         ],
-        "script_level.chapter": 141,
-        "script_level.position": 4,
         "lesson.key": "Build a Play Lab Game",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -5640,8 +5040,6 @@
         "script_level.level_keys": [
           "courseD_playLab_cond4"
         ],
-        "script_level.chapter": 142,
-        "script_level.position": 5,
         "lesson.key": "Build a Play Lab Game",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -5653,8 +5051,6 @@
         "script_level.level_keys": [
           "courseD_playLab_cond5"
         ],
-        "script_level.chapter": 143,
-        "script_level.position": 6,
         "lesson.key": "Build a Play Lab Game",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -5666,8 +5062,6 @@
         "script_level.level_keys": [
           "courseD_playLab_cond6"
         ],
-        "script_level.chapter": 144,
-        "script_level.position": 7,
         "lesson.key": "Build a Play Lab Game",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -5679,8 +5073,6 @@
         "script_level.level_keys": [
           "courseD_playLab_cond6a"
         ],
-        "script_level.chapter": 145,
-        "script_level.position": 8,
         "lesson.key": "Build a Play Lab Game",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -5692,8 +5084,6 @@
         "script_level.level_keys": [
           "courseD_playLab_condFP"
         ],
-        "script_level.chapter": 146,
-        "script_level.position": 9,
         "lesson.key": "Build a Play Lab Game",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -5705,8 +5095,6 @@
         "script_level.level_keys": [
           "BinaryImages"
         ],
-        "script_level.chapter": 147,
-        "script_level.position": 1,
         "lesson.key": "Unplugged: Binary",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -5718,8 +5106,6 @@
         "script_level.level_keys": [
           "courseD_external_binary1"
         ],
-        "script_level.chapter": 148,
-        "script_level.position": 1,
         "lesson.key": "Artist Binary",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -5731,8 +5117,6 @@
         "script_level.level_keys": [
           "courseD_artist_binary1"
         ],
-        "script_level.chapter": 149,
-        "script_level.position": 2,
         "lesson.key": "Artist Binary",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -5744,8 +5128,6 @@
         "script_level.level_keys": [
           "courseD_artist_binary2"
         ],
-        "script_level.chapter": 150,
-        "script_level.position": 3,
         "lesson.key": "Artist Binary",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -5757,8 +5139,6 @@
         "script_level.level_keys": [
           "courseD_artist_binary3"
         ],
-        "script_level.chapter": 151,
-        "script_level.position": 4,
         "lesson.key": "Artist Binary",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -5770,8 +5150,6 @@
         "script_level.level_keys": [
           "courseD_artist_binary4"
         ],
-        "script_level.chapter": 152,
-        "script_level.position": 5,
         "lesson.key": "Artist Binary",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -5783,8 +5161,6 @@
         "script_level.level_keys": [
           "courseD_artist_binary5"
         ],
-        "script_level.chapter": 153,
-        "script_level.position": 6,
         "lesson.key": "Artist Binary",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -5796,8 +5172,6 @@
         "script_level.level_keys": [
           "courseD_artist_binary6"
         ],
-        "script_level.chapter": 154,
-        "script_level.position": 7,
         "lesson.key": "Artist Binary",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -5809,8 +5183,6 @@
         "script_level.level_keys": [
           "courseD_artist_binary7"
         ],
-        "script_level.chapter": 155,
-        "script_level.position": 8,
         "lesson.key": "Artist Binary",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -5822,8 +5194,6 @@
         "script_level.level_keys": [
           "courseD_artist_binary8"
         ],
-        "script_level.chapter": 156,
-        "script_level.position": 9,
         "lesson.key": "Artist Binary",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -5835,8 +5205,6 @@
         "script_level.level_keys": [
           "courseD_artist_binary8_predict1"
         ],
-        "script_level.chapter": 157,
-        "script_level.position": 10,
         "lesson.key": "Artist Binary",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -5848,8 +5216,6 @@
         "script_level.level_keys": [
           "courseD_artist_binaryFP8"
         ],
-        "script_level.chapter": 158,
-        "script_level.position": 11,
         "lesson.key": "Artist Binary",
         "lesson_group.key": "",
         "script.name": "coursed-2017"
@@ -5861,8 +5227,6 @@
         "script_level.level_keys": [
           "courseD_artist_binaryFP"
         ],
-        "script_level.chapter": 159,
-        "script_level.position": 12,
         "lesson.key": "Artist Binary",
         "lesson_group.key": "",
         "script.name": "coursed-2017"

@@ -56,8 +56,6 @@
         "script_level.level_keys": [
           "Dance_Party_01"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Dance Party",
         "lesson_group.key": "",
         "script.name": "dance"
@@ -78,8 +76,6 @@
         "script_level.level_keys": [
           "Dance_Party_02"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Dance Party",
         "lesson_group.key": "",
         "script.name": "dance"
@@ -100,8 +96,6 @@
         "script_level.level_keys": [
           "Dance_Party_03"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "Dance Party",
         "lesson_group.key": "",
         "script.name": "dance"
@@ -122,8 +116,6 @@
         "script_level.level_keys": [
           "Dance_Party_04"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "Dance Party",
         "lesson_group.key": "",
         "script.name": "dance"
@@ -144,8 +136,6 @@
         "script_level.level_keys": [
           "Dance_Party_05"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 5,
         "lesson.key": "Dance Party",
         "lesson_group.key": "",
         "script.name": "dance"
@@ -166,8 +156,6 @@
         "script_level.level_keys": [
           "Dance_Party_06"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 6,
         "lesson.key": "Dance Party",
         "lesson_group.key": "",
         "script.name": "dance"
@@ -188,8 +176,6 @@
         "script_level.level_keys": [
           "Dance_Party_08"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 7,
         "lesson.key": "Dance Party",
         "lesson_group.key": "",
         "script.name": "dance"
@@ -210,8 +196,6 @@
         "script_level.level_keys": [
           "Dance_Party_09"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 8,
         "lesson.key": "Dance Party",
         "lesson_group.key": "",
         "script.name": "dance"
@@ -232,8 +216,6 @@
         "script_level.level_keys": [
           "Dance_Party_10"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 9,
         "lesson.key": "Dance Party",
         "lesson_group.key": "",
         "script.name": "dance"
@@ -254,8 +236,6 @@
         "script_level.level_keys": [
           "Dance_Party_11"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 10,
         "lesson.key": "Dance Party",
         "lesson_group.key": "",
         "script.name": "dance"
@@ -276,8 +256,6 @@
         "script_level.level_keys": [
           "Dance_Party_11b"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 11,
         "lesson.key": "Dance Party",
         "lesson_group.key": "",
         "script.name": "dance"
@@ -298,8 +276,6 @@
         "script_level.level_keys": [
           "Dance_Party_11_5"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 12,
         "lesson.key": "Dance Party",
         "lesson_group.key": "",
         "script.name": "dance"
@@ -320,8 +296,6 @@
         "script_level.level_keys": [
           "Dance_Party_12"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 13,
         "lesson.key": "Dance Party",
         "lesson_group.key": "",
         "script.name": "dance"
@@ -338,8 +312,6 @@
         "script_level.level_keys": [
           "Dance_Party_01"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Dance Party",
         "lesson_group.key": "",
         "script.name": "dance"
@@ -351,8 +323,6 @@
         "script_level.level_keys": [
           "Dance_Party_02"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Dance Party",
         "lesson_group.key": "",
         "script.name": "dance"
@@ -364,8 +334,6 @@
         "script_level.level_keys": [
           "Dance_Party_03"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "Dance Party",
         "lesson_group.key": "",
         "script.name": "dance"
@@ -377,8 +345,6 @@
         "script_level.level_keys": [
           "Dance_Party_04"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "Dance Party",
         "lesson_group.key": "",
         "script.name": "dance"
@@ -390,8 +356,6 @@
         "script_level.level_keys": [
           "Dance_Party_05"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 5,
         "lesson.key": "Dance Party",
         "lesson_group.key": "",
         "script.name": "dance"
@@ -403,8 +367,6 @@
         "script_level.level_keys": [
           "Dance_Party_06"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 6,
         "lesson.key": "Dance Party",
         "lesson_group.key": "",
         "script.name": "dance"
@@ -416,8 +378,6 @@
         "script_level.level_keys": [
           "Dance_Party_08"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 7,
         "lesson.key": "Dance Party",
         "lesson_group.key": "",
         "script.name": "dance"
@@ -429,8 +389,6 @@
         "script_level.level_keys": [
           "Dance_Party_09"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 8,
         "lesson.key": "Dance Party",
         "lesson_group.key": "",
         "script.name": "dance"
@@ -442,8 +400,6 @@
         "script_level.level_keys": [
           "Dance_Party_10"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 9,
         "lesson.key": "Dance Party",
         "lesson_group.key": "",
         "script.name": "dance"
@@ -455,8 +411,6 @@
         "script_level.level_keys": [
           "Dance_Party_11"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 10,
         "lesson.key": "Dance Party",
         "lesson_group.key": "",
         "script.name": "dance"
@@ -468,8 +422,6 @@
         "script_level.level_keys": [
           "Dance_Party_11b"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 11,
         "lesson.key": "Dance Party",
         "lesson_group.key": "",
         "script.name": "dance"
@@ -481,8 +433,6 @@
         "script_level.level_keys": [
           "Dance_Party_11_5"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 12,
         "lesson.key": "Dance Party",
         "lesson_group.key": "",
         "script.name": "dance"
@@ -494,8 +444,6 @@
         "script_level.level_keys": [
           "Dance_Party_12"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 13,
         "lesson.key": "Dance Party",
         "lesson_group.key": "",
         "script.name": "dance"
