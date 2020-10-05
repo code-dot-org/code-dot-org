@@ -11,15 +11,6 @@ lesson 'Artist Functions', display_name: 'Artist Functions'
 level '2-3 Artist Functions 12 Mike'
 level '2-3 Artist Free Play'
 level 'Mike Pair Programming'
-level 'MikeTest3'
-level '2-3 Artist Free Play'
-
-lesson 'The same thing with named levels', display_name: 'The same thing with named levels'
-level '2-3 Artist Functions 12 Mike'
-level '2-3 Artist Free Play'
-level 'Mike Pair Programming', named: true
-level 'MikeTest3'
-level '2-3 Artist Free Play'
 
 lesson 'You are a coding STAR', display_name: 'You are a coding STAR'
 level 'MikeStarNested'
