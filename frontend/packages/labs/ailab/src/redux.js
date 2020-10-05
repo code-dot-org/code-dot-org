@@ -29,6 +29,21 @@ export function setLabelColumn(labelColumn) {
   return { type: SET_LABEL_COLUMN, labelColumn };
 }
 
+/* featureNumberKey maps feature names to a hash of category options mapped to integers.
+  {
+    feature1: {
+      option1 : 0,
+      option2 : 1,
+      option3: 2,
+      ...
+    },
+    feature2: {
+      option1 : 0,
+      option2 : 1,
+      ...
+    }
+  }
+*/
 export function setFeatureNumberKey(featureNumberKey) {
   return { type: SET_FEATURE_NUMBER_KEY, featureNumberKey };
 }
@@ -151,7 +166,7 @@ export function getSelectableFeatures(state) {
     .filter(column => column !== state.labelColumn);
 }
 
-// Right the SVM model we're using only supports binary classification.
+// Right now the SVM model we're using only supports binary classification.
 export function getSelectableLabels(state) {
   return getCategoricalColumns(state).filter(
     column => getUniqueOptions(state, column).length === 2

@@ -20,48 +20,89 @@ export default class SVMTrainer {
     this.svm = new svmjs.SVM();
     const state = store.getState();
     this.state = state;
-    this.buildFeatureToNumberKey(state);
+    this.buildOptionNumberKeysByFeature(state);
   }
 
-  startTraining() {
-    this.addTrainingData();
+  /* Builds a hash that maps a feature's categorical options to numbers because this implementation of the SVM algorithm only accepts numerical inputs.
+  @param {string} - feature name
+  @return {
+    option1 : 0,
+    option2 : 1,
+    option3: 2,
+    ...
   }
-
-  buildFeatureToNumberKeyForColumn = column => {
+  */
+  buildOptionNumberKey = feature => {
     let optionsMappedToNumbers = {};
-    const uniqueOptions = getUniqueOptions(this.state, column);
+    const uniqueOptions = getUniqueOptions(this.state, feature);
     uniqueOptions.forEach(
       option => (optionsMappedToNumbers[option] = uniqueOptions.indexOf(option))
     );
     return optionsMappedToNumbers;
   };
 
-  buildFeatureToNumberKey(state) {
+  /* Builds a hash that maps selected categorical features to their option-number keys and dispatches that hash to the Redux store.
+  @return {
+    feature1: {
+      option1 : 0,
+      option2 : 1,
+      option3: 2,
+      ...
+    },
+    feature2: {
+      option1 : 0,
+      option2 : 1,
+      ...
+    }
+  }
+  */
+  buildOptionNumberKeysByFeature(state) {
     let optionsMappedToNumbersByFeature = {};
     const categoricalColumnsToConvert = getSelectedCategoricalColumns(
       state
     ).concat(this.state.labelColumn);
     categoricalColumnsToConvert.forEach(
       feature =>
-        (optionsMappedToNumbersByFeature[
+        (optionsMappedToNumbersByFeature[feature] = this.buildOptionNumberKey(
           feature
-        ] = this.buildFeatureToNumberKeyForColumn(feature))
+        ))
     );
     store.dispatch(setFeatureNumberKey(optionsMappedToNumbersByFeature));
   }
 
+  /* Builds a hash that maps the options in the label column to -1 and 1, because right now the model only supports binary classification with those specific values. Returns the row's specific option's value in that reference hash.
+  @param {object} row, entry from the dataset
+  {
+    labelColumn: option,
+    featureColumn1: option,
+    featureColumn2: option
+    ...
+  }
+  @return 1 or -1
+  */
   extractLabels = row => {
     const updatedState = store.getState();
     const currentValues = Object.values(
       updatedState.featureNumberKey[this.state.labelColumn]
     );
-    // Right now the model only supports binary classification and labels must be 1 or -1.
+
     const converter = {};
     converter[currentValues[0]] = 1;
     converter[currentValues[1]] = -1;
     return converter[row[this.state.labelColumn]];
   };
 
+  /* For feature columns that store categorical data, looks up the value associated with a row's specific option for a given feature; otherwise returns the option converted to an integer for feature columns that store continuous data.
+  @param {object} row, entry from the dataset
+  {
+    labelColumn: option,
+    featureColumn1: option,
+    featureColumn2: option
+    ...
+  }
+  @param {string} - feature name
+  @return {integer}
+  */
   convertValue = (feature, row) => {
     const updatedState = store.getState();
     return getCategoricalColumns(updatedState).includes(feature)
@@ -69,6 +110,16 @@ export default class SVMTrainer {
       : parseInt(row[feature]);
   };
 
+  /* Builds an array containing integer values associated with each feature's specific option in a given row.
+  @param {object} row, entry from the dataset
+  {
+    labelColumn: option,
+    featureColumn1: option,
+    featureColumn2: option
+    ...
+  }
+  @return {array}
+  */
   extractExamples = row => {
     let exampleValues = [];
     this.state.selectedFeatures.forEach(feature =>
@@ -76,6 +127,10 @@ export default class SVMTrainer {
     );
     return exampleValues;
   };
+
+  startTraining() {
+    this.addTrainingData();
+  }
 
   addTrainingData() {
     const trainingExamples = this.state.data.map(this.extractExamples);
@@ -87,20 +142,20 @@ export default class SVMTrainer {
     this.svm.train(trainingExamples, trainingLabels);
   }
 
-  predict() {
-    const testValues = this.prepareTestData();
-    let prediction = {};
-    prediction.predictedLabel = this.svm.predict([testValues])[0];
-    prediction.confidence = Math.abs(this.svm.marginOne(testValues));
-    store.dispatch(setPrediction(prediction));
-  }
-
   prepareTestData() {
     let testValues = [];
     this.state.selectedFeatures.forEach(feature =>
       testValues.push(this.convertValue(feature, this.state.testData))
     );
     return testValues;
+  }
+
+  predict() {
+    const testValues = this.prepareTestData();
+    let prediction = {};
+    prediction.predictedLabel = this.svm.predict([testValues])[0];
+    prediction.confidence = Math.abs(this.svm.marginOne(testValues));
+    store.dispatch(setPrediction(prediction));
   }
 
   clearAll() {
