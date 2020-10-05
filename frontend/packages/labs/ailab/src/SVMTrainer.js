@@ -98,7 +98,7 @@ export default class SVMTrainer {
   prepareTestData() {
     let testValues = [];
     this.state.selectedFeatures.forEach(feature =>
-      testValues.push(parseInt(this.state.testData[feature]))
+      testValues.push(this.convertValue(feature, this.state.testData))
     );
     return testValues;
   }
