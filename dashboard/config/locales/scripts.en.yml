@@ -7,20 +7,27 @@ en:
         csd_category_name: CS Discoveries ('17-'18)
         csd_2018_category_name: CS Discoveries ('18-'19)
         csd_2019_category_name: CS Discoveries ('19-'20)
+        csd_2020_category_name: CS Discoveries ('20-'21)
+        csd_pilot_category_name: CS Discoveries Pilot
         csf_category_name: CS Fundamentals
-        csf_2018_category_name: CS Fundamentals (2018)
-        csf_2019_category_name: CS Fundamentals (2019)
+        csf_2018_category_name: CS Fundamentals ('18-'19)
+        csf_2019_category_name: CS Fundamentals ('19-'20)
+        csf_2020_category_name: CS Fundamentals ('20-'21)
         csf_international_category_name: CS Fundamentals International
         csf2_draft_category_name: 'Under Development: Courses A - F'
-        csp_category_name: "'15-'16 CS Principles"
+        csp_category_name: CS Principles ('15-'16)
         csp_2018_category_name: CS Principles ('18-'19)
         csp_2019_category_name: CS Principles ('19-'20)
+        csp_2020_category_name: CS Principles ('20-'21)
         cspexams_category_name: CS Principles Practice Test
         csp17_category_name: CS Principles ('17-'18)
         full_course_category_name: Full Courses
         hoc_category_name: Hour of Code
         math_category_name: Math
         research_studies_category_name: Research Studies
+        twenty_hour_category_name: 20-Hour
+        tts_category_name: Text-to-Speech
+        other_category_name: Other
       name:
         course1:
           title: Course 1
@@ -18188,17 +18195,17 @@ en:
         vpl-csp-2020:
           lessons:
             Module 1:
-              name: Module 1
+              name: 'Module 1: Introducing Unit 4 and new pedagogy for teaching programming'
             Module 2:
-              name: Module 2
+              name: 'Module 2: Variables in Unit 4 and the role of collaboration'
             Module 3:
-              name: Module 3
+              name: 'Module 3: Unit 5, using lists in apps, and recognizing CS skills in the classroom'
             Module 4:
-              name: Module 4
+              name: 'Module 4: Unit 5 and using datasets in apps'
             Module 5:
-              name: Module 5
+              name: 'Module 5: Unit 7 and understanding functions with parameters and return'
             Module 6:
-              name: Module 6
+              name: 'Module 6: Introduction to the Create Performance Task'
             Module 7:
               name: Module 7
             Module 8:
