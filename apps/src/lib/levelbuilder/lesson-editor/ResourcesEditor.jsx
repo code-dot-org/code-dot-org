@@ -48,9 +48,10 @@ export default class ResourcesEditor extends Component {
         <table style={{width: '100%'}}>
           <thead>
             <tr>
-              <th style={{width: '20%'}}>Key</th>
-              <th style={{width: '35%'}}>Name</th>
-              <th style={{width: '45%'}}>URL</th>
+              <th style={{width: '15%'}}>Key</th>
+              <th style={{width: '30%'}}>Name</th>
+              <th style={{width: '15%'}}>Type</th>
+              <th style={{width: '40%'}}>URL</th>
             </tr>
           </thead>
           <tbody>
@@ -58,6 +59,7 @@ export default class ResourcesEditor extends Component {
               <tr key={resource.key}>
                 <td>{resource.key}</td>
                 <td>{resource.name}</td>
+                <td>{resource.type}</td>
                 <td>{resource.url}</td>
               </tr>
             ))}
