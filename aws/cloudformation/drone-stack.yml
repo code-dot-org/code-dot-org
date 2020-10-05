@@ -245,7 +245,11 @@ Resources:
             # Needed to create first admin user: https://docs.drone.io/administration/user/admins/
             -
               Name: DRONE_USER_CREATE
-              Value: username:uponthesun,admin:true
+              Value: username:code-org,admin:true
+            # Users on this Drone server must be members of the code-dot-org GitHub Organization.
+            -
+              Name: DRONE_USER_FILTER
+              Value: code-dot-org
 
   DroneMasterEcsService:
     Type: AWS::ECS::Service
@@ -289,14 +293,13 @@ Resources:
             -
               ContainerPort: 8080
           Environment:
-            # TODO: (suresh) Update DroneEcsTaskExecutionRole to include the permissions needed by Autoscaler and then remove this API Key.
+            # TODO: (suresh) Update & use drone-autoscaler-ecs-task to include the permissions needed by Autoscaler and then remove this API Key.
             -
               Name: AWS_ACCESS_KEY_ID
               Value: '{{resolve:secretsmanager:drone/shared:SecretString:AWS_ACCESS_KEY_ID}}'
             -
               Name: AWS_SECRET_ACCESS_KEY
               Value: '{{resolve:secretsmanager:drone/shared:SecretString:AWS_SECRET_ACCESS_KEY}}'
-
 
             -
               Name: DRONE_SERVER_HOST
