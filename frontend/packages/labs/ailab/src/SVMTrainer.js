@@ -51,7 +51,15 @@ export default class SVMTrainer {
   }
 
   extractLabels = row => {
-    return this.convertValue(this.state.labelColumn, row);
+    const updatedState = store.getState();
+    const currentValues = Object.values(
+      updatedState.featureNumberKey[this.state.labelColumn]
+    );
+    // Right now the model only supports binary classification and labels must be 1 or -1.
+    const converter = {};
+    converter[currentValues[0]] = 1;
+    converter[currentValues[1]] = -1;
+    return converter[row[this.state.labelColumn]];
   };
 
   convertValue = (feature, row) => {
