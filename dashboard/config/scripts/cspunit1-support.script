@@ -10,26 +10,9 @@ lesson 'Chapter Overviews', display_name: 'Chapter Overviews'
 level 'Empty Markdown Level', named: true
 
 lesson 'Tool Talk: Intro to Netsim', display_name: 'Tool Talk: Intro to Netsim'
-level 'Empty Markdown Level'
-level 'Empty Markdown Level'
-level 'Empty Markdown Level'
-level 'Empty Markdown Level'
 level 'Sample CSP Assessment'
-
-lesson_group 'content', display_name: 'Content'
-lesson 'Sending Binary Messages', display_name: 'Sending Binary Messages'
-level 'Empty Markdown Level'
-
-lesson 'Encoding and Sending Numbers', display_name: 'Encoding and Sending Numbers'
-level 'Empty Markdown Level'
 
 lesson_group 'practice', display_name: 'Teaching Practices'
 lesson 'Supporting Peer Learning', display_name: 'Supporting Peer Learning'
 level 'U3L2 Free Response Reflection', named: true
-
-lesson 'Running a Constructive Classroom', display_name: 'Running a Constructive Classroom'
-level 'U3L2 Free Response Reflection'
-
-lesson 'Strategies for Student Writing', display_name: 'Strategies for Student Writing'
-level 'U3L2 Free Response Reflection'
 

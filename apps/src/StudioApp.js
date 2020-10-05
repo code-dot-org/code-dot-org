@@ -1628,6 +1628,13 @@ StudioApp.prototype.displayFeedback = function(options) {
   );
 
   if (experiments.isEnabled('bubbleDialog')) {
+    // Track whether this experiment is in use. If not, delete this and similar
+    // sections of code. If it is, create a non-experiment flag.
+    trackEvent(
+      'experiment',
+      'Feedback bubbleDialog',
+      `AppType ${this.config.app}. Level ${this.config.serverLevelId}`
+    );
     const {response, preventDialog, feedbackType, feedbackImage} = options;
 
     const newFinishDialogApps = {
@@ -2721,6 +2728,20 @@ StudioApp.prototype.enableBreakpoints = function() {
       );
     }.bind(this)
   );
+};
+
+/**
+ * Checks whether the code has been changed from the original level code as
+ * specified in levelbuilder. If the level has disabled this functionality,
+ * by turning `validationEnabled` off, this will always return true.
+ */
+StudioApp.prototype.validateCodeChanged = function() {
+  const level = this.config.level;
+  if (!level.validationEnabled) {
+    return true;
+  }
+
+  return project.isCurrentCodeDifferent(level.startBlocks);
 };
 
 /**

@@ -796,6 +796,11 @@ FactoryGirl.define do
     end
   end
 
+  factory :resource do
+    url 'fake.url'
+    sequence(:key) {|n| "key-#{n}"}
+  end
+
   factory :callout do
     sequence(:element_id) {|n| "#pageElement#{n}"}
     localization_key 'drag_blocks'
