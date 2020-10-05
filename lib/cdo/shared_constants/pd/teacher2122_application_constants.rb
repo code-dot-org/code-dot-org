@@ -112,7 +112,7 @@ module Pd
         school_type: 'School Type',
         total_student_enrollment: 'Total Student Enrollment',
         free_lunch_percent: 'Percent of students eligible to receive free/reduced lunch',
-        underrepresented_group_percent: 'Percent of students from underrepresented racial and ethnic groups',
+        underrepresented_minority_percent: 'Percent of students from underrepresented racial and ethnic groups',
         american_indian_or_native_alaskan_percent: 'Percent of student enrollment by race: American Indian or Native Alaskan',
         asian_percent: 'Percent of student enrollment by race: Asian',
         black_or_african_american_percent: 'Percent of student enrollment by race: Black or African American',
@@ -180,7 +180,7 @@ module Pd
         do_you_approve: "Do you approve of this teacher participating in Code.org's #{YEAR} Professional Learning Program?",
         total_student_enrollment: "Total student enrollment",
         free_lunch_percent: "Percent of students who are eligible to receive free or reduced lunch (Principal's response)",
-        underrepresented_group_percent: "Percent of students from underrepresented racial and ethnic groups (Principal's response)",
+        underrepresented_minority_percent: "Percent of students from underrepresented racial and ethnic groups (Principal's response)",
         white: "Percent of student enrollment by race - White",
         black: "Percent of student enrollment by race - Black or African American",
         hispanic: "Percent of student enrollment by race - Hispanic or Latino",
@@ -233,7 +233,7 @@ module Pd
       school_type: {teacher: :school_type, stats: :school_type},
       total_student_enrollment: {principal: :principal_total_enrollment, stats: :students_total},
       free_lunch_percent: {principal: :principal_free_lunch_percent, stats: :frl_eligible_percent},
-      underrepresented_group_percent: {principal: :principal_underrepresented_group_percent, stats: :urm_percent},
+      underrepresented_minority_percent: {principal: :principal_underrepresented_minority_percent, stats: :urm_percent},
       american_indian_or_native_alaskan_percent: {principal: :principal_american_indian_or_native_alaskan_percent, stats: :american_indian_alaskan_native_percent},
       asian_percent: {principal: :principal_asian_percent, stats: :asian_percent},
       black_or_african_american_percent: {principal: :principal_black_or_african_american_percent, stats: :black_or_african_american_percent},
@@ -259,13 +259,13 @@ module Pd
       principal_schedule_confirmed: YES_NO,
       # Scholarship requirements
       free_lunch_percent: YES_NO,
-      underrepresented_group_percent: YES_NO,
+      underrepresented_minority_percent: YES_NO,
     }
 
     # Need to explicitly list these for the shared constant generation to work.
     SCOREABLE_QUESTIONS = {
       scholarship_questions: [
-        :underrepresented_group_percent,
+        :underrepresented_minority_percent,
         :free_lunch_percent,
       ],
       criteria_score_questions_csd: [
@@ -359,7 +359,7 @@ module Pd
         :do_you_approve,
         :total_student_enrollment,
         :free_lunch_percent,
-        :underrepresented_group_percent,
+        :underrepresented_minority_percent,
         :white,
         :black,
         :hispanic,

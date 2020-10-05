@@ -979,10 +979,7 @@ module Api::V1::Pd
         "How many days per week will your CS program class be offered to one section of students?",
         "How many weeks during the year will this course be taught to one section of students?",
         "Total course hours",
-        "Do you plan to personally teach this course in the #{APPLICATION_CURRENT_YEAR} school year? "\
-          "Note: This program is designed to work best for teachers who are teaching "\
-          "this course in the #{APPLICATION_CURRENT_YEAR} school year. Scholarship eligibility is dependent "\
-          "on whether or not you will be teaching the course during the #{APPLICATION_CURRENT_YEAR} school year.",
+        "Do you plan to personally teach this course in the #{APPLICATION_CURRENT_YEAR} school year?",
         "Will this course replace an existing computer science course in the master schedule? (Teacher's response)",
         "Which existing course or curriculum will it replace? Mark all that apply.",
         "Have you participated in previous yearlong Code.org Professional Learning Programs?",
