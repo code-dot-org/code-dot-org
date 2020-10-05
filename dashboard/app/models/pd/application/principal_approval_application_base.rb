@@ -50,7 +50,7 @@ module Pd::Application
       self.application_year = year
     end
 
-    def underrepresented_group_percent
+    def underrepresented_minority_percent
       sanitize_form_data_hash.select do |k, _|
         [
           :black,
