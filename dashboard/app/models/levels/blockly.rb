@@ -581,7 +581,7 @@ class Blockly < Level
 
       # Must generate text_key in the same way it is created in
       # the get_i18n_strings function in sync-in.rb script.
-      text_key = text_title.content.gsub(/[^a-zA-Z0-9_ ]/, '').split.join('_').downcase
+      text_key = Digest::MD5.hexdigest text_title.content
       localized_text = I18n.t(
         text_key,
         scope: [:data, :placeholder_texts, name],
