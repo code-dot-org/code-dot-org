@@ -783,37 +783,6 @@ CSTA: L1:6.CT.1, L1:6.CPP.5, L1:6.CPP.6, L2:9.CT.1, L2:9.CT.3, L2:9.CT.5, L2:9.C
 1255,1,1,1255,1255,tynker_counterhack,Counter Hack,Tynker,https://www.tynker.com/hour-of-code/counter-hack,"Save the computer from a malicious virus! You'll have to hack your way through the system by deleting viruses, opening doors, solving mazes, and navigating through the portals. Watch out for viruses and glitches!",/images/tutorials/new/tynker_counterhack.jpg,2015-tutorial,https://www.tynker.com/hour-of-code/tynker-puzzle-teacher-guide.pdf,English only,en,tynkerch,"all,6-8,9+",Grades 6+,beginner,comfortable,online-tutorial,cs-only,computers,"Internet Explorer 11, Microsoft Edge, Chrome, Firefox, Safari",,1hour,typing,JavaScript,"CCSS-ELA: 3.RI.3, 4.RI.3, 3.RI.5, 3.RF.4, 4.RF.4, 3.L.4 
 CSTA: L1:3.CT.1, L1:6.CT.1, L1:6.CPP.1, L1:6.CPP.5, L1:6.CPP.6",228,999,999,67,53
 1250,1,1,1250,1250,texasinstruments,10 Minutes of Code,Texas Instruments,https://education.ti.com/en/select-country/eu-ti-codes,The 10 Minutes of Code activities can be used in class as a way to spark students' interest in coding with the TI technology they carry in their backpacks everyday.  Learn the basics of coding using the TI-84™ Plus and get started programming in just 10 minutes – no experience needed!  ,/images/tutorials/resubmission/texasinstruments.png,OtherLang,,English only,en,texas-instruments,"all,6-8,9+",Grades 6+,beginner,beginner,online-tutorial,math,"computers,no-internet","TI-84, TI-83 graphing calculators","TI-84, TI-83 graphing calculators",1hour,other,TI Basic,,340,999,999,253,196
-1247,1,1247,1247,1,itch_stop_animation,ITCH Stop Frame Animation (Scratch),Ucodemy,http://hoc.ucodemy.com/v2/website/web/course_catalogue/39894#courseinfo=06e010350a361da7930f358e198090fb,"We'll be using Itch to build our own stop frame animation projects.
-
-Note that headphones are recommended for this course.
-
-We will use some existing sprites that support animations and show the code we need to add to animate our characters.
-
-We'll also go over how to create our very own animation effects and drawings.
-
-We'll learn how to change a sprite costume in scratch repeatedly for animation effects (similar to a flip-book animation) and the code behind it.
-
-All instruction is contained within the Itch environment so there is no need to be switching screens to follow along with the project.",/images/tutorials/new/itch_stop_animation.jpg,2016-tutorial,,English only,en,itchstop,"all,2-5,6-8",Grades 2-8,beginner,beginner,online-tutorial,art,computers,All modern browsers,,"1hour,1hour-follow",blocks,Blocks,"These standards are from the Computer Science Teacher Association matrix.
-
-CT.L2-01 Use the basic steps in algorithmic problem-solving to design solutions (e.g., problem statement and exploration, examination of sample instances, design, implementing a solution, testing, evaluation).
-
-CT.L2-03 Define an algorithm as a sequence of instructions that can be processed by a computer.
-
-CT.L3A-01 Use predefined functions and parameters, classes and methods to divide a complex problem into simpler parts.
-
-CD.L2-01 Recognize that computers are devices that execute programs.",281,999,147,225,999
-1247,1,1247,1247,1,itch_bounceball,ITCH Bouncing Ball (in Scratch),Ucodemy,http://hoc.ucodemy.com/v2/website/web/course_catalogue/38356#cour*seinfo=4ebbb55c7e2d2a89d14a12d504e88624,"Now with Scratch 3.0 - You can also run this on iPADs! 
-
-We take you through an introduction to the Scratch 3.0 visual programming language. This lesson provides a video and text directions for the code students need to add to get a ball bouncing zanily around the screen with lots of customization options.
-
-Once students complete this activity there are prompts for other changes and activities. There is no set goal or outcome as it's an open learning environment, but with just this starting code students come up with amazing projects! All instruction is contained within the iTCH environment so there is no need to be switching screens to follow along with the project. Headphones are recommended.",/images/tutorials/new/itch_bounceball.jpg,2016-tutorial,,English only,en,itchbounceball,"all,2-5,6-8",Grades 2-8,beginner,beginner,online-tutorial,math,"computers,android","Chrome, Firefox, Android Tablet, iPad",,1hour,blocks,"Blocks, Scratch 3.0","ISTE
-1.c – Use models and simulation to explore complex systems and issues
-4.b – Plan and manage activities to develop a solution or complete a project 
-6.a – Understand and use technology systems
-
-CC Math
-1. Make sense of problems and persevere in solving them. 
-2. Reason abstractly and quantitatively.",314,999,146,256,999
 1245,1,1245,1245,1245,tynker_arcade,Undersea Arcade Game Kit,Tynker,https://www.tynker.com/hour-of-code/undersea-arcade,"Make your own top-down arcade shooter game. Start by programming the fish to move up and down when the arrow keys are pressed, then code the sharks to swim across the screen. You'll personalize the game by adding custom assets for the hero, the villain, and the background. Your game could be set at the beach, in the forest, or even in outer space!",/images/tutorials/new/tynker_arcade.jpg,2016-tutorial,https://www.tynker.com/hour-of-code/tynker-build-an-app-teacher-guide.pdf,English only,en,tynkerarc,"all,2-5,6-8,9+",Grades 2+,beginner,beginner,online-tutorial,cs-only,"computers,android,ios,no-internet","All modern browsers, Android tablets, iPads, Android phones, iPhones",,1hour,blocks,"Blocks, Tynker, JavaScript, Python","CCSS ELA: RI.2.3, RI.3.3, W.3.6, RI.4.3, RI.4.5, RI.5.10, RST.6-8.3, RST.6-8.4, RST.6-8.7, RST.9-10.5, RST.11-12.3 
 CCSS Math: MP.3.8 
 CSTA: L1:6.CT.1, L1:6.CPP.5, L1:6.CPP.6, L2:9.CT.1, L2:9.CT.3, L2:9.CT.4, L2:9.CT.12, L2:9.CPP.3, L2:9.CPP.5",196,999,95,160,198
@@ -829,16 +798,6 @@ Extension #1 of this project is aligned with Common Core math standards that emp
 1241,1,1241,1241,1241,tynker_solar,Solar System STEM Kit,Tynker,https://www.tynker.com/hour-of-code/solar-system,Program an interactive model of our Solar System. This project comes with step-by-step instructions that guide you through creating a simulation with planets orbiting the Sun. Then add facts about each planet that pop up when clicked.,/images/tutorials/new/tynker_solar.jpg,2016-tutorial,https://www.tynker.com/hour-of-code/tynker-stem-teacher-guide.pdf,English only,en,tynkersol,"all,2-5,6-8,9+",Grades 2+,beginner,beginner,online-tutorial,science,"computers,android,ios,no-internet","All modern browsers, Android tablets, iPads, Android phones, iPhones",,1hour,blocks,"Blocks, Tynker, JavaScript, Python","CCSS ELA: L.4.1.G, RI.3.3, W.3.6, RI.4.5, RI.4.3, RI.5.10, RST.6-8.4, RST.6-8.7, RST.9-10.5, RST.11-12.3 
 CCSS Math: C.3.OA.C.7, MP.3.2, MP.3.8, MD.4.5, NF.4.7 
 CSTA: L1:6.CT.1, L1:6.CPP.5, L1:6.CPP.6, L2:9.CT.1, L2:9.CT.3, L2:9.CT.5, L2:9.CT.12, L2:9.CPP.3, L2:9.CPP.5",205,999,90,88,228
-1240,1,1,1240,1240,itch_geo,ITCH Name IT - Geography,Ucodemy,http://hoc.ucodemy.com/v2/website/web/course_catalogue/38355#cour*seinfo=b7bba36830d0b06640e7fb234b55e251,"Name-IT has you create a game of recognition! 
-
-The ending project has students creating a game to name the States of Australia!
-
-You'll first walk through and follow directions to create a game to label the three phases of the water cycle. You'll make a fully functioning game, including scoring!
-
-From the coding side you'll learn about variables, conditionals, lists, concatenating strings and much, much more. These are coding techniques you'll be able to re-use in other projects as you progress on to build your new coding skills!
-
-You can take the activity even further by adding your own image and labels (along with many other extra project options, the fun never ends). Headphones are recommended.",/images/tutorials/new/itch_geo.jpg,2016-tutorial,,English only,en,itchg,"all,6-8,9+",Grades 6+,beginner,comfortable,online-tutorial,history,"computers,android","Chrome, Firefox, Android Tablet",,1hour,blocks,Blocks,"CSTA Computational Thinking
-CSTA Computing Practice and Programming",435,999,999,159,226
 1239,1,1239,1239,1239,codemonkey,CodeMonkey,CodeMonkey,http://playcodemonkey.com/referrers/launch?referrer=corg,"Learn and teach coding in CoffeeScript, a real-world programming language. CodeMonkey is a fun, award-winning game, suitable for everybody, with or without any coding experience. CodeMonkey's adaptive platform will give you all the instructions and hints you need, and will reward you star scores. Write code. Catch Bananas. Save the world.",/images/codemonkey.png,"Beginner,International,do-not-show",https://drive.google.com/a/code.org/file/d/0ByMrCnfKaxBcRDVmT1AwYmVXTVE/view?pli=1,Multiple,"en,fr,es,ru,tr,he,pt,pt-br,cz,de,zh-cn,zh-tw",mky,"all,2-5,6-8,9+",Grades 2+,beginner,beginner,online-tutorial,cs-only,computers,All modern browsers,,1hour,typing,CoffeeScript,,999,999,999,999,999
 1238,1,1,1238,1238,tynker_homophones,Homophones STEM Kit,Tynker,https://www.tynker.com/hour-of-code/homophones,"You'll follow step-by-step instructions to animate an interactive story with a lot of homophones in it! Each time a character says a word that is a homophone, ask the player which homophone is the correct word for that context. The player better know their homophones, or else the dialog won't make any sense!",/images/tutorials/new/tynker_homophones.jpg,2016-tutorial,https://www.tynker.com/hour-of-code/tynker-stem-teacher-guide.pdf,English only,en,tynkerhomo,"all,6-8,9+",Grades 6+,beginner,beginner,online-tutorial,la,"computers,android,ios,no-internet","All modern browsers, Android tablets, iPads, Android phones, iPhones",,1hour,blocks,"Blocks, Tynker, JavaScript, Python","CCSS ELA: L.4.1.G, RI.3.3, W.3.6, RI.4.5, RI.4.3, RI.5.10, RST.6-8.4, RST.6-8.7, RST.9-10.5, RST.11-12.3 
 CCSS Math: C.3.OA.C.7, MP.3.2, MP.3.8, MD.4.5, NF.4.7 
@@ -850,32 +809,9 @@ CSTA: L1:6.CT.1, L1:6.CPP.5, L1:6.CPP.6, L2:9.CT.1, L2:9.CT.3, L2:9.CT.5, L2:9.C
 CCSS Math: MP.3.8 
 CSTA: L1:6.CT.1, L1:6.CPP.5, L1:6.CPP.6, L2:9.CT.1, L2:9.CT.3, L2:9.CT.4, L2:9.CT.12, L2:9.CPP.3, L2:9.CPP.5",151,999,74,116,111
 1236,1,1,1236,1236,alice_garfield,Animating with Alice and Garfield,Alice,http://www.alice.org/hourofcode/alice2.html,"Follow the animation production process from storyboarding to programming with Alice and Garfield.  Let creativity and storytelling drive your learning in a drag and drop coding environment.  The project will guide you through what is a storyboard, translating a storyboard into a programmable script, and how to program a short 3D animation. ",/images/tutorials/new/alice_garfield.jpg,2015-tutorial,,English only,en,alicegar,"all,6-8,9+",Grades 6+,beginner,beginner,online-tutorial,art,computers,All modern browsers,,"1hour,1hour-follow",blocks,Blocks,,177,999,999,145,134
-1234,1,1,1234,1234,itch_bio,ITCH Name IT - Parts of the Biological Cell,Ucodemy,http://hoc.ucodemy.com/v2/website/web/course_catalogue/38268#cour*seinfo=d0997690529f494f8654ed44ff87a839,"Name-IT has you create a game of recognition!
-
-Create a game to name the parts of a biological cell. Learn the parts of the cell while you make the game, and play it again as many times as you need to refresh your memory!
-
-You'll first walk through and follow directions to create a game to label the three phases of the water cycle. You'll make a fully functioning game, including scoring!
-
-From the coding side you'll learn about variables, conditionals, lists, concatenating strings and much, much more. These are coding techniques you'll be able to re-use in other projects as you progress on to build your new coding skills!
-
-You can take the activity even further by adding your own image and labels (along with many other extra project options, the fun never ends). Headphones are recommended.",/images/tutorials/new/itch_bio.jpg,2016-tutorial,,English only,en,itchbio,"all,6-8,9+",Grades 6+,beginner,comfortable,online-tutorial,science,computers,"Chrome, Firefox",,1hour,blocks,Blocks,,522,999,999,260,233
 1232,1,1,1232,1,codesters_transformation,Transformation Puzzles,Codesters,https://www.codesters.com/curriculum/hour-of-code-2018/Transformation+Puzzles/1/,"In this activity, students use Python to practice performing transformations on the coordinate plane! The lesson includes demonstrations, direct instruction, and challenges that ask students to program and identify various static transformations!",/images/tutorials/hoc2017/codesters_transformation.png,2017-tutorial,https://docs.google.com/document/d/1spkhN9ZhT5Mi-GzCcQgTrULOp1vjpJUGAAPw0_8kyek/edit?usp=sharing,"Chinese (Simplified), English, Spanish","zh-CN,en,es",codesterstp,"all,6-8",Grades 6-8,beginner,beginner,online-tutorial,math,"computers,android,ios","All modern browsers, Android tablet, iPad",,1hour,"blocks,typing","Blocks, Python","CCSS.MATH.CONTENT.8.G.A.1  Verify experimentally the properties of rotations, reflections, and translations
 CCSS.MATH.CONTENT.8.G.A.2 Understand that a two-dimensional figure is congruent to another if the second can be obtained from the first by a sequence of rotations, reflections, and translations; given two congruent figures, describe a sequence that exhibits the congruence between them.
 ",280,999,999,201,999
-1232,1,1,1232,1,itch_jump,ITCH Jumping (in Scratch),Ucodemy,http://hoc.ucodemy.com/v2/website/web/course_catalogue/38357#cour*seinfo=d66c23a956310d1e4f8b4fca240543c5,"Our Jumping activity provides you the coding skills to get a character to jump onto platforms that is used in many arcade style games.
-
-Use the Jumping skills and create your own game goal.
-
-This uses a cartesian coordinate system so you'll get to learn a little about screen coordinates here.
-
-Enjoy learning all about jumping with Itch! Headphones are recommended.",/images/tutorials/new/itch_jump.jpg,2016-tutorial,,English only,en,itchj,"all,6-8",Grades 6-8,beginner,comfortable,online-tutorial,math,"computers,android","Chrome, Firefox, Android Tablet",,1hour,blocks,Blocks,"ISTE
-1.c – Use models and simulation to explore complex systems and issues
-4.b – Plan and manage activities to develop a solution or complete a project 
-6.a – Understand and use technology systems
-
-CCSS.MATH.PRACTICE.MP1 Make sense of problems and persevere in solving them. 
-CCSS.MATH.PRACTICE.MP5 Use appropriate tools strategically. 
-CCSS.MATH.PRACTICE.MP7 Look for and make use of structure.",396,999,999,208,999
 1231,1231,1231,1231,1,monstercoding,Mystery Island Coding Quest,Monster Coding,http://monstercoding.com/#hour_of_code ,"The Mystery Island Coding Quest by Monster Coding offers a fun filled self guided adventure that teaches several key programming concepts to children. Each block based activity builds on the previous, introducing kids to Functions, Boolean Values, Loops, If/Else Statements, and Arrays, using colorful animated graphics, audio instructions.",/images/monstercoding.png,"Beginner,International",,"English, Spanish, Portuguese, Italian, French, German, Polish, Turkish","en,es,pt,it,fr,de,pl,tr",monster,"all,pre,2-5,6-8",Pre-reader - Grade 8,beginner,beginner,online-tutorial,cs-only,computers,All modern browsers,,1hour,blocks,Blocks,,108,16,131,240,261
 1231,1,1231,1231,1,tynker_multiplication,Multiplication Escape STEM Kit,Tynker,https://www.tynker.com/hour-of-code/multiplication-escape,Code your own math game! Your character needs to escape the cave without getting hit by falling boulders. But the only way the character can run forward is by correctly answering math questions! You'll follow step-by-step instructions to program this fun multiplication quiz game.,/images/tutorials/new/tynker_multiplication.jpg,2016-tutorial,https://www.tynker.com/hour-of-code/tynker-stem-teacher-guide.pdf,English only,en,tynkermult,"all,2-5,6-8",Grades 2-8,beginner,beginner,online-tutorial,math,"computers,android,ios,no-internet","All modern browsers, Android tablets, iPads, Android phones, iPhones",,1hour,blocks,"Blocks, Tynker, JavaScript, Python","CCSS ELA: L.4.1.G, RI.3.3, W.3.6, RI.4.5, RI.4.3, RI.5.10, RST.6-8.4, RST.6-8.7, RST.9-10.5, RST.11-12.3 
 CCSS Math: C.3.OA.C.7, MP.3.2, MP.3.8, MD.4.5, NF.4.7 
