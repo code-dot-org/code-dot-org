@@ -11,7 +11,8 @@ import {Provider} from 'react-redux';
 //TODO Remove once we hook up real activity data
 import {
   levelKeyList,
-  activities
+  activities,
+  sampleResourceData
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/SampleActivitiesData';
 
 $(document).ready(function() {
@@ -36,7 +37,7 @@ $(document).ready(function() {
         purpose={lessonData.purpose}
         preparation={lessonData.preparation}
         announcements={lessonData.announcements || []}
-        resources={lessonData.resources}
+        resources={sampleResourceData}
       />
     </Provider>,
     document.getElementById('edit-container')
