@@ -1,9 +1,11 @@
 /* global Maplace */
 /* exported sendEmail */
+/* global mapboxgl */
 
 var gmap;
 var gmap_loc;
 var selectize;
+var mapboxMap;
 
 var firstRetrievalDone = false;
 
@@ -209,6 +211,86 @@ function loadMap(locations) {
   }
 
   gmap.Load(mapOptions);
+
+  if (window.location.search.indexOf("mapbox") !== -1) {
+    mapboxMap = new mapboxgl.Map({
+      container: "mapbox",
+      style: "mapbox://styles/codeorg/cjyudafoo004w1cnpaeq8a0lz",
+      center: [lng, lat],
+      zoom: 1
+    });
+
+    // mapbox gets the pins
+    let features = [];
+    if (mapOptions.locations && mapOptions.locations.length > 0) {
+      for (var location of mapOptions.locations) {
+        const feature = {
+          type: "Feature",
+          properties: {
+            description: location.html,
+            "icon-image": "star-marker",
+            "icon-size": 22
+          },
+          geometry: {
+            type: "Point",
+            coordinates: [location.lon, location.lat]
+          }
+        };
+        features.push(feature);
+      }
+    }
+
+    mapboxMap.on("load", function() {
+      mapboxMap.loadImage(
+        "https://maps.google.com/mapfiles/kml/paddle/red-stars.png",
+        (error, image) => {
+          if (error) {
+            console.log(error);
+            return;
+          }
+
+          mapboxMap.addImage("star-marker", image);
+          mapboxMap.addSource("places", {
+            type: "geojson",
+            data: {
+              type: "FeatureCollection",
+              features: features
+            }
+          });
+
+          // Add a layer showing the places.
+          mapboxMap.addLayer({
+            id: "places",
+            type: "symbol",
+            source: "places",
+            layout: {
+              "icon-image": "star-marker",
+              "icon-size": 0.5,
+              "icon-anchor": "bottom",
+              "icon-allow-overlap": true
+            }
+          });
+        }
+      );
+    });
+
+    mapboxMap.on("click", "places", function(e) {
+      var coordinates = e.features[0].geometry.coordinates.slice();
+      var description = e.features[0].properties.description;
+
+      // Ensure that if the map is zoomed out such that multiple
+      // copies of the feature are visible, the popup appears
+      // over the copy being pointed to.
+      while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+        coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+      }
+
+      new mapboxgl.Popup()
+        .setLngLat(coordinates)
+        .setHTML(description)
+        .addTo(mapboxMap);
+    });
+  }
 }
 
 function createHTMLElement(tag, attributes, text) {
