@@ -9,6 +9,10 @@ export default class BlockSvg extends GoogleBlockly.BlockSvg {
     this.unusedSvg_.render(this.svgGroup_);
   }
 
+  setCanDisconnectFromParent(canDisconnect) {
+    this.canDisconnectFromParent_ = canDisconnect;
+  }
+
   customContextMenu(menuOptions) {
     // Only show context menu for levelbuilders
     if (Blockly.editBlocks) {
@@ -40,9 +44,20 @@ export default class BlockSvg extends GoogleBlockly.BlockSvg {
           Blockly.ContextMenu.hide();
         }.bind(this)
       };
+      const lockToParent = {
+        text: this.canDisconnectFromParent_
+          ? 'Lock to Parent Block'
+          : 'Unlock from Parent Block',
+        enabled: true,
+        callback: function() {
+          this.setCanDisconnectFromParent(!this.canDisconnectFromParent_);
+          Blockly.ContextMenu.hide();
+        }.bind(this)
+      };
       menuOptions.push(deletable);
       menuOptions.push(movable);
       menuOptions.push(editable);
+      menuOptions.push(lockToParent);
     } else {
       while (menuOptions) {
         menuOptions.pop();
@@ -71,6 +86,13 @@ export default class BlockSvg extends GoogleBlockly.BlockSvg {
 
   isUserVisible() {
     return false; // TODO
+  }
+
+  onMouseDown_(e) {
+    if (!Blockly.utils.isRightButton(e) && !this.canDisconnectFromParent_) {
+      return;
+    }
+    super.onMouseDown_(e);
   }
 
   render() {
