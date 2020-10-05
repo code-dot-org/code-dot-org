@@ -320,8 +320,6 @@
         "script_level.level_keys": [
           "TangramAlgorithms"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Algorithms: Tangrams",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -342,8 +340,6 @@
         "script_level.level_keys": [
           "courseE_video_ramp1"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 1,
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -364,8 +360,6 @@
         "script_level.level_keys": [
           "courseF_maze_ramp1"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 2,
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -386,8 +380,6 @@
         "script_level.level_keys": [
           "courseF_maze_ramp2"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 3,
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -408,8 +400,6 @@
         "script_level.level_keys": [
           "coursef_maze_ramp3"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 4,
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -430,8 +420,6 @@
         "script_level.level_keys": [
           "courseF_maze_ramp4"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 5,
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -452,8 +440,6 @@
         "script_level.level_keys": [
           "courseF_maze_ramp5"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 6,
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -474,8 +460,6 @@
         "script_level.level_keys": [
           "courseF_maze_ramp6"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 7,
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -496,8 +480,6 @@
         "script_level.level_keys": [
           "courseF_artist_ramp8"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 8,
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -518,8 +500,6 @@
         "script_level.level_keys": [
           "courseC_video_angles"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 9,
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -540,8 +520,6 @@
         "script_level.level_keys": [
           "courseF_artist_ramp9"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 10,
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -562,8 +540,6 @@
         "script_level.level_keys": [
           "courseF_artist_predict1"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 11,
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -584,8 +560,6 @@
         "script_level.level_keys": [
           "courseD_video_nestedLoopsArtist"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 12,
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -606,8 +580,6 @@
         "script_level.level_keys": [
           "courseF_artist_ramp10"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 13,
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -628,8 +600,6 @@
         "script_level.level_keys": [
           "courseF_farmer_ramp11"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 14,
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -650,8 +620,6 @@
         "script_level.level_keys": [
           "courseF_maze_ramp13"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 15,
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -672,8 +640,6 @@
         "script_level.level_keys": [
           "courseF_maze_ramp7"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 16,
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -694,8 +660,6 @@
         "script_level.level_keys": [
           "courseF_external_ramp14"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 17,
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -716,8 +680,6 @@
         "script_level.level_keys": [
           "coursef_powerofwords"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 1,
         "lesson.key": "The Power of Words",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -738,8 +700,6 @@
         "script_level.level_keys": [
           "iceage_hello1"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 1,
         "lesson.key": "Ice Age Play Lab",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -760,8 +720,6 @@
         "script_level.level_keys": [
           "iceage_hello2"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 2,
         "lesson.key": "Ice Age Play Lab",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -782,8 +740,6 @@
         "script_level.level_keys": [
           "iceage_move_to_flag"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 3,
         "lesson.key": "Ice Age Play Lab",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -804,8 +760,6 @@
         "script_level.level_keys": [
           "iceage_move_to_actor"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 4,
         "lesson.key": "Ice Age Play Lab",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -826,8 +780,6 @@
         "script_level.level_keys": [
           "iceage_repeat"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 5,
         "lesson.key": "Ice Age Play Lab",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -848,8 +800,6 @@
         "script_level.level_keys": [
           "iceage_click_hello"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 6,
         "lesson.key": "Ice Age Play Lab",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -870,8 +820,6 @@
         "script_level.level_keys": [
           "iceage_move_events"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 7,
         "lesson.key": "Ice Age Play Lab",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -892,8 +840,6 @@
         "script_level.level_keys": [
           "iceage_sound_and_points"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 8,
         "lesson.key": "Ice Age Play Lab",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -914,8 +860,6 @@
         "script_level.level_keys": [
           "iceage_warn_ice_age"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 9,
         "lesson.key": "Ice Age Play Lab",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -936,8 +880,6 @@
         "script_level.level_keys": [
           "iceage_throw_hearts"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 10,
         "lesson.key": "Ice Age Play Lab",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -958,8 +900,6 @@
         "script_level.level_keys": [
           "iceage_free_play"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 11,
         "lesson.key": "Ice Age Play Lab",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -980,8 +920,6 @@
         "script_level.level_keys": [
           "EnvelopeVariables"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 1,
         "lesson.key": "Envelope Variables",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -1002,8 +940,6 @@
         "script_level.level_keys": [
           "grade5_artist_variables_triangles1"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 1,
         "lesson.key": "Variables in Artist",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -1024,8 +960,6 @@
         "script_level.level_keys": [
           "courseF_artist_variables2"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 2,
         "lesson.key": "Variables in Artist",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -1046,8 +980,6 @@
         "script_level.level_keys": [
           "courseF_video_artistVariables"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 3,
         "lesson.key": "Variables in Artist",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -1068,8 +1000,6 @@
         "script_level.level_keys": [
           "courseF_artist_variables3a_predict1"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 4,
         "lesson.key": "Variables in Artist",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -1090,8 +1020,6 @@
         "script_level.level_keys": [
           "courseF_artist_variables3"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 5,
         "lesson.key": "Variables in Artist",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -1112,8 +1040,6 @@
         "script_level.level_keys": [
           "courseF_artist_variables4"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 6,
         "lesson.key": "Variables in Artist",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -1134,8 +1060,6 @@
         "script_level.level_keys": [
           "courseF_artist_variables5"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 7,
         "lesson.key": "Variables in Artist",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -1156,8 +1080,6 @@
         "script_level.level_keys": [
           "courseF_artist_variables6"
         ],
-        "script_level.chapter": 39,
-        "script_level.position": 8,
         "lesson.key": "Variables in Artist",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -1178,8 +1100,6 @@
         "script_level.level_keys": [
           "courseF_artist_variables6a"
         ],
-        "script_level.chapter": 40,
-        "script_level.position": 9,
         "lesson.key": "Variables in Artist",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -1200,8 +1120,6 @@
         "script_level.level_keys": [
           "courseF_external_variableConstant"
         ],
-        "script_level.chapter": 41,
-        "script_level.position": 10,
         "lesson.key": "Variables in Artist",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -1222,8 +1140,6 @@
         "script_level.level_keys": [
           "courseF_artist_variables7"
         ],
-        "script_level.chapter": 42,
-        "script_level.position": 11,
         "lesson.key": "Variables in Artist",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -1244,8 +1160,6 @@
         "script_level.level_keys": [
           "courseF_artist_variables8"
         ],
-        "script_level.chapter": 43,
-        "script_level.position": 12,
         "lesson.key": "Variables in Artist",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -1266,8 +1180,6 @@
         "script_level.level_keys": [
           "courseF_artist_variables9"
         ],
-        "script_level.chapter": 44,
-        "script_level.position": 13,
         "lesson.key": "Variables in Artist",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -1288,8 +1200,6 @@
         "script_level.level_keys": [
           "courseF_artist_variables10"
         ],
-        "script_level.chapter": 45,
-        "script_level.position": 14,
         "lesson.key": "Variables in Artist",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -1310,8 +1220,6 @@
         "script_level.level_keys": [
           "courseF_artist_variablesFP"
         ],
-        "script_level.chapter": 46,
-        "script_level.position": 15,
         "lesson.key": "Variables in Artist",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -1332,8 +1240,6 @@
         "script_level.level_keys": [
           "courseF_playlab_variables1a"
         ],
-        "script_level.chapter": 47,
-        "script_level.position": 1,
         "lesson.key": "Variables in Play Lab",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -1354,8 +1260,6 @@
         "script_level.level_keys": [
           "courseF_playlab_variables2b"
         ],
-        "script_level.chapter": 48,
-        "script_level.position": 2,
         "lesson.key": "Variables in Play Lab",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -1376,8 +1280,6 @@
         "script_level.level_keys": [
           "courseF_playlab_variables3b_josh"
         ],
-        "script_level.chapter": 49,
-        "script_level.position": 3,
         "lesson.key": "Variables in Play Lab",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -1398,8 +1300,6 @@
         "script_level.level_keys": [
           "courseF_playlab_variables4c_predictive1"
         ],
-        "script_level.chapter": 50,
-        "script_level.position": 4,
         "lesson.key": "Variables in Play Lab",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -1420,8 +1320,6 @@
         "script_level.level_keys": [
           "courseF_playlab_variables4b"
         ],
-        "script_level.chapter": 51,
-        "script_level.position": 5,
         "lesson.key": "Variables in Play Lab",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -1442,8 +1340,6 @@
         "script_level.level_keys": [
           "courseF_playlab_variables5b"
         ],
-        "script_level.chapter": 52,
-        "script_level.position": 6,
         "lesson.key": "Variables in Play Lab",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -1464,8 +1360,6 @@
         "script_level.level_keys": [
           "courseF_playlab_variables6b"
         ],
-        "script_level.chapter": 53,
-        "script_level.position": 7,
         "lesson.key": "Variables in Play Lab",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -1486,8 +1380,6 @@
         "script_level.level_keys": [
           "courseF_playlab_variables7b"
         ],
-        "script_level.chapter": 54,
-        "script_level.position": 8,
         "lesson.key": "Variables in Play Lab",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -1508,8 +1400,6 @@
         "script_level.level_keys": [
           "ForLoopFun"
         ],
-        "script_level.chapter": 55,
-        "script_level.position": 1,
         "lesson.key": "For Loop Fun",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -1530,8 +1420,6 @@
         "script_level.level_keys": [
           "courseF_bee_for1"
         ],
-        "script_level.chapter": 56,
-        "script_level.position": 1,
         "lesson.key": "For Loops in Bee",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -1552,8 +1440,6 @@
         "script_level.level_keys": [
           "courseF_bee_for2"
         ],
-        "script_level.chapter": 57,
-        "script_level.position": 2,
         "lesson.key": "For Loops in Bee",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -1574,8 +1460,6 @@
         "script_level.level_keys": [
           "courseF_video_forBee"
         ],
-        "script_level.chapter": 58,
-        "script_level.position": 3,
         "lesson.key": "For Loops in Bee",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -1596,8 +1480,6 @@
         "script_level.level_keys": [
           "courseF_bee_for3_predict1"
         ],
-        "script_level.chapter": 59,
-        "script_level.position": 4,
         "lesson.key": "For Loops in Bee",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -1618,8 +1500,6 @@
         "script_level.level_keys": [
           "courseF_bee_for4"
         ],
-        "script_level.chapter": 60,
-        "script_level.position": 5,
         "lesson.key": "For Loops in Bee",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -1640,8 +1520,6 @@
         "script_level.level_keys": [
           "courseF_bee_for6"
         ],
-        "script_level.chapter": 61,
-        "script_level.position": 6,
         "lesson.key": "For Loops in Bee",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -1662,8 +1540,6 @@
         "script_level.level_keys": [
           "courseF_bee_for7"
         ],
-        "script_level.chapter": 62,
-        "script_level.position": 7,
         "lesson.key": "For Loops in Bee",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -1684,8 +1560,6 @@
         "script_level.level_keys": [
           "courseF_bee_for8"
         ],
-        "script_level.chapter": 63,
-        "script_level.position": 8,
         "lesson.key": "For Loops in Bee",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -1706,8 +1580,6 @@
         "script_level.level_keys": [
           "courseF_bee_for5"
         ],
-        "script_level.chapter": 64,
-        "script_level.position": 9,
         "lesson.key": "For Loops in Bee",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -1728,8 +1600,6 @@
         "script_level.level_keys": [
           "courseF_bee_for9"
         ],
-        "script_level.chapter": 65,
-        "script_level.position": 10,
         "lesson.key": "For Loops in Bee",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -1751,8 +1621,6 @@
         "script_level.level_keys": [
           "courseF_bee_for10"
         ],
-        "script_level.chapter": 66,
-        "script_level.position": 11,
         "lesson.key": "For Loops in Bee",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -1773,8 +1641,6 @@
         "script_level.level_keys": [
           "courseF_bee_for11"
         ],
-        "script_level.chapter": 67,
-        "script_level.position": 12,
         "lesson.key": "For Loops in Bee",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -1795,8 +1661,6 @@
         "script_level.level_keys": [
           "courseF_video_forArtist"
         ],
-        "script_level.chapter": 68,
-        "script_level.position": 1,
         "lesson.key": "For Loops in Artist",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -1817,8 +1681,6 @@
         "script_level.level_keys": [
           "courseF_artist_for1"
         ],
-        "script_level.chapter": 69,
-        "script_level.position": 2,
         "lesson.key": "For Loops in Artist",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -1839,8 +1701,6 @@
         "script_level.level_keys": [
           "courseF_artist_for2"
         ],
-        "script_level.chapter": 70,
-        "script_level.position": 3,
         "lesson.key": "For Loops in Artist",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -1861,8 +1721,6 @@
         "script_level.level_keys": [
           "courseF_artist_for3"
         ],
-        "script_level.chapter": 71,
-        "script_level.position": 4,
         "lesson.key": "For Loops in Artist",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -1883,8 +1741,6 @@
         "script_level.level_keys": [
           "courseF_artist_for4"
         ],
-        "script_level.chapter": 72,
-        "script_level.position": 5,
         "lesson.key": "For Loops in Artist",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -1905,8 +1761,6 @@
         "script_level.level_keys": [
           "courseF_artist_for5"
         ],
-        "script_level.chapter": 73,
-        "script_level.position": 6,
         "lesson.key": "For Loops in Artist",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -1927,8 +1781,6 @@
         "script_level.level_keys": [
           "courseF_artist_for6"
         ],
-        "script_level.chapter": 74,
-        "script_level.position": 7,
         "lesson.key": "For Loops in Artist",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -1949,8 +1801,6 @@
         "script_level.level_keys": [
           "courseF_artist_for7"
         ],
-        "script_level.chapter": 75,
-        "script_level.position": 8,
         "lesson.key": "For Loops in Artist",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -1971,8 +1821,6 @@
         "script_level.level_keys": [
           "courseF_artist_for8"
         ],
-        "script_level.chapter": 76,
-        "script_level.position": 9,
         "lesson.key": "For Loops in Artist",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -1993,8 +1841,6 @@
         "script_level.level_keys": [
           "courseF_artist_for9"
         ],
-        "script_level.chapter": 77,
-        "script_level.position": 10,
         "lesson.key": "For Loops in Artist",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -2015,8 +1861,6 @@
         "script_level.level_keys": [
           "courseF_artist_for10_predict1"
         ],
-        "script_level.chapter": 78,
-        "script_level.position": 11,
         "lesson.key": "For Loops in Artist",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -2037,8 +1881,6 @@
         "script_level.level_keys": [
           "courseF_artist_for10"
         ],
-        "script_level.chapter": 79,
-        "script_level.position": 12,
         "lesson.key": "For Loops in Artist",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -2059,8 +1901,6 @@
         "script_level.level_keys": [
           "SongwritingWithParameters"
         ],
-        "script_level.chapter": 80,
-        "script_level.position": 1,
         "lesson.key": "Songwriting with Parameters",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -2081,8 +1921,6 @@
         "script_level.level_keys": [
           "courseD_bee_conditionalsVid1"
         ],
-        "script_level.chapter": 81,
-        "script_level.position": 1,
         "lesson.key": "Conditionals and Functions in Bee",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -2103,8 +1941,6 @@
         "script_level.level_keys": [
           "courseF_bee_conditionals1_predict1"
         ],
-        "script_level.chapter": 82,
-        "script_level.position": 2,
         "lesson.key": "Conditionals and Functions in Bee",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -2125,8 +1961,6 @@
         "script_level.level_keys": [
           "courseF_bee_conditionals2"
         ],
-        "script_level.chapter": 83,
-        "script_level.position": 3,
         "lesson.key": "Conditionals and Functions in Bee",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -2147,8 +1981,6 @@
         "script_level.level_keys": [
           "courseF_bee_conditionals3"
         ],
-        "script_level.chapter": 84,
-        "script_level.position": 4,
         "lesson.key": "Conditionals and Functions in Bee",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -2169,8 +2001,6 @@
         "script_level.level_keys": [
           "courseF_bee_conditionals4"
         ],
-        "script_level.chapter": 85,
-        "script_level.position": 5,
         "lesson.key": "Conditionals and Functions in Bee",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -2191,8 +2021,6 @@
         "script_level.level_keys": [
           "courseF_bee_conditionals5"
         ],
-        "script_level.chapter": 86,
-        "script_level.position": 6,
         "lesson.key": "Conditionals and Functions in Bee",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -2213,8 +2041,6 @@
         "script_level.level_keys": [
           "courseD_bee_conditionalsVidIfElse"
         ],
-        "script_level.chapter": 87,
-        "script_level.position": 7,
         "lesson.key": "Conditionals and Functions in Bee",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -2235,8 +2061,6 @@
         "script_level.level_keys": [
           "courseF_bee_conditionals7_predict2"
         ],
-        "script_level.chapter": 88,
-        "script_level.position": 8,
         "lesson.key": "Conditionals and Functions in Bee",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -2257,8 +2081,6 @@
         "script_level.level_keys": [
           "courseF_bee_conditionals8"
         ],
-        "script_level.chapter": 89,
-        "script_level.position": 9,
         "lesson.key": "Conditionals and Functions in Bee",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -2279,8 +2101,6 @@
         "script_level.level_keys": [
           "courseF_bee_conditionals10"
         ],
-        "script_level.chapter": 90,
-        "script_level.position": 10,
         "lesson.key": "Conditionals and Functions in Bee",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -2301,8 +2121,6 @@
         "script_level.level_keys": [
           "courseE_video_functionsBee"
         ],
-        "script_level.chapter": 91,
-        "script_level.position": 11,
         "lesson.key": "Conditionals and Functions in Bee",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -2323,8 +2141,6 @@
         "script_level.level_keys": [
           "courseF_bee_functions2"
         ],
-        "script_level.chapter": 92,
-        "script_level.position": 12,
         "lesson.key": "Conditionals and Functions in Bee",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -2345,8 +2161,6 @@
         "script_level.level_keys": [
           "courseF_bee_functions3"
         ],
-        "script_level.chapter": 93,
-        "script_level.position": 13,
         "lesson.key": "Conditionals and Functions in Bee",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -2367,8 +2181,6 @@
         "script_level.level_keys": [
           "courseF_bee_functions3a"
         ],
-        "script_level.chapter": 94,
-        "script_level.position": 14,
         "lesson.key": "Conditionals and Functions in Bee",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -2389,8 +2201,6 @@
         "script_level.level_keys": [
           "courseF_bee_functions4"
         ],
-        "script_level.chapter": 95,
-        "script_level.position": 15,
         "lesson.key": "Conditionals and Functions in Bee",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -2411,8 +2221,6 @@
         "script_level.level_keys": [
           "courseF_bee_functions5a"
         ],
-        "script_level.chapter": 96,
-        "script_level.position": 16,
         "lesson.key": "Conditionals and Functions in Bee",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -2433,8 +2241,6 @@
         "script_level.level_keys": [
           "courseF_video_createFunctions"
         ],
-        "script_level.chapter": 97,
-        "script_level.position": 17,
         "lesson.key": "Conditionals and Functions in Bee",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -2455,8 +2261,6 @@
         "script_level.level_keys": [
           "courseF_bee_functions6"
         ],
-        "script_level.chapter": 98,
-        "script_level.position": 18,
         "lesson.key": "Conditionals and Functions in Bee",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -2477,8 +2281,6 @@
         "script_level.level_keys": [
           "courseF_bee_functions7"
         ],
-        "script_level.chapter": 99,
-        "script_level.position": 19,
         "lesson.key": "Conditionals and Functions in Bee",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -2499,8 +2301,6 @@
         "script_level.level_keys": [
           "courseF_bee_functions8a"
         ],
-        "script_level.chapter": 100,
-        "script_level.position": 20,
         "lesson.key": "Conditionals and Functions in Bee",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -2521,8 +2321,6 @@
         "script_level.level_keys": [
           "courseF_video_artistFunctions"
         ],
-        "script_level.chapter": 101,
-        "script_level.position": 1,
         "lesson.key": "Functions with Parameters in Artist",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -2543,8 +2341,6 @@
         "script_level.level_keys": [
           "courseF_artist_fwp1"
         ],
-        "script_level.chapter": 102,
-        "script_level.position": 2,
         "lesson.key": "Functions with Parameters in Artist",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -2565,8 +2361,6 @@
         "script_level.level_keys": [
           "gradeF_video_artistParameters"
         ],
-        "script_level.chapter": 103,
-        "script_level.position": 3,
         "lesson.key": "Functions with Parameters in Artist",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -2587,8 +2381,6 @@
         "script_level.level_keys": [
           "courseF_artist_fwp2_predict1"
         ],
-        "script_level.chapter": 104,
-        "script_level.position": 4,
         "lesson.key": "Functions with Parameters in Artist",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -2609,8 +2401,6 @@
         "script_level.level_keys": [
           "courseF_artist_fwp2"
         ],
-        "script_level.chapter": 105,
-        "script_level.position": 5,
         "lesson.key": "Functions with Parameters in Artist",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -2631,8 +2421,6 @@
         "script_level.level_keys": [
           "courseF_video_createFunctionArtist"
         ],
-        "script_level.chapter": 106,
-        "script_level.position": 6,
         "lesson.key": "Functions with Parameters in Artist",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -2653,8 +2441,6 @@
         "script_level.level_keys": [
           "courseF_artist_fwp3"
         ],
-        "script_level.chapter": 107,
-        "script_level.position": 7,
         "lesson.key": "Functions with Parameters in Artist",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -2675,8 +2461,6 @@
         "script_level.level_keys": [
           "courseF_artist_fwp4"
         ],
-        "script_level.chapter": 108,
-        "script_level.position": 8,
         "lesson.key": "Functions with Parameters in Artist",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -2697,8 +2481,6 @@
         "script_level.level_keys": [
           "courseF_artist_fwp5"
         ],
-        "script_level.chapter": 109,
-        "script_level.position": 9,
         "lesson.key": "Functions with Parameters in Artist",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -2720,8 +2502,6 @@
         "script_level.level_keys": [
           "courseF_artist_fwp6"
         ],
-        "script_level.chapter": 110,
-        "script_level.position": 10,
         "lesson.key": "Functions with Parameters in Artist",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -2742,8 +2522,6 @@
         "script_level.level_keys": [
           "courseF_artist_fwp7"
         ],
-        "script_level.chapter": 111,
-        "script_level.position": 11,
         "lesson.key": "Functions with Parameters in Artist",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -2764,8 +2542,6 @@
         "script_level.level_keys": [
           "courseF_artist_fwp8"
         ],
-        "script_level.chapter": 112,
-        "script_level.position": 12,
         "lesson.key": "Functions with Parameters in Artist",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -2786,8 +2562,6 @@
         "script_level.level_keys": [
           "courseF_artist_fwp9"
         ],
-        "script_level.chapter": 113,
-        "script_level.position": 13,
         "lesson.key": "Functions with Parameters in Artist",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -2808,8 +2582,6 @@
         "script_level.level_keys": [
           "courseF_bee_fwp1"
         ],
-        "script_level.chapter": 114,
-        "script_level.position": 1,
         "lesson.key": "Functions with Parameters in Bee",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -2830,8 +2602,6 @@
         "script_level.level_keys": [
           "courseF_bee_fwp2"
         ],
-        "script_level.chapter": 115,
-        "script_level.position": 2,
         "lesson.key": "Functions with Parameters in Bee",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -2852,8 +2622,6 @@
         "script_level.level_keys": [
           "courseF_bee_fwp3"
         ],
-        "script_level.chapter": 116,
-        "script_level.position": 3,
         "lesson.key": "Functions with Parameters in Bee",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -2874,8 +2642,6 @@
         "script_level.level_keys": [
           "courseF_bee_fwp4"
         ],
-        "script_level.chapter": 117,
-        "script_level.position": 4,
         "lesson.key": "Functions with Parameters in Bee",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -2896,8 +2662,6 @@
         "script_level.level_keys": [
           "courseF_bee_fwp5"
         ],
-        "script_level.chapter": 118,
-        "script_level.position": 5,
         "lesson.key": "Functions with Parameters in Bee",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -2918,8 +2682,6 @@
         "script_level.level_keys": [
           "courseF_bee_fwp6"
         ],
-        "script_level.chapter": 119,
-        "script_level.position": 6,
         "lesson.key": "Functions with Parameters in Bee",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -2941,8 +2703,6 @@
         "script_level.level_keys": [
           "courseF_bee_fwp7"
         ],
-        "script_level.chapter": 120,
-        "script_level.position": 7,
         "lesson.key": "Functions with Parameters in Bee",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -2963,8 +2723,6 @@
         "script_level.level_keys": [
           "courseF_bee_fwp8"
         ],
-        "script_level.chapter": 121,
-        "script_level.position": 8,
         "lesson.key": "Functions with Parameters in Bee",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -2985,8 +2743,6 @@
         "script_level.level_keys": [
           "courseF_bee_fwp9_predict1"
         ],
-        "script_level.chapter": 122,
-        "script_level.position": 9,
         "lesson.key": "Functions with Parameters in Bee",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -3007,8 +2763,6 @@
         "script_level.level_keys": [
           "courseF_video_csMatters"
         ],
-        "script_level.chapter": 123,
-        "script_level.position": 1,
         "lesson.key": "Explore Project Ideas",
         "lesson_group.key": "end_of_course_project",
         "script.name": "coursef-draft"
@@ -3029,8 +2783,6 @@
         "script_level.level_keys": [
           "InspirationalArtwork"
         ],
-        "script_level.chapter": 124,
-        "script_level.position": 2,
         "lesson.key": "Explore Project Ideas",
         "lesson_group.key": "end_of_course_project",
         "script.name": "coursef-draft"
@@ -3051,8 +2803,6 @@
         "script_level.level_keys": [
           "FoodFight"
         ],
-        "script_level.chapter": 125,
-        "script_level.position": 3,
         "lesson.key": "Explore Project Ideas",
         "lesson_group.key": "end_of_course_project",
         "script.name": "coursef-draft"
@@ -3073,8 +2823,6 @@
         "script_level.level_keys": [
           "Guess The Number"
         ],
-        "script_level.chapter": 126,
-        "script_level.position": 4,
         "lesson.key": "Explore Project Ideas",
         "lesson_group.key": "end_of_course_project",
         "script.name": "coursef-draft"
@@ -3095,8 +2843,6 @@
         "script_level.level_keys": [
           "Choose Your Own Adventure"
         ],
-        "script_level.chapter": 127,
-        "script_level.position": 5,
         "lesson.key": "Explore Project Ideas",
         "lesson_group.key": "end_of_course_project",
         "script.name": "coursef-draft"
@@ -3117,8 +2863,6 @@
         "script_level.level_keys": [
           "Begin planning your project"
         ],
-        "script_level.chapter": 128,
-        "script_level.position": 1,
         "lesson.key": "The Design Process",
         "lesson_group.key": "end_of_course_project",
         "script.name": "coursef-draft"
@@ -3139,8 +2883,6 @@
         "script_level.level_keys": [
           "Course F: Artist Project"
         ],
-        "script_level.chapter": 129,
-        "script_level.position": 1,
         "lesson.key": "Build Your Project",
         "lesson_group.key": "end_of_course_project",
         "script.name": "coursef-draft"
@@ -3161,8 +2903,6 @@
         "script_level.level_keys": [
           "Course F: Play Lab Project"
         ],
-        "script_level.chapter": 130,
-        "script_level.position": 2,
         "lesson.key": "Build Your Project",
         "lesson_group.key": "end_of_course_project",
         "script.name": "coursef-draft"
@@ -3183,8 +2923,6 @@
         "script_level.level_keys": [
           "Course F: Artist Project - Revise"
         ],
-        "script_level.chapter": 131,
-        "script_level.position": 1,
         "lesson.key": "Revise Your Project",
         "lesson_group.key": "end_of_course_project",
         "script.name": "coursef-draft"
@@ -3205,8 +2943,6 @@
         "script_level.level_keys": [
           "Course F: Play Lab Project - Revise"
         ],
-        "script_level.chapter": 132,
-        "script_level.position": 2,
         "lesson.key": "Revise Your Project",
         "lesson_group.key": "end_of_course_project",
         "script.name": "coursef-draft"
@@ -3227,8 +2963,6 @@
         "script_level.level_keys": [
           "Prepare for your presentation"
         ],
-        "script_level.chapter": 133,
-        "script_level.position": 1,
         "lesson.key": "Presentation Your Project",
         "lesson_group.key": "end_of_course_project",
         "script.name": "coursef-draft"
@@ -3245,8 +2979,6 @@
         "script_level.level_keys": [
           "TangramAlgorithms"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Algorithms: Tangrams",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -3258,8 +2990,6 @@
         "script_level.level_keys": [
           "courseE_video_ramp1"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 1,
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -3271,8 +3001,6 @@
         "script_level.level_keys": [
           "courseF_maze_ramp1"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 2,
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -3284,8 +3012,6 @@
         "script_level.level_keys": [
           "courseF_maze_ramp2"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 3,
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -3297,8 +3023,6 @@
         "script_level.level_keys": [
           "coursef_maze_ramp3"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 4,
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -3310,8 +3034,6 @@
         "script_level.level_keys": [
           "courseF_maze_ramp4"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 5,
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -3323,8 +3045,6 @@
         "script_level.level_keys": [
           "courseF_maze_ramp5"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 6,
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -3336,8 +3056,6 @@
         "script_level.level_keys": [
           "courseF_maze_ramp6"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 7,
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -3349,8 +3067,6 @@
         "script_level.level_keys": [
           "courseF_artist_ramp8"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 8,
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -3362,8 +3078,6 @@
         "script_level.level_keys": [
           "courseC_video_angles"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 9,
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -3375,8 +3089,6 @@
         "script_level.level_keys": [
           "courseF_artist_ramp9"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 10,
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -3388,8 +3100,6 @@
         "script_level.level_keys": [
           "courseF_artist_predict1"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 11,
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -3401,8 +3111,6 @@
         "script_level.level_keys": [
           "courseD_video_nestedLoopsArtist"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 12,
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -3414,8 +3122,6 @@
         "script_level.level_keys": [
           "courseF_artist_ramp10"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 13,
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -3427,8 +3133,6 @@
         "script_level.level_keys": [
           "courseF_farmer_ramp11"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 14,
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -3440,8 +3144,6 @@
         "script_level.level_keys": [
           "courseF_maze_ramp13"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 15,
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -3453,8 +3155,6 @@
         "script_level.level_keys": [
           "courseF_maze_ramp7"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 16,
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -3466,8 +3166,6 @@
         "script_level.level_keys": [
           "courseF_external_ramp14"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 17,
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -3479,8 +3177,6 @@
         "script_level.level_keys": [
           "coursef_powerofwords"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 1,
         "lesson.key": "The Power of Words",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -3492,8 +3188,6 @@
         "script_level.level_keys": [
           "iceage_hello1"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 1,
         "lesson.key": "Ice Age Play Lab",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -3505,8 +3199,6 @@
         "script_level.level_keys": [
           "iceage_hello2"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 2,
         "lesson.key": "Ice Age Play Lab",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -3518,8 +3210,6 @@
         "script_level.level_keys": [
           "iceage_move_to_flag"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 3,
         "lesson.key": "Ice Age Play Lab",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -3531,8 +3221,6 @@
         "script_level.level_keys": [
           "iceage_move_to_actor"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 4,
         "lesson.key": "Ice Age Play Lab",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -3544,8 +3232,6 @@
         "script_level.level_keys": [
           "iceage_repeat"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 5,
         "lesson.key": "Ice Age Play Lab",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -3557,8 +3243,6 @@
         "script_level.level_keys": [
           "iceage_click_hello"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 6,
         "lesson.key": "Ice Age Play Lab",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -3570,8 +3254,6 @@
         "script_level.level_keys": [
           "iceage_move_events"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 7,
         "lesson.key": "Ice Age Play Lab",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -3583,8 +3265,6 @@
         "script_level.level_keys": [
           "iceage_sound_and_points"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 8,
         "lesson.key": "Ice Age Play Lab",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -3596,8 +3276,6 @@
         "script_level.level_keys": [
           "iceage_warn_ice_age"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 9,
         "lesson.key": "Ice Age Play Lab",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -3609,8 +3287,6 @@
         "script_level.level_keys": [
           "iceage_throw_hearts"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 10,
         "lesson.key": "Ice Age Play Lab",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -3622,8 +3298,6 @@
         "script_level.level_keys": [
           "iceage_free_play"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 11,
         "lesson.key": "Ice Age Play Lab",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -3635,8 +3309,6 @@
         "script_level.level_keys": [
           "EnvelopeVariables"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 1,
         "lesson.key": "Envelope Variables",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -3648,8 +3320,6 @@
         "script_level.level_keys": [
           "grade5_artist_variables_triangles1"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 1,
         "lesson.key": "Variables in Artist",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -3661,8 +3331,6 @@
         "script_level.level_keys": [
           "courseF_artist_variables2"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 2,
         "lesson.key": "Variables in Artist",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -3674,8 +3342,6 @@
         "script_level.level_keys": [
           "courseF_video_artistVariables"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 3,
         "lesson.key": "Variables in Artist",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -3687,8 +3353,6 @@
         "script_level.level_keys": [
           "courseF_artist_variables3a_predict1"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 4,
         "lesson.key": "Variables in Artist",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -3700,8 +3364,6 @@
         "script_level.level_keys": [
           "courseF_artist_variables3"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 5,
         "lesson.key": "Variables in Artist",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -3713,8 +3375,6 @@
         "script_level.level_keys": [
           "courseF_artist_variables4"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 6,
         "lesson.key": "Variables in Artist",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -3726,8 +3386,6 @@
         "script_level.level_keys": [
           "courseF_artist_variables5"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 7,
         "lesson.key": "Variables in Artist",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -3739,8 +3397,6 @@
         "script_level.level_keys": [
           "courseF_artist_variables6"
         ],
-        "script_level.chapter": 39,
-        "script_level.position": 8,
         "lesson.key": "Variables in Artist",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -3752,8 +3408,6 @@
         "script_level.level_keys": [
           "courseF_artist_variables6a"
         ],
-        "script_level.chapter": 40,
-        "script_level.position": 9,
         "lesson.key": "Variables in Artist",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -3765,8 +3419,6 @@
         "script_level.level_keys": [
           "courseF_external_variableConstant"
         ],
-        "script_level.chapter": 41,
-        "script_level.position": 10,
         "lesson.key": "Variables in Artist",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -3778,8 +3430,6 @@
         "script_level.level_keys": [
           "courseF_artist_variables7"
         ],
-        "script_level.chapter": 42,
-        "script_level.position": 11,
         "lesson.key": "Variables in Artist",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -3791,8 +3441,6 @@
         "script_level.level_keys": [
           "courseF_artist_variables8"
         ],
-        "script_level.chapter": 43,
-        "script_level.position": 12,
         "lesson.key": "Variables in Artist",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -3804,8 +3452,6 @@
         "script_level.level_keys": [
           "courseF_artist_variables9"
         ],
-        "script_level.chapter": 44,
-        "script_level.position": 13,
         "lesson.key": "Variables in Artist",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -3817,8 +3463,6 @@
         "script_level.level_keys": [
           "courseF_artist_variables10"
         ],
-        "script_level.chapter": 45,
-        "script_level.position": 14,
         "lesson.key": "Variables in Artist",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -3830,8 +3474,6 @@
         "script_level.level_keys": [
           "courseF_artist_variablesFP"
         ],
-        "script_level.chapter": 46,
-        "script_level.position": 15,
         "lesson.key": "Variables in Artist",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -3843,8 +3485,6 @@
         "script_level.level_keys": [
           "courseF_playlab_variables1a"
         ],
-        "script_level.chapter": 47,
-        "script_level.position": 1,
         "lesson.key": "Variables in Play Lab",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -3856,8 +3496,6 @@
         "script_level.level_keys": [
           "courseF_playlab_variables2b"
         ],
-        "script_level.chapter": 48,
-        "script_level.position": 2,
         "lesson.key": "Variables in Play Lab",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -3869,8 +3507,6 @@
         "script_level.level_keys": [
           "courseF_playlab_variables3b_josh"
         ],
-        "script_level.chapter": 49,
-        "script_level.position": 3,
         "lesson.key": "Variables in Play Lab",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -3882,8 +3518,6 @@
         "script_level.level_keys": [
           "courseF_playlab_variables4c_predictive1"
         ],
-        "script_level.chapter": 50,
-        "script_level.position": 4,
         "lesson.key": "Variables in Play Lab",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -3895,8 +3529,6 @@
         "script_level.level_keys": [
           "courseF_playlab_variables4b"
         ],
-        "script_level.chapter": 51,
-        "script_level.position": 5,
         "lesson.key": "Variables in Play Lab",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -3908,8 +3540,6 @@
         "script_level.level_keys": [
           "courseF_playlab_variables5b"
         ],
-        "script_level.chapter": 52,
-        "script_level.position": 6,
         "lesson.key": "Variables in Play Lab",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -3921,8 +3551,6 @@
         "script_level.level_keys": [
           "courseF_playlab_variables6b"
         ],
-        "script_level.chapter": 53,
-        "script_level.position": 7,
         "lesson.key": "Variables in Play Lab",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -3934,8 +3562,6 @@
         "script_level.level_keys": [
           "courseF_playlab_variables7b"
         ],
-        "script_level.chapter": 54,
-        "script_level.position": 8,
         "lesson.key": "Variables in Play Lab",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -3947,8 +3573,6 @@
         "script_level.level_keys": [
           "ForLoopFun"
         ],
-        "script_level.chapter": 55,
-        "script_level.position": 1,
         "lesson.key": "For Loop Fun",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -3960,8 +3584,6 @@
         "script_level.level_keys": [
           "courseF_bee_for1"
         ],
-        "script_level.chapter": 56,
-        "script_level.position": 1,
         "lesson.key": "For Loops in Bee",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -3973,8 +3595,6 @@
         "script_level.level_keys": [
           "courseF_bee_for2"
         ],
-        "script_level.chapter": 57,
-        "script_level.position": 2,
         "lesson.key": "For Loops in Bee",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -3986,8 +3606,6 @@
         "script_level.level_keys": [
           "courseF_video_forBee"
         ],
-        "script_level.chapter": 58,
-        "script_level.position": 3,
         "lesson.key": "For Loops in Bee",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -3999,8 +3617,6 @@
         "script_level.level_keys": [
           "courseF_bee_for3_predict1"
         ],
-        "script_level.chapter": 59,
-        "script_level.position": 4,
         "lesson.key": "For Loops in Bee",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -4012,8 +3628,6 @@
         "script_level.level_keys": [
           "courseF_bee_for4"
         ],
-        "script_level.chapter": 60,
-        "script_level.position": 5,
         "lesson.key": "For Loops in Bee",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -4025,8 +3639,6 @@
         "script_level.level_keys": [
           "courseF_bee_for6"
         ],
-        "script_level.chapter": 61,
-        "script_level.position": 6,
         "lesson.key": "For Loops in Bee",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -4038,8 +3650,6 @@
         "script_level.level_keys": [
           "courseF_bee_for7"
         ],
-        "script_level.chapter": 62,
-        "script_level.position": 7,
         "lesson.key": "For Loops in Bee",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -4051,8 +3661,6 @@
         "script_level.level_keys": [
           "courseF_bee_for8"
         ],
-        "script_level.chapter": 63,
-        "script_level.position": 8,
         "lesson.key": "For Loops in Bee",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -4064,8 +3672,6 @@
         "script_level.level_keys": [
           "courseF_bee_for5"
         ],
-        "script_level.chapter": 64,
-        "script_level.position": 9,
         "lesson.key": "For Loops in Bee",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -4077,8 +3683,6 @@
         "script_level.level_keys": [
           "courseF_bee_for9"
         ],
-        "script_level.chapter": 65,
-        "script_level.position": 10,
         "lesson.key": "For Loops in Bee",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -4090,8 +3694,6 @@
         "script_level.level_keys": [
           "courseF_bee_for10"
         ],
-        "script_level.chapter": 66,
-        "script_level.position": 11,
         "lesson.key": "For Loops in Bee",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -4103,8 +3705,6 @@
         "script_level.level_keys": [
           "courseF_bee_for11"
         ],
-        "script_level.chapter": 67,
-        "script_level.position": 12,
         "lesson.key": "For Loops in Bee",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -4116,8 +3716,6 @@
         "script_level.level_keys": [
           "courseF_video_forArtist"
         ],
-        "script_level.chapter": 68,
-        "script_level.position": 1,
         "lesson.key": "For Loops in Artist",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -4129,8 +3727,6 @@
         "script_level.level_keys": [
           "courseF_artist_for1"
         ],
-        "script_level.chapter": 69,
-        "script_level.position": 2,
         "lesson.key": "For Loops in Artist",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -4142,8 +3738,6 @@
         "script_level.level_keys": [
           "courseF_artist_for2"
         ],
-        "script_level.chapter": 70,
-        "script_level.position": 3,
         "lesson.key": "For Loops in Artist",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -4155,8 +3749,6 @@
         "script_level.level_keys": [
           "courseF_artist_for3"
         ],
-        "script_level.chapter": 71,
-        "script_level.position": 4,
         "lesson.key": "For Loops in Artist",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -4168,8 +3760,6 @@
         "script_level.level_keys": [
           "courseF_artist_for4"
         ],
-        "script_level.chapter": 72,
-        "script_level.position": 5,
         "lesson.key": "For Loops in Artist",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -4181,8 +3771,6 @@
         "script_level.level_keys": [
           "courseF_artist_for5"
         ],
-        "script_level.chapter": 73,
-        "script_level.position": 6,
         "lesson.key": "For Loops in Artist",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -4194,8 +3782,6 @@
         "script_level.level_keys": [
           "courseF_artist_for6"
         ],
-        "script_level.chapter": 74,
-        "script_level.position": 7,
         "lesson.key": "For Loops in Artist",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -4207,8 +3793,6 @@
         "script_level.level_keys": [
           "courseF_artist_for7"
         ],
-        "script_level.chapter": 75,
-        "script_level.position": 8,
         "lesson.key": "For Loops in Artist",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -4220,8 +3804,6 @@
         "script_level.level_keys": [
           "courseF_artist_for8"
         ],
-        "script_level.chapter": 76,
-        "script_level.position": 9,
         "lesson.key": "For Loops in Artist",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -4233,8 +3815,6 @@
         "script_level.level_keys": [
           "courseF_artist_for9"
         ],
-        "script_level.chapter": 77,
-        "script_level.position": 10,
         "lesson.key": "For Loops in Artist",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -4246,8 +3826,6 @@
         "script_level.level_keys": [
           "courseF_artist_for10_predict1"
         ],
-        "script_level.chapter": 78,
-        "script_level.position": 11,
         "lesson.key": "For Loops in Artist",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -4259,8 +3837,6 @@
         "script_level.level_keys": [
           "courseF_artist_for10"
         ],
-        "script_level.chapter": 79,
-        "script_level.position": 12,
         "lesson.key": "For Loops in Artist",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -4272,8 +3848,6 @@
         "script_level.level_keys": [
           "SongwritingWithParameters"
         ],
-        "script_level.chapter": 80,
-        "script_level.position": 1,
         "lesson.key": "Songwriting with Parameters",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -4285,8 +3859,6 @@
         "script_level.level_keys": [
           "courseD_bee_conditionalsVid1"
         ],
-        "script_level.chapter": 81,
-        "script_level.position": 1,
         "lesson.key": "Conditionals and Functions in Bee",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -4298,8 +3870,6 @@
         "script_level.level_keys": [
           "courseF_bee_conditionals1_predict1"
         ],
-        "script_level.chapter": 82,
-        "script_level.position": 2,
         "lesson.key": "Conditionals and Functions in Bee",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -4311,8 +3881,6 @@
         "script_level.level_keys": [
           "courseF_bee_conditionals2"
         ],
-        "script_level.chapter": 83,
-        "script_level.position": 3,
         "lesson.key": "Conditionals and Functions in Bee",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -4324,8 +3892,6 @@
         "script_level.level_keys": [
           "courseF_bee_conditionals3"
         ],
-        "script_level.chapter": 84,
-        "script_level.position": 4,
         "lesson.key": "Conditionals and Functions in Bee",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -4337,8 +3903,6 @@
         "script_level.level_keys": [
           "courseF_bee_conditionals4"
         ],
-        "script_level.chapter": 85,
-        "script_level.position": 5,
         "lesson.key": "Conditionals and Functions in Bee",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -4350,8 +3914,6 @@
         "script_level.level_keys": [
           "courseF_bee_conditionals5"
         ],
-        "script_level.chapter": 86,
-        "script_level.position": 6,
         "lesson.key": "Conditionals and Functions in Bee",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -4363,8 +3925,6 @@
         "script_level.level_keys": [
           "courseD_bee_conditionalsVidIfElse"
         ],
-        "script_level.chapter": 87,
-        "script_level.position": 7,
         "lesson.key": "Conditionals and Functions in Bee",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -4376,8 +3936,6 @@
         "script_level.level_keys": [
           "courseF_bee_conditionals7_predict2"
         ],
-        "script_level.chapter": 88,
-        "script_level.position": 8,
         "lesson.key": "Conditionals and Functions in Bee",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -4389,8 +3947,6 @@
         "script_level.level_keys": [
           "courseF_bee_conditionals8"
         ],
-        "script_level.chapter": 89,
-        "script_level.position": 9,
         "lesson.key": "Conditionals and Functions in Bee",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -4402,8 +3958,6 @@
         "script_level.level_keys": [
           "courseF_bee_conditionals10"
         ],
-        "script_level.chapter": 90,
-        "script_level.position": 10,
         "lesson.key": "Conditionals and Functions in Bee",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -4415,8 +3969,6 @@
         "script_level.level_keys": [
           "courseE_video_functionsBee"
         ],
-        "script_level.chapter": 91,
-        "script_level.position": 11,
         "lesson.key": "Conditionals and Functions in Bee",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -4428,8 +3980,6 @@
         "script_level.level_keys": [
           "courseF_bee_functions2"
         ],
-        "script_level.chapter": 92,
-        "script_level.position": 12,
         "lesson.key": "Conditionals and Functions in Bee",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -4441,8 +3991,6 @@
         "script_level.level_keys": [
           "courseF_bee_functions3"
         ],
-        "script_level.chapter": 93,
-        "script_level.position": 13,
         "lesson.key": "Conditionals and Functions in Bee",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -4454,8 +4002,6 @@
         "script_level.level_keys": [
           "courseF_bee_functions3a"
         ],
-        "script_level.chapter": 94,
-        "script_level.position": 14,
         "lesson.key": "Conditionals and Functions in Bee",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -4467,8 +4013,6 @@
         "script_level.level_keys": [
           "courseF_bee_functions4"
         ],
-        "script_level.chapter": 95,
-        "script_level.position": 15,
         "lesson.key": "Conditionals and Functions in Bee",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -4480,8 +4024,6 @@
         "script_level.level_keys": [
           "courseF_bee_functions5a"
         ],
-        "script_level.chapter": 96,
-        "script_level.position": 16,
         "lesson.key": "Conditionals and Functions in Bee",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -4493,8 +4035,6 @@
         "script_level.level_keys": [
           "courseF_video_createFunctions"
         ],
-        "script_level.chapter": 97,
-        "script_level.position": 17,
         "lesson.key": "Conditionals and Functions in Bee",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -4506,8 +4046,6 @@
         "script_level.level_keys": [
           "courseF_bee_functions6"
         ],
-        "script_level.chapter": 98,
-        "script_level.position": 18,
         "lesson.key": "Conditionals and Functions in Bee",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -4519,8 +4057,6 @@
         "script_level.level_keys": [
           "courseF_bee_functions7"
         ],
-        "script_level.chapter": 99,
-        "script_level.position": 19,
         "lesson.key": "Conditionals and Functions in Bee",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -4532,8 +4068,6 @@
         "script_level.level_keys": [
           "courseF_bee_functions8a"
         ],
-        "script_level.chapter": 100,
-        "script_level.position": 20,
         "lesson.key": "Conditionals and Functions in Bee",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -4545,8 +4079,6 @@
         "script_level.level_keys": [
           "courseF_video_artistFunctions"
         ],
-        "script_level.chapter": 101,
-        "script_level.position": 1,
         "lesson.key": "Functions with Parameters in Artist",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -4558,8 +4090,6 @@
         "script_level.level_keys": [
           "courseF_artist_fwp1"
         ],
-        "script_level.chapter": 102,
-        "script_level.position": 2,
         "lesson.key": "Functions with Parameters in Artist",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -4571,8 +4101,6 @@
         "script_level.level_keys": [
           "gradeF_video_artistParameters"
         ],
-        "script_level.chapter": 103,
-        "script_level.position": 3,
         "lesson.key": "Functions with Parameters in Artist",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -4584,8 +4112,6 @@
         "script_level.level_keys": [
           "courseF_artist_fwp2_predict1"
         ],
-        "script_level.chapter": 104,
-        "script_level.position": 4,
         "lesson.key": "Functions with Parameters in Artist",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -4597,8 +4123,6 @@
         "script_level.level_keys": [
           "courseF_artist_fwp2"
         ],
-        "script_level.chapter": 105,
-        "script_level.position": 5,
         "lesson.key": "Functions with Parameters in Artist",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -4610,8 +4134,6 @@
         "script_level.level_keys": [
           "courseF_video_createFunctionArtist"
         ],
-        "script_level.chapter": 106,
-        "script_level.position": 6,
         "lesson.key": "Functions with Parameters in Artist",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -4623,8 +4145,6 @@
         "script_level.level_keys": [
           "courseF_artist_fwp3"
         ],
-        "script_level.chapter": 107,
-        "script_level.position": 7,
         "lesson.key": "Functions with Parameters in Artist",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -4636,8 +4156,6 @@
         "script_level.level_keys": [
           "courseF_artist_fwp4"
         ],
-        "script_level.chapter": 108,
-        "script_level.position": 8,
         "lesson.key": "Functions with Parameters in Artist",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -4649,8 +4167,6 @@
         "script_level.level_keys": [
           "courseF_artist_fwp5"
         ],
-        "script_level.chapter": 109,
-        "script_level.position": 9,
         "lesson.key": "Functions with Parameters in Artist",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -4662,8 +4178,6 @@
         "script_level.level_keys": [
           "courseF_artist_fwp6"
         ],
-        "script_level.chapter": 110,
-        "script_level.position": 10,
         "lesson.key": "Functions with Parameters in Artist",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -4675,8 +4189,6 @@
         "script_level.level_keys": [
           "courseF_artist_fwp7"
         ],
-        "script_level.chapter": 111,
-        "script_level.position": 11,
         "lesson.key": "Functions with Parameters in Artist",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -4688,8 +4200,6 @@
         "script_level.level_keys": [
           "courseF_artist_fwp8"
         ],
-        "script_level.chapter": 112,
-        "script_level.position": 12,
         "lesson.key": "Functions with Parameters in Artist",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -4701,8 +4211,6 @@
         "script_level.level_keys": [
           "courseF_artist_fwp9"
         ],
-        "script_level.chapter": 113,
-        "script_level.position": 13,
         "lesson.key": "Functions with Parameters in Artist",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -4714,8 +4222,6 @@
         "script_level.level_keys": [
           "courseF_bee_fwp1"
         ],
-        "script_level.chapter": 114,
-        "script_level.position": 1,
         "lesson.key": "Functions with Parameters in Bee",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -4727,8 +4233,6 @@
         "script_level.level_keys": [
           "courseF_bee_fwp2"
         ],
-        "script_level.chapter": 115,
-        "script_level.position": 2,
         "lesson.key": "Functions with Parameters in Bee",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -4740,8 +4244,6 @@
         "script_level.level_keys": [
           "courseF_bee_fwp3"
         ],
-        "script_level.chapter": 116,
-        "script_level.position": 3,
         "lesson.key": "Functions with Parameters in Bee",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -4753,8 +4255,6 @@
         "script_level.level_keys": [
           "courseF_bee_fwp4"
         ],
-        "script_level.chapter": 117,
-        "script_level.position": 4,
         "lesson.key": "Functions with Parameters in Bee",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -4766,8 +4266,6 @@
         "script_level.level_keys": [
           "courseF_bee_fwp5"
         ],
-        "script_level.chapter": 118,
-        "script_level.position": 5,
         "lesson.key": "Functions with Parameters in Bee",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -4779,8 +4277,6 @@
         "script_level.level_keys": [
           "courseF_bee_fwp6"
         ],
-        "script_level.chapter": 119,
-        "script_level.position": 6,
         "lesson.key": "Functions with Parameters in Bee",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -4792,8 +4288,6 @@
         "script_level.level_keys": [
           "courseF_bee_fwp7"
         ],
-        "script_level.chapter": 120,
-        "script_level.position": 7,
         "lesson.key": "Functions with Parameters in Bee",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -4805,8 +4299,6 @@
         "script_level.level_keys": [
           "courseF_bee_fwp8"
         ],
-        "script_level.chapter": 121,
-        "script_level.position": 8,
         "lesson.key": "Functions with Parameters in Bee",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -4818,8 +4310,6 @@
         "script_level.level_keys": [
           "courseF_bee_fwp9_predict1"
         ],
-        "script_level.chapter": 122,
-        "script_level.position": 9,
         "lesson.key": "Functions with Parameters in Bee",
         "lesson_group.key": "content",
         "script.name": "coursef-draft"
@@ -4831,8 +4321,6 @@
         "script_level.level_keys": [
           "courseF_video_csMatters"
         ],
-        "script_level.chapter": 123,
-        "script_level.position": 1,
         "lesson.key": "Explore Project Ideas",
         "lesson_group.key": "end_of_course_project",
         "script.name": "coursef-draft"
@@ -4844,8 +4332,6 @@
         "script_level.level_keys": [
           "InspirationalArtwork"
         ],
-        "script_level.chapter": 124,
-        "script_level.position": 2,
         "lesson.key": "Explore Project Ideas",
         "lesson_group.key": "end_of_course_project",
         "script.name": "coursef-draft"
@@ -4857,8 +4343,6 @@
         "script_level.level_keys": [
           "FoodFight"
         ],
-        "script_level.chapter": 125,
-        "script_level.position": 3,
         "lesson.key": "Explore Project Ideas",
         "lesson_group.key": "end_of_course_project",
         "script.name": "coursef-draft"
@@ -4870,8 +4354,6 @@
         "script_level.level_keys": [
           "Guess The Number"
         ],
-        "script_level.chapter": 126,
-        "script_level.position": 4,
         "lesson.key": "Explore Project Ideas",
         "lesson_group.key": "end_of_course_project",
         "script.name": "coursef-draft"
@@ -4883,8 +4365,6 @@
         "script_level.level_keys": [
           "Choose Your Own Adventure"
         ],
-        "script_level.chapter": 127,
-        "script_level.position": 5,
         "lesson.key": "Explore Project Ideas",
         "lesson_group.key": "end_of_course_project",
         "script.name": "coursef-draft"
@@ -4896,8 +4376,6 @@
         "script_level.level_keys": [
           "Begin planning your project"
         ],
-        "script_level.chapter": 128,
-        "script_level.position": 1,
         "lesson.key": "The Design Process",
         "lesson_group.key": "end_of_course_project",
         "script.name": "coursef-draft"
@@ -4909,8 +4387,6 @@
         "script_level.level_keys": [
           "Course F: Artist Project"
         ],
-        "script_level.chapter": 129,
-        "script_level.position": 1,
         "lesson.key": "Build Your Project",
         "lesson_group.key": "end_of_course_project",
         "script.name": "coursef-draft"
@@ -4922,8 +4398,6 @@
         "script_level.level_keys": [
           "Course F: Play Lab Project"
         ],
-        "script_level.chapter": 130,
-        "script_level.position": 2,
         "lesson.key": "Build Your Project",
         "lesson_group.key": "end_of_course_project",
         "script.name": "coursef-draft"
@@ -4935,8 +4409,6 @@
         "script_level.level_keys": [
           "Course F: Artist Project - Revise"
         ],
-        "script_level.chapter": 131,
-        "script_level.position": 1,
         "lesson.key": "Revise Your Project",
         "lesson_group.key": "end_of_course_project",
         "script.name": "coursef-draft"
@@ -4948,8 +4420,6 @@
         "script_level.level_keys": [
           "Course F: Play Lab Project - Revise"
         ],
-        "script_level.chapter": 132,
-        "script_level.position": 2,
         "lesson.key": "Revise Your Project",
         "lesson_group.key": "end_of_course_project",
         "script.name": "coursef-draft"
@@ -4961,8 +4431,6 @@
         "script_level.level_keys": [
           "Prepare for your presentation"
         ],
-        "script_level.chapter": 133,
-        "script_level.position": 1,
         "lesson.key": "Presentation Your Project",
         "lesson_group.key": "end_of_course_project",
         "script.name": "coursef-draft"

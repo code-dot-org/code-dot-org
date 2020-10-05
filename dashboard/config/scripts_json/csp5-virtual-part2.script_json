@@ -210,8 +210,6 @@
         "script_level.level_keys": [
           "CSP Unit 5 Cumulative Assessment 2 MC_2018_2019_virtual"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Unit 5 Assessment 2",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-virtual-part2"
@@ -232,8 +230,6 @@
         "script_level.level_keys": [
           "CSP U5L11 SFLP_virtual"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 1,
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -255,8 +251,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops - 1_virtual"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 2,
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -278,8 +272,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops - 2_virtual"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 3,
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -301,8 +293,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops - 3_virtual"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 4,
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -324,8 +314,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops - Typing in Console_virtual"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 5,
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -347,8 +335,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops - 4_virtual"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 6,
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -370,8 +356,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops - 5_virtual"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 7,
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -393,8 +377,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops - 8_virtual"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 8,
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -416,8 +398,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops - 6_virtual"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 9,
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -439,8 +419,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops - 7_virtual"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 10,
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -462,8 +440,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops - 9_virtual"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 11,
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -485,8 +461,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops -  Complex Condition_virtual"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 12,
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -508,8 +482,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops - 10_virtual"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 13,
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -531,8 +503,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops - 11_virtual"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 14,
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -554,8 +524,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops - 12_virtual"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 15,
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -577,8 +545,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops - Plus Plus_virtual"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 16,
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -600,8 +566,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops - Minus Minus_virtual"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 17,
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -623,8 +587,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops - plus and minus = operator_virtual"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 18,
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -646,8 +608,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops - minus = operator_virtual"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 19,
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -669,8 +629,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops - 14_virtual"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 20,
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -692,8 +650,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops - 15_virtual"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 21,
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -715,8 +671,6 @@
         "script_level.level_keys": [
           "csp-pulse-check-survey-7-levelgroup-U5Ch2_2018_2019_virtual"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 22,
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -737,8 +691,6 @@
         "script_level.level_keys": [
           "CSP U5L12 SFLP_virtual"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 1,
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -760,8 +712,6 @@
         "script_level.level_keys": [
           "Make a Hypothesis_2018_2019_virtual"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 2,
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -783,8 +733,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Simulation - 1_virtual"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 3,
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -806,8 +754,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Simulation - 2_virtual"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 4,
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -829,8 +775,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Simulation - 2.1_virtual"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 5,
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -852,8 +796,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Simulation - 2.5_virtual"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 6,
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -875,8 +817,6 @@
         "script_level.level_keys": [
           "Update your Hypothesis - Part 1_2018_2019_virtual"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 7,
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -898,8 +838,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Simulation - 3_virtual"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 8,
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -921,8 +859,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Simulation - 4_virtual"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 9,
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -944,8 +880,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Simulation - 5_virtual"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 10,
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -967,8 +901,6 @@
         "script_level.level_keys": [
           "Update your Hypothesis - Part 2_2018_2019_virtual"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 11,
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -990,8 +922,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Simulation - 6_virtual"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 12,
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -1012,8 +942,6 @@
         "script_level.level_keys": [
           "CSP U5L13 SFLP_virtual"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 1,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -1035,8 +963,6 @@
         "script_level.level_keys": [
           "Introduction to Lists - Part 1_virtual"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 2,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -1058,8 +984,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Arrays - createFirstArray_virtual"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 3,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -1081,8 +1005,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Arrays - appendItem_virtual"
         ],
-        "script_level.chapter": 39,
-        "script_level.position": 4,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -1104,8 +1026,6 @@
         "script_level.level_keys": [
           "Introduction to Lists - Part 2_virtual"
         ],
-        "script_level.chapter": 40,
-        "script_level.position": 5,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -1127,8 +1047,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Arrays - introIndex_virtual"
         ],
-        "script_level.chapter": 41,
-        "script_level.position": 6,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -1150,8 +1068,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Arrays - indexPractice_virtual"
         ],
-        "script_level.chapter": 42,
-        "script_level.position": 7,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -1173,8 +1089,6 @@
         "script_level.level_keys": [
           "Introduction to Lists - Part 3_virtual"
         ],
-        "script_level.chapter": 43,
-        "script_level.position": 8,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -1196,8 +1110,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Arrays - assignment_virtual"
         ],
-        "script_level.chapter": 44,
-        "script_level.position": 9,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -1219,8 +1131,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Arrays - assignment2_virtual"
         ],
-        "script_level.chapter": 45,
-        "script_level.position": 10,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -1242,8 +1152,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Arrays - assignment3_virtual"
         ],
-        "script_level.chapter": 46,
-        "script_level.position": 11,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -1265,8 +1173,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Arrays - stringsInArrays_virtual"
         ],
-        "script_level.chapter": 47,
-        "script_level.position": 12,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -1288,8 +1194,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Arrays - insertingItems_virtual"
         ],
-        "script_level.chapter": 48,
-        "script_level.position": 13,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -1311,8 +1215,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Arrays - remove_virtual"
         ],
-        "script_level.chapter": 49,
-        "script_level.position": 14,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -1334,8 +1236,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Arrays - insertionErrors_virtual"
         ],
-        "script_level.chapter": 50,
-        "script_level.position": 15,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -1357,8 +1257,6 @@
         "script_level.level_keys": [
           "Introduction to Lists - Part 4_virtual"
         ],
-        "script_level.chapter": 51,
-        "script_level.position": 16,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -1380,8 +1278,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Arrays - length_virtual"
         ],
-        "script_level.chapter": 52,
-        "script_level.position": 17,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -1403,8 +1299,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Arrays - lengthMinus1_virtual"
         ],
-        "script_level.chapter": 53,
-        "script_level.position": 18,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -1426,8 +1320,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Arrays - expressionsAsIndexes_virtual"
         ],
-        "script_level.chapter": 54,
-        "script_level.position": 19,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -1449,8 +1341,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Arrays - Demo App_virtual"
         ],
-        "script_level.chapter": 55,
-        "script_level.position": 20,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -1472,8 +1362,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Arrays - favThings giveIDs_virtual"
         ],
-        "script_level.chapter": 56,
-        "script_level.position": 21,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -1495,8 +1383,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Arrays - favThings createArray_virtual"
         ],
-        "script_level.chapter": 57,
-        "script_level.position": 22,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -1518,8 +1404,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Arrays - favThings firstOutput_virtual"
         ],
-        "script_level.chapter": 58,
-        "script_level.position": 23,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -1541,8 +1425,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Arrays - favThings Counting Variable_virtual"
         ],
-        "script_level.chapter": 59,
-        "script_level.position": 24,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -1564,8 +1446,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Arrays - favThings Next_virtual"
         ],
-        "script_level.chapter": 60,
-        "script_level.position": 25,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -1587,8 +1467,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Arrays - favThings Prev_virtual"
         ],
-        "script_level.chapter": 61,
-        "script_level.position": 26,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -1610,8 +1488,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Arrays - favThings addItem_virtual"
         ],
-        "script_level.chapter": 62,
-        "script_level.position": 27,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -1633,8 +1509,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Arrays - favThings bounds_virtual"
         ],
-        "script_level.chapter": 63,
-        "script_level.position": 28,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -1656,8 +1530,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Arrays - favThings keepPlaying_virtual"
         ],
-        "script_level.chapter": 64,
-        "script_level.position": 29,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -1679,8 +1551,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Arrays - Wrap Up 1_virtual"
         ],
-        "script_level.chapter": 65,
-        "script_level.position": 30,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -1702,8 +1572,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Arrays - Wrap Up 2_virtual"
         ],
-        "script_level.chapter": 66,
-        "script_level.position": 31,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -1724,8 +1592,6 @@
         "script_level.level_keys": [
           "CSP U5L14 SFLP_virtual"
         ],
-        "script_level.chapter": 67,
-        "script_level.position": 1,
         "lesson.key": "Building an App: Image Scroller",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -1747,8 +1613,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Keys - Demo App_virtual"
         ],
-        "script_level.chapter": 68,
-        "script_level.position": 2,
         "lesson.key": "Building an App: Image Scroller",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -1770,8 +1634,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L25 - drag out key event_virtual"
         ],
-        "script_level.chapter": 69,
-        "script_level.position": 3,
         "lesson.key": "Building an App: Image Scroller",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -1793,8 +1655,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Keys - Key Up and Down_virtual"
         ],
-        "script_level.chapter": 70,
-        "script_level.position": 4,
         "lesson.key": "Building an App: Image Scroller",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -1816,8 +1676,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L25 - play sound when up key_virtual"
         ],
-        "script_level.chapter": 71,
-        "script_level.position": 5,
         "lesson.key": "Building an App: Image Scroller",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -1839,8 +1697,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Keys - Multiple Keys_virtual"
         ],
-        "script_level.chapter": 72,
-        "script_level.position": 6,
         "lesson.key": "Building an App: Image Scroller",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -1862,8 +1718,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Keys - Buttons and Keys_virtual"
         ],
-        "script_level.chapter": 73,
-        "script_level.position": 7,
         "lesson.key": "Building an App: Image Scroller",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -1885,8 +1739,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Keys - Functions_virtual"
         ],
-        "script_level.chapter": 74,
-        "script_level.position": 8,
         "lesson.key": "Building an App: Image Scroller",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -1908,8 +1760,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Keys - Add Image URLs_virtual"
         ],
-        "script_level.chapter": 75,
-        "script_level.position": 9,
         "lesson.key": "Building an App: Image Scroller",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -1931,8 +1781,6 @@
         "script_level.level_keys": [
           "Project - Final Image Scroller_virtual"
         ],
-        "script_level.chapter": 76,
-        "script_level.position": 10,
         "lesson.key": "Building an App: Image Scroller",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -1954,8 +1802,6 @@
         "script_level.level_keys": [
           "CSPU5_U3- Keys - Code Refactoring Exit Ticket_virtual"
         ],
-        "script_level.chapter": 77,
-        "script_level.position": 11,
         "lesson.key": "Building an App: Image Scroller",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -1976,8 +1822,6 @@
         "script_level.level_keys": [
           "CSP Unit 5 Cumulative Assessment 3 MC_2018_2019_virtual"
         ],
-        "script_level.chapter": 78,
-        "script_level.position": 1,
         "lesson.key": "Unit 5 Assessment 3",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -1998,8 +1842,6 @@
         "script_level.level_keys": [
           "CSP U5L15 SFLP_virtual"
         ],
-        "script_level.chapter": 79,
-        "script_level.position": 1,
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -2021,8 +1863,6 @@
         "script_level.level_keys": [
           "Processing Lists with Loops_virtual"
         ],
-        "script_level.chapter": 80,
-        "script_level.position": 2,
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -2044,8 +1884,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops And Arrays - Intro For Loop_virtual"
         ],
-        "script_level.chapter": 81,
-        "script_level.position": 3,
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -2067,8 +1905,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops And Arrays - Print Array_virtual"
         ],
-        "script_level.chapter": 82,
-        "script_level.position": 4,
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -2090,8 +1926,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops And Arrays - Add 5_virtual"
         ],
-        "script_level.chapter": 83,
-        "script_level.position": 5,
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -2113,8 +1947,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops And Arrays - Divid by 2_virtual"
         ],
-        "script_level.chapter": 84,
-        "script_level.position": 6,
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -2136,8 +1968,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops And Arrays - Loop Array If_virtual"
         ],
-        "script_level.chapter": 85,
-        "script_level.position": 7,
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -2159,8 +1989,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops And Arrays - Linear Search_virtual"
         ],
-        "script_level.chapter": 86,
-        "script_level.position": 8,
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -2182,8 +2010,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops And Arrays - Counting Times_virtual"
         ],
-        "script_level.chapter": 87,
-        "script_level.position": 9,
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -2205,8 +2031,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops And Arrays - Printing Single True_virtual"
         ],
-        "script_level.chapter": 88,
-        "script_level.position": 10,
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -2228,8 +2052,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops And Arrays - Search with Boolean Var_virtual"
         ],
-        "script_level.chapter": 89,
-        "script_level.position": 11,
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -2251,8 +2073,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops And Arrays - Make it a Function_virtual"
         ],
-        "script_level.chapter": 90,
-        "script_level.position": 12,
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -2274,8 +2094,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops And Arrays - Make it a Function - add list pa_virtual"
         ],
-        "script_level.chapter": 91,
-        "script_level.position": 13,
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -2297,8 +2115,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops And Arrays - General Search Param_virtual"
         ],
-        "script_level.chapter": 92,
-        "script_level.position": 14,
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -2320,8 +2136,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops And Arrays - Find Min_virtual"
         ],
-        "script_level.chapter": 93,
-        "script_level.position": 15,
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -2342,8 +2156,6 @@
         "script_level.level_keys": [
           "CSP U5L16 SFLP_virtual"
         ],
-        "script_level.chapter": 94,
-        "script_level.position": 1,
         "lesson.key": "Functions with Return Values",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -2365,8 +2177,6 @@
         "script_level.level_keys": [
           "Using Output from Functions: The return Command_2018_2019_virtual"
         ],
-        "script_level.chapter": 95,
-        "script_level.position": 2,
         "lesson.key": "Functions with Return Values",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -2388,8 +2198,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Return Values - useMinVal_virtual"
         ],
-        "script_level.chapter": 96,
-        "script_level.position": 3,
         "lesson.key": "Functions with Return Values",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -2411,8 +2219,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Return Values - writeMaxVal_virtual"
         ],
-        "script_level.chapter": 97,
-        "script_level.position": 4,
         "lesson.key": "Functions with Return Values",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -2434,8 +2240,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Return Values - debuggingMaxVal_virtual"
         ],
-        "script_level.chapter": 98,
-        "script_level.position": 5,
         "lesson.key": "Functions with Return Values",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -2457,8 +2261,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Return Values - debuggingConstrain_virtual"
         ],
-        "script_level.chapter": 99,
-        "script_level.position": 6,
         "lesson.key": "Functions with Return Values",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -2480,8 +2282,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Return Values - constrainTurtle_virtual"
         ],
-        "script_level.chapter": 100,
-        "script_level.position": 7,
         "lesson.key": "Functions with Return Values",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -2503,8 +2303,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Return Values - wrapTurtle_virtual"
         ],
-        "script_level.chapter": 101,
-        "script_level.position": 8,
         "lesson.key": "Functions with Return Values",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -2526,8 +2324,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Canvas - introCanvas_virtual"
         ],
-        "script_level.chapter": 102,
-        "script_level.position": 1,
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -2549,8 +2345,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Canvas - 200dots_virtual"
         ],
-        "script_level.chapter": 103,
-        "script_level.position": 2,
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -2572,8 +2366,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Canvas - transparentDots_virtual"
         ],
-        "script_level.chapter": 104,
-        "script_level.position": 3,
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -2595,8 +2387,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Canvas - clickToAdd_virtual"
         ],
-        "script_level.chapter": 105,
-        "script_level.position": 4,
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -2618,8 +2408,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Canvas - usingOffsetXY_virtual"
         ],
-        "script_level.chapter": 106,
-        "script_level.position": 5,
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -2641,8 +2429,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Canvas - draw at click point_virtual"
         ],
-        "script_level.chapter": 107,
-        "script_level.position": 6,
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -2664,8 +2450,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Canvas - changeToMouseMove_virtual"
         ],
-        "script_level.chapter": 108,
-        "script_level.position": 7,
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -2687,8 +2471,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Canvas - shiftKey_virtual"
         ],
-        "script_level.chapter": 109,
-        "script_level.position": 8,
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -2710,8 +2492,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Canvas - appendToArray_virtual"
         ],
-        "script_level.chapter": 110,
-        "script_level.position": 9,
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -2733,8 +2513,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Canvas - delete_virtual"
         ],
-        "script_level.chapter": 111,
-        "script_level.position": 10,
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -2756,8 +2534,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Canvas - redrawRandom_virtual"
         ],
-        "script_level.chapter": 112,
-        "script_level.position": 11,
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -2779,8 +2555,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Canvas - redrawRandom2_virtual"
         ],
-        "script_level.chapter": 113,
-        "script_level.position": 12,
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -2802,8 +2576,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Canvas - redrawOriginal_virtual"
         ],
-        "script_level.chapter": 114,
-        "script_level.position": 13,
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -2825,8 +2597,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Canvas - movementFunction_virtual"
         ],
-        "script_level.chapter": 115,
-        "script_level.position": 14,
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -2848,8 +2618,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Canvas - movementFunction fix Orig_virtual"
         ],
-        "script_level.chapter": 116,
-        "script_level.position": 15,
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -2871,8 +2639,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Canvas - One Dot sprayPaint_virtual"
         ],
-        "script_level.chapter": 117,
-        "script_level.position": 16,
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -2894,8 +2660,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Canvas - sprayPaint_virtual"
         ],
-        "script_level.chapter": 118,
-        "script_level.position": 17,
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -2917,8 +2681,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Canvas - sketch_virtual"
         ],
-        "script_level.chapter": 119,
-        "script_level.position": 18,
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -2940,8 +2702,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Canvas - freePlay_virtual"
         ],
-        "script_level.chapter": 120,
-        "script_level.position": 19,
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -2962,8 +2722,6 @@
         "script_level.level_keys": [
           "CSP Unit 5 Cumulative Assessment 4 MC_2018_2019_virtual"
         ],
-        "script_level.chapter": 121,
-        "script_level.position": 1,
         "lesson.key": "Unit 5 Assessment 4",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -2984,8 +2742,6 @@
         "script_level.level_keys": [
           "CSP Cumulative Assess A_2018_2019_virtual"
         ],
-        "script_level.chapter": 122,
-        "script_level.position": 1,
         "lesson.key": "Unit 5 Assessment 5 - AP Pseudocode Practice Questions",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -3002,8 +2758,6 @@
         "script_level.level_keys": [
           "CSP Unit 5 Cumulative Assessment 2 MC_2018_2019_virtual"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Unit 5 Assessment 2",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-virtual-part2"
@@ -3015,8 +2769,6 @@
         "script_level.level_keys": [
           "CSP U5L11 SFLP_virtual"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 1,
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -3028,8 +2780,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops - 1_virtual"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 2,
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -3041,8 +2791,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops - 2_virtual"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 3,
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -3054,8 +2802,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops - 3_virtual"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 4,
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -3067,8 +2813,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops - Typing in Console_virtual"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 5,
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -3080,8 +2824,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops - 4_virtual"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 6,
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -3093,8 +2835,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops - 5_virtual"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 7,
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -3106,8 +2846,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops - 8_virtual"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 8,
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -3119,8 +2857,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops - 6_virtual"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 9,
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -3132,8 +2868,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops - 7_virtual"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 10,
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -3145,8 +2879,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops - 9_virtual"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 11,
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -3158,8 +2890,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops -  Complex Condition_virtual"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 12,
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -3171,8 +2901,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops - 10_virtual"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 13,
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -3184,8 +2912,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops - 11_virtual"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 14,
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -3197,8 +2923,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops - 12_virtual"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 15,
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -3210,8 +2934,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops - Plus Plus_virtual"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 16,
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -3223,8 +2945,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops - Minus Minus_virtual"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 17,
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -3236,8 +2956,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops - plus and minus = operator_virtual"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 18,
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -3249,8 +2967,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops - minus = operator_virtual"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 19,
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -3262,8 +2978,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops - 14_virtual"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 20,
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -3275,8 +2989,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops - 15_virtual"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 21,
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -3288,8 +3000,6 @@
         "script_level.level_keys": [
           "csp-pulse-check-survey-7-levelgroup-U5Ch2_2018_2019_virtual"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 22,
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -3301,8 +3011,6 @@
         "script_level.level_keys": [
           "CSP U5L12 SFLP_virtual"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 1,
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -3314,8 +3022,6 @@
         "script_level.level_keys": [
           "Make a Hypothesis_2018_2019_virtual"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 2,
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -3327,8 +3033,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Simulation - 1_virtual"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 3,
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -3340,8 +3044,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Simulation - 2_virtual"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 4,
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -3353,8 +3055,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Simulation - 2.1_virtual"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 5,
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -3366,8 +3066,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Simulation - 2.5_virtual"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 6,
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -3379,8 +3077,6 @@
         "script_level.level_keys": [
           "Update your Hypothesis - Part 1_2018_2019_virtual"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 7,
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -3392,8 +3088,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Simulation - 3_virtual"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 8,
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -3405,8 +3099,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Simulation - 4_virtual"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 9,
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -3418,8 +3110,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Simulation - 5_virtual"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 10,
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -3431,8 +3121,6 @@
         "script_level.level_keys": [
           "Update your Hypothesis - Part 2_2018_2019_virtual"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 11,
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -3444,8 +3132,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Simulation - 6_virtual"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 12,
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -3457,8 +3143,6 @@
         "script_level.level_keys": [
           "CSP U5L13 SFLP_virtual"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 1,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -3470,8 +3154,6 @@
         "script_level.level_keys": [
           "Introduction to Lists - Part 1_virtual"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 2,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -3483,8 +3165,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Arrays - createFirstArray_virtual"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 3,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -3496,8 +3176,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Arrays - appendItem_virtual"
         ],
-        "script_level.chapter": 39,
-        "script_level.position": 4,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -3509,8 +3187,6 @@
         "script_level.level_keys": [
           "Introduction to Lists - Part 2_virtual"
         ],
-        "script_level.chapter": 40,
-        "script_level.position": 5,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -3522,8 +3198,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Arrays - introIndex_virtual"
         ],
-        "script_level.chapter": 41,
-        "script_level.position": 6,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -3535,8 +3209,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Arrays - indexPractice_virtual"
         ],
-        "script_level.chapter": 42,
-        "script_level.position": 7,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -3548,8 +3220,6 @@
         "script_level.level_keys": [
           "Introduction to Lists - Part 3_virtual"
         ],
-        "script_level.chapter": 43,
-        "script_level.position": 8,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -3561,8 +3231,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Arrays - assignment_virtual"
         ],
-        "script_level.chapter": 44,
-        "script_level.position": 9,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -3574,8 +3242,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Arrays - assignment2_virtual"
         ],
-        "script_level.chapter": 45,
-        "script_level.position": 10,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -3587,8 +3253,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Arrays - assignment3_virtual"
         ],
-        "script_level.chapter": 46,
-        "script_level.position": 11,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -3600,8 +3264,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Arrays - stringsInArrays_virtual"
         ],
-        "script_level.chapter": 47,
-        "script_level.position": 12,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -3613,8 +3275,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Arrays - insertingItems_virtual"
         ],
-        "script_level.chapter": 48,
-        "script_level.position": 13,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -3626,8 +3286,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Arrays - remove_virtual"
         ],
-        "script_level.chapter": 49,
-        "script_level.position": 14,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -3639,8 +3297,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Arrays - insertionErrors_virtual"
         ],
-        "script_level.chapter": 50,
-        "script_level.position": 15,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -3652,8 +3308,6 @@
         "script_level.level_keys": [
           "Introduction to Lists - Part 4_virtual"
         ],
-        "script_level.chapter": 51,
-        "script_level.position": 16,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -3665,8 +3319,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Arrays - length_virtual"
         ],
-        "script_level.chapter": 52,
-        "script_level.position": 17,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -3678,8 +3330,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Arrays - lengthMinus1_virtual"
         ],
-        "script_level.chapter": 53,
-        "script_level.position": 18,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -3691,8 +3341,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Arrays - expressionsAsIndexes_virtual"
         ],
-        "script_level.chapter": 54,
-        "script_level.position": 19,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -3704,8 +3352,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Arrays - Demo App_virtual"
         ],
-        "script_level.chapter": 55,
-        "script_level.position": 20,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -3717,8 +3363,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Arrays - favThings giveIDs_virtual"
         ],
-        "script_level.chapter": 56,
-        "script_level.position": 21,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -3730,8 +3374,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Arrays - favThings createArray_virtual"
         ],
-        "script_level.chapter": 57,
-        "script_level.position": 22,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -3743,8 +3385,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Arrays - favThings firstOutput_virtual"
         ],
-        "script_level.chapter": 58,
-        "script_level.position": 23,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -3756,8 +3396,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Arrays - favThings Counting Variable_virtual"
         ],
-        "script_level.chapter": 59,
-        "script_level.position": 24,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -3769,8 +3407,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Arrays - favThings Next_virtual"
         ],
-        "script_level.chapter": 60,
-        "script_level.position": 25,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -3782,8 +3418,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Arrays - favThings Prev_virtual"
         ],
-        "script_level.chapter": 61,
-        "script_level.position": 26,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -3795,8 +3429,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Arrays - favThings addItem_virtual"
         ],
-        "script_level.chapter": 62,
-        "script_level.position": 27,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -3808,8 +3440,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Arrays - favThings bounds_virtual"
         ],
-        "script_level.chapter": 63,
-        "script_level.position": 28,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -3821,8 +3451,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Arrays - favThings keepPlaying_virtual"
         ],
-        "script_level.chapter": 64,
-        "script_level.position": 29,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -3834,8 +3462,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Arrays - Wrap Up 1_virtual"
         ],
-        "script_level.chapter": 65,
-        "script_level.position": 30,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -3847,8 +3473,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Arrays - Wrap Up 2_virtual"
         ],
-        "script_level.chapter": 66,
-        "script_level.position": 31,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -3860,8 +3484,6 @@
         "script_level.level_keys": [
           "CSP U5L14 SFLP_virtual"
         ],
-        "script_level.chapter": 67,
-        "script_level.position": 1,
         "lesson.key": "Building an App: Image Scroller",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -3873,8 +3495,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Keys - Demo App_virtual"
         ],
-        "script_level.chapter": 68,
-        "script_level.position": 2,
         "lesson.key": "Building an App: Image Scroller",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -3886,8 +3506,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L25 - drag out key event_virtual"
         ],
-        "script_level.chapter": 69,
-        "script_level.position": 3,
         "lesson.key": "Building an App: Image Scroller",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -3899,8 +3517,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Keys - Key Up and Down_virtual"
         ],
-        "script_level.chapter": 70,
-        "script_level.position": 4,
         "lesson.key": "Building an App: Image Scroller",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -3912,8 +3528,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L25 - play sound when up key_virtual"
         ],
-        "script_level.chapter": 71,
-        "script_level.position": 5,
         "lesson.key": "Building an App: Image Scroller",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -3925,8 +3539,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Keys - Multiple Keys_virtual"
         ],
-        "script_level.chapter": 72,
-        "script_level.position": 6,
         "lesson.key": "Building an App: Image Scroller",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -3938,8 +3550,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Keys - Buttons and Keys_virtual"
         ],
-        "script_level.chapter": 73,
-        "script_level.position": 7,
         "lesson.key": "Building an App: Image Scroller",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -3951,8 +3561,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Keys - Functions_virtual"
         ],
-        "script_level.chapter": 74,
-        "script_level.position": 8,
         "lesson.key": "Building an App: Image Scroller",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -3964,8 +3572,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Keys - Add Image URLs_virtual"
         ],
-        "script_level.chapter": 75,
-        "script_level.position": 9,
         "lesson.key": "Building an App: Image Scroller",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -3977,8 +3583,6 @@
         "script_level.level_keys": [
           "Project - Final Image Scroller_virtual"
         ],
-        "script_level.chapter": 76,
-        "script_level.position": 10,
         "lesson.key": "Building an App: Image Scroller",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -3990,8 +3594,6 @@
         "script_level.level_keys": [
           "CSPU5_U3- Keys - Code Refactoring Exit Ticket_virtual"
         ],
-        "script_level.chapter": 77,
-        "script_level.position": 11,
         "lesson.key": "Building an App: Image Scroller",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -4003,8 +3605,6 @@
         "script_level.level_keys": [
           "CSP Unit 5 Cumulative Assessment 3 MC_2018_2019_virtual"
         ],
-        "script_level.chapter": 78,
-        "script_level.position": 1,
         "lesson.key": "Unit 5 Assessment 3",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -4016,8 +3616,6 @@
         "script_level.level_keys": [
           "CSP U5L15 SFLP_virtual"
         ],
-        "script_level.chapter": 79,
-        "script_level.position": 1,
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -4029,8 +3627,6 @@
         "script_level.level_keys": [
           "Processing Lists with Loops_virtual"
         ],
-        "script_level.chapter": 80,
-        "script_level.position": 2,
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -4042,8 +3638,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops And Arrays - Intro For Loop_virtual"
         ],
-        "script_level.chapter": 81,
-        "script_level.position": 3,
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -4055,8 +3649,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops And Arrays - Print Array_virtual"
         ],
-        "script_level.chapter": 82,
-        "script_level.position": 4,
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -4068,8 +3660,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops And Arrays - Add 5_virtual"
         ],
-        "script_level.chapter": 83,
-        "script_level.position": 5,
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -4081,8 +3671,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops And Arrays - Divid by 2_virtual"
         ],
-        "script_level.chapter": 84,
-        "script_level.position": 6,
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -4094,8 +3682,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops And Arrays - Loop Array If_virtual"
         ],
-        "script_level.chapter": 85,
-        "script_level.position": 7,
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -4107,8 +3693,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops And Arrays - Linear Search_virtual"
         ],
-        "script_level.chapter": 86,
-        "script_level.position": 8,
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -4120,8 +3704,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops And Arrays - Counting Times_virtual"
         ],
-        "script_level.chapter": 87,
-        "script_level.position": 9,
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -4133,8 +3715,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops And Arrays - Printing Single True_virtual"
         ],
-        "script_level.chapter": 88,
-        "script_level.position": 10,
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -4146,8 +3726,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops And Arrays - Search with Boolean Var_virtual"
         ],
-        "script_level.chapter": 89,
-        "script_level.position": 11,
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -4159,8 +3737,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops And Arrays - Make it a Function_virtual"
         ],
-        "script_level.chapter": 90,
-        "script_level.position": 12,
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -4172,8 +3748,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops And Arrays - Make it a Function - add list pa_virtual"
         ],
-        "script_level.chapter": 91,
-        "script_level.position": 13,
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -4185,8 +3759,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops And Arrays - General Search Param_virtual"
         ],
-        "script_level.chapter": 92,
-        "script_level.position": 14,
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -4198,8 +3770,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops And Arrays - Find Min_virtual"
         ],
-        "script_level.chapter": 93,
-        "script_level.position": 15,
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -4211,8 +3781,6 @@
         "script_level.level_keys": [
           "CSP U5L16 SFLP_virtual"
         ],
-        "script_level.chapter": 94,
-        "script_level.position": 1,
         "lesson.key": "Functions with Return Values",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -4224,8 +3792,6 @@
         "script_level.level_keys": [
           "Using Output from Functions: The return Command_2018_2019_virtual"
         ],
-        "script_level.chapter": 95,
-        "script_level.position": 2,
         "lesson.key": "Functions with Return Values",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -4237,8 +3803,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Return Values - useMinVal_virtual"
         ],
-        "script_level.chapter": 96,
-        "script_level.position": 3,
         "lesson.key": "Functions with Return Values",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -4250,8 +3814,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Return Values - writeMaxVal_virtual"
         ],
-        "script_level.chapter": 97,
-        "script_level.position": 4,
         "lesson.key": "Functions with Return Values",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -4263,8 +3825,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Return Values - debuggingMaxVal_virtual"
         ],
-        "script_level.chapter": 98,
-        "script_level.position": 5,
         "lesson.key": "Functions with Return Values",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -4276,8 +3836,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Return Values - debuggingConstrain_virtual"
         ],
-        "script_level.chapter": 99,
-        "script_level.position": 6,
         "lesson.key": "Functions with Return Values",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -4289,8 +3847,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Return Values - constrainTurtle_virtual"
         ],
-        "script_level.chapter": 100,
-        "script_level.position": 7,
         "lesson.key": "Functions with Return Values",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -4302,8 +3858,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Return Values - wrapTurtle_virtual"
         ],
-        "script_level.chapter": 101,
-        "script_level.position": 8,
         "lesson.key": "Functions with Return Values",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -4315,8 +3869,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Canvas - introCanvas_virtual"
         ],
-        "script_level.chapter": 102,
-        "script_level.position": 1,
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -4328,8 +3880,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Canvas - 200dots_virtual"
         ],
-        "script_level.chapter": 103,
-        "script_level.position": 2,
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -4341,8 +3891,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Canvas - transparentDots_virtual"
         ],
-        "script_level.chapter": 104,
-        "script_level.position": 3,
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -4354,8 +3902,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Canvas - clickToAdd_virtual"
         ],
-        "script_level.chapter": 105,
-        "script_level.position": 4,
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -4367,8 +3913,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Canvas - usingOffsetXY_virtual"
         ],
-        "script_level.chapter": 106,
-        "script_level.position": 5,
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -4380,8 +3924,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Canvas - draw at click point_virtual"
         ],
-        "script_level.chapter": 107,
-        "script_level.position": 6,
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -4393,8 +3935,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Canvas - changeToMouseMove_virtual"
         ],
-        "script_level.chapter": 108,
-        "script_level.position": 7,
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -4406,8 +3946,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Canvas - shiftKey_virtual"
         ],
-        "script_level.chapter": 109,
-        "script_level.position": 8,
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -4419,8 +3957,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Canvas - appendToArray_virtual"
         ],
-        "script_level.chapter": 110,
-        "script_level.position": 9,
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -4432,8 +3968,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Canvas - delete_virtual"
         ],
-        "script_level.chapter": 111,
-        "script_level.position": 10,
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -4445,8 +3979,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Canvas - redrawRandom_virtual"
         ],
-        "script_level.chapter": 112,
-        "script_level.position": 11,
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -4458,8 +3990,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Canvas - redrawRandom2_virtual"
         ],
-        "script_level.chapter": 113,
-        "script_level.position": 12,
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -4471,8 +4001,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Canvas - redrawOriginal_virtual"
         ],
-        "script_level.chapter": 114,
-        "script_level.position": 13,
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -4484,8 +4012,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Canvas - movementFunction_virtual"
         ],
-        "script_level.chapter": 115,
-        "script_level.position": 14,
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -4497,8 +4023,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Canvas - movementFunction fix Orig_virtual"
         ],
-        "script_level.chapter": 116,
-        "script_level.position": 15,
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -4510,8 +4034,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Canvas - One Dot sprayPaint_virtual"
         ],
-        "script_level.chapter": 117,
-        "script_level.position": 16,
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -4523,8 +4045,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Canvas - sprayPaint_virtual"
         ],
-        "script_level.chapter": 118,
-        "script_level.position": 17,
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -4536,8 +4056,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Canvas - sketch_virtual"
         ],
-        "script_level.chapter": 119,
-        "script_level.position": 18,
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -4549,8 +4067,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Canvas - freePlay_virtual"
         ],
-        "script_level.chapter": 120,
-        "script_level.position": 19,
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -4562,8 +4078,6 @@
         "script_level.level_keys": [
           "CSP Unit 5 Cumulative Assessment 4 MC_2018_2019_virtual"
         ],
-        "script_level.chapter": 121,
-        "script_level.position": 1,
         "lesson.key": "Unit 5 Assessment 4",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"
@@ -4575,8 +4089,6 @@
         "script_level.level_keys": [
           "CSP Cumulative Assess A_2018_2019_virtual"
         ],
-        "script_level.chapter": 122,
-        "script_level.position": 1,
         "lesson.key": "Unit 5 Assessment 5 - AP Pseudocode Practice Questions",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-virtual-part2"

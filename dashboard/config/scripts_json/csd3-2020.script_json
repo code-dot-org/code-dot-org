@@ -503,8 +503,6 @@
         "script_level.level_keys": [
           "CSD U3L01 TFMD_2020"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Programming for Entertainment",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -526,8 +524,6 @@
         "script_level.level_keys": [
           "CSD U3 Entertainment_2018_2019_pilot_2020"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Programming for Entertainment",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -549,8 +545,6 @@
         "script_level.level_keys": [
           "CSD U3 Entertainment Sample 4_2020"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "Programming for Entertainment",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -572,8 +566,6 @@
         "script_level.level_keys": [
           "CSD U3 Entertainment Sample 3_2020"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "Programming for Entertainment",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -595,8 +587,6 @@
         "script_level.level_keys": [
           "CSD U3 Entertainment Sample 1_2020"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 5,
         "lesson.key": "Programming for Entertainment",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -618,8 +608,6 @@
         "script_level.level_keys": [
           "CSD U3 Entertainment Sample 2_2020"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 6,
         "lesson.key": "Programming for Entertainment",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -641,8 +629,6 @@
         "script_level.level_keys": [
           "CSD U3L02 TFMD_2020"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 1,
         "lesson.key": "Plotting Shapes",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -664,8 +650,6 @@
         "script_level.level_keys": [
           "CSD U3 Plotting Shapes Shape Lab_2020"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 2,
         "lesson.key": "Plotting Shapes",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -687,8 +671,6 @@
         "script_level.level_keys": [
           "CSD U3L03 TFMD_2020"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 1,
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -710,8 +692,6 @@
         "script_level.level_keys": [
           "CSD U3 rect_2020"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 2,
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -733,8 +713,6 @@
         "script_level.level_keys": [
           "CSD: Drawing in Game Lab 1_2020"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 3,
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -756,8 +734,6 @@
         "script_level.level_keys": [
           "CSD U3 Drawing Squares to Corners_2020"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 4,
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -779,8 +755,6 @@
         "script_level.level_keys": [
           "CSD: Drawing in Game Lab 2_2020"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 5,
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -802,8 +776,6 @@
         "script_level.level_keys": [
           "CSD U3 fill_2020"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 6,
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -825,8 +797,6 @@
         "script_level.level_keys": [
           "CSD U3 sequence_2020"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 7,
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -848,8 +818,6 @@
         "script_level.level_keys": [
           "CSD U3 ellipse_2020"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 8,
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -871,8 +839,6 @@
         "script_level.level_keys": [
           "CSD U3 drawing practice choice_2020"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 9,
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -894,8 +860,6 @@
         "script_level.level_keys": [
           "CSD U3 debug_2020"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 10,
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -917,8 +881,6 @@
         "script_level.level_keys": [
           "CSD U3 drawing challenges_2020"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 11,
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -940,8 +902,6 @@
         "script_level.level_keys": [
           "CSD U3L04 TFMD_2020"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 1,
         "lesson.key": "Shapes and Parameters",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -963,8 +923,6 @@
         "script_level.level_keys": [
           "CSD U3 Random Taller Rectangle_2020"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 2,
         "lesson.key": "Shapes and Parameters",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -986,8 +944,6 @@
         "script_level.level_keys": [
           "CSD U3 Random Ellipse Behind_2018_2020"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 3,
         "lesson.key": "Shapes and Parameters",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -1009,8 +965,6 @@
         "script_level.level_keys": [
           "CSD U3 Random background_2020"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 4,
         "lesson.key": "Shapes and Parameters",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -1032,8 +986,6 @@
         "script_level.level_keys": [
           "CSD U3 Random background2_2020"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 5,
         "lesson.key": "Shapes and Parameters",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -1055,8 +1007,6 @@
         "script_level.level_keys": [
           "CSD U3 Random Debug Grass_2020"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 6,
         "lesson.key": "Shapes and Parameters",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -1078,8 +1028,6 @@
         "script_level.level_keys": [
           "CSD Games parameters practice_2020"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 7,
         "lesson.key": "Shapes and Parameters",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -1101,8 +1049,6 @@
         "script_level.level_keys": [
           "CSD U3 Random Debug Cloud_2018_2020"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 8,
         "lesson.key": "Shapes and Parameters",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -1124,8 +1070,6 @@
         "script_level.level_keys": [
           "CSD Games Parameters challenge_2020"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 9,
         "lesson.key": "Shapes and Parameters",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -1147,8 +1091,6 @@
         "script_level.level_keys": [
           "CSD U3L05 TFMD_2020"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 1,
         "lesson.key": "Variables",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -1170,8 +1112,6 @@
         "script_level.level_keys": [
           "CSD U3 Variables Predict Where X_2020"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 2,
         "lesson.key": "Variables",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -1193,8 +1133,6 @@
         "script_level.level_keys": [
           "Introduction to Variables - Part 1_2020"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 3,
         "lesson.key": "Variables",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -1216,8 +1154,6 @@
         "script_level.level_keys": [
           "CSD U3 Variables Predict Where XY_2020"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 4,
         "lesson.key": "Variables",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -1239,8 +1175,6 @@
         "script_level.level_keys": [
           "CSD U3 Variables naming rules v2_2018_2020"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 5,
         "lesson.key": "Variables",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -1262,8 +1196,6 @@
         "script_level.level_keys": [
           "CSD U3 Variables Draw Poppy_2020"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 6,
         "lesson.key": "Variables",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -1285,8 +1217,6 @@
         "script_level.level_keys": [
           "CSD Games variables practice_2020"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 7,
         "lesson.key": "Variables",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -1308,8 +1238,6 @@
         "script_level.level_keys": [
           "CSD U3 Variables assessment_2020"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 8,
         "lesson.key": "Variables",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -1331,8 +1259,6 @@
         "script_level.level_keys": [
           "CSD Games variables challenge_2020"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 9,
         "lesson.key": "Variables",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -1354,8 +1280,6 @@
         "script_level.level_keys": [
           "CSD U3L06 TFMD_2020"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 1,
         "lesson.key": "Random Numbers",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -1377,8 +1301,6 @@
         "script_level.level_keys": [
           "CSD U3 Random random ellipse_2018_2020"
         ],
-        "script_level.chapter": 39,
-        "script_level.position": 2,
         "lesson.key": "Random Numbers",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -1400,8 +1322,6 @@
         "script_level.level_keys": [
           "CSD U3 Random random ellipse2_2018_2020"
         ],
-        "script_level.chapter": 40,
-        "script_level.position": 3,
         "lesson.key": "Random Numbers",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -1423,8 +1343,6 @@
         "script_level.level_keys": [
           "CSD U3 Variables random with assignment_2020"
         ],
-        "script_level.chapter": 41,
-        "script_level.position": 4,
         "lesson.key": "Random Numbers",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -1446,8 +1364,6 @@
         "script_level.level_keys": [
           "CSD U3 Variables random reassign_2020"
         ],
-        "script_level.chapter": 42,
-        "script_level.position": 5,
         "lesson.key": "Random Numbers",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -1469,8 +1385,6 @@
         "script_level.level_keys": [
           "CSD games random practice_2020"
         ],
-        "script_level.chapter": 43,
-        "script_level.position": 6,
         "lesson.key": "Random Numbers",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -1492,8 +1406,6 @@
         "script_level.level_keys": [
           "CSD U3 Random rainbow snake_2018_2020"
         ],
-        "script_level.chapter": 44,
-        "script_level.position": 7,
         "lesson.key": "Random Numbers",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -1515,8 +1427,6 @@
         "script_level.level_keys": [
           "CSD games random challenge_2020"
         ],
-        "script_level.chapter": 45,
-        "script_level.position": 8,
         "lesson.key": "Random Numbers",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -1538,8 +1448,6 @@
         "script_level.level_keys": [
           "CSD U3L07 TFMD_2020"
         ],
-        "script_level.chapter": 46,
-        "script_level.position": 1,
         "lesson.key": "Sprites",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -1561,8 +1469,6 @@
         "script_level.level_keys": [
           "CSD U3 Sprites Exploration_2020"
         ],
-        "script_level.chapter": 47,
-        "script_level.position": 2,
         "lesson.key": "Sprites",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -1584,8 +1490,6 @@
         "script_level.level_keys": [
           "CSD: Sprites in Game Lab_2020"
         ],
-        "script_level.chapter": 48,
-        "script_level.position": 3,
         "lesson.key": "Sprites",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -1607,8 +1511,6 @@
         "script_level.level_keys": [
           "CSD U3 Sprites intro sprites_2020"
         ],
-        "script_level.chapter": 49,
-        "script_level.position": 4,
         "lesson.key": "Sprites",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -1630,8 +1532,6 @@
         "script_level.level_keys": [
           "CSD U3 Sprites intro debug_2020"
         ],
-        "script_level.chapter": 50,
-        "script_level.position": 5,
         "lesson.key": "Sprites",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -1653,8 +1553,6 @@
         "script_level.level_keys": [
           "CSD U3 Sprites anitab 1_2020"
         ],
-        "script_level.chapter": 51,
-        "script_level.position": 6,
         "lesson.key": "Sprites",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -1676,8 +1574,6 @@
         "script_level.level_keys": [
           "CSD: Animation Tab_2020"
         ],
-        "script_level.chapter": 52,
-        "script_level.position": 7,
         "lesson.key": "Sprites",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -1699,8 +1595,6 @@
         "script_level.level_keys": [
           "CSD U3 Sprites sequencing_2020"
         ],
-        "script_level.chapter": 53,
-        "script_level.position": 8,
         "lesson.key": "Sprites",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -1722,8 +1616,6 @@
         "script_level.level_keys": [
           "CSD U3 drawSprites placement match_2019_pilot_2020"
         ],
-        "script_level.chapter": 54,
-        "script_level.position": 9,
         "lesson.key": "Sprites",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -1745,8 +1637,6 @@
         "script_level.level_keys": [
           "CSD Games Sprites practice_2020"
         ],
-        "script_level.chapter": 55,
-        "script_level.position": 10,
         "lesson.key": "Sprites",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -1768,8 +1658,6 @@
         "script_level.level_keys": [
           "CSD U3 Sprites assessment_2020"
         ],
-        "script_level.chapter": 56,
-        "script_level.position": 11,
         "lesson.key": "Sprites",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -1791,8 +1679,6 @@
         "script_level.level_keys": [
           "CSD Games Sprites Challenges_2020"
         ],
-        "script_level.chapter": 57,
-        "script_level.position": 12,
         "lesson.key": "Sprites",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -1814,8 +1700,6 @@
         "script_level.level_keys": [
           "CSD U3L08 TFMD_2020"
         ],
-        "script_level.chapter": 58,
-        "script_level.position": 1,
         "lesson.key": "Sprite Properties",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -1837,8 +1721,6 @@
         "script_level.level_keys": [
           "CSD Games properties predict_2020"
         ],
-        "script_level.chapter": 59,
-        "script_level.position": 2,
         "lesson.key": "Sprite Properties",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -1860,8 +1742,6 @@
         "script_level.level_keys": [
           "CSD Games properties xy_2020"
         ],
-        "script_level.chapter": 60,
-        "script_level.position": 3,
         "lesson.key": "Sprite Properties",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -1883,8 +1763,6 @@
         "script_level.level_keys": [
           "CSD Games properties new_2020"
         ],
-        "script_level.chapter": 61,
-        "script_level.position": 4,
         "lesson.key": "Sprite Properties",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -1906,8 +1784,6 @@
         "script_level.level_keys": [
           "CSD Games Properties practice_2020"
         ],
-        "script_level.chapter": 62,
-        "script_level.position": 5,
         "lesson.key": "Sprite Properties",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -1929,8 +1805,6 @@
         "script_level.level_keys": [
           "CSD Games properties assessment_2020"
         ],
-        "script_level.chapter": 63,
-        "script_level.position": 6,
         "lesson.key": "Sprite Properties",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -1952,8 +1826,6 @@
         "script_level.level_keys": [
           "CSD Games Properties challenge_2020"
         ],
-        "script_level.chapter": 64,
-        "script_level.position": 7,
         "lesson.key": "Sprite Properties",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -1975,8 +1847,6 @@
         "script_level.level_keys": [
           "CSD U3L09 TFMD_2020"
         ],
-        "script_level.chapter": 65,
-        "script_level.position": 1,
         "lesson.key": "Text",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -1998,8 +1868,6 @@
         "script_level.level_keys": [
           "CSD web text explore"
         ],
-        "script_level.chapter": 66,
-        "script_level.position": 2,
         "lesson.key": "Text",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -2021,8 +1889,6 @@
         "script_level.level_keys": [
           "CSD U3 Sprites text_2020"
         ],
-        "script_level.chapter": 67,
-        "script_level.position": 3,
         "lesson.key": "Text",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -2044,8 +1910,6 @@
         "script_level.level_keys": [
           "CSD web text size"
         ],
-        "script_level.chapter": 68,
-        "script_level.position": 4,
         "lesson.key": "Text",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -2067,8 +1931,6 @@
         "script_level.level_keys": [
           "CSD web text practice choice_2020"
         ],
-        "script_level.chapter": 69,
-        "script_level.position": 5,
         "lesson.key": "Text",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -2090,8 +1952,6 @@
         "script_level.level_keys": [
           "CSD web text assessment"
         ],
-        "script_level.chapter": 70,
-        "script_level.position": 6,
         "lesson.key": "Text",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -2113,8 +1973,6 @@
         "script_level.level_keys": [
           "CSD web text challenge choice_2020"
         ],
-        "script_level.chapter": 71,
-        "script_level.position": 7,
         "lesson.key": "Text",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -2136,8 +1994,6 @@
         "script_level.level_keys": [
           "CSD U3L09a TFMD_2020"
         ],
-        "script_level.chapter": 72,
-        "script_level.position": 1,
         "lesson.key": "Mini-Project: Captioned Scenes",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -2159,8 +2015,6 @@
         "script_level.level_keys": [
           "CSD U3 Scene Example_2018_2020"
         ],
-        "script_level.chapter": 73,
-        "script_level.position": 2,
         "lesson.key": "Mini-Project: Captioned Scenes",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -2182,8 +2036,6 @@
         "script_level.level_keys": [
           "CSD U3 Sprites scene drawing_2020"
         ],
-        "script_level.chapter": 74,
-        "script_level.position": 3,
         "lesson.key": "Mini-Project: Captioned Scenes",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -2205,8 +2057,6 @@
         "script_level.level_keys": [
           "CSD U3 Sprites scene sprites_2020"
         ],
-        "script_level.chapter": 75,
-        "script_level.position": 4,
         "lesson.key": "Mini-Project: Captioned Scenes",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -2228,8 +2078,6 @@
         "script_level.level_keys": [
           "CSD U3 Sprites scene text_2020"
         ],
-        "script_level.chapter": 76,
-        "script_level.position": 5,
         "lesson.key": "Mini-Project: Captioned Scenes",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -2251,8 +2099,6 @@
         "script_level.level_keys": [
           "CSD U3 Sprites scene challenge_2020"
         ],
-        "script_level.chapter": 77,
-        "script_level.position": 6,
         "lesson.key": "Mini-Project: Captioned Scenes",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -2274,8 +2120,6 @@
         "script_level.level_keys": [
           "CSD U3L10 TFMD pilot_2020"
         ],
-        "script_level.chapter": 78,
-        "script_level.position": 1,
         "lesson.key": "The Draw Loop",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -2297,8 +2141,6 @@
         "script_level.level_keys": [
           "CSD: Introduction to the Draw Loop_2020"
         ],
-        "script_level.chapter": 79,
-        "script_level.position": 2,
         "lesson.key": "The Draw Loop",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -2320,8 +2162,6 @@
         "script_level.level_keys": [
           "CSD U3 Draw Loop Plugged predict 1_2020"
         ],
-        "script_level.chapter": 80,
-        "script_level.position": 3,
         "lesson.key": "The Draw Loop",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -2343,8 +2183,6 @@
         "script_level.level_keys": [
           "CSD U3 Draw Loop Plugged orange and green_2020"
         ],
-        "script_level.chapter": 81,
-        "script_level.position": 4,
         "lesson.key": "The Draw Loop",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -2366,8 +2204,6 @@
         "script_level.level_keys": [
           "CSD U3 Draw Loop Plugged predict 2_2020"
         ],
-        "script_level.chapter": 82,
-        "script_level.position": 5,
         "lesson.key": "The Draw Loop",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -2389,8 +2225,6 @@
         "script_level.level_keys": [
           "CSD U3 dancing alien_2020"
         ],
-        "script_level.chapter": 83,
-        "script_level.position": 6,
         "lesson.key": "The Draw Loop",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -2412,8 +2246,6 @@
         "script_level.level_keys": [
           "CSD U3 Draw Loop Plugged wiggle sprite x_2020"
         ],
-        "script_level.chapter": 84,
-        "script_level.position": 7,
         "lesson.key": "The Draw Loop",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -2435,8 +2267,6 @@
         "script_level.level_keys": [
           "CSD web draw loop practice choice"
         ],
-        "script_level.chapter": 85,
-        "script_level.position": 8,
         "lesson.key": "The Draw Loop",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -2458,8 +2288,6 @@
         "script_level.level_keys": [
           "CSD U3 Draw Loop Plugged wiggle sprite y_2020"
         ],
-        "script_level.chapter": 86,
-        "script_level.position": 9,
         "lesson.key": "The Draw Loop",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -2481,8 +2309,6 @@
         "script_level.level_keys": [
           "CSD web draw loop challenge choice"
         ],
-        "script_level.chapter": 87,
-        "script_level.position": 10,
         "lesson.key": "The Draw Loop",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -2504,8 +2330,6 @@
         "script_level.level_keys": [
           "CSD U3L12 TFMD_2020"
         ],
-        "script_level.chapter": 88,
-        "script_level.position": 1,
         "lesson.key": "Sprite Movement",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -2527,8 +2351,6 @@
         "script_level.level_keys": [
           "CSD U3 - Simple Counter Predict_2020"
         ],
-        "script_level.chapter": 89,
-        "script_level.position": 2,
         "lesson.key": "Sprite Movement",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -2550,8 +2372,6 @@
         "script_level.level_keys": [
           "CSD: Animating Sprite Movement_2020"
         ],
-        "script_level.chapter": 90,
-        "script_level.position": 3,
         "lesson.key": "Sprite Movement",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -2573,8 +2393,6 @@
         "script_level.level_keys": [
           "CSD U3 Sprite Movement Right_2020"
         ],
-        "script_level.chapter": 91,
-        "script_level.position": 4,
         "lesson.key": "Sprite Movement",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -2596,8 +2414,6 @@
         "script_level.level_keys": [
           "CSD U3 Sprite Movement Left_2020"
         ],
-        "script_level.chapter": 92,
-        "script_level.position": 5,
         "lesson.key": "Sprite Movement",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -2619,8 +2435,6 @@
         "script_level.level_keys": [
           "CSD U3 Diagonal Movement_2020"
         ],
-        "script_level.chapter": 93,
-        "script_level.position": 6,
         "lesson.key": "Sprite Movement",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -2642,8 +2456,6 @@
         "script_level.level_keys": [
           "CSD U3 Sprite Movement Predict_2020"
         ],
-        "script_level.chapter": 94,
-        "script_level.position": 7,
         "lesson.key": "Sprite Movement",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -2665,8 +2477,6 @@
         "script_level.level_keys": [
           "CSD web movement practice choice"
         ],
-        "script_level.chapter": 95,
-        "script_level.position": 8,
         "lesson.key": "Sprite Movement",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -2688,8 +2498,6 @@
         "script_level.level_keys": [
           "CSD U3 Movement Fish_2020"
         ],
-        "script_level.chapter": 96,
-        "script_level.position": 9,
         "lesson.key": "Sprite Movement",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -2711,8 +2519,6 @@
         "script_level.level_keys": [
           "CSD web movement challenge choice"
         ],
-        "script_level.chapter": 97,
-        "script_level.position": 10,
         "lesson.key": "Sprite Movement",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -2734,8 +2540,6 @@
         "script_level.level_keys": [
           "CSD U3L13 TFMD_2020"
         ],
-        "script_level.chapter": 98,
-        "script_level.position": 1,
         "lesson.key": "Mini-Project: Animation",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -2757,8 +2561,6 @@
         "script_level.level_keys": [
           "CSD web project animated example"
         ],
-        "script_level.chapter": 99,
-        "script_level.position": 2,
         "lesson.key": "Mini-Project: Animation",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -2780,8 +2582,6 @@
         "script_level.level_keys": [
           "CSD web project animated plan"
         ],
-        "script_level.chapter": 100,
-        "script_level.position": 3,
         "lesson.key": "Mini-Project: Animation",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -2803,8 +2603,6 @@
         "script_level.level_keys": [
           "CSD web project animated background"
         ],
-        "script_level.chapter": 101,
-        "script_level.position": 4,
         "lesson.key": "Mini-Project: Animation",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -2826,8 +2624,6 @@
         "script_level.level_keys": [
           "CSD web project animated sprites"
         ],
-        "script_level.chapter": 102,
-        "script_level.position": 5,
         "lesson.key": "Mini-Project: Animation",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -2849,8 +2645,6 @@
         "script_level.level_keys": [
           "CSD web project animated text"
         ],
-        "script_level.chapter": 103,
-        "script_level.position": 6,
         "lesson.key": "Mini-Project: Animation",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -2872,8 +2666,6 @@
         "script_level.level_keys": [
           "CSD web project animated movement"
         ],
-        "script_level.chapter": 104,
-        "script_level.position": 7,
         "lesson.key": "Mini-Project: Animation",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -2895,8 +2687,6 @@
         "script_level.level_keys": [
           "CSD web project animated review"
         ],
-        "script_level.chapter": 105,
-        "script_level.position": 8,
         "lesson.key": "Mini-Project: Animation",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -2918,8 +2708,6 @@
         "script_level.level_keys": [
           "CSD U3L14 TFMD_2020"
         ],
-        "script_level.chapter": 106,
-        "script_level.position": 1,
         "lesson.key": "Conditionals",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -2941,8 +2729,6 @@
         "script_level.level_keys": [
           "CSD U3 Boolean Predict_2020"
         ],
-        "script_level.chapter": 107,
-        "script_level.position": 2,
         "lesson.key": "Conditionals",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -2964,8 +2750,6 @@
         "script_level.level_keys": [
           "CSD U3 - Booleans Video_2020"
         ],
-        "script_level.chapter": 108,
-        "script_level.position": 3,
         "lesson.key": "Conditionals",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -2987,8 +2771,6 @@
         "script_level.level_keys": [
           "CSD U3 - conditionals - Matching_2018_2019_pilot_2020"
         ],
-        "script_level.chapter": 109,
-        "script_level.position": 4,
         "lesson.key": "Conditionals",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -3010,8 +2792,6 @@
         "script_level.level_keys": [
           "CSD U3 - conditionals - transition_2020"
         ],
-        "script_level.chapter": 110,
-        "script_level.position": 5,
         "lesson.key": "Conditionals",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -3033,8 +2813,6 @@
         "script_level.level_keys": [
           "CSD U3 - conditionals - first conditional_2020"
         ],
-        "script_level.chapter": 111,
-        "script_level.position": 6,
         "lesson.key": "Conditionals",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -3056,8 +2834,6 @@
         "script_level.level_keys": [
           "csd U3 conditional statements video_2020"
         ],
-        "script_level.chapter": 112,
-        "script_level.position": 7,
         "lesson.key": "Conditionals",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -3079,8 +2855,6 @@
         "script_level.level_keys": [
           "CSD U3 Conditionals Apple 2_2018_2020"
         ],
-        "script_level.chapter": 113,
-        "script_level.position": 8,
         "lesson.key": "Conditionals",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -3102,8 +2876,6 @@
         "script_level.level_keys": [
           "CSD web conditionals practice choice"
         ],
-        "script_level.chapter": 114,
-        "script_level.position": 9,
         "lesson.key": "Conditionals",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -3125,8 +2897,6 @@
         "script_level.level_keys": [
           "CSD web conditionals assessment"
         ],
-        "script_level.chapter": 115,
-        "script_level.position": 10,
         "lesson.key": "Conditionals",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -3148,8 +2918,6 @@
         "script_level.level_keys": [
           "CSD web conditionals challenge choice"
         ],
-        "script_level.chapter": 116,
-        "script_level.position": 11,
         "lesson.key": "Conditionals",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -3171,8 +2939,6 @@
         "script_level.level_keys": [
           "CSD U3L15 TFMD_2020"
         ],
-        "script_level.chapter": 117,
-        "script_level.position": 1,
         "lesson.key": "Keyboard Input",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -3194,8 +2960,6 @@
         "script_level.level_keys": [
           "CSD U3 Keypress Boolean_2018_2020"
         ],
-        "script_level.chapter": 118,
-        "script_level.position": 2,
         "lesson.key": "Keyboard Input",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -3217,8 +2981,6 @@
         "script_level.level_keys": [
           "CSD U3 keydown conditional_2018_2020"
         ],
-        "script_level.chapter": 119,
-        "script_level.position": 3,
         "lesson.key": "Keyboard Input",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -3240,8 +3002,6 @@
         "script_level.level_keys": [
           "CSD U3 UP_ARROW_2018_2020"
         ],
-        "script_level.chapter": 120,
-        "script_level.position": 4,
         "lesson.key": "Keyboard Input",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -3263,8 +3023,6 @@
         "script_level.level_keys": [
           "CSD U3 Input Gears_2020"
         ],
-        "script_level.chapter": 121,
-        "script_level.position": 5,
         "lesson.key": "Keyboard Input",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -3286,8 +3044,6 @@
         "script_level.level_keys": [
           "CSD web keyboard practice choice"
         ],
-        "script_level.chapter": 122,
-        "script_level.position": 6,
         "lesson.key": "Keyboard Input",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -3309,8 +3065,6 @@
         "script_level.level_keys": [
           "CSD U3 Direction Arrows_2018_2020"
         ],
-        "script_level.chapter": 123,
-        "script_level.position": 7,
         "lesson.key": "Keyboard Input",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -3332,8 +3086,6 @@
         "script_level.level_keys": [
           "CSD web keyboard challenge choice"
         ],
-        "script_level.chapter": 124,
-        "script_level.position": 8,
         "lesson.key": "Keyboard Input",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -3355,8 +3107,6 @@
         "script_level.level_keys": [
           "CSD U3L16 TFMD_2020"
         ],
-        "script_level.chapter": 125,
-        "script_level.position": 1,
         "lesson.key": "Mouse Input",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -3378,8 +3128,6 @@
         "script_level.level_keys": [
           "CSD U3 if else predict_2020"
         ],
-        "script_level.chapter": 126,
-        "script_level.position": 2,
         "lesson.key": "Mouse Input",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -3401,8 +3149,6 @@
         "script_level.level_keys": [
           "CSD U3 - Conditionals Video_2020"
         ],
-        "script_level.chapter": 127,
-        "script_level.position": 3,
         "lesson.key": "Mouse Input",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -3424,8 +3170,6 @@
         "script_level.level_keys": [
           "CSD U3 Else_2020"
         ],
-        "script_level.chapter": 128,
-        "script_level.position": 4,
         "lesson.key": "Mouse Input",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -3447,8 +3191,6 @@
         "script_level.level_keys": [
           "CSD games mousedown intro"
         ],
-        "script_level.chapter": 129,
-        "script_level.position": 5,
         "lesson.key": "Mouse Input",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -3470,8 +3212,6 @@
         "script_level.level_keys": [
           "CSD U3 - complex - mouse down_2020"
         ],
-        "script_level.chapter": 130,
-        "script_level.position": 6,
         "lesson.key": "Mouse Input",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -3493,8 +3233,6 @@
         "script_level.level_keys": [
           "CSD U3 If Else_2020"
         ],
-        "script_level.chapter": 131,
-        "script_level.position": 7,
         "lesson.key": "Mouse Input",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -3516,8 +3254,6 @@
         "script_level.level_keys": [
           "CSD web mouse practice choice"
         ],
-        "script_level.chapter": 132,
-        "script_level.position": 8,
         "lesson.key": "Mouse Input",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -3539,8 +3275,6 @@
         "script_level.level_keys": [
           "CSD web mouse assessment"
         ],
-        "script_level.chapter": 133,
-        "script_level.position": 9,
         "lesson.key": "Mouse Input",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -3562,8 +3296,6 @@
         "script_level.level_keys": [
           "CSD web mouse challenge choice"
         ],
-        "script_level.chapter": 134,
-        "script_level.position": 10,
         "lesson.key": "Mouse Input",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -3585,8 +3317,6 @@
         "script_level.level_keys": [
           "CSD U3L17 TFMD_2020"
         ],
-        "script_level.chapter": 135,
-        "script_level.position": 1,
         "lesson.key": "Project - Interactive Card",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -3608,8 +3338,6 @@
         "script_level.level_keys": [
           "CSD U3 Interactive Card Exemplar_2020"
         ],
-        "script_level.chapter": 136,
-        "script_level.position": 2,
         "lesson.key": "Project - Interactive Card",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -3631,8 +3359,6 @@
         "script_level.level_keys": [
           "CSD U3 Card Examples_2018_2019_pilot_2020"
         ],
-        "script_level.chapter": 137,
-        "script_level.position": 3,
         "lesson.key": "Project - Interactive Card",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -3654,8 +3380,6 @@
         "script_level.level_keys": [
           "CSD U3 Interactive Card Background_2020"
         ],
-        "script_level.chapter": 138,
-        "script_level.position": 4,
         "lesson.key": "Project - Interactive Card",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -3677,8 +3401,6 @@
         "script_level.level_keys": [
           "CSD U3 Interactive Card Sprites_2020"
         ],
-        "script_level.chapter": 139,
-        "script_level.position": 5,
         "lesson.key": "Project - Interactive Card",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -3700,8 +3422,6 @@
         "script_level.level_keys": [
           "CSD U3 Interactive Card User Input_2020"
         ],
-        "script_level.chapter": 140,
-        "script_level.position": 6,
         "lesson.key": "Project - Interactive Card",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -3723,8 +3443,6 @@
         "script_level.level_keys": [
           "CSD U3 Interactive Card Other Conditionals_2020"
         ],
-        "script_level.chapter": 141,
-        "script_level.position": 7,
         "lesson.key": "Project - Interactive Card",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -3746,8 +3464,6 @@
         "script_level.level_keys": [
           "CSD U3 Interactive Card Final_2020"
         ],
-        "script_level.chapter": 142,
-        "script_level.position": 8,
         "lesson.key": "Project - Interactive Card",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -3769,8 +3485,6 @@
         "script_level.level_keys": [
           "csd-pulse-check-survey-1-levelgroup U3Ch1_2018_2019_pilot_2020"
         ],
-        "script_level.chapter": 143,
-        "script_level.position": 9,
         "lesson.key": "Project - Interactive Card",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -3792,8 +3506,6 @@
         "script_level.level_keys": [
           "CSD U3L18 TFMD_2020"
         ],
-        "script_level.chapter": 144,
-        "script_level.position": 1,
         "lesson.key": "Velocity",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -3815,8 +3527,6 @@
         "script_level.level_keys": [
           "CSD U3 abstraction velocityX_2020"
         ],
-        "script_level.chapter": 145,
-        "script_level.position": 2,
         "lesson.key": "Velocity",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -3838,8 +3548,6 @@
         "script_level.level_keys": [
           "CSD: Sprite Velocity_2020"
         ],
-        "script_level.chapter": 146,
-        "script_level.position": 3,
         "lesson.key": "Velocity",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -3861,8 +3569,6 @@
         "script_level.level_keys": [
           "CSD U3 abstraction velocityY_2020"
         ],
-        "script_level.chapter": 147,
-        "script_level.position": 4,
         "lesson.key": "Velocity",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -3884,8 +3590,6 @@
         "script_level.level_keys": [
           "CSD U3 abstraction rotation_2020"
         ],
-        "script_level.chapter": 148,
-        "script_level.position": 5,
         "lesson.key": "Velocity",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -3907,8 +3611,6 @@
         "script_level.level_keys": [
           "CSD U3 abstraction rotation control_2020"
         ],
-        "script_level.chapter": 149,
-        "script_level.position": 6,
         "lesson.key": "Velocity",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -3930,8 +3632,6 @@
         "script_level.level_keys": [
           "CSD U3 abstraction velocityX if-statements_2020"
         ],
-        "script_level.chapter": 150,
-        "script_level.position": 7,
         "lesson.key": "Velocity",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -3953,8 +3653,6 @@
         "script_level.level_keys": [
           "CSD games velocity tennis"
         ],
-        "script_level.chapter": 151,
-        "script_level.position": 8,
         "lesson.key": "Velocity",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -3976,8 +3674,6 @@
         "script_level.level_keys": [
           "CSD games velocity practice choice"
         ],
-        "script_level.chapter": 152,
-        "script_level.position": 9,
         "lesson.key": "Velocity",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -3999,8 +3695,6 @@
         "script_level.level_keys": [
           "CSD U3 abstraction velocityX control_2020"
         ],
-        "script_level.chapter": 153,
-        "script_level.position": 10,
         "lesson.key": "Velocity",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -4022,8 +3716,6 @@
         "script_level.level_keys": [
           "CSD games velocity challenge choice"
         ],
-        "script_level.chapter": 154,
-        "script_level.position": 11,
         "lesson.key": "Velocity",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -4045,8 +3737,6 @@
         "script_level.level_keys": [
           "CSD U3L19 TFMD_2020"
         ],
-        "script_level.chapter": 155,
-        "script_level.position": 1,
         "lesson.key": "Collision Detection",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -4068,8 +3758,6 @@
         "script_level.level_keys": [
           "CSD U3 collisions car intro_2020"
         ],
-        "script_level.chapter": 156,
-        "script_level.position": 2,
         "lesson.key": "Collision Detection",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -4091,8 +3779,6 @@
         "script_level.level_keys": [
           "CSD U3 collisions build isTouching_2020"
         ],
-        "script_level.chapter": 157,
-        "script_level.position": 3,
         "lesson.key": "Collision Detection",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -4114,8 +3800,6 @@
         "script_level.level_keys": [
           "CSD U3 collisions isTouching intro_2020"
         ],
-        "script_level.chapter": 158,
-        "script_level.position": 4,
         "lesson.key": "Collision Detection",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -4137,8 +3821,6 @@
         "script_level.level_keys": [
           "CSD U3 collisions egg_2020"
         ],
-        "script_level.chapter": 159,
-        "script_level.position": 5,
         "lesson.key": "Collision Detection",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -4160,8 +3842,6 @@
         "script_level.level_keys": [
           "CSD U3 collisions debug isTouching_2020"
         ],
-        "script_level.chapter": 160,
-        "script_level.position": 6,
         "lesson.key": "Collision Detection",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -4183,8 +3863,6 @@
         "script_level.level_keys": [
           "CSD games istouching practice choice"
         ],
-        "script_level.chapter": 161,
-        "script_level.position": 7,
         "lesson.key": "Collision Detection",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -4206,8 +3884,6 @@
         "script_level.level_keys": [
           "CSD U3 collisions horse_2020"
         ],
-        "script_level.chapter": 162,
-        "script_level.position": 8,
         "lesson.key": "Collision Detection",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -4229,8 +3905,6 @@
         "script_level.level_keys": [
           "CSD games istouching challenge choice"
         ],
-        "script_level.chapter": 163,
-        "script_level.position": 9,
         "lesson.key": "Collision Detection",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -4252,8 +3926,6 @@
         "script_level.level_keys": [
           "CSD U3L20 TFMD"
         ],
-        "script_level.chapter": 164,
-        "script_level.position": 1,
         "lesson.key": "Mini-Project: Side Scroller",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -4275,8 +3947,6 @@
         "script_level.level_keys": [
           "CSD games side scroller demo"
         ],
-        "script_level.chapter": 165,
-        "script_level.position": 2,
         "lesson.key": "Mini-Project: Side Scroller",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -4298,8 +3968,6 @@
         "script_level.level_keys": [
           "CSD games sidescroll background"
         ],
-        "script_level.chapter": 166,
-        "script_level.position": 3,
         "lesson.key": "Mini-Project: Side Scroller",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -4321,8 +3989,6 @@
         "script_level.level_keys": [
           "CSD U3 abstraction tumbleweed_2020"
         ],
-        "script_level.chapter": 167,
-        "script_level.position": 4,
         "lesson.key": "Mini-Project: Side Scroller",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -4344,8 +4010,6 @@
         "script_level.level_keys": [
           "CSD U3 abstraction jump_2018_2020"
         ],
-        "script_level.chapter": 168,
-        "script_level.position": 5,
         "lesson.key": "Mini-Project: Side Scroller",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -4367,8 +4031,6 @@
         "script_level.level_keys": [
           "CSD U3 abstraction looping_2020"
         ],
-        "script_level.chapter": 169,
-        "script_level.position": 6,
         "lesson.key": "Mini-Project: Side Scroller",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -4390,8 +4052,6 @@
         "script_level.level_keys": [
           "CSD U3 collisions sidescroll2_2020"
         ],
-        "script_level.chapter": 170,
-        "script_level.position": 7,
         "lesson.key": "Mini-Project: Side Scroller",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -4413,8 +4073,6 @@
         "script_level.level_keys": [
           "CSD U3 collisions scoreboard_2020"
         ],
-        "script_level.chapter": 171,
-        "script_level.position": 8,
         "lesson.key": "Mini-Project: Side Scroller",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -4436,8 +4094,6 @@
         "script_level.level_keys": [
           "CSD games sidescroll review"
         ],
-        "script_level.chapter": 172,
-        "script_level.position": 9,
         "lesson.key": "Mini-Project: Side Scroller",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -4459,8 +4115,6 @@
         "script_level.level_keys": [
           "CSD U3L20 TFMD_2020"
         ],
-        "script_level.chapter": 173,
-        "script_level.position": 1,
         "lesson.key": "Complex Sprite Movement",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -4482,8 +4136,6 @@
         "script_level.level_keys": [
           "CSD U3 Complex Movement counter prediction gamelab_2020"
         ],
-        "script_level.chapter": 174,
-        "script_level.position": 2,
         "lesson.key": "Complex Sprite Movement",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -4505,8 +4157,6 @@
         "script_level.level_keys": [
           "CSD U3 abstraction accelerateX_2020"
         ],
-        "script_level.chapter": 175,
-        "script_level.position": 3,
         "lesson.key": "Complex Sprite Movement",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -4528,8 +4178,6 @@
         "script_level.level_keys": [
           "CSD U3 abstraction accelerateY_2020"
         ],
-        "script_level.chapter": 176,
-        "script_level.position": 4,
         "lesson.key": "Complex Sprite Movement",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -4551,8 +4199,6 @@
         "script_level.level_keys": [
           "CSD U3 abstraction decelerateX_2020"
         ],
-        "script_level.chapter": 177,
-        "script_level.position": 5,
         "lesson.key": "Complex Sprite Movement",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -4574,8 +4220,6 @@
         "script_level.level_keys": [
           "CSD games movement2 practice choice"
         ],
-        "script_level.chapter": 178,
-        "script_level.position": 6,
         "lesson.key": "Complex Sprite Movement",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -4597,8 +4241,6 @@
         "script_level.level_keys": [
           "CSD U3 abstraction decelerateY_2020"
         ],
-        "script_level.chapter": 179,
-        "script_level.position": 7,
         "lesson.key": "Complex Sprite Movement",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -4620,8 +4262,6 @@
         "script_level.level_keys": [
           "CSD games movement2 challenge choice"
         ],
-        "script_level.chapter": 180,
-        "script_level.position": 8,
         "lesson.key": "Complex Sprite Movement",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -4643,8 +4283,6 @@
         "script_level.level_keys": [
           "CSD U3L21 TFMD_2020"
         ],
-        "script_level.chapter": 181,
-        "script_level.position": 1,
         "lesson.key": "Collisions",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -4666,8 +4304,6 @@
         "script_level.level_keys": [
           "CSD U3 collisions predict set velocity code_2020"
         ],
-        "script_level.chapter": 182,
-        "script_level.position": 2,
         "lesson.key": "Collisions",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -4689,8 +4325,6 @@
         "script_level.level_keys": [
           "CSD U3 collisions displace x_2020"
         ],
-        "script_level.chapter": 183,
-        "script_level.position": 3,
         "lesson.key": "Collisions",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -4712,8 +4346,6 @@
         "script_level.level_keys": [
           "CSD U3 collisions displace y_2020"
         ],
-        "script_level.chapter": 184,
-        "script_level.position": 4,
         "lesson.key": "Collisions",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -4735,8 +4367,6 @@
         "script_level.level_keys": [
           "CSD U3 collisions displace intro_2020"
         ],
-        "script_level.chapter": 185,
-        "script_level.position": 5,
         "lesson.key": "Collisions",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -4758,8 +4388,6 @@
         "script_level.level_keys": [
           "CSD U3 collisions try blocks_2020"
         ],
-        "script_level.chapter": 186,
-        "script_level.position": 6,
         "lesson.key": "Collisions",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -4781,8 +4409,6 @@
         "script_level.level_keys": [
           "CSD games collisions practice choice"
         ],
-        "script_level.chapter": 187,
-        "script_level.position": 7,
         "lesson.key": "Collisions",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -4804,8 +4430,6 @@
         "script_level.level_keys": [
           "CSD games collisions assessment"
         ],
-        "script_level.chapter": 188,
-        "script_level.position": 8,
         "lesson.key": "Collisions",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -4827,8 +4451,6 @@
         "script_level.level_keys": [
           "CSD games collisions challenge choice"
         ],
-        "script_level.chapter": 189,
-        "script_level.position": 9,
         "lesson.key": "Collisions",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -4850,8 +4472,6 @@
         "script_level.level_keys": [
           "CSD U3L23 TFMD"
         ],
-        "script_level.chapter": 190,
-        "script_level.position": 1,
         "lesson.key": "Mini-Project: Flyer Game",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -4873,8 +4493,6 @@
         "script_level.level_keys": [
           "CSD games flyer demo"
         ],
-        "script_level.chapter": 191,
-        "script_level.position": 2,
         "lesson.key": "Mini-Project: Flyer Game",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -4896,8 +4514,6 @@
         "script_level.level_keys": [
           "CSD U3 abstraction add coin_2020"
         ],
-        "script_level.chapter": 192,
-        "script_level.position": 3,
         "lesson.key": "Mini-Project: Flyer Game",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -4919,8 +4535,6 @@
         "script_level.level_keys": [
           "CSD U3 abstraction jumping_2020"
         ],
-        "script_level.chapter": 193,
-        "script_level.position": 4,
         "lesson.key": "Mini-Project: Flyer Game",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -4942,8 +4556,6 @@
         "script_level.level_keys": [
           "CSD U3 abstraction left right counter_2020"
         ],
-        "script_level.chapter": 194,
-        "script_level.position": 5,
         "lesson.key": "Mini-Project: Flyer Game",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -4965,8 +4577,6 @@
         "script_level.level_keys": [
           "CSD U3 abstraction left right counter 2_2020"
         ],
-        "script_level.chapter": 195,
-        "script_level.position": 6,
         "lesson.key": "Mini-Project: Flyer Game",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -4988,8 +4598,6 @@
         "script_level.level_keys": [
           "CSD U3 collisions flyman add obstacles_2020"
         ],
-        "script_level.chapter": 196,
-        "script_level.position": 7,
         "lesson.key": "Mini-Project: Flyer Game",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -5011,8 +4619,6 @@
         "script_level.level_keys": [
           "CSD U3 abstraction reset coin_2020"
         ],
-        "script_level.chapter": 197,
-        "script_level.position": 8,
         "lesson.key": "Mini-Project: Flyer Game",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -5034,8 +4640,6 @@
         "script_level.level_keys": [
           "CSD U3 collisions flyman bounceOff_2020"
         ],
-        "script_level.chapter": 198,
-        "script_level.position": 9,
         "lesson.key": "Mini-Project: Flyer Game",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -5057,8 +4661,6 @@
         "script_level.level_keys": [
           "CSD U3L22 TFMD_2020"
         ],
-        "script_level.chapter": 199,
-        "script_level.position": 1,
         "lesson.key": "Functions",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -5080,8 +4682,6 @@
         "script_level.level_keys": [
           "CSD U3 function video_2020"
         ],
-        "script_level.chapter": 200,
-        "script_level.position": 2,
         "lesson.key": "Functions",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -5103,8 +4703,6 @@
         "script_level.level_keys": [
           "CSD U3 Functions Call Function_2020"
         ],
-        "script_level.chapter": 201,
-        "script_level.position": 3,
         "lesson.key": "Functions",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -5126,8 +4724,6 @@
         "script_level.level_keys": [
           "CSD U3 Functions Order Functions_2020"
         ],
-        "script_level.chapter": 202,
-        "script_level.position": 4,
         "lesson.key": "Functions",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -5149,8 +4745,6 @@
         "script_level.level_keys": [
           "CSD U3 Functions Prediction Order of Create_2020"
         ],
-        "script_level.chapter": 203,
-        "script_level.position": 5,
         "lesson.key": "Functions",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -5172,8 +4766,6 @@
         "script_level.level_keys": [
           "CSD games functions practice choice"
         ],
-        "script_level.chapter": 204,
-        "script_level.position": 6,
         "lesson.key": "Functions",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -5195,8 +4787,6 @@
         "script_level.level_keys": [
           "CSD games functions assessment FR"
         ],
-        "script_level.chapter": 205,
-        "script_level.position": 7,
         "lesson.key": "Functions",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -5218,8 +4808,6 @@
         "script_level.level_keys": [
           "CSD U3 Functions Write Reset_2020"
         ],
-        "script_level.chapter": 206,
-        "script_level.position": 8,
         "lesson.key": "Functions",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -5241,8 +4829,6 @@
         "script_level.level_keys": [
           "CSD U3 Functions Add IsTouching_2020"
         ],
-        "script_level.chapter": 207,
-        "script_level.position": 9,
         "lesson.key": "Functions",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -5264,8 +4850,6 @@
         "script_level.level_keys": [
           "CSD U3 Functions Add Change Background_2020"
         ],
-        "script_level.chapter": 208,
-        "script_level.position": 10,
         "lesson.key": "Functions",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -5287,8 +4871,6 @@
         "script_level.level_keys": [
           "CSD games functions challenge choice"
         ],
-        "script_level.chapter": 209,
-        "script_level.position": 11,
         "lesson.key": "Functions",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -5310,8 +4892,6 @@
         "script_level.level_keys": [
           "CSD U3L23 TFMD_2020"
         ],
-        "script_level.chapter": 210,
-        "script_level.position": 1,
         "lesson.key": "The Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -5333,8 +4913,6 @@
         "script_level.level_keys": [
           "CSD U3 AnimationsMulti Play Defender_2020"
         ],
-        "script_level.chapter": 211,
-        "script_level.position": 2,
         "lesson.key": "The Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -5356,8 +4934,6 @@
         "script_level.level_keys": [
           "CSD U3 AnimationsMulti STOP project guide_2018_2019_pilot_2020"
         ],
-        "script_level.chapter": 212,
-        "script_level.position": 3,
         "lesson.key": "The Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -5379,8 +4955,6 @@
         "script_level.level_keys": [
           "CSD U3 AnimationsMulti defender animate cake enemies_2020"
         ],
-        "script_level.chapter": 213,
-        "script_level.position": 4,
         "lesson.key": "The Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -5402,8 +4976,6 @@
         "script_level.level_keys": [
           "CSD U3 AnimationsMulti defender enemies move_2020"
         ],
-        "script_level.chapter": 214,
-        "script_level.position": 5,
         "lesson.key": "The Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -5425,8 +4997,6 @@
         "script_level.level_keys": [
           "CSD U3 AnimationsMulti defender move player_2020"
         ],
-        "script_level.chapter": 215,
-        "script_level.position": 6,
         "lesson.key": "The Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -5448,8 +5018,6 @@
         "script_level.level_keys": [
           "CSD U3 AnimationsMulti defender move up down_2020"
         ],
-        "script_level.chapter": 216,
-        "script_level.position": 7,
         "lesson.key": "The Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -5471,8 +5039,6 @@
         "script_level.level_keys": [
           "CSD U3 AnimationsMulti defender animate player_2020"
         ],
-        "script_level.chapter": 217,
-        "script_level.position": 8,
         "lesson.key": "The Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -5494,8 +5060,6 @@
         "script_level.level_keys": [
           "CSD U3 AnimationsMulti defender enemies touch cake_2020"
         ],
-        "script_level.chapter": 218,
-        "script_level.position": 9,
         "lesson.key": "The Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -5517,8 +5081,6 @@
         "script_level.level_keys": [
           "CSD U3 AnimationsMulti defender enemies touch cake sprite2_2020"
         ],
-        "script_level.chapter": 219,
-        "script_level.position": 10,
         "lesson.key": "The Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -5540,8 +5102,6 @@
         "script_level.level_keys": [
           "CSD U3 AnimationsMulti defender create set enemies_2020"
         ],
-        "script_level.chapter": 220,
-        "script_level.position": 11,
         "lesson.key": "The Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -5563,8 +5123,6 @@
         "script_level.level_keys": [
           "CSD U3 AnimationsMulti defender displace enemies_2020"
         ],
-        "script_level.chapter": 221,
-        "script_level.position": 12,
         "lesson.key": "The Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -5586,8 +5144,6 @@
         "script_level.level_keys": [
           "CSD U3 AnimationsMulti defender touch water_2020"
         ],
-        "script_level.chapter": 222,
-        "script_level.position": 13,
         "lesson.key": "The Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -5609,8 +5165,6 @@
         "script_level.level_keys": [
           "CSD games cake challenge choice"
         ],
-        "script_level.chapter": 223,
-        "script_level.position": 14,
         "lesson.key": "The Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -5632,8 +5186,6 @@
         "script_level.level_keys": [
           "CSD U3L24 TFMD_2020"
         ],
-        "script_level.chapter": 224,
-        "script_level.position": 1,
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -5655,8 +5207,6 @@
         "script_level.level_keys": [
           "CSD U3 platform sample1_2020"
         ],
-        "script_level.chapter": 225,
-        "script_level.position": 2,
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -5678,8 +5228,6 @@
         "script_level.level_keys": [
           "CSD U3 platform intro_2018_2019_pilot_2020"
         ],
-        "script_level.chapter": 226,
-        "script_level.position": 3,
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -5701,8 +5249,6 @@
         "script_level.level_keys": [
           "CSD U3 platform background1_2020"
         ],
-        "script_level.chapter": 227,
-        "script_level.position": 4,
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -5724,8 +5270,6 @@
         "script_level.level_keys": [
           "CSD U3 platform variable1_2020"
         ],
-        "script_level.chapter": 228,
-        "script_level.position": 5,
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -5747,8 +5291,6 @@
         "script_level.level_keys": [
           "CSD U3 platform background2_2020"
         ],
-        "script_level.chapter": 229,
-        "script_level.position": 6,
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -5770,8 +5312,6 @@
         "script_level.level_keys": [
           "CSD U3 platform scoreboard_2020"
         ],
-        "script_level.chapter": 230,
-        "script_level.position": 7,
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -5793,8 +5333,6 @@
         "script_level.level_keys": [
           "CSD U3 platform platform1_2020"
         ],
-        "script_level.chapter": 231,
-        "script_level.position": 8,
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -5816,8 +5354,6 @@
         "script_level.level_keys": [
           "CSD U3 platform platform2_2020"
         ],
-        "script_level.chapter": 232,
-        "script_level.position": 9,
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -5839,8 +5375,6 @@
         "script_level.level_keys": [
           "CSD U3 platform platform3_2020"
         ],
-        "script_level.chapter": 233,
-        "script_level.position": 10,
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -5862,8 +5396,6 @@
         "script_level.level_keys": [
           "CSD U3 platform items1_2020"
         ],
-        "script_level.chapter": 234,
-        "script_level.position": 11,
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -5885,8 +5417,6 @@
         "script_level.level_keys": [
           "CSD U3 platform items2_2020"
         ],
-        "script_level.chapter": 235,
-        "script_level.position": 12,
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -5908,8 +5438,6 @@
         "script_level.level_keys": [
           "CSD U3 platform items3_2020"
         ],
-        "script_level.chapter": 236,
-        "script_level.position": 13,
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -5931,8 +5459,6 @@
         "script_level.level_keys": [
           "CSD U3 platform player1_2020"
         ],
-        "script_level.chapter": 237,
-        "script_level.position": 14,
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -5954,8 +5480,6 @@
         "script_level.level_keys": [
           "CSD U3 platform player2_2020"
         ],
-        "script_level.chapter": 238,
-        "script_level.position": 15,
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -5977,8 +5501,6 @@
         "script_level.level_keys": [
           "CSD U3 platform player3_2020"
         ],
-        "script_level.chapter": 239,
-        "script_level.position": 16,
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -6000,8 +5522,6 @@
         "script_level.level_keys": [
           "CSD U3 platform player4_2020"
         ],
-        "script_level.chapter": 240,
-        "script_level.position": 17,
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -6023,8 +5543,6 @@
         "script_level.level_keys": [
           "CSD U3 platform review"
         ],
-        "script_level.chapter": 241,
-        "script_level.position": 18,
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -6046,8 +5564,6 @@
         "script_level.level_keys": [
           "CSD U3 platform sample2_2020"
         ],
-        "script_level.chapter": 242,
-        "script_level.position": 19,
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -6069,8 +5585,6 @@
         "script_level.level_keys": [
           "CSD U3 platform sample3_2020"
         ],
-        "script_level.chapter": 243,
-        "script_level.position": 20,
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -6092,8 +5606,6 @@
         "script_level.level_keys": [
           "CSD games platform challenge choice"
         ],
-        "script_level.chapter": 244,
-        "script_level.position": 21,
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -6115,8 +5627,6 @@
         "script_level.level_keys": [
           "CSD U3L25 TFMD_2020"
         ],
-        "script_level.chapter": 245,
-        "script_level.position": 1,
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -6138,8 +5648,6 @@
         "script_level.level_keys": [
           "CSD U3 game intro_2018_2019_pilot_2020"
         ],
-        "script_level.chapter": 246,
-        "script_level.position": 2,
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -6161,8 +5669,6 @@
         "script_level.level_keys": [
           "CSD U3 game variables_2020"
         ],
-        "script_level.chapter": 247,
-        "script_level.position": 3,
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -6184,8 +5690,6 @@
         "script_level.level_keys": [
           "CSD U3 game backgrounds_2020"
         ],
-        "script_level.chapter": 248,
-        "script_level.position": 4,
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -6207,8 +5711,6 @@
         "script_level.level_keys": [
           "CSD U3 game display boards_2020"
         ],
-        "script_level.chapter": 249,
-        "script_level.position": 5,
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -6230,8 +5732,6 @@
         "script_level.level_keys": [
           "CSD U3 game choose background_2020"
         ],
-        "script_level.chapter": 250,
-        "script_level.position": 6,
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -6253,8 +5753,6 @@
         "script_level.level_keys": [
           "CSD U3 game animations_2020"
         ],
-        "script_level.chapter": 251,
-        "script_level.position": 7,
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -6276,8 +5774,6 @@
         "script_level.level_keys": [
           "CSD U3 game create sprites_2020"
         ],
-        "script_level.chapter": 252,
-        "script_level.position": 8,
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -6299,8 +5795,6 @@
         "script_level.level_keys": [
           "CSD U3 game sprite movement_2020"
         ],
-        "script_level.chapter": 253,
-        "script_level.position": 9,
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -6322,8 +5816,6 @@
         "script_level.level_keys": [
           "CSD U3 game user controls_2020"
         ],
-        "script_level.chapter": 254,
-        "script_level.position": 10,
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -6345,8 +5837,6 @@
         "script_level.level_keys": [
           "CSD U3 game interactions_2020"
         ],
-        "script_level.chapter": 255,
-        "script_level.position": 11,
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -6368,8 +5858,6 @@
         "script_level.level_keys": [
           "CSD games project review"
         ],
-        "script_level.chapter": 256,
-        "script_level.position": 12,
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -6391,8 +5879,6 @@
         "script_level.level_keys": [
           "csd-pulse-check-survey-1-levelgroup U3Ch2_2018_2019_pilot_2020"
         ],
-        "script_level.chapter": 257,
-        "script_level.position": 13,
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -6413,8 +5899,6 @@
         "script_level.level_keys": [
           "CSD Interactive Animations and Games Post-Project Test_pilot_2020"
         ],
-        "script_level.chapter": 258,
-        "script_level.position": 1,
         "lesson.key": "Post-Project Test",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -6435,8 +5919,6 @@
         "script_level.level_keys": [
           "csd-post-survey-intro-2019_pilot_2020"
         ],
-        "script_level.chapter": 259,
-        "script_level.position": 1,
         "lesson.key": "CS Discoveries Post Course survey",
         "lesson_group.key": "cspSurvey",
         "script.name": "csd3-2020"
@@ -6457,8 +5939,6 @@
         "script_level.level_keys": [
           "csd-post-survey-2017-levelgroup_2018_2019_pilot_2020"
         ],
-        "script_level.chapter": 260,
-        "script_level.position": 2,
         "lesson.key": "CS Discoveries Post Course survey",
         "lesson_group.key": "cspSurvey",
         "script.name": "csd3-2020"
@@ -6475,8 +5955,6 @@
         "script_level.level_keys": [
           "CSD U3L01 TFMD_2020"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Programming for Entertainment",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -6488,8 +5966,6 @@
         "script_level.level_keys": [
           "CSD U3 Entertainment_2018_2019_pilot_2020"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Programming for Entertainment",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -6501,8 +5977,6 @@
         "script_level.level_keys": [
           "CSD U3 Entertainment Sample 4_2020"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "Programming for Entertainment",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -6514,8 +5988,6 @@
         "script_level.level_keys": [
           "CSD U3 Entertainment Sample 3_2020"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "Programming for Entertainment",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -6527,8 +5999,6 @@
         "script_level.level_keys": [
           "CSD U3 Entertainment Sample 1_2020"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 5,
         "lesson.key": "Programming for Entertainment",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -6540,8 +6010,6 @@
         "script_level.level_keys": [
           "CSD U3 Entertainment Sample 2_2020"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 6,
         "lesson.key": "Programming for Entertainment",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -6553,8 +6021,6 @@
         "script_level.level_keys": [
           "CSD U3L02 TFMD_2020"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 1,
         "lesson.key": "Plotting Shapes",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -6566,8 +6032,6 @@
         "script_level.level_keys": [
           "CSD U3 Plotting Shapes Shape Lab_2020"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 2,
         "lesson.key": "Plotting Shapes",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -6579,8 +6043,6 @@
         "script_level.level_keys": [
           "CSD U3L03 TFMD_2020"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 1,
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -6592,8 +6054,6 @@
         "script_level.level_keys": [
           "CSD U3 rect_2020"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 2,
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -6605,8 +6065,6 @@
         "script_level.level_keys": [
           "CSD: Drawing in Game Lab 1_2020"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 3,
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -6618,8 +6076,6 @@
         "script_level.level_keys": [
           "CSD U3 Drawing Squares to Corners_2020"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 4,
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -6631,8 +6087,6 @@
         "script_level.level_keys": [
           "CSD: Drawing in Game Lab 2_2020"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 5,
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -6644,8 +6098,6 @@
         "script_level.level_keys": [
           "CSD U3 fill_2020"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 6,
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -6657,8 +6109,6 @@
         "script_level.level_keys": [
           "CSD U3 sequence_2020"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 7,
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -6670,8 +6120,6 @@
         "script_level.level_keys": [
           "CSD U3 ellipse_2020"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 8,
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -6683,8 +6131,6 @@
         "script_level.level_keys": [
           "CSD U3 drawing practice choice_2020"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 9,
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -6696,8 +6142,6 @@
         "script_level.level_keys": [
           "CSD U3 debug_2020"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 10,
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -6709,8 +6153,6 @@
         "script_level.level_keys": [
           "CSD U3 drawing challenges_2020"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 11,
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -6722,8 +6164,6 @@
         "script_level.level_keys": [
           "CSD U3L04 TFMD_2020"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 1,
         "lesson.key": "Shapes and Parameters",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -6735,8 +6175,6 @@
         "script_level.level_keys": [
           "CSD U3 Random Taller Rectangle_2020"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 2,
         "lesson.key": "Shapes and Parameters",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -6748,8 +6186,6 @@
         "script_level.level_keys": [
           "CSD U3 Random Ellipse Behind_2018_2020"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 3,
         "lesson.key": "Shapes and Parameters",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -6761,8 +6197,6 @@
         "script_level.level_keys": [
           "CSD U3 Random background_2020"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 4,
         "lesson.key": "Shapes and Parameters",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -6774,8 +6208,6 @@
         "script_level.level_keys": [
           "CSD U3 Random background2_2020"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 5,
         "lesson.key": "Shapes and Parameters",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -6787,8 +6219,6 @@
         "script_level.level_keys": [
           "CSD U3 Random Debug Grass_2020"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 6,
         "lesson.key": "Shapes and Parameters",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -6800,8 +6230,6 @@
         "script_level.level_keys": [
           "CSD Games parameters practice_2020"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 7,
         "lesson.key": "Shapes and Parameters",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -6813,8 +6241,6 @@
         "script_level.level_keys": [
           "CSD U3 Random Debug Cloud_2018_2020"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 8,
         "lesson.key": "Shapes and Parameters",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -6826,8 +6252,6 @@
         "script_level.level_keys": [
           "CSD Games Parameters challenge_2020"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 9,
         "lesson.key": "Shapes and Parameters",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -6839,8 +6263,6 @@
         "script_level.level_keys": [
           "CSD U3L05 TFMD_2020"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 1,
         "lesson.key": "Variables",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -6852,8 +6274,6 @@
         "script_level.level_keys": [
           "CSD U3 Variables Predict Where X_2020"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 2,
         "lesson.key": "Variables",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -6865,8 +6285,6 @@
         "script_level.level_keys": [
           "Introduction to Variables - Part 1_2020"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 3,
         "lesson.key": "Variables",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -6878,8 +6296,6 @@
         "script_level.level_keys": [
           "CSD U3 Variables Predict Where XY_2020"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 4,
         "lesson.key": "Variables",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -6891,8 +6307,6 @@
         "script_level.level_keys": [
           "CSD U3 Variables naming rules v2_2018_2020"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 5,
         "lesson.key": "Variables",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -6904,8 +6318,6 @@
         "script_level.level_keys": [
           "CSD U3 Variables Draw Poppy_2020"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 6,
         "lesson.key": "Variables",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -6917,8 +6329,6 @@
         "script_level.level_keys": [
           "CSD Games variables practice_2020"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 7,
         "lesson.key": "Variables",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -6930,8 +6340,6 @@
         "script_level.level_keys": [
           "CSD U3 Variables assessment_2020"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 8,
         "lesson.key": "Variables",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -6943,8 +6351,6 @@
         "script_level.level_keys": [
           "CSD Games variables challenge_2020"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 9,
         "lesson.key": "Variables",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -6956,8 +6362,6 @@
         "script_level.level_keys": [
           "CSD U3L06 TFMD_2020"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 1,
         "lesson.key": "Random Numbers",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -6969,8 +6373,6 @@
         "script_level.level_keys": [
           "CSD U3 Random random ellipse_2018_2020"
         ],
-        "script_level.chapter": 39,
-        "script_level.position": 2,
         "lesson.key": "Random Numbers",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -6982,8 +6384,6 @@
         "script_level.level_keys": [
           "CSD U3 Random random ellipse2_2018_2020"
         ],
-        "script_level.chapter": 40,
-        "script_level.position": 3,
         "lesson.key": "Random Numbers",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -6995,8 +6395,6 @@
         "script_level.level_keys": [
           "CSD U3 Variables random with assignment_2020"
         ],
-        "script_level.chapter": 41,
-        "script_level.position": 4,
         "lesson.key": "Random Numbers",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -7008,8 +6406,6 @@
         "script_level.level_keys": [
           "CSD U3 Variables random reassign_2020"
         ],
-        "script_level.chapter": 42,
-        "script_level.position": 5,
         "lesson.key": "Random Numbers",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -7021,8 +6417,6 @@
         "script_level.level_keys": [
           "CSD games random practice_2020"
         ],
-        "script_level.chapter": 43,
-        "script_level.position": 6,
         "lesson.key": "Random Numbers",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -7034,8 +6428,6 @@
         "script_level.level_keys": [
           "CSD U3 Random rainbow snake_2018_2020"
         ],
-        "script_level.chapter": 44,
-        "script_level.position": 7,
         "lesson.key": "Random Numbers",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -7047,8 +6439,6 @@
         "script_level.level_keys": [
           "CSD games random challenge_2020"
         ],
-        "script_level.chapter": 45,
-        "script_level.position": 8,
         "lesson.key": "Random Numbers",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -7060,8 +6450,6 @@
         "script_level.level_keys": [
           "CSD U3L07 TFMD_2020"
         ],
-        "script_level.chapter": 46,
-        "script_level.position": 1,
         "lesson.key": "Sprites",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -7073,8 +6461,6 @@
         "script_level.level_keys": [
           "CSD U3 Sprites Exploration_2020"
         ],
-        "script_level.chapter": 47,
-        "script_level.position": 2,
         "lesson.key": "Sprites",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -7086,8 +6472,6 @@
         "script_level.level_keys": [
           "CSD: Sprites in Game Lab_2020"
         ],
-        "script_level.chapter": 48,
-        "script_level.position": 3,
         "lesson.key": "Sprites",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -7099,8 +6483,6 @@
         "script_level.level_keys": [
           "CSD U3 Sprites intro sprites_2020"
         ],
-        "script_level.chapter": 49,
-        "script_level.position": 4,
         "lesson.key": "Sprites",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -7112,8 +6494,6 @@
         "script_level.level_keys": [
           "CSD U3 Sprites intro debug_2020"
         ],
-        "script_level.chapter": 50,
-        "script_level.position": 5,
         "lesson.key": "Sprites",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -7125,8 +6505,6 @@
         "script_level.level_keys": [
           "CSD U3 Sprites anitab 1_2020"
         ],
-        "script_level.chapter": 51,
-        "script_level.position": 6,
         "lesson.key": "Sprites",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -7138,8 +6516,6 @@
         "script_level.level_keys": [
           "CSD: Animation Tab_2020"
         ],
-        "script_level.chapter": 52,
-        "script_level.position": 7,
         "lesson.key": "Sprites",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -7151,8 +6527,6 @@
         "script_level.level_keys": [
           "CSD U3 Sprites sequencing_2020"
         ],
-        "script_level.chapter": 53,
-        "script_level.position": 8,
         "lesson.key": "Sprites",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -7164,8 +6538,6 @@
         "script_level.level_keys": [
           "CSD U3 drawSprites placement match_2019_pilot_2020"
         ],
-        "script_level.chapter": 54,
-        "script_level.position": 9,
         "lesson.key": "Sprites",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -7177,8 +6549,6 @@
         "script_level.level_keys": [
           "CSD Games Sprites practice_2020"
         ],
-        "script_level.chapter": 55,
-        "script_level.position": 10,
         "lesson.key": "Sprites",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -7190,8 +6560,6 @@
         "script_level.level_keys": [
           "CSD U3 Sprites assessment_2020"
         ],
-        "script_level.chapter": 56,
-        "script_level.position": 11,
         "lesson.key": "Sprites",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -7203,8 +6571,6 @@
         "script_level.level_keys": [
           "CSD Games Sprites Challenges_2020"
         ],
-        "script_level.chapter": 57,
-        "script_level.position": 12,
         "lesson.key": "Sprites",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -7216,8 +6582,6 @@
         "script_level.level_keys": [
           "CSD U3L08 TFMD_2020"
         ],
-        "script_level.chapter": 58,
-        "script_level.position": 1,
         "lesson.key": "Sprite Properties",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -7229,8 +6593,6 @@
         "script_level.level_keys": [
           "CSD Games properties predict_2020"
         ],
-        "script_level.chapter": 59,
-        "script_level.position": 2,
         "lesson.key": "Sprite Properties",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -7242,8 +6604,6 @@
         "script_level.level_keys": [
           "CSD Games properties xy_2020"
         ],
-        "script_level.chapter": 60,
-        "script_level.position": 3,
         "lesson.key": "Sprite Properties",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -7255,8 +6615,6 @@
         "script_level.level_keys": [
           "CSD Games properties new_2020"
         ],
-        "script_level.chapter": 61,
-        "script_level.position": 4,
         "lesson.key": "Sprite Properties",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -7268,8 +6626,6 @@
         "script_level.level_keys": [
           "CSD Games Properties practice_2020"
         ],
-        "script_level.chapter": 62,
-        "script_level.position": 5,
         "lesson.key": "Sprite Properties",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -7281,8 +6637,6 @@
         "script_level.level_keys": [
           "CSD Games properties assessment_2020"
         ],
-        "script_level.chapter": 63,
-        "script_level.position": 6,
         "lesson.key": "Sprite Properties",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -7294,8 +6648,6 @@
         "script_level.level_keys": [
           "CSD Games Properties challenge_2020"
         ],
-        "script_level.chapter": 64,
-        "script_level.position": 7,
         "lesson.key": "Sprite Properties",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -7307,8 +6659,6 @@
         "script_level.level_keys": [
           "CSD U3L09 TFMD_2020"
         ],
-        "script_level.chapter": 65,
-        "script_level.position": 1,
         "lesson.key": "Text",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -7320,8 +6670,6 @@
         "script_level.level_keys": [
           "CSD web text explore"
         ],
-        "script_level.chapter": 66,
-        "script_level.position": 2,
         "lesson.key": "Text",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -7333,8 +6681,6 @@
         "script_level.level_keys": [
           "CSD U3 Sprites text_2020"
         ],
-        "script_level.chapter": 67,
-        "script_level.position": 3,
         "lesson.key": "Text",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -7346,8 +6692,6 @@
         "script_level.level_keys": [
           "CSD web text size"
         ],
-        "script_level.chapter": 68,
-        "script_level.position": 4,
         "lesson.key": "Text",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -7359,8 +6703,6 @@
         "script_level.level_keys": [
           "CSD web text practice choice_2020"
         ],
-        "script_level.chapter": 69,
-        "script_level.position": 5,
         "lesson.key": "Text",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -7372,8 +6714,6 @@
         "script_level.level_keys": [
           "CSD web text assessment"
         ],
-        "script_level.chapter": 70,
-        "script_level.position": 6,
         "lesson.key": "Text",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -7385,8 +6725,6 @@
         "script_level.level_keys": [
           "CSD web text challenge choice_2020"
         ],
-        "script_level.chapter": 71,
-        "script_level.position": 7,
         "lesson.key": "Text",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -7398,8 +6736,6 @@
         "script_level.level_keys": [
           "CSD U3L09a TFMD_2020"
         ],
-        "script_level.chapter": 72,
-        "script_level.position": 1,
         "lesson.key": "Mini-Project: Captioned Scenes",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -7411,8 +6747,6 @@
         "script_level.level_keys": [
           "CSD U3 Scene Example_2018_2020"
         ],
-        "script_level.chapter": 73,
-        "script_level.position": 2,
         "lesson.key": "Mini-Project: Captioned Scenes",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -7424,8 +6758,6 @@
         "script_level.level_keys": [
           "CSD U3 Sprites scene drawing_2020"
         ],
-        "script_level.chapter": 74,
-        "script_level.position": 3,
         "lesson.key": "Mini-Project: Captioned Scenes",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -7437,8 +6769,6 @@
         "script_level.level_keys": [
           "CSD U3 Sprites scene sprites_2020"
         ],
-        "script_level.chapter": 75,
-        "script_level.position": 4,
         "lesson.key": "Mini-Project: Captioned Scenes",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -7450,8 +6780,6 @@
         "script_level.level_keys": [
           "CSD U3 Sprites scene text_2020"
         ],
-        "script_level.chapter": 76,
-        "script_level.position": 5,
         "lesson.key": "Mini-Project: Captioned Scenes",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -7463,8 +6791,6 @@
         "script_level.level_keys": [
           "CSD U3 Sprites scene challenge_2020"
         ],
-        "script_level.chapter": 77,
-        "script_level.position": 6,
         "lesson.key": "Mini-Project: Captioned Scenes",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -7476,8 +6802,6 @@
         "script_level.level_keys": [
           "CSD U3L10 TFMD pilot_2020"
         ],
-        "script_level.chapter": 78,
-        "script_level.position": 1,
         "lesson.key": "The Draw Loop",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -7489,8 +6813,6 @@
         "script_level.level_keys": [
           "CSD: Introduction to the Draw Loop_2020"
         ],
-        "script_level.chapter": 79,
-        "script_level.position": 2,
         "lesson.key": "The Draw Loop",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -7502,8 +6824,6 @@
         "script_level.level_keys": [
           "CSD U3 Draw Loop Plugged predict 1_2020"
         ],
-        "script_level.chapter": 80,
-        "script_level.position": 3,
         "lesson.key": "The Draw Loop",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -7515,8 +6835,6 @@
         "script_level.level_keys": [
           "CSD U3 Draw Loop Plugged orange and green_2020"
         ],
-        "script_level.chapter": 81,
-        "script_level.position": 4,
         "lesson.key": "The Draw Loop",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -7528,8 +6846,6 @@
         "script_level.level_keys": [
           "CSD U3 Draw Loop Plugged predict 2_2020"
         ],
-        "script_level.chapter": 82,
-        "script_level.position": 5,
         "lesson.key": "The Draw Loop",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -7541,8 +6857,6 @@
         "script_level.level_keys": [
           "CSD U3 dancing alien_2020"
         ],
-        "script_level.chapter": 83,
-        "script_level.position": 6,
         "lesson.key": "The Draw Loop",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -7554,8 +6868,6 @@
         "script_level.level_keys": [
           "CSD U3 Draw Loop Plugged wiggle sprite x_2020"
         ],
-        "script_level.chapter": 84,
-        "script_level.position": 7,
         "lesson.key": "The Draw Loop",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -7567,8 +6879,6 @@
         "script_level.level_keys": [
           "CSD web draw loop practice choice"
         ],
-        "script_level.chapter": 85,
-        "script_level.position": 8,
         "lesson.key": "The Draw Loop",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -7580,8 +6890,6 @@
         "script_level.level_keys": [
           "CSD U3 Draw Loop Plugged wiggle sprite y_2020"
         ],
-        "script_level.chapter": 86,
-        "script_level.position": 9,
         "lesson.key": "The Draw Loop",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -7593,8 +6901,6 @@
         "script_level.level_keys": [
           "CSD web draw loop challenge choice"
         ],
-        "script_level.chapter": 87,
-        "script_level.position": 10,
         "lesson.key": "The Draw Loop",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -7606,8 +6912,6 @@
         "script_level.level_keys": [
           "CSD U3L12 TFMD_2020"
         ],
-        "script_level.chapter": 88,
-        "script_level.position": 1,
         "lesson.key": "Sprite Movement",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -7619,8 +6923,6 @@
         "script_level.level_keys": [
           "CSD U3 - Simple Counter Predict_2020"
         ],
-        "script_level.chapter": 89,
-        "script_level.position": 2,
         "lesson.key": "Sprite Movement",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -7632,8 +6934,6 @@
         "script_level.level_keys": [
           "CSD: Animating Sprite Movement_2020"
         ],
-        "script_level.chapter": 90,
-        "script_level.position": 3,
         "lesson.key": "Sprite Movement",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -7645,8 +6945,6 @@
         "script_level.level_keys": [
           "CSD U3 Sprite Movement Right_2020"
         ],
-        "script_level.chapter": 91,
-        "script_level.position": 4,
         "lesson.key": "Sprite Movement",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -7658,8 +6956,6 @@
         "script_level.level_keys": [
           "CSD U3 Sprite Movement Left_2020"
         ],
-        "script_level.chapter": 92,
-        "script_level.position": 5,
         "lesson.key": "Sprite Movement",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -7671,8 +6967,6 @@
         "script_level.level_keys": [
           "CSD U3 Diagonal Movement_2020"
         ],
-        "script_level.chapter": 93,
-        "script_level.position": 6,
         "lesson.key": "Sprite Movement",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -7684,8 +6978,6 @@
         "script_level.level_keys": [
           "CSD U3 Sprite Movement Predict_2020"
         ],
-        "script_level.chapter": 94,
-        "script_level.position": 7,
         "lesson.key": "Sprite Movement",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -7697,8 +6989,6 @@
         "script_level.level_keys": [
           "CSD web movement practice choice"
         ],
-        "script_level.chapter": 95,
-        "script_level.position": 8,
         "lesson.key": "Sprite Movement",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -7710,8 +7000,6 @@
         "script_level.level_keys": [
           "CSD U3 Movement Fish_2020"
         ],
-        "script_level.chapter": 96,
-        "script_level.position": 9,
         "lesson.key": "Sprite Movement",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -7723,8 +7011,6 @@
         "script_level.level_keys": [
           "CSD web movement challenge choice"
         ],
-        "script_level.chapter": 97,
-        "script_level.position": 10,
         "lesson.key": "Sprite Movement",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -7736,8 +7022,6 @@
         "script_level.level_keys": [
           "CSD U3L13 TFMD_2020"
         ],
-        "script_level.chapter": 98,
-        "script_level.position": 1,
         "lesson.key": "Mini-Project: Animation",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -7749,8 +7033,6 @@
         "script_level.level_keys": [
           "CSD web project animated example"
         ],
-        "script_level.chapter": 99,
-        "script_level.position": 2,
         "lesson.key": "Mini-Project: Animation",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -7762,8 +7044,6 @@
         "script_level.level_keys": [
           "CSD web project animated plan"
         ],
-        "script_level.chapter": 100,
-        "script_level.position": 3,
         "lesson.key": "Mini-Project: Animation",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -7775,8 +7055,6 @@
         "script_level.level_keys": [
           "CSD web project animated background"
         ],
-        "script_level.chapter": 101,
-        "script_level.position": 4,
         "lesson.key": "Mini-Project: Animation",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -7788,8 +7066,6 @@
         "script_level.level_keys": [
           "CSD web project animated sprites"
         ],
-        "script_level.chapter": 102,
-        "script_level.position": 5,
         "lesson.key": "Mini-Project: Animation",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -7801,8 +7077,6 @@
         "script_level.level_keys": [
           "CSD web project animated text"
         ],
-        "script_level.chapter": 103,
-        "script_level.position": 6,
         "lesson.key": "Mini-Project: Animation",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -7814,8 +7088,6 @@
         "script_level.level_keys": [
           "CSD web project animated movement"
         ],
-        "script_level.chapter": 104,
-        "script_level.position": 7,
         "lesson.key": "Mini-Project: Animation",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -7827,8 +7099,6 @@
         "script_level.level_keys": [
           "CSD web project animated review"
         ],
-        "script_level.chapter": 105,
-        "script_level.position": 8,
         "lesson.key": "Mini-Project: Animation",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -7840,8 +7110,6 @@
         "script_level.level_keys": [
           "CSD U3L14 TFMD_2020"
         ],
-        "script_level.chapter": 106,
-        "script_level.position": 1,
         "lesson.key": "Conditionals",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -7853,8 +7121,6 @@
         "script_level.level_keys": [
           "CSD U3 Boolean Predict_2020"
         ],
-        "script_level.chapter": 107,
-        "script_level.position": 2,
         "lesson.key": "Conditionals",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -7866,8 +7132,6 @@
         "script_level.level_keys": [
           "CSD U3 - Booleans Video_2020"
         ],
-        "script_level.chapter": 108,
-        "script_level.position": 3,
         "lesson.key": "Conditionals",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -7879,8 +7143,6 @@
         "script_level.level_keys": [
           "CSD U3 - conditionals - Matching_2018_2019_pilot_2020"
         ],
-        "script_level.chapter": 109,
-        "script_level.position": 4,
         "lesson.key": "Conditionals",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -7892,8 +7154,6 @@
         "script_level.level_keys": [
           "CSD U3 - conditionals - transition_2020"
         ],
-        "script_level.chapter": 110,
-        "script_level.position": 5,
         "lesson.key": "Conditionals",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -7905,8 +7165,6 @@
         "script_level.level_keys": [
           "CSD U3 - conditionals - first conditional_2020"
         ],
-        "script_level.chapter": 111,
-        "script_level.position": 6,
         "lesson.key": "Conditionals",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -7918,8 +7176,6 @@
         "script_level.level_keys": [
           "csd U3 conditional statements video_2020"
         ],
-        "script_level.chapter": 112,
-        "script_level.position": 7,
         "lesson.key": "Conditionals",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -7931,8 +7187,6 @@
         "script_level.level_keys": [
           "CSD U3 Conditionals Apple 2_2018_2020"
         ],
-        "script_level.chapter": 113,
-        "script_level.position": 8,
         "lesson.key": "Conditionals",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -7944,8 +7198,6 @@
         "script_level.level_keys": [
           "CSD web conditionals practice choice"
         ],
-        "script_level.chapter": 114,
-        "script_level.position": 9,
         "lesson.key": "Conditionals",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -7957,8 +7209,6 @@
         "script_level.level_keys": [
           "CSD web conditionals assessment"
         ],
-        "script_level.chapter": 115,
-        "script_level.position": 10,
         "lesson.key": "Conditionals",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -7970,8 +7220,6 @@
         "script_level.level_keys": [
           "CSD web conditionals challenge choice"
         ],
-        "script_level.chapter": 116,
-        "script_level.position": 11,
         "lesson.key": "Conditionals",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -7983,8 +7231,6 @@
         "script_level.level_keys": [
           "CSD U3L15 TFMD_2020"
         ],
-        "script_level.chapter": 117,
-        "script_level.position": 1,
         "lesson.key": "Keyboard Input",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -7996,8 +7242,6 @@
         "script_level.level_keys": [
           "CSD U3 Keypress Boolean_2018_2020"
         ],
-        "script_level.chapter": 118,
-        "script_level.position": 2,
         "lesson.key": "Keyboard Input",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -8009,8 +7253,6 @@
         "script_level.level_keys": [
           "CSD U3 keydown conditional_2018_2020"
         ],
-        "script_level.chapter": 119,
-        "script_level.position": 3,
         "lesson.key": "Keyboard Input",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -8022,8 +7264,6 @@
         "script_level.level_keys": [
           "CSD U3 UP_ARROW_2018_2020"
         ],
-        "script_level.chapter": 120,
-        "script_level.position": 4,
         "lesson.key": "Keyboard Input",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -8035,8 +7275,6 @@
         "script_level.level_keys": [
           "CSD U3 Input Gears_2020"
         ],
-        "script_level.chapter": 121,
-        "script_level.position": 5,
         "lesson.key": "Keyboard Input",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -8048,8 +7286,6 @@
         "script_level.level_keys": [
           "CSD web keyboard practice choice"
         ],
-        "script_level.chapter": 122,
-        "script_level.position": 6,
         "lesson.key": "Keyboard Input",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -8061,8 +7297,6 @@
         "script_level.level_keys": [
           "CSD U3 Direction Arrows_2018_2020"
         ],
-        "script_level.chapter": 123,
-        "script_level.position": 7,
         "lesson.key": "Keyboard Input",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -8074,8 +7308,6 @@
         "script_level.level_keys": [
           "CSD web keyboard challenge choice"
         ],
-        "script_level.chapter": 124,
-        "script_level.position": 8,
         "lesson.key": "Keyboard Input",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -8087,8 +7319,6 @@
         "script_level.level_keys": [
           "CSD U3L16 TFMD_2020"
         ],
-        "script_level.chapter": 125,
-        "script_level.position": 1,
         "lesson.key": "Mouse Input",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -8100,8 +7330,6 @@
         "script_level.level_keys": [
           "CSD U3 if else predict_2020"
         ],
-        "script_level.chapter": 126,
-        "script_level.position": 2,
         "lesson.key": "Mouse Input",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -8113,8 +7341,6 @@
         "script_level.level_keys": [
           "CSD U3 - Conditionals Video_2020"
         ],
-        "script_level.chapter": 127,
-        "script_level.position": 3,
         "lesson.key": "Mouse Input",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -8126,8 +7352,6 @@
         "script_level.level_keys": [
           "CSD U3 Else_2020"
         ],
-        "script_level.chapter": 128,
-        "script_level.position": 4,
         "lesson.key": "Mouse Input",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -8139,8 +7363,6 @@
         "script_level.level_keys": [
           "CSD games mousedown intro"
         ],
-        "script_level.chapter": 129,
-        "script_level.position": 5,
         "lesson.key": "Mouse Input",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -8152,8 +7374,6 @@
         "script_level.level_keys": [
           "CSD U3 - complex - mouse down_2020"
         ],
-        "script_level.chapter": 130,
-        "script_level.position": 6,
         "lesson.key": "Mouse Input",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -8165,8 +7385,6 @@
         "script_level.level_keys": [
           "CSD U3 If Else_2020"
         ],
-        "script_level.chapter": 131,
-        "script_level.position": 7,
         "lesson.key": "Mouse Input",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -8178,8 +7396,6 @@
         "script_level.level_keys": [
           "CSD web mouse practice choice"
         ],
-        "script_level.chapter": 132,
-        "script_level.position": 8,
         "lesson.key": "Mouse Input",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -8191,8 +7407,6 @@
         "script_level.level_keys": [
           "CSD web mouse assessment"
         ],
-        "script_level.chapter": 133,
-        "script_level.position": 9,
         "lesson.key": "Mouse Input",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -8204,8 +7418,6 @@
         "script_level.level_keys": [
           "CSD web mouse challenge choice"
         ],
-        "script_level.chapter": 134,
-        "script_level.position": 10,
         "lesson.key": "Mouse Input",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -8217,8 +7429,6 @@
         "script_level.level_keys": [
           "CSD U3L17 TFMD_2020"
         ],
-        "script_level.chapter": 135,
-        "script_level.position": 1,
         "lesson.key": "Project - Interactive Card",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -8230,8 +7440,6 @@
         "script_level.level_keys": [
           "CSD U3 Interactive Card Exemplar_2020"
         ],
-        "script_level.chapter": 136,
-        "script_level.position": 2,
         "lesson.key": "Project - Interactive Card",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -8243,8 +7451,6 @@
         "script_level.level_keys": [
           "CSD U3 Card Examples_2018_2019_pilot_2020"
         ],
-        "script_level.chapter": 137,
-        "script_level.position": 3,
         "lesson.key": "Project - Interactive Card",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -8256,8 +7462,6 @@
         "script_level.level_keys": [
           "CSD U3 Interactive Card Background_2020"
         ],
-        "script_level.chapter": 138,
-        "script_level.position": 4,
         "lesson.key": "Project - Interactive Card",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -8269,8 +7473,6 @@
         "script_level.level_keys": [
           "CSD U3 Interactive Card Sprites_2020"
         ],
-        "script_level.chapter": 139,
-        "script_level.position": 5,
         "lesson.key": "Project - Interactive Card",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -8282,8 +7484,6 @@
         "script_level.level_keys": [
           "CSD U3 Interactive Card User Input_2020"
         ],
-        "script_level.chapter": 140,
-        "script_level.position": 6,
         "lesson.key": "Project - Interactive Card",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -8295,8 +7495,6 @@
         "script_level.level_keys": [
           "CSD U3 Interactive Card Other Conditionals_2020"
         ],
-        "script_level.chapter": 141,
-        "script_level.position": 7,
         "lesson.key": "Project - Interactive Card",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -8308,8 +7506,6 @@
         "script_level.level_keys": [
           "CSD U3 Interactive Card Final_2020"
         ],
-        "script_level.chapter": 142,
-        "script_level.position": 8,
         "lesson.key": "Project - Interactive Card",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -8321,8 +7517,6 @@
         "script_level.level_keys": [
           "csd-pulse-check-survey-1-levelgroup U3Ch1_2018_2019_pilot_2020"
         ],
-        "script_level.chapter": 143,
-        "script_level.position": 9,
         "lesson.key": "Project - Interactive Card",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2020"
@@ -8334,8 +7528,6 @@
         "script_level.level_keys": [
           "CSD U3L18 TFMD_2020"
         ],
-        "script_level.chapter": 144,
-        "script_level.position": 1,
         "lesson.key": "Velocity",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -8347,8 +7539,6 @@
         "script_level.level_keys": [
           "CSD U3 abstraction velocityX_2020"
         ],
-        "script_level.chapter": 145,
-        "script_level.position": 2,
         "lesson.key": "Velocity",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -8360,8 +7550,6 @@
         "script_level.level_keys": [
           "CSD: Sprite Velocity_2020"
         ],
-        "script_level.chapter": 146,
-        "script_level.position": 3,
         "lesson.key": "Velocity",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -8373,8 +7561,6 @@
         "script_level.level_keys": [
           "CSD U3 abstraction velocityY_2020"
         ],
-        "script_level.chapter": 147,
-        "script_level.position": 4,
         "lesson.key": "Velocity",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -8386,8 +7572,6 @@
         "script_level.level_keys": [
           "CSD U3 abstraction rotation_2020"
         ],
-        "script_level.chapter": 148,
-        "script_level.position": 5,
         "lesson.key": "Velocity",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -8399,8 +7583,6 @@
         "script_level.level_keys": [
           "CSD U3 abstraction rotation control_2020"
         ],
-        "script_level.chapter": 149,
-        "script_level.position": 6,
         "lesson.key": "Velocity",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -8412,8 +7594,6 @@
         "script_level.level_keys": [
           "CSD U3 abstraction velocityX if-statements_2020"
         ],
-        "script_level.chapter": 150,
-        "script_level.position": 7,
         "lesson.key": "Velocity",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -8425,8 +7605,6 @@
         "script_level.level_keys": [
           "CSD games velocity tennis"
         ],
-        "script_level.chapter": 151,
-        "script_level.position": 8,
         "lesson.key": "Velocity",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -8438,8 +7616,6 @@
         "script_level.level_keys": [
           "CSD games velocity practice choice"
         ],
-        "script_level.chapter": 152,
-        "script_level.position": 9,
         "lesson.key": "Velocity",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -8451,8 +7627,6 @@
         "script_level.level_keys": [
           "CSD U3 abstraction velocityX control_2020"
         ],
-        "script_level.chapter": 153,
-        "script_level.position": 10,
         "lesson.key": "Velocity",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -8464,8 +7638,6 @@
         "script_level.level_keys": [
           "CSD games velocity challenge choice"
         ],
-        "script_level.chapter": 154,
-        "script_level.position": 11,
         "lesson.key": "Velocity",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -8477,8 +7649,6 @@
         "script_level.level_keys": [
           "CSD U3L19 TFMD_2020"
         ],
-        "script_level.chapter": 155,
-        "script_level.position": 1,
         "lesson.key": "Collision Detection",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -8490,8 +7660,6 @@
         "script_level.level_keys": [
           "CSD U3 collisions car intro_2020"
         ],
-        "script_level.chapter": 156,
-        "script_level.position": 2,
         "lesson.key": "Collision Detection",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -8503,8 +7671,6 @@
         "script_level.level_keys": [
           "CSD U3 collisions build isTouching_2020"
         ],
-        "script_level.chapter": 157,
-        "script_level.position": 3,
         "lesson.key": "Collision Detection",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -8516,8 +7682,6 @@
         "script_level.level_keys": [
           "CSD U3 collisions isTouching intro_2020"
         ],
-        "script_level.chapter": 158,
-        "script_level.position": 4,
         "lesson.key": "Collision Detection",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -8529,8 +7693,6 @@
         "script_level.level_keys": [
           "CSD U3 collisions egg_2020"
         ],
-        "script_level.chapter": 159,
-        "script_level.position": 5,
         "lesson.key": "Collision Detection",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -8542,8 +7704,6 @@
         "script_level.level_keys": [
           "CSD U3 collisions debug isTouching_2020"
         ],
-        "script_level.chapter": 160,
-        "script_level.position": 6,
         "lesson.key": "Collision Detection",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -8555,8 +7715,6 @@
         "script_level.level_keys": [
           "CSD games istouching practice choice"
         ],
-        "script_level.chapter": 161,
-        "script_level.position": 7,
         "lesson.key": "Collision Detection",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -8568,8 +7726,6 @@
         "script_level.level_keys": [
           "CSD U3 collisions horse_2020"
         ],
-        "script_level.chapter": 162,
-        "script_level.position": 8,
         "lesson.key": "Collision Detection",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -8581,8 +7737,6 @@
         "script_level.level_keys": [
           "CSD games istouching challenge choice"
         ],
-        "script_level.chapter": 163,
-        "script_level.position": 9,
         "lesson.key": "Collision Detection",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -8594,8 +7748,6 @@
         "script_level.level_keys": [
           "CSD U3L20 TFMD"
         ],
-        "script_level.chapter": 164,
-        "script_level.position": 1,
         "lesson.key": "Mini-Project: Side Scroller",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -8607,8 +7759,6 @@
         "script_level.level_keys": [
           "CSD games side scroller demo"
         ],
-        "script_level.chapter": 165,
-        "script_level.position": 2,
         "lesson.key": "Mini-Project: Side Scroller",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -8620,8 +7770,6 @@
         "script_level.level_keys": [
           "CSD games sidescroll background"
         ],
-        "script_level.chapter": 166,
-        "script_level.position": 3,
         "lesson.key": "Mini-Project: Side Scroller",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -8633,8 +7781,6 @@
         "script_level.level_keys": [
           "CSD U3 abstraction tumbleweed_2020"
         ],
-        "script_level.chapter": 167,
-        "script_level.position": 4,
         "lesson.key": "Mini-Project: Side Scroller",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -8646,8 +7792,6 @@
         "script_level.level_keys": [
           "CSD U3 abstraction jump_2018_2020"
         ],
-        "script_level.chapter": 168,
-        "script_level.position": 5,
         "lesson.key": "Mini-Project: Side Scroller",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -8659,8 +7803,6 @@
         "script_level.level_keys": [
           "CSD U3 abstraction looping_2020"
         ],
-        "script_level.chapter": 169,
-        "script_level.position": 6,
         "lesson.key": "Mini-Project: Side Scroller",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -8672,8 +7814,6 @@
         "script_level.level_keys": [
           "CSD U3 collisions sidescroll2_2020"
         ],
-        "script_level.chapter": 170,
-        "script_level.position": 7,
         "lesson.key": "Mini-Project: Side Scroller",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -8685,8 +7825,6 @@
         "script_level.level_keys": [
           "CSD U3 collisions scoreboard_2020"
         ],
-        "script_level.chapter": 171,
-        "script_level.position": 8,
         "lesson.key": "Mini-Project: Side Scroller",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -8698,8 +7836,6 @@
         "script_level.level_keys": [
           "CSD games sidescroll review"
         ],
-        "script_level.chapter": 172,
-        "script_level.position": 9,
         "lesson.key": "Mini-Project: Side Scroller",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -8711,8 +7847,6 @@
         "script_level.level_keys": [
           "CSD U3L20 TFMD_2020"
         ],
-        "script_level.chapter": 173,
-        "script_level.position": 1,
         "lesson.key": "Complex Sprite Movement",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -8724,8 +7858,6 @@
         "script_level.level_keys": [
           "CSD U3 Complex Movement counter prediction gamelab_2020"
         ],
-        "script_level.chapter": 174,
-        "script_level.position": 2,
         "lesson.key": "Complex Sprite Movement",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -8737,8 +7869,6 @@
         "script_level.level_keys": [
           "CSD U3 abstraction accelerateX_2020"
         ],
-        "script_level.chapter": 175,
-        "script_level.position": 3,
         "lesson.key": "Complex Sprite Movement",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -8750,8 +7880,6 @@
         "script_level.level_keys": [
           "CSD U3 abstraction accelerateY_2020"
         ],
-        "script_level.chapter": 176,
-        "script_level.position": 4,
         "lesson.key": "Complex Sprite Movement",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -8763,8 +7891,6 @@
         "script_level.level_keys": [
           "CSD U3 abstraction decelerateX_2020"
         ],
-        "script_level.chapter": 177,
-        "script_level.position": 5,
         "lesson.key": "Complex Sprite Movement",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -8776,8 +7902,6 @@
         "script_level.level_keys": [
           "CSD games movement2 practice choice"
         ],
-        "script_level.chapter": 178,
-        "script_level.position": 6,
         "lesson.key": "Complex Sprite Movement",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -8789,8 +7913,6 @@
         "script_level.level_keys": [
           "CSD U3 abstraction decelerateY_2020"
         ],
-        "script_level.chapter": 179,
-        "script_level.position": 7,
         "lesson.key": "Complex Sprite Movement",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -8802,8 +7924,6 @@
         "script_level.level_keys": [
           "CSD games movement2 challenge choice"
         ],
-        "script_level.chapter": 180,
-        "script_level.position": 8,
         "lesson.key": "Complex Sprite Movement",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -8815,8 +7935,6 @@
         "script_level.level_keys": [
           "CSD U3L21 TFMD_2020"
         ],
-        "script_level.chapter": 181,
-        "script_level.position": 1,
         "lesson.key": "Collisions",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -8828,8 +7946,6 @@
         "script_level.level_keys": [
           "CSD U3 collisions predict set velocity code_2020"
         ],
-        "script_level.chapter": 182,
-        "script_level.position": 2,
         "lesson.key": "Collisions",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -8841,8 +7957,6 @@
         "script_level.level_keys": [
           "CSD U3 collisions displace x_2020"
         ],
-        "script_level.chapter": 183,
-        "script_level.position": 3,
         "lesson.key": "Collisions",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -8854,8 +7968,6 @@
         "script_level.level_keys": [
           "CSD U3 collisions displace y_2020"
         ],
-        "script_level.chapter": 184,
-        "script_level.position": 4,
         "lesson.key": "Collisions",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -8867,8 +7979,6 @@
         "script_level.level_keys": [
           "CSD U3 collisions displace intro_2020"
         ],
-        "script_level.chapter": 185,
-        "script_level.position": 5,
         "lesson.key": "Collisions",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -8880,8 +7990,6 @@
         "script_level.level_keys": [
           "CSD U3 collisions try blocks_2020"
         ],
-        "script_level.chapter": 186,
-        "script_level.position": 6,
         "lesson.key": "Collisions",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -8893,8 +8001,6 @@
         "script_level.level_keys": [
           "CSD games collisions practice choice"
         ],
-        "script_level.chapter": 187,
-        "script_level.position": 7,
         "lesson.key": "Collisions",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -8906,8 +8012,6 @@
         "script_level.level_keys": [
           "CSD games collisions assessment"
         ],
-        "script_level.chapter": 188,
-        "script_level.position": 8,
         "lesson.key": "Collisions",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -8919,8 +8023,6 @@
         "script_level.level_keys": [
           "CSD games collisions challenge choice"
         ],
-        "script_level.chapter": 189,
-        "script_level.position": 9,
         "lesson.key": "Collisions",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -8932,8 +8034,6 @@
         "script_level.level_keys": [
           "CSD U3L23 TFMD"
         ],
-        "script_level.chapter": 190,
-        "script_level.position": 1,
         "lesson.key": "Mini-Project: Flyer Game",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -8945,8 +8045,6 @@
         "script_level.level_keys": [
           "CSD games flyer demo"
         ],
-        "script_level.chapter": 191,
-        "script_level.position": 2,
         "lesson.key": "Mini-Project: Flyer Game",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -8958,8 +8056,6 @@
         "script_level.level_keys": [
           "CSD U3 abstraction add coin_2020"
         ],
-        "script_level.chapter": 192,
-        "script_level.position": 3,
         "lesson.key": "Mini-Project: Flyer Game",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -8971,8 +8067,6 @@
         "script_level.level_keys": [
           "CSD U3 abstraction jumping_2020"
         ],
-        "script_level.chapter": 193,
-        "script_level.position": 4,
         "lesson.key": "Mini-Project: Flyer Game",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -8984,8 +8078,6 @@
         "script_level.level_keys": [
           "CSD U3 abstraction left right counter_2020"
         ],
-        "script_level.chapter": 194,
-        "script_level.position": 5,
         "lesson.key": "Mini-Project: Flyer Game",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -8997,8 +8089,6 @@
         "script_level.level_keys": [
           "CSD U3 abstraction left right counter 2_2020"
         ],
-        "script_level.chapter": 195,
-        "script_level.position": 6,
         "lesson.key": "Mini-Project: Flyer Game",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -9010,8 +8100,6 @@
         "script_level.level_keys": [
           "CSD U3 collisions flyman add obstacles_2020"
         ],
-        "script_level.chapter": 196,
-        "script_level.position": 7,
         "lesson.key": "Mini-Project: Flyer Game",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -9023,8 +8111,6 @@
         "script_level.level_keys": [
           "CSD U3 abstraction reset coin_2020"
         ],
-        "script_level.chapter": 197,
-        "script_level.position": 8,
         "lesson.key": "Mini-Project: Flyer Game",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -9036,8 +8122,6 @@
         "script_level.level_keys": [
           "CSD U3 collisions flyman bounceOff_2020"
         ],
-        "script_level.chapter": 198,
-        "script_level.position": 9,
         "lesson.key": "Mini-Project: Flyer Game",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -9049,8 +8133,6 @@
         "script_level.level_keys": [
           "CSD U3L22 TFMD_2020"
         ],
-        "script_level.chapter": 199,
-        "script_level.position": 1,
         "lesson.key": "Functions",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -9062,8 +8144,6 @@
         "script_level.level_keys": [
           "CSD U3 function video_2020"
         ],
-        "script_level.chapter": 200,
-        "script_level.position": 2,
         "lesson.key": "Functions",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -9075,8 +8155,6 @@
         "script_level.level_keys": [
           "CSD U3 Functions Call Function_2020"
         ],
-        "script_level.chapter": 201,
-        "script_level.position": 3,
         "lesson.key": "Functions",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -9088,8 +8166,6 @@
         "script_level.level_keys": [
           "CSD U3 Functions Order Functions_2020"
         ],
-        "script_level.chapter": 202,
-        "script_level.position": 4,
         "lesson.key": "Functions",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -9101,8 +8177,6 @@
         "script_level.level_keys": [
           "CSD U3 Functions Prediction Order of Create_2020"
         ],
-        "script_level.chapter": 203,
-        "script_level.position": 5,
         "lesson.key": "Functions",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -9114,8 +8188,6 @@
         "script_level.level_keys": [
           "CSD games functions practice choice"
         ],
-        "script_level.chapter": 204,
-        "script_level.position": 6,
         "lesson.key": "Functions",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -9127,8 +8199,6 @@
         "script_level.level_keys": [
           "CSD games functions assessment FR"
         ],
-        "script_level.chapter": 205,
-        "script_level.position": 7,
         "lesson.key": "Functions",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -9140,8 +8210,6 @@
         "script_level.level_keys": [
           "CSD U3 Functions Write Reset_2020"
         ],
-        "script_level.chapter": 206,
-        "script_level.position": 8,
         "lesson.key": "Functions",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -9153,8 +8221,6 @@
         "script_level.level_keys": [
           "CSD U3 Functions Add IsTouching_2020"
         ],
-        "script_level.chapter": 207,
-        "script_level.position": 9,
         "lesson.key": "Functions",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -9166,8 +8232,6 @@
         "script_level.level_keys": [
           "CSD U3 Functions Add Change Background_2020"
         ],
-        "script_level.chapter": 208,
-        "script_level.position": 10,
         "lesson.key": "Functions",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -9179,8 +8243,6 @@
         "script_level.level_keys": [
           "CSD games functions challenge choice"
         ],
-        "script_level.chapter": 209,
-        "script_level.position": 11,
         "lesson.key": "Functions",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -9192,8 +8254,6 @@
         "script_level.level_keys": [
           "CSD U3L23 TFMD_2020"
         ],
-        "script_level.chapter": 210,
-        "script_level.position": 1,
         "lesson.key": "The Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -9205,8 +8265,6 @@
         "script_level.level_keys": [
           "CSD U3 AnimationsMulti Play Defender_2020"
         ],
-        "script_level.chapter": 211,
-        "script_level.position": 2,
         "lesson.key": "The Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -9218,8 +8276,6 @@
         "script_level.level_keys": [
           "CSD U3 AnimationsMulti STOP project guide_2018_2019_pilot_2020"
         ],
-        "script_level.chapter": 212,
-        "script_level.position": 3,
         "lesson.key": "The Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -9231,8 +8287,6 @@
         "script_level.level_keys": [
           "CSD U3 AnimationsMulti defender animate cake enemies_2020"
         ],
-        "script_level.chapter": 213,
-        "script_level.position": 4,
         "lesson.key": "The Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -9244,8 +8298,6 @@
         "script_level.level_keys": [
           "CSD U3 AnimationsMulti defender enemies move_2020"
         ],
-        "script_level.chapter": 214,
-        "script_level.position": 5,
         "lesson.key": "The Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -9257,8 +8309,6 @@
         "script_level.level_keys": [
           "CSD U3 AnimationsMulti defender move player_2020"
         ],
-        "script_level.chapter": 215,
-        "script_level.position": 6,
         "lesson.key": "The Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -9270,8 +8320,6 @@
         "script_level.level_keys": [
           "CSD U3 AnimationsMulti defender move up down_2020"
         ],
-        "script_level.chapter": 216,
-        "script_level.position": 7,
         "lesson.key": "The Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -9283,8 +8331,6 @@
         "script_level.level_keys": [
           "CSD U3 AnimationsMulti defender animate player_2020"
         ],
-        "script_level.chapter": 217,
-        "script_level.position": 8,
         "lesson.key": "The Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -9296,8 +8342,6 @@
         "script_level.level_keys": [
           "CSD U3 AnimationsMulti defender enemies touch cake_2020"
         ],
-        "script_level.chapter": 218,
-        "script_level.position": 9,
         "lesson.key": "The Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -9309,8 +8353,6 @@
         "script_level.level_keys": [
           "CSD U3 AnimationsMulti defender enemies touch cake sprite2_2020"
         ],
-        "script_level.chapter": 219,
-        "script_level.position": 10,
         "lesson.key": "The Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -9322,8 +8364,6 @@
         "script_level.level_keys": [
           "CSD U3 AnimationsMulti defender create set enemies_2020"
         ],
-        "script_level.chapter": 220,
-        "script_level.position": 11,
         "lesson.key": "The Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -9335,8 +8375,6 @@
         "script_level.level_keys": [
           "CSD U3 AnimationsMulti defender displace enemies_2020"
         ],
-        "script_level.chapter": 221,
-        "script_level.position": 12,
         "lesson.key": "The Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -9348,8 +8386,6 @@
         "script_level.level_keys": [
           "CSD U3 AnimationsMulti defender touch water_2020"
         ],
-        "script_level.chapter": 222,
-        "script_level.position": 13,
         "lesson.key": "The Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -9361,8 +8397,6 @@
         "script_level.level_keys": [
           "CSD games cake challenge choice"
         ],
-        "script_level.chapter": 223,
-        "script_level.position": 14,
         "lesson.key": "The Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -9374,8 +8408,6 @@
         "script_level.level_keys": [
           "CSD U3L24 TFMD_2020"
         ],
-        "script_level.chapter": 224,
-        "script_level.position": 1,
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -9387,8 +8419,6 @@
         "script_level.level_keys": [
           "CSD U3 platform sample1_2020"
         ],
-        "script_level.chapter": 225,
-        "script_level.position": 2,
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -9400,8 +8430,6 @@
         "script_level.level_keys": [
           "CSD U3 platform intro_2018_2019_pilot_2020"
         ],
-        "script_level.chapter": 226,
-        "script_level.position": 3,
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -9413,8 +8441,6 @@
         "script_level.level_keys": [
           "CSD U3 platform background1_2020"
         ],
-        "script_level.chapter": 227,
-        "script_level.position": 4,
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -9426,8 +8452,6 @@
         "script_level.level_keys": [
           "CSD U3 platform variable1_2020"
         ],
-        "script_level.chapter": 228,
-        "script_level.position": 5,
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -9439,8 +8463,6 @@
         "script_level.level_keys": [
           "CSD U3 platform background2_2020"
         ],
-        "script_level.chapter": 229,
-        "script_level.position": 6,
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -9452,8 +8474,6 @@
         "script_level.level_keys": [
           "CSD U3 platform scoreboard_2020"
         ],
-        "script_level.chapter": 230,
-        "script_level.position": 7,
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -9465,8 +8485,6 @@
         "script_level.level_keys": [
           "CSD U3 platform platform1_2020"
         ],
-        "script_level.chapter": 231,
-        "script_level.position": 8,
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -9478,8 +8496,6 @@
         "script_level.level_keys": [
           "CSD U3 platform platform2_2020"
         ],
-        "script_level.chapter": 232,
-        "script_level.position": 9,
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -9491,8 +8507,6 @@
         "script_level.level_keys": [
           "CSD U3 platform platform3_2020"
         ],
-        "script_level.chapter": 233,
-        "script_level.position": 10,
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -9504,8 +8518,6 @@
         "script_level.level_keys": [
           "CSD U3 platform items1_2020"
         ],
-        "script_level.chapter": 234,
-        "script_level.position": 11,
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -9517,8 +8529,6 @@
         "script_level.level_keys": [
           "CSD U3 platform items2_2020"
         ],
-        "script_level.chapter": 235,
-        "script_level.position": 12,
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -9530,8 +8540,6 @@
         "script_level.level_keys": [
           "CSD U3 platform items3_2020"
         ],
-        "script_level.chapter": 236,
-        "script_level.position": 13,
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -9543,8 +8551,6 @@
         "script_level.level_keys": [
           "CSD U3 platform player1_2020"
         ],
-        "script_level.chapter": 237,
-        "script_level.position": 14,
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -9556,8 +8562,6 @@
         "script_level.level_keys": [
           "CSD U3 platform player2_2020"
         ],
-        "script_level.chapter": 238,
-        "script_level.position": 15,
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -9569,8 +8573,6 @@
         "script_level.level_keys": [
           "CSD U3 platform player3_2020"
         ],
-        "script_level.chapter": 239,
-        "script_level.position": 16,
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -9582,8 +8584,6 @@
         "script_level.level_keys": [
           "CSD U3 platform player4_2020"
         ],
-        "script_level.chapter": 240,
-        "script_level.position": 17,
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -9595,8 +8595,6 @@
         "script_level.level_keys": [
           "CSD U3 platform review"
         ],
-        "script_level.chapter": 241,
-        "script_level.position": 18,
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -9608,8 +8606,6 @@
         "script_level.level_keys": [
           "CSD U3 platform sample2_2020"
         ],
-        "script_level.chapter": 242,
-        "script_level.position": 19,
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -9621,8 +8617,6 @@
         "script_level.level_keys": [
           "CSD U3 platform sample3_2020"
         ],
-        "script_level.chapter": 243,
-        "script_level.position": 20,
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -9634,8 +8628,6 @@
         "script_level.level_keys": [
           "CSD games platform challenge choice"
         ],
-        "script_level.chapter": 244,
-        "script_level.position": 21,
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -9647,8 +8639,6 @@
         "script_level.level_keys": [
           "CSD U3L25 TFMD_2020"
         ],
-        "script_level.chapter": 245,
-        "script_level.position": 1,
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -9660,8 +8650,6 @@
         "script_level.level_keys": [
           "CSD U3 game intro_2018_2019_pilot_2020"
         ],
-        "script_level.chapter": 246,
-        "script_level.position": 2,
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -9673,8 +8661,6 @@
         "script_level.level_keys": [
           "CSD U3 game variables_2020"
         ],
-        "script_level.chapter": 247,
-        "script_level.position": 3,
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -9686,8 +8672,6 @@
         "script_level.level_keys": [
           "CSD U3 game backgrounds_2020"
         ],
-        "script_level.chapter": 248,
-        "script_level.position": 4,
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -9699,8 +8683,6 @@
         "script_level.level_keys": [
           "CSD U3 game display boards_2020"
         ],
-        "script_level.chapter": 249,
-        "script_level.position": 5,
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -9712,8 +8694,6 @@
         "script_level.level_keys": [
           "CSD U3 game choose background_2020"
         ],
-        "script_level.chapter": 250,
-        "script_level.position": 6,
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -9725,8 +8705,6 @@
         "script_level.level_keys": [
           "CSD U3 game animations_2020"
         ],
-        "script_level.chapter": 251,
-        "script_level.position": 7,
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -9738,8 +8716,6 @@
         "script_level.level_keys": [
           "CSD U3 game create sprites_2020"
         ],
-        "script_level.chapter": 252,
-        "script_level.position": 8,
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -9751,8 +8727,6 @@
         "script_level.level_keys": [
           "CSD U3 game sprite movement_2020"
         ],
-        "script_level.chapter": 253,
-        "script_level.position": 9,
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -9764,8 +8738,6 @@
         "script_level.level_keys": [
           "CSD U3 game user controls_2020"
         ],
-        "script_level.chapter": 254,
-        "script_level.position": 10,
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -9777,8 +8749,6 @@
         "script_level.level_keys": [
           "CSD U3 game interactions_2020"
         ],
-        "script_level.chapter": 255,
-        "script_level.position": 11,
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -9790,8 +8760,6 @@
         "script_level.level_keys": [
           "CSD games project review"
         ],
-        "script_level.chapter": 256,
-        "script_level.position": 12,
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -9803,8 +8771,6 @@
         "script_level.level_keys": [
           "csd-pulse-check-survey-1-levelgroup U3Ch2_2018_2019_pilot_2020"
         ],
-        "script_level.chapter": 257,
-        "script_level.position": 13,
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -9816,8 +8782,6 @@
         "script_level.level_keys": [
           "CSD Interactive Animations and Games Post-Project Test_pilot_2020"
         ],
-        "script_level.chapter": 258,
-        "script_level.position": 1,
         "lesson.key": "Post-Project Test",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2020"
@@ -9829,8 +8793,6 @@
         "script_level.level_keys": [
           "csd-post-survey-intro-2019_pilot_2020"
         ],
-        "script_level.chapter": 259,
-        "script_level.position": 1,
         "lesson.key": "CS Discoveries Post Course survey",
         "lesson_group.key": "cspSurvey",
         "script.name": "csd3-2020"
@@ -9842,8 +8804,6 @@
         "script_level.level_keys": [
           "csd-post-survey-2017-levelgroup_2018_2019_pilot_2020"
         ],
-        "script_level.chapter": 260,
-        "script_level.position": 2,
         "lesson.key": "CS Discoveries Post Course survey",
         "lesson_group.key": "cspSurvey",
         "script.name": "csd3-2020"

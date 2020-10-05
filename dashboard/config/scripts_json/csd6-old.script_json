@@ -269,8 +269,6 @@
         "script_level.level_keys": [
           "CSDU6 Innovation"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Computing Innovations",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -292,8 +290,6 @@
         "script_level.level_keys": [
           "CSDU6 GameLab Input 1"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 1,
         "lesson.key": "Input Unplugged",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -315,8 +311,6 @@
         "script_level.level_keys": [
           "CSDU6 AppLab Input 1"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 2,
         "lesson.key": "Input Unplugged",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -337,8 +331,6 @@
         "script_level.level_keys": [
           "CSD U6L03 Overview"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 1,
         "lesson.key": "Event Types",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -359,8 +351,6 @@
         "script_level.level_keys": [
           "CSD Review: Design Mode, IDs, and Events"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 2,
         "lesson.key": "Event Types",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -381,8 +371,6 @@
         "script_level.level_keys": [
           "CSD: Review Events"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 3,
         "lesson.key": "Event Types",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -403,8 +391,6 @@
         "script_level.level_keys": [
           "CSD: Creating Variables In App Lab"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 4,
         "lesson.key": "Event Types",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -425,8 +411,6 @@
         "script_level.level_keys": [
           "CSDU6 - UI and Inputs - event type testing"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 5,
         "lesson.key": "Event Types",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -447,8 +431,6 @@
         "script_level.level_keys": [
           "CSD - Getters and Setters"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 1,
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -470,8 +452,6 @@
         "script_level.level_keys": [
           "CSDU6 - UI and Inputs - setScreen"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 2,
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -493,8 +473,6 @@
         "script_level.level_keys": [
           "CSDU6 - UI and Inputs - setText"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 3,
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -516,8 +494,6 @@
         "script_level.level_keys": [
           "CSDU6 - UI and Inputs - hide show"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 4,
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -539,8 +515,6 @@
         "script_level.level_keys": [
           "CSDU6 - UI and Inputs - getText"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 5,
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -562,8 +536,6 @@
         "script_level.level_keys": [
           "CSDU6 - UI and Inputs - dropdown setText"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 6,
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -585,8 +557,6 @@
         "script_level.level_keys": [
           "CSDU6 - UI and Inputs - get set with text input"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 7,
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -608,8 +578,6 @@
         "script_level.level_keys": [
           "CSDU6 - UI and Inputs - getNumber practice"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 8,
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -630,8 +598,6 @@
         "script_level.level_keys": [
           "CSD: getText vs getNumber"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 9,
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -652,8 +618,6 @@
         "script_level.level_keys": [
           "CSDU6 - UI and Inputs - getNumber"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 10,
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -674,8 +638,6 @@
         "script_level.level_keys": [
           "CSD: setProperty"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 11,
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -697,8 +659,6 @@
         "script_level.level_keys": [
           "CSDU6 - UI and Inputs - setProperty first level"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 12,
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -720,8 +680,6 @@
         "script_level.level_keys": [
           "CSDU6 - UI and Inputs - setProperty Image"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 13,
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -743,8 +701,6 @@
         "script_level.level_keys": [
           "CSDU6 - UI and Inputs - setProperty"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 14,
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -765,8 +721,6 @@
         "script_level.level_keys": [
           "Stop: Review Getters and Setters"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 15,
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -787,8 +741,6 @@
         "script_level.level_keys": [
           "Challenge: Input and UI"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 16,
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -809,8 +761,6 @@
         "script_level.level_keys": [
           "CSD LEDs Map"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 1,
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -832,8 +782,6 @@
         "script_level.level_keys": [
           "CSDU6 Circuit Playground Test"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 2,
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -855,8 +803,6 @@
         "script_level.level_keys": [
           "CSDU6 LED basics led.on"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 3,
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -878,8 +824,6 @@
         "script_level.level_keys": [
           "CSDU6 LED basics onEvent"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 4,
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -901,8 +845,6 @@
         "script_level.level_keys": [
           "CSDU6 LED basics led.off()"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 5,
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -924,8 +866,6 @@
         "script_level.level_keys": [
           "CSDU6 LED predict"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 6,
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -947,8 +887,6 @@
         "script_level.level_keys": [
           "CSDU6 LED alarm silent"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 7,
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -969,8 +907,6 @@
         "script_level.level_keys": [
           "CSD Buzzer Map"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 8,
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -992,8 +928,6 @@
         "script_level.level_keys": [
           "CSDU6 buzzer freq"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 9,
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -1015,8 +949,6 @@
         "script_level.level_keys": [
           "CSDU6 buzzer stop"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 10,
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -1038,8 +970,6 @@
         "script_level.level_keys": [
           "CSDU6 buzzer alarm"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 11,
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -1060,8 +990,6 @@
         "script_level.level_keys": [
           "Challenge: Buzzer and LED"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 12,
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -1082,8 +1010,6 @@
         "script_level.level_keys": [
           "CSD: Introduction to Lists - Part 1"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 1,
         "lesson.key": "Lists",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -1104,8 +1030,6 @@
         "script_level.level_keys": [
           "CSD: Lists"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 2,
         "lesson.key": "Lists",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -1127,8 +1051,6 @@
         "script_level.level_keys": [
           "CSDU6 - lists - lists 1"
         ],
-        "script_level.chapter": 39,
-        "script_level.position": 3,
         "lesson.key": "Lists",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -1150,8 +1072,6 @@
         "script_level.level_keys": [
           "CSDU6 - lists - lists 2"
         ],
-        "script_level.chapter": 40,
-        "script_level.position": 4,
         "lesson.key": "Lists",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -1172,8 +1092,6 @@
         "script_level.level_keys": [
           "CSD: Introduction to Lists - Part 2"
         ],
-        "script_level.chapter": 41,
-        "script_level.position": 5,
         "lesson.key": "Lists",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -1194,8 +1112,6 @@
         "script_level.level_keys": [
           "CSD: Accessing List Items"
         ],
-        "script_level.chapter": 42,
-        "script_level.position": 6,
         "lesson.key": "Lists",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -1217,8 +1133,6 @@
         "script_level.level_keys": [
           "CSDU6 - lists - lists 3"
         ],
-        "script_level.chapter": 43,
-        "script_level.position": 7,
         "lesson.key": "Lists",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -1240,8 +1154,6 @@
         "script_level.level_keys": [
           "CSDU6 - lists - lists 4"
         ],
-        "script_level.chapter": 44,
-        "script_level.position": 8,
         "lesson.key": "Lists",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -1263,8 +1175,6 @@
         "script_level.level_keys": [
           "CSDU6 - Arrays - indexPractice"
         ],
-        "script_level.chapter": 45,
-        "script_level.position": 9,
         "lesson.key": "Lists",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -1286,8 +1196,6 @@
         "script_level.level_keys": [
           "CSDU6 - Arrays - expressionsAsIndexes"
         ],
-        "script_level.chapter": 46,
-        "script_level.position": 10,
         "lesson.key": "Lists",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -1308,8 +1216,6 @@
         "script_level.level_keys": [
           "CSD Introduction to Lists - Length"
         ],
-        "script_level.chapter": 47,
-        "script_level.position": 11,
         "lesson.key": "Lists",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -1330,8 +1236,6 @@
         "script_level.level_keys": [
           "CSD: List Length"
         ],
-        "script_level.chapter": 48,
-        "script_level.position": 12,
         "lesson.key": "Lists",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -1353,8 +1257,6 @@
         "script_level.level_keys": [
           "CSDU6 - Arrays - length"
         ],
-        "script_level.chapter": 49,
-        "script_level.position": 13,
         "lesson.key": "Lists",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -1376,8 +1278,6 @@
         "script_level.level_keys": [
           "CSDU6 - Arrays - lengthMinus1"
         ],
-        "script_level.chapter": 50,
-        "script_level.position": 14,
         "lesson.key": "Lists",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -1399,8 +1299,6 @@
         "script_level.level_keys": [
           "CSDU6 - lists - lists 5"
         ],
-        "script_level.chapter": 51,
-        "script_level.position": 15,
         "lesson.key": "Lists",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -1421,8 +1319,6 @@
         "script_level.level_keys": [
           "Challenge: Random Button Colors"
         ],
-        "script_level.chapter": 52,
-        "script_level.position": 16,
         "lesson.key": "Lists",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -1443,8 +1339,6 @@
         "script_level.level_keys": [
           "CSD colorLed Map"
         ],
-        "script_level.chapter": 53,
-        "script_level.position": 1,
         "lesson.key": "Lights",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -1466,8 +1360,6 @@
         "script_level.level_keys": [
           "CSDU6L06 - lists and colorLeds - song list"
         ],
-        "script_level.chapter": 54,
-        "script_level.position": 2,
         "lesson.key": "Lights",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -1489,8 +1381,6 @@
         "script_level.level_keys": [
           "CSDU6L06 - lists and colorLeds - set color"
         ],
-        "script_level.chapter": 55,
-        "script_level.position": 3,
         "lesson.key": "Lights",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -1512,8 +1402,6 @@
         "script_level.level_keys": [
           "CSDU6L06 - lists and colorLeds - debug"
         ],
-        "script_level.chapter": 56,
-        "script_level.position": 4,
         "lesson.key": "Lights",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -1535,8 +1423,6 @@
         "script_level.level_keys": [
           "CSDU6L06 - lists and colorLeds - toggle"
         ],
-        "script_level.chapter": 57,
-        "script_level.position": 5,
         "lesson.key": "Lights",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -1558,8 +1444,6 @@
         "script_level.level_keys": [
           "CSDU6L06 - lists and colorLeds - intensity"
         ],
-        "script_level.chapter": 58,
-        "script_level.position": 6,
         "lesson.key": "Lights",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -1580,8 +1464,6 @@
         "script_level.level_keys": [
           "CSD - Functions Review"
         ],
-        "script_level.chapter": 59,
-        "script_level.position": 7,
         "lesson.key": "Lights",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -1603,8 +1485,6 @@
         "script_level.level_keys": [
           "CSDU6L06 - lists and colorLeds -solo light pattern"
         ],
-        "script_level.chapter": 60,
-        "script_level.position": 8,
         "lesson.key": "Lights",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -1626,8 +1506,6 @@
         "script_level.level_keys": [
           "CSDU6L06 - lists and colorLeds - light pattern off"
         ],
-        "script_level.chapter": 61,
-        "script_level.position": 9,
         "lesson.key": "Lights",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -1648,8 +1526,6 @@
         "script_level.level_keys": [
           "Challenge: Lights Picker"
         ],
-        "script_level.chapter": 62,
-        "script_level.position": 10,
         "lesson.key": "Lights",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -1670,8 +1546,6 @@
         "script_level.level_keys": [
           "CSD: For Loops"
         ],
-        "script_level.chapter": 63,
-        "script_level.position": 1,
         "lesson.key": "For Loops",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -1692,8 +1566,6 @@
         "script_level.level_keys": [
           "CSD: For Loop"
         ],
-        "script_level.chapter": 64,
-        "script_level.position": 2,
         "lesson.key": "For Loops",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -1715,8 +1587,6 @@
         "script_level.level_keys": [
           "CSDU6 - for loop - 2"
         ],
-        "script_level.chapter": 65,
-        "script_level.position": 3,
         "lesson.key": "For Loops",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -1738,8 +1608,6 @@
         "script_level.level_keys": [
           "CSDU6 - for loop - 6"
         ],
-        "script_level.chapter": 66,
-        "script_level.position": 4,
         "lesson.key": "For Loops",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -1761,8 +1629,6 @@
         "script_level.level_keys": [
           "CSDU6 - for loop - predict repeat"
         ],
-        "script_level.chapter": 67,
-        "script_level.position": 5,
         "lesson.key": "For Loops",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -1784,8 +1650,6 @@
         "script_level.level_keys": [
           "CSDU6 - for loop - predict print"
         ],
-        "script_level.chapter": 68,
-        "script_level.position": 6,
         "lesson.key": "For Loops",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -1806,8 +1670,6 @@
         "script_level.level_keys": [
           "CSD: Lists with For Loops"
         ],
-        "script_level.chapter": 69,
-        "script_level.position": 1,
         "lesson.key": "Lists and For Loops",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -1829,8 +1691,6 @@
         "script_level.level_keys": [
           "CSDU6 - for loop - 5"
         ],
-        "script_level.chapter": 70,
-        "script_level.position": 2,
         "lesson.key": "Lists and For Loops",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -1852,8 +1712,6 @@
         "script_level.level_keys": [
           "CSDU6 - for loop - 10"
         ],
-        "script_level.chapter": 71,
-        "script_level.position": 3,
         "lesson.key": "Lists and For Loops",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -1875,8 +1733,6 @@
         "script_level.level_keys": [
           "CSDU6 - for loop - 1"
         ],
-        "script_level.chapter": 72,
-        "script_level.position": 4,
         "lesson.key": "Lists and For Loops",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -1898,8 +1754,6 @@
         "script_level.level_keys": [
           "CSDU6 - for loop - button grid 1"
         ],
-        "script_level.chapter": 73,
-        "script_level.position": 5,
         "lesson.key": "Lists and For Loops",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -1921,8 +1775,6 @@
         "script_level.level_keys": [
           "CSDU6 - for loop - color buttons"
         ],
-        "script_level.chapter": 74,
-        "script_level.position": 6,
         "lesson.key": "Lists and For Loops",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -1944,8 +1796,6 @@
         "script_level.level_keys": [
           "CSDU6 - for loop - color buttons with for"
         ],
-        "script_level.chapter": 75,
-        "script_level.position": 7,
         "lesson.key": "Lists and For Loops",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -1967,8 +1817,6 @@
         "script_level.level_keys": [
           "CSDU6 - for loop - why for"
         ],
-        "script_level.chapter": 76,
-        "script_level.position": 8,
         "lesson.key": "Lists and For Loops",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -1989,8 +1837,6 @@
         "script_level.level_keys": [
           "Stop: Check with Teacher"
         ],
-        "script_level.chapter": 77,
-        "script_level.position": 9,
         "lesson.key": "Lists and For Loops",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -2012,8 +1858,6 @@
         "script_level.level_keys": [
           "CSD - for loop - on off"
         ],
-        "script_level.chapter": 78,
-        "script_level.position": 10,
         "lesson.key": "Lists and For Loops",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -2035,8 +1879,6 @@
         "script_level.level_keys": [
           "CSDU6 - for loops - lights picker"
         ],
-        "script_level.chapter": 79,
-        "script_level.position": 11,
         "lesson.key": "Lists and For Loops",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -2057,8 +1899,6 @@
         "script_level.level_keys": [
           "CSD U6 - timed Loop predict for"
         ],
-        "script_level.chapter": 80,
-        "script_level.position": 1,
         "lesson.key": "Timed Loops",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -2079,8 +1919,6 @@
         "script_level.level_keys": [
           "CSD Timed Loop Map"
         ],
-        "script_level.chapter": 81,
-        "script_level.position": 2,
         "lesson.key": "Timed Loops",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -2102,8 +1940,6 @@
         "script_level.level_keys": [
           "CSD U6 - timed Loop predict timed"
         ],
-        "script_level.chapter": 82,
-        "script_level.position": 3,
         "lesson.key": "Timed Loops",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -2125,8 +1961,6 @@
         "script_level.level_keys": [
           "CSDU6 - timed loop smiley rand y"
         ],
-        "script_level.chapter": 83,
-        "script_level.position": 4,
         "lesson.key": "Timed Loops",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -2148,8 +1982,6 @@
         "script_level.level_keys": [
           "CSDU6 - timed loop smiley event"
         ],
-        "script_level.chapter": 84,
-        "script_level.position": 5,
         "lesson.key": "Timed Loops",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -2171,8 +2003,6 @@
         "script_level.level_keys": [
           "CSDU6 - timed loop console.log()"
         ],
-        "script_level.chapter": 85,
-        "script_level.position": 6,
         "lesson.key": "Timed Loops",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -2193,8 +2023,6 @@
         "script_level.level_keys": [
           "CSDU6 - timed loop stop board"
         ],
-        "script_level.chapter": 86,
-        "script_level.position": 7,
         "lesson.key": "Timed Loops",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -2216,8 +2044,6 @@
         "script_level.level_keys": [
           "CSDU6 - timed loop random blink"
         ],
-        "script_level.chapter": 87,
-        "script_level.position": 8,
         "lesson.key": "Timed Loops",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -2239,8 +2065,6 @@
         "script_level.level_keys": [
           "CSDU6 - timed loop random sound"
         ],
-        "script_level.chapter": 88,
-        "script_level.position": 9,
         "lesson.key": "Timed Loops",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -2262,8 +2086,6 @@
         "script_level.level_keys": [
           "CSDU6 - timed loop predict counter"
         ],
-        "script_level.chapter": 89,
-        "script_level.position": 10,
         "lesson.key": "Timed Loops",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -2284,8 +2106,6 @@
         "script_level.level_keys": [
           "CSD Timed For Loop Map"
         ],
-        "script_level.chapter": 90,
-        "script_level.position": 11,
         "lesson.key": "Timed Loops",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -2307,8 +2127,6 @@
         "script_level.level_keys": [
           "CSDU6 - timed loop for LEDs"
         ],
-        "script_level.chapter": 91,
-        "script_level.position": 12,
         "lesson.key": "Timed Loops",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -2330,8 +2148,6 @@
         "script_level.level_keys": [
           "CSDU6 - timed loop random sound exit"
         ],
-        "script_level.chapter": 92,
-        "script_level.position": 13,
         "lesson.key": "Timed Loops",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -2353,8 +2169,6 @@
         "script_level.level_keys": [
           "CSDU6 - timed loop helpers"
         ],
-        "script_level.chapter": 93,
-        "script_level.position": 14,
         "lesson.key": "Timed Loops",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -2375,8 +2189,6 @@
         "script_level.level_keys": [
           "CSDU6 - timed loop challenge"
         ],
-        "script_level.chapter": 94,
-        "script_level.position": 15,
         "lesson.key": "Timed Loops",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -2397,8 +2209,6 @@
         "script_level.level_keys": [
           "CSDU6 - ch 1 exemplar LEDs"
         ],
-        "script_level.chapter": 95,
-        "script_level.position": 1,
         "lesson.key": "Project: Board Output",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -2420,8 +2230,6 @@
         "script_level.level_keys": [
           "CSDU6 - ch 1 project design"
         ],
-        "script_level.chapter": 96,
-        "script_level.position": 2,
         "lesson.key": "Project: Board Output",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -2443,8 +2251,6 @@
         "script_level.level_keys": [
           "CSDU6 - ch 1 project events"
         ],
-        "script_level.chapter": 97,
-        "script_level.position": 3,
         "lesson.key": "Project: Board Output",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -2466,8 +2272,6 @@
         "script_level.level_keys": [
           "CSDU6 - ch 1 project functions"
         ],
-        "script_level.chapter": 98,
-        "script_level.position": 4,
         "lesson.key": "Project: Board Output",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -2489,8 +2293,6 @@
         "script_level.level_keys": [
           "CSDU6 - ch 1 project output"
         ],
-        "script_level.chapter": 99,
-        "script_level.position": 5,
         "lesson.key": "Project: Board Output",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -2512,8 +2314,6 @@
         "script_level.level_keys": [
           "CSDU6 - ch 1 project finish"
         ],
-        "script_level.chapter": 100,
-        "script_level.position": 6,
         "lesson.key": "Project: Board Output",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -2535,8 +2335,6 @@
         "script_level.level_keys": [
           "csd-pulse-check-survey-1-levelgroup U6Ch1"
         ],
-        "script_level.chapter": 101,
-        "script_level.position": 7,
         "lesson.key": "Project: Board Output",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -2557,8 +2355,6 @@
         "script_level.level_keys": [
           "CSD onBoardEvent Map"
         ],
-        "script_level.chapter": 102,
-        "script_level.position": 1,
         "lesson.key": "Physical Input",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-old"
@@ -2580,8 +2376,6 @@
         "script_level.level_keys": [
           "CSDU6 - button screen buttonL"
         ],
-        "script_level.chapter": 103,
-        "script_level.position": 2,
         "lesson.key": "Physical Input",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-old"
@@ -2603,8 +2397,6 @@
         "script_level.level_keys": [
           "CSDU6 - button screen buttonR"
         ],
-        "script_level.chapter": 104,
-        "script_level.position": 3,
         "lesson.key": "Physical Input",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-old"
@@ -2625,8 +2417,6 @@
         "script_level.level_keys": [
           "CSD Board Buttons Map"
         ],
-        "script_level.chapter": 105,
-        "script_level.position": 4,
         "lesson.key": "Physical Input",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-old"
@@ -2648,8 +2438,6 @@
         "script_level.level_keys": [
           "CSDU6 - button toggle"
         ],
-        "script_level.chapter": 106,
-        "script_level.position": 5,
         "lesson.key": "Physical Input",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-old"
@@ -2671,8 +2459,6 @@
         "script_level.level_keys": [
           "CSDU6 - button on off"
         ],
-        "script_level.chapter": 107,
-        "script_level.position": 6,
         "lesson.key": "Physical Input",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-old"
@@ -2694,8 +2480,6 @@
         "script_level.level_keys": [
           "CSDU6 - button up down predict"
         ],
-        "script_level.chapter": 108,
-        "script_level.position": 7,
         "lesson.key": "Physical Input",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-old"
@@ -2717,8 +2501,6 @@
         "script_level.level_keys": [
           "CSDU6 - button up down"
         ],
-        "script_level.chapter": 109,
-        "script_level.position": 8,
         "lesson.key": "Physical Input",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-old"
@@ -2739,8 +2521,6 @@
         "script_level.level_keys": [
           "CSDU6 - button check for understanding"
         ],
-        "script_level.chapter": 110,
-        "script_level.position": 9,
         "lesson.key": "Physical Input",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-old"
@@ -2762,8 +2542,6 @@
         "script_level.level_keys": [
           "CSDU6 - button switch"
         ],
-        "script_level.chapter": 111,
-        "script_level.position": 10,
         "lesson.key": "Physical Input",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-old"
@@ -2785,8 +2563,6 @@
         "script_level.level_keys": [
           "CSDU6 - button debug"
         ],
-        "script_level.chapter": 112,
-        "script_level.position": 11,
         "lesson.key": "Physical Input",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-old"
@@ -2808,8 +2584,6 @@
         "script_level.level_keys": [
           "CSDU6 - button tug o war right button"
         ],
-        "script_level.chapter": 113,
-        "script_level.position": 12,
         "lesson.key": "Physical Input",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-old"
@@ -2831,8 +2605,6 @@
         "script_level.level_keys": [
           "CSDU6 - button tug o war left button"
         ],
-        "script_level.chapter": 114,
-        "script_level.position": 13,
         "lesson.key": "Physical Input",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-old"
@@ -2854,8 +2626,6 @@
         "script_level.level_keys": [
           "CSDU6 - button tug o war challenge"
         ],
-        "script_level.chapter": 115,
-        "script_level.position": 14,
         "lesson.key": "Physical Input",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-old"
@@ -2876,8 +2646,6 @@
         "script_level.level_keys": [
           "CSDU6 - sensors experiment"
         ],
-        "script_level.chapter": 116,
-        "script_level.position": 1,
         "lesson.key": "Analog Input",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-old"
@@ -2898,8 +2666,6 @@
         "script_level.level_keys": [
           "CSD Board Sensors Map"
         ],
-        "script_level.chapter": 117,
-        "script_level.position": 2,
         "lesson.key": "Analog Input",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-old"
@@ -2921,8 +2687,6 @@
         "script_level.level_keys": [
           "CSDU6 - sensors sound"
         ],
-        "script_level.chapter": 118,
-        "script_level.position": 3,
         "lesson.key": "Analog Input",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-old"
@@ -2944,8 +2708,6 @@
         "script_level.level_keys": [
           "CSDU6 - sensors light"
         ],
-        "script_level.chapter": 119,
-        "script_level.position": 4,
         "lesson.key": "Analog Input",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-old"
@@ -2967,8 +2729,6 @@
         "script_level.level_keys": [
           "CSDU6 - sensors temp"
         ],
-        "script_level.chapter": 120,
-        "script_level.position": 5,
         "lesson.key": "Analog Input",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-old"
@@ -2990,8 +2750,6 @@
         "script_level.level_keys": [
           "CSDU6 - sensors predict"
         ],
-        "script_level.chapter": 121,
-        "script_level.position": 6,
         "lesson.key": "Analog Input",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-old"
@@ -3012,8 +2770,6 @@
         "script_level.level_keys": [
           "CSD Set Scale Map"
         ],
-        "script_level.chapter": 122,
-        "script_level.position": 7,
         "lesson.key": "Analog Input",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-old"
@@ -3035,8 +2791,6 @@
         "script_level.level_keys": [
           "CSDU6 - sensors rgb part 1"
         ],
-        "script_level.chapter": 123,
-        "script_level.position": 8,
         "lesson.key": "Analog Input",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-old"
@@ -3058,8 +2812,6 @@
         "script_level.level_keys": [
           "CSDU6 - sensors rgb part 2"
         ],
-        "script_level.chapter": 124,
-        "script_level.position": 9,
         "lesson.key": "Analog Input",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-old"
@@ -3080,8 +2832,6 @@
         "script_level.level_keys": [
           "CSD Polling Events Map"
         ],
-        "script_level.chapter": 125,
-        "script_level.position": 10,
         "lesson.key": "Analog Input",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-old"
@@ -3103,8 +2853,6 @@
         "script_level.level_keys": [
           "CSDU6 - sensors rgb part 3"
         ],
-        "script_level.chapter": 126,
-        "script_level.position": 11,
         "lesson.key": "Analog Input",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-old"
@@ -3126,8 +2874,6 @@
         "script_level.level_keys": [
           "CSDU6 - sensors temp f c"
         ],
-        "script_level.chapter": 127,
-        "script_level.position": 12,
         "lesson.key": "Analog Input",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-old"
@@ -3148,8 +2894,6 @@
         "script_level.level_keys": [
           "CSDU6 - sensors challenge"
         ],
-        "script_level.chapter": 128,
-        "script_level.position": 13,
         "lesson.key": "Analog Input",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-old"
@@ -3170,8 +2914,6 @@
         "script_level.level_keys": [
           "CSDU6 - sensor theremin demo"
         ],
-        "script_level.chapter": 129,
-        "script_level.position": 1,
         "lesson.key": "Sensor Applications",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-old"
@@ -3193,8 +2935,6 @@
         "script_level.level_keys": [
           "CSDU6 - sensors theremin 1"
         ],
-        "script_level.chapter": 130,
-        "script_level.position": 2,
         "lesson.key": "Sensor Applications",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-old"
@@ -3216,8 +2956,6 @@
         "script_level.level_keys": [
           "CSDU6 - sensors theremin 2"
         ],
-        "script_level.chapter": 131,
-        "script_level.position": 3,
         "lesson.key": "Sensor Applications",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-old"
@@ -3239,8 +2977,6 @@
         "script_level.level_keys": [
           "CSDU6 - sensors theremin 3"
         ],
-        "script_level.chapter": 132,
-        "script_level.position": 4,
         "lesson.key": "Sensor Applications",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-old"
@@ -3261,8 +2997,6 @@
         "script_level.level_keys": [
           "CSDU6 - sensor vu meter demo"
         ],
-        "script_level.chapter": 133,
-        "script_level.position": 5,
         "lesson.key": "Sensor Applications",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-old"
@@ -3284,8 +3018,6 @@
         "script_level.level_keys": [
           "CSDU6 - sensors vu meter 1"
         ],
-        "script_level.chapter": 134,
-        "script_level.position": 6,
         "lesson.key": "Sensor Applications",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-old"
@@ -3307,8 +3039,6 @@
         "script_level.level_keys": [
           "CSDU6 - sensors vu meter 2"
         ],
-        "script_level.chapter": 135,
-        "script_level.position": 7,
         "lesson.key": "Sensor Applications",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-old"
@@ -3330,8 +3060,6 @@
         "script_level.level_keys": [
           "CSDU6 - sensors vu meter 3"
         ],
-        "script_level.chapter": 136,
-        "script_level.position": 8,
         "lesson.key": "Sensor Applications",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-old"
@@ -3352,8 +3080,6 @@
         "script_level.level_keys": [
           "CSDU6 - sensor love tester demo"
         ],
-        "script_level.chapter": 137,
-        "script_level.position": 9,
         "lesson.key": "Sensor Applications",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-old"
@@ -3375,8 +3101,6 @@
         "script_level.level_keys": [
           "CSDU6 - sensors love tester 1"
         ],
-        "script_level.chapter": 138,
-        "script_level.position": 10,
         "lesson.key": "Sensor Applications",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-old"
@@ -3398,8 +3122,6 @@
         "script_level.level_keys": [
           "CSDU6 - sensors love tester 2"
         ],
-        "script_level.chapter": 139,
-        "script_level.position": 11,
         "lesson.key": "Sensor Applications",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-old"
@@ -3421,8 +3143,6 @@
         "script_level.level_keys": [
           "CSDU6 - sensors love tester 3"
         ],
-        "script_level.chapter": 140,
-        "script_level.position": 12,
         "lesson.key": "Sensor Applications",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-old"
@@ -3443,8 +3163,6 @@
         "script_level.level_keys": [
           "CSDU6 - sensor projects challenge"
         ],
-        "script_level.chapter": 141,
-        "script_level.position": 13,
         "lesson.key": "Sensor Applications",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-old"
@@ -3466,8 +3184,6 @@
         "script_level.level_keys": [
           "CSDU6 - final project 1"
         ],
-        "script_level.chapter": 142,
-        "script_level.position": 1,
         "lesson.key": "Project: Prototype an Innovation",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-old"
@@ -3489,8 +3205,6 @@
         "script_level.level_keys": [
           "CSDU6 - final project 2"
         ],
-        "script_level.chapter": 143,
-        "script_level.position": 2,
         "lesson.key": "Project: Prototype an Innovation",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-old"
@@ -3512,8 +3226,6 @@
         "script_level.level_keys": [
           "CSDU6 - final project 3"
         ],
-        "script_level.chapter": 144,
-        "script_level.position": 3,
         "lesson.key": "Project: Prototype an Innovation",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-old"
@@ -3535,8 +3247,6 @@
         "script_level.level_keys": [
           "CSDU6 - final project 4"
         ],
-        "script_level.chapter": 145,
-        "script_level.position": 4,
         "lesson.key": "Project: Prototype an Innovation",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-old"
@@ -3558,8 +3268,6 @@
         "script_level.level_keys": [
           "CSDU6 - final project 5"
         ],
-        "script_level.chapter": 146,
-        "script_level.position": 5,
         "lesson.key": "Project: Prototype an Innovation",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-old"
@@ -3581,8 +3289,6 @@
         "script_level.level_keys": [
           "CSDU6 - final project 6"
         ],
-        "script_level.chapter": 147,
-        "script_level.position": 6,
         "lesson.key": "Project: Prototype an Innovation",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-old"
@@ -3604,8 +3310,6 @@
         "script_level.level_keys": [
           "csd-pulse-check-survey-1-levelgroup U6Ch2"
         ],
-        "script_level.chapter": 148,
-        "script_level.position": 7,
         "lesson.key": "Project: Prototype an Innovation",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-old"
@@ -3622,8 +3326,6 @@
         "script_level.level_keys": [
           "CSDU6 Innovation"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Computing Innovations",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -3635,8 +3337,6 @@
         "script_level.level_keys": [
           "CSDU6 GameLab Input 1"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 1,
         "lesson.key": "Input Unplugged",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -3648,8 +3348,6 @@
         "script_level.level_keys": [
           "CSDU6 AppLab Input 1"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 2,
         "lesson.key": "Input Unplugged",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -3661,8 +3359,6 @@
         "script_level.level_keys": [
           "CSD U6L03 Overview"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 1,
         "lesson.key": "Event Types",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -3674,8 +3370,6 @@
         "script_level.level_keys": [
           "CSD Review: Design Mode, IDs, and Events"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 2,
         "lesson.key": "Event Types",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -3687,8 +3381,6 @@
         "script_level.level_keys": [
           "CSD: Review Events"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 3,
         "lesson.key": "Event Types",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -3700,8 +3392,6 @@
         "script_level.level_keys": [
           "CSD: Creating Variables In App Lab"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 4,
         "lesson.key": "Event Types",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -3713,8 +3403,6 @@
         "script_level.level_keys": [
           "CSDU6 - UI and Inputs - event type testing"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 5,
         "lesson.key": "Event Types",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -3726,8 +3414,6 @@
         "script_level.level_keys": [
           "CSD - Getters and Setters"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 1,
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -3739,8 +3425,6 @@
         "script_level.level_keys": [
           "CSDU6 - UI and Inputs - setScreen"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 2,
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -3752,8 +3436,6 @@
         "script_level.level_keys": [
           "CSDU6 - UI and Inputs - setText"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 3,
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -3765,8 +3447,6 @@
         "script_level.level_keys": [
           "CSDU6 - UI and Inputs - hide show"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 4,
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -3778,8 +3458,6 @@
         "script_level.level_keys": [
           "CSDU6 - UI and Inputs - getText"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 5,
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -3791,8 +3469,6 @@
         "script_level.level_keys": [
           "CSDU6 - UI and Inputs - dropdown setText"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 6,
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -3804,8 +3480,6 @@
         "script_level.level_keys": [
           "CSDU6 - UI and Inputs - get set with text input"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 7,
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -3817,8 +3491,6 @@
         "script_level.level_keys": [
           "CSDU6 - UI and Inputs - getNumber practice"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 8,
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -3830,8 +3502,6 @@
         "script_level.level_keys": [
           "CSD: getText vs getNumber"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 9,
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -3843,8 +3513,6 @@
         "script_level.level_keys": [
           "CSDU6 - UI and Inputs - getNumber"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 10,
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -3856,8 +3524,6 @@
         "script_level.level_keys": [
           "CSD: setProperty"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 11,
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -3869,8 +3535,6 @@
         "script_level.level_keys": [
           "CSDU6 - UI and Inputs - setProperty first level"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 12,
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -3882,8 +3546,6 @@
         "script_level.level_keys": [
           "CSDU6 - UI and Inputs - setProperty Image"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 13,
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -3895,8 +3557,6 @@
         "script_level.level_keys": [
           "CSDU6 - UI and Inputs - setProperty"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 14,
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -3908,8 +3568,6 @@
         "script_level.level_keys": [
           "Stop: Review Getters and Setters"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 15,
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -3921,8 +3579,6 @@
         "script_level.level_keys": [
           "Challenge: Input and UI"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 16,
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -3934,8 +3590,6 @@
         "script_level.level_keys": [
           "CSD LEDs Map"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 1,
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -3947,8 +3601,6 @@
         "script_level.level_keys": [
           "CSDU6 Circuit Playground Test"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 2,
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -3960,8 +3612,6 @@
         "script_level.level_keys": [
           "CSDU6 LED basics led.on"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 3,
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -3973,8 +3623,6 @@
         "script_level.level_keys": [
           "CSDU6 LED basics onEvent"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 4,
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -3986,8 +3634,6 @@
         "script_level.level_keys": [
           "CSDU6 LED basics led.off()"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 5,
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -3999,8 +3645,6 @@
         "script_level.level_keys": [
           "CSDU6 LED predict"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 6,
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -4012,8 +3656,6 @@
         "script_level.level_keys": [
           "CSDU6 LED alarm silent"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 7,
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -4025,8 +3667,6 @@
         "script_level.level_keys": [
           "CSD Buzzer Map"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 8,
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -4038,8 +3678,6 @@
         "script_level.level_keys": [
           "CSDU6 buzzer freq"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 9,
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -4051,8 +3689,6 @@
         "script_level.level_keys": [
           "CSDU6 buzzer stop"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 10,
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -4064,8 +3700,6 @@
         "script_level.level_keys": [
           "CSDU6 buzzer alarm"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 11,
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -4077,8 +3711,6 @@
         "script_level.level_keys": [
           "Challenge: Buzzer and LED"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 12,
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -4090,8 +3722,6 @@
         "script_level.level_keys": [
           "CSD: Introduction to Lists - Part 1"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 1,
         "lesson.key": "Lists",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -4103,8 +3733,6 @@
         "script_level.level_keys": [
           "CSD: Lists"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 2,
         "lesson.key": "Lists",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -4116,8 +3744,6 @@
         "script_level.level_keys": [
           "CSDU6 - lists - lists 1"
         ],
-        "script_level.chapter": 39,
-        "script_level.position": 3,
         "lesson.key": "Lists",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -4129,8 +3755,6 @@
         "script_level.level_keys": [
           "CSDU6 - lists - lists 2"
         ],
-        "script_level.chapter": 40,
-        "script_level.position": 4,
         "lesson.key": "Lists",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -4142,8 +3766,6 @@
         "script_level.level_keys": [
           "CSD: Introduction to Lists - Part 2"
         ],
-        "script_level.chapter": 41,
-        "script_level.position": 5,
         "lesson.key": "Lists",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -4155,8 +3777,6 @@
         "script_level.level_keys": [
           "CSD: Accessing List Items"
         ],
-        "script_level.chapter": 42,
-        "script_level.position": 6,
         "lesson.key": "Lists",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -4168,8 +3788,6 @@
         "script_level.level_keys": [
           "CSDU6 - lists - lists 3"
         ],
-        "script_level.chapter": 43,
-        "script_level.position": 7,
         "lesson.key": "Lists",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -4181,8 +3799,6 @@
         "script_level.level_keys": [
           "CSDU6 - lists - lists 4"
         ],
-        "script_level.chapter": 44,
-        "script_level.position": 8,
         "lesson.key": "Lists",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -4194,8 +3810,6 @@
         "script_level.level_keys": [
           "CSDU6 - Arrays - indexPractice"
         ],
-        "script_level.chapter": 45,
-        "script_level.position": 9,
         "lesson.key": "Lists",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -4207,8 +3821,6 @@
         "script_level.level_keys": [
           "CSDU6 - Arrays - expressionsAsIndexes"
         ],
-        "script_level.chapter": 46,
-        "script_level.position": 10,
         "lesson.key": "Lists",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -4220,8 +3832,6 @@
         "script_level.level_keys": [
           "CSD Introduction to Lists - Length"
         ],
-        "script_level.chapter": 47,
-        "script_level.position": 11,
         "lesson.key": "Lists",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -4233,8 +3843,6 @@
         "script_level.level_keys": [
           "CSD: List Length"
         ],
-        "script_level.chapter": 48,
-        "script_level.position": 12,
         "lesson.key": "Lists",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -4246,8 +3854,6 @@
         "script_level.level_keys": [
           "CSDU6 - Arrays - length"
         ],
-        "script_level.chapter": 49,
-        "script_level.position": 13,
         "lesson.key": "Lists",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -4259,8 +3865,6 @@
         "script_level.level_keys": [
           "CSDU6 - Arrays - lengthMinus1"
         ],
-        "script_level.chapter": 50,
-        "script_level.position": 14,
         "lesson.key": "Lists",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -4272,8 +3876,6 @@
         "script_level.level_keys": [
           "CSDU6 - lists - lists 5"
         ],
-        "script_level.chapter": 51,
-        "script_level.position": 15,
         "lesson.key": "Lists",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -4285,8 +3887,6 @@
         "script_level.level_keys": [
           "Challenge: Random Button Colors"
         ],
-        "script_level.chapter": 52,
-        "script_level.position": 16,
         "lesson.key": "Lists",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -4298,8 +3898,6 @@
         "script_level.level_keys": [
           "CSD colorLed Map"
         ],
-        "script_level.chapter": 53,
-        "script_level.position": 1,
         "lesson.key": "Lights",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -4311,8 +3909,6 @@
         "script_level.level_keys": [
           "CSDU6L06 - lists and colorLeds - song list"
         ],
-        "script_level.chapter": 54,
-        "script_level.position": 2,
         "lesson.key": "Lights",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -4324,8 +3920,6 @@
         "script_level.level_keys": [
           "CSDU6L06 - lists and colorLeds - set color"
         ],
-        "script_level.chapter": 55,
-        "script_level.position": 3,
         "lesson.key": "Lights",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -4337,8 +3931,6 @@
         "script_level.level_keys": [
           "CSDU6L06 - lists and colorLeds - debug"
         ],
-        "script_level.chapter": 56,
-        "script_level.position": 4,
         "lesson.key": "Lights",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -4350,8 +3942,6 @@
         "script_level.level_keys": [
           "CSDU6L06 - lists and colorLeds - toggle"
         ],
-        "script_level.chapter": 57,
-        "script_level.position": 5,
         "lesson.key": "Lights",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -4363,8 +3953,6 @@
         "script_level.level_keys": [
           "CSDU6L06 - lists and colorLeds - intensity"
         ],
-        "script_level.chapter": 58,
-        "script_level.position": 6,
         "lesson.key": "Lights",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -4376,8 +3964,6 @@
         "script_level.level_keys": [
           "CSD - Functions Review"
         ],
-        "script_level.chapter": 59,
-        "script_level.position": 7,
         "lesson.key": "Lights",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -4389,8 +3975,6 @@
         "script_level.level_keys": [
           "CSDU6L06 - lists and colorLeds -solo light pattern"
         ],
-        "script_level.chapter": 60,
-        "script_level.position": 8,
         "lesson.key": "Lights",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -4402,8 +3986,6 @@
         "script_level.level_keys": [
           "CSDU6L06 - lists and colorLeds - light pattern off"
         ],
-        "script_level.chapter": 61,
-        "script_level.position": 9,
         "lesson.key": "Lights",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -4415,8 +3997,6 @@
         "script_level.level_keys": [
           "Challenge: Lights Picker"
         ],
-        "script_level.chapter": 62,
-        "script_level.position": 10,
         "lesson.key": "Lights",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -4428,8 +4008,6 @@
         "script_level.level_keys": [
           "CSD: For Loops"
         ],
-        "script_level.chapter": 63,
-        "script_level.position": 1,
         "lesson.key": "For Loops",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -4441,8 +4019,6 @@
         "script_level.level_keys": [
           "CSD: For Loop"
         ],
-        "script_level.chapter": 64,
-        "script_level.position": 2,
         "lesson.key": "For Loops",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -4454,8 +4030,6 @@
         "script_level.level_keys": [
           "CSDU6 - for loop - 2"
         ],
-        "script_level.chapter": 65,
-        "script_level.position": 3,
         "lesson.key": "For Loops",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -4467,8 +4041,6 @@
         "script_level.level_keys": [
           "CSDU6 - for loop - 6"
         ],
-        "script_level.chapter": 66,
-        "script_level.position": 4,
         "lesson.key": "For Loops",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -4480,8 +4052,6 @@
         "script_level.level_keys": [
           "CSDU6 - for loop - predict repeat"
         ],
-        "script_level.chapter": 67,
-        "script_level.position": 5,
         "lesson.key": "For Loops",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -4493,8 +4063,6 @@
         "script_level.level_keys": [
           "CSDU6 - for loop - predict print"
         ],
-        "script_level.chapter": 68,
-        "script_level.position": 6,
         "lesson.key": "For Loops",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -4506,8 +4074,6 @@
         "script_level.level_keys": [
           "CSD: Lists with For Loops"
         ],
-        "script_level.chapter": 69,
-        "script_level.position": 1,
         "lesson.key": "Lists and For Loops",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -4519,8 +4085,6 @@
         "script_level.level_keys": [
           "CSDU6 - for loop - 5"
         ],
-        "script_level.chapter": 70,
-        "script_level.position": 2,
         "lesson.key": "Lists and For Loops",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -4532,8 +4096,6 @@
         "script_level.level_keys": [
           "CSDU6 - for loop - 10"
         ],
-        "script_level.chapter": 71,
-        "script_level.position": 3,
         "lesson.key": "Lists and For Loops",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -4545,8 +4107,6 @@
         "script_level.level_keys": [
           "CSDU6 - for loop - 1"
         ],
-        "script_level.chapter": 72,
-        "script_level.position": 4,
         "lesson.key": "Lists and For Loops",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -4558,8 +4118,6 @@
         "script_level.level_keys": [
           "CSDU6 - for loop - button grid 1"
         ],
-        "script_level.chapter": 73,
-        "script_level.position": 5,
         "lesson.key": "Lists and For Loops",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -4571,8 +4129,6 @@
         "script_level.level_keys": [
           "CSDU6 - for loop - color buttons"
         ],
-        "script_level.chapter": 74,
-        "script_level.position": 6,
         "lesson.key": "Lists and For Loops",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -4584,8 +4140,6 @@
         "script_level.level_keys": [
           "CSDU6 - for loop - color buttons with for"
         ],
-        "script_level.chapter": 75,
-        "script_level.position": 7,
         "lesson.key": "Lists and For Loops",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -4597,8 +4151,6 @@
         "script_level.level_keys": [
           "CSDU6 - for loop - why for"
         ],
-        "script_level.chapter": 76,
-        "script_level.position": 8,
         "lesson.key": "Lists and For Loops",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -4610,8 +4162,6 @@
         "script_level.level_keys": [
           "Stop: Check with Teacher"
         ],
-        "script_level.chapter": 77,
-        "script_level.position": 9,
         "lesson.key": "Lists and For Loops",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -4623,8 +4173,6 @@
         "script_level.level_keys": [
           "CSD - for loop - on off"
         ],
-        "script_level.chapter": 78,
-        "script_level.position": 10,
         "lesson.key": "Lists and For Loops",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -4636,8 +4184,6 @@
         "script_level.level_keys": [
           "CSDU6 - for loops - lights picker"
         ],
-        "script_level.chapter": 79,
-        "script_level.position": 11,
         "lesson.key": "Lists and For Loops",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -4649,8 +4195,6 @@
         "script_level.level_keys": [
           "CSD U6 - timed Loop predict for"
         ],
-        "script_level.chapter": 80,
-        "script_level.position": 1,
         "lesson.key": "Timed Loops",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -4662,8 +4206,6 @@
         "script_level.level_keys": [
           "CSD Timed Loop Map"
         ],
-        "script_level.chapter": 81,
-        "script_level.position": 2,
         "lesson.key": "Timed Loops",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -4675,8 +4217,6 @@
         "script_level.level_keys": [
           "CSD U6 - timed Loop predict timed"
         ],
-        "script_level.chapter": 82,
-        "script_level.position": 3,
         "lesson.key": "Timed Loops",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -4688,8 +4228,6 @@
         "script_level.level_keys": [
           "CSDU6 - timed loop smiley rand y"
         ],
-        "script_level.chapter": 83,
-        "script_level.position": 4,
         "lesson.key": "Timed Loops",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -4701,8 +4239,6 @@
         "script_level.level_keys": [
           "CSDU6 - timed loop smiley event"
         ],
-        "script_level.chapter": 84,
-        "script_level.position": 5,
         "lesson.key": "Timed Loops",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -4714,8 +4250,6 @@
         "script_level.level_keys": [
           "CSDU6 - timed loop console.log()"
         ],
-        "script_level.chapter": 85,
-        "script_level.position": 6,
         "lesson.key": "Timed Loops",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -4727,8 +4261,6 @@
         "script_level.level_keys": [
           "CSDU6 - timed loop stop board"
         ],
-        "script_level.chapter": 86,
-        "script_level.position": 7,
         "lesson.key": "Timed Loops",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -4740,8 +4272,6 @@
         "script_level.level_keys": [
           "CSDU6 - timed loop random blink"
         ],
-        "script_level.chapter": 87,
-        "script_level.position": 8,
         "lesson.key": "Timed Loops",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -4753,8 +4283,6 @@
         "script_level.level_keys": [
           "CSDU6 - timed loop random sound"
         ],
-        "script_level.chapter": 88,
-        "script_level.position": 9,
         "lesson.key": "Timed Loops",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -4766,8 +4294,6 @@
         "script_level.level_keys": [
           "CSDU6 - timed loop predict counter"
         ],
-        "script_level.chapter": 89,
-        "script_level.position": 10,
         "lesson.key": "Timed Loops",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -4779,8 +4305,6 @@
         "script_level.level_keys": [
           "CSD Timed For Loop Map"
         ],
-        "script_level.chapter": 90,
-        "script_level.position": 11,
         "lesson.key": "Timed Loops",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -4792,8 +4316,6 @@
         "script_level.level_keys": [
           "CSDU6 - timed loop for LEDs"
         ],
-        "script_level.chapter": 91,
-        "script_level.position": 12,
         "lesson.key": "Timed Loops",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -4805,8 +4327,6 @@
         "script_level.level_keys": [
           "CSDU6 - timed loop random sound exit"
         ],
-        "script_level.chapter": 92,
-        "script_level.position": 13,
         "lesson.key": "Timed Loops",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -4818,8 +4338,6 @@
         "script_level.level_keys": [
           "CSDU6 - timed loop helpers"
         ],
-        "script_level.chapter": 93,
-        "script_level.position": 14,
         "lesson.key": "Timed Loops",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -4831,8 +4349,6 @@
         "script_level.level_keys": [
           "CSDU6 - timed loop challenge"
         ],
-        "script_level.chapter": 94,
-        "script_level.position": 15,
         "lesson.key": "Timed Loops",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -4844,8 +4360,6 @@
         "script_level.level_keys": [
           "CSDU6 - ch 1 exemplar LEDs"
         ],
-        "script_level.chapter": 95,
-        "script_level.position": 1,
         "lesson.key": "Project: Board Output",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -4857,8 +4371,6 @@
         "script_level.level_keys": [
           "CSDU6 - ch 1 project design"
         ],
-        "script_level.chapter": 96,
-        "script_level.position": 2,
         "lesson.key": "Project: Board Output",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -4870,8 +4382,6 @@
         "script_level.level_keys": [
           "CSDU6 - ch 1 project events"
         ],
-        "script_level.chapter": 97,
-        "script_level.position": 3,
         "lesson.key": "Project: Board Output",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -4883,8 +4393,6 @@
         "script_level.level_keys": [
           "CSDU6 - ch 1 project functions"
         ],
-        "script_level.chapter": 98,
-        "script_level.position": 4,
         "lesson.key": "Project: Board Output",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -4896,8 +4404,6 @@
         "script_level.level_keys": [
           "CSDU6 - ch 1 project output"
         ],
-        "script_level.chapter": 99,
-        "script_level.position": 5,
         "lesson.key": "Project: Board Output",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -4909,8 +4415,6 @@
         "script_level.level_keys": [
           "CSDU6 - ch 1 project finish"
         ],
-        "script_level.chapter": 100,
-        "script_level.position": 6,
         "lesson.key": "Project: Board Output",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -4922,8 +4426,6 @@
         "script_level.level_keys": [
           "csd-pulse-check-survey-1-levelgroup U6Ch1"
         ],
-        "script_level.chapter": 101,
-        "script_level.position": 7,
         "lesson.key": "Project: Board Output",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-old"
@@ -4935,8 +4437,6 @@
         "script_level.level_keys": [
           "CSD onBoardEvent Map"
         ],
-        "script_level.chapter": 102,
-        "script_level.position": 1,
         "lesson.key": "Physical Input",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-old"
@@ -4948,8 +4448,6 @@
         "script_level.level_keys": [
           "CSDU6 - button screen buttonL"
         ],
-        "script_level.chapter": 103,
-        "script_level.position": 2,
         "lesson.key": "Physical Input",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-old"
@@ -4961,8 +4459,6 @@
         "script_level.level_keys": [
           "CSDU6 - button screen buttonR"
         ],
-        "script_level.chapter": 104,
-        "script_level.position": 3,
         "lesson.key": "Physical Input",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-old"
@@ -4974,8 +4470,6 @@
         "script_level.level_keys": [
           "CSD Board Buttons Map"
         ],
-        "script_level.chapter": 105,
-        "script_level.position": 4,
         "lesson.key": "Physical Input",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-old"
@@ -4987,8 +4481,6 @@
         "script_level.level_keys": [
           "CSDU6 - button toggle"
         ],
-        "script_level.chapter": 106,
-        "script_level.position": 5,
         "lesson.key": "Physical Input",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-old"
@@ -5000,8 +4492,6 @@
         "script_level.level_keys": [
           "CSDU6 - button on off"
         ],
-        "script_level.chapter": 107,
-        "script_level.position": 6,
         "lesson.key": "Physical Input",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-old"
@@ -5013,8 +4503,6 @@
         "script_level.level_keys": [
           "CSDU6 - button up down predict"
         ],
-        "script_level.chapter": 108,
-        "script_level.position": 7,
         "lesson.key": "Physical Input",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-old"
@@ -5026,8 +4514,6 @@
         "script_level.level_keys": [
           "CSDU6 - button up down"
         ],
-        "script_level.chapter": 109,
-        "script_level.position": 8,
         "lesson.key": "Physical Input",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-old"
@@ -5039,8 +4525,6 @@
         "script_level.level_keys": [
           "CSDU6 - button check for understanding"
         ],
-        "script_level.chapter": 110,
-        "script_level.position": 9,
         "lesson.key": "Physical Input",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-old"
@@ -5052,8 +4536,6 @@
         "script_level.level_keys": [
           "CSDU6 - button switch"
         ],
-        "script_level.chapter": 111,
-        "script_level.position": 10,
         "lesson.key": "Physical Input",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-old"
@@ -5065,8 +4547,6 @@
         "script_level.level_keys": [
           "CSDU6 - button debug"
         ],
-        "script_level.chapter": 112,
-        "script_level.position": 11,
         "lesson.key": "Physical Input",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-old"
@@ -5078,8 +4558,6 @@
         "script_level.level_keys": [
           "CSDU6 - button tug o war right button"
         ],
-        "script_level.chapter": 113,
-        "script_level.position": 12,
         "lesson.key": "Physical Input",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-old"
@@ -5091,8 +4569,6 @@
         "script_level.level_keys": [
           "CSDU6 - button tug o war left button"
         ],
-        "script_level.chapter": 114,
-        "script_level.position": 13,
         "lesson.key": "Physical Input",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-old"
@@ -5104,8 +4580,6 @@
         "script_level.level_keys": [
           "CSDU6 - button tug o war challenge"
         ],
-        "script_level.chapter": 115,
-        "script_level.position": 14,
         "lesson.key": "Physical Input",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-old"
@@ -5117,8 +4591,6 @@
         "script_level.level_keys": [
           "CSDU6 - sensors experiment"
         ],
-        "script_level.chapter": 116,
-        "script_level.position": 1,
         "lesson.key": "Analog Input",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-old"
@@ -5130,8 +4602,6 @@
         "script_level.level_keys": [
           "CSD Board Sensors Map"
         ],
-        "script_level.chapter": 117,
-        "script_level.position": 2,
         "lesson.key": "Analog Input",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-old"
@@ -5143,8 +4613,6 @@
         "script_level.level_keys": [
           "CSDU6 - sensors sound"
         ],
-        "script_level.chapter": 118,
-        "script_level.position": 3,
         "lesson.key": "Analog Input",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-old"
@@ -5156,8 +4624,6 @@
         "script_level.level_keys": [
           "CSDU6 - sensors light"
         ],
-        "script_level.chapter": 119,
-        "script_level.position": 4,
         "lesson.key": "Analog Input",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-old"
@@ -5169,8 +4635,6 @@
         "script_level.level_keys": [
           "CSDU6 - sensors temp"
         ],
-        "script_level.chapter": 120,
-        "script_level.position": 5,
         "lesson.key": "Analog Input",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-old"
@@ -5182,8 +4646,6 @@
         "script_level.level_keys": [
           "CSDU6 - sensors predict"
         ],
-        "script_level.chapter": 121,
-        "script_level.position": 6,
         "lesson.key": "Analog Input",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-old"
@@ -5195,8 +4657,6 @@
         "script_level.level_keys": [
           "CSD Set Scale Map"
         ],
-        "script_level.chapter": 122,
-        "script_level.position": 7,
         "lesson.key": "Analog Input",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-old"
@@ -5208,8 +4668,6 @@
         "script_level.level_keys": [
           "CSDU6 - sensors rgb part 1"
         ],
-        "script_level.chapter": 123,
-        "script_level.position": 8,
         "lesson.key": "Analog Input",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-old"
@@ -5221,8 +4679,6 @@
         "script_level.level_keys": [
           "CSDU6 - sensors rgb part 2"
         ],
-        "script_level.chapter": 124,
-        "script_level.position": 9,
         "lesson.key": "Analog Input",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-old"
@@ -5234,8 +4690,6 @@
         "script_level.level_keys": [
           "CSD Polling Events Map"
         ],
-        "script_level.chapter": 125,
-        "script_level.position": 10,
         "lesson.key": "Analog Input",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-old"
@@ -5247,8 +4701,6 @@
         "script_level.level_keys": [
           "CSDU6 - sensors rgb part 3"
         ],
-        "script_level.chapter": 126,
-        "script_level.position": 11,
         "lesson.key": "Analog Input",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-old"
@@ -5260,8 +4712,6 @@
         "script_level.level_keys": [
           "CSDU6 - sensors temp f c"
         ],
-        "script_level.chapter": 127,
-        "script_level.position": 12,
         "lesson.key": "Analog Input",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-old"
@@ -5273,8 +4723,6 @@
         "script_level.level_keys": [
           "CSDU6 - sensors challenge"
         ],
-        "script_level.chapter": 128,
-        "script_level.position": 13,
         "lesson.key": "Analog Input",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-old"
@@ -5286,8 +4734,6 @@
         "script_level.level_keys": [
           "CSDU6 - sensor theremin demo"
         ],
-        "script_level.chapter": 129,
-        "script_level.position": 1,
         "lesson.key": "Sensor Applications",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-old"
@@ -5299,8 +4745,6 @@
         "script_level.level_keys": [
           "CSDU6 - sensors theremin 1"
         ],
-        "script_level.chapter": 130,
-        "script_level.position": 2,
         "lesson.key": "Sensor Applications",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-old"
@@ -5312,8 +4756,6 @@
         "script_level.level_keys": [
           "CSDU6 - sensors theremin 2"
         ],
-        "script_level.chapter": 131,
-        "script_level.position": 3,
         "lesson.key": "Sensor Applications",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-old"
@@ -5325,8 +4767,6 @@
         "script_level.level_keys": [
           "CSDU6 - sensors theremin 3"
         ],
-        "script_level.chapter": 132,
-        "script_level.position": 4,
         "lesson.key": "Sensor Applications",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-old"
@@ -5338,8 +4778,6 @@
         "script_level.level_keys": [
           "CSDU6 - sensor vu meter demo"
         ],
-        "script_level.chapter": 133,
-        "script_level.position": 5,
         "lesson.key": "Sensor Applications",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-old"
@@ -5351,8 +4789,6 @@
         "script_level.level_keys": [
           "CSDU6 - sensors vu meter 1"
         ],
-        "script_level.chapter": 134,
-        "script_level.position": 6,
         "lesson.key": "Sensor Applications",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-old"
@@ -5364,8 +4800,6 @@
         "script_level.level_keys": [
           "CSDU6 - sensors vu meter 2"
         ],
-        "script_level.chapter": 135,
-        "script_level.position": 7,
         "lesson.key": "Sensor Applications",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-old"
@@ -5377,8 +4811,6 @@
         "script_level.level_keys": [
           "CSDU6 - sensors vu meter 3"
         ],
-        "script_level.chapter": 136,
-        "script_level.position": 8,
         "lesson.key": "Sensor Applications",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-old"
@@ -5390,8 +4822,6 @@
         "script_level.level_keys": [
           "CSDU6 - sensor love tester demo"
         ],
-        "script_level.chapter": 137,
-        "script_level.position": 9,
         "lesson.key": "Sensor Applications",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-old"
@@ -5403,8 +4833,6 @@
         "script_level.level_keys": [
           "CSDU6 - sensors love tester 1"
         ],
-        "script_level.chapter": 138,
-        "script_level.position": 10,
         "lesson.key": "Sensor Applications",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-old"
@@ -5416,8 +4844,6 @@
         "script_level.level_keys": [
           "CSDU6 - sensors love tester 2"
         ],
-        "script_level.chapter": 139,
-        "script_level.position": 11,
         "lesson.key": "Sensor Applications",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-old"
@@ -5429,8 +4855,6 @@
         "script_level.level_keys": [
           "CSDU6 - sensors love tester 3"
         ],
-        "script_level.chapter": 140,
-        "script_level.position": 12,
         "lesson.key": "Sensor Applications",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-old"
@@ -5442,8 +4866,6 @@
         "script_level.level_keys": [
           "CSDU6 - sensor projects challenge"
         ],
-        "script_level.chapter": 141,
-        "script_level.position": 13,
         "lesson.key": "Sensor Applications",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-old"
@@ -5455,8 +4877,6 @@
         "script_level.level_keys": [
           "CSDU6 - final project 1"
         ],
-        "script_level.chapter": 142,
-        "script_level.position": 1,
         "lesson.key": "Project: Prototype an Innovation",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-old"
@@ -5468,8 +4888,6 @@
         "script_level.level_keys": [
           "CSDU6 - final project 2"
         ],
-        "script_level.chapter": 143,
-        "script_level.position": 2,
         "lesson.key": "Project: Prototype an Innovation",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-old"
@@ -5481,8 +4899,6 @@
         "script_level.level_keys": [
           "CSDU6 - final project 3"
         ],
-        "script_level.chapter": 144,
-        "script_level.position": 3,
         "lesson.key": "Project: Prototype an Innovation",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-old"
@@ -5494,8 +4910,6 @@
         "script_level.level_keys": [
           "CSDU6 - final project 4"
         ],
-        "script_level.chapter": 145,
-        "script_level.position": 4,
         "lesson.key": "Project: Prototype an Innovation",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-old"
@@ -5507,8 +4921,6 @@
         "script_level.level_keys": [
           "CSDU6 - final project 5"
         ],
-        "script_level.chapter": 146,
-        "script_level.position": 5,
         "lesson.key": "Project: Prototype an Innovation",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-old"
@@ -5520,8 +4932,6 @@
         "script_level.level_keys": [
           "CSDU6 - final project 6"
         ],
-        "script_level.chapter": 147,
-        "script_level.position": 6,
         "lesson.key": "Project: Prototype an Innovation",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-old"
@@ -5533,8 +4943,6 @@
         "script_level.level_keys": [
           "csd-pulse-check-survey-1-levelgroup U6Ch2"
         ],
-        "script_level.chapter": 148,
-        "script_level.position": 7,
         "lesson.key": "Project: Prototype an Innovation",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-old"

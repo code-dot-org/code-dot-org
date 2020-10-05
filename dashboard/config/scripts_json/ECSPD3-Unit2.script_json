@@ -126,8 +126,6 @@
         "script_level.level_keys": [
           "ECS Phase 3 Welcome"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit2"
@@ -148,8 +146,6 @@
         "script_level.level_keys": [
           "ECS Phase 3 Overview"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit2"
@@ -170,8 +166,6 @@
         "script_level.level_keys": [
           "PDECS tour"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit2"
@@ -192,8 +186,6 @@
         "script_level.level_keys": [
           "PD check your progress"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit2"
@@ -214,8 +206,6 @@
         "script_level.level_keys": [
           "ECSPD Unit 2 Outline"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 5,
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit2"
@@ -236,8 +226,6 @@
         "script_level.level_keys": [
           "ECSPD P3 Plan"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 6,
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit2"
@@ -258,8 +246,6 @@
         "script_level.level_keys": [
           "ECSPD Unit2 Connections"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 1,
         "lesson.key": "Intro to Unit 2",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit2"
@@ -280,8 +266,6 @@
         "script_level.level_keys": [
           "ECSPD Unit 2 Lesson Overview"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 2,
         "lesson.key": "Intro to Unit 2",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit2"
@@ -302,8 +286,6 @@
         "script_level.level_keys": [
           "Forum-ECSPD-Unit 2-Teaching Practice"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 1,
         "lesson.key": "Teaching Strategies",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit2"
@@ -324,8 +306,6 @@
         "script_level.level_keys": [
           "ECSPD Unit 2 Growth"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 2,
         "lesson.key": "Teaching Strategies",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit2"
@@ -346,8 +326,6 @@
         "script_level.level_keys": [
           "ECSPD Phase 3 - Unit 2 - Teaching Practice"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 3,
         "lesson.key": "Teaching Strategies",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit2"
@@ -368,8 +346,6 @@
         "script_level.level_keys": [
           "ECSPD Growth Mindset Student Video"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 4,
         "lesson.key": "Teaching Strategies",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit2"
@@ -390,8 +366,6 @@
         "script_level.level_keys": [
           "ECSPD What Is Problem Solving"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 5,
         "lesson.key": "Teaching Strategies",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit2"
@@ -412,8 +386,6 @@
         "script_level.level_keys": [
           "ECSPD Real Life Problem Solving"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 6,
         "lesson.key": "Teaching Strategies",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit2"
@@ -434,8 +406,6 @@
         "script_level.level_keys": [
           "ECSPD Find Learning Strategy"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 7,
         "lesson.key": "Teaching Strategies",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit2"
@@ -456,8 +426,6 @@
         "script_level.level_keys": [
           "ECSPD strategies"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 8,
         "lesson.key": "Teaching Strategies",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit2"
@@ -478,8 +446,6 @@
         "script_level.level_keys": [
           "ECSPD U2 D 1-2"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 1,
         "lesson.key": "Lesson Overviews",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit2"
@@ -500,8 +466,6 @@
         "script_level.level_keys": [
           "ECSPD U2 D 3"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 2,
         "lesson.key": "Lesson Overviews",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit2"
@@ -522,8 +486,6 @@
         "script_level.level_keys": [
           "ECSPD U2 D 4-6"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 3,
         "lesson.key": "Lesson Overviews",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit2"
@@ -544,8 +506,6 @@
         "script_level.level_keys": [
           "ECSPD U2 D 7-9 Intro"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 4,
         "lesson.key": "Lesson Overviews",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit2"
@@ -566,8 +526,6 @@
         "script_level.level_keys": [
           "ECSPD U2 D 10-12 Intro"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 5,
         "lesson.key": "Lesson Overviews",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit2"
@@ -588,8 +546,6 @@
         "script_level.level_keys": [
           "ECSPD Binary Odometer"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 6,
         "lesson.key": "Lesson Overviews",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit2"
@@ -610,8 +566,6 @@
         "script_level.level_keys": [
           "U1L5 How the Internet Works - Video"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 7,
         "lesson.key": "Lesson Overviews",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit2"
@@ -632,8 +586,6 @@
         "script_level.level_keys": [
           "ECSPD U2 D 13-14 Intro"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 8,
         "lesson.key": "Lesson Overviews",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit2"
@@ -654,8 +606,6 @@
         "script_level.level_keys": [
           "ECSPD Linear vs Binary Search Video"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 9,
         "lesson.key": "Lesson Overviews",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit2"
@@ -676,8 +626,6 @@
         "script_level.level_keys": [
           "ECSPD U2 D 15-16 Intro"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 10,
         "lesson.key": "Lesson Overviews",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit2"
@@ -698,8 +646,6 @@
         "script_level.level_keys": [
           "ECSPD U2L1516 Sorting Video"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 11,
         "lesson.key": "Lesson Overviews",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit2"
@@ -720,8 +666,6 @@
         "script_level.level_keys": [
           "ECSPD U2 D 17 Intro"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 12,
         "lesson.key": "Lesson Overviews",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit2"
@@ -742,8 +686,6 @@
         "script_level.level_keys": [
           "ECSPD U2 D 18-21 Intro"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 13,
         "lesson.key": "Lesson Overviews",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit2"
@@ -764,8 +706,6 @@
         "script_level.level_keys": [
           "ECSPD Unit 2 Dani"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 1,
         "lesson.key": "Unit 2 Challenge",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit2"
@@ -786,8 +726,6 @@
         "script_level.level_keys": [
           "ECSPD What is the Challenge"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 2,
         "lesson.key": "Unit 2 Challenge",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit2"
@@ -808,8 +746,6 @@
         "script_level.level_keys": [
           "ECSPD U2 Challenges"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 3,
         "lesson.key": "Unit 2 Challenge",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit2"
@@ -830,8 +766,6 @@
         "script_level.level_keys": [
           "ECSPD U2 Challenge Decision"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 4,
         "lesson.key": "Unit 2 Challenge",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit2"
@@ -852,8 +786,6 @@
         "script_level.level_keys": [
           "ECSPD Pick Challenge"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 5,
         "lesson.key": "Unit 2 Challenge",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit2"
@@ -874,8 +806,6 @@
         "script_level.level_keys": [
           "ECSU2 Challenge Submission"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 6,
         "lesson.key": "Unit 2 Challenge",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit2"
@@ -896,8 +826,6 @@
         "script_level.level_keys": [
           "ECSPD Challenge Reflection"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 1,
         "lesson.key": "Close & Next Steps",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit2"
@@ -914,8 +842,6 @@
         "script_level.level_keys": [
           "ECS Phase 3 Welcome"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit2"
@@ -927,8 +853,6 @@
         "script_level.level_keys": [
           "ECS Phase 3 Overview"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit2"
@@ -940,8 +864,6 @@
         "script_level.level_keys": [
           "PDECS tour"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit2"
@@ -953,8 +875,6 @@
         "script_level.level_keys": [
           "PD check your progress"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit2"
@@ -966,8 +886,6 @@
         "script_level.level_keys": [
           "ECSPD Unit 2 Outline"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 5,
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit2"
@@ -979,8 +897,6 @@
         "script_level.level_keys": [
           "ECSPD P3 Plan"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 6,
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit2"
@@ -992,8 +908,6 @@
         "script_level.level_keys": [
           "ECSPD Unit2 Connections"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 1,
         "lesson.key": "Intro to Unit 2",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit2"
@@ -1005,8 +919,6 @@
         "script_level.level_keys": [
           "ECSPD Unit 2 Lesson Overview"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 2,
         "lesson.key": "Intro to Unit 2",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit2"
@@ -1018,8 +930,6 @@
         "script_level.level_keys": [
           "Forum-ECSPD-Unit 2-Teaching Practice"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 1,
         "lesson.key": "Teaching Strategies",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit2"
@@ -1031,8 +941,6 @@
         "script_level.level_keys": [
           "ECSPD Unit 2 Growth"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 2,
         "lesson.key": "Teaching Strategies",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit2"
@@ -1044,8 +952,6 @@
         "script_level.level_keys": [
           "ECSPD Phase 3 - Unit 2 - Teaching Practice"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 3,
         "lesson.key": "Teaching Strategies",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit2"
@@ -1057,8 +963,6 @@
         "script_level.level_keys": [
           "ECSPD Growth Mindset Student Video"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 4,
         "lesson.key": "Teaching Strategies",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit2"
@@ -1070,8 +974,6 @@
         "script_level.level_keys": [
           "ECSPD What Is Problem Solving"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 5,
         "lesson.key": "Teaching Strategies",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit2"
@@ -1083,8 +985,6 @@
         "script_level.level_keys": [
           "ECSPD Real Life Problem Solving"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 6,
         "lesson.key": "Teaching Strategies",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit2"
@@ -1096,8 +996,6 @@
         "script_level.level_keys": [
           "ECSPD Find Learning Strategy"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 7,
         "lesson.key": "Teaching Strategies",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit2"
@@ -1109,8 +1007,6 @@
         "script_level.level_keys": [
           "ECSPD strategies"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 8,
         "lesson.key": "Teaching Strategies",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit2"
@@ -1122,8 +1018,6 @@
         "script_level.level_keys": [
           "ECSPD U2 D 1-2"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 1,
         "lesson.key": "Lesson Overviews",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit2"
@@ -1135,8 +1029,6 @@
         "script_level.level_keys": [
           "ECSPD U2 D 3"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 2,
         "lesson.key": "Lesson Overviews",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit2"
@@ -1148,8 +1040,6 @@
         "script_level.level_keys": [
           "ECSPD U2 D 4-6"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 3,
         "lesson.key": "Lesson Overviews",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit2"
@@ -1161,8 +1051,6 @@
         "script_level.level_keys": [
           "ECSPD U2 D 7-9 Intro"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 4,
         "lesson.key": "Lesson Overviews",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit2"
@@ -1174,8 +1062,6 @@
         "script_level.level_keys": [
           "ECSPD U2 D 10-12 Intro"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 5,
         "lesson.key": "Lesson Overviews",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit2"
@@ -1187,8 +1073,6 @@
         "script_level.level_keys": [
           "ECSPD Binary Odometer"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 6,
         "lesson.key": "Lesson Overviews",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit2"
@@ -1200,8 +1084,6 @@
         "script_level.level_keys": [
           "U1L5 How the Internet Works - Video"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 7,
         "lesson.key": "Lesson Overviews",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit2"
@@ -1213,8 +1095,6 @@
         "script_level.level_keys": [
           "ECSPD U2 D 13-14 Intro"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 8,
         "lesson.key": "Lesson Overviews",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit2"
@@ -1226,8 +1106,6 @@
         "script_level.level_keys": [
           "ECSPD Linear vs Binary Search Video"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 9,
         "lesson.key": "Lesson Overviews",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit2"
@@ -1239,8 +1117,6 @@
         "script_level.level_keys": [
           "ECSPD U2 D 15-16 Intro"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 10,
         "lesson.key": "Lesson Overviews",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit2"
@@ -1252,8 +1128,6 @@
         "script_level.level_keys": [
           "ECSPD U2L1516 Sorting Video"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 11,
         "lesson.key": "Lesson Overviews",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit2"
@@ -1265,8 +1139,6 @@
         "script_level.level_keys": [
           "ECSPD U2 D 17 Intro"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 12,
         "lesson.key": "Lesson Overviews",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit2"
@@ -1278,8 +1150,6 @@
         "script_level.level_keys": [
           "ECSPD U2 D 18-21 Intro"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 13,
         "lesson.key": "Lesson Overviews",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit2"
@@ -1291,8 +1161,6 @@
         "script_level.level_keys": [
           "ECSPD Unit 2 Dani"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 1,
         "lesson.key": "Unit 2 Challenge",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit2"
@@ -1304,8 +1172,6 @@
         "script_level.level_keys": [
           "ECSPD What is the Challenge"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 2,
         "lesson.key": "Unit 2 Challenge",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit2"
@@ -1317,8 +1183,6 @@
         "script_level.level_keys": [
           "ECSPD U2 Challenges"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 3,
         "lesson.key": "Unit 2 Challenge",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit2"
@@ -1330,8 +1194,6 @@
         "script_level.level_keys": [
           "ECSPD U2 Challenge Decision"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 4,
         "lesson.key": "Unit 2 Challenge",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit2"
@@ -1343,8 +1205,6 @@
         "script_level.level_keys": [
           "ECSPD Pick Challenge"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 5,
         "lesson.key": "Unit 2 Challenge",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit2"
@@ -1356,8 +1216,6 @@
         "script_level.level_keys": [
           "ECSU2 Challenge Submission"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 6,
         "lesson.key": "Unit 2 Challenge",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit2"
@@ -1369,8 +1227,6 @@
         "script_level.level_keys": [
           "ECSPD Challenge Reflection"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 1,
         "lesson.key": "Close & Next Steps",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit2"

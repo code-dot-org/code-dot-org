@@ -140,8 +140,6 @@
         "script_level.level_keys": [
           "CSPfac intro"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Welcome!",
         "lesson_group.key": "",
         "script.name": "cspfacilitator"
@@ -162,8 +160,6 @@
         "script_level.level_keys": [
           "a bit about pixels"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 1,
         "lesson.key": "Pixelation Widget",
         "lesson_group.key": "",
         "script.name": "cspfacilitator"
@@ -184,8 +180,6 @@
         "script_level.level_keys": [
           "Pixelation - Lesson 14 - Make the Letter A"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 2,
         "lesson.key": "Pixelation Widget",
         "lesson_group.key": "",
         "script.name": "cspfacilitator"
@@ -206,8 +200,6 @@
         "script_level.level_keys": [
           "Pixelation - Lesson 14 - Fix bit offset"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 3,
         "lesson.key": "Pixelation Widget",
         "lesson_group.key": "",
         "script.name": "cspfacilitator"
@@ -228,8 +220,6 @@
         "script_level.level_keys": [
           "Pixelation - Lesson 14 - Make your own B and W Image"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 4,
         "lesson.key": "Pixelation Widget",
         "lesson_group.key": "",
         "script.name": "cspfacilitator"
@@ -250,8 +240,6 @@
         "script_level.level_keys": [
           "Pixelation - Lesson 15 - Complete 3-bit color"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 5,
         "lesson.key": "Pixelation Widget",
         "lesson_group.key": "",
         "script.name": "cspfacilitator"
@@ -272,8 +260,6 @@
         "script_level.level_keys": [
           "U1L13 Text Compression"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 1,
         "lesson.key": "Text Compression Widget",
         "lesson_group.key": "",
         "script.name": "cspfacilitator"
@@ -294,8 +280,6 @@
         "script_level.level_keys": [
           "U1L4 NetSim SendAB"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 1,
         "lesson.key": "Internet Simulator",
         "lesson_group.key": "",
         "script.name": "cspfacilitator"
@@ -316,8 +300,6 @@
         "script_level.level_keys": [
           "U1L8 NetSim numbers no decimal"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 2,
         "lesson.key": "Internet Simulator",
         "lesson_group.key": "",
         "script.name": "cspfacilitator"
@@ -338,8 +320,6 @@
         "script_level.level_keys": [
           "U2L5 NetSim Classroom Internet"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 3,
         "lesson.key": "Internet Simulator",
         "lesson_group.key": "",
         "script.name": "cspfacilitator"
@@ -360,8 +340,6 @@
         "script_level.level_keys": [
           "U2L7 NetSim Need for Packets"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 4,
         "lesson.key": "Internet Simulator",
         "lesson_group.key": "",
         "script.name": "cspfacilitator"
@@ -382,8 +360,6 @@
         "script_level.level_keys": [
           "U2L10 NetSim Automatic DNS"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 5,
         "lesson.key": "Internet Simulator",
         "lesson_group.key": "",
         "script.name": "cspfacilitator"
@@ -404,8 +380,6 @@
         "script_level.level_keys": [
           "U3L2 Using Simple Commands"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 1,
         "lesson.key": "App Lab",
         "lesson_group.key": "",
         "script.name": "cspfacilitator"
@@ -426,8 +400,6 @@
         "script_level.level_keys": [
           "U3L03 Define and use turnAround"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 2,
         "lesson.key": "App Lab",
         "lesson_group.key": "",
         "script.name": "cspfacilitator"
@@ -448,8 +420,6 @@
         "script_level.level_keys": [
           "U3L07 - Starry Night Starter Code"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 3,
         "lesson.key": "App Lab",
         "lesson_group.key": "",
         "script.name": "cspfacilitator"
@@ -470,8 +440,6 @@
         "script_level.level_keys": [
           "U3L08 - Enchantment Under the Sea"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 4,
         "lesson.key": "App Lab",
         "lesson_group.key": "",
         "script.name": "cspfacilitator"
@@ -492,8 +460,6 @@
         "script_level.level_keys": [
           "U3L13 - Turtle move with button"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 5,
         "lesson.key": "App Lab",
         "lesson_group.key": "",
         "script.name": "cspfacilitator"
@@ -514,8 +480,6 @@
         "script_level.level_keys": [
           "U3L16 - use images"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 6,
         "lesson.key": "App Lab",
         "lesson_group.key": "",
         "script.name": "cspfacilitator"
@@ -536,8 +500,6 @@
         "script_level.level_keys": [
           "broadcast lesson plan"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 1,
         "lesson.key": "Broadcast Lesson",
         "lesson_group.key": "",
         "script.name": "cspfacilitator"
@@ -558,8 +520,6 @@
         "script_level.level_keys": [
           "U2L2 Student Lesson Introduction"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 2,
         "lesson.key": "Broadcast Lesson",
         "lesson_group.key": "",
         "script.name": "cspfacilitator"
@@ -580,8 +540,6 @@
         "script_level.level_keys": [
           "U2L2 NetSim Hub Mode"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 3,
         "lesson.key": "Broadcast Lesson",
         "lesson_group.key": "",
         "script.name": "cspfacilitator"
@@ -602,8 +560,6 @@
         "script_level.level_keys": [
           "U2L02 Free Response Reflection"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 4,
         "lesson.key": "Broadcast Lesson",
         "lesson_group.key": "",
         "script.name": "cspfacilitator"
@@ -624,8 +580,6 @@
         "script_level.level_keys": [
           "U2L02 Assessment2"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 5,
         "lesson.key": "Broadcast Lesson",
         "lesson_group.key": "",
         "script.name": "cspfacilitator"
@@ -646,8 +600,6 @@
         "script_level.level_keys": [
           "text compression lesson plan"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 1,
         "lesson.key": "Text Compression Lesson",
         "lesson_group.key": "",
         "script.name": "cspfacilitator"
@@ -668,8 +620,6 @@
         "script_level.level_keys": [
           "U1L13 Student Lesson Summary"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 2,
         "lesson.key": "Text Compression Lesson",
         "lesson_group.key": "",
         "script.name": "cspfacilitator"
@@ -690,8 +640,6 @@
         "script_level.level_keys": [
           "U1L13 Text Compression"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 3,
         "lesson.key": "Text Compression Lesson",
         "lesson_group.key": "",
         "script.name": "cspfacilitator"
@@ -712,8 +660,6 @@
         "script_level.level_keys": [
           "U1L13 Assessment 1"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 4,
         "lesson.key": "Text Compression Lesson",
         "lesson_group.key": "",
         "script.name": "cspfacilitator"
@@ -734,8 +680,6 @@
         "script_level.level_keys": [
           "U1L13 Assessment 2"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 5,
         "lesson.key": "Text Compression Lesson",
         "lesson_group.key": "",
         "script.name": "cspfacilitator"
@@ -756,8 +700,6 @@
         "script_level.level_keys": [
           "U1L13 Reflection Free Response"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 6,
         "lesson.key": "Text Compression Lesson",
         "lesson_group.key": "",
         "script.name": "cspfacilitator"
@@ -778,8 +720,6 @@
         "script_level.level_keys": [
           "U1L13 Reflection 1"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 7,
         "lesson.key": "Text Compression Lesson",
         "lesson_group.key": "",
         "script.name": "cspfacilitator"
@@ -800,8 +740,6 @@
         "script_level.level_keys": [
           "U1L13 Reflection 2"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 8,
         "lesson.key": "Text Compression Lesson",
         "lesson_group.key": "",
         "script.name": "cspfacilitator"
@@ -818,8 +756,6 @@
         "script_level.level_keys": [
           "CSPfac intro"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Welcome!",
         "lesson_group.key": "",
         "script.name": "cspfacilitator"
@@ -831,8 +767,6 @@
         "script_level.level_keys": [
           "a bit about pixels"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 1,
         "lesson.key": "Pixelation Widget",
         "lesson_group.key": "",
         "script.name": "cspfacilitator"
@@ -844,8 +778,6 @@
         "script_level.level_keys": [
           "Pixelation - Lesson 14 - Make the Letter A"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 2,
         "lesson.key": "Pixelation Widget",
         "lesson_group.key": "",
         "script.name": "cspfacilitator"
@@ -857,8 +789,6 @@
         "script_level.level_keys": [
           "Pixelation - Lesson 14 - Fix bit offset"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 3,
         "lesson.key": "Pixelation Widget",
         "lesson_group.key": "",
         "script.name": "cspfacilitator"
@@ -870,8 +800,6 @@
         "script_level.level_keys": [
           "Pixelation - Lesson 14 - Make your own B and W Image"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 4,
         "lesson.key": "Pixelation Widget",
         "lesson_group.key": "",
         "script.name": "cspfacilitator"
@@ -883,8 +811,6 @@
         "script_level.level_keys": [
           "Pixelation - Lesson 15 - Complete 3-bit color"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 5,
         "lesson.key": "Pixelation Widget",
         "lesson_group.key": "",
         "script.name": "cspfacilitator"
@@ -896,8 +822,6 @@
         "script_level.level_keys": [
           "U1L13 Text Compression"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 1,
         "lesson.key": "Text Compression Widget",
         "lesson_group.key": "",
         "script.name": "cspfacilitator"
@@ -909,8 +833,6 @@
         "script_level.level_keys": [
           "U1L4 NetSim SendAB"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 1,
         "lesson.key": "Internet Simulator",
         "lesson_group.key": "",
         "script.name": "cspfacilitator"
@@ -922,8 +844,6 @@
         "script_level.level_keys": [
           "U1L8 NetSim numbers no decimal"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 2,
         "lesson.key": "Internet Simulator",
         "lesson_group.key": "",
         "script.name": "cspfacilitator"
@@ -935,8 +855,6 @@
         "script_level.level_keys": [
           "U2L5 NetSim Classroom Internet"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 3,
         "lesson.key": "Internet Simulator",
         "lesson_group.key": "",
         "script.name": "cspfacilitator"
@@ -948,8 +866,6 @@
         "script_level.level_keys": [
           "U2L7 NetSim Need for Packets"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 4,
         "lesson.key": "Internet Simulator",
         "lesson_group.key": "",
         "script.name": "cspfacilitator"
@@ -961,8 +877,6 @@
         "script_level.level_keys": [
           "U2L10 NetSim Automatic DNS"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 5,
         "lesson.key": "Internet Simulator",
         "lesson_group.key": "",
         "script.name": "cspfacilitator"
@@ -974,8 +888,6 @@
         "script_level.level_keys": [
           "U3L2 Using Simple Commands"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 1,
         "lesson.key": "App Lab",
         "lesson_group.key": "",
         "script.name": "cspfacilitator"
@@ -987,8 +899,6 @@
         "script_level.level_keys": [
           "U3L03 Define and use turnAround"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 2,
         "lesson.key": "App Lab",
         "lesson_group.key": "",
         "script.name": "cspfacilitator"
@@ -1000,8 +910,6 @@
         "script_level.level_keys": [
           "U3L07 - Starry Night Starter Code"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 3,
         "lesson.key": "App Lab",
         "lesson_group.key": "",
         "script.name": "cspfacilitator"
@@ -1013,8 +921,6 @@
         "script_level.level_keys": [
           "U3L08 - Enchantment Under the Sea"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 4,
         "lesson.key": "App Lab",
         "lesson_group.key": "",
         "script.name": "cspfacilitator"
@@ -1026,8 +932,6 @@
         "script_level.level_keys": [
           "U3L13 - Turtle move with button"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 5,
         "lesson.key": "App Lab",
         "lesson_group.key": "",
         "script.name": "cspfacilitator"
@@ -1039,8 +943,6 @@
         "script_level.level_keys": [
           "U3L16 - use images"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 6,
         "lesson.key": "App Lab",
         "lesson_group.key": "",
         "script.name": "cspfacilitator"
@@ -1052,8 +954,6 @@
         "script_level.level_keys": [
           "broadcast lesson plan"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 1,
         "lesson.key": "Broadcast Lesson",
         "lesson_group.key": "",
         "script.name": "cspfacilitator"
@@ -1065,8 +965,6 @@
         "script_level.level_keys": [
           "U2L2 Student Lesson Introduction"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 2,
         "lesson.key": "Broadcast Lesson",
         "lesson_group.key": "",
         "script.name": "cspfacilitator"
@@ -1078,8 +976,6 @@
         "script_level.level_keys": [
           "U2L2 NetSim Hub Mode"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 3,
         "lesson.key": "Broadcast Lesson",
         "lesson_group.key": "",
         "script.name": "cspfacilitator"
@@ -1091,8 +987,6 @@
         "script_level.level_keys": [
           "U2L02 Free Response Reflection"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 4,
         "lesson.key": "Broadcast Lesson",
         "lesson_group.key": "",
         "script.name": "cspfacilitator"
@@ -1104,8 +998,6 @@
         "script_level.level_keys": [
           "U2L02 Assessment2"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 5,
         "lesson.key": "Broadcast Lesson",
         "lesson_group.key": "",
         "script.name": "cspfacilitator"
@@ -1117,8 +1009,6 @@
         "script_level.level_keys": [
           "text compression lesson plan"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 1,
         "lesson.key": "Text Compression Lesson",
         "lesson_group.key": "",
         "script.name": "cspfacilitator"
@@ -1130,8 +1020,6 @@
         "script_level.level_keys": [
           "U1L13 Student Lesson Summary"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 2,
         "lesson.key": "Text Compression Lesson",
         "lesson_group.key": "",
         "script.name": "cspfacilitator"
@@ -1143,8 +1031,6 @@
         "script_level.level_keys": [
           "U1L13 Text Compression"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 3,
         "lesson.key": "Text Compression Lesson",
         "lesson_group.key": "",
         "script.name": "cspfacilitator"
@@ -1156,8 +1042,6 @@
         "script_level.level_keys": [
           "U1L13 Assessment 1"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 4,
         "lesson.key": "Text Compression Lesson",
         "lesson_group.key": "",
         "script.name": "cspfacilitator"
@@ -1169,8 +1053,6 @@
         "script_level.level_keys": [
           "U1L13 Assessment 2"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 5,
         "lesson.key": "Text Compression Lesson",
         "lesson_group.key": "",
         "script.name": "cspfacilitator"
@@ -1182,8 +1064,6 @@
         "script_level.level_keys": [
           "U1L13 Reflection Free Response"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 6,
         "lesson.key": "Text Compression Lesson",
         "lesson_group.key": "",
         "script.name": "cspfacilitator"
@@ -1195,8 +1075,6 @@
         "script_level.level_keys": [
           "U1L13 Reflection 1"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 7,
         "lesson.key": "Text Compression Lesson",
         "lesson_group.key": "",
         "script.name": "cspfacilitator"
@@ -1208,8 +1086,6 @@
         "script_level.level_keys": [
           "U1L13 Reflection 2"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 8,
         "lesson.key": "Text Compression Lesson",
         "lesson_group.key": "",
         "script.name": "cspfacilitator"

@@ -126,8 +126,6 @@
         "script_level.level_keys": [
           "ECS Phase 3 Welcome"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit5"
@@ -148,8 +146,6 @@
         "script_level.level_keys": [
           "ECSPD3-u5 about"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit5"
@@ -170,8 +166,6 @@
         "script_level.level_keys": [
           "PD check your progress"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit5"
@@ -192,8 +186,6 @@
         "script_level.level_keys": [
           "ECSPD3-u5 plan"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit5"
@@ -214,8 +206,6 @@
         "script_level.level_keys": [
           "ECSPD course goals"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 5,
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit5"
@@ -236,8 +226,6 @@
         "script_level.level_keys": [
           "ECSPD3-u5 overview"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 1,
         "lesson.key": "Unit 5 Overview",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit5"
@@ -258,8 +246,6 @@
         "script_level.level_keys": [
           "ECSPD3-u5 intro to u5"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 2,
         "lesson.key": "Unit 5 Overview",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit5"
@@ -280,8 +266,6 @@
         "script_level.level_keys": [
           "ECSPD3-u5 connections"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 3,
         "lesson.key": "Unit 5 Overview",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit5"
@@ -302,8 +286,6 @@
         "script_level.level_keys": [
           "CSPPD3-u5 what is data"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 4,
         "lesson.key": "Unit 5 Overview",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit5"
@@ -324,8 +306,6 @@
         "script_level.level_keys": [
           "ECSPD3-u5 tools"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 5,
         "lesson.key": "Unit 5 Overview",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit5"
@@ -346,8 +326,6 @@
         "script_level.level_keys": [
           "ECSPD3-u5 lesson overview"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 1,
         "lesson.key": "Unit 5 lessons",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit5"
@@ -368,8 +346,6 @@
         "script_level.level_keys": [
           "ECSPD3-u5 day 1-3"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 2,
         "lesson.key": "Unit 5 lessons",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit5"
@@ -390,8 +366,6 @@
         "script_level.level_keys": [
           "ECSPD3-u5 day 4-5"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 3,
         "lesson.key": "Unit 5 lessons",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit5"
@@ -412,8 +386,6 @@
         "script_level.level_keys": [
           "ECSPD3-u5 day 6-7"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 4,
         "lesson.key": "Unit 5 lessons",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit5"
@@ -434,8 +406,6 @@
         "script_level.level_keys": [
           "ECSPD3-u5 day 8"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 5,
         "lesson.key": "Unit 5 lessons",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit5"
@@ -456,8 +426,6 @@
         "script_level.level_keys": [
           "ECSPD3-u5 day 9-12"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 6,
         "lesson.key": "Unit 5 lessons",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit5"
@@ -478,8 +446,6 @@
         "script_level.level_keys": [
           "ECSPD3-u5 day 13"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 7,
         "lesson.key": "Unit 5 lessons",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit5"
@@ -500,8 +466,6 @@
         "script_level.level_keys": [
           "ECSPD3-u5 day 14-16"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 8,
         "lesson.key": "Unit 5 lessons",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit5"
@@ -522,8 +486,6 @@
         "script_level.level_keys": [
           "ECSPD3-u5 day 17"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 9,
         "lesson.key": "Unit 5 lessons",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit5"
@@ -544,8 +506,6 @@
         "script_level.level_keys": [
           "ECSPD3-u5 day 18-20"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 10,
         "lesson.key": "Unit 5 lessons",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit5"
@@ -566,8 +526,6 @@
         "script_level.level_keys": [
           "ECSPD3-u5 day 21"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 11,
         "lesson.key": "Unit 5 lessons",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit5"
@@ -588,8 +546,6 @@
         "script_level.level_keys": [
           "ECSPD3-u5 day 22-24"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 12,
         "lesson.key": "Unit 5 lessons",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit5"
@@ -610,8 +566,6 @@
         "script_level.level_keys": [
           "ECSPD3-u5 day 25"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 13,
         "lesson.key": "Unit 5 lessons",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit5"
@@ -632,8 +586,6 @@
         "script_level.level_keys": [
           "ECSPD3-u5 day 26-27"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 14,
         "lesson.key": "Unit 5 lessons",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit5"
@@ -654,8 +606,6 @@
         "script_level.level_keys": [
           "ECSPD3-u5 day 28-29"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 15,
         "lesson.key": "Unit 5 lessons",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit5"
@@ -676,8 +626,6 @@
         "script_level.level_keys": [
           "ECSPD3-u5 day 30"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 16,
         "lesson.key": "Unit 5 lessons",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit5"
@@ -698,8 +646,6 @@
         "script_level.level_keys": [
           "ECSPD3-u5 challenge inside"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 1,
         "lesson.key": "Introduction to the Unit 5 Challenge",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit5"
@@ -720,8 +666,6 @@
         "script_level.level_keys": [
           "ECSPD3-u5 what is a challenge"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 2,
         "lesson.key": "Introduction to the Unit 5 Challenge",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit5"
@@ -742,8 +686,6 @@
         "script_level.level_keys": [
           "ECSPD3-u5 challenge details"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 3,
         "lesson.key": "Introduction to the Unit 5 Challenge",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit5"
@@ -764,8 +706,6 @@
         "script_level.level_keys": [
           "ECSPD3-u5 list of challenges"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 4,
         "lesson.key": "Introduction to the Unit 5 Challenge",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit5"
@@ -786,8 +726,6 @@
         "script_level.level_keys": [
           "CSPPD3-u2 expectations"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 5,
         "lesson.key": "Introduction to the Unit 5 Challenge",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit5"
@@ -808,8 +746,6 @@
         "script_level.level_keys": [
           "ECSPD3-u5 pick a challenge"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 6,
         "lesson.key": "Introduction to the Unit 5 Challenge",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit5"
@@ -830,8 +766,6 @@
         "script_level.level_keys": [
           "ECSPD3-u5 complete the challenge overview"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 1,
         "lesson.key": "Complete the Challenge",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit5"
@@ -852,8 +786,6 @@
         "script_level.level_keys": [
           "ECSD3-u5 do the challenge"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 2,
         "lesson.key": "Complete the Challenge",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit5"
@@ -874,8 +806,6 @@
         "script_level.level_keys": [
           "CSPPD3-u2 create your extension"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 3,
         "lesson.key": "Complete the Challenge",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit5"
@@ -896,8 +826,6 @@
         "script_level.level_keys": [
           "CSPPD3-u2 reflect on challenge"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 4,
         "lesson.key": "Complete the Challenge",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit5"
@@ -918,8 +846,6 @@
         "script_level.level_keys": [
           "ECSPD3-u5 share out overview"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 1,
         "lesson.key": "Share out and Submit",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit5"
@@ -940,8 +866,6 @@
         "script_level.level_keys": [
           "ECSPD3-u5 post to forum"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 2,
         "lesson.key": "Share out and Submit",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit5"
@@ -962,8 +886,6 @@
         "script_level.level_keys": [
           "ECSPD3-u5 submit"
         ],
-        "script_level.chapter": 39,
-        "script_level.position": 3,
         "lesson.key": "Share out and Submit",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit5"
@@ -984,8 +906,6 @@
         "script_level.level_keys": [
           "ECSPD3-u5 post survey"
         ],
-        "script_level.chapter": 40,
-        "script_level.position": 4,
         "lesson.key": "Share out and Submit",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit5"
@@ -1002,8 +922,6 @@
         "script_level.level_keys": [
           "ECS Phase 3 Welcome"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit5"
@@ -1015,8 +933,6 @@
         "script_level.level_keys": [
           "ECSPD3-u5 about"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit5"
@@ -1028,8 +944,6 @@
         "script_level.level_keys": [
           "PD check your progress"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit5"
@@ -1041,8 +955,6 @@
         "script_level.level_keys": [
           "ECSPD3-u5 plan"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit5"
@@ -1054,8 +966,6 @@
         "script_level.level_keys": [
           "ECSPD course goals"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 5,
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit5"
@@ -1067,8 +977,6 @@
         "script_level.level_keys": [
           "ECSPD3-u5 overview"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 1,
         "lesson.key": "Unit 5 Overview",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit5"
@@ -1080,8 +988,6 @@
         "script_level.level_keys": [
           "ECSPD3-u5 intro to u5"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 2,
         "lesson.key": "Unit 5 Overview",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit5"
@@ -1093,8 +999,6 @@
         "script_level.level_keys": [
           "ECSPD3-u5 connections"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 3,
         "lesson.key": "Unit 5 Overview",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit5"
@@ -1106,8 +1010,6 @@
         "script_level.level_keys": [
           "CSPPD3-u5 what is data"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 4,
         "lesson.key": "Unit 5 Overview",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit5"
@@ -1119,8 +1021,6 @@
         "script_level.level_keys": [
           "ECSPD3-u5 tools"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 5,
         "lesson.key": "Unit 5 Overview",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit5"
@@ -1132,8 +1032,6 @@
         "script_level.level_keys": [
           "ECSPD3-u5 lesson overview"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 1,
         "lesson.key": "Unit 5 lessons",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit5"
@@ -1145,8 +1043,6 @@
         "script_level.level_keys": [
           "ECSPD3-u5 day 1-3"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 2,
         "lesson.key": "Unit 5 lessons",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit5"
@@ -1158,8 +1054,6 @@
         "script_level.level_keys": [
           "ECSPD3-u5 day 4-5"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 3,
         "lesson.key": "Unit 5 lessons",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit5"
@@ -1171,8 +1065,6 @@
         "script_level.level_keys": [
           "ECSPD3-u5 day 6-7"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 4,
         "lesson.key": "Unit 5 lessons",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit5"
@@ -1184,8 +1076,6 @@
         "script_level.level_keys": [
           "ECSPD3-u5 day 8"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 5,
         "lesson.key": "Unit 5 lessons",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit5"
@@ -1197,8 +1087,6 @@
         "script_level.level_keys": [
           "ECSPD3-u5 day 9-12"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 6,
         "lesson.key": "Unit 5 lessons",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit5"
@@ -1210,8 +1098,6 @@
         "script_level.level_keys": [
           "ECSPD3-u5 day 13"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 7,
         "lesson.key": "Unit 5 lessons",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit5"
@@ -1223,8 +1109,6 @@
         "script_level.level_keys": [
           "ECSPD3-u5 day 14-16"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 8,
         "lesson.key": "Unit 5 lessons",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit5"
@@ -1236,8 +1120,6 @@
         "script_level.level_keys": [
           "ECSPD3-u5 day 17"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 9,
         "lesson.key": "Unit 5 lessons",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit5"
@@ -1249,8 +1131,6 @@
         "script_level.level_keys": [
           "ECSPD3-u5 day 18-20"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 10,
         "lesson.key": "Unit 5 lessons",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit5"
@@ -1262,8 +1142,6 @@
         "script_level.level_keys": [
           "ECSPD3-u5 day 21"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 11,
         "lesson.key": "Unit 5 lessons",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit5"
@@ -1275,8 +1153,6 @@
         "script_level.level_keys": [
           "ECSPD3-u5 day 22-24"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 12,
         "lesson.key": "Unit 5 lessons",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit5"
@@ -1288,8 +1164,6 @@
         "script_level.level_keys": [
           "ECSPD3-u5 day 25"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 13,
         "lesson.key": "Unit 5 lessons",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit5"
@@ -1301,8 +1175,6 @@
         "script_level.level_keys": [
           "ECSPD3-u5 day 26-27"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 14,
         "lesson.key": "Unit 5 lessons",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit5"
@@ -1314,8 +1186,6 @@
         "script_level.level_keys": [
           "ECSPD3-u5 day 28-29"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 15,
         "lesson.key": "Unit 5 lessons",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit5"
@@ -1327,8 +1197,6 @@
         "script_level.level_keys": [
           "ECSPD3-u5 day 30"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 16,
         "lesson.key": "Unit 5 lessons",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit5"
@@ -1340,8 +1208,6 @@
         "script_level.level_keys": [
           "ECSPD3-u5 challenge inside"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 1,
         "lesson.key": "Introduction to the Unit 5 Challenge",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit5"
@@ -1353,8 +1219,6 @@
         "script_level.level_keys": [
           "ECSPD3-u5 what is a challenge"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 2,
         "lesson.key": "Introduction to the Unit 5 Challenge",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit5"
@@ -1366,8 +1230,6 @@
         "script_level.level_keys": [
           "ECSPD3-u5 challenge details"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 3,
         "lesson.key": "Introduction to the Unit 5 Challenge",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit5"
@@ -1379,8 +1241,6 @@
         "script_level.level_keys": [
           "ECSPD3-u5 list of challenges"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 4,
         "lesson.key": "Introduction to the Unit 5 Challenge",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit5"
@@ -1392,8 +1252,6 @@
         "script_level.level_keys": [
           "CSPPD3-u2 expectations"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 5,
         "lesson.key": "Introduction to the Unit 5 Challenge",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit5"
@@ -1405,8 +1263,6 @@
         "script_level.level_keys": [
           "ECSPD3-u5 pick a challenge"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 6,
         "lesson.key": "Introduction to the Unit 5 Challenge",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit5"
@@ -1418,8 +1274,6 @@
         "script_level.level_keys": [
           "ECSPD3-u5 complete the challenge overview"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 1,
         "lesson.key": "Complete the Challenge",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit5"
@@ -1431,8 +1285,6 @@
         "script_level.level_keys": [
           "ECSD3-u5 do the challenge"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 2,
         "lesson.key": "Complete the Challenge",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit5"
@@ -1444,8 +1296,6 @@
         "script_level.level_keys": [
           "CSPPD3-u2 create your extension"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 3,
         "lesson.key": "Complete the Challenge",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit5"
@@ -1457,8 +1307,6 @@
         "script_level.level_keys": [
           "CSPPD3-u2 reflect on challenge"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 4,
         "lesson.key": "Complete the Challenge",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit5"
@@ -1470,8 +1318,6 @@
         "script_level.level_keys": [
           "ECSPD3-u5 share out overview"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 1,
         "lesson.key": "Share out and Submit",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit5"
@@ -1483,8 +1329,6 @@
         "script_level.level_keys": [
           "ECSPD3-u5 post to forum"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 2,
         "lesson.key": "Share out and Submit",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit5"
@@ -1496,8 +1340,6 @@
         "script_level.level_keys": [
           "ECSPD3-u5 submit"
         ],
-        "script_level.chapter": 39,
-        "script_level.position": 3,
         "lesson.key": "Share out and Submit",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit5"
@@ -1509,8 +1351,6 @@
         "script_level.level_keys": [
           "ECSPD3-u5 post survey"
         ],
-        "script_level.chapter": 40,
-        "script_level.position": 4,
         "lesson.key": "Share out and Submit",
         "lesson_group.key": "",
         "script.name": "ECSPD3-Unit5"

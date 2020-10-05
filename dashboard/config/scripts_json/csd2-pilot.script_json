@@ -378,8 +378,6 @@
         "script_level.level_keys": [
           "CSD U2L01 TFMD_pilot"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Exploring Web Pages",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -400,8 +398,6 @@
         "script_level.level_keys": [
           "CSD Web Sample Pages"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Exploring Web Pages",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -422,8 +418,6 @@
         "script_level.level_keys": [
           "CSD U2L02 TFMD_pilot"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 1,
         "lesson.key": "Intro to HTML",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -445,8 +439,6 @@
         "script_level.level_keys": [
           "CSDU2 - Type Anything_pilot"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 2,
         "lesson.key": "Intro to HTML",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -467,8 +459,6 @@
         "script_level.level_keys": [
           "Intro to Web Lab - Part 1_pilot"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 3,
         "lesson.key": "Intro to HTML",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -489,8 +479,6 @@
         "script_level.level_keys": [
           "CSD U2 Inspector Warm Up_pilot"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 4,
         "lesson.key": "Intro to HTML",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -511,8 +499,6 @@
         "script_level.level_keys": [
           "Intro to Web Lab - Part 2_pilot"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 5,
         "lesson.key": "Intro to HTML",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -534,8 +520,6 @@
         "script_level.level_keys": [
           "CSD U2 HTML Adding Paragraphs_pilot"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 6,
         "lesson.key": "Intro to HTML",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -557,8 +541,6 @@
         "script_level.level_keys": [
           "CSD U2 HTML Adding Paragraphs pt 2_pilot"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 7,
         "lesson.key": "Intro to HTML",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -580,8 +562,6 @@
         "script_level.level_keys": [
           "CSD U2 HTML Debug Paragraphs_pilot"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 8,
         "lesson.key": "Intro to HTML",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -602,8 +582,6 @@
         "script_level.level_keys": [
           "CSD U2L03 TFMD_pilot"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 1,
         "lesson.key": "Headings",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -624,8 +602,6 @@
         "script_level.level_keys": [
           "CSD U2 Pair Programming Video_pilot"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 2,
         "lesson.key": "Headings",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -647,8 +623,6 @@
         "script_level.level_keys": [
           "CSD U2 Heading debug"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 3,
         "lesson.key": "Headings",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -670,8 +644,6 @@
         "script_level.level_keys": [
           "CSD U2 Heading Demo_pilot"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 4,
         "lesson.key": "Headings",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -693,8 +665,6 @@
         "script_level.level_keys": [
           "CSD U2 Heading Sizes_pilot"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 5,
         "lesson.key": "Headings",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -716,8 +686,6 @@
         "script_level.level_keys": [
           "CSD Web Debugging"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 6,
         "lesson.key": "Headings",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -739,8 +707,6 @@
         "script_level.level_keys": [
           "CSD Web Headings practice"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 7,
         "lesson.key": "Headings",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -762,8 +728,6 @@
         "script_level.level_keys": [
           "CSD Header Size MC_2018_2019_pilot"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 8,
         "lesson.key": "Headings",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -785,8 +749,6 @@
         "script_level.level_keys": [
           "CSD U2 Heading Test_pilot"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 9,
         "lesson.key": "Headings",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -807,8 +769,6 @@
         "script_level.level_keys": [
           "CSD Web Headings challenge"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 10,
         "lesson.key": "Headings",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -829,8 +789,6 @@
         "script_level.level_keys": [
           "CSD U2L04 TFMD_pilot"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 1,
         "lesson.key": "Digital Footprint",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -851,8 +809,6 @@
         "script_level.level_keys": [
           "Social Sleuth_2018_2019_pilot"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 2,
         "lesson.key": "Digital Footprint",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -873,8 +829,6 @@
         "script_level.level_keys": [
           "CSD U2L05 TFMD_pilot"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 1,
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -895,8 +849,6 @@
         "script_level.level_keys": [
           "CSD U2 CSS explore CSS_pilot"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 2,
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -917,8 +869,6 @@
         "script_level.level_keys": [
           "Video: Intro to CSS_pilot"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 3,
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -940,8 +890,6 @@
         "script_level.level_keys": [
           "CSD U2 text style h1_pilot"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 4,
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -963,8 +911,6 @@
         "script_level.level_keys": [
           "CSD U2 text style h3_pilot"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 5,
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -986,8 +932,6 @@
         "script_level.level_keys": [
           "CSD U2 text style size_pilot"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 6,
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -1008,8 +952,6 @@
         "script_level.level_keys": [
           "Video: Intro to CSS Part 2_pilot"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 7,
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -1031,8 +973,6 @@
         "script_level.level_keys": [
           "CSD U2 add file_pilot"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 8,
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -1054,8 +994,6 @@
         "script_level.level_keys": [
           "CSD U2 CSS practice_pilot"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 9,
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -1077,8 +1015,6 @@
         "script_level.level_keys": [
           "CSD Web CSS Assessment"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 10,
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -1100,8 +1036,6 @@
         "script_level.level_keys": [
           "CSD U2 CSS challenge_pilot"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 11,
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -1122,8 +1056,6 @@
         "script_level.level_keys": [
           "CSD U2L06 TFMD_pilot"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 1,
         "lesson.key": "Intellectual Property",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -1144,8 +1076,6 @@
         "script_level.level_keys": [
           "CSD U2L07 TFMD_pilot"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 1,
         "lesson.key": "Images",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -1167,8 +1097,6 @@
         "script_level.level_keys": [
           "CSD U2 Image Tag 1_pilot"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 2,
         "lesson.key": "Images",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -1190,8 +1118,6 @@
         "script_level.level_keys": [
           "CSD U2 Image Credit_pilot"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 3,
         "lesson.key": "Images",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -1213,8 +1139,6 @@
         "script_level.level_keys": [
           "CSD U2 Image Tag Debug_pilot"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 4,
         "lesson.key": "Images",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -1236,8 +1160,6 @@
         "script_level.level_keys": [
           "CSD U2 Image choose name"
         ],
-        "script_level.chapter": 39,
-        "script_level.position": 5,
         "lesson.key": "Images",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -1259,8 +1181,6 @@
         "script_level.level_keys": [
           "CSD U2 Image Tag 2_pilot"
         ],
-        "script_level.chapter": 40,
-        "script_level.position": 6,
         "lesson.key": "Images",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -1282,8 +1202,6 @@
         "script_level.level_keys": [
           "CSD U2 Image practice_pilot"
         ],
-        "script_level.chapter": 41,
-        "script_level.position": 7,
         "lesson.key": "Images",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -1305,8 +1223,6 @@
         "script_level.level_keys": [
           "CSD U2 Image assessment"
         ],
-        "script_level.chapter": 42,
-        "script_level.position": 8,
         "lesson.key": "Images",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -1328,8 +1244,6 @@
         "script_level.level_keys": [
           "CSD U2 Image challenge_pilot"
         ],
-        "script_level.chapter": 43,
-        "script_level.position": 9,
         "lesson.key": "Images",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -1350,8 +1264,6 @@
         "script_level.level_keys": [
           "CSD U2L08 TFMD_pilot"
         ],
-        "script_level.chapter": 44,
-        "script_level.position": 1,
         "lesson.key": "Websites for Expression ",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -1372,8 +1284,6 @@
         "script_level.level_keys": [
           "CSD U2 Expression Exemplars_2018_2019_pilot"
         ],
-        "script_level.chapter": 45,
-        "script_level.position": 2,
         "lesson.key": "Websites for Expression ",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -1394,8 +1304,6 @@
         "script_level.level_keys": [
           "CSD U2L09 TFMD_pilot"
         ],
-        "script_level.chapter": 46,
-        "script_level.position": 1,
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -1417,8 +1325,6 @@
         "script_level.level_keys": [
           "CSD U2 layout style sample_pilot"
         ],
-        "script_level.chapter": 47,
-        "script_level.position": 2,
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -1440,8 +1346,6 @@
         "script_level.level_keys": [
           "CSD U2 layout style bgcolor_pilot"
         ],
-        "script_level.chapter": 48,
-        "script_level.position": 3,
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -1463,8 +1367,6 @@
         "script_level.level_keys": [
           "CSD U2 layout style body_pilot"
         ],
-        "script_level.chapter": 49,
-        "script_level.position": 4,
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -1486,8 +1388,6 @@
         "script_level.level_keys": [
           "CSD U2 layout style float_pilot"
         ],
-        "script_level.chapter": 50,
-        "script_level.position": 5,
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -1509,8 +1409,6 @@
         "script_level.level_keys": [
           "CSD U2 layout style width_pilot"
         ],
-        "script_level.chapter": 51,
-        "script_level.position": 6,
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -1532,8 +1430,6 @@
         "script_level.level_keys": [
           "CSD U2 layout style practice_pilot"
         ],
-        "script_level.chapter": 52,
-        "script_level.position": 7,
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -1555,8 +1451,6 @@
         "script_level.level_keys": [
           "CSD U2 add style_pilot"
         ],
-        "script_level.chapter": 53,
-        "script_level.position": 8,
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -1578,8 +1472,6 @@
         "script_level.level_keys": [
           "CSD U2 layout style challenge_pilot"
         ],
-        "script_level.chapter": 54,
-        "script_level.position": 9,
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -1600,8 +1492,6 @@
         "script_level.level_keys": [
           "CSD U2L10 TFMD_pilot"
         ],
-        "script_level.chapter": 55,
-        "script_level.position": 1,
         "lesson.key": "Project - Planning Layout and Style",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -1622,8 +1512,6 @@
         "script_level.level_keys": [
           "CSD U2L11 TFMD_pilot"
         ],
-        "script_level.chapter": 56,
-        "script_level.position": 1,
         "lesson.key": "Project - Building a Webpage",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -1644,8 +1532,6 @@
         "script_level.level_keys": [
           "CSD U2 project guide_2018_2019_pilot"
         ],
-        "script_level.chapter": 57,
-        "script_level.position": 2,
         "lesson.key": "Project - Building a Webpage",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -1667,8 +1553,6 @@
         "script_level.level_keys": [
           "CSD U2 upload images_pilot"
         ],
-        "script_level.chapter": 58,
-        "script_level.position": 3,
         "lesson.key": "Project - Building a Webpage",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -1690,8 +1574,6 @@
         "script_level.level_keys": [
           "CSD U2 add content_pilot"
         ],
-        "script_level.chapter": 59,
-        "script_level.position": 4,
         "lesson.key": "Project - Building a Webpage",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -1713,8 +1595,6 @@
         "script_level.level_keys": [
           "CSD U2 CSS_pilot"
         ],
-        "script_level.chapter": 60,
-        "script_level.position": 5,
         "lesson.key": "Project - Building a Webpage",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -1736,8 +1616,6 @@
         "script_level.level_keys": [
           "CSD U2 project review_pilot"
         ],
-        "script_level.chapter": 61,
-        "script_level.position": 6,
         "lesson.key": "Project - Building a Webpage",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -1758,8 +1636,6 @@
         "script_level.level_keys": [
           "CSD U2 publish video_pilot"
         ],
-        "script_level.chapter": 62,
-        "script_level.position": 7,
         "lesson.key": "Project - Building a Webpage",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -1781,8 +1657,6 @@
         "script_level.level_keys": [
           "CSD U2 project share_pilot"
         ],
-        "script_level.chapter": 63,
-        "script_level.position": 8,
         "lesson.key": "Project - Building a Webpage",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -1804,8 +1678,6 @@
         "script_level.level_keys": [
           "csd-pulse-check-survey-1-levelgroup U2Ch1_2018_2019_pilot"
         ],
-        "script_level.chapter": 64,
-        "script_level.position": 9,
         "lesson.key": "Project - Building a Webpage",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -1826,8 +1698,6 @@
         "script_level.level_keys": [
           "CSD U2L12 TFMD_pilot"
         ],
-        "script_level.chapter": 65,
-        "script_level.position": 1,
         "lesson.key": "Purpose of a  Websites",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-pilot"
@@ -1848,8 +1718,6 @@
         "script_level.level_keys": [
           "CSD U2 Top Websites_2018_2019_pilot"
         ],
-        "script_level.chapter": 66,
-        "script_level.position": 2,
         "lesson.key": "Purpose of a  Websites",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-pilot"
@@ -1870,8 +1738,6 @@
         "script_level.level_keys": [
           "CSD U2L13 TFMD_pilot"
         ],
-        "script_level.chapter": 67,
-        "script_level.position": 1,
         "lesson.key": "Team Problem Solving",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-pilot"
@@ -1892,8 +1758,6 @@
         "script_level.level_keys": [
           "CSD U2L14 TFMD_pilot"
         ],
-        "script_level.chapter": 68,
-        "script_level.position": 1,
         "lesson.key": "Sources and Research",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-pilot"
@@ -1914,8 +1778,6 @@
         "script_level.level_keys": [
           "CSD U2L15 TFMD_pilot"
         ],
-        "script_level.chapter": 69,
-        "script_level.position": 1,
         "lesson.key": "CSS Classes",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-pilot"
@@ -1937,8 +1799,6 @@
         "script_level.level_keys": [
           "CSD U2 classes sample_pilot"
         ],
-        "script_level.chapter": 70,
-        "script_level.position": 2,
         "lesson.key": "CSS Classes",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-pilot"
@@ -1960,8 +1820,6 @@
         "script_level.level_keys": [
           "CSD U2 classes modify_pilot"
         ],
-        "script_level.chapter": 71,
-        "script_level.position": 3,
         "lesson.key": "CSS Classes",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-pilot"
@@ -1983,8 +1841,6 @@
         "script_level.level_keys": [
           "CSD U2 classes spring_pilot"
         ],
-        "script_level.chapter": 72,
-        "script_level.position": 4,
         "lesson.key": "CSS Classes",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-pilot"
@@ -2006,8 +1862,6 @@
         "script_level.level_keys": [
           "CSD U2 classes summer_pilot"
         ],
-        "script_level.chapter": 73,
-        "script_level.position": 5,
         "lesson.key": "CSS Classes",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-pilot"
@@ -2028,8 +1882,6 @@
         "script_level.level_keys": [
           "CSD U2 RGB intro_pilot"
         ],
-        "script_level.chapter": 74,
-        "script_level.position": 6,
         "lesson.key": "CSS Classes",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-pilot"
@@ -2050,8 +1902,6 @@
         "script_level.level_keys": [
           "CSD U2L16 TFMD_pilot"
         ],
-        "script_level.chapter": 75,
-        "script_level.position": 1,
         "lesson.key": "Planning a Multi-page Website",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-pilot"
@@ -2072,8 +1922,6 @@
         "script_level.level_keys": [
           "CSD U2L17 TFMD_pilot"
         ],
-        "script_level.chapter": 76,
-        "script_level.position": 1,
         "lesson.key": "Linking and Navigation",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-pilot"
@@ -2095,8 +1943,6 @@
         "script_level.level_keys": [
           "CSD U2 link demo_pilot"
         ],
-        "script_level.chapter": 77,
-        "script_level.position": 2,
         "lesson.key": "Linking and Navigation",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-pilot"
@@ -2118,8 +1964,6 @@
         "script_level.level_keys": [
           "CSD U2 making links"
         ],
-        "script_level.chapter": 78,
-        "script_level.position": 3,
         "lesson.key": "Linking and Navigation",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-pilot"
@@ -2141,8 +1985,6 @@
         "script_level.level_keys": [
           "CSD U2 naming links"
         ],
-        "script_level.chapter": 79,
-        "script_level.position": 4,
         "lesson.key": "Linking and Navigation",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-pilot"
@@ -2164,8 +2006,6 @@
         "script_level.level_keys": [
           "CSD U2 nav bar"
         ],
-        "script_level.chapter": 80,
-        "script_level.position": 5,
         "lesson.key": "Linking and Navigation",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-pilot"
@@ -2187,8 +2027,6 @@
         "script_level.level_keys": [
           "CSD U2 adding pages"
         ],
-        "script_level.chapter": 81,
-        "script_level.position": 6,
         "lesson.key": "Linking and Navigation",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-pilot"
@@ -2210,8 +2048,6 @@
         "script_level.level_keys": [
           "CSD U2 naming pages"
         ],
-        "script_level.chapter": 82,
-        "script_level.position": 7,
         "lesson.key": "Linking and Navigation",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-pilot"
@@ -2233,8 +2069,6 @@
         "script_level.level_keys": [
           "CSD U2 external links"
         ],
-        "script_level.chapter": 83,
-        "script_level.position": 8,
         "lesson.key": "Linking and Navigation",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-pilot"
@@ -2255,8 +2089,6 @@
         "script_level.level_keys": [
           "CSD U2L18 TFMD_pilot"
         ],
-        "script_level.chapter": 84,
-        "script_level.position": 1,
         "lesson.key": "Project - Website for a Purpose",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-pilot"
@@ -2278,8 +2110,6 @@
         "script_level.level_keys": [
           "CSD web upload images multi_pilot"
         ],
-        "script_level.chapter": 85,
-        "script_level.position": 2,
         "lesson.key": "Project - Website for a Purpose",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-pilot"
@@ -2301,8 +2131,6 @@
         "script_level.level_keys": [
           "CSD U2 create page_pilot"
         ],
-        "script_level.chapter": 86,
-        "script_level.position": 3,
         "lesson.key": "Project - Website for a Purpose",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-pilot"
@@ -2324,8 +2152,6 @@
         "script_level.level_keys": [
           "CSD web add html"
         ],
-        "script_level.chapter": 87,
-        "script_level.position": 4,
         "lesson.key": "Project - Website for a Purpose",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-pilot"
@@ -2347,8 +2173,6 @@
         "script_level.level_keys": [
           "CSD web add CSS"
         ],
-        "script_level.chapter": 88,
-        "script_level.position": 5,
         "lesson.key": "Project - Website for a Purpose",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-pilot"
@@ -2370,8 +2194,6 @@
         "script_level.level_keys": [
           "CSD web check"
         ],
-        "script_level.chapter": 89,
-        "script_level.position": 6,
         "lesson.key": "Project - Website for a Purpose",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-pilot"
@@ -2392,8 +2214,6 @@
         "script_level.level_keys": [
           "CSD U2L19 TFMD_pilot"
         ],
-        "script_level.chapter": 90,
-        "script_level.position": 1,
         "lesson.key": "Peer Review and Final Touches",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-pilot"
@@ -2414,8 +2234,6 @@
         "script_level.level_keys": [
           "CSD Web incorporate feedback"
         ],
-        "script_level.chapter": 91,
-        "script_level.position": 2,
         "lesson.key": "Peer Review and Final Touches",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-pilot"
@@ -2437,8 +2255,6 @@
         "script_level.level_keys": [
           "csd-pulse-check-survey-1-levelgroup U2Ch2_2018_2019_pilot"
         ],
-        "script_level.chapter": 92,
-        "script_level.position": 3,
         "lesson.key": "Peer Review and Final Touches",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-pilot"
@@ -2459,8 +2275,6 @@
         "script_level.level_keys": [
           "CSD Web Development Post-Project Test_pilot"
         ],
-        "script_level.chapter": 93,
-        "script_level.position": 1,
         "lesson.key": "Post-Project Test",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-pilot"
@@ -2481,8 +2295,6 @@
         "script_level.level_keys": [
           "csd-post-survey-intro-2019_pilot"
         ],
-        "script_level.chapter": 94,
-        "script_level.position": 1,
         "lesson.key": "CS Discoveries Post Course survey",
         "lesson_group.key": "cspSurvey",
         "script.name": "csd2-pilot"
@@ -2503,8 +2315,6 @@
         "script_level.level_keys": [
           "csd-post-survey-2017-levelgroup_2018_2019_pilot"
         ],
-        "script_level.chapter": 95,
-        "script_level.position": 2,
         "lesson.key": "CS Discoveries Post Course survey",
         "lesson_group.key": "cspSurvey",
         "script.name": "csd2-pilot"
@@ -2521,8 +2331,6 @@
         "script_level.level_keys": [
           "CSD U2L01 TFMD_pilot"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Exploring Web Pages",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -2534,8 +2342,6 @@
         "script_level.level_keys": [
           "CSD Web Sample Pages"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Exploring Web Pages",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -2547,8 +2353,6 @@
         "script_level.level_keys": [
           "CSD U2L02 TFMD_pilot"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 1,
         "lesson.key": "Intro to HTML",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -2560,8 +2364,6 @@
         "script_level.level_keys": [
           "CSDU2 - Type Anything_pilot"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 2,
         "lesson.key": "Intro to HTML",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -2573,8 +2375,6 @@
         "script_level.level_keys": [
           "Intro to Web Lab - Part 1_pilot"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 3,
         "lesson.key": "Intro to HTML",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -2586,8 +2386,6 @@
         "script_level.level_keys": [
           "CSD U2 Inspector Warm Up_pilot"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 4,
         "lesson.key": "Intro to HTML",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -2599,8 +2397,6 @@
         "script_level.level_keys": [
           "Intro to Web Lab - Part 2_pilot"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 5,
         "lesson.key": "Intro to HTML",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -2612,8 +2408,6 @@
         "script_level.level_keys": [
           "CSD U2 HTML Adding Paragraphs_pilot"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 6,
         "lesson.key": "Intro to HTML",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -2625,8 +2419,6 @@
         "script_level.level_keys": [
           "CSD U2 HTML Adding Paragraphs pt 2_pilot"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 7,
         "lesson.key": "Intro to HTML",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -2638,8 +2430,6 @@
         "script_level.level_keys": [
           "CSD U2 HTML Debug Paragraphs_pilot"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 8,
         "lesson.key": "Intro to HTML",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -2651,8 +2441,6 @@
         "script_level.level_keys": [
           "CSD U2L03 TFMD_pilot"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 1,
         "lesson.key": "Headings",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -2664,8 +2452,6 @@
         "script_level.level_keys": [
           "CSD U2 Pair Programming Video_pilot"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 2,
         "lesson.key": "Headings",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -2677,8 +2463,6 @@
         "script_level.level_keys": [
           "CSD U2 Heading debug"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 3,
         "lesson.key": "Headings",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -2690,8 +2474,6 @@
         "script_level.level_keys": [
           "CSD U2 Heading Demo_pilot"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 4,
         "lesson.key": "Headings",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -2703,8 +2485,6 @@
         "script_level.level_keys": [
           "CSD U2 Heading Sizes_pilot"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 5,
         "lesson.key": "Headings",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -2716,8 +2496,6 @@
         "script_level.level_keys": [
           "CSD Web Debugging"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 6,
         "lesson.key": "Headings",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -2729,8 +2507,6 @@
         "script_level.level_keys": [
           "CSD Web Headings practice"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 7,
         "lesson.key": "Headings",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -2742,8 +2518,6 @@
         "script_level.level_keys": [
           "CSD Header Size MC_2018_2019_pilot"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 8,
         "lesson.key": "Headings",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -2755,8 +2529,6 @@
         "script_level.level_keys": [
           "CSD U2 Heading Test_pilot"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 9,
         "lesson.key": "Headings",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -2768,8 +2540,6 @@
         "script_level.level_keys": [
           "CSD Web Headings challenge"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 10,
         "lesson.key": "Headings",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -2781,8 +2551,6 @@
         "script_level.level_keys": [
           "CSD U2L04 TFMD_pilot"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 1,
         "lesson.key": "Digital Footprint",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -2794,8 +2562,6 @@
         "script_level.level_keys": [
           "Social Sleuth_2018_2019_pilot"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 2,
         "lesson.key": "Digital Footprint",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -2807,8 +2573,6 @@
         "script_level.level_keys": [
           "CSD U2L05 TFMD_pilot"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 1,
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -2820,8 +2584,6 @@
         "script_level.level_keys": [
           "CSD U2 CSS explore CSS_pilot"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 2,
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -2833,8 +2595,6 @@
         "script_level.level_keys": [
           "Video: Intro to CSS_pilot"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 3,
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -2846,8 +2606,6 @@
         "script_level.level_keys": [
           "CSD U2 text style h1_pilot"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 4,
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -2859,8 +2617,6 @@
         "script_level.level_keys": [
           "CSD U2 text style h3_pilot"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 5,
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -2872,8 +2628,6 @@
         "script_level.level_keys": [
           "CSD U2 text style size_pilot"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 6,
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -2885,8 +2639,6 @@
         "script_level.level_keys": [
           "Video: Intro to CSS Part 2_pilot"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 7,
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -2898,8 +2650,6 @@
         "script_level.level_keys": [
           "CSD U2 add file_pilot"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 8,
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -2911,8 +2661,6 @@
         "script_level.level_keys": [
           "CSD U2 CSS practice_pilot"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 9,
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -2924,8 +2672,6 @@
         "script_level.level_keys": [
           "CSD Web CSS Assessment"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 10,
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -2937,8 +2683,6 @@
         "script_level.level_keys": [
           "CSD U2 CSS challenge_pilot"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 11,
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -2950,8 +2694,6 @@
         "script_level.level_keys": [
           "CSD U2L06 TFMD_pilot"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 1,
         "lesson.key": "Intellectual Property",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -2963,8 +2705,6 @@
         "script_level.level_keys": [
           "CSD U2L07 TFMD_pilot"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 1,
         "lesson.key": "Images",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -2976,8 +2716,6 @@
         "script_level.level_keys": [
           "CSD U2 Image Tag 1_pilot"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 2,
         "lesson.key": "Images",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -2989,8 +2727,6 @@
         "script_level.level_keys": [
           "CSD U2 Image Credit_pilot"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 3,
         "lesson.key": "Images",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -3002,8 +2738,6 @@
         "script_level.level_keys": [
           "CSD U2 Image Tag Debug_pilot"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 4,
         "lesson.key": "Images",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -3015,8 +2749,6 @@
         "script_level.level_keys": [
           "CSD U2 Image choose name"
         ],
-        "script_level.chapter": 39,
-        "script_level.position": 5,
         "lesson.key": "Images",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -3028,8 +2760,6 @@
         "script_level.level_keys": [
           "CSD U2 Image Tag 2_pilot"
         ],
-        "script_level.chapter": 40,
-        "script_level.position": 6,
         "lesson.key": "Images",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -3041,8 +2771,6 @@
         "script_level.level_keys": [
           "CSD U2 Image practice_pilot"
         ],
-        "script_level.chapter": 41,
-        "script_level.position": 7,
         "lesson.key": "Images",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -3054,8 +2782,6 @@
         "script_level.level_keys": [
           "CSD U2 Image assessment"
         ],
-        "script_level.chapter": 42,
-        "script_level.position": 8,
         "lesson.key": "Images",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -3067,8 +2793,6 @@
         "script_level.level_keys": [
           "CSD U2 Image challenge_pilot"
         ],
-        "script_level.chapter": 43,
-        "script_level.position": 9,
         "lesson.key": "Images",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -3080,8 +2804,6 @@
         "script_level.level_keys": [
           "CSD U2L08 TFMD_pilot"
         ],
-        "script_level.chapter": 44,
-        "script_level.position": 1,
         "lesson.key": "Websites for Expression ",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -3093,8 +2815,6 @@
         "script_level.level_keys": [
           "CSD U2 Expression Exemplars_2018_2019_pilot"
         ],
-        "script_level.chapter": 45,
-        "script_level.position": 2,
         "lesson.key": "Websites for Expression ",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -3106,8 +2826,6 @@
         "script_level.level_keys": [
           "CSD U2L09 TFMD_pilot"
         ],
-        "script_level.chapter": 46,
-        "script_level.position": 1,
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -3119,8 +2837,6 @@
         "script_level.level_keys": [
           "CSD U2 layout style sample_pilot"
         ],
-        "script_level.chapter": 47,
-        "script_level.position": 2,
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -3132,8 +2848,6 @@
         "script_level.level_keys": [
           "CSD U2 layout style bgcolor_pilot"
         ],
-        "script_level.chapter": 48,
-        "script_level.position": 3,
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -3145,8 +2859,6 @@
         "script_level.level_keys": [
           "CSD U2 layout style body_pilot"
         ],
-        "script_level.chapter": 49,
-        "script_level.position": 4,
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -3158,8 +2870,6 @@
         "script_level.level_keys": [
           "CSD U2 layout style float_pilot"
         ],
-        "script_level.chapter": 50,
-        "script_level.position": 5,
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -3171,8 +2881,6 @@
         "script_level.level_keys": [
           "CSD U2 layout style width_pilot"
         ],
-        "script_level.chapter": 51,
-        "script_level.position": 6,
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -3184,8 +2892,6 @@
         "script_level.level_keys": [
           "CSD U2 layout style practice_pilot"
         ],
-        "script_level.chapter": 52,
-        "script_level.position": 7,
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -3197,8 +2903,6 @@
         "script_level.level_keys": [
           "CSD U2 add style_pilot"
         ],
-        "script_level.chapter": 53,
-        "script_level.position": 8,
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -3210,8 +2914,6 @@
         "script_level.level_keys": [
           "CSD U2 layout style challenge_pilot"
         ],
-        "script_level.chapter": 54,
-        "script_level.position": 9,
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -3223,8 +2925,6 @@
         "script_level.level_keys": [
           "CSD U2L10 TFMD_pilot"
         ],
-        "script_level.chapter": 55,
-        "script_level.position": 1,
         "lesson.key": "Project - Planning Layout and Style",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -3236,8 +2936,6 @@
         "script_level.level_keys": [
           "CSD U2L11 TFMD_pilot"
         ],
-        "script_level.chapter": 56,
-        "script_level.position": 1,
         "lesson.key": "Project - Building a Webpage",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -3249,8 +2947,6 @@
         "script_level.level_keys": [
           "CSD U2 project guide_2018_2019_pilot"
         ],
-        "script_level.chapter": 57,
-        "script_level.position": 2,
         "lesson.key": "Project - Building a Webpage",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -3262,8 +2958,6 @@
         "script_level.level_keys": [
           "CSD U2 upload images_pilot"
         ],
-        "script_level.chapter": 58,
-        "script_level.position": 3,
         "lesson.key": "Project - Building a Webpage",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -3275,8 +2969,6 @@
         "script_level.level_keys": [
           "CSD U2 add content_pilot"
         ],
-        "script_level.chapter": 59,
-        "script_level.position": 4,
         "lesson.key": "Project - Building a Webpage",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -3288,8 +2980,6 @@
         "script_level.level_keys": [
           "CSD U2 CSS_pilot"
         ],
-        "script_level.chapter": 60,
-        "script_level.position": 5,
         "lesson.key": "Project - Building a Webpage",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -3301,8 +2991,6 @@
         "script_level.level_keys": [
           "CSD U2 project review_pilot"
         ],
-        "script_level.chapter": 61,
-        "script_level.position": 6,
         "lesson.key": "Project - Building a Webpage",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -3314,8 +3002,6 @@
         "script_level.level_keys": [
           "CSD U2 publish video_pilot"
         ],
-        "script_level.chapter": 62,
-        "script_level.position": 7,
         "lesson.key": "Project - Building a Webpage",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -3327,8 +3013,6 @@
         "script_level.level_keys": [
           "CSD U2 project share_pilot"
         ],
-        "script_level.chapter": 63,
-        "script_level.position": 8,
         "lesson.key": "Project - Building a Webpage",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -3340,8 +3024,6 @@
         "script_level.level_keys": [
           "csd-pulse-check-survey-1-levelgroup U2Ch1_2018_2019_pilot"
         ],
-        "script_level.chapter": 64,
-        "script_level.position": 9,
         "lesson.key": "Project - Building a Webpage",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-pilot"
@@ -3353,8 +3035,6 @@
         "script_level.level_keys": [
           "CSD U2L12 TFMD_pilot"
         ],
-        "script_level.chapter": 65,
-        "script_level.position": 1,
         "lesson.key": "Purpose of a  Websites",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-pilot"
@@ -3366,8 +3046,6 @@
         "script_level.level_keys": [
           "CSD U2 Top Websites_2018_2019_pilot"
         ],
-        "script_level.chapter": 66,
-        "script_level.position": 2,
         "lesson.key": "Purpose of a  Websites",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-pilot"
@@ -3379,8 +3057,6 @@
         "script_level.level_keys": [
           "CSD U2L13 TFMD_pilot"
         ],
-        "script_level.chapter": 67,
-        "script_level.position": 1,
         "lesson.key": "Team Problem Solving",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-pilot"
@@ -3392,8 +3068,6 @@
         "script_level.level_keys": [
           "CSD U2L14 TFMD_pilot"
         ],
-        "script_level.chapter": 68,
-        "script_level.position": 1,
         "lesson.key": "Sources and Research",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-pilot"
@@ -3405,8 +3079,6 @@
         "script_level.level_keys": [
           "CSD U2L15 TFMD_pilot"
         ],
-        "script_level.chapter": 69,
-        "script_level.position": 1,
         "lesson.key": "CSS Classes",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-pilot"
@@ -3418,8 +3090,6 @@
         "script_level.level_keys": [
           "CSD U2 classes sample_pilot"
         ],
-        "script_level.chapter": 70,
-        "script_level.position": 2,
         "lesson.key": "CSS Classes",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-pilot"
@@ -3431,8 +3101,6 @@
         "script_level.level_keys": [
           "CSD U2 classes modify_pilot"
         ],
-        "script_level.chapter": 71,
-        "script_level.position": 3,
         "lesson.key": "CSS Classes",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-pilot"
@@ -3444,8 +3112,6 @@
         "script_level.level_keys": [
           "CSD U2 classes spring_pilot"
         ],
-        "script_level.chapter": 72,
-        "script_level.position": 4,
         "lesson.key": "CSS Classes",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-pilot"
@@ -3457,8 +3123,6 @@
         "script_level.level_keys": [
           "CSD U2 classes summer_pilot"
         ],
-        "script_level.chapter": 73,
-        "script_level.position": 5,
         "lesson.key": "CSS Classes",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-pilot"
@@ -3470,8 +3134,6 @@
         "script_level.level_keys": [
           "CSD U2 RGB intro_pilot"
         ],
-        "script_level.chapter": 74,
-        "script_level.position": 6,
         "lesson.key": "CSS Classes",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-pilot"
@@ -3483,8 +3145,6 @@
         "script_level.level_keys": [
           "CSD U2L16 TFMD_pilot"
         ],
-        "script_level.chapter": 75,
-        "script_level.position": 1,
         "lesson.key": "Planning a Multi-page Website",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-pilot"
@@ -3496,8 +3156,6 @@
         "script_level.level_keys": [
           "CSD U2L17 TFMD_pilot"
         ],
-        "script_level.chapter": 76,
-        "script_level.position": 1,
         "lesson.key": "Linking and Navigation",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-pilot"
@@ -3509,8 +3167,6 @@
         "script_level.level_keys": [
           "CSD U2 link demo_pilot"
         ],
-        "script_level.chapter": 77,
-        "script_level.position": 2,
         "lesson.key": "Linking and Navigation",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-pilot"
@@ -3522,8 +3178,6 @@
         "script_level.level_keys": [
           "CSD U2 making links"
         ],
-        "script_level.chapter": 78,
-        "script_level.position": 3,
         "lesson.key": "Linking and Navigation",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-pilot"
@@ -3535,8 +3189,6 @@
         "script_level.level_keys": [
           "CSD U2 naming links"
         ],
-        "script_level.chapter": 79,
-        "script_level.position": 4,
         "lesson.key": "Linking and Navigation",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-pilot"
@@ -3548,8 +3200,6 @@
         "script_level.level_keys": [
           "CSD U2 nav bar"
         ],
-        "script_level.chapter": 80,
-        "script_level.position": 5,
         "lesson.key": "Linking and Navigation",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-pilot"
@@ -3561,8 +3211,6 @@
         "script_level.level_keys": [
           "CSD U2 adding pages"
         ],
-        "script_level.chapter": 81,
-        "script_level.position": 6,
         "lesson.key": "Linking and Navigation",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-pilot"
@@ -3574,8 +3222,6 @@
         "script_level.level_keys": [
           "CSD U2 naming pages"
         ],
-        "script_level.chapter": 82,
-        "script_level.position": 7,
         "lesson.key": "Linking and Navigation",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-pilot"
@@ -3587,8 +3233,6 @@
         "script_level.level_keys": [
           "CSD U2 external links"
         ],
-        "script_level.chapter": 83,
-        "script_level.position": 8,
         "lesson.key": "Linking and Navigation",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-pilot"
@@ -3600,8 +3244,6 @@
         "script_level.level_keys": [
           "CSD U2L18 TFMD_pilot"
         ],
-        "script_level.chapter": 84,
-        "script_level.position": 1,
         "lesson.key": "Project - Website for a Purpose",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-pilot"
@@ -3613,8 +3255,6 @@
         "script_level.level_keys": [
           "CSD web upload images multi_pilot"
         ],
-        "script_level.chapter": 85,
-        "script_level.position": 2,
         "lesson.key": "Project - Website for a Purpose",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-pilot"
@@ -3626,8 +3266,6 @@
         "script_level.level_keys": [
           "CSD U2 create page_pilot"
         ],
-        "script_level.chapter": 86,
-        "script_level.position": 3,
         "lesson.key": "Project - Website for a Purpose",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-pilot"
@@ -3639,8 +3277,6 @@
         "script_level.level_keys": [
           "CSD web add html"
         ],
-        "script_level.chapter": 87,
-        "script_level.position": 4,
         "lesson.key": "Project - Website for a Purpose",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-pilot"
@@ -3652,8 +3288,6 @@
         "script_level.level_keys": [
           "CSD web add CSS"
         ],
-        "script_level.chapter": 88,
-        "script_level.position": 5,
         "lesson.key": "Project - Website for a Purpose",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-pilot"
@@ -3665,8 +3299,6 @@
         "script_level.level_keys": [
           "CSD web check"
         ],
-        "script_level.chapter": 89,
-        "script_level.position": 6,
         "lesson.key": "Project - Website for a Purpose",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-pilot"
@@ -3678,8 +3310,6 @@
         "script_level.level_keys": [
           "CSD U2L19 TFMD_pilot"
         ],
-        "script_level.chapter": 90,
-        "script_level.position": 1,
         "lesson.key": "Peer Review and Final Touches",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-pilot"
@@ -3691,8 +3321,6 @@
         "script_level.level_keys": [
           "CSD Web incorporate feedback"
         ],
-        "script_level.chapter": 91,
-        "script_level.position": 2,
         "lesson.key": "Peer Review and Final Touches",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-pilot"
@@ -3704,8 +3332,6 @@
         "script_level.level_keys": [
           "csd-pulse-check-survey-1-levelgroup U2Ch2_2018_2019_pilot"
         ],
-        "script_level.chapter": 92,
-        "script_level.position": 3,
         "lesson.key": "Peer Review and Final Touches",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-pilot"
@@ -3717,8 +3343,6 @@
         "script_level.level_keys": [
           "CSD Web Development Post-Project Test_pilot"
         ],
-        "script_level.chapter": 93,
-        "script_level.position": 1,
         "lesson.key": "Post-Project Test",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-pilot"
@@ -3730,8 +3354,6 @@
         "script_level.level_keys": [
           "csd-post-survey-intro-2019_pilot"
         ],
-        "script_level.chapter": 94,
-        "script_level.position": 1,
         "lesson.key": "CS Discoveries Post Course survey",
         "lesson_group.key": "cspSurvey",
         "script.name": "csd2-pilot"
@@ -3743,8 +3365,6 @@
         "script_level.level_keys": [
           "csd-post-survey-2017-levelgroup_2018_2019_pilot"
         ],
-        "script_level.chapter": 95,
-        "script_level.position": 2,
         "lesson.key": "CS Discoveries Post Course survey",
         "lesson_group.key": "cspSurvey",
         "script.name": "csd2-pilot"

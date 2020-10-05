@@ -69,8 +69,6 @@
         "script_level.level_keys": [
           "CSD U2 HTML miniproject choices"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "HTML  Project",
         "lesson_group.key": "",
         "script.name": "csd2-projects-temp"
@@ -91,8 +89,6 @@
         "script_level.level_keys": [
           "CSD U2 CSS miniproject choices"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 1,
         "lesson.key": "CSS Project",
         "lesson_group.key": "",
         "script.name": "csd2-projects-temp"
@@ -109,8 +105,6 @@
         "script_level.level_keys": [
           "CSD U2 HTML miniproject choices"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "HTML  Project",
         "lesson_group.key": "",
         "script.name": "csd2-projects-temp"
@@ -122,8 +116,6 @@
         "script_level.level_keys": [
           "CSD U2 CSS miniproject choices"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 1,
         "lesson.key": "CSS Project",
         "lesson_group.key": "",
         "script.name": "csd2-projects-temp"

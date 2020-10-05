@@ -85,8 +85,6 @@
         "script_level.level_keys": [
           "CSD U4L12 autoSFLP_2018"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Digital Design",
         "lesson_group.key": "",
         "script.name": "sconyers"
@@ -107,8 +105,6 @@
         "script_level.level_keys": [
           "CSD U4 Design Mode Map_2018"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Digital Design",
         "lesson_group.key": "",
         "script.name": "sconyers"
@@ -129,8 +125,6 @@
         "script_level.level_keys": [
           "CSDU4 Design Mode Video_2018"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "Digital Design",
         "lesson_group.key": "",
         "script.name": "sconyers"
@@ -152,8 +146,6 @@
         "script_level.level_keys": [
           "U4 Model Design 1_2018"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "Digital Design",
         "lesson_group.key": "",
         "script.name": "sconyers"
@@ -175,8 +167,6 @@
         "script_level.level_keys": [
           "U4 Model Design 2_2018"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 5,
         "lesson.key": "Digital Design",
         "lesson_group.key": "",
         "script.name": "sconyers"
@@ -198,8 +188,6 @@
         "script_level.level_keys": [
           "U4 Model Design 3_2018"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 6,
         "lesson.key": "Digital Design",
         "lesson_group.key": "",
         "script.name": "sconyers"
@@ -221,8 +209,6 @@
         "script_level.level_keys": [
           "U4 Model Design 4_2018"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 7,
         "lesson.key": "Digital Design",
         "lesson_group.key": "",
         "script.name": "sconyers"
@@ -243,8 +229,6 @@
         "script_level.level_keys": [
           "CSD U4 Design Elements Map_2018"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 8,
         "lesson.key": "Digital Design",
         "lesson_group.key": "",
         "script.name": "sconyers"
@@ -266,8 +250,6 @@
         "script_level.level_keys": [
           "U4 Model Design 5_2018"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 9,
         "lesson.key": "Digital Design",
         "lesson_group.key": "",
         "script.name": "sconyers"
@@ -289,8 +271,6 @@
         "script_level.level_keys": [
           "U4 Model Design 6_2018"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 10,
         "lesson.key": "Digital Design",
         "lesson_group.key": "",
         "script.name": "sconyers"
@@ -312,8 +292,6 @@
         "script_level.level_keys": [
           "U4 Model Design 7_2018"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 11,
         "lesson.key": "Digital Design",
         "lesson_group.key": "",
         "script.name": "sconyers"
@@ -334,8 +312,6 @@
         "script_level.level_keys": [
           "Design a Screen for your App_2018"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 12,
         "lesson.key": "Digital Design",
         "lesson_group.key": "",
         "script.name": "sconyers"
@@ -357,8 +333,6 @@
         "script_level.level_keys": [
           "CSD U4 - Design Mode Project_2018"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 13,
         "lesson.key": "Digital Design",
         "lesson_group.key": "",
         "script.name": "sconyers"
@@ -379,8 +353,6 @@
         "script_level.level_keys": [
           "CSD U4L13 autoSFLP_2018"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 1,
         "lesson.key": "Linking Screens",
         "lesson_group.key": "",
         "script.name": "sconyers"
@@ -402,8 +374,6 @@
         "script_level.level_keys": [
           "CSD U4 Mult Screen Map_2018"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 2,
         "lesson.key": "Linking Screens",
         "lesson_group.key": "",
         "script.name": "sconyers"
@@ -425,8 +395,6 @@
         "script_level.level_keys": [
           "U4 Model Program 1_2018"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 3,
         "lesson.key": "Linking Screens",
         "lesson_group.key": "",
         "script.name": "sconyers"
@@ -448,8 +416,6 @@
         "script_level.level_keys": [
           "U4 Model Program 1.5_2018"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 4,
         "lesson.key": "Linking Screens",
         "lesson_group.key": "",
         "script.name": "sconyers"
@@ -471,8 +437,6 @@
         "script_level.level_keys": [
           "CSD U4 Importing Screens Map_2018"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 5,
         "lesson.key": "Linking Screens",
         "lesson_group.key": "",
         "script.name": "sconyers"
@@ -494,8 +458,6 @@
         "script_level.level_keys": [
           "U4 Model Program 2_2018"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 6,
         "lesson.key": "Linking Screens",
         "lesson_group.key": "",
         "script.name": "sconyers"
@@ -517,8 +479,6 @@
         "script_level.level_keys": [
           "U4 Model Program 2.5_2018"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 7,
         "lesson.key": "Linking Screens",
         "lesson_group.key": "",
         "script.name": "sconyers"
@@ -540,8 +500,6 @@
         "script_level.level_keys": [
           "CSD U4 User Input Map_2018"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 8,
         "lesson.key": "Linking Screens",
         "lesson_group.key": "",
         "script.name": "sconyers"
@@ -563,8 +521,6 @@
         "script_level.level_keys": [
           "U4 Model Program 3_2018"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 9,
         "lesson.key": "Linking Screens",
         "lesson_group.key": "",
         "script.name": "sconyers"
@@ -586,8 +542,6 @@
         "script_level.level_keys": [
           "CSD U4 Change Screen Map_2018"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 10,
         "lesson.key": "Linking Screens",
         "lesson_group.key": "",
         "script.name": "sconyers"
@@ -609,8 +563,6 @@
         "script_level.level_keys": [
           "U4 Model Program 4_2018"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 11,
         "lesson.key": "Linking Screens",
         "lesson_group.key": "",
         "script.name": "sconyers"
@@ -632,8 +584,6 @@
         "script_level.level_keys": [
           "U4 Model Program 5_2018"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 12,
         "lesson.key": "Linking Screens",
         "lesson_group.key": "",
         "script.name": "sconyers"
@@ -654,8 +604,6 @@
         "script_level.level_keys": [
           "CSDU4 Project Import_2018"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 13,
         "lesson.key": "Linking Screens",
         "lesson_group.key": "",
         "script.name": "sconyers"
@@ -676,8 +624,6 @@
         "script_level.level_keys": [
           "CSDU4 Project Events_2018"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 14,
         "lesson.key": "Linking Screens",
         "lesson_group.key": "",
         "script.name": "sconyers"
@@ -698,8 +644,6 @@
         "script_level.level_keys": [
           "TraceySconyers_Level1_Test"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 1,
         "lesson.key": "Test Lesson",
         "lesson_group.key": "",
         "script.name": "sconyers"
@@ -720,8 +664,6 @@
         "script_level.level_keys": [
           "TraceySconyers_Level2_Test"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 2,
         "lesson.key": "Test Lesson",
         "lesson_group.key": "",
         "script.name": "sconyers"
@@ -738,8 +680,6 @@
         "script_level.level_keys": [
           "CSD U4L12 autoSFLP_2018"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Digital Design",
         "lesson_group.key": "",
         "script.name": "sconyers"
@@ -751,8 +691,6 @@
         "script_level.level_keys": [
           "CSD U4 Design Mode Map_2018"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Digital Design",
         "lesson_group.key": "",
         "script.name": "sconyers"
@@ -764,8 +702,6 @@
         "script_level.level_keys": [
           "CSDU4 Design Mode Video_2018"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "Digital Design",
         "lesson_group.key": "",
         "script.name": "sconyers"
@@ -777,8 +713,6 @@
         "script_level.level_keys": [
           "U4 Model Design 1_2018"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "Digital Design",
         "lesson_group.key": "",
         "script.name": "sconyers"
@@ -790,8 +724,6 @@
         "script_level.level_keys": [
           "U4 Model Design 2_2018"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 5,
         "lesson.key": "Digital Design",
         "lesson_group.key": "",
         "script.name": "sconyers"
@@ -803,8 +735,6 @@
         "script_level.level_keys": [
           "U4 Model Design 3_2018"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 6,
         "lesson.key": "Digital Design",
         "lesson_group.key": "",
         "script.name": "sconyers"
@@ -816,8 +746,6 @@
         "script_level.level_keys": [
           "U4 Model Design 4_2018"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 7,
         "lesson.key": "Digital Design",
         "lesson_group.key": "",
         "script.name": "sconyers"
@@ -829,8 +757,6 @@
         "script_level.level_keys": [
           "CSD U4 Design Elements Map_2018"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 8,
         "lesson.key": "Digital Design",
         "lesson_group.key": "",
         "script.name": "sconyers"
@@ -842,8 +768,6 @@
         "script_level.level_keys": [
           "U4 Model Design 5_2018"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 9,
         "lesson.key": "Digital Design",
         "lesson_group.key": "",
         "script.name": "sconyers"
@@ -855,8 +779,6 @@
         "script_level.level_keys": [
           "U4 Model Design 6_2018"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 10,
         "lesson.key": "Digital Design",
         "lesson_group.key": "",
         "script.name": "sconyers"
@@ -868,8 +790,6 @@
         "script_level.level_keys": [
           "U4 Model Design 7_2018"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 11,
         "lesson.key": "Digital Design",
         "lesson_group.key": "",
         "script.name": "sconyers"
@@ -881,8 +801,6 @@
         "script_level.level_keys": [
           "Design a Screen for your App_2018"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 12,
         "lesson.key": "Digital Design",
         "lesson_group.key": "",
         "script.name": "sconyers"
@@ -894,8 +812,6 @@
         "script_level.level_keys": [
           "CSD U4 - Design Mode Project_2018"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 13,
         "lesson.key": "Digital Design",
         "lesson_group.key": "",
         "script.name": "sconyers"
@@ -907,8 +823,6 @@
         "script_level.level_keys": [
           "CSD U4L13 autoSFLP_2018"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 1,
         "lesson.key": "Linking Screens",
         "lesson_group.key": "",
         "script.name": "sconyers"
@@ -920,8 +834,6 @@
         "script_level.level_keys": [
           "CSD U4 Mult Screen Map_2018"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 2,
         "lesson.key": "Linking Screens",
         "lesson_group.key": "",
         "script.name": "sconyers"
@@ -933,8 +845,6 @@
         "script_level.level_keys": [
           "U4 Model Program 1_2018"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 3,
         "lesson.key": "Linking Screens",
         "lesson_group.key": "",
         "script.name": "sconyers"
@@ -946,8 +856,6 @@
         "script_level.level_keys": [
           "U4 Model Program 1.5_2018"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 4,
         "lesson.key": "Linking Screens",
         "lesson_group.key": "",
         "script.name": "sconyers"
@@ -959,8 +867,6 @@
         "script_level.level_keys": [
           "CSD U4 Importing Screens Map_2018"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 5,
         "lesson.key": "Linking Screens",
         "lesson_group.key": "",
         "script.name": "sconyers"
@@ -972,8 +878,6 @@
         "script_level.level_keys": [
           "U4 Model Program 2_2018"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 6,
         "lesson.key": "Linking Screens",
         "lesson_group.key": "",
         "script.name": "sconyers"
@@ -985,8 +889,6 @@
         "script_level.level_keys": [
           "U4 Model Program 2.5_2018"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 7,
         "lesson.key": "Linking Screens",
         "lesson_group.key": "",
         "script.name": "sconyers"
@@ -998,8 +900,6 @@
         "script_level.level_keys": [
           "CSD U4 User Input Map_2018"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 8,
         "lesson.key": "Linking Screens",
         "lesson_group.key": "",
         "script.name": "sconyers"
@@ -1011,8 +911,6 @@
         "script_level.level_keys": [
           "U4 Model Program 3_2018"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 9,
         "lesson.key": "Linking Screens",
         "lesson_group.key": "",
         "script.name": "sconyers"
@@ -1024,8 +922,6 @@
         "script_level.level_keys": [
           "CSD U4 Change Screen Map_2018"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 10,
         "lesson.key": "Linking Screens",
         "lesson_group.key": "",
         "script.name": "sconyers"
@@ -1037,8 +933,6 @@
         "script_level.level_keys": [
           "U4 Model Program 4_2018"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 11,
         "lesson.key": "Linking Screens",
         "lesson_group.key": "",
         "script.name": "sconyers"
@@ -1050,8 +944,6 @@
         "script_level.level_keys": [
           "U4 Model Program 5_2018"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 12,
         "lesson.key": "Linking Screens",
         "lesson_group.key": "",
         "script.name": "sconyers"
@@ -1063,8 +955,6 @@
         "script_level.level_keys": [
           "CSDU4 Project Import_2018"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 13,
         "lesson.key": "Linking Screens",
         "lesson_group.key": "",
         "script.name": "sconyers"
@@ -1076,8 +966,6 @@
         "script_level.level_keys": [
           "CSDU4 Project Events_2018"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 14,
         "lesson.key": "Linking Screens",
         "lesson_group.key": "",
         "script.name": "sconyers"
@@ -1089,8 +977,6 @@
         "script_level.level_keys": [
           "TraceySconyers_Level1_Test"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 1,
         "lesson.key": "Test Lesson",
         "lesson_group.key": "",
         "script.name": "sconyers"
@@ -1102,8 +988,6 @@
         "script_level.level_keys": [
           "TraceySconyers_Level2_Test"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 2,
         "lesson.key": "Test Lesson",
         "lesson_group.key": "",
         "script.name": "sconyers"

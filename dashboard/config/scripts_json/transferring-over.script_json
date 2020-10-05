@@ -110,8 +110,6 @@
         "script_level.level_keys": [
           "20hr_maze_stage2_1"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "20-hr Stage 2",
         "lesson_group.key": "",
         "script.name": "transferring-over"
@@ -132,8 +130,6 @@
         "script_level.level_keys": [
           "20hr_maze_stage2_2"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "20-hr Stage 2",
         "lesson_group.key": "",
         "script.name": "transferring-over"
@@ -154,8 +150,6 @@
         "script_level.level_keys": [
           "20hr_maze_stage2_3"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "20-hr Stage 2",
         "lesson_group.key": "",
         "script.name": "transferring-over"
@@ -176,8 +170,6 @@
         "script_level.level_keys": [
           "20hr_maze_stage2_4"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "20-hr Stage 2",
         "lesson_group.key": "",
         "script.name": "transferring-over"
@@ -198,8 +190,6 @@
         "script_level.level_keys": [
           "20hr_maze_stage2_5"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 5,
         "lesson.key": "20-hr Stage 2",
         "lesson_group.key": "",
         "script.name": "transferring-over"
@@ -220,8 +210,6 @@
         "script_level.level_keys": [
           "20hr_maze_stage2_6"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 6,
         "lesson.key": "20-hr Stage 2",
         "lesson_group.key": "",
         "script.name": "transferring-over"
@@ -242,8 +230,6 @@
         "script_level.level_keys": [
           "20hr_maze_stage2_7"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 7,
         "lesson.key": "20-hr Stage 2",
         "lesson_group.key": "",
         "script.name": "transferring-over"
@@ -264,8 +250,6 @@
         "script_level.level_keys": [
           "20hr_maze_stage2_8"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 8,
         "lesson.key": "20-hr Stage 2",
         "lesson_group.key": "",
         "script.name": "transferring-over"
@@ -286,8 +270,6 @@
         "script_level.level_keys": [
           "20hr_maze_stage2_9"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 9,
         "lesson.key": "20-hr Stage 2",
         "lesson_group.key": "",
         "script.name": "transferring-over"
@@ -308,8 +290,6 @@
         "script_level.level_keys": [
           "20hr_maze_stage2_10"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 10,
         "lesson.key": "20-hr Stage 2",
         "lesson_group.key": "",
         "script.name": "transferring-over"
@@ -330,8 +310,6 @@
         "script_level.level_keys": [
           "20hr_maze_stage2_11"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 11,
         "lesson.key": "20-hr Stage 2",
         "lesson_group.key": "",
         "script.name": "transferring-over"
@@ -352,8 +330,6 @@
         "script_level.level_keys": [
           "20hr_maze_stage2_12"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 12,
         "lesson.key": "20-hr Stage 2",
         "lesson_group.key": "",
         "script.name": "transferring-over"
@@ -374,8 +350,6 @@
         "script_level.level_keys": [
           "20hr_maze_stage2_13"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 13,
         "lesson.key": "20-hr Stage 2",
         "lesson_group.key": "",
         "script.name": "transferring-over"
@@ -396,8 +370,6 @@
         "script_level.level_keys": [
           "20hr_maze_stage2_14"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 14,
         "lesson.key": "20-hr Stage 2",
         "lesson_group.key": "",
         "script.name": "transferring-over"
@@ -418,8 +390,6 @@
         "script_level.level_keys": [
           "20hr_maze_stage2_15"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 15,
         "lesson.key": "20-hr Stage 2",
         "lesson_group.key": "",
         "script.name": "transferring-over"
@@ -440,8 +410,6 @@
         "script_level.level_keys": [
           "20hr_maze_stage2_16"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 16,
         "lesson.key": "20-hr Stage 2",
         "lesson_group.key": "",
         "script.name": "transferring-over"
@@ -462,8 +430,6 @@
         "script_level.level_keys": [
           "20hr_maze_stage2_17"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 17,
         "lesson.key": "20-hr Stage 2",
         "lesson_group.key": "",
         "script.name": "transferring-over"
@@ -484,8 +450,6 @@
         "script_level.level_keys": [
           "20hr_maze_stage2_18"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 18,
         "lesson.key": "20-hr Stage 2",
         "lesson_group.key": "",
         "script.name": "transferring-over"
@@ -506,8 +470,6 @@
         "script_level.level_keys": [
           "20hr_maze_stage2_19"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 19,
         "lesson.key": "20-hr Stage 2",
         "lesson_group.key": "",
         "script.name": "transferring-over"
@@ -528,8 +490,6 @@
         "script_level.level_keys": [
           "20hr_maze_stage2_20"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 20,
         "lesson.key": "20-hr Stage 2",
         "lesson_group.key": "",
         "script.name": "transferring-over"
@@ -550,8 +510,6 @@
         "script_level.level_keys": [
           "20hr_farmer_stage9_1"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 1,
         "lesson.key": "20-hr Stage 9",
         "lesson_group.key": "",
         "script.name": "transferring-over"
@@ -572,8 +530,6 @@
         "script_level.level_keys": [
           "20hr_farmer_stage9_2"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 2,
         "lesson.key": "20-hr Stage 9",
         "lesson_group.key": "",
         "script.name": "transferring-over"
@@ -594,8 +550,6 @@
         "script_level.level_keys": [
           "20hr_farmer_stage9_3"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 3,
         "lesson.key": "20-hr Stage 9",
         "lesson_group.key": "",
         "script.name": "transferring-over"
@@ -616,8 +570,6 @@
         "script_level.level_keys": [
           "20hr_farmer_stage9_4"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 4,
         "lesson.key": "20-hr Stage 9",
         "lesson_group.key": "",
         "script.name": "transferring-over"
@@ -638,8 +590,6 @@
         "script_level.level_keys": [
           "20hr_farmer_stage9_5"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 5,
         "lesson.key": "20-hr Stage 9",
         "lesson_group.key": "",
         "script.name": "transferring-over"
@@ -660,8 +610,6 @@
         "script_level.level_keys": [
           "20hr_farmer_stage9_6"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 6,
         "lesson.key": "20-hr Stage 9",
         "lesson_group.key": "",
         "script.name": "transferring-over"
@@ -682,8 +630,6 @@
         "script_level.level_keys": [
           "20hr_farmer_stage9_7"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 7,
         "lesson.key": "20-hr Stage 9",
         "lesson_group.key": "",
         "script.name": "transferring-over"
@@ -704,8 +650,6 @@
         "script_level.level_keys": [
           "20hr_farmer_stage9_8"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 8,
         "lesson.key": "20-hr Stage 9",
         "lesson_group.key": "",
         "script.name": "transferring-over"
@@ -726,8 +670,6 @@
         "script_level.level_keys": [
           "20hr_farmer_stage9_9"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 9,
         "lesson.key": "20-hr Stage 9",
         "lesson_group.key": "",
         "script.name": "transferring-over"
@@ -748,8 +690,6 @@
         "script_level.level_keys": [
           "20hr_farmer_stage9_10"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 10,
         "lesson.key": "20-hr Stage 9",
         "lesson_group.key": "",
         "script.name": "transferring-over"
@@ -770,8 +710,6 @@
         "script_level.level_keys": [
           "20hr_farmer_stage9_11"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 11,
         "lesson.key": "20-hr Stage 9",
         "lesson_group.key": "",
         "script.name": "transferring-over"
@@ -792,8 +730,6 @@
         "script_level.level_keys": [
           "course2_playlab_stage17_1"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 1,
         "lesson.key": "Course 2 Stage 17",
         "lesson_group.key": "",
         "script.name": "transferring-over"
@@ -814,8 +750,6 @@
         "script_level.level_keys": [
           "course2_playlab_stage17_2"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 2,
         "lesson.key": "Course 2 Stage 17",
         "lesson_group.key": "",
         "script.name": "transferring-over"
@@ -836,8 +770,6 @@
         "script_level.level_keys": [
           "course2_playlab_stage17_3"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 3,
         "lesson.key": "Course 2 Stage 17",
         "lesson_group.key": "",
         "script.name": "transferring-over"
@@ -858,8 +790,6 @@
         "script_level.level_keys": [
           "course2_playlab_stage17_4"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 4,
         "lesson.key": "Course 2 Stage 17",
         "lesson_group.key": "",
         "script.name": "transferring-over"
@@ -880,8 +810,6 @@
         "script_level.level_keys": [
           "course2_playlab_stage17_5"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 5,
         "lesson.key": "Course 2 Stage 17",
         "lesson_group.key": "",
         "script.name": "transferring-over"
@@ -902,8 +830,6 @@
         "script_level.level_keys": [
           "course2_playlab_stage17_6"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 6,
         "lesson.key": "Course 2 Stage 17",
         "lesson_group.key": "",
         "script.name": "transferring-over"
@@ -924,8 +850,6 @@
         "script_level.level_keys": [
           "course2_playlab_stage17_7"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 7,
         "lesson.key": "Course 2 Stage 17",
         "lesson_group.key": "",
         "script.name": "transferring-over"
@@ -946,8 +870,6 @@
         "script_level.level_keys": [
           "course2_playlab_stage17_8"
         ],
-        "script_level.chapter": 39,
-        "script_level.position": 8,
         "lesson.key": "Course 2 Stage 17",
         "lesson_group.key": "",
         "script.name": "transferring-over"
@@ -968,8 +890,6 @@
         "script_level.level_keys": [
           "course2_playlab_stage17_9"
         ],
-        "script_level.chapter": 40,
-        "script_level.position": 9,
         "lesson.key": "Course 2 Stage 17",
         "lesson_group.key": "",
         "script.name": "transferring-over"
@@ -990,8 +910,6 @@
         "script_level.level_keys": [
           "course2_playlab_stage17_10"
         ],
-        "script_level.chapter": 41,
-        "script_level.position": 10,
         "lesson.key": "Course 2 Stage 17",
         "lesson_group.key": "",
         "script.name": "transferring-over"
@@ -1012,8 +930,6 @@
         "script_level.level_keys": [
           "course2_playlab_stage17_11"
         ],
-        "script_level.chapter": 42,
-        "script_level.position": 11,
         "lesson.key": "Course 2 Stage 17",
         "lesson_group.key": "",
         "script.name": "transferring-over"
@@ -1034,8 +950,6 @@
         "script_level.level_keys": [
           "course3_playlab_stage16_1"
         ],
-        "script_level.chapter": 43,
-        "script_level.position": 1,
         "lesson.key": "Course 3 Stage 16",
         "lesson_group.key": "",
         "script.name": "transferring-over"
@@ -1056,8 +970,6 @@
         "script_level.level_keys": [
           "course3_playlab_stage16_2"
         ],
-        "script_level.chapter": 44,
-        "script_level.position": 2,
         "lesson.key": "Course 3 Stage 16",
         "lesson_group.key": "",
         "script.name": "transferring-over"
@@ -1078,8 +990,6 @@
         "script_level.level_keys": [
           "course3_playlab_stage16_3"
         ],
-        "script_level.chapter": 45,
-        "script_level.position": 3,
         "lesson.key": "Course 3 Stage 16",
         "lesson_group.key": "",
         "script.name": "transferring-over"
@@ -1100,8 +1010,6 @@
         "script_level.level_keys": [
           "course3_playlab_stage16_4"
         ],
-        "script_level.chapter": 46,
-        "script_level.position": 4,
         "lesson.key": "Course 3 Stage 16",
         "lesson_group.key": "",
         "script.name": "transferring-over"
@@ -1122,8 +1030,6 @@
         "script_level.level_keys": [
           "course3_playlab_stage16_5"
         ],
-        "script_level.chapter": 47,
-        "script_level.position": 5,
         "lesson.key": "Course 3 Stage 16",
         "lesson_group.key": "",
         "script.name": "transferring-over"
@@ -1144,8 +1050,6 @@
         "script_level.level_keys": [
           "course3_playlab_stage16_6"
         ],
-        "script_level.chapter": 48,
-        "script_level.position": 6,
         "lesson.key": "Course 3 Stage 16",
         "lesson_group.key": "",
         "script.name": "transferring-over"
@@ -1166,8 +1070,6 @@
         "script_level.level_keys": [
           "course3_playlab_stage17_1"
         ],
-        "script_level.chapter": 49,
-        "script_level.position": 1,
         "lesson.key": "Course 3 Stage 17",
         "lesson_group.key": "",
         "script.name": "transferring-over"
@@ -1188,8 +1090,6 @@
         "script_level.level_keys": [
           "course3_playlab_stage17_2"
         ],
-        "script_level.chapter": 50,
-        "script_level.position": 2,
         "lesson.key": "Course 3 Stage 17",
         "lesson_group.key": "",
         "script.name": "transferring-over"
@@ -1210,8 +1110,6 @@
         "script_level.level_keys": [
           "course3_playlab_stage17_3"
         ],
-        "script_level.chapter": 51,
-        "script_level.position": 3,
         "lesson.key": "Course 3 Stage 17",
         "lesson_group.key": "",
         "script.name": "transferring-over"
@@ -1232,8 +1130,6 @@
         "script_level.level_keys": [
           "course3_playlab_stage17_4"
         ],
-        "script_level.chapter": 52,
-        "script_level.position": 4,
         "lesson.key": "Course 3 Stage 17",
         "lesson_group.key": "",
         "script.name": "transferring-over"
@@ -1254,8 +1150,6 @@
         "script_level.level_keys": [
           "course3_playlab_stage17_5"
         ],
-        "script_level.chapter": 53,
-        "script_level.position": 5,
         "lesson.key": "Course 3 Stage 17",
         "lesson_group.key": "",
         "script.name": "transferring-over"
@@ -1276,8 +1170,6 @@
         "script_level.level_keys": [
           "course3_playlab_stage17_6"
         ],
-        "script_level.chapter": 54,
-        "script_level.position": 6,
         "lesson.key": "Course 3 Stage 17",
         "lesson_group.key": "",
         "script.name": "transferring-over"
@@ -1298,8 +1190,6 @@
         "script_level.level_keys": [
           "course3_playlab_stage17_7"
         ],
-        "script_level.chapter": 55,
-        "script_level.position": 7,
         "lesson.key": "Course 3 Stage 17",
         "lesson_group.key": "",
         "script.name": "transferring-over"
@@ -1316,8 +1206,6 @@
         "script_level.level_keys": [
           "20hr_maze_stage2_1"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "20-hr Stage 2",
         "lesson_group.key": "",
         "script.name": "transferring-over"
@@ -1329,8 +1217,6 @@
         "script_level.level_keys": [
           "20hr_maze_stage2_2"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "20-hr Stage 2",
         "lesson_group.key": "",
         "script.name": "transferring-over"
@@ -1342,8 +1228,6 @@
         "script_level.level_keys": [
           "20hr_maze_stage2_3"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "20-hr Stage 2",
         "lesson_group.key": "",
         "script.name": "transferring-over"
@@ -1355,8 +1239,6 @@
         "script_level.level_keys": [
           "20hr_maze_stage2_4"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "20-hr Stage 2",
         "lesson_group.key": "",
         "script.name": "transferring-over"
@@ -1368,8 +1250,6 @@
         "script_level.level_keys": [
           "20hr_maze_stage2_5"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 5,
         "lesson.key": "20-hr Stage 2",
         "lesson_group.key": "",
         "script.name": "transferring-over"
@@ -1381,8 +1261,6 @@
         "script_level.level_keys": [
           "20hr_maze_stage2_6"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 6,
         "lesson.key": "20-hr Stage 2",
         "lesson_group.key": "",
         "script.name": "transferring-over"
@@ -1394,8 +1272,6 @@
         "script_level.level_keys": [
           "20hr_maze_stage2_7"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 7,
         "lesson.key": "20-hr Stage 2",
         "lesson_group.key": "",
         "script.name": "transferring-over"
@@ -1407,8 +1283,6 @@
         "script_level.level_keys": [
           "20hr_maze_stage2_8"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 8,
         "lesson.key": "20-hr Stage 2",
         "lesson_group.key": "",
         "script.name": "transferring-over"
@@ -1420,8 +1294,6 @@
         "script_level.level_keys": [
           "20hr_maze_stage2_9"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 9,
         "lesson.key": "20-hr Stage 2",
         "lesson_group.key": "",
         "script.name": "transferring-over"
@@ -1433,8 +1305,6 @@
         "script_level.level_keys": [
           "20hr_maze_stage2_10"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 10,
         "lesson.key": "20-hr Stage 2",
         "lesson_group.key": "",
         "script.name": "transferring-over"
@@ -1446,8 +1316,6 @@
         "script_level.level_keys": [
           "20hr_maze_stage2_11"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 11,
         "lesson.key": "20-hr Stage 2",
         "lesson_group.key": "",
         "script.name": "transferring-over"
@@ -1459,8 +1327,6 @@
         "script_level.level_keys": [
           "20hr_maze_stage2_12"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 12,
         "lesson.key": "20-hr Stage 2",
         "lesson_group.key": "",
         "script.name": "transferring-over"
@@ -1472,8 +1338,6 @@
         "script_level.level_keys": [
           "20hr_maze_stage2_13"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 13,
         "lesson.key": "20-hr Stage 2",
         "lesson_group.key": "",
         "script.name": "transferring-over"
@@ -1485,8 +1349,6 @@
         "script_level.level_keys": [
           "20hr_maze_stage2_14"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 14,
         "lesson.key": "20-hr Stage 2",
         "lesson_group.key": "",
         "script.name": "transferring-over"
@@ -1498,8 +1360,6 @@
         "script_level.level_keys": [
           "20hr_maze_stage2_15"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 15,
         "lesson.key": "20-hr Stage 2",
         "lesson_group.key": "",
         "script.name": "transferring-over"
@@ -1511,8 +1371,6 @@
         "script_level.level_keys": [
           "20hr_maze_stage2_16"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 16,
         "lesson.key": "20-hr Stage 2",
         "lesson_group.key": "",
         "script.name": "transferring-over"
@@ -1524,8 +1382,6 @@
         "script_level.level_keys": [
           "20hr_maze_stage2_17"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 17,
         "lesson.key": "20-hr Stage 2",
         "lesson_group.key": "",
         "script.name": "transferring-over"
@@ -1537,8 +1393,6 @@
         "script_level.level_keys": [
           "20hr_maze_stage2_18"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 18,
         "lesson.key": "20-hr Stage 2",
         "lesson_group.key": "",
         "script.name": "transferring-over"
@@ -1550,8 +1404,6 @@
         "script_level.level_keys": [
           "20hr_maze_stage2_19"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 19,
         "lesson.key": "20-hr Stage 2",
         "lesson_group.key": "",
         "script.name": "transferring-over"
@@ -1563,8 +1415,6 @@
         "script_level.level_keys": [
           "20hr_maze_stage2_20"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 20,
         "lesson.key": "20-hr Stage 2",
         "lesson_group.key": "",
         "script.name": "transferring-over"
@@ -1576,8 +1426,6 @@
         "script_level.level_keys": [
           "20hr_farmer_stage9_1"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 1,
         "lesson.key": "20-hr Stage 9",
         "lesson_group.key": "",
         "script.name": "transferring-over"
@@ -1589,8 +1437,6 @@
         "script_level.level_keys": [
           "20hr_farmer_stage9_2"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 2,
         "lesson.key": "20-hr Stage 9",
         "lesson_group.key": "",
         "script.name": "transferring-over"
@@ -1602,8 +1448,6 @@
         "script_level.level_keys": [
           "20hr_farmer_stage9_3"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 3,
         "lesson.key": "20-hr Stage 9",
         "lesson_group.key": "",
         "script.name": "transferring-over"
@@ -1615,8 +1459,6 @@
         "script_level.level_keys": [
           "20hr_farmer_stage9_4"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 4,
         "lesson.key": "20-hr Stage 9",
         "lesson_group.key": "",
         "script.name": "transferring-over"
@@ -1628,8 +1470,6 @@
         "script_level.level_keys": [
           "20hr_farmer_stage9_5"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 5,
         "lesson.key": "20-hr Stage 9",
         "lesson_group.key": "",
         "script.name": "transferring-over"
@@ -1641,8 +1481,6 @@
         "script_level.level_keys": [
           "20hr_farmer_stage9_6"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 6,
         "lesson.key": "20-hr Stage 9",
         "lesson_group.key": "",
         "script.name": "transferring-over"
@@ -1654,8 +1492,6 @@
         "script_level.level_keys": [
           "20hr_farmer_stage9_7"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 7,
         "lesson.key": "20-hr Stage 9",
         "lesson_group.key": "",
         "script.name": "transferring-over"
@@ -1667,8 +1503,6 @@
         "script_level.level_keys": [
           "20hr_farmer_stage9_8"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 8,
         "lesson.key": "20-hr Stage 9",
         "lesson_group.key": "",
         "script.name": "transferring-over"
@@ -1680,8 +1514,6 @@
         "script_level.level_keys": [
           "20hr_farmer_stage9_9"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 9,
         "lesson.key": "20-hr Stage 9",
         "lesson_group.key": "",
         "script.name": "transferring-over"
@@ -1693,8 +1525,6 @@
         "script_level.level_keys": [
           "20hr_farmer_stage9_10"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 10,
         "lesson.key": "20-hr Stage 9",
         "lesson_group.key": "",
         "script.name": "transferring-over"
@@ -1706,8 +1536,6 @@
         "script_level.level_keys": [
           "20hr_farmer_stage9_11"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 11,
         "lesson.key": "20-hr Stage 9",
         "lesson_group.key": "",
         "script.name": "transferring-over"
@@ -1719,8 +1547,6 @@
         "script_level.level_keys": [
           "course2_playlab_stage17_1"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 1,
         "lesson.key": "Course 2 Stage 17",
         "lesson_group.key": "",
         "script.name": "transferring-over"
@@ -1732,8 +1558,6 @@
         "script_level.level_keys": [
           "course2_playlab_stage17_2"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 2,
         "lesson.key": "Course 2 Stage 17",
         "lesson_group.key": "",
         "script.name": "transferring-over"
@@ -1745,8 +1569,6 @@
         "script_level.level_keys": [
           "course2_playlab_stage17_3"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 3,
         "lesson.key": "Course 2 Stage 17",
         "lesson_group.key": "",
         "script.name": "transferring-over"
@@ -1758,8 +1580,6 @@
         "script_level.level_keys": [
           "course2_playlab_stage17_4"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 4,
         "lesson.key": "Course 2 Stage 17",
         "lesson_group.key": "",
         "script.name": "transferring-over"
@@ -1771,8 +1591,6 @@
         "script_level.level_keys": [
           "course2_playlab_stage17_5"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 5,
         "lesson.key": "Course 2 Stage 17",
         "lesson_group.key": "",
         "script.name": "transferring-over"
@@ -1784,8 +1602,6 @@
         "script_level.level_keys": [
           "course2_playlab_stage17_6"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 6,
         "lesson.key": "Course 2 Stage 17",
         "lesson_group.key": "",
         "script.name": "transferring-over"
@@ -1797,8 +1613,6 @@
         "script_level.level_keys": [
           "course2_playlab_stage17_7"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 7,
         "lesson.key": "Course 2 Stage 17",
         "lesson_group.key": "",
         "script.name": "transferring-over"
@@ -1810,8 +1624,6 @@
         "script_level.level_keys": [
           "course2_playlab_stage17_8"
         ],
-        "script_level.chapter": 39,
-        "script_level.position": 8,
         "lesson.key": "Course 2 Stage 17",
         "lesson_group.key": "",
         "script.name": "transferring-over"
@@ -1823,8 +1635,6 @@
         "script_level.level_keys": [
           "course2_playlab_stage17_9"
         ],
-        "script_level.chapter": 40,
-        "script_level.position": 9,
         "lesson.key": "Course 2 Stage 17",
         "lesson_group.key": "",
         "script.name": "transferring-over"
@@ -1836,8 +1646,6 @@
         "script_level.level_keys": [
           "course2_playlab_stage17_10"
         ],
-        "script_level.chapter": 41,
-        "script_level.position": 10,
         "lesson.key": "Course 2 Stage 17",
         "lesson_group.key": "",
         "script.name": "transferring-over"
@@ -1849,8 +1657,6 @@
         "script_level.level_keys": [
           "course2_playlab_stage17_11"
         ],
-        "script_level.chapter": 42,
-        "script_level.position": 11,
         "lesson.key": "Course 2 Stage 17",
         "lesson_group.key": "",
         "script.name": "transferring-over"
@@ -1862,8 +1668,6 @@
         "script_level.level_keys": [
           "course3_playlab_stage16_1"
         ],
-        "script_level.chapter": 43,
-        "script_level.position": 1,
         "lesson.key": "Course 3 Stage 16",
         "lesson_group.key": "",
         "script.name": "transferring-over"
@@ -1875,8 +1679,6 @@
         "script_level.level_keys": [
           "course3_playlab_stage16_2"
         ],
-        "script_level.chapter": 44,
-        "script_level.position": 2,
         "lesson.key": "Course 3 Stage 16",
         "lesson_group.key": "",
         "script.name": "transferring-over"
@@ -1888,8 +1690,6 @@
         "script_level.level_keys": [
           "course3_playlab_stage16_3"
         ],
-        "script_level.chapter": 45,
-        "script_level.position": 3,
         "lesson.key": "Course 3 Stage 16",
         "lesson_group.key": "",
         "script.name": "transferring-over"
@@ -1901,8 +1701,6 @@
         "script_level.level_keys": [
           "course3_playlab_stage16_4"
         ],
-        "script_level.chapter": 46,
-        "script_level.position": 4,
         "lesson.key": "Course 3 Stage 16",
         "lesson_group.key": "",
         "script.name": "transferring-over"
@@ -1914,8 +1712,6 @@
         "script_level.level_keys": [
           "course3_playlab_stage16_5"
         ],
-        "script_level.chapter": 47,
-        "script_level.position": 5,
         "lesson.key": "Course 3 Stage 16",
         "lesson_group.key": "",
         "script.name": "transferring-over"
@@ -1927,8 +1723,6 @@
         "script_level.level_keys": [
           "course3_playlab_stage16_6"
         ],
-        "script_level.chapter": 48,
-        "script_level.position": 6,
         "lesson.key": "Course 3 Stage 16",
         "lesson_group.key": "",
         "script.name": "transferring-over"
@@ -1940,8 +1734,6 @@
         "script_level.level_keys": [
           "course3_playlab_stage17_1"
         ],
-        "script_level.chapter": 49,
-        "script_level.position": 1,
         "lesson.key": "Course 3 Stage 17",
         "lesson_group.key": "",
         "script.name": "transferring-over"
@@ -1953,8 +1745,6 @@
         "script_level.level_keys": [
           "course3_playlab_stage17_2"
         ],
-        "script_level.chapter": 50,
-        "script_level.position": 2,
         "lesson.key": "Course 3 Stage 17",
         "lesson_group.key": "",
         "script.name": "transferring-over"
@@ -1966,8 +1756,6 @@
         "script_level.level_keys": [
           "course3_playlab_stage17_3"
         ],
-        "script_level.chapter": 51,
-        "script_level.position": 3,
         "lesson.key": "Course 3 Stage 17",
         "lesson_group.key": "",
         "script.name": "transferring-over"
@@ -1979,8 +1767,6 @@
         "script_level.level_keys": [
           "course3_playlab_stage17_4"
         ],
-        "script_level.chapter": 52,
-        "script_level.position": 4,
         "lesson.key": "Course 3 Stage 17",
         "lesson_group.key": "",
         "script.name": "transferring-over"
@@ -1992,8 +1778,6 @@
         "script_level.level_keys": [
           "course3_playlab_stage17_5"
         ],
-        "script_level.chapter": 53,
-        "script_level.position": 5,
         "lesson.key": "Course 3 Stage 17",
         "lesson_group.key": "",
         "script.name": "transferring-over"
@@ -2005,8 +1789,6 @@
         "script_level.level_keys": [
           "course3_playlab_stage17_6"
         ],
-        "script_level.chapter": 54,
-        "script_level.position": 6,
         "lesson.key": "Course 3 Stage 17",
         "lesson_group.key": "",
         "script.name": "transferring-over"
@@ -2018,8 +1800,6 @@
         "script_level.level_keys": [
           "course3_playlab_stage17_7"
         ],
-        "script_level.chapter": 55,
-        "script_level.position": 7,
         "lesson.key": "Course 3 Stage 17",
         "lesson_group.key": "",
         "script.name": "transferring-over"
