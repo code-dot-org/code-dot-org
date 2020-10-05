@@ -240,6 +240,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
     if (can_disconnect_from_parent) {
       block.canDisconnectFromParent_ = can_disconnect_from_parent === 'true';
     }
+    return block;
   };
 
   blocklyWrapper.Xml.fieldToDom_ = function(field) {
