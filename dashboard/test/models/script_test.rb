@@ -185,6 +185,7 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal 1, first.absolute_position
     assert_equal 2, second.absolute_position
     assert_equal 3, third.absolute_position
+    original_script_level_ids = script.script_levels.map(&:id)
 
     # Reupload a script of the same filename / name, but lacking the middle lesson.
     script_names, _ = Script.setup([script_file_middle_missing_reversed])
@@ -198,6 +199,10 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal 2, second.absolute_position
     assert_equal 'lesson3', first.name
     assert_equal 'lesson1', second.name
+    # One Lesson / ScriptLevel removed, the rest reordered
+    expected_script_level_ids = [original_script_level_ids[3], original_script_level_ids[4],
+                                 original_script_level_ids[0], original_script_level_ids[1]]
+    assert_equal expected_script_level_ids, script.script_levels.map(&:id)
   end
 
   test 'all fields can be set and then removed on reseed' do
@@ -301,6 +306,10 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal 1, first.position
     assert_equal 2, second.position
     assert_equal 3, third.position
+    original_seed_keys = script.script_levels.map(&:seed_key).compact
+    assert_equal 5, original_seed_keys.length
+    original_script_level_ids = script.script_levels.map(&:id)
+
     script_names, _ = Script.setup([@script_file])
     script = Script.find_by!(name: script_names.first)
     first = script.lessons[0].script_levels[0]
@@ -310,6 +319,8 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal 2, second.position
     assert_equal 3, third.position
     assert_equal original_count, ScriptLevel.count
+    assert_equal original_seed_keys, script.script_levels.map(&:seed_key)
+    assert_equal original_script_level_ids, script.script_levels.map(&:id)
   end
 
   test 'unplugged in script' do
@@ -1384,6 +1395,7 @@ class ScriptTest < ActiveSupport::TestCase
       ScriptDSL.parse(old_dsl, 'a filename')[0][:lesson_groups]
     )
     assert script.script_levels.first.challenge
+    original_script_level_id = script.script_levels.first.id
 
     script = Script.add_script(
       {name: 'challengeTestScript'},
@@ -1391,6 +1403,7 @@ class ScriptTest < ActiveSupport::TestCase
     )
 
     refute script.script_levels.first.challenge
+    assert_equal original_script_level_id, script.script_levels.first.id
   end
 
   test 'can make a bonus level not a bonus level' do
@@ -1408,6 +1421,7 @@ class ScriptTest < ActiveSupport::TestCase
       ScriptDSL.parse(old_dsl, 'a filename')[0][:lesson_groups]
     )
     assert script.script_levels.first.bonus
+    original_script_level_id = script.script_levels.first.id
 
     script = Script.add_script(
       {name: 'challengeTestScript'},
@@ -1415,6 +1429,7 @@ class ScriptTest < ActiveSupport::TestCase
     )
 
     refute script.script_levels.first.bonus
+    assert_equal original_script_level_id, script.script_levels.first.id
   end
 
   test 'can unset the project_widget_visible attribute' do
@@ -2598,6 +2613,24 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal script.lesson_groups[0].lessons[1].absolute_position, 2
     assert_equal script.lesson_groups[1].lessons[0], script.lessons[2]
     assert_equal script.lesson_groups[1].lessons[0].absolute_position, 3
+  end
+
+  test 'level can only be added once to a lesson' do
+    level = create :level
+    dsl = <<~SCRIPT
+      lesson 'lesson1', display_name: 'lesson1'
+      level '#{level.name}'
+      level '#{level.name}'
+    SCRIPT
+
+    error = assert_raises do
+      Script.add_script(
+        {name: 'level-included-multiple-times'},
+        ScriptDSL.parse(dsl, 'a filename')[0][:lesson_groups]
+      )
+    end
+    assert error.message.include? 'Duplicate entry'
+    assert error.message.include? "for key 'index_script_levels_on_seed_key'"
   end
 
   test 'seeding_key' do
