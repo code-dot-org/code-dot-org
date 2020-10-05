@@ -305,9 +305,9 @@ P5Lab.prototype.init = function(config) {
     }.bind(this)
   };
 
-  // Display CSF-style instructions when using Blockly. Otherwise provide a way
-  // for us to have top pane instructions disabled by default, but able to turn
-  // them on.
+  // Display CSF-style instructions when using Blockly (unless there are no
+  // instructions to display). Otherwise provide a way for us to have top pane
+  // instructions disabled by default, but able to turn them on.
   config.noInstructionsWhenCollapsed =
     !this.isSpritelab ||
     (this.isSpritelab &&
