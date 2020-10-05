@@ -28,3 +28,14 @@
     #gmap
 .row
   #volunteer-search-error.col-xs-12.display-none.top-margin
+
+%link{rel: "stylesheet", href: "https://api.tiles.mapbox.com/mapbox-gl-js/v1.1.1/mapbox-gl.css"}
+%script{type: "text/javascript", src: "https://api.tiles.mapbox.com/mapbox-gl-js/v1.1.1/mapbox-gl.js"}
+:javascript
+  mapboxgl.accessToken = "#{CDO.mapbox_access_token}";
+
+.row
+  .col-xs-5
+    &nbsp;
+  .col-xs-7
+    #mapbox{style: "width: 553px; height: 400px"}
