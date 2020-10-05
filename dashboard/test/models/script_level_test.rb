@@ -667,8 +667,6 @@ class ScriptLevelTest < ActiveSupport::TestCase
 
     expected = {
       "script_level.level_keys" => [script_level.levels.first.key],
-      "script_level.chapter" => 1,
-      "script_level.position" => 1,
       "lesson.key" => script_level.lesson.key,
       "lesson_group.key" => script_level.lesson.lesson_group.key,
       "script.name" => script.name
@@ -726,8 +724,6 @@ class ScriptLevelTest < ActiveSupport::TestCase
     expected = {
       "level.key" => lsl.level.key,
       "script_level.level_keys" => [lsl.level.key],
-      "script_level.chapter" => 1,
-      "script_level.position" => 1,
       "lesson.key" => script_level.lesson.key,
       "lesson_group.key" => script_level.lesson.lesson_group.key,
       "script.name" => script.name
