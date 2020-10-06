@@ -246,7 +246,7 @@ class LessonGroupCard extends Component {
   handleChangeBigQuestions = event => {
     this.props.updateLessonGroupField(
       this.props.lessonGroup.position,
-      'big_questions',
+      'bigQuestions',
       event.target.value
     );
   };
@@ -272,11 +272,11 @@ class LessonGroupCard extends Component {
         }
       >
         <div style={styles.lessonGroupCardHeader}>
-          {lessonGroup.user_facing && (
+          {lessonGroup.userFacing && (
             <span>
               <span style={styles.title}>Lesson Group Name:</span>
               <input
-                value={this.props.lessonGroup.display_name}
+                value={this.props.lessonGroup.displayName}
                 onChange={this.handleChangeLessonGroupName}
                 style={{width: 300}}
               />
@@ -288,7 +288,7 @@ class LessonGroupCard extends Component {
             remove={this.handleRemoveLessonGroup}
           />
         </div>
-        {lessonGroup.user_facing && (
+        {lessonGroup.userFacing && (
           <div>
             <label>
               Description
@@ -306,9 +306,9 @@ class LessonGroupCard extends Component {
             <label>
               Big Questions
               <textarea
-                value={this.props.lessonGroup.big_questions}
+                value={this.props.lessonGroup.bigQuestions}
                 rows={Math.max(
-                  this.props.lessonGroup.big_questions.split(/\r\n|\r|\n/)
+                  this.props.lessonGroup.bigQuestions.split(/\r\n|\r|\n/)
                     .length + 1,
                   2
                 )}

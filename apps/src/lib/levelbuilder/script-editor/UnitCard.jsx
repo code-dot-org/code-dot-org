@@ -77,9 +77,9 @@ class UnitCard extends Component {
   serializeLessonGroups = lessonGroups => {
     let s = [];
     lessonGroups.forEach(lessonGroup => {
-      if (lessonGroup.user_facing && lessonGroup.lessons.length > 0) {
+      if (lessonGroup.userFacing && lessonGroup.lessons.length > 0) {
         let t = `lesson_group '${lessonGroup.key}'`;
-        t += `, display_name: '${escape(lessonGroup.display_name)}'`;
+        t += `, display_name: '${escape(lessonGroup.displayName)}'`;
         s.push(t);
       }
       lessonGroup.lessons.forEach(lesson => {
@@ -169,7 +169,7 @@ class UnitCard extends Component {
             />
           ))}
           <div style={styles.addGroupWithWarning}>
-            {this.props.lessonGroups[0].user_facing && (
+            {this.props.lessonGroups[0].userFacing && (
               <button
                 onMouseDown={this.handleAddLessonGroup}
                 className="btn"
@@ -180,7 +180,7 @@ class UnitCard extends Component {
                 Add Lesson Group
               </button>
             )}
-            {!this.props.lessonGroups[0].user_facing && (
+            {!this.props.lessonGroups[0].userFacing && (
               <button
                 onMouseDown={this.handleMakeUserFacing}
                 className="btn"

@@ -130,10 +130,10 @@ function lessonGroups(state = [], action) {
     case ADD_GROUP: {
       newState.push({
         key: action.groupKey,
-        display_name: action.groupName,
-        user_facing: true,
+        displayName: action.groupName,
+        userFacing: true,
         position: action.groupPosition,
-        big_questions: '',
+        bigQuestions: '',
         description: '',
         lessons: []
       });
@@ -153,7 +153,7 @@ function lessonGroups(state = [], action) {
     case REMOVE_GROUP: {
       newState.splice(action.groupPosition - 1, 1);
       if (newState.length === 0) {
-        newState.push(empty_non_user_facing_group);
+        newState.push(emptyNonUserFacingGroup);
       }
       updateLessonPositions(newState);
       break;
@@ -228,8 +228,8 @@ function lessonGroups(state = [], action) {
     }
     case CONVERT_GROUP: {
       newState[action.groupPosition - 1].key = action.key;
-      newState[action.groupPosition - 1].display_name = action.displayName;
-      newState[action.groupPosition - 1].user_facing = true;
+      newState[action.groupPosition - 1].displayName = action.displayName;
+      newState[action.groupPosition - 1].userFacing = true;
       break;
     }
     case REORDER_LESSON: {
@@ -262,12 +262,12 @@ export default {
   lessonGroups
 };
 
-export const empty_non_user_facing_group = {
+export const emptyNonUserFacingGroup = {
   key: `non-user-facing-lg`,
-  display_name: null,
-  user_facing: false,
+  displayName: null,
+  userFacing: false,
   position: 1,
-  big_questions: '',
+  bigQuestions: '',
   description: '',
   lessons: []
 };
