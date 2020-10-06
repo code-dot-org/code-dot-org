@@ -17,9 +17,9 @@ describe('UnitCard', () => {
       lessonGroups: [
         {
           key: 'lg-key',
-          display_name: 'Display Name',
+          displayName: 'Display Name',
           position: 1,
-          user_facing: true,
+          userFacing: true,
           lessons: [
             {
               id: 100,
@@ -37,9 +37,9 @@ describe('UnitCard', () => {
         },
         {
           key: 'lg-key-2',
-          display_name: 'Display Name 2',
+          displayName: 'Display Name 2',
           position: 2,
-          user_facing: true,
+          userFacing: true,
           lessons: [
             {
               id: 100,

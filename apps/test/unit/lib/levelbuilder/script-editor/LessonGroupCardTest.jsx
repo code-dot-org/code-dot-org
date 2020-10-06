@@ -6,11 +6,11 @@ import sinon from 'sinon';
 
 export const nonUserFacingGroup = {
   key: 'lg-key',
-  display_name: null,
+  displayName: null,
   position: 1,
-  user_facing: false,
+  userFacing: false,
   description: '',
-  big_questions: '',
+  bigQuestions: '',
   lessons: [
     {
       id: 100,
@@ -64,11 +64,11 @@ describe('LessonGroupCard', () => {
       targetLessonGroupPos: null,
       lessonGroup: {
         key: 'lg-key',
-        display_name: 'Display Name',
+        displayName: 'Display Name',
         position: 1,
-        user_facing: true,
+        userFacing: true,
         description: 'Lesson group description',
-        big_questions: 'Big questions',
+        bigQuestions: 'Big questions',
         lessons: [
           {
             id: 100,
@@ -163,7 +163,7 @@ describe('LessonGroupCard', () => {
     textArea.simulate('change', {target: {value: 'New Big Questions'}});
     expect(updateLessonGroupField).to.have.been.calledWith(
       1,
-      'big_questions',
+      'bigQuestions',
       'New Big Questions'
     );
   });
