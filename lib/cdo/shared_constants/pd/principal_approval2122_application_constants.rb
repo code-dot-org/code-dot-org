@@ -8,7 +8,7 @@ module Pd
       title: 'Principal Title',
       email: 'Principal Email Address',
       total_student_enrollment: 'Total student enrollment',
-      free_lunch_percent: 'Percentage of students who are eligible to receive free or reduced lunch',
+      free_lunch_percent: 'Percent of students who are eligible to receive free or reduced lunch',
       white: 'White',
       black: 'Black or African American',
       hispanic: 'Hispanic or Latino',

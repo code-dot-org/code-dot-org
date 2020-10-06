@@ -600,6 +600,16 @@ class Level < ActiveRecord::Base
     }
   end
 
+  def summarize_for_edit
+    {
+      id: id,
+      type: self.class.to_s,
+      name: name,
+      updated_at: updated_at.localtime.strftime("%D at %r"),
+      owner: user&.name
+    }
+  end
+
   def summary_for_lesson_plans
     summary = summarize
 

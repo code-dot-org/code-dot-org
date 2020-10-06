@@ -479,19 +479,19 @@ state-facts: true
       %div.policy-item
         - if state_info[:state_plan_s] == 'Yes'
           %div
-            %i.fa.fa-check-square-o
+            %i.fa.fa-check-square
             %b State Plan - 
             = state_info[:state_plan_t]
         - elsif state_info[:state_plan_s] == 'No'
           %div
-            %i.fa.fa-square-o
+            %i.fa.fa-check-square
             %b State Plan -
             = state_info[:state_name_s]
             %b has not
             yet created a state plan for K-12 computer science. A plan that articulates the goals for computer science, strategies for accomplishing the goals, and timelines for carrying out the strategies is important for making computer science a fundamental part of a state’s education system.
         - elsif state_info[:state_plan_s] == 'Other'
           %div
-            %i.fa.fa-square-o
+            %i.fa.fa-check-square
             %b State Plan - 
             = state_info[:state_plan_t]
 
