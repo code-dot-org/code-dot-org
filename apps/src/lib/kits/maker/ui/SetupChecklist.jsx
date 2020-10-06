@@ -337,7 +337,8 @@ export default class SetupChecklist extends Component {
             {this.contactSupport()}
           </ValidationStep>
           {experiments.isEnabled('flash-classic') &&
-            this.state.boardTypeDetected !== BOARD_TYPE.OTHER && (
+            (this.state.boardTypeDetected === BOARD_TYPE.CLASSIC ||
+              this.state.boardTypeDetected === BOARD_TYPE.EXPRESS) && (
               <ValidationStep
                 stepStatus={this.state[STATUS_BOARD_FIRMWARE]}
                 stepName={i18n.validationStepBoardFirmware()}
