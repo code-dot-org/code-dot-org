@@ -74,10 +74,10 @@ export default class StudentSelector extends React.Component {
     const exceededMaximum = selectedStudentIds.length >= 4;
 
     const studentBtns = students.map(student => {
-      let className = 'selected';
+      let className = 'student selected';
       let disabled = false;
       if (selectedStudentIds.indexOf(student.id) === -1) {
-        className = 'selectable';
+        className = 'student selectable';
         disabled = exceededMaximum;
       }
       let buttonStyle = styles.enabled;
@@ -85,7 +85,7 @@ export default class StudentSelector extends React.Component {
       //Adjust styles for disabled and selected buttons
       if (disabled) {
         buttonStyle = {...buttonStyle, ...styles.disabled};
-      } else if (className === 'selected') {
+      } else if (className.includes('selected')) {
         buttonStyle = {...buttonStyle, ...styles.selected};
       }
 
