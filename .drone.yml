@@ -183,6 +183,6 @@ trigger:
   - pull_request
 ---
 kind: signature
-hmac: b7621086539d5bc60d621e507bab706cad6f36fdd859d8b1d1b18d9670dbe5c6
+hmac: 9a6c116088e71ecaa8d68ed2bb5108763bb6dd1f45aa8568fb13df8616dd9495
 
 ...
