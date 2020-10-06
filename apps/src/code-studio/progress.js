@@ -26,6 +26,7 @@ import {
 } from './progressRedux';
 import {setVerified} from '@cdo/apps/code-studio/verifiedTeacherRedux';
 import {
+  selectSection,
   setSections,
   setPageType,
   pageTypes
@@ -348,6 +349,9 @@ function initializeStoreWithSections(store, scriptData) {
       };
     }
 
+    store.dispatch(setSections(sections));
+    store.dispatch(selectSection(currentSection.id.toString()));
+
     // If our current section is a google classroom and teacher is conntected
     // to google, load the google classroom share button api.
     if (
@@ -358,6 +362,7 @@ function initializeStoreWithSections(store, scriptData) {
       registerReducers({googlePlatformApi});
       store.dispatch(loadGooglePlatformApi()).catch(e => console.warn(e));
     }
+  } else {
+    store.dispatch(setSections(sections));
   }
-  store.dispatch(setSections(sections));
 }
