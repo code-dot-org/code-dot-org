@@ -142,7 +142,6 @@ class ProgressLessonTeacherInfo extends React.Component {
             style={{...styles.buttonContainer, ...styles.googleButtonMargin}}
           >
             <GoogleClassroomShareButton
-              buttonId={`gc-button-${lesson.id}`}
               url={levelUrl}
               title={lesson.name}
               courseid={courseId}
