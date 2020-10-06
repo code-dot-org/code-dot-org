@@ -1,0 +1,4 @@
+lesson_group 'csf_data', display_name: 'Virus Simulation for Code Bytes'
+lesson 'Virus Simulation for Code Bytes', display_name: 'Virus Simulation for Code Bytes'
+level 'Virus Simulation for Code Bytes', progression: 'Virus Simulation for Code Bytes'
+
