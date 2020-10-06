@@ -72,7 +72,18 @@
 
 :css
   .mapboxgl-ctrl {
-    width: 100% !important;
+    width: 100%;
+    z-index: 2;
+  }
+
+  .mapboxgl-ctrl ul li {
+    padding-left: 0;
+    text-indent: 0;
+  }
+
+  .mapboxgl-ctrl ul li:before {
+    content: none;
+    color: #00a1e6;
   }
 
 :javascript
