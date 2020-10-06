@@ -1,10 +1,13 @@
 /* global Maplace, mapboxgl */
 
+import React from 'react';
+import ReactDOM from 'react-dom';
 import $ from 'jquery';
 import {getLocations} from '@cdo/apps/lib/ui/classroomMap';
+import logToCloud from '@cdo/apps/logToCloud';
 
-var gmap;
-var gmap_loc;
+var map;
+var map_loc;
 var selectize;
 
 // This is for older browsers that don't support remove.
@@ -28,12 +31,12 @@ $(function() {
     .geocomplete()
     .bind('geocode:result', function(event, result) {
       var loc = result.geometry.location;
-      gmap_loc = loc.lat() + ',' + loc.lng();
+      map_loc = loc.lat() + ',' + loc.lng();
       submitForm();
     });
 
   // Make the map sticky.
-  $('#gmap').sticky({topSpacing: 0});
+  $('#map').sticky({topSpacing: 0});
 
   // Trigger query when a facet is changed.
   $('#class-search-facets')
@@ -50,7 +53,7 @@ function submitForm() {
   $('#location-details').html('');
 
   // If we still don't have coordinates, display an error.
-  if (!gmap_loc) {
+  if (!map_loc) {
     displayQueryError();
     return;
   }
@@ -64,7 +67,7 @@ function getParams(form_data) {
 
   params.push({
     name: 'coordinates',
-    value: gmap_loc
+    value: map_loc
   });
 
   $.each(form_data, function(key, field) {
@@ -121,12 +124,12 @@ function displayQueryError() {
 }
 
 function loadMap(locations) {
-  var coordinates = gmap_loc.split(',');
+  var coordinates = map_loc.split(',');
   var lat = coordinates[0];
   var lng = coordinates[1];
 
   // Reset the map.
-  $('#gmap').html('');
+  $('#map').html('');
   if (window.location.search.includes('mapbox')) {
     const featureList = locations.map((location, index) => ({
       type: 'Feature',
@@ -140,23 +143,28 @@ function loadMap(locations) {
         coordinates: [parseFloat(location.lon), parseFloat(location.lat)]
       }
     }));
-    gmap = new mapboxgl.Map({
-      container: 'gmap',
+    map = new mapboxgl.Map({
+      container: 'map',
       style: 'mapbox://styles/mapbox/streets-v11',
       zoom: 10,
       minZoom: 1,
       center: [lng, lat]
     });
-    gmap.on('load', function() {
-      gmap.loadImage(
+    map.on('load', function() {
+      map.loadImage(
         'https://docs.mapbox.com/mapbox-gl-js/assets/custom_marker.png',
         function(error, image) {
-          // do stuff
           if (error) {
+            logToCloud.addPageAction(
+              logToCloud.PageAction.MapboxMarkerLoadError,
+              {
+                error
+              }
+            );
             throw error;
           }
-          gmap.addImage('custom-marker', image);
-          gmap.addSource('places', {
+          map.addImage('custom-marker', image);
+          map.addSource('places', {
             type: 'geojson',
             data: {
               type: 'FeatureCollection',
@@ -164,7 +172,7 @@ function loadMap(locations) {
             }
           });
           // Add a layer showing the places.
-          gmap.addLayer({
+          map.addLayer({
             id: 'places',
             type: 'symbol',
             source: 'places',
@@ -176,7 +184,7 @@ function loadMap(locations) {
 
           // When a click event occurs on a feature in the places layer, open a popup at the
           // location of the feature, with description HTML from its properties.
-          gmap.on('click', 'places', function(e) {
+          map.on('click', 'places', function(e) {
             var coordinates = e.features[0].geometry.coordinates.slice();
 
             // Ensure that if the map is zoomed out such that multiple
@@ -196,72 +204,89 @@ function loadMap(locations) {
           });
 
           // Change the cursor to a pointer when the mouse is over the places layer.
-          gmap.on('mouseenter', 'places', function() {
-            gmap.getCanvas().style.cursor = 'pointer';
+          map.on('mouseenter', 'places', function() {
+            map.getCanvas().style.cursor = 'pointer';
           });
 
           // Change it back to a pointer when it leaves.
-          gmap.on('mouseleave', 'places', function() {
-            gmap.getCanvas().style.cursor = '';
+          map.on('mouseleave', 'places', function() {
+            map.getCanvas().style.cursor = '';
           });
         }
       );
     });
     if (featureList.length > 0) {
-      const linkStyle =
-        'color: rgb(102, 102, 102); display: block; padding: 5px; font-size: inherit; text-decoration: none; cursor: pointer;';
-      var controlList = document.createElement('ul');
-      controlList.classList.add('ullist');
-      controlList.classList.add('controls');
-      controlList.style = 'margin: 0px; padding: 0px; list-style-type: none;';
-      var viewAll = document.createElement('li');
-      viewAll.classList.add('active');
-      var viewAllLink = document.createElement('a');
-      viewAllLink.setAttribute('data-load', 'all');
-      viewAllLink.id = 'ullist_a_all';
-      viewAllLink.style = linkStyle;
-      viewAllLink.addEventListener('click', function(e) {
-        var activeItem = document.querySelector('li.active');
-        if (activeItem) {
-          activeItem.classList.remove('active');
-        }
-        viewAll.classList.add('active');
-        clearPopUp();
-        gmap.flyTo({
-          center: [lng, lat],
-          zoom: 10
-        });
-      });
-      var titleSpan = document.createElement('span');
-      titleSpan.innerHTML = 'View All';
-      viewAllLink.append(titleSpan);
-      viewAll.append(viewAllLink);
-      controlList.append(viewAll);
+      const linkStyle = {
+        color: 'rgb(102, 102, 102)',
+        display: 'block',
+        padding: '5px',
+        fontSize: 'inherit',
+        textDecoration: 'none',
+        cursor: 'pointer'
+      };
+      var allFeatures = [];
       featureList.forEach((feature, index) => {
-        var listItem = document.createElement('li');
-        listItem.id = `control-${index}`;
-        var link = document.createElement('a');
-        link.style = linkStyle;
-        var titleSpan = document.createElement('span');
-        titleSpan.innerHTML = feature.properties.title;
-        link.append(titleSpan);
-        listItem.append(link);
-        controlList.append(listItem);
-        link.addEventListener('click', function(e) {
-          flyToStore(feature);
-          createPopUp(feature);
+        allFeatures.push(
+          <li id={`control-${index}`} key={`control-${index}`}>
+            <a
+              style={linkStyle}
+              onClick={event => {
+                flyToStore(feature);
+                createPopUp(feature);
 
-          var activeItem = document.querySelector('li.active');
-          if (activeItem) {
-            activeItem.classList.remove('active');
-          }
-          listItem.classList.add('active');
-        });
+                var activeItem = document.querySelector('li.active');
+                if (activeItem) {
+                  activeItem.classList.remove('active');
+                }
+                $(event.target)
+                  .closest('li')
+                  .addClass('active');
+              }}
+            >
+              <span
+                // necessary to translate the character references in the title to the actual characters
+                // eslint-disable-next-line react/no-danger
+                dangerouslySetInnerHTML={{__html: feature.properties.title}}
+              />
+            </a>
+          </li>
+        );
       });
-      $('#controls').html(controlList);
+      const container = document.getElementById('controls');
+      ReactDOM.render(
+        <ul
+          className="ullist controls"
+          style={{margin: '0px', padding: '0px', listStyleType: 'none'}}
+        >
+          <li className="active">
+            <a
+              id="ullist_a_all"
+              style={linkStyle}
+              onClick={event => {
+                var activeItem = document.querySelector('li.active');
+                if (activeItem) {
+                  activeItem.classList.remove('active');
+                }
+                $(event.target)
+                  .closest('li')
+                  .addClass('active');
+                clearPopUp();
+                map.flyTo({
+                  center: [lng, lat],
+                  zoom: 10
+                });
+              }}
+            >
+              <span>View All</span>
+            </a>
+          </li>
+          {allFeatures}
+        </ul>,
+        container
+      );
     }
   } else {
-    gmap = new Maplace();
+    map = new Maplace();
 
     var map_options = {
       map_options: {
@@ -269,7 +294,8 @@ function loadMap(locations) {
         zoom: 12
       },
       controls_type: 'list',
-      controls_on_map: false
+      controls_on_map: false,
+      map_div: '#map'
     };
 
     if (locations.length > 0) {
@@ -280,19 +306,19 @@ function loadMap(locations) {
       };
     }
 
-    gmap.Load(map_options);
+    map.Load(map_options);
   }
 }
 
 function setDetailsTrigger() {
   var details_trigger = '.location-details-trigger';
-  $('#gmap').on('click', details_trigger, function() {
+  $('#map').on('click', details_trigger, function() {
     $(details_trigger).colorbox({inline: true, width: '50%', open: true});
   });
 }
 
 function flyToStore(currentFeature) {
-  gmap.flyTo({
+  map.flyTo({
     center: currentFeature.geometry.coordinates,
     zoom: 15
   });
@@ -303,7 +329,7 @@ function createPopUp(currentFeature) {
   new mapboxgl.Popup()
     .setLngLat(currentFeature.geometry.coordinates)
     .setHTML(currentFeature.properties.description)
-    .addTo(gmap);
+    .addTo(map);
   setDetailsTrigger();
 }
 
