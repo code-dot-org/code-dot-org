@@ -101,6 +101,23 @@ social:
 %br/
 
 .container
+  -# HoC Live Spanish banner
+  - if @language == 'es' || @language == 'la'
+    #hoclivebanner.row
+      %div.banner-box
+        %div.banner-image-box
+          %img.banner-image{src: '/images/hora-del-codigo-en-vivo.png', alt: hoc_s(:hoc_live)}
+        %div.banner-message-box
+          %div.banner-title
+            = hoc_s(:hoc_live_sign_up_title)
+          %div.banner-message
+            = hoc_s(:hoc_live_sign_up_message)
+          %a#signuplivebutton.ctabuttonatag{href: 'http://go.pardot.com/l/153401/2020-09-30/nwvb6j', target: '_blank'}
+            %button.ctabutton-white
+              = hoc_s(:hoc_live_join_us)
+
+    %br/
+    %br/
 
   -# Description
 

@@ -96,6 +96,52 @@ a.category-link {
   margin-right: 10px;
 }
 
+.banner-box {
+  width: 100%;
+  height: fit-content;
+  max-height: 400px;
+}
+
+.banner-image-box {
+  float: left;
+  width: 50%;
+  height: auto;
+  background-color: #e0ffff;
+  align-items: center;
+  padding: 20px;
+}
+
+.banner-image {
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  max-width: 300px;
+  display: block;
+  margin: auto;
+}
+
+.banner-message-box {
+  float: left;
+  width: 50%;
+  height: 100%;
+  background-color: #00adbc;
+  padding: 30px;
+}
+
+.banner-title {
+  font-family: 'Gotham 7r', sans-serif;
+  font-size: 27px;
+  color: white;
+  line-height: 1.2;
+  padding-bottom: 20px;
+}
+
+.banner-message {
+  font-size: 20px;
+  color: white;
+  padding-bottom: 20px;
+}
+
 @media screen and (min-width: 0px) and (max-width: 600px) {
   .announcements-body {
     min-width: 100%;
