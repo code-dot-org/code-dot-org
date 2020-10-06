@@ -31,7 +31,7 @@ module Geocoder
     results = Geocoder.search(first_number_to_end)
     return nil if results.empty?
 
-    if results.first.types.include?('street_address')
+    if results.first.address
       return first_number_to_end
     end
     nil
@@ -79,17 +79,10 @@ def geocoder_config
     units: :km,
   }.tap do |config|
     config[:cache] = Redis.connect(url: CDO.geocoder_redis_url) if CDO.geocoder_redis_url
-    # Temporarily use a Google Maps Project that uses a new Billing Account while we resolve issues
-    # with our existing Billing Account.
-    if CDO.google_maps_api_key
-      config[:lookup] = :google
+    if CDO.mapbox_access_token
+      config[:lookup] = :mapbox
       config[:use_https] = true
-      config[:api_key] = CDO.google_maps_api_key
-    # Normal execution path - use our Google Premium Maps Project
-    elsif CDO.google_maps_client_id && CDO.google_maps_secret
-      config[:use_https] = true
-      config[:lookup] = :google_premier
-      config[:api_key] = [CDO.google_maps_secret, CDO.google_maps_client_id, 'pegasus']
+      config[:api_key] = CDO.mapbox_access_token
     end
     config[:freegeoip] = {host: CDO.freegeoip_host} if CDO.freegeoip_host
   end
