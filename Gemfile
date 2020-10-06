@@ -137,6 +137,10 @@ gem 'unicorn', '~> 5.1.0'
 gem 'chronic', '~> 0.10.2'
 
 gem 'sass-rails', '~> 6.0.0'
+# Temporarily use our own fork of sassc-rails (a dependency of sass-rails),
+# while we try to get some bugs fixed upstream.
+# See https://github.com/sass/sassc-rails/pull/153 for context.
+gem 'sassc-rails', github: 'code-dot-org/sassc-rails', ref: 'frozen-array-fix'
 
 # Use Uglifier as compressor for JavaScript assets.
 gem 'uglifier', '>= 1.3.0'
