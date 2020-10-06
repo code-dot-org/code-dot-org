@@ -10,7 +10,7 @@ git_source(:github) do |repo_name|
 end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.0.7.2'
+gem 'rails', '~> 5.2'
 gem 'rails-controller-testing', '~> 1.0.5'
 
 # Compile Sprockets assets concurrently in `assets:precompile`.
@@ -298,7 +298,7 @@ gem 'firebase_token_generator'
 gem 'sshkit'
 gem 'validates_email_format_of'
 
-gem 'composite_primary_keys'
+gem 'composite_primary_keys', '~> 11.0'
 
 # GitHub API; used by the DotD script to automatically create new
 # releases on deploy
