@@ -214,8 +214,6 @@
         "script_level.level_keys": [
           "OPD-K5 Intro"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -236,8 +234,6 @@
         "script_level.level_keys": [
           "OPD-K5 PreSurvey"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -258,8 +254,6 @@
         "script_level.level_keys": [
           "OPD-K5 Welcome 2"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -280,8 +274,6 @@
         "script_level.level_keys": [
           "OPD-K5 About"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -302,8 +294,6 @@
         "script_level.level_keys": [
           "OPD-K5 Outline"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 5,
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -324,8 +314,6 @@
         "script_level.level_keys": [
           "OPD-K5 Participation"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 6,
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -346,8 +334,6 @@
         "script_level.level_keys": [
           "OPD-K5 CS Video"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 7,
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -368,8 +354,6 @@
         "script_level.level_keys": [
           "OPD-K5 CS Tips"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 8,
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -390,8 +374,6 @@
         "script_level.level_keys": [
           "OPD-K5 Stage1Go"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 9,
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -412,8 +394,6 @@
         "script_level.level_keys": [
           "OPD-K5 Stage2Overview"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 1,
         "lesson.key": "Computer Science Fundamentals",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -434,8 +414,6 @@
         "script_level.level_keys": [
           "OPD-K5 WhatIsCS"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 2,
         "lesson.key": "Computer Science Fundamentals",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -456,8 +434,6 @@
         "script_level.level_keys": [
           "OPD-K5 Why teach CS"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 3,
         "lesson.key": "Computer Science Fundamentals",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -478,8 +454,6 @@
         "script_level.level_keys": [
           "OPD-K5 Younger Grades"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 4,
         "lesson.key": "Computer Science Fundamentals",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -500,8 +474,6 @@
         "script_level.level_keys": [
           "OPD-K5 Vocabulary"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 5,
         "lesson.key": "Computer Science Fundamentals",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -522,8 +494,6 @@
         "script_level.level_keys": [
           "OPD-K5 Stage2Go"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 6,
         "lesson.key": "Computer Science Fundamentals",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -544,8 +514,6 @@
         "script_level.level_keys": [
           "OPD-Stage3Start"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 1,
         "lesson.key": "Looking Ahead",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -566,8 +534,6 @@
         "script_level.level_keys": [
           "OPD-K5 Puzzles"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 2,
         "lesson.key": "Looking Ahead",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -588,8 +554,6 @@
         "script_level.level_keys": [
           "OPD-K5 Unplugged Video"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 3,
         "lesson.key": "Looking Ahead",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -610,8 +574,6 @@
         "script_level.level_keys": [
           "OPD-K5 What is Mastery"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 4,
         "lesson.key": "Looking Ahead",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -632,8 +594,6 @@
         "script_level.level_keys": [
           "OPD-K5 Stage3Start"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 1,
         "lesson.key": "Mastering the Basics: Sequencing",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -654,8 +614,6 @@
         "script_level.level_keys": [
           "OPD-K5 Stage3aGo"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 2,
         "lesson.key": "Mastering the Basics: Sequencing",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -676,8 +634,6 @@
         "script_level.level_keys": [
           "OPD-K5 FirstProgram"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 3,
         "lesson.key": "Mastering the Basics: Sequencing",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -698,8 +654,6 @@
         "script_level.level_keys": [
           "courseA_maze_seq5"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 4,
         "lesson.key": "Mastering the Basics: Sequencing",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -720,8 +674,6 @@
         "script_level.level_keys": [
           "courseA_maze_seq6"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 5,
         "lesson.key": "Mastering the Basics: Sequencing",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -742,8 +694,6 @@
         "script_level.level_keys": [
           "courseA_maze_seq7"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 6,
         "lesson.key": "Mastering the Basics: Sequencing",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -764,8 +714,6 @@
         "script_level.level_keys": [
           "courseA_maze_seq8"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 7,
         "lesson.key": "Mastering the Basics: Sequencing",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -787,8 +735,6 @@
         "script_level.level_keys": [
           "courseA_maze_seq10"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 8,
         "lesson.key": "Mastering the Basics: Sequencing",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -809,8 +755,6 @@
         "script_level.level_keys": [
           "OPD-K5 Stage3Go"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 9,
         "lesson.key": "Mastering the Basics: Sequencing",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -831,8 +775,6 @@
         "script_level.level_keys": [
           "OPD-K5 Stage4Start"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 1,
         "lesson.key": "Mastering the Basics: Loops",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -853,8 +795,6 @@
         "script_level.level_keys": [
           "OPD-K5 Stage4Go"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 2,
         "lesson.key": "Mastering the Basics: Loops",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -875,8 +815,6 @@
         "script_level.level_keys": [
           "OPD-K5 RepeatBlock"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 3,
         "lesson.key": "Mastering the Basics: Loops",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -897,8 +835,6 @@
         "script_level.level_keys": [
           "courseC_starWars_loops2"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 4,
         "lesson.key": "Mastering the Basics: Loops",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -919,8 +855,6 @@
         "script_level.level_keys": [
           "courseC_starWars_loops4"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 5,
         "lesson.key": "Mastering the Basics: Loops",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -941,8 +875,6 @@
         "script_level.level_keys": [
           "courseC_starWars_loops5"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 6,
         "lesson.key": "Mastering the Basics: Loops",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -963,8 +895,6 @@
         "script_level.level_keys": [
           "courseC_starWars_loops6"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 7,
         "lesson.key": "Mastering the Basics: Loops",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -985,8 +915,6 @@
         "script_level.level_keys": [
           "courseC_starWars_loops7"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 8,
         "lesson.key": "Mastering the Basics: Loops",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -1007,8 +935,6 @@
         "script_level.level_keys": [
           "courseC_starWars_loops8"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 9,
         "lesson.key": "Mastering the Basics: Loops",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -1029,8 +955,6 @@
         "script_level.level_keys": [
           "OPD-K5 Stage4Review"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 10,
         "lesson.key": "Mastering the Basics: Loops",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -1051,8 +975,6 @@
         "script_level.level_keys": [
           "OPD-K5 Stage5Start"
         ],
-        "script_level.chapter": 39,
-        "script_level.position": 1,
         "lesson.key": "Mastering the Basics: Conditionals",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -1073,8 +995,6 @@
         "script_level.level_keys": [
           "OPD-K5 Stage5Go"
         ],
-        "script_level.chapter": 40,
-        "script_level.position": 2,
         "lesson.key": "Mastering the Basics: Conditionals",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -1095,8 +1015,6 @@
         "script_level.level_keys": [
           "courseD_bee_conditionalsVid1"
         ],
-        "script_level.chapter": 41,
-        "script_level.position": 3,
         "lesson.key": "Mastering the Basics: Conditionals",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -1117,8 +1035,6 @@
         "script_level.level_keys": [
           "courseD_bee_conditionals1_predict1"
         ],
-        "script_level.chapter": 42,
-        "script_level.position": 4,
         "lesson.key": "Mastering the Basics: Conditionals",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -1139,8 +1055,6 @@
         "script_level.level_keys": [
           "courseD_bee_conditionals2"
         ],
-        "script_level.chapter": 43,
-        "script_level.position": 5,
         "lesson.key": "Mastering the Basics: Conditionals",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -1161,8 +1075,6 @@
         "script_level.level_keys": [
           "courseD_bee_conditionals3"
         ],
-        "script_level.chapter": 44,
-        "script_level.position": 6,
         "lesson.key": "Mastering the Basics: Conditionals",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -1183,8 +1095,6 @@
         "script_level.level_keys": [
           "courseD_bee_conditionals4"
         ],
-        "script_level.chapter": 45,
-        "script_level.position": 7,
         "lesson.key": "Mastering the Basics: Conditionals",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -1205,8 +1115,6 @@
         "script_level.level_keys": [
           "courseD_bee_conditionals5"
         ],
-        "script_level.chapter": 46,
-        "script_level.position": 8,
         "lesson.key": "Mastering the Basics: Conditionals",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -1227,8 +1135,6 @@
         "script_level.level_keys": [
           "OPD-K5 Stage5Review"
         ],
-        "script_level.chapter": 47,
-        "script_level.position": 9,
         "lesson.key": "Mastering the Basics: Conditionals",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -1249,8 +1155,6 @@
         "script_level.level_keys": [
           "OPD-K5 Stage6Start"
         ],
-        "script_level.chapter": 48,
-        "script_level.position": 1,
         "lesson.key": "Mastering the Basics: Functions",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -1271,8 +1175,6 @@
         "script_level.level_keys": [
           "OPD-K5 Stage6Go"
         ],
-        "script_level.chapter": 49,
-        "script_level.position": 2,
         "lesson.key": "Mastering the Basics: Functions",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -1293,8 +1195,6 @@
         "script_level.level_keys": [
           "courseE_video_functionsArtist"
         ],
-        "script_level.chapter": 50,
-        "script_level.position": 3,
         "lesson.key": "Mastering the Basics: Functions",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -1315,8 +1215,6 @@
         "script_level.level_keys": [
           "courseE_artist_functions1"
         ],
-        "script_level.chapter": 51,
-        "script_level.position": 4,
         "lesson.key": "Mastering the Basics: Functions",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -1337,8 +1235,6 @@
         "script_level.level_keys": [
           "courseE_artist_functions_predict1"
         ],
-        "script_level.chapter": 52,
-        "script_level.position": 5,
         "lesson.key": "Mastering the Basics: Functions",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -1359,8 +1255,6 @@
         "script_level.level_keys": [
           "courseE_artist_functions2"
         ],
-        "script_level.chapter": 53,
-        "script_level.position": 6,
         "lesson.key": "Mastering the Basics: Functions",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -1381,8 +1275,6 @@
         "script_level.level_keys": [
           "courseE_artist_functions3"
         ],
-        "script_level.chapter": 54,
-        "script_level.position": 7,
         "lesson.key": "Mastering the Basics: Functions",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -1403,8 +1295,6 @@
         "script_level.level_keys": [
           "courseE_artist_functions4"
         ],
-        "script_level.chapter": 55,
-        "script_level.position": 8,
         "lesson.key": "Mastering the Basics: Functions",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -1425,8 +1315,6 @@
         "script_level.level_keys": [
           "courseE_artist_functions5"
         ],
-        "script_level.chapter": 56,
-        "script_level.position": 9,
         "lesson.key": "Mastering the Basics: Functions",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -1447,8 +1335,6 @@
         "script_level.level_keys": [
           "OPD-K5 Stage6Review"
         ],
-        "script_level.chapter": 57,
-        "script_level.position": 10,
         "lesson.key": "Mastering the Basics: Functions",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -1469,8 +1355,6 @@
         "script_level.level_keys": [
           "OPD-K5 Stage7Start"
         ],
-        "script_level.chapter": 58,
-        "script_level.position": 1,
         "lesson.key": "Mastering the Basics: Events",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -1491,8 +1375,6 @@
         "script_level.level_keys": [
           "OPD-K5 Stage7Go"
         ],
-        "script_level.chapter": 59,
-        "script_level.position": 2,
         "lesson.key": "Mastering the Basics: Events",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -1513,8 +1395,6 @@
         "script_level.level_keys": [
           "OPD-K5 EventsVid"
         ],
-        "script_level.chapter": 60,
-        "script_level.position": 3,
         "lesson.key": "Mastering the Basics: Events",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -1535,8 +1415,6 @@
         "script_level.level_keys": [
           "iceage_move_events"
         ],
-        "script_level.chapter": 61,
-        "script_level.position": 4,
         "lesson.key": "Mastering the Basics: Events",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -1557,8 +1435,6 @@
         "script_level.level_keys": [
           "iceage_sound_and_points"
         ],
-        "script_level.chapter": 62,
-        "script_level.position": 5,
         "lesson.key": "Mastering the Basics: Events",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -1579,8 +1455,6 @@
         "script_level.level_keys": [
           "iceage_warn_ice_age"
         ],
-        "script_level.chapter": 63,
-        "script_level.position": 6,
         "lesson.key": "Mastering the Basics: Events",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -1601,8 +1475,6 @@
         "script_level.level_keys": [
           "OPD-K5 Congrats"
         ],
-        "script_level.chapter": 64,
-        "script_level.position": 7,
         "lesson.key": "Mastering the Basics: Events",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -1623,8 +1495,6 @@
         "script_level.level_keys": [
           "OPD-K5 CongratsFinal"
         ],
-        "script_level.chapter": 65,
-        "script_level.position": 8,
         "lesson.key": "Mastering the Basics: Events",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -1645,8 +1515,6 @@
         "script_level.level_keys": [
           "OPD-K5 Stage8Start"
         ],
-        "script_level.chapter": 66,
-        "script_level.position": 1,
         "lesson.key": "Best Practices for Teaching Computer Science",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -1667,8 +1535,6 @@
         "script_level.level_keys": [
           "OPD-K5 Culture"
         ],
-        "script_level.chapter": 67,
-        "script_level.position": 2,
         "lesson.key": "Best Practices for Teaching Computer Science",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -1689,8 +1555,6 @@
         "script_level.level_keys": [
           "OPD-K5 LessonPlanning"
         ],
-        "script_level.chapter": 68,
-        "script_level.position": 3,
         "lesson.key": "Best Practices for Teaching Computer Science",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -1711,8 +1575,6 @@
         "script_level.level_keys": [
           "OPD-K5 Pair"
         ],
-        "script_level.chapter": 69,
-        "script_level.position": 4,
         "lesson.key": "Best Practices for Teaching Computer Science",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -1733,8 +1595,6 @@
         "script_level.level_keys": [
           "OPD-K5 Problem Solving"
         ],
-        "script_level.chapter": 70,
-        "script_level.position": 5,
         "lesson.key": "Best Practices for Teaching Computer Science",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -1755,8 +1615,6 @@
         "script_level.level_keys": [
           "OPD-K5 Stage8Go"
         ],
-        "script_level.chapter": 71,
-        "script_level.position": 6,
         "lesson.key": "Best Practices for Teaching Computer Science",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -1777,8 +1635,6 @@
         "script_level.level_keys": [
           "OPD-K5 Stage9Start"
         ],
-        "script_level.chapter": 72,
-        "script_level.position": 1,
         "lesson.key": "Planning",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -1799,8 +1655,6 @@
         "script_level.level_keys": [
           "OPD-K5 CS Courses"
         ],
-        "script_level.chapter": 73,
-        "script_level.position": 2,
         "lesson.key": "Planning",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -1821,8 +1675,6 @@
         "script_level.level_keys": [
           "OPD-K5 Using CS"
         ],
-        "script_level.chapter": 74,
-        "script_level.position": 3,
         "lesson.key": "Planning",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -1843,8 +1695,6 @@
         "script_level.level_keys": [
           "OPD-K5 Assessment"
         ],
-        "script_level.chapter": 75,
-        "script_level.position": 4,
         "lesson.key": "Planning",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -1865,8 +1715,6 @@
         "script_level.level_keys": [
           "OPD-K5 Your Plan"
         ],
-        "script_level.chapter": 76,
-        "script_level.position": 5,
         "lesson.key": "Planning",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -1887,8 +1735,6 @@
         "script_level.level_keys": [
           "OPD-K5 Stage9Go"
         ],
-        "script_level.chapter": 77,
-        "script_level.position": 6,
         "lesson.key": "Planning",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -1909,8 +1755,6 @@
         "script_level.level_keys": [
           "OPD-K5 Stage10Start"
         ],
-        "script_level.chapter": 78,
-        "script_level.position": 1,
         "lesson.key": "Next Steps",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -1931,8 +1775,6 @@
         "script_level.level_keys": [
           "OPD-K5 PostSurvey"
         ],
-        "script_level.chapter": 79,
-        "script_level.position": 2,
         "lesson.key": "Next Steps",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -1953,8 +1795,6 @@
         "script_level.level_keys": [
           "OPD-K5 Closing"
         ],
-        "script_level.chapter": 80,
-        "script_level.position": 3,
         "lesson.key": "Next Steps",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -1975,8 +1815,6 @@
         "script_level.level_keys": [
           "OPD-K5 Connect"
         ],
-        "script_level.chapter": 81,
-        "script_level.position": 4,
         "lesson.key": "Next Steps",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -1997,8 +1835,6 @@
         "script_level.level_keys": [
           "OPD-K5 Celebrate"
         ],
-        "script_level.chapter": 82,
-        "script_level.position": 5,
         "lesson.key": "Next Steps",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -2015,8 +1851,6 @@
         "script_level.level_keys": [
           "OPD-K5 Intro"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -2028,8 +1862,6 @@
         "script_level.level_keys": [
           "OPD-K5 PreSurvey"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -2041,8 +1873,6 @@
         "script_level.level_keys": [
           "OPD-K5 Welcome 2"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -2054,8 +1884,6 @@
         "script_level.level_keys": [
           "OPD-K5 About"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -2067,8 +1895,6 @@
         "script_level.level_keys": [
           "OPD-K5 Outline"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 5,
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -2080,8 +1906,6 @@
         "script_level.level_keys": [
           "OPD-K5 Participation"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 6,
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -2093,8 +1917,6 @@
         "script_level.level_keys": [
           "OPD-K5 CS Video"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 7,
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -2106,8 +1928,6 @@
         "script_level.level_keys": [
           "OPD-K5 CS Tips"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 8,
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -2119,8 +1939,6 @@
         "script_level.level_keys": [
           "OPD-K5 Stage1Go"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 9,
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -2132,8 +1950,6 @@
         "script_level.level_keys": [
           "OPD-K5 Stage2Overview"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 1,
         "lesson.key": "Computer Science Fundamentals",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -2145,8 +1961,6 @@
         "script_level.level_keys": [
           "OPD-K5 WhatIsCS"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 2,
         "lesson.key": "Computer Science Fundamentals",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -2158,8 +1972,6 @@
         "script_level.level_keys": [
           "OPD-K5 Why teach CS"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 3,
         "lesson.key": "Computer Science Fundamentals",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -2171,8 +1983,6 @@
         "script_level.level_keys": [
           "OPD-K5 Younger Grades"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 4,
         "lesson.key": "Computer Science Fundamentals",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -2184,8 +1994,6 @@
         "script_level.level_keys": [
           "OPD-K5 Vocabulary"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 5,
         "lesson.key": "Computer Science Fundamentals",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -2197,8 +2005,6 @@
         "script_level.level_keys": [
           "OPD-K5 Stage2Go"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 6,
         "lesson.key": "Computer Science Fundamentals",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -2210,8 +2016,6 @@
         "script_level.level_keys": [
           "OPD-Stage3Start"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 1,
         "lesson.key": "Looking Ahead",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -2223,8 +2027,6 @@
         "script_level.level_keys": [
           "OPD-K5 Puzzles"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 2,
         "lesson.key": "Looking Ahead",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -2236,8 +2038,6 @@
         "script_level.level_keys": [
           "OPD-K5 Unplugged Video"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 3,
         "lesson.key": "Looking Ahead",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -2249,8 +2049,6 @@
         "script_level.level_keys": [
           "OPD-K5 What is Mastery"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 4,
         "lesson.key": "Looking Ahead",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -2262,8 +2060,6 @@
         "script_level.level_keys": [
           "OPD-K5 Stage3Start"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 1,
         "lesson.key": "Mastering the Basics: Sequencing",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -2275,8 +2071,6 @@
         "script_level.level_keys": [
           "OPD-K5 Stage3aGo"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 2,
         "lesson.key": "Mastering the Basics: Sequencing",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -2288,8 +2082,6 @@
         "script_level.level_keys": [
           "OPD-K5 FirstProgram"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 3,
         "lesson.key": "Mastering the Basics: Sequencing",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -2301,8 +2093,6 @@
         "script_level.level_keys": [
           "courseA_maze_seq5"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 4,
         "lesson.key": "Mastering the Basics: Sequencing",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -2314,8 +2104,6 @@
         "script_level.level_keys": [
           "courseA_maze_seq6"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 5,
         "lesson.key": "Mastering the Basics: Sequencing",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -2327,8 +2115,6 @@
         "script_level.level_keys": [
           "courseA_maze_seq7"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 6,
         "lesson.key": "Mastering the Basics: Sequencing",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -2340,8 +2126,6 @@
         "script_level.level_keys": [
           "courseA_maze_seq8"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 7,
         "lesson.key": "Mastering the Basics: Sequencing",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -2353,8 +2137,6 @@
         "script_level.level_keys": [
           "courseA_maze_seq10"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 8,
         "lesson.key": "Mastering the Basics: Sequencing",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -2366,8 +2148,6 @@
         "script_level.level_keys": [
           "OPD-K5 Stage3Go"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 9,
         "lesson.key": "Mastering the Basics: Sequencing",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -2379,8 +2159,6 @@
         "script_level.level_keys": [
           "OPD-K5 Stage4Start"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 1,
         "lesson.key": "Mastering the Basics: Loops",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -2392,8 +2170,6 @@
         "script_level.level_keys": [
           "OPD-K5 Stage4Go"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 2,
         "lesson.key": "Mastering the Basics: Loops",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -2405,8 +2181,6 @@
         "script_level.level_keys": [
           "OPD-K5 RepeatBlock"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 3,
         "lesson.key": "Mastering the Basics: Loops",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -2418,8 +2192,6 @@
         "script_level.level_keys": [
           "courseC_starWars_loops2"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 4,
         "lesson.key": "Mastering the Basics: Loops",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -2431,8 +2203,6 @@
         "script_level.level_keys": [
           "courseC_starWars_loops4"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 5,
         "lesson.key": "Mastering the Basics: Loops",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -2444,8 +2214,6 @@
         "script_level.level_keys": [
           "courseC_starWars_loops5"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 6,
         "lesson.key": "Mastering the Basics: Loops",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -2457,8 +2225,6 @@
         "script_level.level_keys": [
           "courseC_starWars_loops6"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 7,
         "lesson.key": "Mastering the Basics: Loops",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -2470,8 +2236,6 @@
         "script_level.level_keys": [
           "courseC_starWars_loops7"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 8,
         "lesson.key": "Mastering the Basics: Loops",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -2483,8 +2247,6 @@
         "script_level.level_keys": [
           "courseC_starWars_loops8"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 9,
         "lesson.key": "Mastering the Basics: Loops",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -2496,8 +2258,6 @@
         "script_level.level_keys": [
           "OPD-K5 Stage4Review"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 10,
         "lesson.key": "Mastering the Basics: Loops",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -2509,8 +2269,6 @@
         "script_level.level_keys": [
           "OPD-K5 Stage5Start"
         ],
-        "script_level.chapter": 39,
-        "script_level.position": 1,
         "lesson.key": "Mastering the Basics: Conditionals",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -2522,8 +2280,6 @@
         "script_level.level_keys": [
           "OPD-K5 Stage5Go"
         ],
-        "script_level.chapter": 40,
-        "script_level.position": 2,
         "lesson.key": "Mastering the Basics: Conditionals",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -2535,8 +2291,6 @@
         "script_level.level_keys": [
           "courseD_bee_conditionalsVid1"
         ],
-        "script_level.chapter": 41,
-        "script_level.position": 3,
         "lesson.key": "Mastering the Basics: Conditionals",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -2548,8 +2302,6 @@
         "script_level.level_keys": [
           "courseD_bee_conditionals1_predict1"
         ],
-        "script_level.chapter": 42,
-        "script_level.position": 4,
         "lesson.key": "Mastering the Basics: Conditionals",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -2561,8 +2313,6 @@
         "script_level.level_keys": [
           "courseD_bee_conditionals2"
         ],
-        "script_level.chapter": 43,
-        "script_level.position": 5,
         "lesson.key": "Mastering the Basics: Conditionals",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -2574,8 +2324,6 @@
         "script_level.level_keys": [
           "courseD_bee_conditionals3"
         ],
-        "script_level.chapter": 44,
-        "script_level.position": 6,
         "lesson.key": "Mastering the Basics: Conditionals",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -2587,8 +2335,6 @@
         "script_level.level_keys": [
           "courseD_bee_conditionals4"
         ],
-        "script_level.chapter": 45,
-        "script_level.position": 7,
         "lesson.key": "Mastering the Basics: Conditionals",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -2600,8 +2346,6 @@
         "script_level.level_keys": [
           "courseD_bee_conditionals5"
         ],
-        "script_level.chapter": 46,
-        "script_level.position": 8,
         "lesson.key": "Mastering the Basics: Conditionals",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -2613,8 +2357,6 @@
         "script_level.level_keys": [
           "OPD-K5 Stage5Review"
         ],
-        "script_level.chapter": 47,
-        "script_level.position": 9,
         "lesson.key": "Mastering the Basics: Conditionals",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -2626,8 +2368,6 @@
         "script_level.level_keys": [
           "OPD-K5 Stage6Start"
         ],
-        "script_level.chapter": 48,
-        "script_level.position": 1,
         "lesson.key": "Mastering the Basics: Functions",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -2639,8 +2379,6 @@
         "script_level.level_keys": [
           "OPD-K5 Stage6Go"
         ],
-        "script_level.chapter": 49,
-        "script_level.position": 2,
         "lesson.key": "Mastering the Basics: Functions",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -2652,8 +2390,6 @@
         "script_level.level_keys": [
           "courseE_video_functionsArtist"
         ],
-        "script_level.chapter": 50,
-        "script_level.position": 3,
         "lesson.key": "Mastering the Basics: Functions",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -2665,8 +2401,6 @@
         "script_level.level_keys": [
           "courseE_artist_functions1"
         ],
-        "script_level.chapter": 51,
-        "script_level.position": 4,
         "lesson.key": "Mastering the Basics: Functions",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -2678,8 +2412,6 @@
         "script_level.level_keys": [
           "courseE_artist_functions_predict1"
         ],
-        "script_level.chapter": 52,
-        "script_level.position": 5,
         "lesson.key": "Mastering the Basics: Functions",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -2691,8 +2423,6 @@
         "script_level.level_keys": [
           "courseE_artist_functions2"
         ],
-        "script_level.chapter": 53,
-        "script_level.position": 6,
         "lesson.key": "Mastering the Basics: Functions",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -2704,8 +2434,6 @@
         "script_level.level_keys": [
           "courseE_artist_functions3"
         ],
-        "script_level.chapter": 54,
-        "script_level.position": 7,
         "lesson.key": "Mastering the Basics: Functions",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -2717,8 +2445,6 @@
         "script_level.level_keys": [
           "courseE_artist_functions4"
         ],
-        "script_level.chapter": 55,
-        "script_level.position": 8,
         "lesson.key": "Mastering the Basics: Functions",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -2730,8 +2456,6 @@
         "script_level.level_keys": [
           "courseE_artist_functions5"
         ],
-        "script_level.chapter": 56,
-        "script_level.position": 9,
         "lesson.key": "Mastering the Basics: Functions",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -2743,8 +2467,6 @@
         "script_level.level_keys": [
           "OPD-K5 Stage6Review"
         ],
-        "script_level.chapter": 57,
-        "script_level.position": 10,
         "lesson.key": "Mastering the Basics: Functions",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -2756,8 +2478,6 @@
         "script_level.level_keys": [
           "OPD-K5 Stage7Start"
         ],
-        "script_level.chapter": 58,
-        "script_level.position": 1,
         "lesson.key": "Mastering the Basics: Events",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -2769,8 +2489,6 @@
         "script_level.level_keys": [
           "OPD-K5 Stage7Go"
         ],
-        "script_level.chapter": 59,
-        "script_level.position": 2,
         "lesson.key": "Mastering the Basics: Events",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -2782,8 +2500,6 @@
         "script_level.level_keys": [
           "OPD-K5 EventsVid"
         ],
-        "script_level.chapter": 60,
-        "script_level.position": 3,
         "lesson.key": "Mastering the Basics: Events",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -2795,8 +2511,6 @@
         "script_level.level_keys": [
           "iceage_move_events"
         ],
-        "script_level.chapter": 61,
-        "script_level.position": 4,
         "lesson.key": "Mastering the Basics: Events",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -2808,8 +2522,6 @@
         "script_level.level_keys": [
           "iceage_sound_and_points"
         ],
-        "script_level.chapter": 62,
-        "script_level.position": 5,
         "lesson.key": "Mastering the Basics: Events",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -2821,8 +2533,6 @@
         "script_level.level_keys": [
           "iceage_warn_ice_age"
         ],
-        "script_level.chapter": 63,
-        "script_level.position": 6,
         "lesson.key": "Mastering the Basics: Events",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -2834,8 +2544,6 @@
         "script_level.level_keys": [
           "OPD-K5 Congrats"
         ],
-        "script_level.chapter": 64,
-        "script_level.position": 7,
         "lesson.key": "Mastering the Basics: Events",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -2847,8 +2555,6 @@
         "script_level.level_keys": [
           "OPD-K5 CongratsFinal"
         ],
-        "script_level.chapter": 65,
-        "script_level.position": 8,
         "lesson.key": "Mastering the Basics: Events",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -2860,8 +2566,6 @@
         "script_level.level_keys": [
           "OPD-K5 Stage8Start"
         ],
-        "script_level.chapter": 66,
-        "script_level.position": 1,
         "lesson.key": "Best Practices for Teaching Computer Science",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -2873,8 +2577,6 @@
         "script_level.level_keys": [
           "OPD-K5 Culture"
         ],
-        "script_level.chapter": 67,
-        "script_level.position": 2,
         "lesson.key": "Best Practices for Teaching Computer Science",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -2886,8 +2588,6 @@
         "script_level.level_keys": [
           "OPD-K5 LessonPlanning"
         ],
-        "script_level.chapter": 68,
-        "script_level.position": 3,
         "lesson.key": "Best Practices for Teaching Computer Science",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -2899,8 +2599,6 @@
         "script_level.level_keys": [
           "OPD-K5 Pair"
         ],
-        "script_level.chapter": 69,
-        "script_level.position": 4,
         "lesson.key": "Best Practices for Teaching Computer Science",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -2912,8 +2610,6 @@
         "script_level.level_keys": [
           "OPD-K5 Problem Solving"
         ],
-        "script_level.chapter": 70,
-        "script_level.position": 5,
         "lesson.key": "Best Practices for Teaching Computer Science",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -2925,8 +2621,6 @@
         "script_level.level_keys": [
           "OPD-K5 Stage8Go"
         ],
-        "script_level.chapter": 71,
-        "script_level.position": 6,
         "lesson.key": "Best Practices for Teaching Computer Science",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -2938,8 +2632,6 @@
         "script_level.level_keys": [
           "OPD-K5 Stage9Start"
         ],
-        "script_level.chapter": 72,
-        "script_level.position": 1,
         "lesson.key": "Planning",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -2951,8 +2643,6 @@
         "script_level.level_keys": [
           "OPD-K5 CS Courses"
         ],
-        "script_level.chapter": 73,
-        "script_level.position": 2,
         "lesson.key": "Planning",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -2964,8 +2654,6 @@
         "script_level.level_keys": [
           "OPD-K5 Using CS"
         ],
-        "script_level.chapter": 74,
-        "script_level.position": 3,
         "lesson.key": "Planning",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -2977,8 +2665,6 @@
         "script_level.level_keys": [
           "OPD-K5 Assessment"
         ],
-        "script_level.chapter": 75,
-        "script_level.position": 4,
         "lesson.key": "Planning",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -2990,8 +2676,6 @@
         "script_level.level_keys": [
           "OPD-K5 Your Plan"
         ],
-        "script_level.chapter": 76,
-        "script_level.position": 5,
         "lesson.key": "Planning",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -3003,8 +2687,6 @@
         "script_level.level_keys": [
           "OPD-K5 Stage9Go"
         ],
-        "script_level.chapter": 77,
-        "script_level.position": 6,
         "lesson.key": "Planning",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -3016,8 +2698,6 @@
         "script_level.level_keys": [
           "OPD-K5 Stage10Start"
         ],
-        "script_level.chapter": 78,
-        "script_level.position": 1,
         "lesson.key": "Next Steps",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -3029,8 +2709,6 @@
         "script_level.level_keys": [
           "OPD-K5 PostSurvey"
         ],
-        "script_level.chapter": 79,
-        "script_level.position": 2,
         "lesson.key": "Next Steps",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -3042,8 +2720,6 @@
         "script_level.level_keys": [
           "OPD-K5 Closing"
         ],
-        "script_level.chapter": 80,
-        "script_level.position": 3,
         "lesson.key": "Next Steps",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -3055,8 +2731,6 @@
         "script_level.level_keys": [
           "OPD-K5 Connect"
         ],
-        "script_level.chapter": 81,
-        "script_level.position": 4,
         "lesson.key": "Next Steps",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"
@@ -3068,8 +2742,6 @@
         "script_level.level_keys": [
           "OPD-K5 Celebrate"
         ],
-        "script_level.chapter": 82,
-        "script_level.position": 5,
         "lesson.key": "Next Steps",
         "lesson_group.key": "",
         "script.name": "K5-OnlinePD"

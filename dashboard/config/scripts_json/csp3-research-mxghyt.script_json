@@ -280,8 +280,6 @@
         "script_level.level_keys": [
           "v2 U3L01 Student Lesson Introduction"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "The Need For Programming Languages",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -303,8 +301,6 @@
         "script_level.level_keys": [
           "U3L01 Assessment1"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "The Need For Programming Languages",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -326,8 +322,6 @@
         "script_level.level_keys": [
           "U3L01 Assessment3"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "The Need For Programming Languages",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -349,8 +343,6 @@
         "script_level.level_keys": [
           "csp-pulse-check-survey-4-levelgroup-U3Ch1"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "The Need For Programming Languages",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -372,8 +364,6 @@
         "script_level.level_keys": [
           "v2 U3L02 Student Lesson Introduction"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 1,
         "lesson.key": "The Need for Algorithms",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -395,8 +385,6 @@
         "script_level.level_keys": [
           "v2 U3L03 Student Lesson Introduction"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 1,
         "lesson.key": "Creativity in Algorithms",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -418,8 +406,6 @@
         "script_level.level_keys": [
           "SG U3L04 Student Lesson Introduction"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 1,
         "lesson.key": "Using Simple Commands",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -441,8 +427,6 @@
         "script_level.level_keys": [
           "SG csp_applab_turtle"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 2,
         "lesson.key": "Using Simple Commands",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -464,8 +448,6 @@
         "script_level.level_keys": [
           "SG U3L2 Using Simple Commands part 1"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 3,
         "lesson.key": "Using Simple Commands",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -487,8 +469,6 @@
         "script_level.level_keys": [
           "SGU3L2A Introducing Subgoals"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 4,
         "lesson.key": "Using Simple Commands",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -510,8 +490,6 @@
         "script_level.level_keys": [
           "SG U3L2 Using Simple Commands"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 5,
         "lesson.key": "Using Simple Commands",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -533,8 +511,6 @@
         "script_level.level_keys": [
           "SG U3L2_TurtleSquare_right"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 6,
         "lesson.key": "Using Simple Commands",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -556,8 +532,6 @@
         "script_level.level_keys": [
           "SG Add Subgoals practice"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 7,
         "lesson.key": "Using Simple Commands",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -579,8 +553,6 @@
         "script_level.level_keys": [
           "SG U3L2_Turtle3by3Grid"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 8,
         "lesson.key": "Using Simple Commands",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -602,8 +574,6 @@
         "script_level.level_keys": [
           "U3L02 Assessment"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 9,
         "lesson.key": "Using Simple Commands",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -625,8 +595,6 @@
         "script_level.level_keys": [
           "U3L02 Free Response Getting Started"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 10,
         "lesson.key": "Using Simple Commands",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -648,8 +616,6 @@
         "script_level.level_keys": [
           "csp_U3_square_v_rect_FR"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 11,
         "lesson.key": "Using Simple Commands",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -671,8 +637,6 @@
         "script_level.level_keys": [
           "U3L02 Free Response Wrap Up"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 12,
         "lesson.key": "Using Simple Commands",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -694,8 +658,6 @@
         "script_level.level_keys": [
           "SG v2 U3L05 Student Lesson Introduction"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 1,
         "lesson.key": "Creating Functions",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -717,8 +679,6 @@
         "script_level.level_keys": [
           "SG csp_applab_functions"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 2,
         "lesson.key": "Creating Functions",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -740,8 +700,6 @@
         "script_level.level_keys": [
           "SG U3L03 Define and use turnAround"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 3,
         "lesson.key": "Creating Functions",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -763,8 +721,6 @@
         "script_level.level_keys": [
           "SG U3L03 Draw a T using turnAround"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 4,
         "lesson.key": "Creating Functions",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -786,8 +742,6 @@
         "script_level.level_keys": [
           "SG U3L03 define turnRight and draw a rectangle"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 5,
         "lesson.key": "Creating Functions",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -809,8 +763,6 @@
         "script_level.level_keys": [
           "SG CSP Abstraction in Programming 2"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 6,
         "lesson.key": "Creating Functions",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -832,8 +784,6 @@
         "script_level.level_keys": [
           "SG U3L03 - draw rect function"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 7,
         "lesson.key": "Creating Functions",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -855,8 +805,6 @@
         "script_level.level_keys": [
           "SG U3L03 - draw step"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 8,
         "lesson.key": "Creating Functions",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -878,8 +826,6 @@
         "script_level.level_keys": [
           "SG U3L03 Three Steps"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 9,
         "lesson.key": "Creating Functions",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -901,8 +847,6 @@
         "script_level.level_keys": [
           "SG U3L03 draw diamond"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 10,
         "lesson.key": "Creating Functions",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -924,8 +868,6 @@
         "script_level.level_keys": [
           "U3L03 - multiselect - properties of functions"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 11,
         "lesson.key": "Creating Functions",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -947,8 +889,6 @@
         "script_level.level_keys": [
           "U3L03 Assessment"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 12,
         "lesson.key": "Creating Functions",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -970,8 +910,6 @@
         "script_level.level_keys": [
           "U3L03 Free Response Wrap Up"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 13,
         "lesson.key": "Creating Functions",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -993,8 +931,6 @@
         "script_level.level_keys": [
           "csp_U3_plan_code_FR"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 14,
         "lesson.key": "Creating Functions",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -1016,8 +952,6 @@
         "script_level.level_keys": [
           "SG v2 U3L6 Student Lesson Introduction"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 1,
         "lesson.key": "Functions and Top-Down Design",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -1039,8 +973,6 @@
         "script_level.level_keys": [
           "SG U3L04 - snowflake"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 2,
         "lesson.key": "Functions and Top-Down Design",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -1062,8 +994,6 @@
         "script_level.level_keys": [
           "SG U3L04 - 3 by 3 with functions"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 3,
         "lesson.key": "Functions and Top-Down Design",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -1085,8 +1015,6 @@
         "script_level.level_keys": [
           "U3-AP-Practice-FR-design-process"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 4,
         "lesson.key": "Functions and Top-Down Design",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -1108,8 +1036,6 @@
         "script_level.level_keys": [
           "U3L04 Assessment1"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 5,
         "lesson.key": "Functions and Top-Down Design",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -1131,8 +1057,6 @@
         "script_level.level_keys": [
           "U3L04 Assessment2"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 6,
         "lesson.key": "Functions and Top-Down Design",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -1154,8 +1078,6 @@
         "script_level.level_keys": [
           "U3L04 Free Response Wrap Up"
         ],
-        "script_level.chapter": 39,
-        "script_level.position": 7,
         "lesson.key": "Functions and Top-Down Design",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -1177,8 +1099,6 @@
         "script_level.level_keys": [
           "SG v2 U3L07 Student Lesson Introduction"
         ],
-        "script_level.chapter": 40,
-        "script_level.position": 1,
         "lesson.key": "APIs and Function Parameters",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -1200,8 +1120,6 @@
         "script_level.level_keys": [
           "SG U3L06 - moveForwardwithParams"
         ],
-        "script_level.chapter": 41,
-        "script_level.position": 2,
         "lesson.key": "APIs and Function Parameters",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -1223,8 +1141,6 @@
         "script_level.level_keys": [
           "SG U3L06 Challenge 1 triangle"
         ],
-        "script_level.chapter": 42,
-        "script_level.position": 3,
         "lesson.key": "APIs and Function Parameters",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -1246,8 +1162,6 @@
         "script_level.level_keys": [
           "SG U3L07 More Subgoals"
         ],
-        "script_level.chapter": 43,
-        "script_level.position": 4,
         "lesson.key": "APIs and Function Parameters",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -1269,8 +1183,6 @@
         "script_level.level_keys": [
           "SG U3L06 Challenge 2 purple square"
         ],
-        "script_level.chapter": 44,
-        "script_level.position": 5,
         "lesson.key": "APIs and Function Parameters",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -1292,8 +1204,6 @@
         "script_level.level_keys": [
           "SG U3L06 Challenge 3 fill pink"
         ],
-        "script_level.chapter": 45,
-        "script_level.position": 6,
         "lesson.key": "APIs and Function Parameters",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -1315,8 +1225,6 @@
         "script_level.level_keys": [
           "SG U3L06 Challenge 4 bullseye"
         ],
-        "script_level.chapter": 46,
-        "script_level.position": 7,
         "lesson.key": "APIs and Function Parameters",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -1338,8 +1246,6 @@
         "script_level.level_keys": [
           "SG U3L06 Challenge 6 squiggles"
         ],
-        "script_level.chapter": 47,
-        "script_level.position": 8,
         "lesson.key": "APIs and Function Parameters",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -1361,8 +1267,6 @@
         "script_level.level_keys": [
           "SG U3L06 Challenge 5 overlapping circles"
         ],
-        "script_level.chapter": 48,
-        "script_level.position": 9,
         "lesson.key": "APIs and Function Parameters",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -1384,8 +1288,6 @@
         "script_level.level_keys": [
           "SG U3L06 Challenge 7 smiley face"
         ],
-        "script_level.chapter": 49,
-        "script_level.position": 10,
         "lesson.key": "APIs and Function Parameters",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -1407,8 +1309,6 @@
         "script_level.level_keys": [
           "SG U3L06 Challenge 8 make your own"
         ],
-        "script_level.chapter": 50,
-        "script_level.position": 11,
         "lesson.key": "APIs and Function Parameters",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -1430,8 +1330,6 @@
         "script_level.level_keys": [
           "U3-AP-Practice-FR-score-abstraction-response"
         ],
-        "script_level.chapter": 51,
-        "script_level.position": 12,
         "lesson.key": "APIs and Function Parameters",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -1453,8 +1351,6 @@
         "script_level.level_keys": [
           "U3L06 Assessment2"
         ],
-        "script_level.chapter": 52,
-        "script_level.position": 13,
         "lesson.key": "APIs and Function Parameters",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -1476,8 +1372,6 @@
         "script_level.level_keys": [
           "U3L06-API-multichoice"
         ],
-        "script_level.chapter": 53,
-        "script_level.position": 14,
         "lesson.key": "APIs and Function Parameters",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -1499,8 +1393,6 @@
         "script_level.level_keys": [
           "U3L06 Assessment"
         ],
-        "script_level.chapter": 54,
-        "script_level.position": 15,
         "lesson.key": "APIs and Function Parameters",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -1522,8 +1414,6 @@
         "script_level.level_keys": [
           "csp3_U3_turtle_subgoal_mc_levelgroup"
         ],
-        "script_level.chapter": 55,
-        "script_level.position": 16,
         "lesson.key": "APIs and Function Parameters",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -1545,8 +1435,6 @@
         "script_level.level_keys": [
           "SG v2 U3L08 Student Lesson Introduction"
         ],
-        "script_level.chapter": 56,
-        "script_level.position": 1,
         "lesson.key": "Creating functions with Parameters",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -1568,8 +1456,6 @@
         "script_level.level_keys": [
           "SG csp_applab_functions_parameters"
         ],
-        "script_level.chapter": 57,
-        "script_level.position": 2,
         "lesson.key": "Creating functions with Parameters",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -1591,8 +1477,6 @@
         "script_level.level_keys": [
           "SG U3L08 - drawSquareWithParam"
         ],
-        "script_level.chapter": 58,
-        "script_level.position": 3,
         "lesson.key": "Creating functions with Parameters",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -1614,8 +1498,6 @@
         "script_level.level_keys": [
           "SG U3L07 - createTriangleParam"
         ],
-        "script_level.chapter": 59,
-        "script_level.position": 4,
         "lesson.key": "Creating functions with Parameters",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -1637,8 +1519,6 @@
         "script_level.level_keys": [
           "SG U3L08 - squareTwoParams"
         ],
-        "script_level.chapter": 60,
-        "script_level.position": 5,
         "lesson.key": "Creating functions with Parameters",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -1660,8 +1540,6 @@
         "script_level.level_keys": [
           "SG U3L08 - createTwoParamTriangle"
         ],
-        "script_level.chapter": 61,
-        "script_level.position": 6,
         "lesson.key": "Creating functions with Parameters",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -1683,8 +1561,6 @@
         "script_level.level_keys": [
           "SG csp_U3_turtle_subgoal_q3_mc"
         ],
-        "script_level.chapter": 62,
-        "script_level.position": 7,
         "lesson.key": "Creating functions with Parameters",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -1706,8 +1582,6 @@
         "script_level.level_keys": [
           "SG U3 whats a comment"
         ],
-        "script_level.chapter": 63,
-        "script_level.position": 8,
         "lesson.key": "Creating functions with Parameters",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -1729,8 +1603,6 @@
         "script_level.level_keys": [
           "SG U3L08 how to add comments"
         ],
-        "script_level.chapter": 64,
-        "script_level.position": 9,
         "lesson.key": "Creating functions with Parameters",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -1752,8 +1624,6 @@
         "script_level.level_keys": [
           "SG U3L08 - introUnderTheSea"
         ],
-        "script_level.chapter": 65,
-        "script_level.position": 10,
         "lesson.key": "Creating functions with Parameters",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -1775,8 +1645,6 @@
         "script_level.level_keys": [
           "SG U3L08 - paramsToStarfish"
         ],
-        "script_level.chapter": 66,
-        "script_level.position": 11,
         "lesson.key": "Creating functions with Parameters",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -1798,8 +1666,6 @@
         "script_level.level_keys": [
           "SG U3L08 - seaGrass"
         ],
-        "script_level.chapter": 67,
-        "script_level.position": 12,
         "lesson.key": "Creating functions with Parameters",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -1821,8 +1687,6 @@
         "script_level.level_keys": [
           "SG U3L08 - fish"
         ],
-        "script_level.chapter": 68,
-        "script_level.position": 13,
         "lesson.key": "Creating functions with Parameters",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -1844,8 +1708,6 @@
         "script_level.level_keys": [
           "SG U3L08 - multiParamFish"
         ],
-        "script_level.chapter": 69,
-        "script_level.position": 14,
         "lesson.key": "Creating functions with Parameters",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -1867,8 +1729,6 @@
         "script_level.level_keys": [
           "SG U3L08 - randomInput"
         ],
-        "script_level.chapter": 70,
-        "script_level.position": 15,
         "lesson.key": "Creating functions with Parameters",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -1890,8 +1750,6 @@
         "script_level.level_keys": [
           "csp_U3_subgoal_q4_mc"
         ],
-        "script_level.chapter": 71,
-        "script_level.position": 16,
         "lesson.key": "Creating functions with Parameters",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -1913,8 +1771,6 @@
         "script_level.level_keys": [
           "SG U3L08 - freePlay"
         ],
-        "script_level.chapter": 72,
-        "script_level.position": 17,
         "lesson.key": "Creating functions with Parameters",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -1936,8 +1792,6 @@
         "script_level.level_keys": [
           "U3-AP-Practice-FR-manage-complexity"
         ],
-        "script_level.chapter": 73,
-        "script_level.position": 18,
         "lesson.key": "Creating functions with Parameters",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -1959,8 +1813,6 @@
         "script_level.level_keys": [
           "U3L08 Assessment1"
         ],
-        "script_level.chapter": 74,
-        "script_level.position": 19,
         "lesson.key": "Creating functions with Parameters",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -1982,8 +1834,6 @@
         "script_level.level_keys": [
           "U3L08 Assessment2"
         ],
-        "script_level.chapter": 75,
-        "script_level.position": 20,
         "lesson.key": "Creating functions with Parameters",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -2005,8 +1855,6 @@
         "script_level.level_keys": [
           "SG v2 U3L09 Student Lesson Introduction"
         ],
-        "script_level.chapter": 76,
-        "script_level.position": 1,
         "lesson.key": "Looping and Random Numbers",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -2028,8 +1876,6 @@
         "script_level.level_keys": [
           "SG csp_applab_loops"
         ],
-        "script_level.chapter": 77,
-        "script_level.position": 2,
         "lesson.key": "Looping and Random Numbers",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -2051,8 +1897,6 @@
         "script_level.level_keys": [
           "SG U3L07 - introSquare"
         ],
-        "script_level.chapter": 78,
-        "script_level.position": 3,
         "lesson.key": "Looping and Random Numbers",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -2074,8 +1918,6 @@
         "script_level.level_keys": [
           "SG U3L07 - randomSquare"
         ],
-        "script_level.chapter": 79,
-        "script_level.position": 4,
         "lesson.key": "Looping and Random Numbers",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -2097,8 +1939,6 @@
         "script_level.level_keys": [
           "SG subgoals_U3_turtle_prediction_FR"
         ],
-        "script_level.chapter": 80,
-        "script_level.position": 5,
         "lesson.key": "Looping and Random Numbers",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -2120,8 +1960,6 @@
         "script_level.level_keys": [
           "SG U3L07 - randomDots1"
         ],
-        "script_level.chapter": 81,
-        "script_level.position": 6,
         "lesson.key": "Looping and Random Numbers",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -2143,8 +1981,6 @@
         "script_level.level_keys": [
           "SG U3L07 - loopsWithRandom"
         ],
-        "script_level.chapter": 82,
-        "script_level.position": 7,
         "lesson.key": "Looping and Random Numbers",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -2166,8 +2002,6 @@
         "script_level.level_keys": [
           "SG U3L07 - topDownDesign"
         ],
-        "script_level.chapter": 83,
-        "script_level.position": 8,
         "lesson.key": "Looping and Random Numbers",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -2189,8 +2023,6 @@
         "script_level.level_keys": [
           "SG U3L07 - bubbles"
         ],
-        "script_level.chapter": 84,
-        "script_level.position": 9,
         "lesson.key": "Looping and Random Numbers",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -2212,8 +2044,6 @@
         "script_level.level_keys": [
           "SG U3L07 - fish"
         ],
-        "script_level.chapter": 85,
-        "script_level.position": 10,
         "lesson.key": "Looping and Random Numbers",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -2235,8 +2065,6 @@
         "script_level.level_keys": [
           "SG U3L07 - seaStar"
         ],
-        "script_level.chapter": 86,
-        "script_level.position": 11,
         "lesson.key": "Looping and Random Numbers",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -2258,8 +2086,6 @@
         "script_level.level_keys": [
           "SG U3L07 - seaGrass"
         ],
-        "script_level.chapter": 87,
-        "script_level.position": 12,
         "lesson.key": "Looping and Random Numbers",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -2281,8 +2107,6 @@
         "script_level.level_keys": [
           "SG U3L07 - allSeaGrass"
         ],
-        "script_level.chapter": 88,
-        "script_level.position": 13,
         "lesson.key": "Looping and Random Numbers",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -2304,8 +2128,6 @@
         "script_level.level_keys": [
           "SG U3L07 - sunBeams"
         ],
-        "script_level.chapter": 89,
-        "script_level.position": 14,
         "lesson.key": "Looping and Random Numbers",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -2327,8 +2149,6 @@
         "script_level.level_keys": [
           "SG U3L07 - Free Play Loops and Random"
         ],
-        "script_level.chapter": 90,
-        "script_level.position": 15,
         "lesson.key": "Looping and Random Numbers",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -2350,8 +2170,6 @@
         "script_level.level_keys": [
           "U3-AP-Practice-Choose-The-Abstraction"
         ],
-        "script_level.chapter": 91,
-        "script_level.position": 16,
         "lesson.key": "Looping and Random Numbers",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -2373,8 +2191,6 @@
         "script_level.level_keys": [
           "U3L07 - MC remove line of code loops"
         ],
-        "script_level.chapter": 92,
-        "script_level.position": 17,
         "lesson.key": "Looping and Random Numbers",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -2396,8 +2212,6 @@
         "script_level.level_keys": [
           "U3L07 Free Response Reflection"
         ],
-        "script_level.chapter": 93,
-        "script_level.position": 18,
         "lesson.key": "Looping and Random Numbers",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -2419,8 +2233,6 @@
         "script_level.level_keys": [
           "subgoals_u3_top_down_FR"
         ],
-        "script_level.chapter": 94,
-        "script_level.position": 19,
         "lesson.key": "Looping and Random Numbers",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -2442,8 +2254,6 @@
         "script_level.level_keys": [
           "SG v2 U3L10 Student Lesson Introduction"
         ],
-        "script_level.chapter": 95,
-        "script_level.position": 1,
         "lesson.key": "Practice PT - Design a Digital Scene",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -2465,8 +2275,6 @@
         "script_level.level_keys": [
           "U3L08 - individualCode"
         ],
-        "script_level.chapter": 96,
-        "script_level.position": 2,
         "lesson.key": "Practice PT - Design a Digital Scene",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -2487,8 +2295,6 @@
         "script_level.level_keys": [
           "How To: Share Code with Teammates"
         ],
-        "script_level.chapter": 97,
-        "script_level.position": 3,
         "lesson.key": "Practice PT - Design a Digital Scene",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -2510,8 +2316,6 @@
         "script_level.level_keys": [
           "U3L08 - digitalScene"
         ],
-        "script_level.chapter": 98,
-        "script_level.position": 4,
         "lesson.key": "Practice PT - Design a Digital Scene",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -2549,8 +2353,6 @@
           "csp_affirmation_intervention_3",
           "csp_affirmation_control_3"
         ],
-        "script_level.chapter": 99,
-        "script_level.position": 1,
         "lesson.key": "Unit 3 Chapter 1 Assessment",
         "lesson_group.key": "cspAssessment",
         "script.name": "csp3-research-mxghyt"
@@ -2572,8 +2374,6 @@
         "script_level.level_keys": [
           "CSP Unit 3 Ch1 Cumulative Assessment MC Group"
         ],
-        "script_level.chapter": 100,
-        "script_level.position": 2,
         "lesson.key": "Unit 3 Chapter 1 Assessment",
         "lesson_group.key": "cspAssessment",
         "script.name": "csp3-research-mxghyt"
@@ -2594,8 +2394,6 @@
         "script_level.level_keys": [
           "csp-post-survey-2017-levelgroup"
         ],
-        "script_level.chapter": 101,
-        "script_level.position": 1,
         "lesson.key": "Please complete the CSP Mid-course survey",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp3-research-mxghyt"
@@ -2612,8 +2410,6 @@
         "script_level.level_keys": [
           "v2 U3L01 Student Lesson Introduction"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "The Need For Programming Languages",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -2625,8 +2421,6 @@
         "script_level.level_keys": [
           "U3L01 Assessment1"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "The Need For Programming Languages",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -2638,8 +2432,6 @@
         "script_level.level_keys": [
           "U3L01 Assessment3"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "The Need For Programming Languages",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -2651,8 +2443,6 @@
         "script_level.level_keys": [
           "csp-pulse-check-survey-4-levelgroup-U3Ch1"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "The Need For Programming Languages",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -2664,8 +2454,6 @@
         "script_level.level_keys": [
           "v2 U3L02 Student Lesson Introduction"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 1,
         "lesson.key": "The Need for Algorithms",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -2677,8 +2465,6 @@
         "script_level.level_keys": [
           "v2 U3L03 Student Lesson Introduction"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 1,
         "lesson.key": "Creativity in Algorithms",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -2690,8 +2476,6 @@
         "script_level.level_keys": [
           "SG U3L04 Student Lesson Introduction"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 1,
         "lesson.key": "Using Simple Commands",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -2703,8 +2487,6 @@
         "script_level.level_keys": [
           "SG csp_applab_turtle"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 2,
         "lesson.key": "Using Simple Commands",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -2716,8 +2498,6 @@
         "script_level.level_keys": [
           "SG U3L2 Using Simple Commands part 1"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 3,
         "lesson.key": "Using Simple Commands",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -2729,8 +2509,6 @@
         "script_level.level_keys": [
           "SGU3L2A Introducing Subgoals"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 4,
         "lesson.key": "Using Simple Commands",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -2742,8 +2520,6 @@
         "script_level.level_keys": [
           "SG U3L2 Using Simple Commands"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 5,
         "lesson.key": "Using Simple Commands",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -2755,8 +2531,6 @@
         "script_level.level_keys": [
           "SG U3L2_TurtleSquare_right"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 6,
         "lesson.key": "Using Simple Commands",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -2768,8 +2542,6 @@
         "script_level.level_keys": [
           "SG Add Subgoals practice"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 7,
         "lesson.key": "Using Simple Commands",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -2781,8 +2553,6 @@
         "script_level.level_keys": [
           "SG U3L2_Turtle3by3Grid"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 8,
         "lesson.key": "Using Simple Commands",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -2794,8 +2564,6 @@
         "script_level.level_keys": [
           "U3L02 Assessment"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 9,
         "lesson.key": "Using Simple Commands",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -2807,8 +2575,6 @@
         "script_level.level_keys": [
           "U3L02 Free Response Getting Started"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 10,
         "lesson.key": "Using Simple Commands",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -2820,8 +2586,6 @@
         "script_level.level_keys": [
           "csp_U3_square_v_rect_FR"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 11,
         "lesson.key": "Using Simple Commands",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -2833,8 +2597,6 @@
         "script_level.level_keys": [
           "U3L02 Free Response Wrap Up"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 12,
         "lesson.key": "Using Simple Commands",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -2846,8 +2608,6 @@
         "script_level.level_keys": [
           "SG v2 U3L05 Student Lesson Introduction"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 1,
         "lesson.key": "Creating Functions",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -2859,8 +2619,6 @@
         "script_level.level_keys": [
           "SG csp_applab_functions"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 2,
         "lesson.key": "Creating Functions",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -2872,8 +2630,6 @@
         "script_level.level_keys": [
           "SG U3L03 Define and use turnAround"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 3,
         "lesson.key": "Creating Functions",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -2885,8 +2641,6 @@
         "script_level.level_keys": [
           "SG U3L03 Draw a T using turnAround"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 4,
         "lesson.key": "Creating Functions",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -2898,8 +2652,6 @@
         "script_level.level_keys": [
           "SG U3L03 define turnRight and draw a rectangle"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 5,
         "lesson.key": "Creating Functions",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -2911,8 +2663,6 @@
         "script_level.level_keys": [
           "SG CSP Abstraction in Programming 2"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 6,
         "lesson.key": "Creating Functions",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -2924,8 +2674,6 @@
         "script_level.level_keys": [
           "SG U3L03 - draw rect function"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 7,
         "lesson.key": "Creating Functions",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -2937,8 +2685,6 @@
         "script_level.level_keys": [
           "SG U3L03 - draw step"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 8,
         "lesson.key": "Creating Functions",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -2950,8 +2696,6 @@
         "script_level.level_keys": [
           "SG U3L03 Three Steps"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 9,
         "lesson.key": "Creating Functions",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -2963,8 +2707,6 @@
         "script_level.level_keys": [
           "SG U3L03 draw diamond"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 10,
         "lesson.key": "Creating Functions",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -2976,8 +2718,6 @@
         "script_level.level_keys": [
           "U3L03 - multiselect - properties of functions"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 11,
         "lesson.key": "Creating Functions",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -2989,8 +2729,6 @@
         "script_level.level_keys": [
           "U3L03 Assessment"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 12,
         "lesson.key": "Creating Functions",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -3002,8 +2740,6 @@
         "script_level.level_keys": [
           "U3L03 Free Response Wrap Up"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 13,
         "lesson.key": "Creating Functions",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -3015,8 +2751,6 @@
         "script_level.level_keys": [
           "csp_U3_plan_code_FR"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 14,
         "lesson.key": "Creating Functions",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -3028,8 +2762,6 @@
         "script_level.level_keys": [
           "SG v2 U3L6 Student Lesson Introduction"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 1,
         "lesson.key": "Functions and Top-Down Design",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -3041,8 +2773,6 @@
         "script_level.level_keys": [
           "SG U3L04 - snowflake"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 2,
         "lesson.key": "Functions and Top-Down Design",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -3054,8 +2784,6 @@
         "script_level.level_keys": [
           "SG U3L04 - 3 by 3 with functions"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 3,
         "lesson.key": "Functions and Top-Down Design",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -3067,8 +2795,6 @@
         "script_level.level_keys": [
           "U3-AP-Practice-FR-design-process"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 4,
         "lesson.key": "Functions and Top-Down Design",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -3080,8 +2806,6 @@
         "script_level.level_keys": [
           "U3L04 Assessment1"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 5,
         "lesson.key": "Functions and Top-Down Design",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -3093,8 +2817,6 @@
         "script_level.level_keys": [
           "U3L04 Assessment2"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 6,
         "lesson.key": "Functions and Top-Down Design",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -3106,8 +2828,6 @@
         "script_level.level_keys": [
           "U3L04 Free Response Wrap Up"
         ],
-        "script_level.chapter": 39,
-        "script_level.position": 7,
         "lesson.key": "Functions and Top-Down Design",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -3119,8 +2839,6 @@
         "script_level.level_keys": [
           "SG v2 U3L07 Student Lesson Introduction"
         ],
-        "script_level.chapter": 40,
-        "script_level.position": 1,
         "lesson.key": "APIs and Function Parameters",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -3132,8 +2850,6 @@
         "script_level.level_keys": [
           "SG U3L06 - moveForwardwithParams"
         ],
-        "script_level.chapter": 41,
-        "script_level.position": 2,
         "lesson.key": "APIs and Function Parameters",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -3145,8 +2861,6 @@
         "script_level.level_keys": [
           "SG U3L06 Challenge 1 triangle"
         ],
-        "script_level.chapter": 42,
-        "script_level.position": 3,
         "lesson.key": "APIs and Function Parameters",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -3158,8 +2872,6 @@
         "script_level.level_keys": [
           "SG U3L07 More Subgoals"
         ],
-        "script_level.chapter": 43,
-        "script_level.position": 4,
         "lesson.key": "APIs and Function Parameters",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -3171,8 +2883,6 @@
         "script_level.level_keys": [
           "SG U3L06 Challenge 2 purple square"
         ],
-        "script_level.chapter": 44,
-        "script_level.position": 5,
         "lesson.key": "APIs and Function Parameters",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -3184,8 +2894,6 @@
         "script_level.level_keys": [
           "SG U3L06 Challenge 3 fill pink"
         ],
-        "script_level.chapter": 45,
-        "script_level.position": 6,
         "lesson.key": "APIs and Function Parameters",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -3197,8 +2905,6 @@
         "script_level.level_keys": [
           "SG U3L06 Challenge 4 bullseye"
         ],
-        "script_level.chapter": 46,
-        "script_level.position": 7,
         "lesson.key": "APIs and Function Parameters",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -3210,8 +2916,6 @@
         "script_level.level_keys": [
           "SG U3L06 Challenge 6 squiggles"
         ],
-        "script_level.chapter": 47,
-        "script_level.position": 8,
         "lesson.key": "APIs and Function Parameters",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -3223,8 +2927,6 @@
         "script_level.level_keys": [
           "SG U3L06 Challenge 5 overlapping circles"
         ],
-        "script_level.chapter": 48,
-        "script_level.position": 9,
         "lesson.key": "APIs and Function Parameters",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -3236,8 +2938,6 @@
         "script_level.level_keys": [
           "SG U3L06 Challenge 7 smiley face"
         ],
-        "script_level.chapter": 49,
-        "script_level.position": 10,
         "lesson.key": "APIs and Function Parameters",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -3249,8 +2949,6 @@
         "script_level.level_keys": [
           "SG U3L06 Challenge 8 make your own"
         ],
-        "script_level.chapter": 50,
-        "script_level.position": 11,
         "lesson.key": "APIs and Function Parameters",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -3262,8 +2960,6 @@
         "script_level.level_keys": [
           "U3-AP-Practice-FR-score-abstraction-response"
         ],
-        "script_level.chapter": 51,
-        "script_level.position": 12,
         "lesson.key": "APIs and Function Parameters",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -3275,8 +2971,6 @@
         "script_level.level_keys": [
           "U3L06 Assessment2"
         ],
-        "script_level.chapter": 52,
-        "script_level.position": 13,
         "lesson.key": "APIs and Function Parameters",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -3288,8 +2982,6 @@
         "script_level.level_keys": [
           "U3L06-API-multichoice"
         ],
-        "script_level.chapter": 53,
-        "script_level.position": 14,
         "lesson.key": "APIs and Function Parameters",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -3301,8 +2993,6 @@
         "script_level.level_keys": [
           "U3L06 Assessment"
         ],
-        "script_level.chapter": 54,
-        "script_level.position": 15,
         "lesson.key": "APIs and Function Parameters",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -3314,8 +3004,6 @@
         "script_level.level_keys": [
           "csp3_U3_turtle_subgoal_mc_levelgroup"
         ],
-        "script_level.chapter": 55,
-        "script_level.position": 16,
         "lesson.key": "APIs and Function Parameters",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -3327,8 +3015,6 @@
         "script_level.level_keys": [
           "SG v2 U3L08 Student Lesson Introduction"
         ],
-        "script_level.chapter": 56,
-        "script_level.position": 1,
         "lesson.key": "Creating functions with Parameters",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -3340,8 +3026,6 @@
         "script_level.level_keys": [
           "SG csp_applab_functions_parameters"
         ],
-        "script_level.chapter": 57,
-        "script_level.position": 2,
         "lesson.key": "Creating functions with Parameters",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -3353,8 +3037,6 @@
         "script_level.level_keys": [
           "SG U3L08 - drawSquareWithParam"
         ],
-        "script_level.chapter": 58,
-        "script_level.position": 3,
         "lesson.key": "Creating functions with Parameters",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -3366,8 +3048,6 @@
         "script_level.level_keys": [
           "SG U3L07 - createTriangleParam"
         ],
-        "script_level.chapter": 59,
-        "script_level.position": 4,
         "lesson.key": "Creating functions with Parameters",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -3379,8 +3059,6 @@
         "script_level.level_keys": [
           "SG U3L08 - squareTwoParams"
         ],
-        "script_level.chapter": 60,
-        "script_level.position": 5,
         "lesson.key": "Creating functions with Parameters",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -3392,8 +3070,6 @@
         "script_level.level_keys": [
           "SG U3L08 - createTwoParamTriangle"
         ],
-        "script_level.chapter": 61,
-        "script_level.position": 6,
         "lesson.key": "Creating functions with Parameters",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -3405,8 +3081,6 @@
         "script_level.level_keys": [
           "SG csp_U3_turtle_subgoal_q3_mc"
         ],
-        "script_level.chapter": 62,
-        "script_level.position": 7,
         "lesson.key": "Creating functions with Parameters",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -3418,8 +3092,6 @@
         "script_level.level_keys": [
           "SG U3 whats a comment"
         ],
-        "script_level.chapter": 63,
-        "script_level.position": 8,
         "lesson.key": "Creating functions with Parameters",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -3431,8 +3103,6 @@
         "script_level.level_keys": [
           "SG U3L08 how to add comments"
         ],
-        "script_level.chapter": 64,
-        "script_level.position": 9,
         "lesson.key": "Creating functions with Parameters",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -3444,8 +3114,6 @@
         "script_level.level_keys": [
           "SG U3L08 - introUnderTheSea"
         ],
-        "script_level.chapter": 65,
-        "script_level.position": 10,
         "lesson.key": "Creating functions with Parameters",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -3457,8 +3125,6 @@
         "script_level.level_keys": [
           "SG U3L08 - paramsToStarfish"
         ],
-        "script_level.chapter": 66,
-        "script_level.position": 11,
         "lesson.key": "Creating functions with Parameters",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -3470,8 +3136,6 @@
         "script_level.level_keys": [
           "SG U3L08 - seaGrass"
         ],
-        "script_level.chapter": 67,
-        "script_level.position": 12,
         "lesson.key": "Creating functions with Parameters",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -3483,8 +3147,6 @@
         "script_level.level_keys": [
           "SG U3L08 - fish"
         ],
-        "script_level.chapter": 68,
-        "script_level.position": 13,
         "lesson.key": "Creating functions with Parameters",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -3496,8 +3158,6 @@
         "script_level.level_keys": [
           "SG U3L08 - multiParamFish"
         ],
-        "script_level.chapter": 69,
-        "script_level.position": 14,
         "lesson.key": "Creating functions with Parameters",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -3509,8 +3169,6 @@
         "script_level.level_keys": [
           "SG U3L08 - randomInput"
         ],
-        "script_level.chapter": 70,
-        "script_level.position": 15,
         "lesson.key": "Creating functions with Parameters",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -3522,8 +3180,6 @@
         "script_level.level_keys": [
           "csp_U3_subgoal_q4_mc"
         ],
-        "script_level.chapter": 71,
-        "script_level.position": 16,
         "lesson.key": "Creating functions with Parameters",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -3535,8 +3191,6 @@
         "script_level.level_keys": [
           "SG U3L08 - freePlay"
         ],
-        "script_level.chapter": 72,
-        "script_level.position": 17,
         "lesson.key": "Creating functions with Parameters",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -3548,8 +3202,6 @@
         "script_level.level_keys": [
           "U3-AP-Practice-FR-manage-complexity"
         ],
-        "script_level.chapter": 73,
-        "script_level.position": 18,
         "lesson.key": "Creating functions with Parameters",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -3561,8 +3213,6 @@
         "script_level.level_keys": [
           "U3L08 Assessment1"
         ],
-        "script_level.chapter": 74,
-        "script_level.position": 19,
         "lesson.key": "Creating functions with Parameters",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -3574,8 +3224,6 @@
         "script_level.level_keys": [
           "U3L08 Assessment2"
         ],
-        "script_level.chapter": 75,
-        "script_level.position": 20,
         "lesson.key": "Creating functions with Parameters",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -3587,8 +3235,6 @@
         "script_level.level_keys": [
           "SG v2 U3L09 Student Lesson Introduction"
         ],
-        "script_level.chapter": 76,
-        "script_level.position": 1,
         "lesson.key": "Looping and Random Numbers",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -3600,8 +3246,6 @@
         "script_level.level_keys": [
           "SG csp_applab_loops"
         ],
-        "script_level.chapter": 77,
-        "script_level.position": 2,
         "lesson.key": "Looping and Random Numbers",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -3613,8 +3257,6 @@
         "script_level.level_keys": [
           "SG U3L07 - introSquare"
         ],
-        "script_level.chapter": 78,
-        "script_level.position": 3,
         "lesson.key": "Looping and Random Numbers",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -3626,8 +3268,6 @@
         "script_level.level_keys": [
           "SG U3L07 - randomSquare"
         ],
-        "script_level.chapter": 79,
-        "script_level.position": 4,
         "lesson.key": "Looping and Random Numbers",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -3639,8 +3279,6 @@
         "script_level.level_keys": [
           "SG subgoals_U3_turtle_prediction_FR"
         ],
-        "script_level.chapter": 80,
-        "script_level.position": 5,
         "lesson.key": "Looping and Random Numbers",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -3652,8 +3290,6 @@
         "script_level.level_keys": [
           "SG U3L07 - randomDots1"
         ],
-        "script_level.chapter": 81,
-        "script_level.position": 6,
         "lesson.key": "Looping and Random Numbers",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -3665,8 +3301,6 @@
         "script_level.level_keys": [
           "SG U3L07 - loopsWithRandom"
         ],
-        "script_level.chapter": 82,
-        "script_level.position": 7,
         "lesson.key": "Looping and Random Numbers",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -3678,8 +3312,6 @@
         "script_level.level_keys": [
           "SG U3L07 - topDownDesign"
         ],
-        "script_level.chapter": 83,
-        "script_level.position": 8,
         "lesson.key": "Looping and Random Numbers",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -3691,8 +3323,6 @@
         "script_level.level_keys": [
           "SG U3L07 - bubbles"
         ],
-        "script_level.chapter": 84,
-        "script_level.position": 9,
         "lesson.key": "Looping and Random Numbers",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -3704,8 +3334,6 @@
         "script_level.level_keys": [
           "SG U3L07 - fish"
         ],
-        "script_level.chapter": 85,
-        "script_level.position": 10,
         "lesson.key": "Looping and Random Numbers",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -3717,8 +3345,6 @@
         "script_level.level_keys": [
           "SG U3L07 - seaStar"
         ],
-        "script_level.chapter": 86,
-        "script_level.position": 11,
         "lesson.key": "Looping and Random Numbers",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -3730,8 +3356,6 @@
         "script_level.level_keys": [
           "SG U3L07 - seaGrass"
         ],
-        "script_level.chapter": 87,
-        "script_level.position": 12,
         "lesson.key": "Looping and Random Numbers",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -3743,8 +3367,6 @@
         "script_level.level_keys": [
           "SG U3L07 - allSeaGrass"
         ],
-        "script_level.chapter": 88,
-        "script_level.position": 13,
         "lesson.key": "Looping and Random Numbers",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -3756,8 +3378,6 @@
         "script_level.level_keys": [
           "SG U3L07 - sunBeams"
         ],
-        "script_level.chapter": 89,
-        "script_level.position": 14,
         "lesson.key": "Looping and Random Numbers",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -3769,8 +3389,6 @@
         "script_level.level_keys": [
           "SG U3L07 - Free Play Loops and Random"
         ],
-        "script_level.chapter": 90,
-        "script_level.position": 15,
         "lesson.key": "Looping and Random Numbers",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -3782,8 +3400,6 @@
         "script_level.level_keys": [
           "U3-AP-Practice-Choose-The-Abstraction"
         ],
-        "script_level.chapter": 91,
-        "script_level.position": 16,
         "lesson.key": "Looping and Random Numbers",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -3795,8 +3411,6 @@
         "script_level.level_keys": [
           "U3L07 - MC remove line of code loops"
         ],
-        "script_level.chapter": 92,
-        "script_level.position": 17,
         "lesson.key": "Looping and Random Numbers",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -3808,8 +3422,6 @@
         "script_level.level_keys": [
           "U3L07 Free Response Reflection"
         ],
-        "script_level.chapter": 93,
-        "script_level.position": 18,
         "lesson.key": "Looping and Random Numbers",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -3821,8 +3433,6 @@
         "script_level.level_keys": [
           "subgoals_u3_top_down_FR"
         ],
-        "script_level.chapter": 94,
-        "script_level.position": 19,
         "lesson.key": "Looping and Random Numbers",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -3834,8 +3444,6 @@
         "script_level.level_keys": [
           "SG v2 U3L10 Student Lesson Introduction"
         ],
-        "script_level.chapter": 95,
-        "script_level.position": 1,
         "lesson.key": "Practice PT - Design a Digital Scene",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -3847,8 +3455,6 @@
         "script_level.level_keys": [
           "U3L08 - individualCode"
         ],
-        "script_level.chapter": 96,
-        "script_level.position": 2,
         "lesson.key": "Practice PT - Design a Digital Scene",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -3860,8 +3466,6 @@
         "script_level.level_keys": [
           "How To: Share Code with Teammates"
         ],
-        "script_level.chapter": 97,
-        "script_level.position": 3,
         "lesson.key": "Practice PT - Design a Digital Scene",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -3873,8 +3477,6 @@
         "script_level.level_keys": [
           "U3L08 - digitalScene"
         ],
-        "script_level.chapter": 98,
-        "script_level.position": 4,
         "lesson.key": "Practice PT - Design a Digital Scene",
         "lesson_group.key": "csp3_1",
         "script.name": "csp3-research-mxghyt"
@@ -3887,8 +3489,6 @@
           "csp_affirmation_intervention_3",
           "csp_affirmation_control_3"
         ],
-        "script_level.chapter": 99,
-        "script_level.position": 1,
         "lesson.key": "Unit 3 Chapter 1 Assessment",
         "lesson_group.key": "cspAssessment",
         "script.name": "csp3-research-mxghyt"
@@ -3901,8 +3501,6 @@
           "csp_affirmation_intervention_3",
           "csp_affirmation_control_3"
         ],
-        "script_level.chapter": 99,
-        "script_level.position": 1,
         "lesson.key": "Unit 3 Chapter 1 Assessment",
         "lesson_group.key": "cspAssessment",
         "script.name": "csp3-research-mxghyt"
@@ -3914,8 +3512,6 @@
         "script_level.level_keys": [
           "CSP Unit 3 Ch1 Cumulative Assessment MC Group"
         ],
-        "script_level.chapter": 100,
-        "script_level.position": 2,
         "lesson.key": "Unit 3 Chapter 1 Assessment",
         "lesson_group.key": "cspAssessment",
         "script.name": "csp3-research-mxghyt"
@@ -3927,8 +3523,6 @@
         "script_level.level_keys": [
           "csp-post-survey-2017-levelgroup"
         ],
-        "script_level.chapter": 101,
-        "script_level.position": 1,
         "lesson.key": "Please complete the CSP Mid-course survey",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp3-research-mxghyt"

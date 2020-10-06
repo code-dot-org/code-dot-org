@@ -168,8 +168,6 @@
         "script_level.level_keys": [
           "U7 L01 More with Functions"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Parameters and Return Values Explore",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-pilot-staging"
@@ -191,8 +189,6 @@
         "script_level.level_keys": [
           "U7 Param Return Investigate Thermostat Embed"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 1,
         "lesson.key": "Parameters and Return Values Investigate",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-pilot-staging"
@@ -214,8 +210,6 @@
         "script_level.level_keys": [
           "U7 Param Return Investigate Rock Embed"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 2,
         "lesson.key": "Parameters and Return Values Investigate",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-pilot-staging"
@@ -237,8 +231,6 @@
         "script_level.level_keys": [
           "U7 Param Return Investigate Weather Embed"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 3,
         "lesson.key": "Parameters and Return Values Investigate",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-pilot-staging"
@@ -260,8 +252,6 @@
         "script_level.level_keys": [
           "U7 Param Return Investigate Thermostat"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 4,
         "lesson.key": "Parameters and Return Values Investigate",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-pilot-staging"
@@ -283,8 +273,6 @@
         "script_level.level_keys": [
           "U7 Param Return Investigate Rock"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 5,
         "lesson.key": "Parameters and Return Values Investigate",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-pilot-staging"
@@ -306,8 +294,6 @@
         "script_level.level_keys": [
           "U7 Param Return Investigate Weather"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 6,
         "lesson.key": "Parameters and Return Values Investigate",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-pilot-staging"
@@ -329,8 +315,6 @@
         "script_level.level_keys": [
           "U7 Param Return Practice Part 1"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 1,
         "lesson.key": "Parameters and Return Values Practice",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-pilot-staging"
@@ -352,8 +336,6 @@
         "script_level.level_keys": [
           "U7 Param Return Practice Part 2"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 2,
         "lesson.key": "Parameters and Return Values Practice",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-pilot-staging"
@@ -375,8 +357,6 @@
         "script_level.level_keys": [
           "U7 Param Return Practice Part 4"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 3,
         "lesson.key": "Parameters and Return Values Practice",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-pilot-staging"
@@ -398,8 +378,6 @@
         "script_level.level_keys": [
           "U7 Param Return Practice Part 3"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 4,
         "lesson.key": "Parameters and Return Values Practice",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-pilot-staging"
@@ -421,8 +399,6 @@
         "script_level.level_keys": [
           "U7 Param Return Practice Part 5"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 5,
         "lesson.key": "Parameters and Return Values Practice",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-pilot-staging"
@@ -444,8 +420,6 @@
         "script_level.level_keys": [
           "U7 Param Investigate Calculator App"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 6,
         "lesson.key": "Parameters and Return Values Practice",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-pilot-staging"
@@ -467,8 +441,6 @@
         "script_level.level_keys": [
           "U7 Param Practice App 2"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 7,
         "lesson.key": "Parameters and Return Values Practice",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-pilot-staging"
@@ -490,8 +462,6 @@
         "script_level.level_keys": [
           "U7 L04 Exit Ticket"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 1,
         "lesson.key": "Libraries Explore",
         "lesson_group.key": "csp_libraries",
         "script.name": "csp7-pilot-staging"
@@ -513,8 +483,6 @@
         "script_level.level_keys": [
           "U7 Libraries Investigate Painting"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 1,
         "lesson.key": "Libraries Investigate",
         "lesson_group.key": "csp_libraries",
         "script.name": "csp7-pilot-staging"
@@ -536,8 +504,6 @@
         "script_level.level_keys": [
           "U7 Libraries List Math Library"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 2,
         "lesson.key": "Libraries Investigate",
         "lesson_group.key": "csp_libraries",
         "script.name": "csp7-pilot-staging"
@@ -559,8 +525,6 @@
         "script_level.level_keys": [
           "U7 Libraries Investigate Pig Latin"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 3,
         "lesson.key": "Libraries Investigate",
         "lesson_group.key": "csp_libraries",
         "script.name": "csp7-pilot-staging"
@@ -582,8 +546,6 @@
         "script_level.level_keys": [
           "U7 Libraries Explanation Video"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 1,
         "lesson.key": "Libraries Project",
         "lesson_group.key": "csp_libraries",
         "script.name": "csp7-pilot-staging"
@@ -605,8 +567,6 @@
         "script_level.level_keys": [
           "CSP Pilot U7 Libraries Make Pt 1"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 2,
         "lesson.key": "Libraries Project",
         "lesson_group.key": "csp_libraries",
         "script.name": "csp7-pilot-staging"
@@ -628,8 +588,6 @@
         "script_level.level_keys": [
           "CSP Pilot U7 Libraries Make Pt 2"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 3,
         "lesson.key": "Libraries Project",
         "lesson_group.key": "csp_libraries",
         "script.name": "csp7-pilot-staging"
@@ -651,8 +609,6 @@
         "script_level.level_keys": [
           "CSP Pilot U7 Libraries Make Pt 3"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 4,
         "lesson.key": "Libraries Project",
         "lesson_group.key": "csp_libraries",
         "script.name": "csp7-pilot-staging"
@@ -674,8 +630,6 @@
         "script_level.level_keys": [
           "CSP Pilot U7 Libraries Make Pt 4"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 5,
         "lesson.key": "Libraries Project",
         "lesson_group.key": "csp_libraries",
         "script.name": "csp7-pilot-staging"
@@ -697,8 +651,6 @@
         "script_level.level_keys": [
           "Student Late Spring Pilot Survey Libraries"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 1,
         "lesson.key": "Student Survey (Libraries)",
         "lesson_group.key": "csp_libraries",
         "script.name": "csp7-pilot-staging"
@@ -720,8 +672,6 @@
         "script_level.level_keys": [
           "Teacher Late Spring Pilot Survey Libraries"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 1,
         "lesson.key": "Teacher Survey (Libraries)",
         "lesson_group.key": "csp_libraries",
         "script.name": "csp7-pilot-staging"
@@ -738,8 +688,6 @@
         "script_level.level_keys": [
           "U7 L01 More with Functions"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Parameters and Return Values Explore",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-pilot-staging"
@@ -751,8 +699,6 @@
         "script_level.level_keys": [
           "U7 Param Return Investigate Thermostat Embed"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 1,
         "lesson.key": "Parameters and Return Values Investigate",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-pilot-staging"
@@ -764,8 +710,6 @@
         "script_level.level_keys": [
           "U7 Param Return Investigate Rock Embed"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 2,
         "lesson.key": "Parameters and Return Values Investigate",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-pilot-staging"
@@ -777,8 +721,6 @@
         "script_level.level_keys": [
           "U7 Param Return Investigate Weather Embed"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 3,
         "lesson.key": "Parameters and Return Values Investigate",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-pilot-staging"
@@ -790,8 +732,6 @@
         "script_level.level_keys": [
           "U7 Param Return Investigate Thermostat"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 4,
         "lesson.key": "Parameters and Return Values Investigate",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-pilot-staging"
@@ -803,8 +743,6 @@
         "script_level.level_keys": [
           "U7 Param Return Investigate Rock"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 5,
         "lesson.key": "Parameters and Return Values Investigate",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-pilot-staging"
@@ -816,8 +754,6 @@
         "script_level.level_keys": [
           "U7 Param Return Investigate Weather"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 6,
         "lesson.key": "Parameters and Return Values Investigate",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-pilot-staging"
@@ -829,8 +765,6 @@
         "script_level.level_keys": [
           "U7 Param Return Practice Part 1"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 1,
         "lesson.key": "Parameters and Return Values Practice",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-pilot-staging"
@@ -842,8 +776,6 @@
         "script_level.level_keys": [
           "U7 Param Return Practice Part 2"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 2,
         "lesson.key": "Parameters and Return Values Practice",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-pilot-staging"
@@ -855,8 +787,6 @@
         "script_level.level_keys": [
           "U7 Param Return Practice Part 4"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 3,
         "lesson.key": "Parameters and Return Values Practice",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-pilot-staging"
@@ -868,8 +798,6 @@
         "script_level.level_keys": [
           "U7 Param Return Practice Part 3"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 4,
         "lesson.key": "Parameters and Return Values Practice",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-pilot-staging"
@@ -881,8 +809,6 @@
         "script_level.level_keys": [
           "U7 Param Return Practice Part 5"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 5,
         "lesson.key": "Parameters and Return Values Practice",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-pilot-staging"
@@ -894,8 +820,6 @@
         "script_level.level_keys": [
           "U7 Param Investigate Calculator App"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 6,
         "lesson.key": "Parameters and Return Values Practice",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-pilot-staging"
@@ -907,8 +831,6 @@
         "script_level.level_keys": [
           "U7 Param Practice App 2"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 7,
         "lesson.key": "Parameters and Return Values Practice",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-pilot-staging"
@@ -920,8 +842,6 @@
         "script_level.level_keys": [
           "U7 L04 Exit Ticket"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 1,
         "lesson.key": "Libraries Explore",
         "lesson_group.key": "csp_libraries",
         "script.name": "csp7-pilot-staging"
@@ -933,8 +853,6 @@
         "script_level.level_keys": [
           "U7 Libraries Investigate Painting"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 1,
         "lesson.key": "Libraries Investigate",
         "lesson_group.key": "csp_libraries",
         "script.name": "csp7-pilot-staging"
@@ -946,8 +864,6 @@
         "script_level.level_keys": [
           "U7 Libraries List Math Library"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 2,
         "lesson.key": "Libraries Investigate",
         "lesson_group.key": "csp_libraries",
         "script.name": "csp7-pilot-staging"
@@ -959,8 +875,6 @@
         "script_level.level_keys": [
           "U7 Libraries Investigate Pig Latin"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 3,
         "lesson.key": "Libraries Investigate",
         "lesson_group.key": "csp_libraries",
         "script.name": "csp7-pilot-staging"
@@ -972,8 +886,6 @@
         "script_level.level_keys": [
           "U7 Libraries Explanation Video"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 1,
         "lesson.key": "Libraries Project",
         "lesson_group.key": "csp_libraries",
         "script.name": "csp7-pilot-staging"
@@ -985,8 +897,6 @@
         "script_level.level_keys": [
           "CSP Pilot U7 Libraries Make Pt 1"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 2,
         "lesson.key": "Libraries Project",
         "lesson_group.key": "csp_libraries",
         "script.name": "csp7-pilot-staging"
@@ -998,8 +908,6 @@
         "script_level.level_keys": [
           "CSP Pilot U7 Libraries Make Pt 2"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 3,
         "lesson.key": "Libraries Project",
         "lesson_group.key": "csp_libraries",
         "script.name": "csp7-pilot-staging"
@@ -1011,8 +919,6 @@
         "script_level.level_keys": [
           "CSP Pilot U7 Libraries Make Pt 3"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 4,
         "lesson.key": "Libraries Project",
         "lesson_group.key": "csp_libraries",
         "script.name": "csp7-pilot-staging"
@@ -1024,8 +930,6 @@
         "script_level.level_keys": [
           "CSP Pilot U7 Libraries Make Pt 4"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 5,
         "lesson.key": "Libraries Project",
         "lesson_group.key": "csp_libraries",
         "script.name": "csp7-pilot-staging"
@@ -1037,8 +941,6 @@
         "script_level.level_keys": [
           "Student Late Spring Pilot Survey Libraries"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 1,
         "lesson.key": "Student Survey (Libraries)",
         "lesson_group.key": "csp_libraries",
         "script.name": "csp7-pilot-staging"
@@ -1050,8 +952,6 @@
         "script_level.level_keys": [
           "Teacher Late Spring Pilot Survey Libraries"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 1,
         "lesson.key": "Teacher Survey (Libraries)",
         "lesson_group.key": "csp_libraries",
         "script.name": "csp7-pilot-staging"

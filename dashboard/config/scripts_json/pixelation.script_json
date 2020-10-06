@@ -111,8 +111,6 @@
         "script_level.level_keys": [
           "Pixelation 4x4 Empty"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Black & White Pixelation Tutorial",
         "lesson_group.key": "",
         "script.name": "pixelation"
@@ -133,8 +131,6 @@
         "script_level.level_keys": [
           "Pixelation 1"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 1,
         "lesson.key": "Black & White Pixelation Freeplay",
         "lesson_group.key": "",
         "script.name": "pixelation"
@@ -155,8 +151,6 @@
         "script_level.level_keys": [
           "Pixelation - Lesson 15 - Complete 3-bit color"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 1,
         "lesson.key": "Color Pixelation Tutorial",
         "lesson_group.key": "",
         "script.name": "pixelation"
@@ -177,8 +171,6 @@
         "script_level.level_keys": [
           "Pixelation - Lesson 15 - Color Shades"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 2,
         "lesson.key": "Color Pixelation Tutorial",
         "lesson_group.key": "",
         "script.name": "pixelation"
@@ -199,8 +191,6 @@
         "script_level.level_keys": [
           "Pixelation - Lesson 15 - Color Shades 4x4"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 3,
         "lesson.key": "Color Pixelation Tutorial",
         "lesson_group.key": "",
         "script.name": "pixelation"
@@ -221,8 +211,6 @@
         "script_level.level_keys": [
           "Pixelation Flappy"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 1,
         "lesson.key": "Color Pixelation Examples",
         "lesson_group.key": "",
         "script.name": "pixelation"
@@ -243,8 +231,6 @@
         "script_level.level_keys": [
           "Pixelation Bee"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 2,
         "lesson.key": "Color Pixelation Examples",
         "lesson_group.key": "",
         "script.name": "pixelation"
@@ -265,8 +251,6 @@
         "script_level.level_keys": [
           "Mixing Colors"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 1,
         "lesson.key": "Color Pixelation Freeplay",
         "lesson_group.key": "",
         "script.name": "pixelation"
@@ -283,8 +267,6 @@
         "script_level.level_keys": [
           "Pixelation 4x4 Empty"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Black & White Pixelation Tutorial",
         "lesson_group.key": "",
         "script.name": "pixelation"
@@ -296,8 +278,6 @@
         "script_level.level_keys": [
           "Pixelation 1"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 1,
         "lesson.key": "Black & White Pixelation Freeplay",
         "lesson_group.key": "",
         "script.name": "pixelation"
@@ -309,8 +289,6 @@
         "script_level.level_keys": [
           "Pixelation - Lesson 15 - Complete 3-bit color"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 1,
         "lesson.key": "Color Pixelation Tutorial",
         "lesson_group.key": "",
         "script.name": "pixelation"
@@ -322,8 +300,6 @@
         "script_level.level_keys": [
           "Pixelation - Lesson 15 - Color Shades"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 2,
         "lesson.key": "Color Pixelation Tutorial",
         "lesson_group.key": "",
         "script.name": "pixelation"
@@ -335,8 +311,6 @@
         "script_level.level_keys": [
           "Pixelation - Lesson 15 - Color Shades 4x4"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 3,
         "lesson.key": "Color Pixelation Tutorial",
         "lesson_group.key": "",
         "script.name": "pixelation"
@@ -348,8 +322,6 @@
         "script_level.level_keys": [
           "Pixelation Flappy"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 1,
         "lesson.key": "Color Pixelation Examples",
         "lesson_group.key": "",
         "script.name": "pixelation"
@@ -361,8 +333,6 @@
         "script_level.level_keys": [
           "Pixelation Bee"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 2,
         "lesson.key": "Color Pixelation Examples",
         "lesson_group.key": "",
         "script.name": "pixelation"
@@ -374,8 +344,6 @@
         "script_level.level_keys": [
           "Mixing Colors"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 1,
         "lesson.key": "Color Pixelation Freeplay",
         "lesson_group.key": "",
         "script.name": "pixelation"

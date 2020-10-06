@@ -89,6 +89,7 @@ class LevelsController < ApplicationController
     ]
 
     filter_levels(params)
+    @levels = @levels.page(params[:page]).per(LEVELS_PER_PAGE)
   end
 
   # GET /levels/get_filters/
@@ -101,6 +102,8 @@ class LevelsController < ApplicationController
   # Get all the information for levels after filtering
   def get_filtered_levels
     filter_levels(params)
+    @levels = @levels.page(params[:page]).per(7)
+    @levels = @levels.map(&:summarize_for_edit)
     render json: @levels
   end
 
@@ -129,7 +132,6 @@ class LevelsController < ApplicationController
     @levels = @levels.where('levels.type = ?', params[:level_type]) if params[:level_type].present?
     @levels = @levels.joins(:script_levels).where('script_levels.script_id = ?', params[:script_id]) if params[:script_id].present?
     @levels = @levels.left_joins(:user).where('levels.user_id = ?', params[:owner_id]) if params[:owner_id].present?
-    @levels = @levels.page(params[:page]).per(LEVELS_PER_PAGE)
   end
 
   # GET /levels/1

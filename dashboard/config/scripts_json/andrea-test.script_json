@@ -113,8 +113,6 @@
         "script_level.level_keys": [
           "andrea_test1"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Deeper Learning Overview",
         "lesson_group.key": "required",
         "script.name": "andrea-test"
@@ -136,8 +134,6 @@
         "script_level.level_keys": [
           "andrea-test2"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 1,
         "lesson.key": "Part 1",
         "lesson_group.key": "content",
         "script.name": "andrea-test"
@@ -159,8 +155,6 @@
         "script_level.level_keys": [
           "andrea-test3"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 2,
         "lesson.key": "Part 1",
         "lesson_group.key": "content",
         "script.name": "andrea-test"
@@ -182,8 +176,6 @@
           "andrea_test1",
           "andrea-test2"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 1,
         "lesson.key": "Part 2",
         "lesson_group.key": "content",
         "script.name": "andrea-test"
@@ -206,8 +198,6 @@
         "script_level.level_keys": [
           "dlp-hold1"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 1,
         "lesson.key": "part 3",
         "lesson_group.key": "content",
         "script.name": "andrea-test"
@@ -224,8 +214,6 @@
         "script_level.level_keys": [
           "andrea_test1"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Deeper Learning Overview",
         "lesson_group.key": "required",
         "script.name": "andrea-test"
@@ -237,8 +225,6 @@
         "script_level.level_keys": [
           "andrea-test2"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 1,
         "lesson.key": "Part 1",
         "lesson_group.key": "content",
         "script.name": "andrea-test"
@@ -250,8 +236,6 @@
         "script_level.level_keys": [
           "andrea-test3"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 2,
         "lesson.key": "Part 1",
         "lesson_group.key": "content",
         "script.name": "andrea-test"
@@ -264,8 +248,6 @@
           "andrea_test1",
           "andrea-test2"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 1,
         "lesson.key": "Part 2",
         "lesson_group.key": "content",
         "script.name": "andrea-test"
@@ -278,8 +260,6 @@
           "andrea_test1",
           "andrea-test2"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 1,
         "lesson.key": "Part 2",
         "lesson_group.key": "content",
         "script.name": "andrea-test"
@@ -291,8 +271,6 @@
         "script_level.level_keys": [
           "dlp-hold1"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 1,
         "lesson.key": "part 3",
         "lesson_group.key": "content",
         "script.name": "andrea-test"

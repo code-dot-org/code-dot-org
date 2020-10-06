@@ -163,8 +163,6 @@
         "script_level.level_keys": [
           "CSPPD Welcome Video"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "test Unit 1 required reading",
         "lesson_group.key": "required",
         "script.name": "test-teaching-ap-cs-unit-1"
@@ -185,8 +183,6 @@
         "script_level.level_keys": [
           "PDECS tour"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "test Unit 1 required reading",
         "lesson_group.key": "required",
         "script.name": "test-teaching-ap-cs-unit-1"
@@ -207,8 +203,6 @@
         "script_level.level_keys": [
           "PDECS commitment"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "test Unit 1 required reading",
         "lesson_group.key": "required",
         "script.name": "test-teaching-ap-cs-unit-1"
@@ -229,8 +223,6 @@
         "script_level.level_keys": [
           "CSPPD2 chunk 1"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 1,
         "lesson.key": "test Unit 1 content module Alpha",
         "lesson_group.key": "content",
         "script.name": "test-teaching-ap-cs-unit-1"
@@ -251,8 +243,6 @@
         "script_level.level_keys": [
           "CSPPD2 chunk 1 lessons"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 2,
         "lesson.key": "test Unit 1 content module Alpha",
         "lesson_group.key": "content",
         "script.name": "test-teaching-ap-cs-unit-1"
@@ -273,8 +263,6 @@
         "script_level.level_keys": [
           "CSPPD2 PIvideo"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 3,
         "lesson.key": "test Unit 1 content module Alpha",
         "lesson_group.key": "content",
         "script.name": "test-teaching-ap-cs-unit-1"
@@ -295,8 +283,6 @@
         "script_level.level_keys": [
           "CSPPD2 chunk 2"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 1,
         "lesson.key": "test Unit 1 content module Bravo",
         "lesson_group.key": "content",
         "script.name": "test-teaching-ap-cs-unit-1"
@@ -317,8 +303,6 @@
         "script_level.level_keys": [
           "CSPPD2 chunk 2 lessons"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 2,
         "lesson.key": "test Unit 1 content module Bravo",
         "lesson_group.key": "content",
         "script.name": "test-teaching-ap-cs-unit-1"
@@ -339,8 +323,6 @@
         "script_level.level_keys": [
           "CSPPD2 chunk 2 reflection"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 3,
         "lesson.key": "test Unit 1 content module Bravo",
         "lesson_group.key": "content",
         "script.name": "test-teaching-ap-cs-unit-1"
@@ -361,8 +343,6 @@
         "script_level.level_keys": [
           "CSPPD2 chunk 3"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 1,
         "lesson.key": "test Unit 1 content module Charlie",
         "lesson_group.key": "content",
         "script.name": "test-teaching-ap-cs-unit-1"
@@ -383,8 +363,6 @@
         "script_level.level_keys": [
           "CSPPD2 chunk 3 lessons"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 2,
         "lesson.key": "test Unit 1 content module Charlie",
         "lesson_group.key": "content",
         "script.name": "test-teaching-ap-cs-unit-1"
@@ -405,8 +383,6 @@
         "script_level.level_keys": [
           "CSPPD2 share protocol"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 3,
         "lesson.key": "test Unit 1 content module Charlie",
         "lesson_group.key": "content",
         "script.name": "test-teaching-ap-cs-unit-1"
@@ -427,8 +403,6 @@
         "script_level.level_keys": [
           "CSPPD2 chunk 4"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 1,
         "lesson.key": "test Unit 1 practice module Delta",
         "lesson_group.key": "practice",
         "script.name": "test-teaching-ap-cs-unit-1"
@@ -449,8 +423,6 @@
         "script_level.level_keys": [
           "CSPPD2 chunk 4 lessons"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 2,
         "lesson.key": "test Unit 1 practice module Delta",
         "lesson_group.key": "practice",
         "script.name": "test-teaching-ap-cs-unit-1"
@@ -471,8 +443,6 @@
         "script_level.level_keys": [
           "CSPPD2 share compression"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 3,
         "lesson.key": "test Unit 1 practice module Delta",
         "lesson_group.key": "practice",
         "script.name": "test-teaching-ap-cs-unit-1"
@@ -493,8 +463,6 @@
         "script_level.level_keys": [
           "CSPPD2 PT"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 1,
         "lesson.key": "test Unit 1 practice module Echo",
         "lesson_group.key": "practice",
         "script.name": "test-teaching-ap-cs-unit-1"
@@ -515,8 +483,6 @@
         "script_level.level_keys": [
           "CSPPD2 PT activity"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 2,
         "lesson.key": "test Unit 1 practice module Echo",
         "lesson_group.key": "practice",
         "script.name": "test-teaching-ap-cs-unit-1"
@@ -537,8 +503,6 @@
         "script_level.level_keys": [
           "CSPPD2 PT forum"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 3,
         "lesson.key": "test Unit 1 practice module Echo",
         "lesson_group.key": "practice",
         "script.name": "test-teaching-ap-cs-unit-1"
@@ -559,8 +523,6 @@
         "script_level.level_keys": [
           "CSPPD2 congrats"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 1,
         "lesson.key": "test Unit 1 practice module Foxtrot",
         "lesson_group.key": "practice",
         "script.name": "test-teaching-ap-cs-unit-1"
@@ -581,8 +543,6 @@
         "script_level.level_keys": [
           "CSPPD2 next step announcements"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 2,
         "lesson.key": "test Unit 1 practice module Foxtrot",
         "lesson_group.key": "practice",
         "script.name": "test-teaching-ap-cs-unit-1"
@@ -599,8 +559,6 @@
         "script_level.level_keys": [
           "CSPPD Welcome Video"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "test Unit 1 required reading",
         "lesson_group.key": "required",
         "script.name": "test-teaching-ap-cs-unit-1"
@@ -612,8 +570,6 @@
         "script_level.level_keys": [
           "PDECS tour"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "test Unit 1 required reading",
         "lesson_group.key": "required",
         "script.name": "test-teaching-ap-cs-unit-1"
@@ -625,8 +581,6 @@
         "script_level.level_keys": [
           "PDECS commitment"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "test Unit 1 required reading",
         "lesson_group.key": "required",
         "script.name": "test-teaching-ap-cs-unit-1"
@@ -638,8 +592,6 @@
         "script_level.level_keys": [
           "CSPPD2 chunk 1"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 1,
         "lesson.key": "test Unit 1 content module Alpha",
         "lesson_group.key": "content",
         "script.name": "test-teaching-ap-cs-unit-1"
@@ -651,8 +603,6 @@
         "script_level.level_keys": [
           "CSPPD2 chunk 1 lessons"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 2,
         "lesson.key": "test Unit 1 content module Alpha",
         "lesson_group.key": "content",
         "script.name": "test-teaching-ap-cs-unit-1"
@@ -664,8 +614,6 @@
         "script_level.level_keys": [
           "CSPPD2 PIvideo"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 3,
         "lesson.key": "test Unit 1 content module Alpha",
         "lesson_group.key": "content",
         "script.name": "test-teaching-ap-cs-unit-1"
@@ -677,8 +625,6 @@
         "script_level.level_keys": [
           "CSPPD2 chunk 2"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 1,
         "lesson.key": "test Unit 1 content module Bravo",
         "lesson_group.key": "content",
         "script.name": "test-teaching-ap-cs-unit-1"
@@ -690,8 +636,6 @@
         "script_level.level_keys": [
           "CSPPD2 chunk 2 lessons"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 2,
         "lesson.key": "test Unit 1 content module Bravo",
         "lesson_group.key": "content",
         "script.name": "test-teaching-ap-cs-unit-1"
@@ -703,8 +647,6 @@
         "script_level.level_keys": [
           "CSPPD2 chunk 2 reflection"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 3,
         "lesson.key": "test Unit 1 content module Bravo",
         "lesson_group.key": "content",
         "script.name": "test-teaching-ap-cs-unit-1"
@@ -716,8 +658,6 @@
         "script_level.level_keys": [
           "CSPPD2 chunk 3"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 1,
         "lesson.key": "test Unit 1 content module Charlie",
         "lesson_group.key": "content",
         "script.name": "test-teaching-ap-cs-unit-1"
@@ -729,8 +669,6 @@
         "script_level.level_keys": [
           "CSPPD2 chunk 3 lessons"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 2,
         "lesson.key": "test Unit 1 content module Charlie",
         "lesson_group.key": "content",
         "script.name": "test-teaching-ap-cs-unit-1"
@@ -742,8 +680,6 @@
         "script_level.level_keys": [
           "CSPPD2 share protocol"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 3,
         "lesson.key": "test Unit 1 content module Charlie",
         "lesson_group.key": "content",
         "script.name": "test-teaching-ap-cs-unit-1"
@@ -755,8 +691,6 @@
         "script_level.level_keys": [
           "CSPPD2 chunk 4"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 1,
         "lesson.key": "test Unit 1 practice module Delta",
         "lesson_group.key": "practice",
         "script.name": "test-teaching-ap-cs-unit-1"
@@ -768,8 +702,6 @@
         "script_level.level_keys": [
           "CSPPD2 chunk 4 lessons"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 2,
         "lesson.key": "test Unit 1 practice module Delta",
         "lesson_group.key": "practice",
         "script.name": "test-teaching-ap-cs-unit-1"
@@ -781,8 +713,6 @@
         "script_level.level_keys": [
           "CSPPD2 share compression"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 3,
         "lesson.key": "test Unit 1 practice module Delta",
         "lesson_group.key": "practice",
         "script.name": "test-teaching-ap-cs-unit-1"
@@ -794,8 +724,6 @@
         "script_level.level_keys": [
           "CSPPD2 PT"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 1,
         "lesson.key": "test Unit 1 practice module Echo",
         "lesson_group.key": "practice",
         "script.name": "test-teaching-ap-cs-unit-1"
@@ -807,8 +735,6 @@
         "script_level.level_keys": [
           "CSPPD2 PT activity"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 2,
         "lesson.key": "test Unit 1 practice module Echo",
         "lesson_group.key": "practice",
         "script.name": "test-teaching-ap-cs-unit-1"
@@ -820,8 +746,6 @@
         "script_level.level_keys": [
           "CSPPD2 PT forum"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 3,
         "lesson.key": "test Unit 1 practice module Echo",
         "lesson_group.key": "practice",
         "script.name": "test-teaching-ap-cs-unit-1"
@@ -833,8 +757,6 @@
         "script_level.level_keys": [
           "CSPPD2 congrats"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 1,
         "lesson.key": "test Unit 1 practice module Foxtrot",
         "lesson_group.key": "practice",
         "script.name": "test-teaching-ap-cs-unit-1"
@@ -846,8 +768,6 @@
         "script_level.level_keys": [
           "CSPPD2 next step announcements"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 2,
         "lesson.key": "test Unit 1 practice module Foxtrot",
         "lesson_group.key": "practice",
         "script.name": "test-teaching-ap-cs-unit-1"

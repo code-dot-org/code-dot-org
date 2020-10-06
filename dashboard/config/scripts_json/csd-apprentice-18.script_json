@@ -139,8 +139,6 @@
         "script_level.level_keys": [
           "welcome-apprentice-18"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Apprentice Reflection Overview",
         "lesson_group.key": "required",
         "script.name": "csd-apprentice-18"
@@ -161,8 +159,6 @@
         "script_level.level_keys": [
           "morning-prep-monday"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 1,
         "lesson.key": "Day 1",
         "lesson_group.key": "content",
         "script.name": "csd-apprentice-18"
@@ -183,8 +179,6 @@
         "script_level.level_keys": [
           "feel-monday"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 2,
         "lesson.key": "Day 1",
         "lesson_group.key": "content",
         "script.name": "csd-apprentice-18"
@@ -205,8 +199,6 @@
         "script_level.level_keys": [
           "csd-pushDL-unit1"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 3,
         "lesson.key": "Day 1",
         "lesson_group.key": "content",
         "script.name": "csd-apprentice-18"
@@ -227,8 +219,6 @@
         "script_level.level_keys": [
           "morning-prep-tuesday"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 1,
         "lesson.key": "Day 2",
         "lesson_group.key": "content",
         "script.name": "csd-apprentice-18"
@@ -249,8 +239,6 @@
         "script_level.level_keys": [
           "feel-tuesday"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 2,
         "lesson.key": "Day 2",
         "lesson_group.key": "content",
         "script.name": "csd-apprentice-18"
@@ -271,8 +259,6 @@
         "script_level.level_keys": [
           "instructional-strategy-tuesday"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 3,
         "lesson.key": "Day 2",
         "lesson_group.key": "content",
         "script.name": "csd-apprentice-18"
@@ -293,8 +279,6 @@
         "script_level.level_keys": [
           "csd-pushDL-unit2"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 4,
         "lesson.key": "Day 2",
         "lesson_group.key": "content",
         "script.name": "csd-apprentice-18"
@@ -315,8 +299,6 @@
         "script_level.level_keys": [
           "morning-prep-wednesday"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 1,
         "lesson.key": "Day 3",
         "lesson_group.key": "content",
         "script.name": "csd-apprentice-18"
@@ -337,8 +319,6 @@
         "script_level.level_keys": [
           "feel-wednesday"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 2,
         "lesson.key": "Day 3",
         "lesson_group.key": "content",
         "script.name": "csd-apprentice-18"
@@ -359,8 +339,6 @@
         "script_level.level_keys": [
           "getting-buy-in-wednesday"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 3,
         "lesson.key": "Day 3",
         "lesson_group.key": "content",
         "script.name": "csd-apprentice-18"
@@ -381,8 +359,6 @@
         "script_level.level_keys": [
           "csd-pushDL-unit2"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 4,
         "lesson.key": "Day 3",
         "lesson_group.key": "content",
         "script.name": "csd-apprentice-18"
@@ -403,8 +379,6 @@
         "script_level.level_keys": [
           "morning-prep-thursday"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 1,
         "lesson.key": "Day 4",
         "lesson_group.key": "content",
         "script.name": "csd-apprentice-18"
@@ -425,8 +399,6 @@
         "script_level.level_keys": [
           "feel-thursday"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 2,
         "lesson.key": "Day 4",
         "lesson_group.key": "content",
         "script.name": "csd-apprentice-18"
@@ -447,8 +419,6 @@
         "script_level.level_keys": [
           "recruiting-thursday"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 3,
         "lesson.key": "Day 4",
         "lesson_group.key": "content",
         "script.name": "csd-apprentice-18"
@@ -469,8 +439,6 @@
         "script_level.level_keys": [
           "csd-pushDL-unit3"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 4,
         "lesson.key": "Day 4",
         "lesson_group.key": "content",
         "script.name": "csd-apprentice-18"
@@ -491,8 +459,6 @@
         "script_level.level_keys": [
           "apprentice-congrats"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 1,
         "lesson.key": "Wrap Up",
         "lesson_group.key": "content",
         "script.name": "csd-apprentice-18"
@@ -509,8 +475,6 @@
         "script_level.level_keys": [
           "welcome-apprentice-18"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Apprentice Reflection Overview",
         "lesson_group.key": "required",
         "script.name": "csd-apprentice-18"
@@ -522,8 +486,6 @@
         "script_level.level_keys": [
           "morning-prep-monday"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 1,
         "lesson.key": "Day 1",
         "lesson_group.key": "content",
         "script.name": "csd-apprentice-18"
@@ -535,8 +497,6 @@
         "script_level.level_keys": [
           "feel-monday"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 2,
         "lesson.key": "Day 1",
         "lesson_group.key": "content",
         "script.name": "csd-apprentice-18"
@@ -548,8 +508,6 @@
         "script_level.level_keys": [
           "csd-pushDL-unit1"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 3,
         "lesson.key": "Day 1",
         "lesson_group.key": "content",
         "script.name": "csd-apprentice-18"
@@ -561,8 +519,6 @@
         "script_level.level_keys": [
           "morning-prep-tuesday"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 1,
         "lesson.key": "Day 2",
         "lesson_group.key": "content",
         "script.name": "csd-apprentice-18"
@@ -574,8 +530,6 @@
         "script_level.level_keys": [
           "feel-tuesday"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 2,
         "lesson.key": "Day 2",
         "lesson_group.key": "content",
         "script.name": "csd-apprentice-18"
@@ -587,8 +541,6 @@
         "script_level.level_keys": [
           "instructional-strategy-tuesday"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 3,
         "lesson.key": "Day 2",
         "lesson_group.key": "content",
         "script.name": "csd-apprentice-18"
@@ -600,8 +552,6 @@
         "script_level.level_keys": [
           "csd-pushDL-unit2"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 4,
         "lesson.key": "Day 2",
         "lesson_group.key": "content",
         "script.name": "csd-apprentice-18"
@@ -613,8 +563,6 @@
         "script_level.level_keys": [
           "morning-prep-wednesday"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 1,
         "lesson.key": "Day 3",
         "lesson_group.key": "content",
         "script.name": "csd-apprentice-18"
@@ -626,8 +574,6 @@
         "script_level.level_keys": [
           "feel-wednesday"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 2,
         "lesson.key": "Day 3",
         "lesson_group.key": "content",
         "script.name": "csd-apprentice-18"
@@ -639,8 +585,6 @@
         "script_level.level_keys": [
           "getting-buy-in-wednesday"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 3,
         "lesson.key": "Day 3",
         "lesson_group.key": "content",
         "script.name": "csd-apprentice-18"
@@ -652,8 +596,6 @@
         "script_level.level_keys": [
           "csd-pushDL-unit2"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 4,
         "lesson.key": "Day 3",
         "lesson_group.key": "content",
         "script.name": "csd-apprentice-18"
@@ -665,8 +607,6 @@
         "script_level.level_keys": [
           "morning-prep-thursday"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 1,
         "lesson.key": "Day 4",
         "lesson_group.key": "content",
         "script.name": "csd-apprentice-18"
@@ -678,8 +618,6 @@
         "script_level.level_keys": [
           "feel-thursday"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 2,
         "lesson.key": "Day 4",
         "lesson_group.key": "content",
         "script.name": "csd-apprentice-18"
@@ -691,8 +629,6 @@
         "script_level.level_keys": [
           "recruiting-thursday"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 3,
         "lesson.key": "Day 4",
         "lesson_group.key": "content",
         "script.name": "csd-apprentice-18"
@@ -704,8 +640,6 @@
         "script_level.level_keys": [
           "csd-pushDL-unit3"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 4,
         "lesson.key": "Day 4",
         "lesson_group.key": "content",
         "script.name": "csd-apprentice-18"
@@ -717,8 +651,6 @@
         "script_level.level_keys": [
           "apprentice-congrats"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 1,
         "lesson.key": "Wrap Up",
         "lesson_group.key": "content",
         "script.name": "csd-apprentice-18"

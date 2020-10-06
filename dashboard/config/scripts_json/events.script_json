@@ -96,8 +96,6 @@
         "script_level.level_keys": [
           "bounce_1"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Bounce",
         "lesson_group.key": "",
         "script.name": "events"
@@ -118,8 +116,6 @@
         "script_level.level_keys": [
           "bounce_2"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Bounce",
         "lesson_group.key": "",
         "script.name": "events"
@@ -140,8 +136,6 @@
         "script_level.level_keys": [
           "bounce_3"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "Bounce",
         "lesson_group.key": "",
         "script.name": "events"
@@ -162,8 +156,6 @@
         "script_level.level_keys": [
           "bounce_4"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "Bounce",
         "lesson_group.key": "",
         "script.name": "events"
@@ -184,8 +176,6 @@
         "script_level.level_keys": [
           "bounce_5"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 5,
         "lesson.key": "Bounce",
         "lesson_group.key": "",
         "script.name": "events"
@@ -206,8 +196,6 @@
         "script_level.level_keys": [
           "bounce_6"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 6,
         "lesson.key": "Bounce",
         "lesson_group.key": "",
         "script.name": "events"
@@ -228,8 +216,6 @@
         "script_level.level_keys": [
           "bounce_7"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 7,
         "lesson.key": "Bounce",
         "lesson_group.key": "",
         "script.name": "events"
@@ -250,8 +236,6 @@
         "script_level.level_keys": [
           "bounce_10"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 8,
         "lesson.key": "Bounce",
         "lesson_group.key": "",
         "script.name": "events"
@@ -272,8 +256,6 @@
         "script_level.level_keys": [
           "bounce_11"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 9,
         "lesson.key": "Bounce",
         "lesson_group.key": "",
         "script.name": "events"
@@ -294,8 +276,6 @@
         "script_level.level_keys": [
           "bounce_12"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 10,
         "lesson.key": "Bounce",
         "lesson_group.key": "",
         "script.name": "events"
@@ -316,8 +296,6 @@
         "script_level.level_keys": [
           "blockly:Studio:full_sandbox"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 1,
         "lesson.key": "Studio",
         "lesson_group.key": "",
         "script.name": "events"
@@ -338,8 +316,6 @@
         "script_level.level_keys": [
           "blockly:Studio:full_sandbox_infinity"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 2,
         "lesson.key": "Studio",
         "lesson_group.key": "",
         "script.name": "events"
@@ -360,8 +336,6 @@
         "script_level.level_keys": [
           "blockly:Calc:example1"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 1,
         "lesson.key": "Calc",
         "lesson_group.key": "",
         "script.name": "events"
@@ -382,8 +356,6 @@
         "script_level.level_keys": [
           "blockly:Eval:eval1"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 1,
         "lesson.key": "Eval",
         "lesson_group.key": "",
         "script.name": "events"
@@ -400,8 +372,6 @@
         "script_level.level_keys": [
           "bounce_1"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Bounce",
         "lesson_group.key": "",
         "script.name": "events"
@@ -413,8 +383,6 @@
         "script_level.level_keys": [
           "bounce_2"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Bounce",
         "lesson_group.key": "",
         "script.name": "events"
@@ -426,8 +394,6 @@
         "script_level.level_keys": [
           "bounce_3"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "Bounce",
         "lesson_group.key": "",
         "script.name": "events"
@@ -439,8 +405,6 @@
         "script_level.level_keys": [
           "bounce_4"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "Bounce",
         "lesson_group.key": "",
         "script.name": "events"
@@ -452,8 +416,6 @@
         "script_level.level_keys": [
           "bounce_5"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 5,
         "lesson.key": "Bounce",
         "lesson_group.key": "",
         "script.name": "events"
@@ -465,8 +427,6 @@
         "script_level.level_keys": [
           "bounce_6"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 6,
         "lesson.key": "Bounce",
         "lesson_group.key": "",
         "script.name": "events"
@@ -478,8 +438,6 @@
         "script_level.level_keys": [
           "bounce_7"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 7,
         "lesson.key": "Bounce",
         "lesson_group.key": "",
         "script.name": "events"
@@ -491,8 +449,6 @@
         "script_level.level_keys": [
           "bounce_10"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 8,
         "lesson.key": "Bounce",
         "lesson_group.key": "",
         "script.name": "events"
@@ -504,8 +460,6 @@
         "script_level.level_keys": [
           "bounce_11"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 9,
         "lesson.key": "Bounce",
         "lesson_group.key": "",
         "script.name": "events"
@@ -517,8 +471,6 @@
         "script_level.level_keys": [
           "bounce_12"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 10,
         "lesson.key": "Bounce",
         "lesson_group.key": "",
         "script.name": "events"
@@ -530,8 +482,6 @@
         "script_level.level_keys": [
           "blockly:Studio:full_sandbox"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 1,
         "lesson.key": "Studio",
         "lesson_group.key": "",
         "script.name": "events"
@@ -543,8 +493,6 @@
         "script_level.level_keys": [
           "blockly:Studio:full_sandbox_infinity"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 2,
         "lesson.key": "Studio",
         "lesson_group.key": "",
         "script.name": "events"
@@ -556,8 +504,6 @@
         "script_level.level_keys": [
           "blockly:Calc:example1"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 1,
         "lesson.key": "Calc",
         "lesson_group.key": "",
         "script.name": "events"
@@ -569,8 +515,6 @@
         "script_level.level_keys": [
           "blockly:Eval:eval1"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 1,
         "lesson.key": "Eval",
         "lesson_group.key": "",
         "script.name": "events"
