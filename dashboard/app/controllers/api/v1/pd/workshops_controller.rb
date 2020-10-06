@@ -153,7 +153,11 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
 
     @workshops = Pd::Workshop.scheduled_start_on_or_after(Date.today.beginning_of_day).
       where(conditions).where.not(processed_location: nil)
-    render json: to_geojson(@workshops)
+    if params['geojson']
+      render json: to_geojson(@workshops)
+    else
+      render json: @workshops, each_serializer: Api::V1::Pd::WorkshopK5MapSerializer
+    end
   end
 
   # GET /api/v1/pd/workshops/1
