@@ -27,6 +27,7 @@ export default class WorkspaceSvg extends GoogleBlockly.WorkspaceSvg {
     return false; // TODO
   }
   setEnableToolbox() {} // TODO
+  traceOn() {} // TODO
 }
 
 WorkspaceSvg.prototype.blockSpaceEditor = {
