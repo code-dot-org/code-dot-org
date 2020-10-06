@@ -179,6 +179,11 @@ export class UnconnectedTeacherHomepage extends Component {
     // Whether we show the regular announcement/notification
     const showAnnouncement = false;
 
+    // Whether we show the fallback (translatable) SpecialAnnouncement.
+    // This will be shown if this variable is true and either the page is not in English
+    // or there is not configured specialAnnouncement.
+    const showFallbackSpecialAnnouncement = true;
+
     // Verify background image works for both LTR and RTL languages.
     const backgroundUrl = '/shared/images/banners/teacher-homepage-hero.jpg';
 
@@ -213,7 +218,10 @@ export class UnconnectedTeacherHomepage extends Component {
             </div>
           )}
           {!showAnnouncement && <br />}
-          {isEnglish && <SpecialAnnouncement isTeacher={true} />}
+          {showFallbackSpecialAnnouncement &&
+            (!specialAnnouncement || !isEnglish) && (
+              <SpecialAnnouncement isEnglish={isEnglish} isTeacher={true} />
+            )}
           {this.state.showCensusBanner && (
             <div>
               <CensusTeacherBanner
