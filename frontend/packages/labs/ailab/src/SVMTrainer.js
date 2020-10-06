@@ -1,4 +1,5 @@
-/* Training and prediction using a binary SVM machine learning model from (https://github.com/karpathy/svmjs) */
+/* Training and prediction using a binary SVM machine learning model from
+(https://github.com/karpathy/svmjs) */
 
 /* eslint-env node */
 const svmjs = require("svm");
@@ -23,7 +24,8 @@ export default class SVMTrainer {
     this.buildOptionNumberKeysByFeature(state);
   }
 
-  /* Builds a hash that maps a feature's categorical options to numbers because this implementation of the SVM algorithm only accepts numerical inputs.
+  /* Builds a hash that maps a feature's categorical options to numbers because
+  this implementation of the SVM algorithm only accepts numerical inputs.
   @param {string} - feature name
   @return {
     option1 : 0,
@@ -41,7 +43,8 @@ export default class SVMTrainer {
     return optionsMappedToNumbers;
   };
 
-  /* Builds a hash that maps selected categorical features to their option-number keys and dispatches that hash to the Redux store.
+  /* Builds a hash that maps selected categorical features to their option-
+  number keys and dispatches that hash to the Redux store.
   @return {
     feature1: {
       option1 : 0,
@@ -70,7 +73,10 @@ export default class SVMTrainer {
     store.dispatch(setFeatureNumberKey(optionsMappedToNumbersByFeature));
   }
 
-  /* Builds a hash that maps the options in the label column to -1 and 1, because right now the model only supports binary classification with those specific values. Returns the row's specific option's value in that reference hash.
+  /* Builds a hash that maps the options in the label column to -1 and 1,
+  because right now the model only supports binary classification with those
+  specific values. Returns the row's specific option's value in that reference
+  hash.
   @param {object} row, entry from the dataset
   {
     labelColumn: option,
@@ -92,7 +98,10 @@ export default class SVMTrainer {
     return converter[row[this.state.labelColumn]];
   };
 
-  /* For feature columns that store categorical data, looks up the value associated with a row's specific option for a given feature; otherwise returns the option converted to an integer for feature columns that store continuous data.
+  /* For feature columns that store categorical data, looks up the value
+  associated with a row's specific option for a given feature; otherwise
+  returns the option converted to an integer for feature columns that store
+  continuous data.
   @param {object} row, entry from the dataset
   {
     labelColumn: option,
@@ -110,7 +119,8 @@ export default class SVMTrainer {
       : parseInt(row[feature]);
   };
 
-  /* Builds an array containing integer values associated with each feature's specific option in a given row.
+  /* Builds an array containing integer values associated with each feature's
+  specific option in a given row.
   @param {object} row, entry from the dataset
   {
     labelColumn: option,
