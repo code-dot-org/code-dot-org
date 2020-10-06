@@ -1,11 +1,12 @@
 /* global Maplace */
 /* exported sendEmail */
-/* global mapboxgl */
+/* global mapboxgl, MapboxGeocoder */
 
 var gmap;
 var gmap_loc;
 var selectize;
 var mapboxMap;
+var mapboxGeocoder;
 
 var firstRetrievalDone = false;
 
@@ -34,6 +35,21 @@ $(function() {
     .change(function() {
       initializeMap();
     });
+
+  if (window.location.search.indexOf("mapbox") !== -1) {
+    mapboxGeocoder = new MapboxGeocoder({
+      accessToken: mapboxgl.accessToken,
+      types: "country,region,place,postcode,locality,neighborhood"
+    });
+
+    mapboxGeocoder.addTo("#mapbox-geocoder");
+    mapboxGeocoder.on("result", function(result) {
+      const coordinates = result.result.geometry.coordinates;
+      gmap_loc = coordinates[1] + "," + coordinates[0];
+      resetFacets();
+      initializeMap();
+    });
+  }
 });
 
 function initializeMap() {
@@ -213,14 +229,15 @@ function loadMap(locations) {
   gmap.Load(mapOptions);
 
   if (window.location.search.indexOf("mapbox") !== -1) {
+    $("#mapbox-container").show();
+
     mapboxMap = new mapboxgl.Map({
       container: "mapbox",
       style: "mapbox://styles/codeorg/cjyudafoo004w1cnpaeq8a0lz",
       center: [lng, lat],
-      zoom: 1
+      zoom: 12
     });
 
-    // mapbox gets the pins
     let features = [];
     if (mapOptions.locations && mapOptions.locations.length > 0) {
       for (var location of mapOptions.locations) {
