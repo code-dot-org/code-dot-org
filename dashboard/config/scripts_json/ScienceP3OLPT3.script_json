@@ -98,8 +98,6 @@
         "script_level.level_keys": [
           "sciPD3OLP33 intro"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Welcome!",
         "lesson_group.key": "",
         "script.name": "ScienceP3OLPT3"
@@ -120,8 +118,6 @@
         "script_level.level_keys": [
           "sciPD2 timeline"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Welcome!",
         "lesson_group.key": "",
         "script.name": "ScienceP3OLPT3"
@@ -142,8 +138,6 @@
         "script_level.level_keys": [
           "ECSPD PD details"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "Welcome!",
         "lesson_group.key": "",
         "script.name": "ScienceP3OLPT3"
@@ -164,8 +158,6 @@
         "script_level.level_keys": [
           "PD check your progress"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "Welcome!",
         "lesson_group.key": "",
         "script.name": "ScienceP3OLPT3"
@@ -186,8 +178,6 @@
         "script_level.level_keys": [
           "sciPD33 rubric"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 1,
         "lesson.key": "Assessing Computer Models",
         "lesson_group.key": "",
         "script.name": "ScienceP3OLPT3"
@@ -208,8 +198,6 @@
         "script_level.level_keys": [
           "sciPD33 implement2"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 2,
         "lesson.key": "Assessing Computer Models",
         "lesson_group.key": "",
         "script.name": "ScienceP3OLPT3"
@@ -230,8 +218,6 @@
         "script_level.level_keys": [
           "sciPD33 refresh"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 1,
         "lesson.key": "(optional) Refresh your connection to Complex Adaptive Systems",
         "lesson_group.key": "",
         "script.name": "ScienceP3OLPT3"
@@ -252,8 +238,6 @@
         "script_level.level_keys": [
           "sciPD33 refresh2"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 2,
         "lesson.key": "(optional) Refresh your connection to Complex Adaptive Systems",
         "lesson_group.key": "",
         "script.name": "ScienceP3OLPT3"
@@ -274,8 +258,6 @@
         "script_level.level_keys": [
           "sciPD33 thanks"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 1,
         "lesson.key": "Wrap-Up",
         "lesson_group.key": "",
         "script.name": "ScienceP3OLPT3"
@@ -296,8 +278,6 @@
         "script_level.level_keys": [
           "sciPD33 reflection"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 2,
         "lesson.key": "Wrap-Up",
         "lesson_group.key": "",
         "script.name": "ScienceP3OLPT3"
@@ -318,8 +298,6 @@
         "script_level.level_keys": [
           "sciPD33 end"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 3,
         "lesson.key": "Wrap-Up",
         "lesson_group.key": "",
         "script.name": "ScienceP3OLPT3"
@@ -336,8 +314,6 @@
         "script_level.level_keys": [
           "sciPD3OLP33 intro"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Welcome!",
         "lesson_group.key": "",
         "script.name": "ScienceP3OLPT3"
@@ -349,8 +325,6 @@
         "script_level.level_keys": [
           "sciPD2 timeline"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Welcome!",
         "lesson_group.key": "",
         "script.name": "ScienceP3OLPT3"
@@ -362,8 +336,6 @@
         "script_level.level_keys": [
           "ECSPD PD details"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "Welcome!",
         "lesson_group.key": "",
         "script.name": "ScienceP3OLPT3"
@@ -375,8 +347,6 @@
         "script_level.level_keys": [
           "PD check your progress"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "Welcome!",
         "lesson_group.key": "",
         "script.name": "ScienceP3OLPT3"
@@ -388,8 +358,6 @@
         "script_level.level_keys": [
           "sciPD33 rubric"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 1,
         "lesson.key": "Assessing Computer Models",
         "lesson_group.key": "",
         "script.name": "ScienceP3OLPT3"
@@ -401,8 +369,6 @@
         "script_level.level_keys": [
           "sciPD33 implement2"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 2,
         "lesson.key": "Assessing Computer Models",
         "lesson_group.key": "",
         "script.name": "ScienceP3OLPT3"
@@ -414,8 +380,6 @@
         "script_level.level_keys": [
           "sciPD33 refresh"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 1,
         "lesson.key": "(optional) Refresh your connection to Complex Adaptive Systems",
         "lesson_group.key": "",
         "script.name": "ScienceP3OLPT3"
@@ -427,8 +391,6 @@
         "script_level.level_keys": [
           "sciPD33 refresh2"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 2,
         "lesson.key": "(optional) Refresh your connection to Complex Adaptive Systems",
         "lesson_group.key": "",
         "script.name": "ScienceP3OLPT3"
@@ -440,8 +402,6 @@
         "script_level.level_keys": [
           "sciPD33 thanks"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 1,
         "lesson.key": "Wrap-Up",
         "lesson_group.key": "",
         "script.name": "ScienceP3OLPT3"
@@ -453,8 +413,6 @@
         "script_level.level_keys": [
           "sciPD33 reflection"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 2,
         "lesson.key": "Wrap-Up",
         "lesson_group.key": "",
         "script.name": "ScienceP3OLPT3"
@@ -466,8 +424,6 @@
         "script_level.level_keys": [
           "sciPD33 end"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 3,
         "lesson.key": "Wrap-Up",
         "lesson_group.key": "",
         "script.name": "ScienceP3OLPT3"

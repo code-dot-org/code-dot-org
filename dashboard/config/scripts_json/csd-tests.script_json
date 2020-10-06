@@ -84,8 +84,6 @@
         "script_level.level_keys": [
           "CSD U1 Test define a computer"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Computers and Problem Solving",
         "lesson_group.key": "",
         "script.name": "csd-tests"
@@ -106,8 +104,6 @@
         "script_level.level_keys": [
           "CSD U1 Test PSP match"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Computers and Problem Solving",
         "lesson_group.key": "",
         "script.name": "csd-tests"
@@ -128,8 +124,6 @@
         "script_level.level_keys": [
           "CSD U1 IOSP match"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "Computers and Problem Solving",
         "lesson_group.key": "",
         "script.name": "csd-tests"
@@ -150,8 +144,6 @@
         "script_level.level_keys": [
           "CSD U1 Test define problem"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "Computers and Problem Solving",
         "lesson_group.key": "",
         "script.name": "csd-tests"
@@ -172,8 +164,6 @@
         "script_level.level_keys": [
           "CSD U1 Test storage FR"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 5,
         "lesson.key": "Computers and Problem Solving",
         "lesson_group.key": "",
         "script.name": "csd-tests"
@@ -194,8 +184,6 @@
         "script_level.level_keys": [
           "CSD U1 Test Feedback FR"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 6,
         "lesson.key": "Computers and Problem Solving",
         "lesson_group.key": "",
         "script.name": "csd-tests"
@@ -216,8 +204,6 @@
         "script_level.level_keys": [
           "CSD U1 Test Collaborate FR"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 7,
         "lesson.key": "Computers and Problem Solving",
         "lesson_group.key": "",
         "script.name": "csd-tests"
@@ -238,8 +224,6 @@
         "script_level.level_keys": [
           "CSD U1 Test Iteration FR"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 8,
         "lesson.key": "Computers and Problem Solving",
         "lesson_group.key": "",
         "script.name": "csd-tests"
@@ -260,8 +244,6 @@
         "script_level.level_keys": [
           "CSD U1 Test"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 9,
         "lesson.key": "Computers and Problem Solving",
         "lesson_group.key": "",
         "script.name": "csd-tests"
@@ -282,8 +264,6 @@
         "script_level.level_keys": [
           "CSD U2 Test HTML Usage"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 1,
         "lesson.key": "Web Development",
         "lesson_group.key": "",
         "script.name": "csd-tests"
@@ -304,8 +284,6 @@
         "script_level.level_keys": [
           "CSD U2 Test ContentStructureStyle"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 2,
         "lesson.key": "Web Development",
         "lesson_group.key": "",
         "script.name": "csd-tests"
@@ -326,8 +304,6 @@
         "script_level.level_keys": [
           "CSD U2 Test Classes"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 3,
         "lesson.key": "Web Development",
         "lesson_group.key": "",
         "script.name": "csd-tests"
@@ -348,8 +324,6 @@
         "script_level.level_keys": [
           "CSD U2 Test Debug"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 4,
         "lesson.key": "Web Development",
         "lesson_group.key": "",
         "script.name": "csd-tests"
@@ -370,8 +344,6 @@
         "script_level.level_keys": [
           "CSD U2 Test code stylesheet"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 5,
         "lesson.key": "Web Development",
         "lesson_group.key": "",
         "script.name": "csd-tests"
@@ -392,8 +364,6 @@
         "script_level.level_keys": [
           "CSD U2 Test code styles"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 6,
         "lesson.key": "Web Development",
         "lesson_group.key": "",
         "script.name": "csd-tests"
@@ -414,8 +384,6 @@
         "script_level.level_keys": [
           "CSD U2 Test Copyright"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 7,
         "lesson.key": "Web Development",
         "lesson_group.key": "",
         "script.name": "csd-tests"
@@ -436,8 +404,6 @@
         "script_level.level_keys": [
           "CSD U2 Test Bug FR"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 8,
         "lesson.key": "Web Development",
         "lesson_group.key": "",
         "script.name": "csd-tests"
@@ -458,8 +424,6 @@
         "script_level.level_keys": [
           "CSD U2 Test Copyright FR"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 9,
         "lesson.key": "Web Development",
         "lesson_group.key": "",
         "script.name": "csd-tests"
@@ -480,8 +444,6 @@
         "script_level.level_keys": [
           "CSD U2 Test DigCit FR"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 10,
         "lesson.key": "Web Development",
         "lesson_group.key": "",
         "script.name": "csd-tests"
@@ -502,8 +464,6 @@
         "script_level.level_keys": [
           "CSD Web Development Post-Project Test"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 11,
         "lesson.key": "Web Development",
         "lesson_group.key": "",
         "script.name": "csd-tests"
@@ -524,8 +484,6 @@
         "script_level.level_keys": [
           "CSD U3 Test clean code"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 1,
         "lesson.key": "Interactive Animations and Games",
         "lesson_group.key": "",
         "script.name": "csd-tests"
@@ -546,8 +504,6 @@
         "script_level.level_keys": [
           "CSD U3 Test functions"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 2,
         "lesson.key": "Interactive Animations and Games",
         "lesson_group.key": "",
         "script.name": "csd-tests"
@@ -568,8 +524,6 @@
         "script_level.level_keys": [
           "CSD U3 Test variables"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 3,
         "lesson.key": "Interactive Animations and Games",
         "lesson_group.key": "",
         "script.name": "csd-tests"
@@ -590,8 +544,6 @@
         "script_level.level_keys": [
           "CSD U3 Test planning"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 4,
         "lesson.key": "Interactive Animations and Games",
         "lesson_group.key": "",
         "script.name": "csd-tests"
@@ -612,8 +564,6 @@
         "script_level.level_keys": [
           "CSD U3 Test debugging"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 5,
         "lesson.key": "Interactive Animations and Games",
         "lesson_group.key": "",
         "script.name": "csd-tests"
@@ -634,8 +584,6 @@
         "script_level.level_keys": [
           "CSD U3 Test comment"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 6,
         "lesson.key": "Interactive Animations and Games",
         "lesson_group.key": "",
         "script.name": "csd-tests"
@@ -656,8 +604,6 @@
         "script_level.level_keys": [
           "CSD U3 Test debug FR"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 7,
         "lesson.key": "Interactive Animations and Games",
         "lesson_group.key": "",
         "script.name": "csd-tests"
@@ -678,8 +624,6 @@
         "script_level.level_keys": [
           "CSD U3 Test parameter FR"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 8,
         "lesson.key": "Interactive Animations and Games",
         "lesson_group.key": "",
         "script.name": "csd-tests"
@@ -700,8 +644,6 @@
         "script_level.level_keys": [
           "CSD U3 Test collaboration FR"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 9,
         "lesson.key": "Interactive Animations and Games",
         "lesson_group.key": "",
         "script.name": "csd-tests"
@@ -722,8 +664,6 @@
         "script_level.level_keys": [
           "CSD Interactive Animations and Games Post-Project Test"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 10,
         "lesson.key": "Interactive Animations and Games",
         "lesson_group.key": "",
         "script.name": "csd-tests"
@@ -740,8 +680,6 @@
         "script_level.level_keys": [
           "CSD U1 Test define a computer"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Computers and Problem Solving",
         "lesson_group.key": "",
         "script.name": "csd-tests"
@@ -753,8 +691,6 @@
         "script_level.level_keys": [
           "CSD U1 Test PSP match"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Computers and Problem Solving",
         "lesson_group.key": "",
         "script.name": "csd-tests"
@@ -766,8 +702,6 @@
         "script_level.level_keys": [
           "CSD U1 IOSP match"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "Computers and Problem Solving",
         "lesson_group.key": "",
         "script.name": "csd-tests"
@@ -779,8 +713,6 @@
         "script_level.level_keys": [
           "CSD U1 Test define problem"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "Computers and Problem Solving",
         "lesson_group.key": "",
         "script.name": "csd-tests"
@@ -792,8 +724,6 @@
         "script_level.level_keys": [
           "CSD U1 Test storage FR"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 5,
         "lesson.key": "Computers and Problem Solving",
         "lesson_group.key": "",
         "script.name": "csd-tests"
@@ -805,8 +735,6 @@
         "script_level.level_keys": [
           "CSD U1 Test Feedback FR"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 6,
         "lesson.key": "Computers and Problem Solving",
         "lesson_group.key": "",
         "script.name": "csd-tests"
@@ -818,8 +746,6 @@
         "script_level.level_keys": [
           "CSD U1 Test Collaborate FR"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 7,
         "lesson.key": "Computers and Problem Solving",
         "lesson_group.key": "",
         "script.name": "csd-tests"
@@ -831,8 +757,6 @@
         "script_level.level_keys": [
           "CSD U1 Test Iteration FR"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 8,
         "lesson.key": "Computers and Problem Solving",
         "lesson_group.key": "",
         "script.name": "csd-tests"
@@ -844,8 +768,6 @@
         "script_level.level_keys": [
           "CSD U1 Test"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 9,
         "lesson.key": "Computers and Problem Solving",
         "lesson_group.key": "",
         "script.name": "csd-tests"
@@ -857,8 +779,6 @@
         "script_level.level_keys": [
           "CSD U2 Test HTML Usage"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 1,
         "lesson.key": "Web Development",
         "lesson_group.key": "",
         "script.name": "csd-tests"
@@ -870,8 +790,6 @@
         "script_level.level_keys": [
           "CSD U2 Test ContentStructureStyle"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 2,
         "lesson.key": "Web Development",
         "lesson_group.key": "",
         "script.name": "csd-tests"
@@ -883,8 +801,6 @@
         "script_level.level_keys": [
           "CSD U2 Test Classes"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 3,
         "lesson.key": "Web Development",
         "lesson_group.key": "",
         "script.name": "csd-tests"
@@ -896,8 +812,6 @@
         "script_level.level_keys": [
           "CSD U2 Test Debug"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 4,
         "lesson.key": "Web Development",
         "lesson_group.key": "",
         "script.name": "csd-tests"
@@ -909,8 +823,6 @@
         "script_level.level_keys": [
           "CSD U2 Test code stylesheet"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 5,
         "lesson.key": "Web Development",
         "lesson_group.key": "",
         "script.name": "csd-tests"
@@ -922,8 +834,6 @@
         "script_level.level_keys": [
           "CSD U2 Test code styles"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 6,
         "lesson.key": "Web Development",
         "lesson_group.key": "",
         "script.name": "csd-tests"
@@ -935,8 +845,6 @@
         "script_level.level_keys": [
           "CSD U2 Test Copyright"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 7,
         "lesson.key": "Web Development",
         "lesson_group.key": "",
         "script.name": "csd-tests"
@@ -948,8 +856,6 @@
         "script_level.level_keys": [
           "CSD U2 Test Bug FR"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 8,
         "lesson.key": "Web Development",
         "lesson_group.key": "",
         "script.name": "csd-tests"
@@ -961,8 +867,6 @@
         "script_level.level_keys": [
           "CSD U2 Test Copyright FR"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 9,
         "lesson.key": "Web Development",
         "lesson_group.key": "",
         "script.name": "csd-tests"
@@ -974,8 +878,6 @@
         "script_level.level_keys": [
           "CSD U2 Test DigCit FR"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 10,
         "lesson.key": "Web Development",
         "lesson_group.key": "",
         "script.name": "csd-tests"
@@ -987,8 +889,6 @@
         "script_level.level_keys": [
           "CSD Web Development Post-Project Test"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 11,
         "lesson.key": "Web Development",
         "lesson_group.key": "",
         "script.name": "csd-tests"
@@ -1000,8 +900,6 @@
         "script_level.level_keys": [
           "CSD U3 Test clean code"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 1,
         "lesson.key": "Interactive Animations and Games",
         "lesson_group.key": "",
         "script.name": "csd-tests"
@@ -1013,8 +911,6 @@
         "script_level.level_keys": [
           "CSD U3 Test functions"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 2,
         "lesson.key": "Interactive Animations and Games",
         "lesson_group.key": "",
         "script.name": "csd-tests"
@@ -1026,8 +922,6 @@
         "script_level.level_keys": [
           "CSD U3 Test variables"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 3,
         "lesson.key": "Interactive Animations and Games",
         "lesson_group.key": "",
         "script.name": "csd-tests"
@@ -1039,8 +933,6 @@
         "script_level.level_keys": [
           "CSD U3 Test planning"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 4,
         "lesson.key": "Interactive Animations and Games",
         "lesson_group.key": "",
         "script.name": "csd-tests"
@@ -1052,8 +944,6 @@
         "script_level.level_keys": [
           "CSD U3 Test debugging"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 5,
         "lesson.key": "Interactive Animations and Games",
         "lesson_group.key": "",
         "script.name": "csd-tests"
@@ -1065,8 +955,6 @@
         "script_level.level_keys": [
           "CSD U3 Test comment"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 6,
         "lesson.key": "Interactive Animations and Games",
         "lesson_group.key": "",
         "script.name": "csd-tests"
@@ -1078,8 +966,6 @@
         "script_level.level_keys": [
           "CSD U3 Test debug FR"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 7,
         "lesson.key": "Interactive Animations and Games",
         "lesson_group.key": "",
         "script.name": "csd-tests"
@@ -1091,8 +977,6 @@
         "script_level.level_keys": [
           "CSD U3 Test parameter FR"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 8,
         "lesson.key": "Interactive Animations and Games",
         "lesson_group.key": "",
         "script.name": "csd-tests"
@@ -1104,8 +988,6 @@
         "script_level.level_keys": [
           "CSD U3 Test collaboration FR"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 9,
         "lesson.key": "Interactive Animations and Games",
         "lesson_group.key": "",
         "script.name": "csd-tests"
@@ -1117,8 +999,6 @@
         "script_level.level_keys": [
           "CSD Interactive Animations and Games Post-Project Test"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 10,
         "lesson.key": "Interactive Animations and Games",
         "lesson_group.key": "",
         "script.name": "csd-tests"

@@ -140,8 +140,6 @@
         "script_level.level_keys": [
           "sciPD2b intro"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Welcome!",
         "lesson_group.key": "",
         "script.name": "2016_sciencePD-phase2b"
@@ -162,8 +160,6 @@
         "script_level.level_keys": [
           "PDECS tour"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Welcome!",
         "lesson_group.key": "",
         "script.name": "2016_sciencePD-phase2b"
@@ -184,8 +180,6 @@
         "script_level.level_keys": [
           "sciPD2 timeline"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "Welcome!",
         "lesson_group.key": "",
         "script.name": "2016_sciencePD-phase2b"
@@ -206,8 +200,6 @@
         "script_level.level_keys": [
           "sciPD2 StarLogoNova"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 1,
         "lesson.key": "Review StarLogo Nova",
         "lesson_group.key": "",
         "script.name": "2016_sciencePD-phase2b"
@@ -228,8 +220,6 @@
         "script_level.level_keys": [
           "sciPD StarLogo intro 1"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 2,
         "lesson.key": "Review StarLogo Nova",
         "lesson_group.key": "",
         "script.name": "2016_sciencePD-phase2b"
@@ -250,8 +240,6 @@
         "script_level.level_keys": [
           "sciPD2 breed2a"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 1,
         "lesson.key": "Reviewing the Modules",
         "lesson_group.key": "",
         "script.name": "2016_sciencePD-phase2b"
@@ -272,8 +260,6 @@
         "script_level.level_keys": [
           "sciPD2 breed2b"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 2,
         "lesson.key": "Reviewing the Modules",
         "lesson_group.key": "",
         "script.name": "2016_sciencePD-phase2b"
@@ -294,8 +280,6 @@
         "script_level.level_keys": [
           "sciPD2 breed3a"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 1,
         "lesson.key": "Advanced StarLogo Nova",
         "lesson_group.key": "",
         "script.name": "2016_sciencePD-phase2b"
@@ -316,8 +300,6 @@
         "script_level.level_keys": [
           "sciPD2 breed3b"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 2,
         "lesson.key": "Advanced StarLogo Nova",
         "lesson_group.key": "",
         "script.name": "2016_sciencePD-phase2b"
@@ -338,8 +320,6 @@
         "script_level.level_keys": [
           "sciPD2 breed4a"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 1,
         "lesson.key": "Remixing Phases 1 and 2",
         "lesson_group.key": "",
         "script.name": "2016_sciencePD-phase2b"
@@ -360,8 +340,6 @@
         "script_level.level_keys": [
           "sciPD2 breed4b"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 2,
         "lesson.key": "Remixing Phases 1 and 2",
         "lesson_group.key": "",
         "script.name": "2016_sciencePD-phase2b"
@@ -382,8 +360,6 @@
         "script_level.level_keys": [
           "sciPD2 breed4c"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 3,
         "lesson.key": "Remixing Phases 1 and 2",
         "lesson_group.key": "",
         "script.name": "2016_sciencePD-phase2b"
@@ -404,8 +380,6 @@
         "script_level.level_keys": [
           "sciPD2 breed4d"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 4,
         "lesson.key": "Remixing Phases 1 and 2",
         "lesson_group.key": "",
         "script.name": "2016_sciencePD-phase2b"
@@ -426,8 +400,6 @@
         "script_level.level_keys": [
           "sciPD2 implement1"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 1,
         "lesson.key": "Thinking Ahead to Implementation",
         "lesson_group.key": "",
         "script.name": "2016_sciencePD-phase2b"
@@ -448,8 +420,6 @@
         "script_level.level_keys": [
           "sciPD2 implement2"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 2,
         "lesson.key": "Thinking Ahead to Implementation",
         "lesson_group.key": "",
         "script.name": "2016_sciencePD-phase2b"
@@ -470,8 +440,6 @@
         "script_level.level_keys": [
           "sciPD2 thanks"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 1,
         "lesson.key": "Wrap-Up",
         "lesson_group.key": "",
         "script.name": "2016_sciencePD-phase2b"
@@ -492,8 +460,6 @@
         "script_level.level_keys": [
           "sciPD2b reflection"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 2,
         "lesson.key": "Wrap-Up",
         "lesson_group.key": "",
         "script.name": "2016_sciencePD-phase2b"
@@ -514,8 +480,6 @@
         "script_level.level_keys": [
           "sciPD2b end"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 3,
         "lesson.key": "Wrap-Up",
         "lesson_group.key": "",
         "script.name": "2016_sciencePD-phase2b"
@@ -532,8 +496,6 @@
         "script_level.level_keys": [
           "sciPD2b intro"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Welcome!",
         "lesson_group.key": "",
         "script.name": "2016_sciencePD-phase2b"
@@ -545,8 +507,6 @@
         "script_level.level_keys": [
           "PDECS tour"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Welcome!",
         "lesson_group.key": "",
         "script.name": "2016_sciencePD-phase2b"
@@ -558,8 +518,6 @@
         "script_level.level_keys": [
           "sciPD2 timeline"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "Welcome!",
         "lesson_group.key": "",
         "script.name": "2016_sciencePD-phase2b"
@@ -571,8 +529,6 @@
         "script_level.level_keys": [
           "sciPD2 StarLogoNova"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 1,
         "lesson.key": "Review StarLogo Nova",
         "lesson_group.key": "",
         "script.name": "2016_sciencePD-phase2b"
@@ -584,8 +540,6 @@
         "script_level.level_keys": [
           "sciPD StarLogo intro 1"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 2,
         "lesson.key": "Review StarLogo Nova",
         "lesson_group.key": "",
         "script.name": "2016_sciencePD-phase2b"
@@ -597,8 +551,6 @@
         "script_level.level_keys": [
           "sciPD2 breed2a"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 1,
         "lesson.key": "Reviewing the Modules",
         "lesson_group.key": "",
         "script.name": "2016_sciencePD-phase2b"
@@ -610,8 +562,6 @@
         "script_level.level_keys": [
           "sciPD2 breed2b"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 2,
         "lesson.key": "Reviewing the Modules",
         "lesson_group.key": "",
         "script.name": "2016_sciencePD-phase2b"
@@ -623,8 +573,6 @@
         "script_level.level_keys": [
           "sciPD2 breed3a"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 1,
         "lesson.key": "Advanced StarLogo Nova",
         "lesson_group.key": "",
         "script.name": "2016_sciencePD-phase2b"
@@ -636,8 +584,6 @@
         "script_level.level_keys": [
           "sciPD2 breed3b"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 2,
         "lesson.key": "Advanced StarLogo Nova",
         "lesson_group.key": "",
         "script.name": "2016_sciencePD-phase2b"
@@ -649,8 +595,6 @@
         "script_level.level_keys": [
           "sciPD2 breed4a"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 1,
         "lesson.key": "Remixing Phases 1 and 2",
         "lesson_group.key": "",
         "script.name": "2016_sciencePD-phase2b"
@@ -662,8 +606,6 @@
         "script_level.level_keys": [
           "sciPD2 breed4b"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 2,
         "lesson.key": "Remixing Phases 1 and 2",
         "lesson_group.key": "",
         "script.name": "2016_sciencePD-phase2b"
@@ -675,8 +617,6 @@
         "script_level.level_keys": [
           "sciPD2 breed4c"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 3,
         "lesson.key": "Remixing Phases 1 and 2",
         "lesson_group.key": "",
         "script.name": "2016_sciencePD-phase2b"
@@ -688,8 +628,6 @@
         "script_level.level_keys": [
           "sciPD2 breed4d"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 4,
         "lesson.key": "Remixing Phases 1 and 2",
         "lesson_group.key": "",
         "script.name": "2016_sciencePD-phase2b"
@@ -701,8 +639,6 @@
         "script_level.level_keys": [
           "sciPD2 implement1"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 1,
         "lesson.key": "Thinking Ahead to Implementation",
         "lesson_group.key": "",
         "script.name": "2016_sciencePD-phase2b"
@@ -714,8 +650,6 @@
         "script_level.level_keys": [
           "sciPD2 implement2"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 2,
         "lesson.key": "Thinking Ahead to Implementation",
         "lesson_group.key": "",
         "script.name": "2016_sciencePD-phase2b"
@@ -727,8 +661,6 @@
         "script_level.level_keys": [
           "sciPD2 thanks"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 1,
         "lesson.key": "Wrap-Up",
         "lesson_group.key": "",
         "script.name": "2016_sciencePD-phase2b"
@@ -740,8 +672,6 @@
         "script_level.level_keys": [
           "sciPD2b reflection"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 2,
         "lesson.key": "Wrap-Up",
         "lesson_group.key": "",
         "script.name": "2016_sciencePD-phase2b"
@@ -753,8 +683,6 @@
         "script_level.level_keys": [
           "sciPD2b end"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 3,
         "lesson.key": "Wrap-Up",
         "lesson_group.key": "",
         "script.name": "2016_sciencePD-phase2b"

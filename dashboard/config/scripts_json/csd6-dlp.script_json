@@ -85,8 +85,6 @@
         "script_level.level_keys": [
           "deeper learning"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Deeper Learning Overview",
         "lesson_group.key": "required",
         "script.name": "csd6-dlp"
@@ -108,8 +106,6 @@
         "script_level.level_keys": [
           "csd deeper learning timeline"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Deeper Learning Overview",
         "lesson_group.key": "required",
         "script.name": "csd6-dlp"
@@ -131,8 +127,6 @@
         "script_level.level_keys": [
           "deeper learning recommendations- csd"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "Deeper Learning Overview",
         "lesson_group.key": "required",
         "script.name": "csd6-dlp"
@@ -154,8 +148,6 @@
         "script_level.level_keys": [
           "peer review recommendations"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "Deeper Learning Overview",
         "lesson_group.key": "required",
         "script.name": "csd6-dlp"
@@ -177,8 +169,6 @@
         "script_level.level_keys": [
           "csd6dlp-lessons"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 1,
         "lesson.key": "Complete Unit 6 Deeper Learning Reflections",
         "lesson_group.key": "content",
         "script.name": "csd6-dlp"
@@ -200,8 +190,6 @@
         "script_level.level_keys": [
           "csd6dlp-tools"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 2,
         "lesson.key": "Complete Unit 6 Deeper Learning Reflections",
         "lesson_group.key": "content",
         "script.name": "csd6-dlp"
@@ -223,8 +211,6 @@
         "script_level.level_keys": [
           "csd6dlp-assessment"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 3,
         "lesson.key": "Complete Unit 6 Deeper Learning Reflections",
         "lesson_group.key": "content",
         "script.name": "csd6-dlp"
@@ -241,8 +227,6 @@
         "script_level.level_keys": [
           "deeper learning"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Deeper Learning Overview",
         "lesson_group.key": "required",
         "script.name": "csd6-dlp"
@@ -254,8 +238,6 @@
         "script_level.level_keys": [
           "csd deeper learning timeline"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Deeper Learning Overview",
         "lesson_group.key": "required",
         "script.name": "csd6-dlp"
@@ -267,8 +249,6 @@
         "script_level.level_keys": [
           "deeper learning recommendations- csd"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "Deeper Learning Overview",
         "lesson_group.key": "required",
         "script.name": "csd6-dlp"
@@ -280,8 +260,6 @@
         "script_level.level_keys": [
           "peer review recommendations"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "Deeper Learning Overview",
         "lesson_group.key": "required",
         "script.name": "csd6-dlp"
@@ -293,8 +271,6 @@
         "script_level.level_keys": [
           "csd6dlp-lessons"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 1,
         "lesson.key": "Complete Unit 6 Deeper Learning Reflections",
         "lesson_group.key": "content",
         "script.name": "csd6-dlp"
@@ -306,8 +282,6 @@
         "script_level.level_keys": [
           "csd6dlp-tools"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 2,
         "lesson.key": "Complete Unit 6 Deeper Learning Reflections",
         "lesson_group.key": "content",
         "script.name": "csd6-dlp"
@@ -319,8 +293,6 @@
         "script_level.level_keys": [
           "csd6dlp-assessment"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 3,
         "lesson.key": "Complete Unit 6 Deeper Learning Reflections",
         "lesson_group.key": "content",
         "script.name": "csd6-dlp"

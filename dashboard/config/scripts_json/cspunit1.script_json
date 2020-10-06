@@ -279,8 +279,6 @@
         "script_level.level_keys": [
           "U1L1 Student Lesson Introduction"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Personal Innovations",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -301,8 +299,6 @@
         "script_level.level_keys": [
           "U1L1 Innovation - Video"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Personal Innovations",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -323,8 +319,6 @@
         "script_level.level_keys": [
           "U1L1 - FR computer science word association"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "Personal Innovations",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -345,8 +339,6 @@
         "script_level.level_keys": [
           "U1L2 Student Lesson Introduction"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 1,
         "lesson.key": "Sending Binary Messages",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -367,8 +359,6 @@
         "script_level.level_keys": [
           "U1L2 Multiple Choice Assessment Question"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 2,
         "lesson.key": "Sending Binary Messages",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -389,8 +379,6 @@
         "script_level.level_keys": [
           "U1L2 Free response assessment question"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 3,
         "lesson.key": "Sending Binary Messages",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -411,8 +399,6 @@
         "script_level.level_keys": [
           "U1L2 Free response reflection question"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 4,
         "lesson.key": "Sending Binary Messages",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -433,8 +419,6 @@
         "script_level.level_keys": [
           "U1L3 Student Lesson Introduction"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 1,
         "lesson.key": "Sending Complex Messages",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -455,8 +439,6 @@
         "script_level.level_keys": [
           "U1L3 Free response reflection question"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 2,
         "lesson.key": "Sending Complex Messages",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -477,8 +459,6 @@
         "script_level.level_keys": [
           "U1L3 Multiple Choice"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 3,
         "lesson.key": "Sending Complex Messages",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -499,8 +479,6 @@
         "script_level.level_keys": [
           "U1L3 Free Response"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 4,
         "lesson.key": "Sending Complex Messages",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -521,8 +499,6 @@
         "script_level.level_keys": [
           "U1L4 Student Lesson Introduction"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 1,
         "lesson.key": "Sending Binary Messages with the Internet Simulator",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -543,8 +519,6 @@
         "script_level.level_keys": [
           "U1L4 NetSim SendAB"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 2,
         "lesson.key": "Sending Binary Messages with the Internet Simulator",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -565,8 +539,6 @@
         "script_level.level_keys": [
           "U1L4 Multiple Choice"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 3,
         "lesson.key": "Sending Binary Messages with the Internet Simulator",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -587,8 +559,6 @@
         "script_level.level_keys": [
           "U1L4 Free Response Reflection"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 4,
         "lesson.key": "Sending Binary Messages with the Internet Simulator",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -609,8 +579,6 @@
         "script_level.level_keys": [
           "U1L5 Student Lesson Introduction"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 1,
         "lesson.key": "Sending Bits in the Real World",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -631,8 +599,6 @@
         "script_level.level_keys": [
           "U1L5 How the Internet Works - Video"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 2,
         "lesson.key": "Sending Bits in the Real World",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -653,8 +619,6 @@
         "script_level.level_keys": [
           "U1L5 Matching Assessment"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 3,
         "lesson.key": "Sending Bits in the Real World",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -675,8 +639,6 @@
         "script_level.level_keys": [
           "U1L6 Student Lesson Introduction"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 1,
         "lesson.key": "Number Systems",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -697,8 +659,6 @@
         "script_level.level_keys": [
           "U1L6 Assessment multiple choice"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 2,
         "lesson.key": "Number Systems",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -719,8 +679,6 @@
         "script_level.level_keys": [
           "U1L6 Free Response Reflection"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 3,
         "lesson.key": "Number Systems",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -741,8 +699,6 @@
         "script_level.level_keys": [
           "U1L7 Student Lesson Introduction"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 1,
         "lesson.key": "Binary Numbers",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -763,8 +719,6 @@
         "script_level.level_keys": [
           "Odometer"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 2,
         "lesson.key": "Binary Numbers",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -785,8 +739,6 @@
         "script_level.level_keys": [
           "U1L7 Free Response Assessment"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 3,
         "lesson.key": "Binary Numbers",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -807,8 +759,6 @@
         "script_level.level_keys": [
           "U1L7 Free Response Reflection"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 4,
         "lesson.key": "Binary Numbers",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -829,8 +779,6 @@
         "script_level.level_keys": [
           "U1L8 Student Lesson Introduction"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 1,
         "lesson.key": "Sending Numbers",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -851,8 +799,6 @@
         "script_level.level_keys": [
           "U1L8 NetSim numbers with decimal"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 2,
         "lesson.key": "Sending Numbers",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -873,8 +819,6 @@
         "script_level.level_keys": [
           "U1L8 Free Response Reflection"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 3,
         "lesson.key": "Sending Numbers",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -895,8 +839,6 @@
         "script_level.level_keys": [
           "U1L8 Free Response2"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 4,
         "lesson.key": "Sending Numbers",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -917,8 +859,6 @@
         "script_level.level_keys": [
           "U1L8 Multiple Choice"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 5,
         "lesson.key": "Sending Numbers",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -939,8 +879,6 @@
         "script_level.level_keys": [
           "U1L9 Student Lesson Introduction"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 1,
         "lesson.key": "Encoding Numbers in the Real World",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -961,8 +899,6 @@
         "script_level.level_keys": [
           "U1L9 Free Response Assessment"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 2,
         "lesson.key": "Encoding Numbers in the Real World",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -983,8 +919,6 @@
         "script_level.level_keys": [
           "U1L10 Student Lesson Introduction"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 1,
         "lesson.key": "Encoding and Sending Text",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -1005,8 +939,6 @@
         "script_level.level_keys": [
           "U1L10 NetSim numbers with decimal"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 2,
         "lesson.key": "Encoding and Sending Text",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -1027,8 +959,6 @@
         "script_level.level_keys": [
           "U1L10 Assessment 1"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 3,
         "lesson.key": "Encoding and Sending Text",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -1049,8 +979,6 @@
         "script_level.level_keys": [
           "U1L10 Assessment 2"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 4,
         "lesson.key": "Encoding and Sending Text",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -1071,8 +999,6 @@
         "script_level.level_keys": [
           "U1L10 Assessment Free Response"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 5,
         "lesson.key": "Encoding and Sending Text",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -1093,8 +1019,6 @@
         "script_level.level_keys": [
           "U1L11 Student Lesson Introduction"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 1,
         "lesson.key": "Sending Formatted Text",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -1115,8 +1039,6 @@
         "script_level.level_keys": [
           "U1L11 NetSim numbers with Ascii"
         ],
-        "script_level.chapter": 39,
-        "script_level.position": 2,
         "lesson.key": "Sending Formatted Text",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -1137,8 +1059,6 @@
         "script_level.level_keys": [
           "U1L11 Assessment 1"
         ],
-        "script_level.chapter": 40,
-        "script_level.position": 3,
         "lesson.key": "Sending Formatted Text",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -1159,8 +1079,6 @@
         "script_level.level_keys": [
           "U1L11 Assessment 2"
         ],
-        "script_level.chapter": 41,
-        "script_level.position": 4,
         "lesson.key": "Sending Formatted Text",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -1181,8 +1099,6 @@
         "script_level.level_keys": [
           "U1L11 Reflection Free Response"
         ],
-        "script_level.chapter": 42,
-        "script_level.position": 5,
         "lesson.key": "Sending Formatted Text",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -1203,8 +1119,6 @@
         "script_level.level_keys": [
           "U1L11 Collaboration Reflection"
         ],
-        "script_level.chapter": 43,
-        "script_level.position": 6,
         "lesson.key": "Sending Formatted Text",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -1225,8 +1139,6 @@
         "script_level.level_keys": [
           "U1L12 Student Lesson Introduction"
         ],
-        "script_level.chapter": 44,
-        "script_level.position": 1,
         "lesson.key": "Bytes and File Sizes",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -1247,8 +1159,6 @@
         "script_level.level_keys": [
           "U1L12 Reflection Free Response"
         ],
-        "script_level.chapter": 45,
-        "script_level.position": 2,
         "lesson.key": "Bytes and File Sizes",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -1269,8 +1179,6 @@
         "script_level.level_keys": [
           "U1L13 Student Lesson Summary"
         ],
-        "script_level.chapter": 46,
-        "script_level.position": 1,
         "lesson.key": "Text Compression",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -1291,8 +1199,6 @@
         "script_level.level_keys": [
           "U1L13 Text Compression"
         ],
-        "script_level.chapter": 47,
-        "script_level.position": 2,
         "lesson.key": "Text Compression",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -1313,8 +1219,6 @@
         "script_level.level_keys": [
           "U1L13 - Assess Text Compression reverse process"
         ],
-        "script_level.chapter": 48,
-        "script_level.position": 3,
         "lesson.key": "Text Compression",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -1335,8 +1239,6 @@
         "script_level.level_keys": [
           "U1L13 Assess Text Compression amount"
         ],
-        "script_level.chapter": 49,
-        "script_level.position": 4,
         "lesson.key": "Text Compression",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -1357,8 +1259,6 @@
         "script_level.level_keys": [
           "U1L13 Assessment 1"
         ],
-        "script_level.chapter": 50,
-        "script_level.position": 5,
         "lesson.key": "Text Compression",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -1379,8 +1279,6 @@
         "script_level.level_keys": [
           "U1L13 Assessment 2"
         ],
-        "script_level.chapter": 51,
-        "script_level.position": 6,
         "lesson.key": "Text Compression",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -1401,8 +1299,6 @@
         "script_level.level_keys": [
           "U1L14 Student Lesson Summary"
         ],
-        "script_level.chapter": 52,
-        "script_level.position": 1,
         "lesson.key": "Encoding B&W Images",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -1423,8 +1319,6 @@
         "script_level.level_keys": [
           "Pixelation - Lesson 14 - Make the Letter A"
         ],
-        "script_level.chapter": 53,
-        "script_level.position": 2,
         "lesson.key": "Encoding B&W Images",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -1445,8 +1339,6 @@
         "script_level.level_keys": [
           "Pixelation - Lesson 14 - Fix bit offset"
         ],
-        "script_level.chapter": 54,
-        "script_level.position": 3,
         "lesson.key": "Encoding B&W Images",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -1467,8 +1359,6 @@
         "script_level.level_keys": [
           "Pixelation - Lesson 14 - Make your own B and W Image"
         ],
-        "script_level.chapter": 55,
-        "script_level.position": 4,
         "lesson.key": "Encoding B&W Images",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -1489,8 +1379,6 @@
         "script_level.level_keys": [
           "U1L14 Assessment 1"
         ],
-        "script_level.chapter": 56,
-        "script_level.position": 5,
         "lesson.key": "Encoding B&W Images",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -1511,8 +1399,6 @@
         "script_level.level_keys": [
           "U1L14 - Assessment 2"
         ],
-        "script_level.chapter": 57,
-        "script_level.position": 6,
         "lesson.key": "Encoding B&W Images",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -1533,8 +1419,6 @@
         "script_level.level_keys": [
           "U1L15 Student Lesson Summary"
         ],
-        "script_level.chapter": 58,
-        "script_level.position": 1,
         "lesson.key": "Encoding Color Images",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -1555,8 +1439,6 @@
         "script_level.level_keys": [
           "Pixelation - Lesson 15 - Complete 3-bit color"
         ],
-        "script_level.chapter": 59,
-        "script_level.position": 2,
         "lesson.key": "Encoding Color Images",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -1577,8 +1459,6 @@
         "script_level.level_keys": [
           "Pixelation - Lesson 15 - Color Shades"
         ],
-        "script_level.chapter": 60,
-        "script_level.position": 3,
         "lesson.key": "Encoding Color Images",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -1599,8 +1479,6 @@
         "script_level.level_keys": [
           "Pixelation - Lesson 15 - Color Shades 4x4"
         ],
-        "script_level.chapter": 61,
-        "script_level.position": 4,
         "lesson.key": "Encoding Color Images",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -1621,8 +1499,6 @@
         "script_level.level_keys": [
           "Pixelation Flappy"
         ],
-        "script_level.chapter": 62,
-        "script_level.position": 5,
         "lesson.key": "Encoding Color Images",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -1643,8 +1519,6 @@
         "script_level.level_keys": [
           "Pixelation Bee"
         ],
-        "script_level.chapter": 63,
-        "script_level.position": 6,
         "lesson.key": "Encoding Color Images",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -1665,8 +1539,6 @@
         "script_level.level_keys": [
           "Pixelation - Lesson 15 - Favicon Instructions"
         ],
-        "script_level.chapter": 64,
-        "script_level.position": 7,
         "lesson.key": "Encoding Color Images",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -1687,8 +1559,6 @@
         "script_level.level_keys": [
           "Pixelation - Lesson 15 - Color Free Play"
         ],
-        "script_level.chapter": 65,
-        "script_level.position": 8,
         "lesson.key": "Encoding Color Images",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -1709,8 +1579,6 @@
         "script_level.level_keys": [
           "a bit about pixels"
         ],
-        "script_level.chapter": 66,
-        "script_level.position": 9,
         "lesson.key": "Encoding Color Images",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -1731,8 +1599,6 @@
         "script_level.level_keys": [
           "U1L16 Student Lesson Introduction"
         ],
-        "script_level.chapter": 67,
-        "script_level.position": 1,
         "lesson.key": "Lossy Compression and File Formats",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -1753,8 +1619,6 @@
         "script_level.level_keys": [
           "U1L16 - Matching File Compression Types"
         ],
-        "script_level.chapter": 68,
-        "script_level.position": 2,
         "lesson.key": "Lossy Compression and File Formats",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -1775,8 +1639,6 @@
         "script_level.level_keys": [
           "U1L17 Student Lesson Introduction"
         ],
-        "script_level.chapter": 69,
-        "script_level.position": 1,
         "lesson.key": "Encode a Complex Thing",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -1793,8 +1655,6 @@
         "script_level.level_keys": [
           "U1L1 Student Lesson Introduction"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Personal Innovations",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -1806,8 +1666,6 @@
         "script_level.level_keys": [
           "U1L1 Innovation - Video"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Personal Innovations",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -1819,8 +1677,6 @@
         "script_level.level_keys": [
           "U1L1 - FR computer science word association"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "Personal Innovations",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -1832,8 +1688,6 @@
         "script_level.level_keys": [
           "U1L2 Student Lesson Introduction"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 1,
         "lesson.key": "Sending Binary Messages",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -1845,8 +1699,6 @@
         "script_level.level_keys": [
           "U1L2 Multiple Choice Assessment Question"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 2,
         "lesson.key": "Sending Binary Messages",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -1858,8 +1710,6 @@
         "script_level.level_keys": [
           "U1L2 Free response assessment question"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 3,
         "lesson.key": "Sending Binary Messages",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -1871,8 +1721,6 @@
         "script_level.level_keys": [
           "U1L2 Free response reflection question"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 4,
         "lesson.key": "Sending Binary Messages",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -1884,8 +1732,6 @@
         "script_level.level_keys": [
           "U1L3 Student Lesson Introduction"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 1,
         "lesson.key": "Sending Complex Messages",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -1897,8 +1743,6 @@
         "script_level.level_keys": [
           "U1L3 Free response reflection question"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 2,
         "lesson.key": "Sending Complex Messages",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -1910,8 +1754,6 @@
         "script_level.level_keys": [
           "U1L3 Multiple Choice"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 3,
         "lesson.key": "Sending Complex Messages",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -1923,8 +1765,6 @@
         "script_level.level_keys": [
           "U1L3 Free Response"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 4,
         "lesson.key": "Sending Complex Messages",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -1936,8 +1776,6 @@
         "script_level.level_keys": [
           "U1L4 Student Lesson Introduction"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 1,
         "lesson.key": "Sending Binary Messages with the Internet Simulator",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -1949,8 +1787,6 @@
         "script_level.level_keys": [
           "U1L4 NetSim SendAB"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 2,
         "lesson.key": "Sending Binary Messages with the Internet Simulator",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -1962,8 +1798,6 @@
         "script_level.level_keys": [
           "U1L4 Multiple Choice"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 3,
         "lesson.key": "Sending Binary Messages with the Internet Simulator",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -1975,8 +1809,6 @@
         "script_level.level_keys": [
           "U1L4 Free Response Reflection"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 4,
         "lesson.key": "Sending Binary Messages with the Internet Simulator",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -1988,8 +1820,6 @@
         "script_level.level_keys": [
           "U1L5 Student Lesson Introduction"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 1,
         "lesson.key": "Sending Bits in the Real World",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -2001,8 +1831,6 @@
         "script_level.level_keys": [
           "U1L5 How the Internet Works - Video"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 2,
         "lesson.key": "Sending Bits in the Real World",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -2014,8 +1842,6 @@
         "script_level.level_keys": [
           "U1L5 Matching Assessment"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 3,
         "lesson.key": "Sending Bits in the Real World",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -2027,8 +1853,6 @@
         "script_level.level_keys": [
           "U1L6 Student Lesson Introduction"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 1,
         "lesson.key": "Number Systems",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -2040,8 +1864,6 @@
         "script_level.level_keys": [
           "U1L6 Assessment multiple choice"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 2,
         "lesson.key": "Number Systems",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -2053,8 +1875,6 @@
         "script_level.level_keys": [
           "U1L6 Free Response Reflection"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 3,
         "lesson.key": "Number Systems",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -2066,8 +1886,6 @@
         "script_level.level_keys": [
           "U1L7 Student Lesson Introduction"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 1,
         "lesson.key": "Binary Numbers",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -2079,8 +1897,6 @@
         "script_level.level_keys": [
           "Odometer"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 2,
         "lesson.key": "Binary Numbers",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -2092,8 +1908,6 @@
         "script_level.level_keys": [
           "U1L7 Free Response Assessment"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 3,
         "lesson.key": "Binary Numbers",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -2105,8 +1919,6 @@
         "script_level.level_keys": [
           "U1L7 Free Response Reflection"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 4,
         "lesson.key": "Binary Numbers",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -2118,8 +1930,6 @@
         "script_level.level_keys": [
           "U1L8 Student Lesson Introduction"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 1,
         "lesson.key": "Sending Numbers",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -2131,8 +1941,6 @@
         "script_level.level_keys": [
           "U1L8 NetSim numbers with decimal"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 2,
         "lesson.key": "Sending Numbers",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -2144,8 +1952,6 @@
         "script_level.level_keys": [
           "U1L8 Free Response Reflection"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 3,
         "lesson.key": "Sending Numbers",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -2157,8 +1963,6 @@
         "script_level.level_keys": [
           "U1L8 Free Response2"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 4,
         "lesson.key": "Sending Numbers",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -2170,8 +1974,6 @@
         "script_level.level_keys": [
           "U1L8 Multiple Choice"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 5,
         "lesson.key": "Sending Numbers",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -2183,8 +1985,6 @@
         "script_level.level_keys": [
           "U1L9 Student Lesson Introduction"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 1,
         "lesson.key": "Encoding Numbers in the Real World",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -2196,8 +1996,6 @@
         "script_level.level_keys": [
           "U1L9 Free Response Assessment"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 2,
         "lesson.key": "Encoding Numbers in the Real World",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -2209,8 +2007,6 @@
         "script_level.level_keys": [
           "U1L10 Student Lesson Introduction"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 1,
         "lesson.key": "Encoding and Sending Text",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -2222,8 +2018,6 @@
         "script_level.level_keys": [
           "U1L10 NetSim numbers with decimal"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 2,
         "lesson.key": "Encoding and Sending Text",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -2235,8 +2029,6 @@
         "script_level.level_keys": [
           "U1L10 Assessment 1"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 3,
         "lesson.key": "Encoding and Sending Text",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -2248,8 +2040,6 @@
         "script_level.level_keys": [
           "U1L10 Assessment 2"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 4,
         "lesson.key": "Encoding and Sending Text",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -2261,8 +2051,6 @@
         "script_level.level_keys": [
           "U1L10 Assessment Free Response"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 5,
         "lesson.key": "Encoding and Sending Text",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -2274,8 +2062,6 @@
         "script_level.level_keys": [
           "U1L11 Student Lesson Introduction"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 1,
         "lesson.key": "Sending Formatted Text",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -2287,8 +2073,6 @@
         "script_level.level_keys": [
           "U1L11 NetSim numbers with Ascii"
         ],
-        "script_level.chapter": 39,
-        "script_level.position": 2,
         "lesson.key": "Sending Formatted Text",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -2300,8 +2084,6 @@
         "script_level.level_keys": [
           "U1L11 Assessment 1"
         ],
-        "script_level.chapter": 40,
-        "script_level.position": 3,
         "lesson.key": "Sending Formatted Text",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -2313,8 +2095,6 @@
         "script_level.level_keys": [
           "U1L11 Assessment 2"
         ],
-        "script_level.chapter": 41,
-        "script_level.position": 4,
         "lesson.key": "Sending Formatted Text",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -2326,8 +2106,6 @@
         "script_level.level_keys": [
           "U1L11 Reflection Free Response"
         ],
-        "script_level.chapter": 42,
-        "script_level.position": 5,
         "lesson.key": "Sending Formatted Text",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -2339,8 +2117,6 @@
         "script_level.level_keys": [
           "U1L11 Collaboration Reflection"
         ],
-        "script_level.chapter": 43,
-        "script_level.position": 6,
         "lesson.key": "Sending Formatted Text",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -2352,8 +2128,6 @@
         "script_level.level_keys": [
           "U1L12 Student Lesson Introduction"
         ],
-        "script_level.chapter": 44,
-        "script_level.position": 1,
         "lesson.key": "Bytes and File Sizes",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -2365,8 +2139,6 @@
         "script_level.level_keys": [
           "U1L12 Reflection Free Response"
         ],
-        "script_level.chapter": 45,
-        "script_level.position": 2,
         "lesson.key": "Bytes and File Sizes",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -2378,8 +2150,6 @@
         "script_level.level_keys": [
           "U1L13 Student Lesson Summary"
         ],
-        "script_level.chapter": 46,
-        "script_level.position": 1,
         "lesson.key": "Text Compression",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -2391,8 +2161,6 @@
         "script_level.level_keys": [
           "U1L13 Text Compression"
         ],
-        "script_level.chapter": 47,
-        "script_level.position": 2,
         "lesson.key": "Text Compression",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -2404,8 +2172,6 @@
         "script_level.level_keys": [
           "U1L13 - Assess Text Compression reverse process"
         ],
-        "script_level.chapter": 48,
-        "script_level.position": 3,
         "lesson.key": "Text Compression",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -2417,8 +2183,6 @@
         "script_level.level_keys": [
           "U1L13 Assess Text Compression amount"
         ],
-        "script_level.chapter": 49,
-        "script_level.position": 4,
         "lesson.key": "Text Compression",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -2430,8 +2194,6 @@
         "script_level.level_keys": [
           "U1L13 Assessment 1"
         ],
-        "script_level.chapter": 50,
-        "script_level.position": 5,
         "lesson.key": "Text Compression",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -2443,8 +2205,6 @@
         "script_level.level_keys": [
           "U1L13 Assessment 2"
         ],
-        "script_level.chapter": 51,
-        "script_level.position": 6,
         "lesson.key": "Text Compression",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -2456,8 +2216,6 @@
         "script_level.level_keys": [
           "U1L14 Student Lesson Summary"
         ],
-        "script_level.chapter": 52,
-        "script_level.position": 1,
         "lesson.key": "Encoding B&W Images",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -2469,8 +2227,6 @@
         "script_level.level_keys": [
           "Pixelation - Lesson 14 - Make the Letter A"
         ],
-        "script_level.chapter": 53,
-        "script_level.position": 2,
         "lesson.key": "Encoding B&W Images",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -2482,8 +2238,6 @@
         "script_level.level_keys": [
           "Pixelation - Lesson 14 - Fix bit offset"
         ],
-        "script_level.chapter": 54,
-        "script_level.position": 3,
         "lesson.key": "Encoding B&W Images",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -2495,8 +2249,6 @@
         "script_level.level_keys": [
           "Pixelation - Lesson 14 - Make your own B and W Image"
         ],
-        "script_level.chapter": 55,
-        "script_level.position": 4,
         "lesson.key": "Encoding B&W Images",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -2508,8 +2260,6 @@
         "script_level.level_keys": [
           "U1L14 Assessment 1"
         ],
-        "script_level.chapter": 56,
-        "script_level.position": 5,
         "lesson.key": "Encoding B&W Images",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -2521,8 +2271,6 @@
         "script_level.level_keys": [
           "U1L14 - Assessment 2"
         ],
-        "script_level.chapter": 57,
-        "script_level.position": 6,
         "lesson.key": "Encoding B&W Images",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -2534,8 +2282,6 @@
         "script_level.level_keys": [
           "U1L15 Student Lesson Summary"
         ],
-        "script_level.chapter": 58,
-        "script_level.position": 1,
         "lesson.key": "Encoding Color Images",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -2547,8 +2293,6 @@
         "script_level.level_keys": [
           "Pixelation - Lesson 15 - Complete 3-bit color"
         ],
-        "script_level.chapter": 59,
-        "script_level.position": 2,
         "lesson.key": "Encoding Color Images",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -2560,8 +2304,6 @@
         "script_level.level_keys": [
           "Pixelation - Lesson 15 - Color Shades"
         ],
-        "script_level.chapter": 60,
-        "script_level.position": 3,
         "lesson.key": "Encoding Color Images",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -2573,8 +2315,6 @@
         "script_level.level_keys": [
           "Pixelation - Lesson 15 - Color Shades 4x4"
         ],
-        "script_level.chapter": 61,
-        "script_level.position": 4,
         "lesson.key": "Encoding Color Images",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -2586,8 +2326,6 @@
         "script_level.level_keys": [
           "Pixelation Flappy"
         ],
-        "script_level.chapter": 62,
-        "script_level.position": 5,
         "lesson.key": "Encoding Color Images",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -2599,8 +2337,6 @@
         "script_level.level_keys": [
           "Pixelation Bee"
         ],
-        "script_level.chapter": 63,
-        "script_level.position": 6,
         "lesson.key": "Encoding Color Images",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -2612,8 +2348,6 @@
         "script_level.level_keys": [
           "Pixelation - Lesson 15 - Favicon Instructions"
         ],
-        "script_level.chapter": 64,
-        "script_level.position": 7,
         "lesson.key": "Encoding Color Images",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -2625,8 +2359,6 @@
         "script_level.level_keys": [
           "Pixelation - Lesson 15 - Color Free Play"
         ],
-        "script_level.chapter": 65,
-        "script_level.position": 8,
         "lesson.key": "Encoding Color Images",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -2638,8 +2370,6 @@
         "script_level.level_keys": [
           "a bit about pixels"
         ],
-        "script_level.chapter": 66,
-        "script_level.position": 9,
         "lesson.key": "Encoding Color Images",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -2651,8 +2381,6 @@
         "script_level.level_keys": [
           "U1L16 Student Lesson Introduction"
         ],
-        "script_level.chapter": 67,
-        "script_level.position": 1,
         "lesson.key": "Lossy Compression and File Formats",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -2664,8 +2392,6 @@
         "script_level.level_keys": [
           "U1L16 - Matching File Compression Types"
         ],
-        "script_level.chapter": 68,
-        "script_level.position": 2,
         "lesson.key": "Lossy Compression and File Formats",
         "lesson_group.key": "",
         "script.name": "cspunit1"
@@ -2677,8 +2403,6 @@
         "script_level.level_keys": [
           "U1L17 Student Lesson Introduction"
         ],
-        "script_level.chapter": 69,
-        "script_level.position": 1,
         "lesson.key": "Encode a Complex Thing",
         "lesson_group.key": "",
         "script.name": "cspunit1"

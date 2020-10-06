@@ -349,8 +349,6 @@
         "script_level.level_keys": [
           "csp-pre-survey-2017-levelgroup"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "CS Principles Pre-survey",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-2017"
@@ -372,8 +370,6 @@
         "script_level.level_keys": [
           "U1L1 Student Lesson Introduction"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 1,
         "lesson.key": "Personal Innovations",
         "lesson_group.key": "csp1_1",
         "script.name": "csp1-2017"
@@ -395,8 +391,6 @@
         "script_level.level_keys": [
           "Computer Science is Changing Everything"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 2,
         "lesson.key": "Personal Innovations",
         "lesson_group.key": "csp1_1",
         "script.name": "csp1-2017"
@@ -434,8 +428,6 @@
           "csp_socialBelonging_intervention",
           "csp_socialBelonging_control"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 3,
         "lesson.key": "Personal Innovations",
         "lesson_group.key": "csp1_1",
         "script.name": "csp1-2017"
@@ -458,8 +450,6 @@
         "script_level.level_keys": [
           "v2 U1L2 Student Lesson Introduction"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 1,
         "lesson.key": "Sending Binary Messages",
         "lesson_group.key": "csp1_1",
         "script.name": "csp1-2017"
@@ -481,8 +471,6 @@
         "script_level.level_keys": [
           "U1L2 Multiple Choice Assessment Question"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 2,
         "lesson.key": "Sending Binary Messages",
         "lesson_group.key": "csp1_1",
         "script.name": "csp1-2017"
@@ -504,8 +492,6 @@
         "script_level.level_keys": [
           "U1L2 Free response assessment question"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 3,
         "lesson.key": "Sending Binary Messages",
         "lesson_group.key": "csp1_1",
         "script.name": "csp1-2017"
@@ -527,8 +513,6 @@
         "script_level.level_keys": [
           "U1L3 Free Response"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 4,
         "lesson.key": "Sending Binary Messages",
         "lesson_group.key": "csp1_1",
         "script.name": "csp1-2017"
@@ -550,8 +534,6 @@
         "script_level.level_keys": [
           "v2 U1L3 Student Lesson Introduction"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 1,
         "lesson.key": "Sending Binary Messages with the Internet Simulator",
         "lesson_group.key": "csp1_1",
         "script.name": "csp1-2017"
@@ -573,8 +555,6 @@
         "script_level.level_keys": [
           "Internet Simulator: Sending Binary Messages"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 2,
         "lesson.key": "Sending Binary Messages with the Internet Simulator",
         "lesson_group.key": "csp1_1",
         "script.name": "csp1-2017"
@@ -596,8 +576,6 @@
         "script_level.level_keys": [
           "The Internet: Wires, Cables, and Wifi"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 3,
         "lesson.key": "Sending Binary Messages with the Internet Simulator",
         "lesson_group.key": "csp1_1",
         "script.name": "csp1-2017"
@@ -619,8 +597,6 @@
         "script_level.level_keys": [
           "U1L3 Free response reflection question"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 4,
         "lesson.key": "Sending Binary Messages with the Internet Simulator",
         "lesson_group.key": "csp1_1",
         "script.name": "csp1-2017"
@@ -642,8 +618,6 @@
         "script_level.level_keys": [
           "U1L4 Multiple Choice"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 5,
         "lesson.key": "Sending Binary Messages with the Internet Simulator",
         "lesson_group.key": "csp1_1",
         "script.name": "csp1-2017"
@@ -665,8 +639,6 @@
         "script_level.level_keys": [
           "U1L3 Multiple Choice"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 6,
         "lesson.key": "Sending Binary Messages with the Internet Simulator",
         "lesson_group.key": "csp1_1",
         "script.name": "csp1-2017"
@@ -688,8 +660,6 @@
         "script_level.level_keys": [
           "U1L4 Free Response Reflection"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 7,
         "lesson.key": "Sending Binary Messages with the Internet Simulator",
         "lesson_group.key": "csp1_1",
         "script.name": "csp1-2017"
@@ -711,8 +681,6 @@
         "script_level.level_keys": [
           "U1L5 Matching Assessment"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 8,
         "lesson.key": "Sending Binary Messages with the Internet Simulator",
         "lesson_group.key": "csp1_1",
         "script.name": "csp1-2017"
@@ -734,8 +702,6 @@
         "script_level.level_keys": [
           "v2 U1L4 Student Lesson Introduction"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 1,
         "lesson.key": "Number Systems",
         "lesson_group.key": "csp1_1",
         "script.name": "csp1-2017"
@@ -757,8 +723,6 @@
         "script_level.level_keys": [
           "U1L6 Assessment multiple choice"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 2,
         "lesson.key": "Number Systems",
         "lesson_group.key": "csp1_1",
         "script.name": "csp1-2017"
@@ -780,8 +744,6 @@
         "script_level.level_keys": [
           "U1L6 Free Response Reflection"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 3,
         "lesson.key": "Number Systems",
         "lesson_group.key": "csp1_1",
         "script.name": "csp1-2017"
@@ -803,8 +765,6 @@
         "script_level.level_keys": [
           "v2 U1L5 Student Lesson Introduction"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 1,
         "lesson.key": "Binary Numbers",
         "lesson_group.key": "csp1_1",
         "script.name": "csp1-2017"
@@ -826,8 +786,6 @@
         "script_level.level_keys": [
           "Widget: Binary Odometer"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 2,
         "lesson.key": "Binary Numbers",
         "lesson_group.key": "csp1_1",
         "script.name": "csp1-2017"
@@ -849,8 +807,6 @@
         "script_level.level_keys": [
           "U1L7 Free Response Assessment"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 3,
         "lesson.key": "Binary Numbers",
         "lesson_group.key": "csp1_1",
         "script.name": "csp1-2017"
@@ -872,8 +828,6 @@
         "script_level.level_keys": [
           "U1L7 Free Response Reflection"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 4,
         "lesson.key": "Binary Numbers",
         "lesson_group.key": "csp1_1",
         "script.name": "csp1-2017"
@@ -895,8 +849,6 @@
         "script_level.level_keys": [
           "v2 U1L6 Student Lesson Introduction"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 1,
         "lesson.key": "Sending Numbers",
         "lesson_group.key": "csp1_1",
         "script.name": "csp1-2017"
@@ -918,8 +870,6 @@
         "script_level.level_keys": [
           "Internet Simulator: Sending Numbers"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 2,
         "lesson.key": "Sending Numbers",
         "lesson_group.key": "csp1_1",
         "script.name": "csp1-2017"
@@ -941,8 +891,6 @@
         "script_level.level_keys": [
           "U1L8 Free Response Reflection"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 3,
         "lesson.key": "Sending Numbers",
         "lesson_group.key": "csp1_1",
         "script.name": "csp1-2017"
@@ -964,8 +912,6 @@
         "script_level.level_keys": [
           "U1L8 Multiple Choice"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 4,
         "lesson.key": "Sending Numbers",
         "lesson_group.key": "csp1_1",
         "script.name": "csp1-2017"
@@ -987,8 +933,6 @@
         "script_level.level_keys": [
           "v2 U1L8 Student Lesson Introduction"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 1,
         "lesson.key": "Encoding and Sending Formatted Text",
         "lesson_group.key": "csp1_1",
         "script.name": "csp1-2017"
@@ -1010,8 +954,6 @@
         "script_level.level_keys": [
           "Internet Simulator: Sending Text"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 2,
         "lesson.key": "Encoding and Sending Formatted Text",
         "lesson_group.key": "csp1_1",
         "script.name": "csp1-2017"
@@ -1033,8 +975,6 @@
         "script_level.level_keys": [
           "U1L10 Assessment 1"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 3,
         "lesson.key": "Encoding and Sending Formatted Text",
         "lesson_group.key": "csp1_1",
         "script.name": "csp1-2017"
@@ -1056,8 +996,6 @@
         "script_level.level_keys": [
           "U1L10 Assessment 2"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 4,
         "lesson.key": "Encoding and Sending Formatted Text",
         "lesson_group.key": "csp1_1",
         "script.name": "csp1-2017"
@@ -1079,8 +1017,6 @@
         "script_level.level_keys": [
           "U1L10 Assessment Free Response"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 5,
         "lesson.key": "Encoding and Sending Formatted Text",
         "lesson_group.key": "csp1_1",
         "script.name": "csp1-2017"
@@ -1102,8 +1038,6 @@
         "script_level.level_keys": [
           "U1L11 Assessment 1"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 6,
         "lesson.key": "Encoding and Sending Formatted Text",
         "lesson_group.key": "csp1_1",
         "script.name": "csp1-2017"
@@ -1125,8 +1059,6 @@
         "script_level.level_keys": [
           "U1L11 Assessment 2"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 7,
         "lesson.key": "Encoding and Sending Formatted Text",
         "lesson_group.key": "csp1_1",
         "script.name": "csp1-2017"
@@ -1148,8 +1080,6 @@
         "script_level.level_keys": [
           "U1L11 Reflection Free Response"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 8,
         "lesson.key": "Encoding and Sending Formatted Text",
         "lesson_group.key": "csp1_1",
         "script.name": "csp1-2017"
@@ -1171,8 +1101,6 @@
         "script_level.level_keys": [
           "U1L11 Collaboration Reflection"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 9,
         "lesson.key": "Encoding and Sending Formatted Text",
         "lesson_group.key": "csp1_1",
         "script.name": "csp1-2017"
@@ -1193,8 +1121,6 @@
         "script_level.level_keys": [
           "CSP Unit 1 Ch1 Cumulative Assessment MC Group v2"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 1,
         "lesson.key": "Unit 1 Chapter 1 Assessment",
         "lesson_group.key": "csp1_1",
         "script.name": "csp1-2017"
@@ -1216,8 +1142,6 @@
         "script_level.level_keys": [
           "v2 U1 Internet is for Everyone Student Lesson Introduction"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 1,
         "lesson.key": "The Internet",
         "lesson_group.key": "csp1_2",
         "script.name": "csp1-2017"
@@ -1239,8 +1163,6 @@
         "script_level.level_keys": [
           "What is the Internet?"
         ],
-        "script_level.chapter": 39,
-        "script_level.position": 2,
         "lesson.key": "The Internet",
         "lesson_group.key": "csp1_2",
         "script.name": "csp1-2017"
@@ -1262,8 +1184,6 @@
         "script_level.level_keys": [
           "U2L01 Assessment 1"
         ],
-        "script_level.chapter": 40,
-        "script_level.position": 3,
         "lesson.key": "The Internet",
         "lesson_group.key": "csp1_2",
         "script.name": "csp1-2017"
@@ -1285,8 +1205,6 @@
         "script_level.level_keys": [
           "U2L01 Assessment 2"
         ],
-        "script_level.chapter": 41,
-        "script_level.position": 4,
         "lesson.key": "The Internet",
         "lesson_group.key": "csp1_2",
         "script.name": "csp1-2017"
@@ -1308,8 +1226,6 @@
         "script_level.level_keys": [
           "U2L01 Assessment 3"
         ],
-        "script_level.chapter": 42,
-        "script_level.position": 5,
         "lesson.key": "The Internet",
         "lesson_group.key": "csp1_2",
         "script.name": "csp1-2017"
@@ -1331,8 +1247,6 @@
         "script_level.level_keys": [
           "U2L01 Assessment 4"
         ],
-        "script_level.chapter": 43,
-        "script_level.position": 6,
         "lesson.key": "The Internet",
         "lesson_group.key": "csp1_2",
         "script.name": "csp1-2017"
@@ -1354,8 +1268,6 @@
         "script_level.level_keys": [
           "csp-pulse-check-survey-1-levelgroup-U1Ch2"
         ],
-        "script_level.chapter": 44,
-        "script_level.position": 7,
         "lesson.key": "The Internet",
         "lesson_group.key": "csp1_2",
         "script.name": "csp1-2017"
@@ -1377,8 +1289,6 @@
         "script_level.level_keys": [
           "v2 U1L9 Student Lesson Introduction"
         ],
-        "script_level.chapter": 45,
-        "script_level.position": 1,
         "lesson.key": "The Need for Addressing",
         "lesson_group.key": "csp1_2",
         "script.name": "csp1-2017"
@@ -1400,8 +1310,6 @@
         "script_level.level_keys": [
           "Internet Simulator: Broadcast"
         ],
-        "script_level.chapter": 46,
-        "script_level.position": 2,
         "lesson.key": "The Need for Addressing",
         "lesson_group.key": "csp1_2",
         "script.name": "csp1-2017"
@@ -1423,8 +1331,6 @@
         "script_level.level_keys": [
           "The Internet: IP Addresses & DNS"
         ],
-        "script_level.chapter": 47,
-        "script_level.position": 3,
         "lesson.key": "The Need for Addressing",
         "lesson_group.key": "csp1_2",
         "script.name": "csp1-2017"
@@ -1446,8 +1352,6 @@
         "script_level.level_keys": [
           "U2L02 Free Response Reflection"
         ],
-        "script_level.chapter": 48,
-        "script_level.position": 4,
         "lesson.key": "The Need for Addressing",
         "lesson_group.key": "csp1_2",
         "script.name": "csp1-2017"
@@ -1469,8 +1373,6 @@
         "script_level.level_keys": [
           "U2L02 Assessment 3"
         ],
-        "script_level.chapter": 49,
-        "script_level.position": 5,
         "lesson.key": "The Need for Addressing",
         "lesson_group.key": "csp1_2",
         "script.name": "csp1-2017"
@@ -1492,8 +1394,6 @@
         "script_level.level_keys": [
           "U2L02 Assessment 4"
         ],
-        "script_level.chapter": 50,
-        "script_level.position": 6,
         "lesson.key": "The Need for Addressing",
         "lesson_group.key": "csp1_2",
         "script.name": "csp1-2017"
@@ -1515,8 +1415,6 @@
         "script_level.level_keys": [
           "U2L02 Assessment 5"
         ],
-        "script_level.chapter": 51,
-        "script_level.position": 7,
         "lesson.key": "The Need for Addressing",
         "lesson_group.key": "csp1_2",
         "script.name": "csp1-2017"
@@ -1538,8 +1436,6 @@
         "script_level.level_keys": [
           "U2L3 Assessment 2"
         ],
-        "script_level.chapter": 52,
-        "script_level.position": 8,
         "lesson.key": "The Need for Addressing",
         "lesson_group.key": "csp1_2",
         "script.name": "csp1-2017"
@@ -1561,8 +1457,6 @@
         "script_level.level_keys": [
           "v2 U1L10 Student Lesson Introduction"
         ],
-        "script_level.chapter": 53,
-        "script_level.position": 1,
         "lesson.key": "Routers and Redundancy",
         "lesson_group.key": "csp1_2",
         "script.name": "csp1-2017"
@@ -1584,8 +1478,6 @@
         "script_level.level_keys": [
           "Internet Simulator: Routers"
         ],
-        "script_level.chapter": 54,
-        "script_level.position": 2,
         "lesson.key": "Routers and Redundancy",
         "lesson_group.key": "csp1_2",
         "script.name": "csp1-2017"
@@ -1607,8 +1499,6 @@
         "script_level.level_keys": [
           "U2L04 Assessment1"
         ],
-        "script_level.chapter": 55,
-        "script_level.position": 3,
         "lesson.key": "Routers and Redundancy",
         "lesson_group.key": "csp1_2",
         "script.name": "csp1-2017"
@@ -1630,8 +1520,6 @@
         "script_level.level_keys": [
           "U2L04 Assessment4"
         ],
-        "script_level.chapter": 56,
-        "script_level.position": 4,
         "lesson.key": "Routers and Redundancy",
         "lesson_group.key": "csp1_2",
         "script.name": "csp1-2017"
@@ -1653,8 +1541,6 @@
         "script_level.level_keys": [
           "U2L04 Assessment5"
         ],
-        "script_level.chapter": 57,
-        "script_level.position": 5,
         "lesson.key": "Routers and Redundancy",
         "lesson_group.key": "csp1_2",
         "script.name": "csp1-2017"
@@ -1676,8 +1562,6 @@
         "script_level.level_keys": [
           "U2L04 Assessment2"
         ],
-        "script_level.chapter": 58,
-        "script_level.position": 6,
         "lesson.key": "Routers and Redundancy",
         "lesson_group.key": "csp1_2",
         "script.name": "csp1-2017"
@@ -1699,8 +1583,6 @@
         "script_level.level_keys": [
           "U2L04 Assessment3"
         ],
-        "script_level.chapter": 59,
-        "script_level.position": 7,
         "lesson.key": "Routers and Redundancy",
         "lesson_group.key": "csp1_2",
         "script.name": "csp1-2017"
@@ -1722,8 +1604,6 @@
         "script_level.level_keys": [
           "v2 U1L11 Student Lesson Introduction"
         ],
-        "script_level.chapter": 60,
-        "script_level.position": 1,
         "lesson.key": "Packets and Making a Reliable Internet",
         "lesson_group.key": "csp1_2",
         "script.name": "csp1-2017"
@@ -1745,8 +1625,6 @@
         "script_level.level_keys": [
           "Internet Simulator: Packets"
         ],
-        "script_level.chapter": 61,
-        "script_level.position": 2,
         "lesson.key": "Packets and Making a Reliable Internet",
         "lesson_group.key": "csp1_2",
         "script.name": "csp1-2017"
@@ -1768,8 +1646,6 @@
         "script_level.level_keys": [
           "The Internet: Packets, Routing, and Reliability"
         ],
-        "script_level.chapter": 62,
-        "script_level.position": 3,
         "lesson.key": "Packets and Making a Reliable Internet",
         "lesson_group.key": "csp1_2",
         "script.name": "csp1-2017"
@@ -1791,8 +1667,6 @@
         "script_level.level_keys": [
           "U2L05 Reflection 1"
         ],
-        "script_level.chapter": 63,
-        "script_level.position": 4,
         "lesson.key": "Packets and Making a Reliable Internet",
         "lesson_group.key": "csp1_2",
         "script.name": "csp1-2017"
@@ -1814,8 +1688,6 @@
         "script_level.level_keys": [
           "U2L05 Assessment 1"
         ],
-        "script_level.chapter": 64,
-        "script_level.position": 5,
         "lesson.key": "Packets and Making a Reliable Internet",
         "lesson_group.key": "csp1_2",
         "script.name": "csp1-2017"
@@ -1837,8 +1709,6 @@
         "script_level.level_keys": [
           "U2L05 Assessment 2"
         ],
-        "script_level.chapter": 65,
-        "script_level.position": 6,
         "lesson.key": "Packets and Making a Reliable Internet",
         "lesson_group.key": "csp1_2",
         "script.name": "csp1-2017"
@@ -1860,8 +1730,6 @@
         "script_level.level_keys": [
           "U2L3 Assessment"
         ],
-        "script_level.chapter": 66,
-        "script_level.position": 7,
         "lesson.key": "Packets and Making a Reliable Internet",
         "lesson_group.key": "csp1_2",
         "script.name": "csp1-2017"
@@ -1883,8 +1751,6 @@
         "script_level.level_keys": [
           "v2 U1L12 Student Lesson Introduction"
         ],
-        "script_level.chapter": 67,
-        "script_level.position": 1,
         "lesson.key": "The Need for DNS",
         "lesson_group.key": "csp1_2",
         "script.name": "csp1-2017"
@@ -1906,8 +1772,6 @@
         "script_level.level_keys": [
           "Internet Simulator: DNS"
         ],
-        "script_level.chapter": 68,
-        "script_level.position": 2,
         "lesson.key": "The Need for DNS",
         "lesson_group.key": "csp1_2",
         "script.name": "csp1-2017"
@@ -1929,8 +1793,6 @@
         "script_level.level_keys": [
           "The Internet: IP Addresses & DNS"
         ],
-        "script_level.chapter": 69,
-        "script_level.position": 3,
         "lesson.key": "The Need for DNS",
         "lesson_group.key": "csp1_2",
         "script.name": "csp1-2017"
@@ -1952,8 +1814,6 @@
         "script_level.level_keys": [
           "U2L09 Assessment1"
         ],
-        "script_level.chapter": 70,
-        "script_level.position": 4,
         "lesson.key": "The Need for DNS",
         "lesson_group.key": "csp1_2",
         "script.name": "csp1-2017"
@@ -1975,8 +1835,6 @@
         "script_level.level_keys": [
           "U2L09 Assessment2"
         ],
-        "script_level.chapter": 71,
-        "script_level.position": 5,
         "lesson.key": "The Need for DNS",
         "lesson_group.key": "csp1_2",
         "script.name": "csp1-2017"
@@ -1998,8 +1856,6 @@
         "script_level.level_keys": [
           "U2L09 Free Response Wrap Up"
         ],
-        "script_level.chapter": 72,
-        "script_level.position": 6,
         "lesson.key": "The Need for DNS",
         "lesson_group.key": "csp1_2",
         "script.name": "csp1-2017"
@@ -2021,8 +1877,6 @@
         "script_level.level_keys": [
           "U2L10 Assessment1"
         ],
-        "script_level.chapter": 73,
-        "script_level.position": 7,
         "lesson.key": "The Need for DNS",
         "lesson_group.key": "csp1_2",
         "script.name": "csp1-2017"
@@ -2044,8 +1898,6 @@
         "script_level.level_keys": [
           "v2 U1L13 Student Lesson Introduction"
         ],
-        "script_level.chapter": 74,
-        "script_level.position": 1,
         "lesson.key": "HTTP and Abstraction",
         "lesson_group.key": "csp1_2",
         "script.name": "csp1-2017"
@@ -2067,8 +1919,6 @@
         "script_level.level_keys": [
           "The Internet: HTTP and HTML"
         ],
-        "script_level.chapter": 75,
-        "script_level.position": 2,
         "lesson.key": "HTTP and Abstraction",
         "lesson_group.key": "csp1_2",
         "script.name": "csp1-2017"
@@ -2090,8 +1940,6 @@
         "script_level.level_keys": [
           "U2L11 Assessment 1"
         ],
-        "script_level.chapter": 76,
-        "script_level.position": 3,
         "lesson.key": "HTTP and Abstraction",
         "lesson_group.key": "csp1_2",
         "script.name": "csp1-2017"
@@ -2113,8 +1961,6 @@
         "script_level.level_keys": [
           "U2L11 Assessment 2"
         ],
-        "script_level.chapter": 77,
-        "script_level.position": 4,
         "lesson.key": "HTTP and Abstraction",
         "lesson_group.key": "csp1_2",
         "script.name": "csp1-2017"
@@ -2136,8 +1982,6 @@
         "script_level.level_keys": [
           "U2L11 Free Response"
         ],
-        "script_level.chapter": 78,
-        "script_level.position": 5,
         "lesson.key": "HTTP and Abstraction",
         "lesson_group.key": "csp1_2",
         "script.name": "csp1-2017"
@@ -2159,8 +2003,6 @@
         "script_level.level_keys": [
           "v2 U1L14 Student Lesson Introduction"
         ],
-        "script_level.chapter": 79,
-        "script_level.position": 1,
         "lesson.key": "Practice PT - The Internet and Society",
         "lesson_group.key": "csp1_2",
         "script.name": "csp1-2017"
@@ -2198,8 +2040,6 @@
           "csp_affirmation_intervention",
           "csp_affirmation_control"
         ],
-        "script_level.chapter": 80,
-        "script_level.position": 1,
         "lesson.key": "Unit 1 Chapter 2 Assessment",
         "lesson_group.key": "csp1_2",
         "script.name": "csp1-2017"
@@ -2221,8 +2061,6 @@
         "script_level.level_keys": [
           "CSP Unit 1 Ch2 Cumulative Assessment MC Group"
         ],
-        "script_level.chapter": 81,
-        "script_level.position": 2,
         "lesson.key": "Unit 1 Chapter 2 Assessment",
         "lesson_group.key": "csp1_2",
         "script.name": "csp1-2017"
@@ -2244,8 +2082,6 @@
         "script_level.level_keys": [
           "csp-post-survey-2018-markdown-with-link-to-survey"
         ],
-        "script_level.chapter": 82,
-        "script_level.position": 1,
         "lesson.key": "Post-Course Survey",
         "lesson_group.key": "csp1_2",
         "script.name": "csp1-2017"
@@ -2267,8 +2103,6 @@
         "script_level.level_keys": [
           "Click Here!"
         ],
-        "script_level.chapter": 83,
-        "script_level.position": 2,
         "lesson.key": "Post-Course Survey",
         "lesson_group.key": "csp1_2",
         "script.name": "csp1-2017"
@@ -2285,8 +2119,6 @@
         "script_level.level_keys": [
           "csp-pre-survey-2017-levelgroup"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "CS Principles Pre-survey",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-2017"
@@ -2298,8 +2130,6 @@
         "script_level.level_keys": [
           "U1L1 Student Lesson Introduction"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 1,
         "lesson.key": "Personal Innovations",
         "lesson_group.key": "csp1_1",
         "script.name": "csp1-2017"
@@ -2311,8 +2141,6 @@
         "script_level.level_keys": [
           "Computer Science is Changing Everything"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 2,
         "lesson.key": "Personal Innovations",
         "lesson_group.key": "csp1_1",
         "script.name": "csp1-2017"
@@ -2325,8 +2153,6 @@
           "csp_socialBelonging_intervention",
           "csp_socialBelonging_control"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 3,
         "lesson.key": "Personal Innovations",
         "lesson_group.key": "csp1_1",
         "script.name": "csp1-2017"
@@ -2339,8 +2165,6 @@
           "csp_socialBelonging_intervention",
           "csp_socialBelonging_control"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 3,
         "lesson.key": "Personal Innovations",
         "lesson_group.key": "csp1_1",
         "script.name": "csp1-2017"
@@ -2352,8 +2176,6 @@
         "script_level.level_keys": [
           "v2 U1L2 Student Lesson Introduction"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 1,
         "lesson.key": "Sending Binary Messages",
         "lesson_group.key": "csp1_1",
         "script.name": "csp1-2017"
@@ -2365,8 +2187,6 @@
         "script_level.level_keys": [
           "U1L2 Multiple Choice Assessment Question"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 2,
         "lesson.key": "Sending Binary Messages",
         "lesson_group.key": "csp1_1",
         "script.name": "csp1-2017"
@@ -2378,8 +2198,6 @@
         "script_level.level_keys": [
           "U1L2 Free response assessment question"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 3,
         "lesson.key": "Sending Binary Messages",
         "lesson_group.key": "csp1_1",
         "script.name": "csp1-2017"
@@ -2391,8 +2209,6 @@
         "script_level.level_keys": [
           "U1L3 Free Response"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 4,
         "lesson.key": "Sending Binary Messages",
         "lesson_group.key": "csp1_1",
         "script.name": "csp1-2017"
@@ -2404,8 +2220,6 @@
         "script_level.level_keys": [
           "v2 U1L3 Student Lesson Introduction"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 1,
         "lesson.key": "Sending Binary Messages with the Internet Simulator",
         "lesson_group.key": "csp1_1",
         "script.name": "csp1-2017"
@@ -2417,8 +2231,6 @@
         "script_level.level_keys": [
           "Internet Simulator: Sending Binary Messages"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 2,
         "lesson.key": "Sending Binary Messages with the Internet Simulator",
         "lesson_group.key": "csp1_1",
         "script.name": "csp1-2017"
@@ -2430,8 +2242,6 @@
         "script_level.level_keys": [
           "The Internet: Wires, Cables, and Wifi"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 3,
         "lesson.key": "Sending Binary Messages with the Internet Simulator",
         "lesson_group.key": "csp1_1",
         "script.name": "csp1-2017"
@@ -2443,8 +2253,6 @@
         "script_level.level_keys": [
           "U1L3 Free response reflection question"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 4,
         "lesson.key": "Sending Binary Messages with the Internet Simulator",
         "lesson_group.key": "csp1_1",
         "script.name": "csp1-2017"
@@ -2456,8 +2264,6 @@
         "script_level.level_keys": [
           "U1L4 Multiple Choice"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 5,
         "lesson.key": "Sending Binary Messages with the Internet Simulator",
         "lesson_group.key": "csp1_1",
         "script.name": "csp1-2017"
@@ -2469,8 +2275,6 @@
         "script_level.level_keys": [
           "U1L3 Multiple Choice"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 6,
         "lesson.key": "Sending Binary Messages with the Internet Simulator",
         "lesson_group.key": "csp1_1",
         "script.name": "csp1-2017"
@@ -2482,8 +2286,6 @@
         "script_level.level_keys": [
           "U1L4 Free Response Reflection"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 7,
         "lesson.key": "Sending Binary Messages with the Internet Simulator",
         "lesson_group.key": "csp1_1",
         "script.name": "csp1-2017"
@@ -2495,8 +2297,6 @@
         "script_level.level_keys": [
           "U1L5 Matching Assessment"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 8,
         "lesson.key": "Sending Binary Messages with the Internet Simulator",
         "lesson_group.key": "csp1_1",
         "script.name": "csp1-2017"
@@ -2508,8 +2308,6 @@
         "script_level.level_keys": [
           "v2 U1L4 Student Lesson Introduction"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 1,
         "lesson.key": "Number Systems",
         "lesson_group.key": "csp1_1",
         "script.name": "csp1-2017"
@@ -2521,8 +2319,6 @@
         "script_level.level_keys": [
           "U1L6 Assessment multiple choice"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 2,
         "lesson.key": "Number Systems",
         "lesson_group.key": "csp1_1",
         "script.name": "csp1-2017"
@@ -2534,8 +2330,6 @@
         "script_level.level_keys": [
           "U1L6 Free Response Reflection"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 3,
         "lesson.key": "Number Systems",
         "lesson_group.key": "csp1_1",
         "script.name": "csp1-2017"
@@ -2547,8 +2341,6 @@
         "script_level.level_keys": [
           "v2 U1L5 Student Lesson Introduction"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 1,
         "lesson.key": "Binary Numbers",
         "lesson_group.key": "csp1_1",
         "script.name": "csp1-2017"
@@ -2560,8 +2352,6 @@
         "script_level.level_keys": [
           "Widget: Binary Odometer"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 2,
         "lesson.key": "Binary Numbers",
         "lesson_group.key": "csp1_1",
         "script.name": "csp1-2017"
@@ -2573,8 +2363,6 @@
         "script_level.level_keys": [
           "U1L7 Free Response Assessment"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 3,
         "lesson.key": "Binary Numbers",
         "lesson_group.key": "csp1_1",
         "script.name": "csp1-2017"
@@ -2586,8 +2374,6 @@
         "script_level.level_keys": [
           "U1L7 Free Response Reflection"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 4,
         "lesson.key": "Binary Numbers",
         "lesson_group.key": "csp1_1",
         "script.name": "csp1-2017"
@@ -2599,8 +2385,6 @@
         "script_level.level_keys": [
           "v2 U1L6 Student Lesson Introduction"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 1,
         "lesson.key": "Sending Numbers",
         "lesson_group.key": "csp1_1",
         "script.name": "csp1-2017"
@@ -2612,8 +2396,6 @@
         "script_level.level_keys": [
           "Internet Simulator: Sending Numbers"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 2,
         "lesson.key": "Sending Numbers",
         "lesson_group.key": "csp1_1",
         "script.name": "csp1-2017"
@@ -2625,8 +2407,6 @@
         "script_level.level_keys": [
           "U1L8 Free Response Reflection"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 3,
         "lesson.key": "Sending Numbers",
         "lesson_group.key": "csp1_1",
         "script.name": "csp1-2017"
@@ -2638,8 +2418,6 @@
         "script_level.level_keys": [
           "U1L8 Multiple Choice"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 4,
         "lesson.key": "Sending Numbers",
         "lesson_group.key": "csp1_1",
         "script.name": "csp1-2017"
@@ -2651,8 +2429,6 @@
         "script_level.level_keys": [
           "v2 U1L8 Student Lesson Introduction"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 1,
         "lesson.key": "Encoding and Sending Formatted Text",
         "lesson_group.key": "csp1_1",
         "script.name": "csp1-2017"
@@ -2664,8 +2440,6 @@
         "script_level.level_keys": [
           "Internet Simulator: Sending Text"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 2,
         "lesson.key": "Encoding and Sending Formatted Text",
         "lesson_group.key": "csp1_1",
         "script.name": "csp1-2017"
@@ -2677,8 +2451,6 @@
         "script_level.level_keys": [
           "U1L10 Assessment 1"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 3,
         "lesson.key": "Encoding and Sending Formatted Text",
         "lesson_group.key": "csp1_1",
         "script.name": "csp1-2017"
@@ -2690,8 +2462,6 @@
         "script_level.level_keys": [
           "U1L10 Assessment 2"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 4,
         "lesson.key": "Encoding and Sending Formatted Text",
         "lesson_group.key": "csp1_1",
         "script.name": "csp1-2017"
@@ -2703,8 +2473,6 @@
         "script_level.level_keys": [
           "U1L10 Assessment Free Response"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 5,
         "lesson.key": "Encoding and Sending Formatted Text",
         "lesson_group.key": "csp1_1",
         "script.name": "csp1-2017"
@@ -2716,8 +2484,6 @@
         "script_level.level_keys": [
           "U1L11 Assessment 1"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 6,
         "lesson.key": "Encoding and Sending Formatted Text",
         "lesson_group.key": "csp1_1",
         "script.name": "csp1-2017"
@@ -2729,8 +2495,6 @@
         "script_level.level_keys": [
           "U1L11 Assessment 2"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 7,
         "lesson.key": "Encoding and Sending Formatted Text",
         "lesson_group.key": "csp1_1",
         "script.name": "csp1-2017"
@@ -2742,8 +2506,6 @@
         "script_level.level_keys": [
           "U1L11 Reflection Free Response"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 8,
         "lesson.key": "Encoding and Sending Formatted Text",
         "lesson_group.key": "csp1_1",
         "script.name": "csp1-2017"
@@ -2755,8 +2517,6 @@
         "script_level.level_keys": [
           "U1L11 Collaboration Reflection"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 9,
         "lesson.key": "Encoding and Sending Formatted Text",
         "lesson_group.key": "csp1_1",
         "script.name": "csp1-2017"
@@ -2768,8 +2528,6 @@
         "script_level.level_keys": [
           "CSP Unit 1 Ch1 Cumulative Assessment MC Group v2"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 1,
         "lesson.key": "Unit 1 Chapter 1 Assessment",
         "lesson_group.key": "csp1_1",
         "script.name": "csp1-2017"
@@ -2781,8 +2539,6 @@
         "script_level.level_keys": [
           "v2 U1 Internet is for Everyone Student Lesson Introduction"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 1,
         "lesson.key": "The Internet",
         "lesson_group.key": "csp1_2",
         "script.name": "csp1-2017"
@@ -2794,8 +2550,6 @@
         "script_level.level_keys": [
           "What is the Internet?"
         ],
-        "script_level.chapter": 39,
-        "script_level.position": 2,
         "lesson.key": "The Internet",
         "lesson_group.key": "csp1_2",
         "script.name": "csp1-2017"
@@ -2807,8 +2561,6 @@
         "script_level.level_keys": [
           "U2L01 Assessment 1"
         ],
-        "script_level.chapter": 40,
-        "script_level.position": 3,
         "lesson.key": "The Internet",
         "lesson_group.key": "csp1_2",
         "script.name": "csp1-2017"
@@ -2820,8 +2572,6 @@
         "script_level.level_keys": [
           "U2L01 Assessment 2"
         ],
-        "script_level.chapter": 41,
-        "script_level.position": 4,
         "lesson.key": "The Internet",
         "lesson_group.key": "csp1_2",
         "script.name": "csp1-2017"
@@ -2833,8 +2583,6 @@
         "script_level.level_keys": [
           "U2L01 Assessment 3"
         ],
-        "script_level.chapter": 42,
-        "script_level.position": 5,
         "lesson.key": "The Internet",
         "lesson_group.key": "csp1_2",
         "script.name": "csp1-2017"
@@ -2846,8 +2594,6 @@
         "script_level.level_keys": [
           "U2L01 Assessment 4"
         ],
-        "script_level.chapter": 43,
-        "script_level.position": 6,
         "lesson.key": "The Internet",
         "lesson_group.key": "csp1_2",
         "script.name": "csp1-2017"
@@ -2859,8 +2605,6 @@
         "script_level.level_keys": [
           "csp-pulse-check-survey-1-levelgroup-U1Ch2"
         ],
-        "script_level.chapter": 44,
-        "script_level.position": 7,
         "lesson.key": "The Internet",
         "lesson_group.key": "csp1_2",
         "script.name": "csp1-2017"
@@ -2872,8 +2616,6 @@
         "script_level.level_keys": [
           "v2 U1L9 Student Lesson Introduction"
         ],
-        "script_level.chapter": 45,
-        "script_level.position": 1,
         "lesson.key": "The Need for Addressing",
         "lesson_group.key": "csp1_2",
         "script.name": "csp1-2017"
@@ -2885,8 +2627,6 @@
         "script_level.level_keys": [
           "Internet Simulator: Broadcast"
         ],
-        "script_level.chapter": 46,
-        "script_level.position": 2,
         "lesson.key": "The Need for Addressing",
         "lesson_group.key": "csp1_2",
         "script.name": "csp1-2017"
@@ -2898,8 +2638,6 @@
         "script_level.level_keys": [
           "The Internet: IP Addresses & DNS"
         ],
-        "script_level.chapter": 47,
-        "script_level.position": 3,
         "lesson.key": "The Need for Addressing",
         "lesson_group.key": "csp1_2",
         "script.name": "csp1-2017"
@@ -2911,8 +2649,6 @@
         "script_level.level_keys": [
           "U2L02 Free Response Reflection"
         ],
-        "script_level.chapter": 48,
-        "script_level.position": 4,
         "lesson.key": "The Need for Addressing",
         "lesson_group.key": "csp1_2",
         "script.name": "csp1-2017"
@@ -2924,8 +2660,6 @@
         "script_level.level_keys": [
           "U2L02 Assessment 3"
         ],
-        "script_level.chapter": 49,
-        "script_level.position": 5,
         "lesson.key": "The Need for Addressing",
         "lesson_group.key": "csp1_2",
         "script.name": "csp1-2017"
@@ -2937,8 +2671,6 @@
         "script_level.level_keys": [
           "U2L02 Assessment 4"
         ],
-        "script_level.chapter": 50,
-        "script_level.position": 6,
         "lesson.key": "The Need for Addressing",
         "lesson_group.key": "csp1_2",
         "script.name": "csp1-2017"
@@ -2950,8 +2682,6 @@
         "script_level.level_keys": [
           "U2L02 Assessment 5"
         ],
-        "script_level.chapter": 51,
-        "script_level.position": 7,
         "lesson.key": "The Need for Addressing",
         "lesson_group.key": "csp1_2",
         "script.name": "csp1-2017"
@@ -2963,8 +2693,6 @@
         "script_level.level_keys": [
           "U2L3 Assessment 2"
         ],
-        "script_level.chapter": 52,
-        "script_level.position": 8,
         "lesson.key": "The Need for Addressing",
         "lesson_group.key": "csp1_2",
         "script.name": "csp1-2017"
@@ -2976,8 +2704,6 @@
         "script_level.level_keys": [
           "v2 U1L10 Student Lesson Introduction"
         ],
-        "script_level.chapter": 53,
-        "script_level.position": 1,
         "lesson.key": "Routers and Redundancy",
         "lesson_group.key": "csp1_2",
         "script.name": "csp1-2017"
@@ -2989,8 +2715,6 @@
         "script_level.level_keys": [
           "Internet Simulator: Routers"
         ],
-        "script_level.chapter": 54,
-        "script_level.position": 2,
         "lesson.key": "Routers and Redundancy",
         "lesson_group.key": "csp1_2",
         "script.name": "csp1-2017"
@@ -3002,8 +2726,6 @@
         "script_level.level_keys": [
           "U2L04 Assessment1"
         ],
-        "script_level.chapter": 55,
-        "script_level.position": 3,
         "lesson.key": "Routers and Redundancy",
         "lesson_group.key": "csp1_2",
         "script.name": "csp1-2017"
@@ -3015,8 +2737,6 @@
         "script_level.level_keys": [
           "U2L04 Assessment4"
         ],
-        "script_level.chapter": 56,
-        "script_level.position": 4,
         "lesson.key": "Routers and Redundancy",
         "lesson_group.key": "csp1_2",
         "script.name": "csp1-2017"
@@ -3028,8 +2748,6 @@
         "script_level.level_keys": [
           "U2L04 Assessment5"
         ],
-        "script_level.chapter": 57,
-        "script_level.position": 5,
         "lesson.key": "Routers and Redundancy",
         "lesson_group.key": "csp1_2",
         "script.name": "csp1-2017"
@@ -3041,8 +2759,6 @@
         "script_level.level_keys": [
           "U2L04 Assessment2"
         ],
-        "script_level.chapter": 58,
-        "script_level.position": 6,
         "lesson.key": "Routers and Redundancy",
         "lesson_group.key": "csp1_2",
         "script.name": "csp1-2017"
@@ -3054,8 +2770,6 @@
         "script_level.level_keys": [
           "U2L04 Assessment3"
         ],
-        "script_level.chapter": 59,
-        "script_level.position": 7,
         "lesson.key": "Routers and Redundancy",
         "lesson_group.key": "csp1_2",
         "script.name": "csp1-2017"
@@ -3067,8 +2781,6 @@
         "script_level.level_keys": [
           "v2 U1L11 Student Lesson Introduction"
         ],
-        "script_level.chapter": 60,
-        "script_level.position": 1,
         "lesson.key": "Packets and Making a Reliable Internet",
         "lesson_group.key": "csp1_2",
         "script.name": "csp1-2017"
@@ -3080,8 +2792,6 @@
         "script_level.level_keys": [
           "Internet Simulator: Packets"
         ],
-        "script_level.chapter": 61,
-        "script_level.position": 2,
         "lesson.key": "Packets and Making a Reliable Internet",
         "lesson_group.key": "csp1_2",
         "script.name": "csp1-2017"
@@ -3093,8 +2803,6 @@
         "script_level.level_keys": [
           "The Internet: Packets, Routing, and Reliability"
         ],
-        "script_level.chapter": 62,
-        "script_level.position": 3,
         "lesson.key": "Packets and Making a Reliable Internet",
         "lesson_group.key": "csp1_2",
         "script.name": "csp1-2017"
@@ -3106,8 +2814,6 @@
         "script_level.level_keys": [
           "U2L05 Reflection 1"
         ],
-        "script_level.chapter": 63,
-        "script_level.position": 4,
         "lesson.key": "Packets and Making a Reliable Internet",
         "lesson_group.key": "csp1_2",
         "script.name": "csp1-2017"
@@ -3119,8 +2825,6 @@
         "script_level.level_keys": [
           "U2L05 Assessment 1"
         ],
-        "script_level.chapter": 64,
-        "script_level.position": 5,
         "lesson.key": "Packets and Making a Reliable Internet",
         "lesson_group.key": "csp1_2",
         "script.name": "csp1-2017"
@@ -3132,8 +2836,6 @@
         "script_level.level_keys": [
           "U2L05 Assessment 2"
         ],
-        "script_level.chapter": 65,
-        "script_level.position": 6,
         "lesson.key": "Packets and Making a Reliable Internet",
         "lesson_group.key": "csp1_2",
         "script.name": "csp1-2017"
@@ -3145,8 +2847,6 @@
         "script_level.level_keys": [
           "U2L3 Assessment"
         ],
-        "script_level.chapter": 66,
-        "script_level.position": 7,
         "lesson.key": "Packets and Making a Reliable Internet",
         "lesson_group.key": "csp1_2",
         "script.name": "csp1-2017"
@@ -3158,8 +2858,6 @@
         "script_level.level_keys": [
           "v2 U1L12 Student Lesson Introduction"
         ],
-        "script_level.chapter": 67,
-        "script_level.position": 1,
         "lesson.key": "The Need for DNS",
         "lesson_group.key": "csp1_2",
         "script.name": "csp1-2017"
@@ -3171,8 +2869,6 @@
         "script_level.level_keys": [
           "Internet Simulator: DNS"
         ],
-        "script_level.chapter": 68,
-        "script_level.position": 2,
         "lesson.key": "The Need for DNS",
         "lesson_group.key": "csp1_2",
         "script.name": "csp1-2017"
@@ -3184,8 +2880,6 @@
         "script_level.level_keys": [
           "The Internet: IP Addresses & DNS"
         ],
-        "script_level.chapter": 69,
-        "script_level.position": 3,
         "lesson.key": "The Need for DNS",
         "lesson_group.key": "csp1_2",
         "script.name": "csp1-2017"
@@ -3197,8 +2891,6 @@
         "script_level.level_keys": [
           "U2L09 Assessment1"
         ],
-        "script_level.chapter": 70,
-        "script_level.position": 4,
         "lesson.key": "The Need for DNS",
         "lesson_group.key": "csp1_2",
         "script.name": "csp1-2017"
@@ -3210,8 +2902,6 @@
         "script_level.level_keys": [
           "U2L09 Assessment2"
         ],
-        "script_level.chapter": 71,
-        "script_level.position": 5,
         "lesson.key": "The Need for DNS",
         "lesson_group.key": "csp1_2",
         "script.name": "csp1-2017"
@@ -3223,8 +2913,6 @@
         "script_level.level_keys": [
           "U2L09 Free Response Wrap Up"
         ],
-        "script_level.chapter": 72,
-        "script_level.position": 6,
         "lesson.key": "The Need for DNS",
         "lesson_group.key": "csp1_2",
         "script.name": "csp1-2017"
@@ -3236,8 +2924,6 @@
         "script_level.level_keys": [
           "U2L10 Assessment1"
         ],
-        "script_level.chapter": 73,
-        "script_level.position": 7,
         "lesson.key": "The Need for DNS",
         "lesson_group.key": "csp1_2",
         "script.name": "csp1-2017"
@@ -3249,8 +2935,6 @@
         "script_level.level_keys": [
           "v2 U1L13 Student Lesson Introduction"
         ],
-        "script_level.chapter": 74,
-        "script_level.position": 1,
         "lesson.key": "HTTP and Abstraction",
         "lesson_group.key": "csp1_2",
         "script.name": "csp1-2017"
@@ -3262,8 +2946,6 @@
         "script_level.level_keys": [
           "The Internet: HTTP and HTML"
         ],
-        "script_level.chapter": 75,
-        "script_level.position": 2,
         "lesson.key": "HTTP and Abstraction",
         "lesson_group.key": "csp1_2",
         "script.name": "csp1-2017"
@@ -3275,8 +2957,6 @@
         "script_level.level_keys": [
           "U2L11 Assessment 1"
         ],
-        "script_level.chapter": 76,
-        "script_level.position": 3,
         "lesson.key": "HTTP and Abstraction",
         "lesson_group.key": "csp1_2",
         "script.name": "csp1-2017"
@@ -3288,8 +2968,6 @@
         "script_level.level_keys": [
           "U2L11 Assessment 2"
         ],
-        "script_level.chapter": 77,
-        "script_level.position": 4,
         "lesson.key": "HTTP and Abstraction",
         "lesson_group.key": "csp1_2",
         "script.name": "csp1-2017"
@@ -3301,8 +2979,6 @@
         "script_level.level_keys": [
           "U2L11 Free Response"
         ],
-        "script_level.chapter": 78,
-        "script_level.position": 5,
         "lesson.key": "HTTP and Abstraction",
         "lesson_group.key": "csp1_2",
         "script.name": "csp1-2017"
@@ -3314,8 +2990,6 @@
         "script_level.level_keys": [
           "v2 U1L14 Student Lesson Introduction"
         ],
-        "script_level.chapter": 79,
-        "script_level.position": 1,
         "lesson.key": "Practice PT - The Internet and Society",
         "lesson_group.key": "csp1_2",
         "script.name": "csp1-2017"
@@ -3328,8 +3002,6 @@
           "csp_affirmation_intervention",
           "csp_affirmation_control"
         ],
-        "script_level.chapter": 80,
-        "script_level.position": 1,
         "lesson.key": "Unit 1 Chapter 2 Assessment",
         "lesson_group.key": "csp1_2",
         "script.name": "csp1-2017"
@@ -3342,8 +3014,6 @@
           "csp_affirmation_intervention",
           "csp_affirmation_control"
         ],
-        "script_level.chapter": 80,
-        "script_level.position": 1,
         "lesson.key": "Unit 1 Chapter 2 Assessment",
         "lesson_group.key": "csp1_2",
         "script.name": "csp1-2017"
@@ -3355,8 +3025,6 @@
         "script_level.level_keys": [
           "CSP Unit 1 Ch2 Cumulative Assessment MC Group"
         ],
-        "script_level.chapter": 81,
-        "script_level.position": 2,
         "lesson.key": "Unit 1 Chapter 2 Assessment",
         "lesson_group.key": "csp1_2",
         "script.name": "csp1-2017"
@@ -3368,8 +3036,6 @@
         "script_level.level_keys": [
           "csp-post-survey-2018-markdown-with-link-to-survey"
         ],
-        "script_level.chapter": 82,
-        "script_level.position": 1,
         "lesson.key": "Post-Course Survey",
         "lesson_group.key": "csp1_2",
         "script.name": "csp1-2017"
@@ -3381,8 +3047,6 @@
         "script_level.level_keys": [
           "Click Here!"
         ],
-        "script_level.chapter": 83,
-        "script_level.position": 2,
         "lesson.key": "Post-Course Survey",
         "lesson_group.key": "csp1_2",
         "script.name": "csp1-2017"

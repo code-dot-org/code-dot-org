@@ -154,8 +154,6 @@
         "script_level.level_keys": [
           "PDAlg bootstrap"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Course Overview",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -176,8 +174,6 @@
         "script_level.level_keys": [
           "PDAlg first forum"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Course Overview",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -198,8 +194,6 @@
         "script_level.level_keys": [
           "K5PD tour"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "Course Overview",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -220,8 +214,6 @@
         "script_level.level_keys": [
           "PDAlg circles to blocks"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "Course Overview",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -242,8 +234,6 @@
         "script_level.level_keys": [
           "PDAlg block match"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 5,
         "lesson.key": "Course Overview",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -264,8 +254,6 @@
         "script_level.level_keys": [
           "PDAlg Scope"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 6,
         "lesson.key": "Course Overview",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -286,8 +274,6 @@
         "script_level.level_keys": [
           "PDAlg implementation"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 7,
         "lesson.key": "Course Overview",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -308,8 +294,6 @@
         "script_level.level_keys": [
           "PDAlg course goals"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 8,
         "lesson.key": "Course Overview",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -330,8 +314,6 @@
         "script_level.level_keys": [
           "PDK5 Strategies O"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 1,
         "lesson.key": "Computer Science Pedagogy",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -352,8 +334,6 @@
         "script_level.level_keys": [
           "PDK5 Pair Programming 1"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 2,
         "lesson.key": "Computer Science Pedagogy",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -374,8 +354,6 @@
         "script_level.level_keys": [
           "PDK5 Pair programming match"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 3,
         "lesson.key": "Computer Science Pedagogy",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -396,8 +374,6 @@
         "script_level.level_keys": [
           "PDK5 Problem Solving"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 4,
         "lesson.key": "Computer Science Pedagogy",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -418,8 +394,6 @@
         "script_level.level_keys": [
           "PDK5 Classroom Culture C"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 5,
         "lesson.key": "Computer Science Pedagogy",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -440,8 +414,6 @@
         "script_level.level_keys": [
           "PDAlg Classroom Culture 2"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 6,
         "lesson.key": "Computer Science Pedagogy",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -462,8 +434,6 @@
         "script_level.level_keys": [
           "PDK5 Strategies F"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 7,
         "lesson.key": "Computer Science Pedagogy",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -484,8 +454,6 @@
         "script_level.level_keys": [
           "PDK5 Teacher Dashboard 1"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 1,
         "lesson.key": "Teacher Dashboard",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -506,8 +474,6 @@
         "script_level.level_keys": [
           "PDK5 Teacher Dashboard 2"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 2,
         "lesson.key": "Teacher Dashboard",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -528,8 +494,6 @@
         "script_level.level_keys": [
           "PDAlg Teacher Dashboard"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 3,
         "lesson.key": "Teacher Dashboard",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -550,8 +514,6 @@
         "script_level.level_keys": [
           "PDAlg Blocks Video"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 1,
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -572,8 +534,6 @@
         "script_level.level_keys": [
           "Calc Circles of Eval 1"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 2,
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -594,8 +554,6 @@
         "script_level.level_keys": [
           "Calc Circles of Eval 2"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 3,
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -616,8 +574,6 @@
         "script_level.level_keys": [
           "Calc Circles of Eval 3"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 4,
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -638,8 +594,6 @@
         "script_level.level_keys": [
           "Calc Circles of Eval 5"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 5,
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -660,8 +614,6 @@
         "script_level.level_keys": [
           "Calc Circles of Eval 6"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 6,
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -682,8 +634,6 @@
         "script_level.level_keys": [
           "Calc Circles of Eval 7"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 7,
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -704,8 +654,6 @@
         "script_level.level_keys": [
           "Calc Circles of Eval 8"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 8,
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -726,8 +674,6 @@
         "script_level.level_keys": [
           "Calc Circles of Eval 9"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 9,
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -748,8 +694,6 @@
         "script_level.level_keys": [
           "Calc Circles of Eval Free Play"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 10,
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -770,8 +714,6 @@
         "script_level.level_keys": [
           "PDAlg Types Video"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 1,
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -792,8 +734,6 @@
         "script_level.level_keys": [
           "Eval Strings Images .1"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 2,
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -814,8 +754,6 @@
         "script_level.level_keys": [
           "Eval Strings Images .2"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 3,
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -836,8 +774,6 @@
         "script_level.level_keys": [
           "Eval Strings Images 1"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 4,
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -858,8 +794,6 @@
         "script_level.level_keys": [
           "Eval Strings Images 2"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 5,
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -880,8 +814,6 @@
         "script_level.level_keys": [
           "Eval Strings Images 3"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 6,
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -902,8 +834,6 @@
         "script_level.level_keys": [
           "Eval Strings Images 4"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 7,
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -924,8 +854,6 @@
         "script_level.level_keys": [
           "Eval Strings Images 5"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 8,
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -946,8 +874,6 @@
         "script_level.level_keys": [
           "Eval Strings Images 6"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 9,
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -968,8 +894,6 @@
         "script_level.level_keys": [
           "Eval Strings Images 7"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 10,
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -990,8 +914,6 @@
         "script_level.level_keys": [
           "Eval Strings Images 8"
         ],
-        "script_level.chapter": 39,
-        "script_level.position": 11,
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -1012,8 +934,6 @@
         "script_level.level_keys": [
           "Eval Strings Images Free Play"
         ],
-        "script_level.chapter": 40,
-        "script_level.position": 12,
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -1034,8 +954,6 @@
         "script_level.level_keys": [
           "PDAlg Design Recipe Video"
         ],
-        "script_level.chapter": 41,
-        "script_level.position": 1,
         "lesson.key": "The Design Recipe",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -1056,8 +974,6 @@
         "script_level.level_keys": [
           "Play Lab Rocket 1"
         ],
-        "script_level.chapter": 42,
-        "script_level.position": 2,
         "lesson.key": "The Design Recipe",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -1078,8 +994,6 @@
         "script_level.level_keys": [
           "Rocket Contract 1"
         ],
-        "script_level.chapter": 43,
-        "script_level.position": 3,
         "lesson.key": "The Design Recipe",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -1100,8 +1014,6 @@
         "script_level.level_keys": [
           "Calc Rocket 1"
         ],
-        "script_level.chapter": 44,
-        "script_level.position": 4,
         "lesson.key": "The Design Recipe",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -1122,8 +1034,6 @@
         "script_level.level_keys": [
           "Calc Rocket 2"
         ],
-        "script_level.chapter": 45,
-        "script_level.position": 5,
         "lesson.key": "The Design Recipe",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -1144,8 +1054,6 @@
         "script_level.level_keys": [
           "Play Lab Rocket 2"
         ],
-        "script_level.chapter": 46,
-        "script_level.position": 6,
         "lesson.key": "The Design Recipe",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -1166,8 +1074,6 @@
         "script_level.level_keys": [
           "Play Lab Rocket 3"
         ],
-        "script_level.chapter": 47,
-        "script_level.position": 7,
         "lesson.key": "The Design Recipe",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -1188,8 +1094,6 @@
         "script_level.level_keys": [
           "Play Lab Rocket 4"
         ],
-        "script_level.chapter": 48,
-        "script_level.position": 8,
         "lesson.key": "The Design Recipe",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -1210,8 +1114,6 @@
         "script_level.level_keys": [
           "Play Lab Rocket 5"
         ],
-        "script_level.chapter": 49,
-        "script_level.position": 9,
         "lesson.key": "The Design Recipe",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -1232,8 +1134,6 @@
         "script_level.level_keys": [
           "Play Lab Rocket 6"
         ],
-        "script_level.chapter": 50,
-        "script_level.position": 10,
         "lesson.key": "The Design Recipe",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -1254,8 +1154,6 @@
         "script_level.level_keys": [
           "Play Lab Rocket 7"
         ],
-        "script_level.chapter": 51,
-        "script_level.position": 11,
         "lesson.key": "The Design Recipe",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -1276,8 +1174,6 @@
         "script_level.level_keys": [
           "Play Lab Rocket 8"
         ],
-        "script_level.chapter": 52,
-        "script_level.position": 12,
         "lesson.key": "The Design Recipe",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -1298,8 +1194,6 @@
         "script_level.level_keys": [
           "Play Lab Rocket Free Play"
         ],
-        "script_level.chapter": 53,
-        "script_level.position": 13,
         "lesson.key": "The Design Recipe",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -1320,8 +1214,6 @@
         "script_level.level_keys": [
           "PDAlg Big Game"
         ],
-        "script_level.chapter": 54,
-        "script_level.position": 1,
         "lesson.key": "The Big Game",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -1342,8 +1234,6 @@
         "script_level.level_keys": [
           "Big Game Vars 1"
         ],
-        "script_level.chapter": 55,
-        "script_level.position": 2,
         "lesson.key": "The Big Game",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -1364,8 +1254,6 @@
         "script_level.level_keys": [
           "Big Game Vars 2"
         ],
-        "script_level.chapter": 56,
-        "script_level.position": 3,
         "lesson.key": "The Big Game",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -1386,8 +1274,6 @@
         "script_level.level_keys": [
           "Big Game Vars 3"
         ],
-        "script_level.chapter": 57,
-        "script_level.position": 4,
         "lesson.key": "The Big Game",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -1408,8 +1294,6 @@
         "script_level.level_keys": [
           "Big Game Vars 4"
         ],
-        "script_level.chapter": 58,
-        "script_level.position": 5,
         "lesson.key": "The Big Game",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -1430,8 +1314,6 @@
         "script_level.level_keys": [
           "Big Game Animation 1"
         ],
-        "script_level.chapter": 59,
-        "script_level.position": 6,
         "lesson.key": "The Big Game",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -1452,8 +1334,6 @@
         "script_level.level_keys": [
           "Big Game Animation 2"
         ],
-        "script_level.chapter": 60,
-        "script_level.position": 7,
         "lesson.key": "The Big Game",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -1474,8 +1354,6 @@
         "script_level.level_keys": [
           "Big Game Animation 3"
         ],
-        "script_level.chapter": 61,
-        "script_level.position": 8,
         "lesson.key": "The Big Game",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -1496,8 +1374,6 @@
         "script_level.level_keys": [
           "Big Game Animation 4"
         ],
-        "script_level.chapter": 62,
-        "script_level.position": 9,
         "lesson.key": "The Big Game",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -1518,8 +1394,6 @@
         "script_level.level_keys": [
           "Big Game Booleans 1"
         ],
-        "script_level.chapter": 63,
-        "script_level.position": 10,
         "lesson.key": "The Big Game",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -1540,8 +1414,6 @@
         "script_level.level_keys": [
           "Big Game Booleans 4"
         ],
-        "script_level.chapter": 64,
-        "script_level.position": 11,
         "lesson.key": "The Big Game",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -1562,8 +1434,6 @@
         "script_level.level_keys": [
           "Big Game Booleans 2"
         ],
-        "script_level.chapter": 65,
-        "script_level.position": 12,
         "lesson.key": "The Big Game",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -1584,8 +1454,6 @@
         "script_level.level_keys": [
           "Big Game Booleans 3"
         ],
-        "script_level.chapter": 66,
-        "script_level.position": 13,
         "lesson.key": "The Big Game",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -1606,8 +1474,6 @@
         "script_level.level_keys": [
           "Big Game Booleans 5"
         ],
-        "script_level.chapter": 67,
-        "script_level.position": 14,
         "lesson.key": "The Big Game",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -1628,8 +1494,6 @@
         "script_level.level_keys": [
           "Big Game Player 1"
         ],
-        "script_level.chapter": 68,
-        "script_level.position": 15,
         "lesson.key": "The Big Game",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -1650,8 +1514,6 @@
         "script_level.level_keys": [
           "Big Game Player 2"
         ],
-        "script_level.chapter": 69,
-        "script_level.position": 16,
         "lesson.key": "The Big Game",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -1672,8 +1534,6 @@
         "script_level.level_keys": [
           "Big Game Collision 1"
         ],
-        "script_level.chapter": 70,
-        "script_level.position": 17,
         "lesson.key": "The Big Game",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -1694,8 +1554,6 @@
         "script_level.level_keys": [
           "Big Game Collision 4"
         ],
-        "script_level.chapter": 71,
-        "script_level.position": 18,
         "lesson.key": "The Big Game",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -1716,8 +1574,6 @@
         "script_level.level_keys": [
           "Big Game Collision 3"
         ],
-        "script_level.chapter": 72,
-        "script_level.position": 19,
         "lesson.key": "The Big Game",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -1738,8 +1594,6 @@
         "script_level.level_keys": [
           "Big Game Final"
         ],
-        "script_level.chapter": 73,
-        "script_level.position": 20,
         "lesson.key": "The Big Game",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -1760,8 +1614,6 @@
         "script_level.level_keys": [
           "PDAlg end of P3"
         ],
-        "script_level.chapter": 74,
-        "script_level.position": 1,
         "lesson.key": "Next Steps",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -1782,8 +1634,6 @@
         "script_level.level_keys": [
           "PDAlg whats next"
         ],
-        "script_level.chapter": 75,
-        "script_level.position": 2,
         "lesson.key": "Next Steps",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -1800,8 +1650,6 @@
         "script_level.level_keys": [
           "PDAlg bootstrap"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Course Overview",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -1813,8 +1661,6 @@
         "script_level.level_keys": [
           "PDAlg first forum"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Course Overview",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -1826,8 +1672,6 @@
         "script_level.level_keys": [
           "K5PD tour"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "Course Overview",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -1839,8 +1683,6 @@
         "script_level.level_keys": [
           "PDAlg circles to blocks"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "Course Overview",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -1852,8 +1694,6 @@
         "script_level.level_keys": [
           "PDAlg block match"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 5,
         "lesson.key": "Course Overview",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -1865,8 +1705,6 @@
         "script_level.level_keys": [
           "PDAlg Scope"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 6,
         "lesson.key": "Course Overview",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -1878,8 +1716,6 @@
         "script_level.level_keys": [
           "PDAlg implementation"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 7,
         "lesson.key": "Course Overview",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -1891,8 +1727,6 @@
         "script_level.level_keys": [
           "PDAlg course goals"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 8,
         "lesson.key": "Course Overview",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -1904,8 +1738,6 @@
         "script_level.level_keys": [
           "PDK5 Strategies O"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 1,
         "lesson.key": "Computer Science Pedagogy",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -1917,8 +1749,6 @@
         "script_level.level_keys": [
           "PDK5 Pair Programming 1"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 2,
         "lesson.key": "Computer Science Pedagogy",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -1930,8 +1760,6 @@
         "script_level.level_keys": [
           "PDK5 Pair programming match"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 3,
         "lesson.key": "Computer Science Pedagogy",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -1943,8 +1771,6 @@
         "script_level.level_keys": [
           "PDK5 Problem Solving"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 4,
         "lesson.key": "Computer Science Pedagogy",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -1956,8 +1782,6 @@
         "script_level.level_keys": [
           "PDK5 Classroom Culture C"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 5,
         "lesson.key": "Computer Science Pedagogy",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -1969,8 +1793,6 @@
         "script_level.level_keys": [
           "PDAlg Classroom Culture 2"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 6,
         "lesson.key": "Computer Science Pedagogy",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -1982,8 +1804,6 @@
         "script_level.level_keys": [
           "PDK5 Strategies F"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 7,
         "lesson.key": "Computer Science Pedagogy",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -1995,8 +1815,6 @@
         "script_level.level_keys": [
           "PDK5 Teacher Dashboard 1"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 1,
         "lesson.key": "Teacher Dashboard",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -2008,8 +1826,6 @@
         "script_level.level_keys": [
           "PDK5 Teacher Dashboard 2"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 2,
         "lesson.key": "Teacher Dashboard",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -2021,8 +1837,6 @@
         "script_level.level_keys": [
           "PDAlg Teacher Dashboard"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 3,
         "lesson.key": "Teacher Dashboard",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -2034,8 +1848,6 @@
         "script_level.level_keys": [
           "PDAlg Blocks Video"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 1,
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -2047,8 +1859,6 @@
         "script_level.level_keys": [
           "Calc Circles of Eval 1"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 2,
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -2060,8 +1870,6 @@
         "script_level.level_keys": [
           "Calc Circles of Eval 2"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 3,
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -2073,8 +1881,6 @@
         "script_level.level_keys": [
           "Calc Circles of Eval 3"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 4,
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -2086,8 +1892,6 @@
         "script_level.level_keys": [
           "Calc Circles of Eval 5"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 5,
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -2099,8 +1903,6 @@
         "script_level.level_keys": [
           "Calc Circles of Eval 6"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 6,
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -2112,8 +1914,6 @@
         "script_level.level_keys": [
           "Calc Circles of Eval 7"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 7,
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -2125,8 +1925,6 @@
         "script_level.level_keys": [
           "Calc Circles of Eval 8"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 8,
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -2138,8 +1936,6 @@
         "script_level.level_keys": [
           "Calc Circles of Eval 9"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 9,
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -2151,8 +1947,6 @@
         "script_level.level_keys": [
           "Calc Circles of Eval Free Play"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 10,
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -2164,8 +1958,6 @@
         "script_level.level_keys": [
           "PDAlg Types Video"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 1,
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -2177,8 +1969,6 @@
         "script_level.level_keys": [
           "Eval Strings Images .1"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 2,
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -2190,8 +1980,6 @@
         "script_level.level_keys": [
           "Eval Strings Images .2"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 3,
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -2203,8 +1991,6 @@
         "script_level.level_keys": [
           "Eval Strings Images 1"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 4,
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -2216,8 +2002,6 @@
         "script_level.level_keys": [
           "Eval Strings Images 2"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 5,
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -2229,8 +2013,6 @@
         "script_level.level_keys": [
           "Eval Strings Images 3"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 6,
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -2242,8 +2024,6 @@
         "script_level.level_keys": [
           "Eval Strings Images 4"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 7,
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -2255,8 +2035,6 @@
         "script_level.level_keys": [
           "Eval Strings Images 5"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 8,
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -2268,8 +2046,6 @@
         "script_level.level_keys": [
           "Eval Strings Images 6"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 9,
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -2281,8 +2057,6 @@
         "script_level.level_keys": [
           "Eval Strings Images 7"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 10,
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -2294,8 +2068,6 @@
         "script_level.level_keys": [
           "Eval Strings Images 8"
         ],
-        "script_level.chapter": 39,
-        "script_level.position": 11,
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -2307,8 +2079,6 @@
         "script_level.level_keys": [
           "Eval Strings Images Free Play"
         ],
-        "script_level.chapter": 40,
-        "script_level.position": 12,
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -2320,8 +2090,6 @@
         "script_level.level_keys": [
           "PDAlg Design Recipe Video"
         ],
-        "script_level.chapter": 41,
-        "script_level.position": 1,
         "lesson.key": "The Design Recipe",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -2333,8 +2101,6 @@
         "script_level.level_keys": [
           "Play Lab Rocket 1"
         ],
-        "script_level.chapter": 42,
-        "script_level.position": 2,
         "lesson.key": "The Design Recipe",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -2346,8 +2112,6 @@
         "script_level.level_keys": [
           "Rocket Contract 1"
         ],
-        "script_level.chapter": 43,
-        "script_level.position": 3,
         "lesson.key": "The Design Recipe",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -2359,8 +2123,6 @@
         "script_level.level_keys": [
           "Calc Rocket 1"
         ],
-        "script_level.chapter": 44,
-        "script_level.position": 4,
         "lesson.key": "The Design Recipe",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -2372,8 +2134,6 @@
         "script_level.level_keys": [
           "Calc Rocket 2"
         ],
-        "script_level.chapter": 45,
-        "script_level.position": 5,
         "lesson.key": "The Design Recipe",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -2385,8 +2145,6 @@
         "script_level.level_keys": [
           "Play Lab Rocket 2"
         ],
-        "script_level.chapter": 46,
-        "script_level.position": 6,
         "lesson.key": "The Design Recipe",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -2398,8 +2156,6 @@
         "script_level.level_keys": [
           "Play Lab Rocket 3"
         ],
-        "script_level.chapter": 47,
-        "script_level.position": 7,
         "lesson.key": "The Design Recipe",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -2411,8 +2167,6 @@
         "script_level.level_keys": [
           "Play Lab Rocket 4"
         ],
-        "script_level.chapter": 48,
-        "script_level.position": 8,
         "lesson.key": "The Design Recipe",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -2424,8 +2178,6 @@
         "script_level.level_keys": [
           "Play Lab Rocket 5"
         ],
-        "script_level.chapter": 49,
-        "script_level.position": 9,
         "lesson.key": "The Design Recipe",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -2437,8 +2189,6 @@
         "script_level.level_keys": [
           "Play Lab Rocket 6"
         ],
-        "script_level.chapter": 50,
-        "script_level.position": 10,
         "lesson.key": "The Design Recipe",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -2450,8 +2200,6 @@
         "script_level.level_keys": [
           "Play Lab Rocket 7"
         ],
-        "script_level.chapter": 51,
-        "script_level.position": 11,
         "lesson.key": "The Design Recipe",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -2463,8 +2211,6 @@
         "script_level.level_keys": [
           "Play Lab Rocket 8"
         ],
-        "script_level.chapter": 52,
-        "script_level.position": 12,
         "lesson.key": "The Design Recipe",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -2476,8 +2222,6 @@
         "script_level.level_keys": [
           "Play Lab Rocket Free Play"
         ],
-        "script_level.chapter": 53,
-        "script_level.position": 13,
         "lesson.key": "The Design Recipe",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -2489,8 +2233,6 @@
         "script_level.level_keys": [
           "PDAlg Big Game"
         ],
-        "script_level.chapter": 54,
-        "script_level.position": 1,
         "lesson.key": "The Big Game",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -2502,8 +2244,6 @@
         "script_level.level_keys": [
           "Big Game Vars 1"
         ],
-        "script_level.chapter": 55,
-        "script_level.position": 2,
         "lesson.key": "The Big Game",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -2515,8 +2255,6 @@
         "script_level.level_keys": [
           "Big Game Vars 2"
         ],
-        "script_level.chapter": 56,
-        "script_level.position": 3,
         "lesson.key": "The Big Game",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -2528,8 +2266,6 @@
         "script_level.level_keys": [
           "Big Game Vars 3"
         ],
-        "script_level.chapter": 57,
-        "script_level.position": 4,
         "lesson.key": "The Big Game",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -2541,8 +2277,6 @@
         "script_level.level_keys": [
           "Big Game Vars 4"
         ],
-        "script_level.chapter": 58,
-        "script_level.position": 5,
         "lesson.key": "The Big Game",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -2554,8 +2288,6 @@
         "script_level.level_keys": [
           "Big Game Animation 1"
         ],
-        "script_level.chapter": 59,
-        "script_level.position": 6,
         "lesson.key": "The Big Game",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -2567,8 +2299,6 @@
         "script_level.level_keys": [
           "Big Game Animation 2"
         ],
-        "script_level.chapter": 60,
-        "script_level.position": 7,
         "lesson.key": "The Big Game",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -2580,8 +2310,6 @@
         "script_level.level_keys": [
           "Big Game Animation 3"
         ],
-        "script_level.chapter": 61,
-        "script_level.position": 8,
         "lesson.key": "The Big Game",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -2593,8 +2321,6 @@
         "script_level.level_keys": [
           "Big Game Animation 4"
         ],
-        "script_level.chapter": 62,
-        "script_level.position": 9,
         "lesson.key": "The Big Game",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -2606,8 +2332,6 @@
         "script_level.level_keys": [
           "Big Game Booleans 1"
         ],
-        "script_level.chapter": 63,
-        "script_level.position": 10,
         "lesson.key": "The Big Game",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -2619,8 +2343,6 @@
         "script_level.level_keys": [
           "Big Game Booleans 4"
         ],
-        "script_level.chapter": 64,
-        "script_level.position": 11,
         "lesson.key": "The Big Game",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -2632,8 +2354,6 @@
         "script_level.level_keys": [
           "Big Game Booleans 2"
         ],
-        "script_level.chapter": 65,
-        "script_level.position": 12,
         "lesson.key": "The Big Game",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -2645,8 +2365,6 @@
         "script_level.level_keys": [
           "Big Game Booleans 3"
         ],
-        "script_level.chapter": 66,
-        "script_level.position": 13,
         "lesson.key": "The Big Game",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -2658,8 +2376,6 @@
         "script_level.level_keys": [
           "Big Game Booleans 5"
         ],
-        "script_level.chapter": 67,
-        "script_level.position": 14,
         "lesson.key": "The Big Game",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -2671,8 +2387,6 @@
         "script_level.level_keys": [
           "Big Game Player 1"
         ],
-        "script_level.chapter": 68,
-        "script_level.position": 15,
         "lesson.key": "The Big Game",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -2684,8 +2398,6 @@
         "script_level.level_keys": [
           "Big Game Player 2"
         ],
-        "script_level.chapter": 69,
-        "script_level.position": 16,
         "lesson.key": "The Big Game",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -2697,8 +2409,6 @@
         "script_level.level_keys": [
           "Big Game Collision 1"
         ],
-        "script_level.chapter": 70,
-        "script_level.position": 17,
         "lesson.key": "The Big Game",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -2710,8 +2420,6 @@
         "script_level.level_keys": [
           "Big Game Collision 4"
         ],
-        "script_level.chapter": 71,
-        "script_level.position": 18,
         "lesson.key": "The Big Game",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -2723,8 +2431,6 @@
         "script_level.level_keys": [
           "Big Game Collision 3"
         ],
-        "script_level.chapter": 72,
-        "script_level.position": 19,
         "lesson.key": "The Big Game",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -2736,8 +2442,6 @@
         "script_level.level_keys": [
           "Big Game Final"
         ],
-        "script_level.chapter": 73,
-        "script_level.position": 20,
         "lesson.key": "The Big Game",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -2749,8 +2453,6 @@
         "script_level.level_keys": [
           "PDAlg end of P3"
         ],
-        "script_level.chapter": 74,
-        "script_level.position": 1,
         "lesson.key": "Next Steps",
         "lesson_group.key": "",
         "script.name": "algebraPD3"
@@ -2762,8 +2464,6 @@
         "script_level.level_keys": [
           "PDAlg whats next"
         ],
-        "script_level.chapter": 75,
-        "script_level.position": 2,
         "lesson.key": "Next Steps",
         "lesson_group.key": "",
         "script.name": "algebraPD3"

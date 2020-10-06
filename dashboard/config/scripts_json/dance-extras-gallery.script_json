@@ -54,8 +54,6 @@
         "script_level.level_keys": [
           "Dance_Party_extras_gallery_intro"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Dance Party - Go Further",
         "lesson_group.key": "",
         "script.name": "dance-extras-gallery"
@@ -72,8 +70,6 @@
         "script_level.level_keys": [
           "Dance_Party_extras_gallery_intro"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Dance Party - Go Further",
         "lesson_group.key": "",
         "script.name": "dance-extras-gallery"

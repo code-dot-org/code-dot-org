@@ -140,8 +140,6 @@
         "script_level.level_keys": [
           "CSPPD presurvey"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Introduction to PD",
         "lesson_group.key": "",
         "script.name": "CSPPD"
@@ -162,8 +160,6 @@
         "script_level.level_keys": [
           "Welcome to the Family!"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Introduction to PD",
         "lesson_group.key": "",
         "script.name": "CSPPD"
@@ -184,8 +180,6 @@
         "script_level.level_keys": [
           "PDECS tour"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "Introduction to PD",
         "lesson_group.key": "",
         "script.name": "CSPPD"
@@ -206,8 +200,6 @@
         "script_level.level_keys": [
           "PDECS commitment"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "Introduction to PD",
         "lesson_group.key": "",
         "script.name": "CSPPD"
@@ -228,8 +220,6 @@
         "script_level.level_keys": [
           "PDECS commitment match"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 5,
         "lesson.key": "Introduction to PD",
         "lesson_group.key": "",
         "script.name": "CSPPD"
@@ -250,8 +240,6 @@
         "script_level.level_keys": [
           "PDECS attendance commitment"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 6,
         "lesson.key": "Introduction to PD",
         "lesson_group.key": "",
         "script.name": "CSPPD"
@@ -272,8 +260,6 @@
         "script_level.level_keys": [
           "ECSPD pause"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 7,
         "lesson.key": "Introduction to PD",
         "lesson_group.key": "",
         "script.name": "CSPPD"
@@ -294,8 +280,6 @@
         "script_level.level_keys": [
           "CSPPD program overview"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 1,
         "lesson.key": "What is CSP?",
         "lesson_group.key": "",
         "script.name": "CSPPD"
@@ -316,8 +300,6 @@
         "script_level.level_keys": [
           "CSPPD curriculum overview"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 2,
         "lesson.key": "What is CSP?",
         "lesson_group.key": "",
         "script.name": "CSPPD"
@@ -338,8 +320,6 @@
         "script_level.level_keys": [
           "CSPPD unit matching"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 3,
         "lesson.key": "What is CSP?",
         "lesson_group.key": "",
         "script.name": "CSPPD"
@@ -360,8 +340,6 @@
         "script_level.level_keys": [
           "CSPPD course goals"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 4,
         "lesson.key": "What is CSP?",
         "lesson_group.key": "",
         "script.name": "CSPPD"
@@ -382,8 +360,6 @@
         "script_level.level_keys": [
           "CSPPD PT description"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 5,
         "lesson.key": "What is CSP?",
         "lesson_group.key": "",
         "script.name": "CSPPD"
@@ -404,8 +380,6 @@
         "script_level.level_keys": [
           "CSPPD AP quiz"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 6,
         "lesson.key": "What is CSP?",
         "lesson_group.key": "",
         "script.name": "CSPPD"
@@ -426,8 +400,6 @@
         "script_level.level_keys": [
           "CSPPD PD overview"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 7,
         "lesson.key": "What is CSP?",
         "lesson_group.key": "",
         "script.name": "CSPPD"
@@ -448,8 +420,6 @@
         "script_level.level_keys": [
           "CSPPD PD Phases"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 8,
         "lesson.key": "What is CSP?",
         "lesson_group.key": "",
         "script.name": "CSPPD"
@@ -470,8 +440,6 @@
         "script_level.level_keys": [
           "CSPPD phase matching"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 9,
         "lesson.key": "What is CSP?",
         "lesson_group.key": "",
         "script.name": "CSPPD"
@@ -492,8 +460,6 @@
         "script_level.level_keys": [
           "CSPPD PD goals"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 10,
         "lesson.key": "What is CSP?",
         "lesson_group.key": "",
         "script.name": "CSPPD"
@@ -514,8 +480,6 @@
         "script_level.level_keys": [
           "CSPPD program overlap"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 11,
         "lesson.key": "What is CSP?",
         "lesson_group.key": "",
         "script.name": "CSPPD"
@@ -536,8 +500,6 @@
         "script_level.level_keys": [
           "CSPPD instructional materials"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 1,
         "lesson.key": "Exploring CSP Instructional Materials",
         "lesson_group.key": "",
         "script.name": "CSPPD"
@@ -558,8 +520,6 @@
         "script_level.level_keys": [
           "CSPPD materials overview"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 2,
         "lesson.key": "Exploring CSP Instructional Materials",
         "lesson_group.key": "",
         "script.name": "CSPPD"
@@ -580,8 +540,6 @@
         "script_level.level_keys": [
           "CSPPD materials question1"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 3,
         "lesson.key": "Exploring CSP Instructional Materials",
         "lesson_group.key": "",
         "script.name": "CSPPD"
@@ -602,8 +560,6 @@
         "script_level.level_keys": [
           "CSPPD impact of CS"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 1,
         "lesson.key": "Impact of Computer Science",
         "lesson_group.key": "",
         "script.name": "CSPPD"
@@ -624,8 +580,6 @@
         "script_level.level_keys": [
           "ECSPD impact vid1"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 2,
         "lesson.key": "Impact of Computer Science",
         "lesson_group.key": "",
         "script.name": "CSPPD"
@@ -646,8 +600,6 @@
         "script_level.level_keys": [
           "ECSPD impact vid2"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 3,
         "lesson.key": "Impact of Computer Science",
         "lesson_group.key": "",
         "script.name": "CSPPD"
@@ -668,8 +620,6 @@
         "script_level.level_keys": [
           "ECSPD impact vid2 question"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 4,
         "lesson.key": "Impact of Computer Science",
         "lesson_group.key": "",
         "script.name": "CSPPD"
@@ -690,8 +640,6 @@
         "script_level.level_keys": [
           "CSPPD impact in program"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 5,
         "lesson.key": "Impact of Computer Science",
         "lesson_group.key": "",
         "script.name": "CSPPD"
@@ -712,8 +660,6 @@
         "script_level.level_keys": [
           "ECSPD what is growth mindset"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 1,
         "lesson.key": "Growth Mindset",
         "lesson_group.key": "",
         "script.name": "CSPPD"
@@ -734,8 +680,6 @@
         "script_level.level_keys": [
           "ECSPD growth mindset in the classroom"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 2,
         "lesson.key": "Growth Mindset",
         "lesson_group.key": "",
         "script.name": "CSPPD"
@@ -756,8 +700,6 @@
         "script_level.level_keys": [
           "ECSPD growth mindset question"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 3,
         "lesson.key": "Growth Mindset",
         "lesson_group.key": "",
         "script.name": "CSPPD"
@@ -778,8 +720,6 @@
         "script_level.level_keys": [
           "ECSPD growth mindset strategies"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 4,
         "lesson.key": "Growth Mindset",
         "lesson_group.key": "",
         "script.name": "CSPPD"
@@ -800,8 +740,6 @@
         "script_level.level_keys": [
           "CSPPD strategies"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 5,
         "lesson.key": "Growth Mindset",
         "lesson_group.key": "",
         "script.name": "CSPPD"
@@ -822,8 +760,6 @@
         "script_level.level_keys": [
           "CSPPD teaching strategies video"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 1,
         "lesson.key": "Teaching Strategies",
         "lesson_group.key": "",
         "script.name": "CSPPD"
@@ -844,8 +780,6 @@
         "script_level.level_keys": [
           "CSPPD strategies"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 2,
         "lesson.key": "Teaching Strategies",
         "lesson_group.key": "",
         "script.name": "CSPPD"
@@ -866,8 +800,6 @@
         "script_level.level_keys": [
           "CSPPD facilitators"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 1,
         "lesson.key": "Preparing for in-person PD",
         "lesson_group.key": "",
         "script.name": "CSPPD"
@@ -888,8 +820,6 @@
         "script_level.level_keys": [
           "CSPPD forum introduction"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 2,
         "lesson.key": "Preparing for in-person PD",
         "lesson_group.key": "",
         "script.name": "CSPPD"
@@ -910,8 +840,6 @@
         "script_level.level_keys": [
           "ECSPD PD details"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 3,
         "lesson.key": "Preparing for in-person PD",
         "lesson_group.key": "",
         "script.name": "CSPPD"
@@ -932,8 +860,6 @@
         "script_level.level_keys": [
           "CSPPD postsurvey"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 4,
         "lesson.key": "Preparing for in-person PD",
         "lesson_group.key": "",
         "script.name": "CSPPD"
@@ -954,8 +880,6 @@
         "script_level.level_keys": [
           "CSPPD end of p1"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 5,
         "lesson.key": "Preparing for in-person PD",
         "lesson_group.key": "",
         "script.name": "CSPPD"
@@ -972,8 +896,6 @@
         "script_level.level_keys": [
           "CSPPD presurvey"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Introduction to PD",
         "lesson_group.key": "",
         "script.name": "CSPPD"
@@ -985,8 +907,6 @@
         "script_level.level_keys": [
           "Welcome to the Family!"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Introduction to PD",
         "lesson_group.key": "",
         "script.name": "CSPPD"
@@ -998,8 +918,6 @@
         "script_level.level_keys": [
           "PDECS tour"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "Introduction to PD",
         "lesson_group.key": "",
         "script.name": "CSPPD"
@@ -1011,8 +929,6 @@
         "script_level.level_keys": [
           "PDECS commitment"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "Introduction to PD",
         "lesson_group.key": "",
         "script.name": "CSPPD"
@@ -1024,8 +940,6 @@
         "script_level.level_keys": [
           "PDECS commitment match"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 5,
         "lesson.key": "Introduction to PD",
         "lesson_group.key": "",
         "script.name": "CSPPD"
@@ -1037,8 +951,6 @@
         "script_level.level_keys": [
           "PDECS attendance commitment"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 6,
         "lesson.key": "Introduction to PD",
         "lesson_group.key": "",
         "script.name": "CSPPD"
@@ -1050,8 +962,6 @@
         "script_level.level_keys": [
           "ECSPD pause"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 7,
         "lesson.key": "Introduction to PD",
         "lesson_group.key": "",
         "script.name": "CSPPD"
@@ -1063,8 +973,6 @@
         "script_level.level_keys": [
           "CSPPD program overview"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 1,
         "lesson.key": "What is CSP?",
         "lesson_group.key": "",
         "script.name": "CSPPD"
@@ -1076,8 +984,6 @@
         "script_level.level_keys": [
           "CSPPD curriculum overview"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 2,
         "lesson.key": "What is CSP?",
         "lesson_group.key": "",
         "script.name": "CSPPD"
@@ -1089,8 +995,6 @@
         "script_level.level_keys": [
           "CSPPD unit matching"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 3,
         "lesson.key": "What is CSP?",
         "lesson_group.key": "",
         "script.name": "CSPPD"
@@ -1102,8 +1006,6 @@
         "script_level.level_keys": [
           "CSPPD course goals"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 4,
         "lesson.key": "What is CSP?",
         "lesson_group.key": "",
         "script.name": "CSPPD"
@@ -1115,8 +1017,6 @@
         "script_level.level_keys": [
           "CSPPD PT description"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 5,
         "lesson.key": "What is CSP?",
         "lesson_group.key": "",
         "script.name": "CSPPD"
@@ -1128,8 +1028,6 @@
         "script_level.level_keys": [
           "CSPPD AP quiz"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 6,
         "lesson.key": "What is CSP?",
         "lesson_group.key": "",
         "script.name": "CSPPD"
@@ -1141,8 +1039,6 @@
         "script_level.level_keys": [
           "CSPPD PD overview"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 7,
         "lesson.key": "What is CSP?",
         "lesson_group.key": "",
         "script.name": "CSPPD"
@@ -1154,8 +1050,6 @@
         "script_level.level_keys": [
           "CSPPD PD Phases"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 8,
         "lesson.key": "What is CSP?",
         "lesson_group.key": "",
         "script.name": "CSPPD"
@@ -1167,8 +1061,6 @@
         "script_level.level_keys": [
           "CSPPD phase matching"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 9,
         "lesson.key": "What is CSP?",
         "lesson_group.key": "",
         "script.name": "CSPPD"
@@ -1180,8 +1072,6 @@
         "script_level.level_keys": [
           "CSPPD PD goals"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 10,
         "lesson.key": "What is CSP?",
         "lesson_group.key": "",
         "script.name": "CSPPD"
@@ -1193,8 +1083,6 @@
         "script_level.level_keys": [
           "CSPPD program overlap"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 11,
         "lesson.key": "What is CSP?",
         "lesson_group.key": "",
         "script.name": "CSPPD"
@@ -1206,8 +1094,6 @@
         "script_level.level_keys": [
           "CSPPD instructional materials"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 1,
         "lesson.key": "Exploring CSP Instructional Materials",
         "lesson_group.key": "",
         "script.name": "CSPPD"
@@ -1219,8 +1105,6 @@
         "script_level.level_keys": [
           "CSPPD materials overview"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 2,
         "lesson.key": "Exploring CSP Instructional Materials",
         "lesson_group.key": "",
         "script.name": "CSPPD"
@@ -1232,8 +1116,6 @@
         "script_level.level_keys": [
           "CSPPD materials question1"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 3,
         "lesson.key": "Exploring CSP Instructional Materials",
         "lesson_group.key": "",
         "script.name": "CSPPD"
@@ -1245,8 +1127,6 @@
         "script_level.level_keys": [
           "CSPPD impact of CS"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 1,
         "lesson.key": "Impact of Computer Science",
         "lesson_group.key": "",
         "script.name": "CSPPD"
@@ -1258,8 +1138,6 @@
         "script_level.level_keys": [
           "ECSPD impact vid1"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 2,
         "lesson.key": "Impact of Computer Science",
         "lesson_group.key": "",
         "script.name": "CSPPD"
@@ -1271,8 +1149,6 @@
         "script_level.level_keys": [
           "ECSPD impact vid2"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 3,
         "lesson.key": "Impact of Computer Science",
         "lesson_group.key": "",
         "script.name": "CSPPD"
@@ -1284,8 +1160,6 @@
         "script_level.level_keys": [
           "ECSPD impact vid2 question"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 4,
         "lesson.key": "Impact of Computer Science",
         "lesson_group.key": "",
         "script.name": "CSPPD"
@@ -1297,8 +1171,6 @@
         "script_level.level_keys": [
           "CSPPD impact in program"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 5,
         "lesson.key": "Impact of Computer Science",
         "lesson_group.key": "",
         "script.name": "CSPPD"
@@ -1310,8 +1182,6 @@
         "script_level.level_keys": [
           "ECSPD what is growth mindset"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 1,
         "lesson.key": "Growth Mindset",
         "lesson_group.key": "",
         "script.name": "CSPPD"
@@ -1323,8 +1193,6 @@
         "script_level.level_keys": [
           "ECSPD growth mindset in the classroom"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 2,
         "lesson.key": "Growth Mindset",
         "lesson_group.key": "",
         "script.name": "CSPPD"
@@ -1336,8 +1204,6 @@
         "script_level.level_keys": [
           "ECSPD growth mindset question"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 3,
         "lesson.key": "Growth Mindset",
         "lesson_group.key": "",
         "script.name": "CSPPD"
@@ -1349,8 +1215,6 @@
         "script_level.level_keys": [
           "ECSPD growth mindset strategies"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 4,
         "lesson.key": "Growth Mindset",
         "lesson_group.key": "",
         "script.name": "CSPPD"
@@ -1362,8 +1226,6 @@
         "script_level.level_keys": [
           "CSPPD strategies"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 5,
         "lesson.key": "Growth Mindset",
         "lesson_group.key": "",
         "script.name": "CSPPD"
@@ -1375,8 +1237,6 @@
         "script_level.level_keys": [
           "CSPPD teaching strategies video"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 1,
         "lesson.key": "Teaching Strategies",
         "lesson_group.key": "",
         "script.name": "CSPPD"
@@ -1388,8 +1248,6 @@
         "script_level.level_keys": [
           "CSPPD strategies"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 2,
         "lesson.key": "Teaching Strategies",
         "lesson_group.key": "",
         "script.name": "CSPPD"
@@ -1401,8 +1259,6 @@
         "script_level.level_keys": [
           "CSPPD facilitators"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 1,
         "lesson.key": "Preparing for in-person PD",
         "lesson_group.key": "",
         "script.name": "CSPPD"
@@ -1414,8 +1270,6 @@
         "script_level.level_keys": [
           "CSPPD forum introduction"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 2,
         "lesson.key": "Preparing for in-person PD",
         "lesson_group.key": "",
         "script.name": "CSPPD"
@@ -1427,8 +1281,6 @@
         "script_level.level_keys": [
           "ECSPD PD details"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 3,
         "lesson.key": "Preparing for in-person PD",
         "lesson_group.key": "",
         "script.name": "CSPPD"
@@ -1440,8 +1292,6 @@
         "script_level.level_keys": [
           "CSPPD postsurvey"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 4,
         "lesson.key": "Preparing for in-person PD",
         "lesson_group.key": "",
         "script.name": "CSPPD"
@@ -1453,8 +1303,6 @@
         "script_level.level_keys": [
           "CSPPD end of p1"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 5,
         "lesson.key": "Preparing for in-person PD",
         "lesson_group.key": "",
         "script.name": "CSPPD"

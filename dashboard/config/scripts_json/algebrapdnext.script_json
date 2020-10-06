@@ -126,8 +126,6 @@
         "script_level.level_keys": [
           "PDAlg P2 Welcome"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Welcome!",
         "lesson_group.key": "",
         "script.name": "algebrapdnext"
@@ -148,8 +146,6 @@
         "script_level.level_keys": [
           "PDECS tour"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Welcome!",
         "lesson_group.key": "",
         "script.name": "algebrapdnext"
@@ -170,8 +166,6 @@
         "script_level.level_keys": [
           "PDAlg Cirlces of Eval"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "Welcome!",
         "lesson_group.key": "",
         "script.name": "algebrapdnext"
@@ -192,8 +186,6 @@
         "script_level.level_keys": [
           "PDAlg block match"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "Welcome!",
         "lesson_group.key": "",
         "script.name": "algebrapdnext"
@@ -214,8 +206,6 @@
         "script_level.level_keys": [
           "PDAlg Puzzle Tips"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 1,
         "lesson.key": "Teaching with Puzzles",
         "lesson_group.key": "",
         "script.name": "algebrapdnext"
@@ -236,8 +226,6 @@
         "script_level.level_keys": [
           "PDAlg Puzzles Pre"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 2,
         "lesson.key": "Teaching with Puzzles",
         "lesson_group.key": "",
         "script.name": "algebrapdnext"
@@ -258,8 +246,6 @@
         "script_level.level_keys": [
           "PDAlg DR 1"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 1,
         "lesson.key": "Teaching with the Design Recipe",
         "lesson_group.key": "",
         "script.name": "algebrapdnext"
@@ -280,8 +266,6 @@
         "script_level.level_keys": [
           "PDAlg DR Multi 1"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 2,
         "lesson.key": "Teaching with the Design Recipe",
         "lesson_group.key": "",
         "script.name": "algebrapdnext"
@@ -302,8 +286,6 @@
         "script_level.level_keys": [
           "PDAlg DR Text 1"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 3,
         "lesson.key": "Teaching with the Design Recipe",
         "lesson_group.key": "",
         "script.name": "algebrapdnext"
@@ -324,8 +306,6 @@
         "script_level.level_keys": [
           "PDAlg DR Multi 2"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 4,
         "lesson.key": "Teaching with the Design Recipe",
         "lesson_group.key": "",
         "script.name": "algebrapdnext"
@@ -346,8 +326,6 @@
         "script_level.level_keys": [
           "PDAlg DR Match 1"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 5,
         "lesson.key": "Teaching with the Design Recipe",
         "lesson_group.key": "",
         "script.name": "algebrapdnext"
@@ -368,8 +346,6 @@
         "script_level.level_keys": [
           "PDAlg Design Recipe Video"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 1,
         "lesson.key": "The Design Recipe",
         "lesson_group.key": "",
         "script.name": "algebrapdnext"
@@ -390,8 +366,6 @@
         "script_level.level_keys": [
           "Eval Design Recipe 3"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 2,
         "lesson.key": "The Design Recipe",
         "lesson_group.key": "",
         "script.name": "algebrapdnext"
@@ -412,8 +386,6 @@
         "script_level.level_keys": [
           "Eval Design Recipe 5"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 3,
         "lesson.key": "The Design Recipe",
         "lesson_group.key": "",
         "script.name": "algebrapdnext"
@@ -434,8 +406,6 @@
         "script_level.level_keys": [
           "Calc Design Recipe 1"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 4,
         "lesson.key": "The Design Recipe",
         "lesson_group.key": "",
         "script.name": "algebrapdnext"
@@ -456,8 +426,6 @@
         "script_level.level_keys": [
           "Eval Design Recipe Free Play"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 5,
         "lesson.key": "The Design Recipe",
         "lesson_group.key": "",
         "script.name": "algebrapdnext"
@@ -478,8 +446,6 @@
         "script_level.level_keys": [
           "PDAlg Dashboard 1"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 1,
         "lesson.key": "Teacher Dashboard",
         "lesson_group.key": "",
         "script.name": "algebrapdnext"
@@ -500,8 +466,6 @@
         "script_level.level_keys": [
           "PDAlg Dashboard 2"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 2,
         "lesson.key": "Teacher Dashboard",
         "lesson_group.key": "",
         "script.name": "algebrapdnext"
@@ -522,8 +486,6 @@
         "script_level.level_keys": [
           "PDAlg Dashboard 3"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 3,
         "lesson.key": "Teacher Dashboard",
         "lesson_group.key": "",
         "script.name": "algebrapdnext"
@@ -544,8 +506,6 @@
         "script_level.level_keys": [
           "PDAlg Teacher Plan"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 4,
         "lesson.key": "Teacher Dashboard",
         "lesson_group.key": "",
         "script.name": "algebrapdnext"
@@ -566,8 +526,6 @@
         "script_level.level_keys": [
           "PDAlg Prep a Lesson"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 1,
         "lesson.key": "Lesson Prep",
         "lesson_group.key": "",
         "script.name": "algebrapdnext"
@@ -588,8 +546,6 @@
         "script_level.level_keys": [
           "PDAlg Prep on Paper"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 2,
         "lesson.key": "Lesson Prep",
         "lesson_group.key": "",
         "script.name": "algebrapdnext"
@@ -610,8 +566,6 @@
         "script_level.level_keys": [
           "PDAlg Prep Sandbox"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 3,
         "lesson.key": "Lesson Prep",
         "lesson_group.key": "",
         "script.name": "algebrapdnext"
@@ -632,8 +586,6 @@
         "script_level.level_keys": [
           "Lesson Prep Final"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 4,
         "lesson.key": "Lesson Prep",
         "lesson_group.key": "",
         "script.name": "algebrapdnext"
@@ -650,8 +602,6 @@
         "script_level.level_keys": [
           "PDAlg P2 Welcome"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Welcome!",
         "lesson_group.key": "",
         "script.name": "algebrapdnext"
@@ -663,8 +613,6 @@
         "script_level.level_keys": [
           "PDECS tour"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Welcome!",
         "lesson_group.key": "",
         "script.name": "algebrapdnext"
@@ -676,8 +624,6 @@
         "script_level.level_keys": [
           "PDAlg Cirlces of Eval"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "Welcome!",
         "lesson_group.key": "",
         "script.name": "algebrapdnext"
@@ -689,8 +635,6 @@
         "script_level.level_keys": [
           "PDAlg block match"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "Welcome!",
         "lesson_group.key": "",
         "script.name": "algebrapdnext"
@@ -702,8 +646,6 @@
         "script_level.level_keys": [
           "PDAlg Puzzle Tips"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 1,
         "lesson.key": "Teaching with Puzzles",
         "lesson_group.key": "",
         "script.name": "algebrapdnext"
@@ -715,8 +657,6 @@
         "script_level.level_keys": [
           "PDAlg Puzzles Pre"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 2,
         "lesson.key": "Teaching with Puzzles",
         "lesson_group.key": "",
         "script.name": "algebrapdnext"
@@ -728,8 +668,6 @@
         "script_level.level_keys": [
           "PDAlg DR 1"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 1,
         "lesson.key": "Teaching with the Design Recipe",
         "lesson_group.key": "",
         "script.name": "algebrapdnext"
@@ -741,8 +679,6 @@
         "script_level.level_keys": [
           "PDAlg DR Multi 1"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 2,
         "lesson.key": "Teaching with the Design Recipe",
         "lesson_group.key": "",
         "script.name": "algebrapdnext"
@@ -754,8 +690,6 @@
         "script_level.level_keys": [
           "PDAlg DR Text 1"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 3,
         "lesson.key": "Teaching with the Design Recipe",
         "lesson_group.key": "",
         "script.name": "algebrapdnext"
@@ -767,8 +701,6 @@
         "script_level.level_keys": [
           "PDAlg DR Multi 2"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 4,
         "lesson.key": "Teaching with the Design Recipe",
         "lesson_group.key": "",
         "script.name": "algebrapdnext"
@@ -780,8 +712,6 @@
         "script_level.level_keys": [
           "PDAlg DR Match 1"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 5,
         "lesson.key": "Teaching with the Design Recipe",
         "lesson_group.key": "",
         "script.name": "algebrapdnext"
@@ -793,8 +723,6 @@
         "script_level.level_keys": [
           "PDAlg Design Recipe Video"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 1,
         "lesson.key": "The Design Recipe",
         "lesson_group.key": "",
         "script.name": "algebrapdnext"
@@ -806,8 +734,6 @@
         "script_level.level_keys": [
           "Eval Design Recipe 3"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 2,
         "lesson.key": "The Design Recipe",
         "lesson_group.key": "",
         "script.name": "algebrapdnext"
@@ -819,8 +745,6 @@
         "script_level.level_keys": [
           "Eval Design Recipe 5"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 3,
         "lesson.key": "The Design Recipe",
         "lesson_group.key": "",
         "script.name": "algebrapdnext"
@@ -832,8 +756,6 @@
         "script_level.level_keys": [
           "Calc Design Recipe 1"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 4,
         "lesson.key": "The Design Recipe",
         "lesson_group.key": "",
         "script.name": "algebrapdnext"
@@ -845,8 +767,6 @@
         "script_level.level_keys": [
           "Eval Design Recipe Free Play"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 5,
         "lesson.key": "The Design Recipe",
         "lesson_group.key": "",
         "script.name": "algebrapdnext"
@@ -858,8 +778,6 @@
         "script_level.level_keys": [
           "PDAlg Dashboard 1"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 1,
         "lesson.key": "Teacher Dashboard",
         "lesson_group.key": "",
         "script.name": "algebrapdnext"
@@ -871,8 +789,6 @@
         "script_level.level_keys": [
           "PDAlg Dashboard 2"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 2,
         "lesson.key": "Teacher Dashboard",
         "lesson_group.key": "",
         "script.name": "algebrapdnext"
@@ -884,8 +800,6 @@
         "script_level.level_keys": [
           "PDAlg Dashboard 3"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 3,
         "lesson.key": "Teacher Dashboard",
         "lesson_group.key": "",
         "script.name": "algebrapdnext"
@@ -897,8 +811,6 @@
         "script_level.level_keys": [
           "PDAlg Teacher Plan"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 4,
         "lesson.key": "Teacher Dashboard",
         "lesson_group.key": "",
         "script.name": "algebrapdnext"
@@ -910,8 +822,6 @@
         "script_level.level_keys": [
           "PDAlg Prep a Lesson"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 1,
         "lesson.key": "Lesson Prep",
         "lesson_group.key": "",
         "script.name": "algebrapdnext"
@@ -923,8 +833,6 @@
         "script_level.level_keys": [
           "PDAlg Prep on Paper"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 2,
         "lesson.key": "Lesson Prep",
         "lesson_group.key": "",
         "script.name": "algebrapdnext"
@@ -936,8 +844,6 @@
         "script_level.level_keys": [
           "PDAlg Prep Sandbox"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 3,
         "lesson.key": "Lesson Prep",
         "lesson_group.key": "",
         "script.name": "algebrapdnext"
@@ -949,8 +855,6 @@
         "script_level.level_keys": [
           "Lesson Prep Final"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 4,
         "lesson.key": "Lesson Prep",
         "lesson_group.key": "",
         "script.name": "algebrapdnext"
