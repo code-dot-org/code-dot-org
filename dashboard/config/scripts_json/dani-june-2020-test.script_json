@@ -133,8 +133,6 @@
         "script_level.level_keys": [
           "CSD U3L12 TFMD_virtual_2020"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "new lesson",
         "lesson_group.key": "lesson group",
         "script.name": "dani-june-2020-test"
@@ -155,8 +153,6 @@
         "script_level.level_keys": [
           "CSD U3 dancing alien_virtual_2020"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 1,
         "lesson.key": "lesson 2",
         "lesson_group.key": "lg_1",
         "script.name": "dani-june-2020-test"
@@ -177,8 +173,6 @@
         "script_level.level_keys": [
           "csp-pre-survey-levelgroup_2019"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 1,
         "lesson.key": "CS Principles Pre-survey",
         "lesson_group.key": "cspSurvey",
         "script.name": "dani-june-2020-test"
@@ -199,8 +193,6 @@
         "script_level.level_keys": [
           "CSP U5L01 SFLP_2019"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 1,
         "lesson.key": "Buttons and Events",
         "lesson_group.key": "cs_lg",
         "script.name": "dani-june-2020-test"
@@ -217,8 +209,6 @@
         "script_level.level_keys": [
           "CSD U3L12 TFMD_virtual_2020"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "new lesson",
         "lesson_group.key": "lesson group",
         "script.name": "dani-june-2020-test"
@@ -230,8 +220,6 @@
         "script_level.level_keys": [
           "CSD U3 dancing alien_virtual_2020"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 1,
         "lesson.key": "lesson 2",
         "lesson_group.key": "lg_1",
         "script.name": "dani-june-2020-test"
@@ -243,8 +231,6 @@
         "script_level.level_keys": [
           "csp-pre-survey-levelgroup_2019"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 1,
         "lesson.key": "CS Principles Pre-survey",
         "lesson_group.key": "cspSurvey",
         "script.name": "dani-june-2020-test"
@@ -256,8 +242,6 @@
         "script_level.level_keys": [
           "CSP U5L01 SFLP_2019"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 1,
         "lesson.key": "Buttons and Events",
         "lesson_group.key": "cs_lg",
         "script.name": "dani-june-2020-test"

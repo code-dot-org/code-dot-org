@@ -144,7 +144,7 @@ export default class PrincipalApprovalComponent extends LabeledFormComponent {
           step: 1
         })}
         <p style={styles.questionText}>
-          Percentage of student enrollment by race or ethnicity
+          Percent of student enrollment by race or ethnicity
         </p>
         {RACE_LIST.map(race => {
           return this.numberInputFor(race, {
@@ -185,9 +185,9 @@ export default class PrincipalApprovalComponent extends LabeledFormComponent {
           {
             label: `A key part of Code.org's mission is to increase and diversify participation
                     in computer science, especially among female students and underrepresented
-                    minorities. To that end, do you commit to recruiting and enrolling a diverse
-                    group of students in this course, representative of the overall demographics
-                    of your school?`
+                    racial and ethnic groups. To that end, do you commit to recruiting and 
+                    enrolling a diverse group of students in this course, representative of 
+                    the overall demographics of your school?`
           }
         )}
         <p style={styles.questionText}>

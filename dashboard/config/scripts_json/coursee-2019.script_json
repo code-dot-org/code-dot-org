@@ -407,8 +407,6 @@
         "script_level.level_keys": [
           "courseD_video_ramp1_2019"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Sequencing in the Maze",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2019"
@@ -430,8 +428,6 @@
         "script_level.level_keys": [
           "courseD_maze_ramp1_2019"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Sequencing in the Maze",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2019"
@@ -453,8 +449,6 @@
         "script_level.level_keys": [
           "courseC_maze_debugging9_2019"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "Sequencing in the Maze",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2019"
@@ -476,8 +470,6 @@
         "script_level.level_keys": [
           "courseD_maze_ramp3_2019"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "Sequencing in the Maze",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2019"
@@ -499,8 +491,6 @@
         "script_level.level_keys": [
           "courseC_video_debugging_2019"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 5,
         "lesson.key": "Sequencing in the Maze",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2019"
@@ -522,8 +512,6 @@
         "script_level.level_keys": [
           "courseC_maze_debugging2_2019"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 6,
         "lesson.key": "Sequencing in the Maze",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2019"
@@ -545,8 +533,6 @@
         "script_level.level_keys": [
           "courseD_maze_ramp4_2019"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 7,
         "lesson.key": "Sequencing in the Maze",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2019"
@@ -568,8 +554,6 @@
         "script_level.level_keys": [
           "courseC_maze_debugging4_2019"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 8,
         "lesson.key": "Sequencing in the Maze",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2019"
@@ -591,8 +575,6 @@
         "script_level.level_keys": [
           "courseC_maze_debugging6_2019"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 9,
         "lesson.key": "Sequencing in the Maze",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2019"
@@ -615,8 +597,6 @@
         "script_level.level_keys": [
           "courseC_maze_debugging7_2019"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 10,
         "lesson.key": "Sequencing in the Maze",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2019"
@@ -638,8 +618,6 @@
         "script_level.level_keys": [
           "courseD_maze_ramp5a_2019"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 11,
         "lesson.key": "Sequencing in the Maze",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2019"
@@ -661,8 +639,6 @@
         "script_level.level_keys": [
           "courseD_maze_ramp5c_2019"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 12,
         "lesson.key": "Sequencing in the Maze",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2019"
@@ -684,8 +660,6 @@
         "script_level.level_keys": [
           "courseC_video_artist_2019"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 1,
         "lesson.key": "Programming and Loops with the Artist",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2019"
@@ -707,8 +681,6 @@
         "script_level.level_keys": [
           "courseC_artist_prog1_2019"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 2,
         "lesson.key": "Programming and Loops with the Artist",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2019"
@@ -730,8 +702,6 @@
         "script_level.level_keys": [
           "courseC_artist_prog2_2019"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 3,
         "lesson.key": "Programming and Loops with the Artist",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2019"
@@ -753,8 +723,6 @@
         "script_level.level_keys": [
           "ramp_video_loopsArtist_2019"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 4,
         "lesson.key": "Programming and Loops with the Artist",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2019"
@@ -776,8 +744,6 @@
         "script_level.level_keys": [
           "courseC_artist_prog3_2019"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 5,
         "lesson.key": "Programming and Loops with the Artist",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2019"
@@ -799,8 +765,6 @@
         "script_level.level_keys": [
           "courseC_artist_prog4_2019"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 6,
         "lesson.key": "Programming and Loops with the Artist",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2019"
@@ -823,8 +787,6 @@
         "script_level.level_keys": [
           "courseC_artist_prog7_2019"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 7,
         "lesson.key": "Programming and Loops with the Artist",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2019"
@@ -846,8 +808,6 @@
         "script_level.level_keys": [
           "ramp_artist_loops4_2019"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 8,
         "lesson.key": "Programming and Loops with the Artist",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2019"
@@ -869,8 +829,6 @@
         "script_level.level_keys": [
           "ramp_artist_loops5_2019"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 9,
         "lesson.key": "Programming and Loops with the Artist",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2019"
@@ -892,8 +850,6 @@
         "script_level.level_keys": [
           "ramp_artist_loops6_2019"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 10,
         "lesson.key": "Programming and Loops with the Artist",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2019"
@@ -916,8 +872,6 @@
         "script_level.level_keys": [
           "ramp_artist_loops8_2019"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 11,
         "lesson.key": "Programming and Loops with the Artist",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2019"
@@ -938,8 +892,6 @@
         "script_level.level_keys": [
           "courseC_artist_prog_challenge1_2019"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 12,
         "lesson.key": "Programming and Loops with the Artist",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2019"
@@ -960,8 +912,6 @@
         "script_level.level_keys": [
           "courseC_artist_prog_challenge2a_2019"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 13,
         "lesson.key": "Programming and Loops with the Artist",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2019"
@@ -983,8 +933,6 @@
         "script_level.level_keys": [
           "CourseE_HOC 2018 Level_1"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 1,
         "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2019"
@@ -1006,8 +954,6 @@
         "script_level.level_keys": [
           "CourseE_HOC 2018 Level_2"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 2,
         "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2019"
@@ -1029,8 +975,6 @@
         "script_level.level_keys": [
           "CourseE_HOC 2018 Level_3"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 3,
         "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2019"
@@ -1052,8 +996,6 @@
         "script_level.level_keys": [
           "CourseE_HOC 2018 Level_4"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 4,
         "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2019"
@@ -1075,8 +1017,6 @@
         "script_level.level_keys": [
           "CourseE_HOC 2018 Level_5"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 5,
         "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2019"
@@ -1098,8 +1038,6 @@
         "script_level.level_keys": [
           "CourseE_HOC 2018 Level_6"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 6,
         "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2019"
@@ -1121,8 +1059,6 @@
         "script_level.level_keys": [
           "CourseE_HOC 2018 Level_7a"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 7,
         "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2019"
@@ -1144,8 +1080,6 @@
         "script_level.level_keys": [
           "CourseE_HOC 2018 Level_8"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 8,
         "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2019"
@@ -1167,8 +1101,6 @@
         "script_level.level_keys": [
           "CourseE_HOC 2018 Level_9b"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 9,
         "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2019"
@@ -1190,8 +1122,6 @@
         "script_level.level_keys": [
           "CourseE_HOC 2018 Level_10"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 10,
         "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2019"
@@ -1213,8 +1143,6 @@
         "script_level.level_keys": [
           "CourseE_HOC 2018 Level_11"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 11,
         "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2019"
@@ -1236,8 +1164,6 @@
         "script_level.level_keys": [
           "courseD_video_whileIntro_2019"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 1,
         "lesson.key": "Conditionals",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2019"
@@ -1259,8 +1185,6 @@
         "script_level.level_keys": [
           "courseD_farmer_while4_predict1_2019"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 2,
         "lesson.key": "Conditionals",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2019"
@@ -1282,8 +1206,6 @@
         "script_level.level_keys": [
           "courseE_farmer_ramp11a_2019"
         ],
-        "script_level.chapter": 39,
-        "script_level.position": 3,
         "lesson.key": "Conditionals",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2019"
@@ -1305,8 +1227,6 @@
         "script_level.level_keys": [
           "courseE_farmer_ramp11b_2019"
         ],
-        "script_level.chapter": 40,
-        "script_level.position": 4,
         "lesson.key": "Conditionals",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2019"
@@ -1328,8 +1248,6 @@
         "script_level.level_keys": [
           "courseE_farmer_ramp12b_2019"
         ],
-        "script_level.chapter": 41,
-        "script_level.position": 5,
         "lesson.key": "Conditionals",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2019"
@@ -1351,8 +1269,6 @@
         "script_level.level_keys": [
           "courseE_farmer_ramp12_forswap_2019"
         ],
-        "script_level.chapter": 42,
-        "script_level.position": 6,
         "lesson.key": "Conditionals",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2019"
@@ -1374,8 +1290,6 @@
         "script_level.level_keys": [
           "courseD_video_repeatUntil_2019"
         ],
-        "script_level.chapter": 43,
-        "script_level.position": 7,
         "lesson.key": "Conditionals",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2019"
@@ -1397,8 +1311,6 @@
         "script_level.level_keys": [
           "courseE_farmer_ramp12c_2019"
         ],
-        "script_level.chapter": 44,
-        "script_level.position": 8,
         "lesson.key": "Conditionals",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2019"
@@ -1420,8 +1332,6 @@
         "script_level.level_keys": [
           "courseE_farmer_ramp12d_2019"
         ],
-        "script_level.chapter": 45,
-        "script_level.position": 9,
         "lesson.key": "Conditionals",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2019"
@@ -1443,8 +1353,6 @@
         "script_level.level_keys": [
           "courseE_farmer_ramp12e_2019"
         ],
-        "script_level.chapter": 46,
-        "script_level.position": 10,
         "lesson.key": "Conditionals",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2019"
@@ -1466,8 +1374,6 @@
         "script_level.level_keys": [
           "courseE_video_BeeifElse_2019"
         ],
-        "script_level.chapter": 47,
-        "script_level.position": 11,
         "lesson.key": "Conditionals",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2019"
@@ -1490,8 +1396,6 @@
         "script_level.level_keys": [
           "courseE_farmer_ramp12f_2019"
         ],
-        "script_level.chapter": 48,
-        "script_level.position": 12,
         "lesson.key": "Conditionals",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2019"
@@ -1513,8 +1417,6 @@
         "script_level.level_keys": [
           "courseE_farmer_ramp12g_2019"
         ],
-        "script_level.chapter": 49,
-        "script_level.position": 13,
         "lesson.key": "Conditionals",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2019"
@@ -1535,8 +1437,6 @@
         "script_level.level_keys": [
           "SimonSays-Unplugged"
         ],
-        "script_level.chapter": 50,
-        "script_level.position": 1,
         "lesson.key": "Simon Says",
         "lesson_group.key": "csf_sprites",
         "script.name": "coursee-2019"
@@ -1558,8 +1458,6 @@
         "script_level.level_keys": [
           "CourseEF_video_IntroSpriteLab_2019"
         ],
-        "script_level.chapter": 51,
-        "script_level.position": 1,
         "lesson.key": "Learning Sprites with Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "coursee-2019"
@@ -1581,8 +1479,6 @@
         "script_level.level_keys": [
           "Fish Tank 1-validated_2019"
         ],
-        "script_level.chapter": 52,
-        "script_level.position": 2,
         "lesson.key": "Learning Sprites with Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "coursee-2019"
@@ -1604,8 +1500,6 @@
         "script_level.level_keys": [
           "Fish Tank 2-validated_2019"
         ],
-        "script_level.chapter": 53,
-        "script_level.position": 3,
         "lesson.key": "Learning Sprites with Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "coursee-2019"
@@ -1627,8 +1521,6 @@
         "script_level.level_keys": [
           "Fish Tank 3-validated_2019"
         ],
-        "script_level.chapter": 54,
-        "script_level.position": 4,
         "lesson.key": "Learning Sprites with Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "coursee-2019"
@@ -1650,8 +1542,6 @@
         "script_level.level_keys": [
           "Fish Tank 4-validated_2019"
         ],
-        "script_level.chapter": 55,
-        "script_level.position": 5,
         "lesson.key": "Learning Sprites with Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "coursee-2019"
@@ -1673,8 +1563,6 @@
         "script_level.level_keys": [
           "CourseEF_video_MakeSprite_2019"
         ],
-        "script_level.chapter": 56,
-        "script_level.position": 6,
         "lesson.key": "Learning Sprites with Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "coursee-2019"
@@ -1696,8 +1584,6 @@
         "script_level.level_keys": [
           "Fish Tank 5-validated_2019"
         ],
-        "script_level.chapter": 57,
-        "script_level.position": 7,
         "lesson.key": "Learning Sprites with Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "coursee-2019"
@@ -1719,8 +1605,6 @@
         "script_level.level_keys": [
           "Fish Tank 6-validated_2019"
         ],
-        "script_level.chapter": 58,
-        "script_level.position": 8,
         "lesson.key": "Learning Sprites with Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "coursee-2019"
@@ -1742,8 +1626,6 @@
         "script_level.level_keys": [
           "Fish Tank 7-validated_2019"
         ],
-        "script_level.chapter": 59,
-        "script_level.position": 9,
         "lesson.key": "Learning Sprites with Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "coursee-2019"
@@ -1765,8 +1647,6 @@
         "script_level.level_keys": [
           "Dance Party 1-validated_2019"
         ],
-        "script_level.chapter": 60,
-        "script_level.position": 1,
         "lesson.key": "Alien Dance Party with Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "coursee-2019"
@@ -1788,8 +1668,6 @@
         "script_level.level_keys": [
           "CDEF_video_SpritesInAction_2019"
         ],
-        "script_level.chapter": 61,
-        "script_level.position": 2,
         "lesson.key": "Alien Dance Party with Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "coursee-2019"
@@ -1811,8 +1689,6 @@
         "script_level.level_keys": [
           "Dance Party 2_2019"
         ],
-        "script_level.chapter": 62,
-        "script_level.position": 3,
         "lesson.key": "Alien Dance Party with Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "coursee-2019"
@@ -1834,8 +1710,6 @@
         "script_level.level_keys": [
           "Dance Party 3_2019"
         ],
-        "script_level.chapter": 63,
-        "script_level.position": 4,
         "lesson.key": "Alien Dance Party with Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "coursee-2019"
@@ -1857,8 +1731,6 @@
         "script_level.level_keys": [
           "Dance Party 4_2019"
         ],
-        "script_level.chapter": 64,
-        "script_level.position": 5,
         "lesson.key": "Alien Dance Party with Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "coursee-2019"
@@ -1880,8 +1752,6 @@
         "script_level.level_keys": [
           "Dance Party 5_2019"
         ],
-        "script_level.chapter": 65,
-        "script_level.position": 6,
         "lesson.key": "Alien Dance Party with Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "coursee-2019"
@@ -1903,8 +1773,6 @@
         "script_level.level_keys": [
           "Dance Party 6_2019"
         ],
-        "script_level.chapter": 66,
-        "script_level.position": 7,
         "lesson.key": "Alien Dance Party with Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "coursee-2019"
@@ -1926,8 +1794,6 @@
         "script_level.level_keys": [
           "Dance Party 7_2019"
         ],
-        "script_level.chapter": 67,
-        "script_level.position": 8,
         "lesson.key": "Alien Dance Party with Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "coursee-2019"
@@ -1949,8 +1815,6 @@
         "script_level.level_keys": [
           "Dance Party Freeplay_2019"
         ],
-        "script_level.chapter": 68,
-        "script_level.position": 9,
         "lesson.key": "Alien Dance Party with Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "coursee-2019"
@@ -1971,8 +1835,6 @@
         "script_level.level_keys": [
           "PrivatePersonalInformation-Unplugged"
         ],
-        "script_level.chapter": 69,
-        "script_level.position": 1,
         "lesson.key": "Private and Personal Information",
         "lesson_group.key": "csf_digcit",
         "script.name": "coursee-2019"
@@ -1994,8 +1856,6 @@
         "script_level.level_keys": [
           "courseE_aboutme_1"
         ],
-        "script_level.chapter": 70,
-        "script_level.position": 1,
         "lesson.key": "About Me",
         "lesson_group.key": "csf_digcit",
         "script.name": "coursee-2019"
@@ -2017,8 +1877,6 @@
         "script_level.level_keys": [
           "courseE_aboutme_2"
         ],
-        "script_level.chapter": 71,
-        "script_level.position": 2,
         "lesson.key": "About Me",
         "lesson_group.key": "csf_digcit",
         "script.name": "coursee-2019"
@@ -2040,8 +1898,6 @@
         "script_level.level_keys": [
           "courseE_aboutme_3"
         ],
-        "script_level.chapter": 72,
-        "script_level.position": 3,
         "lesson.key": "About Me",
         "lesson_group.key": "csf_digcit",
         "script.name": "coursee-2019"
@@ -2063,8 +1919,6 @@
         "script_level.level_keys": [
           "courseE_aboutme_4"
         ],
-        "script_level.chapter": 73,
-        "script_level.position": 4,
         "lesson.key": "About Me",
         "lesson_group.key": "csf_digcit",
         "script.name": "coursee-2019"
@@ -2086,8 +1940,6 @@
         "script_level.level_keys": [
           "courseE_aboutme_5"
         ],
-        "script_level.chapter": 74,
-        "script_level.position": 5,
         "lesson.key": "About Me",
         "lesson_group.key": "csf_digcit",
         "script.name": "coursee-2019"
@@ -2109,8 +1961,6 @@
         "script_level.level_keys": [
           "courseE_aboutme_6"
         ],
-        "script_level.chapter": 75,
-        "script_level.position": 6,
         "lesson.key": "About Me",
         "lesson_group.key": "csf_digcit",
         "script.name": "coursee-2019"
@@ -2131,8 +1981,6 @@
         "script_level.level_keys": [
           "DesigningForAccessibilityMarkdownLevel_2019"
         ],
-        "script_level.chapter": 76,
-        "script_level.position": 1,
         "lesson.key": "Access Ability",
         "lesson_group.key": "csf_impacts",
         "script.name": "coursee-2019"
@@ -2154,8 +2002,6 @@
         "script_level.level_keys": [
           "courseD_bee_nestedLoops1a_2019"
         ],
-        "script_level.chapter": 77,
-        "script_level.position": 1,
         "lesson.key": "Nested Loops in Bee",
         "lesson_group.key": "csf_nested_loops",
         "script.name": "coursee-2019"
@@ -2177,8 +2023,6 @@
         "script_level.level_keys": [
           "courseD_bee_nestedLoops1_2019"
         ],
-        "script_level.chapter": 78,
-        "script_level.position": 2,
         "lesson.key": "Nested Loops in Bee",
         "lesson_group.key": "csf_nested_loops",
         "script.name": "coursee-2019"
@@ -2200,8 +2044,6 @@
         "script_level.level_keys": [
           "courseD_video_nestedLoops_2019"
         ],
-        "script_level.chapter": 79,
-        "script_level.position": 3,
         "lesson.key": "Nested Loops in Bee",
         "lesson_group.key": "csf_nested_loops",
         "script.name": "coursee-2019"
@@ -2223,8 +2065,6 @@
         "script_level.level_keys": [
           "courseD_bee_nestedLoops2_predict1_2019"
         ],
-        "script_level.chapter": 80,
-        "script_level.position": 4,
         "lesson.key": "Nested Loops in Bee",
         "lesson_group.key": "csf_nested_loops",
         "script.name": "coursee-2019"
@@ -2246,8 +2086,6 @@
         "script_level.level_keys": [
           "courseD_bee_nestedLoops2_2019"
         ],
-        "script_level.chapter": 81,
-        "script_level.position": 5,
         "lesson.key": "Nested Loops in Bee",
         "lesson_group.key": "csf_nested_loops",
         "script.name": "coursee-2019"
@@ -2269,8 +2107,6 @@
         "script_level.level_keys": [
           "courseD_maze_nestedLoops3_2019"
         ],
-        "script_level.chapter": 82,
-        "script_level.position": 6,
         "lesson.key": "Nested Loops in Bee",
         "lesson_group.key": "csf_nested_loops",
         "script.name": "coursee-2019"
@@ -2292,8 +2128,6 @@
         "script_level.level_keys": [
           "courseD_maze_nestedLoops4_2019"
         ],
-        "script_level.chapter": 83,
-        "script_level.position": 7,
         "lesson.key": "Nested Loops in Bee",
         "lesson_group.key": "csf_nested_loops",
         "script.name": "coursee-2019"
@@ -2315,8 +2149,6 @@
         "script_level.level_keys": [
           "courseD_maze_nestedLoops5_2019"
         ],
-        "script_level.chapter": 84,
-        "script_level.position": 8,
         "lesson.key": "Nested Loops in Bee",
         "lesson_group.key": "csf_nested_loops",
         "script.name": "coursee-2019"
@@ -2338,8 +2170,6 @@
         "script_level.level_keys": [
           "courseD_maze_nestedLoops6_2019"
         ],
-        "script_level.chapter": 85,
-        "script_level.position": 9,
         "lesson.key": "Nested Loops in Bee",
         "lesson_group.key": "csf_nested_loops",
         "script.name": "coursee-2019"
@@ -2362,8 +2192,6 @@
         "script_level.level_keys": [
           "courseD_bee_nestedLoops7_2019"
         ],
-        "script_level.chapter": 86,
-        "script_level.position": 10,
         "lesson.key": "Nested Loops in Bee",
         "lesson_group.key": "csf_nested_loops",
         "script.name": "coursee-2019"
@@ -2385,8 +2213,6 @@
         "script_level.level_keys": [
           "courseD_bee_nestedLoops8_2019"
         ],
-        "script_level.chapter": 87,
-        "script_level.position": 11,
         "lesson.key": "Nested Loops in Bee",
         "lesson_group.key": "csf_nested_loops",
         "script.name": "coursee-2019"
@@ -2408,8 +2234,6 @@
         "script_level.level_keys": [
           "courseD_bee_nestedLoops9_2019"
         ],
-        "script_level.chapter": 88,
-        "script_level.position": 12,
         "lesson.key": "Nested Loops in Bee",
         "lesson_group.key": "csf_nested_loops",
         "script.name": "coursee-2019"
@@ -2431,8 +2255,6 @@
         "script_level.level_keys": [
           "courseD_bee_nestedLoops9_predict2_2019"
         ],
-        "script_level.chapter": 89,
-        "script_level.position": 13,
         "lesson.key": "Nested Loops in Bee",
         "lesson_group.key": "csf_nested_loops",
         "script.name": "coursee-2019"
@@ -2453,8 +2275,6 @@
         "script_level.level_keys": [
           "courseD_harvester_nested_loops_challenge1_2019"
         ],
-        "script_level.chapter": 90,
-        "script_level.position": 14,
         "lesson.key": "Nested Loops in Bee",
         "lesson_group.key": "csf_nested_loops",
         "script.name": "coursee-2019"
@@ -2475,8 +2295,6 @@
         "script_level.level_keys": [
           "courseD_collector_nested_loops_challenge2_2019"
         ],
-        "script_level.chapter": 91,
-        "script_level.position": 15,
         "lesson.key": "Nested Loops in Bee",
         "lesson_group.key": "csf_nested_loops",
         "script.name": "coursee-2019"
@@ -2498,8 +2316,6 @@
         "script_level.level_keys": [
           "courseD_artist_nestedLoops1_2019"
         ],
-        "script_level.chapter": 92,
-        "script_level.position": 1,
         "lesson.key": "Nested Loops in Artist",
         "lesson_group.key": "csf_nested_loops",
         "script.name": "coursee-2019"
@@ -2521,8 +2337,6 @@
         "script_level.level_keys": [
           "courseD_artist_nestedLoops1a_2019"
         ],
-        "script_level.chapter": 93,
-        "script_level.position": 2,
         "lesson.key": "Nested Loops in Artist",
         "lesson_group.key": "csf_nested_loops",
         "script.name": "coursee-2019"
@@ -2544,8 +2358,6 @@
         "script_level.level_keys": [
           "courseD_video_nestedLoopsArtist_2019"
         ],
-        "script_level.chapter": 94,
-        "script_level.position": 3,
         "lesson.key": "Nested Loops in Artist",
         "lesson_group.key": "csf_nested_loops",
         "script.name": "coursee-2019"
@@ -2567,8 +2379,6 @@
         "script_level.level_keys": [
           "courseD_artist_nestedLoops2_2019"
         ],
-        "script_level.chapter": 95,
-        "script_level.position": 4,
         "lesson.key": "Nested Loops in Artist",
         "lesson_group.key": "csf_nested_loops",
         "script.name": "coursee-2019"
@@ -2590,8 +2400,6 @@
         "script_level.level_keys": [
           "courseD_artist_nestedLoops3_2019"
         ],
-        "script_level.chapter": 96,
-        "script_level.position": 5,
         "lesson.key": "Nested Loops in Artist",
         "lesson_group.key": "csf_nested_loops",
         "script.name": "coursee-2019"
@@ -2613,8 +2421,6 @@
         "script_level.level_keys": [
           "courseD_artist_nestedLoops4_2019"
         ],
-        "script_level.chapter": 97,
-        "script_level.position": 6,
         "lesson.key": "Nested Loops in Artist",
         "lesson_group.key": "csf_nested_loops",
         "script.name": "coursee-2019"
@@ -2636,8 +2442,6 @@
         "script_level.level_keys": [
           "courseD_artist_nestedLoops5_2019"
         ],
-        "script_level.chapter": 98,
-        "script_level.position": 7,
         "lesson.key": "Nested Loops in Artist",
         "lesson_group.key": "csf_nested_loops",
         "script.name": "coursee-2019"
@@ -2659,8 +2463,6 @@
         "script_level.level_keys": [
           "courseD_artist_nestedLoops7_2019"
         ],
-        "script_level.chapter": 99,
-        "script_level.position": 8,
         "lesson.key": "Nested Loops in Artist",
         "lesson_group.key": "csf_nested_loops",
         "script.name": "coursee-2019"
@@ -2682,8 +2484,6 @@
         "script_level.level_keys": [
           "courseD_artist_nestedLoops8_2019"
         ],
-        "script_level.chapter": 100,
-        "script_level.position": 9,
         "lesson.key": "Nested Loops in Artist",
         "lesson_group.key": "csf_nested_loops",
         "script.name": "coursee-2019"
@@ -2706,8 +2506,6 @@
         "script_level.level_keys": [
           "courseD_artist_nestedLoops9_2019"
         ],
-        "script_level.chapter": 101,
-        "script_level.position": 10,
         "lesson.key": "Nested Loops in Artist",
         "lesson_group.key": "csf_nested_loops",
         "script.name": "coursee-2019"
@@ -2729,8 +2527,6 @@
         "script_level.level_keys": [
           "courseD_artist_nestedLoops10_2019"
         ],
-        "script_level.chapter": 102,
-        "script_level.position": 11,
         "lesson.key": "Nested Loops in Artist",
         "lesson_group.key": "csf_nested_loops",
         "script.name": "coursee-2019"
@@ -2752,8 +2548,6 @@
         "script_level.level_keys": [
           "courseD_artist_nestedLoops9_predict1_2019"
         ],
-        "script_level.chapter": 103,
-        "script_level.position": 12,
         "lesson.key": "Nested Loops in Artist",
         "lesson_group.key": "csf_nested_loops",
         "script.name": "coursee-2019"
@@ -2775,8 +2569,6 @@
         "script_level.level_keys": [
           "courseD_artist_nestedLoopsFP_2019"
         ],
-        "script_level.chapter": 104,
-        "script_level.position": 13,
         "lesson.key": "Nested Loops in Artist",
         "lesson_group.key": "csf_nested_loops",
         "script.name": "coursee-2019"
@@ -2797,8 +2589,6 @@
         "script_level.level_keys": [
           "courseD_artist_nestedLoops_challenge1_2019"
         ],
-        "script_level.chapter": 105,
-        "script_level.position": 14,
         "lesson.key": "Nested Loops in Artist",
         "lesson_group.key": "csf_nested_loops",
         "script.name": "coursee-2019"
@@ -2819,8 +2609,6 @@
         "script_level.level_keys": [
           "courseD_artist_nestedLoops_challenge2_2019"
         ],
-        "script_level.chapter": 106,
-        "script_level.position": 15,
         "lesson.key": "Nested Loops in Artist",
         "lesson_group.key": "csf_nested_loops",
         "script.name": "coursee-2019"
@@ -2842,8 +2630,6 @@
         "script_level.level_keys": [
           "courseD_artist_project1_2019"
         ],
-        "script_level.chapter": 107,
-        "script_level.position": 1,
         "lesson.key": "Nested Loops in Frozen",
         "lesson_group.key": "csf_nested_loops",
         "script.name": "coursee-2019"
@@ -2865,8 +2651,6 @@
         "script_level.level_keys": [
           "courseD_artist_project2_2019"
         ],
-        "script_level.chapter": 108,
-        "script_level.position": 2,
         "lesson.key": "Nested Loops in Frozen",
         "lesson_group.key": "csf_nested_loops",
         "script.name": "coursee-2019"
@@ -2888,8 +2672,6 @@
         "script_level.level_keys": [
           "courseD_artist_project3_2019"
         ],
-        "script_level.chapter": 109,
-        "script_level.position": 3,
         "lesson.key": "Nested Loops in Frozen",
         "lesson_group.key": "csf_nested_loops",
         "script.name": "coursee-2019"
@@ -2911,8 +2693,6 @@
         "script_level.level_keys": [
           "courseD_artist_project4_2019"
         ],
-        "script_level.chapter": 110,
-        "script_level.position": 4,
         "lesson.key": "Nested Loops in Frozen",
         "lesson_group.key": "csf_nested_loops",
         "script.name": "coursee-2019"
@@ -2934,8 +2714,6 @@
         "script_level.level_keys": [
           "courseD_artist_project5_2019"
         ],
-        "script_level.chapter": 111,
-        "script_level.position": 5,
         "lesson.key": "Nested Loops in Frozen",
         "lesson_group.key": "csf_nested_loops",
         "script.name": "coursee-2019"
@@ -2957,8 +2735,6 @@
         "script_level.level_keys": [
           "courseD_artist_project1a_2019"
         ],
-        "script_level.chapter": 112,
-        "script_level.position": 6,
         "lesson.key": "Nested Loops in Frozen",
         "lesson_group.key": "csf_nested_loops",
         "script.name": "coursee-2019"
@@ -2980,8 +2756,6 @@
         "script_level.level_keys": [
           "courseD_artist_project2a_2019"
         ],
-        "script_level.chapter": 113,
-        "script_level.position": 7,
         "lesson.key": "Nested Loops in Frozen",
         "lesson_group.key": "csf_nested_loops",
         "script.name": "coursee-2019"
@@ -3003,8 +2777,6 @@
         "script_level.level_keys": [
           "courseD_artist_project3a_2019"
         ],
-        "script_level.chapter": 114,
-        "script_level.position": 8,
         "lesson.key": "Nested Loops in Frozen",
         "lesson_group.key": "csf_nested_loops",
         "script.name": "coursee-2019"
@@ -3026,8 +2798,6 @@
         "script_level.level_keys": [
           "courseD_artist_project4a_2019"
         ],
-        "script_level.chapter": 115,
-        "script_level.position": 9,
         "lesson.key": "Nested Loops in Frozen",
         "lesson_group.key": "csf_nested_loops",
         "script.name": "coursee-2019"
@@ -3048,8 +2818,6 @@
         "script_level.level_keys": [
           "Songwriting-Unplugged"
         ],
-        "script_level.chapter": 116,
-        "script_level.position": 1,
         "lesson.key": "Functions: Songwriting",
         "lesson_group.key": "csf_functions",
         "script.name": "coursee-2019"
@@ -3071,8 +2839,6 @@
         "script_level.level_keys": [
           "MC_HOC_2017_01_RETRY_2019"
         ],
-        "script_level.chapter": 117,
-        "script_level.position": 1,
         "lesson.key": "Functions in Minecraft",
         "lesson_group.key": "csf_functions",
         "script.name": "coursee-2019"
@@ -3094,8 +2860,6 @@
         "script_level.level_keys": [
           "MC_HOC_2017_02_Cole_2019"
         ],
-        "script_level.chapter": 118,
-        "script_level.position": 2,
         "lesson.key": "Functions in Minecraft",
         "lesson_group.key": "csf_functions",
         "script.name": "coursee-2019"
@@ -3117,8 +2881,6 @@
         "script_level.level_keys": [
           "MC_HOC_2017_03_Cole_2019"
         ],
-        "script_level.chapter": 119,
-        "script_level.position": 3,
         "lesson.key": "Functions in Minecraft",
         "lesson_group.key": "csf_functions",
         "script.name": "coursee-2019"
@@ -3140,8 +2902,6 @@
         "script_level.level_keys": [
           "MC_HOC_2017_04_Cole_2019"
         ],
-        "script_level.chapter": 120,
-        "script_level.position": 4,
         "lesson.key": "Functions in Minecraft",
         "lesson_group.key": "csf_functions",
         "script.name": "coursee-2019"
@@ -3163,8 +2923,6 @@
         "script_level.level_keys": [
           "MC_HOC_2017_04POINT5_RYAN_2019"
         ],
-        "script_level.chapter": 121,
-        "script_level.position": 5,
         "lesson.key": "Functions in Minecraft",
         "lesson_group.key": "csf_functions",
         "script.name": "coursee-2019"
@@ -3186,8 +2944,6 @@
         "script_level.level_keys": [
           "MC_HOC_2017_05_Cole_2019"
         ],
-        "script_level.chapter": 122,
-        "script_level.position": 6,
         "lesson.key": "Functions in Minecraft",
         "lesson_group.key": "csf_functions",
         "script.name": "coursee-2019"
@@ -3209,8 +2965,6 @@
         "script_level.level_keys": [
           "MC_HOC_2017_06_Cole_2019"
         ],
-        "script_level.chapter": 123,
-        "script_level.position": 7,
         "lesson.key": "Functions in Minecraft",
         "lesson_group.key": "csf_functions",
         "script.name": "coursee-2019"
@@ -3232,8 +2986,6 @@
         "script_level.level_keys": [
           "Function intro Ryan_2019"
         ],
-        "script_level.chapter": 124,
-        "script_level.position": 8,
         "lesson.key": "Functions in Minecraft",
         "lesson_group.key": "csf_functions",
         "script.name": "coursee-2019"
@@ -3255,8 +3007,6 @@
         "script_level.level_keys": [
           "MC_HOC_2017_07_Cole_2019"
         ],
-        "script_level.chapter": 125,
-        "script_level.position": 9,
         "lesson.key": "Functions in Minecraft",
         "lesson_group.key": "csf_functions",
         "script.name": "coursee-2019"
@@ -3278,8 +3028,6 @@
         "script_level.level_keys": [
           "MC_HOC_2017_10_RETRY_2019"
         ],
-        "script_level.chapter": 126,
-        "script_level.position": 10,
         "lesson.key": "Functions in Minecraft",
         "lesson_group.key": "csf_functions",
         "script.name": "coursee-2019"
@@ -3301,8 +3049,6 @@
         "script_level.level_keys": [
           "MC_HOC_2017_Ali_2019"
         ],
-        "script_level.chapter": 127,
-        "script_level.position": 11,
         "lesson.key": "Functions in Minecraft",
         "lesson_group.key": "csf_functions",
         "script.name": "coursee-2019"
@@ -3324,8 +3070,6 @@
         "script_level.level_keys": [
           "MC_HOC_2017_FP20x20_2019"
         ],
-        "script_level.chapter": 128,
-        "script_level.position": 12,
         "lesson.key": "Functions in Minecraft",
         "lesson_group.key": "csf_functions",
         "script.name": "coursee-2019"
@@ -3347,8 +3091,6 @@
         "script_level.level_keys": [
           "harvester_skinOverview_video_2019"
         ],
-        "script_level.chapter": 129,
-        "script_level.position": 1,
         "lesson.key": "Functions in Harvester",
         "lesson_group.key": "csf_functions",
         "script.name": "coursee-2019"
@@ -3370,8 +3112,6 @@
         "script_level.level_keys": [
           "courseE_farmer_functions1_2019"
         ],
-        "script_level.chapter": 130,
-        "script_level.position": 2,
         "lesson.key": "Functions in Harvester",
         "lesson_group.key": "csf_functions",
         "script.name": "coursee-2019"
@@ -3393,8 +3133,6 @@
         "script_level.level_keys": [
           "courseE_farmer_functions1a_2019"
         ],
-        "script_level.chapter": 131,
-        "script_level.position": 3,
         "lesson.key": "Functions in Harvester",
         "lesson_group.key": "csf_functions",
         "script.name": "coursee-2019"
@@ -3416,8 +3154,6 @@
         "script_level.level_keys": [
           "courseE_farmer_functions2b_2019"
         ],
-        "script_level.chapter": 132,
-        "script_level.position": 4,
         "lesson.key": "Functions in Harvester",
         "lesson_group.key": "csf_functions",
         "script.name": "coursee-2019"
@@ -3439,8 +3175,6 @@
         "script_level.level_keys": [
           "courseE_farmer_functions2ba_2019"
         ],
-        "script_level.chapter": 133,
-        "script_level.position": 5,
         "lesson.key": "Functions in Harvester",
         "lesson_group.key": "csf_functions",
         "script.name": "coursee-2019"
@@ -3462,8 +3196,6 @@
         "script_level.level_keys": [
           "courseE_farmer_functions3c_2019"
         ],
-        "script_level.chapter": 134,
-        "script_level.position": 6,
         "lesson.key": "Functions in Harvester",
         "lesson_group.key": "csf_functions",
         "script.name": "coursee-2019"
@@ -3485,8 +3217,6 @@
         "script_level.level_keys": [
           "courseE_farmer_functions3c1_2019"
         ],
-        "script_level.chapter": 135,
-        "script_level.position": 7,
         "lesson.key": "Functions in Harvester",
         "lesson_group.key": "csf_functions",
         "script.name": "coursee-2019"
@@ -3508,8 +3238,6 @@
         "script_level.level_keys": [
           "courseE_video_createFunctions2_2019"
         ],
-        "script_level.chapter": 136,
-        "script_level.position": 8,
         "lesson.key": "Functions in Harvester",
         "lesson_group.key": "csf_functions",
         "script.name": "coursee-2019"
@@ -3531,8 +3259,6 @@
         "script_level.level_keys": [
           "courseE_farmer_functions7a1_2019"
         ],
-        "script_level.chapter": 137,
-        "script_level.position": 9,
         "lesson.key": "Functions in Harvester",
         "lesson_group.key": "csf_functions",
         "script.name": "coursee-2019"
@@ -3554,8 +3280,6 @@
         "script_level.level_keys": [
           "courseE_farmer_functions8a1_2019"
         ],
-        "script_level.chapter": 138,
-        "script_level.position": 10,
         "lesson.key": "Functions in Harvester",
         "lesson_group.key": "csf_functions",
         "script.name": "coursee-2019"
@@ -3577,8 +3301,6 @@
         "script_level.level_keys": [
           "courseE_farmer_functions9a1_2019"
         ],
-        "script_level.chapter": 139,
-        "script_level.position": 11,
         "lesson.key": "Functions in Harvester",
         "lesson_group.key": "csf_functions",
         "script.name": "coursee-2019"
@@ -3601,8 +3323,6 @@
         "script_level.level_keys": [
           "courseE_farmer_functions10a1_2019"
         ],
-        "script_level.chapter": 140,
-        "script_level.position": 12,
         "lesson.key": "Functions in Harvester",
         "lesson_group.key": "csf_functions",
         "script.name": "coursee-2019"
@@ -3624,8 +3344,6 @@
         "script_level.level_keys": [
           "courseE_farmer_functions13_2019"
         ],
-        "script_level.chapter": 141,
-        "script_level.position": 13,
         "lesson.key": "Functions in Harvester",
         "lesson_group.key": "csf_functions",
         "script.name": "coursee-2019"
@@ -3647,8 +3365,6 @@
         "script_level.level_keys": [
           "courseE_farmer_functions11_predict_2019"
         ],
-        "script_level.chapter": 142,
-        "script_level.position": 14,
         "lesson.key": "Functions in Harvester",
         "lesson_group.key": "csf_functions",
         "script.name": "coursee-2019"
@@ -3670,8 +3386,6 @@
         "script_level.level_keys": [
           "courseE_artist_functions_predict1_2019"
         ],
-        "script_level.chapter": 143,
-        "script_level.position": 1,
         "lesson.key": "Functions in Artist",
         "lesson_group.key": "csf_functions",
         "script.name": "coursee-2019"
@@ -3693,8 +3407,6 @@
         "script_level.level_keys": [
           "courseE_artist_functions2_2019"
         ],
-        "script_level.chapter": 144,
-        "script_level.position": 2,
         "lesson.key": "Functions in Artist",
         "lesson_group.key": "csf_functions",
         "script.name": "coursee-2019"
@@ -3716,8 +3428,6 @@
         "script_level.level_keys": [
           "courseE_artist_functions3_2019"
         ],
-        "script_level.chapter": 145,
-        "script_level.position": 3,
         "lesson.key": "Functions in Artist",
         "lesson_group.key": "csf_functions",
         "script.name": "coursee-2019"
@@ -3739,8 +3449,6 @@
         "script_level.level_keys": [
           "courseE_artist_functions5_2019"
         ],
-        "script_level.chapter": 146,
-        "script_level.position": 4,
         "lesson.key": "Functions in Artist",
         "lesson_group.key": "csf_functions",
         "script.name": "coursee-2019"
@@ -3762,8 +3470,6 @@
         "script_level.level_keys": [
           "courseE_artist_functions7_2019"
         ],
-        "script_level.chapter": 147,
-        "script_level.position": 5,
         "lesson.key": "Functions in Artist",
         "lesson_group.key": "csf_functions",
         "script.name": "coursee-2019"
@@ -3785,8 +3491,6 @@
         "script_level.level_keys": [
           "courseE_artist_functions8a_2019"
         ],
-        "script_level.chapter": 148,
-        "script_level.position": 6,
         "lesson.key": "Functions in Artist",
         "lesson_group.key": "csf_functions",
         "script.name": "coursee-2019"
@@ -3808,8 +3512,6 @@
         "script_level.level_keys": [
           "courseE_artist_functions8b_2019"
         ],
-        "script_level.chapter": 149,
-        "script_level.position": 7,
         "lesson.key": "Functions in Artist",
         "lesson_group.key": "csf_functions",
         "script.name": "coursee-2019"
@@ -3831,8 +3533,6 @@
         "script_level.level_keys": [
           "courseE_artist_functions8c_2019"
         ],
-        "script_level.chapter": 150,
-        "script_level.position": 8,
         "lesson.key": "Functions in Artist",
         "lesson_group.key": "csf_functions",
         "script.name": "coursee-2019"
@@ -3854,8 +3554,6 @@
         "script_level.level_keys": [
           "courseE_artist_functions8_2019"
         ],
-        "script_level.chapter": 151,
-        "script_level.position": 9,
         "lesson.key": "Functions in Artist",
         "lesson_group.key": "csf_functions",
         "script.name": "coursee-2019"
@@ -3878,8 +3576,6 @@
         "script_level.level_keys": [
           "courseE_artist_functions9_2019"
         ],
-        "script_level.chapter": 152,
-        "script_level.position": 10,
         "lesson.key": "Functions in Artist",
         "lesson_group.key": "csf_functions",
         "script.name": "coursee-2019"
@@ -3901,8 +3597,6 @@
         "script_level.level_keys": [
           "courseE_artist_functions10_2019"
         ],
-        "script_level.chapter": 153,
-        "script_level.position": 11,
         "lesson.key": "Functions in Artist",
         "lesson_group.key": "csf_functions",
         "script.name": "coursee-2019"
@@ -3924,8 +3618,6 @@
         "script_level.level_keys": [
           "courseE_artist_functions_predict2_2019"
         ],
-        "script_level.chapter": 154,
-        "script_level.position": 12,
         "lesson.key": "Functions in Artist",
         "lesson_group.key": "csf_functions",
         "script.name": "coursee-2019"
@@ -3947,8 +3639,6 @@
         "script_level.level_keys": [
           "courseE_artist_functionsProj_2019"
         ],
-        "script_level.chapter": 155,
-        "script_level.position": 13,
         "lesson.key": "Functions in Artist",
         "lesson_group.key": "csf_functions",
         "script.name": "coursee-2019"
@@ -3969,8 +3659,6 @@
         "script_level.level_keys": [
           "courseE_artist_functions_challenge1_2019"
         ],
-        "script_level.chapter": 156,
-        "script_level.position": 14,
         "lesson.key": "Functions in Artist",
         "lesson_group.key": "csf_functions",
         "script.name": "coursee-2019"
@@ -3991,8 +3679,6 @@
         "script_level.level_keys": [
           "courseE_artist_functions_challenge2_2019"
         ],
-        "script_level.chapter": 157,
-        "script_level.position": 15,
         "lesson.key": "Functions in Artist",
         "lesson_group.key": "csf_functions",
         "script.name": "coursee-2019"
@@ -4014,8 +3700,6 @@
         "script_level.level_keys": [
           "courseE_project_exemplars_2019"
         ],
-        "script_level.chapter": 158,
-        "script_level.position": 1,
         "lesson.key": "End of Course Project",
         "lesson_group.key": "end_of_course_project",
         "script.name": "coursee-2019"
@@ -4037,8 +3721,6 @@
         "script_level.level_keys": [
           "CourseE_Project_SpriteLab_2019"
         ],
-        "script_level.chapter": 159,
-        "script_level.position": 2,
         "lesson.key": "End of Course Project",
         "lesson_group.key": "end_of_course_project",
         "script.name": "coursee-2019"
@@ -4060,8 +3742,6 @@
         "script_level.level_keys": [
           "Course E: Artist Project_2019"
         ],
-        "script_level.chapter": 160,
-        "script_level.position": 3,
         "lesson.key": "End of Course Project",
         "lesson_group.key": "end_of_course_project",
         "script.name": "coursee-2019"
@@ -4078,8 +3758,6 @@
         "script_level.level_keys": [
           "courseD_video_ramp1_2019"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Sequencing in the Maze",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2019"
@@ -4091,8 +3769,6 @@
         "script_level.level_keys": [
           "courseD_maze_ramp1_2019"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Sequencing in the Maze",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2019"
@@ -4104,8 +3780,6 @@
         "script_level.level_keys": [
           "courseC_maze_debugging9_2019"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "Sequencing in the Maze",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2019"
@@ -4117,8 +3791,6 @@
         "script_level.level_keys": [
           "courseD_maze_ramp3_2019"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "Sequencing in the Maze",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2019"
@@ -4130,8 +3802,6 @@
         "script_level.level_keys": [
           "courseC_video_debugging_2019"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 5,
         "lesson.key": "Sequencing in the Maze",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2019"
@@ -4143,8 +3813,6 @@
         "script_level.level_keys": [
           "courseC_maze_debugging2_2019"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 6,
         "lesson.key": "Sequencing in the Maze",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2019"
@@ -4156,8 +3824,6 @@
         "script_level.level_keys": [
           "courseD_maze_ramp4_2019"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 7,
         "lesson.key": "Sequencing in the Maze",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2019"
@@ -4169,8 +3835,6 @@
         "script_level.level_keys": [
           "courseC_maze_debugging4_2019"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 8,
         "lesson.key": "Sequencing in the Maze",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2019"
@@ -4182,8 +3846,6 @@
         "script_level.level_keys": [
           "courseC_maze_debugging6_2019"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 9,
         "lesson.key": "Sequencing in the Maze",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2019"
@@ -4195,8 +3857,6 @@
         "script_level.level_keys": [
           "courseC_maze_debugging7_2019"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 10,
         "lesson.key": "Sequencing in the Maze",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2019"
@@ -4208,8 +3868,6 @@
         "script_level.level_keys": [
           "courseD_maze_ramp5a_2019"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 11,
         "lesson.key": "Sequencing in the Maze",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2019"
@@ -4221,8 +3879,6 @@
         "script_level.level_keys": [
           "courseD_maze_ramp5c_2019"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 12,
         "lesson.key": "Sequencing in the Maze",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2019"
@@ -4234,8 +3890,6 @@
         "script_level.level_keys": [
           "courseC_video_artist_2019"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 1,
         "lesson.key": "Programming and Loops with the Artist",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2019"
@@ -4247,8 +3901,6 @@
         "script_level.level_keys": [
           "courseC_artist_prog1_2019"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 2,
         "lesson.key": "Programming and Loops with the Artist",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2019"
@@ -4260,8 +3912,6 @@
         "script_level.level_keys": [
           "courseC_artist_prog2_2019"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 3,
         "lesson.key": "Programming and Loops with the Artist",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2019"
@@ -4273,8 +3923,6 @@
         "script_level.level_keys": [
           "ramp_video_loopsArtist_2019"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 4,
         "lesson.key": "Programming and Loops with the Artist",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2019"
@@ -4286,8 +3934,6 @@
         "script_level.level_keys": [
           "courseC_artist_prog3_2019"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 5,
         "lesson.key": "Programming and Loops with the Artist",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2019"
@@ -4299,8 +3945,6 @@
         "script_level.level_keys": [
           "courseC_artist_prog4_2019"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 6,
         "lesson.key": "Programming and Loops with the Artist",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2019"
@@ -4312,8 +3956,6 @@
         "script_level.level_keys": [
           "courseC_artist_prog7_2019"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 7,
         "lesson.key": "Programming and Loops with the Artist",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2019"
@@ -4325,8 +3967,6 @@
         "script_level.level_keys": [
           "ramp_artist_loops4_2019"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 8,
         "lesson.key": "Programming and Loops with the Artist",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2019"
@@ -4338,8 +3978,6 @@
         "script_level.level_keys": [
           "ramp_artist_loops5_2019"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 9,
         "lesson.key": "Programming and Loops with the Artist",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2019"
@@ -4351,8 +3989,6 @@
         "script_level.level_keys": [
           "ramp_artist_loops6_2019"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 10,
         "lesson.key": "Programming and Loops with the Artist",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2019"
@@ -4364,8 +4000,6 @@
         "script_level.level_keys": [
           "ramp_artist_loops8_2019"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 11,
         "lesson.key": "Programming and Loops with the Artist",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2019"
@@ -4377,8 +4011,6 @@
         "script_level.level_keys": [
           "courseC_artist_prog_challenge1_2019"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 12,
         "lesson.key": "Programming and Loops with the Artist",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2019"
@@ -4390,8 +4022,6 @@
         "script_level.level_keys": [
           "courseC_artist_prog_challenge2a_2019"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 13,
         "lesson.key": "Programming and Loops with the Artist",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2019"
@@ -4403,8 +4033,6 @@
         "script_level.level_keys": [
           "CourseE_HOC 2018 Level_1"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 1,
         "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2019"
@@ -4416,8 +4044,6 @@
         "script_level.level_keys": [
           "CourseE_HOC 2018 Level_2"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 2,
         "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2019"
@@ -4429,8 +4055,6 @@
         "script_level.level_keys": [
           "CourseE_HOC 2018 Level_3"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 3,
         "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2019"
@@ -4442,8 +4066,6 @@
         "script_level.level_keys": [
           "CourseE_HOC 2018 Level_4"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 4,
         "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2019"
@@ -4455,8 +4077,6 @@
         "script_level.level_keys": [
           "CourseE_HOC 2018 Level_5"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 5,
         "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2019"
@@ -4468,8 +4088,6 @@
         "script_level.level_keys": [
           "CourseE_HOC 2018 Level_6"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 6,
         "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2019"
@@ -4481,8 +4099,6 @@
         "script_level.level_keys": [
           "CourseE_HOC 2018 Level_7a"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 7,
         "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2019"
@@ -4494,8 +4110,6 @@
         "script_level.level_keys": [
           "CourseE_HOC 2018 Level_8"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 8,
         "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2019"
@@ -4507,8 +4121,6 @@
         "script_level.level_keys": [
           "CourseE_HOC 2018 Level_9b"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 9,
         "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2019"
@@ -4520,8 +4132,6 @@
         "script_level.level_keys": [
           "CourseE_HOC 2018 Level_10"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 10,
         "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2019"
@@ -4533,8 +4143,6 @@
         "script_level.level_keys": [
           "CourseE_HOC 2018 Level_11"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 11,
         "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2019"
@@ -4546,8 +4154,6 @@
         "script_level.level_keys": [
           "courseD_video_whileIntro_2019"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 1,
         "lesson.key": "Conditionals",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2019"
@@ -4559,8 +4165,6 @@
         "script_level.level_keys": [
           "courseD_farmer_while4_predict1_2019"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 2,
         "lesson.key": "Conditionals",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2019"
@@ -4572,8 +4176,6 @@
         "script_level.level_keys": [
           "courseE_farmer_ramp11a_2019"
         ],
-        "script_level.chapter": 39,
-        "script_level.position": 3,
         "lesson.key": "Conditionals",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2019"
@@ -4585,8 +4187,6 @@
         "script_level.level_keys": [
           "courseE_farmer_ramp11b_2019"
         ],
-        "script_level.chapter": 40,
-        "script_level.position": 4,
         "lesson.key": "Conditionals",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2019"
@@ -4598,8 +4198,6 @@
         "script_level.level_keys": [
           "courseE_farmer_ramp12b_2019"
         ],
-        "script_level.chapter": 41,
-        "script_level.position": 5,
         "lesson.key": "Conditionals",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2019"
@@ -4611,8 +4209,6 @@
         "script_level.level_keys": [
           "courseE_farmer_ramp12_forswap_2019"
         ],
-        "script_level.chapter": 42,
-        "script_level.position": 6,
         "lesson.key": "Conditionals",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2019"
@@ -4624,8 +4220,6 @@
         "script_level.level_keys": [
           "courseD_video_repeatUntil_2019"
         ],
-        "script_level.chapter": 43,
-        "script_level.position": 7,
         "lesson.key": "Conditionals",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2019"
@@ -4637,8 +4231,6 @@
         "script_level.level_keys": [
           "courseE_farmer_ramp12c_2019"
         ],
-        "script_level.chapter": 44,
-        "script_level.position": 8,
         "lesson.key": "Conditionals",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2019"
@@ -4650,8 +4242,6 @@
         "script_level.level_keys": [
           "courseE_farmer_ramp12d_2019"
         ],
-        "script_level.chapter": 45,
-        "script_level.position": 9,
         "lesson.key": "Conditionals",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2019"
@@ -4663,8 +4253,6 @@
         "script_level.level_keys": [
           "courseE_farmer_ramp12e_2019"
         ],
-        "script_level.chapter": 46,
-        "script_level.position": 10,
         "lesson.key": "Conditionals",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2019"
@@ -4676,8 +4264,6 @@
         "script_level.level_keys": [
           "courseE_video_BeeifElse_2019"
         ],
-        "script_level.chapter": 47,
-        "script_level.position": 11,
         "lesson.key": "Conditionals",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2019"
@@ -4689,8 +4275,6 @@
         "script_level.level_keys": [
           "courseE_farmer_ramp12f_2019"
         ],
-        "script_level.chapter": 48,
-        "script_level.position": 12,
         "lesson.key": "Conditionals",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2019"
@@ -4702,8 +4286,6 @@
         "script_level.level_keys": [
           "courseE_farmer_ramp12g_2019"
         ],
-        "script_level.chapter": 49,
-        "script_level.position": 13,
         "lesson.key": "Conditionals",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2019"
@@ -4715,8 +4297,6 @@
         "script_level.level_keys": [
           "SimonSays-Unplugged"
         ],
-        "script_level.chapter": 50,
-        "script_level.position": 1,
         "lesson.key": "Simon Says",
         "lesson_group.key": "csf_sprites",
         "script.name": "coursee-2019"
@@ -4728,8 +4308,6 @@
         "script_level.level_keys": [
           "CourseEF_video_IntroSpriteLab_2019"
         ],
-        "script_level.chapter": 51,
-        "script_level.position": 1,
         "lesson.key": "Learning Sprites with Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "coursee-2019"
@@ -4741,8 +4319,6 @@
         "script_level.level_keys": [
           "Fish Tank 1-validated_2019"
         ],
-        "script_level.chapter": 52,
-        "script_level.position": 2,
         "lesson.key": "Learning Sprites with Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "coursee-2019"
@@ -4754,8 +4330,6 @@
         "script_level.level_keys": [
           "Fish Tank 2-validated_2019"
         ],
-        "script_level.chapter": 53,
-        "script_level.position": 3,
         "lesson.key": "Learning Sprites with Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "coursee-2019"
@@ -4767,8 +4341,6 @@
         "script_level.level_keys": [
           "Fish Tank 3-validated_2019"
         ],
-        "script_level.chapter": 54,
-        "script_level.position": 4,
         "lesson.key": "Learning Sprites with Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "coursee-2019"
@@ -4780,8 +4352,6 @@
         "script_level.level_keys": [
           "Fish Tank 4-validated_2019"
         ],
-        "script_level.chapter": 55,
-        "script_level.position": 5,
         "lesson.key": "Learning Sprites with Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "coursee-2019"
@@ -4793,8 +4363,6 @@
         "script_level.level_keys": [
           "CourseEF_video_MakeSprite_2019"
         ],
-        "script_level.chapter": 56,
-        "script_level.position": 6,
         "lesson.key": "Learning Sprites with Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "coursee-2019"
@@ -4806,8 +4374,6 @@
         "script_level.level_keys": [
           "Fish Tank 5-validated_2019"
         ],
-        "script_level.chapter": 57,
-        "script_level.position": 7,
         "lesson.key": "Learning Sprites with Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "coursee-2019"
@@ -4819,8 +4385,6 @@
         "script_level.level_keys": [
           "Fish Tank 6-validated_2019"
         ],
-        "script_level.chapter": 58,
-        "script_level.position": 8,
         "lesson.key": "Learning Sprites with Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "coursee-2019"
@@ -4832,8 +4396,6 @@
         "script_level.level_keys": [
           "Fish Tank 7-validated_2019"
         ],
-        "script_level.chapter": 59,
-        "script_level.position": 9,
         "lesson.key": "Learning Sprites with Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "coursee-2019"
@@ -4845,8 +4407,6 @@
         "script_level.level_keys": [
           "Dance Party 1-validated_2019"
         ],
-        "script_level.chapter": 60,
-        "script_level.position": 1,
         "lesson.key": "Alien Dance Party with Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "coursee-2019"
@@ -4858,8 +4418,6 @@
         "script_level.level_keys": [
           "CDEF_video_SpritesInAction_2019"
         ],
-        "script_level.chapter": 61,
-        "script_level.position": 2,
         "lesson.key": "Alien Dance Party with Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "coursee-2019"
@@ -4871,8 +4429,6 @@
         "script_level.level_keys": [
           "Dance Party 2_2019"
         ],
-        "script_level.chapter": 62,
-        "script_level.position": 3,
         "lesson.key": "Alien Dance Party with Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "coursee-2019"
@@ -4884,8 +4440,6 @@
         "script_level.level_keys": [
           "Dance Party 3_2019"
         ],
-        "script_level.chapter": 63,
-        "script_level.position": 4,
         "lesson.key": "Alien Dance Party with Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "coursee-2019"
@@ -4897,8 +4451,6 @@
         "script_level.level_keys": [
           "Dance Party 4_2019"
         ],
-        "script_level.chapter": 64,
-        "script_level.position": 5,
         "lesson.key": "Alien Dance Party with Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "coursee-2019"
@@ -4910,8 +4462,6 @@
         "script_level.level_keys": [
           "Dance Party 5_2019"
         ],
-        "script_level.chapter": 65,
-        "script_level.position": 6,
         "lesson.key": "Alien Dance Party with Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "coursee-2019"
@@ -4923,8 +4473,6 @@
         "script_level.level_keys": [
           "Dance Party 6_2019"
         ],
-        "script_level.chapter": 66,
-        "script_level.position": 7,
         "lesson.key": "Alien Dance Party with Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "coursee-2019"
@@ -4936,8 +4484,6 @@
         "script_level.level_keys": [
           "Dance Party 7_2019"
         ],
-        "script_level.chapter": 67,
-        "script_level.position": 8,
         "lesson.key": "Alien Dance Party with Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "coursee-2019"
@@ -4949,8 +4495,6 @@
         "script_level.level_keys": [
           "Dance Party Freeplay_2019"
         ],
-        "script_level.chapter": 68,
-        "script_level.position": 9,
         "lesson.key": "Alien Dance Party with Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "coursee-2019"
@@ -4962,8 +4506,6 @@
         "script_level.level_keys": [
           "PrivatePersonalInformation-Unplugged"
         ],
-        "script_level.chapter": 69,
-        "script_level.position": 1,
         "lesson.key": "Private and Personal Information",
         "lesson_group.key": "csf_digcit",
         "script.name": "coursee-2019"
@@ -4975,8 +4517,6 @@
         "script_level.level_keys": [
           "courseE_aboutme_1"
         ],
-        "script_level.chapter": 70,
-        "script_level.position": 1,
         "lesson.key": "About Me",
         "lesson_group.key": "csf_digcit",
         "script.name": "coursee-2019"
@@ -4988,8 +4528,6 @@
         "script_level.level_keys": [
           "courseE_aboutme_2"
         ],
-        "script_level.chapter": 71,
-        "script_level.position": 2,
         "lesson.key": "About Me",
         "lesson_group.key": "csf_digcit",
         "script.name": "coursee-2019"
@@ -5001,8 +4539,6 @@
         "script_level.level_keys": [
           "courseE_aboutme_3"
         ],
-        "script_level.chapter": 72,
-        "script_level.position": 3,
         "lesson.key": "About Me",
         "lesson_group.key": "csf_digcit",
         "script.name": "coursee-2019"
@@ -5014,8 +4550,6 @@
         "script_level.level_keys": [
           "courseE_aboutme_4"
         ],
-        "script_level.chapter": 73,
-        "script_level.position": 4,
         "lesson.key": "About Me",
         "lesson_group.key": "csf_digcit",
         "script.name": "coursee-2019"
@@ -5027,8 +4561,6 @@
         "script_level.level_keys": [
           "courseE_aboutme_5"
         ],
-        "script_level.chapter": 74,
-        "script_level.position": 5,
         "lesson.key": "About Me",
         "lesson_group.key": "csf_digcit",
         "script.name": "coursee-2019"
@@ -5040,8 +4572,6 @@
         "script_level.level_keys": [
           "courseE_aboutme_6"
         ],
-        "script_level.chapter": 75,
-        "script_level.position": 6,
         "lesson.key": "About Me",
         "lesson_group.key": "csf_digcit",
         "script.name": "coursee-2019"
@@ -5053,8 +4583,6 @@
         "script_level.level_keys": [
           "DesigningForAccessibilityMarkdownLevel_2019"
         ],
-        "script_level.chapter": 76,
-        "script_level.position": 1,
         "lesson.key": "Access Ability",
         "lesson_group.key": "csf_impacts",
         "script.name": "coursee-2019"
@@ -5066,8 +4594,6 @@
         "script_level.level_keys": [
           "courseD_bee_nestedLoops1a_2019"
         ],
-        "script_level.chapter": 77,
-        "script_level.position": 1,
         "lesson.key": "Nested Loops in Bee",
         "lesson_group.key": "csf_nested_loops",
         "script.name": "coursee-2019"
@@ -5079,8 +4605,6 @@
         "script_level.level_keys": [
           "courseD_bee_nestedLoops1_2019"
         ],
-        "script_level.chapter": 78,
-        "script_level.position": 2,
         "lesson.key": "Nested Loops in Bee",
         "lesson_group.key": "csf_nested_loops",
         "script.name": "coursee-2019"
@@ -5092,8 +4616,6 @@
         "script_level.level_keys": [
           "courseD_video_nestedLoops_2019"
         ],
-        "script_level.chapter": 79,
-        "script_level.position": 3,
         "lesson.key": "Nested Loops in Bee",
         "lesson_group.key": "csf_nested_loops",
         "script.name": "coursee-2019"
@@ -5105,8 +4627,6 @@
         "script_level.level_keys": [
           "courseD_bee_nestedLoops2_predict1_2019"
         ],
-        "script_level.chapter": 80,
-        "script_level.position": 4,
         "lesson.key": "Nested Loops in Bee",
         "lesson_group.key": "csf_nested_loops",
         "script.name": "coursee-2019"
@@ -5118,8 +4638,6 @@
         "script_level.level_keys": [
           "courseD_bee_nestedLoops2_2019"
         ],
-        "script_level.chapter": 81,
-        "script_level.position": 5,
         "lesson.key": "Nested Loops in Bee",
         "lesson_group.key": "csf_nested_loops",
         "script.name": "coursee-2019"
@@ -5131,8 +4649,6 @@
         "script_level.level_keys": [
           "courseD_maze_nestedLoops3_2019"
         ],
-        "script_level.chapter": 82,
-        "script_level.position": 6,
         "lesson.key": "Nested Loops in Bee",
         "lesson_group.key": "csf_nested_loops",
         "script.name": "coursee-2019"
@@ -5144,8 +4660,6 @@
         "script_level.level_keys": [
           "courseD_maze_nestedLoops4_2019"
         ],
-        "script_level.chapter": 83,
-        "script_level.position": 7,
         "lesson.key": "Nested Loops in Bee",
         "lesson_group.key": "csf_nested_loops",
         "script.name": "coursee-2019"
@@ -5157,8 +4671,6 @@
         "script_level.level_keys": [
           "courseD_maze_nestedLoops5_2019"
         ],
-        "script_level.chapter": 84,
-        "script_level.position": 8,
         "lesson.key": "Nested Loops in Bee",
         "lesson_group.key": "csf_nested_loops",
         "script.name": "coursee-2019"
@@ -5170,8 +4682,6 @@
         "script_level.level_keys": [
           "courseD_maze_nestedLoops6_2019"
         ],
-        "script_level.chapter": 85,
-        "script_level.position": 9,
         "lesson.key": "Nested Loops in Bee",
         "lesson_group.key": "csf_nested_loops",
         "script.name": "coursee-2019"
@@ -5183,8 +4693,6 @@
         "script_level.level_keys": [
           "courseD_bee_nestedLoops7_2019"
         ],
-        "script_level.chapter": 86,
-        "script_level.position": 10,
         "lesson.key": "Nested Loops in Bee",
         "lesson_group.key": "csf_nested_loops",
         "script.name": "coursee-2019"
@@ -5196,8 +4704,6 @@
         "script_level.level_keys": [
           "courseD_bee_nestedLoops8_2019"
         ],
-        "script_level.chapter": 87,
-        "script_level.position": 11,
         "lesson.key": "Nested Loops in Bee",
         "lesson_group.key": "csf_nested_loops",
         "script.name": "coursee-2019"
@@ -5209,8 +4715,6 @@
         "script_level.level_keys": [
           "courseD_bee_nestedLoops9_2019"
         ],
-        "script_level.chapter": 88,
-        "script_level.position": 12,
         "lesson.key": "Nested Loops in Bee",
         "lesson_group.key": "csf_nested_loops",
         "script.name": "coursee-2019"
@@ -5222,8 +4726,6 @@
         "script_level.level_keys": [
           "courseD_bee_nestedLoops9_predict2_2019"
         ],
-        "script_level.chapter": 89,
-        "script_level.position": 13,
         "lesson.key": "Nested Loops in Bee",
         "lesson_group.key": "csf_nested_loops",
         "script.name": "coursee-2019"
@@ -5235,8 +4737,6 @@
         "script_level.level_keys": [
           "courseD_harvester_nested_loops_challenge1_2019"
         ],
-        "script_level.chapter": 90,
-        "script_level.position": 14,
         "lesson.key": "Nested Loops in Bee",
         "lesson_group.key": "csf_nested_loops",
         "script.name": "coursee-2019"
@@ -5248,8 +4748,6 @@
         "script_level.level_keys": [
           "courseD_collector_nested_loops_challenge2_2019"
         ],
-        "script_level.chapter": 91,
-        "script_level.position": 15,
         "lesson.key": "Nested Loops in Bee",
         "lesson_group.key": "csf_nested_loops",
         "script.name": "coursee-2019"
@@ -5261,8 +4759,6 @@
         "script_level.level_keys": [
           "courseD_artist_nestedLoops1_2019"
         ],
-        "script_level.chapter": 92,
-        "script_level.position": 1,
         "lesson.key": "Nested Loops in Artist",
         "lesson_group.key": "csf_nested_loops",
         "script.name": "coursee-2019"
@@ -5274,8 +4770,6 @@
         "script_level.level_keys": [
           "courseD_artist_nestedLoops1a_2019"
         ],
-        "script_level.chapter": 93,
-        "script_level.position": 2,
         "lesson.key": "Nested Loops in Artist",
         "lesson_group.key": "csf_nested_loops",
         "script.name": "coursee-2019"
@@ -5287,8 +4781,6 @@
         "script_level.level_keys": [
           "courseD_video_nestedLoopsArtist_2019"
         ],
-        "script_level.chapter": 94,
-        "script_level.position": 3,
         "lesson.key": "Nested Loops in Artist",
         "lesson_group.key": "csf_nested_loops",
         "script.name": "coursee-2019"
@@ -5300,8 +4792,6 @@
         "script_level.level_keys": [
           "courseD_artist_nestedLoops2_2019"
         ],
-        "script_level.chapter": 95,
-        "script_level.position": 4,
         "lesson.key": "Nested Loops in Artist",
         "lesson_group.key": "csf_nested_loops",
         "script.name": "coursee-2019"
@@ -5313,8 +4803,6 @@
         "script_level.level_keys": [
           "courseD_artist_nestedLoops3_2019"
         ],
-        "script_level.chapter": 96,
-        "script_level.position": 5,
         "lesson.key": "Nested Loops in Artist",
         "lesson_group.key": "csf_nested_loops",
         "script.name": "coursee-2019"
@@ -5326,8 +4814,6 @@
         "script_level.level_keys": [
           "courseD_artist_nestedLoops4_2019"
         ],
-        "script_level.chapter": 97,
-        "script_level.position": 6,
         "lesson.key": "Nested Loops in Artist",
         "lesson_group.key": "csf_nested_loops",
         "script.name": "coursee-2019"
@@ -5339,8 +4825,6 @@
         "script_level.level_keys": [
           "courseD_artist_nestedLoops5_2019"
         ],
-        "script_level.chapter": 98,
-        "script_level.position": 7,
         "lesson.key": "Nested Loops in Artist",
         "lesson_group.key": "csf_nested_loops",
         "script.name": "coursee-2019"
@@ -5352,8 +4836,6 @@
         "script_level.level_keys": [
           "courseD_artist_nestedLoops7_2019"
         ],
-        "script_level.chapter": 99,
-        "script_level.position": 8,
         "lesson.key": "Nested Loops in Artist",
         "lesson_group.key": "csf_nested_loops",
         "script.name": "coursee-2019"
@@ -5365,8 +4847,6 @@
         "script_level.level_keys": [
           "courseD_artist_nestedLoops8_2019"
         ],
-        "script_level.chapter": 100,
-        "script_level.position": 9,
         "lesson.key": "Nested Loops in Artist",
         "lesson_group.key": "csf_nested_loops",
         "script.name": "coursee-2019"
@@ -5378,8 +4858,6 @@
         "script_level.level_keys": [
           "courseD_artist_nestedLoops9_2019"
         ],
-        "script_level.chapter": 101,
-        "script_level.position": 10,
         "lesson.key": "Nested Loops in Artist",
         "lesson_group.key": "csf_nested_loops",
         "script.name": "coursee-2019"
@@ -5391,8 +4869,6 @@
         "script_level.level_keys": [
           "courseD_artist_nestedLoops10_2019"
         ],
-        "script_level.chapter": 102,
-        "script_level.position": 11,
         "lesson.key": "Nested Loops in Artist",
         "lesson_group.key": "csf_nested_loops",
         "script.name": "coursee-2019"
@@ -5404,8 +4880,6 @@
         "script_level.level_keys": [
           "courseD_artist_nestedLoops9_predict1_2019"
         ],
-        "script_level.chapter": 103,
-        "script_level.position": 12,
         "lesson.key": "Nested Loops in Artist",
         "lesson_group.key": "csf_nested_loops",
         "script.name": "coursee-2019"
@@ -5417,8 +4891,6 @@
         "script_level.level_keys": [
           "courseD_artist_nestedLoopsFP_2019"
         ],
-        "script_level.chapter": 104,
-        "script_level.position": 13,
         "lesson.key": "Nested Loops in Artist",
         "lesson_group.key": "csf_nested_loops",
         "script.name": "coursee-2019"
@@ -5430,8 +4902,6 @@
         "script_level.level_keys": [
           "courseD_artist_nestedLoops_challenge1_2019"
         ],
-        "script_level.chapter": 105,
-        "script_level.position": 14,
         "lesson.key": "Nested Loops in Artist",
         "lesson_group.key": "csf_nested_loops",
         "script.name": "coursee-2019"
@@ -5443,8 +4913,6 @@
         "script_level.level_keys": [
           "courseD_artist_nestedLoops_challenge2_2019"
         ],
-        "script_level.chapter": 106,
-        "script_level.position": 15,
         "lesson.key": "Nested Loops in Artist",
         "lesson_group.key": "csf_nested_loops",
         "script.name": "coursee-2019"
@@ -5456,8 +4924,6 @@
         "script_level.level_keys": [
           "courseD_artist_project1_2019"
         ],
-        "script_level.chapter": 107,
-        "script_level.position": 1,
         "lesson.key": "Nested Loops in Frozen",
         "lesson_group.key": "csf_nested_loops",
         "script.name": "coursee-2019"
@@ -5469,8 +4935,6 @@
         "script_level.level_keys": [
           "courseD_artist_project2_2019"
         ],
-        "script_level.chapter": 108,
-        "script_level.position": 2,
         "lesson.key": "Nested Loops in Frozen",
         "lesson_group.key": "csf_nested_loops",
         "script.name": "coursee-2019"
@@ -5482,8 +4946,6 @@
         "script_level.level_keys": [
           "courseD_artist_project3_2019"
         ],
-        "script_level.chapter": 109,
-        "script_level.position": 3,
         "lesson.key": "Nested Loops in Frozen",
         "lesson_group.key": "csf_nested_loops",
         "script.name": "coursee-2019"
@@ -5495,8 +4957,6 @@
         "script_level.level_keys": [
           "courseD_artist_project4_2019"
         ],
-        "script_level.chapter": 110,
-        "script_level.position": 4,
         "lesson.key": "Nested Loops in Frozen",
         "lesson_group.key": "csf_nested_loops",
         "script.name": "coursee-2019"
@@ -5508,8 +4968,6 @@
         "script_level.level_keys": [
           "courseD_artist_project5_2019"
         ],
-        "script_level.chapter": 111,
-        "script_level.position": 5,
         "lesson.key": "Nested Loops in Frozen",
         "lesson_group.key": "csf_nested_loops",
         "script.name": "coursee-2019"
@@ -5521,8 +4979,6 @@
         "script_level.level_keys": [
           "courseD_artist_project1a_2019"
         ],
-        "script_level.chapter": 112,
-        "script_level.position": 6,
         "lesson.key": "Nested Loops in Frozen",
         "lesson_group.key": "csf_nested_loops",
         "script.name": "coursee-2019"
@@ -5534,8 +4990,6 @@
         "script_level.level_keys": [
           "courseD_artist_project2a_2019"
         ],
-        "script_level.chapter": 113,
-        "script_level.position": 7,
         "lesson.key": "Nested Loops in Frozen",
         "lesson_group.key": "csf_nested_loops",
         "script.name": "coursee-2019"
@@ -5547,8 +5001,6 @@
         "script_level.level_keys": [
           "courseD_artist_project3a_2019"
         ],
-        "script_level.chapter": 114,
-        "script_level.position": 8,
         "lesson.key": "Nested Loops in Frozen",
         "lesson_group.key": "csf_nested_loops",
         "script.name": "coursee-2019"
@@ -5560,8 +5012,6 @@
         "script_level.level_keys": [
           "courseD_artist_project4a_2019"
         ],
-        "script_level.chapter": 115,
-        "script_level.position": 9,
         "lesson.key": "Nested Loops in Frozen",
         "lesson_group.key": "csf_nested_loops",
         "script.name": "coursee-2019"
@@ -5573,8 +5023,6 @@
         "script_level.level_keys": [
           "Songwriting-Unplugged"
         ],
-        "script_level.chapter": 116,
-        "script_level.position": 1,
         "lesson.key": "Functions: Songwriting",
         "lesson_group.key": "csf_functions",
         "script.name": "coursee-2019"
@@ -5586,8 +5034,6 @@
         "script_level.level_keys": [
           "MC_HOC_2017_01_RETRY_2019"
         ],
-        "script_level.chapter": 117,
-        "script_level.position": 1,
         "lesson.key": "Functions in Minecraft",
         "lesson_group.key": "csf_functions",
         "script.name": "coursee-2019"
@@ -5599,8 +5045,6 @@
         "script_level.level_keys": [
           "MC_HOC_2017_02_Cole_2019"
         ],
-        "script_level.chapter": 118,
-        "script_level.position": 2,
         "lesson.key": "Functions in Minecraft",
         "lesson_group.key": "csf_functions",
         "script.name": "coursee-2019"
@@ -5612,8 +5056,6 @@
         "script_level.level_keys": [
           "MC_HOC_2017_03_Cole_2019"
         ],
-        "script_level.chapter": 119,
-        "script_level.position": 3,
         "lesson.key": "Functions in Minecraft",
         "lesson_group.key": "csf_functions",
         "script.name": "coursee-2019"
@@ -5625,8 +5067,6 @@
         "script_level.level_keys": [
           "MC_HOC_2017_04_Cole_2019"
         ],
-        "script_level.chapter": 120,
-        "script_level.position": 4,
         "lesson.key": "Functions in Minecraft",
         "lesson_group.key": "csf_functions",
         "script.name": "coursee-2019"
@@ -5638,8 +5078,6 @@
         "script_level.level_keys": [
           "MC_HOC_2017_04POINT5_RYAN_2019"
         ],
-        "script_level.chapter": 121,
-        "script_level.position": 5,
         "lesson.key": "Functions in Minecraft",
         "lesson_group.key": "csf_functions",
         "script.name": "coursee-2019"
@@ -5651,8 +5089,6 @@
         "script_level.level_keys": [
           "MC_HOC_2017_05_Cole_2019"
         ],
-        "script_level.chapter": 122,
-        "script_level.position": 6,
         "lesson.key": "Functions in Minecraft",
         "lesson_group.key": "csf_functions",
         "script.name": "coursee-2019"
@@ -5664,8 +5100,6 @@
         "script_level.level_keys": [
           "MC_HOC_2017_06_Cole_2019"
         ],
-        "script_level.chapter": 123,
-        "script_level.position": 7,
         "lesson.key": "Functions in Minecraft",
         "lesson_group.key": "csf_functions",
         "script.name": "coursee-2019"
@@ -5677,8 +5111,6 @@
         "script_level.level_keys": [
           "Function intro Ryan_2019"
         ],
-        "script_level.chapter": 124,
-        "script_level.position": 8,
         "lesson.key": "Functions in Minecraft",
         "lesson_group.key": "csf_functions",
         "script.name": "coursee-2019"
@@ -5690,8 +5122,6 @@
         "script_level.level_keys": [
           "MC_HOC_2017_07_Cole_2019"
         ],
-        "script_level.chapter": 125,
-        "script_level.position": 9,
         "lesson.key": "Functions in Minecraft",
         "lesson_group.key": "csf_functions",
         "script.name": "coursee-2019"
@@ -5703,8 +5133,6 @@
         "script_level.level_keys": [
           "MC_HOC_2017_10_RETRY_2019"
         ],
-        "script_level.chapter": 126,
-        "script_level.position": 10,
         "lesson.key": "Functions in Minecraft",
         "lesson_group.key": "csf_functions",
         "script.name": "coursee-2019"
@@ -5716,8 +5144,6 @@
         "script_level.level_keys": [
           "MC_HOC_2017_Ali_2019"
         ],
-        "script_level.chapter": 127,
-        "script_level.position": 11,
         "lesson.key": "Functions in Minecraft",
         "lesson_group.key": "csf_functions",
         "script.name": "coursee-2019"
@@ -5729,8 +5155,6 @@
         "script_level.level_keys": [
           "MC_HOC_2017_FP20x20_2019"
         ],
-        "script_level.chapter": 128,
-        "script_level.position": 12,
         "lesson.key": "Functions in Minecraft",
         "lesson_group.key": "csf_functions",
         "script.name": "coursee-2019"
@@ -5742,8 +5166,6 @@
         "script_level.level_keys": [
           "harvester_skinOverview_video_2019"
         ],
-        "script_level.chapter": 129,
-        "script_level.position": 1,
         "lesson.key": "Functions in Harvester",
         "lesson_group.key": "csf_functions",
         "script.name": "coursee-2019"
@@ -5755,8 +5177,6 @@
         "script_level.level_keys": [
           "courseE_farmer_functions1_2019"
         ],
-        "script_level.chapter": 130,
-        "script_level.position": 2,
         "lesson.key": "Functions in Harvester",
         "lesson_group.key": "csf_functions",
         "script.name": "coursee-2019"
@@ -5768,8 +5188,6 @@
         "script_level.level_keys": [
           "courseE_farmer_functions1a_2019"
         ],
-        "script_level.chapter": 131,
-        "script_level.position": 3,
         "lesson.key": "Functions in Harvester",
         "lesson_group.key": "csf_functions",
         "script.name": "coursee-2019"
@@ -5781,8 +5199,6 @@
         "script_level.level_keys": [
           "courseE_farmer_functions2b_2019"
         ],
-        "script_level.chapter": 132,
-        "script_level.position": 4,
         "lesson.key": "Functions in Harvester",
         "lesson_group.key": "csf_functions",
         "script.name": "coursee-2019"
@@ -5794,8 +5210,6 @@
         "script_level.level_keys": [
           "courseE_farmer_functions2ba_2019"
         ],
-        "script_level.chapter": 133,
-        "script_level.position": 5,
         "lesson.key": "Functions in Harvester",
         "lesson_group.key": "csf_functions",
         "script.name": "coursee-2019"
@@ -5807,8 +5221,6 @@
         "script_level.level_keys": [
           "courseE_farmer_functions3c_2019"
         ],
-        "script_level.chapter": 134,
-        "script_level.position": 6,
         "lesson.key": "Functions in Harvester",
         "lesson_group.key": "csf_functions",
         "script.name": "coursee-2019"
@@ -5820,8 +5232,6 @@
         "script_level.level_keys": [
           "courseE_farmer_functions3c1_2019"
         ],
-        "script_level.chapter": 135,
-        "script_level.position": 7,
         "lesson.key": "Functions in Harvester",
         "lesson_group.key": "csf_functions",
         "script.name": "coursee-2019"
@@ -5833,8 +5243,6 @@
         "script_level.level_keys": [
           "courseE_video_createFunctions2_2019"
         ],
-        "script_level.chapter": 136,
-        "script_level.position": 8,
         "lesson.key": "Functions in Harvester",
         "lesson_group.key": "csf_functions",
         "script.name": "coursee-2019"
@@ -5846,8 +5254,6 @@
         "script_level.level_keys": [
           "courseE_farmer_functions7a1_2019"
         ],
-        "script_level.chapter": 137,
-        "script_level.position": 9,
         "lesson.key": "Functions in Harvester",
         "lesson_group.key": "csf_functions",
         "script.name": "coursee-2019"
@@ -5859,8 +5265,6 @@
         "script_level.level_keys": [
           "courseE_farmer_functions8a1_2019"
         ],
-        "script_level.chapter": 138,
-        "script_level.position": 10,
         "lesson.key": "Functions in Harvester",
         "lesson_group.key": "csf_functions",
         "script.name": "coursee-2019"
@@ -5872,8 +5276,6 @@
         "script_level.level_keys": [
           "courseE_farmer_functions9a1_2019"
         ],
-        "script_level.chapter": 139,
-        "script_level.position": 11,
         "lesson.key": "Functions in Harvester",
         "lesson_group.key": "csf_functions",
         "script.name": "coursee-2019"
@@ -5885,8 +5287,6 @@
         "script_level.level_keys": [
           "courseE_farmer_functions10a1_2019"
         ],
-        "script_level.chapter": 140,
-        "script_level.position": 12,
         "lesson.key": "Functions in Harvester",
         "lesson_group.key": "csf_functions",
         "script.name": "coursee-2019"
@@ -5898,8 +5298,6 @@
         "script_level.level_keys": [
           "courseE_farmer_functions13_2019"
         ],
-        "script_level.chapter": 141,
-        "script_level.position": 13,
         "lesson.key": "Functions in Harvester",
         "lesson_group.key": "csf_functions",
         "script.name": "coursee-2019"
@@ -5911,8 +5309,6 @@
         "script_level.level_keys": [
           "courseE_farmer_functions11_predict_2019"
         ],
-        "script_level.chapter": 142,
-        "script_level.position": 14,
         "lesson.key": "Functions in Harvester",
         "lesson_group.key": "csf_functions",
         "script.name": "coursee-2019"
@@ -5924,8 +5320,6 @@
         "script_level.level_keys": [
           "courseE_artist_functions_predict1_2019"
         ],
-        "script_level.chapter": 143,
-        "script_level.position": 1,
         "lesson.key": "Functions in Artist",
         "lesson_group.key": "csf_functions",
         "script.name": "coursee-2019"
@@ -5937,8 +5331,6 @@
         "script_level.level_keys": [
           "courseE_artist_functions2_2019"
         ],
-        "script_level.chapter": 144,
-        "script_level.position": 2,
         "lesson.key": "Functions in Artist",
         "lesson_group.key": "csf_functions",
         "script.name": "coursee-2019"
@@ -5950,8 +5342,6 @@
         "script_level.level_keys": [
           "courseE_artist_functions3_2019"
         ],
-        "script_level.chapter": 145,
-        "script_level.position": 3,
         "lesson.key": "Functions in Artist",
         "lesson_group.key": "csf_functions",
         "script.name": "coursee-2019"
@@ -5963,8 +5353,6 @@
         "script_level.level_keys": [
           "courseE_artist_functions5_2019"
         ],
-        "script_level.chapter": 146,
-        "script_level.position": 4,
         "lesson.key": "Functions in Artist",
         "lesson_group.key": "csf_functions",
         "script.name": "coursee-2019"
@@ -5976,8 +5364,6 @@
         "script_level.level_keys": [
           "courseE_artist_functions7_2019"
         ],
-        "script_level.chapter": 147,
-        "script_level.position": 5,
         "lesson.key": "Functions in Artist",
         "lesson_group.key": "csf_functions",
         "script.name": "coursee-2019"
@@ -5989,8 +5375,6 @@
         "script_level.level_keys": [
           "courseE_artist_functions8a_2019"
         ],
-        "script_level.chapter": 148,
-        "script_level.position": 6,
         "lesson.key": "Functions in Artist",
         "lesson_group.key": "csf_functions",
         "script.name": "coursee-2019"
@@ -6002,8 +5386,6 @@
         "script_level.level_keys": [
           "courseE_artist_functions8b_2019"
         ],
-        "script_level.chapter": 149,
-        "script_level.position": 7,
         "lesson.key": "Functions in Artist",
         "lesson_group.key": "csf_functions",
         "script.name": "coursee-2019"
@@ -6015,8 +5397,6 @@
         "script_level.level_keys": [
           "courseE_artist_functions8c_2019"
         ],
-        "script_level.chapter": 150,
-        "script_level.position": 8,
         "lesson.key": "Functions in Artist",
         "lesson_group.key": "csf_functions",
         "script.name": "coursee-2019"
@@ -6028,8 +5408,6 @@
         "script_level.level_keys": [
           "courseE_artist_functions8_2019"
         ],
-        "script_level.chapter": 151,
-        "script_level.position": 9,
         "lesson.key": "Functions in Artist",
         "lesson_group.key": "csf_functions",
         "script.name": "coursee-2019"
@@ -6041,8 +5419,6 @@
         "script_level.level_keys": [
           "courseE_artist_functions9_2019"
         ],
-        "script_level.chapter": 152,
-        "script_level.position": 10,
         "lesson.key": "Functions in Artist",
         "lesson_group.key": "csf_functions",
         "script.name": "coursee-2019"
@@ -6054,8 +5430,6 @@
         "script_level.level_keys": [
           "courseE_artist_functions10_2019"
         ],
-        "script_level.chapter": 153,
-        "script_level.position": 11,
         "lesson.key": "Functions in Artist",
         "lesson_group.key": "csf_functions",
         "script.name": "coursee-2019"
@@ -6067,8 +5441,6 @@
         "script_level.level_keys": [
           "courseE_artist_functions_predict2_2019"
         ],
-        "script_level.chapter": 154,
-        "script_level.position": 12,
         "lesson.key": "Functions in Artist",
         "lesson_group.key": "csf_functions",
         "script.name": "coursee-2019"
@@ -6080,8 +5452,6 @@
         "script_level.level_keys": [
           "courseE_artist_functionsProj_2019"
         ],
-        "script_level.chapter": 155,
-        "script_level.position": 13,
         "lesson.key": "Functions in Artist",
         "lesson_group.key": "csf_functions",
         "script.name": "coursee-2019"
@@ -6093,8 +5463,6 @@
         "script_level.level_keys": [
           "courseE_artist_functions_challenge1_2019"
         ],
-        "script_level.chapter": 156,
-        "script_level.position": 14,
         "lesson.key": "Functions in Artist",
         "lesson_group.key": "csf_functions",
         "script.name": "coursee-2019"
@@ -6106,8 +5474,6 @@
         "script_level.level_keys": [
           "courseE_artist_functions_challenge2_2019"
         ],
-        "script_level.chapter": 157,
-        "script_level.position": 15,
         "lesson.key": "Functions in Artist",
         "lesson_group.key": "csf_functions",
         "script.name": "coursee-2019"
@@ -6119,8 +5485,6 @@
         "script_level.level_keys": [
           "courseE_project_exemplars_2019"
         ],
-        "script_level.chapter": 158,
-        "script_level.position": 1,
         "lesson.key": "End of Course Project",
         "lesson_group.key": "end_of_course_project",
         "script.name": "coursee-2019"
@@ -6132,8 +5496,6 @@
         "script_level.level_keys": [
           "CourseE_Project_SpriteLab_2019"
         ],
-        "script_level.chapter": 159,
-        "script_level.position": 2,
         "lesson.key": "End of Course Project",
         "lesson_group.key": "end_of_course_project",
         "script.name": "coursee-2019"
@@ -6145,8 +5507,6 @@
         "script_level.level_keys": [
           "Course E: Artist Project_2019"
         ],
-        "script_level.chapter": 160,
-        "script_level.position": 3,
         "lesson.key": "End of Course Project",
         "lesson_group.key": "end_of_course_project",
         "script.name": "coursee-2019"

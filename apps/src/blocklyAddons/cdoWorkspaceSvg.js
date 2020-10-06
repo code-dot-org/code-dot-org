@@ -60,6 +60,7 @@ export default class WorkspaceSvg extends GoogleBlockly.WorkspaceSvg {
       .querySelectorAll('.blocklyTrash')
       .forEach(x => (x.style.visibility = 'visible'));
   }
+  traceOn() {} // TODO
 }
 
 WorkspaceSvg.prototype.blockSpaceEditor = {

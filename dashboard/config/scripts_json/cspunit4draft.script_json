@@ -432,8 +432,6 @@
         "script_level.level_keys": [
           "U4L02v2 - Finding Trends"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Finding Trends with Visualizations",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -454,8 +452,6 @@
         "script_level.level_keys": [
           "U4L04v2 - Student Introduction"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 1,
         "lesson.key": "Good and Bad Data Visualizations",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -476,8 +472,6 @@
         "script_level.level_keys": [
           "GoodBadVisualizations_v1"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 2,
         "lesson.key": "Good and Bad Data Visualizations",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -498,8 +492,6 @@
         "script_level.level_keys": [
           "GoodBadVisualizations_v2"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 3,
         "lesson.key": "Good and Bad Data Visualizations",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -520,8 +512,6 @@
         "script_level.level_keys": [
           "U4L03v2 - Student Introduction"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 1,
         "lesson.key": "Check Your Assumptions",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -542,8 +532,6 @@
         "script_level.level_keys": [
           "U4 - Making Data Visualizations - Student Introduction"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 1,
         "lesson.key": "Making Data Visualizations",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -564,8 +552,6 @@
         "script_level.level_keys": [
           "U4 - Making Data Visualizations - Getting Started"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 2,
         "lesson.key": "Making Data Visualizations",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -586,8 +572,6 @@
         "script_level.level_keys": [
           "U4 - Making Data Visualizations - Scatter Plot"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 3,
         "lesson.key": "Making Data Visualizations",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -608,8 +592,6 @@
         "script_level.level_keys": [
           "U4 - Making Data Visualizations - Line Chart"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 4,
         "lesson.key": "Making Data Visualizations",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -630,8 +612,6 @@
         "script_level.level_keys": [
           "U4 - Making Data Visualizations - Bar Chart"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 5,
         "lesson.key": "Making Data Visualizations",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -652,8 +632,6 @@
         "script_level.level_keys": [
           "U4 - Making Data Visualizations - Free Play"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 6,
         "lesson.key": "Making Data Visualizations",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -674,8 +652,6 @@
         "script_level.level_keys": [
           "U4L06v2 Student Lesson Introduction"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 1,
         "lesson.key": "Discover a Data Story",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -696,8 +672,6 @@
         "script_level.level_keys": [
           "U4L16 Student Lesson Introduction"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 1,
         "lesson.key": "Cleaning Data",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -718,8 +692,6 @@
         "script_level.level_keys": [
           "U4 - Cleaning Data - Activity Guide"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 2,
         "lesson.key": "Cleaning Data",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -740,8 +712,6 @@
         "script_level.level_keys": [
           "U4 Cleaning Data Activity Guide Pt2"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 3,
         "lesson.key": "Cleaning Data",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -762,8 +732,6 @@
         "script_level.level_keys": [
           "U4 Cleaning Data Activity Guide Pt3"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 4,
         "lesson.key": "Cleaning Data",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -784,8 +752,6 @@
         "script_level.level_keys": [
           "U4L16 Free Response"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 5,
         "lesson.key": "Cleaning Data",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -806,8 +772,6 @@
         "script_level.level_keys": [
           "U4L16 Choose 2"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 6,
         "lesson.key": "Cleaning Data",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -828,8 +792,6 @@
         "script_level.level_keys": [
           "U4L16 Multiple Choice"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 7,
         "lesson.key": "Cleaning Data",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -850,8 +812,6 @@
         "script_level.level_keys": [
           "U4L08v2 Student Intro"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 1,
         "lesson.key": "Creating Summary Tables",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -872,8 +832,6 @@
         "script_level.level_keys": [
           "U4L08v2 Making Pivot Tables"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 2,
         "lesson.key": "Creating Summary Tables",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -894,8 +852,6 @@
         "script_level.level_keys": [
           "U4L08v2 Making Pivot Tables Part 2"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 3,
         "lesson.key": "Creating Summary Tables",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -916,8 +872,6 @@
         "script_level.level_keys": [
           "U4L08v2 Making Pivot Tables Part 3"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 4,
         "lesson.key": "Creating Summary Tables",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -938,8 +892,6 @@
         "script_level.level_keys": [
           "U4L12 - Student Introduction"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 1,
         "lesson.key": "Rapid Research - Data Innovations",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -960,8 +912,6 @@
         "script_level.level_keys": [
           "U4L01 Student Lesson Introduction"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 1,
         "lesson.key": "Why Make Apps?",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -982,8 +932,6 @@
         "script_level.level_keys": [
           "U4L01 Free Response"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 2,
         "lesson.key": "Why Make Apps?",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -1004,8 +952,6 @@
         "script_level.level_keys": [
           "U4L01 Choose 2"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 3,
         "lesson.key": "Why Make Apps?",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -1026,8 +972,6 @@
         "script_level.level_keys": [
           "U4L01 Multiple Choice"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 4,
         "lesson.key": "Why Make Apps?",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -1048,8 +992,6 @@
         "script_level.level_keys": [
           "U4L02 Student Lesson Introduction Video"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 1,
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -1070,8 +1012,6 @@
         "script_level.level_keys": [
           "U4 - Objects - eventParameter"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 2,
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -1092,8 +1032,6 @@
         "script_level.level_keys": [
           "U4 - Objects - dotNotation"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 3,
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -1114,8 +1052,6 @@
         "script_level.level_keys": [
           "U4 - Objects - createDotNotation"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 4,
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -1136,8 +1072,6 @@
         "script_level.level_keys": [
           "U4 - Objects - arraysOfObjects"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 5,
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -1158,8 +1092,6 @@
         "script_level.level_keys": [
           "U4 - Objects - accessingPropertiesInArray"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 6,
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -1180,8 +1112,6 @@
         "script_level.level_keys": [
           "U4 - Objects - exemplarContactsApp"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 7,
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -1202,8 +1132,6 @@
         "script_level.level_keys": [
           "U4 - Objects - readStarterCode"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 8,
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -1224,8 +1152,6 @@
         "script_level.level_keys": [
           "U4 - Objects - createContactsData"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 9,
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -1246,8 +1172,6 @@
         "script_level.level_keys": [
           "U4 - Objects - showContact1"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 10,
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -1268,8 +1192,6 @@
         "script_level.level_keys": [
           "U4 - Objects - showContact2"
         ],
-        "script_level.chapter": 39,
-        "script_level.position": 11,
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -1290,8 +1212,6 @@
         "script_level.level_keys": [
           "U4 - Objects - showContact3"
         ],
-        "script_level.chapter": 40,
-        "script_level.position": 12,
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -1312,8 +1232,6 @@
         "script_level.level_keys": [
           "U4 - Objects - pullValues"
         ],
-        "script_level.chapter": 41,
-        "script_level.position": 13,
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -1334,8 +1252,6 @@
         "script_level.level_keys": [
           "U4 - Objects - createContactObject"
         ],
-        "script_level.chapter": 42,
-        "script_level.position": 14,
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -1356,8 +1272,6 @@
         "script_level.level_keys": [
           "U4 - Objects - resetIndexAndShow"
         ],
-        "script_level.chapter": 43,
-        "script_level.position": 15,
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -1378,8 +1292,6 @@
         "script_level.level_keys": [
           "U4 - Objects - showSampleImage"
         ],
-        "script_level.chapter": 44,
-        "script_level.position": 16,
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -1400,8 +1312,6 @@
         "script_level.level_keys": [
           "U4L02 Free Response"
         ],
-        "script_level.chapter": 45,
-        "script_level.position": 17,
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -1422,8 +1332,6 @@
         "script_level.level_keys": [
           "U4L02 Choose 2"
         ],
-        "script_level.chapter": 46,
-        "script_level.position": 18,
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -1444,8 +1352,6 @@
         "script_level.level_keys": [
           "U4L02 Multiple Choice"
         ],
-        "script_level.chapter": 47,
-        "script_level.position": 19,
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -1466,8 +1372,6 @@
         "script_level.level_keys": [
           "U4L03 Student Lesson Introduction"
         ],
-        "script_level.chapter": 48,
-        "script_level.position": 1,
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -1488,8 +1392,6 @@
         "script_level.level_keys": [
           "U4 - CreateRecord - 1"
         ],
-        "script_level.chapter": 49,
-        "script_level.position": 2,
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -1510,8 +1412,6 @@
         "script_level.level_keys": [
           "U4 - CreateRecord - 2"
         ],
-        "script_level.chapter": 50,
-        "script_level.position": 3,
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -1532,8 +1432,6 @@
         "script_level.level_keys": [
           "U4 - CreateRecord - 2.5"
         ],
-        "script_level.chapter": 51,
-        "script_level.position": 4,
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -1554,8 +1452,6 @@
         "script_level.level_keys": [
           "U4 - CreateRecord - 3"
         ],
-        "script_level.chapter": 52,
-        "script_level.position": 5,
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -1576,8 +1472,6 @@
         "script_level.level_keys": [
           "U4 - CreateRecord - 4"
         ],
-        "script_level.chapter": 53,
-        "script_level.position": 6,
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -1598,8 +1492,6 @@
         "script_level.level_keys": [
           "U4 - CreateRecord - 5"
         ],
-        "script_level.chapter": 54,
-        "script_level.position": 7,
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -1620,8 +1512,6 @@
         "script_level.level_keys": [
           "U4 - Edit Data Table by Hand"
         ],
-        "script_level.chapter": 55,
-        "script_level.position": 8,
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -1642,8 +1532,6 @@
         "script_level.level_keys": [
           "U4 - debug column names are case sensitive"
         ],
-        "script_level.chapter": 56,
-        "script_level.position": 9,
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -1664,8 +1552,6 @@
         "script_level.level_keys": [
           "U4 - Add Row By Hand"
         ],
-        "script_level.chapter": 57,
-        "script_level.position": 10,
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -1686,8 +1572,6 @@
         "script_level.level_keys": [
           "U4 - add createRecord to contacts App"
         ],
-        "script_level.chapter": 58,
-        "script_level.position": 11,
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -1708,8 +1592,6 @@
         "script_level.level_keys": [
           "U4 - fix contacts by hand in data table"
         ],
-        "script_level.chapter": 59,
-        "script_level.position": 12,
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -1730,8 +1612,6 @@
         "script_level.level_keys": [
           "U4 - last stage test adding contcts"
         ],
-        "script_level.chapter": 60,
-        "script_level.position": 13,
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -1752,8 +1632,6 @@
         "script_level.level_keys": [
           "U4L04 Student Lesson Introduction"
         ],
-        "script_level.chapter": 61,
-        "script_level.position": 1,
         "lesson.key": "Reading Records",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -1774,8 +1652,6 @@
         "script_level.level_keys": [
           "U4 - Read Record - 1"
         ],
-        "script_level.chapter": 62,
-        "script_level.position": 2,
         "lesson.key": "Reading Records",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -1796,8 +1672,6 @@
         "script_level.level_keys": [
           "U4 - Read Record - 1.2"
         ],
-        "script_level.chapter": 63,
-        "script_level.position": 3,
         "lesson.key": "Reading Records",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -1818,8 +1692,6 @@
         "script_level.level_keys": [
           "U4 - Read Record - 1.3"
         ],
-        "script_level.chapter": 64,
-        "script_level.position": 4,
         "lesson.key": "Reading Records",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -1840,8 +1712,6 @@
         "script_level.level_keys": [
           "U4 - Read Record - 2"
         ],
-        "script_level.chapter": 65,
-        "script_level.position": 5,
         "lesson.key": "Reading Records",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -1862,8 +1732,6 @@
         "script_level.level_keys": [
           "U4 - Read Record - 3"
         ],
-        "script_level.chapter": 66,
-        "script_level.position": 6,
         "lesson.key": "Reading Records",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -1884,8 +1752,6 @@
         "script_level.level_keys": [
           "U4 - Read Record - 4.1"
         ],
-        "script_level.chapter": 67,
-        "script_level.position": 7,
         "lesson.key": "Reading Records",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -1906,8 +1772,6 @@
         "script_level.level_keys": [
           "U4 - Read Record - 5"
         ],
-        "script_level.chapter": 68,
-        "script_level.position": 8,
         "lesson.key": "Reading Records",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -1928,8 +1792,6 @@
         "script_level.level_keys": [
           "U4 - Unique Ids Explanation"
         ],
-        "script_level.chapter": 69,
-        "script_level.position": 9,
         "lesson.key": "Reading Records",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -1950,8 +1812,6 @@
         "script_level.level_keys": [
           "U4 - deleteRecords 0"
         ],
-        "script_level.chapter": 70,
-        "script_level.position": 10,
         "lesson.key": "Reading Records",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -1972,8 +1832,6 @@
         "script_level.level_keys": [
           "U4 - deleteRecords 1"
         ],
-        "script_level.chapter": 71,
-        "script_level.position": 11,
         "lesson.key": "Reading Records",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -1994,8 +1852,6 @@
         "script_level.level_keys": [
           "U4 - deleteRecords 2 delete object"
         ],
-        "script_level.chapter": 72,
-        "script_level.position": 12,
         "lesson.key": "Reading Records",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -2016,8 +1872,6 @@
         "script_level.level_keys": [
           "U4 - ReadRecords - Contacts App 1"
         ],
-        "script_level.chapter": 73,
-        "script_level.position": 13,
         "lesson.key": "Reading Records",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -2038,8 +1892,6 @@
         "script_level.level_keys": [
           "U4 - Read Record - Local vs Remote Data External"
         ],
-        "script_level.chapter": 74,
-        "script_level.position": 14,
         "lesson.key": "Reading Records",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -2060,8 +1912,6 @@
         "script_level.level_keys": [
           "U4 - ReadRecords - Contacts App 2"
         ],
-        "script_level.chapter": 75,
-        "script_level.position": 15,
         "lesson.key": "Reading Records",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -2082,8 +1932,6 @@
         "script_level.level_keys": [
           "U4 - ReadRecords - Contacts App 3"
         ],
-        "script_level.chapter": 76,
-        "script_level.position": 16,
         "lesson.key": "Reading Records",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -2104,8 +1952,6 @@
         "script_level.level_keys": [
           "U4 - ReadRecords - Contacts App 4"
         ],
-        "script_level.chapter": 77,
-        "script_level.position": 17,
         "lesson.key": "Reading Records",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -2126,8 +1972,6 @@
         "script_level.level_keys": [
           "U4 - ReadRecords - Contacts App 5 make delete work"
         ],
-        "script_level.chapter": 78,
-        "script_level.position": 18,
         "lesson.key": "Reading Records",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -2148,8 +1992,6 @@
         "script_level.level_keys": [
           "U4L05 Student Lesson Introduction"
         ],
-        "script_level.chapter": 79,
-        "script_level.position": 1,
         "lesson.key": "Search Terms",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -2170,8 +2012,6 @@
         "script_level.level_keys": [
           "U4L05 Free Response"
         ],
-        "script_level.chapter": 80,
-        "script_level.position": 2,
         "lesson.key": "Search Terms",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -2192,8 +2032,6 @@
         "script_level.level_keys": [
           "U4L05 Choose 2"
         ],
-        "script_level.chapter": 81,
-        "script_level.position": 3,
         "lesson.key": "Search Terms",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -2214,8 +2052,6 @@
         "script_level.level_keys": [
           "U4L05 Multiple Choice"
         ],
-        "script_level.chapter": 82,
-        "script_level.position": 4,
         "lesson.key": "Search Terms",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -2236,8 +2072,6 @@
         "script_level.level_keys": [
           "U4L06 Student Lesson Introduction"
         ],
-        "script_level.chapter": 83,
-        "script_level.position": 1,
         "lesson.key": "Unique IDs, Delete and Update Records",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -2258,8 +2092,6 @@
         "script_level.level_keys": [
           "U4L06 Free Response"
         ],
-        "script_level.chapter": 84,
-        "script_level.position": 2,
         "lesson.key": "Unique IDs, Delete and Update Records",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -2280,8 +2112,6 @@
         "script_level.level_keys": [
           "U4L06 Choose 2"
         ],
-        "script_level.chapter": 85,
-        "script_level.position": 3,
         "lesson.key": "Unique IDs, Delete and Update Records",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -2302,8 +2132,6 @@
         "script_level.level_keys": [
           "U4L06 Multiple Choice"
         ],
-        "script_level.chapter": 86,
-        "script_level.position": 4,
         "lesson.key": "Unique IDs, Delete and Update Records",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -2324,8 +2152,6 @@
         "script_level.level_keys": [
           "U4L07 Student Lesson Introduction"
         ],
-        "script_level.chapter": 87,
-        "script_level.position": 1,
         "lesson.key": "Import, Export, and Visualize Data",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -2346,8 +2172,6 @@
         "script_level.level_keys": [
           "U4 - Charts - Import Data 1"
         ],
-        "script_level.chapter": 88,
-        "script_level.position": 2,
         "lesson.key": "Import, Export, and Visualize Data",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -2368,8 +2192,6 @@
         "script_level.level_keys": [
           "U4 - Charts - Import Data 2"
         ],
-        "script_level.chapter": 89,
-        "script_level.position": 3,
         "lesson.key": "Import, Export, and Visualize Data",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -2390,8 +2212,6 @@
         "script_level.level_keys": [
           "U4 - Charts - Remixing Apps with Data"
         ],
-        "script_level.chapter": 90,
-        "script_level.position": 4,
         "lesson.key": "Import, Export, and Visualize Data",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -2412,8 +2232,6 @@
         "script_level.level_keys": [
           "U4 - Charts - Export Data"
         ],
-        "script_level.chapter": 91,
-        "script_level.position": 5,
         "lesson.key": "Import, Export, and Visualize Data",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -2434,8 +2252,6 @@
         "script_level.level_keys": [
           "U4 - Charts - drawChartFromRecords 1"
         ],
-        "script_level.chapter": 92,
-        "script_level.position": 6,
         "lesson.key": "Import, Export, and Visualize Data",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -2456,8 +2272,6 @@
         "script_level.level_keys": [
           "U4 - Charts - Scatter Chart"
         ],
-        "script_level.chapter": 93,
-        "script_level.position": 7,
         "lesson.key": "Import, Export, and Visualize Data",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -2478,8 +2292,6 @@
         "script_level.level_keys": [
           "U4 - Charts - Line Chart 1"
         ],
-        "script_level.chapter": 94,
-        "script_level.position": 8,
         "lesson.key": "Import, Export, and Visualize Data",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -2500,8 +2312,6 @@
         "script_level.level_keys": [
           "U4 - Charts - Line Chart 2"
         ],
-        "script_level.chapter": 95,
-        "script_level.position": 9,
         "lesson.key": "Import, Export, and Visualize Data",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -2522,8 +2332,6 @@
         "script_level.level_keys": [
           "U4 - Charts - drawChartFromRecords Options 1"
         ],
-        "script_level.chapter": 96,
-        "script_level.position": 10,
         "lesson.key": "Import, Export, and Visualize Data",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -2544,8 +2352,6 @@
         "script_level.level_keys": [
           "U4 - Charts - drawChartFromRecords Options 2"
         ],
-        "script_level.chapter": 97,
-        "script_level.position": 11,
         "lesson.key": "Import, Export, and Visualize Data",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -2566,8 +2372,6 @@
         "script_level.level_keys": [
           "U4L07 Free Response"
         ],
-        "script_level.chapter": 98,
-        "script_level.position": 12,
         "lesson.key": "Import, Export, and Visualize Data",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -2588,8 +2392,6 @@
         "script_level.level_keys": [
           "U4L07 Choose 2"
         ],
-        "script_level.chapter": 99,
-        "script_level.position": 13,
         "lesson.key": "Import, Export, and Visualize Data",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -2610,8 +2412,6 @@
         "script_level.level_keys": [
           "U4L07 Multiple Choice"
         ],
-        "script_level.chapter": 100,
-        "script_level.position": 14,
         "lesson.key": "Import, Export, and Visualize Data",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -2632,8 +2432,6 @@
         "script_level.level_keys": [
           "U4L08 Student Lesson Introduction"
         ],
-        "script_level.chapter": 101,
-        "script_level.position": 1,
         "lesson.key": "Interpreting Data Visualizations",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -2654,8 +2452,6 @@
         "script_level.level_keys": [
           "U4L08 Free Response"
         ],
-        "script_level.chapter": 102,
-        "script_level.position": 2,
         "lesson.key": "Interpreting Data Visualizations",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -2676,8 +2472,6 @@
         "script_level.level_keys": [
           "U4L08 Choose 2"
         ],
-        "script_level.chapter": 103,
-        "script_level.position": 3,
         "lesson.key": "Interpreting Data Visualizations",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -2698,8 +2492,6 @@
         "script_level.level_keys": [
           "U4L08 Multiple Choice"
         ],
-        "script_level.chapter": 104,
-        "script_level.position": 4,
         "lesson.key": "Interpreting Data Visualizations",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -2720,8 +2512,6 @@
         "script_level.level_keys": [
           "U4L09 Student Lesson Introduction"
         ],
-        "script_level.chapter": 105,
-        "script_level.position": 1,
         "lesson.key": "How is Data Collected?",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -2742,8 +2532,6 @@
         "script_level.level_keys": [
           "U4L09 Free Response"
         ],
-        "script_level.chapter": 106,
-        "script_level.position": 2,
         "lesson.key": "How is Data Collected?",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -2764,8 +2552,6 @@
         "script_level.level_keys": [
           "U4L09 Choose 2"
         ],
-        "script_level.chapter": 107,
-        "script_level.position": 3,
         "lesson.key": "How is Data Collected?",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -2786,8 +2572,6 @@
         "script_level.level_keys": [
           "U4L09 Multiple Choice"
         ],
-        "script_level.chapter": 108,
-        "script_level.position": 4,
         "lesson.key": "How is Data Collected?",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -2808,8 +2592,6 @@
         "script_level.level_keys": [
           "U4L10 Student Lesson Introduction"
         ],
-        "script_level.chapter": 109,
-        "script_level.position": 1,
         "lesson.key": "Using Data in the Real World",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -2830,8 +2612,6 @@
         "script_level.level_keys": [
           "U4L10 Free Response"
         ],
-        "script_level.chapter": 110,
-        "script_level.position": 2,
         "lesson.key": "Using Data in the Real World",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -2852,8 +2632,6 @@
         "script_level.level_keys": [
           "U4L10 Choose 2"
         ],
-        "script_level.chapter": 111,
-        "script_level.position": 3,
         "lesson.key": "Using Data in the Real World",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -2874,8 +2652,6 @@
         "script_level.level_keys": [
           "U4L10 Multiple Choice"
         ],
-        "script_level.chapter": 112,
-        "script_level.position": 4,
         "lesson.key": "Using Data in the Real World",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -2896,8 +2672,6 @@
         "script_level.level_keys": [
           "U4L11 Student Lesson Introduction"
         ],
-        "script_level.chapter": 113,
-        "script_level.position": 1,
         "lesson.key": "Web Requests and APIs",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -2918,8 +2692,6 @@
         "script_level.level_keys": [
           "U4L11 Free Response"
         ],
-        "script_level.chapter": 114,
-        "script_level.position": 2,
         "lesson.key": "Web Requests and APIs",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -2940,8 +2712,6 @@
         "script_level.level_keys": [
           "U4L11 Choose 2"
         ],
-        "script_level.chapter": 115,
-        "script_level.position": 3,
         "lesson.key": "Web Requests and APIs",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -2962,8 +2732,6 @@
         "script_level.level_keys": [
           "U4L11 Multiple Choice"
         ],
-        "script_level.chapter": 116,
-        "script_level.position": 4,
         "lesson.key": "Web Requests and APIs",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -2984,8 +2752,6 @@
         "script_level.level_keys": [
           "U4L12 Student Lesson Introduction"
         ],
-        "script_level.chapter": 117,
-        "script_level.position": 1,
         "lesson.key": "Data, Security, and Privacy",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -3006,8 +2772,6 @@
         "script_level.level_keys": [
           "U4L12 Free Response"
         ],
-        "script_level.chapter": 118,
-        "script_level.position": 2,
         "lesson.key": "Data, Security, and Privacy",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -3028,8 +2792,6 @@
         "script_level.level_keys": [
           "U4L12 Choose 2"
         ],
-        "script_level.chapter": 119,
-        "script_level.position": 3,
         "lesson.key": "Data, Security, and Privacy",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -3050,8 +2812,6 @@
         "script_level.level_keys": [
           "U4L12 Multiple Choice"
         ],
-        "script_level.chapter": 120,
-        "script_level.position": 4,
         "lesson.key": "Data, Security, and Privacy",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -3072,8 +2832,6 @@
         "script_level.level_keys": [
           "U4L13 Student Lesson Introduction"
         ],
-        "script_level.chapter": 121,
-        "script_level.position": 1,
         "lesson.key": "Privacy vs Utility",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -3094,8 +2852,6 @@
         "script_level.level_keys": [
           "U4L13 Free Response"
         ],
-        "script_level.chapter": 122,
-        "script_level.position": 2,
         "lesson.key": "Privacy vs Utility",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -3116,8 +2872,6 @@
         "script_level.level_keys": [
           "U4L13 Choose 2"
         ],
-        "script_level.chapter": 123,
-        "script_level.position": 3,
         "lesson.key": "Privacy vs Utility",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -3138,8 +2892,6 @@
         "script_level.level_keys": [
           "U4L13 Multiple Choice"
         ],
-        "script_level.chapter": 124,
-        "script_level.position": 4,
         "lesson.key": "Privacy vs Utility",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -3160,8 +2912,6 @@
         "script_level.level_keys": [
           "U4L14 Student Lesson Introduction"
         ],
-        "script_level.chapter": 125,
-        "script_level.position": 1,
         "lesson.key": "Privacy in a Digital World",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -3182,8 +2932,6 @@
         "script_level.level_keys": [
           "U4L14 Free Response"
         ],
-        "script_level.chapter": 126,
-        "script_level.position": 2,
         "lesson.key": "Privacy in a Digital World",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -3204,8 +2952,6 @@
         "script_level.level_keys": [
           "U4L14 Choose 2"
         ],
-        "script_level.chapter": 127,
-        "script_level.position": 3,
         "lesson.key": "Privacy in a Digital World",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -3226,8 +2972,6 @@
         "script_level.level_keys": [
           "U4L14 Multiple Choice"
         ],
-        "script_level.chapter": 128,
-        "script_level.position": 4,
         "lesson.key": "Privacy in a Digital World",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -3248,8 +2992,6 @@
         "script_level.level_keys": [
           "U4L15 Student Lesson Introduction"
         ],
-        "script_level.chapter": 129,
-        "script_level.position": 1,
         "lesson.key": "Compiling Data",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -3270,8 +3012,6 @@
         "script_level.level_keys": [
           "U4L15 Free Response"
         ],
-        "script_level.chapter": 130,
-        "script_level.position": 2,
         "lesson.key": "Compiling Data",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -3292,8 +3032,6 @@
         "script_level.level_keys": [
           "U4L15 Choose 2"
         ],
-        "script_level.chapter": 131,
-        "script_level.position": 3,
         "lesson.key": "Compiling Data",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -3314,8 +3052,6 @@
         "script_level.level_keys": [
           "U4L15 Multiple Choice"
         ],
-        "script_level.chapter": 132,
-        "script_level.position": 4,
         "lesson.key": "Compiling Data",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -3336,8 +3072,6 @@
         "script_level.level_keys": [
           "U4L17 Student Lesson Introduction"
         ],
-        "script_level.chapter": 133,
-        "script_level.position": 1,
         "lesson.key": "Designing Data Collection",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -3358,8 +3092,6 @@
         "script_level.level_keys": [
           "U4L17 Free Response"
         ],
-        "script_level.chapter": 134,
-        "script_level.position": 2,
         "lesson.key": "Designing Data Collection",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -3380,8 +3112,6 @@
         "script_level.level_keys": [
           "U4L17 Choose 2"
         ],
-        "script_level.chapter": 135,
-        "script_level.position": 3,
         "lesson.key": "Designing Data Collection",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -3402,8 +3132,6 @@
         "script_level.level_keys": [
           "U4L17 Multiple Choice"
         ],
-        "script_level.chapter": 136,
-        "script_level.position": 4,
         "lesson.key": "Designing Data Collection",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -3424,8 +3152,6 @@
         "script_level.level_keys": [
           "U4L18 Student Lesson Introduction"
         ],
-        "script_level.chapter": 137,
-        "script_level.position": 1,
         "lesson.key": "Designing for Your User",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -3446,8 +3172,6 @@
         "script_level.level_keys": [
           "U4L18 Free Response"
         ],
-        "script_level.chapter": 138,
-        "script_level.position": 2,
         "lesson.key": "Designing for Your User",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -3468,8 +3192,6 @@
         "script_level.level_keys": [
           "U4L18 Choose 2"
         ],
-        "script_level.chapter": 139,
-        "script_level.position": 3,
         "lesson.key": "Designing for Your User",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -3490,8 +3212,6 @@
         "script_level.level_keys": [
           "U4L18 Multiple Choice"
         ],
-        "script_level.chapter": 140,
-        "script_level.position": 4,
         "lesson.key": "Designing for Your User",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -3512,8 +3232,6 @@
         "script_level.level_keys": [
           "U4L19 Student Lesson Introduction"
         ],
-        "script_level.chapter": 141,
-        "script_level.position": 1,
         "lesson.key": "Practice Create PT: Data App",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -3534,8 +3252,6 @@
         "script_level.level_keys": [
           "U4L19 Free Response"
         ],
-        "script_level.chapter": 142,
-        "script_level.position": 2,
         "lesson.key": "Practice Create PT: Data App",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -3556,8 +3272,6 @@
         "script_level.level_keys": [
           "U4L19 Choose 2"
         ],
-        "script_level.chapter": 143,
-        "script_level.position": 3,
         "lesson.key": "Practice Create PT: Data App",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -3578,8 +3292,6 @@
         "script_level.level_keys": [
           "U4L19 Multiple Choice"
         ],
-        "script_level.chapter": 144,
-        "script_level.position": 4,
         "lesson.key": "Practice Create PT: Data App",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -3600,8 +3312,6 @@
         "script_level.level_keys": [
           "CSP Data Unit -Counting Records - Hard Way"
         ],
-        "script_level.chapter": 145,
-        "script_level.position": 1,
         "lesson.key": "What Data Can Tell Us",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -3622,8 +3332,6 @@
         "script_level.level_keys": [
           "CSP Data Unit -Counting Records - Easy Way"
         ],
-        "script_level.chapter": 146,
-        "script_level.position": 2,
         "lesson.key": "What Data Can Tell Us",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -3644,8 +3352,6 @@
         "script_level.level_keys": [
           "CSP Data Unit - Counting Multiple Things"
         ],
-        "script_level.chapter": 147,
-        "script_level.position": 3,
         "lesson.key": "What Data Can Tell Us",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -3666,8 +3372,6 @@
         "script_level.level_keys": [
           "U3L22 Student Lesson Introduction"
         ],
-        "script_level.chapter": 148,
-        "script_level.position": 1,
         "lesson.key": "Permanent Data Storage and Clicker Completion",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -3688,8 +3392,6 @@
         "script_level.level_keys": [
           "U3L17 - introKeyValue"
         ],
-        "script_level.chapter": 149,
-        "script_level.position": 2,
         "lesson.key": "Permanent Data Storage and Clicker Completion",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -3710,8 +3412,6 @@
         "script_level.level_keys": [
           "U3L17 - setKeyValue"
         ],
-        "script_level.chapter": 150,
-        "script_level.position": 3,
         "lesson.key": "Permanent Data Storage and Clicker Completion",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -3732,8 +3432,6 @@
         "script_level.level_keys": [
           "U3L17 - twoSetKeyValue"
         ],
-        "script_level.chapter": 151,
-        "script_level.position": 4,
         "lesson.key": "Permanent Data Storage and Clicker Completion",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -3754,8 +3452,6 @@
         "script_level.level_keys": [
           "U3L17 - introCallbacks"
         ],
-        "script_level.chapter": 152,
-        "script_level.position": 5,
         "lesson.key": "Permanent Data Storage and Clicker Completion",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -3776,8 +3472,6 @@
         "script_level.level_keys": [
           "U3L17 - getKeyValue"
         ],
-        "script_level.chapter": 153,
-        "script_level.position": 6,
         "lesson.key": "Permanent Data Storage and Clicker Completion",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -3798,8 +3492,6 @@
         "script_level.level_keys": [
           "U3L22 Free Response Getting Started"
         ],
-        "script_level.chapter": 154,
-        "script_level.position": 7,
         "lesson.key": "Permanent Data Storage and Clicker Completion",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -3820,8 +3512,6 @@
         "script_level.level_keys": [
           "U3L22 Assessment"
         ],
-        "script_level.chapter": 155,
-        "script_level.position": 8,
         "lesson.key": "Permanent Data Storage and Clicker Completion",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -3842,8 +3532,6 @@
         "script_level.level_keys": [
           "U3L22 Reflection"
         ],
-        "script_level.chapter": 156,
-        "script_level.position": 9,
         "lesson.key": "Permanent Data Storage and Clicker Completion",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -3860,8 +3548,6 @@
         "script_level.level_keys": [
           "U4L02v2 - Finding Trends"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Finding Trends with Visualizations",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -3873,8 +3559,6 @@
         "script_level.level_keys": [
           "U4L04v2 - Student Introduction"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 1,
         "lesson.key": "Good and Bad Data Visualizations",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -3886,8 +3570,6 @@
         "script_level.level_keys": [
           "GoodBadVisualizations_v1"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 2,
         "lesson.key": "Good and Bad Data Visualizations",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -3899,8 +3581,6 @@
         "script_level.level_keys": [
           "GoodBadVisualizations_v2"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 3,
         "lesson.key": "Good and Bad Data Visualizations",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -3912,8 +3592,6 @@
         "script_level.level_keys": [
           "U4L03v2 - Student Introduction"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 1,
         "lesson.key": "Check Your Assumptions",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -3925,8 +3603,6 @@
         "script_level.level_keys": [
           "U4 - Making Data Visualizations - Student Introduction"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 1,
         "lesson.key": "Making Data Visualizations",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -3938,8 +3614,6 @@
         "script_level.level_keys": [
           "U4 - Making Data Visualizations - Getting Started"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 2,
         "lesson.key": "Making Data Visualizations",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -3951,8 +3625,6 @@
         "script_level.level_keys": [
           "U4 - Making Data Visualizations - Scatter Plot"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 3,
         "lesson.key": "Making Data Visualizations",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -3964,8 +3636,6 @@
         "script_level.level_keys": [
           "U4 - Making Data Visualizations - Line Chart"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 4,
         "lesson.key": "Making Data Visualizations",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -3977,8 +3647,6 @@
         "script_level.level_keys": [
           "U4 - Making Data Visualizations - Bar Chart"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 5,
         "lesson.key": "Making Data Visualizations",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -3990,8 +3658,6 @@
         "script_level.level_keys": [
           "U4 - Making Data Visualizations - Free Play"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 6,
         "lesson.key": "Making Data Visualizations",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -4003,8 +3669,6 @@
         "script_level.level_keys": [
           "U4L06v2 Student Lesson Introduction"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 1,
         "lesson.key": "Discover a Data Story",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -4016,8 +3680,6 @@
         "script_level.level_keys": [
           "U4L16 Student Lesson Introduction"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 1,
         "lesson.key": "Cleaning Data",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -4029,8 +3691,6 @@
         "script_level.level_keys": [
           "U4 - Cleaning Data - Activity Guide"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 2,
         "lesson.key": "Cleaning Data",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -4042,8 +3702,6 @@
         "script_level.level_keys": [
           "U4 Cleaning Data Activity Guide Pt2"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 3,
         "lesson.key": "Cleaning Data",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -4055,8 +3713,6 @@
         "script_level.level_keys": [
           "U4 Cleaning Data Activity Guide Pt3"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 4,
         "lesson.key": "Cleaning Data",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -4068,8 +3724,6 @@
         "script_level.level_keys": [
           "U4L16 Free Response"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 5,
         "lesson.key": "Cleaning Data",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -4081,8 +3735,6 @@
         "script_level.level_keys": [
           "U4L16 Choose 2"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 6,
         "lesson.key": "Cleaning Data",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -4094,8 +3746,6 @@
         "script_level.level_keys": [
           "U4L16 Multiple Choice"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 7,
         "lesson.key": "Cleaning Data",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -4107,8 +3757,6 @@
         "script_level.level_keys": [
           "U4L08v2 Student Intro"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 1,
         "lesson.key": "Creating Summary Tables",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -4120,8 +3768,6 @@
         "script_level.level_keys": [
           "U4L08v2 Making Pivot Tables"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 2,
         "lesson.key": "Creating Summary Tables",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -4133,8 +3779,6 @@
         "script_level.level_keys": [
           "U4L08v2 Making Pivot Tables Part 2"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 3,
         "lesson.key": "Creating Summary Tables",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -4146,8 +3790,6 @@
         "script_level.level_keys": [
           "U4L08v2 Making Pivot Tables Part 3"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 4,
         "lesson.key": "Creating Summary Tables",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -4159,8 +3801,6 @@
         "script_level.level_keys": [
           "U4L12 - Student Introduction"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 1,
         "lesson.key": "Rapid Research - Data Innovations",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -4172,8 +3812,6 @@
         "script_level.level_keys": [
           "U4L01 Student Lesson Introduction"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 1,
         "lesson.key": "Why Make Apps?",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -4185,8 +3823,6 @@
         "script_level.level_keys": [
           "U4L01 Free Response"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 2,
         "lesson.key": "Why Make Apps?",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -4198,8 +3834,6 @@
         "script_level.level_keys": [
           "U4L01 Choose 2"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 3,
         "lesson.key": "Why Make Apps?",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -4211,8 +3845,6 @@
         "script_level.level_keys": [
           "U4L01 Multiple Choice"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 4,
         "lesson.key": "Why Make Apps?",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -4224,8 +3856,6 @@
         "script_level.level_keys": [
           "U4L02 Student Lesson Introduction Video"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 1,
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -4237,8 +3867,6 @@
         "script_level.level_keys": [
           "U4 - Objects - eventParameter"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 2,
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -4250,8 +3878,6 @@
         "script_level.level_keys": [
           "U4 - Objects - dotNotation"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 3,
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -4263,8 +3889,6 @@
         "script_level.level_keys": [
           "U4 - Objects - createDotNotation"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 4,
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -4276,8 +3900,6 @@
         "script_level.level_keys": [
           "U4 - Objects - arraysOfObjects"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 5,
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -4289,8 +3911,6 @@
         "script_level.level_keys": [
           "U4 - Objects - accessingPropertiesInArray"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 6,
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -4302,8 +3922,6 @@
         "script_level.level_keys": [
           "U4 - Objects - exemplarContactsApp"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 7,
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -4315,8 +3933,6 @@
         "script_level.level_keys": [
           "U4 - Objects - readStarterCode"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 8,
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -4328,8 +3944,6 @@
         "script_level.level_keys": [
           "U4 - Objects - createContactsData"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 9,
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -4341,8 +3955,6 @@
         "script_level.level_keys": [
           "U4 - Objects - showContact1"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 10,
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -4354,8 +3966,6 @@
         "script_level.level_keys": [
           "U4 - Objects - showContact2"
         ],
-        "script_level.chapter": 39,
-        "script_level.position": 11,
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -4367,8 +3977,6 @@
         "script_level.level_keys": [
           "U4 - Objects - showContact3"
         ],
-        "script_level.chapter": 40,
-        "script_level.position": 12,
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -4380,8 +3988,6 @@
         "script_level.level_keys": [
           "U4 - Objects - pullValues"
         ],
-        "script_level.chapter": 41,
-        "script_level.position": 13,
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -4393,8 +3999,6 @@
         "script_level.level_keys": [
           "U4 - Objects - createContactObject"
         ],
-        "script_level.chapter": 42,
-        "script_level.position": 14,
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -4406,8 +4010,6 @@
         "script_level.level_keys": [
           "U4 - Objects - resetIndexAndShow"
         ],
-        "script_level.chapter": 43,
-        "script_level.position": 15,
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -4419,8 +4021,6 @@
         "script_level.level_keys": [
           "U4 - Objects - showSampleImage"
         ],
-        "script_level.chapter": 44,
-        "script_level.position": 16,
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -4432,8 +4032,6 @@
         "script_level.level_keys": [
           "U4L02 Free Response"
         ],
-        "script_level.chapter": 45,
-        "script_level.position": 17,
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -4445,8 +4043,6 @@
         "script_level.level_keys": [
           "U4L02 Choose 2"
         ],
-        "script_level.chapter": 46,
-        "script_level.position": 18,
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -4458,8 +4054,6 @@
         "script_level.level_keys": [
           "U4L02 Multiple Choice"
         ],
-        "script_level.chapter": 47,
-        "script_level.position": 19,
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -4471,8 +4065,6 @@
         "script_level.level_keys": [
           "U4L03 Student Lesson Introduction"
         ],
-        "script_level.chapter": 48,
-        "script_level.position": 1,
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -4484,8 +4076,6 @@
         "script_level.level_keys": [
           "U4 - CreateRecord - 1"
         ],
-        "script_level.chapter": 49,
-        "script_level.position": 2,
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -4497,8 +4087,6 @@
         "script_level.level_keys": [
           "U4 - CreateRecord - 2"
         ],
-        "script_level.chapter": 50,
-        "script_level.position": 3,
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -4510,8 +4098,6 @@
         "script_level.level_keys": [
           "U4 - CreateRecord - 2.5"
         ],
-        "script_level.chapter": 51,
-        "script_level.position": 4,
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -4523,8 +4109,6 @@
         "script_level.level_keys": [
           "U4 - CreateRecord - 3"
         ],
-        "script_level.chapter": 52,
-        "script_level.position": 5,
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -4536,8 +4120,6 @@
         "script_level.level_keys": [
           "U4 - CreateRecord - 4"
         ],
-        "script_level.chapter": 53,
-        "script_level.position": 6,
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -4549,8 +4131,6 @@
         "script_level.level_keys": [
           "U4 - CreateRecord - 5"
         ],
-        "script_level.chapter": 54,
-        "script_level.position": 7,
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -4562,8 +4142,6 @@
         "script_level.level_keys": [
           "U4 - Edit Data Table by Hand"
         ],
-        "script_level.chapter": 55,
-        "script_level.position": 8,
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -4575,8 +4153,6 @@
         "script_level.level_keys": [
           "U4 - debug column names are case sensitive"
         ],
-        "script_level.chapter": 56,
-        "script_level.position": 9,
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -4588,8 +4164,6 @@
         "script_level.level_keys": [
           "U4 - Add Row By Hand"
         ],
-        "script_level.chapter": 57,
-        "script_level.position": 10,
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -4601,8 +4175,6 @@
         "script_level.level_keys": [
           "U4 - add createRecord to contacts App"
         ],
-        "script_level.chapter": 58,
-        "script_level.position": 11,
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -4614,8 +4186,6 @@
         "script_level.level_keys": [
           "U4 - fix contacts by hand in data table"
         ],
-        "script_level.chapter": 59,
-        "script_level.position": 12,
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -4627,8 +4197,6 @@
         "script_level.level_keys": [
           "U4 - last stage test adding contcts"
         ],
-        "script_level.chapter": 60,
-        "script_level.position": 13,
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -4640,8 +4208,6 @@
         "script_level.level_keys": [
           "U4L04 Student Lesson Introduction"
         ],
-        "script_level.chapter": 61,
-        "script_level.position": 1,
         "lesson.key": "Reading Records",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -4653,8 +4219,6 @@
         "script_level.level_keys": [
           "U4 - Read Record - 1"
         ],
-        "script_level.chapter": 62,
-        "script_level.position": 2,
         "lesson.key": "Reading Records",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -4666,8 +4230,6 @@
         "script_level.level_keys": [
           "U4 - Read Record - 1.2"
         ],
-        "script_level.chapter": 63,
-        "script_level.position": 3,
         "lesson.key": "Reading Records",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -4679,8 +4241,6 @@
         "script_level.level_keys": [
           "U4 - Read Record - 1.3"
         ],
-        "script_level.chapter": 64,
-        "script_level.position": 4,
         "lesson.key": "Reading Records",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -4692,8 +4252,6 @@
         "script_level.level_keys": [
           "U4 - Read Record - 2"
         ],
-        "script_level.chapter": 65,
-        "script_level.position": 5,
         "lesson.key": "Reading Records",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -4705,8 +4263,6 @@
         "script_level.level_keys": [
           "U4 - Read Record - 3"
         ],
-        "script_level.chapter": 66,
-        "script_level.position": 6,
         "lesson.key": "Reading Records",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -4718,8 +4274,6 @@
         "script_level.level_keys": [
           "U4 - Read Record - 4.1"
         ],
-        "script_level.chapter": 67,
-        "script_level.position": 7,
         "lesson.key": "Reading Records",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -4731,8 +4285,6 @@
         "script_level.level_keys": [
           "U4 - Read Record - 5"
         ],
-        "script_level.chapter": 68,
-        "script_level.position": 8,
         "lesson.key": "Reading Records",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -4744,8 +4296,6 @@
         "script_level.level_keys": [
           "U4 - Unique Ids Explanation"
         ],
-        "script_level.chapter": 69,
-        "script_level.position": 9,
         "lesson.key": "Reading Records",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -4757,8 +4307,6 @@
         "script_level.level_keys": [
           "U4 - deleteRecords 0"
         ],
-        "script_level.chapter": 70,
-        "script_level.position": 10,
         "lesson.key": "Reading Records",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -4770,8 +4318,6 @@
         "script_level.level_keys": [
           "U4 - deleteRecords 1"
         ],
-        "script_level.chapter": 71,
-        "script_level.position": 11,
         "lesson.key": "Reading Records",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -4783,8 +4329,6 @@
         "script_level.level_keys": [
           "U4 - deleteRecords 2 delete object"
         ],
-        "script_level.chapter": 72,
-        "script_level.position": 12,
         "lesson.key": "Reading Records",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -4796,8 +4340,6 @@
         "script_level.level_keys": [
           "U4 - ReadRecords - Contacts App 1"
         ],
-        "script_level.chapter": 73,
-        "script_level.position": 13,
         "lesson.key": "Reading Records",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -4809,8 +4351,6 @@
         "script_level.level_keys": [
           "U4 - Read Record - Local vs Remote Data External"
         ],
-        "script_level.chapter": 74,
-        "script_level.position": 14,
         "lesson.key": "Reading Records",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -4822,8 +4362,6 @@
         "script_level.level_keys": [
           "U4 - ReadRecords - Contacts App 2"
         ],
-        "script_level.chapter": 75,
-        "script_level.position": 15,
         "lesson.key": "Reading Records",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -4835,8 +4373,6 @@
         "script_level.level_keys": [
           "U4 - ReadRecords - Contacts App 3"
         ],
-        "script_level.chapter": 76,
-        "script_level.position": 16,
         "lesson.key": "Reading Records",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -4848,8 +4384,6 @@
         "script_level.level_keys": [
           "U4 - ReadRecords - Contacts App 4"
         ],
-        "script_level.chapter": 77,
-        "script_level.position": 17,
         "lesson.key": "Reading Records",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -4861,8 +4395,6 @@
         "script_level.level_keys": [
           "U4 - ReadRecords - Contacts App 5 make delete work"
         ],
-        "script_level.chapter": 78,
-        "script_level.position": 18,
         "lesson.key": "Reading Records",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -4874,8 +4406,6 @@
         "script_level.level_keys": [
           "U4L05 Student Lesson Introduction"
         ],
-        "script_level.chapter": 79,
-        "script_level.position": 1,
         "lesson.key": "Search Terms",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -4887,8 +4417,6 @@
         "script_level.level_keys": [
           "U4L05 Free Response"
         ],
-        "script_level.chapter": 80,
-        "script_level.position": 2,
         "lesson.key": "Search Terms",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -4900,8 +4428,6 @@
         "script_level.level_keys": [
           "U4L05 Choose 2"
         ],
-        "script_level.chapter": 81,
-        "script_level.position": 3,
         "lesson.key": "Search Terms",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -4913,8 +4439,6 @@
         "script_level.level_keys": [
           "U4L05 Multiple Choice"
         ],
-        "script_level.chapter": 82,
-        "script_level.position": 4,
         "lesson.key": "Search Terms",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -4926,8 +4450,6 @@
         "script_level.level_keys": [
           "U4L06 Student Lesson Introduction"
         ],
-        "script_level.chapter": 83,
-        "script_level.position": 1,
         "lesson.key": "Unique IDs, Delete and Update Records",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -4939,8 +4461,6 @@
         "script_level.level_keys": [
           "U4L06 Free Response"
         ],
-        "script_level.chapter": 84,
-        "script_level.position": 2,
         "lesson.key": "Unique IDs, Delete and Update Records",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -4952,8 +4472,6 @@
         "script_level.level_keys": [
           "U4L06 Choose 2"
         ],
-        "script_level.chapter": 85,
-        "script_level.position": 3,
         "lesson.key": "Unique IDs, Delete and Update Records",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -4965,8 +4483,6 @@
         "script_level.level_keys": [
           "U4L06 Multiple Choice"
         ],
-        "script_level.chapter": 86,
-        "script_level.position": 4,
         "lesson.key": "Unique IDs, Delete and Update Records",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -4978,8 +4494,6 @@
         "script_level.level_keys": [
           "U4L07 Student Lesson Introduction"
         ],
-        "script_level.chapter": 87,
-        "script_level.position": 1,
         "lesson.key": "Import, Export, and Visualize Data",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -4991,8 +4505,6 @@
         "script_level.level_keys": [
           "U4 - Charts - Import Data 1"
         ],
-        "script_level.chapter": 88,
-        "script_level.position": 2,
         "lesson.key": "Import, Export, and Visualize Data",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -5004,8 +4516,6 @@
         "script_level.level_keys": [
           "U4 - Charts - Import Data 2"
         ],
-        "script_level.chapter": 89,
-        "script_level.position": 3,
         "lesson.key": "Import, Export, and Visualize Data",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -5017,8 +4527,6 @@
         "script_level.level_keys": [
           "U4 - Charts - Remixing Apps with Data"
         ],
-        "script_level.chapter": 90,
-        "script_level.position": 4,
         "lesson.key": "Import, Export, and Visualize Data",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -5030,8 +4538,6 @@
         "script_level.level_keys": [
           "U4 - Charts - Export Data"
         ],
-        "script_level.chapter": 91,
-        "script_level.position": 5,
         "lesson.key": "Import, Export, and Visualize Data",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -5043,8 +4549,6 @@
         "script_level.level_keys": [
           "U4 - Charts - drawChartFromRecords 1"
         ],
-        "script_level.chapter": 92,
-        "script_level.position": 6,
         "lesson.key": "Import, Export, and Visualize Data",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -5056,8 +4560,6 @@
         "script_level.level_keys": [
           "U4 - Charts - Scatter Chart"
         ],
-        "script_level.chapter": 93,
-        "script_level.position": 7,
         "lesson.key": "Import, Export, and Visualize Data",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -5069,8 +4571,6 @@
         "script_level.level_keys": [
           "U4 - Charts - Line Chart 1"
         ],
-        "script_level.chapter": 94,
-        "script_level.position": 8,
         "lesson.key": "Import, Export, and Visualize Data",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -5082,8 +4582,6 @@
         "script_level.level_keys": [
           "U4 - Charts - Line Chart 2"
         ],
-        "script_level.chapter": 95,
-        "script_level.position": 9,
         "lesson.key": "Import, Export, and Visualize Data",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -5095,8 +4593,6 @@
         "script_level.level_keys": [
           "U4 - Charts - drawChartFromRecords Options 1"
         ],
-        "script_level.chapter": 96,
-        "script_level.position": 10,
         "lesson.key": "Import, Export, and Visualize Data",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -5108,8 +4604,6 @@
         "script_level.level_keys": [
           "U4 - Charts - drawChartFromRecords Options 2"
         ],
-        "script_level.chapter": 97,
-        "script_level.position": 11,
         "lesson.key": "Import, Export, and Visualize Data",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -5121,8 +4615,6 @@
         "script_level.level_keys": [
           "U4L07 Free Response"
         ],
-        "script_level.chapter": 98,
-        "script_level.position": 12,
         "lesson.key": "Import, Export, and Visualize Data",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -5134,8 +4626,6 @@
         "script_level.level_keys": [
           "U4L07 Choose 2"
         ],
-        "script_level.chapter": 99,
-        "script_level.position": 13,
         "lesson.key": "Import, Export, and Visualize Data",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -5147,8 +4637,6 @@
         "script_level.level_keys": [
           "U4L07 Multiple Choice"
         ],
-        "script_level.chapter": 100,
-        "script_level.position": 14,
         "lesson.key": "Import, Export, and Visualize Data",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -5160,8 +4648,6 @@
         "script_level.level_keys": [
           "U4L08 Student Lesson Introduction"
         ],
-        "script_level.chapter": 101,
-        "script_level.position": 1,
         "lesson.key": "Interpreting Data Visualizations",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -5173,8 +4659,6 @@
         "script_level.level_keys": [
           "U4L08 Free Response"
         ],
-        "script_level.chapter": 102,
-        "script_level.position": 2,
         "lesson.key": "Interpreting Data Visualizations",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -5186,8 +4670,6 @@
         "script_level.level_keys": [
           "U4L08 Choose 2"
         ],
-        "script_level.chapter": 103,
-        "script_level.position": 3,
         "lesson.key": "Interpreting Data Visualizations",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -5199,8 +4681,6 @@
         "script_level.level_keys": [
           "U4L08 Multiple Choice"
         ],
-        "script_level.chapter": 104,
-        "script_level.position": 4,
         "lesson.key": "Interpreting Data Visualizations",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -5212,8 +4692,6 @@
         "script_level.level_keys": [
           "U4L09 Student Lesson Introduction"
         ],
-        "script_level.chapter": 105,
-        "script_level.position": 1,
         "lesson.key": "How is Data Collected?",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -5225,8 +4703,6 @@
         "script_level.level_keys": [
           "U4L09 Free Response"
         ],
-        "script_level.chapter": 106,
-        "script_level.position": 2,
         "lesson.key": "How is Data Collected?",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -5238,8 +4714,6 @@
         "script_level.level_keys": [
           "U4L09 Choose 2"
         ],
-        "script_level.chapter": 107,
-        "script_level.position": 3,
         "lesson.key": "How is Data Collected?",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -5251,8 +4725,6 @@
         "script_level.level_keys": [
           "U4L09 Multiple Choice"
         ],
-        "script_level.chapter": 108,
-        "script_level.position": 4,
         "lesson.key": "How is Data Collected?",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -5264,8 +4736,6 @@
         "script_level.level_keys": [
           "U4L10 Student Lesson Introduction"
         ],
-        "script_level.chapter": 109,
-        "script_level.position": 1,
         "lesson.key": "Using Data in the Real World",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -5277,8 +4747,6 @@
         "script_level.level_keys": [
           "U4L10 Free Response"
         ],
-        "script_level.chapter": 110,
-        "script_level.position": 2,
         "lesson.key": "Using Data in the Real World",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -5290,8 +4758,6 @@
         "script_level.level_keys": [
           "U4L10 Choose 2"
         ],
-        "script_level.chapter": 111,
-        "script_level.position": 3,
         "lesson.key": "Using Data in the Real World",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -5303,8 +4769,6 @@
         "script_level.level_keys": [
           "U4L10 Multiple Choice"
         ],
-        "script_level.chapter": 112,
-        "script_level.position": 4,
         "lesson.key": "Using Data in the Real World",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -5316,8 +4780,6 @@
         "script_level.level_keys": [
           "U4L11 Student Lesson Introduction"
         ],
-        "script_level.chapter": 113,
-        "script_level.position": 1,
         "lesson.key": "Web Requests and APIs",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -5329,8 +4791,6 @@
         "script_level.level_keys": [
           "U4L11 Free Response"
         ],
-        "script_level.chapter": 114,
-        "script_level.position": 2,
         "lesson.key": "Web Requests and APIs",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -5342,8 +4802,6 @@
         "script_level.level_keys": [
           "U4L11 Choose 2"
         ],
-        "script_level.chapter": 115,
-        "script_level.position": 3,
         "lesson.key": "Web Requests and APIs",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -5355,8 +4813,6 @@
         "script_level.level_keys": [
           "U4L11 Multiple Choice"
         ],
-        "script_level.chapter": 116,
-        "script_level.position": 4,
         "lesson.key": "Web Requests and APIs",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -5368,8 +4824,6 @@
         "script_level.level_keys": [
           "U4L12 Student Lesson Introduction"
         ],
-        "script_level.chapter": 117,
-        "script_level.position": 1,
         "lesson.key": "Data, Security, and Privacy",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -5381,8 +4835,6 @@
         "script_level.level_keys": [
           "U4L12 Free Response"
         ],
-        "script_level.chapter": 118,
-        "script_level.position": 2,
         "lesson.key": "Data, Security, and Privacy",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -5394,8 +4846,6 @@
         "script_level.level_keys": [
           "U4L12 Choose 2"
         ],
-        "script_level.chapter": 119,
-        "script_level.position": 3,
         "lesson.key": "Data, Security, and Privacy",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -5407,8 +4857,6 @@
         "script_level.level_keys": [
           "U4L12 Multiple Choice"
         ],
-        "script_level.chapter": 120,
-        "script_level.position": 4,
         "lesson.key": "Data, Security, and Privacy",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -5420,8 +4868,6 @@
         "script_level.level_keys": [
           "U4L13 Student Lesson Introduction"
         ],
-        "script_level.chapter": 121,
-        "script_level.position": 1,
         "lesson.key": "Privacy vs Utility",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -5433,8 +4879,6 @@
         "script_level.level_keys": [
           "U4L13 Free Response"
         ],
-        "script_level.chapter": 122,
-        "script_level.position": 2,
         "lesson.key": "Privacy vs Utility",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -5446,8 +4890,6 @@
         "script_level.level_keys": [
           "U4L13 Choose 2"
         ],
-        "script_level.chapter": 123,
-        "script_level.position": 3,
         "lesson.key": "Privacy vs Utility",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -5459,8 +4901,6 @@
         "script_level.level_keys": [
           "U4L13 Multiple Choice"
         ],
-        "script_level.chapter": 124,
-        "script_level.position": 4,
         "lesson.key": "Privacy vs Utility",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -5472,8 +4912,6 @@
         "script_level.level_keys": [
           "U4L14 Student Lesson Introduction"
         ],
-        "script_level.chapter": 125,
-        "script_level.position": 1,
         "lesson.key": "Privacy in a Digital World",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -5485,8 +4923,6 @@
         "script_level.level_keys": [
           "U4L14 Free Response"
         ],
-        "script_level.chapter": 126,
-        "script_level.position": 2,
         "lesson.key": "Privacy in a Digital World",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -5498,8 +4934,6 @@
         "script_level.level_keys": [
           "U4L14 Choose 2"
         ],
-        "script_level.chapter": 127,
-        "script_level.position": 3,
         "lesson.key": "Privacy in a Digital World",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -5511,8 +4945,6 @@
         "script_level.level_keys": [
           "U4L14 Multiple Choice"
         ],
-        "script_level.chapter": 128,
-        "script_level.position": 4,
         "lesson.key": "Privacy in a Digital World",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -5524,8 +4956,6 @@
         "script_level.level_keys": [
           "U4L15 Student Lesson Introduction"
         ],
-        "script_level.chapter": 129,
-        "script_level.position": 1,
         "lesson.key": "Compiling Data",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -5537,8 +4967,6 @@
         "script_level.level_keys": [
           "U4L15 Free Response"
         ],
-        "script_level.chapter": 130,
-        "script_level.position": 2,
         "lesson.key": "Compiling Data",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -5550,8 +4978,6 @@
         "script_level.level_keys": [
           "U4L15 Choose 2"
         ],
-        "script_level.chapter": 131,
-        "script_level.position": 3,
         "lesson.key": "Compiling Data",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -5563,8 +4989,6 @@
         "script_level.level_keys": [
           "U4L15 Multiple Choice"
         ],
-        "script_level.chapter": 132,
-        "script_level.position": 4,
         "lesson.key": "Compiling Data",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -5576,8 +5000,6 @@
         "script_level.level_keys": [
           "U4L17 Student Lesson Introduction"
         ],
-        "script_level.chapter": 133,
-        "script_level.position": 1,
         "lesson.key": "Designing Data Collection",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -5589,8 +5011,6 @@
         "script_level.level_keys": [
           "U4L17 Free Response"
         ],
-        "script_level.chapter": 134,
-        "script_level.position": 2,
         "lesson.key": "Designing Data Collection",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -5602,8 +5022,6 @@
         "script_level.level_keys": [
           "U4L17 Choose 2"
         ],
-        "script_level.chapter": 135,
-        "script_level.position": 3,
         "lesson.key": "Designing Data Collection",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -5615,8 +5033,6 @@
         "script_level.level_keys": [
           "U4L17 Multiple Choice"
         ],
-        "script_level.chapter": 136,
-        "script_level.position": 4,
         "lesson.key": "Designing Data Collection",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -5628,8 +5044,6 @@
         "script_level.level_keys": [
           "U4L18 Student Lesson Introduction"
         ],
-        "script_level.chapter": 137,
-        "script_level.position": 1,
         "lesson.key": "Designing for Your User",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -5641,8 +5055,6 @@
         "script_level.level_keys": [
           "U4L18 Free Response"
         ],
-        "script_level.chapter": 138,
-        "script_level.position": 2,
         "lesson.key": "Designing for Your User",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -5654,8 +5066,6 @@
         "script_level.level_keys": [
           "U4L18 Choose 2"
         ],
-        "script_level.chapter": 139,
-        "script_level.position": 3,
         "lesson.key": "Designing for Your User",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -5667,8 +5077,6 @@
         "script_level.level_keys": [
           "U4L18 Multiple Choice"
         ],
-        "script_level.chapter": 140,
-        "script_level.position": 4,
         "lesson.key": "Designing for Your User",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -5680,8 +5088,6 @@
         "script_level.level_keys": [
           "U4L19 Student Lesson Introduction"
         ],
-        "script_level.chapter": 141,
-        "script_level.position": 1,
         "lesson.key": "Practice Create PT: Data App",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -5693,8 +5099,6 @@
         "script_level.level_keys": [
           "U4L19 Free Response"
         ],
-        "script_level.chapter": 142,
-        "script_level.position": 2,
         "lesson.key": "Practice Create PT: Data App",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -5706,8 +5110,6 @@
         "script_level.level_keys": [
           "U4L19 Choose 2"
         ],
-        "script_level.chapter": 143,
-        "script_level.position": 3,
         "lesson.key": "Practice Create PT: Data App",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -5719,8 +5121,6 @@
         "script_level.level_keys": [
           "U4L19 Multiple Choice"
         ],
-        "script_level.chapter": 144,
-        "script_level.position": 4,
         "lesson.key": "Practice Create PT: Data App",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -5732,8 +5132,6 @@
         "script_level.level_keys": [
           "CSP Data Unit -Counting Records - Hard Way"
         ],
-        "script_level.chapter": 145,
-        "script_level.position": 1,
         "lesson.key": "What Data Can Tell Us",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -5745,8 +5143,6 @@
         "script_level.level_keys": [
           "CSP Data Unit -Counting Records - Easy Way"
         ],
-        "script_level.chapter": 146,
-        "script_level.position": 2,
         "lesson.key": "What Data Can Tell Us",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -5758,8 +5154,6 @@
         "script_level.level_keys": [
           "CSP Data Unit - Counting Multiple Things"
         ],
-        "script_level.chapter": 147,
-        "script_level.position": 3,
         "lesson.key": "What Data Can Tell Us",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -5771,8 +5165,6 @@
         "script_level.level_keys": [
           "U3L22 Student Lesson Introduction"
         ],
-        "script_level.chapter": 148,
-        "script_level.position": 1,
         "lesson.key": "Permanent Data Storage and Clicker Completion",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -5784,8 +5176,6 @@
         "script_level.level_keys": [
           "U3L17 - introKeyValue"
         ],
-        "script_level.chapter": 149,
-        "script_level.position": 2,
         "lesson.key": "Permanent Data Storage and Clicker Completion",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -5797,8 +5187,6 @@
         "script_level.level_keys": [
           "U3L17 - setKeyValue"
         ],
-        "script_level.chapter": 150,
-        "script_level.position": 3,
         "lesson.key": "Permanent Data Storage and Clicker Completion",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -5810,8 +5198,6 @@
         "script_level.level_keys": [
           "U3L17 - twoSetKeyValue"
         ],
-        "script_level.chapter": 151,
-        "script_level.position": 4,
         "lesson.key": "Permanent Data Storage and Clicker Completion",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -5823,8 +5209,6 @@
         "script_level.level_keys": [
           "U3L17 - introCallbacks"
         ],
-        "script_level.chapter": 152,
-        "script_level.position": 5,
         "lesson.key": "Permanent Data Storage and Clicker Completion",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -5836,8 +5220,6 @@
         "script_level.level_keys": [
           "U3L17 - getKeyValue"
         ],
-        "script_level.chapter": 153,
-        "script_level.position": 6,
         "lesson.key": "Permanent Data Storage and Clicker Completion",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -5849,8 +5231,6 @@
         "script_level.level_keys": [
           "U3L22 Free Response Getting Started"
         ],
-        "script_level.chapter": 154,
-        "script_level.position": 7,
         "lesson.key": "Permanent Data Storage and Clicker Completion",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -5862,8 +5242,6 @@
         "script_level.level_keys": [
           "U3L22 Assessment"
         ],
-        "script_level.chapter": 155,
-        "script_level.position": 8,
         "lesson.key": "Permanent Data Storage and Clicker Completion",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"
@@ -5875,8 +5253,6 @@
         "script_level.level_keys": [
           "U3L22 Reflection"
         ],
-        "script_level.chapter": 156,
-        "script_level.position": 9,
         "lesson.key": "Permanent Data Storage and Clicker Completion",
         "lesson_group.key": "",
         "script.name": "cspunit4draft"

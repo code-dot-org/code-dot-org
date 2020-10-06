@@ -303,8 +303,6 @@
         "script_level.level_keys": [
           "UnplugHappyMaps"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Happy Maps",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -325,8 +323,6 @@
         "script_level.level_keys": [
           "K-1 Happy Maps Multi 1"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Happy Maps",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -347,8 +343,6 @@
         "script_level.level_keys": [
           "MoveIt"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 1,
         "lesson.key": "Move it, Move it",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -369,8 +363,6 @@
         "script_level.level_keys": [
           "K-1 Move It Multi 1"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 2,
         "lesson.key": "Move it, Move it",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -391,8 +383,6 @@
         "script_level.level_keys": [
           "blockly:Jigsaw:2"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 1,
         "lesson.key": "Jigsaw: Learn to drag and drop",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -413,8 +403,6 @@
         "script_level.level_keys": [
           "blockly:Jigsaw:3"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 2,
         "lesson.key": "Jigsaw: Learn to drag and drop",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -435,8 +423,6 @@
         "script_level.level_keys": [
           "blockly:Jigsaw:4"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 3,
         "lesson.key": "Jigsaw: Learn to drag and drop",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -457,8 +443,6 @@
         "script_level.level_keys": [
           "blockly:Jigsaw:5"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 4,
         "lesson.key": "Jigsaw: Learn to drag and drop",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -479,8 +463,6 @@
         "script_level.level_keys": [
           "blockly:Jigsaw:6"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 5,
         "lesson.key": "Jigsaw: Learn to drag and drop",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -501,8 +483,6 @@
         "script_level.level_keys": [
           "blockly:Jigsaw:7"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 6,
         "lesson.key": "Jigsaw: Learn to drag and drop",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -523,8 +503,6 @@
         "script_level.level_keys": [
           "blockly:Jigsaw:8"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 7,
         "lesson.key": "Jigsaw: Learn to drag and drop",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -545,8 +523,6 @@
         "script_level.level_keys": [
           "blockly:Jigsaw:9"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 8,
         "lesson.key": "Jigsaw: Learn to drag and drop",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -567,8 +543,6 @@
         "script_level.level_keys": [
           "blockly:Jigsaw:10"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 9,
         "lesson.key": "Jigsaw: Learn to drag and drop",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -589,8 +563,6 @@
         "script_level.level_keys": [
           "blockly:Jigsaw:11"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 10,
         "lesson.key": "Jigsaw: Learn to drag and drop",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -611,8 +583,6 @@
         "script_level.level_keys": [
           "blockly:Jigsaw:12"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 11,
         "lesson.key": "Jigsaw: Learn to drag and drop",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -633,8 +603,6 @@
         "script_level.level_keys": [
           "blockly:Jigsaw:13"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 12,
         "lesson.key": "Jigsaw: Learn to drag and drop",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -655,8 +623,6 @@
         "script_level.level_keys": [
           "k-1 maze 1"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 1,
         "lesson.key": "Maze: Sequence",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -677,8 +643,6 @@
         "script_level.level_keys": [
           "K-1 Maze 2"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 2,
         "lesson.key": "Maze: Sequence",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -699,8 +663,6 @@
         "script_level.level_keys": [
           "K-1 Maze 3"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 3,
         "lesson.key": "Maze: Sequence",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -721,8 +683,6 @@
         "script_level.level_keys": [
           "K-1 Maze 4"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 4,
         "lesson.key": "Maze: Sequence",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -743,8 +703,6 @@
         "script_level.level_keys": [
           "K-1 Maze 5"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 5,
         "lesson.key": "Maze: Sequence",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -765,8 +723,6 @@
         "script_level.level_keys": [
           "K-1 Maze 7"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 6,
         "lesson.key": "Maze: Sequence",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -787,8 +743,6 @@
         "script_level.level_keys": [
           "K-1 Maze 6"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 7,
         "lesson.key": "Maze: Sequence",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -809,8 +763,6 @@
         "script_level.level_keys": [
           "K-1 Maze 8"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 8,
         "lesson.key": "Maze: Sequence",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -831,8 +783,6 @@
         "script_level.level_keys": [
           "K-1 Maze 9"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 9,
         "lesson.key": "Maze: Sequence",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -853,8 +803,6 @@
         "script_level.level_keys": [
           "K-1 Maze 10"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 10,
         "lesson.key": "Maze: Sequence",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -875,8 +823,6 @@
         "script_level.level_keys": [
           "K-1 Maze 11"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 11,
         "lesson.key": "Maze: Sequence",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -897,8 +843,6 @@
         "script_level.level_keys": [
           "K-1 Maze Sequence Assessment 1"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 12,
         "lesson.key": "Maze: Sequence",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -919,8 +863,6 @@
         "script_level.level_keys": [
           "K-1 Maze Sequence Assessment 2"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 13,
         "lesson.key": "Maze: Sequence",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -941,8 +883,6 @@
         "script_level.level_keys": [
           "K-1 Maze Multiple Choice 2"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 14,
         "lesson.key": "Maze: Sequence",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -963,8 +903,6 @@
         "script_level.level_keys": [
           "K-1 Maze Match 1"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 15,
         "lesson.key": "Maze: Sequence",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -985,8 +923,6 @@
         "script_level.level_keys": [
           "course1_maze_seq_challenge1"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 16,
         "lesson.key": "Maze: Sequence",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -1007,8 +943,6 @@
         "script_level.level_keys": [
           "course1_maze_seq_challenge2"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 17,
         "lesson.key": "Maze: Sequence",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -1029,8 +963,6 @@
         "script_level.level_keys": [
           "K-1 maze debug 1"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 1,
         "lesson.key": "Maze: Debugging",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -1051,8 +983,6 @@
         "script_level.level_keys": [
           "K-1 maze debug 2"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 2,
         "lesson.key": "Maze: Debugging",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -1073,8 +1003,6 @@
         "script_level.level_keys": [
           "K-1 maze debug 3"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 3,
         "lesson.key": "Maze: Debugging",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -1095,8 +1023,6 @@
         "script_level.level_keys": [
           "K-1 maze debug 4"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 4,
         "lesson.key": "Maze: Debugging",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -1117,8 +1043,6 @@
         "script_level.level_keys": [
           "K-1 maze debug 5"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 5,
         "lesson.key": "Maze: Debugging",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -1139,8 +1063,6 @@
         "script_level.level_keys": [
           "K-1 maze debug 6"
         ],
-        "script_level.chapter": 39,
-        "script_level.position": 6,
         "lesson.key": "Maze: Debugging",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -1161,8 +1083,6 @@
         "script_level.level_keys": [
           "K-1 maze debug 7"
         ],
-        "script_level.chapter": 40,
-        "script_level.position": 7,
         "lesson.key": "Maze: Debugging",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -1183,8 +1103,6 @@
         "script_level.level_keys": [
           "K-1 maze debug 8"
         ],
-        "script_level.chapter": 41,
-        "script_level.position": 8,
         "lesson.key": "Maze: Debugging",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -1205,8 +1123,6 @@
         "script_level.level_keys": [
           "K-1 maze debug 9"
         ],
-        "script_level.chapter": 42,
-        "script_level.position": 9,
         "lesson.key": "Maze: Debugging",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -1227,8 +1143,6 @@
         "script_level.level_keys": [
           "K-1 maze debug 10"
         ],
-        "script_level.chapter": 43,
-        "script_level.position": 10,
         "lesson.key": "Maze: Debugging",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -1249,8 +1163,6 @@
         "script_level.level_keys": [
           "K-1 maze debug 11"
         ],
-        "script_level.chapter": 44,
-        "script_level.position": 11,
         "lesson.key": "Maze: Debugging",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -1271,8 +1183,6 @@
         "script_level.level_keys": [
           "K-1 Maze Debugging Multi 1"
         ],
-        "script_level.chapter": 45,
-        "script_level.position": 12,
         "lesson.key": "Maze: Debugging",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -1293,8 +1203,6 @@
         "script_level.level_keys": [
           "course1_maze_debugging_challenge1"
         ],
-        "script_level.chapter": 46,
-        "script_level.position": 13,
         "lesson.key": "Maze: Debugging",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -1315,8 +1223,6 @@
         "script_level.level_keys": [
           "course1_maze_debugging_challenge2"
         ],
-        "script_level.chapter": 47,
-        "script_level.position": 14,
         "lesson.key": "Maze: Debugging",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -1337,8 +1243,6 @@
         "script_level.level_keys": [
           "PlantASeed"
         ],
-        "script_level.chapter": 48,
-        "script_level.position": 1,
         "lesson.key": "Real-life Algorithms: Plant a Seed",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -1359,8 +1263,6 @@
         "script_level.level_keys": [
           "K-1 Plant a Seed Multi 1"
         ],
-        "script_level.chapter": 49,
-        "script_level.position": 2,
         "lesson.key": "Real-life Algorithms: Plant a Seed",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -1381,8 +1283,6 @@
         "script_level.level_keys": [
           "K-1 Plant a Seed Multi 2"
         ],
-        "script_level.chapter": 50,
-        "script_level.position": 3,
         "lesson.key": "Real-life Algorithms: Plant a Seed",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -1403,8 +1303,6 @@
         "script_level.level_keys": [
           "K-1 Bee 1"
         ],
-        "script_level.chapter": 51,
-        "script_level.position": 1,
         "lesson.key": "Bee: Sequence",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -1425,8 +1323,6 @@
         "script_level.level_keys": [
           "K-1 Bee 2"
         ],
-        "script_level.chapter": 52,
-        "script_level.position": 2,
         "lesson.key": "Bee: Sequence",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -1447,8 +1343,6 @@
         "script_level.level_keys": [
           "K-1 Bee 3"
         ],
-        "script_level.chapter": 53,
-        "script_level.position": 3,
         "lesson.key": "Bee: Sequence",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -1469,8 +1363,6 @@
         "script_level.level_keys": [
           "K-1 Bee 4"
         ],
-        "script_level.chapter": 54,
-        "script_level.position": 4,
         "lesson.key": "Bee: Sequence",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -1491,8 +1383,6 @@
         "script_level.level_keys": [
           "K-1 Bee 5"
         ],
-        "script_level.chapter": 55,
-        "script_level.position": 5,
         "lesson.key": "Bee: Sequence",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -1513,8 +1403,6 @@
         "script_level.level_keys": [
           "K-1 Bee 6"
         ],
-        "script_level.chapter": 56,
-        "script_level.position": 6,
         "lesson.key": "Bee: Sequence",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -1535,8 +1423,6 @@
         "script_level.level_keys": [
           "K-1 Bee 7"
         ],
-        "script_level.chapter": 57,
-        "script_level.position": 7,
         "lesson.key": "Bee: Sequence",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -1557,8 +1443,6 @@
         "script_level.level_keys": [
           "K-1 Bee 9"
         ],
-        "script_level.chapter": 58,
-        "script_level.position": 8,
         "lesson.key": "Bee: Sequence",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -1579,8 +1463,6 @@
         "script_level.level_keys": [
           "K-1 Bee 11"
         ],
-        "script_level.chapter": 59,
-        "script_level.position": 9,
         "lesson.key": "Bee: Sequence",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -1601,8 +1483,6 @@
         "script_level.level_keys": [
           "K-1 Bee Puzzle 12"
         ],
-        "script_level.chapter": 60,
-        "script_level.position": 10,
         "lesson.key": "Bee: Sequence",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -1623,8 +1503,6 @@
         "script_level.level_keys": [
           "K-1 Bee 13"
         ],
-        "script_level.chapter": 61,
-        "script_level.position": 11,
         "lesson.key": "Bee: Sequence",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -1645,8 +1523,6 @@
         "script_level.level_keys": [
           "K-1 Bee 14"
         ],
-        "script_level.chapter": 62,
-        "script_level.position": 12,
         "lesson.key": "Bee: Sequence",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -1667,8 +1543,6 @@
         "script_level.level_keys": [
           "K-1 Bee 15"
         ],
-        "script_level.chapter": 63,
-        "script_level.position": 13,
         "lesson.key": "Bee: Sequence",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -1689,8 +1563,6 @@
         "script_level.level_keys": [
           "K-1 Bee 1 Multi 1"
         ],
-        "script_level.chapter": 64,
-        "script_level.position": 14,
         "lesson.key": "Bee: Sequence",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -1711,8 +1583,6 @@
         "script_level.level_keys": [
           "K-1 Bee 1 Multi 2"
         ],
-        "script_level.chapter": 65,
-        "script_level.position": 15,
         "lesson.key": "Bee: Sequence",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -1733,8 +1603,6 @@
         "script_level.level_keys": [
           "K-1 Artist1 1"
         ],
-        "script_level.chapter": 66,
-        "script_level.position": 1,
         "lesson.key": "Artist: Sequence",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -1755,8 +1623,6 @@
         "script_level.level_keys": [
           "K-1 Artist1 2"
         ],
-        "script_level.chapter": 67,
-        "script_level.position": 2,
         "lesson.key": "Artist: Sequence",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -1777,8 +1643,6 @@
         "script_level.level_keys": [
           "K-1 Artist1 3"
         ],
-        "script_level.chapter": 68,
-        "script_level.position": 3,
         "lesson.key": "Artist: Sequence",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -1799,8 +1663,6 @@
         "script_level.level_keys": [
           "K-1 Artist1 4"
         ],
-        "script_level.chapter": 69,
-        "script_level.position": 4,
         "lesson.key": "Artist: Sequence",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -1821,8 +1683,6 @@
         "script_level.level_keys": [
           "K-1 Artist1 5"
         ],
-        "script_level.chapter": 70,
-        "script_level.position": 5,
         "lesson.key": "Artist: Sequence",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -1843,8 +1703,6 @@
         "script_level.level_keys": [
           "K-1 Artist1 6"
         ],
-        "script_level.chapter": 71,
-        "script_level.position": 6,
         "lesson.key": "Artist: Sequence",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -1865,8 +1723,6 @@
         "script_level.level_keys": [
           "K-1 Artist1 9"
         ],
-        "script_level.chapter": 72,
-        "script_level.position": 7,
         "lesson.key": "Artist: Sequence",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -1887,8 +1743,6 @@
         "script_level.level_keys": [
           "K-1 Artist1 10"
         ],
-        "script_level.chapter": 73,
-        "script_level.position": 8,
         "lesson.key": "Artist: Sequence",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -1909,8 +1763,6 @@
         "script_level.level_keys": [
           "K-1 artist 1 level 9"
         ],
-        "script_level.chapter": 74,
-        "script_level.position": 9,
         "lesson.key": "Artist: Sequence",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -1931,8 +1783,6 @@
         "script_level.level_keys": [
           "K-1 artist 1 level 10"
         ],
-        "script_level.chapter": 75,
-        "script_level.position": 10,
         "lesson.key": "Artist: Sequence",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -1953,8 +1803,6 @@
         "script_level.level_keys": [
           "K-1 Artist 1 Multi 1"
         ],
-        "script_level.chapter": 76,
-        "script_level.position": 11,
         "lesson.key": "Artist: Sequence",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -1975,8 +1823,6 @@
         "script_level.level_keys": [
           "K-1 Artist 1 Multi 2"
         ],
-        "script_level.chapter": 77,
-        "script_level.position": 12,
         "lesson.key": "Artist: Sequence",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -1997,8 +1843,6 @@
         "script_level.level_keys": [
           "course1_artist_loops_challenge1"
         ],
-        "script_level.chapter": 78,
-        "script_level.position": 13,
         "lesson.key": "Artist: Sequence",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -2019,8 +1863,6 @@
         "script_level.level_keys": [
           "course1_artist_loops_challenge2"
         ],
-        "script_level.chapter": 79,
-        "script_level.position": 14,
         "lesson.key": "Artist: Sequence",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -2041,8 +1883,6 @@
         "script_level.level_keys": [
           "BuildingAFoundation"
         ],
-        "script_level.chapter": 80,
-        "script_level.position": 1,
         "lesson.key": "Building a Foundation",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -2063,8 +1903,6 @@
         "script_level.level_keys": [
           "K-1 Building a Foundation Assessment"
         ],
-        "script_level.chapter": 81,
-        "script_level.position": 2,
         "lesson.key": "Building a Foundation",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -2085,8 +1923,6 @@
         "script_level.level_keys": [
           "K-1 Artist2 1"
         ],
-        "script_level.chapter": 82,
-        "script_level.position": 1,
         "lesson.key": "Artist: Shapes",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -2107,8 +1943,6 @@
         "script_level.level_keys": [
           "K-1 Artist2 2"
         ],
-        "script_level.chapter": 83,
-        "script_level.position": 2,
         "lesson.key": "Artist: Shapes",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -2129,8 +1963,6 @@
         "script_level.level_keys": [
           "K-1 Artist2 3"
         ],
-        "script_level.chapter": 84,
-        "script_level.position": 3,
         "lesson.key": "Artist: Shapes",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -2151,8 +1983,6 @@
         "script_level.level_keys": [
           "K-1 Artist2 4"
         ],
-        "script_level.chapter": 85,
-        "script_level.position": 4,
         "lesson.key": "Artist: Shapes",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -2173,8 +2003,6 @@
         "script_level.level_keys": [
           "K-1 Artist2 5"
         ],
-        "script_level.chapter": 86,
-        "script_level.position": 5,
         "lesson.key": "Artist: Shapes",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -2195,8 +2023,6 @@
         "script_level.level_keys": [
           "K-1 Artist2 6"
         ],
-        "script_level.chapter": 87,
-        "script_level.position": 6,
         "lesson.key": "Artist: Shapes",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -2217,8 +2043,6 @@
         "script_level.level_keys": [
           "K-1 Artist2_7"
         ],
-        "script_level.chapter": 88,
-        "script_level.position": 7,
         "lesson.key": "Artist: Shapes",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -2239,8 +2063,6 @@
         "script_level.level_keys": [
           "K-1 Artist2 Assessment1"
         ],
-        "script_level.chapter": 89,
-        "script_level.position": 8,
         "lesson.key": "Artist: Shapes",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -2261,8 +2083,6 @@
         "script_level.level_keys": [
           "K-1 Artist 2 Match 2"
         ],
-        "script_level.chapter": 90,
-        "script_level.position": 9,
         "lesson.key": "Artist: Shapes",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -2283,8 +2103,6 @@
         "script_level.level_keys": [
           "K-1 Artist2 Free Draw"
         ],
-        "script_level.chapter": 91,
-        "script_level.position": 10,
         "lesson.key": "Artist: Shapes",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -2305,8 +2123,6 @@
         "script_level.level_keys": [
           "blockly:CustomMaze:wordsearch_k_1"
         ],
-        "script_level.chapter": 92,
-        "script_level.position": 1,
         "lesson.key": "Spelling Bee",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -2327,8 +2143,6 @@
         "script_level.level_keys": [
           "blockly:CustomMaze:wordsearch_k_2"
         ],
-        "script_level.chapter": 93,
-        "script_level.position": 2,
         "lesson.key": "Spelling Bee",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -2349,8 +2163,6 @@
         "script_level.level_keys": [
           "blockly:CustomMaze:wordsearch_k_3"
         ],
-        "script_level.chapter": 94,
-        "script_level.position": 3,
         "lesson.key": "Spelling Bee",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -2371,8 +2183,6 @@
         "script_level.level_keys": [
           "blockly:CustomMaze:wordsearch_k_4"
         ],
-        "script_level.chapter": 95,
-        "script_level.position": 4,
         "lesson.key": "Spelling Bee",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -2393,8 +2203,6 @@
         "script_level.level_keys": [
           "blockly:CustomMaze:wordsearch_k_6"
         ],
-        "script_level.chapter": 96,
-        "script_level.position": 5,
         "lesson.key": "Spelling Bee",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -2415,8 +2223,6 @@
         "script_level.level_keys": [
           "blockly:CustomMaze:wordsearch_k_9"
         ],
-        "script_level.chapter": 97,
-        "script_level.position": 6,
         "lesson.key": "Spelling Bee",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -2437,8 +2243,6 @@
         "script_level.level_keys": [
           "blockly:CustomMaze:wordsearch_k_13"
         ],
-        "script_level.chapter": 98,
-        "script_level.position": 7,
         "lesson.key": "Spelling Bee",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -2459,8 +2263,6 @@
         "script_level.level_keys": [
           "blockly:CustomMaze:wordsearch_k_15"
         ],
-        "script_level.chapter": 99,
-        "script_level.position": 8,
         "lesson.key": "Spelling Bee",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -2481,8 +2283,6 @@
         "script_level.level_keys": [
           "blockly:CustomMaze:wordsearch_k_16"
         ],
-        "script_level.chapter": 100,
-        "script_level.position": 9,
         "lesson.key": "Spelling Bee",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -2503,8 +2303,6 @@
         "script_level.level_keys": [
           "blockly:CustomMaze:wordsearch_k_20"
         ],
-        "script_level.chapter": 101,
-        "script_level.position": 10,
         "lesson.key": "Spelling Bee",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -2525,8 +2323,6 @@
         "script_level.level_keys": [
           "K-1 Word Search Multi 1"
         ],
-        "script_level.chapter": 102,
-        "script_level.position": 11,
         "lesson.key": "Spelling Bee",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -2547,8 +2343,6 @@
         "script_level.level_keys": [
           "K-1 Word Search Multi 3"
         ],
-        "script_level.chapter": 103,
-        "script_level.position": 12,
         "lesson.key": "Spelling Bee",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -2569,8 +2363,6 @@
         "script_level.level_keys": [
           "GettingLoopy"
         ],
-        "script_level.chapter": 104,
-        "script_level.position": 1,
         "lesson.key": "Getting Loopy",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -2591,8 +2383,6 @@
         "script_level.level_keys": [
           "K-1 Getting Loopy Multi 1"
         ],
-        "script_level.chapter": 105,
-        "script_level.position": 2,
         "lesson.key": "Getting Loopy",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -2613,8 +2403,6 @@
         "script_level.level_keys": [
           "K-1 Maze Loops 1"
         ],
-        "script_level.chapter": 106,
-        "script_level.position": 1,
         "lesson.key": "Maze: Loops",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -2635,8 +2423,6 @@
         "script_level.level_keys": [
           "K-1 Maze Loops 2"
         ],
-        "script_level.chapter": 107,
-        "script_level.position": 2,
         "lesson.key": "Maze: Loops",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -2657,8 +2443,6 @@
         "script_level.level_keys": [
           "K-1 Maze Loops 3"
         ],
-        "script_level.chapter": 108,
-        "script_level.position": 3,
         "lesson.key": "Maze: Loops",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -2679,8 +2463,6 @@
         "script_level.level_keys": [
           "K-1 Maze Loops 5"
         ],
-        "script_level.chapter": 109,
-        "script_level.position": 4,
         "lesson.key": "Maze: Loops",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -2701,8 +2483,6 @@
         "script_level.level_keys": [
           "K-1 Maze Loops 6"
         ],
-        "script_level.chapter": 110,
-        "script_level.position": 5,
         "lesson.key": "Maze: Loops",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -2723,8 +2503,6 @@
         "script_level.level_keys": [
           "K-1 Maze Loops 7"
         ],
-        "script_level.chapter": 111,
-        "script_level.position": 6,
         "lesson.key": "Maze: Loops",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -2745,8 +2523,6 @@
         "script_level.level_keys": [
           "K-1 Maze Loops 8"
         ],
-        "script_level.chapter": 112,
-        "script_level.position": 7,
         "lesson.key": "Maze: Loops",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -2767,8 +2543,6 @@
         "script_level.level_keys": [
           "K-1 Maze Loops 10"
         ],
-        "script_level.chapter": 113,
-        "script_level.position": 8,
         "lesson.key": "Maze: Loops",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -2789,8 +2563,6 @@
         "script_level.level_keys": [
           "K-1 Maze Loops 11"
         ],
-        "script_level.chapter": 114,
-        "script_level.position": 9,
         "lesson.key": "Maze: Loops",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -2811,8 +2583,6 @@
         "script_level.level_keys": [
           "K-1 Maze Loops 12"
         ],
-        "script_level.chapter": 115,
-        "script_level.position": 10,
         "lesson.key": "Maze: Loops",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -2833,8 +2603,6 @@
         "script_level.level_keys": [
           "K-1 Maze Loops Assessment 1"
         ],
-        "script_level.chapter": 116,
-        "script_level.position": 11,
         "lesson.key": "Maze: Loops",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -2855,8 +2623,6 @@
         "script_level.level_keys": [
           "K-1 Maze Loops Assessment 2"
         ],
-        "script_level.chapter": 117,
-        "script_level.position": 12,
         "lesson.key": "Maze: Loops",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -2877,8 +2643,6 @@
         "script_level.level_keys": [
           "K-1 Maze Loops Multi 1"
         ],
-        "script_level.chapter": 118,
-        "script_level.position": 13,
         "lesson.key": "Maze: Loops",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -2899,8 +2663,6 @@
         "script_level.level_keys": [
           "K-1 Maze Loops Multi 2"
         ],
-        "script_level.chapter": 119,
-        "script_level.position": 14,
         "lesson.key": "Maze: Loops",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -2921,8 +2683,6 @@
         "script_level.level_keys": [
           "course1_collector_loops_challenge1"
         ],
-        "script_level.chapter": 120,
-        "script_level.position": 15,
         "lesson.key": "Maze: Loops",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -2943,8 +2703,6 @@
         "script_level.level_keys": [
           "course1_collector_loops_challenge2"
         ],
-        "script_level.chapter": 121,
-        "script_level.position": 16,
         "lesson.key": "Maze: Loops",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -2965,8 +2723,6 @@
         "script_level.level_keys": [
           "K-1 Bee Loops 1"
         ],
-        "script_level.chapter": 122,
-        "script_level.position": 1,
         "lesson.key": "Bee: Loops",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -2987,8 +2743,6 @@
         "script_level.level_keys": [
           "K-1 Bee Loops 2"
         ],
-        "script_level.chapter": 123,
-        "script_level.position": 2,
         "lesson.key": "Bee: Loops",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -3009,8 +2763,6 @@
         "script_level.level_keys": [
           "K-1 Bee Loops 3"
         ],
-        "script_level.chapter": 124,
-        "script_level.position": 3,
         "lesson.key": "Bee: Loops",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -3031,8 +2783,6 @@
         "script_level.level_keys": [
           "K-1 Bee Loops 4"
         ],
-        "script_level.chapter": 125,
-        "script_level.position": 4,
         "lesson.key": "Bee: Loops",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -3053,8 +2803,6 @@
         "script_level.level_keys": [
           "K-1 Bee Loops 5"
         ],
-        "script_level.chapter": 126,
-        "script_level.position": 5,
         "lesson.key": "Bee: Loops",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -3075,8 +2823,6 @@
         "script_level.level_keys": [
           "K-1 Bee Loops 6"
         ],
-        "script_level.chapter": 127,
-        "script_level.position": 6,
         "lesson.key": "Bee: Loops",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -3097,8 +2843,6 @@
         "script_level.level_keys": [
           "K-1 Bee Loops 7"
         ],
-        "script_level.chapter": 128,
-        "script_level.position": 7,
         "lesson.key": "Bee: Loops",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -3119,8 +2863,6 @@
         "script_level.level_keys": [
           "K-1 Bee Loops 8"
         ],
-        "script_level.chapter": 129,
-        "script_level.position": 8,
         "lesson.key": "Bee: Loops",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -3141,8 +2883,6 @@
         "script_level.level_keys": [
           "K-1 Bee Loops 9"
         ],
-        "script_level.chapter": 130,
-        "script_level.position": 9,
         "lesson.key": "Bee: Loops",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -3163,8 +2903,6 @@
         "script_level.level_keys": [
           "K-1 Bee Loops 10"
         ],
-        "script_level.chapter": 131,
-        "script_level.position": 10,
         "lesson.key": "Bee: Loops",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -3185,8 +2923,6 @@
         "script_level.level_keys": [
           "K-1 Bee Loops 11"
         ],
-        "script_level.chapter": 132,
-        "script_level.position": 11,
         "lesson.key": "Bee: Loops",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -3207,8 +2943,6 @@
         "script_level.level_keys": [
           "K-1 Bee Loops 12"
         ],
-        "script_level.chapter": 133,
-        "script_level.position": 12,
         "lesson.key": "Bee: Loops",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -3229,8 +2963,6 @@
         "script_level.level_keys": [
           "K-1 Bee Loops Match 1"
         ],
-        "script_level.chapter": 134,
-        "script_level.position": 13,
         "lesson.key": "Bee: Loops",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -3251,8 +2983,6 @@
         "script_level.level_keys": [
           "course1_collector_loops_challenge3"
         ],
-        "script_level.chapter": 135,
-        "script_level.position": 14,
         "lesson.key": "Bee: Loops",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -3273,8 +3003,6 @@
         "script_level.level_keys": [
           "course1_collector_loops_challenge4"
         ],
-        "script_level.chapter": 136,
-        "script_level.position": 15,
         "lesson.key": "Bee: Loops",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -3295,8 +3023,6 @@
         "script_level.level_keys": [
           "BigEvent"
         ],
-        "script_level.chapter": 137,
-        "script_level.position": 1,
         "lesson.key": "The Big Event",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -3317,8 +3043,6 @@
         "script_level.level_keys": [
           "K-1 Big Event Match 1"
         ],
-        "script_level.chapter": 138,
-        "script_level.position": 2,
         "lesson.key": "The Big Event",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -3339,8 +3063,6 @@
         "script_level.level_keys": [
           "blockly:Studio:k1_1"
         ],
-        "script_level.chapter": 139,
-        "script_level.position": 1,
         "lesson.key": "Studio: Create a Story",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -3361,8 +3083,6 @@
         "script_level.level_keys": [
           "blockly:Studio:k1_2"
         ],
-        "script_level.chapter": 140,
-        "script_level.position": 2,
         "lesson.key": "Studio: Create a Story",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -3383,8 +3103,6 @@
         "script_level.level_keys": [
           "blockly:Studio:k1_3"
         ],
-        "script_level.chapter": 141,
-        "script_level.position": 3,
         "lesson.key": "Studio: Create a Story",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -3405,8 +3123,6 @@
         "script_level.level_keys": [
           "blockly:Studio:k1_4"
         ],
-        "script_level.chapter": 142,
-        "script_level.position": 4,
         "lesson.key": "Studio: Create a Story",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -3427,8 +3143,6 @@
         "script_level.level_keys": [
           "blockly:Studio:k1_5"
         ],
-        "script_level.chapter": 143,
-        "script_level.position": 5,
         "lesson.key": "Studio: Create a Story",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -3449,8 +3163,6 @@
         "script_level.level_keys": [
           "blockly:Studio:k1_6"
         ],
-        "script_level.chapter": 144,
-        "script_level.position": 6,
         "lesson.key": "Studio: Create a Story",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -3471,8 +3183,6 @@
         "script_level.level_keys": [
           "course1_playlab_events_challenge1"
         ],
-        "script_level.chapter": 145,
-        "script_level.position": 7,
         "lesson.key": "Studio: Create a Story",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -3493,8 +3203,6 @@
         "script_level.level_keys": [
           "course1_playlab_events_challenge2"
         ],
-        "script_level.chapter": 146,
-        "script_level.position": 8,
         "lesson.key": "Studio: Create a Story",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -3515,8 +3223,6 @@
         "script_level.level_keys": [
           "GoingPlacesSafely"
         ],
-        "script_level.chapter": 147,
-        "script_level.position": 1,
         "lesson.key": "Going Places Safely",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -3537,8 +3243,6 @@
         "script_level.level_keys": [
           "K-1 Keep it Private Multi 1"
         ],
-        "script_level.chapter": 148,
-        "script_level.position": 2,
         "lesson.key": "Going Places Safely",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -3559,8 +3263,6 @@
         "script_level.level_keys": [
           "K-1 Artist Loops 1"
         ],
-        "script_level.chapter": 149,
-        "script_level.position": 1,
         "lesson.key": "Artist: Loops",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -3581,8 +3283,6 @@
         "script_level.level_keys": [
           "K-1 Artist Loops 2"
         ],
-        "script_level.chapter": 150,
-        "script_level.position": 2,
         "lesson.key": "Artist: Loops",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -3603,8 +3303,6 @@
         "script_level.level_keys": [
           "K-1 Artist Loops 3"
         ],
-        "script_level.chapter": 151,
-        "script_level.position": 3,
         "lesson.key": "Artist: Loops",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -3625,8 +3323,6 @@
         "script_level.level_keys": [
           "K-1 Artist Loops 4"
         ],
-        "script_level.chapter": 152,
-        "script_level.position": 4,
         "lesson.key": "Artist: Loops",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -3647,8 +3343,6 @@
         "script_level.level_keys": [
           "K-1 Artist Loops 5"
         ],
-        "script_level.chapter": 153,
-        "script_level.position": 5,
         "lesson.key": "Artist: Loops",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -3669,8 +3363,6 @@
         "script_level.level_keys": [
           "K-1 Artist Loops 6"
         ],
-        "script_level.chapter": 154,
-        "script_level.position": 6,
         "lesson.key": "Artist: Loops",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -3691,8 +3383,6 @@
         "script_level.level_keys": [
           "K-1 Artist Loops 7"
         ],
-        "script_level.chapter": 155,
-        "script_level.position": 7,
         "lesson.key": "Artist: Loops",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -3713,8 +3403,6 @@
         "script_level.level_keys": [
           "K-1 Artist Loops 8"
         ],
-        "script_level.chapter": 156,
-        "script_level.position": 8,
         "lesson.key": "Artist: Loops",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -3735,8 +3423,6 @@
         "script_level.level_keys": [
           "K-1 Artist Loops 9"
         ],
-        "script_level.chapter": 157,
-        "script_level.position": 9,
         "lesson.key": "Artist: Loops",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -3757,8 +3443,6 @@
         "script_level.level_keys": [
           "K-1 Artist Loops Free Play"
         ],
-        "script_level.chapter": 158,
-        "script_level.position": 10,
         "lesson.key": "Artist: Loops",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -3779,8 +3463,6 @@
         "script_level.level_keys": [
           "course1_artist_loops_challenge3"
         ],
-        "script_level.chapter": 159,
-        "script_level.position": 11,
         "lesson.key": "Artist: Loops",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -3801,8 +3483,6 @@
         "script_level.level_keys": [
           "course1_artist_loops_challenge4"
         ],
-        "script_level.chapter": 160,
-        "script_level.position": 12,
         "lesson.key": "Artist: Loops",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -3819,8 +3499,6 @@
         "script_level.level_keys": [
           "UnplugHappyMaps"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Happy Maps",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -3832,8 +3510,6 @@
         "script_level.level_keys": [
           "K-1 Happy Maps Multi 1"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Happy Maps",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -3845,8 +3521,6 @@
         "script_level.level_keys": [
           "MoveIt"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 1,
         "lesson.key": "Move it, Move it",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -3858,8 +3532,6 @@
         "script_level.level_keys": [
           "K-1 Move It Multi 1"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 2,
         "lesson.key": "Move it, Move it",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -3871,8 +3543,6 @@
         "script_level.level_keys": [
           "blockly:Jigsaw:2"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 1,
         "lesson.key": "Jigsaw: Learn to drag and drop",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -3884,8 +3554,6 @@
         "script_level.level_keys": [
           "blockly:Jigsaw:3"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 2,
         "lesson.key": "Jigsaw: Learn to drag and drop",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -3897,8 +3565,6 @@
         "script_level.level_keys": [
           "blockly:Jigsaw:4"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 3,
         "lesson.key": "Jigsaw: Learn to drag and drop",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -3910,8 +3576,6 @@
         "script_level.level_keys": [
           "blockly:Jigsaw:5"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 4,
         "lesson.key": "Jigsaw: Learn to drag and drop",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -3923,8 +3587,6 @@
         "script_level.level_keys": [
           "blockly:Jigsaw:6"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 5,
         "lesson.key": "Jigsaw: Learn to drag and drop",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -3936,8 +3598,6 @@
         "script_level.level_keys": [
           "blockly:Jigsaw:7"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 6,
         "lesson.key": "Jigsaw: Learn to drag and drop",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -3949,8 +3609,6 @@
         "script_level.level_keys": [
           "blockly:Jigsaw:8"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 7,
         "lesson.key": "Jigsaw: Learn to drag and drop",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -3962,8 +3620,6 @@
         "script_level.level_keys": [
           "blockly:Jigsaw:9"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 8,
         "lesson.key": "Jigsaw: Learn to drag and drop",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -3975,8 +3631,6 @@
         "script_level.level_keys": [
           "blockly:Jigsaw:10"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 9,
         "lesson.key": "Jigsaw: Learn to drag and drop",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -3988,8 +3642,6 @@
         "script_level.level_keys": [
           "blockly:Jigsaw:11"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 10,
         "lesson.key": "Jigsaw: Learn to drag and drop",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -4001,8 +3653,6 @@
         "script_level.level_keys": [
           "blockly:Jigsaw:12"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 11,
         "lesson.key": "Jigsaw: Learn to drag and drop",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -4014,8 +3664,6 @@
         "script_level.level_keys": [
           "blockly:Jigsaw:13"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 12,
         "lesson.key": "Jigsaw: Learn to drag and drop",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -4027,8 +3675,6 @@
         "script_level.level_keys": [
           "k-1 maze 1"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 1,
         "lesson.key": "Maze: Sequence",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -4040,8 +3686,6 @@
         "script_level.level_keys": [
           "K-1 Maze 2"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 2,
         "lesson.key": "Maze: Sequence",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -4053,8 +3697,6 @@
         "script_level.level_keys": [
           "K-1 Maze 3"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 3,
         "lesson.key": "Maze: Sequence",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -4066,8 +3708,6 @@
         "script_level.level_keys": [
           "K-1 Maze 4"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 4,
         "lesson.key": "Maze: Sequence",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -4079,8 +3719,6 @@
         "script_level.level_keys": [
           "K-1 Maze 5"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 5,
         "lesson.key": "Maze: Sequence",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -4092,8 +3730,6 @@
         "script_level.level_keys": [
           "K-1 Maze 7"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 6,
         "lesson.key": "Maze: Sequence",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -4105,8 +3741,6 @@
         "script_level.level_keys": [
           "K-1 Maze 6"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 7,
         "lesson.key": "Maze: Sequence",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -4118,8 +3752,6 @@
         "script_level.level_keys": [
           "K-1 Maze 8"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 8,
         "lesson.key": "Maze: Sequence",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -4131,8 +3763,6 @@
         "script_level.level_keys": [
           "K-1 Maze 9"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 9,
         "lesson.key": "Maze: Sequence",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -4144,8 +3774,6 @@
         "script_level.level_keys": [
           "K-1 Maze 10"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 10,
         "lesson.key": "Maze: Sequence",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -4157,8 +3785,6 @@
         "script_level.level_keys": [
           "K-1 Maze 11"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 11,
         "lesson.key": "Maze: Sequence",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -4170,8 +3796,6 @@
         "script_level.level_keys": [
           "K-1 Maze Sequence Assessment 1"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 12,
         "lesson.key": "Maze: Sequence",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -4183,8 +3807,6 @@
         "script_level.level_keys": [
           "K-1 Maze Sequence Assessment 2"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 13,
         "lesson.key": "Maze: Sequence",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -4196,8 +3818,6 @@
         "script_level.level_keys": [
           "K-1 Maze Multiple Choice 2"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 14,
         "lesson.key": "Maze: Sequence",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -4209,8 +3829,6 @@
         "script_level.level_keys": [
           "K-1 Maze Match 1"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 15,
         "lesson.key": "Maze: Sequence",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -4222,8 +3840,6 @@
         "script_level.level_keys": [
           "course1_maze_seq_challenge1"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 16,
         "lesson.key": "Maze: Sequence",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -4235,8 +3851,6 @@
         "script_level.level_keys": [
           "course1_maze_seq_challenge2"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 17,
         "lesson.key": "Maze: Sequence",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -4248,8 +3862,6 @@
         "script_level.level_keys": [
           "K-1 maze debug 1"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 1,
         "lesson.key": "Maze: Debugging",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -4261,8 +3873,6 @@
         "script_level.level_keys": [
           "K-1 maze debug 2"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 2,
         "lesson.key": "Maze: Debugging",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -4274,8 +3884,6 @@
         "script_level.level_keys": [
           "K-1 maze debug 3"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 3,
         "lesson.key": "Maze: Debugging",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -4287,8 +3895,6 @@
         "script_level.level_keys": [
           "K-1 maze debug 4"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 4,
         "lesson.key": "Maze: Debugging",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -4300,8 +3906,6 @@
         "script_level.level_keys": [
           "K-1 maze debug 5"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 5,
         "lesson.key": "Maze: Debugging",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -4313,8 +3917,6 @@
         "script_level.level_keys": [
           "K-1 maze debug 6"
         ],
-        "script_level.chapter": 39,
-        "script_level.position": 6,
         "lesson.key": "Maze: Debugging",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -4326,8 +3928,6 @@
         "script_level.level_keys": [
           "K-1 maze debug 7"
         ],
-        "script_level.chapter": 40,
-        "script_level.position": 7,
         "lesson.key": "Maze: Debugging",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -4339,8 +3939,6 @@
         "script_level.level_keys": [
           "K-1 maze debug 8"
         ],
-        "script_level.chapter": 41,
-        "script_level.position": 8,
         "lesson.key": "Maze: Debugging",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -4352,8 +3950,6 @@
         "script_level.level_keys": [
           "K-1 maze debug 9"
         ],
-        "script_level.chapter": 42,
-        "script_level.position": 9,
         "lesson.key": "Maze: Debugging",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -4365,8 +3961,6 @@
         "script_level.level_keys": [
           "K-1 maze debug 10"
         ],
-        "script_level.chapter": 43,
-        "script_level.position": 10,
         "lesson.key": "Maze: Debugging",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -4378,8 +3972,6 @@
         "script_level.level_keys": [
           "K-1 maze debug 11"
         ],
-        "script_level.chapter": 44,
-        "script_level.position": 11,
         "lesson.key": "Maze: Debugging",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -4391,8 +3983,6 @@
         "script_level.level_keys": [
           "K-1 Maze Debugging Multi 1"
         ],
-        "script_level.chapter": 45,
-        "script_level.position": 12,
         "lesson.key": "Maze: Debugging",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -4404,8 +3994,6 @@
         "script_level.level_keys": [
           "course1_maze_debugging_challenge1"
         ],
-        "script_level.chapter": 46,
-        "script_level.position": 13,
         "lesson.key": "Maze: Debugging",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -4417,8 +4005,6 @@
         "script_level.level_keys": [
           "course1_maze_debugging_challenge2"
         ],
-        "script_level.chapter": 47,
-        "script_level.position": 14,
         "lesson.key": "Maze: Debugging",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -4430,8 +4016,6 @@
         "script_level.level_keys": [
           "PlantASeed"
         ],
-        "script_level.chapter": 48,
-        "script_level.position": 1,
         "lesson.key": "Real-life Algorithms: Plant a Seed",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -4443,8 +4027,6 @@
         "script_level.level_keys": [
           "K-1 Plant a Seed Multi 1"
         ],
-        "script_level.chapter": 49,
-        "script_level.position": 2,
         "lesson.key": "Real-life Algorithms: Plant a Seed",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -4456,8 +4038,6 @@
         "script_level.level_keys": [
           "K-1 Plant a Seed Multi 2"
         ],
-        "script_level.chapter": 50,
-        "script_level.position": 3,
         "lesson.key": "Real-life Algorithms: Plant a Seed",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -4469,8 +4049,6 @@
         "script_level.level_keys": [
           "K-1 Bee 1"
         ],
-        "script_level.chapter": 51,
-        "script_level.position": 1,
         "lesson.key": "Bee: Sequence",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -4482,8 +4060,6 @@
         "script_level.level_keys": [
           "K-1 Bee 2"
         ],
-        "script_level.chapter": 52,
-        "script_level.position": 2,
         "lesson.key": "Bee: Sequence",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -4495,8 +4071,6 @@
         "script_level.level_keys": [
           "K-1 Bee 3"
         ],
-        "script_level.chapter": 53,
-        "script_level.position": 3,
         "lesson.key": "Bee: Sequence",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -4508,8 +4082,6 @@
         "script_level.level_keys": [
           "K-1 Bee 4"
         ],
-        "script_level.chapter": 54,
-        "script_level.position": 4,
         "lesson.key": "Bee: Sequence",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -4521,8 +4093,6 @@
         "script_level.level_keys": [
           "K-1 Bee 5"
         ],
-        "script_level.chapter": 55,
-        "script_level.position": 5,
         "lesson.key": "Bee: Sequence",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -4534,8 +4104,6 @@
         "script_level.level_keys": [
           "K-1 Bee 6"
         ],
-        "script_level.chapter": 56,
-        "script_level.position": 6,
         "lesson.key": "Bee: Sequence",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -4547,8 +4115,6 @@
         "script_level.level_keys": [
           "K-1 Bee 7"
         ],
-        "script_level.chapter": 57,
-        "script_level.position": 7,
         "lesson.key": "Bee: Sequence",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -4560,8 +4126,6 @@
         "script_level.level_keys": [
           "K-1 Bee 9"
         ],
-        "script_level.chapter": 58,
-        "script_level.position": 8,
         "lesson.key": "Bee: Sequence",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -4573,8 +4137,6 @@
         "script_level.level_keys": [
           "K-1 Bee 11"
         ],
-        "script_level.chapter": 59,
-        "script_level.position": 9,
         "lesson.key": "Bee: Sequence",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -4586,8 +4148,6 @@
         "script_level.level_keys": [
           "K-1 Bee Puzzle 12"
         ],
-        "script_level.chapter": 60,
-        "script_level.position": 10,
         "lesson.key": "Bee: Sequence",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -4599,8 +4159,6 @@
         "script_level.level_keys": [
           "K-1 Bee 13"
         ],
-        "script_level.chapter": 61,
-        "script_level.position": 11,
         "lesson.key": "Bee: Sequence",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -4612,8 +4170,6 @@
         "script_level.level_keys": [
           "K-1 Bee 14"
         ],
-        "script_level.chapter": 62,
-        "script_level.position": 12,
         "lesson.key": "Bee: Sequence",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -4625,8 +4181,6 @@
         "script_level.level_keys": [
           "K-1 Bee 15"
         ],
-        "script_level.chapter": 63,
-        "script_level.position": 13,
         "lesson.key": "Bee: Sequence",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -4638,8 +4192,6 @@
         "script_level.level_keys": [
           "K-1 Bee 1 Multi 1"
         ],
-        "script_level.chapter": 64,
-        "script_level.position": 14,
         "lesson.key": "Bee: Sequence",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -4651,8 +4203,6 @@
         "script_level.level_keys": [
           "K-1 Bee 1 Multi 2"
         ],
-        "script_level.chapter": 65,
-        "script_level.position": 15,
         "lesson.key": "Bee: Sequence",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -4664,8 +4214,6 @@
         "script_level.level_keys": [
           "K-1 Artist1 1"
         ],
-        "script_level.chapter": 66,
-        "script_level.position": 1,
         "lesson.key": "Artist: Sequence",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -4677,8 +4225,6 @@
         "script_level.level_keys": [
           "K-1 Artist1 2"
         ],
-        "script_level.chapter": 67,
-        "script_level.position": 2,
         "lesson.key": "Artist: Sequence",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -4690,8 +4236,6 @@
         "script_level.level_keys": [
           "K-1 Artist1 3"
         ],
-        "script_level.chapter": 68,
-        "script_level.position": 3,
         "lesson.key": "Artist: Sequence",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -4703,8 +4247,6 @@
         "script_level.level_keys": [
           "K-1 Artist1 4"
         ],
-        "script_level.chapter": 69,
-        "script_level.position": 4,
         "lesson.key": "Artist: Sequence",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -4716,8 +4258,6 @@
         "script_level.level_keys": [
           "K-1 Artist1 5"
         ],
-        "script_level.chapter": 70,
-        "script_level.position": 5,
         "lesson.key": "Artist: Sequence",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -4729,8 +4269,6 @@
         "script_level.level_keys": [
           "K-1 Artist1 6"
         ],
-        "script_level.chapter": 71,
-        "script_level.position": 6,
         "lesson.key": "Artist: Sequence",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -4742,8 +4280,6 @@
         "script_level.level_keys": [
           "K-1 Artist1 9"
         ],
-        "script_level.chapter": 72,
-        "script_level.position": 7,
         "lesson.key": "Artist: Sequence",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -4755,8 +4291,6 @@
         "script_level.level_keys": [
           "K-1 Artist1 10"
         ],
-        "script_level.chapter": 73,
-        "script_level.position": 8,
         "lesson.key": "Artist: Sequence",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -4768,8 +4302,6 @@
         "script_level.level_keys": [
           "K-1 artist 1 level 9"
         ],
-        "script_level.chapter": 74,
-        "script_level.position": 9,
         "lesson.key": "Artist: Sequence",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -4781,8 +4313,6 @@
         "script_level.level_keys": [
           "K-1 artist 1 level 10"
         ],
-        "script_level.chapter": 75,
-        "script_level.position": 10,
         "lesson.key": "Artist: Sequence",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -4794,8 +4324,6 @@
         "script_level.level_keys": [
           "K-1 Artist 1 Multi 1"
         ],
-        "script_level.chapter": 76,
-        "script_level.position": 11,
         "lesson.key": "Artist: Sequence",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -4807,8 +4335,6 @@
         "script_level.level_keys": [
           "K-1 Artist 1 Multi 2"
         ],
-        "script_level.chapter": 77,
-        "script_level.position": 12,
         "lesson.key": "Artist: Sequence",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -4820,8 +4346,6 @@
         "script_level.level_keys": [
           "course1_artist_loops_challenge1"
         ],
-        "script_level.chapter": 78,
-        "script_level.position": 13,
         "lesson.key": "Artist: Sequence",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -4833,8 +4357,6 @@
         "script_level.level_keys": [
           "course1_artist_loops_challenge2"
         ],
-        "script_level.chapter": 79,
-        "script_level.position": 14,
         "lesson.key": "Artist: Sequence",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -4846,8 +4368,6 @@
         "script_level.level_keys": [
           "BuildingAFoundation"
         ],
-        "script_level.chapter": 80,
-        "script_level.position": 1,
         "lesson.key": "Building a Foundation",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -4859,8 +4379,6 @@
         "script_level.level_keys": [
           "K-1 Building a Foundation Assessment"
         ],
-        "script_level.chapter": 81,
-        "script_level.position": 2,
         "lesson.key": "Building a Foundation",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -4872,8 +4390,6 @@
         "script_level.level_keys": [
           "K-1 Artist2 1"
         ],
-        "script_level.chapter": 82,
-        "script_level.position": 1,
         "lesson.key": "Artist: Shapes",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -4885,8 +4401,6 @@
         "script_level.level_keys": [
           "K-1 Artist2 2"
         ],
-        "script_level.chapter": 83,
-        "script_level.position": 2,
         "lesson.key": "Artist: Shapes",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -4898,8 +4412,6 @@
         "script_level.level_keys": [
           "K-1 Artist2 3"
         ],
-        "script_level.chapter": 84,
-        "script_level.position": 3,
         "lesson.key": "Artist: Shapes",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -4911,8 +4423,6 @@
         "script_level.level_keys": [
           "K-1 Artist2 4"
         ],
-        "script_level.chapter": 85,
-        "script_level.position": 4,
         "lesson.key": "Artist: Shapes",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -4924,8 +4434,6 @@
         "script_level.level_keys": [
           "K-1 Artist2 5"
         ],
-        "script_level.chapter": 86,
-        "script_level.position": 5,
         "lesson.key": "Artist: Shapes",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -4937,8 +4445,6 @@
         "script_level.level_keys": [
           "K-1 Artist2 6"
         ],
-        "script_level.chapter": 87,
-        "script_level.position": 6,
         "lesson.key": "Artist: Shapes",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -4950,8 +4456,6 @@
         "script_level.level_keys": [
           "K-1 Artist2_7"
         ],
-        "script_level.chapter": 88,
-        "script_level.position": 7,
         "lesson.key": "Artist: Shapes",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -4963,8 +4467,6 @@
         "script_level.level_keys": [
           "K-1 Artist2 Assessment1"
         ],
-        "script_level.chapter": 89,
-        "script_level.position": 8,
         "lesson.key": "Artist: Shapes",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -4976,8 +4478,6 @@
         "script_level.level_keys": [
           "K-1 Artist 2 Match 2"
         ],
-        "script_level.chapter": 90,
-        "script_level.position": 9,
         "lesson.key": "Artist: Shapes",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -4989,8 +4489,6 @@
         "script_level.level_keys": [
           "K-1 Artist2 Free Draw"
         ],
-        "script_level.chapter": 91,
-        "script_level.position": 10,
         "lesson.key": "Artist: Shapes",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -5002,8 +4500,6 @@
         "script_level.level_keys": [
           "blockly:CustomMaze:wordsearch_k_1"
         ],
-        "script_level.chapter": 92,
-        "script_level.position": 1,
         "lesson.key": "Spelling Bee",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -5015,8 +4511,6 @@
         "script_level.level_keys": [
           "blockly:CustomMaze:wordsearch_k_2"
         ],
-        "script_level.chapter": 93,
-        "script_level.position": 2,
         "lesson.key": "Spelling Bee",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -5028,8 +4522,6 @@
         "script_level.level_keys": [
           "blockly:CustomMaze:wordsearch_k_3"
         ],
-        "script_level.chapter": 94,
-        "script_level.position": 3,
         "lesson.key": "Spelling Bee",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -5041,8 +4533,6 @@
         "script_level.level_keys": [
           "blockly:CustomMaze:wordsearch_k_4"
         ],
-        "script_level.chapter": 95,
-        "script_level.position": 4,
         "lesson.key": "Spelling Bee",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -5054,8 +4544,6 @@
         "script_level.level_keys": [
           "blockly:CustomMaze:wordsearch_k_6"
         ],
-        "script_level.chapter": 96,
-        "script_level.position": 5,
         "lesson.key": "Spelling Bee",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -5067,8 +4555,6 @@
         "script_level.level_keys": [
           "blockly:CustomMaze:wordsearch_k_9"
         ],
-        "script_level.chapter": 97,
-        "script_level.position": 6,
         "lesson.key": "Spelling Bee",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -5080,8 +4566,6 @@
         "script_level.level_keys": [
           "blockly:CustomMaze:wordsearch_k_13"
         ],
-        "script_level.chapter": 98,
-        "script_level.position": 7,
         "lesson.key": "Spelling Bee",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -5093,8 +4577,6 @@
         "script_level.level_keys": [
           "blockly:CustomMaze:wordsearch_k_15"
         ],
-        "script_level.chapter": 99,
-        "script_level.position": 8,
         "lesson.key": "Spelling Bee",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -5106,8 +4588,6 @@
         "script_level.level_keys": [
           "blockly:CustomMaze:wordsearch_k_16"
         ],
-        "script_level.chapter": 100,
-        "script_level.position": 9,
         "lesson.key": "Spelling Bee",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -5119,8 +4599,6 @@
         "script_level.level_keys": [
           "blockly:CustomMaze:wordsearch_k_20"
         ],
-        "script_level.chapter": 101,
-        "script_level.position": 10,
         "lesson.key": "Spelling Bee",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -5132,8 +4610,6 @@
         "script_level.level_keys": [
           "K-1 Word Search Multi 1"
         ],
-        "script_level.chapter": 102,
-        "script_level.position": 11,
         "lesson.key": "Spelling Bee",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -5145,8 +4621,6 @@
         "script_level.level_keys": [
           "K-1 Word Search Multi 3"
         ],
-        "script_level.chapter": 103,
-        "script_level.position": 12,
         "lesson.key": "Spelling Bee",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -5158,8 +4632,6 @@
         "script_level.level_keys": [
           "GettingLoopy"
         ],
-        "script_level.chapter": 104,
-        "script_level.position": 1,
         "lesson.key": "Getting Loopy",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -5171,8 +4643,6 @@
         "script_level.level_keys": [
           "K-1 Getting Loopy Multi 1"
         ],
-        "script_level.chapter": 105,
-        "script_level.position": 2,
         "lesson.key": "Getting Loopy",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -5184,8 +4654,6 @@
         "script_level.level_keys": [
           "K-1 Maze Loops 1"
         ],
-        "script_level.chapter": 106,
-        "script_level.position": 1,
         "lesson.key": "Maze: Loops",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -5197,8 +4665,6 @@
         "script_level.level_keys": [
           "K-1 Maze Loops 2"
         ],
-        "script_level.chapter": 107,
-        "script_level.position": 2,
         "lesson.key": "Maze: Loops",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -5210,8 +4676,6 @@
         "script_level.level_keys": [
           "K-1 Maze Loops 3"
         ],
-        "script_level.chapter": 108,
-        "script_level.position": 3,
         "lesson.key": "Maze: Loops",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -5223,8 +4687,6 @@
         "script_level.level_keys": [
           "K-1 Maze Loops 5"
         ],
-        "script_level.chapter": 109,
-        "script_level.position": 4,
         "lesson.key": "Maze: Loops",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -5236,8 +4698,6 @@
         "script_level.level_keys": [
           "K-1 Maze Loops 6"
         ],
-        "script_level.chapter": 110,
-        "script_level.position": 5,
         "lesson.key": "Maze: Loops",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -5249,8 +4709,6 @@
         "script_level.level_keys": [
           "K-1 Maze Loops 7"
         ],
-        "script_level.chapter": 111,
-        "script_level.position": 6,
         "lesson.key": "Maze: Loops",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -5262,8 +4720,6 @@
         "script_level.level_keys": [
           "K-1 Maze Loops 8"
         ],
-        "script_level.chapter": 112,
-        "script_level.position": 7,
         "lesson.key": "Maze: Loops",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -5275,8 +4731,6 @@
         "script_level.level_keys": [
           "K-1 Maze Loops 10"
         ],
-        "script_level.chapter": 113,
-        "script_level.position": 8,
         "lesson.key": "Maze: Loops",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -5288,8 +4742,6 @@
         "script_level.level_keys": [
           "K-1 Maze Loops 11"
         ],
-        "script_level.chapter": 114,
-        "script_level.position": 9,
         "lesson.key": "Maze: Loops",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -5301,8 +4753,6 @@
         "script_level.level_keys": [
           "K-1 Maze Loops 12"
         ],
-        "script_level.chapter": 115,
-        "script_level.position": 10,
         "lesson.key": "Maze: Loops",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -5314,8 +4764,6 @@
         "script_level.level_keys": [
           "K-1 Maze Loops Assessment 1"
         ],
-        "script_level.chapter": 116,
-        "script_level.position": 11,
         "lesson.key": "Maze: Loops",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -5327,8 +4775,6 @@
         "script_level.level_keys": [
           "K-1 Maze Loops Assessment 2"
         ],
-        "script_level.chapter": 117,
-        "script_level.position": 12,
         "lesson.key": "Maze: Loops",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -5340,8 +4786,6 @@
         "script_level.level_keys": [
           "K-1 Maze Loops Multi 1"
         ],
-        "script_level.chapter": 118,
-        "script_level.position": 13,
         "lesson.key": "Maze: Loops",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -5353,8 +4797,6 @@
         "script_level.level_keys": [
           "K-1 Maze Loops Multi 2"
         ],
-        "script_level.chapter": 119,
-        "script_level.position": 14,
         "lesson.key": "Maze: Loops",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -5366,8 +4808,6 @@
         "script_level.level_keys": [
           "course1_collector_loops_challenge1"
         ],
-        "script_level.chapter": 120,
-        "script_level.position": 15,
         "lesson.key": "Maze: Loops",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -5379,8 +4819,6 @@
         "script_level.level_keys": [
           "course1_collector_loops_challenge2"
         ],
-        "script_level.chapter": 121,
-        "script_level.position": 16,
         "lesson.key": "Maze: Loops",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -5392,8 +4830,6 @@
         "script_level.level_keys": [
           "K-1 Bee Loops 1"
         ],
-        "script_level.chapter": 122,
-        "script_level.position": 1,
         "lesson.key": "Bee: Loops",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -5405,8 +4841,6 @@
         "script_level.level_keys": [
           "K-1 Bee Loops 2"
         ],
-        "script_level.chapter": 123,
-        "script_level.position": 2,
         "lesson.key": "Bee: Loops",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -5418,8 +4852,6 @@
         "script_level.level_keys": [
           "K-1 Bee Loops 3"
         ],
-        "script_level.chapter": 124,
-        "script_level.position": 3,
         "lesson.key": "Bee: Loops",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -5431,8 +4863,6 @@
         "script_level.level_keys": [
           "K-1 Bee Loops 4"
         ],
-        "script_level.chapter": 125,
-        "script_level.position": 4,
         "lesson.key": "Bee: Loops",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -5444,8 +4874,6 @@
         "script_level.level_keys": [
           "K-1 Bee Loops 5"
         ],
-        "script_level.chapter": 126,
-        "script_level.position": 5,
         "lesson.key": "Bee: Loops",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -5457,8 +4885,6 @@
         "script_level.level_keys": [
           "K-1 Bee Loops 6"
         ],
-        "script_level.chapter": 127,
-        "script_level.position": 6,
         "lesson.key": "Bee: Loops",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -5470,8 +4896,6 @@
         "script_level.level_keys": [
           "K-1 Bee Loops 7"
         ],
-        "script_level.chapter": 128,
-        "script_level.position": 7,
         "lesson.key": "Bee: Loops",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -5483,8 +4907,6 @@
         "script_level.level_keys": [
           "K-1 Bee Loops 8"
         ],
-        "script_level.chapter": 129,
-        "script_level.position": 8,
         "lesson.key": "Bee: Loops",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -5496,8 +4918,6 @@
         "script_level.level_keys": [
           "K-1 Bee Loops 9"
         ],
-        "script_level.chapter": 130,
-        "script_level.position": 9,
         "lesson.key": "Bee: Loops",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -5509,8 +4929,6 @@
         "script_level.level_keys": [
           "K-1 Bee Loops 10"
         ],
-        "script_level.chapter": 131,
-        "script_level.position": 10,
         "lesson.key": "Bee: Loops",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -5522,8 +4940,6 @@
         "script_level.level_keys": [
           "K-1 Bee Loops 11"
         ],
-        "script_level.chapter": 132,
-        "script_level.position": 11,
         "lesson.key": "Bee: Loops",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -5535,8 +4951,6 @@
         "script_level.level_keys": [
           "K-1 Bee Loops 12"
         ],
-        "script_level.chapter": 133,
-        "script_level.position": 12,
         "lesson.key": "Bee: Loops",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -5548,8 +4962,6 @@
         "script_level.level_keys": [
           "K-1 Bee Loops Match 1"
         ],
-        "script_level.chapter": 134,
-        "script_level.position": 13,
         "lesson.key": "Bee: Loops",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -5561,8 +4973,6 @@
         "script_level.level_keys": [
           "course1_collector_loops_challenge3"
         ],
-        "script_level.chapter": 135,
-        "script_level.position": 14,
         "lesson.key": "Bee: Loops",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -5574,8 +4984,6 @@
         "script_level.level_keys": [
           "course1_collector_loops_challenge4"
         ],
-        "script_level.chapter": 136,
-        "script_level.position": 15,
         "lesson.key": "Bee: Loops",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -5587,8 +4995,6 @@
         "script_level.level_keys": [
           "BigEvent"
         ],
-        "script_level.chapter": 137,
-        "script_level.position": 1,
         "lesson.key": "The Big Event",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -5600,8 +5006,6 @@
         "script_level.level_keys": [
           "K-1 Big Event Match 1"
         ],
-        "script_level.chapter": 138,
-        "script_level.position": 2,
         "lesson.key": "The Big Event",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -5613,8 +5017,6 @@
         "script_level.level_keys": [
           "blockly:Studio:k1_1"
         ],
-        "script_level.chapter": 139,
-        "script_level.position": 1,
         "lesson.key": "Studio: Create a Story",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -5626,8 +5028,6 @@
         "script_level.level_keys": [
           "blockly:Studio:k1_2"
         ],
-        "script_level.chapter": 140,
-        "script_level.position": 2,
         "lesson.key": "Studio: Create a Story",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -5639,8 +5039,6 @@
         "script_level.level_keys": [
           "blockly:Studio:k1_3"
         ],
-        "script_level.chapter": 141,
-        "script_level.position": 3,
         "lesson.key": "Studio: Create a Story",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -5652,8 +5050,6 @@
         "script_level.level_keys": [
           "blockly:Studio:k1_4"
         ],
-        "script_level.chapter": 142,
-        "script_level.position": 4,
         "lesson.key": "Studio: Create a Story",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -5665,8 +5061,6 @@
         "script_level.level_keys": [
           "blockly:Studio:k1_5"
         ],
-        "script_level.chapter": 143,
-        "script_level.position": 5,
         "lesson.key": "Studio: Create a Story",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -5678,8 +5072,6 @@
         "script_level.level_keys": [
           "blockly:Studio:k1_6"
         ],
-        "script_level.chapter": 144,
-        "script_level.position": 6,
         "lesson.key": "Studio: Create a Story",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -5691,8 +5083,6 @@
         "script_level.level_keys": [
           "course1_playlab_events_challenge1"
         ],
-        "script_level.chapter": 145,
-        "script_level.position": 7,
         "lesson.key": "Studio: Create a Story",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -5704,8 +5094,6 @@
         "script_level.level_keys": [
           "course1_playlab_events_challenge2"
         ],
-        "script_level.chapter": 146,
-        "script_level.position": 8,
         "lesson.key": "Studio: Create a Story",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -5717,8 +5105,6 @@
         "script_level.level_keys": [
           "GoingPlacesSafely"
         ],
-        "script_level.chapter": 147,
-        "script_level.position": 1,
         "lesson.key": "Going Places Safely",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -5730,8 +5116,6 @@
         "script_level.level_keys": [
           "K-1 Keep it Private Multi 1"
         ],
-        "script_level.chapter": 148,
-        "script_level.position": 2,
         "lesson.key": "Going Places Safely",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -5743,8 +5127,6 @@
         "script_level.level_keys": [
           "K-1 Artist Loops 1"
         ],
-        "script_level.chapter": 149,
-        "script_level.position": 1,
         "lesson.key": "Artist: Loops",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -5756,8 +5138,6 @@
         "script_level.level_keys": [
           "K-1 Artist Loops 2"
         ],
-        "script_level.chapter": 150,
-        "script_level.position": 2,
         "lesson.key": "Artist: Loops",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -5769,8 +5149,6 @@
         "script_level.level_keys": [
           "K-1 Artist Loops 3"
         ],
-        "script_level.chapter": 151,
-        "script_level.position": 3,
         "lesson.key": "Artist: Loops",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -5782,8 +5160,6 @@
         "script_level.level_keys": [
           "K-1 Artist Loops 4"
         ],
-        "script_level.chapter": 152,
-        "script_level.position": 4,
         "lesson.key": "Artist: Loops",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -5795,8 +5171,6 @@
         "script_level.level_keys": [
           "K-1 Artist Loops 5"
         ],
-        "script_level.chapter": 153,
-        "script_level.position": 5,
         "lesson.key": "Artist: Loops",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -5808,8 +5182,6 @@
         "script_level.level_keys": [
           "K-1 Artist Loops 6"
         ],
-        "script_level.chapter": 154,
-        "script_level.position": 6,
         "lesson.key": "Artist: Loops",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -5821,8 +5193,6 @@
         "script_level.level_keys": [
           "K-1 Artist Loops 7"
         ],
-        "script_level.chapter": 155,
-        "script_level.position": 7,
         "lesson.key": "Artist: Loops",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -5834,8 +5204,6 @@
         "script_level.level_keys": [
           "K-1 Artist Loops 8"
         ],
-        "script_level.chapter": 156,
-        "script_level.position": 8,
         "lesson.key": "Artist: Loops",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -5847,8 +5215,6 @@
         "script_level.level_keys": [
           "K-1 Artist Loops 9"
         ],
-        "script_level.chapter": 157,
-        "script_level.position": 9,
         "lesson.key": "Artist: Loops",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -5860,8 +5226,6 @@
         "script_level.level_keys": [
           "K-1 Artist Loops Free Play"
         ],
-        "script_level.chapter": 158,
-        "script_level.position": 10,
         "lesson.key": "Artist: Loops",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -5873,8 +5237,6 @@
         "script_level.level_keys": [
           "course1_artist_loops_challenge3"
         ],
-        "script_level.chapter": 159,
-        "script_level.position": 11,
         "lesson.key": "Artist: Loops",
         "lesson_group.key": "",
         "script.name": "course1"
@@ -5886,8 +5248,6 @@
         "script_level.level_keys": [
           "course1_artist_loops_challenge4"
         ],
-        "script_level.chapter": 160,
-        "script_level.position": 12,
         "lesson.key": "Artist: Loops",
         "lesson_group.key": "",
         "script.name": "course1"

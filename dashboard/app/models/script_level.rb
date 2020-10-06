@@ -74,7 +74,7 @@ class ScriptLevel < ActiveRecord::Base
   )
 
   # Chapter values order all the script_levels in a script.
-  def self.add_script_levels(script, lesson, raw_script_levels, counters, new_suffix, editor_experiment)
+  def self.add_script_levels(script, lesson_group, lesson, raw_script_levels, counters, new_suffix, editor_experiment)
     script_level_position = 0
 
     raw_script_levels.map do |raw_script_level|
@@ -106,6 +106,12 @@ class ScriptLevel < ActiveRecord::Base
       end || ScriptLevel.create!(script_level_attributes) do |sl|
         sl.levels = levels
       end
+
+      # Generate and store the seed_key, a unique identifier for this script level which should be stable across environments.
+      # We'll use this in our new, JSON-based seeding process.
+      seed_context = ScriptSeed::SeedContext.new(script: script, lesson_groups: [lesson_group], lessons: [lesson])
+      seed_key_data = script_level.seeding_key(seed_context, false)
+      script_level_attributes[:seed_key] = HashingUtils.ruby_hash_to_md5_hash(seed_key_data)
 
       script_level.assign_attributes(script_level_attributes)
       # We must assign properties separately since otherwise, a missing property won't correctly overwrite the current value
@@ -581,9 +587,7 @@ class ScriptLevel < ActiveRecord::Base
   # @return [Hash<String, String>] all information needed to uniquely identify this object across environments.
   def seeding_key(seed_context, use_existing_level_keys = true)
     my_key = {
-      'script_level.level_keys': get_level_keys(seed_context, use_existing_level_keys),
-      'script_level.chapter': chapter,
-      'script_level.position': position
+      'script_level.level_keys': get_level_keys(seed_context, use_existing_level_keys)
     }
 
     my_lesson = seed_context.lessons.select {|l| l.id == stage_id}.first
@@ -618,9 +622,8 @@ class ScriptLevel < ActiveRecord::Base
         raise "No level found for #{lsl}" unless level
         level
       end
-      my_levels = my_levels.sort_by(&:id)
       raise "No levels found for #{inspect}" if my_levels.nil_or_empty?
     end
-    my_levels.map(&:key)
+    my_levels.sort_by(&:id).map(&:key)
   end
 end

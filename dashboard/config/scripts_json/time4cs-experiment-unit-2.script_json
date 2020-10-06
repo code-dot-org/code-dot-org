@@ -456,8 +456,6 @@
         "script_level.level_keys": [
           "BrowardTestMarkdownLevel"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Introduction to the Problem",
         "lesson_group.key": "time4cs_c1",
         "script.name": "time4cs-experiment-unit-2"
@@ -478,8 +476,6 @@
         "script_level.level_keys": [
           "BrowardTestMarkdownLevel2"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Introduction to the Problem",
         "lesson_group.key": "time4cs_c1",
         "script.name": "time4cs-experiment-unit-2"
@@ -500,8 +496,6 @@
         "script_level.level_keys": [
           "BrowardTestMarkdownLevel"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 1,
         "lesson.key": "Crowdsourcing (Integrated lesson)",
         "lesson_group.key": "time4cs_c1",
         "script.name": "time4cs-experiment-unit-2"
@@ -522,8 +516,6 @@
         "script_level.level_keys": [
           "BrowardTestMarkdownLevel2"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 2,
         "lesson.key": "Crowdsourcing (Integrated lesson)",
         "lesson_group.key": "time4cs_c1",
         "script.name": "time4cs-experiment-unit-2"
@@ -544,8 +536,6 @@
         "script_level.level_keys": [
           "BrowardTestMarkdownLevel"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 1,
         "lesson.key": "Everglades Habitats",
         "lesson_group.key": "time4cs_c1",
         "script.name": "time4cs-experiment-unit-2"
@@ -566,8 +556,6 @@
         "script_level.level_keys": [
           "BrowardTestMarkdownLevel"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 1,
         "lesson.key": "Evaluating a Project in Sprite Lab",
         "lesson_group.key": "time4cs_c1",
         "script.name": "time4cs-experiment-unit-2"
@@ -588,8 +576,6 @@
         "script_level.level_keys": [
           "BrowardTestMarkdownLevel"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 1,
         "lesson.key": "Food Chains",
         "lesson_group.key": "time4cs_c2",
         "script.name": "time4cs-experiment-unit-2"
@@ -610,8 +596,6 @@
         "script_level.level_keys": [
           "BrowardTestMarkdownLevel"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 1,
         "lesson.key": "Conditionals with Cards (Integrated Lesson)- Part 1",
         "lesson_group.key": "time4cs_c2",
         "script.name": "time4cs-experiment-unit-2"
@@ -632,8 +616,6 @@
         "script_level.level_keys": [
           "BrowardTestMarkdownLevel"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 1,
         "lesson.key": "Alligator Holes",
         "lesson_group.key": "time4cs_c2",
         "script.name": "time4cs-experiment-unit-2"
@@ -654,8 +636,6 @@
         "script_level.level_keys": [
           "BrowardTestMarkdownLevel"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 1,
         "lesson.key": "Food Chain Game",
         "lesson_group.key": "time4cs_c2",
         "script.name": "time4cs-experiment-unit-2"
@@ -676,8 +656,6 @@
         "script_level.level_keys": [
           "BrowardTestMarkdownLevel"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 1,
         "lesson.key": "Invasive Species",
         "lesson_group.key": "time4cs_c3",
         "script.name": "time4cs-experiment-unit-2"
@@ -698,8 +676,6 @@
         "script_level.level_keys": [
           "BrowardTestMarkdownLevel"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 1,
         "lesson.key": "Conditionals with Cards (Integrated Lesson)- Part 2",
         "lesson_group.key": "time4cs_c3",
         "script.name": "time4cs-experiment-unit-2"
@@ -720,8 +696,6 @@
         "script_level.level_keys": [
           "BrowardTestMarkdownLevel"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 1,
         "lesson.key": "I am in Big Trouble",
         "lesson_group.key": "time4cs_c3",
         "script.name": "time4cs-experiment-unit-2"
@@ -742,8 +716,6 @@
         "script_level.level_keys": [
           "BrowardTestMarkdownLevel"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 1,
         "lesson.key": "Conditionals in Sprite Lab",
         "lesson_group.key": "time4cs_c3",
         "script.name": "time4cs-experiment-unit-2"
@@ -764,8 +736,6 @@
         "script_level.level_keys": [
           "BrowardTestMarkdownLevel"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 1,
         "lesson.key": "Nested Loops in Maze",
         "lesson_group.key": "time4cs_c3",
         "script.name": "time4cs-experiment-unit-2"
@@ -786,8 +756,6 @@
         "script_level.level_keys": [
           "BrowardTestMarkdownLevel"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 1,
         "lesson.key": "Fancy Shapes using Nested Loops",
         "lesson_group.key": "time4cs_c3",
         "script.name": "time4cs-experiment-unit-2"
@@ -808,8 +776,6 @@
         "script_level.level_keys": [
           "BrowardTestMarkdownLevel"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 1,
         "lesson.key": "Nested Loops with Frozen",
         "lesson_group.key": "time4cs_c3",
         "script.name": "time4cs-experiment-unit-2"
@@ -830,8 +796,6 @@
         "script_level.level_keys": [
           "BrowardTestMarkdownLevel"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 1,
         "lesson.key": "Fishy Business",
         "lesson_group.key": "time4cs_c4",
         "script.name": "time4cs-experiment-unit-2"
@@ -852,8 +816,6 @@
         "script_level.level_keys": [
           "BrowardTestMarkdownLevel"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 1,
         "lesson.key": "Songwriting (Integrated Lesson)",
         "lesson_group.key": "time4cs_c4",
         "script.name": "time4cs-experiment-unit-2"
@@ -874,8 +836,6 @@
         "script_level.level_keys": [
           "BrowardTestMarkdownLevel"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 1,
         "lesson.key": "Functions in Minecraft",
         "lesson_group.key": "time4cs_c4",
         "script.name": "time4cs-experiment-unit-2"
@@ -896,8 +856,6 @@
         "script_level.level_keys": [
           "BrowardTestMarkdownLevel"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 1,
         "lesson.key": "Functions with Harvester",
         "lesson_group.key": "time4cs_c4",
         "script.name": "time4cs-experiment-unit-2"
@@ -918,8 +876,6 @@
         "script_level.level_keys": [
           "BrowardTestMarkdownLevel"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 1,
         "lesson.key": "Functions with Artist",
         "lesson_group.key": "time4cs_c4",
         "script.name": "time4cs-experiment-unit-2"
@@ -940,8 +896,6 @@
         "script_level.level_keys": [
           "BrowardTestMarkdownLevel"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 1,
         "lesson.key": "Pythons impacting native populations",
         "lesson_group.key": "time4cs_c5",
         "script.name": "time4cs-experiment-unit-2"
@@ -962,8 +916,6 @@
         "script_level.level_keys": [
           "BrowardTestMarkdownLevel"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 1,
         "lesson.key": "Functions in Sprite Lab",
         "lesson_group.key": "time4cs_c5",
         "script.name": "time4cs-experiment-unit-2"
@@ -984,8 +936,6 @@
         "script_level.level_keys": [
           "BrowardTestMarkdownLevel"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 1,
         "lesson.key": "Python Problem- Current Solutions",
         "lesson_group.key": "time4cs_c5",
         "script.name": "time4cs-experiment-unit-2"
@@ -1006,8 +956,6 @@
         "script_level.level_keys": [
           "BrowardTestMarkdownLevel"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 1,
         "lesson.key": "End of Course Project (integrated- project planning lesson)",
         "lesson_group.key": "time4cs_c5",
         "script.name": "time4cs-experiment-unit-2"
@@ -1028,8 +976,6 @@
         "script_level.level_keys": [
           "BrowardTestMarkdownLevel"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 1,
         "lesson.key": "Debate- Pythons impacting native populations",
         "lesson_group.key": "time4cs_c5",
         "script.name": "time4cs-experiment-unit-2"
@@ -1050,8 +996,6 @@
         "script_level.level_keys": [
           "BrowardTestMarkdownLevel"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 1,
         "lesson.key": "Work on Project",
         "lesson_group.key": "time4cs_c5",
         "script.name": "time4cs-experiment-unit-2"
@@ -1068,8 +1012,6 @@
         "script_level.level_keys": [
           "BrowardTestMarkdownLevel"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Introduction to the Problem",
         "lesson_group.key": "time4cs_c1",
         "script.name": "time4cs-experiment-unit-2"
@@ -1081,8 +1023,6 @@
         "script_level.level_keys": [
           "BrowardTestMarkdownLevel2"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Introduction to the Problem",
         "lesson_group.key": "time4cs_c1",
         "script.name": "time4cs-experiment-unit-2"
@@ -1094,8 +1034,6 @@
         "script_level.level_keys": [
           "BrowardTestMarkdownLevel"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 1,
         "lesson.key": "Crowdsourcing (Integrated lesson)",
         "lesson_group.key": "time4cs_c1",
         "script.name": "time4cs-experiment-unit-2"
@@ -1107,8 +1045,6 @@
         "script_level.level_keys": [
           "BrowardTestMarkdownLevel2"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 2,
         "lesson.key": "Crowdsourcing (Integrated lesson)",
         "lesson_group.key": "time4cs_c1",
         "script.name": "time4cs-experiment-unit-2"
@@ -1120,8 +1056,6 @@
         "script_level.level_keys": [
           "BrowardTestMarkdownLevel"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 1,
         "lesson.key": "Everglades Habitats",
         "lesson_group.key": "time4cs_c1",
         "script.name": "time4cs-experiment-unit-2"
@@ -1133,8 +1067,6 @@
         "script_level.level_keys": [
           "BrowardTestMarkdownLevel"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 1,
         "lesson.key": "Evaluating a Project in Sprite Lab",
         "lesson_group.key": "time4cs_c1",
         "script.name": "time4cs-experiment-unit-2"
@@ -1146,8 +1078,6 @@
         "script_level.level_keys": [
           "BrowardTestMarkdownLevel"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 1,
         "lesson.key": "Food Chains",
         "lesson_group.key": "time4cs_c2",
         "script.name": "time4cs-experiment-unit-2"
@@ -1159,8 +1089,6 @@
         "script_level.level_keys": [
           "BrowardTestMarkdownLevel"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 1,
         "lesson.key": "Conditionals with Cards (Integrated Lesson)- Part 1",
         "lesson_group.key": "time4cs_c2",
         "script.name": "time4cs-experiment-unit-2"
@@ -1172,8 +1100,6 @@
         "script_level.level_keys": [
           "BrowardTestMarkdownLevel"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 1,
         "lesson.key": "Alligator Holes",
         "lesson_group.key": "time4cs_c2",
         "script.name": "time4cs-experiment-unit-2"
@@ -1185,8 +1111,6 @@
         "script_level.level_keys": [
           "BrowardTestMarkdownLevel"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 1,
         "lesson.key": "Food Chain Game",
         "lesson_group.key": "time4cs_c2",
         "script.name": "time4cs-experiment-unit-2"
@@ -1198,8 +1122,6 @@
         "script_level.level_keys": [
           "BrowardTestMarkdownLevel"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 1,
         "lesson.key": "Invasive Species",
         "lesson_group.key": "time4cs_c3",
         "script.name": "time4cs-experiment-unit-2"
@@ -1211,8 +1133,6 @@
         "script_level.level_keys": [
           "BrowardTestMarkdownLevel"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 1,
         "lesson.key": "Conditionals with Cards (Integrated Lesson)- Part 2",
         "lesson_group.key": "time4cs_c3",
         "script.name": "time4cs-experiment-unit-2"
@@ -1224,8 +1144,6 @@
         "script_level.level_keys": [
           "BrowardTestMarkdownLevel"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 1,
         "lesson.key": "I am in Big Trouble",
         "lesson_group.key": "time4cs_c3",
         "script.name": "time4cs-experiment-unit-2"
@@ -1237,8 +1155,6 @@
         "script_level.level_keys": [
           "BrowardTestMarkdownLevel"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 1,
         "lesson.key": "Conditionals in Sprite Lab",
         "lesson_group.key": "time4cs_c3",
         "script.name": "time4cs-experiment-unit-2"
@@ -1250,8 +1166,6 @@
         "script_level.level_keys": [
           "BrowardTestMarkdownLevel"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 1,
         "lesson.key": "Nested Loops in Maze",
         "lesson_group.key": "time4cs_c3",
         "script.name": "time4cs-experiment-unit-2"
@@ -1263,8 +1177,6 @@
         "script_level.level_keys": [
           "BrowardTestMarkdownLevel"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 1,
         "lesson.key": "Fancy Shapes using Nested Loops",
         "lesson_group.key": "time4cs_c3",
         "script.name": "time4cs-experiment-unit-2"
@@ -1276,8 +1188,6 @@
         "script_level.level_keys": [
           "BrowardTestMarkdownLevel"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 1,
         "lesson.key": "Nested Loops with Frozen",
         "lesson_group.key": "time4cs_c3",
         "script.name": "time4cs-experiment-unit-2"
@@ -1289,8 +1199,6 @@
         "script_level.level_keys": [
           "BrowardTestMarkdownLevel"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 1,
         "lesson.key": "Fishy Business",
         "lesson_group.key": "time4cs_c4",
         "script.name": "time4cs-experiment-unit-2"
@@ -1302,8 +1210,6 @@
         "script_level.level_keys": [
           "BrowardTestMarkdownLevel"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 1,
         "lesson.key": "Songwriting (Integrated Lesson)",
         "lesson_group.key": "time4cs_c4",
         "script.name": "time4cs-experiment-unit-2"
@@ -1315,8 +1221,6 @@
         "script_level.level_keys": [
           "BrowardTestMarkdownLevel"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 1,
         "lesson.key": "Functions in Minecraft",
         "lesson_group.key": "time4cs_c4",
         "script.name": "time4cs-experiment-unit-2"
@@ -1328,8 +1232,6 @@
         "script_level.level_keys": [
           "BrowardTestMarkdownLevel"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 1,
         "lesson.key": "Functions with Harvester",
         "lesson_group.key": "time4cs_c4",
         "script.name": "time4cs-experiment-unit-2"
@@ -1341,8 +1243,6 @@
         "script_level.level_keys": [
           "BrowardTestMarkdownLevel"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 1,
         "lesson.key": "Functions with Artist",
         "lesson_group.key": "time4cs_c4",
         "script.name": "time4cs-experiment-unit-2"
@@ -1354,8 +1254,6 @@
         "script_level.level_keys": [
           "BrowardTestMarkdownLevel"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 1,
         "lesson.key": "Pythons impacting native populations",
         "lesson_group.key": "time4cs_c5",
         "script.name": "time4cs-experiment-unit-2"
@@ -1367,8 +1265,6 @@
         "script_level.level_keys": [
           "BrowardTestMarkdownLevel"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 1,
         "lesson.key": "Functions in Sprite Lab",
         "lesson_group.key": "time4cs_c5",
         "script.name": "time4cs-experiment-unit-2"
@@ -1380,8 +1276,6 @@
         "script_level.level_keys": [
           "BrowardTestMarkdownLevel"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 1,
         "lesson.key": "Python Problem- Current Solutions",
         "lesson_group.key": "time4cs_c5",
         "script.name": "time4cs-experiment-unit-2"
@@ -1393,8 +1287,6 @@
         "script_level.level_keys": [
           "BrowardTestMarkdownLevel"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 1,
         "lesson.key": "End of Course Project (integrated- project planning lesson)",
         "lesson_group.key": "time4cs_c5",
         "script.name": "time4cs-experiment-unit-2"
@@ -1406,8 +1298,6 @@
         "script_level.level_keys": [
           "BrowardTestMarkdownLevel"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 1,
         "lesson.key": "Debate- Pythons impacting native populations",
         "lesson_group.key": "time4cs_c5",
         "script.name": "time4cs-experiment-unit-2"
@@ -1419,8 +1309,6 @@
         "script_level.level_keys": [
           "BrowardTestMarkdownLevel"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 1,
         "lesson.key": "Work on Project",
         "lesson_group.key": "time4cs_c5",
         "script.name": "time4cs-experiment-unit-2"

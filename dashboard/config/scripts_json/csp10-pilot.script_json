@@ -242,8 +242,6 @@
         "script_level.level_keys": [
           "CSP U10L1 SFLP 20-21"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Project - Innovation Simulation Part 1",
         "lesson_group.key": "",
         "script.name": "csp10-pilot"
@@ -265,8 +263,6 @@
         "script_level.level_keys": [
           "U10 L01 CFU innovations"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Project - Innovation Simulation Part 1",
         "lesson_group.key": "",
         "script.name": "csp10-pilot"
@@ -288,8 +284,6 @@
         "script_level.level_keys": [
           "CSP U10L2 SFLP 20-21"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 1,
         "lesson.key": "Project - Innovation Simulation Part 2",
         "lesson_group.key": "",
         "script.name": "csp10-pilot"
@@ -311,8 +305,6 @@
         "script_level.level_keys": [
           "U10 L02 CFU innovations part 2"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 2,
         "lesson.key": "Project - Innovation Simulation Part 2",
         "lesson_group.key": "",
         "script.name": "csp10-pilot"
@@ -334,8 +326,6 @@
         "script_level.level_keys": [
           "CSP U10L3 SFLP 20-21"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 1,
         "lesson.key": "Data Policies and Privacy",
         "lesson_group.key": "",
         "script.name": "csp10-pilot"
@@ -357,8 +347,6 @@
         "script_level.level_keys": [
           "U10L3 CFU Why Collect PII"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 2,
         "lesson.key": "Data Policies and Privacy",
         "lesson_group.key": "",
         "script.name": "csp10-pilot"
@@ -380,8 +368,6 @@
         "script_level.level_keys": [
           "CSP U10L4 SFLP 20-21"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 1,
         "lesson.key": "The Value of Privacy",
         "lesson_group.key": "",
         "script.name": "csp10-pilot"
@@ -403,8 +389,6 @@
         "script_level.level_keys": [
           "CSP U10L5 SFLP 20-21"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 1,
         "lesson.key": "Project - Innovation Simulation Part 3",
         "lesson_group.key": "",
         "script.name": "csp10-pilot"
@@ -426,8 +410,6 @@
         "script_level.level_keys": [
           "CSP U10L6 SFLP 20-21"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 1,
         "lesson.key": "Security Risks Part 1",
         "lesson_group.key": "",
         "script.name": "csp10-pilot"
@@ -449,8 +431,6 @@
         "script_level.level_keys": [
           "CSP 20-21 Keylogging"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 2,
         "lesson.key": "Security Risks Part 1",
         "lesson_group.key": "",
         "script.name": "csp10-pilot"
@@ -472,8 +452,6 @@
         "script_level.level_keys": [
           "CSP 20-21 Phishing"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 3,
         "lesson.key": "Security Risks Part 1",
         "lesson_group.key": "",
         "script.name": "csp10-pilot"
@@ -495,8 +473,6 @@
         "script_level.level_keys": [
           "CSP 20-21 Rogue Access Points"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 4,
         "lesson.key": "Security Risks Part 1",
         "lesson_group.key": "",
         "script.name": "csp10-pilot"
@@ -518,8 +494,6 @@
         "script_level.level_keys": [
           "U10 L07 CFU security risks"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 5,
         "lesson.key": "Security Risks Part 1",
         "lesson_group.key": "",
         "script.name": "csp10-pilot"
@@ -541,8 +515,6 @@
         "script_level.level_keys": [
           "CSP U10L7 SFLP 20-21"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 1,
         "lesson.key": "Security Risks Part 2",
         "lesson_group.key": "",
         "script.name": "csp10-pilot"
@@ -564,8 +536,6 @@
         "script_level.level_keys": [
           "U10 L08 CFU security risks"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 2,
         "lesson.key": "Security Risks Part 2",
         "lesson_group.key": "",
         "script.name": "csp10-pilot"
@@ -587,8 +557,6 @@
         "script_level.level_keys": [
           "CSP U10L8 SFLP 20-21"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 1,
         "lesson.key": "Project: Innovation Simulation Part 4",
         "lesson_group.key": "",
         "script.name": "csp10-pilot"
@@ -610,8 +578,6 @@
         "script_level.level_keys": [
           "CSP U10L9 SFLP 20-21"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 1,
         "lesson.key": "Protecting Data Part 1",
         "lesson_group.key": "",
         "script.name": "csp10-pilot"
@@ -633,8 +599,6 @@
         "script_level.level_keys": [
           "Crack a Caesar Cipher_2020"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 2,
         "lesson.key": "Protecting Data Part 1",
         "lesson_group.key": "",
         "script.name": "csp10-pilot"
@@ -656,8 +620,6 @@
         "script_level.level_keys": [
           "Crack Random Substitution_2020"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 3,
         "lesson.key": "Protecting Data Part 1",
         "lesson_group.key": "",
         "script.name": "csp10-pilot"
@@ -679,8 +641,6 @@
         "script_level.level_keys": [
           "U10L9 CFU public key"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 4,
         "lesson.key": "Protecting Data Part 1",
         "lesson_group.key": "",
         "script.name": "csp10-pilot"
@@ -702,8 +662,6 @@
         "script_level.level_keys": [
           "CSP U10L10 SFLP 20-21"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 1,
         "lesson.key": "Protecting Data Part 2",
         "lesson_group.key": "",
         "script.name": "csp10-pilot"
@@ -725,8 +683,6 @@
         "script_level.level_keys": [
           "U10L10 CFU MFA"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 2,
         "lesson.key": "Protecting Data Part 2",
         "lesson_group.key": "",
         "script.name": "csp10-pilot"
@@ -748,8 +704,6 @@
         "script_level.level_keys": [
           "CSP U10L11 SFLP 20-21"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 1,
         "lesson.key": "Project: Innovation Simulation Part 5",
         "lesson_group.key": "",
         "script.name": "csp10-pilot"
@@ -771,8 +725,6 @@
         "script_level.level_keys": [
           "CSP U10L12 SFLP 20-21"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 1,
         "lesson.key": "Project: Innovation Simulation Part 6",
         "lesson_group.key": "",
         "script.name": "csp10-pilot"
@@ -794,8 +746,6 @@
         "script_level.level_keys": [
           "CSP U10L13 SFLP 20-21"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 1,
         "lesson.key": "Project: Innovation Simulation Part 7",
         "lesson_group.key": "",
         "script.name": "csp10-pilot"
@@ -817,8 +767,6 @@
         "script_level.level_keys": [
           "CSP U10L14 SFLP 20-21"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 1,
         "lesson.key": "Lesson 14: Unit Assessment Day",
         "lesson_group.key": "",
         "script.name": "csp10-pilot"
@@ -840,8 +788,6 @@
         "script_level.level_keys": [
           "CSP 20-21 Unit 10 Assessment"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 2,
         "lesson.key": "Lesson 14: Unit Assessment Day",
         "lesson_group.key": "",
         "script.name": "csp10-pilot"
@@ -858,8 +804,6 @@
         "script_level.level_keys": [
           "CSP U10L1 SFLP 20-21"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Project - Innovation Simulation Part 1",
         "lesson_group.key": "",
         "script.name": "csp10-pilot"
@@ -871,8 +815,6 @@
         "script_level.level_keys": [
           "U10 L01 CFU innovations"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Project - Innovation Simulation Part 1",
         "lesson_group.key": "",
         "script.name": "csp10-pilot"
@@ -884,8 +826,6 @@
         "script_level.level_keys": [
           "CSP U10L2 SFLP 20-21"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 1,
         "lesson.key": "Project - Innovation Simulation Part 2",
         "lesson_group.key": "",
         "script.name": "csp10-pilot"
@@ -897,8 +837,6 @@
         "script_level.level_keys": [
           "U10 L02 CFU innovations part 2"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 2,
         "lesson.key": "Project - Innovation Simulation Part 2",
         "lesson_group.key": "",
         "script.name": "csp10-pilot"
@@ -910,8 +848,6 @@
         "script_level.level_keys": [
           "CSP U10L3 SFLP 20-21"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 1,
         "lesson.key": "Data Policies and Privacy",
         "lesson_group.key": "",
         "script.name": "csp10-pilot"
@@ -923,8 +859,6 @@
         "script_level.level_keys": [
           "U10L3 CFU Why Collect PII"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 2,
         "lesson.key": "Data Policies and Privacy",
         "lesson_group.key": "",
         "script.name": "csp10-pilot"
@@ -936,8 +870,6 @@
         "script_level.level_keys": [
           "CSP U10L4 SFLP 20-21"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 1,
         "lesson.key": "The Value of Privacy",
         "lesson_group.key": "",
         "script.name": "csp10-pilot"
@@ -949,8 +881,6 @@
         "script_level.level_keys": [
           "CSP U10L5 SFLP 20-21"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 1,
         "lesson.key": "Project - Innovation Simulation Part 3",
         "lesson_group.key": "",
         "script.name": "csp10-pilot"
@@ -962,8 +892,6 @@
         "script_level.level_keys": [
           "CSP U10L6 SFLP 20-21"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 1,
         "lesson.key": "Security Risks Part 1",
         "lesson_group.key": "",
         "script.name": "csp10-pilot"
@@ -975,8 +903,6 @@
         "script_level.level_keys": [
           "CSP 20-21 Keylogging"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 2,
         "lesson.key": "Security Risks Part 1",
         "lesson_group.key": "",
         "script.name": "csp10-pilot"
@@ -988,8 +914,6 @@
         "script_level.level_keys": [
           "CSP 20-21 Phishing"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 3,
         "lesson.key": "Security Risks Part 1",
         "lesson_group.key": "",
         "script.name": "csp10-pilot"
@@ -1001,8 +925,6 @@
         "script_level.level_keys": [
           "CSP 20-21 Rogue Access Points"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 4,
         "lesson.key": "Security Risks Part 1",
         "lesson_group.key": "",
         "script.name": "csp10-pilot"
@@ -1014,8 +936,6 @@
         "script_level.level_keys": [
           "U10 L07 CFU security risks"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 5,
         "lesson.key": "Security Risks Part 1",
         "lesson_group.key": "",
         "script.name": "csp10-pilot"
@@ -1027,8 +947,6 @@
         "script_level.level_keys": [
           "CSP U10L7 SFLP 20-21"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 1,
         "lesson.key": "Security Risks Part 2",
         "lesson_group.key": "",
         "script.name": "csp10-pilot"
@@ -1040,8 +958,6 @@
         "script_level.level_keys": [
           "U10 L08 CFU security risks"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 2,
         "lesson.key": "Security Risks Part 2",
         "lesson_group.key": "",
         "script.name": "csp10-pilot"
@@ -1053,8 +969,6 @@
         "script_level.level_keys": [
           "CSP U10L8 SFLP 20-21"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 1,
         "lesson.key": "Project: Innovation Simulation Part 4",
         "lesson_group.key": "",
         "script.name": "csp10-pilot"
@@ -1066,8 +980,6 @@
         "script_level.level_keys": [
           "CSP U10L9 SFLP 20-21"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 1,
         "lesson.key": "Protecting Data Part 1",
         "lesson_group.key": "",
         "script.name": "csp10-pilot"
@@ -1079,8 +991,6 @@
         "script_level.level_keys": [
           "Crack a Caesar Cipher_2020"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 2,
         "lesson.key": "Protecting Data Part 1",
         "lesson_group.key": "",
         "script.name": "csp10-pilot"
@@ -1092,8 +1002,6 @@
         "script_level.level_keys": [
           "Crack Random Substitution_2020"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 3,
         "lesson.key": "Protecting Data Part 1",
         "lesson_group.key": "",
         "script.name": "csp10-pilot"
@@ -1105,8 +1013,6 @@
         "script_level.level_keys": [
           "U10L9 CFU public key"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 4,
         "lesson.key": "Protecting Data Part 1",
         "lesson_group.key": "",
         "script.name": "csp10-pilot"
@@ -1118,8 +1024,6 @@
         "script_level.level_keys": [
           "CSP U10L10 SFLP 20-21"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 1,
         "lesson.key": "Protecting Data Part 2",
         "lesson_group.key": "",
         "script.name": "csp10-pilot"
@@ -1131,8 +1035,6 @@
         "script_level.level_keys": [
           "U10L10 CFU MFA"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 2,
         "lesson.key": "Protecting Data Part 2",
         "lesson_group.key": "",
         "script.name": "csp10-pilot"
@@ -1144,8 +1046,6 @@
         "script_level.level_keys": [
           "CSP U10L11 SFLP 20-21"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 1,
         "lesson.key": "Project: Innovation Simulation Part 5",
         "lesson_group.key": "",
         "script.name": "csp10-pilot"
@@ -1157,8 +1057,6 @@
         "script_level.level_keys": [
           "CSP U10L12 SFLP 20-21"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 1,
         "lesson.key": "Project: Innovation Simulation Part 6",
         "lesson_group.key": "",
         "script.name": "csp10-pilot"
@@ -1170,8 +1068,6 @@
         "script_level.level_keys": [
           "CSP U10L13 SFLP 20-21"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 1,
         "lesson.key": "Project: Innovation Simulation Part 7",
         "lesson_group.key": "",
         "script.name": "csp10-pilot"
@@ -1183,8 +1079,6 @@
         "script_level.level_keys": [
           "CSP U10L14 SFLP 20-21"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 1,
         "lesson.key": "Lesson 14: Unit Assessment Day",
         "lesson_group.key": "",
         "script.name": "csp10-pilot"
@@ -1196,8 +1090,6 @@
         "script_level.level_keys": [
           "CSP 20-21 Unit 10 Assessment"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 2,
         "lesson.key": "Lesson 14: Unit Assessment Day",
         "lesson_group.key": "",
         "script.name": "csp10-pilot"

@@ -54,8 +54,6 @@
         "script_level.level_keys": [
           "PDK5 Intro"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "PDK5 Intro",
         "lesson_group.key": "",
         "script.name": "Test Wednesday"
@@ -72,8 +70,6 @@
         "script_level.level_keys": [
           "PDK5 Intro"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "PDK5 Intro",
         "lesson_group.key": "",
         "script.name": "Test Wednesday"

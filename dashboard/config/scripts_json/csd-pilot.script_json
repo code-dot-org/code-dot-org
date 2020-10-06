@@ -446,8 +446,6 @@
         "script_level.level_keys": [
           "CSD Pilot Warning Page"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Pilot Information 1",
         "lesson_group.key": "",
         "script.name": "csd-pilot"
@@ -468,8 +466,6 @@
         "script_level.level_keys": [
           "CSD Pilot Warning Page"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 1,
         "lesson.key": "Pilot Information 2",
         "lesson_group.key": "",
         "script.name": "csd-pilot"
@@ -490,8 +486,6 @@
         "script_level.level_keys": [
           "CSD Pilot Warning Page"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 1,
         "lesson.key": "Pilot Information 3",
         "lesson_group.key": "",
         "script.name": "csd-pilot"
@@ -512,8 +506,6 @@
         "script_level.level_keys": [
           "CSD Pilot Warning Page"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 1,
         "lesson.key": "Pilot Information 4",
         "lesson_group.key": "",
         "script.name": "csd-pilot"
@@ -534,8 +526,6 @@
         "script_level.level_keys": [
           "CSD Pilot Warning Page"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 1,
         "lesson.key": "Pilot Information 5",
         "lesson_group.key": "",
         "script.name": "csd-pilot"
@@ -556,8 +546,6 @@
         "script_level.level_keys": [
           "CSD Pilot Warning Page"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 1,
         "lesson.key": "Pilot Information 6",
         "lesson_group.key": "",
         "script.name": "csd-pilot"
@@ -578,8 +566,6 @@
         "script_level.level_keys": [
           "CSD Pilot Warning Page"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 1,
         "lesson.key": "Pilot Information 7",
         "lesson_group.key": "",
         "script.name": "csd-pilot"
@@ -600,8 +586,6 @@
         "script_level.level_keys": [
           "CSD Pilot Warning Page"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 1,
         "lesson.key": "Pilot Information 8",
         "lesson_group.key": "",
         "script.name": "csd-pilot"
@@ -622,8 +606,6 @@
         "script_level.level_keys": [
           "CSD Pilot Warning Page"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 1,
         "lesson.key": "Pilot Information 9",
         "lesson_group.key": "",
         "script.name": "csd-pilot"
@@ -644,8 +626,6 @@
         "script_level.level_keys": [
           "CSD Pilot Warning Page"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 1,
         "lesson.key": "Pilot Information 10",
         "lesson_group.key": "",
         "script.name": "csd-pilot"
@@ -666,8 +646,6 @@
         "script_level.level_keys": [
           "CSD Pilot Warning Page"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 1,
         "lesson.key": "Pilot Information 11",
         "lesson_group.key": "",
         "script.name": "csd-pilot"
@@ -688,8 +666,6 @@
         "script_level.level_keys": [
           "CSD Pilot Warning Page"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 1,
         "lesson.key": "Pilot Information 12",
         "lesson_group.key": "",
         "script.name": "csd-pilot"
@@ -710,8 +686,6 @@
         "script_level.level_keys": [
           "CSD Pilot Warning Page"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 1,
         "lesson.key": "Pilot Information 13",
         "lesson_group.key": "",
         "script.name": "csd-pilot"
@@ -732,8 +706,6 @@
         "script_level.level_keys": [
           "CSD Pilot Warning Page"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 1,
         "lesson.key": "Pilot Information 14",
         "lesson_group.key": "",
         "script.name": "csd-pilot"
@@ -754,8 +726,6 @@
         "script_level.level_keys": [
           "CSD Pilot Warning Page"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 1,
         "lesson.key": "Pilot Information 15",
         "lesson_group.key": "",
         "script.name": "csd-pilot"
@@ -776,8 +746,6 @@
         "script_level.level_keys": [
           "CSD Pilot Warning Page"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 1,
         "lesson.key": "Pilot Information 16",
         "lesson_group.key": "",
         "script.name": "csd-pilot"
@@ -798,8 +766,6 @@
         "script_level.level_keys": [
           "CSD Pilot Warning Page"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 1,
         "lesson.key": "Pilot Information 17",
         "lesson_group.key": "",
         "script.name": "csd-pilot"
@@ -820,8 +786,6 @@
         "script_level.level_keys": [
           "CSD Pilot Warning Page"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 1,
         "lesson.key": "Pilot Information 18",
         "lesson_group.key": "",
         "script.name": "csd-pilot"
@@ -842,8 +806,6 @@
         "script_level.level_keys": [
           "CSD Pilot Warning Page"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 1,
         "lesson.key": "Pilot Information 19",
         "lesson_group.key": "",
         "script.name": "csd-pilot"
@@ -864,8 +826,6 @@
         "script_level.level_keys": [
           "CSD Pilot Warning Page"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 1,
         "lesson.key": "Pilot Information 20",
         "lesson_group.key": "",
         "script.name": "csd-pilot"
@@ -886,8 +846,6 @@
         "script_level.level_keys": [
           "CSD Pilot Warning Page"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 1,
         "lesson.key": "Pilot Information 21",
         "lesson_group.key": "",
         "script.name": "csd-pilot"
@@ -908,8 +866,6 @@
         "script_level.level_keys": [
           "CSD Pilot Warning Page"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 1,
         "lesson.key": "Pilot Information 22",
         "lesson_group.key": "",
         "script.name": "csd-pilot"
@@ -930,8 +886,6 @@
         "script_level.level_keys": [
           "CSD Pilot Warning Page"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 1,
         "lesson.key": "Pilot Information 23",
         "lesson_group.key": "",
         "script.name": "csd-pilot"
@@ -952,8 +906,6 @@
         "script_level.level_keys": [
           "CSD Pilot Warning Page"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 1,
         "lesson.key": "Pilot Information 24",
         "lesson_group.key": "",
         "script.name": "csd-pilot"
@@ -974,8 +926,6 @@
         "script_level.level_keys": [
           "CSD Pilot Warning Page"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 1,
         "lesson.key": "Pilot Information 25",
         "lesson_group.key": "",
         "script.name": "csd-pilot"
@@ -996,8 +946,6 @@
         "script_level.level_keys": [
           "CSD Pilot Warning Page"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 1,
         "lesson.key": "Pilot Information 26",
         "lesson_group.key": "",
         "script.name": "csd-pilot"
@@ -1018,8 +966,6 @@
         "script_level.level_keys": [
           "CSD Pilot Warning Page"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 1,
         "lesson.key": "Pilot Information 27",
         "lesson_group.key": "",
         "script.name": "csd-pilot"
@@ -1040,8 +986,6 @@
         "script_level.level_keys": [
           "CSD Pilot Warning Page"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 1,
         "lesson.key": "Pilot Information 28",
         "lesson_group.key": "",
         "script.name": "csd-pilot"
@@ -1062,8 +1006,6 @@
         "script_level.level_keys": [
           "CSD Pilot Warning Page"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 1,
         "lesson.key": "Pilot Information 29",
         "lesson_group.key": "",
         "script.name": "csd-pilot"
@@ -1080,8 +1022,6 @@
         "script_level.level_keys": [
           "CSD Pilot Warning Page"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Pilot Information 1",
         "lesson_group.key": "",
         "script.name": "csd-pilot"
@@ -1093,8 +1033,6 @@
         "script_level.level_keys": [
           "CSD Pilot Warning Page"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 1,
         "lesson.key": "Pilot Information 2",
         "lesson_group.key": "",
         "script.name": "csd-pilot"
@@ -1106,8 +1044,6 @@
         "script_level.level_keys": [
           "CSD Pilot Warning Page"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 1,
         "lesson.key": "Pilot Information 3",
         "lesson_group.key": "",
         "script.name": "csd-pilot"
@@ -1119,8 +1055,6 @@
         "script_level.level_keys": [
           "CSD Pilot Warning Page"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 1,
         "lesson.key": "Pilot Information 4",
         "lesson_group.key": "",
         "script.name": "csd-pilot"
@@ -1132,8 +1066,6 @@
         "script_level.level_keys": [
           "CSD Pilot Warning Page"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 1,
         "lesson.key": "Pilot Information 5",
         "lesson_group.key": "",
         "script.name": "csd-pilot"
@@ -1145,8 +1077,6 @@
         "script_level.level_keys": [
           "CSD Pilot Warning Page"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 1,
         "lesson.key": "Pilot Information 6",
         "lesson_group.key": "",
         "script.name": "csd-pilot"
@@ -1158,8 +1088,6 @@
         "script_level.level_keys": [
           "CSD Pilot Warning Page"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 1,
         "lesson.key": "Pilot Information 7",
         "lesson_group.key": "",
         "script.name": "csd-pilot"
@@ -1171,8 +1099,6 @@
         "script_level.level_keys": [
           "CSD Pilot Warning Page"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 1,
         "lesson.key": "Pilot Information 8",
         "lesson_group.key": "",
         "script.name": "csd-pilot"
@@ -1184,8 +1110,6 @@
         "script_level.level_keys": [
           "CSD Pilot Warning Page"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 1,
         "lesson.key": "Pilot Information 9",
         "lesson_group.key": "",
         "script.name": "csd-pilot"
@@ -1197,8 +1121,6 @@
         "script_level.level_keys": [
           "CSD Pilot Warning Page"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 1,
         "lesson.key": "Pilot Information 10",
         "lesson_group.key": "",
         "script.name": "csd-pilot"
@@ -1210,8 +1132,6 @@
         "script_level.level_keys": [
           "CSD Pilot Warning Page"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 1,
         "lesson.key": "Pilot Information 11",
         "lesson_group.key": "",
         "script.name": "csd-pilot"
@@ -1223,8 +1143,6 @@
         "script_level.level_keys": [
           "CSD Pilot Warning Page"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 1,
         "lesson.key": "Pilot Information 12",
         "lesson_group.key": "",
         "script.name": "csd-pilot"
@@ -1236,8 +1154,6 @@
         "script_level.level_keys": [
           "CSD Pilot Warning Page"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 1,
         "lesson.key": "Pilot Information 13",
         "lesson_group.key": "",
         "script.name": "csd-pilot"
@@ -1249,8 +1165,6 @@
         "script_level.level_keys": [
           "CSD Pilot Warning Page"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 1,
         "lesson.key": "Pilot Information 14",
         "lesson_group.key": "",
         "script.name": "csd-pilot"
@@ -1262,8 +1176,6 @@
         "script_level.level_keys": [
           "CSD Pilot Warning Page"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 1,
         "lesson.key": "Pilot Information 15",
         "lesson_group.key": "",
         "script.name": "csd-pilot"
@@ -1275,8 +1187,6 @@
         "script_level.level_keys": [
           "CSD Pilot Warning Page"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 1,
         "lesson.key": "Pilot Information 16",
         "lesson_group.key": "",
         "script.name": "csd-pilot"
@@ -1288,8 +1198,6 @@
         "script_level.level_keys": [
           "CSD Pilot Warning Page"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 1,
         "lesson.key": "Pilot Information 17",
         "lesson_group.key": "",
         "script.name": "csd-pilot"
@@ -1301,8 +1209,6 @@
         "script_level.level_keys": [
           "CSD Pilot Warning Page"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 1,
         "lesson.key": "Pilot Information 18",
         "lesson_group.key": "",
         "script.name": "csd-pilot"
@@ -1314,8 +1220,6 @@
         "script_level.level_keys": [
           "CSD Pilot Warning Page"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 1,
         "lesson.key": "Pilot Information 19",
         "lesson_group.key": "",
         "script.name": "csd-pilot"
@@ -1327,8 +1231,6 @@
         "script_level.level_keys": [
           "CSD Pilot Warning Page"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 1,
         "lesson.key": "Pilot Information 20",
         "lesson_group.key": "",
         "script.name": "csd-pilot"
@@ -1340,8 +1242,6 @@
         "script_level.level_keys": [
           "CSD Pilot Warning Page"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 1,
         "lesson.key": "Pilot Information 21",
         "lesson_group.key": "",
         "script.name": "csd-pilot"
@@ -1353,8 +1253,6 @@
         "script_level.level_keys": [
           "CSD Pilot Warning Page"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 1,
         "lesson.key": "Pilot Information 22",
         "lesson_group.key": "",
         "script.name": "csd-pilot"
@@ -1366,8 +1264,6 @@
         "script_level.level_keys": [
           "CSD Pilot Warning Page"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 1,
         "lesson.key": "Pilot Information 23",
         "lesson_group.key": "",
         "script.name": "csd-pilot"
@@ -1379,8 +1275,6 @@
         "script_level.level_keys": [
           "CSD Pilot Warning Page"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 1,
         "lesson.key": "Pilot Information 24",
         "lesson_group.key": "",
         "script.name": "csd-pilot"
@@ -1392,8 +1286,6 @@
         "script_level.level_keys": [
           "CSD Pilot Warning Page"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 1,
         "lesson.key": "Pilot Information 25",
         "lesson_group.key": "",
         "script.name": "csd-pilot"
@@ -1405,8 +1297,6 @@
         "script_level.level_keys": [
           "CSD Pilot Warning Page"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 1,
         "lesson.key": "Pilot Information 26",
         "lesson_group.key": "",
         "script.name": "csd-pilot"
@@ -1418,8 +1308,6 @@
         "script_level.level_keys": [
           "CSD Pilot Warning Page"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 1,
         "lesson.key": "Pilot Information 27",
         "lesson_group.key": "",
         "script.name": "csd-pilot"
@@ -1431,8 +1319,6 @@
         "script_level.level_keys": [
           "CSD Pilot Warning Page"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 1,
         "lesson.key": "Pilot Information 28",
         "lesson_group.key": "",
         "script.name": "csd-pilot"
@@ -1444,8 +1330,6 @@
         "script_level.level_keys": [
           "CSD Pilot Warning Page"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 1,
         "lesson.key": "Pilot Information 29",
         "lesson_group.key": "",
         "script.name": "csd-pilot"

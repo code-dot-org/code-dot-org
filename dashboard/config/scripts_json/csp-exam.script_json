@@ -197,8 +197,6 @@
         "script_level.level_keys": [
           "CSP Unit 1 Ch1 Cumulative Assessment MC Group v2_exam_prep"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Unit 1 Assessment 1 - Binary and Ascii ",
         "lesson_group.key": "",
         "script.name": "csp-exam"
@@ -219,8 +217,6 @@
         "script_level.level_keys": [
           "CSP Unit 1 Ch2 Cumulative Assessment MC Group_exam_prep"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 1,
         "lesson.key": "Unit 1 Assessment 2 - Internet Protocols, TCP/IP, DNS, HTTP, etc",
         "lesson_group.key": "",
         "script.name": "csp-exam"
@@ -241,8 +237,6 @@
         "script_level.level_keys": [
           "CSP Unit 2 Ch1 Cumulative Assessment MC_exam_prep"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 1,
         "lesson.key": "Unit 2 Assessment 1 - Bits, Bytes, Hexadecimal and Compression",
         "lesson_group.key": "",
         "script.name": "csp-exam"
@@ -263,8 +257,6 @@
         "script_level.level_keys": [
           "CSP Unit 2 Ch2 Cumulative Assessment MC_exam_prep"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 1,
         "lesson.key": "Unit 2 Assessment 2 - Interpreting Data & Charts, Big Data, Global Impacts",
         "lesson_group.key": "",
         "script.name": "csp-exam"
@@ -285,8 +277,6 @@
         "script_level.level_keys": [
           "CSP Unit 3 Ch1 Cumulative Assessment MC Group_exam_prep"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 1,
         "lesson.key": "Unit 3 Assessment 1 - Turtle Programming, Loops, Functions, Abstraction",
         "lesson_group.key": "",
         "script.name": "csp-exam"
@@ -307,8 +297,6 @@
         "script_level.level_keys": [
           "CSP Unit 4 Ch1 Cumulative Assessment MC_exam_prep"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 1,
         "lesson.key": "Unit 4 Assessment 1 - Privacy, Cybersecurity, Encryption",
         "lesson_group.key": "",
         "script.name": "csp-exam"
@@ -329,8 +317,6 @@
         "script_level.level_keys": [
           "CSP Unit 5 Cumulative Assessment 1 MC_exam_prep"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 1,
         "lesson.key": "Unit 5 Assessment 1 - Events, Variables, Debugging, Arithmetic, Turtle Review",
         "lesson_group.key": "",
         "script.name": "csp-exam"
@@ -351,8 +337,6 @@
         "script_level.level_keys": [
           "CSP Unit 5 Cumulative Assessment 2 MC_exam_prep"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 1,
         "lesson.key": "Unit 5 Assessment 2 - If Statements, Boolean Expressions, Strings",
         "lesson_group.key": "",
         "script.name": "csp-exam"
@@ -373,8 +357,6 @@
         "script_level.level_keys": [
           "CSP Unit 5 Cumulative Assessment 3 MC_exam_prep"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 1,
         "lesson.key": "Unit 5 Assessment 3 - While Loops, Boolean Expressions, Arrays and Lists",
         "lesson_group.key": "",
         "script.name": "csp-exam"
@@ -395,8 +377,6 @@
         "script_level.level_keys": [
           "CSP Unit 5 Cumulative Assessment 4 MC_exam_prep"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 1,
         "lesson.key": "Unit 5 Assessment 4 - List Algorithms, Functions with Return Values",
         "lesson_group.key": "",
         "script.name": "csp-exam"
@@ -417,8 +397,6 @@
         "script_level.level_keys": [
           "CSP Cumulative Assess A_exam_prep"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 1,
         "lesson.key": "Unit 5 Assessment 5 - Practice AP Pseudocode Questions (Variables, Procedures, Loops, Conditionals)",
         "lesson_group.key": "",
         "script.name": "csp-exam"
@@ -435,8 +413,6 @@
         "script_level.level_keys": [
           "CSP Unit 1 Ch1 Cumulative Assessment MC Group v2_exam_prep"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Unit 1 Assessment 1 - Binary and Ascii ",
         "lesson_group.key": "",
         "script.name": "csp-exam"
@@ -448,8 +424,6 @@
         "script_level.level_keys": [
           "CSP Unit 1 Ch2 Cumulative Assessment MC Group_exam_prep"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 1,
         "lesson.key": "Unit 1 Assessment 2 - Internet Protocols, TCP/IP, DNS, HTTP, etc",
         "lesson_group.key": "",
         "script.name": "csp-exam"
@@ -461,8 +435,6 @@
         "script_level.level_keys": [
           "CSP Unit 2 Ch1 Cumulative Assessment MC_exam_prep"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 1,
         "lesson.key": "Unit 2 Assessment 1 - Bits, Bytes, Hexadecimal and Compression",
         "lesson_group.key": "",
         "script.name": "csp-exam"
@@ -474,8 +446,6 @@
         "script_level.level_keys": [
           "CSP Unit 2 Ch2 Cumulative Assessment MC_exam_prep"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 1,
         "lesson.key": "Unit 2 Assessment 2 - Interpreting Data & Charts, Big Data, Global Impacts",
         "lesson_group.key": "",
         "script.name": "csp-exam"
@@ -487,8 +457,6 @@
         "script_level.level_keys": [
           "CSP Unit 3 Ch1 Cumulative Assessment MC Group_exam_prep"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 1,
         "lesson.key": "Unit 3 Assessment 1 - Turtle Programming, Loops, Functions, Abstraction",
         "lesson_group.key": "",
         "script.name": "csp-exam"
@@ -500,8 +468,6 @@
         "script_level.level_keys": [
           "CSP Unit 4 Ch1 Cumulative Assessment MC_exam_prep"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 1,
         "lesson.key": "Unit 4 Assessment 1 - Privacy, Cybersecurity, Encryption",
         "lesson_group.key": "",
         "script.name": "csp-exam"
@@ -513,8 +479,6 @@
         "script_level.level_keys": [
           "CSP Unit 5 Cumulative Assessment 1 MC_exam_prep"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 1,
         "lesson.key": "Unit 5 Assessment 1 - Events, Variables, Debugging, Arithmetic, Turtle Review",
         "lesson_group.key": "",
         "script.name": "csp-exam"
@@ -526,8 +490,6 @@
         "script_level.level_keys": [
           "CSP Unit 5 Cumulative Assessment 2 MC_exam_prep"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 1,
         "lesson.key": "Unit 5 Assessment 2 - If Statements, Boolean Expressions, Strings",
         "lesson_group.key": "",
         "script.name": "csp-exam"
@@ -539,8 +501,6 @@
         "script_level.level_keys": [
           "CSP Unit 5 Cumulative Assessment 3 MC_exam_prep"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 1,
         "lesson.key": "Unit 5 Assessment 3 - While Loops, Boolean Expressions, Arrays and Lists",
         "lesson_group.key": "",
         "script.name": "csp-exam"
@@ -552,8 +512,6 @@
         "script_level.level_keys": [
           "CSP Unit 5 Cumulative Assessment 4 MC_exam_prep"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 1,
         "lesson.key": "Unit 5 Assessment 4 - List Algorithms, Functions with Return Values",
         "lesson_group.key": "",
         "script.name": "csp-exam"
@@ -565,8 +523,6 @@
         "script_level.level_keys": [
           "CSP Cumulative Assess A_exam_prep"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 1,
         "lesson.key": "Unit 5 Assessment 5 - Practice AP Pseudocode Questions (Variables, Procedures, Loops, Conditionals)",
         "lesson_group.key": "",
         "script.name": "csp-exam"

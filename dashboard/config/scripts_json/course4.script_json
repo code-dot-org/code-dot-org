@@ -353,8 +353,6 @@
         "script_level.level_keys": [
           "TangramAlgorithms"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Unplugged: Tangrams",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -375,8 +373,6 @@
         "script_level.level_keys": [
           "Course 4 Maze 2"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 1,
         "lesson.key": "Maze and Bee",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -397,8 +393,6 @@
         "script_level.level_keys": [
           "Course 4 Maze 3"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 2,
         "lesson.key": "Maze and Bee",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -419,8 +413,6 @@
         "script_level.level_keys": [
           "Course 4 Maze 4"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 3,
         "lesson.key": "Maze and Bee",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -441,8 +433,6 @@
         "script_level.level_keys": [
           "Course 4 Maze 5"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 4,
         "lesson.key": "Maze and Bee",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -463,8 +453,6 @@
         "script_level.level_keys": [
           "Course 4 Bee Loops 5 NEW"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 5,
         "lesson.key": "Maze and Bee",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -485,8 +473,6 @@
         "script_level.level_keys": [
           "Course 4 Bee Loops 5a NEW"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 6,
         "lesson.key": "Maze and Bee",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -507,8 +493,6 @@
         "script_level.level_keys": [
           "Course 4 Bee 1"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 7,
         "lesson.key": "Maze and Bee",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -529,8 +513,6 @@
         "script_level.level_keys": [
           "Course 4 Bee 3"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 8,
         "lesson.key": "Maze and Bee",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -551,8 +533,6 @@
         "script_level.level_keys": [
           "Course 4 Bee 2"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 9,
         "lesson.key": "Maze and Bee",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -573,8 +553,6 @@
         "script_level.level_keys": [
           "course4_harvester_nested_loops_challenge1"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 10,
         "lesson.key": "Maze and Bee",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -595,8 +573,6 @@
         "script_level.level_keys": [
           "course4_collector_nested_loops_challenge2"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 11,
         "lesson.key": "Maze and Bee",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -617,8 +593,6 @@
         "script_level.level_keys": [
           "Course 4 Artist 1"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 1,
         "lesson.key": "Artist",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -639,8 +613,6 @@
         "script_level.level_keys": [
           "Course 4 Artist 2"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 2,
         "lesson.key": "Artist",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -661,8 +633,6 @@
         "script_level.level_keys": [
           "Course 4 Artist 3"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 3,
         "lesson.key": "Artist",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -683,8 +653,6 @@
         "script_level.level_keys": [
           "Course 4 Artist 4"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 4,
         "lesson.key": "Artist",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -705,8 +673,6 @@
         "script_level.level_keys": [
           "Course 4 Artist 5"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 5,
         "lesson.key": "Artist",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -727,8 +693,6 @@
         "script_level.level_keys": [
           "Course 4 Artist 6"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 6,
         "lesson.key": "Artist",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -749,8 +713,6 @@
         "script_level.level_keys": [
           "Course 4 Artist 7"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 7,
         "lesson.key": "Artist",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -771,8 +733,6 @@
         "script_level.level_keys": [
           "Course 4 Artist 8"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 8,
         "lesson.key": "Artist",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -793,8 +753,6 @@
         "script_level.level_keys": [
           "Course 4 Artist 8a"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 9,
         "lesson.key": "Artist",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -815,8 +773,6 @@
         "script_level.level_keys": [
           "Course 4 Artist 9"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 10,
         "lesson.key": "Artist",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -837,8 +793,6 @@
         "script_level.level_keys": [
           "Course 4 Artist 10"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 11,
         "lesson.key": "Artist",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -859,8 +813,6 @@
         "script_level.level_keys": [
           "Course 4 Artist 11"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 12,
         "lesson.key": "Artist",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -881,8 +833,6 @@
         "script_level.level_keys": [
           "Course 4 Artist 12"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 13,
         "lesson.key": "Artist",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -903,8 +853,6 @@
         "script_level.level_keys": [
           "Course 4 Artist 13"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 14,
         "lesson.key": "Artist",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -925,8 +873,6 @@
         "script_level.level_keys": [
           "EnvelopeVariables"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 1,
         "lesson.key": "Unplugged: Envelope Variables",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -947,8 +893,6 @@
         "script_level.level_keys": [
           "MadGlibs"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 1,
         "lesson.key": "Unplugged: Madlibs",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -969,8 +913,6 @@
         "script_level.level_keys": [
           "Course 4 Artist Vars 1"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 1,
         "lesson.key": "Artist: Variables",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -991,8 +933,6 @@
         "script_level.level_keys": [
           "Course 4 Artist Vars 2"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 2,
         "lesson.key": "Artist: Variables",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -1013,8 +953,6 @@
         "script_level.level_keys": [
           "NEW Course 4 Artist Vars 2"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 3,
         "lesson.key": "Artist: Variables",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -1035,8 +973,6 @@
         "script_level.level_keys": [
           "NEW Course 4 Artist Vars 4"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 4,
         "lesson.key": "Artist: Variables",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -1057,8 +993,6 @@
         "script_level.level_keys": [
           "NEW Course 4 Artist Vars 6"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 5,
         "lesson.key": "Artist: Variables",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -1079,8 +1013,6 @@
         "script_level.level_keys": [
           "Course 4 Artist Vars 4"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 6,
         "lesson.key": "Artist: Variables",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -1101,8 +1033,6 @@
         "script_level.level_keys": [
           "Course 4 Artist Vars 6"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 7,
         "lesson.key": "Artist: Variables",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -1123,8 +1053,6 @@
         "script_level.level_keys": [
           "Course 4 Artist Vars 7"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 8,
         "lesson.key": "Artist: Variables",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -1145,8 +1073,6 @@
         "script_level.level_keys": [
           "NEW Course 4 Artist Vars 12"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 9,
         "lesson.key": "Artist: Variables",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -1167,8 +1093,6 @@
         "script_level.level_keys": [
           "Course 4 Artist Vars 8"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 10,
         "lesson.key": "Artist: Variables",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -1189,8 +1113,6 @@
         "script_level.level_keys": [
           "Course 4 Artist Vars 11"
         ],
-        "script_level.chapter": 39,
-        "script_level.position": 11,
         "lesson.key": "Artist: Variables",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -1211,8 +1133,6 @@
         "script_level.level_keys": [
           "Course 4 Artist Vars 12"
         ],
-        "script_level.chapter": 40,
-        "script_level.position": 12,
         "lesson.key": "Artist: Variables",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -1233,8 +1153,6 @@
         "script_level.level_keys": [
           "Course 4 Artist Vars 13"
         ],
-        "script_level.chapter": 41,
-        "script_level.position": 13,
         "lesson.key": "Artist: Variables",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -1255,8 +1173,6 @@
         "script_level.level_keys": [
           "Course 4 Artist Vars 14"
         ],
-        "script_level.chapter": 42,
-        "script_level.position": 14,
         "lesson.key": "Artist: Variables",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -1277,8 +1193,6 @@
         "script_level.level_keys": [
           "Course 4 Artist Inspire"
         ],
-        "script_level.chapter": 43,
-        "script_level.position": 15,
         "lesson.key": "Artist: Variables",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -1299,8 +1213,6 @@
         "script_level.level_keys": [
           "Course 4 Artist 20"
         ],
-        "script_level.chapter": 44,
-        "script_level.position": 16,
         "lesson.key": "Artist: Variables",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -1321,8 +1233,6 @@
         "script_level.level_keys": [
           "course4_artist_variables_challenge1"
         ],
-        "script_level.chapter": 45,
-        "script_level.position": 17,
         "lesson.key": "Artist: Variables",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -1343,8 +1253,6 @@
         "script_level.level_keys": [
           "Course 4 Play Lab Vars 1"
         ],
-        "script_level.chapter": 46,
-        "script_level.position": 1,
         "lesson.key": "Play Lab: Variables",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -1365,8 +1273,6 @@
         "script_level.level_keys": [
           "Course 4 Play Lab Vars 2"
         ],
-        "script_level.chapter": 47,
-        "script_level.position": 2,
         "lesson.key": "Play Lab: Variables",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -1387,8 +1293,6 @@
         "script_level.level_keys": [
           "Course 4 Play Lab Vars 3"
         ],
-        "script_level.chapter": 48,
-        "script_level.position": 3,
         "lesson.key": "Play Lab: Variables",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -1409,8 +1313,6 @@
         "script_level.level_keys": [
           "Course 4 Play Lab Vars 4"
         ],
-        "script_level.chapter": 49,
-        "script_level.position": 4,
         "lesson.key": "Play Lab: Variables",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -1431,8 +1333,6 @@
         "script_level.level_keys": [
           "Course 4 Play Lab Vars 5"
         ],
-        "script_level.chapter": 50,
-        "script_level.position": 5,
         "lesson.key": "Play Lab: Variables",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -1453,8 +1353,6 @@
         "script_level.level_keys": [
           "Course 4 Play Lab Vars 6"
         ],
-        "script_level.chapter": 51,
-        "script_level.position": 6,
         "lesson.key": "Play Lab: Variables",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -1475,8 +1373,6 @@
         "script_level.level_keys": [
           "Course 4 Play Lab Vars 7"
         ],
-        "script_level.chapter": 52,
-        "script_level.position": 7,
         "lesson.key": "Play Lab: Variables",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -1497,8 +1393,6 @@
         "script_level.level_keys": [
           "Course 4 Play Lab Vars 9"
         ],
-        "script_level.chapter": 53,
-        "script_level.position": 8,
         "lesson.key": "Play Lab: Variables",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -1519,8 +1413,6 @@
         "script_level.level_keys": [
           "course4_playlab_variables_challenge1"
         ],
-        "script_level.chapter": 54,
-        "script_level.position": 9,
         "lesson.key": "Play Lab: Variables",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -1541,8 +1433,6 @@
         "script_level.level_keys": [
           "ForLoopFun"
         ],
-        "script_level.chapter": 55,
-        "script_level.position": 1,
         "lesson.key": "Unplugged: For Loop Fun",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -1563,8 +1453,6 @@
         "script_level.level_keys": [
           "NEW Course 4 Bee For Loops 1"
         ],
-        "script_level.chapter": 56,
-        "script_level.position": 1,
         "lesson.key": "Bee: For Loops",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -1585,8 +1473,6 @@
         "script_level.level_keys": [
           "NEW Course 4 Bee For Loops 2"
         ],
-        "script_level.chapter": 57,
-        "script_level.position": 2,
         "lesson.key": "Bee: For Loops",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -1607,8 +1493,6 @@
         "script_level.level_keys": [
           "NEW Course 4 Bee For Loops 3"
         ],
-        "script_level.chapter": 58,
-        "script_level.position": 3,
         "lesson.key": "Bee: For Loops",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -1629,8 +1513,6 @@
         "script_level.level_keys": [
           "NEW Course 4 Bee For Loops 4"
         ],
-        "script_level.chapter": 59,
-        "script_level.position": 4,
         "lesson.key": "Bee: For Loops",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -1651,8 +1533,6 @@
         "script_level.level_keys": [
           "NEW Course 4 Bee For Loops 4 4"
         ],
-        "script_level.chapter": 60,
-        "script_level.position": 5,
         "lesson.key": "Bee: For Loops",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -1673,8 +1553,6 @@
         "script_level.level_keys": [
           "NEW Course 4 Bee For Loops 5"
         ],
-        "script_level.chapter": 61,
-        "script_level.position": 6,
         "lesson.key": "Bee: For Loops",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -1695,8 +1573,6 @@
         "script_level.level_keys": [
           "NEW Course 4 Bee For Loops 6"
         ],
-        "script_level.chapter": 62,
-        "script_level.position": 7,
         "lesson.key": "Bee: For Loops",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -1717,8 +1593,6 @@
         "script_level.level_keys": [
           "NEW Course 4 Bee For Loops 8"
         ],
-        "script_level.chapter": 63,
-        "script_level.position": 8,
         "lesson.key": "Bee: For Loops",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -1739,8 +1613,6 @@
         "script_level.level_keys": [
           "NEW Course 4 Bee For Loops 7"
         ],
-        "script_level.chapter": 64,
-        "script_level.position": 9,
         "lesson.key": "Bee: For Loops",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -1761,8 +1633,6 @@
         "script_level.level_keys": [
           "NEW Course 4 Bee For Loops 9"
         ],
-        "script_level.chapter": 65,
-        "script_level.position": 10,
         "lesson.key": "Bee: For Loops",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -1783,8 +1653,6 @@
         "script_level.level_keys": [
           "NEW Course 4 Bee For Loops 10a"
         ],
-        "script_level.chapter": 66,
-        "script_level.position": 11,
         "lesson.key": "Bee: For Loops",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -1805,8 +1673,6 @@
         "script_level.level_keys": [
           "course4_bee_for_challenge1"
         ],
-        "script_level.chapter": 67,
-        "script_level.position": 12,
         "lesson.key": "Bee: For Loops",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -1827,8 +1693,6 @@
         "script_level.level_keys": [
           "Course 4 Artist For Loops 1"
         ],
-        "script_level.chapter": 68,
-        "script_level.position": 1,
         "lesson.key": "Artist: For Loops",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -1849,8 +1713,6 @@
         "script_level.level_keys": [
           "Course 4 Artist For Loops 2"
         ],
-        "script_level.chapter": 69,
-        "script_level.position": 2,
         "lesson.key": "Artist: For Loops",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -1871,8 +1733,6 @@
         "script_level.level_keys": [
           "Course 4 Artist For Loops 3"
         ],
-        "script_level.chapter": 70,
-        "script_level.position": 3,
         "lesson.key": "Artist: For Loops",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -1893,8 +1753,6 @@
         "script_level.level_keys": [
           "Course 4 Artist For Loops 4"
         ],
-        "script_level.chapter": 71,
-        "script_level.position": 4,
         "lesson.key": "Artist: For Loops",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -1915,8 +1773,6 @@
         "script_level.level_keys": [
           "Course 4 Artist For Loops 8"
         ],
-        "script_level.chapter": 72,
-        "script_level.position": 5,
         "lesson.key": "Artist: For Loops",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -1937,8 +1793,6 @@
         "script_level.level_keys": [
           "Course 4 Artist For Loops 14"
         ],
-        "script_level.chapter": 73,
-        "script_level.position": 6,
         "lesson.key": "Artist: For Loops",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -1959,8 +1813,6 @@
         "script_level.level_keys": [
           "Course 4 Artist For Loops 6a"
         ],
-        "script_level.chapter": 74,
-        "script_level.position": 7,
         "lesson.key": "Artist: For Loops",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -1981,8 +1833,6 @@
         "script_level.level_keys": [
           "Course 4 Artist For Loops 11"
         ],
-        "script_level.chapter": 75,
-        "script_level.position": 8,
         "lesson.key": "Artist: For Loops",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -2003,8 +1853,6 @@
         "script_level.level_keys": [
           "Course 4 Artist For Loops 11a"
         ],
-        "script_level.chapter": 76,
-        "script_level.position": 9,
         "lesson.key": "Artist: For Loops",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -2025,8 +1873,6 @@
         "script_level.level_keys": [
           "Course 4 Artist For Loops Challenge"
         ],
-        "script_level.chapter": 77,
-        "script_level.position": 10,
         "lesson.key": "Artist: For Loops",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -2047,8 +1893,6 @@
         "script_level.level_keys": [
           "Course 4 Artist For Loops inspire"
         ],
-        "script_level.chapter": 78,
-        "script_level.position": 11,
         "lesson.key": "Artist: For Loops",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -2069,8 +1913,6 @@
         "script_level.level_keys": [
           "Course 4 Artist For Loops 15"
         ],
-        "script_level.chapter": 79,
-        "script_level.position": 12,
         "lesson.key": "Artist: For Loops",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -2091,8 +1933,6 @@
         "script_level.level_keys": [
           "Course 4 Play Labs For Loops 1"
         ],
-        "script_level.chapter": 80,
-        "script_level.position": 1,
         "lesson.key": "Play Lab: For Loops",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -2113,8 +1953,6 @@
         "script_level.level_keys": [
           "Course 4 Play Labs For Loops 2"
         ],
-        "script_level.chapter": 81,
-        "script_level.position": 2,
         "lesson.key": "Play Lab: For Loops",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -2135,8 +1973,6 @@
         "script_level.level_keys": [
           "Course 4 Play Labs For Loops 3"
         ],
-        "script_level.chapter": 82,
-        "script_level.position": 3,
         "lesson.key": "Play Lab: For Loops",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -2157,8 +1993,6 @@
         "script_level.level_keys": [
           "Course 4 Playlab For Loops 4b"
         ],
-        "script_level.chapter": 83,
-        "script_level.position": 4,
         "lesson.key": "Play Lab: For Loops",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -2179,8 +2013,6 @@
         "script_level.level_keys": [
           "Course 4 Playlab For Loops 5b"
         ],
-        "script_level.chapter": 84,
-        "script_level.position": 5,
         "lesson.key": "Play Lab: For Loops",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -2201,8 +2033,6 @@
         "script_level.level_keys": [
           "Course 4 Playlab For Loops 6b"
         ],
-        "script_level.chapter": 85,
-        "script_level.position": 6,
         "lesson.key": "Play Lab: For Loops",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -2223,8 +2053,6 @@
         "script_level.level_keys": [
           "Course 4 Playlab For Loop Freeplay"
         ],
-        "script_level.chapter": 86,
-        "script_level.position": 7,
         "lesson.key": "Play Lab: For Loops",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -2245,8 +2073,6 @@
         "script_level.level_keys": [
           "NEW Course 4 Artist Functions 1"
         ],
-        "script_level.chapter": 87,
-        "script_level.position": 1,
         "lesson.key": "Artist: Functions",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -2267,8 +2093,6 @@
         "script_level.level_keys": [
           "NEW Course 4 Artist Functions 2"
         ],
-        "script_level.chapter": 88,
-        "script_level.position": 2,
         "lesson.key": "Artist: Functions",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -2289,8 +2113,6 @@
         "script_level.level_keys": [
           "NEW Course 4 Artist Functions 3"
         ],
-        "script_level.chapter": 89,
-        "script_level.position": 3,
         "lesson.key": "Artist: Functions",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -2311,8 +2133,6 @@
         "script_level.level_keys": [
           "NEW Course 4 Artist Functions 4"
         ],
-        "script_level.chapter": 90,
-        "script_level.position": 4,
         "lesson.key": "Artist: Functions",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -2333,8 +2153,6 @@
         "script_level.level_keys": [
           "NEW Course 4 Artist Functions 7"
         ],
-        "script_level.chapter": 91,
-        "script_level.position": 5,
         "lesson.key": "Artist: Functions",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -2355,8 +2173,6 @@
         "script_level.level_keys": [
           "NEW Course 4 Artist Functions 8"
         ],
-        "script_level.chapter": 92,
-        "script_level.position": 6,
         "lesson.key": "Artist: Functions",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -2377,8 +2193,6 @@
         "script_level.level_keys": [
           "NEW Course 4 Artist Functions 9"
         ],
-        "script_level.chapter": 93,
-        "script_level.position": 7,
         "lesson.key": "Artist: Functions",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -2399,8 +2213,6 @@
         "script_level.level_keys": [
           "NEW Course 4 Artist Functions 11"
         ],
-        "script_level.chapter": 94,
-        "script_level.position": 8,
         "lesson.key": "Artist: Functions",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -2421,8 +2233,6 @@
         "script_level.level_keys": [
           "NEW Course 4 Artist Functions 12"
         ],
-        "script_level.chapter": 95,
-        "script_level.position": 9,
         "lesson.key": "Artist: Functions",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -2443,8 +2253,6 @@
         "script_level.level_keys": [
           "NEW Course 4 Artist Functions 13"
         ],
-        "script_level.chapter": 96,
-        "script_level.position": 10,
         "lesson.key": "Artist: Functions",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -2465,8 +2273,6 @@
         "script_level.level_keys": [
           "Course 4 Artist Functions challenge"
         ],
-        "script_level.chapter": 97,
-        "script_level.position": 11,
         "lesson.key": "Artist: Functions",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -2487,8 +2293,6 @@
         "script_level.level_keys": [
           "Course 4 Artist Functions Inspiration"
         ],
-        "script_level.chapter": 98,
-        "script_level.position": 12,
         "lesson.key": "Artist: Functions",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -2509,8 +2313,6 @@
         "script_level.level_keys": [
           "NEW Course 4 Artist Functions 14"
         ],
-        "script_level.chapter": 99,
-        "script_level.position": 13,
         "lesson.key": "Artist: Functions",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -2531,8 +2333,6 @@
         "script_level.level_keys": [
           "course4_artist_concept_challenge2"
         ],
-        "script_level.chapter": 100,
-        "script_level.position": 14,
         "lesson.key": "Artist: Functions",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -2553,8 +2353,6 @@
         "script_level.level_keys": [
           "course4_artist_functions_challenge2"
         ],
-        "script_level.chapter": 101,
-        "script_level.position": 15,
         "lesson.key": "Artist: Functions",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -2575,8 +2373,6 @@
         "script_level.level_keys": [
           "SongwritingWithParameters"
         ],
-        "script_level.chapter": 102,
-        "script_level.position": 1,
         "lesson.key": "Unplugged: Songwriting with Parameters",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -2597,8 +2393,6 @@
         "script_level.level_keys": [
           "NEW Course 4 Artist Params 1"
         ],
-        "script_level.chapter": 103,
-        "script_level.position": 1,
         "lesson.key": "Artist: Functions with Parameters",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -2619,8 +2413,6 @@
         "script_level.level_keys": [
           "NEW Course 4 Artist Params 2"
         ],
-        "script_level.chapter": 104,
-        "script_level.position": 2,
         "lesson.key": "Artist: Functions with Parameters",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -2641,8 +2433,6 @@
         "script_level.level_keys": [
           "NEW Course 4 Artist Params 3"
         ],
-        "script_level.chapter": 105,
-        "script_level.position": 3,
         "lesson.key": "Artist: Functions with Parameters",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -2663,8 +2453,6 @@
         "script_level.level_keys": [
           "NEW Course 4 Artist Params 4"
         ],
-        "script_level.chapter": 106,
-        "script_level.position": 4,
         "lesson.key": "Artist: Functions with Parameters",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -2685,8 +2473,6 @@
         "script_level.level_keys": [
           "NEW Course 4 Artist Params 5"
         ],
-        "script_level.chapter": 107,
-        "script_level.position": 5,
         "lesson.key": "Artist: Functions with Parameters",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -2707,8 +2493,6 @@
         "script_level.level_keys": [
           "NEW Course 4 Artist Params 6"
         ],
-        "script_level.chapter": 108,
-        "script_level.position": 6,
         "lesson.key": "Artist: Functions with Parameters",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -2729,8 +2513,6 @@
         "script_level.level_keys": [
           "NEW Course 4 Artist Params 7"
         ],
-        "script_level.chapter": 109,
-        "script_level.position": 7,
         "lesson.key": "Artist: Functions with Parameters",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -2751,8 +2533,6 @@
         "script_level.level_keys": [
           "NEW Course 4 Artist Params 8"
         ],
-        "script_level.chapter": 110,
-        "script_level.position": 8,
         "lesson.key": "Artist: Functions with Parameters",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -2773,8 +2553,6 @@
         "script_level.level_keys": [
           "NEW Course 4 Artist Params 9"
         ],
-        "script_level.chapter": 111,
-        "script_level.position": 9,
         "lesson.key": "Artist: Functions with Parameters",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -2795,8 +2573,6 @@
         "script_level.level_keys": [
           "NEW Course 4 Artist Params 10"
         ],
-        "script_level.chapter": 112,
-        "script_level.position": 10,
         "lesson.key": "Artist: Functions with Parameters",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -2817,8 +2593,6 @@
         "script_level.level_keys": [
           "NEW Course 4 Artist Params 11"
         ],
-        "script_level.chapter": 113,
-        "script_level.position": 11,
         "lesson.key": "Artist: Functions with Parameters",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -2839,8 +2613,6 @@
         "script_level.level_keys": [
           "NEW Course 4 Artist Params 12"
         ],
-        "script_level.chapter": 114,
-        "script_level.position": 12,
         "lesson.key": "Artist: Functions with Parameters",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -2861,8 +2633,6 @@
         "script_level.level_keys": [
           "NEW Course 4 Artist Params 12a"
         ],
-        "script_level.chapter": 115,
-        "script_level.position": 13,
         "lesson.key": "Artist: Functions with Parameters",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -2883,8 +2653,6 @@
         "script_level.level_keys": [
           "NEW Course 4 Artist Params 13"
         ],
-        "script_level.chapter": 116,
-        "script_level.position": 14,
         "lesson.key": "Artist: Functions with Parameters",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -2905,8 +2673,6 @@
         "script_level.level_keys": [
           "NEW Course 4 Artist Params 14"
         ],
-        "script_level.chapter": 117,
-        "script_level.position": 15,
         "lesson.key": "Artist: Functions with Parameters",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -2927,8 +2693,6 @@
         "script_level.level_keys": [
           "NEW Course 4 Artist Params inspire"
         ],
-        "script_level.chapter": 118,
-        "script_level.position": 16,
         "lesson.key": "Artist: Functions with Parameters",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -2949,8 +2713,6 @@
         "script_level.level_keys": [
           "NEW Course 4 Artist Params 15"
         ],
-        "script_level.chapter": 119,
-        "script_level.position": 17,
         "lesson.key": "Artist: Functions with Parameters",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -2971,8 +2733,6 @@
         "script_level.level_keys": [
           "course4_artist_fwp_challenge1"
         ],
-        "script_level.chapter": 120,
-        "script_level.position": 18,
         "lesson.key": "Artist: Functions with Parameters",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -2993,8 +2753,6 @@
         "script_level.level_keys": [
           "Course 4 Play Lab Params 1"
         ],
-        "script_level.chapter": 121,
-        "script_level.position": 1,
         "lesson.key": "Play Lab: Functions with Parameters",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -3015,8 +2773,6 @@
         "script_level.level_keys": [
           "Course 4 Play Lab Params 2"
         ],
-        "script_level.chapter": 122,
-        "script_level.position": 2,
         "lesson.key": "Play Lab: Functions with Parameters",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -3037,8 +2793,6 @@
         "script_level.level_keys": [
           "Course 4 Play Lab Params 3"
         ],
-        "script_level.chapter": 123,
-        "script_level.position": 3,
         "lesson.key": "Play Lab: Functions with Parameters",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -3059,8 +2813,6 @@
         "script_level.level_keys": [
           "Course 4 Play Lab Params 4"
         ],
-        "script_level.chapter": 124,
-        "script_level.position": 4,
         "lesson.key": "Play Lab: Functions with Parameters",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -3081,8 +2833,6 @@
         "script_level.level_keys": [
           "Course 4 Play Lab Params 5"
         ],
-        "script_level.chapter": 125,
-        "script_level.position": 5,
         "lesson.key": "Play Lab: Functions with Parameters",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -3103,8 +2853,6 @@
         "script_level.level_keys": [
           "Course 4 Play Lab Params 6"
         ],
-        "script_level.chapter": 126,
-        "script_level.position": 6,
         "lesson.key": "Play Lab: Functions with Parameters",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -3125,8 +2873,6 @@
         "script_level.level_keys": [
           "Course 4 Play Lab Params 7"
         ],
-        "script_level.chapter": 127,
-        "script_level.position": 7,
         "lesson.key": "Play Lab: Functions with Parameters",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -3147,8 +2893,6 @@
         "script_level.level_keys": [
           "Course 4 Play Lab Params 8"
         ],
-        "script_level.chapter": 128,
-        "script_level.position": 8,
         "lesson.key": "Play Lab: Functions with Parameters",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -3169,8 +2913,6 @@
         "script_level.level_keys": [
           "Course 4 Play Lab Params 9"
         ],
-        "script_level.chapter": 129,
-        "script_level.position": 9,
         "lesson.key": "Play Lab: Functions with Parameters",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -3191,8 +2933,6 @@
         "script_level.level_keys": [
           "Course 4 Play Lab Params 10"
         ],
-        "script_level.chapter": 130,
-        "script_level.position": 10,
         "lesson.key": "Play Lab: Functions with Parameters",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -3213,8 +2953,6 @@
         "script_level.level_keys": [
           "NEW Course 4 Play Lab Params 11"
         ],
-        "script_level.chapter": 131,
-        "script_level.position": 11,
         "lesson.key": "Play Lab: Functions with Parameters",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -3235,8 +2973,6 @@
         "script_level.level_keys": [
           "Course 4 Bee Params 1"
         ],
-        "script_level.chapter": 132,
-        "script_level.position": 1,
         "lesson.key": "Bee: Functions with Parameters",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -3257,8 +2993,6 @@
         "script_level.level_keys": [
           "Course 4 Bee Params 2"
         ],
-        "script_level.chapter": 133,
-        "script_level.position": 2,
         "lesson.key": "Bee: Functions with Parameters",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -3279,8 +3013,6 @@
         "script_level.level_keys": [
           "Course 4 Bee Params 3"
         ],
-        "script_level.chapter": 134,
-        "script_level.position": 3,
         "lesson.key": "Bee: Functions with Parameters",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -3301,8 +3033,6 @@
         "script_level.level_keys": [
           "Course 4 Bee Params 4"
         ],
-        "script_level.chapter": 135,
-        "script_level.position": 4,
         "lesson.key": "Bee: Functions with Parameters",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -3323,8 +3053,6 @@
         "script_level.level_keys": [
           "Course 4 Bee Params 5"
         ],
-        "script_level.chapter": 136,
-        "script_level.position": 5,
         "lesson.key": "Bee: Functions with Parameters",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -3345,8 +3073,6 @@
         "script_level.level_keys": [
           "Course 4 Bee Params 6"
         ],
-        "script_level.chapter": 137,
-        "script_level.position": 6,
         "lesson.key": "Bee: Functions with Parameters",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -3367,8 +3093,6 @@
         "script_level.level_keys": [
           "Course 4 Bee Params 7"
         ],
-        "script_level.chapter": 138,
-        "script_level.position": 7,
         "lesson.key": "Bee: Functions with Parameters",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -3389,8 +3113,6 @@
         "script_level.level_keys": [
           "Course 4 Bee Params 8"
         ],
-        "script_level.chapter": 139,
-        "script_level.position": 8,
         "lesson.key": "Bee: Functions with Parameters",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -3411,8 +3133,6 @@
         "script_level.level_keys": [
           "course4_bee_fwp_challenge1"
         ],
-        "script_level.chapter": 140,
-        "script_level.position": 9,
         "lesson.key": "Bee: Functions with Parameters",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -3433,8 +3153,6 @@
         "script_level.level_keys": [
           "course4_bee_fwp_challenge2"
         ],
-        "script_level.chapter": 141,
-        "script_level.position": 10,
         "lesson.key": "Bee: Functions with Parameters",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -3455,8 +3173,6 @@
         "script_level.level_keys": [
           "BinaryImages"
         ],
-        "script_level.chapter": 142,
-        "script_level.position": 1,
         "lesson.key": "Unplugged: Binary",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -3477,8 +3193,6 @@
         "script_level.level_keys": [
           "Course 4 Artist Binary pre1"
         ],
-        "script_level.chapter": 143,
-        "script_level.position": 1,
         "lesson.key": "Artist Binary",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -3499,8 +3213,6 @@
         "script_level.level_keys": [
           "Course 4 Artist Binary 1"
         ],
-        "script_level.chapter": 144,
-        "script_level.position": 2,
         "lesson.key": "Artist Binary",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -3521,8 +3233,6 @@
         "script_level.level_keys": [
           "Course 4 Artist Binary 2"
         ],
-        "script_level.chapter": 145,
-        "script_level.position": 3,
         "lesson.key": "Artist Binary",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -3543,8 +3253,6 @@
         "script_level.level_keys": [
           "Course 4 Artist Binary 3"
         ],
-        "script_level.chapter": 146,
-        "script_level.position": 4,
         "lesson.key": "Artist Binary",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -3565,8 +3273,6 @@
         "script_level.level_keys": [
           "Course 4 Artist Binary 4"
         ],
-        "script_level.chapter": 147,
-        "script_level.position": 5,
         "lesson.key": "Artist Binary",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -3587,8 +3293,6 @@
         "script_level.level_keys": [
           "Course 4 Artist Binary 5"
         ],
-        "script_level.chapter": 148,
-        "script_level.position": 6,
         "lesson.key": "Artist Binary",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -3609,8 +3313,6 @@
         "script_level.level_keys": [
           "Course 4 Artist Binary 6"
         ],
-        "script_level.chapter": 149,
-        "script_level.position": 7,
         "lesson.key": "Artist Binary",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -3631,8 +3333,6 @@
         "script_level.level_keys": [
           "Course 4 Artist Binary 7"
         ],
-        "script_level.chapter": 150,
-        "script_level.position": 8,
         "lesson.key": "Artist Binary",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -3653,8 +3353,6 @@
         "script_level.level_keys": [
           "Course 4 Artist Binary Free Play 2a"
         ],
-        "script_level.chapter": 151,
-        "script_level.position": 9,
         "lesson.key": "Artist Binary",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -3675,8 +3373,6 @@
         "script_level.level_keys": [
           "Course 4 Artist Binary Free Play 2b"
         ],
-        "script_level.chapter": 152,
-        "script_level.position": 10,
         "lesson.key": "Artist Binary",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -3697,8 +3393,6 @@
         "script_level.level_keys": [
           "Course 4 Artist Binary Free Play 2"
         ],
-        "script_level.chapter": 153,
-        "script_level.position": 11,
         "lesson.key": "Artist Binary",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -3719,8 +3413,6 @@
         "script_level.level_keys": [
           "course4_artist_binary_challenge1"
         ],
-        "script_level.chapter": 154,
-        "script_level.position": 12,
         "lesson.key": "Artist Binary",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -3741,8 +3433,6 @@
         "script_level.level_keys": [
           "course4_artist_binary_challenge2"
         ],
-        "script_level.chapter": 155,
-        "script_level.position": 13,
         "lesson.key": "Artist Binary",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -3763,8 +3453,6 @@
         "script_level.level_keys": [
           "Course 4 SCV 3"
         ],
-        "script_level.chapter": 156,
-        "script_level.position": 1,
         "lesson.key": "Super Challenge - Variables",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -3785,8 +3473,6 @@
         "script_level.level_keys": [
           "Course 4 SCV 5"
         ],
-        "script_level.chapter": 157,
-        "script_level.position": 2,
         "lesson.key": "Super Challenge - Variables",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -3807,8 +3493,6 @@
         "script_level.level_keys": [
           "Course 4 SCV 4"
         ],
-        "script_level.chapter": 158,
-        "script_level.position": 3,
         "lesson.key": "Super Challenge - Variables",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -3829,8 +3513,6 @@
         "script_level.level_keys": [
           "Course 4 SCV 1"
         ],
-        "script_level.chapter": 159,
-        "script_level.position": 4,
         "lesson.key": "Super Challenge - Variables",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -3851,8 +3533,6 @@
         "script_level.level_keys": [
           "Course 4 SCV 2"
         ],
-        "script_level.chapter": 160,
-        "script_level.position": 5,
         "lesson.key": "Super Challenge - Variables",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -3873,8 +3553,6 @@
         "script_level.level_keys": [
           "Course 4 SCV 6"
         ],
-        "script_level.chapter": 161,
-        "script_level.position": 6,
         "lesson.key": "Super Challenge - Variables",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -3895,8 +3573,6 @@
         "script_level.level_keys": [
           "Course 4 SCFL 1b"
         ],
-        "script_level.chapter": 162,
-        "script_level.position": 1,
         "lesson.key": "Super Challenge - For Loops",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -3917,8 +3593,6 @@
         "script_level.level_keys": [
           "Course 4 SCFL 1a"
         ],
-        "script_level.chapter": 163,
-        "script_level.position": 2,
         "lesson.key": "Super Challenge - For Loops",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -3939,8 +3613,6 @@
         "script_level.level_keys": [
           "Course 4 SCFL 1"
         ],
-        "script_level.chapter": 164,
-        "script_level.position": 3,
         "lesson.key": "Super Challenge - For Loops",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -3961,8 +3633,6 @@
         "script_level.level_keys": [
           "Course 4 SCFL 2"
         ],
-        "script_level.chapter": 165,
-        "script_level.position": 4,
         "lesson.key": "Super Challenge - For Loops",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -3983,8 +3653,6 @@
         "script_level.level_keys": [
           "Course 4 SCFL 3"
         ],
-        "script_level.chapter": 166,
-        "script_level.position": 5,
         "lesson.key": "Super Challenge - For Loops",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -4005,8 +3673,6 @@
         "script_level.level_keys": [
           "Course 4 SCFL 4"
         ],
-        "script_level.chapter": 167,
-        "script_level.position": 6,
         "lesson.key": "Super Challenge - For Loops",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -4027,8 +3693,6 @@
         "script_level.level_keys": [
           "Course 4 SCFL 6"
         ],
-        "script_level.chapter": 168,
-        "script_level.position": 7,
         "lesson.key": "Super Challenge - For Loops",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -4049,8 +3713,6 @@
         "script_level.level_keys": [
           "Course 4 SCFL 7"
         ],
-        "script_level.chapter": 169,
-        "script_level.position": 8,
         "lesson.key": "Super Challenge - For Loops",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -4071,8 +3733,6 @@
         "script_level.level_keys": [
           "Course 4 SCF 1b"
         ],
-        "script_level.chapter": 170,
-        "script_level.position": 1,
         "lesson.key": "Super Challenge - Functions and Parameters",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -4093,8 +3753,6 @@
         "script_level.level_keys": [
           "Course 4 SCF 1a"
         ],
-        "script_level.chapter": 171,
-        "script_level.position": 2,
         "lesson.key": "Super Challenge - Functions and Parameters",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -4115,8 +3773,6 @@
         "script_level.level_keys": [
           "Course 4 SCF 1"
         ],
-        "script_level.chapter": 172,
-        "script_level.position": 3,
         "lesson.key": "Super Challenge - Functions and Parameters",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -4137,8 +3793,6 @@
         "script_level.level_keys": [
           "Course 4 SCF 2"
         ],
-        "script_level.chapter": 173,
-        "script_level.position": 4,
         "lesson.key": "Super Challenge - Functions and Parameters",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -4159,8 +3813,6 @@
         "script_level.level_keys": [
           "Course 4 SCF 3"
         ],
-        "script_level.chapter": 174,
-        "script_level.position": 5,
         "lesson.key": "Super Challenge - Functions and Parameters",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -4181,8 +3833,6 @@
         "script_level.level_keys": [
           "Course 4 EC 1a"
         ],
-        "script_level.chapter": 175,
-        "script_level.position": 1,
         "lesson.key": "Extreme Challenge - Comprehensive",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -4203,8 +3853,6 @@
         "script_level.level_keys": [
           "Course 4 EC 1b"
         ],
-        "script_level.chapter": 176,
-        "script_level.position": 2,
         "lesson.key": "Extreme Challenge - Comprehensive",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -4225,8 +3873,6 @@
         "script_level.level_keys": [
           "Course 4 EC 2a"
         ],
-        "script_level.chapter": 177,
-        "script_level.position": 3,
         "lesson.key": "Extreme Challenge - Comprehensive",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -4247,8 +3893,6 @@
         "script_level.level_keys": [
           "Course 4 EC 2c"
         ],
-        "script_level.chapter": 178,
-        "script_level.position": 4,
         "lesson.key": "Extreme Challenge - Comprehensive",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -4269,8 +3913,6 @@
         "script_level.level_keys": [
           "Course 4 EC 2b"
         ],
-        "script_level.chapter": 179,
-        "script_level.position": 5,
         "lesson.key": "Extreme Challenge - Comprehensive",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -4287,8 +3929,6 @@
         "script_level.level_keys": [
           "TangramAlgorithms"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Unplugged: Tangrams",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -4300,8 +3940,6 @@
         "script_level.level_keys": [
           "Course 4 Maze 2"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 1,
         "lesson.key": "Maze and Bee",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -4313,8 +3951,6 @@
         "script_level.level_keys": [
           "Course 4 Maze 3"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 2,
         "lesson.key": "Maze and Bee",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -4326,8 +3962,6 @@
         "script_level.level_keys": [
           "Course 4 Maze 4"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 3,
         "lesson.key": "Maze and Bee",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -4339,8 +3973,6 @@
         "script_level.level_keys": [
           "Course 4 Maze 5"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 4,
         "lesson.key": "Maze and Bee",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -4352,8 +3984,6 @@
         "script_level.level_keys": [
           "Course 4 Bee Loops 5 NEW"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 5,
         "lesson.key": "Maze and Bee",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -4365,8 +3995,6 @@
         "script_level.level_keys": [
           "Course 4 Bee Loops 5a NEW"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 6,
         "lesson.key": "Maze and Bee",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -4378,8 +4006,6 @@
         "script_level.level_keys": [
           "Course 4 Bee 1"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 7,
         "lesson.key": "Maze and Bee",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -4391,8 +4017,6 @@
         "script_level.level_keys": [
           "Course 4 Bee 3"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 8,
         "lesson.key": "Maze and Bee",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -4404,8 +4028,6 @@
         "script_level.level_keys": [
           "Course 4 Bee 2"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 9,
         "lesson.key": "Maze and Bee",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -4417,8 +4039,6 @@
         "script_level.level_keys": [
           "course4_harvester_nested_loops_challenge1"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 10,
         "lesson.key": "Maze and Bee",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -4430,8 +4050,6 @@
         "script_level.level_keys": [
           "course4_collector_nested_loops_challenge2"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 11,
         "lesson.key": "Maze and Bee",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -4443,8 +4061,6 @@
         "script_level.level_keys": [
           "Course 4 Artist 1"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 1,
         "lesson.key": "Artist",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -4456,8 +4072,6 @@
         "script_level.level_keys": [
           "Course 4 Artist 2"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 2,
         "lesson.key": "Artist",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -4469,8 +4083,6 @@
         "script_level.level_keys": [
           "Course 4 Artist 3"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 3,
         "lesson.key": "Artist",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -4482,8 +4094,6 @@
         "script_level.level_keys": [
           "Course 4 Artist 4"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 4,
         "lesson.key": "Artist",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -4495,8 +4105,6 @@
         "script_level.level_keys": [
           "Course 4 Artist 5"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 5,
         "lesson.key": "Artist",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -4508,8 +4116,6 @@
         "script_level.level_keys": [
           "Course 4 Artist 6"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 6,
         "lesson.key": "Artist",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -4521,8 +4127,6 @@
         "script_level.level_keys": [
           "Course 4 Artist 7"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 7,
         "lesson.key": "Artist",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -4534,8 +4138,6 @@
         "script_level.level_keys": [
           "Course 4 Artist 8"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 8,
         "lesson.key": "Artist",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -4547,8 +4149,6 @@
         "script_level.level_keys": [
           "Course 4 Artist 8a"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 9,
         "lesson.key": "Artist",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -4560,8 +4160,6 @@
         "script_level.level_keys": [
           "Course 4 Artist 9"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 10,
         "lesson.key": "Artist",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -4573,8 +4171,6 @@
         "script_level.level_keys": [
           "Course 4 Artist 10"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 11,
         "lesson.key": "Artist",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -4586,8 +4182,6 @@
         "script_level.level_keys": [
           "Course 4 Artist 11"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 12,
         "lesson.key": "Artist",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -4599,8 +4193,6 @@
         "script_level.level_keys": [
           "Course 4 Artist 12"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 13,
         "lesson.key": "Artist",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -4612,8 +4204,6 @@
         "script_level.level_keys": [
           "Course 4 Artist 13"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 14,
         "lesson.key": "Artist",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -4625,8 +4215,6 @@
         "script_level.level_keys": [
           "EnvelopeVariables"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 1,
         "lesson.key": "Unplugged: Envelope Variables",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -4638,8 +4226,6 @@
         "script_level.level_keys": [
           "MadGlibs"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 1,
         "lesson.key": "Unplugged: Madlibs",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -4651,8 +4237,6 @@
         "script_level.level_keys": [
           "Course 4 Artist Vars 1"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 1,
         "lesson.key": "Artist: Variables",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -4664,8 +4248,6 @@
         "script_level.level_keys": [
           "Course 4 Artist Vars 2"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 2,
         "lesson.key": "Artist: Variables",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -4677,8 +4259,6 @@
         "script_level.level_keys": [
           "NEW Course 4 Artist Vars 2"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 3,
         "lesson.key": "Artist: Variables",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -4690,8 +4270,6 @@
         "script_level.level_keys": [
           "NEW Course 4 Artist Vars 4"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 4,
         "lesson.key": "Artist: Variables",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -4703,8 +4281,6 @@
         "script_level.level_keys": [
           "NEW Course 4 Artist Vars 6"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 5,
         "lesson.key": "Artist: Variables",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -4716,8 +4292,6 @@
         "script_level.level_keys": [
           "Course 4 Artist Vars 4"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 6,
         "lesson.key": "Artist: Variables",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -4729,8 +4303,6 @@
         "script_level.level_keys": [
           "Course 4 Artist Vars 6"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 7,
         "lesson.key": "Artist: Variables",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -4742,8 +4314,6 @@
         "script_level.level_keys": [
           "Course 4 Artist Vars 7"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 8,
         "lesson.key": "Artist: Variables",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -4755,8 +4325,6 @@
         "script_level.level_keys": [
           "NEW Course 4 Artist Vars 12"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 9,
         "lesson.key": "Artist: Variables",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -4768,8 +4336,6 @@
         "script_level.level_keys": [
           "Course 4 Artist Vars 8"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 10,
         "lesson.key": "Artist: Variables",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -4781,8 +4347,6 @@
         "script_level.level_keys": [
           "Course 4 Artist Vars 11"
         ],
-        "script_level.chapter": 39,
-        "script_level.position": 11,
         "lesson.key": "Artist: Variables",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -4794,8 +4358,6 @@
         "script_level.level_keys": [
           "Course 4 Artist Vars 12"
         ],
-        "script_level.chapter": 40,
-        "script_level.position": 12,
         "lesson.key": "Artist: Variables",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -4807,8 +4369,6 @@
         "script_level.level_keys": [
           "Course 4 Artist Vars 13"
         ],
-        "script_level.chapter": 41,
-        "script_level.position": 13,
         "lesson.key": "Artist: Variables",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -4820,8 +4380,6 @@
         "script_level.level_keys": [
           "Course 4 Artist Vars 14"
         ],
-        "script_level.chapter": 42,
-        "script_level.position": 14,
         "lesson.key": "Artist: Variables",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -4833,8 +4391,6 @@
         "script_level.level_keys": [
           "Course 4 Artist Inspire"
         ],
-        "script_level.chapter": 43,
-        "script_level.position": 15,
         "lesson.key": "Artist: Variables",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -4846,8 +4402,6 @@
         "script_level.level_keys": [
           "Course 4 Artist 20"
         ],
-        "script_level.chapter": 44,
-        "script_level.position": 16,
         "lesson.key": "Artist: Variables",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -4859,8 +4413,6 @@
         "script_level.level_keys": [
           "course4_artist_variables_challenge1"
         ],
-        "script_level.chapter": 45,
-        "script_level.position": 17,
         "lesson.key": "Artist: Variables",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -4872,8 +4424,6 @@
         "script_level.level_keys": [
           "Course 4 Play Lab Vars 1"
         ],
-        "script_level.chapter": 46,
-        "script_level.position": 1,
         "lesson.key": "Play Lab: Variables",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -4885,8 +4435,6 @@
         "script_level.level_keys": [
           "Course 4 Play Lab Vars 2"
         ],
-        "script_level.chapter": 47,
-        "script_level.position": 2,
         "lesson.key": "Play Lab: Variables",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -4898,8 +4446,6 @@
         "script_level.level_keys": [
           "Course 4 Play Lab Vars 3"
         ],
-        "script_level.chapter": 48,
-        "script_level.position": 3,
         "lesson.key": "Play Lab: Variables",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -4911,8 +4457,6 @@
         "script_level.level_keys": [
           "Course 4 Play Lab Vars 4"
         ],
-        "script_level.chapter": 49,
-        "script_level.position": 4,
         "lesson.key": "Play Lab: Variables",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -4924,8 +4468,6 @@
         "script_level.level_keys": [
           "Course 4 Play Lab Vars 5"
         ],
-        "script_level.chapter": 50,
-        "script_level.position": 5,
         "lesson.key": "Play Lab: Variables",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -4937,8 +4479,6 @@
         "script_level.level_keys": [
           "Course 4 Play Lab Vars 6"
         ],
-        "script_level.chapter": 51,
-        "script_level.position": 6,
         "lesson.key": "Play Lab: Variables",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -4950,8 +4490,6 @@
         "script_level.level_keys": [
           "Course 4 Play Lab Vars 7"
         ],
-        "script_level.chapter": 52,
-        "script_level.position": 7,
         "lesson.key": "Play Lab: Variables",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -4963,8 +4501,6 @@
         "script_level.level_keys": [
           "Course 4 Play Lab Vars 9"
         ],
-        "script_level.chapter": 53,
-        "script_level.position": 8,
         "lesson.key": "Play Lab: Variables",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -4976,8 +4512,6 @@
         "script_level.level_keys": [
           "course4_playlab_variables_challenge1"
         ],
-        "script_level.chapter": 54,
-        "script_level.position": 9,
         "lesson.key": "Play Lab: Variables",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -4989,8 +4523,6 @@
         "script_level.level_keys": [
           "ForLoopFun"
         ],
-        "script_level.chapter": 55,
-        "script_level.position": 1,
         "lesson.key": "Unplugged: For Loop Fun",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -5002,8 +4534,6 @@
         "script_level.level_keys": [
           "NEW Course 4 Bee For Loops 1"
         ],
-        "script_level.chapter": 56,
-        "script_level.position": 1,
         "lesson.key": "Bee: For Loops",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -5015,8 +4545,6 @@
         "script_level.level_keys": [
           "NEW Course 4 Bee For Loops 2"
         ],
-        "script_level.chapter": 57,
-        "script_level.position": 2,
         "lesson.key": "Bee: For Loops",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -5028,8 +4556,6 @@
         "script_level.level_keys": [
           "NEW Course 4 Bee For Loops 3"
         ],
-        "script_level.chapter": 58,
-        "script_level.position": 3,
         "lesson.key": "Bee: For Loops",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -5041,8 +4567,6 @@
         "script_level.level_keys": [
           "NEW Course 4 Bee For Loops 4"
         ],
-        "script_level.chapter": 59,
-        "script_level.position": 4,
         "lesson.key": "Bee: For Loops",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -5054,8 +4578,6 @@
         "script_level.level_keys": [
           "NEW Course 4 Bee For Loops 4 4"
         ],
-        "script_level.chapter": 60,
-        "script_level.position": 5,
         "lesson.key": "Bee: For Loops",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -5067,8 +4589,6 @@
         "script_level.level_keys": [
           "NEW Course 4 Bee For Loops 5"
         ],
-        "script_level.chapter": 61,
-        "script_level.position": 6,
         "lesson.key": "Bee: For Loops",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -5080,8 +4600,6 @@
         "script_level.level_keys": [
           "NEW Course 4 Bee For Loops 6"
         ],
-        "script_level.chapter": 62,
-        "script_level.position": 7,
         "lesson.key": "Bee: For Loops",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -5093,8 +4611,6 @@
         "script_level.level_keys": [
           "NEW Course 4 Bee For Loops 8"
         ],
-        "script_level.chapter": 63,
-        "script_level.position": 8,
         "lesson.key": "Bee: For Loops",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -5106,8 +4622,6 @@
         "script_level.level_keys": [
           "NEW Course 4 Bee For Loops 7"
         ],
-        "script_level.chapter": 64,
-        "script_level.position": 9,
         "lesson.key": "Bee: For Loops",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -5119,8 +4633,6 @@
         "script_level.level_keys": [
           "NEW Course 4 Bee For Loops 9"
         ],
-        "script_level.chapter": 65,
-        "script_level.position": 10,
         "lesson.key": "Bee: For Loops",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -5132,8 +4644,6 @@
         "script_level.level_keys": [
           "NEW Course 4 Bee For Loops 10a"
         ],
-        "script_level.chapter": 66,
-        "script_level.position": 11,
         "lesson.key": "Bee: For Loops",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -5145,8 +4655,6 @@
         "script_level.level_keys": [
           "course4_bee_for_challenge1"
         ],
-        "script_level.chapter": 67,
-        "script_level.position": 12,
         "lesson.key": "Bee: For Loops",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -5158,8 +4666,6 @@
         "script_level.level_keys": [
           "Course 4 Artist For Loops 1"
         ],
-        "script_level.chapter": 68,
-        "script_level.position": 1,
         "lesson.key": "Artist: For Loops",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -5171,8 +4677,6 @@
         "script_level.level_keys": [
           "Course 4 Artist For Loops 2"
         ],
-        "script_level.chapter": 69,
-        "script_level.position": 2,
         "lesson.key": "Artist: For Loops",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -5184,8 +4688,6 @@
         "script_level.level_keys": [
           "Course 4 Artist For Loops 3"
         ],
-        "script_level.chapter": 70,
-        "script_level.position": 3,
         "lesson.key": "Artist: For Loops",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -5197,8 +4699,6 @@
         "script_level.level_keys": [
           "Course 4 Artist For Loops 4"
         ],
-        "script_level.chapter": 71,
-        "script_level.position": 4,
         "lesson.key": "Artist: For Loops",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -5210,8 +4710,6 @@
         "script_level.level_keys": [
           "Course 4 Artist For Loops 8"
         ],
-        "script_level.chapter": 72,
-        "script_level.position": 5,
         "lesson.key": "Artist: For Loops",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -5223,8 +4721,6 @@
         "script_level.level_keys": [
           "Course 4 Artist For Loops 14"
         ],
-        "script_level.chapter": 73,
-        "script_level.position": 6,
         "lesson.key": "Artist: For Loops",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -5236,8 +4732,6 @@
         "script_level.level_keys": [
           "Course 4 Artist For Loops 6a"
         ],
-        "script_level.chapter": 74,
-        "script_level.position": 7,
         "lesson.key": "Artist: For Loops",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -5249,8 +4743,6 @@
         "script_level.level_keys": [
           "Course 4 Artist For Loops 11"
         ],
-        "script_level.chapter": 75,
-        "script_level.position": 8,
         "lesson.key": "Artist: For Loops",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -5262,8 +4754,6 @@
         "script_level.level_keys": [
           "Course 4 Artist For Loops 11a"
         ],
-        "script_level.chapter": 76,
-        "script_level.position": 9,
         "lesson.key": "Artist: For Loops",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -5275,8 +4765,6 @@
         "script_level.level_keys": [
           "Course 4 Artist For Loops Challenge"
         ],
-        "script_level.chapter": 77,
-        "script_level.position": 10,
         "lesson.key": "Artist: For Loops",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -5288,8 +4776,6 @@
         "script_level.level_keys": [
           "Course 4 Artist For Loops inspire"
         ],
-        "script_level.chapter": 78,
-        "script_level.position": 11,
         "lesson.key": "Artist: For Loops",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -5301,8 +4787,6 @@
         "script_level.level_keys": [
           "Course 4 Artist For Loops 15"
         ],
-        "script_level.chapter": 79,
-        "script_level.position": 12,
         "lesson.key": "Artist: For Loops",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -5314,8 +4798,6 @@
         "script_level.level_keys": [
           "Course 4 Play Labs For Loops 1"
         ],
-        "script_level.chapter": 80,
-        "script_level.position": 1,
         "lesson.key": "Play Lab: For Loops",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -5327,8 +4809,6 @@
         "script_level.level_keys": [
           "Course 4 Play Labs For Loops 2"
         ],
-        "script_level.chapter": 81,
-        "script_level.position": 2,
         "lesson.key": "Play Lab: For Loops",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -5340,8 +4820,6 @@
         "script_level.level_keys": [
           "Course 4 Play Labs For Loops 3"
         ],
-        "script_level.chapter": 82,
-        "script_level.position": 3,
         "lesson.key": "Play Lab: For Loops",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -5353,8 +4831,6 @@
         "script_level.level_keys": [
           "Course 4 Playlab For Loops 4b"
         ],
-        "script_level.chapter": 83,
-        "script_level.position": 4,
         "lesson.key": "Play Lab: For Loops",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -5366,8 +4842,6 @@
         "script_level.level_keys": [
           "Course 4 Playlab For Loops 5b"
         ],
-        "script_level.chapter": 84,
-        "script_level.position": 5,
         "lesson.key": "Play Lab: For Loops",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -5379,8 +4853,6 @@
         "script_level.level_keys": [
           "Course 4 Playlab For Loops 6b"
         ],
-        "script_level.chapter": 85,
-        "script_level.position": 6,
         "lesson.key": "Play Lab: For Loops",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -5392,8 +4864,6 @@
         "script_level.level_keys": [
           "Course 4 Playlab For Loop Freeplay"
         ],
-        "script_level.chapter": 86,
-        "script_level.position": 7,
         "lesson.key": "Play Lab: For Loops",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -5405,8 +4875,6 @@
         "script_level.level_keys": [
           "NEW Course 4 Artist Functions 1"
         ],
-        "script_level.chapter": 87,
-        "script_level.position": 1,
         "lesson.key": "Artist: Functions",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -5418,8 +4886,6 @@
         "script_level.level_keys": [
           "NEW Course 4 Artist Functions 2"
         ],
-        "script_level.chapter": 88,
-        "script_level.position": 2,
         "lesson.key": "Artist: Functions",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -5431,8 +4897,6 @@
         "script_level.level_keys": [
           "NEW Course 4 Artist Functions 3"
         ],
-        "script_level.chapter": 89,
-        "script_level.position": 3,
         "lesson.key": "Artist: Functions",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -5444,8 +4908,6 @@
         "script_level.level_keys": [
           "NEW Course 4 Artist Functions 4"
         ],
-        "script_level.chapter": 90,
-        "script_level.position": 4,
         "lesson.key": "Artist: Functions",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -5457,8 +4919,6 @@
         "script_level.level_keys": [
           "NEW Course 4 Artist Functions 7"
         ],
-        "script_level.chapter": 91,
-        "script_level.position": 5,
         "lesson.key": "Artist: Functions",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -5470,8 +4930,6 @@
         "script_level.level_keys": [
           "NEW Course 4 Artist Functions 8"
         ],
-        "script_level.chapter": 92,
-        "script_level.position": 6,
         "lesson.key": "Artist: Functions",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -5483,8 +4941,6 @@
         "script_level.level_keys": [
           "NEW Course 4 Artist Functions 9"
         ],
-        "script_level.chapter": 93,
-        "script_level.position": 7,
         "lesson.key": "Artist: Functions",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -5496,8 +4952,6 @@
         "script_level.level_keys": [
           "NEW Course 4 Artist Functions 11"
         ],
-        "script_level.chapter": 94,
-        "script_level.position": 8,
         "lesson.key": "Artist: Functions",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -5509,8 +4963,6 @@
         "script_level.level_keys": [
           "NEW Course 4 Artist Functions 12"
         ],
-        "script_level.chapter": 95,
-        "script_level.position": 9,
         "lesson.key": "Artist: Functions",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -5522,8 +4974,6 @@
         "script_level.level_keys": [
           "NEW Course 4 Artist Functions 13"
         ],
-        "script_level.chapter": 96,
-        "script_level.position": 10,
         "lesson.key": "Artist: Functions",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -5535,8 +4985,6 @@
         "script_level.level_keys": [
           "Course 4 Artist Functions challenge"
         ],
-        "script_level.chapter": 97,
-        "script_level.position": 11,
         "lesson.key": "Artist: Functions",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -5548,8 +4996,6 @@
         "script_level.level_keys": [
           "Course 4 Artist Functions Inspiration"
         ],
-        "script_level.chapter": 98,
-        "script_level.position": 12,
         "lesson.key": "Artist: Functions",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -5561,8 +5007,6 @@
         "script_level.level_keys": [
           "NEW Course 4 Artist Functions 14"
         ],
-        "script_level.chapter": 99,
-        "script_level.position": 13,
         "lesson.key": "Artist: Functions",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -5574,8 +5018,6 @@
         "script_level.level_keys": [
           "course4_artist_concept_challenge2"
         ],
-        "script_level.chapter": 100,
-        "script_level.position": 14,
         "lesson.key": "Artist: Functions",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -5587,8 +5029,6 @@
         "script_level.level_keys": [
           "course4_artist_functions_challenge2"
         ],
-        "script_level.chapter": 101,
-        "script_level.position": 15,
         "lesson.key": "Artist: Functions",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -5600,8 +5040,6 @@
         "script_level.level_keys": [
           "SongwritingWithParameters"
         ],
-        "script_level.chapter": 102,
-        "script_level.position": 1,
         "lesson.key": "Unplugged: Songwriting with Parameters",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -5613,8 +5051,6 @@
         "script_level.level_keys": [
           "NEW Course 4 Artist Params 1"
         ],
-        "script_level.chapter": 103,
-        "script_level.position": 1,
         "lesson.key": "Artist: Functions with Parameters",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -5626,8 +5062,6 @@
         "script_level.level_keys": [
           "NEW Course 4 Artist Params 2"
         ],
-        "script_level.chapter": 104,
-        "script_level.position": 2,
         "lesson.key": "Artist: Functions with Parameters",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -5639,8 +5073,6 @@
         "script_level.level_keys": [
           "NEW Course 4 Artist Params 3"
         ],
-        "script_level.chapter": 105,
-        "script_level.position": 3,
         "lesson.key": "Artist: Functions with Parameters",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -5652,8 +5084,6 @@
         "script_level.level_keys": [
           "NEW Course 4 Artist Params 4"
         ],
-        "script_level.chapter": 106,
-        "script_level.position": 4,
         "lesson.key": "Artist: Functions with Parameters",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -5665,8 +5095,6 @@
         "script_level.level_keys": [
           "NEW Course 4 Artist Params 5"
         ],
-        "script_level.chapter": 107,
-        "script_level.position": 5,
         "lesson.key": "Artist: Functions with Parameters",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -5678,8 +5106,6 @@
         "script_level.level_keys": [
           "NEW Course 4 Artist Params 6"
         ],
-        "script_level.chapter": 108,
-        "script_level.position": 6,
         "lesson.key": "Artist: Functions with Parameters",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -5691,8 +5117,6 @@
         "script_level.level_keys": [
           "NEW Course 4 Artist Params 7"
         ],
-        "script_level.chapter": 109,
-        "script_level.position": 7,
         "lesson.key": "Artist: Functions with Parameters",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -5704,8 +5128,6 @@
         "script_level.level_keys": [
           "NEW Course 4 Artist Params 8"
         ],
-        "script_level.chapter": 110,
-        "script_level.position": 8,
         "lesson.key": "Artist: Functions with Parameters",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -5717,8 +5139,6 @@
         "script_level.level_keys": [
           "NEW Course 4 Artist Params 9"
         ],
-        "script_level.chapter": 111,
-        "script_level.position": 9,
         "lesson.key": "Artist: Functions with Parameters",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -5730,8 +5150,6 @@
         "script_level.level_keys": [
           "NEW Course 4 Artist Params 10"
         ],
-        "script_level.chapter": 112,
-        "script_level.position": 10,
         "lesson.key": "Artist: Functions with Parameters",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -5743,8 +5161,6 @@
         "script_level.level_keys": [
           "NEW Course 4 Artist Params 11"
         ],
-        "script_level.chapter": 113,
-        "script_level.position": 11,
         "lesson.key": "Artist: Functions with Parameters",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -5756,8 +5172,6 @@
         "script_level.level_keys": [
           "NEW Course 4 Artist Params 12"
         ],
-        "script_level.chapter": 114,
-        "script_level.position": 12,
         "lesson.key": "Artist: Functions with Parameters",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -5769,8 +5183,6 @@
         "script_level.level_keys": [
           "NEW Course 4 Artist Params 12a"
         ],
-        "script_level.chapter": 115,
-        "script_level.position": 13,
         "lesson.key": "Artist: Functions with Parameters",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -5782,8 +5194,6 @@
         "script_level.level_keys": [
           "NEW Course 4 Artist Params 13"
         ],
-        "script_level.chapter": 116,
-        "script_level.position": 14,
         "lesson.key": "Artist: Functions with Parameters",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -5795,8 +5205,6 @@
         "script_level.level_keys": [
           "NEW Course 4 Artist Params 14"
         ],
-        "script_level.chapter": 117,
-        "script_level.position": 15,
         "lesson.key": "Artist: Functions with Parameters",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -5808,8 +5216,6 @@
         "script_level.level_keys": [
           "NEW Course 4 Artist Params inspire"
         ],
-        "script_level.chapter": 118,
-        "script_level.position": 16,
         "lesson.key": "Artist: Functions with Parameters",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -5821,8 +5227,6 @@
         "script_level.level_keys": [
           "NEW Course 4 Artist Params 15"
         ],
-        "script_level.chapter": 119,
-        "script_level.position": 17,
         "lesson.key": "Artist: Functions with Parameters",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -5834,8 +5238,6 @@
         "script_level.level_keys": [
           "course4_artist_fwp_challenge1"
         ],
-        "script_level.chapter": 120,
-        "script_level.position": 18,
         "lesson.key": "Artist: Functions with Parameters",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -5847,8 +5249,6 @@
         "script_level.level_keys": [
           "Course 4 Play Lab Params 1"
         ],
-        "script_level.chapter": 121,
-        "script_level.position": 1,
         "lesson.key": "Play Lab: Functions with Parameters",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -5860,8 +5260,6 @@
         "script_level.level_keys": [
           "Course 4 Play Lab Params 2"
         ],
-        "script_level.chapter": 122,
-        "script_level.position": 2,
         "lesson.key": "Play Lab: Functions with Parameters",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -5873,8 +5271,6 @@
         "script_level.level_keys": [
           "Course 4 Play Lab Params 3"
         ],
-        "script_level.chapter": 123,
-        "script_level.position": 3,
         "lesson.key": "Play Lab: Functions with Parameters",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -5886,8 +5282,6 @@
         "script_level.level_keys": [
           "Course 4 Play Lab Params 4"
         ],
-        "script_level.chapter": 124,
-        "script_level.position": 4,
         "lesson.key": "Play Lab: Functions with Parameters",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -5899,8 +5293,6 @@
         "script_level.level_keys": [
           "Course 4 Play Lab Params 5"
         ],
-        "script_level.chapter": 125,
-        "script_level.position": 5,
         "lesson.key": "Play Lab: Functions with Parameters",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -5912,8 +5304,6 @@
         "script_level.level_keys": [
           "Course 4 Play Lab Params 6"
         ],
-        "script_level.chapter": 126,
-        "script_level.position": 6,
         "lesson.key": "Play Lab: Functions with Parameters",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -5925,8 +5315,6 @@
         "script_level.level_keys": [
           "Course 4 Play Lab Params 7"
         ],
-        "script_level.chapter": 127,
-        "script_level.position": 7,
         "lesson.key": "Play Lab: Functions with Parameters",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -5938,8 +5326,6 @@
         "script_level.level_keys": [
           "Course 4 Play Lab Params 8"
         ],
-        "script_level.chapter": 128,
-        "script_level.position": 8,
         "lesson.key": "Play Lab: Functions with Parameters",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -5951,8 +5337,6 @@
         "script_level.level_keys": [
           "Course 4 Play Lab Params 9"
         ],
-        "script_level.chapter": 129,
-        "script_level.position": 9,
         "lesson.key": "Play Lab: Functions with Parameters",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -5964,8 +5348,6 @@
         "script_level.level_keys": [
           "Course 4 Play Lab Params 10"
         ],
-        "script_level.chapter": 130,
-        "script_level.position": 10,
         "lesson.key": "Play Lab: Functions with Parameters",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -5977,8 +5359,6 @@
         "script_level.level_keys": [
           "NEW Course 4 Play Lab Params 11"
         ],
-        "script_level.chapter": 131,
-        "script_level.position": 11,
         "lesson.key": "Play Lab: Functions with Parameters",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -5990,8 +5370,6 @@
         "script_level.level_keys": [
           "Course 4 Bee Params 1"
         ],
-        "script_level.chapter": 132,
-        "script_level.position": 1,
         "lesson.key": "Bee: Functions with Parameters",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -6003,8 +5381,6 @@
         "script_level.level_keys": [
           "Course 4 Bee Params 2"
         ],
-        "script_level.chapter": 133,
-        "script_level.position": 2,
         "lesson.key": "Bee: Functions with Parameters",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -6016,8 +5392,6 @@
         "script_level.level_keys": [
           "Course 4 Bee Params 3"
         ],
-        "script_level.chapter": 134,
-        "script_level.position": 3,
         "lesson.key": "Bee: Functions with Parameters",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -6029,8 +5403,6 @@
         "script_level.level_keys": [
           "Course 4 Bee Params 4"
         ],
-        "script_level.chapter": 135,
-        "script_level.position": 4,
         "lesson.key": "Bee: Functions with Parameters",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -6042,8 +5414,6 @@
         "script_level.level_keys": [
           "Course 4 Bee Params 5"
         ],
-        "script_level.chapter": 136,
-        "script_level.position": 5,
         "lesson.key": "Bee: Functions with Parameters",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -6055,8 +5425,6 @@
         "script_level.level_keys": [
           "Course 4 Bee Params 6"
         ],
-        "script_level.chapter": 137,
-        "script_level.position": 6,
         "lesson.key": "Bee: Functions with Parameters",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -6068,8 +5436,6 @@
         "script_level.level_keys": [
           "Course 4 Bee Params 7"
         ],
-        "script_level.chapter": 138,
-        "script_level.position": 7,
         "lesson.key": "Bee: Functions with Parameters",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -6081,8 +5447,6 @@
         "script_level.level_keys": [
           "Course 4 Bee Params 8"
         ],
-        "script_level.chapter": 139,
-        "script_level.position": 8,
         "lesson.key": "Bee: Functions with Parameters",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -6094,8 +5458,6 @@
         "script_level.level_keys": [
           "course4_bee_fwp_challenge1"
         ],
-        "script_level.chapter": 140,
-        "script_level.position": 9,
         "lesson.key": "Bee: Functions with Parameters",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -6107,8 +5469,6 @@
         "script_level.level_keys": [
           "course4_bee_fwp_challenge2"
         ],
-        "script_level.chapter": 141,
-        "script_level.position": 10,
         "lesson.key": "Bee: Functions with Parameters",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -6120,8 +5480,6 @@
         "script_level.level_keys": [
           "BinaryImages"
         ],
-        "script_level.chapter": 142,
-        "script_level.position": 1,
         "lesson.key": "Unplugged: Binary",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -6133,8 +5491,6 @@
         "script_level.level_keys": [
           "Course 4 Artist Binary pre1"
         ],
-        "script_level.chapter": 143,
-        "script_level.position": 1,
         "lesson.key": "Artist Binary",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -6146,8 +5502,6 @@
         "script_level.level_keys": [
           "Course 4 Artist Binary 1"
         ],
-        "script_level.chapter": 144,
-        "script_level.position": 2,
         "lesson.key": "Artist Binary",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -6159,8 +5513,6 @@
         "script_level.level_keys": [
           "Course 4 Artist Binary 2"
         ],
-        "script_level.chapter": 145,
-        "script_level.position": 3,
         "lesson.key": "Artist Binary",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -6172,8 +5524,6 @@
         "script_level.level_keys": [
           "Course 4 Artist Binary 3"
         ],
-        "script_level.chapter": 146,
-        "script_level.position": 4,
         "lesson.key": "Artist Binary",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -6185,8 +5535,6 @@
         "script_level.level_keys": [
           "Course 4 Artist Binary 4"
         ],
-        "script_level.chapter": 147,
-        "script_level.position": 5,
         "lesson.key": "Artist Binary",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -6198,8 +5546,6 @@
         "script_level.level_keys": [
           "Course 4 Artist Binary 5"
         ],
-        "script_level.chapter": 148,
-        "script_level.position": 6,
         "lesson.key": "Artist Binary",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -6211,8 +5557,6 @@
         "script_level.level_keys": [
           "Course 4 Artist Binary 6"
         ],
-        "script_level.chapter": 149,
-        "script_level.position": 7,
         "lesson.key": "Artist Binary",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -6224,8 +5568,6 @@
         "script_level.level_keys": [
           "Course 4 Artist Binary 7"
         ],
-        "script_level.chapter": 150,
-        "script_level.position": 8,
         "lesson.key": "Artist Binary",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -6237,8 +5579,6 @@
         "script_level.level_keys": [
           "Course 4 Artist Binary Free Play 2a"
         ],
-        "script_level.chapter": 151,
-        "script_level.position": 9,
         "lesson.key": "Artist Binary",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -6250,8 +5590,6 @@
         "script_level.level_keys": [
           "Course 4 Artist Binary Free Play 2b"
         ],
-        "script_level.chapter": 152,
-        "script_level.position": 10,
         "lesson.key": "Artist Binary",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -6263,8 +5601,6 @@
         "script_level.level_keys": [
           "Course 4 Artist Binary Free Play 2"
         ],
-        "script_level.chapter": 153,
-        "script_level.position": 11,
         "lesson.key": "Artist Binary",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -6276,8 +5612,6 @@
         "script_level.level_keys": [
           "course4_artist_binary_challenge1"
         ],
-        "script_level.chapter": 154,
-        "script_level.position": 12,
         "lesson.key": "Artist Binary",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -6289,8 +5623,6 @@
         "script_level.level_keys": [
           "course4_artist_binary_challenge2"
         ],
-        "script_level.chapter": 155,
-        "script_level.position": 13,
         "lesson.key": "Artist Binary",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -6302,8 +5634,6 @@
         "script_level.level_keys": [
           "Course 4 SCV 3"
         ],
-        "script_level.chapter": 156,
-        "script_level.position": 1,
         "lesson.key": "Super Challenge - Variables",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -6315,8 +5645,6 @@
         "script_level.level_keys": [
           "Course 4 SCV 5"
         ],
-        "script_level.chapter": 157,
-        "script_level.position": 2,
         "lesson.key": "Super Challenge - Variables",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -6328,8 +5656,6 @@
         "script_level.level_keys": [
           "Course 4 SCV 4"
         ],
-        "script_level.chapter": 158,
-        "script_level.position": 3,
         "lesson.key": "Super Challenge - Variables",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -6341,8 +5667,6 @@
         "script_level.level_keys": [
           "Course 4 SCV 1"
         ],
-        "script_level.chapter": 159,
-        "script_level.position": 4,
         "lesson.key": "Super Challenge - Variables",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -6354,8 +5678,6 @@
         "script_level.level_keys": [
           "Course 4 SCV 2"
         ],
-        "script_level.chapter": 160,
-        "script_level.position": 5,
         "lesson.key": "Super Challenge - Variables",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -6367,8 +5689,6 @@
         "script_level.level_keys": [
           "Course 4 SCV 6"
         ],
-        "script_level.chapter": 161,
-        "script_level.position": 6,
         "lesson.key": "Super Challenge - Variables",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -6380,8 +5700,6 @@
         "script_level.level_keys": [
           "Course 4 SCFL 1b"
         ],
-        "script_level.chapter": 162,
-        "script_level.position": 1,
         "lesson.key": "Super Challenge - For Loops",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -6393,8 +5711,6 @@
         "script_level.level_keys": [
           "Course 4 SCFL 1a"
         ],
-        "script_level.chapter": 163,
-        "script_level.position": 2,
         "lesson.key": "Super Challenge - For Loops",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -6406,8 +5722,6 @@
         "script_level.level_keys": [
           "Course 4 SCFL 1"
         ],
-        "script_level.chapter": 164,
-        "script_level.position": 3,
         "lesson.key": "Super Challenge - For Loops",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -6419,8 +5733,6 @@
         "script_level.level_keys": [
           "Course 4 SCFL 2"
         ],
-        "script_level.chapter": 165,
-        "script_level.position": 4,
         "lesson.key": "Super Challenge - For Loops",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -6432,8 +5744,6 @@
         "script_level.level_keys": [
           "Course 4 SCFL 3"
         ],
-        "script_level.chapter": 166,
-        "script_level.position": 5,
         "lesson.key": "Super Challenge - For Loops",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -6445,8 +5755,6 @@
         "script_level.level_keys": [
           "Course 4 SCFL 4"
         ],
-        "script_level.chapter": 167,
-        "script_level.position": 6,
         "lesson.key": "Super Challenge - For Loops",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -6458,8 +5766,6 @@
         "script_level.level_keys": [
           "Course 4 SCFL 6"
         ],
-        "script_level.chapter": 168,
-        "script_level.position": 7,
         "lesson.key": "Super Challenge - For Loops",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -6471,8 +5777,6 @@
         "script_level.level_keys": [
           "Course 4 SCFL 7"
         ],
-        "script_level.chapter": 169,
-        "script_level.position": 8,
         "lesson.key": "Super Challenge - For Loops",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -6484,8 +5788,6 @@
         "script_level.level_keys": [
           "Course 4 SCF 1b"
         ],
-        "script_level.chapter": 170,
-        "script_level.position": 1,
         "lesson.key": "Super Challenge - Functions and Parameters",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -6497,8 +5799,6 @@
         "script_level.level_keys": [
           "Course 4 SCF 1a"
         ],
-        "script_level.chapter": 171,
-        "script_level.position": 2,
         "lesson.key": "Super Challenge - Functions and Parameters",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -6510,8 +5810,6 @@
         "script_level.level_keys": [
           "Course 4 SCF 1"
         ],
-        "script_level.chapter": 172,
-        "script_level.position": 3,
         "lesson.key": "Super Challenge - Functions and Parameters",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -6523,8 +5821,6 @@
         "script_level.level_keys": [
           "Course 4 SCF 2"
         ],
-        "script_level.chapter": 173,
-        "script_level.position": 4,
         "lesson.key": "Super Challenge - Functions and Parameters",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -6536,8 +5832,6 @@
         "script_level.level_keys": [
           "Course 4 SCF 3"
         ],
-        "script_level.chapter": 174,
-        "script_level.position": 5,
         "lesson.key": "Super Challenge - Functions and Parameters",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -6549,8 +5843,6 @@
         "script_level.level_keys": [
           "Course 4 EC 1a"
         ],
-        "script_level.chapter": 175,
-        "script_level.position": 1,
         "lesson.key": "Extreme Challenge - Comprehensive",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -6562,8 +5854,6 @@
         "script_level.level_keys": [
           "Course 4 EC 1b"
         ],
-        "script_level.chapter": 176,
-        "script_level.position": 2,
         "lesson.key": "Extreme Challenge - Comprehensive",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -6575,8 +5865,6 @@
         "script_level.level_keys": [
           "Course 4 EC 2a"
         ],
-        "script_level.chapter": 177,
-        "script_level.position": 3,
         "lesson.key": "Extreme Challenge - Comprehensive",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -6588,8 +5876,6 @@
         "script_level.level_keys": [
           "Course 4 EC 2c"
         ],
-        "script_level.chapter": 178,
-        "script_level.position": 4,
         "lesson.key": "Extreme Challenge - Comprehensive",
         "lesson_group.key": "",
         "script.name": "course4"
@@ -6601,8 +5887,6 @@
         "script_level.level_keys": [
           "Course 4 EC 2b"
         ],
-        "script_level.chapter": 179,
-        "script_level.position": 5,
         "lesson.key": "Extreme Challenge - Comprehensive",
         "lesson_group.key": "",
         "script.name": "course4"
