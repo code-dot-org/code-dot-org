@@ -1,9 +1,6 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import {
-  levelTokenMargin,
-  borderRadius
-} from '@cdo/apps/lib/levelbuilder/constants';
+import {tokenMargin, borderRadius} from '@cdo/apps/lib/levelbuilder/constants';
 import OrderControls from '@cdo/apps/lib/levelbuilder/OrderControls';
 import ActivitySectionCardButtons from './ActivitySectionCardButtons';
 import {connect} from 'react-redux';
@@ -11,7 +8,6 @@ import {
   moveActivitySection,
   removeActivitySection,
   updateActivitySectionField,
-  addTip,
   reorderLevel,
   moveLevelToActivitySection,
   addLevel,
@@ -53,13 +49,6 @@ const styles = {
     height: 30,
     display: 'flex',
     justifyContent: 'space-between'
-  },
-  addLevel: {
-    fontSize: 14,
-    background: '#eee',
-    border: '1px solid #ddd',
-    boxShadow: 'inset 0 1px 0 0 rgba(255, 255, 255, 0.8)',
-    margin: '0 5px 0 0'
   },
   checkboxesAndButtons: {
     display: 'flex',
@@ -107,7 +96,6 @@ class ActivitySectionCard extends Component {
     moveActivitySection: PropTypes.func,
     removeActivitySection: PropTypes.func,
     updateActivitySectionField: PropTypes.func,
-    addTip: PropTypes.func,
     reorderLevel: PropTypes.func,
     moveLevelToActivitySection: PropTypes.func,
     addLevel: PropTypes.func
@@ -139,7 +127,7 @@ class ActivitySectionCard extends Component {
       });
       this.setState({
         draggedLevelPos: position,
-        dragHeight: this.metrics[position].height + levelTokenMargin,
+        dragHeight: this.metrics[position].height + tokenMargin,
         initialClientY: clientY,
         newPosition: position,
         startingPositions
@@ -291,19 +279,6 @@ class ActivitySectionCard extends Component {
     );
   };
 
-  handleAddTip = tip => {
-    this.props.addTip(
-      this.props.activityPosition,
-      this.props.activitySection.position,
-      tip
-    );
-  };
-
-  //TODO: Hook up editing the tip when you click on the icon
-  handleEditTip = tip => {
-    console.log(`edit tip ${tip}`);
-  };
-
   handleRemoveLevel = levelPos => {
     this.setState({levelPosToRemove: levelPos});
   };
@@ -439,8 +414,6 @@ class ActivitySectionCard extends Component {
           ))}
         <ActivitySectionCardButtons
           activitySection={this.props.activitySection}
-          addTip={this.handleAddTip}
-          editTip={this.handleEditTip}
           addLevel={this.handleAddLevel}
           activityPosition={this.props.activityPosition}
         />
@@ -467,7 +440,6 @@ export default connect(
     addLevel,
     moveActivitySection,
     removeActivitySection,
-    updateActivitySectionField,
-    addTip
+    updateActivitySectionField
   }
 )(ActivitySectionCard);

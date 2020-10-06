@@ -150,10 +150,10 @@ level 'timeforcs_demo_c2_5', named: true
 lesson 'Reviewing Projects', display_name: 'Reviewing Projects'
 level 'timeforcs_demo_c3_1', named: true
 level 'timeforcs_demo_spritelab_1', progression: 'Projects'
-level 'timeforcs_demo_spritelab_1', progression: 'Projects'
-level 'timeforcs_demo_spritelab_1', progression: 'Projects'
-level 'timeforcs_demo_spritelab_1', progression: 'Projects'
-level 'timeforcs_demo_spritelab_1', progression: 'Projects'
+level 'timeforcs_demo_spritelab_2', progression: 'Projects'
+level 'timeforcs_demo_spritelab_3', progression: 'Projects'
+level 'timeforcs_demo_spritelab_4', progression: 'Projects'
+level 'timeforcs_demo_spritelab_5', progression: 'Projects'
 level 'timeforcs_demo_c2_1', progression: 'Rubric'
 
 lesson_group 'time4cs_c2', display_name: 'Collection 2: Food Chains (in the Everglades)'
