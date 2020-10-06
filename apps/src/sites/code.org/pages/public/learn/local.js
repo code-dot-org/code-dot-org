@@ -215,6 +215,7 @@ function loadMap(locations) {
         }
       );
     });
+    // builds the side menu with the list of classes
     if (featureList.length > 0) {
       const linkStyle = {
         color: 'rgb(102, 102, 102)',
