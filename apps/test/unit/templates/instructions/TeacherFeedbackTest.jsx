@@ -140,20 +140,6 @@ describe('TeacherFeedback', () => {
       i18n.lastUpdatedCurrentTeacher.restore();
     });
 
-    it('displays correct message if teacher views feedback given by another teacher', () => {
-      const props = {
-        ...TEACHER_FEEDBACK_NO_RUBRIC_PROPS,
-        latestFeedback: [{feedback_provider_id: 10}]
-      };
-      const lastUpdatedDiffTeacherSpy = sinon.spy(
-        i18n,
-        'lastUpdatedDifferentTeacher'
-      );
-      shallow(<TeacherFeedback {...props} />);
-      expect(lastUpdatedDiffTeacherSpy).to.have.been.calledOnce;
-      i18n.lastUpdatedDifferentTeacher.restore();
-    });
-
     it('shows the correct components if teacher is giving feedback, on a level with a rubric, with no previous feedback', () => {
       const wrapper = shallow(
         <TeacherFeedback {...TEACHER_FEEDBACK_RUBRIC_PROPS} />

@@ -273,25 +273,19 @@ export class TeacherFeedback extends Component {
       time = moment.min(moment(), moment(latestFeedback.created_at)).fromNow();
     } else if (this.props.viewAs === ViewType.Teacher) {
       timeStyle = styles.timeTeacher;
-      //Teacher view if the current teacher did not leave the feedback
-      if (latestFeedback.feedback_provider_id !== this.props.teacher) {
-        feedbackMessage = i18n.lastUpdatedDifferentTeacher();
-        time = this.getFriendlyDate(latestFeedback.created_at);
+      //Teacher view if current teacher left feedback & student viewed
+      if (studentSawFeedback) {
+        timeStyle = {
+          ...timeStyle,
+          ...styles.timeTeacherStudentSeen
+        };
+        feedbackMessage = i18n.seenByStudent();
+        time = this.getFriendlyDate(latestFeedback.student_seen_feedback);
+        currentTeacherStudentSeen = true;
       } else {
-        //Teacher view if current teacher left feedback & student viewed
-        if (studentSawFeedback) {
-          timeStyle = {
-            ...timeStyle,
-            ...styles.timeTeacherStudentSeen
-          };
-          feedbackMessage = i18n.seenByStudent();
-          time = this.getFriendlyDate(latestFeedback.student_seen_feedback);
-          currentTeacherStudentSeen = true;
-        } else {
-          //Teacher view if current teacher left feedback & student did not view
-          feedbackMessage = i18n.lastUpdatedCurrentTeacher();
-          time = this.getFriendlyDate(latestFeedback.created_at);
-        }
+        //Teacher view if current teacher left feedback & student did not view
+        feedbackMessage = i18n.lastUpdatedCurrentTeacher();
+        time = this.getFriendlyDate(latestFeedback.created_at);
       }
     }
     return this.displayFeedbackMessage([
