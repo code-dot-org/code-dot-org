@@ -1714,12 +1714,11 @@ StudioApp.prototype.displayFeedback = function(options) {
       project.getShareUrl();
   } catch (e) {}
 
-  if (
-    this.shouldDisplayFeedbackDialog_(
-      options.preventDialog,
-      options.feedbackType
-    )
-  ) {
+  options.useDialog = this.shouldDisplayFeedbackDialog_(
+    options.preventDialog,
+    options.feedbackType
+  );
+  if (options.useDialog) {
     // let feedback handle creating the dialog
     this.feedback_.displayFeedback(
       options,
