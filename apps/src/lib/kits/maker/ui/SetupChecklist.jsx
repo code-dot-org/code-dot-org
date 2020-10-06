@@ -244,14 +244,25 @@ export default class SetupChecklist extends Component {
   }
 
   installFirmwareSketch() {
+    let firmataFromBoardType;
+    switch (this.state.boardTypeDetected) {
+      case BOARD_TYPE.EXPRESS:
+        firmataFromBoardType =
+          'https://learn.adafruit.com/adafruit-circuit-playground-express/code-org-csd';
+        break;
+      case BOARD_TYPE.MICROBIT:
+        firmataFromBoardType =
+          'https://github.com/microbit-foundation/microbit-firmata#installing-firmata-on-your-bbc-microbit';
+        break;
+      default:
+        firmataFromBoardType =
+          'https://learn.adafruit.com/circuit-playground-firmata/overview';
+    }
     return (
       <div>
         <SafeMarkdown
           markdown={applabI18n.makerSetupInstallFirmata({
-            firmataURL:
-              this.state.boardTypeDetected === BOARD_TYPE.CLASSIC
-                ? 'https://learn.adafruit.com/circuit-playground-firmata/overview'
-                : 'https://learn.adafruit.com/adafruit-circuit-playground-express/code-org-csd'
+            firmataURL: firmataFromBoardType
           })}
         />
       </div>
