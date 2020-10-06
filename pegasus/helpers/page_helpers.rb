@@ -98,7 +98,7 @@ def hacky_localized_lesson_plan_url(path)
   # i18n sync. This list should be kept in sync with the LANGUAGES settings
   # variable in the curriculumbuilder project. (curriculumBuilder/settings.py)
   curriculumbuilder_languages = [
-    'ar-ar', 'es-mx', 'es-es', 'fr-fr', 'hi-in', 'it-it', 'pl-pl', 'pt-br', 'sk-sk', 'th-th'
+    'ar-sa', 'es-mx', 'es-es', 'fr-fr', 'hi-in', 'it-it', 'pl-pl', 'pt-br', 'sk-sk', 'th-th'
   ]
 
   # This is a list of additional languages we want to support. These are
@@ -109,7 +109,7 @@ def hacky_localized_lesson_plan_url(path)
   # added automatically. This means if you try to link to a recently-added
   # lesson plan, it may not be there for any of these languages.
   additional_languages = [
-    'ar-sa', 'de-de', 'fr-fr', 'id-id', 'ko-kr', 'tr-tr', 'zh-cn', 'zh-tw'
+    'de-de', 'id-id', 'ko-kr', 'tr-tr', 'zh-cn', 'zh-tw'
   ]
 
   supported_languages = curriculumbuilder_languages + additional_languages
