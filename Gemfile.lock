@@ -35,6 +35,18 @@ GIT
       redis
 
 GIT
+  remote: https://github.com/code-dot-org/sassc-rails.git
+  revision: cdf930a2ca3a582a0d665720a0693d330d5ba12a
+  ref: frozen-array-fix
+  specs:
+    sassc-rails (2.1.2)
+      railties (>= 4.0.0)
+      sassc (>= 2.0)
+      sprockets (> 3.0)
+      sprockets-rails
+      tilt
+
+GIT
   remote: https://github.com/dooly-ai/omniauth-microsoft_v2_auth.git
   revision: db19d64c2ddb017dddb9a0ff2cee1d84d2fad287
   specs:
@@ -760,12 +772,6 @@ GEM
       sassc-rails (~> 2.1, >= 2.1.1)
     sassc (2.4.0)
       ffi (~> 1.9)
-    sassc-rails (2.1.2)
-      railties (>= 4.0.0)
-      sassc (>= 2.0)
-      sprockets (> 3.0)
-      sprockets-rails
-      tilt
     sawyer (0.8.1)
       addressable (>= 2.3.5, < 2.6)
       faraday (~> 0.8, < 1.0)
@@ -1033,6 +1039,7 @@ DEPENDENCIES
   ruby-progressbar
   ruby_dep (~> 1.3.1)
   sass-rails (~> 6.0.0)
+  sassc-rails!
   scenic
   scenic-mysql_adapter
   scss_lint
