@@ -1,5 +1,7 @@
 # coding: utf-8
 require 'sort_alphabetical'
+require_relative 'country_regions'
+
 # coding: utf-8
 COUNTRY_CODE_TO_COUNTRY_NAME = {
   "AD" => "Andorra",
@@ -292,12 +294,7 @@ EEA_COUNTRY_CODES = EU_COUNTRY_CODES +
     NO
   )
 
-LATAM_COUNTRY_CODES = %w(
-  AR
-  BR
-  CO
-  PE
-)
+LATAM_COUNTRY_CODES = LATAM_ES_COUNTRY_CODES + LATAM_PT_COUNTRY_CODES
 
 # Returns the name of the country whose two character country code is code.
 # If code is not a valid two character country code, returns code.
