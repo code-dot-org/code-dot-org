@@ -84,8 +84,6 @@
         "script_level.level_keys": [
           "sciPDpart4_S1_L1"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Welcome Back!",
         "lesson_group.key": "",
         "script.name": "sciencepd3-2016"
@@ -106,8 +104,6 @@
         "script_level.level_keys": [
           "sciPD2Part4_S1_L2"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Welcome Back!",
         "lesson_group.key": "",
         "script.name": "sciencepd3-2016"
@@ -128,8 +124,6 @@
         "script_level.level_keys": [
           "sciPD2Part4_S1_L3"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "Welcome Back!",
         "lesson_group.key": "",
         "script.name": "sciencepd3-2016"
@@ -150,8 +144,6 @@
         "script_level.level_keys": [
           "sciPD2Part4_S2_L1"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 1,
         "lesson.key": "The TLO",
         "lesson_group.key": "",
         "script.name": "sciencepd3-2016"
@@ -172,8 +164,6 @@
         "script_level.level_keys": [
           "sciPD2Part4_S2_L2"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 2,
         "lesson.key": "The TLO",
         "lesson_group.key": "",
         "script.name": "sciencepd3-2016"
@@ -194,8 +184,6 @@
         "script_level.level_keys": [
           "sciPD2Part4_S3_L1"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 1,
         "lesson.key": "Prep With Your Modules",
         "lesson_group.key": "",
         "script.name": "sciencepd3-2016"
@@ -216,8 +204,6 @@
         "script_level.level_keys": [
           "sciPD2Part4_S3_L2"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 2,
         "lesson.key": "Prep With Your Modules",
         "lesson_group.key": "",
         "script.name": "sciencepd3-2016"
@@ -238,8 +224,6 @@
         "script_level.level_keys": [
           "sciPD2Part4_S3_L3"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 3,
         "lesson.key": "Prep With Your Modules",
         "lesson_group.key": "",
         "script.name": "sciencepd3-2016"
@@ -256,8 +240,6 @@
         "script_level.level_keys": [
           "sciPDpart4_S1_L1"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Welcome Back!",
         "lesson_group.key": "",
         "script.name": "sciencepd3-2016"
@@ -269,8 +251,6 @@
         "script_level.level_keys": [
           "sciPD2Part4_S1_L2"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Welcome Back!",
         "lesson_group.key": "",
         "script.name": "sciencepd3-2016"
@@ -282,8 +262,6 @@
         "script_level.level_keys": [
           "sciPD2Part4_S1_L3"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "Welcome Back!",
         "lesson_group.key": "",
         "script.name": "sciencepd3-2016"
@@ -295,8 +273,6 @@
         "script_level.level_keys": [
           "sciPD2Part4_S2_L1"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 1,
         "lesson.key": "The TLO",
         "lesson_group.key": "",
         "script.name": "sciencepd3-2016"
@@ -308,8 +284,6 @@
         "script_level.level_keys": [
           "sciPD2Part4_S2_L2"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 2,
         "lesson.key": "The TLO",
         "lesson_group.key": "",
         "script.name": "sciencepd3-2016"
@@ -321,8 +295,6 @@
         "script_level.level_keys": [
           "sciPD2Part4_S3_L1"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 1,
         "lesson.key": "Prep With Your Modules",
         "lesson_group.key": "",
         "script.name": "sciencepd3-2016"
@@ -334,8 +306,6 @@
         "script_level.level_keys": [
           "sciPD2Part4_S3_L2"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 2,
         "lesson.key": "Prep With Your Modules",
         "lesson_group.key": "",
         "script.name": "sciencepd3-2016"
@@ -347,8 +317,6 @@
         "script_level.level_keys": [
           "sciPD2Part4_S3_L3"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 3,
         "lesson.key": "Prep With Your Modules",
         "lesson_group.key": "",
         "script.name": "sciencepd3-2016"

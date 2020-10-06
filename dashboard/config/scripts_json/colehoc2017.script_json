@@ -54,8 +54,6 @@
         "script_level.level_keys": [
           "MC_HOC_2017_01_Cole"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "colehoc2017 stage",
         "lesson_group.key": "",
         "script.name": "colehoc2017"
@@ -76,8 +74,6 @@
         "script_level.level_keys": [
           "MC_HOC_2017_02_Cole"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "colehoc2017 stage",
         "lesson_group.key": "",
         "script.name": "colehoc2017"
@@ -98,8 +94,6 @@
         "script_level.level_keys": [
           "MC_HOC_2017_03_Cole"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "colehoc2017 stage",
         "lesson_group.key": "",
         "script.name": "colehoc2017"
@@ -120,8 +114,6 @@
         "script_level.level_keys": [
           "MC_HOC_2017_04_Cole"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "colehoc2017 stage",
         "lesson_group.key": "",
         "script.name": "colehoc2017"
@@ -142,8 +134,6 @@
         "script_level.level_keys": [
           "MC_HOC_2017_04POINT5_RYAN"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 5,
         "lesson.key": "colehoc2017 stage",
         "lesson_group.key": "",
         "script.name": "colehoc2017"
@@ -164,8 +154,6 @@
         "script_level.level_keys": [
           "MC_HOC_2017_05_Cole"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 6,
         "lesson.key": "colehoc2017 stage",
         "lesson_group.key": "",
         "script.name": "colehoc2017"
@@ -186,8 +174,6 @@
         "script_level.level_keys": [
           "MC_HOC_2017_06_Cole"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 7,
         "lesson.key": "colehoc2017 stage",
         "lesson_group.key": "",
         "script.name": "colehoc2017"
@@ -208,8 +194,6 @@
         "script_level.level_keys": [
           "Function intro Ryan"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 8,
         "lesson.key": "colehoc2017 stage",
         "lesson_group.key": "",
         "script.name": "colehoc2017"
@@ -230,8 +214,6 @@
         "script_level.level_keys": [
           "MC_HOC_2017_08_RY"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 9,
         "lesson.key": "colehoc2017 stage",
         "lesson_group.key": "",
         "script.name": "colehoc2017"
@@ -252,8 +234,6 @@
         "script_level.level_keys": [
           "MC_HOC_2017_07_Cole"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 10,
         "lesson.key": "colehoc2017 stage",
         "lesson_group.key": "",
         "script.name": "colehoc2017"
@@ -274,8 +254,6 @@
         "script_level.level_keys": [
           "MC_HOC_2017_10_Cole"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 11,
         "lesson.key": "colehoc2017 stage",
         "lesson_group.key": "",
         "script.name": "colehoc2017"
@@ -296,8 +274,6 @@
         "script_level.level_keys": [
           "MC_HOC_2017_11_Cole"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 12,
         "lesson.key": "colehoc2017 stage",
         "lesson_group.key": "",
         "script.name": "colehoc2017"
@@ -318,8 +294,6 @@
         "script_level.level_keys": [
           "MC_HOC_2017_12_Cole"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 13,
         "lesson.key": "colehoc2017 stage",
         "lesson_group.key": "",
         "script.name": "colehoc2017"
@@ -340,8 +314,6 @@
         "script_level.level_keys": [
           "MC_HOC_2017_13_Cole"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 14,
         "lesson.key": "colehoc2017 stage",
         "lesson_group.key": "",
         "script.name": "colehoc2017"
@@ -358,8 +330,6 @@
         "script_level.level_keys": [
           "MC_HOC_2017_01_Cole"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "colehoc2017 stage",
         "lesson_group.key": "",
         "script.name": "colehoc2017"
@@ -371,8 +341,6 @@
         "script_level.level_keys": [
           "MC_HOC_2017_02_Cole"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "colehoc2017 stage",
         "lesson_group.key": "",
         "script.name": "colehoc2017"
@@ -384,8 +352,6 @@
         "script_level.level_keys": [
           "MC_HOC_2017_03_Cole"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "colehoc2017 stage",
         "lesson_group.key": "",
         "script.name": "colehoc2017"
@@ -397,8 +363,6 @@
         "script_level.level_keys": [
           "MC_HOC_2017_04_Cole"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "colehoc2017 stage",
         "lesson_group.key": "",
         "script.name": "colehoc2017"
@@ -410,8 +374,6 @@
         "script_level.level_keys": [
           "MC_HOC_2017_04POINT5_RYAN"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 5,
         "lesson.key": "colehoc2017 stage",
         "lesson_group.key": "",
         "script.name": "colehoc2017"
@@ -423,8 +385,6 @@
         "script_level.level_keys": [
           "MC_HOC_2017_05_Cole"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 6,
         "lesson.key": "colehoc2017 stage",
         "lesson_group.key": "",
         "script.name": "colehoc2017"
@@ -436,8 +396,6 @@
         "script_level.level_keys": [
           "MC_HOC_2017_06_Cole"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 7,
         "lesson.key": "colehoc2017 stage",
         "lesson_group.key": "",
         "script.name": "colehoc2017"
@@ -449,8 +407,6 @@
         "script_level.level_keys": [
           "Function intro Ryan"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 8,
         "lesson.key": "colehoc2017 stage",
         "lesson_group.key": "",
         "script.name": "colehoc2017"
@@ -462,8 +418,6 @@
         "script_level.level_keys": [
           "MC_HOC_2017_08_RY"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 9,
         "lesson.key": "colehoc2017 stage",
         "lesson_group.key": "",
         "script.name": "colehoc2017"
@@ -475,8 +429,6 @@
         "script_level.level_keys": [
           "MC_HOC_2017_07_Cole"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 10,
         "lesson.key": "colehoc2017 stage",
         "lesson_group.key": "",
         "script.name": "colehoc2017"
@@ -488,8 +440,6 @@
         "script_level.level_keys": [
           "MC_HOC_2017_10_Cole"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 11,
         "lesson.key": "colehoc2017 stage",
         "lesson_group.key": "",
         "script.name": "colehoc2017"
@@ -501,8 +451,6 @@
         "script_level.level_keys": [
           "MC_HOC_2017_11_Cole"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 12,
         "lesson.key": "colehoc2017 stage",
         "lesson_group.key": "",
         "script.name": "colehoc2017"
@@ -514,8 +462,6 @@
         "script_level.level_keys": [
           "MC_HOC_2017_12_Cole"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 13,
         "lesson.key": "colehoc2017 stage",
         "lesson_group.key": "",
         "script.name": "colehoc2017"
@@ -527,8 +473,6 @@
         "script_level.level_keys": [
           "MC_HOC_2017_13_Cole"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 14,
         "lesson.key": "colehoc2017 stage",
         "lesson_group.key": "",
         "script.name": "colehoc2017"

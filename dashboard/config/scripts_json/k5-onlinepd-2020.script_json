@@ -260,8 +260,6 @@
         "script_level.level_keys": [
           "OPD-K5 About_copy_2020"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Welcome to \"Teaching Computer Science Fundamentals\"",
         "lesson_group.key": "k5_getting_started_1",
         "script.name": "k5-onlinepd-2020"
@@ -282,8 +280,6 @@
         "script_level.level_keys": [
           "OPD-K5 WhatIsCS_2020"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Welcome to \"Teaching Computer Science Fundamentals\"",
         "lesson_group.key": "k5_getting_started_1",
         "script.name": "k5-onlinepd-2020"
@@ -304,8 +300,6 @@
         "script_level.level_keys": [
           "OPD-K5 Why teach CS_copy_2020"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "Welcome to \"Teaching Computer Science Fundamentals\"",
         "lesson_group.key": "k5_getting_started_1",
         "script.name": "k5-onlinepd-2020"
@@ -326,8 +320,6 @@
         "script_level.level_keys": [
           "OPD-K5 Outline_copy_2020"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "Welcome to \"Teaching Computer Science Fundamentals\"",
         "lesson_group.key": "k5_getting_started_1",
         "script.name": "k5-onlinepd-2020"
@@ -348,8 +340,6 @@
         "script_level.level_keys": [
           "OPD-K5 CS Tips_copy_2020"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 5,
         "lesson.key": "Welcome to \"Teaching Computer Science Fundamentals\"",
         "lesson_group.key": "k5_getting_started_1",
         "script.name": "k5-onlinepd-2020"
@@ -370,8 +360,6 @@
         "script_level.level_keys": [
           "OPD-K5 Participation_copy_2020"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 6,
         "lesson.key": "Welcome to \"Teaching Computer Science Fundamentals\"",
         "lesson_group.key": "k5_getting_started_1",
         "script.name": "k5-onlinepd-2020"
@@ -392,8 +380,6 @@
         "script_level.level_keys": [
           "OPD-K5 whats your plan_2020"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 7,
         "lesson.key": "Welcome to \"Teaching Computer Science Fundamentals\"",
         "lesson_group.key": "k5_getting_started_1",
         "script.name": "k5-onlinepd-2020"
@@ -414,8 +400,6 @@
         "script_level.level_keys": [
           "OPD-K5 CS Video_copy_2020"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 1,
         "lesson.key": "Understanding the Computer Science Fundamentals Courses",
         "lesson_group.key": "k5_getting_started_1",
         "script.name": "k5-onlinepd-2020"
@@ -436,8 +420,6 @@
         "script_level.level_keys": [
           "OPD-K5 Welcome 2_copy_2020"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 2,
         "lesson.key": "Understanding the Computer Science Fundamentals Courses",
         "lesson_group.key": "k5_getting_started_1",
         "script.name": "k5-onlinepd-2020"
@@ -458,8 +440,6 @@
         "script_level.level_keys": [
           "OPD-K5 role_of_teacher_2020"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 3,
         "lesson.key": "Understanding the Computer Science Fundamentals Courses",
         "lesson_group.key": "k5_getting_started_1",
         "script.name": "k5-onlinepd-2020"
@@ -480,8 +460,6 @@
         "script_level.level_keys": [
           "OPD-K5 types of lessons_2020"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 4,
         "lesson.key": "Understanding the Computer Science Fundamentals Courses",
         "lesson_group.key": "k5_getting_started_1",
         "script.name": "k5-onlinepd-2020"
@@ -502,8 +480,6 @@
         "script_level.level_keys": [
           "OPD-K5 lesson plans_2020"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 5,
         "lesson.key": "Understanding the Computer Science Fundamentals Courses",
         "lesson_group.key": "k5_getting_started_1",
         "script.name": "k5-onlinepd-2020"
@@ -524,8 +500,6 @@
         "script_level.level_keys": [
           "OPD-K5 Unplugged Video_copy_2020"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 6,
         "lesson.key": "Understanding the Computer Science Fundamentals Courses",
         "lesson_group.key": "k5_getting_started_1",
         "script.name": "k5-onlinepd-2020"
@@ -546,8 +520,6 @@
         "script_level.level_keys": [
           "OPD-K5 What is Mastery_copy_2020"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 7,
         "lesson.key": "Understanding the Computer Science Fundamentals Courses",
         "lesson_group.key": "k5_getting_started_1",
         "script.name": "k5-onlinepd-2020"
@@ -568,8 +540,6 @@
         "script_level.level_keys": [
           "OPD-K5 Stage2Go_copy_2020"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 8,
         "lesson.key": "Understanding the Computer Science Fundamentals Courses",
         "lesson_group.key": "k5_getting_started_1",
         "script.name": "k5-onlinepd-2020"
@@ -590,8 +560,6 @@
         "script_level.level_keys": [
           "OPD-K5 Stage3Start_copy_2020"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 1,
         "lesson.key": "Sequencing",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -612,8 +580,6 @@
         "script_level.level_keys": [
           "OPD-K5 sequencing introduced_2020"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 2,
         "lesson.key": "Sequencing",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -634,8 +600,6 @@
         "script_level.level_keys": [
           "OPD-K5 Stage3aGo_copy_2020"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 3,
         "lesson.key": "Sequencing",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -656,8 +620,6 @@
         "script_level.level_keys": [
           "OPD-K5 FirstProgram_2020"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 4,
         "lesson.key": "Sequencing",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -678,8 +640,6 @@
         "script_level.level_keys": [
           "courseA_maze_seq5_2020"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 5,
         "lesson.key": "Sequencing",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -700,8 +660,6 @@
         "script_level.level_keys": [
           "courseA_maze_seq6_2020"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 6,
         "lesson.key": "Sequencing",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -722,8 +680,6 @@
         "script_level.level_keys": [
           "courseA_maze_seq7_2020"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 7,
         "lesson.key": "Sequencing",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -744,8 +700,6 @@
         "script_level.level_keys": [
           "courseA_maze_seq8_2020"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 8,
         "lesson.key": "Sequencing",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -767,8 +721,6 @@
         "script_level.level_keys": [
           "courseA_maze_seq10_2020"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 9,
         "lesson.key": "Sequencing",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -789,8 +741,6 @@
         "script_level.level_keys": [
           "OPD-K5 using lesson plans_2020"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 10,
         "lesson.key": "Sequencing",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -811,8 +761,6 @@
         "script_level.level_keys": [
           "OPD-K5 lesson implementation planning_2020"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 11,
         "lesson.key": "Sequencing",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -833,8 +781,6 @@
         "script_level.level_keys": [
           "OPD-K5 sequencing free response_2020"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 12,
         "lesson.key": "Sequencing",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -855,8 +801,6 @@
         "script_level.level_keys": [
           "OPD-K5 Stage4Start_copy_2020"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 1,
         "lesson.key": "Loops",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -877,8 +821,6 @@
         "script_level.level_keys": [
           "OPD-K5 loops introduced_2020"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 2,
         "lesson.key": "Loops",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -899,8 +841,6 @@
         "script_level.level_keys": [
           "OPD-K5 Stage4Go_copy_2020"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 3,
         "lesson.key": "Loops",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -921,8 +861,6 @@
         "script_level.level_keys": [
           "OPD-K5 RepeatBlock_2020"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 4,
         "lesson.key": "Loops",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -943,8 +881,6 @@
         "script_level.level_keys": [
           "courseC_starWars_loops2_2020"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 5,
         "lesson.key": "Loops",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -965,8 +901,6 @@
         "script_level.level_keys": [
           "courseC_starWars_loops4_2020"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 6,
         "lesson.key": "Loops",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -987,8 +921,6 @@
         "script_level.level_keys": [
           "courseC_starWars_loops5_2020"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 7,
         "lesson.key": "Loops",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -1009,8 +941,6 @@
         "script_level.level_keys": [
           "courseC_starWars_loops6_2020"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 8,
         "lesson.key": "Loops",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -1031,8 +961,6 @@
         "script_level.level_keys": [
           "courseC_starWars_loops7_2020"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 9,
         "lesson.key": "Loops",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -1054,8 +982,6 @@
         "script_level.level_keys": [
           "courseC_starWars_loops8_2020"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 10,
         "lesson.key": "Loops",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -1076,8 +1002,6 @@
         "script_level.level_keys": [
           "OPD-K5 Pair_copy_2020"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 11,
         "lesson.key": "Loops",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -1098,8 +1022,6 @@
         "script_level.level_keys": [
           "OPD-K5 loops free response_2020"
         ],
-        "script_level.chapter": 39,
-        "script_level.position": 12,
         "lesson.key": "Loops",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -1120,8 +1042,6 @@
         "script_level.level_keys": [
           "OPD-K5 Stage7Start_copy_2020"
         ],
-        "script_level.chapter": 40,
-        "script_level.position": 1,
         "lesson.key": "Events",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -1142,8 +1062,6 @@
         "script_level.level_keys": [
           "OPD-K5 events introduced_2020"
         ],
-        "script_level.chapter": 41,
-        "script_level.position": 2,
         "lesson.key": "Events",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -1164,8 +1082,6 @@
         "script_level.level_keys": [
           "OPD-K5 Stage7Go_copy_2020"
         ],
-        "script_level.chapter": 42,
-        "script_level.position": 3,
         "lesson.key": "Events",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -1186,8 +1102,6 @@
         "script_level.level_keys": [
           "OPD-K5-events-1-video_2020"
         ],
-        "script_level.chapter": 43,
-        "script_level.position": 4,
         "lesson.key": "Events",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -1208,8 +1122,6 @@
         "script_level.level_keys": [
           "OPD-K5-events-2_2020"
         ],
-        "script_level.chapter": 44,
-        "script_level.position": 5,
         "lesson.key": "Events",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -1230,8 +1142,6 @@
         "script_level.level_keys": [
           "OPD-K5-events-3_2020"
         ],
-        "script_level.chapter": 45,
-        "script_level.position": 6,
         "lesson.key": "Events",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -1252,8 +1162,6 @@
         "script_level.level_keys": [
           "OPD-K5-events-4_2020"
         ],
-        "script_level.chapter": 46,
-        "script_level.position": 7,
         "lesson.key": "Events",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -1274,8 +1182,6 @@
         "script_level.level_keys": [
           "OPD-K5-events-5_2020"
         ],
-        "script_level.chapter": 47,
-        "script_level.position": 8,
         "lesson.key": "Events",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -1296,8 +1202,6 @@
         "script_level.level_keys": [
           "OPD-K5-events-6_2020"
         ],
-        "script_level.chapter": 48,
-        "script_level.position": 9,
         "lesson.key": "Events",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -1318,8 +1222,6 @@
         "script_level.level_keys": [
           "OPD-K5 debugging_2020"
         ],
-        "script_level.chapter": 49,
-        "script_level.position": 10,
         "lesson.key": "Events",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -1340,8 +1242,6 @@
         "script_level.level_keys": [
           "OPD-K5 events free response_2020"
         ],
-        "script_level.chapter": 50,
-        "script_level.position": 11,
         "lesson.key": "Events",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -1362,8 +1262,6 @@
         "script_level.level_keys": [
           "OPD-K5 Stage5Start_copy_2020"
         ],
-        "script_level.chapter": 51,
-        "script_level.position": 1,
         "lesson.key": "Conditionals",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -1384,8 +1282,6 @@
         "script_level.level_keys": [
           "OPD-K5 conditionals introduced_2020"
         ],
-        "script_level.chapter": 52,
-        "script_level.position": 2,
         "lesson.key": "Conditionals",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -1406,8 +1302,6 @@
         "script_level.level_keys": [
           "OPD-K5 Stage5Go_copy_2020"
         ],
-        "script_level.chapter": 53,
-        "script_level.position": 3,
         "lesson.key": "Conditionals",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -1428,8 +1322,6 @@
         "script_level.level_keys": [
           "courseD_bee_conditionalsVid1_2020"
         ],
-        "script_level.chapter": 54,
-        "script_level.position": 4,
         "lesson.key": "Conditionals",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -1450,8 +1342,6 @@
         "script_level.level_keys": [
           "courseD_bee_conditionals1_predict1_2020"
         ],
-        "script_level.chapter": 55,
-        "script_level.position": 5,
         "lesson.key": "Conditionals",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -1472,8 +1362,6 @@
         "script_level.level_keys": [
           "courseD_bee_conditionals2_2020"
         ],
-        "script_level.chapter": 56,
-        "script_level.position": 6,
         "lesson.key": "Conditionals",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -1494,8 +1382,6 @@
         "script_level.level_keys": [
           "courseD_bee_conditionals3_2020"
         ],
-        "script_level.chapter": 57,
-        "script_level.position": 7,
         "lesson.key": "Conditionals",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -1516,8 +1402,6 @@
         "script_level.level_keys": [
           "courseD_bee_conditionals4_2020"
         ],
-        "script_level.chapter": 58,
-        "script_level.position": 8,
         "lesson.key": "Conditionals",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -1539,8 +1423,6 @@
         "script_level.level_keys": [
           "courseD_bee_conditionals5_2020"
         ],
-        "script_level.chapter": 59,
-        "script_level.position": 9,
         "lesson.key": "Conditionals",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -1561,8 +1443,6 @@
         "script_level.level_keys": [
           "OPD-K5 journaling_2020"
         ],
-        "script_level.chapter": 60,
-        "script_level.position": 10,
         "lesson.key": "Conditionals",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -1583,8 +1463,6 @@
         "script_level.level_keys": [
           "OPD-K5 conditionals free response_2020"
         ],
-        "script_level.chapter": 61,
-        "script_level.position": 11,
         "lesson.key": "Conditionals",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -1605,8 +1483,6 @@
         "script_level.level_keys": [
           "OPD-K5 project_2020"
         ],
-        "script_level.chapter": 62,
-        "script_level.position": 1,
         "lesson.key": "End of Course projects",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -1627,8 +1503,6 @@
         "script_level.level_keys": [
           "OPD-K5 projects introduction_2020"
         ],
-        "script_level.chapter": 63,
-        "script_level.position": 2,
         "lesson.key": "End of Course projects",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -1649,8 +1523,6 @@
         "script_level.level_keys": [
           "OPD-K5-projects-1_2020"
         ],
-        "script_level.chapter": 64,
-        "script_level.position": 3,
         "lesson.key": "End of Course projects",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -1671,8 +1543,6 @@
         "script_level.level_keys": [
           "OPD-K5-projects-2_2020"
         ],
-        "script_level.chapter": 65,
-        "script_level.position": 4,
         "lesson.key": "End of Course projects",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -1693,8 +1563,6 @@
         "script_level.level_keys": [
           "OPD-K5-projects-3_2020"
         ],
-        "script_level.chapter": 66,
-        "script_level.position": 5,
         "lesson.key": "End of Course projects",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -1715,8 +1583,6 @@
         "script_level.level_keys": [
           "OPD-K5-projects-4_2020"
         ],
-        "script_level.chapter": 67,
-        "script_level.position": 6,
         "lesson.key": "End of Course projects",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -1737,8 +1603,6 @@
         "script_level.level_keys": [
           "OPD-K5-projects-5_2020"
         ],
-        "script_level.chapter": 68,
-        "script_level.position": 7,
         "lesson.key": "End of Course projects",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -1759,8 +1623,6 @@
         "script_level.level_keys": [
           "OPD-K5-projects-6_2020"
         ],
-        "script_level.chapter": 69,
-        "script_level.position": 8,
         "lesson.key": "End of Course projects",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -1781,8 +1643,6 @@
         "script_level.level_keys": [
           "OPD-K5-projects-7_2020"
         ],
-        "script_level.chapter": 70,
-        "script_level.position": 9,
         "lesson.key": "End of Course projects",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -1803,8 +1663,6 @@
         "script_level.level_keys": [
           "OPD-K5 projects free response_2020"
         ],
-        "script_level.chapter": 71,
-        "script_level.position": 10,
         "lesson.key": "End of Course projects",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -1825,8 +1683,6 @@
         "script_level.level_keys": [
           "OPD-K5 where to next_2020"
         ],
-        "script_level.chapter": 72,
-        "script_level.position": 11,
         "lesson.key": "End of Course projects",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -1847,8 +1703,6 @@
         "script_level.level_keys": [
           "OPD-K5 diving deeper intro_2020"
         ],
-        "script_level.chapter": 73,
-        "script_level.position": 1,
         "lesson.key": "Functions",
         "lesson_group.key": "k5_diving_deeper_1",
         "script.name": "k5-onlinepd-2020"
@@ -1869,8 +1723,6 @@
         "script_level.level_keys": [
           "OPD-K5 Stage6Start_copy_2020"
         ],
-        "script_level.chapter": 74,
-        "script_level.position": 2,
         "lesson.key": "Functions",
         "lesson_group.key": "k5_diving_deeper_1",
         "script.name": "k5-onlinepd-2020"
@@ -1891,8 +1743,6 @@
         "script_level.level_keys": [
           "OPD-K5 functions introduced_2020"
         ],
-        "script_level.chapter": 75,
-        "script_level.position": 3,
         "lesson.key": "Functions",
         "lesson_group.key": "k5_diving_deeper_1",
         "script.name": "k5-onlinepd-2020"
@@ -1913,8 +1763,6 @@
         "script_level.level_keys": [
           "OPD-K5 Stage6Go_copy_2020"
         ],
-        "script_level.chapter": 76,
-        "script_level.position": 4,
         "lesson.key": "Functions",
         "lesson_group.key": "k5_diving_deeper_1",
         "script.name": "k5-onlinepd-2020"
@@ -1935,8 +1783,6 @@
         "script_level.level_keys": [
           "courseE_artist_functions1_2020"
         ],
-        "script_level.chapter": 77,
-        "script_level.position": 5,
         "lesson.key": "Functions",
         "lesson_group.key": "k5_diving_deeper_1",
         "script.name": "k5-onlinepd-2020"
@@ -1957,8 +1803,6 @@
         "script_level.level_keys": [
           "courseE_artist_functions_predict1_2020"
         ],
-        "script_level.chapter": 78,
-        "script_level.position": 6,
         "lesson.key": "Functions",
         "lesson_group.key": "k5_diving_deeper_1",
         "script.name": "k5-onlinepd-2020"
@@ -1979,8 +1823,6 @@
         "script_level.level_keys": [
           "courseE_video_functionsArtist_2020"
         ],
-        "script_level.chapter": 79,
-        "script_level.position": 7,
         "lesson.key": "Functions",
         "lesson_group.key": "k5_diving_deeper_1",
         "script.name": "k5-onlinepd-2020"
@@ -2001,8 +1843,6 @@
         "script_level.level_keys": [
           "courseE_artist_functions2_2020"
         ],
-        "script_level.chapter": 80,
-        "script_level.position": 8,
         "lesson.key": "Functions",
         "lesson_group.key": "k5_diving_deeper_1",
         "script.name": "k5-onlinepd-2020"
@@ -2023,8 +1863,6 @@
         "script_level.level_keys": [
           "courseE_artist_functions3_2020"
         ],
-        "script_level.chapter": 81,
-        "script_level.position": 9,
         "lesson.key": "Functions",
         "lesson_group.key": "k5_diving_deeper_1",
         "script.name": "k5-onlinepd-2020"
@@ -2045,8 +1883,6 @@
         "script_level.level_keys": [
           "courseE_artist_functions4_2020"
         ],
-        "script_level.chapter": 82,
-        "script_level.position": 10,
         "lesson.key": "Functions",
         "lesson_group.key": "k5_diving_deeper_1",
         "script.name": "k5-onlinepd-2020"
@@ -2067,8 +1903,6 @@
         "script_level.level_keys": [
           "courseE_artist_functions5_2020"
         ],
-        "script_level.chapter": 83,
-        "script_level.position": 11,
         "lesson.key": "Functions",
         "lesson_group.key": "k5_diving_deeper_1",
         "script.name": "k5-onlinepd-2020"
@@ -2089,8 +1923,6 @@
         "script_level.level_keys": [
           "OPD-K5 functions free response_2020"
         ],
-        "script_level.chapter": 84,
-        "script_level.position": 12,
         "lesson.key": "Functions",
         "lesson_group.key": "k5_diving_deeper_1",
         "script.name": "k5-onlinepd-2020"
@@ -2111,8 +1943,6 @@
         "script_level.level_keys": [
           "OPD-K5 variables_2020"
         ],
-        "script_level.chapter": 85,
-        "script_level.position": 1,
         "lesson.key": "Variables",
         "lesson_group.key": "k5_diving_deeper_1",
         "script.name": "k5-onlinepd-2020"
@@ -2133,8 +1963,6 @@
         "script_level.level_keys": [
           "OPD-K5 variables introduction_2020"
         ],
-        "script_level.chapter": 86,
-        "script_level.position": 2,
         "lesson.key": "Variables",
         "lesson_group.key": "k5_diving_deeper_1",
         "script.name": "k5-onlinepd-2020"
@@ -2155,8 +1983,6 @@
         "script_level.level_keys": [
           "OPD-K5 variables unplugged_2020"
         ],
-        "script_level.chapter": 87,
-        "script_level.position": 3,
         "lesson.key": "Variables",
         "lesson_group.key": "k5_diving_deeper_1",
         "script.name": "k5-onlinepd-2020"
@@ -2177,8 +2003,6 @@
         "script_level.level_keys": [
           "OPD-K5-variables-1_2020"
         ],
-        "script_level.chapter": 88,
-        "script_level.position": 4,
         "lesson.key": "Variables",
         "lesson_group.key": "k5_diving_deeper_1",
         "script.name": "k5-onlinepd-2020"
@@ -2199,8 +2023,6 @@
         "script_level.level_keys": [
           "OPD-K5-variables-2_2020"
         ],
-        "script_level.chapter": 89,
-        "script_level.position": 5,
         "lesson.key": "Variables",
         "lesson_group.key": "k5_diving_deeper_1",
         "script.name": "k5-onlinepd-2020"
@@ -2221,8 +2043,6 @@
         "script_level.level_keys": [
           "OPD-K5-variables-3-video_2020"
         ],
-        "script_level.chapter": 90,
-        "script_level.position": 6,
         "lesson.key": "Variables",
         "lesson_group.key": "k5_diving_deeper_1",
         "script.name": "k5-onlinepd-2020"
@@ -2243,8 +2063,6 @@
         "script_level.level_keys": [
           "OPD-K5-variables-4_2020"
         ],
-        "script_level.chapter": 91,
-        "script_level.position": 7,
         "lesson.key": "Variables",
         "lesson_group.key": "k5_diving_deeper_1",
         "script.name": "k5-onlinepd-2020"
@@ -2265,8 +2083,6 @@
         "script_level.level_keys": [
           "OPD-K5-variables-5_2020"
         ],
-        "script_level.chapter": 92,
-        "script_level.position": 8,
         "lesson.key": "Variables",
         "lesson_group.key": "k5_diving_deeper_1",
         "script.name": "k5-onlinepd-2020"
@@ -2287,8 +2103,6 @@
         "script_level.level_keys": [
           "OPD-K5-variables-6_2020"
         ],
-        "script_level.chapter": 93,
-        "script_level.position": 9,
         "lesson.key": "Variables",
         "lesson_group.key": "k5_diving_deeper_1",
         "script.name": "k5-onlinepd-2020"
@@ -2309,8 +2123,6 @@
         "script_level.level_keys": [
           "OPD-K5-variables-7_2020"
         ],
-        "script_level.chapter": 94,
-        "script_level.position": 10,
         "lesson.key": "Variables",
         "lesson_group.key": "k5_diving_deeper_1",
         "script.name": "k5-onlinepd-2020"
@@ -2331,8 +2143,6 @@
         "script_level.level_keys": [
           "OPD-K5 variables free response_2020"
         ],
-        "script_level.chapter": 95,
-        "script_level.position": 11,
         "lesson.key": "Variables",
         "lesson_group.key": "k5_diving_deeper_1",
         "script.name": "k5-onlinepd-2020"
@@ -2353,8 +2163,6 @@
         "script_level.level_keys": [
           "OPD-K5 for loops intro_2020"
         ],
-        "script_level.chapter": 96,
-        "script_level.position": 1,
         "lesson.key": "For Loops",
         "lesson_group.key": "k5_diving_deeper_1",
         "script.name": "k5-onlinepd-2020"
@@ -2375,8 +2183,6 @@
         "script_level.level_keys": [
           "OPD-K5 for loops introduction_2020"
         ],
-        "script_level.chapter": 97,
-        "script_level.position": 2,
         "lesson.key": "For Loops",
         "lesson_group.key": "k5_diving_deeper_1",
         "script.name": "k5-onlinepd-2020"
@@ -2397,8 +2203,6 @@
         "script_level.level_keys": [
           "OPD-K5 for loops_2020"
         ],
-        "script_level.chapter": 98,
-        "script_level.position": 3,
         "lesson.key": "For Loops",
         "lesson_group.key": "k5_diving_deeper_1",
         "script.name": "k5-onlinepd-2020"
@@ -2419,8 +2223,6 @@
         "script_level.level_keys": [
           "OPD-K5-forloops-1_2020"
         ],
-        "script_level.chapter": 99,
-        "script_level.position": 4,
         "lesson.key": "For Loops",
         "lesson_group.key": "k5_diving_deeper_1",
         "script.name": "k5-onlinepd-2020"
@@ -2441,8 +2243,6 @@
         "script_level.level_keys": [
           "OPD-K5-forloops-2_2020"
         ],
-        "script_level.chapter": 100,
-        "script_level.position": 5,
         "lesson.key": "For Loops",
         "lesson_group.key": "k5_diving_deeper_1",
         "script.name": "k5-onlinepd-2020"
@@ -2463,8 +2263,6 @@
         "script_level.level_keys": [
           "OPD-K5-forloops-3-video_2020"
         ],
-        "script_level.chapter": 101,
-        "script_level.position": 6,
         "lesson.key": "For Loops",
         "lesson_group.key": "k5_diving_deeper_1",
         "script.name": "k5-onlinepd-2020"
@@ -2485,8 +2283,6 @@
         "script_level.level_keys": [
           "OPD-K5-forloops-4_2020"
         ],
-        "script_level.chapter": 102,
-        "script_level.position": 7,
         "lesson.key": "For Loops",
         "lesson_group.key": "k5_diving_deeper_1",
         "script.name": "k5-onlinepd-2020"
@@ -2507,8 +2303,6 @@
         "script_level.level_keys": [
           "OPD-K5-forloops-5_2020"
         ],
-        "script_level.chapter": 103,
-        "script_level.position": 8,
         "lesson.key": "For Loops",
         "lesson_group.key": "k5_diving_deeper_1",
         "script.name": "k5-onlinepd-2020"
@@ -2529,8 +2323,6 @@
         "script_level.level_keys": [
           "OPD-K5-forloops-6_2020"
         ],
-        "script_level.chapter": 104,
-        "script_level.position": 9,
         "lesson.key": "For Loops",
         "lesson_group.key": "k5_diving_deeper_1",
         "script.name": "k5-onlinepd-2020"
@@ -2551,8 +2343,6 @@
         "script_level.level_keys": [
           "OPD-K5-forloops-7_2020"
         ],
-        "script_level.chapter": 105,
-        "script_level.position": 10,
         "lesson.key": "For Loops",
         "lesson_group.key": "k5_diving_deeper_1",
         "script.name": "k5-onlinepd-2020"
@@ -2573,8 +2363,6 @@
         "script_level.level_keys": [
           "OPD-K5 for loops free response_2020"
         ],
-        "script_level.chapter": 106,
-        "script_level.position": 11,
         "lesson.key": "For Loops",
         "lesson_group.key": "k5_diving_deeper_1",
         "script.name": "k5-onlinepd-2020"
@@ -2595,8 +2383,6 @@
         "script_level.level_keys": [
           "OPD-K5 sprite lab_2020"
         ],
-        "script_level.chapter": 107,
-        "script_level.position": 1,
         "lesson.key": "Sprite Lab",
         "lesson_group.key": "k5_diving_deeper_1",
         "script.name": "k5-onlinepd-2020"
@@ -2617,8 +2403,6 @@
         "script_level.level_keys": [
           "OPD-K5 sprite lab introduction_2020"
         ],
-        "script_level.chapter": 108,
-        "script_level.position": 2,
         "lesson.key": "Sprite Lab",
         "lesson_group.key": "k5_diving_deeper_1",
         "script.name": "k5-onlinepd-2020"
@@ -2639,8 +2423,6 @@
         "script_level.level_keys": [
           "OPD-K5 sprite lab unplugged_2020"
         ],
-        "script_level.chapter": 109,
-        "script_level.position": 3,
         "lesson.key": "Sprite Lab",
         "lesson_group.key": "k5_diving_deeper_1",
         "script.name": "k5-onlinepd-2020"
@@ -2661,8 +2443,6 @@
         "script_level.level_keys": [
           "OPD-K5 sprite lab video_2020"
         ],
-        "script_level.chapter": 110,
-        "script_level.position": 4,
         "lesson.key": "Sprite Lab",
         "lesson_group.key": "k5_diving_deeper_1",
         "script.name": "k5-onlinepd-2020"
@@ -2683,8 +2463,6 @@
         "script_level.level_keys": [
           "OPD-K5-spritelab-1_2020"
         ],
-        "script_level.chapter": 111,
-        "script_level.position": 5,
         "lesson.key": "Sprite Lab",
         "lesson_group.key": "k5_diving_deeper_1",
         "script.name": "k5-onlinepd-2020"
@@ -2705,8 +2483,6 @@
         "script_level.level_keys": [
           "OPD-K5-spritelab-2_2020"
         ],
-        "script_level.chapter": 112,
-        "script_level.position": 6,
         "lesson.key": "Sprite Lab",
         "lesson_group.key": "k5_diving_deeper_1",
         "script.name": "k5-onlinepd-2020"
@@ -2727,8 +2503,6 @@
         "script_level.level_keys": [
           "OPD-K5-spritelab-3_2020"
         ],
-        "script_level.chapter": 113,
-        "script_level.position": 7,
         "lesson.key": "Sprite Lab",
         "lesson_group.key": "k5_diving_deeper_1",
         "script.name": "k5-onlinepd-2020"
@@ -2749,8 +2523,6 @@
         "script_level.level_keys": [
           "OPD-K5-spritelab-4_2020"
         ],
-        "script_level.chapter": 114,
-        "script_level.position": 8,
         "lesson.key": "Sprite Lab",
         "lesson_group.key": "k5_diving_deeper_1",
         "script.name": "k5-onlinepd-2020"
@@ -2771,8 +2543,6 @@
         "script_level.level_keys": [
           "OPD-K5-spritelab-5-video_2020"
         ],
-        "script_level.chapter": 115,
-        "script_level.position": 9,
         "lesson.key": "Sprite Lab",
         "lesson_group.key": "k5_diving_deeper_1",
         "script.name": "k5-onlinepd-2020"
@@ -2793,8 +2563,6 @@
         "script_level.level_keys": [
           "OPD-K5-spritelab-6_2020"
         ],
-        "script_level.chapter": 116,
-        "script_level.position": 10,
         "lesson.key": "Sprite Lab",
         "lesson_group.key": "k5_diving_deeper_1",
         "script.name": "k5-onlinepd-2020"
@@ -2815,8 +2583,6 @@
         "script_level.level_keys": [
           "OPD-K5-spritelab-7_2020"
         ],
-        "script_level.chapter": 117,
-        "script_level.position": 11,
         "lesson.key": "Sprite Lab",
         "lesson_group.key": "k5_diving_deeper_1",
         "script.name": "k5-onlinepd-2020"
@@ -2837,8 +2603,6 @@
         "script_level.level_keys": [
           "OPD-K5 sprite lab free response_2020"
         ],
-        "script_level.chapter": 118,
-        "script_level.position": 12,
         "lesson.key": "Sprite Lab",
         "lesson_group.key": "k5_diving_deeper_1",
         "script.name": "k5-onlinepd-2020"
@@ -2859,8 +2623,6 @@
         "script_level.level_keys": [
           "OPD-K5 Reviewing Reflections_2020"
         ],
-        "script_level.chapter": 119,
-        "script_level.position": 1,
         "lesson.key": "Reviewing your reflections",
         "lesson_group.key": "k5_next_steps_1",
         "script.name": "k5-onlinepd-2020"
@@ -2881,8 +2643,6 @@
         "script_level.level_keys": [
           "OPD-K5 whats your plan_2020"
         ],
-        "script_level.chapter": 120,
-        "script_level.position": 2,
         "lesson.key": "Reviewing your reflections",
         "lesson_group.key": "k5_next_steps_1",
         "script.name": "k5-onlinepd-2020"
@@ -2903,8 +2663,6 @@
         "script_level.level_keys": [
           "OPD-K5 sequencing free response_2020"
         ],
-        "script_level.chapter": 121,
-        "script_level.position": 3,
         "lesson.key": "Reviewing your reflections",
         "lesson_group.key": "k5_next_steps_1",
         "script.name": "k5-onlinepd-2020"
@@ -2925,8 +2683,6 @@
         "script_level.level_keys": [
           "OPD-K5 loops free response_2020"
         ],
-        "script_level.chapter": 122,
-        "script_level.position": 4,
         "lesson.key": "Reviewing your reflections",
         "lesson_group.key": "k5_next_steps_1",
         "script.name": "k5-onlinepd-2020"
@@ -2947,8 +2703,6 @@
         "script_level.level_keys": [
           "OPD-K5 events free response_2020"
         ],
-        "script_level.chapter": 123,
-        "script_level.position": 5,
         "lesson.key": "Reviewing your reflections",
         "lesson_group.key": "k5_next_steps_1",
         "script.name": "k5-onlinepd-2020"
@@ -2969,8 +2723,6 @@
         "script_level.level_keys": [
           "OPD-K5 conditionals free response_2020"
         ],
-        "script_level.chapter": 124,
-        "script_level.position": 6,
         "lesson.key": "Reviewing your reflections",
         "lesson_group.key": "k5_next_steps_1",
         "script.name": "k5-onlinepd-2020"
@@ -2991,8 +2743,6 @@
         "script_level.level_keys": [
           "OPD-K5 functions free response_2020"
         ],
-        "script_level.chapter": 125,
-        "script_level.position": 7,
         "lesson.key": "Reviewing your reflections",
         "lesson_group.key": "k5_next_steps_1",
         "script.name": "k5-onlinepd-2020"
@@ -3013,8 +2763,6 @@
         "script_level.level_keys": [
           "OPD-K5 variables free response_2020"
         ],
-        "script_level.chapter": 126,
-        "script_level.position": 8,
         "lesson.key": "Reviewing your reflections",
         "lesson_group.key": "k5_next_steps_1",
         "script.name": "k5-onlinepd-2020"
@@ -3035,8 +2783,6 @@
         "script_level.level_keys": [
           "OPD-K5 for loops free response_2020"
         ],
-        "script_level.chapter": 127,
-        "script_level.position": 9,
         "lesson.key": "Reviewing your reflections",
         "lesson_group.key": "k5_next_steps_1",
         "script.name": "k5-onlinepd-2020"
@@ -3057,8 +2803,6 @@
         "script_level.level_keys": [
           "OPD-K5 sprite lab free response_2020"
         ],
-        "script_level.chapter": 128,
-        "script_level.position": 10,
         "lesson.key": "Reviewing your reflections",
         "lesson_group.key": "k5_next_steps_1",
         "script.name": "k5-onlinepd-2020"
@@ -3079,8 +2823,6 @@
         "script_level.level_keys": [
           "OPD-K5 projects free response_2020"
         ],
-        "script_level.chapter": 129,
-        "script_level.position": 11,
         "lesson.key": "Reviewing your reflections",
         "lesson_group.key": "k5_next_steps_1",
         "script.name": "k5-onlinepd-2020"
@@ -3101,8 +2843,6 @@
         "script_level.level_keys": [
           "OPD-K5 Stage10Start_copy_2020"
         ],
-        "script_level.chapter": 130,
-        "script_level.position": 1,
         "lesson.key": "Next steps",
         "lesson_group.key": "k5_next_steps_1",
         "script.name": "k5-onlinepd-2020"
@@ -3123,8 +2863,6 @@
         "script_level.level_keys": [
           "OPD-K5 Stage9Start_copy_2020"
         ],
-        "script_level.chapter": 131,
-        "script_level.position": 2,
         "lesson.key": "Next steps",
         "lesson_group.key": "k5_next_steps_1",
         "script.name": "k5-onlinepd-2020"
@@ -3145,8 +2883,6 @@
         "script_level.level_keys": [
           "OPD-K5 CS Courses_copy_2020"
         ],
-        "script_level.chapter": 132,
-        "script_level.position": 3,
         "lesson.key": "Next steps",
         "lesson_group.key": "k5_next_steps_1",
         "script.name": "k5-onlinepd-2020"
@@ -3167,8 +2903,6 @@
         "script_level.level_keys": [
           "OPD-K5 Assessment_copy_2020"
         ],
-        "script_level.chapter": 133,
-        "script_level.position": 4,
         "lesson.key": "Next steps",
         "lesson_group.key": "k5_next_steps_1",
         "script.name": "k5-onlinepd-2020"
@@ -3189,8 +2923,6 @@
         "script_level.level_keys": [
           "OPD-K5 Your Plan_copy_2020"
         ],
-        "script_level.chapter": 134,
-        "script_level.position": 5,
         "lesson.key": "Next steps",
         "lesson_group.key": "k5_next_steps_1",
         "script.name": "k5-onlinepd-2020"
@@ -3211,8 +2943,6 @@
         "script_level.level_keys": [
           "OPD-K5 Connect_copy_2020"
         ],
-        "script_level.chapter": 135,
-        "script_level.position": 6,
         "lesson.key": "Next steps",
         "lesson_group.key": "k5_next_steps_1",
         "script.name": "k5-onlinepd-2020"
@@ -3233,8 +2963,6 @@
         "script_level.level_keys": [
           "OPD-K5 Closing_2020"
         ],
-        "script_level.chapter": 136,
-        "script_level.position": 7,
         "lesson.key": "Next steps",
         "lesson_group.key": "k5_next_steps_1",
         "script.name": "k5-onlinepd-2020"
@@ -3251,8 +2979,6 @@
         "script_level.level_keys": [
           "OPD-K5 About_copy_2020"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Welcome to \"Teaching Computer Science Fundamentals\"",
         "lesson_group.key": "k5_getting_started_1",
         "script.name": "k5-onlinepd-2020"
@@ -3264,8 +2990,6 @@
         "script_level.level_keys": [
           "OPD-K5 WhatIsCS_2020"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Welcome to \"Teaching Computer Science Fundamentals\"",
         "lesson_group.key": "k5_getting_started_1",
         "script.name": "k5-onlinepd-2020"
@@ -3277,8 +3001,6 @@
         "script_level.level_keys": [
           "OPD-K5 Why teach CS_copy_2020"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "Welcome to \"Teaching Computer Science Fundamentals\"",
         "lesson_group.key": "k5_getting_started_1",
         "script.name": "k5-onlinepd-2020"
@@ -3290,8 +3012,6 @@
         "script_level.level_keys": [
           "OPD-K5 Outline_copy_2020"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "Welcome to \"Teaching Computer Science Fundamentals\"",
         "lesson_group.key": "k5_getting_started_1",
         "script.name": "k5-onlinepd-2020"
@@ -3303,8 +3023,6 @@
         "script_level.level_keys": [
           "OPD-K5 CS Tips_copy_2020"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 5,
         "lesson.key": "Welcome to \"Teaching Computer Science Fundamentals\"",
         "lesson_group.key": "k5_getting_started_1",
         "script.name": "k5-onlinepd-2020"
@@ -3316,8 +3034,6 @@
         "script_level.level_keys": [
           "OPD-K5 Participation_copy_2020"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 6,
         "lesson.key": "Welcome to \"Teaching Computer Science Fundamentals\"",
         "lesson_group.key": "k5_getting_started_1",
         "script.name": "k5-onlinepd-2020"
@@ -3329,8 +3045,6 @@
         "script_level.level_keys": [
           "OPD-K5 whats your plan_2020"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 7,
         "lesson.key": "Welcome to \"Teaching Computer Science Fundamentals\"",
         "lesson_group.key": "k5_getting_started_1",
         "script.name": "k5-onlinepd-2020"
@@ -3342,8 +3056,6 @@
         "script_level.level_keys": [
           "OPD-K5 CS Video_copy_2020"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 1,
         "lesson.key": "Understanding the Computer Science Fundamentals Courses",
         "lesson_group.key": "k5_getting_started_1",
         "script.name": "k5-onlinepd-2020"
@@ -3355,8 +3067,6 @@
         "script_level.level_keys": [
           "OPD-K5 Welcome 2_copy_2020"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 2,
         "lesson.key": "Understanding the Computer Science Fundamentals Courses",
         "lesson_group.key": "k5_getting_started_1",
         "script.name": "k5-onlinepd-2020"
@@ -3368,8 +3078,6 @@
         "script_level.level_keys": [
           "OPD-K5 role_of_teacher_2020"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 3,
         "lesson.key": "Understanding the Computer Science Fundamentals Courses",
         "lesson_group.key": "k5_getting_started_1",
         "script.name": "k5-onlinepd-2020"
@@ -3381,8 +3089,6 @@
         "script_level.level_keys": [
           "OPD-K5 types of lessons_2020"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 4,
         "lesson.key": "Understanding the Computer Science Fundamentals Courses",
         "lesson_group.key": "k5_getting_started_1",
         "script.name": "k5-onlinepd-2020"
@@ -3394,8 +3100,6 @@
         "script_level.level_keys": [
           "OPD-K5 lesson plans_2020"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 5,
         "lesson.key": "Understanding the Computer Science Fundamentals Courses",
         "lesson_group.key": "k5_getting_started_1",
         "script.name": "k5-onlinepd-2020"
@@ -3407,8 +3111,6 @@
         "script_level.level_keys": [
           "OPD-K5 Unplugged Video_copy_2020"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 6,
         "lesson.key": "Understanding the Computer Science Fundamentals Courses",
         "lesson_group.key": "k5_getting_started_1",
         "script.name": "k5-onlinepd-2020"
@@ -3420,8 +3122,6 @@
         "script_level.level_keys": [
           "OPD-K5 What is Mastery_copy_2020"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 7,
         "lesson.key": "Understanding the Computer Science Fundamentals Courses",
         "lesson_group.key": "k5_getting_started_1",
         "script.name": "k5-onlinepd-2020"
@@ -3433,8 +3133,6 @@
         "script_level.level_keys": [
           "OPD-K5 Stage2Go_copy_2020"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 8,
         "lesson.key": "Understanding the Computer Science Fundamentals Courses",
         "lesson_group.key": "k5_getting_started_1",
         "script.name": "k5-onlinepd-2020"
@@ -3446,8 +3144,6 @@
         "script_level.level_keys": [
           "OPD-K5 Stage3Start_copy_2020"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 1,
         "lesson.key": "Sequencing",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -3459,8 +3155,6 @@
         "script_level.level_keys": [
           "OPD-K5 sequencing introduced_2020"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 2,
         "lesson.key": "Sequencing",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -3472,8 +3166,6 @@
         "script_level.level_keys": [
           "OPD-K5 Stage3aGo_copy_2020"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 3,
         "lesson.key": "Sequencing",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -3485,8 +3177,6 @@
         "script_level.level_keys": [
           "OPD-K5 FirstProgram_2020"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 4,
         "lesson.key": "Sequencing",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -3498,8 +3188,6 @@
         "script_level.level_keys": [
           "courseA_maze_seq5_2020"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 5,
         "lesson.key": "Sequencing",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -3511,8 +3199,6 @@
         "script_level.level_keys": [
           "courseA_maze_seq6_2020"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 6,
         "lesson.key": "Sequencing",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -3524,8 +3210,6 @@
         "script_level.level_keys": [
           "courseA_maze_seq7_2020"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 7,
         "lesson.key": "Sequencing",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -3537,8 +3221,6 @@
         "script_level.level_keys": [
           "courseA_maze_seq8_2020"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 8,
         "lesson.key": "Sequencing",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -3550,8 +3232,6 @@
         "script_level.level_keys": [
           "courseA_maze_seq10_2020"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 9,
         "lesson.key": "Sequencing",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -3563,8 +3243,6 @@
         "script_level.level_keys": [
           "OPD-K5 using lesson plans_2020"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 10,
         "lesson.key": "Sequencing",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -3576,8 +3254,6 @@
         "script_level.level_keys": [
           "OPD-K5 lesson implementation planning_2020"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 11,
         "lesson.key": "Sequencing",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -3589,8 +3265,6 @@
         "script_level.level_keys": [
           "OPD-K5 sequencing free response_2020"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 12,
         "lesson.key": "Sequencing",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -3602,8 +3276,6 @@
         "script_level.level_keys": [
           "OPD-K5 Stage4Start_copy_2020"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 1,
         "lesson.key": "Loops",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -3615,8 +3287,6 @@
         "script_level.level_keys": [
           "OPD-K5 loops introduced_2020"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 2,
         "lesson.key": "Loops",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -3628,8 +3298,6 @@
         "script_level.level_keys": [
           "OPD-K5 Stage4Go_copy_2020"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 3,
         "lesson.key": "Loops",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -3641,8 +3309,6 @@
         "script_level.level_keys": [
           "OPD-K5 RepeatBlock_2020"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 4,
         "lesson.key": "Loops",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -3654,8 +3320,6 @@
         "script_level.level_keys": [
           "courseC_starWars_loops2_2020"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 5,
         "lesson.key": "Loops",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -3667,8 +3331,6 @@
         "script_level.level_keys": [
           "courseC_starWars_loops4_2020"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 6,
         "lesson.key": "Loops",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -3680,8 +3342,6 @@
         "script_level.level_keys": [
           "courseC_starWars_loops5_2020"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 7,
         "lesson.key": "Loops",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -3693,8 +3353,6 @@
         "script_level.level_keys": [
           "courseC_starWars_loops6_2020"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 8,
         "lesson.key": "Loops",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -3706,8 +3364,6 @@
         "script_level.level_keys": [
           "courseC_starWars_loops7_2020"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 9,
         "lesson.key": "Loops",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -3719,8 +3375,6 @@
         "script_level.level_keys": [
           "courseC_starWars_loops8_2020"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 10,
         "lesson.key": "Loops",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -3732,8 +3386,6 @@
         "script_level.level_keys": [
           "OPD-K5 Pair_copy_2020"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 11,
         "lesson.key": "Loops",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -3745,8 +3397,6 @@
         "script_level.level_keys": [
           "OPD-K5 loops free response_2020"
         ],
-        "script_level.chapter": 39,
-        "script_level.position": 12,
         "lesson.key": "Loops",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -3758,8 +3408,6 @@
         "script_level.level_keys": [
           "OPD-K5 Stage7Start_copy_2020"
         ],
-        "script_level.chapter": 40,
-        "script_level.position": 1,
         "lesson.key": "Events",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -3771,8 +3419,6 @@
         "script_level.level_keys": [
           "OPD-K5 events introduced_2020"
         ],
-        "script_level.chapter": 41,
-        "script_level.position": 2,
         "lesson.key": "Events",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -3784,8 +3430,6 @@
         "script_level.level_keys": [
           "OPD-K5 Stage7Go_copy_2020"
         ],
-        "script_level.chapter": 42,
-        "script_level.position": 3,
         "lesson.key": "Events",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -3797,8 +3441,6 @@
         "script_level.level_keys": [
           "OPD-K5-events-1-video_2020"
         ],
-        "script_level.chapter": 43,
-        "script_level.position": 4,
         "lesson.key": "Events",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -3810,8 +3452,6 @@
         "script_level.level_keys": [
           "OPD-K5-events-2_2020"
         ],
-        "script_level.chapter": 44,
-        "script_level.position": 5,
         "lesson.key": "Events",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -3823,8 +3463,6 @@
         "script_level.level_keys": [
           "OPD-K5-events-3_2020"
         ],
-        "script_level.chapter": 45,
-        "script_level.position": 6,
         "lesson.key": "Events",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -3836,8 +3474,6 @@
         "script_level.level_keys": [
           "OPD-K5-events-4_2020"
         ],
-        "script_level.chapter": 46,
-        "script_level.position": 7,
         "lesson.key": "Events",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -3849,8 +3485,6 @@
         "script_level.level_keys": [
           "OPD-K5-events-5_2020"
         ],
-        "script_level.chapter": 47,
-        "script_level.position": 8,
         "lesson.key": "Events",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -3862,8 +3496,6 @@
         "script_level.level_keys": [
           "OPD-K5-events-6_2020"
         ],
-        "script_level.chapter": 48,
-        "script_level.position": 9,
         "lesson.key": "Events",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -3875,8 +3507,6 @@
         "script_level.level_keys": [
           "OPD-K5 debugging_2020"
         ],
-        "script_level.chapter": 49,
-        "script_level.position": 10,
         "lesson.key": "Events",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -3888,8 +3518,6 @@
         "script_level.level_keys": [
           "OPD-K5 events free response_2020"
         ],
-        "script_level.chapter": 50,
-        "script_level.position": 11,
         "lesson.key": "Events",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -3901,8 +3529,6 @@
         "script_level.level_keys": [
           "OPD-K5 Stage5Start_copy_2020"
         ],
-        "script_level.chapter": 51,
-        "script_level.position": 1,
         "lesson.key": "Conditionals",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -3914,8 +3540,6 @@
         "script_level.level_keys": [
           "OPD-K5 conditionals introduced_2020"
         ],
-        "script_level.chapter": 52,
-        "script_level.position": 2,
         "lesson.key": "Conditionals",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -3927,8 +3551,6 @@
         "script_level.level_keys": [
           "OPD-K5 Stage5Go_copy_2020"
         ],
-        "script_level.chapter": 53,
-        "script_level.position": 3,
         "lesson.key": "Conditionals",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -3940,8 +3562,6 @@
         "script_level.level_keys": [
           "courseD_bee_conditionalsVid1_2020"
         ],
-        "script_level.chapter": 54,
-        "script_level.position": 4,
         "lesson.key": "Conditionals",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -3953,8 +3573,6 @@
         "script_level.level_keys": [
           "courseD_bee_conditionals1_predict1_2020"
         ],
-        "script_level.chapter": 55,
-        "script_level.position": 5,
         "lesson.key": "Conditionals",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -3966,8 +3584,6 @@
         "script_level.level_keys": [
           "courseD_bee_conditionals2_2020"
         ],
-        "script_level.chapter": 56,
-        "script_level.position": 6,
         "lesson.key": "Conditionals",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -3979,8 +3595,6 @@
         "script_level.level_keys": [
           "courseD_bee_conditionals3_2020"
         ],
-        "script_level.chapter": 57,
-        "script_level.position": 7,
         "lesson.key": "Conditionals",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -3992,8 +3606,6 @@
         "script_level.level_keys": [
           "courseD_bee_conditionals4_2020"
         ],
-        "script_level.chapter": 58,
-        "script_level.position": 8,
         "lesson.key": "Conditionals",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -4005,8 +3617,6 @@
         "script_level.level_keys": [
           "courseD_bee_conditionals5_2020"
         ],
-        "script_level.chapter": 59,
-        "script_level.position": 9,
         "lesson.key": "Conditionals",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -4018,8 +3628,6 @@
         "script_level.level_keys": [
           "OPD-K5 journaling_2020"
         ],
-        "script_level.chapter": 60,
-        "script_level.position": 10,
         "lesson.key": "Conditionals",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -4031,8 +3639,6 @@
         "script_level.level_keys": [
           "OPD-K5 conditionals free response_2020"
         ],
-        "script_level.chapter": 61,
-        "script_level.position": 11,
         "lesson.key": "Conditionals",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -4044,8 +3650,6 @@
         "script_level.level_keys": [
           "OPD-K5 project_2020"
         ],
-        "script_level.chapter": 62,
-        "script_level.position": 1,
         "lesson.key": "End of Course projects",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -4057,8 +3661,6 @@
         "script_level.level_keys": [
           "OPD-K5 projects introduction_2020"
         ],
-        "script_level.chapter": 63,
-        "script_level.position": 2,
         "lesson.key": "End of Course projects",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -4070,8 +3672,6 @@
         "script_level.level_keys": [
           "OPD-K5-projects-1_2020"
         ],
-        "script_level.chapter": 64,
-        "script_level.position": 3,
         "lesson.key": "End of Course projects",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -4083,8 +3683,6 @@
         "script_level.level_keys": [
           "OPD-K5-projects-2_2020"
         ],
-        "script_level.chapter": 65,
-        "script_level.position": 4,
         "lesson.key": "End of Course projects",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -4096,8 +3694,6 @@
         "script_level.level_keys": [
           "OPD-K5-projects-3_2020"
         ],
-        "script_level.chapter": 66,
-        "script_level.position": 5,
         "lesson.key": "End of Course projects",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -4109,8 +3705,6 @@
         "script_level.level_keys": [
           "OPD-K5-projects-4_2020"
         ],
-        "script_level.chapter": 67,
-        "script_level.position": 6,
         "lesson.key": "End of Course projects",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -4122,8 +3716,6 @@
         "script_level.level_keys": [
           "OPD-K5-projects-5_2020"
         ],
-        "script_level.chapter": 68,
-        "script_level.position": 7,
         "lesson.key": "End of Course projects",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -4135,8 +3727,6 @@
         "script_level.level_keys": [
           "OPD-K5-projects-6_2020"
         ],
-        "script_level.chapter": 69,
-        "script_level.position": 8,
         "lesson.key": "End of Course projects",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -4148,8 +3738,6 @@
         "script_level.level_keys": [
           "OPD-K5-projects-7_2020"
         ],
-        "script_level.chapter": 70,
-        "script_level.position": 9,
         "lesson.key": "End of Course projects",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -4161,8 +3749,6 @@
         "script_level.level_keys": [
           "OPD-K5 projects free response_2020"
         ],
-        "script_level.chapter": 71,
-        "script_level.position": 10,
         "lesson.key": "End of Course projects",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -4174,8 +3760,6 @@
         "script_level.level_keys": [
           "OPD-K5 where to next_2020"
         ],
-        "script_level.chapter": 72,
-        "script_level.position": 11,
         "lesson.key": "End of Course projects",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2020"
@@ -4187,8 +3771,6 @@
         "script_level.level_keys": [
           "OPD-K5 diving deeper intro_2020"
         ],
-        "script_level.chapter": 73,
-        "script_level.position": 1,
         "lesson.key": "Functions",
         "lesson_group.key": "k5_diving_deeper_1",
         "script.name": "k5-onlinepd-2020"
@@ -4200,8 +3782,6 @@
         "script_level.level_keys": [
           "OPD-K5 Stage6Start_copy_2020"
         ],
-        "script_level.chapter": 74,
-        "script_level.position": 2,
         "lesson.key": "Functions",
         "lesson_group.key": "k5_diving_deeper_1",
         "script.name": "k5-onlinepd-2020"
@@ -4213,8 +3793,6 @@
         "script_level.level_keys": [
           "OPD-K5 functions introduced_2020"
         ],
-        "script_level.chapter": 75,
-        "script_level.position": 3,
         "lesson.key": "Functions",
         "lesson_group.key": "k5_diving_deeper_1",
         "script.name": "k5-onlinepd-2020"
@@ -4226,8 +3804,6 @@
         "script_level.level_keys": [
           "OPD-K5 Stage6Go_copy_2020"
         ],
-        "script_level.chapter": 76,
-        "script_level.position": 4,
         "lesson.key": "Functions",
         "lesson_group.key": "k5_diving_deeper_1",
         "script.name": "k5-onlinepd-2020"
@@ -4239,8 +3815,6 @@
         "script_level.level_keys": [
           "courseE_artist_functions1_2020"
         ],
-        "script_level.chapter": 77,
-        "script_level.position": 5,
         "lesson.key": "Functions",
         "lesson_group.key": "k5_diving_deeper_1",
         "script.name": "k5-onlinepd-2020"
@@ -4252,8 +3826,6 @@
         "script_level.level_keys": [
           "courseE_artist_functions_predict1_2020"
         ],
-        "script_level.chapter": 78,
-        "script_level.position": 6,
         "lesson.key": "Functions",
         "lesson_group.key": "k5_diving_deeper_1",
         "script.name": "k5-onlinepd-2020"
@@ -4265,8 +3837,6 @@
         "script_level.level_keys": [
           "courseE_video_functionsArtist_2020"
         ],
-        "script_level.chapter": 79,
-        "script_level.position": 7,
         "lesson.key": "Functions",
         "lesson_group.key": "k5_diving_deeper_1",
         "script.name": "k5-onlinepd-2020"
@@ -4278,8 +3848,6 @@
         "script_level.level_keys": [
           "courseE_artist_functions2_2020"
         ],
-        "script_level.chapter": 80,
-        "script_level.position": 8,
         "lesson.key": "Functions",
         "lesson_group.key": "k5_diving_deeper_1",
         "script.name": "k5-onlinepd-2020"
@@ -4291,8 +3859,6 @@
         "script_level.level_keys": [
           "courseE_artist_functions3_2020"
         ],
-        "script_level.chapter": 81,
-        "script_level.position": 9,
         "lesson.key": "Functions",
         "lesson_group.key": "k5_diving_deeper_1",
         "script.name": "k5-onlinepd-2020"
@@ -4304,8 +3870,6 @@
         "script_level.level_keys": [
           "courseE_artist_functions4_2020"
         ],
-        "script_level.chapter": 82,
-        "script_level.position": 10,
         "lesson.key": "Functions",
         "lesson_group.key": "k5_diving_deeper_1",
         "script.name": "k5-onlinepd-2020"
@@ -4317,8 +3881,6 @@
         "script_level.level_keys": [
           "courseE_artist_functions5_2020"
         ],
-        "script_level.chapter": 83,
-        "script_level.position": 11,
         "lesson.key": "Functions",
         "lesson_group.key": "k5_diving_deeper_1",
         "script.name": "k5-onlinepd-2020"
@@ -4330,8 +3892,6 @@
         "script_level.level_keys": [
           "OPD-K5 functions free response_2020"
         ],
-        "script_level.chapter": 84,
-        "script_level.position": 12,
         "lesson.key": "Functions",
         "lesson_group.key": "k5_diving_deeper_1",
         "script.name": "k5-onlinepd-2020"
@@ -4343,8 +3903,6 @@
         "script_level.level_keys": [
           "OPD-K5 variables_2020"
         ],
-        "script_level.chapter": 85,
-        "script_level.position": 1,
         "lesson.key": "Variables",
         "lesson_group.key": "k5_diving_deeper_1",
         "script.name": "k5-onlinepd-2020"
@@ -4356,8 +3914,6 @@
         "script_level.level_keys": [
           "OPD-K5 variables introduction_2020"
         ],
-        "script_level.chapter": 86,
-        "script_level.position": 2,
         "lesson.key": "Variables",
         "lesson_group.key": "k5_diving_deeper_1",
         "script.name": "k5-onlinepd-2020"
@@ -4369,8 +3925,6 @@
         "script_level.level_keys": [
           "OPD-K5 variables unplugged_2020"
         ],
-        "script_level.chapter": 87,
-        "script_level.position": 3,
         "lesson.key": "Variables",
         "lesson_group.key": "k5_diving_deeper_1",
         "script.name": "k5-onlinepd-2020"
@@ -4382,8 +3936,6 @@
         "script_level.level_keys": [
           "OPD-K5-variables-1_2020"
         ],
-        "script_level.chapter": 88,
-        "script_level.position": 4,
         "lesson.key": "Variables",
         "lesson_group.key": "k5_diving_deeper_1",
         "script.name": "k5-onlinepd-2020"
@@ -4395,8 +3947,6 @@
         "script_level.level_keys": [
           "OPD-K5-variables-2_2020"
         ],
-        "script_level.chapter": 89,
-        "script_level.position": 5,
         "lesson.key": "Variables",
         "lesson_group.key": "k5_diving_deeper_1",
         "script.name": "k5-onlinepd-2020"
@@ -4408,8 +3958,6 @@
         "script_level.level_keys": [
           "OPD-K5-variables-3-video_2020"
         ],
-        "script_level.chapter": 90,
-        "script_level.position": 6,
         "lesson.key": "Variables",
         "lesson_group.key": "k5_diving_deeper_1",
         "script.name": "k5-onlinepd-2020"
@@ -4421,8 +3969,6 @@
         "script_level.level_keys": [
           "OPD-K5-variables-4_2020"
         ],
-        "script_level.chapter": 91,
-        "script_level.position": 7,
         "lesson.key": "Variables",
         "lesson_group.key": "k5_diving_deeper_1",
         "script.name": "k5-onlinepd-2020"
@@ -4434,8 +3980,6 @@
         "script_level.level_keys": [
           "OPD-K5-variables-5_2020"
         ],
-        "script_level.chapter": 92,
-        "script_level.position": 8,
         "lesson.key": "Variables",
         "lesson_group.key": "k5_diving_deeper_1",
         "script.name": "k5-onlinepd-2020"
@@ -4447,8 +3991,6 @@
         "script_level.level_keys": [
           "OPD-K5-variables-6_2020"
         ],
-        "script_level.chapter": 93,
-        "script_level.position": 9,
         "lesson.key": "Variables",
         "lesson_group.key": "k5_diving_deeper_1",
         "script.name": "k5-onlinepd-2020"
@@ -4460,8 +4002,6 @@
         "script_level.level_keys": [
           "OPD-K5-variables-7_2020"
         ],
-        "script_level.chapter": 94,
-        "script_level.position": 10,
         "lesson.key": "Variables",
         "lesson_group.key": "k5_diving_deeper_1",
         "script.name": "k5-onlinepd-2020"
@@ -4473,8 +4013,6 @@
         "script_level.level_keys": [
           "OPD-K5 variables free response_2020"
         ],
-        "script_level.chapter": 95,
-        "script_level.position": 11,
         "lesson.key": "Variables",
         "lesson_group.key": "k5_diving_deeper_1",
         "script.name": "k5-onlinepd-2020"
@@ -4486,8 +4024,6 @@
         "script_level.level_keys": [
           "OPD-K5 for loops intro_2020"
         ],
-        "script_level.chapter": 96,
-        "script_level.position": 1,
         "lesson.key": "For Loops",
         "lesson_group.key": "k5_diving_deeper_1",
         "script.name": "k5-onlinepd-2020"
@@ -4499,8 +4035,6 @@
         "script_level.level_keys": [
           "OPD-K5 for loops introduction_2020"
         ],
-        "script_level.chapter": 97,
-        "script_level.position": 2,
         "lesson.key": "For Loops",
         "lesson_group.key": "k5_diving_deeper_1",
         "script.name": "k5-onlinepd-2020"
@@ -4512,8 +4046,6 @@
         "script_level.level_keys": [
           "OPD-K5 for loops_2020"
         ],
-        "script_level.chapter": 98,
-        "script_level.position": 3,
         "lesson.key": "For Loops",
         "lesson_group.key": "k5_diving_deeper_1",
         "script.name": "k5-onlinepd-2020"
@@ -4525,8 +4057,6 @@
         "script_level.level_keys": [
           "OPD-K5-forloops-1_2020"
         ],
-        "script_level.chapter": 99,
-        "script_level.position": 4,
         "lesson.key": "For Loops",
         "lesson_group.key": "k5_diving_deeper_1",
         "script.name": "k5-onlinepd-2020"
@@ -4538,8 +4068,6 @@
         "script_level.level_keys": [
           "OPD-K5-forloops-2_2020"
         ],
-        "script_level.chapter": 100,
-        "script_level.position": 5,
         "lesson.key": "For Loops",
         "lesson_group.key": "k5_diving_deeper_1",
         "script.name": "k5-onlinepd-2020"
@@ -4551,8 +4079,6 @@
         "script_level.level_keys": [
           "OPD-K5-forloops-3-video_2020"
         ],
-        "script_level.chapter": 101,
-        "script_level.position": 6,
         "lesson.key": "For Loops",
         "lesson_group.key": "k5_diving_deeper_1",
         "script.name": "k5-onlinepd-2020"
@@ -4564,8 +4090,6 @@
         "script_level.level_keys": [
           "OPD-K5-forloops-4_2020"
         ],
-        "script_level.chapter": 102,
-        "script_level.position": 7,
         "lesson.key": "For Loops",
         "lesson_group.key": "k5_diving_deeper_1",
         "script.name": "k5-onlinepd-2020"
@@ -4577,8 +4101,6 @@
         "script_level.level_keys": [
           "OPD-K5-forloops-5_2020"
         ],
-        "script_level.chapter": 103,
-        "script_level.position": 8,
         "lesson.key": "For Loops",
         "lesson_group.key": "k5_diving_deeper_1",
         "script.name": "k5-onlinepd-2020"
@@ -4590,8 +4112,6 @@
         "script_level.level_keys": [
           "OPD-K5-forloops-6_2020"
         ],
-        "script_level.chapter": 104,
-        "script_level.position": 9,
         "lesson.key": "For Loops",
         "lesson_group.key": "k5_diving_deeper_1",
         "script.name": "k5-onlinepd-2020"
@@ -4603,8 +4123,6 @@
         "script_level.level_keys": [
           "OPD-K5-forloops-7_2020"
         ],
-        "script_level.chapter": 105,
-        "script_level.position": 10,
         "lesson.key": "For Loops",
         "lesson_group.key": "k5_diving_deeper_1",
         "script.name": "k5-onlinepd-2020"
@@ -4616,8 +4134,6 @@
         "script_level.level_keys": [
           "OPD-K5 for loops free response_2020"
         ],
-        "script_level.chapter": 106,
-        "script_level.position": 11,
         "lesson.key": "For Loops",
         "lesson_group.key": "k5_diving_deeper_1",
         "script.name": "k5-onlinepd-2020"
@@ -4629,8 +4145,6 @@
         "script_level.level_keys": [
           "OPD-K5 sprite lab_2020"
         ],
-        "script_level.chapter": 107,
-        "script_level.position": 1,
         "lesson.key": "Sprite Lab",
         "lesson_group.key": "k5_diving_deeper_1",
         "script.name": "k5-onlinepd-2020"
@@ -4642,8 +4156,6 @@
         "script_level.level_keys": [
           "OPD-K5 sprite lab introduction_2020"
         ],
-        "script_level.chapter": 108,
-        "script_level.position": 2,
         "lesson.key": "Sprite Lab",
         "lesson_group.key": "k5_diving_deeper_1",
         "script.name": "k5-onlinepd-2020"
@@ -4655,8 +4167,6 @@
         "script_level.level_keys": [
           "OPD-K5 sprite lab unplugged_2020"
         ],
-        "script_level.chapter": 109,
-        "script_level.position": 3,
         "lesson.key": "Sprite Lab",
         "lesson_group.key": "k5_diving_deeper_1",
         "script.name": "k5-onlinepd-2020"
@@ -4668,8 +4178,6 @@
         "script_level.level_keys": [
           "OPD-K5 sprite lab video_2020"
         ],
-        "script_level.chapter": 110,
-        "script_level.position": 4,
         "lesson.key": "Sprite Lab",
         "lesson_group.key": "k5_diving_deeper_1",
         "script.name": "k5-onlinepd-2020"
@@ -4681,8 +4189,6 @@
         "script_level.level_keys": [
           "OPD-K5-spritelab-1_2020"
         ],
-        "script_level.chapter": 111,
-        "script_level.position": 5,
         "lesson.key": "Sprite Lab",
         "lesson_group.key": "k5_diving_deeper_1",
         "script.name": "k5-onlinepd-2020"
@@ -4694,8 +4200,6 @@
         "script_level.level_keys": [
           "OPD-K5-spritelab-2_2020"
         ],
-        "script_level.chapter": 112,
-        "script_level.position": 6,
         "lesson.key": "Sprite Lab",
         "lesson_group.key": "k5_diving_deeper_1",
         "script.name": "k5-onlinepd-2020"
@@ -4707,8 +4211,6 @@
         "script_level.level_keys": [
           "OPD-K5-spritelab-3_2020"
         ],
-        "script_level.chapter": 113,
-        "script_level.position": 7,
         "lesson.key": "Sprite Lab",
         "lesson_group.key": "k5_diving_deeper_1",
         "script.name": "k5-onlinepd-2020"
@@ -4720,8 +4222,6 @@
         "script_level.level_keys": [
           "OPD-K5-spritelab-4_2020"
         ],
-        "script_level.chapter": 114,
-        "script_level.position": 8,
         "lesson.key": "Sprite Lab",
         "lesson_group.key": "k5_diving_deeper_1",
         "script.name": "k5-onlinepd-2020"
@@ -4733,8 +4233,6 @@
         "script_level.level_keys": [
           "OPD-K5-spritelab-5-video_2020"
         ],
-        "script_level.chapter": 115,
-        "script_level.position": 9,
         "lesson.key": "Sprite Lab",
         "lesson_group.key": "k5_diving_deeper_1",
         "script.name": "k5-onlinepd-2020"
@@ -4746,8 +4244,6 @@
         "script_level.level_keys": [
           "OPD-K5-spritelab-6_2020"
         ],
-        "script_level.chapter": 116,
-        "script_level.position": 10,
         "lesson.key": "Sprite Lab",
         "lesson_group.key": "k5_diving_deeper_1",
         "script.name": "k5-onlinepd-2020"
@@ -4759,8 +4255,6 @@
         "script_level.level_keys": [
           "OPD-K5-spritelab-7_2020"
         ],
-        "script_level.chapter": 117,
-        "script_level.position": 11,
         "lesson.key": "Sprite Lab",
         "lesson_group.key": "k5_diving_deeper_1",
         "script.name": "k5-onlinepd-2020"
@@ -4772,8 +4266,6 @@
         "script_level.level_keys": [
           "OPD-K5 sprite lab free response_2020"
         ],
-        "script_level.chapter": 118,
-        "script_level.position": 12,
         "lesson.key": "Sprite Lab",
         "lesson_group.key": "k5_diving_deeper_1",
         "script.name": "k5-onlinepd-2020"
@@ -4785,8 +4277,6 @@
         "script_level.level_keys": [
           "OPD-K5 Reviewing Reflections_2020"
         ],
-        "script_level.chapter": 119,
-        "script_level.position": 1,
         "lesson.key": "Reviewing your reflections",
         "lesson_group.key": "k5_next_steps_1",
         "script.name": "k5-onlinepd-2020"
@@ -4798,8 +4288,6 @@
         "script_level.level_keys": [
           "OPD-K5 whats your plan_2020"
         ],
-        "script_level.chapter": 120,
-        "script_level.position": 2,
         "lesson.key": "Reviewing your reflections",
         "lesson_group.key": "k5_next_steps_1",
         "script.name": "k5-onlinepd-2020"
@@ -4811,8 +4299,6 @@
         "script_level.level_keys": [
           "OPD-K5 sequencing free response_2020"
         ],
-        "script_level.chapter": 121,
-        "script_level.position": 3,
         "lesson.key": "Reviewing your reflections",
         "lesson_group.key": "k5_next_steps_1",
         "script.name": "k5-onlinepd-2020"
@@ -4824,8 +4310,6 @@
         "script_level.level_keys": [
           "OPD-K5 loops free response_2020"
         ],
-        "script_level.chapter": 122,
-        "script_level.position": 4,
         "lesson.key": "Reviewing your reflections",
         "lesson_group.key": "k5_next_steps_1",
         "script.name": "k5-onlinepd-2020"
@@ -4837,8 +4321,6 @@
         "script_level.level_keys": [
           "OPD-K5 events free response_2020"
         ],
-        "script_level.chapter": 123,
-        "script_level.position": 5,
         "lesson.key": "Reviewing your reflections",
         "lesson_group.key": "k5_next_steps_1",
         "script.name": "k5-onlinepd-2020"
@@ -4850,8 +4332,6 @@
         "script_level.level_keys": [
           "OPD-K5 conditionals free response_2020"
         ],
-        "script_level.chapter": 124,
-        "script_level.position": 6,
         "lesson.key": "Reviewing your reflections",
         "lesson_group.key": "k5_next_steps_1",
         "script.name": "k5-onlinepd-2020"
@@ -4863,8 +4343,6 @@
         "script_level.level_keys": [
           "OPD-K5 functions free response_2020"
         ],
-        "script_level.chapter": 125,
-        "script_level.position": 7,
         "lesson.key": "Reviewing your reflections",
         "lesson_group.key": "k5_next_steps_1",
         "script.name": "k5-onlinepd-2020"
@@ -4876,8 +4354,6 @@
         "script_level.level_keys": [
           "OPD-K5 variables free response_2020"
         ],
-        "script_level.chapter": 126,
-        "script_level.position": 8,
         "lesson.key": "Reviewing your reflections",
         "lesson_group.key": "k5_next_steps_1",
         "script.name": "k5-onlinepd-2020"
@@ -4889,8 +4365,6 @@
         "script_level.level_keys": [
           "OPD-K5 for loops free response_2020"
         ],
-        "script_level.chapter": 127,
-        "script_level.position": 9,
         "lesson.key": "Reviewing your reflections",
         "lesson_group.key": "k5_next_steps_1",
         "script.name": "k5-onlinepd-2020"
@@ -4902,8 +4376,6 @@
         "script_level.level_keys": [
           "OPD-K5 sprite lab free response_2020"
         ],
-        "script_level.chapter": 128,
-        "script_level.position": 10,
         "lesson.key": "Reviewing your reflections",
         "lesson_group.key": "k5_next_steps_1",
         "script.name": "k5-onlinepd-2020"
@@ -4915,8 +4387,6 @@
         "script_level.level_keys": [
           "OPD-K5 projects free response_2020"
         ],
-        "script_level.chapter": 129,
-        "script_level.position": 11,
         "lesson.key": "Reviewing your reflections",
         "lesson_group.key": "k5_next_steps_1",
         "script.name": "k5-onlinepd-2020"
@@ -4928,8 +4398,6 @@
         "script_level.level_keys": [
           "OPD-K5 Stage10Start_copy_2020"
         ],
-        "script_level.chapter": 130,
-        "script_level.position": 1,
         "lesson.key": "Next steps",
         "lesson_group.key": "k5_next_steps_1",
         "script.name": "k5-onlinepd-2020"
@@ -4941,8 +4409,6 @@
         "script_level.level_keys": [
           "OPD-K5 Stage9Start_copy_2020"
         ],
-        "script_level.chapter": 131,
-        "script_level.position": 2,
         "lesson.key": "Next steps",
         "lesson_group.key": "k5_next_steps_1",
         "script.name": "k5-onlinepd-2020"
@@ -4954,8 +4420,6 @@
         "script_level.level_keys": [
           "OPD-K5 CS Courses_copy_2020"
         ],
-        "script_level.chapter": 132,
-        "script_level.position": 3,
         "lesson.key": "Next steps",
         "lesson_group.key": "k5_next_steps_1",
         "script.name": "k5-onlinepd-2020"
@@ -4967,8 +4431,6 @@
         "script_level.level_keys": [
           "OPD-K5 Assessment_copy_2020"
         ],
-        "script_level.chapter": 133,
-        "script_level.position": 4,
         "lesson.key": "Next steps",
         "lesson_group.key": "k5_next_steps_1",
         "script.name": "k5-onlinepd-2020"
@@ -4980,8 +4442,6 @@
         "script_level.level_keys": [
           "OPD-K5 Your Plan_copy_2020"
         ],
-        "script_level.chapter": 134,
-        "script_level.position": 5,
         "lesson.key": "Next steps",
         "lesson_group.key": "k5_next_steps_1",
         "script.name": "k5-onlinepd-2020"
@@ -4993,8 +4453,6 @@
         "script_level.level_keys": [
           "OPD-K5 Connect_copy_2020"
         ],
-        "script_level.chapter": 135,
-        "script_level.position": 6,
         "lesson.key": "Next steps",
         "lesson_group.key": "k5_next_steps_1",
         "script.name": "k5-onlinepd-2020"
@@ -5006,8 +4464,6 @@
         "script_level.level_keys": [
           "OPD-K5 Closing_2020"
         ],
-        "script_level.chapter": 136,
-        "script_level.position": 7,
         "lesson.key": "Next steps",
         "lesson_group.key": "k5_next_steps_1",
         "script.name": "k5-onlinepd-2020"

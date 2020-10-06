@@ -126,8 +126,6 @@
         "script_level.level_keys": [
           "ECS Phase 3 Unit4 Welcome"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
         "script.name": "ecs-unit4"
@@ -148,8 +146,6 @@
         "script_level.level_keys": [
           "ECS Phase 3 Unit 4 Overview"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
         "script.name": "ecs-unit4"
@@ -170,8 +166,6 @@
         "script_level.level_keys": [
           "PDECS tour"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
         "script.name": "ecs-unit4"
@@ -192,8 +186,6 @@
         "script_level.level_keys": [
           "PLC- check your progress"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
         "script.name": "ecs-unit4"
@@ -214,8 +206,6 @@
         "script_level.level_keys": [
           "ECSPD Unit 4 Outline"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 5,
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
         "script.name": "ecs-unit4"
@@ -236,8 +226,6 @@
         "script_level.level_keys": [
           "ECSPD P3 Plan"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 6,
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
         "script.name": "ecs-unit4"
@@ -258,8 +246,6 @@
         "script_level.level_keys": [
           "ECSPD Unit4 Connections"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 1,
         "lesson.key": "Intro to Unit 4",
         "lesson_group.key": "",
         "script.name": "ecs-unit4"
@@ -280,8 +266,6 @@
         "script_level.level_keys": [
           "ECSPD Unit 4 Lesson Overview"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 2,
         "lesson.key": "Intro to Unit 4",
         "lesson_group.key": "",
         "script.name": "ecs-unit4"
@@ -302,8 +286,6 @@
         "script_level.level_keys": [
           "Forum-ECSPD-Unit 4-Teaching Practice"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 1,
         "lesson.key": "Teaching Strategies",
         "lesson_group.key": "",
         "script.name": "ecs-unit4"
@@ -324,8 +306,6 @@
         "script_level.level_keys": [
           "ECSPD Unit 4 Manage"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 2,
         "lesson.key": "Teaching Strategies",
         "lesson_group.key": "",
         "script.name": "ecs-unit4"
@@ -346,8 +326,6 @@
         "script_level.level_keys": [
           "ECSPD Phase 3 - Unit 4 - Teaching Practice"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 3,
         "lesson.key": "Teaching Strategies",
         "lesson_group.key": "",
         "script.name": "ecs-unit4"
@@ -368,8 +346,6 @@
         "script_level.level_keys": [
           "ECSPD scratch"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 4,
         "lesson.key": "Teaching Strategies",
         "lesson_group.key": "",
         "script.name": "ecs-unit4"
@@ -390,8 +366,6 @@
         "script_level.level_keys": [
           "ECSPD Unit 4 Strategy Review"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 5,
         "lesson.key": "Teaching Strategies",
         "lesson_group.key": "",
         "script.name": "ecs-unit4"
@@ -412,8 +386,6 @@
         "script_level.level_keys": [
           "ECSPD strategies"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 6,
         "lesson.key": "Teaching Strategies",
         "lesson_group.key": "",
         "script.name": "ecs-unit4"
@@ -434,8 +406,6 @@
         "script_level.level_keys": [
           "ECSPD U4 D 1 Intro"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 1,
         "lesson.key": "Unit 4 Day-by-Day",
         "lesson_group.key": "",
         "script.name": "ecs-unit4"
@@ -456,8 +426,6 @@
         "script_level.level_keys": [
           "ECSPD U4 D 2-3 Intro"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 2,
         "lesson.key": "Unit 4 Day-by-Day",
         "lesson_group.key": "",
         "script.name": "ecs-unit4"
@@ -478,8 +446,6 @@
         "script_level.level_keys": [
           "ECSPD U4 D 4 Intro"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 3,
         "lesson.key": "Unit 4 Day-by-Day",
         "lesson_group.key": "",
         "script.name": "ecs-unit4"
@@ -500,8 +466,6 @@
         "script_level.level_keys": [
           "ECSPD U4 D 5-6 Intro"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 4,
         "lesson.key": "Unit 4 Day-by-Day",
         "lesson_group.key": "",
         "script.name": "ecs-unit4"
@@ -522,8 +486,6 @@
         "script_level.level_keys": [
           "ECSPD U4 D 7-8 Intro"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 5,
         "lesson.key": "Unit 4 Day-by-Day",
         "lesson_group.key": "",
         "script.name": "ecs-unit4"
@@ -544,8 +506,6 @@
         "script_level.level_keys": [
           "ECSPD U4 D 9 Intro"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 6,
         "lesson.key": "Unit 4 Day-by-Day",
         "lesson_group.key": "",
         "script.name": "ecs-unit4"
@@ -566,8 +526,6 @@
         "script_level.level_keys": [
           "ECSPD U4 D 10-13 Intro"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 7,
         "lesson.key": "Unit 4 Day-by-Day",
         "lesson_group.key": "",
         "script.name": "ecs-unit4"
@@ -588,8 +546,6 @@
         "script_level.level_keys": [
           "ECSPD U4 D 14 Intro"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 8,
         "lesson.key": "Unit 4 Day-by-Day",
         "lesson_group.key": "",
         "script.name": "ecs-unit4"
@@ -610,8 +566,6 @@
         "script_level.level_keys": [
           "ECSPD U4 D 15 Intro"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 9,
         "lesson.key": "Unit 4 Day-by-Day",
         "lesson_group.key": "",
         "script.name": "ecs-unit4"
@@ -632,8 +586,6 @@
         "script_level.level_keys": [
           "ECSPD U4 D 16-17 Intro"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 10,
         "lesson.key": "Unit 4 Day-by-Day",
         "lesson_group.key": "",
         "script.name": "ecs-unit4"
@@ -654,8 +606,6 @@
         "script_level.level_keys": [
           "ECSPD U4 D 18 Intro"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 11,
         "lesson.key": "Unit 4 Day-by-Day",
         "lesson_group.key": "",
         "script.name": "ecs-unit4"
@@ -676,8 +626,6 @@
         "script_level.level_keys": [
           "ECSPD U4 D 19 Intro"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 12,
         "lesson.key": "Unit 4 Day-by-Day",
         "lesson_group.key": "",
         "script.name": "ecs-unit4"
@@ -698,8 +646,6 @@
         "script_level.level_keys": [
           "ECSPD U4 D 20-23 Intro"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 13,
         "lesson.key": "Unit 4 Day-by-Day",
         "lesson_group.key": "",
         "script.name": "ecs-unit4"
@@ -720,8 +666,6 @@
         "script_level.level_keys": [
           "ECSPD U4 D 24 Intro"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 14,
         "lesson.key": "Unit 4 Day-by-Day",
         "lesson_group.key": "",
         "script.name": "ecs-unit4"
@@ -742,8 +686,6 @@
         "script_level.level_keys": [
           "ECSPD U4 D 25-30 Intro"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 15,
         "lesson.key": "Unit 4 Day-by-Day",
         "lesson_group.key": "",
         "script.name": "ecs-unit4"
@@ -764,8 +706,6 @@
         "script_level.level_keys": [
           "ecspd-unit 4 what is the challenge"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 1,
         "lesson.key": "Unit 4 Challenge",
         "lesson_group.key": "",
         "script.name": "ecs-unit4"
@@ -786,8 +726,6 @@
         "script_level.level_keys": [
           "ECSPD U4 Challenges"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 2,
         "lesson.key": "Unit 4 Challenge",
         "lesson_group.key": "",
         "script.name": "ecs-unit4"
@@ -808,8 +746,6 @@
         "script_level.level_keys": [
           "ECS Unit 4 Challenge Selection"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 3,
         "lesson.key": "Unit 4 Challenge",
         "lesson_group.key": "",
         "script.name": "ecs-unit4"
@@ -830,8 +766,6 @@
         "script_level.level_keys": [
           "ECSD3-u5 do the challenge"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 4,
         "lesson.key": "Unit 4 Challenge",
         "lesson_group.key": "",
         "script.name": "ecs-unit4"
@@ -852,8 +786,6 @@
         "script_level.level_keys": [
           "CSPPD3-u2 create your extension"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 5,
         "lesson.key": "Unit 4 Challenge",
         "lesson_group.key": "",
         "script.name": "ecs-unit4"
@@ -874,8 +806,6 @@
         "script_level.level_keys": [
           "CSPPD3-u2 reflect on challenge"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 6,
         "lesson.key": "Unit 4 Challenge",
         "lesson_group.key": "",
         "script.name": "ecs-unit4"
@@ -896,8 +826,6 @@
         "script_level.level_keys": [
           "CSPPD3-u2 expectations"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 7,
         "lesson.key": "Unit 4 Challenge",
         "lesson_group.key": "",
         "script.name": "ecs-unit4"
@@ -918,8 +846,6 @@
         "script_level.level_keys": [
           "ECS Unit 4 Challenge Submission"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 8,
         "lesson.key": "Unit 4 Challenge",
         "lesson_group.key": "",
         "script.name": "ecs-unit4"
@@ -940,8 +866,6 @@
         "script_level.level_keys": [
           "ECSPD Challenge Reflection"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 1,
         "lesson.key": "Close & Next Steps",
         "lesson_group.key": "",
         "script.name": "ecs-unit4"
@@ -958,8 +882,6 @@
         "script_level.level_keys": [
           "ECS Phase 3 Unit4 Welcome"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
         "script.name": "ecs-unit4"
@@ -971,8 +893,6 @@
         "script_level.level_keys": [
           "ECS Phase 3 Unit 4 Overview"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
         "script.name": "ecs-unit4"
@@ -984,8 +904,6 @@
         "script_level.level_keys": [
           "PDECS tour"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
         "script.name": "ecs-unit4"
@@ -997,8 +915,6 @@
         "script_level.level_keys": [
           "PLC- check your progress"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
         "script.name": "ecs-unit4"
@@ -1010,8 +926,6 @@
         "script_level.level_keys": [
           "ECSPD Unit 4 Outline"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 5,
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
         "script.name": "ecs-unit4"
@@ -1023,8 +937,6 @@
         "script_level.level_keys": [
           "ECSPD P3 Plan"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 6,
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
         "script.name": "ecs-unit4"
@@ -1036,8 +948,6 @@
         "script_level.level_keys": [
           "ECSPD Unit4 Connections"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 1,
         "lesson.key": "Intro to Unit 4",
         "lesson_group.key": "",
         "script.name": "ecs-unit4"
@@ -1049,8 +959,6 @@
         "script_level.level_keys": [
           "ECSPD Unit 4 Lesson Overview"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 2,
         "lesson.key": "Intro to Unit 4",
         "lesson_group.key": "",
         "script.name": "ecs-unit4"
@@ -1062,8 +970,6 @@
         "script_level.level_keys": [
           "Forum-ECSPD-Unit 4-Teaching Practice"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 1,
         "lesson.key": "Teaching Strategies",
         "lesson_group.key": "",
         "script.name": "ecs-unit4"
@@ -1075,8 +981,6 @@
         "script_level.level_keys": [
           "ECSPD Unit 4 Manage"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 2,
         "lesson.key": "Teaching Strategies",
         "lesson_group.key": "",
         "script.name": "ecs-unit4"
@@ -1088,8 +992,6 @@
         "script_level.level_keys": [
           "ECSPD Phase 3 - Unit 4 - Teaching Practice"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 3,
         "lesson.key": "Teaching Strategies",
         "lesson_group.key": "",
         "script.name": "ecs-unit4"
@@ -1101,8 +1003,6 @@
         "script_level.level_keys": [
           "ECSPD scratch"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 4,
         "lesson.key": "Teaching Strategies",
         "lesson_group.key": "",
         "script.name": "ecs-unit4"
@@ -1114,8 +1014,6 @@
         "script_level.level_keys": [
           "ECSPD Unit 4 Strategy Review"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 5,
         "lesson.key": "Teaching Strategies",
         "lesson_group.key": "",
         "script.name": "ecs-unit4"
@@ -1127,8 +1025,6 @@
         "script_level.level_keys": [
           "ECSPD strategies"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 6,
         "lesson.key": "Teaching Strategies",
         "lesson_group.key": "",
         "script.name": "ecs-unit4"
@@ -1140,8 +1036,6 @@
         "script_level.level_keys": [
           "ECSPD U4 D 1 Intro"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 1,
         "lesson.key": "Unit 4 Day-by-Day",
         "lesson_group.key": "",
         "script.name": "ecs-unit4"
@@ -1153,8 +1047,6 @@
         "script_level.level_keys": [
           "ECSPD U4 D 2-3 Intro"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 2,
         "lesson.key": "Unit 4 Day-by-Day",
         "lesson_group.key": "",
         "script.name": "ecs-unit4"
@@ -1166,8 +1058,6 @@
         "script_level.level_keys": [
           "ECSPD U4 D 4 Intro"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 3,
         "lesson.key": "Unit 4 Day-by-Day",
         "lesson_group.key": "",
         "script.name": "ecs-unit4"
@@ -1179,8 +1069,6 @@
         "script_level.level_keys": [
           "ECSPD U4 D 5-6 Intro"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 4,
         "lesson.key": "Unit 4 Day-by-Day",
         "lesson_group.key": "",
         "script.name": "ecs-unit4"
@@ -1192,8 +1080,6 @@
         "script_level.level_keys": [
           "ECSPD U4 D 7-8 Intro"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 5,
         "lesson.key": "Unit 4 Day-by-Day",
         "lesson_group.key": "",
         "script.name": "ecs-unit4"
@@ -1205,8 +1091,6 @@
         "script_level.level_keys": [
           "ECSPD U4 D 9 Intro"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 6,
         "lesson.key": "Unit 4 Day-by-Day",
         "lesson_group.key": "",
         "script.name": "ecs-unit4"
@@ -1218,8 +1102,6 @@
         "script_level.level_keys": [
           "ECSPD U4 D 10-13 Intro"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 7,
         "lesson.key": "Unit 4 Day-by-Day",
         "lesson_group.key": "",
         "script.name": "ecs-unit4"
@@ -1231,8 +1113,6 @@
         "script_level.level_keys": [
           "ECSPD U4 D 14 Intro"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 8,
         "lesson.key": "Unit 4 Day-by-Day",
         "lesson_group.key": "",
         "script.name": "ecs-unit4"
@@ -1244,8 +1124,6 @@
         "script_level.level_keys": [
           "ECSPD U4 D 15 Intro"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 9,
         "lesson.key": "Unit 4 Day-by-Day",
         "lesson_group.key": "",
         "script.name": "ecs-unit4"
@@ -1257,8 +1135,6 @@
         "script_level.level_keys": [
           "ECSPD U4 D 16-17 Intro"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 10,
         "lesson.key": "Unit 4 Day-by-Day",
         "lesson_group.key": "",
         "script.name": "ecs-unit4"
@@ -1270,8 +1146,6 @@
         "script_level.level_keys": [
           "ECSPD U4 D 18 Intro"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 11,
         "lesson.key": "Unit 4 Day-by-Day",
         "lesson_group.key": "",
         "script.name": "ecs-unit4"
@@ -1283,8 +1157,6 @@
         "script_level.level_keys": [
           "ECSPD U4 D 19 Intro"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 12,
         "lesson.key": "Unit 4 Day-by-Day",
         "lesson_group.key": "",
         "script.name": "ecs-unit4"
@@ -1296,8 +1168,6 @@
         "script_level.level_keys": [
           "ECSPD U4 D 20-23 Intro"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 13,
         "lesson.key": "Unit 4 Day-by-Day",
         "lesson_group.key": "",
         "script.name": "ecs-unit4"
@@ -1309,8 +1179,6 @@
         "script_level.level_keys": [
           "ECSPD U4 D 24 Intro"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 14,
         "lesson.key": "Unit 4 Day-by-Day",
         "lesson_group.key": "",
         "script.name": "ecs-unit4"
@@ -1322,8 +1190,6 @@
         "script_level.level_keys": [
           "ECSPD U4 D 25-30 Intro"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 15,
         "lesson.key": "Unit 4 Day-by-Day",
         "lesson_group.key": "",
         "script.name": "ecs-unit4"
@@ -1335,8 +1201,6 @@
         "script_level.level_keys": [
           "ecspd-unit 4 what is the challenge"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 1,
         "lesson.key": "Unit 4 Challenge",
         "lesson_group.key": "",
         "script.name": "ecs-unit4"
@@ -1348,8 +1212,6 @@
         "script_level.level_keys": [
           "ECSPD U4 Challenges"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 2,
         "lesson.key": "Unit 4 Challenge",
         "lesson_group.key": "",
         "script.name": "ecs-unit4"
@@ -1361,8 +1223,6 @@
         "script_level.level_keys": [
           "ECS Unit 4 Challenge Selection"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 3,
         "lesson.key": "Unit 4 Challenge",
         "lesson_group.key": "",
         "script.name": "ecs-unit4"
@@ -1374,8 +1234,6 @@
         "script_level.level_keys": [
           "ECSD3-u5 do the challenge"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 4,
         "lesson.key": "Unit 4 Challenge",
         "lesson_group.key": "",
         "script.name": "ecs-unit4"
@@ -1387,8 +1245,6 @@
         "script_level.level_keys": [
           "CSPPD3-u2 create your extension"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 5,
         "lesson.key": "Unit 4 Challenge",
         "lesson_group.key": "",
         "script.name": "ecs-unit4"
@@ -1400,8 +1256,6 @@
         "script_level.level_keys": [
           "CSPPD3-u2 reflect on challenge"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 6,
         "lesson.key": "Unit 4 Challenge",
         "lesson_group.key": "",
         "script.name": "ecs-unit4"
@@ -1413,8 +1267,6 @@
         "script_level.level_keys": [
           "CSPPD3-u2 expectations"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 7,
         "lesson.key": "Unit 4 Challenge",
         "lesson_group.key": "",
         "script.name": "ecs-unit4"
@@ -1426,8 +1278,6 @@
         "script_level.level_keys": [
           "ECS Unit 4 Challenge Submission"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 8,
         "lesson.key": "Unit 4 Challenge",
         "lesson_group.key": "",
         "script.name": "ecs-unit4"
@@ -1439,8 +1289,6 @@
         "script_level.level_keys": [
           "ECSPD Challenge Reflection"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 1,
         "lesson.key": "Close & Next Steps",
         "lesson_group.key": "",
         "script.name": "ecs-unit4"

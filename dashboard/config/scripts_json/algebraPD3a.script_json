@@ -98,8 +98,6 @@
         "script_level.level_keys": [
           "PDAlg Updates Tweaks"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Updates - Tweaks and Polish",
         "lesson_group.key": "",
         "script.name": "algebraPD3a"
@@ -120,8 +118,6 @@
         "script_level.level_keys": [
           "PDAlg Updates Space"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Updates - Tweaks and Polish",
         "lesson_group.key": "",
         "script.name": "algebraPD3a"
@@ -142,8 +138,6 @@
         "script_level.level_keys": [
           "PDAlg Updates Errors"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "Updates - Tweaks and Polish",
         "lesson_group.key": "",
         "script.name": "algebraPD3a"
@@ -164,8 +158,6 @@
         "script_level.level_keys": [
           "PDAlg Updates Cond"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "Updates - Tweaks and Polish",
         "lesson_group.key": "",
         "script.name": "algebraPD3a"
@@ -186,8 +178,6 @@
         "script_level.level_keys": [
           "PDAlg Big Game"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 1,
         "lesson.key": "Updates - The Big Game and Projects",
         "lesson_group.key": "",
         "script.name": "algebraPD3a"
@@ -208,8 +198,6 @@
         "script_level.level_keys": [
           "PDAlg Big Game Remix"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 2,
         "lesson.key": "Updates - The Big Game and Projects",
         "lesson_group.key": "",
         "script.name": "algebraPD3a"
@@ -230,8 +218,6 @@
         "script_level.level_keys": [
           "PDAlg Big Game History"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 3,
         "lesson.key": "Updates - The Big Game and Projects",
         "lesson_group.key": "",
         "script.name": "algebraPD3a"
@@ -252,8 +238,6 @@
         "script_level.level_keys": [
           "PDAlg Projects"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 4,
         "lesson.key": "Updates - The Big Game and Projects",
         "lesson_group.key": "",
         "script.name": "algebraPD3a"
@@ -274,8 +258,6 @@
         "script_level.level_keys": [
           "PDAlg Design Recipe Updates"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 1,
         "lesson.key": "Updates - The Design Recipe",
         "lesson_group.key": "",
         "script.name": "algebraPD3a"
@@ -296,8 +278,6 @@
         "script_level.level_keys": [
           "PDAlg Design Recipe Examples"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 2,
         "lesson.key": "Updates - The Design Recipe",
         "lesson_group.key": "",
         "script.name": "algebraPD3a"
@@ -318,8 +298,6 @@
         "script_level.level_keys": [
           "PDAlg Design Recipe Required"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 3,
         "lesson.key": "Updates - The Design Recipe",
         "lesson_group.key": "",
         "script.name": "algebraPD3a"
@@ -340,8 +318,6 @@
         "script_level.level_keys": [
           "PDAlg Design Recipe Delete"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 4,
         "lesson.key": "Updates - The Design Recipe",
         "lesson_group.key": "",
         "script.name": "algebraPD3a"
@@ -362,8 +338,6 @@
         "script_level.level_keys": [
           "PDAlg Prep a Lesson"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 1,
         "lesson.key": "Lesson Prep",
         "lesson_group.key": "",
         "script.name": "algebraPD3a"
@@ -384,8 +358,6 @@
         "script_level.level_keys": [
           "PDAlg Prep on Paper"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 2,
         "lesson.key": "Lesson Prep",
         "lesson_group.key": "",
         "script.name": "algebraPD3a"
@@ -406,8 +378,6 @@
         "script_level.level_keys": [
           "PDAlg Prep Sandbox"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 3,
         "lesson.key": "Lesson Prep",
         "lesson_group.key": "",
         "script.name": "algebraPD3a"
@@ -428,8 +398,6 @@
         "script_level.level_keys": [
           "Lesson Prep Final"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 4,
         "lesson.key": "Lesson Prep",
         "lesson_group.key": "",
         "script.name": "algebraPD3a"
@@ -446,8 +414,6 @@
         "script_level.level_keys": [
           "PDAlg Updates Tweaks"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Updates - Tweaks and Polish",
         "lesson_group.key": "",
         "script.name": "algebraPD3a"
@@ -459,8 +425,6 @@
         "script_level.level_keys": [
           "PDAlg Updates Space"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Updates - Tweaks and Polish",
         "lesson_group.key": "",
         "script.name": "algebraPD3a"
@@ -472,8 +436,6 @@
         "script_level.level_keys": [
           "PDAlg Updates Errors"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "Updates - Tweaks and Polish",
         "lesson_group.key": "",
         "script.name": "algebraPD3a"
@@ -485,8 +447,6 @@
         "script_level.level_keys": [
           "PDAlg Updates Cond"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "Updates - Tweaks and Polish",
         "lesson_group.key": "",
         "script.name": "algebraPD3a"
@@ -498,8 +458,6 @@
         "script_level.level_keys": [
           "PDAlg Big Game"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 1,
         "lesson.key": "Updates - The Big Game and Projects",
         "lesson_group.key": "",
         "script.name": "algebraPD3a"
@@ -511,8 +469,6 @@
         "script_level.level_keys": [
           "PDAlg Big Game Remix"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 2,
         "lesson.key": "Updates - The Big Game and Projects",
         "lesson_group.key": "",
         "script.name": "algebraPD3a"
@@ -524,8 +480,6 @@
         "script_level.level_keys": [
           "PDAlg Big Game History"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 3,
         "lesson.key": "Updates - The Big Game and Projects",
         "lesson_group.key": "",
         "script.name": "algebraPD3a"
@@ -537,8 +491,6 @@
         "script_level.level_keys": [
           "PDAlg Projects"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 4,
         "lesson.key": "Updates - The Big Game and Projects",
         "lesson_group.key": "",
         "script.name": "algebraPD3a"
@@ -550,8 +502,6 @@
         "script_level.level_keys": [
           "PDAlg Design Recipe Updates"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 1,
         "lesson.key": "Updates - The Design Recipe",
         "lesson_group.key": "",
         "script.name": "algebraPD3a"
@@ -563,8 +513,6 @@
         "script_level.level_keys": [
           "PDAlg Design Recipe Examples"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 2,
         "lesson.key": "Updates - The Design Recipe",
         "lesson_group.key": "",
         "script.name": "algebraPD3a"
@@ -576,8 +524,6 @@
         "script_level.level_keys": [
           "PDAlg Design Recipe Required"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 3,
         "lesson.key": "Updates - The Design Recipe",
         "lesson_group.key": "",
         "script.name": "algebraPD3a"
@@ -589,8 +535,6 @@
         "script_level.level_keys": [
           "PDAlg Design Recipe Delete"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 4,
         "lesson.key": "Updates - The Design Recipe",
         "lesson_group.key": "",
         "script.name": "algebraPD3a"
@@ -602,8 +546,6 @@
         "script_level.level_keys": [
           "PDAlg Prep a Lesson"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 1,
         "lesson.key": "Lesson Prep",
         "lesson_group.key": "",
         "script.name": "algebraPD3a"
@@ -615,8 +557,6 @@
         "script_level.level_keys": [
           "PDAlg Prep on Paper"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 2,
         "lesson.key": "Lesson Prep",
         "lesson_group.key": "",
         "script.name": "algebraPD3a"
@@ -628,8 +568,6 @@
         "script_level.level_keys": [
           "PDAlg Prep Sandbox"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 3,
         "lesson.key": "Lesson Prep",
         "lesson_group.key": "",
         "script.name": "algebraPD3a"
@@ -641,8 +579,6 @@
         "script_level.level_keys": [
           "Lesson Prep Final"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 4,
         "lesson.key": "Lesson Prep",
         "lesson_group.key": "",
         "script.name": "algebraPD3a"

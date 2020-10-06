@@ -210,8 +210,6 @@
         "script_level.level_keys": [
           "K5PD tour"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Course Overview",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -232,8 +230,6 @@
         "script_level.level_keys": [
           "PDAlg circles to blocks"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Course Overview",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -254,8 +250,6 @@
         "script_level.level_keys": [
           "PDAlg block match"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "Course Overview",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -276,8 +270,6 @@
         "script_level.level_keys": [
           "PDAlg Scope"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "Course Overview",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -298,8 +290,6 @@
         "script_level.level_keys": [
           "PDAlg implementation"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 5,
         "lesson.key": "Course Overview",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -320,8 +310,6 @@
         "script_level.level_keys": [
           "PDAlg course goals"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 6,
         "lesson.key": "Course Overview",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -342,8 +330,6 @@
         "script_level.level_keys": [
           "PDAlg Culture"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 1,
         "lesson.key": "Best Practices for Teaching Computer Science",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -364,8 +350,6 @@
         "script_level.level_keys": [
           "OPD-K5 Pair"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 2,
         "lesson.key": "Best Practices for Teaching Computer Science",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -386,8 +370,6 @@
         "script_level.level_keys": [
           "PDK5 Pair programming match"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 3,
         "lesson.key": "Best Practices for Teaching Computer Science",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -408,8 +390,6 @@
         "script_level.level_keys": [
           "OPD-K5 Problem Solving Video"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 4,
         "lesson.key": "Best Practices for Teaching Computer Science",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -430,8 +410,6 @@
         "script_level.level_keys": [
           "PDAlg Strategy Reflection"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 5,
         "lesson.key": "Best Practices for Teaching Computer Science",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -452,8 +430,6 @@
         "script_level.level_keys": [
           "PDK5 Teacher Dashboard 1"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 1,
         "lesson.key": "Teacher Dashboard",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -474,8 +450,6 @@
         "script_level.level_keys": [
           "PDK5 Teacher Dashboard 2"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 2,
         "lesson.key": "Teacher Dashboard",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -496,8 +470,6 @@
         "script_level.level_keys": [
           "PDAlg Teacher Dashboard"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 3,
         "lesson.key": "Teacher Dashboard",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -518,8 +490,6 @@
         "script_level.level_keys": [
           "PDAlg Blocks Video"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 1,
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -540,8 +510,6 @@
         "script_level.level_keys": [
           "Calc Circles of Eval .4"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 2,
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -562,8 +530,6 @@
         "script_level.level_keys": [
           "Calc Circles of Eval 1"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 3,
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -584,8 +550,6 @@
         "script_level.level_keys": [
           "Calc Circles of Eval 4"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 4,
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -606,8 +570,6 @@
         "script_level.level_keys": [
           "Calc Circles of Eval 5"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 5,
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -628,8 +590,6 @@
         "script_level.level_keys": [
           "Calc Circles of Eval 6"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 6,
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -650,8 +610,6 @@
         "script_level.level_keys": [
           "Calc Circles of Eval 9"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 7,
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -672,8 +630,6 @@
         "script_level.level_keys": [
           "Blocks to Math 2"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 8,
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -694,8 +650,6 @@
         "script_level.level_keys": [
           "Blocks to Math 4"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 9,
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -716,8 +670,6 @@
         "script_level.level_keys": [
           "Blocks to Math 5"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 10,
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -738,8 +690,6 @@
         "script_level.level_keys": [
           "Blocks to Math 6"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 11,
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -760,8 +710,6 @@
         "script_level.level_keys": [
           "Blocks to Math 7"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 12,
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -782,8 +730,6 @@
         "script_level.level_keys": [
           "Calc Circles of Eval Free Play"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 13,
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -804,8 +750,6 @@
         "script_level.level_keys": [
           "PDAlg Types Video"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 1,
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -826,8 +770,6 @@
         "script_level.level_keys": [
           "Eval Strings Images 5"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 2,
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -848,8 +790,6 @@
         "script_level.level_keys": [
           "Eval Strings Images 6"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 3,
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -870,8 +810,6 @@
         "script_level.level_keys": [
           "Eval Strings Images 7"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 4,
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -892,8 +830,6 @@
         "script_level.level_keys": [
           "Eval Strings Images 8"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 5,
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -914,8 +850,6 @@
         "script_level.level_keys": [
           "Multi Strings Images 1"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 6,
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -936,8 +870,6 @@
         "script_level.level_keys": [
           "Eval Strings Images Free Play"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 7,
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -958,8 +890,6 @@
         "script_level.level_keys": [
           "Eval Contracts A"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 1,
         "lesson.key": "Writing Contracts",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -980,8 +910,6 @@
         "script_level.level_keys": [
           "Eval Contracts B"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 2,
         "lesson.key": "Writing Contracts",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -1002,8 +930,6 @@
         "script_level.level_keys": [
           "Eval Contracts C"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 3,
         "lesson.key": "Writing Contracts",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -1024,8 +950,6 @@
         "script_level.level_keys": [
           "Eval Contracts D"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 4,
         "lesson.key": "Writing Contracts",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -1046,8 +970,6 @@
         "script_level.level_keys": [
           "Eval Contracts E"
         ],
-        "script_level.chapter": 39,
-        "script_level.position": 5,
         "lesson.key": "Writing Contracts",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -1068,8 +990,6 @@
         "script_level.level_keys": [
           "Eval Contracts F"
         ],
-        "script_level.chapter": 40,
-        "script_level.position": 6,
         "lesson.key": "Writing Contracts",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -1090,8 +1010,6 @@
         "script_level.level_keys": [
           "Eval Contracts 4"
         ],
-        "script_level.chapter": 41,
-        "script_level.position": 7,
         "lesson.key": "Writing Contracts",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -1112,8 +1030,6 @@
         "script_level.level_keys": [
           "Eval Contracts 4 B"
         ],
-        "script_level.chapter": 42,
-        "script_level.position": 8,
         "lesson.key": "Writing Contracts",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -1134,8 +1050,6 @@
         "script_level.level_keys": [
           "Calc Vars 1"
         ],
-        "script_level.chapter": 43,
-        "script_level.position": 1,
         "lesson.key": "Defining Variables",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -1156,8 +1070,6 @@
         "script_level.level_keys": [
           "Calc Vars 1.1"
         ],
-        "script_level.chapter": 44,
-        "script_level.position": 2,
         "lesson.key": "Defining Variables",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -1178,8 +1090,6 @@
         "script_level.level_keys": [
           "Calc Vars 3"
         ],
-        "script_level.chapter": 45,
-        "script_level.position": 3,
         "lesson.key": "Defining Variables",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -1200,8 +1110,6 @@
         "script_level.level_keys": [
           "Calc Vars 2"
         ],
-        "script_level.chapter": 46,
-        "script_level.position": 4,
         "lesson.key": "Defining Variables",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -1222,8 +1130,6 @@
         "script_level.level_keys": [
           "Calc Vars 2.1"
         ],
-        "script_level.chapter": 47,
-        "script_level.position": 5,
         "lesson.key": "Defining Variables",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -1244,8 +1150,6 @@
         "script_level.level_keys": [
           "Calc Vars 4"
         ],
-        "script_level.chapter": 48,
-        "script_level.position": 6,
         "lesson.key": "Defining Variables",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -1266,8 +1170,6 @@
         "script_level.level_keys": [
           "msm variables multi 1"
         ],
-        "script_level.chapter": 49,
-        "script_level.position": 7,
         "lesson.key": "Defining Variables",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -1288,8 +1190,6 @@
         "script_level.level_keys": [
           "msm variables multi 2"
         ],
-        "script_level.chapter": 50,
-        "script_level.position": 8,
         "lesson.key": "Defining Variables",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -1310,8 +1210,6 @@
         "script_level.level_keys": [
           "msm variables multi 3"
         ],
-        "script_level.chapter": 51,
-        "script_level.position": 9,
         "lesson.key": "Defining Variables",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -1332,8 +1230,6 @@
         "script_level.level_keys": [
           "msm variables multi 4"
         ],
-        "script_level.chapter": 52,
-        "script_level.position": 10,
         "lesson.key": "Defining Variables",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -1354,8 +1250,6 @@
         "script_level.level_keys": [
           "msm variables multi 5"
         ],
-        "script_level.chapter": 53,
-        "script_level.position": 11,
         "lesson.key": "Defining Variables",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -1376,8 +1270,6 @@
         "script_level.level_keys": [
           "msm variables multi 6"
         ],
-        "script_level.chapter": 54,
-        "script_level.position": 12,
         "lesson.key": "Defining Variables",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -1398,8 +1290,6 @@
         "script_level.level_keys": [
           "Eval Define Funcs 1"
         ],
-        "script_level.chapter": 55,
-        "script_level.position": 1,
         "lesson.key": "Defining Functions",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -1420,8 +1310,6 @@
         "script_level.level_keys": [
           "Eval Define Funcs 2"
         ],
-        "script_level.chapter": 56,
-        "script_level.position": 2,
         "lesson.key": "Defining Functions",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -1442,8 +1330,6 @@
         "script_level.level_keys": [
           "Eval Define Funcs 3"
         ],
-        "script_level.chapter": 57,
-        "script_level.position": 3,
         "lesson.key": "Defining Functions",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -1464,8 +1350,6 @@
         "script_level.level_keys": [
           "Eval Define Funcs 4"
         ],
-        "script_level.chapter": 58,
-        "script_level.position": 4,
         "lesson.key": "Defining Functions",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -1486,8 +1370,6 @@
         "script_level.level_keys": [
           "Eval Define Funcs 5"
         ],
-        "script_level.chapter": 59,
-        "script_level.position": 5,
         "lesson.key": "Defining Functions",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -1508,8 +1390,6 @@
         "script_level.level_keys": [
           "Calc Define Funcs 1"
         ],
-        "script_level.chapter": 60,
-        "script_level.position": 6,
         "lesson.key": "Defining Functions",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -1530,8 +1410,6 @@
         "script_level.level_keys": [
           "Calc Define Funcs 2"
         ],
-        "script_level.chapter": 61,
-        "script_level.position": 7,
         "lesson.key": "Defining Functions",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -1552,8 +1430,6 @@
         "script_level.level_keys": [
           "Calc Define Funcs 3"
         ],
-        "script_level.chapter": 62,
-        "script_level.position": 8,
         "lesson.key": "Defining Functions",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -1574,8 +1450,6 @@
         "script_level.level_keys": [
           "Calc Define Funcs 4"
         ],
-        "script_level.chapter": 63,
-        "script_level.position": 9,
         "lesson.key": "Defining Functions",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -1596,8 +1470,6 @@
         "script_level.level_keys": [
           "Multi Define Funcs 1"
         ],
-        "script_level.chapter": 64,
-        "script_level.position": 10,
         "lesson.key": "Defining Functions",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -1618,8 +1490,6 @@
         "script_level.level_keys": [
           "Multi Define Funcs 2"
         ],
-        "script_level.chapter": 65,
-        "script_level.position": 11,
         "lesson.key": "Defining Functions",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -1640,8 +1510,6 @@
         "script_level.level_keys": [
           "Multi Define Funcs 3"
         ],
-        "script_level.chapter": 66,
-        "script_level.position": 12,
         "lesson.key": "Defining Functions",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -1662,8 +1530,6 @@
         "script_level.level_keys": [
           "msm variables multi 10"
         ],
-        "script_level.chapter": 67,
-        "script_level.position": 13,
         "lesson.key": "Defining Functions",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -1684,8 +1550,6 @@
         "script_level.level_keys": [
           "msm variables multi 11"
         ],
-        "script_level.chapter": 68,
-        "script_level.position": 14,
         "lesson.key": "Defining Functions",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -1706,8 +1570,6 @@
         "script_level.level_keys": [
           "msm variables multi 13"
         ],
-        "script_level.chapter": 69,
-        "script_level.position": 15,
         "lesson.key": "Defining Functions",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -1728,8 +1590,6 @@
         "script_level.level_keys": [
           "PDAlg Design Recipe Video"
         ],
-        "script_level.chapter": 70,
-        "script_level.position": 1,
         "lesson.key": "Rocket-Height",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -1750,8 +1610,6 @@
         "script_level.level_keys": [
           "Play Lab Rocket 3"
         ],
-        "script_level.chapter": 71,
-        "script_level.position": 2,
         "lesson.key": "Rocket-Height",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -1772,8 +1630,6 @@
         "script_level.level_keys": [
           "Play Lab Rocket 4"
         ],
-        "script_level.chapter": 72,
-        "script_level.position": 3,
         "lesson.key": "Rocket-Height",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -1794,8 +1650,6 @@
         "script_level.level_keys": [
           "Play Lab Rocket 5"
         ],
-        "script_level.chapter": 73,
-        "script_level.position": 4,
         "lesson.key": "Rocket-Height",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -1816,8 +1670,6 @@
         "script_level.level_keys": [
           "Play Lab Rocket 6"
         ],
-        "script_level.chapter": 74,
-        "script_level.position": 5,
         "lesson.key": "Rocket-Height",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -1838,8 +1690,6 @@
         "script_level.level_keys": [
           "Play Lab Rocket 7"
         ],
-        "script_level.chapter": 75,
-        "script_level.position": 6,
         "lesson.key": "Rocket-Height",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -1860,8 +1710,6 @@
         "script_level.level_keys": [
           "Play Lab Rocket 8"
         ],
-        "script_level.chapter": 76,
-        "script_level.position": 7,
         "lesson.key": "Rocket-Height",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -1882,8 +1730,6 @@
         "script_level.level_keys": [
           "Play Lab Rocket Free Play"
         ],
-        "script_level.chapter": 77,
-        "script_level.position": 8,
         "lesson.key": "Rocket-Height",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -1904,8 +1750,6 @@
         "script_level.level_keys": [
           "Eval Booleans 1"
         ],
-        "script_level.chapter": 78,
-        "script_level.position": 1,
         "lesson.key": "Booleans",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -1926,8 +1770,6 @@
         "script_level.level_keys": [
           "Eval Booleans 2"
         ],
-        "script_level.chapter": 79,
-        "script_level.position": 2,
         "lesson.key": "Booleans",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -1948,8 +1790,6 @@
         "script_level.level_keys": [
           "Eval Booleans 3"
         ],
-        "script_level.chapter": 80,
-        "script_level.position": 3,
         "lesson.key": "Booleans",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -1970,8 +1810,6 @@
         "script_level.level_keys": [
           "Eval Booleans 4"
         ],
-        "script_level.chapter": 81,
-        "script_level.position": 4,
         "lesson.key": "Booleans",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -1992,8 +1830,6 @@
         "script_level.level_keys": [
           "Eval Booleans 5"
         ],
-        "script_level.chapter": 82,
-        "script_level.position": 5,
         "lesson.key": "Booleans",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -2014,8 +1850,6 @@
         "script_level.level_keys": [
           "Eval Booleans 6"
         ],
-        "script_level.chapter": 83,
-        "script_level.position": 6,
         "lesson.key": "Booleans",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -2036,8 +1870,6 @@
         "script_level.level_keys": [
           "Blocks to Bools 1"
         ],
-        "script_level.chapter": 84,
-        "script_level.position": 7,
         "lesson.key": "Booleans",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -2058,8 +1890,6 @@
         "script_level.level_keys": [
           "Blocks to Bools 2"
         ],
-        "script_level.chapter": 85,
-        "script_level.position": 8,
         "lesson.key": "Booleans",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -2080,8 +1910,6 @@
         "script_level.level_keys": [
           "Blocks to Bools 3"
         ],
-        "script_level.chapter": 86,
-        "script_level.position": 9,
         "lesson.key": "Booleans",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -2102,8 +1930,6 @@
         "script_level.level_keys": [
           "Blocks to Bools 4"
         ],
-        "script_level.chapter": 87,
-        "script_level.position": 10,
         "lesson.key": "Booleans",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -2124,8 +1950,6 @@
         "script_level.level_keys": [
           "Eval Booleans Free Play"
         ],
-        "script_level.chapter": 88,
-        "script_level.position": 11,
         "lesson.key": "Booleans",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -2146,8 +1970,6 @@
         "script_level.level_keys": [
           "Eval Cond 1"
         ],
-        "script_level.chapter": 89,
-        "script_level.position": 1,
         "lesson.key": "Eval: Conditionals",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -2168,8 +1990,6 @@
         "script_level.level_keys": [
           "Eval Cond 2"
         ],
-        "script_level.chapter": 90,
-        "script_level.position": 2,
         "lesson.key": "Eval: Conditionals",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -2190,8 +2010,6 @@
         "script_level.level_keys": [
           "Eval Cond 3"
         ],
-        "script_level.chapter": 91,
-        "script_level.position": 3,
         "lesson.key": "Eval: Conditionals",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -2212,8 +2030,6 @@
         "script_level.level_keys": [
           "Eval Cond 4"
         ],
-        "script_level.chapter": 92,
-        "script_level.position": 4,
         "lesson.key": "Eval: Conditionals",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -2234,8 +2050,6 @@
         "script_level.level_keys": [
           "Eval Cond 5"
         ],
-        "script_level.chapter": 93,
-        "script_level.position": 5,
         "lesson.key": "Eval: Conditionals",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -2256,8 +2070,6 @@
         "script_level.level_keys": [
           "Eval Cond 6"
         ],
-        "script_level.chapter": 94,
-        "script_level.position": 6,
         "lesson.key": "Eval: Conditionals",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -2278,8 +2090,6 @@
         "script_level.level_keys": [
           "Eval Cond 7"
         ],
-        "script_level.chapter": 95,
-        "script_level.position": 7,
         "lesson.key": "Eval: Conditionals",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -2300,8 +2110,6 @@
         "script_level.level_keys": [
           "Eval Cond 8"
         ],
-        "script_level.chapter": 96,
-        "script_level.position": 8,
         "lesson.key": "Eval: Conditionals",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -2322,8 +2130,6 @@
         "script_level.level_keys": [
           "PDAlg end of P3"
         ],
-        "script_level.chapter": 97,
-        "script_level.position": 1,
         "lesson.key": "Next Steps",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -2344,8 +2150,6 @@
         "script_level.level_keys": [
           "PDAlg whats next"
         ],
-        "script_level.chapter": 98,
-        "script_level.position": 2,
         "lesson.key": "Next Steps",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -2362,8 +2166,6 @@
         "script_level.level_keys": [
           "K5PD tour"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Course Overview",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -2375,8 +2177,6 @@
         "script_level.level_keys": [
           "PDAlg circles to blocks"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Course Overview",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -2388,8 +2188,6 @@
         "script_level.level_keys": [
           "PDAlg block match"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "Course Overview",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -2401,8 +2199,6 @@
         "script_level.level_keys": [
           "PDAlg Scope"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "Course Overview",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -2414,8 +2210,6 @@
         "script_level.level_keys": [
           "PDAlg implementation"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 5,
         "lesson.key": "Course Overview",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -2427,8 +2221,6 @@
         "script_level.level_keys": [
           "PDAlg course goals"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 6,
         "lesson.key": "Course Overview",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -2440,8 +2232,6 @@
         "script_level.level_keys": [
           "PDAlg Culture"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 1,
         "lesson.key": "Best Practices for Teaching Computer Science",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -2453,8 +2243,6 @@
         "script_level.level_keys": [
           "OPD-K5 Pair"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 2,
         "lesson.key": "Best Practices for Teaching Computer Science",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -2466,8 +2254,6 @@
         "script_level.level_keys": [
           "PDK5 Pair programming match"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 3,
         "lesson.key": "Best Practices for Teaching Computer Science",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -2479,8 +2265,6 @@
         "script_level.level_keys": [
           "OPD-K5 Problem Solving Video"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 4,
         "lesson.key": "Best Practices for Teaching Computer Science",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -2492,8 +2276,6 @@
         "script_level.level_keys": [
           "PDAlg Strategy Reflection"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 5,
         "lesson.key": "Best Practices for Teaching Computer Science",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -2505,8 +2287,6 @@
         "script_level.level_keys": [
           "PDK5 Teacher Dashboard 1"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 1,
         "lesson.key": "Teacher Dashboard",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -2518,8 +2298,6 @@
         "script_level.level_keys": [
           "PDK5 Teacher Dashboard 2"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 2,
         "lesson.key": "Teacher Dashboard",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -2531,8 +2309,6 @@
         "script_level.level_keys": [
           "PDAlg Teacher Dashboard"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 3,
         "lesson.key": "Teacher Dashboard",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -2544,8 +2320,6 @@
         "script_level.level_keys": [
           "PDAlg Blocks Video"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 1,
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -2557,8 +2331,6 @@
         "script_level.level_keys": [
           "Calc Circles of Eval .4"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 2,
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -2570,8 +2342,6 @@
         "script_level.level_keys": [
           "Calc Circles of Eval 1"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 3,
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -2583,8 +2353,6 @@
         "script_level.level_keys": [
           "Calc Circles of Eval 4"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 4,
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -2596,8 +2364,6 @@
         "script_level.level_keys": [
           "Calc Circles of Eval 5"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 5,
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -2609,8 +2375,6 @@
         "script_level.level_keys": [
           "Calc Circles of Eval 6"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 6,
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -2622,8 +2386,6 @@
         "script_level.level_keys": [
           "Calc Circles of Eval 9"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 7,
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -2635,8 +2397,6 @@
         "script_level.level_keys": [
           "Blocks to Math 2"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 8,
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -2648,8 +2408,6 @@
         "script_level.level_keys": [
           "Blocks to Math 4"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 9,
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -2661,8 +2419,6 @@
         "script_level.level_keys": [
           "Blocks to Math 5"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 10,
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -2674,8 +2430,6 @@
         "script_level.level_keys": [
           "Blocks to Math 6"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 11,
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -2687,8 +2441,6 @@
         "script_level.level_keys": [
           "Blocks to Math 7"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 12,
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -2700,8 +2452,6 @@
         "script_level.level_keys": [
           "Calc Circles of Eval Free Play"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 13,
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -2713,8 +2463,6 @@
         "script_level.level_keys": [
           "PDAlg Types Video"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 1,
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -2726,8 +2474,6 @@
         "script_level.level_keys": [
           "Eval Strings Images 5"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 2,
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -2739,8 +2485,6 @@
         "script_level.level_keys": [
           "Eval Strings Images 6"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 3,
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -2752,8 +2496,6 @@
         "script_level.level_keys": [
           "Eval Strings Images 7"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 4,
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -2765,8 +2507,6 @@
         "script_level.level_keys": [
           "Eval Strings Images 8"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 5,
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -2778,8 +2518,6 @@
         "script_level.level_keys": [
           "Multi Strings Images 1"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 6,
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -2791,8 +2529,6 @@
         "script_level.level_keys": [
           "Eval Strings Images Free Play"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 7,
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -2804,8 +2540,6 @@
         "script_level.level_keys": [
           "Eval Contracts A"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 1,
         "lesson.key": "Writing Contracts",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -2817,8 +2551,6 @@
         "script_level.level_keys": [
           "Eval Contracts B"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 2,
         "lesson.key": "Writing Contracts",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -2830,8 +2562,6 @@
         "script_level.level_keys": [
           "Eval Contracts C"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 3,
         "lesson.key": "Writing Contracts",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -2843,8 +2573,6 @@
         "script_level.level_keys": [
           "Eval Contracts D"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 4,
         "lesson.key": "Writing Contracts",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -2856,8 +2584,6 @@
         "script_level.level_keys": [
           "Eval Contracts E"
         ],
-        "script_level.chapter": 39,
-        "script_level.position": 5,
         "lesson.key": "Writing Contracts",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -2869,8 +2595,6 @@
         "script_level.level_keys": [
           "Eval Contracts F"
         ],
-        "script_level.chapter": 40,
-        "script_level.position": 6,
         "lesson.key": "Writing Contracts",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -2882,8 +2606,6 @@
         "script_level.level_keys": [
           "Eval Contracts 4"
         ],
-        "script_level.chapter": 41,
-        "script_level.position": 7,
         "lesson.key": "Writing Contracts",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -2895,8 +2617,6 @@
         "script_level.level_keys": [
           "Eval Contracts 4 B"
         ],
-        "script_level.chapter": 42,
-        "script_level.position": 8,
         "lesson.key": "Writing Contracts",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -2908,8 +2628,6 @@
         "script_level.level_keys": [
           "Calc Vars 1"
         ],
-        "script_level.chapter": 43,
-        "script_level.position": 1,
         "lesson.key": "Defining Variables",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -2921,8 +2639,6 @@
         "script_level.level_keys": [
           "Calc Vars 1.1"
         ],
-        "script_level.chapter": 44,
-        "script_level.position": 2,
         "lesson.key": "Defining Variables",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -2934,8 +2650,6 @@
         "script_level.level_keys": [
           "Calc Vars 3"
         ],
-        "script_level.chapter": 45,
-        "script_level.position": 3,
         "lesson.key": "Defining Variables",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -2947,8 +2661,6 @@
         "script_level.level_keys": [
           "Calc Vars 2"
         ],
-        "script_level.chapter": 46,
-        "script_level.position": 4,
         "lesson.key": "Defining Variables",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -2960,8 +2672,6 @@
         "script_level.level_keys": [
           "Calc Vars 2.1"
         ],
-        "script_level.chapter": 47,
-        "script_level.position": 5,
         "lesson.key": "Defining Variables",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -2973,8 +2683,6 @@
         "script_level.level_keys": [
           "Calc Vars 4"
         ],
-        "script_level.chapter": 48,
-        "script_level.position": 6,
         "lesson.key": "Defining Variables",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -2986,8 +2694,6 @@
         "script_level.level_keys": [
           "msm variables multi 1"
         ],
-        "script_level.chapter": 49,
-        "script_level.position": 7,
         "lesson.key": "Defining Variables",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -2999,8 +2705,6 @@
         "script_level.level_keys": [
           "msm variables multi 2"
         ],
-        "script_level.chapter": 50,
-        "script_level.position": 8,
         "lesson.key": "Defining Variables",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -3012,8 +2716,6 @@
         "script_level.level_keys": [
           "msm variables multi 3"
         ],
-        "script_level.chapter": 51,
-        "script_level.position": 9,
         "lesson.key": "Defining Variables",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -3025,8 +2727,6 @@
         "script_level.level_keys": [
           "msm variables multi 4"
         ],
-        "script_level.chapter": 52,
-        "script_level.position": 10,
         "lesson.key": "Defining Variables",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -3038,8 +2738,6 @@
         "script_level.level_keys": [
           "msm variables multi 5"
         ],
-        "script_level.chapter": 53,
-        "script_level.position": 11,
         "lesson.key": "Defining Variables",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -3051,8 +2749,6 @@
         "script_level.level_keys": [
           "msm variables multi 6"
         ],
-        "script_level.chapter": 54,
-        "script_level.position": 12,
         "lesson.key": "Defining Variables",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -3064,8 +2760,6 @@
         "script_level.level_keys": [
           "Eval Define Funcs 1"
         ],
-        "script_level.chapter": 55,
-        "script_level.position": 1,
         "lesson.key": "Defining Functions",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -3077,8 +2771,6 @@
         "script_level.level_keys": [
           "Eval Define Funcs 2"
         ],
-        "script_level.chapter": 56,
-        "script_level.position": 2,
         "lesson.key": "Defining Functions",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -3090,8 +2782,6 @@
         "script_level.level_keys": [
           "Eval Define Funcs 3"
         ],
-        "script_level.chapter": 57,
-        "script_level.position": 3,
         "lesson.key": "Defining Functions",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -3103,8 +2793,6 @@
         "script_level.level_keys": [
           "Eval Define Funcs 4"
         ],
-        "script_level.chapter": 58,
-        "script_level.position": 4,
         "lesson.key": "Defining Functions",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -3116,8 +2804,6 @@
         "script_level.level_keys": [
           "Eval Define Funcs 5"
         ],
-        "script_level.chapter": 59,
-        "script_level.position": 5,
         "lesson.key": "Defining Functions",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -3129,8 +2815,6 @@
         "script_level.level_keys": [
           "Calc Define Funcs 1"
         ],
-        "script_level.chapter": 60,
-        "script_level.position": 6,
         "lesson.key": "Defining Functions",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -3142,8 +2826,6 @@
         "script_level.level_keys": [
           "Calc Define Funcs 2"
         ],
-        "script_level.chapter": 61,
-        "script_level.position": 7,
         "lesson.key": "Defining Functions",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -3155,8 +2837,6 @@
         "script_level.level_keys": [
           "Calc Define Funcs 3"
         ],
-        "script_level.chapter": 62,
-        "script_level.position": 8,
         "lesson.key": "Defining Functions",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -3168,8 +2848,6 @@
         "script_level.level_keys": [
           "Calc Define Funcs 4"
         ],
-        "script_level.chapter": 63,
-        "script_level.position": 9,
         "lesson.key": "Defining Functions",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -3181,8 +2859,6 @@
         "script_level.level_keys": [
           "Multi Define Funcs 1"
         ],
-        "script_level.chapter": 64,
-        "script_level.position": 10,
         "lesson.key": "Defining Functions",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -3194,8 +2870,6 @@
         "script_level.level_keys": [
           "Multi Define Funcs 2"
         ],
-        "script_level.chapter": 65,
-        "script_level.position": 11,
         "lesson.key": "Defining Functions",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -3207,8 +2881,6 @@
         "script_level.level_keys": [
           "Multi Define Funcs 3"
         ],
-        "script_level.chapter": 66,
-        "script_level.position": 12,
         "lesson.key": "Defining Functions",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -3220,8 +2892,6 @@
         "script_level.level_keys": [
           "msm variables multi 10"
         ],
-        "script_level.chapter": 67,
-        "script_level.position": 13,
         "lesson.key": "Defining Functions",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -3233,8 +2903,6 @@
         "script_level.level_keys": [
           "msm variables multi 11"
         ],
-        "script_level.chapter": 68,
-        "script_level.position": 14,
         "lesson.key": "Defining Functions",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -3246,8 +2914,6 @@
         "script_level.level_keys": [
           "msm variables multi 13"
         ],
-        "script_level.chapter": 69,
-        "script_level.position": 15,
         "lesson.key": "Defining Functions",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -3259,8 +2925,6 @@
         "script_level.level_keys": [
           "PDAlg Design Recipe Video"
         ],
-        "script_level.chapter": 70,
-        "script_level.position": 1,
         "lesson.key": "Rocket-Height",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -3272,8 +2936,6 @@
         "script_level.level_keys": [
           "Play Lab Rocket 3"
         ],
-        "script_level.chapter": 71,
-        "script_level.position": 2,
         "lesson.key": "Rocket-Height",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -3285,8 +2947,6 @@
         "script_level.level_keys": [
           "Play Lab Rocket 4"
         ],
-        "script_level.chapter": 72,
-        "script_level.position": 3,
         "lesson.key": "Rocket-Height",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -3298,8 +2958,6 @@
         "script_level.level_keys": [
           "Play Lab Rocket 5"
         ],
-        "script_level.chapter": 73,
-        "script_level.position": 4,
         "lesson.key": "Rocket-Height",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -3311,8 +2969,6 @@
         "script_level.level_keys": [
           "Play Lab Rocket 6"
         ],
-        "script_level.chapter": 74,
-        "script_level.position": 5,
         "lesson.key": "Rocket-Height",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -3324,8 +2980,6 @@
         "script_level.level_keys": [
           "Play Lab Rocket 7"
         ],
-        "script_level.chapter": 75,
-        "script_level.position": 6,
         "lesson.key": "Rocket-Height",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -3337,8 +2991,6 @@
         "script_level.level_keys": [
           "Play Lab Rocket 8"
         ],
-        "script_level.chapter": 76,
-        "script_level.position": 7,
         "lesson.key": "Rocket-Height",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -3350,8 +3002,6 @@
         "script_level.level_keys": [
           "Play Lab Rocket Free Play"
         ],
-        "script_level.chapter": 77,
-        "script_level.position": 8,
         "lesson.key": "Rocket-Height",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -3363,8 +3013,6 @@
         "script_level.level_keys": [
           "Eval Booleans 1"
         ],
-        "script_level.chapter": 78,
-        "script_level.position": 1,
         "lesson.key": "Booleans",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -3376,8 +3024,6 @@
         "script_level.level_keys": [
           "Eval Booleans 2"
         ],
-        "script_level.chapter": 79,
-        "script_level.position": 2,
         "lesson.key": "Booleans",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -3389,8 +3035,6 @@
         "script_level.level_keys": [
           "Eval Booleans 3"
         ],
-        "script_level.chapter": 80,
-        "script_level.position": 3,
         "lesson.key": "Booleans",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -3402,8 +3046,6 @@
         "script_level.level_keys": [
           "Eval Booleans 4"
         ],
-        "script_level.chapter": 81,
-        "script_level.position": 4,
         "lesson.key": "Booleans",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -3415,8 +3057,6 @@
         "script_level.level_keys": [
           "Eval Booleans 5"
         ],
-        "script_level.chapter": 82,
-        "script_level.position": 5,
         "lesson.key": "Booleans",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -3428,8 +3068,6 @@
         "script_level.level_keys": [
           "Eval Booleans 6"
         ],
-        "script_level.chapter": 83,
-        "script_level.position": 6,
         "lesson.key": "Booleans",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -3441,8 +3079,6 @@
         "script_level.level_keys": [
           "Blocks to Bools 1"
         ],
-        "script_level.chapter": 84,
-        "script_level.position": 7,
         "lesson.key": "Booleans",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -3454,8 +3090,6 @@
         "script_level.level_keys": [
           "Blocks to Bools 2"
         ],
-        "script_level.chapter": 85,
-        "script_level.position": 8,
         "lesson.key": "Booleans",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -3467,8 +3101,6 @@
         "script_level.level_keys": [
           "Blocks to Bools 3"
         ],
-        "script_level.chapter": 86,
-        "script_level.position": 9,
         "lesson.key": "Booleans",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -3480,8 +3112,6 @@
         "script_level.level_keys": [
           "Blocks to Bools 4"
         ],
-        "script_level.chapter": 87,
-        "script_level.position": 10,
         "lesson.key": "Booleans",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -3493,8 +3123,6 @@
         "script_level.level_keys": [
           "Eval Booleans Free Play"
         ],
-        "script_level.chapter": 88,
-        "script_level.position": 11,
         "lesson.key": "Booleans",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -3506,8 +3134,6 @@
         "script_level.level_keys": [
           "Eval Cond 1"
         ],
-        "script_level.chapter": 89,
-        "script_level.position": 1,
         "lesson.key": "Eval: Conditionals",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -3519,8 +3145,6 @@
         "script_level.level_keys": [
           "Eval Cond 2"
         ],
-        "script_level.chapter": 90,
-        "script_level.position": 2,
         "lesson.key": "Eval: Conditionals",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -3532,8 +3156,6 @@
         "script_level.level_keys": [
           "Eval Cond 3"
         ],
-        "script_level.chapter": 91,
-        "script_level.position": 3,
         "lesson.key": "Eval: Conditionals",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -3545,8 +3167,6 @@
         "script_level.level_keys": [
           "Eval Cond 4"
         ],
-        "script_level.chapter": 92,
-        "script_level.position": 4,
         "lesson.key": "Eval: Conditionals",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -3558,8 +3178,6 @@
         "script_level.level_keys": [
           "Eval Cond 5"
         ],
-        "script_level.chapter": 93,
-        "script_level.position": 5,
         "lesson.key": "Eval: Conditionals",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -3571,8 +3189,6 @@
         "script_level.level_keys": [
           "Eval Cond 6"
         ],
-        "script_level.chapter": 94,
-        "script_level.position": 6,
         "lesson.key": "Eval: Conditionals",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -3584,8 +3200,6 @@
         "script_level.level_keys": [
           "Eval Cond 7"
         ],
-        "script_level.chapter": 95,
-        "script_level.position": 7,
         "lesson.key": "Eval: Conditionals",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -3597,8 +3211,6 @@
         "script_level.level_keys": [
           "Eval Cond 8"
         ],
-        "script_level.chapter": 96,
-        "script_level.position": 8,
         "lesson.key": "Eval: Conditionals",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -3610,8 +3222,6 @@
         "script_level.level_keys": [
           "PDAlg end of P3"
         ],
-        "script_level.chapter": 97,
-        "script_level.position": 1,
         "lesson.key": "Next Steps",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"
@@ -3623,8 +3233,6 @@
         "script_level.level_keys": [
           "PDAlg whats next"
         ],
-        "script_level.chapter": 98,
-        "script_level.position": 2,
         "lesson.key": "Next Steps",
         "lesson_group.key": "",
         "script.name": "algebraPD2b"

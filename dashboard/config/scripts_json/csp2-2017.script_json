@@ -350,8 +350,6 @@
         "script_level.level_keys": [
           "v2 U2L1 Student Lesson Introduction"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Bytes and File Sizes",
         "lesson_group.key": "csp2_1",
         "script.name": "csp2-2017"
@@ -373,8 +371,6 @@
         "script_level.level_keys": [
           "U1L12 Reflection Free Response"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Bytes and File Sizes",
         "lesson_group.key": "csp2_1",
         "script.name": "csp2-2017"
@@ -396,8 +392,6 @@
         "script_level.level_keys": [
           "CSP_U2_Shakespeare_Question"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "Bytes and File Sizes",
         "lesson_group.key": "csp2_1",
         "script.name": "csp2-2017"
@@ -419,8 +413,6 @@
         "script_level.level_keys": [
           "csp-pulse-check-survey-2-levelgroup-U2Ch1"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "Bytes and File Sizes",
         "lesson_group.key": "csp2_1",
         "script.name": "csp2-2017"
@@ -442,8 +434,6 @@
         "script_level.level_keys": [
           "v2 U2L2 Student Lesson Summary"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 1,
         "lesson.key": "Text Compression",
         "lesson_group.key": "csp2_1",
         "script.name": "csp2-2017"
@@ -465,8 +455,6 @@
         "script_level.level_keys": [
           "Text Compression"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 2,
         "lesson.key": "Text Compression",
         "lesson_group.key": "csp2_1",
         "script.name": "csp2-2017"
@@ -488,8 +476,6 @@
         "script_level.level_keys": [
           "Widget: Text Compression"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 3,
         "lesson.key": "Text Compression",
         "lesson_group.key": "csp2_1",
         "script.name": "csp2-2017"
@@ -511,8 +497,6 @@
         "script_level.level_keys": [
           "U1L13 - Assess Text Compression reverse process"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 4,
         "lesson.key": "Text Compression",
         "lesson_group.key": "csp2_1",
         "script.name": "csp2-2017"
@@ -534,8 +518,6 @@
         "script_level.level_keys": [
           "U1L13 Assess Text Compression amount"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 5,
         "lesson.key": "Text Compression",
         "lesson_group.key": "csp2_1",
         "script.name": "csp2-2017"
@@ -557,8 +539,6 @@
         "script_level.level_keys": [
           "U1L13 Assessment 1"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 6,
         "lesson.key": "Text Compression",
         "lesson_group.key": "csp2_1",
         "script.name": "csp2-2017"
@@ -580,8 +560,6 @@
         "script_level.level_keys": [
           "U1L13 Assessment 2"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 7,
         "lesson.key": "Text Compression",
         "lesson_group.key": "csp2_1",
         "script.name": "csp2-2017"
@@ -603,8 +581,6 @@
         "script_level.level_keys": [
           "v2 U2L3 Student Lesson Summary"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 1,
         "lesson.key": "Encoding B&W Images",
         "lesson_group.key": "csp2_1",
         "script.name": "csp2-2017"
@@ -626,8 +602,6 @@
         "script_level.level_keys": [
           "Pixelation - Lesson 14 - Make the Letter A"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 2,
         "lesson.key": "Encoding B&W Images",
         "lesson_group.key": "csp2_1",
         "script.name": "csp2-2017"
@@ -649,8 +623,6 @@
         "script_level.level_keys": [
           "Pixelation - Lesson 14 - Fix bit offset"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 3,
         "lesson.key": "Encoding B&W Images",
         "lesson_group.key": "csp2_1",
         "script.name": "csp2-2017"
@@ -672,8 +644,6 @@
         "script_level.level_keys": [
           "Widget: Black and White Pixelation"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 4,
         "lesson.key": "Encoding B&W Images",
         "lesson_group.key": "csp2_1",
         "script.name": "csp2-2017"
@@ -695,8 +665,6 @@
         "script_level.level_keys": [
           "U1L14 Assessment 1"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 5,
         "lesson.key": "Encoding B&W Images",
         "lesson_group.key": "csp2_1",
         "script.name": "csp2-2017"
@@ -718,8 +686,6 @@
         "script_level.level_keys": [
           "U1L14 - Assessment 2"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 6,
         "lesson.key": "Encoding B&W Images",
         "lesson_group.key": "csp2_1",
         "script.name": "csp2-2017"
@@ -741,8 +707,6 @@
         "script_level.level_keys": [
           "v2 U2L4 Student Lesson Summary"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 1,
         "lesson.key": "Encoding Color Images",
         "lesson_group.key": "csp2_1",
         "script.name": "csp2-2017"
@@ -764,8 +728,6 @@
         "script_level.level_keys": [
           "Images, Pixels, and RGB"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 2,
         "lesson.key": "Encoding Color Images",
         "lesson_group.key": "csp2_1",
         "script.name": "csp2-2017"
@@ -787,8 +749,6 @@
         "script_level.level_keys": [
           "Pixelation - Lesson 15 - Complete 3-bit color"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 3,
         "lesson.key": "Encoding Color Images",
         "lesson_group.key": "csp2_1",
         "script.name": "csp2-2017"
@@ -810,8 +770,6 @@
         "script_level.level_keys": [
           "Pixelation - Lesson 15 - Color Shades"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 4,
         "lesson.key": "Encoding Color Images",
         "lesson_group.key": "csp2_1",
         "script.name": "csp2-2017"
@@ -833,8 +791,6 @@
         "script_level.level_keys": [
           "Pixelation - Lesson 15 - Color Shades 4x4"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 5,
         "lesson.key": "Encoding Color Images",
         "lesson_group.key": "csp2_1",
         "script.name": "csp2-2017"
@@ -856,8 +812,6 @@
         "script_level.level_keys": [
           "Pixelation Flappy"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 6,
         "lesson.key": "Encoding Color Images",
         "lesson_group.key": "csp2_1",
         "script.name": "csp2-2017"
@@ -879,8 +833,6 @@
         "script_level.level_keys": [
           "Pixelation Bee"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 7,
         "lesson.key": "Encoding Color Images",
         "lesson_group.key": "csp2_1",
         "script.name": "csp2-2017"
@@ -902,8 +854,6 @@
         "script_level.level_keys": [
           "Favicon Instructions"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 8,
         "lesson.key": "Encoding Color Images",
         "lesson_group.key": "csp2_1",
         "script.name": "csp2-2017"
@@ -925,8 +875,6 @@
         "script_level.level_keys": [
           "Widget: Color Pixelation"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 9,
         "lesson.key": "Encoding Color Images",
         "lesson_group.key": "csp2_1",
         "script.name": "csp2-2017"
@@ -948,8 +896,6 @@
         "script_level.level_keys": [
           "U2L5 Color Pixel MC Question"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 10,
         "lesson.key": "Encoding Color Images",
         "lesson_group.key": "csp2_1",
         "script.name": "csp2-2017"
@@ -971,8 +917,6 @@
         "script_level.level_keys": [
           "U2L5 FR brighten darken image"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 11,
         "lesson.key": "Encoding Color Images",
         "lesson_group.key": "csp2_1",
         "script.name": "csp2-2017"
@@ -994,8 +938,6 @@
         "script_level.level_keys": [
           "v2 U2L5 Student Lesson Introduction"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 1,
         "lesson.key": "Lossy Compression and File Formats",
         "lesson_group.key": "csp2_1",
         "script.name": "csp2-2017"
@@ -1017,8 +959,6 @@
         "script_level.level_keys": [
           "U1L16 - Matching File Compression Types"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 2,
         "lesson.key": "Lossy Compression and File Formats",
         "lesson_group.key": "csp2_1",
         "script.name": "csp2-2017"
@@ -1040,8 +980,6 @@
         "script_level.level_keys": [
           "v2 U2L6 Student Lesson Introduction"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 1,
         "lesson.key": "Practice PT - Encode an Experience",
         "lesson_group.key": "csp2_1",
         "script.name": "csp2-2017"
@@ -1062,8 +1000,6 @@
         "script_level.level_keys": [
           "CSP Unit 2 Ch1 Cumulative Assessment MC"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 1,
         "lesson.key": "Unit 2 Chapter 1 Assessment",
         "lesson_group.key": "csp2_1",
         "script.name": "csp2-2017"
@@ -1085,8 +1021,6 @@
         "script_level.level_keys": [
           "v2 U2L7 Student Lesson Introduction"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 1,
         "lesson.key": "Intro to Data",
         "lesson_group.key": "csp2_2",
         "script.name": "csp2-2017"
@@ -1108,8 +1042,6 @@
         "script_level.level_keys": [
           "csp-pulse-check-survey-3-levelgroup-U2Ch2"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 2,
         "lesson.key": "Intro to Data",
         "lesson_group.key": "csp2_2",
         "script.name": "csp2-2017"
@@ -1131,8 +1063,6 @@
         "script_level.level_keys": [
           "v2 U2L8 Student Lesson Introduction"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 1,
         "lesson.key": "Finding Trends with Visualizations",
         "lesson_group.key": "csp2_2",
         "script.name": "csp2-2017"
@@ -1154,8 +1084,6 @@
         "script_level.level_keys": [
           "U2L8 google trends MC"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 2,
         "lesson.key": "Finding Trends with Visualizations",
         "lesson_group.key": "csp2_2",
         "script.name": "csp2-2017"
@@ -1177,8 +1105,6 @@
         "script_level.level_keys": [
           "U2L8 google trends hypothesis"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 3,
         "lesson.key": "Finding Trends with Visualizations",
         "lesson_group.key": "csp2_2",
         "script.name": "csp2-2017"
@@ -1200,8 +1126,6 @@
         "script_level.level_keys": [
           "v2 U2L9 Student Lesson Introduction"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 1,
         "lesson.key": "Check Your Assumptions",
         "lesson_group.key": "csp2_2",
         "script.name": "csp2-2017"
@@ -1223,8 +1147,6 @@
         "script_level.level_keys": [
           "U2L9 What is digital divide MC"
         ],
-        "script_level.chapter": 39,
-        "script_level.position": 2,
         "lesson.key": "Check Your Assumptions",
         "lesson_group.key": "csp2_2",
         "script.name": "csp2-2017"
@@ -1246,8 +1168,6 @@
         "script_level.level_keys": [
           "U2L9 FR digital divide issue"
         ],
-        "script_level.chapter": 40,
-        "script_level.position": 3,
         "lesson.key": "Check Your Assumptions",
         "lesson_group.key": "csp2_2",
         "script.name": "csp2-2017"
@@ -1269,8 +1189,6 @@
         "script_level.level_keys": [
           "v2 U2L10 Student Lesson Introduction"
         ],
-        "script_level.chapter": 41,
-        "script_level.position": 1,
         "lesson.key": "Good and Bad Data Visualizations",
         "lesson_group.key": "csp2_2",
         "script.name": "csp2-2017"
@@ -1292,8 +1210,6 @@
         "script_level.level_keys": [
           "Collection A: Good and Bad Visualizations"
         ],
-        "script_level.chapter": 42,
-        "script_level.position": 2,
         "lesson.key": "Good and Bad Data Visualizations",
         "lesson_group.key": "csp2_2",
         "script.name": "csp2-2017"
@@ -1315,8 +1231,6 @@
         "script_level.level_keys": [
           "Collection B: Good and Bad Visualizations"
         ],
-        "script_level.chapter": 43,
-        "script_level.position": 3,
         "lesson.key": "Good and Bad Data Visualizations",
         "lesson_group.key": "csp2_2",
         "script.name": "csp2-2017"
@@ -1338,8 +1252,6 @@
         "script_level.level_keys": [
           "U2L10 FR why best worst viz"
         ],
-        "script_level.chapter": 44,
-        "script_level.position": 4,
         "lesson.key": "Good and Bad Data Visualizations",
         "lesson_group.key": "csp2_2",
         "script.name": "csp2-2017"
@@ -1361,8 +1273,6 @@
         "script_level.level_keys": [
           "v2 U2L11 Student Lesson Introduction"
         ],
-        "script_level.chapter": 45,
-        "script_level.position": 1,
         "lesson.key": "Making Data Visualizations",
         "lesson_group.key": "csp2_2",
         "script.name": "csp2-2017"
@@ -1384,8 +1294,6 @@
         "script_level.level_keys": [
           "Downloading the Data Set"
         ],
-        "script_level.chapter": 46,
-        "script_level.position": 2,
         "lesson.key": "Making Data Visualizations",
         "lesson_group.key": "csp2_2",
         "script.name": "csp2-2017"
@@ -1407,8 +1315,6 @@
         "script_level.level_keys": [
           "Making a Scatter Plot"
         ],
-        "script_level.chapter": 47,
-        "script_level.position": 3,
         "lesson.key": "Making Data Visualizations",
         "lesson_group.key": "csp2_2",
         "script.name": "csp2-2017"
@@ -1430,8 +1336,6 @@
         "script_level.level_keys": [
           "Making a Line Chart"
         ],
-        "script_level.chapter": 48,
-        "script_level.position": 4,
         "lesson.key": "Making Data Visualizations",
         "lesson_group.key": "csp2_2",
         "script.name": "csp2-2017"
@@ -1453,8 +1357,6 @@
         "script_level.level_keys": [
           "Making a Bar Chart"
         ],
-        "script_level.chapter": 49,
-        "script_level.position": 5,
         "lesson.key": "Making Data Visualizations",
         "lesson_group.key": "csp2_2",
         "script.name": "csp2-2017"
@@ -1476,8 +1378,6 @@
         "script_level.level_keys": [
           "Editing Chart Appearance"
         ],
-        "script_level.chapter": 50,
-        "script_level.position": 6,
         "lesson.key": "Making Data Visualizations",
         "lesson_group.key": "csp2_2",
         "script.name": "csp2-2017"
@@ -1499,8 +1399,6 @@
         "script_level.level_keys": [
           "U4 - Making Data Visualizations - Free Play"
         ],
-        "script_level.chapter": 51,
-        "script_level.position": 7,
         "lesson.key": "Making Data Visualizations",
         "lesson_group.key": "csp2_2",
         "script.name": "csp2-2017"
@@ -1522,8 +1420,6 @@
         "script_level.level_keys": [
           "U2L10 FR describe what you made from lesson prompt"
         ],
-        "script_level.chapter": 52,
-        "script_level.position": 8,
         "lesson.key": "Making Data Visualizations",
         "lesson_group.key": "csp2_2",
         "script.name": "csp2-2017"
@@ -1545,8 +1441,6 @@
         "script_level.level_keys": [
           "v2 U2L12 Student Lesson Introduction"
         ],
-        "script_level.chapter": 53,
-        "script_level.position": 1,
         "lesson.key": "Discover a Data Story",
         "lesson_group.key": "csp2_2",
         "script.name": "csp2-2017"
@@ -1568,8 +1462,6 @@
         "script_level.level_keys": [
           "U2L12 FR reflection on collaboration"
         ],
-        "script_level.chapter": 54,
-        "script_level.position": 2,
         "lesson.key": "Discover a Data Story",
         "lesson_group.key": "csp2_2",
         "script.name": "csp2-2017"
@@ -1591,8 +1483,6 @@
         "script_level.level_keys": [
           "v2 U2L13 Student Lesson Introduction"
         ],
-        "script_level.chapter": 55,
-        "script_level.position": 1,
         "lesson.key": "Cleaning Data",
         "lesson_group.key": "csp2_2",
         "script.name": "csp2-2017"
@@ -1614,8 +1504,6 @@
         "script_level.level_keys": [
           "Getting to Know Your Data"
         ],
-        "script_level.chapter": 56,
-        "script_level.position": 2,
         "lesson.key": "Cleaning Data",
         "lesson_group.key": "csp2_2",
         "script.name": "csp2-2017"
@@ -1637,8 +1525,6 @@
         "script_level.level_keys": [
           "Cleaning Data"
         ],
-        "script_level.chapter": 57,
-        "script_level.position": 3,
         "lesson.key": "Cleaning Data",
         "lesson_group.key": "csp2_2",
         "script.name": "csp2-2017"
@@ -1660,8 +1546,6 @@
         "script_level.level_keys": [
           "Categorizing Data"
         ],
-        "script_level.chapter": 58,
-        "script_level.position": 4,
         "lesson.key": "Cleaning Data",
         "lesson_group.key": "csp2_2",
         "script.name": "csp2-2017"
@@ -1683,8 +1567,6 @@
         "script_level.level_keys": [
           "U2L13 Cleaning Data MC"
         ],
-        "script_level.chapter": 59,
-        "script_level.position": 5,
         "lesson.key": "Cleaning Data",
         "lesson_group.key": "csp2_2",
         "script.name": "csp2-2017"
@@ -1706,8 +1588,6 @@
         "script_level.level_keys": [
           "U2L13 FR Reflection data analysis objective"
         ],
-        "script_level.chapter": 60,
-        "script_level.position": 6,
         "lesson.key": "Cleaning Data",
         "lesson_group.key": "csp2_2",
         "script.name": "csp2-2017"
@@ -1729,8 +1609,6 @@
         "script_level.level_keys": [
           "v2 U2L14 Student Lesson Introduction"
         ],
-        "script_level.chapter": 61,
-        "script_level.position": 1,
         "lesson.key": "Creating Summary Tables",
         "lesson_group.key": "csp2_2",
         "script.name": "csp2-2017"
@@ -1752,8 +1630,6 @@
         "script_level.level_keys": [
           "Making Pivot Tables Part 1 - The Basics"
         ],
-        "script_level.chapter": 62,
-        "script_level.position": 2,
         "lesson.key": "Creating Summary Tables",
         "lesson_group.key": "csp2_2",
         "script.name": "csp2-2017"
@@ -1775,8 +1651,6 @@
         "script_level.level_keys": [
           "Making Pivot Tables Part 2 - Manipulation and Visualization"
         ],
-        "script_level.chapter": 63,
-        "script_level.position": 3,
         "lesson.key": "Creating Summary Tables",
         "lesson_group.key": "csp2_2",
         "script.name": "csp2-2017"
@@ -1798,8 +1672,6 @@
         "script_level.level_keys": [
           "U4L08v2 Making Pivot Tables Part 3"
         ],
-        "script_level.chapter": 64,
-        "script_level.position": 4,
         "lesson.key": "Creating Summary Tables",
         "lesson_group.key": "csp2_2",
         "script.name": "csp2-2017"
@@ -1821,8 +1693,6 @@
         "script_level.level_keys": [
           "U2L14 Summary Tables MC"
         ],
-        "script_level.chapter": 65,
-        "script_level.position": 5,
         "lesson.key": "Creating Summary Tables",
         "lesson_group.key": "csp2_2",
         "script.name": "csp2-2017"
@@ -1844,8 +1714,6 @@
         "script_level.level_keys": [
           "v2 U2L15 Student Lesson Introduction"
         ],
-        "script_level.chapter": 66,
-        "script_level.position": 1,
         "lesson.key": "Practice PT - Tell a Data Story",
         "lesson_group.key": "csp2_2",
         "script.name": "csp2-2017"
@@ -1883,8 +1751,6 @@
           "csp_affirmation_intervention_2",
           "csp_affirmation_control_2"
         ],
-        "script_level.chapter": 67,
-        "script_level.position": 1,
         "lesson.key": "Unit 2 Chapter 2 Assessment",
         "lesson_group.key": "csp2_2",
         "script.name": "csp2-2017"
@@ -1906,8 +1772,6 @@
         "script_level.level_keys": [
           "CSP Unit 2 Ch2 Cumulative Assessment MC"
         ],
-        "script_level.chapter": 68,
-        "script_level.position": 2,
         "lesson.key": "Unit 2 Chapter 2 Assessment",
         "lesson_group.key": "csp2_2",
         "script.name": "csp2-2017"
@@ -1929,8 +1793,6 @@
         "script_level.level_keys": [
           "csp-post-survey-2018-markdown-with-link-to-survey"
         ],
-        "script_level.chapter": 69,
-        "script_level.position": 1,
         "lesson.key": "Post-Course Survey",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp2-2017"
@@ -1952,8 +1814,6 @@
         "script_level.level_keys": [
           "Click Here!"
         ],
-        "script_level.chapter": 70,
-        "script_level.position": 2,
         "lesson.key": "Post-Course Survey",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp2-2017"
@@ -1970,8 +1830,6 @@
         "script_level.level_keys": [
           "v2 U2L1 Student Lesson Introduction"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Bytes and File Sizes",
         "lesson_group.key": "csp2_1",
         "script.name": "csp2-2017"
@@ -1983,8 +1841,6 @@
         "script_level.level_keys": [
           "U1L12 Reflection Free Response"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Bytes and File Sizes",
         "lesson_group.key": "csp2_1",
         "script.name": "csp2-2017"
@@ -1996,8 +1852,6 @@
         "script_level.level_keys": [
           "CSP_U2_Shakespeare_Question"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "Bytes and File Sizes",
         "lesson_group.key": "csp2_1",
         "script.name": "csp2-2017"
@@ -2009,8 +1863,6 @@
         "script_level.level_keys": [
           "csp-pulse-check-survey-2-levelgroup-U2Ch1"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "Bytes and File Sizes",
         "lesson_group.key": "csp2_1",
         "script.name": "csp2-2017"
@@ -2022,8 +1874,6 @@
         "script_level.level_keys": [
           "v2 U2L2 Student Lesson Summary"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 1,
         "lesson.key": "Text Compression",
         "lesson_group.key": "csp2_1",
         "script.name": "csp2-2017"
@@ -2035,8 +1885,6 @@
         "script_level.level_keys": [
           "Text Compression"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 2,
         "lesson.key": "Text Compression",
         "lesson_group.key": "csp2_1",
         "script.name": "csp2-2017"
@@ -2048,8 +1896,6 @@
         "script_level.level_keys": [
           "Widget: Text Compression"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 3,
         "lesson.key": "Text Compression",
         "lesson_group.key": "csp2_1",
         "script.name": "csp2-2017"
@@ -2061,8 +1907,6 @@
         "script_level.level_keys": [
           "U1L13 - Assess Text Compression reverse process"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 4,
         "lesson.key": "Text Compression",
         "lesson_group.key": "csp2_1",
         "script.name": "csp2-2017"
@@ -2074,8 +1918,6 @@
         "script_level.level_keys": [
           "U1L13 Assess Text Compression amount"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 5,
         "lesson.key": "Text Compression",
         "lesson_group.key": "csp2_1",
         "script.name": "csp2-2017"
@@ -2087,8 +1929,6 @@
         "script_level.level_keys": [
           "U1L13 Assessment 1"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 6,
         "lesson.key": "Text Compression",
         "lesson_group.key": "csp2_1",
         "script.name": "csp2-2017"
@@ -2100,8 +1940,6 @@
         "script_level.level_keys": [
           "U1L13 Assessment 2"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 7,
         "lesson.key": "Text Compression",
         "lesson_group.key": "csp2_1",
         "script.name": "csp2-2017"
@@ -2113,8 +1951,6 @@
         "script_level.level_keys": [
           "v2 U2L3 Student Lesson Summary"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 1,
         "lesson.key": "Encoding B&W Images",
         "lesson_group.key": "csp2_1",
         "script.name": "csp2-2017"
@@ -2126,8 +1962,6 @@
         "script_level.level_keys": [
           "Pixelation - Lesson 14 - Make the Letter A"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 2,
         "lesson.key": "Encoding B&W Images",
         "lesson_group.key": "csp2_1",
         "script.name": "csp2-2017"
@@ -2139,8 +1973,6 @@
         "script_level.level_keys": [
           "Pixelation - Lesson 14 - Fix bit offset"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 3,
         "lesson.key": "Encoding B&W Images",
         "lesson_group.key": "csp2_1",
         "script.name": "csp2-2017"
@@ -2152,8 +1984,6 @@
         "script_level.level_keys": [
           "Widget: Black and White Pixelation"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 4,
         "lesson.key": "Encoding B&W Images",
         "lesson_group.key": "csp2_1",
         "script.name": "csp2-2017"
@@ -2165,8 +1995,6 @@
         "script_level.level_keys": [
           "U1L14 Assessment 1"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 5,
         "lesson.key": "Encoding B&W Images",
         "lesson_group.key": "csp2_1",
         "script.name": "csp2-2017"
@@ -2178,8 +2006,6 @@
         "script_level.level_keys": [
           "U1L14 - Assessment 2"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 6,
         "lesson.key": "Encoding B&W Images",
         "lesson_group.key": "csp2_1",
         "script.name": "csp2-2017"
@@ -2191,8 +2017,6 @@
         "script_level.level_keys": [
           "v2 U2L4 Student Lesson Summary"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 1,
         "lesson.key": "Encoding Color Images",
         "lesson_group.key": "csp2_1",
         "script.name": "csp2-2017"
@@ -2204,8 +2028,6 @@
         "script_level.level_keys": [
           "Images, Pixels, and RGB"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 2,
         "lesson.key": "Encoding Color Images",
         "lesson_group.key": "csp2_1",
         "script.name": "csp2-2017"
@@ -2217,8 +2039,6 @@
         "script_level.level_keys": [
           "Pixelation - Lesson 15 - Complete 3-bit color"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 3,
         "lesson.key": "Encoding Color Images",
         "lesson_group.key": "csp2_1",
         "script.name": "csp2-2017"
@@ -2230,8 +2050,6 @@
         "script_level.level_keys": [
           "Pixelation - Lesson 15 - Color Shades"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 4,
         "lesson.key": "Encoding Color Images",
         "lesson_group.key": "csp2_1",
         "script.name": "csp2-2017"
@@ -2243,8 +2061,6 @@
         "script_level.level_keys": [
           "Pixelation - Lesson 15 - Color Shades 4x4"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 5,
         "lesson.key": "Encoding Color Images",
         "lesson_group.key": "csp2_1",
         "script.name": "csp2-2017"
@@ -2256,8 +2072,6 @@
         "script_level.level_keys": [
           "Pixelation Flappy"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 6,
         "lesson.key": "Encoding Color Images",
         "lesson_group.key": "csp2_1",
         "script.name": "csp2-2017"
@@ -2269,8 +2083,6 @@
         "script_level.level_keys": [
           "Pixelation Bee"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 7,
         "lesson.key": "Encoding Color Images",
         "lesson_group.key": "csp2_1",
         "script.name": "csp2-2017"
@@ -2282,8 +2094,6 @@
         "script_level.level_keys": [
           "Favicon Instructions"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 8,
         "lesson.key": "Encoding Color Images",
         "lesson_group.key": "csp2_1",
         "script.name": "csp2-2017"
@@ -2295,8 +2105,6 @@
         "script_level.level_keys": [
           "Widget: Color Pixelation"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 9,
         "lesson.key": "Encoding Color Images",
         "lesson_group.key": "csp2_1",
         "script.name": "csp2-2017"
@@ -2308,8 +2116,6 @@
         "script_level.level_keys": [
           "U2L5 Color Pixel MC Question"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 10,
         "lesson.key": "Encoding Color Images",
         "lesson_group.key": "csp2_1",
         "script.name": "csp2-2017"
@@ -2321,8 +2127,6 @@
         "script_level.level_keys": [
           "U2L5 FR brighten darken image"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 11,
         "lesson.key": "Encoding Color Images",
         "lesson_group.key": "csp2_1",
         "script.name": "csp2-2017"
@@ -2334,8 +2138,6 @@
         "script_level.level_keys": [
           "v2 U2L5 Student Lesson Introduction"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 1,
         "lesson.key": "Lossy Compression and File Formats",
         "lesson_group.key": "csp2_1",
         "script.name": "csp2-2017"
@@ -2347,8 +2149,6 @@
         "script_level.level_keys": [
           "U1L16 - Matching File Compression Types"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 2,
         "lesson.key": "Lossy Compression and File Formats",
         "lesson_group.key": "csp2_1",
         "script.name": "csp2-2017"
@@ -2360,8 +2160,6 @@
         "script_level.level_keys": [
           "v2 U2L6 Student Lesson Introduction"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 1,
         "lesson.key": "Practice PT - Encode an Experience",
         "lesson_group.key": "csp2_1",
         "script.name": "csp2-2017"
@@ -2373,8 +2171,6 @@
         "script_level.level_keys": [
           "CSP Unit 2 Ch1 Cumulative Assessment MC"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 1,
         "lesson.key": "Unit 2 Chapter 1 Assessment",
         "lesson_group.key": "csp2_1",
         "script.name": "csp2-2017"
@@ -2386,8 +2182,6 @@
         "script_level.level_keys": [
           "v2 U2L7 Student Lesson Introduction"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 1,
         "lesson.key": "Intro to Data",
         "lesson_group.key": "csp2_2",
         "script.name": "csp2-2017"
@@ -2399,8 +2193,6 @@
         "script_level.level_keys": [
           "csp-pulse-check-survey-3-levelgroup-U2Ch2"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 2,
         "lesson.key": "Intro to Data",
         "lesson_group.key": "csp2_2",
         "script.name": "csp2-2017"
@@ -2412,8 +2204,6 @@
         "script_level.level_keys": [
           "v2 U2L8 Student Lesson Introduction"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 1,
         "lesson.key": "Finding Trends with Visualizations",
         "lesson_group.key": "csp2_2",
         "script.name": "csp2-2017"
@@ -2425,8 +2215,6 @@
         "script_level.level_keys": [
           "U2L8 google trends MC"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 2,
         "lesson.key": "Finding Trends with Visualizations",
         "lesson_group.key": "csp2_2",
         "script.name": "csp2-2017"
@@ -2438,8 +2226,6 @@
         "script_level.level_keys": [
           "U2L8 google trends hypothesis"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 3,
         "lesson.key": "Finding Trends with Visualizations",
         "lesson_group.key": "csp2_2",
         "script.name": "csp2-2017"
@@ -2451,8 +2237,6 @@
         "script_level.level_keys": [
           "v2 U2L9 Student Lesson Introduction"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 1,
         "lesson.key": "Check Your Assumptions",
         "lesson_group.key": "csp2_2",
         "script.name": "csp2-2017"
@@ -2464,8 +2248,6 @@
         "script_level.level_keys": [
           "U2L9 What is digital divide MC"
         ],
-        "script_level.chapter": 39,
-        "script_level.position": 2,
         "lesson.key": "Check Your Assumptions",
         "lesson_group.key": "csp2_2",
         "script.name": "csp2-2017"
@@ -2477,8 +2259,6 @@
         "script_level.level_keys": [
           "U2L9 FR digital divide issue"
         ],
-        "script_level.chapter": 40,
-        "script_level.position": 3,
         "lesson.key": "Check Your Assumptions",
         "lesson_group.key": "csp2_2",
         "script.name": "csp2-2017"
@@ -2490,8 +2270,6 @@
         "script_level.level_keys": [
           "v2 U2L10 Student Lesson Introduction"
         ],
-        "script_level.chapter": 41,
-        "script_level.position": 1,
         "lesson.key": "Good and Bad Data Visualizations",
         "lesson_group.key": "csp2_2",
         "script.name": "csp2-2017"
@@ -2503,8 +2281,6 @@
         "script_level.level_keys": [
           "Collection A: Good and Bad Visualizations"
         ],
-        "script_level.chapter": 42,
-        "script_level.position": 2,
         "lesson.key": "Good and Bad Data Visualizations",
         "lesson_group.key": "csp2_2",
         "script.name": "csp2-2017"
@@ -2516,8 +2292,6 @@
         "script_level.level_keys": [
           "Collection B: Good and Bad Visualizations"
         ],
-        "script_level.chapter": 43,
-        "script_level.position": 3,
         "lesson.key": "Good and Bad Data Visualizations",
         "lesson_group.key": "csp2_2",
         "script.name": "csp2-2017"
@@ -2529,8 +2303,6 @@
         "script_level.level_keys": [
           "U2L10 FR why best worst viz"
         ],
-        "script_level.chapter": 44,
-        "script_level.position": 4,
         "lesson.key": "Good and Bad Data Visualizations",
         "lesson_group.key": "csp2_2",
         "script.name": "csp2-2017"
@@ -2542,8 +2314,6 @@
         "script_level.level_keys": [
           "v2 U2L11 Student Lesson Introduction"
         ],
-        "script_level.chapter": 45,
-        "script_level.position": 1,
         "lesson.key": "Making Data Visualizations",
         "lesson_group.key": "csp2_2",
         "script.name": "csp2-2017"
@@ -2555,8 +2325,6 @@
         "script_level.level_keys": [
           "Downloading the Data Set"
         ],
-        "script_level.chapter": 46,
-        "script_level.position": 2,
         "lesson.key": "Making Data Visualizations",
         "lesson_group.key": "csp2_2",
         "script.name": "csp2-2017"
@@ -2568,8 +2336,6 @@
         "script_level.level_keys": [
           "Making a Scatter Plot"
         ],
-        "script_level.chapter": 47,
-        "script_level.position": 3,
         "lesson.key": "Making Data Visualizations",
         "lesson_group.key": "csp2_2",
         "script.name": "csp2-2017"
@@ -2581,8 +2347,6 @@
         "script_level.level_keys": [
           "Making a Line Chart"
         ],
-        "script_level.chapter": 48,
-        "script_level.position": 4,
         "lesson.key": "Making Data Visualizations",
         "lesson_group.key": "csp2_2",
         "script.name": "csp2-2017"
@@ -2594,8 +2358,6 @@
         "script_level.level_keys": [
           "Making a Bar Chart"
         ],
-        "script_level.chapter": 49,
-        "script_level.position": 5,
         "lesson.key": "Making Data Visualizations",
         "lesson_group.key": "csp2_2",
         "script.name": "csp2-2017"
@@ -2607,8 +2369,6 @@
         "script_level.level_keys": [
           "Editing Chart Appearance"
         ],
-        "script_level.chapter": 50,
-        "script_level.position": 6,
         "lesson.key": "Making Data Visualizations",
         "lesson_group.key": "csp2_2",
         "script.name": "csp2-2017"
@@ -2620,8 +2380,6 @@
         "script_level.level_keys": [
           "U4 - Making Data Visualizations - Free Play"
         ],
-        "script_level.chapter": 51,
-        "script_level.position": 7,
         "lesson.key": "Making Data Visualizations",
         "lesson_group.key": "csp2_2",
         "script.name": "csp2-2017"
@@ -2633,8 +2391,6 @@
         "script_level.level_keys": [
           "U2L10 FR describe what you made from lesson prompt"
         ],
-        "script_level.chapter": 52,
-        "script_level.position": 8,
         "lesson.key": "Making Data Visualizations",
         "lesson_group.key": "csp2_2",
         "script.name": "csp2-2017"
@@ -2646,8 +2402,6 @@
         "script_level.level_keys": [
           "v2 U2L12 Student Lesson Introduction"
         ],
-        "script_level.chapter": 53,
-        "script_level.position": 1,
         "lesson.key": "Discover a Data Story",
         "lesson_group.key": "csp2_2",
         "script.name": "csp2-2017"
@@ -2659,8 +2413,6 @@
         "script_level.level_keys": [
           "U2L12 FR reflection on collaboration"
         ],
-        "script_level.chapter": 54,
-        "script_level.position": 2,
         "lesson.key": "Discover a Data Story",
         "lesson_group.key": "csp2_2",
         "script.name": "csp2-2017"
@@ -2672,8 +2424,6 @@
         "script_level.level_keys": [
           "v2 U2L13 Student Lesson Introduction"
         ],
-        "script_level.chapter": 55,
-        "script_level.position": 1,
         "lesson.key": "Cleaning Data",
         "lesson_group.key": "csp2_2",
         "script.name": "csp2-2017"
@@ -2685,8 +2435,6 @@
         "script_level.level_keys": [
           "Getting to Know Your Data"
         ],
-        "script_level.chapter": 56,
-        "script_level.position": 2,
         "lesson.key": "Cleaning Data",
         "lesson_group.key": "csp2_2",
         "script.name": "csp2-2017"
@@ -2698,8 +2446,6 @@
         "script_level.level_keys": [
           "Cleaning Data"
         ],
-        "script_level.chapter": 57,
-        "script_level.position": 3,
         "lesson.key": "Cleaning Data",
         "lesson_group.key": "csp2_2",
         "script.name": "csp2-2017"
@@ -2711,8 +2457,6 @@
         "script_level.level_keys": [
           "Categorizing Data"
         ],
-        "script_level.chapter": 58,
-        "script_level.position": 4,
         "lesson.key": "Cleaning Data",
         "lesson_group.key": "csp2_2",
         "script.name": "csp2-2017"
@@ -2724,8 +2468,6 @@
         "script_level.level_keys": [
           "U2L13 Cleaning Data MC"
         ],
-        "script_level.chapter": 59,
-        "script_level.position": 5,
         "lesson.key": "Cleaning Data",
         "lesson_group.key": "csp2_2",
         "script.name": "csp2-2017"
@@ -2737,8 +2479,6 @@
         "script_level.level_keys": [
           "U2L13 FR Reflection data analysis objective"
         ],
-        "script_level.chapter": 60,
-        "script_level.position": 6,
         "lesson.key": "Cleaning Data",
         "lesson_group.key": "csp2_2",
         "script.name": "csp2-2017"
@@ -2750,8 +2490,6 @@
         "script_level.level_keys": [
           "v2 U2L14 Student Lesson Introduction"
         ],
-        "script_level.chapter": 61,
-        "script_level.position": 1,
         "lesson.key": "Creating Summary Tables",
         "lesson_group.key": "csp2_2",
         "script.name": "csp2-2017"
@@ -2763,8 +2501,6 @@
         "script_level.level_keys": [
           "Making Pivot Tables Part 1 - The Basics"
         ],
-        "script_level.chapter": 62,
-        "script_level.position": 2,
         "lesson.key": "Creating Summary Tables",
         "lesson_group.key": "csp2_2",
         "script.name": "csp2-2017"
@@ -2776,8 +2512,6 @@
         "script_level.level_keys": [
           "Making Pivot Tables Part 2 - Manipulation and Visualization"
         ],
-        "script_level.chapter": 63,
-        "script_level.position": 3,
         "lesson.key": "Creating Summary Tables",
         "lesson_group.key": "csp2_2",
         "script.name": "csp2-2017"
@@ -2789,8 +2523,6 @@
         "script_level.level_keys": [
           "U4L08v2 Making Pivot Tables Part 3"
         ],
-        "script_level.chapter": 64,
-        "script_level.position": 4,
         "lesson.key": "Creating Summary Tables",
         "lesson_group.key": "csp2_2",
         "script.name": "csp2-2017"
@@ -2802,8 +2534,6 @@
         "script_level.level_keys": [
           "U2L14 Summary Tables MC"
         ],
-        "script_level.chapter": 65,
-        "script_level.position": 5,
         "lesson.key": "Creating Summary Tables",
         "lesson_group.key": "csp2_2",
         "script.name": "csp2-2017"
@@ -2815,8 +2545,6 @@
         "script_level.level_keys": [
           "v2 U2L15 Student Lesson Introduction"
         ],
-        "script_level.chapter": 66,
-        "script_level.position": 1,
         "lesson.key": "Practice PT - Tell a Data Story",
         "lesson_group.key": "csp2_2",
         "script.name": "csp2-2017"
@@ -2829,8 +2557,6 @@
           "csp_affirmation_intervention_2",
           "csp_affirmation_control_2"
         ],
-        "script_level.chapter": 67,
-        "script_level.position": 1,
         "lesson.key": "Unit 2 Chapter 2 Assessment",
         "lesson_group.key": "csp2_2",
         "script.name": "csp2-2017"
@@ -2843,8 +2569,6 @@
           "csp_affirmation_intervention_2",
           "csp_affirmation_control_2"
         ],
-        "script_level.chapter": 67,
-        "script_level.position": 1,
         "lesson.key": "Unit 2 Chapter 2 Assessment",
         "lesson_group.key": "csp2_2",
         "script.name": "csp2-2017"
@@ -2856,8 +2580,6 @@
         "script_level.level_keys": [
           "CSP Unit 2 Ch2 Cumulative Assessment MC"
         ],
-        "script_level.chapter": 68,
-        "script_level.position": 2,
         "lesson.key": "Unit 2 Chapter 2 Assessment",
         "lesson_group.key": "csp2_2",
         "script.name": "csp2-2017"
@@ -2869,8 +2591,6 @@
         "script_level.level_keys": [
           "csp-post-survey-2018-markdown-with-link-to-survey"
         ],
-        "script_level.chapter": 69,
-        "script_level.position": 1,
         "lesson.key": "Post-Course Survey",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp2-2017"
@@ -2882,8 +2602,6 @@
         "script_level.level_keys": [
           "Click Here!"
         ],
-        "script_level.chapter": 70,
-        "script_level.position": 2,
         "lesson.key": "Post-Course Survey",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp2-2017"

@@ -153,8 +153,6 @@
         "script_level.level_keys": [
           "CSP-PL AYWS1 Workshop Overview"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Module 1",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -176,8 +174,6 @@
         "script_level.level_keys": [
           "CSP Module 1 Unit 3 Context"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Module 1",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -199,8 +195,6 @@
         "script_level.level_keys": [
           "CSP - Unit 4 tasks overview"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "Module 1",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -222,8 +216,6 @@
         "script_level.level_keys": [
           "CSP-PL - U4 L12 Practice PT 1"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "Module 1",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -245,8 +237,6 @@
         "script_level.level_keys": [
           "CSP-PL U4 L12 Practice PT 2"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 5,
         "lesson.key": "Module 1",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -268,8 +258,6 @@
         "script_level.level_keys": [
           "CSP Module 1 Unit 4 Reflection"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 6,
         "lesson.key": "Module 1",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -291,8 +279,6 @@
         "script_level.level_keys": [
           "CSP Module 1 EIPM Reflection"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 7,
         "lesson.key": "Module 1",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -314,8 +300,6 @@
         "script_level.level_keys": [
           "CSP Module 1 EIPM goes virtual"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 8,
         "lesson.key": "Module 1",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -337,8 +321,6 @@
         "script_level.level_keys": [
           "CSP - Module 1 Wrap Up"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 9,
         "lesson.key": "Module 1",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -360,8 +342,6 @@
         "script_level.level_keys": [
           "CSP-PL AYWS2 Workshop Overview"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 1,
         "lesson.key": "Module 2",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -383,8 +363,6 @@
         "script_level.level_keys": [
           "CSP - Variables Practice overview"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 2,
         "lesson.key": "Module 2",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -406,8 +384,6 @@
         "script_level.level_keys": [
           "CSP-PL - U4 L03 Variables numbers practice 1"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 3,
         "lesson.key": "Module 2",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -429,8 +405,6 @@
         "script_level.level_keys": [
           "CSP - PL - U4 L03 Variables numbers practice 4"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 4,
         "lesson.key": "Module 2",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -452,8 +426,6 @@
         "script_level.level_keys": [
           "CSP - PL - U4 L03 Variables operator practice 1"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 5,
         "lesson.key": "Module 2",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -475,8 +447,6 @@
         "script_level.level_keys": [
           "CSP - PL - U4 L03 Variables operator practice 3"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 6,
         "lesson.key": "Module 2",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -498,8 +468,6 @@
         "script_level.level_keys": [
           "CSP - PL - U4 L03 Variables operator practice 2"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 7,
         "lesson.key": "Module 2",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -521,8 +489,6 @@
         "script_level.level_keys": [
           "CSP - PL - U4 L03 Variables operator practice 5"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 8,
         "lesson.key": "Module 2",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -544,8 +510,6 @@
         "script_level.level_keys": [
           "CSP - PL8 - U4 L03 Variables operator practice 6"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 9,
         "lesson.key": "Module 2",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -567,8 +531,6 @@
         "script_level.level_keys": [
           "CSP - PL9 - U4 L03 Variable Scope: Local vs. Global"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 10,
         "lesson.key": "Module 2",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -590,8 +552,6 @@
         "script_level.level_keys": [
           "CSP - PL - Practice Reflection"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 11,
         "lesson.key": "Module 2",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -613,8 +573,6 @@
         "script_level.level_keys": [
           "CSP - Variables Make overview"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 12,
         "lesson.key": "Module 2",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -636,8 +594,6 @@
         "script_level.level_keys": [
           "CSP - PL U4 L04 Variables Make Project_2020"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 13,
         "lesson.key": "Module 2",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -659,8 +615,6 @@
         "script_level.level_keys": [
           "CSP - PL - U4 L04 Variables Make Project Submit_2020"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 14,
         "lesson.key": "Module 2",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -682,8 +636,6 @@
         "script_level.level_keys": [
           "CSP - PL - Make Reflection"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 15,
         "lesson.key": "Module 2",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -705,8 +657,6 @@
         "script_level.level_keys": [
           "CSP-PL - Unit 4 Wrap-up"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 16,
         "lesson.key": "Module 2",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -728,8 +678,6 @@
         "script_level.level_keys": [
           "CSP - PL - Collaboration Reflection"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 17,
         "lesson.key": "Module 2",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -751,8 +699,6 @@
         "script_level.level_keys": [
           "CSP - Module 2 Wrap Up"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 18,
         "lesson.key": "Module 2",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -774,8 +720,6 @@
         "script_level.level_keys": [
           "CSP-PL AYWS3 Workshop Overview"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 1,
         "lesson.key": "Module 3",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -797,8 +741,6 @@
         "script_level.level_keys": [
           "CSP - Understanding the context for the Model Lesson overview"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 2,
         "lesson.key": "Module 3",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -820,8 +762,6 @@
         "script_level.level_keys": [
           "CSP - Synch3 - Reflection 1"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 3,
         "lesson.key": "Module 3",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -843,8 +783,6 @@
         "script_level.level_keys": [
           "CSP - Synch3 - Reflection 2"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 4,
         "lesson.key": "Module 3",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -866,8 +804,6 @@
         "script_level.level_keys": [
           "CSP - Asynch3 - Intro to CI"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 5,
         "lesson.key": "Module 3",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -889,8 +825,6 @@
         "script_level.level_keys": [
           "CSP - Asynch3 - Broadening the def"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 6,
         "lesson.key": "Module 3",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -912,8 +846,6 @@
         "script_level.level_keys": [
           "CSP - Asynch3 - Feedback in CI"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 7,
         "lesson.key": "Module 3",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -935,8 +867,6 @@
         "script_level.level_keys": [
           "CSP - Asynch3 - Practice feedback"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 8,
         "lesson.key": "Module 3",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -958,8 +888,6 @@
         "script_level.level_keys": [
           "CSP - Module 3 Wrap Up"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 9,
         "lesson.key": "Module 3",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -981,8 +909,6 @@
         "script_level.level_keys": [
           "CSP-PL AYWA4 Workshop Overview"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 1,
         "lesson.key": "Module 4",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -1004,8 +930,6 @@
         "script_level.level_keys": [
           "CSP - Understanding the content of the Lists EIPM sequence"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 2,
         "lesson.key": "Module 4",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -1027,8 +951,6 @@
         "script_level.level_keys": [
           "CSP - Lists EIPM reflection"
         ],
-        "script_level.chapter": 39,
-        "script_level.position": 3,
         "lesson.key": "Module 4",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -1050,8 +972,6 @@
         "script_level.level_keys": [
           "CSP AYW4 - Mental Models in Unit 5"
         ],
-        "script_level.chapter": 40,
-        "script_level.position": 4,
         "lesson.key": "Module 4",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -1073,8 +993,6 @@
         "script_level.level_keys": [
           "CSP - Asynch4 - Intro to Traversals"
         ],
-        "script_level.chapter": 41,
-        "script_level.position": 5,
         "lesson.key": "Module 4",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -1096,8 +1014,6 @@
         "script_level.level_keys": [
           "CSP - Asynch 4 - U5 Traversals Investigate Mile Tracker Modify"
         ],
-        "script_level.chapter": 42,
-        "script_level.position": 6,
         "lesson.key": "Module 4",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -1119,8 +1035,6 @@
         "script_level.level_keys": [
           "CSP - Asynch4 - U5L10 Traversals Investigate"
         ],
-        "script_level.chapter": 43,
-        "script_level.position": 7,
         "lesson.key": "Module 4",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -1142,8 +1056,6 @@
         "script_level.level_keys": [
           "CSP - Asynch4 -U5 Traversals Investigate Dog Finder Modify"
         ],
-        "script_level.chapter": 44,
-        "script_level.position": 8,
         "lesson.key": "Module 4",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -1165,8 +1077,6 @@
         "script_level.level_keys": [
           "CSP AYW4 - Reflection on datasets"
         ],
-        "script_level.chapter": 45,
-        "script_level.position": 9,
         "lesson.key": "Module 4",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -1188,8 +1098,6 @@
         "script_level.level_keys": [
           "CSP - Module 4 Wrap Up"
         ],
-        "script_level.chapter": 46,
-        "script_level.position": 10,
         "lesson.key": "Module 4",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -1211,8 +1119,6 @@
         "script_level.level_keys": [
           "CSP-PL Module 5 - Workshop Overview"
         ],
-        "script_level.chapter": 47,
-        "script_level.position": 1,
         "lesson.key": "Module 5",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -1234,8 +1140,6 @@
         "script_level.level_keys": [
           "CSP-PL M5 - Intro to Unit 7"
         ],
-        "script_level.chapter": 48,
-        "script_level.position": 2,
         "lesson.key": "Module 5",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -1257,8 +1161,6 @@
         "script_level.level_keys": [
           "CSP-PL M5 - Param Explore"
         ],
-        "script_level.chapter": 49,
-        "script_level.position": 3,
         "lesson.key": "Module 5",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -1280,8 +1182,6 @@
         "script_level.level_keys": [
           "CSP-PL M5 - Param Prac 1"
         ],
-        "script_level.chapter": 50,
-        "script_level.position": 4,
         "lesson.key": "Module 5",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -1303,8 +1203,6 @@
         "script_level.level_keys": [
           "PL U7 Param Return Practice Part 1"
         ],
-        "script_level.chapter": 51,
-        "script_level.position": 5,
         "lesson.key": "Module 5",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -1326,8 +1224,6 @@
         "script_level.level_keys": [
           "PL U7 Param Return Practice Part 2"
         ],
-        "script_level.chapter": 52,
-        "script_level.position": 6,
         "lesson.key": "Module 5",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -1349,8 +1245,6 @@
         "script_level.level_keys": [
           "PL U7 Param Return Practice Part 4"
         ],
-        "script_level.chapter": 53,
-        "script_level.position": 7,
         "lesson.key": "Module 5",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -1372,8 +1266,6 @@
         "script_level.level_keys": [
           "PL U7 Param Return Practice Part 3"
         ],
-        "script_level.chapter": 54,
-        "script_level.position": 8,
         "lesson.key": "Module 5",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -1395,8 +1287,6 @@
         "script_level.level_keys": [
           "PL U7 Param Return Practice Part 5"
         ],
-        "script_level.chapter": 55,
-        "script_level.position": 9,
         "lesson.key": "Module 5",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -1418,8 +1308,6 @@
         "script_level.level_keys": [
           "PL U7 Param Investigate Calculator App"
         ],
-        "script_level.chapter": 56,
-        "script_level.position": 10,
         "lesson.key": "Module 5",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -1441,8 +1329,6 @@
         "script_level.level_keys": [
           "PL U7 Param Practice App 2"
         ],
-        "script_level.chapter": 57,
-        "script_level.position": 11,
         "lesson.key": "Module 5",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -1464,8 +1350,6 @@
         "script_level.level_keys": [
           "CSP-PL M5 - Param Prac 10"
         ],
-        "script_level.chapter": 58,
-        "script_level.position": 12,
         "lesson.key": "Module 5",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -1487,8 +1371,6 @@
         "script_level.level_keys": [
           "CSP-PL M5 - Inclusive Classrooms"
         ],
-        "script_level.chapter": 59,
-        "script_level.position": 13,
         "lesson.key": "Module 5",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -1510,8 +1392,6 @@
         "script_level.level_keys": [
           "CSP - Module 5 Wrap Up"
         ],
-        "script_level.chapter": 60,
-        "script_level.position": 14,
         "lesson.key": "Module 5",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -1533,8 +1413,6 @@
         "script_level.level_keys": [
           "CSP-PL Module 6 - Workshop Overview"
         ],
-        "script_level.chapter": 61,
-        "script_level.position": 1,
         "lesson.key": "Module 6",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -1556,8 +1434,6 @@
         "script_level.level_keys": [
           "CSP-PL M6 - Create PT Reqs"
         ],
-        "script_level.chapter": 62,
-        "script_level.position": 2,
         "lesson.key": "Module 6",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -1579,8 +1455,6 @@
         "script_level.level_keys": [
           "CSP-PL M6 - Survival Guide"
         ],
-        "script_level.chapter": 63,
-        "script_level.position": 3,
         "lesson.key": "Module 6",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -1602,8 +1476,6 @@
         "script_level.level_keys": [
           "CSP-PL M6 - Role of teacher"
         ],
-        "script_level.chapter": 64,
-        "script_level.position": 4,
         "lesson.key": "Module 6",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -1625,8 +1497,6 @@
         "script_level.level_keys": [
           "CSP - Module 6 Wrap Up"
         ],
-        "script_level.chapter": 65,
-        "script_level.position": 5,
         "lesson.key": "Module 6",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -1647,8 +1517,6 @@
         "script_level.level_keys": [
           "VirtualPLOverview"
         ],
-        "script_level.chapter": 66,
-        "script_level.position": 1,
         "lesson.key": "Module 7",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -1670,8 +1538,6 @@
         "script_level.level_keys": [
           "CSP - Module 3 Wrap Up"
         ],
-        "script_level.chapter": 67,
-        "script_level.position": 2,
         "lesson.key": "Module 7",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -1692,8 +1558,6 @@
         "script_level.level_keys": [
           "VirtualPLOverview"
         ],
-        "script_level.chapter": 68,
-        "script_level.position": 1,
         "lesson.key": "Module 8",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -1715,8 +1579,6 @@
         "script_level.level_keys": [
           "CSP - Module 3 Wrap Up"
         ],
-        "script_level.chapter": 69,
-        "script_level.position": 2,
         "lesson.key": "Module 8",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -1733,8 +1595,6 @@
         "script_level.level_keys": [
           "CSP-PL AYWS1 Workshop Overview"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Module 1",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -1746,8 +1606,6 @@
         "script_level.level_keys": [
           "CSP Module 1 Unit 3 Context"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Module 1",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -1759,8 +1617,6 @@
         "script_level.level_keys": [
           "CSP - Unit 4 tasks overview"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "Module 1",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -1772,8 +1628,6 @@
         "script_level.level_keys": [
           "CSP-PL - U4 L12 Practice PT 1"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "Module 1",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -1785,8 +1639,6 @@
         "script_level.level_keys": [
           "CSP-PL U4 L12 Practice PT 2"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 5,
         "lesson.key": "Module 1",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -1798,8 +1650,6 @@
         "script_level.level_keys": [
           "CSP Module 1 Unit 4 Reflection"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 6,
         "lesson.key": "Module 1",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -1811,8 +1661,6 @@
         "script_level.level_keys": [
           "CSP Module 1 EIPM Reflection"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 7,
         "lesson.key": "Module 1",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -1824,8 +1672,6 @@
         "script_level.level_keys": [
           "CSP Module 1 EIPM goes virtual"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 8,
         "lesson.key": "Module 1",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -1837,8 +1683,6 @@
         "script_level.level_keys": [
           "CSP - Module 1 Wrap Up"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 9,
         "lesson.key": "Module 1",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -1850,8 +1694,6 @@
         "script_level.level_keys": [
           "CSP-PL AYWS2 Workshop Overview"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 1,
         "lesson.key": "Module 2",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -1863,8 +1705,6 @@
         "script_level.level_keys": [
           "CSP - Variables Practice overview"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 2,
         "lesson.key": "Module 2",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -1876,8 +1716,6 @@
         "script_level.level_keys": [
           "CSP-PL - U4 L03 Variables numbers practice 1"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 3,
         "lesson.key": "Module 2",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -1889,8 +1727,6 @@
         "script_level.level_keys": [
           "CSP - PL - U4 L03 Variables numbers practice 4"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 4,
         "lesson.key": "Module 2",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -1902,8 +1738,6 @@
         "script_level.level_keys": [
           "CSP - PL - U4 L03 Variables operator practice 1"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 5,
         "lesson.key": "Module 2",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -1915,8 +1749,6 @@
         "script_level.level_keys": [
           "CSP - PL - U4 L03 Variables operator practice 3"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 6,
         "lesson.key": "Module 2",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -1928,8 +1760,6 @@
         "script_level.level_keys": [
           "CSP - PL - U4 L03 Variables operator practice 2"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 7,
         "lesson.key": "Module 2",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -1941,8 +1771,6 @@
         "script_level.level_keys": [
           "CSP - PL - U4 L03 Variables operator practice 5"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 8,
         "lesson.key": "Module 2",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -1954,8 +1782,6 @@
         "script_level.level_keys": [
           "CSP - PL8 - U4 L03 Variables operator practice 6"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 9,
         "lesson.key": "Module 2",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -1967,8 +1793,6 @@
         "script_level.level_keys": [
           "CSP - PL9 - U4 L03 Variable Scope: Local vs. Global"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 10,
         "lesson.key": "Module 2",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -1980,8 +1804,6 @@
         "script_level.level_keys": [
           "CSP - PL - Practice Reflection"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 11,
         "lesson.key": "Module 2",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -1993,8 +1815,6 @@
         "script_level.level_keys": [
           "CSP - Variables Make overview"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 12,
         "lesson.key": "Module 2",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -2006,8 +1826,6 @@
         "script_level.level_keys": [
           "CSP - PL U4 L04 Variables Make Project_2020"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 13,
         "lesson.key": "Module 2",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -2019,8 +1837,6 @@
         "script_level.level_keys": [
           "CSP - PL - U4 L04 Variables Make Project Submit_2020"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 14,
         "lesson.key": "Module 2",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -2032,8 +1848,6 @@
         "script_level.level_keys": [
           "CSP - PL - Make Reflection"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 15,
         "lesson.key": "Module 2",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -2045,8 +1859,6 @@
         "script_level.level_keys": [
           "CSP-PL - Unit 4 Wrap-up"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 16,
         "lesson.key": "Module 2",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -2058,8 +1870,6 @@
         "script_level.level_keys": [
           "CSP - PL - Collaboration Reflection"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 17,
         "lesson.key": "Module 2",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -2071,8 +1881,6 @@
         "script_level.level_keys": [
           "CSP - Module 2 Wrap Up"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 18,
         "lesson.key": "Module 2",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -2084,8 +1892,6 @@
         "script_level.level_keys": [
           "CSP-PL AYWS3 Workshop Overview"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 1,
         "lesson.key": "Module 3",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -2097,8 +1903,6 @@
         "script_level.level_keys": [
           "CSP - Understanding the context for the Model Lesson overview"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 2,
         "lesson.key": "Module 3",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -2110,8 +1914,6 @@
         "script_level.level_keys": [
           "CSP - Synch3 - Reflection 1"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 3,
         "lesson.key": "Module 3",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -2123,8 +1925,6 @@
         "script_level.level_keys": [
           "CSP - Synch3 - Reflection 2"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 4,
         "lesson.key": "Module 3",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -2136,8 +1936,6 @@
         "script_level.level_keys": [
           "CSP - Asynch3 - Intro to CI"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 5,
         "lesson.key": "Module 3",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -2149,8 +1947,6 @@
         "script_level.level_keys": [
           "CSP - Asynch3 - Broadening the def"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 6,
         "lesson.key": "Module 3",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -2162,8 +1958,6 @@
         "script_level.level_keys": [
           "CSP - Asynch3 - Feedback in CI"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 7,
         "lesson.key": "Module 3",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -2175,8 +1969,6 @@
         "script_level.level_keys": [
           "CSP - Asynch3 - Practice feedback"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 8,
         "lesson.key": "Module 3",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -2188,8 +1980,6 @@
         "script_level.level_keys": [
           "CSP - Module 3 Wrap Up"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 9,
         "lesson.key": "Module 3",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -2201,8 +1991,6 @@
         "script_level.level_keys": [
           "CSP-PL AYWA4 Workshop Overview"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 1,
         "lesson.key": "Module 4",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -2214,8 +2002,6 @@
         "script_level.level_keys": [
           "CSP - Understanding the content of the Lists EIPM sequence"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 2,
         "lesson.key": "Module 4",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -2227,8 +2013,6 @@
         "script_level.level_keys": [
           "CSP - Lists EIPM reflection"
         ],
-        "script_level.chapter": 39,
-        "script_level.position": 3,
         "lesson.key": "Module 4",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -2240,8 +2024,6 @@
         "script_level.level_keys": [
           "CSP AYW4 - Mental Models in Unit 5"
         ],
-        "script_level.chapter": 40,
-        "script_level.position": 4,
         "lesson.key": "Module 4",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -2253,8 +2035,6 @@
         "script_level.level_keys": [
           "CSP - Asynch4 - Intro to Traversals"
         ],
-        "script_level.chapter": 41,
-        "script_level.position": 5,
         "lesson.key": "Module 4",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -2266,8 +2046,6 @@
         "script_level.level_keys": [
           "CSP - Asynch 4 - U5 Traversals Investigate Mile Tracker Modify"
         ],
-        "script_level.chapter": 42,
-        "script_level.position": 6,
         "lesson.key": "Module 4",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -2279,8 +2057,6 @@
         "script_level.level_keys": [
           "CSP - Asynch4 - U5L10 Traversals Investigate"
         ],
-        "script_level.chapter": 43,
-        "script_level.position": 7,
         "lesson.key": "Module 4",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -2292,8 +2068,6 @@
         "script_level.level_keys": [
           "CSP - Asynch4 -U5 Traversals Investigate Dog Finder Modify"
         ],
-        "script_level.chapter": 44,
-        "script_level.position": 8,
         "lesson.key": "Module 4",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -2305,8 +2079,6 @@
         "script_level.level_keys": [
           "CSP AYW4 - Reflection on datasets"
         ],
-        "script_level.chapter": 45,
-        "script_level.position": 9,
         "lesson.key": "Module 4",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -2318,8 +2090,6 @@
         "script_level.level_keys": [
           "CSP - Module 4 Wrap Up"
         ],
-        "script_level.chapter": 46,
-        "script_level.position": 10,
         "lesson.key": "Module 4",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -2331,8 +2101,6 @@
         "script_level.level_keys": [
           "CSP-PL Module 5 - Workshop Overview"
         ],
-        "script_level.chapter": 47,
-        "script_level.position": 1,
         "lesson.key": "Module 5",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -2344,8 +2112,6 @@
         "script_level.level_keys": [
           "CSP-PL M5 - Intro to Unit 7"
         ],
-        "script_level.chapter": 48,
-        "script_level.position": 2,
         "lesson.key": "Module 5",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -2357,8 +2123,6 @@
         "script_level.level_keys": [
           "CSP-PL M5 - Param Explore"
         ],
-        "script_level.chapter": 49,
-        "script_level.position": 3,
         "lesson.key": "Module 5",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -2370,8 +2134,6 @@
         "script_level.level_keys": [
           "CSP-PL M5 - Param Prac 1"
         ],
-        "script_level.chapter": 50,
-        "script_level.position": 4,
         "lesson.key": "Module 5",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -2383,8 +2145,6 @@
         "script_level.level_keys": [
           "PL U7 Param Return Practice Part 1"
         ],
-        "script_level.chapter": 51,
-        "script_level.position": 5,
         "lesson.key": "Module 5",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -2396,8 +2156,6 @@
         "script_level.level_keys": [
           "PL U7 Param Return Practice Part 2"
         ],
-        "script_level.chapter": 52,
-        "script_level.position": 6,
         "lesson.key": "Module 5",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -2409,8 +2167,6 @@
         "script_level.level_keys": [
           "PL U7 Param Return Practice Part 4"
         ],
-        "script_level.chapter": 53,
-        "script_level.position": 7,
         "lesson.key": "Module 5",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -2422,8 +2178,6 @@
         "script_level.level_keys": [
           "PL U7 Param Return Practice Part 3"
         ],
-        "script_level.chapter": 54,
-        "script_level.position": 8,
         "lesson.key": "Module 5",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -2435,8 +2189,6 @@
         "script_level.level_keys": [
           "PL U7 Param Return Practice Part 5"
         ],
-        "script_level.chapter": 55,
-        "script_level.position": 9,
         "lesson.key": "Module 5",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -2448,8 +2200,6 @@
         "script_level.level_keys": [
           "PL U7 Param Investigate Calculator App"
         ],
-        "script_level.chapter": 56,
-        "script_level.position": 10,
         "lesson.key": "Module 5",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -2461,8 +2211,6 @@
         "script_level.level_keys": [
           "PL U7 Param Practice App 2"
         ],
-        "script_level.chapter": 57,
-        "script_level.position": 11,
         "lesson.key": "Module 5",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -2474,8 +2222,6 @@
         "script_level.level_keys": [
           "CSP-PL M5 - Param Prac 10"
         ],
-        "script_level.chapter": 58,
-        "script_level.position": 12,
         "lesson.key": "Module 5",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -2487,8 +2233,6 @@
         "script_level.level_keys": [
           "CSP-PL M5 - Inclusive Classrooms"
         ],
-        "script_level.chapter": 59,
-        "script_level.position": 13,
         "lesson.key": "Module 5",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -2500,8 +2244,6 @@
         "script_level.level_keys": [
           "CSP - Module 5 Wrap Up"
         ],
-        "script_level.chapter": 60,
-        "script_level.position": 14,
         "lesson.key": "Module 5",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -2513,8 +2255,6 @@
         "script_level.level_keys": [
           "CSP-PL Module 6 - Workshop Overview"
         ],
-        "script_level.chapter": 61,
-        "script_level.position": 1,
         "lesson.key": "Module 6",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -2526,8 +2266,6 @@
         "script_level.level_keys": [
           "CSP-PL M6 - Create PT Reqs"
         ],
-        "script_level.chapter": 62,
-        "script_level.position": 2,
         "lesson.key": "Module 6",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -2539,8 +2277,6 @@
         "script_level.level_keys": [
           "CSP-PL M6 - Survival Guide"
         ],
-        "script_level.chapter": 63,
-        "script_level.position": 3,
         "lesson.key": "Module 6",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -2552,8 +2288,6 @@
         "script_level.level_keys": [
           "CSP-PL M6 - Role of teacher"
         ],
-        "script_level.chapter": 64,
-        "script_level.position": 4,
         "lesson.key": "Module 6",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -2565,8 +2299,6 @@
         "script_level.level_keys": [
           "CSP - Module 6 Wrap Up"
         ],
-        "script_level.chapter": 65,
-        "script_level.position": 5,
         "lesson.key": "Module 6",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -2578,8 +2310,6 @@
         "script_level.level_keys": [
           "VirtualPLOverview"
         ],
-        "script_level.chapter": 66,
-        "script_level.position": 1,
         "lesson.key": "Module 7",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -2591,8 +2321,6 @@
         "script_level.level_keys": [
           "CSP - Module 3 Wrap Up"
         ],
-        "script_level.chapter": 67,
-        "script_level.position": 2,
         "lesson.key": "Module 7",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -2604,8 +2332,6 @@
         "script_level.level_keys": [
           "VirtualPLOverview"
         ],
-        "script_level.chapter": 68,
-        "script_level.position": 1,
         "lesson.key": "Module 8",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
@@ -2617,8 +2343,6 @@
         "script_level.level_keys": [
           "CSP - Module 3 Wrap Up"
         ],
-        "script_level.chapter": 69,
-        "script_level.position": 2,
         "lesson.key": "Module 8",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"

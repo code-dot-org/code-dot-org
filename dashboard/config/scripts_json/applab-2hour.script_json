@@ -96,8 +96,6 @@
         "script_level.level_keys": [
           "Building a UI with Design Mode"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Digital Design",
         "lesson_group.key": "",
         "script.name": "applab-2hour"
@@ -118,8 +116,6 @@
         "script_level.level_keys": [
           "CSDU4 Design Mode Video"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Digital Design",
         "lesson_group.key": "",
         "script.name": "applab-2hour"
@@ -140,8 +136,6 @@
         "script_level.level_keys": [
           "CSDU4 - Design Mode - 15"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "Digital Design",
         "lesson_group.key": "",
         "script.name": "applab-2hour"
@@ -162,8 +156,6 @@
         "script_level.level_keys": [
           "CSDU4 - Design Mode - 4"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "Digital Design",
         "lesson_group.key": "",
         "script.name": "applab-2hour"
@@ -184,8 +176,6 @@
         "script_level.level_keys": [
           "Choosing Good IDs"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 5,
         "lesson.key": "Digital Design",
         "lesson_group.key": "",
         "script.name": "applab-2hour"
@@ -206,8 +196,6 @@
         "script_level.level_keys": [
           "CSD U4 - Design Mode Text"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 6,
         "lesson.key": "Digital Design",
         "lesson_group.key": "",
         "script.name": "applab-2hour"
@@ -228,8 +216,6 @@
         "script_level.level_keys": [
           "CSD U4 - Design Mode Input Widgets"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 7,
         "lesson.key": "Digital Design",
         "lesson_group.key": "",
         "script.name": "applab-2hour"
@@ -250,8 +236,6 @@
         "script_level.level_keys": [
           "CSDU4 - Design Mode - 21"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 8,
         "lesson.key": "Digital Design",
         "lesson_group.key": "",
         "script.name": "applab-2hour"
@@ -272,8 +256,6 @@
         "script_level.level_keys": [
           "CSDU4 - Design Mode Icons"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 9,
         "lesson.key": "Digital Design",
         "lesson_group.key": "",
         "script.name": "applab-2hour"
@@ -294,8 +276,6 @@
         "script_level.level_keys": [
           "CSDU4 - Design Mode - 18"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 10,
         "lesson.key": "Digital Design",
         "lesson_group.key": "",
         "script.name": "applab-2hour"
@@ -316,8 +296,6 @@
         "script_level.level_keys": [
           "Responding to User Input"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 1,
         "lesson.key": "Event Driven Programming",
         "lesson_group.key": "",
         "script.name": "applab-2hour"
@@ -338,8 +316,6 @@
         "script_level.level_keys": [
           "CSDU4 - Design Mode - 16"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 2,
         "lesson.key": "Event Driven Programming",
         "lesson_group.key": "",
         "script.name": "applab-2hour"
@@ -360,8 +336,6 @@
         "script_level.level_keys": [
           "CSDU4 - Design Mode - 3"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 3,
         "lesson.key": "Event Driven Programming",
         "lesson_group.key": "",
         "script.name": "applab-2hour"
@@ -382,8 +356,6 @@
         "script_level.level_keys": [
           "CSDU4 - Design Mode - 17"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 4,
         "lesson.key": "Event Driven Programming",
         "lesson_group.key": "",
         "script.name": "applab-2hour"
@@ -404,8 +376,6 @@
         "script_level.level_keys": [
           "Multi-Screen Apps"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 5,
         "lesson.key": "Event Driven Programming",
         "lesson_group.key": "",
         "script.name": "applab-2hour"
@@ -426,8 +396,6 @@
         "script_level.level_keys": [
           "CSDU4 - Design Mode - 19"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 6,
         "lesson.key": "Event Driven Programming",
         "lesson_group.key": "",
         "script.name": "applab-2hour"
@@ -448,8 +416,6 @@
         "script_level.level_keys": [
           "CSDU4 - Design Mode - 20"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 7,
         "lesson.key": "Event Driven Programming",
         "lesson_group.key": "",
         "script.name": "applab-2hour"
@@ -470,8 +436,6 @@
         "script_level.level_keys": [
           "CSDU4 Connecting Screens"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 8,
         "lesson.key": "Event Driven Programming",
         "lesson_group.key": "",
         "script.name": "applab-2hour"
@@ -492,8 +456,6 @@
         "script_level.level_keys": [
           "CSDU4 Connecting Screens Getting Back"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 9,
         "lesson.key": "Event Driven Programming",
         "lesson_group.key": "",
         "script.name": "applab-2hour"
@@ -514,8 +476,6 @@
         "script_level.level_keys": [
           "CSDU4 Functionality visible"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 1,
         "lesson.key": "Basic App Functionality",
         "lesson_group.key": "",
         "script.name": "applab-2hour"
@@ -536,8 +496,6 @@
         "script_level.level_keys": [
           "CSD - Getters and Setters"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 1,
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "",
         "script.name": "applab-2hour"
@@ -559,8 +517,6 @@
         "script_level.level_keys": [
           "CSDU6 - UI and Inputs - setScreen"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 2,
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "",
         "script.name": "applab-2hour"
@@ -582,8 +538,6 @@
         "script_level.level_keys": [
           "CSDU6 - UI and Inputs - setText"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 3,
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "",
         "script.name": "applab-2hour"
@@ -605,8 +559,6 @@
         "script_level.level_keys": [
           "CSDU6 - UI and Inputs - hide show"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 4,
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "",
         "script.name": "applab-2hour"
@@ -628,8 +580,6 @@
         "script_level.level_keys": [
           "CSDU6 - UI and Inputs - getText"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 5,
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "",
         "script.name": "applab-2hour"
@@ -651,8 +601,6 @@
         "script_level.level_keys": [
           "CSDU6 - UI and Inputs - dropdown setText"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 6,
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "",
         "script.name": "applab-2hour"
@@ -674,8 +622,6 @@
         "script_level.level_keys": [
           "CSDU6 - UI and Inputs - get set with text input"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 7,
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "",
         "script.name": "applab-2hour"
@@ -697,8 +643,6 @@
         "script_level.level_keys": [
           "CSDU6 - UI and Inputs - getNumber practice"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 8,
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "",
         "script.name": "applab-2hour"
@@ -719,8 +663,6 @@
         "script_level.level_keys": [
           "CSD: getText vs getNumber"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 9,
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "",
         "script.name": "applab-2hour"
@@ -741,8 +683,6 @@
         "script_level.level_keys": [
           "CSDU6 - UI and Inputs - getNumber"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 10,
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "",
         "script.name": "applab-2hour"
@@ -763,8 +703,6 @@
         "script_level.level_keys": [
           "CSD: setProperty"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 11,
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "",
         "script.name": "applab-2hour"
@@ -786,8 +724,6 @@
         "script_level.level_keys": [
           "CSDU6 - UI and Inputs - setProperty first level"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 12,
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "",
         "script.name": "applab-2hour"
@@ -809,8 +745,6 @@
         "script_level.level_keys": [
           "CSDU6 - UI and Inputs - setProperty Image"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 13,
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "",
         "script.name": "applab-2hour"
@@ -832,8 +766,6 @@
         "script_level.level_keys": [
           "CSDU6 - UI and Inputs - setProperty"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 14,
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "",
         "script.name": "applab-2hour"
@@ -850,8 +782,6 @@
         "script_level.level_keys": [
           "Building a UI with Design Mode"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Digital Design",
         "lesson_group.key": "",
         "script.name": "applab-2hour"
@@ -863,8 +793,6 @@
         "script_level.level_keys": [
           "CSDU4 Design Mode Video"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Digital Design",
         "lesson_group.key": "",
         "script.name": "applab-2hour"
@@ -876,8 +804,6 @@
         "script_level.level_keys": [
           "CSDU4 - Design Mode - 15"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "Digital Design",
         "lesson_group.key": "",
         "script.name": "applab-2hour"
@@ -889,8 +815,6 @@
         "script_level.level_keys": [
           "CSDU4 - Design Mode - 4"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "Digital Design",
         "lesson_group.key": "",
         "script.name": "applab-2hour"
@@ -902,8 +826,6 @@
         "script_level.level_keys": [
           "Choosing Good IDs"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 5,
         "lesson.key": "Digital Design",
         "lesson_group.key": "",
         "script.name": "applab-2hour"
@@ -915,8 +837,6 @@
         "script_level.level_keys": [
           "CSD U4 - Design Mode Text"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 6,
         "lesson.key": "Digital Design",
         "lesson_group.key": "",
         "script.name": "applab-2hour"
@@ -928,8 +848,6 @@
         "script_level.level_keys": [
           "CSD U4 - Design Mode Input Widgets"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 7,
         "lesson.key": "Digital Design",
         "lesson_group.key": "",
         "script.name": "applab-2hour"
@@ -941,8 +859,6 @@
         "script_level.level_keys": [
           "CSDU4 - Design Mode - 21"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 8,
         "lesson.key": "Digital Design",
         "lesson_group.key": "",
         "script.name": "applab-2hour"
@@ -954,8 +870,6 @@
         "script_level.level_keys": [
           "CSDU4 - Design Mode Icons"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 9,
         "lesson.key": "Digital Design",
         "lesson_group.key": "",
         "script.name": "applab-2hour"
@@ -967,8 +881,6 @@
         "script_level.level_keys": [
           "CSDU4 - Design Mode - 18"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 10,
         "lesson.key": "Digital Design",
         "lesson_group.key": "",
         "script.name": "applab-2hour"
@@ -980,8 +892,6 @@
         "script_level.level_keys": [
           "Responding to User Input"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 1,
         "lesson.key": "Event Driven Programming",
         "lesson_group.key": "",
         "script.name": "applab-2hour"
@@ -993,8 +903,6 @@
         "script_level.level_keys": [
           "CSDU4 - Design Mode - 16"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 2,
         "lesson.key": "Event Driven Programming",
         "lesson_group.key": "",
         "script.name": "applab-2hour"
@@ -1006,8 +914,6 @@
         "script_level.level_keys": [
           "CSDU4 - Design Mode - 3"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 3,
         "lesson.key": "Event Driven Programming",
         "lesson_group.key": "",
         "script.name": "applab-2hour"
@@ -1019,8 +925,6 @@
         "script_level.level_keys": [
           "CSDU4 - Design Mode - 17"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 4,
         "lesson.key": "Event Driven Programming",
         "lesson_group.key": "",
         "script.name": "applab-2hour"
@@ -1032,8 +936,6 @@
         "script_level.level_keys": [
           "Multi-Screen Apps"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 5,
         "lesson.key": "Event Driven Programming",
         "lesson_group.key": "",
         "script.name": "applab-2hour"
@@ -1045,8 +947,6 @@
         "script_level.level_keys": [
           "CSDU4 - Design Mode - 19"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 6,
         "lesson.key": "Event Driven Programming",
         "lesson_group.key": "",
         "script.name": "applab-2hour"
@@ -1058,8 +958,6 @@
         "script_level.level_keys": [
           "CSDU4 - Design Mode - 20"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 7,
         "lesson.key": "Event Driven Programming",
         "lesson_group.key": "",
         "script.name": "applab-2hour"
@@ -1071,8 +969,6 @@
         "script_level.level_keys": [
           "CSDU4 Connecting Screens"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 8,
         "lesson.key": "Event Driven Programming",
         "lesson_group.key": "",
         "script.name": "applab-2hour"
@@ -1084,8 +980,6 @@
         "script_level.level_keys": [
           "CSDU4 Connecting Screens Getting Back"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 9,
         "lesson.key": "Event Driven Programming",
         "lesson_group.key": "",
         "script.name": "applab-2hour"
@@ -1097,8 +991,6 @@
         "script_level.level_keys": [
           "CSDU4 Functionality visible"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 1,
         "lesson.key": "Basic App Functionality",
         "lesson_group.key": "",
         "script.name": "applab-2hour"
@@ -1110,8 +1002,6 @@
         "script_level.level_keys": [
           "CSD - Getters and Setters"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 1,
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "",
         "script.name": "applab-2hour"
@@ -1123,8 +1013,6 @@
         "script_level.level_keys": [
           "CSDU6 - UI and Inputs - setScreen"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 2,
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "",
         "script.name": "applab-2hour"
@@ -1136,8 +1024,6 @@
         "script_level.level_keys": [
           "CSDU6 - UI and Inputs - setText"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 3,
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "",
         "script.name": "applab-2hour"
@@ -1149,8 +1035,6 @@
         "script_level.level_keys": [
           "CSDU6 - UI and Inputs - hide show"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 4,
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "",
         "script.name": "applab-2hour"
@@ -1162,8 +1046,6 @@
         "script_level.level_keys": [
           "CSDU6 - UI and Inputs - getText"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 5,
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "",
         "script.name": "applab-2hour"
@@ -1175,8 +1057,6 @@
         "script_level.level_keys": [
           "CSDU6 - UI and Inputs - dropdown setText"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 6,
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "",
         "script.name": "applab-2hour"
@@ -1188,8 +1068,6 @@
         "script_level.level_keys": [
           "CSDU6 - UI and Inputs - get set with text input"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 7,
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "",
         "script.name": "applab-2hour"
@@ -1201,8 +1079,6 @@
         "script_level.level_keys": [
           "CSDU6 - UI and Inputs - getNumber practice"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 8,
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "",
         "script.name": "applab-2hour"
@@ -1214,8 +1090,6 @@
         "script_level.level_keys": [
           "CSD: getText vs getNumber"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 9,
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "",
         "script.name": "applab-2hour"
@@ -1227,8 +1101,6 @@
         "script_level.level_keys": [
           "CSDU6 - UI and Inputs - getNumber"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 10,
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "",
         "script.name": "applab-2hour"
@@ -1240,8 +1112,6 @@
         "script_level.level_keys": [
           "CSD: setProperty"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 11,
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "",
         "script.name": "applab-2hour"
@@ -1253,8 +1123,6 @@
         "script_level.level_keys": [
           "CSDU6 - UI and Inputs - setProperty first level"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 12,
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "",
         "script.name": "applab-2hour"
@@ -1266,8 +1134,6 @@
         "script_level.level_keys": [
           "CSDU6 - UI and Inputs - setProperty Image"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 13,
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "",
         "script.name": "applab-2hour"
@@ -1279,8 +1145,6 @@
         "script_level.level_keys": [
           "CSDU6 - UI and Inputs - setProperty"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 14,
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "",
         "script.name": "applab-2hour"

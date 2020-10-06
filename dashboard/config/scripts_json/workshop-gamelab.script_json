@@ -96,8 +96,6 @@
         "script_level.level_keys": [
           "Game Lab Workshop: Introduction"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Introduction",
         "lesson_group.key": "",
         "script.name": "workshop-gamelab"
@@ -118,8 +116,6 @@
         "script_level.level_keys": [
           "CSD: Drawing in Game Lab 1"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Introduction",
         "lesson_group.key": "",
         "script.name": "workshop-gamelab"
@@ -140,8 +136,6 @@
         "script_level.level_keys": [
           "U3 - Simple Drawing - Rectangle"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "Introduction",
         "lesson_group.key": "",
         "script.name": "workshop-gamelab"
@@ -162,8 +156,6 @@
         "script_level.level_keys": [
           "U3 - Simple Drawing - Order of Blocks"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "Introduction",
         "lesson_group.key": "",
         "script.name": "workshop-gamelab"
@@ -184,8 +176,6 @@
         "script_level.level_keys": [
           "U3 - Simple Drawing - Fill"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 5,
         "lesson.key": "Introduction",
         "lesson_group.key": "",
         "script.name": "workshop-gamelab"
@@ -206,8 +196,6 @@
         "script_level.level_keys": [
           "Game Lab Workshop: Random"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 6,
         "lesson.key": "Introduction",
         "lesson_group.key": "",
         "script.name": "workshop-gamelab"
@@ -228,8 +216,6 @@
         "script_level.level_keys": [
           "Game Lab Workshop: Draw Loop"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 7,
         "lesson.key": "Introduction",
         "lesson_group.key": "",
         "script.name": "workshop-gamelab"
@@ -250,8 +236,6 @@
         "script_level.level_keys": [
           "CSD: Introduction to the Draw Loop"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 8,
         "lesson.key": "Introduction",
         "lesson_group.key": "",
         "script.name": "workshop-gamelab"
@@ -272,8 +256,6 @@
         "script_level.level_keys": [
           "GameLab Workshop: Draw Loop Shapes"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 9,
         "lesson.key": "Introduction",
         "lesson_group.key": "",
         "script.name": "workshop-gamelab"
@@ -294,8 +276,6 @@
         "script_level.level_keys": [
           "CSD U3 Random Animation"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 10,
         "lesson.key": "Introduction",
         "lesson_group.key": "",
         "script.name": "workshop-gamelab"
@@ -316,8 +296,6 @@
         "script_level.level_keys": [
           "CSD U3 Variables make a square"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 11,
         "lesson.key": "Introduction",
         "lesson_group.key": "",
         "script.name": "workshop-gamelab"
@@ -338,8 +316,6 @@
         "script_level.level_keys": [
           "U3 Variables misconceptions try it"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 12,
         "lesson.key": "Introduction",
         "lesson_group.key": "",
         "script.name": "workshop-gamelab"
@@ -360,8 +336,6 @@
         "script_level.level_keys": [
           "CSD U3 Counters counter square movement"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 13,
         "lesson.key": "Introduction",
         "lesson_group.key": "",
         "script.name": "workshop-gamelab"
@@ -382,8 +356,6 @@
         "script_level.level_keys": [
           "Game Lab Workshop: Variables to Sprites"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 1,
         "lesson.key": "Sprites",
         "lesson_group.key": "",
         "script.name": "workshop-gamelab"
@@ -404,8 +376,6 @@
         "script_level.level_keys": [
           "CSD: Sprites in Game Lab"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 2,
         "lesson.key": "Sprites",
         "lesson_group.key": "",
         "script.name": "workshop-gamelab"
@@ -426,8 +396,6 @@
         "script_level.level_keys": [
           "CSD U3 Sprites intro sprites"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 3,
         "lesson.key": "Sprites",
         "lesson_group.key": "",
         "script.name": "workshop-gamelab"
@@ -448,8 +416,6 @@
         "script_level.level_keys": [
           "CSD U3 Sprites animating with sprites"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 4,
         "lesson.key": "Sprites",
         "lesson_group.key": "",
         "script.name": "workshop-gamelab"
@@ -470,8 +436,6 @@
         "script_level.level_keys": [
           "CSD U3 Sprites debug watchers"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 5,
         "lesson.key": "Sprites",
         "lesson_group.key": "",
         "script.name": "workshop-gamelab"
@@ -492,8 +456,6 @@
         "script_level.level_keys": [
           "CSD U3 Sprites debug background"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 6,
         "lesson.key": "Sprites",
         "lesson_group.key": "",
         "script.name": "workshop-gamelab"
@@ -514,8 +476,6 @@
         "script_level.level_keys": [
           "CSD: Animation Tab"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 7,
         "lesson.key": "Sprites",
         "lesson_group.key": "",
         "script.name": "workshop-gamelab"
@@ -536,8 +496,6 @@
         "script_level.level_keys": [
           "CSD U3 - images - first sprite with image"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 8,
         "lesson.key": "Sprites",
         "lesson_group.key": "",
         "script.name": "workshop-gamelab"
@@ -558,8 +516,6 @@
         "script_level.level_keys": [
           "CSD U3 - images - changing scene"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 9,
         "lesson.key": "Sprites",
         "lesson_group.key": "",
         "script.name": "workshop-gamelab"
@@ -580,8 +536,6 @@
         "script_level.level_keys": [
           "U3 - Sprites and Mod - Mouse X and Y"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 10,
         "lesson.key": "Sprites",
         "lesson_group.key": "",
         "script.name": "workshop-gamelab"
@@ -602,8 +556,6 @@
         "script_level.level_keys": [
           "CSD U3 - Booleans Video"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 1,
         "lesson.key": "Input",
         "lesson_group.key": "",
         "script.name": "workshop-gamelab"
@@ -624,8 +576,6 @@
         "script_level.level_keys": [
           "CSD U3 Boolean Modify"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 2,
         "lesson.key": "Input",
         "lesson_group.key": "",
         "script.name": "workshop-gamelab"
@@ -646,8 +596,6 @@
         "script_level.level_keys": [
           "CSD U3 - conditionals - Matching"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 3,
         "lesson.key": "Input",
         "lesson_group.key": "",
         "script.name": "workshop-gamelab"
@@ -668,8 +616,6 @@
         "script_level.level_keys": [
           "CSD U3 Keypress Boolean"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 4,
         "lesson.key": "Input",
         "lesson_group.key": "",
         "script.name": "workshop-gamelab"
@@ -690,8 +636,6 @@
         "script_level.level_keys": [
           "CSD U3 UP_ARROW"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 5,
         "lesson.key": "Input",
         "lesson_group.key": "",
         "script.name": "workshop-gamelab"
@@ -712,8 +656,6 @@
         "script_level.level_keys": [
           "CSD U3 Direction Arrows"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 6,
         "lesson.key": "Input",
         "lesson_group.key": "",
         "script.name": "workshop-gamelab"
@@ -734,8 +676,6 @@
         "script_level.level_keys": [
           "CSD U3 If Else"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 7,
         "lesson.key": "Input",
         "lesson_group.key": "",
         "script.name": "workshop-gamelab"
@@ -756,8 +696,6 @@
         "script_level.level_keys": [
           "CSD U3 Keypress Watchers"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 8,
         "lesson.key": "Input",
         "lesson_group.key": "",
         "script.name": "workshop-gamelab"
@@ -778,8 +716,6 @@
         "script_level.level_keys": [
           "CSD U3 Keypress Matching"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 9,
         "lesson.key": "Input",
         "lesson_group.key": "",
         "script.name": "workshop-gamelab"
@@ -800,8 +736,6 @@
         "script_level.level_keys": [
           "CSD U3 SFLP Card Project"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 1,
         "lesson.key": "Project: Interactive Card",
         "lesson_group.key": "",
         "script.name": "workshop-gamelab"
@@ -822,8 +756,6 @@
         "script_level.level_keys": [
           "CSD U3 Interactive Card Exemplar"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 2,
         "lesson.key": "Project: Interactive Card",
         "lesson_group.key": "",
         "script.name": "workshop-gamelab"
@@ -844,8 +776,6 @@
         "script_level.level_keys": [
           "CSD U3 Interactive Card Background"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 3,
         "lesson.key": "Project: Interactive Card",
         "lesson_group.key": "",
         "script.name": "workshop-gamelab"
@@ -866,8 +796,6 @@
         "script_level.level_keys": [
           "CSD U3 Interactive Card Sprites"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 4,
         "lesson.key": "Project: Interactive Card",
         "lesson_group.key": "",
         "script.name": "workshop-gamelab"
@@ -888,8 +816,6 @@
         "script_level.level_keys": [
           "CSD U3 Interactive Card User Input"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 5,
         "lesson.key": "Project: Interactive Card",
         "lesson_group.key": "",
         "script.name": "workshop-gamelab"
@@ -910,8 +836,6 @@
         "script_level.level_keys": [
           "CSD U3 Interactive Card Other Conditionals"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 6,
         "lesson.key": "Project: Interactive Card",
         "lesson_group.key": "",
         "script.name": "workshop-gamelab"
@@ -932,8 +856,6 @@
         "script_level.level_keys": [
           "CSD U3 Interactive Card Final"
         ],
-        "script_level.chapter": 39,
-        "script_level.position": 7,
         "lesson.key": "Project: Interactive Card",
         "lesson_group.key": "",
         "script.name": "workshop-gamelab"
@@ -950,8 +872,6 @@
         "script_level.level_keys": [
           "Game Lab Workshop: Introduction"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Introduction",
         "lesson_group.key": "",
         "script.name": "workshop-gamelab"
@@ -963,8 +883,6 @@
         "script_level.level_keys": [
           "CSD: Drawing in Game Lab 1"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Introduction",
         "lesson_group.key": "",
         "script.name": "workshop-gamelab"
@@ -976,8 +894,6 @@
         "script_level.level_keys": [
           "U3 - Simple Drawing - Rectangle"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "Introduction",
         "lesson_group.key": "",
         "script.name": "workshop-gamelab"
@@ -989,8 +905,6 @@
         "script_level.level_keys": [
           "U3 - Simple Drawing - Order of Blocks"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "Introduction",
         "lesson_group.key": "",
         "script.name": "workshop-gamelab"
@@ -1002,8 +916,6 @@
         "script_level.level_keys": [
           "U3 - Simple Drawing - Fill"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 5,
         "lesson.key": "Introduction",
         "lesson_group.key": "",
         "script.name": "workshop-gamelab"
@@ -1015,8 +927,6 @@
         "script_level.level_keys": [
           "Game Lab Workshop: Random"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 6,
         "lesson.key": "Introduction",
         "lesson_group.key": "",
         "script.name": "workshop-gamelab"
@@ -1028,8 +938,6 @@
         "script_level.level_keys": [
           "Game Lab Workshop: Draw Loop"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 7,
         "lesson.key": "Introduction",
         "lesson_group.key": "",
         "script.name": "workshop-gamelab"
@@ -1041,8 +949,6 @@
         "script_level.level_keys": [
           "CSD: Introduction to the Draw Loop"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 8,
         "lesson.key": "Introduction",
         "lesson_group.key": "",
         "script.name": "workshop-gamelab"
@@ -1054,8 +960,6 @@
         "script_level.level_keys": [
           "GameLab Workshop: Draw Loop Shapes"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 9,
         "lesson.key": "Introduction",
         "lesson_group.key": "",
         "script.name": "workshop-gamelab"
@@ -1067,8 +971,6 @@
         "script_level.level_keys": [
           "CSD U3 Random Animation"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 10,
         "lesson.key": "Introduction",
         "lesson_group.key": "",
         "script.name": "workshop-gamelab"
@@ -1080,8 +982,6 @@
         "script_level.level_keys": [
           "CSD U3 Variables make a square"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 11,
         "lesson.key": "Introduction",
         "lesson_group.key": "",
         "script.name": "workshop-gamelab"
@@ -1093,8 +993,6 @@
         "script_level.level_keys": [
           "U3 Variables misconceptions try it"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 12,
         "lesson.key": "Introduction",
         "lesson_group.key": "",
         "script.name": "workshop-gamelab"
@@ -1106,8 +1004,6 @@
         "script_level.level_keys": [
           "CSD U3 Counters counter square movement"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 13,
         "lesson.key": "Introduction",
         "lesson_group.key": "",
         "script.name": "workshop-gamelab"
@@ -1119,8 +1015,6 @@
         "script_level.level_keys": [
           "Game Lab Workshop: Variables to Sprites"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 1,
         "lesson.key": "Sprites",
         "lesson_group.key": "",
         "script.name": "workshop-gamelab"
@@ -1132,8 +1026,6 @@
         "script_level.level_keys": [
           "CSD: Sprites in Game Lab"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 2,
         "lesson.key": "Sprites",
         "lesson_group.key": "",
         "script.name": "workshop-gamelab"
@@ -1145,8 +1037,6 @@
         "script_level.level_keys": [
           "CSD U3 Sprites intro sprites"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 3,
         "lesson.key": "Sprites",
         "lesson_group.key": "",
         "script.name": "workshop-gamelab"
@@ -1158,8 +1048,6 @@
         "script_level.level_keys": [
           "CSD U3 Sprites animating with sprites"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 4,
         "lesson.key": "Sprites",
         "lesson_group.key": "",
         "script.name": "workshop-gamelab"
@@ -1171,8 +1059,6 @@
         "script_level.level_keys": [
           "CSD U3 Sprites debug watchers"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 5,
         "lesson.key": "Sprites",
         "lesson_group.key": "",
         "script.name": "workshop-gamelab"
@@ -1184,8 +1070,6 @@
         "script_level.level_keys": [
           "CSD U3 Sprites debug background"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 6,
         "lesson.key": "Sprites",
         "lesson_group.key": "",
         "script.name": "workshop-gamelab"
@@ -1197,8 +1081,6 @@
         "script_level.level_keys": [
           "CSD: Animation Tab"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 7,
         "lesson.key": "Sprites",
         "lesson_group.key": "",
         "script.name": "workshop-gamelab"
@@ -1210,8 +1092,6 @@
         "script_level.level_keys": [
           "CSD U3 - images - first sprite with image"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 8,
         "lesson.key": "Sprites",
         "lesson_group.key": "",
         "script.name": "workshop-gamelab"
@@ -1223,8 +1103,6 @@
         "script_level.level_keys": [
           "CSD U3 - images - changing scene"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 9,
         "lesson.key": "Sprites",
         "lesson_group.key": "",
         "script.name": "workshop-gamelab"
@@ -1236,8 +1114,6 @@
         "script_level.level_keys": [
           "U3 - Sprites and Mod - Mouse X and Y"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 10,
         "lesson.key": "Sprites",
         "lesson_group.key": "",
         "script.name": "workshop-gamelab"
@@ -1249,8 +1125,6 @@
         "script_level.level_keys": [
           "CSD U3 - Booleans Video"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 1,
         "lesson.key": "Input",
         "lesson_group.key": "",
         "script.name": "workshop-gamelab"
@@ -1262,8 +1136,6 @@
         "script_level.level_keys": [
           "CSD U3 Boolean Modify"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 2,
         "lesson.key": "Input",
         "lesson_group.key": "",
         "script.name": "workshop-gamelab"
@@ -1275,8 +1147,6 @@
         "script_level.level_keys": [
           "CSD U3 - conditionals - Matching"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 3,
         "lesson.key": "Input",
         "lesson_group.key": "",
         "script.name": "workshop-gamelab"
@@ -1288,8 +1158,6 @@
         "script_level.level_keys": [
           "CSD U3 Keypress Boolean"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 4,
         "lesson.key": "Input",
         "lesson_group.key": "",
         "script.name": "workshop-gamelab"
@@ -1301,8 +1169,6 @@
         "script_level.level_keys": [
           "CSD U3 UP_ARROW"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 5,
         "lesson.key": "Input",
         "lesson_group.key": "",
         "script.name": "workshop-gamelab"
@@ -1314,8 +1180,6 @@
         "script_level.level_keys": [
           "CSD U3 Direction Arrows"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 6,
         "lesson.key": "Input",
         "lesson_group.key": "",
         "script.name": "workshop-gamelab"
@@ -1327,8 +1191,6 @@
         "script_level.level_keys": [
           "CSD U3 If Else"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 7,
         "lesson.key": "Input",
         "lesson_group.key": "",
         "script.name": "workshop-gamelab"
@@ -1340,8 +1202,6 @@
         "script_level.level_keys": [
           "CSD U3 Keypress Watchers"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 8,
         "lesson.key": "Input",
         "lesson_group.key": "",
         "script.name": "workshop-gamelab"
@@ -1353,8 +1213,6 @@
         "script_level.level_keys": [
           "CSD U3 Keypress Matching"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 9,
         "lesson.key": "Input",
         "lesson_group.key": "",
         "script.name": "workshop-gamelab"
@@ -1366,8 +1224,6 @@
         "script_level.level_keys": [
           "CSD U3 SFLP Card Project"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 1,
         "lesson.key": "Project: Interactive Card",
         "lesson_group.key": "",
         "script.name": "workshop-gamelab"
@@ -1379,8 +1235,6 @@
         "script_level.level_keys": [
           "CSD U3 Interactive Card Exemplar"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 2,
         "lesson.key": "Project: Interactive Card",
         "lesson_group.key": "",
         "script.name": "workshop-gamelab"
@@ -1392,8 +1246,6 @@
         "script_level.level_keys": [
           "CSD U3 Interactive Card Background"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 3,
         "lesson.key": "Project: Interactive Card",
         "lesson_group.key": "",
         "script.name": "workshop-gamelab"
@@ -1405,8 +1257,6 @@
         "script_level.level_keys": [
           "CSD U3 Interactive Card Sprites"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 4,
         "lesson.key": "Project: Interactive Card",
         "lesson_group.key": "",
         "script.name": "workshop-gamelab"
@@ -1418,8 +1268,6 @@
         "script_level.level_keys": [
           "CSD U3 Interactive Card User Input"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 5,
         "lesson.key": "Project: Interactive Card",
         "lesson_group.key": "",
         "script.name": "workshop-gamelab"
@@ -1431,8 +1279,6 @@
         "script_level.level_keys": [
           "CSD U3 Interactive Card Other Conditionals"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 6,
         "lesson.key": "Project: Interactive Card",
         "lesson_group.key": "",
         "script.name": "workshop-gamelab"
@@ -1444,8 +1290,6 @@
         "script_level.level_keys": [
           "CSD U3 Interactive Card Final"
         ],
-        "script_level.chapter": 39,
-        "script_level.position": 7,
         "lesson.key": "Project: Interactive Card",
         "lesson_group.key": "",
         "script.name": "workshop-gamelab"
