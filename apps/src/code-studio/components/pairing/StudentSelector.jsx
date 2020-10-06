@@ -11,7 +11,7 @@ const styles = {
   enabled: {
     backgroundColor: 'white',
     color: color.cyan,
-    border: '2px solid',
+    border: '1px solid',
     borderColor: color.cyan,
     fontFamily: "'Gotham 4r', sans-serif",
     fontSize: '13px'
