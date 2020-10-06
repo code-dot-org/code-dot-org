@@ -145,7 +145,7 @@ class ProgressLessonTeacherInfo extends React.Component {
               url={levelUrl}
               title={lesson.name}
               courseid={courseId}
-              analyticsData={this.firehoseData()}
+              analyticsData={JSON.stringify(this.firehoseData())}
             />
           </div>
         )}

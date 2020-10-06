@@ -4,6 +4,7 @@ import Button from '../Button';
 import i18n from '@cdo/locale';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {isIE11} from '@cdo/apps/util/browser-detector';
+import _ from 'lodash';
 
 // https://developers.google.com/classroom/brand
 const styles = {
@@ -18,17 +19,17 @@ const styles = {
   }
 };
 
-export default class GoogleClassroomShareButton extends React.Component {
 // used to give each instance a unique id to use for callback names
 let componentCount = 0;
 
+export default class GoogleClassroomShareButton extends React.PureComponent {
   static propTypes = {
     url: PropTypes.string.isRequired,
     itemtype: PropTypes.string.isRequired,
     title: PropTypes.string,
     height: PropTypes.number,
     courseid: PropTypes.number,
-    analyticsData: PropTypes.object
+    analyticsData: PropTypes.string
   };
 
   static defaultProps = {
@@ -78,6 +79,12 @@ let componentCount = 0;
     }
   }
 
+  componentDidUpdate(prevProps) {
+    if (!_.isEqual(this.props, prevProps)) {
+      this.renderButton();
+    }
+  }
+
   onButtonResize() {
     this.setState({buttonRendered: true});
     this.resizeObserver.disconnect();
@@ -120,7 +127,7 @@ let componentCount = 0;
         study: 'google-classroom-share-button',
         study_group: 'v0',
         event: event,
-        data_json: JSON.stringify(this.props.analyticsData)
+        data_json: this.props.analyticsData
       },
       {includeUserId: true}
     );
