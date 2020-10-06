@@ -1377,18 +1377,19 @@ ActiveRecord::Schema.define(version: 20201006202706) do
   end
 
   create_table "script_levels", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.integer  "script_id",                         null: false
+    t.integer  "script_id",                               null: false
     t.integer  "chapter"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "stage_id"
     t.integer  "position"
     t.boolean  "assessment"
-    t.text     "properties",          limit: 65535
+    t.text     "properties",                limit: 65535
     t.boolean  "named_level"
     t.boolean  "bonus"
     t.integer  "activity_section_id"
     t.string   "seed_key"
+    t.integer  "activity_section_position"
     t.index ["activity_section_id"], name: "index_script_levels_on_activity_section_id", using: :btree
     t.index ["script_id"], name: "index_script_levels_on_script_id", using: :btree
     t.index ["seed_key"], name: "index_script_levels_on_seed_key", unique: true, using: :btree
