@@ -19,8 +19,10 @@ const styles = {
 };
 
 export default class GoogleClassroomShareButton extends React.Component {
+// used to give each instance a unique id to use for callback names
+let componentCount = 0;
+
   static propTypes = {
-    buttonId: PropTypes.string.isRequired,
     url: PropTypes.string.isRequired,
     itemtype: PropTypes.string.isRequired,
     title: PropTypes.string,
@@ -51,10 +53,11 @@ export default class GoogleClassroomShareButton extends React.Component {
     this.blur = this.blur.bind(this);
     this.mouseOver = this.mouseOver.bind(this);
     this.mouseOut = this.mouseOut.bind(this);
-    this.iframeMouseOver = false;
   }
 
+  instanceId = componentCount++;
   buttonRef = null;
+  iframeMouseOver = false;
   state = {
     buttonRendered: false
   };
@@ -81,11 +84,11 @@ export default class GoogleClassroomShareButton extends React.Component {
   }
 
   onShareStartName() {
-    return 'onShareStart_' + this.props.buttonId;
+    return 'onShareStart_' + this.instanceId;
   }
 
   onShareCompleteName() {
-    return 'onShareComplete_' + this.props.buttonId;
+    return 'onShareComplete_' + this.instanceId;
   }
 
   onShareStart() {
@@ -125,7 +128,7 @@ export default class GoogleClassroomShareButton extends React.Component {
 
   // https://developers.google.com/classroom/guides/sharebutton
   renderButton() {
-    window.gapi.sharetoclassroom.render(this.props.buttonId, {
+    window.gapi.sharetoclassroom.render(this.buttonRef, {
       theme: 'light',
       url: this.props.url,
       itemtype: this.props.itemtype,
@@ -141,7 +144,6 @@ export default class GoogleClassroomShareButton extends React.Component {
     return (
       <span style={styles.container}>
         <span
-          id={this.props.buttonId}
           ref={elem => (this.buttonRef = elem)}
           onMouseOver={this.mouseOver}
           onMouseOut={this.mouseOut}
