@@ -4,6 +4,7 @@ const SET_IMPORTED_DATA = "SET_IMPORTED_DATA";
 const SET_COLUMNS_BY_DATA_TYPE = "SET_COLUMNS_BY_DATA_TYPE";
 const SET_SELECTED_FEATURES = "SET_SELECTED_FEATURES";
 const SET_LABEL_COLUMN = "SET_LABEL_COLUMN";
+const SET_FEATURE_NUMBER_KEY = "SET_FEATURE_NUMBER_KEY";
 const SET_SHOW_PREDICT = "SET_SHOW_PREDICT";
 const SET_TEST_DATA = "SET_TEST_DATA";
 const SET_PREDICTION = "SET_PREDICTION";
@@ -28,6 +29,25 @@ export function setLabelColumn(labelColumn) {
   return { type: SET_LABEL_COLUMN, labelColumn };
 }
 
+/* featureNumberKey maps feature names to a hash of category options mapped to integers.
+  {
+    feature1: {
+      option1 : 0,
+      option2 : 1,
+      option3: 2,
+      ...
+    },
+    feature2: {
+      option1 : 0,
+      option2 : 1,
+      ...
+    }
+  }
+*/
+export function setFeatureNumberKey(featureNumberKey) {
+  return { type: SET_FEATURE_NUMBER_KEY, featureNumberKey };
+}
+
 export function setShowPredict(showPredict) {
   return { type: SET_SHOW_PREDICT, showPredict };
 }
@@ -45,6 +65,7 @@ const initialState = {
   columnsByDataType: {},
   selectedFeatures: [],
   labelColumn: undefined,
+  featureNumberKey: {},
   showPredict: false,
   testData: {},
   prediction: undefined
@@ -78,6 +99,12 @@ export default function rootReducer(state = initialState, action) {
     return {
       ...state,
       labelColumn: action.labelColumn
+    };
+  }
+  if (action.type === SET_FEATURE_NUMBER_KEY) {
+    return {
+      ...state,
+      featureNumberKey: action.featureNumberKey
     };
   }
   if (action.type === SET_SHOW_PREDICT) {
@@ -139,7 +166,14 @@ export function getSelectableFeatures(state) {
     .filter(column => column !== state.labelColumn);
 }
 
-function getUniqueOptions(state, column) {
+// Right now the SVM model we're using only supports binary classification.
+export function getSelectableLabels(state) {
+  return getCategoricalColumns(state).filter(
+    column => getUniqueOptions(state, column).length === 2
+  );
+}
+
+export function getUniqueOptions(state, column) {
   return Array.from(new Set(state.data.map(row => row[column])));
 }
 
