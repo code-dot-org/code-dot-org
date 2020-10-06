@@ -3,13 +3,15 @@
 en:
   data:
     script:
+      category_heading:
+        csf_category_heading: CS Fundamentals
       category:
         csd_category_name: CS Discoveries ('17-'18)
         csd_2018_category_name: CS Discoveries ('18-'19)
         csd_2019_category_name: CS Discoveries ('19-'20)
         csd_2020_category_name: CS Discoveries ('20-'21)
         csd_pilot_category_name: CS Discoveries Pilot
-        csf_category_name: CS Fundamentals
+        csf_category_name: CS Fundamentals ('17-'18)
         csf_2018_category_name: CS Fundamentals ('18-'19)
         csf_2019_category_name: CS Fundamentals ('19-'20)
         csf_2020_category_name: CS Fundamentals ('20-'21)

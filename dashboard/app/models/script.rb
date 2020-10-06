@@ -1510,6 +1510,13 @@ class Script < ActiveRecord::Base
     end
     info[:is_stable] = true if is_stable
 
+    # For CSF scripts, set the assignment family category so the CSF courses will be
+    # grouped together under the 'CS Fundamentals' heading in the course assignment dropdown.
+    if ScriptConstants.csf_script?(self)
+      info[:assignment_family_category_title] = I18n.t("data.script.category_heading.csf_category_heading", "CS Fundamentals")
+      info[:assignment_family_category_priority] = info[:category_priority]
+    end
+
     info[:category] = I18n.t("data.script.category.#{info[:category]}_category_name", default: info[:category])
     info[:supported_locales] = supported_locale_names
     info[:lesson_extras_available] = lesson_extras_available

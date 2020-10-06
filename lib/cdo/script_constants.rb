@@ -409,4 +409,8 @@ module ScriptConstants
       JIGSAW_NAME == script ||
       ADDITIONAL_I18N_SCRIPTS.include?(script)
   end
+
+  def self.csf_script?(script)
+    CSF_COURSE_PATTERNS.map {|r| r =~ script.name}.any?
+  end
 end

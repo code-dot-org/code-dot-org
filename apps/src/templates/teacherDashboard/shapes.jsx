@@ -73,8 +73,8 @@ export const assignmentShape = PropTypes.shape({
 // "course" is already used to refer to a specific version of a course such as
 // csd-2018.
 export const assignmentFamilyShape = PropTypes.shape({
-  category_priority: PropTypes.number.isRequired,
-  category: PropTypes.string.isRequired,
+  assignment_family_category_priority: PropTypes.number.isRequired,
+  assignment_family_category_title: PropTypes.string.isRequired,
   position: PropTypes.number,
   assignment_family_title: PropTypes.string.isRequired,
   assignment_family_name: PropTypes.string.isRequired

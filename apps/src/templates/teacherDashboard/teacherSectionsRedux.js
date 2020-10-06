@@ -502,8 +502,8 @@ const defaultStageExtras = false;
 
 // Fields to copy from the assignmentInfo when creating an assignmentFamily.
 export const assignmentFamilyFields = [
-  'category_priority',
-  'category',
+  'assignment_family_category_title',
+  'assignment_family_category_priority',
   'position',
   'assignment_family_title',
   'assignment_family_name'
@@ -588,6 +588,10 @@ export default function teacherSections(state = initialState, action) {
 
       // Put each script in its own assignment family with the default version
       // year, unless those values were provided by the server.
+      const assignmentFamilyCategoryTitle =
+        script.assignment_family_category_title || script.category;
+      const assignmentFamilyCategoryPriority =
+        script.assignment_family_category_priority || script.category_priority;
       const assignmentFamilyName =
         script.assignment_family_name || script.script_name;
       const assignmentFamilyTitle =
@@ -615,6 +619,8 @@ export default function teacherSections(state = initialState, action) {
         if (versionYear === defaultVersionYear) {
           assignmentFamilies.push({
             ..._.pick(script, assignmentFamilyFields),
+            assignment_family_category_title: assignmentFamilyCategoryTitle,
+            assignment_family_category_priority: assignmentFamilyCategoryPriority,
             assignment_family_title: assignmentFamilyTitle,
             assignment_family_name: assignmentFamilyName
           });

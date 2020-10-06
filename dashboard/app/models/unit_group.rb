@@ -60,6 +60,11 @@ class UnitGroup < ApplicationRecord
     I18n.t("data.course.name.#{name}.title", default: name)
   end
 
+  # Localized string used as the header for all full courses in course assignment dialog.
+  def localized_assignment_family_category_title
+    I18n.t("courses_category", default: "Full Courses")
+  end
+
   def localized_assignment_family_title
     I18n.t("data.course.name.#{name}.assignment_family_title", default: localized_title)
   end
@@ -214,9 +219,9 @@ class UnitGroup < ApplicationRecord
     info[:version_title] = localized_version_title
     info[:is_stable] = stable?
     info[:pilot_experiment] = pilot_experiment
-    info[:category] = I18n.t('courses_category')
-    # Dropdown is sorted by category_priority ascending. "Full courses" should appear at the top.
-    info[:category_priority] = -1
+    info[:assignment_family_category_title] = localized_assignment_family_category_title
+    # Dropdown is sorted by assignment_family_category_priority ascending. "Full courses" should appear at the top.
+    info[:assignment_family_category_priority] = -1
     info[:script_ids] = user ?
       scripts_for_user(user).map(&:id) :
       default_unit_group_units.map(&:script_id)

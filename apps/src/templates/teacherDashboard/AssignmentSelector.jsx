@@ -42,12 +42,12 @@ const categorizeAssignmentFamilies = assignmentFamilies =>
   _(assignmentFamilies)
     .values()
     .orderBy([
-      'category_priority',
-      'category',
+      'assignment_family_category_priority',
+      'assignment_family_category_title',
       'position',
       'assignment_family_title'
     ])
-    .groupBy('category')
+    .groupBy('assignment_family_category_title')
     .value();
 
 const getVersion = assignment => ({
@@ -302,9 +302,9 @@ export default class AssignmentSelector extends Component {
               </option>
             )}
             {Object.keys(assignmentFamiliesByCategory).map(
-              (categoryName, index) => (
-                <optgroup key={index} label={categoryName}>
-                  {assignmentFamiliesByCategory[categoryName].map(
+              (categoryTitle, index) => (
+                <optgroup key={index} label={categoryTitle}>
+                  {assignmentFamiliesByCategory[categoryTitle].map(
                     assignmentFamily =>
                       assignmentFamily !== undefined && (
                         <option
