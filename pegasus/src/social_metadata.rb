@@ -37,8 +37,8 @@ def get_social_metadata_for_page(request)
   social_tags = {
     "code.org" => {
       "soon-hoc" => {
-        title: hoc_s(:hoc2019_header),
-        description: hoc_s(:social_hoc2019_every_sudent),
+        title: hoc_s(:hoc2020_header),
+        description: hoc_s(:social_hoc2020_cs_important),
         image: images[:codeorg2019_social]
       },
       "soon-hoc-mc" => {
@@ -53,7 +53,7 @@ def get_social_metadata_for_page(request)
       },
       "actual-hoc" => {
         title: I18n.t(:og_title_here),
-        description: hoc_s(:social_hoc2019_learn_computer_science),
+        description: hoc_s(:social_hoc2020_cs_important),
         image: images[:codeorg2019_social]
       },
       "actual-hoc-dance" => {
@@ -62,8 +62,8 @@ def get_social_metadata_for_page(request)
         image: images[:codeorg2019_social]
       },
       "default" => {
-        title: hoc_s(:hoc2019_header),
-        description: hoc_s(:social_hoc2019_every_sudent),
+        title: hoc_s(:hoc2020_header),
+        description: hoc_s(:social_hoc2020_cs_important),
         image: images[:codeorg2019_social]
       }
     },
@@ -90,17 +90,17 @@ def get_social_metadata_for_page(request)
     "hourofcode.com" => {
       "soon-hoc" => {
         title: hoc_s(:social_hoc_is_coming),
-        description: hoc_s(:social_hoc2019_hoc_is_about_csforgood),
+        description: hoc_s(:social_hoc2020_hoc_is_about_csforgood),
         image: images[:hoc_2019_social]
       },
       "actual-hoc" => {
         title: hoc_s(:social_hoc2018_hoc_here),
-        description: hoc_s(:social_hoc2019_hoc_is_about_csforgood),
+        description: hoc_s(:social_hoc2020_hoc_is_about_csforgood),
         image: images[:hoc_2019_social]
       },
       "default" => {
         title: hoc_s(:meta_tag_og_title),
-        description: hoc_s(:social_hoc2019_hoc_is_about_csforgood),
+        description: hoc_s(:social_hoc2020_hoc_is_about_csforgood),
         image: images[:hoc_2019_social]
       }
     },
@@ -163,6 +163,30 @@ def get_social_metadata_for_page(request)
         description: hoc_s(:meta_tag_og_description),
         image: images[:hoc_thanks]
       },
+    },
+    "learn" => {
+      "soon-hoc" => {
+        title: hoc_s(:hoc2020_header),
+        description: hoc_s(:social_hoc2020_global_movement),
+        image: images[:hoc_2019_social]
+      },
+      "default" => {
+        title: hoc_s(:hoc2020_header),
+        description: hoc_s(:social_hoc2020_global_movement),
+        image: images[:hoc_2019_social]
+      }
+    },
+    "hoc-overview" => {
+      "soon-hoc" => {
+        title: hoc_s(:hoc2020_header),
+        description: hoc_s(:social_hoc2020_global_movement),
+        image: images[:hoc_2019_social]
+      },
+      "default" => {
+        title: hoc_s(:hoc2020_header),
+        description: hoc_s(:social_hoc2020_global_movement),
+        image: images[:hoc_2019_social]
+      }
     }
   }
 
@@ -178,6 +202,10 @@ def get_social_metadata_for_page(request)
     page = request.site
   elsif request.path == "/thanks" && request.site == "hourofcode.com"
     page = "thanks"
+  elsif request.path == "/learn" && request.site == "hourofcode.com"
+    page = "learn"
+  elsif request.path == "/hourofcode/overview" && request.site == "code.org"
+    page = "hoc-overview"
   else
     return {}
   end
