@@ -57,7 +57,7 @@ class Dancelab < GamelabJr
   end
 
   def self.hoc_songs
-    manifest_json = AWS::S3.create_client.get_object(bucket: 'cdo-sound-library', key: 'hoc_song_meta/songManifest2019.json')[:body].read
+    manifest_json = AWS::S3.create_client.get_object(bucket: 'cdo-sound-library', key: 'hoc_song_meta/songManifest2020.json')[:body].read
     manifest = JSON.parse(manifest_json)
     manifest['songs'].map do |song|
       name = "#{song['text']}#{song['pg13'] ? ' (PG-13)' : ''}"
