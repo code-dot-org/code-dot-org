@@ -2,6 +2,11 @@ import GoogleBlockly from 'blockly/core';
 import BlockSvgUnused from './blockSvgUnused';
 
 export default class BlockSvg extends GoogleBlockly.BlockSvg {
+  constructor(workspace, prototypeName, opt_id) {
+    super(workspace, prototypeName, opt_id);
+    this.canDisconnectFromParent_ = true;
+  }
+
   addUnusedBlockFrame(helpClickFunc) {
     if (!this.unusedSvg_) {
       this.unusedSvg_ = new BlockSvgUnused(this, helpClickFunc);
@@ -58,10 +63,6 @@ export default class BlockSvg extends GoogleBlockly.BlockSvg {
       menuOptions.push(movable);
       menuOptions.push(editable);
       menuOptions.push(lockToParent);
-    } else {
-      while (menuOptions) {
-        menuOptions.pop();
-      }
     }
   }
 
