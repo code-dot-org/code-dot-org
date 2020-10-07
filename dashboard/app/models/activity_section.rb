@@ -40,4 +40,16 @@ class ActivitySection < ApplicationRecord
     description
     tips
   )
+
+  def summarize_for_edit
+    {
+      id: id,
+      position: position,
+      name: name,
+      remarks: remarks,
+      slide: slide,
+      description: description,
+      tips: tips
+    }
+  end
 end
