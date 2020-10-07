@@ -20,14 +20,14 @@ export const styles = {
 
 export default class LocalMapControlList extends React.Component {
   static propTypes = {
-    selected: PropTypes.number,
-    lng: PropTypes.string,
-    lat: PropTypes.string,
-    featureList: PropTypes.arrayOf(PropTypes.object),
-    flyToLocation: PropTypes.func,
-    createPopUp: PropTypes.func,
-    resetMap: PropTypes.func,
-    updateActive: PropTypes.func
+    selected: PropTypes.number.required,
+    lng: PropTypes.string.required,
+    lat: PropTypes.string.required,
+    featureList: PropTypes.arrayOf(PropTypes.object).required,
+    flyToLocation: PropTypes.func.required,
+    createPopUp: PropTypes.func.required,
+    resetMap: PropTypes.func.required,
+    updateActive: PropTypes.func.required
   };
 
   render() {
