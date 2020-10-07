@@ -121,6 +121,10 @@ la:
     ¡Las ciencias de la computación son mucho más que programar! Disfruta del primer
     paso de Code.org en un nuevo viaje para enseñar más sobre IA en nuestro plan de
     estudios.
+  hoc_live: 'Hora del Código En Vivo'
+  hoc_live_sign_up_title: 'Regístrate para la Hora del Código En Vivo'
+  hoc_live_sign_up_message: '¡Aprende en vivo junto a invitados especiales! Estudiantes de todas las edades y habilidades, incluso aquellos sin computadoras, son bienvenidos. Únete a nuestra lista de distribución para recibir recordatorios de los episodios y recursos para continuar el aprendizaje en casa.'
+  hoc_live_join_us: 'Únete'
   hoc_overview_oceans_tutorial_header: Océanos de AI
   hoc_overview_oceans_tutorial_desc: Aprende sobre inteligencia artificial (IA), aprendizaje
     automático, datos de entrenamiento y sesgos, mientras exploras cuestiones éticas
