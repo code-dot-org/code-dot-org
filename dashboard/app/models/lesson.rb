@@ -287,7 +287,7 @@ class Lesson < ActiveRecord::Base
   #
   # Key names are converted to camelCase here so they can easily be consumed by
   # the client.
-  def summarize_editable_data
+  def summarize_for_lesson_edit
     {
       name: name,
       overview: overview,
