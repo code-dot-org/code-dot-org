@@ -440,7 +440,8 @@ P5Lab.prototype.init = function(config) {
     isProjectLevel: !!config.level.isProjectLevel,
     isSubmittable: !!config.level.submittable,
     isSubmitted: !!config.level.submitted,
-    librariesEnabled: !!config.level.librariesEnabled
+    librariesEnabled: !!config.level.librariesEnabled,
+    validationEnabled: !!config.level.validationEnabled
   });
 
   if (startInAnimationTab(getStore().getState())) {
