@@ -3,8 +3,8 @@
 # Table name: pd_workshop_facilitator_daily_surveys
 #
 #  id             :integer          not null, primary key
-#  form_id        :integer          not null
-#  submission_id  :integer          not null
+#  form_id        :bigint           not null
+#  submission_id  :bigint           not null
 #  user_id        :integer          not null
 #  pd_session_id  :integer
 #  pd_workshop_id :integer          not null
