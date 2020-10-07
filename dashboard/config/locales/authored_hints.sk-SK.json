@@ -569,14 +569,14 @@
         },
         "OPD-K5-variables-6": {
           "courseF_artist_variables4_a": "Tvoj kód nebude veľmi odlišný od toho v poslednej úlohe, iba toľko, že potrebuješ otočiť umelca, aby skočil nadol, a potom ho otočiť späť, aby bol pripravený znovu skočiť dopredu.",
-          "courseF_artist_variables4_c": "Toto je vzor, ktorého sa bude držať tvoj umelec:\n\n![](https://images.code.org/41ae98c1633755cf4553f90a80e125cf-image-1500325529204.6_hint.gif)",
-          "courseF_artist_variables4_b": "<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"variables_set\">\n        <title name=\"VAR\">length</title>\n        <value name=\"VALUE\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">50</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"controls_repeat_ext\">\n            <value name=\"TIMES\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">3</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"controls_repeat_ext\">\n                <value name=\"TIMES\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">3</title>\n                  </block>\n                </value>\n                <statement name=\"DO\">\n                  <block type=\"draw_move\">\n                    <title name=\"DIR\">moveForward</title>\n                    <value name=\"VALUE\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">length</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_turn\">\n                        <title name=\"DIR\">turnLeft</title>\n                        <value name=\"VALUE\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">120</title>\n                          </block>\n                        </value>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n                <next>\n                  <block type=\"jump\">\n                    <title name=\"DIR\">jumpForward</title>\n                    <value name=\"VALUE\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">length</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_turn\">\n                        <title name=\"DIR\">turnRight</title>\n                        <value name=\"VALUE\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">90</title>\n                          </block>\n                        </value>\n                        <next>\n                          <block type=\"jump\">\n                            <title name=\"DIR\">jumpForward</title>\n                            <value name=\"VALUE\">\n                              <block type=\"variables_get\">\n                                <title name=\"VAR\">length</title>\n                              </block>\n                            </value>\n                            <next>\n                              <block type=\"draw_turn\">\n                                <title name=\"DIR\">turnLeft</title>\n                                <value name=\"VALUE\">\n                                  <block type=\"math_number\">\n                                    <title name=\"NUM\">90</title>\n                                  </block>\n                                </value>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "courseF_artist_variables4_c": "Toto je vzor, ktorého sa bude držať tvoj umelec:\n\n[][0]",
+          "courseF_artist_variables4_b": "[blockly block][0]"
         },
         "OPD-K5-variables-7": {
           "courseF_artist_variables5_a": "Druhá polovica tvojho kódu by mala vyzerať takmer rovnako ako prvá, rozdiel bude iba v tom, že sa budeš otáčať _vľavo_, skákať, a potom otáčať _vpravo_.",
           "courseF_artist_variables5_b": "Prvá polovica tvojho kóud nakreslí prvé tri trojuholníky a druhá polovica nakreslí zvyšné tri.",
           "courseF_artist_variables5_c": "Začni zduplikovaním kódu z prvej polovice tvojho programu, potom ho uprav, aby si vyrobil daný vzor.",
-          "courseF_artist_variables5_d": "Toto je vzor, ktorého sa bude držať tvoj umelec:\n\n![](https://images.code.org/e4ac66f8e9a4503e49c4fad1e4fafc1d-image-1500326800109.7_hint.gif)"
+          "courseF_artist_variables5_d": "Toto je vzor, ktorého sa bude držať tvoj umelec:\n\n[][0]"
         },
         "Overworld Avoid Monsters": {
           "mc_8_a": "Je viacero ciest, kotrými môžeš ísť. Ktorá je tá najkratšia?",
@@ -759,10 +759,12 @@
           "mc_9_c": "Použi blok `umiestni fakľu` aby si dal fakľu na miesto, kde stojíš. "
         },
         "behaviors 5": {
-          "behavior hint": "Na vyriešenie tejto úlohy je treba upraviť správanie. Postava kozmonauta sa musí pohnuť dvomi rôznymi smermi, aby išla diagonálne."
+          "behavior hint": "Na vyriešenie tejto úlohy je treba upraviť správanie. Postava kozmonauta sa musí pohnuť dvomi rôznymi smermi, aby išla diagonálne.",
+          "target hint": "Môžeš si vybrať ktorúkoľvek zo štyroch lodí. Ktorú z nich chce astronaut?"
         },
         "behaviors 5_2020": {
-          "behavior hint": "Na vyriešenie tejto úlohy je treba upraviť správanie. Postava kozmonauta sa musí pohnuť dvomi rôznymi smermi, aby išla diagonálne."
+          "behavior hint": "Na vyriešenie tejto úlohy je treba upraviť správanie. Postava kozmonauta sa musí pohnuť dvomi rôznymi smermi, aby išla diagonálne.",
+          "target hint": "Môžeš si vybrať ktorúkoľvek zo štyroch lodí. Ktorú z nich chce astronaut?"
         },
         "comment_intro_maze_2018": {
           "courseC_maze_programming4_a": "Komentáre sú tiež užitočné vtedy, keď sa iní ľudia snažia prečítať tvoj kód.",
@@ -1036,7 +1038,7 @@
           "courseA_collector_loops3_b": "Nezabudni, do vnútra cyklu <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> môžeš vložiť viac ako jeden blok."
         },
         "courseA_collector_loops3_2019": {
-          "courseA_collector_loops3_a": "Skús použiť blok \"opakovať\"!",
+          "courseA_collector_loops3_a": "Skús použiť \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>!\n\n cyklus!",
           "courseA_collector_loops3_b": "Nezabudni, do vnútra cyklu <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> môžeš vložiť viac ako jeden blok."
         },
         "courseA_collector_loops3_2020": {
@@ -2163,8 +2165,8 @@
           "courseB_iceage_loops3_b": "Na opakovanie kódu vytiahni cyklus `opakuj`,\n\n<xml><block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">???</title>\n</block></xml>\n\na potom vlož dovnútra blok, ktorý chceš."
         },
         "courseB_iceage_loops3_2019": {
-          "courseB_iceage_loops3_a": "Použi tento nový blok!\n<xml><block type=\"controls_repeat_simplified_dropdown\">\n\n<title name=\"TIMES\" config=\"3-10\">5</title>\n</block></xml>",
-          "courseB_iceage_loops3_b": "Na opakovanie kódu vytiahni cyklus `opakuj` <xml><block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">???</title>\n</block></xml>, a potom vlož dovnútra blok, ktorý chceš."
+          "courseB_iceage_loops3_a": "Použi tento nový blok!\n <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">5</title>\n    </block></xml>",
+          "courseB_iceage_loops3_b": "Na opakovanie kódu vytiahni cyklus `opakuj` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml>, a potom vlož dovnútra blok, ktorý chceš."
         },
         "courseB_iceage_loops3_2020": {
           "courseB_iceage_loops3_a": "Použi tento nový blok!\n<xml><block type=\"controls_repeat_simplified_dropdown\">\n\n<title name=\"TIMES\" config=\"3-10\">5</title>\n</block></xml>",
@@ -2853,13 +2855,13 @@
         },
         "courseC_PlayLab_events9_2019": {
           "courseC_PlayLab_events9_a": "Použitie bloku `pridaj bod` ti pomôže vyriešiť túto úlohu.",
-          "courseC_PlayLab_events9_b": "Uisti sa, že tvoj nový blok `keď sa postava dotkne` má nastavené postavy **1** a **3**.",
-          "courseC_PlayLab_events9_c": "Blok `keď sa postava dotkne` môžeš na pracovnej ploche použiť viackrát naraz, takto ten prvý nemusíš odstrániť!"
+          "courseC_PlayLab_events9_b": "Uisti sa, že tvoj nový blok `keď sa postava dotkne ` má nastavené postavy **1** a **3**.",
+          "courseC_PlayLab_events9_c": "Blok `keď sa postava dotkne ` môžeš na pracovnej ploche použiť viackrát naraz, takto ten prvý nemusíš odstrániť!"
         },
         "courseC_PlayLab_events9_2020": {
           "courseC_PlayLab_events9_a": "Použitie bloku `pridaj bod` ti pomôže vyriešiť túto úlohu.",
-          "courseC_PlayLab_events9_b": "Uisti sa, že tvoj nový blok `keď sa postava dotkne` má nastavené postavy **1** a **3**.",
-          "courseC_PlayLab_events9_c": "Blok `keď sa postava dotkne` môžeš na pracovnej ploche použiť viackrát naraz, takto ten prvý nemusíš odstrániť!"
+          "courseC_PlayLab_events9_b": "Uisti sa, že tvoj nový blok `keď sa postava dotkne ` má nastavené postavy **1** a **3**.",
+          "courseC_PlayLab_events9_c": "Blok `keď sa postava dotkne ` môžeš na pracovnej ploche použiť viackrát naraz, takto ten prvý nemusíš odstrániť!"
         },
         "courseC_PlayLab_eventsA": {
           "courseC_PlayLab_eventsA_a": "Na vyriešenie tejto úlohy použi blok `nastav pozadie` a blok `nastav postavu na ___ rýchlosť`.",
@@ -2870,11 +2872,11 @@
           "courseC_PlayLab_eventsA_b": "Na vyriešenie tejto úlohy musíš na pracovnú plochu presunúť blok `Pri spustení`."
         },
         "courseC_PlayLab_eventsA_2019": {
-          "courseC_PlayLab_eventsA_a": "Na vyriešenie tejto úlohy použi blok `nastav pozadie` a blok `nastav postavu na ___ rýchlosť`.",
+          "courseC_PlayLab_eventsA_a": "Na vyriešenie tejto úlohy použi blok `nastav pozadie ` a blok `nastav postavu na ___ rýchlosť `.",
           "courseC_PlayLab_eventsA_b": "Na vyriešenie tejto úlohy musíš na pracovnú plochu presunúť blok `Pri spustení`."
         },
         "courseC_PlayLab_eventsA_2020": {
-          "courseC_PlayLab_eventsA_a": "Na vyriešenie tejto úlohy použi blok `nastav pozadie` a blok `nastav postavu na ___ rýchlosť`.",
+          "courseC_PlayLab_eventsA_a": "Na vyriešenie tejto úlohy použi blok `nastav pozadie ` a blok `nastav postavu na ___ rýchlosť `.",
           "courseC_PlayLab_eventsA_b": "Na vyriešenie tejto úlohy musíš na pracovnú plochu presunúť blok `Pri spustení`."
         },
         "courseC_PlayLab_eventsFP": {
@@ -2888,10 +2890,14 @@
           "idea3": "_Potrebuješ inšpiráciu?_\n\n**Pinball** - Jedna z postáv sa pohybuje pomocou šípok (použi bloky`keď šípka nahor`, `keď šípka nadol`), potom vždy prehraj náhodný zvuk, keď narazí do iných postáv."
         },
         "courseC_PlayLab_eventsFP_2019": {
-          "idea3": "_Potrebuješ inšpiráciu?_\n\n**Pinball** - Jedna z postáv sa pohybuje pomocou šípok (použi bloky`keď šípka nahor`, `keď šípka nadol`), potom vždy prehraj náhodný zvuk, keď narazí do iných postáv."
+          "idea3": "_Potrebuješ inšpiráciu?_\n\n**Pinball** - Jedna z postáv sa pohybuje pomocou šípok (použi bloky`keď šípka nahor`, `keď šípka nadol`), potom vždy prehraj náhodný zvuk, keď narazí do iných postáv.",
+          "idea1": "_ Potrebuješ nápad?\n\n** Kto je tam?** Zobrazuj postavy s náhodnými obrázkami, aby nikto nevedel, kto sa objaví ako ďalší.\n\n<img src= \"https://images.code.org/dbd6ece9d0fb213039ea5dccb91fc425-image-1563577859889.gif\" style=\"width: 200px\">_\n",
+          "idea2": "_ Potrebuješ nápad?_\n\n**Dobrodružstvo prichádza** - Zmeň pozadie a potom nechaj postavy hovoriť o tom, kde sa teraz nachádzajú.\n\n<img src= \"https://images.code.org/a7f740d73074deb128cdc2826abda9e6-image-1563576781779.gif\" style=\"width: 200px\">"
         },
         "courseC_PlayLab_eventsFP_2020": {
-          "idea3": "_Potrebuješ inšpiráciu?_\n\n**Pinball** - Jedna z postáv sa pohybuje pomocou šípok (použi bloky`keď šípka nahor`, `keď šípka nadol`), potom vždy prehraj náhodný zvuk, keď narazí do iných postáv."
+          "idea3": "_Potrebuješ inšpiráciu?_\n\n**Pinball** - Jedna z postáv sa pohybuje pomocou šípok (použi bloky`keď šípka nahor`, `keď šípka nadol`), potom vždy prehraj náhodný zvuk, keď narazí do iných postáv.",
+          "idea1": "_ Potrebuješ nápad?\n\n** Kto je tam?** Zobrazuj postavy s náhodnými obrázkami, aby nikto nevedel, kto sa objaví ako ďalší.\n\n<img src= \"https://images.code.org/dbd6ece9d0fb213039ea5dccb91fc425-image-1563577859889.gif\" style=\"width: 200px\">_\n",
+          "idea2": "_ Potrebuješ nápad?_\n\n**Dobrodružstvo prichádza** - Zmeň pozadie a potom nechaj postavy hovoriť o tom, kde sa teraz nachádzajú.\n\n<img src= \"https://images.code.org/a7f740d73074deb128cdc2826abda9e6-image-1563576781779.gif\" style=\"width: 200px\">"
         },
         "courseC_PlayLab_events_challenge1": {
           "courseC_PlayLab_events_challenge_a": "Tento blok môžeš použiť, ak chceš postavy premiestnovať na rôzne miesta na hracej ploche.\n\n<xml> <block type=\"studio_setSpritePosition\">\n\n<title name=\"SPRITE\">0</title>\n<title name=\"VALUE\">12</title>\n</block></xml>",
@@ -2904,14 +2910,14 @@
           "courseC_PlayLab_events_challenge_c": "Vyskúšaj zmeniť rýchlosť jednotlivých postáv, takto si vieš hru uľahčiť alebo sťažiť!\n\n<xml>  <block type=\"studio_setSpriteSpeed\">\n\n<title name=\"SPRITE\">0</title>\n<title name=\"VALUE\">Studio.SpriteSpeed.FAST</title>\n</block></xml>"
         },
         "courseC_PlayLab_events_challenge1_2019": {
-          "courseC_PlayLab_events_challenge_a": "Tento blok môžeš použiť, ak chceš postavy premiestnovať na rôzne miesta na hracej ploche.\n\n<xml> <block type=\"studio_setSpritePosition\">\n\n<title name=\"SPRITE\">0</title>\n<title name=\"VALUE\">12</title>\n</block></xml>",
+          "courseC_PlayLab_events_challenge_a": "Tento blok môžeš použiť, ak chceš postavy premiestnovať na rôzne miesta na hracej ploche.\n\n<xml> <block type=\"studio_setSpritePosition\">\n<title name=\"SPRITE\">0</title>\n<title name=\"VALUE\">12</title>\n</block></xml>",
           "courseC_PlayLab_events_challenge_b": "Vyskúšaj použiť blok `nastav postavu 1 na pozíciu v strede vľavo`, keď sa dotkne iných postáv. Toto hru zreštartuje a tak sa hráč môže znova pokúsiť!",
-          "courseC_PlayLab_events_challenge_c": "Vyskúšaj zmeniť rýchlosť jednotlivých postáv, takto si vieš hru uľahčiť alebo sťažiť!\n\n<xml>  <block type=\"studio_setSpriteSpeed\">\n\n<title name=\"SPRITE\">0</title>\n<title name=\"VALUE\">Studio.SpriteSpeed.FAST</title>\n</block></xml>"
+          "courseC_PlayLab_events_challenge_c": "Vyskúšaj zmeniť rýchlosť jednotlivých postáv, takto si vieš hru uľahčiť alebo sťažiť!\n\n<xml>  <block type=\"studio_setSpriteSpeed\">\n<title name=\"SPRITE\">0</title>\n<title name=\"VALUE\">Studio.SpriteSpeed.FAST</title>\n</block></xml>"
         },
         "courseC_PlayLab_events_challenge1_2020": {
-          "courseC_PlayLab_events_challenge_a": "Tento blok môžeš použiť, ak chceš postavy premiestnovať na rôzne miesta na hracej ploche.\n\n<xml> <block type=\"studio_setSpritePosition\">\n\n<title name=\"SPRITE\">0</title>\n<title name=\"VALUE\">12</title>\n</block></xml>",
+          "courseC_PlayLab_events_challenge_a": "Tento blok môžeš použiť, ak chceš postavy premiestnovať na rôzne miesta na hracej ploche.\n\n<xml> <block type=\"studio_setSpritePosition\">\n<title name=\"SPRITE\">0</title>\n<title name=\"VALUE\">12</title>\n</block></xml>",
           "courseC_PlayLab_events_challenge_b": "Vyskúšaj použiť blok `nastav postavu 1 na pozíciu v strede vľavo`, keď sa dotkne iných postáv. Toto hru zreštartuje a tak sa hráč môže znova pokúsiť!",
-          "courseC_PlayLab_events_challenge_c": "Vyskúšaj zmeniť rýchlosť jednotlivých postáv, takto si vieš hru uľahčiť alebo sťažiť!\n\n<xml>  <block type=\"studio_setSpriteSpeed\">\n\n<title name=\"SPRITE\">0</title>\n<title name=\"VALUE\">Studio.SpriteSpeed.FAST</title>\n</block></xml>"
+          "courseC_PlayLab_events_challenge_c": "Vyskúšaj zmeniť rýchlosť jednotlivých postáv, takto si vieš hru uľahčiť alebo sťažiť!\n\n<xml>  <block type=\"studio_setSpriteSpeed\">\n<title name=\"SPRITE\">0</title>\n<title name=\"VALUE\">Studio.SpriteSpeed.FAST</title>\n</block></xml>"
         },
         "courseC_artist_loop1": {
           "courseC_artist_loop1_a": "V sovjom cykle nemusíš robiť žiadne zmeny, len pridaj navrch jeden blok.",
@@ -2938,7 +2944,7 @@
           "courseC_artist_loops1a_b": "Použi tento blok na nakreslenie nálepky!\n\n<xml>\n<block type=\"sticker\">\n<title name=\"VALUE\">Bird</title>\n</block>\n</xml>"
         },
         "courseC_artist_loops1a_2019": {
-          "courseC_artist_loops1a_a": "Toto je prvý blok, ktorý budeš potrebovať:\n\n<xml>\n<block type=\"jump_to\">\n<title name=\"VALUE\">13</title>\n</block>\n</xml>",
+          "courseC_artist_loops1a_a": "Toto je prvý blok, ktorý budeš potrebovať:\n\n<xml>\n<block type=\"jump_to_xy\">\n<title name=\"XPOS\">200</title>\n<title name=\"YPOS\">200</title>\n</block>\n</xml>",
           "courseC_artist_loops1a_b": "Použi tento blok na nakreslenie nálepky!\n\n<xml>\n<block type=\"sticker\">\n<title name=\"VALUE\">Bird</title>\n</block>\n</xml>"
         },
         "courseC_artist_loops1a_2020": {
@@ -2990,7 +2996,7 @@
           "courseC_artist_loops4a_a": "Použi tento blok, aby si skočil dopredu:\n\n<xml>\n<block type=\"jump_by_constant\">\n<title name=\"DIR\">jumpForward</title>\n<title name=\"VALUE\">100</title>\n</block>\n</xml>\n\nNezabudni zmeniť to, ako ďaleko skočíš!"
         },
         "courseC_artist_loops4a_2019": {
-          "courseC_artist_loops4a_a": "Použi tento blok, aby si skočil dopredu:\n\n<xml>\n<block type=\"jump_by_constant\">\n<title name=\"DIR\">jumpForward</title>\n<title name=\"VALUE\">???</title>\n</block>\n</xml>\n\nNezabudni zmeniť to, ako ďaleko skočíš!",
+          "courseC_artist_loops4a_a": "Použi tento blok, aby si skočil dopredu:\n\n<xml>\n<block type=\"jump_by_constant\">\n<title name=\"DIR\">jumpForward</title>\n<title name=\"VALUE\">100</title>\n</block>\n</xml>\n\nNezabudni zmeniť to, ako ďaleko skočíš!",
           "courseC_artist_loops4a_b": "Tvoj program by mal vyzerať takto!\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"controls_repeat\">\n<title name=\"TIMES\">???</title>\n<statement name=\"DO\">\n<block type=\"jump_to\">\n<title name=\"VALUE\">13</title>\n<next>\n<block type=\"draw_turn_by_constant_dropdown\">\n<title name=\"DIR\">???</title>\n<title name=\"VALUE\" config=\"1,2,5,10,12,20,30,45,60,90,120,180\">???</title>\n<next>\n<block type=\"sticker\">\n<title name=\"VALUE\">Cat</title>\n<next>\n<block type=\"jump_by_constant\">\n<title name=\"DIR\">jumpForward</title>\n<title name=\"VALUE\">???</title>\n<next>\n<block type=\"sticker\">\n<title name=\"VALUE\">Dog</title>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</statement>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseC_artist_loops4a_2020": {
@@ -3020,7 +3026,7 @@
         "courseC_artist_loops5b_2019": {
           "courseC_artist_loops5b_a": "Použi tento blok na nastavenie tvojho vzoru:\n\n<xml>\n<block type=\"draw_line_style_pattern\">\n<title name=\"VALUE\">DEFAULT</title>\n</block>\n</xml>",
           "courseC_artist_loops5b_b": "Na vytvorenie dizajnu, ako je ten hore, použi blok posuň sa dozadu toľko isto krát ako blok posuň sa dopredu.",
-          "courseC_artist_loops5b_c": "Tvoj program by mal vyzerať nejako takto!\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"draw_line_style_pattern\">\n<title name=\"VALUE\">rainbowLine</title>\n<next>\n<block type=\"controls_repeat\">\n<title name=\"TIMES\">4</title>\n<statement name=\"DO\">\n<block type=\"jump_to\">\n<title name=\"VALUE\">13</title>\n<next>\n<block type=\"draw_move_by_constant\">\n<title name=\"DIR\">moveForward</title>\n<title name=\"VALUE\">???</title>\n<next>\n<block type=\"draw_move_by_constant\">\n<title name=\"DIR\">moveBackward</title>\n<title name=\"VALUE\">???</title>\n<next>\n<block type=\"draw_turn_by_constant_dropdown\">\n<title name=\"DIR\">???</title>\n<title name=\"VALUE\" config=\"1,2,5,10,12,20,30,45,60,90,120,180\">???</title>\n<next>\n<block type=\"sticker\">\n<title name=\"VALUE\">Cat</title>\n<next>\n<block type=\"jump_by_constant\">\n<title name=\"DIR\">jumpForward</title>\n<title name=\"VALUE\">???</title>\n<next>\n<block type=\"sticker\">\n<title name=\"VALUE\">Dog</title>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</statement>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+          "courseC_artist_loops5b_c": "Tvoj program by mal vyzerať takto!\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"controls_repeat\">\n<title name=\"TIMES\">???</title>\n<statement name=\"DO\">\n<block type=\"jump_to\">\n<title name=\"VALUE\">13</title>\n<next>\n<block type=\"draw_turn_by_constant_dropdown\">\n<title name=\"DIR\">???</title>\n<title name=\"VALUE\" config=\"1,2,5,10,12,20,30,45,60,90,120,180\">???</title>\n<next>\n<block type=\"sticker\">\n<title name=\"VALUE\">Cat</title>\n<next>\n<block type=\"jump_by_constant\">\n<title name=\"DIR\">jumpForward</title>\n<title name=\"VALUE\">???</title>\n<next>\n<block type=\"sticker\">\n<title name=\"VALUE\">Dog</title>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</statement>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseC_artist_loops5b_2020": {
           "courseC_artist_loops5b_a": "Použi tento blok na nastavenie tvojho vzoru:\n\n<xml>\n<block type=\"draw_line_style_pattern\">\n<title name=\"VALUE\">DEFAULT</title>\n</block>\n</xml>",
@@ -3660,12 +3666,12 @@
         "courseC_harvester_loops_challenge1a_2019": {
           "courseC_harvester_loops_challenge1_a": "Toto by bolo bez cyklov príliš ťažké!",
           "courseC_harvester_loops_challenge1_b": "Môžeš zopakovať `posuň sa dopredu` a `zober kukuricu` koľkokoľvek krát potrebuješ, potom v každom rohu použi blok `otoč sa vpravo`.",
-          "courseC_harvester_loops_challenge1_c": "Najlepší spôsob na zozbieranie kukurice používa blok `opakuj` vo vnútri iného bloku `opakuj`.\n\n<xml><block type=\"controls_repeat\">\n\n<title name=\"TIMES\">2</title>\n<statement name=\"DO\">\n<block type=\"controls_repeat\">\n<title name=\"TIMES\">4</title>\n<statement name=\"DO\">\n<block type=\"maze_move\">\n<title name=\"DIR\">moveForward</title>\n<next>\n<block type=\"harvester_corn\"/>\n</next>\n</block>\n</statement>\n<next>\n<block type=\"maze_turn\">\n<title name=\"DIR\">turnRight</title>\n</block>\n</next>\n</block>\n</statement>\n</block></xml>"
+          "courseC_harvester_loops_challenge1_c": "Najlepší spôsob na zozbieranie kukurice používa blok `opakuj` vo vnútri iného bloku `opakuj`.\n\n<xml><block type=\"controls_repeat\">\n<title name=\"TIMES\">2</title>\n<statement name=\"DO\">\n<block type=\"controls_repeat\">\n<title name=\"TIMES\">4</title>\n<statement name=\"DO\">\n<block type=\"maze_move\">\n<title name=\"DIR\">moveForward</title>\n<next>\n<block type=\"harvester_corn\"/>\n</next>\n</block>\n</statement>\n<next>\n<block type=\"maze_turn\">\n<title name=\"DIR\">turnRight</title>\n</block>\n</next>\n</block>\n</statement>\n</block></xml>"
         },
         "courseC_harvester_loops_challenge1a_2020": {
           "courseC_harvester_loops_challenge1_a": "Toto by bolo bez cyklov príliš ťažké!",
           "courseC_harvester_loops_challenge1_b": "Môžeš zopakovať `posuň sa dopredu` a `zober kukuricu` koľkokoľvek krát potrebuješ, potom v každom rohu použi blok `otoč sa vpravo`.",
-          "courseC_harvester_loops_challenge1_c": "Najlepší spôsob na zozbieranie kukurice používa blok `opakuj` vo vnútri iného bloku `opakuj`.\n\n<xml><block type=\"controls_repeat\">\n\n<title name=\"TIMES\">2</title>\n<statement name=\"DO\">\n<block type=\"controls_repeat\">\n<title name=\"TIMES\">4</title>\n<statement name=\"DO\">\n<block type=\"maze_move\">\n<title name=\"DIR\">moveForward</title>\n<next>\n<block type=\"harvester_corn\"/>\n</next>\n</block>\n</statement>\n<next>\n<block type=\"maze_turn\">\n<title name=\"DIR\">turnRight</title>\n</block>\n</next>\n</block>\n</statement>\n</block></xml>"
+          "courseC_harvester_loops_challenge1_c": "Najlepší spôsob na zozbieranie kukurice používa blok `opakuj` vo vnútri iného bloku `opakuj`.\n\n<xml><block type=\"controls_repeat\">\n<title name=\"TIMES\">2</title>\n<statement name=\"DO\">\n<block type=\"controls_repeat\">\n<title name=\"TIMES\">4</title>\n<statement name=\"DO\">\n<block type=\"maze_move\">\n<title name=\"DIR\">moveForward</title>\n<next>\n<block type=\"harvester_corn\"/>\n</next>\n</block>\n</statement>\n<next>\n<block type=\"maze_turn\">\n<title name=\"DIR\">turnRight</title>\n</block>\n</next>\n</block>\n</statement>\n</block></xml>"
         },
         "courseC_harvester_loops_challenge2": {
           "courseC_harvester_loops_challenge2_a": "Jedno z riešení je ísť cik-cakovo. Ďalší spôsob je ísť do špirály! Úloha ako táto má veľa možných riešení. Buď vytrvalý!",
@@ -3682,14 +3688,14 @@
         "courseC_harvester_loops_challenge2_2019": {
           "courseC_harvester_loops_challenge2_a": "Jedno z riešení je ísť cik-cakovo. Ďalší spôsob je ísť do špirály! Úloha ako táto má veľa možných riešení. Buď vytrvalý!",
           "courseC_harvester_loops_challenge2_b": "Môžeš zopakovať `posuň sa dopredu` a `zober šalát` koľkokoľvek krát potrebuješ, potom sa otoč vždy, keď si v rohu.",
-          "courseC_harvester_loops_challenge2_c": "Tento cik-cakový vzor zopakuj dva krát na to, aby si úlohu splnil len s pomocou 20 blokov!\n\n![](<https://images.code.org/26cfaf6fe4a275e266b51e9ef3711171-image-1493502306380.18.52 PM copy.png>)",
-          "courseC_harvester_loops_challenge2_d": "Tento špirálový vzor môže byť nakódovaný len pomocou 18 blokov!\n\n![](<https://images.code.org/0bfc0a0ed6783fae908368a6e6d12c02-image-1493501358990.18.52 PM.png>)"
+          "courseC_harvester_loops_challenge2_c": "Tento cik-cakový vzor zopakuj dva krát na to, aby si úlohu splnil len s pomocou 20 blokov!\n\n![](https://images.code.org/26cfaf6fe4a275e266b51e9ef3711171-image-1493502306380.18.52 PM copy.png)",
+          "courseC_harvester_loops_challenge2_d": "Tento špirálový vzor môže byť nakódovaný len pomocou 18 blokov!\n\n![](https://images.code.org/0bfc0a0ed6783fae908368a6e6d12c02-image-1493501358990.18.52 PM.png)"
         },
         "courseC_harvester_loops_challenge2_2020": {
           "courseC_harvester_loops_challenge2_a": "Jedno z riešení je ísť cik-cakovo. Ďalší spôsob je ísť do špirály! Úloha ako táto má veľa možných riešení. Buď vytrvalý!",
           "courseC_harvester_loops_challenge2_b": "Môžeš zopakovať `posuň sa dopredu` a `zober šalát` koľkokoľvek krát potrebuješ, potom sa otoč vždy, keď si v rohu.",
-          "courseC_harvester_loops_challenge2_c": "Tento cik-cakový vzor zopakuj dva krát na to, aby si úlohu splnil len s pomocou 20 blokov!\n\n![](<https://images.code.org/26cfaf6fe4a275e266b51e9ef3711171-image-1493502306380.18.52 PM copy.png>)",
-          "courseC_harvester_loops_challenge2_d": "Tento špirálový vzor môže byť nakódovaný len pomocou 18 blokov!\n\n![](<https://images.code.org/0bfc0a0ed6783fae908368a6e6d12c02-image-1493501358990.18.52 PM.png>)"
+          "courseC_harvester_loops_challenge2_c": "Tento cik-cakový vzor zopakuj dva krát na to, aby si úlohu splnil len s pomocou 20 blokov!\n\n![](https://images.code.org/26cfaf6fe4a275e266b51e9ef3711171-image-1493502306380.18.52 PM copy.png)",
+          "courseC_harvester_loops_challenge2_d": "Tento špirálový vzor môže byť nakódovaný len pomocou 18 blokov!\n\n![](https://images.code.org/0bfc0a0ed6783fae908368a6e6d12c02-image-1493501358990.18.52 PM.png)"
         },
         "courseC_maze_debugging1": {
           "courseC_maze_debugging1_a": "-   Funguje všetko po prvom kroku?\n-   Stále všetko funguje aj po druhom kroku?\n-   Kde sa stala chyba?",
@@ -4806,7 +4812,7 @@
         },
         "courseD_bee_conditionals3_copy": {
           "courseD_bee_conditionals3_a": "Použi podmienku `ak`, aby si skontroloval každé miestečko a zisti, či sa tam nachádza kvet, alebo nič.",
-          "courseD_bee_conditionals3_b": "Môžeš použiť cyklus `opakuj` alebo \\`pokiaľ, aby sa včela pohybovala smerom vpred. Použi ktorýkoľvek chceš!",
+          "courseD_bee_conditionals3_b": "Môžeš použiť cyklus `opakuj` alebo `pokiaľ, aby sa včela pohybovala smerom vpred. Použi ktorýkoľvek chceš!",
           "courseD_bee_conditionals3_c": "Neboj sa urobiť chybu! Pridaj bloky,  spusti kód a sleduj, čo sa stane, aj keď úlohu ešte nemáš úplne vyriešenú. "
         },
         "courseD_bee_conditionals4": {
@@ -4830,7 +4836,7 @@
         "courseD_bee_conditionals4_copy": {
           "courseD_bee_conditionals4_a": "Ku každému políčku pristupuj tak, akoby bol nad ním oblak, napriek tomu, že vidíš celú cestu.",
           "courseD_bee_conditionals4_b": "V cykle použi podmienku  `ak` a skontroluj každé pole, či sa tam nachádza nektár.",
-          "courseD_bee_conditionals4_c": "Použitím  bloku <xml><block type=\"maze_untilBlocked\"/></xml> by si sa mal posunúť vpred a skontrolovať kvet. Ak je tam kvet, čo by mala včela spraviť?"
+          "courseD_bee_conditionals4_c": "Použitím  bloku [blockly block][0] by si sa mal posunúť vpred a skontrolovať kvet. Ak je tam kvet, čo by mala včela spraviť?"
         },
         "courseD_bee_conditionals5_2018": {
           "courseD_bee_conditionals5_a": "Predstav si každú stranu obdĺžnika ako samostatnú cestu. Nastav zvonku vnorený cyklus s blokom `opakuj` a zvnútra cyklus `ak je tam ceste vpred`. Koľko ciest musí včela preletieť, ak musí preletieť každú stranu s kvetom?",
@@ -5245,7 +5251,8 @@
           "courseD_farmer_condLoops5_b": "Na jednom miesto môže byť viac ako jedna kukurica, alebo šalát. Použi cyklus `pokiaľ` a pozberaj všetky!"
         },
         "courseD_farmer_condLoops5_2019": {
-          "courseD_farmer_condLoops5_b": "Na jednom miesto môže byť viac ako jedna kukurica, alebo šalát. Použi cyklus `pokiaľ` a pozberaj všetky!"
+          "courseD_farmer_condLoops5_b": "Na jednom miesto môže byť viac ako jedna kukurica, alebo šalát. Použi cyklus `pokiaľ` a pozberaj všetky!",
+          "courseD_farmer_condLoops5_a": "Je tu nový cyklus `opakuj, dokým tam sú tekvice`. Dokážeš ho použiť v tejto úlohe?"
         },
         "courseD_farmer_condLoops5_2020": {
           "courseD_farmer_condLoops5_a": "Je tu nový cyklus `pokiaľ tam sú tekvice`. Dokážeš ho použiť v tejto úlohe?",
@@ -5256,10 +5263,12 @@
           "courseD_farmer_condLoops6_b": "Počas zberu potrebuješ zbierať len kukuricu. Tekvicu stačí ak pozbieraš až na konci programu."
         },
         "courseD_farmer_condLoops6_2019": {
-          "courseD_farmer_condLoops6_b": "Počas zberu potrebuješ zbierať len kukuricu. Tekvicu stačí ak pozbieraš až na konci programu."
+          "courseD_farmer_condLoops6_b": "Počas zberu potrebuješ zbierať len kukuricu. Tekvicu stačí ak pozbieraš až na konci programu.",
+          "courseD_farmer_condLoops6_a": "Posúvaj farmárku po každom kúsku šprály s použitím cyklu `pokiaľ tam je cesta vpred`, alebo bloku `ak tam je cesta vpred / inak`."
         },
         "courseD_farmer_condLoops6_2020": {
-          "courseD_farmer_condLoops6_b": "Počas zberu potrebuješ zbierať len kukuricu. Tekvicu stačí ak pozbieraš až na konci programu."
+          "courseD_farmer_condLoops6_b": "Počas zberu potrebuješ zbierať len kukuricu. Tekvicu stačí ak pozbieraš až na konci programu.",
+          "courseD_farmer_condLoops6_a": "Posúvaj farmárku po každom kúsku šprály s použitím cyklu `pokiaľ tam je cesta vpred`, alebo bloku `ak tam je cesta vpred / inak`."
         },
         "courseD_farmer_condLoops_challenge1": {
           "courseD_farmer_condLoops_challenge1_a": "Pri riešení tejto úlohy ti môže veľmi pomôcť tlačidlo \"Krok\"."
@@ -5511,10 +5520,12 @@
           "courseB_iceage_loops3_b": "Na opakovanie kódu vytiahni cyklus `opakuj` a potom do jeho vnútra vlož blok, ktorý chceš opakovať."
         },
         "courseD_iceage_loops3_2019": {
-          "courseB_iceage_loops3_b": "Na opakovanie kódu vytiahni cyklus `opakuj` a potom do jeho vnútra vlož blok, ktorý chceš opakovať."
+          "courseB_iceage_loops3_b": "Na opakovanie kódu vytiahni cyklus `opakuj` a potom do jeho vnútra vlož blok, ktorý chceš opakovať.",
+          "courseB_iceage_loops3_a": "Použi tento nový blok! <xml><block type=\"controls_repeat_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">5</title>\n  </block></xml>"
         },
         "courseD_iceage_loops3_2020": {
-          "courseB_iceage_loops3_b": "Na opakovanie kódu vytiahni cyklus `opakuj` a potom do jeho vnútra vlož blok, ktorý chceš opakovať."
+          "courseB_iceage_loops3_b": "Na opakovanie kódu vytiahni cyklus `opakuj` a potom do jeho vnútra vlož blok, ktorý chceš opakovať.",
+          "courseB_iceage_loops3_a": "Použi tento nový blok! <xml><block type=\"controls_repeat_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">5</title>\n  </block></xml>"
         },
         "courseD_iceage_loops4": {
           "courseD_iceage_loops4_a": "Neboj sa spustiť tvoj kód a uvidíš, čo sa stane!",
@@ -5589,18 +5600,22 @@
           "courseD_iceage_loops9_c": "Scrat by mal ísť po tejto ceste, aby sa dostal k žaluďu."
         },
         "courseD_maze_intro4_2019": {
-          "courseC_maze_programming4_b": "Ak chceš ísť po ceste, posuň sa dopredu a otoč sa jedným smerom, znova sa pohni a otoč sa opačným smerom. Posuň sa dopredu ešte jeden krát, aby si sa dostal až k žaluďu."
+          "courseC_maze_programming4_b": "Ak chceš ísť po ceste, posuň sa dopredu a otoč sa jedným smerom, znova sa pohni a otoč sa opačným smerom. Posuň sa dopredu ešte jeden krát, aby si sa dostal až k žaluďu.",
+          "courseC_maze_programming4_a": "Z Redovho pohľadu sa môžeš otočiť aj vľavo aj vpravo. Ak si natočený vpravo, otočenie sa vpravo ťa otočí smerom dole."
         },
         "courseD_maze_intro4_2020": {
-          "courseC_maze_programming4_b": "Ak chceš ísť po ceste, posuň sa dopredu a otoč sa jedným smerom, znova sa pohni a otoč sa opačným smerom. Posuň sa dopredu ešte jeden krát, aby si sa dostal až k žaluďu."
+          "courseC_maze_programming4_b": "Ak chceš ísť po ceste, posuň sa dopredu a otoč sa jedným smerom, znova sa pohni a otoč sa opačným smerom. Posuň sa dopredu ešte jeden krát, aby si sa dostal až k žaluďu.",
+          "courseC_maze_programming4_a": "Z Redovho pohľadu sa môžeš otočiť aj vľavo aj vpravo. Ak si natočený vpravo, otočenie sa vpravo ťa otočí smerom dole."
         },
         "courseD_maze_intro5a_2019": {
           "courseC_maze_programming5_a": "Použi tlačidlo \"Krok\" a prezri si svoj kód riadok po riadku. Zistíš, čo spraviť ďalej?",
-          "courseC_maze_programming5_c": "Neboj sa urobiť chybu! Pridaj bloky,  spusti kód a sleduj, čo sa stane, aj keď úlohu ešte nemáš úplne vyriešenú. "
+          "courseC_maze_programming5_c": "Neboj sa urobiť chybu! Pridaj bloky,  spusti kód a sleduj, čo sa stane, aj keď úlohu ešte nemáš úplne vyriešenú. ",
+          "courseC_maze_programming5_b": "Pamätaj si, že smer otáčania sa určuje z pohľadu Reda."
         },
         "courseD_maze_intro5a_2020": {
           "courseC_maze_programming5_a": "Použi tlačidlo \"Krok\" a prezri si svoj kód riadok po riadku. Zistíš, čo spraviť ďalej?",
-          "courseC_maze_programming5_c": "Neboj sa urobiť chybu! Pridaj bloky,  spusti kód a sleduj, čo sa stane, aj keď úlohu ešte nemáš úplne vyriešenú. "
+          "courseC_maze_programming5_c": "Neboj sa urobiť chybu! Pridaj bloky,  spusti kód a sleduj, čo sa stane, aj keď úlohu ešte nemáš úplne vyriešenú. ",
+          "courseC_maze_programming5_b": "Pamätaj si, že smer otáčania sa určuje z pohľadu Reda."
         },
         "courseD_maze_nestedLoops3": {
           "courseD_maze_nestedLoops3_a": "Na vyriešenie úlohy musíš vložiť jeden blok s cyklom `opakuj` do ďalšieho.",
@@ -7166,6 +7181,64 @@
           "grade5_artist_variables_triangles1_a": "Pamätaj, že musíš otočiť umelca o 120 stupňov, aby si spravil vnútorný uhol 60 stupňov v trojuholníku.",
           "grade5_artist_variables_triangles1_b": "Použi cyklus `opakuj`, aby si skrátil tvoj kód.",
           "grade5_artist_variables_triangles1_c": "Vo vnútri tvojho cyklu sa chceš pohnúť dopredu o 50 pixelov, a potom otočiť doľava o 120 stupňov."
+        },
+        "courseC_PlayLab_eventsA_embed_2019": {
+          "courseC_PlayLab_eventsA_a": "Pomocou klávesov so šípkami posuň tučniaka. Na dokončenie tejto úrovne nepotrebuješ napísať žiadny kód.\n"
+        },
+        "courseC_PlayLab_eventsA_embed_2020": {
+          "courseC_PlayLab_eventsA_a": "Pomocou klávesov so šípkami posuň tučniaka. Na dokončenie tejto úrovne nepotrebuješ napísať žiadny kód.\n"
+        },
+        "courseD_bee_conditionals5_2019": {
+          "courseD_bee_conditionals5_a": "Keď použiješ blok `ak pri kvete`, môžeš si pomôcť vnoreným cyklom. Napíš program pre ľavú a spodnú cestu a potom všetko dvakrát opakuj!",
+          "courseD_bee_conditionals5_c": "Aby včela išla cestou dole, použi blok `posuň sa dopredu`. Počas cesty musí hľadať kvety. `Ak pri kvete` včela musí `získať nektár`"
+        },
+        "courseD_bee_conditionals5_2020": {
+          "courseD_bee_conditionals5_a": "Keď použiješ blok `ak pri kvete`, môžeš si pomôcť vnoreným cyklom. Napíš program pre ľavú a spodnú cestu a potom všetko dvakrát opakuj!",
+          "courseD_bee_conditionals5_c": "Aby včela išla cestou dole, použi blok `posuň sa dopredu`. Počas cesty musí hľadať kvety. `Ak pri kvete` včela musí `získať nektár`"
+        },
+        "courseD_farmer_condLoops7_2019": {
+          "courseD_farmer_condLoops7_b": "Skús použiť blok `pokiaľ tam je cesta vpred`, aby sa farmárka posunula o správny počet krokov."
+        },
+        "courseD_farmer_condLoops7_2020": {
+          "courseD_farmer_condLoops7_b": "Skús použiť blok `pokiaľ tam je cesta vpred`, aby sa farmárka posunula o správny počet krokov."
+        },
+        "behaviors 7": {
+          "behaviors_hint1": "Môžeš vytvoriť nové správanie, ktoré používa dve rôzne akcie, alebo skombinovať dve existujúce správania.",
+          "sprites_idea1": "Pre zábavu môžeš podobným správaním donútiť loď odletieť do vesmíru alebo postavu posunúť do popredia. Skús zmeniť pozadie a sprite kostýmy na svojej scéne!\n\n![](<https://images.code.org/7070e44239b53f4b33a5b4fe054bb61c-image-1567714335486.2019-09-05 16_05_19.gif>)\n\n![](<https://images.code.org/278494432d56f1f5d41e345a51223695-image-1567714335485.2019-09-05 16_11_12.gif>)"
+        },
+        "behaviors 7_2020": {
+          "behaviors_hint1": "Môžeš vytvoriť nové správanie, ktoré používa dve rôzne akcie, alebo skombinovať dve existujúce správania.",
+          "sprites_idea1": "Pre zábavu môžeš podobným správaním donútiť loď odletieť do vesmíru alebo postavu posunúť do popredia. Skús zmeniť pozadie a sprite kostýmy na svojej scéne!\n\n![](<https://images.code.org/7070e44239b53f4b33a5b4fe054bb61c-image-1567714335486.2019-09-05 16_05_19.gif>)\n\n![](<https://images.code.org/278494432d56f1f5d41e345a51223695-image-1567714335485.2019-09-05 16_11_12.gif>)"
+        },
+        "behaviors 2": {
+          "behavior hint": "Skús upraviť správanie!\n\n-   Ktorým smerom sa potrebuje raketa posunúť?"
+        },
+        "behaviors 2_2020": {
+          "behavior hint": "Skús upraviť správanie!\n\n-   Ktorým smerom sa potrebuje raketa posunúť?"
+        },
+        "behaviors 3": {
+          "behavior hint": "Skús upraviť správanie!\n\n-   Ktorá hodnota riadi rýchlosť každého sprita?"
+        },
+        "behaviors 3_2020": {
+          "behavior hint": "Skús upraviť správanie!\n\n-   Ktorá hodnota riadi rýchlosť každého sprita?"
+        },
+        "behaviors 3a": {
+          "behavior hint": "Skús upraviť správanie!\n\n-   Ktorá hodnota riadi rýchlosť každého sprita?"
+        },
+        "behaviors 3a_2020": {
+          "behavior hint": "Skús upraviť správanie!\n\n-   Ktorá hodnota riadi rýchlosť každého sprita?"
+        },
+        "behaviors 6": {
+          "behavior hint": "Skús upraviť správanie!\n\n-   Ktorá hodnota riadi rýchlosť každého sprita?"
+        },
+        "behaviors 6_2020": {
+          "behavior hint": "Skús upraviť správanie!\n\n-   Ktorá hodnota riadi rýchlosť každého sprita?"
+        },
+        "courseF_bee_variables_4_2019": {
+          "courseF_bee_variables_4_2019_1": "Namiesto odpočítania 1 od `pozbieraj` pridaj vždy 1. Akú hodnotu by mala mať premenná na začiatku?"
+        },
+        "courseF_bee_variables_4_2020": {
+          "courseF_bee_variables_4_2019_1": "Namiesto odpočítania 1 od `pozbieraj` pridaj vždy 1. Akú hodnotu by mala mať premenná na začiatku?"
         }
       }
     }

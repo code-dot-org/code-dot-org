@@ -56,7 +56,7 @@ gem 'memory_profiler'
 gem 'rack-mini-profiler'
 
 group :development do
-  gem 'annotate'
+  gem 'annotate', '~> 3.1.1'
   gem 'web-console'
 end
 
@@ -136,9 +136,11 @@ gem 'unicorn', '~> 5.1.0'
 
 gem 'chronic', '~> 0.10.2'
 
-# Use SCSS for stylesheets.
-# Ref: https://github.com/rails/sass-rails/pull/386
-gem 'sass-rails', github: 'wjordan/sass-rails', ref: 'frozen-array-fix'
+gem 'sass-rails', '~> 6.0.0'
+# Temporarily use our own fork of sassc-rails (a dependency of sass-rails),
+# while we try to get some bugs fixed upstream.
+# See https://github.com/sass/sassc-rails/pull/153 for context.
+gem 'sassc-rails', github: 'code-dot-org/sassc-rails', ref: 'frozen-array-fix'
 
 # Use Uglifier as compressor for JavaScript assets.
 gem 'uglifier', '>= 1.3.0'
@@ -232,7 +234,7 @@ gem 'font-awesome-rails', '~> 4.7.0.5'
 gem 'sequel'
 gem 'user_agent_parser'
 
-gem 'paranoia'
+gem 'paranoia', '~> 2.4.2'
 gem 'petit', github: 'code-dot-org/petit'  # For URL shortening
 
 # JSON model serializer for REST APIs.

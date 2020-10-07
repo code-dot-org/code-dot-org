@@ -24,7 +24,7 @@ La Hora del Código es una introducción de una hora a las ciencias de la comput
 - [Más formas de apoyar la Hora del Código](#support-hour-of-code)
 - [Preguntas frecuentes para voluntarios](#faq)
 
-Ya sea que te ofrezcas como voluntario de forma virtual, en persona o con tu empresa, tus esfuerzos pueden tener un gran impacto en la forma en que los estudiantes ven las ciencias de la computación y su propio potencial. Echa un vistazo a nuestro [kit de herramientas para voluntarios si todavía tienes preguntas](https://hourofcode.com/files/hoc-volunteer-toolkit.pdf).
+Ya sea que te ofrezcas como voluntario de forma virtual, en persona o con tu empresa, tus esfuerzos pueden tener un gran impacto en la forma en que los estudiantes ven las ciencias de la computación y su propio potencial. Take a look at our [volunteer toolkit if you still have questions](https://hourofcode.com/files/hoc-volunteer-toolkit.pdf).
 
 * * *
 
