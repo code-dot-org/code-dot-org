@@ -251,7 +251,7 @@ function setDetailsTrigger() {
   });
 }
 
-function flyToStore(currentFeature) {
+function flyToLocation(currentFeature) {
   map.flyTo({
     center: currentFeature.geometry.coordinates,
     zoom: 15
@@ -283,7 +283,7 @@ function resultList(featureList, lng, lat, activeIndex) {
       lng={lng}
       lat={lat}
       updateActive={resultList}
-      flyToStore={flyToStore}
+      flyToLocation={flyToLocation}
       createPopUp={createPopUp}
       resetMap={() => {
         clearPopUp();
