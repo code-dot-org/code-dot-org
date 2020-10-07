@@ -55,7 +55,8 @@ export default class ResourcesEditor extends Component {
    *   returns results or a request error occurs.
    */
   debouncedSearch = _.debounce((q, callback) => {
-    const searchUrl = `/resourcesearch/${encodeURIComponent(q)}/5`;
+    const searchLimit = 7;
+    const searchUrl = `/resourcesearch/${encodeURIComponent(q)}/${searchLimit}`;
     // Note, we don't return the fetch promise chain because in a debounced
     // function we're not guaranteed to return anything, and it's not a great
     // interface to sometimes return undefined when there's still async work
@@ -71,6 +72,7 @@ export default class ResourcesEditor extends Component {
         );
         const resources = json
           .map(resource => this.constructResourceOption(resource))
+          // Filter any that are already added to lesson
           .filter(resource => resourceKeysAdded.indexOf(resource.value) === -1);
         return {options: resources};
       })
@@ -79,7 +81,7 @@ export default class ResourcesEditor extends Component {
   }, 200);
 
   getOptions = q => {
-    // Search
+    // Only search if there are at least 3 characters
     if (q.length < 3) {
       return Promise.resolve();
     }
