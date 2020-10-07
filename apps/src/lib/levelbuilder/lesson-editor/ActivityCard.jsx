@@ -129,10 +129,10 @@ class ActivityCard extends Component {
     );
   };
 
-  handleChangeTime = event => {
+  handleChangeDuration = event => {
     this.props.updateActivityField(
       this.props.activity.position,
-      'time',
+      'duration',
       event.target.value
     );
   };
@@ -165,11 +165,11 @@ class ActivityCard extends Component {
             />
           </label>
           <label style={styles.labelAndInput}>
-            <span style={styles.label}>{`Time:`}</span>
+            <span style={styles.label}>{`Duration:`}</span>
             <input
-              value={activity.time}
+              value={activity.duration}
               style={{width: 35}}
-              onChange={this.handleChangeTime}
+              onChange={this.handleChangeDuration}
             />
             <span style={{fontSize: 10}}>{'(mins)'}</span>
           </label>
@@ -180,31 +180,29 @@ class ActivityCard extends Component {
           />
         </div>
         <div style={styles.activityBody} hidden={this.state.collapsed}>
-          {activity.activitySections.map(section => {
-            return (
-              <ActivitySectionCard
-                key={section.key}
-                activitySection={section}
-                activityPosition={activity.position}
-                activitySectionsCount={activity.activitySections.length}
-                activitiesCount={this.props.activitiesCount}
-                ref={activitySectionCard => {
-                  if (activitySectionCard) {
-                    const metrics = ReactDOM.findDOMNode(
-                      activitySectionCard
-                    ).getBoundingClientRect();
-                    this.props.setActivitySectionMetrics(
-                      metrics,
-                      section.position
-                    );
-                  }
-                }}
-                activitySectionMetrics={this.props.activitySectionMetrics}
-                setTargetActivitySection={this.props.setTargetActivitySection}
-                targetActivitySectionPos={this.props.targetActivitySectionPos}
-              />
-            );
-          })}
+          {activity.activitySections.map(section => (
+            <ActivitySectionCard
+              key={section.key}
+              activitySection={section}
+              activityPosition={activity.position}
+              activitySectionsCount={activity.activitySections.length}
+              activitiesCount={this.props.activitiesCount}
+              ref={activitySectionCard => {
+                if (activitySectionCard) {
+                  const metrics = ReactDOM.findDOMNode(
+                    activitySectionCard
+                  ).getBoundingClientRect();
+                  this.props.setActivitySectionMetrics(
+                    metrics,
+                    section.position
+                  );
+                }
+              }}
+              activitySectionMetrics={this.props.activitySectionMetrics}
+              setTargetActivitySection={this.props.setTargetActivitySection}
+              targetActivitySectionPos={this.props.targetActivitySectionPos}
+            />
+          ))}
           <button
             onMouseDown={this.handleAddActivitySection.bind()}
             className="btn"

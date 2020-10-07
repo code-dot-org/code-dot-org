@@ -19,6 +19,8 @@ module Pd::Application
       @application = TEACHER_APPLICATION_CLASS.find_by(user: current_user)
       return render :submitted if @application
 
+      @year = APPLICATION_CURRENT_YEAR
+
       @script_data = {
         props: {
           options: TEACHER_APPLICATION_CLASS.options.camelize_keys,

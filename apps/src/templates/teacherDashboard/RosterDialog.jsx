@@ -2,7 +2,8 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 import BaseDialog from '../BaseDialog';
-import {classroomShape, loadErrorShape, OAuthSectionTypes} from './shapes';
+import {classroomShape, loadErrorShape} from './shapes';
+import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
 import color from '../../util/color';
 import locale from '@cdo/locale';
 import {
