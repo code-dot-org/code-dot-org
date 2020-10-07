@@ -9,7 +9,7 @@ import reducers, {
 import {Provider} from 'react-redux';
 import _ from 'lodash';
 
-//TODO Remove once we hook up real activity data
+//TODO Remove once we hook up real level data
 import {levelKeyList} from '@cdo/apps/lib/levelbuilder/lesson-editor/SampleActivitiesData';
 
 $(document).ready(function() {
