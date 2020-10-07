@@ -2,7 +2,7 @@
 title: 학부모들을 위한 활용 가이드
 ---
 
-# How to do an Hour of Code with your child
+# 아워오브코드를 자녀와 함께 하는 방법
 Trying an Hour of Code is a simple and fun way to introduce your child to computer science, perhaps for the very first time. Not only is computer science foundational to all fields of study, but <a href="https://medium.com/@codeorg/cs-helps-students-outperform-in-school-college-and-workplace-66dd64a69536">recent studies show</a>: children who study computer science perform better in other subjects, excel at problem-solving, and are <font color="00adbc"><b>17% more likely to enroll in college</b></font>.
 
 You can join tens of millions of students worldwide in this global event. Together, we can inspire kids to learn, break stereotypes, and help children discover a newfound interest. Best of all, you already have everything you need to bring the Hour of Code into your home!
@@ -16,7 +16,7 @@ You can try the Hour of Code with a computer, a tablet, a smartphone, or complet
 
 ***
 
-## 1) Explore activities and tutorials.
+## 1) 활동과 튜토리얼 탐구.
 
 [<img src="/images/fit-600/tutorials.png" />]({{ urls/learn }})
 
@@ -26,9 +26,9 @@ All of our activities integrate problem-solving and critical-thinking with fun a
 
 - For the child who loves to play: <a href="https://code.org/minecraft">Minecraft</a> or <a href="https://code.org/dance">Dance Party</a>
 - For the child who loves Disney: <a href="https://code.org/starwars">Star Wars</a>, <a href="https://studio.code.org/s/frozen/stage/1/puzzle/1">Frozen</a>, or <a href="https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C">Moana</a>
-- For the child who loves to learn: <a href="https://code.org/oceans">AI for Oceans</a> or <a href="https://scratch.mit.edu/projects/editor/?tutorial=music&utm_source=codeorg">Make Music with Scratch</a>
+- 배우는 걸 좋아하는 아동: <a href="https://code.org/oceans">바다환경을 위한 AI</a> 또는<a href="https://scratch.mit.edu/projects/editor/?tutorial=music&utm_source=codeorg">스크래치로 음악 만들기</a>
 
-<h3>Low-tech or no-tech?</h3>
+<h3>기술이 부족 또는 아예 없습니까?</h3>
 If you’ll be using limited or no technology, you can filter <a href="https://hourofcode.com/us/learn">Hour of Code activities</a> by selecting “No computers or devices” in the <em>Classroom technology</em> section.
 
 [<img src="/images/fit-500/Marketing/filtering-activities-hoc.jpg" />]({{ urls/learn }})
@@ -68,7 +68,7 @@ It’s okay if both you and your child are brand new to computer science. Here a
 
 <h3>Problem-solve together</h3>
 Lastly, when your child comes across difficulties it's okay to respond:
-- “I don’t know. Let’s figure this out together.”
+- 잘 모르겠음 함께 알아 봅시다."
 - "컴퓨터과학(정보과학) 기술은 항상 우리가 원하는대로만 동작하지 않는단다."
 - "프로그램을 배우는 것은 새로운 언어를 배우는 것과 같아; 곧바로 능숙할 수는 없는 것이란다."
 
