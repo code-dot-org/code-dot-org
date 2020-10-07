@@ -5,6 +5,7 @@ import ReactDOM from 'react-dom';
 import $ from 'jquery';
 import {getLocations} from '@cdo/apps/lib/ui/classroomMap';
 import logToCloud from '@cdo/apps/logToCloud';
+import LocalControlList from './localControlList';
 
 var map;
 var map_loc;
@@ -193,13 +194,12 @@ function loadMap(locations) {
             while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
               coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
             }
-            var activeItem = document.querySelector('li.active');
-            if (activeItem) {
-              activeItem.classList.remove('active');
-            }
-            document
-              .querySelector(`#control-${e.features[0].properties.index}`)
-              .classList.add('active');
+            resultList(
+              featureList,
+              lng,
+              lat,
+              e.features[0].properties.index + 1
+            );
             createPopUp(e.features[0]);
           });
 
@@ -217,74 +217,7 @@ function loadMap(locations) {
     });
     // builds the side menu with the list of classes
     if (featureList.length > 0) {
-      const linkStyle = {
-        color: 'rgb(102, 102, 102)',
-        display: 'block',
-        padding: '5px',
-        fontSize: 'inherit',
-        textDecoration: 'none',
-        cursor: 'pointer'
-      };
-      var allFeatures = [];
-      featureList.forEach((feature, index) => {
-        allFeatures.push(
-          <li id={`control-${index}`} key={`control-${index}`}>
-            <a
-              style={linkStyle}
-              onClick={event => {
-                flyToStore(feature);
-                createPopUp(feature);
-
-                var activeItem = document.querySelector('li.active');
-                if (activeItem) {
-                  activeItem.classList.remove('active');
-                }
-                $(event.target)
-                  .closest('li')
-                  .addClass('active');
-              }}
-            >
-              <span
-                // necessary to translate the character references in the title to the actual characters
-                // eslint-disable-next-line react/no-danger
-                dangerouslySetInnerHTML={{__html: feature.properties.title}}
-              />
-            </a>
-          </li>
-        );
-      });
-      const container = document.getElementById('controls');
-      ReactDOM.render(
-        <ul
-          className="ullist controls"
-          style={{margin: '0px', padding: '0px', listStyleType: 'none'}}
-        >
-          <li className="active">
-            <a
-              id="ullist_a_all"
-              style={linkStyle}
-              onClick={event => {
-                var activeItem = document.querySelector('li.active');
-                if (activeItem) {
-                  activeItem.classList.remove('active');
-                }
-                $(event.target)
-                  .closest('li')
-                  .addClass('active');
-                clearPopUp();
-                map.flyTo({
-                  center: [lng, lat],
-                  zoom: 10
-                });
-              }}
-            >
-              <span>View All</span>
-            </a>
-          </li>
-          {allFeatures}
-        </ul>,
-        container
-      );
+      resultList(featureList, lng, lat, 0);
     }
   } else {
     map = new Maplace();
@@ -339,4 +272,27 @@ function clearPopUp() {
   if (popUps[0]) {
     popUps[0].remove();
   }
+}
+
+function resultList(featureList, lng, lat, activeIndex) {
+  const container = document.getElementById('controls');
+  ReactDOM.render(
+    <LocalControlList
+      selected={activeIndex}
+      featureList={featureList}
+      lng={lng}
+      lat={lat}
+      updateActive={resultList}
+      flyToStore={flyToStore}
+      createPopUp={createPopUp}
+      resetMap={() => {
+        clearPopUp();
+        map.flyTo({
+          center: [lng, lat],
+          zoom: 10
+        });
+      }}
+    />,
+    container
+  );
 }
