@@ -189,7 +189,8 @@ WebLab.prototype.init = function(config) {
     documentationUrl: 'https://studio.code.org/docs/weblab/',
     isProjectLevel: !!config.level.isProjectLevel,
     isSubmittable: !!config.level.submittable,
-    isSubmitted: !!config.level.submitted
+    isSubmitted: !!config.level.submitted,
+    validationEnabled: !!config.level.validationEnabled
   });
 
   this.readOnly = config.readonlyWorkspace;

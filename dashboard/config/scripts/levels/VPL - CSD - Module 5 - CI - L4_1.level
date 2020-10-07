@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 106,
   "properties": {
-    "long_instructions": "# Do This\r\n\r\nComplete the \"X\" shape by typing 0s and 1s. You can always click \"Readable Format\" if you want to clean up your work.",
+    "long_instructions": "# Do This\r\n\r\nComplete the \"X\" shape by typing 0s and 1s. You can always click \"Readable Format\" if you want to clean up your work.\r\n\r\n**Note: This level is the same as Unit 5, Lesson 4 - Level 2 in Code Studio.**",
     "instructions_important": "false",
     "display_name": "Black and White Pixelation Widget",
     "version": "1",
@@ -24,6 +24,6 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-08-06 23:18:44 +0000\",\"changed\":[\"v1_hide_sliders\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-09-10 19:42:09 +0000\",\"changed\":[],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-08-06 23:18:44 +0000\",\"changed\":[\"v1_hide_sliders\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-09-10 19:42:09 +0000\",\"changed\":[],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2020-10-02 18:37:50 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2020-10-02 18:43:01 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"}]"
 }]]></config>
 </Pixelation>
