@@ -305,17 +305,7 @@ class Lesson < ActiveRecord::Base
           position: activity.position,
           name: activity.name,
           duration: activity.duration,
-          activitySections: activity.activity_sections.map do |activity_section|
-            {
-              id: activity_section.id,
-              position: activity_section.position,
-              name: activity_section.name,
-              remarks: activity_section.remarks,
-              slide: activity_section.slide,
-              description: activity_section.description,
-              tips: activity_section.tips
-            }
-          end
+          activitySections: activity.activity_sections.map(&:summarize_for_edit)
         }
       end
     }
