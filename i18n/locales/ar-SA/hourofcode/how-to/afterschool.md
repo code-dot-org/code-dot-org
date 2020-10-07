@@ -6,13 +6,13 @@ title: Hour of Code How-to Guide for After-school
 
 # كيف تدرس "ساعة من البرمجة" لفصول وأندية "ما بعد المدرسة"
 
-### Join the movement and introduce your students to computer science with these steps.
+### انضم إلى الحركة، وعرِّف الطلاب بمجال علوم الكمبيوتر من خلال هذه الخطوات.
 
-Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
+فالتفكير الحسابي يُساعِد في تنمية مهارات حل المشكلات والمنطق والابتكار. فالتفكير الحسابي يُساعِد في تنمية مهارات حل المشكلات والمنطق والابتكار. ينبغي للطلاب اليوم أن يتعلَّموا كيفية تصميم التقنية، وليس استخدامها فحسب. ومع بدء الطلاب للتعلُّم في مرحلة مبكرة، سيصبح لديهم أساسًا للنجاح في أي مسارٍ مهني في القرن الحادي والعشرين.
 
 Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time. If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
 
-### An Hour of Code can also be hosted remotely! To get started, check out our [tips for hosting a virtual Hour of Code event](https://hourofcode.com/us/how-to/virtual).
+### تُنظَّم فعالية "ساعة من البرمجة" أيضًا عن بُعد! وللبدء، يُرجى مراجعة [نصائحنا لفعالية افتراضية من "ساعة من البرمجة"](https://hourofcode.com/us/how-to/virtual).
 
 * * *
 
