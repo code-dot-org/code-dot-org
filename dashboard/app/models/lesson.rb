@@ -299,15 +299,7 @@ class Lesson < ActiveRecord::Base
       purpose: purpose,
       preparation: preparation,
       announcements: announcements,
-      activities: lesson_activities.map do |activity|
-        {
-          id: activity.id,
-          position: activity.position,
-          name: activity.name,
-          duration: activity.duration,
-          activitySections: activity.activity_sections.map(&:summarize_for_edit)
-        }
-      end
+      activities: lesson_activities.map(&:summarize_for_edit)
     }
   end
 
