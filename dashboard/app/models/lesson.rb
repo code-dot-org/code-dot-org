@@ -270,7 +270,7 @@ class Lesson < ActiveRecord::Base
   #
   # TODO: [PLAT-369] trim down to only include those fields needed on the
   # script edit page
-  def summarize_for_edit
+  def summarize_for_script_edit
     summary = summarize.dup
     # Do not let script name override lesson name when there is only one lesson
     summary[:name] = I18n.t("data.script.name.#{script.name}.lessons.#{key}.name")
