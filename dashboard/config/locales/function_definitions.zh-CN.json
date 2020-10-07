@@ -709,7 +709,8 @@
             "name": "画窗户"
           },
           "rectangle": {
-            "name": "矩形"
+            "name": "矩形",
+            "description": "大笑"
           },
           "sun": {
             "name": "太阳"
@@ -727,7 +728,8 @@
             "name": "三角形"
           },
           "square": {
-            "name": "正方形"
+            "name": "正方形",
+            "description": "大笑"
           }
         },
         "Geometric Sun_2018": {
@@ -741,7 +743,8 @@
             "name": "画窗户"
           },
           "rectangle": {
-            "name": "矩形"
+            "name": "矩形",
+            "description": "大笑"
           },
           "sun": {
             "name": "太阳"
@@ -759,7 +762,8 @@
             "name": "三角形"
           },
           "square": {
-            "name": "正方形"
+            "name": "正方形",
+            "description": "大笑"
           }
         },
         "Guess The Number": {
