@@ -13,7 +13,7 @@ import _ from 'lodash';
 import {levelKeyList} from '@cdo/apps/lib/levelbuilder/lesson-editor/SampleActivitiesData';
 
 $(document).ready(function() {
-  const lessonData = getScriptData('lesson').editableData;
+  const lessonData = getScriptData('lesson');
   const activities = lessonData.activities;
 
   // Rename any keys that are different on the backend.
