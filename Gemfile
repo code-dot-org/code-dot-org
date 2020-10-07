@@ -56,7 +56,7 @@ gem 'memory_profiler'
 gem 'rack-mini-profiler'
 
 group :development do
-  gem 'annotate'
+  gem 'annotate', '~> 3.1.1'
   gem 'web-console'
 end
 
