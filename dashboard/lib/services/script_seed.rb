@@ -129,6 +129,8 @@ module ScriptSeed
       # as just another set of objects to import allows us to handle it with the same pattern as the other models.
       seed_context.levels = seed_context.script_levels.map(&:levels).flatten
       import_levels_script_levels(levels_script_levels_data, seed_context)
+
+      CourseOffering.add_course_offering(seed_context.script)
       seed_context.script
     end
   end
