@@ -149,11 +149,11 @@ class LevelTest < ActiveSupport::TestCase
     assert_nil(summary[:display_name])
   end
 
-  test "summarize_for_edit returns object with expected fields" do
+  test "summarize_for_script_edit returns object with expected fields" do
     user = User.create(name: 'Best Curriculum Writer')
     level = Level.create!(name: 'test_level', type: 'Maze', user: user, updated_at: Time.new(2020, 3, 27, 0, 0, 0, "-07:00"))
 
-    summary = level.summarize_for_edit
+    summary = level.summarize_for_script_edit
 
     assert_equal(summary[:id], level.id)
     assert_equal(summary[:type], 'Maze')
