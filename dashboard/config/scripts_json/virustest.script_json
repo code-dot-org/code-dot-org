@@ -49,29 +49,93 @@
       "position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Virus Simulation for Code Bytes"
+        "progression": "Create your sprites"
       },
       "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
-          "Virus Simulation for Code Bytes"
+          "virus_1_codebytes"
         ],
         "lesson.key": "Virus Simulation for Code Bytes",
         "lesson_group.key": "csf_data",
         "script.name": "virustest"
       },
       "level_keys": [
-        "Virus Simulation for Code Bytes"
+        "virus_1_codebytes"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+        "progression": "Simulating an outbreak"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "virus_2_codebytes"
+        ],
+        "lesson.key": "Virus Simulation for Code Bytes",
+        "lesson_group.key": "csf_data",
+        "script.name": "virustest"
+      },
+      "level_keys": [
+        "virus_2_codebytes"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "assessment": null,
+      "properties": {
+        "progression": "Simulating masks"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "virus_3_codebytes"
+        ],
+        "lesson.key": "Virus Simulation for Code Bytes",
+        "lesson_group.key": "csf_data",
+        "script.name": "virustest"
+      },
+      "level_keys": [
+        "virus_3_codebytes"
       ]
     }
   ],
   "levels_script_levels": [
     {
       "seeding_key": {
-        "level.key": "Virus Simulation for Code Bytes",
+        "level.key": "virus_1_codebytes",
         "script_level.level_keys": [
-          "Virus Simulation for Code Bytes"
+          "virus_1_codebytes"
+        ],
+        "lesson.key": "Virus Simulation for Code Bytes",
+        "lesson_group.key": "csf_data",
+        "script.name": "virustest"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "virus_2_codebytes",
+        "script_level.level_keys": [
+          "virus_2_codebytes"
+        ],
+        "lesson.key": "Virus Simulation for Code Bytes",
+        "lesson_group.key": "csf_data",
+        "script.name": "virustest"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "virus_3_codebytes",
+        "script_level.level_keys": [
+          "virus_3_codebytes"
         ],
         "lesson.key": "Virus Simulation for Code Bytes",
         "lesson_group.key": "csf_data",
