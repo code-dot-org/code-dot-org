@@ -4,16 +4,13 @@ import {studentsShape} from './types';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
 
+// see pairing.scss for general button styling
 const styles = {
   buttonLeft: {
     marginLeft: 0
   },
   enabled: {
     backgroundColor: 'white',
-    color: color.cyan,
-    border: '1px solid',
-    borderColor: color.cyan,
-    fontFamily: "'Gotham 4r', sans-serif",
     fontSize: '13px'
   },
   warning: {
