@@ -221,6 +221,8 @@ export class TeacherFeedback extends Component {
   getFriendlyDate = feedbackSeen => {
     const today = new Date();
     const dateFeedbackSeen = new Date(feedbackSeen);
+
+    //javascript months begin counting at 0
     const [todayM, todayD, todayY] = [
       today.getMonth() + 1,
       today.getDate(),
@@ -232,7 +234,7 @@ export class TeacherFeedback extends Component {
       dateFeedbackSeen.getDate(),
       dateFeedbackSeen.getFullYear()
     ];
-    if (todayM === m && todayY === y && todayD === d) {
+    if (todayM === m && todayY === y) {
       if (todayD === d) {
         return 'today';
       } else if (todayD === d + 1) {
@@ -244,6 +246,7 @@ export class TeacherFeedback extends Component {
     }
   };
 
+  //sub-render method invoked by getFeedbackText()
   displayFeedbackMessage = ([style, message, studentSeen, time]) => {
     return (
       <div style={style} id="ui-test-feedback-time">
