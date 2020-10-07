@@ -9,6 +9,62 @@ export default class BlockSvg extends GoogleBlockly.BlockSvg {
     this.unusedSvg_.render(this.svgGroup_);
   }
 
+  setCanDisconnectFromParent(canDisconnect) {
+    this.canDisconnectFromParent_ = canDisconnect;
+  }
+
+  customContextMenu(menuOptions) {
+    // Only show context menu for levelbuilders
+    if (Blockly.editBlocks) {
+      const deletable = {
+        text: this.deletable_
+          ? 'Make Undeletable to Users'
+          : 'Make Deletable to Users',
+        enabled: true,
+        callback: function() {
+          this.setDeletable(!this.isDeletable());
+          Blockly.ContextMenu.hide();
+        }.bind(this)
+      };
+      const movable = {
+        text: this.movable_
+          ? 'Make Immovable to Users'
+          : 'Make Movable to Users',
+        enabled: true,
+        callback: function() {
+          this.setMovable(!this.isMovable());
+          Blockly.ContextMenu.hide();
+        }.bind(this)
+      };
+      const editable = {
+        text: this.editable_ ? 'Make Uneditable' : 'Make editable',
+        enabled: true,
+        callback: function() {
+          this.setEditable(!this.isEditable());
+          Blockly.ContextMenu.hide();
+        }.bind(this)
+      };
+      const lockToParent = {
+        text: this.canDisconnectFromParent_
+          ? 'Lock to Parent Block'
+          : 'Unlock from Parent Block',
+        enabled: true,
+        callback: function() {
+          this.setCanDisconnectFromParent(!this.canDisconnectFromParent_);
+          Blockly.ContextMenu.hide();
+        }.bind(this)
+      };
+      menuOptions.push(deletable);
+      menuOptions.push(movable);
+      menuOptions.push(editable);
+      menuOptions.push(lockToParent);
+    } else {
+      while (menuOptions) {
+        menuOptions.pop();
+      }
+    }
+  }
+
   dispose() {
     super.dispose();
     this.removeUnusedBlockFrame();
@@ -30,6 +86,13 @@ export default class BlockSvg extends GoogleBlockly.BlockSvg {
 
   isUserVisible() {
     return false; // TODO
+  }
+
+  onMouseDown_(e) {
+    if (!Blockly.utils.isRightButton(e) && !this.canDisconnectFromParent_) {
+      return;
+    }
+    super.onMouseDown_(e);
   }
 
   render() {
