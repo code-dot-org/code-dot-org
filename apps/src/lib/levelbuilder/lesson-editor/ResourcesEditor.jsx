@@ -46,12 +46,6 @@ export default class ResourcesEditor extends Component {
     resource: resource
   });
 
-  handleResourceInputChange = e => {
-    var {resources} = this.state;
-    resources.push(e.resource);
-    this.setState({resources});
-  };
-
   /**
    * Debounced function that will request resource search results from the server.
    * Because this function is debounced it is not guaranteed to execute
@@ -103,6 +97,12 @@ export default class ResourcesEditor extends Component {
     });
   };
 
+  addResource = e => {
+    var {resources} = this.state;
+    resources.push(e.resource);
+    this.setState({resources});
+  };
+
   handleRemove = key => {
     const {resources} = this.state;
     const resourceToRemove = resources.find(resource => resource.key === key);
@@ -127,7 +127,7 @@ export default class ResourcesEditor extends Component {
               name="resource_search"
               loadOptions={this.getOptions}
               value={this.state.searchValue}
-              onChange={this.handleResourceInputChange}
+              onChange={this.addResource}
               onValueClick={this.addResource}
               placeholder={''}
             />
