@@ -1,18 +1,23 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../../../util/reconfiguredChai';
-import ActivitySectionCardButtons from '@cdo/apps/lib/levelbuilder/lesson-editor/ActivitySectionCardButtons';
+import {UnconnectedActivitySectionCardButtons as ActivitySectionCardButtons} from '@cdo/apps/lib/levelbuilder/lesson-editor/ActivitySectionCardButtons';
 import {sampleActivities} from './activitiesTestData';
 import sinon from 'sinon';
 
 describe('ActivitySectionCardButtons', () => {
-  let defaultProps;
+  let defaultProps, addTip, updateTip, addLevel, removeTip;
   beforeEach(() => {
+    addTip = sinon.spy();
+    updateTip = sinon.spy();
+    addLevel = sinon.spy();
+    removeTip = sinon.spy();
     defaultProps = {
       activitySection: sampleActivities[0].activitySections[1],
-      addTip: sinon.spy(),
-      editTip: sinon.spy(),
-      addLevel: sinon.spy()
+      addTip,
+      updateTip,
+      addLevel,
+      removeTip
     };
   });
 
@@ -21,7 +26,44 @@ describe('ActivitySectionCardButtons', () => {
     expect(wrapper.find('button').length).to.equal(3);
     expect(wrapper.find('AddResourceDialog').length).to.equal(1);
     expect(wrapper.find('AddLevelDialog').length).to.equal(1);
-    expect(wrapper.find('EditTipDialog').length).to.equal(1);
-    expect(wrapper.find('LessonTipIconWithTooltip').length).to.equal(1);
+    expect(wrapper.find('LessonTipIconWithTooltip').length).to.equal(2);
+    // Don't render this component until add tip button or tip icon are clicked
+    expect(wrapper.find('EditTipDialog').length).to.equal(0);
+  });
+
+  it('add level pressed', () => {
+    const wrapper = shallow(<ActivitySectionCardButtons {...defaultProps} />);
+
+    const button = wrapper.find('button').at(0);
+    expect(button.text()).to.include('Level');
+    button.simulate('mouseDown');
+    expect(wrapper.state().addLevelOpen).to.equal(true);
+  });
+
+  it('edit tip pressed', () => {
+    const wrapper = shallow(<ActivitySectionCardButtons {...defaultProps} />);
+
+    const tip = wrapper.find('LessonTipIconWithTooltip').at(0);
+    tip.simulate('click');
+    expect(wrapper.state().tipToEdit).to.not.be.null;
+    expect(wrapper.state().editingExistingTip).to.equal(true);
+  });
+
+  it('add tip pressed', () => {
+    const wrapper = shallow(<ActivitySectionCardButtons {...defaultProps} />);
+
+    const button = wrapper.find('button').at(1);
+    expect(button.text()).to.include('Tip');
+    button.simulate('mouseDown');
+    expect(wrapper.state().tipToEdit).to.not.be.null;
+  });
+
+  it('add resource link pressed', () => {
+    const wrapper = shallow(<ActivitySectionCardButtons {...defaultProps} />);
+
+    const button = wrapper.find('button').at(2);
+    expect(button.text()).to.include('Resource Link');
+    button.simulate('mouseDown');
+    expect(wrapper.state().addResourceOpen).to.equal(true);
   });
 });

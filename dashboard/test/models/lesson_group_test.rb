@@ -7,7 +7,7 @@ class LessonGroupTest < ActiveSupport::TestCase
   end
   test "lessons ordered correctly" do
     script = create :script
-    lesson_group = create :lesson_group
+    lesson_group = create :lesson_group, script: script
     create :lesson, name: "Lesson3", script: script, lesson_group: lesson_group, absolute_position: 3
     create :lesson, name: "Lesson2", script: script, lesson_group: lesson_group, absolute_position: 2
     create :lesson, name: "Lesson1", script: script, lesson_group: lesson_group, absolute_position: 1
@@ -34,5 +34,21 @@ class LessonGroupTest < ActiveSupport::TestCase
     assert_equal 'my-lesson-group', summary[:key]
     assert_equal 1, summary[:position]
     assert_equal true, summary[:user_facing]
+  end
+
+  test 'seeding_key' do
+    lesson_group = create :lesson_group
+    script = lesson_group.script
+    seed_context = ScriptSeed::SeedContext.new(script: script)
+    lesson_group.reload # clear out any already loaded association data, for verification of query counts
+
+    # seeding_key should not make queries
+    assert_queries(0) do
+      expected = {
+        'script.name' => script.name,
+        'lesson_group.key' => lesson_group.key
+      }
+      assert_equal expected, lesson_group.seeding_key(seed_context)
+    end
   end
 end

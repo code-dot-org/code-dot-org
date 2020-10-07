@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import $ from 'jquery';
 import {reload} from '@cdo/apps/utils';
-import {OAuthSectionTypes} from './shapes';
+import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 /**
