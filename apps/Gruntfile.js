@@ -594,6 +594,8 @@ describe('entry tests', () => {
       './src/sites/studio/pages/levels/editors/fields/_preload_assets.js',
     'levels/editors/fields/_special_level_types':
       './src/sites/studio/pages/levels/editors/fields/_special_level_types.js',
+    'levels/editors/fields/_validation_code':
+      './src/sites/studio/pages/levels/editors/fields/_validation_code.js',
     'levels/editors/fields/_video':
       './src/sites/studio/pages/levels/editors/fields/_video.js',
     'levels/editors/_gamelab':
@@ -612,8 +614,6 @@ describe('entry tests', () => {
 
   var pegasusEntries = {
     // code.org
-    'code.org/public/administrators':
-      './src/sites/code.org/pages/public/administrators.js',
     'code.org/public/dance': './src/sites/code.org/pages/public/dance.js',
     'code.org/public/educate/curriculum/courses':
       './src/sites/code.org/pages/public/educate/curriculum/courses.js',
