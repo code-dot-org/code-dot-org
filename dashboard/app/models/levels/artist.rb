@@ -37,6 +37,7 @@ class Artist < Blockly
     disable_sharing
     solution_image_url
     auto_run
+    validation_enabled
   )
 
   def xml_blocks
