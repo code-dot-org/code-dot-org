@@ -21,7 +21,7 @@ The annual Computer Science State Policy Forum brings together legislators, educ
 
 
 
-Apply for **all** experiences below. 
+Apply for **all** experiences below. Share about the forum using the hashtag **#cspolicy2020**.
 
 <a name="Step 1"></a>
 ## **Step 1**: Register for the Policy Forum Plenary
