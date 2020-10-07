@@ -309,6 +309,7 @@ class Blockly < Level
           ).each do |xml_block_prop|
             next unless level_options.key? xml_block_prop
             set_unless_nil(level_options, xml_block_prop, localized_function_blocks(level_options[xml_block_prop]))
+            set_unless_nil(level_options, xml_block_prop, localized_text_blocks(level_options[xml_block_prop]))
           end
         end
       end
@@ -568,6 +569,29 @@ class Blockly < Level
 
     localize_behaviors(block_xml)
     return block_xml.serialize(save_with: XML_OPTIONS).strip
+  end
+
+  # Localize placeholder texts in text blocks
+  def localized_text_blocks(blocks)
+    return if blocks.nil?
+    block_xml = Nokogiri::XML(blocks, &:noblanks)
+    block_xml.xpath("//block[@type=\"text\"]").each do |text_block|
+      text_title = text_block.at_xpath('./title[@name="TEXT"]')
+      next unless text_title&.content&.present?
+
+      # Must generate text_key in the same way it is created in
+      # the get_i18n_strings function in sync-in.rb script.
+      text_key = Digest::MD5.hexdigest text_title.content
+      localized_text = I18n.t(
+        text_key,
+        scope: [:data, :placeholder_texts, name],
+        default: nil,
+        smart: true
+      )
+      text_title.content = localized_text if localized_text
+    end
+
+    block_xml.serialize(save_with: XML_OPTIONS).strip
   end
 
   def self.base_url
