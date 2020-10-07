@@ -315,7 +315,7 @@ describe('TeacherFeedback', () => {
     it('with feedback displays lastUpdated message', () => {
       const props = {
         ...STUDENT_FEEDBACK_RUBRIC_PROPS,
-        latestFeedback: [{student_seen_feedback: new Date()}]
+        latestFeedback: [{student_seen_feedback: new Date(), comment: 'Great!'}]
       };
       const lastUpdatedSpy = sinon.spy(i18n, 'lastUpdated');
       shallow(<TeacherFeedback {...props} />);
