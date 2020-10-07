@@ -138,18 +138,3 @@ export const levelKeyList = {
   3: 'Level 2 - 2',
   4: 'blockly:Studio:playlab_1'
 };
-
-export const sampleResourceData = [
-  {
-    key: 'resource-1',
-    name: 'Resource 1',
-    url: 'code.org/resource-1',
-    type: 'Slides'
-  },
-  {
-    key: 'resource-2',
-    name: 'Resource 2',
-    url: 'code.org/resource-2',
-    type: 'Handout'
-  }
-];
