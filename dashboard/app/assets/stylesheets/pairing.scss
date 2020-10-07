@@ -8,16 +8,5 @@
     float: left;
     border-radius: 5px;
     margin: 10px 10px 10px 0;
-    &.selectable {
-      cursor: pointer;
-      &:hover {
-        background-color: $lightest_cyan;
-      }
-    }
-
-    &.selected {
-      background-color: $cyan;
-      color: $white;
-    }
   }
 }
