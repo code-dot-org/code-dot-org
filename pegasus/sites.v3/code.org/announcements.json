@@ -1,7 +1,6 @@
 {
   "pages": {
-    "/projects": "home-learning-2020",
-    "/home": "teacher-apps-open-2020"
+    "/projects": "home-learning-2020"
   },
   "banners": {
     "teacher-apps-open-2020": {
