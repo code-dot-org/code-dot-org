@@ -600,7 +600,7 @@ class Level < ActiveRecord::Base
     }
   end
 
-  def summarize_for_script_edit
+  def summarize_for_edit
     {
       id: id,
       type: self.class.to_s,

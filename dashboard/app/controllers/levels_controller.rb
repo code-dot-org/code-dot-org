@@ -103,7 +103,7 @@ class LevelsController < ApplicationController
   def get_filtered_levels
     filter_levels(params)
     @levels = @levels.page(params[:page]).per(7)
-    @levels = @levels.map(&:summarize_for_script_edit)
+    @levels = @levels.map(&:summarize_for_edit)
     render json: @levels
   end
 
