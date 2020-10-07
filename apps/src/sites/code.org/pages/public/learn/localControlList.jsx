@@ -24,7 +24,7 @@ export default class LocalMapControlList extends React.Component {
     lng: PropTypes.string,
     lat: PropTypes.string,
     featureList: PropTypes.arrayOf(PropTypes.object),
-    flyToStore: PropTypes.func,
+    flyToLocation: PropTypes.func,
     createPopUp: PropTypes.func,
     resetMap: PropTypes.func,
     updateActive: PropTypes.func
@@ -35,7 +35,7 @@ export default class LocalMapControlList extends React.Component {
       featureList,
       lng,
       lat,
-      flyToStore,
+      flyToLocation,
       createPopUp,
       resetMap,
       selected,
@@ -52,7 +52,7 @@ export default class LocalMapControlList extends React.Component {
           <a
             style={styles.linkStyle}
             onClick={() => {
-              flyToStore(feature);
+              flyToLocation(feature);
               createPopUp(feature);
               updateActive(featureList, lng, lat, index + 1);
             }}
