@@ -439,6 +439,12 @@ class ScriptLevel < ActiveRecord::Base
     summary
   end
 
+  def summarize_for_edit
+    summary = summarize
+    summary[:levelNumber] = activity_section_position
+    summary
+  end
+
   # Given a script level summary for the last level in a lesson that has already
   # been determined to be a long assessment, returns an array of additional
   # level summaries.
