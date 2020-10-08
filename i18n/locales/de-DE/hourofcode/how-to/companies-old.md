@@ -5,7 +5,7 @@ title: Wie eine Stunde Code Veranstaltung gehostet wird- für Firmen
 {{ signup_button }}
 
 # So bringen Sie die Hour of Code in Ihr Unternehmen
-### Lesen Sie hier wie Sie und Ihre Mitarbeiter Schüler dazu inspirieren können, sich an der Informatik zu versuchen!
+### Erfahren Sie, wie Sie und Ihre MitarbeiterInnen SchülerInnen für Informatik begeistern können!
 
 ***
 

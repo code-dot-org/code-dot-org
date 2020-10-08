@@ -35,6 +35,18 @@ GIT
       redis
 
 GIT
+  remote: https://github.com/code-dot-org/sassc-rails.git
+  revision: cdf930a2ca3a582a0d665720a0693d330d5ba12a
+  ref: frozen-array-fix
+  specs:
+    sassc-rails (2.1.2)
+      railties (>= 4.0.0)
+      sassc (>= 2.0)
+      sprockets (> 3.0)
+      sprockets-rails
+      tilt
+
+GIT
   remote: https://github.com/dooly-ai/omniauth-microsoft_v2_auth.git
   revision: db19d64c2ddb017dddb9a0ff2cee1d84d2fad287
   specs:
@@ -161,18 +173,6 @@ GIT
   branch: debugging
   specs:
     puma (3.12.0)
-
-GIT
-  remote: https://github.com/wjordan/sass-rails.git
-  revision: 06e833d92d083fbcb137364ffebc597b2577db23
-  ref: frozen-array-fix
-  specs:
-    sass-rails (5.0.6)
-      railties (>= 4.0.0, < 6)
-      sass (~> 3.1)
-      sprockets (>= 2.8, < 4.0)
-      sprockets-rails (>= 2.0, < 4.0)
-      tilt (>= 1.1, < 3)
 
 GIT
   remote: https://github.com/wjordan/seamless_database_pool.git
@@ -768,6 +768,10 @@ GEM
     rubyzip (1.2.2)
     safe_yaml (1.0.4)
     sass (3.4.22)
+    sass-rails (6.0.0)
+      sassc-rails (~> 2.1, >= 2.1.1)
+    sassc (2.4.0)
+      ffi (~> 1.9)
     sawyer (0.8.1)
       addressable (>= 2.3.5, < 2.6)
       faraday (~> 0.8, < 1.0)
@@ -1034,7 +1038,8 @@ DEPENDENCIES
   ruby-prof
   ruby-progressbar
   ruby_dep (~> 1.3.1)
-  sass-rails!
+  sass-rails (~> 6.0.0)
+  sassc-rails!
   scenic
   scenic-mysql_adapter
   scss_lint

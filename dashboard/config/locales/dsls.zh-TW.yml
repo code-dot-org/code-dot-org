@@ -4906,6 +4906,15 @@ zh-TW:
         teacher_markdown: "[什麼是電腦 - 範例](https://docs.google.com/document/d/19QfEaVJcF85W6iZwITFIcPycO11znVjYTAaKO78VPH0/edit?usp=sharing)
           - 活動指南 ([PDF](https://docs.google.com/document/d/19QfEaVJcF85W6iZwITFIcPycO11znVjYTAaKO78VPH0/export?format=pdf)
           | [DOCX](https://docs.google.com/document/d/19QfEaVJcF85W6iZwITFIcPycO11znVjYTAaKO78VPH0/export?format=doc))"
+        markdown: |-
+          # 概觀
+
+          In this lesson you'll start thinking about how computers help solve certain kinds of problems and learn the key features of every computer.
+          在此課程你將會開始思考有關電腦如何幫助解決某些類別的問題以及學習每個電腦主要的功能。
+
+          ## 資源
+
+          * [什麼是電腦 - 活動手冊](https://docs.google.com/document/d/1g4dPcsx2xADEZI0FiMYApLr0hh3_-89NDWd2y86sS6I/export?format=pdf)
       csd-post-survey-2017-levelgroup-2018-2nd-semester:
         title: CS Discoveries 課程結束給學生的問卷調查
       csd-post-survey-levelgroup-2018:
@@ -4920,3 +4929,7 @@ zh-TW:
           #我的網路鄰居
 
           ##你如何安全地上網？
+      CSD U3 Entertainment:
+        teacher_markdown: 這裡有幾個網站可以幫學生開始。這些網站通常適合學校，但是內容常常會變動，所以我們強烈建議你與學生共享前，檢查每個網站是否有不當的內容。
+      CSD U3 Lesson Overview 1:
+        markdown: 此課程被要求考慮無聊的及自我表達等"問題"，與反映他們如何著手處理這些問題以及他們自己的生活。從那邊，他們會探索資訊科學整體來說、特別是程式語言，以娛樂的一個特殊的形式或是自我表達的一個載具所扮演的角色。

@@ -1242,15 +1242,15 @@ id:
         update ke kursus kami, atau Berita Sains komputer lainnya?
       legal_opt_in: 'Dengan menyerahkan formulir ini, Anda setuju untuk membiarkan
         Code.org untuk membagikan informasi tentang bagaimana Anda menggunakan Code.org
-        dan materi pembelajaran pembelajaran profesional dengan Rekan Internasional
-        Code.org di negara Anda, distrik sekolah, dan fasilitator. Kami akan membagikan
-        informasi kontak Anda, kursus.unit mana yang Anda gunakan dan menghitung data
-        tentang kelas Anda dengan rekan-rekan ini. Ini termasuk jumlah murid dalam
-        kelas Anda, pembagian demografis dalam kelas Anda, dan nama sekolah dan distrik
-        Anda. Kami tidak akan membagikan informasi apa pun tentang individu murid
-        dengan rekan-rekan kami: semua informasi murid akan tidak-diidentifikasi atau
-        dihitung. Rekan Internasional dan fasilitator kami diwajibkan secara kontrak
-        untuk memperlakukan informasi ini dengan kerahasiaan yang sama seperti Code.org. '
+        dan materi pembelajaran profesional dengan Rekan Internasional Code.org di
+        negara Anda, distrik sekolah, dan fasilitator. Kami akan membagikan informasi
+        kontak Anda, kursus.unit mana yang Anda gunakan dan menghitung data tentang
+        kelas Anda dengan rekan-rekan ini. Ini termasuk jumlah murid dalam kelas Anda,
+        pembagian demografis dalam kelas Anda, dan nama sekolah dan distrik Anda.
+        Kami tidak akan membagikan informasi apa pun tentang individu murid dengan
+        rekan-rekan kami: semua informasi murid akan tidak-diidentifikasi atau dihitung.
+        Rekan Internasional dan fasilitator kami diwajibkan secara kontrak untuk memperlakukan
+        informasi ini dengan kerahasiaan yang sama seperti Code.org. '
     form_entries:
       gender:
         male: Laki-laki
