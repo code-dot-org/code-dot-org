@@ -6,13 +6,13 @@ title: Hour of Code How-to Guide for After-school
 
 # Como ensinar a Hora do Código em aulas extracurriculares e em clubes
 
-### Join the movement and introduce your students to computer science with these steps.
+### Junte-se ao movimento e apresente aos seus alunos a ciência da computação com estes passos.
 
-Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
+O pensamento computacional ajuda a desenvolver habilidades de solução de problemas, lógica e criatividade. Além disso, a tecnologia está transformando todas as profissões no mundo. Hoje em dia, os alunos devem aprender a criar tecnologia, não apenas usá-la. Ao começar cedo, eles terão elementos para alcançar o sucesso em qualquer profissão do século XXI.
 
 Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time. If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
 
-### An Hour of Code can also be hosted remotely! To get started, check out our [tips for hosting a virtual Hour of Code event](https://hourofcode.com/us/how-to/virtual).
+### Uma Hora do Código também pode ser realizada remotamente! Para começar, confira as nossas [dicas para realizar um evento Hora do Código virtual](https://hourofcode.com/us/how-to/virtual).
 
 * * *
 
@@ -36,7 +36,7 @@ Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage o
 
 A melhor experiência da Hora do Código inclui computadores conectados à Internet. But you **don’t** need a computer for every child, and you can even do the Hour of Code without a computer at all.
 
-Certifique-se de testar os tutoriais nos computadores ou dispositivos dos alunos, para garantir que eles funcionem corretamente nos navegadores com som e vídeo. **Have low bandwidth?** Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the unplugged / offline tutorials.
+Não se esqueça de testar os tutoriais nos computadores ou dispositivos dos alunos para garantir que funcionam bem nos navegadores com som e vídeo. **Have low bandwidth?** Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the unplugged / offline tutorials.
 
 Forneça fones de ouvido para sua turma, ou peça aos alunos que tragam seus próprios fones, se o tutorial escolhido funcionar melhor com som.
 
@@ -63,9 +63,9 @@ Comece seu evento da Hora do Código inspirando os participantes e discutindo so
 
 ## 6. É hora de programar!
 
-**Direct participants to the activity** - Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
+**Direct participants to the activity** - Write the tutorial link on a whiteboard. Encontre o link listado nas [informações do tutorial selecionado]({{ urls/learn }}) abaixo da quantidade de participantes.
 
-**When someone comes across difficulties it's okay to respond:** - “I don’t know. Vamos resolver isso juntos." - "Tecnologia nem sempre functiona como nós queremos." -"Aprender a programar computadores é como aprender uma nova lingua: você não será fluente logo no início."
+**When someone comes across difficulties it's okay to respond:** - “I don’t know. Vamos resolver isso juntos.” - “Nem sempre a tecnologia funciona como queremos.” - “Aprender a programar é como aprender um novo idioma. Não se fica fluente de uma hora para outra.”
 
 **What to do if someone finishes early?** - Encourage participants to try another Hour of Code activity at [hourofcode.com/learn]({{ urls/learn }}) - Or, ask those who finish early to help others who are having trouble.
 

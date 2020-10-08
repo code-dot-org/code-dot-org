@@ -3193,8 +3193,8 @@
           "courseC_artist_loopsPrePre1a_b": "Użyj tego bloku, aby przejść o 50 pikseli do przodu:\n\n![](<https://images.code.org/411fca4606a09641e6eedf5069ac4efa-image-1499710237929.08.27 AM.png>)"
         },
         "courseC_artist_prog2": {
-          "courseC_artist_prog2_a": "Jeżeli użyjesz bloku \"idź do przodu o 100 pikseli\", narysuję linię automatycznie.",
-          "courseC_artist_prog2_b": "Masz problem z zakrętem? Użyj bloku \"skręć w prawo o 90 stopni\"."
+          "courseC_artist_prog2_a": "Jeżeli użyjesz bloku blockly block][0], narysuję linię automatycznie.",
+          "courseC_artist_prog2_b": "Masz problem ze skrętem na rogu? Użyj bloku <xml><block type=\"draw_turn_by_constant_dropdown\"><title name=\"DIR\">turnRight</title><title name=\"VALUE\" config=\"45,60,90,120,180\">90</title></block></xml>."
         },
         "courseC_artist_prog2_2018": {
           "courseC_artist_prog2_a": "Jeżeli użyjesz bloku blockly block][0], narysuję linię automatycznie.",
@@ -4739,7 +4739,7 @@
           "courseD_artist_project1a_b": "Te wzorce w dużym stopniu wyglądają jak kaskady z innych łamigłówek, ale używa się w nich innych kątów."
         },
         "courseD_artist_project2": {
-          "courseD_artist_project2_a": "Pamiętaj, że przy pomocy polecenia \"idź do przodu\" rysuje się linię, ale przy pomocy polecenia \"skocz do przodu\" już nie.",
+          "courseD_artist_project2_a": "Pamiętaj, że przy pomocy polecenia \"idź do przodu\" rysuje się linię, ale przy pomocy komendy \"skocz do przodu\" już nie.",
           "courseD_artist_project2_b": "Po narysowaniu i przemieszczeniu się po raz pierwszy możesz powtórzyć kod dodając pętlę wokół na zewnątrz."
         },
         "courseD_artist_project2_2018": {

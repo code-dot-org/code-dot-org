@@ -185,6 +185,7 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal 1, first.absolute_position
     assert_equal 2, second.absolute_position
     assert_equal 3, third.absolute_position
+    original_script_level_ids = script.script_levels.map(&:id)
 
     # Reupload a script of the same filename / name, but lacking the middle lesson.
     script_names, _ = Script.setup([script_file_middle_missing_reversed])
@@ -198,6 +199,10 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal 2, second.absolute_position
     assert_equal 'lesson3', first.name
     assert_equal 'lesson1', second.name
+    # One Lesson / ScriptLevel removed, the rest reordered
+    expected_script_level_ids = [original_script_level_ids[3], original_script_level_ids[4],
+                                 original_script_level_ids[0], original_script_level_ids[1]]
+    assert_equal expected_script_level_ids, script.script_levels.map(&:id)
   end
 
   test 'all fields can be set and then removed on reseed' do
@@ -301,6 +306,10 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal 1, first.position
     assert_equal 2, second.position
     assert_equal 3, third.position
+    original_seed_keys = script.script_levels.map(&:seed_key).compact
+    assert_equal 5, original_seed_keys.length
+    original_script_level_ids = script.script_levels.map(&:id)
+
     script_names, _ = Script.setup([@script_file])
     script = Script.find_by!(name: script_names.first)
     first = script.lessons[0].script_levels[0]
@@ -310,6 +319,8 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal 2, second.position
     assert_equal 3, third.position
     assert_equal original_count, ScriptLevel.count
+    assert_equal original_seed_keys, script.script_levels.map(&:seed_key)
+    assert_equal original_script_level_ids, script.script_levels.map(&:id)
   end
 
   test 'unplugged in script' do
@@ -1384,6 +1395,7 @@ class ScriptTest < ActiveSupport::TestCase
       ScriptDSL.parse(old_dsl, 'a filename')[0][:lesson_groups]
     )
     assert script.script_levels.first.challenge
+    original_script_level_id = script.script_levels.first.id
 
     script = Script.add_script(
       {name: 'challengeTestScript'},
@@ -1391,6 +1403,7 @@ class ScriptTest < ActiveSupport::TestCase
     )
 
     refute script.script_levels.first.challenge
+    assert_equal original_script_level_id, script.script_levels.first.id
   end
 
   test 'can make a bonus level not a bonus level' do
@@ -1408,6 +1421,7 @@ class ScriptTest < ActiveSupport::TestCase
       ScriptDSL.parse(old_dsl, 'a filename')[0][:lesson_groups]
     )
     assert script.script_levels.first.bonus
+    original_script_level_id = script.script_levels.first.id
 
     script = Script.add_script(
       {name: 'challengeTestScript'},
@@ -1415,6 +1429,7 @@ class ScriptTest < ActiveSupport::TestCase
     )
 
     refute script.script_levels.first.bonus
+    assert_equal original_script_level_id, script.script_levels.first.id
   end
 
   test 'can unset the project_widget_visible attribute' do
@@ -1666,7 +1681,7 @@ class ScriptTest < ActiveSupport::TestCase
 
     assert_equal("fake-script *", assignable_info[:name])
     assert_equal("fake-script", assignable_info[:script_name])
-    assert_equal("other", assignable_info[:category])
+    assert_equal("Other", assignable_info[:category])
     assert(assignable_info[:lesson_extras_available])
   end
 
@@ -1694,6 +1709,36 @@ class ScriptTest < ActiveSupport::TestCase
 
     assert_equal('CSP Unit 1 Test', assignable_info[:name])
     assert_equal('CSP Test', assignable_info[:category])
+  end
+
+  # This test checks that all categories that may show up in the UI have
+  # translation strings.
+  test 'all visible categories have translations' do
+    I18n.locale = 'en-US'
+
+    # A course can belong to more than one category and only the first
+    # category is shown in the UI (and thus needs a translation).
+
+    # To determine the set of categories that must be translated, we first
+    # collect the list of all scripts that are mapped to categories in
+    # ScriptConstants::CATEGORIES.
+    all_scripts = ScriptConstants::CATEGORIES.reduce(Set.new) do |scripts, (_, scripts_in_category)|
+      scripts | scripts_in_category
+    end
+
+    # Add a script that is not in any category so that the 'other' category
+    # will be tested.
+    all_scripts |= ['uncategorized-script']
+
+    untranslated_categories = Set.new
+    all_scripts.each do |script|
+      category = ScriptConstants.categories(script)[0] || ScriptConstants::OTHER_CATEGORY_NAME
+      translation = I18n.t("data.script.category.#{category}_category_name", default: nil)
+      untranslated_categories.add(category) if translation.nil?
+    end
+
+    assert untranslated_categories.empty?,
+      "The following categories are missing translations in scripts.en.yml '#{untranslated_categories}'"
   end
 
   test "self.valid_scripts: does not return hidden scripts when user is a student" do
@@ -1763,6 +1808,29 @@ class ScriptTest < ActiveSupport::TestCase
     refute Script.valid_scripts(teacher).any?(&:pilot?)
     assert Script.valid_scripts(pilot_teacher).any?(&:pilot?)
     assert Script.valid_scripts(levelbuilder).any?(&:pilot?)
+  end
+
+  test "self.valid_scripts: pilot experiment results not cached" do
+    # This test is a regression test for LP-1578 where Script.valid_scripts
+    # accidentally added pilot courses to the cached results which were then
+    # returned to non-pilot teachers.
+
+    # Start with an empty scripts table and empty cache
+    Plc::CourseUnit.delete_all  # Delete rows that reference script table
+    Script.delete_all
+    Script.clear_cache
+
+    teacher = create :teacher
+    pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
+    coursea_2019 = create :script, name: 'coursea-2019'
+    coursea_2020 = create :script, name: 'coursea-2020', hidden: true, pilot_experiment: 'my-experiment'
+
+    assert_equal [coursea_2019], Script.valid_scripts(teacher)
+    assert_equal [coursea_2019, coursea_2020], Script.valid_scripts(pilot_teacher)
+
+    # This call to valid_scripts will hit the cache; verify that the call to
+    # Script.valid_scripts(pilot_teacher) did not alter the cache.
+    assert_equal [coursea_2019], Script.valid_scripts(teacher)
   end
 
   test "get_assessment_script_levels returns an empty list if no level groups" do
@@ -2545,6 +2613,24 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal script.lesson_groups[0].lessons[1].absolute_position, 2
     assert_equal script.lesson_groups[1].lessons[0], script.lessons[2]
     assert_equal script.lesson_groups[1].lessons[0].absolute_position, 3
+  end
+
+  test 'level can only be added once to a lesson' do
+    level = create :level
+    dsl = <<~SCRIPT
+      lesson 'lesson1', display_name: 'lesson1'
+      level '#{level.name}'
+      level '#{level.name}'
+    SCRIPT
+
+    error = assert_raises do
+      Script.add_script(
+        {name: 'level-included-multiple-times'},
+        ScriptDSL.parse(dsl, 'a filename')[0][:lesson_groups]
+      )
+    end
+    assert error.message.include? 'Duplicate entry'
+    assert error.message.include? "for key 'index_script_levels_on_seed_key'"
   end
 
   test 'seeding_key' do
