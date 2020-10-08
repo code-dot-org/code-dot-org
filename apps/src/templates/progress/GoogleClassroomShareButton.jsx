@@ -4,6 +4,7 @@ import Button from '../Button';
 import i18n from '@cdo/locale';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {isIE11} from '@cdo/apps/util/browser-detector';
+import _ from 'lodash';
 
 // https://developers.google.com/classroom/brand
 const styles = {
@@ -18,15 +19,17 @@ const styles = {
   }
 };
 
-export default class GoogleClassroomShareButton extends React.Component {
+// used to give each instance a unique id to use for callback names
+let componentCount = 0;
+
+export default class GoogleClassroomShareButton extends React.PureComponent {
   static propTypes = {
-    buttonId: PropTypes.string.isRequired,
     url: PropTypes.string.isRequired,
     itemtype: PropTypes.string.isRequired,
     title: PropTypes.string,
     height: PropTypes.number,
     courseid: PropTypes.number,
-    analyticsData: PropTypes.object
+    analyticsData: PropTypes.string
   };
 
   static defaultProps = {
@@ -51,10 +54,11 @@ export default class GoogleClassroomShareButton extends React.Component {
     this.blur = this.blur.bind(this);
     this.mouseOver = this.mouseOver.bind(this);
     this.mouseOut = this.mouseOut.bind(this);
-    this.iframeMouseOver = false;
   }
 
+  instanceId = componentCount++;
   buttonRef = null;
+  iframeMouseOver = false;
   state = {
     buttonRendered: false
   };
@@ -75,17 +79,23 @@ export default class GoogleClassroomShareButton extends React.Component {
     }
   }
 
+  componentDidUpdate(prevProps) {
+    if (!_.isEqual(this.props, prevProps)) {
+      this.renderButton();
+    }
+  }
+
   onButtonResize() {
     this.setState({buttonRendered: true});
     this.resizeObserver.disconnect();
   }
 
   onShareStartName() {
-    return 'onShareStart_' + this.props.buttonId;
+    return 'onShareStart_' + this.instanceId;
   }
 
   onShareCompleteName() {
-    return 'onShareComplete_' + this.props.buttonId;
+    return 'onShareComplete_' + this.instanceId;
   }
 
   onShareStart() {
@@ -117,7 +127,7 @@ export default class GoogleClassroomShareButton extends React.Component {
         study: 'google-classroom-share-button',
         study_group: 'v0',
         event: event,
-        data_json: JSON.stringify(this.props.analyticsData)
+        data_json: this.props.analyticsData
       },
       {includeUserId: true}
     );
@@ -125,7 +135,7 @@ export default class GoogleClassroomShareButton extends React.Component {
 
   // https://developers.google.com/classroom/guides/sharebutton
   renderButton() {
-    window.gapi.sharetoclassroom.render(this.props.buttonId, {
+    window.gapi.sharetoclassroom.render(this.buttonRef, {
       theme: 'light',
       url: this.props.url,
       itemtype: this.props.itemtype,
@@ -141,7 +151,6 @@ export default class GoogleClassroomShareButton extends React.Component {
     return (
       <span style={styles.container}>
         <span
-          id={this.props.buttonId}
           ref={elem => (this.buttonRef = elem)}
           onMouseOver={this.mouseOver}
           onMouseOut={this.mouseOut}
