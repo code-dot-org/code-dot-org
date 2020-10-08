@@ -1,23 +1,23 @@
 ---
-title: Computer Science Fundamentals Transition Guide
+title: Informaticabeginselen overgangsgids
 ---
 
-# Teaching Courses A-F
+# Cursussen A-F geven
 
-## Table of Contents
+## Inhoudsopgave
 
-* [Overview](#overview)
-* [Teaching the new courses](#newcourses)
+* [Overzicht](#overview)
+* [De nieuwe cursussen geven](#newcourses)
 * [Circle-Time Stories (Courses A and B)](#circletime)
 * [Lesson Scaffolding & Challenge Puzzles (All Ages)](#scaffolding)
 * [Bridging Activities For Unplugged Lessons (All Ages)](#unplugged)
 * [End of Course Projects (Courses E & F)](#endofcourse)
 * [Conclusion](#conclusion)
-* [FAQs](#faq)
+* [Veelgestelde vragen](#faq)
 
 <a id="overview"></a>
 
-## Overview
+## Overzicht
 The landscape of computer science education has changed immensely since the creation of the original Computer Science Fundamentals courses. Originally, Courses 1-4 were designed as a starting point to acquire the basics, no matter what the age of the student who was coming to the discipline.  Now that far more districts, cities, and states have implemented computer science courses beginning at Kindergarten, teachers are asking for more content to see students through until middle school/junior high.
 
 Computer Science Fundamentals Courses A-F, are our answer to that issue.  The creation of a grade-by-grade curriculum allowed us to step back and rethink the way we were presenting material.  It also allowed us the chance to wholeheartedly incorporate feedback from the dedicated teacher community that has supported us on this mission. Designed with the help of some of the best elementary school CS education specialists across the country, Courses A-F should feel familiar enough to run with no extra professional development, but fresh enough to present to students who have done our lessons in the past.
@@ -35,7 +35,7 @@ The biggest update to CS Fundamentals is that content will move from four course
 
 <a id="newcourses"></a>
 
-## Teaching the new courses
+## De nieuwe cursussen geven
 As mentioned earlier, the courses should feel familiar, but different.  If you’ve been to a Code.org professional development workshop, then you’re ready to teach the new courses. There are a small number of changes, but the overall platform, curriculum and pedagogical philosophy is unchanged. If you haven’t yet been, Code.org offers 1 day workshops at no cost to help you learn how to understand the curricula, navigate the Code.org platform, and teach the unplugged lessons.
 
 The main updates to the courses are:
@@ -130,7 +130,7 @@ We hope this overview has been insightful.  If you have any questions or comment
 
 <a id="faq"></a>
 
-## FAQs
+## Veelgestelde vragen
 
 | Question                                                                                                                                                    | Answer                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |

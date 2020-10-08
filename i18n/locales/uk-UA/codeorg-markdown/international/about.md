@@ -5,7 +5,7 @@ title: About
 # About Us
 
 <div class="col-60">
-  Code.org® - некомерційна організація, основною метою якої є збільшення доступності комп'ютерних наук в школах і збільшення залученості жінок і недостатньо представлених меншин. Наше бачення полягає в тому, що кожен учень в кожній школі має можливість вчити комп'ютерні науки точно також, як біологію, хімію або алгебру. We provide the most broadly used curriculum for teaching computer science in primary and secondary school and also organize the annual <a href="https://hourofcode.com">Hour of Code</a> campaign, which has engaged 10% of all students in the world. Code.org підтримується щедрими благодійниками, включаючи Amazon, Facebook, Google, the Infosys Foundation, Microsoft і <a href="/about/donors">багатьма іншими</a>.
+  Code.org® is a nonprofit dedicated to expanding access to computer science in schools and increasing participation by young women and students from other underrepresented groups. Наше бачення полягає в тому, що кожен учень в кожній школі має можливість вчити комп'ютерні науки точно також, як біологію, хімію або алгебру. We provide the most broadly used curriculum for teaching computer science in primary and secondary school and also organize the annual <a href="https://hourofcode.com">Hour of Code</a> campaign, which has engaged 10% of all students in the world. Code.org підтримується щедрими благодійниками, включаючи Amazon, Facebook, Google, the Infosys Foundation, Microsoft і <a href="/about/donors">багатьма іншими</a>.
 </div>
 
 [col-40]
