@@ -86,11 +86,20 @@
     color: #00a1e6;
   }
 
+  .marker {
+    border: none;
+    cursor: pointer;
+    height: 56px;
+    width: 56px;
+    background-image: url(https://maps.google.com/mapfiles/kml/paddle/red-stars.png);
+    background-color: rgba(0, 0, 0, 0);
+  }
+
 :javascript
   mapboxgl.accessToken = "#{CDO.mapbox_access_token}";
 
 #mapbox-container.row{style: "display: none"}
   .col-xs-5
-    &nbsp;
+    #mapbox-listings
   .col-xs-7
     #mapbox{style: "width: 553px; height: 400px"}
