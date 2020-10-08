@@ -6,13 +6,13 @@ title: Hour of Code How-to Guide for After-school
 
 # Comment enseigner une Heure de Code en activités para-scolaires ou en clubs
 
-### Join the movement and introduce your students to computer science with these steps.
+### Rejoignez le mouvement et initiez vos étudiants à l'informatique en suivant ces étapes.
 
-Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
+La pensée computationnelle contribue à développer les compétences de résolution de problèmes, la logique et la créativité. Et la technologie transforme toutes les industries de la planète. Les étudiants d'aujourd'hui doivent apprendre à créer la technologie, et pas seulement à l'utiliser. En commençant tôt, ils auront les bases pour réussir dans tout cheminement de carrière du 21ème siècle.
 
 Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time. If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
 
-### An Hour of Code can also be hosted remotely! To get started, check out our [tips for hosting a virtual Hour of Code event](https://hourofcode.com/us/how-to/virtual).
+### Une Heure de Code peut également être animée à distance ! Pour commencer, consultez nos [conseils pour organiser un événement Heure de Code virtuel](https://hourofcode.com/us/how-to/virtual).
 
 * * *
 

@@ -4,13 +4,13 @@ title: Hour of Code 자원봉사자를 위한 How-to 가이드
 
 {{ signup_button }}
 
-# How-to Guide for Volunteers
+# 자원봉사자를 위한 하우 투 가이드
 ### 오늘 교실에서 차이를 만드세요!
 
 ***
 
-## Why volunteer?
-Check out some testimony from past volunteers:
+## 자원봉사를 왜 해야 하나요?
+과거에 자원봉사자들의 이야기를 확인해 보세요:
 
 - “The best part of my experience was that the entire class were women and people of color. It bodes well for the future of our industry to have a chance to reach and excite these kids.”
 - “Especially enjoyed getting to encourage young girls in technology. Felt like I was helping the next generation in my local area.”
@@ -34,13 +34,13 @@ Do you believe that learning computer science can open doors of opportunity for 
 
 ### How do you get started?
 
-1. [Send this email]({{ promote/help_schools }}) to your child’s teacher offering to help them run an Hour of Code.
-2. Offer to host an Hour of Code event after school at a local school. [Use this How-To Guide]({{ urls/how_to_guide }}) to help you plan.
+1. 자녀의 교사에게 아워오브코드를 진행하는 데 도움을 드리겠다고 제안하는[이 이메일 발송]({{ promote/help_schools }}).
+2. Offer to host an Hour of Code event after school at a local school. [이 하우 투 가이드]({{ urls/how_to_guide }})를 사용하여 플랜 작성 시 도움을 받으세요.
 
 ## Recruit your co-workers to volunteer
 Tell your friends and co-workers about the Hour of Code. Thousands of teachers are  looking for volunteers, so ask them to [sign up as a volunteer](https://code.org/volunteer). Ask your employer to get involved. [Send this email]({{ promote/sample_emails }}) to your manager or the CEO to get everyone on board.
 
-## How to prepare
+## 준비 방법
 - [Pick out a video]({{ promote/videos }}) to show to help focus the class and get them excited to do an Hour of Code.
 - Check out the [Hour of Code Volunteer Toolkit](/files/hoc-volunteer-toolkit.pdf) which includes an overview, timeline, preparation material, and marketing material. Everything you need to be ready for your volunteer experience!
 - If you're going to be doing a tutorial during your session, spend 30 minutes trying at least one [Hour of Code tutorial]({{ urls/learn }}).
@@ -50,41 +50,41 @@ Tell your friends and co-workers about the Hour of Code. Thousands of teachers a
 - Connect with the teacher to discuss what you plan to speak about during your session.
 - If you are a virtual volunteer, test A/V and screen sharing capabilities beforehand.
 
-## Day-of Hour of Code Event
-When you're hosting an Hour of Code event, follow the sample agenda below to help guide your day. Before then, make sure you sign into the school and greet the teacher the day of the event. Confirm the agreed schedule for the day and discuss any talking points.
+## 아워오브코드 이벤트 날
+아워오브코드 이벤트를 주최할 때 여러분의 날을 안내하는 데 도움이 되는 아래의 예시 안건을 따릅니다.  Before then, make sure you sign into the school and greet the teacher the day of the event. Confirm the agreed schedule for the day and discuss any talking points.
 
-### Sample agenda:
+### 예시 안건:
 
-| 시간            | Agenda item                                                                                                                                                                                                                                                                                                                                                  |
-| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| 1-5 minutes   | [Show an inspirational video]({{ promote/videos }}).                                                                                                                                                                                                                                                                                                         |
-| 5-10 minutes  | Introduce yourself and learn more about the students: </ul><li>What do you work, what do you do, and what do you love most about your job?</li><li>What or who inspired you?</li><li>How did you get interested in computer science?</li><li>Did you have a mentor?</li><li>Share a story about how tech affects everyone.</li><br>Ask the students questions and leave time for Q&A.</br> <li> What jobs are they interested in, what are their favorite tech gadgets or apps, and how do they think they are built? </li><li> Do the students have any questions for you?</ul> |
-| 30-60 minutes | **Code!** Walk around, answer questions, and guide them through tough puzzles. Try not to give students the solution outright, instead, try asking them questions so they can answer themselves what went wrong, and encourage students to ask each other if they have questions. 서로에게서 배우는 것은 훌륭한 학습 기회입니다.                                                 |
-| 1~3분          | Thank everyone and share inspirational parting words. Hand out any of your company swag (stickers are awesome)!                                                                                                                                                                                                                                              |
-| After         | **Make a lasting change:** Talk to the teacher about turning the Hour of Code into a full computer science course! Go to [code.org/yourschool](https://code.org/yourschool) with your teacher to fill in what this school teaches today and encourage them to pledge to bring ccomputer science to their classroom.                                          |
+| 시간     | 안건 항목                                                                                                                                                                                                                                                                                    |
+| ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1-5 분  | [동기부여가 되는 비디오를 보여주세요]({{ promote/videos }}).                                                                                                                                                                                                                                             |
+| 5-10분  | 자신을 소개하고 학생들에 대해 더 자세히 알아보세요:</ul><li>직업은 무엇이고, 무슨 일을 하며, 업무 중 가장 좋아하는 것은 무엇입니까?</li><li>무엇이 또는 누가 영감을 주었습니까?</li><li>컴퓨터 과학에 어떻게 관심을 갖게 되었습니까?</li><li>멘토가 있었습니까?</li><li>기술이 모두에게 어떻게 영향을 미치는지에 관한 이야기를 들려주세요.</li><br>학생의 질문에 답하고 Q&A 시간을 남겨 두세요.</br> <li> 학생들이 관심을 갖는 직업은 무엇이고, 좋아하는 테크 장치나 앱은 무엇이며, 그것이 어떻게  만들어진다고 생각합니까? </li><li> 학생들에게 귀하에 대한 질문이 있습니까? </ul> |
+| 30-60분 | **코드!** 교실을 다니며, 질문에 답하고, 학생들이 퍼즐을 풀도록 안내하세요. 노골적인 정답을 주기보다는 질문을 하여 스스로 무엇이 틀렸는지 대답하게 하세요. 학생들이 질문이 있는 경우, 서로에게 물어보도록 권장하세요. 서로에게서 배우는 것은 훌륭한 학습 기회입니다.                                                                                                                                  |
+| 1~3분   | 모두에게 감사를 전하고 동기 부여가 되는 고별사를 하세요. 회사를 나타내는 물건(스티커가 좋습니다)이 있으면 나누어 주세요!                                                                                                                                                                                                                    |
+| 이후     | **지속적인 변화를 만드세요:** 아워오브코드를 완전한 컴퓨터 과학 과정으로 만드는 방법에 대해 교사들과 이야기하세요! 교사와 함께  [code.org/yourschool](https://code.org/yourschool) 로 가서 현재 학교에서 무엇을 가르치는지 적게 하고 교실에서 컴퓨터 과학을 가르치도록 장려하십시오.                                                                                                    |
 
-### After the Event:
-- Share your photos and stories with Code.org at giving@code.org.
-- Remember to enter in your volunteer hours in your company’s volunteer tracking portal.
-- Share about your experience on social media #HourOfCode!
-- If you do take pictures/videos during the event, **especially with students**, make sure you get teacher/parent permission if you would like to post your stories on social media.
-- And, check back in a month: Is the teacher interested in offering a computer science course? Share [resources and professional learning opportunities to help them do this](https://code.org/yourschool).
+### 이벤트 후:
+- giving@code.org에서 Code.org에 사진과 스토리를 공유하세요.
+- 회사의 자원봉사 추적 포털에 귀하의 자원봉사 시간을 적는 것을 잊지 마세요.
+- 귀하의 경험을 소셜 미디어 #HourOfCode에서 공유하세요!
+- 이벤트 중 사진/비디오를  **특히 학생과 함께** 찍는 경우, 귀하의 스토리를 소셜 미디어에 올려도 되는지 교사/부모에게 허가를 구하세요.
+- And, check back in a month: Is the teacher interested in offering a computer science course?  [자료와 전문적 학습 기회 공유](https://code.org/yourschool).
 
-## How you get selected as a technical volunteer of guest speaker
-- Teachers will be searching for volunteers on our [volunteer map](https://code.org/volunteer/local).
-- Try to make your profile as complete as possible to increase the chance that a teacher will select you.
+## 기술 자원봉사자 또는 초대 강연자로 어떻게 선출되었는지
+- 교사는 자원봉사자를[자원봉사 맵](https://code.org/volunteer/local)에서 찾을 수 있습니다.
+- 교사가 연락을 해올 확률을 높이기 위해 프로필을 가능한 한 완벽하게 만들어야 합니다.
 - A teacher will contact you through this form (your email address will never be shared with the teacher). *If you are receiving too many requests from teachers, you can always update your preferences by clicking the link to edit your information or unsubscribe, provided at the bottom of any email from a teacher.*
 
 ## Volunteering during the Hour of Code FAQ
 
-### I haven't been contacted by a teacher yet. How can I still volunteer?
-Try searching for local schools and call the principal/teacher/front office and ask how you can help.
+### 아직 교사의 연락을 받지 못했습니다. 그래도 어떻게 하면 자원봉사를 할 수 있습니까?
+지역 학교를 검색해보고 교장/교사/행정실에 전화하여 자원봉사를 해도 되는지 물어봅니다.
 
-### How long do classroom visits last for?
-An in-person classroom visit usually lasts 60-90 minutes while a virtual classroom visit usually lasts 20-30 minutes.
+### 몇 시간 동안 교실에서 봉사를 합니까?
+직접 교실을 방문하는 경우 60-90분 동안 지속되고 가상 방문인 경우 일반적으로 20-30분 정도 지속됩니다.
 
-### What age group is the Hour of Code activity appropriate for?
-Code.org and our partners design all the Hour of Code activities to engage students of all grade levels (K-12), boys and girls, from all backgrounds. 모두, 심지어 성인도 재미있게 즐길 수 있습니다!
+### 아워오브코드 활동은 어느 연령 그룹에 적절한가요?
+Code.org와 파트너는 모든 배경의 전 학년 (K-12) 남학생과 여학생이 참여하는 모든 아워오브코드 활동을 설계했습니다. 모두, 심지어 성인도 재미있게 즐길 수 있습니다!
 
 
 

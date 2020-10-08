@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200929062628) do
+ActiveRecord::Schema.define(version: 20201006202706) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -1276,12 +1276,14 @@ ActiveRecord::Schema.define(version: 20200929062628) do
 
   create_table "resources", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.string   "name"
-    t.string   "url",        null: false
-    t.string   "key",        null: false
+    t.string   "url",               null: false
+    t.string   "key",               null: false
     t.string   "properties"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["key"], name: "index_resources_on_key", unique: true, using: :btree
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+    t.integer  "course_version_id"
+    t.index ["course_version_id", "key"], name: "index_resources_on_course_version_id_and_key", unique: true, using: :btree
+    t.index ["name", "url"], name: "index_resources_on_name_and_url", type: :fulltext
   end
 
   create_table "school_districts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|

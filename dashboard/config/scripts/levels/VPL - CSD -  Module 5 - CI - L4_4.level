@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 106,
   "properties": {
-    "long_instructions": "# Do This\r\n\r\nAdd eyebrows to this smiley face. Remember to use the \"Readable Format\" if you get stuck.\r\n\r\n![](https://images.code.org/269725fa3d9d6857912fe4a20464a830-image-1491427249017.18.37 PM.png)",
+    "long_instructions": "# Do This\r\n\r\nAdd eyebrows to this smiley face. Remember to use the \"Readable Format\" if you get stuck.\r\n\r\n**Note: This level is the same as Unit 5, Lesson 4 - Level 5 in Code Studio.**\r\n\r\n![](https://images.code.org/269725fa3d9d6857912fe4a20464a830-image-1491427249017.18.37 PM.png)",
     "instructions_important": "false",
     "display_name": "Black and White Pixelation Widget",
     "version": "1",
@@ -22,6 +22,6 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2020-09-10 19:48:45 +0000\",\"changed\":[],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2020-09-10 19:48:45 +0000\",\"changed\":[],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2020-10-02 18:46:33 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"}]"
 }]]></config>
 </Pixelation>

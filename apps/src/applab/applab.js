@@ -683,6 +683,7 @@ Applab.init = function(config) {
       !!config.level.isProjectLevel || config.level.showDebugWatch,
     showMakerToggle:
       !!config.level.isProjectLevel || config.level.makerlabEnabled,
+    validationEnabled: !!config.level.validationEnabled,
     widgetMode: config.level.widgetMode
   });
 
