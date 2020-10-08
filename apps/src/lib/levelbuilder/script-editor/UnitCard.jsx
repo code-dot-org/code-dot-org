@@ -133,7 +133,7 @@ class UnitCard extends Component {
     return s.join('\n');
   };
 
-  serializeLevel = (id, level, active) => {
+  serializeLevel = (id, level) => {
     const s = [];
     const key = this.props.levelKeyList[id];
     if (/^blockly:/.test(key)) {
@@ -153,9 +153,6 @@ class UnitCard extends Component {
       }
     }
     let l = `level '${escape(key)}'`;
-    if (active === false) {
-      l += ', active: false';
-    }
     if (level.progression) {
       l += `, progression: '${escape(level.progression)}'`;
     }
