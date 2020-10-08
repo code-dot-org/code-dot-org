@@ -1,10 +1,10 @@
 ---
-title: Hour of Code How-to Guide for parents
+title: 학부모를 위한 아워오브코드 하우 투 가이드
 layout: wide
 nav: how_to_nav
 ---
 
-# How to do an Hour of Code with your child
+# 아워오브코드를 자녀와 함께 하는 방법
 
 Trying an Hour of Code is a simple and fun way to introduce your child to computer science, perhaps for the very first time. 컴퓨터 과학은 모든 학문 분야의 기초일 뿐 만 아니라 [최근의 연구가 보여주듯](https://medium.com/@codeorg/cs-helps-students-outperform-in-school-college-and-workplace-66dd64a69536): 컴퓨터 과학을 공부하는 아동은 다른 과목에서도 좋은 성과를 나타내고 문제해결 능력이 뛰어나며<font color="00adbc"><b>대학에 진학할 가능성이 17% 더 높습니다.</b></font>.
 
@@ -22,7 +22,7 @@ You can join tens of millions of students worldwide in this global event. Togeth
 
 * * *
 
-## 1) Explore activities and tutorials.
+## 1) 활동과 튜토리얼 탐구.
 
 [![](/images/fit-600/tutorials.png)]({{ urls/learn }})
 
@@ -34,7 +34,7 @@ All of our activities integrate problem-solving and critical-thinking with fun a
 - 디즈니를 좋아하는 아동: [스타 워즈](https://code.org/starwars), [겨울 왕국](https://studio.code.org/s/frozen/stage/1/puzzle/1) 또는 [모아나](https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C)
 - 배우는 걸 좋아하는 아동: [바다환경을 위한 AI](https://code.org/oceans) 또는 [스크래치로 음악 만들기](https://scratch.mit.edu/projects/editor/?tutorial=music&utm_source=codeorg)
 
-<h3>Low-tech or no-tech?</h3>
+<h3>기술이 부족 또는 아예 없습니까?</h3>
 
 제한적인 기술 또는 기술 없이 이용하려면, [아워오브코드 활동](https://hourofcode.com/us/learn) 을 *클래스룸 기술* 섹션에서 “컴퓨터 또는 기기 없음”을 선택하여 필터링 할 수 있습니다.
 
@@ -73,7 +73,7 @@ Now that you have some tutorials in mind, it may be helpful to try these activit
 
 [![](/images/fit-600/Marketing/girl-sitting-on-sofa-while-using-tablet-computer-4144035.jpg)]({{ urls/learn }})
 
-<h3>Have young women at home?</h3>
+<h3>가정에 어린 여성이 있습니까?</h3>
 
 <a href="https://code.org/girls">Here are our recommendations</a> to help spark their interest in computer science. **사전 팁**: 자녀에게 정말 괜찮을 것 같다라고 말함으로써 시작할 수 있습니다!
 
