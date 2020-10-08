@@ -89,12 +89,12 @@ class UnitCard extends Component {
         s.push(t);
         if (lessonGroup.description) {
           s.push(
-            `lesson_group_description: '${escape(lessonGroup.description)}'`
+            `lesson_group_description '${escape(lessonGroup.description)}'`
           );
         }
         if (lessonGroup.big_questions) {
           lessonGroup.big_questions.forEach(question => {
-            s.push(`lesson_group_question: '${escape(question)}'`);
+            s.push(`lesson_group_question '${escape(question)}'`);
           });
         }
       }
