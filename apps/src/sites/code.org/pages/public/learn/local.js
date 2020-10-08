@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom';
 import $ from 'jquery';
 import {getLocations} from '@cdo/apps/lib/ui/classroomMap';
 import logToCloud from '@cdo/apps/logToCloud';
-import LocalControlList from './localControlList';
+import LocalControlList from '@cdo/apps/templates/LocalControlList';
 
 var map;
 var map_loc;
