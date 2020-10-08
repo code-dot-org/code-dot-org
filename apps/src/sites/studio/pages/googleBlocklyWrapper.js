@@ -1,9 +1,11 @@
 import {BlocklyVersion} from '@cdo/apps/constants';
+import CdoBlockDragger from '@cdo/apps/blocklyAddons/cdoBlockDragger';
 import CdoBlockSvg from '@cdo/apps/blocklyAddons/cdoBlockSvg';
 import CdoFieldDropdown from '@cdo/apps/blocklyAddons/cdoFieldDropdown';
 import CdoInput from '@cdo/apps/blocklyAddons/cdoInput';
 import CdoPathObject from '@cdo/apps/blocklyAddons/cdoPathObject';
 import CdoTheme from '@cdo/apps/blocklyAddons/cdoTheme';
+import CdoTrashcan from '@cdo/apps/blocklyAddons/cdoTrashcan';
 import CdoWorkspaceSvg from '@cdo/apps/blocklyAddons/cdoWorkspaceSvg';
 
 /**
@@ -101,16 +103,19 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('useContractEditor');
   blocklyWrapper.wrapReadOnlyProperty('useModalFunctionEditor');
   blocklyWrapper.wrapReadOnlyProperty('utils');
+  blocklyWrapper.wrapReadOnlyProperty('Trashcan');
   blocklyWrapper.wrapReadOnlyProperty('Variables');
   blocklyWrapper.wrapReadOnlyProperty('weblab_locale');
   blocklyWrapper.wrapReadOnlyProperty('Workspace');
   blocklyWrapper.wrapReadOnlyProperty('WorkspaceSvg');
   blocklyWrapper.wrapReadOnlyProperty('Xml');
 
+  blocklyWrapper.blockly_.BlockDragger = CdoBlockDragger;
   blocklyWrapper.blockly_.BlockSvg = CdoBlockSvg;
   blocklyWrapper.blockly_.FieldDropdown = CdoFieldDropdown;
   blocklyWrapper.blockly_.Input = CdoInput;
   blocklyWrapper.geras.PathObject = CdoPathObject;
+  blocklyWrapper.blockly_.Trashcan = CdoTrashcan;
   blocklyWrapper.blockly_.WorkspaceSvg = CdoWorkspaceSvg;
 
   // These are also wrapping read only properties, but can't use wrapReadOnlyProperty
@@ -159,7 +164,8 @@ function initializeBlocklyWrapper(blocklyInstance) {
     createReadOnlyBlockSpace: (container, xml, options) => {
       const workspace = new Blockly.WorkspaceSvg({
         readOnly: true,
-        theme: CdoTheme
+        theme: CdoTheme,
+        plugins: {}
       });
       const svg = Blockly.utils.dom.createSvgElement(
         'svg',
@@ -207,7 +213,8 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.inject = function(container, opt_options, opt_audioPlayer) {
     const options = {
       ...opt_options,
-      theme: CdoTheme
+      theme: CdoTheme,
+      trashcan: true
     };
     return blocklyWrapper.blockly_.inject(container, options);
   };
@@ -222,6 +229,19 @@ function initializeBlocklyWrapper(blocklyInstance) {
     }
     return blockXml;
   };
+
+  blocklyWrapper.Xml.fieldToDom_ = function(field) {
+    if (field.isSerializable()) {
+      // Titles were renamed to fields in 2013, but CDO Blockly and
+      // all existing student code uses titles, so to keep everything
+      // consistent, we should continue using titles here.
+      var container = Blockly.utils.xml.createElement('title');
+      container.setAttribute('name', field.name || '');
+      return field.toXml(container);
+    }
+    return null;
+  };
+
   blocklyWrapper.Xml.domToBlockSpace = function(blockSpace, xml) {
     // Switch argument order
     return blocklyWrapper.Xml.domToWorkspace(xml, blockSpace);
