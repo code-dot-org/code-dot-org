@@ -20,7 +20,7 @@
 # An ActivitySection may contain a progression of script levels, or
 # may simply contain formatted text and other visual information.
 #
-# @attr [String] title - The user-visible heading of this section of the activity
+# @attr [String] name - The user-visible heading of this section of the activity
 # @attr [boolean] remarks - Whether to show the remarks icon
 # @attr [boolean] slide - Whether to show the slides icon
 # @attr [String] description - Text describing the activity
@@ -34,7 +34,7 @@ class ActivitySection < ApplicationRecord
   has_many :script_levels
 
   serialized_attrs %w(
-    title
+    name
     remarks
     slide
     description
