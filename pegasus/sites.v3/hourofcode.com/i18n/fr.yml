@@ -10,25 +10,25 @@ fr:
   campaign_date_start_long: Le 7 décembre
   campaign_date_short: 7–13 déc.
   campaign_date_full: Du 7 au 13 décembre
-  campaign_date_year: '2016'
-  campaign_date_full_year: 5-11 décembre, 2016
-  latam_campaign_date_start_short: Oct. 1
-  latam_campaign_date_start_long: October 1
+  campaign_date_year: '2020'
+  campaign_date_full_year: 7-13 décembre, 2020
+  latam_campaign_date_start_short: 1 Oct.
+  latam_campaign_date_start_long: Octobre 1
   latam_campaign_date_short: Oct. 1 - Dec. 18
   latam_campaign_date_full: October 1 - December 18
-  latam_campaign_date_year: '2016'
+  latam_campaign_date_year: '2020'
   latam_campaign_date_full_year: October 1, 2020 - December 18, 2020
   europe_campaign_date_start_short: Oct. 10
   europe_campaign_date_start_long: October 10
   europe_campaign_date_short: Oct. 10-25
   europe_campaign_date_full: October 10-25
-  europe_campaign_date_year: '2016'
+  europe_campaign_date_year: '2020'
   europe_campaign_date_full_year: October 10-25, 2020
-  africa_campaign_date_start_short: Oct. 1
-  africa_campaign_date_start_long: October 1
+  africa_campaign_date_start_short: 1 Oct.
+  africa_campaign_date_start_long: Octobre 1
   africa_campaign_date_short: Oct. 1-31
   africa_campaign_date_full: October 1-31
-  africa_campaign_date_year: '2016'
+  africa_campaign_date_year: '2020'
   africa_campaign_date_full_year: October 1-31, 2020
   hoc2019_header: Apprends l'informatique. Change le monde.
   hoc2019_header_line1_mobile: Apprends l'informatique.
@@ -44,7 +44,7 @@ fr:
     est un apprentissage fondamental pour tous les élèves.
   social_hoc2019_dance: Featuring Katy Perry, Shawn Mendes, Panic! At The Disco, Lil
     Nas X, Jonas Brothers, Nicki Minaj, and 34 more!
-  oceans_landing_title: AI for Oceans
+  oceans_landing_title: IA pour les Océans
   oceans_landing_description: Learn about machine learning and ethical use of AI.
   cs_for_good_hashtag: "#CSforGood"
   oceans_landing_specs: Available in 25+ languages | Grades 3+
@@ -114,7 +114,7 @@ fr:
     bias, while exploring ethical issues and how AI can be used to address world problems.
     Computer science is about so much more than coding! Enjoy Code.org's first step
     in a new journey to teach more about AI throughout our curriculum.
-  hoc_overview_oceans_tutorial_header: AI for Oceans
+  hoc_overview_oceans_tutorial_header: IA pour les Océans
   hoc_overview_oceans_tutorial_desc: Learn about artificial intelligence (AI), machine
     learning, training data, and bias, while exploring ethical issues and how AI can
     be used to address world problems.
@@ -8629,7 +8629,7 @@ fr:
   tutorial_modtraits_name: Character Traits with GoPiGo
   tutorial_mee_name: 'Minecraft Heure de Code : IA au service du bien'
   tutorial_kuborobo_name: KUBO Robotics Coding Routes
-  tutorial_ai-oceans_name: AI for Oceans
+  tutorial_ai-oceans_name: IA pour les Océans
   tutorial_scratchimagine_longdescription: Imagine a world where anything is possible,
     then bring it to life with Scratch!
   tutorial_codesterspsa_longdescription: Learn the basics of coding in Python while

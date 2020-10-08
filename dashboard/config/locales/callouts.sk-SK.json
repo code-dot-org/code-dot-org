@@ -516,11 +516,13 @@
         },
         "behaviors 3a": {
           "behavior_callout": "Prečo tento postup nefunguje pri prostrednej hviezde?",
-          "star2_callout": "Odstráň blok s kostýmom a použi namiesto neho blok \"táto postava\"."
+          "star2_callout": "Odstráň blok s kostýmom a použi namiesto neho blok \"táto postava\".",
+          "this_sprite_callout": "Vymeň blok kostýmov nižšie za tento."
         },
         "behaviors 3a_2020": {
           "behavior_callout": "Prečo tento postup nefunguje pri prostrednej hviezde?",
-          "star2_callout": "Odstráň blok s kostýmom a použi namiesto neho blok \"táto postava\"."
+          "star2_callout": "Odstráň blok s kostýmom a použi namiesto neho blok \"táto postava\".",
+          "this_sprite_callout": "Vymeň blok kostýmov nižšie za tento."
         },
         "behaviors 4": {
           "behaviors_edit": "Klikni sem  a uvidíš, ako toto správanie funguje."

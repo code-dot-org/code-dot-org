@@ -57,7 +57,7 @@ A technológia átformál minden iparágat a világon. 2015-ben 7 millió olyan 
 
 **Tárgy**: Helyi iskola küldetésének teszi, hogy bemutassa a számítástechnikát diákok számára
 
-A számítógépek mindenhol ott vannak, minden iparágat megváltoztatnak a világon, de az iskolák kevesebb, mint fele oktat számítástechnikát. Young women and students from marginalized racial and ethnic groups are severely underrepresented in computer science classes, and in the tech industry. A jó hír az, hogy mi már dolgozunk azon, hogy ez megváltozzon.
+A számítógépek mindenhol ott vannak, minden iparágat megváltoztatnak a világon, de az iskolák kevesebb, mint fele oktat számítástechnikát. A marginalizált faji és etnikai csoportokból származó fiatal nők és diákok súlyosan alulreprezentáltak az informatika órákon és a technológiai iparban. A jó hír az, hogy mi már dolgozunk azon, hogy ez megváltozzon.
 
 A Kódolás Órájával, a számítástechnika tudomány a Google, MSN, Yahoo! és a Disney honlapján is szerepelt. Több, mint 100 partner csatlakozott, hogy támogassa a mozgalmat. Minden Apple Store a világon tartott már egy Kódolás Órája eseményt. Még Obama elnök úr is megírta élete első kódját a kampány részeként.
 
@@ -77,7 +77,7 @@ Elérhetőség: [YOUR NAME], [TITLE], mobil: (212) 555-5555 Dátum: [DATE and TI
 
 #### A Code.org-ról
 
-Code.org is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by young women and students from other underrepresented groups. Meglátása szerint, minden iskolában minden diáknak lehetőséget kell teremteni arra, hogy megtanulhassa a számítógépes programozást. A 2013-as elindulást követően a Code.org megszervezte a Kódolás órája kampányt, amely eddig több mint 100 millió diákot vezetett be a számítástechnika világába, és Amerika szerte 70 középiskolával együttműködve segíti a számítástechnikai programok bővítését. A Code.org-ot különböző társaságok, alapítványok és nagylelkű személyek jótékony felajánlásai támogatják, köztük a Microsoft, a Facebook, az Infosys Foundation USA, az Amazon és sokan mások. További információkért, kérlek látogass el ide: [code.org]({{ urls/codeorg }}).
+A Code.org egy 501c3 számú non-profit szervezet, amelynek célja a számítástechnikában való részvétel bővítése, valamint a nők és az alulreprezentált színesbőrű hallgatók felkarolása. Meglátása szerint, minden iskolában minden diáknak lehetőséget kell teremteni arra, hogy megtanulhassa a számítógépes programozást. A 2013-as elindulást követően a Code.org megszervezte a Kódolás órája kampányt, amely eddig több mint 100 millió diákot vezetett be a számítástechnika világába, és Amerika szerte 70 középiskolával együttműködve segíti a számítástechnikai programok bővítését. A Code.org-ot különböző társaságok, alapítványok és nagylelkű személyek jótékony felajánlásai támogatják, köztük a Microsoft, a Facebook, az Infosys Foundation USA, az Amazon és sokan mások. További információkért, kérlek látogass el ide: [code.org]({{ urls/codeorg }}).
 
   
 Találj további anyagokat és minta emaileket [itt]({{ promote/sample_emails }}).
