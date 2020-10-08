@@ -153,6 +153,7 @@ de:
         title: Aktivität ohne Computer
         desc: Heute wirst du lernen, was zu tun ist, wenn jemand online gemein zu dir ist.
       deeper learning description:
+        title: '[empty string]'
         desc: "translation missing: en-US.data.unplugged.desc\n"
       courseAB_unplugged_plantASeed:
         title: 'Real-Life-Algorithmen: Pflanze Samen'
@@ -231,6 +232,42 @@ de:
       courseB_unplugged_MRF_2018:
         title: Meine Roboterfreunde
         desc: Lerne zu programmieren, indem du Code für deine Freunde schreibst!
+      BuildingAFoundation_2018:
+        title: '[empty string]'
+        desc: '[empty string]'
+      courseB_unplugged_loopyMRF_2018:
+        title: '[empty string]'
+        desc: '[empty string]'
+      DiceRace_2018:
+        title: '[empty string]'
+        desc: '[empty string]'
+      courseE_unplugged_privateInformation_2018:
+        title: '[empty string]'
+        desc: '[empty string]'
+      SongwritingParameters_2018:
+        title: '[empty string]'
+        desc: '[empty string]'
+      Internet_2018:
+        title: '[empty string]'
+        desc: '[empty string]'
+      Crowdsourcing_2018:
+        title: '[empty string]'
+        desc: '[empty string]'
+      TangramAlgorithms_2018:
+        title: '[empty string]'
+        desc: '[empty string]'
+      courseF_unplugged_powerOfWords_2018:
+        title: '[empty string]'
+        desc: '[empty string]'
+      EnvelopeVariables_2018:
+        title: '[empty string]'
+        desc: '[empty string]'
+      ForLoopFun_2018:
+        title: '[empty string]'
+        desc: '[empty string]'
+      SongwritingWithParameters_2018:
+        title: '[empty string]'
+        desc: '[empty string]'
       PlantASeed_2018:
         title: 'Real-Life-Algorithmen: Pflanze Samen'
         desc: Diese Lektion behandelt die Anwendung von Algorithmen im Alltag, zum Beispiel beim Pflanzen eines Samens. Außerdem wird ein umfassenderes Bild der Informatik und der Rolle von Algorithmen vermittelt.
@@ -275,6 +312,7 @@ de:
         desc: Die Schüler erstellen Armbänder als binäre Darstellung der Anfangsbuchstaben ihrer Namen. Dabei lernen die Schüler, dass Daten auf verschiedene Weise repräsentiert und gespeichert werden können.
       MoveItMoveIt_2018:
         title: Bewegung, Bewegung
+        desc: '[empty string]'
       courseB_unplugged_CnC_2018:
         title: Es ist großartig etwas zu erschaffen und fair zu spielen
         desc: Diese Lektion, die vom Team von Copyright and Creativity an die Grundlagen der Informatik verliehen wurde, soll den Schülern helfen, den kreativen Prozess des Teilens und der Inspiration zu verstehen.  Damit einher geht die Förderung des kreativen Ausdrucks und die Notwendigkeit, mit der kreativen Arbeit fair umzugehen.
@@ -292,6 +330,7 @@ de:
         desc: "translation missing: en-US.data.unplugged.BuildingAFoundation_2018.desc\n"
       courseB_unplugged_loopyMRF_2019:
         title: Meine schleifenden Roboterfreunde
+        desc: '[empty string]'
       Conditionals_2019:
         title: Bedingungen
         desc: Als Einführung in bedingte Anweisungen spielen die Schüler ein Kartenspiel, für welches sie Regeln wie "Wenn ich eine rote Karte ziehe, bekomme ich einen Punkt" und "Wenn ich eine schwarze Karte ziehe, bekommst du einen Punkt" erstellen.
@@ -347,6 +386,7 @@ de:
         title: 'Alltagsalgorithmen: Papierflieger'
         desc: In dieser Lektion wird die Verwendung von Algorithmen im täglichen Leben behandelt. Als Beispiel dienen Papierflieger. Außerdem wird ein umfassenderes Bild der Informatik und der Rolle von Algorithmen vermittelt.
       test-uid-passthrough:
+        title: '[empty string]'
         desc: "\"# Sitzung zu Rekrutierungs-Szenarien\\r\n\\r\n## Rechtswischen für Informatik\\r\nIn dieser Sitzung verwenden wir ein Werkzeug namens \"\"Swipe Right for CS\"\"/Rechtswischen für Informatik , das von unseren Partnern am MIT entwickelt wurde. In \"\"Swipe Right for CS\"\" lesen Sie einige Profile von SchülerInnen und überlegen sich spezifische Aussagen, die Sie verwenden könnten, um ihn/sie davon zu überzeugen, sich in Ihrem Kurs zu Informatik-Prinzipien einzuschreiben. \\r\n\\r\n### So funktioniert das Werkzeug\\r\nWenn Sie das Spiel \"\"Swipe Right for CS\"\" spielen, sehen Sie eine Reihe von Zitaten, die Sie bei jedem/r SchülerIn erwähnen können. Sie wischen bei Zitaten, die Ihrer Meinung nach SchülerInnen überzeugen würden, sich für den Kurs einzuschreiben, nach rechts und bei Aussagen, die Ihrer Meinung nach nicht überzeugend sind, nach links. Während der Sitzung werden wir als Gruppe Ihre Gedanken über die Arten von Aussagen diskutieren, die am effektivsten sind, um SchülerInnen dazu zu motivieren, sich für Informatik einzuschreiben, und Sie werden die Gelegenheit haben zu sehen, wie sich andere Personen in Ihrem Workshop bei jedem der Argumente durch ihre Wischbewegung entschieden haben. \\r\n\\r\n\\r\nWenn Sie unten auf Weiter klicken, leiten wir Sie zum Spiel weiter und geben die E-Mail-Adresse von Code.org weiter, mit der Sie eingeloggt sind.\"\n"
       PlantASeed_2019:
         title: 'Real-Life-Algorithmen: Pflanze Samen'
@@ -362,6 +402,7 @@ de:
         desc: In dieser Lektion lernst du Schleifen kennen!
       MoveItMoveIt_2019:
         title: Bewegung, Bewegung
+        desc: '[empty string]'
       DigitalFootprint_2019:
         title: Dein digitaler Fußabdruck
         desc: Die Lehrer vermitteln den Schülern, dass man einen digitalen Fußabdruck oder eine Fährte hinterlässt, wenn man Informationen über sich selbst ins Internet stellt, und erläutern mögliche Konsequenzen.
