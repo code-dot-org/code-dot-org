@@ -36,6 +36,13 @@ export default function initPage(scriptEditorData) {
           assessment: lesson.assessment,
           unplugged: lesson.unplugged,
           name: lesson.name,
+          /*
+           * NOTE: The Script Edit GUI no long includes the editing of levels
+           * as those have been moved out to the lesson edit page. We include
+           * level information here behind the scenes because it allows us to
+           * continue to use ScriptDSl for the time being until we are ready
+           * to move on to our future system.
+           */
           // Only include the first level of an assessment (uid ending with "_0").
           levels: lesson.levels
             .filter(level => !level.uid || /_0$/.test(level.uid))
