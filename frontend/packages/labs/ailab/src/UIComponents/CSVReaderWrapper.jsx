@@ -16,26 +16,37 @@ class CSVReaderWrapper extends Component {
 
     this.state = {
       csvfile: undefined,
+      download: false,
       data: undefined
     };
   }
 
   handleChange = event => {
     this.setState({
-      csvfile: event.target.files[0]
+      csvfile: event.target.files[0],
+      download: false
+    });
+  };
+
+  handleChangeSelect = event => {
+    this.setState({
+      csvfile: event.target.value,
+      download: true
     });
   };
 
   importCSV = () => {
-    const { csvfile } = this.state;
+    const { csvfile, download } = this.state;
     Papa.parse(csvfile, {
       complete: this.updateData,
-      header: true
+      header: true,
+      download: download
     });
   };
 
   updateData = result => {
     var data = result.data;
+    console.log("data", data);
     this.props.setImportedData(data);
     this.setDefaultColumnDataType(data);
   };
@@ -47,8 +58,42 @@ class CSVReaderWrapper extends Component {
   };
 
   render() {
+    // Update paths to include correct remote Github urls
+    const availableDatasets = [
+      {
+        id: 1,
+        name: "Erin's Candy Preferences - all binary",
+        path:
+          "https://raw.githubusercontent.com/code-dot-org/code-dot-org/staging/dashboard/config/standards.csv"
+      },
+      {
+        id: 2,
+        name: "Titanic - multiple datatypes",
+        path: "../datasets/titanic.csv"
+      }
+    ];
+    console.log("this.state.csvfile", this.state.csvfile);
     return (
       <div>
+        <h2>Which dataset would you like to use?</h2>
+        <form>
+          <label>
+            <h2>Select a dataset from the collection</h2>
+            <select
+              value={this.props.labelColumn}
+              onChange={this.handleChangeSelect}
+            >
+              <option>{""}</option>
+              {availableDatasets.map(dataset => {
+                return (
+                  <option key={dataset["id"]} value={dataset["path"]}>
+                    {dataset["name"]}
+                  </option>
+                );
+              })}
+            </select>
+          </label>
+        </form>
         <h2>Import CSV File</h2>
         <input
           className="csv-input"
