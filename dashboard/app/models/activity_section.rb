@@ -49,7 +49,8 @@ class ActivitySection < ApplicationRecord
       remarks: remarks,
       slide: slide,
       description: description,
-      tips: tips
+      tips: tips,
+      levels: script_levels.map(&:summarize)
     }
   end
 end
