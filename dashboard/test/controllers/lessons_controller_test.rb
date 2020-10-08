@@ -126,8 +126,8 @@ class LessonsControllerTest < ActionController::TestCase
     put :update, params: new_update_params
     @lesson.reload
     assert_equal 2, @lesson.resources.count
-    assert @lesson.resources.includes?(resource_to_keep)
-    assert @lesson.resources.includes?(resource_to_add)
-    refute @lesson.resources.includes?(resource_to_remove)
+    assert @lesson.resources.include?(resource_to_keep)
+    assert @lesson.resources.include?(resource_to_add)
+    refute @lesson.resources.include?(resource_to_remove)
   end
 end
