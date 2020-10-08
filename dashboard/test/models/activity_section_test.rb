@@ -25,4 +25,17 @@ class ActivitySectionTest < ActiveSupport::TestCase
 
     assert_equal [sl3, sl1, sl2], activity_section.script_levels
   end
+
+  test 'script levels must be ordered' do
+    activity_section = create :activity_section
+    lesson = activity_section.lesson_activity.lesson
+    script = lesson.script
+
+    level1 = create :maze, name: 'level 1'
+    error = assert_raises do
+      create :script_level, script: script, lesson: lesson, levels: [level1],
+             activity_section: activity_section
+    end
+    assert_includes error.message, 'activity_section_position is required'
+  end
 end
