@@ -8,7 +8,9 @@ const MOVE_LESSON = 'scriptEditor/MOVE_LESSON';
 const REMOVE_GROUP = 'scriptEditor/REMOVE_GROUP';
 const REMOVE_LESSON = 'scriptEditor/REMOVE_LESSON';
 const SET_LESSON_GROUP = 'scriptEditor/SET_LESSON_GROUP';
-const CONVERT_GROUP = 'scriptEditor/CONVERT_GROUP';
+const CONVERT_GROUP_USER_FACING = 'scriptEditor/CONVERT_GROUP_USER_FACING';
+const CONVERT_GROUP_NON_USER_FACING =
+  'scriptEditor/CONVERT_GROUP_NON_USER_FACING';
 const REORDER_LESSON = 'scriptEditor/REORDER_LESSON';
 const UPDATE_LESSON_GROUP_FIELD = 'scriptEditor/UPDATE_LESSON_GROUP_FIELD';
 
@@ -70,10 +72,15 @@ export const setLessonGroup = (
 });
 
 export const convertGroupToUserFacing = (groupPosition, key, displayName) => ({
-  type: CONVERT_GROUP,
+  type: CONVERT_GROUP_USER_FACING,
   groupPosition,
   key,
   displayName
+});
+
+export const convertGroupToNonUserFacing = groupPosition => ({
+  type: CONVERT_GROUP_NON_USER_FACING,
+  groupPosition
 });
 
 export const reorderLesson = (
@@ -226,10 +233,17 @@ function lessonGroups(state = [], action) {
 
       break;
     }
-    case CONVERT_GROUP: {
+    case CONVERT_GROUP_USER_FACING: {
       newState[action.groupPosition - 1].key = action.key;
       newState[action.groupPosition - 1].displayName = action.displayName;
       newState[action.groupPosition - 1].userFacing = true;
+      break;
+    }
+    case CONVERT_GROUP_NON_USER_FACING: {
+      newState[action.groupPosition - 1].displayName = null;
+      newState[action.groupPosition - 1].bigQuestions = '';
+      newState[action.groupPosition - 1].description = '';
+      newState[action.groupPosition - 1].userFacing = false;
       break;
     }
     case REORDER_LESSON: {

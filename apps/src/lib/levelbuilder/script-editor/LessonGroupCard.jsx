@@ -282,11 +282,13 @@ class LessonGroupCard extends Component {
               />
             </span>
           )}
-          <OrderControls
-            name={lessonGroup.key || '(none)'}
-            move={this.handleMoveLessonGroup}
-            remove={this.handleRemoveLessonGroup}
-          />
+          {lessonGroup.userFacing && (
+            <OrderControls
+              name={lessonGroup.key || '(none)'}
+              move={this.handleMoveLessonGroup}
+              remove={this.handleRemoveLessonGroup}
+            />
+          )}
         </div>
         {lessonGroup.userFacing && (
           <div>
