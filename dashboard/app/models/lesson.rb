@@ -16,8 +16,7 @@
 #
 # Indexes
 #
-#  index_stages_on_lesson_group_id_and_key  (lesson_group_id,key) UNIQUE
-#  index_stages_on_script_id                (script_id)
+#  index_stages_on_script_id  (script_id)
 #
 
 require 'cdo/shared_constants'

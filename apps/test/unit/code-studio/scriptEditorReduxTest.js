@@ -6,7 +6,9 @@ import reducers, {
   moveLesson,
   setLessonGroup,
   reorderLesson,
-  updateLessonGroupField
+  updateLessonGroupField,
+  removeGroup,
+  emptyNonUserFacingGroup
 } from '@cdo/apps/lib/levelbuilder/script-editor/scriptEditorRedux';
 import _ from 'lodash';
 
@@ -15,9 +17,9 @@ const getInitialState = () => ({
   lessonGroups: [
     {
       key: 'lg-key',
-      display_name: 'Display Name',
+      displayName: 'Display Name',
       position: 1,
-      user_facing: true,
+      userFacing: true,
       lessons: [
         {
           id: 100,
@@ -38,6 +40,20 @@ const getInitialState = () => ({
           position: 3
         }
       ]
+    },
+    {
+      key: 'lg-key-2',
+      displayName: 'Display Name 2',
+      position: 2,
+      userFacing: true,
+      lessons: [
+        {
+          id: 104,
+          key: 'd',
+          name: 'D',
+          position: 4
+        }
+      ]
     }
   ]
 });
@@ -51,8 +67,26 @@ describe('scriptEditorRedux reducer tests', () => {
   it('add group', () => {
     const nextState = reducer(initialState, addGroup(2, 'key', 'Display Name'))
       .lessonGroups;
-    assert.equal(nextState[nextState.length - 1].display_name, 'Display Name');
+    assert.equal(nextState[nextState.length - 1].displayName, 'Display Name');
+    assert.equal(nextState[nextState.length - 1].userFacing, true);
   });
+
+  it('remove group', () => {
+    // Remove lesson group when there are 2 lessons groups
+    let nextState = reducer(initialState, removeGroup(1));
+    let lessonGroups = nextState.lessonGroups;
+    assert.equal(lessonGroups.length, 1);
+    assert.equal(lessonGroups[0].key, 'lg-key-2');
+
+    // Remove lesson group when there is only one lesson group left
+    // a non-user facing lesson group should be added
+    nextState = reducer(nextState, removeGroup(1));
+    lessonGroups = nextState.lessonGroups;
+    assert.equal(lessonGroups.length, 1);
+    assert.equal(lessonGroups[0].key, emptyNonUserFacingGroup.key);
+    assert.equal(lessonGroups[0].userFacing, false);
+  });
+
   it('add lesson', () => {
     const nextState = reducer(
       initialState,
@@ -79,7 +113,7 @@ describe('scriptEditorRedux reducer tests', () => {
       initialLessonGroups = [
         {
           key: 'x',
-          display_name: 'X',
+          displayName: 'X',
           position: 1,
           lessons: [
             {id: 101, position: 1, relativePosition: 1},
@@ -88,7 +122,7 @@ describe('scriptEditorRedux reducer tests', () => {
         },
         {
           key: 'y',
-          display_name: 'Y',
+          displayName: 'Y',
           position: 2,
           lessons: [
             {id: 103, position: 3, relativePosition: 3},
@@ -127,7 +161,7 @@ describe('scriptEditorRedux reducer tests', () => {
         [
           {
             key: 'x',
-            display_name: 'X',
+            displayName: 'X',
             position: 1,
             lessons: [
               {id: 101, position: 1, relativePosition: 1},
@@ -136,7 +170,7 @@ describe('scriptEditorRedux reducer tests', () => {
           },
           {
             key: 'y',
-            display_name: 'Y',
+            displayName: 'Y',
             position: 2,
             lessons: [
               {id: 104, position: 3, relativePosition: 3},
@@ -159,7 +193,7 @@ describe('scriptEditorRedux reducer tests', () => {
         [
           {
             key: 'x',
-            display_name: 'X',
+            displayName: 'X',
             position: 1,
             lessons: [
               {id: 101, position: 1, relativePosition: 1},
@@ -169,7 +203,7 @@ describe('scriptEditorRedux reducer tests', () => {
           },
           {
             key: 'y',
-            display_name: 'Y',
+            displayName: 'Y',
             position: 2,
             lessons: [{id: 103, position: 4, relativePosition: 4}]
           }
@@ -189,7 +223,7 @@ describe('scriptEditorRedux reducer tests', () => {
         [
           {
             key: 'x',
-            display_name: 'X',
+            displayName: 'X',
             position: 1,
             lessons: [
               {id: 101, position: 1, relativePosition: 1},
@@ -199,7 +233,7 @@ describe('scriptEditorRedux reducer tests', () => {
           },
           {
             key: 'y',
-            display_name: 'Y',
+            displayName: 'Y',
             position: 2,
             lessons: [{id: 103, position: 4, relativePosition: 4}]
           }
@@ -216,13 +250,13 @@ describe('scriptEditorRedux reducer tests', () => {
           [
             {
               key: 'x',
-              display_name: 'X',
+              displayName: 'X',
               position: 1,
               lessons: [{id: 101, position: 1, relativePosition: 1}]
             },
             {
               key: 'y',
-              display_name: 'Y',
+              displayName: 'Y',
               position: 2,
               lessons: [
                 {id: 103, position: 2, relativePosition: 2},
@@ -241,7 +275,7 @@ describe('scriptEditorRedux reducer tests', () => {
           [
             {
               key: 'x',
-              display_name: 'X',
+              displayName: 'X',
               position: 1,
               lessons: [
                 {id: 101, position: 1, relativePosition: 1},
@@ -251,7 +285,7 @@ describe('scriptEditorRedux reducer tests', () => {
             },
             {
               key: 'y',
-              display_name: 'Y',
+              displayName: 'Y',
               position: 2,
               lessons: [{id: 103, position: 4, relativePosition: 4}]
             }
