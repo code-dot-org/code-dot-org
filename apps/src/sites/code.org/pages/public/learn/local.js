@@ -1,4 +1,4 @@
-/* global Maplace, mapboxgl */
+/* global Maplace, mapboxgl, MapboxGeocoder */
 
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -27,14 +27,32 @@ $(function() {
   });
 
   setFacetDefaults();
-
-  $('#location')
-    .geocomplete()
-    .bind('geocode:result', function(event, result) {
-      var loc = result.geometry.location;
-      map_loc = loc.lat() + ',' + loc.lng();
+  if (window.location.search.includes('mapbox')) {
+    $('#location').hide();
+    $('#mapboxgeocoder').show();
+    var geocoder = new MapboxGeocoder({
+      accessToken: mapboxgl.accessToken,
+      mapboxgl: mapboxgl,
+      marker: false,
+      types: 'country,region,district,postcode,locality,place'
+    });
+    geocoder.on('result', function(result) {
+      var loc = result.result.geometry.coordinates;
+      map_loc = loc[1] + ',' + loc[0];
       submitForm();
     });
+    geocoder.addTo('#mapboxgeocoder');
+  } else {
+    $('#mapboxgeocoder').hide();
+    $('#location').show();
+    $('#location')
+      .geocomplete()
+      .bind('geocode:result', function(event, result) {
+        var loc = result.geometry.location;
+        map_loc = loc.lat() + ',' + loc.lng();
+        submitForm();
+      });
+  }
 
   // Make the map sticky.
   $('#map').sticky({topSpacing: 0});
