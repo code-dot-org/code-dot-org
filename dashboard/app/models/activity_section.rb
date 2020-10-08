@@ -50,7 +50,7 @@ class ActivitySection < ApplicationRecord
       slide: slide,
       description: description,
       tips: tips,
-      levels: script_levels.map(&:summarize)
+      levels: script_levels.map(&:summarize_for_edit)
     }
   end
 end
