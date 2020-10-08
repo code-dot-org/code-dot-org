@@ -119,7 +119,7 @@ describe('LessonGroupCard', () => {
       <LessonGroupCard {...defaultProps} lessonGroup={nonUserFacingGroup} />
     );
 
-    expect(wrapper.find('OrderControls')).to.have.lengthOf(1);
+    expect(wrapper.find('OrderControls')).to.have.lengthOf(0);
     expect(wrapper.find('LessonToken')).to.have.lengthOf(2);
     expect(wrapper.find('button')).to.have.lengthOf(1);
     expect(wrapper.find('input')).to.have.lengthOf(0);
