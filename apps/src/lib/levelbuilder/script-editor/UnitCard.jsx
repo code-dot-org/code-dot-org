@@ -83,18 +83,20 @@ class UnitCard extends Component {
     lessonGroups.forEach(lessonGroup => {
       if (lessonGroup.userFacing && lessonGroup.lessons.length > 0) {
         let t = `lesson_group '${lessonGroup.key}'`;
-        t += `, display_name: '${escape(lessonGroup.display_name)}'`;
+        if (lessonGroup.displayName) {
+          t += `, display_name: '${escape(lessonGroup.displayName)}'`;
+        }
+        s.push(t);
         if (lessonGroup.description) {
-          t += `, lesson_group_description: '${escape(
-            lessonGroup.description
-          )}'`;
+          s.push(
+            `lesson_group_description: '${escape(lessonGroup.description)}'`
+          );
         }
         if (lessonGroup.big_questions) {
           lessonGroup.big_questions.forEach(question => {
-            t += `, lesson_group_question: '${escape(question)}'`;
+            s.push(`lesson_group_question: '${escape(question)}'`);
           });
         }
-        s.push(t);
       }
       if (lessonGroup.lessons) {
         lessonGroup.lessons.forEach(lesson => {
