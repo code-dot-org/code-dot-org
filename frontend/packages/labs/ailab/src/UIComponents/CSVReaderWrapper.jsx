@@ -4,6 +4,7 @@ import React, { Component } from "react";
 import Papa from "papaparse";
 import { connect } from "react-redux";
 import { setImportedData, setColumnsByDataType, ColumnTypes } from "../redux";
+import { availableDatasets } from "../datasetManifest";
 
 class CSVReaderWrapper extends Component {
   static propTypes = {
@@ -46,7 +47,6 @@ class CSVReaderWrapper extends Component {
 
   updateData = result => {
     var data = result.data;
-    console.log("data", data);
     this.props.setImportedData(data);
     this.setDefaultColumnDataType(data);
   };
@@ -58,31 +58,13 @@ class CSVReaderWrapper extends Component {
   };
 
   render() {
-    // Update paths to include correct remote Github urls
-    const availableDatasets = [
-      {
-        id: 1,
-        name: "Erin's Candy Preferences - all binary",
-        path:
-          "https://raw.githubusercontent.com/code-dot-org/code-dot-org/staging/dashboard/config/standards.csv"
-      },
-      {
-        id: 2,
-        name: "Titanic - multiple datatypes",
-        path: "../datasets/titanic.csv"
-      }
-    ];
-    console.log("this.state.csvfile", this.state.csvfile);
     return (
       <div>
         <h2>Which dataset would you like to use?</h2>
         <form>
           <label>
             <h2>Select a dataset from the collection</h2>
-            <select
-              value={this.props.labelColumn}
-              onChange={this.handleChangeSelect}
-            >
+            <select onChange={this.handleChangeSelect}>
               <option>{""}</option>
               {availableDatasets.map(dataset => {
                 return (
