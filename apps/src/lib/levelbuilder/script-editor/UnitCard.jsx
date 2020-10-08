@@ -4,7 +4,11 @@ import {connect} from 'react-redux';
 import color from '@cdo/apps/util/color';
 import {borderRadius} from '@cdo/apps/lib/levelbuilder/constants';
 import LessonGroupCard from '@cdo/apps/lib/levelbuilder/script-editor/LessonGroupCard';
-import {addGroup} from '@cdo/apps/lib/levelbuilder/script-editor/scriptEditorRedux';
+import {
+  addGroup,
+  convertGroupToUserFacing,
+  convertGroupToNonUserFacing
+} from '@cdo/apps/lib/levelbuilder/script-editor/scriptEditorRedux';
 import ReactDOM from 'react-dom';
 
 const styles = {
@@ -32,7 +36,6 @@ const styles = {
     margin: '0 10px 10px 10px'
   },
   addGroupWithWarning: {
-    margin: '0 0 30px 0',
     display: 'flex',
     alignItems: 'center'
   },
@@ -49,7 +52,9 @@ class UnitCard extends Component {
   static propTypes = {
     // from redux
     lessonGroups: PropTypes.array.isRequired,
-    addGroup: PropTypes.func.isRequired
+    addGroup: PropTypes.func.isRequired,
+    convertGroupToUserFacing: PropTypes.func.isRequired,
+    convertGroupToNonUserFacing: PropTypes.func.isRequired
   };
 
   constructor(props) {
@@ -74,9 +79,9 @@ class UnitCard extends Component {
   serializeLessonGroups = lessonGroups => {
     let s = [];
     lessonGroups.forEach(lessonGroup => {
-      if (lessonGroup.user_facing && lessonGroup.lessons.length > 0) {
+      if (lessonGroup.userFacing && lessonGroup.lessons.length > 0) {
         let t = `lesson_group '${lessonGroup.key}'`;
-        t += `, display_name: '${escape(lessonGroup.display_name)}'`;
+        t += `, display_name: '${escape(lessonGroup.displayName)}'`;
         s.push(t);
       }
       lessonGroup.lessons.forEach(lesson => {
@@ -125,6 +130,24 @@ class UnitCard extends Component {
     );
   };
 
+  handleMakeUserFacing = () => {
+    const newLessonGroupKey = this.generateLessonGroupKey();
+    const newLessonGroupDisplayName = prompt(
+      'Enter a display name for first lesson group'
+    );
+    if (newLessonGroupKey && newLessonGroupDisplayName) {
+      this.props.convertGroupToUserFacing(
+        1,
+        newLessonGroupKey,
+        newLessonGroupDisplayName
+      );
+    }
+  };
+
+  handleMakeNonUserFacing = () => {
+    this.props.convertGroupToNonUserFacing(1);
+  };
+
   render() {
     const {lessonGroups} = this.props;
 
@@ -148,26 +171,43 @@ class UnitCard extends Component {
               lessonGroupMetrics={this.lessonGroupMetrics}
               setTargetLessonGroup={this.setTargetLessonGroup}
               targetLessonGroupPos={this.state.targetLessonGroupPos}
+              generateLessonGroupKey={this.generateLessonGroupKey}
             />
           ))}
           <div style={styles.addGroupWithWarning}>
-            <button
-              onMouseDown={this.handleAddLessonGroup}
-              className="btn"
-              style={styles.addGroup}
-              type="button"
-              disabled={!this.props.lessonGroups[0].user_facing}
-            >
-              <i style={{marginRight: 7}} className="fa fa-plus-circle" />
-              Add Lesson Group
-            </button>
+            {this.props.lessonGroups[0].userFacing && (
+              <button
+                onMouseDown={this.handleAddLessonGroup}
+                className="btn"
+                type="button"
+                style={styles.addGroup}
+              >
+                <i style={{marginRight: 7}} className="fa fa-plus-circle" />
+                Add Lesson Group
+              </button>
+            )}
+            {!this.props.lessonGroups[0].userFacing && (
+              <button
+                onMouseDown={this.handleMakeUserFacing}
+                className="btn"
+                style={styles.addGroup}
+                type="button"
+              >
+                Enable Lesson Groups
+              </button>
+            )}
+            {this.props.lessonGroups.length === 1 &&
+              this.props.lessonGroups[0].userFacing && (
+                <button
+                  onMouseDown={this.handleMakeNonUserFacing}
+                  className="btn"
+                  style={styles.addGroup}
+                  type="button"
+                >
+                  Disable Lesson Groups
+                </button>
+              )}
           </div>
-          {!this.props.lessonGroups[0].user_facing && (
-            <span style={styles.displayNameWarning}>
-              You must set the display name of the existing lesson group before
-              adding more.
-            </span>
-          )}
         </div>
         <input
           type="hidden"
@@ -186,6 +226,8 @@ export default connect(
     lessonGroups: state.lessonGroups
   }),
   {
-    addGroup
+    addGroup,
+    convertGroupToUserFacing,
+    convertGroupToNonUserFacing
   }
 )(UnitCard);
