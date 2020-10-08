@@ -89,9 +89,8 @@ class LevelsControllerTest < ActionController::TestCase
       "coursed-2017", "coursee-2017", "coursef-2017", "express-2017", "flappy",
       "frozen", "hourofcode", "jigsaw", "playlab", "pre-express-2017", "starwars"
     ]
-    puts scripts - JSON.parse(@response.body)["scriptOptions"].map {|option| option[0]}
     assert (scripts - JSON.parse(@response.body)["scriptOptions"].map {|option| option[0]}).empty?
-    assert_equal JSON.parse(@response.body)["ownerOptions"].map {|option| option[0]}, ["Any owner"]
+    assert (["Any owner"] - JSON.parse(@response.body)["ownerOptions"].map {|option| option[0]}).empty?
   end
 
   test "should get filtered levels with just page param" do
