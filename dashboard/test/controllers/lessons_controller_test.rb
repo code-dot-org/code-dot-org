@@ -101,5 +101,168 @@ class LessonsControllerTest < ActionController::TestCase
     @lesson.reload
     assert_equal 'new overview', @lesson.overview
     assert_equal 'new student overview', @lesson.student_overview
+    assert_equal 0, @lesson.lesson_activities.count
+  end
+
+  test 'add activity via lesson update' do
+    sign_in @levelbuilder
+
+    @update_params['activities'] = [
+      {
+        name: 'activity name',
+        position: 1
+      }
+    ].to_json
+
+    put :update, params: @update_params
+
+    assert_redirected_to "/lessons/#{@lesson.id}"
+    @lesson.reload
+    assert_equal 'new overview', @lesson.overview
+    assert_equal 'new student overview', @lesson.student_overview
+    assert_equal 1, @lesson.lesson_activities.count
+    activity = @lesson.lesson_activities.first
+    assert_equal 'activity name', activity.name
+    assert_equal 1, activity.position
+  end
+
+  test 'remove activity via lesson update' do
+    sign_in @levelbuilder
+
+    id_a = @lesson.lesson_activities.create(
+      name: 'activity A',
+      position: 1,
+      seeding_key: 'key_a'
+    ).id
+    id_b = @lesson.lesson_activities.create(
+      name: 'activity B',
+      position: 2,
+      seeding_key: 'key_b'
+    ).id
+    id_c = @lesson.lesson_activities.create(
+      name: 'activity C',
+      position: 3,
+      seeding_key: 'key_c'
+    ).id
+
+    @update_params['activities'] = [
+      {
+        id: id_a,
+        name: 'activity A',
+        position: 1
+      },
+      {
+        id: id_c,
+        name: 'activity C',
+        position: 2
+      },
+    ].to_json
+
+    put :update, params: @update_params
+    assert_redirected_to "/lessons/#{@lesson.id}"
+
+    @lesson.reload
+    assert_equal 2, @lesson.lesson_activities.count
+    activities = @lesson.lesson_activities
+
+    assert_equal 'activity A', activities.first.name
+    assert_equal 1, activities.first.position
+    assert_equal id_a, activities.first.id
+
+    assert_equal 'activity C', activities.last.name
+    assert_equal 2, activities.last.position
+    assert_equal id_c, activities.last.id
+
+    assert_equal 0, LessonActivity.where(id: id_b).count
+  end
+
+  test 'add activity section via lesson update' do
+    sign_in @levelbuilder
+
+    old_activity = @lesson.lesson_activities.create(
+      name: 'activity name',
+      position: 1,
+      seeding_key: 'activity-key'
+    )
+
+    @update_params['activities'] = [
+      {
+        id: old_activity.id,
+        name: 'activity name',
+        position: 1,
+        activitySections: [
+          {
+            name: 'section name',
+            position: 1
+          }
+        ]
+      }
+    ].to_json
+
+    put :update, params: @update_params
+
+    assert_redirected_to "/lessons/#{@lesson.id}"
+    @lesson.reload
+
+    assert_equal 1, @lesson.lesson_activities.count
+    new_activity = @lesson.lesson_activities.first
+    assert_equal 'activity name', new_activity.name
+    assert_equal 1, new_activity.position
+    assert_equal old_activity.id, new_activity.id
+
+    assert_equal 1, new_activity.activity_sections.count
+    section = new_activity.activity_sections.first
+    assert_equal 'section name', section.name
+    assert_equal 1, section.position
+  end
+
+  test 'remove activity section via lesson update' do
+    sign_in @levelbuilder
+
+    activity = @lesson.lesson_activities.create(
+      name: 'activity name',
+      position: 1,
+      seeding_key: 'activity-key'
+    )
+    id_a = activity.activity_sections.create(
+      name: 'section A',
+      position: 1,
+      seeding_key: 'key_a'
+    ).id
+    id_b = activity.activity_sections.create(
+      name: 'section B',
+      position: 2,
+      seeding_key: 'key_b'
+    ).id
+
+    @update_params['activities'] = [
+      {
+        id: activity.id,
+        name: 'activity name',
+        position: 1,
+        activitySections: [
+          {
+            id: id_b,
+            name: 'section B',
+            position: 1
+          }
+        ]
+      }
+    ].to_json
+
+    put :update, params: @update_params
+    assert_redirected_to "/lessons/#{@lesson.id}"
+
+    @lesson.reload
+    assert_equal 1, @lesson.lesson_activities.count
+    activity = @lesson.lesson_activities.first
+    assert_equal 1, activity.activity_sections.count
+    section = activity.activity_sections.first
+
+    assert_equal 'section B', section.name
+    assert_equal 1, section.position
+    assert_equal id_b, section.id
+
+    assert_equal 0, LessonActivity.where(id: id_a).count
   end
 end

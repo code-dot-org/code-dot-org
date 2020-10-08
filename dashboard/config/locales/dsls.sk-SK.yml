@@ -1499,14 +1499,16 @@ sk-SK:
           ![](https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)
       GoingPlacesSafely-unplugged:
         markdown: |-
-          Bezpečné surfovanie po internete
+          Bezpečné surfovanie na internete
 
-          Internet je mocným, ale zavše nebezpečným miestom. Dávaj si pozor pri surfovaní po internete!
+          Internet je mocným, ale niekedy aj nebezpečným miestom. Dávaj si pozor pri surfovaní na internete!
       HappyLoops-Unplugged:
         markdown: |-
-          Veselé cykly
+          # Veselé cykly
 
           V tejto lekcii sa naučíš niečo o cykloch!
+
+          ![](https://images.code.org/6aac7f675f0c69033f42ccac6a733f68-image-1557769673400.png)
       HappyLoops-Unplugged_2020:
         markdown: |-
           Veselé cykly
@@ -1514,9 +1516,9 @@ sk-SK:
           V tejto lekcii sa naučíš niečo o cykloch!
       HappyMaps-Unplugged:
         markdown: |-
-          Veselé mapy
+          # Veselé mapy
 
-          Vytvor algoritmus, aby si presunul postavu cez bludisko.
+          Vytvor algoritmus, aby si posunul postavu cez bludisko.
       HappyMaps-Unplugged_2020:
         markdown: |-
           Veselé mapy
@@ -1778,21 +1780,29 @@ sk-SK:
           naučia definovanie a vyvolanie funkcií. "
       behaviors 1 predict:
         answers:
-        - feedback: Nesprávne.
-        - correct: true
+        - text: Sprite sa bude točiť
+          feedback: Nesprávne.
+        - text: Sprite sa zmenší.
+          correct: true
           feedback: Správne!
-        - feedback: Nesprávne.
-        - feedback: Nesprávne
+        - text: Sprite sa posunie.
+          feedback: Nesprávne.
+        - text: Sprite zmení farby.
+          feedback: Nesprávne
         questions:
         - text: Ak chceš vedieť ako funguje `tajomné správanie`, stlač tlačidlo "upraviť".
             Naštuduj si kód a odhadni, čo sa bude diať.
       behaviors 1 predict_2020:
         answers:
-        - feedback: Nesprávne.
-        - correct: true
+        - text: Sprite sa bude točiť
+          feedback: Nesprávne.
+        - text: Sprite sa zmenší.
+          correct: true
           feedback: Správne!
-        - feedback: Nesprávne.
-        - feedback: Nesprávne
+        - text: Sprite sa posunie.
+          feedback: Nesprávne.
+        - text: Sprite zmení farby.
+          feedback: Nesprávne
         questions:
         - text: Ak chceš vedieť ako funguje `tajomné správanie`, stlač tlačidlo "upraviť".
             Naštuduj si kód a odhadni, čo sa bude diať.
@@ -1803,7 +1813,8 @@ sk-SK:
         - text: Diagonálne
           correct: true
           feedback: Správne!
-        - {}
+        - text: Cik cak
+          feedback: Nesprávne.
         - text: Dole, a potom vľavo
           feedback: Nesprávne
         questions:
@@ -1815,7 +1826,8 @@ sk-SK:
         - text: Diagonálne
           correct: true
           feedback: Správne!
-        - {}
+        - text: Cik cak
+          feedback: Nesprávne.
         - text: Dole, a potom vľavo
           feedback: Nesprávne
         questions:
@@ -1990,12 +2002,24 @@ sk-SK:
             program zlyhá? '
       courseC_multi_maze_debugging8_predict1_2018_2019_2020:
         answers:
-        - {}
-        - correct: true
-        - correct: true
+        - text: Scrat sa dostane k žaluďu. V tomto kóde nie sú žiadne chyby.
+          feedback: Nesprávne. Ako prvé Scrat zle odbočí, potom sa neposunie dostatočne
+            ďaleko vpred aby sa dostal až k žaluďu.
+        - text: Scrat sa nedostane k žaluďu pretože sa otočí nesprávnym smerom.
+          correct: true
+          feedback: Správne. Ako prvé Scrat zle odbočí, potom sa neposunie dostatočne
+            ďaleko vpred aby sa dostal až k žaluďu.
+        - text: Scrat sa nedostane až k žaluďu, pretože je použitých málo bokov `posuň
+            sa dopredu`.
+          correct: true
+          feedback: Správne. Ako prvé Scrat zle odbočí, potom sa neposunie dostatočne
+            ďaleko vpred aby sa dostal až k žaluďu.
         - text: Neviem.
+          feedback: V tomto kóde sú dve chyby. Ako prvé Scrat zle odbočí, potom sa
+            neposunie dostatočne ďaleko vpred aby sa dostal až k žaluďu.
         questions:
-        - {}
+        - text: Hľadaj chyby v kóde. Dostane sa Scrat až k žaluďu alebo narazí na
+            problém?
       courseC_multi_maze_programming8_predict1:
         answers:
         - text: Vták skončí jeden krok pred prasiatkom.
@@ -2564,8 +2588,14 @@ sk-SK:
           correct: true
           feedback: Správne!
         - text: Včela sa pokúsi zobrať nektár z kvetu aj z plástu.
+          feedback: Nesprávne. Blok `ak na kvete` umožní včele zobrať nektár z každého
+            kvetu a vyrobiť med na každom pláste.
         - text: Včela sa pokúsi vyrobiť med na kvete aj na pláste.
+          feedback: Nesprávne. Nesprávne. Blok `ak na kvete` umožní včele zobrať nektár
+            z každého kvetu a vyrobiť med na každom pláste.
         - text: Neviem.
+          feedback: Blok `ak na kvete` umožní včele zobrať nektár z každého kvetu
+            a vyrobiť med na každom pláste.
         questions:
         - text: '"Pozri si pozorne tento kód.  Čo myslíš, že sa stane, keď stlačíš
             "Spustiť"? Pamätaj: pod každým oblakom bude vždy len *jeden* plást, alebo
@@ -2577,8 +2607,14 @@ sk-SK:
           correct: true
           feedback: Správne!
         - text: Včela sa pokúsi zobrať nektár z kvetu aj z plástu.
+          feedback: Nesprávne. Blok `ak na kvete` umožní včele zobrať nektár z každého
+            kvetu a vyrobiť med na každom pláste.
         - text: Včela sa pokúsi vyrobiť med na kvete aj na pláste.
+          feedback: Nesprávne. Nesprávne. Blok `ak na kvete` umožní včele zobrať nektár
+            z každého kvetu a vyrobiť med na každom pláste.
         - text: Neviem.
+          feedback: Blok `ak na kvete` umožní včele zobrať nektár z každého kvetu
+            a vyrobiť med na každom pláste.
         questions:
         - text: '"Pozri si pozorne tento kód.  Čo myslíš, že sa stane, keď stlačíš
             "Spustiť"? Pamätaj: pod každým oblakom bude vždy len *jeden* plást, alebo
@@ -4002,3 +4038,187 @@ sk-SK:
         questions:
         - text: Pozorne si prezri tento kód. Čo si myslíš, že sa stane po spustení
             programu?
+      DigitalFootprint-Unplugged:
+        markdown: |-
+          # Tvoja digitálna stopa
+
+          Keď o sebe dávaš informácie na internet, zanecháva to digitálnu stopu.
+      GettingLoopy-Unplugged:
+        markdown: |-
+          # Zacykľujeme sa
+
+          Táto lekcia predstavuje koncept cyklov v programovaní pomocou tanečnej aktivity.
+      GettingLoopy-Unplugged_2020:
+        markdown: |-
+          # Zacykľujeme sa
+
+          Táto lekcia predstavuje koncept cyklov v programovaní pomocou tanečnej aktivity.
+      MoveItMoveIt-Unplugged:
+        markdown: |-
+          # Pohyb, pohyb
+
+          Použi mapu a zadaj príkazy na dosiahnutie cieľa.
+      MoveItMoveIt-Unplugged_2020:
+        markdown: |-
+          # Pohyb, pohyb
+
+          Použi mapu a zadaj príkazy na dosiahnutie cieľa.
+      TheRightAppMarkdownLevel_2019:
+        markdown: "# Tá správna Appka\n\n* Všetci dnes používame počítače, obzvlášť
+          smartfóny. \n* Smartfónové aplikácie alebo \"appky\" pomáhajú ľuďom napríklad
+          hovoriť s priateľmi, počúvať hudbu, nakupovať alebo len prechádzať internet.\n*
+          Pre programátorov je dôležité poznať potreby druhých a zohľadniť ich pri
+          návrhu aplikácií!\n\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)"
+      TheRightAppMarkdownLevel_2019_2020:
+        markdown: "# Tá správna Appka\n\n* Všetci dnes používame počítače, obzvlášť
+          smartfóny. \n* Smartfónové aplikácie alebo \"appky\" pomáhajú ľuďom napríklad
+          hovoriť s priateľmi, počúvať hudbu, nakupovať alebo len prechádzať internet.\n*
+          Pre programátorov je dôležité poznať potreby druhých a zohľadniť ich pri
+          návrhu aplikácií!\n\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)"
+      ScreenOutTheMean-Unplugged:
+        markdown: |-
+          # Neakceptuj zákernosti
+
+          Dnes sa dozvieš, čo robiť, ak sa niekto správa zákerne v online svete.
+      BinaryBracelets-Unplugged:
+        markdown: |-
+          # Binárne náramky
+
+          Vytvor si náramok, ktorý predstavuje tvoje meno v systéme, ktorému rozumejú počítače!
+
+          ![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)
+      BinaryBracelets-Unplugged_2020:
+        markdown: |-
+          # Binárne náramky
+
+          Vytvor si náramok, ktorý predstavuje tvoje meno v systéme, ktorému rozumejú počítače!
+
+          ![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)
+      MyLoopyRoboticFriends-Unplugged:
+        markdown: |-
+          # Moji zacyklení robotickí kamaráti
+
+          Skráť si svoje programy pomocou cyklov!
+      MyLoopyRoboticFriends-Unplugged_2020:
+        markdown: |-
+          # Moji zacyklení robotickí kamaráti
+
+          Skráť si svoje programy pomocou cyklov!
+      MyRoboticFriends-Unplugged:
+        markdown: |-
+          # Moji robotickí kamaráti
+
+          Nauč sa programovať písaním kódu pre svojich kamarátov!
+      MyRoboticFriends-Unplugged_2020:
+        markdown: |-
+          # Moji robotickí kamaráti
+
+          Nauč sa programovať písaním kódu pre svojich kamarátov!
+      PicturingData-Unplugged:
+        markdown: |-
+          # Zobrazovanie údajov
+
+          Použi projekt Play Lab na zhromažďovanie údajov a predpovedanie.
+
+          ![](https://images.code.org/606a78c09a01133a1bbc1aa9c76f3320-image-1557334268558.png)
+      PicturingData-Unplugged_2020:
+        markdown: |-
+          # Zobrazovanie údajov
+
+          Použi projekt Play Lab na zhromažďovanie údajov a predpovedanie.
+
+          ![](https://images.code.org/606a78c09a01133a1bbc1aa9c76f3320-image-1557334268558.png)
+      PowerfulPasswords-Unplugged:
+        markdown: |-
+          # Silné heslá
+
+          Preskúmaj, prečo ľudia používajú heslá a spoznaj výhody ich používania. Objav spôsoby vytvárania a uchovávania silných a bezpečených hesiel.
+
+          ![](https://images.code.org/9e082a5564a289bccc8e2dd79a2cae9f-image-1557869939256.png)
+      ConditionalsWithCards-Unplugged:
+        markdown: |-
+          # Podmienky s kartami
+
+          Zahraj si kartovú hru a vytvor pravidlá ako "ak si potiahnem červenú kartu, dostanem bod" a "ak si potiahnem čiernu kartu, ty dostaneš bod".
+      ConditionalsWithCards-Unplugged_2020:
+        markdown: |-
+          # Podmienky s kartami
+
+          Zahraj si kartovú hru a vytvor pravidlá ako "ak si potiahnem červenú kartu, dostanem bod" a "ak si potiahnem čiernu kartu, ty dostaneš bod".
+      GraphPaperProgramming-Unplugged:
+        markdown: |-
+          # Programovanie na štvorčekovom papieri
+
+          Napíš algoritmy, podľa ktorých môžu tvoji spolužiaci nakresliť obrázky.
+      GraphPaperProgramming-Unplugged_2020:
+        markdown: |-
+          # Programovanie na štvorčekovom papieri
+
+          Napíš algoritmy, podľa ktorých môžu tvoji spolužiaci nakresliť obrázky.
+      RelayProgramming-Unplugged:
+        markdown: |
+          # Štafetové programovanie
+
+          Rozdeľte sa do tímov a spolu napíšte program, ktorý nakreslí obrázky.
+      RelayProgramming-Unplugged_2020:
+        markdown: |
+          # Štafetové programovanie
+
+          Rozdeľte sa do tímov a spolu napíšte program, ktorý nakreslí obrázky.
+      BinaryImages-Unplugged:
+        markdown: |-
+          # Binárne obrazy
+
+          Diskutujte, ako znovu vytvoriť obrázok, ale tentokrát iba pomocou dvoch jednoduchých hodnôt.
+      BinaryImages-Unplugged_2020:
+        markdown: |-
+          # Binárne obrazy
+
+          Diskutujte, ako znovu vytvoriť obrázok, ale tentokrát iba pomocou dvoch jednoduchých hodnôt.
+      DigitalCitizenship-Unplugged:
+        markdown: "# Digitálne občianstvo \n\nNiektoré informácie nie je vhodné zdieľať
+          online. Táto lekcia vám pomôže rozlišovať medzi informáciami bezpečnými
+          na zdieľanie a tými súkromnými."
+      EnvelopeVariables-Unplugged:
+        markdown: "# Premenné v obálkach \n\nPremenné v informatike umožňujú voľnosť.
+          V tejto lekcii sa dozviete, čo sú premenné a akými rozličnými spôsobmi ich
+          môžeme používať."
+      EnvelopeVariables-Unplugged_2020:
+        markdown: "# Premenné v obálkach \n\nPremenné v informatike umožňujú voľnosť.
+          V tejto lekcii sa dozviete, čo sú premenné a akými rozličnými spôsobmi ich
+          môžeme používať."
+      ForLoopFun-Unplugged:
+        markdown: |-
+          # Zábava s cyklami "for"
+
+          Vieme, že cykly nám umožňujú robiť veci dookola, ale teraz sa naučíme, ako používať cykly so zabudovanou extra štruktúrou.
+      ForLoopFun-Unplugged_2020:
+        markdown: |-
+          # Zábava s cyklami "for"
+
+          Vieme, že cykly nám umožňujú robiť veci dookola, ale teraz sa naučíme, ako používať cykly so zabudovanou extra štruktúrou.
+      Internet-Unplugged:
+        markdown: |
+          # Internet
+
+          Vytvorte si v učebni vlastný internet len pomocou kúskov papiera.
+      Internet-Unplugged_2020:
+        markdown: |
+          # Internet
+
+          Vytvorte si v učebni vlastný internet len pomocou kúskov papiera.
+      Crowdsourcing-Unplugged:
+        markdown: |
+          # Crowdsourcing
+
+          Zisti, ako ti pomôže crowdsourcing, v informatike bežná technika riešenia problémov, dokončiť úlohu efektívnejšie spoločne v triede, ako keby si to musel zvládnuť sám.
+      DigitalSharing-Unplugged:
+        markdown: |-
+          # Digitálne zdieľanie
+
+          V tejto lekcii sa zamyslíš nad výzvami a výhodami rešpektovania vlastníctva a autorských práv, najmä v digitálnom prostredí.
+      DigitalSharing-Unplugged_2020:
+        markdown: |-
+          # Digitálne zdieľanie
+
+          V tejto lekcii sa zamyslíš nad výzvami a výhodami rešpektovania vlastníctva a autorských práv, najmä v digitálnom prostredí.

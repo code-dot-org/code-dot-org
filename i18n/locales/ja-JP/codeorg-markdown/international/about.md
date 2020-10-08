@@ -5,7 +5,7 @@ title: 私たちについて
 # 私たちについて
 
 <div class="col-60">
-  Code.org®は教育機関におけるコンピュータサイエンスを身近にし、女性やマイノリティが参加する機会を増やすことを目的とした非営利団体です。 私たちのヴィジョンは、全ての学校の全ての生徒がコンピュータサイエンスを学ぶ機会を持つことです。ちょうど生物学や化学、代数学を学ぶのと同じように。 We provide the most broadly used curriculum for teaching computer science in primary and secondary school and also organize the annual <a href="https://hourofcode.com">Hour of Code</a> campaign, which has engaged 10% of all students in the world. Code.orgはアマゾン、フェイスブック、グーグル、インフォシス財団、マイクロソフトを含む、<a href="/about/donors">その他たくさん</a>の寛大な寄付者によって支えられています。
+  Code.org® is a nonprofit dedicated to expanding access to computer science in schools and increasing participation by young women and students from other underrepresented groups. 私たちのヴィジョンは、全ての学校の全ての生徒がコンピュータサイエンスを学ぶ機会を持つことです。ちょうど生物学や化学、代数学を学ぶのと同じように。 We provide the most broadly used curriculum for teaching computer science in primary and secondary school and also organize the annual <a href="https://hourofcode.com">Hour of Code</a> campaign, which has engaged 10% of all students in the world. Code.orgはアマゾン、フェイスブック、グーグル、インフォシス財団、マイクロソフトを含む、<a href="/about/donors">その他たくさん</a>の寛大な寄付者によって支えられています。
 </div>
 
 [col-40]
