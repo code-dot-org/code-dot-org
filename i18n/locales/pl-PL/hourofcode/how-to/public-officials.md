@@ -6,7 +6,7 @@ title: Porady dla urzędników
 
 # Jak zaangażować całą społeczność
 
-### Pokaż swojemu państwu, dystryktowi lub miastu swoje zaangażowanie w informatykę
+### Pokaż swojemu państwu, regionowi lub miastu swoje zaangażowanie w informatykę
 
 * * *
 

@@ -1,5 +1,5 @@
 ---
-title: Hour of Code How-to Guide
+title: 'Час кода: общее руководство'
 layout: wide
 nav: how_to_nav
 ---
@@ -8,34 +8,34 @@ nav: how_to_nav
 
 # How to plan your Hour of Code
 
-### Join the movement and introduce your students to computer science with these steps.
+### Присоединитесь к движению и познакомьте ваших учеников с информатикой, выполнив следующие шаги.
 
-Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
+Вычислительное мышление помогает приобретать навыки решения задач, развивает логическое и творческое мышление. Технологии меняют облик всех отраслей мировой экономики. Сегодня школьники должны учиться не только использовать технологии, но и создавать их. Начав обучение этому с ранних лет, они заложат основы успешной карьеры в 21 веке в любой сфере деятельности.
 
-Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time, and it fits perfectly for both in-class and after-school settings. Take a look at our [participation guide if you still have questions]({{ localized_files/participation_guide }}).
+Прохождение Часа кода – это простой и занимательный способ познакомить школьников, возможно, впервые их в жизни, с информатикой, причем это вполне можно сделать, как в классе, так и после школы. Take a look at our [participation guide if you still have questions]({{ localized_files/participation_guide }}).
 
-- [Watch the Hour of Code how-to video](#how-to-video)
-- [Explore activities and tutorials](#explore-activities)
-- [Create your plan for the day](#create-your-plan)
+- [Просмотрите видеоруководство по проведению Часа кода](#how-to-video)
+- [Ознакомьтесь с занятиями и учебными пособиями](#explore-activities)
+- [Составьте план на день](#create-your-plan)
 - [Promote your Hour of Code](#promote-your-hour)
-- [How to start your Hour of Code strong](#how-to-start)
-- [Get coding](#code)
-- [Celebrate your students' success](#celebrate)
+- [Как задать мощный старт вашему Часу кода](#how-to-start)
+- [Программируйте](#code)
+- [Отметьте успехи ваших учеников](#celebrate)
 - [Другие материалы для учителей Часа Программирования](#other-resources)
 
-### An Hour of Code can also be hosted remotely! To get started, check out our [tips for hosting a virtual Hour of Code event](https://hourofcode.com/us/how-to/virtual).
+### Час кода может быть организован и удаленно! Для начала ознакомьтесь с [нашими советами по проведению виртуального Часа кода](https://hourofcode.com/us/how-to/virtual).
 
 * * *
 
 <a id="how-to-video"></a>
 
-## 1. Watch the Hour of Code how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+## 1. Просмотрите видеоруководство по Часу кода <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
 * * *
 
 <a id="explore-activities"></a>
 
-## 2. Explore activities and tutorials
+## 2. Ознакомьтесь с занятиями и учебными пособиями
 
 We provide a variety of fun, [student-guided tutorials]({{ urls/learn }}) for all age groups and experience levels. It’s popular for students to try self-led tutorials, though many activities include lesson plans for teachers to guide discussion or extend the activity as well.
 
@@ -47,7 +47,7 @@ Explore the activities and decide ahead of time if you want to choose a single t
 
 <a id="create-your-plan"></a>
 
-## 3. Create your plan for the day
+## 3. Составьте план на день
 
 ### Think about your technology needs - computers are optional!
 
@@ -66,7 +66,7 @@ People around the world join in the Hour of Code celebration during CS Education
 
 <a id="promote-your-hour"></a>
 
-## 4. Promote your Hour of Code
+## 4. Популяризируйте ваш Час кода
 
 Now that you've planned your event, it's time to start promoting it!
 
@@ -90,7 +90,7 @@ Learn more about posters, videos, stickers and other ways to [promote your event
 
 <a id="how-to-start"></a>
 
-## 5. How to start your Hour of Code strong
+## 5. Как задать мощный старт вашему Часу кода
 
 Once your Hour of Code celebration has arrived, make sure you start your event strong with some of these tools and tips.
 
@@ -101,21 +101,21 @@ Invite a [local volunteer]({{ urls/volunteer_local }}) to inspire your students 
 - Оригинальное видео запуска Code.org, с участием Билла Гейтса, Марка Цукерберга, и звезды НБА Криса Боша. (Доступны [1 минутная](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 минутная](https://www.youtube.com/watch?v=nKIu9yen5nc), и [9 минутная](https://www.youtube.com/watch?v=dU1xS07N-FA) версии)
 - Find more inspirational [resources]({{ urls/inspire }}) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-It’s okay if both you and your students are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:
+Вполне нормально, если и вы, и ваши ученики ничего не знают об информатике. Здесь описаны идеи о том, с чего начать занятие вашего Часа кода:
 
 - Объясните как технологии влияют на наши жизни, с примерами, которые тронут и мальчиков, и девочек (расскажите о спасении жизней, помощи людям, объединении людей и т. д.).
 - Расскажите, как программирование в используется повседневной жизни.
-- See tips for getting young women interested in computer science [here]({{ urls/girls }}).
+- Ознакомьтесь [здесь]({{ urls/girls }}) с советами о том, как вызвать интерес к информатике у молодых женщин.
 
 * * *
 
 <a id="code"></a>
 
-## 6. Get coding!
+## 6. Программируйте!
 
 Объясните ученикам, как начать
 
-- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
+- Напишите на доске ссылку на учебное пособите. Найдите ссылку в списке [информации о выбранном вами пособии]({{ urls/learn }}) под количеством участников.
 
 Если ваши ученики сталкиваются с трудностями, будет правильно ответить:
 
@@ -132,7 +132,7 @@ It’s okay if both you and your students are brand new to computer science. Her
 
 <a id="celebrate"></a>
 
-## 7. Celebrate your students' success
+## 7. Отметьте успехи ваших учеников
 
 [col-33]
 
@@ -156,6 +156,6 @@ It’s okay if both you and your students are brand new to computer science. Her
 
 ### Час Кода: а что дальше?
 
-Computer science doesn’t have to end with the Hour of Code! Our curriculum is web-based and free to use, forever. [Learn how](/beyond) to bring CS to your school and students.
+Информатика не ограничивается Часом кода! Наша программа размещена в Интернете и всегда будет бесплатной. [Узнайте как](/beyond) принести информатику в вашу школу и познакомить с ней учеников.
 
 {{ signup_button }}
