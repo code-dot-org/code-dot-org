@@ -4,37 +4,37 @@ title: Ortaklar
 
 Kod Saati, Kod Saatleri ve Bilgisayar Bilimleri Eğitim Haftası Danışma ve Değerlendirme Komiteleri tarafından yönetilmektedir.
 
-The [Advisory Committee]({{ urls/advisory_committee }}) is composed of representatives from K-12, academia, nonprofits, for-profits, and international organizations. Bu komite, Kodlama Saati kampanyası için stratejiyi yönlendirir.
+[Danışma Komitesi]({{ urls/advisory_committee }}); K-12, akademi, kâr amacı gütmeyen ve güden kuruluşlar ve uluslararası kuruluşların temsilcilerden oluşmaktadır. Bu komite, Kodlama Saati kampanyası için stratejiyi yönlendirir.
 
-The [Review Committee]({{ urls/review_committee }}) is composed of 15 educators across K-12 grade bands that assess and recommend activities using the Advisory Committee's rubric. Bu eğitimciler, yüzlerce etkinlik ortağı tarafından sunulan öğrenci yönlendirmeli ve öğretmen yönlendirmeli ders planlarını gözden geçirirken etkinliklerin eğitimsel değerini, öğrencilerin ilgisini çekip çekmeyeceğini ve farklı öğrenci gruplarına hitap edip etmeyeceğini değerlendirir.
+[Değerlendirme Komitesi]({{ urls/review_committee }}) Danışma Komitesi'nin değerlendirme tablosunu kullanarak aktiviteleri değerlendiren ve uygun bulduklarını tavsiye eden K-12 sınıflarından 15 eğitimciden oluşur. Bu eğitimciler, yüzlerce etkinlik ortağı tarafından sunulan öğrenci yönlendirmeli ve öğretmen yönlendirmeli ders planlarını gözden geçirirken etkinliklerin eğitimsel değerini, öğrencilerin ilgisini çekip çekmeyeceğini ve farklı öğrenci gruplarına hitap edip etmeyeceğini değerlendirir.
 
 Her iki komitenin çalışmaları ve özveri, Kod Saatinin başarısı ve her öğrenci için bilgisayar bilimlerine bir giriş sunma vizyonuna katkıda bulunmuştur.
 
-# Major Partners and Corporate Supporters
+# Ana Ortaklar ve Kurumsal Destekçiler
 
 {{ partners/major_partners_corporate_supporters }}
 
 * * *
 
-# International Partners
+# Uluslararası Ortaklarımız
 
 {{ partners/international_partners }}
 
 * * *
 
-# Curriculum and Tutorial Partners
+# Müfredat ve Eğitim Ortaklarımız
 
 {{ partners/curriculum_tutorial_partners }}
 
 * * *
 
-# Infrastructure Partners and Tools
+# Altyapı Ortakları ve Araçları
 
 {{ partners/infrastructure_partners_tools }}
 
 * * *
 
-# Additional Partners
+# Diğer Ortaklar
 
 {{ partners/additional_partners }}
 

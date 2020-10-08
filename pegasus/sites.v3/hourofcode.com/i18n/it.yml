@@ -5,29 +5,29 @@ it:
   language: Italiano
   front_title: Partecipa all'evento didattico più popolare del mondo, %{campaign_date}
   coming_soon: Sta arrivando
-  campaign_date_start_short: 9 dic.
-  campaign_date_start_long: 9 dicembre
-  campaign_date_short: 9-15 dic.
-  campaign_date_full: dal 9 al 15 dicembre
-  campaign_date_year: '2017'
-  campaign_date_full_year: dal 9 al 15 dicembre 2019
+  campaign_date_start_short: 7 Dic.
+  campaign_date_start_long: 7 Dicembre
+  campaign_date_short: Dal 7 al 13 Dicembre
+  campaign_date_full: Dal 7 al 13 Dicembre
+  campaign_date_year: '2020'
+  campaign_date_full_year: dal 7 al 13 dicembre 2020
   latam_campaign_date_start_short: '1 ottobre '
   latam_campaign_date_start_long: '1 ottobre '
   latam_campaign_date_short: 1 ottobre - 18 dicembre
   latam_campaign_date_full: 1 ottobre - 18 dicembre
-  latam_campaign_date_year: '2017'
+  latam_campaign_date_year: '2020'
   latam_campaign_date_full_year: 1 ottobre 2020 - 18 dicembre 2020
   europe_campaign_date_start_short: 10 ottobre
   europe_campaign_date_start_long: 10 ottobre
   europe_campaign_date_short: 10-25 ottobre
   europe_campaign_date_full: 10-25 ottobre
-  europe_campaign_date_year: '2017'
+  europe_campaign_date_year: '2020'
   europe_campaign_date_full_year: 10-25 ottobre, 2020
   africa_campaign_date_start_short: '1 ottobre '
   africa_campaign_date_start_long: '1 ottobre '
   africa_campaign_date_short: 1-31 ottobre
   africa_campaign_date_full: 1-31 ottobre
-  africa_campaign_date_year: '2017'
+  africa_campaign_date_year: '2020'
   africa_campaign_date_full_year: 1-31 ottobre, 2020
   hoc2019_header: Impara l'informatica e cambia il mondo.
   hoc2019_header_line1_mobile: Impara l'informatica.
@@ -78,7 +78,7 @@ it:
     MobileNet </a>. Un modello MobileNet è una <a href="https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks">rete
     neurale convoluzionale</a> che è stato impostato su <a href="http://www.image-net.org/">ImageNet</a>,
     un set di dati di oltre 14 milioni di immagini annotate a mano con parole come
-    "palloncino" o "fragola".Per personalizzare questo modello con i dati della formazione
+    "palloncino" o "fragola".Per personalizzare questo modello con i dati d'addestramento
     etichettati che lo studente genera in questa attività, utilizziamo una tecnica
     chiamata <a href="https://en.wikipedia.org/wiki/Transfer_learning">Trasferimento
     dell'apprendimento</a>. Ogni immagine nel set di dati della formazione viene inviata
@@ -93,13 +93,13 @@ it:
     Un modello MobileNet è un file [convolutional neural network](https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks)
     su cui è stato impostato su [ImageNet](http://www.image-net.org/), un set di dati
     di oltre 14 milioni di immagini annotate a mano con parole come "palloncino" o
-    "fragola". Per personalizzare questo modello con i dati della formazione etichettati
+    "fragola". Per personalizzare questo modello con i dati d'addestramento etichettati
     che lo studente genera in questa attività, utilizziamo una tecnica chiamata [Transfer
     Learning](https://en.wikipedia.org/wiki/Transfer_learning). Ogni immagine nel
     set di dati della formazione viene inviata a MobileNet, come pixel, per ottenere
     un elenco di annotazioni che è più probabile che vengano applicati. Quindi, per
     una nuova immagine, la inviamo a MobileNet e confrontiamo il suo elenco di annotazioni
-    risultante con quelli del set di dati della formazione. Classifichiamo la nuova
+    risultante con quelli del set di dati d'addestramento. Classifichiamo la nuova
     immagine con la stessa etichetta (come "pesce" o "non pesce") come le immagini
     del set della formazione con i risultati più simili.
   oceans_behind_the_scenes_2: I livelli 6-8 usano una <a href="https://en.wikipedia.org/wiki/Support-vector_machine">Macchina
@@ -118,14 +118,12 @@ it:
     lo "spazio" di tutti i pesci possibili in due parti, che corrispondono alle classi
     che stiamo cercando di imparare (come "blu" o "non blu").
   social_hoc2019_oceans_title: 'IA per i Mari #CSforGood'
-  social_hoc2019_oceans_desc: 'Scopri l''intelligenza artificiale, l''apprendimento
-    automatico, i dati della formazione e i pregiudizi, mentre esplori le questioni
-    etiche e in che modo l''Intelligenza Artificiale può essere utilizzata per affrontare
-    i problemi del mondo. L''informatica è molto più che codifica! Goditi il primo
-    passo di Code.org in un nuovo viaggio per insegnare di più sull''intelligenza
-    artificiale durante il nostro piano di studi.
-
-'
+  social_hoc2019_oceans_desc: Scopri l'intelligenza artificiale, l'apprendimento automatico,
+    i dati della formazione e i pregiudizi, mentre esplori le questioni etiche e in
+    che modo l'Intelligenza Artificiale può essere utilizzata per affrontare i problemi
+    del mondo. L'informatica è molto più che codifica! Goditi il primo passo di Code.org
+    in un nuovo viaggio per insegnare di più sull'intelligenza artificiale durante
+    il nostro piano di studi.
   hoc_overview_oceans_tutorial_header: IA per i Mari
   hoc_overview_oceans_tutorial_desc: Scopri l'Intelligenza Artificiale (AI), l'apprendimento
     automatico, i dati di addestramento e i pregiudizi, mentre esplori le questioni

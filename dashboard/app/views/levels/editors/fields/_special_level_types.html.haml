@@ -15,10 +15,6 @@
       it).
   - if @level.respond_to? :free_play
     .field
-      = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :free_play, description: "Free Play"}
-      %p Free Play levels are not checked for correctness (any solution is accepted), can be shared, and can be saved to the public and private gallery
-
-    .field
       = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :embed, description: "Embed"}
       %p Embedded levels hide the Blockly workspace, only showing the visualization area (and the 'finish' button, if 'freeplay' is also set).
 

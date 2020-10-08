@@ -467,6 +467,7 @@ he:
     no_primary_course: "נסה קורס קוד סטודיו"
     choose_next_course: "נסה קורס מסטודיו קוד ע\"י בחירת אחד מטה"
     print_certificate: "הדפס תעודה"
+  certificate_sponsor_message: "%{sponsor_name} נתנו את המתנה הנדיבה כדי לתת חסות ללמידה שלך."
   move_students:
     new_section_dne: "מצטערים, אבל הקבוצה %{new_section_code} איננה קיימת. אנה בחר קוד קבוצה אחרת."
     section_code_cant_be_current_section: "הקבוצה הנוכחית אינה יכולה להיות זהה כמו הקבוצה החדשה."
