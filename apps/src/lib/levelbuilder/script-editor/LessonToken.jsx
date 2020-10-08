@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import {Motion, spring} from 'react-motion';
 import color from '@cdo/apps/util/color';
 import {borderRadius, tokenMargin} from '@cdo/apps/lib/levelbuilder/constants';
+import {lessonShape} from '@cdo/apps/lib/levelbuilder/shapes';
 
 const styles = {
   lessonToken: {
@@ -79,7 +80,7 @@ const styles = {
 export default class LessonToken extends Component {
   static propTypes = {
     lessonGroupPosition: PropTypes.number.isRequired,
-    lesson: PropTypes.object,
+    lesson: lessonShape,
     dragging: PropTypes.bool,
     draggedLessonPos: PropTypes.bool,
     delta: PropTypes.number,
