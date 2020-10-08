@@ -608,6 +608,8 @@ sk:
               name: Tvorba funkcií
             Digital Assistant Project:
               name: Projekt Digitálny asistent
+            Introduction to Arrays:
+              name: Úvod do zoskupení
             Introduction to Digital Assistants:
               name: Úvod do digitálnych asistentov
             Multi-screen Apps:
@@ -993,6 +995,8 @@ sk:
               name: Lekcia 3 - Prehľad
         cspunit3temp:
           lessons:
+            Introduction to Arrays:
+              name: Úvod do zoskupení
             While Loops:
               name: Cykly "pokiaľ"
         CSP-Unit3-Support:
@@ -1175,6 +1179,8 @@ sk:
           lessons:
             Digital Assistant Project:
               name: Projekt Digitálny asistent
+            Introduction to Arrays:
+              name: Úvod do zoskupení
             Introduction to Digital Assistants:
               name: Úvod do digitálnych asistentov
             Multi-screen Apps:
@@ -1634,6 +1640,11 @@ sk:
               display_name: 'Kapitola 1: Proces riešenia problémov'
             csd1_2:
               display_name: 'Kapitola 2: Počítače a riešenie problémov'
+          lessons:
+            The Problem Solving Process:
+              name: Proces riešenia problémov
+            What is a Computer?:
+              name: Čo je počítač?
         csp-online-test:
           lesson_groups:
             required:
@@ -1741,6 +1752,8 @@ sk:
               name: 'Programovanie: Veselé mapy'
             Programming in Maze:
               name: Programovanie v bludisku
+            Loops in Artist:
+              name: Cykly s Umelcom
             'Events: The Big Event':
               name: 'Udalosti: Veľká udalosť'
             Going Places Safely:
@@ -1759,6 +1772,8 @@ sk:
               name: Programovanie v bludisku
             'Loops: My Loopy Robotic Friends':
               name: 'Cykly: Moji zacyklení robotickí kamaráti'
+            Loops in Artist:
+              name: Cykly s Umelcom
             'Events: The Big Event':
               name: 'Udalosti: Veľká udalosť'
             Keep it Private:
@@ -2074,6 +2089,8 @@ sk:
               name: Úvod
             Sprites:
               name: Objekt "sprite"
+            Input:
+              name: Vstup
             'Project: Interactive Card':
               name: 'Projekt: Interaktívna pohľadnica'
         csd5-draft:
@@ -2197,6 +2214,12 @@ sk:
               name: Využitie procesu na tvorbu hry
             'Project: Design a Game':
               name: 'Projekt: vytvor vlastnú hru'
+        csd1-old:
+          lessons:
+            The Problem Solving Process:
+              name: Proces riešenia problémov
+            What is a Computer?:
+              name: Čo je počítač?
         csd2-draft:
           lessons:
             Digital Footprint:
@@ -2207,6 +2230,12 @@ sk:
               name: Projekt - Viacstránkové webstránky
             Lists:
               name: Zoznamy
+        csd1-draft:
+          lessons:
+            The Problem Solving Process:
+              name: Proces riešenia problémov
+            What is a Computer?:
+              name: Čo je počítač?
         csd3-chapters:
           lessons:
             Programming for Entertainment:
@@ -2330,6 +2359,7 @@ sk:
             Loops in Collector:
               description_teacher: Staviame na koncepte opakujúcich sa inštrukcií  z časti "Veselé cykly", táto lekcia študentom umožní používať cykly na zbieranie pokladov na Code.org efektívnejšie.
             Loops in Artist:
+              name: Cykly s Umelcom
               description_teacher: V tejto lekcii si ešte raz zopakujeme cykly. Žiaci začnú kreslením obrázkov pomocou opakovania krátkych sekvencií príkazov. V predchádzajúcej lekcii sme cykly použili na prechádzanie bludiskom a zbieranie drahokamov. Tu ich použijeme na kreslenie vzorov. Na konci lekcie dostanú žiaci príležitosť pomozou cyklov nakresliť vlastné obrazy.
             'Events: The Big Event':
               name: 'Udalosti: Veľká udalosť'
@@ -2359,6 +2389,8 @@ sk:
               name: Programovanie v bludisku
             'Loops: My Loopy Robotic Friends':
               name: 'Cykly: Moji zacyklení robotickí kamaráti'
+            Loops in Artist:
+              name: Cykly s Umelcom
             'Events: The Big Event':
               name: 'Udalosti: Veľká udalosť'
             More Programming in Maze:
@@ -2398,6 +2430,8 @@ sk:
               name: 'Digitálne občianstvo: Vytrieď to zlé'
             Binary Bracelets:
               name: 'Viac ako programovanie: Binárne náramky'
+            Loops in Artist:
+              name: Cykly s Umelcom
             Loops with Rey and BB-8:
               name: Cykly s Rey a BB-8
         coursed-2017:
@@ -2566,6 +2600,8 @@ sk:
               name: Programovanie s Umelcom
             'Loops: My Loopy Robotic Friends':
               name: 'Cykly: Moji zacyklení robotickí kamaráti'
+            Loops in Artist:
+              name: Cykly s Umelcom
             Nested Loops with Frozen:
               name: Vnorené cykly s Frozen
             Nested Loops:
@@ -2655,6 +2691,8 @@ sk:
               name: Programovanie s Umelcom
             'Loops: My Loopy Robotic Friends':
               name: 'Cykly: Moji zacyklení robotickí kamaráti'
+            Loops in Artist:
+              name: Cykly s Umelcom
             Nested Loops with Frozen:
               name: Vnorené cykly s Frozen
         csdnovice:
@@ -2765,6 +2803,8 @@ sk:
               name: 'Hľadanie a odstraňovanie chýb: Štafetové programovanie'
             'Loops: My Loopy Robotic Friends':
               name: 'Cykly: Moji zacyklení robotickí kamaráti'
+            Loops in Artist:
+              name: Cykly s Umelcom
             Nested Loops Project in Artist:
               name: Projekt s vnorenými cyklami s Umelcom
             Internet:
@@ -2864,6 +2904,8 @@ sk:
               name: Programovanie v bludisku
             'Loops: My Loopy Robotic Friends':
               name: 'Cykly: Moji zacyklení robotickí kamaráti'
+            Loops in Artist:
+              name: Cykly s Umelcom
             'Events: The Big Event':
               name: 'Udalosti: Veľká udalosť'
             Spelling Bee:
@@ -2922,6 +2964,8 @@ sk:
               name: Programovanie s Umelcom
             'Loops: My Loopy Robotic Friends':
               name: 'Cykly: Moji zacyklení robotickí kamaráti'
+            Loops in Artist:
+              name: Cykly s Umelcom
             Nested Loops:
               name: Vnorené cykly
             Nested Loops with Frozen:
@@ -2997,6 +3041,8 @@ sk:
               name: Binárny Umelec
             Building a Foundation:
               name: Budovanie základov
+            Loops in Artist:
+              name: Cykly s Umelcom
             Nested Loops in Bee:
               name: Vnorené cykly s včelou
             Loops in Ice Age:
@@ -3022,6 +3068,8 @@ sk:
               name: Odstraňovanie chýb s Laurel
             'Loops: My Loopy Robotic Friends':
               name: 'Cykly: Moji zacyklení robotickí kamaráti'
+            Loops in Artist:
+              name: Cykly s Umelcom
             Nested Loops Project in Frozen:
               name: Projekt s vnorenými cyklami vo Frozen
             'How it Works: The Internet':
@@ -3074,6 +3122,10 @@ sk:
               name: Vnorené cykly
             Loops in Artist (UPDATED!):
               name: Cykly s Umelcom (AKTUALIZOVANÉ!)
+        new-stages-sept-2017:
+          lessons:
+            Loops in Artist:
+              name: Cykly s Umelcom
         new-e:
           lesson_groups:
             csf_e_1:
@@ -3095,6 +3147,8 @@ sk:
               name: Programovanie s Umelcom
             'Loops: My Loopy Robotic Friends':
               name: 'Cykly: Moji zacyklení robotickí kamaráti'
+            Loops in Artist:
+              name: Cykly s Umelcom
             Nested Loops with Frozen:
               name: Vnorené cykly s Frozen
             Course E Introduction:
@@ -3148,6 +3202,8 @@ sk:
               name: Programovanie s Umelcom
             'Loops: My Loopy Robotic Friends':
               name: 'Cykly: Moji zacyklení robotickí kamaráti'
+            Loops in Artist:
+              name: Cykly s Umelcom
             Nested Loops with Frozen:
               name: Vnorené cykly s Frozen
             'Algorithms: Tangrams':
@@ -3216,6 +3272,8 @@ sk:
           lessons:
             Personal Innovations:
               name: Osobné inovácie (vylepšenia)
+            What is a Computer?:
+              name: Čo je počítač?
             Simple Encryption:
               name: Jednoduché šifrovanie
             App Development - Intro to App Lab:
@@ -3283,6 +3341,8 @@ sk:
               name: Programovanie s Umelcom
             'Loops: My Loopy Robotic Friends':
               name: 'Cykly: Moji zacyklení robotickí kamaráti'
+            Loops in Artist:
+              name: Cykly s Umelcom
             Nested Loops:
               name: Vnorené cykly
             Nested Loops with Frozen:
@@ -3341,6 +3401,8 @@ sk:
               name: Programovanie s Umelcom
             'Loops: My Loopy Robotic Friends':
               name: 'Cykly: Moji zacyklení robotickí kamaráti'
+            Loops in Artist:
+              name: Cykly s Umelcom
             Nested Loops with Frozen:
               name: Vnorené cykly s Frozen
             'Algorithms: Tangrams':
@@ -4146,6 +4208,11 @@ sk:
               display_name: 'Kapitola 1: Proces riešenia problémov'
             csd1_2:
               display_name: 'Kapitola 2: Počítače a riešenie problémov'
+          lessons:
+            The Problem Solving Process:
+              name: Proces riešenia problémov
+            What is a Computer?:
+              name: Čo je počítač?
         csd4-2018:
           lesson_groups:
             csd4_1:
@@ -4234,6 +4301,8 @@ sk:
               name: Viacobrazovkové aplikácie
             While Loops:
               name: Cykly "pokiaľ"
+            Introduction to Arrays:
+              name: Úvod do zoskupení
         csppostap-2018:
           lesson_groups:
             csp_postap_1:
@@ -4522,6 +4591,8 @@ sk:
               name: Programovanie s Umelcom
             'Loops: My Loopy Robotic Friends':
               name: 'Cykly: Moji zacyklení robotickí kamaráti'
+            Loops in Artist:
+              name: Cykly s Umelcom
             Nested Loops with Frozen:
               name: Vnorené cykly s Frozen
             Conditionals with Cards:
@@ -4712,6 +4783,8 @@ sk:
               name: Programovanie s Umelcom
             'Loops: My Loopy Robotic Friends':
               name: 'Cykly: Moji zacyklení robotickí kamaráti'
+            Loops in Artist:
+              name: Cykly s Umelcom
             Nested Loops:
               name: Vnorené cykly
             Nested Loops with Frozen:
@@ -4948,6 +5021,11 @@ sk:
               display_name: 'Kapitola 1: Proces riešenia problémov'
             csd1_2:
               display_name: 'Kapitola 2: Počítače a riešenie problémov'
+          lessons:
+            The Problem Solving Process:
+              name: Proces riešenia problémov
+            What is a Computer?:
+              name: Čo je počítač?
         andrea-test:
           title: andrea-test
           description_short: toto je na otestovanie mojich schopností vytvoriť kurz
@@ -5022,6 +5100,8 @@ sk:
               name: 'Cykly sa zacykľujú'
             Loops with Rey and BB-8:
               name: Cykly s Rey a BB-8
+            Loops in Artist:
+              name: Cykly s Umelcom
             Loops in Harvester:
               name: Zber úrody s cyklami
             'Events: The Big Event':
@@ -5099,6 +5179,7 @@ sk:
             Loops in Collector:
               name: Cykly s Laurel
             Loops in Artist:
+              name: Cykly s Umelcom
               description_teacher: V tejto lekcii si ešte raz zopakujeme cykly. Žiaci začnú kreslením obrázkov pomocou opakovania krátkych sekvencií príkazov. V predchádzajúcej lekcii sme cykly použili na prechádzanie bludiskom a zbieranie drahokamov. Tu ich použijeme na kreslenie vzorov. Na konci lekcie dostanú žiaci príležitosť pomozou cyklov nakresliť vlastné obrazy.
             'Events: The Big Event':
               name: Veľká udalosť Jr.
@@ -5487,6 +5568,8 @@ sk:
               name: Viacobrazovkové aplikácie
             While Loops:
               name: Cykly "pokiaľ"
+            Introduction to Arrays:
+              name: Úvod do zoskupení
         csp-explore-2019:
           lesson_groups:
             csp_ap_2:
@@ -5558,6 +5641,8 @@ sk:
               name: Programovanie s Umelcom
             'Loops: My Loopy Robotic Friends':
               name: 'Cykly: Moji zacyklení robotickí kamaráti'
+            Loops in Artist:
+              name: Cykly s Umelcom
             Nested Loops with Frozen:
               name: Vnorené cykly s Frozen
             Alien Dance Party with Sprite Lab:
@@ -5709,6 +5794,10 @@ sk:
           lessons:
             Wrap Up:
               name: Zhrnutie
+        csd-test-saving-state:
+          lessons:
+            What is a Computer?:
+              name: Čo je počítač?
         fit2019-apprentice:
           lesson_groups:
             required:
@@ -5726,6 +5815,11 @@ sk:
               display_name: 'Kapitola 1: Proces riešenia problémov'
             csd1_2:
               display_name: 'Kapitola 2: Počítače a riešenie problémov'
+          lessons:
+            The Problem Solving Process:
+              name: Proces riešenia problémov
+            What is a Computer?:
+              name: Čo je počítač?
         csd2-pilot:
           lesson_groups:
             csd2_1:
@@ -5936,6 +6030,9 @@ sk:
           lesson_groups:
             csd1_2:
               display_name: 'Kapitola 2: Počítače a riešenie problémov'
+          lessons:
+            What is a Computer?:
+              name: Čo je počítač?
         csp2-pilot:
           lesson_groups:
             content:
@@ -5950,6 +6047,8 @@ sk:
               name: Odstraňovanie chýb s Laurel
             'Loops: My Loopy Robotic Friends':
               name: 'Cykly: Moji zacyklení robotickí kamaráti'
+            Loops in Artist:
+              name: Cykly s Umelcom
             Nested Loops:
               name: Vnorené cykly
             Nested Loops Project in Frozen:
@@ -6227,6 +6326,12 @@ sk:
               display_name: 'Kapitola 1: Proces riešenia problémov'
             csd1_2:
               display_name: 'Kapitola 2: Počítače a riešenie problémov'
+          lessons:
+            The Problem Solving Process:
+              name: Proces riešenia problémov
+            What is a Computer?:
+              name: Čo je počítač?
+            0:
         csd4-2020:
           lesson_groups:
             csd4_1:
@@ -6775,6 +6880,8 @@ sk:
               name: Programovanie s Umelcom
             Loops with Rey and BB-8:
               name: Cykly s Rey a BB-8
+            Loops in Artist:
+              name: Cykly s Umelcom
             Nested Loops in Bee:
               name: Vnorené cykly s včelou
             Nested Loops in Frozen:
@@ -6877,6 +6984,8 @@ sk:
             Ocean Scene with Loops:
               name: Na mori s cyklami
               description_teacher: V tejto lekcii si ešte raz zopakujeme cykly. Žiaci začnú kreslením obrázkov pomocou opakovania krátkych sekvencií príkazov. V predchádzajúcej lekcii sme cykly použili na prechádzanie bludiskom a zbieranie drahokamov. Tu ich použijeme na kreslenie vzorov. Na konci lekcie dostanú žiaci príležitosť pomozou cyklov nakresliť vlastné obrazy.
+            Loops in Artist:
+              name: Cykly s Umelcom
             Tell a Story in Play Lab:
               description_teacher: V tejto online aktivite sa študenti naučia, ako v PlayLabe využívať Udalosti. Následne dostanú príležitosť aplikovať všetky doteraz naučené zručnosti a vytvoriť animovanú hru. Je čas na kreativitu! Vytvorme v Play Labe celý príbeh!
             Loops with Scrat:
@@ -6936,6 +7045,8 @@ sk:
               name: Viacobrazovkové aplikácie
             While Loops:
               name: Cykly "pokiaľ"
+            Introduction to Arrays:
+              name: Úvod do zoskupení
             Intro to App Lab:
               name: Úvod do App Labu
             Variables:
@@ -6978,6 +7089,8 @@ sk:
           lessons:
             While Loops:
               name: Cykly "pokiaľ"
+            Introduction to Arrays:
+              name: Úvod do zoskupení
         k5-onlinepd-2020:
           lessons:
             Sequencing:

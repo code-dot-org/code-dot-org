@@ -378,15 +378,18 @@ da-DK:
   mc_platformtext: Moderne browsere, smartphones, tabletter
   mc_specs: Mange sprog | Moderne browsere og tablets | Alder 6+
   minecraft_designer: Minecraft Designer
+  minecraft_specs: 'Mange sprog | Moderne browsere og tablets | Karakterer: 2+'
   minecraft_agent_description: Minecraft er tilbage med en splinterny aktivitet i
     En Times Kodning! En rejse gennem Minecraft ved hjælp af kode.
   minecraft_agent_button: Start
   minecraft_designer_button: Start
   minecraft_adventurer_button: Start
   minecraft_no_internet: Har du ikke internet?
+  minecraft_download_adventurer: Download Minecraft Adventurers offline version.
   minecraft_subtitle: Minecraft Hour of Code
   sports_watch_video: Se videoen
-  watch_inspirational_videos: Før du går i gang, se så én af disse inspirerende videoer
+  watch_inspirational_videos: Inden du går i gang, kan du se én af disse inspirerende
+    videoer
   video_title_inspire_girl: Inspirer en pige
   video_title_anybody_can_learn: Alle Kan Lære
   video_1min: 1 min
@@ -1562,6 +1565,7 @@ da-DK:
   header_legal_tos: Termer
   user_header_label: Hej %{username}
   user_header_team: Hold
+  user_header_my_projects: Mine projekter
   user_header_settings: Min konto
   user_header_logout: Log ud
   user_header_signin: Log ind
@@ -1572,6 +1576,7 @@ da-DK:
   user_header_spritelab: SpriteLab
   user_header_minecraft: Minecraft
   user_header_flappy: Flappy
+  user_header_view_my_projects: Vis mine projekter
   applab_tile_start_tutorial: Start
   applab_tile_teacher_guide: Vis lærervejledning
   aquatic_name: 'Minecraft: Akvatisk rejse'
@@ -1593,6 +1598,7 @@ da-DK:
   hoc_overview_view_teacher_guide: Vis lærervejledning
   hoc2018_creativity_create: Opret
   hoc2018_creativity_what_will_you_create: Hvad vil du skabe?
+  hoc2018_mc_details: 'Mange sprog | Moderne browsere og tablets | Karakterer: 2+'
   hoc2018_mc_aquatic_description: Minecraft er tilbage med en splinterny aktivitet
     i En Times Kodning! En rejse gennem Minecraft ved hjælp af kode.
   hoc2018_mc_hero_description: Minecraft er tilbage med en splinterny aktivitet i
@@ -1600,8 +1606,11 @@ da-DK:
   hoc2018_mc_designer_title: Minecraft Designer
   hoc2018_mc_start: Start
   hoc2018_mc_no_internet: Har du ikke internet?
+  hoc2018_mc_download_adventurer: Download Minecraft Adventurers offline version.
+  hoc2018_mc_educators: Til lærer
   hoc2018_mc_educators_box2_button: Hent
-  hoc2018_mc_watch_videos: Før du går i gang, se så én af disse inspirerende videoer
+  hoc2018_mc_watch_videos: Inden du går i gang, kan du se én af disse inspirerende
+    videoer
   hoc2018_mc_video_1min: 1 min
   hoc2018_mc_video_2min: 2 min
   hoc2018_mc_video_3min: 3 min

@@ -20,6 +20,7 @@
     .form-section.row.no-margin
       .form-group.col-xs-4
         %input#location.form-control{name: "location", placeholder: "ZIP code, city and state/country", type: "text", value: search_location}
+        #mapbox-geocoder
       .form-group.col-xs-2.submit-btn
         %button#btn-submit{type: "submit", style: "margin-top: 0px"} Search
 
@@ -61,3 +62,44 @@
     #gmap
 .row
   #volunteer-search-error.col-xs-12.display-none.top-margin
+
+
+%link{rel: "stylesheet", href: "https://api.tiles.mapbox.com/mapbox-gl-js/v1.1.1/mapbox-gl.css"}
+%script{type: "text/javascript", src: "https://api.tiles.mapbox.com/mapbox-gl-js/v1.1.1/mapbox-gl.js"}
+
+%script{src: "https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.min.js"}
+%link{rel: "stylesheet", href: "https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.css", type: "text/css"}
+
+:css
+  .mapboxgl-ctrl {
+    width: 100%;
+    z-index: 2;
+  }
+
+  .mapboxgl-ctrl ul li {
+    padding-left: 0;
+    text-indent: 0;
+  }
+
+  .mapboxgl-ctrl ul li:before {
+    content: none;
+    color: #00a1e6;
+  }
+
+  .marker {
+    border: none;
+    cursor: pointer;
+    height: 56px;
+    width: 56px;
+    background-image: url(https://maps.google.com/mapfiles/kml/paddle/red-stars.png);
+    background-color: rgba(0, 0, 0, 0);
+  }
+
+:javascript
+  mapboxgl.accessToken = "#{CDO.mapbox_access_token}";
+
+#mapbox-container.row{style: "display: none"}
+  .col-xs-5
+    #mapbox-listings
+  .col-xs-7
+    #mapbox{style: "width: 553px; height: 400px"}

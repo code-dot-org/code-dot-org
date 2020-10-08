@@ -378,12 +378,12 @@ pl:
       professional_learning: Kształcenia Profesjonalne
       documentation: Dokumentacja
       tutorials: Samouczki
-      app_lab_documentation: Dokumentacja "App Lab"
-      app_lab_tutorials: Samouczki "App Lab"
-      game_lab_documentation: Dokumentacja "Game Lab"
-      game_lab_tutorials: Samouczki "Game Lab"
-      sprite_lab_documentation: Dokumentacja "Sprite Lab"
-      sprite_lab_tutorials: Samouczki "Sprite Lab"
+      app_lab_documentation: Dokumentacja App Lab
+      app_lab_tutorials: Samouczki App Lab
+      game_lab_documentation: Dokumentacja Game Lab
+      game_lab_tutorials: Samouczki Game Lab
+      sprite_lab_documentation: Dokumentacja Sprite Lab
+      sprite_lab_tutorials: Samouczki Sprite Lab
       educate_overview: Przegląd edukatora
       educate_elementary: Szkoła podstawowa
       educate_middle: Gimnazjum
