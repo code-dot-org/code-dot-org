@@ -594,8 +594,7 @@ level 'Level 3'
     input_dsl = <<~DSL
       lesson_group 'required', display_name: 'Overview'
       lesson_group_description 'This is a description'
-      lesson_group_question 'Question 1'
-      lesson_group_question 'Question 2'
+      lesson_group_big_questions 'Question 1 Question 2'
       lesson 'Lesson1', display_name: 'Lesson1'
 
       level 'Level 1'
@@ -607,7 +606,7 @@ level 'Level 3'
           key: "required",
           display_name: "Overview",
           description: 'This is a description',
-          big_questions: ['Question 1', 'Question 2'],
+          big_questions: 'Question 1 Question 2',
           lessons: [
             {
               name: "Lesson1",
@@ -902,9 +901,7 @@ level 'Level 3'
     input_dsl = <<~DSL
       lesson_group 'my_group', display_name: 'Display Name'
       lesson_group_description 'This is a description'
-      lesson_group_question 'Who?'
-      lesson_group_question 'What?'
-      lesson_group_question 'Where?'
+      lesson_group_big_questions 'Who? 'What? Where?'
       lesson 'Bob\\'s stage', display_name: 'Bob\\'s stage'
       level 'Level 1', progression: 'Bob\\'s progression'
       level 'Level 2'
@@ -918,7 +915,7 @@ level 'Level 3'
           key: "my_group",
           display_name: "Display Name",
           description: 'This is a description',
-          big_questions: ['Who?', 'What?', 'Where?'],
+          big_questions: 'Who? What? Where?',
           lessons: [
             {
               key: "Bob's stage",
@@ -942,7 +939,7 @@ level 'Level 3'
           "my_group" => {
             "display_name" => "Display Name",
             "description" => "This is a description",
-            "big_questions" => ['Who?', 'What?', 'Where?']
+            "big_questions" => 'Who? What? Where?'
           }
         }
       }
@@ -953,7 +950,7 @@ level 'Level 3'
 
   test 'serialize lesson group and properties' do
     script = create :script, hidden: true
-    lesson_group = create :lesson_group, key: 'content1', script: script, position: 1, properties: {display_name: "Content", description: 'This is a description', big_questions: ['Q1', 'Q2']}
+    lesson_group = create :lesson_group, key: 'content1', script: script, position: 1, properties: {display_name: "Content", description: 'This is a description', big_questions: 'Q1 Q2'}
     lesson1 = create :lesson, key: 'l-1', name: 'lesson 1', script: script, lesson_group: lesson_group, absolute_position: 1
     level1 = create :maze, name: 'maze 1', level_num: 'custom'
     create :script_level, levels: [level1], lesson: lesson1, script: script
@@ -962,8 +959,7 @@ level 'Level 3'
     expected = <<~SCRIPT
       lesson_group 'content1', display_name: 'Content'
       lesson_group_description 'This is a description'
-      lesson_group_question 'Q1'
-      lesson_group_question 'Q2'
+      lesson_group_big_questions 'Q1 Q2'
       lesson 'l-1', display_name: 'lesson 1'
       level 'maze 1'
 

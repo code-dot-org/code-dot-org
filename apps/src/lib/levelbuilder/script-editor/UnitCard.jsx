@@ -6,7 +6,8 @@ import {borderRadius} from '@cdo/apps/lib/levelbuilder/constants';
 import LessonGroupCard from '@cdo/apps/lib/levelbuilder/script-editor/LessonGroupCard';
 import {
   addGroup,
-  convertGroupToUserFacing
+  convertGroupToUserFacing,
+  convertGroupToNonUserFacing
 } from '@cdo/apps/lib/levelbuilder/script-editor/scriptEditorRedux';
 import ReactDOM from 'react-dom';
 import {lessonGroupShape} from '@cdo/apps/lib/levelbuilder/shapes';
@@ -54,7 +55,8 @@ class UnitCard extends Component {
     lessonGroups: PropTypes.arrayOf(lessonGroupShape).isRequired,
     addGroup: PropTypes.func.isRequired,
     levelKeyList: PropTypes.object.isRequired,
-    convertGroupToUserFacing: PropTypes.func.isRequired
+    convertGroupToUserFacing: PropTypes.func.isRequired,
+    convertGroupToNonUserFacing: PropTypes.func.isRequired
   };
 
   constructor(props) {
@@ -79,20 +81,22 @@ class UnitCard extends Component {
   serializeLessonGroups = lessonGroups => {
     let s = [];
     lessonGroups.forEach(lessonGroup => {
-      if (lessonGroup.user_facing && lessonGroup.lessons.length > 0) {
+      if (lessonGroup.userFacing && lessonGroup.lessons.length > 0) {
         let t = `lesson_group '${lessonGroup.key}'`;
-        t += `, display_name: '${escape(lessonGroup.display_name)}'`;
-        if (lessonGroup.description) {
-          t += `, lesson_group_description: '${escape(
-            lessonGroup.description
-          )}'`;
-        }
-        if (lessonGroup.big_questions) {
-          lessonGroup.big_questions.forEach(question => {
-            t += `, lesson_group_question: '${escape(question)}'`;
-          });
+        if (lessonGroup.displayName) {
+          t += `, display_name: '${escape(lessonGroup.displayName)}'`;
         }
         s.push(t);
+        if (lessonGroup.description) {
+          s.push(
+            `lesson_group_description '${escape(lessonGroup.description)}'`
+          );
+        }
+        if (lessonGroup.bigQuestions) {
+          s.push(
+            `lesson_group_big_questions '${escape(lessonGroup.bigQuestions)}'`
+          );
+        }
       }
       if (lessonGroup.lessons) {
         lessonGroup.lessons.forEach(lesson => {
@@ -132,7 +136,18 @@ class UnitCard extends Component {
     return s.join('\n');
   };
 
-  serializeLevel = (id, level, active) => {
+  /**
+   * Generate the ScriptDSL format.
+   * NOTE: The Script Edit GUI no long includes the editing of levels
+   * as those have been moved out to the lesson edit page. We include
+   * level information here behind the scenes because it allows us to
+   * continue to use ScriptDSl for the time being until we are ready
+   * to move on to our future system.
+   * @param id
+   * @param level
+   * @return {string}
+   */
+  serializeLevel = (id, level) => {
     const s = [];
     const key = this.props.levelKeyList[id];
     if (/^blockly:/.test(key)) {
@@ -152,9 +167,6 @@ class UnitCard extends Component {
       }
     }
     let l = `level '${escape(key)}'`;
-    if (active === false) {
-      l += ', active: false';
-    }
     if (level.progression) {
       l += `, progression: '${escape(level.progression)}'`;
     }
@@ -207,6 +219,10 @@ class UnitCard extends Component {
     }
   };
 
+  handleMakeNonUserFacing = () => {
+    this.props.convertGroupToNonUserFacing(1);
+  };
+
   render() {
     const {lessonGroups} = this.props;
 
@@ -234,7 +250,7 @@ class UnitCard extends Component {
             />
           ))}
           <div style={styles.addGroupWithWarning}>
-            {this.props.lessonGroups[0].user_facing && (
+            {this.props.lessonGroups[0].userFacing && (
               <button
                 onMouseDown={this.handleAddLessonGroup}
                 className="btn"
@@ -245,7 +261,7 @@ class UnitCard extends Component {
                 Add Lesson Group
               </button>
             )}
-            {!this.props.lessonGroups[0].user_facing && (
+            {!this.props.lessonGroups[0].userFacing && (
               <button
                 onMouseDown={this.handleMakeUserFacing}
                 className="btn"
@@ -255,6 +271,17 @@ class UnitCard extends Component {
                 Enable Lesson Groups
               </button>
             )}
+            {this.props.lessonGroups.length === 1 &&
+              this.props.lessonGroups[0].userFacing && (
+                <button
+                  onMouseDown={this.handleMakeNonUserFacing}
+                  className="btn"
+                  style={styles.addGroup}
+                  type="button"
+                >
+                  Disable Lesson Groups
+                </button>
+              )}
           </div>
         </div>
         <input
@@ -276,6 +303,7 @@ export default connect(
   }),
   {
     addGroup,
-    convertGroupToUserFacing
+    convertGroupToUserFacing,
+    convertGroupToNonUserFacing
   }
 )(UnitCard);
