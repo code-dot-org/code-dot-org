@@ -5,6 +5,7 @@ import ActivityCard from '@cdo/apps/lib/levelbuilder/lesson-editor/ActivityCard'
 import Activity from '@cdo/apps/templates/lessonOverview/activities/Activity';
 import {connect} from 'react-redux';
 import {addActivity} from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
+import _ from 'lodash';
 
 const styles = {
   activityEditAndPreview: {
@@ -84,6 +85,26 @@ class ActivitiesEditor extends Component {
     this.activitySectionMetrics[activitySectionPosition] = metrics;
   };
 
+  // Serialize the activities into JSON, renaming any keys which are different
+  // on the backend.
+  serializeActivities = () => {
+    const activities = _.cloneDeep(this.props.activities);
+    activities.forEach(activity => {
+      activity.name = activity.displayName;
+      delete activity.displayName;
+
+      activity.activitySections.forEach(activitySection => {
+        activitySection.name = activitySection.displayName;
+        delete activitySection.displayName;
+
+        activitySection.description = activitySection.text;
+        delete activitySection.text;
+      });
+    });
+
+    return JSON.stringify(activities);
+  };
+
   render() {
     const {activities} = this.props;
 
@@ -119,6 +140,11 @@ class ActivitiesEditor extends Component {
             ))}
           </div>
         </div>
+        <input
+          type="hidden"
+          name="activities"
+          value={this.serializeActivities()}
+        />
       </div>
     );
   }
