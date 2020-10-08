@@ -27,11 +27,11 @@ For more instructions on encouraging employees and connecting your employees wit
 
 # How to host an Hour of Code event with students
 
-## 1. Promote your Hour of Code
+## 1. 아워오브코드 홍보
 - Promote your [Hour of Code]({{ urls/promote }}) event and encourage others to host.
 - Encourage software engineers at your company to visit a local classroom to help lead an Hour of Code and inspire students to study computer science. They can [sign up]({{ urls/volunteer_engineer }}) to be connected with a classroom.
 
-## 2. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe>
+## 2. 하우 투 동영상 시청 <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe>
 
 ## 3. Choose an activity
 We host a variety of [fun, hour-long activities]({{ urls/learn }}) for participants of all ages, created by a variety of partners. [Try them out!]({{ urls/learn }})
@@ -58,7 +58,7 @@ Hour of Code를 경험하기 위한 최고의 선택은 인터넷이 연결된 �
 
 - The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh (there are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions).
 - 전세계 코드의 시간 비디오 [](https://www.youtube.com/watch?v=KsOIlDT145A)
-- [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY).
+- [모든 학생들에게 컴퓨터 과학을 배우라고 요청하는 오바마 대통령](https://www.youtube.com/watch?v=6XvmhE1J9PY).
 - 영감을 주는 많은 영상들을 여기서 찾아보세요. [](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 **Ideas to introduce your Hour of Code activity to students:**
@@ -67,7 +67,7 @@ Hour of Code를 경험하기 위한 최고의 선택은 인터넷이 연결된 �
 - If you are a tech company, demo fun, innovative products your company is working on.
 - If you aren’t a tech company, discuss ways your company uses technology to solve problems and accomplish goals.
 - Invite software engineers from your company to speak about why they decided to study computer science and the projects they work on.
-- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
+- 여학생에게 컴퓨터 과학에 관심을 가지게 하는 팀은 [여기]({{ urls/girls }})에서 보세요.
 
 ## 6. Code!
 **참가자들이 활동하도록 이끌어 주세요.**
@@ -77,7 +77,7 @@ Hour of Code를 경험하기 위한 최고의 선택은 인터넷이 연결된 �
 
 **When participants come across difficulties it's okay to respond:**
 
-- “I don’t know. Let’s figure this out together.”
+- 잘 모르겠음 함께 알아 봅시다."
 - "프로그램을 배우는 것은 새로운 언어를 배우는 것과 같아; 곧바로 능숙할 수는 없는 것이란다."
 
 **누군가 일찍 완료 했을 때는 어떻게 할까요?**
@@ -87,9 +87,9 @@ Hour of Code를 경험하기 위한 최고의 선택은 인터넷이 연결된 �
 
 ## 7) 축하하기
 
-- [Print certificates]({{ urls/certificates }}) for participants and students.
-- [Print "I did an Hour of Code!"]({{ promote/resources_stickers }}) stickers.
-- [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your employees.
+- 참가자와 학생을 위한[인증서 인쇄]({{ urls/certificates }}).
+- [ "아워오브코드를 해냈다!"]({{ promote/resources_stickers }}) 라는 스티커를 인쇄하세요.
+- 직원들을 위해 [맞춤형 티셔츠](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more)를 주문하세요.
 - Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
 
 {{ signup_button }}

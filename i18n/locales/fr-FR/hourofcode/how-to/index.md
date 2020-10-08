@@ -1,39 +1,39 @@
 ---
-title: Hour of Code How-to Guide
+title: Guide pratique de L'Heure de Code
 ---
 
 {{ signup_button }}
 
 # How to plan your Hour of Code
 
-### Join the movement and introduce your students to computer science with these steps.
+### Rejoignez le mouvement et initiez vos étudiants à l'informatique en suivant ces étapes.
 
-Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
+La pensée computationnelle contribue à développer les compétences de résolution de problèmes, la logique et la créativité. Et la technologie transforme toutes les industries de la planète. Les étudiants d'aujourd'hui doivent apprendre à créer la technologie, et pas seulement à l'utiliser. En commençant tôt, ils auront les bases pour réussir dans tout cheminement de carrière du 21ème siècle.
 
-Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time, and it fits perfectly for both in-class and after-school settings. Take a look at our [participation guide if you still have questions]({{ localized_files/participation_guide }}).
+Essayer une Heure de Code est un moyen simple et amusant d'initier les élèves à l'informatique, peut-être pour la toute première fois, et convient parfaitement à la fois aux cadres de classe et périscolaire. Take a look at our [participation guide if you still have questions]({{ localized_files/participation_guide }}).
 
-- [Watch the Hour of Code how-to video](#how-to-video)
-- [Explore activities and tutorials](#explore-activities)
-- [Create your plan for the day](#create-your-plan)
+- [Regardez la vidéo pratique de l'Heure de Code](#how-to-video)
+- [Explorez les activités et les tutoriels](#explore-activities)
+- [Créez votre plan pour la journée](#create-your-plan)
 - [Promote your Hour of Code](#promote-your-hour)
-- [How to start your Hour of Code strong](#how-to-start)
-- [Get coding](#code)
-- [Celebrate your students' success](#celebrate)
+- [Comment démarrer votre Heure de Code de manière éloquente ?](#how-to-start)
+- [Codez](#code)
+- [Célébrez le succès de vos élèves](#celebrate)
 - [Autres ressources de l'Heure de Code pour les enseignants](#other-resources)
 
-### An Hour of Code can also be hosted remotely! To get started, check out our [tips for hosting a virtual Hour of Code event](https://hourofcode.com/us/how-to/virtual).
+### Une Heure de Code peut également être animée à distance ! Pour commencer, consultez nos [conseils pour organiser un événement Heure de Code virtuel](https://hourofcode.com/us/how-to/virtual).
 
 * * *
 
 <a id="how-to-video"></a>
 
-## 1. Watch the Hour of Code how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+## 1. Regardez la vidéo pratique de l'Heure de Code <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
 * * *
 
 <a id="explore-activities"></a>
 
-## 2. Explore activities and tutorials
+## 2. Explorez les activités et les tutoriels
 
 We provide a variety of fun, [student-guided tutorials]({{ urls/learn }}) for all age groups and experience levels. It’s popular for students to try self-led tutorials, though many activities include lesson plans for teachers to guide discussion or extend the activity as well.
 
@@ -45,7 +45,7 @@ Explore the activities and decide ahead of time if you want to choose a single t
 
 <a id="create-your-plan"></a>
 
-## 3. Create your plan for the day
+## 3. Créez votre plan pour la journée
 
 ### Think about your technology needs - computers are optional!
 
@@ -64,7 +64,7 @@ People around the world join in the Hour of Code celebration during CS Education
 
 <a id="promote-your-hour"></a>
 
-## 4. Promote your Hour of Code
+## 4. Faites la promotion de votre Heure de Code
 
 Now that you've planned your event, it's time to start promoting it!
 
@@ -88,7 +88,7 @@ Learn more about posters, videos, stickers and other ways to [promote your event
 
 <a id="how-to-start"></a>
 
-## 5. How to start your Hour of Code strong
+## 5. Comment démarrer votre Heure de Code de manière éloquente ?
 
 Once your Hour of Code celebration has arrived, make sure you start your event strong with some of these tools and tips.
 
@@ -99,25 +99,25 @@ Montrez une vidéo qui inspire :
 - La vidéo de lancement originale de Code.org avec Bill Gates, Mark Zuckerberg et la star de la NBA Chris Bosh. (des versions d'[1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), de [5 minutes](https://www.youtube.com/watch?v=nKIu9yen5nc) et de [9 minutes](https://www.youtube.com/watch?v=dU1xS07N-FA) sont disponibles)
 - Find more inspirational [resources]({{ urls/inspire }}) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-It’s okay if both you and your students are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:
+Ce n'est pas un problème si vous et vos étudiants êtes novices en informatique. Voici quelques idées pour présenter votre activité de l'Heure de Code :
 
 - Expliquez la manière dont les nouvelles technologies impactent notre vie, grâce à des exemples qui parleront aux garçons comme aux filles (parlez des technologies qui permettent de sauver des vies, d'aider les gens, ou de connecter les gens entre eux, etc.).
 - En classe, rédigez une liste des choses qui nécessitent de faire de la programmation dans la vie quotidienne.
-- See tips for getting young women interested in computer science [here]({{ urls/girls }}).
+- Voyez les conseils pour intéresser les jeunes femmes à l'informatique [ici]({{ urls/girls }}).
 
 * * *
 
 <a id="code"></a>
 
-## 6. Get coding!
+## 6. Codez !
 
 Direct students to the activity
 
-- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
+- Écrivez le lien du tutoriel au tableau. Trouvez le lien indiqué dans les [informations pour le tutoriel sélectionné]({{ urls/learn }}) sous le nombre de participants.
 
 When your students come across difficulties it's okay to respond:
 
-- « Je ne sais pas. Regardons à cela ensemble. »
+- « Je ne sais pas. Réfléchissons-y ensemble. »
 - « La technologie ne fonctionnent pas toujours de la façon dont nous le voulons. »
 - «Apprendre à programmer, c'est un peu comme apprendre une nouvelle langue; on ne peut pas être tout de suite bilingue.»
 
@@ -130,7 +130,7 @@ What if a student finishes early?
 
 <a id="celebrate"></a>
 
-## 7. Celebrate your students' success
+## 7. Célébrez le succès de vos élèves
 
 [col-33]
 
@@ -154,6 +154,6 @@ What if a student finishes early?
 
 ### Et après l'Heure de Code ?
 
-Computer science doesn’t have to end with the Hour of Code! Our curriculum is web-based and free to use, forever. [Learn how](/beyond) to bring CS to your school and students.
+L'informatique ne devrait pas s'arrêter à l'Heure du Code ! Notre programme est disponible sur le Web et son utilissation est gratuite, pour toujours. [Apprenez comment](/beyond) amener l'informatique à votre école et à vos élèves.
 
 {{ signup_button }}

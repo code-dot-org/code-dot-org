@@ -17,7 +17,7 @@ es-MX:
             '"PINEAPPLE"': piñas
             '"ROBOT"': robots
             '"SHARK"': tiburones
-            '"SLOTH"': perezas
+            '"SLOTH"': perezosos
             '"UNICORN"': unicornios
           MOVE1:
             MOVES.Roll: Vuelta completa
@@ -71,7 +71,7 @@ es-MX:
             '"PINEAPPLE"': piñas
             '"ROBOT"': robots
             '"SHARK"': tiburones
-            '"SLOTH"': perezas
+            '"SLOTH"': perezosos
             '"UNICORN"': todos los unicornios
           MOVE:
             '"next"': "(Siguiente)"
@@ -132,7 +132,7 @@ es-MX:
             '"PINEAPPLE"': piñas
             '"ROBOT"': robots
             '"SHARK"': tiburones
-            '"SLOTH"': perezas
+            '"SLOTH"': perezosos
             '"UNICORN"': unicornios
           PROPERTY:
             '"scale"': tamaño
@@ -156,7 +156,7 @@ es-MX:
             '"PINEAPPLE"': piñas
             '"ROBOT"': robots
             '"SHARK"': tiburones
-            '"SLOTH"': perezas
+            '"SLOTH"': perezosos
             '"UNICORN"': unicornios
           MOVE:
             '"rand"': "(Al azar)"
@@ -313,7 +313,7 @@ es-MX:
             '"PINEAPPLE"': piñas
             '"ROBOT"': robots
             '"SHARK"': tiburones
-            '"SLOTH"': perezas
+            '"SLOTH"': perezosos
             '"UNICORN"': unicornios
           LOCATION:
             "{x: 200, y: 100}": arriba
@@ -341,7 +341,7 @@ es-MX:
             '"PINEAPPLE"': piñas
             '"ROBOT"': robots
             '"SHARK"': tiburones
-            '"SLOTH"': perezas
+            '"SLOTH"': perezosos
             '"UNICORN"': unicornios
           FORMAT:
             '"border"': borde
@@ -372,7 +372,7 @@ es-MX:
             '"PINEAPPLE"': piña
             '"ROBOT"': robot
             '"SHARK"': tiburón
-            '"SLOTH"': pereza
+            '"SLOTH"': perezoso
             '"UNICORN"': unicornio
           LOCATION:
             "{x: 200, y: 100}": arriba
@@ -401,7 +401,7 @@ es-MX:
             '"PINEAPPLE"': piña
             '"ROBOT"': Robot
             '"SHARK"': tiburón
-            '"SLOTH"': pereza
+            '"SLOTH"': perezoso
             '"UNICORN"': Unicornio
           LOCATION:
             "{x: 200, y: 100}": arriba
@@ -450,7 +450,7 @@ es-MX:
             '"PINEAPPLE"': Piñas
             '"ROBOT"': Robots
             '"SHARK"': Tiburones
-            '"SLOTH"': perezas
+            '"SLOTH"': perezosos
             '"UNICORN"': unicornios
           LAYOUT:
             '"border"': borde
@@ -577,7 +577,7 @@ es-MX:
             '"PINEAPPLE"': piñas
             '"ROBOT"': robots
             '"SHARK"': tiburones
-            '"SLOTH"': perezas
+            '"SLOTH"': perezosos
             '"UNICORN"': unicornios
           SPEED:
             '1': normal
@@ -651,7 +651,7 @@ es-MX:
             '"PINEAPPLE"': piñas
             '"ROBOT"': robots
             '"SHARK"': tiburones
-            '"SLOTH"': perezas
+            '"SLOTH"': perezosos
             '"UNICORN"': unicornios
           PROPERTY:
             '"scale"': tamaño
@@ -687,7 +687,7 @@ es-MX:
             '"PINEAPPLE"': piñas
             '"ROBOT"': robots
             '"SHARK"': tiburones
-            '"SLOTH"': perezas
+            '"SLOTH"': perezosos
             '"UNICORN"': unicornios
           PROPERTY:
             '"scale"': tamaño
@@ -714,7 +714,7 @@ es-MX:
             '"PINEAPPLE"': piñas
             '"ROBOT"': robots
             '"SHARK"': tiburones
-            '"SLOTH"': perezas
+            '"SLOTH"': perezosos
             '"UNICORN"': unicornios
       Dancelab_setTintEachInline:
         text: establecer tonalidad {THIS} a {VAL}
@@ -731,7 +731,7 @@ es-MX:
             '"PINEAPPLE"': piñas
             '"ROBOT"': robots
             '"SHARK"': tiburones
-            '"SLOTH"': perezas
+            '"SLOTH"': perezosos
             '"UNICORN"': unicornios
       Dancelab_setTintInline:
         text: definir tinte {SPRITE} a {VAL}
@@ -756,7 +756,7 @@ es-MX:
             '"PINEAPPLE"': piñas
             '"ROBOT"': robots
             '"SHARK"': tiburones
-            '"SLOTH"': perezas
+            '"SLOTH"': perezosos
             '"UNICORN"': unicornios
           VISIBILITY:
             'true': visible
@@ -791,7 +791,7 @@ es-MX:
             '"PINEAPPLE"': piñas
             '"ROBOT"': robots
             '"SHARK"': tiburones
-            '"SLOTH"': perezas
+            '"SLOTH"': perezosos
             '"UNICORN"': unicornios
           PROPERTY:
             '"scale"': tamaño
@@ -836,7 +836,7 @@ es-MX:
             '"PINEAPPLE"': piñas
             '"ROBOT"': robots
             '"SHARK"': tiburones
-            '"SLOTH"': perezas
+            '"SLOTH"': perezosos
             '"UNICORN"': unicornios
           PROPERTY:
             '"scale"': tamaño

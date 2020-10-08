@@ -35,6 +35,18 @@ GIT
       redis
 
 GIT
+  remote: https://github.com/code-dot-org/sassc-rails.git
+  revision: cdf930a2ca3a582a0d665720a0693d330d5ba12a
+  ref: frozen-array-fix
+  specs:
+    sassc-rails (2.1.2)
+      railties (>= 4.0.0)
+      sassc (>= 2.0)
+      sprockets (> 3.0)
+      sprockets-rails
+      tilt
+
+GIT
   remote: https://github.com/dooly-ai/omniauth-microsoft_v2_auth.git
   revision: db19d64c2ddb017dddb9a0ff2cee1d84d2fad287
   specs:
@@ -163,18 +175,6 @@ GIT
     puma (3.12.0)
 
 GIT
-  remote: https://github.com/wjordan/sass-rails.git
-  revision: 06e833d92d083fbcb137364ffebc597b2577db23
-  ref: frozen-array-fix
-  specs:
-    sass-rails (5.0.6)
-      railties (>= 4.0.0, < 6)
-      sass (~> 3.1)
-      sprockets (>= 2.8, < 4.0)
-      sprockets-rails (>= 2.0, < 4.0)
-      tilt (>= 1.1, < 3)
-
-GIT
   remote: https://github.com/wjordan/seamless_database_pool.git
   revision: c9a5c2bc92efc1f87a2aa065283e15283dbb9425
   ref: cdo
@@ -257,9 +257,9 @@ GEM
       public_suffix (>= 2.0.2, < 4.0)
     aes_key_wrap (1.0.1)
     afm (0.2.2)
-    annotate (2.7.2)
-      activerecord (>= 3.2, < 6.0)
-      rake (>= 10.4, < 13.0)
+    annotate (3.1.1)
+      activerecord (>= 3.2, < 7.0)
+      rake (>= 10.4, < 14.0)
     ansi (1.5.0)
     arel (7.1.4)
     ast (2.3.0)
@@ -629,8 +629,8 @@ GEM
     parallel (1.12.1)
     parallel_tests (2.27.0)
       parallel
-    paranoia (2.3.1)
-      activerecord (>= 4.0, < 5.2)
+    paranoia (2.4.2)
+      activerecord (>= 4.0, < 6.1)
     parser (2.4.0.2)
       ast (~> 2.3)
     pdf-reader (1.4.0)
@@ -690,10 +690,10 @@ GEM
       bundler (>= 1.3.0)
       railties (= 5.0.7.2)
       sprockets-rails (>= 2.0.0)
-    rails-controller-testing (0.1.1)
-      actionpack (~> 5.x)
-      actionview (~> 5.x)
-      activesupport (~> 5.x)
+    rails-controller-testing (1.0.5)
+      actionpack (>= 5.0.1.rc1)
+      actionview (>= 5.0.1.rc1)
+      activesupport (>= 5.0.1.rc1)
     rails-dom-testing (2.0.3)
       activesupport (>= 4.2.0)
       nokogiri (>= 1.6)
@@ -727,9 +727,9 @@ GEM
     require_all (2.0.0)
     rerun (0.13.0)
       listen (~> 3.0)
-    responders (2.4.0)
-      actionpack (>= 4.2.0, < 5.3)
-      railties (>= 4.2.0, < 5.3)
+    responders (3.0.1)
+      actionpack (>= 5.0)
+      railties (>= 5.0)
     rest-client (2.0.2)
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 4.0)
@@ -768,6 +768,10 @@ GEM
     rubyzip (1.2.2)
     safe_yaml (1.0.4)
     sass (3.4.22)
+    sass-rails (6.0.0)
+      sassc-rails (~> 2.1, >= 2.1.1)
+    sassc (2.4.0)
+      ffi (~> 1.9)
     sawyer (0.8.1)
       addressable (>= 2.3.5, < 2.6)
       faraday (~> 0.8, < 1.0)
@@ -902,7 +906,7 @@ DEPENDENCIES
   activerecord-import
   acts_as_list
   addressable
-  annotate
+  annotate (~> 3.1.1)
   auto_strip_attributes (~> 2.1)
   aws-google
   aws-sdk-acm
@@ -1002,7 +1006,7 @@ DEPENDENCIES
   os
   parallel
   parallel_tests
-  paranoia
+  paranoia (~> 2.4.2)
   pdf-reader
   petit!
   pg
@@ -1016,7 +1020,7 @@ DEPENDENCIES
   rack-ssl-enforcer
   rack_csrf
   rails (~> 5.0.7.2)
-  rails-controller-testing
+  rails-controller-testing (~> 1.0.5)
   rambling-trie
   recaptcha
   redcarpet (~> 3.3.4)
@@ -1024,7 +1028,7 @@ DEPENDENCIES
   redis-slave-read!
   require_all
   rerun
-  responders (~> 2.0)
+  responders (~> 3.0)
   rest-client (~> 2.0.1)
   retryable
   rinku
@@ -1034,7 +1038,8 @@ DEPENDENCIES
   ruby-prof
   ruby-progressbar
   ruby_dep (~> 1.3.1)
-  sass-rails!
+  sass-rails (~> 6.0.0)
+  sassc-rails!
   scenic
   scenic-mysql_adapter
   scss_lint
