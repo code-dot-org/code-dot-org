@@ -7,14 +7,6 @@ social:
   og:image:width: '1200'
   og:image:height: '630'
 ---
-:ruby
-  @header["social"]["twitter:url"] = "https://#{request.host}/learn"
-  @header["social"]["twitter:title"] = hoc_s(:hour_of_code)
-  @header["social"]["twitter:description"] = hoc_s(:social_hoc2018_global_movement)
-  @header["social"]["twitter:image:src"] = 'https://' + request.host + '/images/social-media/hoc-2018-creativity.png'
-  @header["social"]["og:title"] = hoc_s(:hour_of_code)
-  @header["social"]["og:description"] = hoc_s(:social_hoc2018_global_movement)
-  @header["social"]["og:image"] = 'https://' + request.host + '/images/social-media/hoc-2018-creativity.png'
 
 -# hourofcode.com uses an early version of Bootstrap 3 which didn't have this wider dialog.
 :css
