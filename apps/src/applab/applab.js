@@ -683,6 +683,7 @@ Applab.init = function(config) {
       !!config.level.isProjectLevel || config.level.showDebugWatch,
     showMakerToggle:
       !!config.level.isProjectLevel || config.level.makerlabEnabled,
+    validationEnabled: !!config.level.validationEnabled,
     widgetMode: config.level.widgetMode
   });
 
@@ -1518,8 +1519,11 @@ Applab.onPuzzleFinish = function() {
 };
 
 Applab.onPuzzleComplete = function(submit) {
+  const sourcesUnchanged = !studioApp().validateCodeChanged();
   if (Applab.executionError) {
     Applab.result = ResultType.ERROR;
+  } else if (sourcesUnchanged) {
+    Applab.result = ResultType.FAILURE;
   } else {
     // In most cases, submit all results as success
     Applab.result = ResultType.SUCCESS;
@@ -1539,6 +1543,8 @@ Applab.onPuzzleComplete = function(submit) {
     );
     Applab.testResults = results.testResult;
     Applab.message = results.message;
+  } else if (sourcesUnchanged) {
+    Applab.testResults = TestResults.FREE_PLAY_UNCHANGED_FAIL;
   } else if (!submit) {
     Applab.testResults = TestResults.FREE_PLAY;
   } else {

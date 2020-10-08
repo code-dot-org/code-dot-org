@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import LessonGroups from '@cdo/apps/lib/levelbuilder/script-editor/LessonGroups';
+import UnitCard from '@cdo/apps/lib/levelbuilder/script-editor/UnitCard';
 import LessonDescriptions from '@cdo/apps/lib/levelbuilder/script-editor/LessonDescriptions';
 import AnnouncementsEditor from '@cdo/apps/lib/levelbuilder/announcementsEditor/AnnouncementsEditor';
 import $ from 'jquery';
@@ -520,9 +520,9 @@ export default class ScriptEditor extends React.Component {
           </label>
         </CollapsibleEditorSection>
 
-        <CollapsibleEditorSection title="Lessons and Levels">
+        <CollapsibleEditorSection title="Lesson Groups and Lessons">
           {this.props.beta ? (
-            <LessonGroups />
+            <UnitCard />
           ) : (
             <div>
               {betaWarning || (

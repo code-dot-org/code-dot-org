@@ -10,7 +10,7 @@ title: Guía práctica de la Hora del Código para eventos virtuales
 
 ***
 
-Si bien la Hora del Código se lleva a cabo tradicionalmente en las aulas de todo el mundo, no es necesario que estés en persona para disfrutar de la diversión. Aún puede organizar una Hora del Código interactiva e inspiradora para los estudiantes de forma remota utilizando algunas de estas recomendaciones.  Echa un vistazo a nuestra <a href="https://staging.hourofcode.com/files/participation-guide-virtual.pdf">guía para eventos virtuales</a> si aún tienes preguntas.
+Si bien la Hora del Código se lleva a cabo tradicionalmente en las aulas de todo el mundo, no es necesario que estés en persona para disfrutar de la diversión. Aún puede organizar una Hora del Código interactiva e inspiradora para los estudiantes de forma remota utilizando algunas de estas recomendaciones.  Consulta nuestra [guía de participación]({{ localized_files/participation_guide_virtual }}) si aún tienes preguntas.
 
 <br><br>
 

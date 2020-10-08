@@ -16,8 +16,7 @@
 #
 # Indexes
 #
-#  index_stages_on_lesson_group_id_and_key  (lesson_group_id,key) UNIQUE
-#  index_stages_on_script_id                (script_id)
+#  index_stages_on_script_id  (script_id)
 #
 
 require 'cdo/shared_constants'
@@ -35,6 +34,7 @@ class Lesson < ActiveRecord::Base
   has_many :lesson_activities, -> {order(:position)}, dependent: :destroy
   has_many :script_levels, -> {order(:chapter)}, foreign_key: 'stage_id', dependent: :destroy
   has_many :levels, through: :script_levels
+  has_and_belongs_to_many :resources, join_table: :lessons_resources
 
   has_one :plc_learning_module, class_name: 'Plc::LearningModule', inverse_of: :lesson, foreign_key: 'stage_id', dependent: :destroy
   has_and_belongs_to_many :standards, foreign_key: 'stage_id'
@@ -63,6 +63,7 @@ class Lesson < ActiveRecord::Base
   include CodespanOnlyMarkdownHelper
 
   def self.add_lessons(script, lesson_group, raw_lessons, counters, new_suffix, editor_experiment)
+    script.lessons.reload
     raw_lessons.map do |raw_lesson|
       Lesson.prevent_empty_lesson(raw_lesson)
       Lesson.prevent_blank_display_name(raw_lesson)
@@ -87,8 +88,11 @@ class Lesson < ActiveRecord::Base
       )
       lesson.save! if lesson.changed?
 
-      lesson.script_levels = ScriptLevel.add_script_levels(script, lesson, raw_lesson[:script_levels], counters, new_suffix, editor_experiment)
+      lesson.script_levels = ScriptLevel.add_script_levels(
+        script, lesson_group, lesson, raw_lesson[:script_levels], counters, new_suffix, editor_experiment
+      )
       lesson.save!
+      lesson.reload
 
       Lesson.prevent_multi_page_assessment_outside_final_level(lesson)
 

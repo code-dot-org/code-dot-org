@@ -6,11 +6,11 @@ title: 가상 이벤트를 위한 아워오브코드 하우 투 가이드
 
 # 가상 아워오브코드 이벤트를 위한 팁
 
-### You don't have to be in-person to run a successful Hour of Code!
+### 아워오브코드를 성공적으로 운영하기 위해 직접 그곳에 갈 필요는 없습니다!
 
 ***
 
-While the Hour of Code is traditionally held in classrooms throughout the globe, you don’t need to be in-person to enjoy the fun! You can still host an interactive and inspirational Hour of Code for students remotely using some of these recommendations.  Take a look at our <a href="https://hourofcode.com/files/participation-guide-virtual.pdf">guide for virtual events</a> if you still have questions.
+아워오브코드는 전통적으로 교실에서 열리지만 재미를 즐기기 위해 꼭 그곳에 직접 갈 필욘느 없습니다. 다음의 추천사항으로 학생들을 위한 인터랙티브하고 영감을 주는 아워오브코드를 멀리서도 주최할 수 있습니다.  여전히 질문이 있으시면아 <a href="https://hourofcode.com/files/participation-guide-virtual.pdf">가상 이벤트 가이드</a>를 살펴보십시오.
 
 <br><br>
 

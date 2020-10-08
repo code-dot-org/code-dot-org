@@ -15,7 +15,8 @@ style_min: true
 
 ### Lesson Plans:
 
-- [Star Wars: Building a Galaxy with Code](/files/star-wars-lp.pdf)
+- [Star Wars: Building a Galaxy with Code (English)](https://curriculum.code.org/hoc/plugged/5)
+- [Star Wars: Building a Galaxy with Code (Spanish - LATAM)](https://curriculum.code.org/es-mx/hoc/plugged/5)
 - [Answer Sheet and Teacher Tips](https://docs.google.com/document/d/1BzdwxHsmFMt7ib1HLW7dL24W3sSCLhTklkj4wZ9I26c/edit?usp=sharing)
 
 ### Extension Activities:
