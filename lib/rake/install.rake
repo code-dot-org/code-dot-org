@@ -17,6 +17,9 @@ namespace :install do
       path = "../../tools/hooks/#{f}"
       RakeUtils.ln_s path, "#{git_path}/#{f}"
     end
+
+    # Include custom `.gitconfig`.
+    RakeUtils.system 'git config', '--local include.path ../.gitconfig'
   end
 
   desc 'Create default locals.yml file if it doesn\'t exist'
