@@ -133,6 +133,17 @@ class UnitCard extends Component {
     return s.join('\n');
   };
 
+  /**
+   * Generate the ScriptDSL format.
+   * NOTE: The Script Edit GUI no long includes the editing of levels
+   * as those have been moved out to the lesson edit page. We include
+   * level information here behind the scenes because it allows us to
+   * continue to use ScriptDSl for the time being until we are ready
+   * to move on to our future system.
+   * @param id
+   * @param level
+   * @return {string}
+   */
   serializeLevel = (id, level) => {
     const s = [];
     const key = this.props.levelKeyList[id];
