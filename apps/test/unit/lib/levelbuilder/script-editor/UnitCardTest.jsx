@@ -6,21 +6,26 @@ import sinon from 'sinon';
 import {nonUserFacingGroup} from './LessonGroupCardTest';
 
 describe('UnitCard', () => {
-  let defaultProps, addGroup, convertGroupToUserFacing;
+  let defaultProps,
+    addGroup,
+    convertGroupToUserFacing,
+    convertGroupToNonUserFacing;
 
   beforeEach(() => {
     addGroup = sinon.spy();
     convertGroupToUserFacing = sinon.spy();
+    convertGroupToNonUserFacing = sinon.spy();
     defaultProps = {
       addGroup,
       convertGroupToUserFacing,
       levelKeyList: {},
+      convertGroupToNonUserFacing,
       lessonGroups: [
         {
           key: 'lg-key',
-          display_name: 'Display Name',
+          displayName: 'Display Name',
           position: 1,
-          user_facing: true,
+          userFacing: true,
           lessons: [
             {
               id: 100,
@@ -40,9 +45,9 @@ describe('UnitCard', () => {
         },
         {
           key: 'lg-key-2',
-          display_name: 'Display Name 2',
+          displayName: 'Display Name 2',
           position: 2,
-          user_facing: true,
+          userFacing: true,
           lessons: [
             {
               id: 100,
@@ -69,6 +74,29 @@ describe('UnitCard', () => {
     expect(wrapper.find('Connect(LessonGroupCard)')).to.have.lengthOf(2);
     expect(wrapper.find('button')).to.have.lengthOf(1);
     expect(wrapper.find('button').text()).to.include('Add Lesson Group');
+  });
+
+  it('displays UnitCard correctly when single user facing lesson groups', () => {
+    let wrapper = shallow(
+      <UnitCard
+        {...defaultProps}
+        lessonGroups={[defaultProps.lessonGroups[0]]}
+      />
+    );
+    expect(wrapper.find('Connect(LessonGroupCard)')).to.have.lengthOf(1);
+    expect(wrapper.find('button')).to.have.lengthOf(2);
+    expect(
+      wrapper
+        .find('button')
+        .at(0)
+        .text()
+    ).to.include('Add Lesson Group');
+    expect(
+      wrapper
+        .find('button')
+        .at(1)
+        .text()
+    ).to.include('Disable Lesson Groups');
   });
 
   it('displays UnitCard correctly when non user facing lesson group', () => {
@@ -107,5 +135,19 @@ describe('UnitCard', () => {
 
     expect(convertGroupToUserFacing).to.have.been.calledOnce;
     window.prompt.restore();
+  });
+
+  it('disable lesson groups', () => {
+    let wrapper = shallow(
+      <UnitCard
+        {...defaultProps}
+        lessonGroups={[defaultProps.lessonGroups[0]]}
+      />
+    );
+    const button = wrapper.find('button').at(1);
+    expect(button.text()).to.include('Disable Lesson Groups');
+    button.simulate('mouseDown');
+
+    expect(convertGroupToNonUserFacing).to.have.been.calledOnce;
   });
 });
