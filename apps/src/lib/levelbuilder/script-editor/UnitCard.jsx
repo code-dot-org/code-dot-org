@@ -6,7 +6,8 @@ import {borderRadius} from '@cdo/apps/lib/levelbuilder/constants';
 import LessonGroupCard from '@cdo/apps/lib/levelbuilder/script-editor/LessonGroupCard';
 import {
   addGroup,
-  convertGroupToUserFacing
+  convertGroupToUserFacing,
+  convertGroupToNonUserFacing
 } from '@cdo/apps/lib/levelbuilder/script-editor/scriptEditorRedux';
 import ReactDOM from 'react-dom';
 
@@ -53,7 +54,8 @@ class UnitCard extends Component {
     lessonGroups: PropTypes.array.isRequired,
     addGroup: PropTypes.func.isRequired,
     levelKeyList: PropTypes.object.isRequired,
-    convertGroupToUserFacing: PropTypes.func.isRequired
+    convertGroupToUserFacing: PropTypes.func.isRequired,
+    convertGroupToNonUserFacing: PropTypes.func.isRequired
   };
 
   constructor(props) {
@@ -78,7 +80,7 @@ class UnitCard extends Component {
   serializeLessonGroups = lessonGroups => {
     let s = [];
     lessonGroups.forEach(lessonGroup => {
-      if (lessonGroup.user_facing && lessonGroup.lessons.length > 0) {
+      if (lessonGroup.userFacing && lessonGroup.lessons.length > 0) {
         let t = `lesson_group '${lessonGroup.key}'`;
         t += `, display_name: '${escape(lessonGroup.display_name)}'`;
         if (lessonGroup.description) {
@@ -206,6 +208,10 @@ class UnitCard extends Component {
     }
   };
 
+  handleMakeNonUserFacing = () => {
+    this.props.convertGroupToNonUserFacing(1);
+  };
+
   render() {
     const {lessonGroups} = this.props;
 
@@ -233,7 +239,7 @@ class UnitCard extends Component {
             />
           ))}
           <div style={styles.addGroupWithWarning}>
-            {this.props.lessonGroups[0].user_facing && (
+            {this.props.lessonGroups[0].userFacing && (
               <button
                 onMouseDown={this.handleAddLessonGroup}
                 className="btn"
@@ -244,7 +250,7 @@ class UnitCard extends Component {
                 Add Lesson Group
               </button>
             )}
-            {!this.props.lessonGroups[0].user_facing && (
+            {!this.props.lessonGroups[0].userFacing && (
               <button
                 onMouseDown={this.handleMakeUserFacing}
                 className="btn"
@@ -254,6 +260,17 @@ class UnitCard extends Component {
                 Enable Lesson Groups
               </button>
             )}
+            {this.props.lessonGroups.length === 1 &&
+              this.props.lessonGroups[0].userFacing && (
+                <button
+                  onMouseDown={this.handleMakeNonUserFacing}
+                  className="btn"
+                  style={styles.addGroup}
+                  type="button"
+                >
+                  Disable Lesson Groups
+                </button>
+              )}
           </div>
         </div>
         <input
@@ -275,6 +292,7 @@ export default connect(
   }),
   {
     addGroup,
-    convertGroupToUserFacing
+    convertGroupToUserFacing,
+    convertGroupToNonUserFacing
   }
 )(UnitCard);
