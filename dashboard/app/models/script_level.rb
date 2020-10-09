@@ -442,6 +442,7 @@ class ScriptLevel < ActiveRecord::Base
   def summarize_for_edit
     summary = summarize
     summary[:levelNumber] = activity_section_position
+    summary[:name] = oldest_active_level.key
     summary
   end
 
