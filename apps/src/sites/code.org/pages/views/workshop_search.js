@@ -16,7 +16,7 @@ var map,
   infoWindow,
   markerClusterer;
 
-const ICON_SIZE_MODIFIER = 0.03;
+const ICON_SIZE_MODIFIER = 0.5;
 
 $(document).ready(function() {
   if (window.location.search.includes('mapbox')) {
