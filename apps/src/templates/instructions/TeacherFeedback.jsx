@@ -11,6 +11,7 @@ import $ from 'jquery';
 import RubricField from './RubricField';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {CommentArea} from './CommentArea';
+import TimeAgo from '@cdo/apps/templates/TimeAgo';
 
 const styles = {
   tabAreaHidden: {
@@ -218,7 +219,7 @@ export class TeacherFeedback extends Component {
     return feedbackUnchanged;
   };
 
-  getFriendlyDate = feedbackSeen => {
+  getFriendlyDate(feedbackSeen) {
     const today = new Date();
     const dateFeedbackSeen = new Date(feedbackSeen);
 
@@ -234,20 +235,17 @@ export class TeacherFeedback extends Component {
       dateFeedbackSeen.getDate(),
       dateFeedbackSeen.getFullYear()
     ];
-    if (todayM === m && todayY === y) {
-      if (todayD === d) {
-        return 'today';
-      } else if (todayD === d + 1) {
-        return 'yesterday';
-      }
+    if (todayM === m && todayY === y && todayD === d) {
+      return i18n.today();
+    } else if (todayM === m && todayY === y && todayD === d + 1) {
+      return i18n.yesterday();
     } else {
-      const feedbackYear = (y + '').substr(2, 2);
-      return `${m}/${d}/${feedbackYear}`;
+      return <TimeAgo dateString={feedbackSeen} />;
     }
-  };
+  }
 
   //sub-render method invoked by getFeedbackText()
-  displayFeedbackMessage = ([style, message, studentSeen, time]) => {
+  displayFeedbackMessage([style, message, studentSeen, time]) {
     return (
       <div style={style} id="ui-test-feedback-time">
         {studentSeen && (
@@ -261,7 +259,7 @@ export class TeacherFeedback extends Component {
         {time && <strong>{time}</strong>}
       </div>
     );
-  };
+  }
 
   getFeedbackText = (latestFeedback, studentSawFeedback) => {
     let timeStyle;
@@ -272,8 +270,8 @@ export class TeacherFeedback extends Component {
     //Student view indicates when feedback was last updated
     if (this.props.viewAs === ViewType.Student) {
       timeStyle = styles.timeStudent;
-      feedbackMessage = i18n.lastUpdated();
       time = moment.min(moment(), moment(latestFeedback.created_at)).fromNow();
+      feedbackMessage = i18n.lastUpdated();
     } else if (this.props.viewAs === ViewType.Teacher) {
       timeStyle = styles.timeTeacher;
       //Teacher view if current teacher left feedback & student viewed
