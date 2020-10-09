@@ -329,7 +329,6 @@ class ActivitySectionCard extends Component {
       targetActivitySectionPos,
       activityPosition
     } = this.props;
-    const activitySectionText = activitySection.text || '';
     const {draggedLevelPos, levelPosToRemove} = this.state;
     const isTargetActivitySection =
       targetActivitySectionPos === activitySection.position;
@@ -383,8 +382,11 @@ class ActivitySectionCard extends Component {
           </div>
         </div>
         <textarea
-          value={activitySectionText}
-          rows={Math.max(activitySectionText.split(/\r\n|\r|\n/).length + 1, 2)}
+          value={this.props.activitySection.text}
+          rows={Math.max(
+            this.props.activitySection.text.split(/\r\n|\r|\n/).length + 1,
+            2
+          )}
           style={styles.input}
           onChange={this.handleChangeText}
         />
