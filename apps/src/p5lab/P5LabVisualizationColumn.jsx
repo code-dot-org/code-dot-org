@@ -6,6 +6,7 @@ import classNames from 'classnames';
 import GameButtons from '@cdo/apps/templates/GameButtons';
 import ArrowButtons from '@cdo/apps/templates/ArrowButtons';
 import BelowVisualization from '@cdo/apps/templates/BelowVisualization';
+import experiments from '@cdo/apps/util/experiments';
 import {APP_HEIGHT, APP_WIDTH} from './constants';
 import {GAMELAB_DPAD_CONTAINER_ID} from './gamelab/constants';
 import CompletionButton from '@cdo/apps/templates/CompletionButton';
@@ -20,6 +21,7 @@ import i18n from '@cdo/locale';
 import {toggleGridOverlay} from './actions';
 import GridOverlay from './gamelab/GridOverlay';
 import TextConsole from './spritelab/TextConsole';
+import SpritelabInput from './spritelab/SpritelabInput';
 import {
   cancelLocationSelection,
   selectLocation,
@@ -54,7 +56,8 @@ class P5LabVisualizationColumn extends React.Component {
     cancelPicker: PropTypes.func.isRequired,
     selectPicker: PropTypes.func.isRequired,
     updatePicker: PropTypes.func.isRequired,
-    consoleMessages: PropTypes.array.isRequired
+    consoleMessages: PropTypes.array.isRequired,
+    question: PropTypes.string.isRequired
   };
 
   // Cache app-space mouse coordinates, which we get from the
@@ -179,6 +182,9 @@ class P5LabVisualizationColumn extends React.Component {
           </VisualizationOverlay>
         </ProtectedVisualizationDiv>
         <TextConsole consoleMessages={this.props.consoleMessages} />
+        {experiments.isEnabled(experiments.SPRITELAB_INPUT) && (
+          <SpritelabInput question={this.props.question} />
+        )}
         <GameButtons>
           <ArrowButtons />
 
@@ -217,7 +223,8 @@ export default connect(
     awaitingContainedResponse: state.runState.awaitingContainedResponse,
     showGrid: state.gridOverlay,
     pickingLocation: isPickingLocation(state.locationPicker),
-    consoleMessages: state.textConsole
+    consoleMessages: state.textConsole,
+    question: state.spritelabInput || 'my test question'
   }),
   dispatch => ({
     toggleShowGrid: mode => dispatch(toggleGridOverlay(mode)),
