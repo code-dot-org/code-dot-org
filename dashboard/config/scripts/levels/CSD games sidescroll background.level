@@ -96,7 +96,7 @@
     "encrypted": "false",
     "libraries_enabled": "false",
     "preload_asset_list": null,
-    "validation_enabled": "true"
+    "validation_enabled": "false"
   },
   "published": true,
   "notes": "",

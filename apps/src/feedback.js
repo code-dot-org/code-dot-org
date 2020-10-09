@@ -748,7 +748,6 @@ FeedbackUtils.prototype.getFeedbackMessage = function(options) {
     // Otherwise, the message will depend on the test result.
     switch (options.feedbackType) {
       case TestResults.FREE_PLAY_UNCHANGED_FAIL:
-        logDialogActions('level_unchanged_failure', options, null);
         message = options.useDialog
           ? msg.freePlayUnchangedFail()
           : msg.freePlayUnchangedFailInline();
