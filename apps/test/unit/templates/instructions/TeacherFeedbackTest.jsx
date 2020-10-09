@@ -122,7 +122,7 @@ describe('TeacherFeedback', () => {
       };
       const seenByStudentSpy = sinon.spy(i18n, 'seenByStudent');
       const wrapper = shallow(<TeacherFeedback {...props} />);
-      expect(wrapper.find('FontAwesome').length === 1).to.equal(true);
+      expect(wrapper.find('FontAwesome')).to.have.lengthOf(1);
       expect(wrapper.contains('today')).to.equal(true);
       expect(seenByStudentSpy).to.have.been.calledOnce;
       i18n.seenByStudent.restore();
@@ -136,20 +136,25 @@ describe('TeacherFeedback', () => {
           {feedback_provider_id: 5, student_seen_feedback: today}
         ]
       };
+      const lastSeenTodaySpy = sinon.spy(i18n, 'today');
       const wrapper = shallow(<TeacherFeedback {...props} />);
-      expect(wrapper.contains('today')).to.equal(true);
+      expect(lastSeenTodaySpy).to.have.been.calledOnce;
+      const lastSeenYesterdaySpy = sinon.spy(i18n, 'yesterday');
       let yesterday = new Date(today);
       yesterday.setDate(yesterday.getDate() - 1);
       wrapper.setState({latestFeedback: [{student_seen_feedback: yesterday}]});
-      expect(wrapper.contains('yesterday')).to.equal(true);
-      const longTimeAgo = Date.parse('2011-10-10');
+      expect(lastSeenYesterdaySpy).to.have.been.calledOnce;
+      let twoDaysAgo = new Date(yesterday);
+      twoDaysAgo.setDate(twoDaysAgo.getDate() - 1);
       wrapper.setState({
-        latestFeedback: [{student_seen_feedback: longTimeAgo}]
+        latestFeedback: [{student_seen_feedback: twoDaysAgo}]
       });
-      expect(wrapper.contains('10/10/11')).to.equal(true);
+      expect(wrapper.find('Connect(TimeAgo)')).to.have.lengthOf(1);
+      i18n.today.restore();
+      i18n.yesterday.restore();
     });
 
-    it('displays correct missage if student has not viewed their feedback', () => {
+    it('displays correct message if student has not viewed their feedback', () => {
       const props = {
         ...TEACHER_FEEDBACK_NO_RUBRIC_PROPS,
         latestFeedback: [{feedback_provider_id: 5}]
