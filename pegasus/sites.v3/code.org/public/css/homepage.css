@@ -162,23 +162,6 @@ body.modal-open .supreme-container{
   }
 }
 
-#homepage .hero-message-mobile {
-  font-family: 'Gotham 5r', sans-serif !important;
-  font-size: 34px;
-  line-height: 34px;
-  color: #00ADBC;
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
-
-#homepage .hero-message-mobile-second {
-  font-family: 'Gotham 5r', sans-serif !important;
-  font-size: 34px;
-  line-height: 34px;
-  color: #00ADBC;
-  margin-bottom: 20px;
-}
-
 #homepage .action .video-play-icon {
   width: 24px;
   height: 24px;
