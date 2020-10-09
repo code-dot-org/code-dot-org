@@ -2,19 +2,8 @@
 
 import $ from 'jquery';
 import colors from '@cdo/apps/util/color';
-import MarkerClusterer from 'node-js-marker-clusterer';
-import getScriptData from '@cdo/apps/util/getScriptData';
-import {SubjectNames} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 
-const markerCustererOptions = {
-  imagePath: getScriptData('workshopSearch').imagePath,
-  gridSize: 10
-};
-
-var map,
-  markersByLocation = {},
-  infoWindow,
-  markerClusterer;
+var map;
 
 $(document).ready(function() {
   initializeMapboxMap();
@@ -83,7 +72,7 @@ function placeClusters() {
     source: 'workshops',
     filter: ['has', 'point_count'],
     paint: {
-      'circle-color': colors['teal'],
+      'circle-color': colors.purple,
       'circle-radius': 20,
       'circle-blur': 0.75
     }
