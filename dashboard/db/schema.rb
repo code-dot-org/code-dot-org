@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20201006202706) do
+ActiveRecord::Schema.define(version: 20201009221300) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -1502,9 +1502,9 @@ ActiveRecord::Schema.define(version: 20201006202706) do
     t.integer  "relative_position",                               null: false
     t.text     "properties",        limit: 65535
     t.integer  "lesson_group_id"
-    t.string   "key"
+    t.string   "key",                                             null: false
     t.index ["lesson_group_id", "key"], name: "index_stages_on_lesson_group_id_and_key", unique: true, using: :btree
-    t.index ["script_id"], name: "index_stages_on_script_id", using: :btree
+    t.index ["script_id", "key"], name: "index_stages_on_script_id_and_key", unique: true, using: :btree
   end
 
   create_table "stages_standards", id: false, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
