@@ -7,36 +7,39 @@ export const levelShape = PropTypes.shape({
   url: PropTypes.string,
 
   //information used to preview levels in activity preview
-  status: PropTypes.string,
   icon: PropTypes.string,
   isUnplugged: PropTypes.bool,
-  levelNumber: PropTypes.number,
-  isCurrentLevel: PropTypes.bool,
   isConceptLevel: PropTypes.bool,
-  kind: PropTypes.string,
+
+  // blockly options
+  conceptDifficulty: PropTypes.string,
+  concepts: PropTypes.string,
+  skin: PropTypes.string,
+  videoKey: PropTypes.string
+});
+
+export const scriptLevelShape = PropTypes.shape({
+  // script level id
+  id: PropTypes.number.isRequired,
 
   // The position of this level within the lesson in the UI.
   position: PropTypes.number.isRequired,
 
-  // level id, or -1 if no level is selected.
+  // level id or active variant, or -1 if no level is selected.
   activeId: PropTypes.number,
-  // level ids for all variants of this level
-  ids: PropTypes.arrayOf(PropTypes.number),
+  // all variants of this level
+  levels: PropTypes.arrayOf(levelShape),
 
   // whether this LevelToken is expanded in the UI.
   expand: PropTypes.bool,
 
-  // blockly script level options
-  conceptDifficulty: PropTypes.string,
-  concepts: PropTypes.string,
-  skin: PropTypes.string,
-  videoKey: PropTypes.string,
+  // information determined at script level
+  kind: PropTypes.string,
 
   // other script level options
-  named: PropTypes.bool,
+  bonus: PropTypes.bool,
   assessment: PropTypes.bool,
-  challenge: PropTypes.bool,
-  progression: PropTypes.string
+  challenge: PropTypes.bool
 });
 
 export const tipShape = PropTypes.shape({
@@ -51,7 +54,7 @@ export const activitySectionShape = PropTypes.shape({
   displayName: PropTypes.string,
   remarks: PropTypes.bool,
   slide: PropTypes.bool,
-  levels: PropTypes.arrayOf(levelShape),
+  scriptLevels: PropTypes.arrayOf(scriptLevelShape),
   text: PropTypes.string.isRequired,
   tips: PropTypes.arrayOf(tipShape)
 });
@@ -73,7 +76,7 @@ export const lessonShape = PropTypes.shape({
   unplugged: PropTypes.bool,
   assessment: PropTypes.bool,
   relativePosition: PropTypes.number,
-  levels: PropTypes.arrayOf(levelShape)
+  scriptLevels: PropTypes.arrayOf(scriptLevelShape)
 });
 
 export const lessonGroupShape = PropTypes.shape({
