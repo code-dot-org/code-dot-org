@@ -121,6 +121,8 @@ export default class AddLevelDialog extends Component {
   };
 
   render() {
+    console.log(this.state.searchFields);
+
     return (
       <BaseDialog
         isOpen={this.props.isOpen}
