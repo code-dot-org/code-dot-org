@@ -23,7 +23,8 @@ describe('RemoveLevelDialog', () => {
             activeId: 22,
             ids: [22]
           }
-        ]
+        ],
+        text: ''
       },
       levelPosToRemove: 1,
       handleClose,
