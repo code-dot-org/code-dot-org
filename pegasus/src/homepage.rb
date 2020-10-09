@@ -385,7 +385,7 @@ class Homepage
     hero_codebreak2020 =
       [{centering: "40% 80%", type: "stat", textposition: "bottom", image: "/images/homepage/blank_paper.jpg"}]
     hero_hoc2020 = [
-      {text: "homepage_hero_text_stat_students", centering: "50% 60%", type: "stat", textposition: "bottom", image: "/images/homepage/hoc2020.jpg"}
+      {text: "homepage_hero_text_stat_students", centering: "50% 80%", type: "stat", textposition: "bottom", image: "/images/homepage/hoc2020.jpg"}
     ]
     # Generate a random set of hero images alternating between non-celeb and celeb.
     heroes = get_heroes
