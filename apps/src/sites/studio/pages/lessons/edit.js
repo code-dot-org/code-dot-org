@@ -43,7 +43,7 @@ $(document).ready(function() {
       delete activitySection.description;
 
       activitySection.levels = activitySection.levels || [];
-      activitySection.levels.forEach((level, index) => {
+      activitySection.levels.forEach(level => {
         level.status = 'not started';
       });
 
