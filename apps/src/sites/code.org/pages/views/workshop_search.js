@@ -16,6 +16,8 @@ var map,
   infoWindow,
   markerClusterer;
 
+const ICON_SIZE_MODIFIER = 0.03;
+
 $(document).ready(function() {
   if (window.location.search.includes('mapbox')) {
     $('#gmap').hide();
@@ -135,32 +137,29 @@ function placeClusters() {
 }
 
 function placeIntroWorkshops() {
-  map.loadImage(
-    'https://maps.google.com/mapfiles/kml/paddle/red-blank.png',
-    (error, image) => {
-      if (error) {
-        console.log(error);
-        return;
-      }
-      map.addImage('marker', image);
-      map.addLayer({
-        id: 'intro-workshops',
-        type: 'symbol',
-        source: 'workshops',
-        filter: [
-          'all',
-          ['==', 'show_deep_dive_marker', 'false'],
-          ['!has', 'point_count']
-        ],
-        layout: {
-          'icon-image': 'marker',
-          'icon-size': 0.5,
-          'icon-anchor': 'bottom',
-          'icon-allow-overlap': true
-        }
-      });
+  map.loadImage('/images/map-markers/blank-marker.png', (error, image) => {
+    if (error) {
+      console.log(error);
+      return;
     }
-  );
+    map.addImage('marker', image);
+    map.addLayer({
+      id: 'intro-workshops',
+      type: 'symbol',
+      source: 'workshops',
+      filter: [
+        'all',
+        ['==', 'show_deep_dive_marker', 'false'],
+        ['!has', 'point_count']
+      ],
+      layout: {
+        'icon-image': 'marker',
+        'icon-size': ICON_SIZE_MODIFIER,
+        'icon-anchor': 'bottom',
+        'icon-allow-overlap': true
+      }
+    });
+  });
   map.on('click', 'intro-workshops', onMarkerClick);
   map.on('mouseenter', 'intro-workshops', function() {
     map.getCanvas().style.cursor = 'pointer';
@@ -168,32 +167,29 @@ function placeIntroWorkshops() {
 }
 
 function placeDeepDiveWorkshops() {
-  map.loadImage(
-    'https://maps.google.com/mapfiles/kml/paddle/red-stars.png',
-    (error, image) => {
-      if (error) {
-        console.log(error);
-        return;
-      }
-      map.addImage('star-marker', image);
-      map.addLayer({
-        id: 'deep-dive-workshops',
-        type: 'symbol',
-        source: 'workshops',
-        filter: [
-          'all',
-          ['==', 'show_deep_dive_marker', 'true'],
-          ['!has', 'point_count']
-        ],
-        layout: {
-          'icon-image': 'star-marker',
-          'icon-size': 0.5,
-          'icon-anchor': 'bottom',
-          'icon-allow-overlap': true
-        }
-      });
+  map.loadImage('/images/map-markers/star-marker.png', (error, image) => {
+    if (error) {
+      console.log(error);
+      return;
     }
-  );
+    map.addImage('star-marker', image);
+    map.addLayer({
+      id: 'deep-dive-workshops',
+      type: 'symbol',
+      source: 'workshops',
+      filter: [
+        'all',
+        ['==', 'show_deep_dive_marker', 'true'],
+        ['!has', 'point_count']
+      ],
+      layout: {
+        'icon-image': 'star-marker',
+        'icon-size': ICON_SIZE_MODIFIER,
+        'icon-anchor': 'bottom',
+        'icon-allow-overlap': true
+      }
+    });
+  });
   map.on('click', 'deep-dive-workshops', onMarkerClick);
   map.on('mouseenter', 'deep-dive-workshops', function() {
     map.getCanvas().style.cursor = 'pointer';
