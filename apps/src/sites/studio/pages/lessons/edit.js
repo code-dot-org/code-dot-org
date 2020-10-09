@@ -14,7 +14,7 @@ import {levelKeyList} from '@cdo/apps/lib/levelbuilder/lesson-editor/SampleActiv
 
 $(document).ready(function() {
   const lessonData = getScriptData('lesson');
-  const activities = lessonData.activities;
+  let activities = lessonData.activities;
 
   // Rename any keys that are different on the backend.
   activities.forEach(activity => {
@@ -52,6 +52,28 @@ $(document).ready(function() {
       });
     });
   });
+
+  if (activities.length === 0) {
+    activities = [
+      {
+        key: 'activity-1',
+        displayName: '',
+        position: 1,
+        duration: 0,
+        activitySections: [
+          {
+            key: 'activity-section-1',
+            title: '',
+            levels: [],
+            tips: [],
+            remarks: false,
+            slide: false,
+            text: ''
+          }
+        ]
+      }
+    ];
+  }
 
   registerReducers({...reducers});
   const store = getStore();

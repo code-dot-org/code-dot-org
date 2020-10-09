@@ -306,6 +306,25 @@ function activities(state = [], action) {
     }
     case REMOVE_ACTIVITY: {
       newState.splice(action.activityPosition - 1, 1);
+      if (newState.length === 0) {
+        newState.push({
+          key: 'activity-1',
+          displayName: '',
+          position: 1,
+          duration: 0,
+          activitySections: [
+            {
+              key: 'activity-section-1',
+              title: '',
+              levels: [],
+              tips: [],
+              remarks: false,
+              slide: false,
+              text: ''
+            }
+          ]
+        });
+      }
       updateActivityPositions(newState);
       updateActivitySectionPositions(newState);
       break;
@@ -350,6 +369,17 @@ function activities(state = [], action) {
       const activitySections =
         newState[action.activityPosition - 1].activitySections;
       activitySections.splice(action.activitySectionPosition - 1, 1);
+      if (newState.length === 1 && activitySections.length === 0) {
+        activitySections.push({
+          key: 'activity-section-1',
+          title: '',
+          levels: [],
+          tips: [],
+          remarks: false,
+          slide: false,
+          text: ''
+        });
+      }
       updateActivitySectionPositions(newState);
       break;
     }
