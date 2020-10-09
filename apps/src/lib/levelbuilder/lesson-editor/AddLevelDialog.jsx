@@ -121,6 +121,8 @@ export default class AddLevelDialog extends Component {
   };
 
   render() {
+    console.log(this.state.searchFields);
+
     return (
       <BaseDialog
         isOpen={this.props.isOpen}
@@ -155,7 +157,9 @@ export default class AddLevelDialog extends Component {
               </div>
             )}
             {this.state.methodOfAddingLevel === 'Create New Level' && (
-              <CreateNewLevelInputs />
+              <CreateNewLevelInputs
+                levelOptions={this.state.searchFields.levelOptions}
+              />
             )}
           </div>
           <div style={styles.rightColumn}>
