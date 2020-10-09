@@ -64,7 +64,7 @@
     "expand_debugger": "false",
     "preload_asset_list": null,
     "encrypted": "false",
-    "validation_enabled": "false",
+    "validation_enabled": "true",
     "libraries_enabled": "false"
   },
   "published": true,
