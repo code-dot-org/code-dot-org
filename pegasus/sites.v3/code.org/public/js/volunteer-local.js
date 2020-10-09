@@ -239,7 +239,7 @@ function loadMap(locations) {
 
   mapboxMap.on("load", function() {
     mapboxMap.loadImage(
-      "https://maps.google.com/mapfiles/kml/paddle/red-stars.png",
+      "/images/map-markers/star-marker.png",
       (error, image) => {
         if (error) {
           console.log(error);
