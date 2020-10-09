@@ -1,9 +1,7 @@
-/* global Maplace */
 /* exported sendEmail */
 /* global mapboxgl, MapboxGeocoder */
 
-var gmap;
-var gmap_loc;
+var map_loc;
 var selectize;
 
 var mapboxMap;
@@ -31,15 +29,6 @@ $(function() {
     plugins: ["remove_button"]
   });
 
-  $("#location")
-    .geocomplete()
-    .bind("geocode:result", function(event, result) {
-      var loc = result.geometry.location;
-      gmap_loc = loc.lat() + "," + loc.lng();
-      resetFacets();
-      initializeMap();
-    });
-
   // Trigger query when a facet is changed.
   $("#volunteer-search-facets")
     .find("select")
@@ -47,22 +36,20 @@ $(function() {
       initializeMap();
     });
 
-  if (window.location.search.indexOf("mapbox") !== -1) {
-    // Only the local volunteer search has a geocoder text input.
-    if (window.location.pathname.indexOf("/volunteer/local") !== -1) {
-      mapboxGeocoder = new MapboxGeocoder({
-        accessToken: mapboxgl.accessToken,
-        types: "country,region,place,postcode,locality,neighborhood"
-      });
+  // Only the local volunteer search has a geocoder text input.
+  if (window.location.pathname.indexOf("/volunteer/local") !== -1) {
+    mapboxGeocoder = new MapboxGeocoder({
+      accessToken: mapboxgl.accessToken,
+      types: "country,region,place,postcode,locality,neighborhood"
+    });
 
-      mapboxGeocoder.addTo("#mapbox-geocoder");
-      mapboxGeocoder.on("result", function(result) {
-        const coordinates = result.result.geometry.coordinates;
-        gmap_loc = coordinates[1] + "," + coordinates[0];
-        resetFacets();
-        initializeMap();
-      });
-    }
+    mapboxGeocoder.addTo("#mapbox-geocoder");
+    mapboxGeocoder.on("result", function(result) {
+      const coordinates = result.result.geometry.coordinates;
+      map_loc = coordinates[1] + "," + coordinates[0];
+      resetFacets();
+      initializeMap();
+    });
   }
 });
 
@@ -80,7 +67,7 @@ function getParams(form_data) {
   var params = [];
 
   if (window.location.pathname.indexOf("/volunteer/remote") !== -1) {
-    gmap_loc = "37.6,-95.665";
+    map_loc = "37.6,-95.665";
 
     params.push({
       name: "distance",
@@ -99,14 +86,14 @@ function getParams(form_data) {
   }
 
   // Default showing US results
-  if (!gmap_loc) {
+  if (!map_loc) {
     // Westlake park, Seattle
-    gmap_loc = "47.611089,-122.337034";
+    map_loc = "47.611089,-122.337034";
   }
 
   params.push({
     name: "coordinates",
-    value: gmap_loc
+    value: map_loc
   });
 
   $.each(form_data, function(key, field) {
@@ -215,15 +202,13 @@ function displayQueryError() {
 }
 
 function loadMap(locations) {
-  var coordinates = gmap_loc.split(",");
+  var coordinates = map_loc.split(",");
   var lat = coordinates[0];
   var lng = coordinates[1];
 
-  // Google map specific.
+  // Mapbox specific.
 
-  // Reset the map.
-  $("#gmap").html("");
-  gmap = new Maplace();
+  $("#mapbox-container").show();
 
   var mapOptions = {
     mapOptions: {
@@ -234,120 +219,108 @@ function loadMap(locations) {
     controls_on_map: false
   };
 
+  $("#mapbox-listings").html("");
+
   if (locations.length > 0) {
-    mapOptions.forceGenerateControls = true;
     mapOptions.locations = locations;
-    mapOptions.afterOpenInfowindow = function(index, location, marker) {
-      setContactTrigger(index, location, marker);
-    };
   }
 
-  gmap.Load(mapOptions);
+  mapboxMap = new mapboxgl.Map({
+    container: "mapbox",
+    style: "mapbox://styles/codeorg/cjyudafoo004w1cnpaeq8a0lz",
+    center: [lng, lat],
+    zoom: 1
+  });
 
-  // Mapbox specific.
+  mapboxStores = {
+    type: "FeatureCollection",
+    features: []
+  };
 
-  if (window.location.search.indexOf("mapbox") !== -1) {
-    $("#mapbox-container").show();
+  mapboxMap.on("load", function() {
+    mapboxMap.loadImage(
+      "https://maps.google.com/mapfiles/kml/paddle/red-stars.png",
+      (error, image) => {
+        if (error) {
+          console.log(error);
+          return;
+        }
 
-    $("#mapbox-listings").html("");
+        mapboxMap.addImage("star-marker", image);
+        mapboxMap.addSource("places", {
+          type: "geojson",
+          data: {
+            type: "FeatureCollection",
+            features: mapboxStores.features
+          }
+        });
 
-    mapboxMap = new mapboxgl.Map({
-      container: "mapbox",
-      style: "mapbox://styles/codeorg/cjyudafoo004w1cnpaeq8a0lz",
-      center: [lng, lat],
-      zoom: 1
-    });
+        // Add a layer showing the places.
+        mapboxMap.addLayer({
+          id: "places",
+          type: "symbol",
+          source: "places",
+          layout: {
+            "icon-image": "star-marker",
+            "icon-size": 0.5,
+            "icon-anchor": "bottom",
+            "icon-allow-overlap": true
+          }
+        });
 
-    mapboxStores = {
-      type: "FeatureCollection",
-      features: []
-    };
-
-    mapboxMap.on("load", function() {
-      mapboxMap.loadImage(
-        "https://maps.google.com/mapfiles/kml/paddle/red-stars.png",
-        (error, image) => {
-          if (error) {
-            console.log(error);
-            return;
+        if (mapOptions.locations && mapOptions.locations.length > 0) {
+          for (var i = 0; i < mapOptions.locations.length; i++) {
+            const location = mapOptions.locations[i];
+            const feature = {
+              type: "Feature",
+              properties: {
+                id: i,
+                description: location.html,
+                title: location.title,
+                "icon-image": "star-marker",
+                "icon-size": 22
+              },
+              geometry: {
+                type: "Point",
+                coordinates: [location.lon, location.lat]
+              }
+            };
+            mapboxStores.features.push(feature);
           }
 
-          mapboxMap.addImage("star-marker", image);
-          mapboxMap.addSource("places", {
-            type: "geojson",
-            data: {
-              type: "FeatureCollection",
-              features: mapboxStores.features
-            }
-          });
+          addMarkers(mapboxStores);
 
-          // Add a layer showing the places.
-          mapboxMap.addLayer({
-            id: "places",
-            type: "symbol",
-            source: "places",
-            layout: {
-              "icon-image": "star-marker",
-              "icon-size": 0.5,
-              "icon-anchor": "bottom",
-              "icon-allow-overlap": true
-            }
-          });
+          if (mapOptions.locations.length > 1) {
+            // Set up sidebar.
+            buildLocationList(mapboxStores);
 
-          if (mapOptions.locations && mapOptions.locations.length > 0) {
-            for (var i = 0; i < mapOptions.locations.length; i++) {
-              const location = mapOptions.locations[i];
-              const feature = {
-                type: "Feature",
-                properties: {
-                  id: i,
-                  description: location.html,
-                  title: location.title,
-                  "icon-image": "star-marker",
-                  "icon-size": 22
-                },
-                geometry: {
-                  type: "Point",
-                  coordinates: [location.lon, location.lat]
-                }
-              };
-              mapboxStores.features.push(feature);
-            }
-
-            addMarkers(mapboxStores);
-
-            if (mapOptions.locations.length > 1) {
-              // Set up sidebar.
-              buildLocationList(mapboxStores);
-
-              // And zoom to show the current set of markers.
-              zoomToCurrentMarkers();
-            } else if (mapOptions.locations.length === 1) {
-              // Just fly to the single marker.
-              flyToStore(mapboxStores.features[0]);
-            }
+            // And zoom to show the current set of markers.
+            zoomToCurrentMarkers();
+          } else if (mapOptions.locations.length === 1) {
+            // Just fly to the single marker.
+            flyToStore(mapboxStores.features[0]);
           }
         }
-      );
-    });
-
-    mapboxMap.on("click", "places", function(e) {
-      var coordinates = e.features[0].geometry.coordinates.slice();
-      var description = e.features[0].properties.description;
-
-      // Ensure that if the map is zoomed out such that multiple
-      // copies of the feature are visible, the popup appears
-      // over the copy being pointed to.
-      while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
-        coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
       }
+    );
+  });
 
-      new mapboxgl.Popup()
-        .setLngLat(coordinates)
-        .setHTML(description)
-        .addTo(mapboxMap);
-    });
-  }
+  mapboxMap.on("click", "places", function(e) {
+    var coordinates = e.features[0].geometry.coordinates.slice();
+    var description = e.features[0].properties.description;
+
+    // Ensure that if the map is zoomed out such that multiple
+    // copies of the feature are visible, the popup appears
+    // over the copy being pointed to.
+    while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+      coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+    }
+
+    new mapboxgl.Popup()
+      .setLngLat(coordinates)
+      .setHTML(description)
+      .addTo(mapboxMap);
+  });
 }
 
 /**
@@ -606,14 +579,6 @@ function compileContact(index, location) {
   $("#allnames").append(htmlStr);
 
   return htmlStr;
-}
-
-function setContactTrigger(index, location, marker) {
-  var contact_trigger = ".contact-trigger";
-  $("#gmap").on("click", contact_trigger, function() {
-    $("#name").html(location.contact_title);
-    $("#volunteer-id").val(location.id);
-  });
 }
 
 /* eslint-disable no-unused-vars */
