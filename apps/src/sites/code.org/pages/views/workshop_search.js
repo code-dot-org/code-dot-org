@@ -16,8 +16,6 @@ var map,
   infoWindow,
   markerClusterer;
 
-const ICON_SIZE_MODIFIER = 0.5;
-
 $(document).ready(function() {
   if (window.location.search.includes('mapbox')) {
     $('#gmap').hide();
@@ -154,7 +152,6 @@ function placeIntroWorkshops() {
       ],
       layout: {
         'icon-image': 'marker',
-        'icon-size': ICON_SIZE_MODIFIER,
         'icon-anchor': 'bottom',
         'icon-allow-overlap': true
       }
@@ -184,7 +181,6 @@ function placeDeepDiveWorkshops() {
       ],
       layout: {
         'icon-image': 'star-marker',
-        'icon-size': ICON_SIZE_MODIFIER,
         'icon-anchor': 'bottom',
         'icon-allow-overlap': true
       }
