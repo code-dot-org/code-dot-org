@@ -57,7 +57,7 @@ export default class MicroBitBoard extends EventEmitter {
       .then(() => this.boardClient_.connectBoard())
       .then(() => {
         // Expect this.boardClient_.firmataVersion to equal "Firmata Protocol <version number>"
-        // Expect this.boardClient_.firmwareVersion to equal "micro:bit Firmata 1.0"
+        // Expect this.boardClient_.firmwareVersion to contain "micro:bit Firmata 1.0"
         if (
           this.boardClient_.firmataVersion.includes('Firmata Protocol') &&
           this.boardClient_.firmwareVersion.includes('micro:bit Firmata')
@@ -83,8 +83,6 @@ export default class MicroBitBoard extends EventEmitter {
       };
     });
   }
-
-  initializeEventForwarding() {}
 
   /**
    * Enable existing board components
