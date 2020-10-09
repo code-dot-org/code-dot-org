@@ -45,6 +45,7 @@ cs:
         finish_sign_up_subheader_markdown: 'Vyplňte následující informace pro vytvoření účtu Code.org **%{email}**.'
         finish_sign_up_subheader_provider: 'Vyplňte následující informace pro vytvoření účtu Code.org prostřednictvím poskytovatele <strong>%{provider}</strong> pro <strong>%{email}</strong>.'
         finish_sign_up_subheader_provider_markdown: 'Vyplňte následující informace pro vytvoření účtu Code.org prostřednictvím poskytovatele **%{provider}** pro **%{email}**.'
+        reset_password_token: "Odkaz na obnovení hesla, který jsi použil/a."
         error:
           future: nemůže být v budoucnosti
   beta: "beta"

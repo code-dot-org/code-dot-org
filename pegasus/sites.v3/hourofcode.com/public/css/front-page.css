@@ -96,6 +96,51 @@ a.category-link {
   margin-right: 10px;
 }
 
+.banner-box {
+  display: table;
+  width: 100%;
+  max-height: 400px;
+}
+
+.banner-image-box {
+  display: table-cell;
+  float: none;
+  width: 50%;
+  height: auto;
+  background-color: #e0ffff;
+  text-align: center;
+  vertical-align: middle;
+  padding: 20px;
+}
+
+.banner-image {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+}
+
+.banner-message-box {
+  display: table-cell;
+  float: none;
+  width: 50%;
+  height: auto;
+  background-color: #00adbc;
+  text-align: left;
+  vertical-align: middle;
+  padding: 20px;
+}
+
+.banner-title {
+  font-family: 'Gotham 7r', sans-serif;
+  color: white;
+  line-height: 1.2;
+}
+
+.banner-message {
+  color: white;
+  line-height: 1.2;
+}
+
 @media screen and (min-width: 0px) and (max-width: 600px) {
   .announcements-body {
     min-width: 100%;
@@ -113,6 +158,14 @@ a.category-link {
     font-size: 16px;
     line-height: 18px;
     margin-bottom: 20px;
+  }
+
+  .banner-title {
+    font-size: 16px;
+  }
+
+  .banner-message {
+    font-size: 14px;
   }
 }
 
@@ -134,6 +187,14 @@ a.category-link {
     line-height: 24px;
     margin-bottom: 80px;
   }
+
+  .banner-title {
+    font-size: 20px;
+  }
+
+  .banner-message {
+    font-size: 18px;
+  }
 }
 
 @media screen and (min-width: 1201px) {
@@ -152,6 +213,15 @@ a.category-link {
   .front-header-description {
     font-size: 24px;
     margin-bottom: 80px;
+  }
+
+  .banner-title {
+    font-size: 24px;
+  }
+
+  .banner-message {
+    font-size: 20px;
+    line-height: 1.5
   }
 }
 

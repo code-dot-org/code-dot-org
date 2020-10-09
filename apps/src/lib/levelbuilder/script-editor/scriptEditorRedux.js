@@ -1,4 +1,6 @@
 import _ from 'lodash';
+import PropTypes from 'prop-types';
+import {lessonGroupShape} from '@cdo/apps/lib/levelbuilder/shapes';
 
 const INIT = 'scriptEditor/INIT';
 const ADD_GROUP = 'scriptEditor/ADD_GROUP';
@@ -8,7 +10,9 @@ const MOVE_LESSON = 'scriptEditor/MOVE_LESSON';
 const REMOVE_GROUP = 'scriptEditor/REMOVE_GROUP';
 const REMOVE_LESSON = 'scriptEditor/REMOVE_LESSON';
 const SET_LESSON_GROUP = 'scriptEditor/SET_LESSON_GROUP';
-const CONVERT_GROUP = 'scriptEditor/CONVERT_GROUP';
+const CONVERT_GROUP_USER_FACING = 'scriptEditor/CONVERT_GROUP_USER_FACING';
+const CONVERT_GROUP_NON_USER_FACING =
+  'scriptEditor/CONVERT_GROUP_NON_USER_FACING';
 const REORDER_LESSON = 'scriptEditor/REORDER_LESSON';
 const UPDATE_LESSON_GROUP_FIELD = 'scriptEditor/UPDATE_LESSON_GROUP_FIELD';
 
@@ -70,10 +74,15 @@ export const setLessonGroup = (
 });
 
 export const convertGroupToUserFacing = (groupPosition, key, displayName) => ({
-  type: CONVERT_GROUP,
+  type: CONVERT_GROUP_USER_FACING,
   groupPosition,
   key,
   displayName
+});
+
+export const convertGroupToNonUserFacing = groupPosition => ({
+  type: CONVERT_GROUP_NON_USER_FACING,
+  groupPosition
 });
 
 export const reorderLesson = (
@@ -126,13 +135,16 @@ function lessonGroups(state = [], action) {
 
   switch (action.type) {
     case INIT:
+      validateLessonGroups(action.lessonGroups, action.type);
       return action.lessonGroups;
     case ADD_GROUP: {
       newState.push({
         key: action.groupKey,
-        display_name: action.groupName,
-        user_facing: false,
+        displayName: action.groupName,
+        userFacing: true,
         position: action.groupPosition,
+        bigQuestions: '',
+        description: '',
         lessons: []
       });
       updateGroupPositions(newState);
@@ -150,6 +162,9 @@ function lessonGroups(state = [], action) {
     }
     case REMOVE_GROUP: {
       newState.splice(action.groupPosition - 1, 1);
+      if (newState.length === 0) {
+        newState.push(emptyNonUserFacingGroup);
+      }
       updateLessonPositions(newState);
       break;
     }
@@ -221,10 +236,17 @@ function lessonGroups(state = [], action) {
 
       break;
     }
-    case CONVERT_GROUP: {
+    case CONVERT_GROUP_USER_FACING: {
       newState[action.groupPosition - 1].key = action.key;
-      newState[action.groupPosition - 1].display_name = action.displayName;
-      newState[action.groupPosition - 1].user_facing = true;
+      newState[action.groupPosition - 1].displayName = action.displayName;
+      newState[action.groupPosition - 1].userFacing = true;
+      break;
+    }
+    case CONVERT_GROUP_NON_USER_FACING: {
+      newState[action.groupPosition - 1].displayName = null;
+      newState[action.groupPosition - 1].bigQuestions = '';
+      newState[action.groupPosition - 1].description = '';
+      newState[action.groupPosition - 1].userFacing = false;
       break;
     }
     case REORDER_LESSON: {
@@ -255,4 +277,21 @@ function levelKeyList(state = {}, action) {
 export default {
   levelKeyList,
   lessonGroups
+};
+
+// Use PropTypes.checkPropTypes to enforce that each entry in the array of
+// lessonGroups matches the shape defined in lessonGroupShape.
+function validateLessonGroups(lessonGroups, location) {
+  const propTypes = {activities: PropTypes.arrayOf(lessonGroupShape)};
+  PropTypes.checkPropTypes(propTypes, {lessonGroups}, 'property', location);
+}
+
+export const emptyNonUserFacingGroup = {
+  key: `non-user-facing-lg`,
+  displayName: null,
+  userFacing: false,
+  position: 1,
+  bigQuestions: '',
+  description: '',
+  lessons: []
 };
