@@ -901,7 +901,7 @@ level 'Level 3'
     input_dsl = <<~DSL
       lesson_group 'my_group', display_name: 'Display Name'
       lesson_group_description 'This is a description'
-      lesson_group_big_questions 'Who? 'What? Where?'
+      lesson_group_big_questions 'Who? What? Where?'
       lesson 'Bob\\'s stage', display_name: 'Bob\\'s stage'
       level 'Level 1', progression: 'Bob\\'s progression'
       level 'Level 2'
