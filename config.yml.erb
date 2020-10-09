@@ -238,14 +238,13 @@ new_relic_license_key:
 newrelic_logging: false
 
 # Credentials for Google-federated AWS access.
+# (Deprecated: move these configuration values to AWS config file)
 aws_role:
 google_client_id:
 google_client_secret:
 
-# Static AWS SDK credentials (prefer Google-federated authentication if possible).
+# Default AWS region for the application.
 aws_region: us-east-1
-aws_access_key:
-aws_secret_key:
 
 # Amazon Future Engineer integration
 afe_pardot_form_handler_url:

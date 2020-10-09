@@ -17,7 +17,7 @@ The annual Computer Science State Policy Forum brings together legislators, educ
 3. [Webinar Series](#Step 3) (Various dates all at 3:00 - 4:00 pm ET)
 	* October 22: We Required All Schools to Offer CS, This is What Happened Next
 	* October 29: This Equity Guidance Will Change How You Make CS Education Decisions
-	* November 5: This is How Micro-credentials Can Revolutionize CS Certification
+	* November 5: How Micro-credentials Can Revolutionize CS Certification
 	* November 12: Top 10 Things CS Education Researchers Wish They Could Tell Policymakers and Practitioners
 
 
@@ -108,7 +108,7 @@ Session | Description| Date |Link|
 --------------|------------|---------|--------|
 We Required All Schools to Offer CS, This is What Happened Next| Learn about how Indiana, Maryland, and West Virginia came to requiring all high schools to teach computer science, how the implementation of the policy is going, and what has happened since.|Oct 22 |<a href="https://code.zoom.us/webinar/register/WN_pUFM2Sc0SJChq2o-nWpxiA"><button>Register</button></a>|
 This Equity Guidance Will Change How You Make CS Education Decisions| Learn about the Kapor Center's work in improving equity in computer science education and how to translate intention into equity-focused policy decisions.|Oct 29 |<a href="https://code.zoom.us/webinar/register/WN_X0VopcwdQCeqMh2wmWuvWQ"><button>Register</button></a>|
-This is How Micro-credentials Can Revolutionize CS Certification  	|Learn about micro-credentials, an innovative, competency-based approach to computer science professional learning and certification.| Nov 5|<a href="https://code.zoom.us/webinar/register/WN_L7f0JPVZQRCrT-9uheBGyQ"><button>Register</button></a>|
+How Micro-credentials Can Revolutionize CS Certification  	|Learn about micro-credentials, an innovative, competency-based approach to computer science professional learning and certification.| Nov 5|<a href="https://code.zoom.us/webinar/register/WN_L7f0JPVZQRCrT-9uheBGyQ"><button>Register</button></a>|
 Top 10 Things CS Education Researchers Wish They Could Tell Policymakers and Practitioners |Learn from a trifecta of research, policy, and practical expertise in order to guide high-quality and lasting change in CS education.| Nov 12 |<a href="https://code.zoom.us/webinar/register/WN__sBU59Z2SeGpmeADRUnrvA"><button>Register</button></a>|
 
 

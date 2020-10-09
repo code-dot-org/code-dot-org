@@ -1,4 +1,6 @@
 import _ from 'lodash';
+import PropTypes from 'prop-types';
+import {lessonGroupShape} from '@cdo/apps/lib/levelbuilder/shapes';
 
 const INIT = 'scriptEditor/INIT';
 const ADD_GROUP = 'scriptEditor/ADD_GROUP';
@@ -133,6 +135,7 @@ function lessonGroups(state = [], action) {
 
   switch (action.type) {
     case INIT:
+      validateLessonGroups(action.lessonGroups, action.type);
       return action.lessonGroups;
     case ADD_GROUP: {
       newState.push({
@@ -275,6 +278,13 @@ export default {
   levelKeyList,
   lessonGroups
 };
+
+// Use PropTypes.checkPropTypes to enforce that each entry in the array of
+// lessonGroups matches the shape defined in lessonGroupShape.
+function validateLessonGroups(lessonGroups, location) {
+  const propTypes = {activities: PropTypes.arrayOf(lessonGroupShape)};
+  PropTypes.checkPropTypes(propTypes, {lessonGroups}, 'property', location);
+}
 
 export const emptyNonUserFacingGroup = {
   key: `non-user-facing-lg`,
