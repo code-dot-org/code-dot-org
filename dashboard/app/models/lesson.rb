@@ -12,11 +12,12 @@
 #  relative_position :integer          not null
 #  properties        :text(65535)
 #  lesson_group_id   :integer
-#  key               :string(255)
+#  key               :string(255)      not null
 #
 # Indexes
 #
-#  index_stages_on_script_id  (script_id)
+#  index_stages_on_lesson_group_id_and_key  (lesson_group_id,key) UNIQUE
+#  index_stages_on_script_id_and_key        (script_id,key) UNIQUE
 #
 
 require 'cdo/shared_constants'
