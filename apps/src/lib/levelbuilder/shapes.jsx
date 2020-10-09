@@ -63,3 +63,25 @@ export const activityShape = PropTypes.shape({
   duration: PropTypes.number,
   activitySections: PropTypes.arrayOf(activitySectionShape)
 });
+
+export const lessonShape = PropTypes.shape({
+  id: PropTypes.number,
+  key: PropTypes.string,
+  name: PropTypes.string,
+  position: PropTypes.number,
+  lockable: PropTypes.bool,
+  unplugged: PropTypes.bool,
+  assessment: PropTypes.bool,
+  relativePosition: PropTypes.number,
+  levels: PropTypes.arrayOf(levelShape)
+});
+
+export const lessonGroupShape = PropTypes.shape({
+  key: PropTypes.string,
+  display_name: PropTypes.string,
+  position: PropTypes.number,
+  user_facing: PropTypes.bool,
+  big_questions: PropTypes.string,
+  description: PropTypes.string,
+  lessons: PropTypes.arrayOf(lessonShape)
+});

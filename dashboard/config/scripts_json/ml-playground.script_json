@@ -1,0 +1,351 @@
+{
+  "script": {
+    "name": "ml-playground",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": true,
+    "properties": {
+      "peer_reviews_to_complete": 0
+    },
+    "new_name": null,
+    "family_name": null,
+    "seeding_key": {
+      "script.name": "ml-playground"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "ml-playground"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "USE Projects",
+      "name": "USE Projects",
+      "absolute_position": 1,
+      "lockable": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "USE Projects",
+        "lesson_group.key": "",
+        "script.name": "ml-playground"
+      }
+    },
+    {
+      "key": "MODIFY Projects",
+      "name": "MODIFY Projects",
+      "absolute_position": 2,
+      "lockable": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "MODIFY Projects",
+        "lesson_group.key": "",
+        "script.name": "ml-playground"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+        "progression": "Project 1 - Movie Recommendations"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ml-netflix use-1"
+        ],
+        "lesson.key": "USE Projects",
+        "lesson_group.key": "",
+        "script.name": "ml-playground"
+      },
+      "level_keys": [
+        "ml-netflix use-1"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+        "progression": "Project 2 - Olympics [create design]"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "applab-ml-test-2"
+        ],
+        "lesson.key": "USE Projects",
+        "lesson_group.key": "",
+        "script.name": "ml-playground"
+      },
+      "level_keys": [
+        "applab-ml-test-2"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+        "progression": "Project 1 - Dog Predictor"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "applab-ml-test-3"
+        ],
+        "lesson.key": "MODIFY Projects",
+        "lesson_group.key": "",
+        "script.name": "ml-playground"
+      },
+      "level_keys": [
+        "applab-ml-test-3"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+        "progression": "Project 2 - Candy Predictor"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ml-candy modify-1"
+        ],
+        "lesson.key": "MODIFY Projects",
+        "lesson_group.key": "",
+        "script.name": "ml-playground"
+      },
+      "level_keys": [
+        "ml-candy modify-1"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 3,
+      "assessment": null,
+      "properties": {
+        "progression": "Project 2 - Candy Predictor"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ml-candy modify-2"
+        ],
+        "lesson.key": "MODIFY Projects",
+        "lesson_group.key": "",
+        "script.name": "ml-playground"
+      },
+      "level_keys": [
+        "ml-candy modify-2"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 4,
+      "assessment": null,
+      "properties": {
+        "progression": "Project 2 - Candy Predictor"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ml-candy modify-3"
+        ],
+        "lesson.key": "MODIFY Projects",
+        "lesson_group.key": "",
+        "script.name": "ml-playground"
+      },
+      "level_keys": [
+        "ml-candy modify-3"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 5,
+      "assessment": null,
+      "properties": {
+        "progression": "Project 2 - Candy Predictor"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ml-candy modify-4"
+        ],
+        "lesson.key": "MODIFY Projects",
+        "lesson_group.key": "",
+        "script.name": "ml-playground"
+      },
+      "level_keys": [
+        "ml-candy modify-4"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 6,
+      "assessment": null,
+      "properties": {
+        "progression": "Project 2 - Candy Predictor"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ml-candy modify-5"
+        ],
+        "lesson.key": "MODIFY Projects",
+        "lesson_group.key": "",
+        "script.name": "ml-playground"
+      },
+      "level_keys": [
+        "ml-candy modify-5"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 7,
+      "assessment": null,
+      "properties": {
+        "progression": "Project 2 - Candy Predictor"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ml-candy modify-6"
+        ],
+        "lesson.key": "MODIFY Projects",
+        "lesson_group.key": "",
+        "script.name": "ml-playground"
+      },
+      "level_keys": [
+        "ml-candy modify-6"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "ml-netflix use-1",
+        "script_level.level_keys": [
+          "ml-netflix use-1"
+        ],
+        "lesson.key": "USE Projects",
+        "lesson_group.key": "",
+        "script.name": "ml-playground"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "applab-ml-test-2",
+        "script_level.level_keys": [
+          "applab-ml-test-2"
+        ],
+        "lesson.key": "USE Projects",
+        "lesson_group.key": "",
+        "script.name": "ml-playground"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "applab-ml-test-3",
+        "script_level.level_keys": [
+          "applab-ml-test-3"
+        ],
+        "lesson.key": "MODIFY Projects",
+        "lesson_group.key": "",
+        "script.name": "ml-playground"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ml-candy modify-1",
+        "script_level.level_keys": [
+          "ml-candy modify-1"
+        ],
+        "lesson.key": "MODIFY Projects",
+        "lesson_group.key": "",
+        "script.name": "ml-playground"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ml-candy modify-2",
+        "script_level.level_keys": [
+          "ml-candy modify-2"
+        ],
+        "lesson.key": "MODIFY Projects",
+        "lesson_group.key": "",
+        "script.name": "ml-playground"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ml-candy modify-3",
+        "script_level.level_keys": [
+          "ml-candy modify-3"
+        ],
+        "lesson.key": "MODIFY Projects",
+        "lesson_group.key": "",
+        "script.name": "ml-playground"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ml-candy modify-4",
+        "script_level.level_keys": [
+          "ml-candy modify-4"
+        ],
+        "lesson.key": "MODIFY Projects",
+        "lesson_group.key": "",
+        "script.name": "ml-playground"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ml-candy modify-5",
+        "script_level.level_keys": [
+          "ml-candy modify-5"
+        ],
+        "lesson.key": "MODIFY Projects",
+        "lesson_group.key": "",
+        "script.name": "ml-playground"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ml-candy modify-6",
+        "script_level.level_keys": [
+          "ml-candy modify-6"
+        ],
+        "lesson.key": "MODIFY Projects",
+        "lesson_group.key": "",
+        "script.name": "ml-playground"
+      }
+    }
+  ]
+}

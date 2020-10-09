@@ -134,7 +134,7 @@ class LessonsControllerTest < ActionController::TestCase
       position: 1,
       seeding_key: 'key_a'
     ).id
-    id_b = @lesson.lesson_activities.create(
+    @lesson.lesson_activities.create(
       name: 'activity B',
       position: 2,
       seeding_key: 'key_b'
@@ -172,8 +172,6 @@ class LessonsControllerTest < ActionController::TestCase
     assert_equal 'activity C', activities.last.name
     assert_equal 2, activities.last.position
     assert_equal id_c, activities.last.id
-
-    assert_equal 0, LessonActivity.where(id: id_b).count
   end
 
   test 'add activity section via lesson update' do
@@ -224,7 +222,7 @@ class LessonsControllerTest < ActionController::TestCase
       position: 1,
       seeding_key: 'activity-key'
     )
-    id_a = activity.activity_sections.create(
+    activity.activity_sections.create(
       name: 'section A',
       position: 1,
       seeding_key: 'key_a'
@@ -262,7 +260,5 @@ class LessonsControllerTest < ActionController::TestCase
     assert_equal 'section B', section.name
     assert_equal 1, section.position
     assert_equal id_b, section.id
-
-    assert_equal 0, LessonActivity.where(id: id_a).count
   end
 end
