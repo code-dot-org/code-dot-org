@@ -1,4 +1,4 @@
-/* global Maplace, mapboxgl */
+/* global mapboxgl, MapboxGeocoder */
 
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -27,14 +27,19 @@ $(function() {
   });
 
   setFacetDefaults();
-
-  $('#location')
-    .geocomplete()
-    .bind('geocode:result', function(event, result) {
-      var loc = result.geometry.location;
-      map_loc = loc.lat() + ',' + loc.lng();
-      submitForm();
-    });
+  $('#mapboxgeocoder').show();
+  var geocoder = new MapboxGeocoder({
+    accessToken: mapboxgl.accessToken,
+    mapboxgl: mapboxgl,
+    marker: false,
+    types: 'country,region,district,postcode,locality,place'
+  });
+  geocoder.on('result', function(result) {
+    var loc = result.result.geometry.coordinates;
+    map_loc = loc[1] + ',' + loc[0];
+    submitForm();
+  });
+  geocoder.addTo('#mapboxgeocoder');
 
   // Make the map sticky.
   $('#map').sticky({topSpacing: 0});
@@ -131,116 +136,87 @@ function loadMap(locations) {
 
   // Reset the map.
   $('#map').html('');
-  if (window.location.search.includes('mapbox')) {
-    const featureList = locations.map((location, index) => ({
-      type: 'Feature',
-      properties: {
-        description: location.html,
-        title: location.title,
-        index
-      },
-      geometry: {
-        type: 'Point',
-        coordinates: [parseFloat(location.lon), parseFloat(location.lat)]
-      }
-    }));
-    map = new mapboxgl.Map({
-      container: 'map',
-      style: 'mapbox://styles/mapbox/streets-v11',
-      zoom: 10,
-      minZoom: 1,
-      center: [lng, lat]
-    });
-    map.on('load', function() {
-      map.loadImage(
-        'https://docs.mapbox.com/mapbox-gl-js/assets/custom_marker.png',
-        function(error, image) {
-          if (error) {
-            logToCloud.addPageAction(
-              logToCloud.PageAction.MapboxMarkerLoadError,
-              {
-                error
-              }
-            );
-            throw error;
-          }
-          map.addImage('custom-marker', image);
-          map.addSource('places', {
-            type: 'geojson',
-            data: {
-              type: 'FeatureCollection',
-              features: featureList
+  const featureList = locations.map((location, index) => ({
+    type: 'Feature',
+    properties: {
+      description: location.html,
+      title: location.title,
+      index
+    },
+    geometry: {
+      type: 'Point',
+      coordinates: [parseFloat(location.lon), parseFloat(location.lat)]
+    }
+  }));
+  map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/streets-v11',
+    zoom: 10,
+    minZoom: 1,
+    center: [lng, lat]
+  });
+  map.on('load', function() {
+    map.loadImage(
+      'https://docs.mapbox.com/mapbox-gl-js/assets/custom_marker.png',
+      function(error, image) {
+        if (error) {
+          logToCloud.addPageAction(
+            logToCloud.PageAction.MapboxMarkerLoadError,
+            {
+              error
             }
-          });
-          // Add a layer showing the places.
-          map.addLayer({
-            id: 'places',
-            type: 'symbol',
-            source: 'places',
-            layout: {
-              'icon-image': 'custom-marker',
-              'icon-allow-overlap': true
-            }
-          });
-
-          // When a click event occurs on a feature in the places layer, open a popup at the
-          // location of the feature, with description HTML from its properties.
-          map.on('click', 'places', function(e) {
-            var coordinates = e.features[0].geometry.coordinates.slice();
-
-            // Ensure that if the map is zoomed out such that multiple
-            // copies of the feature are visible, the popup appears
-            // over the copy being pointed to.
-            while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
-              coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
-            }
-            resultList(
-              featureList,
-              lng,
-              lat,
-              e.features[0].properties.index + 1
-            );
-            createPopUp(e.features[0]);
-          });
-
-          // Change the cursor to a pointer when the mouse is over the places layer.
-          map.on('mouseenter', 'places', function() {
-            map.getCanvas().style.cursor = 'pointer';
-          });
-
-          // Change it back to a pointer when it leaves.
-          map.on('mouseleave', 'places', function() {
-            map.getCanvas().style.cursor = '';
-          });
+          );
+          throw error;
         }
-      );
-    });
-    // builds the side menu with the list of classes
-    if (featureList.length > 0) {
-      resultList(featureList, lng, lat, 0);
-    }
-  } else {
-    map = new Maplace();
+        map.addImage('custom-marker', image);
+        map.addSource('places', {
+          type: 'geojson',
+          data: {
+            type: 'FeatureCollection',
+            features: featureList
+          }
+        });
+        // Add a layer showing the places.
+        map.addLayer({
+          id: 'places',
+          type: 'symbol',
+          source: 'places',
+          layout: {
+            'icon-image': 'custom-marker',
+            'icon-allow-overlap': true
+          }
+        });
 
-    var map_options = {
-      map_options: {
-        set_center: [lat, lng],
-        zoom: 12
-      },
-      controls_type: 'list',
-      controls_on_map: false,
-      map_div: '#map'
-    };
+        // When a click event occurs on a feature in the places layer, open a popup at the
+        // location of the feature, with description HTML from its properties.
+        map.on('click', 'places', function(e) {
+          var coordinates = e.features[0].geometry.coordinates.slice();
 
-    if (locations.length > 0) {
-      map_options.force_generate_controls = true;
-      map_options.locations = locations;
-      map_options.afterOpenInfowindow = function(index, location, marker) {
-        setDetailsTrigger(index, location, marker);
-      };
-    }
+          // Ensure that if the map is zoomed out such that multiple
+          // copies of the feature are visible, the popup appears
+          // over the copy being pointed to.
+          while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+            coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+          }
+          resultList(featureList, lng, lat, e.features[0].properties.index + 1);
+          createPopUp(e.features[0]);
+        });
 
-    map.Load(map_options);
+        // Change the cursor to a pointer when the mouse is over the places layer.
+        map.on('mouseenter', 'places', function() {
+          map.getCanvas().style.cursor = 'pointer';
+        });
+
+        // Change it back to a pointer when it leaves.
+        map.on('mouseleave', 'places', function() {
+          map.getCanvas().style.cursor = '';
+        });
+      }
+    );
+  });
+  // builds the side menu with the list of classes
+  if (featureList.length > 0) {
+    resultList(featureList, lng, lat, 0);
   }
 }
 
