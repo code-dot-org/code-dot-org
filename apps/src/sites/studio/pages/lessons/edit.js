@@ -39,7 +39,7 @@ $(document).ready(function() {
       activitySection.displayName = activitySection.name;
       delete activitySection.name;
 
-      activitySection.text = activitySection.description;
+      activitySection.text = activitySection.description || '';
       delete activitySection.description;
 
       activitySection.levels = activitySection.levels || [];
