@@ -3,9 +3,15 @@ import {expect} from '../../../../util/reconfiguredChai';
 import '@cdo/apps/flappy/flappy'; // Importing the app forces the test to load Blockly
 
 describe('Google Blockly Wrapper', () => {
+  const cdoBlockly = Blockly;
   beforeEach(() => {
     Blockly = GoogleBlockly; // eslint-disable-line no-global-assign
   });
+  afterEach(() => {
+    // reset Blockly for other tests
+    Blockly = cdoBlockly; // eslint-disable-line no-global-assign
+  });
+
   it('readOnly properties cannot be set', () => {
     const readOnlyProperties = [
       'ALIGN_CENTRE',
