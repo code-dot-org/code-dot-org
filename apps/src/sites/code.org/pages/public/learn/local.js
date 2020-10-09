@@ -163,7 +163,7 @@ function loadMap(locations) {
         });
         throw error;
       }
-      map.addImage('star-marker', image);
+      map.addImage('dot-marker', image);
       map.addSource('places', {
         type: 'geojson',
         data: {
@@ -177,7 +177,7 @@ function loadMap(locations) {
         type: 'symbol',
         source: 'places',
         layout: {
-          'icon-image': 'star-marker',
+          'icon-image': 'dot-marker',
           'icon-allow-overlap': true
         }
       });
