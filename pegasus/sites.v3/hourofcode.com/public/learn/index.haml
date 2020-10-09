@@ -61,7 +61,7 @@ social:
       background-position: 70% 70%;
     }
   }
-  /* Use the mobile image when the text gets centered */
+  /* Use the narrow image for narrower screens */
   @media screen and (max-width: 600px) {
     #fullwidth {
       background-image: url(#{CDO.code_org_url('/images/learn/hoc2020_background_narrow.png')});
@@ -123,16 +123,6 @@ social:
       defaultSortByPopularity: #{Tutorials.sort_by_popularity?(request.site, DCDO.get("hoc_mode", CDO.default_hoc_mode))}
     });
     tutorialExplorerManager.renderToElement(document.getElementById('tutorials'));
-
-    var studentImage = "#{CDO.code_org_url('/images/learn/hoc2019_foreground.png')}";
-    var img = $('<img>');
-    img.attr('src', studentImage);
-    img.attr('style', 'opacity: 0');
-    img.attr('alt', '');
-    img.appendTo('#studentImage');
-    img.on('load', function() {
-      img.fadeTo('normal', 1);
-    });
 
     // Open banner links in new tab; we render them with markdown, so we can't do this in the haml
     // Add the rel tag to attempt to mitigate the inherent danger in opening
