@@ -187,7 +187,6 @@ function onMarkerClick(e) {
   const popup = new mapboxgl.Popup({className: 'popup'})
     .setLngLat(coordinates)
     .setHTML(description);
-  //popup.addClassName('popup');
   popup.addTo(map);
 }
 
