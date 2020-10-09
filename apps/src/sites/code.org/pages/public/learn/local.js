@@ -156,10 +156,7 @@ function loadMap(locations) {
     center: [lng, lat]
   });
   map.on('load', function() {
-    map.loadImage('/images/map-markers/star-marker.png', function(
-      error,
-      image
-    ) {
+    map.loadImage('/images/map-markers/dot-marker.png', function(error, image) {
       if (error) {
         logToCloud.addPageAction(logToCloud.PageAction.MapboxMarkerLoadError, {
           error
