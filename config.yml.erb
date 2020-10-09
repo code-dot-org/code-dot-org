@@ -238,14 +238,13 @@ new_relic_license_key:
 newrelic_logging: false
 
 # Credentials for Google-federated AWS access.
+# (Deprecated: move these configuration values to AWS config file)
 aws_role:
 google_client_id:
 google_client_secret:
 
-# Static AWS SDK credentials (prefer Google-federated authentication if possible).
+# Default AWS region for the application.
 aws_region: us-east-1
-aws_access_key:
-aws_secret_key:
 
 # Amazon Future Engineer integration
 afe_pardot_form_handler_url:
@@ -426,7 +425,7 @@ proxy: false # If true, generated URLs will not include explicit port numbers in
 # Run dashboard-server with the level editing interface enabled (for admins)
 levelbuilder_mode:
 
-default_hoc_mode:   pre-hoc # overridden by 'hoc_mode' DCDO param, except in :test
+default_hoc_mode:   soon-hoc # overridden by 'hoc_mode' DCDO param, except in :test
 default_hoc_launch: ''       # overridden by 'hoc_launch' DCDO param, except in :test
 
 localize_apps: false
@@ -464,6 +463,7 @@ image_optim: <%=chef_managed && !ci_test%>
 # Used to export data on professional learning to gsheets
 applications_2020_2021_gsheet_key: !Secret
 enrollments_summer_2020_gsheet_key:
+applications_2021_2022_gsheet_key: !Secret
 
 # Referenced in Chef config, but not sure if they are still used anywhere?
 # TODO: verify these are intentionally no longer used and remove references from Chef config.
