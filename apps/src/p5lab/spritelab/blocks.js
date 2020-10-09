@@ -348,6 +348,22 @@ const customInputTypes = {
     generateCode(block, arg) {
       return `'${block.getTitleValue(arg.name)}'`;
     }
+  },
+  variableNamePicker: {
+    addInputRow(blockly, block, inputConfig) {
+      return block.appendValueInput(inputConfig.name);
+    },
+
+    generateCode(block, arg) {
+      const input = block.getInput(arg.name);
+      if (input) {
+        const targetBlock = input.connection.targetBlock();
+        if (targetBlock && targetBlock.type === 'variables_get') {
+          return `'${targetBlock.inputList[0].titleRow[0].value_}'`;
+        }
+      }
+      return '';
+    }
   }
 };
 
