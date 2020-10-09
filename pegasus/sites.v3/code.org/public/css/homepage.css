@@ -133,7 +133,7 @@ body.modal-open .supreme-container{
   line-height: 44px;
   color: #00ADBC;
   margin-top: 0px;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
 }
 
 #homepage .hero-message-second {
@@ -148,7 +148,18 @@ body.modal-open .supreme-container{
   color: #4d575f;
   font-size: 24px;
   line-height: 32px;
-  margin-bottom: 80px;
+}
+
+@media screen and (min-width: 0px) and (max-width: 600px) {
+  #homepage .hero-sub-message {
+    margin-bottom: 80px;
+  }
+}
+
+@media screen and (min-width: 601px) {
+  #homepage .hero-sub-message {
+    margin-bottom: 130px;
+  }
 }
 
 #homepage .hero-message-mobile {
