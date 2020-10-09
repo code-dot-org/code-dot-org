@@ -70,8 +70,7 @@ class Gamelab < Blockly
         properties: {
           code_functions: JSON.parse(palette),
           show_debug_watch: true
-        },
-        validation_enabled: true
+        }
       )
     )
   end

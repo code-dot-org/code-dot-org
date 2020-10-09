@@ -42,8 +42,7 @@ class Weblab < Level
         user: params[:user],
         game: Game.weblab,
         level_num: 'custom',
-        properties: {},
-        validation_enabled: true
+        properties: {}
       )
     )
   end

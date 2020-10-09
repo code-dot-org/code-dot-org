@@ -81,8 +81,7 @@ class Applab < Blockly
         level_num: 'custom',
         properties: {
           code_functions: JSON.parse(palette),
-        },
-        validation_enabled: true
+        }
       )
     )
   end
