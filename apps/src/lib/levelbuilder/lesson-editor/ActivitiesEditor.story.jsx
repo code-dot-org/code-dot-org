@@ -8,7 +8,7 @@ import {Provider} from 'react-redux';
 import {
   sampleActivities,
   levelKeyList
-} from '../../../../test/unit/lib/levelbuilder/activitiesTestData';
+} from '../../../../test/unit/lib/levelbuilder/lesson-editor/activitiesTestData';
 
 const createStore = () => {
   registerReducers({...reducers});
