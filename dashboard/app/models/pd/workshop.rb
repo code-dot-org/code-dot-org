@@ -608,7 +608,7 @@ class Pd::Workshop < ActiveRecord::Base
       longitude: result.longitude,
       city: result.city,
       state: result.state,
-      formatted_address: result.formatted_address
+      formatted_address: result.address
     }.to_json
   end
 
