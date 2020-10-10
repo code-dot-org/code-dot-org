@@ -32,6 +32,16 @@ class LessonActivity < ApplicationRecord
     duration
   )
 
+  def summarize_for_edit
+    {
+      id: id,
+      position: position,
+      name: name,
+      duration: duration,
+      activitySections: activity_sections.map(&:summarize_for_edit)
+    }
+  end
+
   # Updates this object's activity_sections to match the activity sections
   # represented by the provided data, preserving existing objects in cases where
   # ids match.

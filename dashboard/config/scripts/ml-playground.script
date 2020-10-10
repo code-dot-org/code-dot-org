@@ -1,0 +1,15 @@
+login_required true
+
+lesson 'USE Projects', display_name: 'USE Projects'
+level 'ml-netflix use-1', progression: 'Project 1 - Movie Recommendations'
+level 'applab-ml-test-2', progression: 'Project 2 - Olympics [create design]'
+
+lesson 'MODIFY Projects', display_name: 'MODIFY Projects'
+level 'applab-ml-test-3', progression: 'Project 1 - Dog Predictor'
+level 'ml-candy modify-1', progression: 'Project 2 - Candy Predictor'
+level 'ml-candy modify-2', progression: 'Project 2 - Candy Predictor'
+level 'ml-candy modify-3', progression: 'Project 2 - Candy Predictor'
+level 'ml-candy modify-4', progression: 'Project 2 - Candy Predictor'
+level 'ml-candy modify-5', progression: 'Project 2 - Candy Predictor'
+level 'ml-candy modify-6', progression: 'Project 2 - Candy Predictor'
+
