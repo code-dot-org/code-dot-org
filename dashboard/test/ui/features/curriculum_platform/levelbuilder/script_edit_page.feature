@@ -23,12 +23,17 @@ Scenario: Save changes to a script
   Given I create a levelbuilder named "Levi"
   And I create a temp script
   And I view the temp script overview page
-  And element ".uitest-bubble" does not contain text "1"
+  And element ".uitest-bubble" contains text "1"
+  And element ".uitest-bubble" does not contain text "2"
 
   When I view the temp script edit page
-  And I type "lesson 'My Lesson', display_name: 'My Lesson'\nlevel 'Standalone_Artist_1'\n" into "#script_text"
+  And element "#script_text" contains text "lesson 'lesson-1', display_name: 'Lesson One'"
+  And element "#script_text" contains text "level 'k-1 maze 1'"
+  And I type "lesson 'My Lesson', display_name: 'My Lesson'\nlevel 'Standalone_Artist_1'\nlevel 'Standalone_Artist_2'\n" into "#script_text"
   And I click selector ".btn-primary" to load a new page
   And I wait until element "#script-title" is visible
 
   Then element ".uitest-bubble" contains text "1"
+  And element ".uitest-bubble" contains text "2"
+
   And I delete the temp script
