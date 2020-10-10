@@ -67,6 +67,22 @@ export const activityShape = PropTypes.shape({
   activitySections: PropTypes.arrayOf(activitySectionShape)
 });
 
+export const levelShapeForScript = PropTypes.shape({
+  position: PropTypes.number,
+  activeId: PropTypes.number,
+  ids: PropTypes.arrayOf(PropTypes.number),
+  kind: PropTypes.string,
+  skin: PropTypes.string,
+  videoKey: PropTypes.string,
+  concepts: PropTypes.string,
+  conceptDifficulty: PropTypes.string,
+  progression: PropTypes.bool,
+  named: PropTypes.bool,
+  bonus: PropTypes.bool,
+  assessment: PropTypes.bool,
+  challenge: PropTypes.bool
+});
+
 export const lessonShape = PropTypes.shape({
   id: PropTypes.number,
   key: PropTypes.string,
@@ -76,7 +92,7 @@ export const lessonShape = PropTypes.shape({
   unplugged: PropTypes.bool,
   assessment: PropTypes.bool,
   relativePosition: PropTypes.number,
-  scriptLevels: PropTypes.arrayOf(scriptLevelShape)
+  levels: PropTypes.arrayOf(levelShapeForScript) // TODO: Update to use scriptLevelShape
 });
 
 export const lessonGroupShape = PropTypes.shape({
