@@ -10,7 +10,7 @@ import {Provider} from 'react-redux';
 import _ from 'lodash';
 
 //TODO Remove once we hook up real level data
-import {levelKeyList} from '@cdo/apps/lib/levelbuilder/lesson-editor/SampleActivitiesData';
+import {levelKeyList} from '../../../../test/unit/lib/levelbuilder/activitiesTestData';
 
 $(document).ready(function() {
   const lessonData = getScriptData('lesson');
