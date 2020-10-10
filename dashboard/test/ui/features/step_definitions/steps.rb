@@ -1022,9 +1022,10 @@ Given(/^I view the temp script overview page$/) do
   }
 end
 
-Given(/^I view the temp script legacy edit page$/) do
+Given(/^I view the temp script (legacy|gui) edit page$/) do |type|
+  params = type == 'gui' ? '?beta=1' : ''
   steps %{
-    Given I am on "http://studio.code.org/s/#{@temp_script_name}/edit"
+    Given I am on "http://studio.code.org/s/#{@temp_script_name}/edit#{params}"
     And I wait until element ".edit_script" is visible
   }
 end
