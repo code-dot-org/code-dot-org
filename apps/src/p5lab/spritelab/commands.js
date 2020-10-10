@@ -91,6 +91,10 @@ export const commands = {
     actionCommands.setProp.apply(this, [spriteArg, prop, val]);
   },
 
+  setQuestion(questionText, variableName, callback) {
+    callback('IS THIS WORKING');
+  },
+
   setTint(spriteArg, color) {
     actionCommands.setProp(spriteArg, 'tint', color);
   },
