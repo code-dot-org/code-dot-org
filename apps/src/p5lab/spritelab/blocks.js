@@ -349,6 +349,8 @@ const customInputTypes = {
       return `'${block.getTitleValue(arg.name)}'`;
     }
   },
+  // Custom input for a variable input that generates the name of the variable
+  // rather than the value of the variable.
   variableNamePicker: {
     addInputRow(blockly, block, inputConfig) {
       return block.appendValueInput(inputConfig.name);
@@ -359,7 +361,7 @@ const customInputTypes = {
       if (input) {
         const targetBlock = input.connection.targetBlock();
         if (targetBlock && targetBlock.type === 'variables_get') {
-          return `'${targetBlock.inputList[0].titleRow[0].value_}'`;
+          return `'${Blockly.JavaScript.blockToCode(targetBlock)[0]}'`;
         }
       }
       return '';
