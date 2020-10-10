@@ -6,7 +6,6 @@ theme: responsive
 
 # Donate to Code.org
 
-
 <script async src="https://static-na.payments-amazon.com/OffAmazonPayments/us/js/Widgets.js"></script>
 <script>
 $(document).on("click", '#OffAmazonPaymentsWidgets0', function(){
@@ -35,7 +34,13 @@ $(document).on('change', $('.ap-dw-optional-input'), function() {
 **Amazon.com customers:**
 Do your shopping at [smile.amazon.com](https://smile.amazon.com/) to donate a % of all purchases to Code.org
 
-[![image](/images/guidestar-logo.png)](https://www.guidestar.org/profile/46-0858543)
+<a href="https://www.guidestar.org/profile/46-0858543" target="_blank" style="display: inline-block; position: relative; z-index: 1">
+  <span style="display: inline-block; vertical-align: middle; margin-right: 40px">
+    <object data="https://widgets.guidestar.org/gximage2?o=9218725&l=v4" type="image/svg+xml" style="position: relative; z-index: -1">
+      <img src="/images/guidestar-logo.svg" />
+    </object>
+  </span>
+</a>
 
 <br />
 <br />

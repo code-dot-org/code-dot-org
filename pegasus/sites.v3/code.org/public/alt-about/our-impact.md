@@ -167,10 +167,12 @@ Whether it’s organizing the worldwide Hour of Code, advocating for policy chan
 
 <hr/>
 
-<a href="https://www.guidestar.org/profile/46-0858543" target="_blank" rel="noopener noreferrer">
-  <object data="https://widgets.guidestar.org/gximage2?o=9218725&l=v4" type="image/png" style="vertical-align: middle; margin-right: 40px">
-    <img src="/images/guidestar-logo.png" />
-  </object>
+<a href="https://www.guidestar.org/profile/46-0858543" target="_blank" style="display: inline-block; position: relative; z-index: 1">
+  <span style="display: inline-block; vertical-align: middle; margin-right: 40px">
+    <object data="https://widgets.guidestar.org/gximage2?o=9218725&l=v4" type="image/svg+xml" style="position: relative; z-index: -1">
+      <img src="/images/guidestar-logo.svg" />
+    </object>
+  </span>
 </a> 
 [![image](/images/fit-150/student_privacy_pledge.png)](http://studentprivacypledge.org/)
 
