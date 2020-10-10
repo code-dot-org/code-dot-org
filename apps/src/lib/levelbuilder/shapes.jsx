@@ -52,7 +52,7 @@ export const activitySectionShape = PropTypes.shape({
   remarks: PropTypes.bool,
   slide: PropTypes.bool,
   levels: PropTypes.arrayOf(levelShape),
-  text: PropTypes.string,
+  text: PropTypes.string.isRequired,
   tips: PropTypes.arrayOf(tipShape)
 });
 
