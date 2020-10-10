@@ -68,7 +68,7 @@
     "rubric_performance_level_4": "The project guide is incomplete or does not seem to describe the program.",
     "libraries_enabled": "false",
     "preload_asset_list": null,
-    "validation_enabled": "true"
+    "validation_enabled": "false"
   },
   "published": true,
   "notes": "",
