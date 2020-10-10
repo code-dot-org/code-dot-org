@@ -5,7 +5,7 @@ Scenario: View the script edit page
   Given I create a levelbuilder named "Levi"
   And I create a temp script
   And I view the temp script overview page
-  And I view the temp script edit page
+  And I view the temp script legacy edit page
   And I delete the temp script
 
 Scenario: View the script edit page in locale besides en-US
@@ -13,7 +13,7 @@ Scenario: View the script edit page in locale besides en-US
   And I create a levelbuilder named "Levi"
   And I create a temp script
   And I view the temp script overview page
-  And I try to view the temp script edit page
+  And I try to view the temp script legacy edit page
   And I get redirected to "/" via "dashboard"
   And I wait until element "#homepage-container" is visible
   And I wait until element "#homepage-container" contains text "Editing on levelbuilder is only supported in English (en-US locale)."
@@ -26,7 +26,7 @@ Scenario: Save changes to a script
   And element ".uitest-bubble" contains text "1"
   And element ".uitest-bubble" does not contain text "2"
 
-  When I view the temp script edit page
+  When I view the temp script legacy edit page
   And element "#script_text" contains text "lesson 'lesson-1', display_name: 'Lesson One'"
   And element "#script_text" contains text "level 'k-1 maze 1'"
   And I type "lesson 'My Lesson', display_name: 'My Lesson'\nlevel 'Standalone_Artist_1'\nlevel 'Standalone_Artist_2'\n" into "#script_text"

@@ -1022,14 +1022,14 @@ Given(/^I view the temp script overview page$/) do
   }
 end
 
-Given(/^I view the temp script edit page$/) do
+Given(/^I view the temp script legacy edit page$/) do
   steps %{
     Given I am on "http://studio.code.org/s/#{@temp_script_name}/edit"
     And I wait until element ".edit_script" is visible
   }
 end
 
-Given(/^I try to view the temp script edit page$/) do
+Given(/^I try to view the temp script legacy edit page$/) do
   steps %{
     Given I am on "http://studio.code.org/s/#{@temp_script_name}/edit"
   }
