@@ -1,6 +1,8 @@
 import PropTypes from 'prop-types';
 
 export const levelShape = PropTypes.shape({
+  // id of level
+  id: PropTypes.number,
   //name of level
   name: PropTypes.string,
   //url for editing level
