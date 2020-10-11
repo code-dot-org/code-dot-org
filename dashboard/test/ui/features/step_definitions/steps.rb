@@ -1006,7 +1006,7 @@ Given(/^I am assigned to script "([^"]*)"$/) do |script_name|
   )
 end
 
-Given(/^I create a temp script$/) do
+Given(/^I create a temp script and lesson$/) do
   response = browser_request(
     url: '/api/test/create_script',
     method: 'POST'
@@ -1045,7 +1045,7 @@ Given(/^I view the temp lesson edit page$/) do
   }
 end
 
-Given(/^I delete the temp script$/) do
+Given(/^I delete the temp script and lesson$/) do
   browser_request(
     url: '/api/test/destroy_script',
     method: 'POST',
