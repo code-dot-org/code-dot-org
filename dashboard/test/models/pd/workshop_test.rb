@@ -966,14 +966,14 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   test 'process_location' do
     mock_geocoder_result = [
       OpenStruct.new(
-        latitude: 47.6101003,
-        longitude: -122.33746,
+        latitude: 47.610183,
+        longitude: -122.337401,
         city: 'Seattle',
         state: 'WA',
-        formatted_address: '1501 4th Ave, Seattle, WA 98101, USA'
+        place_name: '1501 4th Ave, Seattle, WA 98101, USA'
       )
     ]
-    expected_processed_location = '{"latitude":47.6101003,"longitude":-122.33746,"city":"Seattle","state":"WA","formatted_address":"1501 4th Ave, Seattle, WA 98101, USA"}'
+    expected_processed_location = '{"latitude":47.610183,"longitude":-122.337401,"city":"Seattle","state":"WA","formatted_address":"1501 4th Ave, Seattle, WA 98101, USA"}'
     Honeybadger.expects(:notify).never
 
     # Normal lookup

@@ -66,7 +66,7 @@ class Petition < Form
     result = {zip_code_s: zip_code_or_country}
     location = Geocoder.search(zip_code_or_country).first
     if location
-      result['state_code_s'] = location.state.downcase if location.state
+      result['state_code_s'] = location.state_code.downcase if location.state_code
       result['country_s'] = location.country.downcase if location.country
       return result if result['country_s'] == 'united states'
     end
