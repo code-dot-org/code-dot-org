@@ -87,7 +87,7 @@ class TestController < ApplicationController
     )
     level = Level.find_by_name('Applab test')
     script_level.levels.push(level)
-    render json: {script_name: script.name}
+    render json: {script_name: script.name, lesson_id: lesson.id}
   end
 
   def destroy_script
