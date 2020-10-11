@@ -10,7 +10,7 @@ const DEFAULT_PROPS = {
   lessonGroup: {
     displayName: 'jazz',
     description: 'A chapter about conditionals',
-    bigQuestions: ['Why is the earth round?', 'Can pigs fly?']
+    bigQuestions: 'Why is the earth round? Can pigs fly?'
   },
   lessons: [],
   levelsByLesson: []
