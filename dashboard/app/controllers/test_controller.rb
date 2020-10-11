@@ -75,8 +75,8 @@ class TestController < ApplicationController
     )
     lesson = lesson_group.lessons.create(
       script: script,
-      key: 'lesson-1',
-      name: 'Lesson One',
+      key: 'temp-lesson',
+      name: 'Temp Lesson',
       relative_position: 1,
       absolute_position: 1
     )
@@ -85,7 +85,7 @@ class TestController < ApplicationController
       chapter: 1,
       position: 1
     )
-    level = Level.find_by_name('k-1 maze 1')
+    level = Level.find_by_name('Applab test')
     script_level.levels.push(level)
     render json: {script_name: script.name}
   end
