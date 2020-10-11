@@ -1,4 +1,5 @@
 require 'geocoder'
+require 'geocoder/results/mapbox'
 require 'redis'
 
 module Geocoder
@@ -6,22 +7,52 @@ module Geocoder
     class Base
       def summarize(prefix='location_')
         {}.tap do |results|
-          results["#{prefix}street_number_s"] = data['address']
-          results["#{prefix}route_s"] = data['text']
-          results["#{prefix}street_address_s"] = "#{data['address']} #{data['text']}".strip
-          results["#{prefix}city_s"] = city
-          results["#{prefix}state_s"] = state
-          results["#{prefix}state_code_s"] = context_state_code
-          results["#{prefix}country_s"] = country
-          results["#{prefix}country_code_s"] = context_country_code
-          results["#{prefix}postal_code_s"] = postal_code
-
           results['location_p'] = "#{latitude},#{longitude}" if latitude && longitude
-          %w(address city state postal_code country).each do |component_name|
+          %w(street_number route street_address city state state_code country country_code postal_code).each do |component_name|
             component = send component_name
             results["#{prefix}#{component_name}_s"] = component unless component.nil_or_empty?
           end
         end
+      end
+    end
+
+    # This override for the Mapbox class is being added because we are transition from call the Google Maps location
+    # services to the Mapbox location services. Unfortunately, the data from Mapbox service is significantly different
+    # than the Google responses. In order for our existing code to keep working, this adapter will alter the Mapbox
+    # to give data in the same format as the Google response.
+    # The long term fix would be to add our own API wrapper for Geocoder responses and then refactor the rest of the
+    # codebase to depend on that API instead of directly on the Google/Mapbox API. However, we need this adapter patch
+    # quickly before the Google Maps API is turned off for us.
+    module CdoResultAdapter
+      def state_code
+        # e.g. 'US-WA', 'GB-ENG'
+        country_state_code = mapbox_context('region')&.[]('short_code')
+        # The state code comes after the '-'
+        country_state_code&.split('-')&.last&.upcase
+      end
+
+      def country_code
+        mapbox_context('country')&.[]('short_code')&.upcase
+      end
+
+      def street_number
+        data['address']
+      end
+
+      def route
+        data['text']
+      end
+
+      def street_address
+        "#{data['address']} #{data['text']}".strip
+      end
+
+      def address
+        place_name
+      end
+
+      def formatted_address
+        place_name
       end
 
       private
@@ -31,18 +62,8 @@ module Geocoder
           c if c['id'] =~ Regexp.new(name)
         end&.compact&.first
       end
-
-      def mapbox_state_code
-        # e.g. 'US-WA', 'GB-ENG'
-        country_state_code = mapbox_context('region')&.[]('short_code')
-        # The state code comes after the '-'
-        country_state_code&.split('-')&.last&.upcase
-      end
-
-      def mapbox_country_code
-        mapbox_context('country')&.[]('short_code')&.upcase
-      end
     end
+    Mapbox.send :prepend, CdoResultAdapter
   end
 
   MIN_ADDRESS_LENGTH = 10
@@ -60,7 +81,7 @@ module Geocoder
     results = Geocoder.search(first_number_to_end)
     return nil if results.empty?
 
-    if results.first.address
+    if results.first&.street_address
       return first_number_to_end
     end
     nil
