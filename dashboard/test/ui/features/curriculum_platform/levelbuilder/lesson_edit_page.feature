@@ -1,7 +1,6 @@
 @no_mobile
 Feature: Using the Lesson Edit Page
-
-  Scenario: View the lesson edit page
+  Scenario: Navigate from script edit page to lesson edit page
     Given I create a levelbuilder named "Levi"
     And I create a temp script
     And I view the temp script overview page
@@ -17,3 +16,12 @@ Feature: Using the Lesson Edit Page
     And element "h1" contains text "Temp Lesson"
 
     And I delete the temp script
+
+  Scenario: View lesson edit page
+    Given I create a levelbuilder named "Levi"
+    And I create a temp script
+    And I view the temp lesson edit page
+
+    # Match the text 'Editing Lesson "Temp Lesson"'
+    And element "h1" contains text "Editing Lesson"
+    And element "h1" contains text "Temp Lesson"

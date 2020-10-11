@@ -1011,8 +1011,10 @@ Given(/^I create a temp script$/) do
     url: '/api/test/create_script',
     method: 'POST'
   )
-  @temp_script_name = JSON.parse(response)['script_name']
-  puts "created temp script named '#{@temp_script_name}'"
+  data = JSON.parse(response)
+  @temp_script_name = data['script_name']
+  @temp_lesson_id = data['lesson_id']
+  puts "created temp script named '#{@temp_script_name}' and temp lesson with id #{@temp_lesson_id}"
 end
 
 Given(/^I view the temp script overview page$/) do
@@ -1033,6 +1035,13 @@ end
 Given(/^I try to view the temp script legacy edit page$/) do
   steps %{
     Given I am on "http://studio.code.org/s/#{@temp_script_name}/edit"
+  }
+end
+
+Given(/^I view the temp lesson edit page$/) do
+  steps %{
+    Given I am on "http://studio.code.org/lessons/#{@temp_lesson_id}/edit"
+    And I wait until element "#edit-container" is visible
   }
 end
 
