@@ -42,7 +42,7 @@ $(document).ready(function() {
       activitySection.text = activitySection.description || '';
       delete activitySection.description;
 
-      activitySection.levels = activitySection.levels || [];
+      activitySection.scriptLevels = activitySection.levels || [];
 
       activitySection.tips = activitySection.tips || [];
 
