@@ -802,12 +802,12 @@ class ScriptLevelTest < ActiveSupport::TestCase
     assert_nil script_level.activity_section
 
     # can create script level with matching lessons
-    script_level = create :script_level, lesson: lesson, activity_section: activity_section
+    script_level = create :script_level, lesson: lesson, activity_section: activity_section, activity_section_position: 1
     assert_equal lesson, script_level.activity_section.lesson
 
     # cannot create script level with mismatched lessons
     assert_raises ActiveRecord::RecordInvalid do
-      create :script_level, lesson: other_lesson, activity_section: activity_section
+      create :script_level, lesson: other_lesson, activity_section: activity_section, activity_section_position: 1
     end
   end
 
