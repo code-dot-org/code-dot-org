@@ -26,6 +26,7 @@ import {
 } from './progressRedux';
 import {setVerified} from '@cdo/apps/code-studio/verifiedTeacherRedux';
 import {
+  selectSection,
   setSections,
   setPageType,
   pageTypes
@@ -336,28 +337,33 @@ function initializeStoreWithSections(store, scriptData) {
     return;
   }
 
-  // If we have a selected section, merge it with the minimal data in the
-  // `sections` array before storing in redux.
   const currentSection = scriptData.section;
-  if (currentSection) {
-    const idx = sections.findIndex(section => section.id === currentSection.id);
-    if (idx >= 0) {
-      sections[idx] = {
-        ...sections[idx],
-        ...currentSection
-      };
-    }
+  if (!currentSection) {
+    // If we don't have a selected section, simply set sections and we're done.
+    store.dispatch(setSections(sections));
+    return;
+  }
 
-    // If our current section is a google classroom and teacher is conntected
-    // to google, load the google classroom share button api.
-    if (
-      currentSection.login_type === OAuthSectionTypes.google_classroom &&
-      scriptData.user_providers &&
-      scriptData.user_providers.includes(OAuthProviders.google)
-    ) {
-      registerReducers({googlePlatformApi});
-      store.dispatch(loadGooglePlatformApi()).catch(e => console.warn(e));
-    }
+  // If we do have a selected section, merge it with the minimal data in the
+  // `sections` array before storing in redux.
+  const idx = sections.findIndex(section => section.id === currentSection.id);
+  if (idx >= 0) {
+    sections[idx] = {
+      ...sections[idx],
+      ...currentSection
+    };
   }
   store.dispatch(setSections(sections));
+  store.dispatch(selectSection(currentSection.id.toString()));
+
+  // If our current section is a google classroom and teacher is conntected
+  // to google, load the google classroom share button api.
+  if (
+    currentSection.login_type === OAuthSectionTypes.google_classroom &&
+    scriptData.user_providers &&
+    scriptData.user_providers.includes(OAuthProviders.google)
+  ) {
+    registerReducers({googlePlatformApi});
+    store.dispatch(loadGooglePlatformApi()).catch(e => console.warn(e));
+  }
 }

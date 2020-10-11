@@ -10,10 +10,10 @@ import {Provider} from 'react-redux';
 import _ from 'lodash';
 
 //TODO Remove once we hook up real level data
-import {levelKeyList} from '@cdo/apps/lib/levelbuilder/lesson-editor/SampleActivitiesData';
+import {levelKeyList} from '../../../../../test/unit/lib/levelbuilder/lesson-editor/activitiesTestData';
 
 $(document).ready(function() {
-  const lessonData = getScriptData('lesson').editableData;
+  const lessonData = getScriptData('lesson');
   const activities = lessonData.activities;
 
   // Rename any keys that are different on the backend.
@@ -39,10 +39,10 @@ $(document).ready(function() {
       activitySection.displayName = activitySection.name;
       delete activitySection.name;
 
-      activitySection.text = activitySection.description;
+      activitySection.text = activitySection.description || '';
       delete activitySection.description;
 
-      activitySection.levels = activitySection.levels || [];
+      activitySection.scriptLevels = activitySection.levels || [];
 
       activitySection.tips = activitySection.tips || [];
 
