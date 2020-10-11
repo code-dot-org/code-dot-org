@@ -1,7 +1,7 @@
 class LessonsController < ApplicationController
   load_and_authorize_resource
 
-  before_action :require_levelbuilder_mode, except: [:show]
+  before_action :require_levelbuilder_mode_or_test_env, except: [:show]
 
   # GET /lessons/1
   def show
