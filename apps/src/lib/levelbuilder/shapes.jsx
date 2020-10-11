@@ -78,10 +78,10 @@ export const lessonShape = PropTypes.shape({
 
 export const lessonGroupShape = PropTypes.shape({
   key: PropTypes.string,
-  display_name: PropTypes.string,
+  displayName: PropTypes.string,
   position: PropTypes.number,
-  user_facing: PropTypes.bool,
-  big_questions: PropTypes.string,
+  userFacing: PropTypes.bool,
+  bigQuestions: PropTypes.string,
   description: PropTypes.string,
   lessons: PropTypes.arrayOf(lessonShape)
 });

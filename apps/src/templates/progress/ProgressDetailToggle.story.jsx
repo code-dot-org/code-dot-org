@@ -24,13 +24,13 @@ export default storybook => {
           display_name: 'cat1',
           id: 1,
           description: 'This is a description',
-          big_questions: ['What?']
+          big_questions: 'What?'
         },
         {
           display_name: 'cat2',
           id: 2,
           description: 'This is another description',
-          big_questions: ['Why?']
+          big_questions: 'Why?'
         }
       ],
       stages: [
