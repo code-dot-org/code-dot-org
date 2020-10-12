@@ -17,7 +17,7 @@ $(document).ready(function() {
   const relatedLessons = getScriptData('relatedLessons');
   relatedLessons.forEach(lesson => {
     const type = lesson.lockable ? 'lockable' : 'lesson';
-    const url = `/lessons/${lesson.lessonId}/edit`;
+    const url = lesson.lessonEditUrl;
     console.log(
       `${lesson.scriptName} ${type} ${lesson.relativePosition} ${url}`
     );
