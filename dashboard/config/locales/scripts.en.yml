@@ -18232,3 +18232,33 @@ en:
           description_audience: Internal
           description_short: 'Levels that are linked directly in lesson plans but do not appear in other scripts. '
           description: ''
+        virustest:
+          lessons:
+            Virus Simulation for Code Bytes:
+              name: Virus Simulation for Code Bytes
+          lesson_groups:
+            csf_data:
+              display_name: Virus Simulation for Code Bytes
+          title: Simulating an Outbreak
+          description_audience: ''
+          description_short: 'Use Sprite Lab to create a simulation out of a virus outbreak. '
+          description: ''
+        ml-playground:
+          lessons:
+            Variables:
+              name: Example I Stole From CSD
+            ML Playground:
+              name: ML Playground
+            ML Playground 2:
+              name: ML Playground 2
+            USE Projects:
+              name: USE Projects
+            MODIFY Projects:
+              name: MODIFY Projects
+            CREATE Projects:
+              name: CREATE Projects
+          lesson_groups: {}
+          title: Ml/AI Unit - CSD
+          description_audience: ''
+          description_short: ML/AI Unit
+          description: Brainstorm / Playground area for ML/AI Unit Development for CSD. For future questions about this, ask Dan Schneider.

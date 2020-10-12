@@ -54,6 +54,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('BlockValueType');
   blocklyWrapper.wrapReadOnlyProperty('common_locale');
   blocklyWrapper.wrapReadOnlyProperty('Connection');
+  blocklyWrapper.wrapReadOnlyProperty('ContextMenu');
   blocklyWrapper.wrapReadOnlyProperty('contractEditor');
   blocklyWrapper.wrapReadOnlyProperty('createSvgElement');
   blocklyWrapper.wrapReadOnlyProperty('Css');
@@ -144,9 +145,20 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapSettableProperty('JavaScript');
   blocklyWrapper.wrapSettableProperty('readOnly');
   blocklyWrapper.wrapSettableProperty('showUnusedBlocks');
-  blocklyWrapper.wrapSettableProperty('SNAP_RADIUS');
   blocklyWrapper.wrapSettableProperty('typeHints');
   blocklyWrapper.wrapSettableProperty('valueTypeTabShapeMap');
+
+  // Wrap SNAP_RADIUS property, and in the setter make sure we keep SNAP_RADIUS and CONNECTING_SNAP_RADIUS in sync.
+  // See https://github.com/google/blockly/issues/2217
+  Object.defineProperty(blocklyWrapper, 'SNAP_RADIUS', {
+    get: function() {
+      return this.blockly_.SNAP_RADIUS;
+    },
+    set: function(snapRadius) {
+      this.blockly_.SNAP_RADIUS = snapRadius;
+      this.blockly_.CONNECTING_SNAP_RADIUS = snapRadius;
+    }
+  });
 
   blocklyWrapper.getGenerator = function() {
     return this.JavaScript;
@@ -216,6 +228,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
       theme: CdoTheme,
       trashcan: true
     };
+    blocklyWrapper.editBlocks = opt_options.editBlocks;
     return blocklyWrapper.blockly_.inject(container, options);
   };
 
@@ -224,10 +237,27 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.Xml.originalBlockToDom = blocklyWrapper.Xml.blockToDom;
   blocklyWrapper.Xml.blockToDom = function(block, ignoreChildBlocks) {
     const blockXml = blocklyWrapper.Xml.originalBlockToDom(block);
+    if (!block.canDisconnectFromParent_) {
+      blockXml.setAttribute('can_disconnect_from_parent', false);
+    }
     if (ignoreChildBlocks) {
       Blockly.Xml.deleteNext(blockXml);
     }
     return blockXml;
+  };
+
+  // Aliasing Google's domToBlock() so that we can override it, but still be able
+  // to call Google's domToBlock() in the override function.
+  blocklyWrapper.Xml.originalDomToBlock = blocklyWrapper.Xml.domToBlock;
+  blocklyWrapper.Xml.domToBlock = function(xmlBlock, workspace) {
+    const block = blocklyWrapper.Xml.originalDomToBlock(xmlBlock, workspace);
+    const can_disconnect_from_parent = xmlBlock.getAttribute(
+      'can_disconnect_from_parent'
+    );
+    if (can_disconnect_from_parent) {
+      block.canDisconnectFromParent_ = can_disconnect_from_parent === 'true';
+    }
+    return block;
   };
 
   blocklyWrapper.Xml.fieldToDom_ = function(field) {
