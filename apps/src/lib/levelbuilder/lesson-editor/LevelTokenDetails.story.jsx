@@ -17,15 +17,16 @@ const levelNameToIdMap = {
 };
 
 const defaultLevel = {
+  id: 10,
   position: 1,
-  ids: [2],
-  activeId: 2,
-  named: true
+  levels: [{id: 2}],
+  activeId: 2
 };
 
 const blocklyLevel = {
+  id: 11,
   position: 1,
-  ids: [4],
+  levels: [{id: 4}],
   activeId: 4
 };
 
@@ -44,7 +45,7 @@ export default storybook => {
             setActiveVariant={action('setActiveVariant')}
             setLevelField={action('setLevelField')}
             setScriptLevelField={action('setScriptLevelField')}
-            level={defaultLevel}
+            scriptLevel={defaultLevel}
             activitySectionPosition={1}
             activityPosition={1}
           />
@@ -64,7 +65,7 @@ export default storybook => {
             setActiveVariant={action('setActiveVariant')}
             setLevelField={action('setLevelField')}
             setScriptLevelField={action('setScriptLevelField')}
-            level={blocklyLevel}
+            scriptLevel={blocklyLevel}
             activitySectionPosition={1}
             activityPosition={1}
           />
