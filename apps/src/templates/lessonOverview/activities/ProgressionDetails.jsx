@@ -3,6 +3,7 @@ import React, {Component} from 'react';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import ProgressLevelSet from '@cdo/apps/templates/progress/ProgressLevelSet';
 import color from '@cdo/apps/util/color';
+import {LevelStatus} from '@cdo/apps/util/sharedConstants';
 
 const styles = {
   progressionBox: {
@@ -33,7 +34,7 @@ export default class ProgressionDetails extends Component {
         : scriptLevel.levels[0];
 
     return {
-      status: 'not-started',
+      status: LevelStatus.not_tried,
       url: activeLevel.url,
       name: activeLevel.name,
       kind: activeLevel.kind,
