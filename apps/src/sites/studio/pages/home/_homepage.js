@@ -28,6 +28,7 @@ function showHomepage() {
   const isEnglish = homepageData.isEnglish;
   const announcementOverride = homepageData.announcement;
   const specialAnnouncement = homepageData.specialAnnouncement;
+  const mapboxAccessToken = homepageData.mapboxAccessToken;
   const query = queryString.parse(window.location.search);
   registerReducers({locales});
   const store = getStore();
@@ -78,6 +79,7 @@ function showHomepage() {
             teacherEmail={homepageData.teacherEmail}
             schoolYear={homepageData.currentSchoolYear}
             specialAnnouncement={specialAnnouncement}
+            mapboxAccessToken={mapboxAccessToken}
           />
         )}
         {!isTeacher && (
