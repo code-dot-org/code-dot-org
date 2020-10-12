@@ -296,26 +296,26 @@ class LessonTest < ActiveSupport::TestCase
   end
 
   test 'find related lessons within curriculum umbrella' do
-    script1 = create :script, curriculum_umbrella: 'same'
+    script1 = create :script, name: 'script1', curriculum_umbrella: 'same', version_year: '2099'
     lesson1 = create :lesson, script: script1, key: 'foo'
 
-    script2 = create :script, curriculum_umbrella: 'same'
+    script2 = create :script, name: 'script2', curriculum_umbrella: 'same', version_year: '3000'
     lesson2 = create :lesson, script: script2, key: 'foo'
 
-    script3 = create :script, curriculum_umbrella: 'same'
+    script3 = create :script, name: 'script3', curriculum_umbrella: 'same', version_year: '2099'
     create :lesson, script: script3, key: 'bar'
 
-    script4 = create :script, curriculum_umbrella: 'other'
+    script4 = create :script, name: 'script4', curriculum_umbrella: 'other', version_year: '2099'
     create :lesson, script: script4, key: 'foo'
 
-    script5 = create :script, curriculum_umbrella: 'same'
+    script5 = create :script, name: 'script5', curriculum_umbrella: 'same', version_year: '2099'
     lesson5 = create :lesson, script: script5, key: 'foo'
 
-    script6 = create :script, curriculum_umbrella: 'same'
-    lesson6 = create :lesson, script: script6, key: 'foo'
+    script0 = create :script, name: 'script0', curriculum_umbrella: 'same', version_year: '2099'
+    lesson0 = create :lesson, script: script0, key: 'foo'
 
     assert_queries(1) do
-      assert_equal [lesson2, lesson5, lesson6], lesson1.related_lessons
+      assert_equal [lesson0, lesson5, lesson2], lesson1.related_lessons
     end
 
     assert_queries(1) do
