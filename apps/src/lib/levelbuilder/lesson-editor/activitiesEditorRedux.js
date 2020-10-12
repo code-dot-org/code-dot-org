@@ -353,7 +353,7 @@ function activities(state = [], action) {
       const activitySections =
         newState[action.activityPosition - 1].activitySections;
       activitySections.splice(action.activitySectionPosition - 1, 1);
-      if (newState.length === 1 && activitySections.length === 0) {
+      if (activitySections.length === 0) {
         activitySections.push(emptyActivitySection);
       }
       updateActivitySectionPositions(newState);
@@ -583,7 +583,7 @@ export default {
   levelNameToIdMap
 };
 
-const emptyActivitySection = {
+export const emptyActivitySection = {
   key: 'activity-section-1',
   displayName: '',
   levels: [],
