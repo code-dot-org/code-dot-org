@@ -62,6 +62,7 @@ describe('LessonGroupCard', () => {
       lessonGroupsCount: 1,
       lessonGroupMetrics: {},
       targetLessonGroupPos: null,
+      scriptId: 100,
       lessonGroup: {
         key: 'lg-key',
         displayName: 'Display Name',
@@ -134,14 +135,25 @@ describe('LessonGroupCard', () => {
     const prompt = sinon.stub(window, 'prompt');
     prompt.returns('Lesson Name');
 
+    let returnData = {id: 10, name: 'Lesson Name', key: 'lesson-10'};
+    let server = sinon.fakeServer.create();
+    server.respondWith('POST', '/lessons', [
+      200,
+      {'Content-Type': 'application/json'},
+      JSON.stringify(returnData)
+    ]);
+
     const wrapper = shallow(<LessonGroupCard {...defaultProps} />);
 
     const button = wrapper.find('button');
     expect(button.text()).to.include('Lesson');
     button.simulate('mouseDown');
 
+    server.respond();
+
     expect(addLesson).to.have.been.calledOnce;
     window.prompt.restore();
+    server.restore();
   });
 
   it('edit lesson group description', () => {
