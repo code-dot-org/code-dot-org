@@ -15,6 +15,8 @@ import {levelKeyList} from '@cdo/apps/lib/levelbuilder/lesson-editor/SampleActiv
 $(document).ready(function() {
   const lessonData = getScriptData('lesson');
   const relatedLessons = getScriptData('relatedLessons');
+
+  // TODO(dave): move this output into the lesson edit UI
   relatedLessons.forEach(lesson => {
     const type = lesson.lockable ? 'lockable' : 'lesson';
     const url = lesson.lessonEditUrl;
