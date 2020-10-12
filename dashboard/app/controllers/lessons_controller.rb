@@ -17,7 +17,10 @@ class LessonsController < ApplicationController
   # GET /lessons/1/edit
   def edit
     @lesson_data = @lesson.summarize_for_lesson_edit
-    @related_lessons = @lesson.summarize_related_lessons
+    @related_lessons = @lesson.summarize_related_lessons.map do |lesson|
+      lesson[:lessonEditUrl] = edit_lesson_path(id: lesson[:lessonId])
+      lesson
+    end
   end
 
   # PATCH/PUT /lessons/1
