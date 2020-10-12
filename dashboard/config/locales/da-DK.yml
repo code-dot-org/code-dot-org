@@ -23,16 +23,16 @@ da:
                 til at nulstille din adgangskode, eller password. Kun det sidst sendte
                 link vil virke.
       messages:
-        blank: påkrævet
+        blank: er påkrævet
         blank_plural: er påkrævet
         invalid: er ugyldigt
         invalid_plural: er ugyldige
     attributes:
       user:
         name: Brugernavn
-        name_example: Kallenamn (f.eks Kule Knut eller Tøffe Trine)
+        name_example: Kaldenavn (f.eks. Cool Coder eller Jane S.)
         email: E-mail
-        parent_email: Forældres/værges e-mail adresse
+        parent_email: Forælderens eller værgens e-mailadresse
         personal_email: Personlig e-mail adresse <a href="%{url}"> (Klik her hvis
           du ikke har en e-mail-adresse)</a>
         personal_email_markdown: Personleg epostadresse[(klikk her om du ikkje har
@@ -48,8 +48,8 @@ da:
         finish_sign_up_header: Afslut oprettelsen af din konto
         finish_sign_up_subheader: Udfyld følgende oplysninger for at afslutte oprettelsen
           af en Code.org konto for <strong>%{email}</strong>.
-        finish_sign_up_subheader_markdown: Fyll ut for å gjøre ferdig Code.org-konto
-          for **%{email}**.
+        finish_sign_up_subheader_markdown: Udfyld de følgende oplysninger for at oprette
+          en Code-org-konto med e-mailadressen **%{email}**.
         finish_sign_up_subheader_provider: Udfyld følgende oplysninger for at afslutte
           oprettelsen af en Code.org konto <strong>%{provider}</strong> for <strong>%{email}</strong>.
         finish_sign_up_subheader_provider_markdown: Fyll ut følgende informasjon for
@@ -198,7 +198,7 @@ da:
       behandles i USA.
     student_terms_markdown: E-mailadresser er ikke gemt i form af, at vi kontakter
       studerende. Studerende vil aldrig modtage e-mails fra Code.org, bortset fra,
-      at hvis det er adgangskode-genopretning. Se vores [fortrolighedspolitik](http://code.org/privacy)
+      at hvis det er genopretning af adgangskoder. Se vores [fortrolighedspolitik](http://code.org/privacy)
       for mere information.
     additional_information: Vi har brug for nogle ekstra oplysninger til at fortsætte
       med at logge dig.
@@ -206,7 +206,7 @@ da:
     user_type_label: Kontotype
     user_type_teacher: Lærer
     user_type_student: Elev
-    field_is_required: påkrævet
+    field_is_required: er påkrævet
     accept_terms: Du skal acceptere at oprette en konto
     error: Der opstod en fejl.
     email_preference_question: Kan vi e-maile dig om opdateringer til vores kurser,
@@ -215,14 +215,14 @@ da:
     email_preference_yes: Ja
     email_preference_no: Nej
     email_preference_required: Du skal angive en e-mail adresse.
-    parent_account_checkbox: Jeg er en forælder / værge, der tilmelder mig på vegne
-      af mit barn
+    parent_account_checkbox: Jeg er en forælder eller en værge, der tilmelder sig
+      på vegne af mit barn
     parent_account_email_progress_permission: Kan vi sende dig e-mail lejligheds med
       opdateringer om dit barns fremskridt og projekter og opdateringer om deres kursus
       og datalogi? [(Se vores privatlivspolitik)] (%{privacy_policy_url})
-    parent_account_email_label: Forældres/værges e-mail adresse
+    parent_account_email_label: Forælderens eller værgens e-mailadresse
   school_info:
-    title: Skoleoplysninger (valgfri)
+    title: Skoleoplysninger (valgfrit)
     school_country: Skolens land
     select_school_type: Type af skole
     private: Privat
@@ -269,6 +269,7 @@ da:
       email: Email adresse
       submit: Indsend
     reset_errors:
+      captcha_required: Udfyldt venligst CAPTCHA for at nulstille din adgangskode.
       invalid_email: Det ser ud, som du har tilmeldt en ugyldig e-mail-adresse. Send
         en email til email support@code.org for at modtage et link til at få adgang.
     change_form:
@@ -348,6 +349,10 @@ da:
       user:
         user_type_change_email_mismatch: E-mailadresserne, du angav, matcher ikke
           e-mailadressen til denne konto
+        personal_login_created_email: Du oprettede et personlig log-in med succes.
+          Du kan nu logge på din konto med din e-mail og din adgangskode
+        personal_login_created_username: Du oprettede et personlig log-in med succes.
+          Du kan nu logge på din konto med dit brugernavn (%{username}) og din adgangskode
   nav:
     header:
       finished_hoc: Jeg har afsluttet min Hour of Code
@@ -390,6 +395,7 @@ da:
       district_dashboard: Særskilt betjeningspanel
       label: Hej %{username}
       stats: Mine fremskridt
+      my_projects: Mine projekter
       settings: Min konto
       logout: Log ud
       signin: Log ind
@@ -488,20 +494,28 @@ da:
       efter slutning af skoleåret, så spørg dine forældre eller din værge om hjælp,
       om at oprette din egen personlige log-in, som vist nedenunder.
     create_personal_login_under_13_username: Brugernavn (ikke brug dit rigtige navn!)
-    create_personal_login_under_13_parent_email: Forældres/værges e-mail adresse
+    create_personal_login_under_13_parent_email: Forælderens eller værgens e-mailadresse
     create_personal_login_info: Hvis du ønsker, at beholde din Code.org-konto efter
       slutning af skoleåret, så kan du oprette din egen, som vist nedenunder.
     create_personal_login_link_account: Du kan også vælge at forbinde den til en personlig
       konto under "Administrere sammenkoblet konti"-sektionen.
+    create_personal_login_terms: Ved at lave et personlig log-in, så skal du accepterer,
+      at du er bundet med Code.org's <a href='%{terms_of_service_url}', target='_blank'>servicevilkår</a>.
+      Jeg bekræfter at, jeg har mine forældres eller min værges tilladelse til at
+      bruge Code.org's tjenester, endda uden en lærer.
     create_personal_login_terms_markdown: Ved å lage ei personleg pålogging godtar
       eg Code.org [sine vilkår for bruk](%{terms_of_service_url}). Eg stadfester at
       eg har løyve frå foreldre eller førsette til å bruke Code.org sine tenester,
       sjølv utan ein lærar tilstade.
+    create_personal_login_email_note: 'Bemærkelse: E-mailadresser er ikke gemt i form
+      af, at vi kontakter studerende. Studerende vil aldrig modtage e-mails fra Code.org,
+      bortset fra, at hvis det er genopretning af adgangskoder. Se vores <a href=''%{privacy_policy_url}'',
+      target=''_blank''>fortrolighedspolitik</a> for mere information.'
     create_personal_login_email_note_markdown: 'Merk: E-postadresser er ikkje lagra
       i eit format som gjer det mogleg for oss å kontakte elevar. Dei vil aldri få
       epost frå Code.org med unntak av for å få lenke til passordgjenoppretting. Sjå
       våre [retningsliner for personvern](%{privacy_policy_url}) for meir informasjon.'
-    parent_email_label: 'Forældrenes eller værgens e-mail (valgfrit) '
+    parent_email_label: 'Forælderens eller værgens e-mail (valgfrit) '
     parent_email_hint: "(det her kan bruges til genopretning af adgangskode)"
     enter_parent_email: Indtast dine forældres eller din værges e-mailadresse (til
       genopreting af adgangskode)
@@ -516,7 +530,7 @@ da:
     link_a_parent_email: Knyt en forælder / værges e-mail-adresse til denne konto
       for at holde dig opdateret om dit barns fremskridt og projekter. Du vil også
       være i stand til at bruge denne e-mail-adresse til gendannelse af adgangskode.
-    parent_guardian_email_label: Forældres/værges e-mail adresse
+    parent_guardian_email_label: Forælderens eller værgens e-mailadresse
     remove_parent_email_label: Fjern
     none: Ingen
     only_one_parent_email_supported_warning: 'Bemærk: Vi er kun i stand til at understøtte
@@ -836,6 +850,10 @@ da:
       for personvern](%{privacy_url}). Ver venleg å les desse nøye før du aksepterer
       dei. Merk at våre verktøy for å undervise i JavaScript kan vere utilgjengeleg
       for dine elevar før dei oppdaterte vilkåre er akseptert.
+  donor_interstitial:
+    title: Dine gratis datalogikurser er blevet muliggjort af...
+    support_codeorg_2: "[Doner nu](%{donate_url}) for at støtte Code.org."
+    get_started: Kom i gang på Code.org
   school_info_interstitial:
     save: Gem
   race_interstitial:
@@ -884,7 +902,7 @@ da:
     need_help: Brug for hjælp til at komme i gang?
     saved: Gemt
     not_saved: Ikke gemt
-    view_all: Se Mine Projekter
+    view_all: Vis mine projekter
     edit_project: Rediger projekt
     abuse:
       tos: Dette projekt er blevet rapporteret til at overtræde Code.org med <a href='http://code.org/tos'>

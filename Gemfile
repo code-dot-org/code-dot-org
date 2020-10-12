@@ -44,7 +44,6 @@ gem 'redis', '~> 3.3.3'
 gem 'redis-slave-read', require: false, github: 'code-dot-org/redis-slave-read', ref: 'cfe1bd0f5cf65eee5b52560139cab133f22cb880'
 gem 'xxhash'
 
-gem 'aws-google' # use Google Accounts for AWS access
 gem 'google-api-client', '~> 0.23'
 
 # CSRF protection for Sinatra.
@@ -57,6 +56,7 @@ gem 'rack-mini-profiler'
 
 group :development do
   gem 'annotate', '~> 3.1.1'
+  gem 'aws-google' # use Google Accounts for AWS access
   gem 'web-console'
 end
 
@@ -136,9 +136,11 @@ gem 'unicorn', '~> 5.1.0'
 
 gem 'chronic', '~> 0.10.2'
 
-# Use SCSS for stylesheets.
-# Ref: https://github.com/rails/sass-rails/pull/386
-gem 'sass-rails', github: 'wjordan/sass-rails', ref: 'frozen-array-fix'
+gem 'sass-rails', '~> 6.0.0'
+# Temporarily use our own fork of sassc-rails (a dependency of sass-rails),
+# while we try to get some bugs fixed upstream.
+# See https://github.com/sass/sassc-rails/pull/153 for context.
+gem 'sassc-rails', github: 'code-dot-org/sassc-rails', ref: 'frozen-array-fix'
 
 # Use Uglifier as compressor for JavaScript assets.
 gem 'uglifier', '>= 1.3.0'

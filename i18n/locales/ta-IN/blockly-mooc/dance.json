@@ -10,13 +10,5 @@
   "danceFeedbackNeedDifferentDance": "வேறு டான்சை நீங்கள் பயன்படுத்த வேண்டும்.",
   "danceFeedbackNeedEveryTwoMeasures": "`ஒவ்வொரு 2 அளவீடுகள்`ப்ளாக்கை நீங்கள் பயன்படுத்துவதை உறுதி செய்து கொள்ளவும்",
   "danceFeedbackNeedMakeANewDancer": "இரண்டாவது டான்சரை உருவாக்க `புதிய ஒன்றை உருவாக்குக` ப்ளாக்கை பயன்படுத்தவும்.",
-  "danceFeedbackKeyEvent": "உங்கள் நடனம் நடந்து கொண்டிருக்கையில், <xml></block><block type=\"Dancelab_whenKey\"><title name=\"KEY\">\"up\"</title></block></xml> உடன் சில குறியீட்டை இணைத்து விசையை அழுத்துவதை உறுதி செய்துகொள்ளவும்.",
-  "danceFeedbackDidntPress": "",
-  "danceFeedbackPressedKey": "",
-  "danceFeedbackNeedTwoDancers": "",
-  "danceFeedbackOnlyOneDancerMoved": "",
-  "danceFeedbackNeedLead": "",
-  "danceFeedbackNeedBackup": "",
-  "danceFeedbackSetSize": "",
-  "measure": ""
+  "danceFeedbackKeyEvent": "உங்கள் நடனம் நடந்து கொண்டிருக்கையில், <xml></block><block type=\"Dancelab_whenKey\"><title name=\"KEY\">\"up\"</title></block></xml> உடன் சில குறியீட்டை இணைத்து விசையை அழுத்துவதை உறுதி செய்துகொள்ளவும்."
 }
