@@ -437,8 +437,19 @@ class Lesson < ActiveRecord::Base
 
   def related_lessons
     return [] unless script.curriculum_umbrella
-    lessons = Lesson.joins(:script).where("scripts.properties -> '$.curriculum_umbrella' = ?", script.curriculum_umbrella).where(key: key)
+    lessons = Lesson.includes(:script).joins(:script).where("scripts.properties -> '$.curriculum_umbrella' = ?", script.curriculum_umbrella).where(key: key)
     lessons - [self]
+  end
+
+  def summarize_related_lessons
+    related_lessons.map do |lesson|
+      {
+        scriptName: lesson.script.name,
+        versionYear: lesson.script.version_year,
+        lockable: lesson.lockable,
+        relativePosition: lesson.relative_position,
+      }
+    end
   end
 
   private
