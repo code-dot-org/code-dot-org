@@ -311,7 +311,21 @@ class LessonTest < ActiveSupport::TestCase
       lesson_group4 = create :lesson_group, script: script4
       create :lesson, script: script4, lesson_group: lesson_group4, key: 'foo'
 
-      assert_equal [lesson2], lesson1.related_lessons
+      script5 = create :script, curriculum_umbrella: 'same'
+      lesson_group5 = create :lesson_group, script: script5
+      lesson5 = create :lesson, script: script5, lesson_group: lesson_group5, key: 'foo'
+
+      script6 = create :script, curriculum_umbrella: 'same'
+      lesson_group6 = create :lesson_group, script: script6
+      lesson6 = create :lesson, script: script6, lesson_group: lesson_group6, key: 'foo'
+
+      assert_queries(1) do
+        assert_equal [lesson2, lesson5, lesson6], lesson1.related_lessons
+      end
+
+      assert_queries(1) do
+        assert_equal 3, lesson1.summarize_related_lessons.count
+      end
     end
 
     test 'no related lessons without curriculum umbrella' do
