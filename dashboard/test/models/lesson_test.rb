@@ -293,46 +293,46 @@ class LessonTest < ActiveSupport::TestCase
       refute @lesson_future_visible_after.published?(@student)
       refute @lesson_future_visible_after.published?(nil)
     end
+  end
 
-    test 'find related lessons within curriculum umbrella' do
-      script1 = create :script, curriculum_umbrella: 'same'
-      lesson1 = create :lesson, script: script1, key: 'foo'
+  test 'find related lessons within curriculum umbrella' do
+    script1 = create :script, curriculum_umbrella: 'same'
+    lesson1 = create :lesson, script: script1, key: 'foo'
 
-      script2 = create :script, curriculum_umbrella: 'same'
-      lesson2 = create :lesson, script: script2, key: 'foo'
+    script2 = create :script, curriculum_umbrella: 'same'
+    lesson2 = create :lesson, script: script2, key: 'foo'
 
-      script3 = create :script, curriculum_umbrella: 'same'
-      create :lesson, script: script3, key: 'bar'
+    script3 = create :script, curriculum_umbrella: 'same'
+    create :lesson, script: script3, key: 'bar'
 
-      script4 = create :script, curriculum_umbrella: 'other'
-      create :lesson, script: script4, key: 'foo'
+    script4 = create :script, curriculum_umbrella: 'other'
+    create :lesson, script: script4, key: 'foo'
 
-      script5 = create :script, curriculum_umbrella: 'same'
-      lesson5 = create :lesson, script: script5, key: 'foo'
+    script5 = create :script, curriculum_umbrella: 'same'
+    lesson5 = create :lesson, script: script5, key: 'foo'
 
-      script6 = create :script, curriculum_umbrella: 'same'
-      lesson6 = create :lesson, script: script6, key: 'foo'
+    script6 = create :script, curriculum_umbrella: 'same'
+    lesson6 = create :lesson, script: script6, key: 'foo'
 
-      assert_queries(1) do
-        assert_equal [lesson2, lesson5, lesson6], lesson1.related_lessons
-      end
-
-      assert_queries(1) do
-        assert_equal 3, lesson1.summarize_related_lessons.count
-      end
+    assert_queries(1) do
+      assert_equal [lesson2, lesson5, lesson6], lesson1.related_lessons
     end
 
-    test 'no related lessons without curriculum umbrella' do
-      script1 = create :script
-      lesson_group1 = create :lesson_group, script: script1
-      lesson1 = create :lesson, script: script1, lesson_group: lesson_group1, key: 'foo'
-
-      script2 = create :script
-      lesson_group2 = create :lesson_group, script: script2
-      create :lesson, script: script2, lesson_group: lesson_group2, key: 'foo'
-
-      assert_equal [], lesson1.related_lessons
+    assert_queries(1) do
+      assert_equal 3, lesson1.summarize_related_lessons.count
     end
+  end
+
+  test 'no related lessons without curriculum umbrella' do
+    script1 = create :script
+    lesson_group1 = create :lesson_group, script: script1
+    lesson1 = create :lesson, script: script1, lesson_group: lesson_group1, key: 'foo'
+
+    script2 = create :script
+    lesson_group2 = create :lesson_group, script: script2
+    create :lesson, script: script2, lesson_group: lesson_group2, key: 'foo'
+
+    assert_equal [], lesson1.related_lessons
   end
 
   def create_swapped_lockable_lesson
