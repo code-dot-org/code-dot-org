@@ -2295,6 +2295,10 @@ da:
           lessons:
             Creating Functions:
               name: Oprettelse af funktioner
+        jess-test-script:
+          lessons:
+            Tools:
+              name: Værktøjer
         csp5-virtual:
           lessons:
             While Loops:

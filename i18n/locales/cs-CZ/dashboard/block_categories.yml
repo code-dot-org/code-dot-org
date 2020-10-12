@@ -17,12 +17,14 @@ cs:
       Game/Score: Hra/Skóre
       Games/Score: Hry/Skóre
       Groups: Skupiny
+      Input: Vstup
       Locations: Umístění
       Logic: Logické
       Loops: Cykly
       Math: Matematické
       Numbers: Čísla
       Properties: Vlastnosti
+      Sprites: Postavy
       Text: Text
       Variables: Proměnné
       'Variables ': 'Proměnné '
