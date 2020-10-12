@@ -435,6 +435,23 @@ class Lesson < ActiveRecord::Base
     my_key.stringify_keys
   end
 
+  # Finds all other lessons which match the following criteria:
+  # 1. in the same curriculum umbrella (CSF/CSD/CSP) as this lesson
+  # 2. same lesson key (untranslated lesson name)
+  # The results are sorted first by version year and then by script name.
+  #
+  # This method is intended only to be used in levelbuilder mode, when script
+  # caching is disabled.
+  #
+  # The purpose of this method is to help curriculum writers find lessons
+  # related to the one they are currently editing in which they might want to
+  # make similar edits. The heuristic used by this method is that the lesson key
+  # will not change when a script is deep-copied into a new version year, or
+  # when a lesson is shared across CSF courses within the same version year. If
+  # this heuristic proves to be inadequate, we could consider adding an explicit
+  # link between related lessons.
+  #
+  # @return [Array<Lesson>]
   def related_lessons
     return [] unless script.curriculum_umbrella
     lessons = Lesson.includes(:script).joins(:script).
@@ -444,6 +461,7 @@ class Lesson < ActiveRecord::Base
     lessons - [self]
   end
 
+  # @return [Array<Hash>]
   def summarize_related_lessons
     related_lessons.map do |lesson|
       {
