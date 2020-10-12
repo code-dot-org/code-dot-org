@@ -339,7 +339,7 @@ function activities(state = [], action) {
         newState[action.activityPosition - 1].activitySections;
       activitySections.push({
         key: action.activitySectionKey,
-        title: '',
+        displayName: '',
         levels: [],
         tips: [],
         remarks: false,
@@ -585,7 +585,7 @@ export default {
 
 const emptyActivitySection = {
   key: 'activity-section-1',
-  title: '',
+  displayName: '',
   levels: [],
   tips: [],
   remarks: false,
