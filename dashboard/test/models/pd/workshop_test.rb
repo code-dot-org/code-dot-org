@@ -970,7 +970,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
         longitude: -122.337401,
         city: 'Seattle',
         state: 'WA',
-        place_name: '1501 4th Ave, Seattle, WA 98101, USA'
+        formatted_address: '1501 4th Ave, Seattle, WA 98101, USA'
       )
     ]
     expected_processed_location = '{"latitude":47.610183,"longitude":-122.337401,"city":"Seattle","state":"WA","formatted_address":"1501 4th Ave, Seattle, WA 98101, USA"}'

@@ -48,11 +48,11 @@ module Geocoder
       end
 
       def address
-        place_name
+        data['place_name']
       end
 
       def formatted_address
-        place_name
+        data['place_name']
       end
 
       private
