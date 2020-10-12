@@ -313,6 +313,18 @@ class LessonTest < ActiveSupport::TestCase
 
       assert_equal [lesson2], lesson1.related_lessons
     end
+
+    test 'no related lessons without curriculum umbrella' do
+      script1 = create :script
+      lesson_group1 = create :lesson_group, script: script1
+      lesson1 = create :lesson, script: script1, lesson_group: lesson_group1, key: 'foo'
+
+      script2 = create :script
+      lesson_group2 = create :lesson_group, script: script2
+      create :lesson, script: script2, lesson_group: lesson_group2, key: 'foo'
+
+      assert_equal [], lesson1.related_lessons
+    end
   end
 
   def create_swapped_lockable_lesson
