@@ -468,7 +468,7 @@ class Lesson < ActiveRecord::Base
         scriptName: lesson.script.name,
         lockable: lesson.lockable,
         relativePosition: lesson.relative_position,
-        lessonId: lesson.id
+        lessonEditUrl: edit_lesson_path(id: lesson.id)
       }
     end
   end
