@@ -131,24 +131,35 @@ body.modal-open .supreme-container{
   font-family: 'Gotham 5r', sans-serif !important;
   font-size: 44px;
   line-height: 44px;
-  color: white;
+  color: #00ADBC;
   margin-top: 0px;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
 }
 
 #homepage .hero-message-second {
   font-family: 'Gotham 5r', sans-serif !important;
   font-size: 44px;
   line-height: 44px;
-  color: white;
-  margin-bottom: 40px;
+  color: #00ADBC;
+  margin-bottom: 20px;
 }
 
 #homepage .hero-sub-message {
-  color: white;
+  color: #4d575f;
   font-size: 24px;
   line-height: 32px;
-  margin-bottom: 40px;
+}
+
+@media screen and (min-width: 0px) and (max-width: 600px) {
+  #homepage .hero-sub-message {
+    margin-bottom: 80px;
+  }
+}
+
+@media screen and (min-width: 601px) {
+  #homepage .hero-sub-message {
+    margin-bottom: 130px;
+  }
 }
 
 #homepage .action .video-play-icon {
@@ -245,6 +256,11 @@ body.modal-open .supreme-container{
 #homepage #actions .herohocbutton-hollow-white {
   background-color: initial;
   border-color: white;
+}
+
+#homepage #actions .herohocbutton-solid-yellow {
+  background-color: #FFA400;
+  border-color: #FFA400;
 }
 
 #homepage #actions #hero-video {
