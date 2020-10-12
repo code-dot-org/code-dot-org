@@ -1,0 +1,7 @@
+lesson_group 'outbreak', display_name: 'Outbreak Simulation'
+lesson 'Virus Simulation for Code Bytes', display_name: 'Simulating a Virus'
+level 'virus_1_codebytes', progression: 'Create Your Sprites'
+level 'virus_2_codebytes', progression: 'Simulating an Outbreak'
+level 'virus_3_codebytes', progression: 'Simulating Masks'
+level 'virus_choice_codebytes', progression: 'Optional Extensions'
+
