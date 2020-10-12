@@ -121,10 +121,12 @@ class ActivitySectionCard extends Component {
     // page since the last time this component was updated. Therefore, force the
     // component to rerender so that this.metrics will be up to date.
     this.forceUpdate(() => {
-      const startingPositions = this.props.activitySection.levels.map(level => {
-        const metrics = this.metrics[level.position];
-        return metrics.top + metrics.height / 2;
-      });
+      const startingPositions = this.props.activitySection.scriptLevels.map(
+        scriptLevel => {
+          const metrics = this.metrics[scriptLevel.position];
+          return metrics.top + metrics.height / 2;
+        }
+      );
       this.setState({
         draggedLevelPos: position,
         dragHeight: this.metrics[position].height + tokenMargin,
@@ -291,31 +293,31 @@ class ActivitySectionCard extends Component {
     e.preventDefault();
   }
 
-  //TODO: Hook up being able to actually pick a level to add instead of holding place level
-  handleAddLevel = () => {
-    const newLevelPosition = this.props.activitySection.levels.length + 1;
+  handleAddLevel = level => {
+    const newLevelPosition = this.props.activitySection.scriptLevels.length + 1;
     this.props.addLevel(
       this.props.activityPosition,
       this.props.activitySection.position,
       {
-        ids: [NEW_LEVEL_ID],
-        activeId: NEW_LEVEL_ID,
-        status: 'not started',
-        url: 'https://levelbuilder-studio.code.org/levels/598/edit',
-        icon: 'fa-desktop',
-        name: `Level ${newLevelPosition}`,
-        isUnplugged: false,
-        levelNumber: newLevelPosition,
-        isCurrentLevel: false,
-        isConceptLevel: false,
-        sublevels: [],
+        id: NEW_LEVEL_ID,
+        levels: [
+          {
+            id: level.id,
+            name: level.name,
+            url: `https://levelbuilder-studio.code.org/levels/${level.id}/edit`,
+            icon: level.icon || 'fa-desktop',
+            isUnplugged: level.unplugged,
+            isConceptLevel: level.is_concept_level,
+            skin: level.skin,
+            videoKey: level.videoKey,
+            concepts: level.concepts,
+            conceptDifficulty: level.conceptDifficulty
+          }
+        ],
+        activeId: level.id,
         position: newLevelPosition,
-        kind: 'puzzle',
-        skin: null,
-        videoKey: null,
-        concepts: '',
-        conceptDifficulty: '',
-        named: false,
+        kind: level.kind,
+        bonus: false,
         assessment: false,
         challenge: false,
         expand: false
@@ -358,7 +360,7 @@ class ActivitySectionCard extends Component {
           </label>
           <div style={styles.checkboxesAndButtons}>
             <span style={styles.checkboxes}>
-              {this.props.activitySection.levels.length === 0 && (
+              {this.props.activitySection.scriptLevels.length === 0 && (
                 <label style={styles.labelAndCheckbox}>
                   Remarks
                   <input
@@ -390,25 +392,25 @@ class ActivitySectionCard extends Component {
           style={styles.input}
           onChange={this.handleChangeText}
         />
-        {this.props.activitySection.levels.length > 0 &&
-          this.props.activitySection.levels.map(level => (
+        {this.props.activitySection.scriptLevels.length > 0 &&
+          this.props.activitySection.scriptLevels.map(scriptLevel => (
             <LevelToken
               ref={levelToken => {
                 if (levelToken) {
                   const metrics = ReactDOM.findDOMNode(
                     levelToken
                   ).getBoundingClientRect();
-                  this.metrics[level.position] = metrics;
+                  this.metrics[scriptLevel.position] = metrics;
                 }
               }}
-              key={level.position + '_' + level.ids[0]}
-              level={level}
+              key={scriptLevel.position + '_' + scriptLevel.activeId[0]}
+              scriptLevel={scriptLevel}
               removeLevel={this.handleRemoveLevel}
               activitySectionPosition={this.props.activitySection.position}
               activityPosition={activityPosition}
               dragging={!!draggedLevelPos}
-              draggedLevelPos={level.position === draggedLevelPos}
-              delta={this.state.currentPositions[level.position - 1] || 0}
+              draggedLevelPos={scriptLevel.position === draggedLevelPos}
+              delta={this.state.currentPositions[scriptLevel.position - 1] || 0}
               handleDragStart={this.handleDragStart}
             />
           ))}
