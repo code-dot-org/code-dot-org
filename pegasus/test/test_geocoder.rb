@@ -50,4 +50,37 @@ class GeocoderTest < Minitest::Test
   def test_saucelabs_override
     assert_equal 'US', Geocoder.search('66.85.52.120').first.country_code
   end
+
+  def test_result_adapter
+    Geocoder.configure lookup: :mapbox, api_key: nil
+    expected_summarize = {
+      'location_p' => '47.610183,-122.337401',
+      'location_street_number_s' => '1501',
+      'location_route_s' => '4th Avenue',
+      'location_street_address_s' => '1501 4th Avenue',
+      'location_city_s' => 'Seattle',
+      'location_state_s' => 'Washington',
+      'location_state_code_s' => 'WA',
+      'location_country_s' => 'United States',
+      'location_country_code_s' => 'US',
+      'location_postal_code_s' => '98101'
+    }
+    expected_state_code = 'WA'
+    expected_country_code = 'US'
+    expected_street_number = '1501'
+    expected_route = '4th Avenue'
+    expected_street_address = '1501 4th Avenue'
+    expected_address = '1501 4th Avenue, Seattle, Washington 98101, United States'
+    expected_formatted_address = '1501 4th Avenue, Seattle, Washington 98101, United States'
+
+    location = Geocoder.search('1501 4th Ave, Seattle, WA 98101').first
+    assert_equal(expected_summarize, location.summarize)
+    assert_equal(expected_state_code, location.state_code)
+    assert_equal(expected_country_code, location.country_code)
+    assert_equal(expected_street_number, location.street_number)
+    assert_equal(expected_route, location.route)
+    assert_equal(expected_street_address, location.street_address)
+    assert_equal(expected_address, location.address)
+    assert_equal(expected_formatted_address, location.formatted_address)
+  end
 end
