@@ -443,7 +443,12 @@ class ScriptLevel < ActiveRecord::Base
     summary = summarize
     summary[:id] = id
     summary[:levelNumber] = activity_section_position
-    summary[:name] = oldest_active_level.key
+    summary[:levels] = levels.map do |level|
+      {
+        id: level.id,
+        name: level.name
+      }
+    end
     summary
   end
 
