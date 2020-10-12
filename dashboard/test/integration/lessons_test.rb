@@ -50,11 +50,10 @@ class LessonsTest < ActionDispatch::IntegrationTest
     assert_response :success
     assert_select 'script[data-lesson]', 1
     lesson_data = JSON.parse(css_select('script[data-lesson]').first.attribute('data-lesson').to_s)
-    editable_data = lesson_data['editableData']
-    assert_equal 'lesson overview', editable_data['overview']
-    assert_equal 'student overview', editable_data['studentOverview']
+    assert_equal 'lesson overview', lesson_data['overview']
+    assert_equal 'student overview', lesson_data['studentOverview']
 
-    activities_data = editable_data['activities']
+    activities_data = lesson_data['activities']
     assert_equal 1, activities_data.count
     activity_data = activities_data.first
     assert_equal 'my activity', activity_data['name']
@@ -73,10 +72,9 @@ class LessonsTest < ActionDispatch::IntegrationTest
     get edit_lesson_path(id: @lesson.id)
     assert_response :success
     lesson_data = JSON.parse(css_select('script[data-lesson]').first.attribute('data-lesson').to_s)
-    editable_data = lesson_data['editableData']
-    editable_data['studentOverview'] = 'new student overview'
+    lesson_data['studentOverview'] = 'new student overview'
 
-    activity_data = editable_data['activities'].first
+    activity_data = lesson_data['activities'].first
     activity_data['name'] = 'new activity name'
     activity_data['duration'] = 58
 
@@ -96,11 +94,11 @@ class LessonsTest < ActionDispatch::IntegrationTest
     # To attain symmetry, the edit API could send JSON-encoded activities, but
     # then the client would still have to JSON.parse before making any edits and
     # then re-encoding them with JSON.stringify, which doesn't seem good either.
-    editable_data['activities'] = editable_data['activities'].to_json
+    lesson_data['activities'] = lesson_data['activities'].to_json
 
     # Make sure the update api accepts the data in the same format as
     # the data in the edit response.
-    patch lesson_path(id: @lesson.id, as: :json, params: editable_data)
+    patch lesson_path(id: @lesson.id, as: :json, params: lesson_data)
     assert_response :redirect
     @lesson.reload
     assert_equal 'lesson overview', @lesson.overview
