@@ -32,9 +32,7 @@
       = hoc_s(:codeorg_homepage_hoc2018_header_line1)
   - elsif show_single_hero == "hoc2020"
     .hero-message
-      = hoc_s(:hoc2020_header_line1)
-    .hero-message-second
-      = hoc_s(:hoc2020_header_line2)
+      = hoc_s(:hoc2020_header_with_line_break_markdown, markdown: true)
     .hero-sub-message
       = hoc_s(:codeorg_homepage_hoc2018_header_line1)
   .action_buttons
