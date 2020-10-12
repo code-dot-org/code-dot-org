@@ -14,6 +14,11 @@ import {levelKeyList} from '@cdo/apps/lib/levelbuilder/lesson-editor/SampleActiv
 
 $(document).ready(function() {
   const lessonData = getScriptData('lesson');
+  const relatedLessons = getScriptData('relatedLessons');
+  relatedLessons.forEach(lesson => {
+    const type = lesson.lockable ? 'lockable' : 'lesson';
+    console.log(`${lesson.scriptName} ${type} ${lesson.relativePosition}`);
+  });
   const activities = lessonData.activities;
 
   // Rename any keys that are different on the backend.
