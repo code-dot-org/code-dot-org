@@ -446,7 +446,8 @@ class ScriptLevel < ActiveRecord::Base
     summary[:levels] = levels.map do |level|
       {
         id: level.id,
-        name: level.name
+        name: level.name,
+        url: edit_level_path(id: level.id)
       }
     end
     summary
