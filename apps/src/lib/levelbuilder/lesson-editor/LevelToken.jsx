@@ -138,7 +138,7 @@ class LevelToken extends Component {
     const activeLevel = hasVariants
       ? scriptLevel.levels.filter(level => {
           return level.id === scriptLevel.activeId;
-        })
+        })[0]
       : scriptLevel.levels[0];
 
     const progressBubbleLevel = this.scriptLevelForProgressBubble(activeLevel);
