@@ -3603,3 +3603,20 @@ html[dir=rtl] {
     filter: grayscale(1);
   }
 }
+
+#mapbox-location-search-container {
+  .mapboxgl-ctrl-geocoder {
+    min-width: 100%;
+    z-index: 2;
+    box-shadow: none;
+    border: 1px solid $bootstrap_border_color;
+    font-family: inherit;
+    font-size: inherit;
+  }
+  input {
+    height: 36px;
+    margin: 0;
+    border: none;
+    padding: 0 34px;
+  }
+}
