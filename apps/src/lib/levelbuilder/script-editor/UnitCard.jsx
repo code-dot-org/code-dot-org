@@ -92,10 +92,10 @@ class UnitCard extends Component {
             `lesson_group_description '${escape(lessonGroup.description)}'`
           );
         }
-        if (lessonGroup.big_questions) {
-          lessonGroup.big_questions.forEach(question => {
-            s.push(`lesson_group_question '${escape(question)}'`);
-          });
+        if (lessonGroup.bigQuestions) {
+          s.push(
+            `lesson_group_big_questions '${escape(lessonGroup.bigQuestions)}'`
+          );
         }
       }
       if (lessonGroup.lessons) {
@@ -166,7 +166,7 @@ class UnitCard extends Component {
         s.push(`level_concept_difficulty '${escape(level.conceptDifficulty)}'`);
       }
     }
-    let l = `level '${escape(key)}'`;
+    let l = level.bonus ? `bonus '${escape(key)}'` : `level '${escape(key)}'`;
     if (level.progression) {
       l += `, progression: '${escape(level.progression)}'`;
     }
