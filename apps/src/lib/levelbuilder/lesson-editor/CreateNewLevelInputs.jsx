@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-
-//TODO: Set up creating a new level.
+import $ from 'jquery';
 
 export default class CreateNewLevelInputs extends Component {
   static propTypes = {
-    levelOptions: PropTypes.array
+    levelOptions: PropTypes.array,
+    addLevel: PropTypes.func.isRequired
   };
 
   constructor(props) {
@@ -26,7 +26,22 @@ export default class CreateNewLevelInputs extends Component {
   };
 
   handleCreateLevel = () => {
-    console.log('create level');
+    $.ajax({
+      url: '/levels',
+      method: 'POST',
+      dataType: 'json',
+      data: JSON.stringify({
+        type: this.state.levelType,
+        name: this.state.levelName
+      }),
+      contentType: 'application/json;charset=UTF-8'
+    })
+      .done(data => {
+        this.props.addLevel(data);
+      })
+      .fail(error => {
+        console.log(error);
+      });
   };
 
   render() {

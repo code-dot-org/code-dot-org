@@ -313,7 +313,7 @@ class LevelsController < ApplicationController
       render(status: :not_acceptable, text: invalid) && return
     end
 
-    render json: {redirect: edit_level_path(@level)}
+    render json: @level
   end
 
   # DELETE /levels/1

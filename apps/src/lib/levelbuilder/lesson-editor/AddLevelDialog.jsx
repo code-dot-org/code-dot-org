@@ -159,6 +159,7 @@ export default class AddLevelDialog extends Component {
             {this.state.methodOfAddingLevel === 'Create New Level' && (
               <CreateNewLevelInputs
                 levelOptions={this.state.searchFields.levelOptions}
+                addLevel={this.props.addLevel}
               />
             )}
           </div>
