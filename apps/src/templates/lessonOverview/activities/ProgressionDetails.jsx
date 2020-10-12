@@ -29,7 +29,7 @@ export default class ProgressionDetails extends Component {
       scriptLevel.levels.length > 1
         ? scriptLevel.levels.filter(level => {
             return level.id === scriptLevel.activeId;
-          })
+          })[0]
         : scriptLevel.levels[0];
 
     return {
