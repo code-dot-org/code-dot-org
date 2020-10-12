@@ -293,6 +293,26 @@ class LessonTest < ActiveSupport::TestCase
       refute @lesson_future_visible_after.published?(@student)
       refute @lesson_future_visible_after.published?(nil)
     end
+
+    test 'find related lessons within curriculum umbrella' do
+      script1 = create :script, curriculum_umbrella: 'same'
+      lesson_group1 = create :lesson_group, script: script1
+      lesson1 = create :lesson, script: script1, lesson_group: lesson_group1, key: 'foo'
+
+      script2 = create :script, curriculum_umbrella: 'same'
+      lesson_group2 = create :lesson_group, script: script2
+      lesson2 = create :lesson, script: script2, lesson_group: lesson_group2, key: 'foo'
+
+      script3 = create :script, curriculum_umbrella: 'same'
+      lesson_group3 = create :lesson_group, script: script3
+      create :lesson, script: script3, lesson_group: lesson_group3, key: 'bar'
+
+      script4 = create :script, curriculum_umbrella: 'other'
+      lesson_group4 = create :lesson_group, script: script4
+      create :lesson, script: script4, lesson_group: lesson_group4, key: 'foo'
+
+      assert_equal [lesson2], lesson1.related_lessons
+    end
   end
 
   def create_swapped_lockable_lesson

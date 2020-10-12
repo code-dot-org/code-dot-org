@@ -435,6 +435,12 @@ class Lesson < ActiveRecord::Base
     my_key.stringify_keys
   end
 
+  def related_lessons
+    return [] unless script.curriculum_umbrella
+    lessons = Lesson.joins(:script).where("scripts.properties -> '$.curriculum_umbrella' = ?", script.curriculum_umbrella).where(key: key)
+    lessons - [self]
+  end
+
   private
 
   # Finds the LessonActivity by id, or creates a new one if id is not specified.
