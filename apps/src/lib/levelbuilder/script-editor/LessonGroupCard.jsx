@@ -17,6 +17,7 @@ import {
 } from '@cdo/apps/lib/levelbuilder/script-editor/scriptEditorRedux';
 import LessonToken from '@cdo/apps/lib/levelbuilder/script-editor/LessonToken';
 import {lessonGroupShape} from '@cdo/apps/lib/levelbuilder/shapes';
+import $ from 'jquery';
 
 const styles = {
   checkbox: {
@@ -78,7 +79,8 @@ class LessonGroupCard extends Component {
     removeLesson: PropTypes.func.isRequired,
     setLessonGroup: PropTypes.func.isRequired,
     reorderLesson: PropTypes.func.isRequired,
-    updateLessonGroupField: PropTypes.func.isRequired
+    updateLessonGroupField: PropTypes.func.isRequired,
+    scriptId: PropTypes.number.isRequired
   };
 
   /**
@@ -227,13 +229,25 @@ class LessonGroupCard extends Component {
 
   handleAddLesson = () => {
     const newLessonName = prompt('Enter new lesson name');
-    if (newLessonName) {
-      this.props.addLesson(
-        this.props.lessonGroup.position,
-        this.generateLessonKey(),
-        newLessonName
-      );
-    }
+    const key = this.generateLessonKey();
+
+    $.ajax({
+      url: '/lessons',
+      method: 'POST',
+      dataType: 'json',
+      data: JSON.stringify({
+        script_id: this.props.scriptId,
+        name: newLessonName,
+        key: key
+      }),
+      contentType: 'application/json;charset=UTF-8'
+    })
+      .done(data => {
+        this.props.addLesson(this.props.lessonGroup.position, data);
+      })
+      .fail(error => {
+        console.log(error);
+      });
   };
 
   handleChangeDescription = event => {
@@ -360,7 +374,9 @@ class LessonGroupCard extends Component {
 export const UnconnectedLessonGroupCard = LessonGroupCard;
 
 export default connect(
-  state => ({}),
+  state => ({
+    scriptId: state.scriptId
+  }),
   {
     moveLesson,
     moveGroup,

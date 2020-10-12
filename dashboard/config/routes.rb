@@ -313,7 +313,7 @@ Dashboard::Application.routes.draw do
   resources :courses, param: 'course_name'
   get '/course/:course_name', to: redirect('/courses/%{course_name}')
 
-  resources :lessons, only: [:show, :edit, :update]
+  resources :lessons, only: [:show, :edit, :update, :create]
 
   get '/beta', to: redirect('/')
 

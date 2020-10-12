@@ -27,6 +27,20 @@ class LessonsController < ApplicationController
     redirect_to lesson_path(id: @lesson.id)
   end
 
+  # POST /lessons
+  def create
+    puts params
+
+    lesson = Lesson.create!(
+      key: params[:key],
+      name: params[:name],
+      script_id: params[:script_id],
+      relative_position: 0
+    )
+
+    render json: lesson
+  end
+
   private
 
   def lesson_params

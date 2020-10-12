@@ -18,10 +18,11 @@ const UPDATE_LESSON_GROUP_FIELD = 'scriptEditor/UPDATE_LESSON_GROUP_FIELD';
 
 // NOTE: Position for Lesson Groups and Lessons is 1 based.
 
-export const init = (lessonGroups, levelKeyList) => ({
+export const init = (lessonGroups, levelKeyList, scriptId) => ({
   type: INIT,
   lessonGroups,
-  levelKeyList
+  levelKeyList,
+  scriptId
 });
 
 export const addGroup = (groupPosition, groupKey, groupName) => ({
@@ -31,11 +32,10 @@ export const addGroup = (groupPosition, groupKey, groupName) => ({
   groupName
 });
 
-export const addLesson = (groupPosition, lessonKey, lessonName) => ({
+export const addLesson = (groupPosition, lesson) => ({
   type: ADD_LESSON,
   groupPosition,
-  lessonKey,
-  lessonName
+  lesson
 });
 
 export const moveGroup = (groupPosition, direction) => ({
@@ -153,8 +153,9 @@ function lessonGroups(state = [], action) {
     case ADD_LESSON: {
       const lessons = newState[action.groupPosition - 1].lessons;
       lessons.push({
-        key: action.lessonKey,
-        name: action.lessonName,
+        id: action.lesson.id,
+        key: action.lesson.key,
+        name: action.lesson.name,
         levels: []
       });
       updateLessonPositions(newState);
@@ -274,9 +275,18 @@ function levelKeyList(state = {}, action) {
   return state;
 }
 
+function scriptId(state = {}, action) {
+  switch (action.type) {
+    case INIT:
+      return action.scriptId;
+  }
+  return state;
+}
+
 export default {
   levelKeyList,
-  lessonGroups
+  lessonGroups,
+  scriptId
 };
 
 // Use PropTypes.checkPropTypes to enforce that each entry in the array of
