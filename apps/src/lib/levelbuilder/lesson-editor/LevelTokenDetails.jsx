@@ -179,7 +179,7 @@ class LevelTokenDetails extends Component {
     const activeLevel = hasVariants
       ? this.props.scriptLevel.levels.filter(level => {
           return level.id === this.props.scriptLevel.activeId;
-        })
+        })[0]
       : this.props.scriptLevel.levels[0];
 
     return (
