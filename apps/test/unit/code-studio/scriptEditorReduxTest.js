@@ -14,6 +14,7 @@ import _ from 'lodash';
 
 const getInitialState = () => ({
   levelKeyList: {},
+  scriptId: 100,
   lessonGroups: [
     {
       key: 'lg-key',
@@ -90,7 +91,7 @@ describe('scriptEditorRedux reducer tests', () => {
   it('add lesson', () => {
     const nextState = reducer(
       initialState,
-      addLesson(1, 'lesson-new', 'New Lesson 2')
+      addLesson(1, {id: 1, key: 'lesson-new', name: 'New Lesson 2'})
     ).lessonGroups;
     assert.deepEqual(nextState[0].lessons.map(s => s.name), [
       'A',
