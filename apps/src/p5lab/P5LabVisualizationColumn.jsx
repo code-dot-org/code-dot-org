@@ -56,8 +56,7 @@ class P5LabVisualizationColumn extends React.Component {
     cancelPicker: PropTypes.func.isRequired,
     selectPicker: PropTypes.func.isRequired,
     updatePicker: PropTypes.func.isRequired,
-    consoleMessages: PropTypes.array.isRequired,
-    question: PropTypes.string.isRequired
+    consoleMessages: PropTypes.array.isRequired
   };
 
   // Cache app-space mouse coordinates, which we get from the
@@ -183,7 +182,7 @@ class P5LabVisualizationColumn extends React.Component {
         </ProtectedVisualizationDiv>
         <TextConsole consoleMessages={this.props.consoleMessages} />
         {experiments.isEnabled(experiments.SPRITELAB_INPUT) && (
-          <SpritelabInput question={this.props.question} />
+          <SpritelabInput />
         )}
         <GameButtons>
           <ArrowButtons />
@@ -223,8 +222,7 @@ export default connect(
     awaitingContainedResponse: state.runState.awaitingContainedResponse,
     showGrid: state.gridOverlay,
     pickingLocation: isPickingLocation(state.locationPicker),
-    consoleMessages: state.textConsole,
-    question: state.spritelabInput || 'my test question'
+    consoleMessages: state.textConsole
   }),
   dispatch => ({
     toggleShowGrid: mode => dispatch(toggleGridOverlay(mode)),

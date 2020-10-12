@@ -92,7 +92,7 @@ export const commands = {
   },
 
   setQuestion(questionText, variableName, callback) {
-    callback('IS THIS WORKING');
+    worldCommands.setQuestion(questionText, variableName, callback);
   },
 
   setTint(spriteArg, color) {
@@ -139,6 +139,10 @@ export const commands = {
 
   spriteClicked(condition, spriteArg, callback) {
     eventCommands.spriteClicked(condition, spriteArg, callback);
+  },
+
+  whenQuestionAnswered(variableName, callback) {
+    eventCommands.whenQuestionAnswered(variableName, callback);
   },
 
   // Location commands
