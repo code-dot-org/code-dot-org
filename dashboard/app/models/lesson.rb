@@ -448,9 +448,9 @@ class Lesson < ActiveRecord::Base
     related_lessons.map do |lesson|
       {
         scriptName: lesson.script.name,
-        versionYear: lesson.script.version_year,
         lockable: lesson.lockable,
         relativePosition: lesson.relative_position,
+        lessonId: lesson.id
       }
     end
   end
