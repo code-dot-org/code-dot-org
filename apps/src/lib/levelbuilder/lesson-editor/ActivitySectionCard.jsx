@@ -304,7 +304,7 @@ class ActivitySectionCard extends Component {
           {
             id: level.id,
             name: level.name,
-            url: `https://levelbuilder-studio.code.org/levels/${level.id}/edit`,
+            url: `https://levelbuilder-studio.code.org/levels/${level.id}/edit`, // need to update to respect environment
             icon: level.icon || 'fa-desktop',
             isUnplugged: level.isUnplugged,
             isConceptLevel: level.isConceptLevel,
