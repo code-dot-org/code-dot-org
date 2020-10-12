@@ -42,9 +42,9 @@ $(document).ready(function() {
       activitySection.text = activitySection.description || '';
       delete activitySection.description;
 
-      activitySection.scriptLevels = activitySection.levels || [];
-      activitySection.levels.forEach(level => {
-        level.status = 'not_tried';
+      activitySection.scriptLevels = activitySection.scriptLevels || [];
+      activitySection.scriptLevels.forEach(scriptLevel => {
+        scriptLevel.status = 'not_tried';
       });
 
       activitySection.tips = activitySection.tips || [];
