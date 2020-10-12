@@ -4,7 +4,8 @@ import getScriptData from '@cdo/apps/util/getScriptData';
 import LessonEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/LessonEditor';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import reducers, {
-  init
+  init,
+  emptyActivity
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
 import {Provider} from 'react-redux';
 import _ from 'lodash';
@@ -14,7 +15,7 @@ import {levelKeyList} from '@cdo/apps/lib/levelbuilder/lesson-editor/SampleActiv
 
 $(document).ready(function() {
   const lessonData = getScriptData('lesson');
-  const activities = lessonData.activities;
+  let activities = lessonData.activities;
 
   // Rename any keys that are different on the backend.
   activities.forEach(activity => {
@@ -52,6 +53,10 @@ $(document).ready(function() {
       });
     });
   });
+
+  if (activities.length === 0) {
+    activities = emptyActivity;
+  }
 
   registerReducers({...reducers});
   const store = getStore();
