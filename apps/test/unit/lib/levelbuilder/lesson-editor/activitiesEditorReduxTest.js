@@ -18,7 +18,9 @@ import reducers, {
   setField,
   reorderLevel,
   moveLevelToActivitySection,
-  NEW_LEVEL_ID
+  NEW_LEVEL_ID,
+  emptyActivity,
+  emptyActivitySection
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
 import {sampleActivities} from './activitiesTestData';
 import _ from 'lodash';
@@ -236,6 +238,15 @@ describe('activitiesEditorRedux reducer tests', () => {
       assert.deepEqual(expectedState, state.activities);
     });
 
+    it('removes last activity', () => {
+      let state = reducer(initialState, removeActivity(1));
+      assert.deepEqual(1, state.activities.length);
+
+      state = reducer(state, removeActivity(1));
+      assert.deepEqual(1, state.activities.length);
+      assert.deepEqual([emptyActivity], state.activities);
+    });
+
     it('moves activity', () => {
       let state = reducer(initialState, moveActivity(2, 'up'));
 
@@ -308,6 +319,18 @@ describe('activitiesEditorRedux reducer tests', () => {
         expectedState[0].activitySections[0].position = 1;
 
         assert.deepEqual(expectedState, state.activities);
+      });
+
+      it('remove last activity section in activity', () => {
+        let state = reducer(initialState, removeActivitySection(1, 1));
+        assert.deepEqual(1, state.activities[0].activitySections.length);
+
+        state = reducer(state, removeActivitySection(1, 1));
+
+        let expectedState = _.cloneDeep(initialActivities);
+        expectedState[0].activitySections = [emptyActivitySection];
+
+        assert.deepEqual(1, state.activities[0].activitySections.length);
       });
 
       it('update activity section field', () => {
