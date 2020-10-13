@@ -1,6 +1,7 @@
 // Action types
 
 const SET_IMPORTED_DATA = "SET_IMPORTED_DATA";
+const SET_SELECTED_TRAINER = "SET_SELECTED_TRAINER";
 const SET_COLUMNS_BY_DATA_TYPE = "SET_COLUMNS_BY_DATA_TYPE";
 const SET_SELECTED_FEATURES = "SET_SELECTED_FEATURES";
 const SET_LABEL_COLUMN = "SET_LABEL_COLUMN";
@@ -13,6 +14,10 @@ const SET_PREDICTION = "SET_PREDICTION";
 
 export function setImportedData(data) {
   return { type: SET_IMPORTED_DATA, data };
+}
+
+export function setSelectedTrainer(selectedTrainer) {
+  return { type: SET_SELECTED_TRAINER, selectedTrainer };
 }
 
 export const setColumnsByDataType = (column, dataType) => ({
@@ -62,6 +67,7 @@ export function setPrediction(prediction) {
 
 const initialState = {
   data: [],
+  selectedTrainer: undefined,
   columnsByDataType: {},
   selectedFeatures: [],
   labelColumn: undefined,
@@ -78,6 +84,12 @@ export default function rootReducer(state = initialState, action) {
     return {
       ...state,
       data: action.data
+    };
+  }
+  if (action.type === SET_SELECTED_TRAINER) {
+    return {
+      ...state,
+      selectedTrainer: action.selectedTrainer
     };
   }
   if (action.type === SET_COLUMNS_BY_DATA_TYPE) {

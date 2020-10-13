@@ -2,22 +2,20 @@
 
 import SVMTrainer from "./SVMTrainer";
 
-export const availableTrainers = [
-  {
+export const availableTrainers = {
+  binary_svm: {
     name: "Binary SVM",
     description:
       "Uses the Support Vector Machine algorithm to classify an example as one of two options. Features can be categorical or continuous.",
-    mlType: "binary classification",
-    instantiator: new SVMTrainer()
+    mlType: "binary classification"
   },
-  {
+  knn: {
     name: "KNN",
     description:
-      "Uses the K-Nearest Neighbor algorithm to classify an example as one of N options. Features can be categorical or continuous.",
-    mlTypes: "multi-classification",
-    instantiator: new KNN()
+      "Uses the K-Nearest Neighbor algorithm to classify an example as one of N options.  Features can be categorical or continuous. K is currently set to 2, but we can make this is customizable.",
+    mlTypes: "multi-classification"
   }
-];
+};
 
 let trainingState = {};
 const init = () => {
