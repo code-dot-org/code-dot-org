@@ -65,9 +65,9 @@ export const activityShape = PropTypes.shape({
 });
 
 export const resourceShape = PropTypes.shape({
-  key: PropTypes.string,
-  name: PropTypes.string,
-  url: PropTypes.string
+  key: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  url: PropTypes.string.isRequired
 });
 
 export const lessonShape = PropTypes.shape({

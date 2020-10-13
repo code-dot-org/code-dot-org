@@ -30,7 +30,7 @@ describe('ResourcesEditor', () => {
     expect(wrapper.find('tr').length).to.equal(numResources - 1);
   });
 
-  it('can remove a resource', () => {
+  it('can add a resource', () => {
     const wrapper = shallow(<ResourcesEditor {...defaultProps} />);
     const numResources = wrapper.find('tr').length;
     wrapper.instance().addResource({
