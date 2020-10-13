@@ -320,6 +320,9 @@ function activities(state = [], action) {
     }
     case REMOVE_ACTIVITY: {
       newState.splice(action.activityPosition - 1, 1);
+      if (newState.length === 0) {
+        newState.push(emptyActivity);
+      }
       updateActivityPositions(newState);
       updateActivitySectionPositions(newState);
       break;
@@ -350,7 +353,7 @@ function activities(state = [], action) {
         newState[action.activityPosition - 1].activitySections;
       activitySections.push({
         key: action.activitySectionKey,
-        title: '',
+        displayName: '',
         levels: [],
         tips: [],
         remarks: false,
@@ -364,6 +367,9 @@ function activities(state = [], action) {
       const activitySections =
         newState[action.activityPosition - 1].activitySections;
       activitySections.splice(action.activitySectionPosition - 1, 1);
+      if (activitySections.length === 0) {
+        activitySections.push(emptyActivitySection);
+      }
       updateActivitySectionPositions(newState);
       break;
     }
@@ -605,4 +611,22 @@ export default {
   activities,
   levelKeyList,
   levelNameToIdMap
+};
+
+export const emptyActivitySection = {
+  key: 'activity-section-1',
+  displayName: '',
+  levels: [],
+  tips: [],
+  remarks: false,
+  slide: false,
+  text: ''
+};
+
+export const emptyActivity = {
+  key: 'activity-1',
+  displayName: '',
+  position: 1,
+  duration: 0,
+  activitySections: [emptyActivitySection]
 };
