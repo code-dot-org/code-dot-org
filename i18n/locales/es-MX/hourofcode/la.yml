@@ -6,28 +6,28 @@ la:
   front_title: Únete al mayor evento educativo de la historia, %{campaign_date}
   coming_soon: Próximamente
   campaign_date_start_short: 7 Dic.
-  campaign_date_start_long: 4 de diciembre
-  campaign_date_short: 4-10 dic.
-  campaign_date_full: Del 4 al 10 de diciembre
-  campaign_date_year: '2017'
-  campaign_date_full_year: Del 4 al 10 de diciembre de 2017
+  campaign_date_start_long: 7 de diciembre
+  campaign_date_short: 7-13 dic.
+  campaign_date_full: Del 7 al 13 de diciembre
+  campaign_date_year: '2020'
+  campaign_date_full_year: Del 7 al 13 de diciembre de 2020
   latam_campaign_date_start_short: Oct. 1
   latam_campaign_date_start_long: Octubre 1
   latam_campaign_date_short: Oct. 1 - Dic. 18
   latam_campaign_date_full: Octubre 1 - Diciembre 18
-  latam_campaign_date_year: '2017'
+  latam_campaign_date_year: '2020'
   latam_campaign_date_full_year: Octubre 1, 2020 - Diciembre 18, 2020
   europe_campaign_date_start_short: Oct. 10
   europe_campaign_date_start_long: Octubre 10
   europe_campaign_date_short: Oct. 10-25
   europe_campaign_date_full: Octubre 10-25
-  europe_campaign_date_year: '2017'
+  europe_campaign_date_year: '2020'
   europe_campaign_date_full_year: Octubre 10-25, 2020
   africa_campaign_date_start_short: Oct. 1
   africa_campaign_date_start_long: Octubre 1
   africa_campaign_date_short: Oct. 1-31
   africa_campaign_date_full: Octubre 1-31
-  africa_campaign_date_year: '2017'
+  africa_campaign_date_year: '2020'
   africa_campaign_date_full_year: Octubre 1-31, 2020
   hoc2019_header: Aprende programación. Cambia el mundo.
   hoc2019_header_line1_mobile: Aprende programación.

@@ -14,13 +14,11 @@
 #  named_level         :boolean
 #  bonus               :boolean
 #  activity_section_id :integer
-#  seed_key            :string(255)
 #
 # Indexes
 #
 #  index_script_levels_on_activity_section_id  (activity_section_id)
 #  index_script_levels_on_script_id            (script_id)
-#  index_script_levels_on_seed_key             (seed_key) UNIQUE
 #  index_script_levels_on_stage_id             (stage_id)
 #
 
@@ -51,6 +49,7 @@ class ScriptLevel < ActiveRecord::Base
 
   validate :anonymous_must_be_assessment
   validate :validate_activity_section_lesson
+  validate :validate_activity_section_position
 
   # Make sure we never create a level that is not an assessment, but is anonymous,
   # as in that case it wouldn't actually be treated as anonymous
@@ -63,6 +62,12 @@ class ScriptLevel < ActiveRecord::Base
   def validate_activity_section_lesson
     if activity_section && activity_section.lesson != lesson
       errors.add(:script_level, 'activity_section.lesson does not match lesson')
+    end
+  end
+
+  def validate_activity_section_position
+    if activity_section && !activity_section_position
+      errors.add(:script_level, 'activity_section_position is required when activity_section is present')
     end
   end
 

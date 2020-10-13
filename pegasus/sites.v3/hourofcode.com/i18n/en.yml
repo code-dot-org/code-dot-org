@@ -64,6 +64,11 @@
   social_hoc2019_oceans_title: 'AI for Oceans #CSforGood'
   social_hoc2019_oceans_desc: "Learn about AI, machine learning, training data, and bias, while exploring ethical issues and how AI can be used to address world problems. Computer science is about so much more than coding! Enjoy Code.org's first step in a new journey to teach more about AI throughout our curriculum."
 
+  hoc_live: 'Hour of Code Live'
+  hoc_live_sign_up_title: 'Sign up for Hour of Code Live'
+  hoc_live_sign_up_message: 'Learn in real time alongside special guests! Students of all ages and abilities, including those without computers, are welcome. Join our mailing list to receive recordings of the episodes and resources to continue learning at home.'
+  hoc_live_join_us: 'Join us'
+
   hoc_overview_oceans_tutorial_header: 'AI for Oceans'
   hoc_overview_oceans_tutorial_desc: 'Learn about artificial intelligence (AI), machine learning, training data, and bias, while exploring ethical issues and how AI can be used to address world problems.'
 
@@ -626,7 +631,8 @@
   highlights_title: Highlights
   highlights_header: Hour of Code Highlights
   highlights_description: Some of our favorite moments from the Hour of Code campaign.
-  higlights_see_more: See more highlights
+  highlights_previous: Highlights from previous years
+  highlights_see_more: See more highlights
   highlights_readmore: Read more
   highlights_watchvideo: Watch the video
   highlights_facebook: Share on Facebook

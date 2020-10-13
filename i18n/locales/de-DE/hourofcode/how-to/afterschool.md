@@ -6,13 +6,13 @@ title: Außerschulische Anleitung für Hour of Code
 
 # Wie unterrichtet man eine Hour of Code in Freizeit und Verein
 
-### Join the movement and introduce your students to computer science with these steps.
+### Schließen Sie sich der Bewegung an und führen Sie Ihre SchülerInnen mit diesen Schritten an die Informatik heran.
 
-Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
+Rechnergestütztes Denken fördert Problemlösungsfähigkeiten, Logik und Kreativität. Gleichzeitig verändert die Technologie jede Branche auf diesem Planeten. Die SchülerInnen von heute müssen lernen, wie man Technologie schafft und nicht nur, wie man sie verwendet. Wenn sie früh anfangen, haben sie damit eine Basis für ihren Erfolg in jedem Berufsbild des 21. Jahrhunderts.
 
 Hour of Code ist ein einfacher und lustiger Weg, um Informatik zur Studenten vielleicht erstmals zu vorstellen. Wenn Sie mehr Hilfe brauchen, können Sie ein [lokalen Freiwilliger]({{ urls/volunteer_local }})finden, damit Hour of Code in Ihre außerschulische Klasse oder Schulclub zu helfen.
 
-### An Hour of Code can also be hosted remotely! To get started, check out our [tips for hosting a virtual Hour of Code event](https://hourofcode.com/us/how-to/virtual).
+### Sie können eine Hour of Code auch virtuell moderieren! Schauen Sie sich zum Einstieg unsere [Tipps für das Moderieren einer virtuellen Hour of Code Veranstaltung](https://hourofcode.com/us/how-to/virtual) an.
 
 * * *
 

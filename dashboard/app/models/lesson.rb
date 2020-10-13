@@ -12,12 +12,12 @@
 #  relative_position :integer          not null
 #  properties        :text(65535)
 #  lesson_group_id   :integer
-#  key               :string(255)
+#  key               :string(255)      not null
 #
 # Indexes
 #
 #  index_stages_on_lesson_group_id_and_key  (lesson_group_id,key) UNIQUE
-#  index_stages_on_script_id                (script_id)
+#  index_stages_on_script_id_and_key        (script_id,key) UNIQUE
 #
 
 require 'cdo/shared_constants'
@@ -223,7 +223,7 @@ class Lesson < ActiveRecord::Base
         relative_position: relative_position,
         name: localized_name,
         key: key,
-        assessment: assessment,
+        assessment: !!assessment,
         title: localized_title,
         lesson_group_display_name: lesson_group&.localized_display_name,
         lockable: !!lockable,
@@ -266,11 +266,41 @@ class Lesson < ActiveRecord::Base
     lesson_summary.freeze
   end
 
-  def summarize_for_edit
+  # Provides data about this lesson needed by the script edit page.
+  #
+  # TODO: [PLAT-369] trim down to only include those fields needed on the
+  # script edit page
+  def summarize_for_script_edit
     summary = summarize.dup
     # Do not let script name override lesson name when there is only one lesson
     summary[:name] = I18n.t("data.script.name.#{script.name}.lessons.#{key}.name")
     summary.freeze
+  end
+
+  # Provides all the editable data related to this lesson and its activities for
+  # display on the lesson edit page, excluding any lesson attributes which can
+  # be edited on the script edit page (e.g. name and key).
+  #
+  # The only non-editable data included are the ids of activities and activity
+  # sections, which are needed to identify those objects but cannot themselves
+  # be edited.
+  #
+  # Key names are converted to camelCase here so they can easily be consumed by
+  # the client.
+  def summarize_for_lesson_edit
+    {
+      name: name,
+      overview: overview,
+      studentOverview: student_overview,
+      assessment: assessment,
+      unplugged: unplugged,
+      lockable: lockable,
+      creativeCommonsLicense: creative_commons_license,
+      purpose: purpose,
+      preparation: preparation,
+      announcements: announcements,
+      activities: lesson_activities.map(&:summarize_for_edit)
+    }
   end
 
   # Provides a JSON summary of a particular lesson, that is consumed by tools used to
@@ -368,6 +398,26 @@ class Lesson < ActiveRecord::Base
     Time.parse(visible_after) <= Time.now
   end
 
+  # Updates this lesson's lesson_activities to match the activities represented
+  # by the provided data, preserving existing objects in cases where ids match.
+  # @param activities [Array<Hash>] - Array of hashes representing
+  #   LessonActivity objects.
+  def update_activities(activities)
+    return unless activities
+    # use assignment to delete any missing activities.
+    self.lesson_activities = activities.map do |activity|
+      lesson_activity = fetch_activity(activity)
+      lesson_activity.update!(
+        position: activity['position'],
+        name: activity['name'],
+        duration: activity['duration']
+      )
+
+      lesson_activity.update_activity_sections(activity['activitySections'])
+      lesson_activity
+    end
+  end
+
   # Used for seeding from JSON. Returns the full set of information needed to uniquely identify this object.
   # If the attributes of this object alone aren't sufficient, and associated objects are needed, then data from
   # the seeding_keys of those objects should be included as well.
@@ -378,12 +428,28 @@ class Lesson < ActiveRecord::Base
   # @return [Hash<String, String] all information needed to uniquely identify this object across environments.
   def seeding_key(seed_context)
     my_key = {'lesson.key': key}
-
     my_lesson_group = seed_context.lesson_groups.select {|lg| lg.id == lesson_group_id}.first
     raise "No LessonGroup found for #{self.class}: #{my_key}, LessonGroup ID: #{lesson_group_id}" unless my_lesson_group
     lesson_group_seeding_key = my_lesson_group.seeding_key(seed_context)
-
     my_key.merge!(lesson_group_seeding_key) {|key, _, _| raise "Duplicate key when generating seeding_key: #{key}"}
     my_key.stringify_keys
+  end
+
+  private
+
+  # Finds the LessonActivity by id, or creates a new one if id is not specified.
+  # @param activity [Hash]
+  # @returns [LessonActivity]
+  def fetch_activity(activity)
+    if activity['id']
+      lesson_activity = lesson_activities.find(activity['id'])
+      raise "LessonActivity id #{activity['id']} not found in Lesson id #{id}" unless lesson_activity
+      return lesson_activity
+    end
+
+    lesson_activities.create(
+      position: activity['position'],
+      seeding_key: SecureRandom.uuid
+    )
   end
 end

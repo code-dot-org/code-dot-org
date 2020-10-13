@@ -8,10 +8,23 @@ video_player: true
 <p align="center"><img style="max-width: 100%" src="/images/fit-970/2020forumbanner.png"></p>
 
 
-# Register for the Computer Science State Policy Forum
+# Register for the Computer Science State Policy Forum Series
 
-The annual Computer Science State Policy Forum brings together legislators, education officials, state advocates, industry, national organizations, and representatives from state executive offices committed to K-12 computer science education. This year the forum goes virtual, and consists of two sessions. Apply for **both** sessions by October 11, 2020.
+The annual Computer Science State Policy Forum brings together legislators, education officials, state advocates, industry, national organizations, and representatives from state executive offices committed to K-12 computer science education. This year the forum goes virtual and consists of multiple sessions:
 
+1. [Policy Forum Plenary](#Step 1) (October 14, 1:00 to 2:30 pm ET)
+2. [State Session](#Step 2) (October 14 or 15, see schedule below)
+3. [Webinar Series](#Step 3) (Various dates all at 3:00 - 4:00 pm ET)
+	* October 22: We Required All Schools to Offer CS, This is What Happened Next
+	* October 29: This Equity Guidance Will Change How You Make CS Education Decisions
+	* November 5: How Micro-credentials Can Revolutionize CS Certification
+	* November 12: Top 10 Things CS Education Researchers Wish They Could Tell Policymakers and Practitioners
+
+
+
+Apply for **all** experiences below. Share about the forum using the hashtag **#cspolicy2020**.
+
+<a name="Step 1"></a>
 ## **Step 1**: Register for the Policy Forum Plenary
 Join us October 14 from 1:00 to 2:30 pm ET for a panel discussion of how "Computer Science is More Important Than Ever" featuring three state education chiefs. We'll also launch the **2020 State of Computer Science Education**.
 
@@ -22,7 +35,8 @@ Join us October 14 from 1:00 to 2:30 pm ET for a panel discussion of how "Comput
 </p>
 <hr>
 
-## **Step 2**: Register for the State of Your State
+<a name="Step 2">
+## </a>**Step 2**: Register for the State of Your State
 Join us later on October 14 or 15 for the **State of Your State**. Learn about and discuss the state of computer science in your state. See the chart below for the day and time of your state's session and registration link.
 <hr>
 
@@ -84,11 +98,18 @@ Wyoming|Oct 15|4:00 - 5:00 pm MT|<a href="https://code.zoom.us/meeting/register/
 
 
 
+<a name="Step 3"></a>
+## **Step 3**: Register for the Webinar Series
 
-## After the Forum: Webinar Series
+Join us for a series of sessions on a range of topics. All webinars are scheduled for **3:00 - 4:00 pm ET**.
 
-In the weeks and months following the State Policy Forum, join us for a series of virtual sessions on a range of topics. Come back here for an update.
 
+Session | Description| Date |Link|
+--------------|------------|---------|--------|
+We Required All Schools to Offer CS, This is What Happened Next| Learn about how Indiana, Maryland, and West Virginia came to requiring all high schools to teach computer science, how the implementation of the policy is going, and what has happened since.|Oct 22 |<a href="https://code.zoom.us/webinar/register/WN_pUFM2Sc0SJChq2o-nWpxiA"><button>Register</button></a>|
+This Equity Guidance Will Change How You Make CS Education Decisions| Learn about the Kapor Center's work in improving equity in computer science education and how to translate intention into equity-focused policy decisions.|Oct 29 |<a href="https://code.zoom.us/webinar/register/WN_X0VopcwdQCeqMh2wmWuvWQ"><button>Register</button></a>|
+How Micro-credentials Can Revolutionize CS Certification  	|Learn about micro-credentials, an innovative, competency-based approach to computer science professional learning and certification.| Nov 5|<a href="https://code.zoom.us/webinar/register/WN_L7f0JPVZQRCrT-9uheBGyQ"><button>Register</button></a>|
+Top 10 Things CS Education Researchers Wish They Could Tell Policymakers and Practitioners |Learn from a trifecta of research, policy, and practical expertise in order to guide high-quality and lasting change in CS education.| Nov 12 |<a href="https://code.zoom.us/webinar/register/WN__sBU59Z2SeGpmeADRUnrvA"><button>Register</button></a>|
 
 
 

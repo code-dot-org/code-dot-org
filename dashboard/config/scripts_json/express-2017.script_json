@@ -5,7 +5,7 @@
     "hidden": false,
     "login_required": false,
     "properties": {
-      "project_widget_visible": true,
+      "project_widget_visible": "on",
       "project_widget_types": [
         "playlab",
         "artist"
@@ -15,22 +15,32 @@
       "is_stable": true,
       "curriculum_path": "https://curriculum.code.org/{LOCALE}/csf-1718/express/{LESSON}",
       "supported_locales": [
+        "ar-SA",
         "cs-CZ",
+        "de-DE",
         "es-ES",
         "es-MX",
         "fr-FR",
         "hi-IN",
+        "id-ID",
         "it-IT",
+        "ja-JP",
+        "ko-KR",
+        "pl-PL",
         "pt-BR",
+        "ru-RU",
         "sk-SK",
-        "zh-CN"
+        "tr-TR",
+        "zh-CN",
+        "zh-TW"
       ],
       "curriculum_umbrella": "CSF",
       "family_name": "express",
       "tts": true,
-      "lesson_extras_available": true,
-      "hideable_lessons": true,
-      "is_course": true
+      "lesson_extras_available": "on",
+      "hideable_lessons": "on",
+      "is_course": true,
+      "peer_reviews_to_complete": 0
     },
     "new_name": "express-2017",
     "family_name": "express",
@@ -845,12 +855,12 @@
       "position": 11,
       "assessment": null,
       "properties": {
-        "challenge": true,
         "variants": {
           "courseE_artist_ramp8": {
             "active": false
           }
-        }
+        },
+        "challenge": true
       },
       "named_level": null,
       "bonus": null,

@@ -245,7 +245,9 @@
           "spinning and growing": "旋转和放大\n"
         },
         "courseE_Dogger_2": {
-          "wandering": "徘徊"
+          "wandering": "徘徊",
+          "drive left": "左行车",
+          "drive right": "右行车"
         },
         "courseE_aboutme_1": {
           "wandering": "徘徊"

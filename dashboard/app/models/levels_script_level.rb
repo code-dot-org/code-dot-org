@@ -7,9 +7,8 @@
 #
 # Indexes
 #
-#  index_levels_script_levels_on_level_id                      (level_id)
-#  index_levels_script_levels_on_script_level_id               (script_level_id)
-#  index_levels_script_levels_on_script_level_id_and_level_id  (script_level_id,level_id) UNIQUE
+#  index_levels_script_levels_on_level_id         (level_id)
+#  index_levels_script_levels_on_script_level_id  (script_level_id)
 #
 
 # Join table.

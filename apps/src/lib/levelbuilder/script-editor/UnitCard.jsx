@@ -4,8 +4,13 @@ import {connect} from 'react-redux';
 import color from '@cdo/apps/util/color';
 import {borderRadius} from '@cdo/apps/lib/levelbuilder/constants';
 import LessonGroupCard from '@cdo/apps/lib/levelbuilder/script-editor/LessonGroupCard';
-import {addGroup} from '@cdo/apps/lib/levelbuilder/script-editor/scriptEditorRedux';
+import {
+  addGroup,
+  convertGroupToUserFacing,
+  convertGroupToNonUserFacing
+} from '@cdo/apps/lib/levelbuilder/script-editor/scriptEditorRedux';
 import ReactDOM from 'react-dom';
+import {lessonGroupShape} from '@cdo/apps/lib/levelbuilder/shapes';
 
 const styles = {
   unitHeader: {
@@ -32,7 +37,6 @@ const styles = {
     margin: '0 10px 10px 10px'
   },
   addGroupWithWarning: {
-    margin: '0 0 30px 0',
     display: 'flex',
     alignItems: 'center'
   },
@@ -48,8 +52,11 @@ const escape = str => str.replace(/'/, "\\'");
 class UnitCard extends Component {
   static propTypes = {
     // from redux
-    lessonGroups: PropTypes.array.isRequired,
-    addGroup: PropTypes.func.isRequired
+    lessonGroups: PropTypes.arrayOf(lessonGroupShape).isRequired,
+    addGroup: PropTypes.func.isRequired,
+    levelKeyList: PropTypes.object.isRequired,
+    convertGroupToUserFacing: PropTypes.func.isRequired,
+    convertGroupToNonUserFacing: PropTypes.func.isRequired
   };
 
   constructor(props) {
@@ -74,14 +81,28 @@ class UnitCard extends Component {
   serializeLessonGroups = lessonGroups => {
     let s = [];
     lessonGroups.forEach(lessonGroup => {
-      if (lessonGroup.user_facing && lessonGroup.lessons.length > 0) {
+      if (lessonGroup.userFacing && lessonGroup.lessons.length > 0) {
         let t = `lesson_group '${lessonGroup.key}'`;
-        t += `, display_name: '${escape(lessonGroup.display_name)}'`;
+        if (lessonGroup.displayName) {
+          t += `, display_name: '${escape(lessonGroup.displayName)}'`;
+        }
         s.push(t);
+        if (lessonGroup.description) {
+          s.push(
+            `lesson_group_description '${escape(lessonGroup.description)}'`
+          );
+        }
+        if (lessonGroup.bigQuestions) {
+          s.push(
+            `lesson_group_big_questions '${escape(lessonGroup.bigQuestions)}'`
+          );
+        }
       }
-      lessonGroup.lessons.forEach(lesson => {
-        s = s.concat(this.serializeLesson(lesson));
-      });
+      if (lessonGroup.lessons) {
+        lessonGroup.lessons.forEach(lesson => {
+          s = s.concat(this.serializeLesson(lesson));
+        });
+      }
     });
 
     s.push('');
@@ -95,12 +116,71 @@ class UnitCard extends Component {
    */
   serializeLesson = lesson => {
     let s = [];
-    let t = `stage '${escape(lesson.name)}'`;
+    let t = `lesson '${escape(lesson.name)}'`;
+    if (lesson.name) {
+      t += `, display_name: '${escape(lesson.name)}'`;
+    }
     if (lesson.lockable) {
       t += ', lockable: true';
     }
+    if (lesson.visible_after) {
+      t += ', visible_after: true';
+    }
     s.push(t);
+    if (lesson.levels) {
+      lesson.levels.forEach(level => {
+        s = s.concat(this.serializeLevel(level.ids[0], level));
+      });
+    }
+    s.push('');
     return s.join('\n');
+  };
+
+  /**
+   * Generate the ScriptDSL format.
+   * NOTE: The Script Edit GUI no long includes the editing of levels
+   * as those have been moved out to the lesson edit page. We include
+   * level information here behind the scenes because it allows us to
+   * continue to use ScriptDSl for the time being until we are ready
+   * to move on to our future system.
+   * @param id
+   * @param level
+   * @return {string}
+   */
+  serializeLevel = (id, level) => {
+    const s = [];
+    const key = this.props.levelKeyList[id];
+    if (/^blockly:/.test(key)) {
+      if (level.skin) {
+        s.push(`skin '${escape(level.skin)}'`);
+      }
+      if (level.videoKey) {
+        s.push(`video_key_for_next_level '${escape(level.videoKey)}'`);
+      }
+      if (level.concepts) {
+        // concepts is a comma-separated list of single-quoted strings, so do
+        // not escape its single quotes.
+        s.push(`concepts ${level.concepts}`);
+      }
+      if (level.conceptDifficulty) {
+        s.push(`level_concept_difficulty '${escape(level.conceptDifficulty)}'`);
+      }
+    }
+    let l = `level '${escape(key)}'`;
+    if (level.progression) {
+      l += `, progression: '${escape(level.progression)}'`;
+    }
+    if (level.named) {
+      l += `, named: true`;
+    }
+    if (level.assessment) {
+      l += `, assessment: true`;
+    }
+    if (level.challenge) {
+      l += `, challenge: true`;
+    }
+    s.push(l);
+    return s;
   };
 
   generateLessonGroupKey = () => {
@@ -123,6 +203,24 @@ class UnitCard extends Component {
       this.generateLessonGroupKey(),
       newLessonGroupName
     );
+  };
+
+  handleMakeUserFacing = () => {
+    const newLessonGroupKey = this.generateLessonGroupKey();
+    const newLessonGroupDisplayName = prompt(
+      'Enter a display name for first lesson group'
+    );
+    if (newLessonGroupKey && newLessonGroupDisplayName) {
+      this.props.convertGroupToUserFacing(
+        1,
+        newLessonGroupKey,
+        newLessonGroupDisplayName
+      );
+    }
+  };
+
+  handleMakeNonUserFacing = () => {
+    this.props.convertGroupToNonUserFacing(1);
   };
 
   render() {
@@ -148,26 +246,43 @@ class UnitCard extends Component {
               lessonGroupMetrics={this.lessonGroupMetrics}
               setTargetLessonGroup={this.setTargetLessonGroup}
               targetLessonGroupPos={this.state.targetLessonGroupPos}
+              generateLessonGroupKey={this.generateLessonGroupKey}
             />
           ))}
           <div style={styles.addGroupWithWarning}>
-            <button
-              onMouseDown={this.handleAddLessonGroup}
-              className="btn"
-              style={styles.addGroup}
-              type="button"
-              disabled={!this.props.lessonGroups[0].user_facing}
-            >
-              <i style={{marginRight: 7}} className="fa fa-plus-circle" />
-              Add Lesson Group
-            </button>
+            {this.props.lessonGroups[0].userFacing && (
+              <button
+                onMouseDown={this.handleAddLessonGroup}
+                className="btn"
+                type="button"
+                style={styles.addGroup}
+              >
+                <i style={{marginRight: 7}} className="fa fa-plus-circle" />
+                Add Lesson Group
+              </button>
+            )}
+            {!this.props.lessonGroups[0].userFacing && (
+              <button
+                onMouseDown={this.handleMakeUserFacing}
+                className="btn"
+                style={styles.addGroup}
+                type="button"
+              >
+                Enable Lesson Groups
+              </button>
+            )}
+            {this.props.lessonGroups.length === 1 &&
+              this.props.lessonGroups[0].userFacing && (
+                <button
+                  onMouseDown={this.handleMakeNonUserFacing}
+                  className="btn"
+                  style={styles.addGroup}
+                  type="button"
+                >
+                  Disable Lesson Groups
+                </button>
+              )}
           </div>
-          {!this.props.lessonGroups[0].user_facing && (
-            <span style={styles.displayNameWarning}>
-              You must set the display name of the existing lesson group before
-              adding more.
-            </span>
-          )}
         </div>
         <input
           type="hidden"
@@ -183,9 +298,12 @@ export const UnconnectedUnitCard = UnitCard;
 
 export default connect(
   state => ({
-    lessonGroups: state.lessonGroups
+    lessonGroups: state.lessonGroups,
+    levelKeyList: state.levelKeyList
   }),
   {
-    addGroup
+    addGroup,
+    convertGroupToUserFacing,
+    convertGroupToNonUserFacing
   }
 )(UnitCard);

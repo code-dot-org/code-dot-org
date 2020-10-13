@@ -234,7 +234,7 @@ class Script < ActiveRecord::Base
     end
 
     if !with_hidden && has_any_pilot_access?(user)
-      scripts = scripts.concat(all_scripts.select {|s| s.has_pilot_access?(user)})
+      scripts += all_scripts.select {|s| s.has_pilot_access?(user)}
     end
 
     scripts
@@ -244,15 +244,17 @@ class Script < ActiveRecord::Base
     private
 
     def all_scripts
-      Rails.cache.fetch('valid_scripts/all') do
-        Script.all
+      all_scripts = Rails.cache.fetch('valid_scripts/all') do
+        Script.all.to_a
       end
+      all_scripts.freeze
     end
 
     def visible_scripts
-      Rails.cache.fetch('valid_scripts/valid') do
-        Script.all.reject(&:hidden)
+      visible_scripts = Rails.cache.fetch('valid_scripts/valid') do
+        Script.all.reject(&:hidden).to_a
       end
+      visible_scripts.freeze
     end
   end
 
@@ -1277,10 +1279,10 @@ class Script < ActiveRecord::Base
     summary
   end
 
-  def summarize_for_edit
+  def summarize_for_script_edit
     include_lessons = false
     summary = summarize(include_lessons)
-    summary[:lesson_groups] = lesson_groups.map(&:summarize_for_edit)
+    summary[:lesson_groups] = lesson_groups.map(&:summarize_for_script_edit)
     summary
   end
 

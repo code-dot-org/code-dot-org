@@ -94,7 +94,7 @@ export default storybook => {
             lessonGroup={{
               displayName: 'My Group',
               description: 'Lesson Group Description',
-              bigQuestions: ['Why?', 'Who?', 'Where?']
+              bigQuestions: 'Why? Who? Where?'
             }}
             isPlc={false}
             isSummaryView={false}
