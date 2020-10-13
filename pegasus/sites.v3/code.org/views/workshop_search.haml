@@ -29,7 +29,6 @@
     z-index: 1;
     left: 50%;
     margin-top: 0px;
-    display: none;
   }
   .mapboxgl-ctrl-geocoder {
     min-width: 100%;
@@ -48,10 +47,17 @@
     width: 100%;
     padding-bottom: 56.25%;
     border: 3px solid #ddd;
-    display: none;
+  }
+  .popup {
+    max-width: none !important;
+  }
+  .popup button {
+    color: black;
+    padding-top: 2px;
+    height: auto;
   }
   #mapbox-map button {
-    margin: 0
+    margin: 0;
   }
 
 .row
@@ -60,15 +66,9 @@
       .col-xs-4
         .form-group
           %div#mapboxgeocoder{class: 'geocoder'}
-          %input#geocomplete.form-control{name: "geocomplete", placeholder: "Search for workshops", type: "text"}/
-      .col-xs-8
-        #geocomplete-form.form-group
-          %button#btn-submit{type: "submit", style: "margin-top: 0px"} Search
-          %button#btn-reset.btn-link{type: "reset", style: "margin-top: 0px"} Reset
 .row
   .col-xs-12
     #mapbox-map
-    #gmap{style: 'height: 500px; padding: 3px; border: 3px solid #ddd;'}
 
 #properties{'data-studio-url': CDO.studio_url, 'data-deep-dive-only': deep_dive_only}
 

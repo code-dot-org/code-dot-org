@@ -16,9 +16,7 @@ class LessonsController < ApplicationController
 
   # GET /lessons/1/edit
   def edit
-    @lesson_data = {
-      editableData: @lesson.summarize_editable_data
-    }
+    @lesson_data = @lesson.summarize_for_lesson_edit
   end
 
   # PATCH/PUT /lessons/1
