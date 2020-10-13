@@ -46,7 +46,7 @@ social:
     padding-top: 15px;
   }
   .bannerTeachers {
-    padding-top: 30px;
+    padding-top: 15px;
     padding-bottom: 10px;
     opacity: 0;
   }
@@ -55,18 +55,25 @@ social:
     padding-right: 3px;
     vertical-align: top;
   }
-  @media screen and (min-width: 601px) {
+  @media screen and (min-width: 992px) {
     #fullwidth {
       background-image: url(#{CDO.code_org_url('/images/learn/hoc2020_background.png')});
       background-position: 70% 70%;
     }
   }
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    #fullwidth {
+      background-image: url(#{CDO.code_org_url('/images/learn/hoc2020_background_tablet.png')});
+      background-position: 67% 50%;
+      padding-bottom: 200px;
+    }
+  }
   /* Use the narrow image for narrower screens */
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 767px) {
     #fullwidth {
       background-image: url(#{CDO.code_org_url('/images/learn/hoc2020_background_narrow.png')});
       background-position: 50% 80%;
-      padding-bottom: 180px;
+      padding-bottom: 160px;
     }
   }
 
