@@ -23,6 +23,10 @@ class CourseVersion < ApplicationRecord
   belongs_to :course_offering
   has_many :resources
 
+  def units
+    content_root_type == 'UnitGroup' ? content_root.default_scripts : [content_root]
+  end
+
   # "Interface" for content_root:
   #
   # is_course? - used during seeding to determine whether this object represents the content root for a CourseVersion.
