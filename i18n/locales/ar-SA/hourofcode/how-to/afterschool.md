@@ -36,7 +36,7 @@ Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage o
 
 تشتمل أفضل تجربة لأنشطة "ساعة البرمجة" على أجهزة كمبيوتر متصلة بالإنترنت. But you **don’t** need a computer for every child, and you can even do the Hour of Code without a computer at all.
 
-تأكَّد من اختبار البرامج التعليمية على أجهزة كمبيوتر الطلاب أو أجهزتهم للتأكد من أنها تعمل بشكل صحيح على المتصفحات بالصوت والصورة. **Have low bandwidth?** Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the unplugged / offline tutorials.
+تأكَّد من اختبار البرامج التعليمية على أجهزة كمبيوتر الطلاب أو أجهزتهم للتأكد من أنها تعمل على ما يرام على المتصفحات مع الصوت والفيديو. **Have low bandwidth?** Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the unplugged / offline tutorials.
 
 وفِّر سماعات رأس داخل الفصل الدراسي، أو اطلب من الطلاب إحضار سماعاتهم الخاصة، إذا كان البرنامج التعليمي الذي تختاره يعمل بشكل أفضل مع الصوت.
 
@@ -63,7 +63,7 @@ Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage o
 
 ## 6. ابدأ البرمجة!
 
-**Direct participants to the activity** - Write the tutorial link on a whiteboard. اعثر على الرابط المدرج في [معلومات حول دورتك التعليمية المختارة]({{ urls/learn }}) تحت عدد المشاركين.
+**Direct participants to the activity** - Write the tutorial link on a whiteboard. ابحث عن الرابط المذكور في [معلومات عن برنامجك التعليمي المختار]({{ urls/learn }}) تحت عدد المشاركين. 
 
 **When someone comes across difficulties it's okay to respond:** - “I don’t know. دعونا نكتشف ذلك معًا." - "التكنولوجيا لا تعمل دائمًا بالطريقة التي نريدها." - "تعلم البرمجة يشبه تعلم لغة جديدة، فأنت لن تتحدث بطلاقة على الفور."
 

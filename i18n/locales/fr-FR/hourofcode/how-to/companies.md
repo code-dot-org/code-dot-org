@@ -34,7 +34,7 @@ L'une des façons les plus enrichissantes de participer à l'Heure de Code est d
 
 Une fois qu'un bénévole s'inscrit, un enseignant peut examiner son profil sur notre [ carte des bénévoles](https://code.org/volunteer/local) - Les profils doivent, par conséquent, être soumis aussi complets que possible. Si votre profil correspond à sa salle de classe, un enseignant vous contactera via la plate-forme (nous ne partagerons jamais votre adresse électronique avec l'enseignant). Vous pouvez ensuite parler plus en détail, directement avec l'enseignant, et décider [comment offrir le meilleur bénévolat à sa classe](https://hourofcode.com/us/how-to/volunteers).
 
-For more guidance on volunteering and sample messaging to get your company excited about the Hour of Code, check out our [guide for corporate partners](https://hourofcode.com/files/hoc-corporate-toolkit.pdf).
+For more guidance on volunteering and sample messaging to get your company excited about the Hour of Code, check out our [guide for corporate partners]({{ localized_files/hoc_corporate_toolkit }}).
 
 * * *
 
@@ -82,7 +82,7 @@ Nous avons vu des événements [virtuels](https://hourofcode.com/us/how-to/virtu
 
 - Expliquez comment la technologie a une influence sur nos vies, avec des exemples qui concerneront les étudiants de tous horizons. Parlez de la technologie qui sauve des vies, aide les gens, connecte les gens. 
 - Si vous êtes une entreprise technologique, présentez des produits amusants et innovants sur lesquels votre entreprise travaille. Si vous n'êtes pas une entreprise technologique, discutez des façons dont votre entreprise utilise la technologie pour résoudre des problèmes et atteindre ses objectifs.
-- Invite software engineers from your company to speak about why they decided to study computer science and the projects they work on.
+- Invitez les ingénieurs en informatique de votre entreprise à discuter des raisons pour lesquelles ils ont décidé d'étudier l'informatique et des projets sur lesquels ils travaillent. 
 - Lorsque des membres de votre personnel animeront votre événement ou feront du bénévolat avec une école locale, pensez à commander des [t-shirts personnalisés](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) pour vos employés.
 
 ### 3. Planifiez vos besoins technologiques
@@ -91,7 +91,7 @@ Nous avons vu des événements [virtuels](https://hourofcode.com/us/how-to/virtu
 
 #### Appareils :
 
-Pour tirer le meilleur parti de l'Heure de Code, il est préférable de disposer d'ordinateurs reliés à internet. But you don’t need a computer for every child, and you can even do the Hour of Code without a computer at all! Pour les activités débranchées, il suffit de filtrer la section Technologie de la classe pour afficher les options "Pas d'ordinateurs ou d'appareils".
+Pour tirer le meilleur parti de l'Heure de Code, il est préférable de disposer d'ordinateurs reliés à internet. Mais vous n’avez pas besoin d’un ordinateur pour chaque enfant, et vous pouvez même faire une Heure de Code sans ordinateur du tout ! Pour les activités débranchées, il suffit de filtrer la section Technologie de la classe pour afficher les options "Pas d'ordinateurs ou d'appareils".
 
 - **Testez les activités** sur des ordinateurs ou des appareils. Assurez-vous qu'elles fonctionnent correctement sur les navigateurs, avec son et vidéo.
 - **Nombre d'appareils insuffisant ?** Utilisez la programmation par paires. Quand les élèves sont en équipe, ils s'entraident et sollicitent moins leur enseignant. Ils découvriront ainsi que l'informatique est une discipline qui favorise les interactions sociales et la collaboration.
@@ -120,7 +120,7 @@ Une fois que vous avez une feuille de route définie, pour votre événement, vo
 
 Une fois que les étudiants ou les invités ont terminé leur Heure de Code, il est temps de célébrer leur succès. Voici quelques idées pour rendre votre événement encore plus amusant :
 
-- [Print certificates]({{ urls/certificates }}) for participants and students.
+- [Imprimez des certificats]({{ urls/certificates }}) pour les participants et les étudiants. 
 - [Imprimez des autocollants "J'ai fait une Heure de Code !"]({{ promote/resources_stickers }}) ou trouvez d'autres prix et cadeaux stylisés sur le [Code.org Amazon Store](https://code.org/shop). 
 - Partagez les photos et les vidéos de votre événement l'Heure de Code sur les réseaux sociaux. Utilisez les mots-clefs #HourOfCode et @codeorg, pour que nous aussi, nous puissions mettre en avant votre réussite !
 

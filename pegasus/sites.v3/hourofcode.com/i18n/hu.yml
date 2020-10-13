@@ -122,6 +122,13 @@ hu:
     tanulásról, más ehhez kapcsolódó foglamakról, az ezzel járó etikai problémákról
     és arról, hogyan oldja meg az MI a világ problémáit. A számítástechnika sokkal
     több mint csak kódolás! Taníts többet a Code.org segédanyagaival.
+  hoc_live: Hour of Code Live
+  hoc_live_sign_up_title: Sign up for Hour of Code Live
+  hoc_live_sign_up_message: Learn in real time alongside special guests! Students
+    of all ages and abilities, including those without computers, are welcome. Join
+    our mailing list to receive recordings of the episodes and resources to continue
+    learning at home.
+  hoc_live_join_us: Csatlakozz
   hoc_overview_oceans_tutorial_header: MI az Óceánokért
   hoc_overview_oceans_tutorial_desc: Tanulj többet a mesterséges intelligenciáról,
     a gépi tanulásról, más ehhez kapcsolódó foglamakról, az ezzel járó etikai problémákról
@@ -2774,7 +2781,7 @@ hu:
     "Breaking News: 400 students at Roosevelt participate in the Hour of Code"'
   tutorial_kodable-pre_longdescription: Kodable is a self-guided game that introduces
     kids 5+ to programming basics. Having a teacher or parent nearby is optimal, but
-    not necessary.
+    not necessary. Happy koding!
   tutorial_highseas_longdescription: Animate an ocean wave to create a setting, then
     tell a story that takes place on the high seas.
   tutorial_capython_longdescription: Python is an engaging and simple language to
@@ -4959,18 +4966,17 @@ hu:
     they will create a program to teach their KIBO to dance to the music. Students
     will learn how to create a program to express an idea (in this case, a dance),
     with a focus on sequencing ability.
-  tutorial_buildcharacters_longdescription: The most popular pre-reader app now includes
-    a digital Maker Space! Make levels, design games, or build characters. Choose
-    your activity and start creating with Kodable!  Featuring JavaScript for upper
+  tutorial_buildcharacters_longdescription: What are some character traits you can
+    identify in books or people you know? Design your own fuzz and use code to modify
+    its properties and bring your character to life! Featuring JavaScript for upper
     elementary.
   tutorial_designgames_longdescription: The most popular pre-reader app now includes
     a digital Maker Space! Make levels, design games, or build characters. Choose
     your activity and start creating with Kodable!  Featuring JavaScript for upper
     elementary.
-  tutorial_makelevels_longdescription: The most popular pre-reader app now includes
-    a digital Maker Space! Make levels, design games, or build characters. Choose
-    your activity and start creating with Kodable!  Featuring JavaScript for upper
-    elementary.
+  tutorial_makelevels_longdescription: Can you build a symmetrical maze? A maze with
+    right angles? Get creative and complete maze-building challenges with basic coding
+    concepts. Aligned with K-5 Common Core math.
   tutorial_wizard_longdescription: Journey into the world of Code Magic as a Code
     Wizard. Learn to create and cast spells to customize your castle.
   tutorial_mbscratchcards_longdescription: Connect the physical world of micro:bit
@@ -8280,8 +8286,8 @@ hu:
   tutorial_codewards_string_detail_programming_languages: CoffeeScript
   tutorial_olympics_string_detail_programming_languages: CoffeeScript
   tutorial_codinismhero_string_detail_programming_languages: Python
-  tutorial_discovery_string_detail_programming_languages: Blokk programozás
-  tutorial_csfirstname_string_detail_programming_languages: Blokk programozás
+  tutorial_discovery_string_detail_programming_languages: Blokk programozás, Scratch
+  tutorial_csfirstname_string_detail_programming_languages: Blokk programozás, Scratch
   tutorial_obstaclecourse_string_detail_programming_languages: Blokk programozás
   tutorial_edisonmove_string_detail_programming_languages: Python, EdPy, a text-based
     programming language based on Python.
@@ -9273,7 +9279,7 @@ hu:
   tutorial_ai-oceans_string_detail_platforms: ''
   tutorial_scratchimagine_string_detail_programming_languages: Blokk programozás
   tutorial_codesterspsa_string_detail_programming_languages: Python
-  tutorial_googlehero_string_detail_programming_languages: Blokk programozás
+  tutorial_googlehero_string_detail_programming_languages: Blokk programozás, Scratch
   tutorial_codestersbball_string_detail_programming_languages: Python
   tutorial_scratchcartoon_string_detail_programming_languages: Blokk programozás
   tutorial_codemonkeyjr_string_detail_programming_languages: Blokk programozás

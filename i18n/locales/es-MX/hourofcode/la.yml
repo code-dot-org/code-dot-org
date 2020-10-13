@@ -121,6 +121,13 @@ la:
     ¡Las ciencias de la computación son mucho más que programar! Disfruta del primer
     paso de Code.org en un nuevo viaje para enseñar más sobre IA en nuestro plan de
     estudios.
+  hoc_live: Hora del Código En Vivo
+  hoc_live_sign_up_title: Regístrate para la Hora del Código En Vivo
+  hoc_live_sign_up_message: "¡Aprende en vivo junto a invitados especiales! Estudiantes
+    de todas las edades y habilidades, incluso aquellos sin computadoras, son bienvenidos.
+    Únete a nuestra lista de distribución para recibir recordatorios de los episodios
+    y recursos para continuar el aprendizaje en casa."
+  hoc_live_join_us: Únete
   hoc_overview_oceans_tutorial_header: Océanos de AI
   hoc_overview_oceans_tutorial_desc: Aprende sobre inteligencia artificial (IA), aprendizaje
     automático, datos de entrenamiento y sesgos, mientras exploras cuestiones éticas
@@ -190,7 +197,7 @@ la:
   codeorg_homepage_hoc2018_video: Mira nuestro video
   hourofcode_homepage_hoc2018_header_line1: Cualquier persona, en cualquier lugar,
     puede organizar una Hora del Código. Hay tutoriales de una hora en más de 45 idiomas.
-    No se necesita experiencia.
+    No se necesita experiencia previa en programación.
   hourofcode_homepage_hoc2018_header_line2: De 4 a 104 años.
   hoc2018_tutorial_mchoc_description: "¡Minecraft está de vuelta para la Hora del
     Código con una actividad nueva! Viaja a través de Minecraft con el código."
@@ -8774,8 +8781,8 @@ la:
   tutorial_codewards_string_detail_programming_languages: CoffeeScript
   tutorial_olympics_string_detail_programming_languages: CoffeeScript
   tutorial_codinismhero_string_detail_programming_languages: Python
-  tutorial_discovery_string_detail_programming_languages: Bloques
-  tutorial_csfirstname_string_detail_programming_languages: Bloques
+  tutorial_discovery_string_detail_programming_languages: Bloques, Scratch
+  tutorial_csfirstname_string_detail_programming_languages: Bloques, Scratch
   tutorial_obstaclecourse_string_detail_programming_languages: Bloques
   tutorial_edisonmove_string_detail_programming_languages: Python, EdPy, un lenguaje
     de programación basado en texto basado en Python.
@@ -9816,7 +9823,7 @@ la:
   tutorial_ai-oceans_string_detail_platforms: ''
   tutorial_scratchimagine_string_detail_programming_languages: Bloques
   tutorial_codesterspsa_string_detail_programming_languages: Python
-  tutorial_googlehero_string_detail_programming_languages: Bloques
+  tutorial_googlehero_string_detail_programming_languages: Bloques, Scratch
   tutorial_codestersbball_string_detail_programming_languages: Python
   tutorial_scratchcartoon_string_detail_programming_languages: Bloques
   tutorial_codemonkeyjr_string_detail_programming_languages: Bloques
