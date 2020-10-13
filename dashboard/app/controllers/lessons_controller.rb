@@ -21,20 +21,8 @@ class LessonsController < ApplicationController
 
   # PATCH/PUT /lessons/1
   def update
-    if lesson_params.key?('resources')
-      lesson_resource_keys = lesson_params['resources'] || []
-      resource_keys_in_lesson = @lesson.resources.map(&:key) || []
-      resource_keys_to_add = lesson_resource_keys - resource_keys_in_lesson
-      resource_keys_to_add.each do |resource_key|
-        persisted_resource = Resource.find_by_key(resource_key)
-        @lesson.resources << persisted_resource if persisted_resource
-      end
-      resource_keys_to_remove = resource_keys_in_lesson - lesson_resource_keys
-      resource_keys_to_remove.each do |resource_key|
-        persisted_resource = Resource.find_by_key(resource_key)
-        @lesson.resources.delete(persisted_resource) if persisted_resource
-      end
-    end
+    resources = (lesson_params['resources'] || []).map {|key| Resource.find_by_key(key)}
+    @lesson.resources = resources.compact
     @lesson.update!(lesson_params.except(:resources))
     @lesson.update_activities(JSON.parse(params[:activities])) if params[:activities]
 
