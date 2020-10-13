@@ -293,7 +293,8 @@ class ActivitySectionCard extends Component {
     e.preventDefault();
   }
 
-  handleAddLevel = level => {
+  //TODO: Hook up being able to actually pick a level to add instead of holding place level
+  handleAddLevel = () => {
     const newLevelPosition = this.props.activitySection.scriptLevels.length + 1;
     this.props.addLevel(
       this.props.activityPosition,
@@ -302,21 +303,21 @@ class ActivitySectionCard extends Component {
         id: NEW_LEVEL_ID,
         levels: [
           {
-            id: level.id,
-            name: level.name,
-            url: `https://levelbuilder-studio.code.org/levels/${level.id}/edit`,
-            icon: level.icon || 'fa-desktop',
-            isUnplugged: level.unplugged,
-            isConceptLevel: level.is_concept_level,
-            skin: level.skin,
-            videoKey: level.videoKey,
-            concepts: level.concepts,
-            conceptDifficulty: level.conceptDifficulty
+            id: NEW_LEVEL_ID,
+            name: `Level ${newLevelPosition}`,
+            url: `https://levelbuilder-studio.code.org/levels/598/edit`,
+            icon: 'fa-desktop',
+            isUnplugged: false,
+            isConceptLevel: false,
+            skin: null,
+            videoKey: null,
+            concepts: '',
+            conceptDifficulty: ''
           }
         ],
-        activeId: level.id,
+        activeId: NEW_LEVEL_ID,
         position: newLevelPosition,
-        kind: level.kind,
+        kind: 'puzzle',
         bonus: false,
         assessment: false,
         challenge: false,
