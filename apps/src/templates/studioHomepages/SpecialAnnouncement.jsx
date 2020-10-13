@@ -27,7 +27,7 @@ export default class SpecialAnnouncement extends Component {
     const descriptionText = isEnglish
       ? isTeacher
         ? i18n.teacherAnnouncementSpecialFall2020Body()
-        : i18n.studentAnnouncementSpecial2020BodyShort()
+        : i18n.studentAnnouncementSpecial2020Body()
       : i18n.intlAnnouncementSpecial2020Body();
     const buttonId = isTeacher
       ? 'teacher_homepage_announcement_special2020'
