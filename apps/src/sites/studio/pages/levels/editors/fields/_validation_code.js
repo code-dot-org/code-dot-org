@@ -3,20 +3,18 @@ import $ from 'jquery';
 $(initPage);
 
 function initPage() {
-  const freePlay = $('#level_free_play');
+  const widgetMode = $('#level_widget_mode');
+  const embed = $('#level_embed');
   const autoValidate = $('#level_validation_enabled');
-  if (freePlay && autoValidate) {
-    freePlay.on('click', syncWithValidate);
-    if (!freePlay.prop('checked')) {
-      syncWithValidate();
-    }
+  if (autoValidate.length > 0) {
+    embed.on('click', () => syncValidateWithElements(embed, widgetMode));
+    widgetMode.on('click', () => syncValidateWithElements(embed, widgetMode));
   }
 }
 
-function syncWithValidate() {
-  const freePlay = $('#level_free_play');
+function syncValidateWithElements(element1, element2) {
   const autoValidate = $('#level_validation_enabled');
-  const checked = freePlay.prop('checked');
-  autoValidate.prop('checked', checked);
-  autoValidate.prop('disabled', !checked);
+  const eitherChecked = element1.prop('checked') || element2.prop('checked');
+  autoValidate.prop('checked', !eitherChecked);
+  autoValidate.prop('disabled', eitherChecked);
 }
