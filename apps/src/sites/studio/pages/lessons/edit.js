@@ -19,10 +19,13 @@ $(document).ready(function() {
 
   // TODO(dave): move this output into the lesson edit UI
   relatedLessons.forEach(lesson => {
+    const year = lesson.versionYear;
     const type = lesson.lockable ? 'lockable' : 'lesson';
     const url = lesson.lessonEditUrl;
     console.log(
-      `${lesson.scriptTitle} ${type} ${lesson.relativePosition} ${url}`
+      `${lesson.scriptTitle} - ${year} - ${type} ${
+        lesson.relativePosition
+      } ${url}`
     );
   });
   const activities = lessonData.activities;
