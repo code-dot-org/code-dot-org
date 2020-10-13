@@ -436,7 +436,9 @@ class Lesson < ActiveRecord::Base
   end
 
   # Finds all other lessons which match the following criteria:
-  # 1. in the same curriculum umbrella (CSF/CSD/CSP) as this lesson
+  # 1. the other lesson is in the same course offering as this lesson. Or, if
+  # this is lesson is in a CSF course offering, the other lesson may also be in
+  # any other CSF course offering.
   # 2. same lesson key (untranslated lesson name)
   # The results are sorted first by version year and then by script name.
   #
@@ -453,7 +455,25 @@ class Lesson < ActiveRecord::Base
   #
   # @return [Array<Lesson>]
   def related_lessons
-    return [] unless script.curriculum_umbrella
+    return related_csf_lessons if script&.curriculum_umbrella == 'CSF'
+
+    course_offering = script&.get_course_version&.course_offering
+    return [] unless course_offering
+    # all units in this course offering, including this lesson's unit
+    related_units = course_offering.course_versions.map(&:units).flatten
+    lessons = Lesson.includes(:script).joins(:script).
+      where(script: related_units).
+      where(key: key).
+      order("scripts.properties -> '$.version_year'", 'scripts.name')
+    lessons - [self]
+  end
+
+  def related_csf_lessons
+    # because curriculum umbrella is stored on the Script model, take a big
+    # shortcut and look only at curriculum umbrella, ignoring course version
+    # and course offering. In the future, when curriulum_umbrella moves to
+    # CourseOffering, this implementation will need to change to be more like
+    # related_lessons.
     lessons = Lesson.includes(:script).joins(:script).
       where("scripts.properties -> '$.curriculum_umbrella' = ?", script.curriculum_umbrella).
       where(key: key).
