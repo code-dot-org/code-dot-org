@@ -151,12 +151,13 @@ a.category-link {
   }
 
   .front-header-banner h4 {
-    font-size: 40px;
+    font-size: 34px;
   }
 
   .front-header-description {
     font-size: 16px;
     line-height: 18px;
+    margin-bottom: 20px;
   }
 
   .banner-title {
@@ -178,12 +179,13 @@ a.category-link {
   }
 
   .front-header-banner h4 {
-    font-size: 60px;
+    font-size: 44px;
   }
 
   .front-header-description {
     font-size: 20px;
     line-height: 24px;
+    margin-bottom: 80px;
   }
 
   .banner-title {
@@ -205,11 +207,12 @@ a.category-link {
   }
 
   .front-header-banner h4 {
-    font-size: 80px;
+    font-size: 44px;
   }
 
   .front-header-description {
     font-size: 24px;
+    margin-bottom: 80px;
   }
 
   .banner-title {
@@ -251,10 +254,9 @@ a.category-link {
 }
 
 .front-header-description {
-  color: black;
+  color: #4d575f;
   max-width: 800px;
   display: inline-block;
-  text-shadow: 0px 0px 20px white, 0px 0px 20px white, 0px 0px 20px white;
 }
 
 .hoc-description {
