@@ -166,21 +166,6 @@ export const commands = {
     return locationCommands.randomLocation();
   },
 
-  // Math commands
-  cos(angleDegrees) {
-    if (angleDegrees === undefined) {
-      angleDegrees = 0;
-    }
-    return parseFloat(Math.cos((angleDegrees * Math.PI) / 180).toFixed(4));
-  },
-
-  sin(angleDegrees) {
-    if (angleDegrees === undefined) {
-      angleDegrees = 0;
-    }
-    return parseFloat(Math.sin((angleDegrees * Math.PI) / 180).toFixed(4));
-  },
-
   // Sprite commands
   countByAnimation(spriteArg) {
     return spriteCommands.countByAnimation(spriteArg);
