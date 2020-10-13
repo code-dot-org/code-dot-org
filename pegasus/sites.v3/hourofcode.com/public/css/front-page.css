@@ -150,8 +150,9 @@ a.category-link {
     max-width: 45%;
   }
 
-  .front-header-banner h4 {
+  .front-header-banner .front-header-title p {
     font-size: 34px;
+    line-height: 34px;
   }
 
   .front-header-description {
@@ -178,8 +179,9 @@ a.category-link {
     max-width: 40%;
   }
 
-  .front-header-banner h4 {
+  .front-header-banner .front-header-title p {
     font-size: 44px;
+    line-height: 44px;
   }
 
   .front-header-description {
@@ -206,8 +208,9 @@ a.category-link {
     width: 22%;
   }
 
-  .front-header-banner h4 {
+  .front-header-banner .front-header-title p {
     font-size: 44px;
+    line-height: 44px;
   }
 
   .front-header-description {
@@ -251,6 +254,17 @@ a.category-link {
 .front-header-banner {
   color: white;
   margin-top: 0px;
+}
+
+.front-header-banner .front-header-title {
+  color: #00ADBC;
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+
+.front-header-banner .front-header-title p {
+  font-family: 'Gotham 5r', sans-serif !important;
+  margin-bottom: 0px;
 }
 
 .front-header-description {
