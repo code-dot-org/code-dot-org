@@ -4,6 +4,7 @@ import React, { Component } from "react";
 import Papa from "papaparse";
 import { connect } from "react-redux";
 import { setImportedData, setColumnsByDataType, ColumnTypes } from "../redux";
+import { availableDatasets } from "../datasetManifest";
 
 class CSVReaderWrapper extends Component {
   static propTypes = {
@@ -16,21 +17,31 @@ class CSVReaderWrapper extends Component {
 
     this.state = {
       csvfile: undefined,
+      download: false,
       data: undefined
     };
   }
 
   handleChange = event => {
     this.setState({
-      csvfile: event.target.files[0]
+      csvfile: event.target.files[0],
+      download: false
+    });
+  };
+
+  handleChangeSelect = event => {
+    this.setState({
+      csvfile: event.target.value,
+      download: true
     });
   };
 
   importCSV = () => {
-    const { csvfile } = this.state;
+    const { csvfile, download } = this.state;
     Papa.parse(csvfile, {
       complete: this.updateData,
-      header: true
+      header: true,
+      download: download
     });
   };
 
@@ -49,6 +60,23 @@ class CSVReaderWrapper extends Component {
   render() {
     return (
       <div>
+        <h2>Which dataset would you like to use?</h2>
+        <form>
+          <label>
+            <h2>Select a dataset from the collection</h2>
+            <select onChange={this.handleChangeSelect}>
+              <option>{""}</option>
+              {availableDatasets.map(dataset => {
+                return (
+                  <option key={dataset["id"]} value={dataset["path"]}>
+                    {dataset["name"]}
+                  </option>
+                );
+              })}
+            </select>
+          </label>
+        </form>
+        <h2>OR</h2>
         <h2>Import CSV File</h2>
         <input
           className="csv-input"
@@ -61,6 +89,7 @@ class CSVReaderWrapper extends Component {
           onChange={this.handleChange}
         />
         <p />
+        <h2>Upload the selected dataset</h2>
         <button type="button" onClick={this.importCSV}>
           Upload now!
         </button>
