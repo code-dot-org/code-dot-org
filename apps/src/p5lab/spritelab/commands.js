@@ -91,6 +91,10 @@ export const commands = {
     actionCommands.setProp.apply(this, [spriteArg, prop, val]);
   },
 
+  setQuestion(questionText, variableName, callback) {
+    worldCommands.setQuestion(questionText, variableName, callback);
+  },
+
   setTint(spriteArg, color) {
     actionCommands.setProp(spriteArg, 'tint', color);
   },
@@ -135,6 +139,10 @@ export const commands = {
 
   spriteClicked(condition, spriteArg, callback) {
     eventCommands.spriteClicked(condition, spriteArg, callback);
+  },
+
+  whenQuestionAnswered(variableName, callback) {
+    eventCommands.whenQuestionAnswered(variableName, callback);
   },
 
   // Location commands
