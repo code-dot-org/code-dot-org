@@ -52,7 +52,7 @@ export const activitySectionShape = PropTypes.shape({
   remarks: PropTypes.bool,
   slide: PropTypes.bool,
   levels: PropTypes.arrayOf(levelShape),
-  text: PropTypes.string,
+  text: PropTypes.string.isRequired,
   tips: PropTypes.arrayOf(tipShape)
 });
 
@@ -68,4 +68,26 @@ export const resourceShape = PropTypes.shape({
   key: PropTypes.string,
   name: PropTypes.string,
   url: PropTypes.string
+});
+
+export const lessonShape = PropTypes.shape({
+  id: PropTypes.number,
+  key: PropTypes.string,
+  name: PropTypes.string,
+  position: PropTypes.number,
+  lockable: PropTypes.bool,
+  unplugged: PropTypes.bool,
+  assessment: PropTypes.bool,
+  relativePosition: PropTypes.number,
+  levels: PropTypes.arrayOf(levelShape)
+});
+
+export const lessonGroupShape = PropTypes.shape({
+  key: PropTypes.string,
+  displayName: PropTypes.string,
+  position: PropTypes.number,
+  userFacing: PropTypes.bool,
+  bigQuestions: PropTypes.string,
+  description: PropTypes.string,
+  lessons: PropTypes.arrayOf(lessonShape)
 });

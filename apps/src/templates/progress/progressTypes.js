@@ -42,6 +42,6 @@ export const lessonType = PropTypes.shape({
 export const lessonGroupType = PropTypes.shape({
   id: PropTypes.number,
   displayName: PropTypes.string,
-  bigQuestions: PropTypes.array,
+  bigQuestions: PropTypes.string,
   description: PropTypes.string
 });
