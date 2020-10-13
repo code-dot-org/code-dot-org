@@ -463,8 +463,11 @@ class Lesson < ActiveRecord::Base
     related_units = course_offering.course_versions.map(&:units).flatten
     lessons = Lesson.includes(:script).joins(:script).
       where(script: related_units).
-      where(key: key).
-      order("scripts.properties -> '$.version_year'", 'scripts.name')
+      where(key: key)
+    lessons = lessons.all.sort_by do |lesson|
+      version_year = lesson.script&.get_course_version&.version_year
+      [version_year, lesson.script.name]
+    end
     lessons - [self]
   end
 
