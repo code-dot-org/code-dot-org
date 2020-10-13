@@ -505,7 +505,7 @@ class Lesson < ActiveRecord::Base
   def summarize_related_lessons
     related_lessons.map do |lesson|
       {
-        scriptName: lesson.script.name,
+        scriptTitle: lesson.script.localized_title,
         lockable: lesson.lockable,
         relativePosition: lesson.relative_position,
         lessonEditUrl: edit_lesson_path(id: lesson.id)

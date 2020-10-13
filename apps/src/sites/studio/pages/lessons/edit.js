@@ -22,7 +22,7 @@ $(document).ready(function() {
     const type = lesson.lockable ? 'lockable' : 'lesson';
     const url = lesson.lessonEditUrl;
     console.log(
-      `${lesson.scriptName} ${type} ${lesson.relativePosition} ${url}`
+      `${lesson.scriptTitle} ${type} ${lesson.relativePosition} ${url}`
     );
   });
   const activities = lessonData.activities;
