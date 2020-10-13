@@ -315,7 +315,7 @@ class ActivitySectionCard extends Component {
           }
         ],
         activeId: level.id,
-        position: newLevelPosition,
+        position: newLevelPosition, // This should be based on position in the lesson as a whole not just activitySection
         kind: 'puzzle',
         bonus: false,
         assessment: false,
