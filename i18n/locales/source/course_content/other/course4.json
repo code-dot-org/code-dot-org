@@ -266,6 +266,9 @@
       "set score": {
         "name": "set score"
       }
+    },
+    "placeholder_texts": {
+      "c469f9393f38213de6fcffa9fe48008d": " -score- "
     }
   },
   "https://studio.code.org/s/course4/stage/7/puzzle/2": {
@@ -278,6 +281,9 @@
       "set score": {
         "name": "set score"
       }
+    },
+    "placeholder_texts": {
+      "c469f9393f38213de6fcffa9fe48008d": " -score- "
     }
   },
   "https://studio.code.org/s/course4/stage/7/puzzle/3": {
@@ -311,6 +317,13 @@
     "long_instructions": "Use these blocks to make the actors share a knock-knock joke. Change the punchline and setup to tell your own joke!",
     "authored_hints": {
       "courseF_playlab_variables_challenge1_a": "You will need additional blocks from the tool box to get the actors to talk.\n\n[blockly block][0]"
+    },
+    "placeholder_texts": {
+      "b8bc42495234cdcdcd3ed49dad120a84": "Meg",
+      "8292c7cbebf598e875ccd0c008958922": " who?",
+      "40f4f24106dde9234f43bf30465647e0": "Knock knock.",
+      "3986de660e6560710c546cb2f22c12f3": "Who's there?",
+      "812febf38bfe564d348136e1b9e71bcd": "Megabytes!"
     }
   },
   "https://studio.code.org/s/course4/stage/8/puzzle/1": {
@@ -1198,6 +1211,10 @@
           "points": "points"
         }
       }
+    },
+    "placeholder_texts": {
+      "46e888cc716ac8ec6fad01e85eb7c37c": "Level: ",
+      "013405bba4219ed238e87658786699b6": " Points: "
     }
   },
   "https://studio.code.org/s/course4/stage/15/puzzle/11": {
