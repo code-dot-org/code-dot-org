@@ -55,6 +55,7 @@ class Artist < Blockly
         user: params[:user],
         game: Game.custom_artist,
         level_num: 'custom',
+        validation_enabled: true
       )
     )
   end

@@ -2,6 +2,7 @@ var spriteId = 0;
 var nativeSpriteMap = {};
 var inputEvents = [];
 var behaviors = [];
+var userInputEventCallbacks = {};
 
 export var background;
 export var title = '';
@@ -14,6 +15,7 @@ export function reset() {
   behaviors = [];
   background = 'white';
   title = subtitle = '';
+  userInputEventCallbacks = {};
 }
 
 /**
@@ -147,6 +149,40 @@ function enforceUniqueSpriteName(name) {
  */
 export function deleteSprite(spriteId) {
   delete nativeSpriteMap[spriteId];
+}
+
+export function registerQuestion(questionText, variableName, setterCallback) {
+  if (!userInputEventCallbacks[variableName]) {
+    userInputEventCallbacks[variableName] = {
+      setterCallbacks: [],
+      userCallbacks: []
+    };
+  }
+  userInputEventCallbacks[variableName].setterCallbacks.push(setterCallback);
+}
+
+export function registerQuestionAnswerCallback(variableName, userCallback) {
+  if (!userInputEventCallbacks[variableName]) {
+    userInputEventCallbacks[variableName] = {
+      setterCallbacks: [],
+      userCallbacks: []
+    };
+  }
+  userInputEventCallbacks[variableName].userCallbacks.push(userCallback);
+}
+
+export function onQuestionAnswer(variableName, userInput) {
+  const callbacks = userInputEventCallbacks[variableName];
+  if (callbacks) {
+    // Make sure to call the setter callback to set the variable
+    // before the user callback, which may rely on the variable's new value
+    callbacks.setterCallbacks.forEach(callback => {
+      callback(userInput);
+    });
+    callbacks.userCallbacks.forEach(callback => {
+      callback();
+    });
+  }
 }
 
 export function addEvent(type, args, callback) {
