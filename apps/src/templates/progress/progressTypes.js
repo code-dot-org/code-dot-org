@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 
 export const levelType = PropTypes.shape({
-  status: PropTypes.string.isRequired,
   url: PropTypes.string,
   name: PropTypes.string,
   icon: PropTypes.string,
@@ -10,6 +9,13 @@ export const levelType = PropTypes.shape({
   isCurrentLevel: PropTypes.bool,
   isConceptLevel: PropTypes.bool,
   sublevels: PropTypes.arrayOf(PropTypes.object)
+});
+
+export const levelStatusType = PropTypes.shape({
+  status: PropTypes.string,
+  result: PropTypes.number,
+  paired: PropTypes.bool,
+  time_spent: PropTypes.number
 });
 
 /**

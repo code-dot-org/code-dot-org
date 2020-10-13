@@ -90,7 +90,8 @@ class ProgressLevelSet extends React.Component {
           <tr>
             <td style={styles.col1}>
               <ProgressPill
-                levels={levels}
+                level={levels[0]}
+                multilevel={multiLevelStep}
                 icon={getIconForLevel(levels[0])}
                 text={pillText}
                 disabled={disabled}

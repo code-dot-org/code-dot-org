@@ -573,7 +573,7 @@ const levelWithStatus = (
     }
   }
   return {
-    ...processedLevel(level),
+    ...processedLevel(level, isSublevel),
     status: statusForLevel(level, levelProgress),
     isCurrentLevel: isCurrentLevel(currentLevelId, level),
     paired: levelPairing[level.activeId],

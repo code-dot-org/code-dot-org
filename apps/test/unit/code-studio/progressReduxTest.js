@@ -631,6 +631,7 @@ describe('progressReduxTest', () => {
       const expected = [
         [
           {
+            id: 2106,
             status: 'not_tried',
             url:
               'http://localhost-studio.code.org:3000/s/course3/stage/1/puzzle/1',
@@ -649,6 +650,7 @@ describe('progressReduxTest', () => {
             sublevels: []
           },
           {
+            id: 323,
             status: 'not_tried',
             url:
               'http://localhost-studio.code.org:3000/s/course3/stage/1/puzzle/2',
@@ -667,6 +669,7 @@ describe('progressReduxTest', () => {
             sublevels: []
           },
           {
+            id: 322,
             status: 'not_tried',
             url:
               'http://localhost-studio.code.org:3000/s/course3/stage/1/puzzle/3',
@@ -687,6 +690,7 @@ describe('progressReduxTest', () => {
         ],
         [
           {
+            id: 330,
             status: 'not_tried',
             url:
               'http://localhost-studio.code.org:3000/s/course3/stage/2/puzzle/1',
@@ -705,6 +709,7 @@ describe('progressReduxTest', () => {
             sublevels: []
           },
           {
+            id: 339,
             status: 'perfect',
             url:
               'http://localhost-studio.code.org:3000/s/course3/stage/2/puzzle/2',
@@ -723,6 +728,7 @@ describe('progressReduxTest', () => {
             sublevels: []
           },
           {
+            id: 341,
             status: 'attempted',
             url:
               'http://localhost-studio.code.org:3000/s/course3/stage/2/puzzle/3',

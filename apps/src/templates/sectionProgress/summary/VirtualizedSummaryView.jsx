@@ -5,6 +5,10 @@ import {MultiGrid} from 'react-virtualized';
 import styleConstants from '../../../styleConstants';
 import {jumpToLessonDetails} from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 import {scriptDataPropType} from '../sectionProgressConstants';
+import {
+  summarizeProgressInStage,
+  stageIsAllAssessment
+} from '@cdo/apps/templates/progress/progressHelpers';
 import {sectionDataPropType} from '@cdo/apps/redux/sectionDataRedux';
 import StudentProgressSummaryCell from './StudentProgressSummaryCell';
 import SectionProgressLessonNumberCell from '@cdo/apps/templates/sectionProgress/SectionProgressLessonNumberCell';
@@ -27,7 +31,7 @@ class VirtualizedSummaryView extends Component {
     section: sectionDataPropType.isRequired,
     scriptData: scriptDataPropType.isRequired,
     lessonOfInterest: PropTypes.number.isRequired,
-    levelsByLesson: PropTypes.object,
+    levelStatusByStudent: PropTypes.object,
     onScroll: PropTypes.func,
     jumpToLessonDetails: PropTypes.func.isRequired
   };
@@ -105,7 +109,37 @@ class VirtualizedSummaryView extends Component {
     style,
     position
   ) => {
-    const {section, levelsByLesson} = this.props;
+    const {section, levelStatusByStudent, scriptData} = this.props;
+    const student = section.students[studentStartIndex];
+    let child;
+    if (stageIdIndex < 0) {
+      child = (
+        <SectionProgressNameCell
+          name={student.name}
+          studentId={student.id}
+          sectionId={section.id}
+          scriptName={scriptData.name}
+          scriptId={scriptData.id}
+        />
+      );
+    } else {
+      const stageLevels = scriptData.stages[stageIdIndex].levels;
+      const statusCounts = summarizeProgressInStage(
+        levelStatusByStudent[student.id],
+        stageLevels
+      );
+      const assessmentStage = stageIsAllAssessment(stageLevels);
+      child = (
+        <StudentProgressSummaryCell
+          studentId={student.id}
+          statusCounts={statusCounts}
+          assessmentStage={assessmentStage}
+          style={progressStyles.summaryCell}
+          onSelectDetailView={() => this.props.jumpToLessonDetails(position)}
+        />
+      );
+    }
+
     // Alternate background colour of each row
     if (studentStartIndex % 2 === 1) {
       style = {
@@ -114,25 +148,9 @@ class VirtualizedSummaryView extends Component {
       };
     }
 
-    const student = section.students[studentStartIndex];
-
     return (
       <div className={progressStyles.Cell} key={key} style={style}>
-        {stageIdIndex < 0 && (
-          <SectionProgressNameCell
-            name={student.name}
-            studentId={student.id}
-            sectionId={section.id}
-          />
-        )}
-        {stageIdIndex >= 0 && (
-          <StudentProgressSummaryCell
-            studentId={student.id}
-            levelsWithStatus={levelsByLesson[student.id][stageIdIndex]}
-            style={progressStyles.summaryCell}
-            onSelectDetailView={() => this.props.jumpToLessonDetails(position)}
-          />
-        )}
+        {child}
       </div>
     );
   };
@@ -145,7 +163,7 @@ class VirtualizedSummaryView extends Component {
   };
 
   componentDidUpdate(prevProps) {
-    if (this.props.levelsByLesson !== prevProps.levelsByLesson) {
+    if (this.props.levelStatusByStudent !== prevProps.levelStatusByStudent) {
       this.summaryView.forceUpdateGrids();
     }
   }
@@ -192,8 +210,8 @@ export const UnconnectedVirtualizedSummaryView = VirtualizedSummaryView;
 export default connect(
   state => ({
     lessonOfInterest: state.sectionProgress.lessonOfInterest,
-    levelsByLesson:
-      state.sectionProgress.levelsByLessonByScript[
+    levelStatusByStudent:
+      state.sectionProgress.studentLevelStatusByScript[
         state.scriptSelection.scriptId
       ]
   }),

@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
+import _ from 'lodash';
 import {connect} from 'react-redux';
 import {MultiGrid} from 'react-virtualized';
 import StudentProgressDetailCell from '@cdo/apps/templates/sectionProgress/detail/StudentProgressDetailCell';
@@ -71,12 +72,13 @@ class VirtualizedDetailView extends Component {
   static propTypes = {
     section: sectionDataPropType.isRequired,
     scriptData: scriptDataPropType.isRequired,
+    levelStatusByStudent: PropTypes.object.isRequired,
     lessonOfInterest: PropTypes.number.isRequired,
     setLessonOfInterest: PropTypes.func.isRequired,
     columnWidths: PropTypes.arrayOf(PropTypes.number).isRequired,
-    levelsByLesson: PropTypes.object,
     onScroll: PropTypes.func,
-    stageExtrasEnabled: PropTypes.bool
+    scriptName: PropTypes.string,
+    scriptId: PropTypes.number
   };
 
   constructor(props) {
@@ -100,7 +102,11 @@ class VirtualizedDetailView extends Component {
   }
 
   componentDidUpdate(prevProps) {
-    if (this.props.levelsByLesson !== prevProps.levelsByLesson) {
+    if (
+      !_.isEqual(
+        this.props.levelStatusByStudent !== prevProps.levelStatusByStudent
+      )
+    ) {
       this.detailView.forceUpdateGrids();
     }
   }
@@ -220,7 +226,32 @@ class VirtualizedDetailView extends Component {
   };
 
   studentCellRenderer = (studentStartIndex, stageIdIndex, key, style) => {
-    const {section, levelsByLesson, stageExtrasEnabled} = this.props;
+    const {section, levelStatusByStudent, scriptData} = this.props;
+    const student = section.students[studentStartIndex];
+    let child;
+    if (stageIdIndex < 0) {
+      child = (
+        <SectionProgressNameCell
+          name={student.name}
+          studentId={student.id}
+          sectionId={section.id}
+          scriptName={scriptData.name}
+          scriptId={scriptData.id}
+        />
+      );
+    } else {
+      const stageLevels = scriptData.stages[stageIdIndex].levels;
+      child = (
+        <StudentProgressDetailCell
+          studentId={student.id}
+          sectionId={section.id}
+          stageId={stageIdIndex}
+          stageExtrasEnabled={section.stageExtras}
+          levels={stageLevels}
+          levelStatuses={levelStatusByStudent[student.id] || {}}
+        />
+      );
+    }
 
     // Alternate background colour of each row
     if (studentStartIndex % 2 === 1) {
@@ -230,26 +261,9 @@ class VirtualizedDetailView extends Component {
       };
     }
 
-    const student = section.students[studentStartIndex];
-
     return (
       <div className={progressStyles.Cell} key={key} style={style}>
-        {stageIdIndex < 0 && (
-          <SectionProgressNameCell
-            name={student.name}
-            studentId={student.id}
-            sectionId={section.id}
-          />
-        )}
-        {stageIdIndex >= 0 && (
-          <StudentProgressDetailCell
-            studentId={student.id}
-            sectionId={section.id}
-            stageId={stageIdIndex}
-            stageExtrasEnabled={stageExtrasEnabled}
-            levelsWithStatus={levelsByLesson[student.id][stageIdIndex]}
-          />
-        )}
+        {child}
       </div>
     );
   };
@@ -300,8 +314,8 @@ export default connect(
   state => ({
     columnWidths: getColumnWidthsForDetailView(state),
     lessonOfInterest: state.sectionProgress.lessonOfInterest,
-    levelsByLesson:
-      state.sectionProgress.levelsByLessonByScript[
+    levelStatusByStudent:
+      state.sectionProgress.studentLevelStatusByScript[
         state.scriptSelection.scriptId
       ]
   }),

@@ -8,12 +8,12 @@ import {LevelStatus, LevelKind} from '@cdo/apps/util/sharedConstants';
 const defaultProps = {
   level: {
     levelNumber: 1,
-    status: LevelStatus.perfect,
     url: '/foo/bar',
     name: 'level_name',
     progression: 'progression_name',
     progressionDisplayName: 'progression_display_name'
   },
+  levelStatus: {status: LevelStatus.perfect},
   disabled: false
 };
 
@@ -74,9 +74,9 @@ describe('ProgressBubble', () => {
         {...defaultProps}
         level={{
           ...defaultProps.level,
-          kind: LevelKind.assessment,
-          status: LevelStatus.completed_assessment
+          kind: LevelKind.assessment
         }}
+        levelStatus={{status: LevelStatus.completed_assessment}}
       />
     );
 
@@ -99,10 +99,7 @@ describe('ProgressBubble', () => {
     const wrapper = shallow(
       <ProgressBubble
         {...defaultProps}
-        level={{
-          ...defaultProps.level,
-          status: LevelStatus.attempted
-        }}
+        levelStatus={{status: LevelStatus.attempted}}
       />
     );
     const tooltipDiv = wrapper.find('div').at(1);
@@ -115,10 +112,7 @@ describe('ProgressBubble', () => {
     const wrapper = shallow(
       <ProgressBubble
         {...defaultProps}
-        level={{
-          ...defaultProps.level,
-          status: LevelStatus.passed
-        }}
+        levelStatus={{status: LevelStatus.passed}}
       />
     );
     const tooltipDiv = wrapper.find('div').at(1);
@@ -133,9 +127,9 @@ describe('ProgressBubble', () => {
         {...defaultProps}
         level={{
           ...defaultProps.level,
-          kind: LevelKind.assessment,
-          status: LevelStatus.submitted
+          kind: LevelKind.assessment
         }}
+        levelStatus={{status: LevelStatus.submitted}}
       />
     );
     const tooltipDiv = wrapper.find('div').at(1);
@@ -151,9 +145,9 @@ describe('ProgressBubble', () => {
         {...defaultProps}
         level={{
           ...defaultProps.level,
-          kind: LevelKind.peer_review,
-          status: LevelStatus.review_rejected
+          kind: LevelKind.peer_review
         }}
+        levelStatus={{status: LevelStatus.review_rejected}}
       />
     );
     const tooltipDiv = wrapper.find('div').at(1);
@@ -172,9 +166,9 @@ describe('ProgressBubble', () => {
         {...defaultProps}
         level={{
           ...defaultProps.level,
-          kind: LevelKind.peer_review,
-          status: LevelStatus.review_accepted
+          kind: LevelKind.peer_review
         }}
+        levelStatus={{status: LevelStatus.review_accepted}}
       />
     );
     const tooltipDiv = wrapper.find('div').at(1);

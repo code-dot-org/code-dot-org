@@ -27,15 +27,15 @@ describe('VirtualizedSummaryView', () => {
     stubRedux();
     registerReducers({sectionProgress, scriptSelection, currentUser});
     defaultProps = {
-      levelsByLesson: {
+      levelStatusByStudent: {
         0: {
-          0: [{id: 789, status: 'perfect'}]
+          789: {status: 'perfect'}
         },
         1: {
-          0: [{id: 789, status: 'perfect'}]
+          789: {status: 'perfect'}
         },
         3: {
-          0: [{id: 789, status: 'perfect'}]
+          789: {status: 'perfect'}
         }
       },
       lessonOfInterest: 1,
@@ -92,13 +92,13 @@ describe('VirtualizedSummaryView', () => {
     expect(wrapper.find('StudentProgressSummaryCell')).to.have.length(3);
   });
 
-  it('updates the grid when the levels change', () => {
+  it('updates the grid when progress changes', () => {
     const forceUpdateGridsSpy = sinon.spy();
     const wrapper = shallow(
       <UnconnectedVirtualizedSummaryView {...defaultProps} />
     );
     wrapper.instance().summaryView = {forceUpdateGrids: forceUpdateGridsSpy};
-    wrapper.setProps({levelsByLesson: {}});
+    wrapper.setProps({levelStatusByStudent: {}});
     expect(forceUpdateGridsSpy).to.have.been.calledOnce;
   });
 });

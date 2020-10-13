@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 import Radium from 'radium';
 import ProgressBubble from './ProgressBubble';
 import color from '@cdo/apps/util/color';
-import {levelType} from './progressTypes';
+import {levelType, levelStatusType} from './progressTypes';
 import {DOT_SIZE, DIAMOND_DOT_SIZE} from './progressStyles';
 
 const styles = {
@@ -60,6 +60,7 @@ const styles = {
 class ProgressBubbleSet extends React.Component {
   static propTypes = {
     levels: PropTypes.arrayOf(levelType).isRequired,
+    levelStatuses: PropTypes.objectOf(levelStatusType),
     disabled: PropTypes.bool.isRequired,
     style: PropTypes.object,
     //TODO: (ErinB) probably change to use just number during post launch clean-up.
@@ -92,11 +93,12 @@ class ProgressBubbleSet extends React.Component {
   renderBubble = (level, index, isSublevel) => {
     const {
       levels,
+      levelStatuses,
       selectedSectionId,
       selectedStudentId,
       hideAssessmentIcon
     } = this.props;
-
+    const levelStatus = levelStatuses && levelStatuses[level.id];
     return (
       <div style={styles.withBackground} key={index}>
         <div
@@ -120,6 +122,7 @@ class ProgressBubbleSet extends React.Component {
         >
           <ProgressBubble
             level={level}
+            levelStatus={levelStatus}
             disabled={this.bubbleDisabled(level)}
             smallBubble={isSublevel}
             selectedSectionId={selectedSectionId}

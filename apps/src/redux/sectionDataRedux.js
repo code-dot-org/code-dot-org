@@ -35,7 +35,7 @@ export const SET_SECTION = 'sectionData/SET_SECTION';
 export const setSection = section => {
   // Sort section.students by name.
   const sortedStudents = section.students.sort((a, b) =>
-    a.name.localeCompare(b.name)
+    a.name.localeCompare(b.name, undefined, {numeric: true})
   );
 
   // Filter data to match sectionDataPropType

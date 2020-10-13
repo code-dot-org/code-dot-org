@@ -7,7 +7,7 @@ import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
 import FontAwesome from '../FontAwesome';
 import {getIconForLevel, isLevelAssessment} from './progressHelpers';
-import {levelType} from './progressTypes';
+import {levelType, levelStatusType} from './progressTypes';
 import {
   DOT_SIZE,
   DIAMOND_DOT_SIZE,
@@ -88,6 +88,7 @@ const styles = {
 class ProgressBubble extends React.Component {
   static propTypes = {
     level: levelType.isRequired,
+    levelStatus: levelStatusType,
     disabled: PropTypes.bool.isRequired,
     smallBubble: PropTypes.bool,
     //TODO: (ErinB) probably change to use just number during post launch clean-up.
@@ -132,6 +133,7 @@ class ProgressBubble extends React.Component {
   render() {
     const {
       level,
+      levelStatus,
       smallBubble,
       selectedSectionId,
       selectedStudentId,
@@ -147,10 +149,12 @@ class ProgressBubble extends React.Component {
     const url = level.url;
     const levelName = level.name || level.progressionDisplayName;
     const levelIcon = getIconForLevel(level);
+    const paired = levelStatus && levelStatus.paired;
+    const status = levelStatus && levelStatus.status;
 
     const disabled = this.props.disabled || levelIcon === 'lock';
     const hideNumber =
-      level.letter || levelIcon === 'lock' || level.paired || level.bonus;
+      level.letter || levelIcon === 'lock' || paired || level.bonus;
 
     const style = {
       ...styles.main,
@@ -158,7 +162,7 @@ class ProgressBubble extends React.Component {
       ...(smallBubble && styles.small),
       ...(level.isConceptLevel &&
         (smallBubble ? styles.smallDiamond : styles.largeDiamond)),
-      ...levelProgressStyle(level, disabled),
+      ...levelProgressStyle(status, disabled),
       ...(disabled && level.bonus && styles.disabledStageExtras)
     };
 
@@ -203,7 +207,9 @@ class ProgressBubble extends React.Component {
     if (level.isUnplugged && !smallBubble) {
       return (
         <ProgressPill
-          levels={[level]}
+          level={level}
+          levelStatus={status}
+          multilevel={false}
           text={i18n.unpluggedActivity()}
           tooltip={this.props.hideToolTips ? null : tooltip}
           progressStyle={true}
@@ -229,7 +235,7 @@ class ProgressBubble extends React.Component {
           <div style={style} className="uitest-bubble">
             <div
               style={{
-                fontSize: level.paired || level.bonus ? 14 : 16,
+                fontSize: paired || level.bonus ? 14 : 16,
                 ...styles.contents,
                 ...(level.isConceptLevel && styles.diamondContents)
               }}
@@ -238,9 +244,7 @@ class ProgressBubble extends React.Component {
                 <span id="test-bubble-letter"> {level.letter} </span>
               )}
               {levelIcon === 'lock' && <FontAwesome icon="lock" />}
-              {pairingIconEnabled && level.paired && (
-                <FontAwesome icon="users" />
-              )}
+              {pairingIconEnabled && paired && <FontAwesome icon="users" />}
               {level.bonus && <FontAwesome icon="flag-checkered" />}
               {!hideNumber && (
                 <span>

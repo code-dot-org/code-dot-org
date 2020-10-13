@@ -154,7 +154,7 @@ const scriptDataByScript = {
         title: 'Lesson 2: Learn to Drag and Drop',
         lesson_group_display_name: 'Sequencing',
         lockable: false,
-        levels: [{activeId: 10001}, {activeId: 10002}, {activeId: 10003}],
+        levels: [{id: 10001}, {id: 10002}, {id: 10003}],
         description_student: 'Click and drag to finish the puzzles.',
         description_teacher:
           'This lesson will give students an idea of what to expect when they head to the computer lab. It begins with a brief discussion introducing them to computer lab manners, then they will progress into using a computer to complete online puzzles.',
@@ -197,22 +197,22 @@ export const pluggedLesson = scriptDataByScript[scriptId].stages[1];
 const sectionCompletedLesson = {
   92: {
     100001: {
-      10001: 20,
-      10002: 20,
-      10003: 20
+      10001: {result: 20},
+      10002: {result: 20},
+      10003: {result: 20}
     },
     100002: {
-      10001: 20,
-      10002: 20,
-      10003: 20
+      10001: {result: 20},
+      10002: {result: 20},
+      10003: {result: 20}
     },
     100003: {
-      10001: 20,
-      10002: 20
+      10001: {result: 20},
+      10002: {result: 20}
     },
     100004: {
-      10001: 20,
-      10002: 20
+      10001: {result: 20},
+      10002: {result: 20}
     }
   }
 };
@@ -220,14 +220,14 @@ const sectionCompletedLesson = {
 const sectionPartialCompletedLesson = {
   92: {
     100001: {
-      10001: 20,
-      10002: 20,
-      10003: 20
+      10001: {result: 20},
+      10002: {result: 20},
+      10003: {result: 20}
     },
     100002: {
-      10001: 20,
-      10002: 20,
-      10003: 20
+      10001: {result: 20},
+      10002: {result: 20},
+      10003: {result: 20}
     }
   }
 };
@@ -254,7 +254,7 @@ const selectedLessons = [
 export const fakeState = {
   sectionProgress: {
     scriptDataByScript: scriptDataByScript,
-    studentLevelProgressByScript: {92: {}}
+    studentLevelStatusByScript: {92: {}}
   },
   scriptSelection: {
     scriptId: 92
@@ -269,7 +269,7 @@ export const fakeState = {
 export const stateForPartiallyCompletedLesson = {
   sectionProgress: {
     scriptDataByScript: scriptDataByScript,
-    studentLevelProgressByScript: sectionPartialCompletedLesson
+    studentLevelStatusByScript: sectionPartialCompletedLesson
   },
   scriptSelection: {
     scriptId: 92
@@ -283,7 +283,7 @@ export const stateForPartiallyCompletedLesson = {
 export const stateForCompletedLesson = {
   sectionProgress: {
     scriptDataByScript: scriptDataByScript,
-    studentLevelProgressByScript: sectionCompletedLesson
+    studentLevelStatusByScript: sectionCompletedLesson
   },
   scriptSelection: {
     scriptId: 92
@@ -297,7 +297,7 @@ export const stateForCompletedLesson = {
 export const stateForTeacherMarkedCompletedLesson = {
   sectionProgress: {
     scriptDataByScript: scriptDataByScript,
-    studentLevelProgressByScript: sectionCompletedLesson
+    studentLevelStatusByScript: sectionCompletedLesson
   },
   scriptSelection: {
     scriptId: 92
@@ -313,7 +313,7 @@ export const stateForTeacherMarkedCompletedLesson = {
 export const stateForTeacherMarkedIncompletedLesson = {
   sectionProgress: {
     scriptDataByScript: scriptDataByScript,
-    studentLevelProgressByScript: sectionCompletedLesson
+    studentLevelStatusByScript: sectionCompletedLesson
   },
   scriptSelection: {
     scriptId: 92
@@ -329,7 +329,7 @@ export const stateForTeacherMarkedIncompletedLesson = {
 export const stateForTeacherMarkedAndProgress = {
   sectionProgress: {
     scriptDataByScript: scriptDataByScript,
-    studentLevelProgressByScript: sectionCompletedLesson
+    studentLevelStatusByScript: sectionCompletedLesson
   },
   scriptSelection: {
     scriptId: 92

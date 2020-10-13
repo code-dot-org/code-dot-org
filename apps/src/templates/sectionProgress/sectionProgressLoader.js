@@ -12,10 +12,6 @@ import {
   fetchStandardsCoveredForScript,
   fetchStudentLevelScores
 } from '@cdo/apps/templates/sectionProgress/standards/sectionStandardsProgressRedux';
-import {
-  levelsByLesson,
-  getLevelResult
-} from '@cdo/apps/code-studio/progressRedux';
 import {getStore} from '@cdo/apps/redux';
 import _ from 'lodash';
 
@@ -28,7 +24,7 @@ export function loadScript(scriptId, sectionId) {
   // TODO: Save Standards data in a way that allows us
   // not to reload all data to get correct standards data
   if (
-    state.studentLevelProgressByScript[scriptId] &&
+    state.studentLevelStatusByScript[scriptId] &&
     state.scriptDataByScript[scriptId] &&
     state.currentView !== ViewType.STANDARDS
   ) {
@@ -42,11 +38,9 @@ export function loadScript(scriptId, sectionId) {
   }
 
   let sectionProgress = {
-    studentLevelProgressByScript: {},
-    studentTimestampsByScript: {},
-    studentLevelTimeSpentByScript: {},
-    studentLevelPairingByScript: {},
-    scriptDataByScript: {}
+    scriptDataByScript: {},
+    studentLevelStatusByScript: {},
+    studentLastUpdateByScript: {}
   };
 
   // Get the script data
@@ -55,23 +49,10 @@ export function loadScript(scriptId, sectionId) {
   })
     .then(response => response.json())
     .then(scriptData => {
-      // Filter to match scriptDataPropType
-      const filteredScriptData = {
-        id: scriptData.id,
-        csf: scriptData.csf,
-        hasStandards: scriptData.hasStandards,
-        title: scriptData.title,
-        path: scriptData.path,
-        stages: scriptData.lessons,
-        family_name: scriptData.family_name,
-        version_year: scriptData.version_year
+      sectionProgress.scriptDataByScript = {
+        [scriptId]: postProcessDataByScript(scriptData)
       };
-      sectionProgress.scriptDataByScript = {[scriptId]: filteredScriptData};
 
-      if (scriptData.hasStandards) {
-        getStore().dispatch(fetchStandardsCoveredForScript(scriptId));
-        getStore().dispatch(fetchStudentLevelScores(scriptId, sectionId));
-      }
       if (
         state.currentView === ViewType.STANDARDS &&
         !scriptData.hasStandards
@@ -91,31 +72,16 @@ export function loadScript(scriptId, sectionId) {
     return fetch(url, {credentials: 'include'})
       .then(response => response.json())
       .then(data => {
-        sectionProgress.studentLevelProgressByScript = {
+        sectionProgress.studentLevelStatusByScript = {
           [scriptId]: {
-            ...sectionProgress.studentLevelProgressByScript[scriptId],
-            ...getInfoByStudentByLevel(data.students, getLevelResult)
+            ...sectionProgress.studentLevelStatusByScript[scriptId],
+            ...data.students_status
           }
         };
-
-        sectionProgress.studentTimestampsByScript = {
+        sectionProgress.studentLastUpdateByScript = {
           [scriptId]: {
-            ...sectionProgress.studentTimestampsByScript[scriptId],
-            ...processStudentTimestamps(data.student_timestamps)
-          }
-        };
-
-        sectionProgress.studentLevelTimeSpentByScript = {
-          [scriptId]: {
-            ...sectionProgress.studentLevelTimeSpentByScript[scriptId],
-            ...getInfoByStudentByLevel(data.students, level => level.time_spent)
-          }
-        };
-
-        sectionProgress.studentLevelPairingByScript = {
-          [scriptId]: {
-            ...sectionProgress.studentLevelPairingByScript[scriptId],
-            ...processStudentPairing(data.students)
+            ...sectionProgress.studentLastUpdateByScript[scriptId],
+            ...processStudentTimestamps(data.students_last_update)
           }
         };
       });
@@ -124,16 +90,14 @@ export function loadScript(scriptId, sectionId) {
   // Combine and transform the data
   requests.push(scriptRequest);
   Promise.all(requests).then(() => {
-    sectionProgress.levelsByLessonByScript = postProcessLevelsByLesson(
-      scriptId,
-      sectionProgress
-    );
-    sectionProgress.scriptDataByScript[scriptId] = postProcessDataByScript(
-      sectionProgress.scriptDataByScript[scriptId]
-    );
     getStore().dispatch(addDataByScript(sectionProgress));
     getStore().dispatch(finishLoadingProgress());
     getStore().dispatch(finishRefreshingProgress());
+
+    if (sectionProgress.scriptDataByScript[scriptId].hasStandards) {
+      getStore().dispatch(fetchStandardsCoveredForScript(scriptId));
+      getStore().dispatch(fetchStudentLevelScores(scriptId, sectionId));
+    }
   });
 }
 
@@ -142,63 +106,29 @@ function processStudentTimestamps(timestamps) {
   return studentTimestamps;
 }
 
-function processStudentPairing(students) {
-  const studentPairing = getStudentPairing(students);
-  const isValid = Object.keys(studentPairing).every(userId =>
-    Object.keys(studentPairing[userId]).every(
-      levelId => typeof studentPairing[userId][levelId] === 'boolean'
-    )
-  );
-  if (!isValid) {
-    throw new Error('Input is invalid');
-  }
-  return studentPairing;
-}
-
 function postProcessDataByScript(scriptData) {
-  if (!scriptData.stages) {
-    return scriptData;
+  // Filter to match scriptDataPropType
+  const filteredScriptData = {
+    id: scriptData.id,
+    csf: scriptData.csf,
+    hasStandards: scriptData.hasStandards,
+    title: scriptData.title,
+    path: scriptData.path,
+    stages: scriptData.lessons,
+    family_name: scriptData.family_name,
+    version_year: scriptData.version_year,
+    name: scriptData.name
+  };
+  if (!filteredScriptData.stages) {
+    return filteredScriptData;
   }
   return {
-    ...scriptData,
-    stages: scriptData.stages.map(stage => {
+    ...filteredScriptData,
+    stages: filteredScriptData.stages.map(stage => {
       return {
         ...stage,
         levels: stage.levels.map(level => processedLevel(level))
       };
     })
   };
-}
-
-function postProcessLevelsByLesson(scriptId, progress) {
-  const studentLevelProgress =
-    progress.studentLevelProgressByScript[scriptId] || {};
-  const studentTimeSpent =
-    progress.studentLevelTimeSpentByScript[scriptId] || {};
-  const pairing = progress.studentLevelPairingByScript[scriptId];
-  const scriptData = progress.scriptDataByScript[scriptId];
-  let levelsByLessonByStudent = {};
-  for (const studentId of Object.keys(studentLevelProgress)) {
-    levelsByLessonByStudent[studentId] = levelsByLesson({
-      stages: scriptData.stages,
-      levelProgress: studentLevelProgress[studentId],
-      levelTimeSpent: studentTimeSpent[studentId],
-      levelPairing: pairing[studentId],
-      currentLevelId: null
-    });
-  }
-  return {[scriptId]: levelsByLessonByStudent};
-}
-
-function getStudentPairing(dataByStudent) {
-  return getInfoByStudentByLevel(
-    dataByStudent,
-    levelData => !!levelData.paired
-  );
-}
-
-function getInfoByStudentByLevel(dataByStudent, infoFromLevelData) {
-  return _.mapValues(dataByStudent, studentData =>
-    _.mapValues(studentData, infoFromLevelData)
-  );
 }

@@ -119,48 +119,54 @@ export function stageIsAllAssessment(levels) {
 
 /**
  * Summarizes stage progress data.
- * @param {[]} levelsWithStatus An array of objects each representing
- * students progress in a level
+ * @param {[]} levelStatuses An object keyed by level id containing objects
+ * representing the student's progress in that level
+ * @param {[]} stageLevels An array of the levels in a stage
  * @returns {object} An object with a total count of levels in each of the
  * following buckets: total, completed, imperfect, incomplete, attempted.
  */
-export function summarizeProgressInStage(levelsWithStatus) {
+export function summarizeProgressInStage(levelStatuses, stageLevels) {
   // Filter any bonus levels as they do not count toward progress.
-  levelsWithStatus = levelsWithStatus.filter(level => !level.bonus);
+  stageLevels = stageLevels.filter(level => !level.bonus);
 
   // Get counts of statuses
   let statusCounts = {
-    total: levelsWithStatus.length,
+    total: 0,
     completed: 0,
     imperfect: 0,
     incomplete: 0,
     attempted: 0
   };
-  for (let i = 0; i < levelsWithStatus.length; i++) {
-    const status = levelsWithStatus[i].status;
-    switch (status) {
+
+  stageLevels.forEach(level => {
+    const levelStatus = levelStatuses[level.id];
+    if (!levelStatus) {
+      return;
+    }
+    statusCounts.total++;
+    switch (levelStatus.status) {
       case LevelStatus.perfect:
       case LevelStatus.submitted:
       case LevelStatus.free_play_complete:
       case LevelStatus.completed_assessment:
       case LevelStatus.readonly:
-        statusCounts.completed = statusCounts.completed + 1;
+        statusCounts.completed++;
         break;
       case LevelStatus.not_tried:
-        statusCounts.incomplete = statusCounts.incomplete + 1;
+        statusCounts.incomplete++;
         break;
       case LevelStatus.attempted:
-        statusCounts.incomplete = statusCounts.incomplete + 1;
-        statusCounts.attempted = statusCounts.attempted + 1;
+        statusCounts.incomplete++;
+        statusCounts.attempted++;
         break;
       case LevelStatus.passed:
-        statusCounts.imperfect = statusCounts.imperfect + 1;
+        statusCounts.imperfect++;
         break;
       // All others are assumed to be not tried
       default:
-        statusCounts.incomplete = statusCounts.incomplete + 1;
+        statusCounts.incomplete++;
     }
-  }
+  });
   return statusCounts;
 }
 
@@ -168,8 +174,9 @@ export function summarizeProgressInStage(levelsWithStatus) {
  * The level object passed down to use via the server (and stored in stage.stages.levels)
  * contains more data than we need. This filters to the parts our views care about.
  */
-export const processedLevel = level => {
+export const processedLevel = (level, isSublevel = false) => {
   return {
+    id: isSublevel ? level.level_id : level.activeId,
     url: level.url,
     name: level.name,
     progression: level.progression,
@@ -180,6 +187,8 @@ export const processedLevel = level => {
     levelNumber: level.kind === LevelKind.unplugged ? undefined : level.title,
     isConceptLevel: level.is_concept_level,
     bonus: level.bonus,
-    sublevels: level.sublevels
+    sublevels:
+      level.sublevels &&
+      level.sublevels.map(level => processedLevel(level, true))
   };
 };

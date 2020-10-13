@@ -7,14 +7,12 @@ import ReactTooltip from 'react-tooltip';
 
 const unpluggedLevel = {
   kind: LevelKind.unplugged,
-  isUnplugged: true,
-  status: LevelStatus.perfect
+  isUnplugged: true
 };
 
 const assessmentLevel = {
   kind: LevelKind.assessment,
-  isUnplugged: false,
-  status: LevelStatus.perfect
+  isUnplugged: false
 };
 
 const levelWithUrl = {
@@ -23,7 +21,7 @@ const levelWithUrl = {
 };
 
 const DEFAULT_PROPS = {
-  levels: [],
+  levelStatus: LevelStatus.perfect,
   icon: 'desktop',
   text: '1',
   fontSize: 12,
@@ -33,7 +31,11 @@ const DEFAULT_PROPS = {
 describe('ProgressPill', () => {
   it('can render an unplugged pill', () => {
     shallow(
-      <ProgressPill levels={[unpluggedLevel]} text="Unplugged Activity" />
+      <ProgressPill
+        level={unpluggedLevel}
+        levelStatus={LevelStatus.perfect}
+        text="Unplugged Activity"
+      />
     );
   });
 
@@ -42,7 +44,8 @@ describe('ProgressPill', () => {
 
     const wrapper = shallow(
       <ProgressPill
-        levels={[unpluggedLevel]}
+        level={unpluggedLevel}
+        levelStatus={LevelStatus.perfect}
         text="Unplugged Activity"
         tooltip={tooltip}
       />
@@ -66,7 +69,11 @@ describe('ProgressPill', () => {
 
   it('has an href when single level with url', () => {
     const wrapper = shallow(
-      <ProgressPill levels={[levelWithUrl]} text="Unplugged Activity" />
+      <ProgressPill
+        level={levelWithUrl}
+        levelStatus={LevelStatus.perfect}
+        text="Unplugged Activity"
+      />
     );
     assert.equal(wrapper.find('a').props().href, '/foo/bar');
   });
@@ -74,7 +81,8 @@ describe('ProgressPill', () => {
   it('does not have an href when disabled', () => {
     const wrapper = shallow(
       <ProgressPill
-        levels={[levelWithUrl]}
+        level={levelWithUrl}
+        levelStatus={LevelStatus.perfect}
         text="Unplugged Activity"
         disabled={true}
       />
@@ -82,25 +90,26 @@ describe('ProgressPill', () => {
     assert.equal(wrapper.find('a').props().href, undefined);
   });
 
-  it('has an assessment icon when single level is assessment', () => {
+  it('has an assessment icon when level is assessment and multilevel is false', () => {
     const wrapper = shallow(
-      <ProgressPill {...DEFAULT_PROPS} levels={[assessmentLevel]} />
+      <ProgressPill {...DEFAULT_PROPS} level={assessmentLevel} />
     );
     expect(wrapper.find('SmallAssessmentIcon')).to.have.lengthOf(1);
   });
 
   it('does not have an assessment icon when single level is not assessment', () => {
     const wrapper = shallow(
-      <ProgressPill {...DEFAULT_PROPS} levels={[unpluggedLevel]} />
+      <ProgressPill {...DEFAULT_PROPS} level={unpluggedLevel} />
     );
     expect(wrapper.find('SmallAssessmentIcon')).to.have.lengthOf(0);
   });
 
-  it('does not have an assessment icon when multiple assessment levels', () => {
+  it('does not have an assessment icon when level is assessment and multilevel is true', () => {
     const wrapper = shallow(
       <ProgressPill
         {...DEFAULT_PROPS}
-        levels={[assessmentLevel, assessmentLevel]}
+        level={assessmentLevel}
+        multilevel={true}
       />
     );
     expect(wrapper.find('SmallAssessmentIcon')).to.have.lengthOf(0);

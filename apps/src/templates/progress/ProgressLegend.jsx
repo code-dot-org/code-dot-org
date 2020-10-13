@@ -157,10 +157,10 @@ export default class ProgressLegend extends Component {
               <div style={styles.center}>
                 <ProgressBubble
                   level={{
-                    status: LevelStatus.not_tried,
                     isConceptLevel: true,
                     name: `${i18n.concept()}: ${i18n.notStarted()}`
                   }}
+                  levelStatus={{status: LevelStatus.not_tried}}
                   disabled={false}
                 />
               </div>
@@ -169,10 +169,10 @@ export default class ProgressLegend extends Component {
               <div style={styles.center}>
                 <ProgressBubble
                   level={{
-                    status: LevelStatus.attempted,
                     isConceptLevel: true,
                     name: `${i18n.concept()}: ${i18n.inProgress()}`
                   }}
+                  levelStatus={{status: LevelStatus.attempted}}
                   disabled={false}
                 />
               </div>
@@ -182,10 +182,11 @@ export default class ProgressLegend extends Component {
               <div style={styles.center}>
                 <ProgressBubble
                   level={{
-                    status: LevelStatus.perfect,
+                    levelStatus: {status: LevelStatus.perfect},
                     isConceptLevel: true,
                     name: `${i18n.concept()}: ${i18n.completed()} (${i18n.perfect()})`
                   }}
+                  levelStatus={{status: LevelStatus.perfect}}
                   disabled={false}
                 />
               </div>
@@ -230,10 +231,10 @@ export default class ProgressLegend extends Component {
               <div style={styles.center}>
                 <ProgressBubble
                   level={{
-                    status: LevelStatus.not_tried,
                     isConceptLevel: false,
                     name: `${i18n.activity()}: ${i18n.notStarted()}`
                   }}
+                  levelStatus={{status: LevelStatus.not_tried}}
                   disabled={false}
                 />
               </div>
@@ -242,10 +243,10 @@ export default class ProgressLegend extends Component {
               <div style={styles.center}>
                 <ProgressBubble
                   level={{
-                    status: LevelStatus.attempted,
                     isConceptLevel: false,
                     name: `${i18n.activity()}: ${i18n.inProgress()}`
                   }}
+                  levelStatus={{status: LevelStatus.attempted}}
                   disabled={false}
                 />
               </div>
@@ -255,10 +256,10 @@ export default class ProgressLegend extends Component {
                 <div style={styles.center}>
                   <ProgressBubble
                     level={{
-                      status: LevelStatus.passed,
                       isConceptLevel: false,
                       name: `${i18n.activity()}: ${i18n.completed()} (${i18n.tooManyBlocks()})`
                     }}
+                    levelStatus={{status: LevelStatus.passed}}
                     disabled={false}
                   />
                 </div>
@@ -268,10 +269,10 @@ export default class ProgressLegend extends Component {
               <div style={styles.center}>
                 <ProgressBubble
                   level={{
-                    status: LevelStatus.perfect,
                     isConceptLevel: false,
                     name: `${i18n.activity()}: ${i18n.completed()} (${i18n.perfect()})`
                   }}
+                  levelStatus={{status: LevelStatus.perfect}}
                   disabled={false}
                 />
               </div>
@@ -280,10 +281,10 @@ export default class ProgressLegend extends Component {
               <div style={styles.center}>
                 <ProgressBubble
                   level={{
-                    status: LevelStatus.submitted,
                     isConceptLevel: false,
                     name: `${i18n.activity()}: ${i18n.submitted()}`
                   }}
+                  levelStatus={{status: LevelStatus.submitted}}
                   disabled={false}
                 />
               </div>

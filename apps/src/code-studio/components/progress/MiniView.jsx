@@ -62,6 +62,7 @@ class MiniView extends React.Component {
             excludeCsfColumnInLegend={false}
             teacherResources={[]}
             minimal={minimal}
+            versions={[]}
           />
         </div>
       );

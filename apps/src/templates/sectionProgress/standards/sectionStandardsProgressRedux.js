@@ -294,8 +294,8 @@ export function getPluggedLessonCompletionStatus(state, lesson) {
   if (
     state.scriptSelection.scriptId &&
     state.sectionProgress.scriptDataByScript &&
-    state.sectionProgress.studentLevelProgressByScript &&
-    state.sectionProgress.studentLevelProgressByScript[
+    state.sectionProgress.studentLevelStatusByScript &&
+    state.sectionProgress.studentLevelStatusByScript[
       state.scriptSelection.scriptId
     ] &&
     state.teacherSections.sections &&
@@ -305,20 +305,18 @@ export function getPluggedLessonCompletionStatus(state, lesson) {
     const numberStudentsInSection =
       state.teacherSections.sections[state.teacherSections.selectedSectionId]
         .studentCount;
-    const levelResultsByStudent =
-      state.sectionProgress.studentLevelProgressByScript[scriptId];
+    const levelStatusesByStudent =
+      state.sectionProgress.studentLevelStatusByScript[scriptId];
 
-    const studentIds = Object.keys(levelResultsByStudent);
-    const levelIds = _.map(lesson.levels, 'activeId');
+    const studentIds = Object.keys(levelStatusesByStudent);
+    const levelIds = _.map(lesson.levels, 'id');
     let numStudentsCompletedLesson = 0;
     let numStudentsInProgressLesson = 0;
     studentIds.forEach(studentId => {
       let numLevelsInLessonCompletedByStudent = 0;
       levelIds.forEach(levelId => {
-        if (
-          levelResultsByStudent[studentId][levelId] >=
-          TestResults.MINIMUM_PASS_RESULT
-        ) {
+        const status = levelStatusesByStudent[studentId][levelId];
+        if (status && status.result >= TestResults.MINIMUM_PASS_RESULT) {
           numLevelsInLessonCompletedByStudent++;
         }
       });
