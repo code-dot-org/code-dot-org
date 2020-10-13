@@ -1,6 +1,7 @@
 import * as coreLibrary from '../coreLibrary';
 import {getStore} from '@cdo/apps/redux';
 import {addConsoleMessage} from '../textConsoleModule';
+import {addQuestion} from '../spritelabInputModule';
 
 export const commands = {
   comment(text) {
@@ -33,6 +34,11 @@ export const commands = {
       let backgroundImage = this._preloadedBackgrounds[img];
       coreLibrary.background = backgroundImage;
     }
+  },
+
+  setQuestion(questionText, variableName, setterCallback) {
+    coreLibrary.registerQuestion(questionText, variableName, setterCallback);
+    getStore().dispatch(addQuestion(questionText, variableName));
   },
 
   showTitleScreen(title, subtitle) {
