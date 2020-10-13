@@ -16,6 +16,10 @@ const styles = {
     marginTop: 10,
     marginBottom: 10
   },
+  oddRow: {
+    backgroundColor: color.lightest_gray
+  },
+
   remove: {
     fontSize: 14,
     color: 'white',
@@ -146,12 +150,15 @@ export default class ResourcesEditor extends Component {
             </thead>
             <tbody>
               {this.state.resources.map((resource, index) => (
-                <tr key={resource.key}>
+                <tr
+                  key={resource.key}
+                  style={index % 2 === 1 ? styles.oddRow : {}}
+                >
                   <td>{resource.key}</td>
                   <td>{resource.name}</td>
                   <td>{resource.type}</td>
                   <td>{resource.url}</td>
-                  <td>
+                  <td style={{backgroundColor: 'white'}}>
                     <div
                       style={styles.remove}
                       onMouseDown={() => this.handleRemove(resource.key)}
