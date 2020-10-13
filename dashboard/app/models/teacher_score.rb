@@ -3,7 +3,7 @@
 # Table name: teacher_scores
 #
 #  id            :integer          not null, primary key
-#  user_level_id :integer          unsigned
+#  user_level_id :bigint           unsigned
 #  teacher_id    :integer
 #  score         :integer
 #  created_at    :datetime         not null

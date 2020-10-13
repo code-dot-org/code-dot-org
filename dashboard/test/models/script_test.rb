@@ -347,7 +347,7 @@ class ScriptTest < ActiveSupport::TestCase
       [{
         key: "my_key",
         display_name: "Content",
-        lessons: [{name: "Lesson1", script_levels: [{levels: [{name: 'New App Lab Project'}]}]}]
+        lessons: [{name: "Lesson1", key: 'lesson1', script_levels: [{levels: [{name: 'New App Lab Project'}]}]}]
       }] # From level.yml fixture# From level.yml fixture
     )
     Script.add_script(
@@ -355,7 +355,7 @@ class ScriptTest < ActiveSupport::TestCase
       [{
         key: "my_key",
         display_name: "Content",
-        lessons: [{name: "Lesson1", script_levels: [{levels: [{name: 'New Game Lab Project'}]}]}]
+        lessons: [{name: "Lesson1", key: 'lesson1', script_levels: [{levels: [{name: 'New Game Lab Project'}]}]}]
       }] # From level.yml fixture
     )
   end
@@ -366,7 +366,7 @@ class ScriptTest < ActiveSupport::TestCase
       [{
         key: "my_key",
         display_name: "Content",
-        lessons: [{name: "Lesson1", script_levels: [{levels: [{name: 'New App Lab Project'}]}]}]
+        lessons: [{name: "Lesson1", key: 'lesson1', script_levels: [{levels: [{name: 'New App Lab Project'}]}]}]
       }] # From level.yml fixture# From level.yml fixture
     )
     Script.add_script(
@@ -374,7 +374,7 @@ class ScriptTest < ActiveSupport::TestCase
       [{
         key: "my_key",
         display_name: "Content",
-        lessons: [{name: "Lesson1", script_levels: [{levels: [{name: 'New Game Lab Project'}]}]}]
+        lessons: [{name: "Lesson1", key: 'lesson1', script_levels: [{levels: [{name: 'New Game Lab Project'}]}]}]
       }] # From level.yml fixture
     )
   end
@@ -1810,6 +1810,29 @@ class ScriptTest < ActiveSupport::TestCase
     assert Script.valid_scripts(levelbuilder).any?(&:pilot?)
   end
 
+  test "self.valid_scripts: pilot experiment results not cached" do
+    # This test is a regression test for LP-1578 where Script.valid_scripts
+    # accidentally added pilot courses to the cached results which were then
+    # returned to non-pilot teachers.
+
+    # Start with an empty scripts table and empty cache
+    Plc::CourseUnit.delete_all  # Delete rows that reference script table
+    Script.delete_all
+    Script.clear_cache
+
+    teacher = create :teacher
+    pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
+    coursea_2019 = create :script, name: 'coursea-2019'
+    coursea_2020 = create :script, name: 'coursea-2020', hidden: true, pilot_experiment: 'my-experiment'
+
+    assert_equal [coursea_2019], Script.valid_scripts(teacher)
+    assert_equal [coursea_2019, coursea_2020], Script.valid_scripts(pilot_teacher)
+
+    # This call to valid_scripts will hit the cache; verify that the call to
+    # Script.valid_scripts(pilot_teacher) did not alter the cache.
+    assert_equal [coursea_2019], Script.valid_scripts(teacher)
+  end
+
   test "get_assessment_script_levels returns an empty list if no level groups" do
     script = create(:script, name: 'test-no-levels')
     level_group_script_level = script.get_assessment_script_levels
@@ -2273,15 +2296,13 @@ class ScriptTest < ActiveSupport::TestCase
     dsl = <<-SCRIPT
       lesson_group 'lg-1', display_name: 'Lesson Group'
       lesson_group_description 'This is a description'
-      lesson_group_question 'What is the first question?'
-      lesson_group_question 'What is the second question?'
+      lesson_group_big_questions 'What is the first question? What is the second question?'
       lesson 'Lesson1', display_name: 'Lesson 1'
       level '#{l.name}'
 
       lesson_group 'lg-2', display_name: 'Lesson Group 2'
       lesson_group_description 'Second Description'
-      lesson_group_question 'Hi?'
-      lesson_group_question 'Hello?'
+      lesson_group_big_questions  'Hi? Hello?'
       lesson 'Lesson2', display_name: 'Lesson 2'
       level '#{l.name}'
     SCRIPT
@@ -2290,9 +2311,9 @@ class ScriptTest < ActiveSupport::TestCase
       ScriptDSL.parse(dsl, 'a filename')[0][:lesson_groups]
     )
     assert_equal 'This is a description', script.lesson_groups[0].description
-    assert_equal ['What is the first question?', 'What is the second question?'], script.lesson_groups[0].big_questions
+    assert_equal 'What is the first question? What is the second question?', script.lesson_groups[0].big_questions
     assert_equal 'Second Description', script.lesson_groups[1].description
-    assert_equal ['Hi?', 'Hello?'], script.lesson_groups[1].big_questions
+    assert_equal 'Hi? Hello?', script.lesson_groups[1].big_questions
   end
 
   test 'can change the lesson group for a lesson' do

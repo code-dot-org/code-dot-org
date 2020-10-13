@@ -16,25 +16,13 @@ class LessonsController < ApplicationController
 
   # GET /lessons/1/edit
   def edit
-    @lesson_data = {
-      editableData: {
-        name: @lesson.name,
-        overview: @lesson.overview,
-        studentOverview: @lesson.student_overview,
-        assessment: @lesson.assessment,
-        unplugged: @lesson.unplugged,
-        lockable: @lesson.lockable,
-        creativeCommonsLicense: @lesson.creative_commons_license,
-        purpose: @lesson.purpose,
-        preparation: @lesson.preparation,
-        announcements: @lesson.announcements
-      }
-    }
+    @lesson_data = @lesson.summarize_for_lesson_edit
   end
 
   # PATCH/PUT /lessons/1
   def update
     @lesson.update!(lesson_params)
+    @lesson.update_activities(JSON.parse(params[:activities])) if params[:activities]
 
     redirect_to lesson_path(id: @lesson.id)
   end

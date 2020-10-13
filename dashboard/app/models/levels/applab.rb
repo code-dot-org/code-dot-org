@@ -55,6 +55,7 @@ class Applab < Blockly
     starter_assets
     start_libraries
     libraries_enabled
+    validation_enabled
   )
 
   # List of possible skins, the first is used as a default.
@@ -80,7 +81,8 @@ class Applab < Blockly
         level_num: 'custom',
         properties: {
           code_functions: JSON.parse(palette),
-        }
+        },
+        validation_enabled: true
       )
     )
   end
