@@ -91,8 +91,8 @@ class ScriptDSL < BaseDSL
     @lesson_groups.last[:description] = description
   end
 
-  def lesson_group_question(question)
-    @lesson_groups.last[:big_questions] << question
+  def lesson_group_big_questions(questions)
+    @lesson_groups.last[:big_questions] = questions
   end
 
   def lesson(key, properties = {})
@@ -362,10 +362,7 @@ class ScriptDSL < BaseDSL
         t += ", display_name: '#{escape(lesson_group.display_name)}'" if lesson_group.display_name
         s << t
         s << "lesson_group_description '#{escape(lesson_group.description)}'" if lesson_group.description
-        lesson_group.big_questions&.each do |big_question|
-          s << "lesson_group_question '#{escape(big_question)}'"
-        end
-
+        s << "lesson_group_big_questions '#{escape(lesson_group.big_questions)}'" if lesson_group.big_questions
       end
       lesson_group.lessons.each do |lesson|
         s << serialize_lesson(lesson)

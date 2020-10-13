@@ -1041,7 +1041,7 @@ describe('progressReduxTest', () => {
             id: 1,
             display_name: 'Lesson Group',
             description: 'This is a lesson group',
-            big_questions: ['Why?', 'Who?']
+            big_questions: ' - Why'
           }
         ],
         stages: [fakeLesson('Lesson Group', 'lesson1', 1)],
@@ -1062,7 +1062,7 @@ describe('progressReduxTest', () => {
             id: 1,
             display_name: 'Lesson Group',
             description: 'This is a lesson group',
-            big_questions: ['Why?']
+            big_questions: 'Why?'
           }
         ],
         stages: [

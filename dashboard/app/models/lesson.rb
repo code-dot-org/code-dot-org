@@ -12,11 +12,12 @@
 #  relative_position :integer          not null
 #  properties        :text(65535)
 #  lesson_group_id   :integer
-#  key               :string(255)
+#  key               :string(255)      not null
 #
 # Indexes
 #
-#  index_stages_on_script_id  (script_id)
+#  index_stages_on_lesson_group_id_and_key  (lesson_group_id,key) UNIQUE
+#  index_stages_on_script_id_and_key        (script_id,key) UNIQUE
 #
 
 require 'cdo/shared_constants'
@@ -269,7 +270,7 @@ class Lesson < ActiveRecord::Base
   #
   # TODO: [PLAT-369] trim down to only include those fields needed on the
   # script edit page
-  def summarize_for_edit
+  def summarize_for_script_edit
     summary = summarize.dup
     # Do not let script name override lesson name when there is only one lesson
     summary[:name] = I18n.t("data.script.name.#{script.name}.lessons.#{key}.name")
@@ -286,7 +287,7 @@ class Lesson < ActiveRecord::Base
   #
   # Key names are converted to camelCase here so they can easily be consumed by
   # the client.
-  def summarize_editable_data
+  def summarize_for_lesson_edit
     {
       name: name,
       overview: overview,
@@ -298,25 +299,7 @@ class Lesson < ActiveRecord::Base
       purpose: purpose,
       preparation: preparation,
       announcements: announcements,
-      activities: lesson_activities.map do |activity|
-        {
-          id: activity.id,
-          position: activity.position,
-          name: activity.name,
-          duration: activity.duration,
-          activitySections: activity.activity_sections.map do |activity_section|
-            {
-              id: activity_section.id,
-              position: activity_section.position,
-              name: activity_section.name,
-              remarks: activity_section.remarks,
-              slide: activity_section.slide,
-              description: activity_section.description,
-              tips: activity_section.tips
-            }
-          end
-        }
-      end
+      activities: lesson_activities.map(&:summarize_for_edit)
     }
   end
 
