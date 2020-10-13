@@ -4,7 +4,8 @@ import getScriptData from '@cdo/apps/util/getScriptData';
 import LessonEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/LessonEditor';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import reducers, {
-  init
+  init,
+  emptyActivity
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
 import {Provider} from 'react-redux';
 import _ from 'lodash';
@@ -29,14 +30,16 @@ $(document).ready(function() {
     // where every object has an id, and this key field should become unneeded.
     activity.key = activity.id + '';
 
-    activity.displayName = activity.name;
+    activity.displayName = activity.name || '';
     delete activity.name;
+
+    activity.duration = activity.duration || 0;
 
     activity.activitySections.forEach(activitySection => {
       // React key
       activitySection.key = activitySection.id + '';
 
-      activitySection.displayName = activitySection.name;
+      activitySection.displayName = activitySection.name || '';
       delete activitySection.name;
 
       activitySection.text = activitySection.description || '';
@@ -52,6 +55,10 @@ $(document).ready(function() {
       });
     });
   });
+
+  if (activities.length === 0) {
+    activities.push(emptyActivity);
+  }
 
   registerReducers({...reducers});
   const store = getStore();
