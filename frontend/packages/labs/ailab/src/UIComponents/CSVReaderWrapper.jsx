@@ -76,6 +76,7 @@ class CSVReaderWrapper extends Component {
             </select>
           </label>
         </form>
+        <h2>OR</h2>
         <h2>Import CSV File</h2>
         <input
           className="csv-input"
@@ -88,6 +89,7 @@ class CSVReaderWrapper extends Component {
           onChange={this.handleChange}
         />
         <p />
+        <h2>Upload the selected dataset</h2>
         <button type="button" onClick={this.importCSV}>
           Upload now!
         </button>
