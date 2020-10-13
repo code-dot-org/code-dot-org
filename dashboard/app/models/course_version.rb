@@ -34,6 +34,8 @@ class CourseVersion < ApplicationRecord
   #   False for the CSP1-2019 Unit.
   belongs_to :content_root, polymorphic: true
 
+  alias_attribute :version_year, :key
+
   # Seeding method for creating / updating / deleting the CourseVersion for the given
   # potential content root, i.e. a Script or UnitGroup.
   #
