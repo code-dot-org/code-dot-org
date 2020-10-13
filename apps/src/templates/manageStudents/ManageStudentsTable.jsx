@@ -17,8 +17,10 @@ import ManageStudentsGenderCell from './ManageStudentsGenderCell';
 import ManageStudentsSharingCell from './ManageStudentsSharingCell';
 import ManageStudentsActionsCell from './ManageStudentsActionsCell';
 import ManageStudentsActionsHeaderCell from './ManageStudentsActionsHeaderCell';
+import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import SharingControlActionsHeaderCell from './SharingControlActionsHeaderCell';
 import ManageStudentsLoginInfo from './ManageStudentsLoginInfo';
+import NoSectionCodeDialog from './NoSectionCodeDialog';
 import {
   sectionCode,
   sectionName
@@ -75,6 +77,9 @@ const styles = {
     color: color.teal,
     fontFamily: '"Gotham 7r", sans-serif',
     cursor: 'copy'
+  },
+  dialog: {
+    padding: '20px'
   }
 };
 
@@ -165,7 +170,8 @@ class ManageStudentsTable extends Component {
         position: 0
       }
     },
-    showCopiedMsg: false
+    showCopiedMsg: false,
+    sectionCodeDialog: false
   };
 
   renderTransferSuccessNotification = () => {
@@ -618,6 +624,12 @@ class ManageStudentsTable extends Component {
     window.open(url, '_blank');
   };
 
+  showSectionCodeDialog = () => {
+    this.setState({sectionCodeDialog: true});
+  };
+
+  close = () => this.setState({sectionCodeDialog: false});
+
   render() {
     // Define a sorting transform that can be applied to each column
     const sortable = wrappedSortable(
@@ -648,6 +660,12 @@ class ManageStudentsTable extends Component {
       sectionCode,
       studentData
     } = this.props;
+
+    const noSectionCode = [
+      SectionLoginType.google_classroom,
+      SectionLoginType.clever
+    ];
+
     return (
       <div>
         {addStatus.status === AddStatus.SUCCESS && (
@@ -729,6 +747,31 @@ class ManageStudentsTable extends Component {
               )}
             </div>
           )}
+          {noSectionCode.includes(loginType) && (
+            <div style={styles.sectionCodeBox}>
+              {i18n.sectionCodeWithColon()}
+              <strong>
+                {` ${i18n.notApplicable()} `}
+                <a onClick={() => this.showSectionCodeDialog()}>
+                  {i18n.whyWithQuestionMark()}
+                </a>
+              </strong>
+            </div>
+          )}
+          <div>
+            <BaseDialog
+              useUpdatedStyles
+              fixedWidth={800}
+              style={styles.dialog}
+              isOpen={this.state.sectionCodeDialog}
+              handleClose={this.close}
+            >
+              <NoSectionCodeDialog
+                typeClassroom={loginType}
+                handleClose={this.close}
+              />
+            </BaseDialog>
+          </div>
         </div>
         <Table.Provider
           columns={columns}
