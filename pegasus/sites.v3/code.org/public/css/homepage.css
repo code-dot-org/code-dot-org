@@ -133,15 +133,11 @@ body.modal-open .supreme-container{
   line-height: 44px;
   color: #00ADBC;
   margin-top: 0px;
-  margin-bottom: 0px;
+  margin-bottom: 20px;
 }
 
-#homepage .hero-message-second {
-  font-family: 'Gotham 5r', sans-serif !important;
-  font-size: 44px;
-  line-height: 44px;
-  color: #00ADBC;
-  margin-bottom: 20px;
+#homepage .hero-message p {
+  margin-bottom: 0px;
 }
 
 #homepage .hero-sub-message {
