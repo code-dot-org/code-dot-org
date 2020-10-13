@@ -125,6 +125,43 @@ Resources:
             Condition:
               StringEquals:
                 secretsmanager:VersionStage: AWSCURRENT
+  # Permissions which grant the CurriculumBuilder project read-only acces to
+  # the DCDO database, so select configuration variables can be shared between
+  # the two projects.
+  CurriculumBuilderDCDO:
+    Type: AWS::IAM::ManagedPolicy
+    Properties:
+      ManagedPolicyName: CurriculumBuilderDCDO
+      PolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Action:
+              - dynamodb:BatchGetItem
+              - dynamodb:ConditionCheckItem
+              - dynamodb:DescribeContributorInsights
+              - dynamodb:Scan
+              - dynamodb:ListTagsOfResource
+              - dynamodb:Query
+              - dynamodb:DescribeStream
+              - dynamodb:DescribeTimeToLive
+              - dynamodb:DescribeGlobalTableSettings
+              - dynamodb:DescribeTable
+              - dynamodb:GetShardIterator
+              - dynamodb:DescribeGlobalTable
+              - dynamodb:GetItem
+              - dynamodb:DescribeContinuousBackups
+              - dynamodb:DescribeBackup
+              - dynamodb:GetRecords
+              - dynamodb:DescribeTableReplicaAutoScaling
+            Resource: !sub "arn:aws:dynamodb:${AWS::Region}:${AWS::AccountId}:table/dcdo_production"
+          - Effect: Allow
+            Action:
+              - dynamodb:DescribeReservedCapacityOfferings
+              - dynamodb:DescribeReservedCapacity
+              - dynamodb:DescribeLimits
+              - dynamodb:ListStreams
+            Resource: *
   Developer:
     Type: AWS::IAM::Role
     Properties:
