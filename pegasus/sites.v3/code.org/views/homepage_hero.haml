@@ -30,21 +30,13 @@
       = hoc_s(:hoc2019_header_line2_mobile)
     .hero-sub-message
       = hoc_s(:codeorg_homepage_hoc2018_header_line1)
-  - elsif show_single_hero == "hoc2020"
-    .hero-message
-      = hoc_s(:hoc2020_header_line1)
-    .hero-message-second
-      = hoc_s(:hoc2020_header_line2)
-    .hero-sub-message
-      = hoc_s(:codeorg_homepage_hoc2018_header_line1)
   .action_buttons
     - actions.each do |entry|
-      - if ["cta_button", "cta_button_solid_white", "cta_button_hollow_white", "cta_button_solid_yellow"].include? entry[:type]
+      - if ["cta_button", "cta_button_solid_white", "cta_button_hollow_white"].include? entry[:type]
         .action
           %a.linktag#hero-hoc{href: entry[:url]}
             - extra_class = "herohocbutton-solid-white" if entry[:type] == "cta_button_solid_white"
             - extra_class = "herohocbutton-hollow-white" if entry[:type] == "cta_button_hollow_white"
-            - extra_class = "herohocbutton-solid-yellow" if entry[:type] == "cta_button_solid-yellow"
             %button.herohocbutton{class: extra_class}= I18n.t(entry[:text])
       - elsif entry[:type] == "video"
         .action
