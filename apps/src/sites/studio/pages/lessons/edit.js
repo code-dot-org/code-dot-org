@@ -15,7 +15,7 @@ import {levelKeyList} from '@cdo/apps/lib/levelbuilder/lesson-editor/SampleActiv
 
 $(document).ready(function() {
   const lessonData = getScriptData('lesson');
-  let activities = lessonData.activities;
+  const activities = lessonData.activities;
 
   // Rename any keys that are different on the backend.
   activities.forEach(activity => {
@@ -57,7 +57,7 @@ $(document).ready(function() {
   });
 
   if (activities.length === 0) {
-    activities = emptyActivity;
+    activities.push(emptyActivity);
   }
 
   registerReducers({...reducers});
