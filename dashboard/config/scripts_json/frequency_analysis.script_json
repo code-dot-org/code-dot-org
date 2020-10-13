@@ -5,7 +5,7 @@
     "hidden": true,
     "login_required": false,
     "properties": {
-      "has_lesson_plan": true
+      "peer_reviews_to_complete": 0
     },
     "new_name": null,
     "family_name": null,
