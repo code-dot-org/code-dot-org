@@ -25,5 +25,9 @@ export const commands = {
     if (condition === 'when' || condition === 'while') {
       coreLibrary.addEvent(condition + 'click', {sprite: spriteArg}, callback);
     }
+  },
+
+  whenQuestionAnswered(variableName, callback) {
+    coreLibrary.registerQuestionAnswerCallback(variableName, callback);
   }
 };
