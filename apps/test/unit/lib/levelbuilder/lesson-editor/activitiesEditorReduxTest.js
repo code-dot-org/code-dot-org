@@ -331,6 +331,7 @@ describe('activitiesEditorRedux reducer tests', () => {
         expectedState[0].activitySections = [emptyActivitySection];
 
         assert.deepEqual(1, state.activities[0].activitySections.length);
+        assert.deepEqual(expectedState, state.activities);
       });
 
       it('update activity section field', () => {
