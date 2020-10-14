@@ -49,7 +49,7 @@ class Level < ActiveRecord::Base
   validates_length_of :name, within: 1..70
   validate :reject_illegal_chars
   validates_uniqueness_of :name, case_sensitive: false, conditions: -> {where.not(user_id: nil)}
-  validate :validate_level_key
+  validate :validate_game
 
   after_save :write_custom_level_file
   after_save :update_key_list
@@ -517,16 +517,11 @@ class Level < ActiveRecord::Base
     end
   end
 
-  def validate_level_key
-    # First try to provide a helpful error message based on specific knowledge
-    # of how the level key is currently computed.
+  # Uses specific knowledge of how the key method is implemented in hopes of
+  # preventing any levels for which we can't compute a key.
+  def validate_game
     unless ['custom', nil].include?(level_num) || game
-      errors.add(:game, 'required for non-custom levels')
-    end
-    # Then make sure we can compute a non-nil level key, in case the
-    # the implementation changed to no longer match our assumptions.
-    unless key
-      errors.add(:key, 'level key cannot be nil')
+      errors.add(:game, 'required for non-custom levels in order to compute level key')
     end
   end
 
