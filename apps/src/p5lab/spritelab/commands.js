@@ -51,6 +51,10 @@ export const commands = {
     actionCommands.edgesDisplace.apply(this, [spriteArg]);
   },
 
+  isCostumeEqual(spriteArg, costumeName) {
+    return actionCommands.isCostumeEqual(spriteArg, costumeName);
+  },
+
   isKeyPressed(key) {
     return actionCommands.isKeyPressed.apply(this, [key]);
   },
