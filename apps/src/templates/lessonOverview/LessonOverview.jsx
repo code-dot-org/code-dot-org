@@ -24,8 +24,10 @@ const styles = {
     padding: 10,
     borderLeft: 'solid 1px black'
   },
-  nav: {
-    margin: '10px 0px',
+  header: {
+    margin: '10px 0px'
+  },
+  navLink: {
     fontSize: 18,
     color: color.purple
   }
@@ -55,9 +57,11 @@ class LessonOverview extends Component {
     const {lesson, announcements, isSignedIn, viewAs} = this.props;
     return (
       <div>
-        <a href={lesson.unit.link} style={styles.nav}>
-          {`< ${lesson.unit.displayName}`}
-        </a>
+        <div style={styles.header}>
+          <a href={lesson.unit.link} style={styles.navLink}>
+            {`< ${lesson.unit.displayName}`}
+          </a>
+        </div>
         {isSignedIn && (
           <Announcements
             announcements={announcements}
