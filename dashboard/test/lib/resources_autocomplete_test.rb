@@ -21,4 +21,14 @@ class ResourcesAutocompleteTest < ActiveSupport::TestCase
     matches = ResourcesAutocomplete.get_search_matches("class", 5)
     assert_equal 2, matches.length
   end
+
+  test "only returns up to limit matches" do
+    matches = ResourcesAutocomplete.get_search_matches("class", 1)
+    assert_equal 1, matches.length
+  end
+
+  test "returns empty list for short query" do
+    matches = ResourcesAutocomplete.get_search_matches("cl", 5)
+    assert_equal [], matches
+  end
 end
