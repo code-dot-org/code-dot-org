@@ -27,7 +27,9 @@ const styles = {
     borderLeft: 'solid 1px black'
   },
   header: {
-    margin: '10px 0px'
+    margin: '10px 0px',
+    display: 'flex',
+    justifyContent: 'space-between'
   },
   navLink: {
     fontSize: 18,
@@ -76,18 +78,18 @@ class LessonOverview extends Component {
           <a href={lesson.unit.link} style={styles.navLink}>
             {`< ${lesson.unit.displayName}`}
           </a>
-        </div>
-        <div style={styles.dropdown}>
-          <DropdownButton
-            text={`Other Lessons in this Unit`}
-            color={Button.ButtonColor.purple}
-          >
-            {lesson.unit.lessons.map((l, index) => (
-              <a key={index} href={l.link} target="_blank">
-                {`${index + 1} ${l.displayName}`}
-              </a>
-            ))}
-          </DropdownButton>
+          <div style={styles.dropdown}>
+            <DropdownButton
+              text={`Other Lessons in this Unit`}
+              color={Button.ButtonColor.purple}
+            >
+              {lesson.unit.lessons.map((l, index) => (
+                <a key={index} href={l.link} target="_blank">
+                  {`${index + 1} ${l.displayName}`}
+                </a>
+              ))}
+            </DropdownButton>
+          </div>
         </div>
         {isSignedIn && (
           <Announcements
