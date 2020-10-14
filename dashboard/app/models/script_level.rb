@@ -647,4 +647,11 @@ class ScriptLevel < ActiveRecord::Base
     end
     my_levels.sort_by(&:id).map(&:key)
   end
+
+  # @param [Array<Hash>] levels_data - Array of hashes each representing a level
+  def update_levels(levels_data)
+    self.levels = levels_data.map do |level_data|
+      Level.find(level_data['id'])
+    end
+  end
 end

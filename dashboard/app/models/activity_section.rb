@@ -62,21 +62,33 @@ class ActivitySection < ApplicationRecord
     # lesson but haven't been associated with an activity section yet.
 
     script_levels_data.each do |sl_data|
-      # TODO(dave): create new script level if id did not previously exist
-      next unless sl_data['id']
-
-      sl = ScriptLevel.find(sl_data['id'].to_i)
-      unless sl.activity_section == self
-        raise "ScriptLevel #{sl_data['id']} is not owned by ActivitySection #{id}"
-      end
+      sl = fetch_script_level(sl_data)
       sl.update!(
-        position: sl_data['position'],
+        position: sl_data['position'] || 0,
+        activity_section_position: sl_data['activitySectionPosition'] || 0,
         assessment: !!sl_data['assessment'],
         bonus: !!sl_data['bonus'],
         challenge: !!sl_data['challenge'],
       )
-
+      sl.update_levels(sl_data['levels'])
       # TODO(dave): check and update script level variants
     end
+  end
+
+  private
+
+  def fetch_script_level(sl_data)
+    if sl_data['id']
+      sl = script_levels.find(sl_data['id'])
+      raise "ScriptLevel id #{sl_data['id']} not found in ActivitySection id #{id}" unless script_level
+      return sl
+    end
+
+    script_levels.create(
+      position: sl_data['position'] || 0,
+      activity_section_position: sl_data['position'] || 0,
+      lesson: lesson,
+      script: lesson.script
+    )
   end
 end

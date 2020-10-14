@@ -260,4 +260,61 @@ class LessonsControllerTest < ActionController::TestCase
     assert_equal 1, section.position
     assert_equal id_b, section.id
   end
+
+  test 'add script level via lesson update' do
+    sign_in @levelbuilder
+
+    activity = @lesson.lesson_activities.create(
+      name: 'activity name',
+      position: 1,
+      seeding_key: 'activity-key'
+    )
+    section = activity.activity_sections.create(
+      name: 'section name',
+      position: 1,
+      seeding_key: 'section-key'
+    )
+
+    level_to_add = create :maze, name: 'level-to-add'
+
+    @update_params['activities'] = [
+      {
+        id: activity.id,
+        name: 'activity name',
+        position: 1,
+        activitySections: [
+          {
+            id: section.id,
+            name: 'section name',
+            position: 1,
+            scriptLevels: [
+              activitySectionPosition: 1,
+              activeId: level_to_add.id,
+              assessment: true,
+              levels: [
+                {
+                  id: level_to_add.id,
+                  name: level_to_add.name
+                }
+              ]
+            ]
+          }
+        ]
+      }
+    ].to_json
+
+    put :update, params: @update_params
+
+    assert_redirected_to "/lessons/#{@lesson.id}"
+    @lesson.reload
+
+    assert_equal activity, @lesson.lesson_activities.first
+    assert_equal section, activity.activity_sections.first
+
+    assert_equal 1, section.script_levels.count
+    script_level = section.script_levels.first
+    assert script_level.assessment
+    refute script_level.bonus
+    assert_equal ['level-to-add'], script_level.levels.map(&:name)
+  end
 end
