@@ -29,7 +29,7 @@
   "lessons": [
     {
       "key": "USE Programs",
-      "name": "USE Programs",
+      "name": "USE Programs (AppLab Only)",
       "absolute_position": 1,
       "lockable": false,
       "relative_position": 1,
@@ -43,7 +43,7 @@
     },
     {
       "key": "MODIFY Programs",
-      "name": "MODIFY Programs",
+      "name": "MODIFY Programs (AppLab -> Widget -> AppLab)",
       "absolute_position": 2,
       "lockable": false,
       "relative_position": 2,
@@ -62,7 +62,7 @@
       "position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Movie Recommendations"
+        "progression": "Movie Recommendations (AppLab Only)"
       },
       "named_level": null,
       "bonus": null,
@@ -83,7 +83,7 @@
       "position": 2,
       "assessment": null,
       "properties": {
-        "progression": "Movie Recommendations"
+        "progression": "Movie Recommendations (AppLab Only)"
       },
       "named_level": null,
       "bonus": null,
@@ -104,7 +104,7 @@
       "position": 3,
       "assessment": null,
       "properties": {
-        "progression": "Movie Recommendations"
+        "progression": "Movie Recommendations (AppLab Only)"
       },
       "named_level": null,
       "bonus": null,
@@ -125,7 +125,7 @@
       "position": 4,
       "assessment": null,
       "properties": {
-        "progression": "Movie Recommendations"
+        "progression": "Movie Recommendations (AppLab Only)"
       },
       "named_level": null,
       "bonus": null,
@@ -146,7 +146,7 @@
       "position": 5,
       "assessment": null,
       "properties": {
-        "progression": "Movie Recommendations"
+        "progression": "Movie Recommendations (AppLab Only)"
       },
       "named_level": null,
       "bonus": null,
@@ -167,7 +167,7 @@
       "position": 6,
       "assessment": null,
       "properties": {
-        "progression": "School Acceptance"
+        "progression": "School Acceptance (AppLab Only)"
       },
       "named_level": null,
       "bonus": null,
@@ -188,7 +188,7 @@
       "position": 7,
       "assessment": null,
       "properties": {
-        "progression": "School Acceptance"
+        "progression": "School Acceptance (AppLab Only)"
       },
       "named_level": null,
       "bonus": null,
@@ -209,7 +209,7 @@
       "position": 8,
       "assessment": null,
       "properties": {
-        "progression": "School Acceptance"
+        "progression": "School Acceptance (AppLab Only)"
       },
       "named_level": null,
       "bonus": null,
@@ -230,7 +230,7 @@
       "position": 9,
       "assessment": null,
       "properties": {
-        "progression": "School Acceptance"
+        "progression": "School Acceptance (AppLab Only)"
       },
       "named_level": null,
       "bonus": null,
@@ -251,7 +251,7 @@
       "position": 10,
       "assessment": null,
       "properties": {
-        "progression": "School Acceptance"
+        "progression": "School Acceptance (AppLab Only)"
       },
       "named_level": null,
       "bonus": null,
