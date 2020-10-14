@@ -11,10 +11,10 @@ class LessonsController < ApplicationController
         link: @lesson.script.link
       },
       displayName: @lesson.localized_title,
-      overview: @lesson.overview,
+      overview: @lesson.overview || '',
       announcements: @lesson.announcements,
-      purpose: @lesson.purpose,
-      preparation: @lesson.preparation
+      purpose: @lesson.purpose || '',
+      preparation: @lesson.preparation || ''
     }
   end
 
