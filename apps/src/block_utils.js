@@ -529,6 +529,7 @@ const VALUE_INPUT = 'value';
 const DUMMY_INPUT = 'dummy';
 const STATEMENT_INPUT = 'statement';
 const FIELD_INPUT = 'field';
+const VARIABLE_INPUT = 'variable';
 
 /**
  * Splits a blockText into labelled inputs, each match will a label followed by
@@ -595,6 +596,8 @@ const determineInputs = function(text, args, strictTypes = []) {
         mode = STATEMENT_INPUT;
       } else if (arg.empty) {
         mode = DUMMY_INPUT;
+      } else if (arg.variableInput) {
+        mode = VARIABLE_INPUT;
       } else {
         mode = VALUE_INPUT;
       }
@@ -698,6 +701,44 @@ const STANDARD_INPUT_TYPES = {
         code = JSON.stringify(code);
       }
       return code;
+    }
+  },
+  [VARIABLE_INPUT]: {
+    addInput(blockly, block, inputConfig, currentInputRow) {
+      block.getVars = function() {
+        return {
+          [Blockly.Variables.DEFAULT_CATEGORY]: [
+            block.getTitleValue(inputConfig.name)
+          ]
+        };
+      };
+      block.renameVar = function(oldName, newName) {
+        if (
+          Blockly.Names.equals(oldName, block.getTitleValue(inputConfig.name))
+        ) {
+          block.setTitleValue(newName, inputConfig.name);
+        }
+      };
+      block.removeVar = function(oldName) {
+        if (
+          Blockly.Names.equals(oldName, block.getTitleValue(inputConfig.name))
+        ) {
+          block.dispose(true, true);
+        }
+      };
+      block.superSetTitleValue = block.setTitleValue;
+      block.setTitleValue = function(newValue, name) {
+        if (name === inputConfig.name && block.blockSpace.isFlyout) {
+          newValue = Blockly.Variables.generateUniqueName(newValue);
+        }
+        block.superSetTitleValue(newValue, name);
+      };
+      currentInputRow
+        .appendTitle(inputConfig.label)
+        .appendTitle(new Blockly.FieldVariable(null), inputConfig.name);
+    },
+    generateCode(block, inputConfig) {
+      return block.getTitleValue(inputConfig.name);
     }
   },
   [FIELD_INPUT]: {
