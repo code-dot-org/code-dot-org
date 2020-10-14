@@ -38,7 +38,7 @@ export default class ActivitySection extends Component {
   render() {
     const {section} = this.props;
 
-    const isProgressionSection = section.levels.length > 0;
+    const isProgressionSection = section.scriptLevels.length > 0;
 
     const sectionHasTips = section.tips.length > 0;
 
