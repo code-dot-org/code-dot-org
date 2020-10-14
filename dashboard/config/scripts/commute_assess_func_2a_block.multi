@@ -1,7 +1,7 @@
 name 'Commute Assess - func 2a - block'
-wrong '<pre>5</pre>'
-right '<pre>10</pre>'
-wrong '<pre>55</pre>'
+wrong '`5`'
+right '`10`'
+wrong '`55`'
 wrong 'Nothing is printed'
 wrong 'This script would cause an error'
 

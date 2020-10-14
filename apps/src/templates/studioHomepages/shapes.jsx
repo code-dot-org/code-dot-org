@@ -40,6 +40,18 @@ const shapes = {
     image: PropTypes.string.isRequired,
     type: PropTypes.string,
     id: PropTypes.string.isRequired
+  }),
+  specialAnnouncement: PropTypes.shape({
+    image: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    body: PropTypes.string.isRequired,
+    buttonId: PropTypes.string,
+    buttonUrl: PropTypes.string.isRequired,
+    buttonText: PropTypes.string.isRequired,
+    buttonId2: PropTypes.string,
+    buttonUrl2: PropTypes.string,
+    buttonText2: PropTypes.string,
+    backgroundColor: PropTypes.string
   })
 };
 

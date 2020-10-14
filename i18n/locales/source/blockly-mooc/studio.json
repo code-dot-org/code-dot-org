@@ -34,6 +34,7 @@
   "bird": "bird",
   "calloutPutCommandsHereRunStart": "Put commands here to have them run when the program starts",
   "calloutBlocklyPlaceGoUpHere": "Place a \"go up\" block here to go up",
+  "calloutBlocklyPlaceMoveUpHere": "Place a \"move droid up\" block here to move up",
   "calloutClickEvents": "Click on the events header to see event function blocks.",
   "calloutUseArrowButtons": "Hold down these buttons or the arrow keys on your keyboard to trigger the move events",
   "calloutUseArrowButtonsAutoSteer": "We have hidden the code you wrote, but you can still use the arrow keys to move",

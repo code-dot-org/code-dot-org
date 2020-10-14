@@ -1,9 +1,7 @@
 name 'AP_practice_Qs_rqb_39_CSP_4_2_3'
 wrong 'Some problems cannot be solved using any algorithm.'
-right 'Every decidable problem can be solved by an algorithm in a reasonable (polynomial) time.
-'
-wrong 'Every algorithm can be constructed using only sequencing, selection, and iteration.
-'
+right 'Every decidable problem can be solved by an algorithm in a reasonable (polynomial) time.'
+wrong 'Every algorithm can be constructed using only sequencing, selection, and iteration.'
 wrong 'The language used to express an algorithm does not affect whether an algorithmic solution exists.'
 markdown <<MARKDOWN
 Which of the following is NOT true of algorithms?

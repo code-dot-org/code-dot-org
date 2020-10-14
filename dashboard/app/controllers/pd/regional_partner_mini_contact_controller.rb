@@ -1,6 +1,4 @@
 class Pd::RegionalPartnerMiniContactController < ApplicationController
-  load_resource :regional_partner_mini_contact, class: 'Pd::RegionalPartnerMiniContact', id_param: :contact_id, only: [:thanks]
-
   # GET /pd/regional_partner_mini_contacts/new
   def new
     view_options(full_width: true, responsive_content: true)

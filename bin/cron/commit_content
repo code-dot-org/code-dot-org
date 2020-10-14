@@ -1,4 +1,6 @@
 #!/usr/bin/env ruby
+require_relative 'only_one'
+abort 'Script already running' unless only_one_running?(__FILE__)
 
 # This script commits content on the machine to its associated branch. It is expected to be run only
 # on staging and levelbuilder (levelbuilder-staging).
@@ -6,7 +8,6 @@
 require_relative '../../deployment'
 require 'cdo/chat_client'
 require 'cdo/developers_topic'
-require 'cdo/only_one'
 
 class ContentCommitter
   # @param [Symbol] env The environment the commit is being performed on.
@@ -26,7 +27,7 @@ class ContentCommitter
 
   # @return [String] An environment-specific string indicating that the robo-commit was skipped.
   def commit_skipped_string
-    "robo-commit skipped (#{@d_to_env.upcase}: no)"
+    "<@#{DevelopersTopic.dotd}> robo-commit skipped (#{@d_to_env.upcase}: no)"
   end
 
   # @return [String] An environment-specific string indicating that the robo-commit is happening.
@@ -83,4 +84,4 @@ rescue Exception => e
   content_committer.set_slack_failed
 end
 
-main if only_one_running?(__FILE__)
+main

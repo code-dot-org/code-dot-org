@@ -55,14 +55,14 @@
     "mini_rubric": "false",
     "long_instructions": "\r\n# Do This\r\n\r\n**Step 6: Conditionals:** The app gives feedback if good design choices are made. This is checked everytime the design is changed, so an if-else-if statement is added to the `updateScreen()` function. \r\n\r\nFeel free to add extra Boolean expressions for your own combinations that you believe are good decision decisions!\r\n\r\n* Add an if-else-if statement to the `updateScreen()` function\r\n* Add to the `if` section: `borderPictureName == \"floral\" && backgroundColor == \"lavender\"`\r\n\t* If these conditions are true: `showElement(\"feedback\")`\r\n* In the `else if` section add: `backgroundColor == \"lightblue\" && fontFamily == \"Trebuchet\"`\r\n\t* If these conditions are true: `showElement(\"feedback\")`\r\n* In the `else` section put `hideElement(\"feedback\");\r\n* Update the comment for the function to explain this new behavior\r\n\r\n**Hint: ** If the feedback does not show up, double check that you did the last step in Level 5. \r\n\r\n",
     "project_template_level_name": "U4 L11 Functions Make Template",
-    "map_reference": "/docs/concepts/app-lab/patterns/when-to-make-a-function/",
+    "map_reference": "/docs/concepts/patterns/when-to-make-a-function/",
     "preload_asset_list": null,
     "encrypted": "false",
     "encrypted_examples": [
 
     ],
     "reference_links": [
-      "/docs/concepts/app-lab/patterns/update-screen-pattern/"
+      "/docs/concepts/patterns/update-screen-pattern/"
     ]
   },
   "published": true,

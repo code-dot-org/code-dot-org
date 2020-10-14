@@ -19,6 +19,8 @@
           %li
             = link_to("(#{t 'crud.edit'})", edit_script_path(script))
             = link_to(data_t_suffix('script.name', script.name, 'title'), script_next_path(script))
+            - if script.has_standards_associations?
+              = link_to "(Import Standards)", admin_standards_import_path
     %li= link_to t('builder.manage'), new_level_path
     %li= link_to 'Admin Page Directory', admin_directory_path
     %li= link_to 'Gallery', 'projects/public'

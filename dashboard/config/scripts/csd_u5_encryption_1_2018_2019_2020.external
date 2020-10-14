@@ -1,0 +1,21 @@
+name 'CSD U5 Encryption 1_2018_2019_2020'
+title 'title'
+description 'description here'
+markdown <<MARKDOWN
+# Decoding Binary Strings
+
+![](https://images.code.org/6d8dcf1c1e6c2955fa767e9839af820e-image-1505420730035.24.20 PM.png)
+
+## Encoding system:
+
+![](https://images.code.org/df5db2027cac3c16c4ef4b2b8f940d5d-image-1505420957117.28.48 PM.png) ![](https://images.code.org/4de0035c9053477fa6f5484800dc8140-image-1505420957118.28.39 PM.png)
+
+![](https://images.code.org/8335bef013e9655291fcfecf2c60fcd3-image-1505420957118.28.30 PM.png)  &nbsp;&nbsp; ![](https://images.code.org/ab3337f5b0848557c37fd114fe0d65b7-image-1505420957116.28.56 PM.png)
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+The message itself is a doughnut, thumbs down, and angry face.  Students may have fun coming up with their own interpretations of the emojis.  One possible interpretation is that the sender expected a doughnut, didn't get one and became angry, but there is no "right" answer to what the emojis mean.
+    
+(Hide this message by going to your teacher panel on the right and choosing to view as a student.)
+
+MARKDOWN

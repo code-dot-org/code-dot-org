@@ -1,6 +1,6 @@
 name 'courseF_bee_variables_8a_2018_2019'
 title 'Bee Variables Multi'
-question 'Look at the code below.  How many units of nectar will the bee collect at the end?'
+question 'Look at the code below. How many units of nectar will the bee collect at the end?'
 wrong 'The bee won\'t collect any nectar because the variable isn\'t called "gather".', feedback: 'Incorrect.  Your variable\'s name does not affect its value.'
 right 'The bee will only collect 2 nectar.', feedback: 'Correct!'
 wrong 'The bee will collect all of the nectar.', feedback: 'Incorrect.  The variable gets set back to 0 before the last two function calls.'

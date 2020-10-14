@@ -10,7 +10,7 @@
 #  level_num             :string(255)
 #  ideal_level_source_id :integer          unsigned
 #  user_id               :integer
-#  properties            :text(65535)
+#  properties            :text(16777215)
 #  type                  :string(255)
 #  md5                   :string(255)
 #  published             :boolean          default(FALSE), not null
@@ -30,6 +30,7 @@ class GamelabJr < Gamelab
     hide_custom_blocks
     use_default_sprites
     block_pools
+    mini_toolbox
   )
 
   def shared_blocks
@@ -45,16 +46,18 @@ class GamelabJr < Gamelab
         properties: {
           show_debug_watch: true,
           block_pools: [
-            "gamelab",
+            "GamelabJr",
           ],
           helper_libraries: [
-            "GameLabJr",
+            "NativeSpriteLab",
           ],
           use_default_sprites: true,
           hide_animation_mode: true,
           show_type_hints: true,
-          include_shared_functions: true,
           hide_custom_blocks: true,
+          all_animations_single_frame: true,
+          use_modal_function_editor: true,
+          mini_toolbox: false
         }
       )
     )

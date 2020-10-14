@@ -29,7 +29,7 @@ function recordExport(type) {
       study: 'finish-dialog-export',
       study_group: 'v1',
       event: 'project-export',
-      project_id: project.getCurrentId(),
+      project_id: project.getCurrentId ? project.getCurrentId() : undefined,
       data_string: type
     },
     {includeUserId: true}
@@ -108,9 +108,6 @@ const styles = {
  */
 class ExportDialog extends React.Component {
   static propTypes = {
-    i18n: PropTypes.shape({
-      t: PropTypes.func.isRequired
-    }).isRequired,
     exportApp: PropTypes.func.isRequired,
     expoGenerateApk: PropTypes.func.isRequired,
     expoCheckApkBuild: PropTypes.func.isRequired,
@@ -271,6 +268,7 @@ class ExportDialog extends React.Component {
       md5PublishSavedSources: md5SavedSources
     });
     try {
+      recordExport('publishToExpo');
       const exportResult = await exportApp({
         mode: 'expoPublish',
         iconFileUrl
@@ -289,12 +287,19 @@ class ExportDialog extends React.Component {
       });
       return exportResult;
     } catch (e) {
+      const hasDataAPIsError = e.message.includes('hasDataAPIs');
+      const exportError = hasDataAPIsError
+        ? 'This project uses data APIs. Exporting this type of app is not supported during the Beta period.'
+        : 'Failed to create app. Please try again later.';
+      recordExport(
+        hasDataAPIsError ? 'publishBlockedDueToDataAPIs' : 'publishToExpoError'
+      );
       this.setState({
         exporting: false,
         md5PublishSavedSources: null,
         expoUri: null,
         expoSnackId: null,
-        exportError: 'Failed to create app. Please try again later.'
+        exportError
       });
     }
     // In the success case, we already returned, so reaching this point means
@@ -330,6 +335,7 @@ class ExportDialog extends React.Component {
       return;
     }
 
+    recordExport('generateApk');
     this.setState({generatingApk: true});
     try {
       const apkBuildId = await expoGenerateApk({
@@ -341,6 +347,7 @@ class ExportDialog extends React.Component {
       this.setState({apkBuildId});
       return this.waitForApkBuild(apkBuildId, expoSnackId);
     } catch (e) {
+      recordExport('generateApkError');
       this.setState({
         generatingApk: false,
         apkError: 'Failed to create Android app. Please try again later.',
@@ -381,6 +388,7 @@ class ExportDialog extends React.Component {
         return;
       }
       if (apkUri) {
+        recordExport('generateApkSuccess');
         this.setState({
           generatingApk: false,
           apkError: null,
@@ -395,6 +403,7 @@ class ExportDialog extends React.Component {
         }, APK_BUILD_STATUS_CHECK_PERIOD);
       }
     } catch (e) {
+      recordExport('generateApkError');
       this.setState({
         generatingApk: false,
         apkError: 'Failed to create Android app. Please try again later.',
@@ -463,27 +472,33 @@ class ExportDialog extends React.Component {
 
     switch (screen) {
       case 'intro':
+        recordExport('platformScreen');
         this.setState({screen: 'platform'});
         break;
       case 'platform':
+        recordExport('iconScreen');
         this.setState({screen: 'icon'});
         break;
-      case 'icon':
-        this.setState({
-          screen:
-            platform === PLATFORM_ANDROID ? 'publishAndroid' : 'publishIOS'
-        });
+      case 'icon': {
+        const nextScreen =
+          platform === PLATFORM_ANDROID ? 'publishAndroid' : 'publishIOS';
+        recordExport(`${nextScreen}Screen`);
+        this.setState({screen: nextScreen});
         break;
+      }
       case 'publishAndroid':
         this.generateApkAsNeeded();
+        recordExport('generatingScreen');
         this.setState({screen: 'generating'});
         break;
       case 'publishIOS':
         this.publishExpoExport();
+        recordExport('generatingScreen');
         this.setState({screen: 'generating'});
         break;
       case 'generating':
         if (this.isPublishingForIOSWithoutError()) {
+          recordExport('navigateToExpo');
           this.visitExpoSite();
         }
         this.close();
@@ -663,7 +678,6 @@ class ExportDialog extends React.Component {
   render() {
     const {
       canShareSocial,
-      i18n: i18nProp,
       isAbusive,
       isProjectLevel,
       signInState,
@@ -699,8 +713,8 @@ class ExportDialog extends React.Component {
           {isAbusive && (
             <AbuseError
               i18n={{
-                tos: i18nProp.t('project.abuse.tos'),
-                contact_us: i18nProp.t('project.abuse.contact_us')
+                tos: i18n.tosLong({url: 'http://code.org/tos'}),
+                contact_us: i18n.contactUs({url: 'https://code.org/contact'})
               }}
               className="alert-error"
               style={styles.abuseStyle}
@@ -708,9 +722,7 @@ class ExportDialog extends React.Component {
             />
           )}
           {showShareWarning && (
-            <p style={styles.shareWarning}>
-              {i18nProp.t('project.share_u13_warning')}
-            </p>
+            <p style={styles.shareWarning}>{i18n.shareU13Warning()}</p>
           )}
           {this.renderMainContent()}
           <div style={styles.buttonRow}>

@@ -71,7 +71,7 @@ describe('NetSimMessage', function() {
   it('gracefully converts a malformed base64Payload to empty string', function() {
     var message = new NetSimMessage(testShard, {
       base64Payload: {
-        string: 'totally not a base64 string',
+        string: 'not a base64 string because of the question mark?',
         len: 7
       }
     });

@@ -16,8 +16,8 @@ class UserLevelTest < ActiveSupport::TestCase
 
   test "by_stage" do
     script = create :script
-    stage = create :stage, script: script
-    script_level = create :script_level, script: script, stage: stage
+    stage = create :lesson, script: script
+    script_level = create :script_level, script: script, lesson: stage
     level = script_level.levels.first
 
     stage_user_level = create :user_level, script: script, level: level
@@ -29,12 +29,12 @@ class UserLevelTest < ActiveSupport::TestCase
 
   test "by_stage will find all levels for each script_level" do
     script = create :script
-    stage = create :stage, script: script
+    stage = create :lesson, script: script
     first_level = create :level
     second_level = create :level
     create :script_level,
       script: script,
-      stage: stage,
+      lesson: stage,
       levels: [
         first_level,
         second_level
@@ -287,9 +287,9 @@ class UserLevelTest < ActiveSupport::TestCase
     teacher = create :teacher
     teacher.permission = UserPermission::AUTHORIZED_TEACHER
 
-    stage = create(:stage, lockable: true)
+    stage = create(:lesson, lockable: true)
 
-    script_level = create :script_level, levels: [@level], stage: stage
+    script_level = create :script_level, levels: [@level], lesson: stage
 
     ul_student = UserLevel.create(user: @user, level: @level, submitted: true)
     ul_teacher = UserLevel.create(user: teacher, level: @level, submitted: true)
@@ -331,5 +331,34 @@ class UserLevelTest < ActiveSupport::TestCase
       },
       passing_level_counts
     )
+  end
+
+  test 'calculate_total_time_spent returns 0 if no time_spent recorded' do
+    ul = UserLevel.create(
+      user: @user,
+      level: @level
+    )
+
+    assert_equal 0, ul.calculate_total_time_spent(nil)
+  end
+
+  test 'calculate_total_time_spent returns time_spent additional_time recorded' do
+    ul = UserLevel.create(
+      user: @user,
+      level: @level,
+      time_spent: 2000
+    )
+
+    assert_equal 2000, ul.calculate_total_time_spent(nil)
+  end
+
+  test 'calculate_total_time_spent returns the sum of time_spent and additional_time' do
+    ul = UserLevel.create(
+      user: @user,
+      level: @level,
+      time_spent: 2000
+    )
+
+    assert_equal 4000, ul.calculate_total_time_spent(2000)
   end
 end

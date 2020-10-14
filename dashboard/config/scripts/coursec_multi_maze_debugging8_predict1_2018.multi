@@ -1,5 +1,5 @@
 name 'courseC_multi_maze_debugging8_predict1_2018'
-question 'Look closely at the code below.  What is the first bug that will make this program fail? '
+question 'Look closely at the code below. What is the first bug that will make this program fail?'
 wrong 'The program won\'t fail. Scrat will get to the acorn.', feedback: 'Incorrect. Scrat goes the wrong way after his final turn.'
 right 'Scrat will go the wrong way after his final turn.', feedback: 'Correct!'
 wrong 'Scrat takes one too few steps and ends up short of the acorn.', feedback: 'Incorrect. Taking one too few steps happens after Scrat turns the wrong way.'

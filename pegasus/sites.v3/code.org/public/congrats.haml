@@ -21,7 +21,6 @@ max_age: 60
   rescue ArgumentError
     bad_request
   end
-  pass unless ScriptConstants.script_in_any_category?(cert_script)
 
   if cert_id
     share_url = "http://#{request.host_with_port}/certificates/#{cert_id}"
@@ -30,8 +29,9 @@ max_age: 60
   end
 
   facebook = {:u=>share_url}
-  twitter = {:url=>share_url, :related=>'codeorg', :text=>I18n.t('just_did_hoc_donor', donor_twitter: get_random_donor_twitter)}
-  twitter[:hashtags] = 'HourOfCode' unless I18n.t(:just_did_hoc_donor).include? '#HourOfCode'
+  twitter_message = I18n.t('just_did_hoc_donor', donor_twitter: get_random_donor_twitter)
+  twitter = {:url=>share_url, :related=>'codeorg', :text=>twitter_message}
+  twitter[:hashtags] = 'HourOfCode' unless twitter_message.include? '#HourOfCode'
 
   company_param = params[:co]
   form = DB[:forms].where(kind:'CompanyProfile', name:company_param).first if company_param
@@ -51,7 +51,7 @@ max_age: 60
 
     #additional_actions.ee_markdown
       -if company['additional_actions_copy_t']
-        =TextRender.safe_markdown company['additional_actions_copy_t']
+        = @actionview.render(inline: company['additional_actions_copy_t'], type: :md)
       -else
         =view :company_profile_additional_actions
       = I18n.t :congratulations_volunteer

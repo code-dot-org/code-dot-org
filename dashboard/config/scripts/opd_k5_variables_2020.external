@@ -1,0 +1,14 @@
+name 'OPD-K5 variables_2020'
+title 'variables'
+description 'description here'
+markdown <<MARKDOWN
+# Overview: Variables
+
+<img src="https://images.code.org/833108f29baf6f8633b1282aeb7d06e5-image-1571780548872.jpg" class="level-image">
+
+## Advanced coding concepts: Variables
+
+- Understand that a variable placeholder for a piece of information that can change
+- Practice using variables
+
+MARKDOWN

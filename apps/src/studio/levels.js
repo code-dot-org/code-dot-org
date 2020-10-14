@@ -3830,7 +3830,7 @@ levels.hoc2015_blockly_7 = extend(levels.js_hoc2015_event_two_items, {
       hide_target_selector: '.blocklyDraggable',
       qtip_config: {
         content: {
-          text: msg.calloutBlocklyPlaceGoUpHere()
+          text: msg.calloutBlocklyPlaceMoveUpHere()
         },
         position: {
           my: 'top left',

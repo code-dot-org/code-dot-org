@@ -10,7 +10,7 @@ class AddRelativePositionToStages < ActiveRecord::Migration[4.2]
       lockable_count = 0
       nonlockable_count = 0
       # depend on the fact that stages are ordered by absolute_position
-      script.stages.each do |stage|
+      script.lessons.each do |stage|
         if stage.lockable?
           lockable_count += 1
           stage.update!(relative_position: lockable_count)

@@ -3,123 +3,59 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 import {getStore, registerReducers} from '@cdo/apps/redux';
-import PublishDialog from '@cdo/apps/templates/projects/publishDialog/PublishDialog';
-import DeleteProjectDialog from '@cdo/apps/templates/projects/deleteDialog/DeleteProjectDialog';
-import PublicGallery from '@cdo/apps/templates/projects/PublicGallery';
-import GallerySwitcher from '@cdo/apps/templates/projects/GallerySwitcher';
+import getScriptData from '@cdo/apps/util/getScriptData';
+import ProjectsGallery from '@cdo/apps/templates/projects/ProjectsGallery';
 import ProjectHeader from '@cdo/apps/templates/projects/ProjectHeader';
-import PersonalProjectsTable from '@cdo/apps/templates/projects/PersonalProjectsTable';
-import {
-  MAX_PROJECTS_PER_CATEGORY,
-  Galleries
-} from '@cdo/apps/templates/projects/projectConstants';
+import {Galleries} from '@cdo/apps/templates/projects/projectConstants';
 import projects, {
   selectGallery,
-  setProjectLists,
-  setPersonalProjectsList
+  setPersonalProjects,
+  setPublicProjects
 } from '@cdo/apps/templates/projects/projectsRedux';
 import publishDialogReducer from '@cdo/apps/templates/projects/publishDialog/publishDialogRedux';
 import deleteDialogReducer from '@cdo/apps/templates/projects/deleteDialog/deleteProjectDialogRedux';
 
 $(document).ready(() => {
-  const script = document.querySelector('script[data-projects]');
-  const projectsData = JSON.parse(script.dataset.projects);
-
+  const projectsData = getScriptData('projects');
+  const specialAnnouncement = projectsData.specialAnnouncement;
   registerReducers({
     projects,
     publishDialog: publishDialogReducer,
     deleteDialog: deleteDialogReducer
   });
   const store = getStore();
-  setupReduxSubscribers(store);
-  ReactDOM.render(
-    <Provider store={store}>
-      <GallerySwitcher />
-    </Provider>,
-    document.getElementById('gallery-navigation')
-  );
 
-  ReactDOM.render(
-    <Provider store={store}>
-      <ProjectHeader
-        canViewAdvancedTools={projectsData.canViewAdvancedTools}
-        projectCount={projectsData.projectCount}
-      />
-    </Provider>,
-    document.getElementById('projects-header')
-  );
+  // Default to private gallery if no tab is specified.
+  const currentTab = (
+    projectsData.currentTab || Galleries.PRIVATE
+  ).toUpperCase();
 
-  const isPublic = window.location.pathname.startsWith('/projects/public');
-  const initialState = isPublic ? Galleries.PUBLIC : Galleries.PRIVATE;
-  store.dispatch(selectGallery(initialState));
-  const url = `/api/v1/projects/gallery/public/all/${MAX_PROJECTS_PER_CATEGORY}`;
-
-  $.ajax({
-    method: 'GET',
-    url: url,
-    dataType: 'json'
-  }).done(projectLists => {
-    store.dispatch(setProjectLists(projectLists));
-    const publicGallery = document.getElementById('public-gallery');
-    ReactDOM.render(
-      <Provider store={store}>
-        <PublicGallery limitedGallery={projectsData.limitedGallery} />
-      </Provider>,
-      publicGallery
+  if (!Object.values(Galleries).includes(currentTab)) {
+    console.error(
+      `Unknown /projects tab '${currentTab}'. Make sure to add this tab to the Galleries constant.`
     );
-  });
+  }
 
-  const personalProjectsUrl = `/api/v1/projects/personal`;
-
-  $.ajax({
-    method: 'GET',
-    url: personalProjectsUrl,
-    dataType: 'json'
-  }).done(personalProjectsList => {
-    store.dispatch(setPersonalProjectsList(personalProjectsList));
-    ReactDOM.render(
-      <Provider store={store}>
-        <PersonalProjectsTable canShare={projectsData.canShare} />
-      </Provider>,
-      document.getElementById('react-personal-projects')
-    );
-  });
-
-  const publishConfirm = document.getElementById('publish-confirm');
+  store.dispatch(selectGallery(currentTab));
+  store.dispatch(setPersonalProjects());
+  store.dispatch(setPublicProjects());
 
   ReactDOM.render(
     <Provider store={store}>
-      <PublishDialog />
+      <div>
+        <ProjectHeader
+          canViewAdvancedTools={projectsData.canViewAdvancedTools}
+          projectCount={projectsData.projectCount}
+          specialAnnouncement={specialAnnouncement}
+        />
+        <div className={'main container'}>
+          <ProjectsGallery
+            limitedGallery={projectsData.limitedGallery}
+            canShare={projectsData.canShare}
+          />
+        </div>
+      </div>
     </Provider>,
-    publishConfirm
-  );
-
-  const deleteConfirm = document.getElementById('delete-confirm');
-
-  ReactDOM.render(
-    <Provider store={store}>
-      <DeleteProjectDialog />
-    </Provider>,
-    deleteConfirm
+    document.querySelector('#projects-page')
   );
 });
-
-function showGallery(gallery) {
-  $('#personal-projects-wrapper').toggle(gallery === Galleries.PRIVATE);
-  $('#public-gallery-wrapper').toggle(gallery === Galleries.PUBLIC);
-}
-
-function setupReduxSubscribers(store) {
-  let state = {};
-  store.subscribe(() => {
-    let lastState = state;
-    state = store.getState();
-
-    if (
-      (lastState.projects && lastState.projects.selectedGallery) !==
-      (state.projects && state.projects.selectedGallery)
-    ) {
-      showGallery(state.projects.selectedGallery);
-    }
-  });
-}

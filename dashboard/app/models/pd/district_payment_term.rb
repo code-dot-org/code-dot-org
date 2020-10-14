@@ -19,6 +19,7 @@ class Pd::DistrictPaymentTerm < ActiveRecord::Base
     RATE_DAILY = 'daily'.freeze
   ].freeze
 
-  validates_inclusion_of :rate_type, in: RATE_TYPES
   belongs_to :school_district
+
+  validates_inclusion_of :rate_type, in: RATE_TYPES
 end

@@ -33,4 +33,14 @@ class Pd::RegionalPartnerMappingTest < ActiveSupport::TestCase
       assert_equal mapping.valid?, valid
     end
   end
+
+  test 'zip codes and states must be unique per mapping' do
+    mapping1 = build :pd_regional_partner_mapping, zip_code: '98143', state: nil
+    assert mapping1.valid?
+    mapping1.save
+
+    mapping2 = build :pd_regional_partner_mapping, zip_code: '98143', state: nil
+    refute mapping2.valid?
+    assert_equal ['This region belongs to another partner'], mapping2.errors.full_messages
+  end
 end

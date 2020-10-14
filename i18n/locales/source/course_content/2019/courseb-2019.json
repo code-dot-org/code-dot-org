@@ -38,8 +38,8 @@
     }
   },
   "https://studio.code.org/s/courseb-2019/stage/3/puzzle/5": {
-    "short_instructions": "Add a `North` block to the bottom of the other blocks to finish this code, then click \"Run\".",
-    "long_instructions": "There's an extra block at the end of this code!  \n\nDrag it back to the toolbox to throw it away.",
+    "short_instructions": "Remove the last block in the sequence by dragging it to the toolbox, then click \"Run\".",
+    "long_instructions": "There's an extra [blockly block][0] block at the end of this code!  \n\nDrag it back to the toolbox to throw it away.",
     "authored_hints": {
       "1": "Your code should look like this:\n\n[blockly block][0]"
     }
@@ -510,7 +510,8 @@
   },
   "https://studio.code.org/s/courseb-2019/stage/9/puzzle/12": {
     "short_instructions": "Use what you have learned to draw a picture of what you think the artist saw when he got home.",
-    "long_instructions": "Use what you have learned to draw a picture of what you think the artist saw when he got home.\n\n* * *\n\n### Ideas\n\n[][0]\n[][1]\n[][2]\n[][3]"
+    "long_instructions": "Use what you have learned to draw a picture of what you think the artist saw when he got home.\n\n* * *\n\n### Ideas\n\n[][0]\n[][1]\n[][2]\n[][3]",
+    "teacher_markdown": "This is a free-play level. This is not only a great place to point students who are progressing quickly, but a place for all students to really express their creativity. While students are not actually required to write any code in this level, doing so will allow them to apply what they have learned in a way that is more meaningful to them. Encourage your students to take their time here.\n\n-   These levels are **not checked for correctness** to allow for more open-ended creativity. Empower your students to determine for themselves when they have created something they like. There is no one right answer! \n-   Example solutions are available for this level which can be viewed by opening the teacher panel to the right."
   },
   "https://studio.code.org/s/courseb-2019/stage/9/extras?level_name=courseB_artist_loops_challenge1_2019": {
     "short_instructions": "\"It's time to toss the dice! Can you help me draw these?\"",
@@ -528,8 +529,10 @@
       "courseB_artist_loops_challenge2_a": "The code to draw an X is already given to you. All you need to do is repeat the X and `jump` to the next spot.",
       "courseB_artist_loops_challenge2_b": "You can use `jump` blocks to move to other spaces without drawing."
     },
-    "function_names": {
-      "potential solution": "potential solution"
+    "function_definitions": {
+      "potential solution": {
+        "name": "potential solution"
+      }
     }
   },
   "https://studio.code.org/s/courseb-2019/stage/10/puzzle/1": {
@@ -547,7 +550,8 @@
   },
   "https://studio.code.org/s/courseb-2019/stage/12/puzzle/2": {
     "short_instructions": "See if you can figure out what each block does.",
-    "long_instructions": "This game is called \"Play Lab\".  \n\nSee if you can figure out what each block does."
+    "long_instructions": "This game is called \"Play Lab\".  \n\nSee if you can figure out what each block does.",
+    "teacher_markdown": "This is a free-play level. Because it shows up at the beginning of the lesson, it is intended to serve as a \"sandbox\" where students can experiment with new blocks While students are not actually required to write any code in this level, doing so will allow them to make discoveries of their own before being asked to perform specific tasks. Encourage your students to take their time here."
   },
   "https://studio.code.org/s/courseb-2019/stage/12/puzzle/3": {
     "short_instructions": "Have Daisy the Dragon say something when you click \"Run\".",
@@ -603,11 +607,13 @@
   },
   "https://studio.code.org/s/courseb-2019/stage/12/puzzle/9": {
     "short_instructions": "**Free play:** Use your imagination. What can you do to make this game more fun?",
-    "long_instructions": "**Free play:** Use your imagination. What can you do to make this game more fun?"
+    "long_instructions": "**Free play:** Use your imagination. What can you do to make this game more fun?",
+    "teacher_markdown": "This is a free-play level. This is not only a great place to point students who are progressing quickly, but a place for all students to really express their creativity. While students are not actually required to write any code in this level, doing so will allow them to apply what they have learned in a way that is more meaningful to them. Encourage your students to take their time here."
   },
   "https://studio.code.org/s/courseb-2019/stage/12/extras?level_name=courseB_playlab_events_challenge1_2019": {
     "short_instructions": "Make the animals move down when you press ▼. ",
     "long_instructions": "It's time for the Great Animal Race! Make the animals move down when you press `▼`. \n\nWho will run the fastest?",
+    "teacher_markdown": "This lesson extra is a “free play”. These levels have some characteristics you may want to explore before starting. \n\n-   These levels are **not checked for correctness** to allow for more open-ended creativity. Empower your students to determine for themselves when they have created something they like. There is no one right answer! \n-   Example solutions are available for this level which can be viewed by opening the teacher panel to the right.",
     "authored_hints": {
       "courseB_playlab_events_challenge1_a": "Make the other animals move down when you press `▼`. \n\n[blockly block][0]",
       "courseB_playlab_events_challenge1_b": "Change the speed of the animals by using this block:\n\n[blockly block][0]",

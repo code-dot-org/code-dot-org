@@ -1,0 +1,7 @@
+%h1= I18n.t('maker.google_oauth.login_with_google')
+
+%p= I18n.t('maker.google_oauth.enter_code')
+
+= form_tag(users_auth_maker_google_oauth2_path) do
+  = text_field_tag :secret_code
+  = button_tag I18n.t(:submit), class: "btn-submit"

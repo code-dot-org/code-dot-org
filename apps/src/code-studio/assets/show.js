@@ -8,6 +8,23 @@ const ImagePicker = loadable(() => import('../components/ImagePicker'));
 const SoundPicker = loadable(() => import('../components/SoundPicker'));
 import Dialog from '../LegacyDialog';
 
+module.exports = {
+  showAssetManager,
+  hideAssetManager
+};
+
+let dialog;
+
+/**
+ * Hides the dialog for the asset manager. Useful if you want to display another
+ * dialog on the screen and need to programmatically close the asset manager.
+ */
+function hideAssetManager() {
+  if (dialog) {
+    dialog.hide();
+  }
+}
+
 /**
  * Display the "Manage Assets" modal.
  * @param assetChosen {Function} Called when the user chooses an asset. The
@@ -21,17 +38,12 @@ import Dialog from '../LegacyDialog';
  * @param [options.disableAudioRecording] {boolean} Do not display option to record and upload audio files
  * @param [options.elementId] {string} Logging Purposes: which element is the image chosen for
  */
-module.exports = function showAssetManager(
-  assetChosen,
-  typeFilter,
-  onClose,
-  options
-) {
+function showAssetManager(assetChosen, typeFilter, onClose, options) {
   options = options || {};
   let sounds = new Sounds();
   var codeDiv = document.createElement('div');
   var showChoseImageButton = assetChosen && typeof assetChosen === 'function';
-  var dialog = new Dialog({
+  dialog = new Dialog({
     body: codeDiv,
     id: 'manageAssetsModal',
     onHidden: () => {
@@ -60,10 +72,12 @@ module.exports = function showAssetManager(
       soundPlayer: sounds,
       disableAudioRecording: options.disableAudioRecording,
       elementId: options.elementId,
-      libraryOnly: options.libraryOnly
+      libraryOnly: options.libraryOnly,
+      currentValue: options.currentValue,
+      currentImageType: options.currentImageType
     }),
     codeDiv
   );
 
   dialog.show();
-};
+}

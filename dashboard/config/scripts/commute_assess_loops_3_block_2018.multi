@@ -1,8 +1,19 @@
 name 'commute assess - loops 3 - block_2018'
 question 'What will be printed when this code is run?'
-wrong '<pre>apple<br>apple<br>apple<br>orange<br>orange<br>orange </pre>'
-wrong '<pre>apple<br>orange </pre>'
-right '<pre>apple<br>orange<br>apple<br>orange<br>apple<br>orange </pre>'
+wrong '`apple`  
+`apple`  
+`apple`  
+`orange`  
+`orange`  
+`orange`'
+wrong '`apple`  
+`orange`'
+right '`apple`  
+`orange`  
+`apple`  
+`orange`  
+`apple`  
+`orange`'
 wrong ‘Nothing with be printed'
 wrong ‘It will be different each time you run it'
 

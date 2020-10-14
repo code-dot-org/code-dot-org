@@ -1,8 +1,17 @@
-.field
-  = f.label :dictionary, 'Dictionary'
-  %p Default text for the dictionary.
-  = f.text_area :dictionary, rows: 7
-.field
-  = f.label :poems, 'Custom poems'
-  - 3.times do
-    = text_area_tag 'level[poems][]', nil, rows: 4
+%h1.control-legend{data: {toggle: "collapse", target: "#compression"}}
+  Text Compression Settings
+
+#compression.in.collapse
+  .field
+    = f.label :dictionary, 'Dictionary'
+    %p Default text for the dictionary.
+    = f.text_area :dictionary, rows: 5, class:"input-block-level"
+  .field
+    = f.label :poems, 'Custom poems'
+    - 3.times do
+      = text_area_tag 'level[poems][]', nil, rows: 4
+
+= render partial: 'levels/editors/fields/instructions_area', locals: {f: f}
+= render partial: 'levels/editors/fields/video', locals: {f: f}
+= render partial: 'levels/editors/fields/callouts', locals: {f: f}
+= render partial: 'levels/editors/fields/audit_log', locals: {f: f}

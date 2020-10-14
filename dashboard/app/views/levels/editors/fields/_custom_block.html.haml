@@ -1,0 +1,26 @@
+.field
+  = f.label "Custom block definitions"
+  %p
+    Add some custom JSON block definitions
+    <a href="#" onClick="toggleBlock('custom_blocks_more'); return false">Read more...</a>
+  #custom_blocks_more{style: 'display: none'}
+    %p
+      Here is an example.
+    %pre
+      :preserve
+          {
+            "func": "isDestroyed",
+            "args": [
+              { "name": "SPRITE" }
+            ],
+            "blockText": "{SPRITE} is destroyed?",
+            "returnType": "Boolean",
+          }
+    %p
+      Some notes:
+    %ul
+      %li <code>returnType</code> and <code>args[].type</code> can be any of 'String', 'Number', 'Image', 'Boolean', 'Function', 'Colour', or 'Array'. If none of those apply, or you don't want to enforce a type, just use 'None'
+      %li <code>blockText</code> must contain a placeholder for every argument in the <code>args</code> list
+  #custom_blocks_output
+    ~ f.text_area :custom_blocks, placeholder: 'Custom blocks', rows: 4, value: @level.custom_blocks
+    #custom-blocks-validation

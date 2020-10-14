@@ -10,7 +10,7 @@ class ExperimentsController < ApplicationController
       return
     end
 
-    unless CourseScript.find_by(experiment_name: params[:experiment_name])
+    unless UnitGroupUnit.find_by(experiment_name: params[:experiment_name])
       redirect_to '/', flash: {alert: "Unknown experiment name '#{params[:experiment_name]}'."}
       return
     end
@@ -38,12 +38,9 @@ class ExperimentsController < ApplicationController
       return
     end
 
-    # Default to being active for 100 days
-    now = DateTime.now
     SingleUserExperiment.find_or_create_by!(
       min_user_id: current_user.id,
-      name: experiment_name,
-      end_at: now + 100.days
+      name: experiment_name
     )
     redirect_to '/', flash: {notice: "You have successfully joined the experiment '#{params[:experiment_name]}'."}
   end

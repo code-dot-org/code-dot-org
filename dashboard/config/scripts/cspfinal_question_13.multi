@@ -1,8 +1,8 @@
 name 'CSPFinal_Question_13'
-wrong '<pre>dieRoll = 2</pre>'
-wrong '<pre>rollCounter = 5</pre>'
-right '<pre>evenCounter * 2 = rollCounter</pre>'
-wrong '<pre>dieRoll = evenCounter + RollCounter</pre>'
+wrong '`dieRoll = 2`'
+wrong '`rollCounter = 5`'
+right '`evenCounter * 2 = rollCounter`'
+wrong '`dieRoll = evenCounter + RollCounter`'
 markdown <<MARKDOWN
 A casino is trying to determine the odds for a new game.  They have created the algorithm below to simulate rolling a six sided dice ten times.  Consider the goal of determining if the simulation resulted in the same number of even numbers and odd numbers.  
 

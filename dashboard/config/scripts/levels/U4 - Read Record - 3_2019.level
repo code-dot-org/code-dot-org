@@ -24,7 +24,7 @@
     "edit_code": true,
     "embed": "false",
     "short_instructions": "Change the name of the table in a readRecords command to read from a table that does not exist. (Click to see full instructions)\r\n",
-    "long_instructions": "# Debugging: Wrong Table Name\r\n\r\nYou may have run into this in the previous level already, but let's see what happens when we try to `readRecords` from a table that doesn't exist in our database.\r\n\r\n# Do This\r\n\r\n\r\n* **Drag out `readRecords`** and leave the table name as \"myTable\"\r\n* **Run the program** to see what value is passed to the `records` parameter.\r\n* **Did you get an error? Did anything else change? Make a note of the behavior you see for future debugging**\r\n\r\n<details>\r\n\r\n<summary><strong>What you should see (read this after trying it yourself)</strong></summary>\r\n\r\n<br>\r\n<p>\r\n\r\nIf you read from a table that doesn't exist you won't get any error messages and the database will respond by <strong>sending back an empty array of records</strong>.  An empty array looks like [] in the console.  Any other tables in the database are left unchanged.\r\n</p>\r\n<p>\r\nAs a <strong>debugging tip:</strong> if your requests for reading records from the database are coming up empty, double check that the code and the actual table name are spelled the table name <i>exactly the same</i> - capitalization and spaces matter!\r\n</p>\r\n\r\n\r\n</details>",
+    "long_instructions": "# Debugging: Wrong Table Name\r\n\r\nYou may have run into this in the previous level already, but let's see what happens when we try to `readRecords` from a table that doesn't exist in our database.\r\n\r\n# Do This\r\n\r\n\r\n* **Drag out `readRecords`** and leave the table name as \"myTable\"\r\n* **Run the program** to see what value is passed to the `records` parameter.\r\n* **Did you get an error? Did anything else change? Make a note of the behavior you see for future debugging**\r\n\r\n<details>\r\n\r\n<summary><strong>What you should see (read this after trying it yourself)</strong></summary>\r\n\r\n<br>\r\n<p>\r\n\r\nIf you read from a table that doesn't exist you will get an error message saying that you do not have the requested table in your app. If your requests for reading records generate this error, double check that the code and the actual table name are spelled the table name <i>exactly the same</i> - capitalization and spaces matter!\r\n</p>\r\n\r\n\r\n</details>",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -64,11 +64,16 @@
     "fail_on_lint_errors": "false",
     "makerlab_enabled": "false",
     "mini_rubric": "false",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted": "false",
+    "widget_mode": "false",
+    "libraries_enabled": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2018-09-19 18:32:13 +0000\",\"changed\":[\"notes\",\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-09-19 18:36:41 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-09-19 18:37:08 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-09-19 18:37:32 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2019-02-15 04:09:07 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2018-09-19 18:32:13 +0000\",\"changed\":[\"notes\",\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-09-19 18:36:41 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-09-19 18:37:08 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-09-19 18:37:32 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2019-02-15 04:09:07 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2020-04-14 16:30:32 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Applab>

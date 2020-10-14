@@ -1,0 +1,19 @@
+<Fish>
+  <config><![CDATA[{
+  "game_id": 66,
+  "created_at": "2020-03-17T17:26:05.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "mode": "short",
+    "parent_level_id": 19645,
+    "encrypted": "false",
+    "instructions_important": "false"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2020-03-17 17:26:15 +0000\",\"changed\":[],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</Fish>

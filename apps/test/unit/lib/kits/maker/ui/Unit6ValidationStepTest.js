@@ -50,11 +50,12 @@ describe('Unit6ValidationStep', () => {
       <Unit6ValidationStep
         {...defaultProps}
         stepStatus={Status.SUCCEEDED}
-        initialChoice={Unit6Intention.YES_18_19}
+        initialChoice={Unit6Intention.YES_SPRING_2020}
       />
     );
     assert.equal(
-      wrapper.find(`[value="${Unit6Intention.YES_18_19}"]`).props().checked,
+      wrapper.find(`[value="${Unit6Intention.YES_SPRING_2020}"]`).props()
+        .checked,
       true
     );
     assert.equal(wrapper.find('Button').length, 0);

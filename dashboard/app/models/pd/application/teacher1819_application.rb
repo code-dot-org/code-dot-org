@@ -38,11 +38,11 @@ module Pd::Application
   class Teacher1819Application < TeacherApplicationBase
     include ::Pd::Teacher1819ApplicationConstants
 
-    validates_uniqueness_of :user_id
-
     has_one :pd_teachercon1819_registration,
       class_name: 'Pd::Teachercon1819Registration',
       foreign_key: 'pd_application_id'
+
+    validates_uniqueness_of :user_id
 
     serialized_attrs %w(
       auto_assigned_enrollment_id

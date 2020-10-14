@@ -73,6 +73,10 @@
             "\"inner\""
           ],
           [
+            "diamond",
+            "\"diamond\""
+          ],
+          [
             "circle",
             "\"circle\""
           ],
@@ -81,12 +85,28 @@
             "\"grid\""
           ],
           [
+            "top row",
+            "\"top\""
+          ],
+          [
             "row",
             "\"row\""
           ],
           [
+            "bottom row",
+            "\"bottom\""
+          ],
+          [
+            "left column",
+            "\"left\""
+          ],
+          [
             "column",
             "\"column\""
+          ],
+          [
+            "right column",
+            "\"right\""
           ],
           [
             "criss-cross",

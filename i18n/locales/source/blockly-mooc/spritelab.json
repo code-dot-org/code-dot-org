@@ -1,4 +1,10 @@
 {
+  "clicked": "clicked ",
+  "clickedSprite": "clicked sprite",
+  "subject": "subject ",
+  "subjectSprite": "subject sprite",
+  "object": "object ",
+  "objectSprite": "object sprite",
   "errorLoadingAnimation": "It looks like we are having trouble loading your animation \"{animationName}\". Make sure you have a good internet connection and try reloading the page. If this problem persists, it is possible that this animation is broken. In this case, you may need to continue by removing the animation.",
   "reinfFeedbackMsg": "You're finished! Click \"Continue\" to move on to the next level.",
   "shareGame": "Share your game:",

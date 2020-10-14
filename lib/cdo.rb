@@ -134,6 +134,13 @@ module Cdo
       rack_env&.to_sym == env.to_sym
     end
 
+    # Identify whether we are executing on the managed test system (test.code.org / test-studio.code.org)
+    # to ensure that other systems (such as staging-next or Continuous Integration builds) that are operating
+    # with RACK_ENV=test do not carry out actions on behalf of the managed test system.
+    def test_system?
+      rack_env?(:test) && pegasus_hostname == 'test.code.org'
+    end
+
     # Sets the slogger to use in a test.
     # slogger must support a `write` method.
     def set_slogger_for_test(slogger)
@@ -178,16 +185,17 @@ module Cdo
       filter_backtrace exception.backtrace
     end
 
-    def filter_backtrace(backtrace)
-      FILTER_GEMS.map do |gem|
+    def filter_backtrace(backtrace, filter_gems: FILTER_GEMS)
+      filter_gems.each do |gem|
         backtrace.reject! {|b| b =~ /gems\/#{gem}/}
       end
       backtrace.each do |b|
         b.gsub!(dir, '[CDO]')
         Gem.path.each do |gem|
-          b.gsub!(gem, '[GEM]')
+          b.gsub!(/#{gem}(\/gems|\/bundler\/gems)?/, '[GEM]')
         end
         b.gsub! Bundler.system_bindir, '[BIN]'
+        b.gsub! RbConfig::CONFIG['rubylibdir'], '[RUBY]'
       end
       backtrace.join("\n")
     end

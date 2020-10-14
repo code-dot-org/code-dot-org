@@ -1,0 +1,14 @@
+.field
+  = f.label 'Key-Value Data'
+  This data can be accessed via the getKeyValue and setKeyValue blocks in Game Lab.
+  %pre
+    = preserve do
+      :escaped
+        Example:
+        {
+          "click_count": 5,
+          "button_color": "blue"
+        }
+  ~ f.text_area 'data_properties', placeholder: 'Insert JSON Key-Value Data', rows: 4, value: @level.data_properties or ''
+  :javascript
+    levelbuilder.initializeCodeMirror('level_data_properties', 'javascript');

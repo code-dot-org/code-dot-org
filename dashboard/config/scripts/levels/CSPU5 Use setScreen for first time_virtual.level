@@ -1,0 +1,93 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2020-03-17T21:24:58.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "onEvent": {
+        "params": [
+          "\"id\"",
+          "\"click\"",
+          "function(){\n\n}"
+        ]
+      },
+      "setScreen": null,
+      "setPosition": null,
+      "randomNumber_min_max": null,
+      "console.log": null
+    },
+    "edit_code": true,
+    "embed": "false",
+    "short_instructions": "Make a 2 screen app which can switch back and forth between a black screen and a white screen using buttons. (Click to see detailed instructions.)",
+    "long_instructions": "# Adding Code: Switching Screens with *setScreen*\r\n\r\n<img src=\"https://images.code.org/9232bd923268d36158d63829145c9879-image-1477367827365.gif\" style=\"float: right; width: 150px\">\r\n\r\n**You Try it:** Add event handlers to the buttons that use `setScreen` to switch to the other screen. \r\n\r\nThe result should be two-screen app which can switch back and forth between the \"hello\" and \"go back\" screens.  See example at right.\r\n\r\n* **Add an onEvent handler** for the smiley face image/button to respond to a \"click\"\r\n  * Do it the easy way by inserting from design mode, or just drag an `onEvent` block into the code workspace.\r\n\r\n* **Add `setScreen` into the event handling function**\r\n  * Make it switch to the other screen when the smiley face is clicked.\r\n\r\n**Run. Test. Debug**\r\n\r\n* Test to see if the clicking the smiley face switches screens\r\n* If it doesn't work, retrace your steps and try again.\r\n\r\nIf it works, then **repeat these steps for the \"go back\" button.**\r\n\r\n* The result should look something like the example on the right. \r\n",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "free_play": "false",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "false",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "false",
+    "beginner_mode": "false",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "encrypted_examples": "DMYb0MSu+hAAr6oDUklAhX16zwzmyRcW/g3R2YFaZnvfk1XOi3scbkBJ6Rpj\nbecZ\n",
+    "droplet_tooltips_disabled": "false",
+    "debugger_disabled": "true",
+    "lock_zero_param_functions": "false",
+    "execute_palette_apis_only": "false",
+    "instructions_important": "false",
+    "fail_on_lint_errors": "false",
+    "makerlab_enabled": "false",
+    "project_template_level_name": "CSPU5 Adding Screens Template_virtual",
+    "log_conditions": [
+      {
+        "entries": [
+          "onEvent"
+        ],
+        "matchType": "exact",
+        "minTimes": 2,
+        "message": "You should have two event handlers.  One for the smiley face button on the 'helloScreen', and one for the 'go back' button on the other screen.  Did you add event handlers for both?"
+      },
+      {
+        "entries": [
+          "setScreen"
+        ],
+        "matchType": "exact",
+        "minTimes": 2,
+        "message": "Did you run the program and verify that you can toggle back and forth between the two screens?  We did not detect two calls to setScreen.  Do you have two event handlers? each with a call to setScreen that switches to the other screen?"
+      }
+    ],
+    "parent_level_id": 17114,
+    "name_suffix": "_virtual",
+    "show_debug_watch": "true",
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "hide_share_and_remix": "false",
+    "expand_debugger": "false",
+    "libraries_enabled": "false",
+    "widget_mode": "false",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2020-01-27 18:11:25 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Applab>

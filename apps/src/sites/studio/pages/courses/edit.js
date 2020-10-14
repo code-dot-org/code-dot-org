@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import CourseEditor from '@cdo/apps/templates/courseOverview/CourseEditor';
+import CourseEditor from '@cdo/apps/lib/levelbuilder/course-editor/CourseEditor';
 import {Provider} from 'react-redux';
 import {getStore} from '@cdo/apps/code-studio/redux';
 
@@ -14,14 +14,20 @@ function showCourseEditor() {
     courseEditorData.course_summary.teacher_resources || []
   ).map(([type, link]) => ({type, link}));
 
+  let announcements = courseEditorData.course_summary.announcements || [];
+
   // Eventually we want to do this all via redux
   ReactDOM.render(
     <Provider store={getStore()}>
       <CourseEditor
         name={courseEditorData.course_summary.name}
         title={courseEditorData.course_summary.title}
+        versionTitle={courseEditorData.course_summary.version_title}
         familyName={courseEditorData.course_summary.family_name}
         versionYear={courseEditorData.course_summary.version_year}
+        visible={courseEditorData.course_summary.visible}
+        isStable={courseEditorData.course_summary.is_stable}
+        pilotExperiment={courseEditorData.course_summary.pilot_experiment}
         descriptionShort={courseEditorData.course_summary.description_short}
         descriptionStudent={courseEditorData.course_summary.description_student}
         descriptionTeacher={courseEditorData.course_summary.description_teacher}
@@ -33,8 +39,10 @@ function showCourseEditor() {
         hasVerifiedResources={
           courseEditorData.course_summary.has_verified_resources
         }
+        hasNumberedUnits={courseEditorData.course_summary.has_numbered_units}
         courseFamilies={courseEditorData.course_families}
         versionYearOptions={courseEditorData.version_year_options}
+        announcements={announcements}
       />
     </Provider>,
     document.getElementById('course_editor')

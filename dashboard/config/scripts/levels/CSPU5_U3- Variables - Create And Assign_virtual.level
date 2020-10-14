@@ -1,0 +1,72 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2020-03-17T21:25:01.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "declareAssign_x": null,
+      "console.log": {
+        "params": [
+          "\"message\""
+        ],
+        "paletteParams": [
+          "\"message\""
+        ]
+      },
+      "declareNoAssign_x": null,
+      "assign_x": null
+    },
+    "edit_code": true,
+    "embed": "false",
+    "long_instructions": "# Create and Assign At Once\r\n\r\nIt's so common to want to create a variable and give it an initial value, that JavaScript has a shortcut that lets you create and assign with one line of code like this:\r\n\r\n<img src=\"https://images.code.org/84b576f02fe92989d0955dc8d4122eed-image-1445480709312.png\" style=\"width:120px\">\r\n\r\n\r\nYou'll also see a new block in the toolbox for this (see right).<img src=\"https://images.code.org/cbe3f9ffd0bafef72ce18232f746fdbe-image-1445480538334.gif\" style=\"float: right; width: 350px\">\r\n\r\n# Do This:\r\nWe'll just quickly practice using this form of variable creation and assignment.  The code you write will achieve the same thing as the previous level in fewer lines of code. \r\n\r\n* **Create a variable called `lives`** and **assign it the value 3** using the new one-line version of this command. (See animation at right.)\r\n\r\n* **Add** `console.log` statements to display the value of `lives` just as before.  \r\n\r\n* The output in the console should (again) look like this:\r\n\r\n\t<img src=\"https://images.code.org/6405a3ed95ca3125ea1b2c9ffbdffa94-image-1445349849482.png\" style=\"border: solid 1px gray\">\r\n\r\n",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "droplet_tooltips_disabled": "false",
+    "free_play": "false",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "false",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "true",
+    "beginner_mode": "false",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "debugger_disabled": "true",
+    "short_instructions": "On one line add a variable called \"lives\" and assign it the value 3. Print it to the console. (Click to see full instructions)",
+    "start_blocks": "var score = 0;\r\nconsole.log(\"The value of score is: \");\r\nconsole.log(score);",
+    "lock_zero_param_functions": "false",
+    "execute_palette_apis_only": "false",
+    "encrypted_examples": "CpmpXvXUWzxzXheO4FtKeabMIDD0YNv9IdOfx8V7SYS+ntutrPHR8HVbdeJL\nZ41L\n",
+    "parent_level_id": 17129,
+    "name_suffix": "_virtual",
+    "instructions_important": "false",
+    "mini_rubric": "false",
+    "hide_share_and_remix": "false",
+    "show_debug_watch": "true",
+    "expand_debugger": "false",
+    "fail_on_lint_errors": "false",
+    "makerlab_enabled": "false",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-02-15 04:01:44 +0000\",\"changed\":[\"notes\",\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Applab>

@@ -1,0 +1,69 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2020-03-17T21:25:43.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "onEvent": {
+        "params": [
+          "\"id\"",
+          "\"click\"",
+          "function(event){\n console.log('key is: '+event.key); \n}"
+        ]
+      },
+      "console.log": null
+    },
+    "edit_code": true,
+    "embed": "false",
+    "long_instructions": "# Using *keyup* and *keydown*\r\n\r\nOn the last level, we played with the `keypress` event. Let's take a look at some of the other key events. \r\n\r\nYou are going to get the chance to play with `keyup` and `keydown` in this level. **Pay attention to the different values of `event.key` for `keydown` and `keypress`.**\r\n\r\n# Do This:\r\n\r\n* Switch to the event type to `keydown` or `keyup`. \r\n\r\n<img src=\"https://images.code.org/fa91b1a9e3240eb65ff75b381e76ce69-image-1447213909054.gif\" style=\"width: 350px\">\r\n\r\n* Try out the event.\r\n\t* Press and hold a key\r\n    * Try the arrow keys\r\n    * Shift\r\n    * Option\r\n    * Alt\r\n    * Others",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "slider_speed": "1.0",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "free_play": "true",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "true",
+    "execute_palette_apis_only": "false",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "false",
+    "beginner_mode": "false",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "debugger_disabled": "false",
+    "start_blocks": "onEvent(\"screen1\", \"keypress\", function(event){\r\n console.log('key is: '+event.key); \r\n});",
+    "short_instructions": "Try out the keyup and keydown events to see how they are different from keypress. (Click to see full instructions)",
+    "encrypted_examples": "KyM18f6JZFaKgbBF8lSIu8ySp1rjH3P7mLMfVHl0FF6wcQfpQnFZAeDnZ8S7\nGwK3\n",
+    "parent_level_id": 17365,
+    "name_suffix": "_virtual",
+    "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "show_debug_watch": "true",
+    "expand_debugger": "false",
+    "fail_on_lint_errors": "false",
+    "makerlab_enabled": "false",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-09-18 17:48:33 +0000\",\"changed\":[\"notes\",\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Applab>

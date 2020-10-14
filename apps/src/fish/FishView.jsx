@@ -43,8 +43,7 @@ class FishView extends React.Component {
   static propTypes = {
     isProjectLevel: PropTypes.bool.isRequired,
     isReadOnlyWorkspace: PropTypes.bool.isRequired,
-    onMount: PropTypes.func.isRequired,
-    mobilePortraitWidth: PropTypes.number.isRequired
+    onMount: PropTypes.func.isRequired
   };
 
   constructor(props) {
@@ -121,7 +120,7 @@ class FishView extends React.Component {
     const baseFontSize = (18 * containerWidth) / 930;
 
     return (
-      <StudioAppWrapper rotateContainerWidth={this.props.mobilePortraitWidth}>
+      <StudioAppWrapper>
         <CodeWorkspaceContainer topMargin={0}>
           <div
             id="container"

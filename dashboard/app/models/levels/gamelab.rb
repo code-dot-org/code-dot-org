@@ -10,7 +10,7 @@
 #  level_num             :string(255)
 #  ideal_level_source_id :integer          unsigned
 #  user_id               :integer
-#  properties            :text(65535)
+#  properties            :text(16777215)
 #  type                  :string(255)
 #  md5                   :string(255)
 #  published             :boolean          default(FALSE), not null
@@ -48,6 +48,7 @@ class Gamelab < Blockly
     helper_libraries
     start_libraries
     libraries_enabled
+    validation_enabled
   )
 
   # List of possible skins, the first is used as a default.
@@ -69,7 +70,8 @@ class Gamelab < Blockly
         properties: {
           code_functions: JSON.parse(palette),
           show_debug_watch: true
-        }
+        },
+        validation_enabled: true
       )
     )
   end

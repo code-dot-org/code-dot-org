@@ -1,0 +1,19 @@
+<Map>
+  <config><![CDATA[{
+  "game_id": 59,
+  "created_at": "2020-03-17T17:04:13.000Z",
+  "level_num": "custom",
+  "user_id": 324,
+  "properties": {
+    "instructions_important": "false",
+    "display_name": "Plotting Shapes in Game Lab",
+    "reference": "/docs/concepts/game-lab/drawing-shapes/index.html",
+    "teacher_markdown": "# Simplified Shapes\r\n\r\nThe `rect` and `ellipse` commands that students were introduced to in this lessons are simplified versions of the full commands that they will see later. This allows the class to focus solely on the placement of shapes on the coordinate plane before also worrying about the width and height of those shapes.",
+    "parent_level_id": 15979,
+    "name_suffix": "_virtual"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-05-25 17:24:23 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-05-25 17:26:58 +0000\",\"changed\":[\"teacher_markdown\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-12-20 00:03:21 +0000\",\"changed\":[\"reference\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]"
+}]]></config>
+</Map>

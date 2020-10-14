@@ -1,8 +1,8 @@
 name 'CSPFinal_Question_30'
-wrong '<pre>0 0</pre>'
-wrong '<pre>0 10</pre>'
-wrong '<pre>4 5</pre>'
-right '<pre>4 10</pre>'
+wrong '`0 0`'
+wrong '`0 10`'
+wrong '`4 5`'
+right '`4 10`'
 
 markdown <<MARKDOWN
 What is displayed after the following code segment is executed?

@@ -10,7 +10,7 @@ After a brief review of how the counter pattern is used to move sprites, the cla
 
 ## Introduced Code
 
-* [sprite.velocityY](//docs.code.org/gamelab/velocityY/)
-* [sprite.velocityX](//docs.code.org/gamelab/velocityX/)
-* [sprite.rotationSpeed](//docs.code.org/gamelab/rotationSpeed/)
+* [sprite.velocityY](//studio.code.org/docs/gamelab/velocityY/)
+* [sprite.velocityX](//studio.code.org/docs/gamelab/velocityX/)
+* [sprite.rotationSpeed](//studio.code.org/docs/gamelab/rotationSpeed/)
 MARKDOWN

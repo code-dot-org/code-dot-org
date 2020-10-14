@@ -1,27 +1,18 @@
 name 'Commute Assess - func 2b - block_exam_prep'
-wrong '<pre>9</pre>'
-right '<pre>21</pre>'
-wrong '<pre>81</pre>'
+editor_experiment ''
+wrong '`9`'
+right '`21`'
+wrong '`81`'
 wrong 'nothing is printed'
 wrong 'this script would cause an error'
 markdown <<MARKDOWN
-<div style="width: 300px; float: left">
-<p>
-What will be displayed when this code is run?<br>
-</p>
+What will be displayed when this code is run?
 
-<img src="https://images.code.org/6d176f35bf5b0c26185e92c6cf73cad5-image-1523303071932.png">
-<!-- TEXT: <img src="https://images.code.org/2a2d0ace59f44d8817ca7ef1aad18949-image-1482508898388.png"> -->
+![](https://images.code.org/6d176f35bf5b0c26185e92c6cf73cad5-image-1523303071932.png)
 
-</div>
+*These procedures are shown for your reference - they are the same as the last question.*
 
-<div style="width: 300px; float: left; border-left: solid 1px #00adbc; padding-left: 10px; margin-left: 25px">
-<em>These procedures are shown for your reference - they are the same as the last question.</em><br>
-<img src="https://images.code.org/4735000ae66d81b5a1dd2c9775a5b7e3-image-1482334301386.png" style="width: 300px">
-<!-- TEXT:
-<img src="https://images.code.org/0e5c121af945f2f4a975eab32ebbac05-image-1482508093713.png" > -->
-</div>
-
+![](https://images.code.org/4735000ae66d81b5a1dd2c9775a5b7e3-image-1482334301386.png)
 MARKDOWN
 
 teacher_markdown <<MARKDOWN

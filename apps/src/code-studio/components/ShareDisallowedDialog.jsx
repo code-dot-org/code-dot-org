@@ -53,11 +53,13 @@ class ShareDisallowedDialog extends Component {
           </div>
           <div style={styles.bottom}>
             <Button
+              __useDeprecatedTag
               onClick={this.props.hideShareDialog}
               text={i18n.cancel()}
               color={Button.ButtonColor.gray}
             />
             <Button
+              __useDeprecatedTag
               href={`/users/sign_up?user_return_to=${location.pathname}`}
               text={i18n.createAccount()}
               color={Button.ButtonColor.orange}

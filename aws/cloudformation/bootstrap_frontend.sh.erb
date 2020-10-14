@@ -1,13 +1,4 @@
-#!/bin/bash -x
-# UserData bootstrap script for CloudFormation stack instances.
-# Note: Every time this script's contents change,
-# the LaunchConfiguration will be replaced in the CloudFormation stack.
-
-STACK=${AWS::StackName}
-REGION=${AWS::Region}
-
-INSTANCE_ID=$(curl -s http://169.254.169.254/latest/meta-data/instance-id)
-CHEF_CACHE=<%=local_mode ? '/etc/chef/local-mode-cache/cache' : '/var/chef/cache' %>
+CHEF_CACHE=<%=CDO.chef_local_mode ? '/etc/chef/local-mode-cache/cache' : '/var/chef/cache' %>
 
 # This line causes the LaunchConfiguration to be replaced on each new commit.
 COMMIT=<%=commit%>
@@ -20,29 +11,16 @@ pushd $CHEF_CACHE
   /opt/chef/bin/chef-client -z -N <%=node_name%> -o 'recipe[cdo-apps::hostname]'
 popd
 
+# Run rbspy for 2 minutes on 3 dashboard worker processes at startup.
+# We're doing this temporarily to help debug our deployment unavailability issue.
+# Find 3 dashboard worker process IDs and feed them to 3 rbspy invocations, in parallel using xargs.
+ps aux | grep "cluster worker" | grep dashboard | head -n 3 | tr --squeeze-repeats ' ' | cut -d ' ' -f 2 | xargs -P 3 -I {} sudo rbspy record --silent --duration 120 --pid {} &
+
 # Increase EC2 instance metadata service retries/timeouts.
 export AWS_METADATA_SERVICE_TIMEOUT=30
 export AWS_METADATA_SERVICE_NUM_ATTEMPTS=30
 
-# Signal CompleteLifecycleAction, in case this instance was launched from an Auto Scaling process.
-LIFECYCLE_HOOK=<%=hook%>
-AUTO_SCALING_GROUP=<%=auto_scaling_group%>
-if [ -n "$LIFECYCLE_HOOK" ] && [ -n "$AUTO_SCALING_GROUP" ]; then
-  aws autoscaling complete-lifecycle-action \
-    --lifecycle-action-result CONTINUE \
-    --instance-id $INSTANCE_ID \
-    --lifecycle-hook-name $LIFECYCLE_HOOK \
-    --auto-scaling-group-name $AUTO_SCALING_GROUP \
-    --region $REGION \
-    || true
-fi
-
-# Signal CloudFormation, in case this instance was launched from a CloudFormation stack update.
-RESOURCE_ID=<%=resource_id%>
-aws cloudformation signal-resource \
-  --status SUCCESS \
-  --unique-id $INSTANCE_ID \
-  --stack-name $STACK \
-  --logical-resource-id $RESOURCE_ID \
-  --region $REGION \
-  || true
+# Make sure server passes health check.
+# The status code determines success/failure of the instance launch.
+curl --silent --show-error --fail --retry 10 --retry-connrefused --retry-max-time 60 \
+  localhost:80/health_check > /dev/null

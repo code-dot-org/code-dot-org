@@ -1,2 +1,3 @@
-stage 'PDK5 Intro'
+lesson 'PDK5 Intro', display_name: 'PDK5 Intro'
 level 'PDK5 Intro'
+

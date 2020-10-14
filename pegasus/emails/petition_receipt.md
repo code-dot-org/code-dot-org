@@ -1,7 +1,6 @@
 ---
 from: 'Hadi Partovi (Code.org) <hadi_partovi@code.org>'
 subject: 'Thanks!'
-litmus_tracking_id: 'sfgaovfs'
 ---
 
 ## Thank you for signing your name to support computer science!
@@ -14,7 +13,7 @@ litmus_tracking_id: 'sfgaovfs'
 
 [Learn online](https://code.org/learn) or [find local schools, camps, or workshops](https://code.org/learn/local) that teach coding.
 
-<% if ['educator'].include? role_s %>
+<% if defined?(role_s) && ['educator'].include?(role_s) %>
 
 ## 2) [Host an Hour of Code](https://hourofcode.com) during Computer Science Education Week
 
@@ -28,7 +27,7 @@ During this year's Computer Science Education Week in December, help students wo
 
 <% end %>
 
-<% if ['educator'].include? role_s %>
+<% if defined?(role_s) && ['educator'].include?(role_s) %>
 
 ## 3) Teach computer science
 
@@ -61,8 +60,8 @@ Founder, Code.org
 <hr>
 
 <small>You’re receiving this email because you signed the petition on <a href="https://Code.org/">Code.org</a>. Code.org is a 501c3 non-profit. Our address is 1501 4th Avenue, Suite 900, Seattle, WA 98101.</small> <br />
-<small><strong>Don't like these emails? [Unsubscribe here](<%= unsubscribe_link %>).</strong></small>
+<small><strong>Don't like these emails? [Unsubscribe here](<%= local_assigns.fetch(:unsubscribe_link, "") %>).</strong></small>
 
 
-![](<%= tracking_pixel %>)
+![](<%= local_assigns.fetch(:tracking_pixel, "") %>)
 

@@ -1,9 +1,14 @@
 name 'cspu5_assess3_bakeSale_2018'
-wrong 'Change Line 1 to:  <pre>var total = -1;</pre>'
-wrong 'Change Line 2 to:  <pre>while (itemsInCart >= 0){</pre>'
-wrong 'Change Line 3 to:  <pre>total = promptNum(“Enter next item price”);</pre>'
-right 'Add after line 3:     <pre>numItems = numItems - 1;</pre>'
-wrong 'Add after line 4:     <pre>numItems = 0;</pre>'
+wrong 'Change Line 1 to:  
+`var total = -1;`'
+wrong 'Change Line 2 to:  
+`while (itemsInCart \>= 0){`'
+wrong 'Change Line 3 to:  
+`total = promptNum(“Enter next item price”);`'
+right 'Add after line 3:  
+`numItems = numItems - 1;`'
+wrong 'Add after line 4:  
+`numItems = 0;`'
 markdown <<MARKDOWN
 Tiffany is writing a program to help manage a bake sale.  She writes the following code which prompts the user to enter the total number of items a person is buying and then a loop repeatedly prompts for the cost of each item.  She wrote the code but there is a problem: it runs in an infinite loop.  How can Tiffany change her code so it doesn’t loop forever?
 

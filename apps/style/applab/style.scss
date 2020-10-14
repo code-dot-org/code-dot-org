@@ -27,13 +27,6 @@ div#visualizationResizeBar {
   height: $workspace-headers-height;
 }
 
-// Override appliction.scss's defined width for applab, so that embed levels
-// get a better width. Non embed levels will be handled by responsive media
-// queries
-.small-footer-base {
-  width: 340px;
-}
-
 /*
  * Shrink the visualization area on small displays.
  *
@@ -549,4 +542,25 @@ div#visualizationResizeBar {
 #designModeViz .ui-resizable-s {
   width: calc(100% - 12px);
   bottom: 0;
+}
+
+// Theme dropdown needs to use classes for styling
+.theme-dropdown {
+  .Select-value {
+    height: 44px;
+    .theme-dropdown-label {
+      img {
+        width: 36px;
+        height: 36px;
+      }
+    }
+  }
+  .Select-menu, .Select-menu-outer {
+    height: 516px;
+    max-height: 516px;
+  }
+
+  .Select-control {
+    height: 44px;
+  }
 }

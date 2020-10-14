@@ -2,6 +2,7 @@ var spriteId = 0;
 var nativeSpriteMap = {};
 var inputEvents = [];
 var behaviors = [];
+var userInputEventCallbacks = {};
 
 export var background;
 export var title = '';
@@ -14,6 +15,7 @@ export function reset() {
   behaviors = [];
   background = 'white';
   title = subtitle = '';
+  userInputEventCallbacks = {};
 }
 
 /**
@@ -23,6 +25,9 @@ export function reset() {
  * the specified id/name, or a list containing all sprites with the specified animation.
  */
 export function getSpriteArray(spriteArg) {
+  if (!spriteArg) {
+    return [];
+  }
   if (spriteArg.hasOwnProperty('id')) {
     let sprite = nativeSpriteMap[spriteArg.id];
     if (sprite) {
@@ -38,9 +43,13 @@ export function getSpriteArray(spriteArg) {
     }
   }
   if (spriteArg.costume) {
-    return Object.values(nativeSpriteMap).filter(
-      sprite => sprite.getAnimationLabel() === spriteArg.costume
-    );
+    if (spriteArg.costume === 'all') {
+      return Object.values(nativeSpriteMap);
+    } else {
+      return Object.values(nativeSpriteMap).filter(
+        sprite => sprite.getAnimationLabel() === spriteArg.costume
+      );
+    }
   }
   return [];
 }
@@ -142,8 +151,65 @@ export function deleteSprite(spriteId) {
   delete nativeSpriteMap[spriteId];
 }
 
+export function registerQuestion(questionText, variableName, setterCallback) {
+  if (!userInputEventCallbacks[variableName]) {
+    userInputEventCallbacks[variableName] = {
+      setterCallbacks: [],
+      userCallbacks: []
+    };
+  }
+  userInputEventCallbacks[variableName].setterCallbacks.push(setterCallback);
+}
+
+export function registerQuestionAnswerCallback(variableName, userCallback) {
+  if (!userInputEventCallbacks[variableName]) {
+    userInputEventCallbacks[variableName] = {
+      setterCallbacks: [],
+      userCallbacks: []
+    };
+  }
+  userInputEventCallbacks[variableName].userCallbacks.push(userCallback);
+}
+
+export function onQuestionAnswer(variableName, userInput) {
+  const callbacks = userInputEventCallbacks[variableName];
+  if (callbacks) {
+    // Make sure to call the setter callback to set the variable
+    // before the user callback, which may rely on the variable's new value
+    callbacks.setterCallbacks.forEach(callback => {
+      callback(userInput);
+    });
+    callbacks.userCallbacks.forEach(callback => {
+      callback();
+    });
+  }
+}
+
 export function addEvent(type, args, callback) {
   inputEvents.push({type: type, args: args, callback: callback});
+}
+
+function atTimeEvent(inputEvent, p5Inst) {
+  if (inputEvent.args.unit === 'seconds') {
+    const previousTime = inputEvent.previousTime || 0;
+    inputEvent.previousTime = p5Inst.World.seconds;
+    // There are many ticks per second, but we only want to fire the event once (on the first tick where
+    // World.seconds matches the event argument)
+    if (
+      p5Inst.World.seconds === inputEvent.args.n &&
+      previousTime !== inputEvent.args.n
+    ) {
+      // Call callback with no extra args
+      return [{}];
+    }
+  } else if (inputEvent.args.unit === 'frames') {
+    if (p5Inst.frameCount === inputEvent.args.n) {
+      // Call callback with no extra args
+      return [{}];
+    }
+  }
+  // Don't call callback
+  return [];
 }
 
 function whenPressEvent(inputEvent, p5Inst) {
@@ -198,7 +264,10 @@ function whenTouchEvent(inputEvent) {
         if (!firedOnce) {
           // Sprites are overlapping, and we haven't fired yet for this collision,
           // so we should fire the callback
-          callbackArgList.push({sprite: sprite.id, target: target.id});
+          callbackArgList.push({
+            subjectSprite: sprite.id,
+            objectSprite: target.id
+          });
           firedOnce = true;
         }
       } else {
@@ -221,7 +290,10 @@ function whileTouchEvent(inputEvent) {
   sprites.forEach(sprite => {
     targets.forEach(target => {
       if (sprite.overlap(target)) {
-        callbackArgList.push({sprite: sprite.id, target: target.id});
+        callbackArgList.push({
+          subjectSprite: sprite.id,
+          objectSprite: target.id
+        });
       }
     });
   });
@@ -234,7 +306,7 @@ function whenClickEvent(inputEvent, p5Inst) {
     let sprites = getSpriteArray(inputEvent.args.sprite);
     sprites.forEach(sprite => {
       if (p5Inst.mouseIsOver(sprite)) {
-        callbackArgList.push({sprite: sprite.id});
+        callbackArgList.push({clickedSprite: sprite.id});
       }
     });
   }
@@ -246,7 +318,7 @@ function whileClickEvent(inputEvent, p5Inst) {
   let sprites = getSpriteArray(inputEvent.args.sprite);
   sprites.forEach(sprite => {
     if (p5Inst.mousePressedOver(sprite)) {
-      callbackArgList.push({sprite: sprite.id});
+      callbackArgList.push({clickedSprite: sprite.id});
     }
   });
   return callbackArgList;
@@ -254,6 +326,8 @@ function whileClickEvent(inputEvent, p5Inst) {
 
 function checkEvent(inputEvent, p5Inst) {
   switch (inputEvent.type) {
+    case 'atTime':
+      return atTimeEvent(inputEvent, p5Inst);
     case 'whenpress':
       return whenPressEvent(inputEvent, p5Inst);
     case 'whilepress':

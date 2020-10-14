@@ -11,11 +11,11 @@ The class starts by using booleans to compare the current value of a sprite prop
 
 ## Introduced Code
 
-* [If statement](//docs.code.org/gamelab/ifBlock/)
-* [Less than operator](//docs.code.org/gamelab/lessThanOperator/)
-* [Inequality operator](//docs.code.org/gamelab/inequalityOperator/)
-* [Less than or equal operator](//docs.code.org/gamelab/lessThanOrEqualOperator/)
-* [Greater than operator](//docs.code.org/gamelab/greaterThanOperator/)
-* [Equality operator](//docs.code.org/gamelab/equalityOperator/)
-* [Greater than or equal operator](//docs.code.org/gamelab/greaterThanOrEqualOperator/)
+* [If statement](//studio.code.org/docs/gamelab/ifBlock/)
+* [Less than operator](//studio.code.org/docs/gamelab/lessThanOperator/)
+* [Inequality operator](//studio.code.org/docs/gamelab/inequalityOperator/)
+* [Less than or equal operator](//studio.code.org/docs/gamelab/lessThanOrEqualOperator/)
+* [Greater than operator](//studio.code.org/docs/gamelab/greaterThanOperator/)
+* [Equality operator](//studio.code.org/docs/gamelab/equalityOperator/)
+* [Greater than or equal operator](//studio.code.org/docs/gamelab/greaterThanOrEqualOperator/)
 MARKDOWN

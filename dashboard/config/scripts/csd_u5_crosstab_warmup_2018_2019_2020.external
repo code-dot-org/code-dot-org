@@ -1,0 +1,29 @@
+name 'CSD U5 crosstab warmup_2018_2019_2020'
+display_name 'Cake Survey'
+title 'Pizza Survey'
+description 'description here'
+markdown <<MARKDOWN
+# Cake Survey
+
+For this survey, people got to choose a cake flavor and an icing flavor.
+
+<table style="text-align: center; border: solid 1px darkgray;">
+<tr><td style="width: 50px; background-color: gray; color:white"></td><td style="width: 200px; background-color: gray; color:white">Cake Flavor</td><td style="width: 200px; background-color: gray; color:white">Icing Flavor</td></tr>
+<tr><td>1</td><td>Chocolate Cake</td><td>Chocolate Icing</td></tr>
+<tr><td>2</td><td>Red Velvet Cake</td><td>Cream Cheese Icing</td></tr>
+<tr><td>3</td><td>Chocolate Cake</td><td>Chocolate Icing</td></tr>
+<tr><td>4</td><td>Carrot Cake</td><td>Cream Cheese Icing</td></tr>
+<tr><td>5</td><td>Carrot Cake</td><td>Vanilla Icing</td></tr>
+<tr><td>6</td><td>Chocolate Cake</td><td>Chocolate Icing</td></tr>
+<tr><td>7</td><td>Chocolate Cake</td><td>Cream Cheese Icing</td></tr>
+<tr><td>8</td><td>Carrot Cake</td><td>Cream Cheese Icing</td></tr>
+</table>
+<br><br>
+
+If these people had to agree on one cake and icing combination for a party, what should it be?
+
+What if they were able to order two cakes with icing?
+
+How does knowing both choices help us better understand what sort of cakes we should order?
+
+MARKDOWN

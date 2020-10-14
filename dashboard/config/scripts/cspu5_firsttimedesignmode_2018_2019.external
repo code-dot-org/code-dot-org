@@ -1,4 +1,5 @@
 name 'CSPU5_FirstTimeDesignMode_2018_2019'
+editor_experiment ''
 title 'title'
 css 'unplugged'
 description 'description here'
@@ -10,31 +11,15 @@ In App Lab "Design Mode" lets you drag and drop **User Interface (UI)** elements
 
 To start let's just look at Design Mode and add a single UI element (a button) to our app.  We'll add code later on.
 
-<br><br>
-
-<div style="column-count: 4; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 3; width: 100%">
-
-<p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">1.</span>
-You'll see a new set of switches above the app area that let you flip back and forth between "Design Mode" and Code Mode".</p>
-
-<p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">2.</span>Adding an element is as easy as dragging and dropping it into the app where ever you want. Once it's on the app screen you can reposition it, resize it and change lots of other properties about it </p>
-
-<p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">3.</span>The <em>Properties</em> tab shows you everything you can change about the look and feel of a UI element. <strong>Note:</strong> the properties tab is <em>context sensitive</em> which means that the set of properties you see depends on what you click on in the app. </p>
-
-<p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">4.</span>The <strong>element ID</strong> is important because it's how you refer to the element in your code. We'll discuss element IDs later on.</p>
-</div>
+| 1 | 2 | 3 | 4 |
+| :-------------: | :-------------: | :-------------: | :-------------: |
+| You'll see a new set of switches above the app area that let you flip back and forth between "Design Mode" and Code Mode". | Adding an element is as easy as dragging and dropping it into the app where ever you want. Once it's on the app screen you can reposition it, resize it and change lots of other properties about it | The **Properties** tab shows you everything you can change about the look and feel of a UI element. **Note:** the properties tab is *context sensitive* which means that the set of properties you see depends on what you click on in the app. | The **element ID** is important because it's how you refer to the element in your code. We'll discuss element IDs later on. |
 
 ![](https://images.code.org/01a31ac3be66deb6d01a92a1edfffd21-image-1476726587662.png)
 
-<div style="column-count: 2; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 3; width: 66%; float: right">
-
-<p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">5.</span>You can make the text that the user sees on the button text be whatever you like.</p>
-
-<p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">6.</span><strong>Note:</strong> Scroll down to see other properties for a UI element might be "hiding" down below.</p>
-</div>
-
-<div style="clear: both"></div>
-<hr>
+| 5 | 6 |
+| :-------------: | :-------------: |
+| You can make the text that the user sees on the button text be whatever you like. | Scroll down to see other properties for a UI element that might be "hiding" down below. | 
 
 ### Vocabulary
 **User Interface (UI)** - The "User Interface" or **UI** of an app refers to how a person (user) interacts with the computer or app.  There are common patterns to user interfaces that you probably know about just from experience:

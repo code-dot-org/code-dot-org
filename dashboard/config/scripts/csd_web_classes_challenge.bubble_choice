@@ -1,0 +1,8 @@
+name 'CSD web classes challenge'
+editor_experiment ''
+display_name 'Using Classes'
+description 'Try extra challenges or learn some new code.'
+
+sublevels
+level 'CSD U2 classes music'
+level 'CSD web classes freeplay'

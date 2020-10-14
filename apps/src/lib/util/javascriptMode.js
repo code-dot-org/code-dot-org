@@ -1,6 +1,7 @@
 /** @file Utility methods common to toolkits that use the Droplet editor to let
  * students write and execute JavaScript. */
 import RGBColor from './rgbcolor.js';
+import i18n from '@cdo/locale';
 
 export const OPTIONAL = true;
 
@@ -84,6 +85,16 @@ export function apiValidateType(
         // Validate that we have a data record. These must be objects, and
         // not arrays
         properType = typeof varValue === 'object' && !Array.isArray(varValue);
+        if (properType) {
+          // Records must contain only strings, numbers, booleans, undefined, or null.
+          const isValidRecord = Object.values(varValue).every(val =>
+            isPrimitiveType(val)
+          );
+          if (!isValidRecord) {
+            outputError(i18n.invalidRecordTypeError());
+            return false;
+          }
+        }
         break;
       default:
         properType = typeof varValue === expectedType;

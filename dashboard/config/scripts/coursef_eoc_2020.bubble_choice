@@ -1,0 +1,8 @@
+name 'courseF_EOC_2020'
+editor_experiment ''
+display_name 'End of Course Project'
+description 'You have reached the end of Course F! Choose a project to create.'
+
+sublevels
+level 'CourseF_Project_SpriteLab_2020'
+level 'Course F: Artist Project_2020'

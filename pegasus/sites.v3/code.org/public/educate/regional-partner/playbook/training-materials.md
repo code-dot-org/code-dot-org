@@ -91,6 +91,12 @@ An overview and discussion of the strategies partners are using to work towards 
 <br/>
 ## Virtual Trainings
 
+May 2020
+
+- May 07 Post Facilitator Summit Workshops Round-Up [Recording](https://code.zoom.us/rec/play/6MF4frz8qj43G9fA4gSDAvJ_W9TuLPms0XIe8vdZn0rjVSFRZlv0b-ESalGX8n4TsW0bXU8WSZuOxC0?continueMode=true&_x_zm_rtaid=DqD537qsR_ixsfhWIim2Iw.1588886217306.52006ef8aeb074996d1769e6316b0ca5&_x_zm_rhtaid=437))
+- May 07 Post Facilitator Summit Workshops Round-Up ([Slides](https://docs.google.com/presentation/d/19J1ms87_i1_fA5N4ncB8_hbjDMCXninj8Z29UL_UYJ8/edit?usp=sharing))
+- Recoring Password: 7j&$.Q6b
+
 May 2019
 
 - May 22 Scheduling Academic Year Workshops Webinar ([Recording](https://code.zoom.us/recording/share/bbZsr-nLbIF44hXnJqUkp943EOeupoWwxphZksUwh7qwIumekTziMw))

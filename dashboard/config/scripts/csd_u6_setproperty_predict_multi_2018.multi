@@ -1,10 +1,13 @@
 name 'CSD U6 setProperty predict multi_2018'
+editor_experiment ''
 title 'Make a Prediction'
 question 'Read the code and predict what this app will look like when run.'
-wrong '<img src="https://images.code.org/f1bc9eacc1144bee60b1f04373e583e3-image-1507311692368.png" style="max-width: 100px;">'
-wrong '<img src="https://images.code.org/f30263a5f6e47e6548706288e67b220d-image-1507311692372.png" style="max-width: 100px;">'
-right '<img src="https://images.code.org/772be0de5cfed112f9066c05d2ea6bb7-image-1507311692376.png" style="max-width: 100px;">'
-wrong '<img src="https://images.code.org/cea9a118066ffc296f1023f395e61058-image-1507311692360.png" style="max-width: 100px;">'
+
+wrong '![](https://images.code.org/1e226012bfa76c84938097e1ff117150-image-1579828841757.png)'
+wrong '![](https://images.code.org/dc9e1f761ff6a95542f283e2c700f9f1-image-1579828841754.png)'
+wrong '![](https://images.code.org/f89441dfc9260030feac9de3af2b7d3a-image-1579828841748.png)'
+right '![](https://images.code.org/b82461e6219e023280c4e22df59071d4-image-1579828841751.png)'
+
 markdown <<MARKDOWN
 
 MARKDOWN

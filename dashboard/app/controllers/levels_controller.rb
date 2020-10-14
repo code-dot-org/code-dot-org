@@ -8,7 +8,7 @@ class LevelsController < ApplicationController
   include LevelsHelper
   include ActiveSupport::Inflector
   before_action :authenticate_user!, except: [:show, :embed_level, :get_rubric]
-  before_action :require_levelbuilder_mode, except: [:show, :index, :embed_level, :get_rubric]
+  before_action :require_levelbuilder_mode, except: [:show, :embed_level, :get_rubric]
   load_and_authorize_resource except: [:create]
 
   before_action :set_level, only: [:show, :edit, :update, :destroy]
@@ -60,6 +60,8 @@ class LevelsController < ApplicationController
   # GET /levels.json
   def index
     # Define search filter fields
+
+    search_options = search_options(current_user)
     @search_fields = [
       {
         name: :name,
@@ -70,44 +72,66 @@ class LevelsController < ApplicationController
         name: :level_type,
         description: 'By type:',
         type: 'select',
-        options: [
-          ['All types', ''],
-          *LEVEL_CLASSES.map {|x| [x.name, x.name]}.sort_by {|a| a[0]}
-        ]
+        options: search_options[:levelOptions]
       },
       {
         name: :script_id,
         description: 'By script:',
         type: 'select',
-        options: [
-          ['All scripts', ''],
-          *Script.valid_scripts(current_user).pluck(:name, :id).sort_by {|a| a[0]}
-        ]
-      }
-    ]
-
-    # Add an "owner" filter, only if we're on levelbuilder
-    if Rails.application.config.levelbuilder_mode
-      @search_fields << {
+        options: search_options[:scriptOptions]
+      },
+      {
         name: :owner_id,
         description: 'By owner:',
         type: 'select',
-        options: [
-          ['Any owner', ''],
-          *Level.joins(:user).uniq.pluck('users.name, users.id').sort_by {|a| a[0]}
-        ]
+        options: search_options[:ownerOptions]
       }
-    end
+    ]
 
+    filter_levels(params)
+    @levels = @levels.page(params[:page]).per(LEVELS_PER_PAGE)
+  end
+
+  # GET /levels/get_filters/
+  # Get all the information to filter levels with
+  def get_filters
+    render json: search_options(current_user)
+  end
+
+  # GET /levels/get_filtered_levels/
+  # Get all the information for levels after filtering
+  def get_filtered_levels
+    filter_levels(params)
+    @levels = @levels.page(params[:page]).per(7)
+    @levels = @levels.map(&:summarize_for_edit)
+    render json: @levels
+  end
+
+  # Define search filter fields
+  def search_options(current_user)
+    {
+      levelOptions: [
+        ['All types', ''],
+        *LEVEL_CLASSES.map {|x| [x.name, x.name]}.sort_by {|a| a[0]}
+      ],
+      scriptOptions: [
+        ['All scripts', ''],
+        *Script.valid_scripts(current_user).pluck(:name, :id).sort_by {|a| a[0]}
+      ],
+      ownerOptions: [
+        ['Any owner', ''],
+        *Level.joins(:user).distinct.pluck('users.name, users.id').sort_by {|a| a[0]}
+      ]
+    }
+  end
+
+  def filter_levels(params)
     # Gather filtered search results
     @levels = @levels.order(updated_at: :desc)
     @levels = @levels.where('levels.name LIKE ?', "%#{params[:name]}%") if params[:name]
     @levels = @levels.where('levels.type = ?', params[:level_type]) if params[:level_type].present?
     @levels = @levels.joins(:script_levels).where('script_levels.script_id = ?', params[:script_id]) if params[:script_id].present?
-    if Rails.application.config.levelbuilder_mode
-      @levels = @levels.left_joins(:user).where('levels.user_id = ?', params[:owner_id]) if params[:owner_id].present?
-    end
-    @levels = @levels.page(params[:page]).per(LEVELS_PER_PAGE)
+    @levels = @levels.left_joins(:user).where('levels.user_id = ?', params[:owner_id]) if params[:owner_id].present?
   end
 
   # GET /levels/1
@@ -121,12 +145,21 @@ class LevelsController < ApplicationController
     view_options(
       full_width: true,
       small_footer: @game.uses_small_footer? || @level.enable_scrolling?,
-      has_i18n: @game.has_i18n?
+      has_i18n: @game.has_i18n?,
+      useGoogleBlockly: params[:blocklyVersion] == "Google"
     )
   end
 
   # GET /levels/1/edit
   def edit
+    # Make sure that the encrypted property is a boolean
+    @level.properties['encrypted'] = @level.properties['encrypted'].to_bool if @level.properties['encrypted']
+    scripts = @level.script_levels.map(&:script)
+    @visible = scripts.reject(&:hidden).any?
+    @pilot = scripts.select(&:pilot_experiment).any?
+    @standalone = ProjectsController::STANDALONE_PROJECTS.values.map {|h| h[:name]}.include?(@level.name)
+    fb = FirebaseHelper.new('shared')
+    @dataset_library_manifest = fb.get_library_manifest
   end
 
   # GET /levels/:id/get_rubric
@@ -444,18 +477,21 @@ class LevelsController < ApplicationController
   # to Firehose / Redshift.
   def log_save_error(level)
     FirehoseClient.instance.put_record(
-      study: 'level-save-error',
-      # Make it easy to count most frequent field name in which errors occur.
-      event: level.errors.keys.first,
-      # Level ids are different on levelbuilder, so use the level name. The
-      # level name can be joined on, against the levels table, to determine the
-      # level type or other level properties.
-      data_string: level.name,
-      data_json: {
-        errors: level.errors.to_h,
-        # User ids are different on levelbuilder, so use the email.
-        user_email: current_user.email,
-      }.to_json
+      :analysis,
+      {
+        study: 'level-save-error',
+        # Make it easy to count most frequent field name in which errors occur.
+        event: level.errors.keys.first,
+        # Level ids are different on levelbuilder, so use the level name. The
+        # level name can be joined on, against the levels table, to determine the
+        # level type or other level properties.
+        data_string: level.name,
+        data_json: {
+          errors: level.errors.to_h,
+          # User ids are different on levelbuilder, so use the email.
+          user_email: current_user.email,
+        }.to_json
+      }
     )
   end
 end

@@ -1,0 +1,79 @@
+{
+  "script": {
+    "name": "Test Wednesday",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": false,
+    "properties": {
+    },
+    "new_name": null,
+    "family_name": null,
+    "seeding_key": {
+      "script.name": "Test Wednesday"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "Test Wednesday"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "PDK5 Intro",
+      "name": "PDK5 Intro",
+      "absolute_position": 1,
+      "lockable": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "PDK5 Intro",
+        "lesson_group.key": "",
+        "script.name": "Test Wednesday"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PDK5 Intro"
+        ],
+        "lesson.key": "PDK5 Intro",
+        "lesson_group.key": "",
+        "script.name": "Test Wednesday"
+      },
+      "level_keys": [
+        "PDK5 Intro"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "PDK5 Intro",
+        "script_level.level_keys": [
+          "PDK5 Intro"
+        ],
+        "lesson.key": "PDK5 Intro",
+        "lesson_group.key": "",
+        "script.name": "Test Wednesday"
+      }
+    }
+  ]
+}

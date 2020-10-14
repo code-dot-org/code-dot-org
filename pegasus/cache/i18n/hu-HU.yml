@@ -21,6 +21,8 @@ hu-HU:
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">Számítástechnika tanár vagy? Nézz meg más CSEdWeek anyagokat
     is!</a>'
+  csedweek_banner_teachers_text: Számítástechnika tanár vagy? Nézz meg más CSEdWeek
+    anyagokat is!
   n_have_learned_an_hoc: "<h1>Próbálj ki egy</h1><h2>Kódolás óráját</h2><h3># ember
     már kipróbálta</h3>"
   anybody_can_learn: Mindenki tanulhat.
@@ -28,7 +30,6 @@ hu-HU:
   petition_message: Minden diáknak, minden iskolában meg kellene adni a lehetőséget,
     hogy számítástechnikát tanuljon
   petition_sign_message: 'Ha elfogadod, írd be a nevedet. Csatlakozz # másokhoz.'
-  petition_sign_message_support: 'Ha támogatsz, írd alá. Csatlakozz egy # fős csapathoz.'
   petition_join_others: "# ember vár, hogy csatlakozz"
   name: Név
   email: Email
@@ -143,6 +144,7 @@ hu-HU:
   if_you_enjoyed: Ha tetszett a tanulás, akkor kérje meg barátait is, hogy próbálják
     ki! Szeretnénk, hogy az egész világ tanuljon.
   personalize_certificate: Legyen névre szóló az okleveled
+  print_certificates: Oklevelek nyomtatása
   share_achievement: Oszd meg az elért eredményed
   beyond_hour_message: Haladj tovább a <a href='http://studio.code.org'>többi kurzussal</a>,
     vagy nézd meg, hogy mit lehet <a href='/learn/beyond'>Tanulni a Következő Órában</a>.
@@ -222,7 +224,7 @@ hu-HU:
   studiobar_elementary_title: Kurzusok alsósoknak
   studiobar_elementary_body: Három új tanfolyamunk k &#8209; 5 nek
   studiobar_dance_title: Táncos buli
-  studiobar_dance_body: Hozd létre és oszd meg saját táncos bulidat
+  studiobar_dance_body: Hozd létre, és oszd meg a saját Táncos bulidat
   studiobar_hoc_title: A kódolás órája
   studiobar_hoc_body: Tanulj programozni az Angry Birds-el
   studiobar_flappy_title: Flappy kód
@@ -300,6 +302,7 @@ hu-HU:
   homepage_action_text_learn: Kezdj tanulni
   homepage_action_text_signpetition: Írd alá a petíciót
   homepage_signpetition_dropdown: Írd alá a petíciót &#x25BE;
+  homepage_signpetition_dropdown_text: Egyetértek
   homepage_diversity_pledge: Csatlakozz a diverzitási peticióhoz
   homepage_banner_text_prizes: 'Újra közeledik a Kódolás órája, december 7-13. '
   homepage_banner_link_prizes: Csatlakozz a történelem legnagyobb tanulási eseményéhez!
@@ -1589,6 +1592,8 @@ hu-HU:
   header_teacher_community: Tanári közösség
   header_help_support: 'Segítség és támogatás '
   header_report_bug: Hiba jelentése
+  header_legal_privacy: Adatvédelmi Elvek
+  header_legal_tos: Feltételek
   header_tutorials: Gyakorlatok
   header_documentation: Dokumentáció
   user_header_label: Üdv %{username}
@@ -1615,6 +1620,11 @@ hu-HU:
   account_sign_up_child_accept_terms: Megerősítem, hogy a szülőm vagy törvényes gondviselőm
     engedélyt adott, hogy használjam Code.org szolgáltatásait.
   hoc_overview_dance_title: Táncos buli
+  hoc_overview_dance_subtitle: Programozz le egy Táncos bulit, és oszd meg barátaiddal.
+    Közreműködik Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara és még 25-en!
+  hoc_overview_dance_2019_subtitle: 'Programozz le egy Táncos bulit, és oszd meg barátaiddal.
+    Közreműködik Katy Perry, Shawn Mendes, Panic! A diszkóban: Lil Nas X, Jonas Brothers,
+    Nicki Minaj és még 34-en!'
   hoc_overview_partner_activities_title: További tevékenységek a partnerektől
   hoc_overview_partner_activities_body: A Code.org és partnerei által fejlesztett
     Kódolás Órája weboldal több mint 100 számítástechnikai programot kínál minden

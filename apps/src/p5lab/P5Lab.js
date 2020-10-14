@@ -1,3 +1,4 @@
+/*global Blockly*/
 import $ from 'jquery';
 import _ from 'lodash';
 import React from 'react';
@@ -6,6 +7,7 @@ import {changeInterfaceMode, viewAnimationJson} from './actions';
 import {startInAnimationTab} from './stateQueries';
 import {P5LabInterfaceMode, APP_WIDTH} from './constants';
 import {SpritelabReservedWords} from './spritelab/constants';
+import {TOOLBOX_EDIT_MODE} from '../constants';
 import experiments from '@cdo/apps/util/experiments';
 import {
   outputError,
@@ -74,6 +76,7 @@ import {
 } from '@cdo/apps/util/exporter';
 import project from '@cdo/apps/code-studio/initApp/project';
 import {setExportGeneratedProperties} from '@cdo/apps/code-studio/components/exportDialogRedux';
+import {hasInstructions} from '@cdo/apps/templates/instructions/utils';
 
 const defaultMobileControlsConfig = {
   spaceButtonVisible: true,
@@ -271,7 +274,13 @@ P5Lab.prototype.init = function(config) {
       startLibraries = JSON.parse(config.level.startLibraries);
     }
     project.sourceHandler.setInitialLibrariesList(startLibraries);
-    getStore().dispatch(setInitialAnimationList(this.startAnimations));
+    getStore().dispatch(
+      setInitialAnimationList(
+        this.startAnimations,
+        false /* shouldRunV3Migration */,
+        this.isSpritelab
+      )
+    );
     this.studioApp_.resetButtonClick();
   }.bind(this);
 
@@ -296,10 +305,17 @@ P5Lab.prototype.init = function(config) {
     }.bind(this)
   };
 
-  // Display CSF-style instructions when using Blockly. Otherwise provide a way
-  // for us to have top pane instructions disabled by default, but able to turn
-  // them on.
-  config.noInstructionsWhenCollapsed = !this.isSpritelab;
+  // Display CSF-style instructions when using Blockly (unless there are no
+  // instructions to display). Otherwise provide a way for us to have top pane
+  // instructions disabled by default, but able to turn them on.
+  config.noInstructionsWhenCollapsed =
+    !this.isSpritelab ||
+    (this.isSpritelab &&
+      !hasInstructions(
+        this.level.shortInstructions,
+        this.level.longInstructions,
+        config.hasContainedLevels
+      ));
 
   var breakpointsEnabled = !config.level.debuggerDisabled;
   config.enableShowCode = true;
@@ -372,7 +388,9 @@ P5Lab.prototype.init = function(config) {
 
   var showDebugButtons =
     config.level.editCode &&
-    (!config.hideSource && !config.level.debuggerDisabled);
+    (!config.hideSource &&
+      !config.level.debuggerDisabled &&
+      !config.level.iframeEmbedAppAndCode);
   var showDebugConsole = config.level.editCode && !config.hideSource;
   this.debuggerEnabled = showDebugButtons || showDebugConsole;
 
@@ -422,7 +440,8 @@ P5Lab.prototype.init = function(config) {
     isProjectLevel: !!config.level.isProjectLevel,
     isSubmittable: !!config.level.submittable,
     isSubmitted: !!config.level.submitted,
-    librariesEnabled: !!config.level.librariesEnabled
+    librariesEnabled: !!config.level.librariesEnabled,
+    validationEnabled: !!config.level.validationEnabled
   });
 
   if (startInAnimationTab(getStore().getState())) {
@@ -436,7 +455,14 @@ P5Lab.prototype.init = function(config) {
     config.initialAnimationList && !config.embed && !config.hasContainedLevels
       ? config.initialAnimationList
       : this.startAnimations;
-  getStore().dispatch(setInitialAnimationList(initialAnimationList));
+
+  getStore().dispatch(
+    setInitialAnimationList(
+      initialAnimationList,
+      this.isSpritelab /* shouldRunV3Migration */,
+      this.isSpritelab
+    )
+  );
 
   this.generatedProperties = {
     ...config.initialGeneratedProperties
@@ -784,8 +810,11 @@ P5Lab.prototype.onPuzzleComplete = function(submit, testResult, message) {
   if (message && msg[message]) {
     this.message = msg[message]();
   }
+  const sourcesUnchanged = !this.studioApp_.validateCodeChanged();
   if (this.executionError) {
     this.result = ResultType.ERROR;
+  } else if (sourcesUnchanged) {
+    this.result = ResultType.FAILURE;
   } else {
     // In most cases, submit all results as success
     this.result = ResultType.SUCCESS;
@@ -800,6 +829,8 @@ P5Lab.prototype.onPuzzleComplete = function(submit, testResult, message) {
     });
   } else if (testResult) {
     this.testResults = testResult;
+  } else if (sourcesUnchanged) {
+    this.testResults = TestResults.FREE_PLAY_UNCHANGED_FAIL;
   } else {
     this.testResults = TestResults.FREE_PLAY;
   }
@@ -827,6 +858,24 @@ P5Lab.prototype.onPuzzleComplete = function(submit, testResult, message) {
   } else {
     // We're using blockly, report the program as xml
     var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
+
+    // When SharedFunctions (aka shared behavior_definitions) are enabled, they
+    // are always appended to startBlocks on page load.
+    // See StudioApp -> setStartBlocks_
+    // Because of this, we need to remove the SharedFunctions when we are in
+    // toolbox edit mode. Otherwise, they end up in a student's toolbox.
+    if (this.level.edit_blocks === TOOLBOX_EDIT_MODE) {
+      var allBlocks = Array.from(xml.querySelectorAll('xml > block'));
+      var toRemove = allBlocks.filter(element => {
+        return (
+          element.getAttribute('type') === 'behavior_definition' &&
+          element.getAttribute('usercreated') !== 'true'
+        );
+      });
+      toRemove.forEach(element => {
+        xml.removeChild(element);
+      });
+    }
     program = encodeURIComponent(Blockly.Xml.domToText(xml));
   }
 
@@ -858,11 +907,6 @@ P5Lab.prototype.onPuzzleComplete = function(submit, testResult, message) {
         image: this.encodedFeedbackImage,
         onComplete
       });
-    }
-
-    if (this.studioApp_.isUsingBlockly()) {
-      // reenable toolbox
-      Blockly.mainBlockSpaceEditor.setEnableToolbox(true);
     }
   };
 
@@ -938,11 +982,6 @@ P5Lab.prototype.execute = function() {
     this.executionError
   ) {
     return;
-  }
-
-  if (this.studioApp_.isUsingBlockly()) {
-    // Disable toolbox while running
-    Blockly.mainBlockSpaceEditor.setEnableToolbox(false);
   }
 
   this.startTickTimer();
@@ -1025,7 +1064,7 @@ P5Lab.prototype.initInterpreter = function(attachDebugger = true) {
   code += this.studioApp_.getCode();
   this.JSInterpreter.parse({
     code,
-    libraryCode: this.level.libraryCode,
+    projectLibraries: this.level.projectLibraries,
     blocks: dropletConfig.blocks,
     blockFilter: this.level.executePaletteApisOnly && this.level.codeFunctions,
     enableEvents: true,
@@ -1471,15 +1510,8 @@ P5Lab.prototype.displayFeedback_ = function() {
     message: this.message,
     response: this.response,
     level: level,
-    // feedbackImage: feedbackImageCanvas.canvas.toDataURL("image/png"),
-    // add 'impressive':true to non-freeplay levels that we deem are relatively impressive (see #66990480)
-    showingSharing:
-      !level.disableSharing && level.freePlay /* || level.impressive */,
-    // impressive levels are already saved
-    // alreadySaved: level.impressive,
-    // allow users to save freeplay levels to their gallery (impressive non-freeplay levels are autosaved)
-    saveToLegacyGalleryUrl:
-      level.freePlay && this.response && this.response.save_to_gallery_url,
+    // feedbackImage: feedbackImageCanvas.canvas.toDataURL("image/png")
+    showingSharing: !level.disableSharing && level.freePlay,
     appStrings: {
       reinfFeedbackMsg: msg.reinfFeedbackMsg(),
       sharingText: msg.shareGame()

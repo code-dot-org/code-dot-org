@@ -1,0 +1,12 @@
+name 'CodeBreak E12 Challenges'
+editor_experiment ''
+display_name 'Challenges'
+description "Pick the challenge you want to complete. When you are finished click 'Continue' and don't forget to share your project using the hashtag #CodeBreak!"
+
+sublevels
+level 'CodeBreak E12 Practice Mike'
+level 'CodeBreak - e12 circuitplayground'
+
+markdown <<MARKDOWN
+
+MARKDOWN

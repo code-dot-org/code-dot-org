@@ -1,11 +1,12 @@
 #!/usr/bin/env ruby
+require_relative 'only_one'
+abort 'Script already running' unless only_one_running?(__FILE__)
 
 # This script updates the "DTSN" check on PRs
 
 require_relative '../../deployment'
 require 'cdo/github'
 require 'cdo/developers_topic'
-require 'cdo/only_one'
 
 DTSN_FILE = '.dtsn'.freeze
 
@@ -23,4 +24,4 @@ def main
   end
 end
 
-main if only_one_running?(__FILE__)
+main

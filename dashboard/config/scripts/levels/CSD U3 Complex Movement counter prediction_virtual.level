@@ -1,0 +1,20 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2020-03-17T17:04:54.000Z",
+  "level_num": "custom",
+  "user_id": 106,
+  "properties": {
+    "long_instructions": "# Velocity and the Counter Pattern\r\n\r\nUsing the counter pattern with a sprite's x and y property makes a sprite move smoothly across the screen. In this program **the counter pattern is being used with the `sprite.velocityX` property** instead.\r\n\r\n# Predict\r\n\r\nWhat do you think will happen when the code is run? Why? Once you're ready you can run the code to find out.",
+    "submittable": "false",
+    "allow_user_uploads": "false",
+    "peer_reviewable": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 16164,
+    "name_suffix": "_virtual"
+  },
+  "published": true,
+  "notes": ""
+}]]></config>
+</FreeResponse>

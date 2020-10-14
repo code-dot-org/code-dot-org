@@ -11,6 +11,7 @@ We use a custom process (see [#30036](https://github.com/code-dot-org/code-dot-o
 * Secrets are stored and fetched separately based on the environment, so referencing `CDO.my_secret` actually fetches the secret named `staging/cdo/my_secret`, `production/cdo/my_secret`, etc depending on the environment.
 * AWS access permissions are tuned so that the application has read-only access to secrets in its own environment (e.g., a `staging` application can't read `production` secrets), for security purposes.
   * The `Developer` role is also prevented from reading secrets outside of the `development` environment for a better security posture.
+* Certain environments (`development`, `adhoc`, and `test`-unit_test/CI) include a `<%= clear_secrets %>` line in their environment-specific config, which disables _all_ globally-defined secrets by default for that environment. These environments generally should not require secrets to function, since AWS credentials are not guaranteed. To add an exception, you can opt-in to a specific secret by re-defining it below the `clear_secrets` line. (Make sure the secret is really necessary and the usage scope limited, since use of the secret will require AWS credentials!)
 
 ### Creating/updating a secret
 * Create a `config/secrets.yml` file (see [`secrets.yml.template`](secrets.yml.template) as a reference) containing the configuration for the secrets you wish to create/update, then run the [`bin/update_secrets`](../bin/update_secrets) helper script to apply the changes.

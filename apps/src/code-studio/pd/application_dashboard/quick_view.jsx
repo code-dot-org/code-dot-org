@@ -19,7 +19,7 @@ import RegionalPartnerDropdown, {
 import QuickViewTable from './quick_view_table';
 import Spinner from '../components/spinner';
 import $ from 'jquery';
-import {ApplicationStatuses} from './constants';
+import {getApplicationStatuses} from './constants';
 import {Button, FormGroup, ControlLabel, Row, Col} from 'react-bootstrap';
 
 const styles = {
@@ -65,7 +65,7 @@ export class QuickView extends React.Component {
   }
 
   componentWillMount() {
-    const statusList = ApplicationStatuses[this.props.route.viewType];
+    const statusList = getApplicationStatuses(this.props.route.viewType);
     this.statuses = Object.keys(statusList).map(v => ({
       value: v,
       label: statusList[v]

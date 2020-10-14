@@ -1,0 +1,8 @@
+.count{:style=>"font-size: 42px; line-height: 42px; font-family: 'Gotham 5r', sans-serif;"}
+  -count_string = I18n.t(:try_hoc_num_served_markdown, markdown: true, num: format_integer_with_commas(fetch_hoc_metrics['started']))
+  -if request.locale == 'en-US'
+    %a{:href=>'/leaderboards', :style=>'text-decoration:none'}
+      != count_string
+  -else
+    != count_string
+  %h4.desktop-feature=I18n.t(:anybody_can_learn)

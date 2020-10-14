@@ -26,34 +26,13 @@ describe('Summary', () => {
     expect(summary.find('Spinner')).to.have.length(1);
   });
 
-  it('Generates 5 tables in 2 rows after hearing from server', () => {
+  it('Generates 2 tables in 1 rows after hearing from server', () => {
     let server = sinon.fakeServer.create();
 
     server.respondWith('GET', '/api/v1/pd/applications', [
       200,
       {'Content-Type': 'application/json'},
       JSON.stringify({
-        csf_facilitators: {
-          unreviewed: {locked: 0, total: 1},
-          pending: {locked: 0, total: 0},
-          accepted: {locked: 0, total: 0},
-          declined: {locked: 0, total: 0},
-          waitlisted: {locked: 0, total: 0}
-        },
-        csd_facilitators: {
-          unreviewed: {locked: 0, total: 0},
-          pending: {locked: 0, total: 0},
-          accepted: {locked: 0, total: 0},
-          declined: {locked: 0, total: 0},
-          waitlisted: {locked: 0, total: 0}
-        },
-        csp_facilitators: {
-          unreviewed: {locked: 0, total: 0},
-          pending: {locked: 0, total: 0},
-          accepted: {locked: 0, total: 0},
-          declined: {locked: 0, total: 0},
-          waitlisted: {locked: 0, total: 0}
-        },
         csd_teachers: {
           unreviewed: {locked: 0, total: 1},
           pending: {locked: 0, total: 0},
@@ -84,9 +63,8 @@ describe('Summary', () => {
     server.respond();
     summary.update();
     const rows = summary.find(Row);
-    expect(rows).to.have.length(2);
-    expect(rows.at(0).children()).to.have.length(3);
-    expect(rows.at(1).children()).to.have.length(2);
+    expect(rows).to.have.length(1);
+    expect(rows.at(0).children()).to.have.length(2);
 
     expect(summary.find('Spinner')).to.have.length(0);
   });

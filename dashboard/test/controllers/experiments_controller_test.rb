@@ -4,13 +4,13 @@ class ExperimentsControllerTest < ActionController::TestCase
   setup do
     @teacher = create :teacher
     @experiment_name = 'my-experiment'
-    course = create :course, name: 'my-course'
+    unit_group = create :unit_group, name: 'my-course'
     default_script = create(:script, name: 'default-script')
     alternate_script = create(:script, name: 'alternate-script')
 
-    create :course_script, course: course, script: default_script, position: 2
-    create :course_script,
-      course: course,
+    create :unit_group_unit, unit_group: unit_group, script: default_script, position: 2
+    create :unit_group_unit,
+      unit_group: unit_group,
       script: alternate_script,
       position: 2,
       default_script: default_script,
@@ -73,7 +73,12 @@ class ExperimentsControllerTest < ActionController::TestCase
   ) do
     assert_nil flash[:alert]
     assert_includes flash[:notice], "You have successfully joined the experiment"
-    assert SingleUserExperiment.where(name: "2018-teacher-experience", min_user_id: @teacher.id)
+    assert SingleUserExperiment.where(
+      name: "2018-teacher-experience",
+      min_user_id: @teacher.id,
+      start_at: nil,
+      end_at: nil
+    )
   end
 
   test_user_gets_response_for(
