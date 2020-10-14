@@ -18258,9 +18258,9 @@ en:
             CREATE Projects:
               name: CREATE Projects
             USE Programs:
-              name: USE Programs
+              name: USE Programs (AppLab Only)
             MODIFY Programs:
-              name: MODIFY Programs
+              name: MODIFY Programs (AppLab -> Widget -> AppLab)
           lesson_groups: {}
           title: Ml/AI Unit - CSD
           description_audience: ''

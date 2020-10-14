@@ -15,10 +15,10 @@ import reducers, {
   addLevel,
   removeLevel,
   setActiveVariant,
-  setField,
+  setLevelField,
+  setScriptLevelField,
   reorderLevel,
   moveLevelToActivitySection,
-  NEW_LEVEL_ID,
   emptyActivity,
   emptyActivitySection
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
@@ -88,8 +88,8 @@ describe('activitiesEditorRedux reducer tests', () => {
       const nextState = reducer(initialState, reorderLevel(1, 3, 2, 1))
         .activities;
       assert.deepEqual(
-        nextState[0].activitySections[2].levels.map(l => l.activeId),
-        [2, 1]
+        nextState[0].activitySections[2].scriptLevels.map(l => l.id),
+        [11, 10]
       );
     });
 
@@ -99,11 +99,11 @@ describe('activitiesEditorRedux reducer tests', () => {
         moveLevelToActivitySection(1, 3, 2, 2)
       ).activities;
       assert.deepEqual(
-        nextState[0].activitySections[1].levels.map(l => l.activeId),
+        nextState[0].activitySections[1].scriptLevels.map(l => l.activeId),
         [2]
       );
       assert.deepEqual(
-        nextState[0].activitySections[2].levels.map(l => l.activeId),
+        nextState[0].activitySections[2].scriptLevels.map(l => l.activeId),
         [1]
       );
     });
@@ -112,74 +112,94 @@ describe('activitiesEditorRedux reducer tests', () => {
       const nextState = reducer(
         initialState,
         addLevel(1, 3, {
-          name: 'Level 3',
-          levelNumber: 3,
-          position: 3,
-          icon: 'fa-desktop',
-          ids: [NEW_LEVEL_ID],
-          activeId: NEW_LEVEL_ID,
+          id: 12,
+          levels: [
+            {
+              name: 'Level 4',
+              id: 4,
+              url: 'https://levelbuilder-studio.code.org/levels/598/edit',
+              icon: 'fa-desktop',
+              isUnplugged: false,
+              isConceptLevel: true,
+              skin: null,
+              videoKey: null,
+              concepts: '',
+              conceptDifficulty: ''
+            }
+          ],
+          position: 4,
+          activeId: 4,
           kind: 'puzzle',
-          status: 'not started',
-          url: 'https://levelbuilder-studio.code.org/levels/598/edit',
-          isUnplugged: false,
-          isCurrentLevel: false,
-          isConceptLevel: false,
-          named: false,
+          bonus: false,
           assessment: false,
           challenge: false,
-          sublevels: [],
-          skin: null,
-          videoKey: null,
-          concepts: '',
-          conceptDifficulty: ''
+          expand: false
         })
       ).activities;
       assert.deepEqual(
-        nextState[0].activitySections[2].levels.map(s => s.name),
-        ['Level 1', 'Level 2', 'Level 3']
+        nextState[0].activitySections[2].scriptLevels.map(s => s.id),
+        [10, 11, 12]
       );
     });
 
     it('remove level', () => {
       const nextState = reducer(initialState, removeLevel(1, 3, 1)).activities;
       assert.deepEqual(
-        nextState[0].activitySections[2].levels.map(s => s.name),
-        ['Level 2']
+        nextState[0].activitySections[2].scriptLevels.map(s => s.id),
+        [11]
       );
     });
 
     it('set active variant', () => {
       const nextState = reducer(initialState, setActiveVariant(1, 3, 1, 2))
         .activities;
-      assert.equal(nextState[0].activitySections[2].levels[0].activeId, 2);
+      assert.equal(
+        nextState[0].activitySections[2].scriptLevels[0].activeId,
+        2
+      );
     });
 
     it('set level field', () => {
       let nextState = reducer(
         initialState,
-        setField(1, 3, 1, {videoKey: '_a_'})
+        setLevelField(1, 3, 1, {videoKey: '_a_'})
       );
       assert.equal(
-        nextState.activities[0].activitySections[2].levels[0].videoKey,
+        nextState.activities[0].activitySections[2].scriptLevels[0].levels[0]
+          .videoKey,
         '_a_'
       );
-      nextState = reducer(nextState, setField(1, 3, 1, {skin: '_b_'}));
+      nextState = reducer(nextState, setLevelField(1, 3, 1, {skin: '_b_'}));
       assert.equal(
-        nextState.activities[0].activitySections[2].levels[0].skin,
+        nextState.activities[0].activitySections[2].scriptLevels[0].levels[0]
+          .skin,
         '_b_'
       );
       nextState = reducer(
         nextState,
-        setField(1, 3, 1, {conceptDifficulty: '_c_'})
+        setLevelField(1, 3, 1, {conceptDifficulty: '_c_'})
       );
       assert.equal(
-        nextState.activities[0].activitySections[2].levels[0].conceptDifficulty,
+        nextState.activities[0].activitySections[2].scriptLevels[0].levels[0]
+          .conceptDifficulty,
         '_c_'
       );
-      nextState = reducer(nextState, setField(1, 3, 1, {concepts: '_d_'}));
+      nextState = reducer(nextState, setLevelField(1, 3, 1, {concepts: '_d_'}));
       assert.equal(
-        nextState.activities[0].activitySections[2].levels[0].concepts,
+        nextState.activities[0].activitySections[2].scriptLevels[0].levels[0]
+          .concepts,
         '_d_'
+      );
+    });
+
+    it('set script level field', () => {
+      let nextState = reducer(
+        initialState,
+        setScriptLevelField(1, 3, 1, {bonus: true})
+      );
+      assert.equal(
+        nextState.activities[0].activitySections[2].scriptLevels[0].bonus,
+        true
       );
     });
   });
