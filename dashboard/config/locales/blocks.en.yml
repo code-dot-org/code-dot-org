@@ -1022,6 +1022,8 @@ en:
         text: "{SPRITE}"
       gamelab_comment:
         text: 'comment: {COMMENT}'
+      gamelab_cos:
+        text: cos {NUM}
       gamelab_countByAnimation:
         text: number of {SPRITE}
       gamelab_createNewSprite:
@@ -1272,6 +1274,8 @@ en:
           {SPRITE3N}{SPRITE3COSTUME}
       gamelab_showTitleScreen:
         text: show title screen {BREAK} title {TITLE} subtitle {SUBTITLE}
+      gamelab_sin:
+        text: sin {NUM}
       gamelab_spriteClicked:
         text: "{CONDITION} {SPRITE} clicked"
         options:
