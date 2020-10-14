@@ -299,16 +299,28 @@ WebLab.prototype.init = function(config) {
 };
 
 WebLab.prototype.onFinish = function(submit) {
-  const onComplete = submit
-    ? onSubmitComplete
-    : this.studioApp_.onContinue.bind(this.studioApp_);
+  var onComplete, testResult;
+  const isSuccessful = this.studioApp_.validateCodeChanged(this.level);
+
+  if (isSuccessful) {
+    testResult = TestResults.FREE_PLAY;
+    onComplete = submit
+      ? onSubmitComplete
+      : this.studioApp_.onContinue.bind(this.studioApp_);
+  } else {
+    testResult = TestResults.FREE_PLAY_UNCHANGED_FAIL;
+    onComplete = this.studioApp_.displayFeedback({
+      feedbackType: testResult,
+      level: this.level
+    });
+  }
 
   project.autosave(() => {
     this.studioApp_.report({
       app: 'weblab',
       level: this.level.id,
-      result: true,
-      testResult: TestResults.FREE_PLAY,
+      result: isSuccessful,
+      testResult: testResult,
       program: this.getCurrentFilesVersionId() || '',
       submitted: submit,
       onComplete: onComplete
