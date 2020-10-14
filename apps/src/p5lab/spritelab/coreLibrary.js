@@ -332,7 +332,7 @@ function whileClickEvent(inputEvent, p5Inst) {
 /**
  * @param {Object} inputEvent
  * @param p5Inst - the running P5 instance
- * Checks whether the condition of the event is met, and if so gives the arguments to pass to the user's
+ * Checks whether the condition of the event is met, and if so, returns the arguments to pass to the user's
  * callback function. An event can trigger multiple invocations of the callback in a single tick of the
  * draw loop, so this will return an array of callback arguments.
  * @return {Array.<Object>} Each element of this array gives the arguments that will be passed
