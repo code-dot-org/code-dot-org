@@ -141,7 +141,7 @@ class ActivityCard extends Component {
     const {activity} = this.props;
 
     return (
-      <div>
+      <div className="uitest-activity-card">
         <div
           style={{
             ...styles.activityHeader,
@@ -162,6 +162,7 @@ class ActivityCard extends Component {
               value={activity.displayName}
               style={{width: 150}}
               onChange={this.handleChangeDisplayName}
+              className="uitest-activity-name-input"
             />
           </label>
           <label style={styles.labelAndInput}>

@@ -142,18 +142,20 @@ export default class LessonToken extends Component {
                 )}
               </span>
             </span>
-            <div
-              style={styles.edit}
-              onClick={() => {
-                const win = window.open(
-                  `/lessons/${this.props.lesson.id}/edit`,
-                  '_blank'
-                );
-                win.focus();
-              }}
-            >
-              <i className="fa fa-pencil" />
-            </div>
+            {this.props.lesson.id && (
+              <div
+                style={styles.edit}
+                onClick={() => {
+                  const win = window.open(
+                    `/lessons/${this.props.lesson.id}/edit`,
+                    '_blank'
+                  );
+                  win.focus();
+                }}
+              >
+                <i className="fa fa-pencil" />
+              </div>
+            )}
             <div style={styles.remove} onMouseDown={this.handleRemove}>
               <i className="fa fa-times" />
             </div>
