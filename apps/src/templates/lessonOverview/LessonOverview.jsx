@@ -26,21 +26,14 @@ const styles = {
   },
   nav: {
     margin: '10px 0px',
-    fontSize: 18
-  },
-  navLink: {
-    color: color.purple,
-    margin: '0px 5px'
+    fontSize: 18,
+    color: color.purple
   }
 };
 
 class LessonOverview extends Component {
   static propTypes = {
     lesson: PropTypes.shape({
-      course: PropTypes.shape({
-        displayName: PropTypes.string.isRequired,
-        link: PropTypes.string.isRequired
-      }),
       unit: PropTypes.shape({
         displayName: PropTypes.string.isRequired,
         link: PropTypes.string.isRequired
@@ -62,16 +55,9 @@ class LessonOverview extends Component {
     const {lesson, announcements, isSignedIn, viewAs} = this.props;
     return (
       <div>
-        <div style={styles.nav}>
-          <span>{'<'}</span>
-          <a href={lesson.course.link} style={styles.navLink}>
-            {lesson.course.displayName}
-          </a>
-          <span style={{color: color.lighter_gray}}>{'/'}</span>
-          <a href={lesson.unit.link} style={styles.navLink}>
-            {lesson.unit.displayName}
-          </a>
-        </div>
+        <a href={lesson.unit.link} style={styles.nav}>
+          {`< ${lesson.unit.displayName}`}
+        </a>
         {isSignedIn && (
           <Announcements
             announcements={announcements}

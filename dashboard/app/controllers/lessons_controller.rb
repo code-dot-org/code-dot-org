@@ -6,10 +6,6 @@ class LessonsController < ApplicationController
   # GET /lessons/1
   def show
     @lesson_data = {
-      course: {
-        displayName: @lesson.script.unit_group.localized_title,
-        link: @lesson.script.course_link
-      },
       unit: {
         displayName: @lesson.script.localized_title,
         link: @lesson.script.link
