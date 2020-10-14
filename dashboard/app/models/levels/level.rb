@@ -520,8 +520,8 @@ class Level < ActiveRecord::Base
   def validate_level_key
     # First try to provide a helpful error message based on specific knowledge
     # of how the level key is currently computed.
-    unless ['custom', nil].includes(level_num) || game
-      errors.add(:game, 'game is required for non-custom levels')
+    unless ['custom', nil].include?(level_num) || game
+      errors.add(:game, 'required for non-custom levels')
     end
     # Then make sure we can compute a non-nil level key, in case the
     # the implementation changed to no longer match our assumptions.
