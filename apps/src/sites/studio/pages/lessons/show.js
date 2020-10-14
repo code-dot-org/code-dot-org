@@ -13,8 +13,6 @@ import {Provider} from 'react-redux';
 $(document).ready(function() {
   const lessonData = getScriptData('lesson');
 
-  console.log(lessonData);
-
   const store = getStore();
 
   if (lessonData.announcements) {

@@ -31,6 +31,9 @@ const styles = {
   navLink: {
     color: color.purple,
     margin: '0px 5px'
+  },
+  dropdown: {
+    color: color.purple
   }
 };
 
@@ -43,7 +46,13 @@ class LessonOverview extends Component {
       }),
       unit: PropTypes.shape({
         displayName: PropTypes.string.isRequired,
-        link: PropTypes.string.isRequired
+        link: PropTypes.string.isRequired,
+        lessons: PropTypes.arrayOf(
+          PropTypes.shape({
+            displayName: PropTypes.string.isRequired,
+            link: PropTypes.string.isRequired
+          })
+        )
       }),
       displayName: PropTypes.string.isRequired,
       overview: PropTypes.string,
@@ -56,6 +65,10 @@ class LessonOverview extends Component {
     announcements: PropTypes.arrayOf(announcementShape),
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     isSignedIn: PropTypes.bool.isRequired
+  };
+
+  navigateToLesson = event => {
+    window.location.href = event.target.value;
   };
 
   render() {
@@ -72,6 +85,13 @@ class LessonOverview extends Component {
             {lesson.unit.displayName}
           </a>
         </div>
+        <select style={styles.dropdown} onChange={this.navigateToLesson}>
+          {lesson.unit.lessons.map((lesson, index) => (
+            <option key={`lesson-${index + 1}`} value={lesson.link}>
+              {`${index + 1} ${lesson.displayName}`}
+            </option>
+          ))}
+        </select>
         {isSignedIn && (
           <Announcements
             announcements={announcements}
