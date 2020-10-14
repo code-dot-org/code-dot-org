@@ -20,6 +20,10 @@ class Pd::FitWeekendRegistrationBase < ActiveRecord::Base
 
   self.table_name = 'pd_fit_weekend_registrations'
 
+  YES = 'Yes'.freeze
+  NO = 'No'.freeze
+  YES_OR_NO = [YES, NO].freeze
+
   belongs_to :pd_application, class_name: 'Pd::Application::ApplicationBase'
 
   after_initialize :set_registration_year
@@ -35,10 +39,6 @@ class Pd::FitWeekendRegistrationBase < ActiveRecord::Base
   def set_registration_year
     self.registration_year = nil
   end
-
-  YES = 'Yes'.freeze
-  NO = 'No'.freeze
-  YES_OR_NO = [YES, NO].freeze
 
   def self.options
     {

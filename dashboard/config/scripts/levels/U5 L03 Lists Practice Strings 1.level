@@ -48,10 +48,10 @@
     "parent_level_id": 17897,
     "encrypted": "false",
     "mini_rubric": "false",
-    "map_reference": "/docs/concepts/app-lab/patterns/random-list-access/",
+    "map_reference": "/docs/concepts/patterns/random-list-access/",
     "reference_links": [
-      "/docs/concepts/app-lab/patterns/list-scrolling-pattern/",
-      "/docs/concepts/app-lab/patterns/random-list-access/"
+      "/docs/concepts/patterns/list-scrolling-pattern/",
+      "/docs/concepts/patterns/random-list-access/"
     ],
     "widget_mode": "false",
     "libraries_enabled": "false",

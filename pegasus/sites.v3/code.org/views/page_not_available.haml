@@ -1,0 +1,15 @@
+:ruby
+  @header["title"] = I18n.t(:page_not_available_title)
+
+%link{href: "/css/errors.css", rel: "stylesheet"}
+.error-parent
+  .error-child
+    %img{src: '/shared/images/sad-bee-avatar.png'}
+    %br
+    .error-message
+      %h1= I18n.t(:page_not_available_title)
+      = I18n.t(:page_not_available_description, support_email_link: 'mailto:support@code.org', markdown: :inline).html_safe
+      %br
+      %br
+      %a{href: '/'}
+        %button= I18n.t(:page_not_available_button)

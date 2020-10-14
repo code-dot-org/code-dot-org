@@ -10,6 +10,7 @@ export default storybook =>
       story: () => (
         <DialogFooter>
           <Button
+            __useDeprecatedTag
             href="#"
             text="Cancel"
             size={Button.ButtonSize.large}
@@ -24,6 +25,7 @@ export default storybook =>
       story: () => (
         <DialogFooter rightAlign>
           <Button
+            __useDeprecatedTag
             href="#"
             text="Cancel"
             size={Button.ButtonSize.large}
@@ -38,12 +40,18 @@ export default storybook =>
       story: () => (
         <DialogFooter>
           <Button
+            __useDeprecatedTag
             href="#"
             text="Cancel"
             size={Button.ButtonSize.large}
             color={Button.ButtonColor.gray}
           />
-          <Button href="#" text="Continue" size={Button.ButtonSize.large} />
+          <Button
+            __useDeprecatedTag
+            href="#"
+            text="Continue"
+            size={Button.ButtonSize.large}
+          />
         </DialogFooter>
       )
     },
@@ -55,6 +63,7 @@ export default storybook =>
         <DialogFooter>
           <div>
             <Button
+              __useDeprecatedTag
               href="#"
               text="Cancel"
               size={Button.ButtonSize.large}
@@ -62,8 +71,14 @@ export default storybook =>
             />
           </div>
           <div>
-            <Button href="#" text="One Fish" size={Button.ButtonSize.large} />
             <Button
+              __useDeprecatedTag
+              href="#"
+              text="One Fish"
+              size={Button.ButtonSize.large}
+            />
+            <Button
+              __useDeprecatedTag
               href="#"
               text="Two Fish"
               size={Button.ButtonSize.large}

@@ -44,14 +44,14 @@
     "mini_rubric": "false",
     "long_instructions": "<img src=\"https://images.code.org/39e0ecc8624e7229bcd4632c89671c37-image-1551729641397.gif\" style=\"float:right\" width=\"500\">\r\n\r\n# Do This\r\n\r\n**Step 3 - Add a Function:** The screen is updated each time an input is changed or interacted with. To prevent repeated code, use a function to update the screen.\r\n* Review the updateScreen() Pattern in the Help & Tips tab above.\r\n* Create the `updateScreen()` function\r\n* Inside the function, add a `console.log` block and set it to print `borderPictureName` to the console.\r\n\t* We will use this variable later in an if-statement\r\n* Also in the function, use blocks to display the values stored in the other variables. Every variable should be referenced once in this function. Here are the id's of the elements that will be updated: \r\n    * `\"quote_input\"` displays the text of the quote\r\n        * You will need to use two `setProperty`  blocks to set the font family and size of the quote\r\n        * What block will you use to set the text of the quote?\r\n    * `\"picture_background\"` displays the background color\r\n    \t* Use a `setProperty` block to set the background color\r\n    * `\"picture\"` displays the border picture\r\n    \t* Use `setImageURL` to set the border picture\r\n* Add a comment for your function. Explain its purpose and how it works. \r\n* Add a call to your function. There should be no warnings on the left hand side of your code.\r\n\r\n",
     "project_template_level_name": "U4 L11 Functions Make Template",
-    "map_reference": "/docs/concepts/app-lab/patterns/when-to-make-a-function/",
+    "map_reference": "/docs/concepts/patterns/when-to-make-a-function/",
     "preload_asset_list": null,
     "encrypted": "false",
     "encrypted_examples": [
 
     ],
     "reference_links": [
-      "/docs/concepts/app-lab/patterns/update-screen-pattern/"
+      "/docs/concepts/patterns/update-screen-pattern/"
     ]
   },
   "published": true,

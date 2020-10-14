@@ -38,19 +38,29 @@ A new poster set is available featuring Malala, Stephen Curry, Shakira and more!
 
 ## Use the Hour of Code logo to spread the word
 
-[![image]({{ hoc_logo_fit_200 }})]({{ hoc_logo }})
+[![image]({{ hoc_logo_fit_200 }})]({{ hoc_logo }}) [![image]({{ hdc_logo_fit_200 }})]({{ hdc_logo }})
 
 [Download hi-res versions](http://images.code.org/share/hour-of-code-logo.zip)
 
-**"Hour of Code" is trademarked. We don't want to prevent its usage, but we want to make sure it fits within a few limits:**
+**"Hour of Code" and "Hora del Código" are trademarked. We don't want to prevent their usage, but we do want to make sure usage fits within a few limits:**
 
-1. Jeder Verweis auf "Hour of Code" sollte so verwendet werden, dass nicht der Anschein erweckt wird, es sei Ihr eigenen Markenname oder Ihre Privatinitiative ist. **Good example**: "Participate in the Hour of Code™ at ACMECorp.com." **Bad example**: "Try Hour of Code by ACME Corp."
-2. Use a "TM" superscript in the most prominent places you mention "Hour of Code," both on your web site and in app descriptions.
-3. Include language on your page (or in the footer), including links to the CSEdWeek and [Code.org]({{ codeorg_link }}) websites, that says the following:
+1. Any reference to "Hour of Code" or "Hora del Código" should be used in a fashion that doesn't suggest that it's your own brand name, but rather referencing the Hour of Code as a grassroots movement.
+
+<ul style="margin-top: 0px">
+  <li>
+    <strong>Good example</strong>: "Participate in the Hour of Code™ at YOUR-COMPANY.com."
+  </li>
+  <li>
+    <strong>Bad example</strong>: "Try Hour of Code by YOUR-COMPANY."
+  </li>
+</ul>
+
+1. Use a "TM" superscript in the most prominent places you mention "Hour of Code" and a "Ⓡ" superscript in the most prominent places you mention "Hora del Código", both on your web site and in app descriptions.
+2. Include language on your page (or in the footer), including links to the CSEdWeek and [Code.org]({{ codeorg_link }}) websites, that says the following:
     
-    *“The 'Hour of Code™' is a nationwide initiative by Computer Science Education Week [csedweek.org] and Code.org [code.org] to introduce millions of students to one hour of computer science and computer programming.”*
+    *“The 'Hour of Code™'/'Hora del Código®' is a global initiative by Computer Science Education Week [csedweek.org] and Code.org [code.org] to introduce millions of students to one hour of computer science and computer programming.”*
 
-4. Keine Benützung von "Hour of Code" in App-Namen.
+3. No use of "Hour of Code" or "Hora del Código" in app names.
 
 <a id="stickers"></a>
 
@@ -134,11 +144,11 @@ See http://hourofcode.com/{{ country }} for details, and help spread the word. <
 
 **Subject line**: Local school joins mission to introduce students to computer science
 
-Computers are everywhere, changing every industry on the planet, but only 45% of all high schools teach computer science. Girls and minorities are severely underrepresented in computer science classes, and in the tech industry. Good news is, we’re on our way to change this.
+Computers are everywhere, changing every industry on the planet, but only 45% of all high schools teach computer science. Young women and students from marginalized racial and ethnic groups are severely underrepresented in computer science classes, and in the tech industry. Good news is, we’re on our way to change this.
 
 Mit der "Hour of Code" findet sich die Informatik auf Homepages von Google, MSN, Yahoo!, und Disney. Über 100 Partner unterstützen zusammen diese Bewegung. Every Apple Store in the world has hosted an Hour of Code. Even President Obama wrote his first line of code as part of the campaign.
 
-That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (December 3-9).
+Deshalb macht jeder einzelne der Schüler [SCHOOL NAME] bei der grössten Bildungsveranstaltung der Geschichte mit: Stunde des Codes, während der Computer Science Education Week (3. -9. Dezember).
 
 I'm writing to invite you to attend our kickoff assembly and to see kids start the activity on [DATE].
 

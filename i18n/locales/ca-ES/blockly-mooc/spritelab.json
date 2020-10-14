@@ -1,4 +1,10 @@
 {
+  "clicked": "",
+  "clickedSprite": "",
+  "subject": "",
+  "subjectSprite": "",
+  "object": "",
+  "objectSprite": "",
   "errorLoadingAnimation": "",
   "reinfFeedbackMsg": "Has acabat! Clica a \"Continuar\" per avançar al següent nivell.",
   "shareGame": "Comparteix el teu joc:",

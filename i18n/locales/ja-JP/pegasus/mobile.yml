@@ -12,12 +12,12 @@
   csedweek_dates: "2018年12月3～9日"
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Hour of Code</a>が始まります。先生方と主催者のみなさん、<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Hour of Code</a>の計画をしましょう'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">コンピュータサイエンスの先生ですか？他のCSEdWeekをご覧ください</a>'
+  csedweek_banner_teachers_text: "コンピュータサイエンスの先生ですか？他のCSEdWeekをご覧ください"
   n_have_learned_an_hoc: "<h1>さあ、</h1><h2>コードの時間</h2><h3># をはじめよう</h3>"
   anybody_can_learn: "誰でも学べます"
   learn_now: "今すぐ学ぶ"
   petition_message: "すべての学校の、すべての生徒が、コンピュータサイエンスを学ぶ機会を得るべきです"
   petition_sign_message: 'ご賛同いただけるのであれば、お名前を登録し、 # 名が参加するメーリングリストにご参加ください。'
-  petition_sign_message_support: 'ご支援いただけるのであれば、お名前を登録し、 # 名が参加するメーリングリストにご参加下さい。'
   petition_join_others: '参加する # ほか'
   name: "名前"
   email: "Eメール"
@@ -26,7 +26,7 @@
   twentyhours_heading: "コンピュータサイエンスコースを紹介する"
   twentyhours_text: "初めてのHour of Codeを修了しましたか？フォローアップコースでコンピュータサイエンスやプログラミング概念をさらに学びましょう。"
   og_title: '全ての子供に機会を得る権利があります'
-  og_title_soon: "もうすぐHour of Codeです"
+  og_title_soon: "Hour of Code（アワー オブ コード）が近づいています。"
   og_title_here: "Hour of Codeがやってきた！"
   og_description: "すべての学校のすべての学生が、コンピュータ サイエンスを学ぶ機会を得られる。それはすべてを変えるでしょう。"
   og_description_celeb: "新しいチュートリアルに挑戦し、1人もしくはクラスで著名人とのビデオチャットを勝ちとりましょう！"
@@ -148,6 +148,7 @@
   thanks_for_submitting: "ご提出ありがとうございます ！"
   if_you_enjoyed: "楽しく学べたら、友達にも勧めてみてください！私たちは世の中のみんなが学んでほしいと思っています"
   personalize_certificate: "証明書のカスタマイズする"
+  print_certificates: "証明書を印刷する"
   share_achievement: "あなたの成果を共有する"
   beyond_hour_message: "<a href='http://studio.code.org'>他のコース</a>を継続するか、<a href='/learn/beyond'>１時間を超えてさらに学ぶ</a>をご覧ください。"
   leaderboards_for_hoc: "Hour of Codeが行われている場所"
@@ -229,7 +230,7 @@
   studiobar_elementary_title: "初級コース"
   studiobar_elementary_body: "K&#8209;5 の生徒のための、3つの新しいコース"
   studiobar_dance_title: "ダンスパーティー"
-  studiobar_dance_body: "自分だけのダンスパーティーを作成して共有しよう"
+  studiobar_dance_body: "独自のダンスパーティーを作成し、共有します"
   studiobar_hoc_title: "Hour of Code"
   studiobar_hoc_body: "アングリーバードでコードを学ぶ"
   studiobar_flappy_title: "Flappyのコード"
@@ -281,7 +282,7 @@
   homepage_hero_text_stat_loc: "850万人の女の子がCode.orgに参加して学んでいます。"
   homepage_hero_text_stat_students: "コードスタジオの学生アカウント #student_count  "
   homepage_hero_text_stat_served: 'Hour of Code: #served 提供'
-  homepage_hero_hoc_is_coming: "もうすぐHour of Codeです"
+  homepage_hero_hoc_is_coming: "Hour of Code（アワー オブ コード）が近づいています。"
   homepage_hero_hoc_is_here: "Hour of Codeがやってきました"
   homepage_slot_text_hoc: "Hour of Code"
   homepage_slot_text_frozen: "「アナと雪の女王」のアナとエルサ"
@@ -304,6 +305,7 @@
   homepage_action_text_signpetition: "請願書に署名します。"
   homepage_action_text_wincelebritychat: "著名人とのチャットを勝ち取りましょう"
   homepage_signpetition_dropdown: "請願書に署名します &#x25BE;"
+  homepage_signpetition_dropdown_text: "賛成する"
   homepage_diversity_pledge: "ダイバーシティーを認める誓約をしてください。"
   homepage_banner_text_prizes: 'Hour of Code が12月７~13日にまたやって来ます。 '
   homepage_banner_link_prizes: '史上最大の学習イベントに参加します。 '
@@ -1391,6 +1393,8 @@
   header_teacher_community: "先生のコミュニティ"
   header_help_support: 'ヘルプとサポート '
   header_report_bug: "バグを報告"
+  header_legal_privacy: "プライバシー ポリシー"
+  header_legal_tos: "利用規約"
   header_tutorials: "チュートリアル"
   header_documentation: "ドキュメント"
   user_header_label: "やあ %{username}"
@@ -1443,6 +1447,8 @@
   applab_tile_teacher_guide: "教師用ガイドを表示"
   account_sign_up_email_opt_in: "当社のコースについての最新情報、各地域における機会、コンピュータサイエンスに関するニュースなどを電子メールを介して送付してもよろしいですか？"
   hoc_overview_dance_title: "ダンスパーティー"
+  hoc_overview_dance_subtitle: "お友達と共有するダンスパーティーをコード化します。Katy Perry、Madonna、J。Balvin、Sia、Keith Urban、Ciara、その他25人以上が参加します！"
+  hoc_overview_dance_2019_subtitle: "お友達と共有するため、ダンスパーティーをコード化します。ディスコでは、ケイティ・ペリー、ショーン・メンデス、パニックが中心となり、リルナスX、ジョナスブラザーズ、ニッキーミナージュや、その他34人以上が参加します。"
   hoc_overview_partner_activities_title: "パートナー提供によるアクティビティを追加"
   hoc_overview_partner_activities_body: "Hour of Codeウェブサイトは、年齢や経験レベルを問わずに利用可能な、Code.org とパートナーが開発した 100 以上のコンピューター科学のアクティビティを掲載しています。"
   hoc_overview_partner_activities_link: "アクティビティを表示"
@@ -1492,6 +1498,7 @@
   hoc2018_mc_homepage_try_it: "挑戦してみる"
   hoc2018_mc_back_journey: "Hour of Code（1時間プログラミング）に向けて、マインクラフトの最新アクティビティが出来上がりました。プログラミングを使ってマインクラフトの旅へ"
   hoc2018_mc_teacher_guide: "教師用ガイドを表示"
+  hoc2018_mc_minecraft_education: "マインクラフト エデュケーション\n"
   hoc2018_mc_continue_learning: "マインクラフトで学習をつづける"
   hoc2018_mc_go_to_mc_education: "マインクラフト　エデュケーションへ"
   hoc2018_mc_short_description: "創造性と問題解決スキルを発揮して、プログラムの力でお宝を探して水中世界を探検しましょう。"
@@ -1521,3 +1528,4 @@
   hoc2018_dance_video2: "ダンスパーティー - イベント"
   hoc2018_dance_video3: "ダンスパーティー - プロパティ"
   hoc2018_dance_video4: "ダンスパーティー - 設定"
+  homepage_slot_text_title_at_home: "自宅で学習する\n"

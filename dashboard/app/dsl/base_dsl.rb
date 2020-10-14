@@ -30,14 +30,12 @@ class BaseDSL
     @hash
   end
 
-  # after parse has been done, this function returns a hash of all the user-visible strings from this instance
+  # After parse has been done, this function returns a hash of all the
+  # user-visible strings from this instance.
+  #
+  # Override in subclass to provide class-specific functionality.
   def i18n_hash
-    # Filter out any entries with nil key or value
-    i18n_strings.select {|key, value| key && value}
-  end
-
-  # Implement in subclass
-  def i18n_strings
+    {}
   end
 
   def self.boolean(name)

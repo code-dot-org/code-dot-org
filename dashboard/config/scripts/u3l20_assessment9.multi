@@ -5,5 +5,5 @@ question 'Which of the following are not valid operators in Boolean expressions?
 wrong '<='
 wrong ' !='
 right '='
-wrong '>'
+wrong '\>'
 right '||'

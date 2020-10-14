@@ -4,7 +4,7 @@ type 'multi2'
 
 question 'Which two of the following programming statements did you use when you wrote turtle drawing programs?'
 right 'sequential statements'
-right 'function calls	'
+right 'function calls'
 wrong 'event handlers'
 wrong 'conditionals'
 

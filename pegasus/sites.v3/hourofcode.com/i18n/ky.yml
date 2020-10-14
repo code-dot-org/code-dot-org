@@ -10,7 +10,25 @@ ky:
   campaign_date_short: Дек. 4-10
   campaign_date_full: 4-10-декабрда
   campaign_date_year: '2017'
-  campaign_date_full_year: 2017, 4-10-декабрда
+  campaign_date_full_year: 2020, 7-13-декабрда
+  latam_campaign_date_start_short: Oct. 1
+  latam_campaign_date_start_long: October 1
+  latam_campaign_date_short: Oct. 1 - Dec. 18
+  latam_campaign_date_full: October 1 - December 18
+  latam_campaign_date_year: '2017'
+  latam_campaign_date_full_year: October 1, 2020 - December 18, 2020
+  europe_campaign_date_start_short: Oct. 10
+  europe_campaign_date_start_long: October 10
+  europe_campaign_date_short: Oct. 10-25
+  europe_campaign_date_full: October 10-25
+  europe_campaign_date_year: '2017'
+  europe_campaign_date_full_year: October 10-25, 2020
+  africa_campaign_date_start_short: Oct. 1
+  africa_campaign_date_start_long: October 1
+  africa_campaign_date_short: Oct. 1-31
+  africa_campaign_date_full: October 1-31
+  africa_campaign_date_year: '2017'
+  africa_campaign_date_full_year: October 1-31, 2020
   hoc2019_header: Learn computer science. Change the world.
   hoc2019_header_line1_mobile: Learn computer science.
   hoc2019_header_line2_mobile: Change the world.
@@ -26,38 +44,97 @@ ky:
   social_hoc2019_dance: Featuring Katy Perry, Shawn Mendes, Panic! At The Disco, Lil
     Nas X, Jonas Brothers, Nicki Minaj, and 34 more!
   oceans_landing_title: AI for Oceans
-  oceans_landing_description: 'Explore machine learning by teaching “A.I.” to recognize
-    fish. #CSforGood'
-  oceans_landing_specs: English only | Ages 11+
+  oceans_landing_description: Learn about machine learning and ethical use of AI.
+  cs_for_good_hashtag: "#CSforGood"
+  oceans_landing_specs: Available in 25+ languages | Grades 3+
+  oceans_landing_explanation: Computer science is about so much more than coding!
+    Learn about artificial intelligence (AI), machine learning, training data, and
+    bias, while exploring ethical issues and how AI can be used to address world problems.
+    Enjoy Code.org's first step in a new journey to teach more about AI. When you
+    use the AI for Oceans activity you are training real machine learning models.
+    <a href='#behind-the-scenes'>Learn more</a>.
+  oceans_landing_explanation_markdown: Computer science is about so much more than
+    coding! Learn about artificial intelligence (AI), machine learning, training data,
+    and bias, while exploring ethical issues and how AI can be used to address world
+    problems. Enjoy Code.org's first step in a new journey to teach more about AI.
+    When you use the AI for Oceans activity you are training real machine learning
+    models. [Learn more](#behind-the-scenes).
   oceans_landing_teacher_resources: Teacher Resources
   oceans_landing_teacher_resources_desc: Lesson plans and activities to help you teach
     AI, machine learning, training data, and bias, while exploring ethical issues.
   oceans_landing_resource_button: View Resources
-  oceans_landing_cs_for_good: CS For Good
+  oceans_landing_cs_for_good: CS for Good
   oceans_landing_cs_for_good_desc: Resources to help students understand the role
     computer science could play in creating a more equitable world.
-  oceans_landing_learn_more: Learn more about AI and Machine Learning
-  social_hoc2019_oceans_title: 'AI for Oceans #CSForGood'
+  oceans_landing_videos: Videos about AI and Machine Learning
+  oceans_behind_the_scenes: 'AI for Oceans: Behind the Scenes'
+  oceans_behind_the_scenes_1: Levels 2-4 use a pretrained model provided by the <a
+    href="https://www.tensorflow.org/" >TensorFlow</a> <a href="https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md">
+    MobileNet </a> project. A MobileNet model is a <a href="https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks">convolutional
+    neural network</a> that has been trained on <a href="http://www.image-net.org/">ImageNet</a>,
+    a dataset of over 14 million images hand-annotated with words such as "balloon"
+    or "strawberry". In order to customize this model with the labeled training data
+    the student generates in this activity, we use a technique called <a href="https://en.wikipedia.org/wiki/Transfer_learning">Transfer
+    Learning</a>. Each image in the training dataset is fed to MobileNet, as pixels,
+    to obtain a list of annotations that are most likely to apply to it. Then, for
+    a new image, we feed it to MobileNet and compare its resulting list of annotations
+    to those from the training dataset. We classify the new image with the same label
+    (such as "fish" or "not fish") as the images from the training set with the most
+    similar results.
+  oceans_behind_the_scenes_1_markdown: Levels 2-4 use a pretrained model provided
+    by the [TensorFlow](https://www.tensorflow.org/) [MobileNet](https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md)
+    project. A MobileNet model is a [convolutional neural network](https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks)
+    that has been trained on [ImageNet](http://www.image-net.org/), a dataset of over
+    14 million images hand-annotated with words such as "balloon" or "strawberry".
+    In order to customize this model with the labeled training data the student generates
+    in this activity, we use a technique called [Transfer Learning](https://en.wikipedia.org/wiki/Transfer_learning).
+    Each image in the training dataset is fed to MobileNet, as pixels, to obtain a
+    list of annotations that are most likely to apply to it. Then, for a new image,
+    we feed it to MobileNet and compare its resulting list of annotations to those
+    from the training dataset. We classify the new image with the same label (such
+    as "fish" or "not fish") as the images from the training set with the most similar
+    results.
+  oceans_behind_the_scenes_2: Levels 6-8 use a <a href="https://en.wikipedia.org/wiki/Support-vector_machine">Support-Vector
+    Machine</a> (SVM). We look at each component of the fish (such as eyes, mouth,
+    body) and assemble all of the metadata for the components (such as number of teeth,
+    body shape) into a vector of numbers for each fish. We use these vectors to train
+    the SVM. Based on the training data, the SVM separates the "space" of all possible
+    fish into two parts, which correspond to the classes we are trying to learn (such
+    as "blue" or "not blue").
+  oceans_behind_the_scenes_2_markdown: Levels 6-8 use a [Support-Vector Machine](https://en.wikipedia.org/wiki/Support-vector_machine)
+    (SVM). We look at each component of the fish (such as eyes, mouth, body) and assemble
+    all of the metadata for the components (such as number of teeth, body shape) into
+    a vector of numbers for each fish. We use these vectors to train the SVM. Based
+    on the training data, the SVM separates the "space" of all possible fish into
+    two parts, which correspond to the classes we are trying to learn (such as "blue"
+    or "not blue").
+  social_hoc2019_oceans_title: 'AI for Oceans #CSforGood'
   social_hoc2019_oceans_desc: Learn about AI, machine learning, training data, and
     bias, while exploring ethical issues and how AI can be used to address world problems.
     Computer science is about so much more than coding! Enjoy Code.org's first step
     in a new journey to teach more about AI throughout our curriculum.
-  hoc_overview_oceans_tutorial_header: AI For Oceans
-  hoc_overview_oceans_tutorial_desc: Learn about AI, machine learning, training data,
-    and bias, while exploring ethical issues and how AI can be used to address world
-    problems.
+  hoc_overview_oceans_tutorial_header: AI for Oceans
+  hoc_overview_oceans_tutorial_desc: Learn about artificial intelligence (AI), machine
+    learning, training data, and bias, while exploring ethical issues and how AI can
+    be used to address world problems.
   ai_video_title_what_is_ai: What is AI?
+  ai_video_title_algorithm_bias: Fighting bias in algorithms
   ai_video_title_phone_knows_dog: How does your phone know this is a dog?
   ai_video_title_what_is_ml: What is Machine Learning?
   ai_video_title_ml_big_small_prickly: 'Machine Learning: Solving Problems Big, Small
     and Prickly'
   ai_video_title_ethics_of_ai: Ethics of AI
   ai_video_title_ml_human_bias: Machine Learning and Human Bias
+  ai_video_title_seeing_ai: 'Seeing AI: Making the visual world more accessible'
   activity: Activity
   name: Name
   description: Description
   audience: Audience
   ai_resource_header: Teach and Learn about AI
+  ai_resource_minecraft: Minecraft AI for Good
+  ai_resource_minecraft_desc: 'Access free resources including a lesson plan, videos,
+    computer science curriculum, and teacher trainings. (Requires Minecraft: Education
+    Edition)'
   ai_resource_ml_for_kids: Machine Learning for Kids
   ai_resource_ml_for_kids_desc: Train a machine learning model with text, numbers,
     or images, and use it to make games in Scratch.
@@ -76,18 +153,20 @@ ky:
   ai_audience_k12: K-12 (Reading required)
   ai_audience_hs: High school
   ai_activity_header: Activities Powered by AI and ML
+  ai_activity_seeing_ai: Seeing AI
+  ai_activity_seeing_ai_desc: A free app that narrates the world around you in a variety
+    of languages.
+  ai_activity_quick_draw: Quick, Draw!
+  ai_activity_quick_draw_desc: Can a neural network learn to recognize doodling?
   ai_activity_teachable: Teachable Machine
   ai_activity_teachable_desc: Train a computer to recognize your own images, sounds,
     and poses.
-  ai_activity_quick_draw: Quick, Draw!
-  ai_activity_quick_draw_desc: Can a neural network learn to recognize doodling?
   ai_activity_experiments: AI Experiments with Google
   ai_activity_experiments_desc: Start exploring machine learning through pictures,
     drawings, language, music, and more.
-  ai_activity_mixlab: MixLab
-  ai_activity_mixlab_desc: Make music using voice commands.
-  ai_activity_gaugan: GauGAN Beta
-  ai_activity_gaugan_desc: Paint photo-realistic landscapes with the help of AI.
+  ai_activity_zooniverse: Zooniverse - Snapshot Mountain Zebra
+  ai_activity_zooniverse_desc: Help protect the endangered Cape Mountain Zebra by
+    identifying the different animals in the images.
   codeorg_homepage_hoc2018_curriculum: Go further with <a href="%{studio_url}/courses"
     class="hoc2018-curriculum-link">Code.org courses</a>
   codeorg_homepage_hoc2018_dance_heading: Create your own <span class="highlight-word">Dance&nbsp;Party</span>
@@ -105,6 +184,18 @@ ky:
   hoc2018_tutorial_mchoc_description: Алекс менен Стивди бул Minecraft дүйнөсүнөн
     алып өтүү үчүн коддун блокторун колдонгула.
   codeorg_homepage_hoc2019_dance_heading: Try the new <span class="highlight-word">Dance&nbsp;Party!</span>
+  codeorg_homepage_hoc2019_dance_heading_markdown: Try the new **Dance&nbsp;Party!**
+  codeorg_homepage_special2020_body1: Support for parents and teachers facing school
+    closures.
+  codeorg_homepage_special2020_body2: See our suggested learning resources.
+  codeorg_homepage_special2020_body: Keep learning this summer! Take a look at our
+    resources for learning at home.
+  codeorg_homepage_remote2020_body: Are you teaching in a remote or socially-distanced
+    classroom this semester? View our resources.
+  codeorg_homepage_special2020_link_text: Get started
+  codeorg_homepage_code_break_body: Take a Code Break! Your weekly dose of inspiration,
+    community, and computer science.
+  codeorg_homepage_code_break_link_text: Көптү үйрөн
   cookie_banner_message: By continuing to browse our site or clicking "I agree," you
     agree to the storing of cookies on your computer or device.
   cookie_banner_more_information: See Code.org's Privacy Policy.
@@ -273,6 +364,7 @@ ky:
   how_to_nav_companies: Компанияларга
   how_to_nav_afterschool_educators: Мектептен тышкары үйрөтүүчүлөргө
   how_to_nav_volunteers: Ыктыярчыларга
+  how_to_nav_virtual: For virtual events
   whats_next_header: Эмки кадам?
   whats_next_description: Иш-чараңызга керектүү материалдарды жана кеңештерди жөнөтөбүз.
     <a href='http://code.org/learn'>Учурдагы жетектемени көргүлө</a> - бардык браузерлер,
@@ -349,6 +441,9 @@ ky:
     Hour of Code activities are available year-round. <a href='%{hoc_activities_url}'>Try
     an activity</a> or read our <a href='%{howto_guide_url}'>How-to guide</a> to plan
     an event for your class.
+  signup_registration_not_required_markdown: You don't need to register to participate!
+    The Hour of Code activities are available year-round. [Try an activity](%{hoc_activities_url})
+    or read our [How-to guide](%{howto_guide_url}) to plan an event for your class.
   signup_registration_closed: And every year in December, your class can join millions
     of students around the world celebrating Computer Science Education Week with
     the Hour of Code. We'll open registration for the annual celebration in October.
@@ -398,6 +493,7 @@ ky:
   signup_send_posters_address_placeholder: Бул адрес сиздин картаңызда бөлүшүлбөйт
   signup_event_type_in_school: Мектепте
   signup_event_type_out_of_school: Мектептен тышкары
+  signup_event_type_at_home: Home
   signup_submit_census_label: Кошуу
   signup_submit_census_error_message: Кечиресиздер. Ката кетти. Толтурманы кайра кошууга
     аракет кылгыла.
@@ -446,6 +542,7 @@ ky:
   map_warning: Код сааты картасы биринчи катталган 200 000 иш-чараны гана көрсөтөт.
     Бардык жарактуу адрес менен катталган иш-чараларды <a href='%{events_url}'>иш-чаралар
     бетинде көрсөңүздөр болот.</a>
+  map_warning_markdown: A full list of the events can be viewed on the [events page.](%{events_url})
   meta_tag_og_title: 'Код сааты: кыймылга кошул'
   meta_tag_og_description: Код сааты - 180+ өлкөдөн бардык курактагы он миллиондогон
     окуучулар катышкан, 45тен ашык тилде жеткиликтүү глобалдык кыймыл.
@@ -466,6 +563,13 @@ ky:
     майрамдоонун дүйнөлүк аракетине айланып кетти. Бул <a href='%{tutorials}'> жетектемелерди
     жана тапшырмаларды карагыла.</a> Бул өнөктөштүккө дүйнө боюнча <a href='%{partners}'>400
     өнөк</a> жана 200 000 мугалим колдоого алган.
+  hoc_faq_what_is_hoc_a_markdown: The Hour of Code started as a one-hour introduction
+    to computer science, designed to demystify "code", to show that anybody can learn
+    the basics, and to broaden participation in the field of computer science. It
+    has since become a worldwide effort to celebrate computer science, starting with
+    1-hour coding activities but expanding to all sorts of community efforts. Check
+    out the [tutorials and activities](%{tutorials}). This grassroots campaign is
+    supported by over [400 partners](%{partners}) and 200,000 educators worldwide.
   hoc_faq_last_year: Жетектемелерди байкап көргүлө
   hoc_faq_when_is_hoc_q: Код сааты качан болот?
   hoc_faq_when_is_hoc_a: Код сааты жыл сайын <a href='%{csedweek_url}'>Информатика
@@ -473,27 +577,51 @@ ky:
     күндөрү өтөт, бирок Код саатын жыл бою өткөзсөңүз болот. Информатика аптасы жыл
     сайын компүтердин пионери <a href='%{grace_hopper}'>Адмирал Грейс Мүррей Хоппердин</a>
     (1906-ж. 9-декабрь) туулган күнүндө анын салымын белгилөө катары өткөрүлөт.
+  hoc_faq_when_is_hoc_a_markdown: The Hour of Code takes place each year during [Computer
+    Science Education Week](%{csedweek_url}). The %{campaign_date_year} Computer Science
+    Education Week will be %{campaign_date_full}, but you can host an Hour of Code
+    all year-round. Computer Science Education Week is held annually in recognition
+    of the birthday of computing pioneer [Admiral Grace Murray Hopper](%{grace_hopper})
+    (December 9, 1906).
   hoc_faq_why_cs_q: Эмне үчүн компүтер илими?
   hoc_faq_why_cs_a: "<i>Ар бир</i> окуучунун компүтердик билим алуу мүмкүнчүлүгү болушу
     керек. Ал маселе чечүү, логика жана чыгармачылык жөндөмдөрдү калыптандырат. Эрте
     баштоо менен окуучулар 21-кылымдын иш жолунда ийгиликке жетишүүгө негиз сала алышат.
     <a href='%{stats_url}'>Бул жерден</a> кеңири статистка ала аласыз."
+  hoc_faq_why_cs_a_markdown: _Every_ student should have the opportunity to learn
+    computer science. It helps nurture problem-solving skills, logic and creativity.
+    By starting early, students will have a foundation for success in any 21st-century
+    career path. See more stats [here](%{stats_url}).
   hoc_faq_how_participate_q: Код саатына кантип катышсам болот?
   hoc_faq_how_participate_a: Кантип кылууну үйрөткөн жетектемебизден карап,<a href='/how-to'>пландаштырууну
     бул жерден баштагыла</a>. Код сааты иш-чарасын мектебиңерде, коомдоштукта &mdash;
     коммерциялык эмес кошумча окуу ийрими катары же жумушуңарда уюштурсаңар болот.
     Же %{campaign_date} күндөрү аны өзүңөр байкап көргүлө.
+  hoc_faq_how_participate_a_markdown: "[Start planning here](%{howto}) by reviewing
+    our how-to guide. You can organize an Hour of Code event at your school or in
+    your community — like in an extracurricular club, non-profit or at work. Or, just
+    try it yourself when %{campaign_date} arrives."
   hoc_faq_behind_hoc_q: Код саатынын артында кимдер турат?
   hoc_faq_behind_hoc_a: Код сааты - Код сааты жана Информатика аптасынын <a href='%{partner_url}'>Кеңешчи
     жана Байкоочу комитеттери </a>, аты аталбаган, бирок Код сааттын колдоо максатында
     &mdash; Microsoft, Apple, Amazon, Американын балдар жана кыздар клубдары жана
     College Board менен биргелешкен өнөктөр тарабынан башкарылат.
+  hoc_faq_behind_hoc_a_markdown: The Hour of Code is driven by the Hour of Code and
+    Computer Science Education Week [Advisory and Review Committees](%{partner_url})
+    as well as an unprecedented coalition of partners that have come together to support
+    the Hour of Code — including Microsoft, Apple, Amazon, Boys and Girls Clubs of
+    America and the College Board.
   hoc_faq_host_q: Код жазуу тууралуу эч нерсе билбейм. Иш-чарага катышсам болобу?
   hoc_faq_host_a: Албетте. Код сааты тапшырмалары өз алдынча аткарылат. Болгону <a
     href='%{codeorg_url}/learn'>учурдагы жетектемелерибизди байкап көргүлө</a>. Жаккан
     жетектемени алып, убакытын &mdash; белгилегиле, калганын биз кылабыз. Бизде бала
     бакчадан тартып, ар бир жаш курагына ылайыкташкан сабактар бар. Биздин <a href='/how-to'>кантип
     кылуу жетектемебизди</a> алып, пландаштырып баштасаңар болот.
+  hoc_faq_host_a_markdown: Of course. Hour of Code activities are self-guided. All
+    you have to do is [try our current tutorials](%{codeorg_url}/learn), pick the
+    tutorial you want, and pick an hour — we take care of the rest. We also have options
+    for every age and experience-level, from kindergarten and up. Start planning your
+    event by reading our [how to guide](%{howto}).
   hoc_faq_devices_q: Окуучуларга кандай түзмөктөр керек болот?
   hoc_faq_devices_a: Code.org жетектемелер брадык түзмөктөрдө жана браузерлерде иштейт.
     Code.org техникалык керектер тууралуу кеңири маалыматты <a href='%{codeorg_url}/educate/it'>
@@ -501,6 +629,11 @@ ky:
     жетектеменин <a href='%{codeorg_url}/learn'>%{partner_url}үйрөнүү</a> түшүндүрмөсүнөн
     таба аласыз. Мектебиңиз жетектемелерди камсыздай албаса, биз <a href='%{unplugged_url}'>офлайн
     тапшырмаларды</a> дагы сунуштай тургандыгыбызды унутпагыла!
+  hoc_faq_devices_a_markdown: Code.org tutorials work on all devices and browsers.
+    You can see more information about Code.org's tutorial tech needs [here](%{codeorg_url}/educate/it).
+    Tech needs for non-Code.org tutorials can be found on [%{partner_url}/learn](%{codeorg_url}/learn)
+    in the tutorial specific description. Don't forget we also offer [unplugged activities](%{unplugged_url})
+    if your school can't accommodate the tutorials!
   hoc_faq_need_computers_q: Ар бир катышуучуга компүтер керек болобу?
   hoc_faq_need_computers_a: Жок. Код саатынын компүтерде, смартфондо, планшетте иштеген
     жана компүтердин такыр кереги жок болгон да сабактары бар! Кайда болсоңор дагы,
@@ -512,21 +645,41 @@ ky:
     саатын бир өтсө болот. Видеолорду, тапшырмалардын чыгарылышын же суроолорго жоопторду
     чогуу көргүлө.<li><b>Офлайн иштөө.</b> Биз <a href='%{unplugged_url}'>компүтердин
     такыр кереги жок</a> сабактарды дагы сунуштайбыз.</ul>
+  hoc_faq_need_computers_a_markdown: |-
+    No. We have Hour of Code tutorials that work on PCs, smartphones, tablets, and some that require no computer at all! You can join wherever you are, with whatever you have.
+
+    _Here are a few options:_
+
+    - **Work in pairs.** [Research shows](%{pair_programming_research}) students learn best with [pair programming](%{pair_programming_video}), sharing a computer and working together. Encourage your students to double up.
+    - **Use a projected screen.** If you have a projector and screen for a Web-connected computer, your entire group can do an Hour of Code together. Watch video portions together and take turns solving puzzles or answering questions.
+    - **Go unplugged.** We offer [tutorials that require no computer](%{unplugged_url}) at all.
   hoc_faq_international_q: Мен <country>дамын. Кантип катышсам болот?
   hoc_faq_international_a: Код сааты иш-чарасын каалган киши уюштура алат. Былтыр
     дүйнөдөгү окуучулар Код саатына биригишти. Кошумча маалыматты <a href='/promote'>бул
     жерден</a> таба аласыз.
+  hoc_faq_international_a_markdown: Anyone can organize an Hour of Code event, anywhere
+    in the world. Last year, students worldwide joined together for the Hour of Code.
+    Find out more [here](%{promote}).
   hoc_faq_tutorial_q: Код саатынын сабактарын кантип түзсөм болот?
   hoc_faq_tutorial_a: Сабак түзгөн өнөк болгуңуз келсе, <a href='/tutorial-guidelines'>нускамаларды
     жана эрежелерди караңыз</a>. Биз өнөктөшүүнүн көптөн түрүн түзгүбүз келет, бирок
     негизги максатыбыз компүтерди жаңы үйрөнүп жаткан окуучулардын жана мугалимдердин
     тажрыйбасын оптималдаштыруу.
+  hoc_faq_tutorial_a_markdown: If you're interested in becoming a tutorial partner,
+    [see our guidelines and instructions](%{tutorial_guidelines}). We'd like to host
+    a variety of engaging options, but the primary goal is to optimize the experience
+    for students and teachers who are new to computer science.
   hoc_faq_account_q: Окуучулар каттоодон өтүп кириши керекпи?
   hoc_faq_account_a: Жок. Код саатын иштеп көрүү үчүн эч кандай эсептин же катталуунун
     кереги жок. Бирок<a href='%{codeorg_url}/learn/beyond'>курстун жылышын</a> сактап
     туруу үчүн эсеп керек болот. Ошондой эле, Код саатына катталуу автоматтык түрдө
     Code Studio эсебин түзбөйт. Окуучуларга эсеп түзгүңүз келсе, бул <a href='https://youtu.be/_smelV_KISE'>жетектемелерди</a>
     ээрчигиле.
+  hoc_faq_account_a_markdown: No. Absolutely no signup or login is required for students
+    to try the Hour of Code. Most of the [follow-on courses](%{codeorg_url}/learn/beyond)
+    require account creation to save student progress. Also, signing up for the Hour
+    of Code does NOT automatically create a Code Studio account. If you do want to
+    create accounts for your students, please follow these [instructions](https://youtu.be/_smelV_KISE).
   hoc_faq_high_school_q: Жогорку класстардын окуучулары менен кандай сабак өтсө болот?
   hoc_faq_high_school_a: Биздин Star Wars жана Minecraft сабактарыбыз жогорку класстын
     окуучуларына туура келет, өзгөчө Star Wars'тун JavaScript версиясы жана экөөнүн
@@ -535,12 +688,23 @@ ky:
     %{partner_url} үйрөнүп</a> баштоону сунуштайбыз. Жогорку класстын окуучуларды
     булардын бирин 30 мүнөт ичинде бүтүрүп, андан кийин Khan Academy же CodeHS сыяктуу
     JavaScript менен жасалган кыйыныраак сабактарды байкап көрүшсө болот.
+  hoc_faq_high_school_a_markdown: Our Star Wars and Minecraft tutorials are great
+    for high schoolers, especially the Star Wars JavaScript version and the free play
+    level on both tutorials. Alternately, we recommend trying one of the beginner
+    tutorials on [%{partner_url}/learn](%{codeorg_url}/learn) to start, such as the
+    tutorial with Angry Birds or with Anna and Elsa. A high school student should
+    be able to finish one of these in 30 minutes and can then try a more advanced
+    tutorial in JavaScript, such as Khan Academy or CodeHS.
   hoc_faq_scratch_q: Мен Код сааты үчүн Scratch колдоном, окуучуларым нотбук эмес
     iPad колдонушса кандай кылам?
   hoc_faq_scratch_a: Scratch планшеттерде иштебейт. Окуучуларыңыз жаш болушса, ScratchJR
     деген iPad колдонмосун пайдаланышса болот (эрте окугандарга). <a href='%{codeorg_url}/learn'>%{partner_url}Үйрөнүү</a>
     бөлүмүнүн сабактарынын арасынан Code.org'тун iPad менен иштеген сабактар же CodeSpark
     сыяктуу сабактарын таба аласыз.
+  hoc_faq_scratch_a_markdown: Scratch doesn't run on tablets. If your students are
+    young, they can use the ScratchJR iPad app (for early-readers). If you look at
+    the tutorials on [%{partner_url}/learn](%{codeorg_url}/learn), you can find other
+    tutorials that work on iPads - from Code.org, Tynker, Lightbot, or CodeSpark.
   hoc_faq_count_hoc_q: Код сааттары кандай саналат?
   hoc_faq_map_q: Эмнеге менин ордум картада көрүнбөйт?
   hoc_faq_map_a: Иш-чараңар Код саатынын картасында көрсөтүлбөгөнү үчүн кечирим сурайбыз.
@@ -550,11 +714,23 @@ ky:
     ошол жерден таап алсаңыз болот. Андан сырткары, миңдеген кишилер Код саатына катталышкандыктан,
     картанын жана иш-чаралардын тизмеси адатта 48 саатта бир жаңыртылат. Бир нече
     күндөн кийин кайра текшерип көргүлө!
+  hoc_faq_map_a_markdown: We're so sorry you aren't seeing your event on the Hour
+    of Code map. Because of the tens of thousands of organizers who sign up, the map
+    aggregates the data and displays one point for several events. If you click the
+    [events page](%{events_url}) link below the map you will be directed to a list
+    of all events by state and can find your event listed there. Additionally, given
+    the thousands of people signing up for the Hour of Code, the map and event list
+    usually takes 48 hours to update. Check back in a few days!
   hoc_faq_count_hoc_a: Код саатынын санагычы колдонуучуларды так эсептеген курал эмес.
     Код саатынын катышуучуларын эсептеп жатканда, окуучулардын уникалдуу IDсин эсептебейбиз,
     анткени алардан катталуу же эсебине кирүү талап кылынбайт. Натыйжасында, иш жүзүндө
     катышуучулардын саны азыраак же көбүрөөк дагы болушу мүмкүн. Кенен маалыматты
     <a href='%{codeorg_url}/loc'>бул жерден</a> окуңуз.
+  hoc_faq_count_hoc_a_markdown: The Hour of Code tracker isn't an exact measurement
+    of usage. We do not count unique student IDs perfectly when tracking participation
+    in the Hour of Code, especially because we don't require students to log in or
+    register. As a result, we both over-count and under-count participants at the
+    same time. Read all the details [here](%{codeorg_url}/loc).
   hoc_faq_one_hour_q: Бир саатта бир киши канча үйрөнө алат?
   hoc_faq_one_hour_a: Код саатынын максаты - бир саат ичинде кишинин компүтердин адиси
     кылып чыгаруу эмес. Бир саат, компүтердик илим жашына, билимине карабастан бардык
@@ -572,23 +748,42 @@ ky:
     мугалимдери аны үйрөтө ала тургандыгын түшүнгөн мектеп администрацияларына дагы
     айтсак болот.<br/><br/>  Эң негизгиси, бардык катышуучуларыбыз ушунун баарын кылса
     болоорун түшүнүшкөнүндө.
+  hoc_faq_one_hour_a_markdown: |-
+    The goal of the Hour of Code is not to teach anybody to become an expert computer scientist in one hour. One hour is only enough to learn that computer science is fun and creative, that it is accessible at all ages, for all students, regardless of background. The measure of success of this campaign is not in how much CS students learn - the success is reflected in broad participation across gender and ethnic and socioeconomic groups, and the resulting increase in enrollment and participation we see in CS courses at all grade levels. Millions of the participating teachers and students have decided to go beyond one hour -  to learn for a whole day or a whole week or longer, and many students have decided to enroll in a whole course (or even a college major) as a result.
+
+    Besides the students, another "learner" is the educator who gains the confidence after one hour that they can teach computer science even though they may not have a college degree as a computer scientist. Tens of thousands of teachers decide to pursue computer science further, either attending PD or offering follow-on online courses, or both. And this applies to school administrators too, who realize that computer science is something their students want and their teachers are capable of.
+
+    Above all, what all participants can learn in an hour is that we can do this.
   hoc_faq_more_questions_q: Дагы суроолоруңуз барбы?
   hoc_faq_more_questions_a: "<a href='http://support.code.org'>Колдоо форумубуздан</a>
     жооп издеп көрүңүз."
+  hoc_faq_more_questions_a_markdown: Try finding an answer in our [support forum](http://support.code.org).
   hoc_faq_keep_learning_q: Код саатынан кийин окуумду кантип улантсам болот?
   hoc_faq_keep_learning_a: Код саатын каалаган киши каалаган учурда уюштура алат.
     Жетектемелер жана окутуу пландары жыл бою сайтта жеткиликтүү. <a href='/promote'>Биздин
     ресурстар</a> барагынан иш-чараны кантип өткөзүү жетектемелерди жана Код сааты
     иш-чараңарды ийгиликтүү өткөзүү үчүн башка жардамчы материалдарды табасыңар.
+  hoc_faq_keep_learning_a_markdown: Anyone can host an Hour of Code at any time. The
+    tutorials stay up year-round. You can expect all our tutorials and curriculum
+    to be available on our site in perpetuity. Please go to [our resources](%{promote})
+    for event how-to guides and other resources to help make your Hour of Code event
+    a success.
   hoc_faq_certificates_q: Окуучуларга сертификаттарды кайдан бастырсам болот?
   hoc_faq_certificates_a: "<a href='%{codeorg_url}/certificates'>Сертификаттар барагына</a>
     кирип, бүт класска алдын ала сертификаттарды бастырып алсаңар болот. Ошондой эле,
     Minecraft сабагын өткөн окуучуларга <a href='%{codeorg_url}/certificates?course=mc'>атайын
     сертификаттарды</a> бастырып алсаңар болот."
+  hoc_faq_certificates_a_markdown: Go to our [certificates page](%{codeorg_url}/certificates)
+    where you can print certificates for your entire class ahead of time. You can
+    also print out [special certificates](%{codeorg_url}/certificates?course=mc) for
+    students doing the Minecraft tutorial.
   hoc_faq_logo_q: Код сааты энбелгисин же атын колдонууда кандай чектөөлөр бар?
   hoc_faq_logo_a: '"Код сааты" - соода маркасы. Биз анын колдонулушун тыйгыбыз келбейт,
     бирок бир катар чектөөлөрдүн сакталышы зарыл. Бул жердеги <a href=''https://support.code.org/hc/en-us/articles/215831637-Are-there-limitations-of-how-I-can-use-the-Hour-of-Code-logo-''>жетектемени
     карагыла</a>.'
+  hoc_faq_logo_a_markdown: Hour of Code is trademarked. We don't want to prevent its
+    usage, but we want to make sure its usage fits within a few limits. Please see
+    [these guidelines for usage](%{logo_url}).
   stats_hoc_2013_image_alt: 2013-ж. Код саатынын статистикасы
   stats_growth: 15 млн. колдонуучуга эң тез жеткен учур болгон.
   stats_i18n: Окуучулар 45 тилде окушат
@@ -604,6 +799,8 @@ ky:
   stats_females: Аялдардын жогорку мектептеги, университеттеги жана жумуштагы компүтердик
     курстарга катышуусу 20% гана түзөт.
   stats_females_more: Код саатында аялдар <b>катышуучулардын 50%</b> түзүшөт!
+  stats_females_more_markdown: During the Hour of Code, female students make up **50%
+    of all participants**!
   stats_nina: '"Күнүгө бирдей натыйжа - &mdash; 100% катышуу" - Нина Никольс Пери,
     мугалим'
   stats_student: '"Бул <b>жашоодо бир келген мүмкүнчүлүк</b> экенин билем" - Мариана
@@ -725,14 +922,17 @@ ky:
     Код саатына катышкыла.
   learn_banner_beyond: Улантууну каалайсыңарбы? <a id='learn_banner_beyond'>Бир сааттан
     ашкыла</a>
+  learn_banner_beyond_markdown: Want to keep learning? [Go beyond an hour](%{url})
   learn_banner_teachers: 'Мугалимдер: <a id=''teacher_banner_host''>Код саатын өткүлө</a>
     же <a id=''teacher_banner_howto''>кантип өтүү жетектемесин окугула</a>'
+  learn_banner_teachers_markdown: 'Teachers: [Host an hour](%{host_url}) or [read
+    the How-To Guide](%{howto_url})'
   learn_robotics_banner_heading: Роботикс жана схемалар
   learn_robotics_banner_blurb: Роботтор же физикалык эсептөөчү жабдыктар барбы? Аларды
     алдында берилген тапшырмаларда колдонуп, бардык курактардагы окуучуларга реалдуу
     Код саатын өткөргүлө! Кээ бир тапшырмалар симуляцияны сунуш кылышат, ошондуктан
     силер ишти куралсыз баштай аласыңар.
-  tutorial_dance2019_name: Dance Party 2019
+  tutorial_dance2019_name: Dance Party
   tutorial_danceparty_name: Dance Party
   tutorial_chibitronics_name: 'Chibitronics: Illuminated Story'
   tutorial_athlete_name: Өздүк спорт оюнуңду коддо
@@ -2898,7 +3098,6 @@ ky:
     code through a playful action game and master computer science concepts like variables
     and functions. Create your own game in the Sandbox by remixing and expanding on
     existing game code. Then publish and share your game with friends and family.
-    A scripted lesson guide is included for teachers.
   tutorial_capost_longdescription: Бул санариптик ачык каттын жардамы менен HTML жана
     CSS'ди жеңил жана көңүлдүү жол менен үйрөнүп башта. Үй-бүлөңөр жана досторуңар
     менен бөлүшүүгө куттуктоочу ачык каттарды түзүш үчүн баш жазууларды, параграфтарды,
@@ -3181,11 +3380,11 @@ ky:
     циклдардын жана шарттуулуктардын негиздерин үйрөнөсүңөр!
   tutorial_hopgame_longdescription: "Көңүлдүү уланта бергиле! Оюн түзүү секциясына,
     хакатонго же класстык серияларга жардам бериш үчүн долбоорлордо негизделген колдонмону
-    пайдалангыла. \n\nАткар:\n1. Жолду өтүү\n2. Геометриялык секиргич\n3. Текшерүүчү
-    суроолорду түзгүч\n4. Кулап бараткан куш\n5. Метродо скейт тепкендер\n6. Бөлмөдөн
-    качуу\n\nАр биринде талкулоочу суроолор, дифференциациялар жана видео жетектемелери
-    бар. \n\nОкуучулар өз оюндарын ылайыкташтыруу үчүн силердин инструкцияларыңарды
-    өчүрүшү мүмкүн. Тажрыйбанын кереги жок."
+    пайдалангыла. \n\nБуларды жасагыла:\n1. Жолду өткүлө\n2. Геометриялык секиргич\n3.
+    Текшерүүчү суроолорду түзгүч\n4. Кулап бараткан куш\n5. Метродо скейт тепкендер\n6.
+    Бөлмөдөн качкыла\n\nАр бири талкулоочу суроолорду, дифференциацияларды жана видео
+    жетектемелерин камтыйт. \n\nОкуучулар өз оюндарын ылайыкташтыруу үчүн силердин
+    инструкцияларыңарды өчүрүшү мүмкүн. Тажрыйба талап кылынбайт."
   tutorial_icontrol_longdescription: |-
     Код саатына ылайыкташкан, окутуучулардын жардамчы сабагы - Sphero роботикс окуучуларга физикалык програмдоону изилдөөгө жол ачат.
 
@@ -4815,30 +5014,29 @@ ky:
   tutorial_astropi_longdescription: Code a message and check the ambient air temperature
     on board the ISS using an online simulator of the Astro Pi computer's Sense HAT.
   tutorial_rgart_longdescription: Looking for an easy and intuitive way to teach your
-    students to code? RoboGarden STEAM Activities has fused code practicing with STEAM
-    learning and gamified missions in multiple activities. In the art activity, the
-    student understand color mixing concepts while using coding blocks to solve challenges
+    students to code? RoboGarden STEAM has fused code practicing with STEAM learning
+    and gamified missions in multiple activities. In the art activity, the student
+    understand color mixing concepts while using coding blocks to solve challenges
     in the birthday party.
   tutorial_rgengineer_longdescription: Looking for an easy and intuitive way to teach
-    your students to code? RoboGarden STEAM Activities has fused code practicing with
-    STEAM learning and gamified missions in multiple activities. In the engineering
-    activity, the student learns basic robotics while using coding blocks to solve
-    challenges in the Christmas party.
+    your students to code? RoboGarden STEAM has fused code practicing with STEAM learning
+    and gamified missions in multiple activities. In the engineering activity, the
+    student learns basic robotics while using coding blocks to solve challenges in
+    the Christmas party.
   tutorial_rgmath_longdescription: Looking for an easy and intuitive way to teach
-    your students to code? RoboGarden STEAM Activities has fused code practicing with
-    STEAM learning and gamified missions in multiple activities. In the math activity,
-    the student practices counting, addition and subtraction while solving some coding
-    challenges.
+    your students to code? RoboGarden STEAM has fused code practicing with STEAM learning
+    and gamified missions in multiple activities. In the math activity, the student
+    practices counting, addition and subtraction while solving some coding challenges.
   tutorial_rgscience_longdescription: Looking for an easy and intuitive way to teach
-    your students to code? RoboGarden STEAM Activities has fused code practicing with
-    STEAM learning and gamified missions in multiple activities. In the science activity,
-    the student goes through a journey to the space solving multiple coding challenges
-    and know more about space elements and science facts.
+    your students to code? RoboGarden STEAM has fused code practicing with STEAM learning
+    and gamified missions in multiple activities. In the science activity, the student
+    goes through a journey to the space solving multiple coding challenges and know
+    more about space elements and science facts.
   tutorial_rgtech_longdescription: Looking for an easy and intuitive way to teach
-    your students to code? RoboGarden STEAM Activities has fused code practicing with
-    STEAM learning and gamified missions in multiple activities. In the technology
-    activity, the student goes through a journey to the volcanic islands solving multiple
-    coding challenges by understanding basic concepts of Technology.
+    your students to code? RoboGarden STEAM has fused code practicing with STEAM learning
+    and gamified missions in multiple activities. In the technology activity, the
+    student goes through a journey to the volcanic islands solving multiple coding
+    challenges by understanding basic concepts of Technology.
   tutorial_robotmagic3d_longdescription: Use your imagination to create an animated
     3D logo of your name, your favorite sports team or anything you want. Use code
     to make 3D models and letters come alive with fun. At the end you can download
@@ -4900,7 +5098,7 @@ ky:
     and area of a circle, but have you ever wondered where this number comes from
     or how to calculate it? In this coding activity you will randomly generate points
     similar to a very bad player shooting darts at a dart board. The percentage of
-    darts that land inside the circle can help us calculate Pi Then change the colors
+    darts that land inside the circle can help us calculate Pi. Then change the colors
     of the points just for fun!
   tutorial_stemplanetoids_longdescription: Did you know that the code behind the classic
     Asteroids and Lunar Lander games is simpler than you might think? Did you know
@@ -6922,7 +7120,7 @@ ky:
   tutorial_groklearningpython_string_platforms: Бардык жаңы браузерлер
   tutorial_htmltimetravel_string_platforms: Бардык жаңы браузерлер
   tutorial_hp_flappy_string_platforms: iPad
-  tutorial_appytappin_string_platforms: Офлайн
+  tutorial_appytappin_string_platforms: Бардык жаңы браузерлер
   tutorial_icipher_string_platforms: Офлайн
   tutorial_iguess_string_platforms: Android tablet, iPad, iPhone
   tutorial_imake_string_platforms: Офлайн
@@ -8271,7 +8469,7 @@ ky:
   tutorial_careconfigure_name: ReconFigure of Speech
   tutorial_rpiscratch_name: Scratch 3.0 phrasebook
   tutorial_ozaria_name: Ozaria by CodeCombat
-  tutorial_ttovum_name: Ovum City
+  tutorial_ttovum_name: Ovun City
   tutorial_ttpassage_name: The Passage
   tutorial_tynkerhtmlen_name: Affordable and Clean Energy (HTML)
   tutorial_ttfrog_name: Frog Squash
@@ -8323,6 +8521,7 @@ ky:
   tutorial_modtraits_name: Character Traits with GoPiGo
   tutorial_mee_name: 'Minecraft Hour of Code: AI for Good'
   tutorial_kuborobo_name: KUBO Robotics Coding Routes
+  tutorial_ai-oceans_name: AI for Oceans
   tutorial_scratchimagine_longdescription: Imagine a world where anything is possible,
     then bring it to life with Scratch!
   tutorial_codesterspsa_longdescription: Learn the basics of coding in Python while
@@ -8487,9 +8686,9 @@ ky:
     where you learn to type real code, navigate through 15 game levels, and make your
     own game in order to help save the world of Ozaria.
   tutorial_ttovum_longdescription: Can you control the chaos? Hack your way into the
-    cyberpunk world of Ovum City. Debug broken code, solve puzzles, and upgrade your
+    cyberpunk world of Ovun City. Debug broken code, solve puzzles, and upgrade your
     hardware as you explore self guided open world. Don't get caught by the drones!
-    It's up to you how Ovum City evolves.
+    It's up to you how Ovun City evolves.
   tutorial_ttpassage_longdescription: Immerse yourself in an alien world to help Ada
     escape unknown dangers. Play through this 2D platforming self-guided adventure
     and learn coding techniques along the way. Players will become familiar with coding
@@ -8686,6 +8885,9 @@ ky:
   tutorial_kuborobo_longdescription: In this activity, students put their logic and
     sequencing skills to the test as they use the Tagtiles to program their KUBO robot
     to travel to various locations on a printed map.
+  tutorial_ai-oceans_longdescription: Computer science is about so much more than
+    coding! Learn about AI, machine learning, training data, and bias, while exploring
+    ethical issues and how AI can be used to address world problems.
   tutorial_scratchimagine_language: Англисче, испанча
   tutorial_codesterspsa_language: Англисче
   tutorial_googlehero_language: Англисче, испанча
@@ -8788,6 +8990,7 @@ ky:
     Norwegian, Polish, Portuguese (Brazil), Portuguese (Portugal), Russian, Slovak,
     Spanish (Spain), Spanish (Mexico), Swedish, Turkish, Ukrainian
   tutorial_kuborobo_language: Англисче, испанча
+  tutorial_ai-oceans_language: Англисче
   tutorial_scratchimagine_string_detail_grades: 2+ класстар
   tutorial_codesterspsa_string_detail_grades: 6+ класстар
   tutorial_googlehero_string_detail_grades: 2-8-класстар
@@ -8886,6 +9089,7 @@ ky:
   tutorial_modtraits_string_detail_grades: 2+ класстар
   tutorial_mee_string_detail_grades: 2+ класстар
   tutorial_kuborobo_string_detail_grades: Pre-reader - Grades 8
+  tutorial_ai-oceans_string_detail_grades: Grades 3+
   tutorial_scratchimagine_string_platforms: Бардык жаңы браузерлер, Android планшети,
     iPad
   tutorial_codesterspsa_string_platforms: Бардык жаңы браузерлер, Android планшети,
@@ -8896,8 +9100,8 @@ ky:
     iPad
   tutorial_scratchcartoon_string_platforms: Бардык жаңы браузерлер, Android планшети,
     iPad
-  tutorial_codemonkeyjr_string_platforms: Android планшети, iPad, Android телефону,
-    iPhone
+  tutorial_codemonkeyjr_string_platforms: Бардык жаңы браузерлер, Android планшети,
+    iPad, Android телефону, iPhone
   tutorial_bananatales_string_platforms: Бардык жаңы браузерлер
   tutorial_scratchtales_string_platforms: Бардык жаңы браузерлер, Android планшети,
     iPad
@@ -9004,6 +9208,8 @@ ky:
   tutorial_modtraits_string_platforms: Бардык жаңы браузерлер
   tutorial_mee_string_platforms: iPad, Computers (Windows PC, Mac)
   tutorial_kuborobo_string_platforms: Офлайн
+  tutorial_ai-oceans_string_platforms: All modern browsers, modern Android tablets,
+    iPads, modern Android phones, iPhones
   tutorial_scratchimagine_string_detail_platforms: ''
   tutorial_codesterspsa_string_detail_platforms: ''
   tutorial_googlehero_string_detail_platforms: ''
@@ -9105,6 +9311,7 @@ ky:
   tutorial_modtraits_string_detail_platforms: GoPiGo
   tutorial_mee_string_detail_platforms: ''
   tutorial_kuborobo_string_detail_platforms: KUBO robot
+  tutorial_ai-oceans_string_detail_platforms: ''
   tutorial_scratchimagine_string_detail_programming_languages: Блоктор
   tutorial_codesterspsa_string_detail_programming_languages: Python
   tutorial_googlehero_string_detail_programming_languages: Блоктор
@@ -9216,6 +9423,7 @@ ky:
   tutorial_mee_string_detail_programming_languages: Блоктор
   tutorial_kuborobo_string_detail_programming_languages: Tagtiles that students piece
     together
+  tutorial_ai-oceans_string_detail_programming_languages: AI and Machine Learning
   school_not_found_heading: Мектебиңерди таба алган жокпуз. Кошумча маалымат бериңиз.
   school_name: Мектептин аты
   school_name_error: Мектептин аты керек.
@@ -9272,3 +9480,4 @@ ky:
   some: Айрым
   all: Баары
   dont_know: Мен билбейм
+  language_label: Language

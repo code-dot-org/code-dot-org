@@ -1,0 +1,13 @@
+name 'CSP U3L4 Virtual CFU'
+editor_experiment ''
+title 'Multiple Choice: Functions with Parameters'
+question 'Select the true statement about functions with parameters:'
+description ''
+wrong 'Parameters can only be used once within the body of a function.'
+wrong 'Functions with parameters create duplicated code.'
+right 'Parameters help generalize the solution of a specific problem.'
+wrong 'Values do not need to be provided to a function with parameters in any particular order.'
+
+markdown <<MARKDOWN
+
+MARKDOWN

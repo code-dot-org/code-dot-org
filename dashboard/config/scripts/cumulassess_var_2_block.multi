@@ -1,10 +1,10 @@
 name 'CumulAssess - Var 2 - block'
 question 'What will be displayed after running this code?'
-wrong '<pre>y + z + “ and “ + x</pre>'
-wrong '<pre>sentence</pre>'
-wrong '<pre>BoysHello Girls</pre>'
-wrong '<pre>Hello Boys and Girls</pre>'
-right '<pre>Hello Girls and Boys</pre>'
+wrong '`y + z + “ and “ + x`'
+wrong '`sentence`'
+wrong '`BoysHello Girls`'
+wrong '`Hello Boys and Girls`'
+right '`Hello Girls and Boys`'
 markdown <<MARKDOWN
 ![](https://images.code.org/8f41f2881be7116929af1c6d379f0ca9-image-1483466229189.png)
 MARKDOWN

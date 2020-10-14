@@ -5,8 +5,17 @@ description '/script_assets/2-3_images/unplugged/algorithms_1_q.png'
 height '100'
 
 question 'Choose an algorithm for the image provided.'
-wrong 'Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square'
-right 'Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram below square<br/>Put triangle right of parallelogram'
-wrong 'Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram'
-wrong 'Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle'
+wrong 'Start with a square  
+Put a triangle above the square  
+Put a triangle below the square'
+right 'Start with a square  
+Put a triangle right of square  
+Put a parallelogram below square  
+Put triangle right of parallelogram'
+wrong 'Start with a square  
+Put a parallelogram above the square  
+Put a triangle right of the parallelogram'
+wrong 'Start with a square  
+Put a triangle below the square  
+Put a parallelogram right of the triangle'
 

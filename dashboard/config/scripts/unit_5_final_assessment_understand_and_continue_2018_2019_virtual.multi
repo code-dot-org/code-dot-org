@@ -1,0 +1,10 @@
+name 'Unit 5 final assessment understand and continue_2018_2019_virtual'
+right 'I am planning to take the AP exam this year'
+right 'I am NOT planning to take the AP exam this year'
+right 'I am still not sure if I am going to take the exam'
+
+markdown <<MARKDOWN
+Quick survey question before continuing on...
+
+Please select the answer that most closely describes your intent to take the AP CS Principles exam this year.
+MARKDOWN

@@ -14,7 +14,10 @@ export default class ChoiceResponses extends React.Component {
     numRespondents: PropTypes.number,
     answerType: PropTypes.string.isRequired,
     possibleAnswers: PropTypes.array.isRequired,
-    otherText: PropTypes.string
+    possibleAnswersMap: PropTypes.object,
+    otherText: PropTypes.string,
+    otherAnswers: PropTypes.array,
+    facilitators: PropTypes.object
   };
 
   getTotalRespondents() {
@@ -75,10 +78,21 @@ export default class ChoiceResponses extends React.Component {
         <tr key={i}>
           <td>{this.formatPercentage(count / this.getTotalRespondents())}</td>
           <td style={{paddingLeft: '20px'}}>{count}</td>
-          <td style={{paddingLeft: '20px'}}>{possibleAnswer}</td>
+          <td style={{paddingLeft: '20px'}}>
+            {this.getPossibleAnswerText(possibleAnswer)}
+          </td>
         </tr>
       );
     });
+  }
+
+  getPossibleAnswerText(possibleAnswer) {
+    const {possibleAnswersMap} = this.props;
+    if (possibleAnswersMap && possibleAnswersMap[possibleAnswer]) {
+      return possibleAnswersMap[possibleAnswer];
+    } else {
+      return possibleAnswer;
+    }
   }
 
   renderPerFacilitatorAnswerCounts() {
@@ -90,13 +104,14 @@ export default class ChoiceResponses extends React.Component {
         0
       );
     });
+    const {facilitators} = this.props;
 
     const headerRow = (
       <tr key="header">
         <td />
         {facilitatorNames.map((name, i) => (
           <td colSpan={2} style={{paddingLeft: '20px'}} key={i}>
-            {name}
+            {(facilitators && facilitators[name]) || name}
           </td>
         ))}
         {showTotalCount && (
@@ -120,7 +135,7 @@ export default class ChoiceResponses extends React.Component {
 
       return (
         <tr key={i}>
-          <td>{possibleAnswer}</td>
+          <td>{this.getPossibleAnswerText(possibleAnswer)}</td>
           {countsByFacilitator.map((count, j) => [
             <td style={{paddingLeft: '20px'}} key={`${j}.count`}>
               {count}
@@ -155,20 +170,22 @@ export default class ChoiceResponses extends React.Component {
       this.props.answerType === 'scale'
         ? this.props.possibleAnswers.map(x => x.split(' ')[0])
         : this.props.possibleAnswers;
-    let otherAnswers;
-    if (this.props.perFacilitator) {
-      let givenAnswers = Object.values(this.props.answers).reduce(
-        (set, answers) => {
-          return new Set(Object.keys(answers).concat(...set.values()));
-        },
-        new Set()
-      );
-      otherAnswers = _.difference(givenAnswers, possibleAnswers);
-    } else {
-      otherAnswers = _.difference(
-        Object.keys(this.props.answers),
-        possibleAnswers
-      );
+    let otherAnswers = this.props.otherAnswers;
+    if (!otherAnswers) {
+      if (this.props.perFacilitator) {
+        let givenAnswers = Object.values(this.props.answers).reduce(
+          (set, answers) => {
+            return new Set(Object.keys(answers).concat(...set.values()));
+          },
+          new Set()
+        );
+        otherAnswers = _.difference(givenAnswers, possibleAnswers);
+      } else {
+        otherAnswers = _.difference(
+          Object.keys(this.props.answers),
+          possibleAnswers
+        );
+      }
     }
 
     return (

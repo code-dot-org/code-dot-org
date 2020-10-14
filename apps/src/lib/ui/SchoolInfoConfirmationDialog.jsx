@@ -41,7 +41,8 @@ class SchoolInfoConfirmationDialog extends Component {
         school_type: PropTypes.string,
         school_name: PropTypes.string,
         full_address: PropTypes.string
-      }).isRequired
+      }).isRequired,
+      mapboxAccessToken: PropTypes.string
     }).isRequired,
     onClose: PropTypes.func,
     isOpen: PropTypes.bool
@@ -97,12 +98,14 @@ class SchoolInfoConfirmationDialog extends Component {
           </p>
         </div>
         <Button
+          __useDeprecatedTag
           text={i18n.schoolInfoDialogUpdate()}
           color={Button.ButtonColor.blue}
           onClick={this.handleClickUpdate}
           id="update-button"
         />
         <Button
+          __useDeprecatedTag
           style={styles.button}
           text={i18n.yes()}
           color={Button.ButtonColor.orange}

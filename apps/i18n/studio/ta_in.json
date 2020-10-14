@@ -23,6 +23,7 @@
   "backgroundSpace": "வெளி",
   "backgroundWinter": "குளிர்காலம்",
   "bird": "பறவை",
+  "cat": "பூனை",
   "catActions": "செயல்கள்",
   "catControl": "சுழற்சிகள்",
   "catEvents": "நிகழ்வுகள்",
@@ -44,6 +45,7 @@
   "ifSprite": "நடிகர்",
   "incrementPlayerScore": "மதிப்பெண் பெறு",
   "itemRandom": "தொடர்பின்றி எடுக்கப்பட்ட",
+  "itemDuck": "வாத்து",
   "moveDirectionDown": "கீழே",
   "moveDirectionLeft": "இடது",
   "moveDirectionRight": "வலது",
@@ -74,8 +76,10 @@
   "playSoundWinPoint2": "புள்ளி ஜெயிக்கின்ற 2 ஒலி வாசி",
   "playSoundWood": "வன ஒலி வாசி",
   "projectileRandom": "தொடர்பின்றி எடுக்கப்பட்ட",
+  "projectileDuck": "வாத்து",
   "remove": "நீக்கு",
   "repeatDo": "செய்க",
+  "robot": "ரோபோக்கள்",
   "saySpriteChoices_16": "ஆம்",
   "saySpriteChoices_17": "இல்லை",
   "set": "அமை",
@@ -86,6 +90,7 @@
   "soundRandom": "தொடர்பின்றி எடுக்கப்பட்ட",
   "turnLeft": "இடதுபுறம் திரும்பவும்",
   "turnRight": "வலதுபுறம் திரும்பவும்",
+  "unicorn": "யூனிகார்ன்கள்",
   "waitSeconds": "விநாடிகள்",
   "whenDown": "கீழ் அம்பு அமுக்கும் பொழுது",
   "whenDownTooltip": "கீழ் அம்பு அமுக்கும் பொழுது பின்னே உள்ள செய்லகளை இயக்கு.",
@@ -95,5 +100,6 @@
   "whenRightTooltip": "வலது அம்பு அமுக்கும் பொழுது பின்னே உள்ள செயல்களை இயக்கு.",
   "whenUp": "மேல் அம்பு அமுக்கும் பொழுது",
   "whenUpTooltip": "மேல் அம்பு அமுக்கும் பொழுது பின்னே உள்ள செய்லகளை இயக்கு.",
-  "yes": "ஆம்"
+  "yes": "ஆம்",
+  "zombie": "சோம்பி"
 }

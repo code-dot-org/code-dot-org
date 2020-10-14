@@ -1,0 +1,31 @@
+name 'cspu5_assess1_drawingoutcome_2018_2019_virtual'
+wrong 'https://images.code.org/5aae4fb918093388bd3151828fa62010-image-1475971500656.png'
+wrong 'https://images.code.org/a3028c43bba2d33caff8c9ea5b96006f-image-1475971509472.png'
+right 'https://images.code.org/63e032c191df238f0da8f7b327778017-image-1475971518758.png'
+wrong 'https://images.code.org/b5bf16602c1368923a588d6784ace2e7-image-1475971524720.png'
+
+
+
+markdown <<MARKDOWN
+Consider the code segment below:
+
+![](https://images.code.org/13ff7279eb56f501c06632edeb9473dd-image-1518821206982.46.28 PM.png)
+
+Which of the following images is the most likely outcome of the drawing?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Content: Unit 5 Lesson 4** -- requires transfer/application of turtle and variable assignment from mathematical expression (in lesson 4)
+
+Going through the code line by line:
+
+* 1: variable "dist" is set to 100
+* 2: variable "radius" is set to dist/20 = 5
+* 3: The pen is put down to start drawing
+* 4: a for loop is initiated and will repeat the code inside it 4 times
+* 5: move forward 100 steps
+* 6: draws a dot with radius of 5
+* 7: turns 90 degrees to the right
+
+After lines 5-7 are repeated four times, a square is drawn with a small circle at each corner. Note that the dots drawn are a lot smaller than the length of the square.
+MARKDOWN

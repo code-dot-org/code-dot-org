@@ -276,6 +276,39 @@ class AnimationsTest < FilesApiTestBase
     )
   end
 
+  def test_copy_abusive_animation
+    source_image_filename = @api.randomize_filename('copy_source.png')
+    source_image_body = 'stub-source-contents'
+    dest_image_filename = @api.randomize_filename('copy_dest.png')
+
+    # Make sure we have a clean starting point
+    delete_all_animation_versions(source_image_filename)
+    delete_all_animation_versions(dest_image_filename)
+    upload(source_image_filename, source_image_body)
+
+    # Set the abuse score for the source image
+    @api.patch_abuse(10)
+    animation_bucket = AnimationBucket.new
+    assert_equal 10, animation_bucket.get_abuse_score(@channel_id, source_image_filename)
+
+    # Copy copy_source.png to copy_dest.png
+    @api.copy_object(source_image_filename, dest_image_filename)
+    assert successful?
+
+    # Verify that the destination image has the same abuse score
+    assert_equal 10, animation_bucket.get_abuse_score(@channel_id, dest_image_filename)
+
+    assert_newrelic_metrics %w(
+      Custom/ListRequests/AnimationBucket/BucketHelper.list
+      Custom/ListRequests/AnimationBucket/BucketHelper.app_size
+      Custom/ListRequests/AnimationBucket/BucketHelper.list
+      Custom/ListRequests/AnimationBucket/BucketHelper.object_and_app_size
+    )
+
+    soft_delete(source_image_filename)
+    soft_delete(dest_image_filename)
+  end
+
   def test_animation_versions
     filename = @api.randomize_filename('test.png')
     delete_all_animation_versions(filename)

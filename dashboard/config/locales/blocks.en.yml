@@ -366,10 +366,15 @@ en:
           FORMAT:
             '"border"': border
             '"inner"': inside square
+            '"diamond"': diamond
             '"circle"': circle
             '"grid"': grid
+            '"top"': top row
             '"row"': row
+            '"bottom"': bottom row
+            '"left"': left column
             '"column"': column
+            '"right"': right column
             '"x"': criss-cross
             '"plus"': plus
             '"random"': random
@@ -829,7 +834,7 @@ en:
             '"mid"': mid
             '"treble"': treble
       Dancelab_stopMapping:
-        text: "{SPRITE} stop {PROPERTY} following {RANGE}"
+        text: "{SPRITE} stops {PROPERTY} following {RANGE}"
         options:
           PROPERTY:
             '"scale"': size
@@ -845,7 +850,7 @@ en:
             '"mid"': mid
             '"treble"': treble
       Dancelab_stopMappingEach:
-        text: "{GROUP} stops {PROPERTY} following {RANGE}"
+        text: "{GROUP} stop {PROPERTY} following {RANGE}"
         options:
           GROUP:
             sprites: all
@@ -988,6 +993,14 @@ en:
         text: sprite {SPRITE} begins {BEHAVIOR}
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
+      gamelab_atTime:
+        text: at {N} {UNIT}
+        options:
+          UNIT:
+            '"seconds"': seconds
+            '"frames"': frames
+      gamelab_bounceOff:
+        text: "{SPRITE} bounces off {TARGET}"
       gamelab_changePropBy:
         text: change {SPRITE} {PROPERTY} by {VAL}
         options:
@@ -1006,9 +1019,13 @@ en:
       gamelab_clickedOn:
         text: when {SPRITE} clicked
       gamelab_clickedSpritePointer:
-        text: clicked {SPRITE}
+        text: "{SPRITE}"
       gamelab_comment:
         text: 'comment: {COMMENT}'
+      gamelab_cos:
+        text: cos {NUM}
+      gamelab_countByAnimation:
+        text: number of {SPRITE}
       gamelab_createNewSprite:
         text: "make a new sprite \n called {NAME} \n with costume {COSTUME} \n at {LOCATION}"
       gamelab_destroy:
@@ -1017,6 +1034,8 @@ en:
         text: being draggable
       gamelab_edgesDisplace:
         text: edges block {SPRITE} from moving
+      gamelab_getAllSprites:
+        text: all sprites
       gamelab_getProp:
         text: "{SPRITE} {PROPERTY}"
         options:
@@ -1033,10 +1052,53 @@ en:
           CHOICE:
             '"this"': this
             '"other"': other
+      gamelab_getTime:
+        text: time in {UNIT}
+        options:
+          UNIT:
+            '"seconds"': seconds
+            '"frames"': frames
       gamelab_hideTitleScreen:
         text: hide title screen
+      gamelab_isKeyPressed:
+        text: "{KEY} is pressed"
+        options:
+          KEY:
+            '"up"': up
+            '"down"': down
+            '"left"': left
+            '"right"': right
+            '"space"': space
+            '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': 'n'
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"y"': 'y'
+            '"z"': z
       gamelab_isTouchingEdges:
         text: "{SPRITE} is touching edges"
+      gamelab_isTouchingSprite:
+        text: "{SPRITE} is touching {TARGET}"
       gamelab_jumpTo:
         text: "{SPRITE} jump to {LOCATION}"
       gamelab_keyPressed:
@@ -1079,6 +1141,14 @@ en:
             '"z"': z
       gamelab_locationAt:
         text: 'location x: {X} y: {Y}'
+      gamelab_locationModifier:
+        text: "{DISTANCE} pixels {DIRECTION} of {LOCATION}"
+        options:
+          DIRECTION:
+            '"North"': North
+            '"East"': East
+            '"South"': South
+            '"West"': West
       gamelab_locationMouse:
         text: mouse location
       gamelab_locationOf:
@@ -1087,6 +1157,8 @@ en:
         text: "{LOCATION}"
       gamelab_makeNewSpriteAnon:
         text: make new {ANIMATION_NAME} sprite at {LOCATION}
+      gamelab_makeNumSprites:
+        text: make {NUM} new {ANIMATION_NAME} sprites
       gamelab_mirrorSprite:
         text: "{SPRITE} face {DIRECTION}"
         options:
@@ -1095,6 +1167,8 @@ en:
             '"left"': left
       gamelab_mouseLocation:
         text: mouse location
+      gamelab_moveBackward:
+        text: move {SPRITE} {DISTANCE} pixels backward
       gamelab_moveForward:
         text: move {SPRITE} {DISTANCE} pixels forward
       gamelab_moveInDirection:
@@ -1107,6 +1181,10 @@ en:
             '"West"': West
       gamelab_moveToward:
         text: move {SPRITE} pixels {DISTANCE} toward {TARGET}
+      gamelab_objectSpritePointer:
+        text: "{SPRITE}"
+      gamelab_patrollingUpDown:
+        text: patrolling up and down
       gamelab_playSound:
         text: playSound {SOUND}
       gamelab_pointInDirection:
@@ -1195,19 +1273,27 @@ en:
           collecting
           {SPRITE3N}{SPRITE3COSTUME}
       gamelab_showTitleScreen:
-        text: show title screen {BREAK} title {TITLE} text {SUBTITLE}
+        text: show title screen {BREAK} title {TITLE} subtitle {SUBTITLE}
+      gamelab_sin:
+        text: sin {NUM}
       gamelab_spriteClicked:
         text: "{CONDITION} {SPRITE} clicked"
         options:
           CONDITION:
             '"when"': when
             '"while"': while
+      gamelab_subjectSpritePointer:
+        text: "{SPRITE}"
+      gamelab_tumbling:
+        text: tumbling
       gamelab_turn:
         text: turn {SPRITE} {DIRECTION} {N} degrees
         options:
           DIRECTION:
             '"right"': right
             '"left"': left
+      gamelab_updateTitleWithColor:
+        text: show title screen {BREAK} title {TITLE} color {COLOR}
       gamelab_whenDownArrow:
         text: when down arrow pressed
       gamelab_whenKey:
@@ -1664,6 +1750,14 @@ en:
             '1': '1'
             '2': '2'
             '3': '3'
+      aalab_moveInDirection:
+        text: move {SPRITE} {DISTANCE} pixels {DIRECTION}
+        options:
+          DIRECTION:
+            '"North"': North
+            '"East"': East
+            '"South"': South
+            '"West"': West
       aalab_prompt:
         text: ask question {MESSAGE}
       aalab_scene:
@@ -1675,12 +1769,17 @@ en:
             '3': '3'
       aalab_setupStory:
         text: setup story
-      aalab_showHideSprite:
-        text: "{OPTION}{SPRITE}"
+      aalab_starwars_playSound:
+        text: play{OPTION}sound
         options:
           OPTION:
-            '"show"': show
-            '"hide"': hide
+            '"random"': random
+            '"R2-D2 random"': R2-D2 random
+            '"R2-D2 1"': R2-D2 1
+            '"R2-D2 2"': R2-D2 2
+            '"R2-D2 3"': R2-D2 3
+            '"R2-D2 4"': R2-D2 4
+            '"R2-D2 5"': R2-D2 5
       binary_drawBin:
         text: draw binary {BIN}
       binary_drawBinScreen:

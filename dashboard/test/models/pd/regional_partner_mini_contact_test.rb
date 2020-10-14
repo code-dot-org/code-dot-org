@@ -49,6 +49,36 @@ class Pd::RegionalPartnerMiniContactTest < ActiveSupport::TestCase
     assert_equal regional_partner.id, regional_partner_mini_contact.regional_partner_id
   end
 
+  test 'Matches regional partner with integer zip' do
+    # Use the same state & zip as the mini-contact factory's defaults.
+    state = 'OH'
+    zip = '45242'
+
+    regional_partner = create :regional_partner, name: "partner_OH_45242"
+    regional_partner.mappings.find_or_create_by!(state: state)
+    regional_partner.mappings.find_or_create_by!(zip_code: zip)
+
+    regional_partner_mini_contact = create :pd_regional_partner_mini_contact,
+      form_data: build(:pd_regional_partner_mini_contact_hash).merge("zip" => 45242).to_json
+
+    assert_equal regional_partner.id, regional_partner_mini_contact.regional_partner_id
+  end
+
+  test 'Matches regional partner with messy zip' do
+    # Use the same state & zip as the mini-contact factory's defaults.
+    state = 'OH'
+    zip = '45242'
+
+    regional_partner = create :regional_partner, name: "partner_OH_45242"
+    regional_partner.mappings.find_or_create_by!(state: state)
+    regional_partner.mappings.find_or_create_by!(zip_code: zip)
+
+    regional_partner_mini_contact = create :pd_regional_partner_mini_contact,
+      form_data: build(:pd_regional_partner_mini_contact_hash).merge("zip" => " \n 45242-1234 \n ").to_json
+
+    assert_equal regional_partner.id, regional_partner_mini_contact.regional_partner_id
+  end
+
   # If matched and regional partner has one pm, send matched email to pm
   test 'Matched with one regional partner pm' do
     regional_partner = create :regional_partner, name: "partner_OH_45242"
@@ -93,8 +123,8 @@ class Pd::RegionalPartnerMiniContactTest < ActiveSupport::TestCase
     create :pd_regional_partner_mini_contact, form_data: build(:pd_regional_partner_mini_contact_hash).to_json
     mail = ActionMailer::Base.deliveries.first
 
-    assert_equal ['liz.gauthier@code.org'], mail.to
-    assert_equal 'A person wants to connect with Code.org', mail.subject
+    assert_equal ['international@code.org'], mail.to
+    assert_equal 'A teacher wants to connect with Code.org', mail.subject
     assert_equal ['partner@code.org'], mail.from
     assert_equal 2, ActionMailer::Base.deliveries.count
     assert_sendable mail
@@ -105,8 +135,8 @@ class Pd::RegionalPartnerMiniContactTest < ActiveSupport::TestCase
     create :pd_regional_partner_mini_contact, form_data: build(:pd_regional_partner_mini_contact_hash).to_json
     mail = ActionMailer::Base.deliveries.first
 
-    assert_equal ['liz.gauthier@code.org'], mail.to
-    assert_equal 'A person wants to connect with Code.org', mail.subject
+    assert_equal ['international@code.org'], mail.to
+    assert_equal 'A teacher wants to connect with Code.org', mail.subject
     assert_equal ['partner@code.org'], mail.from
     assert_equal 2, ActionMailer::Base.deliveries.count
     assert_sendable mail

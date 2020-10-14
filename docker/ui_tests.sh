@@ -61,6 +61,7 @@ animations_s3_directory: animations_circle/$CIRCLE_BUILD_NUM
 assets_s3_directory: assets_circle/$CIRCLE_BUILD_NUM
 files_s3_directory: files_circle/$CIRCLE_BUILD_NUM
 sources_s3_directory: sources_circle/$CIRCLE_BUILD_NUM
+libraries_s3_directory: libraries_circle/$CIRCLE_BUILD_NUM
 " >> locals.yml
 echo "Wrote secrets from env vars into locals.yml."
 set -x

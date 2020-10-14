@@ -11,7 +11,25 @@ nl:
   campaign_date_short: 7-13 dec
   campaign_date_full: 7-13 december
   campaign_date_year: '2016'
-  campaign_date_full_year: 5-11 December, 2016
+  campaign_date_full_year: 7-13 December, 2020
+  latam_campaign_date_start_short: Oct. 1
+  latam_campaign_date_start_long: October 1
+  latam_campaign_date_short: Oct. 1 - Dec. 18
+  latam_campaign_date_full: October 1 - December 18
+  latam_campaign_date_year: '2016'
+  latam_campaign_date_full_year: October 1, 2020 - December 18, 2020
+  europe_campaign_date_start_short: Oct. 10
+  europe_campaign_date_start_long: October 10
+  europe_campaign_date_short: Oct. 10-25
+  europe_campaign_date_full: October 10-25
+  europe_campaign_date_year: '2016'
+  europe_campaign_date_full_year: October 10-25, 2020
+  africa_campaign_date_start_short: Oct. 1
+  africa_campaign_date_start_long: October 1
+  africa_campaign_date_short: Oct. 1-31
+  africa_campaign_date_full: October 1-31
+  africa_campaign_date_year: '2016'
+  africa_campaign_date_full_year: October 1-31, 2020
   hoc2019_header: Leer computervaardigheden. Verander de wereld.
   hoc2019_header_line1_mobile: Leer computervaardigheden.
   hoc2019_header_line2_mobile: Verander de wereld.
@@ -27,38 +45,97 @@ nl:
   social_hoc2019_dance: Featuring Katy Perry, Shawn Mendes, Panic! At The Disco, Lil
     Nas X, Jonas Brothers, Nicki Minaj, and 34 more!
   oceans_landing_title: AI for Oceans
-  oceans_landing_description: 'Explore machine learning by teaching “A.I.” to recognize
-    fish. #CSforGood'
-  oceans_landing_specs: English only | Ages 11+
+  oceans_landing_description: Learn about machine learning and ethical use of AI.
+  cs_for_good_hashtag: "#CSforGood"
+  oceans_landing_specs: Available in 25+ languages | Grades 3+
+  oceans_landing_explanation: Computer science is about so much more than coding!
+    Learn about artificial intelligence (AI), machine learning, training data, and
+    bias, while exploring ethical issues and how AI can be used to address world problems.
+    Enjoy Code.org's first step in a new journey to teach more about AI. When you
+    use the AI for Oceans activity you are training real machine learning models.
+    <a href='#behind-the-scenes'>Learn more</a>.
+  oceans_landing_explanation_markdown: Computer science is about so much more than
+    coding! Learn about artificial intelligence (AI), machine learning, training data,
+    and bias, while exploring ethical issues and how AI can be used to address world
+    problems. Enjoy Code.org's first step in a new journey to teach more about AI.
+    When you use the AI for Oceans activity you are training real machine learning
+    models. [Learn more](#behind-the-scenes).
   oceans_landing_teacher_resources: Teacher Resources
   oceans_landing_teacher_resources_desc: Lesson plans and activities to help you teach
     AI, machine learning, training data, and bias, while exploring ethical issues.
   oceans_landing_resource_button: View Resources
-  oceans_landing_cs_for_good: CS For Good
+  oceans_landing_cs_for_good: CS for Good
   oceans_landing_cs_for_good_desc: Resources to help students understand the role
     computer science could play in creating a more equitable world.
-  oceans_landing_learn_more: Learn more about AI and Machine Learning
-  social_hoc2019_oceans_title: 'AI for Oceans #CSForGood'
+  oceans_landing_videos: Videos about AI and Machine Learning
+  oceans_behind_the_scenes: 'AI for Oceans: Behind the Scenes'
+  oceans_behind_the_scenes_1: Levels 2-4 use a pretrained model provided by the <a
+    href="https://www.tensorflow.org/" >TensorFlow</a> <a href="https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md">
+    MobileNet </a> project. A MobileNet model is a <a href="https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks">convolutional
+    neural network</a> that has been trained on <a href="http://www.image-net.org/">ImageNet</a>,
+    a dataset of over 14 million images hand-annotated with words such as "balloon"
+    or "strawberry". In order to customize this model with the labeled training data
+    the student generates in this activity, we use a technique called <a href="https://en.wikipedia.org/wiki/Transfer_learning">Transfer
+    Learning</a>. Each image in the training dataset is fed to MobileNet, as pixels,
+    to obtain a list of annotations that are most likely to apply to it. Then, for
+    a new image, we feed it to MobileNet and compare its resulting list of annotations
+    to those from the training dataset. We classify the new image with the same label
+    (such as "fish" or "not fish") as the images from the training set with the most
+    similar results.
+  oceans_behind_the_scenes_1_markdown: Levels 2-4 use a pretrained model provided
+    by the [TensorFlow](https://www.tensorflow.org/) [MobileNet](https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md)
+    project. A MobileNet model is a [convolutional neural network](https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks)
+    that has been trained on [ImageNet](http://www.image-net.org/), a dataset of over
+    14 million images hand-annotated with words such as "balloon" or "strawberry".
+    In order to customize this model with the labeled training data the student generates
+    in this activity, we use a technique called [Transfer Learning](https://en.wikipedia.org/wiki/Transfer_learning).
+    Each image in the training dataset is fed to MobileNet, as pixels, to obtain a
+    list of annotations that are most likely to apply to it. Then, for a new image,
+    we feed it to MobileNet and compare its resulting list of annotations to those
+    from the training dataset. We classify the new image with the same label (such
+    as "fish" or "not fish") as the images from the training set with the most similar
+    results.
+  oceans_behind_the_scenes_2: Levels 6-8 use a <a href="https://en.wikipedia.org/wiki/Support-vector_machine">Support-Vector
+    Machine</a> (SVM). We look at each component of the fish (such as eyes, mouth,
+    body) and assemble all of the metadata for the components (such as number of teeth,
+    body shape) into a vector of numbers for each fish. We use these vectors to train
+    the SVM. Based on the training data, the SVM separates the "space" of all possible
+    fish into two parts, which correspond to the classes we are trying to learn (such
+    as "blue" or "not blue").
+  oceans_behind_the_scenes_2_markdown: Levels 6-8 use a [Support-Vector Machine](https://en.wikipedia.org/wiki/Support-vector_machine)
+    (SVM). We look at each component of the fish (such as eyes, mouth, body) and assemble
+    all of the metadata for the components (such as number of teeth, body shape) into
+    a vector of numbers for each fish. We use these vectors to train the SVM. Based
+    on the training data, the SVM separates the "space" of all possible fish into
+    two parts, which correspond to the classes we are trying to learn (such as "blue"
+    or "not blue").
+  social_hoc2019_oceans_title: 'AI for Oceans #CSforGood'
   social_hoc2019_oceans_desc: Learn about AI, machine learning, training data, and
     bias, while exploring ethical issues and how AI can be used to address world problems.
     Computer science is about so much more than coding! Enjoy Code.org's first step
     in a new journey to teach more about AI throughout our curriculum.
-  hoc_overview_oceans_tutorial_header: AI For Oceans
-  hoc_overview_oceans_tutorial_desc: Learn about AI, machine learning, training data,
-    and bias, while exploring ethical issues and how AI can be used to address world
-    problems.
+  hoc_overview_oceans_tutorial_header: AI for Oceans
+  hoc_overview_oceans_tutorial_desc: Learn about artificial intelligence (AI), machine
+    learning, training data, and bias, while exploring ethical issues and how AI can
+    be used to address world problems.
   ai_video_title_what_is_ai: What is AI?
+  ai_video_title_algorithm_bias: Fighting bias in algorithms
   ai_video_title_phone_knows_dog: How does your phone know this is a dog?
   ai_video_title_what_is_ml: What is Machine Learning?
   ai_video_title_ml_big_small_prickly: 'Machine Learning: Solving Problems Big, Small
     and Prickly'
   ai_video_title_ethics_of_ai: Ethics of AI
   ai_video_title_ml_human_bias: Machine Learning and Human Bias
+  ai_video_title_seeing_ai: 'Seeing AI: Making the visual world more accessible'
   activity: Activity
   name: Name
   description: Description
   audience: Audience
   ai_resource_header: Teach and Learn about AI
+  ai_resource_minecraft: Minecraft AI for Good
+  ai_resource_minecraft_desc: 'Access free resources including a lesson plan, videos,
+    computer science curriculum, and teacher trainings. (Requires Minecraft: Education
+    Edition)'
   ai_resource_ml_for_kids: Machine Learning for Kids
   ai_resource_ml_for_kids_desc: Train a machine learning model with text, numbers,
     or images, and use it to make games in Scratch.
@@ -77,18 +154,20 @@ nl:
   ai_audience_k12: K-12 (Reading required)
   ai_audience_hs: High school
   ai_activity_header: Activities Powered by AI and ML
+  ai_activity_seeing_ai: Seeing AI
+  ai_activity_seeing_ai_desc: A free app that narrates the world around you in a variety
+    of languages.
+  ai_activity_quick_draw: Quick, Draw!
+  ai_activity_quick_draw_desc: Can a neural network learn to recognize doodling?
   ai_activity_teachable: Teachable Machine
   ai_activity_teachable_desc: Train a computer to recognize your own images, sounds,
     and poses.
-  ai_activity_quick_draw: Quick, Draw!
-  ai_activity_quick_draw_desc: Can a neural network learn to recognize doodling?
   ai_activity_experiments: AI Experiments with Google
   ai_activity_experiments_desc: Start exploring machine learning through pictures,
     drawings, language, music, and more.
-  ai_activity_mixlab: MixLab
-  ai_activity_mixlab_desc: Make music using voice commands.
-  ai_activity_gaugan: GauGAN Beta
-  ai_activity_gaugan_desc: Paint photo-realistic landscapes with the help of AI.
+  ai_activity_zooniverse: Zooniverse - Snapshot Mountain Zebra
+  ai_activity_zooniverse_desc: Help protect the endangered Cape Mountain Zebra by
+    identifying the different animals in the images.
   codeorg_homepage_hoc2018_curriculum: Go further with <a href="%{studio_url}/courses"
     class="hoc2018-curriculum-link">Code.org courses</a>
   codeorg_homepage_hoc2018_dance_heading: Create your own <span class="highlight-word">Dance&nbsp;Party</span>
@@ -107,6 +186,18 @@ nl:
   hoc2018_tutorial_mchoc_description: Gebruik blokken code om Alex of Steve op avontuur
     te sturen door deze Minecraft wereld.
   codeorg_homepage_hoc2019_dance_heading: Probeer de nieuwe <span class="highlight-word">Dance&nbsp;Party!</span>
+  codeorg_homepage_hoc2019_dance_heading_markdown: Try the new **Dance&nbsp;Party!**
+  codeorg_homepage_special2020_body1: Support for parents and teachers facing school
+    closures.
+  codeorg_homepage_special2020_body2: See our suggested learning resources.
+  codeorg_homepage_special2020_body: Keep learning this summer! Take a look at our
+    resources for learning at home.
+  codeorg_homepage_remote2020_body: Are you teaching in a remote or socially-distanced
+    classroom this semester? View our resources.
+  codeorg_homepage_special2020_link_text: Get started
+  codeorg_homepage_code_break_body: Take a Code Break! Your weekly dose of inspiration,
+    community, and computer science.
+  codeorg_homepage_code_break_link_text: Meer informatie
   cookie_banner_message: By continuing to browse our site or clicking "I agree," you
     agree to the storing of cookies on your computer or device.
   cookie_banner_more_information: See Code.org's Privacy Policy.
@@ -276,6 +367,7 @@ nl:
   how_to_nav_companies: Voor bedrijven
   how_to_nav_afterschool_educators: Voor naschoolse opvang
   how_to_nav_volunteers: Voor vrijwilligers
+  how_to_nav_virtual: For virtual events
   whats_next_header: En nu?
   whats_next_description: We je materiaal en handige tips sturen voor je event. Er
     komen snel nieuwe tutorials van 2015 voor alle browsers en smartphones – of zelfs
@@ -355,6 +447,9 @@ nl:
     Hour of Code activities are available year-round. <a href='%{hoc_activities_url}'>Try
     an activity</a> or read our <a href='%{howto_guide_url}'>How-to guide</a> to plan
     an event for your class.
+  signup_registration_not_required_markdown: You don't need to register to participate!
+    The Hour of Code activities are available year-round. [Try an activity](%{hoc_activities_url})
+    or read our [How-to guide](%{howto_guide_url}) to plan an event for your class.
   signup_registration_closed: En elk jaar in december kan je klas zich aansluiten
     bij miljoenen leerlingen over de hele wereld die de computerwetenschappelijke
     onderwijsweek vieren met de Hour of Code. We openen de inschrijving voor de jaarlijkse
@@ -406,6 +501,7 @@ nl:
     kaart
   signup_event_type_in_school: In een school
   signup_event_type_out_of_school: Buiten de school
+  signup_event_type_at_home: Home
   signup_submit_census_label: Inzenden
   signup_submit_census_error_message: Onze excuses. Er is een fout opgetreden. Probeer
     het formulier opnieuw in te sturen.
@@ -456,6 +552,7 @@ nl:
   map_warning: De kaart van Hour of Code toont alleen de eerste 200.000 geregistreerde
     gebeurtenissen. Alle geregistreerde gebeurtenissen met een geldig adres kunnen
     worden bekeken op <a href='%{events_url}'> de evenementenpagina.</a>
+  map_warning_markdown: A full list of the events can be viewed on the [events page.](%{events_url})
   meta_tag_og_title: "'Hour of Code': Iedereen kan het leren"
   meta_tag_og_description: "'Hour of Code' is een wereldwijde beweging die tientallen
     miljoenen leerlingen wil bereiken in 180+ landen en in meer dan 30 talen. Leeftijd:
@@ -476,6 +573,13 @@ nl:
     dat iederen de basis kan leren. <a href='%{tutorials}'>Bekijk de handleidingen</a>.
     Deze vrijwilligerscampagne wordt ondersteund door meer dan <a href='%{partners}'>400
     partners</a> en 200.000 leerkrachten van over de hele wereld."
+  hoc_faq_what_is_hoc_a_markdown: The Hour of Code started as a one-hour introduction
+    to computer science, designed to demystify "code", to show that anybody can learn
+    the basics, and to broaden participation in the field of computer science. It
+    has since become a worldwide effort to celebrate computer science, starting with
+    1-hour coding activities but expanding to all sorts of community efforts. Check
+    out the [tutorials and activities](%{tutorials}). This grassroots campaign is
+    supported by over [400 partners](%{partners}) and 200,000 educators worldwide.
   hoc_faq_last_year: Probeer de tutorials
   hoc_faq_when_is_hoc_q: Wanneer is het 'Hour of Code'?
   hoc_faq_when_is_hoc_a: "'Hour of Code' vindt jaarlijks plaats tijdens <a href='%{csedweek_url}'>Computer
@@ -483,21 +587,40 @@ nl:
     maar je kunt het hele jaar door een 'Hour of Code' organiseren. Computer Science
     Education Week wordt jaarlijks gehouden rond de verjaardag van <a href='%{grace_hopper}'>Admiraal
     Grace Murray Hopper</a> (9 december 1906)."
+  hoc_faq_when_is_hoc_a_markdown: The Hour of Code takes place each year during [Computer
+    Science Education Week](%{csedweek_url}). The %{campaign_date_year} Computer Science
+    Education Week will be %{campaign_date_full}, but you can host an Hour of Code
+    all year-round. Computer Science Education Week is held annually in recognition
+    of the birthday of computing pioneer [Admiral Grace Murray Hopper](%{grace_hopper})
+    (December 9, 1906).
   hoc_faq_why_cs_q: Waarom Informatica?
   hoc_faq_why_cs_a: "<i>Elke</i> leerling moet de kans krijgen om te leren programmeren.
     Het helpt probleemoplossende vaardigheden, logica en creativiteit te ontwikkelen.
     Leerlingen krijgen door vroeg te beginnen de basis voor een succesvole hedendaagse
     loopbaan. Kijk voor meer informatie op <a href='http://code.org'>Code.org</a>."
+  hoc_faq_why_cs_a_markdown: _Every_ student should have the opportunity to learn
+    computer science. It helps nurture problem-solving skills, logic and creativity.
+    By starting early, students will have a foundation for success in any 21st-century
+    career path. See more stats [here](%{stats_url}).
   hoc_faq_how_participate_q: Hoe doe ik mee met 'Hour of Code'?
   hoc_faq_how_participate_a: "<a href='/how-to'>Begin hier met plannen</a> door onze
     handleiding door te nemen. Je kunt een 'Hour of Code' organiseren op jouw school
     of in je gemeenschap &mdash; zoals een naschoolse club, vrijwilligersorganisatie
     of op het werk. Of probeer het gewoon zelf op %{campaign_date}."
+  hoc_faq_how_participate_a_markdown: "[Start planning here](%{howto}) by reviewing
+    our how-to guide. You can organize an Hour of Code event at your school or in
+    your community — like in an extracurricular club, non-profit or at work. Or, just
+    try it yourself when %{campaign_date} arrives."
   hoc_faq_behind_hoc_q: Wie zit er achter 'Hour of Code'?
   hoc_faq_behind_hoc_a: "'Hour of Code' wordt georganiseerd door de <a href='%{partner_url}'>Raad
     van Advies</a> van Hour of Code en de Computer Science Education Week, met een
     nog nooit eerder vertoonde samenwerking van partners die 'Hour of Code' ondersteunen
     &mdash; onder andere Microsoft, Apple en Amazon."
+  hoc_faq_behind_hoc_a_markdown: The Hour of Code is driven by the Hour of Code and
+    Computer Science Education Week [Advisory and Review Committees](%{partner_url})
+    as well as an unprecedented coalition of partners that have come together to support
+    the Hour of Code — including Microsoft, Apple, Amazon, Boys and Girls Clubs of
+    America and the College Board.
   hoc_faq_host_q: Ik weet niets over programmeren. Kan ik nog steeds een evenement
     organiseren?
   hoc_faq_host_a: 'Natuurlijk. De ''Hour of Code''-activiteiten zijn doe-het-zelf.
@@ -505,11 +628,21 @@ nl:
     uit te proberen</a>: kies de tutorial, en kies een uur &mdash; wij zorgen voor
     de rest. We hebben mogelijkheden voor iedere leeftijd en ervaringsniveau, vanaf
     de kleuterschool. Ga van start door onze <a href=''/how-to''>handleiding te lezen</a>.'
+  hoc_faq_host_a_markdown: Of course. Hour of Code activities are self-guided. All
+    you have to do is [try our current tutorials](%{codeorg_url}/learn), pick the
+    tutorial you want, and pick an hour — we take care of the rest. We also have options
+    for every age and experience-level, from kindergarten and up. Start planning your
+    event by reading our [how to guide](%{howto}).
   hoc_faq_devices_q: Welke apparaten moet ik gebruiken voor mijn leerlingen?
   hoc_faq_devices_a: Code.org tutorials werken op alle apparaten en browsers. U kunt
     meer informatie over de Code.org tech needs tutorials vinden op < een href = '%{codeorg_url}/educatie/it'
     >. Tech needs voor non-Code.org tutorials kunt u vinden op <a href=''%{codeorg_url}/learn'>
     in de tutorial beschrijving. Vergeet niet dat wij ook unplugged activiteiten bieden!
+  hoc_faq_devices_a_markdown: Code.org tutorials work on all devices and browsers.
+    You can see more information about Code.org's tutorial tech needs [here](%{codeorg_url}/educate/it).
+    Tech needs for non-Code.org tutorials can be found on [%{partner_url}/learn](%{codeorg_url}/learn)
+    in the tutorial specific description. Don't forget we also offer [unplugged activities](%{unplugged_url})
+    if your school can't accommodate the tutorials!
   hoc_faq_need_computers_q: Heb ik een computer nodig voor iedere deelnemer?
   hoc_faq_need_computers_a: Nee. We hebben cursussen die werken op PC's, smartphones,
     tablets, en een paar waarvoor je helemaal geen computer nodig hebt! Je kunt meedoen
@@ -522,15 +655,30 @@ nl:
     samen een 'Hour of Code' doen. Kijk naar stukken video en los om de beurt opdrachten
     op of beantwoord vragen. <li><b>Ga draadloos</b> We hebben ook tutorials die <a
     href='%{unplugged_url}'>helemaal geen computer vereisen</a>.</ul>
+  hoc_faq_need_computers_a_markdown: |-
+    No. We have Hour of Code tutorials that work on PCs, smartphones, tablets, and some that require no computer at all! You can join wherever you are, with whatever you have.
+
+    _Here are a few options:_
+
+    - **Work in pairs.** [Research shows](%{pair_programming_research}) students learn best with [pair programming](%{pair_programming_video}), sharing a computer and working together. Encourage your students to double up.
+    - **Use a projected screen.** If you have a projector and screen for a Web-connected computer, your entire group can do an Hour of Code together. Watch video portions together and take turns solving puzzles or answering questions.
+    - **Go unplugged.** We offer [tutorials that require no computer](%{unplugged_url}) at all.
   hoc_faq_international_q: Ik ben in <country>. Hoe doe ik internationaal mee?
   hoc_faq_international_a: Iedereen kan een 'Hour of Code' organiseren, waar je ook
     bent. Vorig jaar deden leerlingen van over de hele wereld een 'Hour of Code'.
     Lees <a href='/promote'>hier</a> meer.
+  hoc_faq_international_a_markdown: Anyone can organize an Hour of Code event, anywhere
+    in the world. Last year, students worldwide joined together for the Hour of Code.
+    Find out more [here](%{promote}).
   hoc_faq_tutorial_q: Hoe kan ik een 'Hour of Code'-tutorial maken?
   hoc_faq_tutorial_a: Als je tutorial-partner wil worden, <a href='targetHOC'>lees
     onze richtlijnen en instructies</a>. We bieden graag een veelheid aan mogelijkheden,
     maar het hoofddoel is de ervaring voor leerlingen en leraren die nieuw zijn in
     de informatica te optimaliseren.
+  hoc_faq_tutorial_a_markdown: If you're interested in becoming a tutorial partner,
+    [see our guidelines and instructions](%{tutorial_guidelines}). We'd like to host
+    a variety of engaging options, but the primary goal is to optimize the experience
+    for students and teachers who are new to computer science.
   hoc_faq_account_q: Moeten leerlingen zich aanmelden met een account?
   hoc_faq_account_a: Nee. Er is voor leerlingen helemaal geen inschrijving of login
     vereist om het 'Hour of Code' te proberen. De meeste van de <a href='%{codeorg_url}/learn/beyond'>vervolgcursussen</a>
@@ -538,6 +686,11 @@ nl:
     Aanmelden voor 'Hour of Code' maakt NIET automatisch een Code Studio-account aan.
     Als je accounts wil aanmaken voor je leerlingen, volg dan <a href=''https://youtu.be/_smelV_KISE'>deze
     instructies</a>.
+  hoc_faq_account_a_markdown: No. Absolutely no signup or login is required for students
+    to try the Hour of Code. Most of the [follow-on courses](%{codeorg_url}/learn/beyond)
+    require account creation to save student progress. Also, signing up for the Hour
+    of Code does NOT automatically create a Code Studio account. If you do want to
+    create accounts for your students, please follow these [instructions](https://youtu.be/_smelV_KISE).
   hoc_faq_high_school_q: Welke activiteit doe ik best met leerlingen van een middelbare
     school?
   hoc_faq_high_school_a: Ongeacht de leeftijd raden we aan om te beginnen bij een
@@ -546,6 +699,13 @@ nl:
     leerling van het middelbaar zou in staat moeten zijn om zo'n handleiding af te
     werken in een 30-tal minuten en dan kunnen ze verder gaan met een meer geavanceerde
     handleiding in Javascript zoals Khan Academy of CodeHS.
+  hoc_faq_high_school_a_markdown: Our Star Wars and Minecraft tutorials are great
+    for high schoolers, especially the Star Wars JavaScript version and the free play
+    level on both tutorials. Alternately, we recommend trying one of the beginner
+    tutorials on [%{partner_url}/learn](%{codeorg_url}/learn) to start, such as the
+    tutorial with Angry Birds or with Anna and Elsa. A high school student should
+    be able to finish one of these in 30 minutes and can then try a more advanced
+    tutorial in JavaScript, such as Khan Academy or CodeHS.
   hoc_faq_scratch_q: Wat moet ik doen als ik Scratch voor 'Hour of Code' doe, maar
     mijn leerlingen iPads hebben in plaats van laptops?
   hoc_faq_scratch_a: Scratch werkt niet op tablets. Als je leerlingen jong zijn kunnen
@@ -553,6 +713,10 @@ nl:
     Wanneer je naar de handleidingen kijkt op <a href='http://code.org/learn'>Code.org/learn</a>,
     kan je daar andere handleidingen vinden die werken op iPads - van Code.org, Tynker,Lightbot
     of CodeSpark.
+  hoc_faq_scratch_a_markdown: Scratch doesn't run on tablets. If your students are
+    young, they can use the ScratchJR iPad app (for early-readers). If you look at
+    the tutorials on [%{partner_url}/learn](%{codeorg_url}/learn), you can find other
+    tutorials that work on iPads - from Code.org, Tynker, Lightbot, or CodeSpark.
   hoc_faq_count_hoc_q: Hoe tellen jullie het totale aantal uren 'Hour of Code'?
   hoc_faq_map_q: Waarom zie ik mijn punt niet op de kaart?
   hoc_faq_map_a: Het spijt ons zeer dat u uw 'Hour of Code'-activiteit niet kunt vinden
@@ -562,11 +726,23 @@ nl:
     lijst van alle evenementen gesorteerd op gemeente, daar staat uw evenement vermeld.
     Bovendien duurt het, gezien de duizenden aanmeldingen voor 'Hour of Code', 48
     uur om de kaart en event bij te werken. Probeer het een paar dagen later weer!
+  hoc_faq_map_a_markdown: We're so sorry you aren't seeing your event on the Hour
+    of Code map. Because of the tens of thousands of organizers who sign up, the map
+    aggregates the data and displays one point for several events. If you click the
+    [events page](%{events_url}) link below the map you will be directed to a list
+    of all events by state and can find your event listed there. Additionally, given
+    the thousands of people signing up for the Hour of Code, the map and event list
+    usually takes 48 hours to update. Check back in a few days!
   hoc_faq_count_hoc_a: De teller van 'Hour of Code' is geen nauwkeurige meting van
     het gebruik. We kunnen niet het exacte aantal unieke leerlingen tellen tijdens
     het volgen van het gebruik van 'Hour of Code', met name omdat we inloggen of registreren
     niet verplicht stellen voor de leerlingen. Daardoor tellen we tegelijkertijd zowel
     te veel als te weinig deelnemers. Lees de verdere details <a href='%{codeorg_url}/loc'>hier</a>.
+  hoc_faq_count_hoc_a_markdown: The Hour of Code tracker isn't an exact measurement
+    of usage. We do not count unique student IDs perfectly when tracking participation
+    in the Hour of Code, especially because we don't require students to log in or
+    register. As a result, we both over-count and under-count participants at the
+    same time. Read all the details [here](%{codeorg_url}/loc).
   hoc_faq_one_hour_q: Hoeveel kan men leren in een uur?
   hoc_faq_one_hour_a: Het is niet het doel van 'Hour of Code' om van iedereen in één
     uur een programmeer-expert te maken. Eén uur is alleen genoeg om te leren dat
@@ -586,8 +762,15 @@ nl:
     aan te bieden. En dat geldt ook voor schooldirecteurs die beseffen dat programmeren
     iets is wat de leerlingen willen leren en de leerkrachten kunnen onderwijzen.
     <br/><br/>Het belangrijkste is dat alle deelnemers leren dat ze dit kunnen.
+  hoc_faq_one_hour_a_markdown: |-
+    The goal of the Hour of Code is not to teach anybody to become an expert computer scientist in one hour. One hour is only enough to learn that computer science is fun and creative, that it is accessible at all ages, for all students, regardless of background. The measure of success of this campaign is not in how much CS students learn - the success is reflected in broad participation across gender and ethnic and socioeconomic groups, and the resulting increase in enrollment and participation we see in CS courses at all grade levels. Millions of the participating teachers and students have decided to go beyond one hour -  to learn for a whole day or a whole week or longer, and many students have decided to enroll in a whole course (or even a college major) as a result.
+
+    Besides the students, another "learner" is the educator who gains the confidence after one hour that they can teach computer science even though they may not have a college degree as a computer scientist. Tens of thousands of teachers decide to pursue computer science further, either attending PD or offering follow-on online courses, or both. And this applies to school administrators too, who realize that computer science is something their students want and their teachers are capable of.
+
+    Above all, what all participants can learn in an hour is that we can do this.
   hoc_faq_more_questions_q: Heb je meer vragen?
   hoc_faq_more_questions_a: Probeer het antwoord te vinden in ons  <a href='http://support.code.org'>forum</a>.
+  hoc_faq_more_questions_a_markdown: Try finding an answer in our [support forum](http://support.code.org).
   hoc_faq_keep_learning_q: Hoe kan ik blijven leren na 'Hour of Code'?
   hoc_faq_keep_learning_a: Iedereen kan, op elk gewenst moment, een 'Hour of Code'
     hosten. De tutorials blijven gedurende het hele jaar op de site staan. U kunt
@@ -595,15 +778,27 @@ nl:
     onze site. Ga naar <a href='/promote'>onze middelen</a> voor how-to gidsen en
     andere middelen die u kunnen helpen uw 'Hour of Code'-activiteit tot een succes
     te maken.
+  hoc_faq_keep_learning_a_markdown: Anyone can host an Hour of Code at any time. The
+    tutorials stay up year-round. You can expect all our tutorials and curriculum
+    to be available on our site in perpetuity. Please go to [our resources](%{promote})
+    for event how-to guides and other resources to help make your Hour of Code event
+    a success.
   hoc_faq_certificates_q: Waar kan ik certificaten voor mijn studenten afdrukken?
   hoc_faq_certificates_a: Ga naar onze <a href='%{codeorg_url}/certificates'> certificaten
     pagina</a> waar u certificaten voor uw hele klas kunt afdrukken.
+  hoc_faq_certificates_a_markdown: Go to our [certificates page](%{codeorg_url}/certificates)
+    where you can print certificates for your entire class ahead of time. You can
+    also print out [special certificates](%{codeorg_url}/certificates?course=mc) for
+    students doing the Minecraft tutorial.
   hoc_faq_logo_q: Zijn er beperkingen aan hoe ik het 'Hour of Code'-logo of de naam
     kan gebruiken?
   hoc_faq_logo_a: Uur van Code is een handelsmerk. We willen het gebruik ervan niet
     voorkomen, maar we willen ervoor zorgen dat het gebruik ervan past binnen een
     paar grenzen. Raadpleeg <a href='https://support.code.org/hc/en-us/articles/215831637-Are-there-limitations-of-how-I-can-use-the-Hour-of-Code-logo-'>
     deze richtlijnen voor gebruik</a>.
+  hoc_faq_logo_a_markdown: Hour of Code is trademarked. We don't want to prevent its
+    usage, but we want to make sure its usage fits within a few limits. Please see
+    [these guidelines for usage](%{logo_url}).
   stats_hoc_2013_image_alt: Statistieken van 'Hour of Code' 2013
   stats_growth: Bereikte het als snelste 15 miljoen deelnemers.
   stats_i18n: Leerlingen leren in 40 talen
@@ -620,6 +815,8 @@ nl:
     20% op scholen en daarmee dus ook de beroepsbevolking.
   stats_females_more: During the Hour of Code, female students make up <b>50% of all
     participants</b>!
+  stats_females_more_markdown: During the Hour of Code, female students make up **50%
+    of all participants**!
   stats_nina: '"Iedere dag leverde hetzelfde resultaat op &mdash; 100% deelname."
     - Nina Nichols Peery, lerares'
   stats_student: '"Ik wist dat dit een <b>once-in-a-lifetime</b>-kans was." - Mariana
@@ -744,8 +941,11 @@ nl:
     landen die ook begonnen met een uur van Code.
   learn_banner_beyond: Wilt je blijven leren?  <a id='learn_banner_beyond'> ga verder
     dan een uur</a>
+  learn_banner_beyond_markdown: Want to keep learning? [Go beyond an hour](%{url})
   learn_banner_teachers: 'Leraren: <a id=''teacher_banner_host''> Organiseer een uur</a>
     of <a id=''teacher_banner_howto''> Lees de How-To gids</a>'
+  learn_banner_teachers_markdown: 'Teachers: [Host an hour](%{host_url}) or [read
+    the How-To Guide](%{howto_url})'
   learn_robotics_banner_heading: ROBOTICA
   learn_robotics_banner_blurb: Heb je robots? Gebruik ze met de onderstaande activiteiten
     en maak een tastbaar 'Hour of Code' voor leerlingen van alle leeftijden!
@@ -2540,9 +2740,9 @@ nl:
   tutorial_allcancodeapps_shortdescription: Use the Allcancode Platform to create
     web and mobile apps from design to delivery.
   tutorial_n2y_shortdescription: Help Bitt Bott explore Earth using direction arrows.
-  tutorial_dance2019_longdescription: Code a Dance Party to share with your friends.
-    Featuring Katy Perry, Shawn Mendes, Lil Nas X, Panic! At The Disco, Jonas Brothers,
-    and many more!
+  tutorial_dance2019_longdescription: Codeer een Dance Party om te delen met je vrienden.
+    Met Katy Perry, Shawn Mendes, Panic! At The Disco, Lil Nas X, Jonas Brothers,
+    Nicki Minaj, en nog eens 34 anderen!
   tutorial_danceparty_longdescription: Code a Dance Party to share with your friends.
     Featuring Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, and 25 more!
   tutorial_chibitronics_longdescription: Program a paper circuit to light up your
@@ -2933,7 +3133,6 @@ nl:
     code through a playful action game and master computer science concepts like variables
     and functions. Create your own game in the Sandbox by remixing and expanding on
     existing game code. Then publish and share your game with friends and family.
-    A scripted lesson guide is included for teachers.
   tutorial_capost_longdescription: Starting to learn HTML and CSS is easy and fun
     with this digital postcard. Learn about adding headings, paragraphs, images and
     links to create a holiday card or birthday celebration to share with friends and
@@ -3121,7 +3320,7 @@ nl:
   tutorial_bbcgeo_longdescription: Standards-based lesson plan for grades K-5. Take
     your kids to the computer lab with worksheets in hand, and build apps involving
     geometry.
-  tutorial_chspixel_longdescription: After learning about how graphics work, studetns
+  tutorial_chspixel_longdescription: After learning about how graphics work, students
     will create their own Color by Pixel programs. The lesson plan consists of four
     parts, each covering a specific topic. The entire five-part Color by Pixel lesson
     is designed to run approximately one hour.
@@ -3225,11 +3424,11 @@ nl:
     the clocks scattered in the wilderness! In this tutorial you will learn the basics
     of algorithms, sequences, loops and conditionals!
   tutorial_hopgame_longdescription: "Keep the fun going! Use this project-based guide
-    to facilitate a game design workshop, hackathon, or in-class series. \n\nMake:
-    \n1. Cross the Road\n2. Geometry Jumper\n3. Quiz Creator\n4. Falling Bird \n5.
-    Subway Skaters\n6. Escape the Room\n\nEach includes discussion questions, differentiation,
-    and a video tutorial. \n\nStudents can build off your instructions to customize
-    their games. No prior experience required."
+    to facilitate a game design workshop, hackathon, or in-class series. Make Cross
+    the Road, Geometry Jumper, Quiz Creator, Falling Bird, Subway Skaters, and Escape
+    the Room. Each includes discussion questions, differentiation, and a video tutorial.
+    \n\nStudents can build off your instructions to customize their games. No prior
+    experience required."
   tutorial_icontrol_longdescription: |-
     This teacher facilitated lesson, adapted for the Hour of Code, provides pupils with an opportunity to explore physical programming through robotics - Sphero.
 
@@ -3322,7 +3521,7 @@ nl:
     chance to learn more.
   tutorial_elaseq_longdescription: Students will examine the concept of sequence in
     the context of reading and writing. Through grade level aligned ELA lessons, students
-    will apply their knowledge of sequence to farther their understanding of the role
+    will apply their knowledge of sequence to further their understanding of the role
     sequence plays in programming.
   tutorial_bbcmathi_longdescription: Standards-based lesson plan for grades 3-5. Take
     your kids to the computer lab with worksheets in hand, and build apps involving
@@ -3430,7 +3629,7 @@ nl:
     to human computer interaction (HCI) and in particular why so many gadgets areharder
     to use than need be. Design does make a difference and it is important that interfaces
     are evaluated to check they are easy to use.
-  tutorial_imathematician_longdescription: "This, teacher led, activity provides the
+  tutorial_imathematician_longdescription: "This teacher led activity provides the
     opportunity for pupils to use a cross curricular approach to computer science
     and mathematics.  \n\nPupils will create a computer program to solve a variation
     of a famous problem in a branch of Mathematics (Game Theory), called The Prisoner's
@@ -3951,7 +4150,7 @@ nl:
   tutorial_codehspython_longdescription: Learn the basics of coding with the Python
     programming language by writing programs that you can interact with! This hour
     will cover printing, variables, math, and getting information from users. Write
-    a program that take in and stores data from a user and returns a unique response!
+    a program that takes in and stores data from a user and returns a unique response!
   tutorial_codehsjava_longdescription: Coding in Java with CodeHS
   tutorial_techioda_longdescription: This useful tutorial will interactively teach
     you how to be able to calculate the shortest path between two nodes in a graph
@@ -4189,9 +4388,9 @@ nl:
     are well suited for and finish the lesson by designing their own robot to solve
     a specific problem.
   tutorial_isavesanta_longdescription: In this teacher-led festive activity, adapted
-    for the Hour of Code, the children explore create a computer game using Scratch
-    to save Santa. They design algorithms, use conditional statements as well as test
-    and debug their work. Includes step-by-step lesson plan, pupil resources, support
+    for the Hour of Code, the children create a computer game using Scratch to save
+    Santa. They design algorithms, use conditional statements as well as test and
+    debug their work. Includes step-by-step lesson plan, pupil resources, support
     cards and pre-written program templates.
   tutorial_iorder_longdescription: This teacher led activity, adapted for the Hour
     of Code, develops computational thinking and coding skills using Scratch 2.0.
@@ -4847,30 +5046,29 @@ nl:
   tutorial_astropi_longdescription: Code a message and check the ambient air temperature
     on board the ISS using an online simulator of the Astro Pi computer's Sense HAT.
   tutorial_rgart_longdescription: Looking for an easy and intuitive way to teach your
-    students to code? RoboGarden STEAM Activities has fused code practicing with STEAM
-    learning and gamified missions in multiple activities. In the art activity, the
-    student understand color mixing concepts while using coding blocks to solve challenges
+    students to code? RoboGarden STEAM has fused code practicing with STEAM learning
+    and gamified missions in multiple activities. In the art activity, the student
+    understand color mixing concepts while using coding blocks to solve challenges
     in the birthday party.
   tutorial_rgengineer_longdescription: Looking for an easy and intuitive way to teach
-    your students to code? RoboGarden STEAM Activities has fused code practicing with
-    STEAM learning and gamified missions in multiple activities. In the engineering
-    activity, the student learns basic robotics while using coding blocks to solve
-    challenges in the Christmas party.
+    your students to code? RoboGarden STEAM has fused code practicing with STEAM learning
+    and gamified missions in multiple activities. In the engineering activity, the
+    student learns basic robotics while using coding blocks to solve challenges in
+    the Christmas party.
   tutorial_rgmath_longdescription: Looking for an easy and intuitive way to teach
-    your students to code? RoboGarden STEAM Activities has fused code practicing with
-    STEAM learning and gamified missions in multiple activities. In the math activity,
-    the student practices counting, addition and subtraction while solving some coding
-    challenges.
+    your students to code? RoboGarden STEAM has fused code practicing with STEAM learning
+    and gamified missions in multiple activities. In the math activity, the student
+    practices counting, addition and subtraction while solving some coding challenges.
   tutorial_rgscience_longdescription: Looking for an easy and intuitive way to teach
-    your students to code? RoboGarden STEAM Activities has fused code practicing with
-    STEAM learning and gamified missions in multiple activities. In the science activity,
-    the student goes through a journey to the space solving multiple coding challenges
-    and know more about space elements and science facts.
+    your students to code? RoboGarden STEAM has fused code practicing with STEAM learning
+    and gamified missions in multiple activities. In the science activity, the student
+    goes through a journey to the space solving multiple coding challenges and know
+    more about space elements and science facts.
   tutorial_rgtech_longdescription: Looking for an easy and intuitive way to teach
-    your students to code? RoboGarden STEAM Activities has fused code practicing with
-    STEAM learning and gamified missions in multiple activities. In the technology
-    activity, the student goes through a journey to the volcanic islands solving multiple
-    coding challenges by understanding basic concepts of Technology.
+    your students to code? RoboGarden STEAM has fused code practicing with STEAM learning
+    and gamified missions in multiple activities. In the technology activity, the
+    student goes through a journey to the volcanic islands solving multiple coding
+    challenges by understanding basic concepts of Technology.
   tutorial_robotmagic3d_longdescription: Use your imagination to create an animated
     3D logo of your name, your favorite sports team or anything you want. Use code
     to make 3D models and letters come alive with fun. At the end you can download
@@ -4932,7 +5130,7 @@ nl:
     and area of a circle, but have you ever wondered where this number comes from
     or how to calculate it? In this coding activity you will randomly generate points
     similar to a very bad player shooting darts at a dart board. The percentage of
-    darts that land inside the circle can help us calculate Pi Then change the colors
+    darts that land inside the circle can help us calculate Pi. Then change the colors
     of the points just for fun!
   tutorial_stemplanetoids_longdescription: Did you know that the code behind the classic
     Asteroids and Lunar Lander games is simpler than you might think? Did you know
@@ -5174,7 +5372,7 @@ nl:
   tutorial_frogger_language: English, Spanish, Italian, French, German, and Dutch
   tutorial_tynkereco_language: English only
   tutorial_mitedarc_language: English only
-  tutorial_khan_language: English, Portuguese (Brazil), Spanish
+  tutorial_khan_language: Czech, English, Portuguese (Brazil), Spanish
   tutorial_tynkerd_language: English only
   tutorial_cdmy_language: English, Spanish
   tutorial_codestersdance_language: English, Spanish
@@ -5392,8 +5590,8 @@ nl:
   tutorial_wolframp_language: English only
   tutorial_wolframn_language: English only
   tutorial_soloweb_language: English only
-  tutorial_khanweb_language: English, Portuguese (Brazil), Spanish
-  tutorial_khandata_language: English, Portuguese (Brazil), Spanish
+  tutorial_khanweb_language: Czech, English, Portuguese (Brazil), Spanish
+  tutorial_khandata_language: Czech, English, Portuguese (Brazil), Spanish
   tutorial_robomeshiq_language: English only
   tutorial_googlelogo_language: English only
   tutorial_playtune_language: English only
@@ -6313,7 +6511,7 @@ nl:
   tutorial_dance2019_string_platforms: All modern browsers, Android tablet, iPad,
     Unplugged
   tutorial_danceparty_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_chibitronics_string_platforms: All modern browsers
+  tutorial_chibitronics_string_platforms: All modern browsers, Screen reader
   tutorial_athlete_string_platforms: All modern browsers
   tutorial_moana_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_star-wars_string_platforms: All modern browsers, Android tablet, iPad,
@@ -6389,7 +6587,7 @@ nl:
     Firefox, Safari, Android tablet, iPad
   tutorial_cmgame_string_platforms: All modern browsers
   tutorial_codesters_string_platforms: do-not-show
-  tutorial_qrm_string_platforms: All modern browsers
+  tutorial_qrm_string_platforms: All modern browsers, Screen reader
   tutorial_texas-instruments_string_platforms: TI-84, TI-83 graphing calculators
   tutorial_cajava_string_platforms: Internet Explorer 11, Microsoft Edge, Chrome,
     Firefox, Safari
@@ -6728,7 +6926,7 @@ nl:
     phone, Android phone, iPhone
   tutorial_gpbcatapult_string_platforms: All modern browsers
   tutorial_quorumastro_string_platforms: All modern browsers, Android tablet, iPad,
-    Windows phone, Android phone, iPhone
+    Windows phone, Android phone, iPhone, Screen reader
   tutorial_alicewonder_string_platforms: All modern browsers
   tutorial_rginter_string_platforms: Chrome, Firefox, Android tablet
   tutorial_cssgrid_string_platforms: All modern browsers
@@ -6860,26 +7058,38 @@ nl:
   tutorial_blockscadpizza_string_platforms: All modern browsers
   tutorial_blockscadsugar_string_platforms: All modern browsers
   tutorial_bsgridlight_string_platforms: All modern browsers
-  tutorial_bpartscratch_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_bpartvid_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_bpartscratch_string_platforms: All modern browsers, Android tablet, iPad,
+    Screen reader
+  tutorial_bpartvid_string_platforms: All modern browsers, Android tablet, iPad, Screen
+    reader
   tutorial_bpenglishscratch_string_platforms: All modern browsers, Android tablet,
-    iPad
-  tutorial_bpenglishvid_string_platforms: All modern browsers, Android tablet, iPad
+    iPad, Screen reader
+  tutorial_bpenglishvid_string_platforms: All modern browsers, Android tablet, iPad,
+    Screen reader
   tutorial_bphealthscratch_string_platforms: All modern browsers, Android tablet,
-    iPad
-  tutorial_bphealthvid_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_bpmathscratch_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_bpmathvid_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_bpmlkscratch_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_bpmlkvid_string_platforms: All modern browsers, Android tablet, iPad
+    iPad, Screen reader
+  tutorial_bphealthvid_string_platforms: All modern browsers, Android tablet, iPad,
+    Screen reader
+  tutorial_bpmathscratch_string_platforms: All modern browsers, Android tablet, iPad,
+    Screen reader
+  tutorial_bpmathvid_string_platforms: All modern browsers, Android tablet, iPad,
+    Screen reader
+  tutorial_bpmlkscratch_string_platforms: All modern browsers, Android tablet, iPad,
+    Screen reader
+  tutorial_bpmlkvid_string_platforms: All modern browsers, Android tablet, iPad, Screen
+    reader
   tutorial_bpsafetyscratch_string_platforms: All modern browsers, Android tablet,
-    iPad
-  tutorial_bpsafetyvid_string_platforms: All modern browsers, Android tablet, iPad
+    iPad, Screen reader
+  tutorial_bpsafetyvid_string_platforms: All modern browsers, Android tablet, iPad,
+    Screen reader
   tutorial_bpsciencescratch_string_platforms: All modern browsers, Android tablet,
-    iPad
-  tutorial_bpsciencevid_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_bptechscratch_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_bptechvid_string_platforms: All modern browsers, Android tablet, iPad
+    iPad, Screen reader
+  tutorial_bpsciencevid_string_platforms: All modern browsers, Android tablet, iPad,
+    Screen reader
+  tutorial_bptechscratch_string_platforms: All modern browsers, Android tablet, iPad,
+    Screen reader
+  tutorial_bptechvid_string_platforms: All modern browsers, Android tablet, iPad,
+    Screen reader
   tutorial_caflags_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_matariki_string_platforms: All modern browsers, Android tablet, iPad, Unplugged
   tutorial_carestaurant_string_platforms: All modern browsers, Android tablet, iPad,
@@ -6907,15 +7117,15 @@ nl:
   tutorial_codesparkcreate_string_platforms: All modern browsers, Android tablet,
     iPad, Android phone, iPhone
   tutorial_hardvsoft_string_platforms: Unplugged
-  tutorial_codestersecard_string_platforms: All modern browsers
-  tutorial_codesterslogo_string_platforms: All modern browsers
-  tutorial_codesterstshirt_string_platforms: All modern browsers
+  tutorial_codestersecard_string_platforms: All modern browsers, Screen reader
+  tutorial_codesterslogo_string_platforms: All modern browsers, Screen reader
+  tutorial_codesterstshirt_string_platforms: All modern browsers, Screen reader
   tutorial_codewards_string_platforms: All modern browsers
   tutorial_olympics_string_platforms: All modern browsers
   tutorial_codinismhero_string_platforms: Android tablet, Android phone
   tutorial_discovery_string_platforms: All modern browsers
   tutorial_csfirstname_string_platforms: All modern browsers
-  tutorial_obstaclecourse_string_platforms: iPad
+  tutorial_obstaclecourse_string_platforms: iPad, Screen reader
   tutorial_edisonmove_string_platforms: All modern browsers
   tutorial_edisonspider_string_platforms: All modern browsers, iPad, Android tablets
   tutorial_edisonspotlight_string_platforms: All modern browsers, iPad, Android tablets
@@ -6923,10 +7133,10 @@ nl:
   tutorial_gamefrootsquid_string_platforms: Alle moderne browsers, iPad, zonder kabel
   tutorial_duckpiano_string_platforms: All modern browsers
   tutorial_gpsound_string_platforms: All modern browsers
-  tutorial_groklearningpython_string_platforms: All modern browsers
+  tutorial_groklearningpython_string_platforms: All modern browsers, Screen reader
   tutorial_htmltimetravel_string_platforms: All modern browsers
   tutorial_hp_flappy_string_platforms: iPad
-  tutorial_appytappin_string_platforms: Unplugged
+  tutorial_appytappin_string_platforms: All modern browsers
   tutorial_icipher_string_platforms: Unplugged
   tutorial_iguess_string_platforms: Android tablet, iPad, iPhone
   tutorial_imake_string_platforms: Unplugged
@@ -6976,27 +7186,27 @@ nl:
   tutorial_scratchjrstory_string_platforms: Android tablet, iPad
   tutorial_scratchjrtwinkle_string_platforms: Android tablet, iPad
   tutorial_spherocomm_string_platforms: All modern browsers, Android tablet, iPad,
-    Android phone, iPhone
+    Android phone, iPhone, Screen reader
   tutorial_spherocommunity_string_platforms: All modern browsers, Android tablet,
-    iPad, Android phone, iPhone
+    iPad, Android phone, iPhone, Screen reader
   tutorial_spherofunctions_string_platforms: All modern browsers, Android tablet,
-    iPad, Android phone, iPhone
+    iPad, Android phone, iPhone, Screen reader
   tutorial_spheroinfrared_string_platforms: All modern browsers, Android tablet, iPad,
-    Android phone, iPhone
+    Android phone, iPhone, Screen reader
   tutorial_spherolightsensor_string_platforms: All modern browsers, Android tablet,
-    iPad, Android phone, iPhone
+    iPad, Android phone, iPhone, Screen reader
   tutorial_spheromansion_string_platforms: All modern browsers, Android tablet, iPad,
-    Android phone, iPhone
+    Android phone, iPhone, Screen reader
   tutorial_roadblocks_string_platforms: All modern browsers, Android tablet, iPad,
-    Android phone, iPhone
+    Android phone, iPhone, Screen reader
   tutorial_spherotext2_string_platforms: All modern browsers, Android tablet, iPad,
-    Android phone, iPhone
+    Android phone, iPhone, Screen reader
   tutorial_spherotext3_string_platforms: All modern browsers, Android tablet, iPad,
-    Android phone, iPhone
+    Android phone, iPhone, Screen reader
   tutorial_spherotext4_string_platforms: All modern browsers, Android tablet, iPad,
-    Android phone, iPhone
+    Android phone, iPhone, Screen reader
   tutorial_spheroraptor_string_platforms: All modern browsers, Android tablet, iPad,
-    Android phone, iPhone
+    Android phone, iPhone, Screen reader
   tutorial_stempiday_string_platforms: Chrome, Firefox, Safari, Android tablet, iPad
   tutorial_stemplanetoids_string_platforms: Chrome, Firefox, Safari, Android tablet,
     iPad
@@ -8274,7 +8484,7 @@ nl:
   tutorial_careconfigure_name: ReconFigure of Speech
   tutorial_rpiscratch_name: Scratch 3.0 phrasebook
   tutorial_ozaria_name: Ozaria by CodeCombat
-  tutorial_ttovum_name: Ovum City
+  tutorial_ttovum_name: Ovun City
   tutorial_ttpassage_name: The Passage
   tutorial_tynkerhtmlen_name: Affordable and Clean Energy (HTML)
   tutorial_ttfrog_name: Frog Squash
@@ -8326,6 +8536,7 @@ nl:
   tutorial_modtraits_name: Character Traits with GoPiGo
   tutorial_mee_name: 'Minecraft Een Uur Code: AI voor het goede'
   tutorial_kuborobo_name: KUBO Robotics Coding Routes
+  tutorial_ai-oceans_name: AI for Oceans
   tutorial_scratchimagine_longdescription: Imagine a world where anything is possible,
     then bring it to life with Scratch!
   tutorial_codesterspsa_longdescription: Learn the basics of coding in Python while
@@ -8490,9 +8701,9 @@ nl:
     where you learn to type real code, navigate through 15 game levels, and make your
     own game in order to help save the world of Ozaria.
   tutorial_ttovum_longdescription: Can you control the chaos? Hack your way into the
-    cyberpunk world of Ovum City. Debug broken code, solve puzzles, and upgrade your
+    cyberpunk world of Ovun City. Debug broken code, solve puzzles, and upgrade your
     hardware as you explore self guided open world. Don't get caught by the drones!
-    It's up to you how Ovum City evolves.
+    It's up to you how Ovun City evolves.
   tutorial_ttpassage_longdescription: Immerse yourself in an alien world to help Ada
     escape unknown dangers. Play through this 2D platforming self-guided adventure
     and learn coding techniques along the way. Players will become familiar with coding
@@ -8689,6 +8900,9 @@ nl:
   tutorial_kuborobo_longdescription: In this activity, students put their logic and
     sequencing skills to the test as they use the Tagtiles to program their KUBO robot
     to travel to various locations on a printed map.
+  tutorial_ai-oceans_longdescription: Computer science is about so much more than
+    coding! Learn about AI, machine learning, training data, and bias, while exploring
+    ethical issues and how AI can be used to address world problems.
   tutorial_scratchimagine_language: English, Spanish
   tutorial_codesterspsa_language: Nederlands
   tutorial_googlehero_language: English, Spanish
@@ -8791,6 +9005,7 @@ nl:
     Chinees (traditioneel), Turks, Pools, Indonesisch, Oekraïens, Grieks, Bulgaars,
     Hongaren, Fins, Deens, Zweeds, Noors, Slowaaks, Tsjechisch, Nederlands
   tutorial_kuborobo_language: English, Spanish
+  tutorial_ai-oceans_language: Nederlands
   tutorial_scratchimagine_string_detail_grades: Grades 2+
   tutorial_codesterspsa_string_detail_grades: Grades 6+
   tutorial_googlehero_string_detail_grades: Grades 2-8
@@ -8889,12 +9104,14 @@ nl:
   tutorial_modtraits_string_detail_grades: Grades 2+
   tutorial_mee_string_detail_grades: Grades 2+
   tutorial_kuborobo_string_detail_grades: Pre-reader - Grades 8
+  tutorial_ai-oceans_string_detail_grades: Grades 3+
   tutorial_scratchimagine_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_codesterspsa_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_googlehero_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_codestersbball_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_scratchcartoon_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_codemonkeyjr_string_platforms: Android tablet, iPad, Android phone, iPhone
+  tutorial_codemonkeyjr_string_platforms: All modern browsers, Android tablet, iPad,
+    Android phone, iPhone
   tutorial_bananatales_string_platforms: All modern browsers
   tutorial_scratchtales_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_msemoji_string_platforms: Chrome, Safari
@@ -8919,7 +9136,7 @@ nl:
   tutorial_hyperpadpong_string_platforms: iPad
   tutorial_tynkerland_string_platforms: Alle moderne browsers, iPad, zonder kabel
   tutorial_trinketgirl_string_platforms: All modern browsers, Android tablet, iPad,
-    Windows phone, Android phone, iPhone
+    Windows phone, Android phone, iPhone, Screen reader
   tutorial_rpimosquito_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_tynkermars_string_platforms: Alle moderne browsers, iPad, zonder kabel
   tutorial_cityx_string_platforms: Android tablet, iPad, Android phone, iPhone
@@ -8934,7 +9151,7 @@ nl:
   tutorial_dragonscript_string_platforms: Chrome
   tutorial_uwcloud_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_htmlmuffin_string_platforms: All modern browsers
-  tutorial_microsoftpizza_string_platforms: All modern browsers
+  tutorial_microsoftpizza_string_platforms: All modern browsers, Screen reader
   tutorial_stemc_blckhole_string_platforms: Alle moderne browsers, iPad, zonder kabel
   tutorial_careconfigure_string_platforms: All modern browsers
   tutorial_rpiscratch_string_platforms: All modern browsers, Android tablet, iPad
@@ -8945,7 +9162,7 @@ nl:
   tutorial_ttfrog_string_platforms: Chrome, Firefox
   tutorial_codemojijava_string_platforms: All modern browsers
   tutorial_ccfirewall_string_platforms: Alle moderne browsers, iPad, zonder kabel
-  tutorial_htmljs_string_platforms: All modern browsers
+  tutorial_htmljs_string_platforms: All modern browsers, Screen reader
   tutorial_ttaqueducts_string_platforms: Chrome, Firefox
   tutorial_vtgame_string_platforms: Alle moderne browsers, iPad, zonder kabel
   tutorial_baroborav_string_platforms: All modern browsers
@@ -8996,6 +9213,8 @@ nl:
   tutorial_modtraits_string_platforms: All modern browsers
   tutorial_mee_string_platforms: Windows, iPad, MacOS
   tutorial_kuborobo_string_platforms: Unplugged
+  tutorial_ai-oceans_string_platforms: All modern browsers, modern Android tablets,
+    iPads, modern Android phones, iPhones
   tutorial_scratchimagine_string_detail_platforms: ''
   tutorial_codesterspsa_string_detail_platforms: ''
   tutorial_googlehero_string_detail_platforms: ''
@@ -9097,6 +9316,7 @@ nl:
   tutorial_modtraits_string_detail_platforms: GoPiGo
   tutorial_mee_string_detail_platforms: ''
   tutorial_kuborobo_string_detail_platforms: KUBO robot
+  tutorial_ai-oceans_string_detail_platforms: ''
   tutorial_scratchimagine_string_detail_programming_languages: Blocks
   tutorial_codesterspsa_string_detail_programming_languages: Python
   tutorial_googlehero_string_detail_programming_languages: Blocks
@@ -9208,6 +9428,7 @@ nl:
   tutorial_mee_string_detail_programming_languages: Blocks
   tutorial_kuborobo_string_detail_programming_languages: Tagtiles that students piece
     together
+  tutorial_ai-oceans_string_detail_programming_languages: AI and Machine Learning
   school_not_found_heading: We couldn't find your school. Please enter more information.
   school_name: School name
   school_name_error: School name is required.
@@ -9263,3 +9484,4 @@ nl:
   some: Some
   all: All
   dont_know: I don't know
+  language_label: Language

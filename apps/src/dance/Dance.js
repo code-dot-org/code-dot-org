@@ -40,6 +40,8 @@ import {
 } from './songs';
 import {SongTitlesToArtistTwitterHandle} from '../code-studio/dancePartySongArtistTags';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import {showArrowButtons} from '@cdo/apps/templates/arrowDisplayRedux';
+import queryString from 'query-string';
 
 const ButtonState = {
   UP: 0,
@@ -181,7 +183,12 @@ Dance.prototype.awaitTimingMetrics = function() {
 };
 
 Dance.prototype.initSongs = async function(config) {
-  const songManifest = await getSongManifest(config.useRestrictedSongs);
+  // Check for a user-specified manifest file.
+  const manifest = queryString.parse(window.location.search).manifest;
+  const songManifest = await getSongManifest(
+    config.useRestrictedSongs,
+    manifest
+  );
   const songData = parseSongOptions(songManifest);
   const selectedSong = getSelectedSong(songManifest, config);
 
@@ -443,9 +450,8 @@ Dance.prototype.reset = function() {
     softButtonCount++;
   }
   if (softButtonCount) {
-    $('#soft-buttons')
-      .removeClass('soft-buttons-none')
-      .addClass('soft-buttons-' + softButtonCount);
+    getStore().dispatch(showArrowButtons());
+    $('#soft-buttons').addClass('soft-buttons-' + softButtonCount);
   }
 };
 

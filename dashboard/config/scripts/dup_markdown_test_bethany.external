@@ -1,0 +1,14 @@
+name 'dup_markdown_test_bethany'
+editor_experiment ''
+skip_dialog true
+markdown <<MARKDOWN
+# Example
+I would recommend having the console open -- there are JS errors. At some point, if you inspect the preview area, there will be an unclosed `react-text` comment
+
+To repro, add about 3 bullets here:
+
+### Header 1
+
+### Header 2 (needed)
+A description is necessary here
+MARKDOWN

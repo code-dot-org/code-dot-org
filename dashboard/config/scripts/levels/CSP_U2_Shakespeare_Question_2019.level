@@ -13,10 +13,15 @@
     "skip_sound": true,
     "parent_level_id": 12990,
     "name_suffix": "_2019",
-    "instructions_important": "false"
+    "instructions_important": "false",
+    "encrypted": "false",
+    "encrypted_solution": "UbCXwfxPpXSEYuTKFI2HJ+OMrSI6denQJUneI+L+vQwM+s16a2+30aLAuzpo\nH96LC1U+2DHGynRnjWwqbtiqP0d3DKhC1GPScjx04qjir9wQBN2j8aDu2yN/\n4f/Ah9vH0uWGhZ4tQNtF6spBPTg8gcyP2JIIcHOC7NoIZMvUra6O4j439a20\ndQggpbB6/gdCKf4Q8ivNmMOwz0r2x70yJqcGshaYP7isGREyrFfzVn95ie3z\nAFcSnVpPHRL3GTfXyqum3msBqUH/SvYqJQsKRMMYzUISY9D1AwfV6US9aWFL\nuH0l1r0w8f4tqZ08yxTa8Z7CUnB1hjw6TbfdY3cyIMuWEHzuj2eHF/soIj6x\nU0EIboqdgcD/Qzmedlrv9olP\n",
+    "optional": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2018-05-03 21:12:02 +0000\",\"changed\":[\"published\"],\"changed_by_id\":255,\"changed_by_email\":\"ram@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2018-05-03 21:12:02 +0000\",\"changed\":[\"published\"],\"changed_by_id\":255,\"changed_by_email\":\"ram@code.org\"},{\"changed_at\":\"2020-01-21 18:02:42 +0000\",\"changed\":[],\"changed_by_id\":977,\"changed_by_email\":\"kaitie@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
 </FreeResponse>

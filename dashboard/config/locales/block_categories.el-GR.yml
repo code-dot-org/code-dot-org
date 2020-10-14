@@ -18,12 +18,14 @@ el:
       Game/Score: Παιχνίδι/Σκορ
       Games/Score: Παιχνίδια/Σκορ
       Groups: Ομάδες
+      Input: Είσοδος
       Locations: Τοποθεσίες
       Logic: Λογική
       Loops: Βρόχοι
       Math: Μαθηματικά
       Numbers: Αριθμοί
       Properties: Ιδιότητες
+      Sprites: Χαρακτήρας
       Text: κείμενο
       Variables: Μεταβλητές
       'Variables ': 'Μεταβλητές '

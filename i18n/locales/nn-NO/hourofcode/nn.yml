@@ -10,9 +10,27 @@ nn:
   campaign_date_short: 4.-10. des
   campaign_date_full: 4.-10. desember
   campaign_date_year: '2017'
-  campaign_date_full_year: 4.-10. desember, 2017
-  hoc2019_header: Lær deg informatikk. Endre verda.
-  hoc2019_header_line1_mobile: Lær deg informatikk.
+  campaign_date_full_year: 7.-13. desember, 2020
+  latam_campaign_date_start_short: Oct. 1
+  latam_campaign_date_start_long: October 1
+  latam_campaign_date_short: Oct. 1 - Dec. 18
+  latam_campaign_date_full: October 1 - December 18
+  latam_campaign_date_year: '2017'
+  latam_campaign_date_full_year: October 1, 2020 - December 18, 2020
+  europe_campaign_date_start_short: Oct. 10
+  europe_campaign_date_start_long: October 10
+  europe_campaign_date_short: Oct. 10-25
+  europe_campaign_date_full: October 10-25
+  europe_campaign_date_year: '2017'
+  europe_campaign_date_full_year: October 10-25, 2020
+  africa_campaign_date_start_short: Oct. 1
+  africa_campaign_date_start_long: October 1
+  africa_campaign_date_short: Oct. 1-31
+  africa_campaign_date_full: October 1-31
+  africa_campaign_date_year: '2017'
+  africa_campaign_date_full_year: October 1-31, 2020
+  hoc2019_header: Lær deg programmering. Så kan du endre verda.
+  hoc2019_header_line1_mobile: Lær deg programmering.
   hoc2019_header_line2_mobile: Endre verda.
   social_hoc2019_every_sudent: 'Kvar elev har potensialet til å endra verda. Hjelp
     dei i gong. #CSforGood'
@@ -25,69 +43,131 @@ nn:
     er eit fundament kvar elev kan lære.
   social_hoc2019_dance: Med Katy Perry, Shawn Mendes, Panic! At The Disco, Lil Nas
     X, Jonas Brothers, Nicki Minaj og 34 andre!
-  oceans_landing_title: AI for Oceans
-  oceans_landing_description: 'Explore machine learning by teaching “A.I.” to recognize
-    fish. #CSforGood'
-  oceans_landing_specs: English only | Ages 11+
-  oceans_landing_teacher_resources: Teacher Resources
-  oceans_landing_teacher_resources_desc: Lesson plans and activities to help you teach
-    AI, machine learning, training data, and bias, while exploring ethical issues.
-  oceans_landing_resource_button: View Resources
-  oceans_landing_cs_for_good: CS For Good
-  oceans_landing_cs_for_good_desc: Resources to help students understand the role
-    computer science could play in creating a more equitable world.
-  oceans_landing_learn_more: Learn more about AI and Machine Learning
-  social_hoc2019_oceans_title: 'AI for Oceans #CSForGood'
-  social_hoc2019_oceans_desc: Learn about AI, machine learning, training data, and
+  oceans_landing_title: AI for hav
+  oceans_landing_description: 'Utforsk maskinlæring ved å lære "A.I." til å kjenne
+    att fisk. #CSforGood'
+  cs_for_good_hashtag: "#CSforGood"
+  oceans_landing_specs: Berre på engelsk | Alder 11+
+  oceans_landing_explanation: Computer science is about so much more than coding!
+    Learn about artificial intelligence (AI), machine learning, training data, and
     bias, while exploring ethical issues and how AI can be used to address world problems.
-    Computer science is about so much more than coding! Enjoy Code.org's first step
-    in a new journey to teach more about AI throughout our curriculum.
-  hoc_overview_oceans_tutorial_header: AI For Oceans
-  hoc_overview_oceans_tutorial_desc: Learn about AI, machine learning, training data,
+    Enjoy Code.org's first step in a new journey to teach more about AI. When you
+    use the AI for Oceans activity you are training real machine learning models.
+    <a href='#behind-the-scenes'>Learn more</a>.
+  oceans_landing_explanation_markdown: Computer science is about so much more than
+    coding! Learn about artificial intelligence (AI), machine learning, training data,
     and bias, while exploring ethical issues and how AI can be used to address world
-    problems.
-  ai_video_title_what_is_ai: What is AI?
-  ai_video_title_phone_knows_dog: How does your phone know this is a dog?
-  ai_video_title_what_is_ml: What is Machine Learning?
-  ai_video_title_ml_big_small_prickly: 'Machine Learning: Solving Problems Big, Small
-    and Prickly'
-  ai_video_title_ethics_of_ai: Ethics of AI
-  ai_video_title_ml_human_bias: Machine Learning and Human Bias
-  activity: Activity
-  name: Name
-  description: Description
-  audience: Audience
-  ai_resource_header: Teach and Learn about AI
-  ai_resource_ml_for_kids: Machine Learning for Kids
-  ai_resource_ml_for_kids_desc: Train a machine learning model with text, numbers,
-    or images, and use it to make games in Scratch.
-  ai_resource_ibm_ml_for_kids: 'IBM: Machine Learning for Kids'
-  ai_resouce_ibm_ml_for_kids_desc: Hands-on activities to introduce simple machine
-    learning models to students through games and interactive projects.
-  ai_resource_ecs: 'ECS: Artificial Intelligence (AI)'
-  ai_resource_ecs_desc: A new alternate curriculum unit for the Exploring Computer
-    Science (ECS) curriculum.
-  ai_resource_elements_ai: Elements of AI
-  ai_resource_elements_ai_desc: A series of free online courses created by Reaktor
-    and the University of Helsinki.
+    problems. Enjoy Code.org's first step in a new journey to teach more about AI.
+    When you use the AI for Oceans activity you are training real machine learning
+    models. [Learn more](#behind-the-scenes).
+  oceans_landing_teacher_resources: Lærerressursar
+  oceans_landing_teacher_resources_desc: Timeplanar og aktivitetar som hjelper deg
+    med å undervise AI, maskinlæring, treningsdata og bias, medan du utforskar etiske
+    problem.
+  oceans_landing_resource_button: Vis ressursar
+  oceans_landing_cs_for_good: Programmering for det gode
+  oceans_landing_cs_for_good_desc: Ressursar for å hjelpe elevane med å forstå rolla
+    datavitskap kan ha i å skapa ei meir rettferdig verd.
+  oceans_landing_videos: Videos about AI and Machine Learning
+  oceans_behind_the_scenes: 'AI for Oceans: Behind the Scenes'
+  oceans_behind_the_scenes_1: Levels 2-4 use a pretrained model provided by the <a
+    href="https://www.tensorflow.org/" >TensorFlow</a> <a href="https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md">
+    MobileNet </a> project. A MobileNet model is a <a href="https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks">convolutional
+    neural network</a> that has been trained on <a href="http://www.image-net.org/">ImageNet</a>,
+    a dataset of over 14 million images hand-annotated with words such as "balloon"
+    or "strawberry". In order to customize this model with the labeled training data
+    the student generates in this activity, we use a technique called <a href="https://en.wikipedia.org/wiki/Transfer_learning">Transfer
+    Learning</a>. Each image in the training dataset is fed to MobileNet, as pixels,
+    to obtain a list of annotations that are most likely to apply to it. Then, for
+    a new image, we feed it to MobileNet and compare its resulting list of annotations
+    to those from the training dataset. We classify the new image with the same label
+    (such as "fish" or "not fish") as the images from the training set with the most
+    similar results.
+  oceans_behind_the_scenes_1_markdown: Levels 2-4 use a pretrained model provided
+    by the [TensorFlow](https://www.tensorflow.org/) [MobileNet](https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md)
+    project. A MobileNet model is a [convolutional neural network](https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks)
+    that has been trained on [ImageNet](http://www.image-net.org/), a dataset of over
+    14 million images hand-annotated with words such as "balloon" or "strawberry".
+    In order to customize this model with the labeled training data the student generates
+    in this activity, we use a technique called [Transfer Learning](https://en.wikipedia.org/wiki/Transfer_learning).
+    Each image in the training dataset is fed to MobileNet, as pixels, to obtain a
+    list of annotations that are most likely to apply to it. Then, for a new image,
+    we feed it to MobileNet and compare its resulting list of annotations to those
+    from the training dataset. We classify the new image with the same label (such
+    as "fish" or "not fish") as the images from the training set with the most similar
+    results.
+  oceans_behind_the_scenes_2: Levels 6-8 use a <a href="https://en.wikipedia.org/wiki/Support-vector_machine">Support-Vector
+    Machine</a> (SVM). We look at each component of the fish (such as eyes, mouth,
+    body) and assemble all of the metadata for the components (such as number of teeth,
+    body shape) into a vector of numbers for each fish. We use these vectors to train
+    the SVM. Based on the training data, the SVM separates the "space" of all possible
+    fish into two parts, which correspond to the classes we are trying to learn (such
+    as "blue" or "not blue").
+  oceans_behind_the_scenes_2_markdown: Levels 6-8 use a [Support-Vector Machine](https://en.wikipedia.org/wiki/Support-vector_machine)
+    (SVM). We look at each component of the fish (such as eyes, mouth, body) and assemble
+    all of the metadata for the components (such as number of teeth, body shape) into
+    a vector of numbers for each fish. We use these vectors to train the SVM. Based
+    on the training data, the SVM separates the "space" of all possible fish into
+    two parts, which correspond to the classes we are trying to learn (such as "blue"
+    or "not blue").
+  social_hoc2019_oceans_title: 'AI for hav #CSForGood'
+  social_hoc2019_oceans_desc: 'Lær om AI, maskinlæring, treningsdata og bias medan
+    ein utforskar etiske problem og korleis AI kan brukast for å løyse verdsproblem.
+    Datavitskap er om så mykje meir enn koding! Bli med Code.org sine første steg
+    på ny reise for å lære meir om AI gjennom pensumet vårt. '
+  hoc_overview_oceans_tutorial_header: AI for hav
+  hoc_overview_oceans_tutorial_desc: Lær om AI, maskinlæring, treningsdata og bias
+    medan ein utforskar etiske problem og korleis AI kan brukast for å løyse verdsproblem.
+  ai_video_title_what_is_ai: Kva er AI?
+  ai_video_title_algorithm_bias: Fighting bias in algorithms
+  ai_video_title_phone_knows_dog: Korleis veit telefonen din at dette er ein hund?
+  ai_video_title_what_is_ml: Kva er maskinlæring?
+  ai_video_title_ml_big_small_prickly: 'Maskinlæring: Løyse problem som er store,
+    små og pittesmå'
+  ai_video_title_ethics_of_ai: Etikk i AI
+  ai_video_title_ml_human_bias: Maskinlæring og menneskelege bias
+  ai_video_title_seeing_ai: 'Seeing AI: Making the visual world more accessible'
+  activity: Aktivitet
+  name: Namn
+  description: Skildring
+  audience: Publikum
+  ai_resource_header: Undervis og lær om AI
+  ai_resource_minecraft: Minecraft AI for Good
+  ai_resource_minecraft_desc: 'Access free resources including a lesson plan, videos,
+    computer science curriculum, and teacher trainings. (Requires Minecraft: Education
+    Edition)'
+  ai_resource_ml_for_kids: Maskinlæring for barn
+  ai_resource_ml_for_kids_desc: Tren opp ein maskinlæringsmodell med tekst, tal og
+    bilde og bruk det til å lage spel i Scratch.
+  ai_resource_ibm_ml_for_kids: 'IBM: Maskinlæring for barn'
+  ai_resouce_ibm_ml_for_kids_desc: Praktiske aktivitetar for å introdusere enkel maskinlæringsmodellar
+    til elevar gjennom spel og interaktive prosjekt.
+  ai_resource_ecs: 'ESC: Kunstig intelligens (AI)'
+  ai_resource_ecs_desc: Ein ny alternativ læreplan for Exploring Computer Science
+    (ECS)-pensumet.
+  ai_resource_elements_ai: Elementar i AI
+  ai_resource_elements_ai_desc: Ein serie med gratis nettkurs utforma av Reaktor og
+    universitetet i Helsinki.
   ai_resource_cognimates: Cognimates
-  ai_resource_cognimates_desc: An AI education platform for building games, programming
-    robots and training.
-  ai_audience_k12: K-12 (Reading required)
-  ai_audience_hs: High school
-  ai_activity_header: Activities Powered by AI and ML
-  ai_activity_teachable: Teachable Machine
-  ai_activity_teachable_desc: Train a computer to recognize your own images, sounds,
-    and poses.
-  ai_activity_quick_draw: Quick, Draw!
-  ai_activity_quick_draw_desc: Can a neural network learn to recognize doodling?
-  ai_activity_experiments: AI Experiments with Google
-  ai_activity_experiments_desc: Start exploring machine learning through pictures,
-    drawings, language, music, and more.
-  ai_activity_mixlab: MixLab
-  ai_activity_mixlab_desc: Make music using voice commands.
-  ai_activity_gaugan: GauGAN Beta
-  ai_activity_gaugan_desc: Paint photo-realistic landscapes with the help of AI.
+  ai_resource_cognimates_desc: Ein AI-utdanningsplattform for å bygge spel, programmere
+    robotar og opplæring.
+  ai_audience_k12: Grunnskulen (Treng å kunne lese)
+  ai_audience_hs: Vidaregåande skule
+  ai_activity_header: Aktivitetar med AI og ML
+  ai_activity_seeing_ai: Seeing AI
+  ai_activity_seeing_ai_desc: A free app that narrates the world around you in a variety
+    of languages.
+  ai_activity_quick_draw: Teikn kjapt!
+  ai_activity_quick_draw_desc: Kan eit nevralt nettverk lære seg å kjenne att krusedullar?
+  ai_activity_teachable: Maskin du kan lære opp
+  ai_activity_teachable_desc: 'Lær opp ei datamaskin til å kjenne att dine bilete,
+    lydar og poseringar. '
+  ai_activity_experiments: AI-eksperiment med Google
+  ai_activity_experiments_desc: Utforsk maskinlæring gjennom bilete, teikningar, språk,
+    musikk og meir.
+  ai_activity_zooniverse: Zooniverse - Snapshot Mountain Zebra
+  ai_activity_zooniverse_desc: Help protect the endangered Cape Mountain Zebra by
+    identifying the different animals in the images.
   codeorg_homepage_hoc2018_curriculum: Gå vidare med <a href="%{studio_url}/courses"
     class="hoc2018-curriculum-link">Code.org-kurs</a>
   codeorg_homepage_hoc2018_dance_heading: Lag din eigen <span class="highlight-word">dansefest</span>
@@ -105,6 +185,18 @@ nn:
   hoc2018_tutorial_mchoc_description: Minecraft er tilbake i Kodetimen med ei heilt
     ny oppgåve! Reis gjennom Minecraft med kode.
   codeorg_homepage_hoc2019_dance_heading: Prøv den nye <span class="highlight-word">Dansefesten!</span>
+  codeorg_homepage_hoc2019_dance_heading_markdown: Try the new **Dance&nbsp;Party!**
+  codeorg_homepage_special2020_body1: Support for parents and teachers facing school
+    closures.
+  codeorg_homepage_special2020_body2: See our suggested learning resources.
+  codeorg_homepage_special2020_body: Keep learning this summer! Take a look at our
+    resources for learning at home.
+  codeorg_homepage_remote2020_body: Are you teaching in a remote or socially-distanced
+    classroom this semester? View our resources.
+  codeorg_homepage_special2020_link_text: Get started
+  codeorg_homepage_code_break_body: Take a Code Break! Your weekly dose of inspiration,
+    community, and computer science.
+  codeorg_homepage_code_break_link_text: Les meir
   cookie_banner_message: Ved å fortsatt bruke nettstaden vår eller ved å klikke på
     "Eg godtar", godtar du lagring av cookies på datamaskina eller eininga di.
   cookie_banner_more_information: Sjå Code.org sine Retningslinjer for personvern.
@@ -273,6 +365,7 @@ nn:
   how_to_nav_companies: For næringslivet
   how_to_nav_afterschool_educators: For SFO
   how_to_nav_volunteers: For frivillege
+  how_to_nav_virtual: For virtual events
   whats_next_header: Kva er det neste?
   whats_next_description: Vi vil sende deg materiell og tips for gjennomføring av
     kodetimen din. <a href='http://code.org/learn'> Prøv oppgåver</a> for kva som
@@ -308,9 +401,10 @@ nn:
     200 opplæringsprogram og leksjonar</i>! Finn aktivitetar for ulike fagområde,
     ulike plattformar og elevar på alle erfaringsnivå.
   front_join_us_robotics: Har du roboter?
-  front_join_us_robotics_link: Takk til våre samarbeidspartnere innen automasjon og
-    robotikk for å støtte Kodetimen! Om klasserommet ditt har roboter, klikk på logoane
-    for å finne ein robot-aktivitet!
+  front_join_us_robotics_link: Ønsker du eit sett med fysisk programmeringsdingsar
+    og robotar du kan bruke med elevane dine? Partnarane våre gir sett til 75 klasserom!
+    Registrer deg på Kodetimen for å delta (Klasserom blir valgt av Code.org. Berre
+    for USA)
   front_join_us_teacher: Er du ein lærar?
   front_join_us_inspire: Inspirer elevane med
   front_join_us_inspire_link: Kodetimen i klasserommet.
@@ -349,6 +443,9 @@ nn:
     er tilgjengelege heile året. <a href='%{hoc_activities_url}'>Prøv ein aktivitet</a>
     eller les våre<a href='%{howto_guide_url}'>Slik-gjer-du-det-guidar</a> for å planlegge
     ei hending i klasserommet ditt.
+  signup_registration_not_required_markdown: You don't need to register to participate!
+    The Hour of Code activities are available year-round. [Try an activity](%{hoc_activities_url})
+    or read our [How-to guide](%{howto_guide_url}) to plan an event for your class.
   signup_registration_closed: Og kvart år i desember kan klassen din bli med millionar
     av elevar frå heile verda i feiringa av kodeveka med Kodetimen. Vi opnar opp for
     den årlege registreringa i oktober.
@@ -398,6 +495,7 @@ nn:
   signup_send_posters_address_placeholder: Denne adressa vil ikkje bli vist på kartet
   signup_event_type_in_school: På ein skule
   signup_event_type_out_of_school: Utanfor skulen
+  signup_event_type_at_home: Home
   signup_submit_census_label: Send inn
   signup_submit_census_error_message: Vi beklager. Feil. Prøv å sende skjemaet ein
     gong til.
@@ -442,8 +540,8 @@ nn:
   map_legend_title: Tegnforklaring
   map_legend_hoc_events: Kodetimearrangement
   map_legend_cs_tech_jam: Spesialarrangement
-  map_warning: Kodetimen-kartet viser berre dei 200.000 første registrerte arrangementa.
-    Alle registrerte arrangement kan du sjå på <a href='%{events_url}'>arrangement-sida.</a>
+  map_warning: Ei full liste av arrangement kan du sjå på <a href='%{events_url}'>arrangement-sida</a>.
+  map_warning_markdown: A full list of the events can be viewed on the [events page.](%{events_url})
   meta_tag_og_title: 'Kodetimen: Alle kan lære'
   meta_tag_og_description: Kodetimen er ei verdensomsfattande rørsle som når ut til
     titalls millionar elevar i meir enn 180 land og fins på over 45 språk.
@@ -461,6 +559,13 @@ nn:
   hoc_faq_what_is_hoc_a: |-
     Kodetimen starta som ein timeslang introduksjon til datavitskap, designa for å avmystifisere koding og vise at alle kan lære det grunnleggande og for å auka deltaking innan dataprogrammering.
      Det har sidan blitt ein verdsomfattande innsatsi å feire dataprogrammering, som starta som aktivitetar på ein time, men som har utvida seg til all slags engasjement i samfunnet. Sjekk ut <a href='%{tutorials}'>øvingar og aktivitetar</a>. Denne grasrotkampanjen er støtta av over <a href='%{partners}'>400 partnarar</a> og 200.000 lærarar og pedagogar over heile verda.
+  hoc_faq_what_is_hoc_a_markdown: The Hour of Code started as a one-hour introduction
+    to computer science, designed to demystify "code", to show that anybody can learn
+    the basics, and to broaden participation in the field of computer science. It
+    has since become a worldwide effort to celebrate computer science, starting with
+    1-hour coding activities but expanding to all sorts of community efforts. Check
+    out the [tutorials and activities](%{tutorials}). This grassroots campaign is
+    supported by over [400 partners](%{partners}) and 200,000 educators worldwide.
   hoc_faq_last_year: Prøv oppgåvene
   hoc_faq_when_is_hoc_q: Når er kodetimen?
   hoc_faq_when_is_hoc_a: 'Kodetimen skjer kvart år i løpet av <a href=''%{csedweek_url}''>Kodeveka:
@@ -468,34 +573,63 @@ nn:
     vil skje %{campaign_date_full}, men du kan arrangere Kodetimen når som helst i
     løpet av året. Computer Science Education Week vert halde årleg til minne om datapioneren
     <a href=''%{grace_hopper}''>Admiral Grace Murray Hopper</a> (9. desember, 1906).'
+  hoc_faq_when_is_hoc_a_markdown: The Hour of Code takes place each year during [Computer
+    Science Education Week](%{csedweek_url}). The %{campaign_date_year} Computer Science
+    Education Week will be %{campaign_date_full}, but you can host an Hour of Code
+    all year-round. Computer Science Education Week is held annually in recognition
+    of the birthday of computing pioneer [Admiral Grace Murray Hopper](%{grace_hopper})
+    (December 9, 1906).
   hoc_faq_why_cs_q: Kvifor informatikk?
   hoc_faq_why_cs_a: "<i>Alle</i> studentar burde ha mogelegheita til å lære datavitskap.
     Det fostrar problemløysingseigenskaper, logikk og kreativitet. Ved å byrje tidleg
     får elevane eit grunnlag for suksess i kva som helst karrieresti for det 21. århundret.
     Sjå meir statistikk på <a href='%{stats_url}'>her</a>."
+  hoc_faq_why_cs_a_markdown: _Every_ student should have the opportunity to learn
+    computer science. It helps nurture problem-solving skills, logic and creativity.
+    By starting early, students will have a foundation for success in any 21st-century
+    career path. See more stats [here](%{stats_url}).
   hoc_faq_how_participate_q: Korleis deltek eg i ein Kodetime?
   hoc_faq_how_participate_a: "<a href='/how-to'>start planlegginga</a>. Du kan organisere
     en kodetime for skulen din eller for nærmiljøet &mdash; til dømes ein fritidsklubb,
     ein veldedig organisasjon eller på arbeidsplassen din. Eller, bare prøv det på
     eiga hand når vi kjem til %{campaign_date}."
+  hoc_faq_how_participate_a_markdown: "[Start planning here](%{howto}) by reviewing
+    our how-to guide. You can organize an Hour of Code event at your school or in
+    your community — like in an extracurricular club, non-profit or at work. Or, just
+    try it yourself when %{campaign_date} arrives."
   hoc_faq_behind_hoc_q: Kven står bak Kodetimen?
   hoc_faq_behind_hoc_a: Kodetimen er organisert av Hour of Code og Computer Science
     Education Week<a href='%{partner_url}'>Rådgjevings- og vurderingskomitear</a>,
     samt ei stor gruppe bedrifter som har gått saman for å støtte Kodetimen &mdash;
     inkludert Microsoft, Apple, Amazon, Boys and Girls Clubs of America og College
     Board.
+  hoc_faq_behind_hoc_a_markdown: The Hour of Code is driven by the Hour of Code and
+    Computer Science Education Week [Advisory and Review Committees](%{partner_url})
+    as well as an unprecedented coalition of partners that have come together to support
+    the Hour of Code — including Microsoft, Apple, Amazon, Boys and Girls Clubs of
+    America and the College Board.
   hoc_faq_host_q: Eg veit ingenting om koding. Kan eg framleis vere vert for ein Kodetime?
   hoc_faq_host_a: Sjølvsagt! Kodetimeaktivitetar er brukarstyrte. Alt du treng er
     å <a href='%{codeorg_url}/learn'>sjå på våre oppdaterte rettleiingar</a>, plukke
     den du ynskjer, og velgje ein &mdash; me gjer resten. Me har også val for alle
     aldre og erfaringsnivå, frå barnehagen og opp. Start hendingsplanleggjinga ved
     å lese vår <a href='/how-to'>veiledning</a>.
+  hoc_faq_host_a_markdown: Of course. Hour of Code activities are self-guided. All
+    you have to do is [try our current tutorials](%{codeorg_url}/learn), pick the
+    tutorial you want, and pick an hour — we take care of the rest. We also have options
+    for every age and experience-level, from kindergarten and up. Start planning your
+    event by reading our [how to guide](%{howto}).
   hoc_faq_devices_q: Kva slags datamaskiner/einingar bør eg bruke for elevane mine?
   hoc_faq_devices_a: Code.org sine rettleiingar fungerer på alle einingar og nettlesarar.
     Du finn meir informasjon om tekniske behov <a href='%{codeorg_url}/educate/it'>her</a>.
     Tekniske behov for opplæring utanfor Code.org finn du <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>
     i skildringa av kvar enkelt rettleiing. Ikkje gløym at vi også tilbyr <a href='%{unplugged_url}'>opplegg
     utan datamaskiner</a> dersom skulen ikkje kan tilrettelegge med utstyr!
+  hoc_faq_devices_a_markdown: Code.org tutorials work on all devices and browsers.
+    You can see more information about Code.org's tutorial tech needs [here](%{codeorg_url}/educate/it).
+    Tech needs for non-Code.org tutorials can be found on [%{partner_url}/learn](%{codeorg_url}/learn)
+    in the tutorial specific description. Don't forget we also offer [unplugged activities](%{unplugged_url})
+    if your school can't accommodate the tutorials!
   hoc_faq_need_computers_q: Treng eg datamaskiner til kvar deltakar?
   hoc_faq_need_computers_a: Nei. Vi har Kodetime-rettleiingar som fungerar på PC,
     smarttelefonar, nettbrett og nokre som ikkje treng datamaskiner i det heile teke.
@@ -508,21 +642,41 @@ nn:
     runder der kvar og ein løyser gåter eller svarar på spørsmål<li><b>Heilt utan
     straum.</b> VI har også <a href='%{unplugged_url}'>rettleiingar som ikkje krev
     datamaskiner</a> i det heile teke.</ul>
+  hoc_faq_need_computers_a_markdown: |-
+    No. We have Hour of Code tutorials that work on PCs, smartphones, tablets, and some that require no computer at all! You can join wherever you are, with whatever you have.
+
+    _Here are a few options:_
+
+    - **Work in pairs.** [Research shows](%{pair_programming_research}) students learn best with [pair programming](%{pair_programming_video}), sharing a computer and working together. Encourage your students to double up.
+    - **Use a projected screen.** If you have a projector and screen for a Web-connected computer, your entire group can do an Hour of Code together. Watch video portions together and take turns solving puzzles or answering questions.
+    - **Go unplugged.** We offer [tutorials that require no computer](%{unplugged_url}) at all.
   hoc_faq_international_q: Eg er i <country>. Korleis kan eg delta internasjonalt?
   hoc_faq_international_a: Kven som helst kan organisere eit Kodetime-arrangement,
     kor som helst i verda. I fjor deltok elevar over heile verda saman i Kodetimen.
     Finn ut meir <a href='/promote'> her</a>.
+  hoc_faq_international_a_markdown: Anyone can organize an Hour of Code event, anywhere
+    in the world. Last year, students worldwide joined together for the Hour of Code.
+    Find out more [here](%{promote}).
   hoc_faq_tutorial_q: Korleis kan eg lage ei veiledning for Kodetimen?
   hoc_faq_tutorial_a: Om du er interessert i å bli ein rettleiingsspartner, <a href='target-tutorial-guidelines'>sjå
     våre retningslinjer og instruksjonar</a>. Vi ynskjer å skape mange ulike mogelegheiter,
     men primærmålet er å optimalisere erfaringa for elevane og lærarane som er nye
     innan datavitskap.
+  hoc_faq_tutorial_a_markdown: If you're interested in becoming a tutorial partner,
+    [see our guidelines and instructions](%{tutorial_guidelines}). We'd like to host
+    a variety of engaging options, but the primary goal is to optimize the experience
+    for students and teachers who are new to computer science.
   hoc_faq_account_q: Må elevane logge på med ein konto?
   hoc_faq_account_a: Nei. Registrering eller innlogging er ikkje naudsynt for at elevar
     skal prøve Kodetimen. Dei fleste <a href='%{codeorg_url}/learn/beyond'>kursa for
     viderekommande</a> krev ein konto for å kunne lagre framgangen til eleven. Når
     du registrerer deg for Kodetimen lagar IKKJE automatisk ein Code Studio-konto.
     Dersom du ønsker å lage kontoar for elevande dine, følg desse <a href='https://youtu.be/_smelV_KISE'>instruksjonane</a>.
+  hoc_faq_account_a_markdown: No. Absolutely no signup or login is required for students
+    to try the Hour of Code. Most of the [follow-on courses](%{codeorg_url}/learn/beyond)
+    require account creation to save student progress. Also, signing up for the Hour
+    of Code does NOT automatically create a Code Studio account. If you do want to
+    create accounts for your students, please follow these [instructions](https://youtu.be/_smelV_KISE).
   hoc_faq_high_school_q: Kva for aktivitet bør eg gjere med elevar i vidaregåande
     skule?
   hoc_faq_high_school_a: Oppgåvene på Star Wars og Minecraft er bra for vidaregåande,
@@ -531,24 +685,48 @@ nn:
     for å starte, til dømes oppgåva med Angry Birds eller med Anna og Elsa frå Frost.
     Ein elev i vidaregåande skule bør klare desse på 30 minutt og kan gå vidare til
     ei meir avansert oppgåve i JavaScript, frå for eksempel Khan Academy eller CodeHS.
+  hoc_faq_high_school_a_markdown: Our Star Wars and Minecraft tutorials are great
+    for high schoolers, especially the Star Wars JavaScript version and the free play
+    level on both tutorials. Alternately, we recommend trying one of the beginner
+    tutorials on [%{partner_url}/learn](%{codeorg_url}/learn) to start, such as the
+    tutorial with Angry Birds or with Anna and Elsa. A high school student should
+    be able to finish one of these in 30 minutes and can then try a more advanced
+    tutorial in JavaScript, such as Khan Academy or CodeHS.
   hoc_faq_scratch_q: Eg skal bruke Scratch i Kodetimen, men kva om elevane har iPads
     i staden for laptops?
   hoc_faq_scratch_a: Scratch køyrer ikkje på nettbrett. Om elvane er unge, kan dei
     bruke appen ScratchJR for iPad (for dei som kan lese). Om du ser på oppgåvene
     på<a href='%{codeorg_url}/learn'>%{partner_url}/learn</a> kan du finne andre oppgåver
     som passar for iPad - frå Code.org, Tynker, Lightbot eller CodeSpark.
+  hoc_faq_scratch_a_markdown: Scratch doesn't run on tablets. If your students are
+    young, they can use the ScratchJR iPad app (for early-readers). If you look at
+    the tutorials on [%{partner_url}/learn](%{codeorg_url}/learn), you can find other
+    tutorials that work on iPads - from Code.org, Tynker, Lightbot, or CodeSpark.
   hoc_faq_count_hoc_q: Hvordan tel de kodetimar?
   hoc_faq_map_q: Kvifor ser eg ikkje min prikk på kartet?
   hoc_faq_map_a: Vi er veldig lei oss for at du ikkje ser arrangementet ditt på kartet
     over Kodetimen. Fordi titusenvis av organisatorar melder seg på vil kartet samle
-    fleire arrangement under kvar prikk. Viss du klikkar på nummeret over kartet vil
-    du få opp ei liste over alle arrangement for kvar region og finne arrangementet
-    ditt der. I tillegg vil det ofte ta opp til 48 timar før kartet oppdaterar seg
-    på grunn av det er tusenvis av påmeldingar. Sjekk igjen om nokre få dagar!
+    fleire arrangement under kvar prikk. Viss du klikkar på <a href='%{events_url}'>sida
+    for arrangement</a>-lenka under kartet vil du få opp ei liste over alle arrangement
+    for kvar region og finne arrangementet ditt der. I tillegg vil det ofte ta opp
+    til 48 timar før kartet oppdaterar seg på grunn av det er tusenvis av påmeldingar.
+    Sjekk igjen om nokre få dagar!
+  hoc_faq_map_a_markdown: We're so sorry you aren't seeing your event on the Hour
+    of Code map. Because of the tens of thousands of organizers who sign up, the map
+    aggregates the data and displays one point for several events. If you click the
+    [events page](%{events_url}) link below the map you will be directed to a list
+    of all events by state and can find your event listed there. Additionally, given
+    the thousands of people signing up for the Hour of Code, the map and event list
+    usually takes 48 hours to update. Check back in a few days!
   hoc_faq_count_hoc_a: Teljaren for Kodetimen er ikkje heilt nøyaktig. Vi tel ikkje
     unike elevar eksakt når vi måler deltakinga på Kodetimen, særskilt kjem dette
     av at vi ikkje krev innlogging eller registrering. Dette fører til at vi både
     tel for mange og for få heile tida. Les fleire detaljar om dette <a href='%{codeorg_url}/loc'>her</a>.
+  hoc_faq_count_hoc_a_markdown: The Hour of Code tracker isn't an exact measurement
+    of usage. We do not count unique student IDs perfectly when tracking participation
+    in the Hour of Code, especially because we don't require students to log in or
+    register. As a result, we both over-count and under-count participants at the
+    same time. Read all the details [here](%{codeorg_url}/loc).
   hoc_faq_one_hour_q: Hvor mye kan ein lære i ein time?
   hoc_faq_one_hour_a: Målet til Kodetimen er ikkje at nokon skal bli ekspert i informatikk
     eller koding på ein time. Ein time er berre nok til å lære at informatikk er moro
@@ -565,25 +743,44 @@ nn:
     nettbaserte kurs. Dette gjeld også for skulesjefar som vil forstå at informatikk
     er noko elevane ønskjer og lærarane meistrar.<br/><br/>Det viktigaste av alt er
     at alle deltakarane i løpet av den timen skjønar at dette får vi til.
+  hoc_faq_one_hour_a_markdown: |-
+    The goal of the Hour of Code is not to teach anybody to become an expert computer scientist in one hour. One hour is only enough to learn that computer science is fun and creative, that it is accessible at all ages, for all students, regardless of background. The measure of success of this campaign is not in how much CS students learn - the success is reflected in broad participation across gender and ethnic and socioeconomic groups, and the resulting increase in enrollment and participation we see in CS courses at all grade levels. Millions of the participating teachers and students have decided to go beyond one hour -  to learn for a whole day or a whole week or longer, and many students have decided to enroll in a whole course (or even a college major) as a result.
+
+    Besides the students, another "learner" is the educator who gains the confidence after one hour that they can teach computer science even though they may not have a college degree as a computer scientist. Tens of thousands of teachers decide to pursue computer science further, either attending PD or offering follow-on online courses, or both. And this applies to school administrators too, who realize that computer science is something their students want and their teachers are capable of.
+
+    Above all, what all participants can learn in an hour is that we can do this.
   hoc_faq_more_questions_q: Har du framleis fleire spørsmål?
   hoc_faq_more_questions_a: Sjå om du finn eit svar i vårt <a href='http://support.code.org'>brukarstøtteforum</a>.
+  hoc_faq_more_questions_a_markdown: Try finding an answer in our [support forum](http://support.code.org).
   hoc_faq_keep_learning_q: Korleis held eg fram med læringa etter Kodetimen?
   hoc_faq_keep_learning_a: Kven som helst kan halde ein Kodetime når som helst. Rettleiingane
     vert haldne oppdatert heile året. Du kan forvente at alle rettleiingar og oppgåver
     er tilgjengelege på nettsida vår i overskueleg framtid. Besøk <a href='/promote'>ressurssida
     vår</a> for rettleiing om korleis halde ein Kodetime eller andre ressursar for
     å hjelpe deg å gjere Kodetimen til ein suksess.
+  hoc_faq_keep_learning_a_markdown: Anyone can host an Hour of Code at any time. The
+    tutorials stay up year-round. You can expect all our tutorials and curriculum
+    to be available on our site in perpetuity. Please go to [our resources](%{promote})
+    for event how-to guides and other resources to help make your Hour of Code event
+    a success.
   hoc_faq_certificates_q: Korleis kan eg skrive ut kursbevisa for elevane mine?
   hoc_faq_certificates_a: Gå til sida vår for <a href='%{codeorg_url}/certificates'>kursbevis</a>
     der du kan skrive ut kursbevis for heile klassa på førehand. Du kan også skrive
     ut <a href='%{codeorg_url}/certificates?course=mc'> spesielle kursbevis</a> for
     elevar på Minecraft-opplæringa.
+  hoc_faq_certificates_a_markdown: Go to our [certificates page](%{codeorg_url}/certificates)
+    where you can print certificates for your entire class ahead of time. You can
+    also print out [special certificates](%{codeorg_url}/certificates?course=mc) for
+    students doing the Minecraft tutorial.
   hoc_faq_logo_q: Er der avgrensningar på korleis eg kan nytte Kodtimen sitt namn
     og logo?
   hoc_faq_logo_a: Kodetimen er eit varemerke. Vi ønskjer ikkje å hindre bruken av
     det, men vi vil sikre oss at bruken er innanfor visse avgrensingar. Vær venleg
     og sjå <a href='https://support.code.org/hc/en-us/articles/215831637-Are-there-limitations-of-how-I-can-use-the-Hour-of-Code-logo-'>desse
     retningslinjene for bruk</a>.
+  hoc_faq_logo_a_markdown: Hour of Code is trademarked. We don't want to prevent its
+    usage, but we want to make sure its usage fits within a few limits. Please see
+    [these guidelines for usage](%{logo_url}).
   stats_hoc_2013_image_alt: Tal frå Kodetimen 2013
   stats_growth: Det var den raskaste til å oppnå 15 millionar brukarar.
   stats_i18n: Elevene lærer på over 45 språk
@@ -599,6 +796,8 @@ nn:
   stats_females: Kvinneandelen i informatikk er berre 20% i høgskulekurs. universitetsfag
     og i næringslivet.
   stats_females_more: I Kodetimen utgjer elevar som er jenter <b>50 % av alle deltakarar</b>!
+  stats_females_more_markdown: During the Hour of Code, female students make up **50%
+    of all participants**!
   stats_nina: "«Kvar dag gav det same resultatet &mdash; 100 % engasjement.» – Nina
     Nichols Peery, lærar"
   stats_student: "«Eg visste dette var ein <b>sjanse eg berre ville få éin gong i
@@ -723,8 +922,11 @@ nn:
     Bli med millionar av elevar og lærarar i over 180 land på ein Kodetime.
   learn_banner_beyond: Vil du lære meir? <a id='learn_banner_beyond'>Lær meir enn
     ein Kodetime</a>
+  learn_banner_beyond_markdown: Want to keep learning? [Go beyond an hour](%{url})
   learn_banner_teachers: Lærarar:<a id='teacher_banner_host'>Vær vert for ein time</a>eller<a
     id='teacher_banner_howto'>les slik-gjer-du-guiden</a>
+  learn_banner_teachers_markdown: 'Teachers: [Host an hour](%{host_url}) or [read
+    the How-To Guide](%{howto_url})'
   learn_robotics_banner_heading: ROBOTIKK
   learn_robotics_banner_blurb: Har du robotar eller fysiske programmeringssett? Bruk
     dei i aktivitetane nedanfor og lag ein handfast Kodetime for alle aldrar! Nokre
@@ -1007,7 +1209,7 @@ nn:
   tutorial_playtune_name: Spel melodien-appen
   tutorial_computeit_name: Rekn det ut
   tutorial_codesterssj_name: Vitsar i verdsrommet
-  tutorial_cmchat_name: Python-chatbot
+  tutorial_cmchat_name: Trivia-chatbot
   tutorial_tynkerdb_name: Dragesprenging
   tutorial_cmbuild_name: Spelbyggar
   tutorial_robotrattle_name: Robot-rangle
@@ -1139,9 +1341,9 @@ nn:
   tutorial_cadj_name: DR DJ Device
   tutorial_cacrazy_name: Kod ville skapningar
   tutorial_cajump_name: Hoppande syltetøy
-  tutorial_carest_name: Robo-restaurant puzzler
+  tutorial_carest_name: 'Oppgåvespel: Robo-restaurant'
   tutorial_accai_name: Accenture Intelligent Space Exploration
-  tutorial_vceclipse_name: Code the Eclipse
+  tutorial_vceclipse_name: Kod formørkelsen
   tutorial_pmzero_name: Pac-Man ZERO
   tutorial_hsela_name: 'Telling stories: ELA + coding'
   tutorial_ticklear_name: What's AR?
@@ -1211,8 +1413,8 @@ nn:
   tutorial_codesparkcreate_name: codeSpark Academy med Foos - Lag spel
   tutorial_hardvsoft_name: Team maskinvare vs Team programvare
   tutorial_codestersecard_name: Lag eit e-kort
-  tutorial_codesterslogo_name: Firmalogo
-  tutorial_codesterstshirt_name: T-skjortedesign med monogram
+  tutorial_codesterslogo_name: Design eigen logo
+  tutorial_codesterstshirt_name: Programmer initialane dine
   tutorial_codewards_name: Redd den undersjøiske byen!
   tutorial_olympics_name: C.A.T.S. går for Robot-OL
   tutorial_codinismhero_name: Programmere helten
@@ -1247,31 +1449,31 @@ nn:
   tutorial_mbbuttons_name: 'Introduksjon til BBCs micro:bit: Animasjon og knappar'
   tutorial_meteor_name: Lag eit spel med fallande meteorar til BBC micro:bit
   tutorial_ballbounce_name: Ball Bounce Mobile App
-  tutorial_mitcodi_name: Codi the Bee
-  tutorial_mitdoodle_name: Digital Doodle Mobile App
-  tutorial_talktome_name: Talk to Me Mobile App
-  tutorial_mobilecspmap_name: Map Tour App
-  tutorial_ozorandom_name: Ozobot Random Story Generator
+  tutorial_mitcodi_name: Bia Codi
+  tutorial_mitdoodle_name: Digital Doodle-mobilapp
+  tutorial_talktome_name: Snakk til meg-mobilapp
+  tutorial_mobilecspmap_name: Turkart-app
+  tutorial_ozorandom_name: Ozobot - den tilfeldige forteljingsgeneratoren
   tutorial_ozotroll_name: Trollet Evo
-  tutorial_peblioart_name: 'Interactive Art: Bringing Art to Life with Code'
+  tutorial_peblioart_name: 'Interaktiv kunst: Gi kunst liv med koding'
   tutorial_astropi_name: 'Astro Pi: Mission Zero'
-  tutorial_rgart_name: RoboGarden STEAM - Art
-  tutorial_rgengineer_name: RoboGarden STEAM - Engineering
-  tutorial_rgmath_name: RoboGarden STEAM - Math
-  tutorial_rgscience_name: RoboGarden STEAM - Science
-  tutorial_rgtech_name: RoboGarden STEAM - Technology
-  tutorial_robotmagic3d_name: " Animate a 3D Logo"
-  tutorial_robotmagicflappy_name: 3D Flappy Bird
-  tutorial_scratchadventure_name: Animate an Adventure Game
-  tutorial_scratchtalk_name: Create Animations That Talk
-  tutorial_scratchjrstory_name: 'We Can Create a Story Together! '
-  tutorial_scratchjrtwinkle_name: Twinkle, Twinkle Little Star Class Collaboration
-  tutorial_spherocomm_name: Communication
-  tutorial_spherocommunity_name: Your Community
-  tutorial_spherofunctions_name: Fun Fun Functions
-  tutorial_spheroinfrared_name: 'BOLT: Infrared'
-  tutorial_spherolightsensor_name: 'BOLT: Light Sensor'
-  tutorial_spheromansion_name: 'Jurassic Code: Mansion Mayhem'
+  tutorial_rgart_name: RoboGarden STEAM - Kunst
+  tutorial_rgengineer_name: RoboGarden STEAM - Ingeniørfag
+  tutorial_rgmath_name: RoboGarden STEAM - Matte
+  tutorial_rgscience_name: RoboGarden STEAM - Vitenskap
+  tutorial_rgtech_name: RoboGarden STEAM - Teknologi
+  tutorial_robotmagic3d_name: " Animer ein 3D-logo"
+  tutorial_robotmagicflappy_name: Flaksefugl i 3D
+  tutorial_scratchadventure_name: Animer eit eventyrspel
+  tutorial_scratchtalk_name: Lag animasjonar som snakkar
+  tutorial_scratchjrstory_name: 'Vi kan lage ei forteljing saman! '
+  tutorial_scratchjrtwinkle_name: Twinkle, Twinkle Little Star - Klassesamarbeid
+  tutorial_spherocomm_name: Kommunikasjon
+  tutorial_spherocommunity_name: Fellesskapet ditt
+  tutorial_spherofunctions_name: Kjempekjekke funksjonar
+  tutorial_spheroinfrared_name: 'BOLT: Infrarød'
+  tutorial_spherolightsensor_name: 'BOLT: Lyssensor'
+  tutorial_spheromansion_name: 'Jurassic-kode: Mansion Mayhem'
   tutorial_roadblocks_name: Vegsperringar
   tutorial_spherotext2_name: 'Tekst 2: betingelsar'
   tutorial_spherotext3_name: 'Tekst 3: lys'
@@ -2655,8 +2857,8 @@ nn:
     pop up when clicked.
   tutorial_itchg_longdescription: "Name-IT has you create a game of recognition! \n\nThe
     ending project has students creating a game to name the States of Australia!\n\nYou'll
-    first walk through an and follow directions to create a game to label the three
-    phases of the water cycle. You'll make a fully functioning game, including scoring!\n\nFrom
+    first walk through and follow directions to create a game to label the three phases
+    of the water cycle. You'll make a fully functioning game, including scoring!\n\nFrom
     the coding side you'll learn about variables, conditionals, lists, concatenating
     strings and much, much more. These are coding techniques you'll be able to re-use
     in other projects as you progress on to build your new coding skills!\n\nYou can
@@ -2684,7 +2886,7 @@ nn:
 
     Create a game to name the parts of a biological cell. Learn the parts of the cell while you make the game, and play it again as many times as you need to refresh your memory!
 
-    You'll first walk through an and follow directions to create a game to label the three phases of the water cycle. You'll make a fully functioning game, including scoring!
+    You'll first walk through and follow directions to create a game to label the three phases of the water cycle. You'll make a fully functioning game, including scoring!
 
     From the coding side you'll learn about variables, conditionals, lists, concatenating strings and much, much more. These are coding techniques you'll be able to re-use in other projects as you progress on to build your new coding skills!
 
@@ -2859,7 +3061,6 @@ nn:
     code through a playful action game and master computer science concepts like variables
     and functions. Create your own game in the Sandbox by remixing and expanding on
     existing game code. Then publish and share your game with friends and family.
-    A scripted lesson guide is included for teachers.
   tutorial_capost_longdescription: Starting to learn HTML and CSS is easy and fun
     with this digital postcard. Learn about adding headings, paragraphs, images and
     links to create a holiday card or birthday celebration to share with friends and
@@ -2976,24 +3177,9 @@ nn:
   tutorial_mozillahw_longdescription: Learners will remix JavaScript code to change
     the words on a website, learning about composing for the web, coding JavaScript
     values, and remixing Web content.
-  tutorial_ticklep_longdescription: "Det du kan oppnå\nPapegøye-drone som er kompatibel
-    med Tickle-appen, er kjent for sine fantastiske flygeeigenskapar. Ved å bruke
-    Tickle-appen kan du få dei til å fly på innovative måtar og utføre fantastiske
-    show i lufta. Samtidig som du lærer deg programmeringskonsept medan du prøver
-    å nå målet. \n(Utstyr du treng: Rolling Spider/Airborn Night Airborne Cargo)\n\nØving
-    og utføring\n- Programmer ei drone til å ta av, flippe fleire gongar og lande.\n-
-    Få ei drone til å fly framover i ei spesiell fart for ei spesifisert varigheit
-    til eit mål, og deretter flytt bakover til startpunktet.\n-Programmer ei Papegøye-drone
-    til å fly langs eit kvadrat og ei trekanta rute ved å snu til spesifikke retningsvinklar
-    og fly.\n- Bruk rørslesensorar på eininga di og programmerer ruter for å styre
-    ei drone. Til dømes kan du programmere drona til å fly til høgre når eininga di
-    blir tilta til høgre, fly framover når den blir tiltar framover. Når du ristar
-    på eninga di, kan drona då utføra ein flip i lufta!\n\nDet du kan lære deg\n-
-    Bli kjent med visuell prgrammering.\n- Lære kodekonsepta \"løkke\": ei kontrollsetning
-    som spesifiserer køyring som lar koden bli repetert fleire gongar.  \n- Lær to
-    relaterte fysikkkonsept: 1) Lineære forhold mellom fart, tid og avstand; 2) hastigheit,
-    ein vektor som skidra verdien til farta med ei retning. \n- Forstå retningsvinklar
-    (0 til 369 gradar)."
+  tutorial_ticklep_longdescription: 'Med Tickle, ein brukarvenleg programmeringsapp,
+    kan du lett programmere eiPapegøye-drone til å svømme på ulike måtar berre ved
+    å dra og sleppe kodeblokker saman for å lage ein kommando den skal følge. '
   tutorial_bbot_longdescription: "With these 3 one-hour coding activities, you don't
     need any programming knowledge or experience to teach your students about programming!
     You can teach programming in a fun and easy way. Go over the activities and download
@@ -3043,7 +3229,7 @@ nn:
     grade example, we have lesson plans on this concept scaffolded for K-5.
   tutorial_bbcgeo_longdescription: Standarbasert time for klassar frå 5. klasse. Ta
     med elevane til datalabben med teiknepapir og bygg appar med geometri.
-  tutorial_chspixel_longdescription: After learning about how graphics work, studetns
+  tutorial_chspixel_longdescription: After learning about how graphics work, students
     will create their own Color by Pixel programs. The lesson plan consists of four
     parts, each covering a specific topic. The entire five-part Color by Pixel lesson
     is designed to run approximately one hour.
@@ -3147,11 +3333,11 @@ nn:
     the clocks scattered in the wilderness! In this tutorial you will learn the basics
     of algorithms, sequences, loops and conditionals!
   tutorial_hopgame_longdescription: "Keep the fun going! Use this project-based guide
-    to facilitate a game design workshop, hackathon, or in-class series. \n\nMake:
-    \n1. Cross the Road\n2. Geometry Jumper\n3. Quiz Creator\n4. Falling Bird \n5.
-    Subway Skaters\n6. Escape the Room\n\nEach includes discussion questions, differentiation,
-    and a video tutorial. \n\nStudents can build off your instructions to customize
-    their games. No prior experience required."
+    to facilitate a game design workshop, hackathon, or in-class series. Make Cross
+    the Road, Geometry Jumper, Quiz Creator, Falling Bird, Subway Skaters, and Escape
+    the Room. Each includes discussion questions, differentiation, and a video tutorial.
+    \n\nStudents can build off your instructions to customize their games. No prior
+    experience required."
   tutorial_icontrol_longdescription: |-
     This teacher facilitated lesson, adapted for the Hour of Code, provides pupils with an opportunity to explore physical programming through robotics - Sphero.
 
@@ -3241,7 +3427,7 @@ nn:
     chance to learn more.
   tutorial_elaseq_longdescription: Students will examine the concept of sequence in
     the context of reading and writing. Through grade level aligned ELA lessons, students
-    will apply their knowledge of sequence to farther their understanding of the role
+    will apply their knowledge of sequence to further their understanding of the role
     sequence plays in programming.
   tutorial_bbcmathi_longdescription: Standards-based lesson plan for grades 3-5. Take
     your kids to the computer lab with worksheets in hand, and build apps involving
@@ -3350,7 +3536,7 @@ nn:
     to human computer interaction (HCI) and in particular why so many gadgets areharder
     to use than need be. Design does make a difference and it is important that interfaces
     are evaluated to check they are easy to use.
-  tutorial_imathematician_longdescription: "This, teacher led, activity provides the
+  tutorial_imathematician_longdescription: "This teacher led activity provides the
     opportunity for pupils to use a cross curricular approach to computer science
     and mathematics.  \n\nPupils will create a computer program to solve a variation
     of a famous problem in a branch of Mathematics (Game Theory), called The Prisoner's
@@ -3870,7 +4056,7 @@ nn:
   tutorial_codehspython_longdescription: Learn the basics of coding with the Python
     programming language by writing programs that you can interact with! This hour
     will cover printing, variables, math, and getting information from users. Write
-    a program that take in and stores data from a user and returns a unique response!
+    a program that takes in and stores data from a user and returns a unique response!
   tutorial_codehsjava_longdescription: Koding i Java med CodeHS
   tutorial_techioda_longdescription: This useful tutorial will interactively teach
     you how to be able to calculate the shortest path between two nodes in a graph
@@ -4108,9 +4294,9 @@ nn:
     are well suited for and finish the lesson by designing their own robot to solve
     a specific problem.
   tutorial_isavesanta_longdescription: In this teacher-led festive activity, adapted
-    for the Hour of Code, the children explore create a computer game using Scratch
-    to save Santa. They design algorithms, use conditional statements as well as test
-    and debug their work. Includes step-by-step lesson plan, pupil resources, support
+    for the Hour of Code, the children create a computer game using Scratch to save
+    Santa. They design algorithms, use conditional statements as well as test and
+    debug their work. Includes step-by-step lesson plan, pupil resources, support
     cards and pre-written program templates.
   tutorial_iorder_longdescription: This teacher led activity, adapted for the Hour
     of Code, develops computational thinking and coding skills using Scratch 2.0.
@@ -4770,30 +4956,29 @@ nn:
   tutorial_astropi_longdescription: Code a message and check the ambient air temperature
     on board the ISS using an online simulator of the Astro Pi computer's Sense HAT.
   tutorial_rgart_longdescription: Looking for an easy and intuitive way to teach your
-    students to code? RoboGarden STEAM Activities has fused code practicing with STEAM
-    learning and gamified missions in multiple activities. In the art activity, the
-    student understand color mixing concepts while using coding blocks to solve challenges
+    students to code? RoboGarden STEAM has fused code practicing with STEAM learning
+    and gamified missions in multiple activities. In the art activity, the student
+    understand color mixing concepts while using coding blocks to solve challenges
     in the birthday party.
   tutorial_rgengineer_longdescription: Looking for an easy and intuitive way to teach
-    your students to code? RoboGarden STEAM Activities has fused code practicing with
-    STEAM learning and gamified missions in multiple activities. In the engineering
-    activity, the student learns basic robotics while using coding blocks to solve
-    challenges in the Christmas party.
+    your students to code? RoboGarden STEAM has fused code practicing with STEAM learning
+    and gamified missions in multiple activities. In the engineering activity, the
+    student learns basic robotics while using coding blocks to solve challenges in
+    the Christmas party.
   tutorial_rgmath_longdescription: Looking for an easy and intuitive way to teach
-    your students to code? RoboGarden STEAM Activities has fused code practicing with
-    STEAM learning and gamified missions in multiple activities. In the math activity,
-    the student practices counting, addition and subtraction while solving some coding
-    challenges.
+    your students to code? RoboGarden STEAM has fused code practicing with STEAM learning
+    and gamified missions in multiple activities. In the math activity, the student
+    practices counting, addition and subtraction while solving some coding challenges.
   tutorial_rgscience_longdescription: Looking for an easy and intuitive way to teach
-    your students to code? RoboGarden STEAM Activities has fused code practicing with
-    STEAM learning and gamified missions in multiple activities. In the science activity,
-    the student goes through a journey to the space solving multiple coding challenges
-    and know more about space elements and science facts.
+    your students to code? RoboGarden STEAM has fused code practicing with STEAM learning
+    and gamified missions in multiple activities. In the science activity, the student
+    goes through a journey to the space solving multiple coding challenges and know
+    more about space elements and science facts.
   tutorial_rgtech_longdescription: Looking for an easy and intuitive way to teach
-    your students to code? RoboGarden STEAM Activities has fused code practicing with
-    STEAM learning and gamified missions in multiple activities. In the technology
-    activity, the student goes through a journey to the volcanic islands solving multiple
-    coding challenges by understanding basic concepts of Technology.
+    your students to code? RoboGarden STEAM has fused code practicing with STEAM learning
+    and gamified missions in multiple activities. In the technology activity, the
+    student goes through a journey to the volcanic islands solving multiple coding
+    challenges by understanding basic concepts of Technology.
   tutorial_robotmagic3d_longdescription: Use your imagination to create an animated
     3D logo of your name, your favorite sports team or anything you want. Use code
     to make 3D models and letters come alive with fun. At the end you can download
@@ -4855,7 +5040,7 @@ nn:
     and area of a circle, but have you ever wondered where this number comes from
     or how to calculate it? In this coding activity you will randomly generate points
     similar to a very bad player shooting darts at a dart board. The percentage of
-    darts that land inside the circle can help us calculate Pi Then change the colors
+    darts that land inside the circle can help us calculate Pi. Then change the colors
     of the points just for fun!
   tutorial_stemplanetoids_longdescription: Did you know that the code behind the classic
     Asteroids and Lunar Lander games is simpler than you might think? Did you know
@@ -6230,7 +6415,7 @@ nn:
   tutorial_dance2019_string_platforms: Alle moderne nettlesarar, Android nettbrett,
     iPad, Fråkobla
   tutorial_danceparty_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_chibitronics_string_platforms: All modern browsers
+  tutorial_chibitronics_string_platforms: All modern browsers, Screen reader
   tutorial_athlete_string_platforms: All modern browsers
   tutorial_moana_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_star-wars_string_platforms: All modern browsers, Android tablet, iPad,
@@ -6306,7 +6491,7 @@ nn:
     Firefox, Safari, Android tablet, iPad
   tutorial_cmgame_string_platforms: All modern browsers
   tutorial_codesters_string_platforms: do-not-show
-  tutorial_qrm_string_platforms: All modern browsers
+  tutorial_qrm_string_platforms: All modern browsers, Screen reader
   tutorial_texas-instruments_string_platforms: TI-84, TI-83 graphing calculators
   tutorial_cajava_string_platforms: Internet Explorer 11, Microsoft Edge, Chrome,
     Firefox, Safari
@@ -6643,7 +6828,7 @@ nn:
     phone, Android phone, iPhone
   tutorial_gpbcatapult_string_platforms: All modern browsers
   tutorial_quorumastro_string_platforms: All modern browsers, Android tablet, iPad,
-    Windows phone, Android phone, iPhone
+    Windows phone, Android phone, iPhone, Screen reader
   tutorial_alicewonder_string_platforms: All modern browsers
   tutorial_rginter_string_platforms: Chrome, Firefox, Android tablet
   tutorial_cssgrid_string_platforms: All modern browsers
@@ -6776,26 +6961,38 @@ nn:
   tutorial_blockscadpizza_string_platforms: All modern browsers
   tutorial_blockscadsugar_string_platforms: All modern browsers
   tutorial_bsgridlight_string_platforms: All modern browsers
-  tutorial_bpartscratch_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_bpartvid_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_bpartscratch_string_platforms: All modern browsers, Android tablet, iPad,
+    Screen reader
+  tutorial_bpartvid_string_platforms: All modern browsers, Android tablet, iPad, Screen
+    reader
   tutorial_bpenglishscratch_string_platforms: All modern browsers, Android tablet,
-    iPad
-  tutorial_bpenglishvid_string_platforms: All modern browsers, Android tablet, iPad
+    iPad, Screen reader
+  tutorial_bpenglishvid_string_platforms: All modern browsers, Android tablet, iPad,
+    Screen reader
   tutorial_bphealthscratch_string_platforms: All modern browsers, Android tablet,
-    iPad
-  tutorial_bphealthvid_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_bpmathscratch_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_bpmathvid_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_bpmlkscratch_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_bpmlkvid_string_platforms: All modern browsers, Android tablet, iPad
+    iPad, Screen reader
+  tutorial_bphealthvid_string_platforms: All modern browsers, Android tablet, iPad,
+    Screen reader
+  tutorial_bpmathscratch_string_platforms: All modern browsers, Android tablet, iPad,
+    Screen reader
+  tutorial_bpmathvid_string_platforms: All modern browsers, Android tablet, iPad,
+    Screen reader
+  tutorial_bpmlkscratch_string_platforms: All modern browsers, Android tablet, iPad,
+    Screen reader
+  tutorial_bpmlkvid_string_platforms: All modern browsers, Android tablet, iPad, Screen
+    reader
   tutorial_bpsafetyscratch_string_platforms: All modern browsers, Android tablet,
-    iPad
-  tutorial_bpsafetyvid_string_platforms: All modern browsers, Android tablet, iPad
+    iPad, Screen reader
+  tutorial_bpsafetyvid_string_platforms: All modern browsers, Android tablet, iPad,
+    Screen reader
   tutorial_bpsciencescratch_string_platforms: All modern browsers, Android tablet,
-    iPad
-  tutorial_bpsciencevid_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_bptechscratch_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_bptechvid_string_platforms: All modern browsers, Android tablet, iPad
+    iPad, Screen reader
+  tutorial_bpsciencevid_string_platforms: All modern browsers, Android tablet, iPad,
+    Screen reader
+  tutorial_bptechscratch_string_platforms: All modern browsers, Android tablet, iPad,
+    Screen reader
+  tutorial_bptechvid_string_platforms: All modern browsers, Android tablet, iPad,
+    Screen reader
   tutorial_caflags_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_matariki_string_platforms: Alle moderne nettlesarar, Android nettbrett,
     iPad, Fråkobla
@@ -6825,9 +7022,9 @@ nn:
   tutorial_codesparkcreate_string_platforms: All modern browsers, Android tablet,
     iPad, Android phone, iPhone
   tutorial_hardvsoft_string_platforms: Unplugged
-  tutorial_codestersecard_string_platforms: All modern browsers
-  tutorial_codesterslogo_string_platforms: All modern browsers
-  tutorial_codesterstshirt_string_platforms: All modern browsers
+  tutorial_codestersecard_string_platforms: All modern browsers, Screen reader
+  tutorial_codesterslogo_string_platforms: All modern browsers, Screen reader
+  tutorial_codesterstshirt_string_platforms: All modern browsers, Screen reader
   tutorial_codewards_string_platforms: All modern browsers
   tutorial_olympics_string_platforms: All modern browsers
   tutorial_codinismhero_string_platforms: Android tablet, Android phone
@@ -6841,10 +7038,10 @@ nn:
   tutorial_gamefrootsquid_string_platforms: All modern browsers, iPad
   tutorial_duckpiano_string_platforms: All modern browsers
   tutorial_gpsound_string_platforms: All modern browsers
-  tutorial_groklearningpython_string_platforms: All modern browsers
+  tutorial_groklearningpython_string_platforms: All modern browsers, Screen reader
   tutorial_htmltimetravel_string_platforms: All modern browsers
   tutorial_hp_flappy_string_platforms: iPad
-  tutorial_appytappin_string_platforms: Unplugged
+  tutorial_appytappin_string_platforms: All modern browsers
   tutorial_icipher_string_platforms: Unplugged
   tutorial_iguess_string_platforms: Android tablet, iPad, iPhone
   tutorial_imake_string_platforms: Unplugged
@@ -6894,27 +7091,27 @@ nn:
   tutorial_scratchjrstory_string_platforms: Android tablet, iPad
   tutorial_scratchjrtwinkle_string_platforms: Android tablet, iPad
   tutorial_spherocomm_string_platforms: All modern browsers, Android tablet, iPad,
-    Android phone, iPhone
+    Android phone, iPhone, Screen reader
   tutorial_spherocommunity_string_platforms: All modern browsers, Android tablet,
-    iPad, Android phone, iPhone
+    iPad, Android phone, iPhone, Screen reader
   tutorial_spherofunctions_string_platforms: All modern browsers, Android tablet,
-    iPad, Android phone, iPhone
+    iPad, Android phone, iPhone, Screen reader
   tutorial_spheroinfrared_string_platforms: All modern browsers, Android tablet, iPad,
-    Android phone, iPhone
+    Android phone, iPhone, Screen reader
   tutorial_spherolightsensor_string_platforms: All modern browsers, Android tablet,
-    iPad, Android phone, iPhone
+    iPad, Android phone, iPhone, Screen reader
   tutorial_spheromansion_string_platforms: All modern browsers, Android tablet, iPad,
-    Android phone, iPhone
+    Android phone, iPhone, Screen reader
   tutorial_roadblocks_string_platforms: All modern browsers, Android tablet, iPad,
-    Android phone, iPhone
+    Android phone, iPhone, Screen reader
   tutorial_spherotext2_string_platforms: All modern browsers, Android tablet, iPad,
-    Android phone, iPhone
+    Android phone, iPhone, Screen reader
   tutorial_spherotext3_string_platforms: All modern browsers, Android tablet, iPad,
-    Android phone, iPhone
+    Android phone, iPhone, Screen reader
   tutorial_spherotext4_string_platforms: All modern browsers, Android tablet, iPad,
-    Android phone, iPhone
+    Android phone, iPhone, Screen reader
   tutorial_spheroraptor_string_platforms: All modern browsers, Android tablet, iPad,
-    Android phone, iPhone
+    Android phone, iPhone, Screen reader
   tutorial_stempiday_string_platforms: Chrome, Firefox, Safari, Android tablet, iPad
   tutorial_stemplanetoids_string_platforms: Chrome, Firefox, Safari, Android tablet,
     iPad
@@ -8174,7 +8371,7 @@ nn:
   tutorial_careconfigure_name: ReconFigure of Speech
   tutorial_rpiscratch_name: Scratch 3.0 phrasebook
   tutorial_ozaria_name: Ozaria by CodeCombat
-  tutorial_ttovum_name: Ovum City
+  tutorial_ttovum_name: Ovun City
   tutorial_ttpassage_name: The Passage
   tutorial_tynkerhtmlen_name: Affordable and Clean Energy (HTML)
   tutorial_ttfrog_name: Frog Squash
@@ -8226,6 +8423,7 @@ nn:
   tutorial_modtraits_name: Character Traits with GoPiGo
   tutorial_mee_name: 'Kodetimen i Minecraft: nyttig kunstig intelligens '
   tutorial_kuborobo_name: KUBO Robotics Coding Routes
+  tutorial_ai-oceans_name: AI for hav
   tutorial_scratchimagine_longdescription: Imagine a world where anything is possible,
     then bring it to life with Scratch!
   tutorial_codesterspsa_longdescription: Learn the basics of coding in Python while
@@ -8390,9 +8588,9 @@ nn:
     where you learn to type real code, navigate through 15 game levels, and make your
     own game in order to help save the world of Ozaria.
   tutorial_ttovum_longdescription: Can you control the chaos? Hack your way into the
-    cyberpunk world of Ovum City. Debug broken code, solve puzzles, and upgrade your
+    cyberpunk world of Ovun City. Debug broken code, solve puzzles, and upgrade your
     hardware as you explore self guided open world. Don't get caught by the drones!
-    It's up to you how Ovum City evolves.
+    It's up to you how Ovun City evolves.
   tutorial_ttpassage_longdescription: Immerse yourself in an alien world to help Ada
     escape unknown dangers. Play through this 2D platforming self-guided adventure
     and learn coding techniques along the way. Players will become familiar with coding
@@ -8589,6 +8787,9 @@ nn:
   tutorial_kuborobo_longdescription: In this activity, students put their logic and
     sequencing skills to the test as they use the Tagtiles to program their KUBO robot
     to travel to various locations on a printed map.
+  tutorial_ai-oceans_longdescription: Computer science is about so much more than
+    coding! Learn about AI, machine learning, training data, and bias, while exploring
+    ethical issues and how AI can be used to address world problems.
   tutorial_scratchimagine_language: English, Spanish
   tutorial_codesterspsa_language: Norsk Nynorsk
   tutorial_googlehero_language: English, Spanish
@@ -8691,6 +8892,7 @@ nn:
     (tradisjonell), tyrkisk, Polsk, indonesisk, ukrainsk, gresk, bulgarsk, ungarsk,
     finsk, dansk, svensk, norsk, slovakisk, tsjekkisk, nederlandsk
   tutorial_kuborobo_language: English, Spanish
+  tutorial_ai-oceans_language: Norsk Nynorsk
   tutorial_scratchimagine_string_detail_grades: Frå 2. klasse
   tutorial_codesterspsa_string_detail_grades: Frå 6. klasse
   tutorial_googlehero_string_detail_grades: Frå 2. - 8. klasse
@@ -8789,12 +8991,14 @@ nn:
   tutorial_modtraits_string_detail_grades: Frå 2. klasse
   tutorial_mee_string_detail_grades: Frå 2. klasse
   tutorial_kuborobo_string_detail_grades: Pre-reader - Grades 8
+  tutorial_ai-oceans_string_detail_grades: Grades 3+
   tutorial_scratchimagine_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_codesterspsa_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_googlehero_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_codestersbball_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_scratchcartoon_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_codemonkeyjr_string_platforms: Android tablet, iPad, Android phone, iPhone
+  tutorial_codemonkeyjr_string_platforms: All modern browsers, Android tablet, iPad,
+    Android phone, iPhone
   tutorial_bananatales_string_platforms: All modern browsers
   tutorial_scratchtales_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_msemoji_string_platforms: Chrome, Safari
@@ -8819,7 +9023,7 @@ nn:
   tutorial_hyperpadpong_string_platforms: iPad
   tutorial_tynkerland_string_platforms: All modern browsers, iPad
   tutorial_trinketgirl_string_platforms: All modern browsers, Android tablet, iPad,
-    Windows phone, Android phone, iPhone
+    Windows phone, Android phone, iPhone, Screen reader
   tutorial_rpimosquito_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_tynkermars_string_platforms: All modern browsers, iPad
   tutorial_cityx_string_platforms: Android tablet, iPad, Android phone, iPhone
@@ -8834,7 +9038,7 @@ nn:
   tutorial_dragonscript_string_platforms: Chrome
   tutorial_uwcloud_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_htmlmuffin_string_platforms: All modern browsers
-  tutorial_microsoftpizza_string_platforms: All modern browsers
+  tutorial_microsoftpizza_string_platforms: All modern browsers, Screen reader
   tutorial_stemc_blckhole_string_platforms: All modern browsers, iPad
   tutorial_careconfigure_string_platforms: All modern browsers
   tutorial_rpiscratch_string_platforms: All modern browsers, Android tablet, iPad
@@ -8845,7 +9049,7 @@ nn:
   tutorial_ttfrog_string_platforms: Chrome, Firefox
   tutorial_codemojijava_string_platforms: All modern browsers
   tutorial_ccfirewall_string_platforms: All modern browsers, iPad
-  tutorial_htmljs_string_platforms: All modern browsers
+  tutorial_htmljs_string_platforms: All modern browsers, Screen reader
   tutorial_ttaqueducts_string_platforms: Chrome, Firefox
   tutorial_vtgame_string_platforms: All modern browsers, iPad
   tutorial_baroborav_string_platforms: All modern browsers
@@ -8896,6 +9100,8 @@ nn:
   tutorial_modtraits_string_platforms: All modern browsers
   tutorial_mee_string_platforms: Windows, iPad, MacOS
   tutorial_kuborobo_string_platforms: Unplugged
+  tutorial_ai-oceans_string_platforms: All modern browsers, modern Android tablets,
+    iPads, modern Android phones, iPhones
   tutorial_scratchimagine_string_detail_platforms: ''
   tutorial_codesterspsa_string_detail_platforms: ''
   tutorial_googlehero_string_detail_platforms: ''
@@ -8997,6 +9203,7 @@ nn:
   tutorial_modtraits_string_detail_platforms: GoPiGo
   tutorial_mee_string_detail_platforms: ''
   tutorial_kuborobo_string_detail_platforms: KUBO robot
+  tutorial_ai-oceans_string_detail_platforms: ''
   tutorial_scratchimagine_string_detail_programming_languages: Blokker
   tutorial_codesterspsa_string_detail_programming_languages: Python
   tutorial_googlehero_string_detail_programming_languages: Blokker
@@ -9108,6 +9315,7 @@ nn:
   tutorial_mee_string_detail_programming_languages: Blokker
   tutorial_kuborobo_string_detail_programming_languages: Tagtiles that students piece
     together
+  tutorial_ai-oceans_string_detail_programming_languages: AI and Machine Learning
   school_not_found_heading: Vi kunne ikkje finne skulen din. Skriv inn meir informasjon.
   school_name: Skulenamn
   school_name_error: Skulenamn er påkrevd.
@@ -9163,3 +9371,4 @@ nn:
   some: Some
   all: All
   dont_know: Jeg vet ikke
+  language_label: Language

@@ -1,12 +1,13 @@
-/* globals $ */
+/* globals fetch */
 import clientApi from '@cdo/apps/code-studio/initApp/clientApi';
-import {getUserSections} from '@cdo/apps/util/userSectionClient';
 
 const LIBRARY_NAME = 'library.json';
 export default class LibraryClientApi {
   constructor(channelId) {
     this.channelId = channelId;
     this.libraryApi = clientApi.create('/v3/libraries');
+    this.channelApi = clientApi.create('/v3/channels');
+    this.cacheBustSuffix = new Date().getTime();
   }
 
   publish(library, onError, onSuccess) {
@@ -18,20 +19,38 @@ export default class LibraryClientApi {
         if (error) {
           onError(error);
         } else {
+          this.cacheBustSuffix = new Date().getTime();
           onSuccess(data);
         }
       }
     );
   }
 
+  unpublish(project, callback) {
+    // Clear library information from projects database on success
+    const onSuccess = () => {
+      const value = {
+        ...project,
+        libraryName: undefined,
+        libraryDescription: undefined,
+        libraryPublishedAt: null
+      };
+      this.channelApi.update(this.channelId, value, callback);
+    };
+
+    // Delete from S3
+    this.delete(onSuccess, callback);
+  }
+
   fetchLatest(onSuccess, onError) {
     this.libraryApi.fetch(
-      this.channelId + '/' + LIBRARY_NAME,
-      (error, data) => {
+      this.channelId + '/' + LIBRARY_NAME + '?_=' + this.cacheBustSuffix,
+      (error, data, _, request) => {
         if (data) {
           onSuccess(data);
         } else {
-          onError(error);
+          this.cacheBustSuffix = new Date().getTime();
+          onError(error, request.status);
         }
       }
     );
@@ -68,63 +87,35 @@ export default class LibraryClientApi {
     return library;
   }
 
-  delete() {
-    this.libraryApi.deleteObject(this.channelId + '/' + LIBRARY_NAME, error => {
-      if (error) {
-        // In the future, errors will be surfaced to the user in the libraries dialog
-        console.warn('Error deleting library: ' + error);
+  delete(onSuccess, onError) {
+    this.libraryApi.deleteObject(
+      this.channelId + '/' + LIBRARY_NAME,
+      (error, success) => {
+        if (success) {
+          this.cacheBustSuffix = new Date().getTime();
+          onSuccess();
+        } else {
+          onError(error);
+        }
       }
-    });
+    );
   }
 
   async getClassLibraries(onSuccess, onError) {
-    getUserSections(sections => {
-      // TODO: Add backend controller action so this doesn't require multiple AJAX requests or this super clunky promise structure.
-      let requests = [];
-      let allLibraries = [];
-      let promises = [];
-      let libraryIds = {};
-      sections.forEach(section => {
-        requests.push(
-          $.ajax({
-            url: `/dashboardapi/v1/projects/section/${section.id}`,
-            method: 'GET',
-            dataType: 'json'
-          })
-        );
+    let data;
+    try {
+      let response = await fetch('/api/v1/section_libraries/', {
+        method: 'GET'
       });
-      requests.forEach(request => {
-        promises.push(
-          new Promise((resolve, reject) => {
-            $.when(request)
-              .done(data => {
-                if (data) {
-                  let libraries = data
-                    .filter(library => !!library.libraryName)
-                    .map(library => {
-                      library.name = library.libraryName;
-                      library.description = library.libraryDescription;
-                      return library;
-                    });
-                  libraries.forEach(library => {
-                    if (!libraryIds[library.channel]) {
-                      allLibraries.push(library);
-                      libraryIds[library.channel] = true;
-                    }
-                  });
-                }
-                resolve();
-              })
-              .fail(error => {
-                console.warn('Error finding class libraries: ' + error);
-                reject();
-              });
-          })
-        );
-      });
-      Promise.all(promises).then(() => {
-        onSuccess(allLibraries);
-      });
-    });
+      if (!response.ok) {
+        onError(response.status + ': ' + response.statusText);
+        return;
+      }
+
+      data = await response.json();
+    } catch (error) {
+      onError(error);
+    }
+    onSuccess(data);
   }
 }

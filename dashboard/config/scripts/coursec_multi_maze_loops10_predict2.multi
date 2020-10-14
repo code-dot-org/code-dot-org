@@ -1,5 +1,5 @@
 name 'courseC_multi_maze_loops10_predict2'
-question 'Look closely at the code below.  What will happen when you click "Run"?'
+question 'Look closely at the code below. What will happen when you click "Run"?'
 right 'The bird will not travel far enough in the first loop.', feedback: 'Correct!'
 wrong 'The bird will travel too far in the first loop.', feedback: 'Incorrect. The first loop only lets the bird move forward 1 space, when it needs to move forward 3.'
 wrong 'The bird will reach the pig with no problems.', feedback: 'Incorrect. The first loop only lets the bird move forward 1 space, when it needs to move forward 3.'

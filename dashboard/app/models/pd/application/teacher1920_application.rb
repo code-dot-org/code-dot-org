@@ -38,8 +38,6 @@ module Pd::Application
   class Teacher1920Application < TeacherApplicationBase
     include Pd::Teacher1920ApplicationConstants
 
-    validates_uniqueness_of :user_id
-
     PRINCIPAL_APPROVAL_STATE = [
       NOT_REQUIRED = 'Not required',
       IN_PROGRESS = 'Incomplete - Principal email sent on ',
@@ -62,6 +60,30 @@ module Pd::Application
       TEXT_FIELDS[:other_please_list]
     ]
 
+    # These statuses are considered "decisions", and will queue an email that will be sent by cronjob the next morning
+    # In these decision emails, status and email_type are the same.
+    AUTO_EMAIL_STATUSES = %w(
+      accepted_no_cost_registration
+      declined
+      waitlisted
+      registration_sent
+    )
+
+    # If the regional partner's emails are SENT_BY_SYSTEM, the application must
+    # have an assigned workshop to be set to one of these statuses because they
+    # trigger emails with a link to the workshop registration form
+    WORKSHOP_REQUIRED_STATUSES = %w(
+      accepted_no_cost_registration
+      registration_sent
+    )
+
+    has_many :emails, class_name: 'Pd::Application::Email', foreign_key: 'pd_application_id'
+
+    validates_uniqueness_of :user_id
+    validate :workshop_present_if_required_for_status, if: -> {status_changed?}
+
+    before_save :log_status, if: -> {status_changed?}
+
     serialized_attrs %w(
       status_log
       principal_approval_not_required
@@ -82,29 +104,6 @@ module Pd::Application
         withdrawn
       )
     end
-
-    # These statuses are considered "decisions", and will queue an email that will be sent by cronjob the next morning
-    # In these decision emails, status and email_type are the same.
-    AUTO_EMAIL_STATUSES = %w(
-      accepted_no_cost_registration
-      declined
-      waitlisted
-      registration_sent
-    )
-
-    # If the regional partner's emails are SENT_BY_SYSTEM, the application must
-    # have an assigned workshop to be set to one of these statuses because they
-    # trigger emails with a link to the workshop registration form
-    WORKSHOP_REQUIRED_STATUSES = %w(
-      accepted_no_cost_registration
-      registration_sent
-    )
-
-    has_many :emails, class_name: 'Pd::Application::Email', foreign_key: 'pd_application_id'
-
-    before_save :log_status, if: -> {status_changed?}
-
-    validate :workshop_present_if_required_for_status, if: -> {status_changed?}
 
     def workshop_present_if_required_for_status
       if regional_partner&.applications_decision_emails == RegionalPartner::SENT_BY_SYSTEM &&

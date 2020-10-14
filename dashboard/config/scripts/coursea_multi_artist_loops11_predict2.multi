@@ -1,5 +1,5 @@
 name 'courseA_multi_artist_loops11_predict2'
-question 'Take a good look at the code below.  What will happen when you click "Run"?'
+question 'Take a good look at the code below. What will happen when you click "Run"?'
 wrong 'The artist will draw a square', feedback: 'Incorrect.  The artist repeats `South` and `East` four times to make a staircase.'
 right 'The artist will draw a stair pattern.', feedback: 'Correct!'
 wrong 'The artist won\'t move at all.', feedback: 'Incorrect.  The artist repeats `South` and `East` four times to make a staircase.'

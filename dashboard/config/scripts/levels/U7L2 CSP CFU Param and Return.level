@@ -1,0 +1,28 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2019-12-06T23:25:28.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "Reflection",
+    "long_instructions": "What are the benefits of writing functions that use parameters and return? Try to list at least two.\r\n\r\n",
+    "encrypted_solution": "6qRBzOocikoeXGDbegLlZQc3ko6JIzKX67uT/nmjMws7iqts0OUXasns+rEy\nqgEMSs0Vff7rMeCHyay9SiC5PPeE6GC0YYugOnDumbVXbN0X+Nm7CYHZPuHT\nqcz02DNs2RzAioepS/YEN0+fcQmNAM+HplczBuaPix6S526KF1BhKQsJ1rfu\nYCcuiLizXh+vTX4HcDgtEWAalRYoa/tcKhD/oNP2ZTacbm9VsKP25hJvYF7t\n7pdwYFOr5ln9vklMMAzxxIOz/ax+YJV9UX3/tB1QfnCTfNUrH6l7JCXlrPf1\nYLoAgYM5vvv6fgSvSNLDhXgBpoTw2E63rJSA8ilI73KHcYb47QjGQJOAp89R\nnP/iWWrF8viRNO7jeSzhrzvQfBPduDwJAKqIZnwEqFIqjBdnb9f2mCvzlrMO\nsrcqmy6hAIO2e+/aOFR6Mz766cvA98Wpszq+5660x786VA82vmGfmGkPgJzK\neNdZGeObNC2C31crqAKH2RnSOOMXrTURb1VFMA6b9qtrGrLtckuVtD7vSRe4\nZCJtyOUf1GbMuoc=\n",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 19359,
+    "name_suffix": "_2018",
+    "encrypted": "false",
+    "instructions_important": "false",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-10-21 13:50:50 +0000\",\"changed\":[\"notes\",\"title\",\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-10-21 13:52:51 +0000\",\"changed\":[\"title\",\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-12-06 23:30:33 +0000\",\"changed\":[\"title\",\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

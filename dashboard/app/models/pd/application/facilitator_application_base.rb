@@ -39,6 +39,23 @@ module Pd::Application
     include PdWorkshopHelper
     include Pd::FacilitatorCommonApplicationConstants
 
+    PROGRAMS = {
+      csf: 'CS Fundamentals',
+      csd: 'CS Discoveries',
+      csp: 'CS Principles'
+    }.freeze
+
+    VALID_COURSES = PROGRAMS.keys.map(&:to_s)
+
+    YES_COMMIT = 'Yes, I can commit to this requirement'
+    NO_COMMIT = "No, I can't commit to this requirement"
+
+    validates :course, presence: true, inclusion: {in: VALID_COURSES}
+
+    before_validation :set_course_from_program
+    before_save :destroy_fit_autoenrollment, if: -> {status_changed? && status != "accepted"}
+    before_create :match_partner, if: -> {regional_partner.nil?}
+
     serialized_attrs %w(
       pd_workshop_id
       fit_workshop_id
@@ -63,24 +80,10 @@ module Pd::Application
       self.application_year = year
     end
 
-    PROGRAMS = {
-      csf: 'CS Fundamentals',
-      csd: 'CS Discoveries',
-      csp: 'CS Principles'
-    }.freeze
-
-    VALID_COURSES = PROGRAMS.keys.map(&:to_s)
-
-    YES_COMMIT = 'Yes, I can commit to this requirement'
-    NO_COMMIT = "No, I can't commit to this requirement"
-
-    validates :course, presence: true, inclusion: {in: VALID_COURSES}
-    before_validation :set_course_from_program
     def set_course_from_program
       self.course = PROGRAMS.key(program)
     end
 
-    before_create :match_partner, if: -> {regional_partner.nil?}
     def match_partner
       self.regional_partner = RegionalPartner.find_by_region(zip_code, state_code)
     end
@@ -401,7 +404,6 @@ module Pd::Application
       super.merge(account_email: user.email)
     end
 
-    before_save :destroy_fit_autoenrollment, if: -> {status_changed? && status != "accepted"}
     def destroy_fit_autoenrollment
       return unless auto_assigned_fit_enrollment_id
 

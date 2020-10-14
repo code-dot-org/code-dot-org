@@ -46,6 +46,7 @@ class UnassignButton extends React.Component {
         className={'uitest-unassign-button'}
       >
         <Button
+          __useDeprecatedTag
           color={Button.ButtonColor.green}
           text={text}
           icon={icon}
@@ -59,9 +60,7 @@ class UnassignButton extends React.Component {
 export const UnconnectedUnassignButton = UnassignButton;
 
 export default connect(
-  state => ({
-    sections: state.teacherSections.sections
-  }),
+  null,
   {
     unassignSection
   }

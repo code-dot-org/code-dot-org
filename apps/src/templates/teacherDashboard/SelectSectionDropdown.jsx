@@ -2,11 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
-import {navigateToHref} from '@cdo/apps/utils';
+import {switchToSection, recordSwitchToSection} from './sectionHelpers';
 import {getVisibleSections} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import {TeacherDashboardPath} from '@cdo/apps/templates/teacherDashboard/TeacherDashboardNavigation';
-import _ from 'lodash';
-import firehoseClient from '../../lib/util/firehose';
 
 const styles = {
   container: {
@@ -27,28 +24,10 @@ class SelectSectionDropdown extends React.Component {
   };
 
   onChange = event => {
-    const sectionId = event.target.value;
-    const baseUrl = `/teacher_dashboard/sections/${sectionId}/`;
-    const currentTab = _.last(_.split(window.location.pathname, '/'));
-    const teacherNavigationTabs = _.values(TeacherDashboardPath);
-    const sectionUrl = _.includes(teacherNavigationTabs, `/${currentTab}`)
-      ? baseUrl.concat(currentTab)
-      : baseUrl;
-    navigateToHref(sectionUrl);
-
-    firehoseClient.putRecord(
-      {
-        study: 'teacher_dashboard_actions',
-        study_group: currentTab,
-        event: 'change_section',
-        data_json: JSON.stringify({
-          section_id: this.props.selectedSectionId,
-          old_section_id: this.props.selectedSectionId,
-          new_section_id: sectionId
-        })
-      },
-      {includeUserId: true}
-    );
+    let toSectionId = event.target.value;
+    let fromSectionId = this.props.selectedSectionId;
+    switchToSection(toSectionId, fromSectionId);
+    recordSwitchToSection(toSectionId, fromSectionId, 'from_select');
   };
 
   render() {

@@ -1,0 +1,74 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2020-03-17T21:24:51.000Z",
+  "level_num": "custom",
+  "user_id": 13,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "onEvent": {
+        "params": [
+          "\"id\"",
+          "\"click\"",
+          "function(){\n\n}"
+        ]
+      },
+      "moveForward": null,
+      "moveBackward": null,
+      "turnRight": null,
+      "turnLeft": null
+    },
+    "edit_code": true,
+    "embed": "false",
+    "short_instructions": "Debug the program by verifying your IDs are being referenced properly. (Click to see full instructions)",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "free_play": "true",
+    "long_instructions": "<img src=\"https://images.code.org/20813f24089879d0629709ca673df51e-image-1563573231972.gif\" style=\"float: right; width: 200px\">\r\n\r\n\r\n\r\n# Practice! Add another button\r\n\r\nNow that you know the pattern try it out.  **Add a 2nd button to the screen that turns the turtle to the left when clicked.**  The finished product should look similar to the image shown here.\r\n\r\nRemember the steps:\r\n\r\n  1. **Design Mode**: drag another button onto the screen\r\n  2. Switch to Code Mode: **add an onEvent block** to the code\r\n  3. **Add code** inside the function to make the turtle turn left\r\n  4. Run. Test. Debug\r\n\r\n<details>\r\n\r\n<summary>Need Help? [Click Here]</summary>\r\n\r\n<h3>\r\nHere is an example of adding other button to make the turtle turn left\r\n</h3> \r\n\r\n<div style=\"column-count: 3; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 3; width: 100%\">\r\n\r\n<p><span style=\"font-weight: bold; color: #00adbc; font-size: 200%;\">1.</span>\r\nAdd a UI element to the screen in Design Mode</p>\r\n\r\n<p><span style=\"font-weight: bold; color: #00adbc; font-size: 200%;\">2.</span>\r\nAdd another onEvent block to the code.  <strong>Note:</strong> you need new onEvent block <em>for every</em> event you want to capture.</p>\r\n\r\n<p><span style=\"font-weight: bold; color: #00adbc; font-size: 200%;\">3.</span>\r\nAdd code to the event handler function you want.</p>\r\n</div>\r\n\r\n<img src=\"https://images.code.org/f695b83911560bf628750ed2a134a38c-image-1476818017592.png\" style=\"display: block; width: 100%\">\r\n\r\n<div style=\"column-count: 1; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 3; width: 33%;\">\r\n\r\n<p><span style=\"font-weight: bold; color: #00adbc; font-size: 200%;\">4.</span>\r\n<strong>Debugging Tip:</strong> If you hover your mouse over a UI element, it will show you the ID of the element.  This very useful when you have a lot of elements on the screen.\r\n</div>\r\n\r\n<div style=\"clear: both\">\r\n&nbsp;\r\n</div>\r\n\r\n\r\n\r\n\r\n</details>\r\n\r\n",
+    "never_autoplay_video": "false",
+    "examples_required": "false",
+    "show_turtle_before_run": "true",
+    "autocomplete_palette_apis_only": "true",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "false",
+    "beginner_mode": "true",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "droplet_tooltips_disabled": "false",
+    "debugger_disabled": "true",
+    "encrypted_examples": "HkFAuxcHk7FrpOQl/NluL//zhJexv2BrW/GPj3EreveCfk9vsPDRo5c/dpNy\niy1Y\n",
+    "lock_zero_param_functions": "false",
+    "execute_palette_apis_only": "false",
+    "fail_on_lint_errors": "false",
+    "makerlab_enabled": "false",
+    "instructions_important": "false",
+    "project_template_level_name": "CSPU5_twoButtonTurtleDriver_templateLevel_virtual",
+    "teacher_markdown": "### Quick Tip:\r\n\r\nSometimes instructions in an App Lab level are longer and take up a lot of the screen\r\n\r\n* Remind students that you can always collapse and expand instructions quickly by hitting the arrow that looks like this: ![](https://images.code.org/40949424e5b3f155abe3d9a3f1257ed0-image-1477668989450.png)\r\n\r\n",
+    "show_debug_watch": "true",
+    "parent_level_id": 17079,
+    "name_suffix": "_virtual",
+    "mini_rubric": "false",
+    "hide_share_and_remix": "false",
+    "expand_debugger": "false",
+    "encrypted": "false",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-02-15 03:46:43 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-07-19 21:54:45 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":958,\"changed_by_email\":\"stephanie.wong@code.org\"},{\"changed_at\":\"2019-07-19 21:57:36 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":958,\"changed_by_email\":\"stephanie.wong@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Applab>

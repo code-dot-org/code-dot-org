@@ -3,6 +3,7 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {progressStyles} from './multiGridConstants';
 import {getSelectedScriptName} from '@cdo/apps/redux/scriptSelectionRedux';
+import {tooltipIdForStudent} from './sectionProgressConstants';
 import {scriptUrlForStudent} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import firehoseClient from '../../lib/util/firehose';
 
@@ -36,9 +37,15 @@ class SectionProgressNameCell extends Component {
   render() {
     const {name, studentId, sectionId, scriptName} = this.props;
     const studentUrl = scriptUrlForStudent(sectionId, scriptName, studentId);
+    const tooltipId = tooltipIdForStudent(studentId);
 
     return (
-      <div style={progressStyles.nameCell}>
+      <div
+        style={progressStyles.nameCell}
+        data-tip
+        data-for={tooltipId}
+        aria-describedby={tooltipId}
+      >
         {studentUrl && (
           <a
             href={studentUrl}
@@ -55,7 +62,7 @@ class SectionProgressNameCell extends Component {
 }
 
 export const UnconnectedSectionProgressNameCell = SectionProgressNameCell;
-export default connect(state => ({
+export default connect((state, ownProps) => ({
   scriptName: getSelectedScriptName(state),
   scriptId: state.scriptSelection.scriptId
 }))(SectionProgressNameCell);

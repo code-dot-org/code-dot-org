@@ -3,10 +3,10 @@ title 'Choose Two: True Statements about Functions'
 type 'multi2'
 question 'Choose the two (2) statements that are true about functions'
 
-right 'Meaningful function names help <em>people</em> better understand programs.<br>'
-wrong 'Meaningful function names help <em>computers</em> better understand programs.<br>'
-wrong 'Functions in programming are useful mathematical tools for doing complex computations.<br>'
-right 'Functions in programming are named groupings of programming instructions.<br>'
+right 'Meaningful function names help _people_ better understand programs.'
+wrong 'Meaningful function names help _computers_ better understand programs.'
+wrong 'Functions in programming are useful mathematical tools for doing complex computations.'
+right 'Functions in programming are named groupings of programming instructions.'
 teacher_markdown <<MARKDOWN
 **Correct answers:**
 

@@ -4,7 +4,7 @@ title: Blurbs and useful stats
 
 <a id="blurb"></a>
 
-{{ signup_button }}
+{{ tilmeld_knap }}
 
 # Blurbs and useful stats
 
@@ -38,7 +38,7 @@ Technology is transforming every industry on the planet. In 2015, 7 million open
 
 #### About Code.org
 
-Code.org is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by women and underrepresented students of color. Its vision is that every student in every school has the opportunity to learn computer programming. After launching in 2013, Code.org organized the Hour of Code campaign – which has introduced over 100 million students to computer science to date – and partnered with 70 public school districts nationwide to expand computer science programs. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. For more information, please visit: [code.org]({{ codeorg_link }}).
+Code.org is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by young women and students from other underrepresented groups. Its vision is that every student in every school has the opportunity to learn computer programming. After launching in 2013, Code.org organized the Hour of Code campaign – which has introduced over 100 million students to computer science to date – and partnered with 70 public school districts nationwide to expand computer science programs. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. For more information, please visit: [code.org]({{ codeorg_link }}).
 
 ## Share these on social media and in emails
 
@@ -50,4 +50,4 @@ Code.org is a 501c3 public non-profit dedicated to expanding participation in co
 
 {{ stats_carousel }}
 
-{{ signup_button }}
+{{ tilmeld_knap }}

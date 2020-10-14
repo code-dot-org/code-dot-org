@@ -1,0 +1,22 @@
+name 'CSP Markdown Test'
+editor_experiment ''
+title 'AP Pseudocode: Parameters and Return'
+description ''
+wrong '0 and 100 '
+wrong '0 and 10'
+right '100 and 200'
+wrong '30 and 50'
+
+markdown <<MARKDOWN
+## AP Reference Sheet 
+
+The AP Reference Sheet shows how traversal questions will be represented on the exam. Read through these sections of the Reference Sheet and answer the question below.
+
+![](https://images.code.org/38a3904314c1f6446359e5e71e8320b1-image-1575580720791.17.50 PM.png)\
+
+## Practice Question
+
+The procedure below will be called twice with two numbers provided as arguments to the parameter `myNumber`. Which of the following pair of numbers will `mystery` return the same value?
+
+![](https://images.code.org/fa3cc8947cc809fbd0441d0cda3fcbb0-image-1575580814510.15.01 PM.png)
+MARKDOWN

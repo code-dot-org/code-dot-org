@@ -1,3 +1,4 @@
+/*global dashboard*/
 /**
  * @file Redux module for new format for tracking project animations.
  */
@@ -20,6 +21,8 @@ import {
   getCurrentId
 } from '@cdo/apps/code-studio/initApp/project';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import defaultSprites from './spritelab/defaultSprites.json';
+import trackEvent from '@cdo/apps/util/trackEvent';
 
 // TODO: Overwrite version ID within session
 // TODO: Load exact version ID on project load
@@ -259,14 +262,19 @@ function generateAnimationName(baseName, animationList) {
  * @param {!SerializedAnimationList} serializedAnimationList
  * @returns {function()}
  */
-export function setInitialAnimationList(serializedAnimationList) {
+export function setInitialAnimationList(
+  serializedAnimationList,
+  shouldRunV3Migration,
+  isSpriteLab
+) {
   // Set default empty animation list if none was provided
   if (!serializedAnimationList) {
     serializedAnimationList = {orderedKeys: [], propsByKey: {}};
   }
 
-  // TODO: Tear out this migration when we don't think we need it anymore.
+  // TODO (from 2015): Tear out this migration when it hasn't been used for at least 3 consecutive non-summer months.
   if (Array.isArray(serializedAnimationList)) {
+    trackEvent('Research', 'RanMigration', '2015-animation-migration');
     // We got old animation data that needs to be migrated.
     serializedAnimationList = {
       orderedKeys: serializedAnimationList.map(a => a.key),
@@ -275,6 +283,34 @@ export function setInitialAnimationList(serializedAnimationList) {
         return memo;
       }, {})
     };
+  }
+
+  // TODO (from 2020): Tear out this migration when it hasn't been used for at least 3 consecutive non-summer months.
+  if (shouldRunV3Migration) {
+    serializedAnimationList.orderedKeys.forEach(loadedKey => {
+      let animation = serializedAnimationList.propsByKey[loadedKey];
+      if (
+        !animation.sourceUrl ||
+        animation.sourceUrl.includes(dashboard.project.getCurrentId())
+      ) {
+        // The animation was created by the project owner. Skip.
+        return;
+      }
+
+      if (animation.sourceUrl.includes('/v3/')) {
+        // We want to replace this sprite with the /v1/ sprite
+        let details = `name=${animation.name};key=${loadedKey}`;
+        if (defaultSprites.propsByKey[loadedKey]) {
+          // The key is the same in the main.json and in default sprites. Do a simple replacement.
+          serializedAnimationList.propsByKey[loadedKey] =
+            defaultSprites.propsByKey[loadedKey];
+          trackEvent('Research', 'ReplacedSpriteByKey', details);
+        } else {
+          // We were unable to find a replacement for the /v3/ sprite
+          trackEvent('Research', 'CouldNotReplaceSprite', details);
+        }
+      }
+    });
   }
 
   // Convert frameRates to frameDelays.
@@ -326,7 +362,21 @@ export function setInitialAnimationList(serializedAnimationList) {
       type: SET_INITIAL_ANIMATION_LIST,
       animationList: serializedAnimationList
     });
-    dispatch(selectAnimation(serializedAnimationList.orderedKeys[0] || ''));
+    let index = 0;
+    // If we're in spritelab, we need to make sure we don't set the selected animation to a background
+    if (isSpriteLab) {
+      while (
+        index < serializedAnimationList.orderedKeys.length &&
+        (
+          serializedAnimationList.propsByKey[
+            serializedAnimationList.orderedKeys[index]
+          ].categories || []
+        ).includes('backgrounds')
+      ) {
+        index = index + 1;
+      }
+    }
+    dispatch(selectAnimation(serializedAnimationList.orderedKeys[index] || ''));
     serializedAnimationList.orderedKeys.forEach(key => {
       dispatch(loadAnimationFromSource(key));
     });
@@ -339,16 +389,19 @@ export function addBlankAnimation() {
   // picks "Draw my own."  As soon as the user makes any changes to the
   // animation it gets saved as a custom animation in their own project, just
   // like we do with other library animations.
-  return addLibraryAnimation({
-    name: 'animation',
-    sourceUrl:
-      '/api/v1/animation-library/mUlvnlbeZ5GHYr_Lb4NIuMwPs7kGxHWz/category_backgrounds/blank.png',
-    frameSize: {x: 100, y: 100},
-    frameCount: 1,
-    looping: true,
-    frameDelay: 4,
-    version: 'mUlvnlbeZ5GHYr_Lb4NIuMwPs7kGxHWz'
-  });
+  return addLibraryAnimation(
+    {
+      name: 'animation',
+      sourceUrl:
+        '/api/v1/animation-library/mUlvnlbeZ5GHYr_Lb4NIuMwPs7kGxHWz/category_backgrounds/blank.png',
+      frameSize: {x: 100, y: 100},
+      frameCount: 1,
+      looping: true,
+      frameDelay: 4,
+      version: 'mUlvnlbeZ5GHYr_Lb4NIuMwPs7kGxHWz'
+    },
+    false /*skipBackground. False because these are going to be sprites or we're in gamelab*/
+  );
 }
 
 /**
@@ -405,7 +458,7 @@ export function appendCustomFrames(props) {
  * Add a library animation to the project (at the end of the list, unless a spritelab project).
  * @param {!SerializedAnimation} props
  */
-export function addLibraryAnimation(props) {
+export function addLibraryAnimation(props, skipBackground) {
   return (dispatch, getState) => {
     const key = createUuid();
     if (getState().pageConstants && getState().pageConstants.isBlockly) {
@@ -413,11 +466,17 @@ export function addLibraryAnimation(props) {
     } else {
       dispatch(addAnimationAction(key, props));
     }
-    dispatch(
-      loadAnimationFromSource(key, () => {
-        dispatch(selectAnimation(key));
-      })
-    );
+    // if skipBackground, this means we don't want the selected animation to be a background
+    if (!skipBackground || !props.categories.includes('backgrounds')) {
+      dispatch(
+        loadAnimationFromSource(key, () => {
+          dispatch(selectAnimation(key));
+        })
+      );
+    } else {
+      dispatch(loadAnimationFromSource(key, () => {}));
+    }
+
     let name = generateAnimationName(
       props.name,
       getState().animationList.propsByKey

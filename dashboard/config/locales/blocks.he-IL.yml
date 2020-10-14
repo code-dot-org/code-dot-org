@@ -17,7 +17,7 @@ he:
             '"PINEAPPLE"': כל האננסים
             '"ROBOT"': כל הרובוטים
             '"SHARK"': כל הכרישים
-            '"SLOTH"': כל העצלנים
+            '"SLOTH"': עצלנים
             '"UNICORN"': חדי-קרן
           MOVE1:
             MOVES.Roll: בָּאדִי רוֹל / גלגול גוף
@@ -71,7 +71,7 @@ he:
             '"PINEAPPLE"': כל האננסים
             '"ROBOT"': כל הרובוטים
             '"SHARK"': כל הכרישים
-            '"SLOTH"': כל העצלנים
+            '"SLOTH"': עצלנים
             '"UNICORN"': כל חדי-הקרן
           MOVE:
             '"next"': "(הבא)"
@@ -88,9 +88,6 @@ he:
             MOVES.Kick: כוכב
             MOVES.ThisOrThat: זה או ההוא
             MOVES.Rest: כלום
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changeMoveLR:
         text: "{SPRITE} עושה {MOVE} {DIR} לנצח"
         options:
@@ -109,9 +106,6 @@ he:
             MOVES.Kick: כוכב
             MOVES.ThisOrThat: זה או ההוא
             MOVES.Rest: כלום
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changePropBy:
         text: שנה {PROPERTY} של {SPRITE} ב {VAL}
         options:
@@ -137,7 +131,7 @@ he:
             '"PINEAPPLE"': כל האננסים
             '"ROBOT"': כל הרובוטים
             '"SHARK"': כל הכרישים
-            '"SLOTH"': כל העצלנים
+            '"SLOTH"': עצלנים
             '"UNICORN"': חדי-קרן
           PROPERTY:
             '"scale"': גודל
@@ -161,7 +155,7 @@ he:
             '"PINEAPPLE"': כל האננסים
             '"ROBOT"': כל הרובוטים
             '"SHARK"': כל הכרישים
-            '"SLOTH"': כל העצלנים
+            '"SLOTH"': עצלנים
             '"UNICORN"': חדי-קרן
           MOVE:
             '"rand"': "(אקראי)"
@@ -188,9 +182,6 @@ he:
             MOVES.XArmsUp: סטרץ'
             MOVES.ThisOrThat: זה או ההוא
             MOVES.Rest: כלום
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_doMoveLR:
         text: "{SPRITE} עושה {MOVE} {DIR} פעם אחת"
         options:
@@ -219,9 +210,6 @@ he:
             MOVES.XArmsUp: סטרץ'
             MOVES.ThisOrThat: זה או ההוא
             MOVES.Rest: כלום
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_everyMeasuresRange:
         text: 'חזור כל {N} תיבות אחרי {START} '
       Dancelab_everySeconds:
@@ -324,7 +312,7 @@ he:
             '"PINEAPPLE"': כל האננסים
             '"ROBOT"': כל הרובוטים
             '"SHARK"': כל הכרישים
-            '"SLOTH"': כל העצלנים
+            '"SLOTH"': עצלנים
             '"UNICORN"': חדי-קרן
           LOCATION:
             "{x: 200, y: 100}": עליון
@@ -352,15 +340,20 @@ he:
             '"PINEAPPLE"': כל האננסים
             '"ROBOT"': כל הרובוטים
             '"SHARK"': כל הכרישים
-            '"SLOTH"': כל העצלנים
+            '"SLOTH"': עצלנים
             '"UNICORN"': חדי-קרן
           FORMAT:
             '"border"': גבול
             '"inner"': בתוך ריבוע
+            '"diamond"': יהלום
             '"circle"': עיגול
             '"grid"': רשת
+            '"top"': שורה עליונה
             '"row"': שורה
+            '"bottom"': שורה תחתונה
+            '"left"': עמודה שמאלית
             '"column"': עמודה
+            '"right"': עמודה ימנית
             '"x"': קְרִיס-קְרוֹס
             '"plus"': פלוס
             '"random"': אקראי
@@ -456,7 +449,7 @@ he:
             '"PINEAPPLE"': אננסים
             '"ROBOT"': רובוטים
             '"SHARK"': כרישים
-            '"SLOTH"': כל העצלנים
+            '"SLOTH"': עצלנים
             '"UNICORN"': חדי-קרן
           LAYOUT:
             '"border"': גבול
@@ -583,7 +576,7 @@ he:
             '"PINEAPPLE"': כל האננסים
             '"ROBOT"': כל הרובוטים
             '"SHARK"': כל הכרישים
-            '"SLOTH"': כל העצלנים
+            '"SLOTH"': עצלנים
             '"UNICORN"': חדי-קרן
           SPEED:
             '1': רגיל
@@ -657,7 +650,7 @@ he:
             '"PINEAPPLE"': כל האננסים
             '"ROBOT"': כל הרובוטים
             '"SHARK"': כל הכרישים
-            '"SLOTH"': כל העצלנים
+            '"SLOTH"': עצלנים
             '"UNICORN"': חדי-קרן
           PROPERTY:
             '"scale"': גודל
@@ -693,7 +686,7 @@ he:
             '"PINEAPPLE"': כל האננסים
             '"ROBOT"': כל הרובוטים
             '"SHARK"': כל הכרישים
-            '"SLOTH"': כל העצלנים
+            '"SLOTH"': עצלנים
             '"UNICORN"': חדי-קרן
           PROPERTY:
             '"scale"': גודל
@@ -720,7 +713,7 @@ he:
             '"PINEAPPLE"': כל האננסים
             '"ROBOT"': כל הרובוטים
             '"SHARK"': כל הכרישים
-            '"SLOTH"': כל העצלנים
+            '"SLOTH"': עצלנים
             '"UNICORN"': חדי-קרן
       Dancelab_setTintEachInline:
         text: קבע גוון של {THIS} ל {VAL}
@@ -737,7 +730,7 @@ he:
             '"PINEAPPLE"': כל האננסים
             '"ROBOT"': כל הרובוטים
             '"SHARK"': כל הכרישים
-            '"SLOTH"': כל העצלנים
+            '"SLOTH"': עצלנים
             '"UNICORN"': חדי-קרן
       Dancelab_setTintInline:
         text: קבע גוון של {SPRITE} ל {VAL}
@@ -762,7 +755,7 @@ he:
             '"PINEAPPLE"': כל האננסים
             '"ROBOT"': כל הרובוטים
             '"SHARK"': כל הכרישים
-            '"SLOTH"': כל העצלנים
+            '"SLOTH"': עצלנים
             '"UNICORN"': חדי-קרן
           VISIBILITY:
             'true': נראה
@@ -797,7 +790,7 @@ he:
             '"PINEAPPLE"': כל האננסים
             '"ROBOT"': כל הרובוטים
             '"SHARK"': כל הכרישים
-            '"SLOTH"': כל העצלנים
+            '"SLOTH"': עצלנים
             '"UNICORN"': חדי-קרן
           PROPERTY:
             '"scale"': גודל
@@ -842,7 +835,7 @@ he:
             '"PINEAPPLE"': כל האננסים
             '"ROBOT"': כל הרובוטים
             '"SHARK"': כל הכרישים
-            '"SLOTH"': כל העצלנים
+            '"SLOTH"': עצלנים
             '"UNICORN"': חדי-קרן
           PROPERTY:
             '"scale"': גודל
@@ -964,6 +957,10 @@ he:
         text: דמות {SPRITE} מתחילה {BEHAVIOR}
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"seconds"': שניות
       gamelab_changePropBy:
         text: שנה {PROPERTY} של {SPRITE} ב {VAL}
         options:
@@ -1008,8 +1005,46 @@ he:
         options:
           CHOICE:
             '"this"': זה
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': שניות
       gamelab_hideTitleScreen:
         text: הסתר כותרת מסך
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"up"': למעלה
+            '"down"': למטה
+            '"left"': שמאלה
+            '"right"': ימינה
+            '"space"': חלל
+            '"a"': a
+            '"b"': נ
+            '"c"': ב
+            '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': מ
+            '"o"': o
+            '"p"': p
+            '"q"': "/"
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"y"': y
+            '"z"': z
       gamelab_isTouchingEdges:
         text: "{SPRITE} נוגע בפינות"
       gamelab_jumpTo:
@@ -1054,6 +1089,13 @@ he:
             '"z"': z
       gamelab_locationAt:
         text: 'מיקום: x: {X} y: {Y}'
+      gamelab_locationModifier:
+        options:
+          DIRECTION:
+            '"North"': צפונה
+            '"East"': מזרחה
+            '"South"': דרומה
+            '"West"': מערבה
       gamelab_locationMouse:
         text: מיקום עכבר
       gamelab_locationOf:
@@ -1082,6 +1124,8 @@ he:
             '"West"': מערבה
       gamelab_moveToward:
         text: הזז {SPRITE} פיקסלים {DISTANCE} לכיוון {TARGET}
+      gamelab_objectSpritePointer:
+        text: לחץ {SPRITE}
       gamelab_playSound:
         text: פלייסאונד {SOUND}
       gamelab_pointInDirection:
@@ -1161,6 +1205,8 @@ he:
           CONDITION:
             '"when"': כאשר
             '"while"': כאשר
+      gamelab_subjectSpritePointer:
+        text: לחץ {SPRITE}
       gamelab_turn:
         text: הפוך {SPRITE} {DIRECTION} {N} מעלות
         options:
@@ -1542,6 +1588,14 @@ he:
             '1': '1'
             '2': '2'
             '3': '3'
+      aalab_moveInDirection:
+        text: הזיז {SPRITE} {DISTANCE} פיקסלים {DIRECTION}
+        options:
+          DIRECTION:
+            '"North"': צפונה
+            '"East"': מזרחה
+            '"South"': דרומה
+            '"West"': מערבה
       aalab_prompt:
         text: לשאול את השאלה {MESSAGE}
       aalab_scene:
@@ -1553,12 +1607,10 @@ he:
             '3': '3'
       aalab_setupStory:
         text: סיפור ההתקנה
-      aalab_showHideSprite:
-        text: "{OPTION}{SPRITE}"
+      aalab_starwars_playSound:
         options:
           OPTION:
-            '"show"': הצג
-            '"hide"': הסתר
+            '"random"': אקראי
       binary_drawBin:
         text: לצייר בינארי {BIN}
       binary_drawBinScreen:

@@ -1,0 +1,10 @@
+%h1.control-legend{data: {toggle: "collapse", target: "#code_area"}}
+  Code Area
+
+#code_area.in.collapse
+  = render partial: 'levels/editors/fields/droplet', locals: {f: f} if @level.uses_droplet?
+  = render partial: 'levels/editors/fields/blockly', locals: {f: f} if !(@level.uses_droplet?) && @level.is_a?(Blockly)
+  = render partial: 'levels/editors/fields/weblab_code_area', locals: {f: f} if @level.is_a?(Weblab)
+  = render partial: 'levels/editors/fields/block_pools', locals: {f: f} if @level.is_a?(GamelabJr) || @level.is_a?(Dancelab)
+  = render partial: 'levels/editors/fields/helper_libraries', locals: {f: f} if @level.is_a?(GamelabJr) || @level.is_a?(Dancelab)
+  = render partial: 'levels/editors/fields/validation_code', locals: {f: f}

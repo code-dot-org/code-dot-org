@@ -22,10 +22,13 @@ module ImageModeration
 
     # Log to firehose as well, to have longer-lived data
     FirehoseClient.instance.put_record(
-      study: 'azure-content-moderation',
-      study_group: 'v1',
-      event: 'moderation-error',
-      data_string: err
+      :analysis,
+      {
+        study: 'azure-content-moderation',
+        study_group: 'v1',
+        event: 'moderation-error',
+        data_string: err
+      }
     )
     :everyone
   end

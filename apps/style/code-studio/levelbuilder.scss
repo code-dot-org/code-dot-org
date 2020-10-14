@@ -154,8 +154,12 @@ table.checkboxes {
 
  [data-toggle="collapse"] {
    cursor: pointer;
-   padding: 2%;
+   padding: 15px;
    padding-left: 0;
+   line-height: 18px;
+   margin-bottom: 10px;
+   font-size: 18px;
+   border-bottom: 1px solid #e5e5e5;
 
   &:after {
     content: "\25B2";
@@ -178,7 +182,11 @@ table.checkboxes {
 
   label {
     padding-left: 1%;
-    margin-top: 15px;
+  }
+
+  input:disabled ~ label {
+    cursor: not-allowed;
+    color: #6c757d;
   }
 }
 .collapsed_area_header{

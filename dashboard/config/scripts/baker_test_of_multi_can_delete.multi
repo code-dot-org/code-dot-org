@@ -1,6 +1,6 @@
 name 'Baker test of multi can delete'
 title 'Test of 2 correct answer multi choice'
-description 'There are two answers here that are correct.  Looks like you can choose either one and be right.'
+description 'There are two answers here that are correct. Looks like you can choose either one and be right.'
 question 'What is 2 + 2?'
 wrong '2+3'
 right '5-1'

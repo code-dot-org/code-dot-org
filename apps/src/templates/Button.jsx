@@ -21,7 +21,14 @@ const ButtonColor = {
 
 const ButtonSize = {
   default: 'default',
-  large: 'large'
+  large: 'large',
+  narrow: 'narrow'
+};
+
+const ButtonHeight = {
+  default: 34,
+  large: 40,
+  narrow: 40
 };
 
 const styles = {
@@ -45,6 +52,7 @@ const styles = {
     overflow: 'hidden',
     whiteSpace: 'nowrap'
   },
+  updated: {lineHeight: '12px'},
   icon: {
     marginRight: 5
   },
@@ -138,15 +146,21 @@ const styles = {
   },
   sizes: {
     [ButtonSize.default]: {
-      height: 34,
+      height: ButtonHeight.default,
       paddingLeft: 24,
       paddingRight: 24,
       lineHeight: '34px'
     },
     [ButtonSize.large]: {
-      height: 40,
+      height: ButtonHeight.large,
       paddingLeft: 30,
       paddingRight: 30,
+      lineHeight: '40px'
+    },
+    [ButtonSize.narrow]: {
+      height: ButtonHeight.narrow,
+      paddingLeft: 10,
+      paddingRight: 10,
       lineHeight: '40px'
     }
   }
@@ -169,7 +183,8 @@ class Button extends React.Component {
     id: PropTypes.string,
     tabIndex: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
     isPending: PropTypes.bool,
-    pendingText: PropTypes.string
+    pendingText: PropTypes.string,
+    __useDeprecatedTag: PropTypes.bool
   };
 
   onKeyDown = event => {
@@ -196,7 +211,8 @@ class Button extends React.Component {
       id,
       tabIndex,
       isPending,
-      pendingText
+      pendingText,
+      __useDeprecatedTag
     } = this.props;
 
     const color = this.props.color || ButtonColor.orange;
@@ -206,12 +222,19 @@ class Button extends React.Component {
       throw new Error('Expect at least one of href/onClick');
     }
 
-    const Tag = href ? 'a' : 'div';
+    let Tag = 'button';
+    if (__useDeprecatedTag) {
+      Tag = href ? 'a' : 'div';
+    }
+
+    const sizeStyle = __useDeprecatedTag
+      ? styles.sizes[size]
+      : {...styles.sizes[size], ...styles.updated};
 
     return (
       <Tag
         className={className}
-        style={[styles.main, styles.colors[color], styles.sizes[size], style]}
+        style={[styles.main, styles.colors[color], sizeStyle, style]}
         href={disabled ? 'javascript:void(0);' : href}
         target={target}
         disabled={disabled}
@@ -243,5 +266,6 @@ class Button extends React.Component {
 
 Button.ButtonColor = ButtonColor;
 Button.ButtonSize = ButtonSize;
+Button.ButtonHeight = ButtonHeight;
 
 export default Radium(Button);

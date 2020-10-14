@@ -11,7 +11,25 @@ ta:
   campaign_date_short: டிச. 4-10
   campaign_date_full: டிசம்பர் 4-10
   campaign_date_year: '2017'
-  campaign_date_full_year: டிசம்பர் 4-10, 2017
+  campaign_date_full_year: டிசம்பர் 7-13, 2020
+  latam_campaign_date_start_short: Oct. 1
+  latam_campaign_date_start_long: October 1
+  latam_campaign_date_short: Oct. 1 - Dec. 18
+  latam_campaign_date_full: October 1 - December 18
+  latam_campaign_date_year: '2017'
+  latam_campaign_date_full_year: October 1, 2020 - December 18, 2020
+  europe_campaign_date_start_short: Oct. 10
+  europe_campaign_date_start_long: October 10
+  europe_campaign_date_short: Oct. 10-25
+  europe_campaign_date_full: October 10-25
+  europe_campaign_date_year: '2017'
+  europe_campaign_date_full_year: October 10-25, 2020
+  africa_campaign_date_start_short: Oct. 1
+  africa_campaign_date_start_long: October 1
+  africa_campaign_date_short: Oct. 1-31
+  africa_campaign_date_full: October 1-31
+  africa_campaign_date_year: '2017'
+  africa_campaign_date_full_year: October 1-31, 2020
   hoc2019_header: கம்ப்யூட்டர் சயின்ஸ் கற்றுக்கொள்ளுங்கள். உலகை மாற்றுங்கள்.
   hoc2019_header_line1_mobile: கம்ப்யூட்டர் சயின்ஸ் கற்றுக்கொள்ளுங்கள்.
   hoc2019_header_line2_mobile: உலகை மாற்றுங்கள்.
@@ -27,38 +45,97 @@ ta:
   social_hoc2019_dance: கேட்டி பெர்ரி, ஜோனாஸ் பிரதர்ஸ், லில் நாஸ் எக்ஸ், பேனிக் அட்
     டிஸ்கோ, இன்னும் பலர் தோன்றுகிறார்கள்!
   oceans_landing_title: AI for Oceans
-  oceans_landing_description: 'Explore machine learning by teaching “A.I.” to recognize
-    fish. #CSforGood'
-  oceans_landing_specs: English only | Ages 11+
+  oceans_landing_description: Learn about machine learning and ethical use of AI.
+  cs_for_good_hashtag: "#CSforGood"
+  oceans_landing_specs: Available in 25+ languages | Grades 3+
+  oceans_landing_explanation: Computer science is about so much more than coding!
+    Learn about artificial intelligence (AI), machine learning, training data, and
+    bias, while exploring ethical issues and how AI can be used to address world problems.
+    Enjoy Code.org's first step in a new journey to teach more about AI. When you
+    use the AI for Oceans activity you are training real machine learning models.
+    <a href='#behind-the-scenes'>Learn more</a>.
+  oceans_landing_explanation_markdown: Computer science is about so much more than
+    coding! Learn about artificial intelligence (AI), machine learning, training data,
+    and bias, while exploring ethical issues and how AI can be used to address world
+    problems. Enjoy Code.org's first step in a new journey to teach more about AI.
+    When you use the AI for Oceans activity you are training real machine learning
+    models. [Learn more](#behind-the-scenes).
   oceans_landing_teacher_resources: Teacher Resources
   oceans_landing_teacher_resources_desc: Lesson plans and activities to help you teach
     AI, machine learning, training data, and bias, while exploring ethical issues.
   oceans_landing_resource_button: View Resources
-  oceans_landing_cs_for_good: CS For Good
+  oceans_landing_cs_for_good: CS for Good
   oceans_landing_cs_for_good_desc: Resources to help students understand the role
     computer science could play in creating a more equitable world.
-  oceans_landing_learn_more: Learn more about AI and Machine Learning
-  social_hoc2019_oceans_title: 'AI for Oceans #CSForGood'
+  oceans_landing_videos: Videos about AI and Machine Learning
+  oceans_behind_the_scenes: 'AI for Oceans: Behind the Scenes'
+  oceans_behind_the_scenes_1: Levels 2-4 use a pretrained model provided by the <a
+    href="https://www.tensorflow.org/" >TensorFlow</a> <a href="https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md">
+    MobileNet </a> project. A MobileNet model is a <a href="https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks">convolutional
+    neural network</a> that has been trained on <a href="http://www.image-net.org/">ImageNet</a>,
+    a dataset of over 14 million images hand-annotated with words such as "balloon"
+    or "strawberry". In order to customize this model with the labeled training data
+    the student generates in this activity, we use a technique called <a href="https://en.wikipedia.org/wiki/Transfer_learning">Transfer
+    Learning</a>. Each image in the training dataset is fed to MobileNet, as pixels,
+    to obtain a list of annotations that are most likely to apply to it. Then, for
+    a new image, we feed it to MobileNet and compare its resulting list of annotations
+    to those from the training dataset. We classify the new image with the same label
+    (such as "fish" or "not fish") as the images from the training set with the most
+    similar results.
+  oceans_behind_the_scenes_1_markdown: Levels 2-4 use a pretrained model provided
+    by the [TensorFlow](https://www.tensorflow.org/) [MobileNet](https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md)
+    project. A MobileNet model is a [convolutional neural network](https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks)
+    that has been trained on [ImageNet](http://www.image-net.org/), a dataset of over
+    14 million images hand-annotated with words such as "balloon" or "strawberry".
+    In order to customize this model with the labeled training data the student generates
+    in this activity, we use a technique called [Transfer Learning](https://en.wikipedia.org/wiki/Transfer_learning).
+    Each image in the training dataset is fed to MobileNet, as pixels, to obtain a
+    list of annotations that are most likely to apply to it. Then, for a new image,
+    we feed it to MobileNet and compare its resulting list of annotations to those
+    from the training dataset. We classify the new image with the same label (such
+    as "fish" or "not fish") as the images from the training set with the most similar
+    results.
+  oceans_behind_the_scenes_2: Levels 6-8 use a <a href="https://en.wikipedia.org/wiki/Support-vector_machine">Support-Vector
+    Machine</a> (SVM). We look at each component of the fish (such as eyes, mouth,
+    body) and assemble all of the metadata for the components (such as number of teeth,
+    body shape) into a vector of numbers for each fish. We use these vectors to train
+    the SVM. Based on the training data, the SVM separates the "space" of all possible
+    fish into two parts, which correspond to the classes we are trying to learn (such
+    as "blue" or "not blue").
+  oceans_behind_the_scenes_2_markdown: Levels 6-8 use a [Support-Vector Machine](https://en.wikipedia.org/wiki/Support-vector_machine)
+    (SVM). We look at each component of the fish (such as eyes, mouth, body) and assemble
+    all of the metadata for the components (such as number of teeth, body shape) into
+    a vector of numbers for each fish. We use these vectors to train the SVM. Based
+    on the training data, the SVM separates the "space" of all possible fish into
+    two parts, which correspond to the classes we are trying to learn (such as "blue"
+    or "not blue").
+  social_hoc2019_oceans_title: 'AI for Oceans #CSforGood'
   social_hoc2019_oceans_desc: Learn about AI, machine learning, training data, and
     bias, while exploring ethical issues and how AI can be used to address world problems.
     Computer science is about so much more than coding! Enjoy Code.org's first step
     in a new journey to teach more about AI throughout our curriculum.
-  hoc_overview_oceans_tutorial_header: AI For Oceans
-  hoc_overview_oceans_tutorial_desc: Learn about AI, machine learning, training data,
-    and bias, while exploring ethical issues and how AI can be used to address world
-    problems.
+  hoc_overview_oceans_tutorial_header: AI for Oceans
+  hoc_overview_oceans_tutorial_desc: Learn about artificial intelligence (AI), machine
+    learning, training data, and bias, while exploring ethical issues and how AI can
+    be used to address world problems.
   ai_video_title_what_is_ai: What is AI?
+  ai_video_title_algorithm_bias: Fighting bias in algorithms
   ai_video_title_phone_knows_dog: How does your phone know this is a dog?
   ai_video_title_what_is_ml: What is Machine Learning?
   ai_video_title_ml_big_small_prickly: 'Machine Learning: Solving Problems Big, Small
     and Prickly'
   ai_video_title_ethics_of_ai: Ethics of AI
   ai_video_title_ml_human_bias: Machine Learning and Human Bias
+  ai_video_title_seeing_ai: 'Seeing AI: Making the visual world more accessible'
   activity: Activity
   name: Name
   description: Description
   audience: Audience
   ai_resource_header: Teach and Learn about AI
+  ai_resource_minecraft: Minecraft AI for Good
+  ai_resource_minecraft_desc: 'Access free resources including a lesson plan, videos,
+    computer science curriculum, and teacher trainings. (Requires Minecraft: Education
+    Edition)'
   ai_resource_ml_for_kids: Machine Learning for Kids
   ai_resource_ml_for_kids_desc: Train a machine learning model with text, numbers,
     or images, and use it to make games in Scratch.
@@ -77,18 +154,20 @@ ta:
   ai_audience_k12: K-12 (Reading required)
   ai_audience_hs: High school
   ai_activity_header: Activities Powered by AI and ML
+  ai_activity_seeing_ai: Seeing AI
+  ai_activity_seeing_ai_desc: A free app that narrates the world around you in a variety
+    of languages.
+  ai_activity_quick_draw: Quick, Draw!
+  ai_activity_quick_draw_desc: Can a neural network learn to recognize doodling?
   ai_activity_teachable: Teachable Machine
   ai_activity_teachable_desc: Train a computer to recognize your own images, sounds,
     and poses.
-  ai_activity_quick_draw: Quick, Draw!
-  ai_activity_quick_draw_desc: Can a neural network learn to recognize doodling?
   ai_activity_experiments: AI Experiments with Google
   ai_activity_experiments_desc: Start exploring machine learning through pictures,
     drawings, language, music, and more.
-  ai_activity_mixlab: MixLab
-  ai_activity_mixlab_desc: Make music using voice commands.
-  ai_activity_gaugan: GauGAN Beta
-  ai_activity_gaugan_desc: Paint photo-realistic landscapes with the help of AI.
+  ai_activity_zooniverse: Zooniverse - Snapshot Mountain Zebra
+  ai_activity_zooniverse_desc: Help protect the endangered Cape Mountain Zebra by
+    identifying the different animals in the images.
   codeorg_homepage_hoc2018_curriculum: மேலும் கற்றுக் கொள்ளுங்கள் <a href="%{studio_url}/courses"
     class="hoc2018-curriculum-link">Code.org courses</a>
   codeorg_homepage_hoc2018_dance_heading: உங்கள் சொந்த <span class=" வார்த்தையை-முன்னிலைப்படுத்து">
@@ -109,6 +188,18 @@ ta:
   hoc2018_tutorial_mchoc_description: Hour of Code க்காக Minecraft மீண்டும் புத்தம்
     புதிய நடவடிக்கையுடன் வருகிறது! குறியீட்டைக் கொண்டு Minecraft ஊடான பயணம்.
   codeorg_homepage_hoc2019_dance_heading: Try the new <span class="highlight-word">Dance&nbsp;Party!</span>
+  codeorg_homepage_hoc2019_dance_heading_markdown: Try the new **Dance&nbsp;Party!**
+  codeorg_homepage_special2020_body1: Support for parents and teachers facing school
+    closures.
+  codeorg_homepage_special2020_body2: See our suggested learning resources.
+  codeorg_homepage_special2020_body: Keep learning this summer! Take a look at our
+    resources for learning at home.
+  codeorg_homepage_remote2020_body: Are you teaching in a remote or socially-distanced
+    classroom this semester? View our resources.
+  codeorg_homepage_special2020_link_text: Get started
+  codeorg_homepage_code_break_body: Take a Code Break! Your weekly dose of inspiration,
+    community, and computer science.
+  codeorg_homepage_code_break_link_text: மேலும் அறிக
   cookie_banner_message: எங்கள் தளத்தில் தொடர்ந்து உலாவுதல் மூலமோ அல்லது ”நான் ஒப்புக்கொள்கிறேன்,”
     (”I agree”) என்பதை சொடுக்குவதன் மூலமோ நீங்கள் உங்கள் கணினி அல்லது சாதனத்தில் குக்கீகளை
     சேகரிக்க ஒப்புக் கொள்கிறீர்கள்.
@@ -280,6 +371,7 @@ ta:
   how_to_nav_companies: நிறுவனங்களுக்கு
   how_to_nav_afterschool_educators: பள்ளி நேரத்திற்கு பின் பயிற்றுவிக்கும் ஆசிரியர்களுக்கு
   how_to_nav_volunteers: தொண்டூழியர்களுக்கு
+  how_to_nav_virtual: For virtual events
   whats_next_header: அடுத்து என்ன?
   whats_next_description: உங்கள் நிகழ்வுக்கான பாடப்பொருட்கள் மற்றும் உங்கள் நிகழ்வுக்கான
     உதவிக்குறிப்புகளை நாங்கள் அனுப்புவோம். எந்த ப்ரவுசர், ஸ்மார்ட்ஃபோனுக்கும் – அல்லது
@@ -368,6 +460,9 @@ ta:
     ஆண்டு முழுவதும் Hour of Code நடவடிக்கைகள் கிடைக்கக்கூடியதாக உள்ளன. உங்கள் வகுப்புக்கான
     ஒரு நிகழ்வை திட்டமிட <a href='%{hoc_activities_url}'>ஒரு நடவடிக்கையை </a> அல்லது
     எங்களது <a href='%{howto_guide_url}'> எவ்வாறு செய்வது வழிகாட்டியை </a> முயற்சியுங்கள்.
+  signup_registration_not_required_markdown: You don't need to register to participate!
+    The Hour of Code activities are available year-round. [Try an activity](%{hoc_activities_url})
+    or read our [How-to guide](%{howto_guide_url}) to plan an event for your class.
   signup_registration_closed: உலகமெங்கும் Hour of Code உடன் கம்ப்யூட்டர் சயின்ஸ் கல்வி
     வாரத்தை கொண்டாடுகிற பல லட்சக்கணக்கான மாணவர்களுடன் ஒவ்வொரு ஆண்டும் டிசம்பரில் உங்கள்
     வகுப்பு இணையலாம். ஆண்டு விழா கொண்டாட்டத்திற்கான பதிவை அக்டோபரில் நாங்கள் திறக்கிறோம்.
@@ -421,6 +516,7 @@ ta:
   signup_send_posters_address_placeholder: இந்த முகவரி எங்கள் மேப்பில் பகிரப்படாது
   signup_event_type_in_school: ஒரு பள்ளியில்
   signup_event_type_out_of_school: பள்ளிக்கு வெளியே
+  signup_event_type_at_home: Home
   signup_submit_census_label: சமர்ப்பி
   signup_submit_census_error_message: மன்னிக்கவும். ஒரு பிழை ஏற்பட்டுள்ளது. தயவுசெய்து
     படிவத்தை மீண்டும் சமர்ப்பிக்க முயற்சிக்கவும்.
@@ -468,6 +564,7 @@ ta:
   map_legend_cs_tech_jam: சிறப்பு நிகழ்வு
   map_warning: "<a href='%{events_url}'>events page.</a> ல் நிகழ்வுகளின் முழு பட்டியலைக்
     காணலாம்"
+  map_warning_markdown: A full list of the events can be viewed on the [events page.](%{events_url})
   meta_tag_og_title: 'Hour of Code: இயக்கத்தில் இணையுங்கள்'
   meta_tag_og_description: Hour of Code என்பது 180+ நாடுகளில் 45க்கும் மேற்பட்ட மொழிகளில்
     எல்லா வயதுகளிலும் உள்ள கோடிக்கணக்கான மாணவர்களை சென்றடையும் ஒரு உலகளாவிய இயக்கம்.
@@ -493,6 +590,13 @@ ta:
     மற்றும் நடவடிக்கைகள்</a> ஐ பார்க்கவும். இந்த அடிப்படை நிலையிலான பிரச்சாரம் <a
     href='%{partners}'>400 பங்காளர்கள்</a> மற்றும் 200,000 பயிற்றுவிப்பாளர்களால் உலகெங்கிலும்
     ஆதரிக்கப்படுகிறது.
+  hoc_faq_what_is_hoc_a_markdown: The Hour of Code started as a one-hour introduction
+    to computer science, designed to demystify "code", to show that anybody can learn
+    the basics, and to broaden participation in the field of computer science. It
+    has since become a worldwide effort to celebrate computer science, starting with
+    1-hour coding activities but expanding to all sorts of community efforts. Check
+    out the [tutorials and activities](%{tutorials}). This grassroots campaign is
+    supported by over [400 partners](%{partners}) and 200,000 educators worldwide.
   hoc_faq_last_year: டுடோரியல்களை முயற்சிக்கவும்
   hoc_faq_when_is_hoc_q: Hour of Code எப்போது நடைபெறுகிறது?
   hoc_faq_when_is_hoc_a: Hour of Code ஒவ்வொரு ஆண்டும் <a href='%{csedweek_url}'>கம்ப்யூட்டர்
@@ -502,23 +606,42 @@ ta:
     வாரம் என்பது கம்ப்யூட்டிங்கின் முன்னோடியான <a href='%{grace_hopper}'>அட்மிரல்
     கிரேஸ் முர்ரே ஹாப்பர்</a> பிறந்த நாளை (December 9, 1906) அங்கீகரிக்கும் விதமாக
     நடைபெறுகிறது.
+  hoc_faq_when_is_hoc_a_markdown: The Hour of Code takes place each year during [Computer
+    Science Education Week](%{csedweek_url}). The %{campaign_date_year} Computer Science
+    Education Week will be %{campaign_date_full}, but you can host an Hour of Code
+    all year-round. Computer Science Education Week is held annually in recognition
+    of the birthday of computing pioneer [Admiral Grace Murray Hopper](%{grace_hopper})
+    (December 9, 1906).
   hoc_faq_why_cs_q: ஏன் கம்ப்யூட்டர் சயின்ஸ்?
   hoc_faq_why_cs_a: "<i>ஒவ்வொரு</i> மாணவரும் கம்ப்யூட்டர் சயின்ஸ் பயில்வதற்கான வாய்ப்பை
     பெற வேண்டும். அது சிக்கலை தீர்க்கும் திறன்கள், தர்க்க அறிவு மற்றும் படைப்பாற்றலை
     வளர்க்க உதவுகிறது. முன்கூட்டியே தொடங்குவதன் மூலம், மாணவர்கள் 21ம் நூற்றாண்டின்
     துறைசார் வழியில் எதிலும் வெற்றி காண்பதற்கான ஒரு அடித்தளத்தை பெறுவார்கள். மேலதிகமான
     புள்ளிவிபரங்களை <a href='%{stats_url}'>here</a> ல் பார்க்கவும்."
+  hoc_faq_why_cs_a_markdown: _Every_ student should have the opportunity to learn
+    computer science. It helps nurture problem-solving skills, logic and creativity.
+    By starting early, students will have a foundation for success in any 21st-century
+    career path. See more stats [here](%{stats_url}).
   hoc_faq_how_participate_q: Hour of Code ல் நான் எவ்வாறு பங்கேற்பது?
   hoc_faq_how_participate_a: எங்களது எவ்வாறு செய்வது வழிகாட்டுதலை மறுபார்வை செய்வதன்
     மூலம் <a href='/how-to'>இங்கு திட்டமிடத் தொடங்குங்கள்</a> நீங்கள் உங்கள் பள்ளியில்
     அல்லது உங்கள் சமூகத்தில் &mdash; பாடத்திட்டம் சாரா நடவடிக்கைககள் சங்கம், இலாப
     நோக்கமற்ற நிறுவனம் அல்லது பணியிடத்தில் Hour of Code ஐ ஏற்பாடு செய்யலாம் அல்லது,
     %{campaign_date} வந்ததும் அதை முயற்சி செய்து பாருங்கள்.
+  hoc_faq_how_participate_a_markdown: "[Start planning here](%{howto}) by reviewing
+    our how-to guide. You can organize an Hour of Code event at your school or in
+    your community — like in an extracurricular club, non-profit or at work. Or, just
+    try it yourself when %{campaign_date} arrives."
   hoc_faq_behind_hoc_q: Hour of Code அ?
   hoc_faq_behind_hoc_a: Hour of Code மற்றும் கம்ப்யூட்டர் சயின்ஸ் கல்வி வாரம் <a href='%{partner_url}'>
     ஆலோசனை மற்றும் மறுபார்வை கமிட்டிகளால் </a> மற்றும் முன்னெப்போதும் நிகழாத வகையில்
     மைக்ரோசாஃப்ட், ஆப்பிள், அமேசான், பாய்ஸ் அன் கேர்ள்ஸ் கிளப்ஸ் ஆஃப் அமெரிக்க மற்றும்
     காலேஜ் போர்டு உள்ளிட்ட பங்காளர்களுடனான கூட்டணியாலும் தான் Hour of Code இயக்கப்படுகிறது.
+  hoc_faq_behind_hoc_a_markdown: The Hour of Code is driven by the Hour of Code and
+    Computer Science Education Week [Advisory and Review Committees](%{partner_url})
+    as well as an unprecedented coalition of partners that have come together to support
+    the Hour of Code — including Microsoft, Apple, Amazon, Boys and Girls Clubs of
+    America and the College Board.
   hoc_faq_host_q: கோடிங் பற்றி எனக்கு எதுவும் தெரியாது. இருந்தாலும் கூட என்னால் ஒரு
     நிகழ்வை நடத்த இயலுமா?
   hoc_faq_host_a: உண்மை தான். Hour of Code நடவடிக்கைகள், சுய வழிகாட்டுதலுடன் மேற்கொள்ளக்
@@ -528,6 +651,11 @@ ta:
     கொள்கிறோம். மழலையர் பள்ளி தொடங்கி ஒவ்வொரு வயது மற்றும் அனுபவ நிலைக்கும் ஏற்றபடியான
     தெரிவுகளும் எங்களிடம் உள்ளன. எங்களது <a href='/how-to'> எவ்வாறு செய்வது வழிகாட்டி</a>
     -யை வாசித்து திட்டமிடத் தொடங்குங்கள்.
+  hoc_faq_host_a_markdown: Of course. Hour of Code activities are self-guided. All
+    you have to do is [try our current tutorials](%{codeorg_url}/learn), pick the
+    tutorial you want, and pick an hour — we take care of the rest. We also have options
+    for every age and experience-level, from kindergarten and up. Start planning your
+    event by reading our [how to guide](%{howto}).
   hoc_faq_devices_q: என் மாணவர்களுக்கு நான் என்ன சாதனங்களை பயன்படுத்த வேண்டும்?
   hoc_faq_devices_a: Code.org டுடோரியல்கள் அனைத்து சாதனங்கள் மற்றும் ப்ரவுஸர்களிலும்
     இயங்கும். நீங்கள் Code.org –ன் டுடோரியல் தொழில்நுட்பத் தேவைகள் குறித்தான மேலதிக
@@ -537,6 +665,11 @@ ta:
     school can't accommodate the tutorials! டுடோரியல்களுக்கு உங்கள் பள்ளியால் இடமளிக்க
     இயலாது எனில் <a href='%{unplugged_url}'>unplugged activities</a> ஐயும் வழங்குகிறோம்
     என்பதை மறவாதீர்!
+  hoc_faq_devices_a_markdown: Code.org tutorials work on all devices and browsers.
+    You can see more information about Code.org's tutorial tech needs [here](%{codeorg_url}/educate/it).
+    Tech needs for non-Code.org tutorials can be found on [%{partner_url}/learn](%{codeorg_url}/learn)
+    in the tutorial specific description. Don't forget we also offer [unplugged activities](%{unplugged_url})
+    if your school can't accommodate the tutorials!
   hoc_faq_need_computers_q: ஒவ்வொரு பங்கேற்பாளருக்காகவும் எனக்குக் கணினி தேவையா?
   hoc_faq_need_computers_a: இல்லை. PCக்கள், ஸ்மார்ட்ஃபோன்கள், டேப்ளட்கள் ஆகியவற்றில்
     இயங்குகிற மற்றும் கணினியே தேவைப்படாத சில என எங்களிடம் Hour of Code டுடோரியல்கள்
@@ -550,17 +683,32 @@ ta:
     இணைந்து காணொளி பாகங்களை பார்த்து புதிர்களை தீர்ப்பது அல்லது கேள்விகளுக்கு பதிலளிப்பது
     என செய்யுங்கள். <li><b>அன்பிளக்டு ஆகுங்கள்.</b> நாங்கள் வழங்குகிறோம்<a href='%{unplugged_url}'>கணினி
     தேவைப்படாத டுடோரியல்கள்</a> at all. </ul>
+  hoc_faq_need_computers_a_markdown: |-
+    No. We have Hour of Code tutorials that work on PCs, smartphones, tablets, and some that require no computer at all! You can join wherever you are, with whatever you have.
+
+    _Here are a few options:_
+
+    - **Work in pairs.** [Research shows](%{pair_programming_research}) students learn best with [pair programming](%{pair_programming_video}), sharing a computer and working together. Encourage your students to double up.
+    - **Use a projected screen.** If you have a projector and screen for a Web-connected computer, your entire group can do an Hour of Code together. Watch video portions together and take turns solving puzzles or answering questions.
+    - **Go unplugged.** We offer [tutorials that require no computer](%{unplugged_url}) at all.
   hoc_faq_international_q: நான் <country>-இல் உள்ளேன் சர்வதேச அளவில் நான் எவ்வாறு
     பங்கேற்பது?
   hoc_faq_international_a: ஒரு Hour of Code நிகழ்வை யார் வேண்டுமானாலும், உலகில் எங்கிருந்து
     வேண்டுமானாலும் ஏற்பாடு செய்யலாம். கடந்த அண்டு, உலகமெங்கும் இருந்து மாணவர்கள் Hour
     of Code க்கு என இணைந்தனர். மேலதிக தகவல்களுக்கு <a href='/promote'>இங்கு காணவும்</a>.
+  hoc_faq_international_a_markdown: Anyone can organize an Hour of Code event, anywhere
+    in the world. Last year, students worldwide joined together for the Hour of Code.
+    Find out more [here](%{promote}).
   hoc_faq_tutorial_q: ஒரு Hour of Code டுடோரியலை எவ்வாறு செய்வது?
   hoc_faq_tutorial_a: ஒரு டுடோரியல் பங்காளராக நீங்கள் ஆக விரும்பினால், <a href='/tutorial-guidelines'>எங்கள்
     வழிகாட்டுதல்கள் மற்றும் அறிவுறுத்துதல்களைக் காண்க</a>. பல வகையான ஈடுபாடு ஏற்படுத்தக்கூடிய
     தெரிவுகளை நடத்த எங்களுக்கு விருப்பம் என்கிறபோதிலும் எங்களது முதன்மையோன இலக்கு
     கம்ப்யூட்டர் சயின்ஸிற்கு புதிதாக உள்ள மாணவர்கள் மற்றும் ஆசிரியர்களுக்கு அனுபவத்தை
     உகந்த நிலைக்கு கொண்டு வருவது தான்.
+  hoc_faq_tutorial_a_markdown: If you're interested in becoming a tutorial partner,
+    [see our guidelines and instructions](%{tutorial_guidelines}). We'd like to host
+    a variety of engaging options, but the primary goal is to optimize the experience
+    for students and teachers who are new to computer science.
   hoc_faq_account_q: மாணவர்கள் அக்கவுண்ட் பயன்படுத்தி நுழைவது அவசியமா?
   hoc_faq_account_a: இல்லை. Hour of Code ஐ முயற்சிக்க மாணவர்கள் பதிவிடுவதோ அல்ல உள்நுழைவதோ
     செய்ய வேண்டிய அவசியமே கிடையாது. <a href='%{codeorg_url}/learn/beyond'> பின்தொடரும்
@@ -569,6 +717,11 @@ ta:
     Hour of Code உடன் பதிவு செய்வது என்பது தன்னியக்கமாக ஒரு குறியீடு ஸ்டுடியோ அக்கவுண்ட்டை
     தொடங்காது. உங்கள் மாணவர்களுக்கு அக்கவுண்ட்கள் தொடங்க நீங்கள் விரும்பினால், இந்த
     <a href='https://youtu.be/_smelV_KISE'>instructions</a> அறிவுறுத்தல்களைப் பின்பற்றுங்கள்.
+  hoc_faq_account_a_markdown: No. Absolutely no signup or login is required for students
+    to try the Hour of Code. Most of the [follow-on courses](%{codeorg_url}/learn/beyond)
+    require account creation to save student progress. Also, signing up for the Hour
+    of Code does NOT automatically create a Code Studio account. If you do want to
+    create accounts for your students, please follow these [instructions](https://youtu.be/_smelV_KISE).
   hoc_faq_high_school_q: உயர்நிலைப் பள்ளி மாணவர்களுடன் எந்த நடவடிக்கை நான் செய்ய வேண்டும்?
   hoc_faq_high_school_a: நமது Star Wars மற்றும் Minecraft டுடோரியல்கள் உயர்நிலைப்
     பள்ளி மாணவர்களுக்கு மிகவும் சிறப்பாக இருக்கும், முக்கியமாக இரண்டு டுடோரியல்களிலுமே
@@ -579,6 +732,13 @@ ta:
     இவற்றில் ஏதேனும் ஒன்றை 30 நிமிடங்களில் முடித்துவிட இயன்றவராக இருக்க வேண்டும் என்பதோடு
     Khan அகாடெமி அல்லது CodeHS போன்ற ஒரு இன்னும் மேம்பட்ட ஜாவாஸ்கிரிப்ட் டுடோரியலை
     முயல இயன்றவராக இருப்பார்.
+  hoc_faq_high_school_a_markdown: Our Star Wars and Minecraft tutorials are great
+    for high schoolers, especially the Star Wars JavaScript version and the free play
+    level on both tutorials. Alternately, we recommend trying one of the beginner
+    tutorials on [%{partner_url}/learn](%{codeorg_url}/learn) to start, such as the
+    tutorial with Angry Birds or with Anna and Elsa. A high school student should
+    be able to finish one of these in 30 minutes and can then try a more advanced
+    tutorial in JavaScript, such as Khan Academy or CodeHS.
   hoc_faq_scratch_q: நான் Hour of Code க்கான Scratch-ஐ செய்கிறேன், ஆனால் என் மாணவர்கள்
     லேப்டாப்களுக்குப் பதிலாக ஐபேடுகள் வைத்திருந்தால் என்ன செய்வது?
   hoc_faq_scratch_a: Scratch டேப்ளட்களில் இயங்குவதில்லை. உங்கள் மாணவர்கள் இளமையாக
@@ -586,6 +746,10 @@ ta:
     <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>ல் நீங்கள் டுடோரியல்களைப்
     பார்த்தால், Code.org, Tynker, Lightbot, அல்லது CodeSpark - என iPadகளில் வேலை செய்யும்
     பிற டுடோரியல்களை காணலாம்.
+  hoc_faq_scratch_a_markdown: Scratch doesn't run on tablets. If your students are
+    young, they can use the ScratchJR iPad app (for early-readers). If you look at
+    the tutorials on [%{partner_url}/learn](%{codeorg_url}/learn), you can find other
+    tutorials that work on iPads - from Code.org, Tynker, Lightbot, or CodeSpark.
   hoc_faq_count_hoc_q: நீங்கள் உங்கள் Hours of Code–ஐ எவ்வாறு எண்ணிக்கை செய்வீர்கள்?
   hoc_faq_map_q: மேப்பில் என்னுடைய புள்ளியை ஏன் காணவில்லை?
   hoc_faq_map_a: Hour of Code மேப்பில் உங்கள் Hour of Code நிகழ்வை நீங்கள் காண இயலாததற்கு
@@ -597,12 +761,24 @@ ta:
     கூடுதலாக, Hour of Code-க்கு ஆயிரம் மக்கள் பதிவு செய்கையில், மேப் மற்றும் நிகழ்வுப்
     பட்டியல் அப்டேட் ஆவதற்கு பொதுவாக 48 மணிநேரங்கள் ஆகும். ஒரு சில நாட்களில் மீண்டும்
     வந்து சரிபார்க்கவும்!
+  hoc_faq_map_a_markdown: We're so sorry you aren't seeing your event on the Hour
+    of Code map. Because of the tens of thousands of organizers who sign up, the map
+    aggregates the data and displays one point for several events. If you click the
+    [events page](%{events_url}) link below the map you will be directed to a list
+    of all events by state and can find your event listed there. Additionally, given
+    the thousands of people signing up for the Hour of Code, the map and event list
+    usually takes 48 hours to update. Check back in a few days!
   hoc_faq_count_hoc_a: Hour of Code டிராக்கர் என்பது பயன்பாட்டின் துல்லியமான அளவீடு
     அல்ல. Hour of Codeல் பங்கேற்பு குறித்து ட்ராக் செய்கையில், குறிப்பாக நாங்கள் மாணவர்களை
     உள்நுழையவோ அல்லது பதியவோ வேண்டுவதில்லை என்பதால், தனிப்பட்ட மாணவர் அடையாள எண்களை
     துல்லியமாக நாங்கள் எண்ணுவதில்லை. இதன் விளைவாக, நாங்கள் ஒரே நேரத்தில் பங்கேற்பாளர்களை
     அதிகமாக எண்ணுவதையோ அல்லது குறைவாக எண்ணுவதையோ செய்கிறோம். <a href='%{codeorg_url}/loc'>here</a>ல்
     அனைத்து தகவல்களையும் வாசிக்கவும்.
+  hoc_faq_count_hoc_a_markdown: The Hour of Code tracker isn't an exact measurement
+    of usage. We do not count unique student IDs perfectly when tracking participation
+    in the Hour of Code, especially because we don't require students to log in or
+    register. As a result, we both over-count and under-count participants at the
+    same time. Read all the details [here](%{codeorg_url}/loc).
   hoc_faq_one_hour_q: ஒரு மணிநேரத்தில் ஒருவர் எவ்வளவு கற்றுக்கொள்ள இயலும்?
   hoc_faq_one_hour_a: Hour of Code-ன் இலக்கு என்பது ஒரு மணிநேரத்தில் யாரையும் கணினி
     விஞ்ஞானி நிபுணராக உருவாக்குவதற்கு கற்றுத் தருவது அல்ல.  கம்ப்யூட்டர் சயின்ஸ் என்பது
@@ -626,9 +802,16 @@ ta:
     என்பதையும் தங்கள் ஆசிரியர்கள் அதற்குத் தகுதியானவர்கள் என்பதையும் உணர்ந்திருக்கிறார்கள்.
     <br/><br/> Above all, what all participants can learn in an hour is that we can
     do this.
+  hoc_faq_one_hour_a_markdown: |-
+    The goal of the Hour of Code is not to teach anybody to become an expert computer scientist in one hour. One hour is only enough to learn that computer science is fun and creative, that it is accessible at all ages, for all students, regardless of background. The measure of success of this campaign is not in how much CS students learn - the success is reflected in broad participation across gender and ethnic and socioeconomic groups, and the resulting increase in enrollment and participation we see in CS courses at all grade levels. Millions of the participating teachers and students have decided to go beyond one hour -  to learn for a whole day or a whole week or longer, and many students have decided to enroll in a whole course (or even a college major) as a result.
+
+    Besides the students, another "learner" is the educator who gains the confidence after one hour that they can teach computer science even though they may not have a college degree as a computer scientist. Tens of thousands of teachers decide to pursue computer science further, either attending PD or offering follow-on online courses, or both. And this applies to school administrators too, who realize that computer science is something their students want and their teachers are capable of.
+
+    Above all, what all participants can learn in an hour is that we can do this.
   hoc_faq_more_questions_q: இன்னும் அதிகக் கேள்விகள் உள்ளதா?
   hoc_faq_more_questions_a: எங்களது <a href='http://support.code.org'>support forum</a>ல்
     ஒரு விடையை கண்டுபிடிக்க முயலுங்கள்.
+  hoc_faq_more_questions_a_markdown: Try finding an answer in our [support forum](http://support.code.org).
   hoc_faq_keep_learning_q: Hour of Codeக்குப் பின்னர் நான் எவ்வாறு பயிற்சி பெறுவதை
     தொடருவேன்?
   hoc_faq_keep_learning_a: யாரும் ஒரு Hour of Code ஐ எந்த நேரத்திலும் நடத்தலாம். ஆண்டு
@@ -636,17 +819,29 @@ ta:
     எங்கள் வலைத்தளத்தில் எப்போதும் இருக்கும் என நீங்கள் எதிர்பார்க்கலாம். நிகழ்வுக்கான
     எவ்வாறு செய்வது வழிகாட்டிகள் மற்றும் உங்கள் Hour of Code நிகழ்வை ஒரு வெற்றிகரமானதாக
     ஆக்க உதவும பிற வளஆதாரங்களுக்கு <a href='/promote'>our resources</a> க்கு செல்லவும்.
+  hoc_faq_keep_learning_a_markdown: Anyone can host an Hour of Code at any time. The
+    tutorials stay up year-round. You can expect all our tutorials and curriculum
+    to be available on our site in perpetuity. Please go to [our resources](%{promote})
+    for event how-to guides and other resources to help make your Hour of Code event
+    a success.
   hoc_faq_certificates_q: என் மாணவர்களுக்கான சான்றிதழ்களை நான் எங்கு அச்சடிப்பது?
   hoc_faq_certificates_a: எங்களது <a href='%{codeorg_url}/certificates'>சான்றிதழ்கள்
     பக்கத்திற்கு </a> சென்றால், அங்கு முன்கூட்டியே ஒட்டுமொத்த வகுப்புக்கான சான்றிதழ்களை
     அச்சடிக்கலாம். நீங்கள் Minecraft டுடோரியல் பயிலும் மாணவர்களுக்கும் <a href='%{codeorg_url}/certificates?course=mc'>சிறப்பு
     சான்றிதழ்கள்</a> அச்சடிக்கலாம்.
+  hoc_faq_certificates_a_markdown: Go to our [certificates page](%{codeorg_url}/certificates)
+    where you can print certificates for your entire class ahead of time. You can
+    also print out [special certificates](%{codeorg_url}/certificates?course=mc) for
+    students doing the Minecraft tutorial.
   hoc_faq_logo_q: Hour of Code சின்னம் அல்லது பெயரை நான் எவ்வாறு பயன்படுத்தலாம் என்பதற்கான
     வரம்புகள் உள்ளனவா?
   hoc_faq_logo_a: Hour of Code என்பது வணிகக் குறியீடாகப் பதியப்பட்டது. அதை பயன்படுத்துவதை
     நாங்கள் தடுக்க விரும்பவில்லை, ஆனால் அதன் பயன்பாடு ஒரு சில வரம்புகளுக்கு உட்பட்டு
     உள்ளதை உறுதி செய்து கொள்ள நாங்கள் விரும்புகிறோம். பயன்பாட்டுக்கான இந்த வழிகாட்டுதல்களை
     <a href='%{logo_url}'> usage</a> தயவுசெய்து காணவும்.
+  hoc_faq_logo_a_markdown: Hour of Code is trademarked. We don't want to prevent its
+    usage, but we want to make sure its usage fits within a few limits. Please see
+    [these guidelines for usage](%{logo_url}).
   stats_hoc_2013_image_alt: 2013 Hour of Code லிருந்து புள்ளிவிபரங்கள்
   stats_growth: 15 மில்லியன் பயனர்களை சென்றடைந்த மிக வேகமான ஒன்றாக இது இருந்தது.
   stats_i18n: 15 க்கும் அதிகமான மொழிகளில் மாணவர்கள் பயில்கிறார்கள்
@@ -664,6 +859,8 @@ ta:
     20-25% மட்டுமே உள்ளது.
   stats_females_more: Hour of Code ன் போது பெண் மாணவர்கள் <b>அனைத்து பங்கேற்பாளர்களில்
     50%</b> வகிக்கிறார்கள்!
+  stats_females_more_markdown: During the Hour of Code, female students make up **50%
+    of all participants**!
   stats_nina: '"ஒவ்வொரு நாளும் அதே முடிவுகளையும் &mdash; 100% ஈடுபாட்டையும் கொடுத்தது."
     - நைனா நிகோல்ஸ் பீரி, ஆசிரியர்'
   stats_student: '"இது ஒரு <b>வாழ்வில் ஒரு முறை கிடைக்கும்</b> வாய்ப்பு என்று எனக்குத்
@@ -794,15 +991,18 @@ ta:
     Hour of Code ஐ தொடங்குகிற லட்சக்கணக்கான மாணவர்கள் மற்றும் ஆசிரியர்களுடன் இணையுங்கள்.
   learn_banner_beyond: தொடர்ந்து கற்றுக் கொள்ள வேண்டுமா?  <a id='learn_banner_beyond'>ஒரு
     மணிநேரத்தையும் தாண்டிச் செல்க</a>
+  learn_banner_beyond_markdown: Want to keep learning? [Go beyond an hour](%{url})
   learn_banner_teachers: 'ஆசிரியர்கள்: <a id=''teacher_banner_host''>ஒரு மணிநேரம்
     நடத்துதல்</a> or <a id=''teacher_banner_howto''>எவ்வாறு செய்வது வழிகாட்டியைப்
     படிக்கவும் </a>'
+  learn_banner_teachers_markdown: 'Teachers: [Host an hour](%{host_url}) or [read
+    the How-To Guide](%{howto_url})'
   learn_robotics_banner_heading: ரோபோடிக்ஸ் மற்றும் சர்க்யூட்கள்
   learn_robotics_banner_blurb: ரோபோக்கள் அல்லது பொருள்ரீதியான கணினி கருவிப்பெட்டியை
     வைத்துள்ளீர்களா? அவற்றை கீழ்க்காணும் நடவடிக்கைகளுக்குப் பயன்படுத்தி எந்த வயதையும்
     சேர்ந்த மாணவர்களுக்கு ஒரு உறுதியான Hour of Code ஐ உருவாக்குங்கள். எந்த ஹார்டுவேரும்
     இன்றி நீங்கள் துவங்க ஏதுவாக சில நடவடிக்ககளில் ஒரு சிமுலேட்டரும் வழங்கப்படுகிறது.
-  tutorial_dance2019_name: Dance Party 2019
+  tutorial_dance2019_name: Dance Party
   tutorial_danceparty_name: Dance Party
   tutorial_chibitronics_name: 'Chibitronics: Illuminated Story'
   tutorial_athlete_name: Code your own sports game
@@ -2692,12 +2892,12 @@ ta:
     Once students complete this activity there is an opportunity to explore with ideas for other changes and activities that can be made.  There is no set goal or outcome as it's an open learning environment, but with just this starting code students come up with amazing projects!
 
     All instruction is contained within the Itch environment so there is no need to be switching screens to follow along with the project. Headphones are recommended.
-  tutorial_vidclim_longdescription: "Students research a fact about the Earth's climate,
+  tutorial_vidclim_longdescription: Students research a fact about the Earth's climate,
     engaging with the work of scientists and artists in response to climate change.
-    Students take their research and plan a video sharing their fact. \n\nVideos can
-    be about\nUnderstanding climate changes and its effects\nPublic responses to the
-    climate change effects\nHow climate change impacts everyday life\nWhat actions
-    can you take to make a difference"
+    Students take their research and plan a video sharing their fact. Videos can be
+    about understanding climate changes and its effects, public responses to climate
+    change, how climate change impacts everyday life, and the actions you can take
+    to make a difference.
   tutorial_matlab_longdescription: Learn to Code is an engaging, online, interactive
     tutorial where you learn how to code. Use MATLAB to find out if the closest meet-up
     location with your friends is the movies, the mall, or the cafe. Break the problem
@@ -2720,8 +2920,8 @@ ta:
     pop up when clicked.
   tutorial_itchg_longdescription: "Name-IT has you create a game of recognition! \n\nThe
     ending project has students creating a game to name the States of Australia!\n\nYou'll
-    first walk through an and follow directions to create a game to label the three
-    phases of the water cycle. You'll make a fully functioning game, including scoring!\n\nFrom
+    first walk through and follow directions to create a game to label the three phases
+    of the water cycle. You'll make a fully functioning game, including scoring!\n\nFrom
     the coding side you'll learn about variables, conditionals, lists, concatenating
     strings and much, much more. These are coding techniques you'll be able to re-use
     in other projects as you progress on to build your new coding skills!\n\nYou can
@@ -2749,7 +2949,7 @@ ta:
 
     Create a game to name the parts of a biological cell. Learn the parts of the cell while you make the game, and play it again as many times as you need to refresh your memory!
 
-    You'll first walk through an and follow directions to create a game to label the three phases of the water cycle. You'll make a fully functioning game, including scoring!
+    You'll first walk through and follow directions to create a game to label the three phases of the water cycle. You'll make a fully functioning game, including scoring!
 
     From the coding side you'll learn about variables, conditionals, lists, concatenating strings and much, much more. These are coding techniques you'll be able to re-use in other projects as you progress on to build your new coding skills!
 
@@ -2923,7 +3123,6 @@ ta:
     code through a playful action game and master computer science concepts like variables
     and functions. Create your own game in the Sandbox by remixing and expanding on
     existing game code. Then publish and share your game with friends and family.
-    A scripted lesson guide is included for teachers.
   tutorial_capost_longdescription: Starting to learn HTML and CSS is easy and fun
     with this digital postcard. Learn about adding headings, paragraphs, images and
     links to create a holiday card or birthday celebration to share with friends and
@@ -3093,7 +3292,7 @@ ta:
   tutorial_bbcgeo_longdescription: Standards-based lesson plan for grades K-5. Take
     your kids to the computer lab with worksheets in hand, and build apps involving
     geometry.
-  tutorial_chspixel_longdescription: After learning about how graphics work, studetns
+  tutorial_chspixel_longdescription: After learning about how graphics work, students
     will create their own Color by Pixel programs. The lesson plan consists of four
     parts, each covering a specific topic. The entire five-part Color by Pixel lesson
     is designed to run approximately one hour.
@@ -3197,11 +3396,11 @@ ta:
     the clocks scattered in the wilderness! In this tutorial you will learn the basics
     of algorithms, sequences, loops and conditionals!
   tutorial_hopgame_longdescription: "Keep the fun going! Use this project-based guide
-    to facilitate a game design workshop, hackathon, or in-class series. \n\nMake:
-    \n1. Cross the Road\n2. Geometry Jumper\n3. Quiz Creator\n4. Falling Bird \n5.
-    Subway Skaters\n6. Escape the Room\n\nEach includes discussion questions, differentiation,
-    and a video tutorial. \n\nStudents can build off your instructions to customize
-    their games. No prior experience required."
+    to facilitate a game design workshop, hackathon, or in-class series. Make Cross
+    the Road, Geometry Jumper, Quiz Creator, Falling Bird, Subway Skaters, and Escape
+    the Room. Each includes discussion questions, differentiation, and a video tutorial.
+    \n\nStudents can build off your instructions to customize their games. No prior
+    experience required."
   tutorial_icontrol_longdescription: |-
     This teacher facilitated lesson, adapted for the Hour of Code, provides pupils with an opportunity to explore physical programming through robotics - Sphero.
 
@@ -3293,7 +3492,7 @@ ta:
     chance to learn more.
   tutorial_elaseq_longdescription: Students will examine the concept of sequence in
     the context of reading and writing. Through grade level aligned ELA lessons, students
-    will apply their knowledge of sequence to farther their understanding of the role
+    will apply their knowledge of sequence to further their understanding of the role
     sequence plays in programming.
   tutorial_bbcmathi_longdescription: Standards-based lesson plan for grades 3-5. Take
     your kids to the computer lab with worksheets in hand, and build apps involving
@@ -3401,7 +3600,7 @@ ta:
     to human computer interaction (HCI) and in particular why so many gadgets areharder
     to use than need be. Design does make a difference and it is important that interfaces
     are evaluated to check they are easy to use.
-  tutorial_imathematician_longdescription: "This, teacher led, activity provides the
+  tutorial_imathematician_longdescription: "This teacher led activity provides the
     opportunity for pupils to use a cross curricular approach to computer science
     and mathematics.  \n\nPupils will create a computer program to solve a variation
     of a famous problem in a branch of Mathematics (Game Theory), called The Prisoner's
@@ -3921,7 +4120,7 @@ ta:
   tutorial_codehspython_longdescription: Learn the basics of coding with the Python
     programming language by writing programs that you can interact with! This hour
     will cover printing, variables, math, and getting information from users. Write
-    a program that take in and stores data from a user and returns a unique response!
+    a program that takes in and stores data from a user and returns a unique response!
   tutorial_codehsjava_longdescription: Coding in Java with CodeHS
   tutorial_techioda_longdescription: This useful tutorial will interactively teach
     you how to be able to calculate the shortest path between two nodes in a graph
@@ -4157,9 +4356,9 @@ ta:
     are well suited for and finish the lesson by designing their own robot to solve
     a specific problem.
   tutorial_isavesanta_longdescription: In this teacher-led festive activity, adapted
-    for the Hour of Code, the children explore create a computer game using Scratch
-    to save Santa. They design algorithms, use conditional statements as well as test
-    and debug their work. Includes step-by-step lesson plan, pupil resources, support
+    for the Hour of Code, the children create a computer game using Scratch to save
+    Santa. They design algorithms, use conditional statements as well as test and
+    debug their work. Includes step-by-step lesson plan, pupil resources, support
     cards and pre-written program templates.
   tutorial_iorder_longdescription: This teacher led activity, adapted for the Hour
     of Code, develops computational thinking and coding skills using Scratch 2.0.
@@ -4815,30 +5014,29 @@ ta:
   tutorial_astropi_longdescription: Code a message and check the ambient air temperature
     on board the ISS using an online simulator of the Astro Pi computer's Sense HAT.
   tutorial_rgart_longdescription: Looking for an easy and intuitive way to teach your
-    students to code? RoboGarden STEAM Activities has fused code practicing with STEAM
-    learning and gamified missions in multiple activities. In the art activity, the
-    student understand color mixing concepts while using coding blocks to solve challenges
+    students to code? RoboGarden STEAM has fused code practicing with STEAM learning
+    and gamified missions in multiple activities. In the art activity, the student
+    understand color mixing concepts while using coding blocks to solve challenges
     in the birthday party.
   tutorial_rgengineer_longdescription: Looking for an easy and intuitive way to teach
-    your students to code? RoboGarden STEAM Activities has fused code practicing with
-    STEAM learning and gamified missions in multiple activities. In the engineering
-    activity, the student learns basic robotics while using coding blocks to solve
-    challenges in the Christmas party.
+    your students to code? RoboGarden STEAM has fused code practicing with STEAM learning
+    and gamified missions in multiple activities. In the engineering activity, the
+    student learns basic robotics while using coding blocks to solve challenges in
+    the Christmas party.
   tutorial_rgmath_longdescription: Looking for an easy and intuitive way to teach
-    your students to code? RoboGarden STEAM Activities has fused code practicing with
-    STEAM learning and gamified missions in multiple activities. In the math activity,
-    the student practices counting, addition and subtraction while solving some coding
-    challenges.
+    your students to code? RoboGarden STEAM has fused code practicing with STEAM learning
+    and gamified missions in multiple activities. In the math activity, the student
+    practices counting, addition and subtraction while solving some coding challenges.
   tutorial_rgscience_longdescription: Looking for an easy and intuitive way to teach
-    your students to code? RoboGarden STEAM Activities has fused code practicing with
-    STEAM learning and gamified missions in multiple activities. In the science activity,
-    the student goes through a journey to the space solving multiple coding challenges
-    and know more about space elements and science facts.
+    your students to code? RoboGarden STEAM has fused code practicing with STEAM learning
+    and gamified missions in multiple activities. In the science activity, the student
+    goes through a journey to the space solving multiple coding challenges and know
+    more about space elements and science facts.
   tutorial_rgtech_longdescription: Looking for an easy and intuitive way to teach
-    your students to code? RoboGarden STEAM Activities has fused code practicing with
-    STEAM learning and gamified missions in multiple activities. In the technology
-    activity, the student goes through a journey to the volcanic islands solving multiple
-    coding challenges by understanding basic concepts of Technology.
+    your students to code? RoboGarden STEAM has fused code practicing with STEAM learning
+    and gamified missions in multiple activities. In the technology activity, the
+    student goes through a journey to the volcanic islands solving multiple coding
+    challenges by understanding basic concepts of Technology.
   tutorial_robotmagic3d_longdescription: Use your imagination to create an animated
     3D logo of your name, your favorite sports team or anything you want. Use code
     to make 3D models and letters come alive with fun. At the end you can download
@@ -4900,7 +5098,7 @@ ta:
     and area of a circle, but have you ever wondered where this number comes from
     or how to calculate it? In this coding activity you will randomly generate points
     similar to a very bad player shooting darts at a dart board. The percentage of
-    darts that land inside the circle can help us calculate Pi Then change the colors
+    darts that land inside the circle can help us calculate Pi. Then change the colors
     of the points just for fun!
   tutorial_stemplanetoids_longdescription: Did you know that the code behind the classic
     Asteroids and Lunar Lander games is simpler than you might think? Did you know
@@ -5142,7 +5340,7 @@ ta:
   tutorial_frogger_language: English, Spanish, Italian, French, German, and Dutch
   tutorial_tynkereco_language: English only
   tutorial_mitedarc_language: English only
-  tutorial_khan_language: English, Portuguese (Brazil), Spanish
+  tutorial_khan_language: Czech, English, Portuguese (Brazil), Spanish
   tutorial_tynkerd_language: English only
   tutorial_cdmy_language: English, Spanish
   tutorial_codestersdance_language: English, Spanish
@@ -5360,8 +5558,8 @@ ta:
   tutorial_wolframp_language: English only
   tutorial_wolframn_language: English only
   tutorial_soloweb_language: English only
-  tutorial_khanweb_language: English, Portuguese (Brazil), Spanish
-  tutorial_khandata_language: English, Portuguese (Brazil), Spanish
+  tutorial_khanweb_language: Czech, English, Portuguese (Brazil), Spanish
+  tutorial_khandata_language: Czech, English, Portuguese (Brazil), Spanish
   tutorial_robomeshiq_language: English only
   tutorial_googlelogo_language: English only
   tutorial_playtune_language: English only
@@ -6281,7 +6479,7 @@ ta:
   tutorial_dance2019_string_platforms: All modern browsers, Android tablet, iPad,
     Unplugged
   tutorial_danceparty_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_chibitronics_string_platforms: All modern browsers
+  tutorial_chibitronics_string_platforms: All modern browsers, Screen reader
   tutorial_athlete_string_platforms: All modern browsers
   tutorial_moana_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_star-wars_string_platforms: All modern browsers, Android tablet, iPad,
@@ -6357,7 +6555,7 @@ ta:
     Firefox, Safari, Android tablet, iPad
   tutorial_cmgame_string_platforms: All modern browsers
   tutorial_codesters_string_platforms: do-not-show
-  tutorial_qrm_string_platforms: All modern browsers
+  tutorial_qrm_string_platforms: All modern browsers, Screen reader
   tutorial_texas-instruments_string_platforms: TI-84, TI-83 graphing calculators
   tutorial_cajava_string_platforms: Internet Explorer 11, Microsoft Edge, Chrome,
     Firefox, Safari
@@ -6696,7 +6894,7 @@ ta:
     phone, Android phone, iPhone
   tutorial_gpbcatapult_string_platforms: All modern browsers
   tutorial_quorumastro_string_platforms: All modern browsers, Android tablet, iPad,
-    Windows phone, Android phone, iPhone
+    Windows phone, Android phone, iPhone, Screen reader
   tutorial_alicewonder_string_platforms: All modern browsers
   tutorial_rginter_string_platforms: Chrome, Firefox, Android tablet
   tutorial_cssgrid_string_platforms: All modern browsers
@@ -6829,26 +7027,38 @@ ta:
   tutorial_blockscadpizza_string_platforms: All modern browsers
   tutorial_blockscadsugar_string_platforms: All modern browsers
   tutorial_bsgridlight_string_platforms: All modern browsers
-  tutorial_bpartscratch_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_bpartvid_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_bpartscratch_string_platforms: All modern browsers, Android tablet, iPad,
+    Screen reader
+  tutorial_bpartvid_string_platforms: All modern browsers, Android tablet, iPad, Screen
+    reader
   tutorial_bpenglishscratch_string_platforms: All modern browsers, Android tablet,
-    iPad
-  tutorial_bpenglishvid_string_platforms: All modern browsers, Android tablet, iPad
+    iPad, Screen reader
+  tutorial_bpenglishvid_string_platforms: All modern browsers, Android tablet, iPad,
+    Screen reader
   tutorial_bphealthscratch_string_platforms: All modern browsers, Android tablet,
-    iPad
-  tutorial_bphealthvid_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_bpmathscratch_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_bpmathvid_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_bpmlkscratch_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_bpmlkvid_string_platforms: All modern browsers, Android tablet, iPad
+    iPad, Screen reader
+  tutorial_bphealthvid_string_platforms: All modern browsers, Android tablet, iPad,
+    Screen reader
+  tutorial_bpmathscratch_string_platforms: All modern browsers, Android tablet, iPad,
+    Screen reader
+  tutorial_bpmathvid_string_platforms: All modern browsers, Android tablet, iPad,
+    Screen reader
+  tutorial_bpmlkscratch_string_platforms: All modern browsers, Android tablet, iPad,
+    Screen reader
+  tutorial_bpmlkvid_string_platforms: All modern browsers, Android tablet, iPad, Screen
+    reader
   tutorial_bpsafetyscratch_string_platforms: All modern browsers, Android tablet,
-    iPad
-  tutorial_bpsafetyvid_string_platforms: All modern browsers, Android tablet, iPad
+    iPad, Screen reader
+  tutorial_bpsafetyvid_string_platforms: All modern browsers, Android tablet, iPad,
+    Screen reader
   tutorial_bpsciencescratch_string_platforms: All modern browsers, Android tablet,
-    iPad
-  tutorial_bpsciencevid_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_bptechscratch_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_bptechvid_string_platforms: All modern browsers, Android tablet, iPad
+    iPad, Screen reader
+  tutorial_bpsciencevid_string_platforms: All modern browsers, Android tablet, iPad,
+    Screen reader
+  tutorial_bptechscratch_string_platforms: All modern browsers, Android tablet, iPad,
+    Screen reader
+  tutorial_bptechvid_string_platforms: All modern browsers, Android tablet, iPad,
+    Screen reader
   tutorial_caflags_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_matariki_string_platforms: All modern browsers, Android tablet, iPad, Unplugged
   tutorial_carestaurant_string_platforms: All modern browsers, Android tablet, iPad,
@@ -6876,15 +7086,15 @@ ta:
   tutorial_codesparkcreate_string_platforms: All modern browsers, Android tablet,
     iPad, Android phone, iPhone
   tutorial_hardvsoft_string_platforms: Unplugged
-  tutorial_codestersecard_string_platforms: All modern browsers
-  tutorial_codesterslogo_string_platforms: All modern browsers
-  tutorial_codesterstshirt_string_platforms: All modern browsers
+  tutorial_codestersecard_string_platforms: All modern browsers, Screen reader
+  tutorial_codesterslogo_string_platforms: All modern browsers, Screen reader
+  tutorial_codesterstshirt_string_platforms: All modern browsers, Screen reader
   tutorial_codewards_string_platforms: All modern browsers
   tutorial_olympics_string_platforms: All modern browsers
   tutorial_codinismhero_string_platforms: Android tablet, Android phone
   tutorial_discovery_string_platforms: All modern browsers
   tutorial_csfirstname_string_platforms: All modern browsers
-  tutorial_obstaclecourse_string_platforms: iPad
+  tutorial_obstaclecourse_string_platforms: iPad, Screen reader
   tutorial_edisonmove_string_platforms: All modern browsers
   tutorial_edisonspider_string_platforms: All modern browsers, iPad, Android tablets
   tutorial_edisonspotlight_string_platforms: All modern browsers, iPad, Android tablets
@@ -6892,10 +7102,10 @@ ta:
   tutorial_gamefrootsquid_string_platforms: All modern browsers, iPad
   tutorial_duckpiano_string_platforms: All modern browsers
   tutorial_gpsound_string_platforms: All modern browsers
-  tutorial_groklearningpython_string_platforms: All modern browsers
+  tutorial_groklearningpython_string_platforms: All modern browsers, Screen reader
   tutorial_htmltimetravel_string_platforms: All modern browsers
   tutorial_hp_flappy_string_platforms: iPad
-  tutorial_appytappin_string_platforms: Unplugged
+  tutorial_appytappin_string_platforms: All modern browsers
   tutorial_icipher_string_platforms: Unplugged
   tutorial_iguess_string_platforms: Android tablet, iPad, iPhone
   tutorial_imake_string_platforms: Unplugged
@@ -6945,27 +7155,27 @@ ta:
   tutorial_scratchjrstory_string_platforms: Android tablet, iPad
   tutorial_scratchjrtwinkle_string_platforms: Android tablet, iPad
   tutorial_spherocomm_string_platforms: All modern browsers, Android tablet, iPad,
-    Android phone, iPhone
+    Android phone, iPhone, Screen reader
   tutorial_spherocommunity_string_platforms: All modern browsers, Android tablet,
-    iPad, Android phone, iPhone
+    iPad, Android phone, iPhone, Screen reader
   tutorial_spherofunctions_string_platforms: All modern browsers, Android tablet,
-    iPad, Android phone, iPhone
+    iPad, Android phone, iPhone, Screen reader
   tutorial_spheroinfrared_string_platforms: All modern browsers, Android tablet, iPad,
-    Android phone, iPhone
+    Android phone, iPhone, Screen reader
   tutorial_spherolightsensor_string_platforms: All modern browsers, Android tablet,
-    iPad, Android phone, iPhone
+    iPad, Android phone, iPhone, Screen reader
   tutorial_spheromansion_string_platforms: All modern browsers, Android tablet, iPad,
-    Android phone, iPhone
+    Android phone, iPhone, Screen reader
   tutorial_roadblocks_string_platforms: All modern browsers, Android tablet, iPad,
-    Android phone, iPhone
+    Android phone, iPhone, Screen reader
   tutorial_spherotext2_string_platforms: All modern browsers, Android tablet, iPad,
-    Android phone, iPhone
+    Android phone, iPhone, Screen reader
   tutorial_spherotext3_string_platforms: All modern browsers, Android tablet, iPad,
-    Android phone, iPhone
+    Android phone, iPhone, Screen reader
   tutorial_spherotext4_string_platforms: All modern browsers, Android tablet, iPad,
-    Android phone, iPhone
+    Android phone, iPhone, Screen reader
   tutorial_spheroraptor_string_platforms: All modern browsers, Android tablet, iPad,
-    Android phone, iPhone
+    Android phone, iPhone, Screen reader
   tutorial_stempiday_string_platforms: Chrome, Firefox, Safari, Android tablet, iPad
   tutorial_stemplanetoids_string_platforms: Chrome, Firefox, Safari, Android tablet,
     iPad
@@ -8242,7 +8452,7 @@ ta:
   tutorial_careconfigure_name: ReconFigure of Speech
   tutorial_rpiscratch_name: Scratch 3.0 phrasebook
   tutorial_ozaria_name: Ozaria by CodeCombat
-  tutorial_ttovum_name: Ovum City
+  tutorial_ttovum_name: Ovun City
   tutorial_ttpassage_name: The Passage
   tutorial_tynkerhtmlen_name: Affordable and Clean Energy (HTML)
   tutorial_ttfrog_name: Frog Squash
@@ -8294,6 +8504,7 @@ ta:
   tutorial_modtraits_name: Character Traits with GoPiGo
   tutorial_mee_name: 'Minecraft Hour of Code: AI for Good'
   tutorial_kuborobo_name: KUBO Robotics Coding Routes
+  tutorial_ai-oceans_name: AI for Oceans
   tutorial_scratchimagine_longdescription: Imagine a world where anything is possible,
     then bring it to life with Scratch!
   tutorial_codesterspsa_longdescription: Learn the basics of coding in Python while
@@ -8458,9 +8669,9 @@ ta:
     where you learn to type real code, navigate through 15 game levels, and make your
     own game in order to help save the world of Ozaria.
   tutorial_ttovum_longdescription: Can you control the chaos? Hack your way into the
-    cyberpunk world of Ovum City. Debug broken code, solve puzzles, and upgrade your
+    cyberpunk world of Ovun City. Debug broken code, solve puzzles, and upgrade your
     hardware as you explore self guided open world. Don't get caught by the drones!
-    It's up to you how Ovum City evolves.
+    It's up to you how Ovun City evolves.
   tutorial_ttpassage_longdescription: Immerse yourself in an alien world to help Ada
     escape unknown dangers. Play through this 2D platforming self-guided adventure
     and learn coding techniques along the way. Players will become familiar with coding
@@ -8657,6 +8868,9 @@ ta:
   tutorial_kuborobo_longdescription: In this activity, students put their logic and
     sequencing skills to the test as they use the Tagtiles to program their KUBO robot
     to travel to various locations on a printed map.
+  tutorial_ai-oceans_longdescription: Computer science is about so much more than
+    coding! Learn about AI, machine learning, training data, and bias, while exploring
+    ethical issues and how AI can be used to address world problems.
   tutorial_scratchimagine_language: English, Spanish
   tutorial_codesterspsa_language: English
   tutorial_googlehero_language: English, Spanish
@@ -8759,6 +8973,7 @@ ta:
     Norwegian, Polish, Portuguese (Brazil), Portuguese (Portugal), Russian, Slovak,
     Spanish (Spain), Spanish (Mexico), Swedish, Turkish, Ukrainian
   tutorial_kuborobo_language: English, Spanish
+  tutorial_ai-oceans_language: English
   tutorial_scratchimagine_string_detail_grades: Grades 2+
   tutorial_codesterspsa_string_detail_grades: Grades 6+
   tutorial_googlehero_string_detail_grades: Grades 2-8
@@ -8857,12 +9072,14 @@ ta:
   tutorial_modtraits_string_detail_grades: Grades 2+
   tutorial_mee_string_detail_grades: Grades 2+
   tutorial_kuborobo_string_detail_grades: Pre-reader - Grades 8
+  tutorial_ai-oceans_string_detail_grades: Grades 3+
   tutorial_scratchimagine_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_codesterspsa_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_googlehero_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_codestersbball_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_scratchcartoon_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_codemonkeyjr_string_platforms: Android tablet, iPad, Android phone, iPhone
+  tutorial_codemonkeyjr_string_platforms: All modern browsers, Android tablet, iPad,
+    Android phone, iPhone
   tutorial_bananatales_string_platforms: All modern browsers
   tutorial_scratchtales_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_msemoji_string_platforms: Chrome, Safari
@@ -8887,7 +9104,7 @@ ta:
   tutorial_hyperpadpong_string_platforms: iPad
   tutorial_tynkerland_string_platforms: All modern browsers, iPad
   tutorial_trinketgirl_string_platforms: All modern browsers, Android tablet, iPad,
-    Windows phone, Android phone, iPhone
+    Windows phone, Android phone, iPhone, Screen reader
   tutorial_rpimosquito_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_tynkermars_string_platforms: All modern browsers, iPad
   tutorial_cityx_string_platforms: Android tablet, iPad, Android phone, iPhone
@@ -8902,7 +9119,7 @@ ta:
   tutorial_dragonscript_string_platforms: Chrome
   tutorial_uwcloud_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_htmlmuffin_string_platforms: All modern browsers
-  tutorial_microsoftpizza_string_platforms: All modern browsers
+  tutorial_microsoftpizza_string_platforms: All modern browsers, Screen reader
   tutorial_stemc_blckhole_string_platforms: All modern browsers, iPad
   tutorial_careconfigure_string_platforms: All modern browsers
   tutorial_rpiscratch_string_platforms: All modern browsers, Android tablet, iPad
@@ -8913,7 +9130,7 @@ ta:
   tutorial_ttfrog_string_platforms: Chrome, Firefox
   tutorial_codemojijava_string_platforms: All modern browsers
   tutorial_ccfirewall_string_platforms: All modern browsers, iPad
-  tutorial_htmljs_string_platforms: All modern browsers
+  tutorial_htmljs_string_platforms: All modern browsers, Screen reader
   tutorial_ttaqueducts_string_platforms: Chrome, Firefox
   tutorial_vtgame_string_platforms: All modern browsers, iPad
   tutorial_baroborav_string_platforms: All modern browsers
@@ -8964,6 +9181,8 @@ ta:
   tutorial_modtraits_string_platforms: All modern browsers
   tutorial_mee_string_platforms: iPad, Computers (Windows PC, Mac)
   tutorial_kuborobo_string_platforms: Unplugged
+  tutorial_ai-oceans_string_platforms: All modern browsers, modern Android tablets,
+    iPads, modern Android phones, iPhones
   tutorial_scratchimagine_string_detail_platforms: ''
   tutorial_codesterspsa_string_detail_platforms: ''
   tutorial_googlehero_string_detail_platforms: ''
@@ -9065,6 +9284,7 @@ ta:
   tutorial_modtraits_string_detail_platforms: GoPiGo
   tutorial_mee_string_detail_platforms: ''
   tutorial_kuborobo_string_detail_platforms: KUBO robot
+  tutorial_ai-oceans_string_detail_platforms: ''
   tutorial_scratchimagine_string_detail_programming_languages: Blocks
   tutorial_codesterspsa_string_detail_programming_languages: Python
   tutorial_googlehero_string_detail_programming_languages: Blocks
@@ -9176,6 +9396,7 @@ ta:
   tutorial_mee_string_detail_programming_languages: Blocks
   tutorial_kuborobo_string_detail_programming_languages: Tagtiles that students piece
     together
+  tutorial_ai-oceans_string_detail_programming_languages: AI and Machine Learning
   school_not_found_heading: உங்கள் பள்ளியை எங்களால் காண இயலவில்லை. தயவுசெய்து மேலும்
     தகவல்களை உள்ளிடவும்.
   school_name: பள்ளி பெயர்
@@ -9237,3 +9458,4 @@ ta:
   some: ஓரளவு
   all: அனைத்தும்
   dont_know: தெரியவில்லை
+  language_label: Language

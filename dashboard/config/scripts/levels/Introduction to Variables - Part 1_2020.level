@@ -1,0 +1,23 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2020-02-18T17:57:15.000Z",
+  "level_num": "custom",
+  "user_id": 566,
+  "properties": {
+    "video_key": "csd_gamelab_variables_1",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 18464,
+    "name_suffix": "_2020",
+    "display_name": "Introduction to Variables",
+    "long_instructions": "## Questions to Consider\r\n\r\n* What are variables used to do?\r\n* How do you create a variable and assign it a value?\r\n* What can go into a variable?\r\n",
+    "teacher_markdown": "# Discussion Goals\r\n\r\nStudents should understand that variables hold information and can be accessed using their labels.  With simple drawings, students may not see the power of variables, so you may want them to think of some different apps that they use and what information needs to be stored for the app to work, or think about a more complex program that they want to use variables for.\r\n\r\nNumbers, text, and colors can all go into variables, as well as more complicated data structures that students will see later in the course.",
+    "encrypted": "false"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-07-12 22:35:44 +0000\",\"changed\":[\"video_key\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2019-01-10 20:51:34 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-03-15 05:47:22 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-09-14 19:06:11 +0000\",\"changed\":[\"teacher_markdown\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]"
+}]]></config>
+</StandaloneVideo>

@@ -17,9 +17,6 @@
 class Pd::WorkshopSurvey < ActiveRecord::Base
   include Pd::FacilitatorSpecificForm
 
-  belongs_to :pd_enrollment, class_name: "Pd::Enrollment"
-  validates_presence_of :pd_enrollment
-
   STRONGLY_DISAGREE_TO_STRONGLY_AGREE = [
     'Strongly Disagree',
     'Disagree',
@@ -32,6 +29,10 @@ class Pd::WorkshopSurvey < ActiveRecord::Base
   OTHER = 'Other'.freeze
   YES = 'Yes'.freeze
   NO = 'No'.freeze
+
+  belongs_to :pd_enrollment, class_name: "Pd::Enrollment"
+
+  validates_presence_of :pd_enrollment
 
   def self.required_fields
     [
@@ -110,7 +111,8 @@ class Pd::WorkshopSurvey < ActiveRecord::Base
     pd_enrollment && (pd_enrollment.user.nil? || Pd::WorkshopSurvey.find_by_user(pd_enrollment.user).empty?)
   end
 
-  # Only show implementation questions if this is the CSD Units 2 and 3 workshop survey
+  # Only show implementation questions if this is the survey
+  # for the first CSD Academic Year Workshop of the year.
   def show_implementation_questions?
     pd_enrollment.workshop.subject == Pd::Workshop::SUBJECT_CSD_WORKSHOP_1
   end

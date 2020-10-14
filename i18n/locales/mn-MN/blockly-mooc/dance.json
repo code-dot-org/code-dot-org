@@ -1,0 +1,22 @@
+{
+  "danceFeedbackNeedNewDancer": "Та бүжигчин бүтээх хэрэгтэй.",
+  "danceFeedbackNoDancers": "Танд бүжигчин байхгүй байна.",
+  "danceFeedbackNoBackground": "Та суурийн эффект нэмэх шаардлагатай.",
+  "danceFeedbackTooManyDancers": "Болгоомжтой байгаарай! Та '2 хэмжээс тутамд' шинэ 'доторх блок' байрлуулбал маш олон бүжигчин бий болно.",
+  "danceFeedbackUseSetSize": "Тус бүжигчнийг жижиг болгохын тулд `нөөц тохируулах_бүжигчин2 хэмжээ` блок ашиглаарай.",
+  "danceFeedbackUseSetTint": "Бүжигчний өнгийг өөрчлөхийн тулд `өнгө тохируулах` блок ашиглаарай.",
+  "danceFeedbackUseStartMapping": "<xml><block type=\"Dancelab_startMapping\"><title name=\"SPRITE\">баруун_нэг эвэрт<title name=\"PROPERTY\">\"масштаб\"</title><title name=\"RANGE\">\"басс\"</title></block></xml> блокийг программдаа нэмэх гэж оролдоорой.",
+  "danceFeedbackStartNewMove": "Таны бүжигчин дөрөвдүгээр хэмжилтийн дараа шинэ алхам хийгээгүй байна.",
+  "danceFeedbackNeedDifferentDance": "Та өөр бүжиг ашиглах хэрэгтэй.",
+  "danceFeedbackNeedEveryTwoMeasures": "Та `2 хэмжилт' блокийг ашиглаж байгаа эсэхээ шалгаарай",
+  "danceFeedbackNeedMakeANewDancer": "Хоёр дахь бүжигчин үүсгэхийн тулд `шинийг бүтээх' блокийг ашиглаарай.",
+  "danceFeedbackKeyEvent": "<xml></block><block type=\"Dancelab_whenKey\"><title name=\"KEY\">\"дээш\"</title></block></xml> блок руу код хавсаргасан эсэхээ шалгаж, таны бүжиг явагдаж байхад товчлуур дээр дараарай.",
+  "danceFeedbackDidntPress": "Таны бүжиг явагдааж байхад сум товчлуур дээр дарахаа мартуузай.",
+  "danceFeedbackPressedKey": "Та товчлуур дээр дарсан боловч бүжигчин тань хариу өгсөнгүй.",
+  "danceFeedbackNeedTwoDancers": "Та хоёр бүжигчин бүтээх хэрэгтэй.",
+  "danceFeedbackOnlyOneDancerMoved": "Таны бүжигчдийн зөвхөн нэг нь хөдөллөө.",
+  "danceFeedbackNeedLead": "Түүнчлэн та <xml><block type=\"Dancelab_makeAnonymousDanceSprite\"><title name=\"COSTUME\">???</title><title name=\"LOCATION\">'{'x: 200, y: 200'}'</title></block></xml> блок бүхий нэг гоцлол бүжигчин бүтээх хэрэгтэй.",
+  "danceFeedbackNeedBackup": "<xml><block type=\"Dancelab_makeNewDanceSpriteGroup\"><title name=\"N\">10</title><title name=\"COSTUME\">\"НЭГ ЭВЭРТ\"</title><title name=\"LAYOUT\">\"тойрог\"</title></block></xml> блок бүхий нөөц бүжигчдийн бүлгийг үүсгэх шаардлагатай.",
+  "danceFeedbackSetSize": "Хөгжим эхэлмэгц дор хаяж нэг бүжигчний хэмжээг өөрчлөх хэрэгтэй.",
+  "measure": "Арга хэмжээ:"
+}

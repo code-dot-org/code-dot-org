@@ -1,0 +1,48 @@
+name 'cspu5_assess4_playGame_2018_2019_virtual'
+wrong 'DISPLAY (count)'
+wrong 'DISPLAY (“game over”)'
+right 'RETURN (count)'
+wrong 'RETURN (“game over”)'
+wrong 'Nothing. Procedure works as is.'
+
+
+markdown <<MARKDOWN
+Consider the _playGame_ procedure below which calls on 3 other procedures: _countFives_, _player1Move_, and _player2Move_.
+
+    PROCEDURE playGame()
+    {
+        cards = []
+        REPEAT_UNTIL ( countFives(cards) >= 5 )
+        {
+            card1 = player1Move()
+            APPEND (cards, card1)
+            card2 = player2Move()
+            APPEND (cards, card2)
+        }
+    }
+
+The procedure above simulates a certain card game called “fives” - played with two decks of cards - in which each player takes a turn playing a card, until 5 fives have been played in total, at which point it’s “Game Over.” The procedure uses a list called _cards_ which is initially empty. Each round of play, two cards are appended to the list.
+
+Here is  the _countFives_ procedure.
+
+    PROCEDURE countFives(cards)
+    {
+        count = 0
+        FOR EACH card IN cards
+        {
+            IF( card = 5 )
+            {
+                count = count+1
+            }
+        }
+        <MISSING CODE>
+    }
+
+Which of the following should replace the &lt;MISSING CODE&gt; at line 12 to make the procedure work as designed?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+The purpose of the procedure _countFives_ is to see how many fives are in the deck. A variable in _countFives_ that keeps track of this information is the variable _count_. To send this information to the playGame() function, it has to be returned. Therefore, the missing code is:
+
+	RETURN(count)
+MARKDOWN

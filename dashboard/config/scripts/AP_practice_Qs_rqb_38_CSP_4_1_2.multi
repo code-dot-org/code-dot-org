@@ -1,11 +1,8 @@
 name 'AP_practice_Qs_rqb_38_CSP_4_1_2'
-wrong '8
-'
+wrong '8'
 wrong '0'
-right '18
-'
-wrong '9
-'
+right '18'
+wrong '9'
 markdown <<MARKDOWN
 Consider the following program . Predict the output produced by this program.
 

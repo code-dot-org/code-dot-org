@@ -1,0 +1,50 @@
+{
+  "pages": {
+    "/projects": "home-learning-2020"
+  },
+  "banners": {
+    "teacher-apps-open-2020": {
+      "image": "/images/professional-learning-2019-3.png",
+      "title": "Sign up for Professional Learning",
+      "body": "98% of teachers recommend our engaging programs from elementary school to AP computer science for high school. Join our hands-on workshops with other teachers from your area. Spaces are limited, so apply today!",
+      "buttonText": "Join us",
+      "buttonUrl": "https://code.org/educate/professional-learning/middle-high",
+      "buttonId": "teacher-apps-open-2020-sign-up"
+    },
+    "teacher-apps-closing-2020": {
+      "image": "/images/professional-learning-2019-closing-soon.png",
+      "title": "Don’t miss out. Apply today!",
+      "body": "98% of teachers recommend it and 90% of parents want their child to study computer science. Whether you are new to teaching CS, or have years of experience, join us in this movement and submit your application today.",
+      "buttonText": "Join us",
+      "buttonUrl": "https://code.org/educate/professional-learning/middle-high",
+      "buttonId": "teacher-apps-closing-2020-sign-up"
+    },
+    "teacher-apps-nominate-2020": {
+      "image": "/images/fill-970x562/professional-learning-2019-trophy.png",
+      "title": "Know an Awesome Teacher?",
+      "body": "Let them know how amazing they are by nominating them for a Professional Learning Scholarship today!",
+      "buttonText": "Nominate a Teacher",
+      "buttonUrl": "https://code.org/nominate",
+      "buttonId": "teacher-apps-nominate-2020-button",
+      "backgroundColor": "#59b9dc"
+    },
+    "teacher-apps-stillon-2020": {
+      "image": "/images/fill-970x562/professional-learning-2019-3.png",
+      "title": "Professional Learning is still on!",
+      "body": "Workshops are now virtual in most states! 98% of teachers recommend our engaging professional learning programs to teach computer science. Join our hands-on workshops with other teachers from your area. Spaces are limited, so apply today!",
+      "buttonText": "Join us",
+      "buttonUrl": "https://code.org/educate/professional-learning/middle-high",
+      "buttonId": "teacher-apps-stillon-2020-button",
+      "backgroundColor": "#59b9dc"
+    },
+    "home-learning-2020": {
+      "image": "/images/athome/fill-970x562/app-lab.png",
+      "title": "Project Ideas for Home Learning",
+      "body": "Parents and teachers — take a look at our Project Ideas page for starter projects in Game Lab, App Lab, and Web Lab. These include project descriptions, tips, and demo projects students can remix to make their own! ",
+      "buttonText": "View Project Ideas",
+      "buttonUrl": "https://code.org/athome/project-ideas",
+      "buttonId": "view-project-ideas-2020-button",
+      "backgroundColor": "#59b9dc"
+    }
+  }
+}

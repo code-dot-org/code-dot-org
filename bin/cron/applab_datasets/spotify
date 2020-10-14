@@ -1,0 +1,103 @@
+#!/usr/bin/env ruby
+require_relative '../only_one'
+abort 'Script already running' unless only_one_running?(__FILE__)
+
+# This script fetches spotify data from api.spotify and uploads to the shared firebase channel.
+require_relative '../../../deployment'
+require 'net/http'
+require 'csv'
+require 'ostruct'
+require_relative '../../../shared/middleware/helpers/firebase_helper'
+require 'cdo/profanity_filter'
+
+TOP_200_US_URL = 'https://spotifycharts.com/regional/us/daily/latest/download'
+TOP_200_WORLD_URL = 'https://spotifycharts.com/regional/global/daily/latest/download'
+VIRAL_50_US_URL = 'https://spotifycharts.com/viral/us/daily/latest/download'
+VIRAL_50_WORLD_URL = 'https://spotifycharts.com/viral/global/daily/latest/download'
+PROFANITY_LOCALE = 'en-US'
+
+def get_top200_data(url)
+  records = {}
+  columns = ['id', 'Track Name', 'Artist', 'Position', 'Streams', 'URL']
+  response = Net::HTTP.get_response(URI(url))
+  return unless response.code == '200'
+  id = 1
+  response.body.force_encoding('utf-8')
+  csv = CSV.new(response.body)
+  lines = csv.read
+  lines.shift # first line just contains a note
+  lines.shift # second line is column names
+  regex = generate_profanity_regex(lines)
+  lines.each do |line|
+    next if regex&.match?(get_string_to_check(line)) # skip record if it contains profanity
+
+    record = OpenStruct.new
+    record.id = id
+    record.Position = line[0].to_i
+    record['Track Name'] = line[1]
+    record.Artist = line[2]
+    record.Streams = line[3].to_i
+    record.URL = line[4]
+
+    records[id] = record.to_h.to_json
+    id += 1
+  end
+  return records, columns
+end
+
+def get_viral50_data(url)
+  records = {}
+  columns = ['id', 'Track Name', 'Artist', 'Position', 'URL']
+  response = Net::HTTP.get_response(URI(url))
+  return unless response.code == '200'
+  id = 1
+  response.body.force_encoding('utf-8')
+  csv = CSV.new(response.body)
+  lines = csv.read
+  lines.shift # first line is column names
+  regex = generate_profanity_regex(lines)
+  lines.each do |line|
+    next if regex&.match?(get_string_to_check(line)) # skip record if it contains profanity
+
+    record = OpenStruct.new
+    record.id = id
+    record.Position = line[0].to_i
+    record['Track Name'] = line[1]
+    record.Artist = line[2]
+    record.URL = line[3]
+
+    records[id] = record.to_h.to_json
+    id += 1
+  end
+  return records, columns
+end
+
+# Only check artist and song names for profanity
+def get_string_to_check(line)
+  "#{line[2]} - #{line[1]} "
+end
+
+# Generates a case-insensitive regex of profanities in the entire dataset
+# to match each line against.
+def generate_profanity_regex(lines)
+  str = lines.reduce('') {|acc, line| acc + get_string_to_check(line)}
+  profanities = ProfanityFilter.find_potential_profanities(str, PROFANITY_LOCALE) || []
+  profanities.empty? ? nil : /(#{profanities.join("|")})/i
+end
+
+def main
+  fb = FirebaseHelper.new('shared')
+  records, columns = get_top200_data(TOP_200_US_URL)
+  fb.upload_live_table('Top 200 USA', records, columns)
+
+  records, columns = get_top200_data(TOP_200_WORLD_URL)
+  fb.upload_live_table('Top 200 Worldwide', records, columns)
+
+  records, columns = get_viral50_data(VIRAL_50_US_URL)
+  fb.upload_live_table('Viral 50 USA', records, columns)
+
+  records, columns = get_viral50_data(VIRAL_50_WORLD_URL)
+  fb.upload_live_table('Viral 50 Worldwide', records, columns)
+end
+
+main

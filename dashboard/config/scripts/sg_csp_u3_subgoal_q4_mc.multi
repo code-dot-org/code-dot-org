@@ -1,9 +1,14 @@
 name 'SG csp_U3_subgoal_q4_mc'
-wrong 'Calling the parameters of a function<br><img src="https://images.code.org/0f141813c72d90d60db0cccede38c5c6-image-1506463453209.png">'
-right 'Defining the parameters of a function<br><img src="https://images.code.org/ed7e88443a6c04022684aacf0c2a0692-image-1506699220170.png">'
-wrong 'Moving the turtle around the screen<br><img src="https://images.code.org/cc173669b9c299ead986cfd3519e9360-image-1506463402006.png">'
-wrong 'Orienting the direction of the turtle <br><img src="https://images.code.org/1d9d2d6a43abcb2150686ae2ccddf3a6-image-1506463416525.png">'
-wrong 'Setting pen properties <br><img src="https://images.code.org/47185975f515e79e8712bd19235d8442-image-1506463438591.png">' 
+wrong 'Calling the parameters of a function  
+ ![](https://images.code.org/0f141813c72d90d60db0cccede38c5c6-image-1506463453209.png)'
+right 'Defining the parameters of a function  
+ ![](https://images.code.org/ed7e88443a6c04022684aacf0c2a0692-image-1506699220170.png)'
+wrong 'Moving the turtle around the screen  
+ ![](https://images.code.org/cc173669b9c299ead986cfd3519e9360-image-1506463402006.png)'
+wrong 'Orienting the direction of the turtle   
+ ![](https://images.code.org/1d9d2d6a43abcb2150686ae2ccddf3a6-image-1506463416525.png)'
+wrong 'Setting pen properties   
+ ![](https://images.code.org/47185975f515e79e8712bd19235d8442-image-1506463438591.png)' 
 wrong 'None of the above'
 
 

@@ -3,9 +3,14 @@ class ExternalDSL < ContentDSL
     @hash = {href: '', options: {skip_dialog: true}}
   end
 
-  def i18n_strings
-    strings = super
-    strings['markdown'] = @hash[:markdown] unless @hash[:markdown].blank?
-    strings
+  def associated_blocks(text)
+    @hash[:associated_blocks] = text
+  end
+
+  # @override
+  def self.i18n_fields
+    # external levels do not actually render their 'title' property, for
+    # whatever reason, so we actually want to _exclude_ that field from super
+    super - %w(title)
   end
 end

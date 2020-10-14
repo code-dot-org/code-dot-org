@@ -3,7 +3,6 @@ import React from 'react';
 import PropertyRow from './PropertyRow';
 import ColorPickerPropertyRow from './ColorPickerPropertyRow';
 import ImagePickerPropertyRow from './ImagePickerPropertyRow';
-import ThemePropertyRow from './ThemePropertyRow';
 import EventHeaderRow from './EventHeaderRow';
 import EventRow from './EventRow';
 import DefaultScreenButtonPropertyRow from './DefaultScreenButtonPropertyRow';
@@ -53,10 +52,6 @@ class ScreenProperties extends React.Component {
           handleChange={this.props.handleChange.bind(this, 'id')}
           isIdRow={true}
         />
-        <ThemePropertyRow
-          initialValue={element.getAttribute('data-theme')}
-          handleChange={this.props.handleChange.bind(this, 'theme')}
-        />
         <ColorPickerPropertyRow
           desc={'background color'}
           initialValue={elementUtils.rgb2hex(element.style.backgroundColor)}
@@ -65,6 +60,7 @@ class ScreenProperties extends React.Component {
         <ImagePickerPropertyRow
           desc={'image'}
           initialValue={element.getAttribute('data-canonical-image-url') || ''}
+          currentImageType={element.getAttribute('data-image-type') || ''}
           handleChange={this.props.handleChange.bind(this, 'screen-image')}
           elementId={elementUtils.getId(element)}
         />

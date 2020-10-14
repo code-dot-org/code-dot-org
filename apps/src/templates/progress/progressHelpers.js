@@ -78,6 +78,11 @@ export function getIconForLevel(level, inProgressView = false) {
   if (inProgressView && isLevelAssessment(level)) {
     return 'check-circle';
   }
+
+  if (level.isUnplugged) {
+    return 'scissors';
+  }
+
   if (level.icon) {
     // Eventually I'd like to have dashboard return an icon type. For now, I'm just
     // going to treat the css class it sends as a type, and map it to an icon name.
@@ -86,10 +91,6 @@ export function getIconForLevel(level, inProgressView = false) {
       throw new Error('Unknown iconType: ' + level.icon);
     }
     return match[1];
-  }
-
-  if (level.isUnplugged) {
-    return 'scissors';
   }
 
   if (level.bonus) {
@@ -172,11 +173,13 @@ export const processedLevel = level => {
     url: level.url,
     name: level.name,
     progression: level.progression,
+    progressionDisplayName: level.progression_display_name,
     kind: level.kind,
     icon: level.icon,
     isUnplugged: level.display_as_unplugged,
     levelNumber: level.kind === LevelKind.unplugged ? undefined : level.title,
     isConceptLevel: level.is_concept_level,
-    bonus: level.bonus
+    bonus: level.bonus,
+    sublevels: level.sublevels
   };
 };

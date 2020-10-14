@@ -1,5 +1,8 @@
 name 'CSD U6 test events multi'
-question 'What does a programmer need to know when creating an event listener?<br>&nbsp;&nbsp;&nbsp;I. The event that will trigger the change<br>&nbsp;&nbsp;&nbsp;II. When in the program the event will be triggered<br>&nbsp;&nbsp;&nbsp;II. What the program should do when the event is triggered'
+question 'What does a programmer need to know when creating an event listener?  
+&nbsp;&nbsp;&nbsp;I. The event that will trigger the change  
+&nbsp;&nbsp;&nbsp;II. When in the program the event will be triggered  
+&nbsp;&nbsp;&nbsp;II. What the program should do when the event is triggered'
 wrong 'I only'
 wrong 'II only'
 wrong 'I and II'

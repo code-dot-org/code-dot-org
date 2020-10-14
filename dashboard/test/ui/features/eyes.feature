@@ -74,5 +74,5 @@ Scenario:
   And I close the instructions overlay if it exists
   And I see no difference for "star wars RTL"
   And I press "show-code-header"
-  And I see no difference for "star wars RTL text mode"
+  And I see no difference for "star wars RTL text mode" using stitch mode "none"
   And I close my eyes

@@ -1,4 +1,4 @@
 %h1= t('crud.new_model', model: Script.model_name.human)
-%script{src: webpack_asset_path('js/scripts/new.js'), data: {csrftoken: form_authenticity_token}}
+%script{src: webpack_asset_path('js/scripts/new.js')}
 #form
 = link_to t('crud.back'), scripts_path

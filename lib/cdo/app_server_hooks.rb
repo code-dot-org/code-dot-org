@@ -13,6 +13,9 @@ module Cdo
       #   sudo service dashboard upgrade && sudo service pegasus upgrade
       require 'dynamic_config/gatekeeper'
       require 'dynamic_config/dcdo'
+      Gatekeeper.after_fork
+      DCDO.after_fork
+
       if Gatekeeper.allows('enableWebServiceProcessRollingRestart')
         require 'puma_worker_killer'
 
@@ -23,18 +26,7 @@ module Cdo
 
     def self.after_fork(host:)
       require 'cdo/aws/metrics'
-      Cdo::Metrics.push(
-        'App Server',
-        [
-          {
-            metric_name: :WorkerBoot,
-            dimensions: [
-              {name: "Host", value: host}
-            ],
-            value: 1
-          }
-        ]
-      )
+      Cdo::Metrics.put('App Server/WorkerBoot', 1, Host: host)
       require 'dynamic_config/gatekeeper'
       require 'dynamic_config/dcdo'
       Gatekeeper.after_fork

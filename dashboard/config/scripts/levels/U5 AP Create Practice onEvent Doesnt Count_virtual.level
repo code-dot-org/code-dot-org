@@ -1,0 +1,27 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2020-03-17T21:25:08.000Z",
+  "level_num": "custom",
+  "user_id": 13,
+  "properties": {
+    "long_instructions": "# AP Practice - Create PT - Choosing an Abstraction\r\n\r\nOne component of the **AP Create Performance Task** is creating and describing an abstraction in your program. Here's the actual prompt.\r\n\r\n<div style=\"width: 80%; margin: auto; background-color: #EEEEEE; padding: 10px; font-family: serif; font-size: 12pt\">\r\n\r\n<b>2. Written Responses</b>\r\n<ul>\r\n2d. Capture and paste a program code segment that contains an abstraction you developed individually on your own (marked with a <b>rectangle</b> in <b>section 3</b> below). This abstraction must integrate mathematical and logical concepts.\r\nExplain how your abstraction helped manage the complexity of your program.\r\n<i>(Must not exceed 200 words)</i>\r\n</ul>\r\n</div>\r\n<br>\r\n\r\nHere's one row of the scoring guide for this question\r\n\r\n<div style=\"magin:auto\">\r\n\t<img src=\"https://images.code.org/7d5773ed70d947bf75e0c1b3f7e60911-image-1515454332418.32.05 PM.png\">\r\n</div>\r\n\r\n<br>\r\n\r\n# Grade the Response\r\n\r\nBelow is a segment of code from a \"clicker\" program with a rectangle drawn around a portion of the code identifying an abstraction.\r\n\r\n![](https://images.code.org/7ceaa61af4feb06707f593e4b4ec1947-image-1515454046037.26.18 PM.png)\r\n\r\nEach row is worth one point that either can or cannot be awarded. **Explain why you would or would NOT award the point for Row 7 based on the criteria given above.**",
+    "instructions_important": "false",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "height": "100",
+    "placeholder": "Write your response here.",
+    "encrypted_solution": "qlYCVGKcSJBMql8YOpLbCVXWJTBV5rafmj/xK7Mb/nYX9lzvdrQgZfwjWGT/\neK9qZ51dTzyFkuzHoAXBhXBGy5c1jQULXQ3Jh18Lr9S/VeskvjnLBvE7+Jch\nBQZ6sP+d69zVQzZCswndnibbea+QiUYZaG1KQbRsbNQlLmRMzl46F/dYg4RW\nk3wVe4tb6MSdT+4XHF61cOalBLkyY7Yshe66LkB9bXE9wfSAQE3JzNuyd7pA\nnR19P6LGAS2wCXxkHj0aLihu3VE6JJaT+1HdOjH67NDjvXc18odW6WUgobGs\nKfUy6p0AB8AdeGwgdrTtW2OZaZ+g2lJvYdA97DLOXg6OCtelaaila2wifkYY\nwhyGu2NFlVzbVUMsAiqQoGeK1Qe/QmqZ0rbJjWljPz2sfJD+718cMcHveYPt\nh2bCcnQW5QgzddNfbdU5vmS0M1r3oOoMRP7YugmWS5r5xSNYS1lQp2/+qH9e\nk32fgaa0atNrdwNYaJ1YevWSFvsPvwaNwpXL2NW5JcwZeeSvmZkFRybHsiai\nGWMo2HbmeZ/lVwa7luJDtyvMc/xIDhkaANFUzOypCKYh3I8qEwRlSu/kH+R+\n9YU8En3pLQhhYpBMflfEBDdCtS+m6EjdIhAQi/6AGmqvZDlzCmX9+BF4m4d0\npbAwYn5I4jyCMK2ojnCb1rqruzyfVEWy3j9DuhoBPTzToStiW714na838evd\nZRHo9ifh56iTqny0/hqXRnJp9l829DCu9SAoPomHMJ71F3nC5qebGsvvwbte\nkMOziWBq14gJ2Oz0vWmLGvy345WT21+C8dqmT5YCJVDy8rTsn0xXs3pYVQV2\n+AmzeoxEIi5eltKANYYbNKFPYFujs2odNU8=\n",
+    "display_name": "(new) AP Practice Response - Choosing an Abstraction",
+    "parent_level_id": 17172,
+    "name_suffix": "_virtual",
+    "optional": "false"
+  },
+  "published": true,
+  "notes": "\r\n",
+  "audit_log": "[{\"changed_at\":\"2017-10-13 17:08:21 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2017-10-13 19:51:55 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2017-10-24 21:27:34 +0000\",\"changed\":[],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2017-10-25 14:53:29 +0000\",\"changed\":[\"encrypted_solution\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2018-01-08 23:49:44 +0000\",\"changed\":[\"name\",\"markdown_instructions\",\"placeholder\",\"encrypted_solution\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2018-01-08 23:50:07 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2018-01-08 23:53:05 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2018-01-18 21:02:59 +0000\",\"changed\":[],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-01-22 16:11:17 +0000\",\"changed\":[\"encrypted_solution\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]"
+}]]></config>
+</FreeResponse>

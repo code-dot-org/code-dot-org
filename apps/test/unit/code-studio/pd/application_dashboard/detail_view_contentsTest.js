@@ -1,6 +1,6 @@
 import {DetailViewContents} from '@cdo/apps/code-studio/pd/application_dashboard/detail_view_contents';
 import {
-  ApplicationStatuses,
+  getApplicationStatuses,
   ApplicationFinalStatuses,
   ScholarshipStatusRequiredStatuses
 } from '@cdo/apps/code-studio/pd/application_dashboard/constants';
@@ -71,7 +71,8 @@ describe('DetailViewContents', () => {
       canLock: true,
       applicationId: '1',
       applicationData: defaultApplicationData,
-      viewType: 'facilitator'
+      viewType: 'facilitator',
+      isWorkshopAdmin: false
     };
 
     // No-op router context
@@ -125,20 +126,20 @@ describe('DetailViewContents', () => {
 
       // lock button is disabled for all statuses except "finalized"
       // statuses in the constant are an object {value: label}
-      Object.keys(ApplicationStatuses[applicationType.toLowerCase()]).forEach(
-        status => {
-          const statusIsFinal = ApplicationFinalStatuses.includes(status);
+      Object.keys(
+        getApplicationStatuses(applicationType.toLowerCase())
+      ).forEach(status => {
+        const statusIsFinal = ApplicationFinalStatuses.includes(status);
+        detailView
+          .find('#DetailViewHeader select')
+          .simulate('change', {target: {value: status}});
+        expect(
           detailView
-            .find('#DetailViewHeader select')
-            .simulate('change', {target: {value: status}});
-          expect(
-            detailView
-              .find('#DetailViewHeader Button')
-              .first()
-              .prop('disabled')
-          ).to.equal(!statusIsFinal);
-        }
-      );
+            .find('#DetailViewHeader Button')
+            .first()
+            .prop('disabled')
+        ).to.equal(!statusIsFinal);
+      });
     });
 
     it(`disables status dropdown when locked`, () => {
@@ -337,7 +338,10 @@ describe('DetailViewContents', () => {
 
   describe('Scholarship Teacher? row', () => {
     it('on teacher applications', () => {
-      const detailView = mountDetailView('Teacher');
+      const detailView = mountDetailView('Teacher', {
+        isWorkshopAdmin: true,
+        regionalPartners: [{id: 1, name: 'test'}]
+      });
       const getLastRow = () =>
         detailView
           .find('tr')
@@ -353,6 +357,7 @@ describe('DetailViewContents', () => {
       // Click "Edit"
       detailView
         .find('#DetailViewHeader Button')
+        .not('#admin-edit')
         .last()
         .simulate('click');
 
@@ -381,22 +386,20 @@ describe('DetailViewContents', () => {
   describe('Teacher application scholarship status', () => {
     let detailView;
 
-    beforeEach(() => {
-      detailView = mountDetailView('Teacher', {
-        applicationData: {
-          ...DEFAULT_APPLICATION_DATA,
-          status: 'unreviewed',
-          scholarship_status: null
-        }
-      });
-    });
-
     afterEach(() => {
       detailView.unmount();
     });
 
     for (const applicationStatus of ScholarshipStatusRequiredStatuses) {
       it(`is required in order to set application status to ${applicationStatus}`, () => {
+        detailView = mountDetailView('Teacher', {
+          applicationData: {
+            ...DEFAULT_APPLICATION_DATA,
+            status: 'unreviewed',
+            scholarship_status: null,
+            update_emails_sent_by_system: false
+          }
+        });
         expect(isModalShowing()).to.be.false;
         expect(getScholarshipStatus()).to.be.null;
         expect(getApplicationStatus()).to.equal('unreviewed');
@@ -427,6 +430,14 @@ describe('DetailViewContents', () => {
       'withdrawn'
     ]) {
       it(`is not required to set application status to ${applicationStatus}`, () => {
+        detailView = mountDetailView('Teacher', {
+          applicationData: {
+            ...DEFAULT_APPLICATION_DATA,
+            status: 'unreviewed',
+            scholarship_status: null,
+            update_emails_sent_by_system: false
+          }
+        });
         expect(isModalShowing()).to.be.false;
         expect(getScholarshipStatus()).to.be.null;
 
@@ -435,6 +446,48 @@ describe('DetailViewContents', () => {
         expect(getApplicationStatus()).to.equal(applicationStatus);
       });
     }
+
+    it('appends auto email text if set to true', () => {
+      detailView = mountDetailView('Teacher', {
+        applicationData: {
+          ...DEFAULT_APPLICATION_DATA,
+          status: 'unreviewed',
+          scholarship_status: null,
+          update_emails_sent_by_system: true
+        },
+        viewType: 'teacher'
+      });
+      let options = detailView.find('#DetailViewHeader select').find('option');
+      let applicationStatuses = Object.values(
+        getApplicationStatuses('teacher', true)
+      );
+      var i = 0;
+      options.forEach(option => {
+        expect(option.text()).to.equal(applicationStatuses[i]);
+        i++;
+      });
+    });
+
+    it('does not appends auto email text if set to false', () => {
+      detailView = mountDetailView('Teacher', {
+        applicationData: {
+          ...DEFAULT_APPLICATION_DATA,
+          status: 'unreviewed',
+          scholarship_status: null,
+          update_emails_sent_by_system: false
+        },
+        viewType: 'teacher'
+      });
+      let options = detailView.find('#DetailViewHeader select').find('option');
+      let applicationStatuses = Object.values(
+        getApplicationStatuses('teacher', false)
+      );
+      var i = 0;
+      options.forEach(option => {
+        expect(option.text()).to.equal(applicationStatuses[i]);
+        i++;
+      });
+    });
 
     function clickEditButton() {
       detailView

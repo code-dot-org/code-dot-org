@@ -1,6 +1,6 @@
 login_required true
 
-stage 'What is a Computer?'
+lesson 'What is a Computer?', display_name: 'What is a Computer?'
 level 'csd digital unplugged WIAC'
 level 'csd digital unplugged WIAC L1'
 level 'csd digital unplugged WIAC L2'
@@ -8,6 +8,7 @@ level 'CSD digital Unplugged WIAC video'
 level 'csd digital unplugged WIAC L3'
 level 'CSD digital unplugged WIAC Qs'
 
-stage 'Problem Solving Process'
+lesson 'Problem Solving Process', display_name: 'Problem Solving Process'
 level 'csd digital unplugged PSP word search'
 level 'csd digital unplugged PSP seating'
+

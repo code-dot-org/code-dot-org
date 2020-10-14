@@ -1,0 +1,73 @@
+#!/usr/bin/env ruby
+require_relative 'only_one'
+abort 'Script already running' unless only_one_running?(__FILE__)
+
+require 'csv'
+require 'httparty'
+require 'optparse'
+require_relative '../../deployment'
+
+def check_video_playability(youtube_code, restrict_mode)
+  response_text = HTTParty.get(
+    "https://www.youtube-nocookie.com/get_video_info?video_id=#{youtube_code}",
+    {
+      headers: {
+        "Content-Type" => "application/json",
+        "YouTube-Restrict" => restrict_mode
+      }
+    }
+  )
+
+  # The response text is a querystring (&key=value&key=value)
+  # The value we care about is associated with the key 'player_response'
+  # It's a CGI-encoded JSON blob containing details about whether the video is loadable/playable
+  response = response_text.split('&').map {|line| line.split('=')}.select {|line| line.count == 2}.to_h
+  (JSON.parse CGI.unescape response['player_response'])['playabilityStatus']
+end
+
+options = {}
+OptionParser.new do |opts|
+  opts.banner = <<~BANNER
+    Usage: #{File.basename(__FILE__)} [options]
+
+    This script checks YouTube videos listed in dashboard/config/videos.csv for content
+    restrictions that may affect schools.
+
+    Options:
+  BANNER
+
+  opts.on('--filter=REGEXP', 'Only check videos with keys matching given regular expression') do |filter|
+    options[:filter] = filter
+  end
+
+  opts.on('-h', '--help', 'Print this') do
+    puts opts
+    exit
+  end
+end.parse!
+
+video_count = 0
+error_count = 0
+CSV.foreach(dashboard_dir('config/videos.csv'), headers: true) do |row|
+  video_key = row['Key']
+  youtube_code = row['YoutubeCode']
+
+  # Skip checking this video if it doesn't match a provided filter
+  if options[:filter]
+    next unless Regexp.new(options[:filter]) =~ video_key
+  end
+
+  # Check both Strict and Moderate restricted mode for each video
+  %w(Strict Moderate).each do |restrict_mode|
+    playability = check_video_playability youtube_code, restrict_mode
+    if playability['status'] != 'OK'
+      error_count += 1
+      puts "#{video_key} (#{restrict_mode}): #{playability['reason']}"
+    end
+  end
+
+  video_count += 1
+  print "Checked #{video_count} videos...\r"
+  $stdout.flush
+end
+puts "Checked #{video_count} videos, #{error_count} problems detected."

@@ -4,11 +4,13 @@ fi:
     unplugged:
       Unplug1:
         title: Johdanto tietojenkäsittelyyn
-        desc: Tällä oppitunnilla käydään läpi johdanto tietojenkäsittelytieteeseen
-          ja selitetään, mitä tietotekniikan ammatilainen tekee. Oppitunti antaa myös
-          oppilaille mahdollisuuden samaistua tietotekniikka-ammattilaisen rooliin.
-          Suosittelemme, että tunnilla käydään läpi myös tietotekniikan sanastoa leikin
-          ja hauskanpidon varjolla.
+        desc: Tämä oppitunti tutustuttaa tietotekniikan käsitteeseen ja selittää mitä
+          tietotekniikan ammattilainen tekee. Oppitunti antaa myös oppilaille mahdollisuuden
+          asettua tietotekniikan ammattilaisen rooliin. Tunnin päätteeksi jokaisella
+          oppilaalla on kotiin vietäväksi muistutus siitä mitä hän on oppinut. Voi
+          tuntua houkuttelevalta jättää opettamatta nuorille lapsille sanastoa, joka
+          liittyy tuleviin oppitunteihin, mutta niiden esittäminen hauskassa ja leikkisässä
+          valossa nyt on rakentavampaa kuin tulevien tilaisuuksien odottaminen.
       Unplug2:
         title: Laskennallinen ajattelu
         desc: Vain paperia ja kyniä apuna käyttäen, oppilaat oppivat neljä askelta
@@ -77,7 +79,7 @@ fi:
         title: Yhteenveto
         desc: Ensimmäisen 20 tunnin sarjan viimeinen kertaus auttaa luokkaa elämään
           uudestaan suosikkihetkensä, antaen heille seuraavia askeleita, joita he
-          itse voivat ottaa jos he haluavat jatkaa ohjelmointimatkallaan.
+          itse voivat ottaa, jos he haluavat jatkaa matkaansa tietotekniikassa.
       UnplugHappyMaps:
         title: Iloiset kartat
         desc: Oppilaat ohjaavat hahmon labyrintin läpi luomalla yksinkertaisia algoritmeja
@@ -88,9 +90,10 @@ fi:
           (sarja ohjeita).
       PlantASeed:
         title: 'Tosielämän algoritmit: kylvä siemen'
-        desc: Tämä oppitunti auttaa huomaamaan tavat joilla käytämme algoritmejä arkipäivässä,
-          käyttäen siemenen istutusta esimerkkinä. Siinä keskitytään myös tietojenkäsittelytieteen
-          kokonaiskuvaan ja kuinka algoritmeillä on oleellinen rooli.
+        desc: Tämä oppitunti auttaa huomaamaan tavat, joilla käytämme algoritmeja
+          arkipäivässä, käyttäen siemenen istutusta esimerkkinä. Siinä keskitytään
+          myös tietotekniikan kokonaiskuvaan ja kuinka algoritmeillä on oleellinen
+          rooli.
       BuildingAFoundation:
         title: Rakennetaan perustus
         desc: Opiskelijat kokoavat rakenteen käyttäen annettuja tarvikkeita. Rakenteiden
@@ -130,7 +133,7 @@ fi:
       PaperPlanes:
         title: 'Tosielämän algoritmit: paperilentokoneet'
         desc: Tällä tunnilla tutkitaan, miten algoritmit esiintyvät arkielämässämme,
-          esimerkkinä paperilennokkien tekeminen. Oppitunti keskittyy myös tietojenkäsittelytieteen
+          esimerkkinä paperilennokkien tekeminen. Oppitunti keskittyy myös tietotekniikan
           kokonaiskuvaan ja kuinka algoritmeillä on siinä oleellinen rooli.
       BinaryBracelets:
         title: Binäärikorut
@@ -166,9 +169,9 @@ fi:
           siirtomenetelmiä käyttäen paperilappusia.
       Crowdsourcing:
         title: Joukkoistaminen
-        desc: Opskelijat käyttävät joukkoistamista, tietojenkäsittelytieteessä yleistä
-          ongelmanratkaisutekniikkaa, ratkaistakseen yhdessä luokkana tehtävän tehokkaammin
-          kuin että yksi opiskelija yrittäisi sitä yksinään.
+        desc: Opskelijat käyttävät joukkoistamista, tietotekniikassa yleistä ongelmanratkaisutekniikkaa,
+          ratkaistakseen yhdessä luokkana tehtävän tehokkaammin kuin että yksi opiskelija
+          yrittäisi sitä yksinään.
       DigitalCitizenship:
         title: Digitaalinen kansalaisuus
         desc: Opiskelijat tutkivat yksityisen ja henkilökohtaisen tiedon eroa, erottaen
@@ -197,11 +200,11 @@ fi:
           kanssa.
       SongwritingWithParameters:
         title: Parametroitu laulunkirjoitus
-        desc: 'Eräs hienoimmista tietojenkäsittelytieteen rakenteista on funktio.
-          Funktio (joita joskus kutsutaan proseduureiksi) ovat pienoisohjelmia, joita
-          voit käyttää uudestaan ja uudestaan suuremman ohjelmasi sisältä. Tällä oppitunnilla
-          opiskelijat intuitiivisesti oppivat miksi koodilohkojen yhdistäminen funktioiksi
-          on niinkin kätevä käytäntö.  '
+        desc: 'Eräs hienoimmista tietotekniikan rakenteista on funktio. Funktio (joita
+          joskus kutsutaan proseduureiksi) ovat pienoisohjelmia, joita voit käyttää
+          uudestaan ja uudestaan suuremman ohjelmasi sisällä. Tällä oppitunnilla opiskelijat
+          intuitiivisesti oppivat miksi koodilohkojen yhdistäminen funktioiksi on
+          niinkin kätevä käytäntö.  '
       BinaryImages:
         title: Binäärikuvat
         desc: Vaikka monet ajattelevat binääriä puhtaasti nollina ja ykkösinä, aiemmat
@@ -256,9 +259,10 @@ fi:
         title: Tietokoneeton tekeminen
       courseAB_unplugged_plantASeed:
         title: 'Tosielämän algoritmit: kylvä siemen'
-        desc: Tämä oppitunti auttaa huomaamaan tavat joilla käytämme algoritmejä arkipäivässä,
-          käyttäen siemenen istutusta esimerkkinä. Siinä keskitytään myös tietojenkäsittelytieteen
-          kokonaiskuvaan ja kuinka algoritmeillä on oleellinen rooli.
+        desc: Tämä oppitunti auttaa huomaamaan tavat, joilla käytämme algoritmeja
+          arkipäivässä, käyttäen siemenen istutusta esimerkkinä. Siinä keskitytään
+          myös tietotekniikan kokonaiskuvaan ja kuinka algoritmeillä on oleellinen
+          rooli.
       courseA_unplugged_happyMaps:
         title: Iloiset kartat
         desc: Oppilaat ohjaavat hahmon labyrintin läpi luomalla yksinkertaisia algoritmeja
@@ -286,7 +290,7 @@ fi:
       courseC_unplugged_paperPlanes:
         title: 'Tosielämän algoritmit: paperilentokoneet'
         desc: Tällä tunnilla tutkitaan, miten algoritmit esiintyvät arkielämässämme,
-          esimerkkinä paperilennokkien tekeminen. Oppitunti keskittyy myös tietojenkäsittelytieteen
+          esimerkkinä paperilennokkien tekeminen. Oppitunti keskittyy myös tietotekniikan
           kokonaiskuvaan ja kuinka algoritmeillä on siinä oleellinen rooli.
       courseC_unplugged_gettingLoopy:
         title: Mennään silmukoille
@@ -334,9 +338,9 @@ fi:
           siirtomenetelmiä käyttäen paperilappusia.
       courseE_unplugged_crowdsourcing:
         title: Joukkoistaminen
-        desc: Opskelijat käyttävät joukkoistamista, tietojenkäsittelytieteessä yleistä
-          ongelmanratkaisutekniikkaa, ratkaistakseen yhdessä luokkana tehtävän tehokkaammin
-          kuin että yksi opiskelija yrittäisi sitä yksinään.
+        desc: Opskelijat käyttävät joukkoistamista, tietotekniikassa yleistä ongelmanratkaisutekniikkaa,
+          ratkaistakseen yhdessä luokkana tehtävän tehokkaammin kuin että yksi opiskelija
+          yrittäisi sitä yksinään.
       courseE_unplugged_songwriting:
         title: Säveltäminen
         desc: Opiskelijat käyttävät kuoron käsitettä oppiakseen muuttujien välityksestä
@@ -360,18 +364,19 @@ fi:
           kanssa.
       courseF_unplugged_songwritingParameters:
         title: Parametroitu laulunkirjoitus
-        desc: 'Eräs hienoimmista tietojenkäsittelytieteen rakenteista on funktio.
-          Funktio (joita joskus kutsutaan proseduureiksi) ovat pienoisohjelmia, joita
-          voit käyttää uudestaan ja uudestaan suuremman ohjelmasi sisältä. Tällä oppitunnilla
-          opiskelijat intuitiivisesti oppivat miksi koodilohkojen yhdistäminen funktioiksi
-          on niinkin kätevä käytäntö.  '
+        desc: 'Eräs hienoimmista tietotekniikan rakenteista on funktio. Funktio (joita
+          joskus kutsutaan proseduureiksi) ovat pienoisohjelmia, joita voit käyttää
+          uudestaan ja uudestaan suuremman ohjelmasi sisällä. Tällä oppitunnilla opiskelijat
+          intuitiivisesti oppivat miksi koodilohkojen yhdistäminen funktioiksi on
+          niinkin kätevä käytäntö.  '
       courseB_unplugged_MRF_2018:
         title: Robottiystäväni
       PlantASeed_2018:
         title: 'Tosielämän algoritmit: kylvä siemen'
-        desc: Tämä oppitunti auttaa huomaamaan tavat joilla käytämme algoritmejä arkipäivässä,
-          käyttäen siemenen istutusta esimerkkinä. Siinä keskitytään myös tietojenkäsittelytieteen
-          kokonaiskuvaan ja kuinka algoritmeillä on oleellinen rooli.
+        desc: Tämä oppitunti auttaa huomaamaan tavat, joilla käytämme algoritmeja
+          arkipäivässä, käyttäen siemenen istutusta esimerkkinä. Siinä keskitytään
+          myös tietotekniikan kokonaiskuvaan ja kuinka algoritmeillä on oleellinen
+          rooli.
       UnplugHappyMaps_2018:
         title: Iloiset kartat
         desc: Oppilaat ohjaavat hahmon labyrintin läpi luomalla yksinkertaisia algoritmeja
@@ -413,7 +418,7 @@ fi:
       PaperPlanes_2018:
         title: 'Tosielämän algoritmit: paperilentokoneet'
         desc: Tällä tunnilla tutkitaan, miten algoritmit esiintyvät arkielämässämme,
-          esimerkkinä paperilennokkien tekeminen. Oppitunti keskittyy myös tietojenkäsittelytieteen
+          esimerkkinä paperilennokkien tekeminen. Oppitunti keskittyy myös tietotekniikan
           kokonaiskuvaan ja kuinka algoritmeillä on siinä oleellinen rooli.
       GettingLoopy_2018:
         title: Mennään silmukoille
@@ -472,13 +477,14 @@ fi:
       PaperPlanes_2019:
         title: 'Tosielämän algoritmit: paperilentokoneet'
         desc: Tällä tunnilla tutkitaan, miten algoritmit esiintyvät arkielämässämme,
-          esimerkkinä paperilennokkien tekeminen. Oppitunti keskittyy myös tietojenkäsittelytieteen
+          esimerkkinä paperilennokkien tekeminen. Oppitunti keskittyy myös tietotekniikan
           kokonaiskuvaan ja kuinka algoritmeillä on siinä oleellinen rooli.
       PlantASeed_2019:
         title: 'Tosielämän algoritmit: kylvä siemen'
-        desc: Tämä oppitunti auttaa huomaamaan tavat joilla käytämme algoritmejä arkipäivässä,
-          käyttäen siemenen istutusta esimerkkinä. Siinä keskitytään myös tietojenkäsittelytieteen
-          kokonaiskuvaan ja kuinka algoritmeillä on oleellinen rooli.
+        desc: Tämä oppitunti auttaa huomaamaan tavat, joilla käytämme algoritmeja
+          arkipäivässä, käyttäen siemenen istutusta esimerkkinä. Siinä keskitytään
+          myös tietotekniikan kokonaiskuvaan ja kuinka algoritmeillä on oleellinen
+          rooli.
       UnplugHappyMaps_2019:
         title: Iloiset kartat
         desc: Oppilaat ohjaavat hahmon labyrintin läpi luomalla yksinkertaisia algoritmeja

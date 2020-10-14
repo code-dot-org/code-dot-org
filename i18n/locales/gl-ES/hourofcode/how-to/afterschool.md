@@ -1,12 +1,18 @@
 ---
-title: Guía de instrucións
+title: Hour of Code How-to Guide for After-school
 ---
 
 {{ signup_button }}
 
 # How to teach one Hour of Code in after-school classes and clubs
 
-### Join the movement and introduce a group of students to their first hour of computer science with these steps. The Hour of Code is easy to run - even for beginners! If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
+### Join the movement and introduce your students to computer science with these steps.
+
+Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
+
+Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time. If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
+
+### An Hour of Code can also be hosted remotely! To get started, check out our [tips for hosting a virtual Hour of Code event](https://hourofcode.com/us/how-to/virtual).
 
 * * *
 
@@ -34,7 +40,7 @@ Make sure to test tutorials on student computers or devices to ensure they work 
 
 Proporcione auriculares para a súa clase, ou pídalle aos estudantes que traian os seus no caso de que o titorial escollido funcione mellor con son.
 
-**Non ten dispositivos abondos?** Use a [programación por parellas](https://www.youtube.com/watch?v=vgkahOzFH2Q). Se os estudantes se emparellan, axúdanse entre si e dependen menos do mestre. Eles tamén verán que a informática é unha actividade social e colaborativa.
+**Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). Se os estudantes se emparellan, axúdanse entre si e dependen menos do mestre. Eles tamén verán que a informática é unha actividade social e colaborativa.
 
 ## 5. Start your Hour of Code off with an inspiring video
 

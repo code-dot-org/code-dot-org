@@ -9,11 +9,17 @@ class RaceInterstitialHelperTest < ActionView::TestCase
   def setup
     mock_geocoder_result('US')
 
-    # Create a student over 13 with an account more than 1 week old with an
-    # associated IP address. We expect that such a user would see the race
-    # interstitial helper.
-    @user = create :student, created_at: DateTime.now - 8.days
+    # Create a student over 13 with an account that was first
+    # signed into more than a week ago and an associated IP address.
+    # We expect that such a user would see the race interstitial helper.
+    @user = create :student
     @user.current_sign_in_ip = "127.0.0.1"
+
+    SignIn.create(
+      user_id: @user.id,
+      sign_in_count: 1,
+      sign_in_at: DateTime.now - 8.days
+    )
   end
 
   test 'do not show race interstitial to teacher' do
@@ -26,8 +32,22 @@ class RaceInterstitialHelperTest < ActionView::TestCase
     refute RaceInterstitialHelper.show?(@user)
   end
 
-  test 'do not show race interstitial to user accounts less than one week old' do
-    @user.created_at = DateTime.now - 3.days
+  test 'do not show race interstitial to user if we do not have sign in information' do
+    SignIn.find_by(
+      user_id: @user.id,
+      sign_in_count: 1
+    ).delete
+
+    refute RaceInterstitialHelper.show?(@user)
+  end
+
+  test 'do not show race interstitial to user accounts who signed in for the first time less than a week ago' do
+    sign_in = SignIn.find_by(
+      user_id: @user.id,
+      sign_in_count: 1
+    )
+    sign_in.update(sign_in_at: DateTime.now - 3.days)
+
     refute RaceInterstitialHelper.show?(@user)
   end
 

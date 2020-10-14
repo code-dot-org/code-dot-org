@@ -1,0 +1,106 @@
+name 'Color Sleuth - How does it end?_2018_2019_virtual'
+title 'title'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# The End Game
+
+<div style="width: 400px; margin: auto">
+<p style="text-align: center"> ALEXIS </p>
+
+<p>All right! This is fun.</p>
+
+<p style="text-align: center"> MICHAEL </p>
+
+<p>Okay, the last thing we need to do is have a way for the game to end.</p>
+
+<p style="text-align: center"> ALEXIS</p>
+
+<p>What are you thinking?</p>
+
+<p style="text-align: center"> MICHAEL</p>
+
+<p>Well, I don't know. I can see a lot of possibilities. I do know that I want there to be a winner, and when the game is over it switches a different screen that says "Game Over" and says who won.  Like this:</p>
+
+</div>
+
+<img src="https://images.code.org/7716caff22342056fa063fa20dff923f-image-1481301685485.png" alt="" style="display: block; margin: auto;"/>
+
+<div style="width: 400px; margin: auto">
+
+<p style="text-align: center"> ALEXIS</p>
+
+<p>Sounds do-able. So, how do you want to determine the winner?</p>
+
+<p style="text-align: center"> MICHAEL </p>
+
+<p>I was thinking something simple, just based on the score.</p>
+
+<p style="text-align: center"> ALEXIS</p>
+
+<p>Let's come up with a few ideas...</p>
+
+<p style="text-align: center"> MICHAEL</p>
+
+<p>I was thinking about the rule being: <strong>First to 10 wins</strong>. Keep playing until one person's score reaches 10.</p>
+
+<p style="text-align: center"> ALEXIS</p>
+
+<p>Interesting.  What about <strong>First to get 3 wrong loses?</strong>  That's tougher because you'd have to add a variable to count incorrect clicks for each player and add additional if-statements.</p>
+
+<p style="text-align: center"> MICHAEL </p>
+
+<p>Maybe, I'll look into that.  How about: <strong>Play until the difference in scores is greater than 5?</strong></p>
+
+<p style="text-align: center"> ALEXIS</p>
+
+<p>They might play forever that way!  How about making it a team game: <strong>play until the combined score score is 20</strong> or something like that?</p>
+
+<p style="text-align: center"> MICHAEL</p>
+
+<p>Or <strong>play until, combined, they get 3 wrong?</strong>.  That would be easier to count since we'd just need a single variable.</p>
+
+<p style="text-align: center"> ALEXIS</p>
+
+<p>Well that's a lot of ideas.  Whatever you choose, I think <em>how</em> you should add the code will basically be the same and we can follow the same pattern -- add a function.</p>
+
+<p style="text-align: center"> MICHAEL</p>
+
+<p>I agree. I think in <code>checkCorrect</code>, right after we update the score, we should check if the game is over before setting the board or switching players.  Like this:</p>
+
+</div>
+
+<img src="https://images.code.org/9bf8b4260d473f95bb16b20cf6603741-image-1481225665447.png" alt="" style="display: block; margin: auto"/>
+
+<div style="width: 400px; margin: auto">
+
+<p style="text-align: center"> ALEXIS</p>
+
+<p>Yeah, I see. So in <code>checkGameOver()</code> if the game is over you'll just switch screens right there, and set some labels. <em>Otherwise do nothing.</em></p>
+
+<p style="text-align: center"> MICHAEL</p>
+
+<p>Right. <code>checkGameOver</code> will appear to do nothing most of the time, because it's just checking the conditions behind the scenes.  But once the end-of-game condition is hit, the screen will switch.</p>
+
+<p style="text-align: center"> ALEXIS </p>
+
+<p>So if you add this function, it's just a matter of choosing your condition.</p>
+
+<p style="text-align: center"> MICHAEL</p>
+
+<p>Okay, well. I think I can handle it from here.  Thanks for all your help, Alexis.</p>
+
+<p style="text-align: center"> ALEXIS</p>
+
+<p>Don't mention it!  It was fun.  I'm looking forward to playing your game.</p>
+
+<p style="text-align: center"> MICHAEL</p>
+
+<p>Me too. Just need to finish it...</p>
+
+<h2 id="clickcontinuetofinishthegame">Click continue to finish the game</h2>
+
+
+
+</div>
+MARKDOWN

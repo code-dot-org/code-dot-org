@@ -1,9 +1,9 @@
 name 'cspu5_assess1_turtle_2018'
-wrong '<img src="https://images.code.org/ac7439091c092e532c17167ce1ae91b5-image-1475973196221.png" width=150>'
-wrong '<img src="https://images.code.org/417e418722135ce9582fff8919bf40a0-image-1475973196221.png" width=150>'
-right '<img src="https://images.code.org/f8b00bf5f5af3f23a6c635f2dbf7ae8f-image-1475973196223.png" width=150>'
-wrong '<img src="https://images.code.org/ccf8ed897987be60cd0ce71151d6e6aa-image-1475973196211.png" width=150>'
-wrong '<img src="https://images.code.org/fab07507d8bc055039d4daf671faa47e-image-1475973196219.png" width=150>'
+wrong 'https://images.code.org/ac7439091c092e532c17167ce1ae91b5-image-1475973196221.png,150'
+wrong 'https://images.code.org/417e418722135ce9582fff8919bf40a0-image-1475973196221.png,150'
+right 'https://images.code.org/f8b00bf5f5af3f23a6c635f2dbf7ae8f-image-1475973196223.png,150'
+wrong 'https://images.code.org/ccf8ed897987be60cd0ce71151d6e6aa-image-1475973196211.png,150'
+wrong 'https://images.code.org/fab07507d8bc055039d4daf671faa47e-image-1475973196219.png,150'
 
 
 markdown <<MARKDOWN

@@ -1,21 +1,19 @@
 name 'U1L13 - Assess Text Compression reverse process'
-encrypted 'Maed8HUzBB0nW4FDLMKxia4C08bDeO+rF5W3TJmvxuWG6LvpDvl0ak0lgRhO
-JDCxRyq2l77Ialyt7OwAQvooR4E49e8JoWpoB4ZNvdBc6HqYeyLLpuPF+Lkm
-QoJ7bea7OzC4eoGFk9MngbOiWDv0O0QdztLJ4/hEnPfLy9bX341os0RO6wLI
-m3f7rmquT8kDTW+FAvIBCBbCFVV6bF7Qh1apdOz8MxTbyzwGsxpGH5AO0niM
-G1TvoMgSCMYksESDl4FkK0UAZQXL9Hz7zRT+fHt0whw7WAKxq6vqDYZkejI0
-8MInxlv2nD5sz7rUobhuAZRfbDxLzQxz6fhU0TSihhn/AWwcDrL4aQ9bH/eq
-tMHmYeLGU848FWo7sJVSc4J7NrXq2V2qpSx7gEBt5lRwM+AK90vV68igzcNZ
-RQVJHMgBq2tLSuma7cEouZvCRyBE/9+ZfUPQ0YiUX1weAW/tICos7oniXM9h
-VSEe4BgFkWvtDIvXlRmK1sckamTVqpKCS/fIXNY7CAPXE7d/gFXmDhMuazTu
-xtvvju9VKLyl6rnElHWGicZW2IKIUX2Eki9fP1MNN1n6NsU7kk1od20bbT0b
-1hgNgp6UfFwjoWgVgq6Ex7JFrDnF0kTNjuFWssRKwNBGAPaxMquey67LQ3Cq
-2rf2io5K+kVVrBCIsF4iPAzTwYjsnZ0szfsjn2RlKGH7Tb2J4pATwyT6NwOf
-x7g2JmNmCscDWjM/gXTMhmgS+DjPV2y6yPFNEfMAQ00qckLoMPNPfnaq/iKd
-PTtg9sCOCBnlpMGkt+FSqzVqAMswoiS5DwIRiVe7o3uww1WyUQgTHr1Upd68
-GnDU0r2GaMFmmMptipgPVNHuhxEKu38Hesxkt4uIdwj0tv8m4uRRduubnfRK
-XeeHJvQ3gYluSuBRFpnVa4iJN+xZwqUGGu7k8r0VbIUJnNNKisfBolAhBzDx
-kWnn0fRt4BTcmg6ktDjPzTwVu0NMkmrppbFtSZIU6gDwPTgwqfi/5LdxQKN8
-p8PJRTxSbPnL53GRzpDcp6Ijd0ymmPbL1CQ/bai1c7f07Nl4vaBZfsPe7dQQ
-KNdKXfGAxpxyAP0bZZozqyWcDdtsOQ==
-'
+editor_experiment ''
+title 'Act as the computer!'
+answer 'the_big_bug_bit_the_bull_but_the_bull_bit_the_big_bug_back'
+
+
+markdown <<MARKDOWN
+Below is a piece of text that has already been compressed, and shows some of the information about it. Show you know how this works by reconstructing the original text from the dictionary and compressed version.
+
+![](https://images.code.org/ff0b1798def28b61dd1a623ca13f777e-image-1433782834840.png)
+
+In the text box below, enter the original text you've reconstructed from the compressed version above. **Make sure you use _ (underscore) instead of spaces in your answer.**
+
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+![](https://images.code.org/9b8c36690d234633413db6d24581c084-image-1476734718506.05.02 PM.png)
+MARKDOWN

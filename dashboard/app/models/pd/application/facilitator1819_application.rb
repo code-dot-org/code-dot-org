@@ -40,11 +40,11 @@ module Pd::Application
   class Facilitator1819Application < FacilitatorApplicationBase
     include Pd::Facilitator1819ApplicationConstants
 
-    validates_uniqueness_of :user_id
-
     has_one :pd_fit_weekend1819_registration,
       class_name: 'Pd::FitWeekend1819Registration',
       foreign_key: 'pd_application_id'
+
+    validates_uniqueness_of :user_id
 
     serialized_attrs %w(
       auto_assigned_enrollment_id

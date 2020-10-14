@@ -1,11 +1,17 @@
 name 'Commute Assess - func 3b - block_exam_prep'
 
 question 'What will be displayed when this code is run?'
-wrong'<pre>in func3<br>in func3<br>in func1</pre>'
-wrong'<pre>in func3<br>in func1<br>in func3</pre>'
-right'<span style="font-family: monospace; border: solid 1px #dddddd; background-color: rgba(0,0,0,0.1)">in func3</span> will be displayed over and over until the code is stopped manually’
-wrong '<pre>in func3<br>in func1</pre>'
-wrong '<pre>func3<br>func1</pre>'
+wrong'`in func3`  
+`in func3`  
+`in func1`'
+wrong'`in func3`  
+`in func1`  
+`in func3`'
+right'`in func3` will be displayed over and over until the code is stopped manually’
+wrong '`in func3`  
+`in func1`'
+wrong '`func3`  
+`func1`'
 wrong ‘Nothing is displayed'
 markdown <<MARKDOWN
 The procedures shown here are the same as the previous question.  They are shown for your reference.

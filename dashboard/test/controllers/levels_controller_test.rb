@@ -1,4 +1,5 @@
 require 'test_helper'
+require 'webmock/minitest'
 
 class LevelsControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
@@ -24,6 +25,8 @@ class LevelsControllerTest < ActionController::TestCase
       type: 'toolbox_blocks',
       program: @program,
     }
+    stub_request(:get, /https:\/\/cdo-v3-shared.firebaseio.com/).
+      to_return({"status" => 200, "body" => "{}", "headers" => {}})
   end
 
   test "should get rubric" do
@@ -67,6 +70,63 @@ class LevelsControllerTest < ActionController::TestCase
       rubric_performance_level_3: 'This is okay',
       rubric_performance_level_4: 'This is bad'
     )
+  end
+
+  test "should get filters" do
+    get :get_filters, params: {}
+    assert_equal JSON.parse(@response.body)["levelOptions"].map {|option| option[0]}, [
+      "All types", "Applab", "Artist", "Bounce", "BubbleChoice", "Calc", "ContractMatch",
+      "Craft", "CurriculumReference", "Dancelab", "Eval", "EvaluationMulti", "External",
+      "ExternalLink", "Fish", "Flappy", "FreeResponse", "FrequencyAnalysis", "Gamelab",
+      "GamelabJr", "Karel", "LevelGroup", "Map", "Match", "Maze", "Multi", "NetSim",
+      "Odometer", "Pixelation", "PublicKeyCryptography", "StandaloneVideo",
+      "StarWarsGrid", "Studio", "TextCompression", "TextMatch", "Unplugged",
+      "Vigenere", "Weblab"
+    ]
+    scripts = [
+      "All scripts", "20-hour", "algebra", "artist", "course1", "course2",
+      "course3", "course4", "coursea-2017", "courseb-2017", "coursec-2017",
+      "coursed-2017", "coursee-2017", "coursef-2017", "express-2017", "flappy",
+      "frozen", "hourofcode", "jigsaw", "playlab", "pre-express-2017", "starwars"
+    ]
+    assert (scripts - JSON.parse(@response.body)["scriptOptions"].map {|option| option[0]}).empty?
+    assert (["Any owner"] - JSON.parse(@response.body)["ownerOptions"].map {|option| option[0]}).empty?
+  end
+
+  test "should get filtered levels with just page param" do
+    get :get_filtered_levels, params: {page: 1}
+    assert_equal JSON.parse(@response.body).length, 7
+  end
+
+  test "should get filtered levels with level_type" do
+    get :get_filtered_levels, params: {page: 1, level_type: 'Odometer'}
+    assert_equal JSON.parse(@response.body).length, 1
+    assert_equal JSON.parse(@response.body)[0]["name"], "Odometer"
+  end
+
+  test "should get filtered levels with script_id" do
+    get :get_filtered_levels, params: {page: 1, script_id: 2}
+    assert_equal JSON.parse(@response.body).length, 7
+  end
+
+  test "should get filtered levels with owner_id" do
+    level = create :level, user: @levelbuilder
+    get :get_filtered_levels, params: {page: 1, owner_id: @levelbuilder.id}
+    assert_equal JSON.parse(@response.body)[0]["name"], level[:name]
+  end
+
+  test "get_filters gets no content if not levelbuilder" do
+    sign_out @levelbuilder
+    sign_in create(:teacher)
+    get :get_filters, params: {}
+    assert_response :forbidden
+  end
+
+  test "get_filtered_levels gets no content if not levelbuilder" do
+    sign_out @levelbuilder
+    sign_in create(:teacher)
+    get :get_filtered_levels, params: {page: 1}
+    assert_response :forbidden
   end
 
   test "should get index" do
@@ -451,6 +511,15 @@ class LevelsControllerTest < ActionController::TestCase
     assert_response :forbidden
   end
 
+  test "should not be able to edit on levelbuilder in locale besides en-US" do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    sign_in @levelbuilder
+    with_default_locale(:de) do
+      get :edit, params: {id: @level}
+    end
+    assert_redirected_to "/"
+  end
+
   test "should not create level if not levelbuilder" do
     [@not_admin, @admin].each do |user|
       sign_in user
@@ -519,6 +588,50 @@ class LevelsControllerTest < ActionController::TestCase
     assert_equal 'config/scripts/test_external_markdown.external', assigns(:level).filename
     assert_equal "name", assigns(:level).dsl_text.split("\n").first.split(" ").first
     assert_equal "encrypted", assigns(:level).dsl_text.split("\n")[1].split(" ").first
+  end
+
+  test "should allow rename of new level" do
+    get :edit, params: {id: @level.id}
+    assert_response :success
+    assert_includes @response.body, @level.name
+    assert_not_includes @response.body, 'level cannot be renamed'
+  end
+
+  test "should prevent rename of level in visible or pilot script" do
+    script_level = create :script_level
+    script = script_level.script
+    level = script_level.level
+    assert_equal script.hidden, false
+
+    get :edit, params: {id: level.id}
+    assert_response :success
+    assert_includes @response.body, level.name
+    assert_includes @response.body, 'level cannot be renamed'
+
+    script.hidden = true
+    script.save!
+    get :edit, params: {id: level.id}
+    assert_response :success
+    assert_includes @response.body, level.name
+    assert_not_includes @response.body, 'level cannot be renamed'
+
+    script.pilot_experiment = 'platformization-partners'
+    script.save!
+    get :edit, params: {id: level.id}
+    assert_response :success
+    assert_includes @response.body, level.name
+    assert_includes @response.body, 'level cannot be renamed'
+  end
+
+  test "should prevent rename of stanadalone project level" do
+    level_name = ProjectsController::STANDALONE_PROJECTS.values.first[:name]
+    # standalone project levels are created when we generate fixtures
+    level = Level.find_by(name: level_name)
+
+    get :edit, params: {id: level.id}
+    assert_response :success
+    assert_includes @response.body, level.name
+    assert_includes @response.body, 'level cannot be renamed'
   end
 
   test "should update level" do

@@ -1,4 +1,5 @@
 name 'CB_Question_12_2018_2019'
+editor_experiment ''
 
 right 'I only'
 wrong 'II only'
@@ -15,11 +16,8 @@ MARKDOWN
 teacher_markdown <<MARKDOWN
 **Note:** this question appeared on an AP practice exam. We do not cover the topic explicitly in the curriculum and so this represents the likely scenario that students will encounter questions they have not explcitly prepared for.  
 
-Digital certificates are a relatively simple thing to lookup.  The line from the AP CSP framework reads: 
+Digital certificates are a relatively simple thing to lookup.  The line from the AP CSP framework reads:
 
-```
-6.3.1M Certificate authorities (CAs) issue digital certificates that validate the ownership 
-of encrypted keys used in secured communication and are based on a trust model.
-```
-
+	6.3.1M Certificate authorities (CAs) issue digital certificates that validate the ownership
+	of encrypted keys used in secured communication and are based on a trust model.
 MARKDOWN

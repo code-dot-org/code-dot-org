@@ -89,6 +89,12 @@ export const saveButton = {
   minWidth: 60
 };
 
+export const grayButton = {
+  ...button,
+  marginLeft: 5,
+  backgroundColor: color.background_gray
+};
+
 export const input = {
   width: 'calc(100% - 14px)',
   height: 20,

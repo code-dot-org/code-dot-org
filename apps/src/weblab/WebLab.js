@@ -186,10 +186,11 @@ WebLab.prototype.init = function(config) {
     channelId: config.channel,
     noVisualization: true,
     visualizationInWorkspace: true,
-    documentationUrl: 'https://docs.code.org/weblab/',
+    documentationUrl: 'https://studio.code.org/docs/weblab/',
     isProjectLevel: !!config.level.isProjectLevel,
     isSubmittable: !!config.level.submittable,
-    isSubmitted: !!config.level.submitted
+    isSubmitted: !!config.level.submitted,
+    validationEnabled: !!config.level.validationEnabled
   });
 
   this.readOnly = config.readonlyWorkspace;
@@ -379,7 +380,12 @@ WebLab.prototype.renameProjectFile = function(filename, newFilename, callback) {
 };
 
 // Called by Bramble when a file has been changed or created
-WebLab.prototype.changeProjectFile = function(filename, fileData, callback) {
+WebLab.prototype.changeProjectFile = function(
+  filename,
+  fileData,
+  callback,
+  skipPreWriteHook
+) {
   filesApi.putFile(
     filename,
     fileData,
@@ -389,7 +395,8 @@ WebLab.prototype.changeProjectFile = function(filename, fileData, callback) {
     xhr => {
       console.warn(`WebLab: error file ${filename} not renamed`);
       callback(new Error(xhr.status));
-    }
+    },
+    skipPreWriteHook
   );
 };
 
@@ -400,6 +407,10 @@ WebLab.prototype.changeProjectFile = function(filename, fileData, callback) {
  */
 WebLab.prototype.registerBeforeFirstWriteHook = function(hook) {
   filesApi.registerBeforeFirstWriteHook(hook);
+  filesApi.registerErrorAction(() => {
+    dashboard.assets.hideAssetManager();
+    getStore().dispatch(actions.changeShowError(true));
+  });
 };
 
 // Called by Bramble when project has changed

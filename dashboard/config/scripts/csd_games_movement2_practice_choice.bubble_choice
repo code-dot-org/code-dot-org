@@ -1,0 +1,8 @@
+name 'CSD games movement2 practice choice'
+editor_experiment ''
+display_name 'Sprite Movement Practice'
+description 'Practice using the new ways to move sprites.'
+
+sublevels
+level 'CSD U3 abstraction accelerateY up_2020'
+level 'CSD U3 practice deceleration'

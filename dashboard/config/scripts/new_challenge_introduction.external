@@ -1,4 +1,5 @@
 name 'New Challenge Introduction'
+editor_experiment ''
 title 'title'
 description 'description here'
 href 'path/to/html/in/asset/folder'
@@ -17,7 +18,7 @@ This is much harder to crack and requires a more sophisticated tool, so...
 
 When you click continue, you'll see a **new, more sophisticated version of the encryption tool** that shows you lots of different stuff.
 
-But what it does is bit of a mystery!  
+But what it does is a bit of a mystery!  
 
 ### Your Task:
 

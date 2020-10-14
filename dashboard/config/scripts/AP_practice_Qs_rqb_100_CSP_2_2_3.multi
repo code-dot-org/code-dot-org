@@ -1,10 +1,7 @@
 name 'AP_practice_Qs_rqb_100_CSP_2_2_3'
-wrong 'bytes, bits, words
-'
-wrong 'words, bits, bytes
-'
-wrong 'bits, words, bytes
-'
+wrong 'bytes, bits, words'
+wrong 'words, bits, bytes'
+wrong 'bits, words, bytes'
 right ' bits, bytes, words'
 markdown <<MARKDOWN
 Binary data is processed by physical  layers of computing hardware, including gates,  chips, and components.

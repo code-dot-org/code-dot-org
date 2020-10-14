@@ -81,7 +81,7 @@
 #   INNER JOIN level_concept_difficulties
 #     ON level_concept_difficulties.level_id = user_levels.level_id
 #   WHERE user_levels.best_result = 100
-#     AND user_levels.script_id IN (297, 301, 307, 302, 309, 310, 303)
+#     AND user_levels.script_id IN #{script_ids}
 #     AND user_levels.id > #{start_id}
 #     AND user_levels.id < #{end_id}
 #     AND user_levels.created_at > #{start_date}
@@ -112,20 +112,21 @@ require_relative '../../../dashboard/config/environment'
 # already_recorded should be false for the date ranges of the backfill, and true for date ranges
 # that had the correct LCD data.
 DATE_RANGES = [
-  ['20180701', '20180801', '2018-07-31 23:59:59', false],
-  ['20180801', '20180901', '2018-08-31 23:59:59', false],
-  ['20180901', '20181001', '2018-09-30 23:59:59', false],
-  ['20181001', '20181004', '2018-10-03 23:59:59', false],
-  ['20181004', '20181101', '2018-10-31 23:59:59', true],
-  ['20181101', '20181201', '2018-11-30 23:59:59', true],
-  ['20181201', '20181214', '2018-12-13 23:59:59', true]
+  ['20190601', '20190701', '2019-06-30 23:59:59', false],
+  ['20190701', '20190801', '2019-07-31 23:59:59', false],
+  ['20190801', '20190901', '2019-08-31 23:59:59', false],
+  ['20190901', '20190914', '2019-09-13 23:59:59', false],
+  ['20190914', '20191001', '2019-09-30 23:59:59', true],
+  ['20191001', '20191101', '2019-10-31 23:59:59', true],
+  ['20191101', '20191201', '2019-11-30 23:59:59', true],
+  ['20191201', '20191211', '2019-12-10 23:59:59', true]
 ].freeze
 
 # This script wasn't written to take in arguments; instead it uses these hardcoded paths
 # (together with DATE_RANGES) above for input and output files.
 DATA_DIRECTORY = '/tmp'.freeze
 MONTHLY_FILENAME_PREFIX = (DATA_DIRECTORY + '/user_proficiencies').freeze
-AGGREGATE_FILENAME = (DATA_DIRECTORY + '/aggregate_20180701_20181214').freeze
+AGGREGATE_FILENAME = (DATA_DIRECTORY + '/aggregate_20190601_20191211').freeze
 
 SLICE_SIZE = 5_000
 

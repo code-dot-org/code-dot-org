@@ -12,20 +12,22 @@ describe('Library parser', () => {
       let libraryName = 'Test`~!Library🙃💩Name123';
       expect(parser.sanitizeName(libraryName)).to.equal('TestLibraryName123');
     });
+  });
 
+  describe('suggestName', () => {
     it('capitalizes the first letter of a library', () => {
       let libraryName = 'testLibrary';
-      expect(parser.sanitizeName(libraryName)).to.equal('TestLibrary');
+      expect(parser.suggestName(libraryName)).to.equal('TestLibrary');
     });
 
     it('prepends Lib to the beginning of a library starting with a number', () => {
       let libraryName = '123testLibrary';
-      expect(parser.sanitizeName(libraryName)).to.equal('Lib123testLibrary');
+      expect(parser.suggestName(libraryName)).to.equal('Lib123testLibrary');
     });
 
     it('names an empty library "Lib"', () => {
       let libraryName = '';
-      expect(parser.sanitizeName(libraryName)).to.equal('Lib');
+      expect(parser.suggestName(libraryName)).to.equal('Lib');
     });
   });
 
@@ -138,7 +140,8 @@ describe('Library parser', () => {
         {
           func: functionName,
           category: category,
-          comment: comment
+          comment: comment,
+          type: 'either'
         }
       ];
 
@@ -178,12 +181,14 @@ describe('Library parser', () => {
         {
           func: functions[0],
           category: category,
+          type: 'either',
           params: params,
           paletteParams: params
         },
         {
           func: functions[1],
-          category: category
+          category: category,
+          type: 'either'
         }
       ];
 
@@ -247,7 +252,7 @@ describe('Library parser', () => {
     let emptyFunctions = [];
 
     function closureCreator(libraryName = '', code = '', functions = '') {
-      return `var ${libraryName} = (function() {${code}; return {${functions}}})();`;
+      return `var ${libraryName} = (function() {${code};\nreturn {${functions}}})();`;
     }
 
     it('is able to parse code with quotes', () => {
@@ -259,6 +264,18 @@ describe('Library parser', () => {
       };
       let newJson = parser.createLibraryClosure(originalJson);
       expect(newJson).to.deep.equal(closureCreator(emptyLibraryName, code));
+    });
+
+    // This is especially important when the user code ends with a comment
+    it('adds a newline to the end of the user code', () => {
+      let code = '// comment';
+      let originalJson = {
+        name: emptyLibraryName,
+        functions: emptyFunctions,
+        source: code
+      };
+      let newJson = parser.createLibraryClosure(originalJson);
+      expect(newJson).to.include('// comment;\nreturn');
     });
 
     it('is able to parse functions', () => {

@@ -1,5 +1,5 @@
 name 'CSD Map: onBoardEvent'
 display_name 'Responding to Board Events'
 markdown <<MARKDOWN
-<object data="https://docs.code.org/csd/maker_event/" type="text/html"  style="width: 100%; height: 750px;"></object>
+<object data="https://studio.code.org/docs/csd/maker_event/" type="text/html"  style="width: 100%; height: 750px;"></object>
 MARKDOWN

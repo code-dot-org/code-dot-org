@@ -23,7 +23,6 @@ class ContentDSL < LevelDSL
   def content2(text) @hash[:content2] = text end
   def content3(text) @hash[:content3] = text end
 
-  # Markdown (i18n not yet supported)
   def markdown(md) @hash[:markdown] = md end
   def teacher_markdown(md) @hash[:teacher_markdown] = md end
 
@@ -38,17 +37,15 @@ class ContentDSL < LevelDSL
     @hash[:options][key.to_sym] = args.first
   end
 
-  def i18n_strings
-    strings = {}
-    %i(
-      title
+  # @override
+  def self.i18n_fields
+    super + %w(
       content1
       content2
       content3
-      pre_title
-    ).each do |property|
-      strings[property] = @hash[property] unless @hash[property].blank?
-    end
-    strings.stringify_keys
+      markdown
+      teacher_markdown
+      title
+    )
   end
 end

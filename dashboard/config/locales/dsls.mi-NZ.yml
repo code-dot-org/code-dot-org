@@ -3,238 +3,242 @@ mi-NZ:
   data:
     dsls:
       2-3 Algorithms Multi 1:
-        title: Kōwhiringa Maha
-        questions:
-        - text: Kōwhiria tēahi hātepe mō te atahanga kua whakaratoa.
         answers:
         - text: Me tīmata me tētahi tapawhā<br/>Hoatu i tētahi tapatoru ki runga ake
             i te tapawhā<br/>Hoatu i tētahi tapatoru ki raro iho i te tapawhā
-        - {}
+        - correct: true
         - text: Me tīmata me tētahi tapawhā<br/>Hoatu i tētahi tapawhā whakarara ki
             runga ake i te tapawhā<br/>Hoatu i tētahi tapatoru ki te taha matau o
             te tapawhā whakarara
         - text: Me tīmata me tētahi tapawhā<br/>Hoatu i tētahi tapatoru ki raro iho
             i te tapawhā<br/>Hoatu i tētahi tapawhā whakarara ki te taha matau o te
             tapatoru
-      2-3 Algorithms Multi 2:
+        questions:
+        - text: Kōwhiria tēahi hātepe mō te atahanga kua whakaratoa.
         title: Kōwhiringa Maha
+      2-3 Algorithms Multi 2:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
         content1: Me tīmata me tētahi tapatoru<br/>Hoatu i tētahi tapawhā ki raro
           i te tapatoru<br/>Hoatu i tētahi tapatoru anō ki raro iho i te tapawhā
         questions:
         - text: Ko tēhea o ngā atahanga kāore <em> e </em> whai i tēnei hātepe?
+        title: Kōwhiringa Maha
+      2-3 Big Event Match 1:
         answers:
         - {}
         - {}
         - {}
         - {}
-      2-3 Big Event Match 1:
-        title: Te Whakataurite
         content2: Whakatauritea te pahekotanga pātene ki ngā nekehanga kanikani.
         questions:
         - {}
         - {}
         - {}
         - {}
+        title: Te Whakataurite
+      2-3 Binary Match 1:
         answers:
         - {}
         - {}
         - {}
         - {}
-      2-3 Binary Match 1:
-        title: Te Whakataurite
         content2: Whakamahia te tohu ki te whakataurite i te waehere ki tōna pū
         questions:
         - text: "<strong>A</strong>"
         - text: "<strong>E</strong>"
         - text: "<strong>I</strong>"
         - text: "<strong>O</strong>"
+        title: Te Whakataurite
+      2-3 Conditionals Multi 1:
         answers:
         - {}
         - {}
+        - correct: true
         - {}
-        - {}
-      2-3 Conditionals Multi 1:
-        title: Kōwhiringa Maha
         questions:
         - text: E ai ki ngā ture o te kēmu, kua tika te tapeke piro o tēhea huinga
             kāri?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      2-3 Getting Loopy Multi 1:
         title: Kōwhiringa Maha
+      2-3 Getting Loopy Multi 1:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
         questions:
         - text: Ka pēhea tō whakamāmā i tēnei raupapatanga me ngā koromeke?
+        title: Kōwhiringa Maha
+      2-3 Graph Paper Match 1:
         answers:
         - {}
         - {}
         - {}
-        - {}
-      2-3 Graph Paper Match 1:
-        title: Te Whakataurite
         content1: Me whakataurite i te mātiti ki te papatono.
         questions:
         - {}
         - {}
         - {}
+        title: Te Whakataurite
+      2-3 Graph Paper Multi 1:
         answers:
         - {}
+        - correct: true
         - {}
-        - {}
-      2-3 Graph Paper Multi 1:
-        title: Kōwhiringa Maha
         questions:
         - text: Nā tēhea papatono tēnei atahanga i hanga?
-        answers:
-        - {}
-        - {}
-        - {}
+        title: Kōwhiringa Maha
       2-3 Maze Match 2:
-        title: Whakataurite Rīrapa
+        answers:
+        - {}
+        - {}
+        - {}
         content1: Me whakataurite i ngā panga ki te paraka
-        pre_title: Ngā Tohutohu
         questions:
         - {}
         - {}
         - {}
-        answers:
-        - {}
-        - {}
-        - {}
+        title: Whakataurite Rīrapa
       2-3 Maze Multi 2:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
         title: Rīrapa Kōwhiringa Maha
-        questions:
-        - {}
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
       2-3 Relay Programming Multi 1:
-        title: Kōwhiringa Maha
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
+        questions:
         - {}
-      2-3 Relay Programming Multi 2:
         title: Kōwhiringa Maha
+      2-3 Relay Programming Multi 2:
+        answers:
+        - {}
+        - {}
+        - correct: true
         questions:
         - text: Ko tēhea takiruatanga papatono-atahanga kāore ōna hapa?
+        title: Kōwhiringa Maha
+      2-3 artist debug multi 1:
         answers:
         - {}
+        - correct: true
         - {}
         - {}
-      2-3 artist debug multi 1:
         questions:
         - {}
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
       2-3 artist functions multi 1:
-        title: Ngā Taumahi Rehetoi Kōwhiringa Maha Tahi
+        answers:
+        - correct: true
+        - {}
+        - {}
         questions:
         - text: Tīpakohia ngā paraka e tika ana ki te tā i tēnei atahanga me ngā taumahi
             kua tukuna
+        title: Ngā Taumahi Rehetoi Kōwhiringa Maha Tahi
+      2-3 artist loops match 1:
         answers:
         - {}
         - {}
         - {}
-      2-3 artist loops match 1:
+        - {}
         content2: Whakataurite i te koromeke ki te āhua
         questions:
         - {}
         - {}
         - {}
         - {}
+      2-3 artist loops multi 1:
         answers:
         - {}
         - {}
+        - correct: true
         - {}
-        - {}
-      2-3 artist loops multi 1:
-        title: Ngā Koromeke Rehetoi Kōwhiringa Maha
         questions:
         - text: Ko tēhea āhua ka hangaia e tēnei koromeke?
+        title: Ngā Koromeke Rehetoi Kōwhiringa Maha
+      2-3 artist loops multi 2:
         answers:
         - {}
         - {}
         - {}
-        - {}
-      2-3 artist loops multi 2:
-        title: Ngā Koromeke Rehetoi Kōwhiringa Maha
+        - correct: true
         questions:
         - text: Ko tēhea āhua ka hangaia e tēnei papatono?
+        title: Ngā Koromeke Rehetoi Kōwhiringa Maha
+      2-3 artist match 1:
         answers:
         - {}
         - {}
         - {}
         - {}
-      2-3 artist match 1:
-        title: Whakataurite ā-Rehetoi
         content1: Me whakataurite i te āhua ki ngā paraka e tika ana kia oti pai.
         questions:
         - {}
         - {}
         - {}
         - {}
+        title: Whakataurite ā-Rehetoi
+      2-3 bee conditionals multi 1:
         answers:
         - {}
         - {}
+        - correct: true
         - {}
-        - {}
-      2-3 bee conditionals multi 1:
         questions:
         - text: Ko tēhea te whakaritenga pono o raro iho nei?
+      2-3 bee conditionals multi 3:
         answers:
         - {}
+        - correct: true
         - {}
         - {}
-        - {}
-      2-3 bee conditionals multi 3:
         questions:
         - text: Kōwhiria ngā paraka whai take.
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
       2-3 bee loops multi 1:
-        title: Ngā Koromeke Pī Kōwhiringa Maha Tahi
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
         questions:
         - text: Mā ēhea paraka te katoa o te waireka e kohikohi?
+        title: Ngā Koromeke Pī Kōwhiringa Maha Tahi
+      2-3 maze match 1:
         answers:
         - {}
         - {}
         - {}
-        - {}
-      2-3 maze match 1:
-        title: Whakataurite Rīrapa 1
         content1: Me whakataurite i ngā panga ki te paraka
         questions:
         - {}
         - {}
         - {}
+        title: Whakataurite Rīrapa 1
+      2-3 maze multi 1:
         answers:
         - {}
+        - correct: true
         - {}
         - {}
-      2-3 maze multi 1:
-        title: Rīrapa Kōwhiringa Maha Tahi
         questions:
         - text: Ko tēhea tautuhinga paraka te whakautu tika?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: Rīrapa Kōwhiringa Maha Tahi
       4-5 Algorithms Match 1:
-        title: Te Whakataurite
+        answers:
+        - text: "<h4>Tautuhia te whiwhinga piro o Kaitākaro 1 ki te 0</h4>"
+        - text: "<h4>Ka makaia te mataono e Kaitākaro 1</h4>"
+        - text: "<h4>Tāpiritia te uara o tā Kaitākaro 1 maka mataono ki te tapeketanga
+            piro</h4>"
+        - text: "<h4>Kia kitea he toa whakatairitehia ngā tapeketanga piro</h4>"
         content1: Me whakataurite i ngā hipanga i te kēmu Reihi Mataono ki te raupapatanga
           e tika ana e ai ki te hātepe.
         questions:
@@ -242,23 +246,23 @@ mi-NZ:
         - text: "<h4>2)</h4>"
         - text: "<h4>3)</h4>"
         - text: "<h4>4)</h4>"
-        answers:
-        - text: "<h4>Tautuhia te whiwhinga piro o Kaitākaro 1 ki te 0</h4>"
-        - text: "<h4>Ka makaia te mataono e Kaitākaro 1</h4>"
-        - text: "<h4>Tāpiritia te uara o tā Kaitākaro 1 maka mataono ki te tapeketanga
-            piro</h4>"
-        - text: "<h4>Kia kitea he toa whakatairitehia ngā tapeketanga piro</h4>"
+        title: Te Whakataurite
       4-5 Algorithms Multi 1:
-        title: Kōwhiringa Maha
-        questions:
-        - text: Ka uaua rawa atu te whakaahua i te hātepe mō tēhea o ēnei tūemi?
         answers:
         - text: Te taitai i ō niho
         - text: Te tunu pihikete
         - text: Te hoko kai i tētahi rārangi hoko
         - text: Panana
+          correct: true
+        questions:
+        - text: Ka uaua rawa atu te whakaahua i te hātepe mō tēhea o ēnei tūemi?
+        title: Kōwhiringa Maha
       4-5 Computational Thinking Match 1:
-        title: Te Whakataurite
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
         content1: Kua pūririkitia ēnei waka katoa. Me whakataurite i ia waka ki tōna
           rārangi pūririki.
         questions:
@@ -266,78 +270,81 @@ mi-NZ:
         - text: "<h3>Wīra/taha: 2<br/>Matapihi/taha: 1</h3>"
         - text: "<h3>Wīra/taha: 2<br/>Matapihi/taha: 6</h3>"
         - text: "<h3>Wīra/taha: 3<br/>Matapihi/taha: 2</h3>"
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: Te Whakataurite
       4-5 Computational Thinking Multi 1:
-        title: Kōwhiringa Maha
-        questions:
-        - text: He taone nui a Seattle.<br/> He taone waenganui a Eugene<br/>He taone
-            iti a Hillview.
         answers:
         - text: He _____ _____ _____Seattle.
         - text: He taone _____ a_____.
+          correct: true
         - text: He _____ _____ a_____.
         - text: He taone _____ a Eugene.
-      4-5 Crowdsourcing Multi 1:
+        questions:
+        - text: He taone nui a Seattle.<br/> He taone waenganui a Eugene<br/>He taone
+            iti a Hillview.
         title: Kōwhiringa Maha
+      4-5 Crowdsourcing Multi 1:
+        answers:
+        - {}
+        - correct: true
         questions:
         - text: Ko tēhea o ēnei pikitia te whakaahuatanga pai o te mahi ā-ohu?
-        answers:
-        - {}
-        - {}
-      4-5 Crowdsourcing Multi 2:
         title: Kōwhiringa Maha
-        questions:
-        - text: Ko tēhea o ēnei ngohe ka tino whai take i te mahi ā-ohu?
+      4-5 Crowdsourcing Multi 2:
         answers:
         - text: Te whakanahanaha i tō rūma
+          correct: true
         - text: Te kai i tō wainene
         - text: Te paraehe i ō makawe
         - text: Te horoi i tō kanohi
-      4-5 Digital Footprint Multi 1:
-        title: Kōwhiringa Maha
         questions:
-        - text: Ko tēhea mōhiotanga kua tuhia ki raro iho nei ka pai noa iho ki te
-            tiri ki te ipurangi?
+        - text: Ko tēhea o ēnei ngohe ka tino whai take i te mahi ā-ohu?
+        title: Kōwhiringa Maha
+      4-5 Digital Footprint Multi 1:
         answers:
         - text: Tō huritau
         - text: Tō tino kai
+          correct: true
         - text: Tō wāhinoho
         - text: Te nama kāri tāwere a tō matua
-      4-5 Internet Multi 1:
+        questions:
+        - text: Ko tēhea mōhiotanga kua tuhia ki raro iho nei ka pai noa iho ki te
+            tiri ki te ipurangi?
         title: Kōwhiringa Maha
+      4-5 Internet Multi 1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
         questions:
         - text: Ka haria koe ki tēhea wāhitau IP mā te DNS i a koe ka ngana ki te
             takiuru ki code.org?
+        title: Kōwhiringa Maha
+      4-5 Internet Multi 2:
         answers:
         - {}
+        - correct: true
         - {}
         - {}
-        - {}
-      4-5 Internet Multi 2:
-        title: Kōwhiringa Maha
         questions:
         - text: Kei tēhea pae tukutuku koe mēnā kua tukuna koe e te DNS ki te whārangi
             koinei tana wāhitau IP 100.42.50.110?
+        title: Kōwhiringa Maha
+      4-5 Songwriting Multi 1:
         answers:
         - {}
+        - correct: true
         - {}
         - {}
-        - {}
-      4-5 Songwriting Multi 1:
-        title: Kōwhiringa Maha
         questions:
         - {}
+        title: Kōwhiringa Maha
+      4-5 Suncatchers Match 1:
         answers:
         - {}
         - {}
         - {}
         - {}
-      4-5 Suncatchers Match 1:
-        title: Te Whakataurite
         content1: Mā te whakamahi i te rōpū pūkenga kua whakaratoa me whakataurite
           i te papatono ki tōna kupu.
         questions:
@@ -345,1328 +352,1510 @@ mi-NZ:
         - {}
         - {}
         - {}
+        title: Te Whakataurite
+      4-5 Suncatchers Multi 1:
         answers:
         - {}
+        - correct: true
         - {}
-        - {}
-        - {}
-      4-5 Suncatchers Multi 1:
-        title: Kōwhiringa Maha
         questions:
         - text: Ko ēhea o ngā papatono kei raro iho nei<em>kāore e</em>hanga i te
             raupapatanga ōrite rawa ki tērā o te Papatono 1?
+        title: Kōwhiringa Maha
+      4-5 artist loops multi 1:
         answers:
         - {}
+        - correct: true
         - {}
         - {}
-      4-5 artist loops multi 1:
-        title: Ngā Koromeke Rehetoi Kōwhiringa Maha
         questions:
         - text: Mā ēhea paraka te hoahoatanga e waihanga?
+        title: Ngā Koromeke Rehetoi Kōwhiringa Maha
+      4-5 artist multi 1:
         answers:
         - {}
+        - correct: true
         - {}
         - {}
-        - {}
-      4-5 artist multi 1:
-        title: Rehetoi Kōwhiringa Maha
         questions:
         - text: Mā ēhea paraka tētahi tapawhā roa, 100 te paenga, e waihanga?
+        title: Rehetoi Kōwhiringa Maha
+      4-5 artist multi 2:
         answers:
         - {}
         - {}
+        - correct: true
         - {}
-        - {}
-      4-5 artist multi 2:
-        title: Rehetoi Kōwhiringa Maha
         questions:
         - text: He hangarite tēhea tānga?
+        title: Rehetoi Kōwhiringa Maha
+      4-5 bee conditionals multi 1:
         answers:
         - {}
         - {}
+        - correct: true
         - {}
-        - {}
-      4-5 bee conditionals multi 1:
-        title: Herenga Pī Kōwhiringa Maha
         questions:
         - text: Kōwhiria ngā paraka whai take.
+        title: Herenga Pī Kōwhiringa Maha
+      4-5 bee debug multi 1:
         answers:
         - {}
+        - correct: true
         - {}
         - {}
-        - {}
-      4-5 bee debug multi 1:
-        title: Patuiro Pī Kōwhiringa Maha
         questions:
         - text: Ko tēhea putanga o te taumahi ka tutuki ina whakamahia?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: Patuiro Pī Kōwhiringa Maha
       4-5 bee loops multi 1:
-        title: Ngā Koromeke Pī Kōwhiringa Maha
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
         questions:
         - text: Ko ēhea paraka ka whakaoti i te panga?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: Ngā Koromeke Pī Kōwhiringa Maha
       4-5 maze conditionals multi 1:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: Mā ēhea paraka tēnei panga e whakaoti?
         title: Herenga Rīrapa Kōwhiringa Maha
-        questions:
-        - text: Mā ēhea paraka tēnei panga e whakaoti?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
       4-5 maze match 1:
-        title: Whakataurite Rīrapa
-        content1: Me whakataurite i ngā panga ki te paraka
-        pre_title: Ngā Tohutohu
-        questions:
-        - {}
-        - {}
-        - {}
         answers:
         - {}
         - {}
         - {}
+        content1: Me whakataurite i ngā panga ki te paraka
+        questions:
+        - {}
+        - {}
+        - {}
+        title: Whakataurite Rīrapa
       4-5 maze multi 1:
-        title: Rīrapa Kōwhiringa Maha
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
         questions:
         - text: Mā ēhea paraka tēnei panga e whakaoti?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      Begin planning your project:
-        title: taitara
+        title: Rīrapa Kōwhiringa Maha
       CSD Header Size MC:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       CSD Header Size MC_2018:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       CSD Header Size MC_2018_2019:
         answers:
         - {}
+        - correct: true
         - {}
         - {}
-        - {}
-      CSD U2 Design Project:
-        title: taitara
-      CSD U2 Design Project_2018:
-        title: taitara
-      CSD U2 Design Project_2018_2019:
-        title: taitara
-      CSD U2 L2 Overview:
-        title: taitara
-      CSD U2 L3 Overview:
-        title: taitara
-      CSD U2 L4 Overview:
-        title: taitara
-      CSD U2 L5 Overview:
-        title: taitara
-      CSD U2 L6 Overview:
-        title: taitara
-      CSD U2 expand project:
-        title: taitara
-      CSD U2 expand project_2018:
-        title: taitara
-      CSD U2 expand project_2018_2019:
-        title: taitara
       CSD U2 image debug match:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U2 lists match:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U2 lists match_2018:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U2 lists match_2018_2019:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U3 - conditionals - Matching:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U3 - conditionals - Matching_2018:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U3 - conditionals - Matching_2018_2019:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U3 Boolean MC:
-        title: taitara
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
         questions:
         - {}
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: taitara
       CSD U3 Boolean MC_2018:
-        title: taitara
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
         questions:
         - {}
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: taitara
       CSD U3 Boolean MC_2018_2019:
-        title: taitara
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
         questions:
         - {}
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: taitara
       CSD U3 Functions Prediction define first:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Functions Prediction define first_2018:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Functions Prediction define first_2018_2019:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Keypress Matching:
-        questions:
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
       CSD U3 Keypress Matching_2018:
-        questions:
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
       CSD U3 Keypress Matching_2018_2019:
-        questions:
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
       CSD U3 Sprite Movement Predict Multi:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       CSD U3 Sprite Movement Predict Multi_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       CSD U3 Sprite Movement Predict Multi_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       CSD U3 Sprites intro predict multi:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       CSD U3 Sprites intro predict multi_2018:
-        questions:
-        - {}
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       CSD U3 Sprites intro predict multi_2018_2019:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
         questions:
         - {}
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      CSD U3 combining rep:
-        title: taitara
-      CSD U3 combining rep_2018:
-        title: taitara
-      CSD U3 combining rep_2018_2019:
-        title: taitara
       CSD U3 drawSprites placement match:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
       CSD U3 drawSprites placement match_2019:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
         - {}
         - {}
         - {}
         - {}
-      CSD U5 Encryption 1:
-        title: taitara
-      CSD U5 Encryption 1_2018:
-        title: taitara
-      CSD U5 Encryption 1_2018_2019:
-        title: taitara
-      CSD U5 L13 SFLP Interpreting Data:
-        title: taitara
-      CSD U5 data visualization:
-        title: taitara
-      CSD U5 data visualization_2018:
-        title: taitara
-      CSD U5 data visualization_2018_2019:
-        title: taitara
-      CSD U5 student record:
-        title: taitara
-      CSD U5 student record_2018:
-        title: taitara
-      CSD U5 student record_2018_2019:
-        title: taitara
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
       CSD U6 array multi:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - correct: true
+        questions:
         - {}
       CSD U6 array multi_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - correct: true
+        questions:
         - {}
       CSD U6 array multi_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - correct: true
+        questions:
         - {}
       CSD U6 setProperty predict multi:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - correct: true
+        questions:
         - {}
       CSD U6 setProperty predict multi_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - correct: true
+        questions:
         - {}
-      Internet Simulator Setup 2:
-        title: taitara
+      CSD U6 setProperty predict multi_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
       K-1 Artist 1 Multi 1:
-        title: Kōwhiringa Maha
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
         questions:
         - text: Mā ēhea paraka tēnei panga e whakaoti?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      K-1 Artist 1 Multi 2:
         title: Kōwhiringa Maha
+      K-1 Artist 1 Multi 2:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
         questions:
         - text: Mā ēhea paraka te tapawhā e tā?
+        title: Kōwhiringa Maha
+      K-1 Artist 2 Match 2:
         answers:
         - {}
         - {}
         - {}
         - {}
-      K-1 Artist 2 Match 2:
-        title: Te Whakataurite
         content2: Whakatauritea ngā āhua i runga i te momo.
         questions:
         - {}
         - {}
         - {}
         - {}
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      K-1 Bee 1 Multi 1:
-        title: Kōwhiringa Maha
-        questions:
-        - text: E hia katoa ngā waireka kei tēnei?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      K-1 Bee 1 Multi 2:
-        title: Kōwhiringa Maha
-        questions:
-        - text: E hia katoa ngā waireka kei tēnei?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      K-1 Bee Loops Match 1:
         title: Te Whakataurite
+      K-1 Bee 1 Multi 1:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - text: E hia katoa ngā waireka kei tēnei?
+        title: Kōwhiringa Maha
+      K-1 Bee 1 Multi 2:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - text: E hia katoa ngā waireka kei tēnei?
+        title: Kōwhiringa Maha
+      K-1 Bee Loops Match 1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
         content2: Whakatauritea ngā paraka
         questions:
         - {}
         - {}
         - {}
         - {}
+        title: Te Whakataurite
+      K-1 Big Event Match 1:
         answers:
         - {}
         - {}
         - {}
-        - {}
-      K-1 Big Event Match 1:
-        title: Te Whakataurite
         content2: Whakatauritea te pahekotanga pātene ki ngā nekehanga kanikani.
         questions:
         - {}
         - {}
         - {}
+        title: Te Whakataurite
+      K-1 Digital Footprint Multi 1:
         answers:
         - {}
         - {}
-        - {}
-      K-1 Digital Footprint Multi 1:
-        title: Kōwhiringa Maha
+        - correct: true
         questions:
         - text: Kei tēhea kararehe te tapuwae matihiko nā reira ka <strong>mōrearea</strong>tana
             noho?
-        answers:
-        - {}
-        - {}
-        - {}
-      K-1 Getting Loopy Multi 1:
         title: Kōwhiringa Maha
+      K-1 Getting Loopy Multi 1:
+        answers:
+        - correct: true
+        - {}
+        - {}
         questions:
         - text: Ka pēhea tō whakamāmā i tēnei raupapatanga me ngā koromeke?
+        title: Kōwhiringa Maha
+      K-1 Happy Maps Multi 1:
         answers:
         - {}
+        - correct: true
         - {}
         - {}
-      K-1 Happy Maps Multi 1:
-        title: Kōwhiringa Maha
         questions:
         - text: Mā tēhea pere e tae atu ai a Flurb ki te kura?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      K-1 Keep it Private Multi 1:
         title: Kōwhiringa Maha
+      K-1 Keep it Private Multi 1:
+        answers:
+        - correct: true
+        - {}
+        - {}
         questions:
         - text: Ko ēhea mōhiohio me <strong>kaua</strong>koe e tiri ā-tuihono?
-        answers:
-        - {}
-        - {}
-        - {}
-      K-1 Maze Debugging Multi 1:
         title: Kōwhiringa Maha
+      K-1 Maze Debugging Multi 1:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
         questions:
         - text: Ko tēhea kōwhiringa te paraka whakamutunga?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      K-1 Maze Loops Multi 1:
         title: Kōwhiringa Maha
+      K-1 Maze Loops Multi 1:
+        answers:
+        - correct: true
+        - {}
+        - {}
         questions:
         - text: Ko tēhea te paraka tōai he ōrite?
+        title: Kōwhiringa Maha
+      K-1 Maze Loops Multi 2:
         answers:
         - {}
         - {}
-        - {}
-      K-1 Maze Loops Multi 2:
-        title: Kōwhiringa Maha
+        - correct: true
         questions:
         - text: Tīpakohia te paraka tōai tika.
+        title: Kōwhiringa Maha
+      K-1 Maze Match 1:
         answers:
         - {}
         - {}
         - {}
-      K-1 Maze Match 1:
-        title: Te Whakataurite
+        - {}
         content2: Whakatauritea ngā panga me ngā paraka
-        pre_title: Ngā Tohutohu
         questions:
         - {}
         - {}
         - {}
         - {}
+        title: Te Whakataurite
+      K-1 Maze Multiple Choice 2:
         answers:
         - {}
         - {}
+        - correct: true
         - {}
-        - {}
-      K-1 Maze Multiple Choice 2:
-        title: Rīrapa
         questions:
         - text: Mā tēhea whakautu e tutuki ai tēnei taumata?
+        title: Rīrapa
+      K-1 Move It Multi 1:
         answers:
         - {}
+        - correct: true
         - {}
         - {}
-        - {}
-      K-1 Move It Multi 1:
-        title: Kōwhiringa Maha
         questions:
         - text: Mā tēhea hātepe a Flurb e tae atu ai ngā putiputi?
+        title: Kōwhiringa Maha
+      K-1 Plant a Seed Multi 1:
         answers:
         - {}
         - {}
-        - {}
-        - {}
-      K-1 Plant a Seed Multi 1:
-        title: Kōwhiringa Maha
+        - correct: true
         questions:
         - text: E tika ana kia noho ko tēhea hipanga i te tīmatanga o tēnei hātepe?
+        title: Kōwhiringa Maha
+      K-1 Plant a Seed Multi 2:
         answers:
         - {}
+        - correct: true
         - {}
-        - {}
-      K-1 Plant a Seed Multi 2:
-        title: Kōwhiringa Maha
         questions:
         - text: E tika ana kia whakakīia te āputa me tēhea hipanga i tēnei hātepe?
+        title: Kōwhiringa Maha
+      K-1 Word Search Multi 1:
         answers:
         - {}
+        - correct: true
         - {}
-        - {}
-      K-1 Word Search Multi 1:
-        title: Kōwhiringa Maha
         questions:
         - text: Mā ēhea paraka te kupu "MOVE" e tātaki?
+        title: Kōwhiringa Maha
+      K-1 Word Search Multi 3:
         answers:
         - {}
+        - correct: true
         - {}
-        - {}
-      K-1 Word Search Multi 3:
-        title: Kōwhiringa Maha
         questions:
         - text: Ka tātakina tēhea kupu?
+        title: Kōwhiringa Maha
+      behaviors 1 predict:
         answers:
         - {}
+        - correct: true
         - {}
         - {}
-      Multi-Screen Apps:
-        title: taitara
-      New Challenge Introduction:
-        title: taitara
-      OPD-K5 Stage3aGo:
-        title: taitara
-      Prepare for your presentation:
-        title: taitara
-      behaviors 1 predict:
         questions:
         - {}
+      behaviors 1 predict_2020:
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       behaviors 4 predict:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
+        - {}
+      behaviors 4 predict_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
         - {}
       courseC_multi_artist_prog6_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       courseC_multi_artist_prog6_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       courseC_multi_artist_prog6_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
+        - {}
+      courseC_multi_artist_prog6_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
         - {}
       courseC_multi_harvester_loops11_predict1:
-        questions:
-        - {}
         answers:
+        - text: '4'
+        - text: '12'
+          correct: true
+        - text: '15'
         - {}
-        - {}
-        - {}
+        questions:
         - {}
       courseC_multi_harvester_loops11_predict1_2018:
-        questions:
-        - {}
         answers:
+        - text: '4'
+        - text: '12'
+          correct: true
+        - text: '15'
         - {}
-        - {}
-        - {}
+        questions:
         - {}
       courseC_multi_harvester_loops11_predict1_2018_2019:
+        answers:
+        - text: '4'
+        - text: '12'
+          correct: true
+        - text: '15'
+        - {}
         questions:
         - {}
+      courseC_multi_harvester_loops11_predict1_2018_2019_2020:
         answers:
+        - text: '4'
+        - text: '12'
+          correct: true
+        - text: '15'
         - {}
-        - {}
-        - {}
+        questions:
         - {}
       courseC_multi_maze_debugging8_predict1:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseC_multi_maze_debugging8_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseC_multi_maze_debugging8_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
+        - {}
+      courseC_multi_maze_debugging8_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - correct: true
+        - {}
+        questions:
         - {}
       courseC_multi_maze_programming8_predict1:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseC_multi_maze_programming8_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseC_multi_maze_programming8_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
+        - {}
+      courseC_multi_maze_programming8_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
         - {}
       courseC_multi_starWars_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       courseC_multi_starWars_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       courseC_multi_starWars_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
+        - {}
+      courseC_multi_starWars_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
         - {}
       courseC_multi_starWars_predict2:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseC_multi_starWars_predict2_2018:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseC_multi_starWars_predict2_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
+        - {}
+      courseC_multi_starWars_predict2_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
         - {}
       courseD_multi_artist_binary8_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - correct: true
+        questions:
         - {}
       courseD_multi_artist_binary8_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - correct: true
+        questions:
         - {}
       courseD_multi_artist_binary8_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - correct: true
+        questions:
+        - {}
+      courseD_multi_artist_binary8_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1:
-        questions:
-        - {}
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1_2018:
-        questions:
-        - {}
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1_2018_2019:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
         questions:
         - {}
+      courseD_multi_artist_nestedLoops9_predict1_2018_2019_2020:
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       courseD_multi_bee_conditionals1_predict1:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseD_multi_bee_conditionals1_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseD_multi_bee_conditionals1_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_copy:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
         - {}
       courseD_multi_bee_conditionals7_predict2:
-        questions:
-        - {}
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       courseD_multi_bee_conditionals7_predict2_2018:
-        questions:
-        - {}
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       courseD_multi_bee_conditionals7_predict2_2018_2019:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
         questions:
         - {}
+      courseD_multi_bee_conditionals7_predict2_2018_2019_2020:
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       courseD_multi_bee_nestedLoops2_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       courseD_multi_bee_nestedLoops2_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       courseD_multi_bee_nestedLoops2_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops2_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict2:
-        questions:
-        - {}
         answers:
+        - text: '4'
+        - text: '8'
+          correct: true
+        - text: '12'
         - {}
-        - {}
-        - {}
+        questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict2_2018:
-        questions:
-        - {}
         answers:
+        - text: '4'
+        - text: '8'
+          correct: true
+        - text: '12'
         - {}
-        - {}
-        - {}
+        questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict2_2018_2019:
+        answers:
+        - text: '4'
+        - text: '8'
+          correct: true
+        - text: '12'
+        - {}
         questions:
         - {}
+      courseD_multi_bee_nestedLoops9_predict2_2018_2019_2020:
         answers:
+        - text: '4'
+        - text: '8'
+          correct: true
+        - text: '12'
         - {}
-        - {}
-        - {}
+        questions:
         - {}
       courseD_multi_collector_debugging10_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       courseD_multi_farmer_condLoops9_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       courseD_multi_farmer_condLoops9_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       courseD_multi_farmer_condLoops9_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
+        - {}
+      courseD_multi_farmer_condLoops9_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
         - {}
       courseD_multi_farmer_ramp13:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseD_multi_farmer_while10_predict2:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseD_multi_farmer_while10_predict2_2018:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseD_multi_farmer_while10_predict2_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while10_predict2_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
         - {}
       courseD_multi_farmer_while4_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       courseD_multi_farmer_while4_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       courseD_multi_farmer_while4_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while4_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
         - {}
       courseD_multi_maze_until10_predict2:
-        questions:
-        - {}
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       courseD_multi_maze_until10_predict2_2018:
-        questions:
-        - {}
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       courseD_multi_maze_until10_predict2_2018_2019:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
         questions:
         - {}
+      courseD_multi_maze_until10_predict2_2018_2019_2020:
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       courseD_multi_maze_until2_predict1:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseD_multi_maze_until2_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseD_multi_maze_until2_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
+        - {}
+      courseD_multi_maze_until2_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
         - {}
       courseD_multi_scrat_predict1:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseE_multi_bee_functions_predict1:
-        questions:
-        - {}
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       courseE_multi_farmer_functions11_predict:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - correct: true
+        questions:
         - {}
       courseE_multi_farmer_functions11_predict_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       courseE_multi_farmer_functions11_predict_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
+        - {}
+      courseE_multi_farmer_functions11_predict_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
         - {}
       courseE_prediction_artistFunction1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - correct: true
+        questions:
         - {}
       courseE_prediction_artistFunction1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - correct: true
+        questions:
         - {}
       courseE_prediction_artistFunction1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - correct: true
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_copy:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
         - {}
       courseF_bee_variables_8a_2018:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseF_bee_variables_8a_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
+        - {}
+      courseF_bee_variables_8a_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
         - {}
       courseF_multi_artist_for10_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       courseF_multi_artist_for10_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       courseF_multi_artist_for10_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
+        - {}
+      courseF_multi_artist_for10_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
         - {}
       courseF_multi_artist_fwp2_predict1:
-        questions:
-        - {}
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       courseF_multi_artist_variables3a_predict1:
-        questions:
-        - {}
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       courseF_multi_artist_variables3a_predict1_2018:
-        questions:
-        - {}
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       courseF_multi_artist_variables3a_predict1_2018_2019:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
         questions:
         - {}
+      courseF_multi_artist_variables3a_predict1_2018_2019_2020:
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       courseF_multi_bee_conditionals1_predict1:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseF_multi_bee_conditionals7_predict2:
-        questions:
-        - {}
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       courseF_multi_bee_for3_predict1:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseF_multi_bee_for3_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseF_multi_bee_for3_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
+        - {}
+      courseF_multi_bee_for3_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
         - {}
       courseF_multi_bee_fwp9_predict1:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseF_multi_playlab_variables4c_predictive1:
-        questions:
-        - {}
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       coursee_prediction_artistfunction2:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       coursee_prediction_artistfunction2_2018:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       coursee_prediction_artistfunction2_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
+        - {}
+      coursee_prediction_artistfunction2_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
         - {}
       grade2_multi_collector_A_predict1:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       grade2_multi_collector_A_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       grade2_multi_collector_A_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
+        - {}
+      grade2_multi_collector_A_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
         - {}

@@ -1,0 +1,61 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2020-03-17T21:25:43.000Z",
+  "level_num": "custom",
+  "user_id": 13,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "onEvent": {
+        "params": [
+          "\"id\"",
+          "\"click\"",
+          "function(event){\n console.log('key is: '+event.key); \n}"
+        ]
+      },
+      "console.log": null
+    },
+    "edit_code": true,
+    "embed": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "free_play": "true",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "true",
+    "execute_palette_apis_only": "false",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "false",
+    "beginner_mode": "false",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "debugger_disabled": "false",
+    "slider_speed": "1.0",
+    "long_instructions": "# *keypress*\r\n\r\nIf we want to add keyboard input to our apps we'll need to learn about how key events work in App Lab. To start let's take a closer look at the `onEvent` block. We already know that event handlers call a function. What we'll see now is that they also **pass a parameter**. The default name for this parameter is simply `event` but you can change it to be anything you like. \r\n\r\nThe `event` parameter is a more complex kind of variable (called an \"Object\") that we'll learn more about later. For now just know that for both mouse and keyboard events, the event parameter passes more information about the event. In the case of key events **you can find out the key(s) that were actually pressed by using `event.key`**.\r\n\r\n# Do This:\r\n\r\n* Drag out an `onEvent` block.\r\n* Change the ID to `screen1` and the event type to `keypress`.  \r\n\r\n<img src=\"https://images.code.org/537b5bbef3db62c90155528e6753a00a-image-1447175732347.gif\" style=\"width: 450px\">\r\n\r\n* Once you hit **Run**, **click on the screen so that the keystrokes will register**.\r\n* **Type different combinations of keys** and check out the results in the console. Does every key combination print to the console? Some keys to try:\r\n    * Letter keys\r\n    * Number keys\r\n    * Shift key\r\n    * Hold shift and letter\r\n    * Delete key\r\n    * Left and right arrow keys\r\n    * Press and hold a key",
+    "short_instructions": "Set up an event handler to respond to keypress events, and display event.key in the console. Hit keys on the keyboard to see what happens. (Click to see full instructions)",
+    "encrypted_examples": "I2uFC4G7MZAq8K3/n3N38KhQ40IX3V6VgiKu/vQTgSmzzv81Psn3k/z9zLBH\nv2w7\n",
+    "parent_level_id": 17364,
+    "name_suffix": "_virtual",
+    "show_debug_watch": "true",
+    "preload_asset_list": null
+  },
+  "published": true
+}]]></config>
+  <blocks/>
+</Applab>
