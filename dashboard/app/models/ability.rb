@@ -193,12 +193,15 @@ class Ability
         user.persisted? || !script.login_required?
       end
     end
-    can :read, ScriptLevel do |script_level|
+    can :read, ScriptLevel do |script_level, params|
       script = script_level.script
       if script.pilot?
         script.has_pilot_access?(user)
       else
-        user.persisted? || !script.login_required?
+        # login is required if this script always requires it or if request
+        # params were passed to authorize! and includes login_required=true
+        login_required = script.login_required? || (!params.nil? && params[:login_required] == "true")
+        user.persisted? || !login_required
       end
     end
 
