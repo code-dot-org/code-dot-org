@@ -21,7 +21,17 @@ describe('LessonOverview', () => {
         },
         unit: {
           displayName: 'Unit 1',
-          link: '/s/unit-1'
+          link: '/s/unit-1',
+          lessons: [
+            {
+              displayName: 'Lesson 1',
+              link: '/lessons/1'
+            },
+            {
+              displayName: 'Lesson 2',
+              link: '/lessons/2'
+            }
+          ]
         },
         displayName: 'Lesson Name',
         overview: 'Lesson Overview',
@@ -42,6 +52,10 @@ describe('LessonOverview', () => {
     expect(navLinks.at(0).contains('Course 1')).to.be.true;
     expect(navLinks.at(1).props().href).to.contain('/s/unit-1');
     expect(navLinks.at(1).contains('Unit 1')).to.be.true;
+
+    expect(wrapper.find('DropdownButton').length).to.equal(1);
+    const dropdown = wrapper.find('DropdownButton');
+    expect(dropdown.find('a').length).to.equal(2);
 
     expect(wrapper.contains('Lesson Name'), 'Lesson Name').to.be.true;
 
