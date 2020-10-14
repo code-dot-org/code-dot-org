@@ -10,6 +10,8 @@ import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import styleConstants from '@cdo/apps/styleConstants';
 import color from '@cdo/apps/util/color';
+import Button from '@cdo/apps/templates/Button';
+import DropdownButton from '@cdo/apps/templates/DropdownButton';
 
 const styles = {
   frontPage: {
@@ -33,7 +35,7 @@ const styles = {
     margin: '0px 5px'
   },
   dropdown: {
-    color: color.purple
+    display: 'inline-block'
   }
 };
 
@@ -85,13 +87,18 @@ class LessonOverview extends Component {
             {lesson.unit.displayName}
           </a>
         </div>
-        <select style={styles.dropdown} onChange={this.navigateToLesson}>
-          {lesson.unit.lessons.map((lesson, index) => (
-            <option key={`lesson-${index + 1}`} value={lesson.link}>
-              {`${index + 1} ${lesson.displayName}`}
-            </option>
-          ))}
-        </select>
+        <div style={styles.dropdown}>
+          <DropdownButton
+            text={`Other Lessons in ${lesson.unit.displayName}`}
+            color={Button.ButtonColor.purple}
+          >
+            {lesson.unit.lessons.map((lesson, index) => (
+              <a key={index} href={lesson.link} target="_blank">
+                {`${index + 1} ${lesson.displayName}`}
+              </a>
+            ))}
+          </DropdownButton>
+        </div>
         {isSignedIn && (
           <Announcements
             announcements={announcements}
