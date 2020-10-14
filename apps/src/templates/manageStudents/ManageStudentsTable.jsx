@@ -17,7 +17,6 @@ import ManageStudentsGenderCell from './ManageStudentsGenderCell';
 import ManageStudentsSharingCell from './ManageStudentsSharingCell';
 import ManageStudentsActionsCell from './ManageStudentsActionsCell';
 import ManageStudentsActionsHeaderCell from './ManageStudentsActionsHeaderCell';
-import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import SharingControlActionsHeaderCell from './SharingControlActionsHeaderCell';
 import ManageStudentsLoginInfo from './ManageStudentsLoginInfo';
 import NoSectionCodeDialog from './NoSectionCodeDialog';
@@ -77,9 +76,6 @@ const styles = {
     color: color.teal,
     fontFamily: '"Gotham 7r", sans-serif',
     cursor: 'copy'
-  },
-  dialog: {
-    padding: '20px'
   }
 };
 
@@ -171,7 +167,7 @@ class ManageStudentsTable extends Component {
       }
     },
     showCopiedMsg: false,
-    sectionCodeDialog: false
+    showSectionCodeDialog: false
   };
 
   renderTransferSuccessNotification = () => {
@@ -625,10 +621,10 @@ class ManageStudentsTable extends Component {
   };
 
   showSectionCodeDialog = () => {
-    this.setState({sectionCodeDialog: true});
+    this.setState({showSectionCodeDialog: true});
   };
 
-  close = () => this.setState({sectionCodeDialog: false});
+  close = () => this.setState({showSectionCodeDialog: false});
 
   render() {
     // Define a sorting transform that can be applied to each column
@@ -750,28 +746,19 @@ class ManageStudentsTable extends Component {
           {noSectionCode.includes(loginType) && (
             <div style={styles.sectionCodeBox}>
               {i18n.sectionCodeWithColon()}
-              <strong>
+              <span>
                 {` ${i18n.notApplicable()} `}
                 <a onClick={() => this.showSectionCodeDialog()}>
                   {i18n.whyWithQuestionMark()}
                 </a>
-              </strong>
-            </div>
-          )}
-          <div>
-            <BaseDialog
-              useUpdatedStyles
-              fixedWidth={800}
-              style={styles.dialog}
-              isOpen={this.state.sectionCodeDialog}
-              handleClose={this.close}
-            >
+              </span>
               <NoSectionCodeDialog
                 typeClassroom={loginType}
                 handleClose={this.close}
+                isOpen={this.state.showSectionCodeDialog}
               />
-            </BaseDialog>
-          </div>
+            </div>
+          )}
         </div>
         <Table.Provider
           columns={columns}
