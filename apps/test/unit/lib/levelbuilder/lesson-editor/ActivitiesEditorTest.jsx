@@ -41,7 +41,7 @@ describe('ActivitiesEditor', () => {
 
     const button = wrapper.find('button');
     expect(button.text()).to.include('Activity');
-    button.simulate('click');
+    button.simulate('mouseDown');
     expect(addActivity).to.have.been.calledOnce;
   });
 });
