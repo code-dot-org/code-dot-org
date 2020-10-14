@@ -118,12 +118,41 @@ module Cdo
       site_url('hourofcode.com', path, scheme)
     end
 
+    # Get a list of all languages for which we want to link to a localized
+    # version of CurriculumBuilder. This list is distinct from the list of
+    # languages officially supported by CurriculumBuilder in that there are
+    # some languages which we do not update regularly that we'd still like to
+    # link to. If in the future we (hopefully) move away from this practice of
+    # one-off syncs, we can probably get rid of this helper method.
+    def curriculum_languages
+      cache.fetch("curriculum_languages") do
+        supported_languages = Set[]
+
+        # This is the list of languages officially supported by CurriculumBuilder
+        curriculumbuilder_languages = DCDO.get("curriculumbuilder_languages", []).map(&:first)
+        supported_languages.merge(curriculumbuilder_languages)
+
+        # This is a list of additional languages we want to support. These are
+        # languages for which there does exist content in that language on
+        # curriculum.code.org, but which aren't regularly synced.
+        # Be particularly cautious about adding languages to this list; not only is
+        # the content for that language not updated regularly, but new content is not
+        # added automatically. This means if you try to link to a recently-added
+        # lesson plan, it may not be there for any of these languages.
+        additional_languages = [
+          'de-de', 'id-id', 'ko-kr', 'tr-tr', 'zh-cn', 'zh-tw'
+        ]
+        supported_languages.merge(additional_languages)
+        supported_languages
+      end
+    end
+
     def curriculum_url(locale, path = '')
       locale = locale.downcase.to_s
-      uri = URI("https://curriculum.code.org")
-      path = File.join(locale, path) if curriculum_languages.include? locale
-      uri += path
-      uri.to_s
+      domain = "https://curriculum.code.org"
+      curriculum_languages.include?(locale) ?
+        File.join(domain, locale, path) :
+        File.join(domain, path)
     end
 
     def dir(*dirs)
