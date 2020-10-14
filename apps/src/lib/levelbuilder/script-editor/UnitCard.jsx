@@ -166,7 +166,7 @@ class UnitCard extends Component {
         s.push(`level_concept_difficulty '${escape(level.conceptDifficulty)}'`);
       }
     }
-    let l = `level '${escape(key)}'`;
+    let l = level.bonus ? `bonus '${escape(key)}'` : `level '${escape(key)}'`;
     if (level.progression) {
       l += `, progression: '${escape(level.progression)}'`;
     }
