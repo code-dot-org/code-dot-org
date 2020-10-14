@@ -1,77 +1,98 @@
 ---
-title: Инструкция для родителей
+title: Hour of Code How-to Guide for parents
 ---
-
-{{ signup_button }}
 
 # How to do an Hour of Code with your child
 
-### Complete an Hour of Code at home or volunteer to bring it to your child’s classroom!
+Участие в Часе кода – простой и занимательный способ познакомить вашего ребенка с информатикой, возможно впервые. Not only is computer science foundational to all fields of study, but [recent studies show](https://medium.com/@codeorg/cs-helps-students-outperform-in-school-college-and-workplace-66dd64a69536): children who study computer science perform better in other subjects, excel at problem-solving, and are <font color="00adbc"><b>17% more likely to enroll in college</b></font>.
+
+Вы можете присоединиться к десяткам миллионам школьников всего мира, участвующим в этом глобальном событии. Вместе с вами мы можем вдохновить детей на учебу, преодоление стереотипов и помочь им открыть для себя новые интересы. Отличная новость: у вас уже есть все необходимое, чтобы провести Час кода у себя дома!
+
+[![](/images/fit-600/Marketing/mother-helping-her-daughter-use-a-laptop-4260325.jpg)]({{ urls/learn }})
+
+<h3>Что мне нужно, чтобы начать?</h3>
+
+Провести Час кода легко даже для начинающих. Вам не нужно иметь опыт в области информатики или педагогики, чтобы организовать занимательное и веселое обучение ваших детей.
+
+You can try the Hour of Code with a computer, a tablet, a smartphone, or completely unplugged! Here's how to get started.
+
+[<button>View PDF Guide</button>](https://hourofcode.com/files/HourofCode-Parent-How-To.pdf)
 
 * * *
 
-## 1) Посмотрите эту видео инструкцию <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+## 1) Ознакомьтесь с занятиями и пособиями.
 
-## 2) Choose a tutorial
+[![](/images/fit-600/tutorials.png)]({{ urls/learn }})
 
-We provide a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. [Try them out!]({{ urls/learn }})
+There are countless [Hour of Code activities](https://hourofcode.com/us/learn) available to you if you’re working on a computer with internet access. Мы предлагаем вам заблаговременно рассмотреть различные варианты, чтобы помочь вашему ребенку выполнить его упражнения.
 
-**All Hour of Code tutorials are self-guided - allowing your child to work at their own pace and skill level**
+Все наши занятия соединяют в себе решение задач и развитие критического мышления с весельем и творчеством, при этом некоторые из них особенно популярны среди школьников:
 
-[![](/images/fit-700/tutorials.png)]({{ urls/learn }})
+- For the child who loves to play: [Minecraft](https://code.org/minecraft) or [Dance Party](https://code.org/dance)
+- For the child who loves Disney: [Star Wars](https://code.org/starwars), [Frozen](https://studio.code.org/s/frozen/stage/1/puzzle/1), or [Moana](https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C)
+- For the child who loves to learn: [AI for Oceans](https://code.org/oceans) or [Make Music with Scratch](https://scratch.mit.edu/projects/editor/?tutorial=music&utm_source=codeorg)
 
-## 3) Определите вашу потребность в оборудовании
+<h3>Не подходит техника или ее нет вообще?</h3>
 
-The best Hour of Code experience will be with Internet-connected computers. But you **don’t** need a computer. There are many activities that are "unplugged" and can be done without any technology at all. Test tutorials on your computer or device. Make sure they work properly on browsers with sound and video.
+If you’ll be using limited or no technology, you can filter [Hour of Code activities](https://hourofcode.com/us/learn) by selecting “No computers or devices” in the *Classroom technology* section.
 
-**Want to learn alongside your child?** Try [pair programming.](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) Computer science is social and collaborative.
+[![](/images/fit-500/Marketing/filtering-activities-hoc.jpg)]({{ urls/learn }})
 
-## 4) Start your Hour of Code with an inspiring video
+You can also check out these [short videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNcpfa4LtbaIl35gqir_5XUu) for more ideas on how to facilitate an unplugged activity at home!
 
-Стартуйте свой Час Кода вдохновляя вашего ребенка и рассказывая как компьютерные науки влияют на все стороны нашей жизни.
+## 2) Что следует подготовить заблаговременно
 
-**Покажите вдохновляющее видео:**
+Ознакомившись с учебниками, стоит проверить, как идут занятия на вашем устройстве, прежде чем дать их ребенку.
 
-- Оригинальное видео запуска Code.org, с участием Билла Гейтса, Марка Цукерберга, и звезды НБА Криса Боша ([1 минутная](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 минутная](https://www.youtube.com/watch?v=nKIu9yen5nc), и [9 минутная](https://www.youtube.com/watch?v=dU1xS07N-FA) версии).
-- The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A).
-- [Президент Обама призывает всех учеников изучать информатику](https://www.youtube.com/watch?v=6XvmhE1J9PY).
-- Find more inspirational [resources]({{ urls/inspire }}) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+[![](/images/fit-600/Marketing/father-and-children-looking-at-a-laptop-4260749.jpg)]({{ urls/learn }})
 
-Это нормально, если вы и ваш ребенок являются новичками в компьютерной науке. Вот некоторые идеи, как начать ваш Час Кода:
+<h3>У вас двое или несколько детей?</h3>
 
-- Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about saving lives, helping people, connecting people, etc.).
-- Составьте список вещей, немыслимых в повседневной жизни без программирования.
-- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
+Consider providing each of your children with headphones if they’ll be working on separate devices. That way, they’ll be able to play activities with sound without distracting each other.
 
-Хотите больше идей? Просмотрите наш [шаблон плана урока](/files/AfterschoolEducatorLessonPlanOutline.docx) с советами от опытных педагогов.
+If you’ll only be using one device, or simply want to make your Hour of Code more interactive, try [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). Программирование в парах способствует совместной работе детей. Сотрудничая, они помогают друг другу в решении задач. Также они увидят, что информатика социальна и сплачивает людей.
 
-## 5) Программируйте!
+<h3>Воодушевите детей! </h3>
 
-<img src="/images/fit-700/tutorial-short-link.png" />
+This is a great opportunity to add a new type of activity to your child’s day. You can extend the fun beyond one tutorial with these suggestions:
 
-Когда вы выбрали урок, который вы хотите пройти, вы можете сделать закладку в браузере, используя короткую ссылку на урок.
+- Show them an [inspirational video](https://www.youtube.com/playlist?list=PLzdnOPI1iJNcadqJAZnbDYShie4gLZQQJ) that features one of their favorite role models
+- Inspire them with a video on one of the [many careers](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP) that computer science skills can lead to
+- [Order some swag](https://store.code.org/)! Вы можете выбрать футболки, стикеры и даже временные татуировки. Раздайте эти вещи детям, чтобы воодушевить их, или приберегите к завершению Часа кода в качестве специальных призов. 
 
-**Когда ваш ребенок столкнулся с трудностями**
+<a href="https://store.code.org/" target="_blank"><img src="/images/fit-500/Marketing/hourofcodestore.jpg"></a>
 
-Было бы правильно ответить:
+## 3) Советы по ознакомлению вашего ребенка с информатикой
 
-- “Я не знаю. Давай разберемся вместе”
-- “Технология не всегда работает так, как мы хотим”
-- “Изучение программирования - это как изучение нового языка, вы не сразу станете говорить свободно.”
+It’s okay if both you and your child are brand new to computer science. Here are some ideas to introduce your Hour of Code activity and get you both thinking about CS:
 
-## 7) Отпразднуйте
+- Объясните как технологии воздействуют на нашу жизнь на конкретных примерах, которые могут заинтересовать вашего ребенка. Например, вы можете поговорить о медицине или о том, как люди виртуально связываются друг с другом. Also, check out [Code.org/CSforGood](https://code.org/csforgood) for suggested discussion questions.
+- Составьте вместе список повседневных вещей, для нормальной работы которых используются программы.
 
-[Print certificates]({{ urls/certificates }}) for your child (and yourself!).
+[![](/images/fit-600/Marketing/girl-sitting-on-sofa-while-using-tablet-computer-4144035.jpg)]({{ urls/learn }})
 
-Поделитесь фотографиями и видео о вашем Часе Кода в социальных медиа. Используйте хештеги #HourOfCode и @codeorg, чтобы мы тоже смогли отметить ваш успех!
+<h3>Have young women at home?</h3>
 
-Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code) if you still have questions.
+<a href="https://code.org/girls">Здесь приведены наши рекомендации</a>, которые помогут им заинтересоваться информатикой. **Pro-tip**: You can start just by telling them they’d be great at it!
 
-## Час Кода: а что дальше?
+<h3>Решайте задачи вместе</h3>
 
-The Hour of Code is just the first step in a journey to learn more about how technology works and how to create software applications. To continue this journey:
+Lastly, when your child comes across difficulties it's okay to respond: - “I don’t know. - "Давайте научимся этому вместе." - "Технология не всегда работает так, как мы хотим." - "Изучение программирования - это как изучение нового языка; вы не будете сразу свободно разговаривать."
 
-- Encourage your child to continue [to learn online]({{ urls/learn_beyond }}).
-- Help [promote]({{ urls/promote }}) computer science education in your child’s school district.
+Computer science is all about learning how to “debug” situations that didn’t turn out the way we thought they would. Together, you and your child can think of creative ways to solve the problem!
 
-{{ signup_button }}
+## 4) Не забудьте отметить событие!
+
+The Hour of Code is a global event, and your family deserves to celebrate. Here are some ways to make your Hour of Code extra special:
+
+- Print [Hour of Code Certificates](https://staging.code.org/certificates) that you award when your child completes their activity 
+- [Print stickers](https://staging.hourofcode.com/us/promote/resources#stickers) at home or [purchase them online](https://store.code.org/), as an added surprise. 
+- Share photos and videos of your at-home Hour of Code on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
+
+[![](/images/fit-600/Marketing/g8TUlHzF.jpeg)]({{ urls/learn }})
+
+<h2>Час Кода: а что дальше?</h2>
+
+Computer science doesn’t have to end with the Hour of Code! Хотя 90% родителей хотят, чтобы их дети изучали информатику, в большинстве школ ее пока не преподают. Чтобы помочь вам, наша программа обучения размещена в Интернете и доступ к ней всегда будет бесплатным. [Learn how](https://code.org/yourschool) to bring CS to your child’s school today.
+
+[<button>View PDF Guide</button>](https://hourofcode.com/files/HourofCode-Parent-How-To.pdf)

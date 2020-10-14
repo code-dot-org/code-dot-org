@@ -91,11 +91,7 @@
     .fact
       %i.fa.fa-circle.fa-1{style: "font-size: 14px;"}
       &nbsp;
-      = "#{data[:percent_ap_female_i]}% of them were female"
-    .fact
-      %i.fa.fa-circle.fa-1{style: "font-size: 14px;"}
-      &nbsp;
-      = "#{format_integer_with_commas(data[:total_ap_students_color_i])} were underrepresented minorities"
+      = "#{data[:percent_ap_female_i]}% of them were taken by female students"
 
 .state-buttons
   -if ! state.nil_or_empty? && File.exists?(pegasus_dir("sites.v3/code.org/public/advocacy/state-facts/#{state}.pdf.fetch"))

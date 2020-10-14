@@ -4,7 +4,7 @@
       "AutoScalingGroupName":"${aws:AutoScalingGroupName}",
       "InstanceId":"${aws:InstanceId}"
     },
-    "aggregation_dimensions": [["AutoScalingGroupName"]],
+    "aggregation_dimensions": [["AutoScalingGroupName"], ["Environment"]],
     "metrics_collected": {
       "statsd": {},
       "cpu": {

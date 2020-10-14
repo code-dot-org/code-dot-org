@@ -1,0 +1,26 @@
+<Pixelation>
+  <config><![CDATA[{
+  "game_id": 44,
+  "created_at": "2020-09-10T19:49:51.000Z",
+  "level_num": "custom",
+  "user_id": 106,
+  "properties": {
+    "long_instructions": "# Do This\r\n\r\nNow it's your turn. Draw anything you want in the pixelation widget. Feel free to change the width and height of your image if you wish.\r\n\r\n**Note: This level is the same as Unit 5, Lesson 4 - Level 6 in Code Studio.**",
+    "instructions_important": "false",
+    "display_name": "Black and White Pixelation Widget",
+    "version": "1",
+    "hex": "false",
+    "skip_dialog": true,
+    "href": "pixelation/pixelation.html",
+    "short_instructions": "Draw anything you like",
+    "hide_encoding_controls": "true",
+    "v1_hide_sliders": "false",
+    "parent_level_id": 20319,
+    "name_suffix": "_2020",
+    "encrypted": "false"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2020-09-10 19:49:58 +0000\",\"changed\":[],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2020-10-02 18:47:30 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"}]"
+}]]></config>
+</Pixelation>

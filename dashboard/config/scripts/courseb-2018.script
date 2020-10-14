@@ -12,6 +12,7 @@ is_stable true
 supported_locales ["it-IT", "sk-SK"]
 curriculum_umbrella 'CSF'
 tts true
+is_course true
 
 lesson 'Move It, Move It', display_name: 'Move It, Move It'
 level 'MoveItMoveIt_2018'

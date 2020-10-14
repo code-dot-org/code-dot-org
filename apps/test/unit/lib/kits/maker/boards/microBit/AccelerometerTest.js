@@ -1,7 +1,7 @@
 import {expect} from '../../../../../../util/reconfiguredChai';
 import Accelerometer from '@cdo/apps/lib/kits/maker/boards/microBit/Accelerometer';
 import {MicrobitStubBoard} from '../makeStubBoard';
-import {sensor_channels} from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitConstants';
+import {SENSOR_CHANNELS} from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitConstants';
 import sinon from 'sinon';
 
 describe('MicroBitAccelerometer', function() {
@@ -34,9 +34,9 @@ describe('MicroBitAccelerometer', function() {
 
   it(`sensor values are computed from milli-g to meters/second^2 and rounded to hundredth`, () => {
     // Seed the x, y, z channel with milli-g data
-    boardClient.analogChannel[sensor_channels.accelX] = 3;
-    boardClient.analogChannel[sensor_channels.accelY] = 49;
-    boardClient.analogChannel[sensor_channels.accelZ] = 312;
+    boardClient.analogChannel[SENSOR_CHANNELS.accelX] = 3;
+    boardClient.analogChannel[SENSOR_CHANNELS.accelY] = 49;
+    boardClient.analogChannel[SENSOR_CHANNELS.accelZ] = 312;
 
     expect(accelerometer.x).to.equal(0.02);
     expect(accelerometer.y).to.equal(0.48);
@@ -45,18 +45,18 @@ describe('MicroBitAccelerometer', function() {
 
   it(`total accelerometer calculated from x,y,z milli-g sensor data and rounded to hundredth`, () => {
     // Seed the x, y, z channel with milli-g data
-    boardClient.analogChannel[sensor_channels.accelX] = 3;
-    boardClient.analogChannel[sensor_channels.accelY] = 49;
-    boardClient.analogChannel[sensor_channels.accelZ] = 312;
+    boardClient.analogChannel[SENSOR_CHANNELS.accelX] = 3;
+    boardClient.analogChannel[SENSOR_CHANNELS.accelY] = 49;
+    boardClient.analogChannel[SENSOR_CHANNELS.accelZ] = 312;
 
     expect(accelerometer.acceleration).to.equal(3.09);
   });
 
   it(`pitch, roll, inclination are calculated from sensor data and rounded to hundredth`, () => {
     // Seed the x, y, z channel with milli-g data
-    boardClient.analogChannel[sensor_channels.accelX] = 5;
-    boardClient.analogChannel[sensor_channels.accelY] = 12;
-    boardClient.analogChannel[sensor_channels.accelZ] = 5;
+    boardClient.analogChannel[SENSOR_CHANNELS.accelX] = 5;
+    boardClient.analogChannel[SENSOR_CHANNELS.accelY] = 12;
+    boardClient.analogChannel[SENSOR_CHANNELS.accelZ] = 5;
 
     expect(accelerometer.pitch).to.equal(62.78);
     expect(accelerometer.roll).to.equal(18.86);
@@ -69,24 +69,24 @@ describe('MicroBitAccelerometer', function() {
       let stopSpy = sinon.spy(boardClient, 'stopStreamingAnalogChannel');
       accelerometer.start();
       expect(startSpy).to.have.been.calledThrice;
-      expect(startSpy).to.have.been.calledWith(sensor_channels.accelX);
-      expect(startSpy).to.have.been.calledWith(sensor_channels.accelY);
-      expect(startSpy).to.have.been.calledWith(sensor_channels.accelZ);
+      expect(startSpy).to.have.been.calledWith(SENSOR_CHANNELS.accelX);
+      expect(startSpy).to.have.been.calledWith(SENSOR_CHANNELS.accelY);
+      expect(startSpy).to.have.been.calledWith(SENSOR_CHANNELS.accelZ);
 
       accelerometer.stop();
       expect(stopSpy).to.have.been.calledThrice;
-      expect(stopSpy).to.have.been.calledWith(sensor_channels.accelX);
-      expect(stopSpy).to.have.been.calledWith(sensor_channels.accelY);
-      expect(stopSpy).to.have.been.calledWith(sensor_channels.accelZ);
+      expect(stopSpy).to.have.been.calledWith(SENSOR_CHANNELS.accelX);
+      expect(stopSpy).to.have.been.calledWith(SENSOR_CHANNELS.accelY);
+      expect(stopSpy).to.have.been.calledWith(SENSOR_CHANNELS.accelZ);
     });
   });
 
   describe(`getOrientation()`, () => {
     it(`triggers a call to the corresponding attribute`, () => {
       // Seed the x, y, z channel with milli-g data
-      boardClient.analogChannel[sensor_channels.accelX] = 5;
-      boardClient.analogChannel[sensor_channels.accelY] = 12;
-      boardClient.analogChannel[sensor_channels.accelZ] = 5;
+      boardClient.analogChannel[SENSOR_CHANNELS.accelX] = 5;
+      boardClient.analogChannel[SENSOR_CHANNELS.accelY] = 12;
+      boardClient.analogChannel[SENSOR_CHANNELS.accelZ] = 5;
 
       expect(accelerometer.pitch).to.equal(
         accelerometer.getOrientation('pitch')
@@ -101,9 +101,9 @@ describe('MicroBitAccelerometer', function() {
   describe(`getAcceleration()`, () => {
     beforeEach(() => {
       // Seed the x, y, z channel with milli-g data
-      boardClient.analogChannel[sensor_channels.accelX] = 5;
-      boardClient.analogChannel[sensor_channels.accelY] = 12;
-      boardClient.analogChannel[sensor_channels.accelZ] = 5;
+      boardClient.analogChannel[SENSOR_CHANNELS.accelX] = 5;
+      boardClient.analogChannel[SENSOR_CHANNELS.accelY] = 12;
+      boardClient.analogChannel[SENSOR_CHANNELS.accelZ] = 5;
     });
 
     it(`undefined parameter returns an [x,y,z] array`, () => {
@@ -140,9 +140,9 @@ describe('MicroBitAccelerometer', function() {
       boardClient.receivedAnalogUpdate();
 
       // Seed the x, y, z channel with 'different' data
-      boardClient.analogChannel[sensor_channels.accelX] = 5;
-      boardClient.analogChannel[sensor_channels.accelY] = 12;
-      boardClient.analogChannel[sensor_channels.accelZ] = 5;
+      boardClient.analogChannel[SENSOR_CHANNELS.accelX] = 5;
+      boardClient.analogChannel[SENSOR_CHANNELS.accelY] = 12;
+      boardClient.analogChannel[SENSOR_CHANNELS.accelZ] = 5;
 
       boardClient.receivedAnalogUpdate();
       expect(emitSpy).to.have.been.calledWith('data');
@@ -154,7 +154,7 @@ describe('MicroBitAccelerometer', function() {
       boardClient.receivedAnalogUpdate();
 
       // Seed the x, y, z channel with 'different' data
-      boardClient.analogChannel[sensor_channels.accelX] = 6;
+      boardClient.analogChannel[SENSOR_CHANNELS.accelX] = 6;
 
       boardClient.receivedAnalogUpdate();
       expect(emitSpy).to.have.been.calledWith('change');

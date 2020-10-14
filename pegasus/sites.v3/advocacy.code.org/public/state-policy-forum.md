@@ -1,29 +1,116 @@
 ---
-title: 2018 Code.org/CSTA State Policy Forum
+title: 2020 Computer Science State Policy Forum
 theme: responsive
 video_player: true
 ---
 <a id="top"></a>
 
-<p align="center"><img style="max-width: 100%" src="/images/fit-970/forum-banner.png"></p>
+<p align="center"><img style="max-width: 100%" src="/images/fit-970/2020forumbanner.png"></p>
 
 
-## Join Us September 27-28, 2018
+# Register for the Computer Science State Policy Forum Series
 
-The annual State Policy Forum brings together legislators, education officials, state advocates, industry, national organizations, and representatives from state executive offices committed to K-12 computer science education. This year's forum is co-hosted by [Code.org](https://code.org/promote) and the Computer Science Teachers Association ([CSTA](https://www.csteachers.org/)).
+The annual Computer Science State Policy Forum brings together legislators, education officials, state advocates, industry, national organizations, and representatives from state executive offices committed to K-12 computer science education. This year the forum goes virtual and consists of multiple sessions:
 
-The forum is composed of two experiences, a pre-forum for members of the [Code.org Advocacy Coalition](https://advocacy.code.org) immediately followed by a main forum for all participants. Join us for lively discussions on policy and implementation, hands-on workshops, flash talks, and unique networking opportunities. The forum takes place at the [JW Marriott Denver Cherry Creek](http://www.jwmarriottdenver.com/").
+1. [Policy Forum Plenary](#Step 1) (October 14, 1:00 to 2:30 pm ET)
+2. [State Session](#Step 2) (October 14 or 15, see schedule below)
+3. [Webinar Series](#Step 3) (Various dates all at 3:00 - 4:00 pm ET)
+	* October 22: We Required All Schools to Offer CS, This is What Happened Next
+	* October 29: This Equity Guidance Will Change How You Make CS Education Decisions
+	* November 5: How Micro-credentials Can Revolutionize CS Certification
+	* November 12: Top 10 Things CS Education Researchers Wish They Could Tell Policymakers and Practitioners
 
-The **pre-forum** begins at 8:30 am on Thursday, September 27 as a prelude to the opening session of the main forum later that afternoon.
 
-The **main forum** begins at 2:00 pm on Thursday, September 27 and concludes at 2:30 pm on Friday, September 28.
 
-## Application Details
+Apply for **all** experiences below. Share about the forum using the hashtag **#cspolicy2020**.
 
-* The pre-forum is for members of the [Code.org Advocacy Coalition](https://advocacy.code.org) and those interested in [joining](https://bit.ly/joinadvocacycoalition) the advocacy coalition.
-* Conference fees and meals during the forum are provided at no-cost for participants by Code.org, but **travel, lodging, and expenses will be the responsibility of the attendee**.
-* A limited number of scholarships are available based on need and can be requested in the application form.
-* Applications are currently closed.
+<a name="Step 1"></a>
+## **Step 1**: Register for the Policy Forum Plenary
+Join us October 14 from 1:00 to 2:30 pm ET for a panel discussion of how "Computer Science is More Important Than Ever" featuring three state education chiefs. We'll also launch the **2020 State of Computer Science Education**.
+
+<p align="left"><img style="max-width: 70%" src="/images/fit-970/forumspeakers.png"></p>
+
+<p>
+<a href="https://code.zoom.us/webinar/register/WN_K9JDLUxVRf-DYgiA9zQYsw"><button>Register for the Policy Forum Plenary</button></a>
+</p>
+<hr>
+
+<a name="Step 2">
+## </a>**Step 2**: Register for the State of Your State
+Join us later on October 14 or 15 for the **State of Your State**. Learn about and discuss the state of computer science in your state. See the chart below for the day and time of your state's session and registration link.
+<hr>
+
+State | Date  | Time   |Link|
+--------------|------------------|-----------------|----|
+Alabama 	| Oct 15 | 1:30 - 2:30 pm ET 	|<a href="https://code.zoom.us/meeting/register/tJYrce6prjsvGNCPoqjbv4IOqXaIsn1JSwA5"><button>Register</button></a>|
+Alaska  	| Oct 14 | 3:00 - 4:00 pm AKT |<a href="https://code.zoom.us/meeting/register/tJ0pd--gqTMsH9F-fzEWEx4Z4KJg6vZVyadN"><button>Register</button></a>|
+Arizona	|Oct 14  | 2:30 - 3:30 pm PT| <a href="https://code.zoom.us/meeting/register/tJEkduyopjkqGdaBDiqA3WwC5rcw4Yg76iVT"><button>Register</button></a>|
+Arkansas	|Oct 14|4:30 - 5:30 pm CT|<a href="https://code.zoom.us/meeting/register/tJMrc-qtqz0jH9XS5i7m72NwrU5k_FF3fVuF"><button>Register</button></a>|
+California|Oct 14|11:30 - 12:30 pm PT|<a href="https://code.zoom.us/meeting/register/tJIude6orDkrHtfxeXPaHnC6Xv46gBqofd7D"><button>Register</button></a>|
+Colorado	|Oct 14|2:00 - 3:00 pm MT|<a href="https://code.zoom.us/meeting/register/tJIocuirqTsjEtN5CrjJzVKCcf7dlqGOju64"><button>Register</button></a>|
+Connecticut|Oct 15|9:00 - 10:00 am ET|<a href="https://code.zoom.us/meeting/register/tJYvc--rrjMtE9ZPWmgtUFsEnDv4r7Oog4JQ"><button>Register</button></a>|
+Delaware	|Oct 15|3:00 - 4:00 pm ET|<a href="https://code.zoom.us/meeting/register/tJIqd-Chrz8oGtTuRhkCsDjYNsuirY4BPIWK"><button>Register</button></a>|
+District of Columbia|Oct 15|12:00 - 1:00 pm ET|<a href="https://code.zoom.us/meeting/register/tJ0tcOqorDoqEtLgJCpgzRKO15ZhyAYLmdy0"><button>Register</button></a>|
+Florida	|Oct 14|2:30 - 3:30 pm ET|<a href="https://code.zoom.us/meeting/register/tJ0rdu2tqzgsGtYf2bRTuXMcbxWoxAjG1Zl3"><button>Register</button></a>|
+Georgia	|Oct 15|3:00 - 4:00 pm ET|<a href="https://code.zoom.us/meeting/register/tJUldu2qqDspHtCNsbpwZCneNHKE4gnPuC9g"><button>Register</button></a>|
+Hawaii		|Oct 14|1:00 - 2:00 pm HT|<a href="https://code.zoom.us/meeting/register/tJApd-mprj4iGda0nEObWnoT5qzPQ02R4FI_"><button>Register</button></a>|
+Idaho		|Oct 14|2:00 - 3:00 pm MT|<a href="https://code.zoom.us/meeting/register/tJcpce6srDItHdOmayfpUcDndNG8zeZqOrTm"><button>Register</button></a>|
+Illinois  | Oct 15  | 9:30 - 10:30 am CT|<a href="https://code.zoom.us/meeting/register/tJ0kcu2vrDIrE9JKb8vj3U4jAyf57-Uar1rT"><button>Register</button></a>|
+Indiana	|Oct 14|4:00 - 5:00 pm ET|<a href="https://code.zoom.us/meeting/register/tJUtc-6vrjsoGNbKBq1bssFzgDWlVKogawPV"><button>Register</button></a>|
+Iowa	|Oct 14|1:30-2:30 pm CT|<a href="https://code.zoom.us/meeting/register/tJ0rdOGuqz8jG9dDOBli1ECzz_kboOna_4Hl"><button>Register</button></a>|
+Kansas	|Oct 15|3:30 - 4:30 pm CT|<a href="https://code.zoom.us/meeting/register/tJYsf-Gtqj0qHtek9BfsdxbDiSDDWz2EHeQ7"><button>Register</button></a>|
+Kentucky	|Oct 15|9:00 - 10:00 am ET|<a href="https://code.zoom.us/meeting/register/tJwof-iorz0tHNR8cnGHhB2xT4U--4hQRAbj"><button>Register</button></a>|
+Louisiana	|Oct 15|9:30 - 10:30 am CT|<a href="https://code.zoom.us/meeting/register/tJYqde2pqzkjEtGJcfuDu50jP_1hk7AYf-Cq"><button>Register</button></a>|
+Maine	|Oct 15|1:30 - 2:30 pm ET|<a href="https://code.zoom.us/meeting/register/tJAtcemoqT8vHdD9abLHwB46MwxO8zgwMZl5"><button>Register</button></a>|
+Maryland	|Oct 14|2:30 - 3:30 pm ET|<a href="https://code.zoom.us/meeting/register/tJMqf-qsqj4jE9MI3ntbb97bhTMcPGqpTS-h"><button>Register</button></a>|
+Massachusetts|Oct 15|3:00 - 4:00 pm ET|<a href="https://code.zoom.us/meeting/register/tJIldOiqrjwtGNDiyc3cujruG4LCmYK_4huA"><button>Register</button></a>|
+Michigan|Oct 14|2:30 - 3:30 pm ET|<a href="https://code.zoom.us/meeting/register/tJctd-iqrTwoEtcnnrkRBvO94FsRwHup9yer"><button>Register</button></a>|
+Minnesota|Oct 14|4:30 - 5:30 pm CT|<a href="https://code.zoom.us/meeting/register/tJYuf-qsrz4sGdRetZR4sB7U22-DMEjOACmA"><button>Register</button></a>|
+Mississippi|Oct 14|3:00 - 4:00 pm CT|<a href="https://code.zoom.us/meeting/register/tJUufuihpzwjGdLnhxxnzD3-8SARZY3Kzjhv"><button>Register</button></a>|
+Missouri|Oct 15|2:00 - 3:00 pm CT|<a href="https://code.zoom.us/meeting/register/tJ0of--srDovGNDzPXwh6dni0GFpnlXoFOa6"><button>Register</button></a>|
+Montana|Oct 14|3:30 - 4:30 pm MT|<a href="https://code.zoom.us/meeting/register/tJYvde-trjgpE9E4QHcDjIfbPQFWkNCLPq_0"><button>Register</button></a>|
+Nebraska|Oct 15|11:00 am - 12:00 pm CT|<a href="https://code.zoom.us/meeting/register/tJYufumurz0iE9cnH9ew91KKIuQ6hdm-Gzl4"><button>Register</button></a>|
+Nevada|Oct 14|4:00 - 5:00 pm PT|<a href="https://code.zoom.us/meeting/register/tJEqdOigrT0iG9DBI3GnvnJS_aJWTNZG1Jpe"><button>Register</button></a>|
+New Hampshire|Oct 15 |4:30 - 5:30 pm ET|<a href="https://code.zoom.us/meeting/register/tJEtceuurzMoHtBJLo4A6mnWVE0Nzs-8kmdi"><button>Register</button></a>|
+New Jersey|Oct 15|10:30 - 11:30 am ET|<a href="https://code.zoom.us/meeting/register/tJckd-ipqz8sGNPWdN5rOXAqCO2vGlARvCzU"><button>Register</button></a>|
+New Mexico|Oct 15|11:30 am - 12:30 pm MT|<a href="https://code.zoom.us/meeting/register/tJYsceqpqzMvG9O19p7mvlLwZS2zDbgUZRz8"><button>Register</button></a>|
+New York|Oct 14|2:30 - 3:30 pm ET|<a href="https://code.zoom.us/meeting/register/tJcuf-yorjgjGNPhkQUWAuDi0zEEphL4bk2R"><button>Register</button></a>|
+North Carolina|Oct 15|12:00 - 1:00 pm ET|<a href="https://code.zoom.us/meeting/register/tJYtcOmurTkvGdOJnJXPjTs30V8QdEHahHal"><button>Register</button></a>|
+North Dakota|Oct 15|12:30 - 1:30 pm CT|<a href="https://code.zoom.us/meeting/register/tJYuduigpjsoH9JRtK6oGiLCby8ROtmeRKza"><button>Register</button></a>|
+Ohio|Oct 15|10:30 - 11:30 am ET|<a href="https://code.zoom.us/meeting/register/tJYvde2qpjktG9A-LJffWydYgT_ilec5ilaT"><button>Register</button></a>|
+Oklahoma|Oct 14|3:00 - 4:00 pm CT|<a href="https://code.zoom.us/meeting/register/tJ0rdeyopjkvG9cBYHVCM3_f8qpE5dBhkJ0J"><button>Register</button></a>|
+Oregon|Oct 15|1:30 - 2:30 pm PT|<a href="https://code.zoom.us/meeting/register/tJcvfuyvrT4vEtb9s1lmSM-FHvzAQRmyqmuf"><button>Register</button></a>|
+Pennsylvania|Oct 15|1:30 - 2:30 pm ET|<a href="https://code.zoom.us/meeting/register/tJMuf-mqpj8vGty0m1cZjJ2k_gw--OI9DBE_"><button>Register</button></a>|
+Puerto Rico|Oct 15|9:00 - 10:00 am AST|<a href="https://code.zoom.us/meeting/register/tJEuceGppz4rGtaEIyU7z3p4SMTOaXB_nPUI"><button>Register</button></a>|
+Rhode Island|Oct 15|9:00 - 10:00 am ET|<a href="https://code.zoom.us/meeting/register/tJMkde6hqD4iGN0vbpW6EmKk9utpR2dr5wBZ"><button>Register</button></a>|
+South Carolina|Oct 14|4:00 - 5:00 pm ET|<a href="https://code.zoom.us/meeting/register/tJYlf-qqrzkuE9X4582wx2QxqGbdVm2ls1ht"><button>Register</button></a>|
+South Dakota|Oct 15|2:00 - 3:00 pm CT|<a href="https://code.zoom.us/meeting/register/tJcqcOusrzgiHdSFrl9Y6-_3mgyjbH_vlmNR"><button>Register</button></a>|
+Tennessee|Oct 15|11:00 am - 12:00 pm CT|<a href="https://code.zoom.us/meeting/register/tJYode2orjwsG9D6d7R6-BosR19vz46DTBWM"><button>Register</button></a>|
+Texas|Oct 15|2:00 - 3:00 pm CT|<a href="https://code.zoom.us/meeting/register/tJ0ufu2sqT4oG9JEB-Z_7c8sQ73G9hhBWN6e"><button>Register</button></a>|
+Utah|Oct 15|2:30 - 3:30 pm MT|<a href="https://code.zoom.us/meeting/register/tJcldemtrD8tHNQytmRmh6YY87yG5OJ38iPj"><button>Register</button></a>|
+Vermont|Oct 15|4:30 - 5:30 pm ET|<a href="https://code.zoom.us/meeting/register/tJEtceuurzMoHtBJLo4A6mnWVE0Nzs-8kmdi"><button>Register</button></a>|
+Virginia|Oct 15|1:30 - 2:30 pm ET|<a href="https://code.zoom.us/meeting/register/tJctc-ypqT4uHtElSPpL2AFUGsOUkCadfI-L"><button>Register</button></a>|
+Washington|Oct 15|3:00 - 4:00 pm PT|<a href="https://code.zoom.us/meeting/register/tJUkfuyoqTovHNwoYEc14DwxWCEOr1hrRltx"><button>Register</button></a>|
+West Virginia|Oct 15|12:00 - 1:00 pm ET|<a href="https://code.zoom.us/meeting/register/tJMkfuqtqz0jHdEm5X6nRv6PxGkXRBkPUWMP"><button>Register</button></a>|
+Wisconsin|Oct 15|11:00 am - 12:00 pm CT|<a href="https://code.zoom.us/meeting/register/tJAlcu-vqz4oHdBci9Kt6jnF0hzLMnZEjwbc"><button>Register</button></a>|
+Wyoming|Oct 15|4:00 - 5:00 pm MT|<a href="https://code.zoom.us/meeting/register/tJMpc-ivrT8iGtEDCvCZcD2Vj_KvWtqphMv_"><button>Register</button></a>|
+
+
+
+
+<a name="Step 3"></a>
+## **Step 3**: Register for the Webinar Series
+
+Join us for a series of sessions on a range of topics. All webinars are scheduled for **3:00 - 4:00 pm ET**.
+
+
+Session | Description| Date |Link|
+--------------|------------|---------|--------|
+We Required All Schools to Offer CS, This is What Happened Next| Learn about how Indiana, Maryland, and West Virginia came to requiring all high schools to offer computer science, how the implementation of the policy is going, and what has happened since.|Oct 22 |<a href="https://code.zoom.us/webinar/register/WN_pUFM2Sc0SJChq2o-nWpxiA"><button>Register</button></a>|
+This Equity Guidance Will Change How You Make CS Education Decisions| Learn about the Kapor Center's work in improving equity in computer science education and how to translate intention into equity-focused policy decisions.|Oct 29 |<a href="https://code.zoom.us/webinar/register/WN_X0VopcwdQCeqMh2wmWuvWQ"><button>Register</button></a>|
+How Micro-credentials Can Revolutionize CS Certification  	|Learn about micro-credentials, an innovative, competency-based approach to computer science professional learning and certification.| Nov 5|<a href="https://code.zoom.us/webinar/register/WN_L7f0JPVZQRCrT-9uheBGyQ"><button>Register</button></a>|
+Top 10 Things CS Education Researchers Wish They Could Tell Policymakers and Practitioners |Learn from a trifecta of research, policy, and practical expertise in order to guide high-quality and lasting change in CS education.| Nov 12 |<a href="https://code.zoom.us/webinar/register/WN__sBU59Z2SeGpmeADRUnrvA"><button>Register</button></a>|
+
 
 
 ## Pictures From Previous Forums
@@ -42,132 +129,11 @@ The **main forum** begins at 2:00 pm on Thursday, September 27 and concludes at 
 </div>
 <div style="clear: both;"></div>
 
-## Agenda
-<details>
-  <summary>**What is the schedule for the pre-forum?**</summary>
-  <p>
-  <br>
-### Pre-Forum Workshop (Code.org Advocacy Coalition members)
-
-The pre-forum begins at 8:30 am on Thursday, September 27 as a prelude to the opening session of the main forum that begins that afternoon. Sessions include:
-
-* The Advocacy Year in Review and Year Ahead
-* State of Your State
-* Workshops: Funding Advocacy, Grassroots, Communications, Legislation 101
-* Networking
-* Team Planning Time
-
-Download the [agenda](https://advocacy.code.org/2018_state_policy_pre_forum_agenda.pdf).
-
-</p>
-</details>
-
-
-<details>
-  <summary>**What is the schedule for the main forum?**</summary>
-  <p>
-  <br>
-### Main Forum (All Participants)
-
-The main forum begins at 2:00 pm on Thursday, September 27 following the pre-forum for Advocacy Coalition members and concludes at 2:30 pm on Friday, September 28. Sessions include:
-
-* The State of K-12 CS
-* Flash Talks: Data and Accountability, Reaching Rural Areas, Certification, Managing Grant Programs, State and Local Boards, Legislative Successes/Failures
-* Workshops: Standards, State Plan, Legislation, Microcredentials, Advocacy
-* Birds of a Feather Discussions
-* Team Planning Time
-
-Download the [agenda](https://advocacy.code.org/2018_state_policy_main_forum_agenda.pdf).
-
-</p>
-</details>
-
-
-## Travel and Hotel Information
-
-<details>
-<summary>**Where is the forum located?**</summary>
-  <p>
-  <br>
-
-<a href="http://www.jwmarriottdenver.com/", target=_"blank">JW Marriott Denver Cherry Creek</a>
-<br> 150 Clayton Lane
-<br> Denver, Colorado 80206
-
-</p>
-</details>
-
-<details>
-<summary>**Should I reserve my own flights?**</summary>
-  <p>
-  <br>
-  Yes. All approved participants, unless receiving a scholarship, are responsible for booking their own flights and covering their own airfare. The Denver International Airport (airport code: DEN) is a large international airport that services non-stop flights from many cities around the nation. Forum sessions will begin on Thursday September 27 at 9:00 am for pre-forum attendees, while the main forum begins later at 3:00 pm.
-
-</p>
-</details>
-
-<details>
-<summary>**Should I reserve my own hotel?**</summary>
-  <p>
-  <br>
-  There are two options for reserving accommodations.
-  <ul>
-    <li>Code.org and the JW Marriott Denver Cherry Creek are pleased to offer a discounted rate of $199 per night (not including taxes and fees). If you would like to take advantage of the discounted rate, Code.org will make the reservation on your behalf, and you can pay the hotel by credit card at the end of your stay.</li>
-    <li> If you prefer to find accommodations at a different hotel, you will be responsible for making your own arrangements.</li>
-  </ul>
-  <p>
-  You can indicate your accommodation preferences on the <a href="https://goo.gl/forms/EFcuR6C9Tf6m26AM2" target=_"blank">application form</a>.
-
-</p>
-</details>
-
-<details>
-<summary>**How do I get to the hotel?**</summary>
-  <p>
-  <br>
-The hotel is located 26 miles or about 35 min from the Denver International Airport (DEN).  Uber and Lyft both provide service in the Denver area including to/from the Denver International Airport via their mobile apps. Please call the hotel at (303) 316-2700 to inquire about town car or shuttle transportation services and fees.
-
-For more information on hotel directions or transportation, please visit the hotel's [website](http://www.jwmarriottdenver.com/Denver-Luxury-Hotel/Directions-87.html).
-</p>
-</details>
-
-<details>
-<summary>**What expenses are covered during the forum?**</summary>
-  <p>
-  <br>
-Code.org is happy to cover the costs of the following:
-
-* Registration fee for all participants accepted to the forum
-* Meals during the forum
-
-**Travel, lodging, and expenses will be the responsibility of the attendee.** A limited number of scholarships are available based on need and can be requested in the application form.
-
-</p>
-</details>
-
-## What to Pack
-<details>
-  <summary>**What kind of clothing should I pack?**</summary>
-  <p>
-  <br>
-We encourage business casual attire during the forum. All our conference sessions are indoors, and air conditioning is usually cool in hotels. We recommend that you bring layers if you get cold easily in air conditioned rooms. You can expect outside temperatures to be warm during the day. If you plan to venture outdoors during your free time, be sure to check the local forecast and plan accordingly!
-</p>
-</details>
-
-<details>
-<summary>**What devices will I need to bring?**</summary>
-  <p>
-  <br>
-Please bring your own laptop/tablet, as we will be accessing online resources. We will not have extra devices on hand for participants to borrow.
-
-</p>
-</details>
-
 
 ## Forum Resources
 
-* [2018 Code.org/CSTA State Policy Forum one-pager](https://advocacy.code.org/one-pager.pdf)
 * [State Policy Tracker](http://bit.ly/9policies)
+* 2020 State of Computer Science Education report (coming soon)
 
 
 

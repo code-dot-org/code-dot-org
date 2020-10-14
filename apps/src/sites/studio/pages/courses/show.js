@@ -19,6 +19,10 @@ import {
   setVerifiedResources
 } from '@cdo/apps/code-studio/verifiedTeacherRedux';
 import {convertAssignmentVersionShapeFromServer} from '@cdo/apps/templates/teacherDashboard/shapes';
+import announcementReducer, {
+  addAnnouncement
+} from '@cdo/apps/code-studio/announcementsRedux';
+import {registerReducers} from '@cdo/apps/redux';
 
 $(document).ready(showCourseOverview);
 
@@ -61,6 +65,22 @@ function showCourseOverview() {
   }
 
   const versions = courseSummary.versions;
+
+  const announcements = courseSummary.announcements;
+  if (announcements) {
+    registerReducers({announcements: announcementReducer});
+    announcements.forEach(announcement =>
+      store.dispatch(
+        addAnnouncement(
+          announcement.notice,
+          announcement.details,
+          announcement.link,
+          announcement.type,
+          announcement.visibility
+        )
+      )
+    );
+  }
 
   // Eventually we want to do this all via redux
   ReactDOM.render(

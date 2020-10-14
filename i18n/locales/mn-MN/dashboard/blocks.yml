@@ -88,9 +88,6 @@ mn:
             MOVES.Kick: Од
             MOVES.ThisOrThat: Энэ эсвэл тэр
             MOVES.Rest: Байхгүй
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changeMoveLR:
         text: "{SPRITE} нь {MOVE} {DIR}-г үүрд хийдэг"
         options:
@@ -109,9 +106,6 @@ mn:
             MOVES.Kick: Од
             MOVES.ThisOrThat: Энэ эсвэл тэр
             MOVES.Rest: Байхгүй
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changePropBy:
         text: "{SPRITE} {PROPERTY}-г {VAL}-р өөрчлөх"
         options:
@@ -188,9 +182,6 @@ mn:
             MOVES.XArmsUp: Сунгах
             MOVES.ThisOrThat: Энэ эсвэл тэр
             MOVES.Rest: Байхгүй
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_doMoveLR:
         text: "{SPRITE} нь {MOVE} {DIR}-г нэг удаа хийдэг"
         options:
@@ -219,9 +210,6 @@ mn:
             MOVES.XArmsUp: Сунгах
             MOVES.ThisOrThat: Энэ эсвэл тэр
             MOVES.Rest: Байхгүй
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_everyMeasuresRange:
         text: "{START}-н дараа {N} арга хэмжээ бүрийг давтах "
       Dancelab_everySeconds:
@@ -1100,6 +1088,13 @@ mn:
             '"z"': z
       gamelab_locationAt:
         text: 'байршил х: {X} y: {Y}'
+      gamelab_locationModifier:
+        options:
+          DIRECTION:
+            '"North"': Хойд
+            '"East"': Дорнод
+            '"South"': Өмнөд
+            '"West"': Өрнөд
       gamelab_locationMouse:
         text: хулганы байршил
       gamelab_locationOf:

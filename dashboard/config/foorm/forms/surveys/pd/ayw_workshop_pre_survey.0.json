@@ -76,7 +76,12 @@
         {
          "value": "unit_10",
          "text": "Unit 10 - Cybersecurity and Global Impacts"
+        },
+        {
+         "value": "havent_started",
+         "text": "I haven't started teaching the course yet."
         }
+
        ]
       },
       {
@@ -108,6 +113,10 @@
         {
          "value": "unit_6",
          "text": "Unit 6 - Physical Computing"
+        },
+        {
+         "value": "havent_started",
+         "text": "I haven't started teaching the course yet."
         }
        ]
       }
@@ -1224,8 +1233,12 @@
          "value": "quarter_or_less",
          "text": "A quarter or less (a few units)"
         }
-       ],
-       "hasOther": true
+        ,
+        {
+         "value": "something_other",
+         "text": "A different model, not listed above"
+        }
+       ]
       },
       {
        "type": "checkbox",
@@ -1300,9 +1313,12 @@
       {
        "value": "unsure",
        "text": "Unsure"
+      },
+      {
+       "value": "something_other",
+       "text": "A teaching environment not listed above"
       }
-     ],
-     "hasOther": true
+     ]
     },
     {
      "type": "radiogroup",
@@ -1316,9 +1332,12 @@
       {
        "value": "no",
        "text": "No"
+      },
+      {
+       "value": "unsure",
+       "text": "Unsure"
       }
-     ],
-     "hasOther": true
+     ]
     },
     {
      "type": "comment",

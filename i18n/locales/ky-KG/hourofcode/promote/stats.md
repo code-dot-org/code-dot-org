@@ -38,7 +38,7 @@ With technology changing every industry on the planet, computing knowledge has b
 
 #### Code.org тууралуу
 
-Code.org - 501c3 лицензиясынын негизинде иштеген, компүтердик билимди аялдардын жана бул ишке аз катышкан башка раса окуучулардын санын арбытуу аркылуу жайылтууну көздөгөн бейөкмөт уюм. Its vision is that every student in every school has the opportunity to learn computer programming. 2013-ж. иштеп баштагандан бери, Code.org жыл сайын Код сааты өнөктөштүгүн уюштуруп келет. Код саатына бүгүнкү күнү 100 милилондон ашык киши катышты. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. For more information, please visit: [code.org]({{ codeorg_link }}).
+Code.org is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by young women and students from other underrepresented groups. Its vision is that every student in every school has the opportunity to learn computer programming. 2013-ж. иштеп баштагандан бери, Code.org жыл сайын Код сааты өнөктөштүгүн уюштуруп келет. Код саатына бүгүнкү күнү 100 милилондон ашык киши катышты. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. For more information, please visit: [code.org]({{ codeorg_link }}).
 
 ## Share these on social media and in emails
 

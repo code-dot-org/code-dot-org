@@ -744,6 +744,8 @@ fr:
               name: Utilisez des variables dans les applications
             While Loops:
               name: Boucles « Tant que »
+            Creating Functions with Parameters:
+              name: Créer des Fonctions avec des Paramètres
         algebraPD3:
           lessons:
             Computer Science Pedagogy:
@@ -9568,7 +9570,7 @@ fr:
             For Loops in Artist:
               name: Les Boucles For avec l'Artiste
             Learning Sprites with Sprite Lab:
-              name: Learning Sprite Lab
+              name: Des Poissons qui Nagent, avec le Labo des Lutins
             Alien Dance Party with Sprite Lab:
               name: Soirée Dansante des Extraterrestres
             Pet Giraffe with Sprite Lab:
@@ -14198,7 +14200,7 @@ fr:
             For Loops with Artist:
               name: Les Boucles For avec l'Artiste
             Swimming Fish in Sprite Lab:
-              name: Learning Sprite Lab
+              name: Des Poissons qui Nagent, avec le Labo des Lutins
             Alien Dance Party:
               name: Soirée Dansante des Extraterrestres
             Behaviors in Sprite Lab:
@@ -14833,3 +14835,11 @@ fr:
           lessons:
             Module 1:
               name: Module 1
+        curriculum-sandbox-levels:
+          lessons:
+            Course A:
+              name: Cours A
+            Course B:
+              name: Cours B
+            CS Discoveries:
+              name: Découvertes de l'Informatique

@@ -6,12 +6,12 @@ Feature: Ensure correct #belowVisualization position
     And I wait for the page to fully load
 
     When I open my eyes to test "Video thumbnail position"
-    Then I see no difference for "default visualization width"
+    Then I see no difference for "default visualization width" using stitch mode "none"
 
     When I drag the visualization grippy by 400 pixels
-    Then I see no difference for "wider visualization"
+    Then I see no difference for "wider visualization" using stitch mode "none"
 
     When I drag the visualization grippy by -400 pixels
-    Then I see no difference for "narrower visualization"
+    Then I see no difference for "narrower visualization" using stitch mode "none"
 
     Then I close my eyes

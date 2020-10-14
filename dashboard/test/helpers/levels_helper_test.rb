@@ -4,6 +4,7 @@ class LevelsHelperTest < ActionView::TestCase
   include Devise::Test::ControllerHelpers
 
   def sign_in(user)
+    user.reload
     # override the default sign_in helper because we don't actually have a request or anything here
     stubs(:current_user).returns user
   end
@@ -802,5 +803,37 @@ class LevelsHelperTest < ActionView::TestCase
       "<div class=\"aspect-ratio\">"\
       "<iframe src=\"/levels/#{test_level.id}/embed_level\" width=\"100%\" scrolling=\"no\" seamless=\"seamless\" style=\"border: none;\"></iframe>"\
       "</div>"
+  end
+
+  test 'sets hint prompt attempts threshold in options for level in csf script' do
+    @script = create :csf_script
+    @level = create :level
+    @lesson = create :lesson
+    @script_level = create :script_level, levels: [@level], lesson: @lesson
+    @level.hint_prompt_attempts_threshold = 6
+    level_options = {}
+    set_hint_prompt_options(level_options)
+    assert_equal level_options[:hintPromptAttemptsThreshold], @level.hint_prompt_attempts_threshold
+  end
+
+  test 'sets hint prompt attempts threshold in options to default if not already set' do
+    @script = create :csf_script
+    @level = create :level
+    @lesson = create :lesson
+    @script_level = create :script_level, levels: [@level], lesson: @lesson
+    level_options = {}
+    set_hint_prompt_options(level_options)
+    assert_equal level_options[:hintPromptAttemptsThreshold], 6.5
+  end
+
+  test 'does not set hint prompt attempts threshold in options for level in csp script' do
+    @script = create :csp_script
+    @level = create :level
+    @lesson = create :lesson
+    @script_level = create :script_level, levels: [@level], lesson: @lesson
+    @level.hint_prompt_attempts_threshold = 6
+    level_options = {}
+    set_hint_prompt_options(level_options)
+    assert_nil level_options[:hintPromptAttemptsThreshold]
   end
 end

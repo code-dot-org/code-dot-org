@@ -497,6 +497,37 @@ html, body {
     display: inline-block;
     opacity: 0.5;
   }
+
+  .container {
+    html[dir=rtl] & {
+      float: right;
+    }
+
+    .row {
+      [class*="span"] {
+        html[dir=rtl] & {
+          float: right;
+          margin-right: 20px;
+          margin-left: 0;
+        }
+
+        a {
+          html[dir=rtl] & {
+            float: right;
+          }
+        }
+
+        div.dim {
+          html[dir=rtl] & {
+            float: right;
+            margin-left: 4px;
+            margin-right: 4px;
+          }
+        }
+      }
+    }
+
+  }
 }
 
 /* Styling that keeps the small footer consistent with other page elements */
@@ -1384,13 +1415,13 @@ body.iframe_embed_app_and_code {
   }
 
   html[dir=rtl] .flip-x-close & {
-    left: auto;
-    right: $cornerOffset;
+    right: auto;
+    left: $cornerOffset;
   }
 
   html[dir=rtl] .flip-x-close &:hover {
-    left: auto;
-    right: $cornerOffset - $movement;
+    right: auto;
+    left: $cornerOffset - $movement;
   }
 }
 
@@ -2360,7 +2391,7 @@ a.download-video {
 
 .standalone-video {
   width: 853px;
-  margin: auto;
+  margin: 25px auto 0 auto;
 
   .video-link, .slides-link, #fallback-player-caption-dialog-link {
     display: inline-block;
@@ -3418,6 +3449,10 @@ h2.danger {
   text-align: center;
 }
 
+.foorm-adjust-dropdown-height {
+  height: calc(2em + 10px) !important;
+}
+
 #parent-email-banner {
   position: fixed;
   bottom: 0;
@@ -3526,5 +3561,62 @@ h2.danger {
   /* mobile */
   @media screen and (min-width: 0px) and (max-width: 970px) {
     display: none;
+  }
+}
+
+// Some images must not be flipped over even in RTL
+html[dir=rtl] {
+  img[src="/blockly/media/skins/jigsaw/blocks.png"] {
+    -webkit-transform: none !important;
+    transform: none !important;
+  }
+}
+#add-parent-email {
+  #remove-parent-email-link {
+    color: $red;
+  }
+}
+
+.immersive-reader-button {
+  /* !important is used to override the default styling from the Microsoft immersive-reader-sdk */
+  background-color: $lightest_purple !important;
+  float: right;
+  margin-top: 1px !important;
+  height: 16px !important;
+  padding: 8px !important;
+  border-radius: 4px !important;
+
+  html[dir=rtl] & {
+    float: left;
+  }
+
+  &:hover {
+    background-color: $cyan !important;
+    border-radius: 4px !important;
+
+    /* The TTS buttons overlap this button, so make this button's z-index higher as a temp fix */
+    position: relative;
+    z-index: 1000;
+  }
+
+  img {
+    filter: grayscale(1);
+  }
+}
+
+#mapbox-location-search-container {
+  .mapboxgl-ctrl-geocoder {
+    min-width: 100%;
+    z-index: 2;
+    box-shadow: none;
+    border: 1px solid $bootstrap_border_color;
+    font-family: inherit;
+    font-size: inherit;
+  }
+  input {
+    height: 36px;
+    margin: 0;
+    border: none;
+    padding: 0 34px;
   }
 }

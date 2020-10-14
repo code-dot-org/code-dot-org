@@ -1013,6 +1013,9 @@
         "course3_bee_functions_challenge4": {
           "check nectar or honey": {
             "name": "sprawdź nektar czy miód"
+          },
+          "move and check": {
+            "name": "przesuń się i sprawdź"
           }
         },
         "course4_artist_binary_challenge1": {
@@ -2235,6 +2238,9 @@
         "courseF_bee_conditionals2": {
           "check nectar or honey": {
             "name": "sprawdź nektar czy miód"
+          },
+          "move and check": {
+            "name": "przesuń się i sprawdź"
           }
         },
         "courseF_bee_functions2": {
@@ -2255,11 +2261,17 @@
         "courseF_bee_functions4": {
           "check nectar or honey": {
             "name": "sprawdź nektar czy miód"
+          },
+          "move and check": {
+            "name": "przesuń się i sprawdź"
           }
         },
         "courseF_bee_functions5a": {
           "check nectar or honey": {
             "name": "sprawdź nektar czy miód"
+          },
+          "move and check": {
+            "name": "przesuń się i sprawdź"
           }
         },
         "courseF_bee_functions6": {
@@ -2293,6 +2305,9 @@
         "courseF_bee_functions_challenge2": {
           "check nectar or honey": {
             "name": "sprawdź nektar czy miód"
+          },
+          "move and check": {
+            "name": "przesuń się i sprawdź"
           }
         },
         "courseF_bee_fwp4": {

@@ -315,6 +315,7 @@ module LevelsHelper
       locals: {
         app: app_options[:app],
         use_droplet: use_droplet,
+        use_google_blockly: view_options[:useGoogleBlockly],
         use_blockly: use_blockly,
         use_applab: use_applab,
         use_gamelab: use_gamelab,
@@ -348,8 +349,12 @@ module LevelsHelper
   end
 
   def set_hint_prompt_options(level_options)
-    if @script && @script.hint_prompt_enabled?
-      level_options[:hintPromptAttemptsThreshold] = @level.hint_prompt_attempts_threshold
+    # Default was selected based on analysis of calculated thresholds for
+    # levels in Courses 2, 3, 4 and the 2017 versions of Courses A-F. See PR
+    # #36507 for more details.
+    default_hint_prompt_attempts_threshold = 6.5
+    if @script&.hint_prompt_enabled?
+      level_options[:hintPromptAttemptsThreshold] = @level.hint_prompt_attempts_threshold || default_hint_prompt_attempts_threshold
     end
   end
 
@@ -593,7 +598,7 @@ module LevelsHelper
       callback: @callback,
       sublevelCallback: @sublevel_callback,
     }
-    dev_with_credentials = rack_env?(:development) && (!!CDO.aws_access_key || !!CDO.aws_role) && !!CDO.cloudfront_key_pair_id
+    dev_with_credentials = rack_env?(:development) && !!CDO.cloudfront_key_pair_id
     use_restricted_songs = CDO.cdn_enabled || dev_with_credentials || (rack_env?(:test) && ENV['CI'])
     app_options[:useRestrictedSongs] = use_restricted_songs if @game == Game.dance
     app_options[:isStartMode] = @is_start_mode || false

@@ -1,5 +1,5 @@
 ---
-title: Vejledning
+title: Hour of Code How-to Guide for After-school
 layout: wide
 nav: how_to_nav
 ---
@@ -8,7 +8,13 @@ nav: how_to_nav
 
 # Sådan griber du en times kodning an i fritidsordninger og klubber
 
-### Tilslut dig bevægelsen og indfør en gruppe elever i deres første time med datalogi ved at bruge disse trin. Hour of Code er nemt at afvikle - selv for begyndere! Hvis du gerne vil have et par ekstra hænder til hjælp, kan du finde en [lokal frivillig](%= codeorg_url('/volunteer/local') %) til at hjælpe med at køre en Hour of Code i din fritidsordning eller klub.
+### Join the movement and introduce your students to computer science with these steps.
+
+Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
+
+Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time. If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
+
+### An Hour of Code can also be hosted remotely! To get started, check out our [tips for hosting a virtual Hour of Code event](https://hourofcode.com/us/how-to/virtual).
 
 * * *
 
@@ -36,7 +42,7 @@ Make sure to test tutorials on student computers or devices to ensure they work 
 
 Stil høretelefoner til rådighed i din klasse, eller bed eleverne medbringe deres egne, hvis øvelsen, du vælger, fungerer bedst med lyd.
 
-**Har du ikke nok enheder?** Brug [par programmering](https://www.youtube.com/watch?v=vgkahOzFH2Q). Når eleverne arbejder sammen, hjælper de hinanden og har mindre brug for hjælp fra læreren. De vil også opleve at programmering er en social aktivitet, hvor samarbejde er vigtigt.
+**Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). Når eleverne arbejder sammen, hjælper de hinanden og har mindre brug for hjælp fra læreren. De vil også opleve at programmering er en social aktivitet, hvor samarbejde er vigtigt.
 
 ## 5. Start your Hour of Code off with an inspiring video
 

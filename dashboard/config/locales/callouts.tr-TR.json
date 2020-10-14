@@ -495,6 +495,9 @@
         "OPD-K5-projects-4": {
           "courseE_playLab_scaffold3_1": "Bir sonraki seviyeye geçmek için aktörü bu bayrağa götürün."
         },
+        "OPD-K5-variables-1": {
+          "grade5_artist_variables_triangles1_1": "Artık bloklarda sayı girmenin yeni bir yolu olduğuna dikkat edin. Bu 'matematik' blokları dışarı çekilebilir ve hareket ettirilebilir!"
+        },
         "OPD-K5-variables-5": {
           "courseF_artist_variables3_a": "`uzunluk` değişkenini ayarlamak için bunu kullan"
         },
@@ -587,7 +590,7 @@
           "courseE_artist_functions_challenge2_callout2": "Bu tasarımı beğenmediyseniz istediğiniz değişikliği yapın!"
         },
         "course4_bee_fwp_challenge2": {
-          "courseF_bee_fwp_challenge2_callout1": "Bu işlev mısır ile iyi bir iş çıkaracaktır, ancak diğer sebzelerde nasıl acaba?"
+          "courseF_bee_fwp_challenge2_callout1": "Bu fonksiyon mısır ile iyi bir iş çıkaracaktır, ancak diğer sebzelerde nasıl acaba?"
         },
         "courseA_artist_loops4": {
           "courseA_artist_loops4_1": "Bu sayı, bu bulmacada her bloktan kaç tane kullanabileceğinizi söyler."
@@ -941,6 +944,18 @@
         "courseC_maze_programming4_2020": {
           "courseC_maze_programming4_1": "Bu senin blok limitin. Elinde kullanabileceğin kaç tane blokun kaldığını söyler."
         },
+        "courseC_maze_programming5": {
+          "": "Bu blokların üzerinde sayılar yok. İstediğin kadar kullanabilirsin!"
+        },
+        "courseC_maze_programming5_2018": {
+          "": "Bu blokların üzerinde sayılar yok. İstediğin kadar kullanabilirsin!"
+        },
+        "courseC_maze_programming5_2019": {
+          "": "Bu blokların üzerinde sayılar yok. İstediğin kadar kullanabilirsin!"
+        },
+        "courseC_maze_programming5_2020": {
+          "": "Bu blokların üzerinde sayılar yok. İstediğin kadar kullanabilirsin!"
+        },
         "courseC_maze_programming7": {
           "courseC_maze_programming7_1": "Bu sizin ilk meydan okuma bulmacanız! Zor olmaları tasarlanmıştır, birkaç kez denemeniz gerekebilir.",
           "courseC_maze_programming7_2": "Bu bloklar taştan, atılamazlar."
@@ -1032,6 +1047,12 @@
         "courseD_maze_intro4_2020": {
           "courseC_maze_programming4_1": "Bu senin blok limitin. Elinde kullanabileceğin kaç tane blokun kaldığını söyler."
         },
+        "courseD_maze_intro5a_2019": {
+          "": "Bu blokların üzerinde sayılar yok. İstediğin kadar kullanabilirsin!"
+        },
+        "courseD_maze_intro5a_2020": {
+          "": "Bu blokların üzerinde sayılar yok. İstediğin kadar kullanabilirsin!"
+        },
         "courseD_maze_ramp1": {
           "grade2_CaringForNewPet_0_1": "Tüm blokları birleştirdikten sonra, ''Çalıştır'' a bas ve programını başlat."
         },
@@ -1084,6 +1105,30 @@
         "courseD_maze_ramp4_2020": {
           "courseC_maze_programming4_1": "Bu senin blok limitin. Elinde kullanabileceğin kaç tane blokun kaldığını söyler."
         },
+        "courseD_maze_ramp5": {
+          "": "Bu blokların üzerinde sayılar yok. İstediğin kadar kullanabilirsin!"
+        },
+        "courseD_maze_ramp5_2018": {
+          "": "Bu blokların üzerinde sayılar yok. İstediğin kadar kullanabilirsin!"
+        },
+        "courseD_maze_ramp5_2019": {
+          "": "Bu blokların üzerinde sayılar yok. İstediğin kadar kullanabilirsin!"
+        },
+        "courseD_maze_ramp5_2020": {
+          "": "Bu blokların üzerinde sayılar yok. İstediğin kadar kullanabilirsin!"
+        },
+        "courseD_maze_ramp5a": {
+          "": "Bu blokların üzerinde sayılar yok. İstediğin kadar kullanabilirsin!"
+        },
+        "courseD_maze_ramp5a_2018": {
+          "": "Bu blokların üzerinde sayılar yok. İstediğin kadar kullanabilirsin!"
+        },
+        "courseD_maze_ramp5a_2019": {
+          "": "Bu blokların üzerinde sayılar yok. İstediğin kadar kullanabilirsin!"
+        },
+        "courseD_maze_ramp5a_2020": {
+          "": "Bu blokların üzerinde sayılar yok. İstediğin kadar kullanabilirsin!"
+        },
         "courseD_maze_ramp6": {
           "courseD_maze_ramp6_1": "Buraya koyduğun kod kaç kere tekrarlamasını istediysen o kadar çalışır sonra devam eden bloklara geçer."
         },
@@ -1104,6 +1149,9 @@
         },
         "courseD_scrat_ramp4": {
           "courseC_maze_programming4_1": "Bu senin blok limitin. Elinde kullanabileceğin kaç tane blokun kaldığını söyler."
+        },
+        "courseD_scrat_ramp5": {
+          "": "Bu blokların üzerinde sayılar yok. İstediğin kadar kullanabilirsin!"
         },
         "courseD_scrat_ramp6": {
           "courseD_maze_ramp6_1": "Buraya koyduğun kod kaç kere tekrarlamasını istediysen o kadar çalışır sonra devam eden bloklara geçer."
@@ -1238,8 +1286,26 @@
         "courseE_playLab_scaffold3": {
           "courseE_playLab_scaffold3_1": "Bir sonraki seviyeye geçmek için aktörü bu bayrağa götürün."
         },
+        "courseF_artist_for1": {
+          "courseF_artist_for1_1": "Kodunuz için yer açmak bakımından, araç kurutusu \"kategori\" modundadır. 'For' döngüleri burada yaşar.\n"
+        },
+        "courseF_artist_for1_2018": {
+          "courseF_artist_for1_1": "Kodunuz için yer açmak bakımından, araç kurutusu \"kategori\" modundadır. 'For' döngüleri burada yaşar.\n"
+        },
+        "courseF_artist_for1_2019": {
+          "courseF_artist_for1_1": "Kodunuz için yer açmak bakımından, araç kurutusu \"kategori\" modundadır. 'For' döngüleri burada yaşar.\n"
+        },
+        "courseF_artist_for1_2020": {
+          "courseF_artist_for1_1": "Kodunuz için yer açmak bakımından, araç kurutusu \"kategori\" modundadır. 'For' döngüleri burada yaşar.\n"
+        },
         "courseF_artist_fwp1": {
           "courseF_artist_fwp1_1": "Fonksiyonun içindeki kodu değiştirmek için \"düzenle\" düğmesini kullan."
+        },
+        "courseF_artist_fwp4": {
+          "courseF_artist_fwp4_1": "Çokgeni tamamlamak için, her zaman 360 ÷ 'kenar' kadar derece ile döndüğünüzden emin olun."
+        },
+        "courseF_artist_fwp5": {
+          "courseF_artist_fwp5_1": "Burada çokgen fonksiyonunu bulacaksınız."
         },
         "courseF_artist_variables3": {
           "courseF_artist_variables3_a": "`uzunluk` değişkenini ayarlamak için bunu kullan"
@@ -1295,6 +1361,18 @@
         "courseF_bee_for4_2020": {
           "courseF_bee_for4_1": "Burada 'için' döngüsünü bulacaksınız!"
         },
+        "courseF_bee_for9": {
+          "courseF_bee_for9_1": "'Matematik' bloğunu burada bulacaksınız."
+        },
+        "courseF_bee_for9_2018": {
+          "courseF_bee_for9_1": "'Matematik' bloğunu burada bulacaksınız."
+        },
+        "courseF_bee_for9_2019": {
+          "courseF_bee_for9_1": "'Matematik' bloğunu burada bulacaksınız."
+        },
+        "courseF_bee_for9_2020": {
+          "courseF_bee_for9_1": "'Matematik' bloğunu burada bulacaksınız."
+        },
         "courseF_bee_functions2": {
           "courseF_bee_functions2_1": "Bu blok bir fonksiyonu çağırır.  İçinde ne olduğunu görmek için bu \"Düzenle\" düğmesini tıklayın!"
         },
@@ -1305,11 +1383,20 @@
           "courseF_bee_functions_challenge1_1": "Bu fonksiyona hangi kodu koymalısınız?",
           "courseF_bee_functions_challenge1_2": "Birden çok kez bal yapmak üzere düzenlerseniz \"Nektar veya bal kontrol\" fonksiyonunu burada kullanabilirsiniz."
         },
+        "courseF_bee_fwp1": {
+          "courseF_bee_fwp1_1": "'Eğer' ifadelerini burada bulabilirsiniz."
+        },
         "courseF_bee_fwp2": {
           "courseF_bee_fwp2_a": "Fonsiyonunuzu çağıran kare burada yaşıyor."
         },
+        "courseF_bee_fwp3": {
+          "courseF_bee_fwp3_1": "Bulutların yanı sıra boşluklar kontrol ederken de aynı fonksiyon kullanılabilir."
+        },
+        "courseF_bee_fwp4": {
+          "courseF_bee_fwp4_1": "Bu fonksiyona bir parametre eklemek için \"düzenle\" düğmesine basın."
+        },
         "courseF_bee_fwp_challenge2": {
-          "courseF_bee_fwp_challenge2_callout1": "Bu işlev mısır ile iyi bir iş çıkaracaktır, ancak diğer sebzelerde nasıl acaba?"
+          "courseF_bee_fwp_challenge2_callout1": "Bu fonksiyon mısır ile iyi bir iş çıkaracaktır, ancak diğer sebzelerde nasıl acaba?"
         },
         "courseF_bee_variables_1_2018": {
           "courseF_bee_functions_1_2018_1": "Değişkenlerini altta bulabilirsin!"
@@ -1319,6 +1406,9 @@
         },
         "courseF_bee_variables_1_2020": {
           "courseF_bee_functions_1_2018_1": "Değişkenlerini altta bulabilirsin!"
+        },
+        "courseF_playlab_variables1a": {
+          "courseF_playlab_variables1a_1": "İhtiyacın olan blokları bulmanı kolaylaştırmak için, araç kutucu kategoriler halinde organize edildi."
         },
         "courseF_playlab_variables5c": {
           "courseF_playlab_variables5c_1": "Değişken bloğunuzu burada bulabilirsiniz."
@@ -1378,6 +1468,18 @@
         },
         "frozen square snowflake": {
           "replace_questions": "Açılan menüden \"???\" yerine bir numara seçin"
+        },
+        "grade5_artist_variables_triangles1": {
+          "grade5_artist_variables_triangles1_1": "Artık bloklarda sayı girmenin yeni bir yolu olduğuna dikkat edin. Bu 'matematik' blokları dışarı çekilebilir ve hareket ettirilebilir!"
+        },
+        "grade5_artist_variables_triangles1_2018": {
+          "grade5_artist_variables_triangles1_1": "Artık bloklarda sayı girmenin yeni bir yolu olduğuna dikkat edin. Bu 'matematik' blokları dışarı çekilebilir ve hareket ettirilebilir!"
+        },
+        "grade5_artist_variables_triangles1_2019": {
+          "grade5_artist_variables_triangles1_1": "Artık bloklarda sayı girmenin yeni bir yolu olduğuna dikkat edin. Bu 'matematik' blokları dışarı çekilebilir ve hareket ettirilebilir!"
+        },
+        "grade5_artist_variables_triangles1_2020": {
+          "grade5_artist_variables_triangles1_1": "Artık bloklarda sayı girmenin yeni bir yolu olduğuna dikkat edin. Bu 'matematik' blokları dışarı çekilebilir ve hareket ettirilebilir!"
         }
       }
     }

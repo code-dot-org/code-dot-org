@@ -4012,3 +4012,11 @@ nn:
           lesson_groups:
             lg_1:
               display_name: Innhald
+        curriculum-sandbox-levels:
+          lessons:
+            Course A:
+              name: Kurs A
+            Course B:
+              name: Kurs B
+            CS Discoveries:
+              name: Oppdagingar i informatikk

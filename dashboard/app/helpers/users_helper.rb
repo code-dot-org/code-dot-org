@@ -197,7 +197,8 @@ module UsersHelper
               readonly_answers: readonly_answers ? true : nil,
               paired: (paired_user_levels.include? ul.try(:id)) ? true : nil,
               locked: locked ? true : nil,
-              last_progress_at: include_timestamp ? ul&.updated_at&.to_i : nil
+              last_progress_at: include_timestamp ? ul&.updated_at&.to_i : nil,
+              time_spent: ul&.time_spent&.to_i
             }.compact
           end
         end
@@ -228,7 +229,8 @@ module UsersHelper
           readonly_answers: readonly_answers ? true : nil,
           paired: (paired_user_levels.include? ul.try(:id)) ? true : nil,
           locked: locked ? true : nil,
-          last_progress_at: include_timestamp ? ul&.updated_at&.to_i : nil
+          last_progress_at: include_timestamp ? ul&.updated_at&.to_i : nil,
+          time_spent: ul&.time_spent&.to_i
         }.compact
 
         # Just in case this level has multiple pages, in which case we add an additional

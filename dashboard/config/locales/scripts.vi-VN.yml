@@ -747,6 +747,8 @@ vi:
               name: Sử dụng các biến số trong ứng dụng
             While Loops:
               name: Vòng lặp "trong khi"
+            Creating Functions with Parameters:
+              name: Tạo ra Chức năng với các tham số
         algebraPD3:
           lessons:
             Computer Science Pedagogy:

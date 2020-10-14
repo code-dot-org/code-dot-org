@@ -533,6 +533,28 @@ sk-SK:
           sa svojho plánu pre tvorbu aplikácie\n1. **Vyhodnoť a Uprav**\n   * Vymeňte
           si navzájom aplikácie a pomôžte ich vylepšiť\n1. **Prezentuj**\n   * Predveď
           svoj finálny produkt!"
+      Begin planning your project_2018_2019:
+        markdown: |+
+          # Príklady projektov
+
+          A teraz si vytvoríš svoj záverečný projekt. Začni prehliadkou niekoľkých príkladov.
+
+          | Hladná veverička| Mimozemský príbeh |
+          |---|---|
+          | [![Hungry Squirrel (Play Lab)](https://images.code.org/3fda61d18026d6661dccf4b09baea111-image-1565115158327.PNG "Hungry Squirrel (Play Lab")](https://studio.code.org/projects/playlab/HN1zAX4Om6zdsxVsBBug9Y8mlzKSWUAXhjzRl-64YRs/view) | [![Alien Story (Play Lab)](https://images.code.org/0bd5ed3674ac9fe3304e27e68974c35f-image-1565115240833.PNG "Alien Story (Play Lab")](https://studio.code.org/projects/playlab/I_8rcKtpLFRAn8flROC15Oc-KnDu-bkKBnSORoIDs0o/view) |
+          | Skús ku hre pridať zvuky! | Skús ku príbehu pridať ďalšiu scénu! |
+
+      Begin planning your project_2018_2019_2020:
+        markdown: |+
+          # Príklady projektov
+
+          A teraz si vytvoríš svoj záverečný projekt. Začni prehliadkou niekoľkých príkladov.
+
+          | Hladná veverička| Mimozemský príbeh |
+          |---|---|
+          | [![Hungry Squirrel (Play Lab)](https://images.code.org/3fda61d18026d6661dccf4b09baea111-image-1565115158327.PNG "Hungry Squirrel (Play Lab")](https://studio.code.org/projects/playlab/HN1zAX4Om6zdsxVsBBug9Y8mlzKSWUAXhjzRl-64YRs/view) | [![Alien Story (Play Lab)](https://images.code.org/0bd5ed3674ac9fe3304e27e68974c35f-image-1565115240833.PNG "Alien Story (Play Lab")](https://studio.code.org/projects/playlab/I_8rcKtpLFRAn8flROC15Oc-KnDu-bkKBnSORoIDs0o/view) |
+          | Skús ku hre pridať zvuky! | Skús ku príbehu pridať ďalšiu scénu! |
+
       BigEvent-Unplugged:
         markdown: |-
           Veľká udalosť
@@ -847,9 +869,9 @@ sk-SK:
           * [Call a function](//studio.code.org/docs/gamelab/callMyFunction/) = Zavolaj funkciu
       CSD U3 Keypress Matching:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: keyWentDown()
+        - text: keyWentUp()
+        - text: keyDown()
         content1: Spoj blok stlačenia klávesy s popisom, ktorý mu najviac zodpovedá.
           Ak tebou vybrané riešenie nebude správne, môžeš skúsiť znova.
         questions:
@@ -859,9 +881,9 @@ sk-SK:
         title: 'Spájanie: odpovede na stlačenie kláves'
       CSD U3 Keypress Matching_2018:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: keyWentDown()
+        - text: keyWentUp()
+        - text: keyDown()
         content1: Spoj blok stlačenia klávesy s popisom, ktorý mu najviac zodpovedá.
           Ak tebou vybrané riešenie nebude správne, môžeš skúsiť znova.
         questions:
@@ -871,9 +893,9 @@ sk-SK:
         title: 'Spájanie: odpovede na stlačenie kláves'
       CSD U3 Keypress Matching_2018_2019:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: keyWentDown()
+        - text: keyWentUp()
+        - text: keyDown()
         content1: Spoj blok stlačenia klávesy s popisom, ktorý mu najviac zodpovedá.
           Ak tebou vybrané riešenie nebude správne, môžeš skúsiť znova.
         questions:
@@ -1477,14 +1499,16 @@ sk-SK:
           ![](https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)
       GoingPlacesSafely-unplugged:
         markdown: |-
-          Bezpečné surfovanie po internete
+          Bezpečné surfovanie na internete
 
-          Internet je mocným, ale zavše nebezpečným miestom. Dávaj si pozor pri surfovaní po internete!
+          Internet je mocným, ale niekedy aj nebezpečným miestom. Dávaj si pozor pri surfovaní na internete!
       HappyLoops-Unplugged:
         markdown: |-
-          Veselé cykly
+          # Veselé cykly
 
           V tejto lekcii sa naučíš niečo o cykloch!
+
+          ![](https://images.code.org/6aac7f675f0c69033f42ccac6a733f68-image-1557769673400.png)
       HappyLoops-Unplugged_2020:
         markdown: |-
           Veselé cykly
@@ -1492,9 +1516,9 @@ sk-SK:
           V tejto lekcii sa naučíš niečo o cykloch!
       HappyMaps-Unplugged:
         markdown: |-
-          Veselé mapy
+          # Veselé mapy
 
-          Vytvor algoritmus, aby si presunul postavu cez bludisko.
+          Vytvor algoritmus, aby si posunul postavu cez bludisko.
       HappyMaps-Unplugged_2020:
         markdown: |-
           Veselé mapy
@@ -1695,11 +1719,27 @@ sk-SK:
         questions:
         - text: Ktoré slovo je vyhláskované?
         title: Vyber správnu odpoveď
+      OPD-K5-projects-1:
+        markdown: |+
+          # Príklady projektov
+
+          A teraz si vytvoríš svoj záverečný projekt. Začni prehliadkou niekoľkých príkladov.
+
+          | Hladná veverička | Mimozemský príbeh|
+          |---|---|
+          |<a href="https://studio.code.org/projects/playlab/HN1zAX4Om6zdsxVsBBug9Y8mlzKSWUAXhjzRl-64YRs/view" target="blank">![Hungry Squirrel (Play Lab)](https://images.code.org/3fda61d18026d6661dccf4b09baea111-image-1565115158327.PNG "Hungry Squirrel (Play Lab")</a>| <a href="https://studio.code.org/projects/playlab/I_8rcKtpLFRAn8flROC15Oc-KnDu-bkKBnSORoIDs0o/view" target="blank">![Alien Story (Play Lab)](https://images.code.org/0bd5ed3674ac9fe3304e27e68974c35f-image-1565115240833.PNG "Alien Story (Play Lab")</a>|
+          | Skús ku hre pridať zvuky! | Skús ku príbehu pridať ďalšiu scénu! |
+
       PowerOfWords-Unplugged:
         markdown: |-
           # Sila slov
 
           Dnes sa naučíš, čo treba robiť, ak je niekto v online priestore nepríjemný.
+      PowerOfWords-Unplugged_2020:
+        markdown: |
+          # Sila slov
+
+          ## Čo by sme mali spraviť, keď niekto na internete použije zlomyseľný, útočný, alebo nenávistný jazyk?
       Prepare for your presentation:
         markdown: |-
           # Prezentácia projektov
@@ -1740,21 +1780,29 @@ sk-SK:
           naučia definovanie a vyvolanie funkcií. "
       behaviors 1 predict:
         answers:
-        - feedback: Nesprávne.
-        - correct: true
+        - text: Sprite sa bude točiť
+          feedback: Nesprávne.
+        - text: Sprite sa zmenší.
+          correct: true
           feedback: Správne!
-        - feedback: Nesprávne.
-        - feedback: Nesprávne
+        - text: Sprite sa posunie.
+          feedback: Nesprávne.
+        - text: Sprite zmení farby.
+          feedback: Nesprávne
         questions:
         - text: Ak chceš vedieť ako funguje `tajomné správanie`, stlač tlačidlo "upraviť".
             Naštuduj si kód a odhadni, čo sa bude diať.
       behaviors 1 predict_2020:
         answers:
-        - feedback: Nesprávne.
-        - correct: true
+        - text: Sprite sa bude točiť
+          feedback: Nesprávne.
+        - text: Sprite sa zmenší.
+          correct: true
           feedback: Správne!
-        - feedback: Nesprávne.
-        - feedback: Nesprávne
+        - text: Sprite sa posunie.
+          feedback: Nesprávne.
+        - text: Sprite zmení farby.
+          feedback: Nesprávne
         questions:
         - text: Ak chceš vedieť ako funguje `tajomné správanie`, stlač tlačidlo "upraviť".
             Naštuduj si kód a odhadni, čo sa bude diať.
@@ -1765,7 +1813,8 @@ sk-SK:
         - text: Diagonálne
           correct: true
           feedback: Správne!
-        - {}
+        - text: Cik cak
+          feedback: Nesprávne.
         - text: Dole, a potom vľavo
           feedback: Nesprávne
         questions:
@@ -1777,7 +1826,8 @@ sk-SK:
         - text: Diagonálne
           correct: true
           feedback: Správne!
-        - {}
+        - text: Cik cak
+          feedback: Nesprávne.
         - text: Dole, a potom vľavo
           feedback: Nesprávne
         questions:
@@ -1952,20 +2002,24 @@ sk-SK:
             program zlyhá? '
       courseC_multi_maze_debugging8_predict1_2018_2019_2020:
         answers:
-        - text: Program nezlyhá. Scrat sa dostane až k žaluďu.
-          feedback: Nesprávne. Scrat pôjde zlým smerom po svojom poslednom otočení.
-        - text: Scrat pôjde zlým smerom po svojom poslednom otočení.
+        - text: Scrat sa dostane k žaluďu. V tomto kóde nie sú žiadne chyby.
+          feedback: Nesprávne. Ako prvé Scrat zle odbočí, potom sa neposunie dostatočne
+            ďaleko vpred aby sa dostal až k žaluďu.
+        - text: Scrat sa nedostane k žaluďu pretože sa otočí nesprávnym smerom.
           correct: true
-          feedback: Správne!
-        - text: Scrat nespraví dostatok krokov a nedôjde až k žaluďu.
-          feedback: Nesprávne. Scrat neurobí dosť krokov až potom, ako sa otočí nesprávnym
-            smerom.
+          feedback: Správne. Ako prvé Scrat zle odbočí, potom sa neposunie dostatočne
+            ďaleko vpred aby sa dostal až k žaluďu.
+        - text: Scrat sa nedostane až k žaluďu, pretože je použitých málo bokov `posuň
+            sa dopredu`.
+          correct: true
+          feedback: Správne. Ako prvé Scrat zle odbočí, potom sa neposunie dostatočne
+            ďaleko vpred aby sa dostal až k žaluďu.
         - text: Neviem.
-          feedback: 'Prvá chyba je, že Scrat pôjde zlým smerom po svojom poslednom
-            otočení. '
+          feedback: V tomto kóde sú dve chyby. Ako prvé Scrat zle odbočí, potom sa
+            neposunie dostatočne ďaleko vpred aby sa dostal až k žaluďu.
         questions:
-        - text: 'Pozri sa pozorne na tento kód.  Aká je prvá chyba, kvôli ktorej tento
-            program zlyhá? '
+        - text: Hľadaj chyby v kóde. Dostane sa Scrat až k žaluďu alebo narazí na
+            problém?
       courseC_multi_maze_programming8_predict1:
         answers:
         - text: Vták skončí jeden krok pred prasiatkom.
@@ -2142,6 +2196,50 @@ sk-SK:
         description: Práve si na poslednej úlohe kurzu D! Vyber si projekt, ktorý
           chceš vytvoriť.
         display_name: Záverečný projekt
+      courseD_external_binary1:
+        markdown: "<h1>Binárne obrázky</h1>\n \n<h3> Binárnosť znamená, že máme k
+          dispozícii len 2 možnosti. V našom prípade to je  <b>vypnutý (off)</b> a
+          <b>zapnutý (on)</b>.\n<br/>\nV týchto úlohách budeme používať číslo <b>0</b>
+          ako kód pre vypnutý  a číslo <b>1</b> ako kód pre zapnutý.\n<br/>\n<table>\n<tr><td><img
+          src=\"https://images.code.org/50283881d577c17ac6f1d1648d8f361f-image-1483640342574.09.14.png\"
+          width=\"75px\"/></td><td><img src=\"https://images.code.org/ba6f0a000b18f2dd87160e6255e8a71c-image-1483640355103.09.24.png\"
+          width=\"90px\"/></td></tr>\n<tr padding=\"0px\"><td align=\"center\"><b>0</b></td><td
+          align=\"center\"><b>1</b></td></tr>\n</table><img src=\"https://images.code.org/934883837aa59bca1d5c1ded0e0ac675-image-1483640120036.51.06.png\"
+          float=\"left\"/><h3>K dispozícii máš mriežku s pixelami, po ktorej sa môžeš
+          prechádzať. Obrázky nakreslíš \"zapnutím\" vybraných štvorcov</h3>\n\n![](https://images.code.org/c53e00cde9acbae72d02fb9cc2a20e53-image-1483639858942.png)\n\n\n"
+      courseD_external_binary1_2018:
+        markdown: "<h1>Binárne obrázky</h1>\n \n<h3> Binárnosť znamená, že máme k
+          dispozícii len 2 možnosti. V našom prípade to je  <b>vypnutý (off)</b> a
+          <b>zapnutý (on)</b>.\n<br/>\nV týchto úlohách budeme používať číslo <b>0</b>
+          ako kód pre vypnutý  a číslo <b>1</b> ako kód pre zapnutý.\n<br/>\n<table>\n<tr><td><img
+          src=\"https://images.code.org/50283881d577c17ac6f1d1648d8f361f-image-1483640342574.09.14.png\"
+          width=\"75px\"/></td><td><img src=\"https://images.code.org/ba6f0a000b18f2dd87160e6255e8a71c-image-1483640355103.09.24.png\"
+          width=\"90px\"/></td></tr>\n<tr padding=\"0px\"><td align=\"center\"><b>0</b></td><td
+          align=\"center\"><b>1</b></td></tr>\n</table><img src=\"https://images.code.org/934883837aa59bca1d5c1ded0e0ac675-image-1483640120036.51.06.png\"
+          float=\"left\"/><h3>K dispozícii máš mriežku s pixelami, po ktorej sa môžeš
+          prechádzať. Obrázky nakreslíš \"zapnutím\" vybraných štvorcov</h3>\n\n![](https://images.code.org/c53e00cde9acbae72d02fb9cc2a20e53-image-1483639858942.png)\n\n\n"
+      courseD_external_binary1_2018_2019:
+        markdown: "<h1>Binárne obrázky</h1>\n \n<h3> Binárnosť znamená, že máme k
+          dispozícii len 2 možnosti. V našom prípade to je  <b>vypnutý (off)</b> a
+          <b>zapnutý (on)</b>.\n<br/>\nV týchto úlohách budeme používať číslo <b>0</b>
+          ako kód pre vypnutý  a číslo <b>1</b> ako kód pre zapnutý.\n<br/>\n<table>\n<tr><td><img
+          src=\"https://images.code.org/50283881d577c17ac6f1d1648d8f361f-image-1483640342574.09.14.png\"
+          width=\"75px\"/></td><td><img src=\"https://images.code.org/ba6f0a000b18f2dd87160e6255e8a71c-image-1483640355103.09.24.png\"
+          width=\"90px\"/></td></tr>\n<tr padding=\"0px\"><td align=\"center\"><b>0</b></td><td
+          align=\"center\"><b>1</b></td></tr>\n</table><img src=\"https://images.code.org/934883837aa59bca1d5c1ded0e0ac675-image-1483640120036.51.06.png\"
+          float=\"left\"/><h3>K dispozícii máš mriežku s pixelami, po ktorej sa môžeš
+          prechádzať. Obrázky nakreslíš \"zapnutím\" vybraných štvorcov</h3>\n\n![](https://images.code.org/c53e00cde9acbae72d02fb9cc2a20e53-image-1483639858942.png)\n\n\n"
+      courseD_external_binary1_2018_2019_2020:
+        markdown: "<h1>Binárne obrázky</h1>\n \n<h3> Binárnosť znamená, že máme k
+          dispozícii len 2 možnosti. V našom prípade to je  <b>vypnutý (off)</b> a
+          <b>zapnutý (on)</b>.\n<br/>\nV týchto úlohách budeme používať číslo <b>0</b>
+          ako kód pre vypnutý  a číslo <b>1</b> ako kód pre zapnutý.\n<br/>\n<table>\n<tr><td><img
+          src=\"https://images.code.org/50283881d577c17ac6f1d1648d8f361f-image-1483640342574.09.14.png\"
+          width=\"75px\"/></td><td><img src=\"https://images.code.org/ba6f0a000b18f2dd87160e6255e8a71c-image-1483640355103.09.24.png\"
+          width=\"90px\"/></td></tr>\n<tr padding=\"0px\"><td align=\"center\"><b>0</b></td><td
+          align=\"center\"><b>1</b></td></tr>\n</table><img src=\"https://images.code.org/934883837aa59bca1d5c1ded0e0ac675-image-1483640120036.51.06.png\"
+          float=\"left\"/><h3>K dispozícii máš mriežku s pixelami, po ktorej sa môžeš
+          prechádzať. Obrázky nakreslíš \"zapnutím\" vybraných štvorcov</h3>\n\n![](https://images.code.org/c53e00cde9acbae72d02fb9cc2a20e53-image-1483639858942.png)\n\n\n"
       courseD_multi_artist_binary8_predict1:
         answers:
         - text: A
@@ -2153,6 +2251,21 @@ sk-SK:
         - text: D
           correct: true
           feedback: Správne!
+        markdown: |+
+          <table>
+          <tr>
+
+          <td style="padding: 0 30px 0 0;"> <b>A)</b> <img src="https://images.code.org/ca3e26e5b3008075d06db82c2831ab0b-image-1489438562132.43.39a.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>B)</b> <img src="https://images.code.org/6da194be0b14a041291648c12a307495-image-1489438503416.43.39.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>C)</b> <img src="https://images.code.org/dfaa00e3a6260742671d1ac4455fb5d5-image-1489438562133.43.39b.png" width="100px"/></td>
+
+
+          <td style="padding: 0 20px 0 0;"> <b>D)</b> <img src="https://images.code.org/7fc63ed5875b9f9785d0e88aec6eae47-image-1489439110649.43.39d.png" width="100px"/></td>
+          </tr></table>
+          <br/>
+
         questions:
         - text: Dobre si prezri tento kód. Ktorý z obrázkov nakreslí po stlačení "Spustiť"?
       courseD_multi_artist_binary8_predict1_2018:
@@ -2166,6 +2279,21 @@ sk-SK:
         - text: D
           correct: true
           feedback: Správne!
+        markdown: |+
+          <table>
+          <tr>
+
+          <td style="padding: 0 30px 0 0;"> <b>A)</b> <img src="https://images.code.org/ca3e26e5b3008075d06db82c2831ab0b-image-1489438562132.43.39a.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>B)</b> <img src="https://images.code.org/6da194be0b14a041291648c12a307495-image-1489438503416.43.39.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>C)</b> <img src="https://images.code.org/dfaa00e3a6260742671d1ac4455fb5d5-image-1489438562133.43.39b.png" width="100px"/></td>
+
+
+          <td style="padding: 0 20px 0 0;"> <b>D)</b> <img src="https://images.code.org/7fc63ed5875b9f9785d0e88aec6eae47-image-1489439110649.43.39d.png" width="100px"/></td>
+          </tr></table>
+          <br/>
+
         questions:
         - text: Dobre si prezri tento kód. Ktorý z obrázkov nakreslí po stlačení "Spustiť"?
       courseD_multi_artist_binary8_predict1_2018_2019:
@@ -2179,6 +2307,21 @@ sk-SK:
         - text: D
           correct: true
           feedback: Správne!
+        markdown: |+
+          <table>
+          <tr>
+
+          <td style="padding: 0 30px 0 0;"> <b>A)</b> <img src="https://images.code.org/ca3e26e5b3008075d06db82c2831ab0b-image-1489438562132.43.39a.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>B)</b> <img src="https://images.code.org/6da194be0b14a041291648c12a307495-image-1489438503416.43.39.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>C)</b> <img src="https://images.code.org/dfaa00e3a6260742671d1ac4455fb5d5-image-1489438562133.43.39b.png" width="100px"/></td>
+
+
+          <td style="padding: 0 20px 0 0;"> <b>D)</b> <img src="https://images.code.org/7fc63ed5875b9f9785d0e88aec6eae47-image-1489439110649.43.39d.png" width="100px"/></td>
+          </tr></table>
+          <br/>
+
         questions:
         - text: Dobre si prezri tento kód. Ktorý z obrázkov nakreslí po stlačení "Spustiť"?
       courseD_multi_artist_binary8_predict1_2018_2019_2020:
@@ -2192,6 +2335,21 @@ sk-SK:
         - text: D
           correct: true
           feedback: Správne!
+        markdown: |+
+          <table>
+          <tr>
+
+          <td style="padding: 0 30px 0 0;"> <b>A)</b> <img src="https://images.code.org/ca3e26e5b3008075d06db82c2831ab0b-image-1489438562132.43.39a.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>B)</b> <img src="https://images.code.org/6da194be0b14a041291648c12a307495-image-1489438503416.43.39.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>C)</b> <img src="https://images.code.org/dfaa00e3a6260742671d1ac4455fb5d5-image-1489438562133.43.39b.png" width="100px"/></td>
+
+
+          <td style="padding: 0 20px 0 0;"> <b>D)</b> <img src="https://images.code.org/7fc63ed5875b9f9785d0e88aec6eae47-image-1489439110649.43.39d.png" width="100px"/></td>
+          </tr></table>
+          <br/>
+
         questions:
         - text: Dobre si prezri tento kód. Ktorý z obrázkov nakreslí po stlačení "Spustiť"?
       courseD_multi_artist_nestedLoops9_predict1:
@@ -2430,8 +2588,14 @@ sk-SK:
           correct: true
           feedback: Správne!
         - text: Včela sa pokúsi zobrať nektár z kvetu aj z plástu.
+          feedback: Nesprávne. Blok `ak na kvete` umožní včele zobrať nektár z každého
+            kvetu a vyrobiť med na každom pláste.
         - text: Včela sa pokúsi vyrobiť med na kvete aj na pláste.
+          feedback: Nesprávne. Nesprávne. Blok `ak na kvete` umožní včele zobrať nektár
+            z každého kvetu a vyrobiť med na každom pláste.
         - text: Neviem.
+          feedback: Blok `ak na kvete` umožní včele zobrať nektár z každého kvetu
+            a vyrobiť med na každom pláste.
         questions:
         - text: '"Pozri si pozorne tento kód.  Čo myslíš, že sa stane, keď stlačíš
             "Spustiť"? Pamätaj: pod každým oblakom bude vždy len *jeden* plást, alebo
@@ -2443,8 +2607,14 @@ sk-SK:
           correct: true
           feedback: Správne!
         - text: Včela sa pokúsi zobrať nektár z kvetu aj z plástu.
+          feedback: Nesprávne. Blok `ak na kvete` umožní včele zobrať nektár z každého
+            kvetu a vyrobiť med na každom pláste.
         - text: Včela sa pokúsi vyrobiť med na kvete aj na pláste.
+          feedback: Nesprávne. Nesprávne. Blok `ak na kvete` umožní včele zobrať nektár
+            z každého kvetu a vyrobiť med na každom pláste.
         - text: Neviem.
+          feedback: Blok `ak na kvete` umožní včele zobrať nektár z každého kvetu
+            a vyrobiť med na každom pláste.
         questions:
         - text: '"Pozri si pozorne tento kód.  Čo myslíš, že sa stane, keď stlačíš
             "Spustiť"? Pamätaj: pod každým oblakom bude vždy len *jeden* plást, alebo
@@ -2888,13 +3058,12 @@ sk-SK:
         markdown: |-
           # Príklady projektov
 
-          Práve ideš začať so svojím finálnym projektom. Ešte predtým ako začneš, dobre si poprezeraj príklady projektov.
+          A teraz si vytvoríš svoj záverečný projekt. Skôr, ako začneš si prehliadni niekoľko príkladov.
 
-
-          | Náhodná rýchlosť pri Odrážačke (Basketbal) | Množenie stromprúperov (Star Wars) |
+          | Náhodná rýchlosť s bounce (Basketbal) | Množenie Stormtrooperov (Star Wars) |
           |---|---|
           | [![Random Speed on Bounce (Basketball)](https://images.code.org/b8c4fb3e6838ed7ceb4cbe82ad4a935f-image-1592507103767.png "Random Speed on Bounce (Basketball)")](https://studio.code.org/projects/basketball/-v43GAnRDrVqG266q_Z-LPWeKInuU6oNIVpkepY81n4/view) | [![Multiplying Stormtroopers (Star Wars)](https://images.code.org/9999fe364e597cf5e7d4cd74456e27e3-image-1592507338941.png "Multiplying Stormtroopers (Star Wars)")](https://studio.code.org/projects/starwarsblocks/8ALnYQ_igeHBahKD2t8HMM8pm_M9pPGLcxAjOZNnkkI/view) |
-          | Lopta mení rýchlosť po každom odrazení! | Vyhni sa stormtrúperom lebo sa rozmnožia! |
+          | Lopta mení rýchlosť po každom odrazení! | Vyhni sa Stormtrooperom lebo sa rozmnožia! |
 
 
           | Panika na diskotéke (Tanečná Párty) | Scéna z pláže (Umelec) |
@@ -3018,29 +3187,63 @@ sk-SK:
         - text: Čo sa stane ak stlačíš "Spustiť"?
       courseE_project_exemplars_2019:
         content1: Strana učebnice s obodovaním testu
-        markdown: |-
+        markdown: |
           # Príklady projektov
 
-          Práve sa ideš pustiť do svojho finálneho projektu. Predým ako začneš, prezri si niekoľko príkladov projektov.
+          A teraz si vytvoríš svoj záverečný projekt. Skôr, ako začneš si prehliadni niekoľko príkladov.
 
           ## Sprite Lab
 
-          | Tanec príšer (Sprite Lab) | Košíčková hra (Sprite Lab) |
+          | Monster Dance (Sprite Lab) | Cupcake Game (Sprite Lab) |
           |---|---|
           | [![Monster Dance(Sprite Lab)](https://images.code.org/85838ca11b728dce3e1513515c4510e3-image-1556826303297.png "Monster Dance (Sprite Lab")](https://studio.code.org/projects/spritelab/Cj3sVYGhWo2ujgwRoO1FscJazrDPT2qGfU59YXvFXxs/view) | [![Cupcake Game (Sprite Lab)](https://images.code.org/c90080aaf05349fb6e1fbb6861e815df-image-1556809855136.png "Cupcake Game (Sprite Lab")](https://studio.code.org/projects/spritelab/YMEHR4ps9cDJ0sb4Ks0YrZcpcjGmc4OEiUudZHm-l6g/view) |
           | Skús do tejto hry pridať text alebo skóre! | Skús do tejto hry pridať text alebo skóre! |
 
           ## Umelec
 
-          | Postup (Artist) | Kvetiny s funkciami (Arist) |
+          | Vzory (Umelec) | Kvetiny s funkciami (Umelec) |
           |---|---|
+          | [![Pattern (Artist)](https://images.code.org/2432878706891dda080b69428ddc4a20-image-1556822714214.png "Pattern (Artist)")](https://studio.code.org/projects/artist/TznMeJRa4SnHWJvUBEoNUw/view) | [![Function Flowers (Artist)](https://images.code.org/1e6da38baf996dace44581572895a4b8-image-1556822184973.png "Function Flowers (Artist)")](https://studio.code.org/projects/artist/4uGqFaTnc7V9B6IqCqj21Q/view) |
+          | Zabav sa s vnorenými cyklami! | Zabav sa s funkciami! |
       courseE_project_exemplars_2019_2020:
         content1: Strana učebnice s obodovaním testu
+        markdown: "#  Príklady projektov \n\nA teraz si vytvoríš svoj záverečný projekt.
+          Skôr, ako začneš si prehliadni niekoľko príkladov. \n\n## Sprite Lab\n\n|
+          Monster Dance (Sprite Lab) | Cupcake Game (Sprite Lab) |\n|---|---|\n| [![Monster
+          Dance (Sprite Lab)](https://images.code.org/85838ca11b728dce3e1513515c4510e3-image-1556826303297.png
+          \"Monster Dance (Sprite Lab\")](https://studio.code.org/projects/spritelab/Cj3sVYGhWo2ujgwRoO1FscJazrDPT2qGfU59YXvFXxs/view)
+          | [![Cupcake Game (Sprite Lab)](https://images.code.org/c90080aaf05349fb6e1fbb6861e815df-image-1556809855136.png
+          \"Cupcake Game (Sprite Lab\")](https://studio.code.org/projects/spritelab/YMEHR4ps9cDJ0sb4Ks0YrZcpcjGmc4OEiUudZHm-l6g/view)
+          |\n| Skús ku hre pridať text alebo skóre! | Skús ku hre pridať text alebo
+          skóre! |\n\n## Umelec\n\n| Vzory (Artist) | Snehové vločky (Ľadové kráľovstvo)
+          |\n|---|---|\n| [![Pattern (Artist)](https://images.code.org/2432878706891dda080b69428ddc4a20-image-1556822714214.png
+          \"Pattern (Artist)\")](https://studio.code.org/projects/artist/TznMeJRa4SnHWJvUBEoNUw/view)
+          | [![Snowflake Flowers (Frozen)](https://images.code.org/09990050d5f9055734c923b460e4dc6e-image-1592506430990.png
+          \"Snowflake Flowers (Frozen)\")](https://studio.code.org/projects/artist/4uGqFaTnc7V9B6IqCqj21Q/view)
+          |\n| Zabav sa s vnorenými cyklami! | Zabav sa s funkciami! |\n"
       courseExpress_EOC_2020:
+        description: 'Si na poslednej úlohe Zrýchleného kurzu! Vyber si, aký projekt
+          vytvoríš. '
         display_name: Záverečný projekt
       courseExpress_project_exemplars_2019_2020:
         content1: Strana učebnice s obodovaním testu
+        markdown: |+
+          # Príklady projektov
+
+          A teraz si vytvoríš svoj záverečný projekt. Začni prehliadkou niekoľkých príkladov.
+
+          | Panika na diskotéke (Tanečná párty) | Na pláži (Umelec) |
+          |---|---|
+          | [![Pattern (Artist)](https://images.code.org/73ae79b4070ef734c1b5130333efc1f4-image-1592507673667.png "Pattern (Artist)")](https://studio.code.org/projects/dance/UZLatmMAfCTcyIOCIvsTSf6zoPAZ524VQDuDThd5vAk/view) | [![Snowflake Flowers (Frozen)](https://images.code.org/36570ade5dd92be16de34b06e614ee92-image-1592507892956.png "Snowflake Flowers (Frozen)")](https://studio.code.org/projects/artist/7WY8_OM2z4cucIR9n5I6_RJ7LWhrpf82VM0pve-4Aqc/view) |
+          | Rozpáľ tanečníkov a roztoč to na tejto diskotéke! | Skús ku tejto scéne pridať viac farieb a pozadie! |
+
+          | Snehové vločky (Ľadové kráľovstvo) | Lietadlo (Sprite Lab) |
+          |---|---|
+          | [![Snowflake Flowers (Frozen)](https://images.code.org/09990050d5f9055734c923b460e4dc6e-image-1592506430990.png "Snowflake Flowers (Frozen)")](https://studio.code.org/projects/artist/4uGqFaTnc7V9B6IqCqj21Q/view) | [![#Airplane Game (Sprite Lab)](https://images.code.org/6d7053c472b093f273207cae6282fa2d-image-1592510538635.png "Airplane Game (Sprite Lab )")](https://studio.code.org/projects/spritelab/STSNFsfSpabSzZcZYC7o2HLgTz-vKlZm-vqRyp94pk4/view)  |
+          | Zabav sa s funkciami! | Skús ku hre pridať text, alebo skóre! |
+
       courseF_EOC_2020:
+        description: 'Sme na konci kurzu F! Vyber si, aký projekt vytvoríš. '
         display_name: Záverečný projekt
       courseF_bee_variables_8a_2018:
         answers:
@@ -3563,8 +3766,41 @@ sk-SK:
         - {}
       courseF_project_exemplars_2019:
         content1: Strana učebnice s obodovaním testu
+        markdown: |+
+          # Príklady projektov
+
+          A teraz si vytvoríš svoj záverečný projekt. Začni prehliadkou niekoľkých príkladov.
+
+          ## Sprite Lab
+
+          | Cupcake Game (Sprite Lab) | Helicopter Game (Sprite Lab) |
+          |---|---|
+          | [![#Cupcake Game(Sprite Lab)](https://images.code.org/c90080aaf05349fb6e1fbb6861e815df-image-1556809855136.png)](https://studio.code.org/projects/spritelab/YMEHR4ps9cDJ0sb4Ks0YrZcpcjGmc4OEiUudZHm-l6g/view) | [![#Helicopter Game (Sprite Lab)](https://images.code.org/1a273fd447b952367792423a70c5087a-image-1556812149075.png)](https://studio.code.org/projects/spritelab/STSNFsfSpabSzZcZYC7o2HLgTz-vKlZm-vqRyp94pk4/view) |
+          | Skús ku hre pridať text, alebo skóre! | Skús ku hre pridať text, alebo skóre! |
+
+          ## Umelec
+
+          | Kvety (Umelec) | Špirála (Umelec) |
+          |---|---|
+          | [![Flowers (Artist)](https://images.code.org/0f5adf63c318eab8c8acb397d9db7f2a-image-1556821537577.png)](https://studio.code.org/projects/artist/MIMh2pV2IiLm1ZzaiA6N7kKvg534lFck3abLXTsvZU8/view) | [![Spiral (Artist)](https://images.code.org/06514571a8cf2f8b0346006ac1adc219-image-1556819399386.png)](https://studio.code.org/projects/artist/66scPDPWa8RNNHkcXDaXdA/view) |
+          | Let's get creative with variables! | Let's get creative with For Loops! |
+
       courseF_project_exemplars_2019_2020:
         content1: Strana učebnice s obodovaním testu
+        markdown: "# Príklady projektov\n\nA teraz si vytvoríš svoj záverečný projekt.
+          Skôr, ako začneš si prehliadni niekoľko príkladov.\n\n## Sprite Lab\n\n|
+          Cupcake Game (Sprite Lab) | \tAirplane Game (Sprite Lab) |\n|---|---|\n|
+          [![Cupcake Game (Sprite Lab)](https://images.code.org/c90080aaf05349fb6e1fbb6861e815df-image-1556809855136.png
+          \"Cupcake Game (Sprite Lab)\")](https://studio.code.org/projects/spritelab/YMEHR4ps9cDJ0sb4Ks0YrZcpcjGmc4OEiUudZHm-l6g/view)
+          | [![Airplane Game (Sprite Lab)](https://images.code.org/1a273fd447b952367792423a70c5087a-image-1556812149075.png
+          \"Airplane Game (Sprite Lab)\")](https://studio.code.org/projects/spritelab/STSNFsfSpabSzZcZYC7o2HLgTz-vKlZm-vqRyp94pk4/view)
+          |\n| Skús ku tejto hre pridať text, alebo skóre! | Skús ku tejto hre pridať
+          text, alebo skóre! |\n\n## Umelec\n\n| Flowers (Artist) | Spiral (Artist)
+          |\n|---|---|\n| [![Flowers (Artist)](https://images.code.org/0f5adf63c318eab8c8acb397d9db7f2a-image-1556821537577.png
+          \"Flowers (Artist)\")](https://studio.code.org/projects/artist/MIMh2pV2IiLm1ZzaiA6N7kKvg534lFck3abLXTsvZU8/view)
+          | [![Spiral (Artist)](https://images.code.org/06514571a8cf2f8b0346006ac1adc219-image-1556819399386.png
+          \"Spiral (Artist)\")](https://studio.code.org/projects/artist/66scPDPWa8RNNHkcXDaXdA/view)
+          \ |\n| Zabav s s premennými! | Zabav sa s cyklami \"for\"! |\n\n"
       coursee_prediction_artistfunction2:
         answers:
         - text: Umelec vyrieši túto úlohu správne.
@@ -3802,3 +4038,187 @@ sk-SK:
         questions:
         - text: Pozorne si prezri tento kód. Čo si myslíš, že sa stane po spustení
             programu?
+      DigitalFootprint-Unplugged:
+        markdown: |-
+          # Tvoja digitálna stopa
+
+          Keď o sebe dávaš informácie na internet, zanecháva to digitálnu stopu.
+      GettingLoopy-Unplugged:
+        markdown: |-
+          # Zacykľujeme sa
+
+          Táto lekcia predstavuje koncept cyklov v programovaní pomocou tanečnej aktivity.
+      GettingLoopy-Unplugged_2020:
+        markdown: |-
+          # Zacykľujeme sa
+
+          Táto lekcia predstavuje koncept cyklov v programovaní pomocou tanečnej aktivity.
+      MoveItMoveIt-Unplugged:
+        markdown: |-
+          # Pohyb, pohyb
+
+          Použi mapu a zadaj príkazy na dosiahnutie cieľa.
+      MoveItMoveIt-Unplugged_2020:
+        markdown: |-
+          # Pohyb, pohyb
+
+          Použi mapu a zadaj príkazy na dosiahnutie cieľa.
+      TheRightAppMarkdownLevel_2019:
+        markdown: "# Tá správna Appka\n\n* Všetci dnes používame počítače, obzvlášť
+          smartfóny. \n* Smartfónové aplikácie alebo \"appky\" pomáhajú ľuďom napríklad
+          hovoriť s priateľmi, počúvať hudbu, nakupovať alebo len prechádzať internet.\n*
+          Pre programátorov je dôležité poznať potreby druhých a zohľadniť ich pri
+          návrhu aplikácií!\n\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)"
+      TheRightAppMarkdownLevel_2019_2020:
+        markdown: "# Tá správna Appka\n\n* Všetci dnes používame počítače, obzvlášť
+          smartfóny. \n* Smartfónové aplikácie alebo \"appky\" pomáhajú ľuďom napríklad
+          hovoriť s priateľmi, počúvať hudbu, nakupovať alebo len prechádzať internet.\n*
+          Pre programátorov je dôležité poznať potreby druhých a zohľadniť ich pri
+          návrhu aplikácií!\n\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)"
+      ScreenOutTheMean-Unplugged:
+        markdown: |-
+          # Neakceptuj zákernosti
+
+          Dnes sa dozvieš, čo robiť, ak sa niekto správa zákerne v online svete.
+      BinaryBracelets-Unplugged:
+        markdown: |-
+          # Binárne náramky
+
+          Vytvor si náramok, ktorý predstavuje tvoje meno v systéme, ktorému rozumejú počítače!
+
+          ![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)
+      BinaryBracelets-Unplugged_2020:
+        markdown: |-
+          # Binárne náramky
+
+          Vytvor si náramok, ktorý predstavuje tvoje meno v systéme, ktorému rozumejú počítače!
+
+          ![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)
+      MyLoopyRoboticFriends-Unplugged:
+        markdown: |-
+          # Moji zacyklení robotickí kamaráti
+
+          Skráť si svoje programy pomocou cyklov!
+      MyLoopyRoboticFriends-Unplugged_2020:
+        markdown: |-
+          # Moji zacyklení robotickí kamaráti
+
+          Skráť si svoje programy pomocou cyklov!
+      MyRoboticFriends-Unplugged:
+        markdown: |-
+          # Moji robotickí kamaráti
+
+          Nauč sa programovať písaním kódu pre svojich kamarátov!
+      MyRoboticFriends-Unplugged_2020:
+        markdown: |-
+          # Moji robotickí kamaráti
+
+          Nauč sa programovať písaním kódu pre svojich kamarátov!
+      PicturingData-Unplugged:
+        markdown: |-
+          # Zobrazovanie údajov
+
+          Použi projekt Play Lab na zhromažďovanie údajov a predpovedanie.
+
+          ![](https://images.code.org/606a78c09a01133a1bbc1aa9c76f3320-image-1557334268558.png)
+      PicturingData-Unplugged_2020:
+        markdown: |-
+          # Zobrazovanie údajov
+
+          Použi projekt Play Lab na zhromažďovanie údajov a predpovedanie.
+
+          ![](https://images.code.org/606a78c09a01133a1bbc1aa9c76f3320-image-1557334268558.png)
+      PowerfulPasswords-Unplugged:
+        markdown: |-
+          # Silné heslá
+
+          Preskúmaj, prečo ľudia používajú heslá a spoznaj výhody ich používania. Objav spôsoby vytvárania a uchovávania silných a bezpečených hesiel.
+
+          ![](https://images.code.org/9e082a5564a289bccc8e2dd79a2cae9f-image-1557869939256.png)
+      ConditionalsWithCards-Unplugged:
+        markdown: |-
+          # Podmienky s kartami
+
+          Zahraj si kartovú hru a vytvor pravidlá ako "ak si potiahnem červenú kartu, dostanem bod" a "ak si potiahnem čiernu kartu, ty dostaneš bod".
+      ConditionalsWithCards-Unplugged_2020:
+        markdown: |-
+          # Podmienky s kartami
+
+          Zahraj si kartovú hru a vytvor pravidlá ako "ak si potiahnem červenú kartu, dostanem bod" a "ak si potiahnem čiernu kartu, ty dostaneš bod".
+      GraphPaperProgramming-Unplugged:
+        markdown: |-
+          # Programovanie na štvorčekovom papieri
+
+          Napíš algoritmy, podľa ktorých môžu tvoji spolužiaci nakresliť obrázky.
+      GraphPaperProgramming-Unplugged_2020:
+        markdown: |-
+          # Programovanie na štvorčekovom papieri
+
+          Napíš algoritmy, podľa ktorých môžu tvoji spolužiaci nakresliť obrázky.
+      RelayProgramming-Unplugged:
+        markdown: |
+          # Štafetové programovanie
+
+          Rozdeľte sa do tímov a spolu napíšte program, ktorý nakreslí obrázky.
+      RelayProgramming-Unplugged_2020:
+        markdown: |
+          # Štafetové programovanie
+
+          Rozdeľte sa do tímov a spolu napíšte program, ktorý nakreslí obrázky.
+      BinaryImages-Unplugged:
+        markdown: |-
+          # Binárne obrazy
+
+          Diskutujte, ako znovu vytvoriť obrázok, ale tentokrát iba pomocou dvoch jednoduchých hodnôt.
+      BinaryImages-Unplugged_2020:
+        markdown: |-
+          # Binárne obrazy
+
+          Diskutujte, ako znovu vytvoriť obrázok, ale tentokrát iba pomocou dvoch jednoduchých hodnôt.
+      DigitalCitizenship-Unplugged:
+        markdown: "# Digitálne občianstvo \n\nNiektoré informácie nie je vhodné zdieľať
+          online. Táto lekcia vám pomôže rozlišovať medzi informáciami bezpečnými
+          na zdieľanie a tými súkromnými."
+      EnvelopeVariables-Unplugged:
+        markdown: "# Premenné v obálkach \n\nPremenné v informatike umožňujú voľnosť.
+          V tejto lekcii sa dozviete, čo sú premenné a akými rozličnými spôsobmi ich
+          môžeme používať."
+      EnvelopeVariables-Unplugged_2020:
+        markdown: "# Premenné v obálkach \n\nPremenné v informatike umožňujú voľnosť.
+          V tejto lekcii sa dozviete, čo sú premenné a akými rozličnými spôsobmi ich
+          môžeme používať."
+      ForLoopFun-Unplugged:
+        markdown: |-
+          # Zábava s cyklami "for"
+
+          Vieme, že cykly nám umožňujú robiť veci dookola, ale teraz sa naučíme, ako používať cykly so zabudovanou extra štruktúrou.
+      ForLoopFun-Unplugged_2020:
+        markdown: |-
+          # Zábava s cyklami "for"
+
+          Vieme, že cykly nám umožňujú robiť veci dookola, ale teraz sa naučíme, ako používať cykly so zabudovanou extra štruktúrou.
+      Internet-Unplugged:
+        markdown: |
+          # Internet
+
+          Vytvorte si v učebni vlastný internet len pomocou kúskov papiera.
+      Internet-Unplugged_2020:
+        markdown: |
+          # Internet
+
+          Vytvorte si v učebni vlastný internet len pomocou kúskov papiera.
+      Crowdsourcing-Unplugged:
+        markdown: |
+          # Crowdsourcing
+
+          Zisti, ako ti pomôže crowdsourcing, v informatike bežná technika riešenia problémov, dokončiť úlohu efektívnejšie spoločne v triede, ako keby si to musel zvládnuť sám.
+      DigitalSharing-Unplugged:
+        markdown: |-
+          # Digitálne zdieľanie
+
+          V tejto lekcii sa zamyslíš nad výzvami a výhodami rešpektovania vlastníctva a autorských práv, najmä v digitálnom prostredí.
+      DigitalSharing-Unplugged_2020:
+        markdown: |-
+          # Digitálne zdieľanie
+
+          V tejto lekcii sa zamyslíš nad výzvami a výhodami rešpektovania vlastníctva a autorských práv, najmä v digitálnom prostredí.

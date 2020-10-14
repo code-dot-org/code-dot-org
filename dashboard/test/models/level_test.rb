@@ -149,6 +149,19 @@ class LevelTest < ActiveSupport::TestCase
     assert_nil(summary[:display_name])
   end
 
+  test "summarize_for_edit returns object with expected fields" do
+    user = User.create(name: 'Best Curriculum Writer')
+    level = Level.create!(name: 'test_level', type: 'Maze', user: user, updated_at: Time.new(2020, 3, 27, 0, 0, 0, "-07:00"))
+
+    summary = level.summarize_for_edit
+
+    assert_equal(summary[:id], level.id)
+    assert_equal(summary[:type], 'Maze')
+    assert_equal(summary[:name], 'test_level')
+    assert_equal(summary[:owner], 'Best Curriculum Writer')
+    assert(summary[:updated_at].include?("03/27/20 at")) # The time is different locally than on drone
+  end
+
   test "get_question_text returns question text for free response level" do
     free_response_level = create :level, name: 'A question', long_instructions: 'Answer this question.',
       type: 'FreeResponse'
@@ -1063,5 +1076,32 @@ class LevelTest < ActiveSupport::TestCase
     assert_equal level, level.project_template_level
 
     assert_equal [], level.all_descendant_levels, 'omit self from descendant levels'
+  end
+
+  test 'hint_prompt_enabled is true for levels in a script where hint_prompt_enabled is true' do
+    script = create :csf_script
+    assert script.hint_prompt_enabled?
+    level = create :level
+    create :script_level, levels: [level], script: script
+    assert level.hint_prompt_enabled?
+  end
+
+  test 'hint_prompt_enabled is true for levels in many scripts if at least one script is hint_prompt_enabled' do
+    hint_script = create :csf_script
+    assert hint_script.hint_prompt_enabled?
+    no_hint_script = create :csp_script
+    refute no_hint_script.hint_prompt_enabled?
+    level = create :level
+    create :script_level, levels: [level], script: hint_script
+    create :script_level, levels: [level], script: no_hint_script
+    assert level.hint_prompt_enabled?
+  end
+
+  test 'hint_prompt_enabled is false for levels in scripts where hint_prompt_enabled is false' do
+    no_hint_script = create :csp_script
+    refute no_hint_script.hint_prompt_enabled?
+    level = create :level
+    create :script_level, levels: [level], script: no_hint_script
+    refute level.hint_prompt_enabled?
   end
 end

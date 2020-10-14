@@ -6033,20 +6033,12 @@ pt-BR:
             irá fazer o programa falhar? '
       courseC_multi_maze_debugging8_predict1_2018_2019_2020:
         answers:
-        - text: O programa não falhará. Scrat vai chegar à bolota.
-          feedback: Incorreto. Scrat irá para o caminho errado após sua última volta.
-        - text: Scrat irá para o caminho errado depois da sua última volta.
-          correct: true
-          feedback: Correto!
-        - text: Scrat dá poucos passos e acaba com a bolota.
-          feedback: Incorreta. Dar apenas alguns passos acontece depois que Scrat
-            vira na direção errada.
+        - {}
+        - correct: true
+        - correct: true
         - text: Eu não sei.
-          feedback: 'O primeiro erro é que o Scrat segue o caminho errado após a sua
-            volta final. '
         questions:
-        - text: 'Olhe atentamente para o código abaixo. Qual é o primeiro bug que
-            irá fazer o programa falhar? '
+        - {}
       courseC_multi_maze_programming8_predict1:
         answers:
         - text: O pássaro vai acabar um passo antes do porco.
@@ -7220,6 +7212,21 @@ pt-BR:
             quando você clicar em "Executar"?
       courseD_project_exemplars_2020_2021:
         content1: Teste a Página da Apostila de Markdown
+        markdown: |-
+          # Exemplos de projetos
+
+          Você está prestes a começar seu projeto final. Antes de você começar, passe algum tempo olhando os exemplos de projetos.
+
+          | Velocidade Aleatória no Quique (Basquete) | Multiplicando Stormtroopers (Guerra nas Estrelas) |
+          |---|---|
+          | [![Velocidade Aleatória no Quique (Basquete)](https://images.code.org/b8c4fb3e6838ed7ceb4cbe82ad4a935f-image-1592507103767.png "Velocidade Aleatória no Quique (Basquete)")](https://studio.code.org/projects/basketball/-v43GAnRDrVqG266q_Z-LPWeKInuU6oNIVpkepY81n4/view) | [![Multiplicando Stormtroopers (Guerra nas Estrelas)](https://images.code.org/9999fe364e597cf5e7d4cd74456e27e3-image-1592507338941.png "Multiplicando Stormtroopers (Guerra nas Estrelas)")](https://studio.code.org/projects/starwarsblocks/8ALnYQ_igeHBahKD2t8HMM8pm_M9pPGLcxAjOZNnkkI/view) |
+          | A bola muda de velocidade quando quica! | Evite os stormtroopers ou eles vão multiplicar! |
+
+
+          | Panic! at the Disco (Festa dançante) | Cena na praia (Artista) |
+          |---|---|
+          | [![Padrão (Artista)](https://images.code.org/73ae79b4070ef734c1b5130333efc1f4-image-1592507673667.png "Padrão (Artista)")](https://studio.code.org/projects/dance/UZLatmMAfCTcyIOCIvsTSf6zoPAZ524VQDuDThd5vAk/view) | [![Flores de floco de neve (Congelados)](https://images.code.org/36570ade5dd92be16de34b06e614ee92-image-1592507892956.png "Flores de floco de neve (Congelados)")](https://studio.code.org/projects/artist/7WY8_OM2z4cucIR9n5I6_RJ7LWhrpf82VM0pve-4Aqc/view) |
+          | Seus dançarinos de apoio continuam trocando seus movimentos! | Tente adicionar mais cor e plano de fundo a esta cena! |
       courseE_multi_bee_functions_predict1:
         answers:
         - text: O mesmo programa também irá funcionar para esse desafio.
@@ -7405,8 +7412,40 @@ pt-BR:
 
       courseE_project_exemplars_2019_2020:
         content1: Teste a Página da Apostila de Markdown
+        markdown: |-
+          # Exemplos de Projetos
+
+          Você está prestes a começar seu projeto final. Antes de você começar, passe algum tempo olhando os exemplos de projetos.
+
+          ## Laboratório de Sprite
+
+          | Dança do Monstro (Laboratório de Sprite) | Jogo do Bolinho (Laboratório de Sprite) |
+          |---|---|
+          | [![Dança do Monstro (Laboratório de Sprite)](https://images.code.org/85838ca11b728dce3e1513515c4510e3-image-1556826303297.png "Dança do Monstro (Laboratório de Sprite")](https://studio.code.org/projects/spritelab/Cj3sVYGhWo2ujgwRoO1FscJazrDPT2qGfU59YXvFXxs/view) | [![Jogo do Bolinho (Laboratório de Sprite)](https://images.code.org/c90080aaf05349fb6e1fbb6861e815df-image-1556809855136.png "Jogo do Bolinho (Laboratório de Sprite")](https://studio.code.org/projects/spritelab/YMEHR4ps9cDJ0sb4Ks0YrZcpcjGmc4OEiUudZHm-l6g/view) |
+          | Tente adicionar texto ou uma pontuação a este jogo! | Tente adicionar texto ou uma pontuação a este jogo! |
+
+          ## Artista
+
+          | Padrão (Artista) | Flores de flocos de neve (Congelado) |
+          |---|---|
+          | [![Padrão (Artista)](https://images.code.org/2432878706891dda080b69428ddc4a20-image-1556822714214.png "Padrão (Artista)")](https://studio.code.org/projects/artist/TznMeJRa4SnHWJvUBEoNUw/view) | [![Flores de flocos de neve (Congelado)](https://images.code.org/09990050d5f9055734c923b460e4dc6e-image-1592506430990.png "Flores de flocos de neve (Congelado)")](https://studio.code.org/projects/artist/4uGqFaTnc7V9B6IqCqj21Q/view) |
+          | Vamos ser criativos com loops misturados! | Vamos ser criativos com funções! |
       courseExpress_project_exemplars_2019_2020:
         content1: Teste a Página da Apostila de Markdown
+        markdown: |-
+          # Exemplos de Projeto
+
+          Você está prestes a começar seu projeto final. Antes de você começar, passe algum tempo olhando os exemplos de projetos.
+
+          | Panic! at the Disco (Festa Dançante) | Cena na Praia (Artista) |
+          |---|---|
+          | [![Padrão (Artista)](https://images.code.org/73ae79b4070ef734c1b5130333efc1f4-image-1592507673667.png "Padrão (Artista)")](https://studio.code.org/projects/dance/UZLatmMAfCTcyIOCIvsTSf6zoPAZ524VQDuDThd5vAk/view) | [![Flores de flocos de neve (Congelado)](https://images.code.org/36570ade5dd92be16de34b06e614ee92-image-1592507892956.png "Flores de flocos de neve (Congelado)")](https://studio.code.org/projects/artist/7WY8_OM2z4cucIR9n5I6_RJ7LWhrpf82VM0pve-4Aqc/view) |
+          | Ligue a sua Discoteca enquanto seus dançarinos de apoio a mudam! | Tente adicionar mais cor e plano de fundo a esta cena! |
+
+          | Flores de flocos de neve (Congelado) | Airplane Game (Sprite Lab) |
+          |---|---|
+          | [![Flores de flocos de neve (Congelado)](https://images.code.org/09990050d5f9055734c923b460e4dc6e-image-1592506430990.png "Flores de flocos de neve (Congelado)")](https://studio.code.org/projects/artist/4uGqFaTnc7V9B6IqCqj21Q/view) | [![#Jogo do Avião (Laboratório de Sprite)](https://images.code.org/6d7053c472b093f273207cae6282fa2d-image-1592510538635.png "Jogo do Avião (Laboratório de Sprite)")](https://studio.code.org/projects/spritelab/STSNFsfSpabSzZcZYC7o2HLgTz-vKlZm-vqRyp94pk4/view)  |
+          | Vamos ser criativos com funções! | Tente adicionar texto ou uma pontuação a este jogo! |
       courseF_bee_variables_8a_2018:
         answers:
         - text: A abelha não coletará nenhum néctar porque a variável não é chamada
@@ -8154,6 +8193,24 @@ pt-BR:
 
       courseF_project_exemplars_2019_2020:
         content1: Teste a Página da Apostila de Markdown
+        markdown: |-
+          # Exemplos de Projetos
+
+          Você está prestes a começar seu projeto final. Antes de você começar, passe algum tempo olhando os exemplos de projetos.
+
+          ## Laboratório de Sprite
+
+          | Jogo do Bolinho (Laboratório de Sprite) |  Jogo do Avião (Laboratório de Sprite) |
+          |---|---|
+          | [![Jogo do Bolinho (Laboratório de Sprite)](https://images.code.org/c90080aaf05349fb6e1fbb6861e815df-image-1556809855136.png "Jogo do Bolinho (Laboratório de Sprite)")](https://studio.code.org/projects/spritelab/YMEHR4ps9cDJ0sb4Ks0YrZcpcjGmc4OEiUudZHm-l6g/view) | [![Jogo do Avião (Laboratório de Sprite)](https://images.code.org/1a273fd447b952367792423a70c5087a-image-1556812149075.png "Jogo do Avião (Laboratório de Sprite)")](https://studio.code.org/projects/spritelab/STSNFsfSpabSzZcZYC7o2HLgTz-vKlZm-vqRyp94pk4/view) |
+          | Tente adicionar texto ou uma pontuação a este jogo! | Tente adicionar texto ou uma pontuação a este jogo! |
+
+          ## Artista
+
+          | Flores (Artista) | Espiral (Artista) |
+          |---|---|
+          | [![Flores (Artista)](https://images.code.org/0f5adf63c318eab8c8acb397d9db7f2a-image-1556821537577.png "Flores (Artista)")](https://studio.code.org/projects/artist/MIMh2pV2IiLm1ZzaiA6N7kKvg534lFck3abLXTsvZU8/view) | [![Espiral (Artista)](https://images.code.org/06514571a8cf2f8b0346006ac1adc219-image-1556819399386.png "Espiral (Artista)")](https://studio.code.org/projects/artist/66scPDPWa8RNNHkcXDaXdA/view)  |
+          | Vamos ser criativos com variáveis! | Vamos ser criativos com Loops usando For! |
       coursee_prediction_artistfunction2:
         answers:
         - text: O artista resolverá o quebra-cabeça corretamente.
@@ -8364,10 +8421,37 @@ pt-BR:
           Pesquisa rápida do CS Discoveries!
       csf_be_a_super_digital_citizen:
         content1: descrição aqui
+        markdown: |-
+          # Cidadão Super Digital
+
+          ## Como podemos ser defensores quando vemos cyberbullying?
       csf_password_power-up:
         content1: descrição aqui
+        markdown: |-
+          # Reforce sua senha
+
+          ## Dicas para Memorizar sua Senha
+
+          * Comece com uma **frase** memorável.
+          * Somente seus **pais** devem saber sua senha.
+          * Nunca use nenhuma informação de identidade **privada** na sua senha.
+          * Crie senhas com pelo menos **oito** caracteres.
+          * Use letras, números e **símbolos** na sua senha.
+
+          ![](https://images.code.org/bfa69295fbf33c77ecdeb79b5498d8f7-image-1584751340896.png)
       csf_putting_a_stop_to_online_meanness:
         content1: descrição aqui
+        markdown: |-
+          # PARE a Maldade
+
+          ## O que você deve fazer se alguém é mau com você online?
+
+          * **P**rocure se afastar.
+          * **A**cione um adulto de confiança.
+          * **R**eavalie os sites primeiro.
+          * **E**spere e pense online
+
+          ![](https://images.code.org/f3e4987a130b27f7b589d7829b753aac-image-1584750971069.png)
       grade2_multi_collector_A_predict1:
         answers:
         - text: Laurel irá coletar 4 peças do tesouro usando este código.
@@ -8445,3 +8529,33 @@ pt-BR:
           \   \n<a href=\"https://docs.google.com/document/d/18KHX5NNlmXX1Eqt8u6LFRzto7PK4dIFNv-tr1F1joUQ/edit?usp=sharing\"
           target=\"_new\">\n<button>\nIr para o plano de aulas\n</button> \n</a>\n\n<br/><br/>\n<a
           class=\"btn btn-large btn-primary next-stage submitButton\">Continuar</a>\n"
+      PowerOfWords-Unplugged_2020:
+        markdown: |-
+          # O Poder das Palavras
+
+          ## O que você deve fazer quando alguém usa linguagem perversa ou violenta na internet?
+      PrivatePersonalInformation-Unplugged_2020:
+        markdown: |-
+          # Informação Privada e Pessoal
+
+          ## Qual informação sobre você é OK para compartilhar online?
+      courseD_EOC_2020:
+        description: Você alcançou a última lição do Curso D! Escolha um projeto para
+          criar.
+      courseE_EOC_2020:
+        description: Você alcançou o final do Curso E! Escolha um projeto para criar.
+      courseExpress_EOC_2020:
+        description: Você alcançou a última lição do Curso Expresso! Escolha um projeto
+          para criar.
+      courseF_EOC_2020:
+        description: Você alcançou o final do Curso F! Escolha um projeto para criar.
+      csf_digital_trails:
+        markdown: |-
+          #Siga a Trilha Digital
+
+          ## Qual informação é OK de ter em suas pegadas digitais?
+      csf_safety_in_my_online_neighborhood:
+        markdown: |-
+          #Minha Vizinhança Online
+
+          ##Como você vai a lugares online seguros?

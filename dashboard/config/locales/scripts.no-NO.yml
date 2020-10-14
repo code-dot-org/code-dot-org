@@ -3227,3 +3227,9 @@
           lesson_groups:
             lg_1:
               display_name: Innhold
+        curriculum-sandbox-levels:
+          lessons:
+            Course A:
+              name: Kurs A
+            Course B:
+              name: Kurs B

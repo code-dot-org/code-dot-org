@@ -5068,21 +5068,12 @@ es-ES:
             hará que el programa falle? '
       courseC_multi_maze_debugging8_predict1_2018_2019_2020:
         answers:
-        - text: El programa no fallará. Scrat conseguirá la bellota.
-          feedback: Incorrecto. Scrat va por el camino equivocado luego de su último
-            giro.
-        - text: Scrat se equivocará después de su último giro.
-          correct: true
-          feedback: "¡Correcto!"
-        - text: Scrat da muy pocos pasos y no llega hasta la bellota.
-          feedback: Incorrecto. Dará unos pasos de más, porque Scrat giró en la dirección
-            equivocada.
+        - {}
+        - correct: true
+        - correct: true
         - text: No lo sé.
-          feedback: 'El primer error es que Scrat va por el camino equivocado después
-            de su último giro. '
         questions:
-        - text: 'Mira el siguiente código con atención. ¿Cuál es el primer error que
-            hará que el programa falle? '
+        - {}
       courseC_multi_maze_programming8_predict1:
         answers:
         - text: El pájaro quedará a un paso del cerdo.
@@ -7011,3 +7002,13 @@ es-ES:
           \   \n    \n<a href=\"https://docs.google.com/document/d/18KHX5NNlmXX1Eqt8u6LFRzto7PK4dIFNv-tr1F1joUQ/edit?usp=sharing\"
           target=\"_new\">\n<button>\nIr al plan de la lección\n</button> \n</a>\n\n<br/><br/>\n<a
           class=\"btn btn-large btn-primary next-stage submitButton\">Continuar</a>\n"
+      csf_digital_trails:
+        markdown: |-
+          # Sigue el Rastro Digital
+
+          ## ¿Qué información es buena para obtener en tu huellas digitales?
+      csf_safety_in_my_online_neighborhood:
+        markdown: |-
+          # Mi Barrio en Línea
+
+          ## ¿Cómo navegas en la Red sin riesgo?

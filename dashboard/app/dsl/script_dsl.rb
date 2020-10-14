@@ -19,7 +19,7 @@ class ScriptDSL < BaseDSL
     @curriculum_path = nil
     @project_widget_types = []
     @wrapup_video = nil
-    @script_announcements = nil
+    @announcements = nil
     @new_name = nil
     @family_name = nil
     @version_year = nil
@@ -51,7 +51,7 @@ class ScriptDSL < BaseDSL
   boolean :is_course
 
   string :wrapup_video
-  string :script_announcements
+  string :announcements
   string :new_name
   string :family_name
   string :version_year
@@ -81,9 +81,18 @@ class ScriptDSL < BaseDSL
       @lesson_groups << {
         key: key,
         display_name: properties[:display_name],
+        big_questions: [],
         lessons: []
       }.compact
     end
+  end
+
+  def lesson_group_description(description)
+    @lesson_groups.last[:description] = description
+  end
+
+  def lesson_group_big_questions(questions)
+    @lesson_groups.last[:big_questions] = questions
   end
 
   def lesson(key, properties = {})
@@ -140,7 +149,7 @@ class ScriptDSL < BaseDSL
       curriculum_path: @curriculum_path,
       project_widget_visible: @project_widget_visible,
       project_widget_types: @project_widget_types,
-      script_announcements: @script_announcements,
+      announcements: @announcements,
       new_name: @new_name,
       family_name: @family_name,
       version_year: @version_year,
@@ -275,7 +284,10 @@ class ScriptDSL < BaseDSL
     i18n_lesson_group_strings = {}
     @lesson_groups.each do |lesson_group|
       if lesson_group[:key]
-        i18n_lesson_group_strings[lesson_group[:key]] = {'display_name' => lesson_group[:display_name]}
+        i18n_lesson_group_strings[lesson_group[:key]] = {}
+        lesson_group.select {|k, v| [:display_name, :description, :big_questions].include?(k) && !v.nil_or_empty?}.each do |k, v|
+          i18n_lesson_group_strings[lesson_group[:key]][k.to_s] = v
+        end
       end
       lesson_group[:lessons].each do |lesson|
         i18n_lesson_strings[lesson[:key]] = {'name' => lesson[:name]}
@@ -324,7 +336,7 @@ class ScriptDSL < BaseDSL
     s << "curriculum_path '#{script.curriculum_path}'" if script.curriculum_path
     s << 'project_widget_visible true' if script.project_widget_visible
     s << "project_widget_types #{script.project_widget_types}" if script.project_widget_types
-    s << "script_announcements #{script.script_announcements}" if script.script_announcements
+    s << "announcements #{script.announcements}" if script.announcements
     s << "new_name '#{script.new_name}'" if script.new_name
     s << "family_name '#{script.family_name}'" if script.family_name
     s << "version_year '#{script.version_year}'" if script.version_year
@@ -349,6 +361,8 @@ class ScriptDSL < BaseDSL
         t = "lesson_group '#{escape(lesson_group.key)}'"
         t += ", display_name: '#{escape(lesson_group.display_name)}'" if lesson_group.display_name
         s << t
+        s << "lesson_group_description '#{escape(lesson_group.description)}'" if lesson_group.description
+        s << "lesson_group_big_questions '#{escape(lesson_group.big_questions)}'" if lesson_group.big_questions
       end
       lesson_group.lessons.each do |lesson|
         s << serialize_lesson(lesson)

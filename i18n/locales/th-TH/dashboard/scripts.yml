@@ -2879,3 +2879,9 @@ th:
           lessons:
             Lesson:
               name: บทเรียน
+        curriculum-sandbox-levels:
+          lessons:
+            Course A:
+              name: คอร์ส A
+            Course B:
+              name: คอร์ส B

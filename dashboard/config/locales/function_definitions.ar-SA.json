@@ -1828,7 +1828,7 @@
         },
         "courseE_Dogger_2": {
           "stop_everything": {
-            "name": "توقف_كل_شيء"
+            "name": "أوقِف_كل_شيء"
           },
           "lose": {
             "name": "اخسر"
@@ -3187,6 +3187,21 @@
         "courseF_bee_variables_5_2020": {
           "collect row": {
             "name": "جمع الصف"
+          }
+        },
+        "courseF_bee_variables_6_2018": {
+          "collect stairs": {
+            "name": "اجمع السلالم\n"
+          }
+        },
+        "courseF_bee_variables_6_2019": {
+          "collect stairs": {
+            "name": "اجمع السلالم\n"
+          }
+        },
+        "courseF_bee_variables_6_2020": {
+          "collect stairs": {
+            "name": "اجمع السلالم\n"
           }
         },
         "courseF_bee_variables_7_2018": {

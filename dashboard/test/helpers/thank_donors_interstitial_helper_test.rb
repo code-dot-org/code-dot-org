@@ -5,6 +5,9 @@ class ThankDonorsInterstitialHelperTest < ActionView::TestCase
     @request = ActionDispatch::Request.new({})
     @request.stubs(:gdpr?).returns(false)
     @request.stubs(:params).returns({})
+
+    SchoolInfoInterstitialHelper.stubs(:show?).returns(false)
+    SchoolInfoInterstitialHelper.stubs(:show_confirmation_dialog?).returns(false)
   end
 
   test 'do not show thank donors interstitial if user is not signed in' do
@@ -21,6 +24,20 @@ class ThankDonorsInterstitialHelperTest < ActionView::TestCase
     student = build :user, birthday: nil
 
     refute ThankDonorsInterstitialHelper.show?(student, @request)
+  end
+
+  test 'do not show thank donors interstitial to teacher who will see school info interstitial' do
+    teacher = build :teacher, sign_in_count: 1, terms_of_service_version: 1
+
+    SchoolInfoInterstitialHelper.stubs(:show?).returns(true)
+    refute ThankDonorsInterstitialHelper.show?(teacher, @request)
+  end
+
+  test 'do not show thank donors interstitial to teacher who will see school info confirmation dialog' do
+    teacher = build :teacher, sign_in_count: 1, terms_of_service_version: 1
+
+    SchoolInfoInterstitialHelper.stubs(:show_confirmation_dialog?).returns(true)
+    refute ThankDonorsInterstitialHelper.show?(teacher, @request)
   end
 
   test 'do not show thank donors interstitial to teacher who has not accepted terms of service' do

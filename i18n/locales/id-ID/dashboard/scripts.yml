@@ -106,7 +106,7 @@ id:
             The Big Event:
               name: Acara besar
             Your Digital Footprint:
-              name: Digital Footprint Kamu
+              name: Digital Footprint Anda
         course3:
           title: Kursus 3
           description: Kursus 3 dirancang untuk siswa yang telah mengambil kursus 2. Siswa akan menggali lebih dalam topik pemrograman yang diperkenalkan dalam kursus sebelumnya untuk membuat solusi yang fleksibel untuk beberapa masalah yang lebih kompleks. Pada akhir kursus ini, siswa mwmbuat cerita interaktif dan permainan mereka yang dapat di bagikan dengan siapa pun. Direkomendasikan untuk kelas 4-5.
@@ -152,7 +152,7 @@ id:
             Songwriting:
               name: Menulis lagu
             'Studio: Create a Game':
-              name: 'Studio: Membuat Permainan'
+              name: 'Play Lab: Membuat Permainan'
             'Studio: Create a Story':
               name: 'Studio: Membuat Cerita'
         playlab:
@@ -185,7 +185,7 @@ id:
               name: Artis
         course4:
           title: Kursus 4
-          description: Kursus 4 dirancang bagi siswa yang telah mengambil kursus 2 dan 3. Siswa akan belajar bagaimana menangani teka-teki dengan tingkat kerumitan yang bertambah pada saat mereka belajar bagaimana menggabungkan beberapa konsep ketika menyelesaikan setiap tantangan. Pada saat selesai Kursus ini, siswa akan membuat program yang menampilkan beberapa keterampilan, termasuk untuk loop dan fungsi dengan parameter. Direkomendasikan untuk kelas 4-8.
+          description: Kursus 4 dirancang bagi siswa yang telah mengambil kursus 2 dan 3. Siswa akan belajar bagaimana menangani puzzle dengan tingkat kerumitan yang bertambah pada saat mereka belajar bagaimana menggabungkan beberapa konsep ketika menyelesaikan setiap tantangan. Pada saat selesai Kursus ini, siswa akan membuat program yang menampilkan beberapa keterampilan, termasuk untuk loop dan fungsi dengan parameter. Direkomendasikan untuk kelas 4-8.
           description_short: Siswa mengabil Kursus 4 yang harus sudahmengambil Kursus 2 dan 3.
           description_audience: Usia 10 + (setelah Kursus 3)
           lessons:
@@ -324,8 +324,8 @@ id:
               name: '∞'
         algebrademo:
           title: Demo Aljabar
-          description: Sejumlah teka-teki untuk menunjukkan lingkungan dan bahasa pemrograman yang digunakan dalam Code.org CS di Aljabar
-          description_short: Sejumlah teka-teki untuk menunjukkan lingkungan dan bahasa pemrograman yang digunakan dalam Code.org CS di Aljabar
+          description: Sejumlah puzzle untuk menunjukkan lingkungan dan bahasa pemrograman yang digunakan dalam Code.org CS di Aljabar
+          description_short: Sejumlah puzzle untuk menunjukkan lingkungan dan bahasa pemrograman yang digunakan dalam Code.org CS di Aljabar
           lessons:
             Defining Simple Functions:
               name: Mendefinisikan fungsi sederhana
@@ -507,18 +507,18 @@ id:
               name: Koding satu jam 2013
         CodeStudioPuzzleChallenge:
           title: Tantangan Puzzle Kode Studio
-          description: Cobalah ini coding teka-teki yang menyenangkan ini. Lakukan yang terbaik!
+          description: Cobalah ini coding puzzle yang menyenangkan ini. Lakukan yang terbaik!
           description_short: Tantang diri Anda!
           lessons:
             Puzzles:
-              name: Puzzles/Teka-teki
+              name: Puzzles/Puzzle
         Tutorial Video - Code Studio Puzzle Challenge:
           title: Tutorial - Tantangan Puzzle Kode Studio
-          description: Cobalah ini coding teka-teki yang menyenangkan ini. Lakukan yang terbaik!
+          description: Cobalah ini coding puzzle yang menyenangkan ini. Lakukan yang terbaik!
           description_short: Tantang diri Anda!
           lessons:
             Puzzles:
-              name: Puzzles/Teka-teki
+              name: Puzzles/Puzzle
         cspunit1:
           title: "CSP Unit 1 - informasi Digital"
           description: Unit ini membahas tantangan teknis dan pertanyaan yang muncul dari kebutuhan untuk mewakili informasi digital di komputer dan mentransferkannya antara manusia dan perangkat komputasi.
@@ -746,6 +746,8 @@ id:
               name: Menggunakan variabel dalam aplikasi
             While Loops:
               name: Perulangan Selagi
+            Creating Functions with Parameters:
+              name: Membuat fungsi dengan parameter
         algebraPD3:
           lessons:
             Computer Science Pedagogy:
@@ -1193,7 +1195,7 @@ id:
             Teacher Dashboard:
               name: Dashboard untuk Guru
             Teaching with Puzzles:
-              name: Mengajar dengan teka-teki
+              name: Mengajar dengan puzzle
             Teaching with the Design Recipe:
               name: Mengajar dengan resep desain
             The Design Recipe:
@@ -2605,7 +2607,7 @@ id:
             'Personal Website: Midway Check':
               name: 'Situs web pribadi: periksa midway'
             Publishing a Website:
-              name: Penerbitan sebuah situs web
+              name: Sedang diterbitkan situs web
             Sources and Search Engines:
               name: Sumber dan mesin pencari
             Introduction to HTML:
@@ -2706,7 +2708,7 @@ id:
             Loops Intro:
               name: Pengenalan Loop
             Loops Unplugged:
-              name: Loop Unplugged
+              name: Loop Tanpa Komputer
             Persistence & Frustration:
               name: Kegigihan & Frustrasi
             Programming:
@@ -2766,7 +2768,7 @@ id:
             Loops Intro:
               name: Pengenalan Loop
             Loops Unplugged:
-              name: Loop Unplugged
+              name: Loop Tanpa Komputer
             More Computer Science:
               name: Ilmu Komputer Selengkapnya
             Persistence & Frustration:
@@ -3134,7 +3136,7 @@ id:
             Make a Dog Tag:
               name: Membuat Tanda Anjing
             More CS with Run Marco:
-              name: CS Selengkapnya dengan Run Marco
+              name: CS Selengkapnya dengan Jalankan Marco
             New Home for My Pet:
               name: Rumah baru untuk peliharaan saya
             Online Internet Safety:
@@ -3199,7 +3201,7 @@ id:
             Teacher Dashboard:
               name: Dashboard untuk Guru
             Teaching with Puzzles:
-              name: Mengajar dengan teka-teki
+              name: Mengajar dengan puzzle
             Teaching with the Design Recipe:
               name: Mengajar dengan resep desain
             The Design Recipe:
@@ -3461,7 +3463,7 @@ id:
               description_student: Pelajaran kali ini mengulang  kembali ke pembuatan situs pribadi untuk membahas tentang informasi pribadi yang orang pilih untuk dibagikan secara digital. kelas dimulai dengan membahas jenis informasi apa yang bagus intuk dibagikan kepada orang lain. kemudian melihat beberapa contoh halaman media sosial untuk melihat jenis informasi  pribadi apa yang dapat dibagikan secara sengaja atau tidak disengaja. akhirnya, kelas hadir dengan sebuah pedoman untuk diikuti saat memasukkan informasi secara online.
               description_teacher: "Karena belum lama ini murid sudah menghabiskan waktu memikirkan konten aktual yang akan dimasukkan ke dalam situs web pribadi mereka, pelajaran ini sejenak menghentikan proyek sepanjang-unit (publikasi situs web pribadi) agar dapat membantu murid mengutarakan informasi pribadi yang mereka pilih untuk dibagikan secara digital dan kepada siapa.  Pelajaran ini juga menguatkan pandangan bahwa kebanyakan informasi yang mereka pilih untuk dibagikan secara digital umumnya terjadi di luar kontrol pada saat penyebarannya.  \\r\n\\r\nMurid memulai pelajaran dengan secara sendiri-sendiri mengidentifikasi audiens yang mereka rasa nyaman untuk membagikan beberapa informasi pribadi tertentu. Mereka kemudian mencermati beberapa halaman media sosial untuk menentukan jenis informasi apa saja yang dibagikan orang tentang diri mereka sendiri atau tentang satu sama lain. Terakhir, murid menimbang-nimbang pedoman apa yang mereka anggap tepat untuk memposting informasi secara online.\\r\n\\r\nPoin utama pelajaran ini adalah jangan menakut-nakuti murid, tetapi justru membimbing murid secara eksperiensial untuk menyadari secara akurat level kontrol yang tidak mereka miliki saat menyebarkan informasi ke dalam web."
             Publishing a Website:
-              name: Penerbitan sebuah situs web
+              name: Sedang diterbitkan situs web
             Sources and Search Engines:
               name: Sumber dan mesin pencari
               description_student: Setelah terlebih dahulu menyelesaikan perburuan pemangsa bangkai pencarian web, murid di kelas belajar tentang kinerja internal mesin pencarian dan berkesempatan melenturkan keterampilan analitis mereka dalam mencari binatang yang aneh dan langka.
@@ -3508,8 +3510,8 @@ id:
               description_teacher: "Dimulai dengan diskusi tentang opini masing-masing murid tentang kebolehan orang lain menggunakan karya seseorang, murid  di kelas mengupas tujuan dan peran hak cipta baik bagi kreator maupun pengguna konten kreatif.  Mereka kemudian beralih ke aktivitas yang mengeksplorasi berbagai lisensi Creative Commons sebagai solusi untuk mengatasi sulitnya mengurus dan menangani hak cipta. \\r\n\\r\nTerakhir, berbekal pemahaman umum tentang batasan berbagai lisensi Creative Commons, murid mempelajari cara menambahkan gambar ke halaman web mereka menggunakan tag &lt;img&gt;."
             Project - Multi-Page Websites:
               name: Proyek - Situs Web Multigambar
-              description_student: 'Pelajaran ini membahas hyperlink, yang memudahkan developer web menghubungkan banyak halaman menjadi satu situs web.  Murid di kelas akan menautkan semua halaman sebelumnya menjadi satu proyek, dan membuat bilah navigasi untuk setiap halaman sebelum menerbitkan seluruh situs ke Web.  '
-              description_teacher: "Setelah mempelajari cara menautkan halaman web satu sama lain, murid akhirnya dapat menerbitkan situs web yang selama ini sudah dikerjakan.  Dalam pelajaran ini, mereka menautkan semua halaman yang sudah mereka buat sebelumnya menjadi satu proyek, membuat halaman baru, dan menambahkan navigasi di antara halaman sebelum menerbitkan seluruh situs ke Web.  \\r\n\\r\n"
+              description_student: 'Pelajaran ini membahas hyperlink, yang memudahkan developer web menghubungkan banyak halaman menjadi satu situs web.  Murid di kelas akan menautkan semua halaman sebelumnya menjadi satu proyek, dan membuat bilah navigasi untuk setiap halaman sebelum ebelum dalam proses penerbitan seluruh situs ke Web.  '
+              description_teacher: "Setelah mempelajari cara menautkan halaman web satu sama lain, murid akhirnya dapat menerbitkan situs web yang selama ini sudah dikerjakan.  Dalam pelajaran ini, mereka menautkan semua halaman yang sudah mereka buat sebelumnya menjadi satu proyek, membuat halaman baru, dan menambahkan navigasi di antara halaman sebelum sebelum dalam proses penerbitan seluruh situs ke Web.    \\r\n\\r\n"
             RGB Colors and Classes:
               name: Warna dan Kelas RGB
               description_student: Pelajaran ini membahas kelas dan warna kustom. Murid di kelas mula-mula mempelajari cara menentukan warna kustom menggunakan nilai RGB (merah, hijau, biru), lalu menerapkan warna-warna ini ke halaman web Four Season yang baru, yang menggunakan kelas CSS.  Dengan menggunakan kelas, murid di kelas menambahkan lebih banyak gaya ke halaman web Four Season, lalu menggunakan kelas tersebut untuk membuat gaya situs web pribadi mereka.
@@ -3747,7 +3749,7 @@ id:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritma kehidupan nyata: Tanam sebuah Bibit'
             Your Digital Footprint:
-              name: Digital Footprint Kamu
+              name: Digital Footprint Anda
         coursec-draft:
           description_short: Pelajari dasar-dasar ilmu komputer dan buat seni, cerita, dan permainan Anda sendiri.
           lessons:
@@ -3772,13 +3774,13 @@ id:
             Build a Flappy Game:
               name: Buat Permainan Kepakan
             More CS with Run Marco:
-              name: CS Selengkapnya dengan Run Marco
+              name: CS Selengkapnya dengan Jalankan Marco
             Binary Bracelets:
               name: Gelang biner
             Events in Play Lab:
               name: Event dalam Play Lab
             Your Digital Footprint:
-              name: Digital Footprint Kamu
+              name: Digital Footprint Anda
             Building a Foundation:
               name: Membangun dasar
             Screen Out the Mean:
@@ -4442,7 +4444,7 @@ id:
             Lights:
               name: Lampu
               description_student: Dengan menggunakan konsep daftar dari pelajaran sebelumnya, murid di kelas menulis program yang mengontrol LED sepuluh warna di Circuit Playground.
-              description_teacher: Circuit Playground meliputi LED 10 warna di lingkaran yang mengelilingi sisi luar. LED ini dapat diakses dalam code sebagai sebuah daftar yang disebut `colorLeds`. Dengan berpijak pada pemahaman tentang daftar dari pelajaran sebelumnya, murid menulis program yang mengontrol LED warna dengan mengaksesnya dari daftar.
+              description_teacher: Circuit Playground meliputi LED 10 warna di loop yang mengelilingi sisi luar. LED ini dapat diakses dalam code sebagai sebuah daftar yang disebut `colorLeds`. Dengan berpijak pada pemahaman tentang daftar dari pelajaran sebelumnya, murid menulis program yang mengontrol LED warna dengan mengaksesnya dari daftar.
             For Loops:
               name: Untuk Pengulangan
               description_student: Murid di kelas belajar mengulangi instruksi menggunakan _for loop_, mula-mula dengan mengontrol "robot" melalui kisi-kisi, dan kemudian di App Lab.
@@ -5001,7 +5003,7 @@ id:
             Digital Footprint:
               name: Jejak Digital
             Publishing a Website:
-              name: Penerbitan sebuah situs web
+              name: Sedang diterbitkan situs web
             Sources and Search Engines:
               name: Sumber dan mesin pencari
             Intellectual Property:
@@ -5054,7 +5056,7 @@ id:
               description_teacher: 'Pelajaran ini akan memandu murid menempuh langkah-langkah debugging.  Murid akan mempelajari pertanyaan krusial berikut: "Apa yang terjadi?  Apa yang semestinya terjadi? Apa pesan yang Anda tangkap darinya?"'
             'Persistence & Frustration: Stevie and the Marbles':
               name: 'Kegigihan: Stevie dan Proyek Besar'
-              description_teacher: "Ketika murid menemui kendala pada saat menjawab pertanyaan atau mengerjakan sebuah proyek, mereka mudah sekali frustrasi atau menyerah.  Pelajaran ini akan memperkenalkan murid dengan gagasan bahwa frustrasi bisa menjadi bagian penting pembelajaran. Di sini, frustrasi dihadirkan sebagai langkah dalam proses kreatif, bukan tanda kegagalan.\\r\n\\r\nPelajaran ini dapat diselesaikan dalam satu atau dua sesi perkuliahan. Jika waktu Anda lebih longgar, jangan ragu-ragu untuk berlama-lama menekuni tahap pembuatan dan revisi dari aktivitas Marble Run."
+              description_teacher: "Ketika murid menemui kendala pada saat menjawab pertanyaan atau mengerjakan sebuah proyek, mereka mudah sekali frustrasi atau menyerah.  Pelajaran ini akan memperkenalkan murid dengan gagasan bahwa frustrasi bisa menjadi bagian penting pembelajaran. Di sini, frustrasi dihadirkan sebagai langkah dalam proses kreatif, bukan tanda kegagalan.\\r\n\\r\nPelajaran ini dapat diselesaikan dalam satu atau dua sesi perkuliahan. Jika waktu Anda lebih longgar, jangan ragu-ragu untuk berlama-lama menekuni tahap pembuatan dan revisi dari aktivitas Marble Jalankan."
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritma kehidupan nyata: Tanam sebuah Bibit'
               description_teacher: "Dalam pelajaran ini, murid akan mengaitkan kembali konsep algorithm dengan aktivitas kehidupan nyata sehari-hari dengan menanam benih aktual. Di sini tujuannya adalah memulai pembangunan keterampilan dalam menerjemahkan situasi dunia nyata ke dalam skenario online dan begitu sebaliknya.\\r\n"
@@ -5169,7 +5171,7 @@ id:
             Introduction:
               name: Pengantar teka-Teki secara Online
               description_student: Pelajaran ini memberikan latihan keterampilan yang akan Anda butuhkan untuk kursus ini.
-              description_teacher: 'Dalam kumpulan puzzle ini, murid akan memulai pengenalan (atau tinjauan bergantung pada pengalaman kelas Anda) ruang kerja online Code.org. Akan tersedia beberapa video yang menjelaskan fungsionalitas dasar ruang kerja, meliputi tombol `Run`, `Reset`, dan `Step`. Hal-hal yang juga didiskusikan dalam video ini: menyeret blok Blockly, menghapus blok Blockly, dan menghubungkan blok Blockly. Berikutnya, murid akan melatih keterampilan _sequencing_ dan _debugging_ mereka dalam labirin. Dari situ, murid akan menyaksikan jenis-jenis puzzle baru seperti Kolektor, Artis, dan Pemanen tatkala mereka mempelajari dasar-dasar _loops_ itu sendiri.'
+              description_teacher: 'Dalam kumpulan puzzle ini, murid akan memulai pengenalan (atau tinjauan bergantung pada pengalaman kelas Anda) ruang kerja online Code.org. Akan tersedia beberapa video yang menjelaskan fungsionalitas dasar ruang kerja, meliputi tombol `Jalankan`, `Reset`, dan `Step`. Hal-hal yang juga didiskusikan dalam video ini: menyeret blok Blockly, menghapus blok Blockly, dan menghubungkan blok Blockly. Berikutnya, murid akan melatih keterampilan _sequencing_ dan _debugging_ mereka dalam labirin. Dari situ, murid akan menyaksikan jenis-jenis puzzle baru seperti Kolektor, Artis, dan Pemanen tatkala mereka mempelajari dasar-dasar _loops_ itu sendiri.'
             'Algorithms: Graph Paper Programming':
               name: 'Pemrograman: Pemrograman Kertas Grafik'
               description_student: Dalam pelajaran ini, Anda akan memprogram teman-teman Anda untuk membuat gambar!
@@ -5181,7 +5183,7 @@ id:
             Nested Loops:
               name: Perulangan bercabang
               description_student: Loop di dalam loop di dalam loop. Apa artinya? Pelajaran ini akan mengajari Anda apa yang terjadi ketika Anda meletakkan loop di dalam loop yang lain.
-              description_teacher: Dalam aktivitas online ini, murid berkesempatan meningkatkan pemahaman mereka tentang loop ke level yang sepenuhnya baru. Lewat permainan dengan Lebah dan Tanaman vs Zombi, murid akan mempelajari cara memprogram sebuah loop agar berada di dalam loop lain. Mereka juga akan didorong untuk mencari tahu betapa perubahan kecil di dalam loop dapat memengaruhi program ketika mereka mengklik `Run`.
+              description_teacher: Dalam aktivitas online ini, murid berkesempatan meningkatkan pemahaman mereka tentang loop ke level yang sepenuhnya baru. Lewat permainan dengan Lebah dan Tanaman vs Zombi, murid akan mempelajari cara memprogram sebuah loop agar berada di dalam loop lain. Mereka juga akan didorong untuk mencari tahu betapa perubahan kecil di dalam loop dapat memengaruhi program ketika mereka mengklik `Jalankan`.
             Nested Loops in Artist:
               name: Nested Loop dalam Artis
               description_student: Di sini Anda akan menggunakan nested loop untuk membuat gambar yang keren untuk diperlihatkan kepada keluarga dan teman.
@@ -5260,7 +5262,7 @@ id:
             Introduction:
               name: Pengantar teka-Teki secara Online
               description_student: Pengenalan dengan tempo cepat ini akan memberi Anda kesempatan melatih sebagian besar keterampilan yang akan Anda butuhkan untuk memecahkan puzzle dalam kursus ini.
-              description_teacher: Dalam urutan pelajaran ini, murid akan memulai pengenalan (atau tinjauan bergantung pada pengalaman kelas Anda) ruang kerja online Code.org. Murid akan mempelajari fungsionalitas dasar antarmuka, meliputi tombol `Run`, `Reset`, dan `Step`. Menyeret, menghapus, dan menghubungkan blok-blok Blockly juga diperkenalkan dalam video pengantar. Di dalam puzzle, murid akan melatih keterampilan pengurutan dan debugging mereka dalam Labirin dan Artis.
+              description_teacher: Dalam urutan pelajaran ini, murid akan memulai pengenalan (atau tinjauan bergantung pada pengalaman kelas Anda) ruang kerja online Code.org. Murid akan mempelajari fungsionalitas dasar antarmuka, meliputi tombol `Jalankan`, `Reset`, dan `Step`. Menyeret, menghapus, dan menghubungkan blok-blok Blockly juga diperkenalkan dalam video pengantar. Di dalam puzzle, murid akan melatih keterampilan pengurutan dan debugging mereka dalam Labirin dan Artis.
             The Power of Words:
               name: Kekuatan kata-Kata
             Ice Age Play Lab:
@@ -6179,7 +6181,7 @@ id:
             Nested Loops in Bee:
               name: Nested Loop dalam Lebah
             Loops in Ice Age:
-              name: Putaran dalam Ice Age
+              name: Loop dalam Ice Age
         csp3-a:
           title: CSP Unit 3 - Subtujuan Grup A
           description_short: Versi Alternatif CSP Unit 3 untuk subtujuan eksperimen label grup A.
@@ -6686,7 +6688,7 @@ id:
               name: Pengenalan App Lab
         csp-explore-2017:
           title: Mengeksplorasi - Persiapan Tugas Kinerja AP ('17-'18)
-          description_short: Pelajaran dan sumber daya untuk membantu siswa mempersiapkan dan menyelesaikan AP Tepat Kinerja Tugas.
+          description_short: Pelajaran dan materi pembelajaran untuk membantu siswa mempersiapkan dan menyelesaikan AP Tepat Kinerja Tugas.
           description: "Pelajaran ini hadir untuk membantu Anda memahami, mempersiapkan diri, dan melakukan AP Explore Performance Task.  Setiap \"pelajaran\" berisi tautan ke dokumen yang bermanfaat yang dapat Anda pelajari di bawah bimbingan guru. CATATAN: item kedua dalam pelajaran pertama ini tidak berkaitan langsung dengan Explore PT, tetapi mencakup penyiapan dan alat teknologi umum yang Anda butuhkan untuk mengerjakan berbagai elemen tugas Explore dan Create.\\r\n\\r\nUnit ini terakhir diperbarui pada November, 2017. Baca selengkapnya tentang pembaruan kurikulum di forum.code.org/c/csp/updates."
           lesson_groups:
             csp_ap_2:
@@ -7174,8 +7176,8 @@ id:
               description_teacher: Murid mengatasi persoalan umum yang muncul ketika merancang halaman web di HTML. Murid akan memperbaiki kesalahan dalam urutan halaman web yang semakin kompleks. Selama proses tersebut, mereka akan mempelajari pentingnya komentar, whitespace, dan identasi sebagai tool untuk memudahkan pembacaan halaman web. Pada akhir pelajaran, murid membuat daftar strategi untuk melakukan debugging halaman web dan memastikan halaman webnya mudah dibaca dan dipelihara.
             Project - Multi-Page Websites:
               name: Proyek - Situs Web Multigambar
-              description_student: 'Pelajaran ini membahas hyperlink, yang memudahkan developer web menghubungkan banyak halaman menjadi satu situs web.  Murid di kelas akan menautkan semua halaman sebelumnya menjadi satu proyek, dan membuat bilah navigasi untuk setiap halaman sebelum menerbitkan seluruh situs ke Web.  '
-              description_teacher: "Setelah mempelajari cara menautkan halaman web satu sama lain, murid akhirnya dapat menerbitkan situs web yang selama ini sudah dikerjakan.  Dalam pelajaran ini, mereka menautkan semua halaman yang sudah mereka buat sebelumnya menjadi satu proyek, membuat halaman baru, dan menambahkan navigasi di antara halaman sebelum menerbitkan seluruh situs ke Web.  \\r\n\\r\n"
+              description_student: 'Pelajaran ini membahas hyperlink, yang memudahkan developer web menghubungkan banyak halaman menjadi satu situs web.  Murid di kelas akan menautkan semua halaman sebelumnya menjadi satu proyek, dan membuat bilah navigasi untuk setiap halaman sebelum ebelum dalam proses penerbitan seluruh situs ke Web.  '
+              description_teacher: "Setelah mempelajari cara menautkan halaman web satu sama lain, murid akhirnya dapat menerbitkan situs web yang selama ini sudah dikerjakan.  Dalam pelajaran ini, mereka menautkan semua halaman yang sudah mereka buat sebelumnya menjadi satu proyek, membuat halaman baru, dan menambahkan navigasi di antara halaman sebelum sebelum dalam proses penerbitan seluruh situs ke Web.    \\r\n\\r\n"
             Styling Text with CSS:
               name: Membuat Gaya Teks dengan CSS
               description_student: Pelajaran ini memperkenalkan CSS sebagai cara untuk membuat gaya elemen di halaman. Murid di kelas mempelajari syntax dasar untuk set aturan CSS dan kemudian mengeksplorasi properti yang memengaruhi elemen teks HTML. Terakhir, semua murid menerapkan gaya teks ke situs web pribadi mereka.
@@ -7210,7 +7212,7 @@ id:
               description_teacher: 'Pelajaran ini akan memandu murid menempuh langkah-langkah debugging.  Murid akan mempelajari pertanyaan krusial berikut: "Apa yang terjadi?  Apa yang semestinya terjadi? Apa pesan yang Anda tangkap darinya?"'
             'Persistence & Frustration: Stevie and the Marbles':
               name: Stevie dan Proyek Besar
-              description_teacher: "Ketika murid menemui kendala pada saat menjawab pertanyaan atau mengerjakan sebuah proyek, mereka mudah sekali frustrasi atau menyerah.  Pelajaran ini akan memperkenalkan murid dengan gagasan bahwa frustrasi bisa menjadi bagian penting pembelajaran. Di sini, frustrasi dihadirkan sebagai langkah dalam proses kreatif, bukan tanda kegagalan.\\r\n\\r\nPelajaran ini dapat diselesaikan dalam satu atau dua sesi perkuliahan. Jika waktu Anda lebih longgar, jangan ragu-ragu untuk berlama-lama menekuni tahap pembuatan dan revisi dari aktivitas Marble Run."
+              description_teacher: "Ketika murid menemui kendala pada saat menjawab pertanyaan atau mengerjakan sebuah proyek, mereka mudah sekali frustrasi atau menyerah.  Pelajaran ini akan memperkenalkan murid dengan gagasan bahwa frustrasi bisa menjadi bagian penting pembelajaran. Di sini, frustrasi dihadirkan sebagai langkah dalam proses kreatif, bukan tanda kegagalan.\\r\n\\r\nPelajaran ini dapat diselesaikan dalam satu atau dua sesi perkuliahan. Jika waktu Anda lebih longgar, jangan ragu-ragu untuk berlama-lama menekuni tahap pembuatan dan revisi dari aktivitas Marble Jalankan."
             'Real-life Algorithms: Plant a Seed':
               name: Menanam Benih
               description_teacher: "Dalam pelajaran ini, murid akan mengaitkan kembali konsep algorithm dengan aktivitas kehidupan nyata sehari-hari dengan menanam benih aktual. Di sini tujuannya adalah memulai pembangunan keterampilan dalam menerjemahkan situasi dunia nyata ke dalam skenario online dan begitu sebaliknya.\\r\n"
@@ -7418,7 +7420,7 @@ id:
             Learn to Drag and Drop:
               name: Belajar Menarik dan Melepaskan
             Your Digital Footprint:
-              name: Digital Footprint Kamu
+              name: Digital Footprint Anda
             'Programming: My Robotic Friends':
               name: Teman Robot Saya Jr.
             Programming in Maze:
@@ -7487,7 +7489,7 @@ id:
             Artist Binary:
               name: Artis Biner
             Loops in Ice Age:
-              name: Putaran dalam Ice Age
+              name: Loop dalam Ice Age
             Nested Loops in Frozen:
               name: Keping Salju bersama Anna dan Elsa
             Until Loops in Maze:
@@ -7757,7 +7759,7 @@ id:
             Introduction:
               name: Pendahuluan
               description_student: Pengenalan dengan tempo cepat ini akan memberi Anda kesempatan melatih sebagian besar keterampilan yang akan Anda butuhkan untuk memecahkan puzzle dalam kursus ini.
-              description_teacher: Dalam urutan pelajaran ini, murid akan memulai pengenalan (atau tinjauan bergantung pada pengalaman kelas Anda) ruang kerja online Code.org. Murid akan mempelajari fungsionalitas dasar antarmuka, meliputi tombol `Run`, `Reset`, dan `Step`. Menyeret, menghapus, dan menghubungkan blok-blok Blockly juga diperkenalkan dalam video pengantar. Di dalam puzzle, murid akan melatih keterampilan pengurutan dan debugging mereka dalam Labirin dan Artis.
+              description_teacher: Dalam urutan pelajaran ini, murid akan memulai pengenalan (atau tinjauan bergantung pada pengalaman kelas Anda) ruang kerja online Code.org. Murid akan mempelajari fungsionalitas dasar antarmuka, meliputi tombol `Jalankan`, `Reset`, dan `Step`. Menyeret, menghapus, dan menghubungkan blok-blok Blockly juga diperkenalkan dalam video pengantar. Di dalam puzzle, murid akan melatih keterampilan pengurutan dan debugging mereka dalam Labirin dan Artis.
             Conditionals:
               name: Conditional dengan Petani
               description_student: Anda harus memberi tahu komputer apa yang harus dilakukan dalam kondisi tertentu lewat serial yang seru dan menantang ini.
@@ -8314,7 +8316,7 @@ id:
         csp-explore-2018:
           title: Mengeksplorasi - Persiapan Tugas Kinerja AP ('18-'19)
           description: 'Pelajaran ini hadir untuk membantu Anda memahami, mempersiapkan diri, dan melakukan AP Explore Performance Task.  Setiap "pelajaran" berisi tautan ke dokumen yang bermanfaat yang dapat Anda pelajari di bawah bimbingan guru. CATATAN: item kedua dalam pelajaran pertama ini tidak berkaitan langsung dengan Explore PT, tetapi mencakup penyiapan dan alat teknologi umum yang Anda butuhkan untuk mengerjakan berbagai elemen tugas Explore dan Create.'
-          description_short: Pelajaran dan sumber daya untuk membantu siswa mempersiapkan dan menyelesaikan AP Tepat Kinerja Tugas.
+          description_short: Pelajaran dan materi pembelajaran untuk membantu siswa mempersiapkan dan menyelesaikan AP Tepat Kinerja Tugas.
           lesson_groups:
             csp_ap_2:
               display_name: 'Bab 2: AP Tepat Kinerja Tugas'
@@ -8915,7 +8917,7 @@ id:
             Sequencing with Scrat:
               name: Pengurutan dengan Scrat
             Your Digital Footprint:
-              name: Digital Footprint Kamu
+              name: Digital Footprint Anda
             Programming in Ice Age:
               name: Pemrograman dengan Scrat
             Copyright and Creativity:
@@ -9218,7 +9220,7 @@ id:
             Nested Loops in the Maze:
               name: Nested Loop dalam Labirin
               description_student: Loop di dalam loop di dalam loop. Apa artinya? Pelajaran ini akan mengajari Anda apa yang terjadi ketika Anda meletakkan loop di dalam loop yang lain.
-              description_teacher: Dalam aktivitas online ini, murid berkesempatan meningkatkan pemahaman mereka tentang loop ke level yang sepenuhnya baru. Lewat permainan dengan Lebah dan Tanaman vs Zombi, murid akan mempelajari cara memprogram sebuah loop agar berada di dalam loop lain. Mereka juga akan didorong untuk mencari tahu betapa perubahan kecil di dalam loop dapat memengaruhi program ketika mereka mengklik `Run`.
+              description_teacher: Dalam aktivitas online ini, murid berkesempatan meningkatkan pemahaman mereka tentang loop ke level yang sepenuhnya baru. Lewat permainan dengan Lebah dan Tanaman vs Zombi, murid akan mempelajari cara memprogram sebuah loop agar berada di dalam loop lain. Mereka juga akan didorong untuk mencari tahu betapa perubahan kecil di dalam loop dapat memengaruhi program ketika mereka mengklik `Jalankan`.
             Sequencing in the Maze:
               name: Pengurutan dalam Labirin
             Programming and Loops with the Artist:
@@ -9301,7 +9303,7 @@ id:
             Introduction to Online Puzzles:
               name: Pengantar teka-Teki secara Online
               description_student: Pelajaran ini memberikan latihan keterampilan yang akan Anda butuhkan untuk kursus ini.
-              description_teacher: 'Dalam kumpulan puzzle ini, murid akan memulai pengenalan (atau tinjauan bergantung pada pengalaman kelas Anda) ruang kerja online Code.org. Akan tersedia beberapa video yang menjelaskan fungsionalitas dasar ruang kerja, meliputi tombol `Run`, `Reset`, dan `Step`. Hal-hal yang juga didiskusikan dalam video ini: menyeret blok Blockly, menghapus blok Blockly, dan menghubungkan blok Blockly. Berikutnya, murid akan melatih keterampilan _sequencing_ dan _debugging_ mereka dalam labirin. Dari situ, murid akan menyaksikan jenis-jenis puzzle baru seperti Kolektor, Artis, dan Pemanen tatkala mereka mempelajari dasar-dasar _loops_ itu sendiri.'
+              description_teacher: 'Dalam kumpulan puzzle ini, murid akan memulai pengenalan (atau tinjauan bergantung pada pengalaman kelas Anda) ruang kerja online Code.org. Akan tersedia beberapa video yang menjelaskan fungsionalitas dasar ruang kerja, meliputi tombol `Jalankan`, `Reset`, dan `Step`. Hal-hal yang juga didiskusikan dalam video ini: menyeret blok Blockly, menghapus blok Blockly, dan menghubungkan blok Blockly. Berikutnya, murid akan melatih keterampilan _sequencing_ dan _debugging_ mereka dalam labirin. Dari situ, murid akan menyaksikan jenis-jenis puzzle baru seperti Kolektor, Artis, dan Pemanen tatkala mereka mempelajari dasar-dasar _loops_ itu sendiri.'
             Relay Programming:
               name: Pemrograman bergiliran
               description_student: Ingat pada awal kursus ini ketika Anda menggambar dengan code? Dalam pelajaran ini, Anda akan bekerja sama dengan tim untuk melakukan sesuatu yang sangat mirip!
@@ -9315,9 +9317,9 @@ id:
               description_student: Pernah berangan-angan dapat memainkan permainan video di sekolah? Dalam pelajaran ini, Anda akan belajar membuat permainan sendiri!
               description_teacher: Dalam aktivitas online ini, murid akan mempelajari pengertian event, dan cara komputer menggunakan event dalam program seperti permainan video. Murid akan menyelesaikan puzzle yang membuat programnya dapat menanggapi event (seperti tombol panah yang ditekan.) Pada akhir puzzle, Murid berkesempatan menyesuaikan permainan mereka dengan berbagai kecepatan dan suara.
             Loops in Ice Age:
-              name: Putaran dalam Ice Age
-              description_student: Dalam pelajaran ini, Anda akan menggunakan blok repeat untuk menolong Scrat sampai di akorn seefisien mungkin.
-              description_teacher: Sebagai pembaruan (atau pengenalan) cepat dalam menggunakan loop, tahap ini akan memerintahkan murid menggunakan blok `repeat` untuk membawa Scrat ke akorn dengan lebih efisien.
+              name: Loop dalam Ice Age
+              description_student: Dalam pelajaran ini, Anda akan menggunakan blok repeat untuk menolong Scrat sampai di biji akorn seefisien mungkin.
+              description_teacher: Sebagai pembaruan (atau pengenalan) cepat dalam menggunakan loop, tahap ini akan memerintahkan murid menggunakan blok `repeat` untuk membawa Scrat ke biji akorn dengan lebih efisien.
             Loops in Artist:
               name: Menggambar Bentuk dengan Loop
               description_student: Dalam pelajaran ini, loop memudahkan pembuatan gambar-gambar keren dengan Artis!
@@ -9325,7 +9327,7 @@ id:
             Nested Loops in Bee:
               name: Nested Loop dalam Labirin
               description_student: Loop di dalam loop di dalam loop. Apa artinya? Pelajaran ini akan mengajari Anda apa yang terjadi ketika Anda membuat nested loop.
-              description_teacher: Dalam aktivitas online ini, murid berkesempatan meningkatkan pemahaman mereka tentang loop ke level yang sepenuhnya baru. Lewat permainan dengan Lebah dan Tanaman vs Zombi, murid akan mempelajari cara memprogram sebuah loop agar berada di dalam loop lain. Mereka juga akan didorong untuk mencari tahu betapa perubahan kecil di dalam loop dapat memengaruhi program ketika mereka mengklik `Run`.
+              description_teacher: Dalam aktivitas online ini, murid berkesempatan meningkatkan pemahaman mereka tentang loop ke level yang sepenuhnya baru. Lewat permainan dengan Lebah dan Tanaman vs Zombi, murid akan mempelajari cara memprogram sebuah loop agar berada di dalam loop lain. Mereka juga akan didorong untuk mencari tahu betapa perubahan kecil di dalam loop dapat memengaruhi program ketika mereka mengklik `Jalankan`.
             Nested Loops in Artist:
               name: Nested Loop dalam Artis
             Nested Loops in Frozen:
@@ -9484,7 +9486,7 @@ id:
             Nested Loops in Bee:
               name: Nested Loop dalam Labirin
               description_student: Loop di dalam loop di dalam loop. Apa artinya? Pelajaran ini akan mengajari Anda apa yang terjadi ketika Anda meletakkan loop di dalam loop yang lain.
-              description_teacher: Dalam aktivitas online ini, murid berkesempatan meningkatkan pemahaman mereka tentang loop ke level yang sepenuhnya baru. Lewat permainan dengan Lebah dan Tanaman vs Zombi, murid akan mempelajari cara memprogram sebuah loop agar berada di dalam loop lain. Mereka juga akan didorong untuk mencari tahu betapa perubahan kecil di dalam loop dapat memengaruhi program ketika mereka mengklik `Run`.
+              description_teacher: Dalam aktivitas online ini, murid berkesempatan meningkatkan pemahaman mereka tentang loop ke level yang sepenuhnya baru. Lewat permainan dengan Lebah dan Tanaman vs Zombi, murid akan mempelajari cara memprogram sebuah loop agar berada di dalam loop lain. Mereka juga akan didorong untuk mencari tahu betapa perubahan kecil di dalam loop dapat memengaruhi program ketika mereka mengklik `Jalankan`.
             Nested Loops in Artist:
               name: Bentuk-Bentuk Menawan menggunakan Nested Loop
               description_student: Nested loop lebih banyak! Kali ini Anda harus membuat gambar MENAKJUBKAN dengan nested loop.
@@ -9496,7 +9498,7 @@ id:
             Sequencing in the Maze:
               name: Pengurutan dalam Labirin
               description_student: Dalam pelajaran ini, Anda akan mempelajari cara menulis program Anda sendiri!
-              description_teacher: "Dalam kumpulan puzzle ini, murid akan memulai pengenalan (atau tinjauan bergantung pada pengalaman kelas Anda) ruang kerja online Code.org. Akan tersedia beberapa video yang menjelaskan fungsionalitas dasar ruang kerja, meliputi tombol `Run`, `Reset`, dan `Step`. Hal-hal yang juga didiskusikan dalam video ini: menyeret blok Blockly, menghapus blok Blockly, dan menghubungkan blok Blockly. Berikutnya, murid akan melatih keterampilan _sequencing_ dan _debugging_ mereka dalam labirin. \\r\nDebugging merupakan elemen pokok belajar memprogram. Murid akan menjumpai beberapa puzzle yang sudah dipecahkan secara tidak benar. Mereka harus menyelisik code yang ada untuk mengidentifikasi kesalahan, termasuk loop yang salah, blok yang hilang, blok ekstra, dan blok yang berantakan."
+              description_teacher: "Dalam kumpulan puzzle ini, murid akan memulai pengenalan (atau tinjauan bergantung pada pengalaman kelas Anda) ruang kerja online Code.org. Akan tersedia beberapa video yang menjelaskan fungsionalitas dasar ruang kerja, meliputi tombol `Jalankan`, `Reset`, dan `Step`. Hal-hal yang juga didiskusikan dalam video ini: menyeret blok Blockly, menghapus blok Blockly, dan menghubungkan blok Blockly. Berikutnya, murid akan melatih keterampilan _sequencing_ dan _debugging_ mereka dalam labirin. \\r\nDebugging merupakan elemen pokok belajar memprogram. Murid akan menjumpai beberapa puzzle yang sudah dipecahkan secara tidak benar. Mereka harus menyelisik code yang ada untuk mengidentifikasi kesalahan, termasuk loop yang salah, blok yang hilang, blok ekstra, dan blok yang berantakan."
             Programming and Loops with the Artist:
               name: Loop dengan Artis
               description_student: Dalam pelajaran ini, loop memudahkan pembuatan gambar-gambar yang makin keren dengan Artis!
@@ -9944,18 +9946,18 @@ id:
             Loops in Ice Age:
               name: Loop dengan Scrat
               description_student: Bantu Scrat menutupi tanah lebih banyak menggunakan loop.
-              description_teacher: Berpijak pada konsep mengulang instruksi dari "Happy Loops," tahap ini akan meminta murid menggunakan loop untuk sampai ke akorn dengan lebih efisien di Code.org.
+              description_teacher: Berpijak pada konsep mengulang instruksi dari "Happy Loops," tahap ini akan meminta murid menggunakan loop untuk sampai ke biji akorn dengan lebih efisien di Code.org.
             Programming in Ice Age:
               name: Pemrograman dengan Scrat
-              description_student: Tulis program untuk membantu Scrat mencapai akorn.
-              description_teacher: Dengan menggunakan karakter dari permainan Zaman Es, murid akan mengembangkan algorithm sekuensial untuk menggerakkan Scrat dari satu sisi labirin ke akorn di sisi lain labirin. Untuk melakukannya, mereka harus menumpuk blok code bersama-sama dalam urutan linear, menjadikan blok tersebut bergerak lurus, belok kiri, atau belok kanan.
+              description_student: Tulis pemrograman untuk membantu Scrat mencapai biji akorn.
+              description_teacher: Dengan menggunakan karakter dari permainan Zaman Es, murid akan mengembangkan algorithm sekuensial untuk menggerakkan Scrat dari satu sisi labirin ke biji akorn di sisi lain labirin. Untuk melakukannya, mereka harus menumpuk blok code bersama-sama dalam urutan linear, menjadikan blok tersebut bergerak lurus, belok kiri, atau belok kanan.
             Programming with Rey and BB-8:
               name: Pemrograman dengan Rey dan BB-8
               description_student: Bantu BB-8 mengumpulkan logam rongsokan.
               description_teacher: Dalam pelajaran ini, murid akan menggunakan keterampilan pemrograman yang baru dikuasainya dengan cara-cara yang lebih kompleks untuk menyusuri jalur yang mengecoh dengan BB-8.
             Sequencing with Scrat:
               name: Pengurutan dengan Scrat
-              description_student: Program Scrat untuk mencapai akorn.
+              description_student: Program Scrat untuk mencapai biji akorn.
               description_teacher: Pelajaran ini akan mencetuskan suatu gagasan tentang apa yang diharapkan oleh murid ketika mereka berjalan menuju lab komputer. Pelajaran diawali dengan diskusi singkat yang memperkenalkan mereka dengan tata cara lab komputer, lalu berlanjut dengan penggunaan komputer untuk menyelesaikan puzzle online.
         courseb-2019:
           title: Kursus B (2019)
@@ -9981,7 +9983,7 @@ id:
             Sequencing with Scrat:
               name: Pengurutan dengan Scrat
             Your Digital Footprint:
-              name: Digital Footprint Kamu
+              name: Digital Footprint Anda
               description_student: 'Pelajari tentang jejak digital Anda dan cara menjaga keselamatan diri saat mengunjungi situs web. '
               description_teacher: Bekerja sama dengan [r common-sense-media], pelajaran ini membantu murid belajar tentang kemiripan menjaga diri baik-baik di dunia nyata dan ketika mengunjungi situs-situs web. Murid juga akan belajar bahwa informasi yang mereka masukkan secara online meninggalkan jejak digital atau “tapak.” Tapak ini bisa besar atau kecil, berguna atau mencelakai, tergantung cara mengelolanya.
             'Programming: My Robotic Friends':
@@ -9995,7 +9997,7 @@ id:
             'Loops: My Loopy Robotic Friends':
               name: 'Loop: Teman-Teman Robot Saya yang Mengulang-ulang'
             Loops in Ice Age:
-              name: Putaran dalam Ice Age
+              name: Loop dalam Ice Age
             Loops in Collector:
               name: Loop dengan Laurel
               description_student: Program Laurel si petualang untuk mengumpulkan harta karun di gua terbuka.
@@ -10058,7 +10060,7 @@ id:
             Sequencing with Scrat:
               name: Pengurutan dengan Scrat
             Your Digital Footprint:
-              name: Digital Footprint Kamu
+              name: Digital Footprint Anda
             'Programming: My Robotic Friends':
               name: 'Pemrograman: Teman-Teman Robot Saya'
             Programming in Ice Age:
@@ -10152,8 +10154,8 @@ id:
               description_teacher: Murid mengatasi persoalan umum yang muncul ketika merancang halaman web di HTML. Murid akan memperbaiki kesalahan dalam urutan halaman web yang semakin kompleks. Selama proses tersebut, mereka akan mempelajari pentingnya komentar, whitespace, dan identasi sebagai tool untuk memudahkan pembacaan halaman web. Pada akhir pelajaran, murid membuat daftar strategi untuk melakukan debugging halaman web dan memastikan halaman webnya mudah dibaca dan dipelihara.
             Project - Multi-Page Websites:
               name: Proyek - Situs Web Multigambar
-              description_student: 'Pelajaran ini membahas hyperlink, yang memudahkan developer web menghubungkan banyak halaman menjadi satu situs web.  Murid di kelas akan menautkan semua halaman sebelumnya menjadi satu proyek, dan membuat bilah navigasi untuk setiap halaman sebelum menerbitkan seluruh situs ke Web.  '
-              description_teacher: "Setelah mempelajari cara menautkan halaman web satu sama lain, murid akhirnya dapat menerbitkan situs web yang selama ini sudah dikerjakan.  Dalam pelajaran ini, mereka menautkan semua halaman yang sudah mereka buat sebelumnya menjadi satu proyek, membuat halaman baru, dan menambahkan navigasi di antara halaman sebelum menerbitkan seluruh situs ke Web.  \\r\n\\r\n"
+              description_student: 'Pelajaran ini membahas hyperlink, yang memudahkan developer web menghubungkan banyak halaman menjadi satu situs web.  Murid di kelas akan menautkan semua halaman sebelumnya menjadi satu proyek, dan membuat bilah navigasi untuk setiap halaman sebelum ebelum dalam proses penerbitan seluruh situs ke Web.  '
+              description_teacher: "Setelah mempelajari cara menautkan halaman web satu sama lain, murid akhirnya dapat menerbitkan situs web yang selama ini sudah dikerjakan.  Dalam pelajaran ini, mereka menautkan semua halaman yang sudah mereka buat sebelumnya menjadi satu proyek, membuat halaman baru, dan menambahkan navigasi di antara halaman sebelum sebelum dalam proses penerbitan seluruh situs ke Web.    \\r\n\\r\n"
             Styling Text with CSS:
               name: Membuat Gaya Teks dengan CSS
               description_student: Pelajaran ini memperkenalkan CSS sebagai cara untuk membuat gaya elemen di halaman. Murid di kelas mempelajari syntax dasar untuk set aturan CSS dan kemudian mengeksplorasi properti yang memengaruhi elemen teks HTML. Terakhir, semua murid menerapkan gaya teks ke situs web pribadi mereka.
@@ -10798,7 +10800,7 @@ id:
         csp-explore-2019:
           title: Mengeksplorasi - Persiapan Tugas Kinerja AP ('19-'20)
           description: 'Pelajaran ini hadir untuk membantu Anda memahami, mempersiapkan diri, dan melakukan AP Explore Performance Task.  Setiap "pelajaran" berisi tautan ke dokumen yang bermanfaat yang dapat Anda pelajari di bawah bimbingan guru. CATATAN: item kedua dalam pelajaran pertama ini tidak berkaitan langsung dengan Explore PT, tetapi mencakup penyiapan dan alat teknologi umum yang Anda butuhkan untuk mengerjakan berbagai elemen tugas Explore dan Create.'
-          description_short: Pelajaran dan sumber daya untuk membantu siswa mempersiapkan dan menyelesaikan AP Tepat Kinerja Tugas.
+          description_short: Pelajaran dan materi pembelajaran untuk membantu siswa mempersiapkan dan menyelesaikan AP Tepat Kinerja Tugas.
           lesson_groups:
             csp_ap_2:
               display_name: 'Bab 2: AP Tepat Kinerja Tugas'
@@ -11994,8 +11996,8 @@ id:
               description_teacher: Murid mengatasi persoalan umum yang muncul ketika merancang halaman web di HTML. Murid akan memperbaiki kesalahan dalam urutan halaman web yang semakin kompleks. Selama proses tersebut, mereka akan mempelajari pentingnya komentar, whitespace, dan identasi sebagai tool untuk memudahkan pembacaan halaman web. Pada akhir pelajaran, murid membuat daftar strategi untuk melakukan debugging halaman web dan memastikan halaman webnya mudah dibaca dan dipelihara.
             Project - Multi-Page Websites:
               name: Proyek - Situs Web Multigambar
-              description_student: 'Pelajaran ini membahas hyperlink, yang memudahkan developer web menghubungkan banyak halaman menjadi satu situs web.  Murid di kelas akan menautkan semua halaman sebelumnya menjadi satu proyek, dan membuat bilah navigasi untuk setiap halaman sebelum menerbitkan seluruh situs ke Web.  '
-              description_teacher: "Setelah mempelajari cara menautkan halaman web satu sama lain, murid akhirnya dapat menerbitkan situs web yang selama ini sudah dikerjakan.  Dalam pelajaran ini, mereka menautkan semua halaman yang sudah mereka buat sebelumnya menjadi satu proyek, membuat halaman baru, dan menambahkan navigasi di antara halaman sebelum menerbitkan seluruh situs ke Web.  \\r\n\\r\n"
+              description_student: 'Pelajaran ini membahas hyperlink, yang memudahkan developer web menghubungkan banyak halaman menjadi satu situs web.  Murid di kelas akan menautkan semua halaman sebelumnya menjadi satu proyek, dan membuat bilah navigasi untuk setiap halaman sebelum ebelum dalam proses penerbitan seluruh situs ke Web.  '
+              description_teacher: "Setelah mempelajari cara menautkan halaman web satu sama lain, murid akhirnya dapat menerbitkan situs web yang selama ini sudah dikerjakan.  Dalam pelajaran ini, mereka menautkan semua halaman yang sudah mereka buat sebelumnya menjadi satu proyek, membuat halaman baru, dan menambahkan navigasi di antara halaman sebelum sebelum dalam proses penerbitan seluruh situs ke Web.    \\r\n\\r\n"
             Styling Text with CSS:
               name: Membuat Gaya Teks dengan CSS
               description_student: Pelajaran ini memperkenalkan CSS sebagai cara untuk membuat gaya elemen di halaman. Murid di kelas mempelajari syntax dasar untuk set aturan CSS dan kemudian mengeksplorasi properti yang memengaruhi elemen teks HTML. Terakhir, semua murid menerapkan gaya teks ke situs web pribadi mereka.
@@ -12239,7 +12241,7 @@ id:
             Programming with Rey and BB-8:
               name: Pemrograman dengan Rey dan BB-8
             Loops in Ice Age:
-              name: Putaran dalam Ice Age
+              name: Loop dalam Ice Age
             Ocean Scene with Loops:
               name: Adegan Laut dengan Loop
             Tell a Story in Play Lab:
@@ -13860,12 +13862,12 @@ id:
               description_teacher: 'Pelajaran tanpa komputer ini mempersatukan tim untuk mengerjakan tugas sederhana: bawa "flurb" ke buah-buahan. Murid akan berlatih menulis instruksi yang presisi sewaktu mereka berusaha menerjemahkan instruksi ke dalam simbol yang tersedia. Jika muncul masalah dalam code, murid juga harus bekerja bersama-sama untuk mengenali bug dan membuat solusi.'
             Sequencing with Scrat:
               name: Pengurutan dengan Scrat
-              description_student: Program Scrat untuk mencapai akorn.
+              description_student: Program Scrat untuk mencapai biji akorn.
               description_teacher: Pelajaran ini akan mencetuskan suatu gagasan tentang apa yang diharapkan oleh murid ketika mereka berjalan menuju lab komputer. Pelajaran diawali dengan diskusi singkat yang memperkenalkan mereka dengan tata cara lab komputer, lalu berlanjut dengan penggunaan komputer untuk menyelesaikan puzzle online.
             Programming in Ice Age:
               name: Pemrograman dengan Scrat
-              description_student: Tulis program untuk membantu Scrat mencapai akorn.
-              description_teacher: Dengan menggunakan karakter dari permainan Zaman Es, murid akan mengembangkan algorithm sekuensial untuk menggerakkan Scrat dari satu sisi labirin ke akorn di sisi lain labirin. Untuk melakukannya, mereka harus menumpuk blok code bersama-sama dalam urutan linear, menjadikan blok tersebut bergerak lurus, belok kiri, atau belok kanan.
+              description_student: Tulis pemrograman untuk membantu Scrat mencapai biji akorn.
+              description_teacher: Dengan menggunakan karakter dari permainan Zaman Es, murid akan mengembangkan algorithm sekuensial untuk menggerakkan Scrat dari satu sisi labirin ke biji akorn di sisi lain labirin. Untuk melakukannya, mereka harus menumpuk blok code bersama-sama dalam urutan linear, menjadikan blok tersebut bergerak lurus, belok kiri, atau belok kanan.
             Programming with Rey and BB-8:
               name: Pemrograman dengan Rey dan BB-8
               description_student: Bantu BB-8 mengumpulkan logam rongsokan.
@@ -13877,7 +13879,7 @@ id:
             Loops in Ice Age:
               name: Loop dengan Scrat
               description_student: Bantu Scrat menutupi tanah lebih banyak menggunakan loop.
-              description_teacher: Berpijak pada konsep mengulang instruksi dari "Happy Loops," tahap ini akan meminta murid menggunakan loop untuk sampai ke akorn dengan lebih efisien di Code.org.
+              description_teacher: Berpijak pada konsep mengulang instruksi dari "Happy Loops," tahap ini akan meminta murid menggunakan loop untuk sampai ke biji akorn dengan lebih efisien di Code.org.
             Loops in Collector:
               name: Loop dengan Laurel
               description_student: Bantu Laurel si petualang mengumpulkan harta karun di bawah tanah.
@@ -13914,7 +13916,7 @@ id:
               display_name: kegiatan
           lessons:
             Your Digital Footprint:
-              name: Digital Footprint Kamu
+              name: Digital Footprint Anda
               description_student: 'Pelajari tentang jejak digital Anda dan cara menjaga keselamatan diri saat mengunjungi situs web. '
               description_teacher: Bekerja sama dengan [r common-sense-media], pelajaran ini membantu murid belajar tentang kemiripan menjaga diri baik-baik di dunia nyata dan ketika mengunjungi situs-situs web. Murid juga akan belajar bahwa informasi yang mereka masukkan secara online meninggalkan jejak digital atau “tapak.” Tapak ini bisa besar atau kecil, berguna atau mencelakai, tergantung cara mengelolanya.
             Move It, Move It:
@@ -14088,7 +14090,7 @@ id:
             Introduction to Online Puzzles:
               name: Pengantar teka-Teki secara Online
               description_student: Pelajaran ini memberikan latihan keterampilan yang akan Anda butuhkan untuk kursus ini.
-              description_teacher: 'Dalam kumpulan puzzle ini, murid akan memulai pengenalan (atau tinjauan bergantung pada pengalaman kelas Anda) ruang kerja online Code.org. Akan tersedia beberapa video yang menjelaskan fungsionalitas dasar ruang kerja, meliputi tombol `Run`, `Reset`, dan `Step`. Hal-hal yang juga didiskusikan dalam video ini: menyeret blok Blockly, menghapus blok Blockly, dan menghubungkan blok Blockly. Berikutnya, murid akan melatih keterampilan _sequencing_ dan _debugging_ mereka dalam labirin. Dari situ, murid akan menyaksikan jenis-jenis puzzle baru seperti Kolektor, Artis, dan Pemanen tatkala mereka mempelajari dasar-dasar _loops_ itu sendiri.'
+              description_teacher: 'Dalam kumpulan puzzle ini, murid akan memulai pengenalan (atau tinjauan bergantung pada pengalaman kelas Anda) ruang kerja online Code.org. Akan tersedia beberapa video yang menjelaskan fungsionalitas dasar ruang kerja, meliputi tombol `Jalankan`, `Reset`, dan `Step`. Hal-hal yang juga didiskusikan dalam video ini: menyeret blok Blockly, menghapus blok Blockly, dan menghubungkan blok Blockly. Berikutnya, murid akan melatih keterampilan _sequencing_ dan _debugging_ mereka dalam labirin. Dari situ, murid akan menyaksikan jenis-jenis puzzle baru seperti Kolektor, Artis, dan Pemanen tatkala mereka mempelajari dasar-dasar _loops_ itu sendiri.'
             Relay Programming:
               name: Pemrograman bergiliran
               description_student: Ingat pada awal kursus ini ketika Anda menggambar dengan code? Dalam pelajaran ini, Anda akan bekerja sama dengan tim untuk melakukan sesuatu yang sangat mirip!
@@ -14106,9 +14108,9 @@ id:
               description_student: Merasakan kekuatan seperti yang anda membangun anda sendiri Peran Bintang Permainan dalam pelajaran ini.
               description_teacher: Dalam pelajaran ini, murid akan berlatih menggunakan event untuk membuat permainan yang dapat mereka bagikan secara online. Dengan menampilkan R2-D2 dan karakter Star Wars lainnya, murid akan dipandu menjelajahi event, lalu diberi ruang untuk membuat permainan mereka sendiri.
             Loops in Ice Age:
-              name: Putaran dalam Ice Age
-              description_student: Dalam pelajaran ini, Anda akan menggunakan blok repeat untuk menolong Scrat sampai di akorn seefisien mungkin.
-              description_teacher: Sebagai pembaruan (atau pengenalan) cepat dalam menggunakan loop, tahap ini akan memerintahkan murid menggunakan blok `repeat` untuk membawa Scrat ke akorn dengan lebih efisien.
+              name: Loop dalam Ice Age
+              description_student: Dalam pelajaran ini, Anda akan menggunakan blok repeat untuk menolong Scrat sampai di biji akorn seefisien mungkin.
+              description_teacher: Sebagai pembaruan (atau pengenalan) cepat dalam menggunakan loop, tahap ini akan memerintahkan murid menggunakan blok `repeat` untuk membawa Scrat ke biji akorn dengan lebih efisien.
             Loops in Artist:
               name: Menggambar Bentuk dengan Loop
               description_student: Dalam pelajaran ini, loop memudahkan pembuatan gambar-gambar keren dengan Artis!
@@ -14116,7 +14118,7 @@ id:
             Nested Loops in Bee:
               name: Nested Loop dalam Labirin
               description_student: Loop di dalam loop di dalam loop. Apa artinya? Pelajaran ini akan mengajari Anda apa yang terjadi ketika Anda membuat nested loop.
-              description_teacher: Dalam aktivitas online ini, murid berkesempatan meningkatkan pemahaman mereka tentang loop ke level yang sepenuhnya baru. Lewat permainan dengan Lebah dan Tanaman vs Zombi, murid akan mempelajari cara memprogram sebuah loop agar berada di dalam loop lain. Mereka juga akan didorong untuk mencari tahu betapa perubahan kecil di dalam loop dapat memengaruhi program ketika mereka mengklik `Run`.
+              description_teacher: Dalam aktivitas online ini, murid berkesempatan meningkatkan pemahaman mereka tentang loop ke level yang sepenuhnya baru. Lewat permainan dengan Lebah dan Tanaman vs Zombi, murid akan mempelajari cara memprogram sebuah loop agar berada di dalam loop lain. Mereka juga akan didorong untuk mencari tahu betapa perubahan kecil di dalam loop dapat memengaruhi program ketika mereka mengklik `Jalankan`.
             Conditionals with Cards:
               name: Bersyarat dengan kartu
               description_student: Saatnya memainkan permainan untuk mendapatkan poin hanya dalam kondisi tertentu!
@@ -14184,7 +14186,7 @@ id:
             Sequencing in the Maze:
               name: Pengurutan dalam Labirin
               description_student: Dalam pelajaran ini, Anda akan mempelajari cara menulis program Anda sendiri!
-              description_teacher: "Dalam kumpulan puzzle ini, murid akan memulai pengenalan (atau tinjauan bergantung pada pengalaman kelas Anda) ruang kerja online Code.org. Akan tersedia beberapa video yang menjelaskan fungsionalitas dasar ruang kerja, meliputi tombol `Run`, `Reset`, dan `Step`. Hal-hal yang juga didiskusikan dalam video ini: menyeret blok Blockly, menghapus blok Blockly, dan menghubungkan blok Blockly. Berikutnya, murid akan melatih keterampilan _sequencing_ dan _debugging_ mereka dalam labirin. \\r\nDebugging merupakan elemen pokok belajar memprogram. Murid akan menjumpai beberapa puzzle yang sudah dipecahkan secara tidak benar. Mereka harus menyelisik code yang ada untuk mengidentifikasi kesalahan, termasuk loop yang salah, blok yang hilang, blok ekstra, dan blok yang berantakan."
+              description_teacher: "Dalam kumpulan puzzle ini, murid akan memulai pengenalan (atau tinjauan bergantung pada pengalaman kelas Anda) ruang kerja online Code.org. Akan tersedia beberapa video yang menjelaskan fungsionalitas dasar ruang kerja, meliputi tombol `Jalankan`, `Reset`, dan `Step`. Hal-hal yang juga didiskusikan dalam video ini: menyeret blok Blockly, menghapus blok Blockly, dan menghubungkan blok Blockly. Berikutnya, murid akan melatih keterampilan _sequencing_ dan _debugging_ mereka dalam labirin. \\r\nDebugging merupakan elemen pokok belajar memprogram. Murid akan menjumpai beberapa puzzle yang sudah dipecahkan secara tidak benar. Mereka harus menyelisik code yang ada untuk mengidentifikasi kesalahan, termasuk loop yang salah, blok yang hilang, blok ekstra, dan blok yang berantakan."
             Programming and Loops with the Artist:
               name: Loop dengan Artis
               description_student: Dalam pelajaran ini, loop memudahkan pembuatan gambar-gambar yang makin keren dengan Artis!
@@ -14227,7 +14229,7 @@ id:
             Nested Loops in Bee:
               name: Nested Loop dalam Labirin
               description_student: Loop di dalam loop di dalam loop. Apa artinya? Pelajaran ini akan mengajari Anda apa yang terjadi ketika Anda meletakkan loop di dalam loop yang lain.
-              description_teacher: Dalam aktivitas online ini, murid berkesempatan meningkatkan pemahaman mereka tentang loop ke level yang sepenuhnya baru. Lewat permainan dengan Lebah dan Tanaman vs Zombi, murid akan mempelajari cara memprogram sebuah loop agar berada di dalam loop lain. Mereka juga akan didorong untuk mencari tahu betapa perubahan kecil di dalam loop dapat memengaruhi program ketika mereka mengklik `Run`.
+              description_teacher: Dalam aktivitas online ini, murid berkesempatan meningkatkan pemahaman mereka tentang loop ke level yang sepenuhnya baru. Lewat permainan dengan Lebah dan Tanaman vs Zombi, murid akan mempelajari cara memprogram sebuah loop agar berada di dalam loop lain. Mereka juga akan didorong untuk mencari tahu betapa perubahan kecil di dalam loop dapat memengaruhi program ketika mereka mengklik `Jalankan`.
             Nested Loops in Artist:
               name: Bentuk-Bentuk Menawan menggunakan Nested Loop
               description_student: Nested loop lebih banyak! Kali ini Anda harus membuat gambar MENAKJUBKAN dengan nested loop.
@@ -14302,7 +14304,7 @@ id:
             Nested Loops in the Maze:
               name: Nested Loop dalam Labirin
               description_student: Loop di dalam loop di dalam loop. Apa artinya? Pelajaran ini akan mengajari Anda apa yang terjadi ketika Anda meletakkan loop di dalam loop yang lain.
-              description_teacher: Dalam aktivitas online ini, murid berkesempatan meningkatkan pemahaman mereka tentang loop ke level yang sepenuhnya baru. Lewat permainan dengan Lebah dan Tanaman vs Zombi, murid akan mempelajari cara memprogram sebuah loop agar berada di dalam loop lain. Mereka juga akan didorong untuk mencari tahu betapa perubahan kecil di dalam loop dapat memengaruhi program ketika mereka mengklik `Run`.
+              description_teacher: Dalam aktivitas online ini, murid berkesempatan meningkatkan pemahaman mereka tentang loop ke level yang sepenuhnya baru. Lewat permainan dengan Lebah dan Tanaman vs Zombi, murid akan mempelajari cara memprogram sebuah loop agar berada di dalam loop lain. Mereka juga akan didorong untuk mencari tahu betapa perubahan kecil di dalam loop dapat memengaruhi program ketika mereka mengklik `Jalankan`.
             Envelope Variables:
               name: Sampul Variabel
               description_student: 'Amplop dan variable memiliki kesamaan: keduanya dapat menyimpan benda-benda berharga. Di sini Anda akan mempelajari pengertian variable dan hal-hal menakjubkan yang bisa dilakukannya.'
@@ -14524,7 +14526,7 @@ id:
             Spelling Bee:
               name: Spelling Bee
             Loops in Ice Age:
-              name: Putaran dalam Ice Age
+              name: Loop dalam Ice Age
             Loops in Collector:
               name: Loop dalam Kolektor
               description_teacher: Dalam pelajaran ini, murid melanjutkan belajar tentang konsep loop. Di sini, Laurel si Petualang menggunakan loop untuk mengumpulkan harta karus di kotak gua terbuka. Sebuah blok baru `get treasure` dimunculkan untuk membantunya dalam perjalanan.
@@ -15399,3 +15401,11 @@ id:
           lessons:
             Module 1:
               name: Modul 1
+        curriculum-sandbox-levels:
+          lessons:
+            Course A:
+              name: Kursus A
+            Course B:
+              name: Kursus B
+            CS Discoveries:
+              name: CS Discoveries

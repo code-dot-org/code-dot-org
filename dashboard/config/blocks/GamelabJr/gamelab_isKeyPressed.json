@@ -2,7 +2,7 @@
   "category": "Logic",
   "config": {
     "func": "isKeyPressed",
-    "blockText": "is {KEY} pressed",
+    "blockText": "{KEY} is pressed",
     "args": [
       {
         "name": "KEY",

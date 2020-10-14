@@ -42,10 +42,6 @@
        }
      ],
        "rows": [
-        {
-         "value": "feel_prepared",
-         "text": "I feel more prepared to teach {workshop_course} than I did at the beginning of the day."
-       },
        {
          "value": "love_curriculum",
          "text": "I love teaching with this curriculum."
@@ -53,10 +49,6 @@
        {
          "value": "comfort_collaborating",
          "text": "I feel comfortable collaborating with teachers in my cohort and asking for support."
-       },
-       {
-         "value": "teacher_community",
-         "text": "I feel like I am connected to a community of teachers in my {workshop_course} workshop."
        },
        {
          "value": "excited_about_next_time",
@@ -68,6 +60,7 @@
        "type": "comment",
        "name": "what_supported",
        "title": "What supported your learning the most today and why?",
+        "maxLength": 4000,
        "cols": 60,
        "rows": 2
      },
@@ -75,6 +68,7 @@
        "type": "comment",
        "name": "what_detracted",
        "title": "What detracted from your learning today and why?",
+        "maxLength": 4000,
        "cols": 60,
        "rows": 2
      },
@@ -82,6 +76,7 @@
        "type": "comment",
        "name": "discuss_tomorrow",
        "title": "What is one thing you hope to discuss or learn more about the next time we meet?",
+       "maxLength": 4000,
        "cols": 60,
        "rows": 2
      }

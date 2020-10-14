@@ -10,25 +10,25 @@ fr:
   campaign_date_start_long: Le 7 décembre
   campaign_date_short: 7–13 déc.
   campaign_date_full: Du 7 au 13 décembre
-  campaign_date_year: '2016'
-  campaign_date_full_year: 5-11 décembre, 2016
-  latam_campaign_date_start_short: Oct. 1
-  latam_campaign_date_start_long: October 1
+  campaign_date_year: '2020'
+  campaign_date_full_year: 7-13 décembre, 2020
+  latam_campaign_date_start_short: 1 Oct.
+  latam_campaign_date_start_long: Octobre 1
   latam_campaign_date_short: Oct. 1 - Dec. 18
   latam_campaign_date_full: October 1 - December 18
-  latam_campaign_date_year: '2016'
+  latam_campaign_date_year: '2020'
   latam_campaign_date_full_year: October 1, 2020 - December 18, 2020
   europe_campaign_date_start_short: Oct. 10
   europe_campaign_date_start_long: October 10
   europe_campaign_date_short: Oct. 10-25
   europe_campaign_date_full: October 10-25
-  europe_campaign_date_year: '2016'
+  europe_campaign_date_year: '2020'
   europe_campaign_date_full_year: October 10-25, 2020
-  africa_campaign_date_start_short: Oct. 1
-  africa_campaign_date_start_long: October 1
+  africa_campaign_date_start_short: 1 Oct.
+  africa_campaign_date_start_long: Octobre 1
   africa_campaign_date_short: Oct. 1-31
   africa_campaign_date_full: October 1-31
-  africa_campaign_date_year: '2016'
+  africa_campaign_date_year: '2020'
   africa_campaign_date_full_year: October 1-31, 2020
   hoc2019_header: Apprends l'informatique. Change le monde.
   hoc2019_header_line1_mobile: Apprends l'informatique.
@@ -44,7 +44,7 @@ fr:
     est un apprentissage fondamental pour tous les élèves.
   social_hoc2019_dance: Featuring Katy Perry, Shawn Mendes, Panic! At The Disco, Lil
     Nas X, Jonas Brothers, Nicki Minaj, and 34 more!
-  oceans_landing_title: AI for Oceans
+  oceans_landing_title: IA pour les Océans
   oceans_landing_description: Learn about machine learning and ethical use of AI.
   cs_for_good_hashtag: "#CSforGood"
   oceans_landing_specs: Available in 25+ languages | Grades 3+
@@ -114,7 +114,7 @@ fr:
     bias, while exploring ethical issues and how AI can be used to address world problems.
     Computer science is about so much more than coding! Enjoy Code.org's first step
     in a new journey to teach more about AI throughout our curriculum.
-  hoc_overview_oceans_tutorial_header: AI for Oceans
+  hoc_overview_oceans_tutorial_header: IA pour les Océans
   hoc_overview_oceans_tutorial_desc: Learn about artificial intelligence (AI), machine
     learning, training data, and bias, while exploring ethical issues and how AI can
     be used to address world problems.
@@ -195,9 +195,11 @@ fr:
   codeorg_homepage_special2020_body2: See our suggested learning resources.
   codeorg_homepage_special2020_body: Keep learning this summer! Take a look at our
     resources for learning at home.
+  codeorg_homepage_remote2020_body: Are you teaching in a remote or socially-distanced
+    classroom this semester? View our resources.
   codeorg_homepage_special2020_link_text: Get started
-  codeorg_homepage_code_break_body: Take a Code Break! Your weekly dose of inspiration,
-    community, and computer science.
+  codeorg_homepage_code_break_body: Faites un Code Break ! Votre dose hebdomadaire
+    d’inspiration, de communauté et d’informatique.
   codeorg_homepage_code_break_link_text: En savoir plus
   cookie_banner_message: En poursuivant votre navigation sur ce site ou en cliquant
     sur « J’accepte », vous acceptez le stockage de cookies sur votre ordinateur ou
@@ -370,6 +372,7 @@ fr:
   how_to_nav_companies: Pour les entreprises
   how_to_nav_afterschool_educators: Pour les éducateurs qui officient après la classe
   how_to_nav_volunteers: Pour les bénévoles
+  how_to_nav_virtual: For virtual events
   whats_next_header: Et ensuite ?
   whats_next_description: Nous vous enverrons des outils et conseils utiles pour votre
     évènement. Les tutoriels 2015 seront bientôt à votre disposition pour tous les
@@ -513,6 +516,7 @@ fr:
     notre carte
   signup_event_type_in_school: Dans une école
   signup_event_type_out_of_school: Hors de l'école
+  signup_event_type_at_home: Home
   signup_submit_census_label: Envoyer
   signup_submit_census_error_message: Nous sommes désolés. Une erreur s’est produite.
     Essayez s’il vous plaît soumettre le formulaire à nouveau.
@@ -7021,7 +7025,7 @@ fr:
     phone, Android phone, iPhone
   tutorial_gpbcatapult_string_platforms: Tous les navigateurs actuels
   tutorial_quorumastro_string_platforms: All modern browsers, Android tablet, iPad,
-    Windows phone, Android phone, iPhone
+    Windows phone, Android phone, iPhone, Screen reader
   tutorial_alicewonder_string_platforms: Tous les navigateurs actuels
   tutorial_rginter_string_platforms: Chrome, Firefox, Android tablet
   tutorial_cssgrid_string_platforms: Tous les navigateurs actuels
@@ -7222,7 +7226,7 @@ fr:
   tutorial_codinismhero_string_platforms: Android tablet, Android phone
   tutorial_discovery_string_platforms: Tous les navigateurs actuels
   tutorial_csfirstname_string_platforms: Tous les navigateurs actuels
-  tutorial_obstaclecourse_string_platforms: iPad
+  tutorial_obstaclecourse_string_platforms: iPad, Screen reader
   tutorial_edisonmove_string_platforms: Tous les navigateurs actuels
   tutorial_edisonspider_string_platforms: All modern browsers, iPad, Android tablets
   tutorial_edisonspotlight_string_platforms: All modern browsers, iPad, Android tablets
@@ -8573,7 +8577,7 @@ fr:
   tutorial_careconfigure_name: ReconFigure of Speech
   tutorial_rpiscratch_name: Scratch 3.0 phrasebook
   tutorial_ozaria_name: Ozaria by CodeCombat
-  tutorial_ttovum_name: Ovum City
+  tutorial_ttovum_name: Ovun City
   tutorial_ttpassage_name: The Passage
   tutorial_tynkerhtmlen_name: Affordable and Clean Energy (HTML)
   tutorial_ttfrog_name: Frog Squash
@@ -8625,7 +8629,7 @@ fr:
   tutorial_modtraits_name: Character Traits with GoPiGo
   tutorial_mee_name: 'Minecraft Heure de Code : IA au service du bien'
   tutorial_kuborobo_name: KUBO Robotics Coding Routes
-  tutorial_ai-oceans_name: AI for Oceans
+  tutorial_ai-oceans_name: IA pour les Océans
   tutorial_scratchimagine_longdescription: Imagine a world where anything is possible,
     then bring it to life with Scratch!
   tutorial_codesterspsa_longdescription: Learn the basics of coding in Python while
@@ -8790,9 +8794,9 @@ fr:
     where you learn to type real code, navigate through 15 game levels, and make your
     own game in order to help save the world of Ozaria.
   tutorial_ttovum_longdescription: Can you control the chaos? Hack your way into the
-    cyberpunk world of Ovum City. Debug broken code, solve puzzles, and upgrade your
+    cyberpunk world of Ovun City. Debug broken code, solve puzzles, and upgrade your
     hardware as you explore self guided open world. Don't get caught by the drones!
-    It's up to you how Ovum City evolves.
+    It's up to you how Ovun City evolves.
   tutorial_ttpassage_longdescription: Immerse yourself in an alien world to help Ada
     escape unknown dangers. Play through this 2D platforming self-guided adventure
     and learn coding techniques along the way. Players will become familiar with coding
@@ -9204,7 +9208,8 @@ fr:
     Android, iPad
   tutorial_scratchcartoon_string_platforms: Tous les navigateurs modernes, tablette
     Android, iPad
-  tutorial_codemonkeyjr_string_platforms: Android tablet, iPad, Android phone, iPhone
+  tutorial_codemonkeyjr_string_platforms: Tous les navigateurs actuels, tablette Android,
+    iPad, téléphone Android, iPhone
   tutorial_bananatales_string_platforms: Tous les navigateurs actuels
   tutorial_scratchtales_string_platforms: Tous les navigateurs modernes, tablette
     Android, iPad
@@ -9235,7 +9240,7 @@ fr:
   tutorial_tynkerland_string_platforms: Tous les navigateurs modernes, iPad, classes
     non connectées.
   tutorial_trinketgirl_string_platforms: All modern browsers, Android tablet, iPad,
-    Windows phone, Android phone, iPhone
+    Windows phone, Android phone, iPhone, Screen reader
   tutorial_rpimosquito_string_platforms: Tous les navigateurs modernes, tablette Android,
     iPad
   tutorial_tynkermars_string_platforms: Tous les navigateurs modernes, iPad, classes

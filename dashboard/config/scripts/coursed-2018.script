@@ -10,6 +10,7 @@ is_stable true
 supported_locales ["it-IT", "sk-SK"]
 curriculum_umbrella 'CSF'
 tts true
+is_course true
 
 lesson 'Algorithms: Graph Paper Programming', display_name: 'Graph Paper Programming'
 level 'GraphPaperProgramming_2018'

@@ -16,8 +16,12 @@
 
 class Foorm::Form < ActiveRecord::Base
   include Seeded
+  include Pd::Foorm::Constants
+
+  class InvalidFoormConfigurationError < StandardError; end
 
   has_many :submissions, foreign_key: [:form_name, :form_version], primary_key: [:name, :version]
+  validate :validate_questions
 
   # We have a uniqueness constraint on form name and version for this table.
   # This key format is used elsewhere in Foorm to uniquely identify a form.
@@ -48,7 +52,7 @@ class Foorm::Form < ActiveRecord::Base
     end
 
     transaction do
-      reset_db
+      Foorm::Form.delete_all
       Foorm::Form.import! forms
     end
   end
@@ -76,19 +80,89 @@ class Foorm::Form < ActiveRecord::Base
     questions["pages"]&.each do |page|
       page["elements"]&.map! do |element|
         if element["type"] == "library_item"
-          JSON.parse(
-            Foorm::LibraryQuestion.where(
-              library_name: element["library_name"],
-              library_version: element["library_version"].to_i,
-              question_name: element["name"]
-            ).first.question
-          )
+          library_question = Foorm::LibraryQuestion.where(
+            library_name: element["library_name"],
+            library_version: element["library_version"].to_i,
+            question_name: element["name"]
+          ).first
+          unless library_question
+            raise InvalidFoormConfigurationError, "cannot find library item with library name #{element['library_name']},"\
+                                        " version: #{element['library_version']} and question name #{element['name']}."
+          end
+          JSON.parse(library_question.question)
         else
           element
         end
       end
     end
     return questions
+  end
+
+  def validate_questions
+    # fill_in_library_items will throw an exception if any library items are invalid.
+    # If the questions are not valid JSON, JSON.parse will throw an exception.
+    begin
+      filled_questions = Foorm::Form.fill_in_library_items(JSON.parse(questions))
+    rescue StandardError => e
+      errors.add(:questions, e.message)
+      return
+    end
+    filled_questions.deep_symbolize_keys!
+    element_names = Set.new
+    filled_questions[:pages].each do |page|
+      page[:elements].each do |element_data|
+        # validate_element will throw an exception if the element is invalid
+        Foorm::Form.validate_element(element_data, element_names)
+      rescue StandardError => e
+        errors.add(:questions, e.message)
+      end
+    end
+  end
+
+  # Checks that the element name is not in element_names and the choices/rows/columns are unique and all have
+  # value/text parameters. If any of the above are not true, will raise an InvalidFoormConfigurationError.
+  def self.validate_element(element_data, element_names)
+    return unless PANEL_TYPES.include?(element_data[:type]) || QUESTION_TYPES.include?(element_data[:type])
+    if element_names.include?(element_data[:name])
+      raise InvalidFoormConfigurationError, "Duplicate element name #{element_data[:name]}."
+    end
+    element_names.add(element_data[:name])
+    if PANEL_TYPES.include?(element_data[:type])
+      elements = element_data[:elements]
+      if element_data[:type] == TYPE_PANEL_DYNAMIC
+        elements = element_data[:templateElements]
+      end
+      elements.each do |panel_question_data|
+        validate_element(panel_question_data, element_names)
+      end
+    elsif QUESTION_TYPES.include?(element_data[:type])
+      validate_question(element_data)
+    end
+  end
+
+  def self.validate_question(question_data)
+    case question_data[:type]
+    when TYPE_CHECKBOX, TYPE_RADIO, TYPE_DROPDOWN
+      validate_choices(question_data[:choices], question_data[:name])
+    when TYPE_MATRIX
+      validate_choices(question_data[:rows], question_data[:name])
+      validate_choices(question_data[:columns], question_data[:name])
+    end
+  end
+
+  def self.validate_choices(choices, question_name)
+    choice_values = Set.new
+    choices.each do |choice|
+      if choice.class == Hash && choice.key?(:value) && choice.key?(:text)
+        if choice_values.include?(choice[:value])
+          raise InvalidFoormConfigurationError, "Duplicate choice value #{choice[:value]} in question #{question_name}."
+        end
+        choice_values.add(choice[:value])
+      elsif choice.class == String
+        error_msg = "Foorm configuration contains question '#{question_name}' without key-value choice. Choice is '#{choice}'."
+        raise InvalidFoormConfigurationError,  error_msg
+      end
+    end
   end
 
   def self.get_matrix_question_id(parent_question_id, sub_question_id)

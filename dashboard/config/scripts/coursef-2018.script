@@ -12,6 +12,7 @@ is_stable true
 supported_locales ["it-IT", "sk-SK"]
 curriculum_umbrella 'CSF'
 tts true
+is_course true
 
 lesson_group 'csf_f_1', display_name: 'Ramp Up to Course F (Optional)'
 lesson 'Programming: My Robotic Friends', display_name: 'My Robotic Friends'

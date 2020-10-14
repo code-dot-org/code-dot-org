@@ -2,7 +2,7 @@
 #
 # Table name: user_levels
 #
-#  id               :integer          unsigned, not null, primary key
+#  id               :bigint           unsigned, not null, primary key
 #  user_id          :integer          not null
 #  level_id         :integer          not null
 #  attempts         :integer          default(0), not null
@@ -10,7 +10,7 @@
 #  updated_at       :datetime
 #  best_result      :integer
 #  script_id        :integer
-#  level_source_id  :integer          unsigned
+#  level_source_id  :bigint           unsigned
 #  submitted        :boolean
 #  readonly_answers :boolean
 #  unlocked_at      :datetime
@@ -107,6 +107,11 @@ class UserLevel < ActiveRecord::Base
 
   def paired?
     driver? || navigator?
+  end
+
+  def calculate_total_time_spent(additional_time)
+    existing_time_spent = time_spent ? time_spent : 0
+    additional_time && additional_time > 0 ? existing_time_spent + additional_time : existing_time_spent
   end
 
   def submitted_or_resubmitted?

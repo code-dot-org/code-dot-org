@@ -38,19 +38,29 @@ A new poster set is available featuring Malala, Stephen Curry, Shakira and more!
 
 ## Use the Hour of Code logo to spread the word
 
-[![图片]({{ hoc_logo_fit_200 }})]({{ hoc_logo }})
+[![图片]({{ hoc_logo_fit_200 }})]({{ hoc_logo }}) [![图片]({{ hdc_logo_fit_200 }})]({{ hdc_logo }})
 
 [Download hi-res versions](http://images.code.org/share/hour-of-code-logo.zip)
 
-**"Hour of Code" is trademarked. We don't want to prevent its usage, but we want to make sure it fits within a few limits:**
+**"Hour of Code" and "Hora del Código" are trademarked. We don't want to prevent their usage, but we do want to make sure usage fits within a few limits:**
 
-1. 凡引用“编程一小时”时，都不应该使用令别人误以为这是你自己的品牌的表述方式，而应该引用“编程一小时”为一场民间的运动。 **Good example**: "Participate in the Hour of Code™ at ACMECorp.com." **Bad example**: "Try Hour of Code by ACME Corp."
-2. Use a "TM" superscript in the most prominent places you mention "Hour of Code," both on your web site and in app descriptions.
-3. Include language on your page (or in the footer), including links to the CSEdWeek and [Code.org]({{ codeorg_link }}) websites, that says the following:
+1. Any reference to "Hour of Code" or "Hora del Código" should be used in a fashion that doesn't suggest that it's your own brand name, but rather referencing the Hour of Code as a grassroots movement.
+
+<ul style="margin-top: 0px">
+  <li>
+    <strong>Good example</strong>: "Participate in the Hour of Code™ at YOUR-COMPANY.com."
+  </li>
+  <li>
+    <strong>Bad example</strong>: "Try Hour of Code by YOUR-COMPANY."
+  </li>
+</ul>
+
+1. Use a "TM" superscript in the most prominent places you mention "Hour of Code" and a "Ⓡ" superscript in the most prominent places you mention "Hora del Código", both on your web site and in app descriptions.
+2. Include language on your page (or in the footer), including links to the CSEdWeek and [Code.org]({{ codeorg_link }}) websites, that says the following:
     
-    *“The 'Hour of Code™' is a nationwide initiative by Computer Science Education Week [csedweek.org] and Code.org [code.org] to introduce millions of students to one hour of computer science and computer programming.”*
+    *“The 'Hour of Code™'/'Hora del Código®' is a global initiative by Computer Science Education Week [csedweek.org] and Code.org [code.org] to introduce millions of students to one hour of computer science and computer programming.”*
 
-4. 不要将“编程一小时”用在应用程序名字中。
+3. No use of "Hour of Code" or "Hora del Código" in app names.
 
 <a id="stickers"></a>
 
@@ -134,7 +144,7 @@ See http://hourofcode.com/{{ country }} for details, and help spread the word. <
 
 **Subject line**: Local school joins mission to introduce students to computer science
 
-Computers are everywhere, changing every industry on the planet, but only 45% of all high schools teach computer science. 计算机课堂上的女性和少数族裔学生严重不足，在整个科技产业亦是如此。 好消息是，我们正在着手改变现状。
+Computers are everywhere, changing every industry on the planet, but only 45% of all high schools teach computer science. Young women and students from marginalized racial and ethnic groups are severely underrepresented in computer science classes, and in the tech industry. 好消息是，我们正在着手改变现状。
 
 因为《编程一小时》，计算机科学已经登上谷歌，MSN，雅虎和迪斯尼的主页。 超过100位合作伙伴共同支持这项活动。 世界上每个苹果专卖店都有举办过《编程一小时》。 甚至连奥巴马总统也曾在竞选活动中写下了自己的第一行编码。
 

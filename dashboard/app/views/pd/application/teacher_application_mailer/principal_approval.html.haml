@@ -12,15 +12,22 @@
   curriculum during the school year.
   We are excited that this teacher is committed to computer science education!
   = link_to 'Six different studies show', 'https://medium.com/@codeorg/cs-helps-students-outperform-in-school-college-and-workplace-66dd64a69536'
-  that children who study computer science perform better in other subjects,
+  that students who study computer science perform better in other subjects,
   excel at problem solving,
   and are 17% more likely to attend college.
 
 %p
+  Code.org’s vision is that every student at every school has the opportunity to learn CS
+  as part of their core K-12 path. This is a community effort and administrative support is essential.
   %strong
-    We need your approval in order for us to consider
+    That’s why we need your approval in order for us to consider
     = @application.applicant_full_name + "'s"
     application.
+
+%p
+  To help us measure our progress towards expanding access and providing resources where
+  they’re needed most, we ask that you confirm demographic information about your school
+  as well as how the course will be implemented during the upcoming school year.
 
 %p
   Please take five minutes to complete
@@ -37,11 +44,9 @@
   to see the cost of the program in your region.
 
 %p
-  For participating teachers the following commitment is strongly recommended:
-  %ul
-    %li To attend one, five-day summer workshop
-    %li To attend up to four, one-day local workshops during the school year (usually held on Saturdays)
-    %li To teach the course in the school year.
+  Participating teachers are asked to commit to Code.org’s year-long Professional Learning Program
+  starting in the summer and concluding in the spring. Workshops can either be held in-person,
+  virtually, or as a combination of both throughout the year.
 
 %p
   For more information about
@@ -54,5 +59,6 @@
   Please send any additional questions to your regional partner below.
   Thank you very much for your support of computer science for all!
 
+= render partial: 'questions_concerns'
 %p
   = render partial: 'partner_signature'

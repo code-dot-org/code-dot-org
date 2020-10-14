@@ -1,28 +1,51 @@
 ---
-title: Guía práctica
+title: Guía práctica de la Hora del Código
 ---
 
 {{ signup_button }}
 
 # Cómo planificar tu Hora del Código
 
-### Únete al movimiento e introduce a un grupo de estudiantes a su primera hora de ciencias de la computación con estos pasos. La Hora del Código es sencilla, ¡incluso para principiantes! Si quieres ayuda adicional, puedes encontrar un [voluntario local]({{ urls/volunteer_local }}) que te ayudará a organizar una Hora del Código en tu clase.
+### Únete al movimiento e introduce a tus estudiantes en las ciencias de la computación con estos pasos.
 
-### Consulta nuestra [guía de participación]({{ localized_files/participation_guide }}) si aún tienes preguntas.
+El pensamiento computacional ayuda a fomentar las habilidades de resolución de problemas, la lógica y la creatividad. Y la tecnología está transformando todas las industrias del planeta. Los estudiantes de hoy deben aprender a crear tecnología, no solo a usarla. Al comenzar en etapas tempranas, tendrán una base para el éxito en cualquier trayectoria profesional del siglo XXI.
+
+Probar una Hora del Código es una forma sencilla y divertida de presentarles a los estudiantes las ciencias de la computación, quizás por primera vez, y se adecúa perfectamente tanto en el aula como después de la escuela. Consulta nuestra [guía de participación]({{ localized_files/participation_guide }}) si aún tienes preguntas.
+
+- [Mira el video instructivo de la Hora del Código](#how-to-video)
+- [Explora actividades y tutoriales](#explore-activities)
+- [Crea tu plan para el día](#create-your-plan)
+- [Promueve tu Hora del Código](#promote-your-hour)
+- [Cómo comenzar tu Hora del Código con energía](#how-to-start)
+- [¡A programar!](#code)
+- [Celebra el éxito de tus estudiantes](#celebrate)
+- [Otros recursos de la Hora del Código para educadores](#other-resources)
+
+### ¡Una Hora del Código también se puede organizar de forma remota! Para comenzar, consulta nuestros [consejos para organizar un evento virtual de la Hora del Código](https://hourofcode.com/us/how-to/virtual).
 
 * * *
 
-## 1. Mira este video explicativo <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+<a id="how-to-video"></a>
 
-## 2. Explore Activities and Tutorials
+## 1. Mira el video instructivo de la Hora del Código <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+
+* * *
+
+<a id="explore-activities"></a>
+
+## 2. Explora actividades y tutoriales
 
 Ofrecemos divertidos [tutoriales guiados por estudiantes]({{ urls/learn }}) para todas las edades y niveles de experiencia. Es habitual que los estudiantes prueben tutoriales autodirigidos, aunque muchas actividades incluyen planes de lecciones para que los docentes guíen la discusión o también extiendan la actividad.
 
 Explora las actividades y decide con anticipación si deseas elegir un solo tutorial para todos tus estudiantes, o que cada niño elija el suyo.
 
-[![](/images/fit-700/tutorials.png)]({{ urls/learn }})
+[![](/images/fit-600/tutorials.png)]({{ urls/learn }})
 
-## 3. Create your Plan for the Day
+* * *
+
+<a id="create-your-plan"></a>
+
+## 3. Crea tu plan para el día
 
 ### Considera tus necesidades tecnológicas. ¡Las computadoras son opcionales!
 
@@ -31,13 +54,17 @@ Explora las actividades y decide con anticipación si deseas elegir un solo tuto
 - Entrega auriculares, o pide a los estudiantes que traigan los suyos, en caso de que el tutorial que elijas funcione mejor con sonido.
 - ¿No tienes suficientes dispositivos? Usa la [programación en parejas](https://www.youtube.com/watch?v=vgkahOzFH2Q). Al formar equipos, los estudiantes se ayudan entre sí y dependen menos del docente. Además verán que las ciencias de la computación son una actividad social y colaborativa.
 
-<img src="/images/fit-450/group_ipad.jpg" />
+<img src="/images/fit-600/group_ipad.jpg" />
 
 ### Elige un día y horario
 
 Personas de todo el mundo se suman a la celebración de la Hora del Código durante la Semana por la Educación en Ciencias de la Computación (9-13 de diciembre) cuando se lanzan los últimos tutoriales y actividades. ¡Pero puedes hacer una Hora de Código cualquier día del año!
 
-## 4. Promote your Hour of Code
+* * *
+
+<a id="promote-your-hour"></a>
+
+## 4. Promociona tu Hora del Código
 
 Ahora que has planificado tu evento, ¡es hora de comenzar a promoverlo!
 
@@ -57,7 +84,11 @@ Prepárate para el evento compartiendo [videos inspiradores](/promote/resources)
 
 Descubre más sobre carteles, videos, adhesivos y otras maneras de [promover tu evento](/promote/resources#posters) en tu comunidad.
 
-## 5. Start your Hour of Code Strong
+* * *
+
+<a id="how-to-start"></a>
+
+## 5. Cómo comenzar tu Hora del Código con energía
 
 Una vez que haya llegado tu celebración de la Hora del Código, asegúrate de comenzar tu evento de la mejor manera con algunas de estas herramientas y consejos.
 
@@ -68,17 +99,21 @@ Muestra un video inspirador:
 - Video original de lanzamiento de Code.org, con Bill Gates, Mark Zuckerberg y la estrella de la NBA Chris Bosh. (Existen versiones de [1 minuto](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minutos](https://www.youtube.com/watch?v=nKIu9yen5nc) y [9 minutos](https://www.youtube.com/watch?v=dU1xS07N-FA))
 - Encuentra más [recursos]({{ urls/inspire }}) y [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP) inspiradores.
 
-It’s okay if both you and your students are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:
+No hay problema si tú y tus estudiantes son nuevos en las ciencias de la computación. Estas son algunas ideas para presentar tu actividad de la Hora del Código:
 
 - Explica algunas formas en las que la tecnología tiene un impacto en nuestras vidas, con ejemplos que les interesen a niños y niñas (habla acerca de salvar vidas, ayudar a las personas, conectarlas, etc.).
 - Prepara con la clase una lista de cosas que utilizan programación en la vida cotidiana.
-- Echa un vistazo a los [consejos]({{ urls/girls }}) para que las niñas se interesen en las ciencias de la computación.
+- Mira los consejos para hacer que las niñas se interesen en las ciencias de la computación [aquí]({{ urls/girls }}).
 
-## 6. Get Coding!
+* * *
+
+<a id="code"></a>
+
+## 6. ¡A programar!
 
 Involucra a los estudiantes en la actividad
 
-- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
+- Escribe el enlace del tutorial en una pizarra. Encuentra el enlace que aparece en la [información del tutorial seleccionado]({{ urls/learn }}) debajo del número de participantes.
 
 Si los estudiantes encuentran dificultades, está bien responder:
 
@@ -91,11 +126,15 @@ Si los estudiantes encuentran dificultades, está bien responder:
 - Los estudiantes pueden ver todos los tutoriales y [probar otra actividad de la Hora del Código]({{ urls/learn }}).
 - También puedes pedir a los estudiantes que terminen primero, que ayuden a los compañeros que tienen problemas con la actividad.
 
-## 7. Celebrate your Students' Success
+* * *
+
+<a id="celebrate"></a>
+
+## 7. Celebra el éxito de tus estudiantes
 
 [col-33]
 
-![](/images/fit-450/boy-certificate.jpg)
+![](/images/fit-600/boy-certificate.jpg)
 
 [/col-33]
 
@@ -106,13 +145,15 @@ Si los estudiantes encuentran dificultades, está bien responder:
 
 * * *
 
+<a id="other-resources"></a>
+
 ## Otros recursos de la Hora del Código para educadores:
 
 - Visita el [Foro de la Hora del Código para docentes](http://forum.code.org/c/plc/hour-of-code) para obtener consejos, perspectivas y apoyo de otros educadores.
 - Consulta las [preguntas frecuentes sobre la Hora del Código](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
 
-## ¿Qué viene después de la Hora del Código?
+### ¿Qué viene después de la Hora del Código?
 
-Computer science doesn’t have to end with the Hour of Code! Our curriculum is web-based and free to use, forever. [Learn how](/beyond) to bring CS to your school and students.
+¡Las ciencias de la computación no tienen por qué terminar con la Hora del Código! Nuestro plan de estudios está basado en la web y es de uso gratuito para siempre. [Descubre cómo](/beyond) llevar las ciencias de la computación a tu escuela y a tus alumnos.
 
 {{ signup_button }}

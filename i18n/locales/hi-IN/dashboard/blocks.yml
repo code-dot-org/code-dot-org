@@ -88,9 +88,6 @@ hi:
             MOVES.Kick: स्टार
             MOVES.ThisOrThat: यह या वह
             MOVES.Rest: कोई नहीं
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changeMoveLR:
         text: "{SPRITE} हमेशा {MOVE} {DIR} करता है"
         options:
@@ -109,9 +106,6 @@ hi:
             MOVES.Kick: स्टार
             MOVES.ThisOrThat: यह या वह
             MOVES.Rest: कोई नहीं
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changePropBy:
         text: "{SPRITE} {PROPERTY} को {VAL} द्वारा बदलें"
         options:
@@ -188,9 +182,6 @@ hi:
             MOVES.XArmsUp: ज़ोर से खींचें
             MOVES.ThisOrThat: यह या वह
             MOVES.Rest: कोई नहीं
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_doMoveLR:
         text: "{SPRITE} एक बार {MOVE} {DIR} करता है"
         options:
@@ -219,9 +210,6 @@ hi:
             MOVES.XArmsUp: ज़ोर से खींचें
             MOVES.ThisOrThat: यह या वह
             MOVES.Rest: कोई नहीं
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_everyMeasuresRange:
         text: 'प्रत्येक {N} प्रविधियों को {START} के बाद दोहराएं '
       Dancelab_everySeconds:
@@ -1098,6 +1086,13 @@ hi:
             '"z"': z
       gamelab_locationAt:
         text: 'स्थान x: {X} y: {Y}'
+      gamelab_locationModifier:
+        options:
+          DIRECTION:
+            '"North"': उत्तर
+            '"East"': पूर्व
+            '"South"': दक्षिण
+            '"West"': पश्चिम
       gamelab_locationMouse:
         text: माउस का स्थान
       gamelab_locationOf:

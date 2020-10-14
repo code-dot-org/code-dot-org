@@ -6530,3 +6530,11 @@ it:
           lesson_groups:
             lg_1:
               display_name: Contenuto
+        curriculum-sandbox-levels:
+          lessons:
+            Course A:
+              name: Corso A
+            Course B:
+              name: Corso B
+            CS Discoveries:
+              name: Alla scoperta dell'informatica

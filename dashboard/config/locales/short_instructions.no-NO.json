@@ -581,7 +581,10 @@
         "grade5_artist_binary5": "Hver binærstreng representerer en rad i dette bildet. Kan du ordne strengene slik at de tegner et smile-ansikt i stedet for et trist ansikt?",
         "grade5_artist_binary8": "Fullfør tegningen.",
         "grade5_artist_binary9": "Her er et lerret å tegne på med høyere oppløsning - 16 ganger 16 piskler!\\\r\n\\\r\nSe hva som skjer når vi blir kreative med bitene!",
-        "k-1 maze 1": "Kan du bevege meg til vest for å komme til grisen?"
+        "k-1 maze 1": "Kan du bevege meg til vest for å komme til grisen?",
+        "New Artist Project": "Tegn noe kult! Koden din er lagret som et prosjekt som du kan gå tilbake til når som helst.",
+        "New Basketball Project": "Lag ditt eget basketball spill. Du kan skifte på alle reglene. Når du er ferdig, så kan du dele spillet og la vennene dine prøve spillet på telefonen dems",
+        "New Bounce Project": "Opprett ditt eget Sprett spill. Du kan endre alle bilder og reglene. Når du er ferdig, klikk Fullfør for å la venner prøve spillet på sine telefoner."
       }
     }
   }
