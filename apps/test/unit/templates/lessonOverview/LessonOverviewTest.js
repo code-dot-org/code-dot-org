@@ -15,10 +15,6 @@ describe('LessonOverview', () => {
   beforeEach(() => {
     defaultProps = {
       lesson: {
-        course: {
-          displayName: 'Course 1',
-          link: '/courses/course-1'
-        },
         unit: {
           displayName: 'Unit 1',
           link: '/s/unit-1',
@@ -48,10 +44,8 @@ describe('LessonOverview', () => {
   it('renders default props', () => {
     const wrapper = shallow(<LessonOverview {...defaultProps} />);
     const navLinks = wrapper.find('a');
-    expect(navLinks.at(0).props().href).to.contain('/courses/course-1');
-    expect(navLinks.at(0).contains('Course 1')).to.be.true;
-    expect(navLinks.at(1).props().href).to.contain('/s/unit-1');
-    expect(navLinks.at(1).contains('Unit 1')).to.be.true;
+    expect(navLinks.props().href).to.contain('/s/unit-1');
+    expect(navLinks.contains('Unit 1')).to.be.true;
 
     expect(wrapper.find('DropdownButton').length).to.equal(1);
     const dropdown = wrapper.find('DropdownButton');

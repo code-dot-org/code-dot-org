@@ -26,13 +26,12 @@ const styles = {
     padding: 10,
     borderLeft: 'solid 1px black'
   },
-  nav: {
-    margin: '10px 0px',
-    fontSize: 18
+  header: {
+    margin: '10px 0px'
   },
   navLink: {
-    color: color.purple,
-    margin: '0px 5px'
+    fontSize: 18,
+    color: color.purple
   },
   dropdown: {
     display: 'inline-block'
@@ -73,7 +72,7 @@ class LessonOverview extends Component {
     const {lesson, announcements, isSignedIn, viewAs} = this.props;
     return (
       <div>
-        <div style={styles.nav}>
+        <div style={styles.header}>
           <a href={lesson.unit.link} style={styles.navLink}>
             {`< ${lesson.unit.displayName}`}
           </a>
