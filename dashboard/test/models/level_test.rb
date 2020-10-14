@@ -1107,7 +1107,13 @@ class LevelTest < ActiveSupport::TestCase
 
   test 'validates game' do
     error = assert_raises ActiveRecord::RecordInvalid do
-      level = create :level, game: nil
+      create :level, game: nil
+    end
+    assert_includes error.message, 'Game required for non-custom levels'
+
+    level = create :level
+    level.game = nil
+    error = assert_raises ActiveRecord::RecordInvalid do
       level.save!
     end
     assert_includes error.message, 'Game required for non-custom levels'
