@@ -9,6 +9,7 @@ import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import styleConstants from '@cdo/apps/styleConstants';
+import color from '@cdo/apps/util/color';
 
 const styles = {
   frontPage: {
@@ -22,16 +23,28 @@ const styles = {
     flexGrow: 1,
     padding: 10,
     borderLeft: 'solid 1px black'
+  },
+  nav: {
+    margin: '10px 0px',
+    fontSize: 18
+  },
+  navLink: {
+    color: color.purple,
+    margin: '0px 5px'
   }
 };
 
 class LessonOverview extends Component {
   static propTypes = {
-    displayName: PropTypes.string.isRequired,
-    overview: PropTypes.string,
+    lesson: PropTypes.shape({
+      course: PropTypes.object.isRequired,
+      unit: PropTypes.object.isRequired,
+      displayName: PropTypes.string.isRequired,
+      overview: PropTypes.string,
+      purpose: PropTypes.string,
+      preparation: PropTypes.string
+    }),
     activities: PropTypes.array,
-    purpose: PropTypes.string,
-    preparation: PropTypes.string,
 
     // from redux
     announcements: PropTypes.arrayOf(announcementShape),
@@ -40,17 +53,19 @@ class LessonOverview extends Component {
   };
 
   render() {
-    const {
-      displayName,
-      overview,
-      announcements,
-      isSignedIn,
-      viewAs,
-      purpose,
-      preparation
-    } = this.props;
+    const {lesson, announcements, isSignedIn, viewAs} = this.props;
     return (
       <div>
+        <div style={styles.nav}>
+          <span>{'<'}</span>
+          <a href={lesson.course.link} style={styles.navLink}>
+            {lesson.course.displayName}
+          </a>
+          <span style={{color: color.lighter_gray}}>{'/'}</span>
+          <a href={lesson.unit.link} style={styles.navLink}>
+            {lesson.unit.displayName}
+          </a>
+        </div>
         {isSignedIn && (
           <Announcements
             announcements={announcements}
@@ -58,19 +73,19 @@ class LessonOverview extends Component {
             viewAs={viewAs}
           />
         )}
-        <h1>{displayName}</h1>
+        <h1>{lesson.displayName}</h1>
 
         <div style={styles.frontPage}>
           <div style={styles.left}>
             <h2>{i18n.overview()}</h2>
-            <SafeMarkdown markdown={overview} />
+            <SafeMarkdown markdown={lesson.overview} />
 
             <h2>{i18n.purpose()}</h2>
-            <SafeMarkdown markdown={purpose} />
+            <SafeMarkdown markdown={lesson.purpose} />
           </div>
           <div style={styles.right}>
             <h2>{i18n.preparation()}</h2>
-            <SafeMarkdown markdown={preparation} />
+            <SafeMarkdown markdown={lesson.preparation} />
           </div>
         </div>
 
