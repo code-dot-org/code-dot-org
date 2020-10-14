@@ -348,9 +348,14 @@ class LessonTest < ActiveSupport::TestCase
     create :course_version, course_offering: other_course_offering, content_root: script5, key: '3000'
     create :lesson, script: script5, key: 'foo'
 
+    # measure the query count of the summarize method before checking the result
+    # of related_lessons, so that the count is not artificially reduced by
+    # anything being cached from the call to related_lessons.
     assert_queries(8) do
-      assert_equal [lesson4, lesson2], lesson1.related_lessons
+      lesson1.summarize_related_lessons
     end
+
+    assert_equal [lesson4, lesson2], lesson1.related_lessons
   end
 
   test 'find related lessons within a course offering with unit groups' do
@@ -395,9 +400,14 @@ class LessonTest < ActiveSupport::TestCase
     create :unit_group_unit, unit_group: unit_group_c, script: script6, position: 1
     create :lesson, script: script6, key: 'foo'
 
+    # measure the query count of the summarize method before checking the result
+    # of related_lessons, so that the count is not artificially reduced by
+    # anything being cached from the call to related_lessons.
     assert_queries(11) do
-      assert_equal [lesson4, lesson0, lesson2], lesson1.related_lessons
+      lesson1.summarize_related_lessons
     end
+
+    assert_equal [lesson4, lesson0, lesson2], lesson1.related_lessons
   end
 
   test 'no related lessons without course offering' do
