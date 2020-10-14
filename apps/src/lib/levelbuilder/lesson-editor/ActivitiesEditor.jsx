@@ -123,15 +123,12 @@ class ActivitiesEditor extends Component {
             />
           ))}
           <button
-            onClick={this.handleAddActivity}
+            onMouseDown={this.handleAddActivity}
             className="btn"
             style={styles.addActivity}
             type="button"
           >
-            <i
-              style={{marginRight: 7}}
-              className="fa fa-plus-circle uitest-add-activity"
-            />
+            <i style={{marginRight: 7}} className="fa fa-plus-circle" />
             Activity
           </button>
         </div>
