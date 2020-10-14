@@ -461,10 +461,23 @@ class Lesson < ActiveRecord::Base
     return [] unless course_offering
     # all units in this course offering, including this lesson's unit
     related_units = course_offering.course_versions.map(&:units).flatten
-    lessons = Lesson.includes(:script).joins(:script).
+
+    # to minimize the query count, make the initial query load any associations
+    # that may be used in the sort block below.
+    load_params = {
+      script: [
+        :course_version,
+        {
+          unit_group_units: {
+            unit_group: :course_version
+          }
+        }
+      ]
+    }
+    lessons = Lesson.eager_load(load_params).
       where(script: related_units).
-      where(key: key)
-    lessons = lessons.all.sort_by do |lesson|
+      where(key: key).to_a
+    lessons.sort_by! do |lesson|
       version_year = lesson.script&.get_course_version&.version_year
       [version_year, lesson.script.name]
     end
