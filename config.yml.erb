@@ -368,17 +368,6 @@ cache_assets_in_memory:
 # Contributors should ask a Code.org engineer for this if needed.
 properties_encryption_key: !Secret
 
-# NOTE: When a new language is added to this set, make sure to also update
-# the redirection rules for the cdo-curriculum S3 bucket by running the
-# aws/s3/cdo-curriculum/redirection_rules.rb script. Otherwise, all links to
-# CB for that language will attempt to point to the language-specific version
-# of that content, even if we haven't translated that content yet.
-#
-# See the LANGUAGES setting in
-# https://github.com/mrjoshida/curriculumbuilder/blob/master/curriculumBuilder/settings.py
-# for the languages currently supported in CurriculumBuilder itself
-curriculum_languages: ['es-mx', 'it-it', 'th-th', 'sk-sk']
-
 start_circle_builds_branch:
 start_circle_builds_token:
 circle_build_num: <%=ENV['CIRCLE_BUILD_NUM']%>
