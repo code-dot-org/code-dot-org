@@ -477,8 +477,11 @@ class Lesson < ActiveRecord::Base
     lessons = Lesson.eager_load(load_params).
       where(script: related_units).
       where(key: key).to_a
+
+    # we cannot do the sort in the SQL query, because we don't know which
+    # association get_course_version will use to find the course version.
     lessons.sort_by! do |lesson|
-      version_year = lesson.script&.get_course_version&.version_year
+      version_year = lesson.script.get_course_version.version_year
       [version_year, lesson.script.name]
     end
     lessons - [self]
@@ -490,7 +493,7 @@ class Lesson < ActiveRecord::Base
     # and course offering. In the future, when curriulum_umbrella moves to
     # CourseOffering, this implementation will need to change to be more like
     # related_lessons.
-    lessons = Lesson.includes(:script).joins(:script).
+    lessons = Lesson.includes(:script).
       where("scripts.properties -> '$.curriculum_umbrella' = ?", script.curriculum_umbrella).
       where(key: key).
       order("scripts.properties -> '$.version_year'", 'scripts.name')
