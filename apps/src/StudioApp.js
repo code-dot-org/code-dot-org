@@ -2763,8 +2763,7 @@ StudioApp.prototype.enableBreakpoints = function() {
  * specified in levelbuilder. If the level has disabled this functionality,
  * by turning `validationEnabled` off, this will always return true.
  */
-StudioApp.prototype.validateCodeChanged = function() {
-  const level = this.config.level;
+StudioApp.prototype.validateCodeChanged = function(level = this.config.level) {
   if (!level.validationEnabled) {
     return true;
   }
@@ -3440,6 +3439,7 @@ StudioApp.prototype.setPageConstants = function(config, appSpecificConstants) {
       isReadOnlyWorkspace: !!config.readonlyWorkspace,
       isDroplet: !!level.editCode,
       isBlockly: this.isUsingBlockly(),
+      isBramble: config.app && config.app === 'weblab',
       hideSource: !!config.hideSource,
       isChallengeLevel: !!config.isChallengeLevel,
       isEmbedView: !!config.embed,
