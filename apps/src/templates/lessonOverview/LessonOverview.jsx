@@ -66,8 +66,9 @@ class LessonOverview extends Component {
     isSignedIn: PropTypes.bool.isRequired
   };
 
-  navigateToLesson = event => {
-    window.location.href = event.target.value;
+  linkWithQueryParams = link => {
+    const queryParams = window.location.search || '';
+    return link + queryParams;
   };
 
   render() {
@@ -75,7 +76,10 @@ class LessonOverview extends Component {
     return (
       <div>
         <div style={styles.header}>
-          <a href={lesson.unit.link} style={styles.navLink}>
+          <a
+            href={this.linkWithQueryParams(lesson.unit.link)}
+            style={styles.navLink}
+          >
             {`< ${lesson.unit.displayName}`}
           </a>
           <div style={styles.dropdown}>
@@ -84,7 +88,7 @@ class LessonOverview extends Component {
               color={Button.ButtonColor.purple}
             >
               {lesson.unit.lessons.map((l, index) => (
-                <a key={index} href={l.link} target="_blank">
+                <a key={index} href={this.linkWithQueryParams(l.link)}>
                   {`${index + 1} ${l.displayName}`}
                 </a>
               ))}
