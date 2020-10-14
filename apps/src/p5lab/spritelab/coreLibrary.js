@@ -212,6 +212,11 @@ function atTimeEvent(inputEvent, p5Inst) {
   return [];
 }
 
+function repeatForeverEvent(inputEvent, p5Inst) {
+  // No condition to check, just always call callback with no extra args
+  return [{}];
+}
+
 function whenPressEvent(inputEvent, p5Inst) {
   if (p5Inst.keyWentDown(inputEvent.args.key)) {
     // Call callback with no extra args
@@ -324,10 +329,21 @@ function whileClickEvent(inputEvent, p5Inst) {
   return callbackArgList;
 }
 
-function checkEvent(inputEvent, p5Inst) {
+/**
+ * @param {Object} inputEvent
+ * @param p5Inst - the running P5 instance
+ * Checks whether the condition of the event is met, and if so gives the arguments to pass to the user's
+ * callback function. An event can trigger multiple invocations of the callback in a single tick of the
+ * draw loop, so this will return an array of callback arguments.
+ * @return {Array.<Object>} Each element of this array gives the arguments that will be passed
+ * to the event callback.
+ */
+function getCallbackArgListForEvent(inputEvent, p5Inst) {
   switch (inputEvent.type) {
     case 'atTime':
       return atTimeEvent(inputEvent, p5Inst);
+    case 'repeatForever':
+      return repeatForeverEvent(inputEvent, p5Inst);
     case 'whenpress':
       return whenPressEvent(inputEvent, p5Inst);
     case 'whilepress':
@@ -345,7 +361,7 @@ function checkEvent(inputEvent, p5Inst) {
 
 export function runEvents(p5Inst) {
   inputEvents.forEach(inputEvent => {
-    let callbackArgList = checkEvent(inputEvent, p5Inst);
+    let callbackArgList = getCallbackArgListForEvent(inputEvent, p5Inst);
     callbackArgList.forEach(args => {
       inputEvent.callback(args);
     });
