@@ -47,7 +47,6 @@ scripts_map = {
 @level_concept_difficulty = {}
 @level_sources = {}
 @callouts = {}
-@resources = {}
 
 def handle_level(level)
   attributes = level.attributes.clone
@@ -141,4 +140,3 @@ File.new("#{prefix}level.yml", 'w').write(yamlize(@levels))
 File.new("#{prefix}level_concept_difficulty.yml", 'w').write(yamlize(@level_concept_difficulty))
 File.new("#{prefix}level_source.yml", 'w').write(yamlize(@level_sources))
 File.new("#{prefix}callout.yml", 'w').write(yamlize(@callouts))
-File.new("#{prefix}resource.yml", 'w').write(yamlize(@resources))
