@@ -18257,8 +18257,23 @@ en:
               name: MODIFY Projects
             CREATE Projects:
               name: CREATE Projects
+            USE Programs:
+              name: USE Programs (AppLab Only)
+            MODIFY Programs:
+              name: MODIFY Programs (AppLab -> Widget -> AppLab)
           lesson_groups: {}
           title: Ml/AI Unit - CSD
           description_audience: ''
           description_short: ML/AI Unit
           description: Brainstorm / Playground area for ML/AI Unit Development for CSD. For future questions about this, ask Dan Schneider.
+        outbreak:
+          lessons:
+            Virus Simulation for Code Bytes:
+              name: Simulating a Virus
+          lesson_groups:
+            outbreak:
+              display_name: Outbreak Simulation
+          title: Outbreak
+          description_audience: ''
+          description_short: 'Use Sprite Lab to program a simulation out of a virus outbreak. '
+          description: 'Use Sprite Lab to program a simulation out of a virus outbreak. '
