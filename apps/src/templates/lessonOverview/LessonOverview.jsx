@@ -42,10 +42,6 @@ const styles = {
 class LessonOverview extends Component {
   static propTypes = {
     lesson: PropTypes.shape({
-      course: PropTypes.shape({
-        displayName: PropTypes.string.isRequired,
-        link: PropTypes.string.isRequired
-      }),
       unit: PropTypes.shape({
         displayName: PropTypes.string.isRequired,
         link: PropTypes.string.isRequired,
@@ -78,23 +74,18 @@ class LessonOverview extends Component {
     return (
       <div>
         <div style={styles.nav}>
-          <span>{'<'}</span>
-          <a href={lesson.course.link} style={styles.navLink}>
-            {lesson.course.displayName}
-          </a>
-          <span style={{color: color.lighter_gray}}>{'/'}</span>
           <a href={lesson.unit.link} style={styles.navLink}>
-            {lesson.unit.displayName}
+            {`< ${lesson.unit.displayName}`}
           </a>
         </div>
         <div style={styles.dropdown}>
           <DropdownButton
-            text={`Other Lessons in ${lesson.unit.displayName}`}
+            text={`Other Lessons in this Unit`}
             color={Button.ButtonColor.purple}
           >
-            {lesson.unit.lessons.map((lesson, index) => (
-              <a key={index} href={lesson.link} target="_blank">
-                {`${index + 1} ${lesson.displayName}`}
+            {lesson.unit.lessons.map((l, index) => (
+              <a key={index} href={l.link} target="_blank">
+                {`${index + 1} ${l.displayName}`}
               </a>
             ))}
           </DropdownButton>
