@@ -5,6 +5,7 @@ import _ from 'lodash';
 import Select from 'react-select';
 import 'react-select/dist/react-select.css';
 import color from '@cdo/apps/util/color';
+import AddResourceDialog from './AddResourceDialog';
 
 const styles = {
   resourceSearch: {
@@ -40,7 +41,8 @@ export default class ResourcesEditor extends Component {
     this.state = {
       resources: props.resources || [],
       resourceInput: '',
-      searchValue: ''
+      searchValue: '',
+      newResourceDialogOpen: false
     };
   }
 
@@ -103,9 +105,9 @@ export default class ResourcesEditor extends Component {
     });
   };
 
-  addResource = e => {
+  addResource = resource => {
     var {resources} = this.state;
-    resources.push(e.resource);
+    resources.push(resource);
     this.setState({resources});
   };
 
@@ -116,9 +118,20 @@ export default class ResourcesEditor extends Component {
     this.setState({resources});
   };
 
+  handleNewResourceDialogClose = () => {
+    this.setState({newResourceDialogOpen: false});
+  };
+
   render() {
     return (
       <div>
+        <AddResourceDialog
+          isOpen={this.state.newResourceDialogOpen}
+          onSave={this.addResource}
+          handleClose={this.handleNewResourceDialogClose}
+          typeOptions={['handout', 'slides']}
+          audienceOptions={['teacher', 'studen']}
+        />
         Resources
         <input
           type="hidden"
@@ -133,7 +146,7 @@ export default class ResourcesEditor extends Component {
               name="resource_search"
               loadOptions={this.getOptions}
               value={this.state.searchValue}
-              onChange={this.addResource}
+              onChange={e => this.addResource(e.resource)}
               onValueClick={this.addResource}
               placeholder={''}
             />
@@ -170,6 +183,10 @@ export default class ResourcesEditor extends Component {
               ))}
             </tbody>
           </table>
+          Or add a new resource
+          <div onMouseDown={() => this.setState({newResourceDialogOpen: true})}>
+            <i className="fa fa-plus" />
+          </div>
         </div>
       </div>
     );
