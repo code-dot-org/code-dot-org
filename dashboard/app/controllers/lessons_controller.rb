@@ -12,10 +12,10 @@ class LessonsController < ApplicationController
         lessons: @lesson.script.lessons.map {|lesson| {displayName: lesson.localized_name, link: lesson_path(id: lesson.id)}}
       },
       displayName: @lesson.localized_title,
-      overview: @lesson.overview,
+      overview: @lesson.overview || '',
       announcements: @lesson.announcements,
-      purpose: @lesson.purpose,
-      preparation: @lesson.preparation
+      purpose: @lesson.purpose || '',
+      preparation: @lesson.preparation || ''
     }
   end
 

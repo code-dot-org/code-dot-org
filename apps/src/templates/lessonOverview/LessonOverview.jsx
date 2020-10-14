@@ -51,13 +51,13 @@ class LessonOverview extends Component {
             displayName: PropTypes.string.isRequired,
             link: PropTypes.string.isRequired
           })
-        )
-      }),
+        ).isRequired
+      }).isRequired,
       displayName: PropTypes.string.isRequired,
-      overview: PropTypes.string,
-      purpose: PropTypes.string,
-      preparation: PropTypes.string
-    }),
+      overview: PropTypes.string.isRequired,
+      purpose: PropTypes.string.isRequired,
+      preparation: PropTypes.string.isRequired
+    }).isRequired,
     activities: PropTypes.array,
 
     // from redux
