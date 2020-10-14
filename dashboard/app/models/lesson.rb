@@ -456,7 +456,19 @@ class Lesson < ActiveRecord::Base
   # @return [Array<Lesson>]
   def related_lessons
     return related_csf_lessons if script&.curriculum_umbrella == 'CSF'
-    script&.is_course ? related_unit_lessons : related_unit_group_lessons
+
+    course_offering = script&.get_course_version&.course_offering
+    return [] unless course_offering
+    # all units in this course offering, including this lesson's unit
+    related_units = course_offering.course_versions.map(&:units).flatten
+    lessons = Lesson.includes(:script).joins(:script).
+      where(script: related_units).
+      where(key: key)
+    lessons = lessons.all.sort_by do |lesson|
+      version_year = lesson.script&.get_course_version&.version_year
+      [version_year, lesson.script.name]
+    end
+    lessons - [self]
   end
 
   def related_csf_lessons
@@ -469,28 +481,6 @@ class Lesson < ActiveRecord::Base
       where("scripts.properties -> '$.curriculum_umbrella' = ?", script.curriculum_umbrella).
       where(key: key).
       order("scripts.properties -> '$.version_year'", 'scripts.name')
-    lessons - [self]
-  end
-
-  def related_unit_lessons
-    course_offering = script&.get_course_version&.course_offering
-    return [] unless course_offering
-    lessons = Lesson.joins(script: :course_version).
-      where("course_versions.course_offering_id = ?", course_offering.id).
-      where(key: key).
-      order("course_versions.key", 'scripts.name').
-      to_a
-    lessons - [self]
-  end
-
-  def related_unit_group_lessons
-    course_offering = script&.get_course_version&.course_offering
-    return [] unless course_offering
-    lessons = Lesson.joins(script: {unit_group_units: {unit_group: :course_version}}).
-      where("course_versions.course_offering_id = ?", course_offering.id).
-      where(key: key).
-      order("course_versions.key", 'scripts.name').
-      to_a
     lessons - [self]
   end
 
