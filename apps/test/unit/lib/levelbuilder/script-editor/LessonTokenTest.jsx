@@ -17,9 +17,12 @@ describe('LessonToken', () => {
       handleDragStart,
       removeLesson,
       lesson: {
+        id: 10,
+        key: 'lesson-1',
         name: 'Lesson 1',
         levels: [],
         position: 1,
+        relative_position: 1,
         lockable: false,
         unplugged: false,
         assessment: false
@@ -33,5 +36,24 @@ describe('LessonToken', () => {
     expect(wrapper.find('Motion').length).to.equal(1);
     expect(wrapper.contains('Lesson 1')).to.be.true;
     expect(wrapper.find('i').length).to.equal(3);
+    expect(wrapper.find('.fa-pencil').length).to.equal(1);
+  });
+
+  it('renders newly added lesson without edit button', () => {
+    let wrapper = mount(
+      <LessonToken
+        {...defaultProps}
+        lesson={{
+          key: 'new-lesson',
+          name: 'New Lesson',
+          levels: [],
+          position: 1
+        }}
+      />
+    );
+    expect(wrapper.find('Motion').length).to.equal(1);
+    expect(wrapper.contains('New Lesson')).to.be.true;
+    expect(wrapper.find('i').length).to.equal(2);
+    expect(wrapper.find('.fa-pencil').length).to.equal(0);
   });
 });
