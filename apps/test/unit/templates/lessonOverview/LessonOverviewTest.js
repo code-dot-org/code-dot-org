@@ -35,7 +35,7 @@ describe('LessonOverview', () => {
     const wrapper = shallow(<LessonOverview {...defaultProps} />);
     const navLinks = wrapper.find('a');
     expect(navLinks.props().href).to.contain('/s/unit-1');
-    expect(navLinks.contains('Unit 1')).to.be.true;
+    expect(navLinks.contains('< Unit 1')).to.be.true;
 
     expect(wrapper.contains('Lesson Name'), 'Lesson Name').to.be.true;
 
