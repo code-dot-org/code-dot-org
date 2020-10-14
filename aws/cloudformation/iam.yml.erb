@@ -138,7 +138,7 @@ Resources:
           - Effect: Allow
             Action:
               - dynamodb:GetItem
-            Resource: !sub "arn:aws:dynamodb:${AWS::Region}:${AWS::AccountId}:table/dcdo_production"
+            Resource: !Sub "arn:aws:dynamodb:${AWS::Region}:${AWS::AccountId}:table/dcdo_production"
   Developer:
     Type: AWS::IAM::Role
     Properties:
