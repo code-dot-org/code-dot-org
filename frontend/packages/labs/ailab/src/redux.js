@@ -1,3 +1,4 @@
+import { availableTrainers } from "./train.js";
 // Action types
 
 const SET_IMPORTED_DATA = "SET_IMPORTED_DATA";
@@ -178,15 +179,21 @@ export function getSelectableFeatures(state) {
     .filter(column => column !== state.labelColumn);
 }
 
-// Right now the SVM model we're using only supports binary classification.
 export function getSelectableLabels(state) {
-  return getCategoricalColumns(state).filter(
-    column => getUniqueOptions(state, column).length === 2
-  );
+  const selectableLabels =
+    availableTrainers[state.selectedTrainer] &&
+    availableTrainers[state.selectedTrainer].mlType === "binary"
+      ? getCategoricalColumns(state).filter(
+          column => getUniqueOptions(state, column).length === 2
+        )
+      : getCategoricalColumns(state);
+  return selectableLabels;
 }
 
 export function getUniqueOptions(state, column) {
-  return Array.from(new Set(state.data.map(row => row[column])));
+  return Array.from(new Set(state.data.map(row => row[column]))).filter(
+    option => option !== undefined && option !== ""
+  );
 }
 
 export function getUniqueOptionsByColumn(state) {
