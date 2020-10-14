@@ -46,16 +46,43 @@ const styles = {
 export default class AddResourceDialog extends Component {
   static propTypes = {
     isOpen: PropTypes.bool.isRequired,
-    handleConfirm: PropTypes.func.isRequired,
+    onSave: PropTypes.func.isRequired,
+    handleClose: PropTypes.func.isRequired,
     typeOptions: PropTypes.arrayOf(PropTypes.string),
     audienceOptions: PropTypes.arrayOf(PropTypes.string)
+  };
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      key: '',
+      name: '',
+      type: props.typeOptions[0],
+      audience: props.audienceOptions[0],
+      pdf: false,
+      assessment: false,
+      url: '',
+      downloadUrl: ''
+    };
+  }
+
+  saveResource = () => {
+    console.log(this.state);
+    this.props.handleClose();
+  };
+
+  handleInputChange = e => {
+    const target = e.target;
+    const value = target.type === 'checkbox' ? target.checked : target.value;
+    this.setState({[target.name]: value});
   };
 
   render() {
     return (
       <BaseDialog
         isOpen={this.props.isOpen}
-        handleClose={this.props.handleConfirm}
+        handleClose={this.props.handleClose}
         useUpdatedStyles
         style={styles.dialog}
       >
@@ -63,12 +90,23 @@ export default class AddResourceDialog extends Component {
         <div style={styles.container}>
           <label style={styles.inputAndLabel}>
             Resource Name
-            <input style={styles.textInput} />
+            <input
+              style={styles.textInput}
+              type="text"
+              name="name"
+              value={this.state.name}
+              onChange={this.handleInputChange}
+            />
           </label>
           <div style={styles.dropdownRow}>
             <label style={styles.selectAndLabel}>
-              <span>Add link to resource:</span>
-              <select style={styles.selectInput} onChange={() => {}}>
+              <span>Type:</span>
+              <select
+                style={styles.selectInput}
+                onChange={this.handleInputChange}
+                name="type"
+                value={this.state.type}
+              >
                 {this.props.typeOptions.map(option => (
                   <option value={option} key={option}>
                     {option}
@@ -78,7 +116,12 @@ export default class AddResourceDialog extends Component {
             </label>
             <label style={styles.selectAndLabel}>
               Audience
-              <select style={styles.selectInput}>
+              <select
+                style={styles.selectInput}
+                name="audience"
+                value={this.state.audience}
+                onChange={this.handleInputChange}
+              >
                 {this.props.audienceOptions.map(option => (
                   <option value={option} key={option}>
                     {option}
@@ -90,30 +133,60 @@ export default class AddResourceDialog extends Component {
           <div style={{display: 'flex'}}>
             <label>
               Assessment
-              <input type="checkbox" style={styles.checkboxInput} />
+              <input
+                type="checkbox"
+                style={styles.checkboxInput}
+                name="assessment"
+                value={this.state.assessment}
+                onChange={this.handleInputChange}
+              />
             </label>
             <label style={{marginLeft: 20}}>
               Include in PDF
-              <input type="checkbox" style={styles.checkboxInput} />
+              <input
+                type="checkbox"
+                style={styles.checkboxInput}
+                name="pdf"
+                value={this.state.pdf}
+                onChange={this.handleInputChange}
+              />
             </label>
           </div>
           <label style={styles.inputAndLabel}>
             URL
-            <input style={styles.textInput} />
+            <input
+              style={styles.textInput}
+              type="text"
+              value={this.state.url}
+              name="url"
+              onChange={this.handleInputChange}
+            />
           </label>
           <label style={styles.inputAndLabel}>
             Download URL
-            <input style={styles.textInput} />
+            <input
+              style={styles.textInput}
+              type="text"
+              name="downloadUrl"
+              value={this.state.downloadUrl}
+              onChange={this.handleInputChange}
+            />
           </label>
           <label style={styles.inputAndLabel}>
             Embed Slug
-            <input style={styles.textInput} />
+            <input
+              style={styles.textInput}
+              type="txt"
+              name="key"
+              value={this.state.key}
+              onChange={this.handleInputChange}
+            />
           </label>
         </div>
         <DialogFooter rightAlign>
           <Button
             text={'Close and Add'}
-            onClick={this.props.handleConfirm}
+            onClick={this.saveResource}
             color={Button.ButtonColor.orange}
           />
         </DialogFooter>
