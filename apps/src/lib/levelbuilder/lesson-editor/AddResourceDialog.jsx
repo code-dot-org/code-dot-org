@@ -27,8 +27,17 @@ const styles = {
   textInput: {
     width: '100%'
   },
-  selectInput: {
+  selectAndLabel: {
+    display: 'flex',
+    flexDirection: 'column',
     width: '45%'
+  },
+  selectInput: {
+    width: '100%'
+  },
+  checkboxInput: {
+    marginTop: 0,
+    marginLeft: 10
   }
 };
 
@@ -57,7 +66,7 @@ export default class AddResourceDialog extends Component {
             <input style={styles.textInput} />
           </label>
           <div style={styles.dropdownRow}>
-            <label style={styles.inputAndLabel}>
+            <label style={styles.selectAndLabel}>
               <span>Add link to resource:</span>
               <select style={styles.selectInput} onChange={() => {}}>
                 {this.props.typeOptions.map(option => (
@@ -67,7 +76,7 @@ export default class AddResourceDialog extends Component {
                 ))}
               </select>
             </label>
-            <label style={styles.inputAndLabel}>
+            <label style={styles.selectAndLabel}>
               Audience
               <select style={styles.selectInput}>
                 {this.props.audienceOptions.map(option => (
@@ -76,6 +85,16 @@ export default class AddResourceDialog extends Component {
                   </option>
                 ))}
               </select>
+            </label>
+          </div>
+          <div style={{display: 'flex'}}>
+            <label>
+              Assessment
+              <input type="checkbox" style={styles.checkboxInput} />
+            </label>
+            <label style={{marginLeft: 20}}>
+              Include in PDF
+              <input type="checkbox" style={styles.checkboxInput} />
             </label>
           </div>
           <label style={styles.inputAndLabel}>
