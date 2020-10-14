@@ -6,16 +6,10 @@ class LessonsControllerTest < ActionController::TestCase
   setup do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
-    @unit_group = create(
-      :unit_group,
-      name: 'course-1'
-    )
     @script = create(
       :script,
       name: 'unit-1'
     )
-
-    create :unit_group_unit, unit_group: @unit_group, script: @script, position: 1
 
     @lesson = create(
       :lesson,
@@ -27,19 +21,11 @@ class LessonsControllerTest < ActionController::TestCase
       }
     )
 
-    @unit_group_title = 'Unit Group Display Name'
     @script_title = 'Script Display Name'
     @lesson_name = 'Lesson Display Name'
 
     custom_i18n = {
       'data' => {
-        'course' => {
-          'name' => {
-            @unit_group.name => {
-              'title' => @unit_group_title,
-            }
-          }
-        },
         'script' => {
           'name' => {
             @script.name => {
@@ -83,10 +69,8 @@ class LessonsControllerTest < ActionController::TestCase
     assert_response :ok
     assert(@response.body.include?(@script_title))
     assert(@response.body.include?(@lesson.overview))
-    assert(@response.body.include?(@unit_group.link))
     assert(@response.body.include?(@script.link))
     assert(@response.body.include?(@script_title))
-    assert(@response.body.include?(@unit_group_title))
   end
 
   # only levelbuilders can edit
