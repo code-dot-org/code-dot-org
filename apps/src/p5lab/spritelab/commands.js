@@ -91,6 +91,10 @@ export const commands = {
     actionCommands.setProp.apply(this, [spriteArg, prop, val]);
   },
 
+  setQuestion(questionText, variableName, callback) {
+    worldCommands.setQuestion(questionText, variableName, callback);
+  },
+
   setTint(spriteArg, color) {
     actionCommands.setProp(spriteArg, 'tint', color);
   },
@@ -137,9 +141,17 @@ export const commands = {
     eventCommands.spriteClicked(condition, spriteArg, callback);
   },
 
+  whenQuestionAnswered(variableName, callback) {
+    eventCommands.whenQuestionAnswered(variableName, callback);
+  },
+
   // Location commands
   locationAt(x, y) {
     return locationCommands.locationAt(x, y);
+  },
+
+  locationModifier(distance, direction, location) {
+    return locationCommands.locationModifier(distance, direction, location);
   },
 
   locationMouse() {
@@ -154,11 +166,24 @@ export const commands = {
     return locationCommands.randomLocation();
   },
 
+  // Math commands
+  cos(angleDegrees) {
+    if (angleDegrees === undefined) {
+      angleDegrees = 0;
+    }
+    return parseFloat(Math.cos((angleDegrees * Math.PI) / 180).toFixed(4));
+  },
+
+  sin(angleDegrees) {
+    if (angleDegrees === undefined) {
+      angleDegrees = 0;
+    }
+    return parseFloat(Math.sin((angleDegrees * Math.PI) / 180).toFixed(4));
+  },
+
   // Sprite commands
   countByAnimation(spriteArg) {
-    if (spriteArg.costume) {
-      return spriteCommands.countByAnimation(spriteArg.costume);
-    }
+    return spriteCommands.countByAnimation(spriteArg);
   },
 
   createNewSprite(name, animation, location) {

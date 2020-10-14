@@ -77,15 +77,6 @@ class WorkshopMailerTest < ActionMailer::TestCase
     end
   end
 
-  test 'emails are not sent for workshops with virtual workshop subject' do
-    workshop = build :pd_workshop, course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::LEGACY_SUBJECT_CSD_VIRTUAL_1, num_sessions: 1
-    enrollment = build :pd_enrollment, workshop: workshop
-
-    assert_no_emails do
-      Pd::WorkshopMailer.organizer_cancel_receipt(enrollment).deliver_now
-    end
-  end
-
   test 'reminders are not sent for workshops with suppress_email attribute' do
     workshop = create :csp_summer_workshop, suppress_email: true
     facilitator = workshop.facilitators.first

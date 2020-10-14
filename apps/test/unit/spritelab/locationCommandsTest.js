@@ -16,6 +16,39 @@ describe('Location Commands', () => {
     expect(commands.locationAt(50, 300)).to.deep.equal({x: 50, y: 100});
   });
 
+  describe('locationModifier', () => {
+    it('works with normal inputs', () => {
+      expect(
+        commands.locationModifier(25, 'North', {x: 100, y: 200})
+      ).to.deep.equal({x: 100, y: 175});
+      expect(
+        commands.locationModifier(25, 'South', {x: 100, y: 200})
+      ).to.deep.equal({x: 100, y: 225});
+      expect(
+        commands.locationModifier(25, 'East', {x: 100, y: 200})
+      ).to.deep.equal({x: 125, y: 200});
+      expect(
+        commands.locationModifier(25, 'West', {x: 100, y: 200})
+      ).to.deep.equal({x: 75, y: 200});
+    });
+
+    it('works with location (0, 0)', () => {
+      expect(
+        commands.locationModifier(15, 'North', {x: 0, y: 0})
+      ).to.deep.equal({
+        x: 0,
+        y: -15
+      });
+    });
+
+    it('returns undefined if given invalid inputs', () => {
+      expect(commands.locationModifier(15, 'North')).to.equal(undefined);
+      expect(
+        commands.locationModifier(15, 'Invalid Direction', {x: 10, y: 10})
+      ).to.equal(undefined);
+    });
+  });
+
   it('locationMouse', () => {
     let locationMouse = commands.locationMouse.bind(p5Wrapper.p5);
     p5Wrapper.p5.mouseX = 0;

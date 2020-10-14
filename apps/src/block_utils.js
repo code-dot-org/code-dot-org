@@ -1149,6 +1149,17 @@ exports.createJsWrapperBlockCreator = function(
         }
       }
 
+      if (this.type === 'gamelab_setQuestion') {
+        const input = this.getInput('VAR');
+        if (input) {
+          const targetBlock = input.connection.targetBlock();
+          if (targetBlock && targetBlock.type === 'variables_get') {
+            const varName = Blockly.JavaScript.blockToCode(targetBlock)[0];
+            values.push(`function(val) {${varName} = val;}`);
+          }
+        }
+      }
+
       if (expression) {
         // If the original expression has a value placeholder, replace it
         // with the selected value.

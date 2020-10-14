@@ -1,5 +1,5 @@
 import {EventEmitter} from 'events';
-import {roundToHundredth, sensor_channels} from './MicroBitConstants';
+import {roundToHundredth, SENSOR_CHANNELS} from './MicroBitConstants';
 
 export default class MicroBitThermometer extends EventEmitter {
   constructor(board) {
@@ -13,10 +13,10 @@ export default class MicroBitThermometer extends EventEmitter {
       // trigger a change event
       if (
         this.currentTemp !==
-        this.board.mb.analogChannel[sensor_channels.tempSensor]
+        this.board.mb.analogChannel[SENSOR_CHANNELS.tempSensor]
       ) {
         this.currentTemp = this.board.mb.analogChannel[
-          sensor_channels.tempSensor
+          SENSOR_CHANNELS.tempSensor
         ];
         this.emit('change');
       }
@@ -26,7 +26,7 @@ export default class MicroBitThermometer extends EventEmitter {
     Object.defineProperties(this, {
       raw: {
         get: function() {
-          return this.board.mb.analogChannel[sensor_channels.tempSensor];
+          return this.board.mb.analogChannel[SENSOR_CHANNELS.tempSensor];
         }
       },
       celsius: {
@@ -54,10 +54,10 @@ export default class MicroBitThermometer extends EventEmitter {
   }
 
   start() {
-    this.board.mb.streamAnalogChannel(sensor_channels.tempSensor); // enable temp sensor
+    this.board.mb.streamAnalogChannel(SENSOR_CHANNELS.tempSensor); // enable temp sensor
   }
 
   stop() {
-    this.board.mb.stopStreamingAnalogChannel(sensor_channels.tempSensor); // disable temp sensor
+    this.board.mb.stopStreamingAnalogChannel(SENSOR_CHANNELS.tempSensor); // disable temp sensor
   }
 }

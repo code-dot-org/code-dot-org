@@ -125,7 +125,7 @@ module Cdo
         # the result of translations mistakenly including interpolation syntax
         # that was removed in the source string and we want to be notified so
         # we can update the translation.
-        if result.is_a?(String) && ::I18n::INTERPOLATION_PATTERN.match?(result)
+        if result.is_a?(String) && Regexp.union(::I18n.config.interpolation_patterns).match?(result)
           Honeybadger.notify(
             error_class: 'Interpolation Pattern present in translation',
             error_message: "String #{result.inspect} has unused interpolation patterns after translation",
@@ -152,7 +152,7 @@ module Cdo
         separator = options[:separator] || ::I18n.default_separator
         # We don't pass in a locale because we want the union of all string keys across all locales.
         normalized_key = ::I18n.normalize_keys(nil, key, scope, separator).join(separator)
-        I18nStringUrlTracker.instance.log(normalized_key, url) if key && url
+        I18nStringUrlTracker.instance.log(normalized_key, url, 'ruby') if normalized_key && url
         result
       end
     end

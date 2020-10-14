@@ -574,6 +574,8 @@ describe('entry tests', () => {
     'datasets/index': './src/sites/studio/pages/datasets/index.js',
     'datasets/edit_manifest':
       './src/sites/studio/pages/datasets/edit_manifest.js',
+    'lessons/edit': './src/sites/studio/pages/lessons/edit.js',
+    'lessons/show': './src/sites/studio/pages/lessons/show.js',
     levelbuilder: './src/sites/studio/pages/levelbuilder.js',
     'levels/editors/_applab':
       './src/sites/studio/pages/levels/editors/_applab.js',
@@ -592,6 +594,8 @@ describe('entry tests', () => {
       './src/sites/studio/pages/levels/editors/fields/_preload_assets.js',
     'levels/editors/fields/_special_level_types':
       './src/sites/studio/pages/levels/editors/fields/_special_level_types.js',
+    'levels/editors/fields/_validation_code':
+      './src/sites/studio/pages/levels/editors/fields/_validation_code.js',
     'levels/editors/fields/_video':
       './src/sites/studio/pages/levels/editors/fields/_video.js',
     'levels/editors/_gamelab':
@@ -610,8 +614,6 @@ describe('entry tests', () => {
 
   var pegasusEntries = {
     // code.org
-    'code.org/public/administrators':
-      './src/sites/code.org/pages/public/administrators.js',
     'code.org/public/dance': './src/sites/code.org/pages/public/dance.js',
     'code.org/public/educate/curriculum/courses':
       './src/sites/code.org/pages/public/educate/curriculum/courses.js',
@@ -659,6 +661,8 @@ describe('entry tests', () => {
       './src/sites/code.org/pages/views/professional_learning_apply_banner.js',
     'code.org/views/at_home_banner':
       './src/sites/code.org/pages/views/at_home_banner.js',
+    'code.org/views/virtual_hoc_banner':
+      './src/sites/code.org/pages/views/virtual_hoc_banner.js',
 
     'pd/_jotform_loader': './src/sites/studio/pages/pd/_jotform_loader.js',
     'pd/_jotform_embed': './src/sites/studio/pages/pd/_jotform_embed.js',
@@ -716,6 +720,7 @@ describe('entry tests', () => {
     // The blockly dependency is huge, so we currently control when it is
     // loaded explicitly via script tags rather than via normal imports.
     blockly: './src/sites/studio/pages/blockly.js',
+    googleblockly: './src/sites/studio/pages/googleblockly.js',
 
     // Build embedVideo.js in its own step (skipping factor-bundle) so that
     // we don't have to include the large code-studio-common file in the

@@ -6,6 +6,7 @@ import classNames from 'classnames';
 import GameButtons from '@cdo/apps/templates/GameButtons';
 import ArrowButtons from '@cdo/apps/templates/ArrowButtons';
 import BelowVisualization from '@cdo/apps/templates/BelowVisualization';
+import experiments from '@cdo/apps/util/experiments';
 import {APP_HEIGHT, APP_WIDTH} from './constants';
 import {GAMELAB_DPAD_CONTAINER_ID} from './gamelab/constants';
 import CompletionButton from '@cdo/apps/templates/CompletionButton';
@@ -20,6 +21,7 @@ import i18n from '@cdo/locale';
 import {toggleGridOverlay} from './actions';
 import GridOverlay from './gamelab/GridOverlay';
 import TextConsole from './spritelab/TextConsole';
+import SpritelabInput from './spritelab/SpritelabInput';
 import {
   cancelLocationSelection,
   selectLocation,
@@ -179,6 +181,9 @@ class P5LabVisualizationColumn extends React.Component {
           </VisualizationOverlay>
         </ProtectedVisualizationDiv>
         <TextConsole consoleMessages={this.props.consoleMessages} />
+        {experiments.isEnabled(experiments.SPRITELAB_INPUT) && (
+          <SpritelabInput />
+        )}
         <GameButtons>
           <ArrowButtons />
 

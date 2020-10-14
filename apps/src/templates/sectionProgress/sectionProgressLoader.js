@@ -3,7 +3,9 @@ import {
   startLoadingProgress,
   setCurrentView,
   finishLoadingProgress,
-  addDataByScript
+  addDataByScript,
+  startRefreshingProgress,
+  finishRefreshingProgress
 } from './sectionProgressRedux';
 import {processedLevel} from '@cdo/apps/templates/progress/progressHelpers';
 import {
@@ -23,7 +25,6 @@ export function loadScript(scriptId, sectionId) {
   const state = getStore().getState().sectionProgress;
   const sectionData = getStore().getState().sectionData.section;
 
-  // Don't load data if it's already stored in redux.
   // TODO: Save Standards data in a way that allows us
   // not to reload all data to get correct standards data
   if (
@@ -31,18 +32,24 @@ export function loadScript(scriptId, sectionId) {
     state.scriptDataByScript[scriptId] &&
     state.currentView !== ViewType.STANDARDS
   ) {
-    return;
+    if (state.isRefreshingProgress) {
+      return;
+    }
+    // Continue displaying the UI while updating the data
+    getStore().dispatch(startRefreshingProgress());
+  } else {
+    getStore().dispatch(startLoadingProgress());
   }
 
   let sectionProgress = {
     studentLevelProgressByScript: {},
     studentTimestampsByScript: {},
+    studentLevelTimeSpentByScript: {},
     studentLevelPairingByScript: {},
     scriptDataByScript: {}
   };
 
   // Get the script data
-  getStore().dispatch(startLoadingProgress());
   const scriptRequest = fetch(`/dashboardapi/script_structure/${scriptId}`, {
     credentials: 'include'
   })
@@ -86,21 +93,28 @@ export function loadScript(scriptId, sectionId) {
       .then(data => {
         sectionProgress.studentLevelProgressByScript = {
           [scriptId]: {
-            ...sectionProgress.studentLevelProgressByScript,
+            ...sectionProgress.studentLevelProgressByScript[scriptId],
             ...getInfoByStudentByLevel(data.students, getLevelResult)
           }
         };
 
         sectionProgress.studentTimestampsByScript = {
           [scriptId]: {
-            ...sectionProgress.studentTimestampsByScript,
+            ...sectionProgress.studentTimestampsByScript[scriptId],
             ...processStudentTimestamps(data.student_timestamps)
+          }
+        };
+
+        sectionProgress.studentLevelTimeSpentByScript = {
+          [scriptId]: {
+            ...sectionProgress.studentLevelTimeSpentByScript[scriptId],
+            ...getInfoByStudentByLevel(data.students, level => level.time_spent)
           }
         };
 
         sectionProgress.studentLevelPairingByScript = {
           [scriptId]: {
-            ...sectionProgress.studentLevelPairingByScript,
+            ...sectionProgress.studentLevelPairingByScript[scriptId],
             ...processStudentPairing(data.students)
           }
         };
@@ -119,6 +133,7 @@ export function loadScript(scriptId, sectionId) {
     );
     getStore().dispatch(addDataByScript(sectionProgress));
     getStore().dispatch(finishLoadingProgress());
+    getStore().dispatch(finishRefreshingProgress());
   });
 }
 
@@ -158,6 +173,8 @@ function postProcessDataByScript(scriptData) {
 function postProcessLevelsByLesson(scriptId, progress) {
   const studentLevelProgress =
     progress.studentLevelProgressByScript[scriptId] || {};
+  const studentTimeSpent =
+    progress.studentLevelTimeSpentByScript[scriptId] || {};
   const pairing = progress.studentLevelPairingByScript[scriptId];
   const scriptData = progress.scriptDataByScript[scriptId];
   let levelsByLessonByStudent = {};
@@ -165,6 +182,7 @@ function postProcessLevelsByLesson(scriptId, progress) {
     levelsByLessonByStudent[studentId] = levelsByLesson({
       stages: scriptData.stages,
       levelProgress: studentLevelProgress[studentId],
+      levelTimeSpent: studentTimeSpent[studentId],
       levelPairing: pairing[studentId],
       currentLevelId: null
     });

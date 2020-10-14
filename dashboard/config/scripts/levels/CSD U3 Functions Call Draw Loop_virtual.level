@@ -60,7 +60,7 @@
     "debugger_disabled": "true",
     "hide_animation_mode": "false",
     "pause_animations_by_default": "false",
-    "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"00e0552e-f867-4555-bf47-8029f948702d\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"00e0552e-f867-4555-bf47-8029f948702d\": {\r\n      \"name\": \"flyMan_fly\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/level_animations/50nVH17NoSpT.xZSX6o.JPnk1eCQzRLf/flybot_single_frame.png\",\r\n      \"frameSize\": {\r\n        \"x\": 122,\r\n        \"y\": 139\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"_JIeGMsTaNOy5X0zKrvDNaTPlVq.oyjc\"\r\n    }\r\n  }\r\n}",
+    "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"00e0552e-f867-4555-bf47-8029f948702d\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"00e0552e-f867-4555-bf47-8029f948702d\": {\r\n      \"name\": \"flyMan_fly\",\r\n      \"sourceUrl\": \"https://studio.code.org/v3/animations/TAsnayFhAThGm7NUOUD4lQ/00e0552e-f867-4555-bf47-8029f948702d.png?version=_JIeGMsTaNOy5X0zKrvDNaTPlVq.oyjc\",\r\n      \"frameSize\": {\r\n        \"x\": 122,\r\n        \"y\": 139\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"_JIeGMsTaNOy5X0zKrvDNaTPlVq.oyjc\"\r\n    }\r\n  }\r\n}",
     "instructions_important": "false",
     "start_in_animation_tab": "false",
     "all_animations_single_frame": "true",

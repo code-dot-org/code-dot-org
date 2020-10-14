@@ -1,5 +1,5 @@
 ---
-title: How-to guide for parents
+title: Hour of Code How-to Guide for parents
 ---
 
 # How to do an Hour of Code with your child
@@ -14,7 +14,7 @@ The Hour of Code is simple to run - even for beginners. You don’t need experie
 
 You can try the Hour of Code with a computer, a tablet, a smartphone, or completely unplugged! Here's how to get started. 
 
-[<button>View PDF Guide</button>](https://hourofcode.com/files/HourofCode-Parent-How-To.pdf)
+[<button>View PDF Guide</button>]({{ localized_files/hourofcode_parent_how_to }})
 
 ***
 
@@ -65,7 +65,7 @@ It’s okay if both you and your child are brand new to computer science. Here a
 
 [<img src="/images/fit-600/Marketing/girl-sitting-on-sofa-while-using-tablet-computer-4144035.jpg">]({{ urls/learn }})
 
-<h3>Have girls at home?</h3>
+<h3>Have young women at home?</h3>
 <a href="https://code.org/girls">Here are our recommendations</a> to help spark their interest in computer science. **Pro-tip**: You can start just by telling them they’d be great at it! 
 
 <h3>Problem-solve together</h3>
@@ -91,4 +91,4 @@ The Hour of Code is a global event, and your family deserves to celebrate. Here 
 
 Computer science doesn’t have to end with the Hour of Code! While 90% of parents want their child to learn computer science, most schools still don’t teach it. To help, our curriculum is web-based and free to use, forever. <a href="https://code.org/yourschool">Learn how</a> to bring CS to your child’s school today.
 
-[<button>View PDF Guide</button>](https://hourofcode.com/files/HourofCode-Parent-How-To.pdf)
+[<button>View PDF Guide</button>]({{ localized_files/hourofcode_parent_how_to }})

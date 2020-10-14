@@ -226,11 +226,11 @@ class Section < ActiveRecord::Base
       title = unit_group.localized_title
       link_to_assigned = course_path(unit_group)
       if script_id
-        title_of_current_unit = script.localized_title
+        title_of_current_unit = script.title_for_display
         link_to_current_unit = script_path(script)
       end
     elsif script_id
-      title = script.localized_title
+      title = script.title_for_display
       link_to_assigned = script_path(script)
     end
 

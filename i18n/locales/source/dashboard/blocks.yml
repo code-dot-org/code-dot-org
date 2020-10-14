@@ -1022,6 +1022,8 @@ en:
         text: "[SPRITE][0]"
       gamelab_comment:
         text: 'comment: [COMMENT][0]'
+      gamelab_cos:
+        text: cos [NUM][0]
       gamelab_countByAnimation:
         text: number of [SPRITE][0]
       gamelab_createNewSprite:
@@ -1059,7 +1061,7 @@ en:
       gamelab_hideTitleScreen:
         text: hide title screen
       gamelab_isKeyPressed:
-        text: is [KEY][0] pressed
+        text: "[KEY][0] is pressed"
         options:
           KEY:
             '"up"': up
@@ -1139,6 +1141,14 @@ en:
             '"z"': z
       gamelab_locationAt:
         text: 'location x: [X][0] y: [Y][1]'
+      gamelab_locationModifier:
+        text: "[DISTANCE][0] pixels [DIRECTION][1] of [LOCATION][2]"
+        options:
+          DIRECTION:
+            '"North"': North
+            '"East"': East
+            '"South"': South
+            '"West"': West
       gamelab_locationMouse:
         text: mouse location
       gamelab_locationOf:
@@ -1264,6 +1274,8 @@ en:
           [SPRITE3N][6][SPRITE3COSTUME][7]
       gamelab_showTitleScreen:
         text: show title screen [BREAK][0] title [TITLE][1] subtitle [SUBTITLE][2]
+      gamelab_sin:
+        text: sin [NUM][0]
       gamelab_spriteClicked:
         text: "[CONDITION][0] [SPRITE][1] clicked"
         options:

@@ -15,7 +15,9 @@ const PageAction = makeEnum(
   'BrambleFilesystemResetSuccess',
   'BrambleFilesystemResetFailed',
   'JotFormFrameLoaded',
-  'JotFormLoadFailed'
+  'JotFormLoadFailed',
+  'BlockLoadFailed',
+  'MapboxMarkerLoadError'
 );
 
 const MAX_FIELD_LENGTH = 4095;

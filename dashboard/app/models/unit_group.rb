@@ -43,11 +43,13 @@ class UnitGroup < ApplicationRecord
   serialized_attrs %w(
     teacher_resources
     has_verified_resources
+    has_numbered_units
     family_name
     version_year
     is_stable
     visible
     pilot_experiment
+    announcements
   )
 
   def to_param
@@ -86,6 +88,9 @@ class UnitGroup < ApplicationRecord
     unit_group.update_scripts(hash['script_names'], hash['alternate_scripts'])
     unit_group.properties = hash['properties']
     unit_group.save!
+
+    CourseOffering.add_course_offering(unit_group)
+    unit_group
   rescue Exception => e
     # print filename for better debugging
     new_e = Exception.new("in course: #{path}: #{e.message}")
@@ -219,9 +224,10 @@ class UnitGroup < ApplicationRecord
   end
 
   def self.all_courses
-    Rails.cache.fetch('valid_courses/all') do
-      UnitGroup.all
+    all_courses = Rails.cache.fetch('valid_courses/all') do
+      UnitGroup.all.to_a
     end
+    all_courses.freeze
   end
 
   # Get the set of valid courses for the dropdown in our sections table. This
@@ -237,8 +243,9 @@ class UnitGroup < ApplicationRecord
     end
 
     courses = Rails.cache.fetch("valid_courses/#{I18n.locale}") do
-      UnitGroup.valid_courses_without_cache
+      UnitGroup.valid_courses_without_cache.to_a
     end
+    courses.freeze
 
     if user && has_any_pilot_access?(user)
       pilot_courses = all_courses.select {|c| c.has_pilot_access?(user)}
@@ -296,13 +303,15 @@ class UnitGroup < ApplicationRecord
       description_teacher: I18n.t("data.course.name.#{name}.description_teacher", default: ''),
       version_title: I18n.t("data.course.name.#{name}.version_title", default: ''),
       scripts: scripts_for_user(user).map do |script|
-        include_stages = false
-        script.summarize(include_stages, user).merge!(script.summarize_i18n(include_stages))
+        include_lessons = false
+        script.summarize(include_lessons, user).merge!(script.summarize_i18n_for_display(include_lessons))
       end,
       teacher_resources: teacher_resources,
       has_verified_resources: has_verified_resources?,
+      has_numbered_units: has_numbered_units?,
       versions: summarize_versions(user),
-      show_assign_button: assignable?(user)
+      show_assign_button: assignable?(user),
+      announcements: announcements
     }
   end
 
@@ -325,7 +334,7 @@ class UnitGroup < ApplicationRecord
     return [] unless family_name
 
     # Include visible courses, plus self if not already included
-    courses = UnitGroup.valid_courses(user: user).clone
+    courses = UnitGroup.valid_courses(user: user).clone(freeze: false)
     courses.append(self) unless courses.any? {|c| c.id == id}
 
     versions = courses.
@@ -611,4 +620,10 @@ class UnitGroup < ApplicationRecord
     return true if user.permission?(UserPermission::LEVELBUILDER)
     all_courses.any? {|unit_group| unit_group.has_pilot_experiment?(user)}
   end
+
+  # rubocop:disable Naming/PredicateName
+  def is_course?
+    return !!family_name && !!version_year
+  end
+  # rubocop:enable Naming/PredicateName
 end

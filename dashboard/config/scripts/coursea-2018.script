@@ -12,6 +12,7 @@ is_stable true
 supported_locales ["it-IT", "sk-SK"]
 curriculum_umbrella 'CSF'
 tts true
+is_course true
 
 lesson 'Debugging: Unspotted Bugs', display_name: 'Unspotted Bugs'
 level 'courseB_video_Unspotted_2018'

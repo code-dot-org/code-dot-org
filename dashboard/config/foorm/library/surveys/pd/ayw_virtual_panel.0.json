@@ -10,7 +10,7 @@
       {
        "type": "matrix",
        "name": "async_activities",
-       "title": "As part of this workshop you enganged in asynchronous work (activities that weren't part of a video conference call). To what extent do you agree or disagree that the following asynchronous activities were useful for your personal learning and development?",
+       "title": "As part of this workshop you engaged in asynchronous work (activities that weren't part of a video conference call). To what extent do you agree or disagree that the following asynchronous activities were useful for your personal learning and development?",
        "columns": [
         {
          "value": "1",
@@ -101,13 +101,14 @@
         },
         {
          "value": "adequate_internet_tech",
-         "text": "My internet connection and technology was adequate to fully participate."
+         "text": "My internet connection and technology were adequate to fully participate."
         }
        ]
       },
       {
        "type": "comment",
        "name": "virtual_feedback",
+              "maxLength": 4000,
        "title": "Do you have feedback about the virtual meeting tool or about how logistics were run for this workshop? Please be specific and provide suggestions for improvement.",
        "rows": 2
       }

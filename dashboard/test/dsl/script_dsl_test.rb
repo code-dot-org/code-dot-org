@@ -24,7 +24,7 @@ class ScriptDslTest < ActiveSupport::TestCase
     curriculum_path: nil,
     project_widget_visible: false,
     project_widget_types: [],
-    script_announcements: nil,
+    announcements: nil,
     new_name: nil,
     family_name: nil,
     version_year: nil,
@@ -335,15 +335,15 @@ endvariants
     assert_equal [['curriculum', '/link/to/curriculum'], ['vocabulary', '/link/to/vocab']], output[:teacher_resources]
   end
 
-  test 'can set script_announcements' do
+  test 'can set announcements' do
     input_dsl = <<~DSL
-      script_announcements [{"notice": "NoticeHere", "details": "DetailsHere", "link": "/foo/bar", "type": "information"}]
+      announcements [{"notice": "NoticeHere", "details": "DetailsHere", "link": "/foo/bar", "type": "information"}]
 
       lesson 'Lesson1', display_name: 'Lesson1'
       level 'Level 1'
     DSL
     output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
-    assert_equal [{"notice": "NoticeHere", "details": "DetailsHere", "link": "/foo/bar", "type": "information"}], output[:script_announcements]
+    assert_equal [{"notice": "NoticeHere", "details": "DetailsHere", "link": "/foo/bar", "type": "information"}], output[:announcements]
   end
 
   test 'can set pilot_experiment' do
@@ -593,7 +593,10 @@ level 'Level 3'
   test 'Script DSL for lesson with lesson group' do
     input_dsl = <<~DSL
       lesson_group 'required', display_name: 'Overview'
+      lesson_group_description 'This is a description'
+      lesson_group_big_questions 'Question 1 Question 2'
       lesson 'Lesson1', display_name: 'Lesson1'
+
       level 'Level 1'
       level 'Level 2'
     DSL
@@ -602,6 +605,8 @@ level 'Level 3'
         lesson_groups: [
           key: "required",
           display_name: "Overview",
+          description: 'This is a description',
+          big_questions: 'Question 1 Question 2',
           lessons: [
             {
               name: "Lesson1",
@@ -895,6 +900,8 @@ level 'Level 3'
   test 'script DSL with single quotes' do
     input_dsl = <<~DSL
       lesson_group 'my_group', display_name: 'Display Name'
+      lesson_group_description 'This is a description'
+      lesson_group_big_questions 'Who? What? Where?'
       lesson 'Bob\\'s stage', display_name: 'Bob\\'s stage'
       level 'Level 1', progression: 'Bob\\'s progression'
       level 'Level 2'
@@ -907,6 +914,8 @@ level 'Level 3'
         lesson_groups: [
           key: "my_group",
           display_name: "Display Name",
+          description: 'This is a description',
+          big_questions: 'Who? What? Where?',
           lessons: [
             {
               key: "Bob's stage",
@@ -927,12 +936,35 @@ level 'Level 3'
           "Bob's stage" => {'name' => "Bob's stage"}
         },
         "lesson_groups" => {
-          "my_group" => {"display_name" => "Display Name"}
+          "my_group" => {
+            "display_name" => "Display Name",
+            "description" => "This is a description",
+            "big_questions" => 'Who? What? Where?'
+          }
         }
       }
     }
     assert_equal expected, output
     assert_equal i18n_expected, i18n
+  end
+
+  test 'serialize lesson group and properties' do
+    script = create :script, hidden: true
+    lesson_group = create :lesson_group, key: 'content1', script: script, position: 1, properties: {display_name: "Content", description: 'This is a description', big_questions: 'Q1 Q2'}
+    lesson1 = create :lesson, key: 'l-1', name: 'lesson 1', script: script, lesson_group: lesson_group, absolute_position: 1
+    level1 = create :maze, name: 'maze 1', level_num: 'custom'
+    create :script_level, levels: [level1], lesson: lesson1, script: script
+
+    script_text = ScriptDSL.serialize_to_string(script)
+    expected = <<~SCRIPT
+      lesson_group 'content1', display_name: 'Content'
+      lesson_group_description 'This is a description'
+      lesson_group_big_questions 'Q1 Q2'
+      lesson 'l-1', display_name: 'lesson 1'
+      level 'maze 1'
+
+    SCRIPT
+    assert_equal expected, script_text
   end
 
   test 'serialize lessons in lesson groups in the correct order' do

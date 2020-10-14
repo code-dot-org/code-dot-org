@@ -12,6 +12,7 @@ is_stable true
 supported_locales ["it-IT", "sk-SK"]
 curriculum_umbrella 'CSF'
 tts true
+is_course true
 
 lesson 'Building a Foundation', display_name: 'Building a Foundation'
 level 'BuildingAFoundation_2018'

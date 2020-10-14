@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import CourseEditor from '@cdo/apps/templates/courseOverview/CourseEditor';
+import CourseEditor from '@cdo/apps/lib/levelbuilder/course-editor/CourseEditor';
 import {Provider} from 'react-redux';
 import {getStore} from '@cdo/apps/code-studio/redux';
 
@@ -13,6 +13,8 @@ function showCourseEditor() {
   const teacherResources = (
     courseEditorData.course_summary.teacher_resources || []
   ).map(([type, link]) => ({type, link}));
+
+  let announcements = courseEditorData.course_summary.announcements || [];
 
   // Eventually we want to do this all via redux
   ReactDOM.render(
@@ -37,8 +39,10 @@ function showCourseEditor() {
         hasVerifiedResources={
           courseEditorData.course_summary.has_verified_resources
         }
+        hasNumberedUnits={courseEditorData.course_summary.has_numbered_units}
         courseFamilies={courseEditorData.course_families}
         versionYearOptions={courseEditorData.version_year_options}
+        announcements={announcements}
       />
     </Provider>,
     document.getElementById('course_editor')

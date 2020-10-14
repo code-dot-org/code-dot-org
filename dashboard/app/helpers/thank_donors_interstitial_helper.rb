@@ -8,6 +8,8 @@ module ThankDonorsInterstitialHelper
     return false if user.age.nil? # Age dialog
     return false if user && user.teacher? && !user.accepted_latest_terms? # Terms of Service dialog
     return false if GdprDialogHelper.show?(user, request)
+    return false if SchoolInfoInterstitialHelper.show?(user)
+    return false if SchoolInfoInterstitialHelper.show_confirmation_dialog?(user)
 
     return true
   end

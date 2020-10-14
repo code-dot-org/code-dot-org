@@ -71,7 +71,8 @@ describe('DetailViewContents', () => {
       canLock: true,
       applicationId: '1',
       applicationData: defaultApplicationData,
-      viewType: 'facilitator'
+      viewType: 'facilitator',
+      isWorkshopAdmin: false
     };
 
     // No-op router context
@@ -337,7 +338,10 @@ describe('DetailViewContents', () => {
 
   describe('Scholarship Teacher? row', () => {
     it('on teacher applications', () => {
-      const detailView = mountDetailView('Teacher');
+      const detailView = mountDetailView('Teacher', {
+        isWorkshopAdmin: true,
+        regionalPartners: [{id: 1, name: 'test'}]
+      });
       const getLastRow = () =>
         detailView
           .find('tr')
@@ -353,6 +357,7 @@ describe('DetailViewContents', () => {
       // Click "Edit"
       detailView
         .find('#DetailViewHeader Button')
+        .not('#admin-edit')
         .last()
         .simulate('click');
 
