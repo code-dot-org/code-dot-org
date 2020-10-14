@@ -2,12 +2,15 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../../../util/reconfiguredChai';
 import CreateNewLevelInputs from '@cdo/apps/lib/levelbuilder/lesson-editor/CreateNewLevelInputs';
+import sinon from 'sinon';
 
 describe('CreateNewLevelInputs', () => {
-  let defaultProps;
+  let defaultProps, addLevel;
   beforeEach(() => {
+    addLevel = sinon.spy();
     defaultProps = {
-      levelOptions: [['Applab', 'Applab'], ['Dancelab', 'Dancelab']]
+      levelOptions: [['Applab', 'Applab'], ['Dancelab', 'Dancelab']],
+      addLevel
     };
   });
 
