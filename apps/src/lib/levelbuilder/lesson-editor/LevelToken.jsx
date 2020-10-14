@@ -4,10 +4,11 @@ import {connect} from 'react-redux';
 import {Motion, spring} from 'react-motion';
 import color from '@cdo/apps/util/color';
 import {borderRadius, tokenMargin} from '@cdo/apps/lib/levelbuilder/constants';
-import {levelShape} from '@cdo/apps/lib/levelbuilder/shapes';
+import {scriptLevelShape} from '@cdo/apps/lib/levelbuilder/shapes';
 import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
 import LevelTokenDetails from '@cdo/apps/lib/levelbuilder/lesson-editor/LevelTokenDetails';
 import {toggleExpand} from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
+import {LevelStatus} from '@cdo/apps/util/sharedConstants';
 
 const styles = {
   levelToken: {
@@ -90,7 +91,7 @@ class LevelToken extends Component {
   static propTypes = {
     activitySectionPosition: PropTypes.number.isRequired,
     activityPosition: PropTypes.number.isRequired,
-    level: levelShape.isRequired,
+    scriptLevel: scriptLevelShape.isRequired,
     dragging: PropTypes.bool,
     draggedLevelPos: PropTypes.bool,
     delta: PropTypes.number,
@@ -103,24 +104,45 @@ class LevelToken extends Component {
   };
 
   handleDragStart = e => {
-    this.props.handleDragStart(this.props.level.position, e);
+    this.props.handleDragStart(this.props.scriptLevel.position, e);
   };
 
   toggleExpand = () => {
     this.props.toggleExpand(
       this.props.activityPosition,
       this.props.activitySectionPosition,
-      this.props.level.position
+      this.props.scriptLevel.position
     );
   };
 
   handleRemove = () => {
-    this.props.removeLevel(this.props.level.position);
+    this.props.removeLevel(this.props.scriptLevel.position);
+  };
+
+  scriptLevelForProgressBubble = activeLevel => {
+    let progressBubbleLevel = activeLevel;
+
+    progressBubbleLevel['isCurrentLevel'] = false;
+    progressBubbleLevel['status'] = LevelStatus.not_tried;
+    progressBubbleLevel['levelNumber'] = this.props.scriptLevel.position;
+    progressBubbleLevel['kind'] = this.props.scriptLevel.kind;
+
+    return progressBubbleLevel;
   };
 
   render() {
-    const {draggedLevelPos} = this.props;
+    const {draggedLevelPos, scriptLevel} = this.props;
     const springConfig = {stiffness: 1000, damping: 80};
+
+    const hasVariants = scriptLevel.levels.length > 1;
+
+    const activeLevel = hasVariants
+      ? scriptLevel.levels.filter(level => {
+          return level.id === scriptLevel.activeId;
+        })[0]
+      : scriptLevel.levels[0];
+
+    const progressBubbleLevel = this.scriptLevelForProgressBubble(activeLevel);
     return (
       <Motion
         style={
@@ -138,7 +160,7 @@ class LevelToken extends Component {
                 shadow: 0
               }
         }
-        key={this.props.level.position}
+        key={scriptLevel.position}
       >
         {// Use react-motion to interpolate the following values and create
         // smooth transitions.
@@ -147,7 +169,7 @@ class LevelToken extends Component {
             style={Object.assign({}, styles.levelToken, {
               transform: `translate3d(0, ${y}px, 0) scale(${scale})`,
               boxShadow: `${color.shadow} 0 ${shadow}px ${shadow * 3}px`,
-              zIndex: draggedLevelPos ? 1000 : 500 - this.props.level.position
+              zIndex: draggedLevelPos ? 1000 : 500 - scriptLevel.position
             })}
           >
             <div style={styles.reorder} onMouseDown={this.handleDragStart}>
@@ -158,23 +180,24 @@ class LevelToken extends Component {
                 <span style={styles.titleAndBubble}>
                   <ProgressBubble
                     hideToolTips={true}
-                    level={this.props.level}
+                    level={progressBubbleLevel}
                     disabled={true}
                   />
-                  <span style={styles.levelTitle}>{this.props.level.name}</span>
+                  <span style={styles.levelTitle}>{activeLevel.name}</span>
                 </span>
-                {this.props.level.named && (
-                  <span style={styles.tag}>named</span>
-                )}
-                {this.props.level.assessment && (
+                {activeLevel.assessment && (
                   <span style={styles.tag}>assessment</span>
+                )}
+                {activeLevel.bonus && <span style={styles.tag}>bonus</span>}
+                {activeLevel.challenge && (
+                  <span style={styles.tag}>challenge</span>
                 )}
               </span>
             </span>
             <div
               style={styles.edit}
               onClick={() => {
-                const win = window.open(this.props.level.url, '_blank');
+                const win = window.open(activeLevel.url, '_blank');
                 win.focus();
               }}
             >
@@ -183,9 +206,9 @@ class LevelToken extends Component {
             <div style={styles.remove} onMouseDown={this.handleRemove}>
               <i className="fa fa-times" />
             </div>
-            {this.props.level.expand && (
+            {scriptLevel.expand && (
               <LevelTokenDetails
-                level={this.props.level}
+                scriptLevel={scriptLevel}
                 activitySectionPosition={this.props.activitySectionPosition}
                 activityPosition={this.props.activityPosition}
               />
