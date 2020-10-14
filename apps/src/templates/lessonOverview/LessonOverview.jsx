@@ -80,7 +80,7 @@ class LessonOverview extends Component {
           </a>
           <div style={styles.dropdown}>
             <DropdownButton
-              text={`Other Lessons in this Unit`}
+              text={i18n.otherLessonsInUnit()}
               color={Button.ButtonColor.purple}
             >
               {lesson.unit.lessons.map((l, index) => (
