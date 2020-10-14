@@ -13,6 +13,8 @@ import {Provider} from 'react-redux';
 $(document).ready(function() {
   const lessonData = getScriptData('lesson');
 
+  console.log(lessonData);
+
   const store = getStore();
 
   if (lessonData.announcements) {
@@ -33,11 +35,8 @@ $(document).ready(function() {
   ReactDOM.render(
     <Provider store={store}>
       <LessonOverview
-        displayName={lessonData.title}
-        overview={lessonData.overview}
+        lesson={lessonData}
         activities={sampleActivities} //TODO: Get real activities data getting passed here
-        purpose={lessonData.purpose}
-        preparation={lessonData.preparation}
       />
     </Provider>,
     document.getElementById('show-container')
