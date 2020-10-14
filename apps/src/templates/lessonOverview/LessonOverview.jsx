@@ -37,8 +37,14 @@ const styles = {
 class LessonOverview extends Component {
   static propTypes = {
     lesson: PropTypes.shape({
-      course: PropTypes.object.isRequired,
-      unit: PropTypes.object.isRequired,
+      course: PropTypes.shape({
+        displayName: PropTypes.string.isRequired,
+        link: PropTypes.string.isRequired
+      }),
+      unit: PropTypes.shape({
+        displayName: PropTypes.string.isRequired,
+        link: PropTypes.string.isRequired
+      }),
       displayName: PropTypes.string.isRequired,
       overview: PropTypes.string,
       purpose: PropTypes.string,
