@@ -2,6 +2,10 @@
   color: white;
 }
 
+.highlights-feed {
+  height: 710px;
+}
+
 .highlights-content {
   width: 100%;
 }
@@ -89,5 +93,9 @@
 @media screen and (min-width: 0px) and (max-width: 767px) {
   .highlights-column {
     display: none;
+  }
+
+  .highlights-feed {
+    height: 65vh;
   }
 }
