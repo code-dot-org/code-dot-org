@@ -348,7 +348,7 @@ class LessonTest < ActiveSupport::TestCase
     create :course_version, course_offering: other_course_offering, content_root: script5, key: '3000'
     create :lesson, script: script5, key: 'foo'
 
-    assert_queries(3) do
+    assert_queries(10) do
       assert_equal [lesson4, lesson2], lesson1.related_lessons
     end
   end
@@ -395,7 +395,7 @@ class LessonTest < ActiveSupport::TestCase
     create :unit_group_unit, unit_group: unit_group_c, script: script6, position: 1
     create :lesson, script: script6, key: 'foo'
 
-    assert_queries(6) do
+    assert_queries(17) do
       assert_equal [lesson4, lesson0, lesson2], lesson1.related_lessons
     end
   end
