@@ -514,6 +514,9 @@ exports.appendNewFunctions = function(blocksXml, functionsXml) {
  * @property {boolean} defer Indicates that this input should be wrapped in a
  *   function before being passed into func, so that evaluation can be deferred
  *   until later.
+ * @property {boolean} variableInput Indicates that an input is a variable. The block
+ *   will have a dropown selector populated with all the variables in the program.
+ *   The generated code will be the variable, which will be defined as a global variable in the program.
  */
 
 /**
@@ -705,6 +708,7 @@ const STANDARD_INPUT_TYPES = {
   },
   [VARIABLE_INPUT]: {
     addInput(blockly, block, inputConfig, currentInputRow) {
+      // Make sure the variable name gets declared at the top of the program
       block.getVars = function() {
         return {
           [Blockly.Variables.DEFAULT_CATEGORY]: [
@@ -712,6 +716,8 @@ const STANDARD_INPUT_TYPES = {
           ]
         };
       };
+
+      // The following functions make sure that the variable naming/renaming options work for this block
       block.renameVar = function(oldName, newName) {
         if (
           Blockly.Names.equals(oldName, block.getTitleValue(inputConfig.name))
@@ -733,6 +739,8 @@ const STANDARD_INPUT_TYPES = {
         }
         block.superSetTitleValue(newValue, name);
       };
+
+      // Add the variable field to the block
       currentInputRow
         .appendTitle(inputConfig.label)
         .appendTitle(new Blockly.FieldVariable(null), inputConfig.name);
