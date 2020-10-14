@@ -21,6 +21,12 @@ class LessonsControllerTest < ActionController::TestCase
       }
     )
 
+    @lesson2 = create(
+      :lesson,
+      script_id: @script.id,
+      name: 'second lesson'
+    )
+
     @script_title = 'Script Display Name'
     @lesson_name = 'Lesson Display Name'
 
@@ -71,6 +77,8 @@ class LessonsControllerTest < ActionController::TestCase
     assert(@response.body.include?(@lesson.overview))
     assert(@response.body.include?(@script.link))
     assert(@response.body.include?(@script_title))
+    assert(@response.body.include?(lesson_path(id: @lesson.id)))
+    assert(@response.body.include?(lesson_path(id: @lesson2.id)))
   end
 
   # only levelbuilders can edit
