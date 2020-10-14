@@ -49,6 +49,7 @@ class Level < ActiveRecord::Base
   validates_length_of :name, within: 1..70
   validate :reject_illegal_chars
   validates_uniqueness_of :name, case_sensitive: false, conditions: -> {where.not(user_id: nil)}
+  validate :validate_level_key
 
   after_save :write_custom_level_file
   after_save :update_key_list
@@ -513,6 +514,19 @@ class Level < ActiveRecord::Base
       msg = "\"#{name}\" may only contain letters, numbers, spaces, "\
       "and the following characters: !\"&'()+,\-.:=?_|"
       errors.add(:name, msg)
+    end
+  end
+
+  def validate_level_key
+    # First try to provide a helpful error message based on specific knowledge
+    # of how the level key is currently computed.
+    unless ['custom', nil].includes(level_num) || game
+      errors.add(:game, 'game is required for non-custom levels')
+    end
+    # Then make sure we can compute a non-nil level key, in case the
+    # the implementation changed to no longer match our assumptions.
+    unless key
+      errors.add(:key, 'level key cannot be nil')
     end
   end
 
