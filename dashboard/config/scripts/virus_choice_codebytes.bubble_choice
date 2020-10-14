@@ -4,6 +4,7 @@ description 'Keep building your outbreak simulation with these challenges!'
 
 sublevels
 level 'virus_5_codebytes'
+level 'virus_10_codebytes'
 level 'virus_4_codebytes'
 level 'virus_6_codebytes'
 level 'virus_7_codebytes'
