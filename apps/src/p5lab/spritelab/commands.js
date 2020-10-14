@@ -137,6 +137,10 @@ export const commands = {
     eventCommands.keyPressed(condition, key, callback);
   },
 
+  repeatForever(callback) {
+    eventCommands.repeatForever(callback);
+  },
+
   spriteClicked(condition, spriteArg, callback) {
     eventCommands.spriteClicked(condition, spriteArg, callback);
   },
