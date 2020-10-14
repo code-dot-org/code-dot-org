@@ -260,4 +260,32 @@ class LessonsControllerTest < ActionController::TestCase
     assert_equal 1, section.position
     assert_equal id_b, section.id
   end
+
+  test 'update lesson with new resources' do
+    resource = create :resource
+
+    sign_in @levelbuilder
+    new_update_params = @update_params.merge({resources: [resource.key].to_json})
+    put :update, params: new_update_params
+    @lesson.reload
+    assert_equal 1, @lesson.resources.count
+  end
+
+  test 'update lesson removing and adding resources' do
+    resource_to_keep = create :resource
+    resource_to_add = create :resource
+    resource_to_remove = create :resource
+
+    @lesson.resources << resource_to_keep
+    @lesson.resources << resource_to_remove
+
+    sign_in @levelbuilder
+    new_update_params = @update_params.merge({resources: [resource_to_keep.key, resource_to_add.key].to_json})
+    put :update, params: new_update_params
+    @lesson.reload
+    assert_equal 2, @lesson.resources.count
+    assert @lesson.resources.include?(resource_to_keep)
+    assert @lesson.resources.include?(resource_to_add)
+    refute @lesson.resources.include?(resource_to_remove)
+  end
 end
