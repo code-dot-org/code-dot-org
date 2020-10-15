@@ -183,7 +183,7 @@ export default class ResourcesEditor extends Component {
                 >
                   <td>{resource.key}</td>
                   <td>{resource.name}</td>
-                  <td>{resource.properties.type}</td>
+                  <td>{resource.properties ? resource.properties.type : ''}</td>
                   <td>{resource.url}</td>
                   <td style={{backgroundColor: 'white'}}>
                     <div
