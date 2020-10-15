@@ -7,7 +7,6 @@ import { setPrediction } from "./redux";
 export default class KNNTrainer {
   startTraining() {
     const state = store.getState();
-    /*global ML*/
     this.knn = new ML.KNN(state.trainingExamples, state.trainingLabels, {
       k: 2
     });

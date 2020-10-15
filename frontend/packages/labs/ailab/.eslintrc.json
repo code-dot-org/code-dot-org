@@ -6,7 +6,8 @@
   "extends": ["eslint:recommended", "plugin:react/recommended"],
   "globals": {
     "Atomics": "readonly",
-    "SharedArrayBuffer": "readonly"
+    "SharedArrayBuffer": "readonly",
+    "ML": true
   },
   "parser": "babel-eslint",
   "parserOptions": {
