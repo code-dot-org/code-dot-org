@@ -1,7 +1,6 @@
 class ResourcesController < ApplicationController
   # GET /resourcesearch/:q/:limit
   def search
-    # TODO: use the query to provide real suggestions
-    render json: Resource.limit(params[:limit]).map(&:attributes)
+    render json: ResourcesAutocomplete.get_search_matches(params[:q], params[:limit])
   end
 end
