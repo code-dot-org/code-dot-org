@@ -88,8 +88,10 @@ class Predict extends Component {
               <div>
                 <h2> The Machine Learning model predicts... </h2>
                 <span>
-                  {this.props.prediction.predictedLabel} with{" "}
-                  {this.props.prediction.confidence} confidence.
+                  {this.props.prediction.predictedLabel}
+                  {this.props.prediction.confidence && (
+                    <p>Confidence: {this.props.prediction.confidence}</p>
+                  )}
                 </span>
               </div>
             )}

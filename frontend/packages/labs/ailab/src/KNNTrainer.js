@@ -2,33 +2,21 @@
 https://github.com/mljs/knn */
 
 const knnjs = require("ml-knn");
+import { store } from "./index.js";
+import { setPrediction } from "./redux";
 
 export default class KNNTrainer {
-  constructor() {
-    this.initTrainingState();
-  }
-
-  initTrainingState() {
-    this.knn = new knnjs.KNN();
-  }
-
   startTraining() {
-    this.addTrainingData();
-  }
-
-  addTrainingData() {
     const state = store.getState();
-    this.train(state.trainingExamples, state.trainingLabels);
-  }
-
-  train(trainingExamples, trainingLabels) {
-    this.knn(trainingExamples, trainingLabels, { k: 2 });
+    this.knn = new ML.KNN(state.trainingExamples, state.trainingLabels, {
+      k: 2
+    });
   }
 
   predict(testValues) {
+    console.log("testValues in KNNTrainer", testValues);
     let prediction = {};
     prediction.predictedLabel = this.knn.predict([testValues])[0];
-    console.log("prediction", prediction);
     store.dispatch(setPrediction(prediction));
   }
 

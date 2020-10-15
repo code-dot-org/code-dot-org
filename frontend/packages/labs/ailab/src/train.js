@@ -134,9 +134,10 @@ const prepareTrainingData = () => {
 };
 
 const prepareTestData = () => {
+  const updatedState = store.getState();
   let testValues = [];
-  this.state.selectedFeatures.forEach(feature =>
-    testValues.push(convertValue(feature, this.state.testData))
+  updatedState.selectedFeatures.forEach(feature =>
+    testValues.push(convertValue(updatedState, feature, updatedState.testData))
   );
   return testValues;
 };
@@ -165,7 +166,7 @@ const onClickTrain = () => {
 };
 
 const onClickPredict = () => {
-  const testValues = this.prepareTestData();
+  const testValues = prepareTestData();
   trainingState.trainer.predict(testValues);
 };
 

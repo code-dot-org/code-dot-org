@@ -149,7 +149,6 @@ class DataDisplay extends Component {
                     features) is most likely to belong to. Labels are
                     categorical.
                   </p>
-                  <p>The current model only supports binary classification.</p>
                   <select
                     value={this.props.labelColumn}
                     onChange={this.handleChangeSelect}
