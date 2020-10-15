@@ -180,7 +180,7 @@ class Foorm::Form < ActiveRecord::Base
     # Default headers are the non-facilitator specific set of questions.
     headers = readable_questions[:general]
 
-    comma_separated_submissions = []
+    parsed_answers = []
     filtered_submissions.each do |submission|
       answers = submission.formatted_answers
 
@@ -189,8 +189,15 @@ class Foorm::Form < ActiveRecord::Base
       # Put new headers first, as they generally contain important general
       # information (eg, user_id, pd_workshop_id, etc.)
       potential_new_headers = Hash[
-        answers.keys.map {|question_id| [question_id, question_id]}
-      ]
+        answers.keys.map do |question_id|
+          if headers.key?(question_id)
+            [nil, nil]
+          else
+            [question_id, question_id]
+          end
+        end
+      ].compact
+
       headers = potential_new_headers.merge headers
 
       if submission.associated_facilitator_submissions
@@ -224,11 +231,14 @@ class Foorm::Form < ActiveRecord::Base
           headers.merge! facilitator_headers
         end
       end
-
-      # Keep a list of submissions separate from the CSV, so that we can iteratively
-      # build the list of headers and add that as the first row.
-      comma_separated_submissions << answers.values_at(*headers.keys)
+      # Add answers + facilitator answers to an array.
+      parsed_answers << answers
     end
+
+    # Now we know all the headers, fill in comma_separated_submissions with answers for all headers (filling in with
+    # nil where necessary)
+    comma_separated_submissions = []
+    parsed_answers.each {|answers| comma_separated_submissions << answers.values_at(*headers.keys)}
 
     rows_to_write = [headers.values]
     comma_separated_submissions.each {|row| rows_to_write << row}
