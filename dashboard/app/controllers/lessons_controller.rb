@@ -8,8 +8,9 @@ class LessonsController < ApplicationController
   # lesson edit page, in which case saving the edit page would cause those
   # script levels to be lost. Prevent this by disallowing editing in this case.
   # This helps avoid losing data from existing scripts by accidentally editing
-  # them with the new lessons editor.
+  # them with the new lessons editor on levelbuilder.
   def disallow_legacy_script_levels
+    return if [:development, :adhoc].include? rack_env
     return unless @lesson.script_levels.reject(&:activity_section).any?
     raise CanCan::AccessDenied.new(
       "cannot edit lesson #{@lesson.id} because it contains legacy script levels"
