@@ -6,23 +6,27 @@ import {sampleActivities} from './activitiesTestData';
 import sinon from 'sinon';
 
 describe('AddLevelDialog', () => {
-  let defaultProps;
+  let defaultProps, handleConfirm, addLevel;
   beforeEach(() => {
+    handleConfirm = sinon.spy();
+    addLevel = sinon.spy();
     defaultProps = {
       isOpen: true,
-      handleConfirm: sinon.spy(),
-      currentLevels: sampleActivities[0].activitySections[2].levels,
-      addLevel: sinon.spy()
+      handleConfirm,
+      currentScriptLevels: sampleActivities[0].activitySections[2].scriptLevels,
+      addLevel,
+      activityPosition: 1,
+      activitySectionPosition: 3
     };
   });
 
   it('renders default props', () => {
     const wrapper = shallow(<AddLevelDialog {...defaultProps} />);
-    expect(wrapper.contains('Add Levels'));
+    expect(wrapper.contains('Add Levels')).to.be.true;
     expect(wrapper.find('BaseDialog').length).to.equal(1);
     expect(wrapper.find('ToggleGroup').length).to.equal(1);
     expect(wrapper.find('AddLevelFilters').length).to.equal(1);
     expect(wrapper.find('AddLevelTable').length).to.equal(1);
-    //expect(wrapper.find('LevelToken').length).to.equal(2);
+    expect(wrapper.find('Connect(LevelToken)').length).to.equal(2);
   });
 });

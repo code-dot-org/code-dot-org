@@ -246,6 +246,10 @@ Dashboard::Application.routes.draw do
   end
 
   resources :levels do
+    collection do
+      get 'get_filters'
+      get 'get_filtered_levels'
+    end
     member do
       get 'get_rubric'
       get 'embed_level'
@@ -310,6 +314,8 @@ Dashboard::Application.routes.draw do
   get '/course/:course_name', to: redirect('/courses/%{course_name}')
 
   resources :lessons, only: [:show, :edit, :update]
+
+  get '/resourcesearch/:q/:limit', to: 'resources#search', defaults: {format: 'json'}
 
   get '/beta', to: redirect('/')
 

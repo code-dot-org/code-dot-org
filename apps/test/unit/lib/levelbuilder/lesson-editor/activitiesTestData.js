@@ -3,7 +3,7 @@ export const sampleActivities = [
     key: 'activity-1',
     displayName: 'Main Activity',
     position: 1,
-    time: 20,
+    duration: 20,
     activitySections: [
       {
         key: 'section-3',
@@ -11,7 +11,7 @@ export const sampleActivities = [
         displayName: 'Making programs',
         remarks: true,
         slide: false,
-        levels: [],
+        scriptLevels: [],
         text: 'Simple text',
         tips: []
       },
@@ -21,13 +21,18 @@ export const sampleActivities = [
         displayName: '',
         remarks: false,
         slide: true,
-        levels: [],
+        scriptLevels: [],
         text: 'Details about this section',
         tips: [
           {
             key: 'tip-1',
             type: 'teachingTip',
             markdown: 'Teaching tip content'
+          },
+          {
+            key: 'tip-2',
+            type: 'discussionGoal',
+            markdown: 'Discussion Goal content'
           }
         ]
       },
@@ -39,53 +44,76 @@ export const sampleActivities = [
         remarks: false,
         slide: false,
         text: 'This progression teaches you programming!',
-        levels: [
+        scriptLevels: [
           {
-            name: 'Level 1',
-            levelNumber: 1,
+            id: 10,
+            levels: [
+              {
+                name: 'Level 1',
+                id: 1,
+                url: 'https://levelbuilder-studio.code.org/levels/598/edit',
+                icon: 'fa-desktop',
+                isUnplugged: false,
+                isConceptLevel: true,
+                skin: null,
+                videoKey: null,
+                concepts: '',
+                conceptDifficulty: ''
+              }
+            ],
             position: 1,
             activeId: 1,
-            ids: [1],
             kind: 'puzzle',
-            status: 'not started',
-            url: 'https://levelbuilder-studio.code.org/levels/598/edit',
-            icon: 'fa-desktop',
-            isUnplugged: false,
-            isCurrentLevel: false,
-            isConceptLevel: true,
-            named: false,
+            bonus: false,
             assessment: false,
             challenge: false,
-            sublevels: [],
-            skin: null,
-            videoKey: null,
-            concepts: '',
-            conceptDifficulty: ''
+            expand: false
           },
           {
-            name: 'Level 2',
-            levelNumber: 2,
+            id: 11,
+            levels: [
+              {
+                name: 'Level 2',
+                id: 2,
+                url: 'https://levelbuilder-studio.code.org/levels/598/edit',
+                icon: 'fa-desktop',
+                isUnplugged: false,
+                isConceptLevel: true,
+                skin: null,
+                videoKey: null,
+                concepts: '',
+                conceptDifficulty: ''
+              },
+              {
+                name: 'Level 3',
+                id: 3,
+                url: 'https://levelbuilder-studio.code.org/levels/598/edit',
+                icon: 'fa-desktop',
+                isUnplugged: false,
+                isConceptLevel: true,
+                skin: null,
+                videoKey: null,
+                concepts: '',
+                conceptDifficulty: ''
+              }
+            ],
             position: 2,
             activeId: 2,
-            ids: [2, 3],
             kind: 'assessment',
-            status: 'not started',
-            url: 'https://levelbuilder-studio.code.org/levels/598/edit',
-            icon: 'fa-desktop',
-            isUnplugged: false,
-            isCurrentLevel: false,
-            isConceptLevel: false,
-            named: false,
+            bonus: false,
             assessment: true,
             challenge: false,
-            sublevels: [],
-            skin: null,
-            videoKey: null,
-            concepts: '',
-            conceptDifficulty: ''
+            expand: false
           }
         ]
       }
     ]
   }
 ];
+
+export const levelKeyList = {
+  1: 'Level 1',
+  2: 'Level 2 - 1',
+  3: 'Level 2 - 2',
+  4: 'blockly:Studio:playlab_1'
+};

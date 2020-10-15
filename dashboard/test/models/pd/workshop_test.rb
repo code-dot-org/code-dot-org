@@ -966,14 +966,14 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   test 'process_location' do
     mock_geocoder_result = [
       OpenStruct.new(
-        latitude: 47.6101003,
-        longitude: -122.33746,
+        latitude: 47.610183,
+        longitude: -122.337401,
         city: 'Seattle',
         state: 'WA',
         formatted_address: '1501 4th Ave, Seattle, WA 98101, USA'
       )
     ]
-    expected_processed_location = '{"latitude":47.6101003,"longitude":-122.33746,"city":"Seattle","state":"WA","formatted_address":"1501 4th Ave, Seattle, WA 98101, USA"}'
+    expected_processed_location = '{"latitude":47.610183,"longitude":-122.337401,"city":"Seattle","state":"WA","formatted_address":"1501 4th Ave, Seattle, WA 98101, USA"}'
     Honeybadger.expects(:notify).never
 
     # Normal lookup
@@ -1132,13 +1132,13 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     workshop = build :workshop, num_sessions: 5, sessions_from: Date.new(2017, 3, 30),
       processed_location: nil
 
-    assert_equal 'March 30 - April 3, 2017', workshop.date_and_location_name
+    assert_equal 'March 30 - April 3, 2017, Location TBA', workshop.date_and_location_name
   end
 
   test 'date_and_location_name with no location nor sessions' do
     workshop = create :workshop, processed_location: nil, num_sessions: 0
 
-    assert_equal 'Dates TBA', workshop.date_and_location_name
+    assert_equal 'Dates TBA, Location TBA', workshop.date_and_location_name
   end
 
   test 'date_and_location_name for teachercon' do
@@ -1182,7 +1182,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
   test 'friendly_location with no location returns tba' do
     workshop = build :workshop, location_address: '', processed_location: nil
-    assert_equal '', workshop.friendly_location
+    assert_equal 'Location TBA', workshop.friendly_location
   end
 
   test 'friendly_location with virtual location' do

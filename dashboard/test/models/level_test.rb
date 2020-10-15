@@ -149,6 +149,19 @@ class LevelTest < ActiveSupport::TestCase
     assert_nil(summary[:display_name])
   end
 
+  test "summarize_for_edit returns object with expected fields" do
+    user = User.create(name: 'Best Curriculum Writer')
+    level = Level.create!(name: 'test_level', type: 'Maze', user: user, updated_at: Time.new(2020, 3, 27, 0, 0, 0, "-07:00"))
+
+    summary = level.summarize_for_edit
+
+    assert_equal(summary[:id], level.id)
+    assert_equal(summary[:type], 'Maze')
+    assert_equal(summary[:name], 'test_level')
+    assert_equal(summary[:owner], 'Best Curriculum Writer')
+    assert(summary[:updated_at].include?("03/27/20 at")) # The time is different locally than on drone
+  end
+
   test "get_question_text returns question text for free response level" do
     free_response_level = create :level, name: 'A question', long_instructions: 'Answer this question.',
       type: 'FreeResponse'
