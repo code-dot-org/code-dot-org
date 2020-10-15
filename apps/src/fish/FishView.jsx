@@ -70,7 +70,11 @@ class FishView extends React.Component {
       appHeight: this.codeAppRef.offsetHeight
     });
 
-    window.addEventListener('resize', _.debounce(this.onResize, 100));
+    const resizeDebounceWaitTime = 100;
+    window.addEventListener(
+      'resize',
+      _.debounce(this.onResize, resizeDebounceWaitTime)
+    );
   }
 
   onResize = () => {
