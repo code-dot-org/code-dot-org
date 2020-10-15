@@ -281,6 +281,7 @@ Resources:
       RequiresCompatibilities:
         - EC2
       ExecutionRoleArn: !Sub "arn:aws:iam::${AWS::AccountId}:role/DroneEcsTaskExecutionRole"
+      TaskRoleArn: !Sub "arn:aws:iam::${AWS::AccountId}:role/drone-autoscaler-ecs-task"
       ContainerDefinitions:
         -
           Name: drone-autoscaler
@@ -297,13 +298,9 @@ Resources:
             -
               ContainerPort: 8080
           Environment:
-            # TODO: (suresh) Update & use drone-autoscaler-ecs-task to include the permissions needed by Autoscaler and then remove this API Key.
             -
-              Name: AWS_ACCESS_KEY_ID
-              Value: '{{resolve:secretsmanager:drone/shared:SecretString:AWS_ACCESS_KEY_ID}}'
-            -
-              Name: AWS_SECRET_ACCESS_KEY
-              Value: '{{resolve:secretsmanager:drone/shared:SecretString:AWS_SECRET_ACCESS_KEY}}'
+              Name: AWS_IAM
+              Value: true
 
             -
               Name: DRONE_SERVER_HOST
