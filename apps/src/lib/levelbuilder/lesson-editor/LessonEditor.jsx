@@ -60,12 +60,10 @@ export default class LessonEditor extends Component {
   };
 
   getRelatedLessonText(lesson) {
-    const year = lesson.versionYear;
+    const includeYear = !lesson.scriptTitle.includes(lesson.versionYear);
+    const year = includeYear ? ` - ${lesson.versionYear}` : '';
     const type = lesson.lockable ? 'Lockable' : 'Lesson';
-
-    return `${lesson.scriptTitle} - ${year} - ${type} ${
-      lesson.relativePosition
-    }`;
+    return `${lesson.scriptTitle}${year} - ${type} ${lesson.relativePosition}`;
   }
 
   render() {
