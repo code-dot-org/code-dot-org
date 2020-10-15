@@ -315,6 +315,8 @@ Dashboard::Application.routes.draw do
 
   resources :lessons, only: [:show, :edit, :update]
 
+  get '/resourcesearch/:q/:limit', to: 'resources#search', defaults: {format: 'json'}
+
   get '/beta', to: redirect('/')
 
   get '/hoc/reset', to: 'script_levels#reset', script_id: Script::HOC_NAME, as: 'hoc_reset'
