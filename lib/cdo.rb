@@ -128,8 +128,18 @@ module Cdo
       cache.fetch("curriculum_languages") do
         supported_languages = Set[]
 
-        # This is the list of languages officially supported by CurriculumBuilder
-        curriculumbuilder_languages = DCDO.get("curriculumbuilder_languages", []).map(&:first)
+        # This is the list of languages officially supported by CurriculumBuilder.
+        # The source of truth for this list is in a DCDO variable, so we need
+        # to retrieve it from there (hence why this method is cached). We also
+        # provide a minimal default, in the case where we are unable to
+        # retrieve anything.
+        curriculumbuilder_languages = DCDO.get("curriculumbuilder_languages",
+          [
+            ["en-us", "English"],
+            ["es-mx", "Mexican Spanish"],
+            ["it-it", "Italian"]
+          ]
+        ).map(&:first)
         supported_languages.merge(curriculumbuilder_languages)
 
         # This is a list of additional languages we want to support. These are
@@ -143,7 +153,12 @@ module Cdo
           'de-de', 'id-id', 'ko-kr', 'tr-tr', 'zh-cn', 'zh-tw'
         ]
         supported_languages.merge(additional_languages)
-        supported_languages
+
+        # Don't include English; we do of course _support_ English, but only as
+        # the default, not as a specific localized language.
+        supported_languages.delete("en-us")
+
+        return supported_languages
       end
     end
 
