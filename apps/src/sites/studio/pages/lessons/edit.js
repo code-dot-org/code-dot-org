@@ -4,16 +4,27 @@ import getScriptData from '@cdo/apps/util/getScriptData';
 import LessonEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/LessonEditor';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import reducers, {
-  init
+  init,
+  emptyActivity
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
 import {Provider} from 'react-redux';
 import _ from 'lodash';
 
 //TODO Remove once we hook up real level data
-import {levelKeyList} from '@cdo/apps/lib/levelbuilder/lesson-editor/SampleActivitiesData';
+import {levelKeyList} from '../../../../../test/unit/lib/levelbuilder/lesson-editor/activitiesTestData';
 
 $(document).ready(function() {
-  const lessonData = getScriptData('lesson').editableData;
+  const lessonData = getScriptData('lesson');
+  const relatedLessons = getScriptData('relatedLessons');
+
+  // TODO(dave): move this output into the lesson edit UI
+  relatedLessons.forEach(lesson => {
+    const type = lesson.lockable ? 'lockable' : 'lesson';
+    const url = lesson.lessonEditUrl;
+    console.log(
+      `${lesson.scriptName} ${type} ${lesson.relativePosition} ${url}`
+    );
+  });
   const activities = lessonData.activities;
 
   // Rename any keys that are different on the backend.
@@ -29,20 +40,22 @@ $(document).ready(function() {
     // where every object has an id, and this key field should become unneeded.
     activity.key = activity.id + '';
 
-    activity.displayName = activity.name;
+    activity.displayName = activity.name || '';
     delete activity.name;
+
+    activity.duration = activity.duration || 0;
 
     activity.activitySections.forEach(activitySection => {
       // React key
       activitySection.key = activitySection.id + '';
 
-      activitySection.displayName = activitySection.name;
+      activitySection.displayName = activitySection.name || '';
       delete activitySection.name;
 
-      activitySection.text = activitySection.description;
+      activitySection.text = activitySection.description || '';
       delete activitySection.description;
 
-      activitySection.levels = activitySection.levels || [];
+      activitySection.scriptLevels = activitySection.levels || [];
 
       activitySection.tips = activitySection.tips || [];
 
@@ -52,6 +65,10 @@ $(document).ready(function() {
       });
     });
   });
+
+  if (activities.length === 0) {
+    activities.push(emptyActivity);
+  }
 
   registerReducers({...reducers});
   const store = getStore();
@@ -72,6 +89,7 @@ $(document).ready(function() {
         purpose={lessonData.purpose}
         preparation={lessonData.preparation}
         announcements={lessonData.announcements || []}
+        resources={lessonData.resources}
       />
     </Provider>,
     document.getElementById('edit-container')
