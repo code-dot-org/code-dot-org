@@ -6,11 +6,15 @@ class LessonsController < ApplicationController
   # GET /lessons/1
   def show
     @lesson_data = {
-      title: @lesson.localized_title,
-      overview: @lesson.overview,
+      unit: {
+        displayName: @lesson.script.localized_title,
+        link: @lesson.script.link
+      },
+      displayName: @lesson.localized_title,
+      overview: @lesson.overview || '',
       announcements: @lesson.announcements,
-      purpose: @lesson.purpose,
-      preparation: @lesson.preparation
+      purpose: @lesson.purpose || '',
+      preparation: @lesson.preparation || ''
     }
   end
 
