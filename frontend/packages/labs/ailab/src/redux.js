@@ -7,6 +7,8 @@ const SET_COLUMNS_BY_DATA_TYPE = "SET_COLUMNS_BY_DATA_TYPE";
 const SET_SELECTED_FEATURES = "SET_SELECTED_FEATURES";
 const SET_LABEL_COLUMN = "SET_LABEL_COLUMN";
 const SET_FEATURE_NUMBER_KEY = "SET_FEATURE_NUMBER_KEY";
+const SET_TRAINING_EXAMPLES = "SET_TRAINING_EXAMPLES";
+const SET_TRAINING_LABELS = "SET_TRAINING_LABELS";
 const SET_SHOW_PREDICT = "SET_SHOW_PREDICT";
 const SET_TEST_DATA = "SET_TEST_DATA";
 const SET_PREDICTION = "SET_PREDICTION";
@@ -54,6 +56,14 @@ export function setFeatureNumberKey(featureNumberKey) {
   return { type: SET_FEATURE_NUMBER_KEY, featureNumberKey };
 }
 
+export function setTrainingExamples(trainingExamples) {
+  return { type: SET_TRAINING_EXAMPLES, trainingExamples };
+}
+
+export function setTrainingLabels(trainingLabels) {
+  return { type: SET_TRAINING_LABELS, trainingLabels };
+}
+
 export function setShowPredict(showPredict) {
   return { type: SET_SHOW_PREDICT, showPredict };
 }
@@ -73,6 +83,8 @@ const initialState = {
   selectedFeatures: [],
   labelColumn: undefined,
   featureNumberKey: {},
+  trainingExamples: [],
+  trainingLabels: [],
   showPredict: false,
   testData: {},
   prediction: undefined
@@ -118,6 +130,18 @@ export default function rootReducer(state = initialState, action) {
     return {
       ...state,
       featureNumberKey: action.featureNumberKey
+    };
+  }
+  if (action.type === SET_TRAINING_EXAMPLES) {
+    return {
+      ...state,
+      trainingExamples: action.trainingExamples
+    };
+  }
+  if (action.type === SET_TRAINING_LABELS) {
+    return {
+      ...state,
+      trainingLabels: action.trainingLabels
     };
   }
   if (action.type === SET_SHOW_PREDICT) {
