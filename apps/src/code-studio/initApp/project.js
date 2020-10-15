@@ -982,9 +982,9 @@ var projects = (module.exports = {
       parsedCurrent.getElementsByTagName('parsererror').length > 0 ||
       parsedSample.getElementsByTagName('parsererror').length > 0
     ) {
-      // Normalize line endings between unix and Windows OS.
-      normalizedSample = sampleCode.replace(/\r\n/g, '\n');
-      normalizedCurrent = currentCode.replace(/\r\n/g, '\n');
+      // Remove all whitespace from the code.
+      normalizedSample = sampleCode.replace(/\s+/g, '');
+      normalizedCurrent = currentCode.replace(/\s+/g, '');
     } else {
       // Normalize XML to ignore differences in closing tags.
       const serializer = new XMLSerializer();
