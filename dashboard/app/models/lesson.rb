@@ -66,7 +66,6 @@ class Lesson < ActiveRecord::Base
   def self.add_lessons(script, lesson_group, raw_lessons, counters, new_suffix, editor_experiment)
     script.lessons.reload
     raw_lessons.map do |raw_lesson|
-      Lesson.prevent_empty_lesson(raw_lesson)
       Lesson.prevent_blank_display_name(raw_lesson)
       Lesson.prevent_changing_stable_i18n_key(script, raw_lesson)
 
@@ -112,10 +111,6 @@ class Lesson < ActiveRecord::Base
     if raw_lesson[:name].blank?
       raise "Expect all lessons to have display names. The following lesson does not have a display name: #{raw_lesson[:key]}"
     end
-  end
-
-  def self.prevent_empty_lesson(raw_lesson)
-    raise "Lessons must have at least one level in them.  Lesson: #{raw_lesson[:name]}." if raw_lesson[:script_levels].empty?
   end
 
   # Go through all the script levels for this lesson, except the last one,
@@ -240,7 +235,7 @@ class Lesson < ActiveRecord::Base
       # The last level in a lesson might be a long assessment, so add extra information
       # related to that.  This might include information for additional pages if it
       # happens to be a multi-page long assessment.
-      if last_script_level.long_assessment?
+      if last_script_level&.long_assessment?
         last_level_summary = lesson_data[:levels].last
         extra_levels = ScriptLevel.summarize_extra_puzzle_pages(last_level_summary)
         lesson_data[:levels] += extra_levels
