@@ -38,7 +38,6 @@ Scenario: Save changes to a script
 
   And I delete the temp script and lesson
 
-@skip
 Scenario: Navigate from script gui edit page to lesson edit page
   Given I create a levelbuilder named "Levi"
   And I create a temp script and lesson
