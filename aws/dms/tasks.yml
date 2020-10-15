@@ -108,7 +108,7 @@ cron-user-hierarchy:
 cron-user-hierarchy-pii:
 - dashboard.studio_people
 - dashboard.teacher_profiles
-- dashboard.users
+- dashboard.users:
     remove_column:
         - encrypted_password
 - dashboard.user_geos
