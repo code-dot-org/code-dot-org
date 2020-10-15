@@ -31,7 +31,7 @@ class ActivitySection < ApplicationRecord
   belongs_to :lesson_activity
   has_one :lesson, through: :lesson_activity
 
-  has_many :script_levels, -> {order(:activity_section_position)}
+  has_many :script_levels, -> {order(:activity_section_position)}, dependent: :destroy
 
   serialized_attrs %w(
     name
