@@ -437,7 +437,7 @@ class Lesson < ActiveRecord::Base
 
   # Finds all other lessons which match the following criteria:
   # 1. the other lesson is in the same course offering as this lesson. Or, if
-  # this is lesson is in a CSF course offering, the other lesson may also be in
+  # this lesson is in a CSF course offering, the other lesson may also be in
   # any other CSF course offering.
   # 2. same lesson key (untranslated lesson name)
   # The results are sorted first by version year and then by script name.
