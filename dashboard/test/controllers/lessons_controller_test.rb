@@ -85,6 +85,18 @@ class LessonsControllerTest < ActionController::TestCase
     assert_equal 'student overview', lesson_data['studentOverview']
   end
 
+  test 'cannot edit lesson with legacy script levels' do
+    # legacy script level, not owned by an activity section
+    create :script_level, lesson: @lesson, script: @lesson.script
+
+    sign_in @levelbuilder
+
+    get :edit, params: {
+      id: @lesson.id
+    }
+    assert_response :forbidden
+  end
+
   # only levelbuilders can update
   test_user_gets_response_for :update, params: -> {{id: @lesson.id}}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
   test_user_gets_response_for :update, params: -> {@update_params}, user: :student, response: :forbidden
@@ -101,6 +113,22 @@ class LessonsControllerTest < ActionController::TestCase
     assert_equal 'new overview', @lesson.overview
     assert_equal 'new student overview', @lesson.student_overview
     assert_equal 0, @lesson.lesson_activities.count
+  end
+
+  test 'cannot update lesson with legacy script levels' do
+    # legacy script level, not owned by an activity section
+    create :script_level, lesson: @lesson, script: @lesson.script
+
+    sign_in @levelbuilder
+
+    @update_params['activities'] = [
+      {
+        name: 'activity name',
+        position: 1
+      }
+    ].to_json
+    put :update, params: @update_params
+    assert_response :forbidden
   end
 
   test 'add activity via lesson update' do
