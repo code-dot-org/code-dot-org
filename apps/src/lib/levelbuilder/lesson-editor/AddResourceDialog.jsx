@@ -247,6 +247,7 @@ export default class AddResourceDialog extends Component {
           </div>
           <DialogFooter rightAlign>
             <input
+              id="submit-button"
               type="submit"
               value="Close and Add"
               style={styles.submitButton}
