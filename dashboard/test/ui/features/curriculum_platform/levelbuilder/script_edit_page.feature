@@ -29,6 +29,7 @@ Scenario: Save changes to a script
   When I view the temp script legacy edit page
   And element "#script_text" contains text "lesson 'temp-lesson', display_name: 'Temp Lesson'"
   And element "#script_text" contains text "level 'Applab test'"
+  And I scroll the ".btn-primary" element into view
   And I type "lesson 'temp-lesson', display_name: 'Temp Lesson'\nlevel 'Standalone_Artist_1'\nlevel 'Standalone_Artist_2'\n" into "#script_text"
   And I click selector ".btn-primary" to load a new page
   And I wait until element "#script-title" is visible
