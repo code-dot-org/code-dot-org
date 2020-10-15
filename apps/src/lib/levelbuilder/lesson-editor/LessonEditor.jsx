@@ -8,6 +8,7 @@ import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
 import AnnouncementsEditor from '@cdo/apps/lib/levelbuilder/announcementsEditor/AnnouncementsEditor';
 import CollapsibleEditorSection from '@cdo/apps/lib/levelbuilder/CollapsibleEditorSection';
 import {resourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
+import color from '../../../util/color';
 
 const styles = {
   editor: {
@@ -29,7 +30,7 @@ const styles = {
     margin: '0 6px'
   },
   relatedLessonHeader: {
-    fontSize: 18,
+    fontSize: 16,
     marginTop: 15,
     marginBottom: 10
   },
@@ -39,7 +40,9 @@ const styles = {
   relatedLessonLink: {
     marginRight: 30,
     marginBottom: 15,
-    display: 'inline-block'
+    display: 'inline-block',
+    color: color.purple,
+    textDecoration: 'underline'
   }
 };
 
@@ -97,11 +100,14 @@ export default class LessonEditor extends Component {
               other lessons.
             </p>
             {relatedLessons.map(lesson => (
-              <span key={lesson.id} style={styles.relatedLessonLink}>
-                <a href={lesson.editUrl} target="_blank">
-                  {this.getRelatedLessonText(lesson)}
-                </a>
-              </span>
+              <a
+                key={lesson.id}
+                href={lesson.editUrl}
+                style={styles.relatedLessonLink}
+                target="_blank"
+              >
+                {this.getRelatedLessonText(lesson)}
+              </a>
             ))}
           </div>
         )}
