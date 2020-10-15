@@ -2,7 +2,7 @@ import _ from 'lodash';
 import PropTypes from 'prop-types';
 import {
   activityShape,
-  levelShape,
+  scriptLevelShape,
   tipShape
 } from '@cdo/apps/lib/levelbuilder/shapes';
 
@@ -28,8 +28,11 @@ const MOVE_LEVEL_TO_ACTIVITY_SECTION =
 const ADD_VARIANT = 'activitiesEditor/ADD_VARIANT';
 const SET_ACTIVE_VARIANT = 'activitiesEditor/SET_ACTIVE_VARIANT';
 const REMOVE_VARIANT = 'activitiesEditor/REMOVE_VARIANT';
-const SET_FIELD = 'activitiesEditor/SET_FIELD';
+const SET_LEVEL_FIELD = 'activitiesEditor/SET_LEVEL_FIELD';
+const SET_SCRIPT_LEVEL_FIELD = 'activitiesEditor/SET_SCRIPT_LEVEL_FIELD';
 const TOGGLE_EXPAND = 'activitiesEditor/TOGGLE_EXPAND';
+
+export const NEW_LEVEL_ID = -1;
 
 // NOTE: Position for Activities, Activity Sections and Levels is 1 based.
 
@@ -78,36 +81,36 @@ export const addActivitySection = (activityPosition, activitySectionKey) => ({
 export const toggleExpand = (
   activityPosition,
   activitySectionPosition,
-  levelPosition
+  scriptLevelPosition
 ) => ({
   type: TOGGLE_EXPAND,
   activityPosition,
   activitySectionPosition,
-  levelPosition
+  scriptLevelPosition
 });
 
 export const removeLevel = (
   activityPosition,
   activitySectionPosition,
-  levelPosition
+  scriptLevelPosition
 ) => ({
   type: REMOVE_LEVEL,
   activityPosition,
   activitySectionPosition,
-  levelPosition
+  scriptLevelPosition
 });
 
 export const chooseLevel = (
   activityPosition,
   activitySectionPosition,
-  levelPosition,
+  scriptLevelPosition,
   variant,
   value
 ) => ({
   type: CHOOSE_LEVEL,
   activityPosition,
   activitySectionPosition,
-  levelPosition,
+  scriptLevelPosition,
   variant,
   value
 });
@@ -115,76 +118,89 @@ export const chooseLevel = (
 export const addVariant = (
   activityPosition,
   activitySectionPosition,
-  levelPosition
+  scriptLevelPosition
 ) => ({
   type: ADD_VARIANT,
   activityPosition,
   activitySectionPosition,
-  levelPosition
+  scriptLevelPosition
 });
 
 export const removeVariant = (
   activityPosition,
   activitySectionPosition,
-  levelPosition,
+  scriptLevelPosition,
   levelId
 ) => ({
   type: REMOVE_VARIANT,
   activityPosition,
   activitySectionPosition,
-  levelPosition,
+  scriptLevelPosition,
   levelId
 });
 
 export const setActiveVariant = (
   activityPosition,
   activitySectionPosition,
-  levelPosition,
+  scriptLevelPosition,
   id
 ) => ({
   type: SET_ACTIVE_VARIANT,
   activityPosition,
   activitySectionPosition,
-  levelPosition,
+  scriptLevelPosition,
   id
 });
 
-export const setField = (
+export const setLevelField = (
   activityPosition,
   activitySectionPosition,
-  levelPosition,
+  scriptLevelPosition,
   modifier
 ) => ({
-  type: SET_FIELD,
+  type: SET_LEVEL_FIELD,
   activityPosition,
   activitySectionPosition,
-  levelPosition,
+  scriptLevelPosition,
+  modifier
+});
+
+export const setScriptLevelField = (
+  activityPosition,
+  activitySectionPosition,
+  scriptLevelPosition,
+  modifier
+) => ({
+  type: SET_SCRIPT_LEVEL_FIELD,
+  activityPosition,
+  activitySectionPosition,
+  scriptLevelPosition,
   modifier
 });
 
 export const reorderLevel = (
   activityPosition,
   activitySectionPosition,
-  originalLevelPosition,
-  newLevelPosition
+  originalScriptLevelPosition,
+  newScriptLevelPosition
 ) => ({
   type: REORDER_LEVEL,
   activityPosition,
   activitySectionPosition,
-  originalLevelPosition,
-  newLevelPosition
+  originalScriptLevelPosition,
+  newScriptLevelPosition
 });
 
 export const moveLevelToActivitySection = (
   activityPosition,
   activitySectionPosition,
-  levelPosition,
+  scriptLevelPosition,
   newActivitySectionPosition
 ) => ({
   type: MOVE_LEVEL_TO_ACTIVITY_SECTION,
   activityPosition,
   activitySectionPosition,
-  levelPosition,
+  scriptLevelPosition,
   newActivitySectionPosition
 });
 
@@ -271,19 +287,17 @@ function updateActivitySectionPositions(activities) {
   });
 }
 
-function updateLevelPositions(levels) {
-  for (let i = 0; i < levels.length; i++) {
-    levels[i].position = i + 1;
+function updateScriptLevelPositions(scriptLevels) {
+  for (let i = 0; i < scriptLevels.length; i++) {
+    scriptLevels[i].position = i + 1;
   }
 }
 
-export const NEW_LEVEL_ID = -1;
-
-function getLevels(newState, action) {
+function getScriptLevels(newState, action) {
   const activitySections =
     newState[action.activityPosition - 1].activitySections;
 
-  return activitySections[action.activitySectionPosition - 1].levels;
+  return activitySections[action.activitySectionPosition - 1].scriptLevels;
 }
 
 function activities(state = [], action) {
@@ -306,6 +320,9 @@ function activities(state = [], action) {
     }
     case REMOVE_ACTIVITY: {
       newState.splice(action.activityPosition - 1, 1);
+      if (newState.length === 0) {
+        newState.push(emptyActivity);
+      }
       updateActivityPositions(newState);
       updateActivitySectionPositions(newState);
       break;
@@ -336,7 +353,7 @@ function activities(state = [], action) {
         newState[action.activityPosition - 1].activitySections;
       activitySections.push({
         key: action.activitySectionKey,
-        title: '',
+        displayName: '',
         levels: [],
         tips: [],
         remarks: false,
@@ -350,6 +367,9 @@ function activities(state = [], action) {
       const activitySections =
         newState[action.activityPosition - 1].activitySections;
       activitySections.splice(action.activitySectionPosition - 1, 1);
+      if (activitySections.length === 0) {
+        activitySections.push(emptyActivitySection);
+      }
       updateActivitySectionPositions(newState);
       break;
     }
@@ -438,30 +458,36 @@ function activities(state = [], action) {
     }
 
     case ADD_LEVEL: {
-      validateLevel(action.level, action.type);
-      const levels = getLevels(newState, action);
-      levels.push(action.level);
-      updateLevelPositions(levels);
+      validateScriptLevel(action.level, action.type);
+      const scriptLevels = getScriptLevels(newState, action);
+      scriptLevels.push(action.level);
+      updateScriptLevelPositions(scriptLevels);
       break;
     }
     case REMOVE_LEVEL: {
-      const levels = getLevels(newState, action);
-      levels.splice(action.levelPosition - 1, 1);
-      updateLevelPositions(levels);
+      const scriptLevels = getScriptLevels(newState, action);
+      scriptLevels.splice(action.scriptLevelPosition - 1, 1);
+      updateScriptLevelPositions(scriptLevels);
       break;
     }
     case REORDER_LEVEL: {
-      const levels = getLevels(newState, action);
-      const temp = levels.splice(action.originalLevelPosition - 1, 1);
-      levels.splice(action.newLevelPosition - 1, 0, temp[0]);
-      updateLevelPositions(levels);
+      const scriptLevels = getScriptLevels(newState, action);
+      const temp = scriptLevels.splice(
+        action.originalScriptLevelPosition - 1,
+        1
+      );
+      scriptLevels.splice(action.newScriptLevelPosition - 1, 0, temp[0]);
+      updateScriptLevelPositions(scriptLevels);
       break;
     }
     case MOVE_LEVEL_TO_ACTIVITY_SECTION: {
       //remove level from old activitySection
-      const levels = getLevels(newState, action);
-      const level = levels.splice(action.levelPosition - 1, 1)[0];
-      updateLevelPositions(levels);
+      const scriptLevels = getScriptLevels(newState, action);
+      const scriptLevel = scriptLevels.splice(
+        action.scriptLevelPosition - 1,
+        1
+      )[0];
+      updateScriptLevelPositions(scriptLevels);
 
       // add level to new activitySection
       let newActivityPosition = null;
@@ -474,48 +500,58 @@ function activities(state = [], action) {
       });
       const newActivitySections =
         newState[newActivityPosition - 1].activitySections;
-      const newLevels =
-        newActivitySections[action.newActivitySectionPosition - 1].levels;
-      newLevels.push(level);
-      updateLevelPositions(newLevels);
+      const newScriptLevels =
+        newActivitySections[action.newActivitySectionPosition - 1].scriptLevels;
+      newScriptLevels.push(scriptLevel);
+      updateScriptLevelPositions(newScriptLevels);
       break;
     }
+    case SET_SCRIPT_LEVEL_FIELD: {
+      const type = Object.keys(action.modifier)[0];
+      const scriptLevels = getScriptLevels(newState, action);
+      scriptLevels[action.scriptLevelPosition - 1][type] =
+        action.modifier[type];
+      break;
+    }
+    case SET_LEVEL_FIELD: {
+      const type = Object.keys(action.modifier)[0];
+      const scriptLevels = getScriptLevels(newState, action);
+      scriptLevels[action.scriptLevelPosition - 1].levels.forEach(level => {
+        level[type] = action.modifier[type];
+      });
+      break;
+    }
+    case TOGGLE_EXPAND: {
+      const scriptLevels = getScriptLevels(newState, action);
+      const scriptLevel = scriptLevels[action.scriptLevelPosition - 1];
+      scriptLevel.expand = !scriptLevel.expand;
+      break;
+    }
+    // TODO: Update Variant Methods to Work with new ScriptLevelShape
     case CHOOSE_LEVEL: {
-      const levels = getLevels(newState, action);
-      const level = levels[action.levelPosition - 1];
-      if (level.ids[action.variant] === level.activeId) {
-        level.activeId = action.value;
+      const scriptLevels = getScriptLevels(newState, action);
+      const scriptLevel = scriptLevels[action.scriptLevelPosition - 1];
+      if (scriptLevel.ids[action.variant] === scriptLevel.activeId) {
+        scriptLevel.activeId = action.value;
       }
-      level.ids[action.variant] = action.value;
+      scriptLevel.ids[action.variant] = action.value;
       break;
     }
     case ADD_VARIANT: {
-      const levels = getLevels(newState, action);
-      levels[action.levelPosition - 1].ids.push(NEW_LEVEL_ID);
+      const scriptLevels = getScriptLevels(newState, action);
+      scriptLevels[action.scriptLevelPosition - 1].ids.push(NEW_LEVEL_ID);
       break;
     }
     case REMOVE_VARIANT: {
-      const levels = getLevels(newState, action);
-      const levelIds = levels[action.levelPosition - 1].ids;
+      const scriptLevels = getScriptLevels(newState, action);
+      const levelIds = scriptLevels[action.scriptLevelPosition - 1].ids;
       const i = levelIds.indexOf(action.levelId);
       levelIds.splice(i, 1);
       break;
     }
     case SET_ACTIVE_VARIANT: {
-      const levels = getLevels(newState, action);
-      levels[action.levelPosition - 1].activeId = action.id;
-      break;
-    }
-    case SET_FIELD: {
-      const type = Object.keys(action.modifier)[0];
-      const levels = getLevels(newState, action);
-      levels[action.levelPosition - 1][type] = action.modifier[type];
-      break;
-    }
-    case TOGGLE_EXPAND: {
-      const levels = getLevels(newState, action);
-      const level = levels[action.levelPosition - 1];
-      level.expand = !level.expand;
+      const scriptLevels = getScriptLevels(newState, action);
+      scriptLevels[action.scriptLevelPosition - 1].activeId = action.id;
       break;
     }
   }
@@ -565,14 +601,34 @@ function validateTip(tip, location) {
 }
 
 // Use PropTypes.checkPropTypes to enforce that each entry in the array of
-// level matches the shape defined in levelShape.
-function validateLevel(level, location) {
-  const propTypes = {level: levelShape};
-  PropTypes.checkPropTypes(propTypes, {level}, 'property', location);
+// level matches the shape defined in scriptLevelShape.
+function validateScriptLevel(scriptLevel, location) {
+  const propTypes = {scriptLevel: scriptLevelShape};
+  PropTypes.checkPropTypes(propTypes, {scriptLevel}, 'property', location);
 }
 
 export default {
   activities,
   levelKeyList,
   levelNameToIdMap
+};
+
+export const emptyActivitySection = {
+  key: 'activity-section-1',
+  displayName: '',
+  levels: [],
+  tips: [],
+  remarks: false,
+  slide: false,
+  text: '',
+  scriptLevels: [],
+  position: 1
+};
+
+export const emptyActivity = {
+  key: 'activity-1',
+  displayName: '',
+  position: 1,
+  duration: 0,
+  activitySections: [emptyActivitySection]
 };

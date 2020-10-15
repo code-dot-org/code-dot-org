@@ -1279,10 +1279,10 @@ class Script < ActiveRecord::Base
     summary
   end
 
-  def summarize_for_edit
+  def summarize_for_script_edit
     include_lessons = false
     summary = summarize(include_lessons)
-    summary[:lesson_groups] = lesson_groups.map(&:summarize_for_edit)
+    summary[:lesson_groups] = lesson_groups.map(&:summarize_for_script_edit)
     summary
   end
 
@@ -1463,6 +1463,14 @@ class Script < ActiveRecord::Base
   def unit_group
     return nil if unit_group_units.length != 1
     UnitGroup.get_from_cache(unit_group_units[0].course_id)
+  end
+
+  # If this unit is a standalone course, returns its CourseVersion. Otherwise,
+  # if this unit belongs to a UnitGroup, returns the UnitGroup's CourseVersion,
+  # if there is one.
+  # @return [CourseVersion]
+  def get_course_version
+    course_version || unit_group&.course_version
   end
 
   # @return {String|nil} path to the course overview page for this script if there
