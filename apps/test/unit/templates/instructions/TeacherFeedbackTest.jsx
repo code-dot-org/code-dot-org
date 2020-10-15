@@ -4,6 +4,7 @@ import {expect} from '../../../util/reconfiguredChai';
 import {UnconnectedTeacherFeedback as TeacherFeedback} from '@cdo/apps/templates/instructions/TeacherFeedback';
 import i18n from '@cdo/locale';
 import sinon from 'sinon';
+import moment from 'moment/moment';
 
 const TEACHER_FEEDBACK_NO_RUBRIC_PROPS = {
   user: 5,
@@ -149,7 +150,8 @@ describe('TeacherFeedback', () => {
       wrapper.setState({
         latestFeedback: [{student_seen_feedback: twoDaysAgo}]
       });
-      expect(wrapper.find('Connect(TimeAgo)')).to.have.lengthOf(1);
+      const formattedDate = moment(twoDaysAgo).format('l');
+      expect(wrapper.contains(formattedDate)).to.be.true;
       i18n.today.restore();
       i18n.yesterday.restore();
     });

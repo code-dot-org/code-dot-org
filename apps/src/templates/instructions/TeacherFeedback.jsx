@@ -242,7 +242,7 @@ export class TeacherFeedback extends Component {
     } else if (todayM === m && todayY === y && todayD === d + 1) {
       return i18n.yesterday();
     } else {
-      return moment(feedbackSeen).format('l');
+      return moment(dateFeedbackSeen).format('l');
     }
   }
 
