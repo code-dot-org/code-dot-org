@@ -51,6 +51,10 @@ export const commands = {
     actionCommands.edgesDisplace.apply(this, [spriteArg]);
   },
 
+  isCostumeEqual(spriteArg, costumeName) {
+    return actionCommands.isCostumeEqual(spriteArg, costumeName);
+  },
+
   isKeyPressed(key) {
     return actionCommands.isKeyPressed.apply(this, [key]);
   },
@@ -164,21 +168,6 @@ export const commands = {
 
   randomLocation() {
     return locationCommands.randomLocation();
-  },
-
-  // Math commands
-  cos(angleDegrees) {
-    if (angleDegrees === undefined) {
-      angleDegrees = 0;
-    }
-    return parseFloat(Math.cos((angleDegrees * Math.PI) / 180).toFixed(4));
-  },
-
-  sin(angleDegrees) {
-    if (angleDegrees === undefined) {
-      angleDegrees = 0;
-    }
-    return parseFloat(Math.sin((angleDegrees * Math.PI) / 180).toFixed(4));
   },
 
   // Sprite commands

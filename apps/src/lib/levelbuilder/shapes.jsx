@@ -69,6 +69,12 @@ export const activityShape = PropTypes.shape({
   activitySections: PropTypes.arrayOf(activitySectionShape)
 });
 
+export const resourceShape = PropTypes.shape({
+  key: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  url: PropTypes.string.isRequired
+});
+
 export const levelShapeForScript = PropTypes.shape({
   position: PropTypes.number,
   activeId: PropTypes.number,
