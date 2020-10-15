@@ -52,7 +52,8 @@ $(document).ready(function() {
   if (hocEventLocationElement) {
     const mapboxGeocoder = new MapboxGeocoder({
       accessToken: mapboxgl.accessToken,
-      types: 'address',
+      types:
+        'address,country,region,place,postcode,locality,district,neighborhood',
       placeholder: 'Event location address'
     });
     mapboxGeocoder.addTo('#hoc-event-location-selector');

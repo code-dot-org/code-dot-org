@@ -19,6 +19,7 @@
 #  index_pd_post_course_surveys_on_user_form_year_course  (user_id,form_id,year,course) UNIQUE
 #  index_pd_post_course_surveys_on_user_id                (user_id)
 #
+
 # NOTE: This is a legacy model and no new surveys should be added here. All new surveys should use Foorm.
 # This class is no longer actively synced via our JotForm cron jobs (fill_jotform_placeholders,
 # sync_jotforms, process_jotform_data).
