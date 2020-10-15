@@ -8,7 +8,8 @@ import _ from 'lodash';
 
 const styles = {
   container: {
-    position: 'absolute',
+    position: 'relative',
+    margin: '0 auto',
     userSelect: 'none'
   },
   containerReact: {
@@ -70,11 +71,13 @@ class FishView extends React.Component {
       appHeight: this.codeAppRef.offsetHeight
     });
 
-    const resizeDebounceWaitTime = 100;
-    window.addEventListener(
-      'resize',
-      _.debounce(this.onResize, resizeDebounceWaitTime)
-    );
+    const resizeThrottleWaitTime = 100;
+    this.resizeListener = _.throttle(this.onResize, resizeThrottleWaitTime);
+    window.addEventListener('resize', this.resizeListener);
+    if (window.visualViewport) {
+      window.visualViewport.addEventListener('resize', this.resizeListener);
+      window.visualViewport.addEventListener('scroll', this.resizeListener);
+    }
   }
 
   onResize = () => {
@@ -105,7 +108,7 @@ class FishView extends React.Component {
     const maxAppWidth = 1280;
 
     // Leave space above the small footer.
-    const reduceAppWidth = 36;
+    const reduceAppHeight = 36;
 
     // Specify a baseline font at a baseline width.
     const baselineFontSize = 18;
@@ -118,7 +121,7 @@ class FishView extends React.Component {
 
     // Leave space above the small footer.
     const maxContainerHeight =
-      Math.min(this.state.appHeight, this.state.windowHeight) - reduceAppWidth;
+      Math.min(this.state.appHeight, this.state.windowHeight) - reduceAppHeight;
 
     if (maxContainerWidth / maxContainerHeight > aspectRatio) {
       // Constrain by height.
@@ -139,9 +142,6 @@ class FishView extends React.Component {
     // The tutorial shows 18px fonts when 930px wide.
     const baseFontSize = (baselineFontSize * containerWidth) / baselineAppWidth;
 
-    // Center the container.
-    const containerLeft = (this.state.appWidth - containerWidth) / 2;
-
     return (
       <StudioAppWrapper>
         <CodeWorkspaceContainer topMargin={0}>
@@ -150,8 +150,7 @@ class FishView extends React.Component {
             style={{
               ...styles.container,
               width: Math.round(containerWidth),
-              height: Math.round(containerHeight),
-              left: containerLeft
+              height: Math.round(containerHeight)
             }}
             dir="ltr"
           >
