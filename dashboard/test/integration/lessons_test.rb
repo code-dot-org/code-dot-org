@@ -4,9 +4,15 @@ class LessonsTest < ActionDispatch::IntegrationTest
   setup do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
+    @script = create(
+      :script,
+      name: 'unit-1'
+    )
+
     @lesson = create(
       :lesson,
       name: 'lesson display name',
+      script_id: @script.id,
       properties: {
         overview: 'lesson overview',
         student_overview: 'student overview'
@@ -56,6 +62,7 @@ class LessonsTest < ActionDispatch::IntegrationTest
     assert_select 'script[data-lesson]', 1
     lesson_data = JSON.parse(css_select('script[data-lesson]').first.attribute('data-lesson').to_s)
     assert_equal 'lesson overview', lesson_data['overview']
+    assert_equal '/s/unit-1', lesson_data['unit']['link']
   end
 
   test 'lesson edit page contains expected data' do

@@ -620,7 +620,9 @@ export const emptyActivitySection = {
   tips: [],
   remarks: false,
   slide: false,
-  text: ''
+  text: '',
+  scriptLevels: [],
+  position: 1
 };
 
 export const emptyActivity = {
