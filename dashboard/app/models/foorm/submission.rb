@@ -69,7 +69,7 @@ class Foorm::Submission < ActiveRecord::Base
           question_answer_pairs[question_id] = choices[answer]
         when 'multiSelect'
           choices = question_details[:choices]
-          question_answer_pairs[question_id] = answer.map {|selected| choices[selected]}.sort.join(', ')
+          question_answer_pairs[question_id] = answer.map {|selected| choices[selected]}.compact.sort.join(', ')
         end
       else
         # For any questions in the submission that aren't in the form,
@@ -96,7 +96,7 @@ class Foorm::Submission < ActiveRecord::Base
     # Return blank array if this is a facilitator-specific response,
     # we have no workshop metadata,
     # or we have no user associated with the workshop metadata.
-    return [] if workshop_metadata.facilitator_specific? || workshop_metadata&.user.nil?
+    return [] if workshop_metadata&.facilitator_specific? || workshop_metadata&.user.nil?
 
     associated_submission_metadatas = workshop_metadata.
       class.
