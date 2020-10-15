@@ -43,15 +43,16 @@ class Foorm::Submission < ActiveRecord::Base
     # (for non-free response questions).
     # See FoormParser for the how this is structured.
     general_parsed_questions = form.parsed_questions[:general][form.key]
-    facilitator_parsed_questions = form.parsed_questions[:facilitator][form.key]
+    facilitator_parsed_questions = form.parsed_questions[:facilitator] && form.parsed_questions[:facilitator][form.key]
+
+    parsed_questions = facilitator_parsed_questions ?
+                         general_parsed_questions.merge(facilitator_parsed_questions) :
+                         general_parsed_questions
 
     parsed_answers.each do |question_id, answer|
-      if general_parsed_questions.keys.include?(question_id) ||
-        facilitator_parsed_questions.keys.include?(question_id)
+      if parsed_questions.keys.include?(question_id)
 
-        question_details = general_parsed_questions.keys.include?(question_id) ?
-          general_parsed_questions[question_id] :
-          facilitator_parsed_questions[question_id]
+        question_details = parsed_questions[question_id]
 
         case question_details[:type]
         when 'matrix'

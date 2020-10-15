@@ -84,6 +84,32 @@ class Foorm::FormTest < ActiveSupport::TestCase
     refute invalid_form.valid?
   end
 
+  test 'submissions_to_csv formats submission of a form with only general questions' do
+    form = create :foorm_form_summer_pre_survey
+    workshop = create(:csd_summer_workshop)
+    user = create(:teacher)
+    general_submission_workshop_metadata = create(:day_0_workshop_foorm_submission, :answers_low, user: user, pd_workshop: workshop)
+
+    general_submission = general_submission_workshop_metadata.foorm_submission
+
+    CSV.stubs(:open)
+
+    other_general_headers = {
+      'user_id' => 'user_id',
+      'pd_workshop_id' => 'pd_workshop_id',
+      'pd_session_id' => 'pd_session_id'
+    }
+
+    expected_headers = other_general_headers.
+      merge(form.readable_questions[:general]).
+      merge(form.readable_questions_with_facilitator_number(1))
+
+    expected_response = general_submission.formatted_answers
+
+    assert_equal [expected_headers.values, expected_response.values_at(*expected_headers.keys)],
+      form.submissions_to_csv('test.csv')
+  end
+
   test 'submissions_to_csv formats submission of general and facilitator specific questions' do
     form = create :foorm_form_csf_intro_post_survey
     workshop = create(:csf_101_workshop)
