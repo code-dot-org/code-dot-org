@@ -4,13 +4,7 @@
 /* eslint-env node */
 const svmjs = require("svm");
 import { store } from "./index.js";
-import {
-  setPrediction,
-  getUniqueOptions,
-  getCategoricalColumns,
-  getSelectedCategoricalColumns,
-  setFeatureNumberKey
-} from "./redux";
+import { setPrediction } from "./redux";
 
 export default class SVMTrainer {
   constructor() {
