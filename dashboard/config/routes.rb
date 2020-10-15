@@ -315,6 +315,7 @@ Dashboard::Application.routes.draw do
 
   resources :lessons, only: [:show, :edit, :update]
 
+  resources :resources, only: [:create]
   get '/resourcesearch/:q/:limit', to: 'resources#search', defaults: {format: 'json'}
 
   get '/beta', to: redirect('/')
