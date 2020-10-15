@@ -50,12 +50,18 @@ class FishView extends React.Component {
 
     this.codeAppRef = document.getElementById('codeApp');
 
+    // We have seen on Android devies that window.innerHeight will always be the
+    // same whether in landscape or portrait orientation.  Given that we tell
+    // users to rotate to landscape, adjust to match what we see on iOS devices.
+    const windowWidth = Math.max(window.innerWidth, window.innerHeight);
+    const windowHeight = Math.min(window.innerWidth, window.innerHeight);
+
     // Set these values so that the first render can work with them.
     // Note that appWidth/Height are the dimensions of the "codeApp" div
     // which is the space allocated for an app.
     this.state = {
-      windowWidth: window.innerWidth,
-      windowHeight: window.innerHeight,
+      windowWidth,
+      windowHeight,
       appWidth: this.codeAppRef.offsetWidth,
       appHeight: this.codeAppRef.offsetHeight
     };
@@ -64,9 +70,12 @@ class FishView extends React.Component {
   componentDidMount() {
     this.props.onMount();
 
+    const windowWidth = Math.max(window.innerWidth, window.innerHeight);
+    const windowHeight = Math.min(window.innerWidth, window.innerHeight);
+
     this.setState({
-      windowWidth: window.innerWidth,
-      windowHeight: window.innerHeight,
+      windowWidth,
+      windowHeight,
       appWidth: this.codeAppRef.offsetWidth,
       appHeight: this.codeAppRef.offsetHeight
     });
@@ -81,8 +90,8 @@ class FishView extends React.Component {
   }
 
   onResize = () => {
-    const windowWidth = window.innerWidth;
-    const windowHeight = window.innerHeight;
+    const windowWidth = Math.max(window.innerWidth, window.innerHeight);
+    const windowHeight = Math.min(window.innerWidth, window.innerHeight);
 
     // Check that the window dimensions have actually changed to avoid
     // unnecessary event-processing on iOS Safari.
