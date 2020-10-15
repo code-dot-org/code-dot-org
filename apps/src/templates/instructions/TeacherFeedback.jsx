@@ -11,7 +11,6 @@ import $ from 'jquery';
 import RubricField from './RubricField';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {CommentArea} from './CommentArea';
-import TimeAgo from '@cdo/apps/templates/TimeAgo';
 
 const styles = {
   tabAreaHidden: {
@@ -81,6 +80,9 @@ const styles = {
   },
   form: {
     margin: 0
+  },
+  timestamp: {
+    fontFamily: '"Gotham 7r", sans-serif'
   }
 };
 
@@ -240,7 +242,7 @@ export class TeacherFeedback extends Component {
     } else if (todayM === m && todayY === y && todayD === d + 1) {
       return i18n.yesterday();
     } else {
-      return <TimeAgo dateString={feedbackSeen} />;
+      return moment(feedbackSeen).format('l');
     }
   }
 
@@ -256,7 +258,7 @@ export class TeacherFeedback extends Component {
           />
         )}
         {`${message} `}
-        {time && <strong>{time}</strong>}
+        {time && <span style={styles.timestamp}>{time}</span>}
       </div>
     );
   }
