@@ -1,7 +1,7 @@
 class LessonsController < ApplicationController
   load_and_authorize_resource
 
-  before_action :require_levelbuilder_mode, except: [:show]
+  before_action :require_levelbuilder_mode_or_test_env, except: [:show]
   before_action :disallow_legacy_script_levels, only: [:edit, :update]
 
   # Script levels which are not in activity sections will not show up on the
@@ -20,11 +20,15 @@ class LessonsController < ApplicationController
   # GET /lessons/1
   def show
     @lesson_data = {
-      title: @lesson.localized_title,
-      overview: @lesson.overview,
+      unit: {
+        displayName: @lesson.script.localized_title,
+        link: @lesson.script.link
+      },
+      displayName: @lesson.localized_title,
+      overview: @lesson.overview || '',
       announcements: @lesson.announcements,
-      purpose: @lesson.purpose,
-      preparation: @lesson.preparation
+      purpose: @lesson.purpose || '',
+      preparation: @lesson.preparation || ''
     }
   end
 
@@ -35,7 +39,9 @@ class LessonsController < ApplicationController
 
   # PATCH/PUT /lessons/1
   def update
-    @lesson.update!(lesson_params)
+    resources = (lesson_params['resources'] || []).map {|key| Resource.find_by_key(key)}
+    @lesson.resources = resources.compact
+    @lesson.update!(lesson_params.except(:resources))
     @lesson.update_activities(JSON.parse(params[:activities])) if params[:activities]
 
     redirect_to lesson_path(id: @lesson.id)
@@ -62,9 +68,11 @@ class LessonsController < ApplicationController
       :lockable,
       :purpose,
       :preparation,
-      :announcements
+      :announcements,
+      :resources
     )
     lp[:announcements] = JSON.parse(lp[:announcements]) if lp[:announcements]
+    lp[:resources] = JSON.parse(lp[:resources]) if lp[:resources]
     lp
   end
 end
