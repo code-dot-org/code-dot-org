@@ -16,13 +16,17 @@ class ResourcesController < ApplicationController
         assessment: params[:assessment],
         type: params[:type],
         audience: params[:audience],
-        printable_student_handout: params[:include_in_pdf]
+        include_in_pdf: params[:include_in_pdf]
       }
     )
-    if resource.save
+    if resource.save!
       render json: resource.attributes
     else
-      render json: {status: 422}
+      render json: {status: 500, error: resource.errors.full_message.to_json}
     end
+  end
+
+  def resource_params
+    params.permit(:key, :name, :url, :downloadUrl, :assessment, :type, :audence, :include_in_pdf)
   end
 end
