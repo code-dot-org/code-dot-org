@@ -264,13 +264,14 @@ class Foorm::Form < ActiveRecord::Base
     # As of September 2020, the keys here are :general and :facilitator.
     parsed_questions.each do |questions_section, questions_content|
       questions[questions_section] = {}
+      next if questions_content.nil_or_empty?
 
       questions_content[key].each do |question_id, question_details|
         if question_details[:type] == 'matrix'
           matrix_questions = question_details[:rows]
           matrix_questions.each do |matrix_question_id, matrix_question_text|
-            key = self.class.get_matrix_question_id(question_id, matrix_question_id)
-            questions[questions_section][key] = question_details[:title] + ' >> ' + matrix_question_text
+            matrix_key = self.class.get_matrix_question_id(question_id, matrix_question_id)
+            questions[questions_section][matrix_key] = question_details[:title] + ' >> ' + matrix_question_text
           end
         else
           questions[questions_section][question_id] = question_details[:title]
