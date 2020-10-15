@@ -6,8 +6,12 @@ class LessonsControllerTest < ActionController::TestCase
   setup do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
+    @script = create :script
+    lesson_group = create :lesson_group, script: @script
     @lesson = create(
       :lesson,
+      script: @script,
+      lesson_group: lesson_group,
       name: 'lesson display name',
       properties: {
         overview: 'lesson overview',
@@ -404,5 +408,9 @@ class LessonsControllerTest < ActionController::TestCase
     assert_equal [sl_ids[0], sl_ids[2]], section.script_levels.map(&:id)
     assert_equal ['my-level-1'], section.script_levels.first.levels.map(&:name)
     assert_equal ['my-level-3'], section.script_levels.last.levels.map(&:name)
+
+    # sanity check that chapter and position values have been updated
+    assert_equal [1, 2], section.script_levels.map(&:chapter)
+    assert_equal [1, 2], section.script_levels.map(&:position)
   end
 end

@@ -983,6 +983,33 @@ class Script < ActiveRecord::Base
     end
   end
 
+  # Script levels unfortunately have 3 position values:
+  # 1. chapter: position within the Script
+  # 2. position: position within the Lesson
+  # 3. activity_section_position: position within the ActivitySection.
+  # This method uses activity_section_position as the source of truth to set the
+  # values of position and chapter on all script levels in the script.
+  def fix_script_level_positions
+    reload
+    if script_levels.reject(&:activity_section).any?
+      raise "cannot fix position of legacy script levels"
+    end
+
+    chapter = 0
+    lessons.each do |lesson|
+      position = 0
+      lesson.lesson_activities.each do |activity|
+        activity.activity_sections.each do |section|
+          section.script_levels.each do |sl|
+            sl.chapter = (chapter += 1)
+            sl.position = (position += 1)
+            sl.save!
+          end
+        end
+      end
+    end
+  end
+
   # Clone this script, appending a dash and the suffix to the name of this
   # script. Also clone all the levels in the script, appending an underscore and
   # the suffix to the name of each level. Mark the new script as hidden, and
