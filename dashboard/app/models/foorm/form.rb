@@ -231,11 +231,11 @@ class Foorm::Form < ActiveRecord::Base
           headers.merge! facilitator_headers
         end
       end
-      # Add answers + facilitator answers to an array.
+      # Add combined general and facilitator answers to an array
       parsed_answers << answers
     end
 
-    # Now we know all the headers, fill in comma_separated_submissions with answers for all headers (filling in with
+    # Now we know all the headers, create comma_separated_submissions with answers for all headers (filling in with
     # nil where necessary)
     comma_separated_submissions = []
     parsed_answers.each {|answers| comma_separated_submissions << answers.values_at(*headers.keys)}
