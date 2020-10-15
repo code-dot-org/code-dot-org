@@ -47,6 +47,7 @@ cron:
 - dashboard.levels
 - dashboard.script_levels
 - dashboard.levels_script_levels
+- dashboard.parent_levels_child_levels
 - dashboard.courses
 - dashboard.course_scripts
 - dashboard.survey_results
@@ -108,6 +109,8 @@ cron-user-hierarchy-pii:
 - dashboard.studio_people
 - dashboard.teacher_profiles
 - dashboard.users
+    remove_column:
+        - encrypted_password
 - dashboard.user_geos
 - dashboard.user_school_infos
 cron-user-levels:
