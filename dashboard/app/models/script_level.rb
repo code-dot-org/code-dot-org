@@ -445,6 +445,7 @@ class ScriptLevel < ActiveRecord::Base
   def summarize_for_edit
     summary = summarize
     summary[:id] = id
+    summary[:activitySectionPosition] = activity_section_position
     summary[:levels] = levels.map do |level|
       {
         id: level.id,

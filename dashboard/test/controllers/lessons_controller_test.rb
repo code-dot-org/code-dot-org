@@ -317,4 +317,64 @@ class LessonsControllerTest < ActionController::TestCase
     refute script_level.bonus
     assert_equal ['level-to-add'], script_level.levels.map(&:name)
   end
+
+  test 'remove script level via lesson update' do
+    sign_in @levelbuilder
+
+    activity = @lesson.lesson_activities.create(
+      name: 'activity name',
+      position: 1,
+      seeding_key: 'activity-key'
+    )
+    section = activity.activity_sections.create(
+      name: 'section name',
+      position: 1,
+      seeding_key: 'section-key'
+    )
+    [1, 2, 3].each do |i|
+      section.script_levels.create(
+        position: i,
+        activity_section_position: i,
+        lesson: @lesson,
+        script: @lesson.script,
+        levels: [create(:level, name: "my-level-#{i}")]
+      )
+    end
+    sl_ids = section.script_levels.map(&:id)
+
+    script_levels_data = section.script_levels.map(&:summarize_for_edit)
+    assert_equal 3, script_levels_data.count
+
+    @update_params['activities'] = [
+      {
+        id: activity.id,
+        name: 'activity name',
+        position: 1,
+        activitySections: [
+          {
+            id: section.id,
+            name: 'section name',
+            position: 1,
+            scriptLevels: [
+              script_levels_data[0],
+              script_levels_data[2]
+            ]
+          }
+        ]
+      }
+    ].to_json
+
+    put :update, params: @update_params
+    assert_redirected_to "/lessons/#{@lesson.id}"
+
+    @lesson.reload
+    assert_equal activity, @lesson.lesson_activities.first
+    assert_equal section, activity.activity_sections.first
+
+    section.reload
+    assert_equal 2, section.script_levels.count
+    assert_equal [sl_ids[0], sl_ids[2]], section.script_levels.map(&:id)
+    assert_equal ['my-level-1'], section.script_levels.first.levels.map(&:name)
+    assert_equal ['my-level-3'], section.script_levels.last.levels.map(&:name)
+  end
 end

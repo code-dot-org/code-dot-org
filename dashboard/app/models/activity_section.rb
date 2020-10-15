@@ -57,11 +57,8 @@ class ActivitySection < ApplicationRecord
   # @param [Array<Hash>] script_levels_data - Data representing script levels
   #   belonging to this activity section.
   def update_script_levels(script_levels_data)
-    # We can't assign directly to self.script_levels here like we do in other
-    # places, because we want to preserve any script levels which exist in the
-    # lesson but haven't been associated with an activity section yet.
-
-    script_levels_data.each do |sl_data|
+    # use assignment to delete any missing script levels.
+    self.script_levels = script_levels_data.map do |sl_data|
       sl = fetch_script_level(sl_data)
       sl.update!(
         position: sl_data['position'] || 0,
@@ -70,8 +67,9 @@ class ActivitySection < ApplicationRecord
         bonus: !!sl_data['bonus'],
         challenge: !!sl_data['challenge'],
       )
-      sl.update_levels(sl_data['levels'])
       # TODO(dave): check and update script level variants
+      sl.update_levels(sl_data['levels'] || [])
+      sl
     end
   end
 
@@ -79,9 +77,9 @@ class ActivitySection < ApplicationRecord
 
   def fetch_script_level(sl_data)
     if sl_data['id']
-      sl = script_levels.find(sl_data['id'])
+      script_level = script_levels.find(sl_data['id'])
       raise "ScriptLevel id #{sl_data['id']} not found in ActivitySection id #{id}" unless script_level
-      return sl
+      return script_level
     end
 
     script_levels.create(
