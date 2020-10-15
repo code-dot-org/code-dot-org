@@ -19,8 +19,6 @@ export default class SVMTrainer {
 
   initTrainingState() {
     this.svm = new svmjs.SVM();
-    const state = store.getState();
-    this.state = state;
   }
 
   /* Builds a hash that maps the options in the label column to -1 and 1,
@@ -29,10 +27,10 @@ export default class SVMTrainer {
   @param option from label column
   @return 1 or -1
   */
-  convertLabel = labelOption => {
+  convertLabel = (labelOption, key) => {
     const converter = {};
-    converter[this.state.trainingLabels[0]] = 1;
-    converter[this.state.trainingLabels[1]] = -1;
+    converter[key[0]] = -1;
+    converter[key[1]] = 1;
     return converter[labelOption];
   };
 
@@ -41,8 +39,11 @@ export default class SVMTrainer {
   }
 
   addTrainingData() {
-    const trainingExamples = this.state.trainingExamples;
-    const trainingLabels = this.state.trainingLabels.map(this.convertLabel);
+    const state = store.getState();
+    const trainingExamples = state.trainingExamples;
+    const trainingLabels = state.trainingLabels.map(labelOption =>
+      this.convertLabel(labelOption, state.featureNumberKey[state.labelColumn])
+    );
     this.train(trainingExamples, trainingLabels);
   }
 
