@@ -509,7 +509,8 @@ class Lesson < ActiveRecord::Base
         versionYear: lesson.script.version_year,
         lockable: lesson.lockable,
         relativePosition: lesson.relative_position,
-        lessonEditUrl: edit_lesson_path(id: lesson.id)
+        id: lesson.id,
+        editUrl: edit_lesson_path(id: lesson.id)
       }
     end
   end

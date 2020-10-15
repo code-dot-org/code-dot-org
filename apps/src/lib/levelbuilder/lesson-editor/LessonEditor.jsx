@@ -27,6 +27,19 @@ const styles = {
   },
   dropdown: {
     margin: '0 6px'
+  },
+  relatedLessonHeader: {
+    fontSize: 18,
+    marginTop: 15,
+    marginBottom: 10
+  },
+  relatedLessonContainer: {
+    marginBottom: -15
+  },
+  relatedLessonLink: {
+    marginRight: 30,
+    marginBottom: 15,
+    display: 'inline-block'
   }
 };
 
@@ -42,8 +55,18 @@ export default class LessonEditor extends Component {
     purpose: PropTypes.string,
     preparation: PropTypes.string,
     announcements: PropTypes.arrayOf(announcementShape),
-    resources: PropTypes.arrayOf(resourceShape)
+    resources: PropTypes.arrayOf(resourceShape),
+    relatedLessons: PropTypes.arrayOf(PropTypes.object).isRequired
   };
+
+  getRelatedLessonText(lesson) {
+    const year = lesson.versionYear;
+    const type = lesson.lockable ? 'Lockable' : 'Lesson';
+
+    return `${lesson.scriptTitle} - ${year} - ${type} ${
+      lesson.relativePosition
+    }`;
+  }
 
   render() {
     const {
@@ -56,7 +79,8 @@ export default class LessonEditor extends Component {
       assessment,
       purpose,
       preparation,
-      announcements
+      announcements,
+      relatedLessons
     } = this.props;
     return (
       <div style={styles.editor}>
@@ -65,6 +89,24 @@ export default class LessonEditor extends Component {
           Title
           <input name="name" defaultValue={displayName} style={styles.input} />
         </label>
+
+        {relatedLessons.length > 0 && (
+          <div style={styles.relatedLessonContainer}>
+            <h2 style={styles.relatedLessonHeader}>Update Similar Lessons</h2>
+            <p>
+              The following lessons are similar to this one. You may want to
+              make updates to them as well. Saving this lesson will not update
+              other lessons.
+            </p>
+            {relatedLessons.map(lesson => (
+              <span key={lesson.id} style={styles.relatedLessonLink}>
+                <a href={lesson.editUrl} target="_blank">
+                  {this.getRelatedLessonText(lesson)}
+                </a>
+              </span>
+            ))}
+          </div>
+        )}
 
         <CollapsibleEditorSection title="Lesson Settings">
           <label>
