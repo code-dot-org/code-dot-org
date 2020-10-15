@@ -3,6 +3,8 @@ import sinon from 'sinon';
 import {TestResults} from '@cdo/apps/constants';
 import {LevelStatus, LevelKind} from '@cdo/apps/util/sharedConstants';
 import {ViewType, setViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import clientState from '@cdo/apps/code-studio/clientState';
+import {expect} from '../../util/reconfiguredChai';
 import reducer, {
   initProgress,
   isPerfect,
@@ -24,6 +26,7 @@ import reducer, {
   lessonExtrasUrl,
   setStageExtrasEnabled,
   getLevelResult,
+  useDbProgress,
   __testonly__
 } from '@cdo/apps/code-studio/progressRedux';
 
@@ -1038,7 +1041,7 @@ describe('progressReduxTest', () => {
             id: 1,
             display_name: 'Lesson Group',
             description: 'This is a lesson group',
-            big_questions: ['Why?', 'Who?']
+            big_questions: ' - Why'
           }
         ],
         stages: [fakeLesson('Lesson Group', 'lesson1', 1)],
@@ -1059,7 +1062,7 @@ describe('progressReduxTest', () => {
             id: 1,
             display_name: 'Lesson Group',
             description: 'This is a lesson group',
-            big_questions: ['Why?']
+            big_questions: 'Why?'
           }
         ],
         stages: [
@@ -1453,6 +1456,14 @@ describe('progressReduxTest', () => {
         assert.deepEqual(expectedDispatchActions, getDispatchActions());
         assert.deepEqual(responseData, serverResponseData);
       });
+    });
+  });
+
+  describe('useDbProgress', () => {
+    it('clears the client progress', () => {
+      var clearProgressSpy = sinon.spy(clientState, 'clearProgress');
+      useDbProgress()(sinon.stub());
+      expect(clearProgressSpy).to.have.been.calledOnce;
     });
   });
 });

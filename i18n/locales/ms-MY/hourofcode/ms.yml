@@ -6,29 +6,29 @@ ms:
   front_title: Sertai acara pembelajaran yang terbesar dalam sejarah, 07-13 Disember
     2016
   coming_soon: akan datang
-  campaign_date_start_short: 4 Dis
+  campaign_date_start_short: 7 Dis
   campaign_date_start_long: 4 Disember
-  campaign_date_short: 4 Dis.-10
-  campaign_date_full: Disember 4-10
-  campaign_date_year: '2017'
-  campaign_date_full_year: Disember 4-10, 2017
+  campaign_date_short: 7 Dis.-13
+  campaign_date_full: Disember 7-13
+  campaign_date_year: '2020'
+  campaign_date_full_year: Disember 7-13, 2020
   latam_campaign_date_start_short: Oct. 1
   latam_campaign_date_start_long: October 1
   latam_campaign_date_short: Oct. 1 - Dec. 18
   latam_campaign_date_full: October 1 - December 18
-  latam_campaign_date_year: '2017'
+  latam_campaign_date_year: '2020'
   latam_campaign_date_full_year: October 1, 2020 - December 18, 2020
   europe_campaign_date_start_short: Oct. 10
   europe_campaign_date_start_long: October 10
   europe_campaign_date_short: Oct. 10-25
   europe_campaign_date_full: October 10-25
-  europe_campaign_date_year: '2017'
+  europe_campaign_date_year: '2020'
   europe_campaign_date_full_year: October 10-25, 2020
   africa_campaign_date_start_short: Oct. 1
   africa_campaign_date_start_long: October 1
   africa_campaign_date_short: Oct. 1-31
   africa_campaign_date_full: October 1-31
-  africa_campaign_date_year: '2017'
+  africa_campaign_date_year: '2020'
   africa_campaign_date_full_year: October 1-31, 2020
   hoc2019_header: Pelajari sains komputer. Ubah dunia.
   hoc2019_header_line1_mobile: Pelajari sains komputer.
@@ -510,6 +510,7 @@ ms:
     kami
   signup_event_type_in_school: Di sekolah
   signup_event_type_out_of_school: Di luar sekolah
+  signup_event_type_at_home: Home
   signup_submit_census_label: Hantar
   signup_submit_census_error_message: Maaf daripada pihak kami. Satu ralat telah berlaku.
     Sila cuba hantarkan borang lagi sekali.

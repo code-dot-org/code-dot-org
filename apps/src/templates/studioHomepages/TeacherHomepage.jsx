@@ -45,7 +45,8 @@ export class UnconnectedTeacherHomepage extends Component {
     teacherEmail: PropTypes.string,
     schoolYear: PropTypes.number,
     specialAnnouncement: shapes.specialAnnouncement,
-    beginGoogleImportRosterFlow: PropTypes.func
+    beginGoogleImportRosterFlow: PropTypes.func,
+    mapboxAccessToken: PropTypes.string
   };
 
   state = {
@@ -176,8 +177,13 @@ export class UnconnectedTeacherHomepage extends Component {
       specialAnnouncement
     } = this.props;
 
-    // Show the regular announcement/notification for now.
-    const showAnnouncement = true;
+    // Whether we show the regular announcement/notification
+    const showAnnouncement = false;
+
+    // Whether we show the fallback (translatable) SpecialAnnouncement if there is no
+    // specialAnnouncement passed in as a prop. Currently we only show the fallback for
+    // English-speaking teachers.
+    const showFallbackSpecialAnnouncement = true;
 
     // Verify background image works for both LTR and RTL languages.
     const backgroundUrl = '/shared/images/banners/teacher-homepage-hero.jpg';
@@ -212,7 +218,15 @@ export class UnconnectedTeacherHomepage extends Component {
               <div style={styles.clear} />
             </div>
           )}
-          {isEnglish && <SpecialAnnouncement isTeacher={true} />}
+          {!showAnnouncement && <br />}
+          {/* The current fallback announcement is for English-speaking teachers only. This announcement type
+          is designed to be translatable and in the future can be used for non-English teachers as a fallback
+          to the marketing-configured announcement. */}
+          {showFallbackSpecialAnnouncement &&
+            isEnglish &&
+            !specialAnnouncement && (
+              <SpecialAnnouncement isEnglish={isEnglish} isTeacher={true} />
+            )}
           {this.state.showCensusBanner && (
             <div>
               <CensusTeacherBanner
@@ -237,6 +251,7 @@ export class UnconnectedTeacherHomepage extends Component {
                 onInClassChange={event =>
                   this.handleCensusBannerInClassChange(event)
                 }
+                mapboxAccessToken={this.props.mapboxAccessToken}
               />
               <br />
             </div>

@@ -10,7 +10,7 @@ az:
   campaign_date_short: 4-10 dek.
   campaign_date_full: 4-10 dekabr
   campaign_date_year: '2017'
-  campaign_date_full_year: 4-10 dekabr 2017
+  campaign_date_full_year: 7-13 dekabr 2020
   latam_campaign_date_start_short: Oct. 1
   latam_campaign_date_start_long: October 1
   latam_campaign_date_short: Oct. 1 - Dec. 18
@@ -497,6 +497,7 @@ az:
   signup_send_posters_address_placeholder: Bu ünvan bizim xəritədə paylaşdırılmayacaq
   signup_event_type_in_school: Məktəbdə
   signup_event_type_out_of_school: Məktəbdən kənar
+  signup_event_type_at_home: Home
   signup_submit_census_label: Göndər
   signup_submit_census_error_message: We're sorry. An error occurred. Please try submitting
     the form again.

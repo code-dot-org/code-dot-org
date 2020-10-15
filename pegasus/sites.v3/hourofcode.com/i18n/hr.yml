@@ -11,7 +11,7 @@ hr:
   campaign_date_short: 7. - 13. prosinca
   campaign_date_full: 7. - 13. prosinca
   campaign_date_year: '2016.'
-  campaign_date_full_year: 5.-11. prosinca, 2016.
+  campaign_date_full_year: 7.-13. prosinca, 2020.
   latam_campaign_date_start_short: Oct. 1
   latam_campaign_date_start_long: October 1
   latam_campaign_date_short: Oct. 1 - Dec. 18
@@ -493,6 +493,7 @@ hr:
     karti
   signup_event_type_in_school: U školi
   signup_event_type_out_of_school: Izvan škole
+  signup_event_type_at_home: Home
   signup_submit_census_label: Submit
   signup_submit_census_error_message: We're sorry. An error occurred. Please try submitting
     the form again.

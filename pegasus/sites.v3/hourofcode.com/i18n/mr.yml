@@ -10,7 +10,7 @@ mr:
   campaign_date_short: 4-10 डिसेंबर
   campaign_date_full: 4-10 डिसेंबर
   campaign_date_year: '2017'
-  campaign_date_full_year: 4-10 डिसेंबर 2017
+  campaign_date_full_year: 7-13 डिसेंबर 2020
   latam_campaign_date_start_short: Oct. 1
   latam_campaign_date_start_long: October 1
   latam_campaign_date_short: Oct. 1 - Dec. 18
@@ -504,6 +504,7 @@ mr:
   signup_send_posters_address_placeholder: हा पत्ता आमच्या नकाशावर दाखवला जाणार नाही
   signup_event_type_in_school: शाळेमध्ये
   signup_event_type_out_of_school: शाळेच्या बाहेर
+  signup_event_type_at_home: Home
   signup_submit_census_label: पाठवा
   signup_submit_census_error_message: आम्ही दिलगीर आहोत. एक समस्या आली. कृपया फॉर्म
     पुन्हा सबमिट करण्याचा प्रयत्न करा.

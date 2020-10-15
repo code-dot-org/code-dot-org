@@ -10,7 +10,7 @@ fi:
   campaign_date_short: Dec. 7-13
   campaign_date_full: Joulukuu 4-10
   campaign_date_year: '2020'
-  campaign_date_full_year: Joulukuu 4-10, 2017
+  campaign_date_full_year: Joulukuu 7-13, 2020
   latam_campaign_date_start_short: Oct. 1
   latam_campaign_date_start_long: October 1
   latam_campaign_date_short: Oct. 1 - Dec. 18
@@ -490,6 +490,7 @@ fi:
   signup_send_posters_address_placeholder: Tätä osoitetta ei jaeta kartassamme
   signup_event_type_in_school: Koulussa
   signup_event_type_out_of_school: Koulun ulkopuolella
+  signup_event_type_at_home: Home
   signup_submit_census_label: Submit
   signup_submit_census_error_message: We're sorry. An error occurred. Please try submitting
     the form again.

@@ -10475,6 +10475,8 @@ zh-CN:
               display_name: 项目
             required:
               display_name: 概览
+            optional_stages:
+              display_name: 可选阶段
           lessons:
             Variables Explore:
               name: 变量探索
@@ -10546,6 +10548,10 @@ zh-CN:
               name: 项目 - 决定制作者应用 第 3 部分
             "[OLD] Variables Make":
               name: "[OLD]使用变量"
+            "[OLD] Conditionals Make":
+              name: "[OLD]条件语句创造成功"
+            "[OLD] Functions Make":
+              name: "[OLD]函数创造"
         csp1-2019:
           title: 计算机科学原理单元 1 ：互联网 ('18-'19)
           description: 本单元探讨了在计算机上表示数字信息和在人与计算设备之间传输数据所产生的技术挑战和问题。然后，探讨了互联网的结构和设计以及这些设计决定的影响。
@@ -11703,6 +11709,8 @@ zh-CN:
               display_name: 项目
             required:
               display_name: 概览
+            optional_stages:
+              display_name: 可选阶段
           lessons:
             new stage:
               name: 新的阶段
@@ -11790,6 +11798,12 @@ zh-CN:
               name: 第 5 单元教师问卷
             'Lesson 18: Assessment Day':
               name: '第 18 单元：评估日'
+            "[OLD] Lists Make":
+              name: "[OLD]列表创造"
+            "[OLD] Loops Make":
+              name: "[OLD]循环创造"
+            "[OLD] Traversals Make":
+              name: "[OLD] 遍历创造"
         fit2019-novice:
           title: 夏季工场的新手思考 2019
           description_audience: 6 - 12 培训中的新主持人
@@ -12998,6 +13012,8 @@ zh-CN:
               display_name: 库
             required:
               display_name: 概览
+            optional_stages:
+              display_name: 可选阶段
           lessons:
             Parameters and Returns Explore:
               name: 参数和返回值探索
@@ -13051,6 +13067,8 @@ zh-CN:
               name: 第 7 单元教师问卷
             'Lesson 11: Assessment Day':
               name: '第 11 单元：评估日'
+            "[OLD] Parameters and Return Make":
+              name: "[OLD]参数和返回值制作"
         csp8-pilot:
           title: 计算机科学原理 第 8 单元 试用 - 创建表演任务 准备
           lessons:
@@ -13241,9 +13259,14 @@ zh-CN:
               display_name: '第 2 章︰ 样式和 CSS'
             cspSurvey:
               display_name: 调查
+            csd2_1v2:
+              display_name: '第一单元：创造网页'
+            csd2_2v2:
+              display_name: '第二章：多界面网站'
           lessons:
             Exploring Web Pages:
               name: 探索网页
+              description_student: "**今日问题：人们为什么创造网页？**\\r\n\\r\n这节课涵盖了网页对于创作者和使用者各有什么作用。这节课探讨几个网站及其是如何对它的创作者和使用者有益的。"
             Intro to HTML:
               name: HTML介绍
               description_student: "本课将介绍 HTML 作为解决如何将网站的内容和结构与计算机进行通信问题的方法。本课从一个简短的线下活动开始, 演示了有效交流网页结构的挑战。该课堂在网络实验室中查看 HTML页面, 并讨论 HTML 标记如何帮助解决此问题, 然后使用 HTML 编写该单元的第一个网页。"
@@ -13296,8 +13319,22 @@ zh-CN:
               name: 项目后测试
             CS Discoveries Post Course survey:
               name: 计算机科学发现课后问卷
+            'Mini-Project: HTML Web Page':
+              name: '迷你项目：HTML网站'
+            'Mini-Project: Your Personal Style':
+              name: '迷你项目：你的风格'
+            'Your Web Page - Define ':
+              name: '你的网站：明确 '
+            Your Web Page - Prepare:
+              name: 你的网站：准备
+            Project - Personal Web Page:
+              name: 项目：个人网站
+            Websites for a Purpose:
+              name: 有功能的网站
             Linking Pages:
               name: 链接页面
+            Using Images:
+              name: 使用图画
         csd1-2020:
           title: CSD 第一单元——解决问题和计算('19-'20)
           description: " \n单元1是计算机科学领域的高度交互和协作的介绍，在更广泛的范围寻找解决问题的方案。在其中将会练习使用解决问题的流程来解决一系列的难题、挑战和真实世界的场景。接下来，会学到计算机是如何进行输入、输出、存储处理信息，从而帮助人类解决问题。最后是设计一个应用程序的项目，来解决选择的问题。\n"
@@ -13309,6 +13346,8 @@ zh-CN:
               display_name: '第 1 章︰ 解决问题的流程'
             csd1_2:
               display_name: '第 2 章︰ 计算机和解决问题的能力'
+            csd1_3:
+              display_name: 替补课程
           lessons:
             CS Discoveries Pre-survey:
               name: 计算机科学发现预调查
@@ -13346,7 +13385,11 @@ zh-CN:
               description_teacher: "为了完成对计算机的问题解决过程和输入/输出/存储/处理模型的研究, 学生将提出一个用于解决现实世界问题的应用程序。该项目将需要好几天来完成, 并会让学生创建一个海报突出显示他们的应用程序的功能，并将呈现同学。项目指南为学生提供循序渐进的指导，并帮助他们组织想法。该项目设计为结对完成, 虽然也可以单独完成。"
             Post-Project Test:
               name: 项目后测试
+            'Lesson 1: Intro to Problem Solving - Newspaper Table':
+              name: '第一课：解决问题的简介 - 报纸表格'
             0:
+            '"Alt Lesson 1:" Intro to Problem Solving - Newspaper Table':
+              name: '"替补第一课：”解决问题的简介 - 报纸表格'
             Storage:
               name: 存储
         csd4-2020:
@@ -13669,6 +13712,8 @@ zh-CN:
               name: 计算机科学发现课后问卷
             Text:
               name: 文本
+            Mouse Input:
+              name: 鼠标输入
             Sprites:
               name: 精灵图
         coursea-2020:
@@ -13800,6 +13845,7 @@ zh-CN:
               description_student: 用事件来创作故事或交互的游戏。
               description_teacher: 在这个在线活动中，学生们可以在剧本实验室中学习如何使用事件，并用学会的编程技巧来创建动画游戏。是时候在剧本实验室里创作游戏了！
             Digital Trails:
+              name: 数字小径
               description_student: '了解数字足迹以及如何在访问网站时保证安全。 '
         coursec-2020:
           title: 课程 C (2019)
@@ -13893,6 +13939,7 @@ zh-CN:
               description_student: 准备好大量的编码吧！是时候开始自己的项目了。
               description_teacher: '这堂实践课程让学生经历设计、开发以及展示自己剧本实验室项目的全过程！为了保证学习过程的顺利，可让学生跟随一步步的结构，从在纸上制定计划，到在网站上编码。另外，我们还为老师准备了一些主持最终展示的想法！ '
             Password Power-Up:
+              name: 密码升级
               description_student: 这节课中会学习如何使用密码保护信息，怎样创建出好的密码。
         coursed-2020:
           title: 课程 D (2019)
@@ -13987,9 +14034,13 @@ zh-CN:
               name: 舞蹈派对
               description_student: 该庆祝了！这节课，会创作自己的舞蹈派对。
               description_teacher: 这节课中，学生会制作自己的交互舞蹈派对。这个活动需要声音，才能对音乐有响应。
+            Dance Part:
+              name: 舞蹈派对
             End of Course Project:
               name: 结课项目
               description_student: 准备好大量的编码吧！是时候开始自己的项目了。
+            Be A Super Digital Citizen:
+              name: 做一个超级数字公民
         coursee-2020:
           title: 课程 E (2019)
           description: 开始用算法，循环，条件和事件来编程，然后你会学习函数。在本课程的第二部分，设计并创建一个好项目，并共享给你的亲友们。
@@ -14241,6 +14292,8 @@ zh-CN:
               name: 蜜蜂里的嵌套循环
             Nested Loops in Frozen:
               name: 冰雪奇缘里的嵌套循环
+            'Concept Practice with Minecraft ':
+              name: '用《我的世界》练习概念 '
             Conditionals in Bee:
               name: 蜜蜂里的条件
             While Loops in Farmer:
@@ -14257,6 +14310,12 @@ zh-CN:
               name: 收割者中的函数
             Functions in Artist:
               name: 艺术家之间的功能
+            Variables as Constant in Artist:
+              name: 艺术家里的变量作为常数
+            Variables that Change in Bee:
+              name: 蜜蜂里的变化的变量
+            Variables that Change in Artist:
+              name: 小艺术家里的变化的变量
             For Loops in Bee:
               name: 蜜蜂式里的循环
             For Loops in Artist:
@@ -14265,10 +14324,16 @@ zh-CN:
               name: 在精灵图实验室学习精灵图
             Alien Dance Party with Sprite Lab:
               name: 精灵图实验室中的外星人舞蹈派对
+            Editing Behaviors:
+              name: 编辑行为
             Virtual Pet with Sprite Lab:
               name: 虚拟宠物
+            Build A Project:
+              name: 创建一个项目
             Swimming Fish with Sprite Lab:
               name: 在精灵图实验室学习精灵图
+            Behaviors with Sprite Lab:
+              name: 用精灵图实验室编辑行为
             End of Course Project:
               name: 结课项目
             Programming with Angry Birds:
@@ -14285,6 +14350,8 @@ zh-CN:
               name: 迷宫里的嵌套循环
             Snowflakes with Anna and Elsa:
               name: 冰雪奇缘里的嵌套循环
+            'Looking Ahead with Minecraft ':
+              name: '与《我的世界》往前看 '
             If/Else with Bee:
               name: 蜜蜂里的条件
             While Loops with the Farmer:
@@ -14356,7 +14423,10 @@ zh-CN:
               name: 在游戏实验室中讲故事
               description_teacher: 在这个在线活动中，学生们有机会学习在剧本实验室中如何使用事件，并应用他们学过的所有编程技能来创建一个动画游戏。是时候在剧本实验室里表达创意，编个故事了！
             Make a Game in Play Lab:
+              name: 在游戏实验室中创建一个游戏
               description_teacher: 在这个在线活动中，学生们可以在剧本实验室中学习如何使用事件，并用学会的编程技巧来创建动画游戏。是时候在剧本实验室里创作游戏了！
+            Programming in with Angry Birds:
+              name: 用愤怒的小鸟联系编程
             Loops with Scrat:
               name: 斯奎特和循环
             Loops with Laurel:
@@ -14368,6 +14438,7 @@ zh-CN:
             A Royal Battle with Events:
               name: 游戏实验室中的事件
         csp1-2020:
+          title: 计算机科学原理单元1 - 数字信息('20-'21)
           lesson_groups:
             csp_unit1_2020:
               display_name: '单元 1︰ 数字信息'
@@ -14407,6 +14478,7 @@ zh-CN:
             CS Principles Pre-survey:
               name: 计算机科学原理预调查
         csp2-2020:
+          title: 计算机科学原理单元 2 ：互联网('20-'21)
           lesson_groups:
             csp_unit2_2020:
               display_name: '单元 2︰ 互联网'
@@ -14555,8 +14627,16 @@ zh-CN:
               name: '第 14 课：单元评估日'
         csp-march-virtual:
           lessons:
+            Kick-off:
+              name: 开球
+            Changes:
+              name: 变更
+            Wrap up:
+              name: 总结
             new stage:
               name: 新的阶段
+            Reflections:
+              name: 反射
             Part 1:
               name: 第 1 部分
             Part 2:
@@ -14602,6 +14682,8 @@ zh-CN:
               name: 调试
             Module 1:
               name: 模块 1
+            Module 2:
+              name: 模块 2
         csd2-virtual:
           lesson_groups:
             csd2_1:
@@ -14739,13 +14821,36 @@ zh-CN:
             Project - Design a Game:
               name: 项目 - 设计一个游戏
         code-break:
+          title: 代码小憩
           lessons:
             new stage:
               name: 新的阶段
+            Beginner Challenges:
+              name: 新手挑战
+            Intermediate Challenges:
+              name: 中等级挑战
             Algorithms:
               name: 算法
             Events:
               name: 事件
+            Events with Macklemore & Scott Forstall:
+              name: 跟 Macklemore 和 Scott Forstall 一起学事件
+            Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia:
+              name: Aloe Blacc，Bret Taylor 和 Paola Mejia 讲解硬件
+        code-break-staging:
+          lessons:
+            Events with Macklemore & Scott Forstall:
+              name: 跟 Macklemore 和 Scott Forstall 一起学事件
+        code-break-younger-staging:
+          lessons:
+            Events with Macklemore & Scott Forstall:
+              name: 跟 Macklemore 和 Scott Forstall 一起学事件
+        code-break-younger:
+          lessons:
+            Events with Macklemore & Scott Forstall:
+              name: 跟 Macklemore 和 Scott Forstall 一起学事件
+            Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia:
+              name: Aloe Blacc，Bret Taylor 和 Paola Mejia 讲解硬件
         no-lg:
           lessons:
             new stage:
@@ -14817,13 +14922,26 @@ zh-CN:
               display_name: '深入学习：课程 E 和 F'
             k5_next_steps_1:
               display_name: 下一步
+        dani-test-2020:
+          lessons:
+            new lesson:
+              name: 新课程
+          lesson_groups:
+            lesson group:
+              display_name: 显示名称
         dani-june-2020-test:
           lessons:
+            new lesson:
+              name: 新课程
+            lesson 2:
+              name: 第 2 课
             CS Principles Pre-survey:
               name: 计算机科学原理预调查
             Buttons and Events:
               name: 按钮和事件
           lesson_groups:
+            lesson group:
+              display_name: 显示名称
             cspSurvey:
               display_name: 调查
             csp5_1:
@@ -14874,6 +14992,8 @@ zh-CN:
               name: 键盘输入
               description_student: "在前面的课程中介绍布尔和如果语句之后, 将学生引入一个称为 按下键() 的新块, 它返回一个布尔，可用于条件语句在屏幕上移动精灵图。在本课结束时, 学生将编写程序, 从用户那里获得键盘输入来控制屏幕上的精灵图。"
               description_teacher: "在前面的课程中介绍布尔和_如果_语句之后, 将学生引入一个称为 '按下键()' 的新块, 它返回一个布尔，可用于条件语句在屏幕上移动精灵图。在本课结束时, 学生将编写程序, 从用户那里获得键盘输入来控制屏幕上的精灵图。"
+            Mouse Input:
+              name: 鼠标输入
             Project - Interactive Card:
               name: 项目 - 互动卡
               description_student: "在这个第1章的累积项目中，该班计划使用他们学到的所有编程技巧来开发一个交互式贺卡。"
@@ -14951,19 +15071,37 @@ zh-CN:
               display_name: 内容
         kaitie-test-script:
           lessons:
+            new lesson:
+              name: 新课程
             Module 1:
               name: 模块 1
+            Module 2:
+              name: 模块 2
+          lesson_groups:
+            lesson group:
+              display_name: 显示名称
         vpl-csd-2020:
           lessons:
             Module 1:
               name: 模块 1
+            Module 2:
+              name: 模块 2
         vpl-csp-2020:
           lessons:
             Module 1:
               name: 模块 1
+            Module 2:
+              name: 模块 2
         curriculum-sandbox-levels:
           lessons:
             Course A:
               name: 课程 A
             Course B:
               name: 课程 B
+            Course E/F:
+              name: 课程 E/F
+            CS Discoveries:
+              name: 计算机科学发现
+          lesson_groups:
+            lesson group:
+              display_name: 显示名称

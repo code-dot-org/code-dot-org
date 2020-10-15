@@ -43,11 +43,8 @@ class ScriptLevelTest < ActiveSupport::TestCase
     assert_equal 20, sl.lesson_total
 
     # new script
-    script = create(:script)
-    lesson_group = create(:lesson_group, script: script)
-    lesson = create(:lesson, lesson_group: lesson_group, script: script)
-    sl = create(:script_level, lesson: lesson, script: script)
-    sl2 = create(:script_level, lesson: lesson, script: script)
+    sl = create_script_level_with_ancestors
+    sl2 = create(:script_level, lesson: sl.lesson, script: sl.script)
 
     assert_equal 1, sl.position
     assert_equal 2, sl.lesson_total
@@ -57,11 +54,8 @@ class ScriptLevelTest < ActiveSupport::TestCase
   end
 
   test 'summarize with default route' do
-    script = create(:script)
-    lesson_group = create(:lesson_group, script: script)
-    lesson = create(:lesson, lesson_group: lesson_group, script: script)
-    sl = create(:script_level, lesson: lesson, script: script)
-    sl2 = create(:script_level, lesson: lesson, script: script)
+    sl = create_script_level_with_ancestors
+    sl2 = create(:script_level, lesson: sl.lesson, script: sl.script)
 
     summary = sl.summarize
     assert_match Regexp.new("^#{root_url.chomp('/')}/s/bogus-script-[0-9]+/stage/1/puzzle/1$"), summary[:url]
@@ -88,11 +82,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
   end
 
   test 'named level summarize' do
-    script = create(:script)
-    lesson_group = create(:lesson_group, script: script)
-    lesson = create(:lesson, lesson_group: lesson_group, script: script)
-    sl = create(:script_level, script: script, lesson: lesson)
-    sl.update(named_level: true)
+    sl = create_script_level_with_ancestors({named_level: true})
 
     summary = sl.summarize
     assert_equal sl.level.name, summary[:name]
@@ -127,10 +117,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
   end
 
   test 'teacher panel summarize' do
-    script = create(:script)
-    lesson_group = create(:lesson_group, script: script)
-    lesson = create(:lesson, lesson_group: lesson_group, script: script)
-    sl = create(:script_level, lesson: lesson, script: script)
+    sl = create_script_level_with_ancestors
 
     student = create :student
     create(:user_level, user: student, level: sl.level)
@@ -144,16 +131,9 @@ class ScriptLevelTest < ActiveSupport::TestCase
   end
 
   test 'teacher panel summarize with progress on this level in another script' do
-    script = create(:script)
-    lesson_group = create(:lesson_group, script: script)
-    lesson = create(:lesson, lesson_group: lesson_group, script: script)
-    sl = create(:script_level, lesson: lesson, script: script)
     student = create :student
-
-    script2 = create(:script)
-    lesson_group2 = create(:lesson_group, script: script2)
-    lesson2 = create(:lesson, lesson_group: lesson_group2, script: script2)
-    sl_other = create(:script_level, levels: sl.levels, lesson: lesson2, script: script2)
+    sl = create_script_level_with_ancestors
+    sl_other = create_script_level_with_ancestors({levels: sl.levels})
 
     User.track_level_progress(
       user_id: student.id,
@@ -173,15 +153,11 @@ class ScriptLevelTest < ActiveSupport::TestCase
   end
 
   test 'teacher panel summarize for BubbleChoice level' do
-    script = create(:script)
-    lesson_group = create(:lesson_group, script: script)
-    lesson = create(:lesson, lesson_group: lesson_group, script: script)
-
     student = create :student
     sublevel1 = create :level, name: 'choice_1'
     sublevel2 = create :level, name: 'choice_2'
     bubble_choice = create :bubble_choice_level, sublevels: [sublevel1, sublevel2]
-    script_level = create :script_level, levels: [bubble_choice], lesson: lesson
+    script_level = create_script_level_with_ancestors({levels: [bubble_choice]})
 
     expected_summary = {
       contained: false,
@@ -213,14 +189,11 @@ class ScriptLevelTest < ActiveSupport::TestCase
   end
 
   test 'teacher panel summarize for contained level' do
-    script = create(:script)
-    lesson_group = create(:lesson_group, script: script)
-    lesson = create(:lesson, lesson_group: lesson_group, script: script)
     student = create :student
     contained_level_1 = create :level, name: 'contained level 1', type: 'FreeResponse'
     level_1 = create :level, name: 'level 1'
     level_1.contained_level_names = [contained_level_1.name]
-    sl2 = create :script_level, levels: [level_1], script: script, lesson: lesson
+    sl2 = create_script_level_with_ancestors({levels: [level_1]})
 
     summary2 = sl2.summarize_for_teacher_panel(student)
     assert_equal sl2.assessment, summary2[:assessment]
@@ -235,10 +208,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
     student = create :student
     student2 = create :student
 
-    script = create(:script)
-    lesson_group = create(:lesson_group, script: script)
-    lesson = create(:lesson, lesson_group: lesson_group, script: script)
-    sl = create :script_level, lesson: lesson, script: script
+    sl = create_script_level_with_ancestors
     driver_ul = create(
       :user_level,
       user: student,
@@ -265,12 +235,9 @@ class ScriptLevelTest < ActiveSupport::TestCase
 
   test 'teacher panel summarize for lesson extra' do
     student = create :student
-    script = create(:script)
-    lesson_group = create(:lesson_group, script: script)
-    lesson1 = create(:lesson, lesson_group: lesson_group, script: script)
-    script_level = create :script_level, lesson: lesson1, script: script, bonus: true
+    script_level = create_script_level_with_ancestors({bonus: true})
 
-    summary = ScriptLevel.summarize_as_bonus_for_teacher_panel(script, script_level.id, student)
+    summary = ScriptLevel.summarize_as_bonus_for_teacher_panel(script_level.script, script_level.id, student)
     assert_equal true, summary[:bonus]
     assert_equal LEVEL_STATUS.not_tried, summary[:status]
     assert_equal false, summary[:passed]
@@ -495,18 +462,12 @@ class ScriptLevelTest < ActiveSupport::TestCase
   end
 
   test 'next_level_or_redirect_path_for_user returns to lesson extras for bonus levels' do
-    script = create(:script)
-    lesson_group = create(:lesson_group, script: script)
-    lesson = create(:lesson, lesson_group: lesson_group, script: script)
-    script_level = create :script_level, bonus: true, lesson: lesson, script: script
+    script_level = create_script_level_with_ancestors({bonus: true})
     assert_equal "/s/#{script_level.script.name}/stage/1/extras", script_level.next_level_or_redirect_path_for_user(nil)
   end
 
   test 'next_level_or_redirect_path_for_user returns to bubble choice activity page for BubbleChoice levels' do
-    script = create(:script)
-    lesson_group = create(:lesson_group, script: script)
-    lesson = create(:lesson, lesson_group: lesson_group, script: script)
-    script_level = create :script_level, levels: [create(:bubble_choice_level)], lesson: lesson, script: script
+    script_level = create_script_level_with_ancestors({levels: [create(:bubble_choice_level)]})
     assert_equal "/s/#{script_level.script.name}/stage/1/puzzle/1", script_level.next_level_or_redirect_path_for_user(nil)
   end
 
@@ -563,15 +524,11 @@ class ScriptLevelTest < ActiveSupport::TestCase
   end
 
   test 'can view my last attempt for regular levelgroup' do
-    script = create :script
-    lesson_group = create :lesson_group, script: script
-    lesson = create :lesson, lesson_group: lesson_group, script: script
-
     level = create :level_group, name: 'LevelGroupLevel', type: 'LevelGroup'
     level.properties['title'] = 'Survey'
     level.save!
 
-    script_level = create :script_level, script: script, lesson: lesson, levels: [level], assessment: true
+    script_level = create_script_level_with_ancestors({levels: [level], assessment: true})
 
     student = create :student
 
@@ -579,15 +536,11 @@ class ScriptLevelTest < ActiveSupport::TestCase
   end
 
   test 'can view other user last attempt for regular levelgroup' do
-    script = create :script
-    lesson_group = create :lesson_group, script: script
-    lesson = create :lesson, lesson_group: lesson_group, script: script
-
     level = create :level_group, name: 'LevelGroupLevel', type: 'LevelGroup'
     level.properties['title'] = 'Survey'
     level.save!
 
-    script_level = create :script_level, script: script, lesson: lesson, levels: [level], assessment: true
+    script_level = create_script_level_with_ancestors({levels: [level], assessment: true})
 
     teacher = create :teacher
     student = create :student
@@ -596,16 +549,12 @@ class ScriptLevelTest < ActiveSupport::TestCase
   end
 
   test 'student can view last attempt for anonymous levelgroup' do
-    script = create :script
-    lesson_group = create :lesson_group, script: script
-    lesson = create :lesson, lesson_group: lesson_group, script: script
-
     level = create :level_group, name: 'LevelGroupLevel', type: 'LevelGroup'
     level.properties['title'] = 'Survey'
     level.properties['anonymous'] = 'true'
     level.save!
 
-    script_level = create :script_level, script: script, lesson: lesson, levels: [level], assessment: true
+    script_level = create_script_level_with_ancestors({levels: [level], assessment: true})
 
     student = create :student
 
@@ -613,16 +562,12 @@ class ScriptLevelTest < ActiveSupport::TestCase
   end
 
   test 'teacher can view last attempt for anonymous levelgroup' do
-    script = create :script
-    lesson_group = create :lesson_group, script: script
-    lesson = create :lesson, lesson_group: lesson_group, script: script
-
     level = create :level_group, name: 'LevelGroupLevel', type: 'LevelGroup'
     level.properties['title'] = 'Survey'
     level.properties['anonymous'] = 'true'
     level.save!
 
-    script_level = create :script_level, script: script, lesson: lesson, levels: [level], assessment: true
+    script_level = create_script_level_with_ancestors({levels: [level], assessment: true})
 
     teacher = create :teacher
 
@@ -630,31 +575,23 @@ class ScriptLevelTest < ActiveSupport::TestCase
   end
 
   test 'anonymous can view last attempt for anonymous levelgroup' do
-    script = create :script
-    lesson_group = create :lesson_group, script: script
-    lesson = create :lesson, lesson_group: lesson_group, script: script
-
     level = create :level_group, name: 'LevelGroupLevel', type: 'LevelGroup'
     level.properties['title'] = 'Survey'
     level.properties['anonymous'] = 'true'
     level.save!
 
-    script_level = create :script_level, script: script, lesson: lesson, levels: [level], assessment: true
+    script_level = create_script_level_with_ancestors({levels: [level], assessment: true})
 
     refute script_level.should_hide_survey(nil, nil)
   end
 
   test 'can not view other user last attempt for anonymous levelgroup' do
-    script = create :script
-    lesson_group = create :lesson_group, script: script
-    lesson = create :lesson, lesson_group: lesson_group, script: script
-
     level = create :level_group, name: 'LevelGroupLevel', type: 'LevelGroup'
     level.properties['title'] = 'Survey'
     level.properties['anonymous'] = 'true'
     level.save!
 
-    script_level = create :script_level, script: script, lesson: lesson, levels: [level], assessment: true
+    script_level = create_script_level_with_ancestors({levels: [level], assessment: true})
 
     student = create :student
     teacher = create :teacher
@@ -663,16 +600,12 @@ class ScriptLevelTest < ActiveSupport::TestCase
   end
 
   test 'anonymous levels must be assessments' do
-    script = create :script
-    lesson_group = create :lesson_group, script: script
-    lesson = create :lesson, lesson_group: lesson_group, script: script
-
     level = create :level_group, name: 'LevelGroupLevel', type: 'LevelGroup'
     level.properties['title'] = 'Survey'
     level.properties['anonymous'] = 'true'
     level.save!
 
-    script_level = create :script_level, script: script, lesson: lesson, levels: [level], assessment: true
+    script_level = create_script_level_with_ancestors({levels: [level], assessment: true})
 
     assert_raises do
       script_level.assessment = false
@@ -681,45 +614,130 @@ class ScriptLevelTest < ActiveSupport::TestCase
   end
 
   test 'bonus levels do not appear in the normal progression' do
-    script = create :script
-    lesson_group = create :lesson_group, script: script
-    lesson = create :lesson, lesson_group: lesson_group, script: script
-    script_level = create :script_level, bonus: true, lesson: lesson, script: script
+    script_level = create_script_level_with_ancestors({bonus: true})
     assert_empty script_level.lesson.summarize[:levels]
   end
 
   test 'hidden_for_section returns true if lesson is hidden' do
-    script = create :script
-    lesson_group = create :lesson_group, script: script
-    lesson = create :lesson, lesson_group: lesson_group, script: script
-    script_level = create :script_level, script: script, lesson: lesson
+    script_level = create_script_level_with_ancestors
     section = create :section
 
-    create :section_hidden_lesson, lesson: lesson, section: section
+    create :section_hidden_lesson, lesson: script_level.lesson, section: section
 
     assert_equal true, script_level.hidden_for_section?(section.id)
   end
 
   test 'hidden_for_section returns true if script is hidden' do
-    script = create :script
-    lesson_group = create :lesson_group, script: script
-    lesson = create :lesson, lesson_group: lesson_group, script: script
-    script_level = create :script_level, script: script, lesson: lesson
+    script_level = create_script_level_with_ancestors
     section = create :section
 
-    create :section_hidden_script, script: script, section: section
+    create :section_hidden_script, script: script_level.script, section: section
 
     assert_equal true, script_level.hidden_for_section?(section.id)
   end
 
   test 'hidden_for_section returns false if no hidden lesson/script' do
-    script = create :script
-    lesson_group = create :lesson_group, script: script
-    lesson = create :lesson, lesson_group: lesson_group, script: script
-    script_level = create :script_level, script: script, lesson: lesson
+    script_level = create_script_level_with_ancestors
     section = create :section
 
     assert_equal false, script_level.hidden_for_section?(section.id)
+  end
+
+  def create_script_level_with_ancestors(script_level_attributes = nil)
+    script_level_attributes ||= {}
+    script = create :script
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, lesson_group: lesson_group, script: script
+    create :script_level, script: script, lesson: lesson, **script_level_attributes
+  end
+
+  test 'seeding_key without existing level_keys' do
+    script_level = create_script_level_with_ancestors
+    script_level.reload # reload to clear out any already loaded association data, to verify query counts later
+    script = script_level.script
+    seed_context = create_seed_context(script)
+    # With no existing level_keys property on the script_level, we need additional data from the SeedContext
+    seed_context.levels = script.levels.to_a
+    seed_context.levels_script_levels = script.levels_script_levels.to_a
+
+    seeding_key = nil
+    # Important to minimize queries in seeding_key, since it's called for each ScriptLevel during seeding.
+    # Right now, for blockly levels, we need to make 1 to get the game name. This could be avoided with a little more work.
+    assert_queries(1) {seeding_key = script_level.seeding_key(seed_context)}
+
+    expected = {
+      "script_level.level_keys" => [script_level.levels.first.key],
+      "lesson.key" => script_level.lesson.key,
+      "lesson_group.key" => script_level.lesson.lesson_group.key,
+      "script.name" => script.name
+    }
+
+    assert_equal expected, seeding_key
+  end
+
+  test 'seeding_key with existing level_keys' do
+    script_level = create_script_level_with_ancestors
+    script_level.update!(level_keys: [script_level.levels.first.name])
+    script_level.reload # reload to clear out any already loaded association data, to verify query counts later
+    seed_context = create_seed_context(script_level.script)
+
+    seeding_key = nil
+    # Important to minimize queries in seeding_key, since it's called for each ScriptLevel during seeding.
+    assert_queries(0) {seeding_key = script_level.seeding_key(seed_context)}
+
+    assert_equal [script_level.levels.first.name], seeding_key['script_level.level_keys']
+  end
+
+  test 'seeding_key with use_existing_level_keys false' do
+    script_level = create_script_level_with_ancestors
+    script_level.update!(level_keys: ['wrong-level-key']) # This value should be ignored in this case
+    script_level.reload # reload to clear out any already loaded association data, to verify query counts later
+    script = script_level.script
+    seed_context = create_seed_context(script)
+    # Since we are not using existing level_keys property on the script_level, we need additional data from the SeedContext
+    seed_context.levels = script.levels.to_a
+    seed_context.levels_script_levels = script.levels_script_levels.to_a
+
+    seeding_key = nil
+    # Important to minimize queries in seeding_key, since it's called for each ScriptLevel during seeding.
+    # Right now, for blockly levels, we need to make 1 to get the game name. This could be avoided with a little more work.
+    assert_queries(1) {seeding_key = script_level.seeding_key(seed_context, false)}
+
+    assert_equal [script_level.levels.first.key], seeding_key['script_level.level_keys']
+  end
+
+  test 'LevelsScriptLevel seeding_key' do
+    script_level = create_script_level_with_ancestors
+    script_level.update!(level_keys: [script_level.levels.first.key])
+    script_level.reload # reload to clear out any already loaded association data, to verify query counts later
+    script = script_level.script
+    seed_context = create_seed_context(script)
+    seed_context.script_levels = script.script_levels.to_a
+    seed_context.levels = script.levels.to_a
+    lsl = script_level.levels_script_levels.first
+
+    seeding_key = nil
+    # Important to minimize queries in seeding_key, since it's called for each ScriptLevel during seeding.
+    # Right now, for blockly levels, we need to make 1 to get the game name. This could be avoided with a little more work.
+    assert_queries(1) {seeding_key = lsl.seeding_key(seed_context)}
+
+    expected = {
+      "level.key" => lsl.level.key,
+      "script_level.level_keys" => [lsl.level.key],
+      "lesson.key" => script_level.lesson.key,
+      "lesson_group.key" => script_level.lesson.lesson_group.key,
+      "script.name" => script.name
+    }
+
+    assert_equal expected, seeding_key
+  end
+
+  def create_seed_context(script)
+    ScriptSeed::SeedContext.new(
+      script: script,
+      lesson_groups: script.lesson_groups.to_a,
+      lessons: script.lessons.to_a
+    )
   end
 
   class ValidProgressionLevelTests < ActiveSupport::TestCase
@@ -771,6 +789,27 @@ class ScriptLevelTest < ActiveSupport::TestCase
       refute @script_level_future_visible_after.valid_progression_level?(@student)
       refute @script_level_future_visible_after.valid_progression_level?(nil)
     end
+  end
+
+  test 'validates activity section lesson' do
+    lesson = create :lesson
+    lesson_activity = create :lesson_activity, lesson: lesson
+    activity_section = create :activity_section, lesson_activity: lesson_activity
+    other_lesson = create :lesson
+
+    # can create script level with no activity section
+    script_level = create :script_level, lesson: lesson
+    assert_nil script_level.activity_section
+
+    # can create script level with matching lessons
+    script_level = create :script_level, lesson: lesson, activity_section: activity_section, activity_section_position: 1
+    assert_equal lesson, script_level.activity_section.lesson
+
+    # cannot create script level with mismatched lessons
+    error = assert_raises ActiveRecord::RecordInvalid do
+      create :script_level, lesson: other_lesson, activity_section: activity_section, activity_section_position: 1
+    end
+    assert_equal 'Validation failed: Script level activity_section.lesson does not match lesson', error.message
   end
 
   private

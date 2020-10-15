@@ -10,7 +10,7 @@ cs:
   campaign_date_short: Prosinec 7-13
   campaign_date_full: Prosinec 7-13
   campaign_date_year: '2016'
-  campaign_date_full_year: Prosinec 5.-11, 2016
+  campaign_date_full_year: Prosinec 7.-13, 2020
   latam_campaign_date_start_short: Oct. 1
   latam_campaign_date_start_long: October 1
   latam_campaign_date_short: Oct. 1 - Dec. 18
@@ -491,6 +491,7 @@ cs:
   signup_send_posters_address_placeholder: Tato adresa nebude sdílena na naší mapě
   signup_event_type_in_school: Ve škole
   signup_event_type_out_of_school: Mimo školu
+  signup_event_type_at_home: Home
   signup_submit_census_label: Odeslat
   signup_submit_census_error_message: Je nám líto. Došlo k chybě. Prosím zkuste formulář
     odeslat znovu.

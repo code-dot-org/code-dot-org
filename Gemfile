@@ -11,7 +11,7 @@ end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.7.2'
-gem 'rails-controller-testing'
+gem 'rails-controller-testing', '~> 1.0.5'
 
 # Compile Sprockets assets concurrently in `assets:precompile`.
 # Ref: https://github.com/rails/sprockets/pull/470
@@ -20,7 +20,7 @@ gem 'sprockets-rails'
 
 # provide `respond_to` methods
 # (see: http://guides.rubyonrails.org/4_2_release_notes.html#respond-with-class-level-respond-to)
-gem 'responders', '~> 2.0'
+gem 'responders', '~> 3.0'
 
 # Pinning sinatra to 2.0.2, since '~> 2.0.2' actually lands us on 2.0.5, which
 # breaks some firebase URIs. See
@@ -44,7 +44,6 @@ gem 'redis', '~> 3.3.3'
 gem 'redis-slave-read', require: false, github: 'code-dot-org/redis-slave-read', ref: 'cfe1bd0f5cf65eee5b52560139cab133f22cb880'
 gem 'xxhash'
 
-gem 'aws-google' # use Google Accounts for AWS access
 gem 'google-api-client', '~> 0.23'
 
 # CSRF protection for Sinatra.
@@ -56,9 +55,8 @@ gem 'memory_profiler'
 gem 'rack-mini-profiler'
 
 group :development do
-  gem 'annotate'
-  gem 'pry'
-  gem 'ruby-progressbar', require: false
+  gem 'annotate', '~> 3.1.1'
+  gem 'aws-google' # use Google Accounts for AWS access
   gem 'web-console'
 end
 
@@ -138,9 +136,11 @@ gem 'unicorn', '~> 5.1.0'
 
 gem 'chronic', '~> 0.10.2'
 
-# Use SCSS for stylesheets.
-# Ref: https://github.com/rails/sass-rails/pull/386
-gem 'sass-rails', github: 'wjordan/sass-rails', ref: 'frozen-array-fix'
+gem 'sass-rails', '~> 6.0.0'
+# Temporarily use our own fork of sassc-rails (a dependency of sass-rails),
+# while we try to get some bugs fixed upstream.
+# See https://github.com/sass/sassc-rails/pull/153 for context.
+gem 'sassc-rails', github: 'code-dot-org/sassc-rails', ref: 'frozen-array-fix'
 
 # Use Uglifier as compressor for JavaScript assets.
 gem 'uglifier', '>= 1.3.0'
@@ -153,12 +153,9 @@ gem 'phantomjs', '~> 1.9.7.1'
 # For emoji in utility output.
 gem 'gemoji'
 
-# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 2.5'
-
 # Authentication and permissions.
 gem 'cancancan', '~> 1.15.0'
-gem 'devise', '~> 4.4.0'
+gem 'devise', '~> 4.7.0'
 gem 'devise_invitable', '~> 1.6.0'
 
 # Ref: https://github.com/instructure/ims-lti/pull/90
@@ -223,20 +220,25 @@ gem 'mini_racer'
 
 gem 'jwt' # single signon for zendesk
 
-gem 'codemirror-rails' # edit code in textarea
-
 gem 'twilio-ruby' # SMS API for send-to-phone feature
 
-# We also serve a copy of one of these font files from the public directory
-gem 'font-awesome-rails', '~> 4.6.3' # NOTE: apps/src/applab/Exporter.js depends on the font file names from this version!
+# NOTE: apps/src/applab/Exporter.js depends on the specific names of the font
+# files included here. If you're upgrading to a different version, make sure to
+# check that the filenames have not changed, and copy the latest files from the
+# gem into our project. These font files are currently served from:
+# - /dashboard/public/fonts/
+# - /pegasus/sites.v3/code.org/public/fonts/
+# - /pegasus/sites.v3/hourofcode/public/fonts/
+gem 'font-awesome-rails', '~> 4.7.0.5'
+
 gem 'sequel'
 gem 'user_agent_parser'
 
-gem 'paranoia'
+gem 'paranoia', '~> 2.4.2'
 gem 'petit', github: 'code-dot-org/petit'  # For URL shortening
 
 # JSON model serializer for REST APIs.
-gem 'active_model_serializers', '~> 0.10.0'
+gem 'active_model_serializers', '~> 0.10.10'
 
 # AWS SDK and associated service APIs.
 gem 'aws-sdk-acm'
@@ -357,3 +359,7 @@ gem 'require_all', require: false
 gem 'dotiw'
 
 gem 'datapackage'
+
+gem 'ruby-progressbar'
+
+gem 'pry'

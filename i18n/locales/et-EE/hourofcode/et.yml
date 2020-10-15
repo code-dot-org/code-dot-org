@@ -10,7 +10,7 @@ et:
   campaign_date_short: 4.-10. detsember
   campaign_date_full: 4.-10. detsember
   campaign_date_year: '2017'
-  campaign_date_full_year: 4.-10. detsember 2017
+  campaign_date_full_year: 7.-13. detsember 2020
   latam_campaign_date_start_short: Oct. 1
   latam_campaign_date_start_long: October 1
   latam_campaign_date_short: Oct. 1 - Dec. 18
@@ -491,6 +491,7 @@ et:
   signup_send_posters_address_placeholder: Seda aadressi ei jagata meie kaardil
   signup_event_type_in_school: Koolis
   signup_event_type_out_of_school: Väljaspool kooli
+  signup_event_type_at_home: Home
   signup_submit_census_label: Esita
   signup_submit_census_error_message: Vabandame, ilmnes tõrge. Proovige uuesti vormi
     edastada.

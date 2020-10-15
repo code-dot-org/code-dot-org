@@ -10,7 +10,7 @@ si:
   campaign_date_short: දෙසැ. 5-11
   campaign_date_full: දෙසැම්බර් 5-11
   campaign_date_year: '2016'
-  campaign_date_full_year: දෙසැම්බර් 5-11, 2016
+  campaign_date_full_year: දෙසැම්බර් 7-13, 2020
   latam_campaign_date_start_short: Oct. 1
   latam_campaign_date_start_long: October 1
   latam_campaign_date_short: Oct. 1 - Dec. 18
@@ -495,6 +495,7 @@ si:
   signup_send_posters_address_placeholder: මෙම ලිපිනය අපගේ සිතියමේ share නොවේ
   signup_event_type_in_school: පාසල තුල
   signup_event_type_out_of_school: පාසලෙන් පිටත
+  signup_event_type_at_home: Home
   signup_submit_census_label: Submit
   signup_submit_census_error_message: We're sorry. An error occurred. Please try submitting
     the form again.

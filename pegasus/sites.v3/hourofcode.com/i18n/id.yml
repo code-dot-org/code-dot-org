@@ -6,29 +6,29 @@ id:
   front_title: Bergabunglah dalam acara belajar terbesar sepanjang sejarah pada tanggal
     7-13 Desember 2015
   coming_soon: Akan Datang
-  campaign_date_start_short: 4 Des.
-  campaign_date_start_long: 4 Desember
-  campaign_date_short: 4-10 Des.
-  campaign_date_full: 4-10 Desember
-  campaign_date_year: '2017'
-  campaign_date_full_year: 4-10 Desember 2017
+  campaign_date_start_short: 7 Des.
+  campaign_date_start_long: 7 Desember
+  campaign_date_short: 7-13 Des.
+  campaign_date_full: 7-13 Desember
+  campaign_date_year: '2020'
+  campaign_date_full_year: 7-13 Desember 2020
   latam_campaign_date_start_short: Oct. 1
   latam_campaign_date_start_long: October 1
   latam_campaign_date_short: Oct. 1 - Dec. 18
   latam_campaign_date_full: October 1 - December 18
-  latam_campaign_date_year: '2017'
+  latam_campaign_date_year: '2020'
   latam_campaign_date_full_year: October 1, 2020 - December 18, 2020
   europe_campaign_date_start_short: Oct. 10
   europe_campaign_date_start_long: October 10
   europe_campaign_date_short: Oct. 10-25
   europe_campaign_date_full: October 10-25
-  europe_campaign_date_year: '2017'
+  europe_campaign_date_year: '2020'
   europe_campaign_date_full_year: October 10-25, 2020
   africa_campaign_date_start_short: Oct. 1
   africa_campaign_date_start_long: October 1
   africa_campaign_date_short: Oct. 1-31
   africa_campaign_date_full: October 1-31
-  africa_campaign_date_year: '2017'
+  africa_campaign_date_year: '2020'
   africa_campaign_date_full_year: October 1-31, 2020
   hoc2019_header: Ubahlah dunia dengan belajar ilmu komputer!
   hoc2019_header_line1_mobile: Belajarlah ilmu komputer.
@@ -508,6 +508,7 @@ id:
     kami
   signup_event_type_in_school: Di sekolah
   signup_event_type_out_of_school: Di luar sekolah
+  signup_event_type_at_home: Home
   signup_submit_census_label: Submit
   signup_submit_census_error_message: Mohon maaf. Terjadi kesalahan. Silakan coba
     menyerahkan formulir kembali.

@@ -10,7 +10,7 @@ mk:
   campaign_date_short: Дек. 4-10
   campaign_date_full: Декември 4-10
   campaign_date_year: '2017'
-  campaign_date_full_year: Декември 4-10, 2017
+  campaign_date_full_year: Декември 7-13, 2020
   latam_campaign_date_start_short: Oct. 1
   latam_campaign_date_start_long: October 1
   latam_campaign_date_short: Oct. 1 - Dec. 18
@@ -500,6 +500,7 @@ mk:
     мапа
   signup_event_type_in_school: Во училиште
   signup_event_type_out_of_school: Надвор од училиштето
+  signup_event_type_at_home: Home
   signup_submit_census_label: Поднесете
   signup_submit_census_error_message: Се извинуваме. Се појави грешка. Ве молиме обидете
     се повторно да го поднесете формуларот.

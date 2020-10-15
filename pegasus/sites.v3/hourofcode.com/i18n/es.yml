@@ -7,27 +7,27 @@ es:
   coming_soon: Próximamente
   campaign_date_start_short: Dic. 7
   campaign_date_start_long: 7 de diciembre
-  campaign_date_short: Dic. 7-13
+  campaign_date_short: 7-13 dic.
   campaign_date_full: Del 7 al 13 de diciembre
-  campaign_date_year: '2017'
-  campaign_date_full_year: Del 4 al 10 de diciembre de 2017
+  campaign_date_year: '2020'
+  campaign_date_full_year: Del 7 al 13 de diciembre de 2020
   latam_campaign_date_start_short: Oct. 1
   latam_campaign_date_start_long: October 1
   latam_campaign_date_short: Oct. 1 - Dec. 18
   latam_campaign_date_full: October 1 - December 18
-  latam_campaign_date_year: '2017'
+  latam_campaign_date_year: '2020'
   latam_campaign_date_full_year: October 1, 2020 - December 18, 2020
   europe_campaign_date_start_short: Oct. 10
   europe_campaign_date_start_long: October 10
   europe_campaign_date_short: Oct. 10-25
   europe_campaign_date_full: October 10-25
-  europe_campaign_date_year: '2017'
+  europe_campaign_date_year: '2020'
   europe_campaign_date_full_year: October 10-25, 2020
   africa_campaign_date_start_short: Oct. 1
   africa_campaign_date_start_long: October 1
   africa_campaign_date_short: Oct. 1-31
   africa_campaign_date_full: October 1-31
-  africa_campaign_date_year: '2017'
+  africa_campaign_date_year: '2020'
   africa_campaign_date_full_year: October 1-31, 2020
   hoc2019_header: Aprende a programar. Cambia el mundo.
   hoc2019_header_line1_mobile: Aprende programación.
@@ -122,6 +122,10 @@ es:
     ¡Las ciencias de la computación son mucho más que programar! Disfruta del primer
     paso de Code.org en un nuevo viaje para enseñar más sobre IA en nuestro plan de
     estudios.
+  hoc_live: 'Hora del Código En Vivo'
+  hoc_live_sign_up_title: 'Regístrate para la Hora del Código En Vivo'
+  hoc_live_sign_up_message: '¡Aprende en vivo junto a invitados especiales! Estudiantes de todas las edades y habilidades, incluso aquellos sin computadoras, son bienvenidos. Únete a nuestra lista de distribución para recibir recordatorios de los episodios y recursos para continuar el aprendizaje en casa.'
+  hoc_live_join_us: 'Únete'
   hoc_overview_oceans_tutorial_header: AI para océanos
   hoc_overview_oceans_tutorial_desc: Aprende sobre inteligencia artificial (IA), aprendizaje
     automático, datos de entrenamiento y sesgos, mientras exploras cuestiones éticas
@@ -516,7 +520,8 @@ es:
   signup_send_posters_address_placeholder: Esta dirección no será compartida en nuestro
     mapa
   signup_event_type_in_school: En un colegio o instituto
-  signup_event_type_out_of_school: Fuera de una escuela
+  signup_event_type_out_of_school: Fuera de la escuela
+  signup_event_type_at_home: Home
   signup_submit_census_label: Enviar
   signup_submit_census_error_message: Lo sentimos. Se produjo un error. Intenta enviar
     el formulario otra vez.
@@ -990,7 +995,7 @@ es:
   highlights_constant_athletes_short_heading: Esfuérzate
   footer_copyright_message: Copyright %{current_year} Code.org. Todos los derechos
     reservados.
-  footer_trademark_message: Hora de código ™ es una marca registrada de Code.org.
+  footer_trademark_message: Hora del código ™ es una marca registrada de Code.org.
   footer_menu_partners: Socios y asesores
   footer_menu_contact: Contáctenos
   footer_menu_support: Soporte

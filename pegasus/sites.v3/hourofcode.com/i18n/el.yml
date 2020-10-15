@@ -8,27 +8,27 @@ el:
   coming_soon: Προσεχώς
   campaign_date_start_short: 7 Δεκεμβρίου
   campaign_date_start_long: 7 Δεκεμβρίου
-  campaign_date_short: 4-10 Δεκεμβρίου
-  campaign_date_full: 4-10 Δεκεμβρίου
-  campaign_date_year: '2016'
-  campaign_date_full_year: 5-12 Δεκεμβρίου, 2016
+  campaign_date_short: 7-13 Δεκεμβρίου
+  campaign_date_full: 7-13 Δεκεμβρίου
+  campaign_date_year: '2020'
+  campaign_date_full_year: 7-13 Δεκεμβρίου, 2020
   latam_campaign_date_start_short: Oct. 1
   latam_campaign_date_start_long: October 1
   latam_campaign_date_short: Oct. 1 - Dec. 18
   latam_campaign_date_full: October 1 - December 18
-  latam_campaign_date_year: '2016'
+  latam_campaign_date_year: '2020'
   latam_campaign_date_full_year: October 1, 2020 - December 18, 2020
   europe_campaign_date_start_short: Oct. 10
   europe_campaign_date_start_long: October 10
   europe_campaign_date_short: Oct. 10-25
   europe_campaign_date_full: October 10-25
-  europe_campaign_date_year: '2016'
+  europe_campaign_date_year: '2020'
   europe_campaign_date_full_year: October 10-25, 2020
   africa_campaign_date_start_short: Oct. 1
   africa_campaign_date_start_long: October 1
   africa_campaign_date_short: Oct. 1-31
   africa_campaign_date_full: October 1-31
-  africa_campaign_date_year: '2016'
+  africa_campaign_date_year: '2020'
   africa_campaign_date_full_year: October 1-31, 2020
   hoc2019_header: Μάθετε πληροφορική. Αλλάξτε τον κόσμο.
   hoc2019_header_line1_mobile: Μάθετε πληροφορική.
@@ -521,6 +521,7 @@ el:
     χάρτη μας
   signup_event_type_in_school: Σε ένα σχολείο
   signup_event_type_out_of_school: Εκτός σχολείου
+  signup_event_type_at_home: Home
   signup_submit_census_label: Υποβολή
   signup_submit_census_error_message: Ζητούμε συγγνώμη. Παρουσιάστηκε ένα σφάλμα.
     Δοκιμάστε να υποβάλετε τη φόρμα ξανά.

@@ -9570,7 +9570,7 @@ fr:
             For Loops in Artist:
               name: Les Boucles For avec l'Artiste
             Learning Sprites with Sprite Lab:
-              name: Learning Sprite Lab
+              name: Des Poissons qui Nagent, avec le Labo des Lutins
             Alien Dance Party with Sprite Lab:
               name: Soirée Dansante des Extraterrestres
             Pet Giraffe with Sprite Lab:
@@ -14200,7 +14200,7 @@ fr:
             For Loops with Artist:
               name: Les Boucles For avec l'Artiste
             Swimming Fish in Sprite Lab:
-              name: Learning Sprite Lab
+              name: Des Poissons qui Nagent, avec le Labo des Lutins
             Alien Dance Party:
               name: Soirée Dansante des Extraterrestres
             Behaviors in Sprite Lab:
@@ -14841,3 +14841,5 @@ fr:
               name: Cours A
             Course B:
               name: Cours B
+            CS Discoveries:
+              name: Découvertes de l'Informatique

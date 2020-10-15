@@ -1065,6 +1065,8 @@ cs:
               name: Funkce
             Variables:
               name: Proměnné
+            Sprites:
+              name: Postavy
             Conditionals:
               name: Podmínky
         grade2:
@@ -1363,6 +1365,10 @@ cs:
           lessons:
             Introduction:
               name: Úvod
+            Sprites:
+              name: Postavy
+            Input:
+              name: Vstup
         csd5-draft:
           lesson_groups:
             csd5_2:
@@ -1399,6 +1405,8 @@ cs:
           lessons:
             Variables:
               name: Proměnné
+            Sprites:
+              name: Postavy
             Conditionals:
               name: Podmínky
             Functions:
@@ -1419,6 +1427,8 @@ cs:
           lessons:
             Variables:
               name: Proměnné
+            Sprites:
+              name: Postavy
             Conditionals:
               name: Podmínky
             Functions:
@@ -1716,6 +1726,8 @@ cs:
               name: Hláskovací včelka
         subgoal-labels-opt-in:
           lessons:
+            other:
+              name: ostatní
             Thanks:
               name: Děkujeme
         csp3-research-mxghyt:
@@ -1916,6 +1928,8 @@ cs:
           lessons:
             Variables:
               name: Proměnné
+            Sprites:
+              name: Postavy
             Conditionals:
               name: Podmínky
             Functions:
@@ -1931,6 +1945,8 @@ cs:
           lessons:
             Variables:
               name: Proměnné
+            Sprites:
+              name: Postavy
             Conditionals:
               name: Podmínky
             Functions:
@@ -2425,6 +2441,8 @@ cs:
               display_name: Cykly "For"
             csf_internet:
               display_name: Internet
+            csf_sprites:
+              display_name: Postavy
             csf_digcit:
               display_name: Digitální občanství
           lessons:
@@ -2604,6 +2622,8 @@ cs:
         coursee-2019:
           title: Kurz E (2019)
           lesson_groups:
+            csf_sprites:
+              display_name: Postavy
             csf_digcit:
               display_name: Digitální občanství
             csf_nested_loops:
@@ -2673,6 +2693,8 @@ cs:
               display_name: Proměnné
             csf_for_loops:
               display_name: Cykly "For"
+            csf_sprites:
+              display_name: Postavy
           lessons:
             Programming in Maze:
               name: Programujeme s Angry Birds
@@ -2891,6 +2913,8 @@ cs:
           lessons:
             Variables:
               name: Proměnné
+            Sprites:
+              name: Postavy
             Conditionals:
               name: Podmínky
             Functions:
@@ -2973,6 +2997,9 @@ cs:
             Binary Numbers:
               name: Binární čísla
         time4csdemo:
+          lesson_groups:
+            csf_sprites:
+              display_name: Postavy
           lessons:
             Crowdsourcing:
               name: Crowdsourcing
@@ -3110,6 +3137,8 @@ cs:
           lessons:
             Variables:
               name: Proměnné
+            Sprites:
+              name: Postavy
             Conditionals:
               name: Podmínky
             Functions:
@@ -3304,6 +3333,8 @@ cs:
               display_name: Podmínky
             csf_events:
               display_name: Události
+            csf_sprites:
+              display_name: Postavy
             csf_digcit:
               display_name: Digitální občanství
           lessons:
@@ -3321,6 +3352,8 @@ cs:
               display_name: Podmínky
             csf_events:
               display_name: Události
+            csf_sprites:
+              display_name: Postavy
             csf_digcit:
               display_name: Digitální občanství
           lessons:
@@ -3396,6 +3429,8 @@ cs:
               name: Funkce
             Text:
               name: Text
+            Sprites:
+              name: Postavy
         coursea-2020:
           title: Kurz A (2019)
           lesson_groups:
@@ -3628,6 +3663,8 @@ cs:
         coursee-2020:
           title: Kurz E (2019)
           lesson_groups:
+            csf_sprites:
+              display_name: Postavy
             csf_digcit:
               display_name: Digitální občanství
             csf_nested_loops:
@@ -3669,6 +3706,8 @@ cs:
               display_name: Proměnné
             csf_for_loops:
               display_name: Cykly "For"
+            csf_sprites:
+              display_name: Postavy
           lessons:
             Loops with the Artist:
               name: Kreslení s cykly
@@ -3704,6 +3743,8 @@ cs:
               display_name: Proměnné
             csf_for_loops:
               display_name: Cykly "For"
+            csf_sprites:
+              display_name: Postavy
           lessons:
             Dance Party:
               name: Taneční večírek
@@ -3830,6 +3871,8 @@ cs:
               name: Proměnné
             Random Numbers:
               name: Náhodná čísla
+            Sprites:
+              name: Postavy
             Text:
               name: Text
             Conditionals:
@@ -3877,3 +3920,5 @@ cs:
               name: Kurz A
             Course B:
               name: Kurz B
+            CS Discoveries:
+              name: Objevujeme informatiku

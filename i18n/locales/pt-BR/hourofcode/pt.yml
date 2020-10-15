@@ -5,29 +5,29 @@ pt:
   language: Português (Brasil)
   front_title: Junte-se ao maior evento de aprendizagem da história, %{campaign_date}
   coming_soon: Em breve
-  campaign_date_start_short: 4 de dez.
-  campaign_date_start_long: 4 de dezembro
-  campaign_date_short: 4-10 de dez.
-  campaign_date_full: 4-10 de dezembro
-  campaign_date_year: '2017'
-  campaign_date_full_year: 4-10 de dezembro de 2017
+  campaign_date_start_short: 7 de dezembro
+  campaign_date_start_long: 7 de dezembro
+  campaign_date_short: 7-13 de dezembro
+  campaign_date_full: 7 a 13 de dezembro
+  campaign_date_year: '2020'
+  campaign_date_full_year: 7-13 de dezembro de 2020
   latam_campaign_date_start_short: Oct. 1
   latam_campaign_date_start_long: October 1
   latam_campaign_date_short: Oct. 1 - Dec. 18
   latam_campaign_date_full: October 1 - December 18
-  latam_campaign_date_year: '2017'
+  latam_campaign_date_year: '2020'
   latam_campaign_date_full_year: October 1, 2020 - December 18, 2020
   europe_campaign_date_start_short: Oct. 10
   europe_campaign_date_start_long: October 10
   europe_campaign_date_short: Oct. 10-25
   europe_campaign_date_full: October 10-25
-  europe_campaign_date_year: '2017'
+  europe_campaign_date_year: '2020'
   europe_campaign_date_full_year: October 10-25, 2020
   africa_campaign_date_start_short: Oct. 1
   africa_campaign_date_start_long: October 1
   africa_campaign_date_short: Oct. 1-31
   africa_campaign_date_full: October 1-31
-  africa_campaign_date_year: '2017'
+  africa_campaign_date_year: '2020'
   africa_campaign_date_full_year: October 1-31, 2020
   hoc2019_header: Aprenda Ciência da Computação. Mude o mundo.
   hoc2019_header_line1_mobile: Aprenda Ciência da Computação.
@@ -503,6 +503,7 @@ pt:
     mapa
   signup_event_type_in_school: Em uma escola
   signup_event_type_out_of_school: Fora da escola
+  signup_event_type_at_home: Home
   signup_submit_census_label: Enviar
   signup_submit_census_error_message: Lamentamos. Ocorreu um erro. Por favor, tente
     enviar o formulário novamente.
@@ -949,7 +950,7 @@ pt:
   highlights_constant_athletes_short_heading: Esforce-se
   footer_copyright_message: Copyright %{current_year} Code.org. Todos os direitos
     reservados.
-  footer_trademark_message: Hour of Code™ é uma marca registrada da Code.org.
+  footer_trademark_message: Hour of Code™ é uma marca registrada de Code.org.
   footer_menu_partners: Parceiros e conselheiros
   footer_menu_contact: Fale conosco
   footer_menu_support: Suporte

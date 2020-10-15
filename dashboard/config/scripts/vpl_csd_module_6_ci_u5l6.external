@@ -5,14 +5,14 @@ display_name 'Introduction to Debugging'
 title 'Debugging Session'
 markdown <<MARKDOWN
 #Unit 5 - Lesson 6:  Keeping Data Secret  
-**Estimated time: 15 minutes**
+**Estimated time: 20 minutes**
 
 
 
 
 ## Investigation Goal
 
-**Understand how to encrypt and decrypt a binary message**
+**Identify how a binary message is encrypted and decrypted**
 
 ## Investigation Tasks
 

@@ -12,6 +12,7 @@ import animationPicker from './AnimationPicker/animationPickerModule';
 import animationTab from './AnimationTab/animationTabModule';
 import locationPicker from './spritelab/locationPickerModule';
 import textConsole from './spritelab/textConsoleModule';
+import spritelabInputList from './spritelab/spritelabInputModule';
 var errorDialogStack = require('./errorDialogStackModule').default;
 var P5LabInterfaceMode = require('./constants').P5LabInterfaceMode;
 
@@ -60,5 +61,6 @@ module.exports = {
   animationJsonViewer,
   gridOverlay,
   locationPicker,
-  textConsole
+  textConsole,
+  spritelabInputList
 };

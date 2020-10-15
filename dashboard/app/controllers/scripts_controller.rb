@@ -107,11 +107,12 @@ class ScriptsController < ApplicationController
     end
     @show_all_instructions = params[:show_all_instructions]
     @script_data = {
-      script: @script ? @script.summarize_for_edit : {},
+      script: @script ? @script.summarize_for_script_edit : {},
       has_course: @script&.unit_groups&.any?,
       i18n: @script ? @script.summarize_i18n_for_edit : {},
       beta: beta,
       betaWarning: beta_warning,
+      levelKeyList: beta && Level.key_list,
       lessonLevelData: @script_file,
       locales: options_for_locale_select,
       script_families: ScriptConstants::FAMILY_NAMES,

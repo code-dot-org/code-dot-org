@@ -63,6 +63,7 @@ de:
   previous_page: Vorherige Seite
   next_page: Nächste Seite
   next_resource: Nächste Ressource
+  done_with_module: Mit dieser Lerneinheit abgeschlossen
   cancel: "Abbrechen"
   okay: "Okay"
   or: "oder"
@@ -132,7 +133,7 @@ de:
     student_count: '%{count} Schüler haben sich bereits angemeldet.'
     teacher_count: '%{count} Lehrer haben sich bereits angemeldet.'
     overview: 'Erstellen Sie ein persönliches Benutzerkonto, um Ihre Fortschritte zu verfolgen und Ihre Klasse zu verwalten. <a href="/">Die verschiedenen Stufen und Rätsel</a> können Sie auch ohne Benutzerkennung ansehen; zum Speichern Ihrer Projekte und Fortschritte benötigen Sie jedoch ein Benutzerkonto.'
-    overview_markdown: 'Erstellen Sie ein persönliches Benutzerkonto, um Ihre Fortschritte zu verfolgen und Ihre Klasse zu verwalten. [Die verschiedenen Stufen und Rätsel](/) können Sie auch ohne Benutzerkennung ansehen; zum Speichern Ihrer Projekte und Fortschritte benötigen Sie jedoch ein Benutzerkonto.'
+    overview_markdown: 'Erstellen Sie ein persönliches Benutzerkonto, um Ihre Fortschritte zu verfolgen und Ihre Klasse zu verwalten. [Die verschiedenen Stufen und Rätsel](/) können Sie auch ohne Benutzerkennung ansehen. Zum Speichern Ihrer Projekte und Fortschritte benötigen Sie jedoch ein Benutzerkonto.'
     hoc_already_signed_up_heading: 'Starte ohne dich einzuloggen'
     hoc_already_signed_up_content: "Sie haben sich angemeldet, eine 'Hour of Code' zu unterrichten. \n<br/> <br/>\nUm an diesem Event teilzunehmen, müssen weder Sie, noch Ihre Schülerinnen und Schüler bei Code Studio einloggen. Um zu beginnen, <a href=\"%{learn_url}\"> wählen Sie eine Unterrichtseinheit</a> für Ihre Klasse und teilen Sie mit Ihren Schülern den Link. <br/> <br/> Falls Sie die 'Hour of Code' genossen haben und weiter damit arbeiten möchten, können Sie unten für Ihr 'Code Studio'-Konto ein Passwort festlegen und Ihre Schüler in jedem unserer <a href=\"%{educate_url}\"> längeren Kurse</a> einschreiben."
     hoc_already_signed_up_content_post_hoc: 'Vielen Dank, dass Sie einen ''Hour of Code'' Anlass begleiten. Um sich im Code-Studio anzumelden, müssen Sie ein Passwort für Ihr Konto einrichten. So können Sie Ihren Fortschritt speichern und Ihre Klasse verwalten. Sie werden damit Ihren Schülerinnen und Schülern Kurse zuweisen und ihren Fortschritt verfolgen. Sie können aber auch ohne Login <a href="%{studio_url}"> die Stufen und Aufgaben ansehen</a>.'
@@ -174,7 +175,7 @@ de:
     email_preference_required: "Sie müssen eine bevorzugte Emailadresse angeben."
     parent_account_checkbox: "Ich bin ein(e) Elternteil/Erziehungsberechtige(r) und melde mich im Namen meines Kindes an"
     parent_account_email_progress_permission: "Dürfen wir Sie gelegentlich per E-Mail über den Fortschritt und die Projekte Ihres Kindes sowie über den Kurs und den Informatikunterricht Ihres Kindes auf dem Laufenden halten? [(Bitte beachten Sie unsere Datenschutzerklärung)](%{privacy_policy_url})"
-    parent_account_email_label: "E-Mail an Eltern/Erziehungsberechtigte"
+    parent_account_email_label: "Eltern/Vormund E-Mail"
   school_info:
     title: 'Schulinformationen (optional)'
     school_country: 'Land der Schule'
@@ -444,14 +445,14 @@ de:
     new_password_hint: "(freilassen, wenn du nichts verändern möchtest)"
     current_password_hint: '(wir benötigen dein aktuelles Passwort, um deine Änderungen zu bestätigen)'
     delete: 'Account löschen'
-    delete_text: "Klicken Sie auf der unten stehenden Taste, um Ihren Account zu löschen."
+    delete_text: "Wenn Sie Ihr Account löschen, gehen alle Informationen und Fortschritte verloren, die mit diesem Account verbunden sind."
     delete_text_teacher_managed_note: "Du hast keine Berechtigung, dieses Konto zu löschen, da es von deinem Lehrer verwaltet wird. Dein(e) Lehrer müssen dich aus ihren Bereichen entfernen, bevor du dein Konto löschen kannst."
     delete_text_teacher_note: "Bitte bemerke: Das Löschen Ihres Accounts löscht nicht die Accounts Ihrer Schüler."
     delete_confirm: 'Bist du sicher, dass du deinen Account löschen willst?'
     deleted_user: 'Gelöschter Benutzer'
     no_password_because_oauth: 'Kein Passwort, da du dich als Drittanbieter einloggst.'
-    no_password_because_sponsored: 'Wende dich an deinen Lehrer um dich um dein Passwort zu kümmern.'
-    create_personal_login: 'Erstelle ein persönliches Login'
+    no_password_because_sponsored: 'Wende dich an deinen Lehrer um dein Passwort zu verwalten.'
+    create_personal_login: 'Erstelle ein persönliches Login Kennwort'
     create_personal_login_under_13_info: 'Wenn du dein Code.org-Konto auch nach dem Ende des Schuljahres weiter nutzen möchtest, bitte deinen Elternteil/Vormund, dir zu helfen, dein persönliches Login zu erstellen.'
     create_personal_login_under_13_username: "Beutzername (benutze nicht deinen echten Namen!)"
     create_personal_login_under_13_parent_email: 'Eltern / Erziehungsberechtigten E-Mail-Adresse'

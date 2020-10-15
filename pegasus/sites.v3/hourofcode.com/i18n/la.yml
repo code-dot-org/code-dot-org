@@ -6,28 +6,28 @@ la:
   front_title: Únete al mayor evento educativo de la historia, %{campaign_date}
   coming_soon: Próximamente
   campaign_date_start_short: 7 Dic.
-  campaign_date_start_long: 4 de diciembre
-  campaign_date_short: 4-10 dic.
-  campaign_date_full: Del 4 al 10 de diciembre
-  campaign_date_year: '2017'
-  campaign_date_full_year: Del 4 al 10 de diciembre de 2017
+  campaign_date_start_long: 7 de diciembre
+  campaign_date_short: 7-13 dic.
+  campaign_date_full: Del 7 al 13 de diciembre
+  campaign_date_year: '2020'
+  campaign_date_full_year: Del 7 al 13 de diciembre de 2020
   latam_campaign_date_start_short: Oct. 1
   latam_campaign_date_start_long: Octubre 1
   latam_campaign_date_short: Oct. 1 - Dic. 18
   latam_campaign_date_full: Octubre 1 - Diciembre 18
-  latam_campaign_date_year: '2017'
+  latam_campaign_date_year: '2020'
   latam_campaign_date_full_year: Octubre 1, 2020 - Diciembre 18, 2020
   europe_campaign_date_start_short: Oct. 10
   europe_campaign_date_start_long: Octubre 10
   europe_campaign_date_short: Oct. 10-25
   europe_campaign_date_full: Octubre 10-25
-  europe_campaign_date_year: '2017'
+  europe_campaign_date_year: '2020'
   europe_campaign_date_full_year: Octubre 10-25, 2020
   africa_campaign_date_start_short: Oct. 1
   africa_campaign_date_start_long: Octubre 1
   africa_campaign_date_short: Oct. 1-31
   africa_campaign_date_full: Octubre 1-31
-  africa_campaign_date_year: '2017'
+  africa_campaign_date_year: '2020'
   africa_campaign_date_full_year: Octubre 1-31, 2020
   hoc2019_header: Aprende programación. Cambia el mundo.
   hoc2019_header_line1_mobile: Aprende programación.
@@ -121,6 +121,10 @@ la:
     ¡Las ciencias de la computación son mucho más que programar! Disfruta del primer
     paso de Code.org en un nuevo viaje para enseñar más sobre IA en nuestro plan de
     estudios.
+  hoc_live: 'Hora del Código En Vivo'
+  hoc_live_sign_up_title: 'Regístrate para la Hora del Código En Vivo'
+  hoc_live_sign_up_message: '¡Aprende en vivo junto a invitados especiales! Estudiantes de todas las edades y habilidades, incluso aquellos sin computadoras, son bienvenidos. Únete a nuestra lista de distribución para recibir recordatorios de los episodios y recursos para continuar el aprendizaje en casa.'
+  hoc_live_join_us: 'Únete'
   hoc_overview_oceans_tutorial_header: Océanos de AI
   hoc_overview_oceans_tutorial_desc: Aprende sobre inteligencia artificial (IA), aprendizaje
     automático, datos de entrenamiento y sesgos, mientras exploras cuestiones éticas
@@ -517,6 +521,7 @@ la:
     mapa
   signup_event_type_in_school: En una escuela
   signup_event_type_out_of_school: Fuera de la escuela
+  signup_event_type_at_home: Home
   signup_submit_census_label: Enviar
   signup_submit_census_error_message: Lo sentimos. Se produjo un error. Intenta enviar
     el formulario otra vez.

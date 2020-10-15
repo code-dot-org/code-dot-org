@@ -5,29 +5,29 @@ ro:
   language: Română
   front_title: Alăturaţi-vă celui mai mare eveniment educational din istorie, %{campaign_date}
   coming_soon: În curând
-  campaign_date_start_short: 5 decembrie
-  campaign_date_start_long: 5 decembrie
-  campaign_date_short: 5-11 decembrie
+  campaign_date_start_short: 7 decembrie
+  campaign_date_start_long: 7 decembrie
+  campaign_date_short: 7-13 decembrie
   campaign_date_full: 5-11 decembrie
-  campaign_date_year: '2016'
-  campaign_date_full_year: 5-11 decembrie, 2016
+  campaign_date_year: '2020'
+  campaign_date_full_year: 7-13 decembrie, 2020
   latam_campaign_date_start_short: Oct. 1
   latam_campaign_date_start_long: October 1
   latam_campaign_date_short: Oct. 1 - Dec. 18
   latam_campaign_date_full: October 1 - December 18
-  latam_campaign_date_year: '2016'
+  latam_campaign_date_year: '2020'
   latam_campaign_date_full_year: October 1, 2020 - December 18, 2020
   europe_campaign_date_start_short: Oct. 10
   europe_campaign_date_start_long: October 10
   europe_campaign_date_short: Oct. 10-25
   europe_campaign_date_full: October 10-25
-  europe_campaign_date_year: '2016'
+  europe_campaign_date_year: '2020'
   europe_campaign_date_full_year: October 10-25, 2020
   africa_campaign_date_start_short: Oct. 1
   africa_campaign_date_start_long: October 1
   africa_campaign_date_short: Oct. 1-31
   africa_campaign_date_full: October 1-31
-  africa_campaign_date_year: '2016'
+  africa_campaign_date_year: '2020'
   africa_campaign_date_full_year: October 1-31, 2020
   hoc2019_header: Învață informatica. Schimbă lumea!
   hoc2019_header_line1_mobile: Învață informatica.
@@ -503,6 +503,7 @@ ro:
     noastră
   signup_event_type_in_school: Într-o şcoală
   signup_event_type_out_of_school: În afara şcolii
+  signup_event_type_at_home: Home
   signup_submit_census_label: Trimite
   signup_submit_census_error_message: Ne pare rău. A apărut o eroare. Vă rugăm să
     încercaţi din nou trimiterea formularului.

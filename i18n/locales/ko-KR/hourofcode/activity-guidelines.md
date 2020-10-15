@@ -22,31 +22,31 @@ A few tips:
 
 2. **Beyond beginner lessons**: In addition to lessons for teachers and students who are learning computer science for the first time, we list learning experiences for computer science-savvy classrooms that want to go a little bit further! Help us by submitting lessons for classes that are already comfortable with the basics.
 
-3. **Subject areas**: Have a great lesson idea that integrates Computer Science into Math? History? Language Arts? Science? Art? Or another subject? We’ve had numerous requests from teachers who want to connect the Hour of Code to their subject area. Teachers can filter for their classroom type (grade band or subject area) so we need your help filling in gaps to offer classroom activities or lesson plans that relate CS to every major subject area for different grade bands. We also continue to have a “Computer Science” category for teachers who are looking for generic CS activities.
+3. **Subject areas**: Have a great lesson idea that integrates Computer Science into Math? 역사? 언어? 과학? 아트? 또는 다른 과목은? We’ve had numerous requests from teachers who want to connect the Hour of Code to their subject area. Teachers can filter for their classroom type (grade band or subject area) so we need your help filling in gaps to offer classroom activities or lesson plans that relate CS to every major subject area for different grade bands. We also continue to have a “Computer Science” category for teachers who are looking for generic CS activities.
 
 <a id="top"></a>
 
-## Index:
+## 인덱스:
 
-- [What to submit](#whatsubmit)
-- [General guidelines for creating an Hour of Code™ activity](#guidelines)
-- [How to Submit](#submit)
-- [How activities will be evaluated](#inclusion)
+- [제출 사항](#whatsubmit)
+- [Hour of Code™ 활동을 만들기 위한 일반 가이드라인](#guidelines)
+- [제출 방법](#submit)
+- [활동 평가 방식](#inclusion)
 - [Guidelines for submitting for an early qualitative review NEW](#earlyreview)
 - [Suggestions for designing your activity](#design)
-- [Trademark Guidelines](#tm)
-- [Tracking Pixel](#pixel)
-- [Promoting your activity, CSEdWeek, and Hour of Code](#promote)
+- [상표 가이드라인](#tm)
+- [트랙킹 픽셀](#pixel)
+- [활동과 CSEdWeek, 아워오브코드 홍보](#promote)
 
 <a id="whatsubmit"></a>
 
-## What to submit
+## 제출 사항
 
-**Self-guided puzzle or game ([example](https://code.org/dance))**
+**자기 주도 퍼즐 또는 게임 ([example](https://code.org/dance))**
 
-These activities are designed for students to self-direct through a tutorial. They don’t require much instruction from a teacher or teacher prep work.
+이러한 활동은 튜토리얼을 통해 스스로 학습하도록 설계되었습니다. 교사의 지도 또는 교사의 준비 작업이 많이 요구되지 않습니다.
 
-**Teacher Facilitated lesson ([example](https://studio.code.org/s/course1/stage/2/puzzle/1), [template](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA))**
+**교사 주도 레슨 ([예](https://studio.code.org/s/course1/stage/2/puzzle/1), [템플릿](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA))**
 
 Now that tens of thousands of educators have tried the Hour of Code, many classrooms are ready for more creative activities that teach the basics of computer science. To help more advanced teachers find inspiration, we collect and curate "teacher-led" lessons and activity plans for Hour of Code veterans.
 
@@ -71,7 +71,7 @@ Examples:
 
 If you create an activity or tutorial that is designed for special needs students, please call that out in the description. In particular, there are very few options for the vision-impaired. If your activity is designed for this audience, please let us know.
 
-[**Back to the top**](#top)
+[**맨 위로**](#top)
 
 <a id="guidelines"></a>
 
@@ -83,7 +83,7 @@ The goal of an Hour of Code is to give beginners an accessible first taste of co
 - Computer science is connected to a wide variety of fields and interests. Everybody should learn it!
 - Encourage students to create something unique that can be shared with parents/friends or online. 
 
-The activities should teach a computer science concept such as loops, conditionals, encryption, or how the Internet works. An activity can also teach about how computer science connects to real world occupations, events, or history. For example, teaching UX design to make apps that are meaningful for an audience or cause. We discourage activities that focus on the syntax of programming rather than the concepts. For example, we will list, but not highlight, activities that teach HTML. Similarly, we discourage block programming lessons that focus on setting/changing configuration options rather than learning how to model an algorithm or process.
+The activities should teach a computer science concept such as loops, conditionals, encryption, or how the Internet works. An activity can also teach about how computer science connects to real world occupations, events, or history. For example, teaching UX design to make apps that are meaningful for an audience or cause. 개념 보다 프로그래밍의 구문에 초점을 두는 활동은 지양합니다. For example, we will list, but not highlight, activities that teach HTML. Similarly, we discourage block programming lessons that focus on setting/changing configuration options rather than learning how to model an algorithm or process.
 
 *Technical requirements:* Because of the wide variety of school and classroom technology setups, the best activities are Web-based or smartphone-friendly, or otherwise unplugged-style activities that teach computer science concepts without the use of a computer (see <http://csunplugged.com/>). Activities that require an app-install, desktop app, or game-console experiences are okay but not ideal. We will not list activities that require sign up or payment. (Robotics activities can require robotics purchase.)
 
@@ -91,87 +91,87 @@ The activities should teach a computer science concept such as loops, conditiona
 
 To get a sense of the wide variety of types of tutorials and lesson plans you can create, visit the [Hour of Code Activities page](https://hourofcode.com/us/learn).
 
-[**Back to the top**](#top)
+[**맨 위로**](#top)
 
 <a id="submit"></a>
 
-## How to submit
+## 제출 방법
 
-Visit the [Hour of Code™ Activity Submission page](https://forms.gle/L1hjArNnGSMJPzyE8) and complete the questions to submit your activity.
+[Hour of Code™ 활동 제출 페이지](https://forms.gle/L1hjArNnGSMJPzyE8)를 방문하여 질문 문항을 모두 작성하고 활동을 제출하세요.
 
-What you’ll need:
+필요한 사항:
 
-* Name and email of the primary contact representing the submitted activity
-* Activity Name (cannot include “Hour of Code” in the name)
-* URL link to the activity
-* An activity description (max character count: 400) 
-    * Please include in the description whether it’s mainly student-guided or teacher-facilitated. Additionally, some schools are interested in knowing if Hour of Code activities address Common Core or Next Generation Science Standards. If the activity addresses specific standards, consider including this information.
+* 제출된 활동을 대표하는 일차 연락 담당자의 이름과 이메일
+* 활동명 (명칭에 “아워오브코드”를 넣을 수 없음)
+* 활동에 링크되는 URL
+* 활동 설명(최대 400자) 
+    * 학생 자기주도적인지 또는 교사 지도형인지에 설명에 포함시켜 주세요. Additionally, some schools are interested in knowing if Hour of Code activities address Common Core or Next Generation Science Standards. If the activity addresses specific standards, consider including this information.
 * Recommended grade level(s) for intended users. You may refer to the \[Computer Science Teachers’ Association’s K-12 Standards\] (https://k12cs.org/framework-statements-by-grade-band/) for grade-appropriate computer science concepts. Example grade levels include: 
-    * Kindergarten - Grade 1 (ages 4-6)
-    * Grades 2-5 (ages 7-10)
-    * Grades 6-8 (ages 11-13)
-    * Grades 9+ (ages 14+)
-* A list of subject areas your activity covers (in addition to Computer Science). For example, if a math teacher can use your activity to teach about angles or parabolas, list as math. If you have a mad libs activity that teaches verbs/nouns/etc. choose language arts.
-* A list of programming languages your activity teaches. I.e. C/C++, Java, JavaScript, etc. or language independent (for lesson plans that can be taught in multiple languages)
+    * 유치원생 -1학년 (4-6세)
+    * 2-5학년 (7-10세)
+    * 6-8학년 (11-13세)
+    * 9학년 이상 (14세 이상)
+* A list of subject areas your activity covers (in addition to Computer Science). For example, if a math teacher can use your activity to teach about angles or parabolas, list as math. If you have a mad libs activity that teaches verbs/nouns/etc. 언어 선택
+* A list of programming languages your activity teaches. 예. C/C++, 자바, 자바스크립트 등 or language independent (for lesson plans that can be taught in multiple languages)
 * A list of supported natural languages. Note: Language-detection is the responsibility of the activity provider; we will redirect all users to the single URL provided.
 * What level of experience should an educator have to use your activity? (e.g. Beginner or Comfortable.) And, what level of experience should the students have? If you’d like to prepare more advanced Hour of Code™ Activities, please include the prior knowledge needed in the description of your activity.
-* The length of your activity 
-    * 1 hour only
-    * 1 hour with follow-on course
-    * 2-6 hours (can be multiple lessons)
+* 활동 길이 
+    * 1 시간 만
+    * 1 시간과 후속 과정
+    * 2-6 시간 (여러 개의 레슨이 될 수 있음)
 * A list of accessibility accommodations, if your activity has them. These include screen reader compatibility, text-to-speech capabilities, use of high-contrast colors, or any other accommodations made for learners with disabilities.
 
 #### Additional things you’ll need when submitting Lesson Plans
 
-* Link to your lesson plan. This can be a web page, dropbox link, google drive or similar service. 
-* What software and/or hardware the teacher will need to do your lesson plan (Scratch? Robots? Nothing?)
+* 레슨 플랜에 링크. This can be a web page, dropbox link, google drive or similar service. 
+* 레슨 플랜을 하기 위해 교사는 어떤 소프트웨어 및/또는 하드웨어가 필요합니까 (스크래치? 로봇? 아무 것도 필요 없음?)
 
-#### Additional things you’ll need when submitting Online Activities
+#### 온라인으로 활동 제출 시 필요한 추가적인 일
 
-* Name and logo of your organization
-* whether it is COPPA compliant or not
-* a URL link to teacher notes (optional)
-* A list of tested/compatible platforms: 
-    * Web based: Which platforms have you tested? 
-        * OS - Mac, Win, and other versions
-        * Browsers - IE11, Edge, Firefox, Chrome, Safari
-        * iOS mobile Safari (mobile-optimized)
-        * Android Chrome (mobile-optimized)
-    * Non web-based: specify platform for native code (Mac, Win, iOS, Android, xBox, other)
-    * Unplugged
-* Screenshot or marketing image of the Hour of Code activity. Please send at least one image with 4:3 dimensions. It should be at least 520px by 390px. This image should have NO text on it (other than your logo), in order to make it more accessible for non-English speakers. If an appropriate image is not provided, we may take our own screenshot of your tutorial OR we may choose not to list it. All images must be submitted as a URL link to a .jpg, .jpeg, or .png.
-* In order to more accurately track participation, third party tutorial partners need to include 1-pixel tracking images on the first page of their Hour of Code tutorials. See the [Tracking Pixel](#pixel) section below for more details.
-* Upon finishing your activity, users should be directed to [code.org/api/hour/finish](https://code.org/api/hour/finish) where they will be able to: 
-    * Share on social media that they completed the Hour of Code
-    * Receive a certificate that they completed the Hour of Code
-    * See leaderboards about which countries/cities have the highest participation rates in Hour of Code activities
-    * For users who spend an hour on your activity and don’t complete it, please include a button on your activity that says “I’m finished with my Hour of Code” which links back to [code.org/api/hour/finish](https://code.org/api/hour/finish) as well.
-* (Optional) We may follow-up with an online survey/form link asking for a report of the following activity metrics: 
-    * For online activities (especially smartphone/tablet apps): 
-        * Number of users
-        * How many completed the task
-        * Average time on task
-        * Number of total lines of code written over all users
-        * How many continued on to further learning (measured as any user who finishes the task and goes onto additional tasks at your site)
-    * For offline activities 
-        * Number of downloads of paper version of activity (if applicable)
+* 조직의 이름 및 로고
+* COPPA 준수 여부
+* 교사 노트로 연결되는 URL 링크(선택사항)
+* 테스트된/호환되는 플랫폼 목록: 
+    * 웹 기반: 직접 테스트한 플랫폼은? 
+        * OS - Mac, Win, 기타 버전
+        * 브라우져 - IE11, 에지, 파이어폭스, 크롬, 사파리
+        * iOS 모바일 사파리 (모바일 최적화)
+        * 안드로이드 크롬 (모바일 최적화)
+    * 비 웹기반: 네이티브 코드를 위한 플랫폼을 지정해 주세요.(Mac, Win, iOS, 안드로이드, xBox, 등)
+    * 언플러그드
+* 스크린 샷 또는 아워오브코드 활동의 마케팅 이미지. Please send at least one image with 4:3 dimensions. It should be at least 520px by 390px. This image should have NO text on it (other than your logo), in order to make it more accessible for non-English speakers. If an appropriate image is not provided, we may take our own screenshot of your tutorial OR we may choose not to list it. All images must be submitted as a URL link to a .jpg, .jpeg, or .png.
+* In order to more accurately track participation, third party tutorial partners need to include 1-pixel tracking images on the first page of their Hour of Code tutorials. 더 자세한 내용은 아래 [트래킹 픽셀](#pixel) 섹션을 참고하세요.
+* 활동이 끝나면, 사용자는[code.org/api/hour/finish](https://code.org/api/hour/finish) 으로 가며 거기서 다음을 할 수 있습니다. 
+    * 아워오브코드를 이수했음을 소셜 미디어 상에서 공유
+    * 아워오브코드 이수 인증서를 받음
+    * 아워오브코드 활동에서 가장 높은 참여율을 나타낸 국가와 시를 리더 보드에서 보기
+    * 한 시간 동안 활동을 했지만 완료하지 못한 사용자는 “아워오브코드를 마쳤습니다”라고 말하는 버튼을 활동에 넣고 그 버튼은 [code.org/api/hour/finish](https://code.org/api/hour/finish)로 다시 연결되어 있습니다.
+* (선택 사항)다음과 같은 활동 메트릭스로 된 보고서를 요청하는 온라인 설문조사/양식 링크로 팔로우 업할 수 있습니다. 
+    * 온라인 활동(특히 스마트폰/태블릿 앱): 
+        * 사용자 수
+        * 완료한 과제 수
+        * 과제 수행 평균 시간
+        * 모든 사용자가 작성한 총 코드 라인 수
+        * 계속 학습을 이어간 사용자 수(사이트에서 한 과제를 끝낸 후 추가 과제로 넘어간 사람의 수)
+    * 오프라인 활동 
+        * 종이 버전 활동 다운로드 횟수 (해당되는 경우)
 
-#### Additional things you’ll need when submitting Robotics
+#### 로봇 공학 제출 시 필요한 추가적인 일
 
-* If you submit a robotics activity, we need to know the cost per student for robotics
-* To evaluate robotics activities for inclusion on the website, we will need you to send sample kits to reviewers.
+* 여러분이 로봇공학 활동을 제출하면, 우리는 로봇공학을 위한 학생 당 비용을 알아야 합니다. 
+* 로봇공학 활동을 웹사이트에 포함할지 평가하기 위해, 샘플 키트를 검토자에게 보내야 합니다.
 
-[**Back to the top**](#top)
+[**맨 위로**](#top)
 
 <a id="inclusion"></a>
 
-## How activities will be evaluated
+## 활동 평가 방식
 
-A diverse committee of computer science educators will rank submissions based on qualitative and quantitative criteria. All activities that fit the basic criteria will be listed. Teachers will be able to filter and sort to find the best activities for their classroom.
+컴퓨터 과학 교사 위원회는 정성적/정량적 기준에 기초하여 제출된 내용에 순위를 메길 것입니다. 기본 기준에 적합한 모든 활동이 나열될 것입니다. 교사는 학급에 가장 적절한 활동을 찾기 위해 필터링 및 정렬을 할 수 있습니다.
 
 The rubric for evaluating activities and lesson plans will look for the following criteria on all activities and rank them accordingly:
 
-- High production quality
+- 높은 생산 품질
 - Promote learning by all demographic groups (esp. students underrepresented in CS, like young women, students from marginalized racial and ethnic groups, and students with disabilities)
 - Educational (teaches computer science concepts well)
 - Fun and engaging
@@ -196,7 +196,7 @@ Teachers and students will be able to search through and filter our list of acti
 - Require no installation
 - Are new this year
 
-[**Back to the top**](#top)
+[**맨 위로**](#top)
 
 <a id="earlyreview"></a>
 
@@ -208,7 +208,7 @@ Reviewers will focus on providing the following:
 
 * Positive feedback - What's working well?
 * Critical feedback - What could be improved?
-* Bugs or errors - Are there any bugs, syntax errors, or grammatical errors? If so, where in the activity?
+* 버그 또는 오류 -버그 또는 구문 오류, 문법 오류가 있습니까? If so, where in the activity?
 * Does this activity encourage students to create something unique?
 
 Please note: These are the general guidelines for providing feedback. The early review of your activity may include feedback across all of these categories, or it may only include feedback in one or two. There is also **no guarantee that we will catch all bugs or issues in an activity**.
@@ -219,7 +219,7 @@ All activities submitted for early review will receive feedback by September 1st
 
 Every activity submitted before October 1st will receive a standard review, whether it receives an early review or not. During the standard review period (September-October), reviewers will focus on rating the activities according to the criteria described in the "How activities will be evaluated" section above. Unless you note specific changes to an activity, reviewers can and likely will rely on early review feedback to rate activities.
 
-[**Back to the top**](#top)
+[**맨 위로**](#top)
 
 <a id="design"></a>
 
@@ -246,11 +246,11 @@ You can include the [Hour of Code logo](https://hourofcode.com/us/promote/resour
 
 **Make sure your tutorial can be used in a [Pair Programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) paradigm.** This is particularly useful for the Hour of Code because many classrooms do not have 1:1 hardware for all students.
 
-[**Back to the top**](#top)
+[**맨 위로**](#top)
 
 <a id="tm"></a>
 
-## Trademark Guidelines
+## 상표 가이드라인
 
 Many of our tutorial partners have used our trademark "Hour of Code" on their web sites. We don't want to prevent this usage, but we want to make sure usage falls within a few limits:
 
@@ -259,26 +259,26 @@ Many of our tutorial partners have used our trademark "Hour of Code" on their we
 3. Include language on the page (or in the the footer), including links to the Hour of Code, CSEdWeek and Code.org web sites, that says the following: a. “The '[Hour of Code](http://hourofcode.com)™' is a nationwide initiative by [Computer Science Education Week](http://csedweek.org) and [Code.org](http://code.org) to introduce millions of students to one hour of computer science and computer programming.”
 4. "Hour of Code"를 앱/프로그램 이름으로 사용하지 말아주세요.
 
-[**Back to the top**](#top)
+[**맨 위로**](#top)
 
 <a id="pixel"></a>
 
-## Tracking Pixel
+## 트랙킹 픽셀
 
 In order to more accurately track participation we ask every tutorial partner to include a 1-pixel tracking image on the first page of their Hour of Code tutorials. The pixel-image must be on the start page only. Do not include on any interim pages of your tutorial.
 
 This will allow us to count users who do your Hour of Code tutorial. It will lead to more accurate participation counts for your tutorial.
 
-If your tutorial is approved and included on the final tutorial page, Code.org will provide you with a unique tracking pixel for you to integrate into your tutorial. See example below.
+If your tutorial is approved and included on the final tutorial page, Code.org will provide you with a unique tracking pixel for you to integrate into your tutorial. 아래 예 참조.
 
-NOTE: this isn't important to do for installable apps (iOS/Android apps, or desktop-install apps)
+참고: 설치 가능형 앱 (iOS/안드로이드 앱 또는 데스크톱 설치 앱)에는 별로 중요하지 않습니다.
 
-Example tracking pixels for Dance Party:
+예 댄스 파티를 위한 트랙킹 픽셀:
 
 IMG SRC = <http://code.org/api/hour/begin_dance.png>   
 
 
-[**Back to the top**](#top)
+[**맨 위로**](#top)
 
 <a id="promote"></a>
 
@@ -286,11 +286,11 @@ IMG SRC = <http://code.org/api/hour/begin_dance.png>
 
 Please promote your activity to your network! Direct them to your Hour of Code page. Your users are much more likely to react to a mailing from you about your activity. Use the international Hour of Code campaign during Computer Science Education Week as an excuse to encourage users to invite others to join in, and help us reach more students!
 
-- Feature Hour of Code and CSEdWeek on your website. Ex: <http://www.tynker.com/hour-of-code>
+- Feature Hour of Code and CSEdWeek on your website. 예: <http://www.tynker.com/hour-of-code>
 - Promote Hour of Code using social media, traditional media, mailing lists, etc, using hashtag #HourOfCode (with capital letters H, O, C)
 - Host a local event or ask your employees to host an event at local schools or community groups.
-- See our [resource kit](https://hourofcode.com/us/promote) for further information.
+- 더 자세한 정보는[자료 키트](https://hourofcode.com/us/promote)참조.
 
-[**Back to the top**](#top)
+[**맨 위로**](#top)
 
 {{ signup_button }}

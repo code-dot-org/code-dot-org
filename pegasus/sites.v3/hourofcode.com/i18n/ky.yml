@@ -10,7 +10,7 @@ ky:
   campaign_date_short: Дек. 4-10
   campaign_date_full: 4-10-декабрда
   campaign_date_year: '2017'
-  campaign_date_full_year: 2017, 4-10-декабрда
+  campaign_date_full_year: 2020, 7-13-декабрда
   latam_campaign_date_start_short: Oct. 1
   latam_campaign_date_start_long: October 1
   latam_campaign_date_short: Oct. 1 - Dec. 18
@@ -493,6 +493,7 @@ ky:
   signup_send_posters_address_placeholder: Бул адрес сиздин картаңызда бөлүшүлбөйт
   signup_event_type_in_school: Мектепте
   signup_event_type_out_of_school: Мектептен тышкары
+  signup_event_type_at_home: Home
   signup_submit_census_label: Кошуу
   signup_submit_census_error_message: Кечиресиздер. Ката кетти. Толтурманы кайра кошууга
     аракет кылгыла.

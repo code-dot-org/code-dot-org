@@ -9,25 +9,25 @@ he:
   campaign_date_start_long: רביעי בדצמבר
   campaign_date_short: בין הרביעי ל עשירי בדצמבר
   campaign_date_full: בין הרביעי לעשירי בדצמבר
-  campaign_date_year: '2017'
-  campaign_date_full_year: 4-10 בדצמבר, 2017
+  campaign_date_year: '2020'
+  campaign_date_full_year: 7-13 בדצמבר, 2020
   latam_campaign_date_start_short: Oct. 1
   latam_campaign_date_start_long: October 1
   latam_campaign_date_short: Oct. 1 - Dec. 18
   latam_campaign_date_full: October 1 - December 18
-  latam_campaign_date_year: '2017'
+  latam_campaign_date_year: '2020'
   latam_campaign_date_full_year: October 1, 2020 - December 18, 2020
   europe_campaign_date_start_short: Oct. 10
   europe_campaign_date_start_long: October 10
   europe_campaign_date_short: Oct. 10-25
   europe_campaign_date_full: October 10-25
-  europe_campaign_date_year: '2017'
+  europe_campaign_date_year: '2020'
   europe_campaign_date_full_year: October 10-25, 2020
   africa_campaign_date_start_short: Oct. 1
   africa_campaign_date_start_long: October 1
   africa_campaign_date_short: Oct. 1-31
   africa_campaign_date_full: October 1-31
-  africa_campaign_date_year: '2017'
+  africa_campaign_date_year: '2020'
   africa_campaign_date_full_year: October 1-31, 2020
   hoc2019_header: למדו מדעי המחשב ושנו את העולם
   hoc2019_header_line1_mobile: למדו מדעי המחשב
@@ -67,7 +67,7 @@ he:
   oceans_landing_cs_for_good_desc: משאבים שיעזרו לתלמידים להבין את התפקיד שמדעי המחשב
     יכולים למלא ביצירות עולם צודק יותר.
   oceans_landing_videos: סרטונים על אינטליגנציה מלאכותית ולמידת־מכונה
-  oceans_behind_the_scenes: 'אינטליגנציה מלאכותית למען האוקיינוסים: מאחורי הקלעים'
+  oceans_behind_the_scenes: 'בינה מלאכותית למען האוקיינוסים: מאחורי הקלעים'
   oceans_behind_the_scenes_1: שלבים 2־4 משתמשים במודל מאומן־מראש שסופק על־ידי פרויקט
     <a href="https://www.tensorflow.org/" >TensorFlow</a> <a href="https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md">
     MobileNet </a> . מודל MobileNet הוא <a href="https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks">רשת
@@ -112,50 +112,49 @@ he:
   hoc_overview_oceans_tutorial_desc: Learn about artificial intelligence (AI), machine
     learning, training data, and bias, while exploring ethical issues and how AI can
     be used to address world problems.
-  ai_video_title_what_is_ai: מה זו אינטליגנציה מלאכותית?
+  ai_video_title_what_is_ai: מה זו בינה מלאכותית?
   ai_video_title_algorithm_bias: מאבק בהטיות באלגוריתמים
   ai_video_title_phone_knows_dog: איך הטלפון שלכם יודע שזה כלב?
-  ai_video_title_what_is_ml: מה זה למידת־מכונה?
+  ai_video_title_what_is_ml: מהי למידת מכונה?
   ai_video_title_ml_big_small_prickly: 'Machine Learning: Solving Problems Big, Small
     and Prickly'
-  ai_video_title_ethics_of_ai: האתיקה של האינטליגנציה המלאכותית
-  ai_video_title_ml_human_bias: למידת־מכונה והטייה אנושית
-  ai_video_title_seeing_ai: 'רואים אינטליגנציה מלאכותית: הפיכת העולם הויזואלי לנגיש
-    יותר'
+  ai_video_title_ethics_of_ai: האתיקה של הבינה המלאכותית
+  ai_video_title_ml_human_bias: למידת מכונה והטיה אנושית
+  ai_video_title_seeing_ai: 'רואים בינה מלאכותית: הפיכת העולם החזותי לנגיש יותר'
   activity: Activity
   name: Name
   description: Description
   audience: Audience
-  ai_resource_header: ללמוד וללמד על אינטליגנציה מלאכותית
+  ai_resource_header: ללמוד וללמד על בינה מלאכותית
   ai_resource_minecraft: Minecraft AI for Good
-  ai_resource_minecraft_desc: 'גישה למשאבים חינמיים הכוללים מערך שיעור, תוכנית לימודים
-    של מדעי המחשב, והדרכות למורים. (נדרשת גישה ל"מיינקראפט: מהדורת החינוך")'
-  ai_resource_ml_for_kids: למידת־מכונה עבור ילדים
-  ai_resource_ml_for_kids_desc: הדריכו מודל למידת־מכונה בעזרת טקסט, מספרים או תמונות,
+  ai_resource_minecraft_desc: 'גישה למשאבים חינמיים הכוללים מערך שיעור, סרטונים, תוכנית
+    לימודים של מדעי המחשב והדרכות למורים. (נדרשת גישה ל"מיינקראפט: מהדורת החינוך")'
+  ai_resource_ml_for_kids: למידת מכונה עבור ילדים
+  ai_resource_ml_for_kids_desc: הדריכו מודל למידת מכונה בעזרת טקסט, מספרים או תמונות,
     והשתמשו בו כדי ליצור משחקים ב־Scratch.
-  ai_resource_ibm_ml_for_kids: 'IBM: למידת־מכונה עבור ילדים'
-  ai_resouce_ibm_ml_for_kids_desc: פעילויות מעשיות להצגת מודלים פשוטים של למידת־מכונה
+  ai_resource_ibm_ml_for_kids: 'IBM: למידת מכונה עבור ילדים'
+  ai_resouce_ibm_ml_for_kids_desc: פעילויות מעשיות להצגת מודלים פשוטים של למידת מכונה
     בפני תלמידים, דרך משחקים ופרויקטים אינטראקטיביים.
   ai_resource_ecs: 'ECS: Artificial Intelligence (AI)'
-  ai_resource_ecs_desc: יחידת תוכנית לימודים חדשה וחלופית עבור תוכנית הלימודים "חקר
-    מדעי המחשב (ECS)".
-  ai_resource_elements_ai: אלמנטים של אינטליגנציה מלאכותית
+  ai_resource_ecs_desc: יחידת לימודים חדשה וחלופית עבור תוכנית הלימודים "חקר מדעי
+    המחשב (ECS)".
+  ai_resource_elements_ai: אלמנטים של בינה מלאכותית
   ai_resource_elements_ai_desc: סדרת קורסים מקוונים חינמיים שנוצרו על־ידי Reaktor
     ואוניברסיטת הלסינקי.
   ai_resource_cognimates: Cognimates
-  ai_resource_cognimates_desc: פלטפורמת חינוך, המבוססת על אינטליגנציה מלאכותית, ליצירת
-    משחקים, תכנות רובוטים והדרכות.
+  ai_resource_cognimates_desc: פלטפורמת חינוך, המבוססת על בינה מלאכותית, ליצירת משחקים,
+    תכנות רובוטים והדרכות.
   ai_audience_k12: K-12 (נדרשת קריאה)
   ai_audience_hs: תיכון
   ai_activity_header: Activities Powered by AI and ML
-  ai_activity_seeing_ai: רואים אינטליגנציה מלאכותית
-  ai_activity_seeing_ai_desc: אפליקציה חינמית המתארת את העולם סביבנו במגוון של שפות.
+  ai_activity_seeing_ai: רואים בינה מלאכותית
+  ai_activity_seeing_ai_desc: אפליקציה חינמית המספרת על העולם סביבנו במגוון של שפות.
   ai_activity_quick_draw: מהר, שלפו!
   ai_activity_quick_draw_desc: האם רשת עצבית יכולה לזהות שרבוטים?
   ai_activity_teachable: מכונה שניתנת ללימוד
-  ai_activity_teachable_desc: הדריכו מחשב לזהות תמונות, צלילים ותנוחות שלכם.
+  ai_activity_teachable_desc: הדריכו מחשב לזהות את התמונות, הצלילים והתנוחות שלכם.
   ai_activity_experiments: AI Experiments with Google
-  ai_activity_experiments_desc: התחילו לחקור למידת־מכונה דרך תמונות, ציורים, שפה,
+  ai_activity_experiments_desc: התחילו לחקור למידת מכונה דרך תמונות, ציורים, שפה,
     מוזיקה ועוד.
   ai_activity_zooniverse: Zooniverse - Snapshot Mountain Zebra
   ai_activity_zooniverse_desc: עזרו להגן על "זברת הר־הכַּף" באמצעות זיהוי החיות האחרות
@@ -478,6 +477,7 @@ he:
   signup_send_posters_address_placeholder: כתובת זו לא ישותף על המפה שלנו
   signup_event_type_in_school: בבית הספר
   signup_event_type_out_of_school: מחוץ לבית הספר
+  signup_event_type_at_home: Home
   signup_submit_census_label: שליחה
   signup_submit_census_error_message: אנו מצטערים, אירעה שגיאה. אנא נסו לשלוח את הטופס
     בשנית.
@@ -2214,8 +2214,7 @@ he:
     a pet that you can feed and play with.
   tutorial_carest_shortdescription: Use the MicroPython programming language to make
     a pet that you can feed and play with.
-  tutorial_accai_shortdescription: לַמְּדוּ רובוט אינטליגנציה מלאכותית לחקור כוכב־לכת
-    חדש!
+  tutorial_accai_shortdescription: לַמְּדוּ רובוט בינה מלאכותית לחקור כוכב לכת חדש!
   tutorial_vceclipse_shortdescription: Code a solar eclipse simulation with JavaScript!
   tutorial_pmzero_shortdescription: Create and program a 3D Pac-Man Maze World
   tutorial_hsela_shortdescription: 'Telling stories: ELA + coding'
@@ -4417,10 +4416,11 @@ he:
   tutorial_carest_longdescription: Join Ross at the Food Avengers restaurant. Use
     your computational thinking skills to help Ross solve problems and serve dinner
     to 8 excited kids.
-  tutorial_accai_longdescription: רובוט נשלח לכוכב־לכת לא ידוע כדי לגלות האם האנושות
+  tutorial_accai_longdescription: רובוט נשלח לכוכב לכת לא ידוע כדי לגלות האם האנושות
     יכולה להקים שם מושבה חדשה. הוא חוקר את הכוכב כדי למצוא מחסה, מגלה אוכלוסייה מקומית
-    ומתקשר איתה. בתור השחקנים, אתם תתנסו בטכניקות אינטליגנציה מלאכותית שונות כדי ללמד
-    את הרובוט איך לזהות חיות וצמחים, להבין שפה חדשה, דיאלוג עם התושבים וכו'.
+    ומתקשר איתה. בתור השחקנים, אתם תתנסו בטכניקות שונות של בינה מלאכותית כדי ללמד
+    את הרובוט איך לזהות חיות וצמחים, איך להבין שפה חדשה, איך לנהל דיאלוג עם התושבים
+    וכו'.
   tutorial_vceclipse_longdescription: 2017 gave us one of the most spectacular natural
     phenomena of our lives, and now we're going to simulate the solar eclipse with
     JavaScript! Looking at the eclipse as a system of moving parts, we can decompose
