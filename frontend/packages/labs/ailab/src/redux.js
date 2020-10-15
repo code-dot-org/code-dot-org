@@ -174,7 +174,9 @@ export function getSelectableLabels(state) {
 }
 
 export function getUniqueOptions(state, column) {
-  return Array.from(new Set(state.data.map(row => row[column])));
+  return Array.from(new Set(state.data.map(row => row[column]))).filter(
+    option => option !== undefined && option !== ""
+  );
 }
 
 export function getUniqueOptionsByColumn(state) {
