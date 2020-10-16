@@ -1492,6 +1492,14 @@ class Script < ActiveRecord::Base
     UnitGroup.get_from_cache(unit_group_units[0].course_id)
   end
 
+  # If this unit is a standalone course, returns its CourseVersion. Otherwise,
+  # if this unit belongs to a UnitGroup, returns the UnitGroup's CourseVersion,
+  # if there is one.
+  # @return [CourseVersion]
+  def get_course_version
+    course_version || unit_group&.course_version
+  end
+
   # @return {String|nil} path to the course overview page for this script if there
   #   is one.
   def course_link(section_id = nil)
