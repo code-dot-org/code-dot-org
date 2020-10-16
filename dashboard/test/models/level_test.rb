@@ -1105,4 +1105,24 @@ class LevelTest < ActiveSupport::TestCase
     create :script_level, levels: [level], script: no_hint_script
     refute level.hint_prompt_enabled?
   end
+
+  test 'validates game' do
+    error = assert_raises ActiveRecord::RecordInvalid do
+      create :level, game: nil
+    end
+    assert_includes error.message, 'Game required for non-custom levels'
+
+    level = create :level
+    level.game = nil
+    error = assert_raises ActiveRecord::RecordInvalid do
+      level.save!
+    end
+    assert_includes error.message, 'Game required for non-custom levels'
+  end
+
+  test 'key list' do
+    # Make sure there are no levels from test fixtures for which computing a
+    # level key raises errors.
+    Level.key_list
+  end
 end
