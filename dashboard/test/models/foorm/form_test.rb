@@ -10,6 +10,65 @@ class Foorm::FormTest < ActiveSupport::TestCase
     assert_equal form2.version, version
   end
 
+  test 'readable_questions formats matrix questions for general workshop question' do
+    form = build :foorm_form_csf_intro_post_survey
+    readable_questions = form.readable_questions
+
+    assert_equal 'How much do you agree or disagree with the following statements about the workshop overall? >> I feel more prepared to teach the material covered in this workshop than before I came.',
+      readable_questions[:general]['overall_success-more_prepared']
+  end
+
+  test 'readable_questions formats matrix questions for facilitator-specific workshop question' do
+    form = build :foorm_form_csf_intro_post_survey
+    readable_questions = form.readable_questions
+
+    assert_equal 'During my workshop, my facilitator did the following: >> Demonstrated knowledge of the curriculum.',
+      readable_questions[:facilitator]['facilitator_effectiveness-demonstrated_knowledge']
+  end
+
+  test 'readable_questions formats comment questions for general workshop question' do
+    form = build :foorm_form_csf_intro_post_survey
+    readable_questions = form.readable_questions
+
+    assert_equal 'What supported your learning the most today and why?',
+      readable_questions[:general]['supported']
+  end
+
+  test 'readable_questions formats comment questions for facilitator workshop question' do
+    form = build :foorm_form_csf_intro_post_survey
+    readable_questions = form.readable_questions
+
+    assert_equal 'What were two things my facilitator did well?',
+      readable_questions[:facilitator]['k5_facilitator_did_well']
+  end
+
+  test 'readable_questions formats single select questions for general workshop question' do
+    form = build :foorm_form_csf_intro_post_survey
+    readable_questions = form.readable_questions
+
+    assert_equal 'I give the workshop organizer permission to quote my written feedback from today for use on social media, promotional materials, and other communications.',
+      readable_questions[:general]['permission']
+  end
+
+  test 'submissions_to_csv formats single general submission' do
+    form = create :foorm_form_csf_intro_post_survey
+    submission_workshop_metadata = create :csf_intro_post_workshop_submission, :answers_low
+    submission = submission_workshop_metadata.foorm_submission
+
+    CSV.stubs(:open)
+
+    other_headers = {
+      'user_id' => 'user_id',
+      'pd_workshop_id' => 'pd_workshop_id',
+      'pd_session_id' => 'pd_session_id'
+    }
+    expected_headers = other_headers.merge form.readable_questions[:general]
+
+    expected_response = submission.formatted_answers
+
+    assert_equal [expected_headers.values, expected_response.values], form.submissions_to_csv('test.csv')
+  end
+
   test 'Form validation passes for valid questions' do
     summer_pre_form = build :foorm_form_summer_pre_survey
     assert summer_pre_form.valid?
@@ -25,22 +84,109 @@ class Foorm::FormTest < ActiveSupport::TestCase
     refute invalid_form.valid?
   end
 
-  test 'merge_form_questions_and_config_variables works with no config variables' do
-    form = create :foorm_form_summer_post_survey
-    submission = create :daily_workshop_day_5_foorm_submission, :answers_high_with_survey_config_variables
+  test 'submissions_to_csv formats submission of a form with only general questions' do
+    form = create :foorm_form_summer_pre_survey
+    workshop = create(:csd_summer_workshop)
+    user = create(:teacher)
+    general_submission_workshop_metadata = create(:day_0_workshop_foorm_submission, :answers_low, user: user, pd_workshop: workshop)
 
-    # Goal of method is to combine keys from the survey and one of its submissions.
-    expected_keys = submission.formatted_answers.keys | form.readable_questions.keys
+    general_submission = general_submission_workshop_metadata.foorm_submission
 
-    assert_equal expected_keys.sort,
-      form.merge_form_questions_and_config_variables(submission.formatted_answers).keys.sort
+    CSV.stubs(:open)
+
+    other_general_headers = {
+      'user_id' => 'user_id',
+      'pd_workshop_id' => 'pd_workshop_id',
+      'pd_session_id' => 'pd_session_id'
+    }
+
+    expected_headers = other_general_headers.
+      merge(form.readable_questions[:general]).
+      merge(form.readable_questions_with_facilitator_number(1))
+
+    expected_response = general_submission.formatted_answers
+
+    assert_equal [expected_headers.values, expected_response.values_at(*expected_headers.keys)],
+      form.submissions_to_csv('test.csv')
   end
 
-  test 'merge_form_questions_and_config_variables works with config variables' do
-    form = create :foorm_form_summer_post_survey
-    submission = create :daily_workshop_day_5_foorm_submission, :answers_high
+  test 'submissions_to_csv formats submission of general and facilitator specific questions' do
+    form = create :foorm_form_csf_intro_post_survey
+    workshop = create(:csf_101_workshop)
+    user = create(:teacher)
+    facilitator_submission_workshop_metadata = create(:csf_intro_post_facilitator_workshop_submission, :answers_low, user: user, pd_workshop: workshop)
+    general_submission_workshop_metadata = create(:csf_intro_post_workshop_submission, :answers_low, user: user, pd_workshop: workshop)
 
-    assert_equal form.readable_questions.keys,
-      form.merge_form_questions_and_config_variables(submission.formatted_answers).keys
+    general_submission = general_submission_workshop_metadata.foorm_submission
+    facilitator_submission = facilitator_submission_workshop_metadata.foorm_submission
+
+    CSV.stubs(:open)
+
+    other_general_headers = {
+      'user_id' => 'user_id',
+      'pd_workshop_id' => 'pd_workshop_id',
+      'pd_session_id' => 'pd_session_id'
+    }
+
+    other_facilitator_headers = {
+      'facilitatorId_1' => 'facilitatorId_1',
+      'facilitatorName_1' => 'facilitatorName_1'
+    }
+
+    expected_headers = other_general_headers.
+      merge(form.readable_questions[:general]).
+      merge(other_facilitator_headers).
+      merge(form.readable_questions_with_facilitator_number(1))
+
+    expected_response = general_submission.formatted_answers.
+      merge(facilitator_submission.formatted_answers_with_facilitator_number(1))
+
+    assert_equal [expected_headers.values, expected_response.values_at(*expected_headers.keys)],
+      form.submissions_to_csv('test.csv')
+  end
+
+  test 'submissions_to_csv formats multiple submissions where one did not answer facilitator-specific questions' do
+    form = create :foorm_form_csf_intro_post_survey
+    workshop = create(:csf_101_workshop)
+    user = create(:teacher)
+    facilitator_submission_workshop_metadata_1 = create(:csf_intro_post_facilitator_workshop_submission, :answers_low, user: user, pd_workshop: workshop)
+    general_submission_workshop_metadata_1 = create(:csf_intro_post_workshop_submission, :answers_low, user: user, pd_workshop: workshop)
+    general_submission_workshop_metadata_2 = create(:csf_intro_post_workshop_submission, :answers_low)
+
+    general_submission_1 = general_submission_workshop_metadata_1.foorm_submission
+    facilitator_submission_1 = facilitator_submission_workshop_metadata_1.foorm_submission
+    general_submission_2 = general_submission_workshop_metadata_2.foorm_submission
+
+    CSV.stubs(:open)
+
+    other_general_headers = {
+      'user_id' => 'user_id',
+      'pd_workshop_id' => 'pd_workshop_id',
+      'pd_session_id' => 'pd_session_id'
+    }
+
+    other_facilitator_headers = {
+      'facilitatorId_1' => 'facilitatorId_1',
+      'facilitatorName_1' => 'facilitatorName_1'
+    }
+
+    expected_headers = other_general_headers.
+      merge(form.readable_questions[:general]).
+      merge(other_facilitator_headers).
+      merge(form.readable_questions_with_facilitator_number(1))
+
+    expected_response_1 = general_submission_1.formatted_answers.
+      merge(facilitator_submission_1.formatted_answers_with_facilitator_number(1))
+
+    expected_response_2 = general_submission_2.formatted_answers
+
+    expected_rows = [
+      expected_headers.values,
+      expected_response_1.values_at(*expected_headers.keys),
+      expected_response_2.values_at(*expected_headers.keys)
+    ]
+
+    assert_equal expected_rows,
+      form.submissions_to_csv('test.csv')
   end
 end
