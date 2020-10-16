@@ -16,6 +16,16 @@ import {levelKeyList} from '../../../../../test/unit/lib/levelbuilder/lesson-edi
 
 $(document).ready(function() {
   const lessonData = getScriptData('lesson');
+  const relatedLessons = getScriptData('relatedLessons');
+
+  // TODO(dave): move this output into the lesson edit UI
+  relatedLessons.forEach(lesson => {
+    const type = lesson.lockable ? 'lockable' : 'lesson';
+    const url = lesson.lessonEditUrl;
+    console.log(
+      `${lesson.scriptName} ${type} ${lesson.relativePosition} ${url}`
+    );
+  });
   const activities = lessonData.activities;
 
   // Rename any keys that are different on the backend.
