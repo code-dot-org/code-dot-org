@@ -278,6 +278,18 @@ class LevelsController < ApplicationController
   # POST /levels
   # POST /levels.json
   def create
+    create_helper
+    render json: {redirect: edit_level_path(@level)}
+  end
+
+  # POST /levels
+  # POST /levels.json
+  def create_level
+    create_helper
+    render json: @level
+  end
+
+  def create_helper
     authorize! :create, Level
     type_class = level_params[:type].constantize
 
@@ -312,8 +324,6 @@ class LevelsController < ApplicationController
     rescue ActiveRecord::RecordInvalid => invalid
       render(status: :not_acceptable, text: invalid) && return
     end
-
-    render json: @level
   end
 
   # DELETE /levels/1
@@ -365,14 +375,29 @@ class LevelsController < ApplicationController
   # POST /levels/1/clone?name=new_name
   # Clone existing level and open edit page
   def clone
-    new_name = params.require(:name)
-    editor_experiment = Experiment.get_editor_experiment(current_user)
-    @new_level = @level.clone_with_name(new_name, editor_experiment: editor_experiment)
+    clone_helper
+    render json: {redirect: edit_level_url(@new_level)}
+  rescue ArgumentError => e
+    render(status: :not_acceptable, text: e.message)
+  rescue ActiveRecord::RecordInvalid => invalid
+    render(status: :not_acceptable, text: invalid)
+  end
+
+  # POST /levels/1/clone_level?name=new_name
+  # Clone existing level and return cloned level
+  def clone_level
+    clone_helper
     render json: @new_level
   rescue ArgumentError => e
     render(status: :not_acceptable, text: e.message)
   rescue ActiveRecord::RecordInvalid => invalid
     render(status: :not_acceptable, text: invalid)
+  end
+
+  def clone_helper
+    new_name = params.require(:name)
+    editor_experiment = Experiment.get_editor_experiment(current_user)
+    @new_level = @level.clone_with_name(new_name, editor_experiment: editor_experiment)
   end
 
   # GET /levels/:id/embed_level

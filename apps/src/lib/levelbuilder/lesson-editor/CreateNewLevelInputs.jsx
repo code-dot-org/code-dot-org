@@ -37,7 +37,7 @@ export default class CreateNewLevelInputs extends Component {
   handleCreateLevel = () => {
     this.setState({creatingLevel: true, error: null});
     $.ajax({
-      url: '/levels',
+      url: '/levels/create_level',
       method: 'POST',
       dataType: 'json',
       data: JSON.stringify({
