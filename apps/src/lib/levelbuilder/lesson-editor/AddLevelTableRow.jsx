@@ -26,7 +26,9 @@ export default class AddLevelTableRow extends Component {
     const newLevelName = prompt('Enter new level name');
     if (newLevelName) {
       $.ajax({
-        url: `/levels/${level.id}/clone_level?name=${newLevelName}`,
+        url: `/levels/${
+          level.id
+        }/clone?name=${newLevelName}&do_not_redirect=true`,
         method: 'POST',
         dataType: 'json',
         contentType: 'application/json;charset=UTF-8'
