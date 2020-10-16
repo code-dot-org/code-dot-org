@@ -11,10 +11,7 @@ import {
 import reducers, {
   init
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
-import {
-  levelKeyList,
-  activities
-} from '@cdo/apps/lib/levelbuilder/lesson-editor/SampleActivitiesData';
+import {levelKeyList, sampleActivities} from './activitiesTestData';
 import {Provider} from 'react-redux';
 
 describe('LessonEditor', () => {
@@ -24,7 +21,7 @@ describe('LessonEditor', () => {
     registerReducers({...reducers});
 
     store = getStore();
-    store.dispatch(init(activities, levelKeyList));
+    store.dispatch(init(sampleActivities, levelKeyList));
     defaultProps = {
       displayName: 'Lesson Name',
       overview: 'Lesson Overview',
@@ -66,7 +63,7 @@ describe('LessonEditor', () => {
     ).to.be.true;
     expect(wrapper.find('Connect(ActivitiesEditor)').length).to.equal(1);
     expect(wrapper.find('TextareaWithMarkdownPreview').length).to.equal(4);
-    expect(wrapper.find('input').length).to.equal(24);
+    expect(wrapper.find('input').length).to.equal(18);
     expect(wrapper.find('select').length).to.equal(1);
     expect(wrapper.find('AnnouncementsEditor').length).to.equal(1);
     expect(wrapper.find('CollapsibleEditorSection').length).to.equal(3);
