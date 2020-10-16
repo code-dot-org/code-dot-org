@@ -34,6 +34,7 @@ class LessonsController < ApplicationController
   # GET /lessons/1/edit
   def edit
     @lesson_data = @lesson.summarize_for_lesson_edit
+    @related_lessons = @lesson.summarize_related_lessons
   end
 
   # PATCH/PUT /lessons/1
