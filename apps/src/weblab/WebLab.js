@@ -328,18 +328,12 @@ WebLab.prototype.reportResult = function(submit, validated) {
 };
 
 WebLab.prototype.onFinish = function(submit) {
-  var validated = true;
   if (this.level.validationEnabled) {
-    this.brambleHost.getAllFileDataFromBramble((result, error) => {
-      // Don't let an error from bramble block the student from progressing.
-      if (!error) {
-        validated =
-          JSON.stringify(result) !== JSON.stringify(this.getStartSources());
-      }
-      this.reportResult(submit, validated);
-    });
+    this.brambleHost.validateProjectChanged(validated =>
+      this.reportResult(submit, validated)
+    );
   } else {
-    this.reportResult(submit, validated);
+    this.reportResult(submit, true /* validated */);
   }
 };
 
