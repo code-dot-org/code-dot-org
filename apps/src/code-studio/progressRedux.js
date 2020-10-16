@@ -763,6 +763,9 @@ export const groupedLessons = (state, includeBonusLevels = false) => {
  */
 export const progressionsFromLevels = levels => {
   const progressions = [];
+  if (levels.length === 0) {
+    return progressions;
+  }
   let currentProgression = {
     start: 0,
     name: levels[0].progression || levels[0].name,
