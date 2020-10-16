@@ -2449,20 +2449,20 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal 2, script.script_levels[4].position
   end
 
-  test 'raise error if lesson with no levels' do
+  test 'can add lesson with no levels' do
     dsl = <<-SCRIPT
       lesson_group 'content', display_name: 'Content'
       lesson 'Lesson1', display_name: 'Lesson1'
 
     SCRIPT
 
-    raise = assert_raises do
-      Script.add_script(
-        {name: 'lesson-group-test-script'},
-        ScriptDSL.parse(dsl, 'a filename')[0][:lesson_groups]
-      )
-    end
-    assert_equal 'Lessons must have at least one level in them.  Lesson: Lesson1.', raise.message
+    script = Script.add_script(
+      {name: 'lesson-group-test-script'},
+      ScriptDSL.parse(dsl, 'a filename')[0][:lesson_groups]
+    )
+    lesson = script.lessons.first
+    assert_equal 'Lesson1', lesson.key
+    assert_equal 0, lesson.script_levels.count
   end
 
   test 'raise error if try to change key of lesson in stable and i18n script' do
