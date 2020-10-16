@@ -302,6 +302,35 @@ function syncFilesWithBramble(fileEntries, currentProjectVersion, callback) {
   }
 }
 
+function validateProjectChanged(callback) {
+  getAllFileDataFromBramble((userFiles, error) => {
+    const startSources = webLab_.getStartSources();
+
+    // Don't let an error from bramble block the student from progressing.
+    if (error || userFiles.files.length !== startSources.files.length) {
+      callback(true /* project changed */);
+      return;
+    }
+
+    const changedFile = startSources.files.find(startFile => {
+      const matchingFile = userFiles.files.find(
+        file => file.name === startFile.name
+      );
+      // If startFile doesn't have `data` (and instead has something different
+      // like `url`), this is an image and is stored differently in the
+      // startSources than in bramble. Check for a matching file name, but
+      // don't compare data.
+      return (
+        !matchingFile ||
+        (startFile.data &&
+          startFile.data.replace(/\s+/g, '') !==
+            matchingFile.data.replace(/\s+/g, ''))
+      );
+    });
+    callback(!!changedFile);
+  });
+}
+
 function getAllFileDataFromBramble(callback) {
   const fs = bramble_.getFileSystem();
   const sh = new fs.Shell();
@@ -552,7 +581,7 @@ const brambleHost = {
   onInspectorChanged,
   startInitialFileSync,
   syncFiles,
-  getAllFileDataFromBramble
+  validateProjectChanged
 };
 
 // Give our interface to our parent
