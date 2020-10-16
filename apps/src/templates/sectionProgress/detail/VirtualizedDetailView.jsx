@@ -148,10 +148,7 @@ class VirtualizedDetailView extends Component {
           </div>
         )}
         {rowIndex === 0 && columnIndex >= 1 && (
-          <div
-            style={styles.lessonHeaderContainer}
-            className="lesson-header-container"
-          >
+          <div style={styles.lessonHeaderContainer}>
             <div
               onClick={() => this.onClickLevel(columnIndex)}
               style={styles.numberHeader}
