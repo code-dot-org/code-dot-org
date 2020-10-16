@@ -1,6 +1,8 @@
 lesson_group 'outbreak', display_name: 'Outbreak Simulation'
 lesson 'Virus Simulation for Code Bytes', display_name: 'Simulating a Virus'
-level 'outbreak1', progression: 'Create Your Sprites'
+level 'outbreak1', progression: 'Creating Sprites'
 level 'outbreak2', progression: 'Simulating an Outbreak'
 level 'outbreak3', progression: 'Simulating Masks'
+level 'outbreak4', progression: 'Modifying Your Simulation'
+level 'outbreak5', progression: 'Recovery'
 
