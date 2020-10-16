@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 0,
   "properties": {
-    "long_instructions": "## Programing Languages vs. Natural Languages\r\n\r\nWhat is the difference between a programming language and natural (every-day) language? ",
+    "long_instructions": "## Programming Languages vs. Natural Languages\r\n\r\nWhat is the difference between a programming language and natural (every-day) language? ",
     "encrypted_solution": "vfULSfKzU2NNhdJVu1f/ArSC7THirg7WMOpFAJDHlQvffDrXtyxaMHgoZ/rC\nlj0IgY/3yEdAxsUfT3gSdfg79yMi+GSjVfpluG0bXRiLHpn2hMeAFZM/ddW8\nwYeCFUFe+dpgrhYMYsa4e0LTSCVwHZeauJDFabhez+3NXsxQd15S4gqs++Kx\n+UlbsjYjxNw0/sZGgWoivVyR4+zk8VG6Nq9P3TRowbgLw8CdtFZqMk4O54kb\nFd2KIeZXpLLxcPSvJ6bN8mBJUR0PeF5NAqiQhQ==\n",
     "skip_dialog": true,
     "skip_sound": true,
@@ -20,7 +20,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2019-08-19 16:02:07 +0000\",\"changed\":[\"notes\",\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-08-19 16:37:18 +0000\",\"changed\":[\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-08-19 16:58:58 +0000\",\"changed\":[\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-08-26 15:38:01 +0000\",\"changed\":[\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-08-28 18:47:09 +0000\",\"changed\":[\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2019-08-19 16:02:07 +0000\",\"changed\":[\"notes\",\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-08-19 16:37:18 +0000\",\"changed\":[\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-08-19 16:58:58 +0000\",\"changed\":[\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-08-26 15:38:01 +0000\",\"changed\":[\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-08-28 18:47:09 +0000\",\"changed\":[\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2020-10-16 15:10:51 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
