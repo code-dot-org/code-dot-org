@@ -494,7 +494,7 @@ class Lesson < ActiveRecord::Base
     # and course offering. In the future, when curriulum_umbrella moves to
     # CourseOffering, this implementation will need to change to be more like
     # related_lessons.
-    lessons = Lesson.includes(:script).
+    lessons = Lesson.eager_load(script: :course_version).
       where("scripts.properties -> '$.curriculum_umbrella' = ?", script.curriculum_umbrella).
       where(key: key).
       order("scripts.properties -> '$.version_year'", 'scripts.name')
@@ -505,10 +505,12 @@ class Lesson < ActiveRecord::Base
   def summarize_related_lessons
     related_lessons.map do |lesson|
       {
-        scriptName: lesson.script.name,
+        scriptTitle: lesson.script.localized_title,
+        versionYear: lesson.script.get_course_version.version_year,
         lockable: lesson.lockable,
         relativePosition: lesson.relative_position,
-        lessonEditUrl: edit_lesson_path(id: lesson.id)
+        id: lesson.id,
+        editUrl: edit_lesson_path(id: lesson.id)
       }
     end
   end
