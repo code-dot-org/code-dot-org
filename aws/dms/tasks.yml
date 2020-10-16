@@ -111,6 +111,9 @@ cron-user-hierarchy-pii:
 - dashboard.users:
     remove_column:
         - encrypted_password
+        - reset_password_token
+        - secret_picture_id
+        - secret_words
 - dashboard.user_geos
 - dashboard.user_school_infos
 cron-user-levels:
