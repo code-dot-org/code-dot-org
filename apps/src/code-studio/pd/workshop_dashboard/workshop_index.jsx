@@ -16,6 +16,7 @@ import {
   ProgramManager
 } from './permission';
 import $ from 'jquery';
+import SubmissionsReport from './reports/foorm/submissions_report';
 
 const FILTER_API_URL = '/api/v1/pd/workshops/filter';
 const defaultFilters = {
@@ -91,6 +92,7 @@ export class WorkshopIndex extends React.Component {
       Facilitator,
       CsfFacilitator
     );
+    const canExportSurveyResults = this.props.permission.has(WorkshopAdmin);
 
     return (
       <div>
@@ -121,6 +123,11 @@ export class WorkshopIndex extends React.Component {
             Filter View
           </Button>
         </ButtonToolbar>
+        {canExportSurveyResults && (
+          <SubmissionsReport>
+            <Button>Export Survey Results</Button>
+          </SubmissionsReport>
+        )}
         <h2>In Progress</h2>
         <ServerSortWorkshopTable
           queryUrl={FILTER_API_URL}

@@ -500,6 +500,8 @@ Dashboard::Application.routes.draw do
 
       post 'foorm/form_with_library_items', action: :fill_in_library_items, controller: 'foorm'
       get 'foorm/form_questions', action: :get_form_questions, controller: 'foorm'
+      get 'foorm/submissions_csv', action: :get_submissions_as_csv, controller: 'foorm'
+      get 'foorm/form_names', action: :get_form_names_and_versions, controller: 'foorm'
     end
   end
 
