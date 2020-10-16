@@ -1,20 +1,15 @@
 import React, {Component} from 'react';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import PropTypes from 'prop-types';
-
-const styles = {
-  orderIcon: {
-    float: 'right'
-  },
-  pages: {
-    marginTop: 10
-  }
-};
+import PaginationWrapper from '@cdo/apps/templates/PaginationWrapper';
 
 export default class AddLevelTable extends Component {
   static propTypes = {
     addLevel: PropTypes.func,
-    levels: PropTypes.array
+    levels: PropTypes.array,
+    currentPage: PropTypes.number,
+    setCurrentPage: PropTypes.func,
+    numPages: PropTypes.number
   };
 
   render() {
@@ -67,16 +62,11 @@ export default class AddLevelTable extends Component {
             ))}
           </tbody>
         </table>
-        <div style={styles.pages}>
-          <span>{'1 '}</span>
-          <a>2 </a>
-          <a>3 </a>
-          <a>4 </a>
-          <a>5 </a>
-          ...
-          <a>Next></a>
-          <a>Last>></a>
-        </div>
+        <PaginationWrapper
+          totalPages={this.props.numPages}
+          currentPage={this.props.currentPage}
+          onChangePage={this.props.setCurrentPage}
+        />
       </div>
     );
   }

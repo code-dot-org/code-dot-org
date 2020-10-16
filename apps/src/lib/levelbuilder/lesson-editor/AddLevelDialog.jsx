@@ -67,7 +67,12 @@ export default class AddLevelDialog extends Component {
       methodOfAddingLevel: 'Find Level',
       levels: null,
       searchFields: null,
-      currentPage: 1
+      currentPage: 1,
+      levelName: '',
+      levelType: null,
+      scriptId: 0,
+      ownerId: null,
+      numPages: 0
     };
   }
 
@@ -77,7 +82,12 @@ export default class AddLevelDialog extends Component {
       method: 'GET',
       contentType: 'application/json;charset=UTF-8'
     }).done((data, _, request) => {
-      this.setState({searchFields: data});
+      this.setState({
+        searchFields: data,
+        levelType: data.levelOptions[0][1],
+        scriptId: data.scriptOptions[0][1],
+        ownerId: data.ownerOptions[0][1]
+      });
     });
 
     $.ajax({
@@ -85,23 +95,24 @@ export default class AddLevelDialog extends Component {
       method: 'GET',
       contentType: 'application/json;charset=UTF-8'
     }).done(data => {
-      this.setState({levels: data});
+      console.log(data);
+      this.setState({levels: data.levels, numPages: data.numPages});
     });
   }
 
-  handleSearch = (levelName, levelType, scriptId, ownerId) => {
+  handleSearch = () => {
     let queryParams = {page: this.state.currentPage};
-    if (levelName) {
-      queryParams.name = levelName;
+    if (this.state.levelName) {
+      queryParams.name = this.state.levelName;
     }
-    if (levelType) {
-      queryParams.level_type = levelType;
+    if (this.state.levelType) {
+      queryParams.level_type = this.state.levelType;
     }
-    if (scriptId) {
-      queryParams.script_id = scriptId;
+    if (this.state.scriptId) {
+      queryParams.script_id = this.state.scriptId;
     }
-    if (ownerId) {
-      queryParams.owner_id = ownerId;
+    if (this.state.ownerId) {
+      queryParams.owner_id = this.state.ownerId;
     }
 
     const url =
@@ -112,12 +123,34 @@ export default class AddLevelDialog extends Component {
       method: 'GET',
       contentType: 'application/json;charset=UTF-8'
     }).done((data, _, request) => {
-      this.setState({levels: data});
+      console.log(data);
+      this.setState({levels: data.levels, numPages: data.numPages});
     });
   };
 
   handleToggle = value => {
     this.setState({methodOfAddingLevel: value});
+  };
+
+  setCurrentPage = value => {
+    this.setState({currentPage: value});
+    this.handleSearch();
+  };
+
+  handleChangeLevelName = event => {
+    this.setState({levelName: event.target.value});
+  };
+
+  handleChangeLevelType = event => {
+    this.setState({levelType: event.target.value});
+  };
+
+  handleChangeScript = event => {
+    this.setState({scriptId: event.target.value});
+  };
+
+  handleChangeOwner = event => {
+    this.setState({ownerId: event.target.value});
   };
 
   render() {
@@ -147,10 +180,21 @@ export default class AddLevelDialog extends Component {
                 <AddLevelFilters
                   searchFields={this.state.searchFields}
                   handleSearch={this.handleSearch}
+                  handleChangeLevelName={this.handleChangeLevelName}
+                  handleChangeLevelType={this.handleChangeLevelType}
+                  handleChangeScript={this.handleChangeScript}
+                  handleChangeOwner={this.handleChangeOwner}
+                  ownerId={this.state.ownerId}
+                  scriptId={this.state.scriptId}
+                  levelName={this.state.levelName}
+                  levelType={this.state.levelType}
                 />
                 <AddLevelTable
+                  setCurrentPage={this.setCurrentPage}
+                  currentPage={this.state.currentPage}
                   addLevel={this.props.addLevel}
                   levels={this.state.levels}
+                  numPages={this.state.numPages}
                 />
               </div>
             )}
