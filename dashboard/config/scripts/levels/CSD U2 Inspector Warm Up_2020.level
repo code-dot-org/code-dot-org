@@ -17,7 +17,7 @@
     "video_key": "csd_weblab_intro_1",
     "encrypted": "false",
     "mini_rubric": "false",
-    "validation_enabled": "true",
+    "validation_enabled": "false",
     "map_reference": "/docs/concepts/html/html-tags/",
     "encrypted_examples": [
 
