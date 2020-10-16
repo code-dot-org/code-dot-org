@@ -128,7 +128,8 @@ class FishView extends React.Component {
     // Constrain tutorial to maximum width.
     const maxContainerWidth = Math.min(this.state.appWidth, maxAppWidth);
 
-    // Leave space above the small footer.
+    // Use the smaller of the space allocated for the app and the window height,
+    // and leave space above the small footer.
     const maxContainerHeight =
       Math.min(this.state.appHeight, this.state.windowHeight) - reduceAppHeight;
 
