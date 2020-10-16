@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import PropTypes from 'prop-types';
 import $ from 'jquery';
+import color from '@cdo/apps/util/color';
 
 export default class AddLevelTableRow extends Component {
   static propTypes = {
@@ -13,34 +14,38 @@ export default class AddLevelTableRow extends Component {
     super(props);
 
     this.state = {
-      creatingClonedLevel: false
+      creatingClonedLevel: false,
+      error: null
     };
   }
 
   handleAddLevel = level => {
+    this.setState({error: null});
     this.props.addLevel(level);
   };
 
   handleCloneAndAddLevel = level => {
-    this.setState({creatingClonedLevel: true});
+    this.setState({creatingClonedLevel: true, error: null});
     const newLevelName = prompt('Enter new level name');
-    if (newLevelName) {
-      $.ajax({
-        url: `/levels/${
-          level.id
-        }/clone?name=${newLevelName}&do_not_redirect=true`,
-        method: 'POST',
-        dataType: 'json',
-        contentType: 'application/json;charset=UTF-8'
+    $.ajax({
+      url: `/levels/${
+        level.id
+      }/clone?name=${newLevelName}&do_not_redirect=true`,
+      method: 'POST',
+      dataType: 'json',
+      contentType: 'application/json;charset=UTF-8'
+    })
+      .done(data => {
+        this.props.addLevel(data);
+        this.setState({creatingClonedLevel: false});
       })
-        .done(data => {
-          this.props.addLevel(data);
-          this.setState({creatingClonedLevel: false});
-        })
-        .fail(error => {
-          console.log(error);
+      .fail(error => {
+        console.log(error.responseText);
+        this.setState({
+          creatingClonedLevel: false,
+          error: 'Could not clone level'
         });
-    }
+      });
   };
 
   render() {
@@ -61,6 +66,9 @@ export default class AddLevelTableRow extends Component {
           </button>
           {this.state.creatingClonedLevel && (
             <FontAwesome icon="spinner" className="fa-spin" />
+          )}
+          {this.state.error && (
+            <div style={{color: color.red}}>{this.state.error}</div>
           )}
         </td>
         <td>
