@@ -302,6 +302,37 @@ function syncFilesWithBramble(fileEntries, currentProjectVersion, callback) {
   }
 }
 
+function getAllFileDataFromBramble(callback) {
+  const fs = bramble_.getFileSystem();
+  const sh = new fs.Shell();
+  const allFileData = [];
+
+  // enumerate files in the file system off the project root
+  sh.ls(`${weblabRoot}/${currentProjectPath}`, function(err, entries) {
+    // async-chained enumeration: get the file data for i-th file
+    function getEntryFileData(i, callback, err) {
+      if (err) {
+        callback(null, err);
+        return;
+      }
+      if (i < entries.length) {
+        const entry = entries[i];
+        getFileData(entry.path, (err, fileData) => {
+          // also get the file name
+          allFileData.push({name: entry.path, data: fileData.toString()});
+          getEntryFileData(i + 1, callback, err);
+        });
+      } else {
+        // end of list, call completion callback
+        callback({files: allFileData});
+      }
+    }
+
+    // start an async-chained enumeration through the file list
+    getEntryFileData(0, callback, err);
+  });
+}
+
 function uploadAllFilesFromBramble(callback) {
   const fs = bramble_.getFileSystem();
   const sh = new fs.Shell();
@@ -520,7 +551,8 @@ const brambleHost = {
   onBrambleReady,
   onInspectorChanged,
   startInitialFileSync,
-  syncFiles
+  syncFiles,
+  getAllFileDataFromBramble
 };
 
 // Give our interface to our parent

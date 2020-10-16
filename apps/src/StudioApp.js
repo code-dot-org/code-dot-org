@@ -2768,7 +2768,8 @@ StudioApp.prototype.enableBreakpoints = function() {
  * specified in levelbuilder. If the level has disabled this functionality,
  * by turning `validationEnabled` off, this will always return true.
  */
-StudioApp.prototype.validateCodeChanged = function(level = this.config.level) {
+StudioApp.prototype.validateCodeChanged = function() {
+  const level = this.config.level;
   if (!level.validationEnabled) {
     return true;
   }

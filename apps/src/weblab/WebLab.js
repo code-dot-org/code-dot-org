@@ -298,11 +298,10 @@ WebLab.prototype.init = function(config) {
   };
 };
 
-WebLab.prototype.onFinish = function(submit) {
+WebLab.prototype.reportResult = function(submit, validated) {
   var onComplete, testResult;
-  const isSuccessful = this.studioApp_.validateCodeChanged(this.level);
 
-  if (isSuccessful) {
+  if (validated) {
     testResult = TestResults.FREE_PLAY;
     onComplete = submit
       ? onSubmitComplete
@@ -319,13 +318,29 @@ WebLab.prototype.onFinish = function(submit) {
     this.studioApp_.report({
       app: 'weblab',
       level: this.level.id,
-      result: isSuccessful,
+      result: validated,
       testResult: testResult,
       program: this.getCurrentFilesVersionId() || '',
       submitted: submit,
       onComplete: onComplete
     });
   });
+};
+
+WebLab.prototype.onFinish = function(submit) {
+  var validated = true;
+  if (this.level.validationEnabled) {
+    this.brambleHost.getAllFileDataFromBramble((result, error) => {
+      // Don't let an error from bramble block the student from progressing.
+      if (!error) {
+        validated =
+          JSON.stringify(result) !== JSON.stringify(this.getStartSources());
+      }
+      this.reportResult(submit, validated);
+    });
+  } else {
+    this.reportResult(submit, validated);
+  }
 };
 
 WebLab.prototype.getCodeAsync = function() {
