@@ -21,24 +21,20 @@ const styles = {
 export default class AddLevelFilters extends Component {
   static propTypes = {
     searchFields: PropTypes.object,
-    handleSearch: PropTypes.func
+    handleSearch: PropTypes.func,
+    handleChangeLevelName: PropTypes.func,
+    handleChangeLevelType: PropTypes.func,
+    handleChangeScript: PropTypes.func,
+    handleChangeOwner: PropTypes.func,
+    ownerId: PropTypes.number,
+    scriptId: PropTypes.number,
+    levelType: PropTypes.string,
+    levelName: PropTypes.string
   };
-
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      levelName: '',
-      levelType: this.props.searchFields.levelOptions[0][1],
-      scriptId: this.props.searchFields.scriptOptions[0][1],
-      ownerId: this.props.searchFields.ownerOptions[0][1]
-    };
-  }
 
   handleSearch = _.debounce(
     () => {
-      const {levelName, levelType, scriptId, ownerId} = this.state;
-      this.props.handleSearch(levelName, levelType, scriptId, ownerId);
+      this.props.handleSearch();
     },
     1000,
     {
@@ -47,22 +43,6 @@ export default class AddLevelFilters extends Component {
     }
   );
 
-  handleInputChange = event => {
-    this.setState({levelName: event.target.value});
-  };
-
-  handleChangeLevelType = event => {
-    this.setState({levelType: event.target.value});
-  };
-
-  handleChangeScript = event => {
-    this.setState({scriptId: event.target.value});
-  };
-
-  handleChangeOwner = event => {
-    this.setState({ownerId: event.target.value});
-  };
-
   render() {
     return (
       <div style={styles.filters}>
@@ -70,16 +50,16 @@ export default class AddLevelFilters extends Component {
           By Name:
           <input
             style={styles.dropdown}
-            onChange={this.handleInputChange}
-            value={this.state.levelName}
+            onChange={this.props.handleChangeLevelName}
+            value={this.props.levelName}
           />
         </label>
         <label style={styles.label}>
           By Type:
           <select
             style={styles.dropdown}
-            onChange={this.handleChangeLevelType}
-            value={this.state.levelType}
+            onChange={this.props.handleChangeLevelType}
+            value={this.props.levelType}
           >
             {this.props.searchFields.levelOptions.map(levelType => (
               <option key={levelType[0]} value={levelType[1]}>
@@ -92,8 +72,8 @@ export default class AddLevelFilters extends Component {
           By Script:
           <select
             style={styles.dropdown}
-            onChange={this.handleChangeScript}
-            value={this.state.scriptId}
+            onChange={this.props.handleChangeScript}
+            value={this.props.scriptId}
           >
             {this.props.searchFields.scriptOptions.map(script => (
               <option key={script[0]} value={script[1]}>
@@ -106,8 +86,8 @@ export default class AddLevelFilters extends Component {
           By Owner:
           <select
             style={styles.dropdown}
-            onChange={this.handleChangeOwner}
-            value={this.state.ownerId}
+            onChange={this.props.handleChangeLevelName}
+            value={this.props.ownerId}
           >
             {this.props.searchFields.ownerOptions.map(owner => (
               <option key={owner[0]} value={owner[1]}>
