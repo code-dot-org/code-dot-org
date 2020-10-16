@@ -6,7 +6,7 @@ import $ from 'jquery';
 export default class AddLevelTableRow extends Component {
   static propTypes = {
     addLevel: PropTypes.func,
-    level: PropTypes.array
+    level: PropTypes.object
   };
 
   constructor(props) {
