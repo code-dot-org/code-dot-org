@@ -125,9 +125,8 @@ module Cdo
     # link to. If in the future we (hopefully) move away from this practice of
     # one-off syncs, we can probably get rid of this helper method.
     def curriculum_languages
-      cache.fetch("curriculum_languages") do
-        supported_languages = Set[]
-
+      @@curriculum_languages ||= Set[]
+      if @@curriculum_languages.count == 0
         # This is the list of languages officially supported by CurriculumBuilder.
         # The source of truth for this list is in a DCDO variable, so we need
         # to retrieve it from there (hence why this method is cached). We also
@@ -140,7 +139,7 @@ module Cdo
             ["it-it", "Italian"]
           ]
         ).map(&:first)
-        supported_languages.merge(curriculumbuilder_languages)
+        @@curriculum_languages.merge(curriculumbuilder_languages)
 
         # This is a list of additional languages we want to support. These are
         # languages for which there does exist content in that language on
@@ -152,14 +151,14 @@ module Cdo
         additional_languages = [
           'de-de', 'id-id', 'ko-kr', 'tr-tr', 'zh-cn', 'zh-tw'
         ]
-        supported_languages.merge(additional_languages)
+        @@curriculum_languages.merge(additional_languages)
 
         # Don't include English; we do of course _support_ English, but only as
         # the default, not as a specific localized language.
-        supported_languages.delete("en-us")
-
-        return supported_languages
+        @@curriculum_languages.delete("en-us")
       end
+
+      return @@curriculum_languages
     end
 
     def curriculum_url(locale, path = '')
