@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import $ from 'jquery';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import color from '@cdo/apps/util/color';
 
 const styles = {
   input: {
@@ -51,9 +52,10 @@ export default class CreateNewLevelInputs extends Component {
         this.setState({creatingLevel: false});
       })
       .fail(error => {
+        console.log(error.responseText);
         this.setState({
           creatingLevel: false,
-          error: `Could not create level: ${error}`
+          error: 'Could not create level'
         });
       });
   };
@@ -94,7 +96,9 @@ export default class CreateNewLevelInputs extends Component {
           {this.state.creatingLevel && (
             <FontAwesome icon="spinner" className="fa-spin" />
           )}
-          {this.state.error && <span>{this.state.error}</span>}
+          {this.state.error && (
+            <span style={{color: color.red}}>{this.state.error}</span>
+          )}
         </div>
       </div>
     );
