@@ -2221,101 +2221,108 @@ it:
     creare un animale domestico con cui puoi nutrire e giocare. Nessun micro BBC:bit?
     Nessun problema! Questo corso include un simulatore micro: bit completo, così
     sarai in grado di fare tutto ciò che faresti su un vero micro:bit!'
-  tutorial_techbim_shortdescription: Learn how to manipulate images without the use
-    of external libraries
-  tutorial_techfpp_shortdescription: Functional Programming made easy with Python!
-  tutorial_codesterscr_shortdescription: In this activity, you'll design a cheer routine
-    that your sprite will perform!
-  tutorial_grokdisease_shortdescription: This activity is designed to give you your
-    first experience programming, and has been specially designed for the Hour of
-    Code. Use the programming language Python to model a disease outbreak. Can you
-    solve the curious case of the glowing nose?
-  tutorial_techec_shortdescription: Confused about Closures in JS? Don't worry you're
-    not alone!
-  tutorial_rgbegin_shortdescription: At RoboGarden, we believe in giving learners
-    the opportunity to take an active role in their education
-  tutorial_myradream_shortdescription: Use code blocks to help Myra on a journey to
-    get her dream back.
-  tutorial_thinkfun_shortdescription: Enjoy this fun CS activity that teaches Boolean
-    logic concepts.
+  tutorial_techbim_shortdescription: Impara a manipolare le immagini senza l'uso di
+    librerie esterne
+  tutorial_techfpp_shortdescription: Programmazione funzionale resa facile con Python!
+  tutorial_codesterscr_shortdescription: In questa attività, progetterai un'allegra
+    routine che il tuo personaggio andrà ad eseguire!!
+  tutorial_grokdisease_shortdescription: Questa attività è progettata per darti la
+    tua prima esperienza di programmazione ed è stata progettata appositamente per
+    l'Ora del Codice. Usa il linguaggio di programmazione Python per modellare un'epidemia
+    di malattia. Riuscirai a risolvere il curioso caso del naso luminoso?
+  tutorial_techec_shortdescription: Confuso sulle chiusure in JS? Non preoccuparti,
+    non sei solo!
+  tutorial_rgbegin_shortdescription: A RoboGarden, crediamo nel dare agli studenti
+    l'opportunità di assumere un ruolo attivo nella loro istruzione
+  tutorial_myradream_shortdescription: Usa i blocchi di codice per aiutare Myra in
+    un viaggio per riavere il suo sogno.
+  tutorial_thinkfun_shortdescription: Goditi questa divertente attività d'informatica
+    che insegna concetti di logica booleana.
   tutorial_hopfireworks_shortdescription: Crea un'app Fireworks su iPad/iPhone
-  tutorial_grokspace_shortdescription: This activity is designed to give you your
-    first experience programming, and has been specially designed for the Hour of
-    Code. Use the visual programming language Blockly to investigate space and reach
-    for the stars.
-  tutorial_codehspython_shortdescription: Code programs in Python!
-  tutorial_codehsjava_shortdescription: Code programs in Java!
-  tutorial_techioda_shortdescription: Use Dijkstra's Algorithm to calculate the shortest
-    path in a graph
-  tutorial_grokmonster_shortdescription: Get kids into coding with this friendly course
-    specially designed for the Hour of Code! Use drag-and-drop blocks to write your
-    own programs, learn about sequence and ordering, and create fun monster characters!
-  tutorial_techmjs_shortdescription: Modern Javascript features that will improve
-    your JS code
-  tutorial_techga_shortdescription: Introduction to Genetic Algorithms
-  tutorial_techioan_shortdescription: Stop being stuck in Java because of Null patterns!
-  tutorial_techiogsr_shortdescription: New to Rust? Everything you need to get started
-    is here!
-  tutorial_groktunnel_shortdescription: This activity is designed to give you your
-    first experience programming, and has been specially designed for the Hour of
-    Code. Use the programming language Python to create a simple game (or MUD). Can
-    you find your way through the dark tunnel?
-  tutorial_stemcod_shortdescription: Explore the Physics of Video Games! Learn to
-    code classic games!
-  tutorial_techikb_shortdescription: Basics Kotlin features in a nutshell
-  tutorial_kanostreet_shortdescription: Make beautiful, unique artwork with Kano's
-    Street Art coding challenges
-  tutorial_nyblebot_shortdescription: Coding is Magic - helping kids create amazing
-    things with code.
-  tutorial_codemojijs_shortdescription: Codemoji designed Beginning Javascript to
-    get students typing real javascript commands that will in turn animate the different
-    characters.
-  tutorial_techapf_shortdescription: 7 useful tricks to master Python like a Pro!
-  tutorial_techfpjs_shortdescription: Functional programming made easy with Javascript!
-  tutorial_techlinq_shortdescription: A useful introduction to using the LINQ library
-    in C#
-  tutorial_gpbcatapult_shortdescription: Make your own game like Angry Birds.
-  tutorial_quorumastro_shortdescription: Learn about coding and astronomy in this
-    accessible online tutorial.
-  tutorial_alicewonder_shortdescription: Guide Alice in wonderland using JavaScript.
-  tutorial_rginter_shortdescription: At RoboGarden, we believe in giving learners
-    the opportunity to take an active role in their education.
-  tutorial_cssgrid_shortdescription: A game for learning CSS Grid.
-  tutorial_jshero_shortdescription: JS Hero provides you with an introduction to programming
-    by means of JavaScript. It provides general programming concepts such as variables,
-    conditions, loops, functions and a lot more. These concepts form the basis of
-    many programming languages.
-  tutorial_codemojipy_shortdescription: Python Lab is an IOS based activity that teaches
-    basic python.
-  tutorial_nclabdrone_shortdescription: Build a drone frame with NCLab's 3D Modeling
-    app. 3D print it and make a real flying drone!
-  tutorial_gpbcircle_shortdescription: Make beautiful colors interactively.
-  tutorial_gpbpaint_shortdescription: Create and customize a drawing application.
-  tutorial_cocomarcade_shortdescription: Build your own arcade survival game and challenge
-    your friends!
-  tutorial_techcpp_shortdescription: 7 features to help simplify your C++17 code
-  tutorial_beetik_shortdescription: Use code to hack the music of composer Franz Liszt.
-  tutorial_codedj_shortdescription: Learn Javascript basics and start composing your
-    own beats with Code DJ
-  tutorial_rgadvan_shortdescription: At RoboGarden, we believe in giving learners
-    the opportunity to take an active role in their education.
-  tutorial_codehsrn_shortdescription: Make real apps using React Native!
-  tutorial_codehswd_shortdescription: Build a website!
-  tutorial_turtlerobot_shortdescription: A programming game meant for kids 2 - 6.
-    Helps teach function calling.
-  tutorial_ozoevo_shortdescription: Use the force field of Evo by Ozobot to play,
-    then create awesome games
-  tutorial_ozoexped_shortdescription: Color code your way through space!
-  tutorial_ozojourney_shortdescription: Program your Ozobot robot to circumnavigate
-    the world.
-  tutorial_ozocodes_shortdescription: Pre-readers place Ozocodes logically on a drawing
-    of their name so Ozobot robots can walk from left to right.
-  tutorial_ozoeclipse_shortdescription: Model orbiting bodies, eclipses and lunar
-    phases with Ozobot robots.
-  tutorial_ozosimulator_shortdescription: Learn about programming languages using
-    a marker and paper.
-  tutorial_ozoalgorithm_shortdescription: Write an algorithm for Ozobot robots to
-    show and answer multiplication problems.
+  tutorial_grokspace_shortdescription: Questa attività è pensata per darti la tua
+    prima esperienza di programmazione ed è stata progettata appositamente per l'Ora
+    del Codice. Usa il linguaggio di programmazione visuale Blockly per esplorare
+    lo spazio e raggiungere le stelle.
+  tutorial_codehspython_shortdescription: Programmi di codice in Python!
+  tutorial_codehsjava_shortdescription: Programmi di codice in Java!
+  tutorial_techioda_shortdescription: Usa l'algoritmo di Dijkstra per calcolare il
+    percorso più breve in un grafico
+  tutorial_grokmonster_shortdescription: Fai appassionare i bambini alla programmazione
+    con questo corso intuitivo appositamente progettato per l'Ora del Codice! Usa
+    i blocchi trascina-e-rilascia per scrivere i tuoi programmi, conoscere la sequenza
+    e l'ordinamento e creare divertenti personaggi mostruosi!
+  tutorial_techmjs_shortdescription: Funzionalità Javascript moderne che miglioreranno
+    il tuo codice JS
+  tutorial_techga_shortdescription: Introduzione agli algoritmi genetici
+  tutorial_techioan_shortdescription: Basta restare bloccati su Java a causa dei pattern
+    Null!
+  tutorial_techiogsr_shortdescription: Nuovo su Rust? Qui hai tutto ciò che ti serve
+    per iniziare!
+  tutorial_groktunnel_shortdescription: Questa attività è pensata per offrirti la
+    tua prima esperienza di programmazione ed è stata progettata appositamente per
+    l'ora del codice. Usa il linguaggio di programmazione Python per creare un semplice
+    gioco (o MUD). Riesci a trovare la strada attraverso il tunnel buio?
+  tutorial_stemcod_shortdescription: Esplora la fisica dei videogiochi! Impara a programmare
+    giochi classici!
+  tutorial_techikb_shortdescription: Caratteristiche di base di Kotlin in poche parole
+  tutorial_kanostreet_shortdescription: Crea splendide e uniche opere d'arte con le
+    sfide di codifica Street Art di Kano
+  tutorial_nyblebot_shortdescription: 'La programmazione è magica: aiutiamo i bambini
+    a creare cose incredibili con il codice.'
+  tutorial_codemojijs_shortdescription: Codemoji ha progettato il Javascript iniziale
+    per far sì che gli studenti digitino veri comandi javascript che a loro volta
+    animeranno i diversi personaggi.
+  tutorial_techapf_shortdescription: 7 trucchi utili per padroneggiare Python come
+    un professionista!
+  tutorial_techfpjs_shortdescription: Programmazione funzionale resa facile con Javascript!
+  tutorial_techlinq_shortdescription: Un'utile introduzione all'uso della libreria
+    LINQ in C#
+  tutorial_gpbcatapult_shortdescription: Crea il tuo gioco come Angry Birds.
+  tutorial_quorumastro_shortdescription: Scopri la codifica e l'astronomia in questo
+    tutorial online accessibile.
+  tutorial_alicewonder_shortdescription: Guida Alice nel paese delle meraviglie usando
+    JavaScript.
+  tutorial_rginter_shortdescription: A RoboGarden, crediamo di dare agli studenti
+    l'opportunità di assumere un ruolo attivo nella loro istruzione
+  tutorial_cssgrid_shortdescription: Un gioco per imparare CSS Grid.
+  tutorial_jshero_shortdescription: JS Hero ti fornisce un'introduzione alla programmazione
+    tramite JavaScript. Fornisce concetti generali di programmazione come variabili,
+    condizioni, cicli, funzioni e molto altro ancora. Questi concetti costituiscono
+    la base di molti linguaggi di programmazione.
+  tutorial_codemojipy_shortdescription: Python Lab è un'attività basata su IOS che
+    insegna il python di base.
+  tutorial_nclabdrone_shortdescription: Costruisci un telaio per drone con l'app di
+    modellazione 3D di NCLab. Stampalo in 3D e crea un vero drone volante!
+  tutorial_gpbcircle_shortdescription: Crea bellissimi colori in modo interattivo.
+  tutorial_gpbpaint_shortdescription: Crea e personalizza un'applicazione di disegno.
+  tutorial_cocomarcade_shortdescription: Costruisci il tuo gioco di sopravvivenza
+    arcade e sfida i tuoi amici!
+  tutorial_techcpp_shortdescription: 7 funzionalità per semplificare il codice C++
+    17
+  tutorial_beetik_shortdescription: Usa il codice per hackerare la musica del compositore
+    Franz Liszt.
+  tutorial_codedj_shortdescription: Impara le basi di Javascript e inizia a comporre
+    i tuoi ritmi con Code DJ
+  tutorial_rgadvan_shortdescription: A RoboGarden, crediamo di dare agli studenti
+    l'opportunità di assumere un ruolo attivo nella loro istruzione
+  tutorial_codehsrn_shortdescription: Crea app reali usando React Native!
+  tutorial_codehswd_shortdescription: Crea un sito Web!
+  tutorial_turtlerobot_shortdescription: Un gioco di programmazione pensato per i
+    bambini di 2 - 6 anni. Aiuta a insegnare la chiamata di funzioni.
+  tutorial_ozoevo_shortdescription: Usa il campo di forza di Evo di Ozobot per giocare,
+    quindi crea fantastici giochi
+  tutorial_ozoexped_shortdescription: Codice colore per farti strada nello spazio!
+  tutorial_ozojourney_shortdescription: Programma il tuo robot Ozobot per circumnavigare
+    il mondo.
+  tutorial_ozocodes_shortdescription: I pre-lettori posizionano logicamente gli Ozocodes
+    su un disegno del loro nome in modo che i robot Ozobot possano camminare da sinistra
+    a destra.
+  tutorial_ozoeclipse_shortdescription: Modella corpi in orbita, eclissi e fasi lunari
+    con i robot Ozobot.
+  tutorial_ozosimulator_shortdescription: Impara i linguaggi di programmazione usando
+    un foglio e un pennarello.
+  tutorial_ozoalgorithm_shortdescription: Scrivi un algoritmo per i robot Ozobot per
+    mostrare e rispondere ai problemi di moltiplicazione.
   tutorial_ozotimer_shortdescription: Sfida i programmatori Ozobot a creare un timer
     di 10 secondi.
   tutorial_ozohabits_shortdescription: I giovani programmatori Ozobot modellano la
@@ -2341,23 +2348,24 @@ it:
     viaggio per il mondo a consegnare regali succede un disastro! È caduto dalla sua
     slitta! Crea algoritmi e programma Babbo Natale per tornare sulla sua slitta in
     qualsiasi modo tu sappia farlo.
-  tutorial_iorder_shortdescription: Summer time and the weather is sweet. Makes you
-    want to make a nice cool treat. Create algorithms and program an ice-cream simulation/game
-    using Scratch 2.0. Includes lesson plan, pupil support materials, and pre-written
-    program templates.
-  tutorial_ianimate_shortdescription: Create an animated GIF for the festive season
-    using animation software. Add artwork, backgrounds and objects and make them come
-    to life!
-  tutorial_iloveada_shortdescription: Teach computing with history. This teacher-led
-    activity involves conducting online research about Ada Lovelace, a female pioneer
-    in STEM and the world's first computer programmer!
-  tutorial_kodflash_shortdescription: If there is lightning, then thunder will follow!
-  tutorial_kodchoose_shortdescription: Write a Choose Your Own Adventure story using
-    "If statements"!
-  tutorial_kodpizzapre_shortdescription: Help Dominic's Pizza develop an algorithm
-    for their new mobile app!
-  tutorial_kodpizza_shortdescription: Help Dominic's Pizza develop an algorithm for
-    their new mobile app!
+  tutorial_iorder_shortdescription: È estate e il clima è dolce. Ti fa venire voglia
+    di fare una bella sorpresa. Crea algoritmi e programma una simulazione/gioco di
+    gelato utilizzando Scratch 2.0. Include il programma della lezione, i materiali
+    di supporto per gli alunni e i modelli di programma già scritti.
+  tutorial_ianimate_shortdescription: Crea una GIF animata per le festività natalizie
+    utilizzando un software di animazione. Aggiungi grafica, sfondi e oggetti e fagli
+    prendere vita!
+  tutorial_iloveada_shortdescription: Insegna l'informatica con la storia. Questa
+    attività condotta dall'insegnante prevede l'esecuzione di ricerche online su Ada
+    Lovelace, una donna pioniere nelle materie scientifiche e la prima programmatrice
+    di computer al mondo!
+  tutorial_kodflash_shortdescription: Se c'è un fulmine, arriverà il tuono!
+  tutorial_kodchoose_shortdescription: Scrivi una storia Scegli la tua avventura usando
+    le "Istruzioni Condizionali"!
+  tutorial_kodpizzapre_shortdescription: Aiuta Dominic's Pizza a sviluppare un algoritmo
+    per la loro nuova app mobile!
+  tutorial_kodpizza_shortdescription: Aiuta Dominic's Pizza a sviluppare un algoritmo
+    per la loro nuova app mobile!
   tutorial_kodwomen_shortdescription: 'Technology: is it for all or just some? Explore
     inequalities in tech.'
   tutorial_tfunplug_shortdescription: Enjoy this fun, unplugged CS activity that teaches
@@ -4242,10 +4250,10 @@ it:
     them to start coding in Python right away! Students complete a set of guided practice
     activities in which they learn how to use and modify a variety of programming
     commands. Then, they apply these skills to create their own cheer routine!
-  tutorial_grokdisease_longdescription: This activity is designed to give you your
-    first experience programming, and has been specially designed for the Hour of
-    Code. Use the programming language Python to model a disease outbreak. Can you
-    solve the curious case of the glowing nose?
+  tutorial_grokdisease_longdescription: Questa attività è progettata per darti la
+    tua prima esperienza di programmazione ed è stata progettata appositamente per
+    l'Ora del Codice. Usa il linguaggio di programmazione Python per modellare un'epidemia
+    di malattia. Riuscirai a risolvere il curioso caso del naso luminoso?
   tutorial_techec_longdescription: Closures are a crucial aspect of Javascript, yet
     they remain mysterious and developers do not understand them easily. This interactive
     tutorial will teach you how powerful and useful Closures are to boost your Javascript
@@ -4269,10 +4277,10 @@ it:
     tool on the iPad/iPhone, beloved by millions of students for its freedom of creative
     expression. This self-guided video tutorial teaches kids age 8+ programming basics
     while they code custom versions of interactive fireworks. '
-  tutorial_grokspace_longdescription: This activity is designed to give you your first
-    experience programming, and has been specially designed for the Hour of Code.
-    Use the visual programming language Blockly to investigate space and reach for
-    the stars.
+  tutorial_grokspace_longdescription: Questa attività è pensata per darti la tua prima
+    esperienza di programmazione ed è stata progettata appositamente per l'Ora del
+    Codice. Usa il linguaggio di programmazione visuale Blockly per esplorare lo spazio
+    e raggiungere le stelle.
   tutorial_codehspython_longdescription: Learn the basics of coding with the Python
     programming language by writing programs that you can interact with! This hour
     will cover printing, variables, math, and getting information from users. Write
@@ -4281,9 +4289,10 @@ it:
   tutorial_techioda_longdescription: This useful tutorial will interactively teach
     you how to be able to calculate the shortest path between two nodes in a graph
     in advance, thanks to the Dijkstra's algorithm.
-  tutorial_grokmonster_longdescription: Get kids into coding with this friendly course
-    specially designed for the Hour of Code! Use drag-and-drop blocks to write your
-    own programs, learn about sequence and ordering, and create fun monster characters!
+  tutorial_grokmonster_longdescription: Fai appassionare i bambini alla programmazione
+    con questo corso intuitivo appositamente progettato per l'Ora del Codice! Usa
+    i blocchi trascina-e-rilascia per scrivere i tuoi programmi, conoscere la sequenza
+    e l'ordinamento e creare divertenti personaggi mostruosi!
   tutorial_techmjs_longdescription: JavaScript has been an international standard
     since 1997. In this interactive tutorial, we will explore the modern features
     of the language that will make your code more robust, concise, and easier to read.
@@ -4298,10 +4307,10 @@ it:
     designed with memory safety and performance in mind. It was originally released
     in 2010. In this interactive tutorial, discover the basics of this fun to use
     language, with performances comparable to C and C++!
-  tutorial_groktunnel_longdescription: This activity is designed to give you your
-    first experience programming, and has been specially designed for the Hour of
-    Code. Use the programming language Python to create a simple game (or MUD). Can
-    you find your way through the dark tunnel?
+  tutorial_groktunnel_longdescription: Questa attività è pensata per offrirti la tua
+    prima esperienza di programmazione ed è stata progettata appositamente per l'ora
+    del codice. Usa il linguaggio di programmazione Python per creare un semplice
+    gioco (o MUD). Riesci a trovare la strada attraverso il tunnel buio?
   tutorial_stemcod_longdescription: Do you play video games? Have you ever thought
     about how some games are super-realistic and other games are cartoon-ish? In this
     activity we will talk about the physics of video games and you will learn to modify
