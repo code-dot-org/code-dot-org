@@ -1,12 +1,8 @@
 import React, {Component} from 'react';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import PropTypes from 'prop-types';
-import {NEW_LEVEL_ID} from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
+import AddLevelTableRow from '@cdo/apps/lib/levelbuilder/lesson-editor/AddLevelTableRow';
 
 const styles = {
-  orderIcon: {
-    float: 'right'
-  },
   pages: {
     marginTop: 10
   }
@@ -16,19 +12,6 @@ export default class AddLevelTable extends Component {
   static propTypes = {
     addLevel: PropTypes.func,
     levels: PropTypes.array
-  };
-
-  handleAddLevel = level => {
-    this.props.addLevel(level);
-  };
-
-  handleCloneAndAddLevel = level => {
-    const newLevelName = prompt('Enter new level name');
-    if (newLevelName) {
-      level.name = newLevelName;
-      level.id = NEW_LEVEL_ID;
-    }
-    this.props.addLevel(level);
   };
 
   render() {
@@ -46,34 +29,7 @@ export default class AddLevelTable extends Component {
           </thead>
           <tbody>
             {this.props.levels.map(level => (
-              <tr key={level.id}>
-                <td>
-                  <button
-                    onClick={this.handleAddLevel.bind(this, level)}
-                    type="button"
-                  >
-                    <FontAwesome icon="plus" />
-                  </button>
-                  <button
-                    type="button"
-                    onClick={this.handleCloneAndAddLevel.bind(this, level)}
-                  >
-                    <FontAwesome icon="files-o" />
-                  </button>
-                </td>
-                <td>
-                  <div>{level.name}</div>
-                </td>
-                <td>
-                  <div>{level.type}</div>
-                </td>
-                <td>
-                  <div>{level.owner}</div>
-                </td>
-                <td>
-                  <div>{level.updated_at}</div>
-                </td>
-              </tr>
+              <AddLevelTableRow addLevel={this.props.addLevel} level={level} />
             ))}
           </tbody>
         </table>

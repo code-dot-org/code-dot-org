@@ -368,7 +368,7 @@ class LevelsController < ApplicationController
     new_name = params.require(:name)
     editor_experiment = Experiment.get_editor_experiment(current_user)
     @new_level = @level.clone_with_name(new_name, editor_experiment: editor_experiment)
-    render json: {redirect: edit_level_url(@new_level)}
+    render json: @new_level
   rescue ArgumentError => e
     render(status: :not_acceptable, text: e.message)
   rescue ActiveRecord::RecordInvalid => invalid
