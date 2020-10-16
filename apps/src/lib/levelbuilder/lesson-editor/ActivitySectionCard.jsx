@@ -10,8 +10,8 @@ import {
   updateActivitySectionField,
   reorderLevel,
   moveLevelToActivitySection,
-  NEW_LEVEL_ID,
-  addLevel
+  addLevel,
+  NEW_LEVEL_ID
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
 import LevelToken from '@cdo/apps/lib/levelbuilder/lesson-editor/LevelToken';
 import RemoveLevelDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/RemoveLevelDialog';
@@ -315,7 +315,7 @@ class ActivitySectionCard extends Component {
           }
         ],
         activeId: level.id,
-        position: newLevelPosition, // This should be based on position in the lesson as a whole not just activitySection
+        position: newLevelPosition,
         kind: 'puzzle',
         bonus: false,
         assessment: false,
