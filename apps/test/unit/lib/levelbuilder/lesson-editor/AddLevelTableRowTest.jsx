@@ -36,14 +36,25 @@ describe('AddLevelTableRow', () => {
 
   it('add and clone level', () => {
     const prompt = sinon.stub(window, 'prompt');
-    prompt.returns('Cloned Level');
+    prompt.returns('NewLevelName');
+
+    let returnData = {id: 11, name: 'NewLevelName'};
+    let server = sinon.fakeServer.create();
+    server.respondWith('POST', `/levels/1/clone?name=NewLevelName`, [
+      200,
+      {'Content-Type': 'application/json'},
+      JSON.stringify(returnData)
+    ]);
 
     const wrapper = shallow(<AddLevelTableRow {...defaultProps} />);
 
-    const addAndCloneButton = wrapper.find('button').at(0);
+    const addAndCloneButton = wrapper.find('button').at(1);
     addAndCloneButton.simulate('click');
+
+    server.respond();
     expect(addLevel).to.have.been.calledOnce;
 
     window.prompt.restore();
+    server.restore();
   });
 });

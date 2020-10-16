@@ -39,4 +39,24 @@ describe('CreateNewLevelInputs', () => {
     wrapper.find('input').simulate('change', {target: {value: 'New Level'}});
     expect(wrapper.find('input').props().value).to.equal('New Level');
   });
+
+  it('click create level', () => {
+    let returnData = {id: 10, name: 'New Level Name'};
+    let server = sinon.fakeServer.create();
+    server.respondWith('POST', '/levels', [
+      200,
+      {'Content-Type': 'application/json'},
+      JSON.stringify(returnData)
+    ]);
+
+    const wrapper = shallow(<CreateNewLevelInputs {...defaultProps} />);
+    expect(wrapper.find('button').length).to.equal(1);
+    expect(wrapper.find('button').contains('Create and Add')).to.be.true;
+    wrapper.find('button').simulate('click');
+
+    server.respond();
+    expect(addLevel).to.have.been.calledOnce;
+
+    server.restore();
+  });
 });
