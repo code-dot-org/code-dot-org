@@ -506,7 +506,7 @@ class Lesson < ActiveRecord::Base
     related_lessons.map do |lesson|
       {
         scriptTitle: lesson.script.localized_title,
-        versionYear: lesson.script.version_year,
+        versionYear: lesson.script.get_course_version.version_year,
         lockable: lesson.lockable,
         relativePosition: lesson.relative_position,
         id: lesson.id,
