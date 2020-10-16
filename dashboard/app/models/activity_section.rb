@@ -49,7 +49,8 @@ class ActivitySection < ApplicationRecord
       remarks: remarks,
       slide: slide,
       description: description,
-      tips: tips
+      tips: tips,
+      scriptLevels: script_levels.map(&:summarize_for_edit)
     }
   end
 end
