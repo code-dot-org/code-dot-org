@@ -617,7 +617,7 @@ class Level < ActiveRecord::Base
       name: name,
       updated_at: updated_at.localtime.strftime("%D at %r"),
       owner: user&.name,
-      url: "https://levelbuilder-studio.code.org/levels/#{id}/edit",
+      url: "/levels/#{id}/edit",
       icon: icon,
       kind: unplugged? ? LEVEL_KIND.unplugged : LEVEL_KIND.puzzle,
       title: try(:title),
