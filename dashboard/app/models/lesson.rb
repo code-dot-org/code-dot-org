@@ -494,7 +494,7 @@ class Lesson < ActiveRecord::Base
     # and course offering. In the future, when curriulum_umbrella moves to
     # CourseOffering, this implementation will need to change to be more like
     # related_lessons.
-    lessons = Lesson.includes(:script).
+    lessons = Lesson.eager_load(script: :course_version).
       where("scripts.properties -> '$.curriculum_umbrella' = ?", script.curriculum_umbrella).
       where(key: key).
       order("scripts.properties -> '$.version_year'", 'scripts.name')
