@@ -32,7 +32,8 @@ describe('LessonEditor', () => {
       creativeCommonsLicense: 'Creative Commons BY-NC-SA',
       purpose: 'The purpose of the lesson is for people to learn',
       preparation: '- One',
-      announcements: []
+      announcements: [],
+      relatedLessons: []
     };
   });
 
