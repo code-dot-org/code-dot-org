@@ -239,14 +239,32 @@ function loadMap(locations) {
 
   mapboxMap.on("load", function() {
     mapboxMap.loadImage(
-      "/images/map-markers/star-marker.png",
+      "/images/map-markers/dot-marker.png",
       (error, image) => {
         if (error) {
           console.log(error);
           return;
         }
 
-        mapboxMap.addImage("star-marker", image);
+        mapboxMap.addImage("dot-marker", image);
+        if (mapOptions.locations && mapOptions.locations.length > 0) {
+          for (var i = 0; i < mapOptions.locations.length; i++) {
+            const location = mapOptions.locations[i];
+            const feature = {
+              type: "Feature",
+              properties: {
+                id: i,
+                description: location.html,
+                title: location.title
+              },
+              geometry: {
+                type: "Point",
+                coordinates: [location.lon, location.lat]
+              }
+            };
+            mapboxStores.features.push(feature);
+          }
+        }
         mapboxMap.addSource("places", {
           type: "geojson",
           data: {
@@ -261,33 +279,14 @@ function loadMap(locations) {
           type: "symbol",
           source: "places",
           layout: {
-            "icon-image": "star-marker",
-            "icon-size": 0.5,
+            "icon-image": "dot-marker",
+            "icon-size": 1.1,
             "icon-anchor": "bottom",
             "icon-allow-overlap": true
           }
         });
 
         if (mapOptions.locations && mapOptions.locations.length > 0) {
-          for (var i = 0; i < mapOptions.locations.length; i++) {
-            const location = mapOptions.locations[i];
-            const feature = {
-              type: "Feature",
-              properties: {
-                id: i,
-                description: location.html,
-                title: location.title,
-                "icon-image": "star-marker",
-                "icon-size": 22
-              },
-              geometry: {
-                type: "Point",
-                coordinates: [location.lon, location.lat]
-              }
-            };
-            mapboxStores.features.push(feature);
-          }
-
           addMarkers(mapboxStores);
 
           if (mapOptions.locations.length > 1) {
