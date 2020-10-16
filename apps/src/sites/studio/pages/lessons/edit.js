@@ -9,6 +9,7 @@ import reducers, {
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
 import {Provider} from 'react-redux';
 import _ from 'lodash';
+import {LevelStatus} from '@cdo/apps/util/sharedConstants';
 
 //TODO Remove once we hook up real level data
 import {levelKeyList} from '../../../../../test/unit/lib/levelbuilder/lesson-editor/activitiesTestData';
@@ -46,7 +47,10 @@ $(document).ready(function() {
       activitySection.text = activitySection.description || '';
       delete activitySection.description;
 
-      activitySection.scriptLevels = activitySection.levels || [];
+      activitySection.scriptLevels = activitySection.scriptLevels || [];
+      activitySection.scriptLevels.forEach(scriptLevel => {
+        scriptLevel.status = LevelStatus.not_tried;
+      });
 
       activitySection.tips = activitySection.tips || [];
 
