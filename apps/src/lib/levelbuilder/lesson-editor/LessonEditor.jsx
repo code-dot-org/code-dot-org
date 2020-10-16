@@ -8,7 +8,8 @@ import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
 import AnnouncementsEditor from '@cdo/apps/lib/levelbuilder/announcementsEditor/AnnouncementsEditor';
 import CollapsibleEditorSection from '@cdo/apps/lib/levelbuilder/CollapsibleEditorSection';
 import {resourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
-import color from '../../../util/color';
+import RelatedLessons from './RelatedLessons';
+import {relatedLessonShape} from '../shapes';
 
 const styles = {
   editor: {
@@ -28,21 +29,6 @@ const styles = {
   },
   dropdown: {
     margin: '0 6px'
-  },
-  relatedLessonHeader: {
-    fontSize: 16,
-    marginTop: 15,
-    marginBottom: 10
-  },
-  relatedLessonContainer: {
-    marginBottom: -15
-  },
-  relatedLessonLink: {
-    marginRight: 30,
-    marginBottom: 15,
-    display: 'inline-block',
-    color: color.purple,
-    textDecoration: 'underline'
   }
 };
 
@@ -59,15 +45,8 @@ export default class LessonEditor extends Component {
     preparation: PropTypes.string,
     announcements: PropTypes.arrayOf(announcementShape),
     resources: PropTypes.arrayOf(resourceShape),
-    relatedLessons: PropTypes.arrayOf(PropTypes.object).isRequired
+    relatedLessons: PropTypes.arrayOf(relatedLessonShape).isRequired
   };
-
-  getRelatedLessonText(lesson) {
-    const includeYear = !lesson.scriptTitle.includes(lesson.versionYear);
-    const year = includeYear ? ` - ${lesson.versionYear}` : '';
-    const type = lesson.lockable ? 'Lockable' : 'Lesson';
-    return `${lesson.scriptTitle}${year} - ${type} ${lesson.relativePosition}`;
-  }
 
   render() {
     const {
@@ -91,26 +70,7 @@ export default class LessonEditor extends Component {
           <input name="name" defaultValue={displayName} style={styles.input} />
         </label>
 
-        {relatedLessons.length > 0 && (
-          <div style={styles.relatedLessonContainer}>
-            <h2 style={styles.relatedLessonHeader}>Update Similar Lessons</h2>
-            <p>
-              The following lessons are similar to this one. You may want to
-              make updates to them as well. Saving this lesson will not update
-              other lessons.
-            </p>
-            {relatedLessons.map(lesson => (
-              <a
-                key={lesson.id}
-                href={lesson.editUrl}
-                style={styles.relatedLessonLink}
-                target="_blank"
-              >
-                {this.getRelatedLessonText(lesson)}
-              </a>
-            ))}
-          </div>
-        )}
+        <RelatedLessons relatedLessons={relatedLessons} />
 
         <CollapsibleEditorSection title="Lesson Settings">
           <label>
