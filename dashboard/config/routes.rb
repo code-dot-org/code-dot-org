@@ -257,9 +257,11 @@ Dashboard::Application.routes.draw do
       post 'update_properties'
       post 'update_blocks/:type', to: 'levels#update_blocks', as: 'update_blocks'
       post 'clone'
+      post 'clone_level'
     end
   end
 
+  post 'levels/create_level', to: 'levels#create_level'
   post 'level_assets/upload', to: 'level_assets#upload'
 
   resources :level_starter_assets, only: [:show], param: 'level_name', constraints: {level_name: /[^\/]+/} do
