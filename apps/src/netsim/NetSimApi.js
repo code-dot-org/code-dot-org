@@ -187,6 +187,12 @@ var tableApi = {
       })
       .join('&');
 
+    /**
+     * Caveat: This request may be cancelled in IE. We use whatwg-fetch as a polyfill
+     * for the fetch API, which doesn't support the 'keepalive' property. This is still
+     * an improvement because currently rows aren't deleted at all when a user navigates
+     * away from the page.
+     */
     fetch(this.baseUrl + '?' + queryString, {
       method: 'DELETE',
       keepalive: true
