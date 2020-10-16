@@ -53,6 +53,7 @@ class Level < ActiveRecord::Base
   validates_length_of :name, within: 1..70
   validate :reject_illegal_chars
   validates_uniqueness_of :name, case_sensitive: false, conditions: -> {where.not(user_id: nil)}
+  validate :validate_game, on: [:create, :update]
 
   after_save :write_custom_level_file
   after_save :update_key_list
@@ -517,6 +518,14 @@ class Level < ActiveRecord::Base
       msg = "\"#{name}\" may only contain letters, numbers, spaces, "\
       "and the following characters: !\"&'()+,\-.:=?_|"
       errors.add(:name, msg)
+    end
+  end
+
+  # Uses specific knowledge of how the key method is implemented in hopes of
+  # preventing any levels for which we can't compute a key.
+  def validate_game
+    unless ['custom', nil].include?(level_num) || game
+      errors.add(:game, 'required for non-custom levels in order to compute level key')
     end
   end
 

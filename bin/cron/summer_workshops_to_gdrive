@@ -12,9 +12,7 @@ require 'cdo/google/sheet'
 #
 def get_rows
   subjects = [
-    Pd::SharedWorkshopConstants::SUBJECT_SUMMER_WORKSHOP,
-    Pd::SharedWorkshopConstants::SUBJECT_CSF_101,
-    Pd::SharedWorkshopConstants::SUBJECT_CSF_201
+    Pd::SharedWorkshopConstants::SUBJECT_SUMMER_WORKSHOP
   ]
 
   workshops = []
@@ -24,7 +22,7 @@ def get_rows
 
   # Subsequent rows are for each workshop.
   Pd::Workshop.where(subject: subjects).find_each do |w|
-    if w.workshop_starting_date && w.workshop_starting_date >= Date.new(2020, 5, 15) && w.workshop_starting_date <= Date.new(2020, 8, 31)
+    if w.workshop_starting_date && w.workshop_starting_date >= Date.new(2021, 5, 1) && w.workshop_starting_date <= Date.new(2021, 9, 16)
       workshops << Api::V1::Pd::WorkshopDownloadSerializer.new(w).attributes.values
     end
   end
@@ -33,7 +31,7 @@ def get_rows
 end
 
 def main
-  sheet = Google::Sheet.new CDO.applications_2020_2021_gsheet_key
+  sheet = Google::Sheet.new CDO.applications_2021_2022_gsheet_key
   sheet.export(tab_name: 'summer_workshops', rows: get_rows)
 end
 
