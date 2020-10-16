@@ -12,6 +12,9 @@ const styles = {
     marginBottom: 30,
     fontSize: 14,
     fontFamily: '"Gotham 4r", sans-serif'
+  },
+  noLevelsWarning: {
+    fontSize: 13
   }
 };
 
@@ -28,7 +31,13 @@ export default class ProgressLessonContent extends React.Component {
     const progressions = progressionsFromLevels(levels);
 
     let bubbles;
-    if (progressions.length === 1 && !progressions[0].name) {
+    if (progressions.length === 0) {
+      bubbles = (
+        <span style={styles.noLevelsWarning}>
+          This lesson contains no levels.
+        </span>
+      );
+    } else if (progressions.length === 1 && !progressions[0].name) {
       bubbles = (
         <ProgressBubbleSet
           levels={progressions[0].levels}
