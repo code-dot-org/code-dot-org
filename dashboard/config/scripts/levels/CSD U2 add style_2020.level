@@ -27,6 +27,7 @@
     "map_reference": "/docs/concepts/css/layout-properties/",
     "encrypted": "false",
     "mini_rubric": "true",
+    "validation_enabled": "true",
     "rubric_key_concept": "Create rules that affect entire groups of elements; apply formatting in a web page using CSS.",
     "rubric_performance_level_1": "The background, images, and text have all been styled as described in the instructions.  There are no syntax errors or extra code (that does not function) in the stylesheet.",
     "rubric_performance_level_2": "The background, images, and text have all been styled as described in the instructions, but there may be minimal errors or non-functioning code in the stylesheet.",
