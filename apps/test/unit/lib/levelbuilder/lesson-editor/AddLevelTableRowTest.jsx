@@ -40,11 +40,11 @@ describe('AddLevelTableRow', () => {
 
     let returnData = {id: 11, name: 'NewLevelName'};
     let server = sinon.fakeServer.create();
-    server.respondWith('POST', `/levels/1/clone_level?name=NewLevelName`, [
-      200,
-      {'Content-Type': 'application/json'},
-      JSON.stringify(returnData)
-    ]);
+    server.respondWith(
+      'POST',
+      `/levels/1/clone?name=NewLevelName&do_not_redirect=true`,
+      [200, {'Content-Type': 'application/json'}, JSON.stringify(returnData)]
+    );
 
     const wrapper = shallow(<AddLevelTableRow {...defaultProps} />);
 

@@ -43,7 +43,7 @@ describe('CreateNewLevelInputs', () => {
   it('click create level', () => {
     let returnData = {id: 10, name: 'New Level Name'};
     let server = sinon.fakeServer.create();
-    server.respondWith('POST', '/levels/create_level', [
+    server.respondWith('POST', '/levels?do_not_redirect=true', [
       200,
       {'Content-Type': 'application/json'},
       JSON.stringify(returnData)
