@@ -295,6 +295,133 @@ class LessonTest < ActiveSupport::TestCase
     end
   end
 
+  test 'find related lessons within CSF curriculum umbrella' do
+    script1 = create :script, name: 'script1', curriculum_umbrella: 'CSF', version_year: '2099'
+    lesson1 = create :lesson, script: script1, key: 'foo'
+
+    script2 = create :script, name: 'script2', curriculum_umbrella: 'CSF', version_year: '3000'
+    lesson2 = create :lesson, script: script2, key: 'foo'
+
+    script3 = create :script, name: 'script3', curriculum_umbrella: 'CSF', version_year: '2099'
+    create :lesson, script: script3, key: 'bar'
+
+    script4 = create :script, name: 'script4', curriculum_umbrella: 'other', version_year: '2099'
+    create :lesson, script: script4, key: 'foo'
+
+    script5 = create :script, name: 'script5', curriculum_umbrella: 'CSF', version_year: '2099'
+    lesson5 = create :lesson, script: script5, key: 'foo'
+
+    script0 = create :script, name: 'script0', curriculum_umbrella: 'CSF', version_year: '2099'
+    lesson0 = create :lesson, script: script0, key: 'foo'
+
+    assert_queries(1) do
+      assert_equal [lesson0, lesson5, lesson2], lesson1.related_lessons
+    end
+
+    assert_queries(1) do
+      assert_equal 3, lesson1.summarize_related_lessons.count
+    end
+  end
+
+  test 'find related lessons within a course offering without unit groups' do
+    course_offering = create :course_offering
+
+    script1 = create :script, name: 'script1', is_course: true
+    create :course_version, course_offering: course_offering, content_root: script1, key: '3000'
+    lesson1 = create :lesson, script: script1, key: 'foo'
+
+    script2 = create :script, name: 'script2', is_course: true
+    create :course_version, course_offering: course_offering, content_root: script2, key: '3001'
+    lesson2 = create :lesson, script: script2, key: 'foo'
+
+    script3 = create :script, name: 'script3', is_course: true
+    create :course_version, course_offering: course_offering, content_root: script3, key: '3002'
+    create :lesson, script: script3, key: 'bar'
+
+    script4 = create :script, name: 'script4', is_course: true
+    create :course_version, course_offering: course_offering, content_root: script4, key: '2999'
+    lesson4 = create :lesson, script: script4, key: 'foo'
+
+    other_course_offering = create :course_offering
+
+    script5 = create :script, name: 'script5', is_course: true
+    create :course_version, course_offering: other_course_offering, content_root: script5, key: '3000'
+    create :lesson, script: script5, key: 'foo'
+
+    # measure the query count of the summarize method before checking the result
+    # of related_lessons, so that the count is not artificially reduced by
+    # anything being cached from the call to related_lessons.
+    assert_queries(8) do
+      lesson1.summarize_related_lessons
+    end
+
+    assert_equal [lesson4, lesson2], lesson1.related_lessons
+  end
+
+  test 'find related lessons within a course offering with unit groups' do
+    course_offering = create :course_offering
+
+    unit_group_a = create :unit_group
+    create :course_version, course_offering: course_offering, content_root: unit_group_a, key: '3000'
+
+    script1 = create :script, name: 'script1'
+    create :unit_group_unit, unit_group: unit_group_a, script: script1, position: 1
+    lesson1 = create :lesson, script: script1, key: 'foo'
+
+    script2 = create :script, name: 'script2'
+    create :unit_group_unit, unit_group: unit_group_a, script: script2, position: 2
+    lesson2 = create :lesson, script: script2, key: 'foo'
+
+    script3 = create :script, name: 'script3'
+    create :unit_group_unit, unit_group: unit_group_a, script: script3, position: 3
+    create :lesson, script: script3, key: 'bar'
+
+    script0 = create :script, name: 'script0'
+    create :unit_group_unit, unit_group: unit_group_a, script: script0, position: 4
+    lesson0 = create :lesson, script: script0, key: 'foo'
+
+    unit_group_b = create :unit_group
+    create :course_version, course_offering: course_offering, content_root: unit_group_b, key: '2999'
+
+    script4 = create :script, name: 'script4'
+    create :unit_group_unit, unit_group: unit_group_b, script: script4, position: 1
+    lesson4 = create :lesson, script: script4, key: 'foo'
+
+    script5 = create :script, name: 'script5'
+    create :unit_group_unit, unit_group: unit_group_b, script: script5, position: 2
+    create :lesson, script: script5, key: 'bar'
+
+    other_course_offering = create :course_offering
+
+    unit_group_c = create :unit_group
+    create :course_version, course_offering: other_course_offering, content_root: unit_group_c, key: '3000'
+
+    script6 = create :script, name: 'script6'
+    create :unit_group_unit, unit_group: unit_group_c, script: script6, position: 1
+    create :lesson, script: script6, key: 'foo'
+
+    # measure the query count of the summarize method before checking the result
+    # of related_lessons, so that the count is not artificially reduced by
+    # anything being cached from the call to related_lessons.
+    assert_queries(11) do
+      lesson1.summarize_related_lessons
+    end
+
+    assert_equal [lesson4, lesson0, lesson2], lesson1.related_lessons
+  end
+
+  test 'no related lessons without course offering' do
+    script1 = create :script
+    lesson1 = create :lesson, script: script1, key: 'foo'
+
+    script2 = create :script
+    create :lesson, script: script2, key: 'foo'
+
+    assert_queries(2) do
+      assert_equal [], lesson1.related_lessons
+    end
+  end
+
   def create_swapped_lockable_lesson
     script = create :script
     level1 = create :level_group, name: 'level1', title: 'title1', submittable: true
