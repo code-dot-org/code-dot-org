@@ -592,13 +592,10 @@ fr:
   hoc_faq_what_is_hoc_a: Une Heure de Code est une introduction d'une heure à l'informatique.
     Ce programme est conçu pour démystifier la programmation et montrer que n'importe
     qui peut en apprendre les rudiments. <a href='%{codeorg_url}'>Découvrez les tutoriels</a>.
-  hoc_faq_what_is_hoc_a_markdown: The Hour of Code started as a one-hour introduction
-    to computer science, designed to demystify "code", to show that anybody can learn
-    the basics, and to broaden participation in the field of computer science. It
-    has since become a worldwide effort to celebrate computer science, starting with
-    1-hour coding activities but expanding to all sorts of community efforts. Check
-    out the [tutorials and activities](%{tutorials}). This grassroots campaign is
-    supported by over [400 partners](%{partners}) and 200,000 educators worldwide.
+  hoc_faq_what_is_hoc_a_markdown: |-
+    Une Heure de Code est une introduction d'une heure à l'informatique. Ce programme est conçu pour démystifier la programmation et montrer que n'importe qui peut en apprendre les rudiments. Découvrez les [tutoriels](%{tutorials}).
+
+    [En partenariat avec 400 organisations](%{partners})
   hoc_faq_last_year: Essayez les tutoriels
   hoc_faq_when_is_hoc_q: Quand se déroulera Une Heure de Code ?
   hoc_faq_when_is_hoc_a: N'importe qui peut organiser l'évènement Une heure de Code
