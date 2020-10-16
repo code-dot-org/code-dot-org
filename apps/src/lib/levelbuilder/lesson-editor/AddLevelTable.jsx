@@ -29,7 +29,11 @@ export default class AddLevelTable extends Component {
           </thead>
           <tbody>
             {this.props.levels.map(level => (
-              <AddLevelTableRow addLevel={this.props.addLevel} level={level} />
+              <AddLevelTableRow
+                key={level.id}
+                addLevel={this.props.addLevel}
+                level={level}
+              />
             ))}
           </tbody>
         </table>
