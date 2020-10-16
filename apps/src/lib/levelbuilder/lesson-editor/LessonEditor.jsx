@@ -66,7 +66,10 @@ export default class LessonEditor extends Component {
           <input name="name" defaultValue={displayName} style={styles.input} />
         </label>
 
-        <CollapsibleEditorSection title="General Lesson Settings" collapsed={true}>
+        <CollapsibleEditorSection
+          title="General Lesson Settings"
+          collapsed={true}
+        >
           <label>
             Lockable
             <input
