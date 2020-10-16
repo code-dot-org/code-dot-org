@@ -6,17 +6,22 @@ class LessonsController < ApplicationController
   # GET /lessons/1
   def show
     @lesson_data = {
-      title: @lesson.localized_title,
-      overview: @lesson.overview,
+      unit: {
+        displayName: @lesson.script.localized_title,
+        link: @lesson.script.link
+      },
+      displayName: @lesson.localized_title,
+      overview: @lesson.overview || '',
       announcements: @lesson.announcements,
-      purpose: @lesson.purpose,
-      preparation: @lesson.preparation
+      purpose: @lesson.purpose || '',
+      preparation: @lesson.preparation || ''
     }
   end
 
   # GET /lessons/1/edit
   def edit
     @lesson_data = @lesson.summarize_for_lesson_edit
+    @related_lessons = @lesson.summarize_related_lessons
   end
 
   # PATCH/PUT /lessons/1
