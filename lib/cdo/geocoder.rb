@@ -102,6 +102,8 @@ module Geocoder
   MIN_ADDRESS_LENGTH = 10
 
   def self.find_potential_street_address(text)
+    return nil unless text
+
     # Starting from the first number in the string, try parsing with Geocoder
     number_to_end_search = text.scan /([0-9]+.*)/
     return nil if number_to_end_search.empty?
