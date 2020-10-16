@@ -14,19 +14,29 @@ describe('LessonOverview', () => {
   let defaultProps;
   beforeEach(() => {
     defaultProps = {
-      displayName: 'Lesson Name',
-      overview: 'Lesson Overview',
+      lesson: {
+        unit: {
+          displayName: 'Unit 1',
+          link: '/s/unit-1'
+        },
+        displayName: 'Lesson Name',
+        overview: 'Lesson Overview',
+        purpose: 'The purpose of the lesson is for people to learn',
+        preparation: '- One'
+      },
       activities: [],
       announcements: [],
       viewAs: ViewType.Teacher,
-      isSignedIn: true,
-      purpose: 'The purpose of the lesson is for people to learn',
-      preparation: '- One'
+      isSignedIn: true
     };
   });
 
   it('renders default props', () => {
     const wrapper = shallow(<LessonOverview {...defaultProps} />);
+    const navLinks = wrapper.find('a');
+    expect(navLinks.props().href).to.contain('/s/unit-1');
+    expect(navLinks.contains('< Unit 1')).to.be.true;
+
     expect(wrapper.contains('Lesson Name'), 'Lesson Name').to.be.true;
 
     const safeMarkdowns = wrapper.find('SafeMarkdown');
