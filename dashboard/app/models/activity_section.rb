@@ -61,7 +61,7 @@ class ActivitySection < ApplicationRecord
     self.script_levels = script_levels_data.map do |sl_data|
       sl = fetch_script_level(sl_data)
       sl.update!(
-        position: sl_data['position'] || 0,
+        # position and chapter will be updated based on activity_section_position later
         activity_section_position: sl_data['activitySectionPosition'] || 0,
         assessment: !!sl_data['assessment'],
         bonus: !!sl_data['bonus'],
@@ -83,8 +83,8 @@ class ActivitySection < ApplicationRecord
     end
 
     script_levels.create(
-      position: sl_data['position'] || 0,
-      activity_section_position: sl_data['position'] || 0,
+      position: 0,
+      activity_section_position: 0,
       lesson: lesson,
       script: lesson.script
     )
