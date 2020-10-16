@@ -22,6 +22,8 @@ class GeocoderTest < Minitest::Test
     assert_nil(Geocoder.find_potential_street_address('1500000000'))
     assert_nil(Geocoder.find_potential_street_address('1500000001230b'))
     assert_nil(Geocoder.find_potential_street_address('1_Counter'))
+    assert_nil(Geocoder.find_potential_street_address(nil))
+    assert_nil(Geocoder.find_potential_street_address(''))
   end
 
   def test_with_errors
@@ -82,5 +84,33 @@ class GeocoderTest < Minitest::Test
     assert_equal(expected_street_address, location.street_address)
     assert_equal(expected_address, location.address)
     assert_equal(expected_formatted_address, location.formatted_address)
+  end
+
+  def test_can_parse_result_with_empty_context_field
+    Geocoder.configure lookup: :mapbox, api_key: nil
+    expected_summarize = {
+      'location_p' => '45.6649521968376,16.6791068850861',
+      'location_route_s' => 'Croatia',
+      'location_street_address_s' => 'Croatia',
+      'location_country_code_s' => 'HR'
+    }
+
+    # This search resulted in a null context being returned in production
+    location = Geocoder.search('Sesvete, Croatia').first
+    assert_equal(expected_summarize, location.summarize)
+    assert_equal('HR', location.country_code)
+    assert_nil(location.state_code)
+    assert_nil(location.city)
+    assert_nil(location.state)
+    assert_nil(location.postal_code)
+    assert_nil(location.country)
+    assert_nil(location.neighborhood)
+  end
+
+  def test_can_get_country_code_for_direct_country_searches
+    Geocoder.configure lookup: :mapbox, api_key: nil
+    # This search resulted in a null context being returned in production
+    location = Geocoder.search('Croatia').first
+    assert_equal('HR', location.country_code)
   end
 end

@@ -6,8 +6,14 @@ class LessonsControllerTest < ActionController::TestCase
   setup do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
+    @script = create(
+      :script,
+      name: 'unit-1'
+    )
+
     @lesson = create(
       :lesson,
+      script_id: @script.id,
       name: 'lesson display name',
       properties: {
         overview: 'lesson overview',
@@ -22,7 +28,7 @@ class LessonsControllerTest < ActionController::TestCase
       'data' => {
         'script' => {
           'name' => {
-            @lesson.script.name => {
+            @script.name => {
               'title' => @script_title,
               'lessons' => {
                 @lesson.name => {
@@ -63,6 +69,8 @@ class LessonsControllerTest < ActionController::TestCase
     assert_response :ok
     assert(@response.body.include?(@script_title))
     assert(@response.body.include?(@lesson.overview))
+    assert(@response.body.include?(@script.link))
+    assert(@response.body.include?(@script_title))
   end
 
   # only levelbuilders can edit
