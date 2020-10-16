@@ -140,7 +140,7 @@ class LessonTest < ActiveSupport::TestCase
     assert_equal '/', lesson2.next_level_path_for_lesson_extras(@student)
   end
 
-  test 'raise error if lesson with no levels' do
+  test 'can summarize lesson with no levels' do
     script = create :script
     lesson_group = create :lesson_group, script: script
 
@@ -154,10 +154,9 @@ class LessonTest < ActiveSupport::TestCase
 
     counters = LessonGroup::Counters.new(0, 0, 0, 0)
 
-    raise = assert_raises do
-      Lesson.add_lessons(script, lesson_group, raw_lessons, counters, nil, nil)
-    end
-    assert_equal 'Lessons must have at least one level in them.  Lesson: Lesson 1.', raise.message
+    lessons = Lesson.add_lessons(script, lesson_group, raw_lessons, counters, nil, nil)
+    summary = lessons.first.summarize
+    assert_equal 'Lesson1', summary[:key]
   end
 
   test 'raises error when creating invalid lockable lessons' do
