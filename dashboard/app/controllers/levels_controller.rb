@@ -278,18 +278,6 @@ class LevelsController < ApplicationController
   # POST /levels
   # POST /levels.json
   def create
-    create_helper
-    render json: {redirect: edit_level_path(@level)}
-  end
-
-  # POST /levels
-  # POST /levels.json
-  def create_level
-    create_helper
-    render json: @level
-  end
-
-  def create_helper
     authorize! :create, Level
     type_class = level_params[:type].constantize
 
@@ -324,6 +312,46 @@ class LevelsController < ApplicationController
     rescue ActiveRecord::RecordInvalid => invalid
       render(status: :not_acceptable, text: invalid) && return
     end
+    render json: {redirect: edit_level_path(@level)}
+  end
+
+  # POST /levels/create_level
+  def create_level
+    authorize! :create, Level
+    type_class = level_params[:type].constantize
+
+    # Set some defaults.
+    params[:level][:skin] ||= type_class.skins.first if type_class <= Blockly
+    if type_class <= Grid
+      default_tile = type_class == Karel ? {"tileType": 0} : 0
+      start_tile = type_class == Karel ? {"tileType": 2} : 2
+      params[:level][:maze_data] = Array.new(8) {Array.new(8) {default_tile}}
+      params[:level][:maze_data][0][0] = start_tile
+    end
+    if type_class <= Studio
+      params[:level][:maze_data][0][0] = 16 # studio must have at least 1 actor
+      params[:level][:soft_buttons] = nil
+      params[:level][:timeout_after_when_run] = true
+      params[:level][:success_condition] = Studio.default_success_condition
+      params[:level][:failure_condition] = Studio.default_failure_condition
+    end
+    params[:level][:maze_data] = params[:level][:maze_data].to_json if type_class <= Grid
+    params[:user] = current_user
+
+    create_level_params = level_params
+
+    # Give platformization partners permission to edit any levels they create.
+    editor_experiment = Experiment.get_editor_experiment(current_user)
+    create_level_params[:editor_experiment] = editor_experiment if editor_experiment
+
+    begin
+      @level = type_class.create_from_level_builder(params, create_level_params)
+    rescue ArgumentError => e
+      render(status: :not_acceptable, text: e.message) && return
+    rescue ActiveRecord::RecordInvalid => invalid
+      render(status: :not_acceptable, text: invalid) && return
+    end
+    render json: @level
   end
 
   # DELETE /levels/1
@@ -375,7 +403,7 @@ class LevelsController < ApplicationController
   # POST /levels/1/clone?name=new_name
   # Clone existing level and open edit page
   def clone
-    clone_helper
+    clone_helper(params)
     render json: {redirect: edit_level_url(@new_level)}
   rescue ArgumentError => e
     render(status: :not_acceptable, text: e.message)
@@ -386,7 +414,7 @@ class LevelsController < ApplicationController
   # POST /levels/1/clone_level?name=new_name
   # Clone existing level and return cloned level
   def clone_level
-    clone_helper
+    clone_helper(params)
     render json: @new_level
   rescue ArgumentError => e
     render(status: :not_acceptable, text: e.message)
@@ -394,7 +422,7 @@ class LevelsController < ApplicationController
     render(status: :not_acceptable, text: invalid)
   end
 
-  def clone_helper
+  def clone_helper(params)
     new_name = params.require(:name)
     editor_experiment = Experiment.get_editor_experiment(current_user)
     @new_level = @level.clone_with_name(new_name, editor_experiment: editor_experiment)
