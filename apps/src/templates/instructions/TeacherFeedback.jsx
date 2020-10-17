@@ -227,13 +227,13 @@ export class TeacherFeedback extends Component {
 
     //javascript months begin counting at 0
     const [todayM, todayD, todayY] = [
-      today.getMonth() + 1,
+      today.getMonth(),
       today.getDate(),
       today.getFullYear()
     ];
 
     const [m, d, y] = [
-      dateFeedbackSeen.getMonth() + 1,
+      dateFeedbackSeen.getMonth(),
       dateFeedbackSeen.getDate(),
       dateFeedbackSeen.getFullYear()
     ];
