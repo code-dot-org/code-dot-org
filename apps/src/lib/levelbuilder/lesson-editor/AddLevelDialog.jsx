@@ -134,8 +134,7 @@ export default class AddLevelDialog extends Component {
   };
 
   setCurrentPage = value => {
-    this.setState({currentPage: value});
-    this.handleSearch();
+    this.setState({currentPage: value}, this.handleSearch);
   };
 
   handleChangeLevelName = event => {
