@@ -72,7 +72,10 @@ export default class LessonEditor extends Component {
 
         <RelatedLessons relatedLessons={relatedLessons} />
 
-        <CollapsibleEditorSection title="Lesson Settings">
+        <CollapsibleEditorSection
+          title="General Lesson Settings"
+          collapsed={true}
+        >
           <label>
             Lockable
             <input
@@ -136,13 +139,15 @@ export default class LessonEditor extends Component {
               </p>
             </HelpTip>
           </label>
+        </CollapsibleEditorSection>
+        <CollapsibleEditorSection title="Announcements" collapsed={true}>
           <AnnouncementsEditor
             defaultAnnouncements={announcements}
             inputStyle={styles.input}
           />
         </CollapsibleEditorSection>
 
-        <CollapsibleEditorSection title="Lesson Plan">
+        <CollapsibleEditorSection title="Overviews" collapsed={true}>
           <TextareaWithMarkdownPreview
             markdown={overview}
             label={'Overview'}
@@ -155,6 +160,9 @@ export default class LessonEditor extends Component {
             name={'studentOverview'}
             inputRows={5}
           />
+        </CollapsibleEditorSection>
+
+        <CollapsibleEditorSection title="Purpose and Prep" collapsed={true}>
           <TextareaWithMarkdownPreview
             markdown={purpose}
             label={'Purpose'}
@@ -167,6 +175,9 @@ export default class LessonEditor extends Component {
             name={'preparation'}
             inputRows={5}
           />
+        </CollapsibleEditorSection>
+
+        <CollapsibleEditorSection title="Resources" collapsed={true}>
           <ResourcesEditor resources={this.props.resources} />
         </CollapsibleEditorSection>
 
