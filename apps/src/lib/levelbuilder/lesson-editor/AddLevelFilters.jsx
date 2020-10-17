@@ -86,7 +86,7 @@ export default class AddLevelFilters extends Component {
           By Owner:
           <select
             style={styles.dropdown}
-            onChange={this.props.handleChangeLevelName}
+            onChange={this.props.handleChangeOwner}
             value={this.props.ownerId}
           >
             {this.props.searchFields.ownerOptions.map(owner => (
