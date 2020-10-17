@@ -5,10 +5,15 @@ import AddLevelTable from '@cdo/apps/lib/levelbuilder/lesson-editor/AddLevelTabl
 import sinon from 'sinon';
 
 describe('AddLevelTable', () => {
-  let defaultProps;
+  let defaultProps, addLevel, setCurrentPage;
   beforeEach(() => {
+    addLevel = sinon.spy();
+    setCurrentPage = sinon.spy();
     defaultProps = {
-      addLevel: sinon.spy(),
+      addLevel,
+      currentPage: 1,
+      setCurrentPage,
+      numPages: 7,
       levels: [
         {
           id: 1,
@@ -51,5 +56,6 @@ describe('AddLevelTable', () => {
     expect(wrapper.contains('Last Updated')).to.be.true;
     expect(wrapper.find('button').length).to.equal(8); // 2 buttons for each level
     expect(wrapper.find('tr').length).to.equal(5); // 1 for the headers and 1 for each level
+    expect(wrapper.find('PaginationWrapper').length).to.equal(1);
   });
 });
