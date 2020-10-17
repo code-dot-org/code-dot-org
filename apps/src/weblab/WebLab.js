@@ -308,10 +308,14 @@ WebLab.prototype.reportResult = function(submit, validated) {
       : this.studioApp_.onContinue.bind(this.studioApp_);
   } else {
     testResult = TestResults.FREE_PLAY_UNCHANGED_FAIL;
-    onComplete = this.studioApp_.displayFeedback({
-      feedbackType: testResult,
-      level: this.level
-    });
+    onComplete = submit
+      ? onSubmitComplete
+      : () => {
+          this.studioApp_.displayFeedback({
+            feedbackType: testResult,
+            level: this.level
+          });
+        };
   }
 
   project.autosave(() => {
