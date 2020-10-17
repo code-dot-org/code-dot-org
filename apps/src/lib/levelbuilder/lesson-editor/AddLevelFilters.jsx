@@ -26,8 +26,8 @@ export default class AddLevelFilters extends Component {
     handleChangeLevelType: PropTypes.func,
     handleChangeScript: PropTypes.func,
     handleChangeOwner: PropTypes.func,
-    ownerId: PropTypes.number,
-    scriptId: PropTypes.number,
+    ownerId: PropTypes.string,
+    scriptId: PropTypes.string,
     levelType: PropTypes.string,
     levelName: PropTypes.string
   };
