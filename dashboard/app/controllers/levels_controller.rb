@@ -102,10 +102,11 @@ class LevelsController < ApplicationController
   # Get all the information for levels after filtering
   def get_filtered_levels
     filter_levels(params)
+
     @levels = @levels.limit(150)
     total_levels = @levels.length
     page_number = (total_levels / 7.0).ceil
-    puts page_number
+
     @levels = @levels.page(params[:page]).per(7)
     @levels = @levels.map(&:summarize_for_edit)
     render json: {numPages: page_number, levels: @levels}
