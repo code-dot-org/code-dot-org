@@ -32,6 +32,16 @@ class LessonActivity < ApplicationRecord
     duration
   )
 
+  def summarize_for_lesson_show
+    {
+      id: id,
+      position: position,
+      name: name,
+      duration: duration,
+      activitySections: activity_sections.map(&:summarize_for_lesson_show)
+    }
+  end
+
   def summarize_for_edit
     {
       id: id,
