@@ -115,6 +115,13 @@ nn:
     ein utforskar etiske problem og korleis AI kan brukast for å løyse verdsproblem.
     Datavitskap er om så mykje meir enn koding! Bli med Code.org sine første steg
     på ny reise for å lære meir om AI gjennom pensumet vårt. '
+  hoc_live: Hour of Code Live
+  hoc_live_sign_up_title: Sign up for Hour of Code Live
+  hoc_live_sign_up_message: Learn in real time alongside special guests! Students
+    of all ages and abilities, including those without computers, are welcome. Join
+    our mailing list to receive recordings of the episodes and resources to continue
+    learning at home.
+  hoc_live_join_us: Bli med
   hoc_overview_oceans_tutorial_header: AI for hav
   hoc_overview_oceans_tutorial_desc: Lær om AI, maskinlæring, treningsdata og bias
     medan ein utforskar etiske problem og korleis AI kan brukast for å løyse verdsproblem.
@@ -4907,18 +4914,17 @@ nn:
     eit program som får KIBO til å danse til musikken. Elelvar vil lære seg korleis
     å skape eit program til å uttrykke ein idé (i dette tilfellet ein dans), med eit
     fokus på å kunne sekvensiere.
-  tutorial_buildcharacters_longdescription: The most popular pre-reader app now includes
-    a digital Maker Space! Make levels, design games, or build characters. Choose
-    your activity and start creating with Kodable!  Featuring JavaScript for upper
+  tutorial_buildcharacters_longdescription: What are some character traits you can
+    identify in books or people you know? Design your own fuzz and use code to modify
+    its properties and bring your character to life! Featuring JavaScript for upper
     elementary.
   tutorial_designgames_longdescription: The most popular pre-reader app now includes
     a digital Maker Space! Make levels, design games, or build characters. Choose
     your activity and start creating with Kodable!  Featuring JavaScript for upper
     elementary.
-  tutorial_makelevels_longdescription: The most popular pre-reader app now includes
-    a digital Maker Space! Make levels, design games, or build characters. Choose
-    your activity and start creating with Kodable!  Featuring JavaScript for upper
-    elementary.
+  tutorial_makelevels_longdescription: Can you build a symmetrical maze? A maze with
+    right angles? Get creative and complete maze-building challenges with basic coding
+    concepts. Aligned with K-5 Common Core math.
   tutorial_wizard_longdescription: Journey into the world of Code Magic as a Code
     Wizard. Learn to create and cast spells to customize your castle.
   tutorial_mbscratchcards_longdescription: Connect the physical world of micro:bit
@@ -8222,8 +8228,8 @@ nn:
   tutorial_codewards_string_detail_programming_languages: CoffeeScript
   tutorial_olympics_string_detail_programming_languages: CoffeeScript
   tutorial_codinismhero_string_detail_programming_languages: Python
-  tutorial_discovery_string_detail_programming_languages: Blokker
-  tutorial_csfirstname_string_detail_programming_languages: Blokker
+  tutorial_discovery_string_detail_programming_languages: Blokker, Scratch
+  tutorial_csfirstname_string_detail_programming_languages: Blokker, Scratch
   tutorial_obstaclecourse_string_detail_programming_languages: Blokker
   tutorial_edisonmove_string_detail_programming_languages: Python, EdPy, et tekstbasert
     programmeringsspråk basert på Python.
@@ -8463,8 +8469,8 @@ nn:
     Room style project, the learner joins Marlee and Tyrell as they learn about binary
     numbers, light, color, and more to unravel Professor Photon's Color Conundrum,
     and restore color to the world's devices.
-  tutorial_kodablebeach_longdescription: Learn to program using basic commands and
-    clean up the beach to protect ocean life.
+  tutorial_kodablebeach_longdescription: Save the beach babies! Learn to program using
+    basic commands and clean up the beach to protect ocean life.
   tutorial_tynkeren_longdescription: 'Part of the UN Sustainable Development Goals
     project, this coding prompt shows off projects exploring renewable energy, energy
     efficiency, and access to energy. Readers can play with working projects and advanced
@@ -9206,7 +9212,7 @@ nn:
   tutorial_ai-oceans_string_detail_platforms: ''
   tutorial_scratchimagine_string_detail_programming_languages: Blokker
   tutorial_codesterspsa_string_detail_programming_languages: Python
-  tutorial_googlehero_string_detail_programming_languages: Blokker
+  tutorial_googlehero_string_detail_programming_languages: Blokker, Scratch
   tutorial_codestersbball_string_detail_programming_languages: Python
   tutorial_scratchcartoon_string_detail_programming_languages: Blokker
   tutorial_codemonkeyjr_string_detail_programming_languages: Blokker

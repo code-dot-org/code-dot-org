@@ -16,7 +16,7 @@ The Hour of Code is simple to run - even for beginners. You don’t need experie
 
 You can try the Hour of Code with a computer, a tablet, a smartphone, or completely unplugged! Here's how to get started.
 
-[<button>View PDF Guide</button>](https://hourofcode.com/files/HourofCode-Parent-How-To.pdf)
+[<button>View PDF Guide</button>]({{ localized_files/hourofcode_parent_how_to }})
 
 * * *
 
@@ -95,4 +95,4 @@ The Hour of Code is a global event, and your family deserves to celebrate. Here 
 
 علوم کامپیوتر نباید با «ساعت کدنویسی» تمام شود. While 90% of parents want their child to learn computer science, most schools still don’t teach it. To help, our curriculum is web-based and free to use, forever. [Learn how](https://code.org/yourschool) to bring CS to your child’s school today.
 
-[<button>View PDF Guide</button>](https://hourofcode.com/files/HourofCode-Parent-How-To.pdf)
+[<button>View PDF Guide</button>]({{ localized_files/hourofcode_parent_how_to }})

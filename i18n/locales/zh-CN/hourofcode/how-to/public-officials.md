@@ -24,7 +24,7 @@ From left to right: *Governors from Arkansas, North Carolina, and Arizona partic
 
 ### 1. 请阅读我们的单页报告
 
-See [why computer science education is important](/files/hoc-one-pager.pdf), and how you can help the effort by supporting the Hour of Code.
+See [why computer science education is important]({{ localized_files/hoc_one_pager }}), and how you can help the effort by supporting the Hour of Code.
 
 ### 2. 招募本地学校和社区作为合作机构
 

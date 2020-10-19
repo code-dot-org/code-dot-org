@@ -10,7 +10,7 @@ fr:
         csf_2018_category_name: CS Fundamentals (2018)
         csf_international_category_name: CS Fundamentals International
         csf2_draft_category_name: 'En cours d’élaboration : Cours A - F'
-        csp_category_name: "CS Principles"
+        csp_category_name: CS Principles
         csp_2018_category_name: CS Principles (2018-2019)
         csp_2019_category_name: CS Principles (2019-2020)
         cspexams_category_name: Test d'entraînement aux CS Principles
@@ -19,6 +19,7 @@ fr:
         hoc_category_name: Heure de Code
         math_category_name: Math
         research_studies_category_name: Études de Recherche
+        other_category_name: Autre
       name:
         course1:
           title: Cours 1
@@ -14834,7 +14835,7 @@ fr:
         vpl-csp-2020:
           lessons:
             Module 1:
-              name: Module 1
+              name: 'Module 1'
         curriculum-sandbox-levels:
           lessons:
             Course A:

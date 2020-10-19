@@ -4,12 +4,13 @@ nl:
     script:
       category:
         csf_category_name: Basis
-        csp_category_name: "CW Principes"
+        csp_category_name: CW Principes
         cspexams_category_name: CW Principes Praktische Test
         csp17_category_name: CW Principes
         full_course_category_name: Volledige Cursussen
         hoc_category_name: Uur Code
         math_category_name: wiskundige
+        other_category_name: Anders
       name:
         course1:
           title: Cursus 1
@@ -4019,17 +4020,17 @@ nl:
         vpl-csp-2020:
           lessons:
             Module 1:
-              name: Module 1
+              name: 'Module 1'
             Module 2:
-              name: Module 2
+              name: 'Module 2'
             Module 3:
-              name: Module 3
+              name: 'Module 3'
             Module 4:
-              name: Module 4
+              name: 'Module 4'
             Module 5:
-              name: Module 5
+              name: 'Module 5'
             Module 6:
-              name: Module 6
+              name: 'Module 6'
             Module 7:
               name: Module 7
             Module 8:

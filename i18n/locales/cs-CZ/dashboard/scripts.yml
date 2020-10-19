@@ -8,11 +8,12 @@ cs:
         csd_2019_category_name: Objevujeme informatiku (2019-2020)
         csf_category_name: Základy informatiky
         csf2_draft_category_name: 'Ve vývoji: Kurzy A - F'
-        csp_category_name: "Principy informatiky 2015-2016"
+        csp_category_name: Principy informatiky 2015-2016
         cspexams_category_name: Praktický test z principů informatiky
         csp17_category_name: Principy informatiky 2016-2017
         hoc_category_name: Hodina kódu
         math_category_name: Matematické
+        other_category_name: Ostatní
       name:
         course1:
           title: Kurz 1
@@ -123,7 +124,7 @@ cs:
             'Bee: Nested Loops':
               name: 'Včela: vnořené cykly'
             Bounce:
-              name: Odraz
+              name: Bounce
             Computational Thinking:
               name: Aritmetické Myšlení
             Crowdsourcing:
@@ -359,7 +360,7 @@ cs:
           description_short: Události
           lessons:
             Bounce:
-              name: Odraz
+              name: Bounce
             Studio:
               name: Studio
         flappy:
@@ -497,7 +498,7 @@ cs:
             Bee:
               name: Včela
             Bounce:
-              name: Odraz
+              name: Bounce
             Flappy:
               name: Flappy
             Jigsaw:
@@ -1006,7 +1007,7 @@ cs:
             Bee Debugging:
               name: Včelí ladění
             Bounce:
-              name: Odraz
+              name: Bounce
             'Farmer: While Loops':
               name: 'Farmářka - pokud (while) cykly'
         alltheplcthings:
@@ -1102,7 +1103,7 @@ cs:
           description: Vytvoř basketbalovou hru
           lessons:
             Bounce:
-              name: Odraz
+              name: Bounce
         hoc-encryption:
           lessons:
             Simple Encryption:
@@ -1176,7 +1177,7 @@ cs:
         coursed-draft:
           lessons:
             Events in Bounce:
-              name: Události při odrazu
+              name: Události s Bounce
             Nested Loops in Maze:
               name: Vnořené cykly v bludišti
             'Algorithms: Relay Programming':
@@ -1417,7 +1418,7 @@ cs:
             Ice Age Play Lab:
               name: Doba ledová Play Lab
             Bounce:
-              name: Odraz
+              name: Bounce
         coursea-2017:
           title: Kurz A
           assignment_family_title: Kurz A
@@ -1460,7 +1461,7 @@ cs:
             Introduction:
               name: Představení online úloh
             Events in Bounce:
-              name: Události při odrazu
+              name: Události s Bounce
               description_teacher: V této online aktivitě se studenti naučí, co jsou události a jak je počítače využívají v programech jako jsou video hry. Studenti budou pracovat na úlohách, které přimějí program reagovat na události (jako například zmáčknutí tlačítek šipek). Na konci úlohy dostanou studenti příležitost přizpůsobit si svou hru různými stupni rychlosti a zvuky. 
             Nested Loops:
               name: Vnořené cykly
@@ -1611,7 +1612,7 @@ cs:
             Build a Star Wars Game:
               name: Vytvoř Star Wars hru
             Events in Bounce:
-              name: Události při odrazu
+              name: Události s Bounce
             Build a Flappy Game:
               name: Vytvoř hru Flappy Bird
             Conditionals with Cards:
@@ -1685,7 +1686,7 @@ cs:
             Introduction:
               name: Úvod
             Events in Bounce:
-              name: Události při odrazu
+              name: Události s Bounce
             Nested Loops:
               name: Vnořené cykly
             'Algorithms: Relay Programming':
@@ -1722,7 +1723,7 @@ cs:
             Events with Flappy:
               name: Události s Flappy Bird
             Events in Bounce:
-              name: Události při odrazu
+              name: Události s Bounce
             While Loops in Farmer:
               name: Cykly pokud (while) s farmářkou
             Building a Foundation:
@@ -1912,7 +1913,7 @@ cs:
             Events with Flappy:
               name: Události s Flappy Bird
             Events in Bounce:
-              name: Události při odrazu
+              name: Události s Bounce
             While Loops in Farmer:
               name: Cykly pokud (while) s farmářkou
             Conditionals in Bee:
@@ -1987,7 +1988,7 @@ cs:
             Debugging in Collector:
               name: Ladění s Laurel
             Events in Bounce:
-              name: Události při odrazu
+              name: Události s Bounce
             Loops in Artist:
               name: Kreslení tvarů s cykly
             Nested Loops in Bee:
@@ -2018,6 +2019,8 @@ cs:
               name: Štafetové programování
             Introduction to Online Puzzles:
               name: Představení online úloh
+            Events in Bouncey:
+              name: Události s Bounce
             Nested Loops in Maze:
               name: Vnořené cykly v bludišti
         coursec-2018:
@@ -2082,6 +2085,8 @@ cs:
               description_teacher: V této hodině si studenti procvičí události vystavěním hry, kterou mohou sdílet online. R2-D2 a další postavy ze Star Wars pomohou studentům projít událostmi. Studenti pak dostanou prostor pro vytvoření své vlastní hry.
             'Functions: Songwriting':
               name: Skládání písniček
+            Functions in Harvester:
+              name: Funkce s farmářkou
             Internet:
               name: Internet
             Crowdsourcing:
@@ -2415,7 +2420,7 @@ cs:
               name: Ladění s Laurel
               description_teacher: V této online aktivitě si studenti procvičí ladění kódu v prostředí "sběratele". Studenti budou procvičovat čtení a úpravu kódu při opravování úloh s jednoduchými algoritmy, cykly a vnořenými cykly. 
             Events in Bounce:
-              name: Události při odrazu
+              name: Události s Bounce
               description_teacher: V této online aktivitě se studenti naučí, co jsou události a jak je počítače využívají v programech jako jsou video hry. Studenti budou pracovat na úlohách, které přimějí program reagovat na události (jako například zmáčknutí tlačítek šipek). Na konci úlohy dostanou studenti příležitost přizpůsobit si svou hru různými stupni rychlosti a zvuky. 
             Loops in Ice Age:
               name: Cykly v Době ledové
@@ -2484,6 +2489,8 @@ cs:
               description_teacher: V této hodině si studenti procvičí události vystavěním hry, kterou mohou sdílet online. R2-D2 a další postavy ze Star Wars pomohou studentům projít událostmi. Studenti pak dostanou prostor pro vytvoření své vlastní hry.
             'Functions: Songwriting':
               name: Skládání písniček
+            Functions in Harvester:
+              name: Funkce s farmářkou
             Internet:
               name: Internet
             Crowdsourcing:
@@ -2547,6 +2554,8 @@ cs:
               name: Pokud/jinak se včelkou
             Conditionals & Loops in Harvester:
               name: Zahradničení s podmínkami
+            Functions in Harvester:
+              name: Funkce s farmářkou
             Build a Flappy Game:
               name: Vytvoř hru Flappy Bird
             Envelope Variables:
@@ -3141,6 +3150,8 @@ cs:
           lessons:
             Nested Loops in Maze:
               name: Vnořené cykly v bludišti
+            Functions with Harvester:
+              name: Funkce s farmářkou
         time4cs-control-unit-1:
           lesson_groups:
             csf_sequencing:
@@ -3365,7 +3376,7 @@ cs:
               name: Ladění s Laurel
               description_teacher: V této online aktivitě si studenti procvičí ladění kódu v prostředí "sběratele". Studenti budou procvičovat čtení a úpravu kódu při opravování úloh s jednoduchými algoritmy, cykly a vnořenými cykly. 
             Events in Bounce:
-              name: Události při odrazu
+              name: Události s Bounce
               description_teacher: V této online aktivitě se studenti naučí, co jsou události a jak je počítače využívají v programech jako jsou video hry. Studenti budou pracovat na úlohách, které přimějí program reagovat na události (jako například zmáčknutí tlačítek šipek). Na konci úlohy dostanou studenti příležitost přizpůsobit si svou hru různými stupni rychlosti a zvuky. 
             Build a Star Wars Game:
               name: Vytvoř Star Wars hru
@@ -3430,6 +3441,8 @@ cs:
               description_teacher: V této online aktivitě dostanou studenti příležitost posunout své znalosti cyklů na úplně jinou úrověň. Při hraní se včelkou nebo hry Plants vs Zombies se studenti naučí naprogramovat cyklus uvnitř jiného cyklu. Budou také povzbuzovaní, aby vymysleli, jak malé změny v některém z cyklů ovlivní program poté, co zmáčknou `Spustit`.
             'Functions: Songwriting':
               name: Skládání písniček
+            Functions in Harvester:
+              name: Funkce s farmářkou
         coursef-2020:
           title: Kurz F (2019)
           lesson_groups:
@@ -3503,6 +3516,8 @@ cs:
               name: Cykly pokud (while) s farmářkou
             Harvesting with Conditionals:
               name: Zahradničení s podmínkami
+            Functions with Harvester:
+              name: Funkce s farmářkou
         pre-express-2020:
           lesson_groups:
             csf_sequencing:
