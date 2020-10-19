@@ -1,31 +1,40 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Modal, MenuItem, DropdownButton, Button} from 'react-bootstrap';
+import {Modal, Button} from 'react-bootstrap';
 import 'react-select/dist/react-select.css';
-import Spinner from '../../../components/spinner';
 import Select from 'react-select/lib/Select';
+import {SelectStyleProps} from '../../../constants.js';
+import Spinner from '../../../components/spinner.jsx';
 
 const CSV_QUERY_URL = '/api/v1/pd/foorm/submissions_csv';
 const FORM_NAME_QUERY_URL = '/api/v1/pd/foorm/form_names';
 
 const styles = {
   modalHeader: {
-    padding: '0 15px 0 0',
+    padding: 15,
     height: 30,
     borderBottom: 'none'
   },
   modalBody: {
-    padding: '0 15px 15px 15px',
+    padding: 20,
     fontSize: 14,
-    lineHeight: '22px'
+    lineHeight: '14px',
+    clear: 'both'
+  },
+  downloadButton: {
+    margin: '25px 0px 25px 0px',
+    float: 'right'
+  },
+  spinner: {
+    float: 'right',
+    margin: '27px 5px 0px 0px'
+  },
+  select: {
+    marginTop: 5
   }
 };
 
-export default class SubmissionsReport extends React.Component {
-  static contextTypes = {
-    router: PropTypes.object.isRequired
-  };
-
+export default class SubmissionsDownloadFom extends React.Component {
   static propTypes = {
     children: PropTypes.node.isRequired
   };
@@ -38,6 +47,7 @@ export default class SubmissionsReport extends React.Component {
       loadingFormNames: false,
       loadingCsv: false,
       selectedForm: {name: '', version: ''},
+      selectedFormValue: null,
       showing: false
     };
   }
@@ -60,32 +70,12 @@ export default class SubmissionsReport extends React.Component {
     });
   }
 
-  getFormattedFormNameDropdownOptions() {
-    return this.state.formNamesAndVersions.map((formNameAndVersion, i) => {
-      const formName = formNameAndVersion['name'];
-      const formVersion = formNameAndVersion['version'];
-      return (
-        <MenuItem
-          key={i}
-          eventKey={i}
-          onClick={() =>
-            this.setState({
-              selectedForm: {name: formName, version: formVersion}
-            })
-          }
-        >
-          {`${formName}, version ${formVersion}`}
-        </MenuItem>
-      );
-    });
-  }
-
   getFormattedFormNameSelectOptions() {
     return this.state.formNamesAndVersions.map((formNameAndVersion, i) => {
       const formName = formNameAndVersion['name'];
       const formVersion = formNameAndVersion['version'];
       return {
-        value: {name: formName, version: formVersion},
+        value: `${formName} - ${formVersion}`,
         label: `${formName}, version ${formVersion}`
       };
     });
@@ -106,64 +96,52 @@ export default class SubmissionsReport extends React.Component {
   }
 
   onSelectChange = change => {
-    this.setState({selectedForm: change.value});
-  };
-
-  handleDownloadCsvClick = () => {
-    this.setState({loadingCsv: true});
-    this.loadRequest = $.ajax({
-      method: 'GET',
-      url: CSV_QUERY_URL,
-      data: this.state.selectedForm
-    }).done(() => {
-      this.setState({
-        loadingCsv: false
-      });
-      window.open(`${CSV_QUERY_URL}${this.getQueryParams()}.csv`);
+    const selectedFormNameVersion = change.value.split(' - ', 2);
+    this.setState({
+      selectedForm: {
+        name: selectedFormNameVersion[0],
+        version: selectedFormNameVersion[1]
+      },
+      selectedFormValue: change.value
     });
   };
 
-  render_old() {
-    // <Modal>
-    //   <Modal.Header closeButton style={styles.modalHeader} />
-    //   <Modal.Body style={styles.modalBody}>
-    if (!this.state.formNamesAndVersions) {
-      return <Spinner />;
-    } else {
-      return (
-        <div>
-          <DropdownButton id="load_config" title="Select Survey">
-            {this.getFormattedFormNameDropdownOptions()}
-          </DropdownButton>
-          <Button onClick={this.handleDownloadCsvClick}>Download CSV</Button>
-        </div>
-      );
-    }
-
-    //   </Modal.Body>
-    // </Modal>
-  }
+  handleDownloadCsvClick = () => {
+    window.open(`${CSV_QUERY_URL}${this.getQueryParams()}`);
+  };
 
   render() {
     return (
       <span>
         <span onClick={this.open}>{this.props.children}</span>
         <Modal show={this.state.showing} onHide={this.close}>
-          <Modal.Header closeButton style={styles.modalHeader} />
+          <Modal.Header closeButton style={styles.modalHeader}>
+            <Modal.Title>Download Survey Results</Modal.Title>
+          </Modal.Header>
           <Modal.Body style={styles.modalBody}>
             <div>
               {this.state.formNamesAndVersions && (
                 <div>
+                  Form
                   <Select
                     options={this.getFormattedFormNameSelectOptions()}
+                    value={this.state.selectedFormValue}
                     onChange={this.onSelectChange}
+                    style={styles.select}
+                    {...SelectStyleProps}
                   />
-                  <DropdownButton id="load_config" title="Select Survey">
-                    {this.getFormattedFormNameDropdownOptions()}
-                  </DropdownButton>
-                  <Button onClick={this.handleDownloadCsvClick}>
-                    Download CSV
-                  </Button>
+                  <div>
+                    <Button
+                      onClick={this.handleDownloadCsvClick}
+                      style={styles.downloadButton}
+                      disabled={this.state.selectedFormValue === null}
+                    >
+                      Download as CSV
+                    </Button>
+                    {this.state.loadingCsv && (
+                      <Spinner style={styles.spinner} size="medium" />
+                    )}
+                  </div>
                 </div>
               )}
             </div>

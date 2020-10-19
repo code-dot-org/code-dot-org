@@ -16,7 +16,7 @@ import {
   ProgramManager
 } from './permission';
 import $ from 'jquery';
-import SubmissionsReport from './reports/foorm/submissions_report';
+import SubmissionsDownloadForm from './reports/foorm/submissions_download_form';
 
 const FILTER_API_URL = '/api/v1/pd/workshops/filter';
 const defaultFilters = {
@@ -36,6 +36,11 @@ const filterParams = {
   ended: {
     ...defaultFilters,
     state: 'Ended'
+  }
+};
+const styles = {
+  surveySubmissionsButton: {
+    marginLeft: 5
   }
 };
 
@@ -122,12 +127,14 @@ export class WorkshopIndex extends React.Component {
           >
             Filter View
           </Button>
+          {canExportSurveyResults && (
+            <SubmissionsDownloadForm>
+              <Button style={styles.surveySubmissionsButton}>
+                Export Survey Results
+              </Button>
+            </SubmissionsDownloadForm>
+          )}
         </ButtonToolbar>
-        {canExportSurveyResults && (
-          <SubmissionsReport>
-            <Button>Export Survey Results</Button>
-          </SubmissionsReport>
-        )}
         <h2>In Progress</h2>
         <ServerSortWorkshopTable
           queryUrl={FILTER_API_URL}
