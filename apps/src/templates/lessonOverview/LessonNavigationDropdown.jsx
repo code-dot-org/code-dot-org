@@ -80,7 +80,11 @@ export default class LessonNavigationDropdown extends Component {
       });
 
       if (i + 1 === this.state.currentSection) {
-        for (let j = numfirstLessonInSection; j < numLastLessonInSection; j++) {
+        for (
+          let j = numfirstLessonInSection;
+          j <= numLastLessonInSection;
+          j++
+        ) {
           sectionsAndLessons.push(lesson.unit.lessons[j]);
         }
       }
@@ -109,7 +113,9 @@ export default class LessonNavigationDropdown extends Component {
               onClick={this.handleDropdownClick.bind(this, listItem)}
               className={listItem.link ? 'navigate' : 'no-navigation'} // Used to specify if the dropdown should collapse when clicked
             >
-              {`${listItem.displayName}`}
+              <span style={listItem.link ? {marginLeft: 10} : {}}>
+                {listItem.displayName}
+              </span>
             </a>
           ))}
         </DropdownButton>
