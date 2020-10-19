@@ -358,7 +358,8 @@ function activities(state = [], action) {
         tips: [],
         remarks: false,
         slide: false,
-        text: ''
+        text: '',
+        scriptLevels: []
       });
       updateActivitySectionPositions(newState);
       break;
