@@ -207,7 +207,7 @@ class ActivityCard extends Component {
           ))}
           <button
             onMouseDown={this.handleAddActivitySection.bind()}
-            className="btn"
+            className="btn add-activity-section"
             style={styles.addButton}
             type="button"
           >

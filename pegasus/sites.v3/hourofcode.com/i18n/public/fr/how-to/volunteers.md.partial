@@ -26,7 +26,7 @@ L'Heure de Code est une initiation d'une heure à l'informatique, conçue pour d
 - [Autres manières de soutenir l'Heure de Code](#support-hour-of-code)
 - [FAQ des bénévoles](#faq)
 
-Que vous fassiez du bénévolat virtuellement, en personne ou avec votre entreprise, vos efforts peuvent avoir une influence énorme sur la façon dont les étudiants perçoivent l'informatique et leur propre potentiel. Take a look at our [volunteer toolkit if you still have questions](https://hourofcode.com/files/hoc-volunteer-toolkit.pdf).
+Que vous fassiez du bénévolat virtuellement, en personne ou avec votre entreprise, vos efforts peuvent avoir une influence énorme sur la façon dont les étudiants perçoivent l'informatique et leur propre potentiel. Take a look at our [volunteer toolkit if you still have questions]({{ localized_files/hoc_volunteer_toolkit }}).
 
 * * *
 
@@ -136,7 +136,7 @@ Travaillez avec l'école ou l'enseignant pour discuter de ce qui a le plus de se
 
 - Expliquez comment la technologie a une influence sur nos vies, avec des exemples qui concerneront les étudiants de tous horizons. Parlez de la technologie qui sauve des vies, aide les gens, connecte les gens. 
 - Si vous êtes une entreprise technologique, présentez des produits amusants et innovants sur lesquels votre entreprise travaille. Si vous n'êtes pas une entreprise technologique, discutez des façons dont votre entreprise utilise la technologie pour résoudre des problèmes et atteindre ses objectifs.
-- Invite software engineers from your company to speak about why they decided to study computer science and the projects they work on.
+- Invitez les ingénieurs en informatique de votre entreprise à discuter des raisons pour lesquelles ils ont décidé d'étudier l'informatique et des projets sur lesquels ils travaillent. 
 - Si des membres de votre personnel doivent animer votre événement ou faire du bénévolat avec une école locale, pensez à commander des [t-shirts personnalisés](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) pour vos employés.
 
 ### 3. Planifiez vos besoins technologiques
@@ -145,7 +145,7 @@ Travaillez avec l'école ou l'enseignant pour discuter de ce qui a le plus de se
 
 #### Appareils :
 
-Pour tirer le meilleur parti de l'Heure de Code, il est préférable de disposer d'ordinateurs reliés à internet. But you don’t need a computer for every child, and you can even do the Hour of Code without a computer at all! Pour les activités débranchées, il suffit de filtrer la section Technologie de la classe pour afficher les options "Pas d'ordinateurs ou d'appareils".
+Pour tirer le meilleur parti de l'Heure de Code, il est préférable de disposer d'ordinateurs reliés à internet. Mais vous n’avez pas besoin d’un ordinateur pour chaque enfant, et vous pouvez même faire une Heure de Code sans ordinateur du tout ! Pour les activités débranchées, il suffit de filtrer la section Technologie de la classe pour afficher les options "Pas d'ordinateurs ou d'appareils".
 
 - **Testez les activités** sur des ordinateurs ou des appareils. Assurez-vous qu'elles fonctionnent correctement sur les navigateurs, avec son et vidéo.
 - **Nombre d'appareils insuffisant ?** Utilisez la programmation par paires. Quand les élèves sont en équipe, ils s'entraident et sollicitent moins leur enseignant. Ils découvriront ainsi que l'informatique est une discipline qui favorise les interactions sociales et la collaboration.
