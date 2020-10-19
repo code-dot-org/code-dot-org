@@ -34,14 +34,13 @@ export default class CollapsibleEditorSection extends Component {
     return (
       <div>
         <div style={styles.header}>
-          <h2>
+          <h2
+            onClick={() => {
+              this.setState({collapsed: !this.state.collapsed});
+            }}
+          >
             <FontAwesome
               icon={this.state.collapsed ? 'expand' : 'compress'}
-              onClick={() => {
-                this.setState({
-                  collapsed: !this.state.collapsed
-                });
-              }}
               style={styles.icon}
             />
             {title}

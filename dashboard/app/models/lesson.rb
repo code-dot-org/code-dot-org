@@ -66,7 +66,6 @@ class Lesson < ActiveRecord::Base
   def self.add_lessons(script, lesson_group, raw_lessons, counters, new_suffix, editor_experiment)
     script.lessons.reload
     raw_lessons.map do |raw_lesson|
-      Lesson.prevent_empty_lesson(raw_lesson)
       Lesson.prevent_blank_display_name(raw_lesson)
       Lesson.prevent_changing_stable_i18n_key(script, raw_lesson)
 
@@ -112,10 +111,6 @@ class Lesson < ActiveRecord::Base
     if raw_lesson[:name].blank?
       raise "Expect all lessons to have display names. The following lesson does not have a display name: #{raw_lesson[:key]}"
     end
-  end
-
-  def self.prevent_empty_lesson(raw_lesson)
-    raise "Lessons must have at least one level in them.  Lesson: #{raw_lesson[:name]}." if raw_lesson[:script_levels].empty?
   end
 
   # Go through all the script levels for this lesson, except the last one,
@@ -240,7 +235,7 @@ class Lesson < ActiveRecord::Base
       # The last level in a lesson might be a long assessment, so add extra information
       # related to that.  This might include information for additional pages if it
       # happens to be a multi-page long assessment.
-      if last_script_level.long_assessment?
+      if last_script_level&.long_assessment?
         last_level_summary = lesson_data[:levels].last
         extra_levels = ScriptLevel.summarize_extra_puzzle_pages(last_level_summary)
         lesson_data[:levels] += extra_levels
@@ -417,6 +412,11 @@ class Lesson < ActiveRecord::Base
       lesson_activity.update_activity_sections(activity['activitySections'])
       lesson_activity
     end
+
+    # It's too messy to keep track of all 3 position values for scripts during
+    # this update, so just set activity_section_position as the source of truth
+    # and then fix chapter and position values after.
+    script.fix_script_level_positions
   end
 
   # Used for seeding from JSON. Returns the full set of information needed to uniquely identify this object.
@@ -434,6 +434,85 @@ class Lesson < ActiveRecord::Base
     lesson_group_seeding_key = my_lesson_group.seeding_key(seed_context)
     my_key.merge!(lesson_group_seeding_key) {|key, _, _| raise "Duplicate key when generating seeding_key: #{key}"}
     my_key.stringify_keys
+  end
+
+  # Finds all other lessons which match the following criteria:
+  # 1. the other lesson is in the same course offering as this lesson. Or, if
+  # this lesson is in a CSF course offering, the other lesson may also be in
+  # any other CSF course offering.
+  # 2. same lesson key (untranslated lesson name)
+  # The results are sorted first by version year and then by script name.
+  #
+  # This method is intended only to be used in levelbuilder mode, when script
+  # caching is disabled.
+  #
+  # The purpose of this method is to help curriculum writers find lessons
+  # related to the one they are currently editing in which they might want to
+  # make similar edits. The heuristic used by this method is that the lesson key
+  # will not change when a script is deep-copied into a new version year, or
+  # when a lesson is shared across CSF courses within the same version year. If
+  # this heuristic proves to be inadequate, we could consider adding an explicit
+  # link between related lessons.
+  #
+  # @return [Array<Lesson>]
+  def related_lessons
+    return related_csf_lessons if script&.curriculum_umbrella == 'CSF'
+
+    course_offering = script&.get_course_version&.course_offering
+    return [] unless course_offering
+    # all units in this course offering, including this lesson's unit
+    related_units = course_offering.course_versions.map(&:units).flatten
+
+    # to minimize the query count, make the initial query load any associations
+    # that may be used in the sort block below.
+    load_params = {
+      script: [
+        :course_version,
+        {
+          unit_group_units: {
+            unit_group: :course_version
+          }
+        }
+      ]
+    }
+    lessons = Lesson.eager_load(load_params).
+      where(script: related_units).
+      where(key: key).to_a
+
+    # we cannot do the sort in the SQL query, because we don't know which
+    # association get_course_version will use to find the course version.
+    lessons.sort_by! do |lesson|
+      version_year = lesson.script.get_course_version.version_year
+      [version_year, lesson.script.name]
+    end
+    lessons - [self]
+  end
+
+  def related_csf_lessons
+    # because curriculum umbrella is stored on the Script model, take a big
+    # shortcut and look only at curriculum umbrella, ignoring course version
+    # and course offering. In the future, when curriulum_umbrella moves to
+    # CourseOffering, this implementation will need to change to be more like
+    # related_lessons.
+    lessons = Lesson.eager_load(script: :course_version).
+      where("scripts.properties -> '$.curriculum_umbrella' = ?", script.curriculum_umbrella).
+      where(key: key).
+      order("scripts.properties -> '$.version_year'", 'scripts.name')
+    lessons - [self]
+  end
+
+  # @return [Array<Hash>]
+  def summarize_related_lessons
+    related_lessons.map do |lesson|
+      {
+        scriptTitle: lesson.script.localized_title,
+        versionYear: lesson.script.get_course_version.version_year,
+        lockable: lesson.lockable,
+        relativePosition: lesson.relative_position,
+        id: lesson.id,
+        editUrl: edit_lesson_path(id: lesson.id)
+      }
+    end
   end
 
   private
