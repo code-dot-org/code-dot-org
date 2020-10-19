@@ -16,18 +16,12 @@ $(document).ready(function() {
 
   // Rename any keys that are different on the backend.
   activities.forEach(activity => {
-    // React key which must be unique for each object in the list.
-    activity.key = activity.id + '';
-
     activity.displayName = activity.name || '';
     delete activity.name;
 
     activity.duration = activity.duration || 0;
 
     activity.activitySections.forEach(activitySection => {
-      // React key
-      activitySection.key = activitySection.id + '';
-
       activitySection.displayName = activitySection.name || '';
       delete activitySection.name;
 
