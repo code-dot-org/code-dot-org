@@ -226,7 +226,12 @@ function initializeBlocklyWrapper(blocklyInstance) {
     const options = {
       ...opt_options,
       theme: CdoTheme,
-      trashcan: true
+      trashcan: true,
+      move: {
+        wheel: true,
+        drag: true,
+        scrollbars: true
+      }
     };
     blocklyWrapper.editBlocks = opt_options.editBlocks;
     return blocklyWrapper.blockly_.inject(container, options);
