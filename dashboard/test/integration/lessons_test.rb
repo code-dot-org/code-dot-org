@@ -48,6 +48,20 @@ class LessonsTest < ActionDispatch::IntegrationTest
     )
     assert_equal @activity_section, @activity.activity_sections.first
 
+    @level = create :maze
+    @script_level = create(
+      :script_level,
+      activity_section: @activity_section,
+      activity_section_position: 1,
+      chapter: 1,
+      position: 1,
+      lesson: @lesson,
+      script: @lesson.script,
+      levels: [@level],
+      challenge: true
+    )
+    assert_equal @script_level, @activity_section.script_levels.first
+
     @levelbuilder = create :levelbuilder
   end
 
@@ -83,6 +97,17 @@ class LessonsTest < ActionDispatch::IntegrationTest
     # assigning a serialized_attribute to false sets the value to nil
     assert_nil activity_section_data['remarks']
     assert_equal true, activity_section_data['slide']
+
+    assert_equal 1, activity_section_data['scriptLevels'].count
+    script_level_data = activity_section_data['scriptLevels'].first
+    assert script_level_data['challenge']
+    refute script_level_data['assessment']
+    refute script_level_data['bonus']
+    assert_equal @level.id, script_level_data['activeId']
+    assert_equal 1, script_level_data['levels'].count
+    level_data = script_level_data['levels'].first
+    assert_equal @level.name, level_data['name']
+    assert_equal @level.id, level_data['id']
   end
 
   test 'update lesson using data from edit page' do
@@ -100,6 +125,10 @@ class LessonsTest < ActionDispatch::IntegrationTest
     activity_section_data['name'] = 'new activity section name'
     activity_section_data['remarks'] = true
     activity_section_data['slide'] = false
+
+    script_level_data = activity_section_data['scriptLevels'].first
+    script_level_data['assessment'] = true
+    script_level_data['challenge'] = false
 
     # This part of the edit/update API is not symmetric, because the update
     # API expects the activities field to be JSON-encoded.
@@ -131,5 +160,12 @@ class LessonsTest < ActionDispatch::IntegrationTest
     assert_equal true, @activity_section.remarks
     # assigning a serialized_attribute to false sets the value to nil
     assert_nil @activity_section.slide
+    assert_equal [@script_level], @activity_section.script_levels
+
+    @script_level.reload
+    assert @script_level.assessment
+    refute @script_level.challenge
+    assert_equal 1, @script_level.levels.count
+    assert_equal [@level], @script_level.levels.all
   end
 end
