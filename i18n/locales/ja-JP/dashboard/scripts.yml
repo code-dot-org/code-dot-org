@@ -10,7 +10,7 @@ ja:
         csf_2018_category_name: コンピューターサイエンス 初歩 (2018)
         csf_international_category_name: コンピューターサイエンス 初歩 (多言語)
         csf2_draft_category_name: '開発中: コース A - F'
-        csp_category_name: "'15-'16 コンピューター・サイエンス原理"
+        csp_category_name: '''15-''16 コンピューター・サイエンス原理'
         csp_2018_category_name: コンピューターサイエンス 入門 ('18~'19)
         csp_2019_category_name: コンピューターサイエンス 原理 ('19-'20)
         cspexams_category_name: コンピューター・サイエンス原理実習テスト
@@ -19,6 +19,7 @@ ja:
         hoc_category_name: Hour of Code（アワー オブ コード）
         math_category_name: 計算(けいさん)
         research_studies_category_name: 調査（ちょうさ）・研究（けんきゅう）
+        other_category_name: その他
       name:
         course1:
           title: コース1

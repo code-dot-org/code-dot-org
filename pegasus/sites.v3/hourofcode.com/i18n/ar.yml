@@ -112,6 +112,13 @@ ar:
     لمعالجة المشكلات العالمية. علم الحاسوب هو أكثر بكثير من مجرد البرمجة! استمتع بالخطوة
     الأولى لـ Code.org في رحلة جديدة لتعليم المزيد عن الذكاء الاصطناعي من خلال مناهجنا
     الدراسية.
+  hoc_live: Hour of Code Live
+  hoc_live_sign_up_title: Sign up for Hour of Code Live
+  hoc_live_sign_up_message: Learn in real time alongside special guests! Students
+    of all ages and abilities, including those without computers, are welcome. Join
+    our mailing list to receive recordings of the episodes and resources to continue
+    learning at home.
+  hoc_live_join_us: انضم إلينا
   hoc_overview_oceans_tutorial_header: 'استخدام الذكاء الاصنطاعي في المحيطات '
   hoc_overview_oceans_tutorial_desc: 'تعرف على الذكاء الاصطناعي، وتعلم الآلة، وبيانات
     التدريب، والانحياز، أثناء استكشاف المسائل الأخلاقية وكيف يمكن استخدام الذكاء الاصطناعي
@@ -8176,8 +8183,8 @@ ar:
   tutorial_codewards_string_detail_programming_languages: لغة البرمجة "CoffeeScript"
   tutorial_olympics_string_detail_programming_languages: لغة البرمجة "CoffeeScript"
   tutorial_codinismhero_string_detail_programming_languages: لغة البرمجة "بايثون"
-  tutorial_discovery_string_detail_programming_languages: الكتل البرمجية
-  tutorial_csfirstname_string_detail_programming_languages: الكتل البرمجية
+  tutorial_discovery_string_detail_programming_languages: الكتل البرمجية، لغة "سكراتش"
+  tutorial_csfirstname_string_detail_programming_languages: الكتل البرمجية، لغة "سكراتش"
   tutorial_obstaclecourse_string_detail_programming_languages: الكتل البرمجية
   tutorial_edisonmove_string_detail_programming_languages: لغة البرمجة "بايثون"، لغة
     البرمجة "EdPy"، لغة برمجة نصية تعتمد على لغة "بايثون".
@@ -9172,7 +9179,7 @@ ar:
   tutorial_ai-oceans_string_detail_platforms: ''
   tutorial_scratchimagine_string_detail_programming_languages: الكتل البرمجية
   tutorial_codesterspsa_string_detail_programming_languages: لغة البرمجة "بايثون"
-  tutorial_googlehero_string_detail_programming_languages: الكتل البرمجية
+  tutorial_googlehero_string_detail_programming_languages: الكتل البرمجية، لغة "سكراتش"
   tutorial_codestersbball_string_detail_programming_languages: لغة البرمجة "بايثون"
   tutorial_scratchcartoon_string_detail_programming_languages: الكتل البرمجية
   tutorial_codemonkeyjr_string_detail_programming_languages: الكتل البرمجية

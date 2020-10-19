@@ -121,6 +121,13 @@ tr:
     verileri ve yanlılık hakkında bilgi sahibi olun. Bilgisayar bilimi kodlamadan
     çok daha fazlasıdır! Müfredatımız boyunca yapay zeka ile ilgili daha fazla şey
     öğretme yolculuğunda Code.org'un ilk adımının keyfini çıkarın.
+  hoc_live: Hour of Code Live
+  hoc_live_sign_up_title: Sign up for Hour of Code Live
+  hoc_live_sign_up_message: Learn in real time alongside special guests! Students
+    of all ages and abilities, including those without computers, are welcome. Join
+    our mailing list to receive recordings of the episodes and resources to continue
+    learning at home.
+  hoc_live_join_us: Bize katılın
   hoc_overview_oceans_tutorial_header: Okyanuslar için Yapay Zeka
   hoc_overview_oceans_tutorial_desc: Etik meseleleri ve dünya problemlerini ele almada
     yapay zekanın nasıl kullanılabildiğini keşfederken, yapay zeka, makine öğrenimi,
@@ -8491,8 +8498,8 @@ tr:
   tutorial_codewards_string_detail_programming_languages: CoffeeScript
   tutorial_olympics_string_detail_programming_languages: CoffeeScript
   tutorial_codinismhero_string_detail_programming_languages: Python
-  tutorial_discovery_string_detail_programming_languages: Bloklar
-  tutorial_csfirstname_string_detail_programming_languages: Bloklar
+  tutorial_discovery_string_detail_programming_languages: Bloklar, Scratch
+  tutorial_csfirstname_string_detail_programming_languages: Bloklar, Scratch
   tutorial_obstaclecourse_string_detail_programming_languages: Bloklar
   tutorial_edisonmove_string_detail_programming_languages: Python, temelinde Python
     olan metin tabanlı bir programlama dili olan EdPy.
@@ -9513,7 +9520,7 @@ tr:
   tutorial_ai-oceans_string_detail_platforms: ''
   tutorial_scratchimagine_string_detail_programming_languages: Bloklar
   tutorial_codesterspsa_string_detail_programming_languages: Python
-  tutorial_googlehero_string_detail_programming_languages: Bloklar
+  tutorial_googlehero_string_detail_programming_languages: Bloklar, Scratch
   tutorial_codestersbball_string_detail_programming_languages: Python
   tutorial_scratchcartoon_string_detail_programming_languages: Bloklar
   tutorial_codemonkeyjr_string_detail_programming_languages: Bloklar
