@@ -281,7 +281,6 @@ function loadMap(locations) {
           layout: {
             "icon-image": "dot-marker",
             "icon-size": 1.1,
-            "icon-anchor": "bottom",
             "icon-allow-overlap": true
           }
         });
