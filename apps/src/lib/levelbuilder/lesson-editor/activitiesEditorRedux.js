@@ -352,14 +352,8 @@ function activities(state = [], action) {
       const activitySections =
         newState[action.activityPosition - 1].activitySections;
       activitySections.push({
-        key: action.activitySectionKey,
-        displayName: '',
-        levels: [],
-        tips: [],
-        remarks: false,
-        slide: false,
-        text: '',
-        scriptLevels: []
+        ...emptyActivitySection,
+        key: action.activitySectionKey
       });
       updateActivitySectionPositions(newState);
       break;
