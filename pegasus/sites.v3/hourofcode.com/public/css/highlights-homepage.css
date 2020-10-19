@@ -90,6 +90,14 @@
     display: none;
   }
 
+  .highlights-scroll {
+    display: none;
+  }
+
+  .highlights-single {
+    display: inline-block;
+  }
+
   .highlights-column {
     width: 100%;
   }
@@ -98,13 +106,5 @@
 @media screen and (min-width: 0px) and (max-width: 767px) {
   .highlights-column {
     display: none;
-  }
-
-  .highlights-scroll {
-    display: none;
-  }
-
-  .highlights-single {
-    display: inline-block;
   }
 }
