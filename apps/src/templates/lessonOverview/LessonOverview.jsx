@@ -10,8 +10,7 @@ import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import styleConstants from '@cdo/apps/styleConstants';
 import color from '@cdo/apps/util/color';
-import Button from '@cdo/apps/templates/Button';
-import DropdownButton from '@cdo/apps/templates/DropdownButton';
+import LessonNavigationDropdown from '@cdo/apps/templates/lessonOverview/LessonNavigationDropdown';
 
 const styles = {
   frontPage: {
@@ -34,9 +33,6 @@ const styles = {
   navLink: {
     fontSize: 18,
     color: color.purple
-  },
-  dropdown: {
-    display: 'inline-block'
   }
 };
 
@@ -49,10 +45,12 @@ class LessonOverview extends Component {
         lessons: PropTypes.arrayOf(
           PropTypes.shape({
             displayName: PropTypes.string.isRequired,
-            link: PropTypes.string.isRequired
+            link: PropTypes.string.isRequired,
+            key: PropTypes.string.isRequired
           })
         ).isRequired
       }).isRequired,
+      key: PropTypes.string.isRequired,
       displayName: PropTypes.string.isRequired,
       overview: PropTypes.string.isRequired,
       purpose: PropTypes.string.isRequired,
@@ -82,18 +80,7 @@ class LessonOverview extends Component {
           >
             {`< ${lesson.unit.displayName}`}
           </a>
-          <div style={styles.dropdown}>
-            <DropdownButton
-              text={i18n.otherLessonsInUnit()}
-              color={Button.ButtonColor.purple}
-            >
-              {lesson.unit.lessons.map((l, index) => (
-                <a key={index} href={this.linkWithQueryParams(l.link)}>
-                  {`${index + 1} ${l.displayName}`}
-                </a>
-              ))}
-            </DropdownButton>
-          </div>
+          <LessonNavigationDropdown lesson={lesson} />
         </div>
         {isSignedIn && (
           <Announcements
