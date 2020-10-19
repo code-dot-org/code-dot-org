@@ -76,10 +76,10 @@ class LessonsControllerTest < ActionController::TestCase
       id: @lesson.id
     }
     assert_response :ok
-    assert(@response.body.include?(@script_title))
-    assert(@response.body.include?(@lesson.overview))
-    assert(@response.body.include?(@script.link))
-    assert(@response.body.include?(@script_title))
+    assert_includes @response.body, @script_title
+    assert_includes @response.body, @lesson.overview
+    assert_includes @response.body, @script.link
+    assert_includes @response.body, @script_title
     assert_includes @response.body, activity.name
     assert_includes @response.body, section.name
   end
