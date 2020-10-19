@@ -54,6 +54,19 @@ class ActivitySection < ApplicationRecord
     }
   end
 
+  def summarize_for_lesson_show
+    {
+      id: id,
+      position: position,
+      name: name,
+      remarks: remarks,
+      slide: slide,
+      description: description,
+      tips: tips,
+      scriptLevels: script_levels.map(&:summarize_for_lesson_show)
+    }
+  end
+
   # @param [Array<Hash>] script_levels_data - Data representing script levels
   #   belonging to this activity section.
   def update_script_levels(script_levels_data)
