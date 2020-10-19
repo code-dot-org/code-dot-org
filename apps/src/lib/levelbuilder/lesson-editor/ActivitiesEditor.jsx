@@ -134,7 +134,7 @@ class ActivitiesEditor extends Component {
           ))}
           <button
             onMouseDown={this.handleAddActivity}
-            className="btn"
+            className="btn add-activity"
             style={styles.addActivity}
             type="button"
           >

@@ -10,7 +10,7 @@ title: Godzina Kodowania - przewodnik dla firm
 
 * * *
 
-Myślenie komputacyjne pomaga rozwijać umiejętność rozwiązywania problemów, logikę oraz kreatywność. A technologia zmienia każdą branżę na świecie. Uczniowie dnia dzisiejszego powinni się uczyć, jak tworzyć technologię, a nie tylko jak z niej korzystać. Rozpoczęcie nauki na wczesnym etapie da im podwaliny sukcesu na dowolnej ścieżce zawodowej na miarę XXI wieku.
+Myślenie informatyczne pomaga rozwijać umiejętność rozwiązywania problemów, logikę oraz kreatywność. A technologia zmienia każdą branżę na świecie. Uczniowie dnia dzisiejszego powinni się uczyć, jak tworzyć technologię, a nie tylko jak z niej korzystać. Rozpoczęcie nauki na wczesnym etapie da im podwaliny sukcesu na dowolnej ścieżce zawodowej na miarę XXI wieku.
 
 Biorąc udział w kampanii Godzina Kodowania, twoja firma może pomóc zwiększyć świadomość w zakresie informatyki. Niezależnie od tego, czy chcesz uczestniczyć indywidualnie, czy wraz ze swoją firmą, Twoje działanie może mieć ogromny wpływ na sposób, w jaki młode kobiety i studenci ze zmarginalizowanych grup rasowych i etnicznych postrzegają informatykę i swój własny potencjał.
 
@@ -34,7 +34,7 @@ Jednym z najbardziej satysfakcjonujących sposobów uczestniczenia w Godzinie Ko
 
 Po zarejestrowaniu się wolontariusza nauczyciel może zweryfikować jego profil na naszej [ mapie wolontariuszy](https://code.org/volunteer/local) - dlatego ważne, by profil został wypełniony tak kompletnie, jak to tylko możliwe. Jeśli pasujesz do jakiejś klasy nauczyciel skontaktuje się z Tobą za pośrednictwem platformy (nigdy nie udostępniamy Twojego adresu e-mail nauczycielowi). Później możesz koordynować szczegóły w sposób bezpośredni z nauczycielem [jak najlepiej działać jako wolontariusz w ich klasie](https://hourofcode.com/us/how-to/volunteers).
 
-Aby uzyskać więcej wskazówek na temat wolontariatu i poznać przykładowe treści, które pozwolą promować Godzinę Kodowania w Twojej firmie, [zobacz nasz przewodnik dla partnerów korporacyjnych.](https://staging.hourofcode.com/files/hoc-corporate-toolkit.pdf).
+For more guidance on volunteering and sample messaging to get your company excited about the Hour of Code, check out our [guide for corporate partners]({{ localized_files/hoc_corporate_toolkit }}).
 
 * * *
 

@@ -950,6 +950,11 @@ da:
           lesson_groups:
             required:
               display_name: Oversigt
+        minecraft:
+          description_short: Programmer dyr og andre Minecraft-væsner i din egen udgave
+            af Minecraft.
+          description: Programmer dyr og andre Minecraft-væsner i din egen udgave
+            af Minecraft.
         flappy-impact-study:
           lessons:
             Flappy Code:
@@ -1080,6 +1085,8 @@ da:
               name: Lister
             For Loops:
               name: For Loops
+            Map:
+              name: Kort
             Functions with Parameters:
               name: Funktioner med parametre
         workshop-gamelab:

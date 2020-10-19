@@ -18,6 +18,7 @@ sk:
         full_course_category_name: Všetky kurzy
         hoc_category_name: Hodina Kódu
         math_category_name: Matematické
+        other_category_name: Ostatné
       name:
         course1:
           title: Kurz 1
@@ -1857,8 +1858,55 @@ sk:
             csd1_2:
               display_name: 'Kapitola 2: Počítače a riešenie problémov'
           lessons:
+            Intro to Problem Solving:
+              name: Úvod do riešenia problémov
+              description_student: Študenti pracujú v skupinách na navrhovaní člnov
+                z hliníkovej fólie. Cieľom je navrhnúť čln, ktorý udrží čo najviac
+                drobných. Na konci hodiny sa študenti zamyslia nad svojimi skúsenosťami
+                s touto aktivitou a spoja si ich s typmi riešenia problémov, na ktorých
+                budú pracovať po zvyšok kurzu.
+              description_teacher: V tejto lekcii študenti pracujú v skupinách na
+                navrhovaní člnov z hliníkovej fólie. Cieľom je navrhnúť čln, ktorý
+                udrží čo najviac drobných. Skupiny pracujú na svojich člnoch počas
+                dvoch kôl, ktorých cieľom je zvýšiť počet drobných, ktoré čln udrží.
+                Štruktúra aktivity načrtne rôzne kroky procesu riešenia problémov,
+                s ktorými sa študenti podrobnejšie zoznámia v priebehu nasledujúcej
+                lekcie. Na konci hodiny sa študenti zamyslia nad svojimi skúsenosťami
+                s touto aktivitou a spoja si ich s typmi riešenia problémov, ktoré
+                budú riešiť po zvyšok kurzu
             The Problem Solving Process:
               name: Proces riešenia problémov
+              description_student: Táto lekcia predstavuje formálny proces riešenia
+                problémov, ktorý bude trieda počas roka používať, Definuj - Priprav
+                - Vyskúšaj - Prehodnoť. Trieda tieto kroky prepája s problémom hliníkových
+                člnov z predchádzajúcej lekcie, potom s problémom, ktorý už vedia
+                dobre vyriešiť, a nakoniec s problémom, v ktorého riešení by sa chceli
+                zlepšiť. Na konci hodiny trieda zozbiera zoznam všeobecne užitočných
+                stratégií pre každý krok procesu, na vylepenie na plagáty, ktoré budú
+                používať počas celého kurzu a roka.
+              description_teacher: Táto lekcia predstavuje formálny proces riešenia
+                problémov, ktorý budú študenti počas roka používať, Definuj - Priprav
+                - Vyskúšaj - Prehodnoť. Lekcia začína požiadaním študentov, aby prediskutovali
+                rôzne typy problémov, s ktorými sa stretávajú v každodennom živote.
+                Študentom sa potom ukážu štyri kroky procesu riešenia problémov a
+                budú sa spolu usilovať o prepojenie týchto abstraktných krokov so
+                svojimi skutočnými skúsenosťami s riešením problémov. Študenti najprv
+                prepoja tieto kroky s problémom hliníkových člnov z predchádzajúcej
+                lekcie, potom s problémom, ktorý už vedia dobre vyriešiť, a nakoniec
+                s problémom, v ktorého riešení by sa chceli zlepšiť. Na konci hodiny
+                trieda pozbiera zoznam všeobecne užitočných stratégií pre každý krok
+                procesu na plagáty, ktoré budú používať počas celého kurzu a roka.
+            Exploring Problem Solving:
+              name: Objavovanie riešenia problémov
+              description_student: 'V tejto lekcii študenti aplikujú proces riešenia
+                problémov na tri rôzne úlohy: osemsmerovku, rozdelenie sedenia na
+                narodeninovú oslavu a plánovanie výletu. Problémy sú čoraz zložitejšie
+                a horšie definované, aby sa zdôraznilo, ako je proces riešenia problémov
+                obzvlášť nápomocný pri riešení takýchto problémov.'
+              description_teacher: |-
+                V tejto lekcii študenti aplikujú proces riešenia problémov na tri rôzne úlohy, aby lepšie pochopili hodnotu každého kroku. Vyriešia osemsmerovku, rozdelia sedenie na narodeninovú oslavu a naplánujú výlet. Problémy sú čoraz zložitejšie a horšie definované, aby sa zdôraznilo, ako je proces riešenia problémov obzvlášť nápomocný pri riešení takýchto problémov. Na konci hodiny sa študenti zamýšľajú nad svojimi skúsenosťami s procesom riešenia problémov. Zdôvodnia zahrnutie každého kroku a budú diskutovať o otázkach alebo stratégiách, ktoré im môžu pomôcť lepšie definovať neurčité problémy, pretože to je často najdôležitejší krok.
+
+                Dokončenie tejto lekcie bude pravdepodobne trvať dve alebo viac vyučovacích hodín. Prvé dva problémy sa môžu zmestiť do jednej hodiny, ale tretí bude potrebné posunúť na druhú hodinu.
             What is a Computer?:
               name: Čo je počítač?
         csp-online-test:
@@ -1972,6 +2020,8 @@ sk:
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmy z reálneho života: Zasaď semienko'
+            Learn to Drag and Drop:
+              name: Nauč sa presunúť a pustiť
             'Programming: Happy Maps':
               name: 'Programovanie: Veselé mapy'
             Programming in Maze:
@@ -1990,6 +2040,8 @@ sk:
               name: 'Hľadanie a odstraňovanie chýb: Príbeh o chrobákoch'
             Sequence & Algorithms:
               name: Postupnosť & Algoritmy
+            Learn to Drag and Drop:
+              name: Nauč sa presunúť a pustiť
             'Programming: My Robotic Friends':
               name: 'Programovanie: Moji robotickí kamaráti'
             Programming in Maze:
@@ -2308,6 +2360,8 @@ sk:
               name: Zoznamy
             For Loops:
               name: Cykly "For"
+            Map:
+              name: Mapa
             Functions with Parameters:
               name: Funkcie s parametrami
         workshop-gamelab:
@@ -2444,8 +2498,12 @@ sk:
               name: 'Projekt: vytvor vlastnú hru'
         csd1-old:
           lessons:
+            Intro to Problem Solving:
+              name: Úvod do riešenia problémov
             The Problem Solving Process:
               name: Proces riešenia problémov
+            Exploring Problem Solving:
+              name: Objavovanie riešenia problémov
             What is a Computer?:
               name: Čo je počítač?
         csd2-draft:
@@ -2460,8 +2518,12 @@ sk:
               name: Zoznamy
         csd1-draft:
           lessons:
+            Intro to Problem Solving:
+              name: Úvod do riešenia problémov
             The Problem Solving Process:
               name: Proces riešenia problémov
+            Exploring Problem Solving:
+              name: Objavovanie riešenia problémov
             What is a Computer?:
               name: Čo je počítač?
         csd3-chapters:
@@ -2676,7 +2738,7 @@ sk:
             príbehy a hry.
           description: Vytvor programy s postupnosťami, cyklami a udalosťami. Prelož
             svoje iniciály do binárneho kódu, preskúmaj rôzne techniky riešenia problémov
-            a nauč sa ako reagovať na kyber šikanu. Na konci kurzu si vytvoríš svoju
+            a nauč sa, ako reagovať na kyber šikanu. Na konci kurzu si vytvoríš svoju
             vlastnú hru alebo príbeh, ktoré budeš môcť zdieľať!
           lessons:
             Building a Foundation:
@@ -4293,6 +4355,7 @@ sk:
                 aktivity je budovať zručnosti na preklápanie situácií zo skutočného
                 sveta do online scenárov a naopak.\r\n"
             Learn to Drag and Drop:
+              name: Nauč sa presunúť a pustiť
               description_teacher: Táto lekcia poskytne študentom predstavu o tom,
                 čo očakávať, keď prídu do počítačových laboratórií. Začína krátkou
                 diskusiou, ktorá im predstaví základy správania v počítačových laboratóriách,
@@ -4515,6 +4578,8 @@ sk:
               name: 'Hľadanie a odstraňovanie chýb: Príbeh o chrobákoch'
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmy z reálneho života: Zasaď semienko'
+            Learn to Drag and Drop:
+              name: Nauč sa presunúť a pustiť
             Your Digital Footprint:
               name: Tvoja digitálna stopa
             'Programming: My Robotic Friends':
@@ -4616,7 +4681,7 @@ sk:
           assignment_family_title: Kurz C
           description: Vytvor programy s postupnosťami, cyklami a udalosťami. Prelož
             svoje iniciály do binárneho kódu, preskúmaj rôzne techniky riešenia problémov
-            a nauč sa ako reagovať na kyber šikanu. Na konci kurzu si vytvoríš svoju
+            a nauč sa, ako reagovať na kyber šikanu. Na konci kurzu si vytvoríš svoju
             vlastnú hru alebo príbeh, ktoré budeš môcť zdieľať!
           description_short: Nauč sa základy informatiky a vytvor si vlastné obrázky,
             príbehy a hry.
@@ -5059,8 +5124,55 @@ sk:
             csd1_2:
               display_name: 'Kapitola 2: Počítače a riešenie problémov'
           lessons:
+            Intro to Problem Solving:
+              name: Úvod do riešenia problémov
+              description_student: Študenti pracujú v skupinách na navrhovaní člnov
+                z hliníkovej fólie. Cieľom je navrhnúť čln, ktorý udrží čo najviac
+                drobných. Na konci hodiny sa študenti zamyslia nad svojimi skúsenosťami
+                s touto aktivitou a spoja si ich s typmi riešenia problémov, na ktorých
+                budú pracovať po zvyšok kurzu.
             The Problem Solving Process:
               name: Proces riešenia problémov
+              description_student: Táto lekcia predstavuje formálny proces riešenia
+                problémov, ktorý bude trieda počas roka používať, Definuj - Priprav
+                - Vyskúšaj - Prehodnoť. Trieda tieto kroky prepája s problémom hliníkových
+                člnov z predchádzajúcej lekcie, potom s problémom, ktorý už vedia
+                dobre vyriešiť, a nakoniec s problémom, v ktorého riešení by sa chceli
+                zlepšiť. Na konci hodiny trieda zozbiera zoznam všeobecne užitočných
+                stratégií pre každý krok procesu, na vylepenie na plagáty, ktoré budú
+                používať počas celého kurzu a roka.
+              description_teacher: Táto lekcia predstavuje formálny proces riešenia
+                problémov, ktorý budú študenti počas roka používať, Definuj - Priprav
+                - Vyskúšaj - Prehodnoť. Lekcia začína požiadaním študentov, aby prediskutovali
+                rôzne typy problémov, s ktorými sa stretávajú v každodennom živote.
+                Študentom sa potom ukážu štyri kroky procesu riešenia problémov a
+                budú sa spolu usilovať o prepojenie týchto abstraktných krokov so
+                svojimi skutočnými skúsenosťami s riešením problémov. Študenti najprv
+                prepoja tieto kroky s problémom hliníkových člnov z predchádzajúcej
+                lekcie, potom s problémom, ktorý už vedia dobre vyriešiť, a nakoniec
+                s problémom, v ktorého riešení by sa chceli zlepšiť. Na konci hodiny
+                trieda pozbiera zoznam všeobecne užitočných stratégií pre každý krok
+                procesu na plagáty, ktoré budú používať počas celého kurzu a roka.
+            Exploring Problem Solving:
+              name: Objavovanie riešenia problémov
+              description_student: 'V tejto lekcii študenti aplikujú proces riešenia
+                problémov na tri rôzne úlohy: osemsmerovku, rozdelenie sedenia na
+                narodeninovú oslavu a plánovanie výletu. Problémy sú čoraz zložitejšie
+                a horšie definované, aby sa zdôraznilo, ako je proces riešenia problémov
+                obzvlášť nápomocný pri riešení takýchto problémov.'
+              description_teacher: "V tejto lekcii študenti aplikujú proces riešenia
+                problémov na tri rôzne úlohy, aby lepšie pochopili hodnotu každého
+                kroku. Vyriešia osemsmerovku, rozdelia sedenie na narodeninovú oslavu
+                a naplánujú výlet. Problémy sú čoraz zložitejšie a horšie definované,
+                aby sa zdôraznilo, ako je proces riešenia problémov obzvlášť nápomocný
+                pri riešení takýchto problémov. Na konci hodiny sa študenti zamýšľajú
+                nad svojimi skúsenosťami s procesom riešenia problémov. Zdôvodnia
+                zahrnutie každého kroku a budú diskutovať o otázkach alebo stratégiách,
+                ktoré im môžu pomôcť lepšie definovať neurčité problémy, pretože to
+                je často najdôležitejší krok.\r\n\r\nDokončenie tejto lekcie bude
+                pravdepodobne trvať dve alebo viac vyučovacích hodín. Prvé dva problémy
+                sa môžu zmestiť do jednej hodiny, ale tretí bude potrebné posunúť
+                na druhú hodinu."
             What is a Computer?:
               name: Čo je počítač?
         csd4-2018:
@@ -5310,6 +5422,8 @@ sk:
               name: Stevie a jej veľký projekt
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmy z reálneho života: Zasaď semienko'
+            Learn to Drag and Drop:
+              name: Nauč sa presunúť a pustiť
             'Online Safety: Your Digital Footprint':
               name: 'Online bezpečnosť: Tvoja digitálna stopa'
             'Programming: My Robotic Friends':
@@ -6085,6 +6199,13 @@ sk:
             Concept Practice with Minecraft:
               name: Pohľad do budúcnosti s Minecraftom
         csd1-2019:
+          description: Riešenie problémov a výpočtová technika je vysoko interaktívny
+            a kooperatívny úvod do oblasti informatiky, uvedený v širšom kontexte
+            riešenia úloh. Precvičíte si použitie procesu riešenia problémov na riešenie
+            viacerých úloh, výziev, a scenárov z každodennej praxe. Ďalej sa naučíte
+            ako počítače vkladajú, ukladajú, spracúvajú a posielajú na výstup informácie,
+            ktoré pomáhajú ľuďom riešiť úlohy. Jednotku uzatvára projekt, v ktorom
+            navrhnete aplikáciu, ktorá pomôže vyriešiť príklad podľa vášho výberu.
           lesson_groups:
             cspSurvey:
               display_name: Dotazník
@@ -6093,8 +6214,55 @@ sk:
             csd1_2:
               display_name: 'Kapitola 2: Počítače a riešenie problémov'
           lessons:
+            Intro to Problem Solving:
+              name: Úvod do riešenia problémov
+              description_student: Študenti pracujú v skupinách na navrhovaní člnov
+                z hliníkovej fólie. Cieľom je navrhnúť čln, ktorý udrží čo najviac
+                drobných. Na konci hodiny sa študenti zamyslia nad svojimi skúsenosťami
+                s touto aktivitou a spoja si ich s typmi riešenia problémov, na ktorých
+                budú pracovať po zvyšok kurzu.
             The Problem Solving Process:
               name: Proces riešenia problémov
+              description_student: Táto lekcia predstavuje formálny proces riešenia
+                problémov, ktorý bude trieda počas roka používať, Definuj - Priprav
+                - Vyskúšaj - Prehodnoť. Trieda tieto kroky prepája s problémom hliníkových
+                člnov z predchádzajúcej lekcie, potom s problémom, ktorý už vedia
+                dobre vyriešiť, a nakoniec s problémom, v ktorého riešení by sa chceli
+                zlepšiť. Na konci hodiny trieda zozbiera zoznam všeobecne užitočných
+                stratégií pre každý krok procesu, na vylepenie na plagáty, ktoré budú
+                používať počas celého kurzu a roka.
+              description_teacher: Táto lekcia predstavuje formálny proces riešenia
+                problémov, ktorý budú študenti počas roka používať, Definuj - Priprav
+                - Vyskúšaj - Prehodnoť. Lekcia začína požiadaním študentov, aby prediskutovali
+                rôzne typy problémov, s ktorými sa stretávajú v každodennom živote.
+                Študentom sa potom ukážu štyri kroky procesu riešenia problémov a
+                budú sa spolu usilovať o prepojenie týchto abstraktných krokov so
+                svojimi skutočnými skúsenosťami s riešením problémov. Študenti najprv
+                prepoja tieto kroky s problémom hliníkových člnov z predchádzajúcej
+                lekcie, potom s problémom, ktorý už vedia dobre vyriešiť, a nakoniec
+                s problémom, v ktorého riešení by sa chceli zlepšiť. Na konci hodiny
+                trieda pozbiera zoznam všeobecne užitočných stratégií pre každý krok
+                procesu na plagáty, ktoré budú používať počas celého kurzu a roka.
+            Exploring Problem Solving:
+              name: Objavovanie riešenia problémov
+              description_student: 'V tejto lekcii študenti aplikujú proces riešenia
+                problémov na tri rôzne úlohy: osemsmerovku, rozdelenie sedenia na
+                narodeninovú oslavu a plánovanie výletu. Problémy sú čoraz zložitejšie
+                a horšie definované, aby sa zdôraznilo, ako je proces riešenia problémov
+                obzvlášť nápomocný pri riešení takýchto problémov.'
+              description_teacher: "V tejto lekcii študenti aplikujú proces riešenia
+                problémov na tri rôzne úlohy, aby lepšie pochopili hodnotu každého
+                kroku. Vyriešia osemsmerovku, rozdelia sedenie na narodeninovú oslavu
+                a naplánujú výlet. Problémy sú čoraz zložitejšie a horšie definované,
+                aby sa zdôraznilo, ako je proces riešenia problémov obzvlášť nápomocný
+                pri riešení takýchto problémov. Na konci hodiny sa študenti zamýšľajú
+                nad svojimi skúsenosťami s procesom riešenia problémov. Zdôvodnia
+                zahrnutie každého kroku a budú diskutovať o otázkach alebo stratégiách,
+                ktoré im môžu pomôcť lepšie definovať neurčité problémy, pretože to
+                je často najdôležitejší krok.\r\n\r\nDokončenie tejto lekcie bude
+                pravdepodobne trvať dve alebo viac vyučovacích hodín. Prvé dva problémy
+                sa môžu zmestiť do jednej hodiny, ale tretí bude potrebné posunúť
+                na druhú hodinu."
             What is a Computer?:
               name: Čo je počítač?
         andrea-test:
@@ -6142,7 +6310,7 @@ sk:
           title: Kurz C (2019)
           description: Vytvor programy s postupnosťami, cyklami a udalosťami. Prelož
             svoje iniciály do binárneho kódu, preskúmaj rôzne techniky riešenia problémov
-            a nauč sa ako reagovať na kyber šikanu. Na konci kurzu si vytvoríš svoju
+            a nauč sa, ako reagovať na kyber šikanu. Na konci kurzu si vytvoríš svoju
             vlastnú hru alebo príbeh, ktoré budeš môcť zdieľať!
           description_short: Nauč sa základy informatiky a vytvor si vlastné obrázky,
             príbehy a hry.
@@ -6317,6 +6485,7 @@ sk:
                 lekcie dostanú žiaci príležitosť pomozou cyklov nakresliť vlastné
                 obrazy.
             Learn to Drag and Drop:
+              name: Nauč sa presunúť a pustiť
               description_teacher: Táto lekcia poskytne študentom predstavu o tom,
                 čo očakávať, keď prídu do počítačových laboratórií. Začína krátkou
                 diskusiou, ktorá im predstaví základy správania v počítačových laboratóriách,
@@ -6473,6 +6642,8 @@ sk:
               name: 'Udalosti: Veľká udalosť'
             Spelling Bee:
               name: Včela Hláskovanie
+            Learn to Drag and Drop:
+              name: Nauč sa presunúť a pustiť
             Programming in Maze:
               name: Programovanie s Angry Birds
             Programming in Harvester:
@@ -7144,6 +7315,8 @@ sk:
           lessons:
             What is a Computer?:
               name: Čo je počítač?
+            Problem Solving Process:
+              name: Proces riešenia problémov
         fit2019-apprentice:
           lesson_groups:
             required:
@@ -7154,6 +7327,13 @@ sk:
             Wrap Up:
               name: Zhrnutie
         csd1-pilot:
+          description: Riešenie problémov a výpočtová technika je vysoko interaktívny
+            a kooperatívny úvod do oblasti informatiky, uvedený v širšom kontexte
+            riešenia úloh. Precvičíte si použitie procesu riešenia problémov na riešenie
+            viacerých úloh, výziev, a scenárov z každodennej praxe. Ďalej sa naučíte
+            ako počítače vkladajú, ukladajú, spracúvajú a posielajú na výstup informácie,
+            ktoré pomáhajú ľuďom riešiť úlohy. Jednotku uzatvára projekt, v ktorom
+            navrhnete aplikáciu, ktorá pomôže vyriešiť príklad podľa vášho výberu.
           lesson_groups:
             cspSurvey:
               display_name: Dotazník
@@ -7162,8 +7342,55 @@ sk:
             csd1_2:
               display_name: 'Kapitola 2: Počítače a riešenie problémov'
           lessons:
+            Intro to Problem Solving:
+              name: Úvod do riešenia problémov
+              description_student: Študenti pracujú v skupinách na navrhovaní člnov
+                z hliníkovej fólie. Cieľom je navrhnúť čln, ktorý udrží čo najviac
+                drobných. Na konci hodiny sa študenti zamyslia nad svojimi skúsenosťami
+                s touto aktivitou a spoja si ich s typmi riešenia problémov, na ktorých
+                budú pracovať po zvyšok kurzu.
             The Problem Solving Process:
               name: Proces riešenia problémov
+              description_student: Táto lekcia predstavuje formálny proces riešenia
+                problémov, ktorý bude trieda počas roka používať, Definuj - Priprav
+                - Vyskúšaj - Prehodnoť. Trieda tieto kroky prepája s problémom hliníkových
+                člnov z predchádzajúcej lekcie, potom s problémom, ktorý už vedia
+                dobre vyriešiť, a nakoniec s problémom, v ktorého riešení by sa chceli
+                zlepšiť. Na konci hodiny trieda zozbiera zoznam všeobecne užitočných
+                stratégií pre každý krok procesu, na vylepenie na plagáty, ktoré budú
+                používať počas celého kurzu a roka.
+              description_teacher: Táto lekcia predstavuje formálny proces riešenia
+                problémov, ktorý budú študenti počas roka používať, Definuj - Priprav
+                - Vyskúšaj - Prehodnoť. Lekcia začína požiadaním študentov, aby prediskutovali
+                rôzne typy problémov, s ktorými sa stretávajú v každodennom živote.
+                Študentom sa potom ukážu štyri kroky procesu riešenia problémov a
+                budú sa spolu usilovať o prepojenie týchto abstraktných krokov so
+                svojimi skutočnými skúsenosťami s riešením problémov. Študenti najprv
+                prepoja tieto kroky s problémom hliníkových člnov z predchádzajúcej
+                lekcie, potom s problémom, ktorý už vedia dobre vyriešiť, a nakoniec
+                s problémom, v ktorého riešení by sa chceli zlepšiť. Na konci hodiny
+                trieda pozbiera zoznam všeobecne užitočných stratégií pre každý krok
+                procesu na plagáty, ktoré budú používať počas celého kurzu a roka.
+            Exploring Problem Solving:
+              name: Objavovanie riešenia problémov
+              description_student: 'V tejto lekcii študenti aplikujú proces riešenia
+                problémov na tri rôzne úlohy: osemsmerovku, rozdelenie sedenia na
+                narodeninovú oslavu a plánovanie výletu. Problémy sú čoraz zložitejšie
+                a horšie definované, aby sa zdôraznilo, ako je proces riešenia problémov
+                obzvlášť nápomocný pri riešení takýchto problémov.'
+              description_teacher: "V tejto lekcii študenti aplikujú proces riešenia
+                problémov na tri rôzne úlohy, aby lepšie pochopili hodnotu každého
+                kroku. Vyriešia osemsmerovku, rozdelia sedenie na narodeninovú oslavu
+                a naplánujú výlet. Problémy sú čoraz zložitejšie a horšie definované,
+                aby sa zdôraznilo, ako je proces riešenia problémov obzvlášť nápomocný
+                pri riešení takýchto problémov. Na konci hodiny sa študenti zamýšľajú
+                nad svojimi skúsenosťami s procesom riešenia problémov. Zdôvodnia
+                zahrnutie každého kroku a budú diskutovať o otázkach alebo stratégiách,
+                ktoré im môžu pomôcť lepšie definovať neurčité problémy, pretože to
+                je často najdôležitejší krok.\r\n\r\nDokončenie tejto lekcie bude
+                pravdepodobne trvať dve alebo viac vyučovacích hodín. Prvé dva problémy
+                sa môžu zmestiť do jednej hodiny, ale tretí bude potrebné posunúť
+                na druhú hodinu."
             What is a Computer?:
               name: Čo je počítač?
         csd2-pilot:
@@ -7847,6 +8074,13 @@ sk:
             CS Discoveries Post Course survey:
               name: 'Objavujeme informatiku: Záverečný dotazník'
         csd1-2020:
+          description: Riešenie problémov a výpočtová technika je vysoko interaktívny
+            a kooperatívny úvod do oblasti informatiky, uvedený v širšom kontexte
+            riešenia úloh. Precvičíte si použitie procesu riešenia problémov na riešenie
+            viacerých úloh, výziev, a scenárov z každodennej praxe. Ďalej sa naučíte
+            ako počítače vkladajú, ukladajú, spracúvajú a posielajú na výstup informácie,
+            ktoré pomáhajú ľuďom riešiť úlohy. Jednotku uzatvára projekt, v ktorom
+            navrhnete aplikáciu, ktorá pomôže vyriešiť príklad podľa vášho výberu.
           lesson_groups:
             cspSurvey:
               display_name: Dotazník
@@ -7855,8 +8089,12 @@ sk:
             csd1_2:
               display_name: 'Kapitola 2: Počítače a riešenie problémov'
           lessons:
+            Intro to Problem Solving:
+              name: Úvod do riešenia problémov
             The Problem Solving Process:
               name: Proces riešenia problémov
+            Exploring Problem Solving:
+              name: Objavovanie riešenia problémov
             What is a Computer?:
               name: Čo je počítač?
         csd4-2020:
@@ -8204,6 +8442,7 @@ sk:
                 zaujímavé online miesta, ale nato, aby zostali v bezpečí musia dodržiavať
                 určité pravidlá.
             Learn to Drag and Drop:
+              name: Nauč sa presunúť a pustiť
               description_teacher: Táto lekcia poskytne študentom predstavu o tom,
                 čo očakávať, keď prídu do počítačových laboratórií. Začína krátkou
                 diskusiou, ktorá im predstaví základy správania v počítačových laboratóriách,
@@ -8338,7 +8577,7 @@ sk:
           title: Kurz C (2019)
           description: Vytvor programy s postupnosťami, cyklami a udalosťami. Prelož
             svoje iniciály do binárneho kódu, preskúmaj rôzne techniky riešenia problémov
-            a nauč sa ako reagovať na kyber šikanu. Na konci kurzu si vytvoríš svoju
+            a nauč sa, ako reagovať na kyber šikanu. Na konci kurzu si vytvoríš svoju
             vlastnú hru alebo príbeh, ktoré budeš môcť zdieľať!
           description_short: Nauč sa základy informatiky a vytvor si vlastné obrázky,
             príbehy a hry.
@@ -8884,6 +9123,7 @@ sk:
               display_name: Udalosti
           lessons:
             Learn to Drag and Drop:
+              name: Nauč sa presunúť a pustiť
               description_teacher: Táto lekcia poskytne študentom predstavu o tom,
                 čo očakávať, keď prídu do počítačových laboratórií. Začína krátkou
                 diskusiou, ktorá im predstaví základy správania v počítačových laboratóriách,
