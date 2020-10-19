@@ -104,7 +104,8 @@ class VirtualizedDetailView extends Component {
   componentDidUpdate(prevProps) {
     if (
       !_.isEqual(
-        this.props.levelStatusByStudent !== prevProps.levelStatusByStudent
+        this.props.levelStatusByStudent,
+        prevProps.levelStatusByStudent
       )
     ) {
       this.detailView.forceUpdateGrids();
