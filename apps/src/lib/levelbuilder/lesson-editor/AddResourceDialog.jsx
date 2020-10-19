@@ -41,8 +41,10 @@ const styles = {
     marginLeft: 10
   },
   submitButton: {
-    orange: color.orange,
-    borderRadius: 3
+    backgroundColor: color.orange,
+    color: 'white',
+    borderRadius: 3,
+    fondSize: 12
   }
 };
 
@@ -51,7 +53,7 @@ const styles = {
 export default class AddResourceDialog extends Component {
   static propTypes = {
     isOpen: PropTypes.bool.isRequired,
-    onSave: PropTypes.func.isRequired,
+    onSave: PropTypes.func,
     handleClose: PropTypes.func.isRequired,
     typeOptions: PropTypes.arrayOf(PropTypes.string),
     audienceOptions: PropTypes.arrayOf(PropTypes.string)
@@ -119,7 +121,9 @@ export default class AddResourceDialog extends Component {
         .then(json => {
           if (json !== {}) {
             this.resetState();
-            this.props.onSave(json);
+            if (this.props.onSave) {
+              this.props.onSave(json);
+            }
             this.props.handleClose();
           }
         })
@@ -168,7 +172,7 @@ export default class AddResourceDialog extends Component {
                   value={this.state.type}
                 >
                   <option value={''}>{''}</option>
-                  {this.props.typeOptions.map(option => (
+                  {(this.props.typeOptions || []).map(option => (
                     <option value={option} key={option}>
                       {option}
                     </option>
@@ -184,7 +188,7 @@ export default class AddResourceDialog extends Component {
                   onChange={this.handleInputChange}
                 >
                   <option value={''}>{''}</option>
-                  {this.props.audienceOptions.map(option => (
+                  {(this.props.audienceOptions || []).map(option => (
                     <option value={option} key={option}>
                       {option}
                     </option>
