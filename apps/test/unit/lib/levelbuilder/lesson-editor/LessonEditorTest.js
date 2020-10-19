@@ -79,7 +79,7 @@ describe('LessonEditor', () => {
     );
     const button = wrapper.find('.add-activity-section');
     expect(button.length, 'button').to.equal(1);
-    button.simulate('click');
+    button.simulate('mousedown');
     expect(wrapper.find('ActivitySection').length).to.equal(4);
   });
 });
