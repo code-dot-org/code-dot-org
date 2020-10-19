@@ -889,6 +889,7 @@ $default-modal-width: 640px;
 .video-player-rounded-corners {
   border-radius: 10px;
   border-width: 0;
+  overflow: hidden;
 }
 
 .video-player-full-width {
@@ -903,52 +904,6 @@ $default-modal-width: 640px;
   position: relative;
   // Specifically supports 16x9 aspect ratio
   padding-top: 56.25%;
-}
-
-@media screen and (max-height: 1330px) {
-  .standalone-video-full-width {
-    max-width: 1973px;
-  }
-}
-@media screen and (max-height: 1240px) {
-  .standalone-video-full-width {
-    max-width: 1813px;
-  }
-}
-@media screen and (max-height: 1150px) {
-  .standalone-video-full-width {
-    max-width: 1653px;
-  }
-}
-@media screen and (max-height: 1060px) {
-  .standalone-video-full-width {
-    max-width: 1493px;
-  }
-}
-@media screen and (max-height: 970px) {
-  .standalone-video-full-width {
-    max-width: 1333px;
-  }
-}
-@media screen and (max-height: 880px) {
-  .standalone-video-full-width {
-    max-width: 1173px;
-  }
-}
-@media screen and (max-height: 790px) {
-  .standalone-video-full-width {
-    max-width: 1013px;
-  }
-}
-@media screen and (max-height: 700px) {
-  .standalone-video-full-width {
-    max-width: 853px;
-  }
-}
-@media screen and (max-height: 610px) {
-  .standalone-video-full-width {
-    max-width: 693px;
-  }
 }
 
 .buttons-right-aligned {
@@ -2391,7 +2346,7 @@ a.download-video {
 
 .standalone-video {
   width: 853px;
-  margin: 25px auto 0 auto;
+  margin: 10px auto 0 auto;
 
   .video-link, .slides-link, #fallback-player-caption-dialog-link {
     display: inline-block;

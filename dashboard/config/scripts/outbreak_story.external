@@ -1,0 +1,7 @@
+name 'outbreak_story'
+title 'Outbreak: Programming a Simulation'
+description 'description here'
+
+markdown <<MARKDOWN
+# Outbreak
+MARKDOWN
