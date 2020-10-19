@@ -24,7 +24,7 @@ describe('CollapsibleEditorSection', () => {
     expect(wrapper.state().collapsed).to.equal(false);
   });
 
-  it('clicking icon collapses area', () => {
+  it('clicking h2 collapses area', () => {
     const wrapper = mount(
       <CollapsibleEditorSection {...defaultProps}>
         <span>Child</span>
@@ -35,7 +35,7 @@ describe('CollapsibleEditorSection', () => {
     expect(wrapper.state().collapsed).to.equal(false);
     expect(icon.props().icon).to.include('compress');
 
-    icon.simulate('click');
+    wrapper.find('h2').simulate('click');
 
     expect(wrapper.state().collapsed).to.equal(true);
     expect(wrapper.find('FontAwesome').props().icon).to.include('expand');
