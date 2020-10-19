@@ -2,7 +2,12 @@
   color: white;
 }
 
-.highlights-feed {
+.highlights-single {
+  display: none;
+  width: 100%;
+}
+
+.highlights-scroll {
   height: 710px;
 }
 
@@ -95,7 +100,11 @@
     display: none;
   }
 
-  .highlights-feed {
-    height: 65vh;
+  .highlights-scroll {
+    display: none;
+  }
+
+  .highlights-single {
+    display: inline-block;
   }
 }
