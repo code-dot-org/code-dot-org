@@ -5,6 +5,7 @@ import ProgressBubbleSet from './ProgressBubbleSet';
 import {levelType} from './progressTypes';
 import {progressionsFromLevels} from '@cdo/apps/code-studio/progressRedux';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import i18n from '@cdo/locale';
 
 const styles = {
   summary: {
@@ -34,7 +35,7 @@ export default class ProgressLessonContent extends React.Component {
     if (progressions.length === 0) {
       bubbles = (
         <span style={styles.noLevelsWarning}>
-          This lesson contains no levels.
+          {i18n.lessonContainsNoLevels()}
         </span>
       );
     } else if (progressions.length === 1 && !progressions[0].name) {
