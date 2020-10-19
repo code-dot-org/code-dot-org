@@ -118,6 +118,27 @@ class LessonsControllerTest < ActionController::TestCase
     assert(@response.body.include?(lesson_path(id: @lesson2.id)))
   end
 
+  test 'show lesson with activities' do
+    activity = @lesson.lesson_activities.create(
+      name: 'My Activity',
+      position: 1,
+      seeding_key: 'activity-key'
+    )
+    section = activity.activity_sections.create(
+      name: 'My Activity Section',
+      position: 1,
+      seeding_key: 'activity-section-key'
+    )
+
+    get :show, params: {
+      id: @lesson.id
+    }
+    assert_response :ok
+
+    assert_includes @response.body, activity.name
+    assert_includes @response.body, section.name
+  end
+
   # only levelbuilders can edit
   test_user_gets_response_for :edit, params: -> {{id: @lesson.id}}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
   test_user_gets_response_for :edit, params: -> {{id: @lesson.id}}, user: :student, response: :forbidden
