@@ -174,7 +174,7 @@ class I18nScriptUtils
       level =
         case route_params[:controller]
         when "projects"
-          Level.find_by_name(ProjectsController::STANDALONE_PROJECTS[route_params[:key]][:name])
+          Level.find_by_name(ProjectsController::STANDALONE_PROJECTS.dig(route_params[:key], :name))
         when "script_levels"
           get_script_level(route_params, new_url)
         else
