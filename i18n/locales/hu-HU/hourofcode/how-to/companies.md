@@ -76,7 +76,7 @@ We’ve seen events that are [virtual](https://hourofcode.com/us/how-to/virtual)
 
 |Time | Agenda Item | |\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---- | \---\---\---\---\----- | |1-5 minutes | Show an [inspirational video](https://hourofcode.com/us/promote/resources#videos)|  
 |5-10 minutes | Introduce yourself and learn more about the students: Where do you work, what do you do, and what do you love most about your job? Mi vagy ki inspirál Téged? Hogyan kezdett el érdekelni a számítástechnika? Volt/van egy mentorod? Kérdezz a diákoktól, adj időt egy rövid kérdezz & felelekre. |  
-|30-60 minutes | Code! If your event is in-person, this is the time to answer questions and guide students through tough puzzles. Try not to give them the solution outright, instead, try asking them questions so they can answer themselves what went wrong, and encourage students to ask each other if they have questions. If you are volunteering virtually, work with the teacher on what the best approach might be. It may make more sense to return at the end of the session to see what progress students have made. | | |1-3 minutes | Thank everyone and share inspirational parting words. Hand out any of your company swag ([stickers](#celebrate) are awesome)! | | <br />
+|30-60 minutes | Code! Ha az eseményen személyesen veszel részt, akkor itt az idő, hogy válaszolj a kérdésekre, és átvezesd a diákokat az útvesztőkön. Próbáld meg nem egyből a megoldást elárulni, hanem inkább rávezető kérdéseket feltenni, ezáltal ráirányítva a megoldásra őket. Továbbá biztasd őket, hogy egymástól is bátran kérdezhetnek. Ha virtuálisan veszel részt, dolgozz együtt a tanárral, hogy kitaláljátok, mi a legjobb megoldás. Talán van értelme visszatérni az óra végén egy teljesítményértékelésre, hogy lássátok, milyen eredményt értek el a diákok. | | |1-3 minutes | Thank everyone and share inspirational parting words. Hand out any of your company swag ([stickers](#celebrate) are awesome)! | | <br />
 
 #### Other ideas to add to your event
 
@@ -150,7 +150,7 @@ Help raise awareness of the computer science movement with this sample content t
 #### Stats
 
 - Did you know only 45% of U.S. schools teach computer science? Give every student the chance to learn one #HourOfCode https://hourofcode.com/ 
-- In the U.S., only 26% of software professionals are women. Introduce more young women to computer science with #HourOfCode https://hourofcode.com/ 
+- Az Egyesült Államokban a szoftveres szakemberek csupán 26% -a nő. Vezess be több fiatal nőt az informatikába a #HourOfCode segítségével https://hourofcode.com/ 
 - 67% of computing jobs in the U.S. are not in the tech sector. Help put computer science in the standard curriculum with #HourOfCode https://hourofcode.com/ 
 
 #### Create your own

@@ -1,10 +1,10 @@
 ---
-title: Hour of Code How-To Guide for Volunteers
+title: Kódolás Órája Útmutató önkénteseknek
 ---
 
-# How to volunteer with a school or classroom
+# Hogyan válj önkéntessé egy iskolában vagy akár egy tanórán
 
-### Thousands of teachers are looking for volunteers to inspire their students. Make a difference today!
+### Tanárok ezrei keresnek önkénteseket, hogy inspirálják diákjaikat. Tegyél te is a változásért még ma!
 
 [<button>Sign up to volunteer</button>]({{ urls/volunteer }})
 
@@ -12,45 +12,45 @@ title: Hour of Code How-To Guide for Volunteers
 
 A számítástechnikai gondolkodás segít fejleszteni a problémamegoldó képességeket, a logikát és a kreativitást. És mint jól tudjuk, a technológia átformál minden iparágat a világon. A mai diákoknak meg kell tanulniuk, hogyan kell technológiát létrehozni, nem csak használni azt.
 
-The Hour of Code is a one-hour introduction to computer science designed to demystify “code,” show that anybody can learn the basics, and to broaden participation in the field of computer science. You can help raise awareness of the computer science movement and volunteer to inspire more students to try computer science, particularly young women and students from historically marginalized racial and ethnic groups.
+A Kódolás Órája alapvetően egy egyórás bevezetés a számítástechnika világába, amelynek célja a „kódolás” demisztifikálása, valamint az, hogy megmutassa, bárki megtanulhatja az alapokat, és szélesítheti a tudását a számítástechnika területén. Te is segíthetsz felhívni a figyelmet a számítástechnikai mozgalomra, és önkéntesként egyre több hallgatót ösztönözhetsz a számítástechnika kipróbálására, különös tekintettel a fiatal nőkre és a történelmileg marginalizálódott faji és etnikai csoportok tagjaira.
 
-- [Who can volunteer?](#who-can-volunteer)
-- [Why volunteer?](#why-volunteer)
-- [How do volunteers get selected?](#selection)
-- [What if I want to volunteer with a specific school?](#choose-a-school)
-- [How to prepare](#how-to-prepare)
-- [When you're hosting an event](#hosting-an-event)
-- [Spread the word about the Hour of Code](#promote-hour-of-code)
+- [Ki jelentkezhet önkéntesnek?](#who-can-volunteer)
+- [Miért is jó önkéntesnek lenni?](#why-volunteer)
+- [Hogyan válasszuk ki az önkénteseket?](#selection)
+- [Hogyan legyél önkéntes egy konkrét iskolában?](#choose-a-school)
+- [Hogyan készülj fel](#how-to-prepare)
+- [Teendők egy esemény házigazdájaként](#hosting-an-event)
+- [Reklámozd a Kódolás Óráját](#promote-hour-of-code)
 - [Még több lehetőség, hogy támogast a Kódolás Óráját](#support-hour-of-code)
-- [Volunteer FAQ](#faq)
+- [GYIK önkénteseknek](#faq)
 
-Whether you volunteer virtually, in-person, or with your company, your efforts can make a huge impact on the way students view computer science and their own potential. Take a look at our [volunteer toolkit if you still have questions]({{ localized_files/hoc_volunteer_toolkit }}).
+Függetlenül attól, hogy személyesen, virtuálisan vagy a cégeddel közösen veszel-e részt mint önkéntes, erőfeszítéseid hatalmas hatást gyakorolhatnak a hallgatók informatikai szemléletére és saját lehetőségeidre is. Nézd meg a [ önkénteseknek szóló eszköztárat, ha még lennének kérdéseid]({{ localized_files/hoc_volunteer_toolkit }}).
 
 * * *
 
 <a id="who-can-volunteer"></a>
 
-## Who can volunteer?
+## Ki jelentkezhet önkéntesnek?
 
-Anyone passionate about computer science education and increasing diversity in tech can be a volunteer! We’d love to see volunteers of all backgrounds participate. The Hour of Code features a large variety of activities for all ages and skill levels, so you don’t need to be a programming expert to volunteer!
+Bárki, aki rajong a számítástechnikáért és a technológia sokszínű világáért, tökéletes önkéntessé válhat! Bármilyen háttérrel rendelkező önkéntest szívesen látunk. A Kódolás Órája minden korosztálynak és képzettségi szintnek tartogat érdekes feladatokat, úgyhogy nem félj attól, ha nem vagy programozó zseni, mert ettől függetlenül is jelentkezhetsz önkéntesnek.
 
-You can be a guest speaker in a classroom, or help a teacher run the activity. [Sign up today](https://code.org/volunteer) to inspire students to keep learning computer science.
+Lehetsz vendégelőadó egy tanórán, vagy segíthetsz a tanárnak a feladatok levezénylésében. [ Regisztrálj még ma](https://code.org/volunteer), hogy ösztönözd a hallgatókat még több számításttechnikai tudás elsajátítására.
 
 * * *
 
 <a id="why-volunteer"></a>
 
-## Why volunteer?
+## Miért is jó önkéntesnek lenni?
 
-Computer science is the defining field of the 21st century, yet most schools still don’t teach it. One Hour of Code may be the most access to computer science that these students receive in a given year. By volunteering, you can make it even easier for teachers to bring CS into their classroom.
+A számítástechnika a 21. század meghatározó területe, ennek ellenére a legtöbb iskola még mindig nem tanítja. Egy óra programozás akár az egyetlen alkalom is lehet a diákoknak az adott évben, hogy betekintést nyerhessenek a számítástechnikába. Önkéntes munkáddal még könnyebbé teheted a tanárok számára a számítástechnika bevezetését az osztályterembe.
 
 [![](/images/fit-600/Marketing/HoC-2015-ACE-HS--42.jpg)]({{ urls/learn }})
 
-Check out some testimonials from past volunteers:
+Nézd meg néhány korábbi önkéntesünk vallomását:
 
-- “The best part of my experience was that the entire class were women and people of color. It bodes well for the future of our industry to have a chance to reach and excite these kids.” 
-- “Especially enjoyed getting to encourage young girls in technology. Felt like I was helping the next generation in my local area.” 
-- "Imádtam nézni, milyen izgatottak lettek a gyerekek. One amazing thing was that the teachers noticed that some of the students who didn’t do as well academically were excelling at thinking like a developer and helping others - giving them a place to feel confident.” 
+- "A legjobb élmény számomra az volt, mikor az egész osztály csak lányokból állt és mindenki egy külön egyéniség volt. Ez remekül mutatja az iparág jövőjét, és azt, hogy igen is van esély arra, hogy felkeltsük a gyerekek érdeklődését." 
+- "Különösen tetszett, hogy ösztönözhettem a fiatal lányokat a technológia megismerésére. Úgy érzem, hogy én is segítettem a környezetemben élő következő generációnak." 
+- "Imádtam nézni, milyen izgatottak lettek a gyerekek. Csodálatos dolog volt, hogy a tanárok felfedezték azt, hogy néhány diák, aki nem volt túl jártas a tudományokban, elkezdett úgy gondolkodni, mint egy fejlesztő és segítettek másoknak a tanulásban. Ez lehetőséget adott arra, hogy magabiztosabbnak érezzék magukat." 
 
 [<button>Sign up to volunteer</button>]({{ urls/volunteer }})
 
@@ -58,69 +58,69 @@ Check out some testimonials from past volunteers:
 
 <a id="selection"></a>
 
-## How do volunteers get selected?
+## Hogyan válasszuk ki az önkénteseket?
 
-Teachers can search for volunteers on our [volunteer map](http://code.org/volunteer/local). If you’re located near their classroom, teachers will review your profile on the map, so try to complete as much as possible to increase the chance that a teacher will contact you.
+Tanárok az [önkéntestérkép](https://code.org/volunteer/local) segítségével online kereshetnek önkénteseket. Ha az osztályterem közelében laksz, a tanárok meg tudják nézni a profilod a térképen, ezért próbálj meg minél több adatot kitölteni, hogy nagyobb legyen az esélye annak, hogy egy tanár kapcsolatba lép veled.
 
 [![](/images/fit-600/Marketing/2018_HoC-489-resized.jpg)]({{ urls/learn }})
 
-When selected, a teacher will contact you through the volunteer platform (we will never share your email address with the teacher). Work with them to determine how you can best contribute to their event, and if you’ll be visiting in-person or volunteering virtually.
+Kiválasztásakor a tanár felveszi veled a kapcsolatot az önkéntes platformon keresztül (soha nem osztjuk meg az e-mail címed közvetlenül senkivel). Dolgozz velük együtt, hogy megtudd, hogyan járulhatsz hozzá leginkább az eseményekhez akár virtuálisan, akár személyesen.
 
-If you are receiving too many requests from teachers, you can always update your preferences or unsubscribe by clicking the link provided at the bottom of any email request from a teacher.
+Ha zavar, hogy túl sok felkérést kapsz, bármikor van lehetőséged arra, hogy frissítsd a beállításokat, vagy leiratkozz az e-mailekről.
 
 * * *
 
 <a id="choose-a-school"></a>
 
-## What if I want to volunteer with a specific school?
+## Hogyan legyél önkéntes egy konkrét iskolában?
 
-You don’t have to use our volunteer map in order to volunteer! In fact, we recommend reaching out to teachers and administrators directly if there’s a classroom you’d like to volunteer with.
+Nem kell feltétlen használnod a térképet ahhoz hogy önkéntes legyél! Sőt, javasoljuk, inkább fordulj közvetlenül a tanárokhoz, ha van olyan osztályterem, ahol szívesen önkénteskednél.
 
-To get started: - If you’re a parent or guardian, send [this email](https://hourofcode.com/us/promote/resources#help-schools) to your child’s teacher offering to help them run an Hour of Code. - If you have another school in mind, visit their website to find appropriate contacts to reach out to such as a principal or vice principal, technology or computer science instructors, or even the school’s PTSA. You could also partner with organizations such as the Boys & Girls Clubs of America, Junior Achievement, a YMCA branch, and more to co-host an event. - If you’re unable to find a school that is hosting an Hour of Code, you can volunteer to help run your own event with your company. Check out our [How-To Guide for Companies](https://hourofcode.com/us/how-to/companies) to learn more and get inspired.
+Kezdés: - Ha szülő vagy gondviselő vagy, küldd [ ezt az e-mailt ](https://hourofcode.com/us/promote/resources#help-schools) gyermeked tanárának, felajánlva segítséged egy Kódolás Órája esemény levezénylésében. - Ha egy másik iskolára gondolsz, látogass el a weboldalukra, hogy megtaláld a megfelelő kontaktszemélyt, például az igazgatót vagy az igazgatóhelyettestl, a számítástechnika tanárokat, vagy akár az iskolai munkaközösség elnökét. Lehetőség van szervezetekkel való együttműködésre is. - Ha nem találtál olyan iskolát, amely otthont adna a Kódolás Órájának, önként jelentkezhetsz egy saját esemény megtartására akár a céged bevonásával. Nézd meg az [ útmutatót a vállalatok számára](https://hourofcode.com/us/how-to/companies), hogy többet megtudj és ihletet kapj.
 
 * * *
 
 <a id="how-to-prepare"></a>
 
-## How to prepare
+## Hogyan készülj fel
 
-Whether you’re attending an Hour of Code event remotely or in-person, you’ll have a much smoother experience if you make these preparations beforehand.
+Akár távolról, akár személyesen veszel részt a Kódolás Órája eseményen, sokkal gördülékenyebb lehet az együttműködés, ha megteszted az alábbi előkészületeket.
 
 [![](/images/fit-600/Marketing/4Q9A5575.jpg)]({{ urls/learn }})
 
-### Meet with the Organizer
+### Találkozás a szervezővel
 
-If you’re volunteering with a classroom, discuss these logistics with the teacher ahead of time:
+Ha önként jelentkezel egy osztályterembe, előzetesen beszéld meg az alábbiakat a tanárral:
 
-- Your role at the event. If you work in tech, you might be asked to share your personal experiences or story: How did you get involved in a career in tech? Why is computer science important to you? What are some things you do as part of your job and how does that relate to technology? 
-- If you’ll be volunteering in-person, make sure you both understand local and school health and safety guidelines. Depending on their procedures you may need to arrive a little early. 
-- If you’ll be volunteering virtually or in-person as this can determine what times you need to be present and in what capacity. 
-- If you’re volunteering virtually, work with the teacher to determine the best video conferencing platform to use and try conducting a test run of the event together. 
-- If the teacher has predetermined Hour of Code activities for the event, be aware so that you can [explore them](https://hourofcode.com/us/learn) ahead of time. 
+- A te szereped az eseményen. Ha technológiával foglalkozol, felkérhetnek, hogy oszd meg személyes tapasztalataidat, élményeidet: Hogyan kerültél kapcsolatba a technológiával? Miért fontos számodra a számítástechnika? Milyen dolgokat csinálsz a munkád során és ezek hogyan kapcsolódnak a technológiához? 
+- Ha személyesen önkénteskedsz, győződj meg róla, hogy tisztában vagy mind a helyi, mind az iskolai egészségvédelmi és biztonsági irányelvekkel. Eljárásaiktól függően előfordulhat, hogy korábban kell megérkezned. 
+- Akár virtuálisan akár személyesen veszel részt, a részvétel időpontját, mennyiségét és milyenségét előre meg kell határozni. 
+- Ha virtuális önkéntes leszel, és együtt fogsz dolgozni a tanárral, beszéljétek meg, melyik a legjobb video-konferencia platform, ls csináljatok egy próbát az esemény előtt: 
+- Ha a tanár előre megadta a Kódolsá Órája tevékenység részleteit, ne felejtsd el megnézni még az esemény előtt [felfedezésképp](https://hourofcode.com/us/learn). 
 
-### Think about your participants
+### Gondolj a részvevőkre
 
-- Consider the students you will be speaking to and what might resonate with them. As a volunteer, you can help them to realize that computing is everywhere and they too can become computer scientists. Consider their ages, backgrounds, and gender identities and come prepared with topics that may appeal to their interests. Here is additional guidance on how to inspire [young women](http://code.org/girls) to participate. 
-- Get the students excited! Work with the teacher to pick out an [inspirational video](https://hourofcode.com/us/promote/resources#videos) that can help focus the class and get them excited to do an Hour of Code. 
-- If you are a virtual volunteer, consider making a few slides as part of your presentation to help keep students engaged.
+- Gondolj azokra a hallgatókra, akikkel beszélni fogsz, és arra, mi az, amit át tudsz nekik adni. Önkéntesként segíthetsz nekik felismerni, hogy a számítástechnika mindenütt jelen van, és ők is informatikussá válhatnak. Vedd számításba az életkorukat, hátterüket és nemi identitásukat, és készülj fel olyan témákra, amelyek felkelthetik érdeklődésüket. Íme további útmutatás arról, hogyan inspirálhatod [ fiatal nőket ](http://code.org/girls) a részvételre. 
+- Csigázd fel őket! A tanárral együttműködve válassz ki egy [ inspiráló videót](https://hourofcode.com/us/promote/resources#videos), amely segíthet az osztálynak a fókuszálásban, és felkeltheti az érdeklődést egy órás tevékenység elvégzésére. 
+- Ha virtuális önkéntes leszel, fontold meg néhány dia elkészítését az előadásra, hogy elősegítsd a hallgatók elkötelezettségét.
 
-Need more resources? [Check out these other tips](https://code.org/files/CSTT_Volunteers.pdf).
+Még több infó kell? [Nézd meg a többi tippünket is](https://code.org/files/CSTT_Volunteers.pdf).
 
 * * *
 
 <a id="hosting-an-event"></a>
 
-## When you're hosting an event
+## Teendők egy esemény házigazdájaként
 
-If you are the host of an event with a classroom, use the sample agenda to guide you. Confirm the agreed schedule for the day and discuss any talking points with the teacher beforehand. If you are physically visiting the class, make sure you sign in with the school and greet the teacher the day-of your event.
+Ha egy osztálytermi esemény házigazdája leszel, használj egy a napirend mintát a tervezéshez. Erősítsd meg az előzetesen elfogadott ütemtervet, beszéljetek meg minden vitatémát a tanárral. Amennyiben személyesen látogatsz el az osztályba, feltétlenül jelentkezz be az iskolába, és köszöntsd a tanárt kollégát az esemény napján.
 
-If you’re considering hosting the Hour of Code at home or in the community, we recommend taking a look at some of our in-depth How-To Guides for [parents](https://hourofcode.com/us/how-to/parents) and [organizations or companies](https://hourofcode.com/us/how-to/companies).
+Ha azt fontolgatod, hogy otthon vagy egy közösségben szeretnéd megrendezni a Kódolás Óráját, javasoljuk, hogy nézz át néhány részletes útmutatót <a href = "https://hourofcode.com/us/how webhelyről. -to / szülők "> ami a szülőknek </a> és [ a szervezeteknek vagy vállalatoknak ](https://hourofcode.com/us/how-to/companies) szól.
 
 ### 1. Nézd meg ezt az útmutató videót <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
 ### 2. Determine a date, format, and location for your event
 
-Work with the school or teacher to discuss what makes the most sense. We’ve seen events that are [virtual](https://hourofcode.com/us/how-to/virtual) or in-person, at the company office or held in the community, and for students of all ages! You can also take a look at what other [corporate partners](https://medium.com/@codeorg/amazon-microsoft-google-vista-and-more-rally-to-bring-the-hour-of-code-to-students-worldwide-4641325542cf) and [donors](https://medium.com/@codeorg/how-code-orgs-corporate-supporters-helped-spread-the-love-for-2019-s-hour-of-code-73a3c088f10f) have done in the past for some inspiring ideas.
+Dolgozzatok együtt az iskolával vagy a tanárral, és beszéljétek meg, hogy a legpraktikusabb. We’ve seen events that are [virtual](https://hourofcode.com/us/how-to/virtual) or in-person, at the company office or held in the community, and for students of all ages! You can also take a look at what other [corporate partners](https://medium.com/@codeorg/amazon-microsoft-google-vista-and-more-rally-to-bring-the-hour-of-code-to-students-worldwide-4641325542cf) and [donors](https://medium.com/@codeorg/how-code-orgs-corporate-supporters-helped-spread-the-love-for-2019-s-hour-of-code-73a3c088f10f) have done in the past for some inspiring ideas.
 
 <br />
 
@@ -128,14 +128,14 @@ Work with the school or teacher to discuss what makes the most sense. We’ve se
 
 |Time | Agenda Item | |\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---- | \---\---\---\---\----- | |1-5 minutes | Show an [inspirational video](https://hourofcode.com/us/promote/resources#videos)|  
 |5-10 minutes | Introduce yourself and learn more about the students: Where do you work, what do you do, and what do you love most about your job? Mi vagy ki inspirál Téged? Hogyan kezdett el érdekelni a számítástechnika? Volt/van egy mentorod? Kérdezz a diákoktól, adj időt egy rövid kérdezz & felelekre. |  
-|30-60 minutes | Code! If your event is in-person, this is the time to answer questions and guide students through tough puzzles. Try not to give them the solution outright, instead, try asking them questions so they can answer themselves what went wrong, and encourage students to ask each other if they have questions. If you are volunteering virtually, work with the teacher on what the best approach might be. It may make more sense to return at the end of the session to see what progress students have made. | | |1-3 minutes | Thank everyone and share inspirational parting words. Hand out any of your company swag ([stickers](#celebrate) are awesome)! | | <br />
+|30-60 minutes | Code! Ha az eseményen személyesen veszel részt, akkor itt az idő, hogy válaszolj a kérdésekre, és átvezesd a diákokat az útvesztőkön. Próbáld meg nem egyből a megoldást elárulni, hanem inkább rávezető kérdéseket feltenni, ezáltal ráirányítva a megoldásra őket. Továbbá biztasd őket, hogy egymástól is bátran kérdezhetnek. Ha virtuálisan veszel részt, dolgozz együtt a tanárral, hogy kitaláljátok, mi a legjobb megoldás. Talán van értelme visszatérni az óra végén egy teljesítményértékelésre, hogy lássátok, milyen eredményt értek el a diákok. | | |1-3 minutes | Thank everyone and share inspirational parting words. Hand out any of your company swag ([stickers](#celebrate) are awesome)! | | <br />
 
 #### Other ideas to add to your event
 
 - Explain ways technology impacts our lives, with examples that students of all backgrounds will care about - talk about technology that’s saving lives, helping people, connecting people. 
 - If you are a tech company, demo fun, innovative products your company is working on. If you aren’t a tech company, discuss ways your company uses technology to solve problems and accomplish goals.
 - Győzz meg programozókat a vállalatodtól, hogy mondják el miért lettek programozók és jelenleg milyen projekteken dolgoznak épp.
-- If you have a group of staff that will be facilitating your event or volunteering with a local school, consider ordering [custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your group.
+- Ha van olyan csoport, amely segít az eseményt létrehozni, vagy önkénteskként vesz részt egy helyi iskolában, fontold meg az <a href = "http://blog.code.org/post/132608499493/hour-of-code-shirts-and -több "> egyedi póló </a> készítését.
 
 ### 3. Plan your technology needs
 
@@ -172,7 +172,7 @@ Once you have a solid roadmap for your event, you can then start inviting studen
 
 After students or guests have completed their Hour of Code, it’s time to celebrate their success. Here are some ideas for making your event even more fun:
 
-- [Share certificates]({{ urls/certificates }}) for participants and students.
+- [Nyomtass bizonyítványokat]({{ urls/certificates }}) a résztvevőknek és diákoknak.
 - [Print "I did an Hour of Code! stickers"]({{ promote/resources_stickers }}) or find other prizes and swag on the [Code.org Amazon Store](https://code.org/shop). 
 - Oszd meg a "Hour of Code"-hoz kapcsolódó fotóidat, videóidat a közösségi hálón. Használd a #HourOfCode és a @codeorg tageket, így mi is ki tudjuk emelni az eredményeidet!
 
@@ -180,7 +180,7 @@ After students or guests have completed their Hour of Code, it’s time to celeb
 
 <a id="promote-hour-of-code"></a>
 
-## Spread the word about the Hour of Code
+## Reklámozd a Kódolás Óráját
 
 One of the best ways to help is to spread the word and promote the Hour of Code.
 
@@ -188,7 +188,7 @@ One of the best ways to help is to spread the word and promote the Hour of Code.
 
 ### 1. Register Your Event
 
-When you sign up your Hour of Code event, you’ll receive helpful email communications with news and tips for hosting a successful Hour of Code. It’s also how you can let local schools or parents know that you’re hosting an event near them.
+Amikor regisztrálsz a Kódolás Órája eseményre, kapni fogsz hasznos e-mailes üzeneteket, hírekkel és tippekkel a sikeres eseményszervezéshez. It’s also how you can let local schools or parents know that you’re hosting an event near them.
 
 ### 2. Post on Social Media
 
@@ -202,7 +202,7 @@ Help raise awareness of the computer science movement with this sample content t
 #### Stats
 
 - Did you know only 45% of U.S. schools teach computer science? Give every student the chance to learn one #HourOfCode https://hourofcode.com/ 
-- In the U.S., only 26% of software professionals are women. Introduce more young women to computer science with #HourOfCode https://hourofcode.com/ 
+- Az Egyesült Államokban a szoftveres szakemberek csupán 26% -a nő. Vezess be több fiatal nőt az informatikába a #HourOfCode segítségével https://hourofcode.com/ 
 - 67% of computing jobs in the U.S. are not in the tech sector. Help put computer science in the standard curriculum with #HourOfCode https://hourofcode.com/ 
 
 #### Create your own
@@ -238,29 +238,29 @@ For more suggestions on how to support Code.org and the Hour of Code, visit [Cod
 
 <a id="faq"></a>
 
-## Volunteering FAQ
+## GYIK önkénteseknek
 
-### I haven't been contacted by a teacher yet. How can I still volunteer?
+### Még nem kaptam megkeresést, hogyan lehetek így is önkéntes?
 
-Try searching for local schools and call the principal/teacher/front office and ask how you can help.  
-
-
-### How long do classroom visits last for?
-
-An in-person classroom visit usually lasts 60-90 minutes while a virtual classroom visit usually lasts 20-30 minutes.   
+Próbálj meg megkeresni iskolákat, intézményvezetőket és tanárokat felajánlva nekik segítségedet.  
 
 
-### What age group is the Hour of Code activity appropriate for?
+### Mennyi időbe telik egy osztály meglátogatása?
 
-Code.org and our partners design all the Hour of Code activities to engage students of all grade levels (K-12) from all backgrounds. Everyone - even adults - can have fun playing!   
-
-
-### How do I get selected as a technical volunteer or guest speaker?
-
-Teachers will be searching for volunteers on our [volunteer map](https://code.org/volunteer/local). Try to make your profile as complete as possible to increase the chance that a teacher will select you. If you have a preference on how you’d like to volunteer, such as being a guest speaker or as technical support, please indicate that in the description of your profile.   
+Személyes látogatás általában 60-90 percet vesz igénybe, amíg egy virtuális látogatás 20-30 percig tart.  
 
 
-When selected, a teacher will contact you through the volunteer platform (your email address will never be shared with the teacher). If you are receiving too many requests from teachers, you can always update your preferences by clicking the link to edit your information or unsubscribe, provided at the bottom of any email from a teacher.   
+### Milyen korcsoportnak megfelelő a Kódolás Órája esemény?
+
+Code.org és partnereink minden korosztály számára kínálnak lehetőséget a tanulásra, legyen fiú vagy lány, bármilyen háttérrel rendelkező ember óvodától 12. osztályig. Sőt, még a felnőttek is szórakozhatnak egy jót!  
+
+
+### Hogyan választhatnak ki egy vendégelőadó technikai önkéntesének
+
+Tanárok az [önkéntestérkép](https://code.org/volunteer/local) segítségével online kereshetnek önkénteseket. Próbáld meg profilodat a lehető legjobban kitölteni, ezzel növelve az esélyedet a kiválasztásra. Ha előnyben részesíted az önkéntes munkát, például vendégelőadóként vagy technikai támogatásként, kérjük, jelezd a profilod leírásában.   
+
+
+Kiválasztásakor a tanár felveszi veled a kapcsolatot az önkéntes platformon keresztül (soha nem osztjuk meg az e-mail címed közvetlenül senkivel). *Ha a tanároktól túl sok megkeresést kapsz, abban az esetben frissítheted preferenciáidat az adataid szerkesztésre gombra kattintva vagy le is iratkozhatsz a levelek alján lévő leiratkozás gombbal az adott tanár leveleiről.*   
 
 
 [<button>Sign up to volunteer</button>]({{ urls/volunteer }})

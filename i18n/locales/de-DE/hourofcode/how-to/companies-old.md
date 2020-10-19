@@ -60,11 +60,11 @@ Wir veranstalten eine Vielzahl [unterhaltsamer Aktivitäten, die eine Stunde dau
 
 Die beste "Hour of Code"-Erfahrung macht man mit Computern, die einen Internetzugang haben. Es ist ** nicht** erforderlich, dass jede(r) Teilnehmer(in) einen eigenen Computer vor sich hat - und eine Hour of Code kann man sogar ganz ohne Computer veranstalten! 
 
-<stark x-id="1">Planen Sie voraus!</stark> Wir empfehlen die folgenden Vorbereitungen vor Beginn Ihrer Veranstaltung: 
+**Plan Ahead!** Do the following before your event starts:
 
 - Testen Sie die Aktivitäten auf Computern oder Geräten. Prüfen Sie, ob sie in den Browsern ordnungsgemäß mit Ton und Bild funktionieren. 
 - Stellen den TeilnehmerInnen Kopfhörer zur Verfügung, oder bitten Sie sie, eigene mitzubringen, wenn das ausgewählte Tutorial am Besten mit Ton funktioniert. 
-- <stark x-id="1">Nicht genug Geräte?</strong> Dann bietet sich das Konzept der [Paarprogrammierung](https://www.youtube.com/watch?v=vgkahOzFH2Q) an. Wenn TeilnehmerInnen zu zweit arbeiten, helfen sie sich gegenseitig und sind weniger auf den Moderator angewiesen. Sie werden dann auch festellen, dass Programieren sozial und kooperativ ist.
+- **Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). Wenn TeilnehmerInnen zu zweit arbeiten, helfen sie sich gegenseitig und sind weniger auf den Moderator angewiesen. Sie werden dann auch festellen, dass Programieren sozial und kooperativ ist.
 - < strong x-id="1"Schwaches Internet?</strong> Planen Sie, Videos von Ihrem Computer für die ganze Klasse zu zeigen. So müssen die TeilnehmerInnen nicht alle das gleiche Video einzeln herunterladen. Oder testen Sie Aktivitäten ohne Computer bzw. ohne Internet. 
 
 
