@@ -309,11 +309,9 @@ function activities(state = [], action) {
       return action.activities;
     case ADD_ACTIVITY: {
       newState.push({
+        ...emptyActivity,
         key: action.activityKey,
-        displayName: '',
-        position: action.activityPosition,
-        duration: 0,
-        activitySections: []
+        position: action.activityPosition
       });
       updateActivityPositions(newState);
       break;
