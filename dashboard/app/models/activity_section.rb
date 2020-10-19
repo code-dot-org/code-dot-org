@@ -31,7 +31,7 @@ class ActivitySection < ApplicationRecord
   belongs_to :lesson_activity
   has_one :lesson, through: :lesson_activity
 
-  has_many :script_levels, -> {order(:activity_section_position)}
+  has_many :script_levels, -> {order(:activity_section_position)}, dependent: :destroy
 
   serialized_attrs %w(
     name
@@ -52,5 +52,41 @@ class ActivitySection < ApplicationRecord
       tips: tips,
       scriptLevels: script_levels.map(&:summarize_for_edit)
     }
+  end
+
+  # @param [Array<Hash>] script_levels_data - Data representing script levels
+  #   belonging to this activity section.
+  def update_script_levels(script_levels_data)
+    # use assignment to delete any missing script levels.
+    self.script_levels = script_levels_data.map do |sl_data|
+      sl = fetch_script_level(sl_data)
+      sl.update!(
+        # position and chapter will be updated based on activity_section_position later
+        activity_section_position: sl_data['activitySectionPosition'] || 0,
+        assessment: !!sl_data['assessment'],
+        bonus: !!sl_data['bonus'],
+        challenge: !!sl_data['challenge'],
+      )
+      # TODO(dave): check and update script level variants
+      sl.update_levels(sl_data['levels'] || [])
+      sl
+    end
+  end
+
+  private
+
+  def fetch_script_level(sl_data)
+    if sl_data['id']
+      script_level = script_levels.find(sl_data['id'])
+      raise "ScriptLevel id #{sl_data['id']} not found in ActivitySection id #{id}" unless script_level
+      return script_level
+    end
+
+    script_levels.create(
+      position: 0,
+      activity_section_position: 0,
+      lesson: lesson,
+      script: lesson.script
+    )
   end
 end
