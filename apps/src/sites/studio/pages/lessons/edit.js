@@ -50,6 +50,14 @@ $(document).ready(function() {
       activitySection.scriptLevels = activitySection.scriptLevels || [];
       activitySection.scriptLevels.forEach(scriptLevel => {
         scriptLevel.status = LevelStatus.not_tried;
+
+        // The position within the lesson
+        scriptLevel.levelNumber = scriptLevel.position;
+
+        // The position within the activity section
+        scriptLevel.position = scriptLevel.activitySectionPosition;
+
+        delete scriptLevel.activitySectionPosition;
       });
 
       activitySection.tips = activitySection.tips || [];
