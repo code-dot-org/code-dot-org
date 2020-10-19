@@ -20,11 +20,13 @@ Geocoder.configure(
 
 require 'geocoder/lookups/freegeoip'
 # Force Freegeoip to use HTTP protocol.
-Geocoder::Lookup::Freegeoip.prepend(Module.new do
-  def supported_protocols
-    [:http]
+Geocoder::Lookup::Freegeoip.prepend(
+  Module.new do
+    def supported_protocols
+      [:http]
+    end
   end
-end)
+)
 
 def handler(event:, context:)
   puts "Incoming event: #{event}"
