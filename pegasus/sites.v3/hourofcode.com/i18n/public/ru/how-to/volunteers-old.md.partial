@@ -6,87 +6,91 @@ nav: how_to_nav
 
 {{ signup_button }}
 
-# How-to Guide for Volunteers
-### Make a difference in a classroom today!
+# Инструкция для волонтеров
+### Сделайте сегодняшнее занятие особым!
 
 ***
 
 ## Зачем работать волонтером?
-Check out some testimony from past volunteers:
+Прочитайте отзывы волонтеров о прошедших мероприятиях:
 
-- “The best part of my experience was that the entire class were women and people of color. It bodes well for the future of our industry to have a chance to reach and excite these kids.”
-- “Especially enjoyed getting to encourage young girls in technology. Felt like I was helping the next generation in my local area.”
-- "“Было ЗАМЕЧАТЕЛЬНО видеть воодушевление детей. One amazing thing was that the teachers noticed that some of the students who didn’t do as well academically were excelling at thinking like a developer and helping others learn - giving them a place to feel confident.”
+- “Больше всего мне понравилось то, что весь класс состоял из девочек и представителей цветного населения. Возможность охватить и воодушевить этих детей очень полезна для будущего нашей отрасли”.
+- “Особенно приятно было помогать девочкам осваивать технологию. Я чувствовала, что помогаю новому поколению, подрастающему в моем районе”.
+- "“Было ЗАМЕЧАТЕЛЬНО видеть воодушевление детей. Учителя обратили внимание на поразительное явление: некоторые не очень хорошо успевающие школьники продемонстрировали отличную способность думать как программисты и помогали другим, что давало им возможность ощутить уверенность в себе”.
 
-## Anyone can volunteer
-### Volunteers and speakers in tech:
-Do you have a connection to CS or tech? If you work in software engineering, at a tech company in any role (non-engineer or engineering), or you’ve taken computer science courses, you can help inspire students! Many students have never met anyone who works in the tech industry and our teachers love being able to connect their classrooms to professionals and university students.
+## Волонтером может быть каждый
+### Волонтеры и спикеры на технологические темы:
+Вы связаны с информатикой или технологиями? Если ваша работа связана с программированием и вы работаете в технологической компании (неважно, программист вы или нет) или если вы закончили курс информатики, вы можете помочь вдохновить школьников! Многие из них никогда не встречали никого, кто работает в технологической отрасли, и наши учителя будут рады познакомить свои классы с профессионалами и студентами университетов.
 
-You can be a guest speaker in a classroom, or help a teacher run the activity. Visit a local classroom to inspire students to keep learning computer science.
+Вы можете выступить в классе в качестве приглашенного спикера или помочь учителю провести занятие. Посетите класс в соседней школе, чтобы вдохновить учеников на изучение информатики.
 <br>
 <br>
 
-<a href="https://code.org/volunteer"><button>Sign up today to be a tech volunteer!</button>
+<a href="https://code.org/volunteer"><button>Зарегистрируйтесь в качестве волонтера - технического специалиста сегодня!
+</button>
 
 <br>
 <br>
 
-### Anyone passionate about expanding opportunity:
-Do you believe that learning computer science can open doors of opportunity for students? Help out in a local classroom or organize an after school event! You don’t need any background in computer science to host an Hour of Code. And, just offering to help out is often enough to convince your child’s teacher, a friend, or a club to try an hour.
+### Любой энтузиаст расширения возможностей:
+Верите ли вы в то, что изучение информатики может открыть для школьников новые возможности? Помогите провести занятие в местной школе во время или после уроков! Чтобы провести Час кода, вам не нужно иметь опыт работы в сфере информатики. И даже просто предложения помощи часто будет достаточно для учителя вашего ребенка, вашего друга или для членов клуба, чтобы пройти часовое занятие.
 
-### How do you get started?
+### С чего начать?
 
-1. [Send this email]({{ promote/help_schools }}) to your child’s teacher offering to help them run an Hour of Code.
-2. Offer to host an Hour of Code event after school at a local school. [Use this How-To Guide]({{ urls/how_to_guide }}) to help you plan.
+1. [Отправьте это сообщение]({{ promote/help_schools }}) учителю вашего ребенка, предложив помощь в проведении Часа кода.
+2. Предложите провести Час кода в соседней школе после уроков. [Используйте это руководство]({{ urls/how_to_guide }}) для планирования события.
 
-## Recruit your co-workers to volunteer
-Tell your friends and co-workers about the Hour of Code. Thousands of teachers are  looking for volunteers, so ask them to [sign up as a volunteer](https://code.org/volunteer). Ask your employer to get involved. [Send this email]({{ promote/sample_emails }}) to your manager or the CEO to get everyone on board.
+## Привлеките к волонтерской работе ваших сотрудников
+Расскажите своим друзьям и сотрудникам о Часе кода. Тысячи учителей ищут волонтеров, поэтому попросите друзей  [зарегистрироваться в качестве волонтеров](https://code.org/volunteer). Попросите о содействии вашего работодателя. [Отправьте это сообщение]({{ promote/sample_emails }}) вашему менеджеру или генеральному директору, чтобы обеспечить участие всех сотрудников.
 
 ## Как подготовиться
-- [Pick out a video]({{ promote/videos }}) to show to help focus the class and get them excited to do an Hour of Code.
-- Check out the [Hour of Code Volunteer Toolkit](/files/hoc-volunteer-toolkit.pdf) which includes an overview, timeline, preparation material, and marketing material. Everything you need to be ready for your volunteer experience!
-- If you're going to be doing a tutorial during your session, spend 30 minutes trying at least one [Hour of Code tutorial]({{ urls/learn }}).
-- If you're visiting a school, complete any background checks or required paperwork.
-- [Review these tips](https://code.org/files/CSTT_Volunteers.pdf) about how to interact with students.
-- Join the conversation on Facebook, Twitter, Instagram, and Tumblr with #HourOfCode.
-- Connect with the teacher to discuss what you plan to speak about during your session.
-- If you are a virtual volunteer, test A/V and screen sharing capabilities beforehand.
+- [Выберите видео]({{ promote/videos }}) для показа, чтобы сфокусировать внимание класса и воодушевить учеников на участие в Часе кода.
+- Ознакомьтесь с [набором инструментов для волонтеров Часа кода](/files/hoc-volunteer-toolkit.pdf), где приведены обзор, расписание, порядок подготовки, а также перечислены подготовительные и маркетинговые материалы. Это все, что вам нужно для подготовки к волонтерской работе!
+- Если в ходе урока вы собираетесь использовать учебное пособие, потратьте 30 минут, чтобы ознакомиться хотя бы с одним из [пособий]({{ urls/learn }}).
+- Если вы собираетесь посетить школу, заполните необходимые формы и представьте требуемые документы.
+- [Ознакомьтесь с этими советами](https://code.org/files/CSTT_Volunteers.pdf) касательно общения с учениками.
+- Присоединитесь к дискуссиям в Facebook, Twitter, Instagram, Tumblr с хештегом #ЧасКода.
+- Свяжитесь с учителем и обсудите то, о чем собираетесь говорить.
+- Если вы помогаете виртуально, заранее проверьте передачу аудио- и видеосигнала и подключение экрана.
 
-## Day-of Hour of Code Event
-When you're hosting an Hour of Code event, follow the sample agenda below to help guide your day. Before then, make sure you sign into the school and greet the teacher the day of the event. Confirm the agreed schedule for the day and discuss any talking points.
+## В день проведения Часа кода
+При проведении Часа кода придерживайтесь приведенного ниже примерного расписания. Запишитесь для посещения школы и поздоровайтесь с учителем по прибытии. Подтвердите согласованное расписание и обсудите все, о чем будете говорить.
 
-### Sample agenda:
+### Примерное расписание:
 
-| Время         | Agenda item                                                                                                                                                                                                                                                                                                                                                              |
-| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| 1-5 minutes   | [Show an inspirational video]({{ promote/videos }}).                                                                                                                                                                                                                                                                                                                     |
-| 5-10 minutes  | Introduce yourself and learn more about the students: </ul><li>What do you work, what do you do, and what do you love most about your job?</li><li>Что или кто вдохновляет вас?</li><li>Как вы заинтересовались компьютерной наукой?</li><li>Был ли у вас наставник?</li><li>Share a story about how tech affects everyone.</li><br>Задайте вопросы учащимся и оставьте время на вопросы и ответы.</br> <li> What jobs are they interested in, what are their favorite tech gadgets or apps, and how do they think they are built? </li><li> Do the students have any questions for you?</ul> |
-| 30-60 minutes | **Code!** Walk around, answer questions, and guide them through tough puzzles. Try not to give students the solution outright, instead, try asking them questions so they can answer themselves what went wrong, and encourage students to ask each other if they have questions. Учиться у друг друга - это отличная возможность для обучения.                          |
-| 1-3 minutes   | Thank everyone and share inspirational parting words. Hand out any of your company swag (stickers are awesome)!                                                                                                                                                                                                                                                          |
-| After         | **Make a lasting change:** Talk to the teacher about turning the Hour of Code into a full computer science course! Go to [code.org/yourschool](https://code.org/yourschool) with your teacher to fill in what this school teaches today and encourage them to pledge to bring ccomputer science to their classroom.                                                      |
+| Время         | Действия                                                                                                                                                                                                                                                                                                                                                             |
+| ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1–5 мин       | [Демонстрация мотивационного видео]({{ promote/videos }}).                                                                                                                                                                                                                                                                                                           |
+| 5–10 мин      | Рассказ о себе и знакомство с учениками </ul><li>Где вы работаете, чем занимаетесь, что больше всего нравится в работе?
+</li><li>Что или кто вдохновляет вас?</li><li>Как вы заинтересовались компьютерной наукой?</li><li>Был ли у вас наставник?</li><li>Рассказ о том, как технологии влияют на жизнь каждого.
+</li><br>Задайте вопросы учащимся и оставьте время на вопросы и ответы.</br> <li> Какими профессиями они интересуются, какие у них любимые гаджеты и приложения, что они думают о том, как все это было создано?
+ </li><li> Есть ли у учеников вопросы к вам? </ul>                    |
+| 30–60 мин     | **Программируйте!** Ходите по классу, отвечайте на вопросы и помогайте ученикам решать трудные головоломки. Старайтесь не подсказывать ученикам решения, а задавать такие вопросы, чтобы они сами могли ответить, что пошло не так, как надо, а также поощрять школьников задавать вопросы друг другу. Учиться у друг друга - это отличная возможность для обучения. |
+| 1–3 мин       | Поблагодарите всех и скажите что-либо вдохновляющее на прощание. Раздайте какие-либо предметы с символикой (стикеры прекрасно подойдут)!                                                                                                                                                                                                                             |
+| После занятия | **Добейтесь долгосрочных изменений:** поговорите с учителем о переходе от Часа кода к полноценному курсу информатики! Зайдите на [code.org/yourschool](https://code.org/yourschool) вместе с учителем и заполните информацию о преподаваемых в школе предметах, предложите учителю взять обязательство внедрить преподавание информатики.                            |
 
-### After the Event:
-- Share your photos and stories with Code.org at giving@code.org.
-- Remember to enter in your volunteer hours in your company’s volunteer tracking portal.
-- Share about your experience on social media #HourOfCode!
-- If you do take pictures/videos during the event, **especially with students**, make sure you get teacher/parent permission if you would like to post your stories on social media.
-- And, check back in a month: Is the teacher interested in offering a computer science course? Share [resources and professional learning opportunities to help them do this](https://code.org/yourschool).
+### После мероприятия
+- Поделитесь вашими фотографиями и историями с Code.org на giving@code.org.
+- Не забудьте отметить часы вашей волонтерской работы на волонтерском портале вашей компании.
+- Поделитесь впечатлениями в социальных сетях с хештегом #ЧасКода
+- Если вы фотографируете или снимаете видео во время мероприятия, **особенно с участием школьников**, обязательно получите у учителя или родителей разрешение на размещение ваших историй в социальных сетях.
+- И через месяц поинтересуйтесь, заинтересован ли учитель в преподавании курса информатики. Поделитесь [ресурсами и информацией о соответствующих возможностях профессионального обучения](https://code.org/yourschool).
 
-## How you get selected as a technical volunteer of guest speaker
+## Каким образом вы будете выбраны в качестве добровольного технического помощника или приглашенного спикера
 - Учителя ищут волонтеров с помощью нашей [карты волонтеров](https://code.org/volunteer/local).
 - Постарайтесь как можно полнее заполнить свой профиль, чтобы увеличить вероятность того, что учитель свяжется с вами.
-- A teacher will contact you through this form (your email address will never be shared with the teacher). *If you are receiving too many requests from teachers, you can always update your preferences by clicking the link to edit your information or unsubscribe, provided at the bottom of any email from a teacher.*
+- Учитель свяжется с вами через эту форму (ваш адрес электронной почты никогда не передается учителю). *Если вы получаете слишком много просьб от учителей, вы в любой момент можете изменить свои настройки, отредактировать свою информацию или отписаться по ссылке, приводимой в конце каждого сообщения от учителя.*
 
-## Volunteering during the Hour of Code FAQ
+## ЧаВО по волонтерской работе на Часе кода
 
-### I haven't been contacted by a teacher yet. How can I still volunteer?
+### Со мной еще не связывались учителя. Как я могу поработать волонтером?
 Попробуйте поискать школы поблизости, позвонить директору (учителю, в приемную) и спросить, как вы можете помочь.
 
 ### Сколько времени уходит на посещение мероприятия в классе?
-An in-person classroom visit usually lasts 60-90 minutes while a virtual classroom visit usually lasts 20-30 minutes.
+Личный визит в класс обычно занимает 60–90 минут, а виртуальный – 20–30 минут.
 
 ### Для какой возрастной группы подходят занятия Часа кода?
-Code.org and our partners design all the Hour of Code activities to engage students of all grade levels (K-12), boys and girls, from all backgrounds. Everyone, even adults can have fun playing!
+Code.org и наши партнеры разработали все занятия для Часа кода для учеников всех классов (с 1-го по 12-й), мальчиков и девочек с любым уровнем навыков. Все, даже взрослые, могут получать удовольствие от игр!
 
 
 

@@ -9,87 +9,111 @@ title: Wie eine Stunde Code Veranstaltung gehostet wird- für Firmen
 
 ***
 
-## Nehmen Sie Kontakt mit örtlichen Schulklassen und freiwilligen Helfern für die Hour of Code auf
-Code.org bietet Ihren Mitarbeitern die Möglichkeit, sich mit lokalen Klassenzimmern zu [verbinden]({{ urls/volunteer }}), die an der "Hour of Code" teilnehmen, wo sie ihre technische Berufserfahrung teilen und Studenten zum Studium der Informatik inspirieren können.
+## Kontaktieren Sie eine Klasse in Ihrer Gegend helfen Sie als Freiwillige(r) bei der Hour of Code mit
+Code.org bietet Ihren Mitarbeitern die Gelegenheit, eine Klasse in Ihrer Community zu [kontaktieren]({{ urls/volunteer }}), die an der Hour of Code teilnimmt. Dort können sie über ihre Erfahrungen in einem technischen Beruf erzählen und SchülerInnen für die Teilnahme am Informatikunterricht begeistern.
 
-[<button>Sign up to volunteer!</button>]({{ urls/volunteer }})
+[<button>Registrieren Sie sich als Freiwillige(r) an!
+</button>]({{ urls/volunteer }})
 <br>
 <br>
 
-Um mehr darüber zu erfahren, wie Sie Ihre Mitarbeiter ermutigen können und wie der Kontakt zwischen Ihren Mitarbeitern und den örtlichen Klassen hergestellt werden kann, schauen Sie sich unseren [Leitfaden für Firmenpartner](%= localized_file('/files/hoc-corporate-toolkit. pdf') %) an.
+Weitere Anweisungen, dazu, wie Sie Mitarbeiter für dieses Projekt gewinnen und wie diese mit Schulklassen Kontakt aufnehmen können, finden Sie in unserem [Leitfaden für Unternehmenspartner]({{{{ localized_files/hoc_corporate_toolkit }}).
 
-## Weitere Möglichkeiten, als Unternehmen die Hour of Code zu unterstützen
+## Weitere Möglichkeiten, wie Unternehmen eine Hour of Code unterstützen können
 
-- Bitten Sie Ihren CEO, [eine unternehmensweite E-Mail]({{ promote/sample_emails }}) zu versenden, die die Bedeutung der Informatik unterstreicht und die Mitarbeiter ermutigt, das Wort zu verbreiten.
-- Veranstalten Sie eine Stunde Code Happy Hour mit Mitarbeitern, um die [Aktivitäten]({{ urls/learn }}}) auszuprobieren.
-- Host an Hour of Code event for a local classroom of students or non profits partners to do an Hour of Code at your company’s office. See event how-to guide below.
+- Bitten Sie den Leiter/die Leiterin Ihres Unternehmens, eine
+
+ unternehmensweite E-Mail zu versenden, in der die Bedeutung der Informatik betont und die MitarbeiterInnen ermutigt werden, diese Kampagne zu unterstützen und auf sie hinzuweisen. </li> 
+  
+  - Moderieren Sie eine Hour of Code Happy Hour mit Kollegen, um die [Aktivitäten]({{{ urls/learn }}}) kennenzulernen. 
+- "Organisieren Sie eine Hour of Code-Veranstaltung für eine lokale Klasse 	oder gemeinnützige Partner in den Betriebsräumen Ihres Unternehmens." Lesen Sie in dem Leitfaden weiter unten mehr zur Planung einer Veranstaltung. </ul> 
 
 
-# Leitfaden zur Durchführung einer "Hour of Code"-Veranstaltung
 
-## 1. Ihr Hour of Code bewerben
-- Machen Sie Werbung für Ihr ["Hour of Code"-Event]({{ urls/promote }}) und ermutigen Sie auch andere, eine solche Veranstaltung durchzuführen.
-- Ermuntern Sie Ihre Programmierer ihrer Firma, regionale Klassen zu besuchen, um bei der Durchführung einer Hour of Code zu helfen und die Schüler für ein Studium der Informatik zu begeistern. They can [sign up]({{ urls/volunteer_engineer }}) to be connected with a classroom.
 
-## 2. How-To Video anschauen <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe>
+# Anleitung zum Moderieren einer Hour of Code 
 
-## 3. Choose an activity
-We host a variety of [fun, hour-long activities]({{ urls/learn }}) for participants of all ages, created by a variety of partners. [Try them out!]({{ urls/learn }})
 
-**All Hour of Code activities** require minimal prep-time, and are self-guided - allowing participants to work at their own pace and skill-level.
+
+## 1. Machen Sie Werbung für Ihre Hour of Code 
+
+- Machen Sie Werbung für Ihre [Hour of Code]({{ urls/promote }})-Veranstaltung und ermutigen Sie andere als Moderatoren. 
+- Motivieren Sie Software-SpezialistInnen aus Ihrem Unternehmen dazu, eine lokale Klasse zu besuchen und SchülerInnen im Rahmen einer Hour of Code für die Teilnahme am Informatikunterricht begeistern. Sie können sich [registrieren]({{ urls/volunteer_engineer }}), damit sie Kontakt mit einer Klasse bekommen. 
+
+
+
+## 2. Schauen Sie sich dieses hilfreiche Video an  <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+
+
+
+## 3. Wählen Sie eine Aktivität 
+
+Wir veranstalten eine Vielzahl [unterhaltsamer Aktivitäten, die eine Stunde dauern]({{ urls/learn }}), für TeilnehmerInnen aller Altersgruppen, die von einer Vielzahl von Partnern gestaltet werden. [Probieren Sie sie aus!]({{ urls/learn }}) 
+
+**Alle Hour of Code Aktivitäten** erfordern sehr wenig Vorbereitungszeit und sind selbstgesteuert - so können die TeilnehmerInnen in ihrem eigenen Tempo und auf ihrem eigenen Kenntnisniveau arbeiten. 
 
 [<img src="/images/fit-700/tutorials.png" />]({{ urls/learn }})
 
-## 4. Plan your technology needs - computers are optional
 
-Die beste "Hour of Code"-Erfahrung macht man mit Computern, die einen Internetzugang haben. But you **don’t** need a computer for every participant, and you can even do the Hour of Code without a computer at all.
 
-**Plan Ahead!** Do the following before your event starts:
+## 4. Planen Sie Ihren technologischen Bedarf - Computer sind optional! 
 
-- Test activities on computers or devices. Make sure they work properly on browsers with sound and video.
-- Wenn der ausgewählte Kurs am besten mit Ton funktioniert, stellen Sie entweder Kopfhörer zur Verfügung oder bitten Sie die Teilnehmer im Voraus, ihre eigenen Kopfhörer mitzubringen.
-- **Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). Wenn die Teilnehmer in Paaren arbeiten, helfen sie sich gegenseitig und sind weniger auf den Kursleiter angewiesen. Sie werden dann auch festellen, dass Programieren sozial und kooperativ ist.
-- **Have low bandwidth?** Plan to show videos at the front of the event, so each participant isn't downloading their own videos. Or try the unplugged / offline activities.
+Die beste "Hour of Code"-Erfahrung macht man mit Computern, die einen Internetzugang haben. Es ist ** nicht** erforderlich, dass jede(r) Teilnehmer(in) einen eigenen Computer vor sich hat - und eine Hour of Code kann man sogar ganz ohne Computer veranstalten! 
 
-## 5.  Start your Hour of Code off with an inspiring video
-Beginnen Sie Ihre Hour of Code mit einer motivierenden Diskussion mit den Teilnehmern darüber, wie Informatik jeden Teil unseres Lebens beeinflusst. Erzählen Sie den Teilnehmern, warum Sie sich für Informatik entschieden haben und was Ihre Aufgaben in Ihrer Firma sind.
+<stark x-id="1">Planen Sie voraus!</stark> Wir empfehlen die folgenden Vorbereitungen vor Beginn Ihrer Veranstaltung: 
+
+- Testen Sie die Aktivitäten auf Computern oder Geräten. Prüfen Sie, ob sie in den Browsern ordnungsgemäß mit Ton und Bild funktionieren. 
+- Stellen den TeilnehmerInnen Kopfhörer zur Verfügung, oder bitten Sie sie, eigene mitzubringen, wenn das ausgewählte Tutorial am Besten mit Ton funktioniert. 
+- <stark x-id="1">Nicht genug Geräte?</strong> Dann bietet sich das Konzept der [Paarprogrammierung](https://www.youtube.com/watch?v=vgkahOzFH2Q) an. Wenn TeilnehmerInnen zu zweit arbeiten, helfen sie sich gegenseitig und sind weniger auf den Moderator angewiesen. Sie werden dann auch festellen, dass Programieren sozial und kooperativ ist.
+- < strong x-id="1"Schwaches Internet?</strong> Planen Sie, Videos von Ihrem Computer für die ganze Klasse zu zeigen. So müssen die TeilnehmerInnen nicht alle das gleiche Video einzeln herunterladen. Oder testen Sie Aktivitäten ohne Computer bzw. ohne Internet. 
+
+
+
+## 5. Beginnen Sie Ihre Hour of Code mit einem motivierenden Video 
+
+Beginnen Sie Ihre Hour of Code mit einer motivierenden Diskussion mit den Teilnehmern darüber, wie Informatik jeden Teil unseres Lebens beeinflusst. Erzählen Sie mehr darüber, was Sie am Fach Informatik begeistert hat, und über Ihre Rolle in Ihrem Unternehmen. 
 
 **Zeigen Sie ein inspirierendes Video:**
 
-- Das original "Hour of Code"-Einführungsvideo mit Bill Gates, Mark Zuckerberg und NBA-Star Chris Bosch ([1-minütige](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 -minütige](https://www.youtube.com/watch?v=nKIu9yen5nc) und [9-minütige](https://www.youtube.com/watch?v=dU1xS07N-FA) Version).
+- Das Originalvideo von Code.org zur Einführung mit Bill Gates, Mark Zuckerberg und dem NBA-Star Chris Bosh (es gibt unterschiedliche Versionen mit einer Laufzeit von jeweils [1 Minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 Minuten](https://www.youtube.com/watch?v=nKIu9yen5nc), und [9 Minuten](https://www.youtube.com/watch?v=dU1xS07N-FA)). 
 - Das ["Hour of Code" weltweit Video](https://www.youtube.com/watch?v=KsOIlDT145A)
 - [US-Präsident Obama fordert alle Schüler auf, Informatik zu lernen](https://www.youtube.com/watch?v=6XvmhE1J9PY).
 - Weitere inspirierende Videos finden Sie [ hier](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-**Ideen, wie Sie Ihren Kurs einleiten können:**
+**Hier einige Ideen, wie Sie den SchülerInnen Ihre Hour of Code-Aktivität präsentieren können: **
 
-- Erklären Sie, wie die Technik unser aller Leben beeinflusst. Verwenden Sie Beispiele, die Jungen sowie Mädchen interessieren: Sprechen Sie über Technologien, die Leben retten, Menschen helfen und Menschen verbinden.
-- Wenn Sie aus einem Unternehmen der IT-Branche kommen, zeigen Sie unterhaltsame, innovative Produkte, an denen Ihre Firma arbeitet.
-- Wenn Sie nicht aus der IT-Branche kommen, erklären Sie, wie in Ihrer Firma Technologie verwendet wird, um Probleme zu lösen und Ziele zu erreichen.
-- Laden Sie Programmier Ihrer Firma ein und lassen Sie diese erzählen, warum sie Informatik studiert haben und an welchen Projekten sie gerade arbeiten.
+- Erklären Sie anhand von für Jungen und Mädchen interessanten Beispielen, wie Technologien unser Leben beeinflussen z. B. Leben retten, Menschen helfen, Menschen miteinander verbinden. 
+- Wenn Sie für ein Technologieunternehmen arbeiten, führen Sie interessante und innovativen Produkte vor, an denen Ihr Unternehmen arbeitet. 
+- Wenn Sie für eine andere Art von Unternehmen arbeiten, stellen Sie dar, wie Ihr Unternehmen Technologie verwendet, um Probleme zu lösen und Ziele zu erreichen. 
+- Bitten Sie Programmierer aus Ihrem Unternehmen, etwas darüber erzählen, warum sie Informatik studiert haben und an welcher Art von Projekten sie arbeiten. 
 - [Hier]({{ urls/girls }}) finden Sie Tipps, wie Sie Mädchen für Informatik begeistern können.
 
-## 6. Code!
+
+
+## 6. Code! 
+
 **Führen Sie die Teilnehmer in den Kurs ein**
 
-- Write the activity link on a whiteboard. Find the link listed on the [information for your selected activity]({{ urls/learn }}) under the number of participants.
-- Bei jüngeren Schülern sollten Sie die Startseite schon vorher geladen oder als Lesezeichen gespeichert haben.
+- Schreiben Sie den Link zur Aktivität an eine Tafel. Sie finden den Link in den [Informationen für Ihr ausgewähltes Tutorial]({{{{ urls/learn }}) unter der Anzahl der Teilnehmer. 
+- Für jüngere SchülerInnen ist es am besten, die Seite mit ihren Aktivitäten schon vor der Stunde zu öffnen oder sie als Lesezeichen zu speichern. 
 
-**Wenn die Teilnehmer auf Probleme stoßen, ist es in Ordnung, wenn Sie Folgendes antworten:**
+**Wenn Ihre TeilnehmerInnen auf Schwierigkeiten stoßen, können Sie sagen: **
 
-- "Ich weiß nicht. Lassen wir zusammen es herausbekommen."
-- "Programmieren lernen ist wie das Lernen einer Fremdsprache; wir sprechen sie nicht gleich fließend."
+- "Ich weiß nicht. Wir sollten die Lösung gemeinsam suchen." 
+- "Programmieren lernen ist wie das Lernen einer Fremdsprache - wir beherrschen das niemals gleich fließend.""
 
 **Was tun, wenn jemand früher fertig ist?**
 
-- Der Teilnehmer kann einen anderen "Hour of Code"-Kurs auf hourofcode.com/learn ausprobieren.
-- Oder bitten Sie ihn, einem Freund zu helfen, der Probleme mit dem Kurs hat.
+- Sie können eine weitere Hour of Code-Aktivität unter hourofcode.com/learn ausprobieren. 
+- Oder bitten Sie sie, einem Freund/einer Freundin zu helfen, der/die Probleme mit der Aktivität hat. 
+
+
 
 ## 7) Feiern Sie!
 
 - [Drucken Sie Zertifikate]({{ urls/certificates }}) für Ihre Teilnehmer und Schüler.
 - [Drucken Sie "I did an hour of code!"]({{ promote/resources_stickers }}}) Aufkleber.
-- [Bestellen Sie individuelle T-Shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) für Ihre Mitarbeiter.
-- Teilen Photos und Videos von Ihrer Hour of Code Ereignis auf Social Media. Benutzen #HourofCode und @codeorg, damit wir auch Ihren Erfolg hervorheben können!
+- [Bestellen Sie spezielle T-Shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) für Ihre MitarbeiterInnen. 
+- Posten Sie Fotos und Videos von Ihrer Hour of Code in den Sozialen Medien. Erwähnen Sie dabei #HourofCode und @codeorg, damit wir Ihren gemeinsamen Erfolg mitfeiern können! 
 
 {{ signup_button }}

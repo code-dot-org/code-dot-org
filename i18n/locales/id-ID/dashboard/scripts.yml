@@ -11,7 +11,7 @@ id:
         csf_2019_category_name: CS Fundamentals (2019)
         csf_international_category_name: Dasar dasar internasional CS
         csf2_draft_category_name: 'Dalam pengembangan: Kursus A-F'
-        csp_category_name: "'15-16'Aturan CS"
+        csp_category_name: '''15-16''Aturan CS'
         csp_2018_category_name: Aturan CS('18-'19)
         csp_2019_category_name: Dasar dasar CS('19'20)
         cspexams_category_name: Aturan Tes Praktik CS
@@ -20,6 +20,7 @@ id:
         hoc_category_name: Jam kode
         math_category_name: Matematika
         research_studies_category_name: Studi Penelitian
+        other_category_name: Lain
       name:
         course1:
           title: Kursus 1
@@ -15400,7 +15401,7 @@ id:
         vpl-csp-2020:
           lessons:
             Module 1:
-              name: Modul 1
+              name: 'Modul 1'
         curriculum-sandbox-levels:
           lessons:
             Course A:
