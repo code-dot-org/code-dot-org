@@ -107,6 +107,7 @@ export default class LessonNavigationDropdown extends Component {
             <a
               key={index}
               onClick={this.handleDropdownClick.bind(this, listItem)}
+              className={listItem.link ? 'navigate' : 'no-navigation'} // Used to specify if the dropdown should collapse when clicked
             >
               {`${listItem.displayName}`}
             </a>
