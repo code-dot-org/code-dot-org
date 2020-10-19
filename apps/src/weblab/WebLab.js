@@ -299,7 +299,7 @@ WebLab.prototype.init = function(config) {
 };
 
 WebLab.prototype.reportResult = function(submit, validated) {
-  var onComplete, testResult;
+  let onComplete, testResult;
 
   if (validated) {
     testResult = TestResults.FREE_PLAY;

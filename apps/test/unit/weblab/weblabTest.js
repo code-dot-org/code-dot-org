@@ -6,7 +6,7 @@ import project from '@cdo/apps/code-studio/initApp/project';
 import {onSubmitComplete} from '@cdo/apps/submitHelper';
 
 describe('Web Lab', () => {
-  var reportStub, weblab;
+  let reportStub, weblab;
   describe('onFinish', () => {
     beforeEach(() => {
       weblab = new WebLab();
@@ -36,7 +36,7 @@ describe('Web Lab', () => {
   });
 
   describe('reportResult', () => {
-    var reportStub;
+    let reportStub;
     const defaultValues = {
       app: 'weblab',
       level: 123,
