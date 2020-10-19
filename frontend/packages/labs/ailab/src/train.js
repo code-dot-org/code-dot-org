@@ -16,19 +16,22 @@ export const availableTrainers = {
   binary_svm: {
     name: "Binary SVM",
     description:
-      "Uses the Support Vector Machine algorithm to classify an example as one of two options. Features can be categorical or continuous.",
+      "Uses the Support Vector Machine algorithm to classify an example as one
+      of two options. Features can be categorical or continuous.",
     mlType: "binary"
   },
   knn: {
     name: "KNN",
     description:
-      "Uses the K-Nearest Neighbor algorithm to classify an example as one of N options.  Features can be categorical or continuous. K is currently set to 2, but this is customizable.",
+      "Uses the K-Nearest Neighbor algorithm to classify an example as one of N
+      options.  Features can be categorical or continuous. K is currently set
+      to 2, but this is customizable.",
     mlType: "multi"
   }
 };
 
 /* Builds a hash that maps a feature's categorical options to numbers because
-  the ML algorithms only accepts numerical inputs.
+  the ML algorithms only accept numerical inputs.
   @param {string} - feature name
   @return {
     option1 : 0,
