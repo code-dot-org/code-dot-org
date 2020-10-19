@@ -27,7 +27,7 @@ export default class Activity extends Component {
           })}
         </h2>
         {activity.activitySections.map(item => {
-          return <ActivitySection key={item.key} section={item} />;
+          return <ActivitySection key={item.id} section={item} />;
         })}
       </div>
     );
