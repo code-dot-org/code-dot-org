@@ -147,7 +147,7 @@ class User < ActiveRecord::Base
 
   # courses a facilitator is able to teach
   has_many :courses_as_facilitator,
-    class_name: Pd::CourseFacilitator,
+    class_name: 'Pd::CourseFacilitator',
     foreign_key: :facilitator_id,
     dependent: :destroy
 
