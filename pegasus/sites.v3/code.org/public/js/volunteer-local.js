@@ -285,6 +285,10 @@ function loadMap(locations) {
             "icon-allow-overlap": true
           }
         });
+        mapboxMap.addControl(
+          new mapboxgl.NavigationControl({ showCompass: false }),
+          "bottom-right"
+        );
 
         if (mapOptions.locations && mapOptions.locations.length > 0) {
           addMarkers(mapboxStores);
