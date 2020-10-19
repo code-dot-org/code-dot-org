@@ -38,7 +38,8 @@ export class UnconnectedRemoveLevelDialog extends Component {
     const {activitySection, handleClose, levelPosToRemove} = this.props;
     let bodyText;
     if (levelPosToRemove) {
-      const levelId = activitySection.levels[levelPosToRemove - 1].activeId;
+      const levelId =
+        activitySection.scriptLevels[levelPosToRemove - 1].activeId;
       const levelName = this.props.levelKeyList[levelId];
       bodyText = `Are you sure you want to remove the level named "${levelName}" from the script?`;
     }

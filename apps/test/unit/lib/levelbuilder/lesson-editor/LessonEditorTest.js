@@ -67,6 +67,6 @@ describe('LessonEditor', () => {
     expect(wrapper.find('input').length).to.equal(18);
     expect(wrapper.find('select').length).to.equal(1);
     expect(wrapper.find('AnnouncementsEditor').length).to.equal(1);
-    expect(wrapper.find('CollapsibleEditorSection').length).to.equal(3);
+    expect(wrapper.find('CollapsibleEditorSection').length).to.equal(6);
   });
 });

@@ -138,6 +138,18 @@ class LessonsControllerTest < ActionController::TestCase
     assert_equal 'student overview', lesson_data['studentOverview']
   end
 
+  test 'cannot edit lesson with legacy script levels' do
+    # legacy script level, not owned by an activity section
+    create :script_level, lesson: @lesson, script: @lesson.script
+
+    sign_in @levelbuilder
+
+    get :edit, params: {
+      id: @lesson.id
+    }
+    assert_response :forbidden
+  end
+
   # only levelbuilders can update
   test_user_gets_response_for :update, params: -> {{id: @lesson.id}}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
   test_user_gets_response_for :update, params: -> {@update_params}, user: :student, response: :forbidden
@@ -154,6 +166,22 @@ class LessonsControllerTest < ActionController::TestCase
     assert_equal 'new overview', @lesson.overview
     assert_equal 'new student overview', @lesson.student_overview
     assert_equal 0, @lesson.lesson_activities.count
+  end
+
+  test 'cannot update lesson with legacy script levels' do
+    # legacy script level, not owned by an activity section
+    create :script_level, lesson: @lesson, script: @lesson.script
+
+    sign_in @levelbuilder
+
+    @update_params['activities'] = [
+      {
+        name: 'activity name',
+        position: 1
+      }
+    ].to_json
+    put :update, params: @update_params
+    assert_response :forbidden
   end
 
   test 'add activity via lesson update' do
@@ -340,5 +368,126 @@ class LessonsControllerTest < ActionController::TestCase
     assert @lesson.resources.include?(resource_to_keep)
     assert @lesson.resources.include?(resource_to_add)
     refute @lesson.resources.include?(resource_to_remove)
+  end
+
+  test 'add script level via lesson update' do
+    sign_in @levelbuilder
+
+    activity = @lesson.lesson_activities.create(
+      name: 'activity name',
+      position: 1,
+      seeding_key: 'activity-key'
+    )
+    section = activity.activity_sections.create(
+      name: 'section name',
+      position: 1,
+      seeding_key: 'section-key'
+    )
+
+    level_to_add = create :maze, name: 'level-to-add'
+
+    @update_params['activities'] = [
+      {
+        id: activity.id,
+        name: 'activity name',
+        position: 1,
+        activitySections: [
+          {
+            id: section.id,
+            name: 'section name',
+            position: 1,
+            scriptLevels: [
+              activitySectionPosition: 1,
+              activeId: level_to_add.id,
+              assessment: true,
+              levels: [
+                {
+                  id: level_to_add.id,
+                  name: level_to_add.name
+                }
+              ]
+            ]
+          }
+        ]
+      }
+    ].to_json
+
+    put :update, params: @update_params
+
+    assert_redirected_to "/lessons/#{@lesson.id}"
+    @lesson.reload
+
+    assert_equal activity, @lesson.lesson_activities.first
+    assert_equal section, activity.activity_sections.first
+
+    assert_equal 1, section.script_levels.count
+    script_level = section.script_levels.first
+    assert script_level.assessment
+    refute script_level.bonus
+    assert_equal ['level-to-add'], script_level.levels.map(&:name)
+  end
+
+  test 'remove script level via lesson update' do
+    sign_in @levelbuilder
+
+    activity = @lesson.lesson_activities.create(
+      name: 'activity name',
+      position: 1,
+      seeding_key: 'activity-key'
+    )
+    section = activity.activity_sections.create(
+      name: 'section name',
+      position: 1,
+      seeding_key: 'section-key'
+    )
+    [1, 2, 3].each do |i|
+      section.script_levels.create(
+        position: i,
+        activity_section_position: i,
+        lesson: @lesson,
+        script: @lesson.script,
+        levels: [create(:level, name: "my-level-#{i}")]
+      )
+    end
+    sl_ids = section.script_levels.map(&:id)
+
+    script_levels_data = section.script_levels.map(&:summarize_for_edit)
+    assert_equal 3, script_levels_data.count
+
+    @update_params['activities'] = [
+      {
+        id: activity.id,
+        name: 'activity name',
+        position: 1,
+        activitySections: [
+          {
+            id: section.id,
+            name: 'section name',
+            position: 1,
+            scriptLevels: [
+              script_levels_data[0],
+              script_levels_data[2]
+            ]
+          }
+        ]
+      }
+    ].to_json
+
+    put :update, params: @update_params
+    assert_redirected_to "/lessons/#{@lesson.id}"
+
+    @lesson.reload
+    assert_equal activity, @lesson.lesson_activities.first
+    assert_equal section, activity.activity_sections.first
+
+    section.reload
+    assert_equal 2, section.script_levels.count
+    assert_equal [sl_ids[0], sl_ids[2]], section.script_levels.map(&:id)
+    assert_equal ['my-level-1'], section.script_levels.first.levels.map(&:name)
+    assert_equal ['my-level-3'], section.script_levels.last.levels.map(&:name)
+
+    # sanity check that chapter and position values have been updated
+    assert_equal [1, 2], section.script_levels.map(&:chapter)
+    assert_equal [1, 2], section.script_levels.map(&:position)
   end
 end

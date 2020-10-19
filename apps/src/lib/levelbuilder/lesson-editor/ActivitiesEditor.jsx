@@ -99,6 +99,16 @@ class ActivitiesEditor extends Component {
 
         activitySection.description = activitySection.text;
         delete activitySection.text;
+
+        activitySection.scriptLevels.forEach(scriptLevel => {
+          // The position within the activity section
+          scriptLevel.activitySectionPosition = scriptLevel.position;
+
+          // Other position values will be recomputed from the
+          // activitySectionPosition on the server.
+          delete scriptLevel.position;
+          delete scriptLevel.levelNumber;
+        });
       });
     });
 
