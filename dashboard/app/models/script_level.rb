@@ -442,6 +442,17 @@ class ScriptLevel < ActiveRecord::Base
     summary
   end
 
+  def summarize_for_lesson_show
+    summary = summarize
+    summary[:id] = id
+    summary[:levels] = levels.map do |level|
+      {
+        id: level.id,
+      }
+    end
+    summary
+  end
+
   def summarize_for_edit
     summary = summarize
     summary[:id] = id
@@ -451,17 +462,6 @@ class ScriptLevel < ActiveRecord::Base
         id: level.id,
         name: level.name,
         url: edit_level_path(id: level.id)
-      }
-    end
-    summary
-  end
-
-  def summarize_for_lesson_show
-    summary = summarize
-    summary[:id] = id
-    summary[:levels] = levels.map do |level|
-      {
-        id: level.id,
       }
     end
     summary
