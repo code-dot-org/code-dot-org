@@ -1,10 +1,10 @@
+// Pop-up modal for downloading all Foorm submissions for a single form as a csv.
 import React from 'react';
 import PropTypes from 'prop-types';
 import {Modal, Button} from 'react-bootstrap';
 import 'react-select/dist/react-select.css';
 import Select from 'react-select/lib/Select';
 import {SelectStyleProps} from '../../../constants.js';
-import Spinner from '../../../components/spinner.jsx';
 
 const CSV_QUERY_URL = '/api/v1/pd/foorm/submissions_csv';
 const FORM_NAME_QUERY_URL = '/api/v1/pd/foorm/form_names';
@@ -25,10 +25,6 @@ const styles = {
     margin: '25px 0px 25px 0px',
     float: 'right'
   },
-  spinner: {
-    float: 'right',
-    margin: '27px 5px 0px 0px'
-  },
   select: {
     marginTop: 5
   }
@@ -45,7 +41,6 @@ export default class SubmissionsDownloadFom extends React.Component {
     this.state = {
       formNamesAndVersions: null,
       loadingFormNames: false,
-      loadingCsv: false,
       selectedForm: {name: '', version: ''},
       selectedFormValue: null,
       showing: false
@@ -138,9 +133,6 @@ export default class SubmissionsDownloadFom extends React.Component {
                     >
                       Download as CSV
                     </Button>
-                    {this.state.loadingCsv && (
-                      <Spinner style={styles.spinner} size="medium" />
-                    )}
                   </div>
                 </div>
               )}
