@@ -124,7 +124,7 @@ class LevelToken extends Component {
 
     progressBubbleLevel['isCurrentLevel'] = false;
     progressBubbleLevel['status'] = LevelStatus.not_tried;
-    progressBubbleLevel['levelNumber'] = this.props.scriptLevel.position;
+    progressBubbleLevel['levelNumber'] = this.props.scriptLevel.levelNumber;
     progressBubbleLevel['kind'] = this.props.scriptLevel.kind;
 
     return progressBubbleLevel;

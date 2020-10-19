@@ -412,6 +412,11 @@ class Lesson < ActiveRecord::Base
       lesson_activity.update_activity_sections(activity['activitySections'])
       lesson_activity
     end
+
+    # It's too messy to keep track of all 3 position values for scripts during
+    # this update, so just set activity_section_position as the source of truth
+    # and then fix chapter and position values after.
+    script.fix_script_level_positions
   end
 
   # Used for seeding from JSON. Returns the full set of information needed to uniquely identify this object.
