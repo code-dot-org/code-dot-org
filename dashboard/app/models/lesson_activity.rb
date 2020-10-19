@@ -60,6 +60,7 @@ class LessonActivity < ApplicationRecord
         description: section['description'],
         tips: section['tips']
       )
+      activity_section.update_script_levels(section['scriptLevels'] || [])
       activity_section
     end
   end
