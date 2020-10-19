@@ -58,6 +58,17 @@ class LessonsControllerTest < ActionController::TestCase
   test_user_gets_response_for :show, params: -> {{id: @lesson.id}}, user: :levelbuilder, response: :success
 
   test 'show lesson' do
+    activity = @lesson.lesson_activities.create(
+      name: 'My Activity',
+      position: 1,
+      seeding_key: 'activity-key'
+    )
+    section = activity.activity_sections.create(
+      name: 'My Activity Section',
+      position: 1,
+      seeding_key: 'activity-section-key'
+    )
+
     # a bit weird, but this is what happens when there is only one lesson.
     assert_equal @script_title, @lesson.localized_name
 
@@ -69,6 +80,8 @@ class LessonsControllerTest < ActionController::TestCase
     assert(@response.body.include?(@lesson.overview))
     assert(@response.body.include?(@script.link))
     assert(@response.body.include?(@script_title))
+    assert_includes @response.body, activity.name
+    assert_includes @response.body, section.name
   end
 
   # only levelbuilders can edit
