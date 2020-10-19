@@ -27,7 +27,7 @@ Wypróbowanie "Godziny kodowania" jest łatwe i stanowi atrakcyjny sposób wprow
 </p>
 
 <p>
-  <a href="https://hourofcode.com/files/HourofCode-Parent-How-To.pdf"><button>Zobacz przewodnik PDF</button></a>
+  <a href="{{ localized_files/hourofcode_parent_how_to }}"><button>Zobacz przewodnik PDF</button></a>
 </p>
 
 <hr />
@@ -45,7 +45,7 @@ Wypróbowanie "Godziny kodowania" jest łatwe i stanowi atrakcyjny sposób wprow
 </p>
 
 <p>
-  Wszystkie nasze zajęcia obejmują zagadnienia rozwiązywania problemów i krytycznego myślenia w sposób atrakcyjny i kreatywny, a tutaj podajemy kilku faworytów uczniów:
+  Wszystkie nasze zajęcia obejmują zagadnienia rozwiązywania problemów i krytycznego myślenia w sposób atrakcyjny i kreatywny, a tutaj podajemy kilka ulubionych przez uczniów:
 </p>
 
 <ul>
@@ -79,7 +79,7 @@ Wypróbowanie "Godziny kodowania" jest łatwe i stanowi atrakcyjny sposób wprow
 </h2>
 
 <p>
-  Teraz, gdy masz już w głowie nasze pewne samouczki, być może warto wypróbować te zajęcia na swoim urządzeniu zanim wprowadzicie je swoim dzieciom.
+  Teraz, gdy masz już w głowie niektóre nasze samouczki, być może warto wypróbować te zajęcia na swoim urządzeniu zanim wprowadzicie je swoim dzieciom.
 </p>
 
 <p>
@@ -93,7 +93,7 @@ Wypróbowanie "Godziny kodowania" jest łatwe i stanowi atrakcyjny sposób wprow
 </p>
 
 <p>
-  Jeśli będziesz korzystać tylko z jednego urządzenia lub po prostu chcesz sprawić, aby zajęcia "Godzina kodowania" były bardziej interaktywne wypróbuj <a href="https://www.youtube.com/watch?v=vgkahOzFH2Q">programowanie w parach</a>. Programowanie w parach zachęca dzieci do współpracy. Gdy dobierają się w pary, to pomagają sobie nawzajem w zakresie zagadnienia rozwiązywania problemów. Zobaczą także, że praca z komputerem jest działalnością zespołową i uspołeczniającą.
+  Jeśli będziesz korzystać tylko z jednego urządzenia lub po prostu chcesz sprawić, aby zajęcia "Godzina kodowania" były bardziej interaktywne wypróbuj <a href="https://www.youtube.com/watch?v=vgkahOzFH2Q">programowanie w parach</a>. Programowanie w parach zachęca dzieci do współpracy. Gdy dobierają się w pary, to pomagają sobie nawzajem w rozwiązywania problemów. Zobaczą także, że praca z komputerem jest działalnością zespołową i uspołeczniającą.
 </p>
 
 <h3>Wywołaj w dzieciach entuzjazm! </h3>
@@ -185,9 +185,9 @@ Wypróbowanie "Godziny kodowania" jest łatwe i stanowi atrakcyjny sposób wprow
 <h2>Co będzie się działo po Godzinie Kodowania?</h2>
 
 <p>
-  Informatyka nie musi kończyć się z Godziną Kodowania! Chociaż 90% rodziców chce, aby dziecko uczyło się informatyki, w większości szkół się jej nie wykłada. Nasz program nauczania ma charakter sieciowy i można z niego korzystać bezpłatnie, zawsze, aby nieść pomoc. <a href="https://code.org/yourschool">Dowiedz się, jak </a> wprowadzić informatykę w szkole Twojego dziecka już dzisiaj.
+  Informatyka nie musi kończyć się z Godziną Kodowania! Chociaż 90% rodziców chce, aby dziecko uczyło się informatyki, w większości szkół się jej nie wykłada. Nasz program nauczania działa w Internecie i można z niego korzystać bezpłatnie, zawsze, aby nieść pomoc. <a href="https://code.org/yourschool">Dowiedz się, jak </a> wprowadzić informatykę w szkole Twojego dziecka już dzisiaj.
 </p>
 
 <p>
-  <a href="https://hourofcode.com/files/HourofCode-Parent-How-To.pdf"><button>Zobacz przewodnik PDF</button></a>
+  <a href="{{ localized_files/hourofcode_parent_how_to }}"><button>Zobacz przewodnik PDF</button></a>
 </p>
