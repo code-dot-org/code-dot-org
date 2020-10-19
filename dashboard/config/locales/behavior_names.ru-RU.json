@@ -914,7 +914,9 @@
           "moving north": "движение на север",
           "jittering": "дрожание",
           "moving west": "движение на запад",
-          "patrolling": "патрулирование"
+          "patrolling": "патрулирование",
+          "drive left": "ехать влево\n",
+          "drive right": "ехать вправо\n"
         },
         "courseE_aboutme_1": {
           "wandering": "блуждание",
