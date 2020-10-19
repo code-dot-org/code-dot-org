@@ -124,6 +124,13 @@ it:
     del mondo. L'informatica è molto più che codifica! Goditi il primo passo di Code.org
     in un nuovo viaggio per insegnare di più sull'intelligenza artificiale durante
     il nostro piano di studi.
+  hoc_live: L'Ora del Codice dal vivo
+  hoc_live_sign_up_title: Iscriviti a l'Ora del Codice dal vivo
+  hoc_live_sign_up_message: Impara in tempo reale insieme a ospiti speciali! Gli studenti
+    di tutte le età e abilità, compresi quelli senza computer, sono i benvenuti. Iscriviti
+    alla nostra mailing list per ricevere le registrazioni degli episodi e le risorse
+    per continuare ad imparare a casa.
+  hoc_live_join_us: Unisciti a noi
   hoc_overview_oceans_tutorial_header: IA per i Mari
   hoc_overview_oceans_tutorial_desc: Scopri l'Intelligenza Artificiale (AI), l'apprendimento
     automatico, i dati di addestramento e i pregiudizi, mentre esplori le questioni
@@ -162,25 +169,26 @@ it:
   ai_resource_elements_ai_desc: Una serie di corsi online gratuiti creati da Reaktor
     e dall'Università di Helsinki.
   ai_resource_cognimates: Cognimates
-  ai_resource_cognimates_desc: An AI education platform for building games, programming
-    robots and training.
-  ai_audience_k12: K-12 (Reading required)
-  ai_audience_hs: High school
-  ai_activity_header: Activities Powered by AI and ML
-  ai_activity_seeing_ai: Seeing AI
-  ai_activity_seeing_ai_desc: A free app that narrates the world around you in a variety
-    of languages.
-  ai_activity_quick_draw: Quick, Draw!
-  ai_activity_quick_draw_desc: Can a neural network learn to recognize doodling?
-  ai_activity_teachable: Teachable Machine
-  ai_activity_teachable_desc: Train a computer to recognize your own images, sounds,
-    and poses.
-  ai_activity_experiments: AI Experiments with Google
-  ai_activity_experiments_desc: Start exploring machine learning through pictures,
-    drawings, language, music, and more.
-  ai_activity_zooniverse: Zooniverse - Snapshot Mountain Zebra
-  ai_activity_zooniverse_desc: Help protect the endangered Cape Mountain Zebra by
-    identifying the different animals in the images.
+  ai_resource_cognimates_desc: Una piattaforma didattica IA per la creazione di giochi,
+    la programmazione di robot e la formazione.
+  ai_audience_k12: Dai 6 anni in su (è necessario saper leggere)
+  ai_audience_hs: Secondaria superiore
+  ai_activity_header: Attività basate sull'Intelligenza Artificiale e l'Apprendimento
+    Automatico
+  ai_activity_seeing_ai: Vedere IA
+  ai_activity_seeing_ai_desc: Un'app gratuita che racconta il mondo intorno a te in
+    una varietà di lingue.
+  ai_activity_quick_draw: Disegno rapido!
+  ai_activity_quick_draw_desc: Una rete neurale può imparare a riconoscere gli scarabocchi?
+  ai_activity_teachable: Macchina che possono imparare
+  ai_activity_teachable_desc: Addestra un computer a riconoscere le tue immagini,
+    i tuoi suoni e le tue pose.
+  ai_activity_experiments: Esperimenti di intelligenza artificiale con Google
+  ai_activity_experiments_desc: Inizia a esplorare l'apprendimento automatico attraverso
+    immagini, disegni, linguaggio, musica e altro ancora.
+  ai_activity_zooniverse: Zooniverse - Istantanea Zebra Mountain
+  ai_activity_zooniverse_desc: Aiutaci a proteggere la Zebra di Cape Mountain in via
+    di estinzione identificando i diversi animali nelle immagini.
   codeorg_homepage_hoc2018_curriculum: Approfondisci i <a href="%{studio_url}/courses"
     class="hoc2018-curriculum-link">corsi di Code.org</a>
   codeorg_homepage_hoc2018_dance_heading: Crea il tuo progetto in <span class="highlight-word">Ballando&nbsp;col&nbsp;codice</span>
@@ -200,18 +208,19 @@ it:
   hoc2018_tutorial_mchoc_description: Utilizza blocchi di codice per portare Alex
     o Steve in un'avventura nel mondo di Minecraft.
   codeorg_homepage_hoc2019_dance_heading: Prova il nuovo <span class="highlight-word">Dance&nbsp;Party!</span>
-  codeorg_homepage_hoc2019_dance_heading_markdown: Try the new **Dance&nbsp;Party!**
-  codeorg_homepage_special2020_body1: Support for parents and teachers facing school
-    closures.
-  codeorg_homepage_special2020_body2: See our suggested learning resources.
-  codeorg_homepage_special2020_body: Keep learning this summer! Take a look at our
-    resources for learning at home.
+  codeorg_homepage_hoc2019_dance_heading_markdown: Prova la nuova attività **Ballando
+    con il codice!**
+  codeorg_homepage_special2020_body1: Supporto per genitori e insegnanti che affrontano
+    la chiusura delle scuole.
+  codeorg_homepage_special2020_body2: Consulta le risorse di apprendimento consigliate.
+  codeorg_homepage_special2020_body: Continua ad imparare quest'estate! Dai un'occhiata
+    alle nostre risorse per l'apprendimento a casa.
   codeorg_homepage_remote2020_body: Insegni in una classe remota o socialmente lontana
     questo semestre? Visualizza le nostre risorse.
-  codeorg_homepage_special2020_link_text: Get started
-  codeorg_homepage_code_break_body: Take a Code Break! Your weekly dose of inspiration,
-    community, and computer science.
-  codeorg_homepage_code_break_link_text: Learn more
+  codeorg_homepage_special2020_link_text: Inizia
+  codeorg_homepage_code_break_body: Fai una pausa col codice! La tua dose settimanale
+    di ispirazione, community e informatica.
+  codeorg_homepage_code_break_link_text: Scopri di più
   cookie_banner_message: Cliccando "Accetto." accetti la memorizzazione dei cookie
     sul tuo computer o dispositivo.
   cookie_banner_more_information: Vedi la Privacy Policy di Code.org.
@@ -260,7 +269,7 @@ it:
   company_tntp: TNTP
   company_abss: Alamance-Burlington School System
   company_aldineisd: Aldine Independent School District
-  company_afterschool: after school
+  company_afterschool: doposcuola
   company_laalliance: Alliance College Ready Public Schools
   company_asd: Arlington Public Schools
   company_arlingtonpublicschools: Arlington Public Schools
@@ -270,105 +279,107 @@ it:
   company_blan: Blanchester Local Schools
   company_bremertonschools: Bremerton School District
   company_browardschools: Broward County Schools
-  company_cajonvalley: Cajon Valley School District
-  company_calistogajointunified: Calistoga Joint Unified School District
-  company_canalwinchesterschools: Canal Winchester Local Schools
-  company_canyonsdistrict: Canyons School District
-  company_centralunified: Central Unified School District
-  company_cvsd: Central Valley School District
-  company_ccboe: Charles County Public Schools
-  company_ChathamCountySchools: Chatham County Schools
-  company_chelmsfordpublicschooldistrict: Chelmsford School District
-  company_cheneysd: Cheney School District
-  company_chesterfieldschools: Chesterfield County Public Schools
+  company_cajonvalley: Distretto scolastico di Cajon Valley
+  company_calistogajointunified: Distretto scolastico unificato congiunto di Calistoga
+  company_canalwinchesterschools: Scuole locali di Canal Winchester
+  company_canyonsdistrict: Distretto scolastico di Canyon
+  company_centralunified: Distretto scolastico unificato centrale
+  company_cvsd: Distretto scolastico della Central Valley
+  company_ccboe: Scuole pubbliche della Contea di Charles
+  company_ChathamCountySchools: Scuole della contea di Chatham
+  company_chelmsfordpublicschooldistrict: Distretto scolastico di Chelmsford
+  company_cheneysd: Distretto scolastico di Cheney
+  company_chesterfieldschools: Scuole pubbliche della contea di Chesterfield
   company_codebrooklyn: Code Brooklyn
-  company_cps: Chicago Public Schools
-  company_ccsd: Clark County School District
-  company_cloverparkschooldistrict: Clover Park School District
-  company_ccsoh: Columbus City School District
-  company_cresskillboe: Cresskill Public Schools
-  company_dallasisd: Dallas Independent School District
+  company_cps: Scuole pubbliche di Chicago
+  company_ccsd: Distretto scolastico della contea di Clark
+  company_cloverparkschooldistrict: Distretto scolastico di Clover Park
+  company_ccsoh: Distretto scolastico della città di Columbus
+  company_cresskillboe: Scuole pubbliche di Cresskill
+  company_dallasisd: Distretto scolastico indipendente di Dallas
   company_disney: Disney
-  company_dpsk12: Denver Public Schools
-  company_dcsdk12: Douglas County Schools
-  company_dpsnc: Durham Public Schools
-  company_evsd: East Valley School District
-  company_eastonvilleschooldistrict: Eatonville School District
-  company_enumclawschooldistrict: Enumclaw School District
-  company_everettsd: Everette Public Schools
-  company_fsusd: Fairfield-Suisun Unified School District
-  company_fayettecountypublicschools: Fayette County Public Schools
-  company_forsythcountyschools: Forsyth County Schools
-  company_fcschools: Franklin County School
-  company_fpschools: Franklin Pierce School District
-  company_frederickcountypublicschools: Frederick County Public Schools
-  company_fultonschools: Fulton County Schools
-  company_vadoe: Governor's School Programs
-  company_gcs: Granville County Schools
+  company_dpsk12: Scuole pubbliche di Denver
+  company_dcsdk12: Scuole della contea di Douglas
+  company_dpsnc: Scuole pubbliche di Durham
+  company_evsd: Distretto scolastico della East Valley
+  company_eastonvilleschooldistrict: Distretto scolastico di Eatonville
+  company_enumclawschooldistrict: Distretto scolastico di Enumclaw
+  company_everettsd: Scuole pubbliche di Everette
+  company_fsusd: Distretto scolastico unificato Fairfield-Suisun
+  company_fayettecountypublicschools: Scuole pubbliche della Contea di Fayette
+  company_forsythcountyschools: Scuole della contea di Forsyth
+  company_fcschools: Scuole della contea di Franklin
+  company_fpschools: Distretto scolastico di Franklin Pierce
+  company_frederickcountypublicschools: Scuole pubbliche della Contea di Frederick
+  company_fultonschools: Scuole della contea di Fulton
+  company_vadoe: Programmi scolastici governativi
+  company_gcs: Scuole della contea di Granville
   company_gcisd: Grapevine-Colleyville ISD
   company_godaddy: Go Daddy
-  company_greenupcountyschooldistrict: Greenup County Schools
-  company_gwinnettcountypublicschools: Gwinnett County Public Schools
-  company_HamptonCitySchools: Hampton City Schools
-  company_HanoverCountyPublicSchools: Hanover County Public Schools
-  company_HenricoCountyPublicSchools: Henrico County Public Schools
-  company_highlineschools: Highline School District
-  company_houstonisd: Houston Independent School District
-  company_hcpss: Howard County Public Schools
-  company_idla: Idaho Digital Learning Academy
-  company_janesvilleschooldistrict: Janesville School District
-  company_johnstoncountyschools: Johnston County Schools
-  company_lps: Lincoln Public School
-  company_littletonpublicschools: Littleton Public Schools
-  company_lausd: Los Angeles Unified School District
-  company_lcps: Louisa County Public Schools
-  company_lcsedu: Lynchburg City Schools
-  company_msvl: Marysville School District
-  company_dadeschools: Miami-Dade Public Schools
-  company_miltonps: Milton Public Schools
-  company_montgomeryschoolsmd: Montgomery County Public Schools
-  company_needhampublicschools: Needham Public Schools
-  company_NelsonCountyPublicSchools: Nelson County Public Schools
-  company_newalbanyschools: New Albany Plain Local Schools
-  company_newkentschools: New Kent County Public Schools
-  company_newarkcityschools: Newark City Schools
-  company_nnschools: Newport News Public Schools
-  company_newtonpublicschools: Newton Public Schools
-  company_nps: Norfolk Public Schools
-  company_nycdoe: NYC Department of Education
-  company_ohlsd: Oak Hills Local School District
-  company_oneclay: One Clay County School District
-  company_ocps: Orange County Schools
-  company_orangeusd: Orange Unified School District
-  company_pbsd: Palm Beach School District
-  company_pvusd: Paradise Valley Unified School District
-  company_PetersburgCityPublicSchools: Petersburg City Public Schools
-  company_pylusd: Placentia-Yorba Linda Union School District
-  company_PowhatanCountyPublicSchools: Powhatan County Public Schools
-  company_pgcps: Prince Georges County Public Schools
-  company_provocityschooldistrict: Provo Public Schools
-  company_reyn: Reynoldsburg City School District
-  company_RichmondPublicSchools: Richmond Public Schools
-  company_RockinghamCountySchools: Rockingham County Schools
-  company_svusd: Saddleback Valley Unified School District
-  company_sfusd: San Francisco Unified School District
-  company_ShenandoahCountyPublicSchools: Shenandoah County Public Schools
-  company_shorelineschools: Shoreline School District
-  company_sjusd: San Juan Unified School District
+  company_greenupcountyschooldistrict: Scuole della Contea di Greenup
+  company_gwinnettcountypublicschools: Scuole pubbliche della Contea di Gwinnett
+  company_HamptonCitySchools: Scuole di Hampton City
+  company_HanoverCountyPublicSchools: Scuole pubbliche della Contea di Hanover
+  company_HenricoCountyPublicSchools: Scuole pubbliche della Contea di Henrico
+  company_highlineschools: Distretto scolastico di Highline
+  company_houstonisd: Distretto scolastico indipendente di Houston
+  company_hcpss: Scuole pubbliche della Contea di Howard
+  company_idla: Accademia per l'apprendimento Idaho Digital
+  company_janesvilleschooldistrict: Distretto scolastico di Janesville
+  company_johnstoncountyschools: Scuole della contea di Johnston
+  company_lps: Scuola pubblica Lincoln
+  company_littletonpublicschools: Scuole pubbliche di Littleton
+  company_lausd: Distretto scolastico unificato di Los Angeles
+  company_lcps: Scuole pubbliche della Contea di Louisa
+  company_lcsedu: Scuole di Lynchburg City
+  company_msvl: Distretto scolastico di Marysville
+  company_dadeschools: Scuole pubbliche di Miami-Dade
+  company_miltonps: Scuole pubbliche di Milton
+  company_montgomeryschoolsmd: Scuole pubbliche della Contea di Montgomery
+  company_needhampublicschools: Scuole pubbliche di Needham
+  company_NelsonCountyPublicSchools: Scuole pubbliche della Contea di Nelson
+  company_newalbanyschools: 'Scuole locali di New Albany Plain
+
+'
+  company_newkentschools: Scuole pubbliche della Contea di New Kent
+  company_newarkcityschools: Scuole di Newark City
+  company_nnschools: Scuole pubbliche di Newport News
+  company_newtonpublicschools: Scuole pubbliche Newton
+  company_nps: Scuole pubbliche di Norfolk
+  company_nycdoe: Dipartimento dell'Istruzione di New York
+  company_ohlsd: Distretto scolastico locale di Oak Hills
+  company_oneclay: Distretto scolastico della contea di One Clay
+  company_ocps: Scuole della contea di Orange
+  company_orangeusd: Distretto scolastico unificato di Orange
+  company_pbsd: Distretto scolastico di Palm Beach
+  company_pvusd: Distretto scolastico unificato di Paradise Valley
+  company_PetersburgCityPublicSchools: Scuole pubbliche della città di San Pietroburgo
+  company_pylusd: Distretto scolastico Placentia-Yorba Linda Union
+  company_PowhatanCountyPublicSchools: Scuole pubbliche della contea di Powhatan
+  company_pgcps: Scuole pubbliche della contea di Prince George
+  company_provocityschooldistrict: Scuole pubbliche di Provo
+  company_reyn: Distretto scolastico della città di Reynoldsburg
+  company_RichmondPublicSchools: Scuole pubbliche di Richmond
+  company_RockinghamCountySchools: Scuole della contea di Rockingham
+  company_svusd: Distretto scolastico unificato di Saddleback Valley
+  company_sfusd: Distretto scolastico unificato di San Francisco
+  company_ShenandoahCountyPublicSchools: Scuole pubbliche della Contea di Shenandoah
+  company_shorelineschools: Distretto scolastico di Shoreline
+  company_sjusd: Distretto scolastico unificato di San Juan
   company_sky: Sky
-  company_spokaneschools: Spokane Public Schools
-  company_StaffordCountyPublicSchools: Stafford County Public Schools
-  company_strongnet: Strongsville School District
-  company_TukwilaSchoolDistrict: Tukwila School District
-  company_vermilionschools: Vermilion Local School District
+  company_spokaneschools: Scuole pubbliche di Spokane
+  company_StaffordCountyPublicSchools: Scuole pubbliche della Contea di Stafford
+  company_strongnet: Distretto scolastico di Strongsville
+  company_TukwilaSchoolDistrict: Distretto scolastico Tukwila
+  company_vermilionschools: Distretto scolastico locale di Vermilion
   company_vista-equity-partners: Vista Equity Partners
-  company_walthampublicschools: Waltham Public Schools
-  company_warrencountyschools: Warren County Schools
-  company_WaynesboroPublicSchools: Waynesboro Public Schools
-  company_WellesleyPublicSchools: Wellesley Public Schools
-  company_wvsd208: West Valley School District
-  company_wuhsd: Whittier Union High School District
-  company_wcschools: Wilson County Schools
+  company_walthampublicschools: Scuole pubbliche di Waltham
+  company_warrencountyschools: Scuole della contea di Warren
+  company_WaynesboroPublicSchools: Scuole pubbliche di Waynesboro
+  company_WellesleyPublicSchools: Scuole pubbliche di Wellesley
+  company_wvsd208: Distretto scolastico della West Valley
+  company_wuhsd: Distretto scolastico di Whittier Union
+  company_wcschools: Scuole della contea di Wilson
   company_yelp: Yelp
   nav_back_to_resources: Torna a Risorse
   how_to_nav_educators: Per insegnanti
@@ -381,7 +392,7 @@ it:
   how_to_nav_companies: Per le aziende
   how_to_nav_afterschool_educators: Per gli insegnanti del doposcuola
   how_to_nav_volunteers: Per i volontari
-  how_to_nav_virtual: For virtual events
+  how_to_nav_virtual: Per eventi virtuali
   whats_next_header: Cosa c'è dopo?
   whats_next_description: Ti manderemo del materiale e consigli utili per il tuo evento.
     <a href='http://code.org/learn'>Prova le esercitazioni disponibili </a> per qualunque
@@ -456,17 +467,18 @@ it:
     il Futuro</a>.
   front_join_us_code_info: Per maggiori informazioni, visita per favore Code.org
   front_join_us_n_students_served: 'Ore già svolte: #'
-  front_join_us_challenge: Win a video chat for your classroom with a celebrity!
-  front_join_us_learn_more: Learn more
-  signup_closed: Registration for the Hour of Code is now closed. Please check again
-    in October to sign up for the next Hour of Code.
-  signup_registration_not_required: You don't need to register to participate! The
-    Hour of Code activities are available year-round. <a href='%{hoc_activities_url}'>Try
-    an activity</a> or read our <a href='%{howto_guide_url}'>How-to guide</a> to plan
-    an event for your class.
-  signup_registration_not_required_markdown: You don't need to register to participate!
-    The Hour of Code activities are available year-round. [Try an activity](%{hoc_activities_url})
-    or read our [How-to guide](%{howto_guide_url}) to plan an event for your class.
+  front_join_us_challenge: Vinci una chat video con una celebrità per la tua classe!
+  front_join_us_learn_more: Scopri di più
+  signup_closed: Le registrazioni per l'Ora del Codice al momento sono chiuse. Ricontrolla
+    ad ottobre per iscriverti alla prossima Ora del Codice.
+  signup_registration_not_required: Non è necessario registrarsi per partecipare!
+    Le attività dell'Ora del Codice sono disponibili tutto l'anno. <a href='%{hoc_activities_url}'>Prova
+    un'attività</a> o leggi la nostra <a href='%{howto_guide_url}'>Guida pratica </a>
+    per pianificare un evento per la tua classe.
+  signup_registration_not_required_markdown: Non è necessario registrarsi per partecipare!
+    Le attività dell'Ora del Codice sono disponibili tutto l'anno. [Try an activity](%{hoc_activities_url})
+    o leggi la nostra [How-to guide](%{howto_guide_url}) per pianificare un evento
+    per la tua classe.
   signup_registration_closed: E ogni anno a dicembre, la tua classe può unirsi a milioni
     di studenti in tutto il mondo per celebrare la Computer Science Education Week
     con l'Ora del Codice. Apriremo le iscrizioni per il festeggiamento annuale in
@@ -479,7 +491,7 @@ it:
   signup_name_error: Il Nome è richiesto.
   signup_email_label: Il tuo indirizzo di posta elettronica
   signup_email_error: L'Email è richiesta
-  signup_invalid_email_error: The email address you entered is invalid
+  signup_invalid_email_error: L'indirizzo email immesso non è valido
   signup_organization_name_label: Nome della scuola o dell'organizzazione
   signup_organization_name_error: Il Nome dell'Organizzazione è richiesto.
   signup_event_type_label: Tipo di evento
@@ -502,10 +514,10 @@ it:
     i miei studenti (solo per gli USA)
   signup_email_preference_opt_in: Possiamo inviarti via email aggiornamenti sui corsi
     di Code.org e altre notizie legate al mondo dell'informatica?
-  signup_email_preference_privacy: "(See our privacy policy)"
+  signup_email_preference_privacy: "(Vedi la nostra politica della privacy)"
   signup_email_preference_yes: Sì
   signup_email_preference_no: 'No'
-  signup_email_preference_error: Email preference is required
+  signup_email_preference_error: È richiesta la preferenza dell'email
   signup_multiple_event_warning: Se stai organizzando più eventi dell'Ora del Codice,
     per favore indica un differente nome o indirizzo di posta elettronica per ognuno
     di essi. Contiamo solo un evento per ogni differente combinazione di nome e indirizzo
@@ -538,28 +550,28 @@ it:
     del Codice.
   signup_thank_you_message: Ti abbiamo inviato un messaggio di conferma per posta
     elettronica con le informazioni per aiutarti a iniziare.
-  social_hoc2018_code_org_what_create: 'Code.org: What will you create?'
-  social_hoc2018_creativity_in_are_you: 'The #HourOfCode is about creativity. I’m
-    in! Are you?'
+  social_hoc2018_code_org_what_create: 'Code.org: Tu cosa creerai?'
+  social_hoc2018_creativity_in_are_you: "#HourOfCode riguarda la creatività. Io ci
+    sono! E tu?"
   social_hoc2018_dance_party: 'Ora del Codice: Ballando col codice'
-  social_hoc2018_dance_what_create: Featuring Katy Perry, Madonna, J. Balvin, Sia,
-    Keith Urban, Ciara, and 25 more!
-  social_hoc2018_every_student: Every student deserves the opportunity to express
-    their creativity with computer science.
-  social_hoc2018_every_student_try_what_create: Every student deserves the opportunity
-    to express their creativity with computer science. Try your hand at the new tutorials.
-    What will you create?
-  social_hoc2018_hoc_coming_create: The Hour of Code is coming. What will you create?
+  social_hoc2018_dance_what_create: Con Katy Perry, Madonna, J. Balvin, Sia, Keith
+    Urban, Ciara e altri 25!
+  social_hoc2018_every_student: Ogni studente deve avere l'opportunità di esprimere
+    la propria creatività con l'informatica.
+  social_hoc2018_every_student_try_what_create: Ogni studente deve avere l'opportunità
+    di esprimere la propria creatività con l'informatica. Prova i nuovi tutorial.
+    Cosa creerai?
+  social_hoc2018_hoc_coming_create: L'Ora del Codice sta arrivando. Cosa creerai?
   social_hoc2018_hoc_here: L'Ora del Codice è qui!
   social_hoc2018_join: L'Ora di Codice sta arrivando
-  social_hoc2018_mc: Minecraft is back for the Hour of Code, and you’re the hero!
-    Write code to journey through Minecraft biomes.
-  social_hoc2018_mc_creativity: Use your creativity and problem solving skills to
-    explore and build underwater worlds with code.
+  social_hoc2018_mc: Minecraft è tornato per l'Ora del Codice e tu sei l'eroe! Programma
+    il tuo viaggio attraverso le creature di Minecraft.
+  social_hoc2018_mc_creativity: Usa la tua creatività e la tua abilità a risolvere
+    i problemi per esplorare e costruire mondi sottomarini con la programmazione.
   social_hoc2018_what_create: Tu cosa creerai?
-  social_hoc2018_global_movement: The Hour of Code is a global movement reaching tens
-    of millions of students. One-hour tutorials are available in 45+ languages for
-    all ages.
+  social_hoc2018_global_movement: L'Ora del Codice è un movimento globale che coinvolge
+    decine di milioni di studenti. I tutorial di un'ora sono disponibili per tutte
+    le età e in oltre 45 lingue.
   map_title: La mappa degli eventi dell'Ora del Codice
   map_header: "# eventi dell'Ora del Codice in tutto il mondo"
   map_header_count_year: "%{event_count} eventi registrati nel %{year}"
@@ -575,7 +587,8 @@ it:
   map_warning: La mappa dell'Ora del Codice mostra solo i primi 200.000 eventi registrati.
     Tutti gli eventi registrati con un indirizzo valido possono essere visualizzati
     alla <a href='%{events_url}'>pagina degli eventi.</a>
-  map_warning_markdown: A full list of the events can be viewed on the [events page.](%{events_url})
+  map_warning_markdown: È possibile visualizzare un elenco completo degli eventi sulla
+    [events page.](%{events_url})
   meta_tag_og_title: L'Ora di Codice sta arrivando
   meta_tag_og_description: L'Ora del Codice è un movimento globale che coinvolge decine
     di milioni di studenti in più di 180 nazioni e in più di 45 lingue.
@@ -584,10 +597,10 @@ it:
     decine di milioni di studenti in più di 180 nazioni e in più di 45 lingue.
   twitter_default_text: 'Io partecipo all'' #OradelCodice #HourOfCode quest''anno,
     e tu? @codeorg @programmafuturo'
-  twitter_donor_text: 'This year''s #HourOfCode is about creativity. I’m in! Are you?
-    (Thanks %{random_donor} for supporting @codeorg)'
-  twitter_donor_text_2019: 'This year''s #HourOfCode is about #CSforGood. I’m in!
-    Are you? (Thanks %{random_donor} for supporting @codeorg)'
+  twitter_donor_text: 'Quest''anno #HourOfCode è incentrato sulla creatività. In ci
+    sono! E tu? (Thanks %{random_donor} for supporting @codeorg)'
+  twitter_donor_text_2019: 'Quest''anno #HourOfCode parlerà di #CSforGood. Io ci sono.
+    E tu? (Thanks %{random_donor} for supporting @codeorg)'
   hoc_faq_title: FAQ
   hoc_faq_what_is_hoc_q: Cosa è l'Ora del Codice?
   hoc_faq_what_is_hoc_a: L'Ora del Codice è iniziata come una lezione di introduzione
@@ -599,13 +612,14 @@ it:
     impegno collettivo.<a href='%{tutorials}'> Guarda le esercitazioni disponibili</a>.
     Lo sforzo viene supportato da più di <a href='%{partners}'>400 partner</a> e 200,000
     insegnanti in tutto il mondo.
-  hoc_faq_what_is_hoc_a_markdown: The Hour of Code started as a one-hour introduction
-    to computer science, designed to demystify "code", to show that anybody can learn
-    the basics, and to broaden participation in the field of computer science. It
-    has since become a worldwide effort to celebrate computer science, starting with
-    1-hour coding activities but expanding to all sorts of community efforts. Check
-    out the [tutorials and activities](%{tutorials}). This grassroots campaign is
-    supported by over [400 partners](%{partners}) and 200,000 educators worldwide.
+  hoc_faq_what_is_hoc_a_markdown: L'Ora del Codice è nata come introduzione di un'ora
+    d'informatica, progettata per demistificare il "codice" e dimostrare che chiunque
+    può apprenderne le basi e ampliare la partecipazione nel campo dell'informatica.
+    Da allora è diventata uno sforzo mondiale per celebrare l'informatica, iniziando
+    con attività di codifica di 1 ora ma espandendosi a tutti i tipi di sforzi della
+    community. Dai uno sguardo ai [tutorials and activities](%{tutorials}). Questa
+    campagna di base è supportata da oltre [400 partners](%{partners}) e da 200,000
+    insegnanti in tutto il mondo.
   hoc_faq_last_year: Prova le esercitazioni
   hoc_faq_when_is_hoc_q: Quando è l'Ora del Codice?
   hoc_faq_when_is_hoc_a: L'Ora del Codice si svolge ogni anno durante la <a href='%{csedweek_url}'>Settimana
@@ -615,12 +629,12 @@ it:
     viene svolta ogni anno nel periodo in cui ricade la data di nascita della pioniera
     dell'Informatica <a href='%{grace_hopper}'>Ammiraglio Grace Murray Hopper</a>
     (9 dicembre 1906).
-  hoc_faq_when_is_hoc_a_markdown: The Hour of Code takes place each year during [Computer
-    Science Education Week](%{csedweek_url}). The %{campaign_date_year} Computer Science
-    Education Week will be %{campaign_date_full}, but you can host an Hour of Code
-    all year-round. Computer Science Education Week is held annually in recognition
-    of the birthday of computing pioneer [Admiral Grace Murray Hopper](%{grace_hopper})
-    (December 9, 1906).
+  hoc_faq_when_is_hoc_a_markdown: L'Ora del Codice si svolge ogni anno durante [Computer
+    Science Education Week](%{csedweek_url}). Il %{campaign_date_year} sarà la settimana
+    dell'educazione informatica %{campaign_date_full}, ma si può ospitare un'Ora del
+    Codice durante tutto l'anno. La settimana dell'educazione informatica si tiene
+    ogni anno in riconoscimento del compleanno del pioniere dell'informatica [Admiral
+    Grace Murray Hopper](%{grace_hopper}) (9, dicembre, 1906).
   hoc_faq_why_cs_q: Perché l'informatica?
   hoc_faq_why_cs_a: <i>Ogni</i> studente dovrebbe avere l'opportunità di imparare
     l'informatica. Aiuta a coltivare abilità riguardanti la risoluzione di problemi,
@@ -628,31 +642,33 @@ it:
     per raggiungere il successo in qualsiasi tipo di carriera del XXI secolo. Vedi
     ulteriori statistiche <a href='%{stats_url}'>qua</a>. Se sei in Italia visita
     il sito <a href="https://programmailfuturo.it">Programma il Futuro</a>.
-  hoc_faq_why_cs_a_markdown: _Every_ student should have the opportunity to learn
-    computer science. It helps nurture problem-solving skills, logic and creativity.
-    By starting early, students will have a foundation for success in any 21st-century
-    career path. See more stats [here](%{stats_url}).
+  hoc_faq_why_cs_a_markdown: "<i>Ogni</i> studente dovrebbe avere l'opportunità di
+    imparare l'informatica. Aiuta a coltivare abilità riguardanti la risoluzione di
+    problemi, la logica e la creatività. Iniziando in giovane età, gli studenti avranno
+    le basi per raggiungere il successo in qualsiasi tipo di carriera del XXI secolo.
+    Vedi ulteriori statistiche [here](%{stats_url})."
   hoc_faq_how_participate_q: Come partecipare all'Ora del Codice?
   hoc_faq_how_participate_a: "<a href='/how-to'>Inizia la progettazione qui</a> esaminando
     la nostra guida. Puoi organizzare un evento dell'Ora del Codice nella tua scuola
     o nel tua comunità &mdash; come, ad esempio, in un circolo, o in un'associazione
     senza scopo di lucro oppure al lavoro. In alternativa, puoi provarlo tu stesso
     a partire dal %{campaign_date}."
-  hoc_faq_how_participate_a_markdown: "[Start planning here](%{howto}) by reviewing
-    our how-to guide. You can organize an Hour of Code event at your school or in
-    your community — like in an extracurricular club, non-profit or at work. Or, just
-    try it yourself when %{campaign_date} arrives."
+  hoc_faq_how_participate_a_markdown: "[Start planning here](%{howto}) esaminando
+    la nostra guida. Puoi organizzare un evento dell'Ora del Codice nella tua scuola
+    o nel tua comunità — come, ad esempio, in un circolo, o in un'associazione senza
+    scopo di lucro oppure al lavoro. In alternativa, puoi provarlo tu stesso quando
+    arriva %{campaign_date}."
   hoc_faq_behind_hoc_q: Chi c'è dietro l'Ora del Codice?
   hoc_faq_behind_hoc_a: L'Ora di Codice è organizzata con il supporto del <a href='%{partner_url}'>Comitato
     Consultivo della Settimana di Educazione all'Informatica</a> così come di un raggruppamento
     senza precedenti di partner che si sono uniti per supportare l'Ora del Codice
     &mdash; compresi Microsoft, Apple, Amazon, Boys and Girls Clubs of America e la
     College Board.
-  hoc_faq_behind_hoc_a_markdown: The Hour of Code is driven by the Hour of Code and
-    Computer Science Education Week [Advisory and Review Committees](%{partner_url})
-    as well as an unprecedented coalition of partners that have come together to support
-    the Hour of Code — including Microsoft, Apple, Amazon, Boys and Girls Clubs of
-    America and the College Board.
+  hoc_faq_behind_hoc_a_markdown: L'Ora di Codice è organizzata con il supporto del  [Advisory
+    and Review Committees](%{partner_url}) della Settimana di Educazione all'Informatica,
+    così come di un raggruppamento senza precedenti di partner che si sono uniti per
+    supportare l'Ora del Codice — compresi Microsoft, Apple, Amazon, Boys and Girls
+    Clubs of America e la College Board.
   hoc_faq_host_q: Non so nulla di programmazione e di informatica. Posso organizzare
     ugualmente un evento?
   hoc_faq_host_a: Naturalmente. Le attività dell'Ora del Codice sono autogestite.
@@ -661,11 +677,11 @@ it:
     il resto. Abbiamo materiali adatti ad ogni età e livello di esperienza, a partire
     dall'età prescolare. Inizia a pianificare il tuo evento leggendo la <a href='/how-to'>guida
     che spiega come farlo</a>.
-  hoc_faq_host_a_markdown: Of course. Hour of Code activities are self-guided. All
-    you have to do is [try our current tutorials](%{codeorg_url}/learn), pick the
-    tutorial you want, and pick an hour — we take care of the rest. We also have options
-    for every age and experience-level, from kindergarten and up. Start planning your
-    event by reading our [how to guide](%{howto}).
+  hoc_faq_host_a_markdown: Naturalmente. Le attività dell'Ora del Codice sono autogestite.
+    Tutto ciò che devi fare è  [try our current tutorials](%{codeorg_url}/learn),
+    scegliere quello che preferisci e un orario — noi pensiamo a tutto il resto. Abbiamo
+    materiali adatti ad ogni età e livello di esperienza, a partire dall'età prescolare.
+    Inizia a pianificare il tuo evento leggendo la nostra [how to guide](%{howto}).
   hoc_faq_devices_q: Quali dispositivi dovrei usare per i miei studenti?
   hoc_faq_devices_a: I corsi di Code.org funzionano su tutti i browser e dispositivi.
     È possibile vedere ulteriori informazioni circa i requisiti tecnologici dei corsi
@@ -675,11 +691,12 @@ it:
     href='%{unplugged_url}'> corsi tradizionali</a> se la scuola non ha strumentazione
     informatica! Sul sito di Programma il Futuro si possono trovare <a href="https://programmailfuturo.it/come/lezioni-tradizionali">alcune
     lezioni tradizionali tradotte in italiano</a>.
-  hoc_faq_devices_a_markdown: Code.org tutorials work on all devices and browsers.
-    You can see more information about Code.org's tutorial tech needs [here](%{codeorg_url}/educate/it).
-    Tech needs for non-Code.org tutorials can be found on [%{partner_url}/learn](%{codeorg_url}/learn)
-    in the tutorial specific description. Don't forget we also offer [unplugged activities](%{unplugged_url})
-    if your school can't accommodate the tutorials!
+  hoc_faq_devices_a_markdown: I tutorial di Code.org funzionano su tutti i browser
+    e dispositivi. È possibile vedere ulteriori informazioni circa i requisiti tecnologici
+    dei corsi di Code.org su [here](%{codeorg_url}/educate/it). I requisiti tecnologici
+    per i tutorial non- Code.org sono disponibili su [%{partner_url}/learn](%{codeorg_url}/learn)
+    nella descrizione degli specifici corsi. Non dimenticate che offriamo anche [unplugged
+    activities](%{unplugged_url}) se la scuola non dispone della strumentazione informatica!
   hoc_faq_need_computers_q: Ho bisogno di un computer per ogni partecipante?
   hoc_faq_need_computers_a: No. Abbiamo lezioni dell'Ora del Codice che funzionano
     su PC, su smartphone, su tablet oltre a lezioni che non necessitano di alcun computer!
@@ -697,29 +714,27 @@ it:
     (<a href="https://programmailfuturo.it/come/lezioni-tradizionali">alcune lezioni
     tradizionali tradotte in italiano</a>)</ul>
   hoc_faq_need_computers_a_markdown: |-
-    No. We have Hour of Code tutorials that work on PCs, smartphones, tablets, and some that require no computer at all! You can join wherever you are, with whatever you have.
+    No. Abbiamo lezioni dell'Ora del Codice che funzionano su PC, su smartphone, su tablet oltre a lezioni che non necessitano di alcun computer! Puoi prendere parte a questo evento dovunque tu sia con qualsiasi strumento tu abbia a disposizione.
 
-    _Here are a few options:_
+    _Ecco alcune opzioni_
 
-    - **Work in pairs.** [Research shows](%{pair_programming_research}) students learn best with [pair programming](%{pair_programming_video}), sharing a computer and working together. Encourage your students to double up.
-    - **Use a projected screen.** If you have a projector and screen for a Web-connected computer, your entire group can do an Hour of Code together. Watch video portions together and take turns solving puzzles or answering questions.
-    - **Go unplugged.** We offer [tutorials that require no computer](%{unplugged_url}) at all.
+    - **Lavorare in coppia.** [Research shows](%{pair_programming_research}) gli studenti imparino meglio attraverso la [pair programming](%{pair_programming_video}), condividendo un computer e lavorando insieme. Incoraggia i tuoi studenti a lavorare insieme. _**Utilizza un proiettore.** Se hai un proiettore e un computer connesso ad internet, i tuoi studenti potranno partecipare all'Ora del Codice tutti insieme. Guardate insieme le parti dei video e a turno risolvete gli esercizi o rispondete alle domande. _**Usa le lezioni tradizionali.** Offriamo anche [tutorials that require no computer](%{unplugged_url}).
   hoc_faq_international_q: Io sono in Italia. Come posso partecipare a livello internazionale?
   hoc_faq_international_a: Tutti possono organizzare un evento dell'Ora del Codice,
     in tutto il mondo. L'anno scorso hanno partecipato all'Ora del Codice studenti
     di ogni parte del mondo. Per saperne di più clicca <a href='/promote'>qui</a>.
-  hoc_faq_international_a_markdown: Anyone can organize an Hour of Code event, anywhere
-    in the world. Last year, students worldwide joined together for the Hour of Code.
-    Find out more [here](%{promote}).
+  hoc_faq_international_a_markdown: Tutti possono organizzare un evento dell'Ora del
+    Codice, in tutto il mondo. L'anno scorso hanno partecipato all'Ora del Codice
+    studenti di ogni parte del mondo. Per saperne di più [here](%{promote}).
   hoc_faq_tutorial_q: Come posso creare un'esercitazione dell'Ora del Codice?
   hoc_faq_tutorial_a: Se sei interessato a creare un'esercitazione, <a href='/tutorial-guidelines'>leggi
     le nostre linee guida e le istruzioni</a>. Ci piacerebbe offrire una grande varietà
     di opzioni coinvolgenti, ma l'obiettivo primario è ottimizzare l'esperienza per
     gli studenti e gli insegnanti che si affacciano per la prima volta all'informatica.
-  hoc_faq_tutorial_a_markdown: If you're interested in becoming a tutorial partner,
-    [see our guidelines and instructions](%{tutorial_guidelines}). We'd like to host
-    a variety of engaging options, but the primary goal is to optimize the experience
-    for students and teachers who are new to computer science.
+  hoc_faq_tutorial_a_markdown: Se sei interessato a creare un tutorial, [see our guidelines
+    and instructions](%{tutorial_guidelines}). Ci piacerebbe offrire una grande varietà
+    di opzioni coinvolgenti , ma l'obbiettivo primario è ottimizzare l'esperienza
+    per gli studenti ed i docenti che si affacciano per la prima volta all'informatica.
   hoc_faq_account_q: Gli studenti devono accedere utilizzando un account?
   hoc_faq_account_a: Assolutamente no. Non è richiesta alcuna registrazione o login
     agli studenti che vogliono provare l'Ora del Codice. La maggior parte dei <a href='%{codeorg_url}/learn/beyond'>
@@ -727,23 +742,25 @@ it:
     e i progressi degli studenti. Inoltre, iscriversi all'Ora del Codice NON crea
     automaticamente un account sulla piattaforma Code studio. Se sei in Italia iscriviti
     attraverso il sito di <a href="http://programmailfuturo.it">Programma il Futuro</a>.
-  hoc_faq_account_a_markdown: No. Absolutely no signup or login is required for students
-    to try the Hour of Code. Most of the [follow-on courses](%{codeorg_url}/learn/beyond)
-    require account creation to save student progress. Also, signing up for the Hour
-    of Code does NOT automatically create a Code Studio account. If you do want to
-    create accounts for your students, please follow these [instructions](https://youtu.be/_smelV_KISE).
+  hoc_faq_account_a_markdown: Assolutamente no. Non è richiesta alcuna registrazione
+    o accesso agli studenti che vogliono provare l'Ora del Codice. La maggior parte
+    dei [follow-on courses](%{codeorg_url}/learn/beyond)  invece richiede un account
+    per registrare i percorsi e i progressi degli studenti. Inoltre, iscriversi all'Ora
+    del Codice NON crea automaticamente un account sulla piattaforma Code studio.
+    Se desideri creare account per i tuoi studenti, segui queste [instructions](https://youtu.be/_smelV_KISE).
   hoc_faq_high_school_q: Quale attività dovrei fare con gli studenti delle scuole
     superiori?
   hoc_faq_high_school_a: |-
     I nostri corsi con Guerre Stellari e Minecraft sono perfetti per le scuole superiori, soprattutto la versione JavaScript di Guerre Stellari, e gli esercizi "liberi" su entrambi i corsi.<br>
     Indipendentemente dall'età, raccomandiamo di provare prima le lezioni per principianti su <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a> come, ad esempio, la lezione Angry Birds o quella con Anna ed Elsa. Uno studente di scuola superiore è in grado di terminare ciascuna di essa in non più di 30 minuti; successivamente può provare una lezione avanzata per il linguaggio Javascript tra quelli proposti su Khan Academy o CodeHS.
-  hoc_faq_high_school_a_markdown: Our Star Wars and Minecraft tutorials are great
-    for high schoolers, especially the Star Wars JavaScript version and the free play
-    level on both tutorials. Alternately, we recommend trying one of the beginner
-    tutorials on [%{partner_url}/learn](%{codeorg_url}/learn) to start, such as the
-    tutorial with Angry Birds or with Anna and Elsa. A high school student should
-    be able to finish one of these in 30 minutes and can then try a more advanced
-    tutorial in JavaScript, such as Khan Academy or CodeHS.
+  hoc_faq_high_school_a_markdown: I nostri corsi con Guerre Stellari e Minecraft sono
+    perfetti per le scuole superiori, soprattutto la versione JavaScript di Guerre
+    Stellari, e gli esercizi "liberi" su entrambi i corsi. In alternativa, ti consigliamo
+    di provare uno dei tutorial per principianti su [%{partner_url}/learn](%{codeorg_url}/learn)
+    come, ad esempio, il tutorial con Angry Birds o quello con Anna ed Elsa. Uno studente
+    di scuola superiore è in grado di terminare ciascuna di essa in non più di 30
+    minuti; successivamente può provare una lezione avanzata per il linguaggio Javascript
+    tra quelli proposti su Khan Academy o CodeHS.
   hoc_faq_scratch_q: Sto usando Scratch per l'Ora del Codice, ma cosa succede se i
     miei studenti hanno un iPad invece di un computer portatile?
   hoc_faq_scratch_a: Scratch non viene eseguito sui tablet. Se gli studenti sono giovani,
@@ -751,10 +768,11 @@ it:
     un'occhiata alle <a href="https://programmailfuturo.it/come/ora-del-codice/introduzione">attività
     disponibili</a>, ne puoi trovare altre che funzionano su iPad - da Code.org, Tynker,
     Lightbot o CodeSpark. Vedi anche <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>
-  hoc_faq_scratch_a_markdown: Scratch doesn't run on tablets. If your students are
-    young, they can use the ScratchJR iPad app (for early-readers). If you look at
-    the tutorials on [%{partner_url}/learn](%{codeorg_url}/learn), you can find other
-    tutorials that work on iPads - from Code.org, Tynker, Lightbot, or CodeSpark.
+  hoc_faq_scratch_a_markdown: Scratch non funziona sui tablet. Se gli studenti sono
+    giovani, possono utilizzare l'app ScratchJR (per i bambini-più piccoli) per iPad.
+    Se dai un'occhiata ai tutorial su  [%{partner_url}/learn](%{codeorg_url}/learn),
+    ne puoi trovare altri che funzionano su iPad - su Code.org, Tynker, Lightbot o
+    CodeSpark.
   hoc_faq_count_hoc_q: In che modo contate le Ore del Codice fatte?
   hoc_faq_map_q: Perché non vedo il mio segnalino sulla mappa?
   hoc_faq_map_a: Ci dispiace che non si veda il tuo evento sulla mappa dell'Ora del
@@ -764,23 +782,24 @@ it:
     tua nazione e puoi trovare il tuo evento lì elencato. Inoltre, date le migliaia
     di persone che si iscrivono all'Ora del Codice, sono in genere necessarie 48 ore
     per aggiornare la mappa. Ritorna a controllare tra un paio di giorni!
-  hoc_faq_map_a_markdown: We're so sorry you aren't seeing your event on the Hour
-    of Code map. Because of the tens of thousands of organizers who sign up, the map
-    aggregates the data and displays one point for several events. If you click the
-    [events page](%{events_url}) link below the map you will be directed to a list
-    of all events by state and can find your event listed there. Additionally, given
-    the thousands of people signing up for the Hour of Code, the map and event list
-    usually takes 48 hours to update. Check back in a few days!
+  hoc_faq_map_a_markdown: Ci dispiace che tu non veda il tuo evento sulla mappa dell'Ora
+    del Codice. A causa delle decine di migliaia di organizzatori che si iscrivono,
+    la mappa aggrega i dati e visualizza un singolo segnalino per diversi eventi.
+    Se clicchi sul link [events page](%{events_url}) sotto la mappa accedi a un elenco
+    di tutti gli eventi della tua nazione e puoi trovare il tuo evento elencato tra
+    questi. Inoltre, date le migliaia di persone che si iscrivono all'Ora del Codice,
+    sono in genere necessarie 48 ore per aggiornare la mappa. Ritorna a controllare
+    tra un paio di giorni!
   hoc_faq_count_hoc_a: Il contatore dell'Ora del Codice non misura le ore svolte in
     senso strettamente temporale. Non contiamo esattamente le ore di codice fatte
     da ogni studente anche perché ogni studente non ha bisogno di accedere o registrarsi.
     Di conseguenza, noi facciamo una stima del tempo che tutti i partecipanti hanno
     trascorso usando le nostre esercitazioni. Leggi tutti i dettagli <a href='%{codeorg_url}/loc'>qui</a>.
-  hoc_faq_count_hoc_a_markdown: The Hour of Code tracker isn't an exact measurement
-    of usage. We do not count unique student IDs perfectly when tracking participation
-    in the Hour of Code, especially because we don't require students to log in or
-    register. As a result, we both over-count and under-count participants at the
-    same time. Read all the details [here](%{codeorg_url}/loc).
+  hoc_faq_count_hoc_a_markdown: Il contatore dell'Ora del Codice non misura le ore
+    svolte in senso strettamente temporale. Non contiamo esattamente le ore di codice
+    fatte da ogni studente anche perché ogni studente non ha bisogno di accedere o
+    registrarsi. Di conseguenza, noi facciamo una stima del tempo che tutti i partecipanti
+    hanno trascorso usando le nostre esercitazioni. Leggi tutti i dettagli [here](%{codeorg_url}/loc).
   hoc_faq_one_hour_q: Quanto posso imparare in un'ora?
   hoc_faq_one_hour_a: L'obiettivo dell'Ora del Codice non è di insegnare a diventare
     un esperto informatico in un'ora. Un'ora è solo quanto basta per rendersi conto
@@ -803,44 +822,59 @@ it:
     che i loro studenti vogliono e gli insegnanti sono in grado di fare. <br/> <br/>
     Soprattutto, ciò che tutti i partecipanti possono imparare in un'ora, è che POSSONO
     FARCELA.
-  hoc_faq_one_hour_a_markdown: |-
-    The goal of the Hour of Code is not to teach anybody to become an expert computer scientist in one hour. One hour is only enough to learn that computer science is fun and creative, that it is accessible at all ages, for all students, regardless of background. The measure of success of this campaign is not in how much CS students learn - the success is reflected in broad participation across gender and ethnic and socioeconomic groups, and the resulting increase in enrollment and participation we see in CS courses at all grade levels. Millions of the participating teachers and students have decided to go beyond one hour -  to learn for a whole day or a whole week or longer, and many students have decided to enroll in a whole course (or even a college major) as a result.
-
-    Besides the students, another "learner" is the educator who gains the confidence after one hour that they can teach computer science even though they may not have a college degree as a computer scientist. Tens of thousands of teachers decide to pursue computer science further, either attending PD or offering follow-on online courses, or both. And this applies to school administrators too, who realize that computer science is something their students want and their teachers are capable of.
-
-    Above all, what all participants can learn in an hour is that we can do this.
+  hoc_faq_one_hour_a_markdown: "L'obiettivo dell'Ora del Codice non è di insegnare
+    a diventare un esperto informatico in un'ora. Un'ora è solo quanto basta per rendersi
+    conto che l'informatica è divertente e creativa, che è accessibile a tutte le
+    età, a tutti gli studenti, indipendentemente dal contesto. La misura del successo
+    di questa campagna non è quanta informatica imparano gli studenti - il successo
+    è misurato dall'ampia partecipazione dei generi e dei vari gruppi etnici e socioeconomici
+    e il conseguente incremento di iscrizione ai corsi di informatica e la crescente
+    partecipazione che vediamo nei corsi di informatica a tutti i livelli. Milioni
+    di partecipanti, insegnanti e studenti, hanno deciso di proseguire al di là di
+    un'ora - di imparare per un intero giorno o un'intera settimana o più, e molti
+    studenti - come risultato di questo progetto - hanno deciso di iscriversi a un
+    intero corso universitario di informatica (o anche di laurearsi in informatica).
+    \n\nOltre agli studenti, un altro \"discente\" è l'educatore che acquisisce fiducia,
+    dopo un'ora di lavoro, che è in grado di iniziare ad insegnare informatica anche
+    se non ha necessariamente una laurea universitaria in informatica. Decine di migliaia
+    di insegnanti decidono di proseguire ulteriormente nello studio dell'informatica,
+    frequentando corsi in presenza oppure online, o entrambi. E questo vale anche
+    per gli amministratori della scuola, che capiscono quanto l'informatica sia qualcosa
+    che i loro studenti vogliono e gli insegnanti sono in grado di fare. \n\nSoprattutto,
+    ciò che tutti i partecipanti possono imparare in un'ora, è che possiamo farlo."
   hoc_faq_more_questions_q: Hai ancora domande?
   hoc_faq_more_questions_a: Cerca una risposta nel nostro <a href='http://support.code.org'>
     forum di supporto</a>. Se sei in Italia visita <a href='http://programmailfuturo.it'>
     sito di supporto</a>.
-  hoc_faq_more_questions_a_markdown: Try finding an answer in our [support forum](http://support.code.org).
+  hoc_faq_more_questions_a_markdown: Cerca una risposta nel nostro [support forum](http://support.code.org).
   hoc_faq_keep_learning_q: Come continuo ad imparare dopo l'Ora del Codice?
   hoc_faq_keep_learning_a: Chiunque può organizzare un'Ora del Codice in qualsiasi
     momento. Le nostre esercitazioni sono sempre disponibili, per tutto il tempo che
     vorrai. Vai alla pagina <a href='/promote'> promuovi</a> per guide a come organizzare
     un evento ed altre risorse utili per contribuire a rendere il tuo evento dell'Ora
     del Codice un successo.
-  hoc_faq_keep_learning_a_markdown: Anyone can host an Hour of Code at any time. The
-    tutorials stay up year-round. You can expect all our tutorials and curriculum
-    to be available on our site in perpetuity. Please go to [our resources](%{promote})
-    for event how-to guides and other resources to help make your Hour of Code event
-    a success.
+  hoc_faq_keep_learning_a_markdown: Chiunque può organizzare un'Ora del Codice in
+    qualsiasi momento. I nostri tutorial sono sempre disponibili, per tutto l'anno.
+    Puoi aspettarti che tutti i nostri tutorial e piani di studio siano sempre disponibili
+    sul nostro sito. Vai alla pagina [our resources](%{promote}) per guide a come
+    organizzare un evento ed altre risorse utili per contribuire a rendere il tuo
+    evento dell'Ora del Codice un successo.
   hoc_faq_certificates_q: Dove posso stampare gli attestati per i miei studenti?
   hoc_faq_certificates_a: |-
     Se sei in Italia puoi stampare gli attestati personalizzati da <a href="http://programmailfuturo.it/come/attestati-personalizzati">questa pagina</a>.<br>
     Vai alla <a href='%{codeorg_url}/certificates'> pagina dei certificati</a> dove è possibile stampare in anticipo i certificati per l'intera classe. È possibile anche stampare certificati <a href='%{codeorg_url}/certificates?course=mc'> speciali</a> per gli studenti che fanno il corso di Minecraft.
-  hoc_faq_certificates_a_markdown: Go to our [certificates page](%{codeorg_url}/certificates)
-    where you can print certificates for your entire class ahead of time. You can
-    also print out [special certificates](%{codeorg_url}/certificates?course=mc) for
-    students doing the Minecraft tutorial.
+  hoc_faq_certificates_a_markdown: Vai alla [certificates page](%{codeorg_url}/certificates)
+    dove potrai stampare in anticipo i certificati per l'intera classe. È possibile
+    anche stampare [special certificates](%{codeorg_url}/certificates?course=mc) per
+    gli studenti che seguono il corso di Minecraft.
   hoc_faq_logo_q: Ci sono limitazioni per l'uso del logo o del nome "Hour of Code"?
   hoc_faq_logo_a: '"Hour of Code" è un marchio registrato. Non vogliamo impedire il
     suo utilizzo, ma vogliamo essere sicuri che il suo utilizzo rientri all''interno
     di alcuni limiti. Consulta <a href=''https://support.code.org/hc/en-us/articles/215831637-Are-there-limitations-of-how-I-can-use-the-Hour-of-Code-logo-''>
     queste linee guida per l''utilizzo</a>.'
-  hoc_faq_logo_a_markdown: Hour of Code is trademarked. We don't want to prevent its
-    usage, but we want to make sure its usage fits within a few limits. Please see
-    [these guidelines for usage](%{logo_url}).
+  hoc_faq_logo_a_markdown: '"Hour of Code" è un marchio registrato. Non vogliamo impedire
+    il suo utilizzo, ma vogliamo essere sicuri che il suo utilizzo rientri all''interno
+    di alcuni limiti. Consulta [these guidelines for usage](%{logo_url}).'
   stats_hoc_2013_image_alt: Statistiche dell'Ora del Codice per il 2013
   stats_growth: E' stato il più veloce a raggiungere i 15 milioni di utenti.
   stats_i18n: Gli studenti stanno imparando in più di 45 lingue diverse
@@ -853,12 +887,12 @@ it:
   stats_global: Oltre 100 milioni di studenti hanno provato l'Ora del Codice
   stats_girls_more: Si sono avvicinate all'informatica più ragazze che negli ultimi
     70 anni
-  stats_females: Participation of female students in computer science is only 20-25%
-    of high school courses, university courses, and the workforce.
-  stats_females_more: During the Hour of Code, female students make up <b>50% of all
-    participants</b>!
-  stats_females_more_markdown: During the Hour of Code, female students make up **50%
-    of all participants**!
+  stats_females: La partecipazione delle studentesse all'informatica è solo del 20-25%
+    dei corsi delle scuole superiori, dei corsi universitari e della forza lavoro.
+  stats_females_more: Durante l'Ora del Codice, le studentesse sono il <b> 50% di
+    tutti i partecipanti </b>!
+  stats_females_more_markdown: Durante l'Ora del Codice, le studentesse formano il
+    **50% di tutti i partecipanti**!
   stats_nina: '"Ogni giorno ottengo sempre lo stesso risultato&mdash; il 100% di attenzione."-
     Nina Nichols Peery, Insegnante'
   stats_student: '"Sapevo che questa era un''occasione <b>irripetibile</b>."-Mariana
@@ -907,8 +941,8 @@ it:
   videos_creativity: Che cos'è la Creatività?
   videos_creativity_series: Che cos'è la Creatività? Vedi tutte le serie.
   title_country_resources: Risorse specifiche per una nazione
-  title_hoc_advisory_committee: Hour of Code and CSEdWeek Advisory Committee
-  title_hoc_review_committee: Hour of Code and CSEdWeek Review Committee
+  title_hoc_advisory_committee: Comitati esecutivi di "Hour of Code" e "CSEdWeek"
+  title_hoc_review_committee: Comitato di revisione per l'Ora del Codice e CSEdWeek
   title_how_to_promote: Spargi la voce
   title_how_to_districts: L'Ora del Codice - Guida per le Province
   title_how_to_events: Come organizzare un evento dell'Ora del Codice
@@ -986,10 +1020,10 @@ it:
     iniziando con un'Ora del Codice.
   learn_banner_beyond: Vuoi continuare ad imparare? <a id='learn_banner_beyond'>Vai
     oltre l'Ora del Codice</a>
-  learn_banner_beyond_markdown: Want to keep learning? [Go beyond an hour](%{url})
+  learn_banner_beyond_markdown: Vuoi continuare ad imparare? [Go beyond an hour](%{url})
   learn_banner_teachers: 'Insegnanti: <a id=''teacher_banner_host''>Organizza un''Ora
     del Codice</a> oppure <a id=''teacher_banner_howto''>leggi la guida</a>'
-  learn_banner_teachers_markdown: 'Teachers: [Host an hour](%{host_url}) or [read
+  learn_banner_teachers_markdown: 'Insegnanti: [Host an hour](%{host_url}) o [read
     the How-To Guide](%{howto_url})'
   learn_robotics_banner_heading: ROBOTICA
   learn_robotics_banner_blurb: Hai dei robot o dei kit di elettronica educativa? Usali
@@ -998,7 +1032,7 @@ it:
     iniziare anche senza hardware.
   tutorial_dance2019_name: Dance Party 2019
   tutorial_danceparty_name: Ballando col codice
-  tutorial_chibitronics_name: 'Chibitronics: Illuminated Story'
+  tutorial_chibitronics_name: 'Chibitronic: Storia geniale'
   tutorial_athlete_name: Programma il tuo sport
   tutorial_moana_name: 'Oceania: orientati con il Codice'
   tutorial_star-wars_name: 'Star Wars: Costruisci una galassia con Code'
@@ -1077,7 +1111,7 @@ it:
   tutorial_buildpong_name: Costruire Pong con l'Intelligenza Artificiale
   tutorial_tynkerdrones_name: Programmare droni e robot
   tutorial_carla_name: Programmazione con Carla
-  tutorial_zulama_name: Zulama MakeQuest Video Game Activity
+  tutorial_zulama_name: Attività di videogioco Zulama MakeQuest
   tutorial_capost_name: Costruire una cartolina digitale con HTML e CSS
   tutorial_marco_name: Run Marco!
   tutorial_codestersflappybike_name: Flappy Bike
@@ -1153,51 +1187,52 @@ it:
   tutorial_grok_name: Grok Learning
   tutorial_ijournalist_name: iJournalist
   tutorial_bbcmusic_name: Programmazione Bitsbox + Musica
-  tutorial_secretcodes_name: Secret Codes Activity
-  tutorial_tlchex_name: HexaHexaFlexagon Automata Activity
-  tutorial_tickles_name: Sphero Run
-  tutorial_ozogame_name: Create an Ozobot Game Level
+  tutorial_secretcodes_name: Attività con i codici segreti
+  tutorial_tlchex_name: Attività di HexaHexaFlexagon Automata
+  tutorial_tickles_name: La corsa di Shero
+  tutorial_ozogame_name: Crea un livello di gioco Ozobot
   tutorial_vidcodeio_name: Ingresso e uscita, attività di matematica
   tutorial_besttech_name: Miglior attività tecnologica
   tutorial_tlcbrain_name: Attività cervello-in-una-borsa
   tutorial_hopquiz_name: Creatore di quiz
   tutorial_unfortunate_name: Una serie di sfortunati eventi
   tutorial_cha_name: Attività sulla storia del computer
-  tutorial_elaseq_name: 'Writing and Coding: ELA Integration with Common Core Standards'
+  tutorial_elaseq_name: 'Scrittura e codifica: integrazione ELA con standard fondamentali
+    comuni'
   tutorial_bbcmathi_name: Programmazione Bitsbox + Matematica (3-5)
   tutorial_tlcpixel_name: Puzzles di pixel
   tutorial_arduino_name: Attività con Arduino
   tutorial_introrobo_name: Introduzione alla robotica
-  tutorial_tlcinvis_name: Invisible Palming Activity
-  tutorial_tlcjflap_name: 'JFLAP: Creating Finite State Machines'
+  tutorial_tlcinvis_name: Attività di palming invisibile
+  tutorial_tlcjflap_name: 'JFLAP: creazione di macchine a stati finiti'
   tutorial_procolor_name: Programmazione con i colori
-  tutorial_spiralsfinch_name: Spirals with the Finch
+  tutorial_spiralsfinch_name: Disegnare Spirali con Finch
   tutorial_ozoi_name: Un'introduzione alla programmazione e Ozobot
-  tutorial_ticklel_name: LEGO Bricker
+  tutorial_ticklel_name: Costruzioni LEGO
   tutorial_spiralsdash_name: Disegnare spirali con Dash
   tutorial_ghdebug_name: Attività di debug Grace Hopper
   tutorial_tlckk_name: Puzzle di Kriss-Kross
   tutorial_firstcomp_name: Il mio primo Computer
   tutorial_mazefinch_name: Attraverso il labirinto con il Robot Finch
-  tutorial_tlccc_name: Compression Code Puzzles
-  tutorial_tlcdoodle_name: Algorithmic Doodle Art
-  tutorial_tlcpunch_name: Punch Card Searching Activity
-  tutorial_finchfract_name: Finch Fractals
-  tutorial_tlcmind_name: The Red Black Mind Meld Activity
-  tutorial_tlctelebot_name: The Teleporting Robot Activity
-  tutorial_tlcaus_name: Australian Magician's Dream Activity
+  tutorial_tlccc_name: Esercizi di compressione con il codice
+  tutorial_tlcdoodle_name: Scarabocchi Artistici creati con gli Algoritmi
+  tutorial_tlcpunch_name: Attività di Ricerca con Schede Perforate
+  tutorial_finchfract_name: I Frattali con Finch
+  tutorial_tlcmind_name: L'attività di fusione mentale rosso nera
+  tutorial_tlctelebot_name: Attività del Robot Teletrasportatore
+  tutorial_tlcaus_name: Attività del Sogno del Mago Australiano
   tutorial_oralhist_name: 'Storia: Progetto orale'
-  tutorial_tlcmicro_name: Microwave Racing Video Activity
-  tutorial_imathematician_name: iMathematician
-  tutorial_tlcmagic_name: Magical Book Magic
+  tutorial_tlcmicro_name: Video Attività della Corsa dei Microonde
+  tutorial_imathematician_name: iMatematico
+  tutorial_tlcmagic_name: Magia del Libro Magico
   tutorial_scratchmus_name: Fare musica con Scratch
   tutorial_scratchanim_name: Anima il tuo nome con Scratch
   tutorial_scratchfly_name: Fallo volare con Scratch
-  tutorial_tynkerarc_name: Undersea Arcade Game Kit
-  tutorial_grokffpython_name: Frozen Fractals (Python Turtle)
-  tutorial_grokffblock_name: Frozen Fractals (Blockly Turtle)
+  tutorial_tynkerarc_name: Kit del Gioco Arcade Sottomarino
+  tutorial_grokffpython_name: Frattali Congelati (Tartaruga Python)
+  tutorial_grokffblock_name: Frattali Congelati (Tartaruga Blockly)
   tutorial_grokeliza_name: È umana Eliza? (Python)
-  tutorial_tynkercan_name: Physics Cannon 2-Player Game Kit
+  tutorial_tynkercan_name: Kit di gioco per 2 giocatori di Physics Cannon
   tutorial_grokflags_name: Bandiere del Mondo (Tartaruga Python)
   tutorial_robomind_name: Programma un robot virtuale con RoboMind
   tutorial_scratchanimwork_name: 'Anima il Tuo Nome: Guida per l''Educatore'
@@ -1273,51 +1308,51 @@ it:
   tutorial_khanweb_name: 'Accademia Khan: pagine Web'
   tutorial_khandata_name: 'Accademia Khan: banche dati'
   tutorial_robomeshiq_name: Programma i Robot VEX IQ con Blockly
-  tutorial_googlelogo_name: Create your own Google logo
-  tutorial_playtune_name: Play That Tune App
+  tutorial_googlelogo_name: Crea il tuo logo Google
+  tutorial_playtune_name: Riproduci l'app That Tune
   tutorial_computeit_name: Compute It
-  tutorial_codesterssj_name: Space Jokes
-  tutorial_cmchat_name: Trivia Chatbot
+  tutorial_codesterssj_name: Scherzi spaziali
+  tutorial_cmchat_name: Chat con il robot
   tutorial_tynkerdb_name: Soffio di Drago
-  tutorial_cmbuild_name: Game Builder
-  tutorial_robotrattle_name: Robot Rattle
-  tutorial_codestersh_name: Hedgehog Designs
-  tutorial_codehsdigipixel_name: Digital Art in Pixels with CodeHS
-  tutorial_ccbinary_name: Binary Hero
-  tutorial_codehsturtle_name: Program in Python with Tracy the Turtle
-  tutorial_grokhd_name: Hydrangea Danger
-  tutorial_grokem_name: Emoticon Madness
-  tutorial_kodmaze_name: Maze Maker Challenges
+  tutorial_cmbuild_name: Generatore di gioco
+  tutorial_robotrattle_name: Sonaglio del robot
+  tutorial_codestersh_name: Disegni di riccio
+  tutorial_codehsdigipixel_name: Arte digitale in pixel con CodeHS
+  tutorial_ccbinary_name: Eroe binario
+  tutorial_codehsturtle_name: Programma in Python con Tracy la tartaruga
+  tutorial_grokhd_name: Pericolo di ortensie
+  tutorial_grokem_name: Follia di emoticon
+  tutorial_kodmaze_name: Sfide di Maze Maker
   tutorial_codestersa_name: Asteroid Dodge
-  tutorial_cmdodo_name: Dodo Does Math
+  tutorial_cmdodo_name: Dodo fa matematica
   tutorial_tynkerspace_name: Ricerca nello Spazio
-  tutorial_gfbloons_name: Bloons Trigonometry Defense
+  tutorial_gfbloons_name: Difesa trigonometrica di Bloons
   tutorial_raspipong_name: Sense HAT Pong
-  tutorial_codehsvr_name: Create Virtual Worlds with CodeHS
+  tutorial_codehsvr_name: Crea mondi virtuali con CodeHS
   tutorial_codesterstp_name: Trasformazioni geometriche
   tutorial_codestersbb_name: Basket
-  tutorial_gfcrossyroad_name: Learn to Code with Crossy Road
+  tutorial_gfcrossyroad_name: Impara a programmare con Crossy Road
   tutorial_googleww_name: Wonder Woman
-  tutorial_codehsjsapp_name: Make a Real App with JavaScript
+  tutorial_codehsjsapp_name: Crea una vera app con JavaScript
   tutorial_gfmihi_name: Mihi Maker
-  tutorial_hopdropphone_name: Make "Don't Drop the Phone" on iPad/iPhone
-  tutorial_techfaa_name: Flocking Autonomous Agents
-  tutorial_codehsjsgraph_name: JavaScript Graphics with CodeHS
+  tutorial_hopdropphone_name: Fai "Non far cadere il telefono" su iPad/iPhone
+  tutorial_techfaa_name: Floccaggio di agenti autonomi
+  tutorial_codehsjsgraph_name: Grafica JavaScript con CodeHS
   tutorial_thunkable_name: Learn How to Build 10 Apps in 1 Hour!
-  tutorial_hopcrossyroad_name: Make Crossy Road on iPad/iPhone
-  tutorial_switchglitch_name: 'Switch & Glitch: Robot Adventure'
-  tutorial_codecar_name: Code Car Simulator
+  tutorial_hopcrossyroad_name: Crea Crossy Road su iPad/iPhone
+  tutorial_switchglitch_name: 'Switch & Glitch: Avventura robotica'
+  tutorial_codecar_name: Simulatore di codice auto
   tutorial_codesterscp_name: Il piano cartesiano
-  tutorial_grokpetblock_name: Virtual Pet (micro:bit Blockly)
-  tutorial_techbim_name: Basic Image Manipulation
-  tutorial_techfpp_name: Introduction to Functional Programming with Python
-  tutorial_codesterscr_name: Cheer Routines
-  tutorial_grokdisease_name: Disease Epidemic
-  tutorial_techec_name: Explaining Closures in JS
-  tutorial_rgbegin_name: RoboGarden Coding - Beginner
-  tutorial_myradream_name: 'Actimator: Myra''s Dream'
-  tutorial_thinkfun_name: 'Robot Repair: Can You Fix the Robot Brain?'
-  tutorial_hopfireworks_name: Make a Fireworks App on iPad/iPhone
+  tutorial_grokpetblock_name: Animale domestico virtuale (micro:bit Blockly)
+  tutorial_techbim_name: Manipolazione di base delle immagini
+  tutorial_techfpp_name: Introduzione alla programmazione funzionale con Python
+  tutorial_codesterscr_name: Routine in allegria
+  tutorial_grokdisease_name: Epidemia di malattia
+  tutorial_techec_name: Spiegazione delle chiusure in JavaScript
+  tutorial_rgbegin_name: Codifica RoboGarden - Principiante
+  tutorial_myradream_name: 'Attimatore: Il sogno di Myra'
+  tutorial_thinkfun_name: 'Riparazione del robot: sai riparare il cervello del robot?'
+  tutorial_hopfireworks_name: Crea un'app Fireworks su iPad/iPhone
   tutorial_grokspace_name: Space (Blockly)
   tutorial_codehspython_name: Code in Python with CodeHS
   tutorial_codehsjava_name: Coding in Java with CodeHS
@@ -2133,12 +2168,12 @@ it:
   tutorial_codehsjsapp_shortdescription: Code your first real app with JavaScript!
   tutorial_gfmihi_shortdescription: Code your own mini-game and learn how to introduce
     yourself in Te Reo Maori (the indigenous language of New Zealand)
-  tutorial_hopdropphone_shortdescription: Make "Don't Drop the Phone" on iPad/iPhone
+  tutorial_hopdropphone_shortdescription: Fai "Non far cadere il telefono" su iPad/iPhone
   tutorial_techfaa_shortdescription: Simulate a visually impressive life-like behavior
     of group entities
   tutorial_codehsjsgraph_shortdescription: Make your own graphics and drawing programs!
   tutorial_thunkable_shortdescription: 1 hour, 10 apps
-  tutorial_hopcrossyroad_shortdescription: Make Crossy Road on iPad/iPhone
+  tutorial_hopcrossyroad_shortdescription: Crea Crossy Road su iPad/iPhone
   tutorial_switchglitch_shortdescription: Program cute robots and help them save the
     galaxy!
   tutorial_codecar_shortdescription: Use typed code to control the lights and buttons
@@ -2167,7 +2202,7 @@ it:
     get her dream back.
   tutorial_thinkfun_shortdescription: Enjoy this fun CS activity that teaches Boolean
     logic concepts.
-  tutorial_hopfireworks_shortdescription: Make a Fireworks App on iPad/iPhone
+  tutorial_hopfireworks_shortdescription: Crea un'app Fireworks su iPad/iPhone
   tutorial_grokspace_shortdescription: This activity is designed to give you your
     first experience programming, and has been specially designed for the Hour of
     Code. Use the visual programming language Blockly to investigate space and reach
@@ -5044,18 +5079,17 @@ it:
     they will create a program to teach their KIBO to dance to the music. Students
     will learn how to create a program to express an idea (in this case, a dance),
     with a focus on sequencing ability.
-  tutorial_buildcharacters_longdescription: The most popular pre-reader app now includes
-    a digital Maker Space! Make levels, design games, or build characters. Choose
-    your activity and start creating with Kodable!  Featuring JavaScript for upper
+  tutorial_buildcharacters_longdescription: What are some character traits you can
+    identify in books or people you know? Design your own fuzz and use code to modify
+    its properties and bring your character to life! Featuring JavaScript for upper
     elementary.
   tutorial_designgames_longdescription: The most popular pre-reader app now includes
     a digital Maker Space! Make levels, design games, or build characters. Choose
     your activity and start creating with Kodable!  Featuring JavaScript for upper
     elementary.
-  tutorial_makelevels_longdescription: The most popular pre-reader app now includes
-    a digital Maker Space! Make levels, design games, or build characters. Choose
-    your activity and start creating with Kodable!  Featuring JavaScript for upper
-    elementary.
+  tutorial_makelevels_longdescription: Can you build a symmetrical maze? A maze with
+    right angles? Get creative and complete maze-building challenges with basic coding
+    concepts. Aligned with K-5 Common Core math.
   tutorial_wizard_longdescription: Journey into the world of Code Magic as a Code
     Wizard. Learn to create and cast spells to customize your castle.
   tutorial_mbscratchcards_longdescription: Connect the physical world of micro:bit
@@ -8378,8 +8412,8 @@ it:
   tutorial_codewards_string_detail_programming_languages: CoffeeScript
   tutorial_olympics_string_detail_programming_languages: CoffeeScript
   tutorial_codinismhero_string_detail_programming_languages: Python
-  tutorial_discovery_string_detail_programming_languages: Blocchi
-  tutorial_csfirstname_string_detail_programming_languages: Blocchi
+  tutorial_discovery_string_detail_programming_languages: Blocchi, Scratch
+  tutorial_csfirstname_string_detail_programming_languages: Blocchi, Scratch
   tutorial_obstaclecourse_string_detail_programming_languages: Blocchi
   tutorial_edisonmove_string_detail_programming_languages: Python, EdPy, un linguaggio
     di programmazione testuale basato su Python.
@@ -8619,8 +8653,8 @@ it:
     Room style project, the learner joins Marlee and Tyrell as they learn about binary
     numbers, light, color, and more to unravel Professor Photon's Color Conundrum,
     and restore color to the world's devices.
-  tutorial_kodablebeach_longdescription: Learn to program using basic commands and
-    clean up the beach to protect ocean life.
+  tutorial_kodablebeach_longdescription: Save the beach babies! Learn to program using
+    basic commands and clean up the beach to protect ocean life.
   tutorial_tynkeren_longdescription: 'Part of the UN Sustainable Development Goals
     project, this coding prompt shows off projects exploring renewable energy, energy
     efficiency, and access to energy. Readers can play with working projects and advanced
@@ -9366,7 +9400,7 @@ it:
   tutorial_ai-oceans_string_detail_platforms: ''
   tutorial_scratchimagine_string_detail_programming_languages: Blocchi
   tutorial_codesterspsa_string_detail_programming_languages: Python
-  tutorial_googlehero_string_detail_programming_languages: Blocchi
+  tutorial_googlehero_string_detail_programming_languages: Blocchi, Scratch
   tutorial_codestersbball_string_detail_programming_languages: Python
   tutorial_scratchcartoon_string_detail_programming_languages: Blocchi
   tutorial_codemonkeyjr_string_detail_programming_languages: Blocchi
