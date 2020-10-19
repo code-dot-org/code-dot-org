@@ -53,15 +53,15 @@ class ActivitySection < ApplicationRecord
     }
   end
 
-  def summarize_for_edit
-    summary = summarize
-    summary[:scriptLevels] = script_levels.map(&:summarize_for_edit)
-    summary
-  end
-
   def summarize_for_lesson_show
     summary = summarize
     summary[:scriptLevels] = script_levels.map(&:summarize_for_lesson_show)
+    summary
+  end
+
+  def summarize_for_edit
+    summary = summarize
+    summary[:scriptLevels] = script_levels.map(&:summarize_for_edit)
     summary
   end
 
