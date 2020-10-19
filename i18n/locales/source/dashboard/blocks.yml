@@ -1256,6 +1256,8 @@ en:
             '"x"': x position
             '"y"': y position
             '"direction"': movement direction
+      gamelab_setQuestion:
+        text: ask question [QUESTION][0] for variable [VAR][1]
       gamelab_setSizes:
         text: set [SPRITE][0] [PROPERTY][1] to [N][2]%
         options:
@@ -1311,6 +1313,8 @@ en:
             '"d"': d
       gamelab_whenLeftArrow:
         text: when left arrow pressed
+      gamelab_whenQuestionAnswered:
+        text: when [VAR][0] is answered
       gamelab_whenRightArrow:
         text: when right arrow pressed
       gamelab_whenTouching:
