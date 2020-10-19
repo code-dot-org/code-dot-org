@@ -37,3 +37,21 @@ Feature: App Lab Data Tab
     And I press keys "1" for element ".uitest-data-table-content:first-of-type tr:nth-child(3) td:nth-child(2) input:first-of-type"
     And I click selector ".uitest-data-table-content:first-of-type tr:nth-child(3) td:nth-child(4) button:first-of-type"
     Then I wait until element ".uitest-data-table-content:first-of-type tr:nth-child(3) td:nth-child(2)" contains text "21"
+
+  Scenario: Key/Value Pairs Tab
+    Then I click selector "#keyValuePairsTab" once I see it
+    And I wait until element "#keyValuePairsBody" is visible
+
+    # Add a key/value pair
+    And I press keys "numKey" for element ".uitest-kv-table:first-of-type tr:nth-child(2) td:first-of-type input"
+    And I press keys "3" for element ".uitest-kv-table:first-of-type tr:nth-child(2) td:nth-child(2) input"
+    Then I click selector ".uitest-kv-table:first-of-type tr:nth-child(2) td:nth-child(3) button"
+    Then I wait until element ".uitest-kv-table:first-of-type tr:nth-child(3) td:nth-child(1)" contains text "numKey"
+    Then I wait until element ".uitest-kv-table:first-of-type tr:nth-child(3) td:nth-child(2)" contains text "3"
+
+    # Edit a key/value pair
+    And I click selector ".uitest-kv-table:first-of-type tr:nth-child(3) td:nth-child(3) button:first-of-type"
+    And I press keys "00" for element ".uitest-kv-table:first-of-type tr:nth-child(3) td:nth-child(2) input"
+    And I click selector ".uitest-kv-table:first-of-type tr:nth-child(3) td:nth-child(3) button:first-of-type"
+    Then I wait until element ".uitest-kv-table:first-of-type tr:nth-child(3) td:nth-child(1)" contains text "numKey"
+    Then I wait until element ".uitest-kv-table:first-of-type tr:nth-child(3) td:nth-child(2)" contains text "300"
