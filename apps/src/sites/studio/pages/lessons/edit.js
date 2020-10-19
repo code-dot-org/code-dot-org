@@ -9,12 +9,14 @@ import reducers, {
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
 import {Provider} from 'react-redux';
 import _ from 'lodash';
+import {LevelStatus} from '@cdo/apps/util/sharedConstants';
 
 //TODO Remove once we hook up real level data
 import {levelKeyList} from '../../../../../test/unit/lib/levelbuilder/lesson-editor/activitiesTestData';
 
 $(document).ready(function() {
   const lessonData = getScriptData('lesson');
+  const relatedLessons = getScriptData('relatedLessons');
   const activities = lessonData.activities;
 
   // Rename any keys that are different on the backend.
@@ -45,7 +47,18 @@ $(document).ready(function() {
       activitySection.text = activitySection.description || '';
       delete activitySection.description;
 
-      activitySection.scriptLevels = activitySection.levels || [];
+      activitySection.scriptLevels = activitySection.scriptLevels || [];
+      activitySection.scriptLevels.forEach(scriptLevel => {
+        scriptLevel.status = LevelStatus.not_tried;
+
+        // The position within the lesson
+        scriptLevel.levelNumber = scriptLevel.position;
+
+        // The position within the activity section
+        scriptLevel.position = scriptLevel.activitySectionPosition;
+
+        delete scriptLevel.activitySectionPosition;
+      });
 
       activitySection.tips = activitySection.tips || [];
 
@@ -80,6 +93,7 @@ $(document).ready(function() {
         preparation={lessonData.preparation}
         announcements={lessonData.announcements || []}
         resources={lessonData.resources}
+        relatedLessons={relatedLessons}
       />
     </Provider>,
     document.getElementById('edit-container')
