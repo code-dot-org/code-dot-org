@@ -7,18 +7,21 @@ import {
   setTestData,
   getSelectedContinuousColumns,
   getSelectedCategoricalColumns,
-  getUniqueOptionsByColumn
+  getUniqueOptionsByColumn,
+  getConvertedPredictedLabel
 } from "../redux";
 
 class Predict extends Component {
   static propTypes = {
     showPredict: PropTypes.bool,
+    labelColumn: PropTypes.string,
     selectedCategoricalColumns: PropTypes.array,
     selectedContinuousColumns: PropTypes.array,
     uniqueOptionsByColumn: PropTypes.object,
     testData: PropTypes.object,
     setTestData: PropTypes.func.isRequired,
-    prediction: PropTypes.object
+    predictedLabel: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    confidence: PropTypes.number
   };
 
   handleChange = (event, feature) => {
@@ -84,13 +87,13 @@ class Predict extends Component {
             <button type="button" onClick={this.onClickPredict}>
               Predict!
             </button>
-            {this.props.prediction && (
+            {this.props.predictedLabel && (
               <div>
                 <h2> The Machine Learning model predicts... </h2>
                 <span>
-                  {this.props.prediction.predictedLabel}
-                  {this.props.prediction.confidence && (
-                    <p>Confidence: {this.props.prediction.confidence}</p>
+                  {this.props.labelColumn}: {this.props.predictedLabel}
+                  {this.props.confidence && (
+                    <p>Confidence: {this.props.confidence}</p>
                   )}
                 </span>
               </div>
@@ -106,7 +109,9 @@ export default connect(
   state => ({
     showPredict: state.showPredict,
     testData: state.testData,
-    prediction: state.prediction,
+    predictedLabel: getConvertedPredictedLabel(state),
+    confidence: state.prediction.confidence,
+    labelColumn: state.labelColumn,
     selectedContinuousColumns: getSelectedContinuousColumns(state),
     selectedCategoricalColumns: getSelectedCategoricalColumns(state),
     uniqueOptionsByColumn: getUniqueOptionsByColumn(state)
