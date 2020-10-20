@@ -41,16 +41,15 @@ export default class AddLevelTableRow extends Component {
           this.setState({creatingClonedLevel: false});
         })
         .fail(error => {
-          console.log(error.responseText);
           this.setState({
             creatingClonedLevel: false,
-            error: 'Could not clone level'
+            error: error.responseText
           });
         });
     } else {
       this.setState({
         creatingClonedLevel: false,
-        error: 'Must provide new name for the cloned level'
+        error: 'Please provide name for the cloned level'
       });
     }
   };
