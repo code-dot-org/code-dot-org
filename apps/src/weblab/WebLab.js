@@ -168,6 +168,7 @@ WebLab.prototype.init = function(config) {
     this.studioApp_.initProjectTemplateWorkspaceIconCallout();
     this.studioApp_.alertIfCompletedWhilePairing(config);
     this.studioApp_.initVersionHistoryUI(config);
+    this.studioApp_.initTimeSpent();
 
     let finishButton = document.getElementById('finishButton');
     if (finishButton) {
@@ -235,6 +236,7 @@ WebLab.prototype.init = function(config) {
   }
 
   function onRefreshPreview() {
+    this.studioApp_.debouncedSilentlyReport(this.level.id);
     project.autosave(() => {
       if (this.brambleHost) {
         this.brambleHost.refreshPreview();
