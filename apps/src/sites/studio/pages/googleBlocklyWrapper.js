@@ -1,4 +1,5 @@
 import {BlocklyVersion} from '@cdo/apps/constants';
+import styleConstants from '@cdo/apps/styleConstants';
 import CdoBlockDragger from '@cdo/apps/blocklyAddons/cdoBlockDragger';
 import CdoBlockSvg from '@cdo/apps/blocklyAddons/cdoBlockSvg';
 import CdoFieldDropdown from '@cdo/apps/blocklyAddons/cdoFieldDropdown';
@@ -233,6 +234,10 @@ function initializeBlocklyWrapper(blocklyInstance) {
         scrollbars: true
       }
     };
+    // Shrink container to make room for the workspace header
+    container.style.height = `calc(100% - ${
+      styleConstants['workspace-headers-height']
+    }px)`;
     blocklyWrapper.editBlocks = opt_options.editBlocks;
     return blocklyWrapper.blockly_.inject(container, options);
   };
