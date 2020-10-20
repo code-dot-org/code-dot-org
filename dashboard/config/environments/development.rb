@@ -14,6 +14,9 @@ Dashboard::Application.configure do
     end
   end
 
+  # Allow rendering with our custom localhost domain
+  config.hosts << "localhost-studio.code.org"
+
   # Do not eager load code on boot.
   config.eager_load = false
 
