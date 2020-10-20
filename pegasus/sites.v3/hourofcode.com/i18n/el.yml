@@ -30,6 +30,20 @@ el:
   africa_campaign_date_full: October 1-31
   africa_campaign_date_year: '2020'
   africa_campaign_date_full_year: October 1-31, 2020
+  hoc2020_header: Learn today, build a brighter tomorrow.
+  hoc2020_header_with_line_break_markdown: |-
+    Learn today,
+
+    build a brighter tomorrow.
+  social_hoc2020_cs_important: 'CS is more important than ever. Let''s build the future
+    we want. #CSforGood'
+  social_hoc2020_hoc_is_about_csforgood: 'The #HourOfCode is about #CSforGood. Learn
+    today, build a brighter tomorrow.'
+  social_hoc2020_global_movement: Η Ώρα του Κώδικα είναι ένα παγκόσμιο κίνημα που
+    υλοποιείται από δεκάδες εκατομμύρια μαθητές. Ωριαία μαθήματα είναι διαθέσιμα σε
+    45+ γλώσσες για όλες τις ηλικίες.
+  social_hoc2020_coming_dates: The Hour of Code is coming December 7-13, 2020. Computer
+    science is foundational for every student to learn.
   hoc2019_header: Μάθετε πληροφορική. Αλλάξτε τον κόσμο.
   hoc2019_header_line1_mobile: Μάθετε πληροφορική.
   hoc2019_header_line2_mobile: Αλλάξτε τον κόσμο.
@@ -960,7 +974,8 @@ el:
   highlights_header: Επισημάνσεις της Ώρας του Κώδικα
   highlights_description: Μερικές από τις αγαπημένες μας στιγμές από την εξόρμηση
     της Ώρας του Κώδικα.
-  higlights_see_more: Δες περισσότερες επισημάνσεις
+  highlights_previous: Highlights from previous years
+  highlights_see_more: See more highlights
   highlights_readmore: Διαβάστε περισσότερα
   highlights_watchvideo: Δείτε το βίντεο
   highlights_facebook: Κοινή χρήση στο Facebook

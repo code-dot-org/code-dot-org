@@ -12,6 +12,7 @@ el:
         full_course_category_name: Πλήρη μαθήματα
         hoc_category_name: Ώρα του Κώδικα
         math_category_name: Μαθηματικά
+        other_category_name: Άλλα
       name:
         course1:
           title: Μάθημα 1

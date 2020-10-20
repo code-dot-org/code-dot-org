@@ -19,6 +19,7 @@ mn:
         hoc_category_name: Кодын цаг
         math_category_name: Математик
         research_studies_category_name: Судалгааны сэдэв
+        other_category_name: Бусад
       name:
         course1:
           title: Хичээл 1
