@@ -10,6 +10,8 @@ import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import styleConstants from '@cdo/apps/styleConstants';
 import color from '@cdo/apps/util/color';
+import Button from '@cdo/apps/templates/Button';
+import DropdownButton from '@cdo/apps/templates/DropdownButton';
 
 const styles = {
   frontPage: {
@@ -25,11 +27,16 @@ const styles = {
     borderLeft: 'solid 1px black'
   },
   header: {
-    margin: '10px 0px'
+    margin: '10px 0px',
+    display: 'flex',
+    justifyContent: 'space-between'
   },
   navLink: {
     fontSize: 18,
     color: color.purple
+  },
+  dropdown: {
+    display: 'inline-block'
   }
 };
 
@@ -38,7 +45,13 @@ class LessonOverview extends Component {
     lesson: PropTypes.shape({
       unit: PropTypes.shape({
         displayName: PropTypes.string.isRequired,
-        link: PropTypes.string.isRequired
+        link: PropTypes.string.isRequired,
+        lessons: PropTypes.arrayOf(
+          PropTypes.shape({
+            displayName: PropTypes.string.isRequired,
+            link: PropTypes.string.isRequired
+          })
+        ).isRequired
       }).isRequired,
       displayName: PropTypes.string.isRequired,
       overview: PropTypes.string.isRequired,
@@ -53,14 +66,34 @@ class LessonOverview extends Component {
     isSignedIn: PropTypes.bool.isRequired
   };
 
+  linkWithQueryParams = link => {
+    const queryParams = window.location.search || '';
+    return link + queryParams;
+  };
+
   render() {
     const {lesson, announcements, isSignedIn, viewAs} = this.props;
     return (
       <div>
         <div style={styles.header}>
-          <a href={lesson.unit.link} style={styles.navLink}>
+          <a
+            href={this.linkWithQueryParams(lesson.unit.link)}
+            style={styles.navLink}
+          >
             {`< ${lesson.unit.displayName}`}
           </a>
+          <div style={styles.dropdown}>
+            <DropdownButton
+              text={i18n.otherLessonsInUnit()}
+              color={Button.ButtonColor.purple}
+            >
+              {lesson.unit.lessons.map((l, index) => (
+                <a key={index} href={this.linkWithQueryParams(l.link)}>
+                  {`${index + 1} ${l.displayName}`}
+                </a>
+              ))}
+            </DropdownButton>
+          </div>
         </div>
         {isSignedIn && (
           <Announcements

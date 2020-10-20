@@ -10,6 +10,7 @@ uk:
         csp17_category_name: "'16-'17 принципи інформатики"
         hoc_category_name: Година коду
         math_category_name: Математика
+        other_category_name: Інше
       name:
         course1:
           title: Курс 1

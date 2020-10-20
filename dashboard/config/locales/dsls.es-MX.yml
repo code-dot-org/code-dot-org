@@ -7856,3 +7856,25 @@ es-MX:
           # Mi Barrio en Línea
 
           ## ¿Cómo navegas en la Red sin riesgo?
+      csd-post-survey-2018-markdown-with-link-to-survey:
+        markdown: |+
+          # Encuesta de fin de curso de Descubrimientos de Ciencias de la Computación
+
+          **¡Tus opiniones son muy importantes para nosotros!** Nos permitirán:
+
+          * Mejorar el curso
+          * Entender tu experiencia
+          * Saber sobre qué temas quieres aprender más en el futuro
+
+          ¡Gracias por tomarte el tiempo para ayudarnos a mejorar aún más el curso de Descubrimientos de Ciencias de la Computación!
+
+          <a class="btn btn-large btn-success" href="/s/csd-post-survey/stage/1/puzzle/1/page/1" target="top">¡Haz clic aquí para completar la encuesta de fin de curso de Descubrimientos de Ciencias de la Computación!</a>
+
+          (se abre en una nueva pestaña)
+
+          <br>
+
+
+
+
+

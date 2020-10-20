@@ -16,7 +16,8 @@ const ButtonColor = {
   blue: 'blue',
   white: 'white',
   red: 'red',
-  green: 'green'
+  green: 'green',
+  purple: 'purple'
 };
 
 const ButtonSize = {
@@ -124,6 +125,23 @@ const styles = {
       },
       ':disabled': {
         backgroundColor: color.lightest_red,
+        boxShadow: 'inset 0 2px 0 0 rgba(0,0,0,0.1)'
+      }
+    },
+    [ButtonColor.purple]: {
+      color: color.white,
+      backgroundColor: color.purple,
+      fontWeight: 'bold',
+      boxShadow: 'inset 0 2px 0 0 rgba(255,255,255,0.40)',
+      ':hover': {
+        boxShadow: 'none',
+        color: color.purple,
+        borderColor: color.purple,
+        backgroundColor: color.lightest_purple
+      },
+      ':disabled': {
+        color: color.lighter_purple,
+        backgroundColor: color.lightest_purple,
         boxShadow: 'inset 0 2px 0 0 rgba(0,0,0,0.1)'
       }
     },
