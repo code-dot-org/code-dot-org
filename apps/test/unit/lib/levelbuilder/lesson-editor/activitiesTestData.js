@@ -1,13 +1,11 @@
 export const sampleActivities = [
   {
-    id: 11,
     key: 'activity-1',
     displayName: 'Main Activity',
     position: 1,
     duration: 20,
     activitySections: [
       {
-        id: 22,
         key: 'section-3',
         position: 1,
         displayName: 'Making programs',
@@ -18,7 +16,6 @@ export const sampleActivities = [
         tips: []
       },
       {
-        id: 33,
         key: 'section-1',
         position: 2,
         displayName: '',
@@ -40,7 +37,6 @@ export const sampleActivities = [
         ]
       },
       {
-        id: 44,
         tips: [],
         key: 'progression-1',
         position: 3,
