@@ -173,7 +173,8 @@ class Foorm::Form < ActiveRecord::Base
   # received for that Form. It includes the content of the form submitted
   # by a user, as well as some additional metadata about the context
   # in which the form was submitted (eg, workshop ID, user ID).
-  def submissions_to_csv(file_path)
+  # @return csv text
+  def submissions_to_csv
     filtered_submissions = submissions.
       reject {|submission| submission.workshop_metadata&.facilitator_specific?}
 
@@ -244,11 +245,11 @@ class Foorm::Form < ActiveRecord::Base
     comma_separated_submissions.each {|row| rows_to_write << row}
 
     # Finally, add the header row and, subsequently, rows of survey responses.
-    CSV.open(file_path, "wb") do |csv|
+    csv_result = CSV.generate do |csv|
       rows_to_write.each {|row| csv << row}
     end
 
-    rows_to_write
+    csv_result
   end
 
   def parsed_questions
