@@ -1,9 +1,9 @@
-import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import i18n from '@cdo/locale';
 import Button from '@cdo/apps/templates/Button';
 import DropdownButton from '@cdo/apps/templates/DropdownButton';
 import color from '@cdo/apps/util/color';
+import {lessonShape} from '@cdo/apps/templates/lessonOverview/lessonPlanShapes';
 
 const styles = {
   dropdown: {
@@ -18,24 +18,7 @@ const LESSONS_PER_SECTION = 10;
 
 export default class LessonNavigationDropdown extends Component {
   static propTypes = {
-    lesson: PropTypes.shape({
-      unit: PropTypes.shape({
-        displayName: PropTypes.string.isRequired,
-        link: PropTypes.string.isRequired,
-        lessons: PropTypes.arrayOf(
-          PropTypes.shape({
-            displayName: PropTypes.string.isRequired,
-            link: PropTypes.string.isRequired,
-            key: PropTypes.string.isRequired
-          })
-        ).isRequired
-      }).isRequired,
-      key: PropTypes.string.isRequired,
-      displayName: PropTypes.string.isRequired,
-      overview: PropTypes.string.isRequired,
-      purpose: PropTypes.string.isRequired,
-      preparation: PropTypes.string.isRequired
-    }).isRequired
+    lesson: lessonShape.isRequired
   };
 
   constructor(props) {
@@ -58,9 +41,8 @@ export default class LessonNavigationDropdown extends Component {
   };
 
   handleDropdownClick = listItem => {
-    console.log(listItem);
     if (listItem.link) {
-      window.location.href = listItem.link;
+      window.location.href = this.linkWithQueryParams(listItem.link);
     } else {
       this.setState({currentSection: listItem.sectionNumber});
     }
@@ -121,23 +103,19 @@ export default class LessonNavigationDropdown extends Component {
                 listItem.link ? {} : {backgroundColor: color.lightest_purple}
               }
             >
-              <span style={listItem.link ? {marginLeft: 10} : {}}>
-                {listItem.link && (
+              {listItem.link && (
+                <span style={{marginLeft: 10}}>
                   <span
                     style={{
                       ...{margin: '0px 2px'},
                       ...(listItem.key === lesson.key && styles.boldText)
                     }}
                   >
-                    {`${listItem.position} -`}
+                    {`${listItem.position} - ${listItem.displayName}`}
                   </span>
-                )}
-                <span
-                  style={listItem.key === lesson.key ? styles.boldText : {}}
-                >
-                  {listItem.displayName}
                 </span>
-              </span>
+              )}
+              {!listItem.link && <span>{listItem.displayName}</span>}
             </a>
           ))}
         </DropdownButton>
