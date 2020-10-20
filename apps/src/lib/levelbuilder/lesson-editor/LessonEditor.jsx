@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import ActivitiesEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/ActivitiesEditor';
 import ResourcesEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/ResourcesEditor';
+import ObjectivesEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/ObjectivesEditor';
 import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
@@ -45,7 +46,8 @@ export default class LessonEditor extends Component {
     preparation: PropTypes.string,
     announcements: PropTypes.arrayOf(announcementShape),
     resources: PropTypes.arrayOf(resourceShape),
-    relatedLessons: PropTypes.arrayOf(relatedLessonShape).isRequired
+    relatedLessons: PropTypes.arrayOf(relatedLessonShape).isRequired,
+    objectives: PropTypes.arrayOf(PropTypes.object)
   };
 
   render() {
@@ -179,6 +181,10 @@ export default class LessonEditor extends Component {
 
         <CollapsibleEditorSection title="Resources" collapsed={true}>
           <ResourcesEditor resources={this.props.resources} />
+        </CollapsibleEditorSection>
+
+        <CollapsibleEditorSection title="Objectives" collapsed={true}>
+          <ObjectivesEditor objectives={this.props.objectives || []} />
         </CollapsibleEditorSection>
 
         <CollapsibleEditorSection title="Activities & Levels">
