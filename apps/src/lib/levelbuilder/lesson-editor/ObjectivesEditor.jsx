@@ -1,28 +1,49 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import 'react-select/dist/react-select.css';
 import color from '@cdo/apps/util/color';
 
 const styles = {
-  resourceSearch: {
-    paddingBottom: 10
-  },
-  resourceBox: {
-    border: '1px solid ' + color.light_gray,
-    padding: 10,
-    marginTop: 10,
-    marginBottom: 10
-  },
   oddRow: {
     backgroundColor: color.lightest_gray
   },
-
+  actionButtons: {
+    display: 'flex',
+    justifyContent: 'space-evenly',
+    backgroundColor: 'white'
+  },
   remove: {
     fontSize: 14,
     color: 'white',
     background: color.dark_red,
     cursor: 'pointer',
-    textAlign: 'center'
+    textAlign: 'center',
+    minWidth: '50%'
+  },
+  edit: {
+    fontSize: 14,
+    color: 'white',
+    background: color.default_blue,
+    cursor: 'pointer',
+    textAlign: 'center',
+    minWidth: '50%'
+  },
+  save: {
+    fontSize: 14,
+    color: 'white',
+    background: color.green,
+    cursor: 'pointer',
+    textAlign: 'center',
+    minWidth: '50%'
+  },
+  addButton: {
+    background: color.cyan,
+    borderRadius: 3,
+    color: color.white,
+    fontSize: 14,
+    padding: 7,
+    textAlign: 'center',
+    marginTop: 10,
+    marginLeft: 0
   }
 };
 
@@ -54,6 +75,21 @@ export default class ObjectivesEditor extends Component {
     });
   };
 
+  handleCancel = () => {
+    let {objectives, objectiveInput, currentlyEditingIndex} = this.state;
+    if (
+      objectiveInput === '' &&
+      currentlyEditingIndex === objectives.length - 1
+    ) {
+      objectives.splice(objectives.length - 1, 1);
+    }
+    this.setState({
+      objectives,
+      objectiveInput: '',
+      currentlyEditingIndex: null
+    });
+  };
+
   handleSave = () => {
     let {objectives, objectiveInput, currentlyEditingIndex} = this.state;
     objectives[currentlyEditingIndex].description = objectiveInput;
@@ -77,7 +113,6 @@ export default class ObjectivesEditor extends Component {
   render() {
     return (
       <div>
-        Objectives
         <input
           type="hidden"
           name="objectives"
@@ -88,7 +123,7 @@ export default class ObjectivesEditor extends Component {
             <thead>
               <tr>
                 <th style={{width: '90%'}}>Description</th>
-                <th style={{width: '10%'}}>Actions</th>
+                <th style={{width: '30%'}}>Actions</th>
               </tr>
             </thead>
             <tbody>
@@ -106,31 +141,46 @@ export default class ObjectivesEditor extends Component {
                       <div>{objective.description}</div>
                     )}
                   </td>
-                  <td style={{backgroundColor: 'white'}}>
-                    {this.state.currentlyEditingIndex === index && (
+                  {this.state.currentlyEditingIndex === index ? (
+                    <td style={styles.actionButtons}>
                       <div style={styles.save} onMouseDown={this.handleSave}>
                         <i className="fa fa-check" />
                       </div>
-                    )}
-                    <div
-                      style={styles.edit}
-                      onMouseDown={() => this.handleEdit(index)}
-                    >
-                      <i className="fa fa-edit" />
-                    </div>
-                    <div
-                      style={styles.remove}
-                      onMouseDown={() => this.handleRemove(index)}
-                    >
-                      <i className="fa fa-times" />
-                    </div>
-                  </td>
+                      <div
+                        style={styles.remove}
+                        onMouseDown={this.handleCancel}
+                      >
+                        <i className="fa fa-times" />
+                      </div>
+                    </td>
+                  ) : (
+                    <td style={styles.actionButtons}>
+                      <div
+                        style={styles.edit}
+                        onMouseDown={() => this.handleEdit(index)}
+                      >
+                        <i className="fa fa-edit" />
+                      </div>
+                      <div
+                        style={styles.remove}
+                        onMouseDown={() => this.handleRemove(index)}
+                      >
+                        <i className="fa fa-trash" />
+                      </div>
+                    </td>
+                  )}
                 </tr>
               ))}
             </tbody>
           </table>
-          <div onMouseDown={this.addObjective}>Add new objective</div>
         </div>
+        <button
+          onMouseDown={this.addObjective}
+          style={styles.addButton}
+          type="button"
+        >
+          <i className="fa fa-plus" style={{marginRight: 7}} /> Objective
+        </button>
       </div>
     );
   }
