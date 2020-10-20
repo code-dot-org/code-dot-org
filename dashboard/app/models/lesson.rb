@@ -300,6 +300,27 @@ class Lesson < ActiveRecord::Base
     }
   end
 
+  def summarize_for_lesson_show
+    {
+      unit: script.summarize_for_lesson_show,
+      key: key,
+      displayName: localized_title,
+      overview: overview || '',
+      announcements: announcements,
+      purpose: purpose || '',
+      preparation: preparation || ''
+    }
+  end
+
+  def summarize_for_lesson_dropdown
+    {
+      key: key,
+      position: absolute_position,
+      displayName: localized_name,
+      link: lesson_path(id: id)
+    }
+  end
+
   # Provides a JSON summary of a particular lesson, that is consumed by tools used to
   # build lesson plans (Curriculum Builder)
   def summary_for_lesson_plans

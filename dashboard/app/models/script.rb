@@ -1337,6 +1337,14 @@ class Script < ActiveRecord::Base
     }
   end
 
+  def summarize_for_lesson_show
+    {
+      displayName: localized_title,
+      link: link,
+      lessons: lessons.map(&:summarize_for_lesson_dropdown)
+    }
+  end
+
   # Creates an object representing all translations associated with this script
   # and its lessons, in a format that can be deep-merged with the contents of
   # scripts.en.yml.
