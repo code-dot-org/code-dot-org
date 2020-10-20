@@ -296,7 +296,8 @@ class Lesson < ActiveRecord::Base
       preparation: preparation,
       announcements: announcements,
       activities: lesson_activities.map(&:summarize_for_edit),
-      resources: resources
+      resources: resources,
+      objectives: objectives.map(&:summarize_for_edit)
     }
   end
 
@@ -418,6 +419,17 @@ class Lesson < ActiveRecord::Base
     # this update, so just set activity_section_position as the source of truth
     # and then fix chapter and position values after.
     script.fix_script_level_positions
+  end
+
+  def update_objectives(objectives)
+    return unless objectives
+
+    self.objectives = objectives.map do |objective|
+      persisted_objective = objective['id'].blank? ? Objective.new : Objective.find(objective['id'])
+      persisted_objective.description = objective['description']
+      persisted_objective.save!
+      persisted_objective
+    end
   end
 
   # Used for seeding from JSON. Returns the full set of information needed to uniquely identify this object.

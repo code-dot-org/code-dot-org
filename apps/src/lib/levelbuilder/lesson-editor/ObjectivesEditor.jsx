@@ -81,7 +81,7 @@ export default class ObjectivesEditor extends Component {
         <input
           type="hidden"
           name="objectives"
-          value={JSON.stringify(this.state.objectives.map(r => r.key))}
+          value={JSON.stringify(this.state.objectives)}
         />
         <div style={styles.objectiveBox}>
           <table style={{width: '100%'}}>
