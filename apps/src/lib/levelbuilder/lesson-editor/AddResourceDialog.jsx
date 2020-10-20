@@ -44,7 +44,7 @@ const styles = {
     backgroundColor: color.orange,
     color: 'white',
     borderRadius: 3,
-    fondSize: 12
+    fontSize: 12
   }
 };
 
