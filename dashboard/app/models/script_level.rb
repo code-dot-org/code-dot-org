@@ -451,8 +451,7 @@ class ScriptLevel < ActiveRecord::Base
         id: level.id,
         icon: level.icon,
         isUnplugged: level.unplugged?,
-        isConceptLevel: level.concept_level?,
-        url: build_script_level_path(self)
+        isConceptLevel: level.concept_level?
       }
     end
     summary
