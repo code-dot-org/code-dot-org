@@ -11,6 +11,7 @@ import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import styleConstants from '@cdo/apps/styleConstants';
 import color from '@cdo/apps/util/color';
 import LessonNavigationDropdown from '@cdo/apps/templates/lessonOverview/LessonNavigationDropdown';
+import {lessonShape} from '@cdo/apps/templates/lessonOverview/lessonPlanShapes';
 
 const styles = {
   frontPage: {
@@ -38,24 +39,7 @@ const styles = {
 
 class LessonOverview extends Component {
   static propTypes = {
-    lesson: PropTypes.shape({
-      unit: PropTypes.shape({
-        displayName: PropTypes.string.isRequired,
-        link: PropTypes.string.isRequired,
-        lessons: PropTypes.arrayOf(
-          PropTypes.shape({
-            displayName: PropTypes.string.isRequired,
-            link: PropTypes.string.isRequired,
-            key: PropTypes.string.isRequired
-          })
-        ).isRequired
-      }).isRequired,
-      key: PropTypes.string.isRequired,
-      displayName: PropTypes.string.isRequired,
-      overview: PropTypes.string.isRequired,
-      purpose: PropTypes.string.isRequired,
-      preparation: PropTypes.string.isRequired
-    }).isRequired,
+    lesson: lessonShape.isRequired,
     activities: PropTypes.array,
 
     // from redux
