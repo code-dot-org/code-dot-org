@@ -33,11 +33,12 @@ export default class CollapsibleEditorSection extends Component {
 
   render() {
     const {title, fullWidth} = this.props;
-    const wrapperStyle = {
+    const editorsStyle = {
+      ...styles.editors,
       width: fullWidth ? null : styleConstants['content-width']
     };
     return (
-      <div style={wrapperStyle}>
+      <div>
         <div style={styles.header}>
           <h2
             onClick={() => {
@@ -51,7 +52,7 @@ export default class CollapsibleEditorSection extends Component {
             {title}
           </h2>
         </div>
-        <div style={styles.editors} hidden={this.state.collapsed}>
+        <div style={editorsStyle} hidden={this.state.collapsed}>
           {this.props.children}
         </div>
       </div>

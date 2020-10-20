@@ -22,7 +22,9 @@ describe('CollapsibleEditorSection', () => {
     expect(wrapper.find('span').length).to.equal(1);
     expect(wrapper.find('FontAwesome').length).to.equal(1);
     expect(wrapper.state().collapsed).to.equal(false);
-    expect(wrapper.props().style.width).to.equal(970);
+
+    const editorsWrapper = wrapper.children().last();
+    expect(editorsWrapper.props().style.width).to.equal(970);
   });
 
   it('renders in full width', () => {
@@ -31,7 +33,8 @@ describe('CollapsibleEditorSection', () => {
         <span>Child</span>
       </CollapsibleEditorSection>
     );
-    expect(wrapper.props().style.width).to.equal(null);
+    const editorsWrapper = wrapper.children().last();
+    expect(editorsWrapper.props().style.width).to.equal(null);
   });
 
   it('clicking h2 collapses area', () => {
