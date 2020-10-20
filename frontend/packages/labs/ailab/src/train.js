@@ -131,27 +131,23 @@ const prepareTrainingData = () => {
   const updatedState = store.getState();
   const trainingExamples = updatedState.data
     .map(row => extractExamples(updatedState, row))
-    .filter(example => example.length > 0);
+    .filter(example => example.length > 0 && example !== undefined);
   const trainingLabels = updatedState.data
     .map(row => extractLabel(updatedState, row))
     .filter(label => label !== undefined && label !== "");
   // Reserve 10% of the data to calculate accuracy
-  const numToReserve = parseInt(trainingExamples.length * 0.1);
-  const indicesToReserve = [];
-  while (indicesToReserve.length < numToReserve) {
-    let randomIndex = getRandomInt(trainingExamples.length - 1);
-    if (!indicesToReserve.includes(randomIndex)) {
-      indicesToReserve.push(...[randomIndex]);
-    }
-  }
   const accuracyCheckExamples = [];
   const accuracyCheckLabels = [];
-  indicesToReserve.forEach(index => {
-    accuracyCheckExamples.push(trainingExamples[index]);
-    trainingExamples.splice(index, 1);
-    accuracyCheckLabels.push(trainingLabels[index]);
-    trainingLabels.splice(index, 1);
-  });
+  const numToReserve = parseInt(trainingExamples.length * 0.1);
+  let numReserved = 0;
+  while (numReserved < numToReserve) {
+    let randomIndex = getRandomInt(trainingExamples.length - 1);
+    accuracyCheckExamples.push(trainingExamples[randomIndex]);
+    trainingExamples.splice(randomIndex, 1);
+    accuracyCheckLabels.push(trainingLabels[randomIndex]);
+    trainingLabels.splice(randomIndex, 1);
+    numReserved++;
+  }
   store.dispatch(setTrainingExamples(trainingExamples));
   store.dispatch(setTrainingLabels(trainingLabels));
   store.dispatch(setAccuracyCheckExamples(accuracyCheckExamples));

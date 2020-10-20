@@ -11,7 +11,7 @@ class TrainModel extends Component {
     labelColumn: PropTypes.string,
     setShowPredict: PropTypes.func.isRequired,
     selectedTrainer: PropTypes.string,
-    accuracy: PropTypes.number
+    accuracy: PropTypes.string
   };
 
   constructor(props) {

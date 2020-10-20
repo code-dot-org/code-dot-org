@@ -294,12 +294,13 @@ export function getAccuracy(state) {
   const numPredictedLabels = state.accuracyCheckPredictedLabels.length;
   for (let i = 0; i < numPredictedLabels; i++) {
     if (
-      state.accuracyCheckLabels[i] === state.accuracyCheckPredictedLabels[i]
+      state.accuracyCheckLabels[i].toString() ===
+      state.accuracyCheckPredictedLabels[i].toString()
     ) {
       numCorrect++;
     }
   }
-  return (numCorrect / numPredictedLabels) * 100;
+  return ((numCorrect / numPredictedLabels) * 100).toFixed(2);
 }
 
 export const ColumnTypes = {
