@@ -100,7 +100,12 @@ export default class LessonNavigationDropdown extends Component {
               onClick={this.handleDropdownClick.bind(this, listItem)}
               className={listItem.link ? 'navigate' : 'no-navigation'} // Used to specify if the dropdown should collapse when clicked
               style={
-                listItem.link ? {} : {backgroundColor: color.lightest_purple}
+                listItem.link
+                  ? {fontFamily: '"Gotham 4r", sans-serif'}
+                  : {
+                      fontFamily: '"Gotham 4r", sans-serif',
+                      backgroundColor: color.lightest_purple
+                    }
               }
             >
               {listItem.link && (
