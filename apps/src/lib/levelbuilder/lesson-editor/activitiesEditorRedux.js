@@ -309,11 +309,9 @@ function activities(state = [], action) {
       return action.activities;
     case ADD_ACTIVITY: {
       newState.push({
+        ...emptyActivity,
         key: action.activityKey,
-        displayName: '',
-        position: action.activityPosition,
-        duration: 0,
-        activitySections: []
+        position: action.activityPosition
       });
       updateActivityPositions(newState);
       break;
@@ -352,13 +350,8 @@ function activities(state = [], action) {
       const activitySections =
         newState[action.activityPosition - 1].activitySections;
       activitySections.push({
-        key: action.activitySectionKey,
-        displayName: '',
-        levels: [],
-        tips: [],
-        remarks: false,
-        slide: false,
-        text: ''
+        ...emptyActivitySection,
+        key: action.activitySectionKey
       });
       updateActivitySectionPositions(newState);
       break;
