@@ -18,20 +18,7 @@ class LessonsController < ApplicationController
 
   # GET /lessons/1
   def show
-    @lesson_data = {
-      unit: {
-        displayName: @lesson.script.localized_title,
-        link: @lesson.script.link,
-        lessons: @lesson.script.lessons.map {|lesson| {key: lesson.key, position: lesson.absolute_position, displayName: lesson.localized_name, link: lesson_path(id: lesson.id)}}
-      },
-      key: @lesson.key,
-      displayName: @lesson.localized_title,
-      overview: @lesson.overview || '',
-      announcements: @lesson.announcements,
-      purpose: @lesson.purpose || '',
-      preparation: @lesson.preparation || '',
-      activities: @lesson.lesson_activities.map(&:summarize_for_lesson_show)
-    }
+    @lesson_data = @lesson.summarize_for_lesson_show
   end
 
   # GET /lessons/1/edit
