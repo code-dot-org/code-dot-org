@@ -35,7 +35,7 @@ export default class ProgressionDetails extends Component {
 
     return {
       status: LevelStatus.not_tried,
-      url: activeLevel.url,
+      url: scriptLevel.url,
       name: activeLevel.name,
       kind: scriptLevel.kind,
       icon: activeLevel.icon,
