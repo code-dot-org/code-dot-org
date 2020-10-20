@@ -147,7 +147,11 @@ export default class LessonEditor extends Component {
           />
         </CollapsibleEditorSection>
 
-        <CollapsibleEditorSection title="Overviews" collapsed={true}>
+        <CollapsibleEditorSection
+          title="Overviews"
+          collapsed={true}
+          fullWidth={true}
+        >
           <TextareaWithMarkdownPreview
             markdown={overview}
             label={'Overview'}
@@ -162,7 +166,11 @@ export default class LessonEditor extends Component {
           />
         </CollapsibleEditorSection>
 
-        <CollapsibleEditorSection title="Purpose and Prep" collapsed={true}>
+        <CollapsibleEditorSection
+          title="Purpose and Prep"
+          collapsed={true}
+          fullWidth={true}
+        >
           <TextareaWithMarkdownPreview
             markdown={purpose}
             label={'Purpose'}
