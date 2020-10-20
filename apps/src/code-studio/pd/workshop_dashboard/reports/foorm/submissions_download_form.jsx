@@ -107,7 +107,7 @@ export default class SubmissionsDownloadFom extends React.Component {
 
   render() {
     return (
-      <span>
+      <div>
         <span onClick={this.open}>{this.props.children}</span>
         <Modal show={this.state.showing} onHide={this.close}>
           <Modal.Header closeButton style={styles.modalHeader}>
@@ -139,7 +139,7 @@ export default class SubmissionsDownloadFom extends React.Component {
             </div>
           </Modal.Body>
         </Modal>
-      </span>
+      </div>
     );
   }
 }
