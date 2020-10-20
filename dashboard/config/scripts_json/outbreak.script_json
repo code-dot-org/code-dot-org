@@ -70,7 +70,7 @@
       "position": 2,
       "assessment": null,
       "properties": {
-        "progression": "Creating Sprites"
+        "progression": "Creating a Simulation"
       },
       "named_level": null,
       "bonus": null,
@@ -91,7 +91,7 @@
       "position": 3,
       "assessment": null,
       "properties": {
-        "progression": "Simulating an Outbreak"
+        "progression": "Programming with Events"
       },
       "named_level": null,
       "bonus": null,
@@ -112,7 +112,7 @@
       "position": 4,
       "assessment": null,
       "properties": {
-        "progression": "Simulating Masks"
+        "progression": "Stopping the Outbreak with Masks"
       },
       "named_level": null,
       "bonus": null,
@@ -133,7 +133,7 @@
       "position": 5,
       "assessment": null,
       "properties": {
-        "progression": "Modifying Your Simulation"
+        "progression": "More Monsters"
       },
       "named_level": null,
       "bonus": null,
