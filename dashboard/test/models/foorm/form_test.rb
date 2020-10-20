@@ -55,8 +55,6 @@ class Foorm::FormTest < ActiveSupport::TestCase
     submission_workshop_metadata = create :csf_intro_post_workshop_submission, :answers_low
     submission = submission_workshop_metadata.foorm_submission
 
-    CSV.stubs(:open)
-
     other_headers = {
       'user_id' => 'user_id',
       'pd_workshop_id' => 'pd_workshop_id',
@@ -66,7 +64,7 @@ class Foorm::FormTest < ActiveSupport::TestCase
 
     expected_response = submission.formatted_answers
 
-    assert_equal [expected_headers.values, expected_response.values], form.submissions_to_csv('test.csv')
+    assert_equal get_csv_string([expected_headers.values, expected_response.values]), form.submissions_to_csv
   end
 
   test 'Form validation passes for valid questions' do
@@ -92,8 +90,6 @@ class Foorm::FormTest < ActiveSupport::TestCase
 
     general_submission = general_submission_workshop_metadata.foorm_submission
 
-    CSV.stubs(:open)
-
     other_general_headers = {
       'user_id' => 'user_id',
       'pd_workshop_id' => 'pd_workshop_id',
@@ -106,8 +102,8 @@ class Foorm::FormTest < ActiveSupport::TestCase
 
     expected_response = general_submission.formatted_answers
 
-    assert_equal [expected_headers.values, expected_response.values_at(*expected_headers.keys)],
-      form.submissions_to_csv('test.csv')
+    assert_equal get_csv_string([expected_headers.values, expected_response.values_at(*expected_headers.keys)]),
+      form.submissions_to_csv
   end
 
   test 'submissions_to_csv formats submission of general and facilitator specific questions' do
@@ -119,8 +115,6 @@ class Foorm::FormTest < ActiveSupport::TestCase
 
     general_submission = general_submission_workshop_metadata.foorm_submission
     facilitator_submission = facilitator_submission_workshop_metadata.foorm_submission
-
-    CSV.stubs(:open)
 
     other_general_headers = {
       'user_id' => 'user_id',
@@ -141,8 +135,8 @@ class Foorm::FormTest < ActiveSupport::TestCase
     expected_response = general_submission.formatted_answers.
       merge(facilitator_submission.formatted_answers_with_facilitator_number(1))
 
-    assert_equal [expected_headers.values, expected_response.values_at(*expected_headers.keys)],
-      form.submissions_to_csv('test.csv')
+    assert_equal get_csv_string([expected_headers.values, expected_response.values_at(*expected_headers.keys)]),
+      form.submissions_to_csv
   end
 
   test 'submissions_to_csv formats multiple submissions where one did not answer facilitator-specific questions' do
@@ -156,8 +150,6 @@ class Foorm::FormTest < ActiveSupport::TestCase
     general_submission_1 = general_submission_workshop_metadata_1.foorm_submission
     facilitator_submission_1 = facilitator_submission_workshop_metadata_1.foorm_submission
     general_submission_2 = general_submission_workshop_metadata_2.foorm_submission
-
-    CSV.stubs(:open)
 
     other_general_headers = {
       'user_id' => 'user_id',
@@ -186,7 +178,15 @@ class Foorm::FormTest < ActiveSupport::TestCase
       expected_response_2.values_at(*expected_headers.keys)
     ]
 
-    assert_equal expected_rows,
-      form.submissions_to_csv('test.csv')
+    assert_equal get_csv_string(expected_rows),
+      form.submissions_to_csv
+  end
+
+  private
+
+  def get_csv_string(expected_values)
+    CSV.generate do |csv|
+      expected_values.each {|row| csv << row}
+    end
   end
 end

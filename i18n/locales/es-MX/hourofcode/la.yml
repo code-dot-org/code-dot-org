@@ -29,6 +29,20 @@ la:
   africa_campaign_date_full: Octubre 1-31
   africa_campaign_date_year: '2020'
   africa_campaign_date_full_year: Octubre 1-31, 2020
+  hoc2020_header: Learn today, build a brighter tomorrow.
+  hoc2020_header_with_line_break_markdown: |-
+    Learn today,
+
+    build a brighter tomorrow.
+  social_hoc2020_cs_important: 'CS is more important than ever. Let''s build the future
+    we want. #CSforGood'
+  social_hoc2020_hoc_is_about_csforgood: 'The #HourOfCode is about #CSforGood. Learn
+    today, build a brighter tomorrow.'
+  social_hoc2020_global_movement: La Hora del Código es un movimiento global en el
+    que participan decenas de millones de estudiantes. Los tutoriales de una hora
+    están disponibles en más de 45 idiomas para todas las edades.
+  social_hoc2020_coming_dates: The Hour of Code is coming December 7-13, 2020. Computer
+    science is foundational for every student to learn.
   hoc2019_header: Aprende programación. Cambia el mundo.
   hoc2019_header_line1_mobile: Aprende programación.
   hoc2019_header_line2_mobile: Cambia el mundo.
@@ -524,7 +538,7 @@ la:
     mapa
   signup_event_type_in_school: En una escuela
   signup_event_type_out_of_school: Fuera de la escuela
-  signup_event_type_at_home: Home
+  signup_event_type_at_home: Página principal
   signup_submit_census_label: Enviar
   signup_submit_census_error_message: Lo sentimos. Se produjo un error. Intenta enviar
     el formulario otra vez.
@@ -958,7 +972,8 @@ la:
   highlights_header: Destacados de la Hora del Código
   highlights_description: Algunos de nuestros momentos favoritos de la campaña de
     la Hora del Código.
-  higlights_see_more: Ver más destacados
+  highlights_previous: Highlights from previous years
+  highlights_see_more: See more highlights
   highlights_readmore: Leer más
   highlights_watchvideo: Mira el video
   highlights_facebook: Compartir en Facebook

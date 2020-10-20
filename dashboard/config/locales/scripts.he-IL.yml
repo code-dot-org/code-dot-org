@@ -6,6 +6,7 @@ he:
         csf_category_name: יסודות מדעי המחשב
         hoc_category_name: שעה של קוד
         math_category_name: מתמטיקה
+        other_category_name: אחר
       name:
         course1:
           title: מסלול 1
@@ -3189,6 +3190,10 @@ he:
           lesson_groups:
             csp3_1_2018:
               display_name: 'יחידה 3: מבוא לתכנות'
+        jess-test-script:
+          lessons:
+            Tools:
+              name: כלים
         csd2-virtual:
           lesson_groups:
             csd2_1:

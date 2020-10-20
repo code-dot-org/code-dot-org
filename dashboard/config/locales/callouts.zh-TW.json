@@ -1554,6 +1554,13 @@
           "New Play Lab Project_callout1": "點擊工具箱上的類別按鈕，來看看其中的積木吧！用滑鼠拖曳積木到工作區，把他們添加到你的程式中。",
           "New Play Lab Project_callout2": "點擊「運行」以儲存並運行你的程式",
           "sign_in_to_save_project": "想要在以後繼續使用這個專案嗎？登入以將這個專案保存到你的帳戶！"
+        },
+        "courseC_video_angles": {
+          "courseD_maze_ramp6_1": "不管你的程式是什麼，放到迴圈裡以後就會執行你所指定的次數，執行完以後才會繼續以後的程式。"
+        },
+        "courseD_video_nestedLoopsArtist": {
+          "courseE_artist_ramp8_1": "你可以修改這個數字。",
+          "courseE_artist_ramp8_2": "點擊此處輸入程式要重複的次數。"
         }
       }
     }

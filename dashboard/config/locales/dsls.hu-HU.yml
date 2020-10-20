@@ -1511,9 +1511,9 @@ hu-HU:
       courseC_multi_starWars_predict1_2018_2019:
         answers:
         - text: BB-8 nem fog megmozdulni.
-          feedback: Nem jó válasz. Az ismétlés blokk miatt BB-8 ötöt lép előre.
+          feedback: Nem jó válasz. Az ismétlés blokk miatt BB-8 előre fog lépni 5-ször.
         - text: BB-8 csak egyet lép előre
-          feedback: Nem jó válasz. Az ismétlés blokk miatt BB-8 ötöt lép előre.
+          feedback: Nem jó válasz. Az ismétlés blokk miatt BB-8 előre fog lépni 5-ször.
         - text: BB-8 ötöt lép előre és felszedi az összes fémdarabot
           correct: true
         - text: Nem tudom

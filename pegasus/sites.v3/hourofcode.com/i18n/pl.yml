@@ -29,6 +29,18 @@ pl:
   africa_campaign_date_full: 1 -  31 października
   africa_campaign_date_year: '2020'
   africa_campaign_date_full_year: 1 - 31 października 2020
+  hoc2020_header: Ucz się dzisiaj, buduj jaśniejsze jutro.
+  hoc2020_header_with_line_break_markdown: "Ucz się dzisiaj, \n\nbuduj jaśniejsze
+    jutro."
+  social_hoc2020_cs_important: 'Informatyka nigdy jeszcze nie była tak ważna. Budujmy
+    przyszłość taką, jakiej chcemy. #CSforGood'
+  social_hoc2020_hoc_is_about_csforgood: "#HourOfCode poświęcona jest #CSforGood.
+    Ucz się dzisiaj, buduj jaśniejsze jutro."
+  social_hoc2020_global_movement: Godzina Kodowania to globalny ruch docierający do
+    dziesiątek milionów uczniów. Jednogodzinne samouczki są dostępne w 45+ językach
+    dla uczniów w każdym wieku.
+  social_hoc2020_coming_dates: Godzina Kodowania będzie miała miejsce w dniach 7-13
+    grudnia 2020. Informatyka jest podstawą w kształceniu każdego ucznia.
   hoc2019_header: Ucz się informatyki. Zmieniaj świat!
   hoc2019_header_line1_mobile: Ucz się informatyki.
   hoc2019_header_line2_mobile: Zmieniaj świat!
@@ -946,7 +958,8 @@ pl:
   highlights_header: Atrakcje Godziny Kodowania
   highlights_description: Niektóre z naszych ulubionych momentów z kampanii Godziny
     Kodowania.
-  higlights_see_more: Zobacz więcej atrakcji
+  highlights_previous: Najważniejsze atrakcje poprzednich lat
+  highlights_see_more: Zobacz więcej atrakcji
   highlights_readmore: Czytaj więcej
   highlights_watchvideo: Obejrzyj wideo
   highlights_facebook: Udostępnij na Facebooku
