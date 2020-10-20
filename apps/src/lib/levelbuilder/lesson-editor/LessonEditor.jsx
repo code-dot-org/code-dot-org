@@ -8,6 +8,8 @@ import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
 import AnnouncementsEditor from '@cdo/apps/lib/levelbuilder/announcementsEditor/AnnouncementsEditor';
 import CollapsibleEditorSection from '@cdo/apps/lib/levelbuilder/CollapsibleEditorSection';
 import {resourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
+import RelatedLessons from './RelatedLessons';
+import {relatedLessonShape} from '../shapes';
 
 const styles = {
   editor: {
@@ -42,7 +44,8 @@ export default class LessonEditor extends Component {
     purpose: PropTypes.string,
     preparation: PropTypes.string,
     announcements: PropTypes.arrayOf(announcementShape),
-    resources: PropTypes.arrayOf(resourceShape)
+    resources: PropTypes.arrayOf(resourceShape),
+    relatedLessons: PropTypes.arrayOf(relatedLessonShape).isRequired
   };
 
   render() {
@@ -56,7 +59,8 @@ export default class LessonEditor extends Component {
       assessment,
       purpose,
       preparation,
-      announcements
+      announcements,
+      relatedLessons
     } = this.props;
     return (
       <div style={styles.editor}>
@@ -66,7 +70,12 @@ export default class LessonEditor extends Component {
           <input name="name" defaultValue={displayName} style={styles.input} />
         </label>
 
-        <CollapsibleEditorSection title="Lesson Settings">
+        <RelatedLessons relatedLessons={relatedLessons} />
+
+        <CollapsibleEditorSection
+          title="General Lesson Settings"
+          collapsed={true}
+        >
           <label>
             Lockable
             <input
@@ -130,13 +139,15 @@ export default class LessonEditor extends Component {
               </p>
             </HelpTip>
           </label>
+        </CollapsibleEditorSection>
+        <CollapsibleEditorSection title="Announcements" collapsed={true}>
           <AnnouncementsEditor
             defaultAnnouncements={announcements}
             inputStyle={styles.input}
           />
         </CollapsibleEditorSection>
 
-        <CollapsibleEditorSection title="Lesson Plan">
+        <CollapsibleEditorSection title="Overviews" collapsed={true}>
           <TextareaWithMarkdownPreview
             markdown={overview}
             label={'Overview'}
@@ -149,6 +160,9 @@ export default class LessonEditor extends Component {
             name={'studentOverview'}
             inputRows={5}
           />
+        </CollapsibleEditorSection>
+
+        <CollapsibleEditorSection title="Purpose and Prep" collapsed={true}>
           <TextareaWithMarkdownPreview
             markdown={purpose}
             label={'Purpose'}
@@ -161,6 +175,9 @@ export default class LessonEditor extends Component {
             name={'preparation'}
             inputRows={5}
           />
+        </CollapsibleEditorSection>
+
+        <CollapsibleEditorSection title="Resources" collapsed={true}>
           <ResourcesEditor resources={this.props.resources} />
         </CollapsibleEditorSection>
 

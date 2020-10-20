@@ -16,7 +16,7 @@ Egy Kódolás Órája alkalmat könnyű megszervezni, sőt tapasztalat sem szük
 
 Kipróbálhatod a Kódolás Óráját számítógépenl, táblagépen, okostelefonnal vagy akár gépek nélkül is! Így kezdj neki.
 
-[<button>Nézd meg az útmutatót</button>](https://hourofcode.com/files/HourofCode-Parent-How-To.pdf)
+[<button>Nézd meg az útmutatót</button>]({{ localized_files/hourofcode_parent_how_to }})
 
 * * *
 
@@ -106,4 +106,4 @@ Minden tevékenységünk magába foglalja a problémamegoldást és a kritikai g
         
         Computer science doesn’t have to end with the Hour of Code! Míg a szülők 90%-a szeretné, hogy gyermeke informatikát tanuljon, az iskolák többségében még mindig nem létező tantárgy. Segítségül tantervünk webalapú és ingyenesen használható, örökre. [ További információ ](https://code.org/yourschool) arról, hogyan csempészhetsz informatikát gyermeked iskolájába.
         
-        [<button>Nézd meg az útmutatót</button>](https://hourofcode.com/files/HourofCode-Parent-How-To.pdf)
+        [<button>Nézd meg az útmutatót</button>]({{ localized_files/hourofcode_parent_how_to }})

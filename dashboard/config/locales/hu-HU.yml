@@ -250,7 +250,7 @@ hu:
       confirm_password: Erősítse meg új jelszavát
       submit: Jelszavam módosítása
   welcome_email:
-    subject: Csatlakozz az én órámhoz (a Code.org-on)
+    subject: Csatlakozz az én osztályomhoz (a Code.org-on)
     body: "Kattints az alábbi linkre, hogy számítógép-tudományi gyakorlatokra iratkozz
       fel a Code.org rendszerben (velem, mint tanár): %{link} \n\nA gyakorlatok izgalmasak,
       látványosak, és a számítógép-tudomány alapvető fogalmait egyszerű, irányított,
@@ -269,9 +269,9 @@ hu:
     added_teacher: "%{name} hozzáadva mint a tanárod"
     registered: Regisztráltál %{section_name}-ra.
     error:
-      signed_in: Mielőtt folytatná kérem jelentkezzen ki
-      username_not_found: A %{username} felhasználónév nem található
-      username_in_use: "%{username} már foglalt, kérjük válasszon egy újat"
+      signed_in: Kérjük, jelentkezz ki, mielőtt folytatnád
+      username_not_found: "%{username} felhasználónév nem található"
+      username_in_use: "%{username} már foglalt. Kérjük, válassz egy másikat"
       no_teacher: 'Nem található bejelentkezett felhasználó ezzel az értékkel: ''%{teacher_email_or_code}''.
         Kérdd meg, hogy jelentkezzen be itt, majd próbáld felvenni újra'
       section_not_found: 'Nem található szakasz ezzel a kóddal: ''%{section_code}''.'

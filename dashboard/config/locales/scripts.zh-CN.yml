@@ -20,6 +20,7 @@ zh-CN:
         hoc_category_name: 编程一小时
         math_category_name: 数学
         research_studies_category_name: 研究工作
+        other_category_name: 其他
       name:
         course1:
           title: '课程 1:'

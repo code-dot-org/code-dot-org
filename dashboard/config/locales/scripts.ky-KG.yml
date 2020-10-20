@@ -5,6 +5,7 @@ ky:
       category:
         hoc_category_name: Код сааты
         math_category_name: Математика
+        other_category_name: Башка
       name:
         course1:
           title: Курс 1

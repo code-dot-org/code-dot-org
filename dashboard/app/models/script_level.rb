@@ -442,9 +442,24 @@ class ScriptLevel < ActiveRecord::Base
     summary
   end
 
+  def summarize_for_lesson_show
+    summary = summarize
+    summary[:id] = id
+    summary[:levels] = levels.map do |level|
+      {
+        name: level.name,
+        id: level.id,
+        icon: level.icon,
+        isConceptLevel: level.concept_level?
+      }
+    end
+    summary
+  end
+
   def summarize_for_edit
     summary = summarize
     summary[:id] = id
+    summary[:activitySectionPosition] = activity_section_position
     summary[:levels] = levels.map do |level|
       {
         id: level.id,
@@ -646,5 +661,12 @@ class ScriptLevel < ActiveRecord::Base
       raise "No levels found for #{inspect}" if my_levels.nil_or_empty?
     end
     my_levels.sort_by(&:id).map(&:key)
+  end
+
+  # @param [Array<Hash>] levels_data - Array of hashes each representing a level
+  def update_levels(levels_data)
+    self.levels = levels_data.map do |level_data|
+      Level.find(level_data['id'])
+    end
   end
 end

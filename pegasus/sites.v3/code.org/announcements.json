@@ -2,6 +2,7 @@
   "pages": {
     "/projects": "home-learning-2020"
   },
+
   "banners": {
     "teacher-apps-open-2020": {
       "image": "/images/professional-learning-2019-3.png",
@@ -46,5 +47,7 @@
       "buttonId": "view-project-ideas-2020-button",
       "backgroundColor": "#59b9dc"
     }
+
+
   }
 }
