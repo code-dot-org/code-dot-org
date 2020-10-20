@@ -171,6 +171,7 @@ class ActivityCard extends Component {
               value={activity.duration}
               style={{width: 35}}
               onChange={this.handleChangeDuration}
+              className="uitest-activity-duration-input"
             />
             <span style={{fontSize: 10}}>{'(mins)'}</span>
           </label>
