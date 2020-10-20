@@ -447,7 +447,11 @@ class ScriptLevel < ActiveRecord::Base
     summary[:id] = id
     summary[:levels] = levels.map do |level|
       {
+        name: level.name,
         id: level.id,
+        icon: level.icon,
+        isUnplugged: level.unplugged?,
+        isConceptLevel: level.concept_level?,
       }
     end
     summary
