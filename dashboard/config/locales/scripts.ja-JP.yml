@@ -19,6 +19,7 @@ ja:
         hoc_category_name: Hour of Code（アワー オブ コード）
         math_category_name: 計算(けいさん)
         research_studies_category_name: 調査（ちょうさ）・研究（けんきゅう）
+        other_category_name: その他
       name:
         course1:
           title: コース1

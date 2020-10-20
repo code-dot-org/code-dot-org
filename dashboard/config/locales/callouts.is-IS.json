@@ -1483,6 +1483,13 @@
         },
         "grade5_artist_variables_triangles1_2020": {
           "grade5_artist_variables_triangles1_1": "Nú er komin ný aðferð til að setja tölur í kubba. Þessa kubba undir `Reikningur` má draga fram og færa til!"
+        },
+        "courseC_video_angles": {
+          "courseD_maze_ramp6_1": "Kóðinn sem þú setur hér verður endurtekinn eins oft og þú segir til um, áður en afgangurinn af forritinu er keyrður."
+        },
+        "courseD_video_nestedLoopsArtist": {
+          "courseE_artist_ramp8_1": "Þú getur breytt þessari tölu.",
+          "courseE_artist_ramp8_2": "Smelltu hér til að skrifa tölu fyrir hve oft á að endurtaka kóðann."
         }
       }
     }

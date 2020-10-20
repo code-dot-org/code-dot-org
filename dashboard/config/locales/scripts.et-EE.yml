@@ -5,6 +5,7 @@ et:
       category:
         hoc_category_name: KoodiTund
         math_category_name: Matemaatika
+        other_category_name: Muu
       name:
         course1:
           title: Kursus 1

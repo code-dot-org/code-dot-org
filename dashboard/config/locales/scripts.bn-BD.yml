@@ -5,6 +5,7 @@ bn:
       category:
         hoc_category_name: এক ঘন্টার কোড
         math_category_name: গণিত
+        other_category_name: অন্যান্য
       name:
         course1:
           title: কোর্স ১
