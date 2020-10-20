@@ -37,11 +37,15 @@ export default class CreateNewLevelInputs extends Component {
 
   handleCreateLevel = () => {
     this.setState({creatingLevel: true, error: null});
-    const needMoreLevelInformation = this.state.levelName === '' || this.state.levelType === '';
+    const needMoreLevelInformation =
+      this.state.levelName === '' || this.state.levelType === '';
     if (needMoreLevelInformation) {
       this.setState({
         creatingLevel: false,
-        error: this.state.levelType === '' ? 'Please choose a level type' : 'Please enter a level name'
+        error:
+          this.state.levelType === ''
+            ? 'Please choose a level type'
+            : 'Please enter a level name'
       });
     } else {
       $.ajax({

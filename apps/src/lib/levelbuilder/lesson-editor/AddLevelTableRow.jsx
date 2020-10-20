@@ -27,25 +27,32 @@ export default class AddLevelTableRow extends Component {
   handleCloneAndAddLevel = level => {
     this.setState({creatingClonedLevel: true, error: null});
     const newLevelName = prompt('Enter new level name');
-    $.ajax({
-      url: `/levels/${
-        level.id
-      }/clone?name=${newLevelName}&do_not_redirect=true`,
-      method: 'POST',
-      dataType: 'json',
-      contentType: 'application/json;charset=UTF-8'
-    })
-      .done(data => {
-        this.props.addLevel(data);
-        this.setState({creatingClonedLevel: false});
+    if (newLevelName) {
+      $.ajax({
+        url: `/levels/${
+          level.id
+        }/clone?name=${newLevelName}&do_not_redirect=true`,
+        method: 'POST',
+        dataType: 'json',
+        contentType: 'application/json;charset=UTF-8'
       })
-      .fail(error => {
-        console.log(error.responseText);
-        this.setState({
-          creatingClonedLevel: false,
-          error: 'Could not clone level'
+        .done(data => {
+          this.props.addLevel(data);
+          this.setState({creatingClonedLevel: false});
+        })
+        .fail(error => {
+          console.log(error.responseText);
+          this.setState({
+            creatingClonedLevel: false,
+            error: 'Could not clone level'
+          });
         });
+    } else {
+      this.setState({
+        creatingClonedLevel: false,
+        error: 'Must provide new name for the cloned level'
       });
+    }
   };
 
   render() {
