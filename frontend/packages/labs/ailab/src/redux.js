@@ -1,6 +1,7 @@
 import { availableTrainers } from "./train.js";
 // Action types
 
+const RESET_STATE = "RESET_STATE";
 const SET_IMPORTED_DATA = "SET_IMPORTED_DATA";
 const SET_SELECTED_TRAINER = "SET_SELECTED_TRAINER";
 const SET_COLUMNS_BY_DATA_TYPE = "SET_COLUMNS_BY_DATA_TYPE";
@@ -74,6 +75,10 @@ export function setTestData(testData) {
 
 export function setPrediction(prediction) {
   return { type: SET_PREDICTION, prediction };
+}
+
+export function resetState() {
+  return { type: RESET_STATE };
 }
 
 const initialState = {
@@ -160,6 +165,11 @@ export default function rootReducer(state = initialState, action) {
     return {
       ...state,
       prediction: action.prediction
+    };
+  }
+  if (action.type === RESET_STATE) {
+    return {
+      ...initialState
     };
   }
   return state;
