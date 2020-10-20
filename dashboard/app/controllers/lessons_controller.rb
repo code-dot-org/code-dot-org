@@ -28,7 +28,8 @@ class LessonsController < ApplicationController
       overview: @lesson.overview || '',
       announcements: @lesson.announcements,
       purpose: @lesson.purpose || '',
-      preparation: @lesson.preparation || ''
+      preparation: @lesson.preparation || '',
+      activities: @lesson.lesson_activities.map(&:summarize_for_lesson_show)
     }
   end
 
