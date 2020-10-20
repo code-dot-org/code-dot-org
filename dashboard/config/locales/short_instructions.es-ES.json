@@ -3053,7 +3053,12 @@
         "ramp_artist_loops9": "Dibuja un cuadrado para resolver este desafío.",
         "ramp_artist_loops9_2018": "Dibuja un cuadrado para resolver este desafío.",
         "ramp_artist_loops9_2019": "Dibuja un cuadrado para resolver este desafío.",
-        "ramp_artist_loops9_2020": "Dibuja un cuadrado para resolver este desafío."
+        "ramp_artist_loops9_2020": "Dibuja un cuadrado para resolver este desafío.",
+        "courseC_video_angles": "¡Ayuda a Scrat a llegar hasta la bellota!",
+        "courseD_video_nestedLoopsArtist": "Usa lo que has aprendido para dibujar este triángulo.",
+        "courseE_bee_ramp14": "Muévete hacia adelante hasta que alcances la lechuga, y luego usa un bucle `mientras` para recogerla toda.",
+        "courseE_farmer_predict1": "¡Cuando haya lechuga, recoge la lechuga!",
+        "courseE_farmer_predict2": "Muévete hacia adelante hasta que alcances la lechuga, y luego usa un bucle `mientras` para recogerla toda."
       }
     }
   }

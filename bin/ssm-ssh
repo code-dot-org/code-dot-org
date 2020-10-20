@@ -1,0 +1,38 @@
+#!/bin/bash
+
+# Starts an SSH session to the specified EC2 instance through SSM Session Manager,
+# using a temporary SSH key sent through EC2 Instance Connect.
+
+if [ "$#" -ne 4 ]; then
+  echo "Usage: $0 INSTANCE_ID PORT USER KEY_PATH"
+  exit 1
+fi
+
+INSTANCE_ID=${1}
+PORT=${2}
+INSTANCE_OS_USER=${3}
+KEY_PATH=${4}
+
+# Create a temporary SSH key at the provided path.
+rm -f "${KEY_PATH}"
+ssh-keygen -q -t rsa -f "${KEY_PATH}" -N ''
+
+# Lookup Availability Zone of EC2 instance.
+AZ=$(aws ec2 describe-instances \
+  --instance-ids "$INSTANCE_ID" \
+  --query 'Reservations[].Instances[].Placement.AvailabilityZone' \
+  --output text
+)
+
+# Call ec2-instance-connect.SendSSHPublicKey to authorize the public key.
+aws ec2-instance-connect send-ssh-public-key \
+  --instance-id "$INSTANCE_ID" \
+  --availability-zone "$AZ" \
+  --instance-os-user "$INSTANCE_OS_USER" \
+  --ssh-public-key "file://${KEY_PATH}.pub"
+
+# Call ssm to start the SSH port-forwarding session via SSM Session Manager.
+aws ssm start-session \
+  --target "$INSTANCE_ID" \
+  --document-name AWS-StartSSHSession \
+  --parameters "portNumber=$PORT"

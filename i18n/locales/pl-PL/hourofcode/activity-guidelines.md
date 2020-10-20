@@ -8,17 +8,17 @@ title: Wytyczne dla samouczków
   }
 </style>
 
-# Guidelines for creating and submitting tutorials and lessons for Hour of Code™ and Computer Science Education Week
+# Przewodniki do tworzenia i podawania samouczków i lekcji na potrzeby "Godziny kodowania™" [Hour of Code™] w ramach "Tygodnia Edukacji Informatycznej"
 
-Code.org hosts a variety of Hour of Code™ activities, lessons, and videos on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at [hourofcode.com/learn]({{ urls/learn }}).
+Code.org organizuje wiele zajęć, lekcji i filmów wideo związanych z "Godziną kodowania™" [Hour of Code™] na stronach Code.org, Hour of Code oraz CSEdWeek. Aktualna ista znajduje się na stronie [hourofcode.com/learn]({{ urls/learn }}).
 
-Want to submit your own self-guided tutorial, teacher-led lesson, or robotics/maker activity that explains a computer science principle? Join this global movement and help participants around the world get started with an hour of code or go further with multi-lesson, day-long, or week-long activities.
+Czy chcesz przedłożyć swój własny samouczek, lekcję prowadzoną przez nauczyciela lub zajęcia z robotyki/ czynność twórcy, która wyjaśnia zasadę informatyczną? Dołącz do tego ruchu globalnego i pomóż uczestnikom z całego świata wystartować z godziną kodowania lub pójść dalej w ramach zajęć wielolekcyjnych, całodziennych lub całotygodniowych.
 
-**After reading the guidelines, you can submit your activity through our [Hour of Code™ Activity Submission page](https://forms.gle/L1hjArNnGSMJPzyE8). You can submit an activity at any time, but the deadline for inclusion in any given calendar year is October 1. (For example, any activities received after October 1, {{ campaign_date/year }} will not be listed for {{ campaign_date/year }}'s Hour of Code.) The deadline to submit for an early qualitative review [(details below)](#earlyreview) is August 16.** If you have any questions about your activitiy submission, please reach out to us at support@code.org.
+**Po przeczytaniu wytycznych możesz przedstawić swoje zajęcia za pomocą strony "Przedłożenia zajęć ["Godziny kodowania ™" [Hour of Code™]](https://forms.gle/L1hjArNnGSMJPzyE8). Możesz przedłożyć zajęcia w dowolnym momencie, ale terminem włączenia w dowolny rok kalendarzowy jest 1 października. (Na przykład dowolne zajęcia otrzymane po 1 października, {{ campaign_date/year }} nie będą uwzględnione na liście {{ campaign_date/year }}'Godziny kodowania".) Terminem ostatecznym złożenia wczesnej opinii jakościowej [(szczegóły poniżej)](#earlyreview) jest 16 sierpnia.** Jeśli masz jakiekolwiek pytania dotyczące złożenia Twoich zajęć, prosimy zwrócić się do nas na adres: support@code.org.
 
-A few tips:
+Kilka wskazówek
 
-1. **Submit more than one activity**: If you’ve built activities for different levels, different ages, or other categories, we list your activities separately so each teacher can find the right thing for their classroom. Submit each tutorial or activity individually. Given the number of submissions we have seen in recent years, we will have time to review **up to 5 activities** per partner. After that, we will make a best effort to review as many as possible before Hour of Code begins.
+1. **Przedłóż więcej niż jedne zajęcia**: Jeśli zbudowałeś zajęcia dla różnych poziomów, różnych grup wiekowych lub innych kategorii, sporządzimy listę Twoich zajęć odrębnie tak, aby każdy nauczyciel mógł znaleźć odpowiednią rzecz dla swojej klasy. Przedłóż każdy samouczek lub zajęcia indywidualnie. Mając liczbę pozycji przedłożonych obserwowanych w ostatnich latach, będziemy mieć czas na weryfikację **do 5 zajęć** przypadających na partnera. Potem dołożymy wszelkich starań, aby zweryfikować jak najwięcej zanim rozpocznie się "Godzina kodowania".
 
 2. **Beyond beginner lessons**: In addition to lessons for teachers and students who are learning computer science for the first time, we list learning experiences for computer science-savvy classrooms that want to go a little bit further! Help us by submitting lessons for classes that are already comfortable with the basics.
 
