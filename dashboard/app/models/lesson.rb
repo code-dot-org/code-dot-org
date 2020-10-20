@@ -308,7 +308,8 @@ class Lesson < ActiveRecord::Base
       overview: overview || '',
       announcements: announcements,
       purpose: purpose || '',
-      preparation: preparation || ''
+      preparation: preparation || '',
+      activities: lesson_activities.map(&:summarize_for_lesson_show)
     }
   end
 
