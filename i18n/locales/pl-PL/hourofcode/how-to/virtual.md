@@ -10,7 +10,7 @@ title: Poradnik "Godziny kodowania" dla wydarzeń wirtualnych
 
 ***
 
-Chociaż "Godzinę kodowania" tradycyjnie prowadzi się w klasach na całym świecie, nie trzeba występować na nich osobiście, aby się dobrze bawić! Można występować w roli gospodarza interaktywnej i inspirującej "Godziny kodowania" dla uczniów w trybie zdanym korzystając z niektórych z poniższych rekomendacji.  Take a look at our <a href="https://hourofcode.com/files/participation-guide-virtual.pdf">guide for virtual events</a> if you still have questions.
+Chociaż "Godzinę kodowania" tradycyjnie prowadzi się w klasach na całym świecie, nie trzeba występować na nich osobiście, aby się dobrze bawić! Można występować w roli gospodarza interaktywnej i inspirującej "Godziny kodowania" dla uczniów w trybie zdanym korzystając z niektórych z poniższych rekomendacji.  Take a look at our [guide for virtual events]({{ localized_files/participation_guide_virtual }}) if you still have questions.
 
 <br><br>
 
@@ -20,7 +20,7 @@ Chociaż "Godzinę kodowania" tradycyjnie prowadzi się w klasach na całym świ
 Even if you plan for students to complete their activities independently, we recommend starting your event with a virtual kick-off online to get participants excited. There are several interesting ways you can start your event: 
 
 <ul>
-<li><b>Zaproś prelegenta-gościa</b>: Tysiące wolontariuszy z wszystkich możliwych środowisk czekają na wiadomość od Ciebie! Po prostu skorzystaj z naszej <a href="https://code.org/volunteer/local">mapy ochotników</a>, aby ich wyszukać. Dzięki wirtualnej "Godzinie kodowania" nie jesteś ograniczony odległością, zatem, w razie potrzeby, rozważ wyszukiwanie wolontariuszy oferujących pomoc w trybie zdalnym poza obszarem swojego kodu pocztowego. Gdy już się połączysz z wolontariuszem, możesz odwołać się do <a href="http://hourofcode.com/us/how-to/volunteers">"Jak to się robi w <<Godzinie kodowania>>"</a>, jako przewodnika do określenia potencjalnych tematów, pytań do dyskusji i nie wielu innych.</li> 
+<li><b>Zaproś prelegenta-gościa</b>: Tysiące wolontariuszy z wszystkich możliwych środowisk czekają na wiadomość od Ciebie! Po prostu skorzystaj z naszej <a href="https://code.org/volunteer/local">mapy ochotników</a>, aby ich wyszukać. Dzięki wirtualnej "Godzinie kodowania" nie jesteś ograniczony odległością, zatem, w razie potrzeby, rozważ wyszukiwanie wolontariuszy oferujących pomoc w trybie zdalnym poza obszarem swojego kodu pocztowego. Gdy już się połączysz z wolontariuszem, możesz odwołać się do <a href="http://hourofcode.com/us/how-to/volunteers">"Jak to się robi w Godzinie kodowania"</a>, jako przewodnika do określenia potencjalnych tematów, pytań do dyskusji i nie wielu innych.</li> 
 <li><b>Pokaż inspirujący film wideo</b>: Inną, skuteczną opcją jest rozpoczęcie swojego wydarzenia jest pokazanie uczestnikom jednego w naszych wielu <a href="http://hourofcode.com/us/promote/resources#videos">inspirujących filmów wideo</a>. Wiele filmów wideo trwa poniżej 5 minut i zawiera inspirację i zachętę od celebrytów rozpoznawalnych dla Twoich uczniów.</li> 
 <li><b>Omów zagadnienie "Informatyka na dobre"</b>: Przekształć swoje wydarzenia "Godzina kodowania" w głębsze zgłębienie informatyki poprzez rozważenie wpływu technologii na swoje życie codzienne. Stawiaj uczniom pytania naprowadzające i przekształć początek swojego wydarzenie w interaktywną dyskusję. Zapoznaj się z tymi  <a href="https://code.org/csforgood#prompts">pytaniami do dyskusji</a>, aby zebrać pomysły na to, jak rozpocząć rozmowę.</li>
 </ul>

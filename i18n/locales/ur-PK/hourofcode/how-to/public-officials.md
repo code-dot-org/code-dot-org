@@ -24,7 +24,7 @@ title: رہنمائی کیسے کریں – برائے عوامی-نمائندگ
 
 ### 1 ۔ ہماری ایک صفحہ کار کا مطالعہ
 
-See [why computer science education is important](/files/hoc-one-pager.pdf), and how you can help the effort by supporting the Hour of Code.
+See [why computer science education is important]({{ localized_files/hoc_one_pager }}), and how you can help the effort by supporting the Hour of Code.
 
 ### 2 ۔ بھرتی مقامی اسکولوں اور اضلاع
 

@@ -155,7 +155,9 @@ function getLocations(results) {
       var contact_link =
         '<a id="contact-trigger-' +
         index +
-        '" class="contact-trigger" onclick="return contactVolunteer()">Contact</a>';
+        '" class="contact-trigger" onclick="return contactVolunteer(' +
+        id +
+        ')">Contact</a>';
 
       var location = {
         lat: lat,
@@ -281,7 +283,6 @@ function loadMap(locations) {
           layout: {
             "icon-image": "dot-marker",
             "icon-size": 1.1,
-            "icon-anchor": "bottom",
             "icon-allow-overlap": true
           }
         });
@@ -585,12 +586,13 @@ function compileContact(index, location) {
 }
 
 /* eslint-disable no-unused-vars */
-function contactVolunteer() {
+function contactVolunteer(id) {
   $("#name").show();
   $("#volunteer-contact").show();
   $("#success-message").hide();
   $("#error-message").hide();
   adjustScroll("volunteer-contact");
+  $("#volunteer-id").val(id);
 
   return false;
 }
