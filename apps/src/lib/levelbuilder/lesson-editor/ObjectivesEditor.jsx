@@ -9,7 +9,8 @@ const styles = {
   actionButtons: {
     display: 'flex',
     justifyContent: 'space-evenly',
-    backgroundColor: 'white'
+    backgroundColor: 'white',
+    height: 30
   },
   remove: {
     fontSize: 14,
@@ -17,7 +18,8 @@ const styles = {
     background: color.dark_red,
     cursor: 'pointer',
     textAlign: 'center',
-    minWidth: '50%'
+    minWidth: '50%',
+    lineHeight: '30px'
   },
   edit: {
     fontSize: 14,
@@ -25,7 +27,8 @@ const styles = {
     background: color.default_blue,
     cursor: 'pointer',
     textAlign: 'center',
-    minWidth: '50%'
+    minWidth: '50%',
+    lineHeight: '30px'
   },
   save: {
     fontSize: 14,
@@ -33,7 +36,8 @@ const styles = {
     background: color.green,
     cursor: 'pointer',
     textAlign: 'center',
-    minWidth: '50%'
+    minWidth: '50%',
+    lineHeight: '30px'
   },
   addButton: {
     background: color.cyan,
@@ -129,13 +133,19 @@ export default class ObjectivesEditor extends Component {
             <tbody>
               {this.state.objectives.map((objective, index) => (
                 <tr key={index} style={index % 2 === 1 ? styles.oddRow : {}}>
-                  <td>
+                  <td style={{height: 30}}>
                     {this.state.currentlyEditingIndex === index ? (
                       <input
                         value={this.state.objectiveInput}
                         onChange={e =>
                           this.setState({objectiveInput: e.target.value})
                         }
+                        onKeyDown={e => {
+                          if (e.key === 'Enter') {
+                            this.handleSave();
+                          }
+                        }}
+                        style={{width: '98%'}}
                       />
                     ) : (
                       <div>{objective.description}</div>
