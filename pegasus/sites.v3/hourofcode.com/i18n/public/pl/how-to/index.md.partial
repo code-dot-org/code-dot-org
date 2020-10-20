@@ -1,5 +1,5 @@
 ---
-title: Hour of Code How-to Guide
+title: Przewodnik po "Godzinie kodowania"
 layout: wide
 nav: how_to_nav
 ---
@@ -14,13 +14,13 @@ Myślenie informatyczne pomaga rozwijać umiejętność rozwiązywania problemó
 
 Wypróbowanie godziny kodowania to prosty i przyjemny sposób na zapoznanie uczniów z podstawami informatyki, który doskonale wpisze się w zajęcia lekcyjne, jak i pozaszkolne. Zobacz nasz <a href="{{ localized_files/participation_guide }}"</a>przewodnik uczestnictwa, jeśli nadal masz pytania.
 
-- [Watch the Hour of Code how-to video](#how-to-video)
-- [Explore activities and tutorials](#explore-activities)
-- [Create your plan for the day](#create-your-plan)
+- [Obejrzyj film instruktażowy "Godziny kodowania"](#how-to-video)
+- [Poznawaj zajęcia i treści samouczków](#explore-activities)
+- [Utwórz swój plan dnia](#create-your-plan)
 - [Promuj swoją Godzinę Kodowania](#promote-your-hour)
-- [How to start your Hour of Code strong](#how-to-start)
-- [Get coding](#code)
-- [Celebrate your students' success](#celebrate)
+- [Jak "z przytupem" zacząć "Godzinę kodowania"](#how-to-start)
+- [Zacznij kodować](#code)
+- [Świętuj sukces swoich uczniów](#celebrate)
 - [Inne zasoby Godziny Kodowania dla nauczycieli](#other-resources)
 
 ### Godzinę kodowania można również zorganizować zdalnie! Aby rozpocząć, [zapoznaj się z naszymi wskazówkami dotyczącymi organizowania wirtualnej godziny kodowania.](https://hourofcode.com/us/how-to/virtual).
@@ -90,7 +90,7 @@ Dowiedz się więcej o plakatach, filmach, naklejkach i innych sposobach [ promo
 
 <a id="how-to-start"></a>
 
-## 5. How to start your Hour of Code strong
+## 5. Jak "z przytupem" zacząć "Godzinę kodowania"
 
 Po nadejściu Godziny Kodowania upewnij się, że dobrze rozpoczniesz swoje wydarzenie dzięki niektórym z tych narzędzi i wskazówek.
 
@@ -111,7 +111,7 @@ W porządku, jeśli zarówno Ty, jak i Twoi uczniowie, jesteście nowicjuszami w
 
 <a id="code"></a>
 
-## 6. Get coding!
+## 6. Zacznijcie kodować!
 
 Skieruj uczniów na zadania
 
@@ -156,6 +156,6 @@ A co zrobić, jeśli któryś z uczniów skończy wcześniej?
 
 ### Co będzie się działo po Godzinie Kodowania?
 
-Computer science doesn’t have to end with the Hour of Code! Our curriculum is web-based and free to use, forever. [Learn how](/beyond) to bring CS to your school and students.
+Informatyka nie musi się kończyć na "Godzinie kodowania"! Nasz program realizowany jest w trybie internetowym i można z niego korzystać bezpłatnie, na zawsze. [Dowiedz się, jak można ](/beyond) wprowadzić informatykę to swojej szkoły i przybliżyć ją swoim uczniom.
 
 {{ signup_button }}

@@ -14,6 +14,10 @@ module Geocoder
           end
         end
       end
+
+      def relevance
+        1.0
+      end
     end
 
     # This override for the Mapbox class is being added because we are transition from call the Google Maps location
@@ -58,6 +62,10 @@ module Geocoder
 
       def formatted_address
         data['place_name']
+      end
+
+      def relevance
+        data['relevance']
       end
 
       # This following methods should be removed once the Geocoder gem is updated
@@ -116,10 +124,11 @@ module Geocoder
     results = Geocoder.search(first_number_to_end)
     return nil if results.empty?
 
-    if results.first&.street_address
-      return first_number_to_end
-    end
-    nil
+    # Return nil if none of the results returned from Geocoder matched on a
+    # street address with relevance >= 0.8
+    return nil if results.none? {|r| r.relevance >= 0.8 && r.street_address}
+
+    first_number_to_end
   end
 
   # Temporarily, for a given block, configure Geocoder to raise all errors.
