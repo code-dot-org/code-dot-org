@@ -20,6 +20,7 @@ id:
         hoc_category_name: Jam kode
         math_category_name: Matematika
         research_studies_category_name: Studi Penelitian
+        other_category_name: Lain
       name:
         course1:
           title: Kursus 1

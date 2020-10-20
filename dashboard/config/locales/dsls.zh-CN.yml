@@ -7575,3 +7575,50 @@ zh-CN:
       courseExpress_EOC_2020:
         display_name: 结课项目
         description: 你已经完成了本课程！点击以创建项目。
+      CSD Interactive Animations and Games Post-Project Test:
+        title: 互动动画和游戏 项目后测试
+      CSD Physical Computing Post-Project Test:
+        title: 物理计算 项目后测试
+      CSD User Centered Design Post-Project Test:
+        title: 以用户为中心的设计：项目后测试
+      CSD Web Development Post-Project Test:
+        title: 网页开发 项目后测试
+      csd-post-survey-2017-levelgroup:
+        title: 计算机科学发现期末学生调查
+      csd-post-survey-2017-levelgroup_2018:
+        title: 计算机科学发现期末学生调查
+      csd-post-survey-2018-markdown-with-link-to-survey:
+        markdown: |+
+          # 计算机科学发现课后问卷
+
+          **你的输入和反馈对我们非常重要！** 我们会用它来：
+
+          * 改进课程
+          * 了解你的体验
+          * 告诉我们今后想要学习的主题
+
+          非常感谢花时间来帮助计算机科学发现变得更好！
+
+          <a class="btn btn-large btn-success" href="/s/csd-post-survey/stage/1/puzzle/1/page/1" target="top">点击这里完成计算机科学发现课后问卷！！！</a>
+
+          (在新窗口中打开)
+
+          <br>
+
+
+
+
+
+      csd-post-survey-intro-2019:
+        markdown: |+
+          # 计算机科学发现 课后问卷
+
+          **您的输入和反馈对我们非常重要！** 这些反馈会用来：
+
+          * 了解您的体验
+          * 改进课程
+
+          感谢花时间来帮助计算机科学原理变得更好！
+
+      csd-post-survey-levelgroup_2019:
+        title: 计算机科学发现期末学生调查

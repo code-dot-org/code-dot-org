@@ -110,7 +110,7 @@ Resources:
   image_id: IMAGE_ID,
   ssh_key_name: SSH_KEY_NAME,
   subnets: subnets(azs(AVAILABILITY_ZONES - ['us-east-1e'])), # us-east-1e doesn't support m5 instance types.
-  frontend_policies: [Ref: 'CDOPolicy'],
+  frontend_policies: [{Ref: 'CDOPolicy'}, {ImportValue: 'IAM-SessionPermissions'}],
   frontend_properties: {TargetGroupARNs: [Ref: 'ALBTargetGroup']},
   frontend_volume_size: 64,
   ami_timeout: 'PT120M',
@@ -405,7 +405,9 @@ Resources:
                   - dms:StartReplicationTask
                 Resource: !Sub "arn:aws:dms:${AWS::Region}:${AWS::AccountId}:task:*"
 <% end -%>
-      ManagedPolicyArns: [!Ref CDOPolicy]
+      ManagedPolicyArns:
+        - !Ref CDOPolicy
+        - !ImportValue IAM-SessionPermissions
       PermissionsBoundary: !ImportValue IAM-DevPermissions
   DaemonInstanceProfile:
     Type: AWS::IAM::InstanceProfile

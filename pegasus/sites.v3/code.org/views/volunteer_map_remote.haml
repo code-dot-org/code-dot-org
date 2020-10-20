@@ -27,6 +27,12 @@
 %link{rel: "stylesheet", href: "https://api.tiles.mapbox.com/mapbox-gl-js/v1.1.1/mapbox-gl.css"}
 %script{type: "text/javascript", src: "https://api.tiles.mapbox.com/mapbox-gl-js/v1.1.1/mapbox-gl.js"}
 
+:css
+  .mapboxgl-popup-content {
+    max-height: 180px;
+    overflow-y: scroll;
+  }
+
 :javascript
   mapboxgl.accessToken = "#{CDO.mapbox_access_token}";
 
