@@ -87,7 +87,7 @@ const initialState = {
   trainingLabels: [],
   showPredict: false,
   testData: {},
-  prediction: undefined
+  prediction: {}
 };
 
 // Reducer
@@ -226,6 +226,30 @@ export function getUniqueOptionsByColumn(state) {
     column => (uniqueOptionsByColumn[column] = getUniqueOptions(state, column))
   );
   return uniqueOptionsByColumn;
+}
+
+function getKeyByValue(object, value) {
+  return Object.keys(object).find(key => object[key] === value);
+}
+
+function isEmpty(object) {
+  return Object.keys(object).length === 0;
+}
+
+export function getConvertedPredictedLabel(state) {
+  if (
+    state.labelColumn &&
+    !isEmpty(state.featureNumberKey) &&
+    !isEmpty(state.prediction)
+  ) {
+    const label = getCategoricalColumns(state).includes(state.labelColumn)
+      ? getKeyByValue(
+          state.featureNumberKey[state.labelColumn],
+          state.prediction.predictedLabel
+        )
+      : state.prediction.predictedLabel;
+    return label;
+  }
 }
 
 export const ColumnTypes = {
