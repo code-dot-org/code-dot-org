@@ -11,7 +11,7 @@ zh-TW:
         csf_2019_category_name: 電腦科學基礎 2019)
         csf_international_category_name: 計算機科學基礎國際版
         csf2_draft_category_name: '開發中：課程 A - F'
-        csp_category_name: "'15-' 16 計算機科學原理"
+        csp_category_name: '''15-'' 16 計算機科學原理'
         csp_2018_category_name: 計算機科學原理（'18-'19）
         csp_2019_category_name: 計算機科學原理（'19-'20）
         cspexams_category_name: 計算機科學原理應用測驗
@@ -20,6 +20,7 @@ zh-TW:
         hoc_category_name: 一小時玩程式
         math_category_name: 運算
         research_studies_category_name: 研究
+        other_category_name: 其它
       name:
         course1:
           title: 課程 1
@@ -15195,7 +15196,7 @@ zh-TW:
         vpl-csp-2020:
           lessons:
             Module 1:
-              name: 模組 1
+              name: '模組 1'
         curriculum-sandbox-levels:
           lessons:
             Course A:

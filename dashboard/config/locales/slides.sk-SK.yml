@@ -312,6 +312,13 @@ sk:
       2:
         text: Ak má postava niečo opakovane vykonávať bez zásahu hráča, budeme vkladať
           tieto bloky do vnútra bloku "opakuj donekonečna".
+    C1_artist_intro:
+      1:
+        text: S týmito blokmi kreslíš. Použi ich, aby sa umelec dostal kam potrebuje
+          na zafarbenie sivých čiar.
+      2:
+        text: "S týmito blokmi skáčeš. Keď ich použiješ, tvoj umelec sa pohne, ale
+          nekreslí, takže pomocou nich preskočíš na ďalšiu šedú čiaru. \n"
     C1_bee_loops:
       1:
         text: Cyklus znamená opakovanie činnosti. Keď kontrolujem úľ, vytiahnem a
@@ -357,6 +364,64 @@ sk:
           pridal klobúk a zaradil ho do svojej kolekcie nezvyčajných zvierat. Úžasné!
           Neskôr som šiel na veľmi vzdialené miesto. Navštívil som Keňu. Je to krajina
           v Afrike. Žije tu mnoho zebier.
+    C1_pair_programming:
+      1:
+        text: 'Dnes sa naučíme niečo o párovom programovaní. Pri párovom programovaní
+          pracujete ako tím. Pýtate sa, prečo by mali dvaja ľudia používať jeden počítač?
+          Pretože - viac hláv, viac rozumu. Pri párovom programovaní si ty a tvoj
+          partner sadnete za jeden počítač a budete pracovať na spoločnom projekte. '
+      2:
+        text: Párové programovanie je ako jazda v pretekárskom aute. Jeden je vodič
+          a druhý je navigátor. Vodič sedí za počítačom, používa klávesnicu, myš alebo
+          dotykovú obrazovku a ovláda hlavné činnosti počítača. Druhá osoba je navigátor.
+          Navigátor je niekto, kto pomáha vodičovi. Odpovedá na jeho otázky, všíma
+          si chyby a identifikuje potenciálne problémy.
+      3:
+        text: Komunikácia je pri párovom programovaní kľúčom k úspechu. Neurážaj svojho
+          partnera. Rešpektujte sa. Nesnaž sa byť nadriadeným navigátorom. Po celý
+          čas komunikujte so svojím partnerom o tom, čo robíte. Vodič vysvetľuje,
+          čo robí. Navigátor môže navrhovať ďalšie kroky.
+      4:
+        text: Navigátor by mal premýšľať o úlohe komplexne a vodič sa zameriava na
+          detaily. Obe úlohy sú dôležité. Párové programovanie je o tímovej spolupráci.
+    C1_playlab_storytelling:
+      1:
+        text: 'Je čas byť kreatívny a použiť tvoje kódovacie zručnosti na vyrozprávanie
+          príbehu. Tvoj príbeh bude mať aktérov a ty budeš môcť prinútiť týchto aktérov
+          rozprávať a interagovať medzi sebou. Začni rozmýšľať nad tým, aký príbeh
+          chceš rozpovedať. '
+      2:
+        text: 'Mačky sa vždy báli psov, a čo ak si mačka uvedomí, že pes sa len snažil
+          byť milý? Tlačidlo "pri spustení" všetko začína. Tlačidlo "posuň sa" posunie
+          tvoj charakter a tlačidlo "povedz" spôsobí to, že charakter povie čokoľvek,
+          čo napíšeš. '
+      3:
+        text: 'Toto je tlačidlo "keď sa aktéri zrazia", ktoré môžeš prepojiť s ďalšími
+          blokmi. '
+      4:
+        text: Ja som prikázala psovi prísť a povedať "Ahoj", ale potom sa mačka vyľakala
+          a utiekla. "Ahh". Ak by bolo viac času, príbeh by mal šťastný koniec. Koniec!
+    C2_artist_intro:
+      1:
+        text: Na preteky sa ani nedostanete, ak nemáte v tíme ľudí, ktorí sú zdatní
+          v informatike - a to práve pre množstvo dát zbieraných autami. Títo ľudia
+          tiež vytvárajú programy, ktoré pretekárom pomáhajú byť dlhodobo výkonnými.
+      2:
+        text: 'V týchto úlohách sa staneš umelcom, ktorý kreslí rôzne tvary. Kamkoľvek
+          sa tvoj umelec pohne, nakreslí za sebou čiaru. '
+      3:
+        text: Po plátne sa hýbeš pomocou bloku "posuň sa dopredu". V tomto prípade
+          príkaz "posuň sa dopredu" znamená posun dopredu o 100 pixelov. Čo sa presne
+          stane pri stlačení tlačidla "Spustiť"? Umelec sa posunie o 100 pixelov.
+          Pixely sú veľmi malé štvorce na tvojej obrazovke.
+      4:
+        text: Iný blok v téjto úlohe hovorí "otoč sa vpravo o 90 stupňov". Použitím
+          tohto bloku sa umelec otočí o nejakú časť kruhu. Môžeš sa pohrať s tým,
+          o koľko stupňov sa má umelec otočiť. Toto je otočka o 90 stupňov.
+      5:
+        text: "A toto je otočka o 120 stupňov. Nezabudni - to, o koľko sa umelec posunie
+          či otočí, \nmeníš šípkami vedľa hodnôt pixelov a stupňov. Veľa zábavy pri
+          kreslení!"
     C2_artist_debugging:
       3:
         text: Och, tu je ten problém! Mačacie fúzy sú dlhé 75 pixelov, nie 25.
@@ -385,6 +450,27 @@ sk:
           štvorčekový papier. Musíš skontrolovať kamarátovu prácu a v prípade, že
           v nej nádeš chybu, tak túto chybu opraviť, pridať vlastnú šípku a rýchlo
           bežať so štafetou za ďalším členom tvojho tímu.
+    C3_artist_intro:
+      1:
+        text: Na preteky sa ani nedostanete, ak nemáte v tíme ľudí, ktorí sú zdatní
+          v informatike - a to práve pre množstvo dát zbieraných autami. Títo ľudia
+          tiež vytvárajú programy, ktoré pretekárom pomáhajú byť dlhodobo výkonnými.
+      2:
+        text: 'V týchto úlohách sa staneš umelcom, ktorý kreslí rôzne tvary. Kamkoľvek
+          sa tvoj umelec pohne, nakreslí za sebou čiaru. '
+      3:
+        text: Po plátne sa hýbeš pomocou bloku "posuň sa dopredu". V tomto prípade
+          príkaz "posuň sa dopredu" znamená posun dopredu o 100 pixelov. Čo sa presne
+          stane pri stlačení tlačidla "Spustiť"? Umelec sa posunie o 100 pixelov.
+          Pixely sú veľmi malé štvorce na tvojej obrazovke.
+      4:
+        text: Iný blok v téjto úlohe hovorí "otoč sa vpravo o 90 stupňov". Použitím
+          tohto bloku sa umelec otočí o nejakú časť kruhu. Môžeš sa pohrať s tým,
+          o koľko stupňov sa má umelec otočiť. Toto je otočka o 90 stupňov.
+      5:
+        text: "A toto je otočka o 120 stupňov. Nezabudni - to, o koľko sa umelec posunie
+          či otočí, \nmeníš šípkami vedľa hodnôt pixelov a stupňov. Veľa zábavy pri
+          kreslení!"
     C3_bee_debugging:
       1:
         text: Počul si už niekedy o ladení programu? Týmto spôsobom zistíš čo nefunguje.

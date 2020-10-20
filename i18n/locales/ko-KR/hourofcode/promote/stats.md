@@ -38,9 +38,9 @@ Code.org의 창시자이자 CEO인 Hadi Partovi는 "아워오브코드는 코드
 
 #### Code.org 소개
 
-Code.org는 소외된 그룹의 어린 여성과 학생에 의한 컴퓨터 과학 참여 확대와 증가를 위해 일하는 미국의 501c3 조항에 의한 비영리 조직입니다. 이 조직의 비전은 각 학교의 각 학생이 컴퓨터 프로그래밍을 배울 기회를 갖는 것입니다. 2013년 출범 후, Code.org는 아워오브코드 캠페인을 조직했습니다. 1억명 이상의 학생에게 최신 컴퓨터 과학을 소개하고 컴퓨터 과학 프로그램 확장을 위해 전국적으로 70개 공립학교 학군과 파트너십을 맺었습니다. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. For more information, please visit: [code.org]({{ codeorg_link }}).
+Code.org는 소외된 그룹의 어린 여성과 학생에 의한 컴퓨터 과학 참여 확대와 증가를 위해 일하는 미국의 501c3 조항에 의한 비영리 조직입니다. 이 조직의 비전은 각 학교의 각 학생이 컴퓨터 프로그래밍을 배울 기회를 갖는 것입니다. 2013년 출범 후, Code.org는 아워오브코드 캠페인을 조직했습니다. 1억명 이상의 학생에게 최신 컴퓨터 과학을 소개하고 컴퓨터 과학 프로그램 확장을 위해 전국적으로 70개 공립학교 학군과 파트너십을 맺었습니다. Code.org는 Microsoft, Facebook, Infosys Foundation USA, Amazon 등을 포함하여 기업과 재단, 개인의 기부금으로 후원되고 있습니다. 더 자새한 정보는 [code.org]({{ codeorg_link }})를 방문하십시오.
 
-## Share these on social media and in emails
+## 소셜 미디어와 이메일로 공유하세요.
 
 [![이미지](/images/social-media/fit-250/social-1.png)](/images/social-media/social-1.png)&nbsp;&nbsp;&nbsp;&nbsp; [![이미지](/images/social-media/fit-250/social-2.png)](/images/social-media/social-2.png)&nbsp;&nbsp;&nbsp;&nbsp; [![이미지](/images/social-media/fit-250/social-3.png)](/images/social-media/social-3.png)&nbsp;&nbsp;&nbsp;&nbsp;
 

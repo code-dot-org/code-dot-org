@@ -11,7 +11,7 @@ de:
         csf_2019_category_name: Informatik Grundlagen (2019)
         csf_international_category_name: Informatik Grundlagen international
         csf2_draft_category_name: 'In der Entwicklung: Kurse A - F'
-        csp_category_name: "'15-'16 Grundsätze der Informatik"
+        csp_category_name: '''15-''16 Grundsätze der Informatik'
         csp_2018_category_name: CS Principles ('18-'19)
         csp_2019_category_name: Grundsätze der Informatik ('19-'20)
         cspexams_category_name: Praxistest Grundlagen der Informatik
@@ -20,6 +20,7 @@ de:
         hoc_category_name: Hour of Code
         math_category_name: Mathematik
         research_studies_category_name: Forschung
+        other_category_name: Andere
       name:
         course1:
           title: Kurs 1
@@ -17242,7 +17243,7 @@ de:
         vpl-csp-2020:
           lessons:
             Module 1:
-              name: Modul 1
+              name: 'Modul 1'
           description_audience: '[empty string]'
           description_short: '[empty string]'
           description: '[empty string]'
@@ -17255,3 +17256,8 @@ de:
             CS Discoveries:
               name: CS Entdeckungen
           description: '[empty string]'
+        virustest:
+          description_audience: '[empty string]'
+          description: '[empty string]'
+        ml-playground:
+          description_audience: '[empty string]'
