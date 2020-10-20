@@ -19,6 +19,13 @@ class LessonsControllerTest < ActionController::TestCase
       }
     )
 
+    @lesson2 = create(
+      :lesson,
+      script_id: @script.id,
+      lesson_group: lesson_group,
+      name: 'second lesson'
+    )
+
     @script_title = 'Script Display Name'
     @lesson_name = 'Lesson Display Name'
 
@@ -57,10 +64,49 @@ class LessonsControllerTest < ActionController::TestCase
   test_user_gets_response_for :show, params: -> {{id: @lesson.id}}, user: :teacher, response: :success
   test_user_gets_response_for :show, params: -> {{id: @lesson.id}}, user: :levelbuilder, response: :success
 
-  test 'show lesson' do
-    # a bit weird, but this is what happens when there is only one lesson.
-    assert_equal @script_title, @lesson.localized_name
+  test 'show lesson when lesson is the only lesson in script' do
+    @solo_lesson_in_script = create(
+      :lesson,
+      name: 'lesson display name',
+      properties: {
+        overview: 'lesson overview',
+        student_overview: 'student overview'
+      }
+    )
 
+    custom_i18n = {
+      'data' => {
+        'script' => {
+          'name' => {
+            @solo_lesson_in_script.script.name => {
+              'title' => @script_title,
+              'lessons' => {
+                @lesson.name => {
+                  'name' => @lesson_name
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    I18n.backend.store_translations 'en-US', custom_i18n
+    assert_equal @script_title, @solo_lesson_in_script.script.localized_title
+
+    # a bit weird, but this is what happens when there is only one lesson.
+    assert_equal @script_title, @solo_lesson_in_script.localized_name
+
+    get :show, params: {
+      id: @solo_lesson_in_script.id
+    }
+    assert_response :ok
+    assert(@response.body.include?(@script_title))
+    assert(@response.body.include?(@solo_lesson_in_script.overview))
+    assert(@response.body.include?(lesson_path(id: @solo_lesson_in_script.id)))
+  end
+
+  test 'show lesson when script has multiple lessons' do
     get :show, params: {
       id: @lesson.id
     }
@@ -68,7 +114,8 @@ class LessonsControllerTest < ActionController::TestCase
     assert(@response.body.include?(@script_title))
     assert(@response.body.include?(@lesson.overview))
     assert(@response.body.include?(@script.link))
-    assert(@response.body.include?(@script_title))
+    assert(@response.body.include?(lesson_path(id: @lesson.id)))
+    assert(@response.body.include?(lesson_path(id: @lesson2.id)))
   end
 
   # only levelbuilders can edit

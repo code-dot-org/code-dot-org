@@ -1,4 +1,3 @@
-is_course true
 hidden false
 hideable_lessons true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csf-19/express/"], ["teacherForum", "https://forum.code.org/c/csf"], ["vocabulary", "https://curriculum.code.org/csf-19/express/vocab/"], ["standardMappings", "https://curriculum.code.org/csf-19/express/standards/"]]
@@ -10,9 +9,10 @@ project_widget_types ["playlab", "artist"]
 family_name 'express'
 version_year '2019'
 is_stable true
-supported_locales ["cs-CZ", "es-MX", "fr-FR", "sk-SK"]
+supported_locales ["cs-CZ", "es-ES", "es-MX", "fr-FR", "sk-SK"]
 curriculum_umbrella 'CSF'
 tts true
+is_course true
 
 lesson_group 'csf_warmup', display_name: 'Warm-Up'
 lesson 'Dance Party', display_name: 'Dance Party'
