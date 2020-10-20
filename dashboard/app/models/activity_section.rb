@@ -41,7 +41,7 @@ class ActivitySection < ApplicationRecord
     tips
   )
 
-  def summarize_for_edit
+  def summarize
     {
       id: id,
       position: position,
@@ -50,8 +50,19 @@ class ActivitySection < ApplicationRecord
       slide: slide,
       description: description,
       tips: tips,
-      scriptLevels: script_levels.map(&:summarize_for_edit)
     }
+  end
+
+  def summarize_for_lesson_show
+    summary = summarize
+    summary[:scriptLevels] = script_levels.map(&:summarize_for_lesson_show)
+    summary
+  end
+
+  def summarize_for_edit
+    summary = summarize
+    summary[:scriptLevels] = script_levels.map(&:summarize_for_edit)
+    summary
   end
 
   # @param [Array<Hash>] script_levels_data - Data representing script levels
