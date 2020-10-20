@@ -41,10 +41,17 @@ const styles = {
     marginLeft: 10
   },
   submitButton: {
-    backgroundColor: color.orange,
     color: 'white',
+    backgroundColor: color.orange,
+    borderColor: color.orange,
     borderRadius: 3,
-    fontSize: 12
+    fontSize: 12,
+    fontFamily: '"Gotham 4r", sans-serif',
+    fontWeight: 'bold',
+    paddingLeft: 20,
+    paddingRight: 20,
+    paddingTop: 5,
+    paddingBottom: 5
   }
 };
 
@@ -104,7 +111,8 @@ export default class AddResourceDialog extends Component {
       pdf: false,
       assessment: false,
       url: '',
-      downloadUrl: ''
+      downloadUrl: '',
+      error: ''
     });
   };
 
