@@ -320,6 +320,7 @@ function validateProjectChanged(callback) {
       // like `url`), this is an image and is stored differently in the
       // startSources than in bramble. Check for a matching file name, but
       // don't compare data.
+      // Regex: Compare without whitespace.
       return (
         !matchingFile ||
         (startFile.data &&
