@@ -22,7 +22,7 @@ class LessonsController < ApplicationController
       unit: {
         displayName: @lesson.script.localized_title,
         link: @lesson.script.link,
-        lessons: @lesson.script.lessons.each_with_index.map {|lesson, index| {key: lesson.key, displayName: "#{index} #{lesson.localized_name}", link: lesson_path(id: lesson.id)}}
+        lessons: @lesson.script.lessons.map {|lesson| {key: lesson.key, position: lesson.absolute_position, displayName: lesson.localized_name, link: lesson_path(id: lesson.id)}}
       },
       key: @lesson.key,
       displayName: @lesson.localized_title,

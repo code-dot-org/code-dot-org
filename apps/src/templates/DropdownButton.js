@@ -143,7 +143,8 @@ class DropdownButton extends Component {
                 key={index}
                 style={{
                   ...styles.anchor,
-                  ...(index > 0 && styles.nonFirstAnchor)
+                  ...(index > 0 && styles.nonFirstAnchor),
+                  ...child.props.style
                 }}
               />
             ))}

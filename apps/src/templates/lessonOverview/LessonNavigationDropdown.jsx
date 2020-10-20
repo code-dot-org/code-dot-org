@@ -3,10 +3,14 @@ import React, {Component} from 'react';
 import i18n from '@cdo/locale';
 import Button from '@cdo/apps/templates/Button';
 import DropdownButton from '@cdo/apps/templates/DropdownButton';
+import color from '@cdo/apps/util/color';
 
 const styles = {
   dropdown: {
     display: 'inline-block'
+  },
+  boldText: {
+    fontFamily: '"Gotham 7r", sans-serif'
   }
 };
 
@@ -54,6 +58,7 @@ export default class LessonNavigationDropdown extends Component {
   };
 
   handleDropdownClick = listItem => {
+    console.log(listItem);
     if (listItem.link) {
       window.location.href = listItem.link;
     } else {
@@ -81,8 +86,8 @@ export default class LessonNavigationDropdown extends Component {
 
       if (i + 1 === this.state.currentSection) {
         for (
-          let j = numfirstLessonInSection;
-          j <= numLastLessonInSection;
+          let j = numfirstLessonInSection - 1;
+          j < numLastLessonInSection;
           j++
         ) {
           sectionsAndLessons.push(lesson.unit.lessons[j]);
@@ -112,9 +117,26 @@ export default class LessonNavigationDropdown extends Component {
               key={index}
               onClick={this.handleDropdownClick.bind(this, listItem)}
               className={listItem.link ? 'navigate' : 'no-navigation'} // Used to specify if the dropdown should collapse when clicked
+              style={
+                listItem.link ? {} : {backgroundColor: color.lightest_purple}
+              }
             >
               <span style={listItem.link ? {marginLeft: 10} : {}}>
-                {listItem.displayName}
+                {listItem.link && (
+                  <span
+                    style={{
+                      ...{margin: '0px 2px'},
+                      ...(listItem.key === lesson.key && styles.boldText)
+                    }}
+                  >
+                    {`${listItem.position} -`}
+                  </span>
+                )}
+                <span
+                  style={listItem.key === lesson.key ? styles.boldText : {}}
+                >
+                  {listItem.displayName}
+                </span>
               </span>
             </a>
           ))}
