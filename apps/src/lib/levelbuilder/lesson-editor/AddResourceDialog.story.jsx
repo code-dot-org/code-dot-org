@@ -6,7 +6,7 @@ const defaultProps = {
     console.log('submitted');
   },
   isOpen: true,
-  onClose: () => {
+  handleClose: () => {
     console.log('closed');
   },
   typeOptions: ['activity guide', 'video', 'resource', 'hand-out'],
