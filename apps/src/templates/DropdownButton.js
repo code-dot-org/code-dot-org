@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import Radium from 'radium';
 import color from '@cdo/apps/util/color';
@@ -67,28 +66,12 @@ class DropdownButton extends Component {
     dropdownOpen: false
   };
 
-  onComponentDidUnmount() {
-    document.removeEventListener('click', this.onClickDocument, false);
-  }
-
   expandDropdown = () => {
-    document.addEventListener('click', this.onClickDocument, false);
     this.setState({dropdownOpen: true});
   };
 
   collapseDropdown = () => {
-    document.removeEventListener('click', this.onClickDocument, false);
     this.setState({dropdownOpen: false});
-  };
-
-  onClickDocument = event => {
-    // We're only concerned with clicks outside of ourselves
-    if (ReactDOM.findDOMNode(this).contains(event.target)) {
-      return;
-    }
-    if (this.state.dropdownOpen) {
-      this.collapseDropdown();
-    }
   };
 
   toggleDropdown = () => {
