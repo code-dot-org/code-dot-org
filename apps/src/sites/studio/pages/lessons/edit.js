@@ -79,6 +79,8 @@ $(document).ready(function() {
   //TODO Switch to using real data once we have activity data
   store.dispatch(init(activities, levelKeyList));
 
+  console.log(lessonData.objectives);
+
   ReactDOM.render(
     <Provider store={store}>
       <LessonEditor
@@ -94,6 +96,7 @@ $(document).ready(function() {
         announcements={lessonData.announcements || []}
         resources={lessonData.resources}
         relatedLessons={relatedLessons}
+        objectives={lessonData.objectives}
       />
     </Provider>,
     document.getElementById('edit-container')
