@@ -8,7 +8,7 @@ title: Przewodnik - Godzina Kodowania w ramach zajęć pozalekcyjnych
 
 ### Przyłącz się do tej inicjatywy i wprowadź swoich uczniów w dziedzinę informatyki w sposób następujący.
 
-Myślenie komputacyjne pomaga rozwijać umiejętność rozwiązywania problemów, logikę oraz kreatywność. A technologia zmienia każdą branżę na świecie. Uczniowie dnia dzisiejszego powinni się uczyć, jak tworzyć technologię, a nie tylko jak z niej korzystać. Rozpoczęcie nauki na wczesnym etapie da im podwaliny sukcesu na dowolnej ścieżce zawodowej na miarę XXI wieku.
+Myślenie informatyczne pomaga rozwijać umiejętność rozwiązywania problemów, logikę oraz kreatywność. A technologia zmienia każdą branżę na świecie. Uczniowie dnia dzisiejszego powinni się uczyć, jak tworzyć technologię, a nie tylko jak z niej korzystać. Rozpoczęcie nauki na wczesnym etapie da im podwaliny sukcesu na dowolnej ścieżce zawodowej na miarę XXI wieku.
 
 Akcja godzina kodowania to prosty i przyjemny sposób na zapoznanie dzieci z podstawami informatyki. Jeśli potrzebujesz wsparcia, [ poszukaj wolontariusza ]({{ urls/volunteer_local }}), który pomoże poprowadzić Godzinę kodowania na twoich pozaszkolnych zajęciach.
 

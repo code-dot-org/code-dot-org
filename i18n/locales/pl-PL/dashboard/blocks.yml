@@ -1014,6 +1014,8 @@ pl:
         text: "{SPRITE}"
       gamelab_comment:
         text: 'komentarz: {COMMENT}'
+      gamelab_cos:
+        text: cos {NUM}
       gamelab_countByAnimation:
         text: liczba {SPRITE}
       gamelab_createNewSprite:
@@ -1241,6 +1243,8 @@ pl:
         text: "ustaw symulację  {SPRITE1N}{SPRITE1COSTUME} z prędkością \n{SPRITE1SPEED}\nSPRITE2N][3]{SPRITE2COSTUME} z prędkością\n {SPRITE2SPEED}\nzbierając\n{SPRITE3N}{SPRITE3COSTUME}"
       gamelab_showTitleScreen:
         text: pokaż ekran tytułowy {BREAK} tytuł {TITLE} podtytuł {SUBTITLE}
+      gamelab_sin:
+        text: sin {NUM}
       gamelab_spriteClicked:
         text: "{CONDITION} {SPRITE} kliknięty"
         options:

@@ -122,6 +122,14 @@ pl:
     świecie. Informatyka to coś więcej niż tylko kodowanie! Ciesz się pierwszym krokiem
     Code.org w nowej podróży, aby zacząć uczyć o sztucznej inteligencji z naszym programem
     nauczania.
+  hoc_live: '"Godzina kodowania" na żywo'
+  hoc_live_sign_up_title: Zaloguj się do "Godziny kodowania" na żywo
+  hoc_live_sign_up_message: Ucz się w czasie rzeczywistym wraz z gośćmi specjalnymi!
+    Mile widziani są wszyscy uczniowie w każdym wieku i dysponujący wszelkimi umiejętnościami,
+    również osoby niedysponujące komputerami.Dołącz do  naszej listy mailingowej,
+    aby otrzymywać nagrania odcinków i zasobów umożliwiających kontynuację nauki w
+    domu.
+  hoc_live_join_us: Dołącz do nas
   hoc_overview_oceans_tutorial_header: AI dla oceanów
   hoc_overview_oceans_tutorial_desc: Dowiedz się o sztucznej inteligencji, uczeniu
     maszynowym, danych szkoleniowych i uprzedzeniach, wyjaśniając jednocześnie kwestie
@@ -1157,7 +1165,8 @@ pl:
   tutorial_arduino_name: Aktywności z Arduino
   tutorial_introrobo_name: Wprowadzenie do robotyki
   tutorial_tlcinvis_name: Zajęcia z niewidzialnej manipulacji dłonią
-  tutorial_tlcjflap_name: 'JFLAP: Tworzenie maszyn typu "Finite State Machine"'
+  tutorial_tlcjflap_name: 'JFLAP: Tworzenie maszyn typu "Finite State Machine" (automat
+    skończony)'
   tutorial_procolor_name: Programowanie za pomocą kolorów
   tutorial_spiralsfinch_name: Spirale z Finchem
   tutorial_ozoi_name: Wprowadzenie do programowania i Ozobot
@@ -1379,7 +1388,7 @@ pl:
   tutorial_lbio_name: Operacje Wejścia-Wyjścia. Zrób to z Little Bits
   tutorial_wonpuppy_name: Szczeniaczek Dash (E3)
   tutorial_woncue_name: Przewodnik wstępy Cue
-  tutorial_wonzoo_name: Wykropkuj zoo, w którym można głaskać zwierzęta (B2)
+  tutorial_wonzoo_name: Dot w zoo, w którym można głaskać zwierzęta (B2)
   tutorial_wontrip_name: Lądowa podróż Dasha (F2)
   tutorial_woncollect_name: Kolekcjoner Dash (B1)
   tutorial_wonsecret_name: Tajna wiadomość Cue
@@ -2155,7 +2164,7 @@ pl:
     Cię do wbudowanego programowania z użyciem bloków przyjaznych dla użytkownika
     i zostały one zaprogramowane specjalnie dla "Godziny kodowania". Użyj bloków i
     micro:bit, aby stworzyć zwierzątko, które możesz karmić i z którym możesz się
-    bawić. Nie ma micro:bitu BBC? Nie ma problemu! Ten kurs obejmuje pełny symulator
+    bawić. Nie ma micro:bitu BBC? Nie ma problemu! Ten kurs uwzględnia pełny symulator
     micro:bit tak, abyś mógł być w stanie zrobić wszystko, co zrobiłbyś na prawdziwym
     micro:bicie!
   tutorial_techbim_shortdescription: Naucz się jak manipulować obrazy bez korzystania
@@ -2180,7 +2189,7 @@ pl:
     doświadczenie w zakresie programowania i zostały zaprojektowane specjalne na potrzeby
     "Godziny kodowania". Używaj języka programowania wizualnego Blockly do badania
     kosmosu i sięgania gwiazd.
-  tutorial_codehspython_shortdescription: Koduj programy w Pythonie!
+  tutorial_codehspython_shortdescription: Koduj programy w języku Python!
   tutorial_codehsjava_shortdescription: Koduj programy w języku Java!
   tutorial_techioda_shortdescription: Użyj algorytmu Dijkstry do wyliczenia najkrótszej
     ścieżki na wykresie
@@ -2240,7 +2249,7 @@ pl:
   tutorial_beetik_shortdescription: Użyj kodu, aby zhakować muzykę kompozytora Franciszka
     Liszta.
   tutorial_codedj_shortdescription: Ucz się podstaw języka Javascript i zacznij komponować
-    swoje własne uderzenia przy pomocy kodu DJ
+    swoje własne uderzenia przy pomocy aplikacji "Kodu DJ" [Code DJ]
   tutorial_rgadvan_shortdescription: W RoboGarden jesteśmy przekonani, że należy dawać
     okazje do podejmowania aktywnej roi w ich edukacji
   tutorial_codehsrn_shortdescription: Twórz prawdziwe aplikacje z użyciem React Native!
@@ -2517,7 +2526,7 @@ pl:
     symulacji w badaniach. Będą się uczyć jak masa i prędkość wpływają na zderzenia
     sprężyste używając równań zachowania pędu i zachowania energii kinetycznej/
   tutorial_codehsmath_shortdescription: Uczniom przedstawia się żółwia Tracy i uczą
-    się sposobów kodowania różnych modeli matematycznych w Pythonie! Doświadczenie
+    się sposobów kodowania różnych modeli matematycznych w języku Python! Doświadczenie
     w zakresie kodowania nie jest konieczne, ale uczniowie powinni ukończyć kurs przynajmniej
     na poziomie Algebra I.
   tutorial_codehsmusic_shortdescription: 'Uczniowie badają, w jaki sposób używa się
@@ -2596,7 +2605,7 @@ pl:
     takie jak zmiany wysokości tonu, odwracanie lub echo.
   tutorial_groklearningpython_shortdescription: Rozwijaj swoje umiejętności programowania
     i buduj swój własny klasyfikator zwierząt! W ramach tego kursu będziesz używać
-    język programowania Python, aby klasyfikować zwierzęta na podstawie ich charakterystyk.
+    języka programowania Python, aby klasyfikować zwierzęta na podstawie ich charakterystyk.
   tutorial_htmltimetravel_shortdescription: Odbądź pełną przygód podróż w czasie i
     podbijaj najgłębsze zakątki kosmosu ucząc się, jak się przemieszczać, obracać
     i przekształcać obiekty używając podstaw animacji w CSS.
@@ -2797,9 +2806,9 @@ pl:
     masek Twojego ulubionego superbohatera. Publikuj i udostępniaj swoje praca!
   tutorial_vidcodeplastic_shortdescription: Naucz się korzystać z pętli, fal sinusoidalnych
     i niestandardowych emoji, aby stworzyć unikatowy projekt.
-  tutorial_vidcodetypeface_shortdescription: Utwórz twarz Twojego własnego typu używając
-    kształtów i elementów typografii. Typ ma o wiele więcej elementów niż możemy sobie
-    uświadamiać!
+  tutorial_vidcodetypeface_shortdescription: Utwórz swoją własną czcionkę używając
+    kształtów i elementów typografii. Krój ma o wiele więcej elementów niż możemy
+    sobie uświadamiać!
   tutorial_washustorm_shortdescription: Naucz się, jak programować nadchodzącą burzę.
   tutorial_activitypackets_shortdescription: Znajduj godziny rozrywki przyjaznej dla
     rodziny przy pomocy możliwych do wydrukowania pakietów kreatywnych zajęć kodowania
@@ -3039,8 +3048,8 @@ pl:
     "Geometry Jumper" w otwartym środowisku programowania Hopscotch! W toku działań
     będziesz gromadzić doświadczenie praktyczne w zakresie koncepcji takich jak sekwencja,
     pętle, zmienne i debugowanie. W celu odbycia albo poprowadzenia tych zajęć nie
-    jest potrzebne wcześniejsze doświadczenie; obejmuje ono zabawny samouczek wideo
-    w aplikacji oraz przewodnik prowadzenia krok-po-kroku.
+    jest potrzebne wcześniejsze doświadczenie;  w ramach zajęć zapewnia się zabawny
+    samouczek wideo w aplikacji oraz przewodnik prowadzenia krok-po-kroku.
   tutorial_tynkermult_longdescription: Zakoduj swoją własną grę matematyczną! Twoja
     postać musi uciec z pieczary nieuderzona przez spadające głazy. Natomiast jedynym
     sposobem na to, by postać mogła biec przed siebie jest udzielanie prawidłowych
@@ -3117,8 +3126,8 @@ pl:
     twórczą stronę kodowania, tworząc aplikację, z której mogą korzystać znajomi,
     aby się wyrażać. W tym procesie, ucz się o sekwencji, zdarzeniach, pętlach i zmiennych.
     \n\nW celu odbycia albo poprowadzenia tych zajęć nie jest potrzebne wcześniejsze
-    doświadczenie; obejmuje ono samouczek wideo w aplikacji oraz przewodnik prowadzenia
-    krok-po-kroku."
+    doświadczenie; w ramach zajęć zapewnia się samouczek wideo w aplikacji oraz przewodnik
+    prowadzenia krok-po-kroku."
   tutorial_tynkercm_longdescription: Odkryj zaczarowany las, gdzie złapiesz potwory
     i dowiesz się, jak je zaprogramować, rozwiązując łamigłówki programistyczne. Zbierz,
     zakoduj i ewoluuj wszystkie unikalne potwory. Wymyśl strategie, biorąc pod uwagę
@@ -3641,10 +3650,10 @@ pl:
     programowania komputerów, zatem nadaj im inteligentnych umiejętności. '
   tutorial_hopquiz_longdescription: Ten plan lekcji stanowi szablon, który można dostosowywać
     i używać na potrzeby dowolnego przedmiotu - nauk ścisłych, języków lub historii.
-    Uwzględnia przy tym instrukcje i wyjaśnienia krok-po-kroku, których można używać,
-    aby pomóc uczniom kodować quizy wielokrotnego wyboru. W trakcie procesu będą ćwiczyć
-    i zgłębiać koncepcje kodowania takich jak sekwencje, pętle, zmienne i wyrażenia
-    warunkowe.
+    W ramach zajęć zapewnia się instrukcje i wyjaśnienia krok-po-kroku, których można
+    używać, aby pomóc uczniom kodować quizy wielokrotnego wyboru. W trakcie procesu
+    będą ćwiczyć i zgłębiać koncepcje kodowania takich jak sekwencje, pętle, zmienne
+    i wyrażenia warunkowe.
   tutorial_unfortunate_longdescription: Wszyscy reagujemy na wydarzenia, do których
     dochodzi w naszym otoczeniu, na przykład kibicowanie, gdy zwycięża szkolna drużyna,
     płacz na smutnym filmie lub taniec, gdy słyszymy muzykę. Na tej lekcji uczniowie
@@ -4118,7 +4127,7 @@ pl:
     w wyzwaniach. Będziesz się musiał skupić i użyć swoich zdolności intuicyjnych,
     aby zrozumieć pewne kluczowe pojęcia programowania.
   tutorial_codesterssj_longdescription: Na tych zajęciach uczniowie korzystają z naszego
-    narzędzia przeciągania do tekstu, aby od razu rozpocząć kodowanie w Pythonie!
+    narzędzia przeciągania do tekstu, aby od razu rozpocząć kodowanie w języku Python!
     W miarę, gdy pracują w ramach wprowadzających zajęć budowania umiejętności uczniowie
     zaczynają się uczyć o podstawowej składni, zmiennych i zdarzeniach! Będą używać
     wielu duszków, aby stworzyć scenariusz opowiadania dowcipów, który możemy udostępnić
@@ -4138,30 +4147,35 @@ pl:
     ich własne wersje klasycznej gry Frogger™.  Dwuwymiarowe Animacje pozwala uczniom
     rysować obrazy, programować aplikacje i tworzyć oryginalne dwuwymiarowe obrazy
     dla ich własnych gier.
-  tutorial_robotrattle_longdescription: Robot Rattle teaches students to operate a
-    fully physically simulated robot with the help of a visual coding language by
-    easily dragging & dropping blocks to write code instructions. Students are introduced
-    to the robot and its various moving joints, and learn to move its joints with
-    the use of angles. The robot can push and grab objects in order to direct them
-    to the goal, but also break if moved against obstacles. This activity is targeted
-    to kids aged 13+ and offers easy-to-grasp insights into physical behaviour and
-    robotics. On top of that, anyone with a smartphone and a mobile VR headset will
-    be able to watch the full-scale robot performing the written code.
-  tutorial_codestersh_longdescription: In this activity, designed for beginning coders,
-    students use a drag-to-text toolkit to start coding in Python right away! First,
-    work through some skill building activities where you learn how to assign and
-    modify commands for your sprite. Then, program your own commands to create shareable
-    electronic art! *Sharing requires student sign up.
-  tutorial_codehsdigipixel_longdescription: Learn how images are stored and displayed
-    on computers using pixels. Explore how images are encoded as a grid of color values,
-    and make your own digital images using binary and hexadecimal color codes!
-  tutorial_ccbinary_longdescription: Make a Scratch game in which you play the notes
-    of a song as they scroll down the stage. You'll score ten points for every correct
-    note you play. Each note corresponds to a binary number.
-  tutorial_codehsturtle_longdescription: Learn the basics of programming by drawing
-    shapes on your screen with Tracy the Turtle! Turtle Graphics (or LOGO) is a beginner
-    friendly way to explore programming concepts and bring creativity into programming
-    in a visual way.
+  tutorial_robotrattle_longdescription: 'Robot Rattle uczy uczniów obsługi robota
+    symulowanego w pełni w wymiarze fizycznym przy pomocy wizualnego języka kodowania
+    korzystając z bloków, które łatwo się przeciąga i opuszcza, aby pisać instrukcje
+    kodowania. Uczniom przedstawia się robota i jego ruchome stawy i uczy ich, jak
+    porusza się kończynami w stawach posługując się kątami. Robot jest w stanie popychać
+    i chwytać przedmioty, aby kierować je do miejsca docelowego lub niszczyć, jeśli
+    poruszają się w kierunku przeszkód. Te zajęcia są przeznaczone dla uczniów, którzy
+    ukończyli 13 lat i oferuje się im łatwe do zrozumienia przemyślenia dotyczące
+    zachowania fizycznego i robotyki. Poza tym każdy posiadacz smartfona oraz mobilnych
+    słuchawek rzeczywistości wirtualnej (VR) będzie mógł obejrzeć robota w pełnej
+    skali realizującego pisemny kod. '
+  tutorial_codestersh_longdescription: Na tych zajęciach, przeznaczonych dla początkujących
+    osób zajmujących się kodowaniem, uczniowie korzystają z przybornika narzędzi przeciągania
+    do tekstu, aby od razu rozpocząć kodowanie w języku Python! Najpierw pracuj w
+    ramach zajęć budowania pewnych umiejętności, na których uczysz się jak przyporządkowywać
+    i modyfikować komendy dla swojego duszka. Następnie zaprogramuj swoje własne komendy,
+    aby tworzyć nadającą się do udostępniania sztukę elektroniczną! * Udostępnianie
+    elektroniczne wymaga, aby uczeń się zalogował.
+  tutorial_codehsdigipixel_longdescription: Dowiedz się jak przechowuje się i wyświetla
+    obrazy na komputerze z użyciem pikseli. Zgłębiaj sposób kodowania obrazków jako
+    siatkę wartości kolorów i twórz swoje własne obrazy cyfrowe używając kodów kolorów
+    w zapisie binarnym i szesnastkowym!
+  tutorial_ccbinary_longdescription: Utwórz grę Scratch, w której odgrywasz nuty piosenki
+    w miarę przewijania etapu. Za każdą poprawnie odegraną nutę otrzymujesz dziesięć
+    punktów. Każda nuta odpowiada liczbie binarnej.
+  tutorial_codehsturtle_longdescription: Ucz się podstaw programowania rysując kształty
+    na swoim ekranie z żółwikiem Tracy! Turtle Graphics (albo LOGO) stanowi sposób,
+    przyjazny dla osoby początkującej, zgłębiania pojęć programowania oraz wnoszenia
+    kreatywności do programowania w trybie wizualnym.
   tutorial_grokhd_longdescription: 'Kontynuuj rozwijanie Twoich umiejętności programowania
     przy pomocy Blockly! Ten kurs bazuje na tym, czego uczyliście się w ramach zajęć
     "Zamrożone fraktale" [Frozen Fractals]: https://hourofcode.com/grokffblock.Te
@@ -4172,22 +4186,24 @@ pl:
     w zakresie programowania i zostały zaprojektowane specjalne na potrzeby "Godziny
     kodowania". Używaj języka programowania Python, aby badać emotikony i manipulowanie
     tekstem.
-  tutorial_kodmaze_longdescription: Build your own mazes to solve and share! Students
-    will pair geometry with programming to build solvable mazes based on given challenges.
-    Challenges include mazes with simple shapes, fractions, symmetry, and specified
-    angles.
-  tutorial_codestersa_longdescription: 'In this activity, designed for students with
-    some coding experience, students use our drag-to-text toolkit to build an game
-    with player controls! Students learn about variables, randomly generated numbers,
-    game design, and multiple types of events and event triggers, all while scrambling
-    to stay out of the way as asteroids hurtle toward their spaceship! Prereq: variables,
-    parameters.'
-  tutorial_cmdodo_longdescription: In this hour-long course, you will write real code
-    as you add, subtract and measure distances to help a dodo find her missing eggs!
-  tutorial_tynkerspace_longdescription: Your astronaut's ship has crash-landed!  Luckily,
-    you're there to help. Use drag-and-drop programming to help your character collect
-    spare parts while avoiding aliens and obstacles. Can you find a ship to bring
-    your astronaut home?
+  tutorial_kodmaze_longdescription: Buduj swoje własne labirynty, aby rozwiązywać
+    i udostępniać! Uczniowie będą łączyć geometrię z programowaniem, aby budować możliwe
+    do pokonania labirynty na podstawie danych konkretnych wyzwań. Do wyzwań zalicza
+    się labirynty o prostych kształtach, ułamki, symetrię oraz podane kąty.
+  tutorial_codestersa_longdescription: 'Na tych zajęciach, przeznaczonych dla uczniów
+    posiadających pewne doświadczenie w zakresie kodowania uczniowie korzystają z
+    przybornika narzędzi przeciągania do tekstu, aby zbudować grę ze sterownikami
+    gracza! Uczniowie uczą o losowo wygenerowanych liczbach, układzie gry oraz wielu
+    rodzajach zdarzeń a nawet czynnikach inicjujących przez cały czas starając się
+    unikać stawania na torze asteroidów lecących w stronę ich statku kosmicznego!
+    Wymóg konieczny: zmienne, parametry.'
+  tutorial_cmdodo_longdescription: Na tym jednogodzinnym kursie będziesz pisać prawdziwy
+    kod w miarę dodawania, odejmowania oraz pomiaru odległości, aby pomóc dodo znaleźć
+    jajka, które gdzieś zgubiła!
+  tutorial_tynkerspace_longdescription: Twój statek kosmiczny musiał lądować awaryjnie!
+    Na szczęście jesteś tutaj, aby pomóc. Użyj programowania w trybie przeciągnij-i-opuść,
+    aby pomóc swojej postaci zebrać części zamienne, unikając przy tym ufoludków i
+    przeszkód. Czy jesteś w stanie znaleźć statek, aby sprowadzić astronautę do domu?
   tutorial_gfbloons_longdescription: W tej lekcji będziesz kodował ostrzeliwanie małpiej
     wieży z popularnej gry Bloons Tower Defense. Pod koniec lekcji będziesz znał punkt
     widzenia odkrywania matematyki i algorytmów powszechnie używanych w wielu dzisiejszych
@@ -4195,77 +4211,87 @@ pl:
     własnych grach. Tutoriale Gamefoot Hour of Code używają wizualnego języka programowania
     używając bloków, gdzie uczniowie łatwo przeciągają i upuszczają wizualne bloki
     do pisania kodu.
-  tutorial_raspipong_longdescription: Recreate the classic game of Pong using a Sense
-    HAT and some Python code. This activity can be completed online using the Sense
-    HAT emulator, or by using a Raspberry Pi and the Sense HAT hardware.
-  tutorial_codehsvr_longdescription: Learn the basics of building virtual reality
-    worlds using HTML and the A-Frame JavaScript Library. Through this activity, students
-    will build their own virtual reality worlds that are compatible with VR devices,
-    including smartphone VR headsets!
+  tutorial_raspipong_longdescription: Odtwórz klasyczną grę Pong używając Sense HAT
+    oraz pewnej ilości kodu w języku Python! Te zajęcia można przejść w trybie online
+    z użyciem emulatora Sense Hat lub używając Raspberry Pi i sprzętu Sense HAT.
+  tutorial_codehsvr_longdescription: Ucz się podstaw budowania światów w rzeczywistości
+    wirtualnej używając HTML oraz biblioteki A-Frame JavaScrip. Na tych zajęciach
+    uczniowie będą budować swoje własne światy rzeczywistości wirtualnej, które będą
+    kompatybilne z urządzeniami rzeczywistości wirtualnej (VR), z uwzględnieniem słuchawek
+    rzeczywistości wirtualnej (VR) ze smartfona.
   tutorial_codesterstp_longdescription: 'Na tych zajęciach uczniowie używają Pythona
     do praktykowania transformacji w układzie współrzędnych! Lekcja zawiera demonstracje,
     bezpośrednie instrukcje i wyzwania, które wymagają od uczniów zaprogramowania
     i zidentyfikowania różnych transformacji statycznych! '
   tutorial_codestersbb_longdescription: 'Uczniowie korzystają z narzędzia przeciągnij
-    do tekstu, aby od razu rozpocząć kodowanie w Pythonie! W tej samouczącej aktywności,
-    uczniowie wykonują serię bezpośrednich instrukcji, w których budują grę w koszykówkę!
-    Uczniowie wykorzystują zmienne, zdarzenia, podstawową składnię, tworząc losowe
-    współrzędne. Zalecana wiedza wstępna: zmienne, notacje kropek, zdarzenia, liczby
-    ujemne'
-  tutorial_gfcrossyroad_longdescription: In this suite of introductory coding lessons
-    you will learn about making your own Crossy Road style mini-game. You will learn
-    how to code algorithms and sequences, inputs / outputs, loops and iteration, selection
-    and if-statements, and comparative operators and think like a computer scientist.
-    This suite of lessons is aligned with the New Zealand and Australian (Victorian)
-    digital technologies curriculum and designed to help young people AND educators
-    embrace coding in their schools, classrooms and coding clubs. Gamefroot Hour of
-    Code tutorials use a visual programming language using blocks where students simply
-    drag and drop visual blocks to write code.
-  tutorial_googleww_longdescription: In this activity, you'll code three unique scenes
-    from the film using Blockly, an introductory coding language, to help Wonder Woman
-    navigate obstacles and reach her goal. You'll use the power of sequences, variables,
-    loops and conditionals to help Diana train against her opponents.
-  tutorial_codehsjsapp_longdescription: CodeHS is compatible with all up-to-date browsers
-    except Internet Explorer. Chrome is our preferred / recommended browser, but Firefox
-    and Safari should work fine as well, assuming they are up to date.
-  tutorial_gfmihi_longdescription: Kia ora! In this activity you will code your own
-    mini-game and learn how to introduce yourself in Te Reo Maori - the indigenous
-    language of New Zealand. Mihi Maker is a fun easy to use activity that combines
-    coding, social studies and indigenous culture. You will learn how game designers
-    program basic collision detection algorithms. Collision detection is a program
-    used by a computer to help it understand when two objects will hit into each other.
-    Gamefroot Hour of Code tutorials use a visual programming language using blocks
-    where students simply drag and drop visual blocks to write code.
-  tutorial_hopdropphone_longdescription: 'Hopscotch is a simple programming tool on
-    the iPad/iPhone, beloved by millions of students for its freedom of creative expression.
-    Watch your students squeal with delight as they create their own "Don''t Drop
-    the Phone" games! This self-guided video tutorial teaches kids ages 8+ programming
-    basics while they code customized editions of this popular game. '
-  tutorial_techfaa_longdescription: This interactive tutorial will introduce you to
-    "Flocking", a type of algorithm which is intended to simulate life-like behavior
-    of Autonomous Agents in a group. The embedded viewer makes it easy for you to
-    see the rendering of the code.
-  tutorial_codehsjsgraph_longdescription: CodeHS is compatible with all up-to-date
-    browsers except Internet Explorer. Chrome is our preferred / recommended browser,
-    but Firefox and Safari should work fine as well, assuming they are up to date.
-  tutorial_thunkable_longdescription: Using the language of blocks, learn how to build
-    10 simple apps in 1 hour. This funny tutorial series will start you on your path
-    to becoming a mobile app developer!
-  tutorial_hopcrossyroad_longdescription: Hopscotch is a simple programming tool on
-    the iPad/iPhone, beloved by millions of students for its freedom of creative expression.
-    With this self-guided video tutorial, your students will make their own versions
-    of Crossy Road! Kids ages 8+ will be exposed to the basics of programming while
-    they code customized editions of this App Store favorite.
-  tutorial_switchglitch_longdescription: Switch & Glitch lets your students play the
-    hero! Using a visual interface, they program cute robots and help them save the
-    day. This activity teaches children aged 5-10 the basics of programming, loops,
-    and the art of debugging. The galaxy needs you!
-  tutorial_codecar_longdescription: Code a simulated car circuit board! You'll type
-    real C++ code that controls the lights and buttons of a car-shaped circuit board.
-    Through 7 lessons, you'll flash the tail light, code a brake pedal, and more on
-    the simulated Code Car. This activity teaches loops, if statements, and logic
-    with typed code and includes a lesson plan with alignments to ISTE, NGSS, Common
-    Core, and CSTA standards.
+    do tekstu, aby od razu rozpocząć kodowanie w języku Python! W tej samouczącej
+    aktywności, uczniowie wykonują serię bezpośrednich instrukcji, w których budują
+    grę w koszykówkę! Uczniowie wykorzystują zmienne, zdarzenia, podstawową składnię,
+    tworząc losowe współrzędne. Zalecana wiedza wstępna: zmienne, notacje kropek,
+    zdarzenia, liczby ujemne'
+  tutorial_gfcrossyroad_longdescription: W ramach tego zestawu lekcji wprowadzających
+    do kodowania będziesz się uczyć o tworzeniu  minigry Crossy Road w Twoim własnym
+    stylu. Będziesz się uczyć jak kodować algorytmy i sekwencje, dane wejściowe /
+    dane wyjściowe, pętle i iteracje, selekcję i wyrażenia warunkowe "jeśli" oraz
+    operatorów komparatywnych, a także będziesz myśleć jak informatyk. Ten zestaw
+    lekcji jest dostosowany do programu cyfrowych technologii w Nowej Zelandii i Australii
+    (w stanie Wiktoria) i służy pomocą młodym ludziom I edukatorom w zrozumieniu istoty
+    kodowania w ich szkołach, klasach i klubach kodowania. W samouczkach w ramach
+    "Godziny kodowania" Gamefroot używa się wizualnego języka programowania, w którym
+    wykorzystuje się bloki, a uczniowie po prostu przeciągają i opuszczają wizualne
+    bloki, aby pisać kod.
+  tutorial_googleww_longdescription: W ramach tych zajęć będziesz kodować trzy jedyne
+    w swoim rodzaju sceny z filmu Blockly, wprowadzający język kodowania, aby pomóc
+    "Cudownej kobiecie" [Wonder Woman] pokonywać przeszkody i osiągać cel. Będziesz
+    korzystać z mocy sekwencji, zmiennych, pętli oraz pętli i wyrażeń warunkowych,
+    aby pomóc Dianie w szkoleniu do walki z przeciwnikami.
+  tutorial_codehsjsapp_longdescription: CodeHS jest kompatybilny z nowoczesnymi przeglądarkami
+    z wyjątkiem przeglądarki Internet Explorer. Chrome jest naszą preferowaną/ zalecaną
+    przeglądarką, ale Firefox i Safari również powinna świetnie działać, zakładając,
+    że one również są zaktualizowane.
+  tutorial_gfmihi_longdescription: Kia ora! Na tych zajęciach będziesz kodować swoją
+    własną mini-grę i uczyć się, jak się przestawić w Te Reo Maori - języku rdzennych
+    mieszkańców Nowej Zelandii. Mihi Maker jest przyjemnym w ćwiczeniem, które łączy
+    kodowanie, nauki społeczne i rdzenną kulturę.  Dowiesz się, jak twórcy gier programują
+    podstawowe algorytmy do wykrywania kolizji. Wykrywanie kolizji jest programem
+    używanym przez komputer, aby pomóc zrozumieć, kiedy dwa obiekty zderzą się ze
+    sobą.  W samouczkach w ramach "Godziny kodowania" Gamefroot używa się wizualnego
+    języka programowania, w którym wykorzystuje się bloki, a uczniowie po prostu przeciągają
+    i opuszczają wizualne bloki, aby pisać kod.
+  tutorial_hopdropphone_longdescription: '"Gra w klasy" [Hopscotch] jest prostym narzędziem
+    programistycznym na iPada/iPhone''a, ukochanym przez miliony uczniów za swobodę
+    twórczej ekspresji. Przyglądaj się, jak Twoi uczniowie piszczą z radości tworząc
+    swoje własne gry "Nie upuszczaj telefonu" ["Don''t Drop the Phone"]. Ten samouczek
+    wideo, do samodzielnego przerobienia, uczy dzieci, które ukończyły 8 lat podstaw
+    programowania w czasie, gdy kodują autorskie edycje tej popularnej gry.'
+  tutorial_techfaa_longdescription: 'Ten interaktywny samouczek wprowadzi Cię we "Flocking",
+    rodzaj algorytmu, który jest przeznaczony do symulowania zachowania  "Autonomicznych
+    agentów" [Autonomous Agents] w grupie, niczym w prawdziwym życiu. Wbudowana przeglądarka
+    ułatwia Ci zauważenie realizacji kodu. '
+  tutorial_codehsjsgraph_longdescription: CodeHS jest kompatybilny z nowoczesnymi
+    przeglądarkami z wyjątkiem przeglądarki Internet Explorer. Chrome jest naszą preferowaną/
+    zalecaną przeglądarką, ale Firefox i Safari również powinna świetnie działać,
+    zakładając, że one również są zaktualizowane.
+  tutorial_thunkable_longdescription: Używając języka bloków uczysz się, jak zbudować
+    10 prostych aplikacji w 1 godzinę. Ta seria śmiesznych samouczków pomoże Ci wyruszyć
+    na ścieżkę prowadzącą do tego, abyś został twórcą aplikacji mobilnych!
+  tutorial_hopcrossyroad_longdescription: '"Gra w klasy" [Hopscotch] jest prostym
+    narzędziem programistycznym na iPada/iPhone''a, ukochanym przez miliony uczniów
+    za swobodę twórczej ekspresji. Przy pomocy tego samouczka wideo do samodzielnego
+    przerobienia, Twoi uczniowie będą tworzyć swoje własne wersje Crossy Road! Dzieci
+    , które ukończyły 8 lat, będą się konfrontować z podstawami programowania, w trakcie
+    kodowania autorskich edycji ulubieńców z App Store. '
+  tutorial_switchglitch_longdescription: Switch & Glitch, niech Twoi uczniowie pobawią
+    się w bohaterów. Używając interfejsu wizualnego programują urocze roboty i pomagają
+    im uratować dzień. Na tych zajęciach dzieci w wieku 5-10 lat uczą się podstaw
+    programowania i sztuki debugowania! Galaktyka Cię potrzebuje!
+  tutorial_codecar_longdescription: 'Zakoduj płytę obwodową symulowanego samochodu!
+    Będziesz wpisywać prawdziwy kod C++, który steruje światłami i przyciskami płyty
+    obwodowej w kształcie samochodu. Podczas 7 lekcji będziesz migał tylnymi światłami,
+    kodował pedał hamulca i wiele więcej na symulowanym samochodzie kodu. Na tych
+    zajęciach przedstawia się zagadnienia takie jak: pętle, wyrażenia warunkowe "jeśli"
+    oraz logikę z wpisanym kodem i uwzględniają one plan lekcji dostosowany do norm
+    ISTE, NGSS, Common Core i CSTA.'
   tutorial_codesterscp_longdescription: 'Na tej lekcji uczniowie wykorzystują wszystkie
     cztery ćwiartki płaszczyzny współrzędnych! Używają Pythona i naszego narzędzia
     przeciągania do tekstu, aby wysłać Duszka do różnych miejsc na scenie! Dostępne
@@ -4275,19 +4301,19 @@ pl:
     Cię do wbudowanego programowania z użyciem bloków przyjaznych dla użytkownika
     i zostały one zaprogramowane specjalnie dla "Godziny kodowania". Użyj bloków i
     micro:bit, aby stworzyć zwierzątko, które możesz karmić i z którym możesz się
-    bawić. Nie ma micro:bitu BBC? Nie ma problemu! Ten kurs obejmuje pełny symulator
+    bawić. Nie ma micro:bitu BBC? Nie ma problemu! Ten kurs uwzględnia pełny symulator
     micro:bit tak, abyś mógł być w stanie zrobić wszystko, co zrobiłbyś na prawdziwym
     micro:bicie!
-  tutorial_techbim_longdescription: 'This hands-on tutorial is intended for people
-    curious to know how to programatically perform some simple image manipulations
-    such as rotation, colorization, increase of contrast, blur, edge detection, etc.,
-    without the help of advanced libraries. '
-  tutorial_techfpp_longdescription: Python is well known for its object oriented programming
-    features (classes, methods, inheritance…), however, it cannot be restricted to
-    these! This interactive tutorial shows the useful, but lesser known, functional
-    programming features and techniques of Python.
+  tutorial_techbim_longdescription: 'Ten praktyczny samouczek jest przeznaczony dla
+    osób zainteresowanych, jak wykonywać pewne proste manipulacje obrazami w kontekście
+    programistycznym takie jak: obroty, nadawanie koloru, zwiększenie kontrastu, zatarcie
+    konturów, wykrywanie krawędzi, itp. bez pomocy zaawansowanych bibliotek. '
+  tutorial_techfpp_longdescription: Python jest dobrze znany w kontekście swoich cech
+    programistycznych ukierunkowanych na obiekt (klasy, metody, dziedzictwo…), niemniej,
+    nie można się do tego ograniczać! Ten interaktywny samouczek pokazuje użyteczne,
+    acz mniej znane funkcjonalne cechy i techniki programowania języka Python.
   tutorial_codesterscr_longdescription: Uczniowie korzystają z narzędzia przeciągnij
-    do tekstu, które umożliwia im szybkie rozpoczęcie kodowania w Pythonie! Uczniowie
+    do tekstu, które umożliwia im szybkie rozpoczęcie kodowania w języku Python! Uczniowie
     wykonują zestaw ćwiczeń z przewodnikiem, w których dowiadują się, jak używać i
     modyfikować rozmaite komendy programowania. Potem wykorzystują te umiejętności
     do tworzenia własnej chorografii kodowania!
@@ -4295,221 +4321,242 @@ pl:
     doświadczenie w zakresie programowania i zostały zaprojektowane specjalne na potrzeby
     "Godziny kodowania". Używaj języka programowania Python do modelowania wybuchu
     choroby. Czy jesteś w stanie rozwiązać ciekawy przypadek błyszczącego nosa?
-  tutorial_techec_longdescription: Closures are a crucial aspect of Javascript, yet
-    they remain mysterious and developers do not understand them easily. This interactive
-    tutorial will teach you how powerful and useful Closures are to boost your Javascript
-    practice!
-  tutorial_rgbegin_longdescription: RoboGarden is an easy to understand, hands-on
-    educational app where students take part in active learning. Fully equipped to
-    teach coding literacy from scratch, RoboGarden reduces the need for a tech-savvy
-    teacher.
-  tutorial_myradream_longdescription: Monsters have taken Myra's dream. Learn coding
-    skills to help her cross bridges, fly through the air, and swim underwater to
-    get back her dream. Actimator is a Web-based visual environment for creating games
-    and science simulations collaboratively, as well as publishing them for the Web
-    and as mobile apps.
-  tutorial_thinkfun_longdescription: We'll take you through the process of fixing
-    a Robot's brain, step by step! Along the way you'll solve puzzles based on the
-    famous 'Boolean Satisfiability Problem,' and within an hour you'll be a Boolean
-    Master and have an understanding of advanced programming concepts! All instruction
-    is contained on one screen, and volume is optional.
-  tutorial_hopfireworks_longdescription: 'Your students will be so excited when they
-    code their own (explosion free!) fireworks app! Hopscotch is a simple programming
-    tool on the iPad/iPhone, beloved by millions of students for its freedom of creative
-    expression. This self-guided video tutorial teaches kids age 8+ programming basics
-    while they code custom versions of interactive fireworks. '
+  tutorial_techec_longdescription: Domknięcia stanowią kluczowy aspekt języka Javascript,
+    niemniej pozostają tajemnicze i twórcom nie jest łatwo je zrozumieć. Ten interaktywny
+    samouczek uczy Cię, jak potężne i przydatne są domknięcia jeśli chodzi o ugruntowanie
+    w zakresiie praktyki Javascript!
+  tutorial_rgbegin_longdescription: 'RoboGarden jest praktyczną aplikacją, która łatwo
+    jest opanować, przeznaczoną dla uczniów uczestniczących w aktywnej nauce. Z uwagi
+    na fakt pełnego przystosowawnia jej do nauczania umiejętności kodowania od podstaw,
+    RoboGarden zmniejsza zapotrzebowanie na nauczyciela posiadającego zmysł techniczny. '
+  tutorial_myradream_longdescription: 'Potwory odebrały Myrze jej marzenie. Nabądź
+    umiejętności kodowania, aby pomóc jej przekraczać mosty, fruwać w powietrzu i
+    przepływać pod wodą, aby odzyskać swój sen. Actimator jest wizualnym środowiskiem
+    internetowym do wspólnego tworzenia gier i  symulacji naukowych, jak również publikowania
+    ich w Internecie i w aplikacjach mobilnych. '
+  tutorial_thinkfun_longdescription: 'Przeprowadzimy Cię przez proces naprawiania
+    mózgu robota, krok-po-kroku! Po drodze będziesz rozwiązywać łamigłówki dotyczące
+    słynnego "Problemu spełnialności Boole''a", a po godzinie będziesz mistrzem boolowskim
+    i będziesz rozumieć zaawansowane pojęcia programistyczne! Wszystkie instrukcje
+    zwarte są na jednym ekranie, a objętość jest opcjonalna. '
+  tutorial_hopfireworks_longdescription: Twoi uczniowie będą bardzie przejęci, gdy
+    zakodują swoją własną aplikację do fajerwerków (bez wybuchów!)! "Gra w klasy"
+    [Hopscotch] jest prostym narzędziem programistycznym na iPada/iPhone'a, ukochanym
+    przez miliony uczniów za swobodę twórczej ekspresji. Ten samouczek wideo, do samodzielnego
+    przerobienia, uczy dzieci, które ukończyły 8 lat, podstaw programowania w czasie,
+    gdy kodują autorskie wersje interaktywnych fajerwerków.
   tutorial_grokspace_longdescription: Te zajęcia mają na celu umożliwić pierwsze doświadczenie
     w zakresie programowania i zostały zaprojektowane specjalne na potrzeby "Godziny
     kodowania". Używaj języka programowania wizualnego Blockly do badania kosmosu
     i sięgania gwiazd.
-  tutorial_codehspython_longdescription: Learn the basics of coding with the Python
-    programming language by writing programs that you can interact with! This hour
-    will cover printing, variables, math, and getting information from users. Write
-    a program that takes in and stores data from a user and returns a unique response!
+  tutorial_codehspython_longdescription: Ucz się podstaw kodowania przy pomocy języka
+    programowania Pytho pisząc programy, z którymi możesz wchodzić w interakcję! W
+    czasie tej godziny będziesz zajmować się drukowaniem, zmiennymi, matematyką oraz
+    uzyskiwaniem informacji od użytkowników. Napisz program, który pobiera i przechowuje
+    dane od użytkownika i przekazuje z powrotem niepowtarzalną odpowiedź!
   tutorial_codehsjava_longdescription: Kodowanie w języku Java z CodeHS
-  tutorial_techioda_longdescription: This useful tutorial will interactively teach
-    you how to be able to calculate the shortest path between two nodes in a graph
-    in advance, thanks to the Dijkstra's algorithm.
+  tutorial_techioda_longdescription: Ten przydatny samouczek będzie Cię interaktywnie
+    uczyć, jak być w stanie obliczać z wyprzedzeniem najkrótszą drogę pomiędzy dwoma
+    węzłami na wykresie dzięki algorytmowi Dijkstry.
   tutorial_grokmonster_longdescription: Zachęć dzieci do kodowania w trakcie tego
     przyjaznego kursu zaprojektowanego konkretnie na potrzeby "Godziny kodowania"!
     Użyj bloków przeciągnij-i-opuść, aby pisać swoje własne programy, ucz się o sekwencjach
     i prowadzeniu oraz twórz zabawne postaci - potwory!
-  tutorial_techmjs_longdescription: JavaScript has been an international standard
-    since 1997. In this interactive tutorial, we will explore the modern features
-    of the language that will make your code more robust, concise, and easier to read.
-  tutorial_techga_longdescription: Genetic Algorithms make use of the evolution theory
-    to powerfully solve problems where deterministic algorithms are too costly, such
-    as the Travelling salesman problem. This interactive tutorial is a clear and simple
-    introduction to help you understand how Genetic Algorithms work.
-  tutorial_techioan_longdescription: In this interactive tutorial, we will learn why
-    Java's "null" value should always be avoided and what solutions exist to bypass
-    it.
-  tutorial_techiogsr_longdescription: Rust is a recent System Programming Language
-    designed with memory safety and performance in mind. It was originally released
-    in 2010. In this interactive tutorial, discover the basics of this fun to use
-    language, with performances comparable to C and C++!
+  tutorial_techmjs_longdescription: 'JavaScript jest międzynarodowym standardem od
+    roku 1997. W ramach tego interaktywnego samouczka będziemy zgłębiać nowoczesne
+    cechy języka, który będzie sprawi, że Twój kod będzie mocniejszy, bardziej zwięzły
+    i łatwiejszy do odczytania. '
+  tutorial_techga_longdescription: W "Algorytmach genetycznych" [Genetic Algorithms]
+    używa się teorii ewolucji, aby w sposób zdecydowany rozwiązywać problemy tam,
+    gdzie algorytmy deterministyczne są zbyt kosztowne, takie jak problem komiwojażera.
+    Ten interaktywny samouczek stanowi czytelne i proste wprowadzenie, które pomoże
+    Ci zrozumieć zasadę działania "Algorytmów genetycznych" [Genetic Algorithms].
+  tutorial_techioan_longdescription: W ramach tego interaktywnego samouczka będziemy
+    się uczyć, dlaczego należy zawsze unikać wartości "pustej"Javy oraz jakie są skuteczne
+    sposoby na jej skuteczne obejście.
+  tutorial_techiogsr_longdescription: '"Rdza" [Rust] jest najnowszym systemowym językiem
+    programowania [System Programming Language] zaprojektowanym z myślą o bezpieczeństwie
+    pamięci oraz wynikach. Pierwszy raz udostępniono go w roku 2010. W ramach niniejszego
+    nteraktywnego samouczka odkrywaj podstawy tego przyjemnego w użyciu języka o efektach
+    porównywalnych do C i C++!'
   tutorial_groktunnel_longdescription: Te zajęcia mają na celu umożliwić pierwsze
     doświadczenie w zakresie programowania i zostały zaprojektowane specjalne na potrzeby
     "Godziny kodowania". Używaj języka programowania Python do tworzenia prostej gry
     (lub MUD). Czy możesz znaleźć drogę przez ciemny tunel?
-  tutorial_stemcod_longdescription: Do you play video games? Have you ever thought
-    about how some games are super-realistic and other games are cartoon-ish? In this
-    activity we will talk about the physics of video games and you will learn to modify
-    a computer code to simulate the motion of an object. Our activities are all based
-    on classic video games. No install required. 100% Chromebook compatible.
-  tutorial_techikb_longdescription: Kotlin is a new open-source programming language
-    from JetBrains. It can be of greatest interest to people who work with Java today,
-    although it could also appeal to all programmers who use a garbage collected runtime
-    (Scala, Go, Python, Ruby and JavaScript). Discover Kotlin's basics in this interactive
-    tutorial!
-  tutorial_kanostreet_longdescription: Art and technology unite! With Kano's Street
-    Art Hour of Code challenges, creative minds of all abilities will code with a
-    paintbrush, making beautiful, unique artwork. Along the way, makers will learn
-    computer science principles while using a real programming language in an intuitive
-    and engaging way. With our teacher resources and guided content, everyone can
-    get in on the fun.
-  tutorial_nyblebot_longdescription: Boogie Bot is a fun and engaging coding app.
-    Bursting with life and energy, this 3D app will introduce kids to the basics of
-    computer programming using Google's visual programming language Blockly. Boogie
-    Bot is a dancing robot, who can be programmed to do dance moves. App Features
-    (all features available in full version) learn to code with coding blocks, create
-    your own dance with code, choose from several different unique dance tracks, transform
-    the room to a trendy party zone, add stunning special effects on stage, earn coins
-    as you learn programming constructs, decorate the room with cool stuff, play and
-    explore in an interactive room full of hidden features, record and save a video
-    of your awesome creation.
-  tutorial_codemojijs_longdescription: Beginning JavaScript is designed to get students
-    typing simple commands that have a big impact on the characters' actions. The
-    students will type commands that make the characters do everything from backflips
-    to make sounds and even talk. This activity will help you learn basic JavaScript
-    ideas and commands.
-  tutorial_techapf_longdescription: The interactive tutorial aims to introduce you
-    to useful advanced Python features and tricks you may not know yet to improve
-    your mastery of the Python language.
-  tutorial_techfpjs_longdescription: Functional programming is one of those things
-    that may look too hard or too theoretical to try. Wait no more! In this interactive
-    tutorial, you'll discover functional programming through hands-on examples and
-    exercises in JavaScript.
-  tutorial_techlinq_longdescription: The C# programming language is quite popular
-    with developers, in a large part because of its many powerful and intuitive language
-    features. One of these is LINQ, a library used to execute queries directly in
-    C# syntax against many types of data. This interactive tutorial will show you
-    how to use it, step by step.
-  tutorial_gpbcatapult_longdescription: Participants will build a catapult to launch
-    a ball from one side of the stage to the other, as in the game Angry Birds.
-  tutorial_quorumastro_longdescription: Learn about coding using themes from computational
-    astronomy in this accessible online tutorial. In it, students will discover how
-    to control telescopes while also practicing with the Quorum programming language's
-    computer graphics engine. By the final lesson, students will create a graphical
-    and accessible map of the stars to find items in the universe.
-  tutorial_alicewonder_longdescription: Alice in Wonderland is a self-guided puzzle
-    designed for 6+ kids without prior programming experience. You will guide Alice
-    using functions with and without parameters.
-  tutorial_rginter_longdescription: RoboGarden is an easy to understand, hands-on
-    educational app where students take part in active learning. Fully equipped to
-    teach coding literacy from scratch, RoboGarden reduces the need for a tech-savvy
-    teacher.
-  tutorial_cssgrid_longdescription: Learn all about CSS Grid by tending to your vegetable
-    garden.
-  tutorial_jshero_longdescription: JS Hero wants to take you into the world of JavaScript
-    programming. On each page you will find a small lesson and a small programming
-    task. The task can be answered directly on the page. And you are immediately told
-    if you have solved the problem correctly or if you made a mistake.
-  tutorial_codemojipy_longdescription: Python Lab is an IOS based activity that teaches
-    the basics of the programming language python. Users will learn about loops, arrays,
-    booleans and much more.
-  tutorial_nclabdrone_longdescription: 'Build a drone frame in ten steps with NCLab''s
-    3D Modeling app. The drone frame can be 3D printed and used to build a real working
-    drone!  Each step includes tutorials and instructions. Complete the code and immediately
-    see the results.  3D Modeling is a vital part of 21st century engineering, manufacturing,
-    art, science, medicine, and more.  This is a great way to get started! '
-  tutorial_gpbcircle_longdescription: Participants will make a circle that changes
-    color and brightness as you move the mouse. In the process, they will explore
-    the hue, saturation, and brightness color model.
-  tutorial_gpbpaint_longdescription: Participants will create a paint editor to draw
-    with the mouse, then add features such as a clear button and the ability to fill
-    areas with color.
+  tutorial_stemcod_longdescription: Czy grywasz w gry wideo? Czy zastanawiałeś się
+    kiedyś nad tym, że niektóre gry są niesamowicie realistyczne, a inne przypominają
+    kreskówki? Na tych zajęciach będziemy mówić o fizyce gier wideo, a ty będziesz
+    się uczyć modyfikować kod komputerowy, aby symulować ruch obiektu. Nasze zajęcia
+    są w całości oparte na klasycznych grach wideo. Nie wymagają instalacji. W 100%
+    kompatybilna z Chromebook.
+  tutorial_techikb_longdescription: Kotlin jest nowym językiem programowania typu
+    "open-source" opracowanym przez JetBrains. Może wzbudzać ogromne zainteresowanie
+    u osób, które pracują obecnie z językiem Java, chociaż może również odpowiadać
+    wszystkim programistom, którzy korzystają z efektywnego czasu odśmiecania pamięci
+    (Scala, Go, Python, Ruby i JavaScript). Odkrywaj podstawy języka Kotlin w ramach
+    tego interaktywnego samouczka!
+  tutorial_kanostreet_longdescription: Sztuka ujednolica się z technologią! Dzięki
+    wyzwaniom w ramach "Godziny kodowania ze sztuką uliczną Kano" [Kano's Street Art
+    Hour of Code] twórcze umysły posiadające rozliczne umiejętności będą kodować przy
+    pomocy pędzla, tworząc piękne, unikalne dzieła sztuki. Po drodze twórcy będą się
+    uczyć zasad informatyki, korzystając z prawdziwego języka programowania w sposób
+    intuicyjny i zaangażowany. Mając do dyspozycji zasoby naszego nauczyciela oraz
+    treści z objaśnieniami każdy może przystąpić do zabawy.
+  tutorial_nyblebot_longdescription: Boogie Bot jest przyjemna i wciągającą aplikację
+    do kodowania. Tryskając życiem i energią, ta aplikacja 3D wprowadzi dzieci w podstawy
+    programowania komputerowego z użyciem wizualnego języka programowania Google -
+    Blockly. Boogie Bot jest tańczącym robotem, który może zostać zaprogramowany pod
+    kątem ruchów tanecznych. Cechy aplikacji (wszystkie cechy dostępne w pełnej wersji)
+    uczą się kodowania z zastosowaniem bloków kodowania; twórz swój własny taniec
+    przy pomocy kodu, wybieraj spośród kilku niepowtarzalnych ścieżek tańca, przekształcaj
+    salę w modną sferę imprezową, dodawaj zachwycające efekty specjalne na scenie,
+    zarabiaj monety, w trakcie nauki konstruktów programowania, dekoruj salę fajnymi
+    dekoracjami, baw się i poznawaj interaktywną salę pełną ukrytych cech, nagraj
+    i zapisz wideo z Twoją wspaniałą pracą.
+  tutorial_codemojijs_longdescription: '"JavaScript dla początkujących" [Beginning
+    JavaScript] jest przeznaczony do tego, by skłaniać uczniów do pisania prostych
+    komend, które mają duży wpływ na charakter działań. Uczniowie będą wpisywać komendy,
+    które sprawiają, że postaci będą wykonywać wszystko od salt w tył, po wydawanie
+    dźwięków, a nawet mówienie. Te zajęcia pomogą nauczyć się podstaw pojęć i komend
+    w języku JavaScript.'
+  tutorial_techapf_longdescription: 'Interaktywny samouczek ma na celu wprowadzenie
+    Cię w użyteczne cechy zaawansowanego języka Python oraz w sztuczki, których mogłeś
+    jeszcze nie znać, aby doskonalić Twoją biegłość w zakresie języka Python. '
+  tutorial_techfpjs_longdescription: Programowanie funkcjonalne jest jedną z tych
+    rzeczy, które mogą sprawiać wrażenie zbyt trudnych lub zbyt teoretycznych, by
+    jej spróbować. Nie czekaj dłużej! W ramach tego interaktywnego samouczka, będziesz
+    odkrywać programowanie funkcjonalne poprzez praktyczne przykłady i ćwiczenia w
+    języku JavaScript.
+  tutorial_techlinq_longdescription: Język programowania C# jest dość popularny wśród
+    programistów, w dużej mierze z uwagi na jego potężne i intuicyjne cechy językowe.
+    Jedną z nich jest LINQ, biblioteka używana do realizacji wyszukiwania bezpośrednio
+    w składni C# w oparciu o wiele rodzajów danych. Ten interaktywny samouczek pokaże
+    Ci, jak go używać, krok po kroku.
+  tutorial_gpbcatapult_longdescription: Uczniowie będą budować procę/ katapultę do
+    wystrzelenia piłki z jednej strony sceny na drugą, jak w grze Angry Birds.
+  tutorial_quorumastro_longdescription: Ucz się o kodowaniu używając tematów z dziedziny
+    astronomii informatycznej w ramach tego samouczka dostępnego w Internecie. Tutaj
+    uczniowie będą odkrywać, jak sterować teleskopami, w czasie ćwiczenia z napędem
+    grafiki komputerowej języka programowania Quorum. Na lekcji finałowej uczniowie
+    będą tworzyć graficzną i dostępną mapę gwiazd, aby znajdować obiekty we wszechświecie.
+  tutorial_alicewonder_longdescription: '"Alicja w krainie czarów" jest łamigłówką
+    do samodzielnego przejścia dla dzieci, które ukończyły 6 lat, bez uprzedniego
+    doświadczenia w zakresie programowania. Będziesz prowadzić Alicję używając funkcji
+    z parametrami i bez nich. '
+  tutorial_rginter_longdescription: 'RoboGarden jest praktyczną aplikacją, która łatwo
+    jest opanować, przeznaczoną dla uczniów uczestniczących w aktywnej nauce. Z uwagi
+    na fakt pełnego przystosowawnia jej do nauczania umiejętności kodowania od podstaw,
+    RoboGarden zmniejsza zapotrzebowanie na nauczyciela posiadającego zmysł techniczny. '
+  tutorial_cssgrid_longdescription: Ucz się wszystkiego o siatce CSS pielęgnując swój
+    ogród warzywny.
+  tutorial_jshero_longdescription: JS Hero chce Cię zabrać do świata programowania
+    w języku JavaScript. Na każdej stronie znajdziesz niewielką lekcję oraz małe zadanie
+    związane z programowaniem. Zadanie można rozwiązać bezpośrednio na stronie. A
+    Ty uzyskasz natychmiastową informację, czy rozwiązałeś problem w sposób poprawny
+    czy popełniłeś błąd.
+  tutorial_codemojipy_longdescription: Python Lab jest ćwiczeniem na bazie IOS, które
+    uczy podstaw programowania w języku Python. Uczniowie będą się uczyć o pętlach,  szeregach,
+    wartościach boolowskich i wielu innych rzeczach.
+  tutorial_nclabdrone_longdescription: Zbuduj ramę drona w dziesięciu krokach z aplikacją
+    3D do modelowania NCLab. Rama drona może być wydrukowana w 3D i użyta do budowy
+    prawdziwego, działającego drona! Każdy krok jest wyposażony w samouczki i instrukcje.
+    Zrealizuj kod i natychmiast zobacz wyniki. Modelowanie w 3D stanowi fundamentalną
+    część projektowania, wytwarzania, sztuki, nauki, medycyny i innych dziedzin na
+    miarę XXI wieku. Jest to wspaniały sposób rozpoczęcia!
+  tutorial_gpbcircle_longdescription: Uczestnicy będą tworzyć koło, które zmienia
+    kolor i jasność w miarę przesuwania przez Ciebie myszy. W trakcie procesu będą
+    poznawać wzorzec koloru w kontekście odcienia, nasycenia oraz jasności.
+  tutorial_gpbpaint_longdescription: Uczestnicy będą tworzyć edytor farb, aby rysować
+    przy pomocy myszy, a następnie dodawać cechy takie jak przycisk czyszczenia oraz
+    zdolność wypełniania obszarów kolorem.
   tutorial_cocomarcade_longdescription: Gotów do zrobienia jeszcze lepszej gry? Szlifuj
     zaawansowane umiejętności w zakresie funkcji i zdarzeń w języku Python lub JavaScript,
     następnie użyj ich do stworzenia survivalowej gry arcade!
-  tutorial_techcpp_longdescription: Every C++ programmer aims for simpler, cleaner
-    and more expressive ways to code. This handy tutorial picked 7 cool C++17 features
-    that will make your code nicer.
-  tutorial_beetik_longdescription: In this activity, students reconstruct a small
-    part of a famous piece by composer Franz Liszt. Students will learn how to embed
-    loops and how they're used in both computer science and music. This is a step-by-step
-    guide that will introduce algorithmic thinking in music with elements of computer
-    science. In the last level of this activity, students will 'hack' the music by
-    changing elements such as tempo, key, repetitions, notes, etc with the objective
-    of making original variations based on what they learned. This activity intersects
-    classical music with computer science.
-  tutorial_codedj_longdescription: In Code DJ, you will first discover the basics
-    of Javascript by answering questions that will progressively become more like
-    code. You will then reach a second world where you will actually start to make
-    music directly with code, just by changing numbers at first, and as your mastery
-    increases, by manipulating rhythm loops and more! You will then unlock the ability
-    to create music freely in the Code DJ app and get it as an mp3!
-  tutorial_rgadvan_longdescription: RoboGarden is an easy to understand, hands-on
-    educational app where students take part in active learning. Fully equipped to
-    teach coding literacy from scratch, RoboGarden reduces the need for a tech-savvy
-    teacher.
-  tutorial_codehsrn_longdescription: This activity gives you some examples on how
-    to make your first real mobile apps and how to test them out on your phone using
-    React Native. To run apps on a smartphone phone, students will need to download
-    the Expo app. Find more information about Expo at https://expo.io/.
-  tutorial_codehswd_longdescription: CodeHS is compatible with all up-to-date browsers
-    except Internet Explorer. Chrome is our preferred / recommended browser, but Firefox
-    and Safari should work fine as well, assuming they are up to date.
-  tutorial_turtlerobot_longdescription: A take on the board game Robot Turtles that
-    allows the student to practice without the help of a teacher.
-  tutorial_ozoevo_longdescription: Evo by Ozobot is packed with tons of cool technology,
-    like proximity sensors, programmable LEDs, motion and sounds, and light and color
-    sensors underneath so it can see colors and follow lines. This introduction to
-    Evo presents an OzoBlockly program that makes Evo move when its proximity sensors
-    are activated by your hands, and play a victory dance once it has walked on certain
-    colors.
+  tutorial_techcpp_longdescription: Każdy programista w języku  C++ poszukuje prostszych,
+    czystszych i bardziej wyrazistych sposobów kodowania. W ramach tego wygodnego
+    samouczka wybrano 7 fajnych cech  C++17, które sprawią, że Twój kod stanie się
+    przyjemniejszy.
+  tutorial_beetik_longdescription: 'Na tych zajęciach uczniowie odtwarzają niewielkie
+    części sławnego dzieła kompozytora Franciszka Liszta. Uczniowie będą się uczyć
+    wbudowywać pętle oraz poznawać sposób ich wykorzystania zarówno w muzyce, jak
+    i w informatyce. Jest to przewodnik krok-po-kroku, który wprowadzi do muzyki myślenie
+    algorytmiczne z elementami informatyki.  Na ostatnim poziomie tych zajęć uczniowie
+    będą "hakować" muzykę poprzez zmianę elementów takich jak tempo, klucz, powtórzenia,
+    nuty, itp. w celu tworzenia oryginalnych wariacji w oparciu o to, czego się nauczyli.
+    Te zajęcia łączą muzykę klasyczną w informatyką. '
+  tutorial_codedj_longdescription: W ramach "Kodu DJ" [Code DJ], będziesz odkrywać
+    podstawy języka Javascript poprzez udzielanie odpowiedzi na pytania, które stopniowo
+    będą przeradzać się w kod. Potem dojdziesz do drugiego świata, w którym rzeczywiście
+    zaczniesz tworzyć muzykę bezpośrednio przy pomocy kodu, najpierw po prostu poprzez
+    zmianę numerów, a w miarę wzrostu Twojej biegłości, poprzez manipulowanie pętlami
+    rytmu i nie tylko! Potem będziesz uruchamiać zdolność swobodnego tworzenia muzyki
+    w aplikacji "Kodu DJ" [Code DJ] i doprowadzać ją do poziomu mp3!
+  tutorial_rgadvan_longdescription: 'RoboGarden jest praktyczną aplikacją, która łatwo
+    jest opanować, przeznaczoną dla uczniów uczestniczących w aktywnej nauce. Z uwagi
+    na fakt pełnego przystosowawnia jej do nauczania umiejętności kodowania od podstaw,
+    RoboGarden zmniejsza zapotrzebowanie na nauczyciela posiadającego zmysł techniczny. '
+  tutorial_codehsrn_longdescription: Na tych zajęciach podaje się pewne przykłady
+    sposobu tworzenia Twojej pierwszej prawdziwej aplikacji mobilnej oraz sposobu
+    jej testowania na Twoim telefonie przy użyciu "React Naive".  W celu uruchomienia
+    aplikacji na smartfonie uczniowie będą musieli pobrać aplikację Expo. Więcej informacji
+    na temat Expo można znaleźć na stronie https://expo.io/.
+  tutorial_codehswd_longdescription: CodeHS jest kompatybilny z nowoczesnymi przeglądarkami
+    z wyjątkiem przeglądarki Internet Explorer. Chrome jest naszą preferowaną/ zalecaną
+    przeglądarką, ale Firefox i Safari również powinna świetnie działać, zakładając,
+    że one również są zaktualizowane.
+  tutorial_turtlerobot_longdescription: Próba w ramach gry planszowej "Żółwie-roboty"
+    [Robot Turtles], która pozwala uczniowi ćwiczyć bez pomocy nauczyciela.
+  tutorial_ozoevo_longdescription: 'Evo marki Ozobot jest wypełniony tonami świetnej
+    technologii, takiej jak czujniki zbliżania, możliwe do programowania LEDy, czujniki
+    ruchów i dźwięków oraz światła i koloru pod spodem tak, aby widział kolory i szedł
+    śladem linii. To przedstawienie robota Evo prezentuje program OzoBlockly, który
+    sprawia, że  Evo się porusza, po aktywacji czujników zbliżenia Twoimi rękami oraz
+    odgrywa taniec zwycięstwa po wejściu na określone kolory. '
   tutorial_ozoexped_longdescription: Uczniowie ćwiczą rysowanie linii i kolorowanie
     kodów, które Ozobot może wykonać w zabawny sposób z drukowaną grą planszową. Zarówno
     szczęście i umiejętności grają rolę przez serię zabawnych czasowych wyzwań, które
     wymagają połączenia ich kształtu oraz kodów koloru. Tak jak uczniowie są zadowoleni,
     otrzymają ruch bliższy ich kierunkowi. Aktywność zawiera wyzwanie kartowe studentów
     umiejących zwiększyć trudność dla ich przeciwników tak jak część ich strategii.
-  tutorial_ozojourney_longdescription: As a class, students will program their Ozobot
-    to complete the journey of Ferdinand Magellan. The educator should cut out and
-    assemble the paper continents ahead of time. Students will use the OzoBlockly
-    language to program an Ozobot robot to navigate around the continents along the
-    path Magellan took. Along the way students will label different parts of world
-    geography.
-  tutorial_ozocodes_longdescription: This tutorial helps Pre-readers get in on the
-    Ozobot coding fun by having them to write their names in thick black lines that
-    Ozobot can walk on and place OzoCodes in logical places to help the robot walk,
-    and jump, from the first letter to the last. Students test a first draft and iterate
-    to create a working final product.  This lesson encourages fine motor skills,
-    computer science concepts and adds to students' OzoCode experience.
-  tutorial_ozoeclipse_longdescription: Discover the magic of eclipses, lunar phases,
-    and celestial mechanics (changing speeds of orbiting bodies) using Ozobot robots
-    on a simple map based on the Moon's orbit around Earth. Even with little Ozobot
-    programming experience, a class can create a demonstration of eclipses with two
-    bots and a flashlight, then create a map of the changing speeds of an orbiting
-    body with simple OzoCodes, drawn with markers.
-  tutorial_ozosimulator_longdescription: This activity teaches about programming languages
-    without students needing to use a computer or bot. The student is the computer
-    in this activity that uses psuedocode to teach the basics of how to write a program
-    a computer can read using a brain-teasing maze in which students must first read
-    and execute commands, and then write a program for a maze using what they've learned.
-  tutorial_ozoalgorithm_longdescription: Students with several programming concepts
-    under their belts will enjoy the challenge of making Ozobot choose a random multiplication
-    fact, then draw the array of the fact on a grid and blink and/or say the answers.
-    Programming concepts students should know ahead of time include loops, math, variables,
-    random number generation, and the OzoBlockly specific concepts of line following,
-    setting LED lights, timers and "say" for Evo audio capabilities.
-  tutorial_ozotimer_longdescription: Could we turn Ozobot Bit into a timer - specifically
-    a timer for measuring seconds? This challenge lesson will involve the student's
-    knowledge of concepts from geometry and physical science, as well as his or her
-    ability to write Level 4 (Advanced) OzoBlockly code using light effects, line
-    navigation, and timing. An OzoMap is provided as a basis for which the OzoBlockly
-    program can then be designed. A stop-watch or a cell phone stop-watch app is needed
-    to calibrate the Ozobot Bit second timer.
+  tutorial_ozojourney_longdescription: 'Jako klasa uczniowie będą programować swojego
+    Ozobota, aby odbyć podróż Ferdynanda Magellana. Edukator powinien nieco wcześniej
+    wyciąć i złożyć kontynenty z papieru. Uczniowie będą używać języka OzoBlockly
+    do zaprogramowania robota Ozobot do nawigacji po kontynentach ścieżką, którą obrał
+    Magellan. Po drodze uczniowie będą oznaczać różne części geografii świata. '
+  tutorial_ozocodes_longdescription: Ten samouczek pomaga osobom uczącym się czytać
+    dołączyć do zabawy z kodowaniem robota Ozobot skłaniając ich do zapisania swoich
+    imion grubymi, czarnymi liniami, którymi Ozobot może przejść i umieszczać  OzoKody
+    w miejscach logicznych, aby pomóc robotowi w chodzeniu, skakaniu, od pierwszej
+    litery do ostatniej. Uczniowie testują pierwszy projekt i prowadzą iterację, aby
+    tworzyć sprawny produkt gotowy. Ta lekcja wspomaga dobre umiejętności motoryczne,
+    pojęcia informatyki oraz wzbogaca doświadczenie uczniów w zakresie OzoKodu.
+  tutorial_ozoeclipse_longdescription: Odkrywaj magiczne zaćmienia, fazy księżyca,
+    niebiańską mechanikę (zmieniając prędkość ciał krążących po orbicie) używając
+    robotów Ozobot na prostej mapie, której podstawą jest orbita Księżyca okrążająca
+    Ziemię. Nawet w przypadku posiadania niewielkiego doświadczenia w zakresie programowania
+    Ozobota, klasa może stworzyć pokaz zaćmień przy pomocy dwóch botów i latarki,
+    a następnie opracować mapę zmieniających się prędkości ciał krążących po orbicie
+    stosując proste OzoKody, narysowane markerami.
+  tutorial_ozosimulator_longdescription: 'Na tych zajęciach uczy się o językach programowania
+    bez konieczności posiadania przez uczniów komputera lub bota. Na tych zajęciach
+    to uczeń jest komputerem, który używa pseudokodu, aby uczyć podstaw, jak się pisze
+    program, który komputer jest w stanie odczytać używając labiryntu stymulującego
+    mózg, w którym uczniowie muszą najpierw odczytać, a potem wykonać komendy; później
+    napisać program dla labiryntu używając tego, czego się nauczył. '
+  tutorial_ozoalgorithm_longdescription: Uczniowie posiadający w zanadrzu kilka pojęć
+    programowania będą bawić się wyzwaniem w postaci skłaniania Ozobota do wyboru
+    przypadkowo zmultiplikowanego faktu, a następnie narysują szereg faktu na siatce
+    i wymrugają i/lub powiedzą odpowiedzi. Pojęcia programowania, które uczniowie
+    powinni znać wcześniej, obejmują pętle, matematykę, zmienne, losowe tworzenie
+    liczb oraz konkretne pojęcia OzoBlockly  podążające za linią, ustawianie świateł
+    LED, timerów i "wypowiedzi" w sprawie zdolności audio w wydaniu Evo.
+  tutorial_ozotimer_longdescription: Czy moglibyśmy zmienić robota Ozobot Bit w timer
+    - w szczególności w timer mierzący sekundy? Ta lekcja z wyzwaniem będzie wymagać
+    znajomości ze strony ucznia pojęć z geometrii i nauk fizycznych, jak również umiejętności
+    pisania kodu na poziomie 4 (zaawansowanym) OzoBlockly z użyciem efektów świetlnych,
+    nawigacji liniowej oraz orientacji czasowej. Jest udostępniona OzoMapa, jako podstawa,
+    na której można projektować później program OzoBlockly. Do skalibrowania drugiego
+    timera Ozobot Bit potrzebny jest stoper lub aplikacja stoper w telefonie komórkowym.
   tutorial_ozohabits_longdescription: Kiedy uczniowie wiedzą jak narysować kinie i
     OzoCody do programu Ozobot, są one gotowe do włączania tej metody programowania
     w prawdziwym świecie. Ten tutorial pokazuje jak Ozobot może być wykorzystany do
@@ -4523,252 +4570,276 @@ pl:
     pewność w ich zdolności do rozumienia nauki komputerowej przez gry Ozobot Blockly.
     Uczniowie odkrywają jak Bit i Evo przez Ozobot będą ładować programy przez niezwyczajną
     metodę - kolorowy błysk na czujniku światła robota oraz uczyć tego programu.
-  tutorial_ozopair_longdescription: Students who know the OzoBlockly block-based programming
-    language learn how to work in teams as Drivers and Navigators, and then practice
-    by creating a single program on one computer for one Ozobot robot. This is a teacher-led
-    tutorial that requires videos to be shown at the beginning, and then guidance
-    to help students through completing their program when needed.
-  tutorial_codesnoopy_longdescription: Team up with friends and practice your coding
-    skills by programming Snoopy's Beagle Scouts in a fun and silly snowball fight!
-    Beginners and pre-readers welcome - teams write their code in secret while trying
-    to outsmart each other. With words-free code, everyone can get in on the fun!
-    This activity supports 1- 4 players on the same device - play against friends
-    or the computer.
+  tutorial_ozopair_longdescription: 'Uczniowie, którzy znają blokowy język programowania
+    OzoBlockly uczą się, jak on działa w zespołach z kierowcami i nawigatorami, a
+    następnie ćwiczą, tworząc pojedynczy program na jednym komputerze dla jednego
+    robota Ozobot. To jest samouczek prowadzony przez nauczyciela, który wymaga pokazania
+    filmu wideo na początku, a następnie poprowadzenia, aby pomóc uczniom ukończyć
+    program, jeśli wystąpi taka potrzeba. '
+  tutorial_codesnoopy_longdescription: 'Stwórz zespół z kolegami i ćwicz swoje umiejętności
+    kodowania programując skautów z drużyny "Snoopy''s Beagle" do rozegrania wesołej
+    i głupawej bitwy na śnieżki! Mile widziani początkujący i osoby uczące się czytać
+    - zespoły piszą swój kod w tajemnicy, próbując się wzajemnie przechytrzyć. Dzięki
+    temu, że kod tworzy się bez słów, każdy może zaangażować się w zabawę! Na tych
+    zajęciach to samo urządzenie obsługuje 1-4 graczy - graj przeciw koledze lub przeciw
+    komputerowi. '
   tutorial_applabintro_longdescription: Stwórz własną aplikację w JavaScript używając
     bloków lub tekstu. Będziesz tworzyć prostą aplikację przy pomocy przycisków, obrazków,
     dźwięków i wielu ekranów, które możesz udostępnić znajomym lub opublikować w galerii
     publicznej. Jeśli już kiedyś wykonywałeś jakieś kodowanie przy pomocy bloków,
     wynieś swoje umiejętności na kolejny poziom.
-  tutorial_cslartist_longdescription: Did you know that there's a little artist who
-    lives inside every computer? This PDF contains a fun story embedded with puzzles
-    that will teach your students the fundamentals of digital art as they make their
-    own creations using pixels, algorithms and repeat loops.
-  tutorial_cslscratchjr_longdescription: CodeSpeak's "Let's Play with the ScratchJr
-    Kitten!" Activity Pack is a Read Aloud Story with accompanying worksheets. The
-    Story walks through the code for a great first project for brand new coders. A
-    grown-up can read the story to a class of pre-reader students and then guide students
-    to code the story in their tablets using the ScratchJr app. Students with early
-    reading skills can read the story themselves and independently complete the Activity
-    Pack.
-  tutorial_floevents_longdescription: Students will explore events, a concept that
-    allows programs to respond to specific stimuli. Events are determined in bits
-    of code called event handlers, which listen for specific events and contain instructions
-    on how to respond. Students will learn key vocabulary and write text for event
-    handlers in a Mad Libs-style exercise in which they create and act out event handlers
-    of their own.
-  tutorial_florobot_longdescription: In this lesson, students will build their literacy
-    skills while diving into the field of robotics. They'll watch Flocabulary's educational
-    hip-hop video to find out what a robot is and see examples of robots in daily
-    life. They'll close-read short passages about robots, discuss tasks that robots
-    are well suited for and finish the lesson by designing their own robot to solve
-    a specific problem.
-  tutorial_isavesanta_longdescription: In this teacher-led festive activity, adapted
-    for the Hour of Code, the children create a computer game using Scratch to save
-    Santa. They design algorithms, use conditional statements as well as test and
-    debug their work. Includes step-by-step lesson plan, pupil resources, support
-    cards and pre-written program templates.
-  tutorial_iorder_longdescription: This teacher led activity, adapted for the Hour
-    of Code, develops computational thinking and coding skills using Scratch 2.0.
-    The children program an ice-cream stand simulation and/or game and, in doing so,
-    design algorithms, use repetition, conditional statements, test and debug their
-    work. Includes step-by-step lesson plan, pupil support materials, and pre-written
-    Scratch 2.0 program templates for teacher and pupils.
-  tutorial_ianimate_longdescription: 'This teacher-led seasonal activity, adapted
-    for the Hour of Code, introduces children to creating computer animations. The
-    children will create frames, add artwork and animate a simple Christmas scene.
-    Lots of ideas for differentiation, extension and enrichment from making a very
-    simple animated sequence to more able pupils: animating backgrounds as well as
-    characters and objects, adding 3D effects (e.g. shadows), creating more frames
-    for smoother movement, switching backgrounds to create scene changes, and animating
-    more than one object.'
-  tutorial_iloveada_longdescription: This teacher-led lesson activity, adapted for
-    the Hour of Code, provides an opportunity to teach cross-curricular computing
-    with history. Children research Ada Lovelace an important historical figure in
-    computer science and the world's first computer programmer! They then use basic
-    HTML to create a multimedia webpage showcasing their findings and skills as web
-    masters. Includes a step-by-step activity plan, associated teacher and pupil resources
-    and ideas for extension and enrichment to take learning further.
-  tutorial_kodflash_longdescription: Flash! Clap! This hands-on, wild weather lesson
-    teaches conditional statements with lightning and thunder. Students will learn
-    about why thunder always follows lightning and will examine the logic statement
-    "if there is lightning, then thunder will follow." Count the seconds between the
-    two to see how far away the storm is!
-  tutorial_kodchoose_longdescription: Choose your own adventure! Through a series
-    of "If statements", students will alter the storyline and ending to a narrative
-    they write. Like a program's path changes based on conditions, the path a character
-    takes through a narrative can change too. Get creative and lead the Kodable fuzzFamily
-    on multiple adventures within one story that can have varying conclusions.
-  tutorial_kodpizzapre_longdescription: In a 3-part unit, students will connect math
-    and programming to develop solutions for a restaurant's mobile ordering app. Dominic's
-    Pizza restaurant is creating an algorithm for their new app and it's up to students
-    to help calculate pizza costs. At the end of the unit, students will make and
-    deliver their "pizza" after calculating the cost of the order.
-  tutorial_kodpizza_longdescription: In a 3-part unit, students will connect math
-    and programming to develop solutions for a restaurant's mobile ordering app. Dominic's
-    Pizza restaurant is creating an algorithm for their new app and it's up to students
-    to help calculate pizza costs. At the end of the unit, students will make and
-    deliver their "pizza" after calculating the cost of the order.
-  tutorial_kodwomen_longdescription: This 3-part unit explores gender inequality and
-    engages students in activities and discussions around different experiences and
-    perspectives. Highlighting influential women in the history of tech, students
-    learn about past pioneers and form their own opinions on equality in the tech
-    field. At the end of the unit, students express their opinions in writing to effect
-    change in their school community.
-  tutorial_tfunplug_longdescription: We'll take you through the process of fixing
-    a Robot's brain, step by step! Along the way you'll solve puzzles based on the
-    famous 'Boolean Satisfiability Problem,' and within an hour you'll be a Boolean
-    Master and have an understanding of advanced programming concepts! No computers
-    required – everything you'll need can be printed out from our supplied PDF.
-  tutorial_lbvariables_longdescription: Having fun is not a variable! Short activities
-    and fun videos provide an overview of the core coding concepts that students will
-    encounter in the app. The variables lesson teaches students to create variables
-    to add countdowns, characters, and extra players to games.
-  tutorial_lbfunctions_longdescription: Short activities and fun videos provide an
-    overview of the core coding concepts that students will encounter in the app.
-    The functions lesson teaches students to create their own unique code blocks to
-    level-up their game.
-  tutorial_lblogic_longdescription: Logic-defying fun activities and videos provide
-    an overview of the core coding concepts that students will encounter in the app.
-    The logic lesson teaches students to use conditional statements to program rules
-    and choices into their games.
-  tutorial_lbworld_longdescription: Code for good! Students design a game that will
-    help make life easier for people in their community. At the end, each group will
-    present their prototypes at a "Change the World Arcade" that will be open to community
-    members.
-  tutorial_lbloops_longdescription: Loops are the secret weapon of every game ninja.
-    Short activities and fun videos provide an overview of the core coding concepts
-    that students will encounter in the app. The loops lesson teaches students how
-    to use loops to create animations.
-  tutorial_lbtug_longdescription: Bring a whole new meaning to the term "button-masher".
-    Students will create and remix the Tug of War game to explore how functions are
-    used to structure code.
-  tutorial_lbpotato_longdescription: Students will use loops, conditional logic, and
-    variables to create a new spin on the game of Hot Potato. This lesson provides
-    a choice between a beginner or intermediate level exploration into understanding
-    the invention code.
-  tutorial_lbguitar_longdescription: Students will work together to design a musical
-    instrument that makes it easy for anyone, even for those who cannot read music,
-    to play simple songs.
-  tutorial_lbio_longdescription: Short activities and fun videos provide an overview
-    of the core coding concepts that students will encounter in the app. The inputs
-    and outputs lesson teaches students how to control images, sound, and motion.
-  tutorial_wonpuppy_longdescription: Use the Wonder Workshop Blockly app and Dash
-    the robot to tackle 3 coding challenges! In this series of challenges, you will
-    train Dash the puppy to perform tricks. This series is part 3 of the Hour of Code
-    Dash and Dot Challenge Card activities. It is recommended for students who have
-    coding experience with functions.
-  tutorial_woncue_longdescription: Use Wonder Workshop's cue app to program your CUE
-    robot in different ways. Challenges and demos in the app will show you how to
-    program using blocks, JavaScript, or state machines. You'll also get to know the
-    robot's 4 different personalities as you code!
-  tutorial_wonzoo_longdescription: Use the Wonder Workshop Blockly app and Dot the
-    robot to tackle 3 coding challenges! In this series of challenges, you will help
-    Dot play with the animals at the petting zoo. This series is part 2 of the Hour
-    of Code Dash and Dot Challenge Card activities.
-  tutorial_wontrip_longdescription: Use the Wonder Workshop Blockly app and Dash the
-    robot to tackle 3 coding challenges! In this series of challenges, you will help
-    Dash prepare for a road trip. This series is part 4 of the Hour of Code Dash and
-    Dot Challenge Card activities. It is recommended for students who have coding
-    experience with event handlers and conditionals.
-  tutorial_woncollect_longdescription: Use the Wonder Workshop Blockly app and Dash
-    the robot to tackle 3 coding challenges! In this series of challenges, you will
-    help Dash collect different objects like seashells and candy. Don't forget to
-    make some space on the floor for your robot to move around. This series is part
-    1 of the Hour of Code Dash and Dot Challenge Card activities.
+  tutorial_cslartist_longdescription: Czy wiedziałeś, że w każdym komputerze mieszka
+    mały artysta? Ten PDF zawiera zabawną historię z łamigłówkami, która uczy uczniów
+    podstaw sztuki cyfrowej, którą tworzą w postaci prac własnych z użyciem pikseli,
+    algorytmów i pętli "powtórz".
+  tutorial_cslscratchjr_longdescription: ' "Pakiet do zajęć CodeSpeak "Pobawmy się
+    z kotkiem ScratchemJr" [ CodeSpeak''s "Let''s Play with the ScratchJr Kitten!"
+    Activity Pack"] jest historyjką do czytania na głos z uzupełniającymi ją kartami
+    pracy. Historyjka prowadzi przez kod, na potrzeby pierwszego dużego projektu i
+    jest przeznaczona dla nowicjuszy kodowania. Historyjkę może odczytać klasie dorosły,
+    a następnie poprowadzić uczniów, aby zakodowali opowiadanie na swoich tabletach,
+    używając aplikacji ScratchJr. Uczniowie, którzy wcześnie nauczyli się czytać mogą
+    przeczytać sobie opowiadanie sami i samodzielnie wypełnić "Pakiet do zajęć". '
+  tutorial_floevents_longdescription: Uczniowie będą badać zdarzenia, pojęcie, które
+    pozwala programom reagować na konkretne bodźce. Zdarzenia są określone przez fragmenty
+    kodu, które zwane są funkcjami "event handlers" i zawierają instrukcje jak reagować.
+    Uczniowie będą się uczyć kluczowego słownictwa oraz pisać tekst na potrzeby funkcji
+    "event handlers" w ramach ćwiczenia w stylu Mad Lib, w którym tworzą i odgrywają
+    funkcje "event handlers" na własną rękę.
+  tutorial_florobot_longdescription: 'Na tej lekcji uczniowie będą budować swoją biegłość
+    w czytaniu skacząc jednocześnie na główkę w dziedzinę robotyki. Obejrzą edukacyjny
+    film wideo z hip-hopem "Flocabulary", aby dowiedzieć się, czym jest robot oraz
+    obejrzeć przykłady robotów w życiu codziennym. Uważnie przeczytają krótkie fragmenty
+    o robotach, omówią zadania, do wykonania których roboty świetnie się nadają i
+    zakończą lekcję projektowaniem swojego własnego robota, do rozwiązania konkretnego
+    problemu. '
+  tutorial_isavesanta_longdescription: Na tych świątecznych zajęciach prowadzonych
+    przez nauczyciela, dostosowanych do "Godziny kodowania" dzieci tworzę grę komputerową
+    z użyciem programu Scratch, aby uratować Świętego Mikołaja. Projektują algorytmy
+    i używają wyrażeń warunkowych, jak również testują i debugują swoją pracę. W ramach
+    zajęć zapewnia się plan lekcji krok-po-kroku, materiały dla uczniów, karty wspomagające
+    oraz uprzednio napisane szablony programu
+  tutorial_iorder_longdescription: Te zajęcia prowadzone przez nauczyciela, dostosowane
+    do "Godziny kodowania" rozwijają umiejętności myślenia informatycznego i kodowania
+    z użyciem systemu Scratch 2.0.  Dzieci programują symulację budki z lodami i/lub
+    stosowną grę, a przy tym programują algorytmy, używają powtarzania, wyrażeń warunkowych,
+    testują i debugują swoją pracę. W ramach zajęć zapewnia się plan lekcji krok-po-kroku,
+    samouczek dla ucznia oraz przewodnik po ocenie.
+  tutorial_ianimate_longdescription: 'Te świąteczne zajęcia prowadzone przez nauczyciela,
+    dostosowane do "Godziny kodowania", wprowadzają dzieci w tworzenie animacji komputerowych.
+    Dzieci będą tworzyć klatki filmu, dodawać prace plastyczne i animować prostą scenkę
+    Bożego Narodzenia. Mnóstwo pomysłów na różnicowanie, poszerzanie i wzbogacanie
+    od tworzenia bardzo prostej, animowanej sekwencji po uczniów bardziej zaawansowanych:
+    animowanie tła, jak również postaci i obiektów, dodawanie efektów 3D (np. cieni),
+    tworzenie większej ilości klatek, aby  ruch był bardziej płynny, przełączanie
+    tła, aby kreować zmiany scen i animowanie więcej niż jednego obiektu.'
+  tutorial_iloveada_longdescription: Te zajęcia lekcyjne prowadzone przez nauczyciela,
+    dostosowane do  "Godziny kodowania" dają możliwość nauczania międzyprogramowej
+    informatyki w kontekście historycznym. Dzieci prowadzą badania na temat Ady Lovelace,
+    ważnej postaci historycznej w dziedzinie informatyki oraz pierwszej programistki  komputerowej
+    na  świecie! Mogą korzystać z podstawowej wersji HTML, aby utworzyć multimedialną
+    stronę internetową popularyzującą jej odkrycia i umiejętności jako mistrzowskie
+    osiągnięcia internetu. W ramach zajęć zapewnia się plan zajęć krok-po-kroku, powiązanych
+    zasobów dla nauczyciela i ucznia i pomysłów na rozbudowę i wzbogacenie poprzez
+    dalszą naukę.
+  tutorial_kodflash_longdescription: Błysk! Grzmot! Ta lekcja, poświęcona pogodzie
+    dzikiej przyrody, prowadzona w trybie zajęć praktycznych, uczy wyrażeń warunkowych
+    na podstawie wyładowań atmosferycznych i grzmotów. Uczniowie dowiedzą się, dlaczego
+    grzmot zawsze następuje po wyładowaniu atmosferycznym i będą badać stwierdzenie
+    logiczne "jeśli wystąpiło wyładowanie atmosferyczne, to po nim nastąpi grzmot."
+    Policz sekundy pomiędzy jednym a drugim, aby przekonać się, jak daleko jest burza!
+  tutorial_kodchoose_longdescription: Wybierz swoją własną przygodę! Przy pomocy serii
+    "wyrażeń warunkowych <<jeśli>>", uczniowie będą zmieniać fabułę i kończyć narrację,
+    którą piszą. Tak, jak ścieżka programu zmienia się na podstawie warunków, ścieżka
+    przez narrację, którą obiera postać, może również ulegać zmianie. Daj się ponieść
+    kreatywności i poprowadzić "Możliwej do zakodowania Rodziniefuzz" [Kodable fuzzFamily]
+    w liczne przygody w ramach jednej opowieści, która może mieć bardzo zmienne zakończenia.
+  tutorial_kodpizzapre_longdescription: W każdej 3-częściowej jednostce uczniowie
+    będą łączyć matematykę z programowaniem, aby opracowywać rozwiązania dla aplikacji
+    mobilnej do zamawiania w restauracji. Restauracja Dominic's Pizza tworzy algorytm
+    na potrzeby swojej nowej aplikacji i od uczniów zależy pomoc w kalkulacji kosztów
+    pizzy. Na koniec jednostki uczniowie będą robić i dostarczać swoją "pizzę" po
+    wykonaniu kalkulacji kosztu zamówienia.
+  tutorial_kodpizza_longdescription: W każdej 3-częściowej jednostce uczniowie będą
+    łączyć matematykę z programowaniem, aby opracowywać rozwiązania dla aplikacji
+    mobilnej do zamawiania w restauracji. Restauracja Dominic's Pizza tworzy algorytm
+    na potrzeby swojej nowej aplikacji i od uczniów zależy pomoc w kalkulacji kosztów
+    pizzy. Na koniec jednostki uczniowie będą robić i dostarczać swoją "pizzę" po
+    wykonaniu kalkulacji kosztu zamówienia.
+  tutorial_kodwomen_longdescription: 'W tej 3-częściowej jednostce zgłębia się zagadnienie
+    nierówności i angażuje uczniów w zajęcia i rozmowy poświęcone różnym doświadczeniom
+    i perspektywom. Dzięki podkreśleniu roli wpływowej kobiety w historii techniki
+    uczniowie uczą się o dawnych pionierach i tworzą swoje własne opinie na temat
+    nierówności na polu techniki. Na koniec jednostki uczniowie wyrażają swoje opinie
+    na piśmie, aby wdrożyć zmianę w swojej szkolnej społeczności. '
+  tutorial_tfunplug_longdescription: Przeprowadzimy Cię przez proces naprawiania mózgu
+    robota, krok-po-kroku! Po drodze będziesz rozwiązywać łamigłówki dotyczące słynnego
+    "Problemu spełnialności Boole'a", a po godzinie będziesz mistrzem boolowskim i
+    będziesz rozumieć zaawansowane pojęcia programistyczne! Komputery nie są potrzebne
+    - wszystko, czego potrzebujesz można wydrukować z przekazanych dokumentów PDF.
+  tutorial_lbvariables_longdescription: Zabawa nie jest zmienną! Krótkie ćwiczenia
+    i rozrywkowe filmy wideo dają ogólny ogląd kluczowych pojęć kodowania, na które
+    uczniowie będą trafiać w aplikacji. Lekcja o zmiennych uczy uczniów tworzyć zmienne
+    i dodawać odliczenia, znaki oraz dodatkowych graczy do gry.
+  tutorial_lbfunctions_longdescription: Krótkie ćwiczenia i rozrywkowe filmy wideo
+    dają ogólny ogląd kluczowych pojęć kodowania, na które uczniowie będą trafiać
+    w aplikacji. Lekcja o funkcjach uczy uczniów tworzyć swoje własne, niepowtarzalne
+    bloki kodowania, aby wynieść grę na wyższy poziom.
+  tutorial_lblogic_longdescription: Logiczne, rozrywkowe zajęcia i filmy wideo dają
+    ogląd kluczowych pojęć kodowania, na które uczniowie będą trafiać w aplikacji.
+    Lekcja logiki uczy uczniów używania wyrażeń warunkowych programowania zasad i
+    wyborów w ramach gry.
+  tutorial_lbworld_longdescription: Koduj na dobre! Uczniowie projektują grę która
+    pomoże im ułatwić życie ludziom w ich sąsiedztwie. Na koniec przedstawią swoje
+    prototypy na "Zmień arkadę Świata" ["Change the World Arcade"], która będzie otwarta
+    dla członków społeczności.
+  tutorial_lbloops_longdescription: Pętle są tajną bronią każdego ninja w grze. Krótkie
+    ćwiczenia i rozrywkowe filmy wideo dają ogólny ogląd kluczowych pojęć kodowania,
+    na które uczniowie będą trafiać w aplikacji. Lekcja o pętlach uczy uczniów, jak
+    używać pętli do tworzenia animacji.
+  tutorial_lbtug_longdescription: 'Nadaj całkiem nowego znaczenia terminowi: "button-masher".
+    Uczniowie będą tworzyć i dokonywać remiksu gry w przeciąganie liny, aby zgłębiać
+    jak wykorzystuje się funkcje do konstruowania kodu. '
+  tutorial_lbpotato_longdescription: Uczniowie będą używać pętli, logiki warunkowej
+    oraz zmiennych do tworzenia nowego obrotu w grze w gorącego ziemniaka. Ta lekcja
+    umożliwia wybór pomiędzy angażowaniem się w poziom początkujący lub średnio zaawansowany,
+    aby zrozumieć kod wynalazku.
+  tutorial_lbguitar_longdescription: 'Uczniowie będą współpracować projektując instrument
+    muzyczny, który ułatwi każdemu, nawet osobom, które nie umieją czytać nut, zagranie
+    prostych piosenek. '
+  tutorial_lbio_longdescription: 'Krótkie ćwiczenia i rozrywkowe filmy wideo dają
+    ogólny ogląd kluczowych pojęć kodowania, na które uczniowie będą trafiać w aplikacji.
+    Dane wejściowe i wyniki wyjściowe z lekcji uczą uczniów, jak sterować obrazami,
+    dźwiękiem i ruchem. '
+  tutorial_wonpuppy_longdescription: Korzystaj z aplikacji Blockly "Cudowny warsztat"
+    [Wonder Workshop Blockly] i robota Dasha, aby podjąć 3 wyzwania w zakresie kodowania!
+    W tej serii wyzwań będziesz uczył szczeniaka Dasha wykonywania sztuczek. Ta seria
+    stanowi część 3 zajęć "Godzina kodowania - karta wyzwań Dasha i Dot" [Hour of
+    Code Dash and Dot Challenge Card]. Zalecana dla uczniów, posiadających doświadczenie
+    w zakresie kodowania z użyciem funkcji.
+  tutorial_woncue_longdescription: Korzystaj z aplikacji "Cudowny warsztat" [Wonder
+    Workshop] do programowania robota CUE na różne sposoby. Wyzwania i demo w aplikacji
+    pokażą Ci, jak programować z użyciem bloków, JavaScript albo urządzeń stanu. Poznasz
+    również 4 różne osobowości robota w trakcie kodowania!
+  tutorial_wonzoo_longdescription: 'Korzystaj z aplikacji Blockly "Cudowny warsztat"
+    [Wonder Workshop Blockly] i robota Dota, aby podjąć 3 wyzwania w zakresie kodowania!
+    W tej serii wyzwań będziesz pomagać Dotowi bawić się ze zwierzętami w zoo, w którym
+    można je głaskać. Ta seria stanowi część 2 zajęć "Godzina kodowania - karta wyzwań
+    Dasha i Dot" [Hour of Code Dash and Dot Challenge Card]. '
+  tutorial_wontrip_longdescription: Korzystaj z aplikacji Blockly "Cudowny warsztat"
+    [Wonder Workshop Blockly] i robota Dasha, aby podjąć 3 wyzwania w zakresie kodowania!
+    W tej serii wyzwań będziesz pomagał Dashowi przygotować się do podróży samochodem.
+    Ta seria stanowi część 4 zajęć "Godzina kodowania - karta wyzwań Dasha i Dot"
+    [Hour of Code Dash and Dot Challenge Card]. Zalecana dla uczniów, posiadających
+    doświadczenie w zakresie kodowania z użyciem funkcji "event handlers" i wyrażeń
+    warunkowych.
+  tutorial_woncollect_longdescription: 'Korzystaj z aplikacji Blockly "Cudowny warsztat"
+    [Wonder Workshop Blockly] i robota Dasha, aby podjąć 3 wyzwania w zakresie kodowania!
+    W tej serii wyzwań będziesz pomagał Dashowi zbierać różne przedmioty takie jak
+    muszelki czy cukierki. Ze zapomnij zapewniać odrobiny miejsca na podłodze, aby
+    Twój robot miał się gdzie poruszać. Ta seria stanowi część 1 zajęć "Godzina kodowania
+    - karta wyzwań Dasha i Dot" [Hour of Code Dash and Dot Challenge Card]. '
   tutorial_wonsecret_longdescription: Użyjmy aplikacji "Wonder Workshop Cue" z robotem
     Cue, aby stworzyć system tajnych wiadomości. Te zajęcia są polecane dla uczniów
     posiadających doświadczenie w zakresie kodowania w JavaScript.
-  tutorial_hsscience_longdescription: Imagine if your students could easily make their
-    own computer models of natural phenomena! This hour-long lesson plan uses the
-    water cycle as an example for building an interactive computer model using an
-    iPad-based kid's programming tool called Hopscotch. You can adapt it to simulate
-    any dynamic system being studied. No prior experience required!
-  tutorial_popculture_longdescription: This activity gives beginners an accessible
-    introduction to crowd-sourcing data, visualization, and data analysis using interactive
-    tools. The aim is to demonstrate that anybody can contribute to data science projects
-    and that computer science can be connected to a wide variety of topics (even trends
-    in popular culture) making it relevant to a variety of people. In this activity,
-    students practice asking their own questions about popular culture and seeking
-    answers to those questions using computational tools.
-  tutorial_legorobust_longdescription: Investigating what characteristics of a building
-    would help make it resistant to an earthquake, using an earthquake simulator constructed
-    from LEGO bricks. Students will explore the origin and nature of earthquakes.
-    Create and program a device that will allow you to test building designs. Document
-    evidence and present your findings about which structure design(s) are best for
-    withstanding earthquakes.
-  tutorial_legoplants_longdescription: Model the relationship between a pollinator
-    and flower during the reproduction phase using a LEGO representation. Students
-    will explore how different organisms take an active role in plant reproduction.
-    Create and program a model of a bee and flower to mimic the relationship between
-    the pollinator and the plant. Present and document the different models you have
-    created of plants and their pollinators.
-  tutorial_legopark_longdescription: Design cars that can park themselves safely without
-    driver intervention. Students will understand that algorithms are capable of carrying
-    out a series of instructions in order. Explore the concept of Outputs by comparing
-    different ways in which a wheeled robot can move.
+  tutorial_hsscience_longdescription: Wyobraź sobie, co by było, gdyby Twoi uczniowie
+    byli w stanie łatwo tworzyć swoje własne modele komputerowe zjawisk w przyrodzie!
+    Ten plan godzinnej lekcji korzysta z cyklu obiegu wody jako przykładu zbudowania
+    interaktywnego modelu komputerowego z użyciem narzędzia programowania dzieci opartego
+    na iPadzie o nazwie "Gra w klasy" [Hopscotch]. Można go dostosować do symulacji
+    dowolnego dynamicznego systemu stanowiącego przedmiot badań. Nie jest potrzebne
+    wcześniejsze doświadczenie!
+  tutorial_popculture_longdescription: Te zajęcia stanowią przystępne dla osób początkujących
+    wprowadzenie do zagadnień crowd-sourcingu danych, wizualizacji oraz analizy danych
+    przy użyciu narzędzi interaktywnych. Celem jest wykazanie, że każdy może wnosić
+    wkład w projekty naukowe dotyczące danych oraz że informatyka może być powiązana
+    z szeregiem tematów (nawet trendami w popkulturze), co czyni ją ważną dla wielu
+    osób. Na tych zajęciach uczniowie będą ćwiczyć zadawanie własnych pytań na temat
+    popkultury oraz poszukiwać odpowiedzi na te pytania korzystając z narzędzi informatycznych.
+  tutorial_legorobust_longdescription: 'Badanie jakie cechy budynku sprawią, że będzie
+    on odporny na oddziaływanie trzęsienia ziemi, używając symulatora trzęsień ziemi
+    skonstruowanego z klocków LEGO. Uczniowie będą badać pochodzenie i charakter trzęsień
+    ziemi. Utwórz i zaprogramuj urządzenie, które pozwoli Ci testować konstrukcje
+    budowlane. Udokumentuj dowody i przedstaw swoje wnioski na temat tego, która konstrukcja
+    jest/ które konstrukcje są w stanie najlepiej przetrwać trzęsienia ziemi. '
+  tutorial_legoplants_longdescription: Kształtuj relację pomiędzy zapylaczem a kwiatem
+    na etapie reprodukcji z użyciem przestawienia w postaci konstrukcji LEGO. Uczniowie
+    będą badać, jak różne organizmy przyjmują aktywną rolę w reprodukcji roślin. Utwórz
+    i zaprogramuj model pszczoły i kwiatu celem odtworzenia relacji pomiędzy zapylaczem
+    a rośliną. Przedstaw i udokumentuj różne modele kwiatów i zapylaczy, które utworzyłeś.
+  tutorial_legopark_longdescription: Zaprogramuj samochody umiejące samodzielnie parkować,
+    w sposób bezpieczny, bez interwencji kierowcy. Uczniowie zrozumieją, że algorytmy
+    są zdolne do wykonania szeregu poleceń po kolei. Zgłębiaj pojęcie wyników porównując
+    różne sposoby, w jakie robot na kółkach jest w stanie się poruszać.
   tutorial_legodetect_longdescription: Projektuj jak unikać wypadków, do których dochodzi
     pomiędzy pojazdami a obiektami na drodze.
-  tutorial_legolight_longdescription: Design car features that will improve nighttime
-    driving safety. Students will explore the concept of inputs and the way to control
-    them.
-  tutorial_alexa_longdescription: Alexa is the voice service that powers Amazon Echo.
-    Alexa provides capabilities, called "skills", which enable customers to interact
-    with devices using voice. In this tutorial, you will build a web service to handle
-    notifications from Alexa. You will create fact skills unique to your school for
-    this lab. By the end of this lab, you will be able to create an Alexa Fact skill
-    in the Amazon Developer Portal, create and configure an interaction model for
-    the Alexa skill, and test the skill using Developer tools and optionally an Alexa
-    device or simulator.
-  tutorial_grokpetmicro_longdescription: This activity is designed to introduce you
-    to embedded programming, and has been specially designed for the Hour of Code.
-    Use the MicroPython programming language to make a pet that you can feed and play
-    with. Don't have a BBC micro:bit? No problem! This course includes a full micro:bit
-    simulator, so you'll be able to do everything you'd do on a real micro:bit!
-  tutorial_pirateplunder_longdescription: Pirate Plunder takes place in an engaging
-    3D environment in which students help our pirate captain to reach his treasure
-    by dragging and dropping visual blocks to write code. Students climb, fight, collect,
-    and walk their way through challenges of increasing complexity while learning
-    to create efficient code with loops and write intelligent behaviour with conditions.
-    This actvitiy is targeted to kids aged 7+ and first-time-coders. On top of that,
-    anyone with a smartphone and a mobile VR headset will be able to explore their
-    solved tasks in VR.
-  tutorial_cadj_longdescription: Join Cody and Ava as they learn about Data Representation
-    using a fun and interactive DJ Device. Discover how your name can be represented
-    using numbers, images and sound while creating your very own colorful musical
-    melody!
-  tutorial_cacrazy_longdescription: Join Alex and Lonnie as they learn about coding
-    by creating fun, interactive pictures. Learn about sequence, loops, events, and
-    actions as you create crazy creatures in this exciting adventure!
-  tutorial_cajump_longdescription: Join Charlie and Tilley as they design a sport-themed
-    platformer game for Lucy's birthday.
-  tutorial_carest_longdescription: Join Ross at the Food Avengers restaurant. Use
-    your computational thinking skills to help Ross solve problems and serve dinner
-    to 8 excited kids.
+  tutorial_legolight_longdescription: Zaprojektuj cechy samochodu, które zwiększą
+    bezpieczeństwo prowadzenia w nocy. Uczniowie będą zgłębiać pojęcie danych wejściowych
+    oraz sposobu sterowania nimi.
+  tutorial_alexa_longdescription: Alexa jest serwisem głosowym, który obsługuje Amazon
+    Echo. Alexa zapewnia możliwości zwane "umiejętnościami", które pozwalają klientom
+    na wchodzenie w interakcje z urządzeniami przy użyciu głosu. W ramach tego samouczka
+    będziesz budować serwis internetowy, aby obsłużyć powiadomienia od Alexy. Będziesz
+    tworzyć umiejętności wykorzystywania faktów unikalnych dla Twojej szkoły na potrzeby
+    tego laboratorium. Na koniec tego laboratorium będziesz w stanie tworzyć umiejętność
+    "Faktu Alexy" w "Portalu twórcy Amazona" [Amazon Developer Portal], tworzyć konfiguracje
+    modelu interakcji na potrzeby umiejętności Alexy oraz testować umiejętność przy
+    użyciu narzędzi twórcy, a opcjonalnie urządzenia lub symulatora Alexy.
+  tutorial_grokpetmicro_longdescription: Te zajęcia są przeznaczone do wprowadzania
+    Cię do wbudowanego programowania i zostały one zaprogramowane specjalnie dla "Godziny
+    kodowania". Użyj języka programowania MicroPythonbit, aby stworzyć zwierzątko,
+    które możesz karmić i z którym możesz się bawić. Nie ma micro:bitu BBC? Nie ma
+    problemu! Ten kurs uwzględnia pełny symulator micro:bit tak, abyś mógł być w stanie
+    zrobić wszystko, co zrobiłbyś na prawdziwym micro:bicie!
+  tutorial_pirateplunder_longdescription: '"Napad rabunkowy piratów" [Pirate Plunder]
+    ma miejsce we wciągającym środowisku 3D, w którym uczniowie pomagają kapitanowi
+    naszych piratów dojść do skarbu poprzez przeciąganie i opuszczanie bloków wizualnych,
+    aby pisać kod. Uczniowie wspinają się, walczą, zbierają i torują sobie drogę pośród
+    wyzwań o coraz większej złożoności, aby uczyć się tworzyć skuteczny kod zawierający
+    pętle oraz zapisywać inteligentne zachowanie przy pomocy wyrażeń warunkowych.
+    Te zajęcia są przeznaczone dla dzieci, które ukończyły 7 lat oraz osób kodujących
+    po raz pierwszy w życiu. Poza tym każdy, kto dysponuje smartfonem oraz mobilnymi
+    słuchawkami rzeczywistości wirtualnej (VR) będzie w stanie zgłębiać ich zadania
+    rozwiązane w rzeczywistości wirtualnej (VR).'
+  tutorial_cadj_longdescription: 'Dołącz do Cody''ego i Avy w czasie, gdy uczą się
+    o przedstawianiu danych, używając rozrywkowego i interaktywnego urządzenia DJ.
+    Odkryj sposób, w jaki Twoje imię może być przedstawione z użyciem liczb, obrazów
+    i dźwięku w trakcie tworzenia Twojej własnej, barwnej i dźwięcznej melodii! '
+  tutorial_cacrazy_longdescription: Dołącz do Alex i Lonnie w czasie, gdy uczą się
+    o kodowaniu tworząc wesołe, interaktywne obrazki. Ucz się o sekwencjach, pętlach,
+    zdarzeniach i działaniach w trakcie tworzenia szalonych stworzeń w ramach tej
+    ekscytującej przygody!
+  tutorial_cajump_longdescription: Dołącz do Charliego i Tilley, gdy projektują grę-platformówkę
+    o tematyce sportowej na urodziny Lucy.
+  tutorial_carest_longdescription: Dołącz do Rossa w restauracji Food Avengers. Użyj
+    swoich umiejętności myślenia informatycznego, aby pomóc Rossowi w rozwiązaniu
+    problemów i podaniu kolacji dla 8 rozentuzjazmowanych dzieci.
   tutorial_accai_longdescription: Robot zostaje wysłany na nieznaną planetę, aby dowiedzieć
     się, czy ludzkość mogłaby założyć nową osadę. Bada planetę, aby znaleźć schronienie,
     odkrywa i współdziała z miejscową ludnością. Jako gracz, poznasz różne techniki
     sztucznej inteligencji, aby nauczyć robota rozpoznawania zwierząt i roślin, rozumienia
     nowego języka, rozmawiania z mieszkańcami itp.
-  tutorial_vceclipse_longdescription: 2017 gave us one of the most spectacular natural
-    phenomena of our lives, and now we're going to simulate the solar eclipse with
-    JavaScript! Looking at the eclipse as a system of moving parts, we can decompose
-    the problem into bite-sized chunks, using objects with methods, loops, and conditionals
-    to make an interactive app that models our observations.
-  tutorial_pmzero_longdescription: In one hour you create a simple version of a Pac-Man
-    game. You draw the characters in 2D and turn them into 3D. You create your own
-    maze. Then you program the game using AgentCubes. With only 11 IF/THEN rules you
-    create sophisticated AI. Even with just two smart ghosts you will have your hands
-    full to win the game.
-  tutorial_hsela_longdescription: Students will practice identifying narrative elements
-    while bringing their favorite story, poem or historical event to life. Learning
-    to code gives students another format and media for expressing their creativity
-    and communicating with others. Show them how to program their own interactive
-    stories, and wait for the smiles. 1-hour lesson plan, no prior coding experience
-    required.
-  tutorial_ticklear_longdescription: You will learn the basic concept of AR (Augmented
-    Reality), its current applications and its possibilities in the future and the
-    basic concepts of programming using motion blocks and event blocks under an AR/3D
-    environment.
+  tutorial_vceclipse_longdescription: Rok 2017 przyniósł nam jedno z najbardziej spektakularnych
+    zjawisk przyrodniczych naszego życia i teraz my zamierzamy przeprowadzić symulację
+    zaćmienia słońca w języku JavaScript! Patrząc na zaćmienie jako na system ruchomych
+    elementów, dokonujemy rozbioru problemu na części w rozmiarze bajta, posługując
+    się obiektami, z użyciem metod, pętli i wyrażeń warunkowych, aby stworzyć interaktywną
+    aplikację, która tworzy model naszych obserwacji.
+  tutorial_pmzero_longdescription: 'W czasie jednej godziny utworzymy prostą wersje
+    gry Pac-Man. Narysujesz postaci w 2D i zamienisz je na 3D. Utworzysz swój własny
+    labirynt. Potem zaprogramujesz grę z użyciem AgentCubes. Przy pomocy tylko 11
+    zasad "JEŚLI/ TO" tworzysz wyszukaną sztuczną inteligencję. Nawet mając tylko
+    dwa inteligentne duchy będziesz miał wszystko, czego potrzeba, do wygrania gry. '
+  tutorial_hsela_longdescription: 'Uczniowie będą ćwiczyć identyfikowanie elementów
+    narracyjnych, przywołując swoją ulubioną historię, wiersz lub wydarzenie historyczne.
+    Uczenie kodowania zapewnia uczniom inny format i inne media do wyrażania swojej
+    kreatywności i komunikowania się z ludźmi. Pokaż im, jak się programuje własne
+    interaktywne historie i czekaj na uśmiechy. Plan lekcji godzinnej, nie wymaga
+    się wcześniejszego doświadczenia w zakresie kodowania. '
+  tutorial_ticklear_longdescription: Będziesz poznawać podstawowe pojęcie rzeczywistości
+    rozszerzonej [AR - Augmented Reality], jej bieżących zastosowań oraz możliwości
+    w przyszłości oraz podstawowych pojęć programowania z użyciem bloków ruchu oraz
+    bloków zdarzeń w środowisku AR/3D.
   tutorial_bcrobot_longdescription: Używając BlocksCAD, bezpłatnego oprogramowania
     online przeznaczonego do nauczania uczniów kodowania oraz projektowania wspomaganego
     komputerowo [Computer Aided Design], uczniowie będą projektować robota 3D. Używając
@@ -4780,84 +4851,89 @@ pl:
     3D. Używając kształtów, tłumaczenia i obracania bloków uczniowie będą się konfrontować
     z myśleniem informatycznym do wybudowania czegoś, co mogą wydrukować w 3D!
   tutorial_ifly_longdescription: Te zajęcia lekcyjne prowadzone przez nauczyciela,
-    dostosowane do  "Godziny kodowania" dają możliwość zgłębiania układy fizyczne
+    dostosowane do  "Godziny kodowania" dają możliwość zgłębiania układów fizycznych
     poprzez robotykę. Używając środowiska programowania przeciągnij i opuść oraz dronów
     uczniowie uczą się, że układy fizyczne mogą być programowane i sterowane przez
-    algorytmy i kod.  Uwzględnia się plan zajęć krok-po-kroku, powiązanych zasobów
-    dla nauczyciela i ucznia i pomysłów na rozbudowę i wzbogacenie poprzez dalszą
-    naukę.
+    algorytmy i kod.  Uwzględnia się plan zajęć krok-po-kroku, powiązane zasoby dla
+    nauczyciela i ucznia i pomysły na rozbudowę i wzbogacenie poprzez dalszą naukę.
   tutorial_idowedo_longdescription: Te zajęcia lekcyjne prowadzone przez nauczyciela,
     dostosowane do  "Godziny kodowania" dają możliwość zgłębiania programowania urządzeń
     (robotyka). Dzieci projektują i budują modele z użyciem cegieł konstrukcyjnych
     i przywrócenia ich do życia przy pomocy kodu! Używając środowiska wizualnego programowania
     przeciągnij i opuść i części LEGO™ WeDo (silnik i węzeł oraz opcjonalne czujniki)  uczniowie
     uczą się, że układy fizyczne mogą być programowane i sterowane przez algorytmy
-    i kod.  Uwzględnia się plan zajęć krok-po-kroku, powiązanych zasobów dla nauczyciela
-    i ucznia i pomysłów na rozbudowę i wzbogacenie poprzez dalszą naukę.
+    i kod.  Uwzględnia się plan zajęć krok-po-kroku, powiązane zasoby dla nauczyciela
+    i ucznia i pomysły na rozbudowę i wzbogacenie poprzez dalszą naukę.
   tutorial_diggindwarf_longdescription: Krasnoludki potrzebują Twojej pomocy w nawigacji,
     kopaniu i zbieraniu skarbów! Dowiedz się, jak używać języka JavaScript, aby przeprowadzić
     krasnoludka przez labirynty i łamigłówki.
-  tutorial_rmedr_longdescription: Using Blockly in Robot Mesh Studio, program a VEX
-    EDR robot "mimic" online and watch it run through a maze. Students learn about
-    basic robot movement, and how to incorporate three sensors and one output into
-    their programming.
-  tutorial_spheroit_longdescription: Learn your first "if/then, else" condition by
-    building a fun game where you will be throwing Sphero and guessing animal sounds.
-    This is a great activity after you complete Blocks 1, and can be used for the
-    "Hour of Code."
-  tutorial_gameofcodes_longdescription: Build an awesome Dragon game to defend the
-    wall, then export it as a standalone app (for iOS, Android, PC, and Mac).
-  tutorial_blocklygames_longdescription: Blockly Games is a series of educational
-    games that teach programming. It is designed for children who have not had prior
-    experience with computer programming but who wish to learn at a more challenging
-    pace. By the end of these games, players are ready to use conventional text-based
-    languages.
-  tutorial_spherohello_longdescription: Have you conquered Blocks and need a new challenge?
-    Take the logic you have learned with block-based programming and begin to learn
-    how to program with just text. In this first Text activity learn the basics of
-    the text canvas, loops, and some tips to get started with your first lines of
-    JavaScript code.
-  tutorial_spheroarcade_longdescription: In this arcade-style playground, you can
-    recreate classic games with a Sphero SPRK+ robot while learning the basics of
-    game design. You'll build your very own robotic renditions of some famous games
-    like Pong, Bop It, and Pac-Man. Each game uses Sphero in a different way such
-    as rolling on the floor, detecting gestures, or using Sphero as a joystick.
-  tutorial_bcpy1_longdescription: 'This Hour of Code lesson teaches you some basic
-    concepts of coding in Python, based on the CodeCraft 3D game by BuzzCoder.com.
-    CodeCraft is a new game to learn programming by building whatever you imagine
-    in a virtual 3D world. You can start from building simple blocks, columns, and
-    walls, then large buildings, bridges, and even trees. When you are ready to delve
-    into more advanced levels, you will be able to build more complex structures:
-    growing flowers, flickering stars, and even invisible drones to move around and
-    build or destroy things at your command. You''ll have fun learning how to code
-    while playing this game!'
-  tutorial_bcpy2_longdescription: 'This Hour of Code lesson is a follow-up course
-    to World of Python. You''ll learn more advanced coding concepts in Python based
-    on the CodeCraft 3D game by BuzzCoder.com. CodeCraft is a new game to learn programming
-    by building whatever you imagine in a virtual 3D world. You can start from building
-    simple blocks, columns, and walls, then large buildings, bridges, and even trees.
-    When you are ready to delve into more advanced levels, you will be able to build
-    more complex structures: growing flowers, flickering stars, and even invisible
-    drones to move around and build or destroy things at your command. You''ll have
-    fun learning how to code while playing this game!'
-  tutorial_bcjs1_longdescription: 'This Hour of Code lesson teaches you some basic
-    concepts of coding in JavaScript, based on the CodeCraft 3D game by BuzzCoder.com.
-    CodeCraft is a new game to learn programming by building whatever you imagine
-    in a virtual 3D world. You can start from building simple blocks, columns, and
-    walls, then large buildings, bridges, and even trees. When you are ready to delve
-    into more advanced levels, you will be able to build more complex structures:
-    growing flowers, flickering stars, and even invisible drones to move around and
-    build or destroy things at your command. You''ll have fun learning how to code
-    while playing this game!'
-  tutorial_bcjs2_longdescription: 'This Hour of Code lesson is a follow-up course
-    to World of JavaScript. You''ll learn more advanced coding concepts in JavaScript
-    based on the CodeCraft 3D game by BuzzCoder.com. CodeCraft is a new game to learn
-    programming by building whatever you imagine in a virtual 3D world. You can start
-    from building simple blocks, columns, and walls, then large buildings, bridges,
-    and even trees. When you are ready to delve into more advanced levels, you will
-    be able to build more complex structures: growing flowers, flickering stars, and
-    even invisible drones to move around and build or destroy things at your command.
-    You''ll have fun learning how to code while playing this game!'
+  tutorial_rmedr_longdescription: Używając Blockly w "Studio siatki robotów" [Robot
+    Mesh Studio], zaprogramuj, aby robot VEX EDR "naśladował" online i obserwuj, jak
+    przechodzi przez labirynt. Uczniowie uczą się o podstawowych ruchach robota oraz
+    jak włączyć trzy czujniki i jeden wynik w zakres ich programowania.
+  tutorial_spheroit_longdescription: Naucz się swojego pierwszego wyrażenia warunkowego
+    "jeśli/ to, w przeciwnym razie" budując rozrywkową grę tam, gdzie będziesz wrzucać
+    Sphero i odgadywać dźwięki zwierząt. To są wspaniałe zajęcia po przerobieniu Tekstu
+    1 i można ich używać do "Godziny kodowania".
+  tutorial_gameofcodes_longdescription: Zbuduj swoją wspaniałą grę Dragon i broń ściany,
+    a następnie eksportuj ją jako niezależną aplikację (na system iOS, Android, PC
+    i Mac).
+  tutorial_blocklygames_longdescription: '"Gry Blockly" [Blockly Games] jest serią
+    gier edukacyjnych, które uczą programowania. Jest ona przeznaczona dla dzieci,
+    które nie miały uprzedniego doświadczenia w zakresie programowania komputerowego,
+    ale które chcą uczyć się w bardziej wymagającym tempie. Pod koniec tych gier gracze
+    będą gotowi do używania konwencjonalnych języków tekstowych. '
+  tutorial_spherohello_longdescription: Czy opanowałeś już bloki i potrzebujesz nowego
+    wyzwania? Skorzystaj z logiki, której się nauczyłeś w ramach programowania blokowego,
+    aby rozpocząć uczyć się programowania przy pomocy samego tekstu. Na tych pierwszych
+    zajęciach tekstowych poznaj podstawy w postaci kanwy tekstu, pętli oraz niektóre
+    wskazówki, aby zacząć od swoich pierwszych wierszy kodu JavaScript.
+  tutorial_spheroarcade_longdescription: Na tym placu zabaw w stylu arkady możesz
+    odtwarzać klasyczne gry przy pomocy robota Sphero SPRK+ ucząc się podstaw projektowania
+    gier. Będziesz budować swoje własne interpretacje robotyczne niektórych znanych
+    gier takich jak  Pong, Bop It i Pac-Man. W każdej grze używa się Sphero w inny
+    sposób taki jak turlanie się po podłodze, wykrywanie gestów oraz używanie Sphero
+    jako joysticka.
+  tutorial_bcpy1_longdescription: 'Ta "Godzina kodowania" uczy Cię pewnych podstawowych
+    pojęć kodowania w języku Python, na podstawie gry  CodeCraft 3D wyprodukowanej
+    przez BuzzCoder.com. CodeCraft jest nową grą do nauki programowania poprzez budowanie
+    tego, co sobie wyobrazisz w wirtualnym świecie 3D. Możesz rozpocząć od budowania
+    prostych bloków, kolumn i ścian, a następnie wielkich budowli, mostów, a nawet
+    drzew. Gdy będziesz gotów na skok na zaawansowane poziomy, będziesz mógł budować
+    bardziej złożone konstrukcje:  rosnące kwiaty, migoczące gwiazdy, a nawet niewidzialne
+    drony, aby przemieszczać się i budować lub niszczyć rzeczy na Twoją komendę. Będziesz
+    się dobrze bawić ucząc się kodowania w trakcie rozgrywania tej gry!'
+  tutorial_bcpy2_longdescription: 'Ta lekcja w ramach "Godziny kodowania" stanowi
+    ciąg dalszy kursu "Świat Pythona" [World of Python]. Będziesz się uczyć bardziej
+    zaawansowanych pojęć kodowania w języku Python, na podstawie gry  CodeCraft 3D
+    wyprodukowanej przez BuzzCoder.com. CodeCraft jest nową grą do nauki programowania
+    poprzez budowanie tego, co sobie wyobrazisz w wirtualnym świecie 3D. Możesz rozpocząć
+    od budowania prostych bloków, kolumn i ścian, a następnie wielkich budowli, mostów,
+    a nawet drzew. Gdy będziesz gotów na skok na zaawansowane poziomy, będziesz mógł
+    budować bardziej złożone konstrukcje:  rosnące kwiaty, migoczące gwiazdy, a nawet
+    niewidzialne drony, aby przemieszczać się i budować lub niszczyć rzeczy na Twoją
+    komendę. Będziesz się dobrze bawić ucząc się kodowania w trakcie rozgrywania tej
+    gry!'
+  tutorial_bcjs1_longdescription: 'Ta "Godzina kodowania" uczy Cię pewnych podstawowych
+    pojęć kodowania w języku JavaScript, na podstawie gry  CodeCraft 3D wyprodukowanej
+    przez BuzzCoder.com. CodeCraft jest nową grą do nauki programowania poprzez budowanie
+    tego, co sobie wyobrazisz w wirtualnym świecie 3D. Możesz rozpocząć od budowania
+    prostych bloków, kolumn i ścian, a następnie wielkich budowli, mostów, a nawet
+    drzew. Gdy będziesz gotów na skok na zaawansowane poziomy, będziesz mógł budować
+    bardziej złożone konstrukcje:  rosnące kwiaty, migoczące gwiazdy, a nawet niewidzialne
+    drony, aby przemieszczać się i budować lub niszczyć rzeczy na Twoją komendę. Będziesz
+    się dobrze bawić ucząc się kodowania w trakcie rozgrywania tej gry!'
+  tutorial_bcjs2_longdescription: 'Ta lekcja w ramach "Godziny kodowania" stanowi
+    ciąg dalszy kursu "Świat JavaScript" [World of JavaScript]. Będziesz się uczyć
+    bardziej zaawansowanych pojęć kodowania w języku JavaScript, na podstawie gry  CodeCraft
+    3D wyprodukowanej przez BuzzCoder.com. CodeCraft jest nową grą do nauki programowania
+    poprzez budowanie tego, co sobie wyobrazisz w wirtualnym świecie 3D. Możesz rozpocząć
+    od budowania prostych bloków, kolumn i ścian, a następnie wielkich budowli, mostów,
+    a nawet drzew. Gdy będziesz gotów na skok na zaawansowane poziomy, będziesz mógł
+    budować bardziej złożone konstrukcje:  rosnące kwiaty, migoczące gwiazdy, a nawet
+    niewidzialne drony, aby przemieszczać się i budować lub niszczyć rzeczy na Twoją
+    komendę. Będziesz się dobrze bawić ucząc się kodowania w trakcie rozgrywania tej
+    gry!'
   tutorial_3dbearmars_longdescription: Mars Pioneers jest modułem dydaktycznym opartym
     na projekcie, w ramach którego naucza się faktów o Marsie i kluczowych warunkach
     umożliwiających tam przeżycie człowieka. Uczniowie będą budować kolonię korzystając
@@ -4882,10 +4958,10 @@ pl:
     zegara, który można ustawiać tak, aby pokazywał dowolny czas.
   tutorial_blockscaddinner_longdescription: Uczniowie napiszą program używając zmiennych
     i współrzędnych, aby pomóc robotowi nakryć dla nich stół.
-  tutorial_blockscadicecream_longdescription: Students will program an ice cream machine
-    to create 3D ice cream cones with different numbers and sizes of ice cream scoops.
-    They will work with variables, modules, and functions to calculate the cost of
-    a particular ice cream cone based on the area of the spherical ice cream scoops.
+  tutorial_blockscadicecream_longdescription: 'Uczniowie programują maszynę do produkcji
+    lodów, aby móc robić lody 3D w rożku o różnych liczbach i rozmiarach gałek.  Będą
+    pracować korzystając ze zmiennych, modułów i funkcji do wyliczenia kosztu konkretnych
+    lodów w rożku na podstawie powierzchni kulistych gałek. '
   tutorial_blockscadpizza_longdescription: Uczniowie zaprogramują moduł do tworzenia
     pizzy 3S, obliczając obwody i obszary oraz używając po drodze pętli.
   tutorial_blockscadsugar_longdescription: Uczniowie będą używać zaprogramowanego
@@ -4893,121 +4969,138 @@ pl:
   tutorial_bsgridlight_longdescription: Wybierz przyjaciela Bota, aby pomóc w przygotowaniach
     do "Festiwalu w latarni morskiej". Zakoduj swojego Boa, aby zatrzymać te nieznośne
     rumiane boty i uratować dzień!
-  tutorial_bpartscratch_longdescription: Creative Coding - developed with Scratch
-    and Vidcode - pairs block- and text-based projects with hundreds of cross-curricular
-    topics. Projects are scaffolded so that teachers of any subject - regardless of
-    prior experience - can easily introduce coding. The project-based approach positions
-    coding as a means of self-expression for students and gives them a creative way
-    to show what they know.
-  tutorial_bpartvid_longdescription: Creative Coding - developed with Scratch and
-    Vidcode - pairs block- and text-based projects with hundreds of cross-curricular
-    topics. Projects are scaffolded so that teachers of any subject - regardless of
-    prior experience - can easily introduce coding. The project-based approach positions
-    coding as a means of self-expression for students and gives them a creative way
-    to show what they know.
-  tutorial_bpenglishscratch_longdescription: Creative Coding - developed with Scratch
-    and Vidcode - pairs block- and text-based projects with hundreds of cross-curricular
-    topics. Projects are scaffolded so that teachers of any subject - regardless of
-    prior experience - can easily introduce coding. The project-based approach positions
-    coding as a means of self-expression for students and gives them a creative way
-    to show what they know.
-  tutorial_bpenglishvid_longdescription: Creative Coding - developed with Scratch
-    and Vidcode - pairs block- and text-based projects with hundreds of cross-curricular
-    topics. Projects are scaffolded so that teachers of any subject - regardless of
-    prior experience - can easily introduce coding. The project-based approach positions
-    coding as a means of self-expression for students and gives them a creative way
-    to show what they know.
-  tutorial_bphealthscratch_longdescription: Creative Coding - developed with Scratch
-    and Vidcode - pairs block- and text-based projects with hundreds of cross-curricular
-    topics. Projects are scaffolded so that teachers of any subject - regardless of
-    prior experience - can easily introduce coding. The project-based approach positions
-    coding as a means of self-expression for students and gives them a creative way
-    to show what they know.
-  tutorial_bphealthvid_longdescription: Creative Coding - developed with Scratch and
-    Vidcode - pairs block- and text-based projects with hundreds of cross-curricular
-    topics. Projects are scaffolded so that teachers of any subject - regardless of
-    prior experience - can easily introduce coding. The project-based approach positions
-    coding as a means of self-expression for students and gives them a creative way
-    to show what they know.
-  tutorial_bpmathscratch_longdescription: Creative Coding - developed with Scratch
-    and Vidcode - pairs block- and text-based projects with hundreds of cross-curricular
-    topics. Projects are scaffolded so that teachers of any subject - regardless of
-    prior experience - can easily introduce coding. The project-based approach positions
-    coding as a means of self-expression for students and gives them a creative way
-    to show what they know.
-  tutorial_bpmathvid_longdescription: Creative Coding - developed with Scratch and
-    Vidcode - pairs block- and text-based projects with hundreds of cross-curricular
-    topics. Projects are scaffolded so that teachers of any subject - regardless of
-    prior experience - can easily introduce coding. The project-based approach positions
-    coding as a means of self-expression for students and gives them a creative way
-    to show what they know.
-  tutorial_bpmlkscratch_longdescription: Creative Coding - developed with Scratch
-    and Vidcode - pairs block- and text-based projects with hundreds of cross-curricular
-    topics. Projects are scaffolded so that teachers of any subject - regardless of
-    prior experience - can easily introduce coding. The project-based approach positions
-    coding as a means of self-expression for students and gives them a creative way
-    to show what they know.
-  tutorial_bpmlkvid_longdescription: Creative Coding - developed with Scratch and
-    Vidcode - pairs block- and text-based projects with hundreds of cross-curricular
-    topics. Projects are scaffolded so that teachers of any subject - regardless of
-    prior experience - can easily introduce coding. The project-based approach positions
-    coding as a means of self-expression for students and gives them a creative way
-    to show what they know.
-  tutorial_bpsafetyscratch_longdescription: Creative Coding - developed with Scratch
-    and Vidcode - pairs block- and text-based projects with hundreds of cross-curricular
-    topics. Projects are scaffolded so that teachers of any subject - regardless of
-    prior experience - can easily introduce coding. The project-based approach positions
-    coding as a means of self-expression for students and gives them a creative way
-    to show what they know.
-  tutorial_bpsafetyvid_longdescription: Creative Coding - developed with Scratch and
-    Vidcode - pairs block- and text-based projects with hundreds of cross-curricular
-    topics. Projects are scaffolded so that teachers of any subject - regardless of
-    prior experience - can easily introduce coding. The project-based approach positions
-    coding as a means of self-expression for students and gives them a creative way
-    to show what they know.
-  tutorial_bpsciencescratch_longdescription: Creative Coding - developed with Scratch
-    and Vidcode - pairs block- and text-based projects with hundreds of cross-curricular
-    topics. Projects are scaffolded so that teachers of any subject - regardless of
-    prior experience - can easily introduce coding. The project-based approach positions
-    coding as a means of self-expression for students and gives them a creative way
-    to show what they know.
-  tutorial_bpsciencevid_longdescription: Creative Coding - developed with Scratch
-    and Vidcode - pairs block- and text-based projects with hundreds of cross-curricular
-    topics. Projects are scaffolded so that teachers of any subject - regardless of
-    prior experience - can easily introduce coding. The project-based approach positions
-    coding as a means of self-expression for students and gives them a creative way
-    to show what they know.
-  tutorial_bptechscratch_longdescription: Creative Coding - developed with Scratch
-    and Vidcode - pairs block- and text-based projects with hundreds of cross-curricular
-    topics. Projects are scaffolded so that teachers of any subject - regardless of
-    prior experience - can easily introduce coding. The project-based approach positions
-    coding as a means of self-expression for students and gives them a creative way
-    to show what they know.
-  tutorial_bptechvid_longdescription: Creative Coding - developed with Scratch and
-    Vidcode - pairs block- and text-based projects with hundreds of cross-curricular
-    topics. Projects are scaffolded so that teachers of any subject - regardless of
-    prior experience - can easily introduce coding. The project-based approach positions
-    coding as a means of self-expression for students and gives them a creative way
-    to show what they know.
+  tutorial_bpartscratch_longdescription: '"Kreatywne kodowanie" [Creative Coding]
+    - opracowane przy pomocy systemu Scratch i Vidcode - bloków sparowanych oraz projektów,
+    których podstawę stanowi tekst o setkach międzyplanowych tematów. Projekty są
+    wspomagane tak, aby nauczyciele wykładający dowolny temat - bez względu na wcześniejsze
+    doświadczenie - mogą łatwo wprowadzić kodowanie. Podejście projektowe plasuje
+    kodowanie w gronie środków autowyrazu dla uczniów i podaje im kreatywny sposób,
+    aby mogli się wykazać swoją wiedzą. '
+  tutorial_bpartvid_longdescription: '"Kreatywne kodowanie" [Creative Coding] - opracowane
+    przy pomocy systemu Scratch i Vidcode - bloków sparowanych oraz projektów, których
+    podstawę stanowi tekst o setkach międzyplanowych tematów. Projekty są wspomagane
+    tak, aby nauczyciele wykładający dowolny temat - bez względu na wcześniejsze doświadczenie
+    - mogą łatwo wprowadzić kodowanie. Podejście projektowe plasuje kodowanie w gronie
+    środków autowyrazu dla uczniów i podaje im kreatywny sposób, aby mogli się wykazać
+    swoją wiedzą. '
+  tutorial_bpenglishscratch_longdescription: '"Kreatywne kodowanie" [Creative Coding]
+    - opracowane przy pomocy systemu Scratch i Vidcode - bloków sparowanych oraz projektów,
+    których podstawę stanowi tekst o setkach międzyplanowych tematów. Projekty są
+    wspomagane tak, aby nauczyciele wykładający dowolny temat - bez względu na wcześniejsze
+    doświadczenie - mogą łatwo wprowadzić kodowanie. Podejście projektowe plasuje
+    kodowanie w gronie środków autowyrazu dla uczniów i podaje im kreatywny sposób,
+    aby mogli się wykazać swoją wiedzą. '
+  tutorial_bpenglishvid_longdescription: '"Kreatywne kodowanie" [Creative Coding]
+    - opracowane przy pomocy systemu Scratch i Vidcode - bloków sparowanych oraz projektów,
+    których podstawę stanowi tekst o setkach międzyplanowych tematów. Projekty są
+    wspomagane tak, aby nauczyciele wykładający dowolny temat - bez względu na wcześniejsze
+    doświadczenie - mogą łatwo wprowadzić kodowanie. Podejście projektowe plasuje
+    kodowanie w gronie środków autowyrazu dla uczniów i podaje im kreatywny sposób,
+    aby mogli się wykazać swoją wiedzą. '
+  tutorial_bphealthscratch_longdescription: '"Kreatywne kodowanie" [Creative Coding]
+    - opracowane przy pomocy systemu Scratch i Vidcode - bloków sparowanych oraz projektów,
+    których podstawę stanowi tekst o setkach międzyplanowych tematów. Projekty są
+    wspomagane tak, aby nauczyciele wykładający dowolny temat - bez względu na wcześniejsze
+    doświadczenie - mogą łatwo wprowadzić kodowanie. Podejście projektowe plasuje
+    kodowanie w gronie środków autowyrazu dla uczniów i podaje im kreatywny sposób,
+    aby mogli się wykazać swoją wiedzą. '
+  tutorial_bphealthvid_longdescription: '"Kreatywne kodowanie" [Creative Coding] -
+    opracowane przy pomocy systemu Scratch i Vidcode - bloków sparowanych oraz projektów,
+    których podstawę stanowi tekst o setkach międzyplanowych tematów. Projekty są
+    wspomagane tak, aby nauczyciele wykładający dowolny temat - bez względu na wcześniejsze
+    doświadczenie - mogą łatwo wprowadzić kodowanie. Podejście projektowe plasuje
+    kodowanie w gronie środków autowyrazu dla uczniów i podaje im kreatywny sposób,
+    aby mogli się wykazać swoją wiedzą. '
+  tutorial_bpmathscratch_longdescription: '"Kreatywne kodowanie" [Creative Coding]
+    - opracowane przy pomocy systemu Scratch i Vidcode - bloków sparowanych oraz projektów,
+    których podstawę stanowi tekst o setkach międzyplanowych tematów. Projekty są
+    wspomagane tak, aby nauczyciele wykładający dowolny temat - bez względu na wcześniejsze
+    doświadczenie - mogą łatwo wprowadzić kodowanie. Podejście projektowe plasuje
+    kodowanie w gronie środków autowyrazu dla uczniów i podaje im kreatywny sposób,
+    aby mogli się wykazać swoją wiedzą. '
+  tutorial_bpmathvid_longdescription: '"Kreatywne kodowanie" [Creative Coding] - opracowane
+    przy pomocy systemu Scratch i Vidcode - bloków sparowanych oraz projektów, których
+    podstawę stanowi tekst o setkach międzyplanowych tematów. Projekty są wspomagane
+    tak, aby nauczyciele wykładający dowolny temat - bez względu na wcześniejsze doświadczenie
+    - mogą łatwo wprowadzić kodowanie. Podejście projektowe plasuje kodowanie w gronie
+    środków autowyrazu dla uczniów i podaje im kreatywny sposób, aby mogli się wykazać
+    swoją wiedzą. '
+  tutorial_bpmlkscratch_longdescription: '"Kreatywne kodowanie" [Creative Coding]
+    - opracowane przy pomocy systemu Scratch i Vidcode - bloków sparowanych oraz projektów,
+    których podstawę stanowi tekst o setkach międzyplanowych tematów. Projekty są
+    wspomagane tak, aby nauczyciele wykładający dowolny temat - bez względu na wcześniejsze
+    doświadczenie - mogą łatwo wprowadzić kodowanie. Podejście projektowe plasuje
+    kodowanie w gronie środków autowyrazu dla uczniów i podaje im kreatywny sposób,
+    aby mogli się wykazać swoją wiedzą. '
+  tutorial_bpmlkvid_longdescription: '"Kreatywne kodowanie" [Creative Coding] - opracowane
+    przy pomocy systemu Scratch i Vidcode - bloków sparowanych oraz projektów, których
+    podstawę stanowi tekst o setkach międzyplanowych tematów. Projekty są wspomagane
+    tak, aby nauczyciele wykładający dowolny temat - bez względu na wcześniejsze doświadczenie
+    - mogą łatwo wprowadzić kodowanie. Podejście projektowe plasuje kodowanie w gronie
+    środków autowyrazu dla uczniów i podaje im kreatywny sposób, aby mogli się wykazać
+    swoją wiedzą. '
+  tutorial_bpsafetyscratch_longdescription: '"Kreatywne kodowanie" [Creative Coding]
+    - opracowane przy pomocy systemu Scratch i Vidcode - bloków sparowanych oraz projektów,
+    których podstawę stanowi tekst o setkach międzyplanowych tematów. Projekty są
+    wspomagane tak, aby nauczyciele wykładający dowolny temat - bez względu na wcześniejsze
+    doświadczenie - mogą łatwo wprowadzić kodowanie. Podejście projektowe plasuje
+    kodowanie w gronie środków autowyrazu dla uczniów i podaje im kreatywny sposób,
+    aby mogli się wykazać swoją wiedzą. '
+  tutorial_bpsafetyvid_longdescription: '"Kreatywne kodowanie" [Creative Coding] -
+    opracowane przy pomocy systemu Scratch i Vidcode - bloków sparowanych oraz projektów,
+    których podstawę stanowi tekst o setkach międzyplanowych tematów. Projekty są
+    wspomagane tak, aby nauczyciele wykładający dowolny temat - bez względu na wcześniejsze
+    doświadczenie - mogą łatwo wprowadzić kodowanie. Podejście projektowe plasuje
+    kodowanie w gronie środków autowyrazu dla uczniów i podaje im kreatywny sposób,
+    aby mogli się wykazać swoją wiedzą. '
+  tutorial_bpsciencescratch_longdescription: '"Kreatywne kodowanie" [Creative Coding]
+    - opracowane przy pomocy systemu Scratch i Vidcode - bloków sparowanych oraz projektów,
+    których podstawę stanowi tekst o setkach międzyplanowych tematów. Projekty są
+    wspomagane tak, aby nauczyciele wykładający dowolny temat - bez względu na wcześniejsze
+    doświadczenie - mogą łatwo wprowadzić kodowanie. Podejście projektowe plasuje
+    kodowanie w gronie środków autowyrazu dla uczniów i podaje im kreatywny sposób,
+    aby mogli się wykazać swoją wiedzą. '
+  tutorial_bpsciencevid_longdescription: '"Kreatywne kodowanie" [Creative Coding]
+    - opracowane przy pomocy systemu Scratch i Vidcode - bloków sparowanych oraz projektów,
+    których podstawę stanowi tekst o setkach międzyplanowych tematów. Projekty są
+    wspomagane tak, aby nauczyciele wykładający dowolny temat - bez względu na wcześniejsze
+    doświadczenie - mogą łatwo wprowadzić kodowanie. Podejście projektowe plasuje
+    kodowanie w gronie środków autowyrazu dla uczniów i podaje im kreatywny sposób,
+    aby mogli się wykazać swoją wiedzą. '
+  tutorial_bptechscratch_longdescription: '"Kreatywne kodowanie" [Creative Coding]
+    - opracowane przy pomocy systemu Scratch i Vidcode - bloków sparowanych oraz projektów,
+    których podstawę stanowi tekst o setkach międzyplanowych tematów. Projekty są
+    wspomagane tak, aby nauczyciele wykładający dowolny temat - bez względu na wcześniejsze
+    doświadczenie - mogą łatwo wprowadzić kodowanie. Podejście projektowe plasuje
+    kodowanie w gronie środków autowyrazu dla uczniów i podaje im kreatywny sposób,
+    aby mogli się wykazać swoją wiedzą. '
+  tutorial_bptechvid_longdescription: '"Kreatywne kodowanie" [Creative Coding] - opracowane
+    przy pomocy systemu Scratch i Vidcode - bloków sparowanych oraz projektów, których
+    podstawę stanowi tekst o setkach międzyplanowych tematów. Projekty są wspomagane
+    tak, aby nauczyciele wykładający dowolny temat - bez względu na wcześniejsze doświadczenie
+    - mogą łatwo wprowadzić kodowanie. Podejście projektowe plasuje kodowanie w gronie
+    środków autowyrazu dla uczniów i podaje im kreatywny sposób, aby mogli się wykazać
+    swoją wiedzą. '
   tutorial_caflags_longdescription: Poznaj niektóre podstawowe koncepcje programowania
     z blockly. Rozwijaj swoje myślenie informatyczne używając prostych kształtów,
     kolorów i współrzędnych, aby narysować flagi świata. Odkryj swoją kreatywność
     w miarę zgłębiania różnych sekwencji bloków i wartości, aby budować swoje własne,
     pełne emocji flagowe dzieła.
-  tutorial_matariki_longdescription: 'Maia and Charlie are from New Zealand.  Maia''s
-    family are getting ready to celebrate Matariki: the Māori new year.  She''s invited
-    her friend Charlie to come and stay at her family''s marae (traditional meeting
-    house). There are lots of exciting problem-solving tasks and activities to do
-    for Matariki! Use your Computational Thinking skills to help Maia and Charlie
-    prepare for the celebration.'
+  tutorial_matariki_longdescription: 'Maia i Charlie są z Nowej Zelandii. Rodzina
+    Mai przygotowuje się do obchodów Matariki: maoryskiego Nowego Roku. Zaprosiła
+    kolegę Mai, Charliego, aby przyjechał i zatrzymał się w rodzinnym marae (domu
+    tradycyjnych spotkań). Wyłania się wiele rodzących emocje zadań i ćwiczeń z zakresu
+    rozwiązywania problemów wpisujących się w Matariki! Skorzystaj ze swoich umiejętności
+    myślenia informatycznego, aby pomóc Mai i Charliemu przygotować się do obchodów. '
   tutorial_carestaurant_longdescription: Charlie i Tilley postanowili, że jeśli właściwie
     zaprogramują Rossa, będzie on w stanie pomóc im malować, aby uatrakcyjnić Food
     Avengers. Upewnij się, że ich algorytmy są odpowiednio mocne - źle pokierowany
     robot z pędzlem malarskim może narobić poważnych szkód!
-  tutorial_casea_longdescription: Alex and Lonnie create fancy fish and super sea
-    creatures with blocks. Help them sort the sequences into order and debug by spotting
-    and fixing the mistakes. Customize your own ocean scene and bring your characters
-    to life by adding interactivity. Beginner coders and pre-readers welcome!
+  tutorial_casea_longdescription: Alex i Lonnie tworzą przy pomocy bloków wymyślną
+    rybę oraz świetne stworzenia morski. Pomóż ich uporządkować sekwencje i przeprowadzić
+    debugowanie wyszukując i naprawiając błędy.  Dostosuj swoją własną scenę oceaniczną
+    do potrzeb i przywróć swoje postaci do życia dodając wymiaru interaktywnego. Mile
+    widziane osoby początkujące w dziedzinie kodowania i osoby uczące się czytać!
   tutorial_cashield_longdescription: Są letnie wakacje i Alex, jej rodzina i Lonnie
     jadą na wakacje do Finlandii. Starszy brat Alexa, Reuben, tworzy nową aplikację
     na potrzeby ornamentów tarczy i pokazuje Alex i Lonniemu jak jej używać. Dołącz
@@ -5030,10 +5123,10 @@ pl:
   tutorial_codehsart_longdescription: Memy! Memy! Memy! Uczniowie badają skrzyżowania
     kodowania oraz sztukę budowania programu komputerowego, który umożliwia im tworzenie
     nowych, autorskich memów do udostępniania znajomym.
-  tutorial_codehsbitcoin_longdescription: In this Hour of Code activity, students
-    are introduced to the Bitcoin blockchain ledger and some Bitcoin statistics. Students
-    look at how a transactions works on the Bitcoin ledger and and investigate the
-    overall performance of the Bitcoin blockchain.
+  tutorial_codehsbitcoin_longdescription: W tej "Godzinie kodowania" uczniom wprowadza
+    się księgę łańcucha bloków Bitcoina oraz pewne dane statystyczne dotyczące Bitcoina.
+    Uczniowie przyglądają się, jak realizuje się transakcje w księdze Bitcoinów oraz
+    badają ogólne wyniki uzyskiwanie z łańcuchu bloków Bitcoin.
   tutorial_codehsblockchain_longdescription: Uczniowie uczą się o podstawach kryptowalut
     badając technologię kryptografii, stosowana skrótów i łańcucha bloków (blockchain)!
   tutorial_codehscipher_longdescription: Podczas tych zajęć "Godziny kodowania" uczniowie
@@ -5046,7 +5139,7 @@ pl:
     ostateczne wartości prędkości wyliczone w ramach symulacji. Uczniowie powinni
     posiadać umiejętność rozwiązywania równań matematycznych z użyciem algebry podstawowej.
   tutorial_codehsmath_longdescription: Uczniom przedstawia się żółwia Tracy i uczą
-    się sposobów kodowania różnych modeli matematycznych w Pythonie! Doświadczenie
+    się sposobów kodowania różnych modeli matematycznych w języku Python! Doświadczenie
     w zakresie kodowania nie jest konieczne, ale uczniowie powinni ukończyć kurs przynajmniej
     na poziomie Algebra I.
   tutorial_codehsmusic_longdescription: 'Uczniowie badają, w jaki sposób używa się
@@ -5055,15 +5148,17 @@ pl:
   tutorial_codehssports_longdescription: Uczniowie uczą się sposobu wykorzystania
     kodowania w sportach i układzie gier budując własną grę wideo o tematyce sportowej,
     którą można natychmiast udostępniać znajomym!
-  tutorial_codemojipizza_longdescription: 'This course is designed to teach students
-    the fundamentals of JavaScript objects. Students will learn the basic types of
-    data that can be stored in variables, from their first boolean all the way to
-    creating their own objects with multiple properties. The activity makes complex
-    concepts easy to understand by using everyone''s favourite food: Pizza!'
-  tutorial_moonlander_longdescription: Learn Physics as you code! Moon Lander is a
-    Game Builder course with 17 exercises that guides you on how to build your own
-    physics-based game. In the game, you will use code and 6-9th grade physics concepts
-    in order to help a spaceship land safely on the moon.
+  tutorial_codemojipizza_longdescription: 'Ten kurs służy do przybliżania uczniom
+    podstaw obiektów  JavaScript. Uczniowie będą się uczyć podstawowych typów danych,
+    które można przechowywać w zmiennych, z ich pierwszej zmiennej boolowskiej na
+    całej drodze tworzenia własnych obiektów o licznych właściwościach. Zajęcia sprawiają,
+    że złożone pojęcia stają się proste do zrozumienia, gdy użyjemy ulubionej potrawy
+    wszystkich: pizzy!'
+  tutorial_moonlander_longdescription: Ucz się fizyki w trakcie kodowania! "Pojazd
+    księżycowy" [Moon Lander] jest kursem "Budowniczego gier" [Game Builder] obejmującym
+    17 ćwiczeń, które pokazuj Ci, jak budować swoje własne gry, których podstawą jest
+    fizyka. W grze będziesz korzystać z kodowania i pojęć fizyki przyswajanych w klasach
+    6-9, aby pomóc statkowi kosmicznemu w bezpiecznym lądowaniu na księżycu.
   tutorial_sushicards_longdescription: Stwórz grę, w której poruszasz rekinem, aby
     złapał rybę.
   tutorial_codesparkcreate_longdescription: Czy kiedykolwiek chciałeś zaprojektować
@@ -5101,59 +5196,63 @@ pl:
     miejsce albo hobby.
   tutorial_obstaclecourse_longdescription: Współpracuj ze swoim zespołem w ramach
     kodowania programu, który skutecznie nawiguje robotem przez tor przeszkód.
-  tutorial_edisonmove_longdescription: Introduce text-based programming and the key
-    computational concept of sequence to your students using Edison robots and EdPy,
-    a text-based programming language based on Python. Explore computer science and
-    programming basics including functions, inputs, input parameters and outputs.
-    Then take on a coding challenge and write your own program to get your Edison
-    robot through a maze.
-  tutorial_edisonspider_longdescription: Introduce the key computational concepts
-    of variables and data, two of the most fundamental parts of general-purpose programming
-    languages, using Edison robots and the Scratch-based programming language EdScratch.
-    Students can work through this lesson independently learning what variables are,
-    why we use them and then applying their knowledge to program Edison to drive like
-    a spider laying a trap.
-  tutorial_edisonspotlight_longdescription: Introduce Edison robots to your students,
-    helping them begin to explore what a robot is and how it can sense, and react,
-    to the world. Students can work through this lesson independently as they program
-    the Edison robot using the block-based programming language EdBlocks, practicing
-    computer science fundamentals including sequence, loops and conditionals.
-  tutorial_firiapython_longdescription: Get your micro:bit ready, and level-up to
-    Python coding! CodeSpace will guide you step-by-step from your very first line
-    of Python to coding an interactive program with buttons and LEDs. Learn the basics
-    of programming embedded devices, monitoring inputs and controlling outputs. Learn
-    how variables and if statements control the flow of code, and finish with a fast
-    and fun micro-game!
+  tutorial_edisonmove_longdescription: Wprowadź programowanie w oparciu o tekst oraz
+    kluczowe pojęcia informatyczne sekwencji swoim uczniom korzystającym z robotów
+    Edison i EdPy, tekstowego języka programowania na podstawie języka Python. Eksploruj
+    podstawy informatyki i programowania, z uwzględnieniem funkcji, danych wejściowych,
+    parametrów wejściowych oraz wyników. Następnie podejmij wyzwanie kodowania i napisz
+    swój własny program, aby przeprowadzić robota Edisona przez labirynt.
+  tutorial_edisonspider_longdescription: Wprowadzaj kluczowe koncepcje informatyczne
+    zmiennych i danych, dwie z najbardziej fundamentalnych części uniwersalnych języków
+    programowania, używając robotów Edison oraz języka programowania, którego podstawę
+    stanowi Scratch - EdScratch. Uczniowie mogą pracować na tej lekcji samodzielnie,
+    ucząc się czym są zmienne i przyczyn, dla których z nich korzystamy, a następnie
+    użyj ich wiedzy, aby zaprogramować Edisona do prowadzenia pająka zastawiającego
+    pułapkę.
+  tutorial_edisonspotlight_longdescription: Wprowadzaj roboty Edison swoim uczniom,
+    aby zaczęli zgłębiać, czym jest robot oraz jak wyczuwa i reaguje na świat. Uczniowie
+    mogą pracować na tej lekcji samodzielnie w trakcie programowania robota Edisona
+    używającego języka, którego podstawą są bloki EdBlocks, ćwicząc podstawy informatyki,
+    z uwzględnieniem sekwencji, pętli i wyrażeń warunkowych.
+  tutorial_firiapython_longdescription: Przygotuj swoje micro:bity i zrównaj poziom
+    z kodowaniem w języku Python! CodeSpace przeprowadzi Cię krok-po-kroku od Twojego
+    pierwszego wiersza w języku Python do kodowania interaktywnego programu przy pomocy
+    przycisków i LED-ów. Ucz się podstaw programowania wbudowanych urządzeń, monitorując
+    dane wejściowe i kontrolując wyniki na wyjściu. Dowiedz się, jak zmienne i wyrażenia
+    warunkowe "jeśli" sterują przepływem kodu i zakończ wszystko szybką i przyjemna
+    mikro-grą!
   tutorial_gamefrootsquid_longdescription: Ogromne ośmiornice są największymi bezkręgowcami
     na świecie.  W tej grze dla początkujących, poświęconej kodowaniu, będziesz się
     uczyć podstaw kodowania i tworzenia gry, w której bada się życie ośmiornic w podwodnym
     świecie oceanu. Będziesz odkrywać sekretne życie ogromnej ośmiornicy, sposób kodowania
     sterowników gry na klawiaturze (dane wejściowe/ wyjściowe), języka kodowania Google
     Blockly, sposobu publikowania własnej gry komputerowej.
-  tutorial_duckpiano_longdescription: In this project you'll make keys on your computer
-    play quack sounds at different pitches, like a piano that sounds like a duck.
-    You can use your duck piano to play simple tunes. Later, you can try other sounds,
-    such as dog barks or even sounds you record yourself. This project works best
-    on a computer with a keyboard, but it could be adapted to work on a tablet.
+  tutorial_duckpiano_longdescription: 'W ramach tego projektu będziesz tworzyć klawisze
+    na swoim komputerze, odgrywać dźwięki kwakania o różnej wysokości, jakby na pianinie,
+    które brzmi jak kaczka. Możesz używać swojego kaczego pianina do odtwarzania prostych
+    dźwięków. Potem, możesz wypróbować inne dźwięki takie jak szczekanie psów, a nawet
+    dźwięki, które sam nagrasz. Ten projekt sprawdza się najlepiej na komputerze z
+    keyboardem, ale można go dostosować do pracy na tablecie. '
   tutorial_gpsound_longdescription: W ramach tego projektu będziesz pisać program
     zapisujący dźwięk z mikrofonu Twojego komputera, odgrywać go i rysować obrazek
     zapisanego dźwięku. Możesz również przetwarzać swoje nagrania, aby dodawać efekty
     takie jak zmiany wysokości tonu, odwracanie lub echo.
-  tutorial_groklearningpython_longdescription: Develop your programming skills and
-    build your own animal classifier! In this course you'll use the programming language
-    Python to classify animals based on their characteristics. You'll learn about
-    the differences between animals, and how biologists use programming to help them
-    do science! This activity has some assumed knowledge (variables, print and input).
+  tutorial_groklearningpython_longdescription: Rozwijaj swoje umiejętności programowania
+    i buduj swój własny klasyfikator zwierząt! W ramach tego kursu będziesz używać
+    języka programowania Python, aby klasyfikować zwierzęta na podstawie ich charakterystyk.
+    Będziesz się uczyć o różnicach pomiędzy zwierzętami oraz tego, jak biolodzy korzystają
+    z programów, aby pomóc im w budowaniu nauki! W przypadku realizacji tych zajęć
+    zakłada się posiadanie pewnej wiedzy (zmienne, drukowanie i dane wejściowe).
   tutorial_htmltimetravel_longdescription: Odbądź pełną przygód podróż w czasie i
     podbijaj najgłębsze zakątki kosmosu ucząc się, jak się przemieszczać, obracać
     i przekształcać obiekty używając podstaw animacji w CSS.
   tutorial_hp_flappy_longdescription: Ucz się logicznego myślenia i koncepcji programowania
     tworząc swoją własną grę w stylu "Flappy Birds" na hyperPadzie.
-  tutorial_appytappin_longdescription: This teacher-led activity, adapted for the
-    Hour of Code, introduces children to using a text-based programming language to
-    develop a mobile games app. They design algorithms and use variables and functions,
-    as well as test and debug their work. Includes a step-by-step lesson plan, pupil
-    resources, support cards and pre-written program template.
+  tutorial_appytappin_longdescription: Te zajęcia prowadzone przez nauczyciela, dostosowane
+    do "Godziny kodowania" wprowadzają dzieci w używanie języka programowania opartego
+    o tekst elementy, aby opracować mobilną aplikację do gier. Dzieci projektują algorytmy
+    i używają zmiennych i funkcji, jak również testują i debugują swoją pracę. Obejmują
+    plan lekcji krok-po-kroku, samouczek dla ucznia oraz przewodnik po ocenie.
   tutorial_icipher_longdescription: Są to zajęcia prowadzone przez nauczyciela, zaadaptowane
     do "Godziny kodowania", które uczą dzieci bezpiecznej komunikacji. Dzieci uczą
     się, że w czasie wiadomości były szyfrowane i rozszyfrowywane z użyciem szyfrów.
@@ -5175,18 +5274,18 @@ pl:
     muzykę i nie tylko.
   tutorial_khanwebpages_longdescription: Dowiedz się, jak tworzyć strony internetowe
     ze znacznikami HTML i CSS, i stwórz swoją własną kartkę z życzeniami.
-  tutorial_kibobowl_longdescription: Crash! How far does KIBO have to move to get
-    from the start of the bowling lane to the pins? You can create a single straight
-    lane or a more complicated path. Students will use estimation and measurement
-    to create a program to travel the length of the lane. They'll test how far a single
-    forward block carries KIBO, then improve their programs using the Engineering
-    Design Process.
-  tutorial_kibodance_longdescription: Let's have a KIBO Robot dance party! Set up
-    a music player to play a favorite classroom song, or a song connected to a world
-    culture you're exploring. Students will decorate their KIBO as a dancer, then
-    they will create a program to teach their KIBO to dance to the music. Students
-    will learn how to create a program to express an idea (in this case, a dance),
-    with a focus on sequencing ability.
+  tutorial_kibobowl_longdescription: ZZderzenie! Jak daleko KIBO musi się przemieścić,
+    aby przejść z punktu startowego toru kuli do kręgli? Możesz stworzyć jeden prosty
+    pas lub bardziej skomplikowaną ścieżkę. Uczniowie będą używać wartości szacunkowych
+    i pomiarów do tworzenia programu do przejścia przez całą długość toru. Będą testować,
+    jak daleko jeden blok ruchu do przodu przeniesie KIBO, a następnie doskonal programy
+    korzystając z "Procesu projektowania inżynierskiego" [Engineering Design Process].
+  tutorial_kibodance_longdescription: Urządźmy potańcówkę dla KIBO! Nastaw odtwarzacz
+    muzyki, aby zagrać ulubioną piosenkę klasy albo piosenkę związaną ze światem kultury,
+    którą zgłębiasz. Uczniowie będą dekorować swojego KIBO jako tancerza, a potem
+    będą tworzyć program, aby nauczyć KIBO tańczyć w rytm muzyki. Uczniowie będą się
+    uczyć, jak tworzyć program, aby wyrazić pomysł (w tym przypadku - taniec), koncentrując
+    się na umiejętnościach tworzenia sekwencji.
   tutorial_buildcharacters_longdescription: Najbardziej popularna aplikacja dla osób
     uczących  się czytać obecnie obejmuje cyfrowy "Maker Space"! Twórz poziomy, projektuj
     gry lub buduj postaci. Wybierz swoje zajęcia i zacznij tworzyć przy pomocy Kodable!
@@ -5206,16 +5305,18 @@ pl:
     światem Scratcha.
   tutorial_mbswiftplaygrounds_longdescription: Użyj miro:bit na iPadzie, aby  uczyć
     się Swifta.
-  tutorial_mbbuttons_longdescription: In this introductory project, you'll make pictures
-    or animations appear on the micro:bit display when buttons are pressed. This activity
-    is suitable for those who have never programmed before or those seeking a simple
-    introduction to programming the BBC micro:bit. It uses MicroBlocks, a Scratch-like
-    programming system that lets you see your code running on the micro:bit immediately.
-  tutorial_meteor_longdescription: In this project, you'll create a Falling Meteors
-    game for the BBC micro:bit. Using the buttons, the player will move a shield to
-    catch falling meteors and save the Earth. The techniques you learn in this project
-    can be used to make many other games for the BBC micro:bit, including classics
-    such as Pong and Space Invaders.
+  tutorial_mbbuttons_longdescription: W ramach tego projektu wprowadzającego będziesz
+    sprawiać, że obrazy lub animacje będą pojawiać się na ekranie micro:bit po naciśnięciu
+    przycisku. Te zajęcia nadają się dla tych osóbb, które nigdy wcześniej nie zajmowały
+    się programowaniem oraz tych, które poszukują krótkiego wprowadzenia do programowania
+    the BBC micro:bit. Używa się z nich MicroBlocks, systemu programowania przypominającego
+    Scratch, który umożliwia Ci oglądanie kodu natychmiast, w trakcie przebiegu, na
+    micro:bit.
+  tutorial_meteor_longdescription: W ramach tego projektu będziesz tworzyć grę "Spadające
+    meteory" [Falling Meteors] dla BBC micro:bit. Używając przycisków gracz będzie
+    poruszał tarczą, aby łapać spadające meteory i ratować Ziemię. Technik, które
+    poznajesz w ramach tego projektu, możesz używać do tworzenia wielu innych gier
+    dla BBC micro:bit, w tym klasyków takich jak Pong i Space Invaders.
   tutorial_ballbounce_longdescription: Naucz się tworzyć aplikację mobilną, w której
     użytkownik rzuca piłką po ekranie, a ona odbija się od krawędzi.
   tutorial_mitcodi_longdescription: Ucz się tworzyć swoją własną interaktywną aplikację
@@ -5224,10 +5325,12 @@ pl:
     obrazki na ekranie!
   tutorial_talktome_longdescription: Ucz się tworzyć aplikację mobilną, która sprawia,
     że Twój telefon mówi do Ciebie!
-  tutorial_mobilecspmap_longdescription: Use App Inventor to create a Map Tour of
-    landmarks in your town, state, or anywhere in the world. Self-guided video and
-    text tutorials lead students through building a user interface and coding a mobile
-    app, using a map component and determining locations by latitude and longitude.
+  tutorial_mobilecspmap_longdescription: Używaj "Wynalazcy aplikacji" [App Inventor],
+    do tworzenia "Trasy z mapą" [Map Tour] charakterystycznych punktów w swoim mieście,
+    kraju lub w dowolnym miejscu na świecie. Samouczki wideo lub tekstowe do przejścia
+    samodzielnie prowadzą uczniów przez budowanie interfejsu użytkownika oraz kodowanie
+    aplikacji mobilnej z użyciem elementu mapy i określenie lokalizacji na podstawie
+    szerokości i długości geograficznej.
   tutorial_ozorandom_longdescription: Ucz się, jak komputery tworzą losowe liczby
     i używają ich, a następnie użyj losowego programu ruchu, aby pomóc zaszczepiać
     pomysły na opowieść.
@@ -5237,34 +5340,36 @@ pl:
     kodu, aby tworzyć interaktywne prace artystyczne inspirowane przez artystów.
   tutorial_astropi_longdescription: Kodu wiadomość i sprawdzaj temperaturę otoczenia
     na pokładzie ISS z użyciem symulatora online HAT Sense komputera Astro Pi.
-  tutorial_rgart_longdescription: Looking for an easy and intuitive way to teach your
-    students to code? RoboGarden STEAM has fused code practicing with STEAM learning
-    and gamified missions in multiple activities. In the art activity, the student
-    understand color mixing concepts while using coding blocks to solve challenges
-    in the birthday party.
-  tutorial_rgengineer_longdescription: Looking for an easy and intuitive way to teach
-    your students to code? RoboGarden STEAM has fused code practicing with STEAM learning
-    and gamified missions in multiple activities. In the engineering activity, the
-    student learns basic robotics while using coding blocks to solve challenges in
-    the Christmas party.
-  tutorial_rgmath_longdescription: Looking for an easy and intuitive way to teach
-    your students to code? RoboGarden STEAM has fused code practicing with STEAM learning
-    and gamified missions in multiple activities. In the math activity, the student
-    practices counting, addition and subtraction while solving some coding challenges.
-  tutorial_rgscience_longdescription: Looking for an easy and intuitive way to teach
-    your students to code? RoboGarden STEAM has fused code practicing with STEAM learning
-    and gamified missions in multiple activities. In the science activity, the student
-    goes through a journey to the space solving multiple coding challenges and know
-    more about space elements and science facts.
-  tutorial_rgtech_longdescription: Looking for an easy and intuitive way to teach
-    your students to code? RoboGarden STEAM has fused code practicing with STEAM learning
-    and gamified missions in multiple activities. In the technology activity, the
-    student goes through a journey to the volcanic islands solving multiple coding
-    challenges by understanding basic concepts of Technology.
-  tutorial_robotmagic3d_longdescription: Use your imagination to create an animated
-    3D logo of your name, your favorite sports team or anything you want. Use code
-    to make 3D models and letters come alive with fun. At the end you can download
-    an animated sticker of your creation and share it with friends.
+  tutorial_rgart_longdescription: Szukasz łatwego i intuicyjnego sposobu do nauczenia
+    swoich uczniów kodowania? W RoboGarden STEAM połączono ćwiczenie kodowania z nauką
+    STEAM i misjami w formie gier w ramach wielu zajęć. Na tych zajęciach o charakterze
+    artystycznym uczeń dochodzi do osiągnięcia zrozumienia pojęcia mieszania kolorów
+    w trakcie używania bloków kodowania do rozwiązania wyzwań związanych z przyjęciem
+    urodzinowym.
+  tutorial_rgengineer_longdescription: Szukasz łatwego i intuicyjnego sposobu do nauczenia
+    swoich uczniów kodowania? W RoboGarden STEAM połączono ćwiczenie kodowania z nauką
+    STEAM i misjami w formie gier w ramach wielu zajęć. Na tych zajęciach o charakterze
+    inżynierskim uczeń poznaje podstawy robotyki w trakcie używania bloków kodowania
+    do rozwiązania wyzwań związanych z przyjęciem bożonarodzeniowym.
+  tutorial_rgmath_longdescription: Szukasz łatwego i intuicyjnego sposobu do nauczenia
+    swoich uczniów kodowania? W RoboGarden STEAM połączono ćwiczenie kodowania z nauką
+    STEAM i misjami w formie gier w ramach wielu zajęć. Na zajęciach z matematyki
+    uczeń ćwiczy liczenie, dodawanie i odejmowanie w trakcie rozwiązania wyzwań związanych
+    z  kodowaniem.
+  tutorial_rgscience_longdescription: Szukasz łatwego i intuicyjnego sposobu do nauczenia
+    swoich uczniów kodowania? W RoboGarden STEAM połączono ćwiczenie kodowania z nauką
+    STEAM i misjami w formie gier w ramach wielu zajęć. Na zajęciach z przyrody uczeń
+    odbywa podróż w kosmos, rozwiązując wiele wyzwań związanych z  kodowaniem i dowiaduje
+    się więcej o elementach kosmosu oraz poznaje więcej faktów przyrodniczych.
+  tutorial_rgtech_longdescription: Szukasz łatwego i intuicyjnego sposobu do nauczenia
+    swoich uczniów kodowania? W RoboGarden STEAM połączono ćwiczenie kodowania z nauką
+    STEAM i misjami w formie gier w ramach wielu zajęć. Na zajęciach z techniki uczeń
+    odbywa podróż na wyspy wulkaniczne, rozwiązując wiele wyzwań związanych z  kodowaniem
+    dzięki zrozumieniu podstawowych koncepcji technologii.
+  tutorial_robotmagic3d_longdescription: Korzystaj ze swojej wyobraźni w celu stworzenia
+    animowanego logo 3D swojego imienia, swojej ulubionej drużyny sportowej czy czegokolwiek,
+    czego chcesz. Używaj kodu do powoływania w zabawie modeli 3D i liter do życia.
+    Pod koniec możesz pobrać animowaną naklejkę swojej pracy i udostępniać ją znajomym.
   tutorial_robotmagicflappy_longdescription: Użyj wyobraźni do tworzenia gry 3D "Flappy
     Bird". Użyj kodu to powoływania, w zabawie, modeli 3D do życia. Pod koniec możesz
     udostępnić swoją pracę znajomym i rzuć im wyzwanie wysokiego punktowania.
@@ -5272,14 +5377,16 @@ pl:
     "Cartoon Network" na poszukiwanie, z najdalszych zakątków wszechświata, do krańców
     źródełka Craiga. Otwieraj tajne skarby i odkrywaj nowych bohaterów tworząc przygodową
     grę.
-  tutorial_scratchtalk_longdescription: Bring your characters to life in Scratch using
-    new Text-to-Speech blocks powered by Amazon. Create a rapping robot or an interactive
-    animation that talks. This project will show you how to create talking animations
-    that spin, zoom and change colors. The possibilities are endless!
-  tutorial_scratchjrstory_longdescription: An intermediate activity meant for children
-    in 2nd-5th grades with some experience with ScratchJr. Through this activity and
-    continued time with ScratchJr, students will have the opportunity to think creatively,
-    improve their storytelling and collaborate with peers.
+  tutorial_scratchtalk_longdescription: Powołaj do życia swoje postaci w systemie
+    Scratch używając nowych bloków tekstu-do-mowy obsługiwanych przez Amazona. Utwórz
+    rapującego robota lub interaktywną animację, która mówi. Ten projekt pokaże Ci,
+    jak tworzyć mówiące animacje, w których wykonuje się obroty, powiększa obraz i
+    zmienia kolory. Możliwości są nieograniczone!
+  tutorial_scratchjrstory_longdescription: Zajęcia na poziomie średnio zaawansowanym
+    przeznaczone dla dzieci w klasach 2-5 posiadających pewne doświadczenie w zakresie.
+    Poprzez te zajęcia i ciągłość czasu spędzanego z ScratchJr, uczniowie będą mieli
+    okazję do twórczego myślenia, doskonalenia umiejętności opowiadania historii i
+    współpracować z rówieśnikami.
   tutorial_scratchjrtwinkle_longdescription: Współpraca klasy "Mrugaj, mrugaj gwiazdko
     mała" to zajęcia wprowadzające dla dzieci w wieku od przedszkolaków po drugoklasistów
     z niewielkim doświadczeniem w zakresie programowania. Dzięki tym zajęciom uczniowie
@@ -5336,18 +5443,20 @@ pl:
     że obie te gry cechują się precyzyjną fizyką? Na tych zajęciach naprawisz uszkodzoną
     grę Pong tak, że obiekty będą się odbijać tak, jak powinny. Potem dodasz grawitacji,
     aby utworzyć klon Bonk.io! Działa na Chromebooks i innych urządzeniach!
-  tutorial_algobot_longdescription: AlgoBot is a puzzle game that takes place on the
-    Europa, a pan-galactic colonisation ship, where a recycling mission goes horribly
-    wrong. Players command AlgoBot, a smart little service droid, and learn to use
-    a visual programming language to help him contain the crisis!
+  tutorial_algobot_longdescription: AlgoBot jest grą - łamigłówką, której akcja toczy
+    się w Europie, na pangalaktycznym statku kolonizatorów, realizującym misję recyklingową,
+    w której coś się skrajnie załamuje. Gracze wydają komendy AlgoBotowi, inteligentnemu
+    droidkowi i uczą się używać wizualnego języka programowania, aby pomóc mu pokonać
+    kryzys!
   tutorial_thunkableapps_longdescription: Naucz się budować swoje własne aplikacje
     przy pomocy kodowania w oparciu o bloki!
-  tutorial_toxicodedot_longdescription: 'Select a card from your deck and interpret
-    its code in order to progress through the world. Use your intuitive abilities
-    to guess the rules and learn from your own mistakes. Made with care by the team
-    behind Compute it and Silent Teacher, with the same fundamentals: trial-and-error
-    instead of verbose explanations, smooth progression, no code to type, accessibility
-    to absolute beginners.'
+  tutorial_toxicodedot_longdescription: 'Wybierz kartę ze swojej talii i interpretuj
+    jej kod w celu poczynienia postępów w przemierzani świata. Posłuż się swoimi zdolnościami
+    intuicyjnymi, aby odgadywać reguły i uczyć się na własnych błędach. Zespół obsługujący
+    rozwiązania "Wylicz to" [Compute it] i "Bezgłośny nauczyciel" [Silent Teacher]
+    opracował to ze szczególną pieczołowitością korzystając z tych samych podstaw:
+    metody prób-i-błędów zamiast słownych wyjaśnień, gładkiego przechodzenia, braku
+    kodu do wpisania, dostępności dla osób w pełni początkujących.'
   tutorial_gcactions_longdescription: Odkryj działania, jeden z kluczowych klocków
     w kodowaniu i używaj ich do kodowania gry wideo! Badaj kulturę cyfrową i ucz się
     o robotach i o tym, co mogą rzeczywiście robić.
@@ -5369,31 +5478,34 @@ pl:
   tutorial_gcvariables_longdescription: Odkrywaj zmienne, jeden z kluczowych klocków
     w kodowaniu i używaj ich do kodowania gry wideo! Badaj kulturę cyfrową i ucz się
     o tym, czym są dane i jak działają.
-  tutorial_beanything_longdescription: Explore six cool careers and see how coding
-    can be applied to each one! Discover what it's like to be a Robotics Engineer,
-    a Musician, an Astronaut, a Farmer, a Beekeeper, and a Pastry Chef. Use programming
-    to animate characters, compose music, tell stories, design games, and even create
-    art.
+  tutorial_beanything_longdescription: 'Zgłębiaj arkana sześciu fajnych zawodów i
+    zobacz, w jakim zakresie można stosować kodowanie w przypadku każdego z nich!
+    Okrywaj, jak to jest być inżynierem robotyki, muzykiem, astronautą, rolnikiem,
+    pszczelarzem czy kucharzem specjalizującym się w daniach z makaronu. Użyj programowania
+    do animowania postaci, komponowania muzyki, opowiadania historii, projektowania
+    gier, a nawet do tworzenia sztuki. '
   tutorial_change_longdescription: Stwórz projekt, który pokazuje, jak zmieniałbyś
     świat! Niezależnie od tego, czy pasjonujesz się recyklingiem, czy masz pomysł
     na osiągnięcie pokoju na świecie, podziel się swoją wizją z kodem!
   tutorial_cooking_longdescription: 'Pochwal się swoimi umiejętnościami - twórz interaktywną
     grę o gotowaniu. Początkujący mogą korzystać z samodzielnego samouczka, a bardziej
     zaawansowani kodujący mają opcję wyjścia od pustego projektu. '
-  tutorial_crystal_longdescription: Battle with friends in this multiplayer game.
-    Apply your own strategies and pit your code against the entire Tynker community
-    to see who the true coding champion is! Cast spells, collect power-ups, and defeat
-    enemies as you battle in a wild 4-player arena that is shrinking amidst lava!
+  tutorial_crystal_longdescription: Przeprowadź bitwę ze swoimi znajomymi w ramach
+    tej gry przeznaczonej dla wielu graczy. Stosuj swoje własne strategie i postaw
+    swój kod przeciwko całej społeczności Tynker, aby przekonać się, kto jest prawdziwym
+    mistrzem kodowania! Rzucaj zaklęcia, zbieraj power-upy i pokonuj wrogów w bitwie
+    na arenie dzikich 4 graczy, która maleje zalewana przez lawę!
   tutorial_landscape_longdescription: Użyj funkcji rysowania pióra w języku Pythona
     do tworzenia pejzażu z użyciem kodu. Użyj obiektów pejzażu już utworzonych dla
     Ciebie lub zaprojektuj swoją własną budowlę. Publikuj i udostępniaj swoje prace!
   tutorial_pets_longdescription: 'Twórz ciekawą grę o tematyce zwierząt domowych -
     prawdziwych lub z wyobraźni! Początkujący mogą korzystać z samodzielnego samouczka,
     a bardziej zaawansowani kodujący mają opcję wyjścia od pustego projektu. '
-  tutorial_petvet_longdescription: A busy day at the Pet Vet leads to fun as you and
-    Barbie help a variety of pets through their very first checkups. From guiding
-    pets into the Examination Room to diagnosing their sniffles, boo-boos, and itches,
-    you'll find every puzzle has a solution to make the pets feel better than ever!
+  tutorial_petvet_longdescription: Pracowity dzień w przychodni weterynaryjnej Pet
+    Vet prowadzi do zabawy, gdy Ty i Barbie pomagają w pierwszych badaniach kontrolnych
+    wielu zwierząt. Począwszy od wprowadzania zwierząt do gabinetu po diagnozowanie
+    ich katarów, bolączek i świądów stwierdzisz, że każda łamigłówka ma swoje rozwiązanie,
+    dzięki któremu zwierzęta poczują się lepiej niż kiedykolwiek wcześniej!
   tutorial_superhero_longdescription: Użyj sztuki pikselowej HTML i CSS do tworzenia
     masek Twojego ulubionego superbohatera. Publikuj i udostępniaj swoje praca!
   tutorial_vidcodeplastic_longdescription: Zanieczyszczanie naszych oceanów plastikiem
@@ -5402,11 +5514,11 @@ pl:
     plastikiem za pomocą JavaScript, możesz zrobić drugi film na dowolny temat, który
     uważasz za ważny! Naucz się korzystać z pętli, fal sinusoidalnych i niestandardowych
     emoji, aby stworzyć unikatowy projekt.
-  tutorial_vidcodetypeface_longdescription: Create your own typeface using shapes
-    and elements of typography. Type has more elements than you may have realized!
-    So far we have talked about fonts and how they are different styles of text. Fonts
-    are actually just different styles of a typeface. A typeface is a family of fonts
-    that have similar features.
+  tutorial_vidcodetypeface_longdescription: 'Utwórz swój własny krój pisma używając
+    kształtów i elementów typografii. Krój ma o wiele więcej elementów niż możemy
+    sobie uświadamiać! Dotychczas mówiliśmy o czcionkach oraz tym, jak różnicują one
+    style tekstu. Czcionki są, tak naprawdę, po prostu różnymi stylami kroju pisma.
+    Krój pisma jest rodziną czcionek, które posiadają podobne cechy. '
   tutorial_washustorm_longdescription: Naucz się, jak programować nadchodzącą burzę.
   tutorial_activitypackets_longdescription: Znajduj godziny rozrywki przyjaznej dla
     rodziny przy pomocy możliwych do wydrukowania pakietów kreatywnych zajęć kodowania
@@ -5417,10 +5529,11 @@ pl:
     o tematyce Rookie z użyciem Blockly, wprowadzającego języka kodowania. Będziesz
     używać sekwencji, zmiennych i pętli, aby tworzyć niepowtarzalny element, który
     podkreśla Twoją kreatywność!
-  tutorial_tommyturtle_longdescription: Help young kids learn the basics of coding
-    with Tommy the Turtle! Gold Award Winner for Best Educational App by Best Mobile
-    App Awards. Connects with STEMdash to enable parents and teachers to track learning
-    progress, chat with your child to provide encouragement, or limit their playtime.
+  tutorial_tommyturtle_longdescription: Pomóż młodym dzieciom uczyć się podstaw kodowania
+    z żółwiem Tommym! Zwycięzcy złotego medalu za najlepszą aplikację edukacyjną w
+    konkursie o nagrodę za najlepszą aplikację mobilną. Łączy  się on ze STEMdash,
+    aby umożliwić rodzicom i nauczycielom śledzenie procesu nauki, rozmawiania ze
+    swoim dzieckiem, aby je wspierać i zachęcać lub skrócić czas gry.
   tutorial_mazyad_longdescription: Ten produkt poszerzy Twoje granice, aby tworzyć
     zintegrowaną wersję papierową skomputeryzowanych aplikacji oraz alternatywy, jeśli
     komputer nie jest, z dowolnego powodu, używany. Będzie to również służyć jako
@@ -5433,9 +5546,9 @@ pl:
   tutorial_duckrace_longdescription: W tym kursie będziesz rozwiązywał zadania w zakresie
     programowania, aby pomóc kaczce Toni zbierać monety na oszczędności na wakacje.
     Na końcu kursu będziesz tworzyć swoją własną grę.
-  tutorial_allcancodeapps_longdescription: Use the Allcancode Platform to create web
-    and mobile apps from design to delivery. Application logic is written in Google
-    Blockly, the programming language used in most Code.org activities.
+  tutorial_allcancodeapps_longdescription: Użyj platformy Allcancode do budowania
+    aplikacji internetowych i mobilnych od projektu po dostawę. Logika aplikacji jest
+    zapisana w Google Blockly, języku programowania używanym w większości zajęć Code.org.
   tutorial_n2y_longdescription: 'W ramach tych zajęć, które można wydrukować, uczniowie
     mogą pomóc małemu robotowi imieniem Bitt Bott badać różne formy terenu na Ziemi.
     Uczniowie udzielają Bitt Bottowi prostych poleceń wybierając i zakreślając kółkiem
@@ -8640,8 +8753,8 @@ pl:
   tutorial_codewards_string_detail_programming_languages: CoffeeScript
   tutorial_olympics_string_detail_programming_languages: CoffeeScript
   tutorial_codinismhero_string_detail_programming_languages: Python
-  tutorial_discovery_string_detail_programming_languages: Bloki
-  tutorial_csfirstname_string_detail_programming_languages: Bloki
+  tutorial_discovery_string_detail_programming_languages: Bloki, Scratch
+  tutorial_csfirstname_string_detail_programming_languages: Bloki, Scratch
   tutorial_obstaclecourse_string_detail_programming_languages: Bloki
   tutorial_edisonmove_string_detail_programming_languages: Python, EdPy, tekstowy
     język programowania oparty na Pythonie.
@@ -8919,7 +9032,7 @@ pl:
   tutorial_grasshopperphoto_longdescription: Nabywaj umiejętności kodowania, aby tworzyć
     filtry do stosowania na różnych zdjęciach.
   tutorial_tynkerpyland_longdescription: W ramach projektu ONZ zrównoważonego rozwoju,
-    w tym projekcie utworzysz w Pythonie własną grę do sadzenia drzew.
+    w tym projekcie utworzysz w języku Python własną grę do sadzenia drzew.
   tutorial_codeitimages_longdescription: Naucz się programować własne niesamowite
     obrazki i animacje.
   tutorial_hyperpadenemy_longdescription: Ucz się logicznego myślenia i  programowania
@@ -9111,11 +9224,11 @@ pl:
     informatycznego do rozwiązywania problemów, modyfikowania i projektowania/ opracowywania
     aplikacji '
   tutorial_firiacodebot_longdescription: Python pasuje do Twojego mózgu! Nawet jeśli
-    jeszcze nigdy nie używałeś języka bazującego na tekście, te zajęcia nauczą Cię
-    wszystkiego, co potrzebujesz, aby sprawić, by Twój Robot poruszał się, rozświetlał
-    i reagował na dane wejściowe użytkownika. CodeBot jest rewolucyjną platformą do
-    autentycznego kodowania realnego świata, łącząc prawdziwy język programowania
-    z mocarnym sprzętem. Twój KOD w pełni kontroluje wszystkie funkcje robota!
+    jeszcze nigdy nie używałeś języka testowego, te zajęcia nauczą Cię wszystkiego,
+    co potrzebujesz, aby sprawić, by Twój Robot poruszał się, rozświetlał i reagował
+    na dane wejściowe użytkownika. CodeBot jest rewolucyjną platformą do autentycznego
+    kodowania realnego świata, łącząc prawdziwy język programowania z mocarnym sprzętem.
+    Twój KOD w pełni kontroluje wszystkie funkcje robota!
   tutorial_modlighthouse_longdescription: Uczniowie projektują latarnię morską na
     podstawie kryteriów i ograniczeń projektowych. Wówczas uczniowie dokonują iteracji
     dotyczącej projektowania, aby sprawić, by stał się automatyczny oraz dostosować
@@ -9131,10 +9244,10 @@ pl:
     kształtów geometrycznych i zgłębiając, jak można używać pętli w programach, które
     zawierają powtarzający kod.
   tutorial_edshapeup_longdescription: Wprowadź kluczowe koncepcje informatyczne pętli
-    określonych i zmiennych używając robotów Edison i EdPy, języka programowania opartego
-    na języku Python. Uczniowie mogą samodzielnie przechodzić przez tę lekcję ćwicząc
-    używanie pętli określonych oraz rozpoznawania wzorców w celu prowadzenia znanych
-    wielokątów regularnych przez przyjęciem wyzwania mniej regularnych wielokątów
+    określonych i zmiennych używając robotów Edison i EdPy, tekstowego języka programowania
+    opartego na języku Python. Uczniowie mogą samodzielnie przechodzić przez tę lekcję
+    ćwicząc używanie pętli określonych oraz rozpoznawania wzorców w celu prowadzenia
+    znanych wielokątów regularnych przez przyjęciem wyzwania mniej regularnych wielokątów
     i nieregularnych kształtów.
   tutorial_ozocolor_longdescription: Uczniowie będą wprowadzani w koncepcję funkcji
     poprzez używanie kodów kolorowych w celu przedstawiania funkcji. Ta lekcja jest
@@ -9225,7 +9338,7 @@ pl:
     do "Godziny kodowania" wprowadzają dzieci w używanie języka programowania opartego
     o elementy, aby rozwijać umiejętności kodowania. Dzieci używają algorytmów, umiejętności
     programowania i myślenia informatycznego, aby programować Kodu, by dostarczył
-    prezenty świąteczne. Obejmuje plan lekcji krok-po-kroku, samouczek dla ucznia
+    prezenty świąteczne. Obejmują one plan lekcji krok-po-kroku, samouczek dla ucznia
     oraz przewodnik po ocenie.
   tutorial_rpisensehat_longdescription: Ucz się jak używać sprzętu Sense HAT do budowania
     urządzenia do rejestracji danych, które może przechwytywać szereg informacji na
@@ -9684,7 +9797,7 @@ pl:
   tutorial_ai-oceans_string_detail_platforms: ''
   tutorial_scratchimagine_string_detail_programming_languages: Bloki
   tutorial_codesterspsa_string_detail_programming_languages: Python
-  tutorial_googlehero_string_detail_programming_languages: Bloki
+  tutorial_googlehero_string_detail_programming_languages: Bloki, Scratch
   tutorial_codestersbball_string_detail_programming_languages: Python
   tutorial_scratchcartoon_string_detail_programming_languages: Bloki
   tutorial_codemonkeyjr_string_detail_programming_languages: Bloki

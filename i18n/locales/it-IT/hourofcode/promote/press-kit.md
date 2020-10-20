@@ -57,7 +57,7 @@ La tecnologia sta trasformando ogni azienda del pianeta. Nel 2015, 7 milioni di 
 
 **Oggetto**: la scuola si unisce alla missione di avvicinare gli studenti all'informatica
 
-I computer sono ovunque e stanno cambiando ogni industria del pianeta, ma meno della metà delle scuole insegna informatica. Young women and students from marginalized racial and ethnic groups are severely underrepresented in computer science classes, and in the tech industry. La buona notizia è che intendiamo cambiare rotta.
+I computer sono ovunque e stanno cambiando ogni industria del pianeta, ma meno della metà delle scuole insegna informatica. Le ragazze e le minoranze sono molto poco rappresentate negli studi informatici e nelle aziende tecnologiche. La buona notizia è che intendiamo cambiare rotta.
 
 Con l'Ora del Codice, l'informatica è stata sulle homepage di Google, MSN, Yahoo! e Disney. Più di 100 partner si sono uniti per supportare questo movimento. Ogni Apple Store nel mondo ha ospitato un'Ora del Codice. Anche il presidente Obama ha scritto la sua prima riga di codice nell'ambito di questa campagna.
 
