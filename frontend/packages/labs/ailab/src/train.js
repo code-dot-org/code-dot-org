@@ -121,6 +121,10 @@ const extractLabel = (state, row) => {
   return convertValue(state, state.labelColumn, row);
 };
 
+const getRandomInt = max => {
+  return Math.floor(Math.random() * Math.floor(max));
+};
+
 const prepareTrainingData = () => {
   const updatedState = store.getState();
   const trainingExamples = updatedState.data
@@ -129,6 +133,31 @@ const prepareTrainingData = () => {
   const trainingLabels = updatedState.data
     .map(row => extractLabel(updatedState, row))
     .filter(label => label !== undefined && label !== "");
+  // Reserve 10% of the data to calculate accuracy
+  const numToReserve = parseInt(trainingExamples.length * 0.1);
+  console.log("numToReserve", numToReserve);
+  const indicesToReserve = [];
+  while (indicesToReserve.length < numToReserve) {
+    let randomIndex = getRandomInt(trainingExamples.length - 1);
+    if (!indicesToReserve.includes(randomIndex)) {
+      indicesToReserve.push(...[randomIndex]);
+    }
+  }
+  console.log("indicesToReserve", indicesToReserve);
+  const accuracyCheckExamples = [];
+  const accuracyCheckLabels = [];
+  indicesToReserve.forEach(index => {
+    accuracyCheckExamples.push(trainingExamples[index]);
+    accuracyCheckLabels.push(trainingLabels[index]);
+  });
+  console.log("accuracyCheckExamples", accuracyCheckExamples);
+  console.log("accuracyCheckLabels", accuracyCheckLabels);
+  // --> Check if this is working.
+  // --> If it is save accuracyCheckLabels and accuracyCheckExamples in state
+  // write the action creators in redux, etc
+  // Add a check accuracy button
+  // On click, run predict on the stored accuracy check examples
+  // Compare results of above with accuracy check labels and calculate % correct (see whiteboard)
   store.dispatch(setTrainingExamples(trainingExamples));
   store.dispatch(setTrainingLabels(trainingLabels));
 };
