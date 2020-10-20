@@ -450,7 +450,6 @@ class ScriptLevel < ActiveRecord::Base
         name: level.name,
         id: level.id,
         icon: level.icon,
-        isUnplugged: level.unplugged?,
         isConceptLevel: level.concept_level?
       }
     end
