@@ -3,11 +3,17 @@ import PropTypes from "prop-types";
 import React, { Component } from "react";
 import Papa from "papaparse";
 import { connect } from "react-redux";
-import { setImportedData, setColumnsByDataType, ColumnTypes } from "../redux";
+import {
+  resetState,
+  setImportedData,
+  setColumnsByDataType,
+  ColumnTypes
+} from "../redux";
 import { availableDatasets } from "../datasetManifest";
 
 class CSVReaderWrapper extends Component {
   static propTypes = {
+    resetState: PropTypes.func.isRequired,
     setImportedData: PropTypes.func.isRequired,
     setColumnsByDataType: PropTypes.func.isRequired
   };
@@ -23,6 +29,7 @@ class CSVReaderWrapper extends Component {
   }
 
   handleChange = event => {
+    this.props.resetState();
     this.setState({
       csvfile: event.target.files[0],
       download: false
@@ -30,6 +37,7 @@ class CSVReaderWrapper extends Component {
   };
 
   handleChangeSelect = event => {
+    this.props.resetState();
     this.setState({
       csvfile: event.target.value,
       download: true
@@ -101,6 +109,9 @@ class CSVReaderWrapper extends Component {
 export default connect(
   state => ({}),
   dispatch => ({
+    resetState() {
+      dispatch(resetState());
+    },
     setImportedData(data) {
       dispatch(setImportedData(data));
     },
