@@ -14,6 +14,10 @@ module Geocoder
           end
         end
       end
+
+      def relevance
+        1.0
+      end
     end
 
     # This override for the Mapbox class is being added because we are transition from call the Google Maps location
