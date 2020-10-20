@@ -308,10 +308,6 @@ StudioApp.prototype.init = function(config) {
 
   config.getCode = this.getCode.bind(this);
   copyrightStrings = config.copyrightStrings;
-  this.debouncedSilentlyReport = _.debounce(
-    this.silentlyReport.bind(this),
-    1000
-  );
 
   if (config.legacyShareStyle && config.hideSource) {
     $('body').addClass('legacy-share-view');
@@ -412,7 +408,7 @@ StudioApp.prototype.init = function(config) {
 
   // Record time at initialization.
   this.initTime = new Date().getTime();
-  this.milestoneStartTime = new Date().getTime();
+  this.initTimeSpent();
 
   // Fixes viewport for small screens.
   var viewport = document.querySelector('meta[name="viewport"]');
@@ -691,6 +687,14 @@ StudioApp.prototype.getVersionHistoryHandler = function(config) {
 
     dialog.show();
   };
+};
+
+StudioApp.prototype.initTimeSpent = function() {
+  this.milestoneStartTime = new Date().getTime();
+  this.debouncedSilentlyReport = _.debounce(
+    this.silentlyReport.bind(this),
+    1000
+  );
 };
 
 StudioApp.prototype.initVersionHistoryUI = function(config) {
@@ -1896,17 +1900,17 @@ StudioApp.prototype.clearAndAttachRuntimeAnnotations = function() {
  * Report milestones but don't trigger the success callback when
  * the server responds.
  */
-StudioApp.prototype.silentlyReport = function() {
+StudioApp.prototype.silentlyReport = function(level = this.config.level.id) {
   var options = {
     app: getStore().getState().pageConstants.appType,
-    level: this.config.level.id,
+    level: level,
     skipSuccessCallback: true
   };
 
   // Some DB-backed levels (such as craft) only save the user's code when the user
   // successfully finishes the level. Opening the level in a new tab will make the level
   // appear freshly started. Therefore, we mark only channel-backed levels "started" here.
-  if (this.config.channel) {
+  if (getStore().getState().pageConstants.channelId) {
     options.testResult = TestResults.LEVEL_STARTED;
   }
   this.report(options);
