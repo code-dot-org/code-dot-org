@@ -21,13 +21,15 @@ class LessonsController < ApplicationController
     @lesson_data = {
       unit: {
         displayName: @lesson.script.localized_title,
-        link: @lesson.script.link
+        link: @lesson.script.link,
+        lessons: @lesson.script.lessons.map {|lesson| {displayName: lesson.localized_name, link: lesson_path(id: lesson.id)}}
       },
       displayName: @lesson.localized_title,
       overview: @lesson.overview || '',
       announcements: @lesson.announcements,
       purpose: @lesson.purpose || '',
-      preparation: @lesson.preparation || ''
+      preparation: @lesson.preparation || '',
+      activities: @lesson.lesson_activities.map(&:summarize_for_lesson_show)
     }
   end
 
