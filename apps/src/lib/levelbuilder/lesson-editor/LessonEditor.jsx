@@ -10,6 +10,7 @@ import CollapsibleEditorSection from '@cdo/apps/lib/levelbuilder/CollapsibleEdit
 import {resourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
 import RelatedLessons from './RelatedLessons';
 import {relatedLessonShape} from '../shapes';
+import color from '@cdo/apps/util/color';
 
 const styles = {
   editor: {
@@ -29,6 +30,22 @@ const styles = {
   },
   dropdown: {
     margin: '0 6px'
+  },
+  saveButtonBackground: {
+    margin: 0,
+    position: 'fixed',
+    bottom: 0,
+    left: 0,
+    backgroundColor: color.lightest_gray,
+    borderColor: color.lightest_gray,
+    height: 50,
+    width: '100%',
+    zIndex: 900,
+    display: 'flex',
+    justifyContent: 'flex-end'
+  },
+  saveButton: {
+    margin: '10px 50px 10px 20px'
   }
 };
 
@@ -185,9 +202,15 @@ export default class LessonEditor extends Component {
           <ActivitiesEditor />
         </CollapsibleEditorSection>
 
-        <button className="btn btn-primary" type="submit" style={{margin: 0}}>
-          Save Changes
-        </button>
+        <div style={styles.saveButtonBackground}>
+          <button
+            className="btn btn-primary"
+            type="submit"
+            style={styles.saveButton}
+          >
+            Save Changes
+          </button>
+        </div>
       </div>
     );
   }
