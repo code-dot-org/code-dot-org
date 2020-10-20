@@ -568,7 +568,7 @@
           "patrolling2": "hliadkovať2",
           "shrinking2": "zmenšovanie2",
           "growing2": "zväčšovanie2",
-          "moving south2": "posúvať sa južne2"
+          "moving south2": "posúvať sa na juh2"
         },
         "Virtual Pet 3_2020": {
           "wandering": "túlať sa",
@@ -594,7 +594,7 @@
           "patrolling2": "hliadkovať2",
           "shrinking2": "zmenšovanie2",
           "growing2": "zväčšovanie2",
-          "moving south2": "posúvať sa južne2"
+          "moving south2": "posúvať sa na juh2"
         },
         "Virtual Pet 4": {
           "shrinking": "zmenšovať sa",
@@ -686,7 +686,7 @@
           "patrolling": "hliadkovať",
           "moving east": "posúvať sa na východ",
           "mystery behavior": "záhadné správanie",
-          "running east": "posunúť východne"
+          "running east": "posunúť na východ"
         },
         "behaviors 1_2020": {
           "wandering": "túlať sa",
@@ -702,7 +702,7 @@
           "patrolling": "hliadkovať",
           "moving east": "posúvať sa na východ",
           "mystery behavior": "záhadné správanie",
-          "running east": "posunúť východne"
+          "running east": "posunúť na východ"
         },
         "behaviors 2": {
           "wandering": "túlať sa",
@@ -718,7 +718,7 @@
           "patrolling": "hliadkovať",
           "moving east": "posúvať sa na východ",
           "flying": "letieť",
-          "running east": "posunúť východne"
+          "running east": "posunúť na východ"
         },
         "behaviors 2_2020": {
           "wandering": "túlať sa",
@@ -734,7 +734,7 @@
           "patrolling": "hliadkovať",
           "moving east": "posúvať sa na východ",
           "flying": "letieť",
-          "running east": "posunúť východne"
+          "running east": "posunúť na východ"
         },
         "behaviors 3": {
           "wandering": "túlať sa",
@@ -749,8 +749,8 @@
           "moving west": "posúvať sa na západ",
           "patrolling": "hliadkovať",
           "moving east": "posúvať sa na východ",
-          "zooming east": "rútiť sa východne",
-          "driving east": "jazdiť východne"
+          "zooming east": "rútiť sa na východ",
+          "driving east": "jazdiť na východ"
         },
         "behaviors 3_2020": {
           "wandering": "túlať sa",
@@ -765,8 +765,8 @@
           "moving west": "posúvať sa na západ",
           "patrolling": "hliadkovať",
           "moving east": "posúvať sa na východ",
-          "zooming east": "rútiť sa východne",
-          "driving east": "jazdiť východne"
+          "zooming east": "rútiť sa na východ",
+          "driving east": "jazdiť na východ"
         },
         "behaviors 3a": {
           "spinning right": "rýchlo sa otočiť vpravo",
@@ -781,8 +781,8 @@
           "moving west": "posúvať sa na západ",
           "patrolling": "hliadkovať",
           "moving east": "posúvať sa na východ",
-          "zooming east": "rútiť sa východne",
-          "driving east": "jazdiť východne"
+          "zooming east": "rútiť sa na východ",
+          "driving east": "jazdiť na východ"
         },
         "behaviors 3a_2020": {
           "spinning right": "rýchlo sa otočiť vpravo",
@@ -797,8 +797,8 @@
           "moving west": "posúvať sa na západ",
           "patrolling": "hliadkovať",
           "moving east": "posúvať sa na východ",
-          "zooming east": "rútiť sa východne",
-          "driving east": "jazdiť východne"
+          "zooming east": "rútiť sa na východ",
+          "driving east": "jazdiť na východ"
         },
         "behaviors 4": {
           "wandering": "túlať sa",
@@ -813,8 +813,8 @@
           "moving west": "posúvať sa na západ",
           "patrolling": "hliadkovať",
           "moving east": "posúvať sa na východ",
-          "move south and west": "Posuň sa južne a západne",
-          "running east": "posunúť východne"
+          "move south and west": "Posuň sa na juh a na západ",
+          "running east": "posunúť na východ"
         },
         "behaviors 4_2020": {
           "wandering": "túlať sa",
@@ -829,8 +829,8 @@
           "moving west": "posúvať sa na západ",
           "patrolling": "hliadkovať",
           "moving east": "posúvať sa na východ",
-          "move south and west": "Posuň sa južne a západne",
-          "running east": "posunúť východne"
+          "move south and west": "Posuň sa na juh a na západ",
+          "running east": "posunúť na východ"
         },
         "behaviors 6": {
           "spinning left": "rýchlo sa otočiť vľavo",
@@ -846,7 +846,7 @@
           "moving west": "posúvať sa na západ",
           "patrolling": "hliadkovať",
           "rolling": "kotúľajúc sa",
-          "running east": "posunúť východne"
+          "running east": "posunúť na východ"
         },
         "behaviors 6_2020": {
           "spinning left": "rýchlo sa otočiť vľavo",
@@ -862,7 +862,7 @@
           "moving west": "posúvať sa na západ",
           "patrolling": "hliadkovať",
           "rolling": "kotúľajúc sa",
-          "running east": "posunúť východne"
+          "running east": "posunúť na východ"
         },
         "behaviors 7": {
           "moving north": "posúvať sa na sever",
@@ -878,7 +878,7 @@
           "patrolling": "hliadkovať",
           "moving east": "posúvať sa na východ",
           "rolling": "kotúľajúc sa",
-          "running east": "posunúť východne"
+          "running east": "posunúť na východ"
         },
         "behaviors 7_2020": {
           "moving north": "posúvať sa na sever",
@@ -894,7 +894,7 @@
           "patrolling": "hliadkovať",
           "moving east": "posúvať sa na východ",
           "rolling": "kotúľajúc sa",
-          "running east": "posunúť východne"
+          "running east": "posunúť na východ"
         },
         "courseE_Dogger_2": {
           "drive left": "jazdi vľavo",

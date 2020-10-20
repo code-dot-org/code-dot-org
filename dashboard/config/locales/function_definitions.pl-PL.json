@@ -554,6 +554,32 @@
           },
           "draw a house": {
             "name": "narysuj dom"
+          },
+          "draw a door": {
+            "name": "narysuj drzwi"
+          },
+          "draw grass": {
+            "name": "narysuj drzwi"
+          },
+          "draw windows": {
+            "name": "narysuj okna"
+          },
+          "rectangle": {
+            "name": "prostokąt",
+            "description": "lol"
+          },
+          "sun": {
+            "name": "słońce"
+          },
+          "window": {
+            "name": "okno"
+          },
+          "triangle": {
+            "name": "trójkąt"
+          },
+          "square": {
+            "name": "kwadrat",
+            "description": "lol"
           }
         },
         "Geometric Sun_2018": {
@@ -562,6 +588,32 @@
           },
           "draw a house": {
             "name": "narysuj dom"
+          },
+          "draw a door": {
+            "name": "narysuj drzwi"
+          },
+          "draw grass": {
+            "name": "narysuj drzwi"
+          },
+          "draw windows": {
+            "name": "narysuj okna"
+          },
+          "rectangle": {
+            "name": "prostokąt",
+            "description": "lol"
+          },
+          "sun": {
+            "name": "słońce"
+          },
+          "window": {
+            "name": "okno"
+          },
+          "triangle": {
+            "name": "trójkąt"
+          },
+          "square": {
+            "name": "kwadrat",
+            "description": "lol"
           }
         },
         "Guess The Number": {
@@ -577,18 +629,22 @@
             "parameters": {
               "sides": "boki",
               "length": "długość"
-            }
+            },
+            "name": "kształt n-boczny",
+            "description": "Kształt zmienia się w oparciu o to, ile boków ma obecnie. Wymaga to dwóch parametrów: długości i boków. Długość!"
           },
           "draw a loop": {
             "parameters": {
               "length": "długość",
               "sides": "boki"
-            }
+            },
+            "name": "narysuj pętlę"
           },
           "draw spiral circle": {
             "parameters": {
               "size": "rozmiar"
-            }
+            },
+            "name": "narysuj spiralny okrąg"
           }
         },
         "InspirationalArtwork_2018": {
@@ -596,12 +652,18 @@
             "parameters": {
               "length": "długość",
               "sides": "boki"
-            }
+            },
+            "name": "narysuj pętlę"
           },
           "draw spiral circle": {
             "parameters": {
               "size": "rozmiar"
-            }
+            },
+            "name": "narysuj spiralny okrąg"
+          },
+          "n-sided shape": {
+            "name": "kształt n-boczny",
+            "description": "Kształt zmienia się w oparciu o to, ile boków ma obecnie. Wymaga to dwóch parametrów: długości i boków. Długość!"
           }
         },
         "MC_HOC_2017_07_Cole": {
@@ -1075,28 +1137,44 @@
           "draw flame": {
             "parameters": {
               "x": "x"
-            }
+            },
+            "name": "narysuj płomień"
+          },
+          "draw fire": {
+            "name": "narysuj ogień"
           }
         },
         "courseC_artist_prog3_2018": {
           "draw flame": {
             "parameters": {
               "x": "x"
-            }
+            },
+            "name": "narysuj płomień"
+          },
+          "draw fire": {
+            "name": "narysuj ogień"
           }
         },
         "courseC_artist_prog3_2019": {
           "draw flame": {
             "parameters": {
               "x": "x"
-            }
+            },
+            "name": "narysuj płomień"
+          },
+          "draw fire": {
+            "name": "narysuj ogień"
           }
         },
         "courseC_artist_prog3_2020": {
           "draw flame": {
             "parameters": {
               "x": "x"
-            }
+            },
+            "name": "narysuj płomień"
+          },
+          "draw fire": {
+            "name": "narysuj ogień"
           }
         },
         "courseC_data wizard": {
@@ -2387,16 +2465,25 @@
         "courseF_bee_variables_8_2018": {
           "collect": {
             "name": "zbierz"
+          },
+          "move and increment": {
+            "name": "ruch i przyrost"
           }
         },
         "courseF_bee_variables_8_2019": {
           "collect": {
             "name": "zbierz"
+          },
+          "move and increment": {
+            "name": "ruch i przyrost"
           }
         },
         "courseF_bee_variables_8_2020": {
           "collect": {
             "name": "zbierz"
+          },
+          "move and increment": {
+            "name": "ruch i przyrost"
           }
         },
         "grade5_artist_binary11": {
@@ -2432,6 +2519,140 @@
             "parameters": {
               "binary": "binarny"
             }
+          }
+        },
+        "Robot Doodle": {
+          "25 pixel square": {
+            "name": "kwadrat 25-pikselowy"
+          },
+          "draw eye": {
+            "name": "narysuj oko"
+          }
+        },
+        "Robot Doodle_2018": {
+          "25 pixel square": {
+            "name": "kwadrat 25-pikselowy"
+          },
+          "draw eye": {
+            "name": "narysuj oko"
+          }
+        },
+        "courseC_artist_prog4": {
+          "booster": {
+            "name": "podbicie"
+          }
+        },
+        "courseC_artist_prog4_2018": {
+          "booster": {
+            "name": "podbicie"
+          }
+        },
+        "courseC_artist_prog4_2019": {
+          "booster": {
+            "name": "podbicie"
+          }
+        },
+        "courseC_artist_prog4_2020": {
+          "booster": {
+            "name": "podbicie"
+          }
+        },
+        "courseE_Dogger_2": {
+          "stop_everything": {
+            "name": "zatrzymaj_wszystko"
+          },
+          "lose": {
+            "name": "przegrywasz"
+          }
+        },
+        "courseF_bee_variables_1_2018": {
+          "collect row": {
+            "name": "zbierz rząd"
+          }
+        },
+        "courseF_bee_variables_1_2019": {
+          "collect row": {
+            "name": "zbierz rząd"
+          }
+        },
+        "courseF_bee_variables_1_2020": {
+          "collect row": {
+            "name": "zbierz rząd"
+          }
+        },
+        "courseF_bee_variables_2_2018": {
+          "collect row": {
+            "name": "zbierz rząd"
+          }
+        },
+        "courseF_bee_variables_2_2019": {
+          "collect row": {
+            "name": "zbierz rząd"
+          }
+        },
+        "courseF_bee_variables_2_2020": {
+          "collect row": {
+            "name": "zbierz rząd"
+          }
+        },
+        "courseF_bee_variables_3_2018": {
+          "collect row": {
+            "name": "zbierz rząd"
+          }
+        },
+        "courseF_bee_variables_3_2019": {
+          "collect row": {
+            "name": "zbierz rząd"
+          }
+        },
+        "courseF_bee_variables_3_2020": {
+          "collect row": {
+            "name": "zbierz rząd"
+          }
+        },
+        "courseF_bee_variables_4_2018": {
+          "collect row": {
+            "name": "zbierz rząd"
+          }
+        },
+        "courseF_bee_variables_4_2019": {
+          "collect row": {
+            "name": "zbierz rząd"
+          }
+        },
+        "courseF_bee_variables_4_2020": {
+          "collect row": {
+            "name": "zbierz rząd"
+          }
+        },
+        "courseF_bee_variables_5_2018": {
+          "collect row": {
+            "name": "zbierz rząd"
+          }
+        },
+        "courseF_bee_variables_5_2019": {
+          "collect row": {
+            "name": "zbierz rząd"
+          }
+        },
+        "courseF_bee_variables_5_2020": {
+          "collect row": {
+            "name": "zbierz rząd"
+          }
+        },
+        "courseF_bee_variables_6_2018": {
+          "collect stairs": {
+            "name": "zbierz schody"
+          }
+        },
+        "courseF_bee_variables_6_2019": {
+          "collect stairs": {
+            "name": "zbierz schody"
+          }
+        },
+        "courseF_bee_variables_6_2020": {
+          "collect stairs": {
+            "name": "zbierz schody"
           }
         }
       }

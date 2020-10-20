@@ -1381,6 +1381,13 @@
         },
         "courseA_artist_loops8_2020": {
           "courseA_artist_loops8_1": "Savais-tu que tu peux redessiner par dessus une ligne quand tu en as besoin?"
+        },
+        "courseC_video_angles": {
+          "courseD_maze_ramp6_1": "Quelque soit le code que tu mettras ici, il se répètera autant de fois que tu en donneras l’instruction, puis continuera à exécuter le reste du programme."
+        },
+        "courseD_video_nestedLoopsArtist": {
+          "courseE_artist_ramp8_1": "Tu peux modifier ce nombre.",
+          "courseE_artist_ramp8_2": "Clique ici pour taper le nombre de fois que ce code doit se répéter."
         }
       }
     }
