@@ -24,6 +24,14 @@ export default class AddLevelTableRow extends Component {
     this.props.addLevel(level);
   };
 
+  determineErrorMessage = (error, newLevelName) => {
+    if (error === 'Validation failed: Name has already been taken') {
+      return `A level named ${newLevelName} already exists`;
+    }
+
+    return error;
+  };
+
   handleCloneAndAddLevel = level => {
     this.setState({creatingClonedLevel: true, error: null});
     const newLevelName = prompt('Enter new level name');
@@ -43,7 +51,7 @@ export default class AddLevelTableRow extends Component {
         .fail(error => {
           this.setState({
             creatingClonedLevel: false,
-            error: error.responseText
+            error: this.determineErrorMessage(error.responseText, newLevelName)
           });
         });
     } else {
