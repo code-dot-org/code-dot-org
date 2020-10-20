@@ -3,20 +3,32 @@ import PropTypes from "prop-types";
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import train, { availableTrainers } from "../train";
-import { setShowPredict } from "../redux";
+import { setShowPredict, getAccuracy } from "../redux";
 
 class TrainModel extends Component {
   static propTypes = {
     selectedFeatures: PropTypes.array,
     labelColumn: PropTypes.string,
     setShowPredict: PropTypes.func.isRequired,
-    selectedTrainer: PropTypes.string
+    selectedTrainer: PropTypes.string,
+    accuracy: PropTypes.number
   };
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      showAccuracy: false
+    };
+  }
 
   onClickTrainModel = () => {
     train.init();
     train.onClickTrain();
     this.props.setShowPredict(true);
+    this.setState({
+      showAccuracy: true
+    });
   };
 
   render() {
@@ -37,6 +49,16 @@ class TrainModel extends Component {
               <button type="button" onClick={this.onClickTrainModel}>
                 Train model
               </button>
+              {this.state.showAccuracy && (
+                <div>
+                  <p>
+                    10% of the training data was reserved to test the accuracy
+                    of the newly trained model. The calcualted accuracy of this
+                    model is:
+                  </p>
+                  {this.props.accuracy}%
+                </div>
+              )}
             </div>
           )}
       </div>
@@ -48,7 +70,8 @@ export default connect(
   state => ({
     selectedFeatures: state.selectedFeatures,
     labelColumn: state.labelColumn,
-    selectedTrainer: state.selectedTrainer
+    selectedTrainer: state.selectedTrainer,
+    accuracy: getAccuracy(state)
   }),
   dispatch => ({
     setShowPredict(showPredict) {

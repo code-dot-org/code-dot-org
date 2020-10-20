@@ -7,6 +7,10 @@ const SET_COLUMNS_BY_DATA_TYPE = "SET_COLUMNS_BY_DATA_TYPE";
 const SET_SELECTED_FEATURES = "SET_SELECTED_FEATURES";
 const SET_LABEL_COLUMN = "SET_LABEL_COLUMN";
 const SET_FEATURE_NUMBER_KEY = "SET_FEATURE_NUMBER_KEY";
+const SET_ACCURACY_CHECK_EXAMPLES = "SET_ACCURACY_CHECK_EXAMPLES";
+const SET_ACCURACY_CHECK_LABELS = "SET_ACCURACY_CHECK_LABELS";
+const SET_ACCURACY_CHECK_PREDICTED_LABELS =
+  "SET_ACCURACY_CHECK_PREDICTED_LABELS";
 const SET_TRAINING_EXAMPLES = "SET_TRAINING_EXAMPLES";
 const SET_TRAINING_LABELS = "SET_TRAINING_LABELS";
 const SET_SHOW_PREDICT = "SET_SHOW_PREDICT";
@@ -56,6 +60,18 @@ export function setFeatureNumberKey(featureNumberKey) {
   return { type: SET_FEATURE_NUMBER_KEY, featureNumberKey };
 }
 
+export function setAccuracyCheckExamples(accuracyCheckExamples) {
+  return { type: SET_ACCURACY_CHECK_EXAMPLES, accuracyCheckExamples };
+}
+
+export function setAccuracyCheckLabels(accuracyCheckLabels) {
+  return { type: SET_ACCURACY_CHECK_LABELS, accuracyCheckLabels };
+}
+
+export function setAccuracyCheckPredictedLabels(predictedLabels) {
+  return { type: SET_ACCURACY_CHECK_PREDICTED_LABELS, predictedLabels };
+}
+
 export function setTrainingExamples(trainingExamples) {
   return { type: SET_TRAINING_EXAMPLES, trainingExamples };
 }
@@ -85,6 +101,9 @@ const initialState = {
   featureNumberKey: {},
   trainingExamples: [],
   trainingLabels: [],
+  accuracyCheckExamples: [],
+  accuracyCheckLabels: [],
+  accuracyCheckPredictedLabels: [],
   showPredict: false,
   testData: {},
   prediction: {}
@@ -142,6 +161,24 @@ export default function rootReducer(state = initialState, action) {
     return {
       ...state,
       trainingLabels: action.trainingLabels
+    };
+  }
+  if (action.type === SET_ACCURACY_CHECK_EXAMPLES) {
+    return {
+      ...state,
+      accuracyCheckExamples: action.accuracyCheckExamples
+    };
+  }
+  if (action.type === SET_ACCURACY_CHECK_LABELS) {
+    return {
+      ...state,
+      accuracyCheckLabels: action.accuracyCheckLabels
+    };
+  }
+  if (action.type === SET_ACCURACY_CHECK_PREDICTED_LABELS) {
+    return {
+      ...state,
+      accuracyCheckPredictedLabels: action.predictedLabels
     };
   }
   if (action.type === SET_SHOW_PREDICT) {
@@ -250,6 +287,19 @@ export function getConvertedPredictedLabel(state) {
       : state.prediction.predictedLabel;
     return label;
   }
+}
+
+export function getAccuracy(state) {
+  let numCorrect = 0;
+  const numPredictedLabels = state.accuracyCheckPredictedLabels.length;
+  for (let i = 0; i < numPredictedLabels; i++) {
+    if (
+      state.accuracyCheckLabels[i] === state.accuracyCheckPredictedLabels[i]
+    ) {
+      numCorrect++;
+    }
+  }
+  return (numCorrect / numPredictedLabels) * 100;
 }
 
 export const ColumnTypes = {
