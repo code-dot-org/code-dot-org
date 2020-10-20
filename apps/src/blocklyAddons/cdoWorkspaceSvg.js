@@ -78,14 +78,22 @@ WorkspaceSvg.getContentDimensionsBounded_ = function(ws, svgSize) {
   const content = Blockly.WorkspaceSvg.getContentDimensionsExact_(ws);
 
   // View height and width are both in pixels, and are the same as the SVG size.
-  const viewWidth = svgSize.width;
-  const viewHeight = svgSize.height;
+  const containerWidth = svgSize.width;
+  const containerHeight = svgSize.height;
+
+  // Add extra vertical space beneath the last block
+  const extraVerticalSpace = 100;
+  content.bottom += extraVerticalSpace;
+
+  // Workspace height is either the length of the blocks or the height of the container,
+  // whichever is greater.
+  const height = Math.max(content.bottom, containerHeight);
 
   const dimensions = {
     left: 0,
     top: 0,
-    height: Math.max(content.bottom + viewHeight / 2, viewHeight),
-    width: viewWidth // No horizontal scroll
+    height: height,
+    width: containerWidth // No horizontal scroll
   };
   return dimensions;
 };
