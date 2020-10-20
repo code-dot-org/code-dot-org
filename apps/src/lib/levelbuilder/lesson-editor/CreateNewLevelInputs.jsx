@@ -37,27 +37,35 @@ export default class CreateNewLevelInputs extends Component {
 
   handleCreateLevel = () => {
     this.setState({creatingLevel: true, error: null});
-    $.ajax({
-      url: '/levels?do_not_redirect=true',
-      method: 'POST',
-      dataType: 'json',
-      data: JSON.stringify({
-        type: this.state.levelType,
-        name: this.state.levelName
-      }),
-      contentType: 'application/json;charset=UTF-8'
-    })
-      .done(data => {
-        this.props.addLevel(data);
-        this.setState({creatingLevel: false});
-      })
-      .fail(error => {
-        console.log(error.responseText);
-        this.setState({
-          creatingLevel: false,
-          error: 'Could not create level'
-        });
+    const needMoreLevelInformation = this.state.levelName === '' || this.state.levelType === '';
+    if (needMoreLevelInformation) {
+      this.setState({
+        creatingLevel: false,
+        error: this.state.levelType === '' ? 'Please choose a level type' : 'Please enter a level name'
       });
+    } else {
+      $.ajax({
+        url: '/levels?do_not_redirect=true',
+        method: 'POST',
+        dataType: 'json',
+        data: JSON.stringify({
+          type: this.state.levelType,
+          name: this.state.levelName
+        }),
+        contentType: 'application/json;charset=UTF-8'
+      })
+        .done(data => {
+          this.props.addLevel(data);
+          this.setState({creatingLevel: false});
+        })
+        .fail(error => {
+          console.log(error.responseText);
+          this.setState({
+            creatingLevel: false,
+            error: 'Could not create level'
+          });
+        });
+    }
   };
 
   render() {
