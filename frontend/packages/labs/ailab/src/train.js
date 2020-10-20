@@ -95,7 +95,7 @@ const buildOptionNumberKeysByFeature = state => {
 const convertValue = (state, feature, row) => {
   return getCategoricalColumns(state).includes(feature)
     ? state.featureNumberKey[feature][row[feature]]
-    : parseInt(row[feature]);
+    : parseFloat(row[feature]);
 };
 
 /* Builds an array containing integer values associated with each feature's
