@@ -583,7 +583,7 @@ StudioApp.prototype.init = function(config) {
     );
   }
 
-  if (!config.readOnlyWorkspace) {
+  if (!config.readonlyWorkspace) {
     this.addChangeHandler(this.editDuringRunAlertHandler.bind(this));
   }
 
