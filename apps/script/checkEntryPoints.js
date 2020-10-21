@@ -43,6 +43,7 @@ const child_process = require('child_process');
 
 const SILENCED = [
   // app types loaded conditionally from _apps_dependencies.html.haml
+  'ailab',
   'applab',
   'bounce',
   'calc',

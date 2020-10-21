@@ -279,3 +279,5 @@ level 'Video - The Future of Big Data'
 lesson 'ML Fish', display_name: 'ML Fish'
 level 'allthethings HOC ML Fish 1'
 
+lesson 'AI Lab', display_name: 'AI Lab'
+level 'allthethings AI Lab 1'
