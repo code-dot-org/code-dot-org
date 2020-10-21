@@ -22,6 +22,7 @@ import {TestResults, KeyCodes} from './constants';
 import QRCode from 'qrcode.react';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import experiments from '@cdo/apps/util/experiments';
+import clientState from '@cdo/apps/code-studio/clientState';
 
 // Types of blocks that do not count toward displayed block count. Used
 // by FeedbackUtils.blockShouldBeCounted_
@@ -1133,13 +1134,8 @@ FeedbackUtils.prototype.getShowCodeComponent_ = function(
   challenge = false
 ) {
   const numLinesWritten = this.getNumBlocksUsed();
-  const shouldShowTotalLines =
-    options.response &&
-    options.response.total_lines &&
-    options.response.total_lines !== numLinesWritten;
-  const totalNumLinesWritten = shouldShowTotalLines
-    ? options.response.total_lines
-    : 0;
+  const totalLines = clientState.lines();
+  const totalNumLinesWritten = totalLines !== numLinesWritten ? totalLines : 0;
 
   const generatedCodeProperties = this.getGeneratedCodeProperties({
     generatedCodeDescription:
