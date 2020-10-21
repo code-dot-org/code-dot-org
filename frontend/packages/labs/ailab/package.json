@@ -1,13 +1,13 @@
 {
-  "name": "ml-playground",
-  "version": "1.0.1",
-  "main": "index.js",
+  "name": "@code-dot-org/ml-playground",
+  "version": "0.0.5",
+  "main": "dist/main.js",
   "repository": "git@github.com:code-dot-org/ml-playground.git",
   "author": "",
   "license": "MIT",
   "private": false,
   "engines": {
-    "node": ">=14.12.0",
+    "node": ">=8.15",
     "npm": ">=3.10.8"
   },
   "scripts": {
@@ -45,5 +45,9 @@
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-preset-stage-1": "^6.24.1",
     "jest": "^26.4.2"
-  }
+  },
+  "files": [
+    "dist/**/!(oceans.js)",
+    "i18n/oceans.json"
+  ]
 }
