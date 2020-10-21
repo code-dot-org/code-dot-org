@@ -4,6 +4,7 @@ import {connect} from 'react-redux';
 import Button from './Button';
 import i18n from '@cdo/locale';
 import {unassignSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 const styles = {
   buttonMargin: {
@@ -33,6 +34,14 @@ class UnassignButton extends React.Component {
 
   onClickUnassign = () => {
     const {sectionId, unassignSection} = this.props;
+    firehoseClient.putRecord(
+      {
+        study: 'teacher_course_page',
+        event: 'section-unassigned',
+        data_json: JSON.stringify({sectionId})
+      },
+      {includeUserId: true}
+    );
     unassignSection(sectionId);
   };
 
