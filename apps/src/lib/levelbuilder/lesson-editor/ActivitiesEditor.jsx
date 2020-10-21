@@ -9,6 +9,7 @@ import {
   NEW_LEVEL_ID
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
 import _ from 'lodash';
+import ReactDOM from 'react-dom';
 
 const styles = {
   activityEditAndPreview: {
@@ -81,11 +82,24 @@ class ActivitiesEditor extends Component {
     this.setState({targetActivitySectionPos});
   };
 
-  // To be populated with the bounding client rect of each ActivitySectionCard element.
-  activitySectionMetrics = {};
+  // To be populated with the react ref of each ActivitySectionCard element.
+  activitySectionRefs = [];
 
-  setActivitySectionMetrics = (metrics, activitySectionPosition) => {
-    this.activitySectionMetrics[activitySectionPosition] = metrics;
+  setActivitySectionRef = (activitySectionRef, activitySectionPosition) => {
+    this.activitySectionRefs[activitySectionPosition] = activitySectionRef;
+  };
+
+  // To be populated with the bounding client rect of each ActivitySectionCard element.
+  activitySectionMetrics = [];
+
+  // populate activitySectionMetrics from activitySectionRefs.
+  updateActivitySectionMetrics = () => {
+    this.activitySectionMetrics = [];
+    this.activitySectionRefs.forEach((ref, position) => {
+      const node = ReactDOM.findDOMNode(ref);
+      const rect = !!node && node.getBoundingClientRect();
+      this.activitySectionMetrics[position] = rect;
+    });
   };
 
   // Serialize the activities into JSON, renaming any keys which are different
@@ -135,10 +149,11 @@ class ActivitiesEditor extends Component {
               activity={activity}
               activitiesCount={activities.length}
               key={activity.key}
-              setActivitySectionMetrics={this.setActivitySectionMetrics}
+              setActivitySectionRef={this.setActivitySectionRef}
               setTargetActivitySection={this.setTargetActivitySection}
               targetActivitySectionPos={this.state.targetActivitySectionPos}
               activitySectionMetrics={this.activitySectionMetrics}
+              updateActivitySectionMetrics={this.updateActivitySectionMetrics}
             />
           ))}
           <button
