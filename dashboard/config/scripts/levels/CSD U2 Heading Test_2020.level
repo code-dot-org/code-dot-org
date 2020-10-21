@@ -20,6 +20,7 @@
     "map_reference": "/docs/concepts/html/headings-and-paragraphs/",
     "rubric_key_concept": "Use HTML to create a web page that includes hierarchical headings, paragraphs, lists, and images.\r\n\r\nUnderstand the need for precision when using computer languages and use appropriate syntax.\r\n",
     "mini_rubric": "true",
+    "validation_enabled": "true",
     "encrypted": "false",
     "rubric_performance_level_1": "All content is contained in tags, uses paragraph tags and multiple sized headings in a logically consistent way.",
     "rubric_performance_level_2": "All content is contained in tags, uses paragraph and heading tags in a reasonable way.",

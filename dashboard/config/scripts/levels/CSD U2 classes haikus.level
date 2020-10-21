@@ -33,7 +33,7 @@
     "rubric_performance_level_4": "No class or rule sets are created, or no website elements are put in the class.",
     "rubric_key_concept": "Create classes that can be referenced and affected as a group.",
     "encrypted_examples": "+MGfTkG+3LbP60yMKF4JKGolTeTwYmFppZYlKVpjUC/e/Q6tsY+Mz71iIfPX\nN5ghH5UxKf7eDk4ra7am4Wt6Hw==\n",
-    "validation_enabled": "false"
+    "validation_enabled": "true"
   },
   "published": true,
   "notes": "",
