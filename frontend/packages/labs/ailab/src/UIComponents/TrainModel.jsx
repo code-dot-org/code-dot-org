@@ -53,7 +53,7 @@ class TrainModel extends Component {
                 <div>
                   <p>
                     10% of the training data was reserved to test the accuracy
-                    of the newly trained model. The calcualted accuracy of this
+                    of the newly trained model. The calculated accuracy of this
                     model is:
                   </p>
                   {this.props.accuracy}%

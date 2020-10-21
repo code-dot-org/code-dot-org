@@ -135,7 +135,9 @@ const prepareTrainingData = () => {
   const trainingLabels = updatedState.data
     .map(row => extractLabel(updatedState, row))
     .filter(label => label !== undefined && label !== "");
-  // Reserve 10% of the data to calculate accuracy
+  // Randomly select 10% of examples and corresponding labels from the training // set to reserve for a post-training accuracy calculation. The accuracy check
+  // examples and labels are excluded from the training set when the model is
+  // trained and saved to state separately to test the model's accuracy.
   const accuracyCheckExamples = [];
   const accuracyCheckLabels = [];
   const numToReserve = parseInt(trainingExamples.length * 0.1);
