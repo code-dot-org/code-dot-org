@@ -626,6 +626,7 @@ export default {
     // blockInstallOptions is undefined.
     if (
       !blockInstallOptions ||
+      !blockInstallOptions.level ||
       blockInstallOptions.level.editBlocks !== TOOLBOX_EDIT_MODE
     ) {
       Blockly.Flyout.configure(Blockly.BlockValueType.BEHAVIOR, {

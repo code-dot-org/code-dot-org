@@ -1,4 +1,5 @@
 import $ from 'jquery';
+import initializeCodeMirror from '@cdo/apps/code-studio/initializeCodeMirror';
 
 $(initPage);
 
@@ -9,6 +10,9 @@ function initPage() {
   if (autoValidate.length > 0) {
     embed.on('click', () => syncValidateWithElements(embed, widgetMode));
     widgetMode.on('click', () => syncValidateWithElements(embed, widgetMode));
+  }
+  if (document.getElementById('level_validation_code')) {
+    initializeCodeMirror('level_validation_code', 'javascript');
   }
 }
 
