@@ -1,6 +1,7 @@
 {
   "pages": {
-    "/projects": "home-learning-2020"
+    "/projects": "home-learning-2020",
+    "/home": "soonhoc-2020"
   },
 
   "banners": {
@@ -46,8 +47,15 @@
       "buttonUrl": "https://code.org/athome/project-ideas",
       "buttonId": "view-project-ideas-2020-button",
       "backgroundColor": "#59b9dc"
+    },
+   "soonhoc-2020": {
+      "image": "/images/teacherdashboard1.png",
+      "title": "The Hour of Code is Coming",
+      "body": "Sign up your class to try one of the over 115 new activities for the Hour of Code (Dec. 7-13). This year, we’ll explore how we can harness computer science and technologies like AI to help build the society we want to live in. Sign up today!",
+      "buttonText": "Join Us",
+      "buttonUrl": "https://hourofcode.com/us#join",
+      "buttonId": "2020-soonhoc"
     }
-
 
   }
 }
