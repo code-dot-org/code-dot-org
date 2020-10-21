@@ -8633,6 +8633,25 @@
         "iceage_warn_ice_age": {
           "iceage_warn_ice_age_a": "Devi semplicemente aggiungere due blocchi per risolvere questo esercizio.",
           "iceage_warn_ice_age_b": "Aggiungi entrambi i nuovi blocchi sotto all'evento `quando si clicca su \"Esegui\"` per farli eseguire immediatamente all'avvio del programma."
+        },
+        "courseC_video_angles": {
+          "courseD_scrat_programming6_a": "Ci sono due modi per risolvere questo esercizio!",
+          "courseD_scrat_programming6_b": "Ricorda di girare prima di muoverti, visto che Scrat è rivolto nella direzione sbagliata.",
+          "courseD_scrat_programming6_c": "Non aver paura di sbagliare! Prova ad aggiungere blocchi ed eseguire il codice per vedere cosa succede, anche se non hai ancora risolto l'esercizio."
+        },
+        "courseD_video_nestedLoopsArtist": {
+          "courseE_artist_ramp8_a": "Per disegnare un lato, usa il blocco `vai avanti di 100 pixel` e cambia il 100 in 200.",
+          "courseE_artist_ramp8_b": "Per disegnare 4 lati, inserisci il blocco `vai avanti di 100 pixel` all'interno di un ciclo di ripetizione e assicurarsi che il ciclo sia impostato per ripetersi 4 volte.\n\nNon dimenticarti di girare!",
+          "courseE_artist_ramp8_c": "Il ciclo deve contenere due blocchi: `vai avanti` e `gira a destra di 90 gradi`.",
+          "courseD_artist_ramp12_a": "In cosa è simile a un quadrato? e in cosa differisce?",
+          "courseD_artist_ramp12_b": "Puoi usare il menù a discesa (▼) del blocco `gira a ...` per vedere gli angoli tra cui scegliere!",
+          "courseD_artist_ramp12_c": "Per disegnare ogni lato, è necessario andare avanti di 100 pixel e poi girare a destra di 120 gradi. Quanti lati ti servono?"
+        },
+        "courseE_bee_ramp14": {
+          "courseE_farmer_ramp12d_b": "Per risolvere questo esercizio, dovrai anche mettere i cicli `ripeti fino a che` e `mentre` all'interno di un ciclo `ripeti ... volte`!\nRicorda: il ciclo `ripeti fino a che sei su una lattuga` ripete tutti i blocchi che contiene per tutto il tempo in cui NON sei su una lattuga e si interrompe quando finalmente arrivi ad una lattuga."
+        },
+        "courseE_farmer_predict2": {
+          "courseE_farmer_ramp12e_b": "La soluzione di questo esercizio è molto simile a quella del precedente, ma girando nella direzione opposta."
         }
       }
     }

@@ -5,6 +5,7 @@ az:
       category:
         hoc_category_name: Kod Saatı
         math_category_name: Riyaziyyat
+        other_category_name: Digər
       name:
         course1:
           title: Kurs 1

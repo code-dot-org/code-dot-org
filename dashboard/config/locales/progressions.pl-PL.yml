@@ -14,10 +14,12 @@ pl:
       Attribution: Atrybucja
       Basic Conditionals: Podstawowe Wyrażenia warunkowe
       Binary Numbers: Liczby binarne
+      Board Events: Zdarzenia na tablicy
       Board Input and Output: Wejście i Wyjście Płyty
       Boolean Comparison: Porównanie Logiczne
       Build a Screen: Zbuduj ekran
       Building an App: Tworzenie aplikacji
+      CS Discoveries Post-Course Survey: Ankieta po kursie "Odkrycia Informatyki"
       CS Discoveries Post-course Survey: Ankieta po kursie Odkrycia Informatyki
       Cake Defender: Obrońca Ciasta
       Challenge: Wyzwanie
@@ -31,6 +33,7 @@ pl:
       Collisions in Games: Kolizje w Grach
       Color LEDs: Kolorowe LED
       Combining Projects: Łączenie projektów
+      Combining Representations: Łączenie przedstawień
       'Conditionals: If Statements': 'Instrukcje Warunkowe: instrukcja "jeśli"'
       'Conditionals: If and If/Else Statements': 'Instrukcje Warunkowe: instrukcja
         "jeśli/w przeciwnym razie"'
@@ -47,7 +50,7 @@ pl:
       Events: Zdarzenia
       Events and Linking Screens: Zdarzenia i Ekrany z linkami
       Events and Properties: Zdarzenia i Właściwości
-      Example Projects: Projekty przykładowe
+      Example Projects: Przykłady projektów
       Example projects: Przykłady projektów
       Expanding Personal Website: Rozszerzanie Osobistej Witryny Internetowej
       Expanding Your Website: Rozszerzanie Twojej Witryny Internetowej
@@ -71,7 +74,8 @@ pl:
       Introducing Sprite Lab: Wprowadzenie Sprite Lab
       Introduction to Arrays: Wprowadzenie do tablic
       Iteration and Parameters: Iteracja i Parametry
-      Keyboard Input: Wejście klawiatury
+      Keeping Data Secret: Zachowywanie danych w tajemnicy
+      Keyboard Input: Wejście z klawiatury
       LED Apps: Aplikacje LED
       Lesson Extras: Dodatki do Lekcji
       Linking Pages: Łączenie stron
@@ -87,7 +91,9 @@ pl:
       Motorcycle: Motocykl
       Orientation: Orientacja
       Pair Programming: Programowanie w parach
+      Programming with Rey and BB-8: Programowanie z Reyem i BB-8
       Programs that Repeat: Programy, które Powtarzają
+      Project: Projekt
       Project - Background and Variables: Projekt - Tło i Zmienne
       Project - Sprites and Interactions: Projekt - Duszki i Interakcje
       Project Work: Praca Projektowa
@@ -100,6 +106,7 @@ pl:
       Repeat Blocks with the Artist: Bloki Powtarzania z Artystą
       Repeat Unit Statements: Instrukcje Powtarzaj jednostkę
       Repeat Until Statements: Instrukcje Powtarzaj aż
+      Representing Images: Przedstawianie obrazków
       Run a simulation: Uruchom symulację
       Sample Programs: Przykładowe Programy
       Screen Design: Projekt Ekranu
@@ -121,6 +128,7 @@ pl:
       Video: Wideo
       Warm Up: Rozgrzewka
       Website Project: Projekt Strony internetowej
+      While Loops with the Farmer: Pętle "dopóki" przy pomocy interfejsu Farmer
       Wrap-up: Podsumowanie
       Your Personal Website: Twoja Osobista Strona Internetowa
       isTouching: isTouching

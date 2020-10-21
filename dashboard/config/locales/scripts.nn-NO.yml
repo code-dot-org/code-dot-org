@@ -15,6 +15,7 @@ nn:
         full_course_category_name: Alle kurs
         hoc_category_name: Kodetimen
         math_category_name: Matematikk
+        other_category_name: Anna
       name:
         course1:
           title: Kurs 1
@@ -4018,3 +4019,5 @@ nn:
               name: Kurs A
             Course B:
               name: Kurs B
+            CS Discoveries:
+              name: Oppdagingar i informatikk

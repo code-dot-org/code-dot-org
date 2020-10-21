@@ -354,6 +354,11 @@ FactoryGirl.define do
       oauth_refresh_token 'fake-oauth-refresh-token'
     end
 
+    trait :microsoft_v2_sso_provider do
+      sso_provider_with_token
+      provider 'microsoft_v2_auth'
+    end
+
     trait :powerschool_sso_provider do
       untrusted_email_sso_provider
       provider 'powerschool'
@@ -791,10 +796,27 @@ FactoryGirl.define do
     end
   end
 
+  factory :resource do
+    url 'fake.url'
+    sequence(:key) {|n| "key-#{n}"}
+  end
+
   factory :callout do
     sequence(:element_id) {|n| "#pageElement#{n}"}
     localization_key 'drag_blocks'
     script_level
+  end
+
+  factory :lesson_activity do
+    sequence(:seeding_key) {|n| "lesson-activity-#{n}"}
+    sequence(:position)
+    lesson
+  end
+
+  factory :activity_section do
+    sequence(:seeding_key) {|n| "activity-section-#{n}"}
+    sequence(:position)
+    lesson_activity
   end
 
   factory :activity do

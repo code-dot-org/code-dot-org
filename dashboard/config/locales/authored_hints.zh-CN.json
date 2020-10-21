@@ -2732,7 +2732,7 @@
         "courseB_collector_loops6_2019": {
           "courseB_collector_loops6_a": "无法找出哪里出错？请使用\"步进\"按钮来逐模块运行程序。",
           "courseB_collector_loops6_b": "通过单击 \"3\" 并选择其他数字, 可以更改重复循环运行的次数。",
-          "courseB_collector_loops6_c": "需使用 3 次 `重复` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> 循环来通过此关。",
+          "courseB_collector_loops6_c": "需使用 3次`重复` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> 循环来解决这个难题。",
           "courseB_collector_loops6_d": "如果你感到迷惑, 试着把这个关卡分成3块。"
         },
         "courseB_collector_loops6_2020": {
@@ -6220,7 +6220,8 @@
           "courseD_farmer_condLoops5_b": "每个地方可能有不止一个玉米或生菜厂。使用`当`循环来收集所有这些!"
         },
         "courseD_farmer_condLoops5_2019": {
-          "courseD_farmer_condLoops5_b": "每个地方可能有不止一个玉米或生菜厂。使用`当`循环来收集所有这些!"
+          "courseD_farmer_condLoops5_b": "每个地方可能有不止一个玉米或生菜厂。使用`当`循环来收集所有这些!",
+          "courseD_farmer_condLoops5_a": "有一个新的循环: ' 重复直到有南瓜 '。你能看到它如何在这个关卡使用？"
         },
         "courseD_farmer_condLoops5_2020": {
           "courseD_farmer_condLoops5_a": "有一个新的循环: ' 重复直到在南瓜上 '。你能看到它如何在这个关卡使用？",
@@ -8734,6 +8735,25 @@
         "iceage_warn_ice_age": {
           "iceage_warn_ice_age_a": "您只需要在需要的地方添加两个模块来过关。 ",
           "iceage_warn_ice_age_b": "在 \"当运行时\" 事件下添加两个新模块, 使其在程序启动后立即运行。"
+        },
+        "courseC_video_angles": {
+          "courseD_scrat_programming6_a": "有两种方法来解决这个难题 ！",
+          "courseD_scrat_programming6_b": "记住在移动前先转向, 因为斯奎特朝着错误的方向。",
+          "courseD_scrat_programming6_c": "不要害怕犯错误! 即使你不认为你已经解决了这个关卡，尝试添加模块并运行代码, 看看会发生什么,。"
+        },
+        "courseD_video_nestedLoopsArtist": {
+          "courseE_artist_ramp8_a": "若要绘制一条边，使用`向前移动100像素`模块，并将100更改为200。",
+          "courseE_artist_ramp8_b": "若要绘制4条边，请将`向前移动100像素`模块放在重复循环里面，并确保该循环设置为4次。然后别忘了转向！",
+          "courseE_artist_ramp8_c": "你的循环应该有两个模块在里面：`向前移动`和`向右转90度`。",
+          "courseD_artist_ramp12_a": "这和正方形有什么相似之处？ 又有什么不同？",
+          "courseD_artist_ramp12_b": "您可以使用`转向`模块的下拉菜单来查看所需的角度!",
+          "courseD_artist_ramp12_c": "若要绘制每条边，需要向前移动100像素，然后向右转120度。你需要几条边？"
+        },
+        "courseE_bee_ramp14": {
+          "courseE_farmer_ramp12d_b": "你仍然需要把你的`直到`和`当`循环放到`重复`循环中来通过这个关卡!"
+        },
+        "courseE_farmer_predict2": {
+          "courseE_farmer_ramp12e_b": "这个关卡的解决方案看起来很像最后一个关卡的解决方案, 除了转向了另一个方向。"
         }
       }
     }

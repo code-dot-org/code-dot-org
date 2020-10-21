@@ -1,8 +1,8 @@
 ---
-title: Hour of Code and CSEdWeek Advisory Committee
+title: Hour of Code ve Bilgisayar Bilimi Eğitim Haftası Danışma Komitesi
 ---
 
-# Hour of Code and CSEdWeek Advisory Committee
+# Hour of Code ve Bilgisayar Bilimi Eğitim Haftası Danışma Komitesi
 
 {{ advisory-committee/about_headshots }}
 

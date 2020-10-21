@@ -8690,6 +8690,25 @@
         "iceage_warn_ice_age": {
           "iceage_warn_ice_age_a": "Solo deberías tener que añadir dos bloques para llevar este desafío a donde debe estar. ",
           "iceage_warn_ice_age_b": "Añade los dos nuevos bloques debajo del evento 'al ejecutar' para que ocurran inmediatamente después de que se inicie el programa."
+        },
+        "courseC_video_angles": {
+          "courseD_scrat_programming6_a": "¡Hay dos formas de resolver este desafío!",
+          "courseD_scrat_programming6_b": "Recuerda girar primero antes de moverte, ya que Scrat está mirando en la dirección incorrecta.",
+          "courseD_scrat_programming6_c": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el desafío."
+        },
+        "courseD_video_nestedLoopsArtist": {
+          "courseE_artist_ramp8_a": "Para dibujar un lado, utiliza el bloque `avanzar 100 pixeles`, y cambiar el 100 a un 200.",
+          "courseE_artist_ramp8_b": "Para dibujar 4 lados, ubica el bloque `avanzar por 100 píxeles` dentro de un loop repetir y asegúrate que el loop esté ajustado para dibujar 4 veces. \n\n¡No te olvides de girar después!",
+          "courseE_artist_ramp8_c": "Tu loop debe tener dos bloques dentro: `avanzar 'y` girar 90 grados hacia la derecha\\`.",
+          "courseD_artist_ramp12_a": "¿Cómo es esto similar a un cuadrado? ¿Como es diferente?",
+          "courseD_artist_ramp12_b": "¡Puedes utilizar el menú desplegable en los bloques 'girar' para ver qué ángulo necesitas!",
+          "courseD_artist_ramp12_c": "Para dibujar cada lado, deberás avanzar 100 píxeles, luego girar a la derecha 120 grados. ¿Cuántos lados necesitas?"
+        },
+        "courseE_bee_ramp14": {
+          "courseE_farmer_ramp12d_b": "¡De todos modos tendrás que poner sus loops `hasta y mientras` dentro de un loop `repetir` para resolver este desafío!"
+        },
+        "courseE_farmer_predict2": {
+          "courseE_farmer_ramp12e_b": "La solución a este desafío se parecerá mucho a la solución al último desafío, pero girando en la otra dirección."
         }
       }
     }

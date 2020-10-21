@@ -1091,9 +1091,6 @@
         "courseB_Scrat_ramp3b_2019": {
           "1": "הקוד שלך צריך להיראות כך:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\"/>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
-        "courseB_Scrat_ramp5a_2018": {
-          "1": "הקוד שלך צריך להיראות כך:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\"/>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
-        },
         "courseB_Scrat_ramp5a_2019": {
           "1": "הקוד שלך צריך להיראות כך:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\"/>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
@@ -2268,6 +2265,13 @@
         "coursea_maze_ramp1_2020": {
           "courseC_maze_programming1_a": "אם הציפור לא מגיעה אל החזיר, בדוק היטב ששני הבלוקים מחוברים יחד היטב ואז לחץ \"הרץ\" שוב.",
           "courseC_maze_programming1_b": "אל תפחד לטעות! נסה משהו, ואם זה לא מצליח, נסה משהו אחר!"
+        },
+        "courseB_Scrat_ramp5a_2018": {
+          "1": "הקוד שלך צריך להיראות כך:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\"/>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+        },
+        "courseC_video_angles": {
+          "courseD_scrat_programming6_a": "ישנן 2 דרכים לפתור את החידה הזו!",
+          "courseD_scrat_programming6_c": "אל תפחד לטעות! נסה להוסיף בלוקים והריץ את הקוד ותראה מה יקרה, גם אם אתה חושב שעדיין לא פתרת את החידה."
         }
       }
     }

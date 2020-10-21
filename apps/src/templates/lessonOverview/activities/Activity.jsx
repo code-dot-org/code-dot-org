@@ -23,7 +23,7 @@ export default class Activity extends Component {
         <h2 style={styles.activityHeader}>
           {i18n.activityHeader({
             activityName: activity.displayName,
-            activityTime: activity.time
+            activityDuration: activity.duration
           })}
         </h2>
         {activity.activitySections.map(item => {

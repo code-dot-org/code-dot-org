@@ -5,30 +5,44 @@ ar:
   language: الإنجليزية
   front_title: انضم إلى أكبر حدث تعليمي في التاريخ، %{campaign_date}
   coming_soon: قريباً
-  campaign_date_start_short: 4 ديسمبر
-  campaign_date_start_long: 4 ديسمبر
-  campaign_date_short: 4-10 ديسمبر
-  campaign_date_full: 4-10 ديسمبر
-  campaign_date_year: '2017'
-  campaign_date_full_year: 4-10 ديسمبر 2017
-  latam_campaign_date_start_short: Oct. 1
+  campaign_date_start_short: 7 ديسمبر
+  campaign_date_start_long: 7 ديسمبر
+  campaign_date_short: 7-13 ديسمبر
+  campaign_date_full: 7-13 ديسمبر
+  campaign_date_year: '2020'
+  campaign_date_full_year: 7-13 ديسمبر 2020
+  latam_campaign_date_start_short: 1 أكتوبر
   latam_campaign_date_start_long: October 1
   latam_campaign_date_short: Oct. 1 - Dec. 18
   latam_campaign_date_full: October 1 - December 18
-  latam_campaign_date_year: '2017'
+  latam_campaign_date_year: '2020'
   latam_campaign_date_full_year: October 1, 2020 - December 18, 2020
   europe_campaign_date_start_short: Oct. 10
   europe_campaign_date_start_long: October 10
   europe_campaign_date_short: Oct. 10-25
   europe_campaign_date_full: October 10-25
-  europe_campaign_date_year: '2017'
+  europe_campaign_date_year: '2020'
   europe_campaign_date_full_year: October 10-25, 2020
-  africa_campaign_date_start_short: Oct. 1
+  africa_campaign_date_start_short: 1 أكتوبر
   africa_campaign_date_start_long: October 1
   africa_campaign_date_short: Oct. 1-31
   africa_campaign_date_full: October 1-31
-  africa_campaign_date_year: '2017'
+  africa_campaign_date_year: '2020'
   africa_campaign_date_full_year: October 1-31, 2020
+  hoc2020_header: Learn today, build a brighter tomorrow.
+  hoc2020_header_with_line_break_markdown: |-
+    Learn today,
+
+    build a brighter tomorrow.
+  social_hoc2020_cs_important: 'CS is more important than ever. Let''s build the future
+    we want. #CSforGood'
+  social_hoc2020_hoc_is_about_csforgood: 'The #HourOfCode is about #CSforGood. Learn
+    today, build a brighter tomorrow.'
+  social_hoc2020_global_movement: ساعة البرمجة هي حركة عالمية تصل إلى عشرات الملايين
+    من الطلاب. تتوفر برامج ودروس تعليمية مدتها ساعة واحدة بأكثر من 45 لغة مناسبة لجميع
+    الأعمار.
+  social_hoc2020_coming_dates: The Hour of Code is coming December 7-13, 2020. Computer
+    science is foundational for every student to learn.
   hoc2019_header: تعلم علوم الحاسوب. غير العالم.
   hoc2019_header_line1_mobile: تعلم علوم الحاسوب.
   hoc2019_header_line2_mobile: غير العالم.
@@ -112,6 +126,13 @@ ar:
     لمعالجة المشكلات العالمية. علم الحاسوب هو أكثر بكثير من مجرد البرمجة! استمتع بالخطوة
     الأولى لـ Code.org في رحلة جديدة لتعليم المزيد عن الذكاء الاصطناعي من خلال مناهجنا
     الدراسية.
+  hoc_live: Hour of Code Live
+  hoc_live_sign_up_title: Sign up for Hour of Code Live
+  hoc_live_sign_up_message: Learn in real time alongside special guests! Students
+    of all ages and abilities, including those without computers, are welcome. Join
+    our mailing list to receive recordings of the episodes and resources to continue
+    learning at home.
+  hoc_live_join_us: انضم إلينا
   hoc_overview_oceans_tutorial_header: 'استخدام الذكاء الاصنطاعي في المحيطات '
   hoc_overview_oceans_tutorial_desc: 'تعرف على الذكاء الاصطناعي، وتعلم الآلة، وبيانات
     التدريب، والانحياز، أثناء استكشاف المسائل الأخلاقية وكيف يمكن استخدام الذكاء الاصطناعي
@@ -491,6 +512,7 @@ ar:
   signup_send_posters_address_placeholder: لن تتم مشاركة هذا العنوان على خريطتنا
   signup_event_type_in_school: داخل المدرسة
   signup_event_type_out_of_school: خارج المدرسة
+  signup_event_type_at_home: Home
   signup_submit_census_label: إرسال
   signup_submit_census_error_message: نعتذر. حدث خطأ. يرجى محاولة إرسال النموذج مرة
     أخرى.
@@ -888,7 +910,8 @@ ar:
   highlights_title: الأخبار الهامة
   highlights_header: الأخبار الهامة في ساعة البرمجة
   highlights_description: بعض لحظاتنا المفضلة من حملة ساعة البرمجة.
-  higlights_see_more: شاهد المزيد من الأخبار الهامة
+  highlights_previous: Highlights from previous years
+  highlights_see_more: See more highlights
   highlights_readmore: اقرأ المزيد
   highlights_watchvideo: شاهد الفيديو
   highlights_facebook: مشاركة على فيسبوك
@@ -8175,8 +8198,8 @@ ar:
   tutorial_codewards_string_detail_programming_languages: لغة البرمجة "CoffeeScript"
   tutorial_olympics_string_detail_programming_languages: لغة البرمجة "CoffeeScript"
   tutorial_codinismhero_string_detail_programming_languages: لغة البرمجة "بايثون"
-  tutorial_discovery_string_detail_programming_languages: الكتل البرمجية
-  tutorial_csfirstname_string_detail_programming_languages: الكتل البرمجية
+  tutorial_discovery_string_detail_programming_languages: الكتل البرمجية، لغة "سكراتش"
+  tutorial_csfirstname_string_detail_programming_languages: الكتل البرمجية، لغة "سكراتش"
   tutorial_obstaclecourse_string_detail_programming_languages: الكتل البرمجية
   tutorial_edisonmove_string_detail_programming_languages: لغة البرمجة "بايثون"، لغة
     البرمجة "EdPy"، لغة برمجة نصية تعتمد على لغة "بايثون".
@@ -9171,7 +9194,7 @@ ar:
   tutorial_ai-oceans_string_detail_platforms: ''
   tutorial_scratchimagine_string_detail_programming_languages: الكتل البرمجية
   tutorial_codesterspsa_string_detail_programming_languages: لغة البرمجة "بايثون"
-  tutorial_googlehero_string_detail_programming_languages: الكتل البرمجية
+  tutorial_googlehero_string_detail_programming_languages: الكتل البرمجية، لغة "سكراتش"
   tutorial_codestersbball_string_detail_programming_languages: لغة البرمجة "بايثون"
   tutorial_scratchcartoon_string_detail_programming_languages: الكتل البرمجية
   tutorial_codemonkeyjr_string_detail_programming_languages: الكتل البرمجية

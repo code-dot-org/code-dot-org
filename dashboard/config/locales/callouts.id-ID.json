@@ -76,7 +76,7 @@
         },
         "CSD U3 rect": {
           "CSD_U3_rect_c1": "Inilah kodenya",
-          "CSD_U3_rect_c2": "Berikut ini adalah tombol \"Run\"."
+          "CSD_U3_rect_c2": "Berikut ini adalah tombol \"Jalankan\"."
         },
         "CSD U3 rect_2018": {
           "CSD_U3_rect_c1": "Inilah kodenya"
@@ -142,13 +142,13 @@
           "CSD_U6_checkWin": "Periksa apakah pemain telah menang"
         },
         "Course 4 Artist 4": {
-          "repeat_full_circle": "Masukkan jumlah waktu zombie harus bergerak untuk membuat lingkaran penuh"
+          "repeat_full_circle": "Masukkan jumlah waktu zombie harus bergerak untuk membuat loop penuh"
         },
         "Course 4 Artist 7": {
           "repeat_blocks": "Gunakan blok \"Ulangi\" dan membungkusnya di sekitar blok ruang kerja"
         },
         "Course 4 Artist For Loops 4": {
-          "place_counter_variable": "Tarik variabel counter ke dalam blok ini"
+          "place_counter_variable": "Pindahkan variabel counter ke dalam blok ini"
         },
         "Course 4 Artist Functions challenge": {
           "Course_4_Artist_Functions_challenge_1": "Perhatikan bahwa kami telah memilah semua blok dan menempatkannya di belakang kategori untuk menjaga agar tetap rapi.  Klik di sini untuk menemukan semua blok yang Anda butuhkan."
@@ -197,7 +197,7 @@
         },
         "Course 4 Playlab For Loops 4b": {
           "Course_4_Playlab_For_Loops_4b_1": "Perhatikan bahwa variabel `pencacah` mempunyai nama yang berbeda untuk setiap karakter? Itu membuat setiap loop `untuk` bisa mengendalikan pencacahnya sendiri.",
-          "Course_4_Playlab_For_Loops_4b_2": "Dalam teka-teki ini, anda hanya diizinkan mengubah \"kenaikan\" dari loop `untuk`."
+          "Course_4_Playlab_For_Loops_4b_2": "Dalam puzzle ini, anda hanya diizinkan mengubah \"kenaikan\" dari loop `untuk`."
         },
         "Course 4 SCV 6": {
           "Course_4_SCV_6": "Blok ini mengizinkan anda menyesuaikan warna anda dengan hampir semua hal yang ingin anda lihat! Bermainlah dengan angka ini untuk melihat apa yang terjadi!"
@@ -213,7 +213,7 @@
           "dance_callout_02": "Tambahkan blok ini ke program Anda!"
         },
         "CourseD_Dance_2020_05": {
-          "dance_callout_05": "Tambahkan acara baru ke program Anda."
+          "dance_callout_05": "Tambahkan event baru ke program Anda."
         },
         "CourseD_Dance_2020_06": {
           "dance_party_11_5_groups": "Blok baru!"
@@ -255,7 +255,7 @@
           "dance_callout_02": "Tambahkan blok ini ke program Anda!"
         },
         "Dance_2019_05": {
-          "dance_callout_05": "Tambahkan acara baru ke program Anda."
+          "dance_callout_05": "Tambahkan event baru ke program Anda."
         },
         "Dance_2019_06": {
           "dance_party_11_5_groups": "Blok baru!"
@@ -333,13 +333,13 @@
           "MC_HOC_2016_New_Walk_callout2": "Tekan \"Run\" untuk mulai bergerak."
         },
         "MC_HOC_2017_03_Cole": {
-          "MC_HOC_2017_03_Cole_1": "Ini adalah lingkaran `ulangi`!  Klik untuk memasukkannya ke ruang kerja dan tambahkan kode yang ingin Anda jalankan berulang kali."
+          "MC_HOC_2017_03_Cole_1": "Ini adalah loop `repeat`!  Klik untuk memasukkannya ke ruang kerja dan tambahkan kode yang ingin Anda jalankan berulang kali."
         },
         "MC_HOC_2017_03_Cole_2019": {
-          "MC_HOC_2017_03_Cole_1": "Ini adalah lingkaran `ulangi`!  Klik untuk memasukkannya ke ruang kerja dan tambahkan kode yang ingin Anda jalankan berulang kali."
+          "MC_HOC_2017_03_Cole_1": "Ini adalah loop `repeat`!  Klik untuk memasukkannya ke ruang kerja dan tambahkan kode yang ingin Anda jalankan berulang kali."
         },
         "MC_HOC_2017_03_Cole_2020": {
-          "MC_HOC_2017_03_Cole_1": "Ini adalah lingkaran `ulangi`!  Klik untuk memasukkannya ke ruang kerja dan tambahkan kode yang ingin Anda jalankan berulang kali."
+          "MC_HOC_2017_03_Cole_1": "Ini adalah loop `repeat`!  Klik untuk memasukkannya ke ruang kerja dan tambahkan kode yang ingin Anda jalankan berulang kali."
         },
         "MC_HOC_2017_04_Cole": {
           "MC_HOC_2017_04_Cole_a": "Agent dapat mengapung di atas air, tapi pemain tidak dapat!"
@@ -481,10 +481,10 @@
           "": "Klik disini!"
         },
         "behaviors 1": {
-          "behaviors_edit": "Klik di sini untuk melihat cara kerja perilaku ini."
+          "behaviors_edit": "Klik di sini untuk melihat Bagaimana kerja perilaku ini."
         },
         "behaviors 1_2020": {
-          "behaviors_edit": "Klik di sini untuk melihat cara kerja perilaku ini."
+          "behaviors_edit": "Klik di sini untuk melihat Bagaimana kerja perilaku ini."
         },
         "behaviors 3a": {
           "behavior_callout": "Mengapa perilaku ini tidak bekerja pada bintang menengah?",
@@ -497,10 +497,10 @@
           "this_sprite_callout": "Ganti blok kostum di bawah dengan ini."
         },
         "behaviors 4": {
-          "behaviors_edit": "Klik di sini untuk melihat cara kerja perilaku ini."
+          "behaviors_edit": "Klik di sini untuk melihat Bagaimana kerja perilaku ini."
         },
         "behaviors 4_2020": {
-          "behaviors_edit": "Klik di sini untuk melihat cara kerja perilaku ini."
+          "behaviors_edit": "Klik di sini untuk melihat Bagaimana kerja perilaku ini."
         },
         "behaviors 5": {
           "behaviors_edit": "Tambahkan kode untuk perilaku."
@@ -621,7 +621,7 @@
           "courseC_maze_programming2_1": "Ini adalah kotak perlengkapan. Dimana kamu akan menemukan blok-blok tambahan untuk menyelesaikan teka-teki yang kamu kerjakan."
         },
         "courseA_maze_ramp3a_2018": {
-          "courseC_maze_programming2_1": "Ini adalah kotak perlengkapan. Dimana kamu akan menemukan blok-blok tambahan untuk menyelesaikan teka-teki yang kamu kerjakan."
+          "courseC_maze_programming2_1": "Ini adalah kotak perlengkapan. Dimana kamu akan menemukan blok-blok tambahan untuk menyelesaikan puzzle yang kamu kerjakan."
         },
         "courseA_maze_seq1": {
           "courseA_maze_seq1_1": "Klik icon bola lampu saat anda membutuhkan petunjuk!"
@@ -687,16 +687,16 @@
           "grade2_CaringForNewPet_0_1": "Setelah menghubungkan semua blok, tekan \"Run\" untuk memulai program."
         },
         "courseB_Scrat_ramp3a_2019": {
-          "courseC_maze_programming2_1": "Ini adalah kotak perlengkapan. Dimana kamu akan menemukan blok-blok tambahan untuk menyelesaikan teka-teki yang kamu kerjakan."
+          "courseC_maze_programming2_1": "Ini adalah kotak perlengkapan. Dimana kamu akan menemukan blok-blok tambahan untuk menyelesaikan puzzle yang kamu kerjakan."
         },
         "courseB_Scrat_ramp3a_2020": {
-          "courseC_maze_programming2_1": "Ini adalah kotak perlengkapan. Dimana kamu akan menemukan blok-blok tambahan untuk menyelesaikan teka-teki yang kamu kerjakan."
+          "courseC_maze_programming2_1": "Ini adalah kotak perlengkapan. Dimana kamu akan menemukan blok-blok tambahan untuk menyelesaikan puzzle yang kamu kerjakan."
         },
         "courseB_artist_loops3": {
-          "courseB_artist_loops3_1": "Hanya ada satu dari blok-blok tersebut yang ada didalam kotak peralatan. Mau digunakan untuk apa?"
+          "courseB_artist_loops3_1": "Hanya ada satu dari blok-blok tersebut yang ada didalam kotak peralatan. Bagaimana digunakan untuk apa?"
         },
         "courseB_artist_loops3_2018": {
-          "courseB_artist_loops3_1": "Hanya ada satu dari blok-blok tersebut yang ada didalam kotak peralatan. Mau digunakan untuk apa?"
+          "courseB_artist_loops3_1": "Hanya ada satu dari blok-blok tersebut yang ada didalam kotak peralatan. Bagaimana digunakan untuk apa?"
         },
         "courseB_artist_loops3_2019": {
           "courseB_artist_loops3_1": "Hanya ada satu dari blok-blok tersebut yang ada didalam kotak peralatan. Mau digunakan untuk apa?"
@@ -873,31 +873,31 @@
           "grade2_CaringForNewPet_0_1": "Setelah menghubungkan semua blok, tekan \"Run\" untuk memulai program."
         },
         "courseC_maze_programming2": {
-          "courseC_maze_programming2_1": "Ini adalah kotak perlengkapan. Dimana kamu akan menemukan blok-blok tambahan untuk menyelesaikan teka-teki yang kamu kerjakan."
+          "courseC_maze_programming2_1": "Ini adalah kotak perlengkapan. Dimana kamu akan menemukan blok-blok tambahan untuk menyelesaikan puzzle yang kamu kerjakan."
         },
         "courseC_maze_programming2_2018": {
-          "courseC_maze_programming2_1": "Ini adalah kotak perlengkapan. Dimana kamu akan menemukan blok-blok tambahan untuk menyelesaikan teka-teki yang kamu kerjakan."
+          "courseC_maze_programming2_1": "Ini adalah kotak perlengkapan. Dimana kamu akan menemukan blok-blok tambahan untuk menyelesaikan puzzle yang kamu kerjakan."
         },
         "courseC_maze_programming2_2019": {
-          "courseC_maze_programming2_1": "Ini adalah kotak perlengkapan. Dimana kamu akan menemukan blok-blok tambahan untuk menyelesaikan teka-teki yang kamu kerjakan."
+          "courseC_maze_programming2_1": "Ini adalah kotak perlengkapan. Dimana kamu akan menemukan blok-blok tambahan untuk menyelesaikan puzzle yang kamu kerjakan."
         },
         "courseC_maze_programming2_2020": {
-          "courseC_maze_programming2_1": "Ini adalah kotak perlengkapan. Dimana kamu akan menemukan blok-blok tambahan untuk menyelesaikan teka-teki yang kamu kerjakan."
+          "courseC_maze_programming2_1": "Ini adalah kotak perlengkapan. Dimana kamu akan menemukan blok-blok tambahan untuk menyelesaikan puzzle yang kamu kerjakan."
         },
         "courseC_maze_programming3": {
-          "courseC_maze_programming3_2": "Kamu bisa menarik blok-blok tambahan ke dalam kotak perlengkapan untuk membuangnya.",
+          "courseC_maze_programming3_2": "Anda bisa menarik blok-blok tambahan ke dalam kotak perlengkapan untuk membuangnya.",
           "courseC_maze_programming3_3": "Blok-blok tersebut adalah batu dan tidak bisa dibuang."
         },
         "courseC_maze_programming3_2018": {
-          "courseC_maze_programming3_2": "Kamu bisa menarik blok-blok tambahan ke dalam kotak perlengkapan untuk membuangnya.",
+          "courseC_maze_programming3_2": "Anda bisa menarik blok-blok tambahan ke dalam kotak perlengkapan untuk membuangnya.",
           "courseC_maze_programming3_3": "Blok-blok tersebut adalah batu dan tidak bisa dibuang."
         },
         "courseC_maze_programming3_2019": {
-          "courseC_maze_programming3_2": "Kamu bisa menarik blok-blok tambahan ke dalam kotak perlengkapan untuk membuangnya.",
+          "courseC_maze_programming3_2": "Anda bisa menarik blok-blok tambahan ke dalam kotak perlengkapan untuk membuangnya.",
           "courseC_maze_programming3_3": "Blok-blok tersebut adalah batu dan tidak bisa dibuang."
         },
         "courseC_maze_programming3_2020": {
-          "courseC_maze_programming3_2": "Kamu bisa menarik blok-blok tambahan ke dalam kotak perlengkapan untuk membuangnya.",
+          "courseC_maze_programming3_2": "Anda bisa menarik blok-blok tambahan ke dalam kotak perlengkapan untuk membuangnya.",
           "courseC_maze_programming3_3": "Blok-blok tersebut adalah batu dan tidak bisa dibuang."
         },
         "courseC_maze_programming4": {
@@ -1010,13 +1010,13 @@
           "courseD_collector_ramp8_1": "Gunakan blok ini untuk mengumpulkan satu buah harta karun.  "
         },
         "courseD_farmer_while7_2018": {
-          "courseD_farmer_while7_2018_PathAhead": "Anda harus menggunakan blok `ketika jalan di depan` untuk menyelesaikan teka-teki ini."
+          "courseD_farmer_while7_2018_PathAhead": "Anda harus menggunakan blok `ketika jalan di depan` untuk menyelesaikan puzzle ini."
         },
         "courseD_farmer_while7_2019": {
-          "courseD_farmer_while7_2018_PathAhead": "Anda harus menggunakan blok `ketika jalan di depan` untuk menyelesaikan teka-teki ini."
+          "courseD_farmer_while7_2018_PathAhead": "Anda harus menggunakan blok `ketika jalan di depan` untuk menyelesaikan puzzle ini."
         },
         "courseD_farmer_while7_2020": {
-          "courseD_farmer_while7_2018_PathAhead": "Anda harus menggunakan blok `ketika jalan di depan` untuk menyelesaikan teka-teki ini."
+          "courseD_farmer_while7_2018_PathAhead": "Anda harus menggunakan blok `ketika jalan di depan` untuk menyelesaikan puzzle ini."
         },
         "courseD_maze_intro4_2019": {
           "courseC_maze_programming4_1": "Ini adalah batas jumlah blok kamu. Menunjukkan kepada kamu masih ada berapa blok yang bisa kamu gunakan."
@@ -1043,31 +1043,31 @@
           "grade2_CaringForNewPet_0_1": "Setelah menghubungkan semua blok, tekan \"Run\" untuk memulai program."
         },
         "courseD_maze_ramp2": {
-          "courseC_maze_programming2_1": "Ini adalah kotak perlengkapan. Dimana kamu akan menemukan blok-blok tambahan untuk menyelesaikan teka-teki yang kamu kerjakan."
+          "courseC_maze_programming2_1": "Ini adalah kotak perlengkapan. Dimana kamu akan menemukan blok-blok tambahan untuk menyelesaikan puzzle yang kamu kerjakan."
         },
         "courseD_maze_ramp2_2018": {
-          "courseC_maze_programming2_1": "Ini adalah kotak perlengkapan. Dimana kamu akan menemukan blok-blok tambahan untuk menyelesaikan teka-teki yang kamu kerjakan."
+          "courseC_maze_programming2_1": "Ini adalah kotak perlengkapan. Dimana kamu akan menemukan blok-blok tambahan untuk menyelesaikan puzzle yang kamu kerjakan."
         },
         "courseD_maze_ramp2_2019": {
-          "courseC_maze_programming2_1": "Ini adalah kotak perlengkapan. Dimana kamu akan menemukan blok-blok tambahan untuk menyelesaikan teka-teki yang kamu kerjakan."
+          "courseC_maze_programming2_1": "Ini adalah kotak perlengkapan. Dimana kamu akan menemukan blok-blok tambahan untuk menyelesaikan puzzle yang kamu kerjakan."
         },
         "courseD_maze_ramp2_2020": {
-          "courseC_maze_programming2_1": "Ini adalah kotak perlengkapan. Dimana kamu akan menemukan blok-blok tambahan untuk menyelesaikan teka-teki yang kamu kerjakan."
+          "courseC_maze_programming2_1": "Ini adalah kotak perlengkapan. Dimana kamu akan menemukan blok-blok tambahan untuk menyelesaikan puzzle yang kamu kerjakan."
         },
         "courseD_maze_ramp3": {
-          "courseC_maze_programming3_2": "Kamu bisa menarik blok-blok tambahan ke dalam kotak perlengkapan untuk membuangnya.",
+          "courseC_maze_programming3_2": "Anda bisa menarik blok-blok tambahan ke dalam kotak perlengkapan untuk membuangnya.",
           "stone_block_2": "Blok-blok warna abu-abu terbuat dari batu dan tidak bisa dibuang."
         },
         "courseD_maze_ramp3_2018": {
-          "courseC_maze_programming3_2": "Kamu bisa menarik blok-blok tambahan ke dalam kotak perlengkapan untuk membuangnya.",
+          "courseC_maze_programming3_2": "Anda bisa menarik blok-blok tambahan ke dalam kotak perlengkapan untuk membuangnya.",
           "stone_block_2": "Blok-blok warna abu-abu terbuat dari batu dan tidak bisa dibuang."
         },
         "courseD_maze_ramp3_2019": {
-          "courseC_maze_programming3_2": "Kamu bisa menarik blok-blok tambahan ke dalam kotak perlengkapan untuk membuangnya.",
+          "courseC_maze_programming3_2": "Anda bisa menarik blok-blok tambahan ke dalam kotak perlengkapan untuk membuangnya.",
           "stone_block_2": "Blok-blok warna abu-abu terbuat dari batu dan tidak bisa dibuang."
         },
         "courseD_maze_ramp3_2020": {
-          "courseC_maze_programming3_2": "Kamu bisa menarik blok-blok tambahan ke dalam kotak perlengkapan untuk membuangnya.",
+          "courseC_maze_programming3_2": "Anda bisa menarik blok-blok tambahan ke dalam kotak perlengkapan untuk membuangnya.",
           "stone_block_2": "Blok-blok warna abu-abu terbuat dari batu dan tidak bisa dibuang."
         },
         "courseD_maze_ramp4": {
@@ -1119,10 +1119,10 @@
           "grade2_CaringForNewPet_0_1": "Setelah menghubungkan semua blok, tekan \"Run\" untuk memulai program."
         },
         "courseD_scrat_ramp2": {
-          "courseC_maze_programming2_1": "Ini adalah kotak perlengkapan. Dimana kamu akan menemukan blok-blok tambahan untuk menyelesaikan teka-teki yang kamu kerjakan."
+          "courseC_maze_programming2_1": "Ini adalah kotak perlengkapan. Dimana kamu akan menemukan blok-blok tambahan untuk menyelesaikan puzzle yang kamu kerjakan."
         },
         "courseD_scrat_ramp3": {
-          "courseC_maze_programming3_2": "Kamu bisa menarik blok-blok tambahan ke dalam kotak perlengkapan untuk membuangnya."
+          "courseC_maze_programming3_2": "Anda bisa menarik blok-blok tambahan ke dalam kotak perlengkapan untuk membuangnya."
         },
         "courseD_scrat_ramp4": {
           "courseC_maze_programming4_1": "Ini adalah batas jumlah blok kamu. Menunjukkan kepada kamu masih ada berapa blok yang bisa kamu gunakan."
@@ -1288,7 +1288,7 @@
           "courseF_artist_fwp4_1": "Untuk menyelesaikan poligon kamu, pastikan kamu selalu berputar 360 ÷ derajat `sisi bidang`."
         },
         "courseF_artist_fwp5": {
-          "courseF_artist_fwp5_1": "Kamu akan menemukan fungsi poligon disini."
+          "courseF_artist_fwp5_1": "Anda akan menemukan fungsi poligon disini."
         },
         "courseF_artist_variables3": {
           "courseF_artist_variables3_a": "Gunakan ini untuk menetapkan nilai dari variabel `panjang`"
@@ -1345,16 +1345,16 @@
           "courseF_bee_for4_1": "Anda akan menemukan loop 'for` di sini!"
         },
         "courseF_bee_for9": {
-          "courseF_bee_for9_1": "Kamu akan menemukan blok `matematika` disini."
+          "courseF_bee_for9_1": "Anda akan menemukan blok `matematika` disini."
         },
         "courseF_bee_for9_2018": {
-          "courseF_bee_for9_1": "Kamu akan menemukan blok `matematika` disini."
+          "courseF_bee_for9_1": "Anda akan menemukan blok `matematika` disini."
         },
         "courseF_bee_for9_2019": {
-          "courseF_bee_for9_1": "Kamu akan menemukan blok `matematika` disini."
+          "courseF_bee_for9_1": "Anda akan menemukan blok `matematika` disini."
         },
         "courseF_bee_for9_2020": {
-          "courseF_bee_for9_1": "Kamu akan menemukan blok `matematika` disini."
+          "courseF_bee_for9_1": "Anda akan menemukan blok `matematika` disini."
         },
         "courseF_bee_functions2": {
           "courseF_bee_functions2_1": "Blok ini memanggil fungsi. Klik tombol \"sunting\" ini untuk melihat isinya!"
@@ -1367,7 +1367,7 @@
           "courseF_bee_functions_challenge1_2": "Fungsi \"periksa nektar atau madu\" dapat digunakan di sini jika anda menyuntingnya untuk membuat madu beberapa kali."
         },
         "courseF_bee_fwp1": {
-          "courseF_bee_fwp1_1": "Kamu bisa menemukan pernyataan `jika` disini."
+          "courseF_bee_fwp1_1": "Anda bisa menemukan pernyataan `jika` disini."
         },
         "courseF_bee_fwp2": {
           "courseF_bee_fwp2_a": "Blok yang memanggil fungsi anda berada di sini."
@@ -1469,6 +1469,13 @@
         },
         "grade5_artist_variables_triangles1_2020": {
           "grade5_artist_variables_triangles1_1": "Perhatikan bahwa blok-blok sekarang memiliki cara baru untuk memasukkan nomor. Blok-blok `matematika` tersebut bisa ditarik dan dipindah-pindahkan!"
+        },
+        "courseC_video_angles": {
+          "courseD_maze_ramp6_1": "Apapun kode yang anda masukkan ke sini akan mengulangi sebanyak yang anda kirimkan, kemudian klik tombol lanjutkan untuk menyelesaikan program itu."
+        },
+        "courseD_video_nestedLoopsArtist": {
+          "courseE_artist_ramp8_1": "Anda bisa merubah angka ini.",
+          "courseE_artist_ramp8_2": "Klik di sini untuk mengetik berapa kali kode Anda berulang."
         }
       }
     }

@@ -6,12 +6,13 @@ ru:
         csf_category_name: Основы информатики
         csf_2018_category_name: Основы CS (2018)
         csf2_draft_category_name: 'В разработке: Курсы A - F'
-        csp_category_name: "«15 - 16» Основы информатики"
+        csp_category_name: '«15 - 16» Основы информатики'
         cspexams_category_name: Практический тест по основам информатики
         csp17_category_name: '«16 - 17» Основы информатики'
         full_course_category_name: Курсы полностью
         hoc_category_name: Час Кода
         math_category_name: Математика
+        other_category_name: Другое
       name:
         course1:
           title: Курс 1
@@ -1032,6 +1033,10 @@ ru:
           lessons:
             Hour of Code 2015:
               name: Час кода 2015
+        oceans:
+          title: AI для океанов
+          description: Узнайте, как AI и машинное обучение могут быть использованы для решения мировых проблем.
+          description_short: Узнайте, как AI и машинное обучение могут быть использованы для решения мировых проблем.
         ScienceP3OLPT3:
           lessons:
             Welcome!:
@@ -1206,6 +1211,7 @@ ru:
             Post-Course Survey:
               name: Опрос после окончания курса
         csp4-2017:
+          description_short: Исследуйте богатый данными мир, в котором мы живем, и то, как данные влияют на государственную политику, личную неприкосновенность, безопасность, закон и этику.
           lesson_groups:
             csp4_1:
               display_name: 'Глава 1: Мир больших объемов данных и шифрование'
@@ -1357,6 +1363,8 @@ ru:
               name: 'Пчела: Условные команды'
         gradeKinder:
           lessons:
+            Debugging:
+              name: Отладка
             Events:
               name: События
             'Jigsaw: Learn to drag and drop':
@@ -1379,6 +1387,8 @@ ru:
               name: Написание песен
         grade1:
           lessons:
+            Debugging:
+              name: Отладка
             Events:
               name: События
             'Jigsaw: Learn to drag and drop':
@@ -1489,6 +1499,8 @@ ru:
               name: Рисование фигур
             Variables:
               name: Переменные
+            Sprites:
+              name: Спрайты
             Conditionals:
               name: Условные команды
         grade2:
@@ -1539,6 +1551,11 @@ ru:
               display_name: 'Глава 1: Процесс решения проблемы'
             csd1_2:
               display_name: 'Глава 2: Компьютеры и решение проблем'
+          lessons:
+            The Problem Solving Process:
+              name: Процесс решения проблем
+            What is a Computer?:
+              name: Что такое компьютер?
         csp-online-test:
           lesson_groups:
             required:
@@ -1669,6 +1686,8 @@ ru:
               name: Твой цифровой след
             Building a Foundation:
               name: Строительство опоры
+            Loops in Harvester:
+              name: Циклы в харвестере
         coursed-draft:
           lessons:
             Nested Loops in Maze:
@@ -1753,6 +1772,9 @@ ru:
           title: Создай свою спортивную игру
           description_short: Сочетай разные виды спорта
           description: Сочетай разные виды спорта
+          lessons:
+            Sports:
+              name: Спорт
         2016_sciencePD-phase2b:
           lessons:
             Welcome!:
@@ -1870,6 +1892,8 @@ ru:
           lessons:
             Introduction:
               name: Введение
+            Sprites:
+              name: Спрайты
             Input:
               name: Ввод
         csd5-draft:
@@ -1951,6 +1975,8 @@ ru:
           lessons:
             Variables:
               name: Переменные
+            Sprites:
+              name: Спрайты
             Plotting Shapes:
               name: Рисование фигур
             Conditionals:
@@ -1988,16 +2014,30 @@ ru:
               name: Обнаружение столкновений
             Functions:
               name: функции
+        csd1-old:
+          lessons:
+            The Problem Solving Process:
+              name: Процесс решения проблем
+            What is a Computer?:
+              name: Что такое компьютер?
         csd2-draft:
           lessons:
             Lists:
               name: Списки
+        csd1-draft:
+          lessons:
+            The Problem Solving Process:
+              name: Процесс решения проблем
+            What is a Computer?:
+              name: Что такое компьютер?
         csd3-chapters:
           lessons:
             Plotting Shapes:
               name: Рисование фигур
             Variables:
               name: Переменные
+            Sprites:
+              name: Спрайты
             Conditionals:
               name: Условные команды
             Velocity:
@@ -2071,6 +2111,8 @@ ru:
           lessons:
             'Real-life Algorithms: Paper Planes':
               name: 'Реальные алгоритмы: Бумажные самолетики'
+            Loops in Harvester:
+              name: Циклы в харвестере
             Loops in Artist:
               name: Циклы в исполнителе Художник
         coursed-2017:
@@ -2302,6 +2344,8 @@ ru:
               name: Пчела
         subgoal-labels-opt-in:
           lessons:
+            other:
+              name: другое
             Thanks:
               name: Спасибо
         csp3-research-mxghyt:
@@ -2506,6 +2550,8 @@ ru:
               name: Создание функций с параметрами
         pwc:
           lessons:
+            What is a Computer?:
+              name: Что такое компьютер?
             Simple Encryption:
               name: Простое шифрование
         hero:
@@ -2624,6 +2670,8 @@ ru:
               name: Рисование фигур
             Variables:
               name: Переменные
+            Sprites:
+              name: Спрайты
             Conditionals:
               name: Условные команды
             Velocity:
@@ -2646,6 +2694,8 @@ ru:
               name: Рисование фигур
             Variables:
               name: Переменные
+            Sprites:
+              name: Спрайты
             Conditionals:
               name: Условные команды
             Velocity:
@@ -2940,6 +2990,11 @@ ru:
               display_name: 'Глава 1: Процесс решения проблемы'
             csd1_2:
               display_name: 'Глава 2: Компьютеры и решение проблем'
+          lessons:
+            The Problem Solving Process:
+              name: Процесс решения проблем
+            What is a Computer?:
+              name: Что такое компьютер?
         csd4-2018:
           lesson_groups:
             csd4_1:
@@ -3015,6 +3070,7 @@ ru:
             cspSurvey:
               display_name: Опрос
         csp4-2018:
+          description_short: Исследуйте богатый данными мир, в котором мы живем, и то, как данные влияют на государственную политику, личную неприкосновенность, безопасность, закон и этику.
           lesson_groups:
             csp4_1_2018:
               display_name: 'Раздел 4: Большие данные и конфиденциальность'
@@ -3282,6 +3338,8 @@ ru:
               display_name: Циклы с параметром
             csf_internet:
               display_name: интернет
+            csf_sprites:
+              display_name: Спрайты
             csf_digcit:
               display_name: Цифровое гражданство
           lessons:
@@ -3363,6 +3421,8 @@ ru:
           lesson_groups:
             ramp_up:
               display_name: Продвинуться
+            csf_sprites:
+              display_name: Спрайты
             csf_digcit:
               display_name: Цифровое гражданство
             csf_nested_loops:
@@ -3418,6 +3478,8 @@ ru:
               display_name: Переменные
             csf_for_loops:
               display_name: Циклы с параметром
+            csf_sprites:
+              display_name: Спрайты
           lessons:
             Relay Programming:
               name: Эстафетное программирование
@@ -3459,6 +3521,11 @@ ru:
               display_name: 'Глава 1: Процесс решения проблемы'
             csd1_2:
               display_name: 'Глава 2: Компьютеры и решение проблем'
+          lessons:
+            The Problem Solving Process:
+              name: Процесс решения проблем
+            What is a Computer?:
+              name: Что такое компьютер?
         andrea-test:
           lesson_groups:
             required:
@@ -3605,6 +3672,8 @@ ru:
               name: Рисование фигур
             Variables:
               name: Переменные
+            Sprites:
+              name: Спрайты
             Conditionals:
               name: Условные команды
             Velocity:
@@ -3734,6 +3803,7 @@ ru:
             Creating functions with Parameters:
               name: Создание функций с параметрами
         csp4-2019:
+          description_short: Исследуйте богатый данными мир, в котором мы живем, и то, как данные влияют на государственную политику, личную неприкосновенность, безопасность, закон и этику.
           lesson_groups:
             csp4_1_2018:
               display_name: 'Раздел 4: Большие данные и конфиденциальность'
@@ -3811,6 +3881,8 @@ ru:
           lesson_groups:
             ramp_up:
               display_name: Продвинуться
+            csf_sprites:
+              display_name: Спрайты
             time4cs_c1:
               display_name: 'Эверглейдс и его экосистемы'
             time4cs_c2:
@@ -3956,6 +4028,10 @@ ru:
               display_name: Краткий обзор
             content:
               display_name: Содержимое
+        csd-test-saving-state:
+          lessons:
+            What is a Computer?:
+              name: Что такое компьютер?
         fit2019-apprentice:
           lesson_groups:
             required:
@@ -3970,6 +4046,11 @@ ru:
               display_name: 'Глава 1: Процесс решения проблемы'
             csd1_2:
               display_name: 'Глава 2: Компьютеры и решение проблем'
+          lessons:
+            The Problem Solving Process:
+              name: Процесс решения проблем
+            What is a Computer?:
+              name: Что такое компьютер?
         csd2-pilot:
           lesson_groups:
             csd2_1:
@@ -3997,6 +4078,8 @@ ru:
               name: Рисование фигур
             Variables:
               name: Переменные
+            Sprites:
+              name: Спрайты
             Conditionals:
               name: Условные команды
             Velocity:
@@ -4016,6 +4099,8 @@ ru:
           lessons:
             The Need for Programming Languages:
               name: Необходимость языков программирования
+            Debugging:
+              name: Отладка
         csl-vn:
           lesson_groups:
             csf_sequencing:
@@ -4093,6 +4178,9 @@ ru:
           lesson_groups:
             csd1_2:
               display_name: 'Глава 2: Компьютеры и решение проблем'
+          lessons:
+            What is a Computer?:
+              name: Что такое компьютер?
         csp2-pilot:
           lesson_groups:
             content:
@@ -4238,6 +4326,8 @@ ru:
               display_name: Условные команды
             csf_events:
               display_name: События
+            csf_sprites:
+              display_name: Спрайты
             csf_digcit:
               display_name: Цифровое гражданство
             ramp_up:
@@ -4261,6 +4351,8 @@ ru:
               display_name: Условные команды
             csf_events:
               display_name: События
+            csf_sprites:
+              display_name: Спрайты
             csf_digcit:
               display_name: Цифровое гражданство
             ramp_up:
@@ -4308,6 +4400,12 @@ ru:
               display_name: Параметры и возвращаемые значения
             csp_libraries:
               display_name: Библиотеки
+        csp9-pilot:
+          lessons:
+            Big Data, Crowdsourcing, and Machine Learning:
+              name: Big Data, краудсорсинг и машинное обучение
+            Machine Learning and Bias:
+              name: Машинное обучение и предвзятость
         csd2-2020:
           lesson_groups:
             csd2_1:
@@ -4327,6 +4425,12 @@ ru:
               display_name: 'Глава 1: Процесс решения проблемы'
             csd1_2:
               display_name: 'Глава 2: Компьютеры и решение проблем'
+          lessons:
+            The Problem Solving Process:
+              name: Процесс решения проблем
+            What is a Computer?:
+              name: Что такое компьютер?
+            0:
         csd4-2020:
           lesson_groups:
             csd4_1:
@@ -4398,6 +4502,8 @@ ru:
               name: функции
             Text:
               name: Текст
+            Sprites:
+              name: Спрайты
         coursea-2020:
           description_short: Введение в компьютерные науки для детей, еще не умеющих читать.
           description_audience: 'Возраст: 4-7'
@@ -4511,6 +4617,8 @@ ru:
           lesson_groups:
             ramp_up:
               display_name: Продвинуться
+            csf_sprites:
+              display_name: Спрайты
             csf_digcit:
               display_name: Цифровое гражданство
             csf_nested_loops:
@@ -4545,6 +4653,8 @@ ru:
               display_name: Переменные
             csf_for_loops:
               display_name: Циклы с параметром
+            csf_sprites:
+              display_name: Спрайты
           lessons:
             Nested Loops in the Maze:
               name: Вложенные циклы в Лабиринте
@@ -4564,6 +4674,10 @@ ru:
             Digital Sharing:
               name: Публикация цифровых произведений
               description_teacher: Предоставленный курсу "Основы компьютерных наук" сотрудниками сайта Copyright and Creativity ("Авторские права и творчество"), этот урок призван объяснить учащимся проблемы и преимущества уважения права собственности и авторского права, особенно в цифровой среде. Учащимся следует объяснить, что, не уважая прав артистов, невозможно быть этичным цифровым гражданином.
+            AI for Oceans:
+              name: AI для океанов
+              description_student: 'Краткое содержание урока: сначала ученики классифицируют объекты либо как "рыбу", либо как" не рыбу", чтобы попытаться удалить мусор из океана. Затем учащиеся должны будут расширить свой набор данных обучения, чтобы включить в него других морских существ, которые живут в воде. Во второй части занятия учащиеся будут выбирать собственные метки для нанесения на изображения случайно сгенерированных рыб. Эти обучающие данные используются для модели машинного обучения, которая затем должна иметь возможность самостоятельно маркировать новые изображения.'
+              description_teacher: "** Краткое содержание урока: * * сначала ученики классифицируют объекты либо как \"рыбу\", либо как\" не рыбу\", чтобы попытаться удалить мусор из океана. Затем учащиеся должны будут расширить свой набор данных обучения, чтобы включить в него других морских существ, которые живут в воде. Во второй части занятия учащиеся будут выбирать собственные метки для нанесения на изображения случайно сгенерированных рыб. Эти обучающие данные используются для модели машинного обучения, которая затем должна иметь возможность самостоятельно маркировать новые изображения.\\р\n\\r\n\\r\n** Проверка правильности: * * этот учебник не скажет ученикам, правильно ли они прошли уровень. Можно быстро пропустить различные части действия. Поощряйте учащихся смотреть видео, читать инструкции и пробовать разные вещи по пути. В любой момент они могут поделиться своими находками с вами или одноклассником.\\р"
         express-2020:
           title: Экспресс-курс (2017)
           description_audience: 'Возраст: 9-18'
@@ -4582,6 +4696,8 @@ ru:
               display_name: Переменные
             csf_for_loops:
               display_name: Циклы с параметром
+            csf_sprites:
+              display_name: Спрайты
           lessons:
             Dance Party:
               name: Танцевальная вечеринка
@@ -4651,6 +4767,14 @@ ru:
           lessons:
             The Need for Programming Languages:
               name: Необходимость языков программирования
+            Debugging:
+              name: Отладка
+        csp9-2020:
+          lessons:
+            Big Data, Crowdsourcing, and Machine Learning:
+              name: Big Data, краудсорсинг и машинное обучение
+            Machine Learning and Bias:
+              name: Машинное обучение и предвзятость
         csp3-virtual:
           description_short: Программирование
           lesson_groups:
@@ -4667,6 +4791,12 @@ ru:
               name: API и параметры функции
             Creating functions with Parameters:
               name: Создание функций с параметрами
+        jess-test-script:
+          lessons:
+            Tools:
+              name: Инструменты
+            Debugging:
+              name: Отладка
         csd2-virtual:
           lesson_groups:
             csd2_1:
@@ -4768,6 +4898,8 @@ ru:
               name: Переменные
             Random Numbers:
               name: Случайные числа
+            Sprites:
+              name: Спрайты
             Text:
               name: Текст
             Conditionals:
@@ -4819,3 +4951,5 @@ ru:
               name: Курс A
             Course B:
               name: Курс B
+            CS Discoveries:
+              name: Открытия в информатике

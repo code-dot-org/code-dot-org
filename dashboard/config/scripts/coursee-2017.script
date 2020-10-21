@@ -1,4 +1,3 @@
-is_course true
 hidden false
 hideable_lessons true
 lesson_extras_available true
@@ -10,9 +9,10 @@ new_name 'coursee-2017'
 family_name 'coursee'
 version_year '2017'
 is_stable true
-supported_locales ["cs-CZ", "es-ES", "es-MX", "fr-FR", "hi-IN", "it-IT", "pt-BR", "sk-SK", "zh-CN"]
+supported_locales ["ar-SA", "cs-CZ", "de-DE", "es-ES", "es-MX", "fr-FR", "hi-IN", "id-ID", "it-IT", "ko-KR", "mn-MN", "pl-PL", "pt-BR", "ru-RU", "sk-SK", "tr-TR", "zh-CN", "zh-TW"]
 curriculum_umbrella 'CSF'
 tts true
+is_course true
 
 lesson_group 'csf_e_1', display_name: 'Ramp Up to Course E (Optional)'
 lesson 'Programming: My Robotic Friends', display_name: 'Programming: My Robotic Friends'
@@ -108,40 +108,40 @@ level 'DiceRace'
 lesson 'Introduction', display_name: 'Introduction to Online Puzzles'
 level 'courseE_video_ramp1'
 variants
-  level 'courseD_scrat_ramp1'
   level 'courseE_maze_ramp1', active: false
+  level 'courseD_scrat_ramp1'
 endvariants
 variants
-  level 'courseD_scrat_ramp2'
   level 'courseE_maze_ramp2', active: false
+  level 'courseD_scrat_ramp2'
 endvariants
 variants
-  level 'courseD_scrat_ramp3'
   level 'courseE_maze_ramp3', active: false
+  level 'courseD_scrat_ramp3'
 endvariants
 variants
-  level 'courseD_scrat_ramp4'
   level 'courseE_maze_ramp4', active: false
+  level 'courseD_scrat_ramp4'
 endvariants
 variants
-  level 'courseD_scrat_ramp5'
   level 'courseE_maze_ramp5', active: false
+  level 'courseD_scrat_ramp5'
 endvariants
 variants
-  level 'courseD_scrat_predict1'
   level 'courseE_maze_predict1', active: false
+  level 'courseD_scrat_predict1'
 endvariants
 variants
-  level 'courseD_video_ScratLoops'
   level 'courseCDEF_video_AngryBirdLoops', active: false
+  level 'courseD_video_ScratLoops'
 endvariants
 variants
-  level 'courseD_scrat_ramp6'
   level 'courseE_maze_ramp6', active: false
+  level 'courseD_scrat_ramp6'
 endvariants
 variants
-  level 'courseD_scrat_ramp7'
   level 'courseE_maze_ramp7', active: false
+  level 'courseD_scrat_ramp7'
 endvariants
 level 'courseD_scrat_ramp8', challenge: true
 level 'ramp_video_artistIntro'
@@ -153,37 +153,37 @@ lesson 'Conditionals', display_name: 'Conditionals in Farmer'
 level 'courseD_video_whileIntro'
 level 'courseE_farmer_ramp11a'
 variants
-  level 'courseE_farmer_ramp11b'
   level 'courseE_farmer_ramp12', active: false
+  level 'courseE_farmer_ramp11b'
 endvariants
 variants
-  level 'courseE_farmer_ramp12b'
   level 'courseE_farmer_predict1', active: false
+  level 'courseE_farmer_ramp12b'
 endvariants
 variants
-  level 'courseE_farmer_ramp12_forswap'
   level 'courseE_video_ifElse', active: false
+  level 'courseE_farmer_ramp12_forswap'
 endvariants
 variants
   level 'courseD_video_repeatUntil'
   level 'courseE_farmer_ramp12a', active: false
 endvariants
 variants
-  level 'courseE_farmer_ramp12c'
   level 'courseE_farmer_ramp13', active: false
+  level 'courseE_farmer_ramp12c'
 endvariants
 variants
-  level 'courseE_farmer_ramp12d'
   level 'courseE_bee_ramp14', active: false
+  level 'courseE_farmer_ramp12d'
 endvariants
 variants
-  level 'courseE_farmer_ramp12e'
   level 'courseE_farmer_predict2', active: false
+  level 'courseE_farmer_ramp12e'
 endvariants
 level 'courseE_video_BeeifElse'
 variants
-  level 'courseE_farmer_ramp12f'
   level 'courseE_farmer_ramp15', active: false
+  level 'courseE_farmer_ramp12f'
 endvariants
 level 'courseE_farmer_ramp12g'
 

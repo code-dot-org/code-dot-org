@@ -2084,10 +2084,10 @@
         "courseA_harvester_seq1_2019": "¡Ayuda a la cosechadora a recoger el trozo de maíz!",
         "courseA_harvester_seq1_2020": "¡Ayuda a la cosechadora a recoger el trozo de maíz!",
         "courseA_harvester_seq2": "¡Usa <xml><block type=\"maze_moveWest\"/></xml> **tres** veces para que la cosechadora llegue hasta el maíz! ",
-        "courseA_harvester_seq2_2019": "¡Usa <xml><block type=\"maze_moveWest\"/></xml> **tres** veces para que la cosechadora llegue hasta el maíz! ",
+        "courseA_harvester_seq2_2019": "¡Usa <xml><block type=\"maze_moveWest\" block-text=\"move west\"/></xml> **tres** veces para que la cosechadora llegue hasta el maíz! ",
         "courseA_harvester_seq2_2020": "¡Usa <xml><block type=\"maze_moveWest\" block-text=\"move west\"/></xml> **tres** veces para que la cosechadora llegue hasta el maíz! ",
         "courseA_harvester_seq3": "¡Usa <xml><block type=\"maze_moveNorth\"/></xml> **tres** veces para que la cosechadora llegue hasta el maíz! No te olvides de recoger el maíz al final.",
-        "courseA_harvester_seq3_2019": "¡Usa <xml><block type=\"maze_moveNorth\"/></xml> **tres** veces para que la cosechadora llegue hasta el maíz! No te olvides de recoger el maíz al final.",
+        "courseA_harvester_seq3_2019": "¡Usa <xml><block type=\"maze_moveNorth\" block-text=\"move north\"/></xml> **tres** veces para que la cosechadora llegue hasta el maíz! No te olvides de recoger el maíz al final.",
         "courseA_harvester_seq3_2020": "¡Usa <xml><block type=\"maze_moveNorth\" block-text=\"move north\"/></xml> **tres** veces para que la cosechadora llegue hasta el maíz! No te olvides de recoger el maíz al final.",
         "courseA_harvester_seq4": "Agrega _un_ bloque para ayudar a la cosechadora a recoger el maíz.",
         "courseA_harvester_seq4_2019": "Agrega _un_ bloque para ayudar a la cosechadora a recoger el maíz.",
@@ -2253,7 +2253,7 @@
         "courseB_collector_loops1_2020": "**Juego libre:** Mueve a Laurel y consigue todos los tesoros que puedas. Consigue al menos un objeto sin errores para pasar este nivel.\n\n* * *\n\nArrastra bloques al espacio de trabajo e intenta descubrir cómo conseguir tesoros.  ",
         "courseB_collector_loops2": "Mueve a Laurel hasta el tesoro y, luego, usa el bloque <xml><block type=\"collector_collect\"/></xml> para recogerlo.\n\nRecoge los cuatro montones para pasar este nivel.",
         "courseB_collector_loops2_2018": "Mueve a Laurel hasta el tesoro y, luego, usa el bloque <xml><block type=\"collector_collect\"/></xml> para recogerlo.\n\nRecoge los cuatro montones para pasar este nivel.",
-        "courseB_collector_loops2_2019": "Mueve a Laurel hasta el tesoro y, luego, usa el bloque <xml><block type=\"collector_collect\"/></xml> para recogerlo.\n\nRecoge los cuatro montones para pasar este nivel.",
+        "courseB_collector_loops2_2019": "Mueve a Laurel hasta el tesoro y, luego, usa el bloque <xml><block type=\"collector_collect\" block-text=\"get treasure\"/></xml> para recogerlo.\n\nRecoge los cuatro montones para pasar este nivel.",
         "courseB_collector_loops2_2020": "Mueve a Laurel hasta el tesoro y, luego, usa el bloque <xml><block type=\"collector_collect\" block-text=\"get treasure\"/></xml> para recogerlo.\n\nRecoge los cuatro montones para pasar este nivel.",
         "courseB_collector_loops3": "¿Cómo puede Laurel obtener los cinco montones de tesoros con un solo bloque <xml><block type=\"maze_moveEast\"/></xml>?",
         "courseB_collector_loops3_2018": "¿Cómo puede Laurel obtener los cinco montones de tesoros con un solo bloque <xml><block type=\"maze_moveEast\"/></xml>?",
@@ -3707,7 +3707,12 @@
         "simconfig": "# Modificar y Predecir\n\nEscoge una de las variables que controla esta simulación para modificar y predecir en qué manera cambiará el resultado.\n\nDespués de que hayas escrito tu predicción, ejecuta la simulación por 5 veces y escribe tus descubrimientos. ¿Fue precisa tu predicción?",
         "simconfig_2020": "# Modificar y Predecir\n\nEscoge una de las variables que controla esta simulación para modificar y predecir en qué manera cambiará el resultado.\n\nDespués de que hayas escrito tu predicción, ejecuta la simulación por 5 veces y escribe tus descubrimientos. ¿Fue precisa tu predicción?",
         "simstarter": "# Coleccionando los Datos\n\nEjecuta esta simulación por 5 veces. Cada vez, usa el guión de la actividad Coleccionando los Datos para grabar:\n\n-   ¿Cuántas manzanas coleccionó el elefante?\n-   ¿Cuántas manzanas coleccionó hipopótamo?\n-   ¿Cuánto tiempo pasó para que todas las manzanas estén coleccionadas?",
-        "simstarter_2020": "# Coleccionando los Datos\n\nEjecuta esta simulación por 5 veces. Cada vez, usa el guión de la actividad Coleccionando los Datos para grabar:\n\n-   ¿Cuántas manzanas coleccionó el elefante?\n-   ¿Cuántas manzanas coleccionó hipopótamo?\n-   ¿Cuánto tiempo pasó para que todas las manzanas estén coleccionadas?"
+        "simstarter_2020": "# Coleccionando los Datos\n\nEjecuta esta simulación por 5 veces. Cada vez, usa el guión de la actividad Coleccionando los Datos para grabar:\n\n-   ¿Cuántas manzanas coleccionó el elefante?\n-   ¿Cuántas manzanas coleccionó hipopótamo?\n-   ¿Cuánto tiempo pasó para que todas las manzanas estén coleccionadas?",
+        "courseC_video_angles": "¡Ayuda a Scrat a llegar hasta la bellota!",
+        "courseD_video_nestedLoopsArtist": "Usa lo que has aprendido para dibujar este triángulo.\n\n* * *\n\n##### Cada lado tiene 100 pixeles de largo. Necesitarás girar 120 grados en cada esquina.",
+        "courseE_bee_ramp14": "Las lechugas están esparcidas en el jardín.\\\nSigue por cada camino **hasta** que alcances una lechuga, y luego continúa para recogerla **mientras** queden más por recoger.  ",
+        "courseE_farmer_predict1": "Ahora, la cosechadora necesita recoger todas las lechugas. Usa el 'mientras hay lechugas' dentro del loop 'repetir' para recogerlas todas!",
+        "courseE_farmer_predict2": "Las lechugas están esparcidas en el jardín.\\\nSigue por cada camino **hasta** que alcances una lechuga, y luego continúa para recogerla **mientras** queden más por recoger.  "
       }
     }
   }

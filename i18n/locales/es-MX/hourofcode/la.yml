@@ -6,29 +6,43 @@ la:
   front_title: Únete al mayor evento educativo de la historia, %{campaign_date}
   coming_soon: Próximamente
   campaign_date_start_short: 7 Dic.
-  campaign_date_start_long: 4 de diciembre
-  campaign_date_short: 4-10 dic.
-  campaign_date_full: Del 4 al 10 de diciembre
-  campaign_date_year: '2017'
-  campaign_date_full_year: Del 4 al 10 de diciembre de 2017
+  campaign_date_start_long: 7 de diciembre
+  campaign_date_short: 7-13 dic.
+  campaign_date_full: Del 7 al 13 de diciembre
+  campaign_date_year: '2020'
+  campaign_date_full_year: Del 7 al 13 de diciembre de 2020
   latam_campaign_date_start_short: Oct. 1
   latam_campaign_date_start_long: Octubre 1
   latam_campaign_date_short: Oct. 1 - Dic. 18
   latam_campaign_date_full: Octubre 1 - Diciembre 18
-  latam_campaign_date_year: '2017'
+  latam_campaign_date_year: '2020'
   latam_campaign_date_full_year: Octubre 1, 2020 - Diciembre 18, 2020
   europe_campaign_date_start_short: Oct. 10
   europe_campaign_date_start_long: Octubre 10
   europe_campaign_date_short: Oct. 10-25
   europe_campaign_date_full: Octubre 10-25
-  europe_campaign_date_year: '2017'
+  europe_campaign_date_year: '2020'
   europe_campaign_date_full_year: Octubre 10-25, 2020
   africa_campaign_date_start_short: Oct. 1
   africa_campaign_date_start_long: Octubre 1
   africa_campaign_date_short: Oct. 1-31
   africa_campaign_date_full: Octubre 1-31
-  africa_campaign_date_year: '2017'
+  africa_campaign_date_year: '2020'
   africa_campaign_date_full_year: Octubre 1-31, 2020
+  hoc2020_header: Learn today, build a brighter tomorrow.
+  hoc2020_header_with_line_break_markdown: |-
+    Learn today,
+
+    build a brighter tomorrow.
+  social_hoc2020_cs_important: 'CS is more important than ever. Let''s build the future
+    we want. #CSforGood'
+  social_hoc2020_hoc_is_about_csforgood: 'The #HourOfCode is about #CSforGood. Learn
+    today, build a brighter tomorrow.'
+  social_hoc2020_global_movement: La Hora del Código es un movimiento global en el
+    que participan decenas de millones de estudiantes. Los tutoriales de una hora
+    están disponibles en más de 45 idiomas para todas las edades.
+  social_hoc2020_coming_dates: The Hour of Code is coming December 7-13, 2020. Computer
+    science is foundational for every student to learn.
   hoc2019_header: Aprende programación. Cambia el mundo.
   hoc2019_header_line1_mobile: Aprende programación.
   hoc2019_header_line2_mobile: Cambia el mundo.
@@ -121,6 +135,13 @@ la:
     ¡Las ciencias de la computación son mucho más que programar! Disfruta del primer
     paso de Code.org en un nuevo viaje para enseñar más sobre IA en nuestro plan de
     estudios.
+  hoc_live: Hora del Código En Vivo
+  hoc_live_sign_up_title: Regístrate para la Hora del Código En Vivo
+  hoc_live_sign_up_message: "¡Aprende en vivo junto a invitados especiales! Estudiantes
+    de todas las edades y habilidades, incluso aquellos sin computadoras, son bienvenidos.
+    Únete a nuestra lista de distribución para recibir recordatorios de los episodios
+    y recursos para continuar el aprendizaje en casa."
+  hoc_live_join_us: Únete
   hoc_overview_oceans_tutorial_header: Océanos de AI
   hoc_overview_oceans_tutorial_desc: Aprende sobre inteligencia artificial (IA), aprendizaje
     automático, datos de entrenamiento y sesgos, mientras exploras cuestiones éticas
@@ -190,7 +211,7 @@ la:
   codeorg_homepage_hoc2018_video: Mira nuestro video
   hourofcode_homepage_hoc2018_header_line1: Cualquier persona, en cualquier lugar,
     puede organizar una Hora del Código. Hay tutoriales de una hora en más de 45 idiomas.
-    No se necesita experiencia.
+    No se necesita experiencia previa en programación.
   hourofcode_homepage_hoc2018_header_line2: De 4 a 104 años.
   hoc2018_tutorial_mchoc_description: "¡Minecraft está de vuelta para la Hora del
     Código con una actividad nueva! Viaja a través de Minecraft con el código."
@@ -379,7 +400,7 @@ la:
   how_to_nav_companies: Para empresas
   how_to_nav_afterschool_educators: Para docentes extracurriculares
   how_to_nav_volunteers: Para voluntarios
-  how_to_nav_virtual: For virtual events
+  how_to_nav_virtual: Para eventos virtuales
   whats_next_header: Próximos pasos
   whats_next_description: Te enviaremos materiales y consejos útiles para tu evento.
     <a href='http://code.org/learn'> Prueba los tutoriales</a> para cualquier navegador
@@ -517,6 +538,7 @@ la:
     mapa
   signup_event_type_in_school: En una escuela
   signup_event_type_out_of_school: Fuera de la escuela
+  signup_event_type_at_home: Página principal
   signup_submit_census_label: Enviar
   signup_submit_census_error_message: Lo sentimos. Se produjo un error. Intenta enviar
     el formulario otra vez.
@@ -950,7 +972,8 @@ la:
   highlights_header: Destacados de la Hora del Código
   highlights_description: Algunos de nuestros momentos favoritos de la campaña de
     la Hora del Código.
-  higlights_see_more: Ver más destacados
+  highlights_previous: Highlights from previous years
+  highlights_see_more: See more highlights
   highlights_readmore: Leer más
   highlights_watchvideo: Mira el video
   highlights_facebook: Compartir en Facebook
@@ -8773,8 +8796,8 @@ la:
   tutorial_codewards_string_detail_programming_languages: CoffeeScript
   tutorial_olympics_string_detail_programming_languages: CoffeeScript
   tutorial_codinismhero_string_detail_programming_languages: Python
-  tutorial_discovery_string_detail_programming_languages: Bloques
-  tutorial_csfirstname_string_detail_programming_languages: Bloques
+  tutorial_discovery_string_detail_programming_languages: Bloques, Scratch
+  tutorial_csfirstname_string_detail_programming_languages: Bloques, Scratch
   tutorial_obstaclecourse_string_detail_programming_languages: Bloques
   tutorial_edisonmove_string_detail_programming_languages: Python, EdPy, un lenguaje
     de programación basado en texto basado en Python.
@@ -9815,7 +9838,7 @@ la:
   tutorial_ai-oceans_string_detail_platforms: ''
   tutorial_scratchimagine_string_detail_programming_languages: Bloques
   tutorial_codesterspsa_string_detail_programming_languages: Python
-  tutorial_googlehero_string_detail_programming_languages: Bloques
+  tutorial_googlehero_string_detail_programming_languages: Bloques, Scratch
   tutorial_codestersbball_string_detail_programming_languages: Python
   tutorial_scratchcartoon_string_detail_programming_languages: Bloques
   tutorial_codemonkeyjr_string_detail_programming_languages: Bloques

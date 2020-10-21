@@ -5,7 +5,7 @@ title: Über uns
 # Über uns
 
 <div class="col-60">
-  Code.org® ist eine gemeinnützige Organisation, die den Zugang zur Informatik in Schulen ausweiten und die Teilnahme von Frauen und anderen Minoritäten fördern will. Unsere Vision ist, dass jeder Schüler in jeder Schule die Möglichkeit hat, Informatik zu lernen, genauso wie Biologie, Chemie oder Algebra. Wir bieten den am weitesten verbreiteten Lehrplan für den Informatikunterricht in der Grund- und Sekundarschule und organisieren auch die jährliche Kampagne <a href="https://hourofcode.com">Hour of Code</a>, mit der sich 10% aller Schülerinnen und Schüler in der Welt beschäftigen. Code.org wird von großzügigen Spendern unterstützt, darunter Amazon, Facebook, Google, die Infosys Foundation, Microsoft und <a href="/about/donors">vielen weiteren</a>.
+  Code.org® is a nonprofit dedicated to expanding access to computer science in schools and increasing participation by young women and students from other underrepresented groups. Unsere Vision ist, dass jeder Schüler in jeder Schule die Möglichkeit hat, Informatik zu lernen, genauso wie Biologie, Chemie oder Algebra. Wir bieten den am weitesten verbreiteten Lehrplan für den Informatikunterricht in der Grund- und Sekundarschule und organisieren auch die jährliche Kampagne <a href="https://hourofcode.com">Hour of Code</a>, mit der sich 10% aller Schülerinnen und Schüler in der Welt beschäftigen. Code.org wird von großzügigen Spendern unterstützt, darunter Amazon, Facebook, Google, die Infosys Foundation, Microsoft und <a href="/about/donors">vielen weiteren</a>.
 </div>
 
 [col-40]

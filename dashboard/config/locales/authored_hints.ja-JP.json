@@ -2273,12 +2273,12 @@
         },
         "courseA_playlab_events_challenge2_2019": {
           "courseA_playlab_events_challenge2_a": "<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n          </block>\n    </next>\n  </block></xml> で とりをしゃべらせることが できます。",
-          "courseA_playlab_events_challenge2_b": "おとをならすには、<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n\n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n\n  </block></xml> をつかいます。",
+          "courseA_playlab_events_challenge2_b": "おとをならすには、<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n  </block></xml> をつかいます。",
           "courseA_playlab_events_challenge2_c": "<xml>  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSpriteEmotion\">\n        <title name=\"SPRITE\">5</title>\n        <title name=\"VALUE\">2</title>\n        <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">5</title>\n            <title name=\"TEXT\">Roar!</title>\n            <next>\n              <block type=\"studio_setSpriteEmotion\">\n                <title name=\"SPRITE\">5</title>\n                <title name=\"VALUE\">0</title>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block></xml> をつかえば、かおを かえることが できます。"
         },
         "courseA_playlab_events_challenge2_2020": {
           "courseA_playlab_events_challenge2_a": "<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n          </block>\n    </next>\n  </block></xml> で とりをしゃべらせることが できます。",
-          "courseA_playlab_events_challenge2_b": "おとをならすには、<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n\n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n\n  </block></xml> をつかいます。",
+          "courseA_playlab_events_challenge2_b": "おとをならすには、<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n  </block></xml> をつかいます。",
           "courseA_playlab_events_challenge2_c": "<xml>  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSpriteEmotion\">\n        <title name=\"SPRITE\">5</title>\n        <title name=\"VALUE\">2</title>\n        <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">5</title>\n            <title name=\"TEXT\">Roar!</title>\n            <next>\n              <block type=\"studio_setSpriteEmotion\">\n                <title name=\"SPRITE\">5</title>\n                <title name=\"VALUE\">0</title>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block></xml> をつかえば、かおを かえることが できます。"
         },
         "courseB_Scrat_ramp1_2018": {
@@ -8619,6 +8619,25 @@
         "iceage_warn_ice_age": {
           "iceage_warn_ice_age_a": "2ブロック追加すれば、このパズルをクリアできます。 ",
           "iceage_warn_ice_age_b": "プログラムを実行したときにやることを `実行（じっこう）した時`の下に引っ付けよう。"
+        },
+        "courseC_video_angles": {
+          "courseD_scrat_programming6_a": "このパズルを クリアする ほうほうは、2つ あるよ。",
+          "courseD_scrat_programming6_b": "スクラットは海の方を向いているので、前に進む前に曲がろう。",
+          "courseD_scrat_programming6_c": "ミスをおそれないで！まちがってもいいから、ブロックを引っ付けたら、どうなるか実行してみよう。"
+        },
+        "courseD_video_nestedLoopsArtist": {
+          "courseE_artist_ramp8_a": "`前にすすむ 100 ピクセル`の100を200にかえて、へんをかいてください。",
+          "courseE_artist_ramp8_b": "4つの辺をかくには、`うごく まえに 100 ピクセル`を くり返しの中に入れて 4回 くり返します。\n\n曲がるのを わすれないでね。",
+          "courseE_artist_ramp8_c": "くり返しのなかに入れるのは、`すすむ まえに` と `まがる みぎに 90度`の ２つです。",
+          "courseD_artist_ramp12_a": "正方形をかくのと同じだけど、どこを変えればいいかな？",
+          "courseD_artist_ramp12_b": "`まがる`のドロップダウンメニューで 曲がる角度を 指定できます。",
+          "courseD_artist_ramp12_c": "１つの辺は、100ピクセル前に進んで、120度右に曲がれば かくことができます。これを 何回 くり返せばいいかな？"
+        },
+        "courseE_bee_ramp14": {
+          "courseE_farmer_ramp12d_b": "`くりかえし`の中に、`までを くりかえします` と `以下の間` を入れます！"
+        },
+        "courseE_farmer_predict2": {
+          "courseE_farmer_ramp12e_b": "今回のパズルは、さっきやったパズルと ほとんど 同じですが、曲がる方向が ちがっています。"
         }
       }
     }

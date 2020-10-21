@@ -1,39 +1,39 @@
 ---
-title: Hour of Code How-to Guide
+title: Przewodnik po "Godzinie kodowania"
 ---
 
 {{ signup_button }}
 
 # Jak zorganizować Godzinę Kodowania
 
-### Join the movement and introduce your students to computer science with these steps.
+### Przyłącz się do tej inicjatywy i wprowadź swoich uczniów w dziedzinę informatyki w sposób następujący.
 
-Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
+Myślenie informatyczne pomaga rozwijać umiejętność rozwiązywania problemów, logikę oraz kreatywność. A technologia zmienia każdą branżę na świecie. Uczniowie dnia dzisiejszego powinni się uczyć, jak tworzyć technologię, a nie tylko jak z niej korzystać. Rozpoczęcie nauki na wczesnym etapie da im podwaliny sukcesu na dowolnej ścieżce zawodowej na miarę XXI wieku.
 
-Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time, and it fits perfectly for both in-class and after-school settings. Zobacz nasz <a href="{{ localized_files/participation_guide }}"</a>przewodnik uczestnictwa, jeśli nadal masz pytania.
+Wypróbowanie godziny kodowania to prosty i przyjemny sposób na zapoznanie uczniów z podstawami informatyki, który doskonale wpisze się w zajęcia lekcyjne, jak i pozaszkolne. Zobacz nasz <a href="{{ localized_files/participation_guide }}"</a>przewodnik uczestnictwa, jeśli nadal masz pytania.
 
-- [Watch the Hour of Code how-to video](#how-to-video)
-- [Explore activities and tutorials](#explore-activities)
-- [Create your plan for the day](#create-your-plan)
+- [Obejrzyj film instruktażowy "Godziny kodowania"](#how-to-video)
+- [Poznawaj zajęcia i treści samouczków](#explore-activities)
+- [Utwórz swój plan dnia](#create-your-plan)
 - [Promuj swoją Godzinę Kodowania](#promote-your-hour)
-- [How to start your Hour of Code strong](#how-to-start)
-- [Get coding](#code)
-- [Celebrate your students' success](#celebrate)
+- [Jak "z przytupem" zacząć "Godzinę kodowania"](#how-to-start)
+- [Zacznij kodować](#code)
+- [Świętuj sukces swoich uczniów](#celebrate)
 - [Inne zasoby Godziny Kodowania dla nauczycieli](#other-resources)
 
-### An Hour of Code can also be hosted remotely! To get started, check out our [tips for hosting a virtual Hour of Code event](https://hourofcode.com/us/how-to/virtual).
+### Godzinę kodowania można również zorganizować zdalnie! Aby rozpocząć, [zapoznaj się z naszymi wskazówkami dotyczącymi organizowania wirtualnej godziny kodowania.](https://hourofcode.com/us/how-to/virtual).
 
 * * *
 
 <a id="how-to-video"></a>
 
-## 1. Watch the Hour of Code how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+## 1. Obejrzyj film instruktażowy "Godziny kodowania" <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
 * * *
 
 <a id="explore-activities"></a>
 
-## 2. Explore activities and tutorials
+## 2. Poznawaj zajęcia i treści samouczków
 
 Oferujemy wiele zabawy, [ samouczki dla uczniów ]({{ urls/learn }}) dla wszystkich grup wiekowych i poziomów zaawansowania. Uczniowie często wypróbowują samouczki, choć wiele zajęć obejmuje plany lekcji dla nauczycieli, którzy poprowadzą dyskusję lub rozszerzą działania. 
 
@@ -45,7 +45,7 @@ Przeglądaj zajęcia i zdecyduj z wyprzedzeniem, czy chcesz wybrać jeden samouc
 
 <a id="create-your-plan"></a>
 
-## 3. Create your plan for the day
+## 3. Utwórz swój plan dnia
 
 ### Zaplanuj potrzebny sprzęt - komputery nie są niezbędne
 
@@ -64,7 +64,7 @@ Ludzie na całym świecie przyłączają się do obchodów Godziny Kodowania pod
 
 <a id="promote-your-hour"></a>
 
-## 4. Promote your Hour of Code
+## 4. Promuj swoją "Godzinę kodowania"
 
 Teraz, kiedy już zaplanowałeś swoje wydarzenie, czas zacząć je promować!
 
@@ -88,7 +88,7 @@ Dowiedz się więcej o plakatach, filmach, naklejkach i innych sposobach [ promo
 
 <a id="how-to-start"></a>
 
-## 5. How to start your Hour of Code strong
+## 5. Jak "z przytupem" zacząć "Godzinę kodowania"
 
 Po nadejściu Godziny Kodowania upewnij się, że dobrze rozpoczniesz swoje wydarzenie dzięki niektórym z tych narzędzi i wskazówek.
 
@@ -99,21 +99,21 @@ Pokaż inspirujący film:
 - W oryginalnym wideo Code.org występują Bill Gates, Mark Zuckerberg i gwiazda NBA Chris Bosh. (Do wyboru są wersje trwające [1 minutę](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minut](https://www.youtube.com/watch?v=nKIu9yen5nc) oraz [9 minut](https://www.youtube.com/watch?v=dU1xS07N-FA))
 - Znajdź więcej inspirujących [zasobów]({{ urls/inspire }}) i [filmów](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-It’s okay if both you and your students are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:
+W porządku, jeśli zarówno Ty, jak i Twoi uczniowie, jesteście nowicjuszami w dziedzinie informatyki. Oto kilka pomysłów na rozpoczęcie aktywności z Godzina Kodowania:
 
 - Wyjaśnij, jak technologia wpływa na nasze życie, używając przykładów, które zainteresują zarówno chłopców, jak i dziewczęta (opowiedz o ratowaniu życia, pomaganiu ludziom, łączeniu ludzi itp.).
 - Wymieńcie wspólnie rzeczy, które używają kodu w życiu codziennym.
-- See tips for getting young women interested in computer science [here]({{ urls/girls }}).
+- Przeczytaj nasze wskazówki [ jak zainteresować młode kobiety informatyką ]({{ urls/girls }}).
 
 * * *
 
 <a id="code"></a>
 
-## 6. Get coding!
+## 6. Zacznijcie kodować!
 
 Skieruj uczniów na zadania
 
-- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
+- Napisz na tablicy link do samouczka. Znajdź link wymieniony w [informacji dla Twojego wybranego samouczka]({{ urls/learn }}) pod liczbą uczestników.
 
 Kiedy Twoi uczniowie napotkają trudności, możesz powiedzieć:
 
@@ -130,7 +130,7 @@ A co zrobić, jeśli któryś z uczniów skończy wcześniej?
 
 <a id="celebrate"></a>
 
-## 7. Celebrate your students' success
+## Świętuj sukcesy swoich uczniów
 
 [col-33]
 
@@ -154,6 +154,6 @@ A co zrobić, jeśli któryś z uczniów skończy wcześniej?
 
 ### Co będzie się działo po Godzinie Kodowania?
 
-Computer science doesn’t have to end with the Hour of Code! Our curriculum is web-based and free to use, forever. [Learn how](/beyond) to bring CS to your school and students.
+Informatyka nie musi się kończyć na "Godzinie kodowania"! Nasz program realizowany jest w trybie internetowym i można z niego korzystać bezpłatnie, na zawsze. [Dowiedz się, jak można ](/beyond) wprowadzić informatykę to swojej szkoły i przybliżyć ją swoim uczniom.
 
 {{ signup_button }}

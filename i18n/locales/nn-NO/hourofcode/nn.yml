@@ -10,7 +10,7 @@ nn:
   campaign_date_short: 4.-10. des
   campaign_date_full: 4.-10. desember
   campaign_date_year: '2017'
-  campaign_date_full_year: 4.-10. desember, 2017
+  campaign_date_full_year: 7.-13. desember, 2020
   latam_campaign_date_start_short: Oct. 1
   latam_campaign_date_start_long: October 1
   latam_campaign_date_short: Oct. 1 - Dec. 18
@@ -29,6 +29,20 @@ nn:
   africa_campaign_date_full: October 1-31
   africa_campaign_date_year: '2017'
   africa_campaign_date_full_year: October 1-31, 2020
+  hoc2020_header: Learn today, build a brighter tomorrow.
+  hoc2020_header_with_line_break_markdown: |-
+    Learn today,
+
+    build a brighter tomorrow.
+  social_hoc2020_cs_important: 'CS is more important than ever. Let''s build the future
+    we want. #CSforGood'
+  social_hoc2020_hoc_is_about_csforgood: 'The #HourOfCode is about #CSforGood. Learn
+    today, build a brighter tomorrow.'
+  social_hoc2020_global_movement: Kodetimen er ei verdensomsfattande rørsle som når
+    ut til titalls millionar elevar. Læringsopplegg på ein time fins på over 45 språk
+    og passar folk i alle aldrar.
+  social_hoc2020_coming_dates: The Hour of Code is coming December 7-13, 2020. Computer
+    science is foundational for every student to learn.
   hoc2019_header: Lær deg programmering. Så kan du endre verda.
   hoc2019_header_line1_mobile: Lær deg programmering.
   hoc2019_header_line2_mobile: Endre verda.
@@ -115,6 +129,13 @@ nn:
     ein utforskar etiske problem og korleis AI kan brukast for å løyse verdsproblem.
     Datavitskap er om så mykje meir enn koding! Bli med Code.org sine første steg
     på ny reise for å lære meir om AI gjennom pensumet vårt. '
+  hoc_live: Hour of Code Live
+  hoc_live_sign_up_title: Sign up for Hour of Code Live
+  hoc_live_sign_up_message: Learn in real time alongside special guests! Students
+    of all ages and abilities, including those without computers, are welcome. Join
+    our mailing list to receive recordings of the episodes and resources to continue
+    learning at home.
+  hoc_live_join_us: Bli med
   hoc_overview_oceans_tutorial_header: AI for hav
   hoc_overview_oceans_tutorial_desc: Lær om AI, maskinlæring, treningsdata og bias
     medan ein utforskar etiske problem og korleis AI kan brukast for å løyse verdsproblem.
@@ -495,6 +516,7 @@ nn:
   signup_send_posters_address_placeholder: Denne adressa vil ikkje bli vist på kartet
   signup_event_type_in_school: På ein skule
   signup_event_type_out_of_school: Utanfor skulen
+  signup_event_type_at_home: Home
   signup_submit_census_label: Send inn
   signup_submit_census_error_message: Vi beklager. Feil. Prøv å sende skjemaet ein
     gong til.
@@ -884,7 +906,8 @@ nn:
   highlights_title: Høgdepunkt
   highlights_header: Kodetimen sine høgdepunkt
   highlights_description: Nokre av våre favorittaugneblink frå Kodetimen.
-  higlights_see_more: Sjå fleire høgdepunkt
+  highlights_previous: Highlights from previous years
+  highlights_see_more: See more highlights
   highlights_readmore: Les meir
   highlights_watchvideo: Sjå videoen
   highlights_facebook: Del på Facebook
@@ -4906,18 +4929,17 @@ nn:
     eit program som får KIBO til å danse til musikken. Elelvar vil lære seg korleis
     å skape eit program til å uttrykke ein idé (i dette tilfellet ein dans), med eit
     fokus på å kunne sekvensiere.
-  tutorial_buildcharacters_longdescription: The most popular pre-reader app now includes
-    a digital Maker Space! Make levels, design games, or build characters. Choose
-    your activity and start creating with Kodable!  Featuring JavaScript for upper
+  tutorial_buildcharacters_longdescription: What are some character traits you can
+    identify in books or people you know? Design your own fuzz and use code to modify
+    its properties and bring your character to life! Featuring JavaScript for upper
     elementary.
   tutorial_designgames_longdescription: The most popular pre-reader app now includes
     a digital Maker Space! Make levels, design games, or build characters. Choose
     your activity and start creating with Kodable!  Featuring JavaScript for upper
     elementary.
-  tutorial_makelevels_longdescription: The most popular pre-reader app now includes
-    a digital Maker Space! Make levels, design games, or build characters. Choose
-    your activity and start creating with Kodable!  Featuring JavaScript for upper
-    elementary.
+  tutorial_makelevels_longdescription: Can you build a symmetrical maze? A maze with
+    right angles? Get creative and complete maze-building challenges with basic coding
+    concepts. Aligned with K-5 Common Core math.
   tutorial_wizard_longdescription: Journey into the world of Code Magic as a Code
     Wizard. Learn to create and cast spells to customize your castle.
   tutorial_mbscratchcards_longdescription: Connect the physical world of micro:bit
@@ -6414,7 +6436,7 @@ nn:
   tutorial_dance2019_string_platforms: Alle moderne nettlesarar, Android nettbrett,
     iPad, Fråkobla
   tutorial_danceparty_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_chibitronics_string_platforms: All modern browsers
+  tutorial_chibitronics_string_platforms: All modern browsers, Screen reader
   tutorial_athlete_string_platforms: All modern browsers
   tutorial_moana_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_star-wars_string_platforms: All modern browsers, Android tablet, iPad,
@@ -6490,7 +6512,7 @@ nn:
     Firefox, Safari, Android tablet, iPad
   tutorial_cmgame_string_platforms: All modern browsers
   tutorial_codesters_string_platforms: do-not-show
-  tutorial_qrm_string_platforms: All modern browsers
+  tutorial_qrm_string_platforms: All modern browsers, Screen reader
   tutorial_texas-instruments_string_platforms: TI-84, TI-83 graphing calculators
   tutorial_cajava_string_platforms: Internet Explorer 11, Microsoft Edge, Chrome,
     Firefox, Safari
@@ -6827,7 +6849,7 @@ nn:
     phone, Android phone, iPhone
   tutorial_gpbcatapult_string_platforms: All modern browsers
   tutorial_quorumastro_string_platforms: All modern browsers, Android tablet, iPad,
-    Windows phone, Android phone, iPhone
+    Windows phone, Android phone, iPhone, Screen reader
   tutorial_alicewonder_string_platforms: All modern browsers
   tutorial_rginter_string_platforms: Chrome, Firefox, Android tablet
   tutorial_cssgrid_string_platforms: All modern browsers
@@ -6960,26 +6982,38 @@ nn:
   tutorial_blockscadpizza_string_platforms: All modern browsers
   tutorial_blockscadsugar_string_platforms: All modern browsers
   tutorial_bsgridlight_string_platforms: All modern browsers
-  tutorial_bpartscratch_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_bpartvid_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_bpartscratch_string_platforms: All modern browsers, Android tablet, iPad,
+    Screen reader
+  tutorial_bpartvid_string_platforms: All modern browsers, Android tablet, iPad, Screen
+    reader
   tutorial_bpenglishscratch_string_platforms: All modern browsers, Android tablet,
-    iPad
-  tutorial_bpenglishvid_string_platforms: All modern browsers, Android tablet, iPad
+    iPad, Screen reader
+  tutorial_bpenglishvid_string_platforms: All modern browsers, Android tablet, iPad,
+    Screen reader
   tutorial_bphealthscratch_string_platforms: All modern browsers, Android tablet,
-    iPad
-  tutorial_bphealthvid_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_bpmathscratch_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_bpmathvid_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_bpmlkscratch_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_bpmlkvid_string_platforms: All modern browsers, Android tablet, iPad
+    iPad, Screen reader
+  tutorial_bphealthvid_string_platforms: All modern browsers, Android tablet, iPad,
+    Screen reader
+  tutorial_bpmathscratch_string_platforms: All modern browsers, Android tablet, iPad,
+    Screen reader
+  tutorial_bpmathvid_string_platforms: All modern browsers, Android tablet, iPad,
+    Screen reader
+  tutorial_bpmlkscratch_string_platforms: All modern browsers, Android tablet, iPad,
+    Screen reader
+  tutorial_bpmlkvid_string_platforms: All modern browsers, Android tablet, iPad, Screen
+    reader
   tutorial_bpsafetyscratch_string_platforms: All modern browsers, Android tablet,
-    iPad
-  tutorial_bpsafetyvid_string_platforms: All modern browsers, Android tablet, iPad
+    iPad, Screen reader
+  tutorial_bpsafetyvid_string_platforms: All modern browsers, Android tablet, iPad,
+    Screen reader
   tutorial_bpsciencescratch_string_platforms: All modern browsers, Android tablet,
-    iPad
-  tutorial_bpsciencevid_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_bptechscratch_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_bptechvid_string_platforms: All modern browsers, Android tablet, iPad
+    iPad, Screen reader
+  tutorial_bpsciencevid_string_platforms: All modern browsers, Android tablet, iPad,
+    Screen reader
+  tutorial_bptechscratch_string_platforms: All modern browsers, Android tablet, iPad,
+    Screen reader
+  tutorial_bptechvid_string_platforms: All modern browsers, Android tablet, iPad,
+    Screen reader
   tutorial_caflags_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_matariki_string_platforms: Alle moderne nettlesarar, Android nettbrett,
     iPad, Fråkobla
@@ -7009,9 +7043,9 @@ nn:
   tutorial_codesparkcreate_string_platforms: All modern browsers, Android tablet,
     iPad, Android phone, iPhone
   tutorial_hardvsoft_string_platforms: Unplugged
-  tutorial_codestersecard_string_platforms: All modern browsers
-  tutorial_codesterslogo_string_platforms: All modern browsers
-  tutorial_codesterstshirt_string_platforms: All modern browsers
+  tutorial_codestersecard_string_platforms: All modern browsers, Screen reader
+  tutorial_codesterslogo_string_platforms: All modern browsers, Screen reader
+  tutorial_codesterstshirt_string_platforms: All modern browsers, Screen reader
   tutorial_codewards_string_platforms: All modern browsers
   tutorial_olympics_string_platforms: All modern browsers
   tutorial_codinismhero_string_platforms: Android tablet, Android phone
@@ -7025,7 +7059,7 @@ nn:
   tutorial_gamefrootsquid_string_platforms: All modern browsers, iPad
   tutorial_duckpiano_string_platforms: All modern browsers
   tutorial_gpsound_string_platforms: All modern browsers
-  tutorial_groklearningpython_string_platforms: All modern browsers
+  tutorial_groklearningpython_string_platforms: All modern browsers, Screen reader
   tutorial_htmltimetravel_string_platforms: All modern browsers
   tutorial_hp_flappy_string_platforms: iPad
   tutorial_appytappin_string_platforms: All modern browsers
@@ -7078,27 +7112,27 @@ nn:
   tutorial_scratchjrstory_string_platforms: Android tablet, iPad
   tutorial_scratchjrtwinkle_string_platforms: Android tablet, iPad
   tutorial_spherocomm_string_platforms: All modern browsers, Android tablet, iPad,
-    Android phone, iPhone
+    Android phone, iPhone, Screen reader
   tutorial_spherocommunity_string_platforms: All modern browsers, Android tablet,
-    iPad, Android phone, iPhone
+    iPad, Android phone, iPhone, Screen reader
   tutorial_spherofunctions_string_platforms: All modern browsers, Android tablet,
-    iPad, Android phone, iPhone
+    iPad, Android phone, iPhone, Screen reader
   tutorial_spheroinfrared_string_platforms: All modern browsers, Android tablet, iPad,
-    Android phone, iPhone
+    Android phone, iPhone, Screen reader
   tutorial_spherolightsensor_string_platforms: All modern browsers, Android tablet,
-    iPad, Android phone, iPhone
+    iPad, Android phone, iPhone, Screen reader
   tutorial_spheromansion_string_platforms: All modern browsers, Android tablet, iPad,
-    Android phone, iPhone
+    Android phone, iPhone, Screen reader
   tutorial_roadblocks_string_platforms: All modern browsers, Android tablet, iPad,
-    Android phone, iPhone
+    Android phone, iPhone, Screen reader
   tutorial_spherotext2_string_platforms: All modern browsers, Android tablet, iPad,
-    Android phone, iPhone
+    Android phone, iPhone, Screen reader
   tutorial_spherotext3_string_platforms: All modern browsers, Android tablet, iPad,
-    Android phone, iPhone
+    Android phone, iPhone, Screen reader
   tutorial_spherotext4_string_platforms: All modern browsers, Android tablet, iPad,
-    Android phone, iPhone
+    Android phone, iPhone, Screen reader
   tutorial_spheroraptor_string_platforms: All modern browsers, Android tablet, iPad,
-    Android phone, iPhone
+    Android phone, iPhone, Screen reader
   tutorial_stempiday_string_platforms: Chrome, Firefox, Safari, Android tablet, iPad
   tutorial_stemplanetoids_string_platforms: Chrome, Firefox, Safari, Android tablet,
     iPad
@@ -8209,8 +8243,8 @@ nn:
   tutorial_codewards_string_detail_programming_languages: CoffeeScript
   tutorial_olympics_string_detail_programming_languages: CoffeeScript
   tutorial_codinismhero_string_detail_programming_languages: Python
-  tutorial_discovery_string_detail_programming_languages: Blokker
-  tutorial_csfirstname_string_detail_programming_languages: Blokker
+  tutorial_discovery_string_detail_programming_languages: Blokker, Scratch
+  tutorial_csfirstname_string_detail_programming_languages: Blokker, Scratch
   tutorial_obstaclecourse_string_detail_programming_languages: Blokker
   tutorial_edisonmove_string_detail_programming_languages: Python, EdPy, et tekstbasert
     programmeringsspråk basert på Python.
@@ -8450,8 +8484,8 @@ nn:
     Room style project, the learner joins Marlee and Tyrell as they learn about binary
     numbers, light, color, and more to unravel Professor Photon's Color Conundrum,
     and restore color to the world's devices.
-  tutorial_kodablebeach_longdescription: Learn to program using basic commands and
-    clean up the beach to protect ocean life.
+  tutorial_kodablebeach_longdescription: Save the beach babies! Learn to program using
+    basic commands and clean up the beach to protect ocean life.
   tutorial_tynkeren_longdescription: 'Part of the UN Sustainable Development Goals
     project, this coding prompt shows off projects exploring renewable energy, energy
     efficiency, and access to energy. Readers can play with working projects and advanced
@@ -9010,7 +9044,7 @@ nn:
   tutorial_hyperpadpong_string_platforms: iPad
   tutorial_tynkerland_string_platforms: All modern browsers, iPad
   tutorial_trinketgirl_string_platforms: All modern browsers, Android tablet, iPad,
-    Windows phone, Android phone, iPhone
+    Windows phone, Android phone, iPhone, Screen reader
   tutorial_rpimosquito_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_tynkermars_string_platforms: All modern browsers, iPad
   tutorial_cityx_string_platforms: Android tablet, iPad, Android phone, iPhone
@@ -9025,7 +9059,7 @@ nn:
   tutorial_dragonscript_string_platforms: Chrome
   tutorial_uwcloud_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_htmlmuffin_string_platforms: All modern browsers
-  tutorial_microsoftpizza_string_platforms: All modern browsers
+  tutorial_microsoftpizza_string_platforms: All modern browsers, Screen reader
   tutorial_stemc_blckhole_string_platforms: All modern browsers, iPad
   tutorial_careconfigure_string_platforms: All modern browsers
   tutorial_rpiscratch_string_platforms: All modern browsers, Android tablet, iPad
@@ -9036,7 +9070,7 @@ nn:
   tutorial_ttfrog_string_platforms: Chrome, Firefox
   tutorial_codemojijava_string_platforms: All modern browsers
   tutorial_ccfirewall_string_platforms: All modern browsers, iPad
-  tutorial_htmljs_string_platforms: All modern browsers
+  tutorial_htmljs_string_platforms: All modern browsers, Screen reader
   tutorial_ttaqueducts_string_platforms: Chrome, Firefox
   tutorial_vtgame_string_platforms: All modern browsers, iPad
   tutorial_baroborav_string_platforms: All modern browsers
@@ -9193,7 +9227,7 @@ nn:
   tutorial_ai-oceans_string_detail_platforms: ''
   tutorial_scratchimagine_string_detail_programming_languages: Blokker
   tutorial_codesterspsa_string_detail_programming_languages: Python
-  tutorial_googlehero_string_detail_programming_languages: Blokker
+  tutorial_googlehero_string_detail_programming_languages: Blokker, Scratch
   tutorial_codestersbball_string_detail_programming_languages: Python
   tutorial_scratchcartoon_string_detail_programming_languages: Blokker
   tutorial_codemonkeyjr_string_detail_programming_languages: Blokker

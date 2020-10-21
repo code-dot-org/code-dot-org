@@ -497,6 +497,37 @@ html, body {
     display: inline-block;
     opacity: 0.5;
   }
+
+  .container {
+    html[dir=rtl] & {
+      float: right;
+    }
+
+    .row {
+      [class*="span"] {
+        html[dir=rtl] & {
+          float: right;
+          margin-right: 20px;
+          margin-left: 0;
+        }
+
+        a {
+          html[dir=rtl] & {
+            float: right;
+          }
+        }
+
+        div.dim {
+          html[dir=rtl] & {
+            float: right;
+            margin-left: 4px;
+            margin-right: 4px;
+          }
+        }
+      }
+    }
+
+  }
 }
 
 /* Styling that keeps the small footer consistent with other page elements */
@@ -858,6 +889,7 @@ $default-modal-width: 640px;
 .video-player-rounded-corners {
   border-radius: 10px;
   border-width: 0;
+  overflow: hidden;
 }
 
 .video-player-full-width {
@@ -872,52 +904,6 @@ $default-modal-width: 640px;
   position: relative;
   // Specifically supports 16x9 aspect ratio
   padding-top: 56.25%;
-}
-
-@media screen and (max-height: 1330px) {
-  .standalone-video-full-width {
-    max-width: 1973px;
-  }
-}
-@media screen and (max-height: 1240px) {
-  .standalone-video-full-width {
-    max-width: 1813px;
-  }
-}
-@media screen and (max-height: 1150px) {
-  .standalone-video-full-width {
-    max-width: 1653px;
-  }
-}
-@media screen and (max-height: 1060px) {
-  .standalone-video-full-width {
-    max-width: 1493px;
-  }
-}
-@media screen and (max-height: 970px) {
-  .standalone-video-full-width {
-    max-width: 1333px;
-  }
-}
-@media screen and (max-height: 880px) {
-  .standalone-video-full-width {
-    max-width: 1173px;
-  }
-}
-@media screen and (max-height: 790px) {
-  .standalone-video-full-width {
-    max-width: 1013px;
-  }
-}
-@media screen and (max-height: 700px) {
-  .standalone-video-full-width {
-    max-width: 853px;
-  }
-}
-@media screen and (max-height: 610px) {
-  .standalone-video-full-width {
-    max-width: 693px;
-  }
 }
 
 .buttons-right-aligned {
@@ -1384,13 +1370,13 @@ body.iframe_embed_app_and_code {
   }
 
   html[dir=rtl] .flip-x-close & {
-    left: auto;
-    right: $cornerOffset;
+    right: auto;
+    left: $cornerOffset;
   }
 
   html[dir=rtl] .flip-x-close &:hover {
-    left: auto;
-    right: $cornerOffset - $movement;
+    right: auto;
+    left: $cornerOffset - $movement;
   }
 }
 
@@ -2360,7 +2346,7 @@ a.download-video {
 
 .standalone-video {
   width: 853px;
-  margin: 25px auto 0 auto;
+  margin: 10px auto 0 auto;
 
   .video-link, .slides-link, #fallback-player-caption-dialog-link {
     display: inline-block;
@@ -3533,6 +3519,13 @@ h2.danger {
   }
 }
 
+// Some images must not be flipped over even in RTL
+html[dir=rtl] {
+  img[src="/blockly/media/skins/jigsaw/blocks.png"] {
+    -webkit-transform: none !important;
+    transform: none !important;
+  }
+}
 #add-parent-email {
   #remove-parent-email-link {
     color: $red;
@@ -3563,5 +3556,22 @@ h2.danger {
 
   img {
     filter: grayscale(1);
+  }
+}
+
+#mapbox-location-search-container {
+  .mapboxgl-ctrl-geocoder {
+    min-width: 100%;
+    z-index: 2;
+    box-shadow: none;
+    border: 1px solid $bootstrap_border_color;
+    font-family: inherit;
+    font-size: inherit;
+  }
+  input {
+    height: 36px;
+    margin: 0;
+    border: none;
+    padding: 0 34px;
   }
 }

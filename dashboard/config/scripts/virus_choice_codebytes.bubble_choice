@@ -1,0 +1,12 @@
+name 'virus_choice_codebytes'
+display_name 'Optional Extensions'
+description 'Keep building your outbreak simulation with these challenges!'
+
+sublevels
+level 'virus_tweaks_codebytes'
+level 'virus_costumes_codebytes'
+level 'virus_recovery_codebytes'
+level 'virus_chance_codebytes'
+level 'virus_immunity_codebytes'
+level 'virus_print_codebytes'
+level 'virus_free_codebytes'

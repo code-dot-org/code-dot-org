@@ -140,6 +140,7 @@ $almost_white: #eee;
   border-top: 1px solid $border_gray;
   border-bottom: 1px solid $border_gray;
   padding: 0;
+  padding-top: 10px;
   overflow: hidden;
 }
 
@@ -150,7 +151,6 @@ $almost_white: #eee;
   text-align: center;
   font-family: $gotham-bold;
   font-size: 14px;
-  line-height: 40px;
 }
 
 #thank-donors-modal .donor-subheader {

@@ -7,29 +7,43 @@ ru:
     декабря 2015
   coming_soon: Скоро
   campaign_date_start_short: 7 декабря
-  campaign_date_start_long: 5 декабря
-  campaign_date_short: 5-11 декабря
+  campaign_date_start_long: 7 декабря
+  campaign_date_short: 7-13 декабря
   campaign_date_full: 7-13 декабря
-  campaign_date_year: '2016'
-  campaign_date_full_year: 5-11 декабря 2016 года
+  campaign_date_year: '2020'
+  campaign_date_full_year: 7-13 декабря 2020 года
   latam_campaign_date_start_short: Oct. 1
   latam_campaign_date_start_long: October 1
   latam_campaign_date_short: Oct. 1 - Dec. 18
   latam_campaign_date_full: October 1 - December 18
-  latam_campaign_date_year: '2016'
+  latam_campaign_date_year: '2020'
   latam_campaign_date_full_year: October 1, 2020 - December 18, 2020
   europe_campaign_date_start_short: Oct. 10
   europe_campaign_date_start_long: October 10
   europe_campaign_date_short: Oct. 10-25
   europe_campaign_date_full: October 10-25
-  europe_campaign_date_year: '2016'
+  europe_campaign_date_year: '2020'
   europe_campaign_date_full_year: October 10-25, 2020
   africa_campaign_date_start_short: Oct. 1
   africa_campaign_date_start_long: October 1
   africa_campaign_date_short: Oct. 1-31
   africa_campaign_date_full: October 1-31
-  africa_campaign_date_year: '2016'
+  africa_campaign_date_year: '2020'
   africa_campaign_date_full_year: October 1-31, 2020
+  hoc2020_header: Learn today, build a brighter tomorrow.
+  hoc2020_header_with_line_break_markdown: |-
+    Learn today,
+
+    build a brighter tomorrow.
+  social_hoc2020_cs_important: 'CS is more important than ever. Let''s build the future
+    we want. #CSforGood'
+  social_hoc2020_hoc_is_about_csforgood: 'The #HourOfCode is about #CSforGood. Learn
+    today, build a brighter tomorrow.'
+  social_hoc2020_global_movement: Час Программирования - это глобальное движение,
+    охватывающее десятки миллионов учеников. Руководства по часовому обучению доступны
+    для всех возрастов на 45+ языках.
+  social_hoc2020_coming_dates: The Hour of Code is coming December 7-13, 2020. Computer
+    science is foundational for every student to learn.
   hoc2019_header: Познай информатику. Измени мир.
   hoc2019_header_line1_mobile: Познай информатику.
   hoc2019_header_line2_mobile: Измени мир.
@@ -114,6 +128,13 @@ ru:
     bias, while exploring ethical issues and how AI can be used to address world problems.
     Computer science is about so much more than coding! Enjoy Code.org's first step
     in a new journey to teach more about AI throughout our curriculum.
+  hoc_live: Hour of Code Live
+  hoc_live_sign_up_title: Sign up for Hour of Code Live
+  hoc_live_sign_up_message: Learn in real time alongside special guests! Students
+    of all ages and abilities, including those without computers, are welcome. Join
+    our mailing list to receive recordings of the episodes and resources to continue
+    learning at home.
+  hoc_live_join_us: Присоединяйтесь к нам
   hoc_overview_oceans_tutorial_header: AI for Oceans
   hoc_overview_oceans_tutorial_desc: Learn about artificial intelligence (AI), machine
     learning, training data, and bias, while exploring ethical issues and how AI can
@@ -196,8 +217,10 @@ ru:
   codeorg_homepage_remote2020_body: Are you teaching in a remote or socially-distanced
     classroom this semester? View our resources.
   codeorg_homepage_special2020_link_text: Get started
-  codeorg_homepage_code_break_body: Take a Code Break! Your weekly dose of inspiration,
-    community, and computer science.
+  codeorg_homepage_code_break_body: 'Возьмите Перерыв на программирование! Получайте
+    еженедельно порцию идей порцию идей для вдохновения, общения и компьютерных наук
+
+'
   codeorg_homepage_code_break_link_text: Узнать больше
   cookie_banner_message: By continuing to browse our site or clicking "I agree," you
     agree to the storing of cookies on your computer or device.
@@ -505,6 +528,7 @@ ru:
   signup_send_posters_address_placeholder: Этот адрес не будет показан на нашей карте
   signup_event_type_in_school: В школе
   signup_event_type_out_of_school: Вне школы
+  signup_event_type_at_home: Home
   signup_submit_census_label: Отправить
   signup_submit_census_error_message: Мы очень сожалеем, возникла ошибка. Пожалуйста,
     попробуйте отправить форму ещё раз.
@@ -910,7 +934,8 @@ ru:
   highlights_title: Основные моменты
   highlights_header: Основные моменты Часа кода
   highlights_description: Некоторые из наших любимых моментов из Часа кода.
-  higlights_see_more: See more highlights
+  highlights_previous: Highlights from previous years
+  highlights_see_more: See more highlights
   highlights_readmore: Подробнее
   highlights_watchvideo: Посмотреть видео
   highlights_facebook: Поделитесь на Facebook
@@ -2760,7 +2785,7 @@ ru:
     "Breaking News: 400 students at Roosevelt participate in the Hour of Code"'
   tutorial_kodable-pre_longdescription: Kodable is a self-guided game that introduces
     kids 5+ to programming basics. Having a teacher or parent nearby is optimal, but
-    not necessary.
+    not necessary. Happy koding!
   tutorial_highseas_longdescription: Анимируйте океанскую волну, чтобы создать обстановку,
     а затем расскажите историю, которая происходит в открытом море.
   tutorial_capython_longdescription: Python-привлекательный и простой язык для изучения.
@@ -4935,18 +4960,17 @@ ru:
     they will create a program to teach their KIBO to dance to the music. Students
     will learn how to create a program to express an idea (in this case, a dance),
     with a focus on sequencing ability.
-  tutorial_buildcharacters_longdescription: The most popular pre-reader app now includes
-    a digital Maker Space! Make levels, design games, or build characters. Choose
-    your activity and start creating with Kodable!  Featuring JavaScript for upper
+  tutorial_buildcharacters_longdescription: What are some character traits you can
+    identify in books or people you know? Design your own fuzz and use code to modify
+    its properties and bring your character to life! Featuring JavaScript for upper
     elementary.
   tutorial_designgames_longdescription: The most popular pre-reader app now includes
     a digital Maker Space! Make levels, design games, or build characters. Choose
     your activity and start creating with Kodable!  Featuring JavaScript for upper
     elementary.
-  tutorial_makelevels_longdescription: The most popular pre-reader app now includes
-    a digital Maker Space! Make levels, design games, or build characters. Choose
-    your activity and start creating with Kodable!  Featuring JavaScript for upper
-    elementary.
+  tutorial_makelevels_longdescription: Can you build a symmetrical maze? A maze with
+    right angles? Get creative and complete maze-building challenges with basic coding
+    concepts. Aligned with K-5 Common Core math.
   tutorial_wizard_longdescription: Journey into the world of Code Magic as a Code
     Wizard. Learn to create and cast spells to customize your castle.
   tutorial_mbscratchcards_longdescription: Connect the physical world of micro:bit
@@ -6865,7 +6889,7 @@ ru:
     phone, Android phone, iPhone
   tutorial_gpbcatapult_string_platforms: Все современные браузеры
   tutorial_quorumastro_string_platforms: All modern browsers, Android tablet, iPad,
-    Windows phone, Android phone, iPhone
+    Windows phone, Android phone, iPhone, Screen reader
   tutorial_alicewonder_string_platforms: Все современные браузеры
   tutorial_rginter_string_platforms: Chrome, Firefox, Android tablet
   tutorial_cssgrid_string_platforms: Все современные браузеры
@@ -6997,26 +7021,38 @@ ru:
   tutorial_blockscadpizza_string_platforms: Все современные браузеры
   tutorial_blockscadsugar_string_platforms: Все современные браузеры
   tutorial_bsgridlight_string_platforms: Все современные браузеры
-  tutorial_bpartscratch_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_bpartvid_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_bpartscratch_string_platforms: All modern browsers, Android tablet, iPad,
+    Screen reader
+  tutorial_bpartvid_string_platforms: All modern browsers, Android tablet, iPad, Screen
+    reader
   tutorial_bpenglishscratch_string_platforms: All modern browsers, Android tablet,
-    iPad
-  tutorial_bpenglishvid_string_platforms: All modern browsers, Android tablet, iPad
+    iPad, Screen reader
+  tutorial_bpenglishvid_string_platforms: All modern browsers, Android tablet, iPad,
+    Screen reader
   tutorial_bphealthscratch_string_platforms: All modern browsers, Android tablet,
-    iPad
-  tutorial_bphealthvid_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_bpmathscratch_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_bpmathvid_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_bpmlkscratch_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_bpmlkvid_string_platforms: All modern browsers, Android tablet, iPad
+    iPad, Screen reader
+  tutorial_bphealthvid_string_platforms: All modern browsers, Android tablet, iPad,
+    Screen reader
+  tutorial_bpmathscratch_string_platforms: All modern browsers, Android tablet, iPad,
+    Screen reader
+  tutorial_bpmathvid_string_platforms: All modern browsers, Android tablet, iPad,
+    Screen reader
+  tutorial_bpmlkscratch_string_platforms: All modern browsers, Android tablet, iPad,
+    Screen reader
+  tutorial_bpmlkvid_string_platforms: All modern browsers, Android tablet, iPad, Screen
+    reader
   tutorial_bpsafetyscratch_string_platforms: All modern browsers, Android tablet,
-    iPad
-  tutorial_bpsafetyvid_string_platforms: All modern browsers, Android tablet, iPad
+    iPad, Screen reader
+  tutorial_bpsafetyvid_string_platforms: All modern browsers, Android tablet, iPad,
+    Screen reader
   tutorial_bpsciencescratch_string_platforms: All modern browsers, Android tablet,
-    iPad
-  tutorial_bpsciencevid_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_bptechscratch_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_bptechvid_string_platforms: All modern browsers, Android tablet, iPad
+    iPad, Screen reader
+  tutorial_bpsciencevid_string_platforms: All modern browsers, Android tablet, iPad,
+    Screen reader
+  tutorial_bptechscratch_string_platforms: All modern browsers, Android tablet, iPad,
+    Screen reader
+  tutorial_bptechvid_string_platforms: All modern browsers, Android tablet, iPad,
+    Screen reader
   tutorial_caflags_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_matariki_string_platforms: All modern browsers, Android tablet, iPad, Unplugged
   tutorial_carestaurant_string_platforms: All modern browsers, Android tablet, iPad,
@@ -7052,7 +7088,7 @@ ru:
   tutorial_codinismhero_string_platforms: Android tablet, Android phone
   tutorial_discovery_string_platforms: Все современные браузеры
   tutorial_csfirstname_string_platforms: Все современные браузеры
-  tutorial_obstaclecourse_string_platforms: iPad
+  tutorial_obstaclecourse_string_platforms: iPad, Screen reader
   tutorial_edisonmove_string_platforms: Все современные браузеры
   tutorial_edisonspider_string_platforms: All modern browsers, iPad, Android tablets
   tutorial_edisonspotlight_string_platforms: All modern browsers, iPad, Android tablets
@@ -8262,8 +8298,8 @@ ru:
   tutorial_codewards_string_detail_programming_languages: CoffeeScript
   tutorial_olympics_string_detail_programming_languages: CoffeeScript
   tutorial_codinismhero_string_detail_programming_languages: Python
-  tutorial_discovery_string_detail_programming_languages: Блоки
-  tutorial_csfirstname_string_detail_programming_languages: Блоки
+  tutorial_discovery_string_detail_programming_languages: Blocks, Scratch
+  tutorial_csfirstname_string_detail_programming_languages: Blocks, Scratch
   tutorial_obstaclecourse_string_detail_programming_languages: Блоки
   tutorial_edisonmove_string_detail_programming_languages: Python, EdPy, a text-based
     programming language based on Python.
@@ -8503,8 +8539,8 @@ ru:
     Room style project, the learner joins Marlee and Tyrell as they learn about binary
     numbers, light, color, and more to unravel Professor Photon's Color Conundrum,
     and restore color to the world's devices.
-  tutorial_kodablebeach_longdescription: Learn to program using basic commands and
-    clean up the beach to protect ocean life.
+  tutorial_kodablebeach_longdescription: Save the beach babies! Learn to program using
+    basic commands and clean up the beach to protect ocean life.
   tutorial_tynkeren_longdescription: 'Part of the UN Sustainable Development Goals
     project, this coding prompt shows off projects exploring renewable energy, energy
     efficiency, and access to energy. Readers can play with working projects and advanced
@@ -9065,7 +9101,7 @@ ru:
   tutorial_hyperpadpong_string_platforms: iPad
   tutorial_tynkerland_string_platforms: All modern browsers, iPad
   tutorial_trinketgirl_string_platforms: All modern browsers, Android tablet, iPad,
-    Windows phone, Android phone, iPhone
+    Windows phone, Android phone, iPhone, Screen reader
   tutorial_rpimosquito_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_tynkermars_string_platforms: All modern browsers, iPad
   tutorial_cityx_string_platforms: Android tablet, iPad, Android phone, iPhone
@@ -9248,7 +9284,7 @@ ru:
   tutorial_ai-oceans_string_detail_platforms: ''
   tutorial_scratchimagine_string_detail_programming_languages: Блоки
   tutorial_codesterspsa_string_detail_programming_languages: Python
-  tutorial_googlehero_string_detail_programming_languages: Блоки
+  tutorial_googlehero_string_detail_programming_languages: Blocks, Scratch
   tutorial_codestersbball_string_detail_programming_languages: Python
   tutorial_scratchcartoon_string_detail_programming_languages: Блоки
   tutorial_codemonkeyjr_string_detail_programming_languages: Блоки
