@@ -67,7 +67,17 @@ const TYPE_OPTIONS = [
 
 const AUDIENCE_OPTIONS = ['Student', 'Teacher', 'Verified Teacher'];
 
-// TODO: Hook up adding a resource when resources are associated with lessons
+const initialState = {
+  key: '',
+  name: '',
+  type: '',
+  audience: '',
+  pdf: false,
+  assessment: false,
+  url: '',
+  downloadUrl: '',
+  error: ''
+};
 
 export default class AddResourceDialog extends Component {
   static propTypes = {
@@ -79,17 +89,7 @@ export default class AddResourceDialog extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      key: '',
-      name: '',
-      type: '',
-      audience: '',
-      pdf: false,
-      assessment: false,
-      url: '',
-      downloadUrl: '',
-      error: ''
-    };
+    this.state = {...initialState};
   }
 
   validateResource = () => {
@@ -113,20 +113,11 @@ export default class AddResourceDialog extends Component {
   };
 
   resetState = () => {
-    this.setState({
-      key: '',
-      name: '',
-      type: '',
-      audience: '',
-      pdf: false,
-      assessment: false,
-      url: '',
-      downloadUrl: '',
-      error: ''
-    });
+    this.setState(initialState);
   };
 
   saveResource = e => {
+    // Stop the page from reloading after form submit
     e.preventDefault();
     if (this.validateResource()) {
       const formData = new FormData(e.target);
