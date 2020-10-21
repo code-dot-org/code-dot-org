@@ -40,7 +40,6 @@ class LessonsController < ApplicationController
 
   # PATCH/PUT /lessons/1
   def update
-    puts params
     resources = (lesson_params['resources'] || []).map {|key| Resource.find_by_key(key)}
     @lesson.resources = resources.compact
     @lesson.update!(lesson_params.except(:resources, :objectives))

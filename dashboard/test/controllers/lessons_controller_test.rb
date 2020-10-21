@@ -370,6 +370,14 @@ class LessonsControllerTest < ActionController::TestCase
     refute @lesson.resources.include?(resource_to_remove)
   end
 
+  test 'update lesson with new objectives' do
+    sign_in @levelbuilder
+    new_update_params = @update_params.merge({objectives: [{id: nil, description: 'description'}].to_json})
+    put :update, params: new_update_params
+    @lesson.reload
+    assert_equal 1, @lesson.objectives.count
+  end
+
   test 'add script level via lesson update' do
     sign_in @levelbuilder
 
