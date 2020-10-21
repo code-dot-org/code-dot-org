@@ -30,7 +30,8 @@ const styles = {
 export default class SubmissionsDownloadForm extends React.Component {
   static propTypes = {
     children: PropTypes.node.isRequired,
-    workshopId: PropTypes.string
+    workshopId: PropTypes.string,
+    style: PropTypes.object
   };
 
   constructor(props) {
@@ -125,7 +126,7 @@ export default class SubmissionsDownloadForm extends React.Component {
 
   render() {
     return (
-      <div>
+      <div style={this.props.style}>
         <span onClick={this.open}>{this.props.children}</span>
         <Modal show={this.state.showing} onHide={this.close}>
           <Modal.Header closeButton style={styles.modalHeader}>
