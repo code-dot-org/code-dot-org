@@ -2,7 +2,7 @@
 https://github.com/mljs/knn */
 
 import { store } from "./index.js";
-import { setPrediction } from "./redux";
+import { setPrediction, setAccuracyCheckPredictedLabels } from "./redux";
 
 export default class KNNTrainer {
   startTraining() {
@@ -10,6 +10,12 @@ export default class KNNTrainer {
     this.knn = new ML.KNN(state.trainingExamples, state.trainingLabels, {
       k: 2
     });
+    this.batchPredict(state.accuracyCheckExamples);
+  }
+
+  batchPredict(accuracyCheckExamples) {
+    const predictedLabels = this.knn.predict(accuracyCheckExamples);
+    store.dispatch(setAccuracyCheckPredictedLabels(predictedLabels));
   }
 
   predict(testValues) {

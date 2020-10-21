@@ -9,7 +9,9 @@ import {
   getSelectedCategoricalColumns,
   setFeatureNumberKey,
   setTrainingExamples,
-  setTrainingLabels
+  setTrainingLabels,
+  setAccuracyCheckExamples,
+  setAccuracyCheckLabels
 } from "./redux";
 
 export const availableTrainers = {
@@ -121,16 +123,37 @@ const extractLabel = (state, row) => {
   return convertValue(state, state.labelColumn, row);
 };
 
+const getRandomInt = max => {
+  return Math.floor(Math.random() * Math.floor(max));
+};
+
 const prepareTrainingData = () => {
   const updatedState = store.getState();
   const trainingExamples = updatedState.data
     .map(row => extractExamples(updatedState, row))
-    .filter(example => example.length > 0);
+    .filter(example => example.length > 0 && example !== undefined);
   const trainingLabels = updatedState.data
     .map(row => extractLabel(updatedState, row))
     .filter(label => label !== undefined && label !== "");
+  // Randomly select 10% of examples and corresponding labels from the training // set to reserve for a post-training accuracy calculation. The accuracy check
+  // examples and labels are excluded from the training set when the model is
+  // trained and saved to state separately to test the model's accuracy.
+  const accuracyCheckExamples = [];
+  const accuracyCheckLabels = [];
+  const numToReserve = parseInt(trainingExamples.length * 0.1);
+  let numReserved = 0;
+  while (numReserved < numToReserve) {
+    let randomIndex = getRandomInt(trainingExamples.length - 1);
+    accuracyCheckExamples.push(trainingExamples[randomIndex]);
+    trainingExamples.splice(randomIndex, 1);
+    accuracyCheckLabels.push(trainingLabels[randomIndex]);
+    trainingLabels.splice(randomIndex, 1);
+    numReserved++;
+  }
   store.dispatch(setTrainingExamples(trainingExamples));
   store.dispatch(setTrainingLabels(trainingLabels));
+  store.dispatch(setAccuracyCheckExamples(accuracyCheckExamples));
+  store.dispatch(setAccuracyCheckLabels(accuracyCheckLabels));
 };
 
 const prepareTestData = () => {

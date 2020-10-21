@@ -144,10 +144,9 @@ class DataDisplay extends Component {
                 <label>
                   <h2>Which column contains the labels for your dataset?</h2>
                   <p>
-                    The model will be trained to predict which catgegory from
-                    the label column an example (a set of attributes or
-                    features) is most likely to belong to. Labels are
-                    categorical.
+                    The model will be trained to predict which category from the
+                    label column an example (a set of attributes or features) is
+                    most likely to belong to. Labels are categorical.
                   </p>
                   <select
                     value={this.props.labelColumn}
