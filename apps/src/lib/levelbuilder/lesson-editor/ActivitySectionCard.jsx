@@ -88,9 +88,10 @@ class ActivitySectionCard extends Component {
     activityPosition: PropTypes.number,
     activitySectionsCount: PropTypes.number,
     activitiesCount: PropTypes.number,
-    activitySectionMetrics: PropTypes.object,
+    activitySectionMetrics: PropTypes.array,
     setTargetActivitySection: PropTypes.func,
     targetActivitySectionPos: PropTypes.number,
+    updateActivitySectionMetrics: PropTypes.func,
 
     //redux
     moveActivitySection: PropTypes.func,
@@ -127,13 +128,18 @@ class ActivitySectionCard extends Component {
           return metrics.top + metrics.height / 2;
         }
       );
-      this.setState({
-        draggedLevelPos: position,
-        dragHeight: this.metrics[position].height + tokenMargin,
-        initialClientY: clientY,
-        newPosition: position,
-        startingPositions
-      });
+      this.setState(
+        {
+          draggedLevelPos: position,
+          dragHeight: this.metrics[position].height + tokenMargin,
+          initialClientY: clientY,
+          newPosition: position,
+          startingPositions
+        },
+        () => {
+          this.props.updateActivitySectionMetrics();
+        }
+      );
       window.addEventListener('selectstart', this.preventSelect);
       window.addEventListener('mousemove', this.handleDrag);
       window.addEventListener('mouseup', this.handleDragStop);

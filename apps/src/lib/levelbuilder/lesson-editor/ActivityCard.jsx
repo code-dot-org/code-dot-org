@@ -12,7 +12,6 @@ import {
   removeActivity,
   updateActivityField
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
-import ReactDOM from 'react-dom';
 import {activityShape} from '@cdo/apps/lib/levelbuilder/shapes';
 
 const styles = {
@@ -66,10 +65,11 @@ class ActivityCard extends Component {
   static propTypes = {
     activity: activityShape,
     activitiesCount: PropTypes.number,
-    setActivitySectionMetrics: PropTypes.func.isRequired,
+    setActivitySectionRef: PropTypes.func.isRequired,
     setTargetActivitySection: PropTypes.func.isRequired,
     targetActivitySectionPos: PropTypes.number,
-    activitySectionMetrics: PropTypes.object.isRequired,
+    activitySectionMetrics: PropTypes.array.isRequired,
+    updateActivitySectionMetrics: PropTypes.func,
 
     //redux
     addActivitySection: PropTypes.func,
@@ -189,20 +189,15 @@ class ActivityCard extends Component {
               activityPosition={activity.position}
               activitySectionsCount={activity.activitySections.length}
               activitiesCount={this.props.activitiesCount}
-              ref={activitySectionCard => {
-                if (activitySectionCard) {
-                  const metrics = ReactDOM.findDOMNode(
-                    activitySectionCard
-                  ).getBoundingClientRect();
-                  this.props.setActivitySectionMetrics(
-                    metrics,
-                    section.position
-                  );
-                }
+              ref={ref => {
+                this.props.setActivitySectionRef(ref, section.position);
               }}
               activitySectionMetrics={this.props.activitySectionMetrics}
               setTargetActivitySection={this.props.setTargetActivitySection}
               targetActivitySectionPos={this.props.targetActivitySectionPos}
+              updateActivitySectionMetrics={
+                this.props.updateActivitySectionMetrics
+              }
             />
           ))}
           <button
