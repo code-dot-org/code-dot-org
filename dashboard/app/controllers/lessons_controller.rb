@@ -37,6 +37,7 @@ class LessonsController < ApplicationController
   def edit
     @lesson_data = @lesson.summarize_for_lesson_edit
     @related_lessons = @lesson.summarize_related_lessons
+    view_options(full_width: true)
   end
 
   # PATCH/PUT /lessons/1
