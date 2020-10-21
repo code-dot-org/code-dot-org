@@ -28,7 +28,8 @@ class LessonsController < ApplicationController
       overview: @lesson.overview || '',
       announcements: @lesson.announcements,
       purpose: @lesson.purpose || '',
-      preparation: @lesson.preparation || ''
+      preparation: @lesson.preparation || '',
+      resources: @lesson.resources || []
     }
   end
 
