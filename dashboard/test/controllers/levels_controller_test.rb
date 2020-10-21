@@ -75,7 +75,7 @@ class LevelsControllerTest < ActionController::TestCase
   test "should get filters" do
     get :get_filters, params: {}
     assert_equal JSON.parse(@response.body)["levelOptions"].map {|option| option[0]}, [
-      "All types", "Applab", "Artist", "Bounce", "BubbleChoice", "Calc", "ContractMatch",
+      "All types", "Ailab", "Applab", "Artist", "Bounce", "BubbleChoice", "Calc", "ContractMatch",
       "Craft", "CurriculumReference", "Dancelab", "Eval", "EvaluationMulti", "External",
       "ExternalLink", "Fish", "Flappy", "FreeResponse", "FrequencyAnalysis", "Gamelab",
       "GamelabJr", "Karel", "LevelGroup", "Map", "Match", "Maze", "Multi", "NetSim",
