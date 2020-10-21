@@ -5,43 +5,33 @@ import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import Button from '@cdo/apps/templates/Button';
 import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 
+const styles = {
+  dialog: {
+    paddingLeft: 20,
+    paddingRight: 20,
+    paddingBottom: 20
+  },
+  detailsLine: {
+    marginBottom: 25
+  },
+  button: {
+    width: 48,
+    height: 48,
+    borderRadius: 0,
+    padding: 0
+  },
+  buttonIcon: {
+    margin: 0,
+    fontSize: 24
+  }
+};
+
 export default class SendLessonDialog extends Component {
   static propTypes = {
     isOpen: PropTypes.bool.isRequired,
     handleClose: PropTypes.func.isRequired,
     showGoogleButton: PropTypes.bool
   };
-
-  render() {
-    return (
-      <BaseDialog
-        isOpen={this.props.isOpen}
-        handleClose={this.props.handleClose}
-        style={styles.dialog}
-        useUpdatedStyles
-      >
-        <h2>{i18n.sendLessonTitle()}</h2>
-        <div style={styles.detailsLine}>
-          {i18n.sendLessonDetails()}{' '}
-          <a
-            target="_blank"
-            href="https://support.code.org/" // TODO: Update this!
-          >
-            {i18n.learnMore()}
-          </a>
-        </div>
-        {this.renderCopyToClipboardRow()}
-        {this.props.showGoogleButton && this.renderShareToGoogleRow()}
-        <DialogFooter>
-          <Button
-            text={i18n.done()}
-            onClick={this.props.handleClose}
-            color={Button.ButtonColor.gray}
-          />
-        </DialogFooter>
-      </BaseDialog>
-    );
-  }
 
   renderCopyToClipboardRow() {
     return (
@@ -73,25 +63,35 @@ export default class SendLessonDialog extends Component {
       </div>
     );
   }
-}
 
-const styles = {
-  dialog: {
-    paddingLeft: 20,
-    paddingRight: 20,
-    paddingBottom: 20
-  },
-  detailsLine: {
-    marginBottom: 25
-  },
-  button: {
-    width: 48,
-    height: 48,
-    borderRadius: 0,
-    padding: 0
-  },
-  buttonIcon: {
-    margin: 0,
-    fontSize: 24
+  render() {
+    return (
+      <BaseDialog
+        isOpen={this.props.isOpen}
+        handleClose={this.props.handleClose}
+        style={styles.dialog}
+        useUpdatedStyles
+      >
+        <h2>{i18n.sendLessonTitle()}</h2>
+        <div style={styles.detailsLine}>
+          {i18n.sendLessonDetails()}{' '}
+          <a
+            target="_blank"
+            href="https://support.code.org/" // TODO: Update this!
+          >
+            {i18n.learnMore()}
+          </a>
+        </div>
+        {this.renderCopyToClipboardRow()}
+        {this.props.showGoogleButton && this.renderShareToGoogleRow()}
+        <DialogFooter>
+          <Button
+            text={i18n.done()}
+            onClick={this.props.handleClose}
+            color={Button.ButtonColor.gray}
+          />
+        </DialogFooter>
+      </BaseDialog>
+    );
   }
-};
+}
