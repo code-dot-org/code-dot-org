@@ -1,0 +1,30 @@
+name 'VPL - CSD - Module 7 - CI'
+editor_experiment ''
+display_name 'Introduction to Debugging'
+
+title 'Debugging Session'
+markdown <<MARKDOWN
+#Introduction to App Lab
+
+**Estimated Time: 35 minutes**
+
+## Overview
+
+In this section, you will explore App Lab in Code Studio to design screens with code and identify user input. You may want to write down ideas about how to teach Unit 6 in your journal as you go through the levels. The times below are suggestions.  Feel free to take as much time as you need.
+
+## App Lab Exploration
+
+* UI Element Properties (~5 minutes)
+
+* Designing Screens with Code (~20 minutes)
+
+* Input (~10 minutes)
+
+
+
+
+
+
+
+
+MARKDOWN
