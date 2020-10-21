@@ -7,7 +7,7 @@ describe('ObjectivesEditor', () => {
   let defaultProps;
   beforeEach(() => {
     defaultProps = {
-      objectives: [{id: 1, description: 'description'}]
+      objectives: [{key: '1', description: 'description'}]
     };
   });
 

@@ -62,7 +62,8 @@ export default class ObjectivesEditor extends Component {
     this.state = {
       objectives: props.objectives || [],
       objectiveInput: '',
-      currentlyEditingIndex: null
+      currentlyEditingIndex: null,
+      nextObjectiveKey: 1
     };
   }
 
@@ -96,21 +97,28 @@ export default class ObjectivesEditor extends Component {
 
   handleSave = () => {
     let {objectives, objectiveInput, currentlyEditingIndex} = this.state;
-    objectives[currentlyEditingIndex].description = objectiveInput;
+    const newObjectives = [...objectives];
+    newObjectives[currentlyEditingIndex] = {
+      ...objectives[currentlyEditingIndex],
+      description: objectiveInput
+    };
     this.setState({
-      objectives,
+      objectives: newObjectives,
       objectiveInput: '',
       currentlyEditingIndex: null
     });
   };
 
   addObjective = () => {
-    let {objectives} = this.state;
-    objectives.push({description: '', id: null});
+    let {objectives, nextObjectiveKey} = this.state;
+    objectives = objectives.concat([
+      {description: '', key: `objective-${nextObjectiveKey}`}
+    ]);
     this.setState({
       objectives,
       currentlyEditingIndex: objectives.length - 1,
-      objectiveInput: ''
+      objectiveInput: '',
+      nextObjectiveKey: nextObjectiveKey + 1
     });
   };
 
@@ -132,7 +140,10 @@ export default class ObjectivesEditor extends Component {
             </thead>
             <tbody>
               {this.state.objectives.map((objective, index) => (
-                <tr key={index} style={index % 2 === 1 ? styles.oddRow : {}}>
+                <tr
+                  key={objective.key}
+                  style={index % 2 === 1 ? styles.oddRow : {}}
+                >
                   <td style={{height: 30}}>
                     {this.state.currentlyEditingIndex === index ? (
                       <input

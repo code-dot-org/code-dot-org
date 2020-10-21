@@ -18,6 +18,7 @@ $(document).ready(function() {
   const lessonData = getScriptData('lesson');
   const relatedLessons = getScriptData('relatedLessons');
   const activities = lessonData.activities;
+  const objectives = lessonData.objectives;
 
   // Rename any keys that are different on the backend.
   activities.forEach(activity => {
@@ -73,6 +74,8 @@ $(document).ready(function() {
     activities.push(emptyActivity);
   }
 
+  objectives.forEach(objective => (objective.key = objective.id + ''));
+
   registerReducers({...reducers});
   const store = getStore();
 
@@ -94,7 +97,7 @@ $(document).ready(function() {
         announcements={lessonData.announcements || []}
         resources={lessonData.resources}
         relatedLessons={relatedLessons}
-        objectives={lessonData.objectives}
+        objectives={objectives}
       />
     </Provider>,
     document.getElementById('edit-container')
