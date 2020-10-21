@@ -33,6 +33,7 @@ var ALLOWED_KEYS = new Set([
   'hasContainedLevels',
   'isDroplet',
   'isBlockly',
+  'isBramble',
   'isMinecraft',
   'runButtonText',
   'visualizationHasPadding',

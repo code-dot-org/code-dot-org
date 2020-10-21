@@ -18269,7 +18269,7 @@ en:
         outbreak:
           lessons:
             Virus Simulation for Code Bytes:
-              name: Simulating a Virus
+              name: Coding a Simulation
           lesson_groups:
             outbreak:
               display_name: Outbreak Simulation
