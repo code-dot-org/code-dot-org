@@ -15,7 +15,7 @@ const styles = {
 
 // TODO: Hook up adding a resource when resources are associated with lessons
 
-export default class AddResourceDialog extends Component {
+export default class FindResourceDialog extends Component {
   static propTypes = {
     isOpen: PropTypes.bool.isRequired,
     handleConfirm: PropTypes.func.isRequired
