@@ -1,11 +1,8 @@
 import React, {Component} from 'react';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import PropTypes from 'prop-types';
+import AddLevelTableRow from '@cdo/apps/lib/levelbuilder/lesson-editor/AddLevelTableRow';
 
 const styles = {
-  orderIcon: {
-    float: 'right'
-  },
   pages: {
     marginTop: 10
   }
@@ -32,38 +29,11 @@ export default class AddLevelTable extends Component {
           </thead>
           <tbody>
             {this.props.levels.map(level => (
-              <tr key={level.id}>
-                <td>
-                  <button
-                    type="button"
-                    onClick={() => {
-                      console.log('Add');
-                    }}
-                  >
-                    <FontAwesome icon="plus" />
-                  </button>
-                  <button
-                    type="button"
-                    onClick={() => {
-                      console.log('Clone and Add');
-                    }}
-                  >
-                    <FontAwesome icon="files-o" />
-                  </button>
-                </td>
-                <td>
-                  <div>{level.name}</div>
-                </td>
-                <td>
-                  <div>{level.type}</div>
-                </td>
-                <td>
-                  <div>{level.owner}</div>
-                </td>
-                <td>
-                  <div>{level.updated_at}</div>
-                </td>
-              </tr>
+              <AddLevelTableRow
+                key={level.id}
+                addLevel={this.props.addLevel}
+                level={level}
+              />
             ))}
           </tbody>
         </table>
