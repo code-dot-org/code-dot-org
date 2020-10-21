@@ -80,6 +80,7 @@ export default class AddLevelFilters extends Component {
             style={styles.dropdown}
             onChange={this.handleChangeLevelType}
             value={this.state.levelType}
+            id={'add-level-type'}
           >
             {this.props.searchFields.levelOptions.map(levelType => (
               <option key={levelType[0]} value={levelType[1]}>
