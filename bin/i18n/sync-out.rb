@@ -269,7 +269,9 @@ def distribute_course_content(locale)
     extension = type == "dsls" ? "yml" : "json"
     type_file = "dashboard/config/locales/#{type}.#{locale}.#{extension}"
 
-    existing_data = parse_file(type_file).dig(locale, "data", type) || {}
+    existing_data = File.exist?(type_file) ?
+      parse_file(type_file).dig(locale, "data", type) || {} :
+      {}
 
     type_data = Hash.new
     type_data[locale] = Hash.new
