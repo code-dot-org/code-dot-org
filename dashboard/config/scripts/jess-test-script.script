@@ -108,7 +108,9 @@ level 'VPL - CSD Module 5 - Differentiation', progression: 'Differentiation (~10
 level 'VPL - CSD - Module 5 Wrap Up', progression: 'Wrap Up (~10 mins)'
 
 lesson 'Module 7', display_name: 'Module 7'
-level 'VirtualPLOverview'
+level 'VPL - CSD Module 7 Overview', progression: 'Module 7 Overview'
+level 'VPL - CSD M7 Theme Introduction', progression: 'Theme Introduction (~5 mins)'
+level 'VPL - CSD - Module 7 - CI', progression: 'Introduction to App Lab (~35 mins)'
 
 lesson 'Module 8', display_name: 'Module 8'
 level 'VirtualPLOverview'
