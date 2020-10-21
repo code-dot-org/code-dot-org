@@ -30,7 +30,10 @@ la:
   africa_campaign_date_year: '2020'
   africa_campaign_date_full_year: Octubre 1-31, 2020
   hoc2020_header: Aprende hoy y construye un mejor futuro.
-  hoc2020_header_with_line_break_markdown: "Aprende hoy y \nconstruye un mejor futuro."
+  hoc2020_header_with_line_break_markdown: |-
+    Aprende hoy y
+
+    construye un mejor futuro.
   social_hoc2020_cs_important: 'CS is more important than ever. Let''s build the future
     we want. #CSforGood'
   social_hoc2020_hoc_is_about_csforgood: 'The #HourOfCode is about #CSforGood. Learn
