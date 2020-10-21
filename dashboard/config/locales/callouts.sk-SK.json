@@ -516,11 +516,13 @@
         },
         "behaviors 3a": {
           "behavior_callout": "Prečo tento postup nefunguje pri prostrednej hviezde?",
-          "star2_callout": "Odstráň blok s kostýmom a použi namiesto neho blok \"táto postava\"."
+          "star2_callout": "Odstráň blok s kostýmom a použi namiesto neho blok \"táto postava\".",
+          "this_sprite_callout": "Vymeň blok kostýmov nižšie za tento."
         },
         "behaviors 3a_2020": {
           "behavior_callout": "Prečo tento postup nefunguje pri prostrednej hviezde?",
-          "star2_callout": "Odstráň blok s kostýmom a použi namiesto neho blok \"táto postava\"."
+          "star2_callout": "Odstráň blok s kostýmom a použi namiesto neho blok \"táto postava\".",
+          "this_sprite_callout": "Vymeň blok kostýmov nižšie za tento."
         },
         "behaviors 4": {
           "behaviors_edit": "Klikni sem  a uvidíš, ako toto správanie funguje."
@@ -1450,6 +1452,13 @@
         },
         "grade5_artist_variables_triangles1_2020": {
           "grade5_artist_variables_triangles1_1": "Všimni si, že bloky majú nový spôsob zadávani čísiel. Tieto \"matematické\" bloky môžeš vytiahnuť a presúvať podľa potreby!"
+        },
+        "courseC_video_angles": {
+          "courseD_maze_ramp6_1": "Akýkoľvek kód, ktorý sem vložíš, sa zopakuje toľkokrát, koľko mu povieš. Až potom sa spustí zvyšok programu."
+        },
+        "courseD_video_nestedLoopsArtist": {
+          "courseE_artist_ramp8_1": "Toto číslo môžete zmeniť.",
+          "courseE_artist_ramp8_2": "Kliknite sem pre zadanie počtu opakovaní vášho kódu."
         }
       }
     }

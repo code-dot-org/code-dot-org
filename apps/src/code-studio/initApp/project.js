@@ -968,9 +968,11 @@ var projects = (module.exports = {
    * Tests whether provided sample code is different from the current project code.
    * This also normalizes the code so incidental differences in line endings or
    * empty xml tags are not recognized as differences.
-   * @param {string} sampleCode the code to diff against the current project code
+   * @param {string} sampleCodeInput the code to diff against the current project code
    */
-  isCurrentCodeDifferent(sampleCode = '') {
+  isCurrentCodeDifferent(sampleCodeInput) {
+    // We can't use a default param here because we need to check for null and undefined
+    const sampleCode = sampleCodeInput || '';
     const currentCode = currentSources.source || '';
     let normalizedSample, normalizedCurrent;
     const parser = new DOMParser();
@@ -982,9 +984,9 @@ var projects = (module.exports = {
       parsedCurrent.getElementsByTagName('parsererror').length > 0 ||
       parsedSample.getElementsByTagName('parsererror').length > 0
     ) {
-      // Normalize line endings between unix and Windows OS.
-      normalizedSample = sampleCode.replace(/\r\n/g, '\n');
-      normalizedCurrent = currentCode.replace(/\r\n/g, '\n');
+      // Remove all whitespace from the code.
+      normalizedSample = sampleCode.replace(/\s+/g, '');
+      normalizedCurrent = currentCode.replace(/\s+/g, '');
     } else {
       // Normalize XML to ignore differences in closing tags.
       const serializer = new XMLSerializer();

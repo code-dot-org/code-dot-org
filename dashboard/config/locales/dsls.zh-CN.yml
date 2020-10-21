@@ -5534,11 +5534,13 @@ zh-CN:
         - text: 因为斯奎特转向了错误的方向，所以斯奎特不会碰到橡子
           correct: true
           feedback: 正确。首先，斯奎特转向了错误的方向，第二，斯奎特向前移动的步数不足以到达橡子。
-        - correct: true
+        - text: 斯奎特不会碰到橡子因为没有足够的`向前移动`模块。
+          correct: true
           feedback: 正确。首先，斯奎特转向了错误的方向，第二，斯奎特向前移动的步数不足以到达橡子。
         - text: 我不知道。
+          feedback: 这段代码中有两个缺陷。首先，斯奎特转向了错误的方向，第二，斯奎特向前移动的步数不足以到达橡子。
         questions:
-        - {}
+        - text: 在代码中寻找缺陷。斯奎特是否能碰到橡子？
       courseC_multi_maze_programming8_predict1:
         answers:
         - text: 这只鸟最终会比猪少走一步。
@@ -6655,8 +6657,42 @@ zh-CN:
 
       courseE_project_exemplars_2019_2020:
         content1: 测试Markdown文本页面
+        markdown: |+
+          # 项目示例
+
+          要开始最终项目了。在开始前，花些时间来看看示例项目。
+
+          ## 精灵图实验室
+
+          | 怪物跳舞 (精灵图实验室) | 纸杯蛋糕游戏 (精灵图实验室) |
+          |---|---|
+          | [![怪物跳舞 (精灵图实验室)](https://images.code.org/85838ca11b728dce3e1513515c4510e3-image-1556826303297.png "怪物跳舞 (精灵图实验室)")](https://studio.code.org/projects/spritelab/Cj3sVYGhWo2ujgwRoO1FscJazrDPT2qGfU59YXvFXxs/view) | [![Cupcake Game (Sprite Lab)](https://images.code.org/c90080aaf05349fb6e1fbb6861e815df-image-1556809855136.png "纸杯蛋糕游戏 (精灵图实验室)")](https://studio.code.org/projects/spritelab/YMEHR4ps9cDJ0sb4Ks0YrZcpcjGmc4OEiUudZHm-l6g/view) |
+          | 试试为游戏添加文本或分数！ | 试试为游戏添加文本或分数！ |
+
+          ## 小艺术家
+
+          | 图案 (小艺术家) | 函数的花 (小艺术家) |
+          |---|---|
+          | [![图案 (小艺术家)](https://images.code.org/2432878706891dda080b69428ddc4a20-image-1556822714214.png "图案 (小艺术家)")](https://studio.code.org/projects/artist/TznMeJRa4SnHWJvUBEoNUw/view) | [![函数的花 (小艺术家)](https://images.code.org/1e6da38baf996dace44581572895a4b8-image-1556822184973.png "函数的花 (小艺术家)")](https://studio.code.org/projects/artist/4uGqFaTnc7V9B6IqCqj21Q/view) |
+          | 用嵌套循环来创造！ | 用函数来创造！ |
+
       courseExpress_project_exemplars_2019_2020:
         content1: 测试Markdown文本页面
+        markdown: |+
+          # 项目示例
+
+          你即将要开始创造你的结业项目，但是在你开始之前，花一些时间看看例子。
+
+          | Panic! at the Disco (Dance Party) | Beach Scene (Artist) |
+          |---|---|
+          | [![Pattern (Artist)](https://images.code.org/73ae79b4070ef734c1b5130333efc1f4-image-1592507673667.png "Pattern (Artist)")](https://studio.code.org/projects/dance/UZLatmMAfCTcyIOCIvsTSf6zoPAZ524VQDuDThd5vAk/view) | [![Snowflake Flowers (Frozen)](https://images.code.org/36570ade5dd92be16de34b06e614ee92-image-1592507892956.png "Snowflake Flowers (Frozen)")](https://studio.code.org/projects/artist/7WY8_OM2z4cucIR9n5I6_RJ7LWhrpf82VM0pve-4Aqc/view) |
+          | Get your disco on while your backup dancers switch it up! | Try adding more color and background to this scene! |
+
+          | Snowflake Flowers (Frozen) | Airplane Game (Sprite Lab) |
+          |---|---|
+          | [![Snowflake Flowers (Frozen)](https://images.code.org/09990050d5f9055734c923b460e4dc6e-image-1592506430990.png "Snowflake Flowers (Frozen)")](https://studio.code.org/projects/artist/4uGqFaTnc7V9B6IqCqj21Q/view) | [![#Airplane Game (Sprite Lab)](https://images.code.org/6d7053c472b093f273207cae6282fa2d-image-1592510538635.png "Airplane Game (Sprite Lab )")](https://studio.code.org/projects/spritelab/STSNFsfSpabSzZcZYC7o2HLgTz-vKlZm-vqRyp94pk4/view)  |
+          | Let's get creative with functions! | Try adding text or a score to this game! |
+
       courseF_bee_variables_8a_2018:
         answers:
         - text: 蜜蜂不会收集任何花蜜，因为变量名称不是“收集”。
@@ -7223,6 +7259,25 @@ zh-CN:
 
       courseF_project_exemplars_2019_2020:
         content1: 测试Markdown文本页面
+        markdown: |+
+          # 项目示例
+
+          要开始最终项目了。开始前，花点时间来看看示例项目。
+
+          ## 精灵图实验室
+
+          | 纸杯蛋糕游戏 (精灵图实验室) | 直升机游戏 (精灵图实验室) |
+          |---|---|
+          | [![#纸杯蛋糕游戏 (精灵图实验室)](https://images.code.org/c90080aaf05349fb6e1fbb6861e815df-image-1556809855136.png)](https://studio.code.org/projects/spritelab/YMEHR4ps9cDJ0sb4Ks0YrZcpcjGmc4OEiUudZHm-l6g/view) | [![#直升机游戏 (精灵图实验室)](https://images.code.org/1a273fd447b952367792423a70c5087a-image-1556812149075.png)](https://studio.code.org/projects/spritelab/STSNFsfSpabSzZcZYC7o2HLgTz-vKlZm-vqRyp94pk4/view) |
+          | 试试给游戏加上文字或分数！ | 试试给游戏加上文字或分数！ |
+
+          ## 小艺术家
+
+          | 花丛 (小艺术家) | 螺旋 (小艺术家) |
+          |---|---|
+          | [![花丛 (小艺术家)](https://images.code.org/0f5adf63c318eab8c8acb397d9db7f2a-image-1556821537577.png)](https://studio.code.org/projects/artist/MIMh2pV2IiLm1ZzaiA6N7kKvg534lFck3abLXTsvZU8/view) | [![螺旋 (小艺术家)](https://images.code.org/06514571a8cf2f8b0346006ac1adc219-image-1556819399386.png)](https://studio.code.org/projects/artist/66scPDPWa8RNNHkcXDaXdA/view) |
+          | 用变量发挥创意！ | 用循环发挥创意！ |
+
       coursee_prediction_artistfunction2:
         answers:
         - text: 艺术家将正确解决谜题。
@@ -7520,3 +7575,50 @@ zh-CN:
       courseExpress_EOC_2020:
         display_name: 结课项目
         description: 你已经完成了本课程！点击以创建项目。
+      CSD Interactive Animations and Games Post-Project Test:
+        title: 互动动画和游戏 项目后测试
+      CSD Physical Computing Post-Project Test:
+        title: 物理计算 项目后测试
+      CSD User Centered Design Post-Project Test:
+        title: 以用户为中心的设计：项目后测试
+      CSD Web Development Post-Project Test:
+        title: 网页开发 项目后测试
+      csd-post-survey-2017-levelgroup:
+        title: 计算机科学发现期末学生调查
+      csd-post-survey-2017-levelgroup_2018:
+        title: 计算机科学发现期末学生调查
+      csd-post-survey-2018-markdown-with-link-to-survey:
+        markdown: |+
+          # 计算机科学发现课后问卷
+
+          **你的输入和反馈对我们非常重要！** 我们会用它来：
+
+          * 改进课程
+          * 了解你的体验
+          * 告诉我们今后想要学习的主题
+
+          非常感谢花时间来帮助计算机科学发现变得更好！
+
+          <a class="btn btn-large btn-success" href="/s/csd-post-survey/stage/1/puzzle/1/page/1" target="top">点击这里完成计算机科学发现课后问卷！！！</a>
+
+          (在新窗口中打开)
+
+          <br>
+
+
+
+
+
+      csd-post-survey-intro-2019:
+        markdown: |+
+          # 计算机科学发现 课后问卷
+
+          **您的输入和反馈对我们非常重要！** 这些反馈会用来：
+
+          * 了解您的体验
+          * 改进课程
+
+          感谢花时间来帮助计算机科学原理变得更好！
+
+      csd-post-survey-levelgroup_2019:
+        title: 计算机科学发现期末学生调查

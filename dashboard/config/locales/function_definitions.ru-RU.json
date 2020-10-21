@@ -486,7 +486,8 @@
             "name": "нарисовать окна"
           },
           "rectangle": {
-            "name": "прямоугольник"
+            "name": "прямоугольник",
+            "description": "ха-ха!\n"
           },
           "sun": {
             "name": "солнце"
@@ -504,7 +505,8 @@
             "name": "треугольник"
           },
           "square": {
-            "name": "квадрат"
+            "name": "квадрат",
+            "description": "ха-ха!\n"
           }
         },
         "Geometric Sun_2018": {
@@ -518,7 +520,8 @@
             "name": "нарисовать окна"
           },
           "rectangle": {
-            "name": "прямоугольник"
+            "name": "прямоугольник",
+            "description": "ха-ха!\n"
           },
           "sun": {
             "name": "солнце"
@@ -536,7 +539,8 @@
             "name": "треугольник"
           },
           "square": {
-            "name": "квадрат"
+            "name": "квадрат",
+            "description": "ха-ха!\n"
           }
         },
         "Guess The Number": {
@@ -1048,6 +1052,9 @@
           },
           "draw eye": {
             "name": "нарисовать глаз"
+          },
+          "25 pixel square": {
+            "name": "квадрат со стороной 25 точек\n"
           }
         },
         "Robot Doodle_2018": {
@@ -1056,6 +1063,9 @@
           },
           "draw eye": {
             "name": "нарисовать глаз"
+          },
+          "25 pixel square": {
+            "name": "квадрат со стороной 25 точек\n"
           }
         },
         "Standalone_Artist_7": {
@@ -3040,6 +3050,14 @@
         "grade5_artist_binary9": {
           "draw": {
             "name": "нарисовать"
+          }
+        },
+        "courseE_Dogger_2": {
+          "stop_everything": {
+            "name": "stop_everything\n"
+          },
+          "lose": {
+            "name": "потерять\n"
           }
         }
       }

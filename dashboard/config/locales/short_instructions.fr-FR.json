@@ -2966,7 +2966,12 @@
         "courseA_artist_loops2": "Aide l'artiste à dessiner cette ligne 2 fois vers l'avant.",
         "courseA_artist_loops2_2018": "Aide l'artiste à dessiner cette ligne 2 fois vers l'avant.",
         "courseA_artist_loops2_2019": "Aide l'artiste à dessiner cette ligne 2 fois vers l'avant.",
-        "courseA_artist_loops2_2020": "Aide l'artiste à dessiner cette ligne 2 fois vers l'avant."
+        "courseA_artist_loops2_2020": "Aide l'artiste à dessiner cette ligne 2 fois vers l'avant.",
+        "courseC_video_angles": "Aide Scrat à atteindre le gland !",
+        "courseD_video_nestedLoopsArtist": "Utilise tes connaissances pour dessiner ce triangle.",
+        "courseE_bee_ramp14": "Avance jusqu'à ce que tu atteignes la laitue, puis ramasse-la toute, en utilisant une boucle `tant que`.",
+        "courseE_farmer_predict1": "Tant qu'il y a de la laitue, ramasse la laitue !",
+        "courseE_farmer_predict2": "Avance jusqu'à ce que tu atteignes la laitue, puis ramasse-la toute, en utilisant une boucle `tant que`."
       }
     }
   }

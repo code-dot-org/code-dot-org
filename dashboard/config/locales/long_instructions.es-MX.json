@@ -3707,7 +3707,12 @@
         "simconfig": "# Modificar y Predecir\n\nEscoge una de las variables que controla esta simulación para modificar y predecir en qué manera cambiará el resultado.\n\nDespués de que hayas escrito tu predicción, ejecuta la simulación por 5 veces y escribe tus descubrimientos. ¿Fue precisa tu predicción?",
         "simconfig_2020": "# Modificar y Predecir\n\nEscoge una de las variables que controla esta simulación para modificar y predecir en qué manera cambiará el resultado.\n\nDespués de que hayas escrito tu predicción, ejecuta la simulación por 5 veces y escribe tus descubrimientos. ¿Fue precisa tu predicción?",
         "simstarter": "# Coleccionando los Datos\n\nEjecuta esta simulación por 5 veces. Cada vez, usa el guión de la actividad Coleccionando los Datos para grabar:\n\n-   ¿Cuántas manzanas coleccionó el elefante?\n-   ¿Cuántas manzanas coleccionó hipopótamo?\n-   ¿Cuánto tiempo pasó para que todas las manzanas estén coleccionadas?",
-        "simstarter_2020": "# Coleccionando los Datos\n\nEjecuta esta simulación por 5 veces. Cada vez, usa el guión de la actividad Coleccionando los Datos para grabar:\n\n-   ¿Cuántas manzanas coleccionó el elefante?\n-   ¿Cuántas manzanas coleccionó hipopótamo?\n-   ¿Cuánto tiempo pasó para que todas las manzanas estén coleccionadas?"
+        "simstarter_2020": "# Coleccionando los Datos\n\nEjecuta esta simulación por 5 veces. Cada vez, usa el guión de la actividad Coleccionando los Datos para grabar:\n\n-   ¿Cuántas manzanas coleccionó el elefante?\n-   ¿Cuántas manzanas coleccionó hipopótamo?\n-   ¿Cuánto tiempo pasó para que todas las manzanas estén coleccionadas?",
+        "courseC_video_angles": "¡Ayuda a Scrat a llegar hasta la bellota!",
+        "courseD_video_nestedLoopsArtist": "Usa lo que has aprendido para dibujar este triángulo.\n\n* * *\n\n##### Cada lado tiene 100 pixeles de largo. Necesitarás girar 120 grados en cada esquina.",
+        "courseE_bee_ramp14": "Las lechugas están esparcidas en el jardín.\\\nSigue por cada camino **hasta** que alcances una lechuga, y luego continúa para recogerla **mientras** queden más por recoger.  ",
+        "courseE_farmer_predict1": "Ahora, la cosechadora necesita recoger todas las lechugas. Usa el 'mientras hay lechugas' dentro del loop 'repetir' para recogerlas todas!",
+        "courseE_farmer_predict2": "Las lechugas están esparcidas en el jardín.\\\nSigue por cada camino **hasta** que alcances una lechuga, y luego continúa para recogerla **mientras** queden más por recoger.  "
       }
     }
   }

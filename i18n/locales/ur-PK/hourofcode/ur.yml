@@ -6,30 +6,43 @@ ur:
   front_title: تاریخ میں ہونے والی سب سے بڑی سیکھنے کی تقریب میں شامل ہوجائیے، %{campaign_date},
     ٢٠١٥
   coming_soon: جلد آ رہا ہے
-  campaign_date_start_short: دسمبر 4
-  campaign_date_start_long: 4 دسمبر
-  campaign_date_short: دسمبر 4-10
-  campaign_date_full: 4-10 دسمبر
-  campaign_date_year: '2017'
-  campaign_date_full_year: 4-10، 2017
+  campaign_date_start_short: دسمبر 7
+  campaign_date_start_long: 7 دسمبر
+  campaign_date_short: دسمبر 7-13
+  campaign_date_full: 7 تا 13 دسمبر
+  campaign_date_year: '2020'
+  campaign_date_full_year: 7-13، 2020
   latam_campaign_date_start_short: Oct. 1
   latam_campaign_date_start_long: October 1
   latam_campaign_date_short: Oct. 1 - Dec. 18
   latam_campaign_date_full: October 1 - December 18
-  latam_campaign_date_year: '2017'
+  latam_campaign_date_year: '2020'
   latam_campaign_date_full_year: October 1, 2020 - December 18, 2020
   europe_campaign_date_start_short: Oct. 10
   europe_campaign_date_start_long: October 10
   europe_campaign_date_short: Oct. 10-25
   europe_campaign_date_full: October 10-25
-  europe_campaign_date_year: '2017'
+  europe_campaign_date_year: '2020'
   europe_campaign_date_full_year: October 10-25, 2020
   africa_campaign_date_start_short: Oct. 1
   africa_campaign_date_start_long: October 1
   africa_campaign_date_short: Oct. 1-31
   africa_campaign_date_full: October 1-31
-  africa_campaign_date_year: '2017'
+  africa_campaign_date_year: '2020'
   africa_campaign_date_full_year: October 1-31, 2020
+  hoc2020_header: Learn today, build a brighter tomorrow.
+  hoc2020_header_with_line_break_markdown: |-
+    Learn today,
+
+    build a brighter tomorrow.
+  social_hoc2020_cs_important: 'CS is more important than ever. Let''s build the future
+    we want. #CSforGood'
+  social_hoc2020_hoc_is_about_csforgood: 'The #HourOfCode is about #CSforGood. Learn
+    today, build a brighter tomorrow.'
+  social_hoc2020_global_movement: کوڈ کا قیام ایک گلوبل تحریک ہے جس میں دس لاکھ طالب
+    علم تک پہنچ گئی ہے. ایک گھنٹے کے سبق تمام عمروں کے لئے 45+ زبانوں میں دستیاب ہیں.
+  social_hoc2020_coming_dates: The Hour of Code is coming December 7-13, 2020. Computer
+    science is foundational for every student to learn.
   hoc2019_header: کمپیوٹر سائینس سیکھیے اوردنیا بدلیے
   hoc2019_header_line1_mobile: کمپیوٹر سائینس سیکھیے
   hoc2019_header_line2_mobile: دنیا بدلیے
@@ -114,6 +127,13 @@ ur:
     bias, while exploring ethical issues and how AI can be used to address world problems.
     Computer science is about so much more than coding! Enjoy Code.org's first step
     in a new journey to teach more about AI throughout our curriculum.
+  hoc_live: Hour of Code Live
+  hoc_live_sign_up_title: Sign up for Hour of Code Live
+  hoc_live_sign_up_message: Learn in real time alongside special guests! Students
+    of all ages and abilities, including those without computers, are welcome. Join
+    our mailing list to receive recordings of the episodes and resources to continue
+    learning at home.
+  hoc_live_join_us: ہمارے ساتھ شامل ہوں
   hoc_overview_oceans_tutorial_header: AI for Oceans
   hoc_overview_oceans_tutorial_desc: Learn about artificial intelligence (AI), machine
     learning, training data, and bias, while exploring ethical issues and how AI can
@@ -913,7 +933,8 @@ ur:
   highlights_title: ہائی لائٹس
   highlights_header: ضابطہ کے گھنٹے پر روشنی ڈالی گئی
   highlights_description: کچھ گھنٹے کے کوڈ مہم سے ہمارے پسندیدہ لمحات ۔
-  higlights_see_more: مزید روشنی ڈالی گئی ہے دیکھ
+  highlights_previous: Highlights from previous years
+  highlights_see_more: See more highlights
   highlights_readmore: مزید پڑھیں
   highlights_watchvideo: ویڈیو دیکھیئے
   highlights_facebook: فیس بُک پر شیئر کریں
@@ -8649,8 +8670,8 @@ ur:
   tutorial_codewards_string_detail_programming_languages: کافی سکرپٹ
   tutorial_olympics_string_detail_programming_languages: کافی سکرپٹ
   tutorial_codinismhero_string_detail_programming_languages: پادری
-  tutorial_discovery_string_detail_programming_languages: بلاکس
-  tutorial_csfirstname_string_detail_programming_languages: بلاکس
+  tutorial_discovery_string_detail_programming_languages: بلاکس، سکریچ
+  tutorial_csfirstname_string_detail_programming_languages: بلاکس، سکریچ
   tutorial_obstaclecourse_string_detail_programming_languages: بلاکس
   tutorial_edisonmove_string_detail_programming_languages: ازگر، ایدپی، ازگر پر مبنی
     ایک ٹیکسٹ بیسڈ پروگرامنگ زبان ہے ۔
@@ -8890,8 +8911,8 @@ ur:
     Room style project, the learner joins Marlee and Tyrell as they learn about binary
     numbers, light, color, and more to unravel Professor Photon's Color Conundrum,
     and restore color to the world's devices.
-  tutorial_kodablebeach_longdescription: Learn to program using basic commands and
-    clean up the beach to protect ocean life.
+  tutorial_kodablebeach_longdescription: Save the beach babies! Learn to program using
+    basic commands and clean up the beach to protect ocean life.
   tutorial_tynkeren_longdescription: 'Part of the UN Sustainable Development Goals
     project, this coding prompt shows off projects exploring renewable energy, energy
     efficiency, and access to energy. Readers can play with working projects and advanced
@@ -9646,7 +9667,7 @@ ur:
   tutorial_ai-oceans_string_detail_platforms: ''
   tutorial_scratchimagine_string_detail_programming_languages: بلاکس
   tutorial_codesterspsa_string_detail_programming_languages: پادری
-  tutorial_googlehero_string_detail_programming_languages: بلاکس
+  tutorial_googlehero_string_detail_programming_languages: بلاکس، سکریچ
   tutorial_codestersbball_string_detail_programming_languages: پادری
   tutorial_scratchcartoon_string_detail_programming_languages: بلاکس
   tutorial_codemonkeyjr_string_detail_programming_languages: بلاکس

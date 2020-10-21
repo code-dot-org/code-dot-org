@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200929062628) do
+ActiveRecord::Schema.define(version: 20201016003134) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -650,6 +650,14 @@ ActiveRecord::Schema.define(version: 20200929062628) do
     t.float    "value",       limit: 24, null: false
   end
 
+  create_table "objectives", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.text     "properties", limit: 65535
+    t.integer  "lesson_id"
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+    t.index ["lesson_id"], name: "index_objectives_on_lesson_id", using: :btree
+  end
+
   create_table "other_curriculum_offerings", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.string   "curriculum_provider_name",            null: false
     t.string   "school_id",                limit: 12, null: false
@@ -1276,12 +1284,14 @@ ActiveRecord::Schema.define(version: 20200929062628) do
 
   create_table "resources", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.string   "name"
-    t.string   "url",        null: false
-    t.string   "key",        null: false
+    t.string   "url",               null: false
+    t.string   "key",               null: false
     t.string   "properties"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["key"], name: "index_resources_on_key", unique: true, using: :btree
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+    t.integer  "course_version_id"
+    t.index ["course_version_id", "key"], name: "index_resources_on_course_version_id_and_key", unique: true, using: :btree
+    t.index ["name", "url"], name: "index_resources_on_name_and_url", type: :fulltext
   end
 
   create_table "school_districts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
@@ -1375,18 +1385,19 @@ ActiveRecord::Schema.define(version: 20200929062628) do
   end
 
   create_table "script_levels", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.integer  "script_id",                         null: false
+    t.integer  "script_id",                               null: false
     t.integer  "chapter"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "stage_id"
     t.integer  "position"
     t.boolean  "assessment"
-    t.text     "properties",          limit: 65535
+    t.text     "properties",                limit: 65535
     t.boolean  "named_level"
     t.boolean  "bonus"
     t.integer  "activity_section_id"
     t.string   "seed_key"
+    t.integer  "activity_section_position"
     t.index ["activity_section_id"], name: "index_script_levels_on_activity_section_id", using: :btree
     t.index ["script_id"], name: "index_script_levels_on_script_id", using: :btree
     t.index ["seed_key"], name: "index_script_levels_on_seed_key", unique: true, using: :btree
@@ -1500,9 +1511,9 @@ ActiveRecord::Schema.define(version: 20200929062628) do
     t.integer  "relative_position",                               null: false
     t.text     "properties",        limit: 65535
     t.integer  "lesson_group_id"
-    t.string   "key"
+    t.string   "key",                                             null: false
     t.index ["lesson_group_id", "key"], name: "index_stages_on_lesson_group_id_and_key", unique: true, using: :btree
-    t.index ["script_id"], name: "index_stages_on_script_id", using: :btree
+    t.index ["script_id", "key"], name: "index_stages_on_script_id_and_key", unique: true, using: :btree
   end
 
   create_table "stages_standards", id: false, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|

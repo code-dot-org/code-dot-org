@@ -89,6 +89,7 @@ class LevelsController < ApplicationController
     ]
 
     filter_levels(params)
+    @levels = @levels.page(params[:page]).per(LEVELS_PER_PAGE)
   end
 
   # GET /levels/get_filters/
@@ -101,6 +102,8 @@ class LevelsController < ApplicationController
   # Get all the information for levels after filtering
   def get_filtered_levels
     filter_levels(params)
+    @levels = @levels.page(params[:page]).per(7)
+    @levels = @levels.map(&:summarize_for_edit)
     render json: @levels
   end
 
@@ -129,7 +132,6 @@ class LevelsController < ApplicationController
     @levels = @levels.where('levels.type = ?', params[:level_type]) if params[:level_type].present?
     @levels = @levels.joins(:script_levels).where('script_levels.script_id = ?', params[:script_id]) if params[:script_id].present?
     @levels = @levels.left_joins(:user).where('levels.user_id = ?', params[:owner_id]) if params[:owner_id].present?
-    @levels = @levels.page(params[:page]).per(LEVELS_PER_PAGE)
   end
 
   # GET /levels/1
@@ -143,7 +145,8 @@ class LevelsController < ApplicationController
     view_options(
       full_width: true,
       small_footer: @game.uses_small_footer? || @level.enable_scrolling?,
-      has_i18n: @game.has_i18n?
+      has_i18n: @game.has_i18n?,
+      useGoogleBlockly: params[:blocklyVersion] == "Google"
     )
   end
 
@@ -309,8 +312,11 @@ class LevelsController < ApplicationController
     rescue ActiveRecord::RecordInvalid => invalid
       render(status: :not_acceptable, text: invalid) && return
     end
-
-    render json: {redirect: edit_level_path(@level)}
+    if params[:do_not_redirect]
+      render json: @level
+    else
+      render json: {redirect: edit_level_path(@level)}
+    end
   end
 
   # DELETE /levels/1
@@ -365,7 +371,12 @@ class LevelsController < ApplicationController
     new_name = params.require(:name)
     editor_experiment = Experiment.get_editor_experiment(current_user)
     @new_level = @level.clone_with_name(new_name, editor_experiment: editor_experiment)
-    render json: {redirect: edit_level_url(@new_level)}
+
+    if params[:do_not_redirect]
+      render json: @new_level
+    else
+      render json: {redirect: edit_level_url(@new_level)}
+    end
   rescue ArgumentError => e
     render(status: :not_acceptable, text: e.message)
   rescue ActiveRecord::RecordInvalid => invalid

@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import LessonGroups from '@cdo/apps/lib/levelbuilder/script-editor/LessonGroups';
+import UnitCard from '@cdo/apps/lib/levelbuilder/script-editor/UnitCard';
 import LessonDescriptions from '@cdo/apps/lib/levelbuilder/script-editor/LessonDescriptions';
 import AnnouncementsEditor from '@cdo/apps/lib/levelbuilder/announcementsEditor/AnnouncementsEditor';
 import $ from 'jquery';
@@ -35,6 +35,22 @@ const styles = {
     marginBottom: 10,
     border: '1px solid ' + color.light_gray,
     padding: 10
+  },
+  saveButtonBackground: {
+    margin: 0,
+    position: 'fixed',
+    bottom: 0,
+    left: 0,
+    backgroundColor: color.lightest_gray,
+    borderColor: color.lightest_gray,
+    height: 50,
+    width: '100%',
+    zIndex: 900,
+    display: 'flex',
+    justifyContent: 'flex-end'
+  },
+  saveButton: {
+    margin: '10px 50px 10px 20px'
   }
 };
 
@@ -520,9 +536,9 @@ export default class ScriptEditor extends React.Component {
           </label>
         </CollapsibleEditorSection>
 
-        <CollapsibleEditorSection title="Lessons and Levels">
+        <CollapsibleEditorSection title="Lesson Groups and Lessons">
           {this.props.beta ? (
-            <LessonGroups />
+            <UnitCard />
           ) : (
             <div>
               {betaWarning || (
@@ -546,14 +562,16 @@ export default class ScriptEditor extends React.Component {
           )}
         </CollapsibleEditorSection>
 
-        <button
-          className="btn btn-primary"
-          type="submit"
-          style={{margin: 0}}
-          onClick={this.presubmit}
-        >
-          Save Changes
-        </button>
+        <div style={styles.saveButtonBackground}>
+          <button
+            className="btn btn-primary"
+            type="submit"
+            style={styles.saveButton}
+            onClick={this.presubmit}
+          >
+            Save Changes
+          </button>
+        </div>
       </div>
     );
   }

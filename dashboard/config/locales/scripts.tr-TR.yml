@@ -21,6 +21,7 @@ tr:
         hoc_category_name: Saat Kodu
         math_category_name: Matematik
         research_studies_category_name: Araştırma Çalışmaları
+        other_category_name: Diğer
       name:
         course1:
           title: Kurs 1
