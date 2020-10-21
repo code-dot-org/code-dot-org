@@ -54,6 +54,7 @@ class ActivitiesEditor extends Component {
     super(props);
 
     this.state = {
+      targetActivityPos: null,
       targetActivitySectionPos: null
     };
   }
@@ -79,37 +80,34 @@ class ActivitiesEditor extends Component {
   };
 
   // To be populated with the react ref of each ActivitySectionCard element.
-  activitySectionRefs = [];
+  sectionRefs = [];
 
-  setActivitySectionRef = (activitySectionRef, activitySectionPosition) => {
-    this.activitySectionRefs[activitySectionPosition] = activitySectionRef;
+  setActivitySectionRef = (sectionRef, sectionPos) => {
+    this.sectionRefs[sectionPos] = sectionRef;
   };
 
   // To be populated with the bounding client rect of each ActivitySectionCard element.
-  activitySectionMetrics = [];
+  sectionMetrics = [];
 
-  // populate activitySectionMetrics from activitySectionRefs.
+  // populate sectionMetrics from sectionRefs.
   updateActivitySectionMetrics = () => {
-    this.activitySectionMetrics = [];
-    this.activitySectionRefs.forEach((ref, position) => {
+    this.sectionMetrics = [];
+    this.sectionRefs.forEach((ref, position) => {
       const node = ReactDOM.findDOMNode(ref);
       const rect = !!node && node.getBoundingClientRect();
-      this.activitySectionMetrics[position] = rect;
+      this.sectionMetrics[position] = rect;
     });
   };
 
-  // Given a clientY value of a location on the screen, find the ActivitySectionCard
-  // corresponding to that location, and update targetActivitySectionPos to match.
+  // Given a clientY value of a location on the screen, find the ActivityCard
+  // and ActivitySectionCard corresponding to that location, and update
+  // targetActivityPos and targetActivitySectionPos to match.
   updateTargetActivitySection = y => {
-    const activitySectionPos = Object.keys(this.activitySectionMetrics).find(
-      sectionPos => {
-        const rect = this.activitySectionMetrics[sectionPos];
-        return y > rect.top && y < rect.top + rect.height;
-      }
-    );
-    const targetActivitySectionPos = activitySectionPos
-      ? Number(activitySectionPos)
-      : null;
+    const sectionPos = Object.keys(this.sectionMetrics).find(sectionPos => {
+      const rect = this.sectionMetrics[sectionPos];
+      return y > rect.top && y < rect.top + rect.height;
+    });
+    const targetActivitySectionPos = sectionPos ? Number(sectionPos) : null;
     this.setState({targetActivitySectionPos});
   };
 
@@ -163,7 +161,7 @@ class ActivitiesEditor extends Component {
               setActivitySectionRef={this.setActivitySectionRef}
               updateTargetActivitySection={this.updateTargetActivitySection}
               targetActivitySectionPos={this.state.targetActivitySectionPos}
-              activitySectionMetrics={this.activitySectionMetrics}
+              activitySectionMetrics={this.sectionMetrics}
               updateActivitySectionMetrics={this.updateActivitySectionMetrics}
             />
           ))}
