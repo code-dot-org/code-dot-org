@@ -21,6 +21,9 @@ describe('MicroBitBoard', () => {
     window.SerialPort = {};
     board = new MicroBitBoard();
     board.boardClient_ = new MicrobitStubBoard();
+    // Stubbing versions to replicate connection
+    board.boardClient_.firmataVersion = 'Firmata Protocol';
+    board.boardClient_.firmwareVersion = 'micro:bit Firmata';
   });
 
   afterEach(() => {
