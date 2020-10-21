@@ -19,6 +19,9 @@ const styles = {
     padding: 20,
     maxWidth: 550,
     marginTop: 20
+  },
+  csvExportButton: {
+    float: 'right'
   }
 };
 
@@ -91,8 +94,9 @@ export class ResultsLoader extends React.Component {
           {this.props.permission.has(WorkshopAdmin) && (
             <SubmissionsDownloadForm
               workshopId={this.props.params['workshopId']}
+              style={styles.csvExportButton}
             >
-              <Button>Download CSV</Button>
+              <Button>Export Survey Results</Button>
             </SubmissionsDownloadForm>
           )}
           <Results {...data} />
