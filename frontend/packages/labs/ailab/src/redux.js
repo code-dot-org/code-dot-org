@@ -1,4 +1,4 @@
-import { availableTrainers } from "./train.js";
+import { MLTypes, availableTrainers } from "./train.js";
 // Action types
 
 const RESET_STATE = "RESET_STATE";
@@ -214,13 +214,34 @@ export function getSelectableFeatures(state) {
 }
 
 export function getSelectableLabels(state) {
-  const selectableLabels =
-    availableTrainers[state.selectedTrainer] &&
-    availableTrainers[state.selectedTrainer].mlType === "binary"
-      ? getCategoricalColumns(state).filter(
-          column => getUniqueOptions(state, column).length === 2
-        )
-      : getCategoricalColumns(state);
+  const eligibleColumns = getContinuousColumns(state).concat(
+    getCategoricalColumns(state)
+  );
+  let labelsRestrictedByTrainer;
+  switch (true) {
+    case availableTrainers[state.selectedTrainer] &&
+      availableTrainers[state.selectedTrainer].mlType ===
+        MLTypes.CLASSIFICATION &&
+      availableTrainers[state.selectedTrainer].binary:
+      labelsRestrictedByTrainer = getCategoricalColumns(state).filter(
+        column => getUniqueOptions(state, column).length === 2
+      );
+      break;
+    case availableTrainers[state.selectedTrainer] &&
+      availableTrainers[state.selectedTrainer].mlType ===
+        MLTypes.CLASSIFICATION:
+      labelsRestrictedByTrainer = getCategoricalColumns(state);
+      break;
+    case availableTrainers[state.selectedTrainer] &&
+      availableTrainers[state.selectedTrainer].mlType === MLTypes.REGRESSION:
+      labelsRestrictedByTrainer = getContinuousColumns(state);
+      break;
+    default:
+      labelsRestrictedByTrainer = eligibleColumns;
+  }
+  const selectableLabels = labelsRestrictedByTrainer.filter(
+    x => !state.selectedFeatures.includes(x)
+  );
   return selectableLabels;
 }
 

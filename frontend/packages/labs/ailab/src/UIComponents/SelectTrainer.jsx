@@ -36,10 +36,12 @@ class SelectTrainer extends Component {
               })}
             </select>
             {this.props.selectedTrainer && (
-              <p>
-                {" "}
+              <div>
+                <h3>
+                  {availableTrainers[this.props.selectedTrainer]["mlType"]}
+                </h3>{" "}
                 {availableTrainers[this.props.selectedTrainer]["description"]}
-              </p>
+              </div>
             )}
           </label>
         </form>

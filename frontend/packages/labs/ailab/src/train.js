@@ -3,7 +3,7 @@
 import SVMTrainer from "./SVMTrainer";
 import KNNTrainer from "./KNNTrainer";
 import { store } from "./index.js";
-import {
+import ColumnTypes, {
   getUniqueOptions,
   getCategoricalColumns,
   getSelectedCategoricalColumns,
@@ -12,18 +12,38 @@ import {
   setTrainingLabels
 } from "./redux";
 
+export const MLTypes = {
+  CLASSIFICATION: "classification",
+  REGRESSION: "regression"
+};
+
 export const availableTrainers = {
-  binary_svm: {
+  binarySvm: {
     name: "Binary SVM",
     description:
-      "Uses the Support Vector Machine algorithm to classify an example as one of two options. Features can be categorical or continuous.",
-    mlType: "binary"
+      "Uses the Support Vector Machine algorithm to classify an example as one of two options.",
+    mlType: MLTypes.CLASSIFICATION,
+    binary: true,
+    supportedFeatureTypes: [ColumnTypes.CATEGORICAL, ColumnTypes.CONTINUOUS],
+    labelType: ColumnTypes.CATEGORICAL
   },
   knn: {
     name: "KNN",
     description:
-      "Uses the K-Nearest Neighbor algorithm to classify an example as one of N options.  Features can be categorical or continuous. K is currently set to 2, but this is customizable.",
-    mlType: "multi"
+      "Uses the K-Nearest Neighbor algorithm to classify an example as one of N options. K is currently set to 2, but this is customizable.",
+    mlType: MLTypes.CLASSIFICATION,
+    binary: false,
+    supportedFeatureTypes: [ColumnTypes.CATEGORICAL, ColumnTypes.CONTINUOUS],
+    labelType: ColumnTypes.CATEGORICAL
+  },
+  randomForest: {
+    name: "Random Forest",
+    description:
+      "Uses Random Forest ensemble learning to predict a continuous data label.",
+    mlType: MLTypes.REGRESSION,
+    binary: false,
+    supportedFeatureTypes: [ColumnTypes.CATEGORICAL, ColumnTypes.CONTINUOUS],
+    labelType: ColumnTypes.CONTINUOUS
   }
 };
 
