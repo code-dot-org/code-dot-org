@@ -205,7 +205,8 @@
         "ramp_artist_loops6": "This staircase is much bigger,\nbut it takes the same amount of code as the last puzzle!\\\r\n\\\r\nFix this loop\nto complete the puzzle.",
         "ramp_artist_loops6_2018": "This staircase is much bigger,\nbut it takes the same amount of code as the last puzzle!\\\r\n\\\r\nFix this loop\nto complete the puzzle.",
         "ramp_artist_loops6_2019": "This staircase is much bigger,\nbut it takes the same amount of code as the last puzzle!\\\r\n\\\r\nFix this loop\nto complete the puzzle.",
-        "ramp_artist_loops6_2020": "This staircase is much bigger,\nbut it takes the same amount of code as the last puzzle!\\\r\n\\\r\nFix this loop\nto complete the puzzle."
+        "ramp_artist_loops6_2020": "This staircase is much bigger,\nbut it takes the same amount of code as the last puzzle!\\\r\n\\\r\nFix this loop\nto complete the puzzle.",
+        "courseD_video_nestedLoopsArtist": "Use what you've learned to draw\nthis triangle.\\\r\n\\_\\_\\_\\\r\n\n##### The sides are each 100 pixels long. You will\n\nneed to turn 120 degrees at each corner."
       }
     }
   }

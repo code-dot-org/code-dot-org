@@ -22,6 +22,7 @@ es-MX:
         hoc_category_name: Hora del código
         math_category_name: Matemáticas
         research_studies_category_name: Estudios de investigación
+        other_category_name: Otro
       name:
         course1:
           title: Curso 1

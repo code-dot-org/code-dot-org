@@ -2593,6 +2593,55 @@
           "draw a shape": {
             "name": "tegn en form"
           }
+        },
+        "MC_HOC_2017_10_RETRY": {
+          "fix long path": {
+            "name": "reparer lang vei"
+          },
+          "fix short path": {
+            "name": "reparer kort vei"
+          }
+        },
+        "MC_HOC_2017_10_RETRY_2019": {
+          "fix long path": {
+            "name": "reparer lang vei"
+          },
+          "fix short path": {
+            "name": "reparer kort vei"
+          }
+        },
+        "MC_HOC_2017_10_RETRY_2020": {
+          "fix long path": {
+            "name": "reparer lang vei"
+          },
+          "fix short path": {
+            "name": "reparer kort vei"
+          }
+        },
+        "course1_artist_loops_challenge1": {
+          "\"simple\" solution": {
+            "name": "\"enkel\" løsning"
+          }
+        },
+        "course1_artist_loops_challenge2": {
+          "potential solution": {
+            "name": "mulig løsning"
+          }
+        },
+        "courseA_artist_loops_challenge1": {
+          "\"simple\" solution": {
+            "name": "\"enkel\" løsning"
+          }
+        },
+        "courseB_artist_loops_challenge2": {
+          "potential solution": {
+            "name": "mulig løsning"
+          }
+        },
+        "courseB_artist_loops_challenge2_2018": {
+          "potential solution": {
+            "name": "mulig løsning"
+          }
         }
       }
     }

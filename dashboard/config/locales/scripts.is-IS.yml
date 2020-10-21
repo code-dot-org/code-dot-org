@@ -19,6 +19,7 @@ is:
         hoc_category_name: Klukkustund kóðunar
         math_category_name: Reikningur
         research_studies_category_name: Rannsóknanám
+        other_category_name: Annað
       name:
         course1:
           title: Námskeið 1

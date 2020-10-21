@@ -21,10 +21,23 @@ export default class BlockDragger extends GoogleBlockly.BlockDragger {
     }
   }
 
-  /** Hide trashcan when drag ends
+  /** Hide trashcan when drag ends.
+   * Also prevent blocks from ending with a negative position. Google allows the workspace to scroll in any direction,
+   * so negative block coordinates are valid, but we want to keep everything flowing down and to the right from (0,0).
    * @override
    */
   endBlockDrag(e, currentDragDeltaXY) {
+    // Don't let the block end with a negative position, unless it's getting deleted.
+    if (!this.draggedConnectionManager_.wouldDeleteBlock()) {
+      const endPosition = this.draggingBlock_.getRelativeToSurfaceXY();
+      if (endPosition.x < 0) {
+        currentDragDeltaXY.x -= endPosition.x;
+      }
+      if (endPosition.y < 0) {
+        currentDragDeltaXY.y -= endPosition.y;
+      }
+    }
+
     super.endBlockDrag(e, currentDragDeltaXY);
     this.workspace_.trashcan.setDisabled(false);
     this.workspace_.hideTrashcan();

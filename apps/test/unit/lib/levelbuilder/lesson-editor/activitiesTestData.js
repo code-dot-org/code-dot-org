@@ -51,7 +51,7 @@ export const sampleActivities = [
               {
                 name: 'Level 1',
                 id: 1,
-                url: 'https://levelbuilder-studio.code.org/levels/598/edit',
+                url: 'levels/598/edit',
                 icon: 'fa-desktop',
                 isUnplugged: false,
                 isConceptLevel: true,
@@ -75,7 +75,7 @@ export const sampleActivities = [
               {
                 name: 'Level 2',
                 id: 2,
-                url: 'https://levelbuilder-studio.code.org/levels/598/edit',
+                url: '/levels/598/edit',
                 icon: 'fa-desktop',
                 isUnplugged: false,
                 isConceptLevel: true,
@@ -87,7 +87,7 @@ export const sampleActivities = [
               {
                 name: 'Level 3',
                 id: 3,
-                url: 'https://levelbuilder-studio.code.org/levels/598/edit',
+                url: '/levels/598/edit',
                 icon: 'fa-desktop',
                 isUnplugged: false,
                 isConceptLevel: true,
