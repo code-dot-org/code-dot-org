@@ -78,10 +78,6 @@ class ActivitiesEditor extends Component {
     return `activity-${activityNumber}`;
   };
 
-  setTargetActivitySection = targetActivitySectionPos => {
-    this.setState({targetActivitySectionPos});
-  };
-
   // To be populated with the react ref of each ActivitySectionCard element.
   activitySectionRefs = [];
 
@@ -106,20 +102,15 @@ class ActivitiesEditor extends Component {
   // corresponding to that location, and update targetActivitySectionPos to match.
   updateTargetActivitySection = y => {
     const activitySectionPos = Object.keys(this.activitySectionMetrics).find(
-      activitySectionPos => {
-        const activitySectionRect = this.activitySectionMetrics[
-          activitySectionPos
-        ];
-        return (
-          y > activitySectionRect.top &&
-          y < activitySectionRect.top + activitySectionRect.height
-        );
+      sectionPos => {
+        const rect = this.activitySectionMetrics[sectionPos];
+        return y > rect.top && y < rect.top + rect.height;
       }
     );
     const targetActivitySectionPos = activitySectionPos
       ? Number(activitySectionPos)
       : null;
-    this.setTargetActivitySection(targetActivitySectionPos);
+    this.setState({targetActivitySectionPos});
   };
 
   // Serialize the activities into JSON, renaming any keys which are different
