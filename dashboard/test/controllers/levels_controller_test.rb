@@ -89,14 +89,13 @@ class LevelsControllerTest < ActionController::TestCase
       "coursed-2017", "coursee-2017", "coursef-2017", "express-2017", "flappy",
       "frozen", "hourofcode", "jigsaw", "playlab", "pre-express-2017", "starwars"
     ]
-    puts scripts - JSON.parse(@response.body)["scriptOptions"].map {|option| option[0]}
     assert (scripts - JSON.parse(@response.body)["scriptOptions"].map {|option| option[0]}).empty?
-    assert_equal JSON.parse(@response.body)["ownerOptions"].map {|option| option[0]}, ["Any owner"]
+    assert (["Any owner"] - JSON.parse(@response.body)["ownerOptions"].map {|option| option[0]}).empty?
   end
 
   test "should get filtered levels with just page param" do
     get :get_filtered_levels, params: {page: 1}
-    assert_equal JSON.parse(@response.body).length, 30
+    assert_equal JSON.parse(@response.body).length, 7
   end
 
   test "should get filtered levels with level_type" do
@@ -107,7 +106,7 @@ class LevelsControllerTest < ActionController::TestCase
 
   test "should get filtered levels with script_id" do
     get :get_filtered_levels, params: {page: 1, script_id: 2}
-    assert_equal JSON.parse(@response.body).length, 20
+    assert_equal JSON.parse(@response.body).length, 7
   end
 
   test "should get filtered levels with owner_id" do
@@ -367,6 +366,21 @@ class LevelsControllerTest < ActionController::TestCase
     end
 
     assert_equal edit_level_path(assigns(:level)), JSON.parse(@response.body)["redirect"]
+  end
+
+  test "should return newly created level when do_not_redirect" do
+    game = Game.find_by_name("Custom")
+    assert_creates(Level) do
+      post :create, params: {
+        level: {name: "NewCustomLevel", type: 'Artist'},
+        game_id: game.id,
+        program: @program,
+        do_not_redirect: true
+      }
+    end
+
+    assert_equal 'NewCustomLevel', JSON.parse(@response.body)['name']
+    assert_equal 'Artist', JSON.parse(@response.body)['type']
   end
 
   test "should create studio level" do
@@ -866,6 +880,19 @@ class LevelsControllerTest < ActionController::TestCase
     assert_equal old.game, new_level.game
     assert_equal "Fun Level (copy 1)", new_level.name
     assert_equal "/levels/#{new_level.id}/edit", URI(JSON.parse(@response.body)['redirect']).path
+  end
+
+  test "should clone without redirect" do
+    game = Game.find_by_name("Custom")
+    old = create(:level, game_id: game.id, name: "Fun Level")
+    assert_creates(Level) do
+      post :clone, params: {id: old.id, name: "Fun Level (copy 1)", do_not_redirect: true}
+    end
+
+    new_level = assigns(:new_level)
+    assert_equal old.game, new_level.game
+    assert_equal "Fun Level (copy 1)", new_level.name
+    assert_equal "Fun Level (copy 1)", JSON.parse(@response.body)['name']
   end
 
   test "cannot clone hard-coded levels" do

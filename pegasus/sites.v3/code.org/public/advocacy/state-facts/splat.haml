@@ -479,7 +479,7 @@ state-facts: true
       %div.policy-item
         - if state_info[:state_plan_s] == 'Yes'
           %div
-            %i.fa.fa-check-square-o
+            <i class="far fa-check-square"></i>
             %b State Plan - 
             = state_info[:state_plan_t]
         - elsif state_info[:state_plan_s] == 'No'
@@ -498,7 +498,7 @@ state-facts: true
       %div.policy-item
         - if state_info[:cs_standards_s] == 'Yes'
           %div
-            %i.fa.fa-check-square-o
+            %i.far.fa-check-square
             %b K-12 Standards - 
             = state_info[:standards_t]
         - elsif state_info[:cs_standards_s] == 'No'
@@ -519,7 +519,7 @@ state-facts: true
       %div.policy-item
         - if state_info[:pd_funding_s] == 'Yes'
           %div
-            %i.fa.fa-check-square-o
+            %i.far.fa-check-square
             %b Funding - 
             = state_info[:funding_t]
         - elsif state_info[:pd_funding_s] == 'No'
@@ -538,7 +538,7 @@ state-facts: true
       %div.policy-item
         - if state_info[:cs_teacher_cert_s] == 'Yes'
           %div
-            %i.fa.fa-check-square-o
+            <i class="far fa-check-square"></i>
             %b Certification - 
             = state_info[:certification_t]
         - elsif state_info[:cs_teacher_cert_s] == 'No'
@@ -557,7 +557,7 @@ state-facts: true
       %div.policy-item
         - if state_info[:pre_service_s] == 'Yes'
           %div
-            %i.fa.fa-check-square-o
+            %i.far.fa-check-square
             %b Pre-Service Programs - 
             = state_info[:preservice_t]
         - elsif state_info[:pre_service_s] == 'No'
@@ -576,7 +576,7 @@ state-facts: true
       %div.policy-item
         - if state_info[:state_position_s] == 'Yes'
           %div
-            %i.fa.fa-check-square-o
+            %i.far.fa-check-square
             %b Dedicated State Position - 
             = state_info[:state_cs_t]
         - elsif state_info[:state_position_s] == 'No'
@@ -595,7 +595,7 @@ state-facts: true
       %div.policy-item
         - if state_info[:require_hs_s] == 'Yes'
           %div
-            %i.fa.fa-check-square-o
+            %i.far.fa-check-square
             %b Require High Schools to Offer - 
             = state_info[:hs_t]
         - elsif state_info[:require_hs_s] == 'No'
@@ -614,7 +614,7 @@ state-facts: true
       %div.policy-item
         - if state_info[:cs_counts_t] == 'Yes'
           %div
-            %i.fa.fa-check-square-o
+            %i.far.fa-check-square
             %b Count Towards Graduation - 
             = state_info[:count_t]
         - elsif state_info[:cs_counts_t] == 'No'
@@ -635,7 +635,7 @@ state-facts: true
       .policy-item
         - if state_info[:higher_ed_entrance_s] == 'Yes'
           %div
-            %i.fa.fa-check-square-o
+            %i.far.fa-check-square
             %b IHE Admission - 
             = state_info[:higher_ed_t]
         - elsif state_info[:higher_ed_entrance_s] == 'No'

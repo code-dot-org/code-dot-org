@@ -4,7 +4,11 @@ import color from '@cdo/apps/util/color';
 import ActivityCard from '@cdo/apps/lib/levelbuilder/lesson-editor/ActivityCard';
 import Activity from '@cdo/apps/templates/lessonOverview/activities/Activity';
 import {connect} from 'react-redux';
-import {addActivity} from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
+import {
+  addActivity,
+  NEW_LEVEL_ID
+} from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
+import _ from 'lodash';
 
 const styles = {
   activityEditAndPreview: {
@@ -84,6 +88,42 @@ class ActivitiesEditor extends Component {
     this.activitySectionMetrics[activitySectionPosition] = metrics;
   };
 
+  // Serialize the activities into JSON, renaming any keys which are different
+  // on the backend.
+  serializeActivities = () => {
+    const activities = _.cloneDeep(this.props.activities);
+    activities.forEach(activity => {
+      activity.name = activity.displayName;
+      delete activity.displayName;
+
+      activity.activitySections.forEach(activitySection => {
+        activitySection.name = activitySection.displayName;
+        delete activitySection.displayName;
+
+        activitySection.description = activitySection.text;
+        delete activitySection.text;
+
+        activitySection.scriptLevels.forEach(scriptLevel => {
+          // The server expects id to be absent if a new script level is to be
+          // created.
+          if (scriptLevel.id === NEW_LEVEL_ID) {
+            delete scriptLevel.id;
+          }
+
+          // The position within the activity section
+          scriptLevel.activitySectionPosition = scriptLevel.position;
+
+          // Other position values will be recomputed from the
+          // activitySectionPosition on the server.
+          delete scriptLevel.position;
+          delete scriptLevel.levelNumber;
+        });
+      });
+    });
+
+    return JSON.stringify(activities);
+  };
+
   render() {
     const {activities} = this.props;
 
@@ -103,7 +143,7 @@ class ActivitiesEditor extends Component {
           ))}
           <button
             onMouseDown={this.handleAddActivity}
-            className="btn"
+            className="btn add-activity"
             style={styles.addActivity}
             type="button"
           >
@@ -119,6 +159,11 @@ class ActivitiesEditor extends Component {
             ))}
           </div>
         </div>
+        <input
+          type="hidden"
+          name="activities"
+          value={this.serializeActivities()}
+        />
       </div>
     );
   }

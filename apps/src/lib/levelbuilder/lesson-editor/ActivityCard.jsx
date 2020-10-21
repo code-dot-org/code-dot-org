@@ -141,7 +141,7 @@ class ActivityCard extends Component {
     const {activity} = this.props;
 
     return (
-      <div>
+      <div className="uitest-activity-card">
         <div
           style={{
             ...styles.activityHeader,
@@ -162,6 +162,7 @@ class ActivityCard extends Component {
               value={activity.displayName}
               style={{width: 150}}
               onChange={this.handleChangeDisplayName}
+              className="uitest-activity-name-input"
             />
           </label>
           <label style={styles.labelAndInput}>
@@ -170,6 +171,7 @@ class ActivityCard extends Component {
               value={activity.duration}
               style={{width: 35}}
               onChange={this.handleChangeDuration}
+              className="uitest-activity-duration-input"
             />
             <span style={{fontSize: 10}}>{'(mins)'}</span>
           </label>
@@ -205,7 +207,7 @@ class ActivityCard extends Component {
           ))}
           <button
             onMouseDown={this.handleAddActivitySection.bind()}
-            className="btn"
+            className="btn add-activity-section"
             style={styles.addButton}
             type="button"
           >

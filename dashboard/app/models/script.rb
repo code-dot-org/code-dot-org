@@ -234,7 +234,7 @@ class Script < ActiveRecord::Base
     end
 
     if !with_hidden && has_any_pilot_access?(user)
-      scripts = scripts.concat(all_scripts.select {|s| s.has_pilot_access?(user)})
+      scripts += all_scripts.select {|s| s.has_pilot_access?(user)}
     end
 
     scripts
@@ -244,15 +244,17 @@ class Script < ActiveRecord::Base
     private
 
     def all_scripts
-      Rails.cache.fetch('valid_scripts/all') do
-        Script.all
+      all_scripts = Rails.cache.fetch('valid_scripts/all') do
+        Script.all.to_a
       end
+      all_scripts.freeze
     end
 
     def visible_scripts
-      Rails.cache.fetch('valid_scripts/valid') do
-        Script.all.reject(&:hidden)
+      visible_scripts = Rails.cache.fetch('valid_scripts/valid') do
+        Script.all.reject(&:hidden).to_a
       end
+      visible_scripts.freeze
     end
   end
 
@@ -981,6 +983,33 @@ class Script < ActiveRecord::Base
     end
   end
 
+  # Script levels unfortunately have 3 position values:
+  # 1. chapter: position within the Script
+  # 2. position: position within the Lesson
+  # 3. activity_section_position: position within the ActivitySection.
+  # This method uses activity_section_position as the source of truth to set the
+  # values of position and chapter on all script levels in the script.
+  def fix_script_level_positions
+    reload
+    if script_levels.reject(&:activity_section).any?
+      raise "cannot fix position of legacy script levels"
+    end
+
+    chapter = 0
+    lessons.each do |lesson|
+      position = 0
+      lesson.lesson_activities.each do |activity|
+        activity.activity_sections.each do |section|
+          section.script_levels.each do |sl|
+            sl.chapter = (chapter += 1)
+            sl.position = (position += 1)
+            sl.save!
+          end
+        end
+      end
+    end
+  end
+
   # Clone this script, appending a dash and the suffix to the name of this
   # script. Also clone all the levels in the script, appending an underscore and
   # the suffix to the name of each level. Mark the new script as hidden, and
@@ -1277,10 +1306,10 @@ class Script < ActiveRecord::Base
     summary
   end
 
-  def summarize_for_edit
+  def summarize_for_script_edit
     include_lessons = false
     summary = summarize(include_lessons)
-    summary[:lesson_groups] = lesson_groups.map(&:summarize_for_edit)
+    summary[:lesson_groups] = lesson_groups.map(&:summarize_for_script_edit)
     summary
   end
 
@@ -1461,6 +1490,14 @@ class Script < ActiveRecord::Base
   def unit_group
     return nil if unit_group_units.length != 1
     UnitGroup.get_from_cache(unit_group_units[0].course_id)
+  end
+
+  # If this unit is a standalone course, returns its CourseVersion. Otherwise,
+  # if this unit belongs to a UnitGroup, returns the UnitGroup's CourseVersion,
+  # if there is one.
+  # @return [CourseVersion]
+  def get_course_version
+    course_version || unit_group&.course_version
   end
 
   # @return {String|nil} path to the course overview page for this script if there

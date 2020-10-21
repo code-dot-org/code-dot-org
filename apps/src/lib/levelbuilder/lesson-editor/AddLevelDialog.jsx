@@ -17,7 +17,9 @@ const styles = {
     paddingLeft: 20,
     paddingRight: 20,
     paddingBottom: 20,
-    fontFamily: '"Gotham 4r", sans-serif, sans-serif'
+    width: 1100,
+    fontFamily: '"Gotham 4r", sans-serif, sans-serif',
+    marginLeft: -600
   },
   dialogContent: {
     display: 'flex',
@@ -52,7 +54,7 @@ export default class AddLevelDialog extends Component {
   static propTypes = {
     isOpen: PropTypes.bool.isRequired,
     handleConfirm: PropTypes.func.isRequired,
-    currentLevels: PropTypes.array,
+    currentScriptLevels: PropTypes.array,
     addLevel: PropTypes.func,
     activityPosition: PropTypes.number,
     activitySectionPosition: PropTypes.number
@@ -146,21 +148,27 @@ export default class AddLevelDialog extends Component {
                   searchFields={this.state.searchFields}
                   handleSearch={this.handleSearch}
                 />
-                <AddLevelTable addLevel={this.props.addLevel} />
+                <AddLevelTable
+                  addLevel={this.props.addLevel}
+                  levels={this.state.levels}
+                />
               </div>
             )}
             {this.state.methodOfAddingLevel === 'Create New Level' && (
-              <CreateNewLevelInputs />
+              <CreateNewLevelInputs
+                levelOptions={this.state.searchFields.levelOptions}
+                addLevel={this.props.addLevel}
+              />
             )}
           </div>
           <div style={styles.rightColumn}>
             <h4>Levels in Progression</h4>
             <div style={styles.levelsBox}>
               {/*TODO Hook up removeLevel for the addLevelDialog*/}
-              {this.props.currentLevels.map(level => (
+              {this.props.currentScriptLevels.map(scriptLevel => (
                 <LevelToken
-                  key={level.position + '_' + level.ids[0]}
-                  level={level}
+                  key={scriptLevel.position + '_' + scriptLevel.activeId[0]}
+                  scriptLevel={scriptLevel}
                   removeLevel={() => {
                     console.log('remove level');
                   }}

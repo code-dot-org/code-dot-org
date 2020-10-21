@@ -11,7 +11,7 @@ end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.7.2'
-gem 'rails-controller-testing'
+gem 'rails-controller-testing', '~> 1.0.5'
 
 # Compile Sprockets assets concurrently in `assets:precompile`.
 # Ref: https://github.com/rails/sprockets/pull/470
@@ -20,7 +20,7 @@ gem 'sprockets-rails'
 
 # provide `respond_to` methods
 # (see: http://guides.rubyonrails.org/4_2_release_notes.html#respond-with-class-level-respond-to)
-gem 'responders', '~> 2.0'
+gem 'responders', '~> 3.0'
 
 # Pinning sinatra to 2.0.2, since '~> 2.0.2' actually lands us on 2.0.5, which
 # breaks some firebase URIs. See
@@ -28,9 +28,8 @@ gem 'responders', '~> 2.0'
 gem 'sinatra', '2.0.2', require: 'sinatra/base'
 
 gem 'mysql2', '>= 0.4.1'
-# Ref: https://github.com/bdurand/seamless_database_pool/issues/38
-# Ref: https://github.com/bdurand/seamless_database_pool/pull/39
-gem 'seamless_database_pool', github: 'wjordan/seamless_database_pool', ref: 'cdo'
+
+gem 'seamless_database_pool', '>= 1.0.20'
 
 gem 'dalli' # memcached
 gem 'dalli-elasticache' # ElastiCache Auto Discovery memcached nodes
@@ -44,7 +43,6 @@ gem 'redis', '~> 3.3.3'
 gem 'redis-slave-read', require: false, github: 'code-dot-org/redis-slave-read', ref: 'cfe1bd0f5cf65eee5b52560139cab133f22cb880'
 gem 'xxhash'
 
-gem 'aws-google' # use Google Accounts for AWS access
 gem 'google-api-client', '~> 0.23'
 
 # CSRF protection for Sinatra.
@@ -56,7 +54,8 @@ gem 'memory_profiler'
 gem 'rack-mini-profiler'
 
 group :development do
-  gem 'annotate'
+  gem 'annotate', '~> 3.1.1'
+  gem 'aws-google' # use Google Accounts for AWS access
   gem 'web-console'
 end
 
@@ -136,9 +135,11 @@ gem 'unicorn', '~> 5.1.0'
 
 gem 'chronic', '~> 0.10.2'
 
-# Use SCSS for stylesheets.
-# Ref: https://github.com/rails/sass-rails/pull/386
-gem 'sass-rails', github: 'wjordan/sass-rails', ref: 'frozen-array-fix'
+gem 'sass-rails', '~> 6.0.0'
+# Temporarily use our own fork of sassc-rails (a dependency of sass-rails),
+# while we try to get some bugs fixed upstream.
+# See https://github.com/sass/sassc-rails/pull/153 for context.
+gem 'sassc-rails', github: 'code-dot-org/sassc-rails', ref: 'frozen-array-fix'
 
 # Use Uglifier as compressor for JavaScript assets.
 gem 'uglifier', '>= 1.3.0'
@@ -232,7 +233,7 @@ gem 'font-awesome-rails', '~> 4.7.0.5'
 gem 'sequel'
 gem 'user_agent_parser'
 
-gem 'paranoia'
+gem 'paranoia', '~> 2.4.2'
 gem 'petit', github: 'code-dot-org/petit'  # For URL shortening
 
 # JSON model serializer for REST APIs.

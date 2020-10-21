@@ -2,19 +2,20 @@
 #
 # Table name: script_levels
 #
-#  id                  :integer          not null, primary key
-#  script_id           :integer          not null
-#  chapter             :integer
-#  created_at          :datetime
-#  updated_at          :datetime
-#  stage_id            :integer
-#  position            :integer
-#  assessment          :boolean
-#  properties          :text(65535)
-#  named_level         :boolean
-#  bonus               :boolean
-#  activity_section_id :integer
-#  seed_key            :string(255)
+#  id                        :integer          not null, primary key
+#  script_id                 :integer          not null
+#  chapter                   :integer
+#  created_at                :datetime
+#  updated_at                :datetime
+#  stage_id                  :integer
+#  position                  :integer
+#  assessment                :boolean
+#  properties                :text(65535)
+#  named_level               :boolean
+#  bonus                     :boolean
+#  activity_section_id       :integer
+#  seed_key                  :string(255)
+#  activity_section_position :integer
 #
 # Indexes
 #
@@ -51,6 +52,7 @@ class ScriptLevel < ActiveRecord::Base
 
   validate :anonymous_must_be_assessment
   validate :validate_activity_section_lesson
+  validate :validate_activity_section_position
 
   # Make sure we never create a level that is not an assessment, but is anonymous,
   # as in that case it wouldn't actually be treated as anonymous
@@ -66,6 +68,12 @@ class ScriptLevel < ActiveRecord::Base
     end
   end
 
+  def validate_activity_section_position
+    if activity_section && !activity_section_position
+      errors.add(:script_level, 'activity_section_position is required when activity_section is present')
+    end
+  end
+
   serialized_attrs %w(
     variants
     progression
@@ -74,7 +82,7 @@ class ScriptLevel < ActiveRecord::Base
   )
 
   # Chapter values order all the script_levels in a script.
-  def self.add_script_levels(script, lesson, raw_script_levels, counters, new_suffix, editor_experiment)
+  def self.add_script_levels(script, lesson_group, lesson, raw_script_levels, counters, new_suffix, editor_experiment)
     script_level_position = 0
 
     raw_script_levels.map do |raw_script_level|
@@ -97,17 +105,25 @@ class ScriptLevel < ActiveRecord::Base
         position: (script_level_position += 1),
         named_level: raw_script_level[:named_level],
         bonus: raw_script_level[:bonus],
-        assessment: raw_script_level[:assessment],
-        properties: properties.with_indifferent_access
+        assessment: raw_script_level[:assessment]
       }
+      find_existing_script_level_attributes = script_level_attributes.slice(:script_id, :stage_id)
       script_level = script.script_levels.detect do |sl|
-        script_level_attributes.all? {|k, v| sl.send(k) == v} &&
-          sl.levels == levels
+        find_existing_script_level_attributes.all? {|k, v| sl.send(k) == v} &&
+          sl.levels.map(&:id).sort == levels.map(&:id).sort
       end || ScriptLevel.create!(script_level_attributes) do |sl|
         sl.levels = levels
       end
 
+      # Generate and store the seed_key, a unique identifier for this script level which should be stable across environments.
+      # We'll use this in our new, JSON-based seeding process.
+      seed_context = ScriptSeed::SeedContext.new(script: script, lesson_groups: [lesson_group], lessons: [lesson])
+      seed_key_data = script_level.seeding_key(seed_context, false)
+      script_level_attributes[:seed_key] = HashingUtils.ruby_hash_to_md5_hash(seed_key_data)
+
       script_level.assign_attributes(script_level_attributes)
+      # We must assign properties separately since otherwise, a missing property won't correctly overwrite the current value
+      script_level.properties = properties
       script_level.save! if script_level.changed?
       script_level
     end
@@ -354,12 +370,6 @@ class ScriptLevel < ActiveRecord::Base
       ids.concat(l.contained_levels.map(&:id))
     end
 
-    # Levelbuilders can select if External/
-    # Markdown levels should display as Unplugged.
-    display_as_unplugged =
-      level.unplugged? ||
-      level.properties["display_as_unplugged"] == "true"
-
     summary = {
       ids: ids,
       activeId: oldest_active_level.id,
@@ -371,7 +381,7 @@ class ScriptLevel < ActiveRecord::Base
       url: build_script_level_url(self),
       freePlay: level.try(:free_play) == "true",
       bonus: bonus,
-      display_as_unplugged: display_as_unplugged
+      display_as_unplugged: level.display_as_unplugged?
     }
 
     if progression
@@ -423,6 +433,34 @@ class ScriptLevel < ActiveRecord::Base
       end
     end
 
+    summary
+  end
+
+  def summarize_for_lesson_show
+    summary = summarize
+    summary[:id] = id
+    summary[:levels] = levels.map do |level|
+      {
+        name: level.name,
+        id: level.id,
+        icon: level.icon,
+        isConceptLevel: level.concept_level?
+      }
+    end
+    summary
+  end
+
+  def summarize_for_edit
+    summary = summarize
+    summary[:id] = id
+    summary[:activitySectionPosition] = activity_section_position
+    summary[:levels] = levels.map do |level|
+      {
+        id: level.id,
+        name: level.name,
+        url: edit_level_path(id: level.id)
+      }
+    end
     summary
   end
 
@@ -579,9 +617,7 @@ class ScriptLevel < ActiveRecord::Base
   # @return [Hash<String, String>] all information needed to uniquely identify this object across environments.
   def seeding_key(seed_context, use_existing_level_keys = true)
     my_key = {
-      'script_level.level_keys': get_level_keys(seed_context, use_existing_level_keys),
-      'script_level.chapter': chapter,
-      'script_level.position': position
+      'script_level.level_keys': get_level_keys(seed_context, use_existing_level_keys)
     }
 
     my_lesson = seed_context.lessons.select {|l| l.id == stage_id}.first
@@ -616,9 +652,15 @@ class ScriptLevel < ActiveRecord::Base
         raise "No level found for #{lsl}" unless level
         level
       end
-      my_levels = my_levels.sort_by(&:id)
       raise "No levels found for #{inspect}" if my_levels.nil_or_empty?
     end
-    my_levels.map(&:key)
+    my_levels.sort_by(&:id).map(&:key)
+  end
+
+  # @param [Array<Hash>] levels_data - Array of hashes each representing a level
+  def update_levels(levels_data)
+    self.levels = levels_data.map do |level_data|
+      Level.find(level_data['id'])
+    end
   end
 end

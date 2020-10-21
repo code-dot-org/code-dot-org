@@ -9,6 +9,7 @@ export const levelType = PropTypes.shape({
   levelNumber: PropTypes.number,
   isCurrentLevel: PropTypes.bool,
   isConceptLevel: PropTypes.bool,
+  kind: PropTypes.string,
   sublevels: PropTypes.arrayOf(PropTypes.object)
 });
 
@@ -42,6 +43,6 @@ export const lessonType = PropTypes.shape({
 export const lessonGroupType = PropTypes.shape({
   id: PropTypes.number,
   displayName: PropTypes.string,
-  bigQuestions: PropTypes.array,
+  bigQuestions: PropTypes.string,
   description: PropTypes.string
 });

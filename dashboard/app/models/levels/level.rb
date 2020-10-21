@@ -23,7 +23,11 @@
 #  index_levels_on_name     (name)
 #
 
+require 'cdo/shared_constants'
+
 class Level < ActiveRecord::Base
+  include SharedConstants
+
   belongs_to :game
   has_and_belongs_to_many :concepts
   has_and_belongs_to_many :script_levels
@@ -49,6 +53,7 @@ class Level < ActiveRecord::Base
   validates_length_of :name, within: 1..70
   validate :reject_illegal_chars
   validates_uniqueness_of :name, case_sensitive: false, conditions: -> {where.not(user_id: nil)}
+  validate :validate_game, on: [:create, :update]
 
   after_save :write_custom_level_file
   after_save :update_key_list
@@ -516,6 +521,14 @@ class Level < ActiveRecord::Base
     end
   end
 
+  # Uses specific knowledge of how the key method is implemented in hopes of
+  # preventing any levels for which we can't compute a key.
+  def validate_game
+    unless ['custom', nil].include?(level_num) || game
+      errors.add(:game, 'required for non-custom levels in order to compute level key')
+    end
+  end
+
   def log_changes(user=nil)
     return unless changed?
 
@@ -591,12 +604,39 @@ class Level < ActiveRecord::Base
     end
   end
 
+  def display_as_unplugged?
+    # Levelbuilders can select if External/
+    # Markdown levels should display as Unplugged.
+    unplugged? || properties["display_as_unplugged"] == "true"
+  end
+
   def summarize
     {
       level_id: id,
       type: self.class.to_s,
       name: name,
       display_name: display_name
+    }
+  end
+
+  def summarize_for_edit
+    {
+      id: id,
+      type: self.class.to_s,
+      name: name,
+      updated_at: updated_at.localtime.strftime("%D at %r"),
+      owner: user&.name,
+      url: "/levels/#{id}/edit",
+      icon: icon,
+      kind: unplugged? ? LEVEL_KIND.unplugged : LEVEL_KIND.puzzle,
+      title: try(:title),
+      unplugged: display_as_unplugged?,
+      is_concept_level: concept_level?,
+      sublevels: try(:sublevels),
+      skin: try(:skin),
+      videoKey: video_key,
+      concepts: summarize_concepts,
+      conceptDifficulty: summarize_concept_difficulty
     }
   end
 
