@@ -298,22 +298,47 @@ WebLab.prototype.init = function(config) {
   };
 };
 
-WebLab.prototype.onFinish = function(submit) {
-  const onComplete = submit
-    ? onSubmitComplete
-    : this.studioApp_.onContinue.bind(this.studioApp_);
+WebLab.prototype.reportResult = function(submit, validated) {
+  let onComplete, testResult;
+
+  if (validated) {
+    testResult = TestResults.FREE_PLAY;
+    onComplete = submit
+      ? onSubmitComplete
+      : this.studioApp_.onContinue.bind(this.studioApp_);
+  } else {
+    testResult = TestResults.FREE_PLAY_UNCHANGED_FAIL;
+    onComplete = submit
+      ? onSubmitComplete
+      : () => {
+          this.studioApp_.displayFeedback({
+            feedbackType: testResult,
+            level: this.level
+          });
+        };
+  }
 
   project.autosave(() => {
     this.studioApp_.report({
       app: 'weblab',
       level: this.level.id,
-      result: true,
-      testResult: TestResults.FREE_PLAY,
+      result: validated,
+      testResult: testResult,
       program: this.getCurrentFilesVersionId() || '',
       submitted: submit,
       onComplete: onComplete
     });
   });
+};
+
+WebLab.prototype.onFinish = function(submit) {
+  if (this.level.validationEnabled) {
+    this.brambleHost.validateProjectChanged(validated =>
+      this.reportResult(submit, validated)
+    );
+  } else {
+    this.reportResult(submit, true /* validated */);
+  }
 };
 
 WebLab.prototype.getCodeAsync = function() {

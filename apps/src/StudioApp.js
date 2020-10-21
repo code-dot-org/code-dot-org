@@ -294,7 +294,8 @@ function showWarnings(config) {
 }
 
 /**
- * Common startup tasks for all apps. Happens after configure.
+ * Common startup tasks for all blockly and droplet apps. Happens
+ * after configure.
  * @param {AppOptionsConfig}
  */
 StudioApp.prototype.init = function(config) {
@@ -1652,9 +1653,13 @@ StudioApp.prototype.displayFeedback = function(options) {
 
   // Write updated progress to Redux.
   const store = getStore();
-  store.dispatch(
-    mergeProgress({[this.config.serverLevelId]: options.feedbackType})
-  );
+  if (this.config) {
+    // Some apps (Weblab, Oceans) don't have a config. Skip this step
+    // for those.
+    store.dispatch(
+      mergeProgress({[this.config.serverLevelId]: options.feedbackType})
+    );
+  }
 
   if (experiments.isEnabled('bubbleDialog')) {
     // Track whether this experiment is in use. If not, delete this and similar
@@ -1744,7 +1749,7 @@ StudioApp.prototype.displayFeedback = function(options) {
 
   // If this level is enabled with a hint prompt threshold, check it and some
   // other state values to see if we should show the hint prompt
-  if (this.config.level.hintPromptAttemptsThreshold) {
+  if (this.config && this.config.level.hintPromptAttemptsThreshold) {
     this.authoredHintsController_.considerShowingOnetimeHintPrompt();
   }
 
@@ -3440,6 +3445,7 @@ StudioApp.prototype.setPageConstants = function(config, appSpecificConstants) {
       isReadOnlyWorkspace: !!config.readonlyWorkspace,
       isDroplet: !!level.editCode,
       isBlockly: this.isUsingBlockly(),
+      isBramble: config.app && config.app === 'weblab',
       hideSource: !!config.hideSource,
       isChallengeLevel: !!config.isChallengeLevel,
       isEmbedView: !!config.embed,
