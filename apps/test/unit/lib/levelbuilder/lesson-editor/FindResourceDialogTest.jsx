@@ -1,10 +1,10 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../../../util/reconfiguredChai';
-import AddResourceDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/AddResourceDialog';
+import FindResourceDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/FindResourceDialog';
 import sinon from 'sinon';
 
-describe('AddResourceDialog', () => {
+describe('FindResourceDialog', () => {
   let defaultProps;
   beforeEach(() => {
     defaultProps = {
@@ -14,7 +14,7 @@ describe('AddResourceDialog', () => {
   });
 
   it('renders default props', () => {
-    const wrapper = shallow(<AddResourceDialog {...defaultProps} />);
+    const wrapper = shallow(<FindResourceDialog {...defaultProps} />);
     expect(wrapper.contains('Add Resource')).to.be.true;
     expect(wrapper.find('BaseDialog').length).to.equal(1);
     expect(wrapper.find('select').length).to.equal(1);
