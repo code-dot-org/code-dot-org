@@ -111,4 +111,9 @@ class GeocoderTest < Minitest::Test
     location = Geocoder.search('Croatia').first
     assert_equal('HR', location.country_code)
   end
+
+  def test_localhost_lookup
+    location = Geocoder.search("127.0.0.1").first
+    assert_equal("RD", location.country_code)
+  end
 end
