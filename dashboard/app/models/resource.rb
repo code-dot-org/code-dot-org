@@ -27,7 +27,7 @@
 # @attr [String] audience - who this resource is targeted toward (eg teacher, student, etc)
 # @attr [String] download_url - URL that can download the file
 # @attr [Boolean] include_in_pdf - indicates whether the file will be included in a PDF handout
-class Resource < ActiveRecord::Base
+class Resource < ApplicationRecord
   include SerializedProperties
 
   has_and_belongs_to_many :lessons, join_table: :lessons_resources
