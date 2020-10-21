@@ -187,11 +187,15 @@ export default class SummaryProgressRow extends React.Component {
               styles.fadedCol)
           }}
         >
-          <ProgressBubbleSet
-            levels={levels}
-            disabled={locked && viewAs !== ViewType.Teacher}
-            style={lesson.isFocusArea ? styles.focusAreaMargin : undefined}
-          />
+          {levels.length === 0 ? (
+            i18n.lessonContainsNoLevels()
+          ) : (
+            <ProgressBubbleSet
+              levels={levels}
+              disabled={locked && viewAs !== ViewType.Teacher}
+              style={lesson.isFocusArea ? styles.focusAreaMargin : undefined}
+            />
+          )}
           {lesson.isFocusArea && <FocusAreaIndicator />}
         </td>
       </tr>

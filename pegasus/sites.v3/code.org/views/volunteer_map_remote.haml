@@ -21,10 +21,23 @@
           -VolunteerEngineerSubmission2015.experiences.each do |key, value|
             %option{value: key, selected: (experience_s||[]).include?(key.to_s)}= value
 
-#volunteer-search-results.row.top-margin
-  #volunteer-search-controls.col-xs-5
-    #controls
-  #volunteer-search-map.col-xs-7
-    #gmap
 .row
   #volunteer-search-error.col-xs-12.display-none.top-margin
+
+%link{rel: "stylesheet", href: "https://api.tiles.mapbox.com/mapbox-gl-js/v1.1.1/mapbox-gl.css"}
+%script{type: "text/javascript", src: "https://api.tiles.mapbox.com/mapbox-gl-js/v1.1.1/mapbox-gl.js"}
+
+:css
+  .mapboxgl-popup-content {
+    max-height: 180px;
+    overflow-y: scroll;
+  }
+
+:javascript
+  mapboxgl.accessToken = "#{CDO.mapbox_access_token}";
+
+#mapbox-container.row{style: "display: none"}
+  .col-xs-5
+    #mapbox-listings{style: "height: 400px; overflow: scroll"}
+  .col-xs-7
+    #mapbox{style: "width: 553px; height: 400px"}

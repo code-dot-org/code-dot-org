@@ -41,6 +41,41 @@ const serverProgressResponse = {
   }
 };
 
+const firstServerProgressResponse = {
+  pagination: {
+    page: 1,
+    per: 2,
+    total_pages: 2
+  },
+  student_timestamps: {
+    100: null,
+    101: timeInSeconds
+  },
+  students: {
+    100: {},
+    101: {
+      2000: {status: 'locked'},
+      2001: {status: 'perfect', result: 30, paired: true, time_spent: 12345}
+    }
+  }
+};
+
+const secondServerProgressResponse = {
+  pagination: {
+    page: 2,
+    per: 2,
+    total_pages: 2
+  },
+  student_timestamps: {
+    102: timeInSeconds + 1
+  },
+  students: {
+    102: {
+      2000: {status: 'perfect', result: 100, time_spent: 6789}
+    }
+  }
+};
+
 const fullExpectedResult = {
   levelsByLessonByScript: {
     123: {
@@ -130,28 +165,15 @@ describe('sectionProgressLoader.loadScript', () => {
     sectionProgress.startRefreshingProgress.restore();
   });
 
-  it('returns early if it is already loading', () => {
-    reduxStub.returns({
-      getState: () => {
-        return {
-          sectionProgress: {
-            isLoadingProgress: true
-          },
-          sectionData: {}
-        };
-      }
-    });
-    expect(loadScript(0)).to.be.undefined;
-    expect(startLoadingProgressStub).to.have.not.been.called;
-    expect(startRefreshingProgressStub).to.have.not.been.called;
-  });
-
   it('returns early if it is already refreshing', () => {
     reduxStub.returns({
       getState: () => {
         return {
           sectionProgress: {
-            isRefreshingProgress: true
+            isRefreshingProgress: true,
+            studentLevelProgressByScript: [true],
+            scriptDataByScript: [true],
+            currentView: 0
           },
           sectionData: {}
         };
@@ -215,6 +237,49 @@ describe('sectionProgressLoader.loadScript', () => {
       expect(addDataByScriptStub).to.have.been.calledOnce;
       expect(finishLoadingProgressStub).to.have.been.calledOnce;
       expect(finishRefreshingProgressStub).to.have.been.calledOnce;
+    });
+
+    it('handles multiple pages of data', () => {
+      reduxStub.returns({
+        getState: () => {
+          return {
+            sectionProgress: {
+              studentLevelProgressByScript: [],
+              scriptDataByScript: [],
+              currentView: 0
+            },
+            sectionData: {
+              section: {
+                students: new Array(60)
+              }
+            }
+          };
+        },
+        dispatch: () => {}
+      });
+
+      sinon.stub(progressHelpers, 'processedLevel');
+      sinon.stub(progress, 'levelsByLesson').returns({});
+      addDataByScriptStub = sinon.spy(sectionProgress, 'addDataByScript');
+      fetchStub.onCall(0).returns({
+        then: sinon.stub().returns({
+          then: sinon.stub().callsArgWith(0, serverScriptResponse)
+        })
+      });
+      fetchStub.onCall(1).returns({
+        then: sinon.stub().returns({
+          then: sinon.stub().callsArgWith(0, firstServerProgressResponse)
+        })
+      });
+      fetchStub.onCall(2).returns({
+        then: sinon.stub().returns({
+          then: sinon.stub().callsArgWith(0, secondServerProgressResponse)
+        })
+      });
+      loadScript(123, 0);
+      expect(addDataByScriptStub).to.have.been.calledWith(fullExpectedResult);
+      progressHelpers.processedLevel.restore();
+      progress.levelsByLesson.restore();
     });
 
     describe('the first time', () => {

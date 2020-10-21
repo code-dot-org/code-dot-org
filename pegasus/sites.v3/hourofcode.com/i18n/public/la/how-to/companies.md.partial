@@ -1,5 +1,5 @@
 ---
-title: Hour of Code How-To Guide for Companies
+title: Guía práctica de la Hora del Código para empresas
 layout: wide
 nav: how_to_nav
 ---
@@ -36,7 +36,7 @@ Una de las formas más satisfactorias de participar en la Hora del Código es se
 
 Una vez que un voluntario se registra, un docente puede revisar su perfil en nuestro [mapa de voluntarios](https://code.org/volunteer/local), por lo que los perfiles deben enviarse lo más completos posible. Si tienes un buen perfil para tu aula, un docente se comunicará contigo a través de la plataforma (nunca compartiremos tu dirección de correo electrónico con el docente). Luego, puedes coordinar los detalles directamente con el docente sobre [cómo ser mejor voluntario en tu aula](https://hourofcode.com/us/how-to/volunteers).
 
-Para obtener más orientación sobre el voluntariado y mensajes de muestra para entusiasmar a tu empresa con la Hora del Código, consulta nuestra [guía para socios corporativos](https://staging.hourofcode.com/files/hoc-corporate-toolkit.pdf).
+Para obtener más orientación sobre el voluntariado y mensajes de muestra para entusiasmar a tu empresa con la Hora del Código, consulta nuestra [guía para socios corporativos]({{ localized_files/hoc_corporate_toolkit }}).
 
 * * *
 
@@ -78,7 +78,7 @@ Si deseas hacer un esfuerzo adicional, tu empresa también puede organizar un ev
 
 | Tiempo | Tema de la agenda | | \---\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---- | \---\---\---\---\----- | | 1-5 minutos | Muestra un [video inspirador](https://hourofcode.com/us/promote/resources#videos)|  
 | 5-10 minutos | Preséntate y aprende más sobre los estudiantes: ¿Dónde trabajas, qué haces y qué es lo que más amas de su trabajo? ¿Qué o quién te inspiró? ¿Cómo te interesaste por las ciencias de la computación? ¿Tuviste un mentor? Haz preguntas a los estudiantes y asigna tiempo a una sesión de preguntas y respuestas. |  
-| 30-60 minutos | ¡Código! If your event is in-person, this is the time to answer questions and guide students through tough puzzles. Try not to give them the solution outright, instead, try asking them questions so they can answer themselves what went wrong, and encourage students to ask each other if they have questions. If you are volunteering virtually, work with the teacher on what the best approach might be. It may make more sense to return at the end of the session to see what progress students have made. | | |1-3 minutos | Agradece a todos y comparte palabras de despedida inspiradoras. Reparte cualquiera de los materiales promocionales de tu empresa ([los stickers](#celebrate) son geniales). | | <br />
+| 30-60 minutos | ¡Código! Si tu evento es en persona, este es el momento de responder preguntas y guiar a los estudiantes a través de desafíos exigentes. Trata de no darles la solución abiertamente; en su lugar, haz preguntas a los estudiantes para que puedan responder por sí mismos qué salió mal y anímalos a hacerse preguntas unos a otros. Si te ofreces como voluntario virtualmente, trabaja con el docente sobre cuál podría ser el mejor abordaje. Puede que tenga más sentido regresar al final de la sesión para ver el progreso de los estudiantes. | | |1-3 minutos | Agradece a todos y comparte palabras de despedida inspiradoras. Reparte cualquiera de los materiales promocionales de tu empresa ([los stickers](#celebrate) son geniales). | | <br />
 
 #### Otras ideas para agregar a tu evento
 
@@ -152,20 +152,20 @@ Ayuda a crear conciencia sobre el movimiento de las ciencias de la computación 
 #### Estadísticas
 
 - ¿Sabías que solo el 45 % de las escuelas de EE. UU. enseñan ciencias de la computación? Dale a cada estudiante la oportunidad de aprender una #HoraDelCódigo https://hourofcode.com/ 
-- In the U.S., only 26% of software professionals are women. Introduce more young women to computer science with #HourOfCode https://hourofcode.com/ 
-- 67% of computing jobs in the U.S. are not in the tech sector. Help put computer science in the standard curriculum with #HourOfCode https://hourofcode.com/ 
+- En los EE. UU., solo el 26 % de los profesionales del software son mujeres. Preséntales las ciencias de la computación a más niñas con #HoraDelCódigo https://hourofcode.com/ 
+- El 67% de los trabajos informáticos en los EE. UU. no se encuentran en el sector tecnológico. Ayuda a poner a las ciencias de la computación en el plan de estudios estándar con #HoraDelCódigo https://hourofcode.com/ 
 
-#### Create your own
+#### Crea una propia
 
-- One #HourOfCode can lead to [fill in your story]. https://hourofcode.com/ 
-- I’m supporting #HourOfCode because [fill in your thoughts]. Join us https://hourofcode.com 
+- Una #HoraDelCódigo puede llevar a [completar tu historia]. https://hourofcode.com/ 
+- Estoy apoyando a la #HoraDelCódigo porque [escribe tus ideas]. Únete a nosotros https://hourofcode.com 
 
-#### Engineer-specific
+#### Específico para ingenieros
 
-- If your very first line of code changed your life, help students near you write their first #HourOfCode https://code.org/volunteer 
-- If you learned to code—what’s your story? Inspire a student near you through their first #HourOfCode https://code.org/volunteer
+- Si tu primera línea de código cambió tu vida, ayuda a los estudiantes cercanos a escribir su primer #HoraDelCódigo https://code.org/volunteer 
+- Si aprendiste a codificar, ¿cuál es tu historia? Inspira a un estudiante cercano a ti a través de su primera #HoraDelCódigo https://code.org/volunteer
 
-<a href="https://hourofcode.com/promote/resources#posters">Learn more</a> about posters, videos, stickers and other ways to promote your event to your community.
+<a href="https://hourofcode.com/promote/resources#posters">Obtén más información</a> sobre carteles, videos, stickers y otras formas de promover tu evento en tu comunidad.
 
 * * *
 
@@ -175,13 +175,13 @@ Ayuda a crear conciencia sobre el movimiento de las ciencias de la computación 
 
 [![](/images/fit-600/Marketing/girl-strong-coding.png)]({{ urls/learn }})
 
-- Spread awareness by wearing [Code.org swag](https://store.code.org/) (all proceeds go to supporting more students gain access to computer science education).
-- Choose to benefit Code.org when you shop on [AmazonSmile](https://code.org/donate/amazonsmile). 
-- Ask your CEO to send a company-wide email emphasizing the importance of computer science and encouraging employees to spread the word.
-- Have some fun with co-workers in a [giving campaign](https://medium.com/@codeorg/how-a-haircut-happy-hour-turned-into-a-fundraiser-for-code-org-1952b197faa2).
-- [Sign this petition](https://code.org/promote) to make sure that every student has the opportunity to learn computer science. 
-- [Donate](https://code.org/donate) to Code.org so that we can keep our educational resources free and accessible to all. 
+- Difunde la conciencia exhibiendo los materiales promocionales de [ Code.org ](https://store.code.org/) (todos los ingresos se destinan a ayudar a que más estudiantes obtengan acceso a la educación en las ciencias de la computación).
+- Elige beneficiar a Code.org cuando compres en [AmazonSmile](https://code.org/donate/amazonsmile). 
+- Pídele a tu director ejecutivo que envíe un correo electrónico a toda la empresa enfatizando la importancia de las ciencias de la computación y alentando a los empleados a correr la voz.
+- Diviértete con tus compañeros de trabajo en una [campaña de donaciones](https://medium.com/@codeorg/how-a-haircut-happy-hour-turned-into-a-fundraiser-for-code-org-1952b197faa2).
+- [Firma esta petición](https://code.org/promote) para asegurarte de que todos los estudiantes tengan la oportunidad de aprender ciencias de la computación. 
+- [Haz una donación](https://code.org/donate) a Code.org para que podamos mantener nuestros recursos educativos gratuitos y accesibles para todos. 
 
-For more suggestions on how to support Code.org and the Hour of Code, visit [Code.org/Help](https://code.org/help)
+Para obtener más sugerencias sobre cómo apoyar a Code.org y la Hora del Código, visita [Code.org/Ayuda](https://code.org/help)
 
 {{ signup_button }}

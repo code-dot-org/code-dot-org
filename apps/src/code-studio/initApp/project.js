@@ -349,9 +349,9 @@ var projects = (module.exports = {
   },
 
   /**
-   * Sets abuse score to zero, saves the project, and reloads the page
+   * Sets abuse score, saves the project, and reloads the page
    */
-  adminResetAbuseScore() {
+  adminResetAbuseScore(score = 0) {
     var id = this.getCurrentId();
     if (!id) {
       return;
@@ -360,16 +360,16 @@ var projects = (module.exports = {
       if (err) {
         throw err;
       }
-      assets.patchAll(id, 'abuse_score=0', null, function(err, result) {
+      assets.patchAll(id, `abuse_score=${score}`, null, function(err, result) {
         if (err) {
           throw err;
         }
       });
-      files.patchAll(id, 'abuse_score=0', null, function(err, result) {
+      files.patchAll(id, `abuse_score=${score}`, null, function(err, result) {
         if (err) {
           throw err;
         }
-        $('.admin-abuse-score').text(0);
+        $('.admin-abuse-score').text(score);
       });
     });
   },
@@ -495,6 +495,9 @@ var projects = (module.exports = {
     },
     setCurrentData(data) {
       current = data;
+    },
+    setCurrentSources(data) {
+      currentSources = data;
     },
     setSourceVersionInterval(seconds) {
       newSourceVersionInterval = seconds * 1000;
@@ -960,6 +963,40 @@ var projects = (module.exports = {
       });
     });
   },
+
+  /**
+   * Tests whether provided sample code is different from the current project code.
+   * This also normalizes the code so incidental differences in line endings or
+   * empty xml tags are not recognized as differences.
+   * @param {string} sampleCodeInput the code to diff against the current project code
+   */
+  isCurrentCodeDifferent(sampleCodeInput) {
+    // We can't use a default param here because we need to check for null and undefined
+    const sampleCode = sampleCodeInput || '';
+    const currentCode = currentSources.source || '';
+    let normalizedSample, normalizedCurrent;
+    const parser = new DOMParser();
+    const parsedCurrent = parser.parseFromString(currentCode, 'text/xml');
+    const parsedSample = parser.parseFromString(sampleCode, 'text/xml');
+    // We normalize in different ways due to the difference in how droplet and blockly
+    // store code. Blockly is xml based and Droplet is plaintext based.
+    if (
+      parsedCurrent.getElementsByTagName('parsererror').length > 0 ||
+      parsedSample.getElementsByTagName('parsererror').length > 0
+    ) {
+      // Remove all whitespace from the code.
+      normalizedSample = sampleCode.replace(/\s+/g, '');
+      normalizedCurrent = currentCode.replace(/\s+/g, '');
+    } else {
+      // Normalize XML to ignore differences in closing tags.
+      const serializer = new XMLSerializer();
+      normalizedSample = serializer.serializeToString(parsedSample);
+      normalizedCurrent = serializer.serializeToString(parsedCurrent);
+    }
+
+    return normalizedSample !== normalizedCurrent;
+  },
+
   /**
    * Saves the project to the Channels API.
    * @param {boolean} forceNewVersion If true, explicitly create a new version.

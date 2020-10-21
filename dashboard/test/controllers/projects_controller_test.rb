@@ -12,6 +12,7 @@ class ProjectsControllerTest < ActionController::TestCase
 
   setup do
     sign_in_with_request create :user
+    Geocoder.stubs(:search).returns([OpenStruct.new(country_code: 'US')])
   end
 
   self.use_transactional_test_case = true
