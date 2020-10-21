@@ -30,6 +30,19 @@ ur:
   africa_campaign_date_full: October 1-31
   africa_campaign_date_year: '2020'
   africa_campaign_date_full_year: October 1-31, 2020
+  hoc2020_header: Learn today, build a brighter tomorrow.
+  hoc2020_header_with_line_break_markdown: |-
+    Learn today,
+
+    build a brighter tomorrow.
+  social_hoc2020_cs_important: 'CS is more important than ever. Let''s build the future
+    we want. #CSforGood'
+  social_hoc2020_hoc_is_about_csforgood: 'The #HourOfCode is about #CSforGood. Learn
+    today, build a brighter tomorrow.'
+  social_hoc2020_global_movement: کوڈ کا قیام ایک گلوبل تحریک ہے جس میں دس لاکھ طالب
+    علم تک پہنچ گئی ہے. ایک گھنٹے کے سبق تمام عمروں کے لئے 45+ زبانوں میں دستیاب ہیں.
+  social_hoc2020_coming_dates: The Hour of Code is coming December 7-13, 2020. Computer
+    science is foundational for every student to learn.
   hoc2019_header: کمپیوٹر سائینس سیکھیے اوردنیا بدلیے
   hoc2019_header_line1_mobile: کمپیوٹر سائینس سیکھیے
   hoc2019_header_line2_mobile: دنیا بدلیے
@@ -920,7 +933,8 @@ ur:
   highlights_title: ہائی لائٹس
   highlights_header: ضابطہ کے گھنٹے پر روشنی ڈالی گئی
   highlights_description: کچھ گھنٹے کے کوڈ مہم سے ہمارے پسندیدہ لمحات ۔
-  higlights_see_more: مزید روشنی ڈالی گئی ہے دیکھ
+  highlights_previous: Highlights from previous years
+  highlights_see_more: See more highlights
   highlights_readmore: مزید پڑھیں
   highlights_watchvideo: ویڈیو دیکھیئے
   highlights_facebook: فیس بُک پر شیئر کریں

@@ -9,21 +9,19 @@ class GeocoderTest < Minitest::Test
   def test_finding_potential_addresses
     Geocoder.configure lookup: :mapbox, api_key: nil
     assert_nil(Geocoder.find_potential_street_address('this is just some text'))
-    assert(Geocoder.find_potential_street_address('1 Embarcadero Blvd SF CA'))
     assert_equal('1 Embarcadero Blvd SF CA', Geocoder.find_potential_street_address('1 Embarcadero Blvd SF CA'))
     assert_equal('123 Post Road Westport CT', Geocoder.find_potential_street_address('Hi I live at 123 Post Road Westport CT'))
     assert_equal('123, Post Road, Westport, CT', Geocoder.find_potential_street_address('Hi I live at 123, Post Road, Westport, CT'))
-    assert_equal('123, Post Road, Westport, CT and other stuff', Geocoder.find_potential_street_address('Hi I live at 123, Post Road, Westport, CT and other stuff'))
+    assert_nil(Geocoder.find_potential_street_address('Hi I live at 123, Post Road, Westport, CT and other stuff'))
     assert_nil(Geocoder.find_potential_street_address('1b'))
     assert_nil(Geocoder.find_potential_street_address('300b'))
     assert_nil(Geocoder.find_potential_street_address('300'))
-    assert_nil(Geocoder.find_potential_street_address('250'))
-    assert_nil(Geocoder.find_potential_street_address('400'))
     assert_nil(Geocoder.find_potential_street_address('1500000000'))
     assert_nil(Geocoder.find_potential_street_address('1500000001230b'))
     assert_nil(Geocoder.find_potential_street_address('1_Counter'))
     assert_nil(Geocoder.find_potential_street_address(nil))
     assert_nil(Geocoder.find_potential_street_address(''))
+    assert_nil(Geocoder.find_potential_street_address('2019 Dance Party Example'))
   end
 
   def test_with_errors

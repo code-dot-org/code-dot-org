@@ -24,6 +24,8 @@ pl:
         hoc_category_name: Godzina Kodowania
         math_category_name: Matematyka
         research_studies_category_name: Studia badawcze
+        twenty_hour_category_name: 20 Godzina
+        tts_category_name: Zamiana tekstu na mowę
         other_category_name: Inni/inne
       name:
         course1:
@@ -278,7 +280,7 @@ pl:
             'Calc: Defining Variables':
               name: Definiowanie zmiennych i przypisanie
             'Calc: Evaluation Blocks':
-              name: Bloki oceny oraz wyrażenia arytmetyczne
+              name: Bloki obliczeń oraz wyrażenia arytmetyczne
             'Eval: Boolean Operators':
               name: Operatory logiczne
             'Eval: Conditionals':
@@ -515,7 +517,7 @@ pl:
             Bytes and File Sizes:
               name: Bajty i rozmiary plików
             Encode a Complex Thing:
-              name: Kodowanie doświadczenia
+              name: Zakoduj doświadczenie
             Encoding B&W Images:
               name: Kodowanie czarno-białych obrazów
             Encoding Color Images:
@@ -563,7 +565,7 @@ pl:
             Booleans:
               name: Wartości logiczne
             Design Recipe Practice:
-              name: Ćwiczenia w zakresie przepisu na projekt
+              name: Praktyka projektowania receptur
             Evaluation Blocks:
               name: Bloki ewaluacji
             Luigi's Pizza:
@@ -681,7 +683,7 @@ pl:
             Events Unplugged:
               name: Zdarzenia bez komputera
             Functions and Top-Down Design:
-              name: Funkcje oraz projekt od góry do dołu
+              name: Funkcje oraz projektowanie zstępujące
             Functions with Return Values:
               name: Funkcje zwracające wartości
             Image Scroller with Key Events:
@@ -701,7 +703,7 @@ pl:
             Multi-screen Apps:
               name: Aplikacje wieloekranowe
             Practice PT - Design a Digital Scene:
-              name: Praktyka PT - Projekt sceny cyfrotej
+              name: Praktyka PT - Projekt sceny cyfrowej
             'Practice PT: Create':
               name: 'Praktyka PT: Twórz'
             Processing Arrays:
@@ -709,7 +711,7 @@ pl:
             The Need For Programming Languages:
               name: Potrzeba języków programowania
             Understanding Program Flow and Logic:
-              name: Zrozumienie przepływu i logiki programu
+              name: Zrozumienie przebiegu programu i logiki 
             User Input and Strings:
               name: Dane użytkownika oraz łańcuchy
             Using Simple Commands:
@@ -855,11 +857,11 @@ pl:
             Epidemic Model Extensions:
               name: Uogólnienia epidemicznego modelu
             Review StarLogo Nova:
-              name: Powtórka ze StarLogo Nova
+              name: Przgląd StarLogo Nova
             Revisiting Agent Movement:
-              name: Ponowne omówienie ruchu agenta
+              name: Ponowne odwiedzenie ruchu agenta
             Thinking Ahead to Implementation:
-              name: Myślenie perspektywiczne względem wdrożenia
+              name: Myślenie przed wdrożeniem
             Welcome!:
               name: Witamy!
             Wrap-Up:
@@ -867,7 +869,7 @@ pl:
         sciencePD3:
           lessons:
             Decode and Share:
-              name: Dekodowanie i udostępnianie
+              name: Dekoduj i udostępnij
             Mystery Model:
               name: Tajemny model
             Welcome Back!:
@@ -880,11 +882,11 @@ pl:
             Algorithms Detour - How Routers Learn:
               name: Jak uczą się routery
             Algorithms Detour - Minimum Spanning Tree:
-              name: Objazd algorytmów - minimalne drzewo rozpinające
+              name: Przegląd algorytmów - Minimalne drzewo rozpinające
             Algorithms Detour - Shortest Path:
-              name: Objazd algorytmów - najkrótsza droga
+              name: Przegląd algorytmów - Najkrótsza droga
             Alice and Bob and Asymmetric Keys:
-              name: Klucze asymetryczne - filiżanki i fasolki
+              name: Klucze asymetryczne - Filiżanki i fasolki
             Cracking the Code:
               name: Łamanie kodu
             DNS in the Real World:
@@ -896,7 +898,7 @@ pl:
             Invent an Addressing Protocol:
               name: Wymyśl protokół adresowania
             One Way Functions - Ice Cream Vans:
-              name: Funkcje jednokierunkowe - samochody dostawcze lodów
+              name: Funkcje jednokierunkowe - Problem z hotspotem WiFi
             Packets and Making a Reliable Internet:
               name: Pakiety i tworzenie niezawodnego internetu
             Practice PT - Cybersecurity Innovations:
@@ -979,7 +981,7 @@ pl:
             Long assessment:
               name: Długi sprawdzian
             Markdown Details:
-              name: Dane szczegółowe obniżki
+              name: Szczegóły Markdown
             Match:
               name: Dopasuj
             Maze:
@@ -1001,9 +1003,9 @@ pl:
             Public Key Cryptography:
               name: Kryptografia klucza publicznego
             Rich long assessment:
-              name: Bogata ocena długa
+              name: Bogaty długi sprawdzian
             Sample PLC Assessment:
-              name: Przykładowa ocena PLC
+              name: Przykładowa sprawdzian PLC
             Star wars:
               name: Gwiezdne Wojny
             Studio:
@@ -1033,7 +1035,7 @@ pl:
             Pluralsight Test:
               name: Test Pluralsight
             Externals Optionally Displayed as Unplugged:
-              name: Elementy zewnętrzne opcjonalne wyświetlone jako "unplugged"
+              name: Elementy zewnętrzne opcjonalne wyświetlone jako unplugged (bez komputera)
             Bubble Choice:
               name: Wybór bańki
             Contained Levels:
@@ -1167,11 +1169,11 @@ pl:
             Remixing Phases 1 and 2:
               name: Remiksowanie etapów 1 i 2
             Review StarLogo Nova:
-              name: Powtórka ze StarLogo Nova
+              name: Przgląd StarLogo Nova
             Reviewing the Modules:
               name: Przeglądanie modułów
             Thinking Ahead to Implementation:
-              name: Myślenie perspektywiczne względem wdrożenia
+              name: Myślenie przed wdrożeniem
             Welcome!:
               name: Witamy!
             Wrap-Up:
@@ -1191,11 +1193,11 @@ pl:
             Remixing Phases 1 and 2:
               name: Remiksowanie etapów 1 i 2
             Review StarLogo Nova:
-              name: Powtórka ze StarLogo Nova
+              name: Przgląd StarLogo Nova
             Reviewing the Modules:
               name: Przeglądanie modułów
             Thinking Ahead to Implementation:
-              name: Myślenie perspektywiczne względem wdrożenia
+              name: Myślenie przed wdrożeniem
             Welcome!:
               name: Witamy!
             Wrap-Up:
@@ -1219,11 +1221,11 @@ pl:
             Remixing Phases 1 and 2:
               name: Remiksowanie etapów 1 i 2
             Review StarLogo Nova:
-              name: Powtórka ze StarLogo Nova
+              name: Przgląd StarLogo Nova
             Reviewing the Modules:
               name: Przeglądanie modułów
             Thinking Ahead to Implementation:
-              name: Myślenie perspektywiczne względem wdrożenia
+              name: Myślenie przed wdrożeniem
             Welcome!:
               name: Witamy!
             Wrap-Up:
@@ -1668,11 +1670,11 @@ pl:
             Create PT:
               name: Twórz PT
             Create PT Prep:
-              name: Twórz przygotowanie PT
+              name: Utwórz przygotowanie PT
             Explore PT:
-              name: Eksploruj PT
+              name: Zbadaj PT
             Explore PT Prep:
-              name: Eksploruj przygotowanie PT
+              name: Zbadaj przygotowanie PT
         cspunit4:
           description_short: Programowanie
           lessons:
@@ -1751,7 +1753,7 @@ pl:
             Create PT Breakdown:
               name: Twórz podział PT
             Explore PT Breakdown:
-              name: Eksploruj podział PT
+              name: Zbadaj podział PT
             Getting Started:
               name: Pierwsze kroki
             Share out and Submit:
@@ -1906,7 +1908,7 @@ pl:
             CSP Student Post Survey Staging:
               name: Podział na etapy badania ex post uczniów CSP
             Participate in a longitudinal study!:
-              name: Udział w strategii badań podłużnych!
+              name: Weź udział w badaniu podłużnym!
             CSP Student Post-Course Survey:
               name: Ankieta dla uczniów po odbyciu kursu CSD
             Post-Course Survey:
@@ -1960,15 +1962,15 @@ pl:
             CSP Student Post Survey Staging:
               name: Podział na etapy badania ex post uczniów CSP
             Participate in a longitudinal study!:
-              name: Udział w strategii badań podłużnych!
+              name: Weź udział w badaniu podłużnym!
             CSP Student Post-Course Survey:
               name: Ankieta dla uczniów po odbyciu kursu CSD
             Practice PT - Encode an Experience:
-              name: Praktyka PT Kodowanie doświadczenia
+              name: Praktyka PT - Kodowanie doświadczenia
             Post-Course Survey:
               name: Ankieta po odbyciu kursu
         csp3-2017:
-          title: Część 3 CSP - Wprowadzenie do programowania ('17-'18)
+          title: Jednostka 3 CSP - Wprowadzenie do programowania ('17-'18)
           description: "Ten rozdział wprowadza koncepcje fundamentalne programowania komputerowego, co odblokowuje możliwość tworzenia bogatych, interaktywnych aplikacji. W tym kursie używa się JavaScript jako języka oprogramowania oraz App Lab jako środowiska programowania do budowania aplikacji, ale koncepcje poznane w ramach tych lekcji obejmują wszystkie języki i narzędzia programowania. .\\r\n\\r\nTen rozdział zaktualizowano po raz ostatni 30 października 2017 roku. Czytaj więcej o aktualizacjach curriculum na stronie forum.code.org/c/csp/updates."
           description_short: Programowanie
           lesson_groups:
@@ -1988,11 +1990,11 @@ pl:
             Creativity in Algorithms:
               name: Kreatywność w algorytmach
             Functions and Top-Down Design:
-              name: Funkcje oraz projekt od góry do dołu
+              name: Funkcje oraz projektowanie zstępujące
             Looping and Random Numbers:
               name: Zapętlanie i losowe liczby
             Practice PT - Design a Digital Scene:
-              name: Praktyka PT - Projekt sceny cyfrotej
+              name: Praktyka PT - Projekt sceny cyfrowej
             The Need For Programming Languages:
               name: Potrzeba języków programowania
             The Need for Algorithms:
@@ -2006,33 +2008,33 @@ pl:
             CSP Student Post Survey Staging:
               name: Podział na etapy badania ex post uczniów CSP
             Participate in a longitudinal study!:
-              name: Udział w strategii badań podłużnych!
+              name: Weź udział w badaniu podłużnym!
             CSP Student Post-Course Survey:
               name: Ankieta dla uczniów po odbyciu kursu CSD
             Creating Functions with Parameters:
               name: Tworzenie funkcji z parametrami
             CSP End-of-Semester Mid-course survey:
-              name: Ankieta w trakcie kursu na koniec semestru CSP
+              name: CSP Ankieta w trakcie kursu na koniec semestru
             CSP Mid-course survey:
-              name: Badanie CSP w trakcie kursu 
+              name: CSP Ankieta w trakcie kursu 
             Please complete the CSP Mid-course survey!:
-              name: Prosimy o wypełnienie ankiety CSP w trakcie kursu!
+              name: Prosimy o wypełnienie ankiety w trakcie kursu CSP!
             Post-Course Survey:
               name: Ankieta po odbyciu kursu
         csp4-2017:
-          title: Część 4 CSP - Ważne dane i prywatność ('17- '18)
+          title: CSP Jednostka 4 - Giga dane i prywatność ('17- '18)
           description: "Bogaty w dane świat, w którym żyjemy, niesię ze sobą wiele złożonych pytań dotyczących polityki publicznej, prawa, etyki oraz oddziaływania społecznego. Do celów niniejszego rozdziału można zaliczyć wypracowanie dopracowanego i zrównoważonego poglądu na temat danych na świecie, z uwzględnieniem pozytywnych i negatywnych skutków tego działania oraz zrozumienia postaw sposobu i przyczyny działania nowoczesnego szyfrowania.\\r\n\\r\nTen rozdział zaktualizowano ostatnio w listopadzie 2017 roku. Czytaj więcej na temat aktualizacji curriculum na stronie forum.code.org/c/csp/updates."
           description_short: Eksploruj bogaty w dane świat, w którym żyjemy oraz sposób, w jaki dane wpływają na strategię publiczną, prywatność osób, bezpieczeństwo, prawo i etykę.
           lesson_groups:
             csp4_1:
-              display_name: 'Rozdział 1: Świat Big Data i Szyfrowania'
+              display_name: 'Rozdział 1: Świat giga danych i szyfrowania'
             cspAssessment:
               display_name: Ocena Rozdziału
             cspSurvey:
               display_name: Ankieta
           lessons:
             Alice and Bob and Asymmetric Keys:
-              name: Alice i  Bob i klucze asymetryczne
+              name: Alicja i  Bob i klucze asymetryczne
             Cracking the Code:
               name: Łamanie kodu
             Encryption with Keys and Passwords:
@@ -2044,7 +2046,7 @@ pl:
             Practice PT - Propose an Innovation:
               name: Praktyka PT - Zaproponuj innowację
             Public Key Crypto:
-              name: Klucz publiczny Crypto
+              name: Kryptografia z kluczem publicznym
             Rapid Research - Data Innovations:
               name: Szybkie badania - Innowacje w zakresie danych
             Simple Encryption:
@@ -2058,11 +2060,11 @@ pl:
             Practice PT - Big Data and Security Dilemmas:
               name: Praktyka PT - Ważne dane i dylematy w zakresie bezpieczeństwa
             Unit 4 Chapter 1 Assessment:
-              name: Część 4 Rozdział 1 - Ocena 
+              name: Rozdział 1 Jednostka 4 - Sprawdzian
             CSP Student Post Survey Staging:
               name: Podział na etapy badania ex post uczniów CSP
             Participate in a longitudinal study!:
-              name: Udział w strategii badań podłużnych!
+              name: Weź udział w badaniu podłużnym!
             CSP Student Post-Course Survey:
               name: Ankieta dla uczniów po odbyciu kursu CSD
             Post-Course Survey:
@@ -2070,14 +2072,14 @@ pl:
             Student Post-Course Survey:
               name: Ankieta dla uczniów po odbyciu kursu
         csp5-2017:
-          title: Część 5 CSP - Budowanie aplikacji ('17- '18)
+          title: CSP Jednostka 5 - Budowanie aplikacji ('17- '18)
           description: Ten dział stanowi kontynuację wprowadzania koncepcji fundamentalnych programowania komputerowego, co odblokowuje możliwość tworzenia bogatych, interaktywnych aplikacji. W tym dziale używa się JavaScript jako języka oprogramowania oraz App Lab jako środowiska programowania do budowania aplikacji, ale koncepcje poznane w ramach tych lekcji obejmują wszystkie języki i narzędzia programowania. 
           description_short: Kontynuuj poznawanie fundamentalnych koncepcji programowania komputerowego w JavaScript poprzez tworzenie bogatych, interaktywnych aplikacji.
           lesson_groups:
             csp5_1:
-              display_name: 'Rozdział 1: Programowanie Sterowane Zdarzeniami'
+              display_name: 'Rozdział 1: Programowanie sterowane zdarzeniami'
             csp5_2:
-              display_name: 'Rozdział 2: Programowanie ze Strukturami Danych'
+              display_name: 'Rozdział 2: Programowanie ze strukturami danych'
             cspSurvey:
               display_name: Ankieta
           lessons:
@@ -2116,7 +2118,7 @@ pl:
             Processing Arrays:
               name: Przetwarzanie tablic
             Understanding Program Flow and Logic:
-              name: Zrozumienie przepływu i logiki programu
+              name: Zrozumienie przebiegu programu i logiki 
             User Input and Strings:
               name: Dane użytkownika oraz łańcuchy
             Using Variables in Apps:
@@ -2126,7 +2128,7 @@ pl:
             Edited lessons ABOVE this line:
               name: Lekcje zredagowane POWYŻEJ tej linii
             Buttons and Events:
-              name: Przyciski i wydarzenia
+              name: Przyciski i zdarzenia
             Make Your Own Multi-Screen App:
               name: Utwórz swoją własną aplikację wieloekranową
             Unit 5 Assessment 1:
@@ -2176,7 +2178,7 @@ pl:
             CSP Student Post Survey Staging:
               name: Podział na etapy badania ex post uczniów CSP
             Participate in a longitudinal study!:
-              name: Udział w strategii badań podłużnych!
+              name: Weź udział w badaniu podłużnym!
             CSP Student Post-Course Survey:
               name: Ankieta dla uczniów po odbyciu kursu CSD
             '"if" Statements Unplugged':
@@ -2190,11 +2192,11 @@ pl:
             Create PT:
               name: Twórz PT
             Create PT Prep:
-              name: Twórz przygotowanie PT
+              name: Utwórz przygotowanie PT
             Explore PT:
-              name: Eksploruj PT
+              name: Zbadaj PT
             Explore PT Prep:
-              name: Eksploruj przygotowanie PT
+              name: Zbadaj przygotowanie PT
             Create PT Prep - Reviewing the Task:
               name: Twórz przygotowanie PT - Weryfikacja zadania
             Create PT Prep - Making a Plan:
@@ -2206,13 +2208,13 @@ pl:
             Explore PT - Making a Plan:
               name: Eksploruj PT - Sporządzanie planu
             Explore PT - Complete the Task:
-              name: Eksploruj PT - Wykonaj zadanie
+              name: Zbadaj PT - Wykonaj zadanie
             Tech Setup - Your AP Digital Portfolio and Other Tools:
-              name: Układ techniczny - Twój cyfrowy portfel AP i inne narzędzia
+              name: Układ techniczny - Twoje cyfrowe portfolio AP i inne narzędzia
             CSP Student Post Survey Staging:
               name: Podział na etapy badania ex post uczniów CSP
             Participate in a longitudinal study!:
-              name: Udział w strategii badań podłużnych!
+              name: Weź udział w badaniu podłużnym!
             CSP Student Post-Course Survey:
               name: Ankieta dla uczniów po odbyciu kursu CSD
         CSDU3-Draft:
@@ -2305,7 +2307,7 @@ pl:
             ECS Curriculum:
               name: Program nauczania ECS
             Welcome to Phase 1!:
-              name: Witamy na etapie 1!
+              name: Witamy w Fazie 1!
             Wrap Up:
               name: Zakończenie
             Classroom and workshop style:
@@ -2351,23 +2353,23 @@ pl:
         cspoptional:
           lessons:
             Algorithms Detour - How Routers Learn:
-              name: Objazd algorytmów - jak uczą się routery
+              name: Objśnienie algorytmów - Jak uczą się routery
             Algorithms Detour - Minimum Spanning Tree:
-              name: Objazd algorytmów - minimalne drzewo rozpinające
+              name: Przegląd algorytmów - Minimalne drzewo rozpinające
             Algorithms Detour - Shortest Path:
-              name: Objazd algorytmów - najkrótsza droga
+              name: Przegląd algorytmów - Najkrótsza droga
             Unit 1 - Encoding Numbers in the Real World:
               name: Jednostka 1 - Kodowanie liczb w świecie rzeczywistym
             Unit 1 - Sending Bits in the Real World:
               name: Jednostka 1 - Przesłanie bitów w świecie rzeczywistym
             Unit 1 - Algorithms Detour - Minimum Spanning Tree:
-              name: Część 1 - Objazd algorytmów - minimalne drzewo rozpinające
+              name: Jednostka 1 - Objaśnienie algorytmów - Minimalne drzewo rozpinające
             Unit 1 - Algorithms Detour - Shortest Path:
-              name: Objazd algorytmów - najkrótsza ścieżka
+              name: Jednostka 1 - Objaśnienie algorytmów - Najkrótsza ścieżka
             Unit 1 - How Routers Learn:
               name: Jednostka 1 - Jak uczą się routery
             Unit 4 - Hard Problems - The Traveling Salesperson Problem:
-              name: Część 4 - Trudne problemy - Problem podróżującego przedstawiciela handlowego
+              name: Jednostka 4 - Trudne problemy - Problem komiwojażera
             Unit 4 - One-Way Functions - The WiFi Hotspot Problem:
               name: Część 4 - Funkcje jednokierunkowe - Problem z hotspotem Wi-Fi
         cspunit1-support:
@@ -2392,7 +2394,7 @@ pl:
             Strategies for Student Writing:
               name: Strategie pisania przez uczniów
             Supporting Peer Learning:
-              name: Wspieranie nauki w grupie rówieśniczej
+              name: Wspieranie nauki w grupie
             'Tool Talk: Intro to Netsim':
               name: 'Narzędzie do mówienia: Wprowadzenie do koncepcji "netism" - działania w Internecie'
         test-teaching-ap-cs-unit-1:
@@ -2431,7 +2433,7 @@ pl:
         cspunit1-tools:
           lessons:
             netsim:
-              name: netsim - działanie w Internecie
+              name: netsim
         csp-facilitators:
           lessons:
             Introduction to Events:
@@ -2447,7 +2449,7 @@ pl:
             CSP Longitudinal Contact Request:
               name: Żądanie kontaktu podłużnego CSP
             Participate in a longitudinal study!:
-              name: Udział w strategii badań podłużnych!
+              name: Weź udział w badaniu podłużnym!
             "[Deprecated - teacher cannot see results] CSP Culminating Assessment":
               name: "[Nieaktualne - nauczyciel nie widzi wyników] Ocena kulminacyjna CSP"
             'NOTE: Deprecated - teacher cannot see results. CSP Culminating Assessment':
@@ -2668,11 +2670,11 @@ pl:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algorytmy z życia wzięte: sadź nasiona'
             'Programming Unplugged: Happy Maps':
-              name: 'Programowanie w trybie "unplugged" - bez komputera: Szczęśliwe mapy (Happy Maps)'
+              name: 'Programowanie bez komputera: Szczęśliwe mapy'
         grade4:
           lessons:
             'Bee: Determine the Concept':
-              name: 'Pszczółka: Określ koncepcję'
+              name: 'Pszczółka: Określ pojęcie'
             'Bee: Functions (Course 3)':
               name: 'Pszczółka: Funkcje (Kurs 3)'
             Build a Star Wars Game!:
@@ -2686,9 +2688,9 @@ pl:
             Final Project - Presentation Day:
               name: Projekt końcowy - dzień prezentacji
             'Final Project - Unplugged: Design Process':
-              name: 'Projekt końcowy - W trybie "unplugged" - bez komputera: Proces projektowania'
+              name: 'Projekt końcowy - Bez komputera: Proces projektowania'
             'Final Project - Work Day: Build Project Online':
-              name: 'Projekt końcowy - Dzień pracy: Budowa projektu online'
+              name: 'Projekt końcowy - Dzień pracy: Buduj projekt online'
             More Programming with Scratch:
               name: Więcej programowania w języku Scratch
             'New Artist: Functions':
@@ -2754,9 +2756,9 @@ pl:
             Final Project - Review/Revise Day:
               name: Projekt końcowy - dzień powtórki/modyfikacji
             'Final Project - Unplugged: Design Process':
-              name: 'Projekt końcowy - W trybie "unplugged" - bez komputera: Proces projektowania'
+              name: 'Projekt końcowy - Bez komputera: Proces projektowania'
             'Final Project - Work Day: Build Project Online':
-              name: 'Projekt końcowy - Dzień pracy: Budowa projektu online'
+              name: 'Projekt końcowy - Dzień pracy: Buduj projekt online'
             'Play Lab: Variables':
               name: 'Play Lab: Zmienne'
             Try programming with Khan Academy:
@@ -3076,7 +3078,7 @@ pl:
             Caring for My New Pet:
               name: Troszczenie się o moje nowe zwierze
             Exploring the Neighborhood:
-              name: Odkrywanie sąsiedztwa
+              name: Badanie sąsiedztwa
             Flappy:
               name: Flappy
             Getting Loopy with Puppy:
@@ -3166,23 +3168,23 @@ pl:
             Unit 3 Chapter 1 Assessment:
               name: Jednostka 3 Rozdział 1 - Sprawdzian
             Unit 4 Chapter 1 Assessment:
-              name: Część 4 Rozdział 1 - Ocena 
+              name: Rozdział 1 Jednostka 4 - Sprawdzian
             'Anonymous student survey: Taking the AP exam':
               name: 'Anonimowa ankieta dla ucznia: Przystępowanie do egzaminu AP'
         csd1-2017:
-          title: Część 1 CSD - Rozwiązywanie problemów ('17- '18)
+          title: CSD Jednostka 1 - Rozwiązywanie problemów ('17- '18)
           description_short: "Dowiedz się, w jaki sposób ludzie pracują na komputerach, aby rozwiązać problemy."
           description: "Dział 1 stanowi niezwykle interaktywny i zachęcający do współpracy wstęp do dziedziny informatyki, ujętej w ramy z szerzej rozumianego dążenia do rozwiązywania problemów.  Będziesz ćwiczyć proces rozwiązywania problemów do rozwiązania serii łamigłówek, wyzwań i scenariuszy z prawdziwego świata. Potem będziesz się dowiadywać, jak dane wejściowe, wyniki wyjściowe, przechowywanie oraz przetwarzanie informacji pomagają ludziom w rozwiązywaniu problemów. Dział kończy się projektem, w którym projektujesz aplikację, która pomaga rozwiązać wybrany przez Ciebie problem. \\r"
           lesson_groups:
             cspSurvey:
               display_name: Ankieta
             csd1_1:
-              display_name: 'Rozdział 1: Proces Rozwiązywania Problemów'
+              display_name: 'Rozdział 1: Proces rozwiązywania problemów'
             csd1_2:
-              display_name: 'Rozdział 2: Komputery i Rozwiązywanie Problemów'
+              display_name: 'Rozdział 2: Komputery i rozwiązywanie problemów'
           lessons:
             Intro to Problem Solving:
-              name: Wstęp do rozwiązywania problemów
+              name: Wprowadzenie do rozwiązywania problemów
               description_student: 'Klasa pracuje w grupach projektując łódki z folii aluminiotej tak, aby utrzymały jak najwięcej drobnych monet. Pod koniec lekcji grupy zastanowią się nad doświadczeniami zebranymi w trakcie zajęć oraz dokonają powiązań z rodzajami rozwiązań problemów, którymi będą się zajmować do końca kursu.'
               description_teacher: 'Na tej lekcji uczniowie pracują w grupach projektując łódki z folii aluminiotej tak, aby utrzymały jak najwięcej drobnych monet. Grupy odbywają dwie rundy prac nad łódkami, a celem jest próba utrzymania większej liczby drobnych monet niż w rundzie 1. Konstrukcja zajęć zapowiada różne działania w procesie rozwiązywania problemu, do których uczniowie zostaną wprowadzeni w stopniu bardziej szczegółowym na kolejnej lekcji. Pod koniec lekcji grupy zastanowią się nad doświadczeniami zebranymi w trakcie zajęć oraz dokonają powiązań z rodzajami rozwiązań problemów, którymi będą się zajmować do końca kursu.'
             The Problem Solving Process:
@@ -3917,7 +3919,7 @@ pl:
             Welcome!:
               name: Witamy!
             Review StarLogo Nova:
-              name: Powtórka ze StarLogo Nova
+              name: Przgląd StarLogo Nova
             Reviewing the Modules:
               name: Przeglądanie modułów
             Advanced StarLogo Nova:
@@ -3925,7 +3927,7 @@ pl:
             Remixing Phases 1 and 2:
               name: Remiksowanie etapów 1 i 2
             Thinking Ahead to Implementation:
-              name: Myślenie perspektywiczne względem wdrożenia
+              name: Myślenie przed wdrożeniem
             Wrap-Up:
               name: Podsumowanie
         2016_sciencePD_phase2b:
@@ -3933,7 +3935,7 @@ pl:
             Welcome!:
               name: Witamy!
             Review StarLogo Nova:
-              name: Powtórka ze StarLogo Nova
+              name: Przgląd StarLogo Nova
             Reviewing the Modules:
               name: Przeglądanie modułów
             Advanced StarLogo Nova:
@@ -3941,7 +3943,7 @@ pl:
             Remixing Phases 1 and 2:
               name: Remiksowanie etapów 1 i 2
             Thinking Ahead to Implementation:
-              name: Myślenie perspektywiczne względem wdrożenia
+              name: Myślenie przed wdrożeniem
             Wrap-Up:
               name: Podsumowanie
         sciencepd3-2016:
@@ -4715,7 +4717,7 @@ pl:
           description: To jest oryginalny projekt działu 1 CSD, ujawniony po raz pierwszy jesienią 2016. Tę wersję zastąpiono działem zaktualizowanym w studio.code.org/s/csd1-2019, który będzie dostępny tylko do 1 lipca 2017 roku.
           lessons:
             Intro to Problem Solving:
-              name: Wstęp do rozwiązywania problemów
+              name: Wprowadzenie do rozwiązywania problemów
             The Problem Solving Process:
               name: Proces rozwiązywania problemów
             Exploring Problem Solving:
@@ -4775,7 +4777,7 @@ pl:
         csd1-draft:
           lessons:
             Intro to Problem Solving:
-              name: Wstęp do rozwiązywania problemów
+              name: Wprowadzenie do rozwiązywania problemów
             The Problem Solving Process:
               name: Proces rozwiązywania problemów
             Exploring Problem Solving:
@@ -4861,7 +4863,7 @@ pl:
             CSP Student Post Survey Staging:
               name: Podział na etapy badania ex post uczniów CSP
             Participate in a longitudinal study!:
-              name: Udział w strategii badań podłużnych!
+              name: Weź udział w badaniu podłużnym!
         fmscsd3preview:
           title: CSD - Rysowanie w Game Lab
           description_audience: Gimnazjum Falmouth [Falmouth Middle School] (Mike Harvey)
@@ -4879,7 +4881,7 @@ pl:
             CSP Student Post-Course Survey:
               name: Ankieta dla uczniów po odbyciu kursu CSD
             Participate in a longitudinal study!:
-              name: Udział w strategii badań podłużnych!
+              name: Weź udział w badaniu podłużnym!
         csp-post-survey:
           title: Ankieta dla uczniów po odbyciu kursu CSD ('17-'18)
           description_audience: Uczniowie CSP
@@ -4892,7 +4894,7 @@ pl:
             CSP Student Post-Course Survey:
               name: Ankieta dla uczniów po odbyciu kursu CSD
             Participate in a longitudinal study!:
-              name: Udział w strategii badań podłużnych!
+              name: Weź udział w badaniu podłużnym!
             CSP Post-Course Survey:
               name: Ankieta po zakończeniu kursu  CSP 
             CSP post survey 2018 staging:
@@ -5451,7 +5453,7 @@ pl:
             Explore PT - Making a Plan:
               name: Eksploruj PT - Sporządzanie planu
             Explore PT - Complete the Task:
-              name: Eksploruj PT - Wykonaj zadanie
+              name: Zbadaj PT - Wykonaj zadanie
         csp-create-task:
           description_short: Te lekcje obejmują przygotowanie i realizację "Zasad informatyki AP Twórz zadanie wydajnościowe.
           description: Te lekcje obejmują przygotowanie i realizację "Zasad informatyki AP Twórz zadanie wydajnościowe.
@@ -5467,7 +5469,7 @@ pl:
           description: Obejmuje układ "Portfela cyfrowego AP" oraz inne narzędzia techniczne potrzebne do realizacji i przekazania zadań wydajnościowych AP.
           lessons:
             Tech Setup - Your AP Digital Portfolio and Other Tools:
-              name: Układ techniczny - Twój cyfrowy portfel AP i inne narzędzia
+              name: Układ techniczny - Twoje cyfrowe portfolio AP i inne narzędzia
         csp-ap:
           title: Egzamin i zadania Wydajnościowe AP CSP
           description_short: W ramach lekcji prowadzi się uczniów w kierunku przygotowania i podejściu do egzaminu AP i zadań wydajnościowych.
@@ -5481,7 +5483,7 @@ pl:
               display_name: 'Rozdział 2: AP Eksploruj zadanie wydajnościowe'
           lessons:
             Tech Setup - Your AP Digital Portfolio and Other Tools:
-              name: Układ techniczny - Twój cyfrowy portfel AP i inne narzędzia
+              name: Układ techniczny - Twoje cyfrowe portfolio AP i inne narzędzia
             Create PT Prep - Reviewing the Task:
               name: Twórz przygotowanie PT - Weryfikacja zadania
             Create PT Prep - Making a Plan:
@@ -5493,9 +5495,9 @@ pl:
             Explore PT - Making a Plan:
               name: Eksploruj PT - Sporządzanie planu
             Explore PT - Complete the Task:
-              name: Eksploruj PT - Wykonaj zadanie
+              name: Zbadaj PT - Wykonaj zadanie
             Participate in a longitudinal study!:
-              name: Udział w strategii badań podłużnych!
+              name: Weź udział w badaniu podłużnym!
         cspnovice:
           title: Przemyślenia prowadzącego - nowicjusza TeacherCon "Zasady informatyki" 
           description_audience: ' -Prowadzący-nowicjusze CSP'
@@ -5902,7 +5904,7 @@ pl:
             Creating Functions:
               name: Tworzenie Funkcji
             Functions and Top-Down Design:
-              name: Funkcje oraz projekt od góry do dołu
+              name: Funkcje oraz projektowanie zstępujące
             APIs and Function Parameters:
               name: API i parametry funkcji
             Creating functions with Parameters:
@@ -5910,13 +5912,13 @@ pl:
             Looping and Random Numbers:
               name: Zapętlanie i losowe liczby
             Practice PT - Design a Digital Scene:
-              name: Praktyka PT - Projekt sceny cyfrotej
+              name: Praktyka PT - Projekt sceny cyfrowej
             Unit 3 Chapter 1 Assessment:
               name: Jednostka 3 Rozdział 1 - Sprawdzian
             foo:
               name: foo
             CSP Mid-course survey:
-              name: Badanie CSP w trakcie kursu 
+              name: CSP Ankieta w trakcie kursu 
             Please complete the CSP Mid-course survey:
               name: Prosimy o wypełnienie ankiety CSP w trakcie kursu
         csd4-draft:
@@ -6486,7 +6488,7 @@ pl:
             Creating Functions:
               name: Tworzenie Funkcji
             Functions and Top-Down Design:
-              name: Funkcje oraz projekt od góry do dołu
+              name: Funkcje oraz projektowanie zstępujące
             APIs and Function Parameters:
               name: API i parametry funkcji
             Creating functions with Parameters:
@@ -6494,7 +6496,7 @@ pl:
             Looping and Random Numbers:
               name: Zapętlanie i losowe liczby
             Practice PT - Design a Digital Scene:
-              name: Praktyka PT - Projekt sceny cyfrotej
+              name: Praktyka PT - Projekt sceny cyfrowej
             Unit 3 Chapter 1 Assessment:
               name: Jednostka 3 Rozdział 1 - Sprawdzian
         pwc:
@@ -6629,9 +6631,9 @@ pl:
             Explore PT - Making a Plan:
               name: Eksploruj PT - Sporządzanie planu
             Explore PT - Complete the Task:
-              name: Eksploruj PT - Wykonaj zadanie
+              name: Zbadaj PT - Wykonaj zadanie
             Tech Setup - Your AP Digital Portfolio and Other Tools:
-              name: Układ techniczny - Twój cyfrowy portfel AP i inne narzędzia
+              name: Układ techniczny - Twoje cyfrowe portfolio AP i inne narzędzia
             'Setup: Digital Portfolio and Other Tools':
               name: 'Układ: Cyfrowy portfel i inne narzędzia'
             Post-Course Survey:
@@ -6647,7 +6649,7 @@ pl:
               display_name: Ankieta
           lessons:
             Tech Setup - Your AP Digital Portfolio and Other Tools:
-              name: Układ techniczny - Twój cyfrowy portfel AP i inne narzędzia
+              name: Układ techniczny - Twoje cyfrowe portfolio AP i inne narzędzia
             Create PT Prep - Reviewing the Task:
               name: Twórz przygotowanie PT - Weryfikacja zadania
             Create PT Prep - Making a Plan:
@@ -7937,14 +7939,14 @@ pl:
             cspSurvey:
               display_name: Ankieta
             csd1_1:
-              display_name: 'Rozdział 1: Proces Rozwiązywania Problemów'
+              display_name: 'Rozdział 1: Proces rozwiązywania problemów'
             csd1_2:
-              display_name: 'Rozdział 2: Komputery i Rozwiązywanie Problemów'
+              display_name: 'Rozdział 2: Komputery i rozwiązywanie problemów'
           lessons:
             CS Discoveries Pre-survey:
               name: Ankieta wstępna dotycząca "Odkryć informatyki" 
             Intro to Problem Solving:
-              name: Wstęp do rozwiązywania problemów
+              name: Wprowadzenie do rozwiązywania problemów
               description_student: 'Klasa pracuje w grupach projektując łódki z folii aluminiotej tak, aby utrzymały jak najwięcej drobnych monet. Pod koniec lekcji grupy zastanowią się nad doświadczeniami zebranymi w trakcie zajęć oraz dokonają powiązań z rodzajami rozwiązań problemów, którymi będą się zajmować do końca kursu.'
               description_teacher: Na tej lekcji uczniowie pracują w grupach projektując łódki z folii aluminiowej tak, aby utrzymały jak najwięcej drobnych monet. Grupy odbywają dwie rundy prac nad łódkami, a celem jest próba utrzymania większej liczby drobnych monet niż w rundzie 1. Konstrukcja zajęć zapowiada różne działania w procesie rozwiązywania problemu, do których uczniowie zostaną wprowadzeni w stopniu bardziej szczegółowym na kolejnej lekcji. Pod koniec lekcji grupy zastanowią się nad doświadczeniami zebranymi w trakcie zajęć oraz dokonają powiązań z rodzajami rozwiązań problemów, którymi będą się zajmować do końca kursu.
             The Problem Solving Process:
@@ -8156,7 +8158,7 @@ pl:
             Lossy Compression and File Formats:
               name: Kompresja stratna oraz formaty plików
             Practice PT - Encode an Experience:
-              name: Praktyka PT Kodowanie doświadczenia
+              name: Praktyka PT - Kodowanie doświadczenia
             Unit 2 Chapter 1 Assessment:
               name: Jednostka 2 Rozdział 1 - Sprawdzian
             Intro to Data:
@@ -8209,7 +8211,7 @@ pl:
             Creating Functions:
               name: Tworzenie Funkcji
             Functions and Top-Down Design:
-              name: Funkcje oraz projekt od góry do dołu
+              name: Funkcje oraz projektowanie zstępujące
             APIs and Function Parameters:
               name: API i parametry funkcji
             Creating functions with Parameters:
@@ -8217,11 +8219,11 @@ pl:
             Looping and Random Numbers:
               name: Zapętlanie i losowe liczby
             Practice PT - Design a Digital Scene:
-              name: Praktyka PT - Projekt sceny cyfrotej
+              name: Praktyka PT - Projekt sceny cyfrowej
             Unit 3 Chapter 1 Assessment:
               name: Jednostka 3 Rozdział 1 - Sprawdzian
             Please complete the CSP Mid-course survey!:
-              name: Prosimy o wypełnienie ankiety CSP w trakcie kursu!
+              name: Prosimy o wypełnienie ankiety w trakcie kursu CSP!
             Creating Functions with Parameters:
               name: Tworzenie funkcji z parametrami
             Mid-Year Survey:
@@ -8243,7 +8245,7 @@ pl:
             Explore PT - Making a Plan:
               name: Eksploruj PT - Sporządzanie planu
             Explore PT - Complete the Task:
-              name: Eksploruj PT - Wykonaj zadanie
+              name: Zbadaj PT - Wykonaj zadanie
             Mid-Year Survey:
               name: Badanie w trakcie roku
             CS Principles Post-Course Survey:
@@ -8291,15 +8293,15 @@ pl:
             Encryption with Keys and Passwords:
               name: Szyfrowanie przy pomocy kluczy i haseł
             Public Key Crypto:
-              name: Klucz publiczny Crypto
+              name: Kryptografia z kluczem publicznym
             Rapid Research - Cybercrime:
               name: Szybkie badania - Cyberprzestępczość
             Practice PT - Big Data and Security Dilemmas:
               name: Praktyka PT - Ważne dane i dylematy w zakresie bezpieczeństwa
             Unit 4 Chapter 1 Assessment:
-              name: Część 4 Rozdział 1 - Ocena 
+              name: Rozdział 1 Jednostka 4 - Sprawdzian
             Participate in a longitudinal study!:
-              name: Udział w strategii badań podłużnych!
+              name: Weź udział w badaniu podłużnym!
             Finding Trends with Visualizations:
               name: Odkrywanie trendów z wizualizacjami
             Check Your Assumptions:
@@ -8316,14 +8318,14 @@ pl:
           description_short: Kontynuuj poznawanie fundamentalnych koncepcji programowania komputerowego w JavaScript poprzez tworzenie bogatych, interaktywnych aplikacji.
           lesson_groups:
             csp5_1:
-              display_name: 'Rozdział 1: Programowanie Sterowane Zdarzeniami'
+              display_name: 'Rozdział 1: Programowanie sterowane zdarzeniami'
             csp5_2:
-              display_name: 'Rozdział 2: Programowanie ze Strukturami Danych'
+              display_name: 'Rozdział 2: Programowanie ze strukturami danych'
             cspSurvey:
               display_name: Ankieta
           lessons:
             Buttons and Events:
-              name: Przyciski i wydarzenia
+              name: Przyciski i zdarzenia
             Multi-screen Apps:
               name: Aplikacje wieloekranowe
             'Building an App: Multi-Screen App':
@@ -8369,7 +8371,7 @@ pl:
             Unit 5 Assessment 5 - AP Pseudocode Practice Questions:
               name: Część 5 Ocena 5 - Pytania dotyczące praktyki pseudokodu AP
             Participate in a longitudinal study!:
-              name: Udział w strategii badań podłużnych!
+              name: Weź udział w badaniu podłużnym!
             Mid-Year Survey:
               name: Badanie w trakcie roku
             CS Principles Post-Course Survey:
@@ -9581,14 +9583,14 @@ pl:
             cspSurvey:
               display_name: Ankieta
             csd1_1:
-              display_name: 'Rozdział 1: Proces Rozwiązywania Problemów'
+              display_name: 'Rozdział 1: Proces rozwiązywania problemów'
             csd1_2:
-              display_name: 'Rozdział 2: Komputery i Rozwiązywanie Problemów'
+              display_name: 'Rozdział 2: Komputery i rozwiązywanie problemów'
           lessons:
             CS Discoveries Pre-survey:
               name: Ankieta wstępna dotycząca "Odkryć informatyki" 
             Intro to Problem Solving:
-              name: Wstęp do rozwiązywania problemów
+              name: Wprowadzenie do rozwiązywania problemów
               description_student: 'Klasa pracuje w grupach projektując łódki z folii aluminiotej tak, aby utrzymały jak najwięcej drobnych monet. Pod koniec lekcji grupy zastanowią się nad doświadczeniami zebranymi w trakcie zajęć oraz dokonają powiązań z rodzajami rozwiązań problemów, którymi będą się zajmować do końca kursu.'
               description_teacher: Na tej lekcji uczniowie pracują w grupach projektując łódki z folii aluminiowej tak, aby utrzymały jak najwięcej drobnych monet. Grupy odbywają dwie rundy prac nad łódkami, a celem jest próba utrzymania większej liczby drobnych monet niż w rundzie 1. Konstrukcja zajęć zapowiada różne działania w procesie rozwiązywania problemu, do których uczniowie zostaną wprowadzeni w stopniu bardziej szczegółowym na kolejnej lekcji. Pod koniec lekcji grupy zastanowią się nad doświadczeniami zebranymi w trakcie zajęć oraz dokonają powiązań z rodzajami rozwiązań problemów, którymi będą się zajmować do końca kursu.
             The Problem Solving Process:
@@ -10586,7 +10588,7 @@ pl:
             Creating Functions:
               name: Tworzenie Funkcji
             Functions and Top-Down Design:
-              name: Funkcje oraz projekt od góry do dołu
+              name: Funkcje oraz projektowanie zstępujące
             APIs and Function Parameters:
               name: API i parametry funkcji
             Creating functions with Parameters:
@@ -10594,7 +10596,7 @@ pl:
             Looping and Random Numbers:
               name: Zapętlanie i losowe liczby
             Practice PT - Design a Digital Scene:
-              name: Praktyka PT - Projekt sceny cyfrotej
+              name: Praktyka PT - Projekt sceny cyfrowej
             Unit 3 Chapter 1 Assessment:
               name: Jednostka 3 Rozdział 1 - Sprawdzian
             Mid-Year Survey:
@@ -10630,7 +10632,7 @@ pl:
             Encryption with Keys and Passwords:
               name: Szyfrowanie przy pomocy kluczy i haseł
             Public Key Crypto:
-              name: Klucz publiczny Crypto
+              name: Kryptografia z kluczem publicznym
             Rapid Research - Cybercrime:
               name: Szybkie badania - Cyberprzestępczość
             Unit 4 Assessment:
@@ -10647,14 +10649,14 @@ pl:
           description_short: Kontynuuj poznawanie fundamentalnych koncepcji programowania komputerowego w JavaScript poprzez tworzenie bogatych, interaktywnych aplikacji.
           lesson_groups:
             csp5_1:
-              display_name: 'Rozdział 1: Programowanie Sterowane Zdarzeniami'
+              display_name: 'Rozdział 1: Programowanie sterowane zdarzeniami'
             csp5_2:
-              display_name: 'Rozdział 2: Programowanie ze Strukturami Danych'
+              display_name: 'Rozdział 2: Programowanie ze strukturami danych'
             cspSurvey:
               display_name: Ankieta
           lessons:
             Buttons and Events:
-              name: Przyciski i wydarzenia
+              name: Przyciski i zdarzenia
             Multi-screen Apps:
               name: Aplikacje wieloekranowe
             'Building an App: Multi-Screen App':
@@ -10716,7 +10718,7 @@ pl:
             Explore PT - Making a Plan:
               name: Eksploruj PT - Sporządzanie planu
             Explore PT - Complete the Task:
-              name: Eksploruj PT - Wykonaj zadanie
+              name: Zbadaj PT - Wykonaj zadanie
             Mid-Year Survey:
               name: Badanie w trakcie roku
             CS Principles Post Course survey:
@@ -11811,14 +11813,14 @@ pl:
             cspSurvey:
               display_name: Ankieta
             csd1_1:
-              display_name: 'Rozdział 1: Proces Rozwiązywania Problemów'
+              display_name: 'Rozdział 1: Proces rozwiązywania problemów'
             csd1_2:
-              display_name: 'Rozdział 2: Komputery i Rozwiązywanie Problemów'
+              display_name: 'Rozdział 2: Komputery i rozwiązywanie problemów'
           lessons:
             CS Discoveries Pre-survey:
               name: Ankieta wstępna dotycząca "Odkryć informatyki" 
             Intro to Problem Solving:
-              name: Wstęp do rozwiązywania problemów
+              name: Wprowadzenie do rozwiązywania problemów
               description_student: 'Klasa pracuje w grupach projektując łódki z folii aluminiotej tak, aby utrzymały jak najwięcej drobnych monet. Pod koniec lekcji grupy zastanowią się nad doświadczeniami zebranymi w trakcie zajęć oraz dokonają powiązań z rodzajami rozwiązań problemów, którymi będą się zajmować do końca kursu.'
               description_teacher: Na tej lekcji uczniowie pracują w grupach projektując łódki z folii aluminiowej tak, aby utrzymały jak najwięcej drobnych monet. Grupy odbywają dwie rundy prac nad łódkami, a celem jest próba utrzymania większej liczby drobnych monet niż w rundzie 1. Konstrukcja zajęć zapowiada różne działania w procesie rozwiązywania problemu, do których uczniowie zostaną wprowadzeni w stopniu bardziej szczegółowym na kolejnej lekcji. Pod koniec lekcji grupy zastanowią się nad doświadczeniami zebranymi w trakcie zajęć oraz dokonają powiązań z rodzajami rozwiązań problemów, którymi będą się zajmować do końca kursu.
             The Problem Solving Process:
@@ -12390,7 +12392,7 @@ pl:
           title: Informatyka i rozwiązywanie problemów
           lesson_groups:
             csd1_2:
-              display_name: 'Rozdział 2: Komputery i Rozwiązywanie Problemów'
+              display_name: 'Rozdział 2: Komputery i rozwiązywanie problemów'
           lessons:
             What is a Computer?:
               name: Czym jest komputer?
@@ -12839,13 +12841,13 @@ pl:
             Python Problem- Current Solutions:
               name: Problem z pytonem - Aktualne rozwiązania
             End of Course Project (integrated- project planning lesson):
-              name: Koniec projektu kursu (lekcja zintegrowanego planowania projektu)
+              name: Koniec projektu kursu (zintegrowana lekcja planowania projektu)
             Debate- Pythons impacting native populations:
               name: Debata - Pytony mające wpływ na miejscowe populacje
             Work on Project:
               name: Praca nad projektem
         time4cs-control-unit-1:
-          title: Dział kontrolny 1 Time 4CS
+          title: Time 4CS Jednostka kontrolna 1
           lesson_groups:
             csf_sequencing:
               display_name: Sekwencjonowanie
@@ -12887,7 +12889,7 @@ pl:
             Conditionals Review:
               name: Weryfikacja instrukcji warunkowych
         time4cs-experiment-unit-1:
-          title: Eksperymentalny dział 1 Time 4CS
+          title: Time 4CS Eksperymentalna Jednostka 1 
           lesson_groups:
             csf_sequencing:
               display_name: Sekwencjonowanie
@@ -12929,7 +12931,7 @@ pl:
             Conditionals Review:
               name: Weryfikacja instrukcji warunkowych
         csp7-pilot:
-          title: 'Dział 7 CSP wersja pilotażowa: Parametry, zwrot i biblioteki'
+          title: 'CSP Jednostka 7 Pilotaż: Parametry, zwracanie i biblioteki'
           lesson_groups:
             csp_parameters_return_values:
               display_name: Parametry i wartości zwracane
@@ -12941,19 +12943,19 @@ pl:
               display_name: Etapy opcjonalne
           lessons:
             Parameters and Returns Explore:
-              name: Eksploruj parametry i wartości zwrotne
+              name: Odkrywaj parametry i zwracanie wartości
             Parameters and Returns Investigate:
-              name: Badaj parametry i wartości zwrotne
+              name: Badaj parametry i zwracanie wartości
             Parameters and Returns Practice:
-              name: Praktyka - parametry i wartości zwrotne
+              name: Praktyka - parametry i zwracanie wartości
             Parameters and Returns Make:
-              name: Twórz parametry i wartości zwrotne
+              name: Twórz parametry i wartości zwracane
             Libraries Explore:
               name: Eksploruj biblioteki
             Libraries Investigate:
               name: Badaj biblioteki
             Libraries Practice:
-              name: Praktyka - Biblioteki
+              name: Praktyka bibliotek
             Libraries Make:
               name: Twórz biblioteki
             Project - Libraries Part 1:
@@ -12963,15 +12965,15 @@ pl:
             Project - Libraries Part 3:
               name: Projekt - Biblioteki Część 3
             Assessment Day:
-              name: Dzień oceny
+              name: Dzień sprawdzianu
             Parameters and Return Explore:
-              name: Eksploruj parametry i wartości zwrotne
+              name: Odkrywaj parametry i zwracanie wartości
             Parameters and Return Investigate:
-              name: Badaj parametry i wartości zwrotne
+              name: Badaj parametry i zwracanie wartości
             Parameters and Return Practice:
-              name: Praktyka - parametry i wartości zwrotne
+              name: Praktyka - parametry i zwracanie wartości
             Parameters and Return Make:
-              name: Twórz parametry i wartości zwrotne
+              name: Twórz parametry i wartości zwracane
             Libraries Make Part 1:
               name: Twórz biblioteki - Część 1
             Libraries Make Part  2:
@@ -13107,19 +13109,19 @@ pl:
               display_name: Biblioteki
           lessons:
             Parameters and Return Explore:
-              name: Eksploruj parametry i wartości zwrotne
+              name: Odkrywaj parametry i zwracanie wartości
             Parameters and Return Investigate:
-              name: Badaj parametry i wartości zwrotne
+              name: Badaj parametry i zwracanie wartości
             Parameters and Return Practice:
-              name: Praktyka - parametry i wartości zwrotne
+              name: Praktyka - parametry i zwracanie wartości
             Parameters and Return Make:
-              name: Twórz parametry i wartości zwrotne
+              name: Twórz parametry i wartości zwracane
             Libraries Explore:
               name: Eksploruj biblioteki
             Libraries Investigate:
               name: Badaj biblioteki
             Libraries Practice:
-              name: Praktyka - Biblioteki
+              name: Praktyka bibliotek
             Project - Make a Library Part 1:
               name: Projekt - Utwórz bibliotekę Część 1
             Project - Make a Library Part 2:
@@ -13127,7 +13129,7 @@ pl:
             Project - Make a Library Part 3:
               name: Projekt - Utwórz bibliotekę Część 3
             Assessment Day:
-              name: Dzień oceny
+              name: Dzień sprawdzianu
             Unit 7 STUDENT Survey:
               name: Jednostka 7 Ankieta dla UCZNIA
             Unit 7 TEACHER Survey:
@@ -13297,16 +13299,16 @@ pl:
             cspSurvey:
               display_name: Ankieta
             csd1_1:
-              display_name: 'Rozdział 1: Proces Rozwiązywania Problemów'
+              display_name: 'Rozdział 1: Proces rozwiązywania problemów'
             csd1_2:
-              display_name: 'Rozdział 2: Komputery i Rozwiązywanie Problemów'
+              display_name: 'Rozdział 2: Komputery i rozwiązywanie problemów'
             csd1_3:
               display_name: Lekcje alternatywne
           lessons:
             CS Discoveries Pre-survey:
               name: Ankieta wstępna dotycząca "Odkryć informatyki" 
             Intro to Problem Solving:
-              name: Wstęp do rozwiązywania problemów
+              name: Wprowadzenie do rozwiązywania problemów
               description_student: "**Pytanie dnia: Co może nam pomóc we wspólnej pracy i rozwiązywaniu problemów jako zespół?**\\r\n\\r\nKlasa pracuje w grupach projektując łódki z folii aluminiotej tak, aby utrzymały jak najwięcej drobnych monet. Pod koniec lekcji grupy zastanowią się nad doświadczeniami zebranymi w trakcie zajęć oraz dokonają powiązań z rodzajami rozwiązań problemów, którymi będą się zajmować do końca kursu."
               description_teacher: "**Pytanie dnia: Co może nam pomóc we wspólnej pracy i rozwiązywaniu problemów jako zespół?**\\r\n\\r\nNa tej lekcji uczniowie pracują w grupach projektując łódki z folii aluminiotej tak, aby utrzymały jak najwięcej drobnych monet. Grupy odbywają dwie rundy prac nad łódkami, a celem jest próba utrzymania większej liczby drobnych monet niż w rundzie 1. Konstrukcja zajęć zapowiada różne działania w procesie rozwiązywania problemu, do których uczniowie zostaną wprowadzeni w stopniu bardziej szczegółowym na kolejnej lekcji. Pod koniec lekcji grupy zastanowią się nad doświadczeniami zebranymi w trakcie zajęć oraz dokonają powiązań z rodzajami rozwiązań problemów, którymi będą się zajmować do końca kursu.\n\n\\r\n\\r\n**Dostępne są również alternatywne wersje tej lekcji.** \\r\n\\r\n* [Stół prasowy](./4/)\\r\n* [Most z makaronu](./5/)\\r\n* [Wieża z papieru](./6/)\n"
             The Problem Solving Process:
@@ -13767,7 +13769,7 @@ pl:
             'Mini-Project: Platform Jumper':
               name: 'Mini-projekt: Skoczek na platformie'
             'Mini-Project: Flyer Game':
-              name: 'Mini-projekt: Gra typu "Flyer"'
+              name: 'Mini-projekt: Gra typu Flyer'
               description_student: "**Pytanie dnia: W jaki sposób można wykorzystywać nowe rodzaje kolizji i modelowania ruchu do tworzenia gry?**\\r\n\\r\nKlasa wykorzystuje to, czego się nauczyła na temat symulowania grawitacji i różnych rodzajów kolizji w celu tworzenia prostych gier typu \"Flyer\". Po przyjrzeniu się przykładotej grze typu \"Flyyer\", uczniowie przeprowadzają burzę mózgów w sprawie tego, jakiego typu \"Flyer\" chcieliby mieć, a następnie wykorzystują uporządkowany proces do zaprogramowania gry w \"Studiu kodowania\"."
               description_teacher: "**Pytanie dnia: W jaki sposób można wykorzystywać nowe rodzaje kolizji i modelowania ruchu do tworzenia gry?**\\r\n\\r\nUczniowie wykorzystują to,  czego się nauczyli na temat symulowania grawitacji i różnych rodzajów kolizji w celu tworzenia prostych gier typu \"Flyer\". Po przyjrzeniu się przykładotej grze typu \"Flyyer\", uczniowie przeprowadzają burzę mózgów w sprawie tego, jakiego typu gry \"Flyer\" chcieliby mieć, a następnie wykorzystują uporządkowany proces do zaprogramowania gry w \"Studiu kodowania\"."
         coursea-2020:
@@ -14009,7 +14011,7 @@ pl:
               description_teacher: 'W trakcie tej lekcji podsumowującej uczniowie przechodzą proces projektowania, tworzenia i przedstawiania swoich własnych projektów Play Lab! W celu uzyskania pewności, że proces toczy się gładko, zapewniliśmy strukturę krok-po-kroku do wykorzystania przez uczniów, od planowania na papierze po kodowanie na swojej stronie internetowej. W dodatku podsuwamy pomysły, które mają pomóc nauczycielom w doprowadzeniu do wzorcowego finału!'
             Putting a STOP to Online Meanness:
               name: Stawianie STOP świństwom online
-              description_student: Na tej lekcji dowiesz się czym jest złośliwość oraz co robić, jeśli spotka Cię ona w Internecie.
+              description_student: Na tej lekcji dowiesz się, czym jest złośliwość oraz co robić, jeśli spotka Cię ona w Internecie.
               description_teacher: |-
                 <img alt="" src="https://curriculum.code.org/media/uploads/CommonSenseEducationShort400px.png" style="padding: 10px 0;">
 
@@ -14384,7 +14386,7 @@ pl:
             Nested Loops in Frozen:
               name: Zagnieżdżone pętle w interfejsie Frozen
             'Concept Practice with Minecraft ':
-              name: 'Ćwiczenie koncepcji z Minecraftem'
+              name: 'Ćwiczenie pomysłów z Minecraftem'
             Conditionals in Bee:
               name: Wyrażenie warunkowe z Pszczółką
             While Loops in Farmer:
@@ -14722,14 +14724,14 @@ pl:
             'Lesson 14: Unit Assessment Day':
               name: 'Lekcja 14: Dzień oceny części'
         csp-march-virtual:
-          title: Zasady informatyki 20-21 Szkolenie z programu dla prowadzących
+          title: Zasady informatyki 20-21 Szkolenie dotyczące programu nauczania dla prowadzących
           lessons:
             Kick-off:
               name: Rozpoczęcie
             Changes:
               name: Zmiany
             Curriculum Investigations:
-              name: Badania programu
+              name: Analizowanie programu nauczania
             Wrap up:
               name: Podsumowanie
             new stage:
@@ -14747,11 +14749,11 @@ pl:
             Comparing Make Lessons:
               name: Porównywanie tworzenia lekcji
             Prework and Saturday Session Resources:
-              name: Zasoby na czas przed rozpoczęciem pracy i sesję sobotnią
+              name: Zasoby na czas przed rozpoczęciem pracy i na sobotnią sesję
             Saturday Session Resources:
               name: Zasoby na sobotnią sesję 
         csp3-virtual:
-          title: Wprowadzenie do "Programowania żółwi" w App Lab we własnym tempie
+          title: Wprowadzenie we własnym tempie do Programowania żółwia w App Lab
           description_short: Programowanie
           lesson_groups:
             csp3_1_2018:
@@ -14768,7 +14770,7 @@ pl:
             Creating Functions:
               name: Tworzenie Funkcji
             Functions and Top-Down Design:
-              name: Funkcje oraz projekt od góry do dołu
+              name: Funkcje oraz projektowanie zstępujące
             APIs and Function Parameters:
               name: API i parametry funkcji
             Creating functions with Parameters:
@@ -14776,7 +14778,7 @@ pl:
             Looping and Random Numbers:
               name: Zapętlanie i losowe liczby
             Practice PT - Design a Digital Scene:
-              name: Praktyka PT - Projekt sceny cyfrotej
+              name: Praktyka PT - Projekt sceny cyfrowej
             Unit 3 Chapter 1 Assessment:
               name: Jednostka 3 Rozdział 1 - Sprawdzian
             CS Principles Post Course survey:
@@ -14793,7 +14795,7 @@ pl:
             newer stage:
               name: nowsza etap
             Welcome to CSD Virtual Professional Learning:
-              name: Witamy w "Wirtualnym profesjonalnym kształceniu w zakresie  w zakresie CSD"
+              name: Witamy w Wirtualnym profesjonalnym kształceniu w zakresie CSD
             Introduction to CSD:
               name: Wprowadzenie do CSD
             Tools:
@@ -14894,7 +14896,7 @@ pl:
           description_short: Poznaj fundamentalne pojęcia programowania komputerów w JavaScript poprzez tworzenie bogatych, interaktywnych aplikacji.
           lessons:
             Buttons and Events:
-              name: Przyciski i wydarzenia
+              name: Przyciski i zdarzenia
             Multi-screen Apps:
               name: Aplikacje wieloekranowe
             'Building an App: Multi-Screen App':
@@ -15087,7 +15089,7 @@ pl:
             Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia Mineya:
               name: Sprzęt z Aloe Blacc, Bretem Taylorem i Paolą Mejią Minaya
         code-break-younger-staging:
-          title: Młodsza podział na etapy Code Break
+          title: Podział młodszych na etapy w Code Break
           lessons:
             Episode 1 - Algorithms with Hill Harper:
               name: 'Odcinek 1: Algorytmy z Hill Harper'
@@ -15163,9 +15165,9 @@ pl:
           description: Ten rozdział wprowadza koncepcje fundamentalne programowania komputerowego, co odblokowuje możliwość tworzenia bogatych, interaktywnych aplikacji. W tym kursie używa się JavaScript jako języka oprogramowania oraz App Lab jako środowiska programowania do budowania aplikacji, ale koncepcje poznane w ramach tych lekcji obejmują wszystkie języki i narzędzia programowania. 
           lesson_groups:
             csp5_1:
-              display_name: 'Rozdział 1: Programowanie Sterowane Zdarzeniami'
+              display_name: 'Rozdział 1: Programowanie sterowane zdarzeniami'
             csp5_2:
-              display_name: 'Rozdział 2: Programowanie ze Strukturami Danych'
+              display_name: 'Rozdział 2: Programowanie ze strukturami danych'
           lessons:
             Unit 5 Assessment 2:
               name: Jednostka 5 Sprawdzian 2
@@ -15243,7 +15245,7 @@ pl:
             CS Principles Pre-survey:
               name: Ankieta wstępna dotyczące zasad informatyki 
             Buttons and Events:
-              name: Przyciski i wydarzenia
+              name: Przyciski i zdarzenia
           lesson_groups:
             lesson group:
               display_name: wyświetl nazwisko
@@ -15252,7 +15254,7 @@ pl:
             cspSurvey:
               display_name: Ankieta
             csp5_1:
-              display_name: 'Rozdział 1: Programowanie Sterowane Zdarzeniami'
+              display_name: 'Rozdział 1: Programowanie sterowane zdarzeniami'
             cs_lg:
               display_name: LG GOOD
         csd3-virtual:
@@ -15349,7 +15351,7 @@ pl:
               description_student: "**Pytanie dnia: W jaki sposób programiści budują coś z z abstrakcji tak, aby tworzyć dalsze abstrakcje?**\\r\n\\r\nNa tej lekcji klasa programuje swoje duszki tak, aby wchodziły w interakcję na nowe sposoby. Po krótkiej powtórce poświęconej sposobowi użycia bloku \"dotykają się\", uczniowie przeprowadzają burzę mózgów na temat innych sposobów, w jakie dwa duszki mogą tejść ze sobą w interakcję. Korzystają z \"Dotykają się\", aby sprawić, by jeden duszek popchnął drugiego przepychając go przez cały ekran zanim zaczną ćwiczenia z użyciem czterech bloków kolizji ('kolizja', 'przemieszczenie', 'podskok' i 'odskok`)."
               description_teacher: "**Pytanie dnia: W jaki sposób programiści budują coś z z abstrakcji tak, aby tworzyć dalsze abstrakcje?**\\r\n\\r\nNa tej lekcji uczniowie programują programuje swoje duszki tak, aby wchodziły w interakcję na nowe sposoby. Po krótkiej powtórce poświęconej sposobowi użycia bloku \"dotykają się\", uczniowie przeprowadzają burzę mózgów na temat innych sposobów, w jakie dwa duszki mogą tejść ze sobą w interakcję. Korzystają z \"Dotykają się\", aby sprawić, by jeden duszek popchnął drugiego przepychając go przez cały ekran zanim zaczną ćwiczenia z użyciem czterech bloków kolizji ('kolizja', 'przemieszczenie', 'podskok' i 'odskok`)."
             'Mini-Project: Flyer Game':
-              name: 'Mini-projekt: Gra typu "Flyer"'
+              name: 'Mini-projekt: Gra typu Flyer'
               description_student: "**Pytanie dnia: W jaki sposób można wykorzystywać nowe rodzaje kolizji i modelowania ruchu do tworzenia gry?**\\r\n\\r\nKlasa wykorzystuje to, czego się nauczyła na temat symulowania grawitacji i różnych rodzajów kolizji w celu tworzenia prostych gier typu \"Flyer\". Po przyjrzeniu się przykładotej grze typu \"Flyyer\", uczniowie przeprowadzają burzę mózgów w sprawie tego, jakiego typu \"Flyer\" chcieliby mieć, a następnie wykorzystują uporządkowany proces do zaprogramowania gry w \"Studiu kodowania\"."
               description_teacher: "**Pytanie dnia: W jaki sposób można wykorzystywać nowe rodzaje kolizji i modelowania ruchu do tworzenia gry?**\\r\n\\r\nUczniowie wykorzystują to,  czego się nauczyli na temat symulowania grawitacji i różnych rodzajów kolizji w celu tworzenia prostych gier typu \"Flyer\". Po przyjrzeniu się przykładotej grze typu \"Flyyer\", uczniowie przeprowadzają burzę mózgów w sprawie tego, jakiego typu gry \"Flyer\" chcieliby mieć, a następnie wykorzystują uporządkowany proces do zaprogramowania gry w \"Studiu kodowania\"."
             Functions:

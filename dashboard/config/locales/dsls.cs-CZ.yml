@@ -2327,39 +2327,43 @@ cs-CZ:
       courseE_multi_farmer_functions11_predict:
         answers:
         - text: Zahradnice posbírá dvě dýně.
-        - {}
-        - {}
-        - correct: true
+        - text: Farmářka sesbírá všechny dýně.
+        - text: Farmářka sklidí salát.
+        - text: Farmářka sklidí kukuřici.
+          correct: true
           feedback: Správně!
         questions:
-        - {}
+        - text: Podívej se na níže definované funkce. Co farmářka sesbírá?
       courseE_multi_farmer_functions11_predict_2018:
         answers:
         - text: Zahradnice posbírá dvě dýně.
-        - {}
-        - correct: true
+        - text: Farmářka sesbírá všechny dýně.
+        - text: Farmářka sklidí salát.
+          correct: true
           feedback: Správně!
-        - {}
+        - text: Farmářka sklidí kukuřici.
         questions:
-        - {}
+        - text: Podívej se na níže definované funkce. Co farmářka sesbírá?
       courseE_multi_farmer_functions11_predict_2018_2019:
         answers:
         - text: Zahradnice posbírá dvě dýně.
-        - {}
-        - correct: true
+        - text: Farmářka sesbírá všechny dýně.
+        - text: Farmářka sklidí salát.
+          correct: true
           feedback: Správně!
-        - {}
+        - text: Farmářka sklidí kukuřici.
         questions:
-        - {}
+        - text: Podívej se na níže definované funkce. Co farmářka sesbírá?
       courseE_multi_farmer_functions11_predict_2018_2019_2020:
         answers:
         - text: Zahradnice posbírá dvě dýně.
-        - {}
-        - correct: true
+        - text: Farmářka sesbírá všechny dýně.
+        - text: Farmářka sklidí salát.
+          correct: true
           feedback: Správně!
-        - {}
+        - text: Farmářka sklidí kukuřici.
         questions:
-        - {}
+        - text: Podívej se na níže definované funkce. Co farmářka sesbírá?
       courseE_prediction_artistFunction1:
         answers:
         - {}
@@ -2722,3 +2726,5 @@ cs-CZ:
           obrázků, uvidíš je všechny pokaždé, když nahraješ soubor a můžeš používat
           *jakýkoliv* soubor, který jsi už nahrál.\n\n![](https://images.code.org/d64d7e3dadc882897e450b00a0fc6cb2-image-1476896824985.gif)\n\n###
           Klikni na Pokračovat a vyzkoušej si to!"
+      CSD User Centered Design Post-Project Test:
+        title: 'Design zaměřený na uživatele: Test po projektu'

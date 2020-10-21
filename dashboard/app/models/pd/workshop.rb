@@ -797,7 +797,7 @@ class Pd::Workshop < ActiveRecord::Base
 
   # whether we will show the scholarship dropdown
   def scholarship_workshop?
-    csf? || local_summer?
+    csf? || local_summer? || ACADEMIC_YEAR_WORKSHOP_SUBJECTS.include?(subject)
   end
 
   def pre_survey?

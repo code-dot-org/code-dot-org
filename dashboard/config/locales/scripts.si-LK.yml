@@ -9,6 +9,7 @@ si:
         csp17_category_name: "'16-'17 පරිගණක විද්‍යාවේ මූලිකාංග"
         hoc_category_name: Hour of Code
         math_category_name: ගණිත
+        other_category_name: වෙනත්
       name:
         course1:
           title: පාඨමාලා අංක 1
