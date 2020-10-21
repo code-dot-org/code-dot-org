@@ -146,6 +146,7 @@ export default class ObjectivesEditor extends Component {
                           }
                         }}
                         style={{width: '98%'}}
+                        type="text"
                       />
                     ) : (
                       <div>{objective.description}</div>
