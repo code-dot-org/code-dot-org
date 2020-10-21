@@ -89,7 +89,7 @@ class ActivitySectionCard extends Component {
     activitySectionsCount: PropTypes.number,
     activitiesCount: PropTypes.number,
     activitySectionMetrics: PropTypes.array,
-    setTargetActivitySection: PropTypes.func,
+    updateTargetActivitySection: PropTypes.func,
     targetActivitySectionPos: PropTypes.number,
     updateActivitySectionMetrics: PropTypes.func,
 
@@ -171,25 +171,7 @@ class ActivitySectionCard extends Component {
       }
     );
     this.setState({currentPositions, newPosition});
-    const targetActivitySectionPos = this.getTargetActivitySection(clientY);
-    this.props.setTargetActivitySection(targetActivitySectionPos);
-  };
-
-  // Given a clientY value of a location on the screen, find the ActivitySectionCard
-  // corresponding to that location, and return the position of the
-  // corresponding activity section within the script.
-  getTargetActivitySection = y => {
-    const {activitySectionMetrics} = this.props;
-    const activitySectionPos = Object.keys(activitySectionMetrics).find(
-      activitySectionPos => {
-        const activitySectionRect = activitySectionMetrics[activitySectionPos];
-        return (
-          y > activitySectionRect.top &&
-          y < activitySectionRect.top + activitySectionRect.height
-        );
-      }
-    );
-    return activitySectionPos ? Number(activitySectionPos) : null;
+    this.props.updateTargetActivitySection(clientY);
   };
 
   handleDragStop = () => {
@@ -217,7 +199,9 @@ class ActivitySectionCard extends Component {
         targetActivitySectionPos
       );
     }
-    this.props.setTargetActivitySection(null);
+
+    // shortcut to clear target activity section
+    this.props.updateTargetActivitySection(-1);
 
     this.setState({
       draggedLevelPos: null,
