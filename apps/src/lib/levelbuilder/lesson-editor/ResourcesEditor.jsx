@@ -108,7 +108,7 @@ export default class ResourcesEditor extends Component {
 
   addResource = resource => {
     var {resources} = this.state;
-    resources.push(resource);
+    resources = resources.concat([resource]);
     this.setState({resources});
   };
 
@@ -135,16 +135,6 @@ export default class ResourcesEditor extends Component {
           isOpen={this.state.newResourceDialogOpen}
           onSave={this.addResource}
           handleClose={this.handleNewResourceDialogClose}
-          typeOptions={[
-            'Activity Guide',
-            'Video',
-            'Resource',
-            'Handout',
-            'Answer Key',
-            'Rubric',
-            'Exemplar'
-          ]}
-          audienceOptions={['Teacher', 'Verified Teacher', 'Student']}
         />
         Resources
         <input
