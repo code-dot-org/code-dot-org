@@ -102,6 +102,26 @@ class ActivitiesEditor extends Component {
     });
   };
 
+  // Given a clientY value of a location on the screen, find the ActivitySectionCard
+  // corresponding to that location, and update targetActivitySectionPos to match.
+  updateTargetActivitySection = y => {
+    const activitySectionPos = Object.keys(this.activitySectionMetrics).find(
+      activitySectionPos => {
+        const activitySectionRect = this.activitySectionMetrics[
+          activitySectionPos
+        ];
+        return (
+          y > activitySectionRect.top &&
+          y < activitySectionRect.top + activitySectionRect.height
+        );
+      }
+    );
+    const targetActivitySectionPos = activitySectionPos
+      ? Number(activitySectionPos)
+      : null;
+    this.setTargetActivitySection(targetActivitySectionPos);
+  };
+
   // Serialize the activities into JSON, renaming any keys which are different
   // on the backend.
   serializeActivities = () => {
@@ -150,7 +170,7 @@ class ActivitiesEditor extends Component {
               activitiesCount={activities.length}
               key={activity.key}
               setActivitySectionRef={this.setActivitySectionRef}
-              setTargetActivitySection={this.setTargetActivitySection}
+              updateTargetActivitySection={this.updateTargetActivitySection}
               targetActivitySectionPos={this.state.targetActivitySectionPos}
               activitySectionMetrics={this.activitySectionMetrics}
               updateActivitySectionMetrics={this.updateActivitySectionMetrics}
