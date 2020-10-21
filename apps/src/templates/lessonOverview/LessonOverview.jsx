@@ -56,7 +56,8 @@ class LessonOverview extends Component {
       displayName: PropTypes.string.isRequired,
       overview: PropTypes.string.isRequired,
       purpose: PropTypes.string.isRequired,
-      preparation: PropTypes.string.isRequired
+      preparation: PropTypes.string.isRequired,
+      resources: PropTypes.arrayOf(PropTypes.object)
     }).isRequired,
     activities: PropTypes.array,
 
@@ -115,6 +116,16 @@ class LessonOverview extends Component {
           <div style={styles.right}>
             <h2>{i18n.preparation()}</h2>
             <SafeMarkdown markdown={lesson.preparation} />
+            {lesson.resources && (
+              <div>
+                <h2>{i18n.links()}</h2>
+                <ul>
+                  {lesson.resources.map(resource => (
+                    <li>{resource.name}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
           </div>
         </div>
 
