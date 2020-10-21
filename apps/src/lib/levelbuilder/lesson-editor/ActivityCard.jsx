@@ -190,7 +190,11 @@ class ActivityCard extends Component {
               activitySectionsCount={activity.activitySections.length}
               activitiesCount={this.props.activitiesCount}
               ref={ref => {
-                this.props.setActivitySectionRef(ref, section.position);
+                this.props.setActivitySectionRef(
+                  ref,
+                  activity.position,
+                  section.position
+                );
               }}
               activitySectionMetrics={this.props.activitySectionMetrics}
               updateTargetActivitySection={

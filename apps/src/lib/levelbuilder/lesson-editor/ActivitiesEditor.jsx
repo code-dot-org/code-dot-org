@@ -82,8 +82,9 @@ class ActivitiesEditor extends Component {
   // To be populated with the react ref of each ActivitySectionCard element.
   sectionRefs = [];
 
-  setActivitySectionRef = (sectionRef, sectionPos) => {
-    this.sectionRefs[sectionPos] = sectionRef;
+  setActivitySectionRef = (sectionRef, activityPos, sectionPos) => {
+    this.sectionRefs[activityPos] = this.sectionRefs[activityPos] || [];
+    this.sectionRefs[activityPos][sectionPos] = sectionRef;
   };
 
   // To be populated with the bounding client rect of each ActivitySectionCard element.
@@ -92,10 +93,14 @@ class ActivitiesEditor extends Component {
   // populate sectionMetrics from sectionRefs.
   updateActivitySectionMetrics = () => {
     this.sectionMetrics = [];
-    this.sectionRefs.forEach((ref, position) => {
-      const node = ReactDOM.findDOMNode(ref);
-      const rect = !!node && node.getBoundingClientRect();
-      this.sectionMetrics[position] = rect;
+    this.sectionRefs.forEach((sectionRefs, activityPos) => {
+      sectionRefs.forEach((ref, sectionPos) => {
+        const node = ReactDOM.findDOMNode(ref);
+        const rect = !!node && node.getBoundingClientRect();
+        this.sectionMetrics[activityPos] =
+          this.sectionMetrics[activityPos] || [];
+        this.sectionMetrics[activityPos][sectionPos] = rect;
+      });
     });
   };
 
@@ -103,12 +108,16 @@ class ActivitiesEditor extends Component {
   // and ActivitySectionCard corresponding to that location, and update
   // targetActivityPos and targetActivitySectionPos to match.
   updateTargetActivitySection = y => {
-    const sectionPos = Object.keys(this.sectionMetrics).find(sectionPos => {
-      const rect = this.sectionMetrics[sectionPos];
-      return y > rect.top && y < rect.top + rect.height;
+    this.sectionMetrics.forEach((sectionMetrics, activityPos) => {
+      sectionMetrics.forEach((rect, sectionPos) => {
+        if (y > rect.top && y < rect.top + rect.height) {
+          this.setState({
+            targetActivityPos: activityPos,
+            targetActivitySectionPos: sectionPos
+          });
+        }
+      });
     });
-    const targetActivitySectionPos = sectionPos ? Number(sectionPos) : null;
-    this.setState({targetActivitySectionPos});
   };
 
   // Serialize the activities into JSON, renaming any keys which are different
