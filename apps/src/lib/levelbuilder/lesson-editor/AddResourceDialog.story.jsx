@@ -8,9 +8,7 @@ const defaultProps = {
   isOpen: true,
   handleClose: () => {
     console.log('closed');
-  },
-  typeOptions: ['activity guide', 'video', 'resource', 'hand-out'],
-  audienceOptions: ['Student', 'Teacher', 'Verified Teacher']
+  }
 };
 
 export default storybook => {

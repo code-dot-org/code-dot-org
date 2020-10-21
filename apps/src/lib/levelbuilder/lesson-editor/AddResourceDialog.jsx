@@ -55,15 +55,25 @@ const styles = {
   }
 };
 
+const TYPE_OPTIONS = [
+  'Activity Guide',
+  'Answer Key',
+  'Exemplar',
+  'Handout',
+  'Resource',
+  'Rubric',
+  'Video'
+];
+
+const AUDIENCE_OPTIONS = ['Student', 'Teacher', 'Verified Teacher'];
+
 // TODO: Hook up adding a resource when resources are associated with lessons
 
 export default class AddResourceDialog extends Component {
   static propTypes = {
     isOpen: PropTypes.bool.isRequired,
     onSave: PropTypes.func,
-    handleClose: PropTypes.func.isRequired,
-    typeOptions: PropTypes.arrayOf(PropTypes.string),
-    audienceOptions: PropTypes.arrayOf(PropTypes.string)
+    handleClose: PropTypes.func.isRequired
   };
 
   constructor(props) {
@@ -180,7 +190,7 @@ export default class AddResourceDialog extends Component {
                   value={this.state.type}
                 >
                   <option value={''}>{''}</option>
-                  {(this.props.typeOptions || []).map(option => (
+                  {TYPE_OPTIONS.map(option => (
                     <option value={option} key={option}>
                       {option}
                     </option>
@@ -196,7 +206,7 @@ export default class AddResourceDialog extends Component {
                   onChange={this.handleInputChange}
                 >
                   <option value={''}>{''}</option>
-                  {(this.props.audienceOptions || []).map(option => (
+                  {AUDIENCE_OPTIONS.map(option => (
                     <option value={option} key={option}>
                       {option}
                     </option>
