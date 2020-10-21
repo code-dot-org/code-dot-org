@@ -28,7 +28,8 @@ class LessonsController < ApplicationController
       overview: @lesson.overview || '',
       announcements: @lesson.announcements,
       purpose: @lesson.purpose || '',
-      preparation: @lesson.preparation || ''
+      preparation: @lesson.preparation || '',
+      activities: @lesson.lesson_activities.map(&:summarize_for_lesson_show)
     }
   end
 
@@ -36,6 +37,7 @@ class LessonsController < ApplicationController
   def edit
     @lesson_data = @lesson.summarize_for_lesson_edit
     @related_lessons = @lesson.summarize_related_lessons
+    view_options(full_width: true)
   end
 
   # PATCH/PUT /lessons/1
