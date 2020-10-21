@@ -424,12 +424,19 @@ class Lesson < ActiveRecord::Base
   def update_objectives(objectives)
     return unless objectives
 
-    self.objectives = objectives.map do |objective|
+    previous_objectives = self.objectives
+
+    new_objectives = objectives.map do |objective|
       persisted_objective = objective['id'].blank? ? Objective.new : Objective.find(objective['id'])
       persisted_objective.description = objective['description']
       persisted_objective.save!
       persisted_objective
     end
+
+    # As each objective can only be associated with one lesson, destory
+    # any removed objectives
+    (previous_objectives - new_objectives).each(&:destroy!)
+    self.objectives = new_objectives
   end
 
   # Used for seeding from JSON. Returns the full set of information needed to uniquely identify this object.
