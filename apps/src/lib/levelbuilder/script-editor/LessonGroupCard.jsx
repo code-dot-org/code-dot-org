@@ -255,7 +255,7 @@ class LessonGroupCard extends Component {
   handleChangeLessonGroupName = event => {
     this.props.updateLessonGroupField(
       this.props.lessonGroup.position,
-      'name',
+      'displayName',
       event.target.value
     );
   };
@@ -272,53 +272,49 @@ class LessonGroupCard extends Component {
             : styles.lessonGroupCard
         }
       >
-        <div style={styles.lessonGroupCardHeader}>
-          {lessonGroup.userFacing && (
-            <span>
+        {lessonGroup.userFacing && (
+          <div>
+            <div style={styles.lessonGroupCardHeader}>
               <span style={styles.title}>Lesson Group Name:</span>
               <input
                 value={this.props.lessonGroup.displayName}
                 onChange={this.handleChangeLessonGroupName}
                 style={{width: 300}}
               />
-            </span>
-          )}
-          {lessonGroup.userFacing && (
-            <OrderControls
-              name={lessonGroup.key || '(none)'}
-              move={this.handleMoveLessonGroup}
-              remove={this.handleRemoveLessonGroup}
-            />
-          )}
-        </div>
-        {lessonGroup.userFacing && (
-          <div>
-            <label>
-              Description
-              <textarea
-                value={this.props.lessonGroup.description}
-                rows={Math.max(
-                  this.props.lessonGroup.description.split(/\r\n|\r|\n/)
-                    .length + 1,
-                  2
-                )}
-                style={styles.input}
-                onChange={this.handleChangeDescription}
+              <OrderControls
+                name={lessonGroup.key || '(none)'}
+                move={this.handleMoveLessonGroup}
+                remove={this.handleRemoveLessonGroup}
               />
-            </label>
-            <label>
-              Big Questions
-              <textarea
-                value={this.props.lessonGroup.bigQuestions}
-                rows={Math.max(
-                  this.props.lessonGroup.bigQuestions.split(/\r\n|\r|\n/)
-                    .length + 1,
-                  2
-                )}
-                style={styles.input}
-                onChange={this.handleChangeBigQuestions}
-              />
-            </label>
+            </div>
+            <div>
+              <label>
+                Description
+                <textarea
+                  value={this.props.lessonGroup.description}
+                  rows={Math.max(
+                    this.props.lessonGroup.description.split(/\r\n|\r|\n/)
+                      .length + 1,
+                    2
+                  )}
+                  style={styles.input}
+                  onChange={this.handleChangeDescription}
+                />
+              </label>
+              <label>
+                Big Questions
+                <textarea
+                  value={this.props.lessonGroup.bigQuestions}
+                  rows={Math.max(
+                    this.props.lessonGroup.bigQuestions.split(/\r\n|\r|\n/)
+                      .length + 1,
+                    2
+                  )}
+                  style={styles.input}
+                  onChange={this.handleChangeBigQuestions}
+                />
+              </label>
+            </div>
           </div>
         )}
         {lessonGroup.lessons.map(lesson => (
