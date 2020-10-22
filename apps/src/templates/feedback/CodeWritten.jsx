@@ -52,6 +52,8 @@ class CodeWritten extends React.Component {
     );
 
     let totalLines;
+    // Don't display totalLinesWritten the first time a user writes code. Only
+    // display it when the user has a total greater than the their current attempt.
     if (totalNumLinesWritten && totalNumLinesWritten !== numLinesWritten) {
       totalLines = (
         <p
