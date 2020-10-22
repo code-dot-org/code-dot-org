@@ -317,8 +317,11 @@ class LevelsController < ApplicationController
     rescue ActiveRecord::RecordInvalid => invalid
       render(status: :not_acceptable, text: invalid) && return
     end
-
-    render json: {redirect: edit_level_path(@level)}
+    if params[:do_not_redirect]
+      render json: @level
+    else
+      render json: {redirect: edit_level_path(@level)}
+    end
   end
 
   # DELETE /levels/1
@@ -373,7 +376,12 @@ class LevelsController < ApplicationController
     new_name = params.require(:name)
     editor_experiment = Experiment.get_editor_experiment(current_user)
     @new_level = @level.clone_with_name(new_name, editor_experiment: editor_experiment)
-    render json: {redirect: edit_level_url(@new_level)}
+
+    if params[:do_not_redirect]
+      render json: @new_level
+    else
+      render json: {redirect: edit_level_url(@new_level)}
+    end
   rescue ArgumentError => e
     render(status: :not_acceptable, text: e.message)
   rescue ActiveRecord::RecordInvalid => invalid

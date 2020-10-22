@@ -54,8 +54,9 @@ describe('AddLevelTable', () => {
     expect(wrapper.contains('Type')).to.be.true;
     expect(wrapper.contains('Owner')).to.be.true;
     expect(wrapper.contains('Last Updated')).to.be.true;
-    expect(wrapper.find('button').length).to.equal(8); // 2 buttons for each level
-    expect(wrapper.find('tr').length).to.equal(5); // 1 for the headers and 1 for each level
+
     expect(wrapper.find('PaginationWrapper').length).to.equal(1);
+    expect(wrapper.find('tr').length).to.equal(1);
+    expect(wrapper.find('AddLevelTableRow').length).to.equal(4);
   });
 });

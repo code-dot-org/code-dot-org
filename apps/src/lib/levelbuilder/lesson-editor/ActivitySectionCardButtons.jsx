@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import AddLevelDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/AddLevelDialog';
 import LessonTipIconWithTooltip from '@cdo/apps/lib/levelbuilder/lesson-editor/LessonTipIconWithTooltip';
-import AddResourceDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/AddResourceDialog';
+import FindResourceDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/FindResourceDialog';
 import EditTipDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/EditTipDialog';
 import {activitySectionShape} from '@cdo/apps/lib/levelbuilder/shapes';
 import {connect} from 'react-redux';
@@ -165,7 +165,7 @@ class ActivitySectionCardButtons extends Component {
             </span>
           )}
         </div>
-        <AddResourceDialog
+        <FindResourceDialog
           isOpen={this.state.addResourceOpen}
           handleConfirm={this.handleCloseAddResource}
         />
