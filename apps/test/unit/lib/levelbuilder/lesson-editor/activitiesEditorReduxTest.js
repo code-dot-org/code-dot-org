@@ -27,7 +27,7 @@ import _ from 'lodash';
 
 const getInitialState = () => ({
   levelKeyList: {},
-  activities: sampleActivities
+  activities: _.cloneDeep(sampleActivities)
 });
 
 const reducer = combineReducers(reducers);
