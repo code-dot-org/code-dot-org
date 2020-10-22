@@ -35,30 +35,32 @@ class CodeWritten extends React.Component {
   };
 
   render() {
+    const {
+      numLinesWritten,
+      totalNumLinesWritten,
+      children,
+      useChallengeStyles
+    } = this.props;
     const lines = (
       <p
         id="num-lines-of-code"
         className="lines-of-code-message"
-        style={
-          this.props.useChallengeStyles ? styles.challengeLineCounts : null
-        }
+        style={useChallengeStyles ? styles.challengeLineCounts : null}
       >
-        {msg.numLinesOfCodeWritten({numLines: this.props.numLinesWritten})}
+        {msg.numLinesOfCodeWritten({numLines: numLinesWritten})}
       </p>
     );
 
     let totalLines;
-    if (this.props.totalNumLinesWritten !== 0) {
+    if (totalNumLinesWritten && totalNumLinesWritten !== numLinesWritten) {
       totalLines = (
         <p
           id="total-num-lines-of-code"
           className="lines-of-code-message"
-          style={
-            this.props.useChallengeStyles ? styles.challengeLineCounts : null
-          }
+          style={useChallengeStyles ? styles.challengeLineCounts : null}
         >
           {msg.totalNumLinesOfCodeWritten({
-            numLines: this.props.totalNumLinesWritten
+            numLines: totalNumLinesWritten
           })}
         </p>
       );
@@ -67,19 +69,19 @@ class CodeWritten extends React.Component {
     const showCode = (
       <details
         className="show-code"
-        style={this.props.useChallengeStyles ? styles.details : null}
+        style={useChallengeStyles ? styles.details : null}
       >
         <summary
           role="button"
           style={{
             ...styles.summary,
-            ...(this.props.useChallengeStyles ? styles.challengeSummary : {})
+            ...(useChallengeStyles ? styles.challengeSummary : {})
           }}
           onClick={() => trackEvent('showCode', 'click', 'dialog')}
         >
           <b>{msg.showGeneratedCode()}</b>
         </summary>
-        {this.props.children}
+        {children}
       </details>
     );
 
