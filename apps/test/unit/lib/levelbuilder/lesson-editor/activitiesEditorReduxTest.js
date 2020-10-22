@@ -93,50 +93,54 @@ describe('activitiesEditorRedux reducer tests', () => {
       );
     });
 
-    it('moves level to activitySection', () => {
-      initialState.activities.push({
-        key: 'activity-2',
-        displayName: 'Second Activity',
-        position: 2,
-        duration: 30,
-        activitySections: [
-          {
-            key: 'section-4',
-            position: 1,
-            displayName: 'Making drawings',
-            remarks: true,
-            slide: false,
-            scriptLevels: [],
-            text: 'Drawing text',
-            tips: []
-          }
-        ]
+    describe('moveLevelToActivitySection', () => {
+      beforeEach(() => {
+        initialState.activities.push({
+          key: 'activity-2',
+          displayName: 'Second Activity',
+          position: 2,
+          duration: 30,
+          activitySections: [
+            {
+              key: 'section-4',
+              position: 1,
+              displayName: 'Making drawings',
+              remarks: true,
+              slide: false,
+              scriptLevels: [],
+              text: 'Drawing text',
+              tips: []
+            }
+          ]
+        });
       });
 
-      const oldActivities = initialState.activities;
-      let levelIdsBySection = oldActivities[0].activitySections.map(section =>
-        section.scriptLevels.map(l => l.activeId)
-      );
-      assert.deepEqual([[], [], [1, 2]], levelIdsBySection);
+      it('moves level to activitySection within the same activity', () => {
+        const oldActivities = initialState.activities;
+        let levelIdsBySection = oldActivities[0].activitySections.map(section =>
+          section.scriptLevels.map(l => l.activeId)
+        );
+        assert.deepEqual([[], [], [1, 2]], levelIdsBySection);
 
-      const activityPos = 1;
-      const sectionPos = 3;
-      const levelPos = 2;
-      const newSectionPos = 2;
-      const newActivities = reducer(
-        initialState,
-        moveLevelToActivitySection(
-          activityPos,
-          sectionPos,
-          levelPos,
-          activityPos,
-          newSectionPos
-        )
-      ).activities;
-      levelIdsBySection = newActivities[0].activitySections.map(section =>
-        section.scriptLevels.map(l => l.activeId)
-      );
-      assert.deepEqual([[], [2], [1]], levelIdsBySection);
+        const activityPos = 1;
+        const sectionPos = 3;
+        const levelPos = 2;
+        const newSectionPos = 2;
+        const newActivities = reducer(
+          initialState,
+          moveLevelToActivitySection(
+            activityPos,
+            sectionPos,
+            levelPos,
+            activityPos,
+            newSectionPos
+          )
+        ).activities;
+        levelIdsBySection = newActivities[0].activitySections.map(section =>
+          section.scriptLevels.map(l => l.activeId)
+        );
+        assert.deepEqual([[], [2], [1]], levelIdsBySection);
+      });
     });
 
     it('add level', () => {
