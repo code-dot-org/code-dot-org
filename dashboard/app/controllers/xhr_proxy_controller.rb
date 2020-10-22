@@ -49,6 +49,7 @@ class XhrProxyController < ApplicationController
     api.zippopotam.us
     atlas.media.mit.edu
     bible-api.com
+    thecatapi.com
     code.org
     compete.hsctf.com
     covidtracking.com
