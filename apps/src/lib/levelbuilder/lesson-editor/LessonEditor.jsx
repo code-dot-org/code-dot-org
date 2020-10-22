@@ -64,7 +64,7 @@ export default class LessonEditor extends Component {
     announcements: PropTypes.arrayOf(announcementShape),
     resources: PropTypes.arrayOf(resourceShape),
     relatedLessons: PropTypes.arrayOf(relatedLessonShape).isRequired,
-    objectives: PropTypes.arrayOf(PropTypes.object)
+    objectives: PropTypes.arrayOf(PropTypes.object).isRequired
   };
 
   render() {
@@ -213,7 +213,7 @@ export default class LessonEditor extends Component {
           collapsed={true}
           fullWidth={true}
         >
-          <ObjectivesEditor objectives={this.props.objectives || []} />
+          <ObjectivesEditor objectives={this.props.objectives} />
         </CollapsibleEditorSection>
 
         <CollapsibleEditorSection title="Activities & Levels" fullWidth={true}>
