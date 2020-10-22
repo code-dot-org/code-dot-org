@@ -17,6 +17,8 @@ import {levelKeyList} from '../../../../../test/unit/lib/levelbuilder/lesson-edi
 $(document).ready(function() {
   const lessonData = getScriptData('lesson');
   const relatedLessons = getScriptData('relatedLessons');
+  const searchOptions = getScriptData('searchOptions');
+
   const activities = lessonData.activities;
 
   // Rename any keys that are different on the backend.
@@ -77,7 +79,7 @@ $(document).ready(function() {
   const store = getStore();
 
   //TODO Switch to using real data once we have activity data
-  store.dispatch(init(activities, levelKeyList));
+  store.dispatch(init(activities, levelKeyList, searchOptions));
 
   ReactDOM.render(
     <Provider store={store}>
