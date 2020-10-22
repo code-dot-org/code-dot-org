@@ -2,13 +2,13 @@
 import PropTypes from "prop-types";
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { setSelectedTrainer } from "../redux";
-import { availableTrainers } from "../train.js";
+import { setSelectedTrainer, getCompatibleTrainers } from "../redux";
 
 class SelectTrainer extends Component {
   static propTypes = {
     selectedTrainer: PropTypes.string,
-    setSelectedTrainer: PropTypes.func
+    setSelectedTrainer: PropTypes.func,
+    compatibleTrainers: PropTypes.object
   };
 
   handleChangeSelect = event => {
@@ -16,6 +16,7 @@ class SelectTrainer extends Component {
   };
 
   render() {
+    const { compatibleTrainers, selectedTrainer } = this.props;
     return (
       <div>
         <h2>Pick an Algorithm</h2>
@@ -27,20 +28,18 @@ class SelectTrainer extends Component {
               onChange={this.handleChangeSelect}
             >
               <option>{""}</option>
-              {Object.keys(availableTrainers).map((trainerKey, index) => {
+              {Object.keys(compatibleTrainers).map((trainerKey, index) => {
                 return (
                   <option key={index} value={trainerKey}>
-                    {availableTrainers[trainerKey]["name"]}
+                    {compatibleTrainers[trainerKey]["name"]}
                   </option>
                 );
               })}
             </select>
             {this.props.selectedTrainer && (
               <div>
-                <h3>
-                  {availableTrainers[this.props.selectedTrainer]["mlType"]}
-                </h3>{" "}
-                {availableTrainers[this.props.selectedTrainer]["description"]}
+                <h3>{compatibleTrainers[selectedTrainer]["mlType"]}</h3>{" "}
+                {compatibleTrainers[selectedTrainer]["description"]}
               </div>
             )}
           </label>
@@ -52,7 +51,8 @@ class SelectTrainer extends Component {
 
 export default connect(
   state => ({
-    selectedTrainer: state.selectedTrainer
+    selectedTrainer: state.selectedTrainer,
+    compatibleTrainers: getCompatibleTrainers(state)
   }),
   dispatch => ({
     setSelectedTrainer(selectedTrainer) {

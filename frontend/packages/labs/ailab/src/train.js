@@ -47,6 +47,25 @@ export const availableTrainers = {
   }
 };
 
+const filterTrainersByType = type => {
+  let trainersOfType = {};
+  const trainerKeys = Object.keys(availableTrainers).filter(
+    trainerKey => availableTrainers[trainerKey].mlType === type
+  );
+  trainerKeys.forEach(
+    trainerKey => (trainersOfType[trainerKey] = availableTrainers[trainerKey])
+  );
+  return trainersOfType;
+};
+
+export const getClassificationTrainers = () => {
+  return filterTrainersByType(MLTypes.CLASSIFICATION);
+};
+
+export const getRegressionTrainers = () => {
+  return filterTrainersByType(MLTypes.REGRESSION);
+};
+
 /* Builds a hash that maps a feature's categorical options to numbers because
   the ML algorithms only accept numerical inputs.
   @param {string} - feature name
@@ -173,8 +192,6 @@ const init = () => {
     case "knn":
       trainer = new KNNTrainer();
       break;
-    default:
-      trainer = new SVMTrainer();
   }
   trainingState.trainer = trainer;
   buildOptionNumberKeysByFeature(state);

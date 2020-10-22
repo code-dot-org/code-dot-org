@@ -1,4 +1,9 @@
-import { MLTypes, availableTrainers } from "./train.js";
+import {
+  MLTypes,
+  availableTrainers,
+  getRegressionTrainers,
+  getClassificationTrainers
+} from "./train.js";
 // Action types
 
 const RESET_STATE = "RESET_STATE";
@@ -281,6 +286,21 @@ export function getConvertedPredictedLabel(state) {
       : state.prediction.predictedLabel;
     return label;
   }
+}
+
+export function getCompatibleTrainers(state) {
+  let compatibleTrainers;
+  switch (true) {
+    case state.columnsByDataType[state.labelColumn] === ColumnTypes.CATEGORICAL:
+      compatibleTrainers = getClassificationTrainers();
+      break;
+    case state.columnsByDataType[state.labelColumn] === ColumnTypes.CONTINUOUS:
+      compatibleTrainers = getRegressionTrainers();
+      break;
+    default:
+      compatibleTrainers = availableTrainers;
+  }
+  return compatibleTrainers;
 }
 
 export const ColumnTypes = {
