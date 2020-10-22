@@ -325,7 +325,6 @@ export function getConvertedPredictedLabel(state) {
   }
 }
 
-<<<<<<< HEAD
 export function getCompatibleTrainers(state) {
   let compatibleTrainers;
   switch (true) {
@@ -339,7 +338,8 @@ export function getCompatibleTrainers(state) {
       compatibleTrainers = availableTrainers;
   }
   return compatibleTrainers;
-=======
+}
+
 export function getAccuracy(state) {
   let numCorrect = 0;
   const numPredictedLabels = state.accuracyCheckPredictedLabels.length;
@@ -352,7 +352,6 @@ export function getAccuracy(state) {
     }
   }
   return ((numCorrect / numPredictedLabels) * 100).toFixed(2);
->>>>>>> main
 }
 
 export const ColumnTypes = {

@@ -156,7 +156,9 @@ const extractExamples = (state, row) => {
   state.selectedFeatures.forEach(feature =>
     exampleValues.push(convertValue(state, feature, row))
   );
-  return exampleValues.filter(label => label !== undefined && label !== "");
+  return exampleValues.filter(
+    label => label !== undefined && label !== "" && !isNaN(label)
+  );
 };
 
 const extractLabel = (state, row) => {
@@ -174,7 +176,7 @@ const prepareTrainingData = () => {
     .filter(example => example.length > 0 && example !== undefined);
   const trainingLabels = updatedState.data
     .map(row => extractLabel(updatedState, row))
-    .filter(label => label !== undefined && label !== "");
+    .filter(label => label !== undefined && label !== "" && !isNaN(label));
   // Randomly select 10% of examples and corresponding labels from the training // set to reserve for a post-training accuracy calculation. The accuracy check
   // examples and labels are excluded from the training set when the model is
   // trained and saved to state separately to test the model's accuracy.
@@ -215,6 +217,9 @@ const init = () => {
       break;
     case "knn":
       trainer = new KNNTrainer();
+      break;
+    case "randomForest":
+      trainer = new RFTrainer();
       break;
   }
   trainingState.trainer = trainer;
