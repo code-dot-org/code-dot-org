@@ -9,8 +9,12 @@ const styles = {
     flexDirection: 'row',
     alignItems: 'center'
   },
+  input: {
+    width: 195,
+    margin: 5
+  },
   dropdown: {
-    width: 125,
+    width: 150,
     margin: 5
   },
   label: {
@@ -69,7 +73,7 @@ export default class AddLevelFilters extends Component {
         <label style={styles.label}>
           By Name:
           <input
-            style={styles.dropdown}
+            style={styles.input}
             onChange={this.handleInputChange}
             value={this.state.levelName}
           />

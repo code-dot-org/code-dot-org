@@ -251,9 +251,11 @@ export default class ScriptEditor extends React.Component {
           <label>
             Supported locales
             <p>
-              Select additional locales supported by this script. Select
+              <span>
+                {'Select additional locales supported by this script. Select '}
+              </span>
               <a onClick={this.handleClearSupportedLocalesSelectClick}>none</a>
-              or shift-click or cmd-click to select multiple.
+              <span>{' or shift-click or cmd-click to select multiple.'}</span>
             </p>
             <select
               name="supported_locales[]"
