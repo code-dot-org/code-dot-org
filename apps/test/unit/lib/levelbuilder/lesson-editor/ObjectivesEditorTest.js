@@ -40,7 +40,7 @@ describe('ObjectivesEditor', () => {
     expect(wrapper.find('tr').length).to.equal(numObjectives + 1);
   });
 
-  it('does not add an empty objective', () => {
+  it('does not add an objective after add and cancel', () => {
     const wrapper = shallow(<ObjectivesEditor {...defaultProps} />);
     const numObjectives = wrapper.find('tr').length;
     const addObjectiveButton = wrapper.find('button').first();
