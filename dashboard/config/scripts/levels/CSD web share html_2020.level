@@ -28,6 +28,7 @@
     ],
     "encrypted": "false",
     "mini_rubric": "false",
+    "validation_enabled": "false",
     "encrypted_examples": [
 
     ]
