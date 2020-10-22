@@ -36,7 +36,7 @@ class Lesson < ActiveRecord::Base
   has_many :script_levels, -> {order(:chapter)}, foreign_key: 'stage_id', dependent: :destroy
   has_many :levels, through: :script_levels
   has_and_belongs_to_many :resources, join_table: :lessons_resources
-  has_many :objectives
+  has_many :objectives, dependent: :destroy
 
   has_one :plc_learning_module, class_name: 'Plc::LearningModule', inverse_of: :lesson, foreign_key: 'stage_id', dependent: :destroy
   has_and_belongs_to_many :standards, foreign_key: 'stage_id'
@@ -424,19 +424,12 @@ class Lesson < ActiveRecord::Base
   def update_objectives(objectives)
     return unless objectives
 
-    previous_objectives = self.objectives
-
-    new_objectives = objectives.map do |objective|
+    self.objectives = objectives.map do |objective|
       persisted_objective = objective['id'].blank? ? Objective.new : Objective.find(objective['id'])
       persisted_objective.description = objective['description']
       persisted_objective.save!
       persisted_objective
     end
-
-    # As each objective can only be associated with one lesson, destory
-    # any removed objectives
-    (previous_objectives - new_objectives).each(&:destroy!)
-    self.objectives = new_objectives
   end
 
   # Used for seeding from JSON. Returns the full set of information needed to uniquely identify this object.
