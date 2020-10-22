@@ -50,7 +50,12 @@ const styles = {
     marginRight: 5
   },
   labelAndInput: {
-    marginLeft: 5,
+    marginLeft: 10,
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'flex-start'
+  },
+  inputsAndIcon: {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'flex-start'
@@ -148,33 +153,35 @@ class ActivityCard extends Component {
             ...(this.state.collapsed && {marginBottom: 10})
           }}
         >
-          <FontAwesome
-            icon={this.state.collapsed ? 'expand' : 'compress'}
-            onClick={() => {
-              this.setState({
-                collapsed: !this.state.collapsed
-              });
-            }}
-          />
-          <label style={styles.labelAndInput}>
-            <span style={styles.label}>{`Activity:`}</span>
-            <input
-              value={activity.displayName}
-              style={{width: 150}}
-              onChange={this.handleChangeDisplayName}
-              className="uitest-activity-name-input"
+          <div style={styles.inputsAndIcon}>
+            <FontAwesome
+              icon={this.state.collapsed ? 'expand' : 'compress'}
+              onClick={() => {
+                this.setState({
+                  collapsed: !this.state.collapsed
+                });
+              }}
             />
-          </label>
-          <label style={styles.labelAndInput}>
-            <span style={styles.label}>{`Duration:`}</span>
-            <input
-              value={activity.duration}
-              style={{width: 35}}
-              onChange={this.handleChangeDuration}
-              className="uitest-activity-duration-input"
-            />
-            <span style={{fontSize: 10}}>{'(mins)'}</span>
-          </label>
+            <label style={styles.labelAndInput}>
+              <span style={styles.label}>{`Activity:`}</span>
+              <input
+                value={activity.displayName}
+                style={{width: 200}}
+                onChange={this.handleChangeDisplayName}
+                className="uitest-activity-name-input"
+              />
+            </label>
+            <label style={styles.labelAndInput}>
+              <span style={styles.label}>{`Duration:`}</span>
+              <input
+                value={activity.duration}
+                style={{width: 35}}
+                onChange={this.handleChangeDuration}
+                className="uitest-activity-duration-input"
+              />
+              <span style={{fontSize: 10}}>{'(mins)'}</span>
+            </label>
+          </div>
           <OrderControls
             name={activity.key || '(none)'}
             move={this.handleMoveActivity}
