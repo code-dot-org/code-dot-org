@@ -2161,7 +2161,49 @@
       "position": 3,
       "assessment": null,
       "properties": {
-        "progression": "Introduction to App Lab (~35 mins)"
+        "progression": "Lesson Investigation (~55 mins)"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD - Module 7 - CI-U6"
+        ],
+        "lesson.key": "Module 7",
+        "lesson_group.key": "",
+        "script.name": "jess-test-script"
+      },
+      "level_keys": [
+        "VPL - CSD - Module 7 - CI-U6"
+      ]
+    },
+    {
+      "chapter": 97,
+      "position": 4,
+      "assessment": null,
+      "properties": {
+        "progression": "Lesson Investigation (~55 mins)"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD - Module 7 - CI - U6L1"
+        ],
+        "lesson.key": "Module 7",
+        "lesson_group.key": "",
+        "script.name": "jess-test-script"
+      },
+      "level_keys": [
+        "VPL - CSD - Module 7 - CI - U6L1"
+      ]
+    },
+    {
+      "chapter": 98,
+      "position": 5,
+      "assessment": null,
+      "properties": {
+        "progression": "Lesson Investigation (~55 mins)"
       },
       "named_level": null,
       "bonus": null,
@@ -2178,7 +2220,70 @@
       ]
     },
     {
-      "chapter": 97,
+      "chapter": 99,
+      "position": 6,
+      "assessment": null,
+      "properties": {
+        "progression": "Lesson Investigation (~55 mins)"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD Module 7 PSP Reflection"
+        ],
+        "lesson.key": "Module 7",
+        "lesson_group.key": "",
+        "script.name": "jess-test-script"
+      },
+      "level_keys": [
+        "VPL - CSD Module 7 PSP Reflection"
+      ]
+    },
+    {
+      "chapter": 100,
+      "position": 7,
+      "assessment": null,
+      "properties": {
+        "progression": "Equity Journey (~10 mins)"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD Module 7 - Equity Journey"
+        ],
+        "lesson.key": "Module 7",
+        "lesson_group.key": "",
+        "script.name": "jess-test-script"
+      },
+      "level_keys": [
+        "VPL - CSD Module 7 - Equity Journey"
+      ]
+    },
+    {
+      "chapter": 101,
+      "position": 8,
+      "assessment": null,
+      "properties": {
+        "progression": "Module 7 Asynchronous Wrap Up (~10 mins)"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD - Module 7 Wrap Up"
+        ],
+        "lesson.key": "Module 7",
+        "lesson_group.key": "",
+        "script.name": "jess-test-script"
+      },
+      "level_keys": [
+        "VPL - CSD - Module 7 Wrap Up"
+      ]
+    },
+    {
+      "chapter": 102,
       "position": 1,
       "assessment": null,
       "properties": {
@@ -3246,9 +3351,64 @@
     },
     {
       "seeding_key": {
+        "level.key": "VPL - CSD - Module 7 - CI-U6",
+        "script_level.level_keys": [
+          "VPL - CSD - Module 7 - CI-U6"
+        ],
+        "lesson.key": "Module 7",
+        "lesson_group.key": "",
+        "script.name": "jess-test-script"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD - Module 7 - CI - U6L1",
+        "script_level.level_keys": [
+          "VPL - CSD - Module 7 - CI - U6L1"
+        ],
+        "lesson.key": "Module 7",
+        "lesson_group.key": "",
+        "script.name": "jess-test-script"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "VPL - CSD - Module 7 - CI",
         "script_level.level_keys": [
           "VPL - CSD - Module 7 - CI"
+        ],
+        "lesson.key": "Module 7",
+        "lesson_group.key": "",
+        "script.name": "jess-test-script"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD Module 7 PSP Reflection",
+        "script_level.level_keys": [
+          "VPL - CSD Module 7 PSP Reflection"
+        ],
+        "lesson.key": "Module 7",
+        "lesson_group.key": "",
+        "script.name": "jess-test-script"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD Module 7 - Equity Journey",
+        "script_level.level_keys": [
+          "VPL - CSD Module 7 - Equity Journey"
+        ],
+        "lesson.key": "Module 7",
+        "lesson_group.key": "",
+        "script.name": "jess-test-script"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD - Module 7 Wrap Up",
+        "script_level.level_keys": [
+          "VPL - CSD - Module 7 Wrap Up"
         ],
         "lesson.key": "Module 7",
         "lesson_group.key": "",
