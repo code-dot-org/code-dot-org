@@ -173,10 +173,17 @@ class Foorm::Form < ActiveRecord::Base
   # received for that Form. It includes the content of the form submitted
   # by a user, as well as some additional metadata about the context
   # in which the form was submitted (eg, workshop ID, user ID).
+  # @param submissions_to_report: optional array of submissions to write to csv.
+  # If any submissions in the array do not belong to this form they will not be written
+  # to the csv.
   # @return csv text
-  def submissions_to_csv
-    filtered_submissions = submissions.
-      reject {|submission| submission.workshop_metadata&.facilitator_specific?}
+  def submissions_to_csv(submissions_to_report=nil)
+    submissions_to_report ||= submissions
+    filtered_submissions = submissions_to_report.
+      reject do |submission|
+        submission.workshop_metadata&.facilitator_specific? || submission.form_name != name ||
+          submission.form_version != version
+      end
 
     # Default headers are the non-facilitator specific set of questions.
     headers = readable_questions[:general]
