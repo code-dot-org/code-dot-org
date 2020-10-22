@@ -94,6 +94,25 @@ describe('activitiesEditorRedux reducer tests', () => {
     });
 
     it('moves level to activitySection', () => {
+      initialState.activities.push({
+        key: 'activity-2',
+        displayName: 'Second Activity',
+        position: 2,
+        duration: 30,
+        activitySections: [
+          {
+            key: 'section-4',
+            position: 1,
+            displayName: 'Making drawings',
+            remarks: true,
+            slide: false,
+            scriptLevels: [],
+            text: 'Drawing text',
+            tips: []
+          }
+        ]
+      });
+
       const nextState = reducer(
         initialState,
         moveLevelToActivitySection(1, 3, 2, 2)
