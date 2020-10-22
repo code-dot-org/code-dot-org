@@ -315,6 +315,7 @@ Dashboard::Application.routes.draw do
 
   resources :lessons, only: [:show, :edit, :update]
 
+  resources :resources, only: [:create]
   get '/resourcesearch/:q/:limit', to: 'resources#search', defaults: {format: 'json'}
 
   get '/beta', to: redirect('/')
@@ -451,6 +452,8 @@ Dashboard::Application.routes.draw do
         get :workshop_organizer_survey_report, action: :workshop_organizer_survey_report, controller: 'workshop_organizer_survey_report'
 
         get 'foorm/generic_survey_report', action: :generic_survey_report, controller: 'workshop_survey_foorm_report'
+        get 'foorm/csv_survey_report', action: :csv_survey_report, controller: 'workshop_survey_foorm_report'
+        get 'foorm/forms_for_workshop', action: :forms_for_workshop, controller: 'workshop_survey_foorm_report'
       end
 
       resources :workshop_summary_report, only: :index
