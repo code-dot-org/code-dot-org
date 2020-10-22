@@ -555,9 +555,10 @@ NetSimLobby.prototype.buildShardChoiceList_ = function(
     });
   }
 
-  // Add user's sections to the shard list
+  // Add user's active (non-archived) sections to the shard list
+  const unarchivedSections = sectionList.filter(section => !section.hidden);
   this.shardChoices_ = this.shardChoices_.concat(
-    sectionList.map(
+    unarchivedSections.map(
       function(section) {
         return {
           shardSeed: section.id,
