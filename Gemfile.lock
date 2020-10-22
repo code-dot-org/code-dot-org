@@ -74,13 +74,6 @@ GIT
     gctools (0.2.4)
 
 GIT
-  remote: https://github.com/wjordan/geocoder.git
-  revision: 2da20897188b57f777df89f90e45cf331c5b014f
-  ref: rack-request-fix
-  specs:
-    geocoder (1.3.7)
-
-GIT
   remote: https://github.com/wjordan/gnista.git
   revision: 573e51812da662a48d272d79e855737eee31bd7d
   ref: embed
@@ -441,6 +434,7 @@ GEM
       railties (>= 3.2, < 6.1)
     fspath (3.1.0)
     gemoji (2.1.0)
+    geocoder (1.6.4)
     get_process_mem (0.2.3)
     gherkin (5.1.0)
     globalid (0.4.2)
@@ -949,7 +943,7 @@ DEPENDENCIES
   full-name-splitter!
   gctools!
   gemoji
-  geocoder!
+  geocoder
   gnista!
   google-api-client (~> 0.23)
   google_drive
