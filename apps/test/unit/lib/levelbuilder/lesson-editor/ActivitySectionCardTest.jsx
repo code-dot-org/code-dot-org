@@ -27,7 +27,7 @@ describe('ActivitySectionCard', () => {
       activityPosition: 1,
       activitySectionsCount: 3,
       activitiesCount: 1,
-      activitySectionMetrics: {},
+      activitySectionMetrics: [],
       setTargetActivitySection,
       targetActivitySectionPos: 1,
 
