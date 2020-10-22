@@ -16,11 +16,11 @@ import {
   isLinux
 } from '../util/browserChecks';
 import ValidationStep, {Status} from '../../../ui/ValidationStep';
-import {BOARD_TYPE} from '../boards/circuitPlayground/CircuitPlaygroundBoard';
 import experiments from '@cdo/apps/util/experiments';
 import _ from 'lodash';
 import yaml from 'js-yaml';
 import Button from '@cdo/apps/templates/Button';
+import {BOARD_TYPE} from '../util/boardUtils';
 import {CHROME_APP_WEBSTORE_URL} from '../util/makerConstants';
 
 const STATUS_SUPPORTED_BROWSER = 'statusSupportedBrowser';
@@ -104,7 +104,7 @@ export default class SetupChecklist extends Component {
       // Can we talk to the firmware?
       .then(() =>
         this.detectStep(STATUS_BOARD_CONNECT, () =>
-          setupChecker.detectCorrectFirmware()
+          setupChecker.detectCorrectFirmware(this.state.boardTypeDetected)
         )
       )
 
@@ -244,14 +244,25 @@ export default class SetupChecklist extends Component {
   }
 
   installFirmwareSketch() {
+    let firmataFromBoardType;
+    switch (this.state.boardTypeDetected) {
+      case BOARD_TYPE.EXPRESS:
+        firmataFromBoardType =
+          'https://learn.adafruit.com/adafruit-circuit-playground-express/code-org-csd';
+        break;
+      case BOARD_TYPE.MICROBIT:
+        firmataFromBoardType =
+          'https://github.com/microbit-foundation/microbit-firmata#installing-firmata-on-your-bbc-microbit';
+        break;
+      default:
+        firmataFromBoardType =
+          'https://learn.adafruit.com/circuit-playground-firmata/overview';
+    }
     return (
       <div>
         <SafeMarkdown
           markdown={applabI18n.makerSetupInstallFirmata({
-            firmataURL:
-              this.state.boardTypeDetected === BOARD_TYPE.CLASSIC
-                ? 'https://learn.adafruit.com/circuit-playground-firmata/overview'
-                : 'https://learn.adafruit.com/adafruit-circuit-playground-express/code-org-csd'
+            firmataURL: firmataFromBoardType
           })}
         />
       </div>
@@ -326,7 +337,8 @@ export default class SetupChecklist extends Component {
             {this.contactSupport()}
           </ValidationStep>
           {experiments.isEnabled('flash-classic') &&
-            this.state.boardTypeDetected !== BOARD_TYPE.OTHER && (
+            (this.state.boardTypeDetected === BOARD_TYPE.CLASSIC ||
+              this.state.boardTypeDetected === BOARD_TYPE.EXPRESS) && (
               <ValidationStep
                 stepStatus={this.state[STATUS_BOARD_FIRMWARE]}
                 stepName={i18n.validationStepBoardFirmware()}
