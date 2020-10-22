@@ -167,7 +167,7 @@ class ActivitySectionCardButtons extends Component {
         </div>
         <FindResourceDialog
           isOpen={this.state.addResourceOpen}
-          handleClose={this.handleCloseAddResource}
+          handleConfirm={this.handleCloseAddResource}
         />
         {/* Prevent dialog from trying to render when there is no tip to edit*/}
         {this.state.tipToEdit !== null && (
