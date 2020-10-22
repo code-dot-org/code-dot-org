@@ -195,22 +195,13 @@ class ActivitySectionCard extends Component {
           this.state.newPosition
         );
       }
-    } else if (
-      targetActivityPos === activityPosition &&
-      targetActivitySectionPos
-    ) {
+    } else if (targetActivityPos && targetActivitySectionPos) {
       // When dragging between activitySections, move it to the end of the new activitySection.
       this.props.moveLevelToActivitySection(
         activityPosition,
         activitySection.position,
         this.state.draggedLevelPos,
-        targetActivitySectionPos
-      );
-    } else if (targetActivityPos && targetActivitySectionPos) {
-      console.log(
-        'TODO: move to activity',
         targetActivityPos,
-        'section',
         targetActivitySectionPos
       );
     }
