@@ -1137,7 +1137,6 @@ FeedbackUtils.prototype.getShowCodeComponent_ = function(
   // Use the response from the server if we have one. Otherwise use the client's data.
   const totalLines =
     (options.response && options.response.total_lines) || clientState.lines();
-  const totalNumLinesWritten = totalLines !== numLinesWritten ? totalLines : 0;
 
   const generatedCodeProperties = this.getGeneratedCodeProperties({
     generatedCodeDescription:
@@ -1147,7 +1146,7 @@ FeedbackUtils.prototype.getShowCodeComponent_ = function(
   return (
     <CodeWritten
       numLinesWritten={numLinesWritten}
-      totalNumLinesWritten={totalNumLinesWritten}
+      totalNumLinesWritten={totalLines}
       useChallengeStyles={challenge}
     >
       <GeneratedCode
