@@ -139,13 +139,21 @@ module Geocoder
   end
   singleton_class.prepend SauceLabsOverride
 
-  # Override Geocoder#search to default to the RD country code for requests coming from the same box. These requests
-  # are either coming from a developer or a UI test suite.
+  # Override Geocoder#search to default to the same behavior as the FreeGeoIP service used on our staging and production
+  # servers. Localhost lookups are usually because UI tests are making requests and we want our developer and drone
+  # environments to behave similar to production and staging.
+  # https://github.com/alexreisner/geocoder/blob/350cf0cc6a158d510aec3d91594d9b5718f877a9/lib/geocoder/lookups/freegeoip.rb#L41-L54
   module LocahostOverride
     def search(query, options = {})
       ip = IPAddr.new(query) rescue nil
       if ip&.loopback?
-        [OpenStruct.new(country_code: 'RD')]
+        [OpenStruct.new(
+          ip: ip.to_s,
+          country_code: 'RD',
+          country: 'Reserved',
+          longitude: '0',
+          latitude: '0'
+        )]
       else
         super
       end
