@@ -4,21 +4,36 @@ display_name 'Introduction to Debugging'
 
 title 'Debugging Session'
 markdown <<MARKDOWN
-#Introduction to App Lab
+#Unit 6 - Lesson 2: Designing Screens with Code
 
-**Estimated Time: 35 minutes**
+## Revisiting App Lab
 
-## Overview
+We engaged with App Lab in previous modules focused on getting ready to teach Units 3 and 4.  In this section, you will continue to explore App Lab in Code Studio with Lesson 2: Designing Screens with Code. We will be wearing our "teacher hats" here to identify the level types included in Lesson 2 that support students.
 
-In this section, you will explore App Lab in Code Studio to design screens with code and identify user input. You may want to write down ideas about how to teach Unit 6 in your journal as you go through the levels. The times below are suggestions.  Feel free to take as much time as you need.
+**Note**:  You may feel more comfortable with App Lab if you have taught or plan to teach Unit 4.  Otherwise, consider taking more time practicing using App Lab.  Write down any questions or concerns you may want to bring up with the facilitators during the synchronous workshop. 
 
-## App Lab Exploration
+## Level Types
 
-* UI Element Properties (~5 minutes)
+Let's take a look at the different level types included in Lesson 2.  
 
-* Designing Screens with Code (~20 minutes)
+* **Predict Level** 
+	* Students read working code, discuss the code with a partner, and then predict what the code will do before running it themselves. 
+    * "For Teachers Only" provides the correct answer.
+    * You can see this in Level 2 - Setting Properties.
 
-* Input (~10 minutes)
+* **Programming Level**
+	* Students complete targeted tasks that help with practicing and building specific skills from the lesson.
+    * You can see this in Level 3 - Setting Properties.
+
+* **Assessment Level**
+	* Programming levels to assess student mastery of the target skills from the lesson.
+    * Mini rubrics are provided in the "Key Concepts" tab.
+    * You can see this in Level 4 - Setting Properties.  Note the check mark that indicates it is an assessment level.
+
+* **Help & Tips**
+	* This tab includes resources that provide information on particular concepts of programming structures.
+    
+The design mode elements have already been created and show up on the user screen.  A helpful hint for students is to hover over any of the elements on the user screen and see the element's id.
 
 
 
