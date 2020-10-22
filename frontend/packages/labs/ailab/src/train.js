@@ -186,7 +186,7 @@ const init = () => {
   const state = store.getState();
   let trainer;
   switch (state.selectedTrainer) {
-    case "binary_svm":
+    case "binarySvm":
       trainer = new SVMTrainer();
       break;
     case "knn":
