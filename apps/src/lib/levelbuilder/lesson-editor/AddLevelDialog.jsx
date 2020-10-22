@@ -131,6 +131,10 @@ export default class AddLevelDialog extends Component {
     this.setState({methodOfAddingLevel: value});
   };
 
+  handleNewSearch = () => {
+    this.setState({currentPage: 1}, this.handleSearch);
+  };
+
   setCurrentPage = value => {
     this.setState({currentPage: value}, this.handleSearch);
   };
@@ -178,7 +182,7 @@ export default class AddLevelDialog extends Component {
                 <div style={styles.filtersAndLevels}>
                   <AddLevelFilters
                     searchFields={this.state.searchFields}
-                    handleSearch={this.handleSearch}
+                    handleSearch={this.handleNewSearch}
                     handleChangeLevelName={this.handleChangeLevelName}
                     handleChangeLevelType={this.handleChangeLevelType}
                     handleChangeScript={this.handleChangeScript}
