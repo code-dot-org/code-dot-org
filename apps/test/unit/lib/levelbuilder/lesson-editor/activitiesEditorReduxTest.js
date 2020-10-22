@@ -113,9 +113,19 @@ describe('activitiesEditorRedux reducer tests', () => {
         ]
       });
 
+      const activityPos = 1;
+      const sectionPos = 3;
+      const levelPos = 2;
+      const newSectionPos = 2;
       const nextState = reducer(
         initialState,
-        moveLevelToActivitySection(1, 3, 2, 2)
+        moveLevelToActivitySection(
+          activityPos,
+          sectionPos,
+          levelPos,
+          activityPos,
+          newSectionPos
+        )
       ).activities;
       assert.deepEqual(
         nextState[0].activitySections[1].scriptLevels.map(l => l.activeId),
