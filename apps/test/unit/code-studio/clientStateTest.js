@@ -1,7 +1,6 @@
 /** @file Tests for clientState.js */
 
 var assert = require('assert');
-var cookies = require('js-cookie');
 var state = require('@cdo/apps/code-studio/clientState');
 var chai = require('chai');
 
@@ -99,7 +98,7 @@ describe('clientState#hasSeenVideo/hasSeenCallout', function() {
   });
 
   it('Does not record line counts when level progress does not have a line count', function() {
-    cookies.set('lines', 50, {expires: 365, path: '/'});
+    sessionStorage.setItem('lines', 50);
     state.lines().should.equal(50);
     state.trackLines(true, undefined);
     state.lines().should.equal(50);
@@ -113,12 +112,11 @@ describe('clientState#hasSeenVideo/hasSeenCallout', function() {
     state.lines().should.equal(100);
   });
 
-  it('Handled malformed line counts in cookie', function() {
-    cookies.set('lines', NaN, {expires: 365, path: '/'});
+  it('Handled malformed line counts in session storage', function() {
+    sessionStorage.setItem('lines', NaN);
     state.lines().should.equal(0);
     state.trackLines(true, 50);
     state.lines().should.equal(50);
-    cookies.get('lines').should.equal('50');
   });
 
   it('records video progress', function() {
