@@ -11,7 +11,7 @@ function initPage() {
     embed.on('click', () => syncValidateWithElements(embed, widgetMode));
     widgetMode.on('click', () => syncValidateWithElements(embed, widgetMode));
   }
-  if (document.getElementById('level_validation_code')) {
+  if ($('#level_validation_code')) {
     initializeCodeMirror('level_validation_code', 'javascript');
   }
 }
