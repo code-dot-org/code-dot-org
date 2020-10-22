@@ -485,6 +485,7 @@ export default {
         // blocks, disallow editing the behavior, because renaming the behavior
         // can break things.
         if (
+          appOptions && // appOptions is not available on level edit page
           appOptions.level.toolbox &&
           !appOptions.readonlyWorkspace &&
           !Blockly.hasCategories
@@ -626,6 +627,7 @@ export default {
     // blockInstallOptions is undefined.
     if (
       !blockInstallOptions ||
+      !blockInstallOptions.level ||
       blockInstallOptions.level.editBlocks !== TOOLBOX_EDIT_MODE
     ) {
       Blockly.Flyout.configure(Blockly.BlockValueType.BEHAVIOR, {
