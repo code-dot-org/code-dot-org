@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import PropTypes from 'prop-types';
 import PaginationWrapper from '@cdo/apps/templates/PaginationWrapper';
+import AddLevelTableRow from '@cdo/apps/lib/levelbuilder/lesson-editor/AddLevelTableRow';
 
 export default class AddLevelTable extends Component {
   static propTypes = {
@@ -27,38 +27,11 @@ export default class AddLevelTable extends Component {
           </thead>
           <tbody>
             {this.props.levels.map(level => (
-              <tr key={level.id}>
-                <td>
-                  <button
-                    type="button"
-                    onClick={() => {
-                      console.log('Add');
-                    }}
-                  >
-                    <FontAwesome icon="plus" />
-                  </button>
-                  <button
-                    type="button"
-                    onClick={() => {
-                      console.log('Clone and Add');
-                    }}
-                  >
-                    <FontAwesome icon="files-o" />
-                  </button>
-                </td>
-                <td>
-                  <div>{level.name}</div>
-                </td>
-                <td>
-                  <div>{level.type}</div>
-                </td>
-                <td>
-                  <div>{level.owner}</div>
-                </td>
-                <td>
-                  <div>{level.updated_at}</div>
-                </td>
-              </tr>
+              <AddLevelTableRow
+                key={level.id}
+                addLevel={this.props.addLevel}
+                level={level}
+              />
             ))}
           </tbody>
         </table>
