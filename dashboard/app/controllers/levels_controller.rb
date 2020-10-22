@@ -8,7 +8,8 @@ class LevelsController < ApplicationController
   include LevelsHelper
   include ActiveSupport::Inflector
   before_action :authenticate_user!, except: [:show, :embed_level, :get_rubric]
-  before_action :require_levelbuilder_mode, except: [:show, :embed_level, :get_rubric]
+  before_action :require_levelbuilder_mode, except: [:show, :embed_level, :get_rubric, :get_filters, :get_filtered_levels]
+  before_action :require_levelbuilder_mode_or_test_env, only: [:get_filters, :get_filtered_levels]
   load_and_authorize_resource except: [:create]
 
   before_action :set_level, only: [:show, :edit, :update, :destroy]
