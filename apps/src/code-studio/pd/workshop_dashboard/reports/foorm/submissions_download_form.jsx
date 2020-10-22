@@ -6,9 +6,6 @@ import 'react-select/dist/react-select.css';
 import Select from 'react-select/lib/Select';
 import {SelectStyleProps} from '../../../constants.js';
 
-const CSV_QUERY_URL = '/api/v1/pd/foorm/submissions_csv';
-const FORM_NAME_QUERY_URL = '/api/v1/pd/foorm/form_names';
-
 const styles = {
   modalHeader: {
     padding: 15,
@@ -30,9 +27,11 @@ const styles = {
   }
 };
 
-export default class SubmissionsDownloadFom extends React.Component {
+export default class SubmissionsDownloadForm extends React.Component {
   static propTypes = {
-    children: PropTypes.node.isRequired
+    children: PropTypes.node.isRequired,
+    workshopId: PropTypes.string,
+    style: PropTypes.object
   };
 
   constructor(props) {
@@ -55,7 +54,7 @@ export default class SubmissionsDownloadFom extends React.Component {
     this.setState({loadingFormNames: true});
     this.loadRequest = $.ajax({
       method: 'GET',
-      url: FORM_NAME_QUERY_URL,
+      url: this.getFormNameVersionQueryUrl(),
       dataType: 'json'
     }).done(data => {
       this.setState({
@@ -102,12 +101,32 @@ export default class SubmissionsDownloadFom extends React.Component {
   };
 
   handleDownloadCsvClick = () => {
-    window.open(`${CSV_QUERY_URL}${this.getQueryParams()}`);
+    window.open(`${this.getCsvQueryUrl()}${this.getQueryParams()}`);
   };
+
+  getCsvQueryUrl() {
+    if (this.props.workshopId) {
+      return `/api/v1/pd/workshops/${
+        this.props.workshopId
+      }/foorm/csv_survey_report`;
+    } else {
+      return '/api/v1/pd/foorm/submissions_csv';
+    }
+  }
+
+  getFormNameVersionQueryUrl() {
+    if (this.props.workshopId) {
+      return `/api/v1/pd/workshops/${
+        this.props.workshopId
+      }/foorm/forms_for_workshop`;
+    } else {
+      return '/api/v1/pd/foorm/form_names';
+    }
+  }
 
   render() {
     return (
-      <div>
+      <div style={this.props.style}>
         <span onClick={this.open}>{this.props.children}</span>
         <Modal show={this.state.showing} onHide={this.close}>
           <Modal.Header closeButton style={styles.modalHeader}>
