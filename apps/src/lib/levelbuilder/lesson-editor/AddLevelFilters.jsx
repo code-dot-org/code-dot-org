@@ -90,7 +90,7 @@ export default class AddLevelFilters extends Component {
             value={this.props.ownerId}
           >
             {this.props.searchFields.ownerOptions.map(owner => (
-              <option key={owner[0]} value={owner[1]}>
+              <option key={owner[1]} value={owner[1]}>
                 {owner[0]}
               </option>
             ))}

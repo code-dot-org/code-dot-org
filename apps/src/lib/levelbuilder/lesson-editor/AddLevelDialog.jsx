@@ -96,7 +96,6 @@ export default class AddLevelDialog extends Component {
       method: 'GET',
       contentType: 'application/json;charset=UTF-8'
     }).done(data => {
-      console.log(data);
       this.setState({levels: data.levels, numPages: data.numPages});
     });
   }

@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import PaginationWrapper from '@cdo/apps/templates/PaginationWrapper';
 import AddLevelTableRow from '@cdo/apps/lib/levelbuilder/lesson-editor/AddLevelTableRow';
+import color from '@cdo/apps/util/color';
 
 export default class AddLevelTable extends Component {
   static propTypes = {
@@ -35,6 +36,11 @@ export default class AddLevelTable extends Component {
             ))}
           </tbody>
         </table>
+        {this.props.levels.length === 0 && (
+          <div style={{color: color.red}}>
+            {'There are no levels matching the search you entered.'}
+          </div>
+        )}
         <PaginationWrapper
           totalPages={this.props.numPages}
           currentPage={this.props.currentPage}
