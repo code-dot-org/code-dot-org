@@ -12,6 +12,7 @@ import CreateNewLevelInputs from '@cdo/apps/lib/levelbuilder/lesson-editor/Creat
 import $ from 'jquery';
 import queryString from 'query-string';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import {connect} from 'react-redux';
 
 const styles = {
   dialog: {
@@ -51,46 +52,40 @@ const styles = {
   }
 };
 
-export default class AddLevelDialog extends Component {
+class AddLevelDialog extends Component {
   static propTypes = {
     isOpen: PropTypes.bool.isRequired,
     handleConfirm: PropTypes.func.isRequired,
     currentScriptLevels: PropTypes.array,
     addLevel: PropTypes.func,
     activityPosition: PropTypes.number,
-    activitySectionPosition: PropTypes.number
+    activitySectionPosition: PropTypes.number,
+
+    // from redux
+    searchOptions: PropTypes.object
   };
 
   constructor(props) {
     super(props);
 
+    console.log(props.searchOptions);
+    console.log(props.searchOptions.levelOptions);
+    console.log(props.searchOptions.levelOptions[0]);
+    console.log(props.searchOptions.levelOptions[0][1]);
+
     this.state = {
       methodOfAddingLevel: 'Find Level',
       levels: null,
-      searchFields: null,
       currentPage: 1,
       levelName: '',
-      levelType: null,
-      scriptId: null,
-      ownerId: null,
+      levelType: props.searchOptions.levelOptions[0][1],
+      scriptId: props.searchOptions.scriptOptions[0][1],
+      ownerId: props.searchOptions.ownerOptions[0][1],
       numPages: 0
     };
   }
 
   componentDidMount() {
-    $.ajax({
-      url: `/levels/get_filters`,
-      method: 'GET',
-      contentType: 'application/json;charset=UTF-8'
-    }).done((data, _, request) => {
-      this.setState({
-        searchFields: data,
-        levelType: data.levelOptions[0][1],
-        scriptId: data.scriptOptions[0][1],
-        ownerId: data.ownerOptions[0][1]
-      });
-    });
-
     $.ajax({
       url: `/levels/get_filtered_levels?page=${this.state.currentPage}`,
       method: 'GET',
@@ -165,7 +160,7 @@ export default class AddLevelDialog extends Component {
       >
         <h2>Add Levels</h2>
         <div style={styles.dialogContent}>
-          {this.state.levels && this.state.searchFields && (
+          {this.state.levels && (
             <div style={styles.topArea}>
               <ToggleGroup
                 selected={this.state.methodOfAddingLevel}
@@ -181,7 +176,6 @@ export default class AddLevelDialog extends Component {
               {this.state.methodOfAddingLevel === 'Find Level' && (
                 <div style={styles.filtersAndLevels}>
                   <AddLevelFilters
-                    searchFields={this.state.searchFields}
                     handleSearch={this.handleNewSearch}
                     handleChangeLevelName={this.handleChangeLevelName}
                     handleChangeLevelType={this.handleChangeLevelType}
@@ -203,13 +197,13 @@ export default class AddLevelDialog extends Component {
               )}
               {this.state.methodOfAddingLevel === 'Create New Level' && (
                 <CreateNewLevelInputs
-                  levelOptions={this.state.searchFields.levelOptions}
+                  levelOptions={this.props.searchOptions.levelOptions}
                   addLevel={this.props.addLevel}
                 />
               )}
             </div>
           )}
-          {(!this.state.levels || !this.state.searchFields) && (
+          {!this.state.levels && (
             <FontAwesome icon="spinner" className="fa-spin" />
           )}
           <div style={styles.bottomArea}>
@@ -241,3 +235,9 @@ export default class AddLevelDialog extends Component {
     );
   }
 }
+
+export const UnconnectedAddLevelDialog = AddLevelDialog;
+
+export default connect(state => ({
+  searchOptions: state.searchOptions
+}))(AddLevelDialog);
