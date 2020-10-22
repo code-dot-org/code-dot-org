@@ -5,7 +5,7 @@
     "hidden": true,
     "login_required": false,
     "properties": {
-      "hideable_lessons": true,
+      "hideable_lessons": "on",
       "teacher_resources": [
         [
           "lessonPlans",
@@ -24,7 +24,8 @@
           "https://studio.code.org/my-professional-learning"
         ]
       ],
-      "student_detail_progress_view": true
+      "student_detail_progress_view": "on",
+      "peer_reviews_to_complete": 0
     },
     "new_name": null,
     "family_name": null,
@@ -2118,23 +2119,66 @@
       "position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Module 7 Overview"
       },
       "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
-          "VirtualPLOverview"
+          "VPL - CSD Module 7 Overview"
         ],
         "lesson.key": "Module 7",
         "lesson_group.key": "",
         "script.name": "jess-test-script"
       },
       "level_keys": [
-        "VirtualPLOverview"
+        "VPL - CSD Module 7 Overview"
       ]
     },
     {
       "chapter": 95,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+        "progression": "Theme Introduction (~5 mins)"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD M7 Theme Introduction"
+        ],
+        "lesson.key": "Module 7",
+        "lesson_group.key": "",
+        "script.name": "jess-test-script"
+      },
+      "level_keys": [
+        "VPL - CSD M7 Theme Introduction"
+      ]
+    },
+    {
+      "chapter": 96,
+      "position": 3,
+      "assessment": null,
+      "properties": {
+        "progression": "Introduction to App Lab (~35 mins)"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD - Module 7 - CI"
+        ],
+        "lesson.key": "Module 7",
+        "lesson_group.key": "",
+        "script.name": "jess-test-script"
+      },
+      "level_keys": [
+        "VPL - CSD - Module 7 - CI"
+      ]
+    },
+    {
+      "chapter": 97,
       "position": 1,
       "assessment": null,
       "properties": {
@@ -3180,9 +3224,31 @@
     },
     {
       "seeding_key": {
-        "level.key": "VirtualPLOverview",
+        "level.key": "VPL - CSD Module 7 Overview",
         "script_level.level_keys": [
-          "VirtualPLOverview"
+          "VPL - CSD Module 7 Overview"
+        ],
+        "lesson.key": "Module 7",
+        "lesson_group.key": "",
+        "script.name": "jess-test-script"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD M7 Theme Introduction",
+        "script_level.level_keys": [
+          "VPL - CSD M7 Theme Introduction"
+        ],
+        "lesson.key": "Module 7",
+        "lesson_group.key": "",
+        "script.name": "jess-test-script"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD - Module 7 - CI",
+        "script_level.level_keys": [
+          "VPL - CSD - Module 7 - CI"
         ],
         "lesson.key": "Module 7",
         "lesson_group.key": "",
