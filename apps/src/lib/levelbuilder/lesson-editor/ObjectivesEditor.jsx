@@ -92,9 +92,9 @@ export default class ObjectivesEditor extends Component {
   };
 
   handleCancel = () => {
-    let {objectives, objectiveInput, currentlyEditingIndex} = this.state;
+    let {objectives, currentlyEditingIndex} = this.state;
     if (
-      objectiveInput === '' &&
+      objectives[currentlyEditingIndex].description === '' &&
       currentlyEditingIndex === objectives.length - 1
     ) {
       objectives = objectives.slice(0, objectives.length - 1);
