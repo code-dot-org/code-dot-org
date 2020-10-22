@@ -516,6 +516,10 @@ class Lesson < ActiveRecord::Base
     end
   end
 
+  def resources_for_lesson_plan
+    resources.map(&:summarize_for_lesson_plan).group_by {|r| r[:audience]}
+  end
+
   private
 
   # Finds the LessonActivity by id, or creates a new one if id is not specified.

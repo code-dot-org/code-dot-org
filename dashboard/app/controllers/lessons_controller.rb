@@ -29,7 +29,7 @@ class LessonsController < ApplicationController
       announcements: @lesson.announcements,
       purpose: @lesson.purpose || '',
       preparation: @lesson.preparation || '',
-      resources: @lesson.resources || []
+      resources: @lesson.resources_for_lesson_plan
     }
   end
 

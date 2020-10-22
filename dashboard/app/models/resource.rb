@@ -33,11 +33,22 @@ class Resource < ApplicationRecord
   has_and_belongs_to_many :lessons, join_table: :lessons_resources
   belongs_to :course_version
 
-  serialized_attrs %(
+  serialized_attrs %w(
     type
     assessment
     audience
     download_url
     printable_student_handout
   )
+
+  def summarize_for_lesson_plan
+    {
+      key: key,
+      name: I18n.t("data.resource.#{key}.name", default: name),
+      url: url,
+      download_url: download_url,
+      audience: audience || 'All',
+      type: type
+    }
+  end
 end
