@@ -159,6 +159,43 @@ class LessonTest < ActiveSupport::TestCase
     assert_equal 'Lesson1', summary[:key]
   end
 
+  test 'can summarize lesson for lesson plan' do
+    script = create :script
+    lesson_group = create :lesson_group, script: script
+    lesson = create(
+      :lesson,
+      lesson_group: lesson_group,
+      script: script,
+      name: 'Lesson 1',
+      key: 'lesson-1',
+      relative_position: 1,
+      absolute_position: 1,
+      properties: {
+        overview: 'lesson overview',
+        purpose: 'learning',
+        preparation: 'do things'
+      }
+    )
+
+    summary = lesson.summarize_for_lesson_show
+    assert_equal 'lesson-1', summary[:key]
+    assert_equal 'lesson overview', summary[:overview]
+    assert_equal 'learning', summary[:purpose]
+    assert_equal 'do things', summary[:preparation]
+    assert_equal script.summarize_for_lesson_show, summary[:unit]
+  end
+
+  test 'can summarize lesson for lesson plan dropdown' do
+    script = create :script
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, lesson_group: lesson_group, script: script, name: 'Lesson 1', key: 'lesson-1', relative_position: 1, absolute_position: 1
+
+    summary = lesson.summarize_for_lesson_dropdown
+    assert_equal 'lesson-1', summary[:key]
+    assert_equal "/lessons/#{lesson.id}", summary[:link]
+    assert_equal 1, summary[:position]
+  end
+
   test 'raises error when creating invalid lockable lessons' do
     script = create :script
     lesson_group = create :lesson_group, script: script
