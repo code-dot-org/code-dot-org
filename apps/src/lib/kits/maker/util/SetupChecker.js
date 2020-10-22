@@ -7,7 +7,8 @@ import {
   gtChrome33,
   isChromeOS
 } from './browserChecks';
-import {detectBoardTypeFromPort} from './boardUtils';
+import {BOARD_TYPE, detectBoardTypeFromPort} from './boardUtils';
+import MicroBitBoard from '../boards/microBit/MicroBitBoard';
 
 export default class SetupChecker {
   port = null;
@@ -51,9 +52,14 @@ export default class SetupChecker {
   /**
    * @return {Promise}
    */
-  detectCorrectFirmware() {
-    this.boardController = new CircuitPlaygroundBoard(this.port);
-    return this.boardController.connectToFirmware();
+  detectCorrectFirmware(boardType) {
+    if (boardType === BOARD_TYPE.MICROBIT) {
+      this.boardController = new MicroBitBoard(this.port);
+      return this.boardController.checkExpectedFirmware();
+    } else {
+      this.boardController = new CircuitPlaygroundBoard(this.port);
+      return this.boardController.connectToFirmware();
+    }
   }
 
   /**
