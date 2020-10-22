@@ -17,8 +17,14 @@ const styles = {
   button: {
     width: 48,
     height: 48,
-    borderRadius: 0,
-    padding: 0
+    // use longhand properties for border radius and padding to properly
+    // override the longhand properties in Button
+    borderTopLeftRadius: 0,
+    borderTopRightRadius: 0,
+    borderBottomLeftRadius: 0,
+    borderBottomRightRadius: 0,
+    paddingLeft: 0,
+    paddingRight: 0
   },
   buttonIcon: {
     margin: 0,
@@ -28,8 +34,8 @@ const styles = {
 
 export default class SendLessonDialog extends Component {
   static propTypes = {
-    isOpen: PropTypes.bool.isRequired,
-    handleClose: PropTypes.func.isRequired,
+    isOpen: PropTypes.bool,
+    handleClose: PropTypes.func,
     showGoogleButton: PropTypes.bool
   };
 
@@ -37,6 +43,7 @@ export default class SendLessonDialog extends Component {
     return (
       <div>
         <Button
+          text=""
           icon="copy"
           iconStyle={styles.buttonIcon}
           color="white"
@@ -53,6 +60,7 @@ export default class SendLessonDialog extends Component {
       <div>
         {/* TODO: Replace placeholder button with actual implementation */}
         <Button
+          text=""
           icon="users"
           iconStyle={styles.buttonIcon}
           color="white"
