@@ -789,6 +789,24 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal 1, summary[:peerReviewsRequired]
   end
 
+  test 'can summarize script for lesson plan' do
+    script = create :script, name: 'my-script'
+    lesson_group = create :lesson_group, script: script
+    create(
+      :lesson,
+      lesson_group: lesson_group,
+      script: script,
+      name: 'Lesson 1',
+      key: 'lesson-1',
+      relative_position: 1,
+      absolute_position: 1
+    )
+
+    summary = script.summarize_for_lesson_show
+    assert_equal '/s/my-script', summary[:link]
+    assert_equal 'lesson-1', summary[:lessons][0][:key]
+  end
+
   class SummarizeVisibleAfterScriptTests < ActiveSupport::TestCase
     setup do
       @student = create :student
