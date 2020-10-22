@@ -485,11 +485,15 @@ function activities(state = [], action) {
       // add level to new activitySection
       let newActivityPosition = null;
       newState.forEach(activity => {
-        activity.activitySections.forEach(activitySection => {
-          if (activitySection.position === action.newActivitySectionPosition) {
-            newActivityPosition = activity.position;
-          }
-        });
+        if (activity.position === action.activityPosition) {
+          activity.activitySections.forEach(activitySection => {
+            if (
+              activitySection.position === action.newActivitySectionPosition
+            ) {
+              newActivityPosition = activity.position;
+            }
+          });
+        }
       });
       const newActivitySections =
         newState[newActivityPosition - 1].activitySections;
