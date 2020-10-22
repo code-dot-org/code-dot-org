@@ -18,7 +18,7 @@ $(document).ready(function() {
   const lessonData = getScriptData('lesson');
   const relatedLessons = getScriptData('relatedLessons');
   const activities = lessonData.activities;
-  const objectives = lessonData.objectives;
+  const objectives = lessonData.objectives || [];
 
   // Rename any keys that are different on the backend.
   activities.forEach(activity => {
@@ -74,6 +74,9 @@ $(document).ready(function() {
     activities.push(emptyActivity);
   }
 
+  // Do the same thing for objective keys as for activity keys above.
+  // React needs unique keys for all objects, but objectives don't get
+  // a key until they're saved to the server, which happens after lesson save.
   objectives.forEach(objective => (objective.key = objective.id + ''));
 
   registerReducers({...reducers});

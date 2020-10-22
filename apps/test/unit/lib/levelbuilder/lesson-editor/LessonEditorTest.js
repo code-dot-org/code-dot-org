@@ -33,7 +33,8 @@ describe('LessonEditor', () => {
       purpose: 'The purpose of the lesson is for people to learn',
       preparation: '- One',
       announcements: [],
-      relatedLessons: []
+      relatedLessons: [],
+      objectives: []
     };
   });
 
