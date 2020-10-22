@@ -113,11 +113,17 @@ describe('activitiesEditorRedux reducer tests', () => {
         ]
       });
 
+      const oldActivities = initialState.activities;
+      let levelIdsBySection = oldActivities[0].activitySections.map(section =>
+        section.scriptLevels.map(l => l.activeId)
+      );
+      assert.deepEqual([[], [], [1, 2]], levelIdsBySection);
+
       const activityPos = 1;
       const sectionPos = 3;
       const levelPos = 2;
       const newSectionPos = 2;
-      const nextState = reducer(
+      const newActivities = reducer(
         initialState,
         moveLevelToActivitySection(
           activityPos,
@@ -127,14 +133,10 @@ describe('activitiesEditorRedux reducer tests', () => {
           newSectionPos
         )
       ).activities;
-      assert.deepEqual(
-        nextState[0].activitySections[1].scriptLevels.map(l => l.activeId),
-        [2]
+      levelIdsBySection = newActivities[0].activitySections.map(section =>
+        section.scriptLevels.map(l => l.activeId)
       );
-      assert.deepEqual(
-        nextState[0].activitySections[2].scriptLevels.map(l => l.activeId),
-        [1]
-      );
+      assert.deepEqual([[], [2], [1]], levelIdsBySection);
     });
 
     it('add level', () => {
