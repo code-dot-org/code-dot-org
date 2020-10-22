@@ -67,6 +67,7 @@ class ActivityCard extends Component {
     activitiesCount: PropTypes.number,
     setActivitySectionRef: PropTypes.func.isRequired,
     updateTargetActivitySection: PropTypes.func.isRequired,
+    targetActivityPos: PropTypes.number,
     targetActivitySectionPos: PropTypes.number,
     activitySectionMetrics: PropTypes.array.isRequired,
     updateActivitySectionMetrics: PropTypes.func,
@@ -200,6 +201,7 @@ class ActivityCard extends Component {
               updateTargetActivitySection={
                 this.props.updateTargetActivitySection
               }
+              targetActivityPos={this.props.targetActivityPos}
               targetActivitySectionPos={this.props.targetActivitySectionPos}
               updateActivitySectionMetrics={
                 this.props.updateActivitySectionMetrics

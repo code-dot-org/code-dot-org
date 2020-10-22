@@ -90,6 +90,7 @@ class ActivitySectionCard extends Component {
     activitiesCount: PropTypes.number,
     activitySectionMetrics: PropTypes.array,
     updateTargetActivitySection: PropTypes.func,
+    targetActivityPos: PropTypes.number,
     targetActivitySectionPos: PropTypes.number,
     updateActivitySectionMetrics: PropTypes.func,
 
@@ -178,9 +179,13 @@ class ActivitySectionCard extends Component {
     const {
       activitySection,
       activityPosition,
+      targetActivityPos,
       targetActivitySectionPos
     } = this.props;
-    if (targetActivitySectionPos === activitySection.position) {
+    if (
+      targetActivityPos === activityPosition &&
+      targetActivitySectionPos === activitySection.position
+    ) {
       // When dragging within a activitySection, reorder the level within that activitySection.
       if (this.state.draggedLevelPos !== this.state.newPosition) {
         this.props.reorderLevel(
@@ -190,12 +195,22 @@ class ActivitySectionCard extends Component {
           this.state.newPosition
         );
       }
-    } else if (targetActivitySectionPos) {
+    } else if (
+      targetActivityPos === activityPosition &&
+      targetActivitySectionPos
+    ) {
       // When dragging between activitySections, move it to the end of the new activitySection.
       this.props.moveLevelToActivitySection(
         activityPosition,
         activitySection.position,
         this.state.draggedLevelPos,
+        targetActivitySectionPos
+      );
+    } else if (targetActivityPos && targetActivitySectionPos) {
+      console.log(
+        'TODO: move to activity',
+        targetActivityPos,
+        'section',
         targetActivitySectionPos
       );
     }
@@ -318,11 +333,13 @@ class ActivitySectionCard extends Component {
   render() {
     const {
       activitySection,
+      targetActivityPos,
       targetActivitySectionPos,
       activityPosition
     } = this.props;
     const {draggedLevelPos, levelPosToRemove} = this.state;
     const isTargetActivitySection =
+      targetActivityPos === activityPosition &&
       targetActivitySectionPos === activitySection.position;
     return (
       <div

@@ -169,6 +169,7 @@ class ActivitiesEditor extends Component {
               key={activity.key}
               setActivitySectionRef={this.setActivitySectionRef}
               updateTargetActivitySection={this.updateTargetActivitySection}
+              targetActivityPos={this.state.targetActivityPos}
               targetActivitySectionPos={this.state.targetActivitySectionPos}
               activitySectionMetrics={this.sectionMetrics}
               updateActivitySectionMetrics={this.updateActivitySectionMetrics}
