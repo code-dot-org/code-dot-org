@@ -1,7 +1,8 @@
 /* Generic machine learning handlers that route to the selected trainer. */
 
-import SVMTrainer from "./SVMTrainer";
-import KNNTrainer from "./KNNTrainer";
+import SVMTrainer from "./trainers/SVMTrainer";
+import KNNTrainer from "./trainers/KNNTrainer";
+import RFTrainer from "./trainers/RFTrainer";
 import { store } from "./index.js";
 import ColumnTypes, {
   getUniqueOptions,
