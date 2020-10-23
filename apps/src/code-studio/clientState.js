@@ -3,6 +3,7 @@
  *       combination of cookies and HTML5 web storage.
  */
 import {trySetSessionStorage} from '../utils';
+import {getStore} from './redux';
 // Note: sessionStorage is not shared between tabs.
 var sessionStorage = window.sessionStorage;
 
@@ -38,6 +39,7 @@ clientState.reset = function() {
 
 clientState.clearProgress = function() {
   sessionStorage.removeItem('progress');
+  sessionStorage.removeItem('lines');
 };
 
 /**
@@ -91,12 +93,16 @@ clientState.writeSourceForLevel = function(
 
 /**
  * Tracks the lines of code written after the user clicks run if their
- * solution is successful.
+ * solution is successful. Skips if the user is logged in.
  * @param {boolean} result - Whether the user's solution is successful
  * @param {number} lines - Number of lines of code user wrote in this solution
  */
 clientState.trackLines = function(result, lines) {
-  if (result && isFinite(lines)) {
+  if (
+    result &&
+    isFinite(lines) &&
+    !getStore().getState().progress.usingDbProgress
+  ) {
     addLines(lines);
   }
 };
