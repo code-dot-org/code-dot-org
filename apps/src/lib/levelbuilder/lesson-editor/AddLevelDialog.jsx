@@ -11,6 +11,7 @@ import AddLevelFilters from '@cdo/apps/lib/levelbuilder/lesson-editor/AddLevelFi
 import CreateNewLevelInputs from '@cdo/apps/lib/levelbuilder/lesson-editor/CreateNewLevelInputs';
 import $ from 'jquery';
 import queryString from 'query-string';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
 
 const styles = {
   dialog: {
@@ -25,12 +26,12 @@ const styles = {
     display: 'flex',
     flexDirection: 'column'
   },
-  leftColumn: {
+  topArea: {
     display: 'flex',
     flexDirection: 'column',
     margin: 15
   },
-  rightColumn: {
+  bottomArea: {
     display: 'flex',
     flexDirection: 'column',
     margin: 15
@@ -67,7 +68,12 @@ export default class AddLevelDialog extends Component {
       methodOfAddingLevel: 'Find Level',
       levels: null,
       searchFields: null,
-      currentPage: 1
+      currentPage: 1,
+      levelName: '',
+      levelType: null,
+      scriptId: null,
+      ownerId: null,
+      numPages: 0
     };
   }
 
@@ -77,7 +83,12 @@ export default class AddLevelDialog extends Component {
       method: 'GET',
       contentType: 'application/json;charset=UTF-8'
     }).done((data, _, request) => {
-      this.setState({searchFields: data});
+      this.setState({
+        searchFields: data,
+        levelType: data.levelOptions[0][1],
+        scriptId: data.scriptOptions[0][1],
+        ownerId: data.ownerOptions[0][1]
+      });
     });
 
     $.ajax({
@@ -85,23 +96,23 @@ export default class AddLevelDialog extends Component {
       method: 'GET',
       contentType: 'application/json;charset=UTF-8'
     }).done(data => {
-      this.setState({levels: data});
+      this.setState({levels: data.levels, numPages: data.numPages});
     });
   }
 
-  handleSearch = (levelName, levelType, scriptId, ownerId) => {
+  handleSearch = () => {
     let queryParams = {page: this.state.currentPage};
-    if (levelName) {
-      queryParams.name = levelName;
+    if (this.state.levelName) {
+      queryParams.name = this.state.levelName;
     }
-    if (levelType) {
-      queryParams.level_type = levelType;
+    if (this.state.levelType) {
+      queryParams.level_type = this.state.levelType;
     }
-    if (scriptId) {
-      queryParams.script_id = scriptId;
+    if (this.state.scriptId) {
+      queryParams.script_id = this.state.scriptId;
     }
-    if (ownerId) {
-      queryParams.owner_id = ownerId;
+    if (this.state.ownerId) {
+      queryParams.owner_id = this.state.ownerId;
     }
 
     const url =
@@ -112,12 +123,36 @@ export default class AddLevelDialog extends Component {
       method: 'GET',
       contentType: 'application/json;charset=UTF-8'
     }).done((data, _, request) => {
-      this.setState({levels: data});
+      this.setState({levels: data.levels, numPages: data.numPages});
     });
   };
 
   handleToggle = value => {
     this.setState({methodOfAddingLevel: value});
+  };
+
+  handleNewSearch = () => {
+    this.setState({currentPage: 1}, this.handleSearch);
+  };
+
+  setCurrentPage = value => {
+    this.setState({currentPage: value}, this.handleSearch);
+  };
+
+  handleChangeLevelName = event => {
+    this.setState({levelName: event.target.value});
+  };
+
+  handleChangeLevelType = event => {
+    this.setState({levelType: event.target.value});
+  };
+
+  handleChangeScript = event => {
+    this.setState({scriptId: event.target.value});
+  };
+
+  handleChangeOwner = event => {
+    this.setState({ownerId: event.target.value});
   };
 
   render() {
@@ -130,38 +165,54 @@ export default class AddLevelDialog extends Component {
       >
         <h2>Add Levels</h2>
         <div style={styles.dialogContent}>
-          <div style={styles.leftColumn}>
-            <ToggleGroup
-              selected={this.state.methodOfAddingLevel}
-              onChange={this.handleToggle}
-            >
-              <button type="button" value={'Find Level'}>
-                Find Level
-              </button>
-              <button type="button" value={'Create New Level'}>
-                Create New Level
-              </button>
-            </ToggleGroup>
-            {this.state.methodOfAddingLevel === 'Find Level' && (
-              <div style={styles.filtersAndLevels}>
-                <AddLevelFilters
-                  searchFields={this.state.searchFields}
-                  handleSearch={this.handleSearch}
-                />
-                <AddLevelTable
+          {this.state.levels && this.state.searchFields && (
+            <div style={styles.topArea}>
+              <ToggleGroup
+                selected={this.state.methodOfAddingLevel}
+                onChange={this.handleToggle}
+              >
+                <button type="button" value={'Find Level'}>
+                  Find Level
+                </button>
+                <button type="button" value={'Create New Level'}>
+                  Create New Level
+                </button>
+              </ToggleGroup>
+              {this.state.methodOfAddingLevel === 'Find Level' && (
+                <div style={styles.filtersAndLevels}>
+                  <AddLevelFilters
+                    searchFields={this.state.searchFields}
+                    handleSearch={this.handleNewSearch}
+                    handleChangeLevelName={this.handleChangeLevelName}
+                    handleChangeLevelType={this.handleChangeLevelType}
+                    handleChangeScript={this.handleChangeScript}
+                    handleChangeOwner={this.handleChangeOwner}
+                    ownerId={this.state.ownerId}
+                    scriptId={this.state.scriptId}
+                    levelName={this.state.levelName}
+                    levelType={this.state.levelType}
+                  />
+                  <AddLevelTable
+                    setCurrentPage={this.setCurrentPage}
+                    currentPage={this.state.currentPage}
+                    addLevel={this.props.addLevel}
+                    levels={this.state.levels}
+                    numPages={this.state.numPages}
+                  />
+                </div>
+              )}
+              {this.state.methodOfAddingLevel === 'Create New Level' && (
+                <CreateNewLevelInputs
+                  levelOptions={this.state.searchFields.levelOptions}
                   addLevel={this.props.addLevel}
-                  levels={this.state.levels}
                 />
-              </div>
-            )}
-            {this.state.methodOfAddingLevel === 'Create New Level' && (
-              <CreateNewLevelInputs
-                levelOptions={this.state.searchFields.levelOptions}
-                addLevel={this.props.addLevel}
-              />
-            )}
-          </div>
-          <div style={styles.rightColumn}>
+              )}
+            </div>
+          )}
+          {(!this.state.levels || !this.state.searchFields) && (
+            <FontAwesome icon="spinner" className="fa-spin" />
+          )}
+          <div style={styles.bottomArea}>
             <h4>Levels in Progression</h4>
             <div style={styles.levelsBox}>
               {/*TODO Hook up removeLevel for the addLevelDialog*/}
