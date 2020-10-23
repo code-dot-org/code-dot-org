@@ -117,7 +117,7 @@ describe('activitiesEditorRedux reducer tests', () => {
             {
               name: 'Level 4',
               id: 4,
-              url: 'https://levelbuilder-studio.code.org/levels/598/edit',
+              url: '/levels/598/edit',
               icon: 'fa-desktop',
               isUnplugged: false,
               isConceptLevel: true,

@@ -368,6 +368,21 @@ class LevelsControllerTest < ActionController::TestCase
     assert_equal edit_level_path(assigns(:level)), JSON.parse(@response.body)["redirect"]
   end
 
+  test "should return newly created level when do_not_redirect" do
+    game = Game.find_by_name("Custom")
+    assert_creates(Level) do
+      post :create, params: {
+        level: {name: "NewCustomLevel", type: 'Artist'},
+        game_id: game.id,
+        program: @program,
+        do_not_redirect: true
+      }
+    end
+
+    assert_equal 'NewCustomLevel', JSON.parse(@response.body)['name']
+    assert_equal 'Artist', JSON.parse(@response.body)['type']
+  end
+
   test "should create studio level" do
     game = Game.find_by_name("CustomStudio")
     assert_creates(Level) do
@@ -865,6 +880,19 @@ class LevelsControllerTest < ActionController::TestCase
     assert_equal old.game, new_level.game
     assert_equal "Fun Level (copy 1)", new_level.name
     assert_equal "/levels/#{new_level.id}/edit", URI(JSON.parse(@response.body)['redirect']).path
+  end
+
+  test "should clone without redirect" do
+    game = Game.find_by_name("Custom")
+    old = create(:level, game_id: game.id, name: "Fun Level")
+    assert_creates(Level) do
+      post :clone, params: {id: old.id, name: "Fun Level (copy 1)", do_not_redirect: true}
+    end
+
+    new_level = assigns(:new_level)
+    assert_equal old.game, new_level.game
+    assert_equal "Fun Level (copy 1)", new_level.name
+    assert_equal "Fun Level (copy 1)", JSON.parse(@response.body)['name']
   end
 
   test "cannot clone hard-coded levels" do

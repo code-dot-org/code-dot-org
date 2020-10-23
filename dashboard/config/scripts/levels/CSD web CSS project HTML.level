@@ -26,7 +26,7 @@
 
     ],
     "teacher_markdown": "**New Style, New Project**: To give students opportunities to create a variety of projects and help emphasize their newfound CSS skills, this project is **not** linked to the previous HTML Mini-Project in Lesson 4. If students would like to build off of their previous work, they can go back and copy-and-paste their HTML Code into this project. Or, they can use this as an opportunity to build a completely new website to suit their personality.",
-    "validation_enabled": "false"
+    "validation_enabled": "true"
   },
   "published": true,
   "notes": "",

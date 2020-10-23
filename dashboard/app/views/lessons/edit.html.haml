@@ -4,4 +4,4 @@
 = form_for @lesson, {url: lesson_path(id: @lesson.id)} do |f|
   #edit-container
 
-= link_to t('crud.show'), @lesson
+= link_to t('crud.show'), lesson_path(id: @lesson.id)

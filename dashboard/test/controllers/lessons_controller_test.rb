@@ -118,6 +118,27 @@ class LessonsControllerTest < ActionController::TestCase
     assert(@response.body.include?(lesson_path(id: @lesson2.id)))
   end
 
+  test 'show lesson with activities' do
+    activity = @lesson.lesson_activities.create(
+      name: 'My Activity',
+      position: 1,
+      seeding_key: 'activity-key'
+    )
+    section = activity.activity_sections.create(
+      name: 'My Activity Section',
+      position: 1,
+      seeding_key: 'activity-section-key'
+    )
+
+    get :show, params: {
+      id: @lesson.id
+    }
+    assert_response :ok
+
+    assert_includes @response.body, activity.name
+    assert_includes @response.body, section.name
+  end
+
   # only levelbuilders can edit
   test_user_gets_response_for :edit, params: -> {{id: @lesson.id}}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
   test_user_gets_response_for :edit, params: -> {{id: @lesson.id}}, user: :student, response: :forbidden
@@ -368,6 +389,42 @@ class LessonsControllerTest < ActionController::TestCase
     assert @lesson.resources.include?(resource_to_keep)
     assert @lesson.resources.include?(resource_to_add)
     refute @lesson.resources.include?(resource_to_remove)
+  end
+
+  test 'update lesson with new objectives' do
+    sign_in @levelbuilder
+    new_update_params = @update_params.merge({objectives: [{id: nil, description: 'description'}].to_json})
+    put :update, params: new_update_params
+    @lesson.reload
+    assert_equal 1, @lesson.objectives.count
+  end
+
+  test 'update lesson by removing objectives' do
+    sign_in @levelbuilder
+    objective_to_keep = create :objective, description: 'to keep', lesson: @lesson
+    objective_to_remove = create :objective, description: 'to remove', lesson: @lesson
+    assert_equal 2, @lesson.objectives.count
+
+    new_update_params = @update_params.merge({objectives: [objective_to_keep.summarize_for_edit].to_json})
+    put :update, params: new_update_params
+    @lesson.reload
+
+    assert_equal 1, @lesson.objectives.count
+    assert_nil Objective.find_by_id(objective_to_remove.id)
+    assert_not_nil objective_to_keep.reload
+  end
+
+  test 'editing an objective updates the objective' do
+    sign_in @levelbuilder
+    objective = create :objective, description: 'to edit', lesson: @lesson
+
+    new_update_params = @update_params.merge({objectives: [{id: objective.id, description: 'edited description'}].to_json})
+    put :update, params: new_update_params
+    @lesson.reload
+    objective.reload
+
+    assert_equal 1, @lesson.objectives.count
+    assert_equal 'edited description', objective.description
   end
 
   test 'add script level via lesson update' do
