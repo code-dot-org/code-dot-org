@@ -14,7 +14,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
      node --version  # --> v8.15.0
      yarn --version  # --> 1.16.0
      ```
-1. If using HTTPS: `git clone https://github.com/code-dot-org/code-dot-org.git`, if using SSH: `git@github.com:code-dot-org/code-dot-org.git`
+1. If using SSH (recommended): `git clone git@github.com:code-dot-org/code-dot-org.git` , if using HTTPS: `git clone https://github.com/code-dot-org/code-dot-org.git`, 
 1. `gem install bundler -v 1.17.3`
 1. `rbenv rehash`
 1. `cd code-dot-org`
