@@ -178,17 +178,16 @@ class Foorm::Form < ActiveRecord::Base
   # to the csv.
   # @return csv text
   def submissions_to_csv(submissions_to_report=nil)
-    submissions_to_report ||= submissions
     calculated_readable_questions = readable_questions
     headers = calculated_readable_questions[:general]
     has_facilitator_questions = !(calculated_readable_questions[:facilitator].nil_or_empty?)
-    filtered_submissions = submissions_to_report
+    filtered_submissions = submissions_to_report || submissions
 
     if has_facilitator_questions
-      filtered_submissions = submissions_to_report.
+      filtered_submissions = filtered_submissions.
         reject do |submission|
-        submission.workshop_metadata&.facilitator_specific?
-      end
+          submission.workshop_metadata&.facilitator_specific?
+        end
     end
 
     # Default headers are the non-facilitator specific set of questions.
@@ -213,6 +212,7 @@ class Foorm::Form < ActiveRecord::Base
 
       headers = potential_new_headers.merge headers
 
+      # look for associated facilitator questions if the form has facilitator questions.
       if has_facilitator_questions
         associated_facilitator_submissions = submission.associated_facilitator_submissions
 
