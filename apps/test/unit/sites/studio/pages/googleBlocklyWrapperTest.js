@@ -48,7 +48,6 @@ describe('Google Blockly Wrapper', () => {
       'FieldRectangularDropdown',
       'FieldTextInput',
       'FieldVariable',
-      'fireUiEvent',
       'fish_locale',
       'Flyout',
       'FunctionalBlockUtils',
