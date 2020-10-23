@@ -9,6 +9,11 @@ class HourOfCodeHelpersTest < Minitest::Test
     Rack::Builder.parse_file(File.absolute_path('../config.ru', __dir__)).first
   end
 
+  def teardown
+    super
+    Geocoder.unstub(:search)
+  end
+
   # Covers #hoc_canonicalized_i18n_path / #hoc_detect_country / #hoc_detect_language in helpers/hourofcode_helpers.rb
   def test_hourofcode_redirect
     gb_ip = '89.151.64.0' # Great Britain IP address range
@@ -55,7 +60,7 @@ class HourOfCodeHelpersTest < Minitest::Test
     cloudfront_ip = '54.240.158.170' # Whitelisted CloudFront-ip proxy range
     local_load_balancer = '10.31.164.34' # Private-network address range
     Geocoder.stubs(:search).with(user_ip, {ip_address: true}).returns([OpenStruct.new(country_code: 'GB')])
-    Geocoder.stubs(:search).with(untrusted_proxy_ip, {ip_address: true}).returns([OpenStruct.new(country_code: 'DE')])
+    Geocoder.stubs(:search).with('127.0.0.1', {ip_address: true}).returns([OpenStruct.new(country_code: 'RD')])
 
     header 'host', 'hourofcode.com'
     header 'X_FORWARDED_FOR', [user_ip, untrusted_proxy_ip, cloudfront_ip, local_load_balancer].join(', ')
