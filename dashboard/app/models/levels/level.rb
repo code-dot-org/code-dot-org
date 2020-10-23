@@ -778,7 +778,7 @@ class Level < ActiveRecord::Base
   end
 
   # Define search filter fields
-  def self.search_options(current_user)
+  def self.search_options
     {
       levelOptions: [
         ['All types', ''],
@@ -786,7 +786,7 @@ class Level < ActiveRecord::Base
       ],
       scriptOptions: [
         ['All scripts', ''],
-        *Script.valid_scripts(current_user).pluck(:name, :id).sort_by {|a| a[0]}
+        *Script.all_scripts.pluck(:name, :id).sort_by {|a| a[0]}
       ],
       ownerOptions: [
         ['Any owner', ''],

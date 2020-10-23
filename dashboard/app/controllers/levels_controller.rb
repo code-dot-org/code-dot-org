@@ -61,7 +61,7 @@ class LevelsController < ApplicationController
   def index
     # Define search filter fields
 
-    search_options = Level.search_options(current_user)
+    search_options = Level.search_options
     @search_fields = [
       {
         name: :name,
@@ -90,12 +90,6 @@ class LevelsController < ApplicationController
 
     filter_levels(params)
     @levels = @levels.page(params[:page]).per(LEVELS_PER_PAGE)
-  end
-
-  # GET /levels/get_filters/
-  # Get all the information to filter levels with
-  def get_filters
-    render json: Level.search_options(current_user)
   end
 
   # GET /levels/get_filtered_levels/
