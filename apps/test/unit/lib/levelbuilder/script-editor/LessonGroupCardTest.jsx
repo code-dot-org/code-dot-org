@@ -11,6 +11,7 @@ export const nonUserFacingGroup = {
   userFacing: false,
   description: '',
   bigQuestions: '',
+  lessonKeys: [],
   lessons: [
     {
       id: 100,
