@@ -25,7 +25,7 @@ describe('ActivitySectionCardButtons', () => {
     const wrapper = shallow(<ActivitySectionCardButtons {...defaultProps} />);
     expect(wrapper.find('button').length).to.equal(3);
     expect(wrapper.find('FindResourceDialog').length).to.equal(1);
-    expect(wrapper.find('AddLevelDialog').length).to.equal(1);
+    expect(wrapper.find('Connect(AddLevelDialog)').length).to.equal(1);
     expect(wrapper.find('LessonTipIconWithTooltip').length).to.equal(2);
     // Don't render this component until add tip button or tip icon are clicked
     expect(wrapper.find('EditTipDialog').length).to.equal(0);

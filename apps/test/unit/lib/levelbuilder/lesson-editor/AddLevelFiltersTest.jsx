@@ -1,8 +1,9 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../../../util/reconfiguredChai';
-import AddLevelFilters from '@cdo/apps/lib/levelbuilder/lesson-editor/AddLevelFilters';
+import {UnconnectedAddLevelFilters as AddLevelFilters} from '@cdo/apps/lib/levelbuilder/lesson-editor/AddLevelFilters';
 import sinon from 'sinon';
+import {searchOptions} from './activitiesTestData';
 
 describe('AddLevelFilters', () => {
   let defaultProps,
@@ -18,11 +19,7 @@ describe('AddLevelFilters', () => {
     handleChangeScript = sinon.spy();
     handleChangeOwner = sinon.spy();
     defaultProps = {
-      searchFields: {
-        levelOptions: [['All types', ''], ['Dancelab', 'Dancelab']],
-        scriptOptions: [['All scripts', ''], ['jigsaw', 2]],
-        ownerOptions: [['Any owner', ''], ['Levelbuilder', 1]]
-      },
+      searchOptions: searchOptions,
       handleSearch,
       handleChangeLevelName,
       handleChangeLevelType,
