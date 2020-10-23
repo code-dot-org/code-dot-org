@@ -64,6 +64,7 @@ class LessonsController < ApplicationController
     # for now, only allow editing of fields that cannot be edited on the
     # script edit page.
     lp = lp.permit(
+      :name,
       :overview,
       :student_overview,
       :assessment,
