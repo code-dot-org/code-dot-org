@@ -24,4 +24,8 @@ class Objective < ActiveRecord::Base
   serialized_attrs %w(
     description
   )
+
+  def summarize_for_edit
+    {id: id, description: description}
+  end
 end
