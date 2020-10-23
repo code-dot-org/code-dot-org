@@ -68,11 +68,6 @@ class AddLevelDialog extends Component {
   constructor(props) {
     super(props);
 
-    console.log(props.searchOptions);
-    console.log(props.searchOptions.levelOptions);
-    console.log(props.searchOptions.levelOptions[0]);
-    console.log(props.searchOptions.levelOptions[0][1]);
-
     this.state = {
       methodOfAddingLevel: 'Find Level',
       levels: null,

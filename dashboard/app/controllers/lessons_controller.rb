@@ -37,7 +37,7 @@ class LessonsController < ApplicationController
   def edit
     @lesson_data = @lesson.summarize_for_lesson_edit
     @related_lessons = @lesson.summarize_related_lessons
-    @search_options = Level.search_options(current_user)
+    @search_options = Level.search_options
     view_options(full_width: true)
   end
 
