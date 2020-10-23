@@ -195,12 +195,14 @@ export const moveLevelToActivitySection = (
   activityPosition,
   activitySectionPosition,
   scriptLevelPosition,
+  newActivityPosition,
   newActivitySectionPosition
 ) => ({
   type: MOVE_LEVEL_TO_ACTIVITY_SECTION,
   activityPosition,
   activitySectionPosition,
   scriptLevelPosition,
+  newActivityPosition,
   newActivitySectionPosition
 });
 
@@ -483,16 +485,8 @@ function activities(state = [], action) {
       updateScriptLevelPositions(scriptLevels);
 
       // add level to new activitySection
-      let newActivityPosition = null;
-      newState.forEach(activity => {
-        activity.activitySections.forEach(activitySection => {
-          if (activitySection.position === action.newActivitySectionPosition) {
-            newActivityPosition = activity.position;
-          }
-        });
-      });
       const newActivitySections =
-        newState[newActivityPosition - 1].activitySections;
+        newState[action.newActivityPosition - 1].activitySections;
       const newScriptLevels =
         newActivitySections[action.newActivitySectionPosition - 1].scriptLevels;
       newScriptLevels.push(scriptLevel);
