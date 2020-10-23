@@ -116,25 +116,45 @@ class LessonOverview extends Component {
           <div style={styles.right}>
             <h2>{i18n.preparation()}</h2>
             <SafeMarkdown markdown={lesson.preparation} />
-            {lesson.resources && <h2>{i18n.links()}</h2>}
-            {lesson.resources['Teacher'] && (
+            {lesson.resources && (
               <div>
-                <h3>For the teachers</h3>
-                <ul>
-                  {lesson.resources['Teacher'].map(resource => (
-                    <li key={resource.key}>{resource.name}</li>
-                  ))}
-                </ul>
-              </div>
-            )}
-            {lesson.resources['Student'] && (
-              <div>
-                <h3>For the students</h3>
-                <ul>
-                  {lesson.resources['Student'].map(resource => (
-                    <li key={resource.key}>{resource.name}</li>
-                  ))}
-                </ul>
+                <h2>{i18n.links()}</h2>
+                {lesson.resources['Teacher'] && (
+                  <div>
+                    <h3>{i18n.forTheTeachers()}</h3>
+                    <ul>
+                      {lesson.resources['Teacher'].map(resource => (
+                        <li key={resource.key}>
+                          <a href={resource.url}>{resource.name}</a>
+                          {resource.type && ` -  ${resource.type}`}
+                          {resource.download_url && (
+                            <a
+                              href={resource.download_url}
+                            >{` (${i18n.download()})`}</a>
+                          )}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+                {lesson.resources['Student'] && (
+                  <div>
+                    <h3>{i18n.forTheStudents()}</h3>
+                    <ul>
+                      {lesson.resources['Student'].map(resource => (
+                        <li key={resource.key}>
+                          <a href={resource.url}>{resource.name}</a>
+                          {resource.type && ` -  ${resource.type}`}
+                          {resource.download_url && (
+                            <a href={resource.download_url}>
+                              {` (${i18n.download()})`}
+                            </a>
+                          )}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
               </div>
             )}
           </div>
