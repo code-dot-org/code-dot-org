@@ -86,7 +86,11 @@ export default class Announcement extends Component {
             </select>
           </div>
         </label>
-        <button className="btn" type="button" onClick={() => onRemove(index)}>
+        <button
+          className="btn btn-danger"
+          type="button"
+          onClick={() => onRemove(index)}
+        >
           Remove
         </button>
       </div>

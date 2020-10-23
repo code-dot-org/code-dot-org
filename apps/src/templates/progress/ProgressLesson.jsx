@@ -150,6 +150,8 @@ class ProgressLesson extends React.Component {
       viewAs === ViewType.Teacher
         ? lesson.description_teacher
         : lesson.description_student;
+
+    const levelUrl = levels[0] && levels[0].url;
     return (
       <div
         style={{
@@ -206,7 +208,7 @@ class ProgressLesson extends React.Component {
           )}
         </div>
         {showTeacherInfo && viewAs === ViewType.Teacher && (
-          <ProgressLessonTeacherInfo lesson={lesson} />
+          <ProgressLessonTeacherInfo lesson={lesson} levelUrl={levelUrl} />
         )}
         {lesson.isFocusArea && <FocusAreaIndicator />}
       </div>

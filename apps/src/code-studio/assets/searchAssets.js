@@ -58,3 +58,9 @@ export function searchAssets(
     )
   };
 }
+
+export function filterOutBackgrounds(assets) {
+  return assets.filter(
+    animation => !animation.categories.includes('backgrounds')
+  );
+}

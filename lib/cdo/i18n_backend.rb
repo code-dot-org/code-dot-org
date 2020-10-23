@@ -125,7 +125,7 @@ module Cdo
         # the result of translations mistakenly including interpolation syntax
         # that was removed in the source string and we want to be notified so
         # we can update the translation.
-        if result.is_a?(String) && ::I18n::INTERPOLATION_PATTERN.match?(result)
+        if result.is_a?(String) && Regexp.union(::I18n.config.interpolation_patterns).match?(result)
           Honeybadger.notify(
             error_class: 'Interpolation Pattern present in translation',
             error_message: "String #{result.inspect} has unused interpolation patterns after translation",

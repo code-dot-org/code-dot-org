@@ -7,6 +7,7 @@ if Rails.env.development?
     # same name.
     Annotate.set_defaults(
       {
+        'models'                  => "true",
         'position_in_routes'      => "before",
         'position_in_class'       => "before",
         'position_in_test'        => "before",

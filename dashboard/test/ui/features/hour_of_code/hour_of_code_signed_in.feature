@@ -40,13 +40,10 @@ Scenario: Failing at puzzle 6, refreshing puzzle 6, bubble should show up as att
   When element "#runButton" is visible
   Then I verify progress in the header of the current page is "attempted" for level 6
 
-# The server should be the source of truth. If we have a stale read, that means we haven't saved the user progress.
 Scenario: Async progress write followed by a stale read
   Given I am on "http://studio.code.org/hoc/20?noautoplay=true"
   And I wait for the page to fully load
   And I verify progress in the header of the current page is "not_tried" for level 20
-  Then mark the current level as completed on the client
-  And I wait for 3 seconds
   And I reload the page
   And I verify progress in the header of the current page is "not_tried" for level 20
   And I wait for 3 seconds

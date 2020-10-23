@@ -17,13 +17,15 @@ describe('RemoveLevelDialog', () => {
       activityPosition: 1,
       activitySection: {
         position: 3,
-        levels: [
+        scriptLevels: [
           {
             position: 1,
             activeId: 22,
-            ids: [22]
+            ids: [22],
+            id: 33
           }
-        ]
+        ],
+        text: ''
       },
       levelPosToRemove: 1,
       handleClose,

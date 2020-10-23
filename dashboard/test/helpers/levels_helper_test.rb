@@ -4,6 +4,7 @@ class LevelsHelperTest < ActionView::TestCase
   include Devise::Test::ControllerHelpers
 
   def sign_in(user)
+    user.reload
     # override the default sign_in helper because we don't actually have a request or anything here
     stubs(:current_user).returns user
   end
