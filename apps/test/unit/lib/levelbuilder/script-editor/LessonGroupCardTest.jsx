@@ -62,6 +62,7 @@ describe('LessonGroupCard', () => {
       lessonGroupsCount: 1,
       lessonGroupMetrics: {},
       targetLessonGroupPos: null,
+      lessonKeys: [],
       lessonGroup: {
         key: 'lg-key',
         displayName: 'Display Name',

@@ -8,7 +8,9 @@ describe('ResourcesEditor', () => {
   let defaultProps;
   beforeEach(() => {
     defaultProps = {
-      resources: resourceTestData
+      resources: resourceTestData,
+      typeOptions: ['Activity Guide', 'Handout'],
+      audienceOptions: ['Teacher', 'Student']
     };
   });
 
@@ -34,11 +36,10 @@ describe('ResourcesEditor', () => {
     const wrapper = shallow(<ResourcesEditor {...defaultProps} />);
     const numResources = wrapper.find('tr').length;
     wrapper.instance().addResource({
-      resource: {
-        key: 'added-resource',
-        name: 'name of resource',
-        url: 'fake.fake'
-      }
+      key: 'added-resource',
+      name: 'name of resource',
+      url: 'fake.fake',
+      properties: {}
     });
     expect(wrapper.find('tr').length).to.equal(numResources + 1);
   });

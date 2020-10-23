@@ -5,6 +5,8 @@ import _ from 'lodash';
 import Select from 'react-select';
 import 'react-select/dist/react-select.css';
 import color from '@cdo/apps/util/color';
+import AddResourceDialog from './AddResourceDialog';
+import Button from '@cdo/apps/templates/Button';
 
 const styles = {
   resourceSearch: {
@@ -40,7 +42,8 @@ export default class ResourcesEditor extends Component {
     this.state = {
       resources: props.resources || [],
       resourceInput: '',
-      searchValue: ''
+      searchValue: '',
+      newResourceDialogOpen: false
     };
   }
 
@@ -103,9 +106,9 @@ export default class ResourcesEditor extends Component {
     });
   };
 
-  addResource = e => {
+  addResource = resource => {
     var {resources} = this.state;
-    resources.push(e.resource);
+    resources = resources.concat([resource]);
     this.setState({resources});
   };
 
@@ -116,9 +119,23 @@ export default class ResourcesEditor extends Component {
     this.setState({resources});
   };
 
+  handleAddResourceClick = e => {
+    e.preventDefault();
+    this.setState({newResourceDialogOpen: true});
+  };
+
+  handleNewResourceDialogClose = () => {
+    this.setState({newResourceDialogOpen: false});
+  };
+
   render() {
     return (
       <div>
+        <AddResourceDialog
+          isOpen={this.state.newResourceDialogOpen}
+          onSave={this.addResource}
+          handleClose={this.handleNewResourceDialogClose}
+        />
         Resources
         <input
           type="hidden"
@@ -133,7 +150,7 @@ export default class ResourcesEditor extends Component {
               name="resource_search"
               loadOptions={this.getOptions}
               value={this.state.searchValue}
-              onChange={this.addResource}
+              onChange={e => this.addResource(e.resource)}
               onValueClick={this.addResource}
               placeholder={''}
             />
@@ -141,9 +158,9 @@ export default class ResourcesEditor extends Component {
           <table style={{width: '100%'}}>
             <thead>
               <tr>
-                <th style={{width: '10%'}}>Key</th>
-                <th style={{width: '25%'}}>Name</th>
-                <th style={{width: '15%'}}>Type</th>
+                <th style={{width: '20%'}}>Key</th>
+                <th style={{width: '20%'}}>Name</th>
+                <th style={{width: '10%'}}>Type</th>
                 <th style={{width: '40%'}}>URL</th>
                 <th style={{width: '10%'}}>Actions</th>
               </tr>
@@ -156,7 +173,7 @@ export default class ResourcesEditor extends Component {
                 >
                   <td>{resource.key}</td>
                   <td>{resource.name}</td>
-                  <td>{resource.type}</td>
+                  <td>{resource.properties ? resource.properties.type : ''}</td>
                   <td>{resource.url}</td>
                   <td style={{backgroundColor: 'white'}}>
                     <div
@@ -170,6 +187,11 @@ export default class ResourcesEditor extends Component {
               ))}
             </tbody>
           </table>
+          <Button
+            onClick={this.handleAddResourceClick}
+            text={'Add New Resource'}
+            color={color.blue}
+          />
         </div>
       </div>
     );
