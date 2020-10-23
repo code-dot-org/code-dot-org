@@ -89,7 +89,7 @@ class Foorm::Submission < ActiveRecord::Base
       'created_at' => created_at,
       'user_id' => workshop_metadata.user&.id,
       'pd_workshop_id' => workshop_metadata.pd_workshop&.id,
-      'pd_session_id' => workshop_metadata.pd_session&.id,
+      'pd_session_id' => workshop_metadata.pd_session&.id
     }
   end
 
