@@ -44,8 +44,9 @@ class LessonsController < ApplicationController
   def update
     resources = (lesson_params['resources'] || []).map {|key| Resource.find_by_key(key)}
     @lesson.resources = resources.compact
-    @lesson.update!(lesson_params.except(:resources))
+    @lesson.update!(lesson_params.except(:resources, :objectives))
     @lesson.update_activities(JSON.parse(params[:activities])) if params[:activities]
+    @lesson.update_objectives(JSON.parse(params[:objectives])) if params[:objectives]
 
     redirect_to lesson_path(id: @lesson.id)
   end
@@ -72,7 +73,8 @@ class LessonsController < ApplicationController
       :purpose,
       :preparation,
       :announcements,
-      :resources
+      :resources,
+      :objectives
     )
     lp[:announcements] = JSON.parse(lp[:announcements]) if lp[:announcements]
     lp[:resources] = JSON.parse(lp[:resources]) if lp[:resources]
