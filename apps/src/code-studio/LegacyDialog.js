@@ -1,6 +1,16 @@
 import $ from 'jquery';
 import debounce from 'lodash/debounce';
 
+function createOpenInNewTabButton(parentElement, link) {
+  if (link) {
+    parentElement.append(
+      $(
+        `<div><a target="_blank" href="${link}" rel="noopener noreferrer"></a></div>`
+      ).addClass('open-link')
+    );
+  }
+}
+
 /**
  * Adjust the maximum size of the popup's inner scroll area so that the whole popup
  * will fit within the browser viewport.
@@ -81,28 +91,12 @@ var LegacyDialog = (module.exports = function(options) {
       .append(header);
     if (close) {
       modalHeader.append(closeLink);
-      if (options.link) {
-        modalHeader.append(
-          $(
-            `<div><a target="_blank" href="${
-              options.link
-            }" rel="noopener noreferrer"></a></div>`
-          ).addClass('open-link')
-        );
-      }
+      createOpenInNewTabButton(modalHeader, options.link);
     }
     this.div.append(modalHeader);
   } else if (close) {
     modalBody.append(closeLink);
-    if (options.link) {
-      modalBody.append(
-        $(
-          `<div><a target="_blank" href="${
-            options.link
-          }" rel="noopener noreferrer"></a></div>`
-        ).addClass('open-link')
-      );
-    }
+    createOpenInNewTabButton(modalBody, options.link);
   }
 
   modalBody.append(body);
