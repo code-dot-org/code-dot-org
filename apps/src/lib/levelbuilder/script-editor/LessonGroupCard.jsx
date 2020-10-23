@@ -69,7 +69,7 @@ class LessonGroupCard extends Component {
     lessonGroupMetrics: PropTypes.object,
     setTargetLessonGroup: PropTypes.func,
     targetLessonGroupPos: PropTypes.number,
-    lessonKeys: PropTypes.array,
+    lessonKeys: PropTypes.array.isRequired,
 
     // from redux
     addLesson: PropTypes.func.isRequired,

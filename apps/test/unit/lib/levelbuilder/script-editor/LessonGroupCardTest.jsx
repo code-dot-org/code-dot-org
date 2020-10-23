@@ -11,7 +11,6 @@ export const nonUserFacingGroup = {
   userFacing: false,
   description: '',
   bigQuestions: '',
-  lessonKeys: [],
   lessons: [
     {
       id: 100,
@@ -63,6 +62,7 @@ describe('LessonGroupCard', () => {
       lessonGroupsCount: 1,
       lessonGroupMetrics: {},
       targetLessonGroupPos: null,
+      lessonKeys: [],
       lessonGroup: {
         key: 'lg-key',
         displayName: 'Display Name',
