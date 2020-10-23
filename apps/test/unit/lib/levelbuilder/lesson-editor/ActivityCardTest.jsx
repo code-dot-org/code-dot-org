@@ -12,7 +12,8 @@ describe('ActivityCard', () => {
     moveActivity,
     updateActivityField,
     setActivitySectionRef,
-    updateTargetActivitySection;
+    updateTargetActivitySection,
+    updateActivitySectionMetrics;
   beforeEach(() => {
     addActivitySection = sinon.spy();
     removeActivity = sinon.spy();
@@ -20,6 +21,7 @@ describe('ActivityCard', () => {
     updateActivityField = sinon.spy();
     setActivitySectionRef = sinon.spy();
     updateTargetActivitySection = sinon.spy();
+    updateActivitySectionMetrics = sinon.spy();
     defaultProps = {
       activity: sampleActivities[0],
       activitiesCount: 1,
@@ -29,6 +31,7 @@ describe('ActivityCard', () => {
       updateActivityField,
       setActivitySectionRef,
       updateTargetActivitySection,
+      updateActivitySectionMetrics,
       targetActivitySectionPos: 1,
       activitySectionMetrics: []
     };

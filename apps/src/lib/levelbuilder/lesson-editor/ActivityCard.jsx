@@ -70,7 +70,7 @@ class ActivityCard extends Component {
     targetActivityPos: PropTypes.number,
     targetActivitySectionPos: PropTypes.number,
     activitySectionMetrics: PropTypes.array.isRequired,
-    updateActivitySectionMetrics: PropTypes.func,
+    updateActivitySectionMetrics: PropTypes.func.isRequired,
 
     //redux
     addActivitySection: PropTypes.func,
@@ -139,7 +139,12 @@ class ActivityCard extends Component {
   };
 
   render() {
-    const {activity} = this.props;
+    const {
+      activity,
+      setActivitySectionRef,
+      updateTargetActivitySection,
+      updateActivitySectionMetrics
+    } = this.props;
 
     return (
       <div className="uitest-activity-card">
@@ -191,21 +196,13 @@ class ActivityCard extends Component {
               activitySectionsCount={activity.activitySections.length}
               activitiesCount={this.props.activitiesCount}
               ref={ref => {
-                this.props.setActivitySectionRef(
-                  ref,
-                  activity.position,
-                  section.position
-                );
+                setActivitySectionRef(ref, activity.position, section.position);
               }}
               activitySectionMetrics={this.props.activitySectionMetrics}
-              updateTargetActivitySection={
-                this.props.updateTargetActivitySection
-              }
+              updateTargetActivitySection={updateTargetActivitySection}
               targetActivityPos={this.props.targetActivityPos}
               targetActivitySectionPos={this.props.targetActivitySectionPos}
-              updateActivitySectionMetrics={
-                this.props.updateActivitySectionMetrics
-              }
+              updateActivitySectionMetrics={updateActivitySectionMetrics}
             />
           ))}
           <button
