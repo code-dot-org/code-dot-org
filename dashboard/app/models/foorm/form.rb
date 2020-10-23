@@ -178,7 +178,6 @@ class Foorm::Form < ActiveRecord::Base
   # to the csv.
   # @return csv text
   def submissions_to_csv(submissions_to_report=nil)
-    start_time = Time.now
     submissions_to_report ||= submissions
     calculated_readable_questions = readable_questions
     headers = calculated_readable_questions[:general]
@@ -192,12 +191,8 @@ class Foorm::Form < ActiveRecord::Base
       end
     end
 
-    filter_time = Time.now
-    puts "time to filter: #{filter_time - start_time} seconds"
     # Default headers are the non-facilitator specific set of questions.
-
     parsed_answers = []
-    start_submission_parsing = Time.now
     filtered_submissions.each do |submission|
       next if submission.form_name != name || submission.form_version != version
       answers = submission.formatted_answers
@@ -261,8 +256,6 @@ class Foorm::Form < ActiveRecord::Base
       parsed_answers << answers
     end
 
-    puts "time to parse submissions: #{Time.now - start_submission_parsing}"
-
     # Now we know all the headers, create comma_separated_submissions with answers for all headers (filling in with
     # nil where necessary)
     comma_separated_submissions = []
@@ -276,7 +269,6 @@ class Foorm::Form < ActiveRecord::Base
       rows_to_write.each {|row| csv << row}
     end
 
-    puts "total time: #{Time.now - start_time}"
     csv_result
   end
 
