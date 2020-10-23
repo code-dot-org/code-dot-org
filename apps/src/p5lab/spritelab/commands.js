@@ -51,6 +51,10 @@ export const commands = {
     actionCommands.edgesDisplace.apply(this, [spriteArg]);
   },
 
+  isCostumeEqual(spriteArg, costumeName) {
+    return actionCommands.isCostumeEqual(spriteArg, costumeName);
+  },
+
   isKeyPressed(key) {
     return actionCommands.isKeyPressed.apply(this, [key]);
   },
@@ -89,6 +93,10 @@ export const commands = {
 
   setProp(spriteArg, prop, val) {
     actionCommands.setProp.apply(this, [spriteArg, prop, val]);
+  },
+
+  setQuestion(questionText, variableName, callback) {
+    worldCommands.setQuestion(questionText, variableName, callback);
   },
 
   setTint(spriteArg, color) {
@@ -133,8 +141,16 @@ export const commands = {
     eventCommands.keyPressed(condition, key, callback);
   },
 
+  repeatForever(callback) {
+    eventCommands.repeatForever(callback);
+  },
+
   spriteClicked(condition, spriteArg, callback) {
     eventCommands.spriteClicked(condition, spriteArg, callback);
+  },
+
+  whenQuestionAnswered(variableName, callback) {
+    eventCommands.whenQuestionAnswered(variableName, callback);
   },
 
   // Location commands

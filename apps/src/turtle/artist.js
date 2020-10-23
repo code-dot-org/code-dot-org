@@ -334,6 +334,7 @@ Artist.prototype.init = function(config) {
     appSpecificConstants.smallStaticAvatar = config.skin.blankAvatar;
     appSpecificConstants.failureAvatar = config.skin.blankAvatar;
   }
+  appSpecificConstants.validationEnabled = !!config.level.validationEnabled;
   this.studioApp_.setPageConstants(config, appSpecificConstants);
 
   var iconPath =

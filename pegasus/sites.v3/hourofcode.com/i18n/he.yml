@@ -9,26 +9,40 @@ he:
   campaign_date_start_long: רביעי בדצמבר
   campaign_date_short: בין הרביעי ל עשירי בדצמבר
   campaign_date_full: בין הרביעי לעשירי בדצמבר
-  campaign_date_year: '2017'
-  campaign_date_full_year: 4-10 בדצמבר, 2017
+  campaign_date_year: '2020'
+  campaign_date_full_year: 7-13 בדצמבר, 2020
   latam_campaign_date_start_short: Oct. 1
   latam_campaign_date_start_long: October 1
   latam_campaign_date_short: Oct. 1 - Dec. 18
   latam_campaign_date_full: October 1 - December 18
-  latam_campaign_date_year: '2017'
+  latam_campaign_date_year: '2020'
   latam_campaign_date_full_year: October 1, 2020 - December 18, 2020
   europe_campaign_date_start_short: Oct. 10
   europe_campaign_date_start_long: October 10
   europe_campaign_date_short: Oct. 10-25
   europe_campaign_date_full: October 10-25
-  europe_campaign_date_year: '2017'
+  europe_campaign_date_year: '2020'
   europe_campaign_date_full_year: October 10-25, 2020
   africa_campaign_date_start_short: Oct. 1
   africa_campaign_date_start_long: October 1
   africa_campaign_date_short: Oct. 1-31
   africa_campaign_date_full: October 1-31
-  africa_campaign_date_year: '2017'
+  africa_campaign_date_year: '2020'
   africa_campaign_date_full_year: October 1-31, 2020
+  hoc2020_header: Learn today, build a brighter tomorrow.
+  hoc2020_header_with_line_break_markdown: |-
+    Learn today,
+
+    build a brighter tomorrow.
+  social_hoc2020_cs_important: 'CS is more important than ever. Let''s build the future
+    we want. #CSforGood'
+  social_hoc2020_hoc_is_about_csforgood: 'The #HourOfCode is about #CSforGood. Learn
+    today, build a brighter tomorrow.'
+  social_hoc2020_global_movement: The Hour of Code is a global movement reaching tens
+    of millions of students. One-hour tutorials are available in 45+ languages for
+    all ages.
+  social_hoc2020_coming_dates: The Hour of Code is coming December 7-13, 2020. Computer
+    science is foundational for every student to learn.
   hoc2019_header: למדו מדעי המחשב ושנו את העולם
   hoc2019_header_line1_mobile: למדו מדעי המחשב
   hoc2019_header_line2_mobile: שנה את העולם
@@ -67,7 +81,7 @@ he:
   oceans_landing_cs_for_good_desc: משאבים שיעזרו לתלמידים להבין את התפקיד שמדעי המחשב
     יכולים למלא ביצירות עולם צודק יותר.
   oceans_landing_videos: סרטונים על אינטליגנציה מלאכותית ולמידת־מכונה
-  oceans_behind_the_scenes: 'אינטליגנציה מלאכותית למען האוקיינוסים: מאחורי הקלעים'
+  oceans_behind_the_scenes: 'בינה מלאכותית למען האוקיינוסים: מאחורי הקלעים'
   oceans_behind_the_scenes_1: שלבים 2־4 משתמשים במודל מאומן־מראש שסופק על־ידי פרויקט
     <a href="https://www.tensorflow.org/" >TensorFlow</a> <a href="https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md">
     MobileNet </a> . מודל MobileNet הוא <a href="https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks">רשת
@@ -108,54 +122,60 @@ he:
     bias, while exploring ethical issues and how AI can be used to address world problems.
     Computer science is about so much more than coding! Enjoy Code.org's first step
     in a new journey to teach more about AI throughout our curriculum.
+  hoc_live: Hour of Code Live
+  hoc_live_sign_up_title: Sign up for Hour of Code Live
+  hoc_live_sign_up_message: Learn in real time alongside special guests! Students
+    of all ages and abilities, including those without computers, are welcome. Join
+    our mailing list to receive recordings of the episodes and resources to continue
+    learning at home.
+  hoc_live_join_us: הצטרפו אלינו
   hoc_overview_oceans_tutorial_header: אינטליגנציה מלאכותית למען האוקיינוסים
   hoc_overview_oceans_tutorial_desc: Learn about artificial intelligence (AI), machine
     learning, training data, and bias, while exploring ethical issues and how AI can
     be used to address world problems.
-  ai_video_title_what_is_ai: מה זו אינטליגנציה מלאכותית?
+  ai_video_title_what_is_ai: מה זו בינה מלאכותית?
   ai_video_title_algorithm_bias: מאבק בהטיות באלגוריתמים
   ai_video_title_phone_knows_dog: איך הטלפון שלכם יודע שזה כלב?
-  ai_video_title_what_is_ml: מה זה למידת־מכונה?
+  ai_video_title_what_is_ml: מהי למידת מכונה?
   ai_video_title_ml_big_small_prickly: 'Machine Learning: Solving Problems Big, Small
     and Prickly'
-  ai_video_title_ethics_of_ai: האתיקה של האינטליגנציה המלאכותית
-  ai_video_title_ml_human_bias: למידת־מכונה והטייה אנושית
-  ai_video_title_seeing_ai: 'רואים אינטליגנציה מלאכותית: הפיכת העולם הויזואלי לנגיש
-    יותר'
+  ai_video_title_ethics_of_ai: האתיקה של הבינה המלאכותית
+  ai_video_title_ml_human_bias: למידת מכונה והטיה אנושית
+  ai_video_title_seeing_ai: 'רואים בינה מלאכותית: הפיכת העולם החזותי לנגיש יותר'
   activity: Activity
   name: Name
   description: Description
   audience: Audience
-  ai_resource_header: ללמוד וללמד על אינטליגנציה מלאכותית
+  ai_resource_header: ללמוד וללמד על בינה מלאכותית
   ai_resource_minecraft: Minecraft AI for Good
-  ai_resource_minecraft_desc: 'גישה למשאבים חינמיים הכוללים מערך שיעור, תוכנית לימודים
-    של מדעי המחשב, והדרכות למורים. (נדרשת גישה ל"מיינקראפט: מהדורת החינוך")'
-  ai_resource_ml_for_kids: למידת־מכונה עבור ילדים
-  ai_resource_ml_for_kids_desc: הדריכו מודל למידת־מכונה בעזרת טקסט, מספרים או תמונות,
+  ai_resource_minecraft_desc: 'גישה למשאבים חינמיים הכוללים מערך שיעור, סרטונים, תוכנית
+    לימודים של מדעי המחשב והדרכות למורים. (נדרשת גישה ל"מיינקראפט: מהדורת החינוך")'
+  ai_resource_ml_for_kids: למידת מכונה עבור ילדים
+  ai_resource_ml_for_kids_desc: הדריכו מודל למידת מכונה בעזרת טקסט, מספרים או תמונות,
     והשתמשו בו כדי ליצור משחקים ב־Scratch.
-  ai_resource_ibm_ml_for_kids: 'IBM: למידת־מכונה עבור ילדים'
-  ai_resouce_ibm_ml_for_kids_desc: פעילויות מעשיות להצגת מודלים פשוטים של למידת־מכונה
+  ai_resource_ibm_ml_for_kids: 'IBM: למידת מכונה עבור ילדים'
+  ai_resouce_ibm_ml_for_kids_desc: פעילויות מעשיות להצגת מודלים פשוטים של למידת מכונה
     בפני תלמידים, דרך משחקים ופרויקטים אינטראקטיביים.
   ai_resource_ecs: 'ECS: Artificial Intelligence (AI)'
-  ai_resource_ecs_desc: יחידת תוכנית לימודים חדשה וחלופית עבור תוכנית הלימודים "חקר
-    מדעי המחשב (ECS)".
-  ai_resource_elements_ai: אלמנטים של אינטליגנציה מלאכותית
+  ai_resource_ecs_desc: יחידת לימודים חדשה וחלופית עבור תוכנית הלימודים "חקר מדעי
+    המחשב (ECS)".
+  ai_resource_elements_ai: אלמנטים של בינה מלאכותית
   ai_resource_elements_ai_desc: סדרת קורסים מקוונים חינמיים שנוצרו על־ידי Reaktor
     ואוניברסיטת הלסינקי.
   ai_resource_cognimates: Cognimates
-  ai_resource_cognimates_desc: פלטפורמת חינוך, המבוססת על אינטליגנציה מלאכותית, ליצירת
-    משחקים, תכנות רובוטים והדרכות.
+  ai_resource_cognimates_desc: פלטפורמת חינוך, המבוססת על בינה מלאכותית, ליצירת משחקים,
+    תכנות רובוטים והדרכות.
   ai_audience_k12: K-12 (נדרשת קריאה)
   ai_audience_hs: תיכון
   ai_activity_header: Activities Powered by AI and ML
-  ai_activity_seeing_ai: רואים אינטליגנציה מלאכותית
-  ai_activity_seeing_ai_desc: אפליקציה חינמית המתארת את העולם סביבנו במגוון של שפות.
+  ai_activity_seeing_ai: רואים בינה מלאכותית
+  ai_activity_seeing_ai_desc: אפליקציה חינמית המספרת על העולם סביבנו במגוון של שפות.
   ai_activity_quick_draw: מהר, שלפו!
   ai_activity_quick_draw_desc: האם רשת עצבית יכולה לזהות שרבוטים?
   ai_activity_teachable: מכונה שניתנת ללימוד
-  ai_activity_teachable_desc: הדריכו מחשב לזהות תמונות, צלילים ותנוחות שלכם.
+  ai_activity_teachable_desc: הדריכו מחשב לזהות את התמונות, הצלילים והתנוחות שלכם.
   ai_activity_experiments: AI Experiments with Google
-  ai_activity_experiments_desc: התחילו לחקור למידת־מכונה דרך תמונות, ציורים, שפה,
+  ai_activity_experiments_desc: התחילו לחקור למידת מכונה דרך תמונות, ציורים, שפה,
     מוזיקה ועוד.
   ai_activity_zooniverse: Zooniverse - Snapshot Mountain Zebra
   ai_activity_zooniverse_desc: עזרו להגן על "זברת הר־הכַּף" באמצעות זיהוי החיות האחרות
@@ -861,7 +881,8 @@ he:
   highlights_title: דגשים
   highlights_header: שעת תכנות - דגשים
   highlights_description: רגעים אהובים מתוך הקמפיינים של שעת תכנות.
-  higlights_see_more: ראה דגשים נוספים
+  highlights_previous: Highlights from previous years
+  highlights_see_more: See more highlights
   highlights_readmore: קרא עוד
   highlights_watchvideo: צפה בוידאו
   highlights_facebook: שתף בפייסבוק
@@ -2215,8 +2236,7 @@ he:
     a pet that you can feed and play with.
   tutorial_carest_shortdescription: Use the MicroPython programming language to make
     a pet that you can feed and play with.
-  tutorial_accai_shortdescription: לַמְּדוּ רובוט אינטליגנציה מלאכותית לחקור כוכב־לכת
-    חדש!
+  tutorial_accai_shortdescription: לַמְּדוּ רובוט בינה מלאכותית לחקור כוכב לכת חדש!
   tutorial_vceclipse_shortdescription: Code a solar eclipse simulation with JavaScript!
   tutorial_pmzero_shortdescription: Create and program a 3D Pac-Man Maze World
   tutorial_hsela_shortdescription: 'Telling stories: ELA + coding'
@@ -2693,7 +2713,7 @@ he:
     "Breaking News: 400 students at Roosevelt participate in the Hour of Code"'
   tutorial_kodable-pre_longdescription: Kodable is a self-guided game that introduces
     kids 5+ to programming basics. Having a teacher or parent nearby is optimal, but
-    not necessary.
+    not necessary. Happy koding!
   tutorial_highseas_longdescription: Animate an ocean wave to create a setting, then
     tell a story that takes place on the high seas.
   tutorial_capython_longdescription: Python is an engaging and simple language to
@@ -4418,10 +4438,11 @@ he:
   tutorial_carest_longdescription: Join Ross at the Food Avengers restaurant. Use
     your computational thinking skills to help Ross solve problems and serve dinner
     to 8 excited kids.
-  tutorial_accai_longdescription: רובוט נשלח לכוכב־לכת לא ידוע כדי לגלות האם האנושות
+  tutorial_accai_longdescription: רובוט נשלח לכוכב לכת לא ידוע כדי לגלות האם האנושות
     יכולה להקים שם מושבה חדשה. הוא חוקר את הכוכב כדי למצוא מחסה, מגלה אוכלוסייה מקומית
-    ומתקשר איתה. בתור השחקנים, אתם תתנסו בטכניקות אינטליגנציה מלאכותית שונות כדי ללמד
-    את הרובוט איך לזהות חיות וצמחים, להבין שפה חדשה, דיאלוג עם התושבים וכו'.
+    ומתקשר איתה. בתור השחקנים, אתם תתנסו בטכניקות שונות של בינה מלאכותית כדי ללמד
+    את הרובוט איך לזהות חיות וצמחים, איך להבין שפה חדשה, איך לנהל דיאלוג עם התושבים
+    וכו'.
   tutorial_vceclipse_longdescription: 2017 gave us one of the most spectacular natural
     phenomena of our lives, and now we're going to simulate the solar eclipse with
     JavaScript! Looking at the eclipse as a system of moving parts, we can decompose
@@ -4844,18 +4865,17 @@ he:
     they will create a program to teach their KIBO to dance to the music. Students
     will learn how to create a program to express an idea (in this case, a dance),
     with a focus on sequencing ability.
-  tutorial_buildcharacters_longdescription: The most popular pre-reader app now includes
-    a digital Maker Space! Make levels, design games, or build characters. Choose
-    your activity and start creating with Kodable!  Featuring JavaScript for upper
+  tutorial_buildcharacters_longdescription: What are some character traits you can
+    identify in books or people you know? Design your own fuzz and use code to modify
+    its properties and bring your character to life! Featuring JavaScript for upper
     elementary.
   tutorial_designgames_longdescription: The most popular pre-reader app now includes
     a digital Maker Space! Make levels, design games, or build characters. Choose
     your activity and start creating with Kodable!  Featuring JavaScript for upper
     elementary.
-  tutorial_makelevels_longdescription: The most popular pre-reader app now includes
-    a digital Maker Space! Make levels, design games, or build characters. Choose
-    your activity and start creating with Kodable!  Featuring JavaScript for upper
-    elementary.
+  tutorial_makelevels_longdescription: Can you build a symmetrical maze? A maze with
+    right angles? Get creative and complete maze-building challenges with basic coding
+    concepts. Aligned with K-5 Common Core math.
   tutorial_wizard_longdescription: Journey into the world of Code Magic as a Code
     Wizard. Learn to create and cast spells to customize your castle.
   tutorial_mbscratchcards_longdescription: Connect the physical world of micro:bit
@@ -8184,8 +8204,8 @@ he:
   tutorial_codewards_string_detail_programming_languages: קופי סקריפט
   tutorial_olympics_string_detail_programming_languages: קופי סקריפט
   tutorial_codinismhero_string_detail_programming_languages: Python
-  tutorial_discovery_string_detail_programming_languages: Blocks
-  tutorial_csfirstname_string_detail_programming_languages: Blocks
+  tutorial_discovery_string_detail_programming_languages: Blocks, Scratch
+  tutorial_csfirstname_string_detail_programming_languages: Blocks, Scratch
   tutorial_obstaclecourse_string_detail_programming_languages: Blocks
   tutorial_edisonmove_string_detail_programming_languages: Python, EdPy, a text-based
     programming language based on Python.
@@ -8425,8 +8445,8 @@ he:
     Room style project, the learner joins Marlee and Tyrell as they learn about binary
     numbers, light, color, and more to unravel Professor Photon's Color Conundrum,
     and restore color to the world's devices.
-  tutorial_kodablebeach_longdescription: Learn to program using basic commands and
-    clean up the beach to protect ocean life.
+  tutorial_kodablebeach_longdescription: Save the beach babies! Learn to program using
+    basic commands and clean up the beach to protect ocean life.
   tutorial_tynkeren_longdescription: 'Part of the UN Sustainable Development Goals
     project, this coding prompt shows off projects exploring renewable energy, energy
     efficiency, and access to energy. Readers can play with working projects and advanced
@@ -9168,7 +9188,7 @@ he:
   tutorial_ai-oceans_string_detail_platforms: ''
   tutorial_scratchimagine_string_detail_programming_languages: Blocks
   tutorial_codesterspsa_string_detail_programming_languages: Python
-  tutorial_googlehero_string_detail_programming_languages: Blocks
+  tutorial_googlehero_string_detail_programming_languages: Blocks, Scratch
   tutorial_codestersbball_string_detail_programming_languages: Python
   tutorial_scratchcartoon_string_detail_programming_languages: Blocks
   tutorial_codemonkeyjr_string_detail_programming_languages: Blocks

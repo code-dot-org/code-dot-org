@@ -12,7 +12,7 @@ title: Nauka informatyki po zamknięciu szkół w odpowiedzi na Covid 19
 
 <p>Stajemy przed niezwykle trudnym wyzwaniem, powodowanym przez wybuch globalnej epidemii związanej z wirusem COVID-19, i zmaganiem się z rosnącymi obawami dotyczącymi naszego zdrowia, naszych społeczności i gospodarki. Względy bezpieczeństwa spowodowały powszechne zamykanie szkół. </p>
 <p>Chcielibyśmy wesprzeć nauczycieli, uczniów i rodziny w każdy możliwy sposób. Poniżej znajduje się wykaz zasobów, które pomogą Twoim uczniom uczyć się informatyki w domu. <strong> Rodzice - jeśli rozważacie utworzenie konta Code.org dla Twojego dziecka lub pomoc w uzyskaniu dostępu do istniejącego konta, <a href = "https://support.code.org/hc/en-us/articles/ 360040703792 "> przeczytajcie te wyjaśnienia</a>. </strong></p>
-<p>Pracujemy również nad zasobami, <a href="#teacher-support">aby pomóc nauczycielom w trakcie kursu</a> w kontynuowania nauczania informatyki, gdy ich uczniowie są daleko. </p>
+<p>Zebraliśmy również pewne <a href="#teacher-support"> zasoby, które mają pomóc nauczycielom w kontynuowaniu nauczania informatyki </a>, gdy ich uczniowie przebywają z dala lub w klasach z oddalonymi od siebie uczniami. </p>
 <p><a href="#apps">Jeśli nie masz komputera w domu,  Zobacz możliwości dla smartfona</a></p>
 
 <br>
@@ -130,31 +130,31 @@ To świetna okazja dla uczniów, rozpoczynających samodzielną naukę. Poznasz 
 <div style="clear: both; padding-top: 40px; border-bottom:1px solid #00adbc"></div>
 <a id="teacher-support"></a>
 
-## Wsparcie dla nauczycieli w trakcie kursu
-Pracujemy nad stworzeniem wsparcia dla nauczycieli prowadzących obecnie nasze kursy tutaj i będziemy aktualizować zasoby i rekomendacje, jak tylko będziemy je mieli.
+## Wsparcie dla nauczycieli w wirtualnych lub oddalonych społecznie klasach
+Odwiedź <a href="https://code.org/alternative-classrooms">code.org/alternative-classrooms</a>, aby wyświetlić zasoby i sugestie dla nauczycieli w środowiskach wirtualnych lub oddalonych społecznie klasach. Dostęp do zasobów dotyczących kursów można uzyskać klikając poniższe łącza.
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
 
 <div class="solid-block-header" style="margin-top:10px"><a href="/athome/csp" style="color:#ffffff; text-decoration: none"><p>Podstawy informatyki</p></a></div>
-Przewodnik dla nauczycieli z materiałami, z których uczniowie mogą korzystać w domu, aby kontynuować naukę i przygotowywać się do nadchodzącego egzaminu AP
-
 </div>
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
 
 <div class="solid-block-header" style="background-color:#b9bf15; margin-top:10px"><a href="/athome/csd" style="color:#ffffff; text-decoration: none"><p>Odkrycia Informatyczne</p></a></div>
-Przewodnik dla nauczycieli z materiałami, z których uczniowie mogą korzystać w domu, aby kontynuować naukę w ramach Odkryć informatycznych
-
 </div>
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
 
 <div class="solid-block-header" style="background-color:#ffa400; margin-top:10px"><a href="/athome/csf" style="color:#ffffff; text-decoration: none"><p>Podstawy Informatyki</p></a></div>
-Przewodnik dla nauczycieli z materiałami, z których uczniowie mogą korzystać w domu, aby kontynuować naukę w ramach Podstaw informatyki
-
 </div>
 <div style="clear: both; margin-bottom: 15px"></div>
 
 <p><a href="#top">Powrót na górę</a></p>
 
 <div style="clear: both; padding-top: 40px; "></div>
+
+<hr />
+
+<div style="text-align:center">
+<img src="/images/athome/unescovid19.png" style="width:35%">
+</div>

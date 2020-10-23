@@ -11,7 +11,7 @@ tr:
         csf_2019_category_name: Bilgisayar Bilimi Temelleri (2019)
         csf_international_category_name: CS (Computer Science-Bilgisayar Bilimleri) Uluslararası Temelleri
         csf2_draft_category_name: 'Geliştiriliyor: Kurslar A - F'
-        csp_category_name: "' 15 - 16' Bilgisayar bilimleri ilkeleri"
+        csp_category_name: ''' 15 - 16'' Bilgisayar bilimleri ilkeleri'
         csp_2018_category_name: Bilgisayar Bilimi İlkeleri ('18-'19)
         csp_2019_category_name: Bilgisayar Bilimi İlkeleri ('19-'20)
         cspexams_category_name: Bilgisayar bilimi ilkeleri uygulama testi
@@ -20,6 +20,7 @@ tr:
         hoc_category_name: Saat Kodu
         math_category_name: Matematik
         research_studies_category_name: Araştırma Çalışmaları
+        other_category_name: Diğer
       name:
         course1:
           title: Kurs 1
@@ -15558,17 +15559,17 @@ tr:
         vpl-csp-2020:
           lessons:
             Module 1:
-              name: Modül 1
+              name: 'Modül 1'
             Module 2:
-              name: Modül 2
+              name: 'Modül 2'
             Module 3:
-              name: Modül 3
+              name: 'Modül 3'
             Module 4:
-              name: Modül 4
+              name: 'Modül 4'
             Module 5:
-              name: Modül 5
+              name: 'Modül 5'
             Module 6:
-              name: Modül 6
+              name: 'Modül 6'
             Module 7:
               name: Modül 7
             Module 8:

@@ -12,6 +12,7 @@ ru:
         full_course_category_name: Курсы полностью
         hoc_category_name: Час Кода
         math_category_name: Математика
+        other_category_name: Другое
       name:
         course1:
           title: Курс 1

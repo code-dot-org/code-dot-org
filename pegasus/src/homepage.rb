@@ -148,12 +148,12 @@ class Homepage
       [
         {
           text: "homepage_action_text_join_us",
-          type: "cta_button_solid_white",
+          type: "cta_button_solid_yellow",
           url: CDO.hourofcode_url("#join")
         },
         {
           text: "homepage_action_text_try_it",
-          type: "cta_button_hollow_white",
+          type: "cta_button_solid_white",
           url: "/hourofcode/overview"
         }
       ]
@@ -370,7 +370,7 @@ class Homepage
   end
 
   def self.show_single_hero(request)
-    promote_code_break(request) ? "codebreak2020" : "changeworld"
+    promote_code_break(request) ? "codebreak2020" : "hoc2020"
   end
 
   def self.get_heroes_arranged(request)
@@ -384,12 +384,17 @@ class Homepage
     hero_oceans2019 = [{text: "homepage_hero_text_stat_students", centering: "0% 70%", type: "stat", textposition: "bottom", image: "/images/homepage/hoc2019_oceans.png"}]
     hero_codebreak2020 =
       [{centering: "40% 80%", type: "stat", textposition: "bottom", image: "/images/homepage/blank_paper.jpg"}]
+    hero_hoc2020 = [
+      {text: "homepage_hero_text_stat_students", centering: "50% 80%", type: "stat", textposition: "bottom", image: "/images/homepage/hoc2020.jpg"}
+    ]
     # Generate a random set of hero images alternating between non-celeb and celeb.
     heroes = get_heroes
     hero_display_time = 13 * 1000
 
     if show_single_hero(request) == "hoc2019"
       heroes_arranged = hero_hoc2019
+    elsif show_single_hero(request) == "hoc2020"
+      heroes_arranged = hero_hoc2020
     elsif show_single_hero(request) == "create"
       heroes_arranged = hero_create
     elsif show_single_hero(request) == "changeworld"

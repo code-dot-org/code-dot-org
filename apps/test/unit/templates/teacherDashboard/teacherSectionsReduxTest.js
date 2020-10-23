@@ -44,7 +44,7 @@ import reducer, {
   sortSectionsList,
   NO_SECTION
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import {OAuthSectionTypes} from '@cdo/apps/templates/teacherDashboard/shapes';
+import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
 
 const {
   EDIT_SECTION_SUCCESS,

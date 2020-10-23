@@ -3081,7 +3081,12 @@
         "courseA_playLab_events5_2019": "Adicione eventos para que Jorge se mova para cima e para baixo quando os botões `para cima` e`para baixo` são pressionados. Faça Jorge pegar as bandeiras para terminar o nível!",
         "courseA_playLab_events5_2020": "Adicione eventos para que Jorge se mova para cima e para baixo quando os botões `para cima` e`para baixo` são pressionados. Faça Jorge pegar as bandeiras para terminar o nível!",
         "courseA_playLab_events6_2019": "Torne isso mais interessante alterando o fundo e reproduzindo um som aleatório quando Jorge for clicado. Quando seu código estiver pronto, clique no Jorge para testá-lo!",
-        "courseA_playLab_events6_2020": "Torne isso mais interessante alterando o fundo e reproduzindo um som aleatório quando Jorge for clicado. Quando seu código estiver pronto, clique no Jorge para testá-lo!"
+        "courseA_playLab_events6_2020": "Torne isso mais interessante alterando o fundo e reproduzindo um som aleatório quando Jorge for clicado. Quando seu código estiver pronto, clique no Jorge para testá-lo!",
+        "courseC_video_angles": "Ajude Scrat a chegar até a noz!",
+        "courseD_video_nestedLoopsArtist": "Use o que você aprendeu para desenhar este triângulo.",
+        "courseE_bee_ramp14": "Avance até chegar à alface e, em seguida, colha tudo usando um laço `while`.",
+        "courseE_farmer_predict1": "Enquanto houver alface, colha alface!",
+        "courseE_farmer_predict2": "Avance até chegar à alface e, em seguida, colha tudo usando um laço `while`."
       }
     }
   }

@@ -1303,6 +1303,13 @@
         },
         "grade5_artist_variables_triangles1_2020": {
           "grade5_artist_variables_triangles1_1": "Guarda: c'è una nuova modalità per introdurre numeri nei blocchi. Questi blocchi \"matematici\" possono essere presi e spostati da un blocco all'altro!"
+        },
+        "courseC_video_angles": {
+          "courseD_maze_ramp6_1": "Qualiasi codice inserisci qui sarà ripetuto quante volte gli dici di farlo, poi continua ad eseguire il resto del programma."
+        },
+        "courseD_video_nestedLoopsArtist": {
+          "courseE_artist_ramp8_1": "Puoi cambiare questo numero.",
+          "courseE_artist_ramp8_2": "Clicca qui per inserire il numero di volte da ripetere il tuo codice."
         }
       }
     }

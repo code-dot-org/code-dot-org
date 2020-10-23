@@ -1653,6 +1653,134 @@
           "draw a shape": {
             "name": "tegn en form"
           }
+        },
+        "Function intro Ryan": {
+          "build bridge": {
+            "name": "bygg bro"
+          }
+        },
+        "Function intro Ryan_2019": {
+          "build bridge": {
+            "name": "bygg bro"
+          }
+        },
+        "Function intro Ryan_2020": {
+          "build bridge": {
+            "name": "bygg bro"
+          }
+        },
+        "K-1 Artist2 3": {
+          "draw roof": {
+            "name": "tegn tak"
+          }
+        },
+        "K-1 Artist2 4": {
+          "draw rectangle": {
+            "name": "tegn rektangel"
+          }
+        },
+        "K-1 Artist2 5": {
+          "draw rectangle": {
+            "name": "tegn rektangel"
+          }
+        },
+        "MC_HOC_2017_07_Cole": {
+          "clear path": {
+            "name": "rydd vei"
+          }
+        },
+        "MC_HOC_2017_07_Cole_2019": {
+          "clear path": {
+            "name": "rydd vei"
+          }
+        },
+        "MC_HOC_2017_07_Cole_2020": {
+          "clear path": {
+            "name": "rydd vei"
+          }
+        },
+        "MC_HOC_2017_10_RETRY": {
+          "fix long path": {
+            "name": "reparer lang vei"
+          },
+          "fix short path": {
+            "name": "reparer kort vei"
+          }
+        },
+        "MC_HOC_2017_10_RETRY_2019": {
+          "fix long path": {
+            "name": "reparer lang vei"
+          },
+          "fix short path": {
+            "name": "reparer kort vei"
+          }
+        },
+        "MC_HOC_2017_10_RETRY_2020": {
+          "fix long path": {
+            "name": "reparer lang vei"
+          },
+          "fix short path": {
+            "name": "reparer kort vei"
+          }
+        },
+        "MC_HOC_2017_Ali": {
+          "build short bridge": {
+            "name": "bygg kort bro"
+          },
+          "build long bridge": {
+            "name": "bygg lang bro"
+          }
+        },
+        "MC_HOC_2017_Ali_2019": {
+          "build short bridge": {
+            "name": "bygg kort bro"
+          },
+          "build long bridge": {
+            "name": "bygg lang bro"
+          }
+        },
+        "MC_HOC_2017_Ali_2020": {
+          "build short bridge": {
+            "name": "bygg kort bro"
+          },
+          "build long bridge": {
+            "name": "bygg lang bro"
+          }
+        },
+        "course1_artist_loops_challenge1": {
+          "\"simple\" solution": {
+            "name": "\"enkel\" løsning"
+          }
+        },
+        "course1_artist_loops_challenge2": {
+          "potential solution": {
+            "name": "mulig løsning"
+          }
+        },
+        "courseA_artist_loops_challenge1": {
+          "\"simple\" solution": {
+            "name": "\"enkel\" løsning"
+          }
+        },
+        "courseB_artist_loops_challenge2": {
+          "potential solution": {
+            "name": "mulig løsning"
+          }
+        },
+        "courseB_artist_loops_challenge2_2018": {
+          "potential solution": {
+            "name": "mulig løsning"
+          }
+        },
+        "courseB_artist_loops_challenge2_2019": {
+          "potential solution": {
+            "name": "mulig løsning"
+          }
+        },
+        "courseB_artist_loops_challenge2_2020": {
+          "potential solution": {
+            "name": "mulig løsning"
+          }
         }
       }
     }

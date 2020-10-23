@@ -21,6 +21,11 @@
 
 class CourseVersion < ApplicationRecord
   belongs_to :course_offering
+  has_many :resources
+
+  def units
+    content_root_type == 'UnitGroup' ? content_root.default_scripts : [content_root]
+  end
 
   # "Interface" for content_root:
   #
@@ -28,6 +33,8 @@ class CourseVersion < ApplicationRecord
   #   For example, this should return True for the CourseA-2019 Unit and the CSP-2019 UnitGroup. This should return
   #   False for the CSP1-2019 Unit.
   belongs_to :content_root, polymorphic: true
+
+  alias_attribute :version_year, :key
 
   # Seeding method for creating / updating / deleting the CourseVersion for the given
   # potential content root, i.e. a Script or UnitGroup.

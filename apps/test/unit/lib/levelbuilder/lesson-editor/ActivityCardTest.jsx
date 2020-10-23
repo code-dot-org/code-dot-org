@@ -11,15 +11,17 @@ describe('ActivityCard', () => {
     removeActivity,
     moveActivity,
     updateActivityField,
-    setActivitySectionMetrics,
-    setTargetActivitySection;
+    setActivitySectionRef,
+    updateTargetActivitySection,
+    updateActivitySectionMetrics;
   beforeEach(() => {
     addActivitySection = sinon.spy();
     removeActivity = sinon.spy();
     moveActivity = sinon.spy();
     updateActivityField = sinon.spy();
-    setActivitySectionMetrics = sinon.spy();
-    setTargetActivitySection = sinon.spy();
+    setActivitySectionRef = sinon.spy();
+    updateTargetActivitySection = sinon.spy();
+    updateActivitySectionMetrics = sinon.spy();
     defaultProps = {
       activity: sampleActivities[0],
       activitiesCount: 1,
@@ -27,17 +29,18 @@ describe('ActivityCard', () => {
       removeActivity,
       moveActivity,
       updateActivityField,
-      setActivitySectionMetrics,
-      setTargetActivitySection,
+      setActivitySectionRef,
+      updateTargetActivitySection,
+      updateActivitySectionMetrics,
       targetActivitySectionPos: 1,
-      activitySectionMetrics: {}
+      activitySectionMetrics: []
     };
   });
 
   it('renders default props', () => {
     const wrapper = shallow(<ActivityCard {...defaultProps} />);
-    expect(wrapper.contains('Activity:'));
-    expect(wrapper.contains('Time (mins):'));
+    expect(wrapper.contains('Activity:')).to.be.true;
+    expect(wrapper.contains('Duration:')).to.be.true;
     expect(wrapper.find('OrderControls').length).to.equal(1);
     expect(wrapper.find('Connect(ActivitySectionCard)').length).to.equal(3);
     expect(wrapper.find('button').length).to.equal(1);
@@ -65,11 +68,11 @@ describe('ActivityCard', () => {
     );
   });
 
-  it('edit activity time', () => {
+  it('edit activity duration', () => {
     const wrapper = shallow(<ActivityCard {...defaultProps} />);
 
     const titleInput = wrapper.find('input').at(1);
     titleInput.simulate('change', {target: {value: '1000'}});
-    expect(updateActivityField).to.have.been.calledWith(1, 'time', '1000');
+    expect(updateActivityField).to.have.been.calledWith(1, 'duration', '1000');
   });
 });

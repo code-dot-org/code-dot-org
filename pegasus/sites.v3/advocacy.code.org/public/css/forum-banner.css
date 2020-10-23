@@ -1,11 +1,11 @@
 .announcement {
   width: 100%;
   color: white;
-  background-color: #7665a0;
+  background-color: #00adbc;
   margin-top: 20px;
   margin-bottom: 20px;
   overflow:hidden;
-  padding: 16px;
+  padding: 14px;
   border-radius: 5px
 }
 
@@ -32,17 +32,8 @@
   float: right;
 }
 
-.announcement .large-button {
-  margin-top: 0px;
-  width: 100px;
-  height: 50px;
+.announcement .right button {
+  margin-top: 10px;
+  margin-right: 10px;
   font-family: 'Gotham 5r', sans-serif;
 }
-
-.announcement .small-button {
-  margin-top: 0px;
-  width: 80px;
-  height: 50px;
-  font-family: 'Gotham 5r', sans-serif;
-}
-

@@ -235,6 +235,11 @@ sk:
       2:
         text: "Ak má postava niečo opakovane vykonávať bez zásahu hráča, budeme vkladať tieto bloky do vnútra bloku \"opakuj donekonečna\"."
       3:
+    C1_artist_intro:
+      1:
+        text: "S týmito blokmi kreslíš. Použi ich, aby sa umelec dostal kam potrebuje na zafarbenie sivých čiar."
+      2:
+        text: "S týmito blokmi skáčeš. Keď ich použiješ, tvoj umelec sa pohne, ale nekreslí, takže pomocou nich preskočíš na ďalšiu šedú čiaru. \n"
     C1_bee_loops:
       1:
         text: "Cyklus znamená opakovanie činnosti. Keď kontrolujem úľ, vytiahnem a skontrolujem jeden rám a potom ho vrátim a túto činnosť opakujem viackrát. Toto je vlastne cyklus - vykonávanie rovnakej činnosti opakovane."
@@ -279,6 +284,35 @@ sk:
       5:
       6:
       7:
+    C1_pair_programming:
+      1:
+        text: "Dnes sa naučíme niečo o párovom programovaní. Pri párovom programovaní pracujete ako tím. Pýtate sa, prečo by mali dvaja ľudia používať jeden počítač? Pretože - viac hláv, viac rozumu. Pri párovom programovaní si ty a tvoj partner sadnete za jeden počítač a budete pracovať na spoločnom projekte. "
+      2:
+        text: "Párové programovanie je ako jazda v pretekárskom aute. Jeden je vodič a druhý je navigátor. Vodič sedí za počítačom, používa klávesnicu, myš alebo dotykovú obrazovku a ovláda hlavné činnosti počítača. Druhá osoba je navigátor. Navigátor je niekto, kto pomáha vodičovi. Odpovedá na jeho otázky, všíma si chyby a identifikuje potenciálne problémy."
+      3:
+        text: "Komunikácia je pri párovom programovaní kľúčom k úspechu. Neurážaj svojho partnera. Rešpektujte sa. Nesnaž sa byť nadriadeným navigátorom. Po celý čas komunikujte so svojím partnerom o tom, čo robíte. Vodič vysvetľuje, čo robí. Navigátor môže navrhovať ďalšie kroky."
+      4:
+        text: "Navigátor by mal premýšľať o úlohe komplexne a vodič sa zameriava na detaily. Obe úlohy sú dôležité. Párové programovanie je o tímovej spolupráci."
+    C1_playlab_storytelling:
+      1:
+        text: "Je čas byť kreatívny a použiť tvoje kódovacie zručnosti na vyrozprávanie príbehu. Tvoj príbeh bude mať aktérov a ty budeš môcť prinútiť týchto aktérov rozprávať a interagovať medzi sebou. Začni rozmýšľať nad tým, aký príbeh chceš rozpovedať. "
+      2:
+        text: "Mačky sa vždy báli psov, a čo ak si mačka uvedomí, že pes sa len snažil byť milý? Tlačidlo \"pri spustení\" všetko začína. Tlačidlo \"posuň sa\" posunie tvoj charakter a tlačidlo \"povedz\" spôsobí to, že charakter povie čokoľvek, čo napíšeš. "
+      3:
+        text: "Toto je tlačidlo \"keď sa aktéri zrazia\", ktoré môžeš prepojiť s ďalšími blokmi. "
+      4:
+        text: "Ja som prikázala psovi prísť a povedať \"Ahoj\", ale potom sa mačka vyľakala a utiekla. \"Ahh\". Ak by bolo viac času, príbeh by mal šťastný koniec. Koniec!"
+    C2_artist_intro:
+      1:
+        text: "Na preteky sa ani nedostanete, ak nemáte v tíme ľudí, ktorí sú zdatní v informatike - a to práve pre množstvo dát zbieraných autami. Títo ľudia tiež vytvárajú programy, ktoré pretekárom pomáhajú byť dlhodobo výkonnými."
+      2:
+        text: "V týchto úlohách sa staneš umelcom, ktorý kreslí rôzne tvary. Kamkoľvek sa tvoj umelec pohne, nakreslí za sebou čiaru. "
+      3:
+        text: "Po plátne sa hýbeš pomocou bloku \"posuň sa dopredu\". V tomto prípade príkaz \"posuň sa dopredu\" znamená posun dopredu o 100 pixelov. Čo sa presne stane pri stlačení tlačidla \"Spustiť\"? Umelec sa posunie o 100 pixelov. Pixely sú veľmi malé štvorce na tvojej obrazovke."
+      4:
+        text: "Iný blok v téjto úlohe hovorí \"otoč sa vpravo o 90 stupňov\". Použitím tohto bloku sa umelec otočí o nejakú časť kruhu. Môžeš sa pohrať s tým, o koľko stupňov sa má umelec otočiť. Toto je otočka o 90 stupňov."
+      5:
+        text: "A toto je otočka o 120 stupňov. Nezabudni - to, o koľko sa umelec posunie či otočí, \nmeníš šípkami vedľa hodnôt pixelov a stupňov. Veľa zábavy pri kreslení!"
     C2_artist_debugging:
       1:
       2:
@@ -306,6 +340,17 @@ sk:
         text: "V štafetovom programovaní sa tímy budú pretekať v písaní programu na štvorčekový papier. Musíš skontrolovať kamarátovu prácu a v prípade, že v nej nádeš chybu, tak túto chybu opraviť, pridať vlastnú šípku a rýchlo bežať so štafetou za ďalším členom tvojho tímu."
       3:
       4:
+    C3_artist_intro:
+      1:
+        text: "Na preteky sa ani nedostanete, ak nemáte v tíme ľudí, ktorí sú zdatní v informatike - a to práve pre množstvo dát zbieraných autami. Títo ľudia tiež vytvárajú programy, ktoré pretekárom pomáhajú byť dlhodobo výkonnými."
+      2:
+        text: "V týchto úlohách sa staneš umelcom, ktorý kreslí rôzne tvary. Kamkoľvek sa tvoj umelec pohne, nakreslí za sebou čiaru. "
+      3:
+        text: "Po plátne sa hýbeš pomocou bloku \"posuň sa dopredu\". V tomto prípade príkaz \"posuň sa dopredu\" znamená posun dopredu o 100 pixelov. Čo sa presne stane pri stlačení tlačidla \"Spustiť\"? Umelec sa posunie o 100 pixelov. Pixely sú veľmi malé štvorce na tvojej obrazovke."
+      4:
+        text: "Iný blok v téjto úlohe hovorí \"otoč sa vpravo o 90 stupňov\". Použitím tohto bloku sa umelec otočí o nejakú časť kruhu. Môžeš sa pohrať s tým, o koľko stupňov sa má umelec otočiť. Toto je otočka o 90 stupňov."
+      5:
+        text: "A toto je otočka o 120 stupňov. Nezabudni - to, o koľko sa umelec posunie či otočí, \nmeníš šípkami vedľa hodnôt pixelov a stupňov. Veľa zábavy pri kreslení!"
     C3_bee_debugging:
       1:
         text: "Počul si už niekedy o ladení programu? Týmto spôsobom zistíš čo nefunguje. Keď ladíš kód, identifikuješ a odstraňuješ chyby."
@@ -405,7 +450,7 @@ sk:
       7:
       8:
       9:
-        text: "Ak by si niekedy chcel odstrániť blok, tak ho iba odstráň z pracovnej plochy a presuň ho späť do panela nástrojov."
+        text: "Ak niekedy budeš chcieť odstrániť blok, tak ho iba odstráň z pracovnej plochy a presuň ho späť do panela nástrojov."
       10:
     starwars_blocks_events:
       1:
@@ -426,7 +471,7 @@ sk:
       3:
         text: "Tradičné programovanie je zvyčajne v textovej forme, ale dnes budeme používať Blockly. Je to systém, ktorý na písanie programu používa vizuálne bloky. V pozadí v podstate vytvárame kód v Javascripte."
       4:
-        text: "Naučíš sa koncepty, ktoré počítačoví programátori používajú každý deň a ktoré tvoria základ informatiky. Tu v Mojangu používame tie isté koncepty nato, aby sme sfunkčnili Minecraft."
+        text: "Naučíš sa koncepty, ktoré počítačoví programátori používajú každý deň a ktoré tvoria základ informatiky. Tu v Mojangu používame tie isté koncepty na to, aby sme sfunkčnili Minecraft."
       5:
         text: "Predtým než začneš, vyberieš si svoju postavu. Ja si vyberiem Alex. Poďme vytvoriť kód pre program, ktorý jej pomôže hýbať sa po obrazovke."
       6:
@@ -436,26 +481,26 @@ sk:
       8:
         text: "Biela oblasť vpravo sa nazýva pracovný priestor a je to miesto, kde budeme budovať náš program."
       9:
-        text: "Ak potiahneme do nášho pracovného priestoru blok PosuňSaDopredu(); a potom klikneme Spustiť, čo sa stane? Alexa sa pohne vpred o jedno pole."
+        text: "Ak potiahneme do nášho pracovného priestoru blok PosuňSaDopredu(); a potom klikneme Spustiť, čo sa stane? Alex sa pohne vpred o jedno pole."
       10:
         text: "A čo ak chceme urobiť niečo potom, čo sa pohla o jedno pole? Môžeme do nášho programu pridať ďalší blok. Vyberiem si blok OtočSaVpravo(); a potiahnem ho pod môj blok PosuňSaDopredu(); až kým sa nezobrazí táto oranžová čiara. Potom blok pustím a oba bloky sa spoja dohromady. Keď znova stlačím \"Spustiť\", Alex vykoná príkazy z nášho pracovného priestoru v poradí zhora nadol."
       11:
-        text: "Ak by si niekedy chcel odstrániť blok, tak ho iba presuň z pracovnej plochy späť do panela nástrojov."
+        text: "Ak niekedy budeš chcieť odstrániť blok, tak ho iba presuň z pracovnej plochy späť do panela nástrojov."
       12:
-        text: "Keď chceš zrušiť svoje zmeny a vrátiť sa späť tam, kde si začal, použi tlačidlo \"Začať znova\" v pravom hornom rohu pracovnej plochy. Ešte jedna vec: vidíš malý trojuholník na bloku \"otoč sa\"? Kedykoľvek, keď vidíš takýto trojuholník, tak si môžeš vybrať inú možnosť. Pustime sa do kódovania!"
+        text: "Keď chceš zrušiť svoje zmeny a vrátiť sa späť na začiatok, použi tlačidlo \"Začať znova\" v pravom hornom rohu pracovnej plochy. Ešte jedna vec: vidíš malý trojuholník na bloku \"otoč sa\"? Kedykoľvek, keď vidíš takýto trojuholník, tak si môžeš vybrať inú možnosť. Pustime sa do kódovania!"
     mc_repeat:
       1:
         text: "Som Lydia Winters, riaditeľka firmy Mojang, kde vytvárame drobnú hru nazývanú Minecraft."
       2:
         text: "Moja obľúbená činnosť v Minecrafte je objavovať. Zbožňujem dobrodružstvá v jaskyniach a objavovanie nových vecí. Keďže nie som programátorka, som nadšená, že si tiež môžem prejsť týmto Minecraft kurzom a sama sa naučím trocha kódovať."
       3:
-        text: "Predošlý level využíval množstvo blokov PosuňSaDopredu();. Bolo by to jednoduchšie, ak by sme dokázali počítaču povedať, aby vykonal príkaz PosuňSaDopredu(); štyri alebo päť krát. Našťastie, počítače sú veľmi dobré v opakovaní príkazov pomocou opakovacích cyklov."
+        text: "V predošlej úlohe sme potrebovali množstvo blokov PosuňSaDopredu();. Bolo by jednoduchšie, ak by sme počítaču mohli povedať, nech príkaz PosuňSaDopredu(); vykoná štyri alebo päť krát. Počítače sú našťastie veľmi dobré v opakovaní príkazov pomocou opakovacích cyklov."
       4:
         text: "Pri stavbe Mincraftu používame opakovacie cykly, aby sme umiestnili všetky začiatočné materiály na vytvorenie nového sveta. Sú to tisíce a tisíce blokov. Taktiež používame cykly aj v menších príkladoch, ako napríklad hýbanie Alexinho chodidla vpred a vzad počas toho ako kráča. Opakovacie cykly sú mocná časť programovania."
       5:
         text: "Prichádza noc, takže v najbližších leveloch si postavíme dom, aby sme zostali v bezpečí. Použijeme blok opakuj, aby sme to urobili veľmi jednoducho."
       6:
-        text: "Aby sme postavili stenu nášho domu, môžeme buď povedať Alex PosuňSaDopredu(); a umiestni dosky štyrikrát, alebo jej môžeme povedať PosuňSaDopredu(); a umiestniť jednu dosku, potom vziať tento príkaz a použiť bloky opakovania, aby to vykonala viacerokrát. Teraz klikneme na blok opakovania a povieme jej, koľkokrát chceme, aby vykonala túto akciu. Teraz postavme náš dom predtým, než príde noc! Veľa zábavy!"
+        text: "Aby sme postavili stenu nášho domu, môžeme buď štyrikrát za sebou Alex prikázať \"PosuňSaDopredu(); a umiestni dosky\", alebo jej môžeme povedať \"PosuňSaDopredu(); a umiestniť jednu dosku\", potom vziať tento príkaz a použiť blok opakovania na to, aby aktivitu vykonala viackrát. Teraz klikneme na blok opakovania a povieme jej, koľkokrát má túto akciu vykonať. A teraz postavme náš dom skôr, než príde noc! Veľa zábavy!"
     mc_if_statements:
       1:
         text: "Teraz sa naučíme o príkaze \"ak\". Príkazy \"ak\" patria k základným programovacím príkazom. Pomáhajú robiť počítaču rozhodnutia."
@@ -535,7 +580,7 @@ sk:
       7:
         text: "Na začiatok ideme naprogramovať kurča. Presuňme príkaz \"posuň sa dopredu\" na pracovnú plochu. Keď stlačím tlačidlo \"Spustiť\", kurča sa posunie o jeden krok dopredu. Pre ďalší posun presuniem ďalší blok \"posuň sa dopredu\" pod prvý blok \"posuň sa dopredu\" až kým sa nezobrazí farebné podsvietenie. Potom blok pustím a oba bloky sa spoja dokopy. Ak znova stlačím tlačidlo \"Spustiť\", kurča spraví dva kroky."
       8:
-        text: "Ak by si niekedy chcel odstrániť blok, tak ho iba odstráň z pracovnej plochy a presuň ho späť do panela nástrojov."
+        text: "Ak niekedy budeš chcieť odstrániť blok, tak ho iba odstráň z pracovnej plochy a presuň ho späť do panela nástrojov."
       9:
         text: "Potom, čo stlačíš \"Spustiť\", môžeš vždy stlačiť tlačidlo \"Obnoviť\", ktorým hru reštartuješ, aby si mohol začať odznova. Teraz si na rade ty, aby si si vytvoril tvoju vlastnú verziu Minecraftu. Veľa zábavy!"
     mc_2016_loops:
@@ -553,7 +598,7 @@ sk:
       3:
         text: "Ale čo sa stane, keď predmet alebo postavu použiješ? V Minecrafte ovečky zanechávajú vlnu, keď ich ostriháš, kravy utekajú preč, keď do nich udrieš a strašidlá vybuchujú, keď sa k ním priblížiš. Tieto reakcie sa dejú vďaka niečomu, čo sa volá udalosti. Udalosti hovoria tvojmu programu, aby počúvali alebo čakali na niečo, čo sa stane. A keď sa to stane, niečo spravia."
       4:
-        text: "Doteraz si použil len jednu udalosť. Kód, ktorý si vložil do poľa \"po vytvorení\" sa spustí, keď sa vytvorí postava alebo keď začne hra. V ďalších leveloch budeš mať nové polia pre udalosti ako napríklad \"po dotknutí sa\", ktorý sa spustí, keď sa dotkneš postavy, alebo \"po použití\", keď postavu použiješ. Alebo ak chceš, aby zombík pri východe slnka zmizol, vlož akciu do poľa \"po východe slnka\""
+        text: "Doteraz sme použili len jednu udalosť. Kód vložený za príkaz \"po vytvorení\" sa spustí, keď sa vytvorí postava, alebo keď začne hra. V ďalších úlohách budemať nové bloky pre udalosti ako napríklad \"po dotknutí sa\", ktorý sa spustí, keď sa dotkneš postavy, alebo \"po použití\", keď postavu použiješ. Alebo ak chceš, aby zombík pri východe slnka zmizol, vlož akciu do poľa \"po východe slnka\"."
     mc_2016_spawn:
       1:
         text: "V hrách, vytvárame postavy príkazom \"vytvor postavu\". V tomto leveli poďme vytvárať zombíkov po západe slnka. Použijeme pre to blok \"keď príde noc\"."

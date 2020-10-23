@@ -10,7 +10,7 @@ it:
         csf_2018_category_name: Fondamenti di Informatica (2018)
         csf_international_category_name: Fondamenti di Informatica (in Italiano)
         csf2_draft_category_name: 'Corsi A - F: In fase di sviluppo'
-        csp_category_name: "Princìpi dell'Informatica (versione 2015-16)"
+        csp_category_name: Princìpi dell'Informatica (versione 2015-16)
         csp_2018_category_name: Principi di informatica ('18-'19)
         csp_2019_category_name: Principi di informatica ('19-'20)
         cspexams_category_name: Prova pratica di principi d'informatica
@@ -19,6 +19,7 @@ it:
         hoc_category_name: L'Ora del Codice
         math_category_name: Matematica
         research_studies_category_name: Studi di Ricerca
+        other_category_name: Altro
       name:
         course1:
           title: Corso 1

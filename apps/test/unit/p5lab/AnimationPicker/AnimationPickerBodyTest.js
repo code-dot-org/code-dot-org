@@ -20,7 +20,10 @@ describe('AnimationPickerBody', function() {
     libraryManifest: testAnimationLibrary,
     categories: CostumeCategories,
     hideUploadOption: false,
-    hideAnimationNames: false
+    hideAnimationNames: false,
+    navigable: true,
+    hideBackgrounds: false,
+    canDraw: true
   };
 
   describe('upload warning', function() {

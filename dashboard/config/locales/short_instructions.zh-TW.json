@@ -3060,7 +3060,12 @@
         "courseA_playLab_events6_2019": "當喬治被點擊時播放一個隨機的聲音並且改變背景來讓這一切變得更有趣吧。當你的程式準備完成後，點擊喬治來試試看！",
         "courseA_playLab_events6_2020": "當喬治被點擊時播放一個隨機的聲音並且改變背景來讓這一切變得更有趣吧。當你的程式準備完成後，點擊喬治來試試看！",
         "express_maze_debugging9_2019": "使用工具箱裡面的程式積木來建構你的程式，請一起幫忙讓松鼠 Scrat 可以順利找到橡果吧！",
-        "express_maze_debugging9_2020": "使用工具箱裡面的程式積木來建構你的程式，請一起幫忙讓松鼠 Scrat 可以順利找到橡果吧！"
+        "express_maze_debugging9_2020": "使用工具箱裡面的程式積木來建構你的程式，請一起幫忙讓松鼠 Scrat 可以順利找到橡果吧！",
+        "courseC_video_angles": "幫鼠奎特拿到橡樹果實！",
+        "courseD_video_nestedLoopsArtist": "使用你學到的方法來畫出這個三角形。",
+        "courseE_bee_ramp14": "向前移動，直到到達生菜，然後用`重複 判斷`迴圈將其全部摘取。",
+        "courseE_farmer_predict1": "趁著有生菜的時候，去摘生菜吧！",
+        "courseE_farmer_predict2": "向前移動，直到到達生菜，然後用`重複 判斷`迴圈將其全部摘取。"
       }
     }
   }

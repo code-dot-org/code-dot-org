@@ -1,40 +1,40 @@
 ---
-title: Hour of Code How-To Guide for Virtual Events
+title: Poradnik "Godziny kodowania" dla wydarzeń wirtualnych
 ---
 
 {{ signup_button }}
 
-# Tips for a virtual Hour of Code event
+# Wskazówki na potrzeby wirtualnego wydarzenia "Godzina kodowania"
 
-### You don't have to be in-person to run a successful Hour of Code!
+### Nie musisz występować osobiście, aby skutecznie przeprowadzić "Godzinę kodowania"!
 
 ***
 
-While the Hour of Code is traditionally held in classrooms throughout the globe, you don’t need to be in-person to enjoy the fun! You can still host an interactive and inspirational Hour of Code for students remotely using some of these recommendations.  Take a look at our <a href="https://hourofcode.com/files/participation-guide-virtual.pdf">guide for virtual events</a> if you still have questions.
+Chociaż "Godzinę kodowania" tradycyjnie prowadzi się w klasach na całym świecie, nie trzeba występować na nich osobiście, aby się dobrze bawić! Można występować w roli gospodarza interaktywnej i inspirującej "Godziny kodowania" dla uczniów w trybie zdanym korzystając z niektórych z poniższych rekomendacji.  Take a look at our [guide for virtual events]({{ localized_files/participation_guide_virtual }}) if you still have questions.
 
 <br><br>
 
 [<img src="/images/fit-600/Marketing/pexels-andrea-piacquadio-3762940.jpg" />]({{ urls/learn }})
 
-## You may be apart, but you can still start together
+## Można być oddalonym, a jednak cały czas być razem.
 Even if you plan for students to complete their activities independently, we recommend starting your event with a virtual kick-off online to get participants excited. There are several interesting ways you can start your event: 
 
 <ul>
-<li><b>Invite a guest speaker</b>: Thousands of volunteers from all backgrounds are waiting to hear from you! Simply use our <a href="https://code.org/volunteer/local">volunteer map</a> to search for them. With a virtual Hour of Code, you’re not limited by distance so if needed, consider searching outside of your zip code for volunteers that are offering to help remotely. Once you’ve connected with a volunteer, you can reference the <a href="http://hourofcode.com/us/how-to/volunteers">Hour of Code Volunteer How-To</a> as a guide for determining potential topics, discussion questions, and more.</li> 
-<li><b>Show an inspirational video</b>: Another reliable option to start your event, is showing participants one of our many <a href="http://hourofcode.com/us/promote/resources#videos">inspirational videos</a>. Many videos are less than 5 minutes long and feature inspiration and encouragement from celebrities your students will recognize.</li> 
-<li><b>Discuss computer science for good</b>: Turn your Hour of Code event into a deeper understanding of computer science by considering the impact of technology on our everyday lives. Ask students guiding questions and turn the beginning of your event into an interactive discussion. For ideas on how to get the conversation started, check out these <a href="https://code.org/csforgood#prompts">discussion questions</a>.</li>
+<li><b>Zaproś prelegenta-gościa</b>: Tysiące wolontariuszy z wszystkich możliwych środowisk czekają na wiadomość od Ciebie! Po prostu skorzystaj z naszej <a href="https://code.org/volunteer/local">mapy ochotników</a>, aby ich wyszukać. Dzięki wirtualnej "Godzinie kodowania" nie jesteś ograniczony odległością, zatem, w razie potrzeby, rozważ wyszukiwanie wolontariuszy oferujących pomoc w trybie zdalnym poza obszarem swojego kodu pocztowego. Gdy już się połączysz z wolontariuszem, możesz odwołać się do <a href="http://hourofcode.com/us/how-to/volunteers">"Jak to się robi w Godzinie kodowania"</a>, jako przewodnika do określenia potencjalnych tematów, pytań do dyskusji i nie wielu innych.</li> 
+<li><b>Pokaż inspirujący film wideo</b>: Inną, skuteczną opcją jest rozpoczęcie swojego wydarzenia jest pokazanie uczestnikom jednego w naszych wielu <a href="http://hourofcode.com/us/promote/resources#videos">inspirujących filmów wideo</a>. Wiele filmów wideo trwa poniżej 5 minut i zawiera inspirację i zachętę od celebrytów rozpoznawalnych dla Twoich uczniów.</li> 
+<li><b>Omów zagadnienie "Informatyka na dobre"</b>: Przekształć swoje wydarzenia "Godzina kodowania" w głębsze zgłębienie informatyki poprzez rozważenie wpływu technologii na swoje życie codzienne. Stawiaj uczniom pytania naprowadzające i przekształć początek swojego wydarzenie w interaktywną dyskusję. Zapoznaj się z tymi  <a href="https://code.org/csforgood#prompts">pytaniami do dyskusji</a>, aby zebrać pomysły na to, jak rozpocząć rozmowę.</li>
 </ul>
 
 ---
 
-## What to prepare ahead of time
+## Co przygotować z wyprzedzeniem czasowym
 
-### 1. Determine your video conferencing platform
+### 1. Określ swoją platformę do wideokonferencji
 Chances are you’re probably familiar with platforms like Cisco Webex, Google Meet, Microsoft Teams, Skype, or Zoom by now. Whichever tool you prefer, we just encourage you to familiarize yourself, test out it’s capabilities, and run through your Hour of Code agenda prior to your event date.
 
 [<img src="/images/fit-600/Marketing/photo-of-boy-video-calling-with-a-woman-4145197.jpg" />]({{ urls/learn }})
 
-### 2. Plan how students will participate
+### 2. Zaplanuj sposób uczestnictwa uczniów
 **Self-led Hour of Code activity**<br> We recommend that after your kickoff, you allow students to leave the video conference to work through their <a href="https://hourofcode.com/us/learn">Hour of Code activities</a> on their own rather than live together. This will allow students to immerse themselves in their own projects and gain a stronger understanding of the CS concepts. It will also minimize the distraction and obstacle of having to have a video conference window open.
 
 It may be helpful for you to determine 1-3 tutorial options for them to choose from ahead of time. This allows you to choose activities that are best suited for their grade level. Plus, if students have questions that require your assistance you’ll be better prepared to help if you’re already familiar with the tutorials they’re working on.
@@ -47,22 +47,22 @@ If your class is expected to do their activity immediately after kickoff, you mi
 
 [<img src="/images/fit-600/Marketing//happy-father-and-child-browsing-laptop-in-bedroom-4545778.jpg" />](https://hourofcode.com/us/how-to/parents)
 
-### 3. Enlist a volunteer
-You can find a volunteer suited to your needs by visiting our <a href="https://code.org/volunteer/local">volunteer map</a>. Many are available for remote participation and are more than willing to speak about their experience in computer science, how technology impacts their roles, or simply to help you with troubleshooting student questions. Once you find a volunteer, make sure you set up a meeting with them ahead of time to discuss their role for the event, work out technical requirements, and establish the logistics of participating online.
+### 3. Wciągnij wolontariusza na listę
+Można znaleźć wolontariusza dopasowanego do Twoich potrzeb na naszej [v mapie wolontariuszy ](https://code.org/volunteer/local). Wielu z nich jest dostępnych do udziału w trybie zdalnym oraz bardziej niż gotowych do rozmowy na temat doświadczeń w dziedzinie informatyki, sposobu, w jaki technologia wpływa na sprawowane role albo po prostu pomóc ci w rozwiązywaniu kwestii trapiących ucznia.  Once you find a volunteer, make sure you set up a meeting with them ahead of time to discuss their role for the event, work out technical requirements, and establish the logistics of participating online.
 
-### 4. Celebration supplies
+### 4. Zasoby do celebrowania
 Take a look below for ideas on celebrating your virtual Hour of Code. Some may require you to prepare ahead of time such as creating completion <a href="https://code.org/certificates">certificates</a> for all of your participants.
 
 ---
 
-## Celebrate together
+## Świętujcie razem
 
 Similar to how you started the event, come together afterwards to celebrate! Here are some ideas for making your virtual celebration interactive and special:
 
-- Allow students to share their completed projects with the rest of the class. If your conferencing platform allows, you can even encourage students to take a screenshot of their projects and set it as their virtual background!
-- Discuss learnings: What have they learned about computer science or technology? What did they do when they ran into a problem, how did they solve it?
-- <a href="https://code.org/certificates">Create and share certificates</a> for your participants
-- Share photos and videos of your virtual Hour of Code on social media. Użyj #HourOfCode i @codeorg, abyśmy również mogli cieszyć się Waszym sukcesem!
+- Pozwól uczniom udostępnić swoje ukończone projekty pozostałej części klasy. Jeśli Twoja platforma konferencyjna Ci to umożliwia, możesz nawet zachęcić uczniów do zrobienia zrzutów ekranu swoich projektów i ustawić je na swoim wirtualnym tle!
+- Wnioski z dyskusji: Czego oni nauczyli się o informatyce lub technologii? Co oni zrobili, gdy natrafią na problem, jak go rozwiązali?
+- <a href="https://code.org/certificates">Utwórz świadectwa udziału</a> dla swoich uczestników
+- Udostępniaj zdjęcia i filmy z Waszej wirtualnej "Godziny kodowania" w mediach społecznościowych. Użyj #HourOfCode i @codeorg, abyśmy również mogli cieszyć się Waszym sukcesem!
 
 [<img src="/images/fit-600/Marketing/g8TUlHzF.jpeg" />]({{ urls/learn }})
 

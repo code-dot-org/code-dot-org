@@ -1,10 +1,10 @@
 ---
-title: Computer Science for Good
+title: 计算机科学教育的好处
 ---
 
 <center>
 <h1>
-  Talking about Computer Science for Good in Your Classroom
+  在课堂里谈论计算机科学的益处
 </h1>
 </center>
 
@@ -12,21 +12,21 @@ title: Computer Science for Good
 <img src="/images/fit-850/marketing/talkingtoclass.jpg">
 </center>
 
-<br>Computer science is a foundational subject in today’s world that will benefit students in any career path. It not only gives them room to flex their creativity but also equips them with the tools to tackle some of the world’s most pressing problems.
+<br>计算机科学与技术是一个在当代社会中对于任何职业的基础。 这不但给学生们一个展示他们的创造力，也授予他们能够解决一些想到困难的问题。
 
-How computer science is used and applied in the real world is a crucial part of learning computer science. That is why we’re focusing on #CSforGood as the theme for the Hour of Code this year. We can help students understand some of the challenges that people around the world face and inspire them to think more deeply about the role computer science can play in creating a more equitable and sustainable world.
+如何在真实环境中使用计算机科学与技术是学习本学科中一个重要的部分。 这是为什么我们用#CSforGood（计算机科学与技术的利益）作为本年度《编程一小时》的大纲。 我们可以协助学生们理解一些世界上存在的问题，然后引导他们更深入思考本学科可以怎样提供一个更公正和可持续性的世界！
 
 <center>
 <img src="/images/fit-500/marketing/sdg-new-image-csforgood.jpg">
 </center>
 
-Using the <a href="https://www.un.org/sustainabledevelopment/">United Nations’ Sustainable Development Goals (SDGs)</a> as a guide, our goal is to convey to students how computer science can make a positive impact in our world - from self-driving car technology that can make our roads safer, to data science techniques that can identify disease earlier and keep us healthier. <br><br>
+以<a href="https://www.un.org/sustainabledevelopment/">可持续发展目标</a>作为引导，我们的目标是教导学生们计算机科学与技术是如何是这个世界更具有正能量，从是道路更安全的无人汽车到可以推测可能会具有有爆发性的疾病的计算机统计学。 <br><br>
 
 <center>
 <a href="https://www.code.org/oceans"><img src="/images/fit-700/marketing/ai-oceans-csforgood.png"></a>
 </center>
 
-<br>When considering CS for Good, we were inspired to think about the potential of Artificial Intelligence, and are pleased to introduce Code.org's brand-new Hour of Code activity: <a href="https://www.code.org/oceans">AI for Oceans</a>. In this activity, students will learn about AI, machine learning, training data, and bias, all while exploring ethical issues and how AI can be used to address world problems. It's also just one example of how CS is about much more than coding. Enjoy this first step in a new journey to teach more about AI!<br>
+<br>当在考虑算机科学教育的好处时，我们都想着人工智能的将来，并不在意介绍全新的《编程一小时》：<a href="https://www.code.org/oceans">海洋AI</a> 在这个活动中，学生将会在探索种族问题中学习人工智能，机器学习，训练数据和偏差和人工智能是如何改善世界问题的。 这也是一个例子展示计算机科学也包括了其他内容，不只是编程。 享受开启您人工智能学习的第一步吧！<br>
 
 <a id="prompts"></a>
 

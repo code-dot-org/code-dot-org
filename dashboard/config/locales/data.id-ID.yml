@@ -89,7 +89,7 @@ id:
           pelajari bagaimana kami mengatur blok-blok tersebut sehingga lain kali anda
           bisa melakukannya sendiri.'
         maze_2_14: OK, ini seperti teka-teki yang terakhir, tetapi anda harus ingat
-          bagaimana menggunakan blok "jika" (if) dan blok "ulangi" (repeat) bersama-sama.
+          bagaimana menggunakan blok "jika" (if) dan blok "repeat" bersama-sama.
         maze_2_15: Saya ingin bunga matahari! Gunakan blok "jika" (if) untuk menggerakkan
           saya kesana dengan blok sesedikit mungkin.
         maze_2_16: OK, ayo coba lagi! Yang ini tidak jauh berbeda, tapi hati-hati
@@ -129,12 +129,12 @@ id:
           Anda mau. Tips: anda bisa menggambar tongkat, kepingan salju atau spiral.
           Cobalah gunakan blok baru "atur lebar". Selamat bersenang-senang!'
         turtle_4_1: 'Dapatkan Anda menggambar segitiga (panjang 100 piksel) dengan
-          menggunakan hanya 3 blok? Tips: Gunakanlah blok "Ulangi" (repeat).'
+          menggunakan hanya 3 blok? Tips: Gunakanlah blok "repeat".'
         turtle_4_2: Tambahkan blok "belok kanan 90 derajat" di suatu tempat di tengah
           program sudah keluar pada ruang kerja untuk menggambar segitiga ini.
         turtle_4_3: OK, di sini adalah kode yang anda tulis untuk menggambar sebuah
-          segitiga. Dapatkah Anda menambahkan blok "Ulangi" (repeat) dan blok "Belok"
-          (turn) untuk membuat sebuah bunga yang cantik?
+          segitiga. Dapatkah Anda menambahkan blok "repeat" dan blok "turn" untuk
+          membuat sebuah bunga yang cantik?
         turtle_4_4: 'Berikut adalah kode yang sama dari teka-teki sebelumnya, tetapi
           mengubah hanya 36 derajat setelah gambar untuk setiap segitiga. Berapa kali
           Apakah ini perlu mengulangi? (Tips: setelah 360 derajat berputar gambar
@@ -221,7 +221,7 @@ id:
           acak dalam lingkaran?  Cobalah menggambar apa pun yang Anda suka.
         maze_karel_2_1: 'Dengan menggunakan blok-blok, bantu saya memindahkan tumpukan
           dan mengisi lubang di ladang. Cobalah gunakan loop daripada menggunakan
-          banyak blok. Tips: Anda dapat menempatkan sebuah loop dalam loop lain.'
+          banyak blok. Petunjuk: Anda dapat menempatkan sebuah loop dalam loop lain.'
         maze_karel_2_2: Kita sudah mendefinisikan blok yang bernama "Isi 5", yang
           kini dalam kategori fungsi. Gunakanlah untuk membantu saya mengisi lubang
           ini.
@@ -254,7 +254,7 @@ id:
         turtle_3_2: Gunakan fungsi "gambar persegi" sebagai contoh, buat fungsi "gambar
           segitiga" dan  gunakanlah.
         turtle_3_3: 'Gambar pagar segitiga mengelilingi kucing-kucing dan pagar segi
-          empat mengelilingi sapi. Tips: uji program selagi anda membuatnya.'
+          empat mengelilingi sapi. Petunjuk: uji program selagi anda membuatnya.'
         turtle_3_4: Lihat jika anda dapat mengetahui bagaimana menggunakan "gambar
           persegi empat" dan "gambar segitiga" (dan blok-blok lain) untuk menggambar
           rumah mengelilingi singa.
