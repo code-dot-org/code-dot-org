@@ -36,7 +36,7 @@ class AddLevelFilters extends Component {
     levelName: PropTypes.string,
 
     // from redux
-    searchOptions: PropTypes.object
+    searchOptions: PropTypes.object.isRequired
   };
 
   handleSearch = _.debounce(
