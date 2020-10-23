@@ -8,6 +8,8 @@ import {sampleActivities} from './activitiesTestData';
 describe('ActivitySectionCard', () => {
   let defaultProps,
     setTargetActivitySection,
+    updateTargetActivitySection,
+    updateActivitySectionMetrics,
     moveActivitySection,
     removeActivitySection,
     updateActivitySectionField,
@@ -16,6 +18,8 @@ describe('ActivitySectionCard', () => {
     addLevel;
   beforeEach(() => {
     setTargetActivitySection = sinon.spy();
+    updateTargetActivitySection = sinon.spy();
+    updateActivitySectionMetrics = sinon.spy();
     moveActivitySection = sinon.spy();
     removeActivitySection = sinon.spy();
     updateActivitySectionField = sinon.spy();
@@ -28,6 +32,8 @@ describe('ActivitySectionCard', () => {
       activitySectionsCount: 3,
       activitiesCount: 1,
       activitySectionMetrics: [],
+      updateTargetActivitySection,
+      updateActivitySectionMetrics,
       setTargetActivitySection,
       targetActivitySectionPos: 1,
 
