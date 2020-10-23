@@ -52,7 +52,7 @@ class AddLevelDialogTop extends Component {
     addLevel: PropTypes.func,
 
     // from redux
-    searchOptions: PropTypes.object
+    searchOptions: PropTypes.object.isRequired
   };
 
   constructor(props) {
