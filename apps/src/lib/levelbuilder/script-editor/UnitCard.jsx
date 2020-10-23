@@ -116,7 +116,7 @@ class UnitCard extends Component {
    */
   serializeLesson = lesson => {
     let s = [];
-    let t = `lesson '${escape(lesson.name)}'`;
+    let t = `lesson '${escape(lesson.key)}'`;
     if (lesson.name) {
       t += `, display_name: '${escape(lesson.name)}'`;
     }
