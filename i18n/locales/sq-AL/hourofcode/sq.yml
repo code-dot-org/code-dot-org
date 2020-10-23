@@ -29,6 +29,20 @@ sq:
   africa_campaign_date_full: October 1-31
   africa_campaign_date_year: '2016'
   africa_campaign_date_full_year: October 1-31, 2020
+  hoc2020_header: Learn today, build a brighter tomorrow.
+  hoc2020_header_with_line_break_markdown: |-
+    Learn today,
+
+    build a brighter tomorrow.
+  social_hoc2020_cs_important: 'CS is more important than ever. Let''s build the future
+    we want. #CSforGood'
+  social_hoc2020_hoc_is_about_csforgood: 'The #HourOfCode is about #CSforGood. Learn
+    today, build a brighter tomorrow.'
+  social_hoc2020_global_movement: The Hour of Code is a global movement reaching tens
+    of millions of students. One-hour tutorials are available in 45+ languages for
+    all ages.
+  social_hoc2020_coming_dates: The Hour of Code is coming December 7-13, 2020. Computer
+    science is foundational for every student to learn.
   hoc2019_header: Learn computer science. Change the world.
   hoc2019_header_line1_mobile: Learn computer science.
   hoc2019_header_line2_mobile: Change the world.
@@ -909,7 +923,8 @@ sq:
   highlights_header: Pikat kryesore të Orës së Kodimit
   highlights_description: Disa nga momentet tona të preferuara nga fushata e Orës
     së Kodimit.
-  higlights_see_more: See more highlights
+  highlights_previous: Highlights from previous years
+  highlights_see_more: See more highlights
   highlights_readmore: Read more
   highlights_watchvideo: Shiko videon
   highlights_facebook: Shpërndaje në Facebook

@@ -88,7 +88,8 @@ export default class AnnouncementsEditor extends Component {
           />
         ))}
         <button className="btn" type="button" onClick={this.add}>
-          Additional Announcement
+          <i style={{marginRight: 7}} className="fa fa-plus-circle" />
+          Add Announcement
         </button>
         {announcements.length > 0 && (
           <div>

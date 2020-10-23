@@ -9,7 +9,7 @@ title: Przewodnik Godziny Kodowania dla wolontariuszy
 
 ***
 
-## Why volunteer?
+## Dlaczego wolontariat?
 Przeczytaj niektóre relacje innych wolontariuszy:
 
 - "Najlepszym aspektem mojego doświadczenia było to, że cała klasa składała się z kobiet i osób o różnym kolorze skóry. To, że mamy szansę dotrzeć do tych dzieciaków i zainteresować je, dobrze wróży przyszłości naszej branży."
@@ -40,10 +40,10 @@ Czy wierzysz w to, że nauka informatyki może otwierać uczniom drzwi do różn
 ## Zrekrutuj współpracowników jako wolontariuszy.
 Opowiedz znajomym i współpracownikom o "Godzinie kodowania". Tysiące nauczycieli szukają wolontariuszy, zatem poproś ich [o zapisanie Cię jako wolontariusza](https://code.org/volunteer). Poproś swojego pracodawcę, aby się zaangażował. [Wyślij ten email]({{ promote/sample_emails }}) do swojego przełożonego lub prezesa, aby zaangażować wszystkich.
 
-## How to prepare
+## Jak się przygotować
 - [Wybierz film wideo]({{ promote/videos }}), który pokażesz, aby pomóc klasie skupić się i zainteresować "Godziną kodowania".
-- Wypróbuj [Zestaw wolontariusza <<Godziny kodowania>>"](/files/hoc-volunteer-toolkit.pdf) zawierający omówienie ogólne, ramy czasowe, materiały do przygotowania się oraz materiały marketingowe. Wszystko, czego potrzebujesz, aby być gotowym na przeżycie doświadczenie wcielenia się w rolę wolontariusza!
-- Jeśli zamierzasz zrealizować samouczek w trakcie swojej sesji, poświęć 30 minut na wypróbowanie przynajmniej jednego [samouczka <<Godziny kodowania>>]({{ urls/learn }}).
+- Wypróbuj [Zestaw wolontariusza Godziny kodowania"](/files/hoc-volunteer-toolkit.pdf) zawierający omówienie ogólne, ramy czasowe, materiały do przygotowania się oraz materiały marketingowe. Wszystko, czego potrzebujesz, aby być gotowym na przeżycie doświadczenie wcielenia się w rolę wolontariusza!
+- Jeśli zamierzasz zrealizować samouczek w trakcie swojej sesji, poświęć 30 minut na wypróbowanie przynajmniej jednego [samouczka Godziny kodowania]({{ urls/learn }}).
 - Jeśli udajesz się do szkoły, sprawdź wszystko wcześniej i dopełnij wymaganych formalności.
 - [Przejrzyj wskazówki](https://code.org/files/CSTT_Volunteers.pdf) jak pracować z uczniami.
 - Dołącz do rozmowy na Facebooku, Twitterze, Instagramie i Tumblr z #HourOfCode.
@@ -71,19 +71,19 @@ Gdy jesteś gospodarzem wydarzenia "Godziny kodowania", przejrzyj poniższy prog
 - Sprawdź po miesiącu: Czy nauczyciel jest zainteresowany ofertą kursu informatycznego? Udostępniaj [materiały oraz okazje do zdobywania profesjonalnej wiedzy, aby pomagać nauczycielom w tym zakresie](https://code.org/yourschool).
 
 ## Jakie są zasady wybierania wolontariusza ds. technicznych jako mówcy gościnnego
-- Teachers will be searching for volunteers on our [volunteer map](https://code.org/volunteer/local).
-- Try to make your profile as complete as possible to increase the chance that a teacher will select you.
+- Nauczyciele będą szukać wolontariuszy na naszej [v mapie wolontariuszy ](https://code.org/volunteer/local).
+- Postaraj się, aby Twój profil był możliwie jak najbardziej kompletny - to zwiększa szansę, że nauczyciel wybierze właśnie ciebie.
 - Nauczyciel skontaktuje się z tobą poprzez ten formularz (twój adres email nie zostanie nigdy udostępniony). *Jeśli otrzymujesz za dużo zapytań od nauczycieli, możesz uaktualnić swoje preferencje. Kliknij link umieszczony na dole każdej wiadomości od nauczyciela, aby zmienić swoje informacje albo wypisać się.*
 
 ## Wolontariat w trakcie najczęściej zadawanych pytań i odpowiedzi [FAQ] w ramach "Godziny kodowania"
 
 ### Nauczyciel jeszcze się ze mną nie kontaktował. W jaki sposób mogę się jeszcze zgłosić jako wolontariusz?
-Try searching for local schools and call the principal/teacher/front office and ask how you can help.
+Spróbuj poszukać miejscowych szkół, zadzwoń do dyrektora/nauczyciela/sekretariatu i zapytaj jak możesz pomóc.
 
-### How long do classroom visits last for?
+### Ile trwają wizyty w klasie?
 Zwykle osobista wizyta w klasie trwa 60-90 minut, a wirtualna wizyta w klasie trwa zwykle 20-30 minut.
 
-### What age group is the Hour of Code activity appropriate for?
+### Dla jakiej grupy wiekowej zajęcia "Godzina kodowania" są odpowiednie?
 Code.org i nasi partnerzy projektują wszystkie zajęcia w ramach "Godziny kodowania", aby angażować uczniów wszystkich klas (K-12), chłopców i dziewczęta, ze  wszystkich środowisk. Każdy, nawet dorośli mogą się dobrze bawić grając!
 
 

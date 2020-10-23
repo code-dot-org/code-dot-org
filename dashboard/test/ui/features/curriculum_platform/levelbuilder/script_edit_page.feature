@@ -53,6 +53,8 @@ Scenario: Navigate from script gui edit page to lesson edit page
   And I view the temp script gui edit page
 
   # Open the lesson edit page
+  And I wait until element ".fa-pencil" is visible
+  Then I scroll the ".fa-pencil" element into view
   And I click ".fa-pencil"
   And I switch tabs
   And I wait until element "#edit-container" is visible

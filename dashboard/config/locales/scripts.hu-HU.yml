@@ -8,6 +8,7 @@ hu:
         csf_international_category_name: A számítógép-tudomány alapjai - nemzetközi
         hoc_category_name: A kódolás órája
         math_category_name: Matematika
+        other_category_name: Egyéb
       name:
         course1:
           title: 1. tanfolyam

@@ -32,7 +32,7 @@
     "rubric_performance_level_2": "The background, images, and text have all been styled as described in the instructions, but there may be minimal errors or non-functioning code in the stylesheet.",
     "rubric_performance_level_3": "Rule-sets have been created in the style-sheet to style the background, images, and text, but there are major errors that prevent the code from working properly.",
     "rubric_performance_level_4": "There are no rule-sets in the stylesheet, or the rule-sets do not have the necessary selectors to style the background or images in the pages.",
-    "validation_enabled": "false"
+    "validation_enabled": "true"
   },
   "published": true,
   "notes": "",

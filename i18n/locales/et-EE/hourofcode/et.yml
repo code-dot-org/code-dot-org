@@ -29,6 +29,20 @@ et:
   africa_campaign_date_full: October 1-31
   africa_campaign_date_year: '2017'
   africa_campaign_date_full_year: October 1-31, 2020
+  hoc2020_header: Learn today, build a brighter tomorrow.
+  hoc2020_header_with_line_break_markdown: |-
+    Learn today,
+
+    build a brighter tomorrow.
+  social_hoc2020_cs_important: 'CS is more important than ever. Let''s build the future
+    we want. #CSforGood'
+  social_hoc2020_hoc_is_about_csforgood: 'The #HourOfCode is about #CSforGood. Learn
+    today, build a brighter tomorrow.'
+  social_hoc2020_global_movement: KoodiTund on globaalne liikumine, mis jõuab miljonite
+    tudengiteni. 1-tunnised juhised on 45+ erinevas keeles ning need sobivad igas
+    vanuses inimestele.
+  social_hoc2020_coming_dates: The Hour of Code is coming December 7-13, 2020. Computer
+    science is foundational for every student to learn.
   hoc2019_header: Õpi arvutiteadusi ja muuda maailma.
   hoc2019_header_line1_mobile: Õpi arvutiteadusi.
   hoc2019_header_line2_mobile: Muuda maailma.
@@ -881,7 +895,8 @@ et:
   highlights_title: Tipphetked
   highlights_header: KoodiTund tipphetked
   highlights_description: Mõned meie KoodiTund kampaania lemmikseigad.
-  higlights_see_more: Vaata veel tipphetki
+  highlights_previous: Highlights from previous years
+  highlights_see_more: See more highlights
   highlights_readmore: Loe veel
   highlights_watchvideo: Vaata videot
   highlights_facebook: Jaga Facebookis

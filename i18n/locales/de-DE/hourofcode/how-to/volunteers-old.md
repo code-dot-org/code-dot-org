@@ -56,77 +56,23 @@ Wenn Sie eine Hour of Code-Veranstaltung moderieren, verwenden Sie den nachfolge
 
 ### Mustervorlage für den Ablauf einer Veranstaltung:
 
-<table spaces-before="0" line-breaks-before="2">
-  <tr>
-    <th>
-      Zeit
-    </th>
-    
-    <th>
-      Aktivität
-    </th>
-  </tr>
-  
-  <tr>
-    <td>
-      1-5 Minuten
-    </td>
-    
-    <td>
-      <a href="{{ promote/videos }}">Ein inspirierendes Video zeigen:</a>.
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      5-10 Minuten
-    </td>
-    
-    <td>
-      Stellen Sie sich vor und erfahren Sie mehr über die SchülerInnen: </ul><li>Was ist Ihr Beruf, was tun Sie, und was gefällt Ihnen an Ihrer Arbeit am besten?
+| Zeit          | Aktivität                                                                                                                                                                                                                                                                                                                                                                                          |
+| ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1-5 Minuten   | [Ein inspirierendes Video zeigen:]({{ promote/videos }}).                                                                                                                                                                                                                                                                                                                                          |
+| 5-10 Minuten  | Stellen Sie sich vor und erfahren Sie mehr über die SchülerInnen: </ul><li>Was ist Ihr Beruf, was tun Sie, und was gefällt Ihnen an Ihrer Arbeit am besten?
 </li><li>Wer oder was hat Sie dazu gebracht?</li><li>Wie kam es, dass Sie sich für Informatik interessiert haben?</li><li>Hatten Sie einen Mentor?</li><li>Erzählen Sie eine Geschichte darüber, wie Technologie jeden beeinflusst.
 </li><br>Stellen Sie Fragen an die Schüler; nehmen Sie sich Zeit für Fragen und Antworten.</br> <li> Für welche Berufe interessieren sie sich, was sind ihre bevorzugten technischen Geräte oder Anwendungen, und wie sind diese ihrer Meinung nach aufgebaut?
- </li><li> Haben die SchülerInnen Fragen an Sie? </ul>
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      30-60 Minuten
-    </td>
-    
-    <td>
-      <stark x-id="1">Code!</stark> Gehen Sie umher, beantworten Sie Fragen und helfen Sie ihnen bei der Lösung schwieriger Aufgaben. Versuchen Sie, ihnen die Lösung nicht direkt zu verraten. Stellen Sie ihnen stattdessen Fragen, damit sie selbst sagen können, was nicht geklappt hat, und ermutigen Sie sie zu Kommunikation untereinander, wenn sie Fragen haben. Voneinander lernen ist eine großartige Lernerfahrung.
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      1-3 Minuten
-    </td>
-    
-    <td>
-      Bedanken Sie sich bei allen und verabschieden Sie sich mit einer inspirierenden Botschaft. Verteilen Sie witzige Artikel von Ihrem Unternehmen (Sticker kommen immer gut an)!
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      Im Anschluss
-    </td>
-    
-    <td>
-      <stark x-id="1">Bewirken Sie eine langfristigen Wandel:</stark> Sprechen Sie mit der Lehrkraft darüber, aus der Hour of Code einen vollständigen Informatikkurs zu machen! Besuchen Sie <a href="https://code.org/yourschool">code.org/yourschool</a> mit dem Lehrer/der Lehrerin, damit er/sie dort einträgt, was diese Schule derzeit unterrichtet und ermutigen Sie ihn/sie, sich für Informatik in ihren Unterricht einzusetzen.
-    </td>
-  </tr>
-</table>
+ </li><li> Haben die SchülerInnen Fragen an Sie? </ul> |
+| 30-60 Minuten | **Code!** Walk around, answer questions, and guide them through tough puzzles. Versuchen Sie, ihnen die Lösung nicht direkt zu verraten. Stellen Sie ihnen stattdessen Fragen, damit sie selbst sagen können, was nicht geklappt hat, und ermutigen Sie sie zu Kommunikation untereinander, wenn sie Fragen haben. Voneinander lernen ist eine großartige Lernerfahrung.                           |
+| 1-3 Minuten   | Bedanken Sie sich bei allen und verabschieden Sie sich mit einer inspirierenden Botschaft. Verteilen Sie witzige Artikel von Ihrem Unternehmen (Sticker kommen immer gut an)!                                                                                                                                                                                                                      |
+| Im Anschluss  | **Make a lasting change:** Talk to the teacher about turning the Hour of Code into a full computer science course! Besuchen Sie [code.org/yourschool](https://code.org/yourschool) mit dem Lehrer/der Lehrerin, damit er/sie dort einträgt, was diese Schule derzeit unterrichtet und ermutigen Sie ihn/sie, sich für Informatik in ihren Unterricht einzusetzen.                                  |
 
 ### Nach der Veranstaltung:
 - Teilen Sie Ihre Fotos und Geschichten unter der E-Mail-Adresse giving@code.org mit Code.org.
 - Vergessen Sie nicht, Ihre Freiwilligenstunden in das Protokoll des Freiwilligen-Portal Ihres Unternehmens einzutragen.
 - Teilen Sie Ihre Erfahrungen mit #HourOfCode in den Sozialen Medien!
-- Wenn Sie während der Veranstaltung Fotos/Videos machen, **insbesondere solche mit SchülerInnen</stark>, holen Sie unbedingt die Genehmigungen der der Lehrkräfte/Eltern ein, wenn Sie Ihre Geschichten in sozialen Medien veröffentlichen möchten. </li>
-- Melden Sie sich nach einem Monat noch einmal: Ist der Lehrer/die Lehrerin daran interessiert, einen Informatikkurs anzubieten? Geben Sie ihnen Informationen zu [Ressourcen und professionellen Lernmöglichkeiten,die sie bei ihrem Vorhaben unterstützen](https://code.org/yourschool). </ul>
+- If you do take pictures/videos during the event, **especially with students**, make sure you get teacher/parent permission if you would like to post your stories on social media.
+- Melden Sie sich nach einem Monat noch einmal: Ist der Lehrer/die Lehrerin daran interessiert, einen Informatikkurs anzubieten? Geben Sie ihnen Informationen zu [Ressourcen und professionellen Lernmöglichkeiten,die sie bei ihrem Vorhaben unterstützen](https://code.org/yourschool).
 
 ## Wie erfolgt die Auswahl als Freiwillige(r) für technische Präsentationen oder als GastreferentIn?
 - LehrerInnen suchen Freiwillige auf unserer [Unterstützerkarte](https://code.org/volunteer/local).

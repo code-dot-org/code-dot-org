@@ -29,6 +29,20 @@ tr:
   africa_campaign_date_full: 1-31 Ekim
   africa_campaign_date_year: '2020'
   africa_campaign_date_full_year: 1-31 Ekim 2020
+  hoc2020_header: Learn today, build a brighter tomorrow.
+  hoc2020_header_with_line_break_markdown: |-
+    Learn today,
+
+    build a brighter tomorrow.
+  social_hoc2020_cs_important: 'CS is more important than ever. Let''s build the future
+    we want. #CSforGood'
+  social_hoc2020_hoc_is_about_csforgood: 'The #HourOfCode is about #CSforGood. Learn
+    today, build a brighter tomorrow.'
+  social_hoc2020_global_movement: Hour of Code, on milyonlarca öğrenciye ulaşan küresel
+    bir harekettir. Bir saatlik öğretici materyaller, her yaştan insan için 45'in
+    üzerinde dilde sunulmaktadır.
+  social_hoc2020_coming_dates: The Hour of Code is coming December 7-13, 2020. Computer
+    science is foundational for every student to learn.
   hoc2019_header: Bilgisayar Bilimlerini Öğren, Dünyayı değiştir.
   hoc2019_header_line1_mobile: Bilgisayar Bilimlerini Öğren.
   hoc2019_header_line2_mobile: Dünyayı değiştir.
@@ -946,7 +960,8 @@ tr:
   highlights_title: Önemli Anlar
   highlights_header: Hour of Code Önemli Noktalar
   highlights_description: Hour of Code kampanyamızdaki bazı favori anlarımız.
-  higlights_see_more: Biraz daha bilgi
+  highlights_previous: Highlights from previous years
+  highlights_see_more: See more highlights
   highlights_readmore: Daha fazla oku
   highlights_watchvideo: Video İzleyin
   highlights_facebook: Facebook'ta Paylaş

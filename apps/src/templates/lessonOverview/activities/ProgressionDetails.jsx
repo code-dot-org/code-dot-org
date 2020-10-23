@@ -35,12 +35,12 @@ export default class ProgressionDetails extends Component {
 
     return {
       status: LevelStatus.not_tried,
-      url: activeLevel.url,
+      url: scriptLevel.url,
       name: activeLevel.name,
-      kind: activeLevel.kind,
+      kind: scriptLevel.kind,
       icon: activeLevel.icon,
       isConceptLevel: activeLevel.isConceptLevel,
-      isUnplugged: activeLevel.isUnplugged,
+      isUnplugged: scriptLevel.display_as_unplugged,
       levelNumber: scriptLevel.position,
       bonus: scriptLevel.bonus
     };
@@ -56,7 +56,7 @@ export default class ProgressionDetails extends Component {
           levels={progression.scriptLevels.map(scriptLevel =>
             this.convertScriptLevelForProgression(scriptLevel)
           )}
-          disabled={true}
+          disabled={false}
           selectedSectionId={null}
         />
         <div style={styles.description}>

@@ -152,12 +152,7 @@ function getLocations(results) {
       var id = volunteers[index].id;
       var html = compileHTML(index, volunteers[index]);
       var contact_title = compileContact(index, volunteers[index]);
-      var contact_link =
-        '<a id="contact-trigger-' +
-        index +
-        '" class="contact-trigger" onclick="return contactVolunteer(' +
-        id +
-        ')">Contact</a>';
+      var contact_link = `<a id="contact-trigger-${index}" class="contact-trigger" onclick="return contactVolunteer(${id}, '${title}')">Contact</a>`;
 
       var location = {
         lat: lat,
@@ -586,7 +581,8 @@ function compileContact(index, location) {
 }
 
 /* eslint-disable no-unused-vars */
-function contactVolunteer(id) {
+function contactVolunteer(id, name) {
+  $("#name").text(name);
   $("#name").show();
   $("#volunteer-contact").show();
   $("#success-message").hide();

@@ -139,7 +139,7 @@ Cosa ti serve:
         * iOS Safari su dispositivo mobile (ottimizzato per i dispositivi mobili)
         * Android Chrome (ottimizzato per i dispositivi mobili)
     * Non basato sul Web: specifica la piattaforma per il codice nativo (Mac, Win, iOS, Android, xBox, altro)
-    * Unplugged
+    * Non necessita di PC
 * Screenshot o immagine di marketing dell'attività dell'Ora del Codice. Invia almeno un'immagine con dimensioni 4: 3. Dovrebbe essere di almeno 520 pixel per 390 pixel. Questa immagine non deve contenere testo (a parte il tuo logo), in modo da renderla più accessibile a chi non parla inglese. Se non viene fornita un'immagine appropriata, potremmo acquisire il nostro screenshot del tuo tutorial OPPURE potremmo scegliere di non elencarlo. Tutte le immagini devono essere inviate come collegamento URL a un file .jpg, .jpeg o .png.
 * Per monitorare più accuratamente la partecipazione, i partner di tutorial di terze parti devono includere immagini di tracciamento di 1 pixel nella prima pagina dei loro tutorial dell'Ora del Codice. Consulta la sezione [ Pixel di monitoraggio ](#pixel) di seguito per ulteriori dettagli.
 * Al termine della tua attività, gli utenti devono essere indirizzati a [ code.org/api/hour/finish ](https://code.org/api/hour/finish) dove potranno: 

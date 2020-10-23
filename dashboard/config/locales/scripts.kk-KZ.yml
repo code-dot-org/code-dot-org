@@ -5,6 +5,7 @@ kk:
       category:
         hoc_category_name: Код жазу Сағаты
         math_category_name: Математика
+        other_category_name: Басқасы
       name:
         course1:
           title: Курс 1

@@ -29,6 +29,19 @@ hi:
   africa_campaign_date_full: October 1-31
   africa_campaign_date_year: '2020'
   africa_campaign_date_full_year: October 1-31, 2020
+  hoc2020_header: Learn today, build a brighter tomorrow.
+  hoc2020_header_with_line_break_markdown: |-
+    Learn today,
+
+    build a brighter tomorrow.
+  social_hoc2020_cs_important: 'CS is more important than ever. Let''s build the future
+    we want. #CSforGood'
+  social_hoc2020_hoc_is_about_csforgood: 'The #HourOfCode is about #CSforGood. Learn
+    today, build a brighter tomorrow.'
+  social_hoc2020_global_movement: ऑवर ऑफ़ कोड एक वैश्विक आंदोलन है जो लाखों छात्रों
+    तक पहुंचता है।एक घंटे के ट्यूटोरियल सभी उम्र के लिए 45+ भाषाओं में उपलब्ध हैं।
+  social_hoc2020_coming_dates: The Hour of Code is coming December 7-13, 2020. Computer
+    science is foundational for every student to learn.
   hoc2019_header: कंप्यूटर साइंस सीखो, दुनिया बदलो
   hoc2019_header_line1_mobile: कंप्यूटर साइंस सीखो
   hoc2019_header_line2_mobile: दुनिया बदलो
@@ -922,7 +935,8 @@ hi:
   highlights_title: हाइलाइट्स
   highlights_header: ऑवर ऑफ़ कोड हाइलाइट्स
   highlights_description: ऑवर ऑफ़ कोड अभियान से हमारे कुछ पसंदीदा पल।
-  higlights_see_more: अधिक हाइलाइट्स देखें
+  highlights_previous: Highlights from previous years
+  highlights_see_more: See more highlights
   highlights_readmore: और पढ़ें
   highlights_watchvideo: वीडियो देखें
   highlights_facebook: फेसबुक पर साझा करें

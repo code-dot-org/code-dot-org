@@ -30,6 +30,20 @@ ta:
   africa_campaign_date_full: October 1-31
   africa_campaign_date_year: '2017'
   africa_campaign_date_full_year: October 1-31, 2020
+  hoc2020_header: Learn today, build a brighter tomorrow.
+  hoc2020_header_with_line_break_markdown: |-
+    Learn today,
+
+    build a brighter tomorrow.
+  social_hoc2020_cs_important: 'CS is more important than ever. Let''s build the future
+    we want. #CSforGood'
+  social_hoc2020_hoc_is_about_csforgood: 'The #HourOfCode is about #CSforGood. Learn
+    today, build a brighter tomorrow.'
+  social_hoc2020_global_movement: Hour of Code என்பது பல்லாயிரக்கணக்கான மாணவர்களைச்
+    சென்றடையும் ஒரு உலகளாவிய இயக்கமாகும். ஒரு மணி நேர பயிற்சி வீடியோக்கள் எல்லா வயதினருக்கும்
+    45+ மேற்பட்ட மொழிகளில் கிடைக்கின்றன.
+  social_hoc2020_coming_dates: The Hour of Code is coming December 7-13, 2020. Computer
+    science is foundational for every student to learn.
   hoc2019_header: கம்ப்யூட்டர் சயின்ஸ் கற்றுக்கொள்ளுங்கள். உலகை மாற்றுங்கள்.
   hoc2019_header_line1_mobile: கம்ப்யூட்டர் சயின்ஸ் கற்றுக்கொள்ளுங்கள்.
   hoc2019_header_line2_mobile: உலகை மாற்றுங்கள்.
@@ -959,7 +973,8 @@ ta:
   highlights_title: சிறப்பம்சங்கள்
   highlights_header: Hour of Code சிறப்பும்சங்கள்
   highlights_description: Hour of Code பிரச்சாரத்தில்.
-  higlights_see_more: மேலதிக சிறப்பம்சங்களைக் காண்க
+  highlights_previous: Highlights from previous years
+  highlights_see_more: See more highlights
   highlights_readmore: மேலும் வாசியுங்கள்
   highlights_watchvideo: காணொளியைக் காண்க
   highlights_facebook: முகநூலில் பகிரவும்

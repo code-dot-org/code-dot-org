@@ -30,6 +30,20 @@ ru:
   africa_campaign_date_full: October 1-31
   africa_campaign_date_year: '2020'
   africa_campaign_date_full_year: October 1-31, 2020
+  hoc2020_header: Learn today, build a brighter tomorrow.
+  hoc2020_header_with_line_break_markdown: |-
+    Learn today,
+
+    build a brighter tomorrow.
+  social_hoc2020_cs_important: 'CS is more important than ever. Let''s build the future
+    we want. #CSforGood'
+  social_hoc2020_hoc_is_about_csforgood: 'The #HourOfCode is about #CSforGood. Learn
+    today, build a brighter tomorrow.'
+  social_hoc2020_global_movement: Час Программирования - это глобальное движение,
+    охватывающее десятки миллионов учеников. Руководства по часовому обучению доступны
+    для всех возрастов на 45+ языках.
+  social_hoc2020_coming_dates: The Hour of Code is coming December 7-13, 2020. Computer
+    science is foundational for every student to learn.
   hoc2019_header: Познай информатику. Измени мир.
   hoc2019_header_line1_mobile: Познай информатику.
   hoc2019_header_line2_mobile: Измени мир.
@@ -920,7 +934,8 @@ ru:
   highlights_title: Основные моменты
   highlights_header: Основные моменты Часа кода
   highlights_description: Некоторые из наших любимых моментов из Часа кода.
-  higlights_see_more: See more highlights
+  highlights_previous: Highlights from previous years
+  highlights_see_more: See more highlights
   highlights_readmore: Подробнее
   highlights_watchvideo: Посмотреть видео
   highlights_facebook: Поделитесь на Facebook

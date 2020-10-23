@@ -1782,6 +1782,13 @@
         },
         "grade5_artist_variables_triangles1_2020": {
           "grade5_artist_variables_triangles1_1": "注意，模块可以用新的方法来输入数字了。这些`math`（数学）模块能被拖出来，并且四处移动了！"
+        },
+        "courseC_video_angles": {
+          "courseD_maze_ramp6_1": "无论您在这里放置什么代码, 都会重复您说的次数, 然后继续运行该程序的其余部分。"
+        },
+        "courseD_video_nestedLoopsArtist": {
+          "courseE_artist_ramp8_1": "您可以更改此数字。",
+          "courseE_artist_ramp8_2": "单击此处键入重复代码的次数。"
         }
       }
     }

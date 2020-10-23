@@ -650,7 +650,7 @@ ActiveRecord::Schema.define(version: 20201016003134) do
     t.float    "value",       limit: 24, null: false
   end
 
-  create_table "objectives", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci" do |t|
+  create_table "objectives", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.text     "properties", limit: 65535
     t.integer  "lesson_id"
     t.datetime "created_at",               null: false

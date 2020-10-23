@@ -19,6 +19,7 @@ it:
         hoc_category_name: L'Ora del Codice
         math_category_name: Matematica
         research_studies_category_name: Studi di Ricerca
+        other_category_name: Altro
       name:
         course1:
           title: Corso 1

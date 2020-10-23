@@ -987,6 +987,11 @@ describe('project.js', () => {
       expect(project.isCurrentCodeDifferent('')).to.be.false;
     });
 
+    it('compares null inputs as if they were an empty string', () => {
+      setSources({source: ''});
+      expect(project.isCurrentCodeDifferent(null)).to.be.false;
+    });
+
     it('compares unset input sources as if they were an empty string', () => {
       setSources({source: ''});
       expect(project.isCurrentCodeDifferent()).to.be.false;

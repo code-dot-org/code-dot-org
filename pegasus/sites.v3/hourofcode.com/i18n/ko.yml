@@ -29,6 +29,19 @@ ko:
   africa_campaign_date_full: 10월 1일~31일
   africa_campaign_date_year: 2020년
   africa_campaign_date_full_year: 2020년 10월 1일~31일
+  hoc2020_header: Learn today, build a brighter tomorrow.
+  hoc2020_header_with_line_break_markdown: |-
+    Learn today,
+
+    build a brighter tomorrow.
+  social_hoc2020_cs_important: 'CS is more important than ever. Let''s build the future
+    we want. #CSforGood'
+  social_hoc2020_hoc_is_about_csforgood: 'The #HourOfCode is about #CSforGood. Learn
+    today, build a brighter tomorrow.'
+  social_hoc2020_global_movement: 아워오브코드는 수 천만 명의 학생들과 함께 하는 전 세계적인 운동입니다. 모든 연령을
+    위한 한 시간 분량의 튜토리얼이 45개 이상의 언어로 제공됩니다.
+  social_hoc2020_coming_dates: The Hour of Code is coming December 7-13, 2020. Computer
+    science is foundational for every student to learn.
   hoc2019_header: 컴퓨터 과학을 배우세요. 세상을 바꾸세요.
   hoc2019_header_line1_mobile: 컴퓨터 과학을 배우세요.
   hoc2019_header_line2_mobile: 세상을 바꾸세요.
@@ -779,7 +792,8 @@ ko:
   highlights_title: 하이라이트
   highlights_header: Hour of Code의 하이라이트
   highlights_description: Hour of Code 캠페인에서 우리가 가장 좋아하는 순간들
-  higlights_see_more: 더 많은 하이라이트 참조
+  highlights_previous: Highlights from previous years
+  highlights_see_more: See more highlights
   highlights_readmore: 자세히 보기
   highlights_watchvideo: 동영상 보기
   highlights_facebook: 페이스북에 공유

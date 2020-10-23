@@ -808,7 +808,7 @@
           "NEW_Course_4_Bee_For_Loops_8_a": "Wenn deine Schleife hochzählt, wird die Schrittweite bei jedem Durchlauf zu deiner Zählervariablen addiert.<br><br>\n\nWas musst du zu jeder Zahl addieren, um die nächste Zahl zu erhalten?"
         },
         "OPD-K5-events-2": {
-          "courseC_flappy_events1_a": "[][0]"
+          "courseC_flappy_events1_a": "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
         },
         "OPD-K5-events-3": {
           "courseC_flappy_events2_a": "Der Block, den du hinzufügen musst, heißt `Stelle Geschwindigkeit ein`. ",
@@ -824,8 +824,8 @@
           "courseC_flappy_events5_a": "Du musst den `Erziele einen Punkt` Block verwenden, um dieses Level zu bestehen!"
         },
         "OPD-K5-forloops-1": {
-          "courseF_bee_for1_a": "Zieh einen violetten Nummernblock in das leere Feld der ‚Wiederholen`-Schleife, um zu bestimmen, wie oft er wiederholt werden soll.",
-          "courseF_bee_for1_b": "Du benötigen zwei Blöcke in deiner ‚Wiederholen`-Schleife, um den gesamten Nektar zu sammeln."
+          "courseF_bee_for1_a": "Zieh einen violetten Nummernblock in das leere Feld der ‚Wiederholen\\`-Schleife, um zu bestimmen, wie oft er wiederholt werden soll.",
+          "courseF_bee_for1_b": "Du benötigen zwei Blöcke in deiner ‚Wiederholen\\`-Schleife, um den gesamten Nektar zu sammeln."
         },
         "OPD-K5-forloops-2": {
           "courseF_bee_for2_a": "Wenn dich das verwirrt, arbeite an einer Blüte nach der anderen und teste deinen Code dabei häufig.",
@@ -837,7 +837,7 @@
           "courseF_bee_for4_c": "Achte darauf, dass du die `Zähl`-Variable in deiner verschachtelten `Wiederholen`-Schleife verwendest, um genügend Nektar zu erhalten!"
         },
         "OPD-K5-forloops-6": {
-          "courseF_bee_for6_a": "Denk daran, eine `Zähl'-Variable innerhalb deiner `Wiederholen'-Schleife zu verwenden.",
+          "courseF_bee_for6_a": "Denk daran, eine `Zähl'-Variable innerhalb deiner`Wiederholen'-Schleife zu verwenden.",
           "courseF_bee_for6_b": "Innerhalb deiner \"Für\"-Schleife benötigst du einen \"Vorwärts\"-Befehl und eine Schleife zum Sammeln des Nektars.",
           "courseF_bee_for6_c": "Deine Schleife muss von **5** bis **1** zählen."
         },
@@ -848,7 +848,7 @@
         },
         "OPD-K5-projects-2": {
           "courseE_playLab_scaffold1_a": "Du kannst den Baustein `Figur 1 in Bild ??? einfügen` verwenden, um der Szene eine Figur hinzuzufügen.",
-          "courseE_playLab_scaffold1_b": "Füge den Baustein `Figur einfügen` unter wenn ausgeführt wird` ein, damit deine Figur am Anfang des Programms erscheint.",
+          "courseE_playLab_scaffold1_b": "Füge den Baustein `Figur einfügen` unter wenn ausgeführt wird\\` ein, damit deine Figur am Anfang des Programms erscheint.",
           "courseE_playLab_scaffold1_c": "Verwende `Hintergrund ???? erstellen`, um einen Hintergrund für deine Szene zu wählen."
         },
         "OPD-K5-projects-3": {
@@ -861,7 +861,7 @@
         },
         "OPD-K5-variables-1": {
           "grade5_artist_variables_triangles1_a": "Um in diesem Dreieck einen Innenwinkel von 60 Grad zu erreichen, vergiss nicht, den Künstler um 120 Grad zu drehen.",
-          "grade5_artist_variables_triangles1_b": "Verwende die `Wiederholen`-Schleife`, um deinen Code zu verkürzen.",
+          "grade5_artist_variables_triangles1_b": "Verwende die `Wiederholen`-Schleife\\`, um deinen Code zu verkürzen.",
           "grade5_artist_variables_triangles1_c": "Du willst dich in deiner Schleife um 50 Pixel vorwärts bewegen und dich dann um 120 Grad nach links drehen."
         },
         "OPD-K5-variables-2": {
@@ -870,18 +870,18 @@
         },
         "OPD-K5-variables-5": {
           "courseF_artist_variables3_a": "Die Variable `Länge` wird an zwei Stellen in deinem Code verwendet: In der Seitenlänge deines Dreiecks und in dem Abstand, um den du dich zwischen den Dreiecken vorwärts bewegst.",
-          "courseF_artist_variables3_b": "Ein Zahlen-Block mit dem Wert 50 sollte nur an einer Stelle stehen: nach dem `Länge bestimmen` Block.\n"
+          "courseF_artist_variables3_b": "Ein Zahlen-Block mit dem Wert 50 sollte nur an einer Stelle stehen: nach dem `Länge bestimmen` Block."
         },
         "OPD-K5-variables-6": {
           "courseF_artist_variables4_a": "Dein Code wird nicht viel anders sein als im letzten Puzzle, außer dass du den Zeichner drehen musst, um herunterzuspringen, und ihn dann zurückdrehen musst, um dich darauf vorzubereiten, das nächste Dreieck zu zeichnen.",
-          "courseF_artist_variables4_c": "Dies ist das Muster, dem dein Künstler folgen wird: \n\n[][0]",
-          "courseF_artist_variables4_b": "[blockly block][0]"
+          "courseF_artist_variables4_c": "Dies ist das Muster, dem dein Künstler folgen wird: \n\n![](https://images.code.org/41ae98c1633755cf4553f90a80e125cf-image-1500325529204.6_hint.gif)",
+          "courseF_artist_variables4_b": "<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"variables_set\">\n        <title name=\"VAR\">length</title>\n        <value name=\"VALUE\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">50</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"controls_repeat_ext\">\n            <value name=\"TIMES\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">3</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"controls_repeat_ext\">\n                <value name=\"TIMES\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">3</title>\n                  </block>\n                </value>\n                <statement name=\"DO\">\n                  <block type=\"draw_move\">\n                    <title name=\"DIR\">moveForward</title>\n                    <value name=\"VALUE\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">length</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_turn\">\n                        <title name=\"DIR\">turnLeft</title>\n                        <value name=\"VALUE\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">120</title>\n                          </block>\n                        </value>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n                <next>\n                  <block type=\"jump\">\n                    <title name=\"DIR\">jumpForward</title>\n                    <value name=\"VALUE\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">length</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_turn\">\n                        <title name=\"DIR\">turnRight</title>\n                        <value name=\"VALUE\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">90</title>\n                          </block>\n                        </value>\n                        <next>\n                          <block type=\"jump\">\n                            <title name=\"DIR\">jumpForward</title>\n                            <value name=\"VALUE\">\n                              <block type=\"variables_get\">\n                                <title name=\"VAR\">length</title>\n                              </block>\n                            </value>\n                            <next>\n                              <block type=\"draw_turn\">\n                                <title name=\"DIR\">turnLeft</title>\n                                <value name=\"VALUE\">\n                                  <block type=\"math_number\">\n                                    <title name=\"NUM\">90</title>\n                                  </block>\n                                </value>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "OPD-K5-variables-7": {
-          "courseF_artist_variables5_a": "Die zweite Hälfte deines Codes sollte fast genauso aussehen wie die erste Hälfte, außer dass du dich _nach_links_ drehen, springen und dann _nach_rechts_ drehen wirst.",
+          "courseF_artist_variables5_a": "Die zweite Hälfte deines Codes sollte fast genauso aussehen wie die erste Hälfte, außer dass du dich _nach_links\\_ drehen, springen und dann _nach_rechts\\_ drehen wirst.",
           "courseF_artist_variables5_b": "Die erste Hälfte deines Codes wird drei Dreiecke zeichnen, die zweite Hälfte die anderen drei.",
           "courseF_artist_variables5_c": "Beginne damit, den Code in der ersten Hälfte deines Programms zu duplizieren, und ändere ihn dann so, dass das gezeigte Muster entsteht.",
-          "courseF_artist_variables5_d": "Dies ist das Muster, dem dein Künstler folgen wird: \n\n[][0]"
+          "courseF_artist_variables5_d": "Dies ist das Muster, dem dein Künstler folgen wird: \n\n![](https://images.code.org/e4ac66f8e9a4503e49c4fad1e4fafc1d-image-1500326800109.7_hint.gif)"
         },
         "Overworld Avoid Monsters": {
           "mc_8_a": "Es gibt ein paar Wege, die du einschlagen können. Welcher ist der kürzeste?",
@@ -1190,10 +1190,10 @@
         },
         "course2_bee_conditionals_challenge1": {
           "courseD_bee_conditionals_challenge1_a": "Kannst du einen Weg finden, der jede Blume und jede Wabe erreicht, ohne auf Bäume zu treffen? Der beste Weg ist eine Spirale.\n\n**Du kannst das lösen, ohne jemals nach links zu gehen.**",
-          "courseD_bee_conditionals_challenge1_b": "In dieser Aufgabe könnte jedes Feld eine Blüte, eine Honigwabe oder nichts enthalten. Das bedeutet, dass du deine \\`wenn/sonst'-Bedingung in jedem Feld wiederholen kannst."
+          "courseD_bee_conditionals_challenge1_b": "In dieser Aufgabe könnte jedes Feld eine Blüte, eine Honigwabe oder nichts enthalten. Das bedeutet, dass du deine `wenn/ansonsten`-Bedingung in jedem Feld wiederholen kannst."
         },
         "course2_bee_conditionals_challenge2": {
-          "courseD_bee_conditionals_challenge1_b": "Genau wie die `wenn bei Blume` Bausteine, wird der Code innerhalb eines `solange Nektar > 0` nur ausgeführt, wenn sich die Biene an einer Blume befindet. Der Hauptunterschied besteht darin, dass der Code im Inneren wiederholt ausgeführt wird, bis kein Nektar mehr vorhanden ist.  Versuche dieses Muster:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "Genau wie die `wenn bei Blume` Bausteine, wird der Code innerhalb eines `solange Nektar > 0` nur ausgeführt, wenn sich die Biene an einer Blume befindet. Der Hauptunterschied besteht darin, dass der Code im Inneren wiederholt ausgeführt wird, bis kein Nektar mehr vorhanden ist.  Versuche dieses Muster:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "course2_collector_loops_challenge2": {
           "courseC_maze_loops_challenge2_a": "Der Originalcode würde gut funktionieren - wenn es nur einen Schatz in jedem Stapel gäbe!",
@@ -1252,8 +1252,8 @@
           "courseF_bee_functions_challenge2_b": "**Lösung:**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_ext\" inline=\"true\">\n        <value name=\"TIMES\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">4</title>\n          </block>\n        </value>\n        <statement name=\"DO\">\n          <block type=\"maze_untilBlocked\">\n            <statement name=\"DO\">\n              <block type=\"maze_move\">\n                <title name=\"DIR\">moveForward</title>\n                <next>\n                  <block type=\"maze_if\">\n                    <title name=\"DIR\">isPathRight</title>\n                    <statement name=\"DO\">\n                      <block type=\"procedures_callnoreturn\" id=\"function\">\n                        <mutation name=\"move and check\"/>\n                      </block>\n                    </statement>\n                  </block>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnLeft</title>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n  <block type=\"procedures_defnoreturn\" editable=\"false\" usercreated=\"true\">\n    <mutation/>\n    <title name=\"NAME\">check nectar or honey</title>\n    <statement name=\"STACK\">\n      <block type=\"bee_ifElseFlower\">\n        <title name=\"LOC\">atFlower</title>\n        <statement name=\"DO\">\n          <block type=\"bee_whileNectarAmount\">\n            <title name=\"ARG1\">nectarRemaining</title>\n            <title name=\"OP\">&gt;</title>\n            <title name=\"ARG2\">0</title>\n            <statement name=\"DO\">\n              <block type=\"maze_nectar\"/>\n            </statement>\n          </block>\n        </statement>\n        <statement name=\"ELSE\">\n          <block type=\"bee_whileNectarAmount\">\n            <title name=\"ARG1\">honeyAvailable</title>\n            <title name=\"OP\">&gt;</title>\n            <title name=\"ARG2\">0</title>\n            <statement name=\"DO\">\n              <block type=\"maze_honey\"/>\n            </statement>\n          </block>\n        </statement>\n      </block>\n    </statement>\n  </block>\n  <block type=\"procedures_defnoreturn\" deletable=\"false\" movable=\"false\" editable=\"false\">\n    <mutation/>\n    <title name=\"NAME\">move and check</title>\n    <statement name=\"STACK\">\n      <block type=\"controls_repeat_ext\" inline=\"true\">\n        <value name=\"TIMES\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">2</title>\n          </block>\n        </value>\n        <statement name=\"DO\">\n          <block type=\"procedures_callnoreturn\">\n            <mutation name=\"check nectar or honey\"/>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n                <next>\n                  <block type=\"maze_untilBlocked\">\n                    <statement name=\"DO\">\n                      <block type=\"maze_move\">\n                        <title name=\"DIR\">moveForward</title>\n                      </block>\n                    </statement>\n                    <next>\n                      <block type=\"maze_turn\">\n                        <title name=\"DIR\">turnRight</title>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </statement>\n  </block>\n</xml>"
         },
         "course3_collector_debugging_challenge2": {
-          "courseD_collector_debugging_challenge2_a": "Beginne damit, nur ZWEI Edelsteine von jedem der ersten zwei Stapel zu holen.\n\n![](<https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png>)\nVerwende diese Blöcke.\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n  </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title name=\"DIR\">moveForward</title>\n                  </block>\n                  \n \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n    <title name=\"TIMES\">2</title>\n  </block>\n\n\n\n</xml>",
-          "courseD_collector_debugging_challenge2_b": "Als nächstes sammele die restlichen Edelsteine in dieser Reihe ein. \n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)\nFüge diese Blöcke zu deinem Programm hinzu.\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>",
+          "courseD_collector_debugging_challenge2_a": "Beginne damit, nur ZWEI Edelsteine von jedem der ersten zwei Stapel zu holen.\n\n![](<https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png>)\nVerwende diese Blöcke.\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n  </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title name=\"DIR\">moveForward</title>\n                  </block>\n                  \n \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n    <title name=\"TIMES\">2</title>\n  </block>\n\n</xml>",
+          "courseD_collector_debugging_challenge2_b": "Als nächstes sammele die restlichen Edelsteine in dieser Reihe ein. \n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)\nFüge diese Blöcke zu deinem Programm hinzu.\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n\n        </statement>\n      </block>\n\n</xml>",
           "courseD_collector_debugging_challenge2_c": "Sammele schließlich den verbleibenden Schatz ein. Füge diese Blöcke zu deinem Programm hinzu.\n\n[blockly block][1]",
           "courseD_collector_debugging_challenge2_d": "Hier ist die vollständige Lösung für dieses Rätsel.\n\n[blockly block][1]"
         },
@@ -1319,8 +1319,8 @@
           "courseA_artist_loops2_b": "Benutze diesen <xml><block type=\"simple_move_right\"/></xml> Baustein um die Aufgabe zu lösen."
         },
         "courseA_artist_loops2_2018": {
-          "courseA_artist_loops2_a": "Du weißt nicht, wie man Linien zeichnet? Beginne damit, Blöcke zum [blockly block][0] Block anzufügen um zu sehen, was passiert.",
-          "courseA_artist_loops2_b": "Benutze diesen [blockly block][0] Baustein um die Aufgabe zu lösen."
+          "courseA_artist_loops2_a": "Du weißt nicht, wie man Linien zeichnet? Beginne damit, Blöcke zum <xml><block type=\"when_run\"/></xml> Block anzufügen um zu sehen, was passiert.",
+          "courseA_artist_loops2_b": "Benutze diesen <xml><block type=\"simple_move_right\"/></xml> Baustein um die Aufgabe zu lösen."
         },
         "courseA_artist_loops2_2019": {
           "courseA_artist_loops2_a": "Du weißt nicht, wie man Linien zeichnet? Beginne damit, Blöcke zum [blockly block][0] Block anzufügen um zu sehen, was passiert.",
@@ -1336,7 +1336,7 @@
         },
         "courseA_artist_loops3_2018": {
           "courseA_artist_loops3_a": "Fahre langsam mit deinem Finger das Programm entlang um zu sehen, wo es schief läuft.",
-          "courseA_artist_loops3_b": "Du wirst einen solchen Baustein brauchen, um die Aufgabe lösen zu können:\n\n[][0]"
+          "courseA_artist_loops3_b": "Du wirst einen solchen Baustein brauchen, um die Aufgabe lösen zu können:\n\n![](<https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png>)"
         },
         "courseA_artist_loops3_2019": {
           "courseA_artist_loops3_a": "Fahre langsam mit deinem Finger das Programm entlang um zu sehen, wo es schief läuft.",
@@ -1352,7 +1352,7 @@
         },
         "courseA_artist_loops4_2018": {
           "courseA_artist_loops4_a": "Wenn du die Schleife mehr als 4 mal wiederholen möchtest, kannst du die Zahl oben im Block ändern.",
-          "courseA_artist_loops4_b": "Da du nur einen [blockly block][0] benutzen darfst, versuche ihn in die [blockly block][1] Schleife zu setzen."
+          "courseA_artist_loops4_b": "Da du nur einen <xml><block type=\"simple_move_right\"/></xml> benutzen darfst, versuche ihn in die <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"2-6\">5</title></block></xml> Schleife zu setzen."
         },
         "courseA_artist_loops4_2019": {
           "courseA_artist_loops4_a": "Wenn du die Schleife mehr als 4 mal wiederholen möchtest, kannst du die Zahl oben im Block ändern.",
@@ -1368,9 +1368,9 @@
           "courseA_artist_loops5_c": "Da du nur einen <xml><block type=\"simple_move_right\"/></xml> benutzen darfst, versuche ihn in die \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>\n\nSchleife zu setzen."
         },
         "courseA_artist_loops5_2018": {
-          "courseA_artist_loops5_a": "Zeige, was du über [blockly block][0] Blöcke gelernt hast, um diese Aufgabe zu lösen!",
+          "courseA_artist_loops5_a": "Zeige, was du über <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> Blöcke gelernt hast, um diese Aufgabe zu lösen!",
           "courseA_artist_loops5_b": "Wenn du die Schleife mehr als 4 mal wiederholen möchtest, kannst du die Zahl oben im Block ändern.",
-          "courseA_artist_loops5_c": "Da du nur einen [blockly block][0] benutzen darfst, versuche ihn in die \n\n[blockly block][1]\n\nSchleife zu setzen."
+          "courseA_artist_loops5_c": "Da du nur einen <xml><block type=\"simple_move_right\"/></xml> benutzen darfst, versuche ihn in die \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>\n\nSchleife zu setzen."
         },
         "courseA_artist_loops5_2019": {
           "courseA_artist_loops5_a": "Zeige, was du über [blockly block][0] Blöcke gelernt hast, um diese Aufgabe zu lösen!",
@@ -1406,7 +1406,7 @@
         "courseA_artist_loops7_2018": {
           "courseA_artist_loops7_a": "Du weißt nicht, wohin du die Schleife setzen musst? Versuche den Code Schritt-für-Schritt zu schreiben und suche dann ein Muster.",
           "courseA_artist_loops7_b": "Schreibe zuerst den Code für eine Welle und wiederhole das dann, um die anderen beiden Wellen zu zeichnen.",
-          "courseA_artist_loops7_c": "Denk daran, dass du mehr als einen Block in eine [blockly block][0] Schleife setzen kannst."
+          "courseA_artist_loops7_c": "Denk daran, dass du mehr als einen Block in eine <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">???</title>\n  </block></xml> Schleife setzen kannst."
         },
         "courseA_artist_loops7_2019": {
           "courseA_artist_loops7_a": "Du weißt nicht, wohin du die Schleife setzen musst? Versuche den Code Schritt-für-Schritt zu schreiben und suche dann ein Muster.",
@@ -1445,7 +1445,7 @@
         },
         "courseA_artist_loops9_2018": {
           "courseA_artist_loops9_a": "Füge noch einen Block zum Code hinzu, um die restlichen Stufen zu zeichnen.",
-          "courseA_artist_loops9_b": "Der von Dir hinzugefügte Baustein sollte sich innerhalb der Schleife [blockly block][0] befinden.",
+          "courseA_artist_loops9_b": "Der von Dir hinzugefügte Baustein sollte sich innerhalb der Schleife <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block>\n</xml> befinden.",
           "courseA_artist_loops9_c": "Du weißt nicht, wohin du die Schleife setzen musst? Versuche den Code Schritt-für-Schritt zu schreiben und suche dann Mustern."
         },
         "courseA_artist_loops9_2019": {
@@ -1464,7 +1464,7 @@
           "courseA_artist_loops_challenge2_c": "Alle deine Blöcke müssen innerhalb einer Schleife sein, um die Aufgabe zu lösen!"
         },
         "courseA_artist_loops_challenge2a_2018": {
-          "courseA_artist_loops_challenge2_a": "Blöcke wie dieser [blockly block][0] lassen deinen Künstler schräg gehen!",
+          "courseA_artist_loops_challenge2_a": "Blöcke wie dieser <xml>  <block type=\"simple_move_up_left\"/></xml> lassen deinen Künstler schräg gehen!",
           "courseA_artist_loops_challenge2_b": "Wenn du ein Zelt fertig hast, 'springe' zweimal nach oben um zum nächsten zu kommen!",
           "courseA_artist_loops_challenge2_c": "Alle deine Blöcke müssen innerhalb einer Schleife sein, um die Aufgabe zu lösen!"
         },
@@ -1483,7 +1483,7 @@
           "courseA_collector_loops1_b": "Eine einfache Lösung wäre 2 mal nach Osten zu gehen und dann den Schatz einzusammeln."
         },
         "courseA_collector_loops1_2018": {
-          "courseA_collector_loops1_a": "Nachdem du auf ein Feld mit einem Schatz gelangt bist, nimm diesen Block um ihn einzusammeln.\n\n[blockly block][0]",
+          "courseA_collector_loops1_a": "Nachdem du auf ein Feld mit einem Schatz gelangt bist, nimm diesen Block um ihn einzusammeln.\n\n<xml>  <block type=\"collector_collect\"/></xml>",
           "courseA_collector_loops1_b": "Eine einfache Lösung wäre 2 mal nach Osten zu gehen und dann den Schatz einzusammeln."
         },
         "courseA_collector_loops1_2019": {
@@ -1500,7 +1500,7 @@
         },
         "courseA_collector_loops2_2018": {
           "courseA_collector_loops2_a": "Du musst dich zuerst bewegen, dann kannst du die Schätze einsammeln.",
-          "courseA_collector_loops2_b": "Nachdem du auf ein Feld mit einem Schatz gelangt bist, nimm diesen Block um ihn einzusammeln.\n\n[blockly block][0]"
+          "courseA_collector_loops2_b": "Nachdem du auf ein Feld mit einem Schatz gelangt bist, nimm diesen Block um ihn einzusammeln.\n\n<xml>  <block type=\"collector_collect\"/></xml>"
         },
         "courseA_collector_loops2_2019": {
           "courseA_collector_loops2_a": "Du musst dich zuerst bewegen, dann kannst du die Schätze einsammeln.",
@@ -1515,8 +1515,8 @@
           "courseA_collector_loops3_b": "Denk daran! Du kannst mehr als 1 Block in eine <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> Schleife setzen."
         },
         "courseA_collector_loops3_2018": {
-          "courseA_collector_loops3_a": "Versuche eine [blockly block][0] Schleife zu verwenden!",
-          "courseA_collector_loops3_b": "Denk daran! Du kannst mehr als 1 Block in eine [blockly block][0] Schleife setzen."
+          "courseA_collector_loops3_a": "Versuche eine <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> Schleife zu verwenden!",
+          "courseA_collector_loops3_b": "Denk daran! Du kannst mehr als 1 Block in eine <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> Schleife setzen."
         },
         "courseA_collector_loops3_2019": {
           "courseA_collector_loops3_a": "Versuche eine \n\n[blockly block][0]\n\n Schleife zu benutzen!",
@@ -1532,7 +1532,7 @@
         },
         "courseA_collector_loops4_2018": {
           "courseA_collector_loops4_a": "Wenn Du verändern möchtest, wie weit Laurel geht, dann ändere die Zahl der Wiederholungen in der Schleife.",
-          "courseA_collector_loops4_b": "Vergiss nicht, dass Laurel nach Beenden der [blockly block][0] Schleife noch nach unten gehen muss, um den letzten Schatz zu nehmen!"
+          "courseA_collector_loops4_b": "Vergiss nicht, dass Laurel nach Beenden der <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> Schleife noch nach unten gehen muss, um den letzten Schatz zu nehmen!"
         },
         "courseA_collector_loops4_2019": {
           "courseA_collector_loops4_a": "Wenn Du verändern möchtest, wie weit Laurel geht, dann ändere die Zahl der Wiederholungen in der Schleife.",
@@ -1550,7 +1550,7 @@
         "courseA_collector_loops5_2018": {
           "courseA_collector_loops5_a": "Wenn du nicht sofort eine Lösung findest, nimm doch ein Blatt Papier, zeichne darauf alle Pfeile die du für den Weg brauchst und suche dann darin ein Muster.",
           "courseA_collector_loops5_b": "Versuche, die Aufgabe in 2 Teile zu zerlegen: Zuerst seitwärts bewegen und dann nach unten.",
-          "courseA_collector_loops5_c": "Du solltest mit einer [blockly block][0] Schleife beginnen, die Laurel nach Westen bewegt und die Schätze einsammelt."
+          "courseA_collector_loops5_c": "Du solltest mit einer <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> Schleife beginnen, die Laurel nach Westen bewegt und die Schätze einsammelt."
         },
         "courseA_collector_loops5_2019": {
           "courseA_collector_loops5_a": "Wenn du nicht sofort eine Lösung findest, nimm doch ein Blatt Papier, zeichne darauf alle Pfeile die du für den Weg brauchst und suche dann darin ein Muster.",
@@ -1568,7 +1568,7 @@
         },
         "courseA_collector_loops6_2018": {
           "courseA_collector_loops6_a": "Du findest nicht heraus, was schief läuft? Führe den Code ein paar mal aus um zu sehen, was passiert.",
-          "courseA_collector_loops6_b": "Die kürzeste Lösung hat 2 [blockly block][0] Schleifen, eine nach der anderen."
+          "courseA_collector_loops6_b": "Die kürzeste Lösung hat 2 <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> Schleifen, eine nach der anderen."
         },
         "courseA_collector_loops6_2019": {
           "courseA_collector_loops6_a": "Du findest nicht heraus, was schief läuft? Führe den Code ein paar mal aus um zu sehen, was passiert.",
@@ -1616,7 +1616,7 @@
         },
         "courseA_collector_loops9_2018": {
           "courseA_collector_loops9_a": "Wenn du nicht gleich die besten Stellen für Schleifen findest, versuche den Code Schritt-für-Schritt zu schreiben und suche dann nach einem Muster. ",
-          "courseA_collector_loops9_b": "Versuche 2 deiner [blockly block][0] Schleifen in eine andere Schleife zu setzen um deinen Code kürzer zu machen!"
+          "courseA_collector_loops9_b": "Versuche 2 deiner <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> Schleifen in eine andere Schleife zu setzen um deinen Code kürzer zu machen!"
         },
         "courseA_collector_loops9_2019": {
           "courseA_collector_loops9_a": "Wenn du nicht gleich die besten Stellen für Schleifen findest, versuche den Code Schritt-für-Schritt zu schreiben und suche dann nach einem Muster. ",
@@ -1636,7 +1636,7 @@
           "courseA_collector_loops_challenge1_a": "Versuche die Zahlen in den Schleifen zu ändern, wenn etwas falsch zu sein scheint.",
           "courseA_collector_loops_challenge1_b": "Du brauchst keine Schleife verwenden, wenn du etwas nur einmal machst.",
           "courseA_collector_loops_challenge1_c": "Wenn du anfängst, gibt es 6 Diamanten auf der rechten Seite der Höhle, aber du brauchst die Schätze dort nur 5 mal einzusammeln, wenn du nach Süden gehst. Weißt du warum?",
-          "courseA_collector_loops_challenge1_d": "Das Startprogramm sammelt die letzten 2 Diamanten nicht ein. Versuche einmal, ganz am Ende diesen Code einzusetzen:\n\n[blockly block][0]"
+          "courseA_collector_loops_challenge1_d": "Das Startprogramm sammelt die letzten 2 Diamanten nicht ein. Versuche einmal, ganz am Ende diesen Code einzusetzen:\n\n<xml><block type=\"maze_moveEast\">\n                        <next>\n                          <block type=\"collector_collect_simplified\">\n                            <next>\n                              <block type=\"maze_moveSouth\">\n                                <next>\n                                  <block type=\"collector_collect\"/>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block></xml>"
         },
         "courseA_collector_loops_challenge1_2019": {
           "courseA_collector_loops_challenge1_a": "Versuche die Zahlen in den Schleifen zu ändern, wenn etwas falsch zu sein scheint.",
@@ -1683,7 +1683,7 @@
           "courseA_collector_loops2_b": "Nachdem du auf ein Feld mit einem Schatz gelangt bist, nimm diesen Block um ihn einzusammeln.\n\n<xml>  <block type=\"collector_collect\"/></xml>"
         },
         "courseA_harvester_loops1": {
-          "courseA_harvester_loops1_a": "Sobald du dich zu einem Maiskolben bewegt hast, benutze diesen Baustein um ihn zu ernten!\n\n[blockly block][0]"
+          "courseA_harvester_loops1_a": "Sobald du dich zu einem Maiskolben bewegt hast, benutze diesen Baustein um ihn zu ernten!\n\n<xml><block type=\"harvester_corn\"/></xml>"
         },
         "courseA_harvester_loops1_2019": {
           "courseA_harvester_loops1_a": "Sobald du dich zu einem Maiskolben bewegt hast, benutze diesen Baustein um ihn zu ernten!\n\n[blockly block][0]"
@@ -1692,7 +1692,7 @@
           "courseA_harvester_loops1_a": "Sobald du dich zu einem Maiskolben bewegt hast, benutze diesen Baustein um ihn zu ernten!\n\n[blockly block][0]"
         },
         "courseA_harvester_loops2": {
-          "courseA_harvester_loops2_a": "Dein Code wird **vier** `Gehe nach Westen` [blockly block][0] Bausteine haben.\n\nund **vier** `Pflücke Mais` [blockly block][1] Bausteine.",
+          "courseA_harvester_loops2_a": "Dein Code wird **vier** `Gehe nach Westen` <xml><block type=\"maze_moveWest\"/></xml> Bausteine haben.\n\nund **vier** `Pflücke Mais` <xml><block type=\"harvester_corn\"/></xml> Bausteine.",
           "courseA_harvester_loops2_b": "Wenn du immer noch Probleme hast, versuche, die Schritte laut auszusprechen. "
         },
         "courseA_harvester_loops2_2019": {
@@ -1704,8 +1704,8 @@
           "courseA_harvester_loops2_b": "Wenn du immer noch Probleme hast, versuche, die Schritte laut auszusprechen. "
         },
         "courseA_harvester_loops3": {
-          "courseA_harvester_loops3_a": "Verwende einen `wiederhole` Baustein wie diesen, um Dir zu helfen!\n\n[blockly block][0]",
-          "courseA_harvester_loops3_b": "Um Code zu wiederholen, nimm eine `wiederhole` ([blockly block][0]) Schleife und setze dann den Baustein, den du möchtest hinein. "
+          "courseA_harvester_loops3_a": "Verwende einen `wiederhole` Baustein wie diesen, um Dir zu helfen!\n\n<xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">4</title>\n  </block></xml>",
+          "courseA_harvester_loops3_b": "Um Code zu wiederholen, nimm eine `wiederhole` (<xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">4</title>\n  </block></xml>) Schleife und setze dann den Baustein, den du möchtest hinein. "
         },
         "courseA_harvester_loops3_2019": {
           "courseA_harvester_loops3_a": "Verwende einen `wiederhole` Baustein wie diesen, um Dir zu helfen!\n\n[blockly block][0]",
@@ -1729,7 +1729,7 @@
         },
         "courseA_harvester_loops5": {
           "courseA_harvester_loops5_a": "Wenn Du nicht mehr weiter kommst, teile die Aufgabe in 2 Teile und löse sie nacheinander: Der eine Teil ist vor der Ecke und der zweite nach der Ecke.",
-          "courseA_harvester_loops5_b": "Dein endgültiger Code wird **eine** `wiederhole` [blockly block][0] Schleife, **einen** `Gehe nach Süden` [blockly block][1] Baustein und **einen** `Gehe nach Osten` [blockly block][2] Baustein haben.",
+          "courseA_harvester_loops5_b": "Dein endgültiger Code wird **eine** `wiederhole` <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">6</title>\n    </block></xml> Schleife, **einen** `Gehe nach Süden` <xml><block type=\"maze_moveSouth\" limit=\"1\"/></xml> Baustein und **einen** `Gehe nach Osten` <xml><block type=\"maze_moveEast\" limit=\"1\"/> </xml> Baustein haben.",
           "courseA_harvester_loops5_c": "Benutze diesen Weg, um den gesamten Mais zu ernten!"
         },
         "courseA_harvester_loops5_2019": {
@@ -1743,8 +1743,8 @@
           "courseA_harvester_loops5_c": "Benutze diesen Weg, um den gesamten Mais zu ernten!"
         },
         "courseA_harvester_loops5a": {
-          "courseA_harvester_loops5a_a": "Du brauchst eine `wiederhole`[blockly block][0] Schleife nach einer weiteren.",
-          "courseA_harvester_loops5a_b": "Eine Schleife wiederholt `Gehe nach Süden` [blockly block][0], und die andere wiederholt `Gehe nach Osten` [blockly block][1]",
+          "courseA_harvester_loops5a_a": "Du brauchst eine `wiederhole`<xml> <block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">6</title>\n  </block></xml> Schleife nach einer weiteren.",
+          "courseA_harvester_loops5a_b": "Eine Schleife wiederholt `Gehe nach Süden` <xml><block type=\"maze_moveSouth\" limit=\"1\"/></xml>, und die andere wiederholt `Gehe nach Osten` <xml><block type=\"maze_moveEast\" limit=\"1\"/></xml>",
           "courseA_harvester_loops5a_c": "Benutze diesen Pfad, um dich in die eine Richtung zu bewegen, und dann in die andere."
         },
         "courseA_harvester_loops5a_2019": {
@@ -1785,7 +1785,7 @@
           "courseA_harvester_loops6_b": "Dies ist der Weg, den du gehen solltest, um den gesamten Mais zu ernten."
         },
         "courseA_harvester_loops7": {
-          "courseA_harvester_loops7_a": "Du brauchst zwei `wiederhole` [blockly block][0]Schleifen hintereinander!",
+          "courseA_harvester_loops7_a": "Du brauchst zwei `wiederhole` <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">5</title>\n  </block></xml>Schleifen hintereinander!",
           "courseA_harvester_loops7_b": "Verwende zwei Schleifen, um diesem Weg zu folgen."
         },
         "courseA_harvester_loops7_2019": {
@@ -1812,8 +1812,8 @@
           "courseA_harvester_loops9_c": "Folge diesen Weg, um den gesamten Mais zu ernten."
         },
         "courseA_harvester_seq1": {
-          "courseA_harvester_seq1_a": "Verwende diesen Baustein, um den Mais zu ernten, wenn die Erntearbeiterin ihn erreicht!\n\n[blockly block][0]",
-          "courseA_harvester_seq1_b": "Die Erntearbeiterin muss sich dreimal nach Osten bewegen, um zum Mais zu gelangen. Verwende diesen Baustein:\n\n[blockly block][0]"
+          "courseA_harvester_seq1_a": "Verwende diesen Baustein, um den Mais zu ernten, wenn die Erntearbeiterin ihn erreicht!\n\n<xml>\n  <block type=\"harvester_corn\"/>\n</xml>",
+          "courseA_harvester_seq1_b": "Die Erntearbeiterin muss sich dreimal nach Osten bewegen, um zum Mais zu gelangen. Verwende diesen Baustein:\n\n<xml>\n  <block type=\"maze_moveEast\"/>\n</xml>"
         },
         "courseA_harvester_seq10": {
           "courseA_harvester_seq10_a": "Wenn Du nicht mehr weiter weißt, versuche zuerst einmal die einzelnen Schritte auf ein Blatt Papier zu schreiben.",
@@ -1831,7 +1831,7 @@
           "courseA_harvester_seq10_c": "Versuche, diesen Weg zu benutzen, um den gesamten Mais zu ernten."
         },
         "courseA_harvester_seq13": {
-          "courseA_bee_seq1_a": "Verwenden Sie diesen Baustein, um Mais zu ernten, sobald die Erntehelferin ihn erreicht hat.\n\n[blockly block][0]"
+          "courseA_bee_seq1_a": "Verwenden Sie diesen Baustein, um Mais zu ernten, sobald die Erntehelferin ihn erreicht hat.\n\n<xml>\n  <block type=\"harvester_corn\"/>\n</xml>"
         },
         "courseA_harvester_seq13_2019": {
           "courseA_bee_seq1_a": "Verwenden Sie diesen Baustein, um Mais zu ernten, sobald die Erntehelferin ihn erreicht hat.\n\n[blockly block][0]"
@@ -1848,7 +1848,7 @@
           "courseA_harvester_seq1_b": "Die Erntearbeiterin muss sich dreimal nach Osten bewegen, um zum Mais zu gelangen. Verwende diesen Baustein:\n\n[blockly block][0]"
         },
         "courseA_harvester_seq2": {
-          "courseA_harvester_seq2_a": "Vergiss nicht, den Mais mit [blockly block][0] zu ernten!",
+          "courseA_harvester_seq2_a": "Vergiss nicht, den Mais mit <xml><block type=\"harvester_corn\"/></xml> zu ernten!",
           "courseA_harvester_seq2_b": "Versuche einmal, die einzelnen Schritte auf ein Blatt Papier zu schreiben um eine Lösung zu finden!"
         },
         "courseA_harvester_seq2_2019": {
@@ -1860,7 +1860,7 @@
           "courseA_harvester_seq2_b": "Versuche einmal, die einzelnen Schritte auf ein Blatt Papier zu schreiben um eine Lösung zu finden!"
         },
         "courseA_harvester_seq3": {
-          "courseA_harvester_seq3_a": "Hast du daran gedacht, diesen Baustein zu verwenden?\n\n[blockly block][0]",
+          "courseA_harvester_seq3_a": "Hast du daran gedacht, diesen Baustein zu verwenden?\n\n<xml><block type=\"harvester_corn\"/></xml>",
           "courseA_harvester_seq3_b": "Sag die Schritte laut und schau, ob es dir hilft, die Antwort zu finden."
         },
         "courseA_harvester_seq3_2019": {
@@ -1873,7 +1873,7 @@
         },
         "courseA_harvester_seq4": {
           "courseA_harvester_seq4_a": "Wie viele Felder gibt es zwischen der Erntearbeiterin und dem Mais? Wie viele Bausteine befinden sich bereits in Deinem Arbeitsbereich?",
-          "courseA_harvester_seq4_b": "Du brauchst fünf `Gehe nach Osten` Bausteine und einen `Pflücke Mais` Baustein:\n\n[blockly block][0]"
+          "courseA_harvester_seq4_b": "Du brauchst fünf `Gehe nach Osten` Bausteine und einen `Pflücke Mais` Baustein:\n\n<xml><block type=\"harvester_corn\"/></xml>"
         },
         "courseA_harvester_seq4_2019": {
           "courseA_harvester_seq4_a": "Wie viele Felder gibt es zwischen der Erntearbeiterin und dem Mais? Wie viele Bausteine befinden sich bereits in Deinem Arbeitsbereich?",
@@ -1886,7 +1886,7 @@
         "courseA_harvester_seq5": {
           "courseA_harvester_seq5_a": "Welcher Baustein bewegt den Erntearbeiterin in die falsche Richtung?",
           "courseA_harvester_seq5_b": "Du musst einen Baustein entfernen.",
-          "courseA_harvester_seq5_c": "Wirf diesen Baustein in den Müll!\n\n[blockly block][0]"
+          "courseA_harvester_seq5_c": "Wirf diesen Baustein in den Müll!\n\n<xml><block type=\"maze_moveNorth\"/></xml>"
         },
         "courseA_harvester_seq5_2019": {
           "courseA_harvester_seq5_a": "Welcher Baustein bewegt den Erntearbeiterin in die falsche Richtung?",
@@ -1944,7 +1944,7 @@
           "courseA_harvester_seq9_c": "Du solltest diesen Weg gehen, um den gesamten Mais zu ernten."
         },
         "courseA_maze_ramp2_2018": {
-          "1": "Dein Code sollte so aussehen!\n\n[blockly block][0]"
+          "1": "Dein Code sollte so aussehen!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseA_maze_ramp2_2019": {
           "1": "Dein Code sollte so aussehen!\n\n[blockly block][0]"
@@ -1953,7 +1953,7 @@
           "1": "Dein Code sollte so aussehen!\n\n[blockly block][0]"
         },
         "courseA_maze_ramp3a_2018": {
-          "1": "Dein Code sollte so aussehen!\n\n[blockly block][0]"
+          "1": "Dein Code sollte so aussehen!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveNorth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseA_maze_ramp3a_2019": {
           "1": "Dein Code sollte so aussehen!\n\n[blockly block][0]"
@@ -1962,7 +1962,7 @@
           "1": "Dein Code sollte so aussehen!\n\n[blockly block][0]"
         },
         "courseA_maze_ramp3b_2018": {
-          "1": "Dein Code sollte so aussehen!\n\n[blockly block][0]"
+          "1": "Dein Code sollte so aussehen!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveSouth\">\n        <next>\n          <block type=\"maze_moveWest\">\n            <next>\n              <block type=\"maze_moveWest\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseA_maze_ramp3b_2019": {
           "1": "Dein Code sollte so aussehen!\n\n[blockly block][0]"
@@ -1971,7 +1971,7 @@
           "1": "Dein Code sollte so aussehen!\n\n[blockly block][0]"
         },
         "courseA_maze_ramp4a_2018": {
-          "1": "Dein Code sollte so aussehen!\n\n[blockly block][0]"
+          "1": "Dein Code sollte so aussehen!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveSouth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseA_maze_ramp4a_2019": {
           "1": "Dein Code sollte so aussehen!\n\n[blockly block][0]"
@@ -1980,7 +1980,7 @@
           "1": "Dein Code sollte so aussehen!\n\n[blockly block][0]"
         },
         "courseA_maze_ramp5a_2018": {
-          "1": "Dein Code sollte so aussehen!\n\n[blockly block][0]"
+          "1": "Dein Code sollte so aussehen!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveWest\">\n        <next>\n          <block type=\"maze_moveWest\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseA_maze_ramp5a_2019": {
           "1": "Dein Code sollte so aussehen!\n\n[blockly block][0]"
@@ -2020,7 +2020,7 @@
         "courseA_maze_seq13_2018": {
           "courseA_maze_seq13_a": "Wenn dir der Pfad, den du brauchst, nicht klar ist, fahre mit deinem Finger den Weg vom Vogel zum Schwein nach.",
           "courseA_maze_seq13_b": "Hab keine Angst davor, Fehler zu machen! Versuch einfach mal, Blöcke hinzuzufügen und den Code gleich auszuführen, damit du sofort sehen kannst, was passiert.",
-          "courseA_maze_seq13_c": "Diese [blockly block][0][blockly block][1] Blöcke helfen dir näher an das Schwein zu kommen."
+          "courseA_maze_seq13_c": "Diese <xml><block type=\"maze_moveNorth\"/></xml><xml><block type=\"maze_moveEast\"/></xml> Blöcke helfen dir näher an das Schwein zu kommen."
         },
         "courseA_maze_seq13_2019": {
           "courseA_maze_seq13_a": "Wenn dir der Pfad, den du brauchst, nicht klar ist, fahre mit deinem Finger den Weg vom Vogel zum Schwein nach.",
@@ -2033,8 +2033,8 @@
           "courseA_maze_seq13_c": "Diese [blockly block][0]\n\n[blockly block][1]\n\nBausteine helfen dir, dem Schwein näher zu kommen."
         },
         "courseA_maze_seq1_2018": {
-          "courseA_maze_seq1_a": "Wenn der Vogel sich nicht bewegt, dann überprüfe ob die Blöcke richtig unter [blockly block][0] eingerastet sind",
-          "courseA_maze_seq1_b": "Der Vogel muss sich 3 mal in Richtung Westen bewegen. Nimm diesen Block:\n\n[blockly block][0]"
+          "courseA_maze_seq1_a": "Wenn der Vogel sich nicht bewegt, dann überprüfe ob die Blöcke richtig unter <xml>\n  <block type=\"when_run\"/>\n</xml> eingerastet sind",
+          "courseA_maze_seq1_b": "Der Vogel muss sich 3 mal in Richtung Westen bewegen. Nimm diesen Block:\n\n<xml><block type=\"maze_moveWest\"/></xml>"
         },
         "courseA_maze_seq1_2019": {
           "courseA_maze_seq1_a": "Wenn der Vogel sich nicht bewegt, dann überprüfe ob die Blöcke richtig unter [blockly block][0] eingerastet sind",
@@ -2063,7 +2063,7 @@
         },
         "courseA_maze_seq5_2018": {
           "1": "Versuche einmal, die einzelnen Schritte auf ein Blatt Papier zu schreiben um eine Lösung zu finden!",
-          "2": "Du musst diesen Block verwenden:\n\n[blockly block][0]"
+          "2": "Du musst diesen Block verwenden:\n\n<xml><block type=\"maze_moveSouth\"/></xml>"
         },
         "courseA_maze_seq5_2019": {
           "1": "Versuche einmal, die einzelnen Schritte auf ein Blatt Papier zu schreiben um eine Lösung zu finden!",
@@ -2164,7 +2164,7 @@
         },
         "courseA_playLab_events2_2018": {
           "courseA_playLab_events2_a": "Suche einen Baustein mit dem der Hund etwas sagen kann.",
-          "courseA_playLab_events2_b": "Das ist der Code, den du brauchst, um die Aufgabe zu lösen:\n\n[blockly block][0]"
+          "courseA_playLab_events2_b": "Das ist der Code, den du brauchst, um die Aufgabe zu lösen:\n\n<xml>\n<block type=\"when_run\" movable=\"false\" deletable=\"false\">\n<next>\n<block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</next>\n</block>\n</xml>"
         },
         "courseA_playLab_events2_2019": {
           "courseA_playLab_events2_a": "Suche einen Baustein mit dem der Hund etwas sagen kann.",
@@ -2179,7 +2179,7 @@
           "courseA_playLab_events3_b": "Wenn du dein Programm geschrieben hast, vergiss nicht die Pfeiltaste nach links zu drücken um Jorge zur Fahne zu bewegen. Wenn die Fahne grün wird bist du angekommen!"
         },
         "courseA_playLab_events3_2018": {
-          "courseA_playLab_events3_a": "Ziehe diesen Block [blockly block][0] in den Arbeitsbereich und lass ihn unterhalb von [blockly block][1] einrasten!",
+          "courseA_playLab_events3_a": "Ziehe diesen Block <xml><block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">8</title>\n  </block></xml> in den Arbeitsbereich und lass ihn unterhalb von <xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">left</title>\n  </block></xml> einrasten!",
           "courseA_playLab_events3_b": "Wenn du dein Programm geschrieben hast, vergiss nicht die Pfeiltaste nach links zu drücken um Jorge zur Fahne zu bewegen. Wenn die Fahne grün wird bist du angekommen!"
         },
         "courseA_playLab_events3_2019": {
@@ -2195,8 +2195,8 @@
           "courseA_playLab_events4_b": "Das ist der Code, den du brauchen wirst um diese Aufgabe zu lösen:\n\n<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">right</title>\n    <next>\n  <block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">2</title>\n  </block></next></block></xml>"
         },
         "courseA_playLab_events4_2018": {
-          "courseA_playLab_events4_a": "Dies ist der Ereignis-Block, den du brauchen wirst, um Jorge nach rechts zu bewegen:\n\n[blockly block][0]",
-          "courseA_playLab_events4_b": "Das ist der Code, den du brauchen wirst um diese Aufgabe zu lösen:\n\n[blockly block][0]"
+          "courseA_playLab_events4_a": "Dies ist der Ereignis-Block, den du brauchen wirst, um Jorge nach rechts zu bewegen:\n\n<xml><block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">2</title>\n  </block></xml>",
+          "courseA_playLab_events4_b": "Das ist der Code, den du brauchen wirst um diese Aufgabe zu lösen:\n\n<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">right</title>\n    <next>\n  <block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">2</title>\n  </block></next></block></xml>"
         },
         "courseA_playLab_events4_2019": {
           "courseA_playLab_events4_a": "Dies ist der Ereignis-Block, den du brauchen wirst, um Jorge nach rechts zu bewegen:\n\n[blockly block][0]",
@@ -2211,8 +2211,8 @@
           "courseA_playLab_events5_b": "Weißt du, dass du die Taste für den Pfeil im Ereignis-Block ändern kannst, indem du auf das Bild im Block klickst und eine andere Taste auswählst?\n\n![](https://images.code.org/b010b6a8131689af53b33148753c15b4-image-1492639642316.gif)"
         },
         "courseA_playLab_events5_2018": {
-          "courseA_playLab_events5_a": "Dies sind die Ereignis-Blöcke, die du brauchst, um Jorge nach oben und unten zu bewegen:\n\n[blockly block][0]\n\nund \n\n[blockly block][1]",
-          "courseA_playLab_events5_b": "Weißt du, dass du die Taste für den Pfeil im Ereignis-Block ändern kannst, indem du auf das Bild im Block klickst und eine andere Taste auswählst?\n\n[][0]"
+          "courseA_playLab_events5_a": "Dies sind die Ereignis-Blöcke, die du brauchst, um Jorge nach oben und unten zu bewegen:\n\n<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">up</title>\n  </block></xml>\n\nund \n\n<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">down</title>\n  </block></xml>",
+          "courseA_playLab_events5_b": "Weißt du, dass du die Taste für den Pfeil im Ereignis-Block ändern kannst, indem du auf das Bild im Block klickst und eine andere Taste auswählst?\n\n![](https://images.code.org/b010b6a8131689af53b33148753c15b4-image-1492639642316.gif)"
         },
         "courseA_playLab_events5_2019": {
           "courseA_playLab_events5_a": "Dies sind die Ereignis-Blöcke, die du brauchst, um Jorge nach oben und unten zu bewegen:\n\n[blockly block][0]\n\nund \n\n[blockly block][1]",
@@ -2228,9 +2228,9 @@
           "courseA_playLab_events6_c": "Das ist der Block, den du brauchst, um einen zufälligen Ton abzuspielen:\n\n<xml><block type=\"studio_playSound\">\n    <title name=\"SOUND\">random</title>\n  </block></xml>"
         },
         "courseA_playLab_events6_2018": {
-          "courseA_playLab_events6_a": "Dies ist der Ereignis-Block, den du brauchst, um Jorge etwas machen zu lassen, wenn er geklickt wird:\n\n[blockly block][0]",
-          "courseA_playLab_events6_b": "Das ist der Block, den du brauchst, um den Hintergrund zu ändern:\n\n[blockly block][0]",
-          "courseA_playLab_events6_c": "Das ist der Block, den du brauchst, um einen zufälligen Ton abzuspielen:\n\n[blockly block][0]"
+          "courseA_playLab_events6_a": "Dies ist der Ereignis-Block, den du brauchst, um Jorge etwas machen zu lassen, wenn er geklickt wird:\n\n<xml><block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">1</title>\n  </block></xml>",
+          "courseA_playLab_events6_b": "Das ist der Block, den du brauchst, um den Hintergrund zu ändern:\n\n<xml><block type=\"studio_setBackground\">\n    <title name=\"VALUE\">random</title>\n  </block></xml>",
+          "courseA_playLab_events6_c": "Das ist der Block, den du brauchst, um einen zufälligen Ton abzuspielen:\n\n<xml><block type=\"studio_playSound\">\n    <title name=\"SOUND\">random</title>\n  </block></xml>"
         },
         "courseA_playLab_events6_2019": {
           "courseA_playLab_events6_a": "Dies ist der Ereignis-Block, den du brauchst, um Jorge etwas machen zu lassen, wenn er geklickt wird:\n\n[blockly block][0]",
@@ -2246,7 +2246,7 @@
           "courseA_playLab_events7_a": "Nimm diesen Block, um zu steuern, was passiert, wenn die Figuren zusammenprallen!\n\n<xml><block type=\"studio_whenSpriteCollided\">\n    <title name=\"SPRITE1\">1</title>\n    <title name=\"SPRITE2\">0</title>\n  </block></xml>"
         },
         "courseA_playLab_events7_2018": {
-          "courseA_playLab_events7_a": "Nimm diesen Block, um zu steuern, was passiert, wenn die Figuren zusammenprallen!\n\n[blockly block][0]"
+          "courseA_playLab_events7_a": "Nimm diesen Block, um zu steuern, was passiert, wenn die Figuren zusammenprallen!\n\n<xml><block type=\"studio_whenSpriteCollided\">\n    <title name=\"SPRITE1\">1</title>\n    <title name=\"SPRITE2\">0</title>\n  </block></xml>"
         },
         "courseA_playLab_events7_2019": {
           "courseA_playLab_events7_a": "Nimm diesen Block, um zu steuern, was passiert, wenn die Figuren zusammenprallen!\n\n[blockly block][0]"
@@ -2262,11 +2262,11 @@
           "courseA_playlab_events_challenge1_e": "Und zuletzt, mach, dass Wendel, der Zauberer, erscheint, wenn du auf Spiff klickst!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">7</title>\n      </block>\n    </next>\n  </block></xml>"
         },
         "courseA_playlab_events_challenge1_2018": {
-          "courseA_playlab_events_challenge1_a": "Mach, dass Waddles, der Pinguin, erscheint, wenn du auf Robin klickst!\n\n[blockly block][0]",
-          "courseA_playlab_events_challenge1_b": "Mach, dass Buu, der Geist, erscheint, wenn du auf Waddles klickst!\n\n[blockly block][0]",
-          "courseA_playlab_events_challenge1_c": "Mach, dass Jayden, das wuschelige Monster, erscheint, wenn du auf Buu klickst!\n\n[blockly block][0]",
-          "courseA_playlab_events_challenge1_d": "Mach, dass Spiff, der Roboter, erscheint, wenn du auf das Monster klickst!\n\n[blockly block][0]",
-          "courseA_playlab_events_challenge1_e": "Und zuletzt, mach, dass Wendel, der Zauberer, erscheint, wenn du auf Spiff klickst!\n\n[blockly block][0]"
+          "courseA_playlab_events_challenge1_a": "Mach, dass Waddles, der Pinguin, erscheint, wenn du auf Robin klickst!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_b": "Mach, dass Buu, der Geist, erscheint, wenn du auf Waddles klickst!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_c": "Mach, dass Jayden, das wuschelige Monster, erscheint, wenn du auf Buu klickst!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_d": "Mach, dass Spiff, der Roboter, erscheint, wenn du auf das Monster klickst!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_e": "Und zuletzt, mach, dass Wendel, der Zauberer, erscheint, wenn du auf Spiff klickst!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">7</title>\n      </block>\n    </next>\n  </block></xml>"
         },
         "courseA_playlab_events_challenge1_2019": {
           "courseA_playlab_events_challenge1_a": "Mach, dass Waddles, der Pinguin, erscheint, wenn du auf Robin klickst!\n\n[blockly block][0]",
@@ -2288,9 +2288,9 @@
           "courseA_playlab_events_challenge2_c": "Du kannst das grantige Monster knurren lassen.\n\n<xml>  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSpriteEmotion\">\n        <title name=\"SPRITE\">5</title>\n        <title name=\"VALUE\">2</title>\n        <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">5</title>\n            <title name=\"TEXT\">Roar!</title>\n            <next>\n              <block type=\"studio_setSpriteEmotion\">\n                <title name=\"SPRITE\">5</title>\n                <title name=\"VALUE\">0</title>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block></xml>"
         },
         "courseA_playlab_events_challenge2_2018": {
-          "courseA_playlab_events_challenge2_a": "Du kannst einen Vogel zum singen bringen.\n\n[blockly block][0]",
-          "courseA_playlab_events_challenge2_b": "Du kannst den Roboter piepsen lassen.\n\n[blockly block][0]",
-          "courseA_playlab_events_challenge2_c": "Du kannst das grantige Monster knurren lassen.\n\n[blockly block][0]"
+          "courseA_playlab_events_challenge2_a": "Du kannst einen Vogel zum singen bringen.\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n          </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge2_b": "Du kannst den Roboter piepsen lassen.\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge2_c": "Du kannst das grantige Monster knurren lassen.\n\n<xml>  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSpriteEmotion\">\n        <title name=\"SPRITE\">5</title>\n        <title name=\"VALUE\">2</title>\n        <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">5</title>\n            <title name=\"TEXT\">Roar!</title>\n            <next>\n              <block type=\"studio_setSpriteEmotion\">\n                <title name=\"SPRITE\">5</title>\n                <title name=\"VALUE\">0</title>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block></xml>"
         },
         "courseA_playlab_events_challenge2_2019": {
           "courseA_playlab_events_challenge2_a": "Du kannst einen Vogel zum singen bringen.\n\n[blockly block][0]",
@@ -3354,12 +3354,12 @@
         },
         "courseC19_playLab_EOC1": {
           "courseE_playLab_scaffold1_a": "Du kannst den Baustein `Figur 1 in Bild ??? einfügen` verwenden, um der Szene eine Figur hinzuzufügen.",
-          "courseE_playLab_scaffold1_b": "Füge den Baustein `Figur einfügen` unter wenn ausgeführt wird` ein, damit deine Figur am Anfang des Programms erscheint.",
+          "courseE_playLab_scaffold1_b": "Füge den Baustein `Figur einfügen` unter wenn ausgeführt wird\\` ein, damit deine Figur am Anfang des Programms erscheint.",
           "courseE_playLab_scaffold1_c": "Verwende `Hintergrund ???? erstellen`, um einen Hintergrund für deine Szene zu wählen."
         },
         "courseC19_playLab_EOC1_2020": {
           "courseE_playLab_scaffold1_a": "Du kannst den Baustein `Figur 1 in Bild ??? einfügen` verwenden, um der Szene eine Figur hinzuzufügen.",
-          "courseE_playLab_scaffold1_b": "Füge den Baustein `Figur einfügen` unter wenn ausgeführt wird` ein, damit deine Figur am Anfang des Programms erscheint.",
+          "courseE_playLab_scaffold1_b": "Füge den Baustein `Figur einfügen` unter wenn ausgeführt wird\\` ein, damit deine Figur am Anfang des Programms erscheint.",
           "courseE_playLab_scaffold1_c": "Verwende `Hintergrund ???? erstellen`, um einen Hintergrund für deine Szene zu wählen."
         },
         "courseC19_playLab_EOC2": {
@@ -3379,52 +3379,52 @@
           "courseE_playLab_scaffold4_a": "Verwende `Punkt erzielen`, um einen Punkt hinzuzufügen, und `Punkt abziehen`, um einen Punkt abzuziehen."
         },
         "courseC_PlayLab_events1": {
-          "courseC_PlayLab_events1_a": "Verbinde diesen Block mit dem `wenn Ausführen` Block:\n\n[blockly block][0]"
+          "courseC_PlayLab_events1_a": "Verbinde diesen Block mit dem `wenn Ausführen` Block:\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</xml>"
         },
         "courseC_PlayLab_events1_2018": {
-          "courseC_PlayLab_events1_a": "Verbinde diesen Block mit dem `wenn Ausführen` Block:\n\n[blockly block][0]"
+          "courseC_PlayLab_events1_a": "Verbinde diesen Block mit dem `wenn Ausführen` Block:\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</xml>"
         },
         "courseC_PlayLab_events1_2019": {
-          "courseC_PlayLab_events1_a": "Verbinde diesen Block mit dem `wenn Ausführen` Block:\n\n[blockly block][0]"
+          "courseC_PlayLab_events1_a": "Verbinde diesen Block mit dem `wenn Ausführen` Block:\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</xml>"
         },
         "courseC_PlayLab_events1_2020": {
-          "courseC_PlayLab_events1_a": "Verbinde diesen Block mit dem `wenn Ausführen` Block:\n\n[blockly block][0]"
+          "courseC_PlayLab_events1_a": "Verbinde diesen Block mit dem `wenn Ausführen` Block:\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</xml>"
         },
         "courseC_PlayLab_events2": {
-          "courseC_PlayLab_events2_a": "Verbinde zwei dieser Blöcke mit dem `wenn Ausführen` Block:\n\n[blockly block][0]",
+          "courseC_PlayLab_events2_a": "Verbinde zwei dieser Blöcke mit dem `wenn Ausführen` Block:\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</xml>",
           "courseC_PlayLab_events2_b": "Verwende das Drop-down-Menü in dem zweiten Block `Figur __ sagt`, um zu ändern, welche Figur spricht!"
         },
         "courseC_PlayLab_events2_2018": {
-          "courseC_PlayLab_events2_a": "Verbinde zwei dieser Blöcke mit dem `wenn Ausführen` Block:\n\n[blockly block][0]",
+          "courseC_PlayLab_events2_a": "Verbinde zwei dieser Blöcke mit dem `wenn Ausführen` Block:\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</xml>",
           "courseC_PlayLab_events2_b": "Verwende das Drop-down-Menü in dem zweiten Block `Figur __ sagt`, um zu ändern, welche Figur spricht!"
         },
         "courseC_PlayLab_events2_2019": {
-          "courseC_PlayLab_events2_a": "Verbinde zwei dieser Blöcke mit dem `wenn Ausführen` Block:\n\n[blockly block][0]",
+          "courseC_PlayLab_events2_a": "Verbinde zwei dieser Blöcke mit dem `wenn Ausführen` Block:\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</xml>",
           "courseC_PlayLab_events2_b": "Verwende das Drop-down-Menü in dem zweiten Block `Figur __ sagt`, um zu ändern, welche Figur spricht!"
         },
         "courseC_PlayLab_events2_2020": {
-          "courseC_PlayLab_events2_a": "Verbinde zwei dieser Blöcke mit dem `wenn Ausführen` Block:\n\n[blockly block][0]",
+          "courseC_PlayLab_events2_a": "Verbinde zwei dieser Blöcke mit dem `wenn Ausführen` Block:\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</xml>",
           "courseC_PlayLab_events2_b": "Verwende das Drop-down-Menü in dem zweiten Block `Figur __ sagt`, um zu ändern, welche Figur spricht!"
         },
         "courseC_PlayLab_events3": {
           "courseC_PlayLab_events3_a": "Du brauchst Jorge nur etwa 25 Pixel nach rechts bewegen, um diese Aufgabe zu lösen.",
           "courseC_PlayLab_events3_b": "Gibt es einen Block in der Werkzeugkiste, der aussieht, als könnte er eine Figur bewegen?",
-          "courseC_PlayLab_events3_c": "Verbinde diesen Block mit dem `wenn Ausführen` Block:\n\n[blockly block][0]"
+          "courseC_PlayLab_events3_c": "Verbinde diesen Block mit dem `wenn Ausführen` Block:\n\n<xml>\n<block type=\"studio_moveDistance\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"DIR\">2</title>\n    <title name=\"DISTANCE\">25</title>\n  </block>\n</xml>"
         },
         "courseC_PlayLab_events3_2018": {
           "courseC_PlayLab_events3_a": "Du brauchst Jorge nur etwa 25 Pixel nach rechts bewegen, um diese Aufgabe zu lösen.",
           "courseC_PlayLab_events3_b": "Gibt es einen Block in der Werkzeugkiste, der aussieht, als könnte er eine Figur bewegen?",
-          "courseC_PlayLab_events3_c": "Verbinde diesen Block mit dem `wenn Ausführen` Block:\n\n[blockly block][0]"
+          "courseC_PlayLab_events3_c": "Verbinde diesen Block mit dem `wenn Ausführen` Block:\n\n<xml>\n<block type=\"studio_moveDistance\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"DIR\">2</title>\n    <title name=\"DISTANCE\">25</title>\n  </block>\n</xml>"
         },
         "courseC_PlayLab_events3_2019": {
           "courseC_PlayLab_events3_a": "Du brauchst Jorge nur etwa 25 Pixel nach rechts bewegen, um diese Aufgabe zu lösen.",
           "courseC_PlayLab_events3_b": "Gibt es einen Block in der Werkzeugkiste, der aussieht, als könnte er eine Figur bewegen?",
-          "courseC_PlayLab_events3_c": "Verbinde diesen Block mit dem `wenn Ausführen` Block:\n\n[blockly block][0]"
+          "courseC_PlayLab_events3_c": "Verbinde diesen Block mit dem `wenn Ausführen` Block:\n\n<xml>\n<block type=\"studio_moveDistance\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"DIR\">2</title>\n    <title name=\"DISTANCE\">25</title>\n  </block>\n</xml>"
         },
         "courseC_PlayLab_events3_2020": {
           "courseC_PlayLab_events3_a": "Du brauchst Jorge nur etwa 25 Pixel nach rechts bewegen, um diese Aufgabe zu lösen.",
           "courseC_PlayLab_events3_b": "Gibt es einen Block in der Werkzeugkiste, der aussieht, als könnte er eine Figur bewegen?",
-          "courseC_PlayLab_events3_c": "Verbinde diesen Block mit dem `wenn Ausführen` Block:\n\n[blockly block][0]"
+          "courseC_PlayLab_events3_c": "Verbinde diesen Block mit dem `wenn Ausführen` Block:\n\n<xml>\n<block type=\"studio_moveDistance\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"DIR\">2</title>\n    <title name=\"DISTANCE\">25</title>\n  </block>\n</xml>"
         },
         "courseC_PlayLab_events4": {
           "courseC_PlayLab_events4_b": "Wenn \"Ausführen\" geklickt wird, muss sich Jorge um **100** Pixel nach rechts bewegen, um die Katze Olive zu erreichen.",
@@ -3479,19 +3479,19 @@
           "courseC_PlayLab_events6_c": "Wenn du fertig bist, solltest du in der Lage sein, Waddles mit den Pfeiltasten auf deinem Computer zu bewegen!"
         },
         "courseC_PlayLab_events7": {
-          "courseC_PlayLab_events7_a": "Verwende die beiden Blöcke `bewege Figur 2 um 400 Pixel nach oben‘ und  `bewege Figur 2 um 400 Pixel nach unten‘ in der Schleife `ewig wiederholen`, um diese Aufgabe zu lösen!",
+          "courseC_PlayLab_events7_a": "Verwende die beiden Blöcke `bewege Figur 2 um 400 Pixel nach oben‘ und`bewege Figur 2 um 400 Pixel nach unten‘ in der Schleife `ewig wiederholen`, um diese Aufgabe zu lösen!",
           "courseC_PlayLab_events7_b": "Die `ewig wiederholen`-Schleife muss nicht mit anderen Ereignisblöcken verbunden sein; sie läuft von selbst ab."
         },
         "courseC_PlayLab_events7_2018": {
-          "courseC_PlayLab_events7_a": "Verwende die beiden Blöcke `bewege Figur 2 um 400 Pixel nach oben‘ und  `bewege Figur 2 um 400 Pixel nach unten‘ in der Schleife `ewig wiederholen`, um diese Aufgabe zu lösen!",
+          "courseC_PlayLab_events7_a": "Verwende die beiden Blöcke `bewege Figur 2 um 400 Pixel nach oben‘ und`bewege Figur 2 um 400 Pixel nach unten‘ in der Schleife `ewig wiederholen`, um diese Aufgabe zu lösen!",
           "courseC_PlayLab_events7_b": "Die `ewig wiederholen`-Schleife muss nicht mit anderen Ereignisblöcken verbunden sein; sie läuft von selbst ab."
         },
         "courseC_PlayLab_events7_2019": {
-          "courseC_PlayLab_events7_a": "Verwende die beiden Blöcke `bewege Figur 2 um 400 Pixel nach oben‘ und  `bewege Figur 2 um 400 Pixel nach unten‘ in der Schleife `ewig wiederholen`, um diese Aufgabe zu lösen!",
+          "courseC_PlayLab_events7_a": "Verwende die beiden Blöcke `bewege Figur 2 um 400 Pixel nach oben‘ und`bewege Figur 2 um 400 Pixel nach unten‘ in der Schleife `ewig wiederholen`, um diese Aufgabe zu lösen!",
           "courseC_PlayLab_events7_b": "Die `ewig wiederholen`-Schleife muss nicht mit anderen Ereignisblöcken verbunden sein; sie läuft von selbst ab."
         },
         "courseC_PlayLab_events7_2020": {
-          "courseC_PlayLab_events7_a": "Verwende die beiden Blöcke `bewege Figur 2 um 400 Pixel nach oben‘ und  `bewege Figur 2 um 400 Pixel nach unten‘ in der Schleife `ewig wiederholen`, um diese Aufgabe zu lösen!",
+          "courseC_PlayLab_events7_a": "Verwende die beiden Blöcke `bewege Figur 2 um 400 Pixel nach oben‘ und`bewege Figur 2 um 400 Pixel nach unten‘ in der Schleife `ewig wiederholen`, um diese Aufgabe zu lösen!",
           "courseC_PlayLab_events7_b": "Die `ewig wiederholen`-Schleife muss nicht mit anderen Ereignisblöcken verbunden sein; sie läuft von selbst ab."
         },
         "courseC_PlayLab_events8": {
@@ -3531,74 +3531,74 @@
           "courseC_PlayLab_events9_c": "Du kannst mehr als ein `wenn Figur berührt` Ereignis in deinem Arbeitsbereich haben, so dass du das erste nicht löschen musst!"
         },
         "courseC_PlayLab_eventsA": {
-          "courseC_PlayLab_eventsA_a": "Verwende die Blöcke \"Hintergrund setzen\" und \"Figur auf ____ Geschwindigkeit setzen\", um diese Aufgabe zu lösen!",
+          "courseC_PlayLab_eventsA_a": "Verwende die Blöcke \"Hintergrund setzen\" und \"Figur auf \\_\\_\\_\\_ Geschwindigkeit setzen\", um diese Aufgabe zu lösen!",
           "courseC_PlayLab_eventsA_b": "Du musst extra einen 'wenn Ausführen'  Ereignisblock in den Arbeitsbereich ziehen, um diese Aufgabe zu lösen!"
         },
         "courseC_PlayLab_eventsA_2018": {
-          "courseC_PlayLab_eventsA_a": "Verwende die Blöcke \"Hintergrund setzen\" und \"Figur auf ____ Geschwindigkeit setzen\", um diese Aufgabe zu lösen!",
+          "courseC_PlayLab_eventsA_a": "Verwende die Blöcke \"Hintergrund setzen\" und \"Figur auf \\_\\_\\_\\_ Geschwindigkeit setzen\", um diese Aufgabe zu lösen!",
           "courseC_PlayLab_eventsA_b": "Du musst extra einen 'wenn Ausführen'  Ereignisblock in den Arbeitsbereich ziehen, um diese Aufgabe zu lösen!"
         },
         "courseC_PlayLab_eventsA_2019": {
-          "courseC_PlayLab_eventsA_a": "Verwende die Blöcke \"Hintergrund setzen\" und \"Figur auf ____ Geschwindigkeit setzen\", um diese Aufgabe zu lösen!",
+          "courseC_PlayLab_eventsA_a": "Verwende die Blöcke \"Hintergrund setzen\" und \"Figur auf \\_\\_\\_\\_ Geschwindigkeit setzen\", um diese Aufgabe zu lösen!",
           "courseC_PlayLab_eventsA_b": "Du musst extra einen 'wenn Ausführen'  Ereignisblock in den Arbeitsbereich ziehen, um diese Aufgabe zu lösen!"
         },
         "courseC_PlayLab_eventsA_2020": {
-          "courseC_PlayLab_eventsA_a": "Verwende die Blöcke \"Hintergrund setzen\" und \"Figur auf ____ Geschwindigkeit setzen\", um diese Aufgabe zu lösen!",
+          "courseC_PlayLab_eventsA_a": "Verwende die Blöcke \"Hintergrund setzen\" und \"Figur auf \\_\\_\\_\\_ Geschwindigkeit setzen\", um diese Aufgabe zu lösen!",
           "courseC_PlayLab_eventsA_b": "Du musst extra einen 'wenn Ausführen'  Ereignisblock in den Arbeitsbereich ziehen, um diese Aufgabe zu lösen!"
         },
         "courseC_PlayLab_eventsA_embed_2019": {
-          "courseC_PlayLab_eventsA_a": "Benutze die Pfeilschlüssel um den Pinguin zu bewegen. Du musst keinen Code schreiben, um die Ebene abzuschließen.\n"
+          "courseC_PlayLab_eventsA_a": "Benutze die Pfeilschlüssel um den Pinguin zu bewegen. Du musst keinen Code schreiben, um die Ebene abzuschließen."
         },
         "courseC_PlayLab_eventsA_embed_2020": {
-          "courseC_PlayLab_eventsA_a": "Benutze die Pfeilschlüssel um den Pinguin zu bewegen. Du musst keinen Code schreiben, um die Ebene abzuschließen.\n"
+          "courseC_PlayLab_eventsA_a": "Benutze die Pfeilschlüssel um den Pinguin zu bewegen. Du musst keinen Code schreiben, um die Ebene abzuschließen."
         },
         "courseC_PlayLab_eventsFP": {
-          "idea1": "_Brauchst du eine Idee?_ \n\n**Wer ist da?** Lass die Figuren in zufälligen Bildern erscheinen, so dass niemand weiß, wer als nächstes auftaucht. \n\n[][0]",
-          "idea2": "_Brauchst du eine Idee?_ \n\n**Auf ein Abenteuer gehen** - Ändere den Hintergrund, dann lass die Figuren darüber sprechen, wo sie sich gerade befinden.\n\n[][0]",
-          "idea3": "_Brauchst du eine Idee?_ \n\n**Flippern** - Bewege eine Figur mit den Pfeiltasten (nimm die `wenn Pfeil nach oben` und `wenn Pfeil nach unten‘ Blöcke) und spiele zufällige Töne ab, sobald sie mit anderen Figuren auf dem Bildschirm zusammenstößt."
+          "idea1": "_Brauchst du eine Idee?_ \n\n**Wer ist da?** Lass die Figuren in zufälligen Bildern erscheinen, so dass niemand weiß, wer als nächstes auftaucht. \n\n![](https://images.code.org/a56e03479801995d93ad5a4e4384a79e-image-1475340154498.gif)",
+          "idea2": "_Brauchst du eine Idee?_ \n\n**Auf ein Abenteuer gehen** - Ändere den Hintergrund, dann lass die Figuren darüber sprechen, wo sie sich gerade befinden.\n\n![](https://images.code.org/010c4d919f841d6049caf9211ab65ccc-image-1475340583052.gif)",
+          "idea3": "_Brauchst du eine Idee?_ \n\n**Flippern** - Bewege eine Figur mit den Pfeiltasten (nimm die `wenn Pfeil nach oben` und \\`wenn Pfeil nach unten‘ Blöcke) und spiele zufällige Töne ab, sobald sie mit anderen Figuren auf dem Bildschirm zusammenstößt."
         },
         "courseC_PlayLab_eventsFP_2018": {
-          "idea1": "_Brauchst du eine Idee?_ \n\n**Wer ist da?** Lass die Figuren in zufälligen Bildern erscheinen, so dass niemand weiß, wer als nächstes auftaucht. \n\n[][0]",
-          "idea2": "_Brauchst du eine Idee?_ \n\n**Auf ein Abenteuer gehen** - Ändere den Hintergrund, dann lass die Figuren darüber sprechen, wo sie sich gerade befinden.\n\n[][0]",
-          "idea3": "_Brauchst du eine Idee?_ \n\n**Flippern** - Bewege eine Figur mit den Pfeiltasten (nimm die `wenn Pfeil nach oben` und `wenn Pfeil nach unten‘ Blöcke) und spiele zufällige Töne ab, sobald sie mit anderen Figuren auf dem Bildschirm zusammenstößt."
+          "idea1": "_Brauchst du eine Idee?_ \n\n**Wer ist da?** Lass die Figuren in zufälligen Bildern erscheinen, so dass niemand weiß, wer als nächstes auftaucht. \n\n![](https://images.code.org/a56e03479801995d93ad5a4e4384a79e-image-1475340154498.gif)",
+          "idea2": "_Brauchst du eine Idee?_ \n\n**Auf ein Abenteuer gehen** - Ändere den Hintergrund, dann lass die Figuren darüber sprechen, wo sie sich gerade befinden.\n\n![](https://images.code.org/010c4d919f841d6049caf9211ab65ccc-image-1475340583052.gif)",
+          "idea3": "_Brauchst du eine Idee?_ \n\n**Flippern** - Bewege eine Figur mit den Pfeiltasten (nimm die `wenn Pfeil nach oben` und \\`wenn Pfeil nach unten‘ Blöcke) und spiele zufällige Töne ab, sobald sie mit anderen Figuren auf dem Bildschirm zusammenstößt."
         },
         "courseC_PlayLab_eventsFP_2019": {
           "idea1": "Brauchst du eine Idee?\n\n**Wer ist da?** Lasse Charaktere mit zufälligen Bildern erscheinen, so dass niemand weiß, wer als nächstes erscheint.\n\n<img src= \"https://images.code.org/dbd6ece9d0fb213039ea5dccb91fc425-image-1563577859889.gif\" style=\"width: 200px\">",
           "idea2": "_Brauchst du eine Idee?_\n\n**Ein Abenteuer erleben** - Ändere den Hintergrund, dann lasse die Charaktere darüber reden, wo sie sich gerade befinden.\n\n<img src= \"https://images.code.org/a7f740d73074deb128cdc2826abda9e6-image-1563576781779.gif\" style=\"width: 200px\">",
-          "idea3": "_Brauchst du eine Idee?_ \n\n**Flippern** - Bewege eine Figur mit den Pfeiltasten (nimm die `wenn Pfeil nach oben` und `wenn Pfeil nach unten‘ Blöcke) und spiele zufällige Töne ab, sobald sie mit anderen Figuren auf dem Bildschirm zusammenstößt."
+          "idea3": "_Brauchst du eine Idee?_ \n\n**Flippern** - Bewege eine Figur mit den Pfeiltasten (nimm die `wenn Pfeil nach oben` und \\`wenn Pfeil nach unten‘ Blöcke) und spiele zufällige Töne ab, sobald sie mit anderen Figuren auf dem Bildschirm zusammenstößt."
         },
         "courseC_PlayLab_eventsFP_2020": {
           "idea1": "Brauchst du eine Idee?\n\n**Wer ist da?** Lasse Charaktere mit zufälligen Bildern erscheinen, so dass niemand weiß, wer als nächstes erscheint.\n\n<img src= \"https://images.code.org/dbd6ece9d0fb213039ea5dccb91fc425-image-1563577859889.gif\" style=\"width: 200px\">",
           "idea2": "_Brauchst du eine Idee?_\n\n**Ein Abenteuer erleben** - Ändere den Hintergrund, dann lasse die Charaktere darüber reden, wo sie sich gerade befinden.\n\n<img src= \"https://images.code.org/a7f740d73074deb128cdc2826abda9e6-image-1563576781779.gif\" style=\"width: 200px\">",
-          "idea3": "_Brauchst du eine Idee?_ \n\n**Flippern** - Bewege eine Figur mit den Pfeiltasten (nimm die `wenn Pfeil nach oben` und `wenn Pfeil nach unten‘ Blöcke) und spiele zufällige Töne ab, sobald sie mit anderen Figuren auf dem Bildschirm zusammenstößt."
+          "idea3": "_Brauchst du eine Idee?_ \n\n**Flippern** - Bewege eine Figur mit den Pfeiltasten (nimm die `wenn Pfeil nach oben` und \\`wenn Pfeil nach unten‘ Blöcke) und spiele zufällige Töne ab, sobald sie mit anderen Figuren auf dem Bildschirm zusammenstößt."
         },
         "courseC_PlayLab_events_challenge1": {
-          "courseC_PlayLab_events_challenge_a": "Du kannst diesen Block verwenden, um Figuren an verschiedene Orte im Spielbereich zu bewegen.\n\n[blockly block][0]",
+          "courseC_PlayLab_events_challenge_a": "Du kannst diesen Block verwenden, um Figuren an verschiedene Orte im Spielbereich zu bewegen.\n\n<xml> <block type=\"studio_setSpritePosition\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">12</title>\n  </block></xml>",
           "courseC_PlayLab_events_challenge_b": "Nimm `Setze Figur 1 in die Mitte links Position`, wenn er eine der anderen Figuren berührt. Dadurch wird das Spiel zurückgesetzt, so dass der Spieler es weiterhin versuchen kann!",
-          "courseC_PlayLab_events_challenge_c": "Vielleicht möchtest du auch versuchen, die Geschwindigkeit der verschiedenen Figuren zu ändern, um das Spiel einfacher oder schwieriger zu machen!\n\n[blockly block][0]\n"
+          "courseC_PlayLab_events_challenge_c": "Vielleicht möchtest du auch versuchen, die Geschwindigkeit der verschiedenen Figuren zu ändern, um das Spiel einfacher oder schwieriger zu machen!\n\n<xml>  <block type=\"studio_setSpriteSpeed\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Studio.SpriteSpeed.FAST</title>\n  </block></xml>"
         },
         "courseC_PlayLab_events_challenge1_2018": {
-          "courseC_PlayLab_events_challenge_a": "Du kannst diesen Block verwenden, um Figuren an verschiedene Orte im Spielbereich zu bewegen.\n\n[blockly block][0]",
+          "courseC_PlayLab_events_challenge_a": "Du kannst diesen Block verwenden, um Figuren an verschiedene Orte im Spielbereich zu bewegen.\n\n<xml> <block type=\"studio_setSpritePosition\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">12</title>\n  </block></xml>",
           "courseC_PlayLab_events_challenge_b": "Nimm `Setze Figur 1 in die Mitte links Position`, wenn er eine der anderen Figuren berührt. Dadurch wird das Spiel zurückgesetzt, so dass der Spieler es weiterhin versuchen kann!",
-          "courseC_PlayLab_events_challenge_c": "Vielleicht möchtest du auch versuchen, die Geschwindigkeit der verschiedenen Figuren zu ändern, um das Spiel einfacher oder schwieriger zu machen!\n\n[blockly block][0]\n"
+          "courseC_PlayLab_events_challenge_c": "Vielleicht möchtest du auch versuchen, die Geschwindigkeit der verschiedenen Figuren zu ändern, um das Spiel einfacher oder schwieriger zu machen!\n\n<xml>  <block type=\"studio_setSpriteSpeed\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Studio.SpriteSpeed.FAST</title>\n  </block></xml>"
         },
         "courseC_PlayLab_events_challenge1_2019": {
-          "courseC_PlayLab_events_challenge_a": "Du kannst diesen Block verwenden, um Figuren an verschiedene Orte im Spielbereich zu bewegen.\n\n[blockly block][0]",
+          "courseC_PlayLab_events_challenge_a": "Du kannst diesen Block verwenden, um Figuren an verschiedene Orte im Spielbereich zu bewegen.\n\n<xml> <block type=\"studio_setSpritePosition\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">12</title>\n  </block></xml>",
           "courseC_PlayLab_events_challenge_b": "Nimm `Setze Figur 1 in die Mitte links Position`, wenn er eine der anderen Figuren berührt. Dadurch wird das Spiel zurückgesetzt, so dass der Spieler es weiterhin versuchen kann!",
-          "courseC_PlayLab_events_challenge_c": "Vielleicht möchtest du auch versuchen, die Geschwindigkeit der verschiedenen Figuren zu ändern, um das Spiel einfacher oder schwieriger zu machen!\n\n[blockly block][0]\n"
+          "courseC_PlayLab_events_challenge_c": "Vielleicht möchtest du auch versuchen, die Geschwindigkeit der verschiedenen Figuren zu ändern, um das Spiel einfacher oder schwieriger zu machen!\n\n<xml>  <block type=\"studio_setSpriteSpeed\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Studio.SpriteSpeed.FAST</title>\n  </block></xml>"
         },
         "courseC_PlayLab_events_challenge1_2020": {
-          "courseC_PlayLab_events_challenge_a": "Du kannst diesen Block verwenden, um Figuren an verschiedene Orte im Spielbereich zu bewegen.\n\n[blockly block][0]",
+          "courseC_PlayLab_events_challenge_a": "Du kannst diesen Block verwenden, um Figuren an verschiedene Orte im Spielbereich zu bewegen.\n\n<xml> <block type=\"studio_setSpritePosition\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">12</title>\n  </block></xml>",
           "courseC_PlayLab_events_challenge_b": "Nimm `Setze Figur 1 in die Mitte links Position`, wenn er eine der anderen Figuren berührt. Dadurch wird das Spiel zurückgesetzt, so dass der Spieler es weiterhin versuchen kann!",
-          "courseC_PlayLab_events_challenge_c": "Vielleicht möchtest du auch versuchen, die Geschwindigkeit der verschiedenen Figuren zu ändern, um das Spiel einfacher oder schwieriger zu machen!\n\n[blockly block][0]\n"
+          "courseC_PlayLab_events_challenge_c": "Vielleicht möchtest du auch versuchen, die Geschwindigkeit der verschiedenen Figuren zu ändern, um das Spiel einfacher oder schwieriger zu machen!\n\n<xml>  <block type=\"studio_setSpriteSpeed\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Studio.SpriteSpeed.FAST</title>\n  </block></xml>"
         },
         "courseC_artist_loop1": {
           "courseC_artist_loop1_a": "Du brauchst keine Änderungen an der Schleife vorzunehmen, setze einfach einen Block darüber!",
-          "courseC_artist_loop1_b": "Dies ist der Block, den du benötigst, um ein Muster zu bestimmen: \n\n[blockly block][0] \n\nWähle irgendein Muster, das dir gefällt!\n"
+          "courseC_artist_loop1_b": "Dies ist der Block, den du benötigst, um ein Muster zu bestimmen: \n\n<xml>\n<block type=\"draw_line_style_pattern\">\n    <title name=\"VALUE\">DEFAULT</title>\n  </block>\n</xml> \n\nWähle irgendein Muster, das dir gefällt!"
         },
         "courseC_artist_loop1_2018": {
           "courseC_artist_loop1_a": "Du brauchst keine Änderungen an der Schleife vorzunehmen, setze einfach einen Block darüber!",
-          "courseC_artist_loop1_b": "Dies ist der Block, den du benötigst, um ein Muster zu bestimmen: \n\n[blockly block][0] \n\nWähle irgendein Muster, das dir gefällt!\n"
+          "courseC_artist_loop1_b": "Dies ist der Block, den du benötigst, um ein Muster zu bestimmen: \n\n<xml>\n<block type=\"draw_line_style_pattern\">\n    <title name=\"VALUE\">DEFAULT</title>\n  </block>\n</xml> \n\nWähle irgendein Muster, das dir gefällt!"
         },
         "courseC_artist_loop1_2019": {
           "courseC_artist_loop1_a": "Du brauchst keine Änderungen an der Schleife vorzunehmen, setze einfach einen Block darüber!",
@@ -3615,8 +3615,8 @@
           "courseC_artist_loops1a_b": "Verwende diesen Block, um den Sticker zu zeichnen! \n\n<xml>\n<block type=\"sticker\">\n    <title name=\"VALUE\">Bird</title>\n  </block>\n</xml>"
         },
         "courseC_artist_loops1a_2018": {
-          "courseC_artist_loops1a_a": "Das ist der erste Block, den du dafür brauchst:\n\n[blockly block][0]",
-          "courseC_artist_loops1a_b": "Verwende diesen Block, um den Sticker zu zeichnen! \n\n[Blockly block][0]"
+          "courseC_artist_loops1a_a": "Das ist der erste Block, den du dafür brauchst:\n\n<xml>\n<block type=\"jump_to_xy\">\n    <title name=\"XPOS\">200</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n</xml>",
+          "courseC_artist_loops1a_b": "Verwende diesen Block, um den Sticker zu zeichnen! \n\n<xml>\n<block type=\"sticker\">\n    <title name=\"VALUE\">Bird</title>\n  </block>\n</xml>"
         },
         "courseC_artist_loops1a_2019": {
           "courseC_artist_loops1a_a": "Das ist der erste Block, den du dafür brauchst:\n\n<xml>\n  <block type=\"jump_to\">\n    <title name=\"VALUE\">13</title>\n  </block>\n</xml>",
@@ -3627,10 +3627,10 @@
           "courseC_artist_loops1a_b": "Verwende diesen Block, um den Sticker zu zeichnen! \n\n<xml>\n<block type=\"sticker\">\n    <title name=\"VALUE\">Bird</title>\n  </block>\n</xml>"
         },
         "courseC_artist_loops1b_2019": {
-          "courseC_artist_loops1b_a": "Dies ist der erste Baustein, den du benötigst:\n\n[blockly block][0]\n\nDu kannst entweder links oder rechts und eine beliebige Anzahl von Grad wählen."
+          "courseC_artist_loops1b_a": "Dies ist der erste Baustein, den du benötigst:\n\n<xml>\n  <block type=\"draw_turn_by_constant_dropdown\">\n    <title name=\"DIR\">???</title>\n    <title name=\"VALUE\" config=\"45,60,90,120,180\">???</title>\n  </block>\n</xml>\n\nDu kannst entweder links oder rechts und eine beliebige Anzahl von Grad wählen."
         },
         "courseC_artist_loops1b_2020": {
-          "courseC_artist_loops1b_a": "Dies ist der erste Baustein, den du benötigst:\n\n[blockly block][0]\n\nDu kannst entweder links oder rechts und eine beliebige Anzahl von Grad wählen."
+          "courseC_artist_loops1b_a": "Dies ist der erste Baustein, den du benötigst:\n\n<xml>\n  <block type=\"draw_turn_by_constant_dropdown\">\n    <title name=\"DIR\">???</title>\n    <title name=\"VALUE\" config=\"45,60,90,120,180\">???</title>\n  </block>\n</xml>\n\nDu kannst entweder links oder rechts und eine beliebige Anzahl von Grad wählen."
         },
         "courseC_artist_loops2a": {
           "courseC_artist_loops2a_a": "Innerhalb deiner Schleife musst du auf 200 über 200 nach unten springen, dann den Vogel-Sticker zeichnen und dich dann um 30 Grad drehen.",
@@ -3654,7 +3654,7 @@
         },
         "courseC_artist_loops3a_2018": {
           "courseC_artist_loops3a_a": "Du musst nur einen Block in deiner Schleife hinzufügen, nach dem Vogelaufkleber.",
-          "courseC_artist_loops3a_b": "Benutze das Drop-Down-Menü auf dem Block `Sticker zeichnen´, um den Fledermaus-Sticker zu finden."
+          "courseC_artist_loops3a_b": "Benutze das Drop-Down-Menü auf dem Block \\`Sticker zeichnen´, um den Fledermaus-Sticker zu finden."
         },
         "courseC_artist_loops3a_2019": {
           "courseC_artist_loops3a_a": "Du wirst nur einen Baustein innerhalb deiner Schleife hinzufügen wollen, nach dem ersten Aufkleber.",
@@ -3668,7 +3668,7 @@
           "courseC_artist_loops4a_a": "Verwende diesen Block, um vorwärts zu springen:\n\n<xml>\n<block type=\"jump_by_constant\">\n    <title name=\"DIR\">jumpForward</title>\n    <title name=\"VALUE\">100</title>\n  </block>\n</xml> \n\nVergiss nicht, dass du anpassen musst, wie weit du springst!"
         },
         "courseC_artist_loops4a_2018": {
-          "courseC_artist_loops4a_a": "Verwende diesen Block, um vorwärts zu springen:\n\n[blockly block][0] \n\nVergiss nicht, dass du anpassen musst, wie weit du springst!"
+          "courseC_artist_loops4a_a": "Verwende diesen Block, um vorwärts zu springen:\n\n<xml>\n<block type=\"jump_by_constant\">\n    <title name=\"DIR\">jumpForward</title>\n    <title name=\"VALUE\">100</title>\n  </block>\n</xml> \n\nVergiss nicht, dass du anpassen musst, wie weit du springst!"
         },
         "courseC_artist_loops4a_2019": {
           "courseC_artist_loops4a_a": "Verwende diesen Block, um vorwärts zu springen:\n\n<xml>\n<block type=\"jump_by_constant\">\n    <title name=\"DIR\">jumpForward</title>\n    <title name=\"VALUE\">???</title>\n  </block>\n</xml> \n\nVergiss nicht, dass du anpassen musst, wie weit du springst!",
@@ -3679,10 +3679,10 @@
           "courseC_artist_loops4a_b": "Dein Programm sollte so aussehen!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">???</title>\n        <statement name=\"DO\">\n          <block type=\"jump_to\">\n            <title name=\"VALUE\">13</title>\n            <next>\n              <block type=\"draw_turn_by_constant_dropdown\">\n                <title name=\"DIR\">???</title>\n                <title name=\"VALUE\" config=\"1,2,5,10,12,20,30,45,60,90,120,180\">???</title>\n                <next>\n                  <block type=\"sticker\">\n                    <title name=\"VALUE\">Cat</title>\n                    <next>\n                      <block type=\"jump_by_constant\">\n                        <title name=\"DIR\">jumpForward</title>\n                        <title name=\"VALUE\">???</title>\n                        <next>\n                          <block type=\"sticker\">\n                            <title name=\"VALUE\">Dog</title>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseC_artist_loops5a": {
-          "courseC_artist_loops5a_a": "Verwende die Drop-Down-Menüs auf den `Sticker zeichnen' Blöcken, um die Bilder zu ändern!"
+          "courseC_artist_loops5a_a": "Verwende die Drop-Down-Menüs auf den \\`Sticker zeichnen' Blöcken, um die Bilder zu ändern!"
         },
         "courseC_artist_loops5a_2018": {
-          "courseC_artist_loops5a_a": "Verwende die Drop-Down-Menüs auf den `Sticker zeichnen' Blöcken, um die Bilder zu ändern!"
+          "courseC_artist_loops5a_a": "Verwende die Drop-Down-Menüs auf den \\`Sticker zeichnen' Blöcken, um die Bilder zu ändern!"
         },
         "courseC_artist_loops5a_2019": {
           "courseC_artist_loops5a_a": "Verwende die Drop-Down-Menüs auf den \\`Sticker zeichnen' Blöcken, um die Bilder zu ändern!"
@@ -3695,7 +3695,7 @@
           "courseC_artist_loops5b_b": "Für ein Muster wie das oben musst du dich genauso weit zurück bewegen, wie du dich vorwärts bewegst."
         },
         "courseC_artist_loops5b_2018": {
-          "courseC_artist_loops5b_a": "Verwende diesen Block, um das Muster deiner Linien zu bestimmen:\n\n[blockly Block][0]",
+          "courseC_artist_loops5b_a": "Verwende diesen Block, um das Muster deiner Linien zu bestimmen:\n\n<xml>\n<block type=\"draw_line_style_pattern\">\n    <title name=\"VALUE\">DEFAULT</title>\n  </block>\n</xml>",
           "courseC_artist_loops5b_b": "Für ein Muster wie das oben musst du dich genauso weit zurück bewegen, wie du dich vorwärts bewegst."
         },
         "courseC_artist_loops5b_2019": {
@@ -3721,10 +3721,10 @@
           "courseC_artist_loops6a_a": "Um ein Muster wie das oben zu erstellen, springe zwischen den einzelnen Stickern um weniger als 75 Pixel vorwärts."
         },
         "courseC_artist_loops7a": {
-          "courseC_artist_loops7a_a": "Ein Kreis hat 360 Grad. Multipliziere die Gradzahl in deiner Drehung mit der Anzahl deiner Wiederholungen! Ergibt das 360? Prüfe die Drehbewegung, um zu sehen, ob es passt!\n"
+          "courseC_artist_loops7a_a": "Ein Kreis hat 360 Grad. Multipliziere die Gradzahl in deiner Drehung mit der Anzahl deiner Wiederholungen! Ergibt das 360? Prüfe die Drehbewegung, um zu sehen, ob es passt!"
         },
         "courseC_artist_loops7a_2018": {
-          "courseC_artist_loops7a_a": "Ein Kreis hat 360 Grad. Multipliziere die Gradzahl in deiner Drehung mit der Anzahl deiner Wiederholungen! Ergibt das 360? Prüfe die Drehbewegung, um zu sehen, ob es passt!\n"
+          "courseC_artist_loops7a_a": "Ein Kreis hat 360 Grad. Multipliziere die Gradzahl in deiner Drehung mit der Anzahl deiner Wiederholungen! Ergibt das 360? Prüfe die Drehbewegung, um zu sehen, ob es passt!"
         },
         "courseC_artist_loops7a_2019": {
           "courseC_artist_loops7a_a": "Ein Kreis hat 360 Grad. Multipliziere die Gradzahl in deiner Drehung mit der Anzahl deiner Wiederholungen! Ergibt das 360? Prüfe die Drehbewegung, um zu sehen, ob es passt!"
@@ -3749,12 +3749,12 @@
           "courseC_artist_loopsPre1a_b": "Deine `wiederholen`-Schleife sollte 3 Blöcke enthalten: `springe zu 200 um 200 nach unten`, `vorwärts bewegen um 50 Pixel` und `nach rechts drehen um 60 Grad`."
         },
         "courseC_artist_loopsPrePre1a": {
-          "courseC_artist_loopsPrePre1a_a": "Den ersten Baustein, den du brauchen wirst, ist:\n\n[][0]",
-          "courseC_artist_loopsPrePre1a_b": "Um 50 Pixel vorwärts zu gehen, benutze diesen Block:\n\n[][0]"
+          "courseC_artist_loopsPrePre1a_a": "Den ersten Baustein, den du brauchen wirst, ist:\n\n![](<https://images.code.org/60e3354a2e7dd37b64833eac1e8694be-image-1499710228373.08.14 AM.png>)",
+          "courseC_artist_loopsPrePre1a_b": "Um 50 Pixel vorwärts zu gehen, benutze diesen Block:\n\n![](<https://images.code.org/411fca4606a09641e6eedf5069ac4efa-image-1499710237929.08.27 AM.png>)"
         },
         "courseC_artist_loopsPrePre1a_2018": {
-          "courseC_artist_loopsPrePre1a_a": "Der erste Baustein, den du brauchst, ist:\n\n[blockly block][0]",
-          "courseC_artist_loopsPrePre1a_b": "Um 50 Pixel vorwärts zu bewegen, verwende diesen Baustein:\n\n[blockly block][0]"
+          "courseC_artist_loopsPrePre1a_a": "Der erste Baustein, den du brauchst, ist:\n\n<xml>  <block type=\"jump_to_xy\" id=\"callMe\">\n    <title name=\"XPOS\">200</title>\n    <title name=\"YPOS\">200</title>\n  </block></xml>",
+          "courseC_artist_loopsPrePre1a_b": "Um 50 Pixel vorwärts zu bewegen, verwende diesen Baustein:\n\n<xml><block type=\"draw_move_by_constant\">\n    <title name=\"DIR\">moveForward</title>\n    <title name=\"VALUE\">50</title>\n  </block></xml>"
         },
         "courseC_artist_loopsPrePre1a_2019": {
           "courseC_artist_loopsPrePre1a_a": "Der erste Baustein, den du brauchst, ist:\n\n<xml>  <block type=\"jump_to_xy\" id=\"callMe\">\n    <title name=\"XPOS\">200</title>\n    <title name=\"YPOS\">200</title>\n  </block></xml>",
@@ -3929,11 +3929,11 @@
           "courseC_maze_loops_challenge2_b": "Verwende Schleifen, damit du nicht zu viele ˋSammelnˋ Blöcke brauchst!"
         },
         "courseC_collector_prog1": {
-          "courseC_collector_prog1_a": "Wenn du auf einem Feld stehst, wo ein Schatz liegt, dann benutze einen [blockly block][0] Block um ihn aufzuheben.",
+          "courseC_collector_prog1_a": "Wenn du auf einem Feld stehst, wo ein Schatz liegt, dann benutze einen <xml><block type=\"collector_collect\"/></xml> Block um ihn aufzuheben.",
           "courseC_collector_prog1_b": "Die einfachste Lösung wäre, einmal vorwärts zu gehen und den Schatz dann aufzuheben."
         },
         "courseC_collector_prog1_2018": {
-          "courseC_collector_prog1_a": "Wenn du auf einem Feld stehst, wo ein Schatz liegt, dann benutze einen [blockly block][0] Block um ihn aufzuheben.",
+          "courseC_collector_prog1_a": "Wenn du auf einem Feld stehst, wo ein Schatz liegt, dann benutze einen <xml><block type=\"collector_collect\"/></xml> Block um ihn aufzuheben.",
           "courseC_collector_prog1_b": "Die einfachste Lösung wäre, einmal vorwärts zu gehen und den Schatz dann aufzuheben."
         },
         "courseC_collector_prog1_2019": {
@@ -3945,11 +3945,11 @@
           "courseC_collector_prog1_b": "Die einfachste Lösung wäre, einmal vorwärts zu gehen und den Schatz dann aufzuheben."
         },
         "courseC_collector_prog2": {
-          "courseC_collector_prog2_a": "Du kannst 4 [blockly block][0] Blöcke benutzen oder auch den [blockly block][1] Block um dein Programm kürzer zu machen.",
+          "courseC_collector_prog2_a": "Du kannst 4 <xml><block type=\"maze_move\"><title name=\"DIR\">moveForward</title></block></xml> Blöcke benutzen oder auch den <xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> Block um dein Programm kürzer zu machen.",
           "courseC_collector_prog2_b": "Hab keine Angst, einen Fehler zu machen! Versuche weitere Blöcke hinzuzufügen und den Code auszuführen. Manchmal hilft es zu sehen was passiert, auch wenn du der Meinung bist, dass das Rätsel noch nicht gelöst ist."
         },
         "courseC_collector_prog2_2018": {
-          "courseC_collector_prog2_a": "Du kannst 4 [blockly block][0] Blöcke benutzen oder auch den [blockly block][1] Block um dein Programm kürzer zu machen.",
+          "courseC_collector_prog2_a": "Du kannst 4 <xml><block type=\"maze_move\"><title name=\"DIR\">moveForward</title></block></xml> Blöcke benutzen oder auch den <xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> Block um dein Programm kürzer zu machen.",
           "courseC_collector_prog2_b": "Hab keine Angst, einen Fehler zu machen! Versuche weitere Blöcke hinzuzufügen und den Code auszuführen. Manchmal hilft es zu sehen was passiert, auch wenn du der Meinung bist, dass das Rätsel noch nicht gelöst ist."
         },
         "courseC_collector_prog2_2019": {
@@ -3961,12 +3961,12 @@
           "courseC_collector_prog2_b": "Hab keine Angst, einen Fehler zu machen! Versuche weitere Blöcke hinzuzufügen und den Code auszuführen. Manchmal hilft es zu sehen was passiert, auch wenn du der Meinung bist, dass das Rätsel noch nicht gelöst ist."
         },
         "courseC_collector_prog3": {
-          "courseC_collector_prog3_a": "Das Programm wird nur diejenigen Blöcke ausführen, welche mit dem [blockly block][0] Block verbunden sind.",
+          "courseC_collector_prog3_a": "Das Programm wird nur diejenigen Blöcke ausführen, welche mit dem <xml><block type=\"when_run\"/></xml> Block verbunden sind.",
           "courseC_collector_prog3_b": "Versuche die Schaltfläche \"Schritt\" zu verwenden, um deinen Code Zeile für Zeile auszuführen. Siehst du, wo etwas nicht funktioniert?",
           "courseC_collector_prog3_c": "Wenn du Probleme hast, diese Aufgabe zu lösen, schreibe alle Bewegungen auf ein Blatt Papier!"
         },
         "courseC_collector_prog3_2018": {
-          "courseC_collector_prog3_a": "Das Programm wird nur diejenigen Blöcke ausführen, welche mit dem [blockly block][0] Block verbunden sind.",
+          "courseC_collector_prog3_a": "Das Programm wird nur diejenigen Blöcke ausführen, welche mit dem <xml><block type=\"when_run\"/></xml> Block verbunden sind.",
           "courseC_collector_prog3_b": "Versuche die Schaltfläche \"Schritt\" zu verwenden, um deinen Code Zeile für Zeile auszuführen. Siehst du, wo etwas nicht funktioniert?",
           "courseC_collector_prog3_c": "Wenn du Probleme hast, diese Aufgabe zu lösen, schreibe alle Bewegungen auf ein Blatt Papier!"
         },
@@ -4089,16 +4089,16 @@
           "courseC_collector_prog_challenge1_b": "Hast du dich verlaufen? Versuche diesen Weg zu nehmen, um die Aufgabe zu lösen!"
         },
         "courseC_flappy_events1": {
-          "courseC_flappy_events1_a": "[][0]"
+          "courseC_flappy_events1_a": "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
         },
         "courseC_flappy_events1_2018": {
-          "courseC_flappy_events1_a": "[][0]"
+          "courseC_flappy_events1_a": "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
         },
         "courseC_flappy_events1_2019": {
-          "courseC_flappy_events1_a": "[][0]"
+          "courseC_flappy_events1_a": "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
         },
         "courseC_flappy_events1_2020": {
-          "courseC_flappy_events1_a": "[][0]"
+          "courseC_flappy_events1_a": "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
         },
         "courseC_flappy_events2": {
           "courseC_flappy_events2_a": "Der Block, den du hinzufügen musst, heißt `Stelle Geschwindigkeit ein`. ",
@@ -4201,20 +4201,20 @@
           "courseC_flappy_events9_a": "Verbinde den Block `Punktestand setzen 0` mit dem Ereignis `wenn ein Hindernis getroffen wird`, um dieses Level zu bestehen!"
         },
         "courseC_harvester_loops1": {
-          "courseC_harvester_loops1_a": "Sobald du bei einem Kürbis angelangt bist, benutze [blockly block][0], um ihn zu ernten.",
-          "courseC_harvester_loops1_b": "Du kannst eine Schleife mit dem [blockly block][0]-Baustein verwenden, um mehr als einen Kürbis aus einem Quadrat zu pflücken."
+          "courseC_harvester_loops1_a": "Sobald du bei einem Kürbis angelangt bist, benutze <xml><block type=\"harvester_pumpkin\"/></xml>, um ihn zu ernten.",
+          "courseC_harvester_loops1_b": "Du kannst eine Schleife mit dem <xml><block type=\"harvester_pumpkin\"/></xml>-Baustein verwenden, um mehr als einen Kürbis aus einem Quadrat zu pflücken."
         },
         "courseC_harvester_loops1_2018": {
-          "courseC_harvester_loops1_a": "Sobald du bei einem Kürbis angelangt bist, benutze [blockly block][0], um ihn zu ernten.",
-          "courseC_harvester_loops1_b": "Du kannst eine Schleife mit dem [blockly block][0]-Baustein verwenden, um mehr als einen Kürbis aus einem Quadrat zu pflücken."
+          "courseC_harvester_loops1_a": "Sobald du bei einem Kürbis angelangt bist, benutze <xml><block type=\"harvester_pumpkin\"/></xml>, um ihn zu ernten.",
+          "courseC_harvester_loops1_b": "Du kannst eine Schleife mit dem <xml><block type=\"harvester_pumpkin\"/></xml>-Baustein verwenden, um mehr als einen Kürbis aus einem Quadrat zu pflücken."
         },
         "courseC_harvester_loops1_2019": {
-          "courseC_harvester_loops1_a": "Sobald du bei einem Kürbis angelangt bist, benutze [blockly block][0], um ihn zu ernten.",
-          "courseC_harvester_loops1_b": "Du kannst eine Schleife mit dem [blockly block][0]-Baustein verwenden, um mehr als einen Kürbis aus einem Quadrat zu pflücken."
+          "courseC_harvester_loops1_a": "Sobald du bei einem Kürbis angelangt bist, benutze <xml><block type=\"harvester_pumpkin\"/></xml>, um ihn zu ernten.",
+          "courseC_harvester_loops1_b": "Du kannst eine Schleife mit dem <xml><block type=\"harvester_pumpkin\"/></xml>-Baustein verwenden, um mehr als einen Kürbis aus einem Quadrat zu pflücken."
         },
         "courseC_harvester_loops1_2020": {
-          "courseC_harvester_loops1_a": "Sobald du bei einem Kürbis angelangt bist, benutze [blockly block][0], um ihn zu ernten.",
-          "courseC_harvester_loops1_b": "Du kannst eine Schleife mit dem [blockly block][0]-Baustein verwenden, um mehr als einen Kürbis aus einem Quadrat zu pflücken."
+          "courseC_harvester_loops1_a": "Sobald du bei einem Kürbis angelangt bist, benutze <xml><block type=\"harvester_pumpkin\"/></xml>, um ihn zu ernten.",
+          "courseC_harvester_loops1_b": "Du kannst eine Schleife mit dem <xml><block type=\"harvester_pumpkin\"/></xml>-Baustein verwenden, um mehr als einen Kürbis aus einem Quadrat zu pflücken."
         },
         "courseC_harvester_loops2": {
           "courseC_harvester_loops2_a": "Wenn du nicht weiterkommst, versuche, die Schritte auf Papier zu schreiben und nach sich wiederholenden Mustern zu suchen.",
@@ -4343,46 +4343,46 @@
         "courseC_harvester_loops_challenge1a": {
           "courseC_harvester_loops_challenge1_a": "Das ist ohne Schleifen zu schwer!",
           "courseC_harvester_loops_challenge1_b": "Du kannst `bewege vorwärts` und `pflücke Mais` so oft du willst wiederholen. Biege anschließend an jeder Ecke rechts ab.",
-          "courseC_harvester_loops_challenge1_c": "Der beste Weg, den Mais in der Mitte zu ernten, ist die Verwendung eines `wiederhole` Bausteins innerhalb eines anderen `wiederhole` Bausteins.\n\n[blockly block][0]"
+          "courseC_harvester_loops_challenge1_c": "Der beste Weg, den Mais in der Mitte zu ernten, ist die Verwendung eines `wiederhole` Bausteins innerhalb eines anderen `wiederhole` Bausteins.\n\n<xml><block type=\"controls_repeat\">\n        <title name=\"TIMES\">2</title>\n        <statement name=\"DO\">\n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">4</title>\n            <statement name=\"DO\">\n              <block type=\"maze_move\">\n                <title name=\"DIR\">moveForward</title>\n                <next>\n                  <block type=\"harvester_corn\"/>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n            </next>\n          </block>\n        </statement>\n        </block></xml>"
         },
         "courseC_harvester_loops_challenge1a_2018": {
           "courseC_harvester_loops_challenge1_a": "Das ist ohne Schleifen zu schwer!",
           "courseC_harvester_loops_challenge1_b": "Du kannst `bewege vorwärts` und `pflücke Mais` so oft du willst wiederholen. Biege anschließend an jeder Ecke rechts ab.",
-          "courseC_harvester_loops_challenge1_c": "Nachdem du die ersten beiden Maiskolben gepflückt hast, kannst du eine verschachtelte Schleife verwenden, um die nächsten acht Maiskolben zu ernten.\n\n[blockly block][0]"
+          "courseC_harvester_loops_challenge1_c": "Nachdem du die ersten beiden Maiskolben gepflückt hast, kannst du eine verschachtelte Schleife verwenden, um die nächsten acht Maiskolben zu ernten.\n\n<xml><block type=\"controls_repeat\">\n        <title name=\"TIMES\">2</title>\n        <statement name=\"DO\">\n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">4</title>\n            <statement name=\"DO\">\n              <block type=\"maze_move\">\n                <title name=\"DIR\">moveForward</title>\n                <next>\n                  <block type=\"harvester_corn\"/>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n            </next>\n          </block>\n        </statement>\n        </block></xml>"
         },
         "courseC_harvester_loops_challenge1a_2019": {
           "courseC_harvester_loops_challenge1_a": "Das ist ohne Schleifen zu schwer!",
           "courseC_harvester_loops_challenge1_b": "Du kannst `bewege vorwärts` und `pflücke Mais` so oft du willst wiederholen. Biege anschließend an jeder Ecke rechts ab.",
-          "courseC_harvester_loops_challenge1_c": "Der beste Weg, den Mais in der Mitte zu ernten, ist die Verwendung eines `wiederhole` Bausteins innerhalb eines anderen `wiederhole` Bausteins.\n\n[blockly block][0]"
+          "courseC_harvester_loops_challenge1_c": "Der beste Weg, den Mais in der Mitte zu ernten, ist die Verwendung eines `wiederhole` Bausteins innerhalb eines anderen `wiederhole` Bausteins.\n\n<xml><block type=\"controls_repeat\">\n        <title name=\"TIMES\">2</title>\n        <statement name=\"DO\">\n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">4</title>\n            <statement name=\"DO\">\n              <block type=\"maze_move\">\n                <title name=\"DIR\">moveForward</title>\n                <next>\n                  <block type=\"harvester_corn\"/>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n            </next>\n          </block>\n        </statement>\n        </block></xml>"
         },
         "courseC_harvester_loops_challenge1a_2020": {
           "courseC_harvester_loops_challenge1_a": "Das ist ohne Schleifen zu schwer!",
           "courseC_harvester_loops_challenge1_b": "Du kannst `bewege vorwärts` und `pflücke Mais` so oft du willst wiederholen. Biege anschließend an jeder Ecke rechts ab.",
-          "courseC_harvester_loops_challenge1_c": "Der beste Weg, den Mais in der Mitte zu ernten, ist die Verwendung eines `wiederhole` Bausteins innerhalb eines anderen `wiederhole` Bausteins.\n\n[blockly block][0]"
+          "courseC_harvester_loops_challenge1_c": "Der beste Weg, den Mais in der Mitte zu ernten, ist die Verwendung eines `wiederhole` Bausteins innerhalb eines anderen `wiederhole` Bausteins.\n\n<xml><block type=\"controls_repeat\">\n        <title name=\"TIMES\">2</title>\n        <statement name=\"DO\">\n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">4</title>\n            <statement name=\"DO\">\n              <block type=\"maze_move\">\n                <title name=\"DIR\">moveForward</title>\n                <next>\n                  <block type=\"harvester_corn\"/>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n            </next>\n          </block>\n        </statement>\n        </block></xml>"
         },
         "courseC_harvester_loops_challenge2": {
           "courseC_harvester_loops_challenge2_a": "Ein Weg, dies zu lösen, sieht wie ein Zickzack aus. Ein anderer Weg sieht wie eine Spirale aus! Es gibt viele verschiedene Lösungen für ein Rätsel wie dieses. Sei hartnäckig!",
           "courseC_harvester_loops_challenge2_b": "Du kannst `bewege vorwärts` und `pflücke Salat` so oft du willst wiederholen. Biege anschließend an jeder Ecke ab.",
-          "courseC_harvester_loops_challenge2_c": "Dieses Zickzackmuster kann zweimal wiederholt werden, um das Puzzle mit nur 20 Bausteinen zu meistern!\n\n[][0]",
-          "courseC_harvester_loops_challenge2_d": "Dieses Spiralmuster kann mit nur 18 Bausteinen gemeistert werden!\n\n[][0]"
+          "courseC_harvester_loops_challenge2_c": "Dieses Zickzackmuster kann zweimal wiederholt werden, um das Puzzle mit nur 20 Bausteinen zu meistern!\n\n![](<https://images.code.org/26cfaf6fe4a275e266b51e9ef3711171-image-1493502306380.18.52 PM copy.png>)",
+          "courseC_harvester_loops_challenge2_d": "Dieses Spiralmuster kann mit nur 18 Bausteinen gemeistert werden!\n\n![](<https://images.code.org/0bfc0a0ed6783fae908368a6e6d12c02-image-1493501358990.18.52 PM.png>)"
         },
         "courseC_harvester_loops_challenge2_2018": {
           "courseC_harvester_loops_challenge2_a": "Ein Weg, dies zu lösen, sieht wie ein Zickzack aus. Ein anderer Weg sieht wie eine Spirale aus! Es gibt viele verschiedene Lösungen für ein Rätsel wie dieses. Sei hartnäckig!",
           "courseC_harvester_loops_challenge2_b": "Du kannst `bewege vorwärts` und `pflücke Salat` so oft du willst wiederholen. Biege anschließend an jeder Ecke ab.",
-          "courseC_harvester_loops_challenge2_c": "Dieses Zickzackmuster kann zweimal wiederholt werden, um das Puzzle mit nur 20 Bausteinen zu meistern!\n\n[][0]",
-          "courseC_harvester_loops_challenge2_d": "Dieses Spiralmuster kann mit nur 18 Bausteinen gemeistert werden!\n\n[][0]"
+          "courseC_harvester_loops_challenge2_c": "Dieses Zickzackmuster kann zweimal wiederholt werden, um das Puzzle mit nur 20 Bausteinen zu meistern!\n\n![](<https://images.code.org/26cfaf6fe4a275e266b51e9ef3711171-image-1493502306380.18.52 PM copy.png>)",
+          "courseC_harvester_loops_challenge2_d": "Dieses Spiralmuster kann mit nur 18 Bausteinen gemeistert werden!\n\n![](<https://images.code.org/0bfc0a0ed6783fae908368a6e6d12c02-image-1493501358990.18.52 PM.png>)"
         },
         "courseC_harvester_loops_challenge2_2019": {
           "courseC_harvester_loops_challenge2_a": "Ein Weg, dies zu lösen, sieht wie ein Zickzack aus. Ein anderer Weg sieht wie eine Spirale aus! Es gibt viele verschiedene Lösungen für ein Rätsel wie dieses. Sei hartnäckig!",
           "courseC_harvester_loops_challenge2_b": "Du kannst `bewege vorwärts` und `pflücke Salat` so oft du willst wiederholen. Biege anschließend an jeder Ecke ab.",
-          "courseC_harvester_loops_challenge2_c": "Dieses Zickzackmuster kann zweimal wiederholt werden, um das Puzzle mit nur 20 Bausteinen zu meistern!\n\n[][0]",
-          "courseC_harvester_loops_challenge2_d": "Dieses Spiralmuster kann mit nur 18 Bausteinen gemeistert werden!\n\n[][0]"
+          "courseC_harvester_loops_challenge2_c": "Dieses Zickzackmuster kann zweimal wiederholt werden, um das Puzzle mit nur 20 Bausteinen zu meistern!\n\n![](<https://images.code.org/26cfaf6fe4a275e266b51e9ef3711171-image-1493502306380.18.52 PM copy.png>)",
+          "courseC_harvester_loops_challenge2_d": "Dieses Spiralmuster kann mit nur 18 Bausteinen gemeistert werden!\n\n![](<https://images.code.org/0bfc0a0ed6783fae908368a6e6d12c02-image-1493501358990.18.52 PM.png>)"
         },
         "courseC_harvester_loops_challenge2_2020": {
           "courseC_harvester_loops_challenge2_a": "Ein Weg, dies zu lösen, sieht wie ein Zickzack aus. Ein anderer Weg sieht wie eine Spirale aus! Es gibt viele verschiedene Lösungen für ein Rätsel wie dieses. Sei hartnäckig!",
           "courseC_harvester_loops_challenge2_b": "Du kannst `bewege vorwärts` und `pflücke Salat` so oft du willst wiederholen. Biege anschließend an jeder Ecke ab.",
-          "courseC_harvester_loops_challenge2_c": "Dieses Zickzackmuster kann zweimal wiederholt werden, um das Puzzle mit nur 20 Bausteinen zu meistern!\n\n[][0]",
-          "courseC_harvester_loops_challenge2_d": "Dieses Spiralmuster kann mit nur 18 Bausteinen gemeistert werden!\n\n[][0]"
+          "courseC_harvester_loops_challenge2_c": "Dieses Zickzackmuster kann zweimal wiederholt werden, um das Puzzle mit nur 20 Bausteinen zu meistern!\n\n![](<https://images.code.org/26cfaf6fe4a275e266b51e9ef3711171-image-1493502306380.18.52 PM copy.png>)",
+          "courseC_harvester_loops_challenge2_d": "Dieses Spiralmuster kann mit nur 18 Bausteinen gemeistert werden!\n\n![](<https://images.code.org/0bfc0a0ed6783fae908368a6e6d12c02-image-1493501358990.18.52 PM.png>)"
         },
         "courseC_maze_debugging1": {
           "courseC_maze_debugging1_a": "-   Funktioniert alles nach dem ersten Schritt?\n-   Funktioniert nach dem zweiten Schritt noch alles?\n-   Wo läuft es schief?",
@@ -4533,7 +4533,7 @@
         },
         "courseC_maze_debugging_challenge2_2018": {
           "courseC_maze_debugging_challenge2_b": "Wenn du nicht weiterkommst, solltest du versuchen, den Fehler im Code zu beheben. An welcher Stell läuft er nicht richtig?",
-          "courseC_maze_debugging_challenge2_c": "Es gibt zwei verschiedene Wege, denen du folgen kannst, indem du dich einfach vorwärts bewegst und viermal abbiegst. Wenn du eine Möglichkeit findest, eine Schleife zu benutzen, gibt es sogar noch mehr Möglichkeiten! \n\n[][0]"
+          "courseC_maze_debugging_challenge2_c": "Es gibt zwei verschiedene Wege, denen du folgen kannst, indem du dich einfach vorwärts bewegst und viermal abbiegst. Wenn du eine Möglichkeit findest, eine Schleife zu benutzen, gibt es sogar noch mehr Möglichkeiten! \n\n![](<https://images.code.org/8a4665671cda35fea1f629a5bcc39e26-image-1493502743154.48.05 PM.png>)"
         },
         "courseC_maze_debugging_challenge2_2019": {
           "courseC_maze_debugging_challenge2_b": "Wenn du nicht weiterkommst, solltest du versuchen, den Fehler im Code zu beheben. An welcher Stell läuft er nicht richtig?",
@@ -4572,11 +4572,11 @@
           "courseC_maze_programming1_0": "Überprüfe, ob alle Blöcke richtig eingerastet sind, und klicke dann nochmals auf 'Ausführen'!"
         },
         "courseC_maze_programming2": {
-          "courseC_maze_programming2_a": "Um einen [blockly block][0] Block zu verwenden, ziehe ihn aus der Werkzeugkiste und lass ihn beim [blockly block][1] Block einrasten.",
+          "courseC_maze_programming2_a": "Um einen <xml><block type=\"maze_moveForward\"/></xml> Block zu verwenden, ziehe ihn aus der Werkzeugkiste und lass ihn beim <xml><block type=\"when_run\"/></xml> Block einrasten.",
           "courseC_maze_programming2_b": "Überprüfe, ob alle Blöcke richtig eingerastet sind, und klicke dann nochmals auf 'Ausführen'!"
         },
         "courseC_maze_programming2_2018": {
-          "courseC_maze_programming2_a": "Um einen [blockly block][0] Block zu verwenden, ziehe ihn aus der Werkzeugkiste und lass ihn beim [blockly block][1] Block einrasten.",
+          "courseC_maze_programming2_a": "Um einen <xml><block type=\"maze_moveForward\"/></xml> Block zu verwenden, ziehe ihn aus der Werkzeugkiste und lass ihn beim <xml><block type=\"when_run\"/></xml> Block einrasten.",
           "courseC_maze_programming2_b": "Überprüfe, ob alle Blöcke richtig eingerastet sind, und klicke dann nochmals auf 'Ausführen'!"
         },
         "courseC_maze_programming2_2019": {
@@ -4589,11 +4589,11 @@
         },
         "courseC_maze_programming3": {
           "courseC_maze_programming3_a": "Führe zuerst den Code aus, um zu sehen, was falsch läuft!",
-          "courseC_maze_programming3_b": "[][0]\n\nUm einen Block aus der Mitte deines Codes zu löschen, ziehe alle Blöcke darunter in einen anderen Teil des Arbeitsbereiches!\n\nZiehe nun den Block, den du löschen möchtest, zurück in die Werkzeugkiste!\n\nZuletzt setzt du die anderen Blöcke wieder dorthin wo sie hingehören."
+          "courseC_maze_programming3_b": "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nUm einen Block aus der Mitte deines Codes zu löschen, ziehe alle Blöcke darunter in einen anderen Teil des Arbeitsbereiches!\n\nZiehe nun den Block, den du löschen möchtest, zurück in die Werkzeugkiste!\n\nZuletzt setzt du die anderen Blöcke wieder dorthin wo sie hingehören."
         },
         "courseC_maze_programming3_2018": {
           "courseC_maze_programming3_a": "Führe zuerst den Code aus, um zu sehen, was falsch läuft!",
-          "courseC_maze_programming3_b": "[][0]\n\nUm einen Block aus der Mitte deines Codes zu löschen, ziehe alle Blöcke darunter in einen anderen Teil des Arbeitsbereiches!\n\nZiehe nun den Block, den du löschen möchtest, zurück in die Werkzeugkiste!\n\nZuletzt setzt du die anderen Blöcke wieder dorthin wo sie hingehören."
+          "courseC_maze_programming3_b": "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nUm einen Block aus der Mitte deines Codes zu löschen, ziehe alle Blöcke darunter in einen anderen Teil des Arbeitsbereiches!\n\nZiehe nun den Block, den du löschen möchtest, zurück in die Werkzeugkiste!\n\nZuletzt setzt du die anderen Blöcke wieder dorthin wo sie hingehören."
         },
         "courseC_maze_programming3_2019": {
           "courseC_maze_programming3_a": "Führe zuerst den Code aus, um zu sehen, was falsch läuft!",
@@ -4605,11 +4605,11 @@
         },
         "courseC_maze_programming4": {
           "courseC_maze_programming4_a": "Denk daran, bei einer Drehung drehst du dich vom Standpunkt des _Vogels_ aus!  Wenn du nach rechts drehst, wird der Vogel nach unten zeigen.",
-          "courseC_maze_programming4_b": "Um dem Weg zu folgen:\n\n- vorwärts bewegen\n- in eine Richtung drehen\n- vorwärts bewegen\n- in die andere Richtung drehen\n- vorwärts bewegen"
+          "courseC_maze_programming4_b": "Um dem Weg zu folgen:\n\n-   vorwärts bewegen\n-   in eine Richtung drehen\n-   vorwärts bewegen\n-   in die andere Richtung drehen\n-   vorwärts bewegen"
         },
         "courseC_maze_programming4_2018": {
           "courseC_maze_programming4_a": "Denk daran, bei einer Drehung drehst du dich vom Standpunkt des _Vogels_ aus!  Wenn du nach rechts drehst, wird der Vogel nach unten zeigen.",
-          "courseC_maze_programming4_b": "Um dem Weg zu folgen:\n\n- vorwärts bewegen\n- in eine Richtung drehen\n- vorwärts bewegen\n- in die andere Richtung drehen\n- vorwärts bewegen"
+          "courseC_maze_programming4_b": "Um dem Weg zu folgen:\n\n-   vorwärts bewegen\n-   in eine Richtung drehen\n-   vorwärts bewegen\n-   in die andere Richtung drehen\n-   vorwärts bewegen"
         },
         "courseC_maze_programming4_2019": {
           "courseC_maze_programming4_a": "Denk daran, bei einer Drehung drehst du dich vom Standpunkt des _Vogels_ aus!  Wenn du nach rechts drehst, wird der Vogel nach unten zeigen.",
@@ -4709,11 +4709,11 @@
         },
         "courseC_maze_programming_challenge2": {
           "courseC_maze_programming_challenge2_a": "_\"Pass sehr gut auf, dass ich mich in die richtige Richtung drehe, wenn du mich rückwärts laufen lässt!\"_",
-          "courseC_maze_programming_challenge2_b": "Die kürzeste Lösung braucht nur 5 Blöcke, aber dieser Block wird benötigt:\n\n[blockly block][0]"
+          "courseC_maze_programming_challenge2_b": "Die kürzeste Lösung braucht nur 5 Blöcke, aber dieser Block wird benötigt:\n\n<xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
         },
         "courseC_maze_programming_challenge2_2018": {
           "courseC_maze_programming_challenge2_a": "_\"Pass sehr gut auf, dass ich mich in die richtige Richtung drehe, wenn du mich rückwärts laufen lässt!\"_",
-          "courseC_maze_programming_challenge2_b": "Die kürzeste Lösung braucht nur 5 Blöcke, aber dieser Block wird benötigt:\n\n[blockly block][0]"
+          "courseC_maze_programming_challenge2_b": "Die kürzeste Lösung braucht nur 5 Blöcke, aber dieser Block wird benötigt:\n\n<xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
         },
         "courseC_maze_programming_challenge2_2019": {
           "courseC_maze_programming_challenge2_a": "_\"Pass sehr gut auf, dass ich mich in die richtige Richtung drehe, wenn du mich rückwärts laufen lässt!\"_",
@@ -4868,12 +4868,12 @@
         "courseC_starWars_loops8": {
           "course_starWars_loops8_a": "Versuche, das Problem in kleine Teile zu zerlegen. Lass dir Zeit. Du musst die Aufgabe nicht gleich beim ersten Versuch lösen!",
           "course_starWars_loops8_b": "Denke bei der ersten Hälfte der Aufgabe an die Treppenstufen Aufgabe! Wie hast du das vorhin gelöst?",
-          "course_starWars_loops8_c": "Schau dir diesen Pfad an.\n\n[][0]"
+          "course_starWars_loops8_c": "Schau dir diesen Pfad an.\n\n![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)"
         },
         "courseC_starWars_loops8_2018": {
           "course_starWars_loops8_a": "Versuche, das Problem in kleine Teile zu zerlegen. Lass dir Zeit. Du musst die Aufgabe nicht gleich beim ersten Versuch lösen!",
           "course_starWars_loops8_b": "Denke bei der ersten Hälfte der Aufgabe an die Treppenstufen Aufgabe! Wie hast du das vorhin gelöst?",
-          "course_starWars_loops8_c": "Schau dir diesen Pfad an.\n\n[][0]"
+          "course_starWars_loops8_c": "Schau dir diesen Pfad an.\n\n![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)"
         },
         "courseC_starWars_loops8_2019": {
           "course_starWars_loops8_a": "Versuche, das Problem in kleine Teile zu zerlegen. Lass dir Zeit. Du musst die Aufgabe nicht gleich beim ersten Versuch lösen!",
@@ -4888,15 +4888,15 @@
         "courseC_starWars_loops8_copy": {
           "course_starWars_loops8_a": "Versuche, das Problem in kleine Teile zu zerlegen. Lass dir Zeit. Du musst die Aufgabe nicht gleich beim ersten Versuch lösen!",
           "course_starWars_loops8_b": "Denke bei der ersten Hälfte der Aufgabe an die Treppenstufen Aufgabe! Wie hast du das vorhin gelöst?",
-          "course_starWars_loops8_c": "Schau dir diesen Pfad an.\n\n[][0]"
+          "course_starWars_loops8_c": "Schau dir diesen Pfad an.\n\n![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)"
         },
         "courseC_starWars_loops9": {
           "course_starWars_loops9_b": "Du kannst mehr als einen Block in eine 'wiederholen' Schleife setzen.",
-          "course_starWars_loops9_c": "Du musst dich nicht nach links drehen, um dieses Rätsel zu lösen. Alle deine Drehungen können nach rechts gehen.\n\n[][0]"
+          "course_starWars_loops9_c": "Du musst dich nicht nach links drehen, um dieses Rätsel zu lösen. Alle deine Drehungen können nach rechts gehen.\n\n![](https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png)"
         },
         "courseC_starWars_loops9_2018": {
           "course_starWars_loops9_b": "Du kannst mehr als einen Block in eine 'wiederholen' Schleife setzen.",
-          "course_starWars_loops9_c": "Du musst dich nicht nach links drehen, um dieses Rätsel zu lösen. Alle deine Drehungen können nach rechts gehen.\n\n[][0]"
+          "course_starWars_loops9_c": "Du musst dich nicht nach links drehen, um dieses Rätsel zu lösen. Alle deine Drehungen können nach rechts gehen.\n\n![](https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png)"
         },
         "courseC_starWars_loops9_2019": {
           "course_starWars_loops9_b": "Du kannst mehr als einen Block in eine 'wiederholen' Schleife setzen.",
@@ -4952,12 +4952,12 @@
         "courseD_artist_binary1_2019": {
           "courseD_artist_binary1_a": "Ersetze das \"????\" im Textbaustein durch das gewünschte Binärbild aus Nullen und Einsen.",
           "courseD_artist_binary1_b": "Der Künstler wird für jede 1 eine weiße Fläche und für jede 0 eine schwarze Fläche zeichnen.",
-          "courseD_artist_binary1_c": "So kannst deinen Binärcode eingeben: \n\n[][0]"
+          "courseD_artist_binary1_c": "So kannst deinen Binärcode eingeben: \n\n![](https://images.code.org/ec0f974e32c4323fc61cb49b48b8f1c0-image-1500334311345.2_hint.gif)"
         },
         "courseD_artist_binary1_2020": {
           "courseD_artist_binary1_a": "Ersetze das \"????\" im Textbaustein durch das gewünschte Binärbild aus Nullen und Einsen.",
           "courseD_artist_binary1_b": "Der Künstler wird für jede 1 eine weiße Fläche und für jede 0 eine schwarze Fläche zeichnen.",
-          "courseD_artist_binary1_c": "So kannst deinen Binärcode eingeben: \n\n[][0]"
+          "courseD_artist_binary1_c": "So kannst deinen Binärcode eingeben: \n\n![](https://images.code.org/ec0f974e32c4323fc61cb49b48b8f1c0-image-1500334311345.2_hint.gif)"
         },
         "courseD_artist_binary2": {
           "courseD_artist_binary2_a": "Klicke einfach auf `Ausführen`, um den Ablauf dieses Programms zu sehen!"
@@ -5484,60 +5484,60 @@
           "courseD_artist_binary8_c": "Hab keine Angst, einen Fehler zu machen! Versuche, weitere Bausteine hinzuzufügen und den Code auszuführen, auch wenn du die Aufgabe noch nicht gelöst hast."
         },
         "courseD_bee_conditionals1_predict1": {
-          "courseD_bee_conditionals1_a": "Du musst mit einem \\`wenn‘-Baustein prüfen, ob sich unter der Wolke eine Blüte befindet, bevor du versuchst, Nektar zu holen."
+          "courseD_bee_conditionals1_a": "Du musst mit einem `wenn`-Baustein prüfen, ob sich unter der Wolke eine Blüte befindet, bevor du versuchst, Nektar zu holen."
         },
         "courseD_bee_conditionals1_predict1_2018": {
-          "courseD_bee_conditionals1_a": "Du musst mit einem \\`wenn‘-Baustein prüfen, ob sich unter der Wolke eine Blüte befindet, bevor du versuchst, Nektar zu holen."
+          "courseD_bee_conditionals1_a": "Du musst mit einem `wenn`-Baustein prüfen, ob sich unter der Wolke eine Blüte befindet, bevor du versuchst, Nektar zu holen."
         },
         "courseD_bee_conditionals1_predict1_2019": {
-          "courseD_bee_conditionals1_a": "Du musst mit einem \\`wenn‘-Baustein prüfen, ob sich unter der Wolke eine Blüte befindet, bevor du versuchst, Nektar zu holen."
+          "courseD_bee_conditionals1_a": "Du musst mit einem `wenn`-Baustein prüfen, ob sich unter der Wolke eine Blüte befindet, bevor du versuchst, Nektar zu holen."
         },
         "courseD_bee_conditionals1_predict1_2020": {
-          "courseD_bee_conditionals1_a": "Du musst mit einem \\`wenn‘-Baustein prüfen, ob sich unter der Wolke eine Blüte befindet, bevor du versuchst, Nektar zu holen."
+          "courseD_bee_conditionals1_a": "Du musst mit einem `wenn`-Baustein prüfen, ob sich unter der Wolke eine Blüte befindet, bevor du versuchst, Nektar zu holen."
         },
         "courseD_bee_conditionals1_predict1_copy": {
-          "courseD_bee_conditionals1_a": "Du musst mit einem `wenn‘-Baustein prüfen, ob sich unter der Wolke eine Blüte befindet, bevor du versuchst, Nektar zu holen."
+          "courseD_bee_conditionals1_a": "Du musst mit einem `wenn`-Baustein prüfen, ob sich unter der Wolke eine Blüte befindet, bevor du versuchst, Nektar zu holen."
         },
         "courseD_bee_conditionals2": {
           "courseD_bee_conditionals2_hintVid1": "Brauchst du Hilfe? Sieh dir das Video an!",
-          "courseD_bee_conditionals2_a": "Manchmal ist eine Blüte da, manchmal nicht. Wenn du willst, dass dein Code in beiden Fällen läuft, verwende auf jeden Fall eine \\`if‘-Anweisung.",
-          "courseD_bee_conditionals2_b": "Du kannst eine 'wiederholen`-Schleife` oder einen `während ein Weg vor dir liegt` verwenden, um dich durch dieses Labyrinth zu bewegen.",
-          "courseD_bee_conditionals2_c": "Du musst nicht nach Honigwaben suchen, unter den Wolken befinden sich nur Blüten oder leere Felder.",
+          "courseD_bee_conditionals2_a": "Manchmal ist eine Blüte da, manchmal nicht. Wenn du willst, dass dein Code in beiden Fällen läuft, verwende auf jeden Fall eine `wenn`-Anweisung.wenn",
+          "courseD_bee_conditionals2_b": "Du kannst eine `wiederhole`-Schleife`oder eine`solange ein Weg vor dir liegt\\` verwenden, um dich durch dieses Labyrinth zu bewegen.",
+          "courseD_bee_conditionals2_c": "Du brauchst nicht nach Honigwaben suchen. Unter den Wolken befinden sich nur Blüten oder leere Felder.",
           "courseD_bee_conditionals2_hintVid2": "In diesem Video findest du Hilfe zur Lösung dieser Aufgabe."
         },
         "courseD_bee_conditionals2_2018": {
           "courseD_bee_conditionals2_hintVid1": "Brauchst du Hilfe? Sieh dir das Video an!",
           "courseD_bee_conditionals2_a": "Manchmal ist eine Blüte da, manchmal nicht. Wenn du willst, dass dein Code in beiden Fällen läuft, verwende auf jeden Fall eine \\`if‘-Anweisung.",
-          "courseD_bee_conditionals2_b": "Du kannst eine 'wiederholen`-Schleife` oder einen `während ein Weg vor dir liegt` verwenden, um dich durch dieses Labyrinth zu bewegen.",
-          "courseD_bee_conditionals2_c": "Du musst nicht nach Honigwaben suchen, unter den Wolken befinden sich nur Blüten oder leere Felder.",
+          "courseD_bee_conditionals2_b": "Du kannst eine `wiederhole`-Schleife`oder eine`solange ein Weg vor dir liegt\\` verwenden, um dich durch dieses Labyrinth zu bewegen.",
+          "courseD_bee_conditionals2_c": "Du brauchst nicht nach Honigwaben suchen. Unter den Wolken befinden sich nur Blüten oder leere Felder.",
           "courseD_bee_conditionals2_hintVid2": "In diesem Video findest du Hilfe zur Lösung dieser Aufgabe."
         },
         "courseD_bee_conditionals2_2019": {
           "courseD_bee_conditionals2_a": "Manchmal ist eine Blüte da, manchmal nicht. Wenn du willst, dass dein Code in beiden Fällen läuft, verwende auf jeden Fall eine \\`if‘-Anweisung.",
-          "courseD_bee_conditionals2_c": "Du musst nicht nach Honigwaben suchen, unter den Wolken befinden sich nur Blüten oder leere Felder."
+          "courseD_bee_conditionals2_c": "Du brauchst nicht nach Honigwaben suchen. Unter den Wolken befinden sich nur Blüten oder leere Felder."
         },
         "courseD_bee_conditionals2_2020": {
           "courseD_bee_conditionals2_a": "Manchmal ist eine Blüte da, manchmal nicht. Wenn du willst, dass dein Code in beiden Fällen läuft, verwende auf jeden Fall eine \\`if‘-Anweisung.",
-          "courseD_bee_conditionals2_c": "Du musst nicht nach Honigwaben suchen, unter den Wolken befinden sich nur Blüten oder leere Felder."
+          "courseD_bee_conditionals2_c": "Du brauchst nicht nach Honigwaben suchen. Unter den Wolken befinden sich nur Blüten oder leere Felder."
         },
         "courseD_bee_conditionals2_copy": {
           "courseD_bee_conditionals2_hintVid1": "Brauchst du Hilfe? Sieh dir das Video an!",
-          "courseD_bee_conditionals2_a": "Manchmal ist eine Blüte da, manchmal nicht. Wenn du willst, dass dein Code in beiden Fällen läuft, verwende auf jeden Fall eine `if‘-Anweisung.",
-          "courseD_bee_conditionals2_b": "Du kannst eine 'wiederholen`-Schleife` oder einen `während ein Weg vor dir liegt` verwenden, um dich durch dieses Labyrinth zu bewegen.",
-          "courseD_bee_conditionals2_c": "Du musst nicht nach Honigwaben suchen, unter den Wolken befinden sich nur Blüten oder leere Felder.",
+          "courseD_bee_conditionals2_a": "Manchmal ist eine Blüte da, manchmal nicht. Wenn du willst, dass dein Code in beiden Fällen läuft, verwende auf jeden Fall eine \\`if‘-Anweisung.",
+          "courseD_bee_conditionals2_b": "Du kannst eine `wiederhole`-Schleife`oder eine`solange ein Weg vor dir liegt\\` verwenden, um dich durch dieses Labyrinth zu bewegen.",
+          "courseD_bee_conditionals2_c": "Du brauchst nicht nach Honigwaben suchen. Unter den Wolken befinden sich nur Blüten oder leere Felder.",
           "courseD_bee_conditionals2_hintVid2": "In diesem Video findest du Hilfe zur Lösung dieser Aufgabe."
         },
         "courseD_bee_conditionals3": {
           "courseD_bee_conditionals3_hintVid1": "Brauchst du Hilfe? Sieh dir das Video an!",
           "courseD_bee_conditionals3_a": "Achte darauf, dass du mit einer \"if\"-Anweisung jedes Feld daraufhin überprüfst, ob es entweder eine Blüte oder nichts enthält.",
-          "courseD_bee_conditionals3_b": "Du kannst eine 'wiederholen`- oder eine`während‘-Schleife verwenden, damit die Biene in Bewegung bleibt. Verwende die Schleife, die dir am besten gefällt!",
+          "courseD_bee_conditionals3_b": "Du kannst eine `wiederhole`- oder eine `solange`-Schleife verwenden, damit die Biene in Bewegung bleibt. Verwende die Schleife, die dir am besten gefällt!",
           "courseD_bee_conditionals3_c": "Hab keine Angst, einen Fehler zu machen! Versuche weitere Blöcke hinzuzufügen und den Code auszuführen, auch wenn du der Meinung bist, dass du das Rätsel noch nicht gelöst hast.",
           "courseD_bee_conditionals3_hintVid2": "In diesem Video findest du Hilfe zur Lösung dieser Aufgabe."
         },
         "courseD_bee_conditionals3_2018": {
           "courseD_bee_conditionals3_hintVid1": "Brauchst du Hilfe? Sieh dir das Video an!",
           "courseD_bee_conditionals3_a": "Achte darauf, dass du mit einer \"if\"-Anweisung jedes Feld daraufhin überprüfst, ob es entweder eine Blüte oder nichts enthält.",
-          "courseD_bee_conditionals3_b": "Du kannst eine 'wiederholen`- oder eine`während‘-Schleife verwenden, damit die Biene in Bewegung bleibt. Verwende die Schleife, die dir am besten gefällt!",
+          "courseD_bee_conditionals3_b": "Du kannst eine `wiederhole`- oder eine `solange`-Schleife verwenden, damit die Biene in Bewegung bleibt. Verwende die Schleife, die dir am besten gefällt!",
           "courseD_bee_conditionals3_c": "Hab keine Angst, einen Fehler zu machen! Versuche weitere Blöcke hinzuzufügen und den Code auszuführen, auch wenn du der Meinung bist, dass du das Rätsel noch nicht gelöst hast.",
           "courseD_bee_conditionals3_hintVid2": "In diesem Video findest du Hilfe zur Lösung dieser Aufgabe."
         },
@@ -5552,14 +5552,14 @@
         "courseD_bee_conditionals3_copy": {
           "courseD_bee_conditionals3_hintVid1": "Brauchst du Hilfe? Sieh dir das Video an!",
           "courseD_bee_conditionals3_a": "Achte darauf, dass du mit einer \"if\"-Anweisung jedes Feld daraufhin überprüfst, ob es entweder eine Blüte oder nichts enthält.",
-          "courseD_bee_conditionals3_b": "Du kannst eine 'wiederholen`- oder eine `während‘-Schleife verwenden, damit die Biene in Bewegung bleibt. Verwende die Schleife, die dir am besten gefällt!\n",
+          "courseD_bee_conditionals3_b": "Du kannst eine `wiederhole`- oder eine `solange`-Schleife verwenden, damit die Biene in Bewegung bleibt. Verwende die Schleife, die dir am besten gefällt!",
           "courseD_bee_conditionals3_c": "Hab keine Angst, einen Fehler zu machen! Versuche weitere Blöcke hinzuzufügen und den Code auszuführen, auch wenn du der Meinung bist, dass du das Rätsel noch nicht gelöst hast.",
           "courseD_bee_conditionals3_hintVid2": "In diesem Video findest du Hilfe zur Lösung dieser Aufgabe."
         },
         "courseD_bee_conditionals4": {
           "courseD_bee_conditionals4_hintVid1": "Brauchst du Hilfe? Sieh dir das Video an!",
-          "courseD_bee_conditionals4_a": "Du kannst jeden Platz immer noch so behandeln, als ob eine Wolke über ihm liegt, obwohl du den ganzen Weg übersehen kannst.",
-          "courseD_bee_conditionals4_b": "Verwende eine `if`-Anweisung innerhalb deiner Schleife, um jedes Platz auf Nektar zu überprüfen.",
+          "courseD_bee_conditionals4_a": "Du kannst jeden Platz immer noch so behandeln, als ob eine Wolke über ihm liegt, obwohl du den ganzen Weg sehen kannst.",
+          "courseD_bee_conditionals4_b": "Verwende eine `wenn`-Anweisung innerhalb deiner Schleife, um jedes Feld auf Nektar zu überprüfen.",
           "courseD_bee_conditionals4_c": "Mit dem <xml><block type=\"maze_untilBlocked\"/></xml> Baustein solltest du dich vorwärts bewegen und nach einer Blüte suchen. Wenn dort eine Blüte ist - was soll die Biene tun?",
           "courseD_bee_conditionals4_hintVid2": "In diesem Video findest du Hilfe zur Lösung dieser Aufgabe."
         },
@@ -5582,14 +5582,14 @@
           "courseD_bee_conditionals4_hintVid1": "Brauchst du Hilfe? Sieh dir das Video an!",
           "courseD_bee_conditionals4_a": "Du kannst jeden Platz immer noch so behandeln, als ob eine Wolke über ihm liegt, obwohl du den ganzen Weg übersehen kannst.",
           "courseD_bee_conditionals4_b": "Verwende eine `if`-Anweisung innerhalb deiner Schleife, um jedes Platz auf Nektar zu überprüfen.",
-          "courseD_bee_conditionals4_c": "Mit dem [blockly block][0] Baustein solltest du dich vorwärts bewegen und nach einer Blüte suchen. Wenn dort eine Blüte ist - was soll die Biene tun?",
+          "courseD_bee_conditionals4_c": "Mit dem <xml><block type=\"maze_untilBlocked\"/></xml> Baustein solltest du dich vorwärts bewegen und nach einer Blüte suchen. Wenn dort eine Blüte ist - was soll die Biene tun?",
           "courseD_bee_conditionals4_hintVid2": "In diesem Video findest du Hilfe zur Lösung dieser Aufgabe."
         },
         "courseD_bee_conditionals5": {
           "courseD_bee_conditionals5_hintVid1": "Brauchst du Hilfe? Sieh dir das Video an!",
-          "courseD_bee_conditionals5_a": "Betrachte jede Seite des rechteckigen Pfades als einen eigenen Pfad. Baue eine geschachtelte Schleife auf, mit einem `wiederholen`-Baustein an der Außenseite und einer \\`während-der-Weg-geradeaus-geht‘-Schleife an der Innenseite. Wie viele Wege muss die Biene entlangfliegen, wenn sie jede Seite mit einer Blüte anfliegen muss?",
-          "courseD_bee_conditionals5_c": "3 Seiten des Rechtecks haben Blüten, so dass der Code 3-mal `wiederholt‘ werden muss. Bei jeder Wiederholung muss die Biene den Weg weiterverfolgen,`solange noch ein Weg vor ihr liegt`. Um den Weg weiter zu verfolgen, muss sich die Biene`vorwärts bewegen`. Während sie sich auf dem Weg befindet, muss die Biene Blüten Ausschau halten.`Wenn es eine Blüte gibt‘, muss die Biene `Nektar holen`.",
-          "courseD_bee_conditionals5_b": "Im Baustein `während ein Weg vor dir liegt`, musst du dich vorwärts bewegen und nach einer Blüte suchen. Wie prüfst du, ob eine Blüte vorhanden ist? Was tust du, wenn eine Blüte vorhanden ist?",
+          "courseD_bee_conditionals5_a": "Betrachte jede Seite des rechteckigen Pfades als einen eigenen Pfad. Baue eine geschachtelte Schleife auf, mit einem `wiederhole`-Baustein an der Außenseite und einer \\`Solange ein Weg vor dir liegt‘-Schleife an der Innenseite. Wie viele Wege muss die Biene entlangfliegen, wenn sie jede Seite mit einer Blüte anfliegen muss?",
+          "courseD_bee_conditionals5_c": "3 Seiten des Rechtecks haben Blüten, so dass der Code `wiederhole 3 mal` benötigt. Bei jeder Wiederholung muss die Biene den Weg weiterverfolgen, `solange ein Weg vor dir liegt`. Um den Weg weiter zu verfolgen, muss sich die Biene `vorwärts bewegen`. Während sie sich auf dem Weg befindet, muss die Biene nach Blüten Ausschau halten. `wenn an der Blume`, muss die Biene mit `hole Nektar`,Nektar holen.",
+          "courseD_bee_conditionals5_b": "Im Baustein `solange ein Weg vor dir liegt`, musst du dich vorwärts bewegen und nach einer Blüte suchen. Wie prüfst du, ob eine Blüte vorhanden ist? Was tust du, wenn eine Blüte vorhanden ist?",
           "courseD_bee_conditionals5_hintVid2": "In diesem Video findest du Hilfe zur Lösung dieser Aufgabe."
         },
         "courseD_bee_conditionals5_2018": {
@@ -5609,9 +5609,9 @@
         },
         "courseD_bee_conditionals5_copy": {
           "courseD_bee_conditionals5_hintVid1": "Brauchst du Hilfe? Sieh dir das Video an!",
-          "courseD_bee_conditionals5_a": "Betrachte jede Seite des rechteckigen Pfades als einen eigenen Pfad. Baue eine geschachtelte Schleife auf, mit einem `wiederholen`-Baustein an der Außenseite und einer `während-der-Weg-geradeaus-geht‘-Schleife an der Innenseite. Wie viele Wege muss die Biene entlangfliegen, wenn sie jede Seite mit einer Blüte anfliegen muss?",
-          "courseD_bee_conditionals5_c": "3 Seiten des Rechtecks haben Blüten, so dass der Code 3-mal `wiederholt‘ werden muss. Bei jeder Wiederholung muss die Biene den Weg weiterverfolgen, `solange noch ein Weg vor ihr liegt`. Um den Weg weiter zu verfolgen, muss sich die Biene `vorwärts bewegen`. Während sie sich auf dem Weg befindet, muss die Biene Blüten Ausschau halten. `Wenn es eine Blüte gibt‘, muss die Biene `Nektar holen`.",
-          "courseD_bee_conditionals5_b": "Im Baustein `während ein Weg vor dir liegt`, musst du dich vorwärts bewegen und nach einer Blüte suchen. Wie prüfst du, ob eine Blüte vorhanden ist? Was tust du, wenn eine Blüte vorhanden ist?",
+          "courseD_bee_conditionals5_a": "Betrachte jede Seite des rechteckigen Pfades als einen eigenen Pfad. Baue eine geschachtelte Schleife auf, mit einem `wiederhole`-Baustein an der Außenseite und einer \\`Solange ein Weg vor dir liegt‘-Schleife an der Innenseite. Wie viele Wege muss die Biene entlangfliegen, wenn sie jede Seite mit einer Blüte anfliegen muss?",
+          "courseD_bee_conditionals5_c": "3 Seiten des Rechtecks haben Blüten, so dass der Code `wiederhole 3 mal` benötigt. Bei jeder Wiederholung muss die Biene den Weg weiterverfolgen, `solange ein Weg vor dir liegt`. Um den Weg weiter zu verfolgen, muss sich die Biene `vorwärts bewegen`. Während sie sich auf dem Weg befindet, muss die Biene nach Blüten Ausschau halten. `wenn an der Blume`, muss die Biene mit `hole Nektar`,Nektar holen.",
+          "courseD_bee_conditionals5_b": "Im Baustein `solange ein Weg vor dir liegt`, musst du dich vorwärts bewegen und nach einer Blüte suchen. Wie prüfst du, ob eine Blüte vorhanden ist? Was tust du, wenn eine Blüte vorhanden ist?",
           "courseD_bee_conditionals5_hintVid2": "In diesem Video findest du Hilfe zur Lösung dieser Aufgabe."
         },
         "courseD_bee_conditionals6": {
@@ -5640,42 +5640,42 @@
         },
         "courseD_bee_conditionals7": {
           "courseD_bee_conditionals7_hintVid1": "Brauchst du Hilfe? Sieh dir das Video an!",
-          "courseD_bee_conditionals7_a": "**Denke daran:** Dieses Aufgabe ändert sich jedes Mal, wenn sie ausgeführt wird.\n\nDu brauchst einen bedingten Baustein (`wenn/sonst`), um die Aufgabe zu lösen.",
+          "courseD_bee_conditionals7_a": "**Denke daran:** Dieses Aufgabe ändert sich jedes Mal, wenn sie ausgeführt wird.\n\nDu brauchst einen bedingten Baustein (`wenn/ansonsten`), um die Aufgabe zu lösen.",
           "courseD_bee_conditionals7_b": "Wenn sich unter der Wolke keine Blüte befindet, muss es dort eine Wabe geben, so dass du den Fall eines leeren Felds nicht zu berücksichtigen brauchst.",
           "courseD_bee_conditionals7_hintVid2": "In diesem Video findest du Hilfe zur Lösung dieser Aufgabe."
         },
         "courseD_bee_conditionals7_2018": {
           "courseD_bee_conditionals7_hintVid1": "Brauchst du Hilfe? Sieh dir das Video an!",
-          "courseD_bee_conditionals7_a": "**Denke daran:** Dieses Aufgabe ändert sich jedes Mal, wenn sie ausgeführt wird.\n\nDu brauchst einen bedingten Baustein (`wenn/sonst`), um die Aufgabe zu lösen.",
+          "courseD_bee_conditionals7_a": "**Denke daran:** Dieses Aufgabe ändert sich jedes Mal, wenn sie ausgeführt wird.\n\nDu brauchst einen bedingten Baustein (`wenn/ansonsten`), um die Aufgabe zu lösen.",
           "courseD_bee_conditionals7_b": "Wenn sich unter der Wolke keine Blüte befindet, muss es dort eine Wabe geben, so dass du den Fall eines leeren Felds nicht zu berücksichtigen brauchst.",
           "courseD_bee_conditionals7_hintVid2": "In diesem Video findest du Hilfe zur Lösung dieser Aufgabe."
         },
         "courseD_bee_conditionals7_2019": {
-          "courseD_bee_conditionals7_a": "**Denke daran:** Dieses Aufgabe ändert sich jedes Mal, wenn sie ausgeführt wird.\n\nDu brauchst einen bedingten Baustein (`wenn/sonst`), um die Aufgabe zu lösen.",
+          "courseD_bee_conditionals7_a": "**Denke daran:** Dieses Aufgabe ändert sich jedes Mal, wenn sie ausgeführt wird.\n\nDu brauchst einen bedingten Baustein (`wenn/ansonsten`), um die Aufgabe zu lösen.",
           "courseD_bee_conditionals7_b": "Wenn sich unter der Wolke keine Blüte befindet, muss es dort eine Wabe geben, so dass du den Fall eines leeren Felds nicht zu berücksichtigen brauchst."
         },
         "courseD_bee_conditionals7_2020": {
-          "courseD_bee_conditionals7_a": "**Denke daran:** Dieses Aufgabe ändert sich jedes Mal, wenn sie ausgeführt wird.\n\nDu brauchst einen bedingten Baustein (`wenn/sonst`), um die Aufgabe zu lösen.",
+          "courseD_bee_conditionals7_a": "**Denke daran:** Dieses Aufgabe ändert sich jedes Mal, wenn sie ausgeführt wird.\n\nDu brauchst einen bedingten Baustein (`wenn/ansonsten`), um die Aufgabe zu lösen.",
           "courseD_bee_conditionals7_b": "Wenn sich unter der Wolke keine Blüte befindet, muss es dort eine Wabe geben, so dass du den Fall eines leeren Felds nicht zu berücksichtigen brauchst."
         },
         "courseD_bee_conditionals7_predict2": {
-          "courseD_bee_conditionals7_a": "**Denke daran:** Dieses Aufgabe ändert sich jedes Mal, wenn sie ausgeführt wird.\n\nDu brauchst einen bedingten Baustein (`wenn/sonst`), um die Aufgabe zu lösen."
+          "courseD_bee_conditionals7_a": "**Denke daran:** Dieses Aufgabe ändert sich jedes Mal, wenn sie ausgeführt wird.\n\nDu brauchst einen bedingten Baustein (`wenn/ansonsten`), um die Aufgabe zu lösen."
         },
         "courseD_bee_conditionals7_predict2_2018": {
-          "courseD_bee_conditionals7_a": "**Denke daran:** Dieses Aufgabe ändert sich jedes Mal, wenn sie ausgeführt wird.\n\nDu brauchst einen bedingten Baustein (`wenn/sonst`), um die Aufgabe zu lösen."
+          "courseD_bee_conditionals7_a": "**Denke daran:** Dieses Aufgabe ändert sich jedes Mal, wenn sie ausgeführt wird.\n\nDu brauchst einen bedingten Baustein (`wenn/ansonsten`), um die Aufgabe zu lösen."
         },
         "courseD_bee_conditionals7_predict2_2019": {
-          "courseD_bee_conditionals7_a": "**Denke daran:** Dieses Aufgabe ändert sich jedes Mal, wenn sie ausgeführt wird.\n\nDu brauchst einen bedingten Baustein (`wenn/sonst`), um die Aufgabe zu lösen."
+          "courseD_bee_conditionals7_a": "**Denke daran:** Dieses Aufgabe ändert sich jedes Mal, wenn sie ausgeführt wird.\n\nDu brauchst einen bedingten Baustein (`wenn/ansonsten`), um die Aufgabe zu lösen."
         },
         "courseD_bee_conditionals7_predict2_2020": {
-          "courseD_bee_conditionals7_a": "**Denke daran:** Dieses Aufgabe ändert sich jedes Mal, wenn sie ausgeführt wird.\n\nDu brauchst einen bedingten Baustein (`wenn/sonst`), um die Aufgabe zu lösen."
+          "courseD_bee_conditionals7_a": "**Denke daran:** Dieses Aufgabe ändert sich jedes Mal, wenn sie ausgeführt wird.\n\nDu brauchst einen bedingten Baustein (`wenn/ansonsten`), um die Aufgabe zu lösen."
         },
         "courseD_bee_conditionals8": {
           "courseD_bee_conditionals8_hintVid1": "Brauchst du Hilfe? Sieh dir das Video an!",
           "courseD_bee_conditionals8_a": "**Denke daran:** Dieses Rätsel ändert sich jedes Mal, wenn es gelaufen ist.\nDu brauchst einen bedingten Block (`if` oder `if/else`), um die Aufgabe zu lösen.",
-          "courseD_bee_conditionals8_b": "Dieses Rätsel ist knifflig, weil man leere Felder, Nektar, _und_ Honig nicht mit nur einer einzigen Bedingung prüfen kann.\n\nSuche Nektar und Honig nur am Ende deines Weges.",
+          "courseD_bee_conditionals8_b": "Dieses Rätsel ist knifflig, weil man leere Felder, Nektar, _und_ Honig nicht mit nur einer einzigen Bedingung prüfen kann.\n\nSuche nur am Ende deines Weges nach Nektar und Honig.",
           "courseD_bee_conditionals8_c": "Wie kannst du sicherstellen, dass du jeden Weg bis zum Ende gehst, egal wie lang er ist?",
-          "courseD_bee_conditionals8_d": "Auch wenn du eine Wolke direkt vor dir hast, musst du sie nicht erst besuchen. Versuche, mit der Wolke unten rechts im Feld zu beginnen. \n\n![](https://images.code.org/166e71553edf23bf13ecd290a8e7e721-image-1501013509361.09.09.png)",
+          "courseD_bee_conditionals8_d": "Auch wenn du eine Wolke direkt vor dir hast, musst du sie nicht als erstes besuchen. Versuche, mit der Wolke unten rechts im Feld zu beginnen. \n\n![](https://images.code.org/166e71553edf23bf13ecd290a8e7e721-image-1501013509361.09.09.png)",
           "courseD_bee_conditionals8_hintVid2": "In diesem Video findest du Hilfe zur Lösung dieser Aufgabe."
         },
         "courseD_bee_conditionals8_2018": {
@@ -5683,7 +5683,7 @@
           "courseD_bee_conditionals8_a": "**Denke daran:** Dieses Rätsel ändert sich jedes Mal, wenn es gelaufen ist.\nDu brauchst einen bedingten Block (`if` oder `if/else`), um die Aufgabe zu lösen.",
           "courseD_bee_conditionals8_b": "Dieses Rätsel ist knifflig, weil man leere Felder, Nektar, _und_ Honig nicht mit nur einer einzigen Bedingung prüfen kann.\n\nSuche Nektar und Honig nur am Ende deines Weges.",
           "courseD_bee_conditionals8_c": "Wie kannst du sicherstellen, dass du jeden Weg bis zum Ende gehst, egal wie lang er ist?",
-          "courseD_bee_conditionals8_d": "Auch wenn du eine Wolke direkt vor dir hast, musst du sie nicht erst besuchen. Versuche, mit der Wolke unten rechts im Feld zu beginnen. \n\n![](https://images.code.org/166e71553edf23bf13ecd290a8e7e721-image-1501013509361.09.09.png)",
+          "courseD_bee_conditionals8_d": "Auch wenn du eine Wolke direkt vor dir hast, musst du sie nicht als erstes besuchen. Versuche, mit der Wolke unten rechts im Feld zu beginnen. \n\n![](https://images.code.org/166e71553edf23bf13ecd290a8e7e721-image-1501013509361.09.09.png)",
           "courseD_bee_conditionals8_hintVid2": "In diesem Video findest du Hilfe zur Lösung dieser Aufgabe."
         },
         "courseD_bee_conditionals8_2019": {
@@ -5696,31 +5696,31 @@
         },
         "courseD_bee_conditionals_challenge1": {
           "courseD_bee_conditionals_challenge1_a": "Kannst du einen Weg finden, der jede Blüte und jede Wabe erreicht, ohne Bäume zu treffen? Der beste Weg ist eine Spirale.",
-          "courseD_bee_conditionals_challenge1_b": "In dieser Aufgabe könnte jedes Feld eine Blüte, eine Honigwabe oder nichts enthalten. Das bedeutet, dass du deine \\`wenn/sonst'-Bedingung in jedem Feld wiederholen kannst."
+          "courseD_bee_conditionals_challenge1_b": "In dieser Aufgabe könnte jedes Feld eine Blüte, eine Honigwabe oder nichts enthalten. Das bedeutet, dass du deine `wenn/ansonsten`-Bedingung in jedem Feld wiederholen kannst."
         },
         "courseD_bee_conditionals_challenge1_2018": {
           "courseD_bee_conditionals_challenge1_a": "Kannst du einen Weg finden, der jede Blüte und jede Wabe erreicht, ohne Bäume zu treffen? Der beste Weg ist eine Spirale.",
-          "courseD_bee_conditionals_challenge1_b": "In dieser Aufgabe könnte jedes Feld eine Blüte, eine Honigwabe oder nichts enthalten. Das bedeutet, dass du deine \\`wenn/sonst'-Bedingung in jedem Feld wiederholen kannst."
+          "courseD_bee_conditionals_challenge1_b": "In dieser Aufgabe könnte jedes Feld eine Blüte, eine Honigwabe oder nichts enthalten. Das bedeutet, dass du deine `wenn/ansonsten`-Bedingung in jedem Feld wiederholen kannst."
         },
         "courseD_bee_conditionals_challenge1_2019": {
           "courseD_bee_conditionals_challenge1_a": "Kannst du einen Weg finden, der jede Blüte und jede Wabe erreicht, ohne Bäume zu treffen? Der beste Weg ist eine Spirale.",
-          "courseD_bee_conditionals_challenge1_b": "In dieser Aufgabe könnte jedes Feld eine Blüte, eine Honigwabe oder nichts enthalten. Das bedeutet, dass du deine \\`wenn/sonst'-Bedingung in jedem Feld wiederholen kannst."
+          "courseD_bee_conditionals_challenge1_b": "In dieser Aufgabe könnte jedes Feld eine Blüte, eine Honigwabe oder nichts enthalten. Das bedeutet, dass du deine `wenn/ansonsten`-Bedingung in jedem Feld wiederholen kannst."
         },
         "courseD_bee_conditionals_challenge1_2020": {
           "courseD_bee_conditionals_challenge1_a": "Kannst du einen Weg finden, der jede Blüte und jede Wabe erreicht, ohne Bäume zu treffen? Der beste Weg ist eine Spirale.",
-          "courseD_bee_conditionals_challenge1_b": "In dieser Aufgabe könnte jedes Feld eine Blüte, eine Honigwabe oder nichts enthalten. Das bedeutet, dass du deine \\`wenn/sonst'-Bedingung in jedem Feld wiederholen kannst."
+          "courseD_bee_conditionals_challenge1_b": "In dieser Aufgabe könnte jedes Feld eine Blüte, eine Honigwabe oder nichts enthalten. Das bedeutet, dass du deine `wenn/ansonsten`-Bedingung in jedem Feld wiederholen kannst."
         },
         "courseD_bee_conditionals_challenge2": {
-          "courseD_bee_conditionals_challenge1_b": "Genau wie die Bausteine `wenn an der Blüte` läuft der Code in einem `solange wie Nektar > 0 ist` nur dann, wenn sich die Biene an einer Blüte befindet. Der Unterschied besteht darin, dass der eingefügte Code immer wieder läuft, bis kein Nektar mehr vorhanden ist. Probiere es mit diesem Muster:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "Genau wie die Bausteine `wenn an der Blume` läuft der Code in einem `solange Nektar > 0 ist` nur dann, wenn sich die Biene an einer Blüte befindet. Der Unterschied besteht darin, dass der eingefügte Code immer wieder läuft, bis kein Nektar mehr vorhanden ist. Probiere es mit diesem Muster:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_conditionals_challenge2_2018": {
-          "courseD_bee_conditionals_challenge1_b": "Genau wie die Bausteine `wenn an der Blüte` läuft der Code in einem `solange wie Nektar > 0 ist` nur dann, wenn sich die Biene an einer Blüte befindet. Der Unterschied besteht darin, dass der eingefügte Code immer wieder läuft, bis kein Nektar mehr vorhanden ist. Probiere es mit diesem Muster:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "Genau wie die Bausteine `wenn an der Blume` läuft der Code in einem `solange Nektar > 0 ist` nur dann, wenn sich die Biene an einer Blüte befindet. Der Unterschied besteht darin, dass der eingefügte Code immer wieder läuft, bis kein Nektar mehr vorhanden ist. Probiere es mit diesem Muster:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_conditionals_challenge2_2019": {
-          "courseD_bee_conditionals_challenge1_b": "Genau wie die Bausteine `wenn an der Blüte` läuft der Code in einem `solange wie Nektar > 0 ist` nur dann, wenn sich die Biene an einer Blüte befindet. Der Unterschied besteht darin, dass der eingefügte Code immer wieder läuft, bis kein Nektar mehr vorhanden ist. Probiere es mit diesem Muster:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "Genau wie die Bausteine `wenn an der Blume` läuft der Code in einem `solange Nektar > 0 ist` nur dann, wenn sich die Biene an einer Blüte befindet. Der Unterschied besteht darin, dass der eingefügte Code immer wieder läuft, bis kein Nektar mehr vorhanden ist. Probiere es mit diesem Muster:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_conditionals_challenge2_2020": {
-          "courseD_bee_conditionals_challenge1_b": "Genau wie die Bausteine `wenn an der Blüte` läuft der Code in einem `solange wie Nektar > 0 ist` nur dann, wenn sich die Biene an einer Blüte befindet. Der Unterschied besteht darin, dass der eingefügte Code immer wieder läuft, bis kein Nektar mehr vorhanden ist. Probiere es mit diesem Muster:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "Genau wie die Bausteine `wenn an der Blume` läuft der Code in einem `solange Nektar > 0 ist` nur dann, wenn sich die Biene an einer Blüte befindet. Der Unterschied besteht darin, dass der eingefügte Code immer wieder läuft, bis kein Nektar mehr vorhanden ist. Probiere es mit diesem Muster:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_debugging_challenge1": {
           "courseD_bee_debugging_challenge1_a": "Warum funktioniert die erste Hälfte dieses Programms? Denk darüber nach, warum die Biene sich rückwärts bewegen muss. Wie viel Nektar sammelt die Biene jedes Mal, wenn sie sich über eine Blüte bewegt?",
@@ -5812,10 +5812,10 @@
           "courseD_bounce_events10s_a": "Du solltest diese beiden Ereignisse in deinem Code haben:\n\n<xml><block type=\"bounce_whenBallInGoal\" deletable=\"false\"><next><block type=\"bounce_playSound\"><title name=\"SOUND\">swish</title><next><block type=\"bounce_incrementPlayerScore\"></block></next></block></next></block><block type=\"bounce_whenBallMissesPaddle\" deletable=\"false\"><next><block type=\"bounce_playSound\"><title name=\"SOUND\">whistle</title><next><block type=\"bounce_incrementOpponentScore\"></block></next></block></next></block></xml>"
         },
         "courseD_bounce_events10s_2019": {
-          "courseD_bounce_events10s_a": "Du solltest diese beiden Ereignisse in deinem Code haben:\n\n[blockly block][0]"
+          "courseD_bounce_events10s_a": "Du solltest diese beiden Ereignisse in deinem Code haben:\n\n<xml><block type=\"bounce_whenBallInGoal\" deletable=\"false\"><next><block type=\"bounce_playSound\"><title name=\"SOUND\">swish</title><next><block type=\"bounce_incrementPlayerScore\"></block></next></block></next></block><block type=\"bounce_whenBallMissesPaddle\" deletable=\"false\"><next><block type=\"bounce_playSound\"><title name=\"SOUND\">whistle</title><next><block type=\"bounce_incrementOpponentScore\"></block></next></block></next></block></xml>"
         },
         "courseD_bounce_events10s_2020": {
-          "courseD_bounce_events10s_a": "Du solltest diese beiden Ereignisse in deinem Code haben:\n\n[blockly block][0]"
+          "courseD_bounce_events10s_a": "Du solltest diese beiden Ereignisse in deinem Code haben:\n\n<xml><block type=\"bounce_whenBallInGoal\" deletable=\"false\"><next><block type=\"bounce_playSound\"><title name=\"SOUND\">swish</title><next><block type=\"bounce_incrementPlayerScore\"></block></next></block></next></block><block type=\"bounce_whenBallMissesPaddle\" deletable=\"false\"><next><block type=\"bounce_playSound\"><title name=\"SOUND\">whistle</title><next><block type=\"bounce_incrementOpponentScore\"></block></next></block></next></block></xml>"
         },
         "courseD_bounce_events11s_2018": {
           "courseD_bounce_events11s_a": "Du musst einen Ball werfen, wenn das Spiel beginnt, wenn du den Korb triffst und wenn die Hand den Ball verfehlt."
@@ -5854,10 +5854,10 @@
           "courseD_bounce_events2s_a": "Du musst zweimal das`move` Ereignissen verwenden, damit dies funktioniert:\n\n<xml>\n  <block type=\"bounce_whenLeft\" deletable=\"false\" x=\"20\" y=\"20\">\n    <next>\n      <block type=\"bounce_moveLeft\"/>\n    </next>\n  </block>\n  <block type=\"bounce_whenRight\" deletable=\"false\" x=\"180\" y=\"20\">\n    <next>\n      <block type=\"bounce_moveRight\"/>\n    </next>\n  </block>\n</xml>"
         },
         "courseD_bounce_events2s_2019": {
-          "courseD_bounce_events2s_a": "Du musst zweimal das`move` Ereignissen verwenden, damit dies funktioniert:\n\n[blockly block][0]"
+          "courseD_bounce_events2s_a": "Du musst zweimal das`move` Ereignissen verwenden, damit dies funktioniert:\n\n<xml>\n  <block type=\"bounce_whenLeft\" deletable=\"false\" x=\"20\" y=\"20\">\n    <next>\n      <block type=\"bounce_moveLeft\"/>\n    </next>\n  </block>\n  <block type=\"bounce_whenRight\" deletable=\"false\" x=\"180\" y=\"20\">\n    <next>\n      <block type=\"bounce_moveRight\"/>\n    </next>\n  </block>\n</xml>"
         },
         "courseD_bounce_events2s_2020": {
-          "courseD_bounce_events2s_a": "Du musst zweimal das`move` Ereignissen verwenden, damit dies funktioniert:\n\n[blockly block][0]"
+          "courseD_bounce_events2s_a": "Du musst zweimal das`move` Ereignissen verwenden, damit dies funktioniert:\n\n<xml>\n  <block type=\"bounce_whenLeft\" deletable=\"false\" x=\"20\" y=\"20\">\n    <next>\n      <block type=\"bounce_moveLeft\"/>\n    </next>\n  </block>\n  <block type=\"bounce_whenRight\" deletable=\"false\" x=\"180\" y=\"20\">\n    <next>\n      <block type=\"bounce_moveRight\"/>\n    </next>\n  </block>\n</xml>"
         },
         "courseD_bounce_events5s_2018": {
           "courseD_bounce_events5s_a": "Du musst die Hand nicht bewegen, um dieses Rätsel zu lösen.",
@@ -5865,22 +5865,22 @@
         },
         "courseD_bounce_events5s_2019": {
           "courseD_bounce_events5s_a": "Du musst die Hand nicht bewegen, um dieses Rätsel zu lösen.",
-          "courseD_bounce_events5s_b": "Stelle sicher, dass du diesen Code in deinem Arbeitsbereich hinzugefügt hast:\n\n[blockly block][0]"
+          "courseD_bounce_events5s_b": "Stelle sicher, dass du diesen Code in deinem Arbeitsbereich hinzugefügt hast:\n\n<xml>  <block type=\"bounce_whenPaddleCollided\" deletable=\"false\"> <next> <block type=\"bounce_bounceBall\"/></next></block></xml>"
         },
         "courseD_bounce_events5s_2020": {
           "courseD_bounce_events5s_a": "Du musst die Hand nicht bewegen, um dieses Rätsel zu lösen.",
-          "courseD_bounce_events5s_b": "Stelle sicher, dass du diesen Code in deinem Arbeitsbereich hinzugefügt hast:\n\n[blockly block][0]"
+          "courseD_bounce_events5s_b": "Stelle sicher, dass du diesen Code in deinem Arbeitsbereich hinzugefügt hast:\n\n<xml>  <block type=\"bounce_whenPaddleCollided\" deletable=\"false\"> <next> <block type=\"bounce_bounceBall\"/></next></block></xml>"
         },
         "courseD_bounce_events6s_2018": {
           "courseD_bounce_events6s_a": "Hast du ein Ereignis, das so aussieht?\n\n<xml><block type=\"bounce_whenWallCollided\" deletable=\"false\"><next><block type=\"bounce_bounceBall\"></block></next></block></block></xml>",
           "courseD_bounce_events6s_b": "Wenn du den Code richtig geschrieben hast, musst du nicht die Hand bewegen, um zu gewinnen."
         },
         "courseD_bounce_events6s_2019": {
-          "courseD_bounce_events6s_a": "Hast du ein Ereignis, das so aussieht?\n\n[blockly block][0]",
+          "courseD_bounce_events6s_a": "Hast du ein Ereignis, das so aussieht?\n\n<xml><block type=\"bounce_whenWallCollided\" deletable=\"false\"><next><block type=\"bounce_bounceBall\"></block></next></block></block></xml>",
           "courseD_bounce_events6s_b": "Wenn du den Code richtig geschrieben hast, musst du nicht die Hand bewegen, um zu gewinnen."
         },
         "courseD_bounce_events6s_2020": {
-          "courseD_bounce_events6s_a": "Hast du ein Ereignis, das so aussieht?\n\n[blockly block][0]",
+          "courseD_bounce_events6s_a": "Hast du ein Ereignis, das so aussieht?\n\n<xml><block type=\"bounce_whenWallCollided\" deletable=\"false\"><next><block type=\"bounce_bounceBall\"></block></next></block></block></xml>",
           "courseD_bounce_events6s_b": "Wenn du den Code richtig geschrieben hast, musst du nicht die Hand bewegen, um zu gewinnen."
         },
         "courseD_bounce_events7s_2018": {
@@ -5894,8 +5894,8 @@
         },
         "courseD_collector_debugging1": {
           "courseD_collector_debugging1_a": "Verwende die Schaltfläche \"Schritt\", um den ersten Schritt zu überprüfen. \n\n-   Funktioniert der zweite Schritt?\n\n-   Wo funktioniert dein Programm nicht mehr?",
-          "courseD_collector_debugging1_b": "Erkennst du irgendwelche Muster, die durch eine `Wiederholen`-Schleife einfacher gezeichnet werden könnten?",
-          "courseD_collector_debugging1_c": "Denke daran, den \\`sammeln‘-Baustein zu verwenden, um Schätze aufzusammeln, wenn du sie erreicht hast."
+          "courseD_collector_debugging1_b": "Erkennst du irgendwelche Muster, die durch eine `wiederhole`-Schleife einfacher gezeichnet werden könnten?",
+          "courseD_collector_debugging1_c": "Denke daran, den `sammle`-Baustein zu verwenden, um Schätze aufzusammeln, wenn du sie erreicht hast."
         },
         "courseD_collector_debugging10_predict1": {
           "courseD_collector_debugging9_a": "Es gibt verschiedene Lösungen für diese Aufgabe... aber alle beinhalten Drehungen!",
@@ -5903,19 +5903,19 @@
         },
         "courseD_collector_debugging1a_2018": {
           "courseD_collector_debugging1_a": "Verwende die Schaltfläche \"Schritt\", um den ersten Schritt zu überprüfen. \n\n-   Funktioniert der zweite Schritt?\n\n-   Wo funktioniert dein Programm nicht mehr?",
-          "courseD_collector_debugging1_c": "Denke daran, den \\`sammeln‘-Baustein zu verwenden, um Schätze aufzusammeln, wenn du sie erreicht hast."
+          "courseD_collector_debugging1_c": "Denke daran, den `sammle`-Baustein zu verwenden, um Schätze aufzusammeln, wenn du sie erreicht hast."
         },
         "courseD_collector_debugging1a_2019": {
-          "courseD_collector_debugging1_a": "Verwende die Schaltfläche \"Schritt\", um den ersten Schritt zu überprüfen. \n\n- Funktioniert der zweite Schritt?\n\n- Wo funktioniert dein Programm nicht mehr?",
-          "courseD_collector_debugging1_c": "Denke daran, den `sammeln‘-Baustein zu verwenden, um Schätze aufzusammeln, wenn du sie erreicht hast."
+          "courseD_collector_debugging1_a": "Verwende die Schaltfläche \"Schritt\", um den ersten Schritt zu überprüfen. \n\n-   Funktioniert der zweite Schritt?\n\n-   Wo funktioniert dein Programm nicht mehr?",
+          "courseD_collector_debugging1_c": "Denke daran, den `sammle`-Baustein zu verwenden, um Schätze aufzusammeln, wenn du sie erreicht hast."
         },
         "courseD_collector_debugging1a_2020": {
-          "courseD_collector_debugging1_a": "Verwende die Schaltfläche \"Schritt\", um den ersten Schritt zu überprüfen. \n\n- Funktioniert der zweite Schritt?\n\n- Wo funktioniert dein Programm nicht mehr?",
-          "courseD_collector_debugging1_c": "Denke daran, den `sammeln‘-Baustein zu verwenden, um Schätze aufzusammeln, wenn du sie erreicht hast."
+          "courseD_collector_debugging1_a": "Verwende die Schaltfläche \"Schritt\", um den ersten Schritt zu überprüfen. \n\n-   Funktioniert der zweite Schritt?\n\n-   Wo funktioniert dein Programm nicht mehr?",
+          "courseD_collector_debugging1_c": "Denke daran, den `sammle`-Baustein zu verwenden, um Schätze aufzusammeln, wenn du sie erreicht hast."
         },
         "courseD_collector_debugging2": {
           "courseD_collector_debugging2_a": "Verwende die Schaltfläche \"Schritt\", um den ersten Schritt zu überprüfen. \n\n-   Funktioniert der zweite Schritt?\n\n-   Wo funktioniert dein Programm nicht mehr?",
-          "courseD_collector_debugging2_b": "Erkennst du irgendwelche Muster, die durch eine `Wiederholen`-Schleife einfacher gezeichnet werden könnten?",
+          "courseD_collector_debugging2_b": "Erkennst du irgendwelche Muster, die durch eine `wiederhole`-Schleife einfacher gezeichnet werden könnten?",
           "courseD_collector_debugging2_c": "Versuche, auf einer Seite dieses Musters einen Schatz zu sammeln. Kannst du dies wiederholen, um auf den beiden anderen Seiten Schätze zu sammeln?"
         },
         "courseD_collector_debugging2a_2018": {
@@ -5923,11 +5923,11 @@
           "courseD_collector_debugging2a_c": "Was passiert dann?\n\nWas soll passieren?\n\nWas sagt dir das?"
         },
         "courseD_collector_debugging2a_2019": {
-          "courseD_collector_debugging2a_a": "Verwende die Schaltfläche \"Schritt\", um den ersten Schritt zu überprüfen. \n\n- Funktioniert der zweite Schritt?\n\n- Wo funktioniert dein Programm nicht mehr?",
+          "courseD_collector_debugging2a_a": "Verwende die Schaltfläche \"Schritt\", um den ersten Schritt zu überprüfen. \n\n-   Funktioniert der zweite Schritt?\n\n-   Wo funktioniert dein Programm nicht mehr?",
           "courseD_collector_debugging2a_c": "Was passiert dann?\n\nWas soll passieren?\n\nWas sagt dir das?"
         },
         "courseD_collector_debugging2a_2020": {
-          "courseD_collector_debugging2a_a": "Verwende die Schaltfläche \"Schritt\", um den ersten Schritt zu überprüfen. \n\n- Funktioniert der zweite Schritt?\n\n- Wo funktioniert dein Programm nicht mehr?",
+          "courseD_collector_debugging2a_a": "Verwende die Schaltfläche \"Schritt\", um den ersten Schritt zu überprüfen. \n\n-   Funktioniert der zweite Schritt?\n\n-   Wo funktioniert dein Programm nicht mehr?",
           "courseD_collector_debugging2a_c": "Was passiert dann?\n\nWas soll passieren?\n\nWas sagt dir das?"
         },
         "courseD_collector_debugging3": {
@@ -5946,18 +5946,18 @@
         "courseD_collector_debugging4": {
           "courseD_collector_debugging4_a": "Versuche, den Debugging-Prozess ein paar Mal hintereinander zu verwenden. \n\nWas verursacht das erste Problem? \n\nWenn das Problem behoben ist, was funktioniert dann nicht richtig?",
           "courseD_collector_debugging4_b": "Wenn du Schwierigkeiten beim Erstellen des Treppenstufenmusters hast, versuche, es mit dem Finger nachzuzeichnen und die Befehle laut auszusprechen. \n\nVergiss dabei nicht, die Richtung der Drehungen anzugeben!",
-          "courseD_collector_debugging4_c": "In dieser Schleife fehlt ein Baustein. Kannst herausfinden, welcher?"
+          "courseD_collector_debugging4_c": "In dieser Schleife fehlt nur ein Baustein. Kannst du herausfinden, welcher?"
         },
         "courseD_collector_debugging4a_2018": {
           "courseD_collector_debugging4_a": "Versuche, den Debugging-Prozess ein paar Mal hintereinander zu verwenden. \n\nWas verursacht das erste Problem? \n\nWenn das Problem behoben ist, was funktioniert dann nicht richtig?",
           "courseD_collector_debugging4_b": "Wenn du Schwierigkeiten beim Erstellen des Treppenstufenmusters hast, versuche, es mit dem Finger nachzuzeichnen und die Befehle laut auszusprechen. \n\nVergiss dabei nicht, die Richtung der Drehungen anzugeben!"
         },
         "courseD_collector_debugging4a_2019": {
-          "courseD_collector_debugging4_a": "Versuche, den Debugging-Prozess ein paar Mal hintereinander zu verwenden. \n\nWas verursacht das erste Problem? \n\nWenn das Problem behoben ist, was funktioniert dann nicht richtig?\n",
+          "courseD_collector_debugging4_a": "Versuche, den Debugging-Prozess ein paar Mal hintereinander zu verwenden. \n\nWas verursacht das erste Problem? \n\nWenn das Problem behoben ist, was funktioniert dann nicht richtig?",
           "courseD_collector_debugging4_b": "Wenn du Schwierigkeiten beim Erstellen des Treppenstufenmusters hast, versuche, es mit dem Finger nachzuzeichnen und die Befehle laut auszusprechen. \n\nVergiss dabei nicht, die Richtung der Drehungen anzugeben!"
         },
         "courseD_collector_debugging4a_2020": {
-          "courseD_collector_debugging4_a": "Versuche, den Debugging-Prozess ein paar Mal hintereinander zu verwenden. \n\nWas verursacht das erste Problem? \n\nWenn das Problem behoben ist, was funktioniert dann nicht richtig?\n",
+          "courseD_collector_debugging4_a": "Versuche, den Debugging-Prozess ein paar Mal hintereinander zu verwenden. \n\nWas verursacht das erste Problem? \n\nWenn das Problem behoben ist, was funktioniert dann nicht richtig?",
           "courseD_collector_debugging4_b": "Wenn du Schwierigkeiten beim Erstellen des Treppenstufenmusters hast, versuche, es mit dem Finger nachzuzeichnen und die Befehle laut auszusprechen. \n\nVergiss dabei nicht, die Richtung der Drehungen anzugeben!"
         },
         "courseD_collector_debugging5": {
@@ -5978,18 +5978,18 @@
         },
         "courseD_collector_debugging6": {
           "courseD_collector_debugging6_a": "Versuche, den Code mit der Schaltfläche \"Schritt\" zu prüfen. Ist beim ersten Schritt alles richtig? \n\n-   Funktioniert der zweite Schritt?\n\n-   Wo funktioniert der Code nicht mehr?",
-          "courseD_collector_debugging6_b": "Es sieht so aus, als wären alle richtigen Schritte vorhanden, du brauchst nur noch einige mehr. Wie kannst die Aktion `sammeln` mehrfach wiederholen?"
+          "courseD_collector_debugging6_b": "Es sieht so aus, als wären alle richtigen Schritte vorhanden. Du brauchst nur noch einige mehr. Wie kannst du die Aktion `sammle` mehrfach wiederholen?"
         },
         "courseD_collector_debugging6a_2018": {
           "courseD_collector_debugging6_a": "Versuche, den Code mit der Schaltfläche \"Schritt\" zu prüfen. Ist beim ersten Schritt alles richtig? \n\n-   Funktioniert der zweite Schritt?\n\n-   Wo funktioniert der Code nicht mehr?",
           "courseD_collector_debugging6_b": "Es sieht so aus, als ob sich alle benötigten Bausteine im Arbeitsbereich befinden. Versuche auf \"Neuanfang\" zu klicken, wenn es zu verwirrend wird."
         },
         "courseD_collector_debugging6a_2019": {
-          "courseD_collector_debugging6_a": "Versuche, den Code mit der Schaltfläche \"Schritt\" zu prüfen. Ist beim ersten Schritt alles richtig? \n\n- Funktioniert der zweite Schritt?\n \n- Wo funktioniert der Code nicht mehr?",
+          "courseD_collector_debugging6_a": "Versuche, den Code mit der Schaltfläche \"Schritt\" zu prüfen. Ist beim ersten Schritt alles richtig? \n\n-   Funktioniert der zweite Schritt?\n\n-   Wo funktioniert der Code nicht mehr?",
           "courseD_collector_debugging6_b": "Es sieht so aus, als ob sich alle benötigten Bausteine im Arbeitsbereich befinden. Versuche auf \"Neuanfang\" zu klicken, wenn es zu verwirrend wird."
         },
         "courseD_collector_debugging6a_2020": {
-          "courseD_collector_debugging6_a": "Versuche, den Code mit der Schaltfläche \"Schritt\" zu prüfen. Ist beim ersten Schritt alles richtig? \n\n- Funktioniert der zweite Schritt?\n \n- Wo funktioniert der Code nicht mehr?",
+          "courseD_collector_debugging6_a": "Versuche, den Code mit der Schaltfläche \"Schritt\" zu prüfen. Ist beim ersten Schritt alles richtig? \n\n-   Funktioniert der zweite Schritt?\n\n-   Wo funktioniert der Code nicht mehr?",
           "courseD_collector_debugging6_b": "Es sieht so aus, als ob sich alle benötigten Bausteine im Arbeitsbereich befinden. Versuche auf \"Neuanfang\" zu klicken, wenn es zu verwirrend wird."
         },
         "courseD_collector_debugging8": {
@@ -6001,8 +6001,8 @@
           "courseD_collector_debugging9_b": "Überlege, wie du die Aufgabe lösen würdest, und versuche dann schrittweise, den Code an das, was du dir vorstellst, anzupassen."
         },
         "courseD_collector_debugging_challenge2": {
-          "courseD_collector_debugging_challenge2_a": "Beginne damit, nur **zwei** Edelsteine von jedem der ersten **zwei** Stapel zu holen.\n\n![](<https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png>)\nVerwende diese Blöcke.\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n  </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title name=\"DIR\">moveForward</title>\n                  </block>\n                  \n \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n    <title name=\"TIMES\">2</title>\n  </block>\n\n\n\n</xml>",
-          "courseD_collector_debugging_challenge2_b": "Als nächstes sammele die restlichen Edelsteine in dieser Reihe ein. \n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)\nFüge diese Blöcke zu deinem Programm hinzu.\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>",
+          "courseD_collector_debugging_challenge2_a": "Beginne damit, nur **zwei** Edelsteine von jedem der ersten **zwei** Stapel zu holen.\n\n![](<https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png>)\nVerwende diese Blöcke.\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n  </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title name=\"DIR\">moveForward</title>\n                  </block>\n                  \n \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n    <title name=\"TIMES\">2</title>\n  </block>\n\n</xml>",
+          "courseD_collector_debugging_challenge2_b": "Als nächstes sammele die restlichen Edelsteine in dieser Reihe ein. \n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)\nFüge diese Blöcke zu deinem Programm hinzu.\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n\n        </statement>\n      </block>\n\n</xml>",
           "courseD_collector_debugging_challenge2_c": "Sammele schließlich den verbleibenden Schatz ein. Füge diese Blöcke zu deinem Programm hinzu.\n\n[blockly block][1]",
           "courseD_collector_debugging_challenge2_d": "Hier ist die vollständige Lösung für dieses Rätsel.\n\n[blockly block][1]"
         },
@@ -6404,11 +6404,11 @@
         },
         "courseD_iceage_loops1_2019": {
           "courseD_iceage_loops1_a": "Vorsicht bei gebrochenem Eis! Scrat fällt gleich durch!",
-          "courseD_iceage_loops1_b": "Du musst diesen Block benutzen:\n\n[blockly block][0]"
+          "courseD_iceage_loops1_b": "Du musst diesen Block benutzen:\n\n<xml><block type=\"maze_moveForward\"/></xml>"
         },
         "courseD_iceage_loops1_2020": {
           "courseD_iceage_loops1_a": "Vorsicht bei gebrochenem Eis! Scrat fällt gleich durch!",
-          "courseD_iceage_loops1_b": "Du musst diesen Block benutzen:\n\n[blockly block][0]"
+          "courseD_iceage_loops1_b": "Du musst diesen Block benutzen:\n\n<xml><block type=\"maze_moveForward\"/></xml>"
         },
         "courseD_iceage_loops2": {
           "courseD_iceage_loops2_a": "Teile dieses Rätsel auf in zwei Teile; eins vor der Ecke, und noch eins nach der Ecke.",
@@ -6430,11 +6430,11 @@
           "courseB_iceage_loops3_b": "Um den Code zu wiederholen, ziehe einen `wiederhole`-Baustein auf die Arbeitsfläche und setze dann den zu wiederholenden Block hinein."
         },
         "courseD_iceage_loops3_2019": {
-          "courseB_iceage_loops3_a": "Benutze diesen neuen Block!\n\n [blockly block][0]",
+          "courseB_iceage_loops3_a": "Benutze diesen neuen Block!\n\n <xml><block type=\"controls_repeat_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">5</title>\n  </block></xml>",
           "courseB_iceage_loops3_b": "Um den Code zu wiederholen, ziehe einen `wiederhole`-Baustein auf die Arbeitsfläche und setze dann den zu wiederholenden Block hinein."
         },
         "courseD_iceage_loops3_2020": {
-          "courseB_iceage_loops3_a": "Benutze diesen neuen Block!\n\n [blockly block][0]",
+          "courseB_iceage_loops3_a": "Benutze diesen neuen Block!\n\n <xml><block type=\"controls_repeat_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">5</title>\n  </block></xml>",
           "courseB_iceage_loops3_b": "Um den Code zu wiederholen, ziehe einen `wiederhole`-Baustein auf die Arbeitsfläche und setze dann den zu wiederholenden Block hinein."
         },
         "courseD_iceage_loops4": {
@@ -6628,7 +6628,7 @@
           "courseC_maze_programming2_b": "Überprüfe, ob alle drei Blöcke vollständig zusammengeklickt sind. Klicke dann erneut auf \"\"Ausführen\"\"."
         },
         "courseD_maze_ramp2_2019": {
-          "courseC_maze_programming2_a": "Um einen `Vorwärts´-Block zu verwenden, ziehe ihn aus der Werkzeugkiste in den Arbeitsbereich und verbinde ihn mit dem `wenn ausgeführt`-Block.",
+          "courseC_maze_programming2_a": "Um einen `Vorwärts´-Block zu verwenden, ziehe ihn aus der Werkzeugkiste in den Arbeitsbereich und verbinde ihn mit dem`wenn ausgeführt\\`-Block.",
           "courseC_maze_programming2_b": "Überprüfe, ob alle drei Blöcke vollständig zusammengeklickt sind. Klicke dann erneut auf \"\"Ausführen\"\"."
         },
         "courseD_maze_ramp2_2020": {
@@ -7042,8 +7042,8 @@
         },
         "courseE_artist_functions2_copy": {
           "courseD_artist_functions2_b": "Die Funktion, die du schreibst, sollte nicht dein ganzes Programm enthalten, sondern nur den Teil, der ein Quadrat mit 100 Pixel langen Seiten zeichnet.",
-          "courseD_artist_functions2_c": "Verwende den grünen Baustein `ein Quadrat zeichnen`, um deine Funktion unter dem Baustein `wenn ausgeführt wird` aufzurufen. Sonst wird der Code in deiner Funktion nicht ausgeführt. \n\n[blockly block][0]",
-          "courseD_artist_functions2_a": "Dein Programm sollte: \n\n- die Funktion verwenden \n- um 100 + 75 Pixel vorwärts bewegen\n- die Funktion verwenden"
+          "courseD_artist_functions2_c": "Verwende den grünen Baustein `ein Quadrat zeichnen`, um deine Funktion unter dem Baustein `wenn ausgeführt wird` aufzurufen. Sonst wird der Code in deiner Funktion nicht ausgeführt. \n\n<xml><block type=\"procedures_callnoreturn\" limit=\"2\"><mutation name=\"draw a square\"/></block></xml>",
+          "courseD_artist_functions2_a": "Dein Programm sollte: \n\n-   die Funktion verwenden \n-   um 100 + 75 Pixel vorwärts bewegen\n-   die Funktion verwenden"
         },
         "courseE_artist_functions3": {
           "courseD_artist_functions3_a": "Um diese Aufgabe zu lösen, musst du nur eine Schleife hinzufügen, die den Startercode 8 Mal wiederholt. \n\nWenn du dich nicht mehr erinnern kannst, wie der Startercode aussieht, klicke oben rechts im Arbeitsbereich auf \"Neu starten\".",
@@ -8642,6 +8642,25 @@
         "iceage_warn_ice_age": {
           "iceage_warn_ice_age_a": "Du solltest nur zwei Blöcke hinzufügen müssen, um dieses Puzzle zu vervollständigen. ",
           "iceage_warn_ice_age_b": "Füge die beiden neuen Bausteine unter dem Ereignis `wenn ausgeführt wird` hinzu, damit sie unmittelbar nach dem Programmstart ausgeführt werden."
+        },
+        "courseC_video_angles": {
+          "courseD_scrat_programming6_a": "Es gibt zwei Möglichkeiten, dieses Rätsel zu lösen!",
+          "courseD_scrat_programming6_b": "Denke daran, dich zuerst zu drehen, bevor du dich bewegst, da Scrat in die falsche Richtung zeigt.",
+          "courseD_scrat_programming6_c": "Hab keine Angst, einen Fehler zu machen! Versuche weitere Blöcke hinzuzufügen und den Code auszuführen. Manchmal hilft es zu sehen was passiert, auch wenn du der Meinung bist, dass das Rätsel noch nicht gelöst ist."
+        },
+        "courseD_video_nestedLoopsArtist": {
+          "courseE_artist_ramp8_a": "Um eine Seite zu zeichnen, verwende den Block `vorwärts bewegen um 100 Pixel` und ändere die 100 in eine 200!",
+          "courseE_artist_ramp8_b": "Um 4 Seiten zu zeichnen, füge einen `um 100 Pixel vorwärts bewegen`-Baustein in eine Wiederholen-Schleife ein und achte darauf, dass die Schleife so eingestellt ist, dass 4 Mal gezeichnet wird. \n\nVergiss das anschließende Drehen nicht!",
+          "courseE_artist_ramp8_c": "Deine Schleife sollte zwei Bausteine enthalten: `vorwärts bewegen` und `um 90 Grad nach rechts drehen`.",
+          "courseD_artist_ramp12_a": "Auf welche Weise ähnelt das Dreieck einem Quadrat? Was ist hier anders?",
+          "courseD_artist_ramp12_b": "Du kannst das Dropdown-Menü auf den `Drehblöcken` benutzen, um zu sehen, welchen Winkel du brauchst!",
+          "courseD_artist_ramp12_c": "Um alle Seiten zu zeichnen, brauchst du eine Vorwärtsbewegung um 100 Pixel und dann eine 120 Grad Drehung nach rechts. Wie viele Seiten musst du zeichnen?"
+        },
+        "courseE_bee_ramp14": {
+          "courseE_farmer_ramp12d_b": "Um dieses Rätsel zu lösen, musst du noch deine 'bis'-Schleife und deine 'während'-Schleife in eine 'wiederholen'-Schleife stecken!"
+        },
+        "courseE_farmer_predict2": {
+          "courseE_farmer_ramp12e_b": "Die Lösung zu diesem Rätsel wird sehr nach der Lösung zum letzten Rätsel aussehen, aber drehend in der andere Richtung."
         }
       }
     }

@@ -31,6 +31,20 @@ hu:
   africa_campaign_date_full: Október 1-31.
   africa_campaign_date_year: '2017'
   africa_campaign_date_full_year: 2020. október 1-31.
+  hoc2020_header: Learn today, build a brighter tomorrow.
+  hoc2020_header_with_line_break_markdown: |-
+    Learn today,
+
+    build a brighter tomorrow.
+  social_hoc2020_cs_important: 'CS is more important than ever. Let''s build the future
+    we want. #CSforGood'
+  social_hoc2020_hoc_is_about_csforgood: 'The #HourOfCode is about #CSforGood. Learn
+    today, build a brighter tomorrow.'
+  social_hoc2020_global_movement: A Kódolás Órája egy globális kezdeményezés, mely
+    több tíz millió diákot elér. Több mint 45 nyelven érhetők el oktatóvideók minden
+    korosztálynak.
+  social_hoc2020_coming_dates: The Hour of Code is coming December 7-13, 2020. Computer
+    science is foundational for every student to learn.
   hoc2019_header: Tanulj informatikát. Változtasd meg a világot!
   hoc2019_header_line1_mobile: Tanulj informatikát.
   hoc2019_header_line2_mobile: Változtasd meg a világot!
@@ -917,7 +931,8 @@ hu:
   highlights_title: Kiemelt tartalmak
   highlights_header: Kódolás Órája kiemelt tartalmak
   highlights_description: A kedvenc pillanataink a Kódolás Órája kampányból.
-  higlights_see_more: Több fontos pillanat
+  highlights_previous: Highlights from previous years
+  highlights_see_more: See more highlights
   highlights_readmore: Továbbiak
   highlights_watchvideo: Nézd meg a videót
   highlights_facebook: Megosztás Facebookon
@@ -8481,11 +8496,11 @@ hu:
   tutorial_phidgets_name: A Phidgets Theremin with Processing
   tutorial_kcjmerry_name: Merry Micro:bits
   tutorial_modvariables_name: Investigating Variables & Block Values using Cubelets
-  tutorial_codestersmicro_name: 'Codesters: Create a Micro Ball Game'
-  tutorial_codestersdata_name: 'Codesters: Code & Graph micro:bit Data'
+  tutorial_codestersmicro_name: 'Codesters: Készíts egy Micro Ball játékot'
+  tutorial_codestersdata_name: 'Codesters: Kód & Gráf micro:bit Adat'
   tutorial_ikodexmas_name: iKode Xmas
   tutorial_rpisensehat_name: Sense HAT data logger
-  tutorial_modtraits_name: Character Traits with GoPiGo
+  tutorial_modtraits_name: Karaktervonások a GoPiGoval
   tutorial_mee_name: 'Minecraft Kódolás Órája: Az MI lehetőségei '
   tutorial_kuborobo_name: KUBO Robotics Coding Routes
   tutorial_ai-oceans_name: MI az Óceánokért
@@ -8502,9 +8517,9 @@ hu:
   tutorial_codestersbball_longdescription: Learn the basics of coding in Python while
     creating your own Basketball game. You'll learn how to add backgrounds and sprites,
     and how to use events to control the motion of sprites on the stage.
-  tutorial_scratchcartoon_longdescription: Bring some of your favorite Cartoon Network
-    characters to life by coding your own animation. Add more characters and make
-    them jump, fly, and talk.
+  tutorial_scratchcartoon_longdescription: Kelts életre néhyánat kedvenc Cartoon Network
+    karaktereid közül saját animációt programozva. Adj hozzá több karatert, és vedd
+    rá őket, hogy ugorjanak, repüljenek és beszéljenek.
   tutorial_codemonkeyjr_longdescription: In a world filled with captivating creatures
     and bright colors, 4-6 year olds will join a monkey on a mission to collect bananas
     and unlock treasure chests. All the while, they will explore and learn the basics
@@ -8551,12 +8566,12 @@ hu:
     in plain English and is easy to learn. Try it out!
   tutorial_grasshopperphoto_longdescription: Tanulj kódolni, hogy szűrőket készíthess,
     amiket különböző fényképekre illeszthetsz.
-  tutorial_tynkerpyland_longdescription: 'Part of the UN Sustainable Development Goals
-    project, this Python project will have you create your own tree-planting game. '
+  tutorial_tynkerpyland_longdescription: 'Az ENSZ Fenntartható Fejlődés Céljai projekt
+    részeként ez a Python projekt segít megalkotni a saját faültető játékod. '
   tutorial_codeitimages_longdescription: Tanuld meg hogyan programozz saját lenyűgöző
     képeket és animációkat.
-  tutorial_hyperpadenemy_longdescription: 'Learn logical thinking and programming
-    by creating a platformer game enemy AI. '
+  tutorial_hyperpadenemy_longdescription: Tanulj logikus gondolkodást és programozást
+    egy platformer játék mesterséges intelligenciájának megalkotásával.
   tutorial_tynkerpro_longdescription: 'Part of the UN Sustainable Development Goals
     project, this coding prompt shows off projects exploring issues surrounding recycling
     and reuse. Beginners can play with working projects and advanced programmers can
@@ -8567,8 +8582,8 @@ hu:
     journey to Tubrosos Castle. Learn what it's like to be a gray hat hacker by helping
     the wizard elf, Cyrena find the Crown of Knowledge. You will expose the poor security
     systems used at the castle and learn how to avoid becoming the victim of a scam.
-  tutorial_thunkableyeet_longdescription: Learn how to build two apps that will help
-    your city! Yeet!
+  tutorial_thunkableyeet_longdescription: Tanuld meg hogyan készíts két alkalmazást,
+    amik segíteni fognak a városodon! Jeee!
   tutorial_vidcodedeal_longdescription: Start coding for good by creating animations
     featuring notable women leaders and quotes that express their point of view.
   tutorial_codehsgeno_longdescription: In this hour of code, students will create
@@ -8582,10 +8597,10 @@ hu:
     project, this coding prompt shows off projects exploring the importance of forests
     to the world''s ecosystem. Readers can play with working projects and advanced
     programmers can create their own original projects. '
-  tutorial_trinketgirl_longdescription: Learn to program a big story using Python,
-    and then change it up to create your own story!
-  tutorial_rpimosquito_longdescription: Make a game where you protect people from
-    malaria by making a parrot catch mosquitoes.
+  tutorial_trinketgirl_longdescription: Tanulj meg egy nagy történetet progromozni
+    Pythonnal, majd változtasd meg, hogy megalkosd a te saját történeted!
+  tutorial_rpimosquito_longdescription: Készíts egy játékot, ahol embereket védesz
+    meg a maláriától azáltal, hogy ráveszel egy papagájt, hogy fogjon szúnyogokat.
   tutorial_tynkermars_longdescription: Explore NASA's exciting new efforts to reach
     the Moon and then Mars. Students can design their own animated mission patch,
     imagine their life as an Artemis astronaut on the Lunar Gateway, and more. Beginners
@@ -8597,11 +8612,11 @@ hu:
     fun! Students will apply design thinking concepts to investigate problems while
     developing their technological awareness, thereby honing their high-level thinking
     skills.
-  tutorial_vidcodemap_longdescription: Collect and analyze data for community engagement,
-    by coding your own community map!
-  tutorial_robotmagicfarm_longdescription: Code the FarmBot to plant seeds. Start
-    planting simple fields then add complexity.  Finish by growing art of your own
-    design.
+  tutorial_vidcodemap_longdescription: Gyűjts és elemezz adatot a közösségi elköteleződés
+    kapcsán lekódolva a saját közösségi térképedet!
+  tutorial_robotmagicfarm_longdescription: Kódold a FarmBotot, hogy ültessen magokat.
+    Kezdd azzal, hogy beültetsz egyszerű földeket, majd tedd összetettebbé. Fejezd
+    be a terved műalkotássá fejlesztésével.
   tutorial_codehstriangle_longdescription: In this hour of code, we'll explore how
     to create a simulator that will calculate the area of a triangle with dimensions
     chosen by a user. We'll program with Tracy the Turtle in Python to make this happen.
@@ -8619,10 +8634,10 @@ hu:
     E.D. gets a shock to its motherboard wiping out all its programs. It's up to you
     to program E.D. to help it through this strange alien's terrain. Are you up for
     the challenge?
-  tutorial_codingtown_longdescription: Build your own business, code and have fun.
-  tutorial_kanoart_longdescription: Use block code to draw a scene, then bring it
-    to life with animation and mouse interaction. Code your own paintbrushes, add
-    stickers, and get creative!
+  tutorial_codingtown_longdescription: Építsd fel a saját üzleted, kódolj, és élvezd.
+  tutorial_kanoart_longdescription: Használj kód blokkot, hogy megrajzolj egy képet,
+    majd keltsd életre animációval és egér interakcióval. Kódold le a saját ecsetedet,
+    adj hozzá matricákat, és légy kreatív!
   tutorial_dragonscript_longdescription: Welcome to DragonScript Arena – the programming
     strategy game and coding club. Level up your Javascript & Software Engineering
     as you play! Build your own Dragon A.I. Imagine Battlebots but with robot Dragons.
@@ -8742,10 +8757,10 @@ hu:
   tutorial_modlighthouse_longdescription: 'Students design a lighthouse based on design
     criteria and constraints.  Then students iterate on that design to make it automatic,
     and to customize its message. '
-  tutorial_spherogreen_longdescription: 'Learn how to use a counting number variable
-    to keep track of all your classrooms recycling. '
-  tutorial_ozopopstar_longdescription: 'Students will write and call functions, and
-    execute them with the Ozobot. This is the second of two lessons. '
+  tutorial_spherogreen_longdescription: 'Tanuld meg hogyan használhatod a számláló
+    változót az osztálytermi újrahasznosítás nyomonkövetéséhez. '
+  tutorial_ozopopstar_longdescription: 'A tanulók funkciókat fognak írni és előhívni,
+    majd végrehajtani őket Ozobottal. Ez a második két lecke közül. '
   tutorial_eddesign_longdescription: Introduce the key computational concepts of loops,
     nested loops and sequential order using Edison robots and the Scratch-based programming
     language EdScratch. Students can work through this lesson independently focusing

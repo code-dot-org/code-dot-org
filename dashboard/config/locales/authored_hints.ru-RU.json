@@ -1209,7 +1209,7 @@
           "courseD_bee_conditionals_challenge1_b": "В этой головоломке на любом месте может быть цветок, сота или ничего.  Это означает, что условный блок (\"если/или же\") можно повторить у каждого квадратика."
         },
         "course2_bee_conditionals_challenge2": {
-          "courseD_bee_conditionals_challenge1_b": "Как и в блоке `если на цветке` код внутри `пока нектар > 0` будет выполняться только если пчёлка на цветке. Основное отличие в том, что код внутри будет повторяться пока не останется нектара. Попробуй этот пример:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "Как и в блоке `если на цветке` код внутри `пока нектар > 0` будет выполняться только если пчёлка на цветке. Основное отличие в том, что код внутри будет повторяться пока не останется нектара. Попробуй этот пример:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "course2_collector_loops_challenge2": {
           "courseC_maze_loops_challenge2_a": "Исходный код работает отлично - если в клетке всего одно сокровище!",
@@ -1265,7 +1265,7 @@
           "courseF_bee_functions_challenge2_b": "**Решение:**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_ext\" inline=\"true\">\n        <value name=\"TIMES\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">4</title>\n          </block>\n        </value>\n        <statement name=\"DO\">\n          <block type=\"maze_untilBlocked\">\n            <statement name=\"DO\">\n              <block type=\"maze_move\">\n                <title name=\"DIR\">moveForward</title>\n                <next>\n                  <block type=\"maze_if\">\n                    <title name=\"DIR\">isPathRight</title>\n                    <statement name=\"DO\">\n                      <block type=\"procedures_callnoreturn\" id=\"function\">\n                        <mutation name=\"move and check\"/>\n                      </block>\n                    </statement>\n                  </block>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnLeft</title>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n  <block type=\"procedures_defnoreturn\" editable=\"false\" usercreated=\"true\">\n    <mutation/>\n    <title name=\"NAME\">check nectar or honey</title>\n    <statement name=\"STACK\">\n      <block type=\"bee_ifElseFlower\">\n        <title name=\"LOC\">atFlower</title>\n        <statement name=\"DO\">\n          <block type=\"bee_whileNectarAmount\">\n            <title name=\"ARG1\">nectarRemaining</title>\n            <title name=\"OP\">&gt;</title>\n            <title name=\"ARG2\">0</title>\n            <statement name=\"DO\">\n              <block type=\"maze_nectar\"/>\n            </statement>\n          </block>\n        </statement>\n        <statement name=\"ELSE\">\n          <block type=\"bee_whileNectarAmount\">\n            <title name=\"ARG1\">honeyAvailable</title>\n            <title name=\"OP\">&gt;</title>\n            <title name=\"ARG2\">0</title>\n            <statement name=\"DO\">\n              <block type=\"maze_honey\"/>\n            </statement>\n          </block>\n        </statement>\n      </block>\n    </statement>\n  </block>\n  <block type=\"procedures_defnoreturn\" deletable=\"false\" movable=\"false\" editable=\"false\">\n    <mutation/>\n    <title name=\"NAME\">move and check</title>\n    <statement name=\"STACK\">\n      <block type=\"controls_repeat_ext\" inline=\"true\">\n        <value name=\"TIMES\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">2</title>\n          </block>\n        </value>\n        <statement name=\"DO\">\n          <block type=\"procedures_callnoreturn\">\n            <mutation name=\"check nectar or honey\"/>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n                <next>\n                  <block type=\"maze_untilBlocked\">\n                    <statement name=\"DO\">\n                      <block type=\"maze_move\">\n                        <title name=\"DIR\">moveForward</title>\n                      </block>\n                    </statement>\n                    <next>\n                      <block type=\"maze_turn\">\n                        <title name=\"DIR\">turnRight</title>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </statement>\n  </block>\n</xml>"
         },
         "course3_collector_debugging_challenge2": {
-          "courseD_collector_debugging_challenge2_b": "Затем собери оставшиеся жемчужины в этом ряду.\n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)\nДобавь эти блоки к своей программе.\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>",
+          "courseD_collector_debugging_challenge2_b": "Затем собери оставшиеся жемчужины в этом ряду.\n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)\nДобавь эти блоки к своей программе.\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n\n        </statement>\n      </block>\n\n</xml>",
           "courseD_collector_debugging_challenge2_c": "Наконец, собери остальные сокровища. Добавь эти блоки к своей программе.\n\n<xml>\n  <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>",
           "courseD_collector_debugging_challenge2_d": "Вот полное решение этой головоломки.\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">4</title>\n            <statement name=\"DO\">\n              <block type=\"controls_repeat\">\n                <title name=\"TIMES\">2</title>\n                <statement name=\"DO\">\n                  <block type=\"maze_move\">\n                    <title name=\"DIR\">moveForward</title>\n                    <next>\n                      <block type=\"controls_repeat\">\n                        <title name=\"TIMES\">2</title>\n                        <statement name=\"DO\">\n                          <block type=\"collector_collect\"/>\n                        </statement>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n                <next>\n                  <block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
@@ -5195,16 +5195,16 @@
           "courseD_bee_conditionals_challenge1_b": "В этой головоломке на любом месте может быть цветок, сота или ничего.  Это означает, что условный блок (\"если/или же\") можно повторить у каждого квадратика."
         },
         "courseD_bee_conditionals_challenge2": {
-          "courseD_bee_conditionals_challenge1_b": "Совсем как блоки \"если у цветка\", код внутри цикла \"пока нектар > 0\" будет выполняться только, если пчела находится у цветка. Разница состоит в том, что код внутри будет выполняться снова и снова, пока нектар не кончится.  Попробуй эту схему:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "Совсем как блоки \"если у цветка\", код внутри цикла \"пока нектар > 0\" будет выполняться только, если пчела находится у цветка. Разница состоит в том, что код внутри будет выполняться снова и снова, пока нектар не кончится.  Попробуй эту схему:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_conditionals_challenge2_2018": {
-          "courseD_bee_conditionals_challenge1_b": "Совсем как блоки \"если у цветка\", код внутри цикла \"пока нектар > 0\" будет выполняться только, если пчела находится у цветка. Разница состоит в том, что код внутри будет выполняться снова и снова, пока нектар не кончится.  Попробуй эту схему:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "Совсем как блоки \"если у цветка\", код внутри цикла \"пока нектар > 0\" будет выполняться только, если пчела находится у цветка. Разница состоит в том, что код внутри будет выполняться снова и снова, пока нектар не кончится.  Попробуй эту схему:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_conditionals_challenge2_2019": {
-          "courseD_bee_conditionals_challenge1_b": "Совсем как блоки \"если у цветка\", код внутри цикла \"пока нектар > 0\" будет выполняться только, если пчела находится у цветка. Разница состоит в том, что код внутри будет выполняться снова и снова, пока нектар не кончится.  Попробуй эту схему:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "Совсем как блоки \"если у цветка\", код внутри цикла \"пока нектар > 0\" будет выполняться только, если пчела находится у цветка. Разница состоит в том, что код внутри будет выполняться снова и снова, пока нектар не кончится.  Попробуй эту схему:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_conditionals_challenge2_2020": {
-          "courseD_bee_conditionals_challenge1_b": "Совсем как блоки \"если у цветка\", код внутри цикла \"пока нектар > 0\" будет выполняться только, если пчела находится у цветка. Разница состоит в том, что код внутри будет выполняться снова и снова, пока нектар не кончится.  Попробуй эту схему:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "Совсем как блоки \"если у цветка\", код внутри цикла \"пока нектар > 0\" будет выполняться только, если пчела находится у цветка. Разница состоит в том, что код внутри будет выполняться снова и снова, пока нектар не кончится.  Попробуй эту схему:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_debugging_challenge1": {
           "courseD_bee_debugging_challenge1_a": "Почему первая половина этой программы работает? Подумай, почему пчеле приходится двигаться назад. Сколько нектара собирает пчела всякий раз, как переползает через цветок?",
@@ -5389,8 +5389,8 @@
           "courseD_collector_debugging9_b": "Догадайся, как решить эту задачу, а затем двигайся шаг за шагом, чтобы подогнать код под то, что у тебя в голове."
         },
         "courseD_collector_debugging_challenge2": {
-          "courseD_collector_debugging_challenge2_a": "Начни с того, чтобы собрать всего **две** жемчужины из каждой из первых **двух** груд.\n\n![](<https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png>)\nИспользуй эти блоки.\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n  </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title name=\"DIR\">moveForward</title>\n                  </block>\n                  \n \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n    <title name=\"TIMES\">2</title>\n  </block>\n\n\n\n</xml>",
-          "courseD_collector_debugging_challenge2_b": "Затем собери оставшиеся жемчужины в этом ряду.\n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)\nДобавь эти блоки к своей программе.\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>",
+          "courseD_collector_debugging_challenge2_a": "Начни с того, чтобы собрать всего **две** жемчужины из каждой из первых **двух** груд.\n\n![](<https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png>)\nИспользуй эти блоки.\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n  </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title name=\"DIR\">moveForward</title>\n                  </block>\n                  \n \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n    <title name=\"TIMES\">2</title>\n  </block>\n\n</xml>",
+          "courseD_collector_debugging_challenge2_b": "Затем собери оставшиеся жемчужины в этом ряду.\n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)\nДобавь эти блоки к своей программе.\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n\n        </statement>\n      </block>\n\n</xml>",
           "courseD_collector_debugging_challenge2_c": "Наконец, собери остальные сокровища. Добавь эти блоки к своей программе.\n\n<xml>\n  <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>",
           "courseD_collector_debugging_challenge2_d": "Вот полное решение этой головоломки.\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">4</title>\n            <statement name=\"DO\">\n              <block type=\"controls_repeat\">\n                <title name=\"TIMES\">2</title>\n                <statement name=\"DO\">\n                  <block type=\"maze_move\">\n                    <title name=\"DIR\">moveForward</title>\n                    <next>\n                      <block type=\"controls_repeat\">\n                        <title name=\"TIMES\">2</title>\n                        <statement name=\"DO\">\n                          <block type=\"collector_collect\"/>\n                        </statement>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n                <next>\n                  <block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
@@ -6519,7 +6519,8 @@
           "courseE_bee_concept3a_c": "Есть три группы цветов, поэтому твой внешний цикл повтора должен повториться три раза."
         },
         "courseE_bee_concept3_2018": {
-          "courseE_bee_concept3a_b": "Если не сможешь догадаться, куда поместить циклы, попробуй написать код шаг за шагом и найти повторяющиеся действия."
+          "courseE_bee_concept3a_b": "Если не сможешь догадаться, куда поместить циклы, попробуй написать код шаг за шагом и найти повторяющиеся действия.",
+          "courseE_bee_concept3a_a": "Чтобы решить эту головоломку, попробуй использовать вложенные циклы \"повторить\" или \"пока\"."
         },
         "courseE_bee_concept4": {
           "courseE_bee_concept4_a": "Здесь тебе действительно пригодится оператор \"если/или же\".",
@@ -8575,6 +8576,83 @@
         },
         "New Minecraft Hero Project": {
           "MC_HOC_2017_13_Cole_a": "Попробуйте заставить Агента построить несколько мостов, чтобы Алекс или Стив могли ходить по краям карты."
+        },
+        "comment_intro_maze_2018": {
+          "courseC_maze_programming4_a": "Комментарии также полезны, если другие люди попытаются прочитать твой код.",
+          "courseC_maze_programming4_b": "Добавь комментарий при смене направления: что бы произошло, если бы ты повернул в другую сторону?"
+        },
+        "courseC_video_angles": {
+          "courseD_scrat_programming6_a": "Эту головоломку можно решить двумя способами!",
+          "courseD_scrat_programming6_b": "Не забудь сначала повернуть прежде, чем переместиться, поскольку Скрат стоит лицом не в ту сторону.",
+          "courseD_scrat_programming6_c": "Не бойся допустить ошибку! Добавляй блоки, запускай код и смотри, что получится, даже если не уверен, что уже решил головоломку."
+        },
+        "courseD_video_nestedLoopsArtist": {
+          "courseE_artist_ramp8_a": "Чтобы нарисовать сторону, используй блок \"двигаться вперед на 100 точек\" и поменяй 100 на 200.",
+          "courseE_artist_ramp8_b": "Чтобы нарисовать 4 стороны, вставь блок \"двигаться вперед на 100 точек\" внутрь цикла повтора и убедись, что цикл установлен на то, чтобы рисовать 4 раза.\n\nНе забудь затем поворачивать!",
+          "courseE_artist_ramp8_c": "Внутри цикла должны быть два блока: \"двигаться вперед\" и \"повернуть направо на 90 градусов\".",
+          "courseD_artist_ramp12_a": "Чем это похоже на квадрат?  А в чем отличия?",
+          "courseD_artist_ramp12_b": "Чтобы понять, какой угол тебе нужен, открой выпадающее меню на блоках \"повернуть\"!",
+          "courseD_artist_ramp12_c": "Чтобы нарисовать любую сторону, тебе потребуется переместиться вперед на 100 точек, а затем повернуть направо на 120 градусов. Сколько сторон тебе потребуется нарисовать?"
+        },
+        "courseE_bee_ramp14": {
+          "courseE_farmer_ramp12d_b": "Чтобы решить эту головоломку, тебе также нужно будет поместить свои циклы \"до тех пор, пока не\" и \"пока\" внутри цикла \"повторить\"!"
+        },
+        "courseE_farmer_predict2": {
+          "courseE_farmer_ramp12e_b": "Решение этой головоломки будет во многом напоминать решение предыдущей, но с поворотом в другом направлении."
+        },
+        "courseE_farmer_ramp11b": {
+          "courseE_farmer_ramp11b_a": "Для сокращения своего кода ты можешь вложить свой цикл \"пока\" внутрь цикла \"повторить\"."
+        },
+        "courseE_farmer_ramp11b_2018": {
+          "courseE_farmer_ramp11b_a": "Для сокращения своего кода ты можешь вложить свой цикл \"пока\" внутрь цикла \"повторить\"."
+        },
+        "courseE_farmer_ramp11b_2019": {
+          "courseE_farmer_ramp11b_a": "Для сокращения своего кода ты можешь вложить свой цикл \"пока\" внутрь цикла \"повторить\"."
+        },
+        "courseE_farmer_ramp11b_2020": {
+          "courseE_farmer_ramp11b_a": "Для сокращения своего кода ты можешь вложить свой цикл \"пока\" внутрь цикла \"повторить\"."
+        },
+        "courseE_farmer_ramp12_forswap": {
+          "courseE_farmer_ramp12_b": "Тебе также нужно будет использовать цикл \"повторить\" вне всего этого, чтобы сообщить жнице, сколько раз нужно пройти вперед и собрать салат."
+        },
+        "courseE_farmer_ramp12_forswap_2018": {
+          "courseE_farmer_ramp12_b": "Тебе также нужно будет использовать цикл \"повторить\" вне всего этого, чтобы сообщить жнице, сколько раз нужно пройти вперед и собрать салат."
+        },
+        "courseE_farmer_ramp12_forswap_2019": {
+          "courseE_farmer_ramp12_b": "Тебе также нужно будет использовать цикл \"повторить\" вне всего этого, чтобы сообщить жнице, сколько раз нужно пройти вперед и собрать салат."
+        },
+        "courseE_farmer_ramp12_forswap_2020": {
+          "courseE_farmer_ramp12_b": "Тебе также нужно будет использовать цикл \"повторить\" вне всего этого, чтобы сообщить жнице, сколько раз нужно пройти вперед и собрать салат."
+        },
+        "courseE_farmer_ramp12c": {
+          "courseE_farmer_ramp12b_b": "Тебе также нужно будет использовать сначала цикл \"до тех пор, пока не\", а затем один раз цикл \"пока\", когда доберешься до салата."
+        },
+        "courseE_farmer_ramp12c_2018": {
+          "courseE_farmer_ramp12b_b": "Тебе также нужно будет использовать сначала цикл \"до тех пор, пока не\", а затем один раз цикл \"пока\", когда доберешься до салата."
+        },
+        "courseE_farmer_ramp12c_2019": {
+          "courseE_farmer_ramp12b_b": "Тебе также нужно будет использовать сначала цикл \"до тех пор, пока не\", а затем один раз цикл \"пока\", когда доберешься до салата."
+        },
+        "courseE_farmer_ramp12c_2020": {
+          "courseE_farmer_ramp12b_b": "Тебе также нужно будет использовать сначала цикл \"до тех пор, пока не\", а затем один раз цикл \"пока\", когда доберешься до салата."
+        },
+        "courseE_farmer_ramp12d_2018": {
+          "courseE_farmer_ramp12d_b": "Чтобы решить эту головоломку, тебе также нужно будет поместить свои циклы \"до тех пор, пока не\" и \"пока\" внутри цикла \"повторить\"!"
+        },
+        "courseE_farmer_ramp12d_2019": {
+          "courseE_farmer_ramp12d_b": "Чтобы решить эту головоломку, тебе также нужно будет поместить свои циклы \"до тех пор, пока не\" и \"пока\" внутри цикла \"повторить\"!"
+        },
+        "courseE_farmer_ramp12d_2020": {
+          "courseE_farmer_ramp12d_b": "Чтобы решить эту головоломку, тебе также нужно будет поместить свои циклы \"до тех пор, пока не\" и \"пока\" внутри цикла \"повторить\"!"
+        },
+        "courseE_farmer_ramp12e_2018": {
+          "courseE_farmer_ramp12e_b": "Решение этой головоломки будет во многом напоминать решение предыдущей, но с поворотом в другом направлении."
+        },
+        "courseE_farmer_ramp12e_2019": {
+          "courseE_farmer_ramp12e_b": "Решение этой головоломки будет во многом напоминать решение предыдущей, но с поворотом в другом направлении."
+        },
+        "courseE_farmer_ramp12e_2020": {
+          "courseE_farmer_ramp12e_b": "Решение этой головоломки будет во многом напоминать решение предыдущей, но с поворотом в другом направлении."
         }
       }
     }

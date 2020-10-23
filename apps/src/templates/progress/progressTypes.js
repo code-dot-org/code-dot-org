@@ -9,6 +9,7 @@ export const levelType = PropTypes.shape({
   levelNumber: PropTypes.number,
   isCurrentLevel: PropTypes.bool,
   isConceptLevel: PropTypes.bool,
+  kind: PropTypes.string,
   sublevels: PropTypes.arrayOf(PropTypes.object)
 });
 

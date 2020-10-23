@@ -29,6 +29,20 @@ nn:
   africa_campaign_date_full: October 1-31
   africa_campaign_date_year: '2017'
   africa_campaign_date_full_year: October 1-31, 2020
+  hoc2020_header: Learn today, build a brighter tomorrow.
+  hoc2020_header_with_line_break_markdown: |-
+    Learn today,
+
+    build a brighter tomorrow.
+  social_hoc2020_cs_important: 'CS is more important than ever. Let''s build the future
+    we want. #CSforGood'
+  social_hoc2020_hoc_is_about_csforgood: 'The #HourOfCode is about #CSforGood. Learn
+    today, build a brighter tomorrow.'
+  social_hoc2020_global_movement: Kodetimen er ei verdensomsfattande rørsle som når
+    ut til titalls millionar elevar. Læringsopplegg på ein time fins på over 45 språk
+    og passar folk i alle aldrar.
+  social_hoc2020_coming_dates: The Hour of Code is coming December 7-13, 2020. Computer
+    science is foundational for every student to learn.
   hoc2019_header: Lær deg programmering. Så kan du endre verda.
   hoc2019_header_line1_mobile: Lær deg programmering.
   hoc2019_header_line2_mobile: Endre verda.
@@ -892,7 +906,8 @@ nn:
   highlights_title: Høgdepunkt
   highlights_header: Kodetimen sine høgdepunkt
   highlights_description: Nokre av våre favorittaugneblink frå Kodetimen.
-  higlights_see_more: Sjå fleire høgdepunkt
+  highlights_previous: Highlights from previous years
+  highlights_see_more: See more highlights
   highlights_readmore: Les meir
   highlights_watchvideo: Sjå videoen
   highlights_facebook: Del på Facebook
