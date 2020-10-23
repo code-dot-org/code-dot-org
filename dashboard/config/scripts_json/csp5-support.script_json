@@ -6,8 +6,8 @@
     "login_required": false,
     "properties": {
       "professional_learning_course": "CSP Support",
-      "peer_reviews_to_complete": 4,
-      "student_detail_progress_view": true
+      "peer_reviews_to_complete": 0,
+      "student_detail_progress_view": "on"
     },
     "new_name": null,
     "family_name": null,
