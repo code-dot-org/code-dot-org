@@ -44,9 +44,14 @@ Feature: Using the Lesson Edit Page
     When execute JavaScript expression "$('.uitest-open-add-level-button').simulate('mousedown')"
     And I wait until element "h2" contains text "Add Levels"
     And element "#add-level-type" is visible
+    # If the next step fails, we should consider replacing "Artist" with any other
+    # level type which does not appear in the initial view, here and below.
+    And element "td" does not contain text "Artist"
     And I select the "Artist" option in dropdown "add-level-type"
     And element ".fa-search" is visible
     And I press ".fa-search" using jQuery
+    # We will know the search has completed after the following step, because we
+    # confirmed earlier that there were no Artist levels in the initial view.
     And I wait until element "td" contains text "Artist"
     And element ".fa-plus" is visible
     And I press the first ".fa-plus" element
