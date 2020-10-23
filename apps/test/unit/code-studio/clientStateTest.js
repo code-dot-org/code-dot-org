@@ -3,6 +3,8 @@
 var assert = require('assert');
 var state = require('@cdo/apps/code-studio/clientState');
 var chai = require('chai');
+import sinon from 'sinon';
+import * as redux from '@cdo/apps/redux';
 
 chai.should();
 
@@ -77,24 +79,16 @@ describe('clientState#trackLines', function() {
     state.trackLines(true, -10);
     state.lines().should.equal(10);
   });
-});
 
-describe('clientState#queryParams', function() {
-  it('parses query params', function() {
-    window.history.replaceState('', '', '?foo=1&bar=2');
-
-    var params = state.queryParams();
-    params.foo.should.equal('1');
-    params.bar.should.equal('2');
-
-    state.queryParams('foo').should.equal('1');
-    state.queryParams('bar').should.equal('2');
-  });
-});
-
-describe('clientState#hasSeenVideo/hasSeenCallout', function() {
-  beforeEach(function() {
-    state.reset();
+  it('does not track line counts when the DB is managing tracking', function() {
+    sinon.stub(redux, 'getStore').returns({
+      getState: () => {
+        return {progress: {usingDbProgress: true}};
+      }
+    });
+    state.trackLines(true, 10);
+    state.lines().should.equal(0);
+    redux.getStore.restore();
   });
 
   it('Does not record line counts when level progress does not have a line count', function() {
@@ -117,6 +111,25 @@ describe('clientState#hasSeenVideo/hasSeenCallout', function() {
     state.lines().should.equal(0);
     state.trackLines(true, 50);
     state.lines().should.equal(50);
+  });
+});
+
+describe('clientState#queryParams', function() {
+  it('parses query params', function() {
+    window.history.replaceState('', '', '?foo=1&bar=2');
+
+    var params = state.queryParams();
+    params.foo.should.equal('1');
+    params.bar.should.equal('2');
+
+    state.queryParams('foo').should.equal('1');
+    state.queryParams('bar').should.equal('2');
+  });
+});
+
+describe('clientState#hasSeenVideo/hasSeenCallout', function() {
+  beforeEach(function() {
+    state.reset();
   });
 
   it('records video progress', function() {
