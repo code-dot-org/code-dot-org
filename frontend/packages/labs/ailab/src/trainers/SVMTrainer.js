@@ -26,6 +26,7 @@ export default class SVMTrainer {
     const converter = {};
     converter[key[Object.keys(key)[0]]] = -1;
     converter[key[Object.keys(key)[1]]] = 1;
+    this.converter = converter;
     return converter[labelOption];
   };
 
