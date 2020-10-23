@@ -11,7 +11,9 @@ class TrainModel extends Component {
     labelColumn: PropTypes.string,
     setShowPredict: PropTypes.func.isRequired,
     selectedTrainer: PropTypes.string,
-    accuracy: PropTypes.string
+    accuracy: PropTypes.string,
+    accuracyCheckLabels: PropTypes.array,
+    accuracyCheckPredictedLabels: PropTypes.array
   };
 
   constructor(props) {
@@ -53,9 +55,27 @@ class TrainModel extends Component {
                 <div>
                   <p>
                     10% of the training data was reserved to test the accuracy
-                    of the newly trained model. The calculated accuracy of this
-                    model is:
+                    of the newly trained model.
                   </p>
+                  <div>
+                    <table>
+                      <tr>
+                        <th>Expected</th>
+                        <th>Predicted</th>
+                      </tr>
+                      {this.props.accuracyCheckLabels.map((label, index) => {
+                        return (
+                          <tr>
+                            <td>{label}</td>
+                            <td>
+                              {this.props.accuracyCheckPredictedLabels[index]}
+                            </td>
+                          </tr>
+                        );
+                      })}
+                    </table>
+                  </div>
+                  <h3>The calculated accuracy of this model is:</h3>
                   {this.props.accuracy}%
                 </div>
               )}
@@ -71,7 +91,9 @@ export default connect(
     selectedFeatures: state.selectedFeatures,
     labelColumn: state.labelColumn,
     selectedTrainer: state.selectedTrainer,
-    accuracy: getAccuracy(state)
+    accuracy: getAccuracy(state),
+    accuracyCheckLabels: state.accuracyCheckLabels,
+    accuracyCheckPredictedLabels: state.accuracyCheckPredictedLabels
   }),
   dispatch => ({
     setShowPredict(showPredict) {

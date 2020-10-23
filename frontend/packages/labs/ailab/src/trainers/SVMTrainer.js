@@ -3,8 +3,8 @@
 
 /* eslint-env node */
 const svmjs = require("svm");
-import { store } from "./index.js";
-import { setPrediction, setAccuracyCheckPredictedLabels } from "./redux";
+import { store } from "../index.js";
+import { setPrediction, setAccuracyCheckPredictedLabels } from "../redux";
 
 export default class SVMTrainer {
   constructor() {
