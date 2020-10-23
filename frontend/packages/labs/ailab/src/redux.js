@@ -354,6 +354,32 @@ export function getAccuracy(state) {
   return ((numCorrect / numPredictedLabels) * 100).toFixed(2);
 }
 
+export function readyToTrain(state) {
+  return !Object.values(readyToTrainErrors(state)).includes(true);
+}
+
+export function readyToTrainErrors(state) {
+  const readyToTrainErrors = {};
+  readyToTrainErrors["noFeature"] = state.selectedFeatures.length === 0;
+  readyToTrainErrors["noLabel"] = !state.labelColumn;
+  readyToTrainErrors["noAlgorithm"] = !state.selectedTrainer;
+  readyToTrainErrors["labelFeatureDupe"] = state.selectedFeatures.includes(
+    state.labelColumn
+  );
+
+  if (state.selectedTrainer && state.labelColumn) {
+    const trainerLabelType = availableTrainers[state.selectedTrainer].labelType;
+    const labelDatatype = state.columnsByDataType[state.labelColumn];
+    const badLabelAlgorithmCombo = !trainerLabelType === labelDatatype;
+    readyToTrainErrors["badLabelAlgorithmCombo"] = badLabelAlgorithmCombo;
+    readyToTrainErrors["labelDatatype"] = labelDatatype;
+    readyToTrainErrors["trainerMltype"] =
+      availableTrainers[state.selectedTrainer].mlType;
+  }
+
+  return readyToTrainErrors;
+}
+
 export const ColumnTypes = {
   CATEGORICAL: "categorical",
   CONTINUOUS: "continuous",
