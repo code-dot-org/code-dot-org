@@ -6,7 +6,7 @@
 #  lesson_id   :integer          not null
 #  seeding_key :string(255)      not null
 #  position    :integer          not null
-#  properties  :string(255)
+#  properties  :text(65535)
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
 #

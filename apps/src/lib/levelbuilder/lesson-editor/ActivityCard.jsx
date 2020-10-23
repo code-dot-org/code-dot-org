@@ -12,7 +12,6 @@ import {
   removeActivity,
   updateActivityField
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
-import ReactDOM from 'react-dom';
 import {activityShape} from '@cdo/apps/lib/levelbuilder/shapes';
 
 const styles = {
@@ -71,10 +70,12 @@ class ActivityCard extends Component {
   static propTypes = {
     activity: activityShape,
     activitiesCount: PropTypes.number,
-    setActivitySectionMetrics: PropTypes.func.isRequired,
-    setTargetActivitySection: PropTypes.func.isRequired,
+    setActivitySectionRef: PropTypes.func.isRequired,
+    updateTargetActivitySection: PropTypes.func.isRequired,
+    targetActivityPos: PropTypes.number,
     targetActivitySectionPos: PropTypes.number,
-    activitySectionMetrics: PropTypes.object.isRequired,
+    activitySectionMetrics: PropTypes.array.isRequired,
+    updateActivitySectionMetrics: PropTypes.func.isRequired,
 
     //redux
     addActivitySection: PropTypes.func,
@@ -143,7 +144,12 @@ class ActivityCard extends Component {
   };
 
   render() {
-    const {activity} = this.props;
+    const {
+      activity,
+      setActivitySectionRef,
+      updateTargetActivitySection,
+      updateActivitySectionMetrics
+    } = this.props;
 
     return (
       <div className="uitest-activity-card">
@@ -196,20 +202,14 @@ class ActivityCard extends Component {
               activityPosition={activity.position}
               activitySectionsCount={activity.activitySections.length}
               activitiesCount={this.props.activitiesCount}
-              ref={activitySectionCard => {
-                if (activitySectionCard) {
-                  const metrics = ReactDOM.findDOMNode(
-                    activitySectionCard
-                  ).getBoundingClientRect();
-                  this.props.setActivitySectionMetrics(
-                    metrics,
-                    section.position
-                  );
-                }
+              ref={ref => {
+                setActivitySectionRef(ref, activity.position, section.position);
               }}
               activitySectionMetrics={this.props.activitySectionMetrics}
-              setTargetActivitySection={this.props.setTargetActivitySection}
+              updateTargetActivitySection={updateTargetActivitySection}
+              targetActivityPos={this.props.targetActivityPos}
               targetActivitySectionPos={this.props.targetActivitySectionPos}
+              updateActivitySectionMetrics={updateActivitySectionMetrics}
             />
           ))}
           <button
