@@ -69,7 +69,6 @@ export default class RFTrainer {
 
   batchPredict(accuracyCheckExamples) {
     const predictedLabels = this.rfregression.predict(accuracyCheckExamples);
-    console.log("predictedLabels", predictedLabels);
     store.dispatch(setAccuracyCheckPredictedLabels(predictedLabels));
   }
 

@@ -30,19 +30,19 @@ export const availableTrainers = {
     supportedFeatureTypes: [ColumnTypes.CATEGORICAL, ColumnTypes.CONTINUOUS],
     labelType: ColumnTypes.CATEGORICAL
   },
-  knn: {
-    name: "KNN",
+  knnClassify: {
+    name: "KNN Classifier",
     description:
-      "Uses the K-Nearest Neighbor algorithm to classify an example as one of N options. K is currently set to 2, but this is customizable.",
+      "Uses the K-Nearest Neighbor algorithm to classify an example as one of N options.",
     mlType: MLTypes.CLASSIFICATION,
     binary: false,
     supportedFeatureTypes: [ColumnTypes.CATEGORICAL, ColumnTypes.CONTINUOUS],
     labelType: ColumnTypes.CATEGORICAL
   },
-  randomForest: {
-    name: "Random Forest",
+  knnRegress: {
+    name: "KNN Regression",
     description:
-      "Uses Random Forest ensemble learning to predict a continuous data label.",
+      "Uses the K-Nearest Neighbor algorithm to predict a floating point label.",
     mlType: MLTypes.REGRESSION,
     binary: false,
     supportedFeatureTypes: [ColumnTypes.CATEGORICAL, ColumnTypes.CONTINUOUS],
@@ -215,11 +215,11 @@ const init = () => {
     case "binarySvm":
       trainer = new SVMTrainer();
       break;
-    case "knn":
+    case "knnClassify":
       trainer = new KNNTrainer();
       break;
-    case "randomForest":
-      trainer = new RFTrainer();
+    case "knnRegress":
+      trainer = new KNNTrainer();
       break;
   }
   trainingState.trainer = trainer;
