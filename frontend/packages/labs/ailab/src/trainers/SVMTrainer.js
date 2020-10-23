@@ -4,7 +4,7 @@
 /* eslint-env node */
 const svmjs = require("svm");
 import { store } from "../index.js";
-import { setPrediction } from "../redux";
+import { setPrediction, setAccuracyCheckPredictedLabels } from "../redux";
 
 export default class SVMTrainer {
   constructor() {
@@ -13,6 +13,7 @@ export default class SVMTrainer {
 
   initTrainingState() {
     this.svm = new svmjs.SVM();
+    this.converter = {};
   }
 
   /* Builds a hash that maps the options in the label column to -1 and 1,
@@ -23,9 +24,15 @@ export default class SVMTrainer {
   */
   convertLabel = (labelOption, key) => {
     const converter = {};
-    converter[key[0]] = -1;
-    converter[key[1]] = 1;
+    converter[key[Object.keys(key)[0]]] = -1;
+    converter[key[Object.keys(key)[1]]] = 1;
     return converter[labelOption];
+  };
+
+  convertPredictedLabel = predictedLabel => {
+    return Object.keys(this.converter).find(
+      key => this.converter[key] === predictedLabel
+    );
   };
 
   startTraining() {
@@ -39,10 +46,19 @@ export default class SVMTrainer {
       this.convertLabel(labelOption, state.featureNumberKey[state.labelColumn])
     );
     this.train(trainingExamples, trainingLabels);
+    this.batchPredict(state.accuracyCheckExamples);
   }
 
   train(trainingExamples, trainingLabels) {
     this.svm.train(trainingExamples, trainingLabels);
+  }
+
+  batchPredict(accuracyCheckExamples) {
+    const predictedLabels = this.svm.predict(accuracyCheckExamples);
+    const convertedPredictedLabels = predictedLabels.map(predictedLabel =>
+      this.convertPredictedLabel(predictedLabel)
+    );
+    store.dispatch(setAccuracyCheckPredictedLabels(convertedPredictedLabels));
   }
 
   predict(testValues) {
