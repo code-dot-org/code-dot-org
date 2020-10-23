@@ -8,7 +8,7 @@ Do you need to create a slide deck or one-pager to advocate for computer science
 
 ## Code.org Policy Resources
 * See [state-by-state data](https://docs.google.com/spreadsheets/d/e/2PACX-1vSntgonHS7gQ-QI7hcwNq0ssLt99IcwoUZMRZ2uksOkdxlvPi5yuY3GjdxzfELwaOZC4eZoLLnhsSxE/pubhtml) on our 9 model policies for computer science education.
-* Code.org partnered with CSTA and ECEP to create the [2019 State of Computer Science Education](https://advocacy.code.org/2019_state_of_cs.pdf) report on state-level policies that support equitable K-12 computer science education. You can also view the 2018 report [here](https://code.org/files/2018_state_of_cs.pdf), and the 2017 report (authored by Code.org, MassCAN, EDC, ECEP, SageFox, and ECS) [here](http://code.org/files/State_of_the_states.pdf). The 2019 report found that states who adopt more state computer science policies show greater gender diversity in AP computer science exam-taking.
+* Code.org partnered with CSTA and ECEP to create the annual [State of Computer Science Education](https://advocacy.code.org/stateofcs) report on state-level policies that support equitable K-12 computer science education and an analysis of implementation and participation data. You can download the reports from 2017-2020. The 2020 report found that states who adopt more state computer science policies show greater gender diversity in AP computer science exam-taking.
 * [Computer science and ESSA](http://code.org/files/CS_and_ESSA.pdf): Read our recommendations for how states can add computer science to their state ESSA plans.
 * Download a [master slide deck](https://docs.google.com/presentation/d/1SUGh9QdyXoXPepD1vC5YXRnicxp-th_yWX8dNM_vywc/edit?usp=sharing) that you can use to create your own presentations.
 
@@ -37,6 +37,7 @@ Do you need to create a slide deck or one-pager to advocate for computer science
 
 ### Diversity in computer science
 
+* We compiled and analyzed data on student participation in CS by race/ethnicity and gender (in Code.org's courses, in AP CS, and in bachelor's degrees earned in CS). View our summary [here](https://docs.google.com/document/d/e/2PACX-1vSUfAnF829USdnUbiQ_RZNJ0xM2SZypTsGTuBSGpzsAez9B2k092UHlVYFufIfrG9Pd3a8HIEZ9xVYx/pub).
 * Women who learn computer science in high school are   [10 times](http://codeorg.tumblr.com/post/143007230537/computer-science-the-impact-of-k-12-on-university) more likely to study it in university.
 * When computer science counts for graduation, [diversity increases] (https://medium.com/@codeorg/does-making-cs-count-make-a-difference-7ab5ca6b8407).
 * The [underrepresentation of students from marginalized racial and ethnic groups in computer science isn't about lack of interest](https://medium.com/@codeorg/with-code-orgs-6d43964e3fff) but lack of access.
