@@ -24,7 +24,7 @@ class LessonsController < ApplicationController
         link: @lesson.script.link,
         lessons: @lesson.script.lessons.map {|lesson| {displayName: lesson.localized_name, link: lesson_path(id: lesson.id)}}
       },
-      displayName: @lesson.localized_title,
+      displayName: @lesson.name,
       overview: @lesson.overview || '',
       announcements: @lesson.announcements,
       purpose: @lesson.purpose || '',
