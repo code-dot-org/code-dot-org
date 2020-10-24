@@ -55,8 +55,7 @@ Feature: Using the Lesson Edit Page
     And I wait until element ".uitest-level-dialog-content td" contains text "Artist"
     And element ".uitest-level-dialog-content td .fa-plus" is visible
     And I press the first ".uitest-level-dialog-content td .fa-plus" element
-    # TODO: change to not use jquery once button is not obscured
-    And I press ".save-add-levels-button" using jQuery
+    And I click selector ".save-add-levels-button"
     And I wait until element "h2" does not contain text "Add Levels"
 
     # Verify lesson editor updated
