@@ -247,7 +247,6 @@ Dashboard::Application.routes.draw do
 
   resources :levels do
     collection do
-      get 'get_filters'
       get 'get_filtered_levels'
     end
     member do
