@@ -34,7 +34,7 @@ const styles = {
 export default class EditTipDialog extends Component {
   static propTypes = {
     isOpen: PropTypes.bool.isRequired,
-    tip: tipShape,
+    tip: tipShape.isRequired,
     handleConfirm: PropTypes.func.isRequired,
     handleDelete: PropTypes.func.isRequired
   };

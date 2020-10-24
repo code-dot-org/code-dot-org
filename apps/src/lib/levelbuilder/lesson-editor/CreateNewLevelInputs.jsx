@@ -12,7 +12,7 @@ const styles = {
 
 export default class CreateNewLevelInputs extends Component {
   static propTypes = {
-    levelOptions: PropTypes.array,
+    levelOptions: PropTypes.array.isRequired,
     addLevel: PropTypes.func.isRequired
   };
 

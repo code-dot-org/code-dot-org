@@ -53,7 +53,7 @@ class UnitCard extends Component {
   static propTypes = {
     // from redux
     lessonGroups: PropTypes.arrayOf(lessonGroupShape).isRequired,
-    addGroup: PropTypes.func.isRequired,
+    addGroup: PropTypes.func.isRequired.isRequired,
     levelKeyList: PropTypes.object.isRequired,
     convertGroupToUserFacing: PropTypes.func.isRequired,
     convertGroupToNonUserFacing: PropTypes.func.isRequired

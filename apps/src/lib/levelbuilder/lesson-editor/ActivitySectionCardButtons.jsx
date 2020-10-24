@@ -29,12 +29,12 @@ const styles = {
 
 class ActivitySectionCardButtons extends Component {
   static propTypes = {
-    activitySection: activitySectionShape,
-    activityPosition: PropTypes.number,
-    addTip: PropTypes.func,
-    addLevel: PropTypes.func,
-    updateTip: PropTypes.func,
-    removeTip: PropTypes.func
+    activitySection: activitySectionShape.isRequired,
+    activityPosition: PropTypes.number.isRequired,
+    addTip: PropTypes.func.isRequired,
+    addLevel: PropTypes.func.isRequired,
+    updateTip: PropTypes.func.isRequired,
+    removeTip: PropTypes.func.isRequired
   };
 
   constructor(props) {

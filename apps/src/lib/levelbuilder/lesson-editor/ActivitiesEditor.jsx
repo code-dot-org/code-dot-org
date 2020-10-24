@@ -46,8 +46,8 @@ const styles = {
 class ActivitiesEditor extends Component {
   static propTypes = {
     //redux
-    activities: PropTypes.array,
-    addActivity: PropTypes.func
+    activities: PropTypes.array.isRequired,
+    addActivity: PropTypes.func.isRequired
   };
 
   constructor(props) {
