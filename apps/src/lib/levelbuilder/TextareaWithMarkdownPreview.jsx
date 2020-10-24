@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import color from '@cdo/apps/util/color';
+import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 
 const styles = {
   wrapper: {
@@ -43,7 +44,8 @@ export default class TextareaWithMarkdownPreview extends React.Component {
     markdown: PropTypes.string,
     label: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
-    inputRows: PropTypes.number
+    inputRows: PropTypes.number,
+    helpTip: PropTypes.string
   };
 
   constructor(props) {
@@ -62,6 +64,11 @@ export default class TextareaWithMarkdownPreview extends React.Component {
     return (
       <label>
         {this.props.label}
+        {this.props.helpTip && (
+          <HelpTip>
+            <p>{this.props.helpTip}</p>
+          </HelpTip>
+        )}
         <div style={styles.wrapper}>
           <div style={styles.container}>
             <div style={{marginBottom: 5}}>Markdown:</div>
