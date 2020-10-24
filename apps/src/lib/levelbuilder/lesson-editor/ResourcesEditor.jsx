@@ -33,7 +33,7 @@ const styles = {
 
 export default class ResourcesEditor extends Component {
   static propTypes = {
-    resources: PropTypes.arrayOf(resourceShape)
+    resources: PropTypes.arrayOf(resourceShape).isRequired
   };
 
   constructor(props) {

@@ -84,10 +84,10 @@ slide or remarks as well.
 
 class ActivitySectionCard extends Component {
   static propTypes = {
-    activitySection: activitySectionShape,
-    activityPosition: PropTypes.number,
-    activitySectionsCount: PropTypes.number,
-    activitiesCount: PropTypes.number,
+    activitySection: activitySectionShape.isRequired,
+    activityPosition: PropTypes.number.isRequired,
+    activitySectionsCount: PropTypes.number.isRequired,
+    activitiesCount: PropTypes.number.isRequired,
     activitySectionMetrics: PropTypes.array.isRequired,
     updateTargetActivitySection: PropTypes.func.isRequired,
     targetActivityPos: PropTypes.number,
@@ -95,12 +95,12 @@ class ActivitySectionCard extends Component {
     updateActivitySectionMetrics: PropTypes.func.isRequired,
 
     //redux
-    moveActivitySection: PropTypes.func,
-    removeActivitySection: PropTypes.func,
-    updateActivitySectionField: PropTypes.func,
-    reorderLevel: PropTypes.func,
-    moveLevelToActivitySection: PropTypes.func,
-    addLevel: PropTypes.func
+    moveActivitySection: PropTypes.func.isRequired,
+    removeActivitySection: PropTypes.func.isRequired,
+    updateActivitySectionField: PropTypes.func.isRequired,
+    reorderLevel: PropTypes.func.isRequired,
+    moveLevelToActivitySection: PropTypes.func.isRequired,
+    addLevel: PropTypes.func.isRequired
   };
 
   /**

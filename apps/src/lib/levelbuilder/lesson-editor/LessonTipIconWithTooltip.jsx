@@ -10,7 +10,7 @@ import {tipShape} from '@cdo/apps/lib/levelbuilder/shapes';
 
 export default class LessonTipIconWithTooltip extends Component {
   static propTypes = {
-    tip: tipShape,
+    tip: tipShape.isRequired,
     onClick: PropTypes.func
   };
 
