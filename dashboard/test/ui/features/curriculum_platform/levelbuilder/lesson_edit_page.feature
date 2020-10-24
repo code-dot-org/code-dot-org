@@ -43,7 +43,7 @@ Feature: Using the Lesson Edit Page
     # TODO: use regular click instead once button responds to click events
     When execute JavaScript expression "$('.uitest-open-add-level-button').simulate('mousedown')"
     And I wait until element "h2" contains text "Add Levels"
-    And element "#add-level-type" is visible
+    And I wait until element "#add-level-type" is visible
     # If the next step fails, we should consider replacing "Artist" with any other
     # level type which does not appear in the initial view, here and below.
     And element "td" does not contain text "Artist"
