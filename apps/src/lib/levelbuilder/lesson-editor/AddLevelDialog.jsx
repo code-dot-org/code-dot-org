@@ -64,7 +64,10 @@ export default class AddLevelDialog extends Component {
         style={styles.dialog}
       >
         <h2>Add Levels</h2>
-        <div style={styles.dialogContent}>
+        <div
+          style={styles.dialogContent}
+          className="uitest-level-dialog-content"
+        >
           <AddLevelDialogTop addLevel={this.props.addLevel} />
           <div style={styles.bottomArea}>
             <h4>Levels in Progression</h4>
@@ -89,6 +92,7 @@ export default class AddLevelDialog extends Component {
             text={i18n.closeAndSave()}
             onClick={this.props.handleConfirm}
             color={Button.ButtonColor.orange}
+            className="save-add-levels-button"
           />
         </DialogFooter>
       </BaseDialog>
