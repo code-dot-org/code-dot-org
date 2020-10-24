@@ -88,9 +88,11 @@ class ActivitySectionCard extends Component {
     activityPosition: PropTypes.number,
     activitySectionsCount: PropTypes.number,
     activitiesCount: PropTypes.number,
-    activitySectionMetrics: PropTypes.object,
-    setTargetActivitySection: PropTypes.func,
+    activitySectionMetrics: PropTypes.array.isRequired,
+    updateTargetActivitySection: PropTypes.func.isRequired,
+    targetActivityPos: PropTypes.number,
     targetActivitySectionPos: PropTypes.number,
+    updateActivitySectionMetrics: PropTypes.func.isRequired,
 
     //redux
     moveActivitySection: PropTypes.func,
@@ -127,13 +129,16 @@ class ActivitySectionCard extends Component {
           return metrics.top + metrics.height / 2;
         }
       );
-      this.setState({
-        draggedLevelPos: position,
-        dragHeight: this.metrics[position].height + tokenMargin,
-        initialClientY: clientY,
-        newPosition: position,
-        startingPositions
-      });
+      this.setState(
+        {
+          draggedLevelPos: position,
+          dragHeight: this.metrics[position].height + tokenMargin,
+          initialClientY: clientY,
+          newPosition: position,
+          startingPositions
+        },
+        () => this.props.updateActivitySectionMetrics()
+      );
       window.addEventListener('selectstart', this.preventSelect);
       window.addEventListener('mousemove', this.handleDrag);
       window.addEventListener('mouseup', this.handleDragStop);
@@ -165,34 +170,20 @@ class ActivitySectionCard extends Component {
       }
     );
     this.setState({currentPositions, newPosition});
-    const targetActivitySectionPos = this.getTargetActivitySection(clientY);
-    this.props.setTargetActivitySection(targetActivitySectionPos);
-  };
-
-  // Given a clientY value of a location on the screen, find the ActivitySectionCard
-  // corresponding to that location, and return the position of the
-  // corresponding activity section within the script.
-  getTargetActivitySection = y => {
-    const {activitySectionMetrics} = this.props;
-    const activitySectionPos = Object.keys(activitySectionMetrics).find(
-      activitySectionPos => {
-        const activitySectionRect = activitySectionMetrics[activitySectionPos];
-        return (
-          y > activitySectionRect.top &&
-          y < activitySectionRect.top + activitySectionRect.height
-        );
-      }
-    );
-    return activitySectionPos ? Number(activitySectionPos) : null;
+    this.props.updateTargetActivitySection(clientY);
   };
 
   handleDragStop = () => {
     const {
       activitySection,
       activityPosition,
+      targetActivityPos,
       targetActivitySectionPos
     } = this.props;
-    if (targetActivitySectionPos === activitySection.position) {
+    if (
+      targetActivityPos === activityPosition &&
+      targetActivitySectionPos === activitySection.position
+    ) {
       // When dragging within a activitySection, reorder the level within that activitySection.
       if (this.state.draggedLevelPos !== this.state.newPosition) {
         this.props.reorderLevel(
@@ -202,16 +193,19 @@ class ActivitySectionCard extends Component {
           this.state.newPosition
         );
       }
-    } else if (targetActivitySectionPos) {
+    } else if (targetActivityPos && targetActivitySectionPos) {
       // When dragging between activitySections, move it to the end of the new activitySection.
       this.props.moveLevelToActivitySection(
         activityPosition,
         activitySection.position,
         this.state.draggedLevelPos,
+        targetActivityPos,
         targetActivitySectionPos
       );
     }
-    this.props.setTargetActivitySection(null);
+
+    // shortcut to clear target activity section
+    this.props.updateTargetActivitySection(-1);
 
     this.setState({
       draggedLevelPos: null,
@@ -328,11 +322,13 @@ class ActivitySectionCard extends Component {
   render() {
     const {
       activitySection,
+      targetActivityPos,
       targetActivitySectionPos,
       activityPosition
     } = this.props;
     const {draggedLevelPos, levelPosToRemove} = this.state;
     const isTargetActivitySection =
+      targetActivityPos === activityPosition &&
       targetActivitySectionPos === activitySection.position;
     return (
       <div
