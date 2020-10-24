@@ -111,6 +111,20 @@ class LessonOverview extends Component {
 
             <h2>{i18n.purpose()}</h2>
             <SafeMarkdown markdown={lesson.purpose} />
+
+            <h2>{i18n.agenda()}</h2>
+            {this.props.activities.map(activity => (
+              <ul style={{listStyleType: 'none'}}>
+                <li>
+                  <a>{activity.displayName}</a>
+                </li>
+                {activity.activitySections.map(section => (
+                  <li style={{marginLeft: 15}}>
+                    <a>{section.displayName}</a>
+                  </li>
+                ))}
+              </ul>
+            ))}
           </div>
           <div style={styles.right}>
             <h2>{i18n.preparation()}</h2>
