@@ -41,7 +41,7 @@ Feature: Using the Lesson Edit Page
     # Open the Add Level dialog, search for an artist level and add the first one
 
     # TODO: use regular click instead once button responds to click events
-    When execute JavaScript expression "$('.uitest-open-add-level-button').simulate('mousedown')"
+    When execute JavaScript expression "$('.uitest-open-add-level-button').first().simulate('mousedown')"
     And I wait until element "h2" contains text "Add Levels"
     And I wait until element "#add-level-type" is visible
     # If the next step fails, we should consider replacing "Artist" with any other
