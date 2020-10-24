@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import _ from 'lodash';
+import {connect} from 'react-redux';
 
 const styles = {
   filters: {
@@ -22,9 +23,8 @@ const styles = {
   }
 };
 
-export default class AddLevelFilters extends Component {
+class AddLevelFilters extends Component {
   static propTypes = {
-    searchFields: PropTypes.object,
     handleSearch: PropTypes.func,
     handleChangeLevelName: PropTypes.func,
     handleChangeLevelType: PropTypes.func,
@@ -33,7 +33,10 @@ export default class AddLevelFilters extends Component {
     ownerId: PropTypes.string,
     scriptId: PropTypes.string,
     levelType: PropTypes.string,
-    levelName: PropTypes.string
+    levelName: PropTypes.string,
+
+    // from redux
+    searchOptions: PropTypes.object.isRequired
   };
 
   handleSearch = _.debounce(
@@ -66,7 +69,7 @@ export default class AddLevelFilters extends Component {
             value={this.props.levelType}
             id={'add-level-type'}
           >
-            {this.props.searchFields.levelOptions.map(levelType => (
+            {this.props.searchOptions.levelOptions.map(levelType => (
               <option key={levelType[0]} value={levelType[1]}>
                 {levelType[0]}
               </option>
@@ -80,7 +83,7 @@ export default class AddLevelFilters extends Component {
             onChange={this.props.handleChangeScript}
             value={this.props.scriptId}
           >
-            {this.props.searchFields.scriptOptions.map(script => (
+            {this.props.searchOptions.scriptOptions.map(script => (
               <option key={script[0]} value={script[1]}>
                 {script[0]}
               </option>
@@ -94,7 +97,7 @@ export default class AddLevelFilters extends Component {
             onChange={this.props.handleChangeOwner}
             value={this.props.ownerId}
           >
-            {this.props.searchFields.ownerOptions.map(owner => (
+            {this.props.searchOptions.ownerOptions.map(owner => (
               <option key={owner[1]} value={owner[1]}>
                 {owner[0]}
               </option>
@@ -108,3 +111,9 @@ export default class AddLevelFilters extends Component {
     );
   }
 }
+
+export const UnconnectedAddLevelFilters = AddLevelFilters;
+
+export default connect(state => ({
+  searchOptions: state.searchOptions
+}))(AddLevelFilters);
