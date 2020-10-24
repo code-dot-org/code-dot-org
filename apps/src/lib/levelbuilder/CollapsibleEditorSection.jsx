@@ -1,22 +1,27 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import styleConstants from '@cdo/apps/styleConstants';
 
 const styles = {
   header: {
-    borderBottom: '1px solid black'
+    borderBottom: '1px solid rgb(204, 204, 204)'
   },
   icon: {
     marginRight: 10
   },
   editors: {
     padding: 10
+  },
+  title: {
+    fontSize: 20
   }
 };
 
 export default class CollapsibleEditorSection extends Component {
   static propTypes = {
     title: PropTypes.string,
+    fullWidth: PropTypes.bool,
     collapsed: PropTypes.bool,
     children: PropTypes.any
   };
@@ -30,7 +35,11 @@ export default class CollapsibleEditorSection extends Component {
   }
 
   render() {
-    const {title} = this.props;
+    const {title, fullWidth} = this.props;
+    const editorsStyle = {
+      ...styles.editors,
+      width: fullWidth ? null : styleConstants['content-width']
+    };
     return (
       <div>
         <div style={styles.header}>
@@ -38,6 +47,7 @@ export default class CollapsibleEditorSection extends Component {
             onClick={() => {
               this.setState({collapsed: !this.state.collapsed});
             }}
+            style={styles.title}
           >
             <FontAwesome
               icon={this.state.collapsed ? 'expand' : 'compress'}
@@ -46,7 +56,7 @@ export default class CollapsibleEditorSection extends Component {
             {title}
           </h2>
         </div>
-        <div style={styles.editors} hidden={this.state.collapsed}>
+        <div style={editorsStyle} hidden={this.state.collapsed}>
           {this.props.children}
         </div>
       </div>

@@ -3,7 +3,7 @@
  *       combination of cookies and HTML5 web storage.
  */
 import {trySetSessionStorage} from '../utils';
-import cookies from 'js-cookie';
+import {getStore} from './redux';
 // Note: sessionStorage is not shared between tabs.
 var sessionStorage = window.sessionStorage;
 
@@ -31,20 +31,15 @@ var MAX_LINES_TO_SAVE = 1000;
  */
 clientState.MAXIMUM_CACHABLE_RESULT = 999;
 
-var COOKIE_OPTIONS = {
-  expires: clientState.EXPIRY_DAYS,
-  path: '/'
-};
-
 clientState.reset = function() {
   try {
-    cookies.remove('lines', {path: '/'});
     sessionStorage.clear();
   } catch (e) {}
 };
 
 clientState.clearProgress = function() {
   sessionStorage.removeItem('progress');
+  sessionStorage.removeItem('lines');
 };
 
 /**
@@ -72,9 +67,7 @@ clientState.sourceForLevel = function(scriptName, levelId, timestamp) {
 };
 
 /**
- * Cache a copy of the level source along with a timestamp. Posts to /milestone
- * may be queued, so save the data in sessionStorage to present a consistent
- * client view.
+ * Cache a copy of the level source along with a timestamp.
  * @param {string} scriptName
  * @param {number} levelId
  * @param {number} timestamp
@@ -99,13 +92,17 @@ clientState.writeSourceForLevel = function(
 };
 
 /**
- * Tracks the users progress after they click run. Results larger than 999 are
- * reserved for server-dependent changes and can't be cached locally.
+ * Tracks the lines of code written after the user clicks run if their
+ * solution is successful. Skips if the user is logged in.
  * @param {boolean} result - Whether the user's solution is successful
  * @param {number} lines - Number of lines of code user wrote in this solution
  */
 clientState.trackLines = function(result, lines) {
-  if (result && isFinite(lines)) {
+  if (
+    result &&
+    isFinite(lines) &&
+    !getStore().getState().progress.usingDbProgress
+  ) {
     addLines(lines);
   }
 };
@@ -152,7 +149,7 @@ clientState.allLevelsProgress = function() {
  * @returns {number}
  */
 clientState.lines = function() {
-  var linesStr = cookies.get('lines');
+  var linesStr = sessionStorage.getItem('lines');
   return isFinite(linesStr) ? Number(linesStr) : 0;
 };
 
@@ -166,7 +163,7 @@ function addLines(addedLines) {
     MAX_LINES_TO_SAVE
   );
 
-  cookies.set('lines', String(newLines), COOKIE_OPTIONS);
+  trySetSessionStorage('lines', String(newLines));
 }
 
 /**
