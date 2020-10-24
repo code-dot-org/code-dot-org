@@ -18,9 +18,27 @@ const levelNameToIdMap = {
 
 const defaultLevel = {
   id: 10,
+  levels: [
+    {
+      name: 'Level One',
+      id: 1,
+      url: 'levels/598/edit',
+      icon: 'fa-desktop',
+      isUnplugged: false,
+      isConceptLevel: true,
+      skin: null,
+      videoKey: null,
+      concepts: '',
+      conceptDifficulty: ''
+    }
+  ],
   position: 1,
-  levels: [{id: 2}],
-  activeId: 2
+  activeId: 1,
+  kind: 'puzzle',
+  bonus: false,
+  assessment: false,
+  challenge: false,
+  expand: false
 };
 
 const blocklyLevel = {
