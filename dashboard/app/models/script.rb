@@ -241,14 +241,14 @@ class Script < ActiveRecord::Base
   end
 
   class << self
-    private
-
     def all_scripts
       all_scripts = Rails.cache.fetch('valid_scripts/all') do
         Script.all.to_a
       end
       all_scripts.freeze
     end
+
+    private
 
     def visible_scripts
       visible_scripts = Rails.cache.fetch('valid_scripts/valid') do

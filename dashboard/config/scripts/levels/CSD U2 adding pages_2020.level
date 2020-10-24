@@ -28,6 +28,7 @@
     "map_reference": "/docs/concepts/html/hyperlinks/",
     "encrypted": "false",
     "mini_rubric": "true",
+    "validation_enabled": "true",
     "rubric_key_concept": "Creating a digital artifact, linking within a multi-page site\r\n",
     "rubric_performance_level_1": "A new page has been created and given a unique and descriptive name ending in “.html”. There is a link from the index.html page to the new page and from the new page back to index.html",
     "rubric_performance_level_2": "There is at least one one working link from one HTML page to another\r\n",
