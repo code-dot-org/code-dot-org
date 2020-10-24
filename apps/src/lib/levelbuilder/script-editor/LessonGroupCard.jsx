@@ -69,6 +69,7 @@ class LessonGroupCard extends Component {
     lessonGroupMetrics: PropTypes.object,
     setTargetLessonGroup: PropTypes.func,
     targetLessonGroupPos: PropTypes.number,
+    lessonKeys: PropTypes.array.isRequired,
 
     // from redux
     addLesson: PropTypes.func.isRequired,
@@ -214,11 +215,7 @@ class LessonGroupCard extends Component {
 
   generateLessonKey = () => {
     let lessonNumber = this.props.lessonGroup.lessons.length + 1;
-    while (
-      this.props.lessonGroup.lessons.some(
-        lesson => lesson.key === `lesson-${lessonNumber}`
-      )
-    ) {
+    while (this.props.lessonKeys.includes(`lesson-${lessonNumber}`)) {
       lessonNumber++;
     }
 

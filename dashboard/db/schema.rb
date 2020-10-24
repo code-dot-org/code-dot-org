@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20201016003134) do
+ActiveRecord::Schema.define(version: 20201023025847) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -29,12 +29,12 @@ ActiveRecord::Schema.define(version: 20201016003134) do
   end
 
   create_table "activity_sections", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.integer  "lesson_activity_id", null: false
-    t.string   "seeding_key",        null: false, comment: "unique key which is stable across environments for seeding purposes"
-    t.integer  "position",           null: false
-    t.string   "properties"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
+    t.integer  "lesson_activity_id",               null: false
+    t.string   "seeding_key",                      null: false, comment: "unique key which is stable across environments for seeding purposes"
+    t.integer  "position",                         null: false
+    t.text     "properties",         limit: 65535
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
     t.index ["lesson_activity_id"], name: "index_activity_sections_on_lesson_activity_id", using: :btree
     t.index ["seeding_key"], name: "index_activity_sections_on_seeding_key", unique: true, using: :btree
   end
@@ -531,12 +531,12 @@ ActiveRecord::Schema.define(version: 20201016003134) do
   end
 
   create_table "lesson_activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.integer  "lesson_id",   null: false
-    t.string   "seeding_key", null: false, comment: "unique key which is stable across environments for seeding purposes"
-    t.integer  "position",    null: false
-    t.string   "properties"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.integer  "lesson_id",                 null: false
+    t.string   "seeding_key",               null: false, comment: "unique key which is stable across environments for seeding purposes"
+    t.integer  "position",                  null: false
+    t.text     "properties",  limit: 65535
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
     t.index ["lesson_id"], name: "index_lesson_activities_on_lesson_id", using: :btree
     t.index ["seeding_key"], name: "index_lesson_activities_on_seeding_key", unique: true, using: :btree
   end

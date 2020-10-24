@@ -117,3 +117,21 @@ export const levelKeyList = {
   3: 'Level 2 - 2',
   4: 'blockly:Studio:playlab_1'
 };
+
+export const searchOptions = {
+  levelOptions: [
+    ['All types', ''],
+    ['Applab', 'Applab'],
+    ['Dancelab', 'Dancelab']
+  ],
+  scriptOptions: [
+    ['All scripts', ''],
+    ['Script 1', 'script-1'],
+    ['Script 2', 'script-2']
+  ],
+  ownerOptions: [
+    ['Any owner', ''],
+    ['Levelbuilder 1', 1],
+    ['Levelbuilder 2', 2]
+  ]
+};
