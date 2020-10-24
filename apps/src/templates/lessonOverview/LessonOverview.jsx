@@ -12,6 +12,7 @@ import styleConstants from '@cdo/apps/styleConstants';
 import color from '@cdo/apps/util/color';
 import Button from '@cdo/apps/templates/Button';
 import DropdownButton from '@cdo/apps/templates/DropdownButton';
+import LessonAgenda from '@cdo/apps/templates/lessonOverview/LessonAgenda';
 
 const styles = {
   frontPage: {
@@ -113,20 +114,7 @@ class LessonOverview extends Component {
             <SafeMarkdown markdown={lesson.purpose} />
 
             <h2>{i18n.agenda()}</h2>
-            {this.props.activities.map(activity => (
-              <ul key={activity.key} style={{listStyleType: 'none'}}>
-                <li>
-                  <a>{`${activity.displayName} (${
-                    activity.duration
-                  } ${i18n.minutes()})`}</a>
-                </li>
-                {activity.activitySections.map(section => (
-                  <li style={{marginLeft: 15}} key={section.key}>
-                    <a>{section.displayName}</a>
-                  </li>
-                ))}
-              </ul>
-            ))}
+            <LessonAgenda activities={this.props.activities} />
           </div>
           <div style={styles.right}>
             <h2>{i18n.preparation()}</h2>
