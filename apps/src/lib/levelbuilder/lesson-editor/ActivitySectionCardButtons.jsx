@@ -183,7 +183,7 @@ class ActivitySectionCardButtons extends Component {
           handleConfirm={this.handleCloseAddLevel}
           currentScriptLevels={this.props.activitySection.scriptLevels}
           addLevel={this.props.addLevel}
-          activitySectionPosition={this.props.activitySection.position}
+          activitySection={this.props.activitySection}
           activityPosition={this.props.activityPosition}
         />
       </div>
