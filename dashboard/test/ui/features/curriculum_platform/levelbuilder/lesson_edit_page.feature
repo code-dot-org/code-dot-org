@@ -53,9 +53,9 @@ Feature: Using the Lesson Edit Page
     # We will know the search has completed after the following step, because we
     # confirmed earlier that there were no Artist levels in the initial view.
     And I wait until element "td" contains text "Artist"
-    And element ".fa-plus" is visible
-    And I press the first ".fa-plus" element
-    And I press ".save-add-levels-button"
+    And element "td .fa-plus" is visible
+    And I press the first "td .fa-plus" element
+    And I click selector ".save-add-levels-button"
     And I wait until element "h2" does not contain text "Add Levels"
 
     # Verify lesson editor updated
