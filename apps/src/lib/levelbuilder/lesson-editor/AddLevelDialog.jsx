@@ -6,6 +6,8 @@ import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 import Button from '@cdo/apps/templates/Button';
 import LevelToken from '@cdo/apps/lib/levelbuilder/lesson-editor/LevelToken';
 import AddLevelDialogTop from '@cdo/apps/lib/levelbuilder/lesson-editor/AddLevelDialogTop';
+import RemoveLevelDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/RemoveLevelDialog';
+import {activitySectionShape} from '@cdo/apps/lib/levelbuilder/shapes';
 
 const styles = {
   dialog: {
@@ -52,7 +54,19 @@ export default class AddLevelDialog extends Component {
     currentScriptLevels: PropTypes.array,
     addLevel: PropTypes.func,
     activityPosition: PropTypes.number,
-    activitySectionPosition: PropTypes.number
+    activitySection: activitySectionShape
+  };
+
+  state = {
+    levelPosToRemove: null
+  };
+
+  handleRemoveLevel = levelPos => {
+    this.setState({levelPosToRemove: levelPos});
+  };
+
+  handleCloseRemoveLevelDialog = () => {
+    this.setState({levelPosToRemove: null});
   };
 
   render() {
@@ -69,21 +83,24 @@ export default class AddLevelDialog extends Component {
           <div style={styles.bottomArea}>
             <h4>Levels in Progression</h4>
             <div style={styles.levelsBox}>
-              {/*TODO Hook up removeLevel for the addLevelDialog*/}
               {this.props.currentScriptLevels.map(scriptLevel => (
                 <LevelToken
                   key={scriptLevel.position + '_' + scriptLevel.activeId[0]}
                   scriptLevel={scriptLevel}
-                  removeLevel={() => {
-                    console.log('remove level');
-                  }}
-                  activitySectionPosition={this.props.activitySectionPosition}
+                  removeLevel={this.handleRemoveLevel}
+                  activitySectionPosition={this.props.activitySection.position}
                   activityPosition={this.props.activityPosition}
                 />
               ))}
             </div>
           </div>
         </div>
+        <RemoveLevelDialog
+          activitySection={this.props.activitySection}
+          activityPosition={this.props.activityPosition}
+          levelPosToRemove={this.state.levelPosToRemove}
+          handleClose={this.handleCloseRemoveLevelDialog}
+        />
         <DialogFooter rightAlign>
           <Button
             text={i18n.closeAndSave()}
