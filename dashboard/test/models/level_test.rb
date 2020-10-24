@@ -1125,4 +1125,25 @@ class LevelTest < ActiveSupport::TestCase
     # level key raises errors.
     Level.key_list
   end
+
+  test "get search options" do
+    search_options = Level.search_options
+    assert_equal search_options[:levelOptions].map {|option| option[0]}, [
+      "All types", "Applab", "Artist", "Bounce", "BubbleChoice", "Calc", "ContractMatch",
+      "Craft", "CurriculumReference", "Dancelab", "Eval", "EvaluationMulti", "External",
+      "ExternalLink", "Fish", "Flappy", "FreeResponse", "FrequencyAnalysis", "Gamelab",
+      "GamelabJr", "Karel", "LevelGroup", "Map", "Match", "Maze", "Multi", "NetSim",
+      "Odometer", "Pixelation", "PublicKeyCryptography", "StandaloneVideo",
+      "StarWarsGrid", "Studio", "TextCompression", "TextMatch", "Unplugged",
+      "Vigenere", "Weblab"
+    ]
+    scripts = [
+      "All scripts", "20-hour", "algebra", "artist", "course1", "course2",
+      "course3", "course4", "coursea-2017", "courseb-2017", "coursec-2017",
+      "coursed-2017", "coursee-2017", "coursef-2017", "express-2017", "flappy",
+      "frozen", "hourofcode", "jigsaw", "playlab", "pre-express-2017", "starwars"
+    ]
+    assert (scripts - search_options[:scriptOptions].map {|option| option[0]}).empty?
+    assert (["Any owner"] - search_options[:ownerOptions].map {|option| option[0]}).empty?
+  end
 end
