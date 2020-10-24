@@ -1,0 +1,72 @@
+---
+title: Policy implementation summary
+---
+
+:ruby
+  if request.params["pdf_version"]
+    @header["layout"] = "none"
+    @header["theme"] = "pdf"
+  end
+
+%link{:rel=>'stylesheet', :type=>'text/css', :href=>'/css/state-policy-summary.css'}
+// Generates summary of all state policies based on the data in cdo-state-promote Google Sheet.
+- state_info = DB[:cdo_state_promote]
+
+.policy-summary
+  %h1 K–12 Computer Science Policy and Implementation in States
+
+  %p 
+  %ul.link-bar
+    %li= link_to 'Code.org’s Nine Policy Elements','https://code.org'
+    %li= link_to 'State-by-state data on the 9 policies','https://code.org'
+    %li= link_to '2019 State Legislation','https://code.org'
+  .intro-text2
+    %p We are seeing a groundswell of interest and effort from students, parents, teachers, districts, and states to bring computer science into our K–12 system. Tens of millions of students are participating in the Hour of Code. Tens of thousands of teachers are going through professional development to bring computer science (CS) into their schools. Hundreds of school districts have embraced computer science in their curriculum. New York City and Chicago Public Schools—two of the largest districts in the country—have announced that computer science will be in all schools, and in Chicago, it is a required graduation credit. And in the past five years, virtually every state has responded to this growing interest by passing policies to boost computer science.
+
+    %p We’ve suggested nine policies states can adopt to make computer science foundational for all students (see: https://code.org/files/Making_CS_Fundamental.pdf). Below is a list of state actions working toward these broad policy and/or implementation plans toward scaling K–12 computer science, including efforts prioritizing equity (highlighted in gray).
+
+    %p 
+      %b Help us grow and maintain this document. 
+      This document represents states where Code.org is tracking policy change, as well as statewide implementation efforts in those states. There are likely states that we are not aware of that are working on new policies, and we’d love your help adding them to this list. (Note: For now, we’re only including action in states where there is a statewide policy effort underway.) 
+      %b Do you have a suggestion for an addition or edit to this document? Please submit it 
+      %b= link_to 'here','https://goo.gl/forms/Xb7wj04dh3vgFqbv1'
+
+  - state_info.each do |state|
+    %h2=state[:state_name_s]
+    %ul.state-facts
+      - unless state[:policy_0_t] == nil
+        %li
+          %b State Plan: 
+          =state[:policy_0_t]
+      - unless state[:policy_1_t] == nil
+        %li
+          %b K–12 CS Standards: 
+          =state[:policy_1_t]
+      - unless state[:policy_2_t] == nil
+        %li
+          %b Funding: 
+          =state[:policy_2_t]
+      - unless state[:policy_3_t] == nil
+        %li
+          %b K-12 CS Certification: 
+          =state[:policy_3_t]
+      - unless state[:policy_4_t] == nil
+        %li
+          %b Preservice Incentives: 
+          =state[:policy_4_t]
+      - unless state[:policy_5_t] == nil
+        %li
+          %b Dedicated CS Position: 
+          =state[:policy_5_t]
+      - unless state[:policy_6_t] == nil
+        %li
+          %b Requiring All Secondary Schools to Offer CS: 
+          =state[:policy_6_t]
+      - unless state[:policy_7_t] == nil
+        %li
+          %b Making CS Count: 
+          =state[:policy_7_t]
+      - unless state[:policy_8_t] == nil
+        %li
+          %b Higher Education Admission: 
+          =state[:policy_8_t]
