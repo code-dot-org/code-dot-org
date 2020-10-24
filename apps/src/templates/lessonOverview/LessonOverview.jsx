@@ -114,12 +114,14 @@ class LessonOverview extends Component {
 
             <h2>{i18n.agenda()}</h2>
             {this.props.activities.map(activity => (
-              <ul style={{listStyleType: 'none'}}>
+              <ul key={activity.key} style={{listStyleType: 'none'}}>
                 <li>
-                  <a>{activity.displayName}</a>
+                  <a>{`${activity.displayName} (${
+                    activity.duration
+                  } ${i18n.minutes()})`}</a>
                 </li>
                 {activity.activitySections.map(section => (
-                  <li style={{marginLeft: 15}}>
+                  <li style={{marginLeft: 15}} key={section.key}>
                     <a>{section.displayName}</a>
                   </li>
                 ))}
