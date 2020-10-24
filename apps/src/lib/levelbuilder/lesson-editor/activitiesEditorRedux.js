@@ -36,10 +36,11 @@ export const NEW_LEVEL_ID = -1;
 
 // NOTE: Position for Activities, Activity Sections and Levels is 1 based.
 
-export const init = (activities, levelKeyList) => ({
+export const init = (activities, levelKeyList, searchOptions) => ({
   type: INIT,
   activities,
-  levelKeyList
+  levelKeyList,
+  searchOptions
 });
 
 export const addActivity = (activityPosition, activityKey) => ({
@@ -195,12 +196,14 @@ export const moveLevelToActivitySection = (
   activityPosition,
   activitySectionPosition,
   scriptLevelPosition,
+  newActivityPosition,
   newActivitySectionPosition
 ) => ({
   type: MOVE_LEVEL_TO_ACTIVITY_SECTION,
   activityPosition,
   activitySectionPosition,
   scriptLevelPosition,
+  newActivityPosition,
   newActivitySectionPosition
 });
 
@@ -483,16 +486,8 @@ function activities(state = [], action) {
       updateScriptLevelPositions(scriptLevels);
 
       // add level to new activitySection
-      let newActivityPosition = null;
-      newState.forEach(activity => {
-        activity.activitySections.forEach(activitySection => {
-          if (activitySection.position === action.newActivitySectionPosition) {
-            newActivityPosition = activity.position;
-          }
-        });
-      });
       const newActivitySections =
-        newState[newActivityPosition - 1].activitySections;
+        newState[action.newActivityPosition - 1].activitySections;
       const newScriptLevels =
         newActivitySections[action.newActivitySectionPosition - 1].scriptLevels;
       newScriptLevels.push(scriptLevel);
@@ -560,6 +555,14 @@ function levelKeyList(state = {}, action) {
   return state;
 }
 
+function searchOptions(state = {}, action) {
+  switch (action.type) {
+    case INIT:
+      return action.searchOptions;
+  }
+  return state;
+}
+
 function levelNameToIdMap(state = {}, action) {
   switch (action.type) {
     case INIT: {
@@ -603,6 +606,7 @@ function validateScriptLevel(scriptLevel, location) {
 export default {
   activities,
   levelKeyList,
+  searchOptions,
   levelNameToIdMap
 };
 
