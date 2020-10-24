@@ -51,7 +51,6 @@ export default class AddLevelDialog extends Component {
   static propTypes = {
     isOpen: PropTypes.bool.isRequired,
     handleConfirm: PropTypes.func.isRequired,
-    currentScriptLevels: PropTypes.array,
     addLevel: PropTypes.func,
     activityPosition: PropTypes.number,
     activitySection: activitySectionShape
@@ -83,7 +82,7 @@ export default class AddLevelDialog extends Component {
           <div style={styles.bottomArea}>
             <h4>Levels in Progression</h4>
             <div style={styles.levelsBox}>
-              {this.props.currentScriptLevels.map(scriptLevel => (
+              {this.props.activitySection.scriptLevels.map(scriptLevel => (
                 <LevelToken
                   key={scriptLevel.position + '_' + scriptLevel.activeId[0]}
                   scriptLevel={scriptLevel}
