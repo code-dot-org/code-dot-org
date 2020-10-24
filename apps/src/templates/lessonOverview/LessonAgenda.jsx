@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import i18n from '@cdo/locale';
+import _ from 'lodash';
 
 export default class LessonAgenda extends Component {
   static propTypes = {
@@ -9,7 +10,8 @@ export default class LessonAgenda extends Component {
 
   render() {
     // Do not link to sections that are progressions and sections without a displayName
-    this.props.activities.forEach(activity => {
+    let filteredActivitiesList = _.cloneDeep(this.props.activities);
+    filteredActivitiesList.forEach(activity => {
       let filteredActivitySections = [];
       activity.activitySections.forEach(section => {
         if (section.displayName !== '' && section.scriptLevels.length < 1) {
@@ -21,7 +23,7 @@ export default class LessonAgenda extends Component {
 
     return (
       <div>
-        {this.props.activities.map(activity => (
+        {filteredActivitiesList.map(activity => (
           <ul key={activity.key} style={{listStyleType: 'none'}}>
             <li>
               <a href={`#activity-${activity.key}`}>{`${
