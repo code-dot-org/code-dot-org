@@ -115,17 +115,15 @@ function updateGroupPositions(lessonGroups) {
 
 function updateLessonPositions(lessonGroups) {
   let relativePosition = 1;
-  let absolutePosition = 1;
   lessonGroups.forEach(lessonGroup => {
-    lessonGroup.lessons.forEach(lesson => {
-      lesson.position = absolutePosition;
+    lessonGroup.lessons.forEach((lesson, lessonIndex) => {
+      lesson.position = lessonIndex + 1;
       if (lesson.lockable) {
         lesson.relativePosition = undefined;
       } else {
         lesson.relativePosition = relativePosition;
         relativePosition++;
       }
-      absolutePosition++;
     });
   });
 }
