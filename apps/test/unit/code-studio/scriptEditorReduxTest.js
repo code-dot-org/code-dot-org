@@ -20,24 +20,9 @@ const getInitialState = () => ({
       position: 1,
       userFacing: true,
       lessons: [
-        {
-          id: 100,
-          key: 'a',
-          name: 'A',
-          position: 1
-        },
-        {
-          name: 'B',
-          key: 'b',
-          id: 101,
-          position: 2
-        },
-        {
-          name: 'C',
-          key: 'c',
-          id: 102,
-          position: 3
-        }
+        {id: 100, key: 'a', name: 'A', position: 1},
+        {name: 'B', key: 'b', id: 101, position: 2},
+        {name: 'C', key: 'c', id: 102, position: 3}
       ]
     },
     {
@@ -46,24 +31,9 @@ const getInitialState = () => ({
       position: 2,
       userFacing: true,
       lessons: [
-        {
-          id: 104,
-          key: 'd',
-          name: 'D',
-          position: 1
-        },
-        {
-          id: 105,
-          key: 'e',
-          name: 'E',
-          position: 2
-        },
-        {
-          id: 106,
-          key: 'f',
-          name: 'F',
-          position: 3
-        }
+        {id: 104, key: 'd', name: 'D', position: 1},
+        {id: 105, key: 'e', name: 'E', position: 2},
+        {id: 106, key: 'f', name: 'F', position: 3}
       ]
     }
   ]
@@ -187,14 +157,8 @@ describe('scriptEditorRedux reducer tests', () => {
               displayName: 'X',
               position: 1,
               lessons: [
-                {
-                  id: 101,
-                  position: 1
-                },
-                {
-                  id: 102,
-                  position: 2
-                },
+                {id: 101, position: 1},
+                {id: 102, position: 2},
                 {id: 104, position: 3}
               ]
             },
