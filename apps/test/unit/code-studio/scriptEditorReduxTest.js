@@ -129,19 +129,13 @@ describe('scriptEditorRedux reducer tests', () => {
           key: 'x',
           displayName: 'X',
           position: 1,
-          lessons: [
-            {id: 101, position: 1, relativePosition: 1},
-            {id: 102, position: 2, relativePosition: 2}
-          ]
+          lessons: [{id: 101, position: 1}, {id: 102, position: 2}]
         },
         {
           key: 'y',
           displayName: 'Y',
           position: 2,
-          lessons: [
-            {id: 103, position: 3, relativePosition: 3},
-            {id: 104, position: 4, relativePosition: 4}
-          ]
+          lessons: [{id: 103, position: 3}, {id: 104, position: 4}]
         }
       ];
       initialState.lessonGroups = initialLessonGroups;
@@ -177,19 +171,13 @@ describe('scriptEditorRedux reducer tests', () => {
             key: 'x',
             displayName: 'X',
             position: 1,
-            lessons: [
-              {id: 101, position: 1, relativePosition: 1},
-              {id: 102, position: 2, relativePosition: 2}
-            ]
+            lessons: [{id: 101, position: 1}, {id: 102, position: 2}]
           },
           {
             key: 'y',
             displayName: 'Y',
             position: 2,
-            lessons: [
-              {id: 104, position: 1, relativePosition: 3},
-              {id: 103, position: 2, relativePosition: 4}
-            ]
+            lessons: [{id: 104, position: 1}, {id: 103, position: 2}]
           }
         ],
         state.lessonGroups,
@@ -210,16 +198,16 @@ describe('scriptEditorRedux reducer tests', () => {
             displayName: 'X',
             position: 1,
             lessons: [
-              {id: 101, position: 1, relativePosition: 1},
-              {id: 102, position: 2, relativePosition: 2},
-              {id: 104, position: 3, relativePosition: 3}
+              {id: 101, position: 1},
+              {id: 102, position: 2},
+              {id: 104, position: 3}
             ]
           },
           {
             key: 'y',
             displayName: 'Y',
             position: 2,
-            lessons: [{id: 103, position: 1, relativePosition: 4}]
+            lessons: [{id: 103, position: 1}]
           }
         ],
         state.lessonGroups,
@@ -240,16 +228,16 @@ describe('scriptEditorRedux reducer tests', () => {
             displayName: 'X',
             position: 1,
             lessons: [
-              {id: 101, position: 1, relativePosition: 1},
-              {id: 104, position: 2, relativePosition: 2},
-              {id: 102, position: 3, relativePosition: 3}
+              {id: 101, position: 1},
+              {id: 104, position: 2},
+              {id: 102, position: 3}
             ]
           },
           {
             key: 'y',
             displayName: 'Y',
             position: 2,
-            lessons: [{id: 103, position: 1, relativePosition: 4}]
+            lessons: [{id: 103, position: 1}]
           }
         ],
         state.lessonGroups,
@@ -266,16 +254,16 @@ describe('scriptEditorRedux reducer tests', () => {
               key: 'x',
               displayName: 'X',
               position: 1,
-              lessons: [{id: 101, position: 1, relativePosition: 1}]
+              lessons: [{id: 101, position: 1}]
             },
             {
               key: 'y',
               displayName: 'Y',
               position: 2,
               lessons: [
-                {id: 103, position: 1, relativePosition: 2},
-                {id: 104, position: 2, relativePosition: 3},
-                {id: 102, position: 3, relativePosition: 4}
+                {id: 103, position: 1},
+                {id: 104, position: 2},
+                {id: 102, position: 3}
               ]
             }
           ],
@@ -294,22 +282,20 @@ describe('scriptEditorRedux reducer tests', () => {
               lessons: [
                 {
                   id: 101,
-                  position: 1,
-                  relativePosition: 1
+                  position: 1
                 },
                 {
                   id: 102,
-                  position: 2,
-                  relativePosition: 2
+                  position: 2
                 },
-                {id: 104, position: 3, relativePosition: 3}
+                {id: 104, position: 3}
               ]
             },
             {
               key: 'y',
               displayName: 'Y',
               position: 2,
-              lessons: [{id: 103, position: 1, relativePosition: 4}]
+              lessons: [{id: 103, position: 1}]
             }
           ],
           newState.lessonGroups

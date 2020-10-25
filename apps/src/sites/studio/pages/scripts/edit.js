@@ -31,7 +31,6 @@ export default function initPage(scriptEditorData) {
           id: lesson.id,
           key: lesson.key,
           position: lessonIndex + 1,
-          relativePosition: lesson.relative_position,
           lockable: lesson.lockable,
           assessment: lesson.assessment,
           unplugged: lesson.unplugged,
