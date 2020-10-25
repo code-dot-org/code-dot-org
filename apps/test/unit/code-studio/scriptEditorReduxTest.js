@@ -21,8 +21,8 @@ const getInitialState = () => ({
       userFacing: true,
       lessons: [
         {id: 100, key: 'a', name: 'A', position: 1},
-        {name: 'B', key: 'b', id: 101, position: 2},
-        {name: 'C', key: 'c', id: 102, position: 3}
+        {id: 101, key: 'b', name: 'B', position: 2},
+        {id: 102, key: 'c', name: 'C', position: 3}
       ]
     },
     {
