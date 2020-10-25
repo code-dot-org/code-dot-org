@@ -11,8 +11,8 @@ import TimeSelect from './time_select';
 import DatePicker from './date_picker';
 import {DATE_FORMAT, TIME_FORMAT} from '../workshopConstants';
 
-const MIN_TIME = moment('7:00am', TIME_FORMAT);
-const MAX_TIME = moment('7:00pm', TIME_FORMAT);
+const MIN_TIME = moment('12:00am', TIME_FORMAT);
+const MAX_TIME = moment('11:59pm', TIME_FORMAT);
 
 export default class SessionFormPart extends React.Component {
   static propTypes = {
