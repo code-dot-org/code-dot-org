@@ -153,7 +153,7 @@ function lessonGroups(state = [], action) {
     }
     case REMOVE_LESSON: {
       const lessons = newState[action.groupPosition - 1].lessons;
-      lessons.splice(action.lessonPosition - lessons[0].position, 1);
+      lessons.splice(action.lessonPosition - 1, 1);
       updateLessonPositions(newState);
       break;
     }
@@ -176,10 +176,7 @@ function lessonGroups(state = [], action) {
     case SET_LESSON_GROUP: {
       // Remove the lesson from the old lesson group
       const oldLessons = newState[action.oldGroupPosition - 1].lessons;
-      const curLesson = oldLessons.splice(
-        action.lessonPosition - oldLessons[0].position,
-        1
-      )[0];
+      const curLesson = oldLessons.splice(action.lessonPosition - 1, 1)[0];
 
       // add lesson to the new lesson group
       const newLessons = newState[action.newGroupPosition - 1].lessons;

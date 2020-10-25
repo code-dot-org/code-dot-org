@@ -134,7 +134,7 @@ describe('scriptEditorRedux reducer tests', () => {
           key: 'y',
           displayName: 'Y',
           position: 2,
-          lessons: [{id: 103, position: 3}, {id: 104, position: 4}]
+          lessons: [{id: 103, position: 1}, {id: 104, position: 2}]
         }
       ];
       initialState.lessonGroups = initialLessonGroups;
@@ -179,7 +179,7 @@ describe('scriptEditorRedux reducer tests', () => {
       });
 
       it('groups with others in same lesson group', () => {
-        const newState = reducer(initialState, setLessonGroup(4, 2, 1));
+        const newState = reducer(initialState, setLessonGroup(2, 2, 1));
         assert.deepEqual(
           [
             {
