@@ -6,7 +6,6 @@ const INIT = 'scriptEditor/INIT';
 const ADD_GROUP = 'scriptEditor/ADD_GROUP';
 const ADD_LESSON = 'scriptEditor/ADD_LESSON';
 const MOVE_GROUP = 'scriptEditor/MOVE_GROUP';
-const MOVE_LESSON = 'scriptEditor/MOVE_LESSON';
 const REMOVE_GROUP = 'scriptEditor/REMOVE_GROUP';
 const REMOVE_LESSON = 'scriptEditor/REMOVE_LESSON';
 const SET_LESSON_GROUP = 'scriptEditor/SET_LESSON_GROUP';
@@ -41,13 +40,6 @@ export const addLesson = (groupPosition, lessonKey, lessonName) => ({
 export const moveGroup = (groupPosition, direction) => ({
   type: MOVE_GROUP,
   groupPosition,
-  direction
-});
-
-export const moveLesson = (groupPosition, lessonPosition, direction) => ({
-  type: MOVE_LESSON,
-  groupPosition,
-  lessonPosition,
   direction
 });
 
@@ -178,37 +170,6 @@ function lessonGroups(state = [], action) {
       newState[index] = newState[swap];
       newState[swap] = tempGroup;
       updateGroupPositions(newState);
-      updateLessonPositions(newState);
-      break;
-    }
-    case MOVE_LESSON: {
-      const groupIndex = action.groupPosition - 1;
-
-      const lessons = newState[groupIndex].lessons;
-
-      const lessonIndex = action.lessonPosition - lessons[0].position;
-      const lessonSwapIndex =
-        action.direction === 'up' ? lessonIndex - 1 : lessonIndex + 1;
-
-      if (lessonSwapIndex >= 0 && lessonSwapIndex <= lessons.length - 1) {
-        //if lesson is staying in the same lesson group
-        const tempLesson = lessons[lessonIndex];
-        lessons[lessonIndex] = lessons[lessonSwapIndex];
-        lessons[lessonSwapIndex] = tempLesson;
-      } else {
-        const groupSwapIndex =
-          action.direction === 'up' ? groupIndex - 1 : groupIndex + 1;
-
-        // Remove the lesson from the old lesson group
-        const oldLessons = newState[groupIndex].lessons;
-        const curLesson = oldLessons.splice(lessonIndex, 1)[0];
-
-        // add lesson to the new lesson group
-        const newLessons = newState[groupSwapIndex].lessons;
-        action.direction === 'up'
-          ? newLessons.push(curLesson)
-          : newLessons.unshift(curLesson);
-      }
       updateLessonPositions(newState);
       break;
     }

@@ -3,7 +3,6 @@ import {combineReducers} from 'redux';
 import reducers, {
   addGroup,
   addLesson,
-  moveLesson,
   setLessonGroup,
   reorderLesson,
   updateLessonGroupField,
@@ -151,98 +150,6 @@ describe('scriptEditorRedux reducer tests', () => {
       expectedState[0].description = 'Overview of the lesson group';
 
       assert.deepEqual(expectedState, state.lessonGroups);
-    });
-
-    it('moves a lesson up three times', () => {
-      const id = 104;
-      let groupPosition = initialState.lessonGroups.find(lessonGroup =>
-        lessonGroup.lessons.find(lesson => lesson.id === id)
-      ).position;
-      let lessonPosition = initialState.lessonGroups[
-        groupPosition - 1
-      ].lessons.find(lesson => lesson.id === id).position;
-      let state = reducer(
-        initialState,
-        moveLesson(groupPosition, lessonPosition, 'up')
-      );
-      assert.deepEqual(
-        [
-          {
-            key: 'x',
-            displayName: 'X',
-            position: 1,
-            lessons: [{id: 101, position: 1}, {id: 102, position: 2}]
-          },
-          {
-            key: 'y',
-            displayName: 'Y',
-            position: 2,
-            lessons: [{id: 104, position: 1}, {id: 103, position: 2}]
-          }
-        ],
-        state.lessonGroups,
-        'first move changes position but not group'
-      );
-
-      groupPosition = state.lessonGroups.find(lessonGroup =>
-        lessonGroup.lessons.find(lesson => lesson.id === id)
-      ).position;
-      lessonPosition = state.lessonGroups[groupPosition - 1].lessons.find(
-        lesson => lesson.id === id
-      ).position;
-      state = reducer(state, moveLesson(groupPosition, lessonPosition, 'up'));
-      assert.deepEqual(
-        [
-          {
-            key: 'x',
-            displayName: 'X',
-            position: 1,
-            lessons: [
-              {id: 101, position: 1},
-              {id: 102, position: 2},
-              {id: 104, position: 3}
-            ]
-          },
-          {
-            key: 'y',
-            displayName: 'Y',
-            position: 2,
-            lessons: [{id: 103, position: 1}]
-          }
-        ],
-        state.lessonGroups,
-        'second move changes group but not position'
-      );
-
-      groupPosition = state.lessonGroups.find(lessonGroup =>
-        lessonGroup.lessons.find(lesson => lesson.id === id)
-      ).position;
-      lessonPosition = state.lessonGroups[groupPosition - 1].lessons.find(
-        lesson => lesson.id === id
-      ).position;
-      state = reducer(state, moveLesson(groupPosition, lessonPosition, 'up'));
-      assert.deepEqual(
-        [
-          {
-            key: 'x',
-            displayName: 'X',
-            position: 1,
-            lessons: [
-              {id: 101, position: 1},
-              {id: 104, position: 2},
-              {id: 102, position: 3}
-            ]
-          },
-          {
-            key: 'y',
-            displayName: 'Y',
-            position: 2,
-            lessons: [{id: 103, position: 1}]
-          }
-        ],
-        state.lessonGroups,
-        'third move changes position but not group'
-      );
     });
 
     describe('set lesson group', () => {
