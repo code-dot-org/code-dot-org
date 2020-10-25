@@ -112,10 +112,12 @@ describe('scriptEditorRedux reducer tests', () => {
     ]);
   });
 
-  it('reorder lessons', () => {
-    const nextState = reducer(initialState, reorderLesson(1, 1, 3))
-      .lessonGroups;
-    assert.deepEqual(nextState[0].lessons.map(l => l.key), ['b', 'c', 'a']);
+  describe('reorderLesson', () => {
+    it('reorders lessons within first lesson group', () => {
+      const nextState = reducer(initialState, reorderLesson(1, 1, 3))
+        .lessonGroups;
+      assert.deepEqual(nextState[0].lessons.map(l => l.key), ['b', 'c', 'a']);
+    });
   });
 
   describe('lesson groups', () => {
