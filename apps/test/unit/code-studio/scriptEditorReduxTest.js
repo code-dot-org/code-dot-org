@@ -52,6 +52,18 @@ const getInitialState = () => ({
           key: 'd',
           name: 'D',
           position: 4
+        },
+        {
+          id: 105,
+          key: 'e',
+          name: 'E',
+          position: 5
+        },
+        {
+          id: 106,
+          key: 'f',
+          name: 'F',
+          position: 6
         }
       ]
     }
