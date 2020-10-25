@@ -251,8 +251,13 @@ function lessonGroups(state = [], action) {
     }
     case REORDER_LESSON: {
       const lessons = newState[action.groupPosition - 1].lessons;
-      const temp = lessons.splice(action.originalLessonPosition - 1, 1);
-      lessons.splice(action.newLessonPosition - 1, 0, temp[0]);
+
+      const positionOffset = lessons[0].position;
+      const oldIndex = action.originalLessonPosition - positionOffset;
+      const temp = lessons.splice(oldIndex, 1);
+      const newIndex = action.newLessonPosition - positionOffset;
+      lessons.splice(newIndex, 0, temp[0]);
+
       updateLessonPositions(newState);
       break;
     }

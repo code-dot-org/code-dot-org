@@ -113,10 +113,40 @@ describe('scriptEditorRedux reducer tests', () => {
   });
 
   describe('reorderLesson', () => {
-    it('reorders lessons within first lesson group', () => {
-      const nextState = reducer(initialState, reorderLesson(1, 1, 3))
+    it('move lesson up within first lesson group', () => {
+      const nextState = reducer(initialState, reorderLesson(1, 3, 1))
         .lessonGroups;
-      assert.deepEqual(nextState[0].lessons.map(l => l.key), ['b', 'c', 'a']);
+      assert.deepEqual(nextState[0].lessons.map(l => l.key), ['c', 'a', 'b']);
+    });
+
+    it('move lesson down within first lesson group', () => {
+      const nextState = reducer(initialState, reorderLesson(1, 1, 2))
+        .lessonGroups;
+      assert.deepEqual(nextState[0].lessons.map(l => l.key), ['b', 'a', 'c']);
+    });
+
+    it('move lesson to same position within first lesson group', () => {
+      const nextState = reducer(initialState, reorderLesson(1, 2, 2))
+        .lessonGroups;
+      assert.deepEqual(nextState[0].lessons.map(l => l.key), ['a', 'b', 'c']);
+    });
+
+    it('move lesson up within second lesson group', () => {
+      const nextState = reducer(initialState, reorderLesson(2, 6, 5))
+        .lessonGroups;
+      assert.deepEqual(nextState[1].lessons.map(l => l.key), ['d', 'f', 'e']);
+    });
+
+    it('move lesson to same position within second lesson group', () => {
+      const nextState = reducer(initialState, reorderLesson(2, 5, 5))
+        .lessonGroups;
+      assert.deepEqual(nextState[1].lessons.map(l => l.key), ['d', 'e', 'f']);
+    });
+
+    it('move lesson down within second lesson group', () => {
+      const nextState = reducer(initialState, reorderLesson(2, 4, 5))
+        .lessonGroups;
+      assert.deepEqual(nextState[1].lessons.map(l => l.key), ['e', 'd', 'f']);
     });
   });
 
