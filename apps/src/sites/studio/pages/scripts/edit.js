@@ -27,10 +27,10 @@ export default function initPage(scriptEditorData) {
       bigQuestions: lesson_group.big_questions || '',
       lessons: lesson_group.lessons
         .filter(lesson => lesson.id)
-        .map(lesson => ({
+        .map((lesson, lessonIndex) => ({
           id: lesson.id,
           key: lesson.key,
-          position: lesson.position,
+          position: lessonIndex + 1,
           relativePosition: lesson.relative_position,
           lockable: lesson.lockable,
           assessment: lesson.assessment,
