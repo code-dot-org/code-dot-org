@@ -269,7 +269,7 @@ class Lesson < ActiveRecord::Base
   def summarize_for_script_edit
     summary = summarize.dup
     # Do not let script name override lesson name when there is only one lesson
-    summary[:name] = name
+    summary[:name] = I18n.t("data.script.name.#{script.name}.lessons.#{key}.name")
     summary.freeze
   end
 
