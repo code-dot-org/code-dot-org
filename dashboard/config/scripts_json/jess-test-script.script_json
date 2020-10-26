@@ -2497,19 +2497,230 @@
       "position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Module 8 Overview"
       },
       "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
-          "VirtualPLOverview"
+          "VPL - CSD Module 8 Overview"
         ],
         "lesson.key": "Module 8",
         "lesson_group.key": "",
         "script.name": "jess-test-script"
       },
       "level_keys": [
-        "VirtualPLOverview"
+        "VPL - CSD Module 8 Overview"
+      ]
+    },
+    {
+      "chapter": 113,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+        "progression": "Lesson Investigation (~60 mins)"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD - Module 8 - CI"
+        ],
+        "lesson.key": "Module 8",
+        "lesson_group.key": "",
+        "script.name": "jess-test-script"
+      },
+      "level_keys": [
+        "VPL - CSD - Module 8 - CI"
+      ]
+    },
+    {
+      "chapter": 114,
+      "position": 3,
+      "assessment": null,
+      "properties": {
+        "progression": "Lesson Investigation (~60 mins)"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD - Module 8 - U6L6"
+        ],
+        "lesson.key": "Module 8",
+        "lesson_group.key": "",
+        "script.name": "jess-test-script"
+      },
+      "level_keys": [
+        "VPL - CSD - Module 8 - U6L6"
+      ]
+    },
+    {
+      "chapter": 115,
+      "position": 4,
+      "assessment": null,
+      "properties": {
+        "progression": "Lesson Investigation (~60 mins)"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD - Module 8 - U6L6 Lesson 2"
+        ],
+        "lesson.key": "Module 8",
+        "lesson_group.key": "",
+        "script.name": "jess-test-script"
+      },
+      "level_keys": [
+        "VPL - CSD - Module 8 - U6L6 Lesson 2"
+      ]
+    },
+    {
+      "chapter": 116,
+      "position": 5,
+      "assessment": null,
+      "properties": {
+        "progression": "Lesson Investigation (~60 mins)"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD - Module 8 - U6L6 Level 3"
+        ],
+        "lesson.key": "Module 8",
+        "lesson_group.key": "",
+        "script.name": "jess-test-script"
+      },
+      "level_keys": [
+        "VPL - CSD - Module 8 - U6L6 Level 3"
+      ]
+    },
+    {
+      "chapter": 117,
+      "position": 6,
+      "assessment": null,
+      "properties": {
+        "progression": "Lesson Investigation (~60 mins)"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD - Module 8 - U6L6 - Level 4"
+        ],
+        "lesson.key": "Module 8",
+        "lesson_group.key": "",
+        "script.name": "jess-test-script"
+      },
+      "level_keys": [
+        "VPL - CSD - Module 8 - U6L6 - Level 4"
+      ]
+    },
+    {
+      "chapter": 118,
+      "position": 7,
+      "assessment": null,
+      "properties": {
+        "progression": "Lesson Investigation (~60 mins)"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD - Module 8 - U6L9"
+        ],
+        "lesson.key": "Module 8",
+        "lesson_group.key": "",
+        "script.name": "jess-test-script"
+      },
+      "level_keys": [
+        "VPL - CSD - Module 8 - U6L9"
+      ]
+    },
+    {
+      "chapter": 119,
+      "position": 8,
+      "assessment": null,
+      "properties": {
+        "progression": "Conclusions and Connections (~10 mins)"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD - Module 8 - Conclusions and Connections"
+        ],
+        "lesson.key": "Module 8",
+        "lesson_group.key": "",
+        "script.name": "jess-test-script"
+      },
+      "level_keys": [
+        "VPL - CSD - Module 8 - Conclusions and Connections"
+      ]
+    },
+    {
+      "chapter": 120,
+      "position": 9,
+      "assessment": null,
+      "properties": {
+        "progression": "Conclusions and Connections (~10 mins)"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD U6 Chapter 1 Project"
+        ],
+        "lesson.key": "Module 8",
+        "lesson_group.key": "",
+        "script.name": "jess-test-script"
+      },
+      "level_keys": [
+        "VPL - CSD U6 Chapter 1 Project"
+      ]
+    },
+    {
+      "chapter": 121,
+      "position": 10,
+      "assessment": null,
+      "properties": {
+        "progression": "Conclusions and Connections (~10 mins)"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD U6 Chapter 2 Project"
+        ],
+        "lesson.key": "Module 8",
+        "lesson_group.key": "",
+        "script.name": "jess-test-script"
+      },
+      "level_keys": [
+        "VPL - CSD U6 Chapter 2 Project"
+      ]
+    },
+    {
+      "chapter": 122,
+      "position": 11,
+      "assessment": null,
+      "properties": {
+        "progression": "Module 8 Asynchronous Wrap Up (~10 mins)"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD - Module 8 Wrap Up"
+        ],
+        "lesson.key": "Module 8",
+        "lesson_group.key": "",
+        "script.name": "jess-test-script"
+      },
+      "level_keys": [
+        "VPL - CSD - Module 8 Wrap Up"
       ]
     }
   ],
@@ -3737,9 +3948,119 @@
     },
     {
       "seeding_key": {
-        "level.key": "VirtualPLOverview",
+        "level.key": "VPL - CSD Module 8 Overview",
         "script_level.level_keys": [
-          "VirtualPLOverview"
+          "VPL - CSD Module 8 Overview"
+        ],
+        "lesson.key": "Module 8",
+        "lesson_group.key": "",
+        "script.name": "jess-test-script"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD - Module 8 - CI",
+        "script_level.level_keys": [
+          "VPL - CSD - Module 8 - CI"
+        ],
+        "lesson.key": "Module 8",
+        "lesson_group.key": "",
+        "script.name": "jess-test-script"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD - Module 8 - U6L6",
+        "script_level.level_keys": [
+          "VPL - CSD - Module 8 - U6L6"
+        ],
+        "lesson.key": "Module 8",
+        "lesson_group.key": "",
+        "script.name": "jess-test-script"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD - Module 8 - U6L6 Lesson 2",
+        "script_level.level_keys": [
+          "VPL - CSD - Module 8 - U6L6 Lesson 2"
+        ],
+        "lesson.key": "Module 8",
+        "lesson_group.key": "",
+        "script.name": "jess-test-script"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD - Module 8 - U6L6 Level 3",
+        "script_level.level_keys": [
+          "VPL - CSD - Module 8 - U6L6 Level 3"
+        ],
+        "lesson.key": "Module 8",
+        "lesson_group.key": "",
+        "script.name": "jess-test-script"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD - Module 8 - U6L6 - Level 4",
+        "script_level.level_keys": [
+          "VPL - CSD - Module 8 - U6L6 - Level 4"
+        ],
+        "lesson.key": "Module 8",
+        "lesson_group.key": "",
+        "script.name": "jess-test-script"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD - Module 8 - U6L9",
+        "script_level.level_keys": [
+          "VPL - CSD - Module 8 - U6L9"
+        ],
+        "lesson.key": "Module 8",
+        "lesson_group.key": "",
+        "script.name": "jess-test-script"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD - Module 8 - Conclusions and Connections",
+        "script_level.level_keys": [
+          "VPL - CSD - Module 8 - Conclusions and Connections"
+        ],
+        "lesson.key": "Module 8",
+        "lesson_group.key": "",
+        "script.name": "jess-test-script"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD U6 Chapter 1 Project",
+        "script_level.level_keys": [
+          "VPL - CSD U6 Chapter 1 Project"
+        ],
+        "lesson.key": "Module 8",
+        "lesson_group.key": "",
+        "script.name": "jess-test-script"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD U6 Chapter 2 Project",
+        "script_level.level_keys": [
+          "VPL - CSD U6 Chapter 2 Project"
+        ],
+        "lesson.key": "Module 8",
+        "lesson_group.key": "",
+        "script.name": "jess-test-script"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD - Module 8 Wrap Up",
+        "script_level.level_keys": [
+          "VPL - CSD - Module 8 Wrap Up"
         ],
         "lesson.key": "Module 8",
         "lesson_group.key": "",

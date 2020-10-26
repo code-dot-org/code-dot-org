@@ -6,7 +6,7 @@ level 'outbreak2', progression: 'Programming with Events'
 level 'outbreak3', progression: 'Stopping the Outbreak with Masks'
 level 'outbreak4', progression: 'More Monsters'
 level 'outbreak5', progression: 'Recovery'
-level 'outbreak6', progression: 'Random Chance'
+level 'outbreak6', progression: 'Chance', challenge: true
 level 'outbreak7', progression: 'Immunity and Vaccines'
 level 'outbreak8', progression: 'Share Your Message'
 level 'outbreak_freeplay', progression: 'Free Play'

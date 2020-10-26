@@ -44,7 +44,9 @@ export default class ActivitySection extends Component {
 
     return (
       <div>
-        {!isProgressionSection && <h4>{section.displayName}</h4>}
+        {!isProgressionSection && (
+          <h4 id={`activity-section-${section.key}`}>{section.displayName}</h4>
+        )}
         {section.remarks && (
           <div>
             <h4>
