@@ -399,7 +399,7 @@ class LessonsControllerTest < ActionController::TestCase
     new_update_params = @update_params.merge({resources: [resource.key].to_json})
     new_update_params['activities'] = [{id: 'bogus'}].to_json
 
-    assert_raises do
+    assert_raises ActiveRecord::RecordNotFound do
       put :update, params: new_update_params
     end
 
