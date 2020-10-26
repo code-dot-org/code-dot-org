@@ -35,6 +35,9 @@
       = hoc_s(:hoc2020_header_with_line_break_markdown, markdown: true)
     .hero-sub-message
       = hoc_s(:codeorg_homepage_hoc2018_header_line1)
+  - elsif show_single_hero == "codebytes2020"
+    .hero-message-codebytes
+      = hoc_s(:codebytes2020_header_markdown)
   .action_buttons
     - actions.each do |entry|
       - if ["cta_button", "cta_button_solid_white", "cta_button_hollow_white", "cta_button_solid_yellow"].include? entry[:type]
@@ -65,6 +68,10 @@
         %div
           %a{onclick: "return showVideo_mainvideo();", style: "cursor: pointer"}
             %img{src: "images/homepage/watch_video_drawn_button.png", style: "width: 250px; margin-top: 10px"}
+      - elsif entry[:type] == "code_bytes_join"
+        .action
+          %a.linktag#hero-hoc{href: entry[:url]}
+            %button.codebytes-button= I18n.t(entry[:text])
 
   .clear{style: "clear: both"}
 
@@ -175,6 +182,11 @@
               %h3{style: "font-weight: 900; color:#191919; margin-top: 10px; margin-bottom: 6px;"} Bret Taylor
 
         %div{style: "clear:both;"}
+  - elsif show_single_hero == "codebytes2020"
+    %div
+      %img{src: "/images/fit-1200/homepage/codebytes2020_foreground.png", style: "width: 750px; max-width: 100%; margin: auto; display: block;"}
+    #actions
+      = main_actions
 
   - elsif show_single_hero
     #actions

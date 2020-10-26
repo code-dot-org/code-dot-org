@@ -146,6 +146,15 @@ body.modal-open .supreme-container{
   line-height: 32px;
 }
 
+#homepage .hero-message-codebytes {
+  margin: 30px auto 30px auto;
+  color: #4d575f;
+  font-size: 24px;
+  line-height: 32px;
+  max-width: 750px;
+  clear: both;
+}
+
 @media screen and (min-width: 0px) and (max-width: 600px) {
   #homepage .hero-sub-message {
     margin-bottom: 80px;
@@ -239,6 +248,16 @@ body.modal-open .supreme-container{
   font-size: 18px;
   min-width: 230px;
   height: 40px;
+  padding: 0 30px;
+  margin: 10px 5px 0 0;
+}
+
+#homepage #actions .codebytes-button {
+  font-weight: 500;
+  font-size: 24px;
+  width: 500px;
+  max-width: 75%;
+  height: 50px;
   padding: 0 30px;
   margin: 10px 5px 0 0;
 }
