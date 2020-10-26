@@ -43,11 +43,13 @@ class LessonsController < ApplicationController
 
   # PATCH/PUT /lessons/1
   def update
-    resources = (lesson_params['resources'] || []).map {|key| Resource.find_by_key(key)}
-    @lesson.resources = resources.compact
-    @lesson.update!(lesson_params.except(:resources, :objectives))
-    @lesson.update_activities(JSON.parse(params[:activities])) if params[:activities]
-    @lesson.update_objectives(JSON.parse(params[:objectives])) if params[:objectives]
+    ActiveRecord::Base.transaction do
+      resources = (lesson_params['resources'] || []).map {|key| Resource.find_by_key(key)}
+      @lesson.resources = resources.compact
+      @lesson.update!(lesson_params.except(:resources, :objectives))
+      @lesson.update_activities(JSON.parse(params[:activities])) if params[:activities]
+      @lesson.update_objectives(JSON.parse(params[:objectives])) if params[:objectives]
+    end
 
     redirect_to lesson_path(id: @lesson.id)
   end
