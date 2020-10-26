@@ -34,6 +34,14 @@ const styles = {
   },
   selectRow: {
     margin: '5px 0px 5px 0px'
+  },
+  questionTooltip: {
+    cursor: 'pointer',
+    marginLeft: '0.5em',
+    marginRight: '0.5em'
+  },
+  tooltipText: {
+    maxWidth: 200
   }
 };
 
@@ -216,18 +224,14 @@ export default class SubmissionsDownloadForm extends React.Component {
                               <span data-for="date-tooltip" data-tip>
                                 <FontAwesome
                                   icon="question-circle-o"
-                                  style={{
-                                    cursor: 'pointer',
-                                    marginLeft: '0.5em',
-                                    marginRight: '0.5em'
-                                  }}
+                                  style={styles.questionTooltip}
                                 />
                                 <ReactTooltip
                                   role="tooltip"
                                   id="date-tooltip"
                                   effect="solid"
                                 >
-                                  <div style={{maxWidth: 200}}>
+                                  <div style={styles.tooltipText}>
                                     You must provide a date range in order to
                                     download submissions. If the download times
                                     out, please shorten the date range.
