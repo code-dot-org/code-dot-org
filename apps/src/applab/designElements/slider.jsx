@@ -7,7 +7,6 @@ import ZOrderRow from './ZOrderRow';
 import EventHeaderRow from './EventHeaderRow';
 import EventRow from './EventRow';
 import * as elementUtils from './elementUtils';
-import {generateEventHandler} from './utils';
 
 class SliderProperties extends React.Component {
   static propTypes = {
@@ -98,7 +97,17 @@ class SliderEvents extends React.Component {
 
   getInputEventCode() {
     const id = elementUtils.getId(this.props.element);
-    return generateEventHandler(id, 'input');
+    const code =
+      'onEvent("' +
+      id +
+      '", "input", function(event) {\n' +
+      '  console.log("' +
+      id +
+      ' value: " + getNumber("' +
+      id +
+      '"));\n' +
+      '});\n';
+    return code;
   }
 
   insertInput = () => {

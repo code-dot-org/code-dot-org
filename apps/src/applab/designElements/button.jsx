@@ -16,7 +16,6 @@ import {ICON_PREFIX_REGEX} from '../constants';
 import * as elementUtils from './elementUtils';
 import designMode from '../designMode';
 import elementLibrary from './library';
-import {generateEventHandler} from './utils';
 
 class ButtonProperties extends React.Component {
   static propTypes = {
@@ -161,7 +160,15 @@ class ButtonEvents extends React.Component {
 
   getClickEventCode() {
     const id = elementUtils.getId(this.props.element);
-    return generateEventHandler(id, 'click');
+    const code =
+      'onEvent("' +
+      id +
+      '", "click", function(event) {\n' +
+      '  console.log("' +
+      id +
+      ' clicked!");\n' +
+      '});\n';
+    return code;
   }
 
   insertClick = () => this.props.onInsertEvent(this.getClickEventCode());

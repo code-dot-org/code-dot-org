@@ -7,7 +7,6 @@ import EventHeaderRow from './EventHeaderRow';
 import EventRow from './EventRow';
 import * as elementUtils from './elementUtils';
 import $ from 'jquery';
-import {generateEventHandler} from './utils';
 
 class CanvasProperties extends React.Component {
   static propTypes = {
@@ -74,7 +73,19 @@ class CanvasEvents extends React.Component {
 
   getClickEventCode() {
     const id = elementUtils.getId(this.props.element);
-    return generateEventHandler(id, 'click');
+    const code =
+      'onEvent("' +
+      id +
+      '", "click", function(event) {\n' +
+      '  console.log("' +
+      id +
+      ' clicked at x:" + event.offsetX + " y:" + event.offsetY);\n' +
+      '  setActiveCanvas("' +
+      id +
+      '");\n' +
+      '  circle(event.offsetX, event.offsetY, 10);\n' +
+      '});\n';
+    return code;
   }
 
   insertClick = () => this.props.onInsertEvent(this.getClickEventCode());

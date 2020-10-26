@@ -7,7 +7,6 @@ import ZOrderRow from './ZOrderRow';
 import EventHeaderRow from './EventHeaderRow';
 import EventRow from './EventRow';
 import * as elementUtils from './elementUtils';
-import {generateEventHandler} from './utils';
 
 // Prefix used to generate default group ids
 const GROUP_ID_PREFIX = 'radio_group';
@@ -90,7 +89,17 @@ class RadioButtonEvents extends React.Component {
 
   getChangeEventCode() {
     const id = elementUtils.getId(this.props.element);
-    return generateEventHandler(id, 'change');
+    const code =
+      'onEvent("' +
+      id +
+      '", "change", function(event) {\n' +
+      '  console.log("' +
+      id +
+      ' checked? " + getChecked("' +
+      id +
+      '"));\n' +
+      '});\n';
+    return code;
   }
 
   insertChange = () => {
