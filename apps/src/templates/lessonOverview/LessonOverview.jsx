@@ -152,7 +152,7 @@ class LessonOverview extends Component {
             <h2>{i18n.preparation()}</h2>
             <SafeMarkdown markdown={lesson.preparation} />
             {lesson.resources && (
-              <div>
+              <div id="resource-section">
                 <h2>{i18n.links()}</h2>
                 {lesson.resources['Teacher'] && (
                   <div>
