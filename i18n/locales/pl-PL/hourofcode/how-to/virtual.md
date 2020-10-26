@@ -10,14 +10,14 @@ title: Poradnik "Godziny kodowania" dla wydarzeń wirtualnych
 
 ***
 
-Chociaż "Godzinę kodowania" tradycyjnie prowadzi się w klasach na całym świecie, nie trzeba występować na nich osobiście, aby się dobrze bawić! Można występować w roli gospodarza interaktywnej i inspirującej "Godziny kodowania" dla uczniów w trybie zdanym korzystając z niektórych z poniższych rekomendacji.  Take a look at our [guide for virtual events]({{ localized_files/participation_guide_virtual }}) if you still have questions.
+Chociaż "Godzinę kodowania" tradycyjnie prowadzi się w klasach na całym świecie, nie trzeba występować na nich osobiście, aby się dobrze bawić! Można występować w roli gospodarza interaktywnej i inspirującej "Godziny kodowania" dla uczniów w trybie zdanym korzystając z niektórych z poniższych rekomendacji.  Rzuć okiem na nasz [przewodnik po wydarzeniach wirtualnych ]({{ localized_files/participation_guide_virtual }}), jeśli nadal masz pytania.
 
 <br><br>
 
 [<img src="/images/fit-600/Marketing/pexels-andrea-piacquadio-3762940.jpg" />]({{ urls/learn }})
 
 ## Można być oddalonym, a jednak cały czas być razem.
-Even if you plan for students to complete their activities independently, we recommend starting your event with a virtual kick-off online to get participants excited. There are several interesting ways you can start your event: 
+Nawet jeśli planujesz, że uczniowie będą realizować zajęcia samodzielnie, zalecamy rozpoczęcie Twojego wydarzenia od wirtualnego startu online, aby wzbudzić emocje w uczestnikach. Istnieje kilka ciekawych sposobów rozpoczęcia Twojego wydarzenia: 
 
 <ul>
 <li><b>Zaproś prelegenta-gościa</b>: Tysiące wolontariuszy z wszystkich możliwych środowisk czekają na wiadomość od Ciebie! Po prostu skorzystaj z naszej <a href="https://code.org/volunteer/local">mapy ochotników</a>, aby ich wyszukać. Dzięki wirtualnej "Godzinie kodowania" nie jesteś ograniczony odległością, zatem, w razie potrzeby, rozważ wyszukiwanie wolontariuszy oferujących pomoc w trybie zdalnym poza obszarem swojego kodu pocztowego. Gdy już się połączysz z wolontariuszem, możesz odwołać się do <a href="http://hourofcode.com/us/how-to/volunteers">"Jak to się robi w Godzinie kodowania"</a>, jako przewodnika do określenia potencjalnych tematów, pytań do dyskusji i nie wielu innych.</li> 
@@ -30,34 +30,34 @@ Even if you plan for students to complete their activities independently, we rec
 ## Co przygotować z wyprzedzeniem czasowym
 
 ### 1. Określ swoją platformę do wideokonferencji
-Chances are you’re probably familiar with platforms like Cisco Webex, Google Meet, Microsoft Teams, Skype, or Zoom by now. Whichever tool you prefer, we just encourage you to familiarize yourself, test out it’s capabilities, and run through your Hour of Code agenda prior to your event date.
+Prawdopodobnie już teraz znasz platformy takie jak: Cisco Webex, Google Meet, Microsoft Teams, Skype lub Zoom. Bez względu na to, jakie narzędzie preferujesz, zachęcamy Cię do zapoznania się z nim we własnym zakresie, przetestowania swoich możliwości oraz przejścia programu swojej "Godziny kodowania" przed terminem Twojego wydarzenia.
 
 [<img src="/images/fit-600/Marketing/photo-of-boy-video-calling-with-a-woman-4145197.jpg" />]({{ urls/learn }})
 
 ### 2. Zaplanuj sposób uczestnictwa uczniów
-**Self-led Hour of Code activity**<br> We recommend that after your kickoff, you allow students to leave the video conference to work through their <a href="https://hourofcode.com/us/learn">Hour of Code activities</a> on their own rather than live together. This will allow students to immerse themselves in their own projects and gain a stronger understanding of the CS concepts. It will also minimize the distraction and obstacle of having to have a video conference window open.
+**Samodzielnie prowadzone zajęcia z "Godziny kodowania"**<br> Zalecamy, aby po rozpoczęciu pozwolić uczniom na opuszczenie wideokonferencji, aby przejść przez <a href="https://hourofcode.com/us/learn">zajęcia "Godziny kodowania"</a> na własną rękę, a nie razem. Pozwoli to uczniom zanurzyć się we własnych projektach i uzyskać większe zrozumienie pojęć informatycznych. Zminimalizuje to problem odwracania uwagi i przeszkód utrzymywania otwartego okna wideokonferencji.
 
-It may be helpful for you to determine 1-3 tutorial options for them to choose from ahead of time. This allows you to choose activities that are best suited for their grade level. Plus, if students have questions that require your assistance you’ll be better prepared to help if you’re already familiar with the tutorials they’re working on.
+Pomocne może być określenie dla nich 1-3 opcji samouczka do wyboru z wyprzedzeniem. To umożliwi to wybór zajęć, które są najlepiej dostosowane do poziomu ich klasy. Poza tym, jeśli uczniowie będą mieć pytania, które wymagają Twojej pomocy, będziesz do tego lepiej przygotowany znając z góry treść samouczków, które realizują.
 
-If your class is expected to do their activity immediately after kickoff, you might consider keeping a virtual conference room, chat platform, or other means of communication open so they can reconnect with you with questions as needed.
+Jeśli oczekuje się, że Twoja klasa zrealizuje swoje zajęcia bezpośrednio po ich rozpoczęciu, możesz rozważyć zachowanie sali przeznaczonej do wideokonferencji, platformy do chatu lub innych środków komunikacji otwartych tak, aby można było połączyć się z Tobą ponownie w przypadku pytań, jeśli wystąpi taka potrzeba.
 
-**Hour of Code activity together online**<br> If you prefer to keep your participants on the same video call for the duration of your event, please note that they’ll need to have two windows open at all times - one for the video conferencing platform, and the other for students to work on their activity.
+**"Godzina kodowania" wspólnie online**<br> Jeśli wolisz utrzymać swoich uczestników na tym samym połączeniu przez czas trwania wydarzenia, prosimy mieć na uwadze, że będą musieli mieć otwarte przez cały czas dwa okna - jedno na potrzebę platformy wideokonferencji a drugie, dla uczniów, którzy pracują nad realizacją zajęć.
 
-**With parents**<br> For students that are Grade 4 and below, consider encouraging their parents to host an Hour of Code at home. You can support them with some recommended tutorials as well as this helpful <a href="https://hourofcode.com/us/how-to/parents">How-To for Parents</a>.
+**Wraz z rodzicami**<br> W przypadku uczniów, którzy są najwyżej w IV klasie, należy rozważyć zachęcanie rodziców do organizacji "Godziny kodowania" w domu. Można ich wspierać przy pomocy kilku zalecanych samouczków, jak również tego przydatnego <a href="https://hourofcode.com/us/how-to/parents">Przewodnika dla rodziców</a>.
 
 [<img src="/images/fit-600/Marketing//happy-father-and-child-browsing-laptop-in-bedroom-4545778.jpg" />](https://hourofcode.com/us/how-to/parents)
 
 ### 3. Wciągnij wolontariusza na listę
-Można znaleźć wolontariusza dopasowanego do Twoich potrzeb na naszej [v mapie wolontariuszy ](https://code.org/volunteer/local). Wielu z nich jest dostępnych do udziału w trybie zdalnym oraz bardziej niż gotowych do rozmowy na temat doświadczeń w dziedzinie informatyki, sposobu, w jaki technologia wpływa na sprawowane role albo po prostu pomóc ci w rozwiązywaniu kwestii trapiących ucznia.  Once you find a volunteer, make sure you set up a meeting with them ahead of time to discuss their role for the event, work out technical requirements, and establish the logistics of participating online.
+Można znaleźć wolontariusza dopasowanego do Twoich potrzeb na naszej [v mapie wolontariuszy ](https://code.org/volunteer/local). Wielu z nich jest dostępnych do udziału w trybie zdalnym oraz bardziej niż gotowych do rozmowy na temat doświadczeń w dziedzinie informatyki, sposobu, w jaki technologia wpływa na sprawowane role albo po prostu pomóc ci w rozwiązywaniu kwestii trapiących ucznia.  Gdy już znajdziesz ochotnika, dopilnuj, aby umówić z nim z wyprzedzeniem spotkanie celem omówienia jego roli w tym wydarzeniu,  opracowania wymogów technicznych oraz wypracowania logistyki uczestnictwa online.
 
 ### 4. Zasoby do celebrowania
-Take a look below for ideas on celebrating your virtual Hour of Code. Some may require you to prepare ahead of time such as creating completion <a href="https://code.org/certificates">certificates</a> for all of your participants.
+Zerknij poniżej, aby pozyskać pomysły na celebrowanie swojej wirtualnej "Godziny kodowania". Niektóre aspekty mogą wymagać od Ciebie przygotowań z wyprzedzeniem czasowym takich jak utworzenie <a href="https://code.org/certificates">świadectw</a> dla wszystkich Twoich uczestników.
 
 ---
 
 ## Świętujcie razem
 
-Similar to how you started the event, come together afterwards to celebrate! Here are some ideas for making your virtual celebration interactive and special:
+Zbierzcie się razem po wydarzeniu, aby świętować, w podobny sposób, w jaki je rozpoczęliście! Kilka sposobów jak sprawić, aby Twoje wirtualne obchody miały charakter interaktywny i szczególny:
 
 - Pozwól uczniom udostępnić swoje ukończone projekty pozostałej części klasy. Jeśli Twoja platforma konferencyjna Ci to umożliwia, możesz nawet zachęcić uczniów do zrobienia zrzutów ekranu swoich projektów i ustawić je na swoim wirtualnym tle!
 - Wnioski z dyskusji: Czego oni nauczyli się o informatyce lub technologii? Co oni zrobili, gdy natrafią na problem, jak go rozwiązali?
@@ -66,6 +66,6 @@ Similar to how you started the event, come together afterwards to celebrate! Her
 
 [<img src="/images/fit-600/Marketing/g8TUlHzF.jpeg" />]({{ urls/learn }})
 
-Lastly, if you didn’t start the event with a <a href="https://code.org/volunteer/local">guest speaker</a>, <a href="https://hourofcode.com/us/promote/resources#">inspirational video</a>, or <a href="https://code.org/csforgood#prompts">discussion questions</a>, this would be another great opportunity to incorporate one of those experiences as well.
+W końcu jeśli nie zacząłeś jeszcze wydarzenia od <a href="https://hourofcode.com/us/promote/resources#">inspirującego filmu wideo</a>, <a href="https://code.org/volunteer/local">gościnnego prelegenta</a>,albo  <a href="https://code.org/csforgood#prompts">pytań do dyskusji</a>, będzie to kolejna wspaniała okazja do włączenia również takich doświadczeń.
 
 {{ signup_button }}
