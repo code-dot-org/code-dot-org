@@ -777,6 +777,24 @@ class Level < ActiveRecord::Base
     script_levels.map(&:script).select(&:hint_prompt_enabled?).any?
   end
 
+  # Define search filter fields
+  def self.search_options
+    {
+      levelOptions: [
+        ['All types', ''],
+        *LevelsController::LEVEL_CLASSES.map {|x| [x.name, x.name]}.sort_by {|a| a[0]}
+      ],
+      scriptOptions: [
+        ['All scripts', ''],
+        *Script.all_scripts.pluck(:name, :id).sort_by {|a| a[0]}
+      ],
+      ownerOptions: [
+        ['Any owner', ''],
+        *Level.joins(:user).distinct.pluck('users.name, users.id').sort_by {|a| a[0]}
+      ]
+    }
+  end
+
   private
 
   # Returns the level name, removing the name_suffix first (if present), and
