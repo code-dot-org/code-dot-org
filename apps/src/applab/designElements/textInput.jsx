@@ -15,6 +15,7 @@ import designMode from '../designMode';
 import {themeOptions, CLASSIC_THEME_INDEX} from '../constants';
 import themeValues, {CLASSIC_TEXT_INPUT_PADDING} from '../themeValues';
 import elementLibrary from './library';
+import {generateEventHandler} from './utils';
 
 class TextInputProperties extends React.Component {
   static propTypes = {
@@ -129,17 +130,7 @@ class TextInputEvents extends React.Component {
 
   getChangeEventCode() {
     const id = elementUtils.getId(this.props.element);
-    const code =
-      'onEvent("' +
-      id +
-      '", "change", function(event) {\n' +
-      '  console.log("' +
-      id +
-      ' entered text: " + getText("' +
-      id +
-      '"));\n' +
-      '});\n';
-    return code;
+    return generateEventHandler(id, 'change');
   }
 
   insertChange = () => {
@@ -148,17 +139,7 @@ class TextInputEvents extends React.Component {
 
   getInputEventCode() {
     const id = elementUtils.getId(this.props.element);
-    const code =
-      'onEvent("' +
-      id +
-      '", "input", function(event) {\n' +
-      '  console.log("' +
-      id +
-      ' current text: " + getText("' +
-      id +
-      '"));\n' +
-      '});\n';
-    return code;
+    return generateEventHandler(id, 'input');
   }
 
   insertInput = () => {

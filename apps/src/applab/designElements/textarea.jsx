@@ -15,6 +15,7 @@ import EnumPropertyRow from './EnumPropertyRow';
 import designMode from '../designMode';
 import themeValues, {CLASSIC_TEXT_AREA_PADDING} from '../themeValues';
 import elementLibrary from './library';
+import {generateEventHandler} from './utils';
 
 class TextAreaProperties extends React.Component {
   static propTypes = {
@@ -147,17 +148,7 @@ class TextAreaEvents extends React.Component {
 
   getChangeEventCode() {
     const id = elementUtils.getId(this.props.element);
-    const code =
-      'onEvent("' +
-      id +
-      '", "change", function(event) {\n' +
-      '  console.log("' +
-      id +
-      ' entered text: " + getText("' +
-      id +
-      '"));\n' +
-      '});\n';
-    return code;
+    return generateEventHandler(id, 'change');
   }
 
   insertChange = () => {
