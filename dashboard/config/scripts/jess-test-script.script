@@ -128,5 +128,15 @@ level 'VPL - CSD Module 7 - Equity Journey', progression: 'Equity Journey (~10 m
 level 'VPL - CSD - Module 7 Wrap Up', progression: 'Module 7 Asynchronous Wrap Up (~10 mins)'
 
 lesson 'Module 8', display_name: 'Module 8'
-level 'VirtualPLOverview'
+level 'VPL - CSD Module 8 Overview', progression: 'Module 8 Overview'
+level 'VPL - CSD - Module 8 - CI', progression: 'Lesson Investigation (~60 mins)'
+level 'VPL - CSD - Module 8 - U6L6', progression: 'Lesson Investigation (~60 mins)'
+level 'VPL - CSD - Module 8 - U6L6 Lesson 2', progression: 'Lesson Investigation (~60 mins)'
+level 'VPL - CSD - Module 8 - U6L6 Level 3', progression: 'Lesson Investigation (~60 mins)'
+level 'VPL - CSD - Module 8 - U6L6 - Level 4', progression: 'Lesson Investigation (~60 mins)'
+level 'VPL - CSD - Module 8 - U6L9', progression: 'Lesson Investigation (~60 mins)'
+level 'VPL - CSD - Module 8 - Conclusions and Connections', progression: 'Conclusions and Connections (~10 mins)'
+level 'VPL - CSD U6 Chapter 1 Project', progression: 'Conclusions and Connections (~10 mins)'
+level 'VPL - CSD U6 Chapter 2 Project', progression: 'Conclusions and Connections (~10 mins)'
+level 'VPL - CSD - Module 8 Wrap Up', progression: 'Module 8 Asynchronous Wrap Up (~10 mins)'
 
