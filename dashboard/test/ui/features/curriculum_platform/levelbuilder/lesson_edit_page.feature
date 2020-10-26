@@ -1,7 +1,6 @@
 # We need "press keys" to type into the React form's fields, but that doesn't work on IE.
 @no_ie
 @no_mobile
-@skip
 Feature: Using the Lesson Edit Page
   Scenario: Save changes using the lesson edit page
     Given I create a levelbuilder named "Levi"
