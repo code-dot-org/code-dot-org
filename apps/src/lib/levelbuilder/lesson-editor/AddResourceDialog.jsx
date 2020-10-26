@@ -62,6 +62,7 @@ const TYPE_OPTIONS = [
   'Handout',
   'Resource',
   'Rubric',
+  'Slides',
   'Video'
 ];
 
