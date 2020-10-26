@@ -530,7 +530,8 @@ class Lesson < ActiveRecord::Base
 
   def resources_for_lesson_plan(verified_teacher)
     grouped_resources = resources.map(&:summarize_for_lesson_plan).group_by {|r| r[:audience]}
-    if verified_teacher
+    if verified_teacher && grouped_resources.key?('Verified Teacher')
+      grouped_resources['Teacher'] ||= []
       grouped_resources['Teacher'] += grouped_resources['Verified Teacher']
     end
     grouped_resources.delete('Verified Teacher')
