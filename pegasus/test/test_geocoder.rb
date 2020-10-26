@@ -9,19 +9,21 @@ class GeocoderTest < Minitest::Test
   def test_finding_potential_addresses
     Geocoder.configure lookup: :mapbox, api_key: nil
     assert_nil(Geocoder.find_potential_street_address('this is just some text'))
-    assert(Geocoder.find_potential_street_address('1 Embarcadero Blvd SF CA'))
     assert_equal('1 Embarcadero Blvd SF CA', Geocoder.find_potential_street_address('1 Embarcadero Blvd SF CA'))
     assert_equal('123 Post Road Westport CT', Geocoder.find_potential_street_address('Hi I live at 123 Post Road Westport CT'))
     assert_equal('123, Post Road, Westport, CT', Geocoder.find_potential_street_address('Hi I live at 123, Post Road, Westport, CT'))
-    assert_equal('123, Post Road, Westport, CT and other stuff', Geocoder.find_potential_street_address('Hi I live at 123, Post Road, Westport, CT and other stuff'))
+    assert_nil(Geocoder.find_potential_street_address('Hi I live at 123 Post'))
+    assert_equal('123 Post Road', Geocoder.find_potential_street_address('Hi I live at 123 Post Road'))
+    assert_nil(Geocoder.find_potential_street_address('Hi I live at 123, Post Road, Westport, CT and other stuff'))
     assert_nil(Geocoder.find_potential_street_address('1b'))
     assert_nil(Geocoder.find_potential_street_address('300b'))
     assert_nil(Geocoder.find_potential_street_address('300'))
-    assert_nil(Geocoder.find_potential_street_address('250'))
-    assert_nil(Geocoder.find_potential_street_address('400'))
     assert_nil(Geocoder.find_potential_street_address('1500000000'))
     assert_nil(Geocoder.find_potential_street_address('1500000001230b'))
     assert_nil(Geocoder.find_potential_street_address('1_Counter'))
+    assert_nil(Geocoder.find_potential_street_address(nil))
+    assert_nil(Geocoder.find_potential_street_address(''))
+    assert_nil(Geocoder.find_potential_street_address('2019 Dance Party Example'))
   end
 
   def test_with_errors
@@ -82,5 +84,33 @@ class GeocoderTest < Minitest::Test
     assert_equal(expected_street_address, location.street_address)
     assert_equal(expected_address, location.address)
     assert_equal(expected_formatted_address, location.formatted_address)
+  end
+
+  def test_can_parse_result_with_empty_context_field
+    Geocoder.configure lookup: :mapbox, api_key: nil
+    expected_summarize = {
+      'location_p' => '45.6649521968376,16.6791068850861',
+      'location_route_s' => 'Croatia',
+      'location_street_address_s' => 'Croatia',
+      'location_country_code_s' => 'HR'
+    }
+
+    # This search resulted in a null context being returned in production
+    location = Geocoder.search('Sesvete, Croatia').first
+    assert_equal(expected_summarize, location.summarize)
+    assert_equal('HR', location.country_code)
+    assert_nil(location.state_code)
+    assert_nil(location.city)
+    assert_nil(location.state)
+    assert_nil(location.postal_code)
+    assert_nil(location.country)
+    assert_nil(location.neighborhood)
+  end
+
+  def test_can_get_country_code_for_direct_country_searches
+    Geocoder.configure lookup: :mapbox, api_key: nil
+    # This search resulted in a null context being returned in production
+    location = Geocoder.search('Croatia').first
+    assert_equal('HR', location.country_code)
   end
 end

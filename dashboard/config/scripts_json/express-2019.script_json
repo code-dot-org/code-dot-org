@@ -5,7 +5,7 @@
     "hidden": false,
     "login_required": false,
     "properties": {
-      "project_widget_visible": true,
+      "project_widget_visible": "on",
       "project_widget_types": [
         "playlab",
         "artist"
@@ -19,6 +19,7 @@
       "tts": true,
       "supported_locales": [
         "cs-CZ",
+        "es-ES",
         "es-MX",
         "fr-FR",
         "sk-SK"
@@ -41,9 +42,10 @@
           "https://curriculum.code.org/csf-19/express/standards/"
         ]
       ],
-      "lesson_extras_available": true,
-      "hideable_lessons": true,
-      "is_course": true
+      "lesson_extras_available": "on",
+      "hideable_lessons": "on",
+      "is_course": true,
+      "peer_reviews_to_complete": 0
     },
     "new_name": null,
     "family_name": "express",
