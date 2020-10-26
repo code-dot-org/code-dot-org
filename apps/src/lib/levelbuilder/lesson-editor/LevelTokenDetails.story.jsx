@@ -51,7 +51,8 @@ const blocklyLevel = {
       url: 'levels/59800/edit'
     }
   ],
-  activeId: 4
+  activeId: 4,
+  expand: false
 };
 
 export default storybook => {
