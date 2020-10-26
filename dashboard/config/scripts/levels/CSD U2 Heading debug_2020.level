@@ -20,6 +20,7 @@
     "map_reference": "/docs/concepts/html/headings-and-paragraphs/",
     "encrypted": "false",
     "mini_rubric": "false",
+    "validation_enabled": "true",
     "teacher_markdown": "# Debugging\r\n\r\nStudents may note that when code is organized and uses whitespace, it's much easier to find bugs, but any reasonable piece of advice around debugging could work here.\r\n\r\nAllow students to share out their advice, and continue to emphasize that getting bugs is a normal part of programming.  Students will be introduced to a formal debugging process later in the lesson."
   },
   "published": true,

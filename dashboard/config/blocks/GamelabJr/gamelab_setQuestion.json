@@ -3,7 +3,7 @@
   "config": {
     "func": "setQuestion",
     "inline": false,
-    "blockText": "ask question {QUESTION} for variable {VAR}",
+    "blockText": "prompt user {QUESTION} for variable {VAR}",
     "args": [
       {
         "name": "QUESTION",

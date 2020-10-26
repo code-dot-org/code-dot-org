@@ -108,9 +108,9 @@ Teachers who are actually implementing, but are listed as having 0 students:
 - This can happen if a teacher is teaching under a Code.org account that is associated with an email address different from the one they used to enroll in your workshop. If you are able to give us the email address of the teacher’s Code.org account, we can link them in Tableau to display student progress.
 - Note: Refer to the *Met Implementation Bar?* column for this process. Our data team is working on the issue causing the *Null* values in the *Highest Unit* column.
 
-**Step 3:** Reach out to any teachers that are not implementing. Use this <a href=“https://docs.google.com/document/d/1nR_851Tpb-5V6pYnw9rAry_UUuvKLNR2TU1W9ltiZfQ/edit” target_blank>template</a> or create your own.
+**Step 3:** Reach out to any teachers that are not implementing. Use this [template](https://docs.google.com/document/d/1nR_851Tpb-5V6pYnw9rAry_UUuvKLNR2TU1W9ltiZfQ/edit) or create your own.
 
-**Step 4:** Indicate the changes that you’re requesting to Code.org by completing <a href=“https://docs.google.com/forms/d/e/1FAIpQLSdKb2cHTPBu3kreR6PhsoSvMBBsipmkMEKgoOTKBPVXO0Sa8g/viewform?usp=sf_link” target_blank>this survey</a> by October 30th.
+**Step 4:** Indicate the changes that you’re requesting to Code.org by completing [this survey](https://docs.google.com/forms/d/e/1FAIpQLSdKb2cHTPBu3kreR6PhsoSvMBBsipmkMEKgoOTKBPVXO0Sa8g/viewform?usp=sf_link) by October 30th.
 
 **Step 5:** Review your final implementation rates. Code.org will notify you when your rosters have been corrected. This will be towards the end of November. Final scholarship payments, which are dependent on implementation rates, will also be calculated during that time. 
 

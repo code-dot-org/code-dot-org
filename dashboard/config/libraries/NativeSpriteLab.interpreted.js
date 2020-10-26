@@ -8,6 +8,45 @@ function draw() {
   }
 }
 
+/**
+ * Must run in the interpreter, not natively, so that callback executes before withPercentChance() returns,
+ * rather than being added to the stack. For example, consider the following program:
+ * var i = 10;
+ * ifVarEquals(i, 10, function() {
+ *   printText("first");
+ * });
+ * printText("second");
+ *
+ * If ifVarEquals() executed natively, the print statements would happen out of order.
+ */
+function ifVarEquals(variableName, value, callback) {
+  if (variableName == value) {
+    callback();
+  }
+}
+
+/**
+ * Must run in the interpreter, not natively, so that callback executes before withPercentChance() returns,
+ * rather than being added to the stack. For example, consider the following program:
+ * var i = 0;
+ * for (var count = 0; count < 100; count++) {
+ *   withPercentChance(50, function () {
+ *     i = (typeof i == 'number' ? i : 0) + 1;
+ *   });
+ * }
+ * printText(i)
+ *
+ * If withPercentChance() executed natively, i would still be 0 because the callbacks wouldn't have executed yet.
+ * Instead, if we keep the whole execution within the interpreter, the callbacks will execute before printText(),
+ * as expected.
+ */
+
+function withPercentChance(num, callback) {
+  if (randomNumber(0, 100) < num) {
+    callback();
+  }
+}
+
 /* Legacy code only. Do not add any new code below here */
 function clickedOn(spriteId, callback) {
   spriteClicked('when', spriteId, callback);

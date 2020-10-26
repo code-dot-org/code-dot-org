@@ -53,6 +53,7 @@
     "lock_zero_param_functions": "false",
     "disable_if_else_editing": "false",
     "free_play": "false",
+    "validation_enabled": "true",
     "text_mode_at_start": "false",
     "hide_animation_mode": "true",
     "start_in_animation_tab": "false",

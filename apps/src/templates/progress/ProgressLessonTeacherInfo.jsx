@@ -40,7 +40,7 @@ const styles = {
 class ProgressLessonTeacherInfo extends React.Component {
   static propTypes = {
     lesson: lessonType.isRequired,
-    levelUrl: PropTypes.string.isRequired,
+    levelUrl: PropTypes.string,
 
     // redux provided
     section: sectionShape,
@@ -137,7 +137,7 @@ class ProgressLessonTeacherInfo extends React.Component {
             onChange={this.onClickHiddenToggle}
           />
         )}
-        {showGoogleClassroomButton && (
+        {showGoogleClassroomButton && levelUrl && (
           <div
             style={{...styles.buttonContainer, ...styles.googleButtonMargin}}
           >

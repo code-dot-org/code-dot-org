@@ -1,12 +1,16 @@
+<%
+require 'cdo/cloud_formation/vpc'
+self.class.include VPC
+-%>
 ---
 AWSTemplateFormatVersion: 2010-09-09
 Description: >-
   Lambda layer for functions used in CloudFormation Custom Resources.
   Note: Admin permissions are required to manage this stack.
 Parameters:
-  SlackEndpoint:
+  SessionChannel:
+    Description: Channel to post Slack session audit messages.
     Type: String
-    NoEcho: true
 Resources:
   AMIManager:
     Type: AWS::Lambda::Function
@@ -121,7 +125,7 @@ Resources:
       Code: <%=js_zip ['slackCloudWatchEvent.js']%>
       Environment:
         Variables:
-          SLACK_ENDPOINT: !Ref SlackEndpoint
+          SLACK_ENDPOINT: '{{resolve:secretsmanager:production/cdo/slack_endpoint}}'
       Handler: slackCloudWatchEvent.handler
       Runtime: nodejs10.x
       Timeout: 30
@@ -269,6 +273,66 @@ Resources:
             - "ec2:DescribeImages"
             Resource: '*'
       PermissionsBoundary: !ImportValue IAM-DevPermissions
+  LambdaSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: Security group for VPC-internal Lambda functions.
+      VpcId: !ImportValue VPC
+  SSMSessionSlack:
+    Type: AWS::Lambda::Function
+    Properties:
+      Description: 'SSM Session Slack event handler'
+      FunctionName: SSMSessionSlack
+      Code: <%=ruby_zip 'ssm_session_slack' %>
+      Environment:
+        Variables:
+          SLACK_API_TOKEN: '{{resolve:secretsmanager:lambda/ssm_session_slack_token}}'
+          SLACK_CHANNEL: !Ref SessionChannel
+          FREEGEOIP_HOST: !ImportValue geocoder-DNSName
+          AUDIT_LOG_PATH: /admin/auditlogs
+      Handler: ssm_session_slack.handler
+      Runtime: ruby2.7
+      MemorySize: 1024
+      Timeout: 30
+      Role: !GetAtt SSMSessionSlackRole.Arn
+      VpcConfig:
+        SecurityGroupIds: [!Ref LambdaSecurityGroup]
+        SubnetIds: <%=subnets.to_json%>
+  SSMSessionSlackRole:
+    Type: AWS::IAM::Role
+    Properties:
+      <%=service_role 'lambda'%>
+      Path: /
+      ManagedPolicyArns: ['arn:aws:iam::aws:policy/service-role/AWSLambdaVPCAccessExecutionRole']
+      Policies:
+        - PolicyName: root
+          PolicyDocument:
+            Statement:
+              - Effect: Allow
+                Action: ['ec2:DescribeTags']
+                Resource: '*'
+      PermissionsBoundary: !ImportValue IAM-DevPermissions
+  SessionEvent:
+    Type: AWS::Events::Rule
+    Properties:
+      Description: !Sub "Session events for ${AWS::StackName}."
+      EventPattern:
+        source: [aws.ssm]
+        detail-type: [AWS API Call via CloudTrail]
+        detail:
+          eventSource: [ssm.amazonaws.com]
+          eventName: [StartSession]
+          responseElements:
+            sessionId: [exists: true]
+      State: ENABLED
+      Targets: [{Id: SessionEventTarget, Arn: !GetAtt SSMSessionSlack.Arn}]
+  SessionEventPermission:
+    Type: AWS::Lambda::Permission
+    Properties:
+      FunctionName: !GetAtt SSMSessionSlack.Arn
+      Action: 'lambda:InvokeFunction'
+      Principal: events.amazonaws.com
+      SourceArn: !GetAtt SessionEvent.Arn
 Outputs:
   AMIManager:
     Value: !GetAtt AMIManager.Arn
