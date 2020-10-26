@@ -1203,6 +1203,18 @@ input.header_input {
   padding: 5px;
 }
 
+.oceans-blue {
+  #codeApp {
+    .loading {
+      background: image-url("spinner-big-oceans-blue.gif") no-repeat center center;
+    }
+
+    .slow_load {
+      color: $white;
+    }
+  }
+}
+
 #codeApp {
   position: relative;
 
