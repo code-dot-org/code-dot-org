@@ -13,10 +13,9 @@ describe('AddLevelDialog', () => {
     defaultProps = {
       isOpen: true,
       handleConfirm,
-      currentScriptLevels: sampleActivities[0].activitySections[2].scriptLevels,
       addLevel,
       activityPosition: 1,
-      activitySectionPosition: 3
+      activitySection: sampleActivities[0].activitySections[2]
     };
   });
 
