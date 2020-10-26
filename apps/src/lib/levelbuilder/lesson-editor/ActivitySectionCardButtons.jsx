@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import AddLevelDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/AddLevelDialog';
 import LessonTipIconWithTooltip from '@cdo/apps/lib/levelbuilder/lesson-editor/LessonTipIconWithTooltip';
-import AddResourceDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/AddResourceDialog';
+import FindResourceDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/FindResourceDialog';
 import EditTipDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/EditTipDialog';
 import {activitySectionShape} from '@cdo/apps/lib/levelbuilder/shapes';
 import {connect} from 'react-redux';
@@ -127,7 +127,7 @@ class ActivitySectionCardButtons extends Component {
           <span>
             <button
               onMouseDown={this.handleOpenAddLevel}
-              className="btn"
+              className="btn uitest-open-add-level-button"
               style={styles.addButton}
               type="button"
             >
@@ -165,7 +165,7 @@ class ActivitySectionCardButtons extends Component {
             </span>
           )}
         </div>
-        <AddResourceDialog
+        <FindResourceDialog
           isOpen={this.state.addResourceOpen}
           handleConfirm={this.handleCloseAddResource}
         />
@@ -181,9 +181,8 @@ class ActivitySectionCardButtons extends Component {
         <AddLevelDialog
           isOpen={this.state.addLevelOpen}
           handleConfirm={this.handleCloseAddLevel}
-          currentScriptLevels={this.props.activitySection.scriptLevels}
           addLevel={this.props.addLevel}
-          activitySectionPosition={this.props.activitySection.position}
+          activitySection={this.props.activitySection}
           activityPosition={this.props.activityPosition}
         />
       </div>

@@ -51,7 +51,7 @@ export const sampleActivities = [
               {
                 name: 'Level 1',
                 id: 1,
-                url: 'https://levelbuilder-studio.code.org/levels/598/edit',
+                url: 'levels/598/edit',
                 icon: 'fa-desktop',
                 isUnplugged: false,
                 isConceptLevel: true,
@@ -62,6 +62,7 @@ export const sampleActivities = [
               }
             ],
             position: 1,
+            levelNumber: 1,
             activeId: 1,
             kind: 'puzzle',
             bonus: false,
@@ -75,7 +76,7 @@ export const sampleActivities = [
               {
                 name: 'Level 2',
                 id: 2,
-                url: 'https://levelbuilder-studio.code.org/levels/598/edit',
+                url: '/levels/598/edit',
                 icon: 'fa-desktop',
                 isUnplugged: false,
                 isConceptLevel: true,
@@ -87,7 +88,7 @@ export const sampleActivities = [
               {
                 name: 'Level 3',
                 id: 3,
-                url: 'https://levelbuilder-studio.code.org/levels/598/edit',
+                url: '/levels/598/edit',
                 icon: 'fa-desktop',
                 isUnplugged: false,
                 isConceptLevel: true,
@@ -98,6 +99,7 @@ export const sampleActivities = [
               }
             ],
             position: 2,
+            levelNumber: 2,
             activeId: 2,
             kind: 'assessment',
             bonus: false,
@@ -116,4 +118,22 @@ export const levelKeyList = {
   2: 'Level 2 - 1',
   3: 'Level 2 - 2',
   4: 'blockly:Studio:playlab_1'
+};
+
+export const searchOptions = {
+  levelOptions: [
+    ['All types', ''],
+    ['Applab', 'Applab'],
+    ['Dancelab', 'Dancelab']
+  ],
+  scriptOptions: [
+    ['All scripts', ''],
+    ['Script 1', 'script-1'],
+    ['Script 2', 'script-2']
+  ],
+  ownerOptions: [
+    ['Any owner', ''],
+    ['Levelbuilder 1', 1],
+    ['Levelbuilder 2', 2]
+  ]
 };

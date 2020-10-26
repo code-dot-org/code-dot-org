@@ -23,7 +23,11 @@
 #  index_levels_on_name     (name)
 #
 
+require 'cdo/shared_constants'
+
 class Level < ActiveRecord::Base
+  include SharedConstants
+
   belongs_to :game
   has_and_belongs_to_many :concepts
   has_and_belongs_to_many :script_levels
@@ -600,6 +604,12 @@ class Level < ActiveRecord::Base
     end
   end
 
+  def display_as_unplugged?
+    # Levelbuilders can select if External/
+    # Markdown levels should display as Unplugged.
+    unplugged? || properties["display_as_unplugged"] == "true"
+  end
+
   def summarize
     {
       level_id: id,
@@ -615,7 +625,18 @@ class Level < ActiveRecord::Base
       type: self.class.to_s,
       name: name,
       updated_at: updated_at.localtime.strftime("%D at %r"),
-      owner: user&.name
+      owner: user&.name,
+      url: "/levels/#{id}/edit",
+      icon: icon,
+      kind: unplugged? ? LEVEL_KIND.unplugged : LEVEL_KIND.puzzle,
+      title: try(:title),
+      unplugged: display_as_unplugged?,
+      is_concept_level: concept_level?,
+      sublevels: try(:sublevels),
+      skin: try(:skin),
+      videoKey: video_key,
+      concepts: summarize_concepts,
+      conceptDifficulty: summarize_concept_difficulty
     }
   end
 
@@ -754,6 +775,24 @@ class Level < ActiveRecord::Base
   # the scripts associated with the level are hint_prompt_enabled.
   def hint_prompt_enabled?
     script_levels.map(&:script).select(&:hint_prompt_enabled?).any?
+  end
+
+  # Define search filter fields
+  def self.search_options
+    {
+      levelOptions: [
+        ['All types', ''],
+        *LevelsController::LEVEL_CLASSES.map {|x| [x.name, x.name]}.sort_by {|a| a[0]}
+      ],
+      scriptOptions: [
+        ['All scripts', ''],
+        *Script.all_scripts.pluck(:name, :id).sort_by {|a| a[0]}
+      ],
+      ownerOptions: [
+        ['Any owner', ''],
+        *Level.joins(:user).distinct.pluck('users.name, users.id').sort_by {|a| a[0]}
+      ]
+    }
   end
 
   private

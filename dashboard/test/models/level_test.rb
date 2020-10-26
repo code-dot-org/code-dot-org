@@ -160,6 +160,7 @@ class LevelTest < ActiveSupport::TestCase
     assert_equal(summary[:name], 'test_level')
     assert_equal(summary[:owner], 'Best Curriculum Writer')
     assert(summary[:updated_at].include?("03/27/20 at")) # The time is different locally than on drone
+    assert_equal(summary[:url], "/levels/#{level.id}/edit")
   end
 
   test "get_question_text returns question text for free response level" do
@@ -1123,5 +1124,26 @@ class LevelTest < ActiveSupport::TestCase
     # Make sure there are no levels from test fixtures for which computing a
     # level key raises errors.
     Level.key_list
+  end
+
+  test "get search options" do
+    search_options = Level.search_options
+    assert_equal search_options[:levelOptions].map {|option| option[0]}, [
+      "All types", "Applab", "Artist", "Bounce", "BubbleChoice", "Calc", "ContractMatch",
+      "Craft", "CurriculumReference", "Dancelab", "Eval", "EvaluationMulti", "External",
+      "ExternalLink", "Fish", "Flappy", "FreeResponse", "FrequencyAnalysis", "Gamelab",
+      "GamelabJr", "Karel", "LevelGroup", "Map", "Match", "Maze", "Multi", "NetSim",
+      "Odometer", "Pixelation", "PublicKeyCryptography", "StandaloneVideo",
+      "StarWarsGrid", "Studio", "TextCompression", "TextMatch", "Unplugged",
+      "Vigenere", "Weblab"
+    ]
+    scripts = [
+      "All scripts", "20-hour", "algebra", "artist", "course1", "course2",
+      "course3", "course4", "coursea-2017", "courseb-2017", "coursec-2017",
+      "coursed-2017", "coursee-2017", "coursef-2017", "express-2017", "flappy",
+      "frozen", "hourofcode", "jigsaw", "playlab", "pre-express-2017", "starwars"
+    ]
+    assert (scripts - search_options[:scriptOptions].map {|option| option[0]}).empty?
+    assert (["Any owner"] - search_options[:ownerOptions].map {|option| option[0]}).empty?
   end
 end

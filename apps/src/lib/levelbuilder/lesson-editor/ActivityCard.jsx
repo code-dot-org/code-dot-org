@@ -12,7 +12,6 @@ import {
   removeActivity,
   updateActivityField
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
-import ReactDOM from 'react-dom';
 import {activityShape} from '@cdo/apps/lib/levelbuilder/shapes';
 
 const styles = {
@@ -50,7 +49,12 @@ const styles = {
     marginRight: 5
   },
   labelAndInput: {
-    marginLeft: 5,
+    marginLeft: 10,
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'flex-start'
+  },
+  inputsAndIcon: {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'flex-start'
@@ -66,10 +70,12 @@ class ActivityCard extends Component {
   static propTypes = {
     activity: activityShape,
     activitiesCount: PropTypes.number,
-    setActivitySectionMetrics: PropTypes.func.isRequired,
-    setTargetActivitySection: PropTypes.func.isRequired,
+    setActivitySectionRef: PropTypes.func.isRequired,
+    updateTargetActivitySection: PropTypes.func.isRequired,
+    targetActivityPos: PropTypes.number,
     targetActivitySectionPos: PropTypes.number,
-    activitySectionMetrics: PropTypes.object.isRequired,
+    activitySectionMetrics: PropTypes.array.isRequired,
+    updateActivitySectionMetrics: PropTypes.func.isRequired,
 
     //redux
     addActivitySection: PropTypes.func,
@@ -138,7 +144,12 @@ class ActivityCard extends Component {
   };
 
   render() {
-    const {activity} = this.props;
+    const {
+      activity,
+      setActivitySectionRef,
+      updateTargetActivitySection,
+      updateActivitySectionMetrics
+    } = this.props;
 
     return (
       <div className="uitest-activity-card">
@@ -148,33 +159,35 @@ class ActivityCard extends Component {
             ...(this.state.collapsed && {marginBottom: 10})
           }}
         >
-          <FontAwesome
-            icon={this.state.collapsed ? 'expand' : 'compress'}
-            onClick={() => {
-              this.setState({
-                collapsed: !this.state.collapsed
-              });
-            }}
-          />
-          <label style={styles.labelAndInput}>
-            <span style={styles.label}>{`Activity:`}</span>
-            <input
-              value={activity.displayName}
-              style={{width: 150}}
-              onChange={this.handleChangeDisplayName}
-              className="uitest-activity-name-input"
+          <div style={styles.inputsAndIcon}>
+            <FontAwesome
+              icon={this.state.collapsed ? 'expand' : 'compress'}
+              onClick={() => {
+                this.setState({
+                  collapsed: !this.state.collapsed
+                });
+              }}
             />
-          </label>
-          <label style={styles.labelAndInput}>
-            <span style={styles.label}>{`Duration:`}</span>
-            <input
-              value={activity.duration}
-              style={{width: 35}}
-              onChange={this.handleChangeDuration}
-              className="uitest-activity-duration-input"
-            />
-            <span style={{fontSize: 10}}>{'(mins)'}</span>
-          </label>
+            <label style={styles.labelAndInput}>
+              <span style={styles.label}>{`Activity:`}</span>
+              <input
+                value={activity.displayName}
+                style={{width: 200}}
+                onChange={this.handleChangeDisplayName}
+                className="uitest-activity-name-input"
+              />
+            </label>
+            <label style={styles.labelAndInput}>
+              <span style={styles.label}>{`Duration:`}</span>
+              <input
+                value={activity.duration}
+                style={{width: 35}}
+                onChange={this.handleChangeDuration}
+                className="uitest-activity-duration-input"
+              />
+              <span style={{fontSize: 10}}>{'(mins)'}</span>
+            </label>
+          </div>
           <OrderControls
             name={activity.key || '(none)'}
             move={this.handleMoveActivity}
@@ -189,20 +202,14 @@ class ActivityCard extends Component {
               activityPosition={activity.position}
               activitySectionsCount={activity.activitySections.length}
               activitiesCount={this.props.activitiesCount}
-              ref={activitySectionCard => {
-                if (activitySectionCard) {
-                  const metrics = ReactDOM.findDOMNode(
-                    activitySectionCard
-                  ).getBoundingClientRect();
-                  this.props.setActivitySectionMetrics(
-                    metrics,
-                    section.position
-                  );
-                }
+              ref={ref => {
+                setActivitySectionRef(ref, activity.position, section.position);
               }}
               activitySectionMetrics={this.props.activitySectionMetrics}
-              setTargetActivitySection={this.props.setTargetActivitySection}
+              updateTargetActivitySection={updateTargetActivitySection}
+              targetActivityPos={this.props.targetActivityPos}
               targetActivitySectionPos={this.props.targetActivitySectionPos}
+              updateActivitySectionMetrics={updateActivitySectionMetrics}
             />
           ))}
           <button

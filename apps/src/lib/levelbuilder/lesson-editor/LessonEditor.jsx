@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import ActivitiesEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/ActivitiesEditor';
 import ResourcesEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/ResourcesEditor';
+import ObjectivesEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/ObjectivesEditor';
 import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
@@ -10,6 +11,7 @@ import CollapsibleEditorSection from '@cdo/apps/lib/levelbuilder/CollapsibleEdit
 import {resourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
 import RelatedLessons from './RelatedLessons';
 import {relatedLessonShape} from '../shapes';
+import color from '@cdo/apps/util/color';
 
 const styles = {
   editor: {
@@ -29,6 +31,22 @@ const styles = {
   },
   dropdown: {
     margin: '0 6px'
+  },
+  saveButtonBackground: {
+    margin: 0,
+    position: 'fixed',
+    bottom: 0,
+    left: 0,
+    backgroundColor: color.lightest_gray,
+    borderColor: color.lightest_gray,
+    height: 50,
+    width: '100%',
+    zIndex: 900,
+    display: 'flex',
+    justifyContent: 'flex-end'
+  },
+  saveButton: {
+    margin: '10px 50px 10px 20px'
   }
 };
 
@@ -45,7 +63,8 @@ export default class LessonEditor extends Component {
     preparation: PropTypes.string,
     announcements: PropTypes.arrayOf(announcementShape),
     resources: PropTypes.arrayOf(resourceShape),
-    relatedLessons: PropTypes.arrayOf(relatedLessonShape).isRequired
+    relatedLessons: PropTypes.arrayOf(relatedLessonShape).isRequired,
+    objectives: PropTypes.arrayOf(PropTypes.object).isRequired
   };
 
   render() {
@@ -147,7 +166,11 @@ export default class LessonEditor extends Component {
           />
         </CollapsibleEditorSection>
 
-        <CollapsibleEditorSection title="Overviews" collapsed={true}>
+        <CollapsibleEditorSection
+          title="Overviews"
+          collapsed={true}
+          fullWidth={true}
+        >
           <TextareaWithMarkdownPreview
             markdown={overview}
             label={'Overview'}
@@ -159,10 +182,17 @@ export default class LessonEditor extends Component {
             label={'Student Overview'}
             name={'studentOverview'}
             inputRows={5}
+            helpTip={
+              'This overview will appear on the students Lessons Resources page.'
+            }
           />
         </CollapsibleEditorSection>
 
-        <CollapsibleEditorSection title="Purpose and Prep" collapsed={true}>
+        <CollapsibleEditorSection
+          title="Purpose and Prep"
+          collapsed={true}
+          fullWidth={true}
+        >
           <TextareaWithMarkdownPreview
             markdown={purpose}
             label={'Purpose'}
@@ -181,13 +211,27 @@ export default class LessonEditor extends Component {
           <ResourcesEditor resources={this.props.resources} />
         </CollapsibleEditorSection>
 
-        <CollapsibleEditorSection title="Activities & Levels">
+        <CollapsibleEditorSection
+          title="Objectives"
+          collapsed={true}
+          fullWidth={true}
+        >
+          <ObjectivesEditor objectives={this.props.objectives} />
+        </CollapsibleEditorSection>
+
+        <CollapsibleEditorSection title="Activities & Levels" fullWidth={true}>
           <ActivitiesEditor />
         </CollapsibleEditorSection>
 
-        <button className="btn btn-primary" type="submit" style={{margin: 0}}>
-          Save Changes
-        </button>
+        <div style={styles.saveButtonBackground}>
+          <button
+            className="btn btn-primary"
+            type="submit"
+            style={styles.saveButton}
+          >
+            Save Changes
+          </button>
+        </div>
       </div>
     );
   }

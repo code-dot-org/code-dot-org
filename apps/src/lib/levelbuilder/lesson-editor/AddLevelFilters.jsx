@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import _ from 'lodash';
+import {connect} from 'react-redux';
 
 const styles = {
   filters: {
@@ -9,8 +10,12 @@ const styles = {
     flexDirection: 'row',
     alignItems: 'center'
   },
+  input: {
+    width: 195,
+    margin: 5
+  },
   dropdown: {
-    width: 125,
+    width: 150,
     margin: 5
   },
   label: {
@@ -18,27 +23,25 @@ const styles = {
   }
 };
 
-export default class AddLevelFilters extends Component {
+class AddLevelFilters extends Component {
   static propTypes = {
-    searchFields: PropTypes.object,
-    handleSearch: PropTypes.func
+    handleSearch: PropTypes.func,
+    handleChangeLevelName: PropTypes.func,
+    handleChangeLevelType: PropTypes.func,
+    handleChangeScript: PropTypes.func,
+    handleChangeOwner: PropTypes.func,
+    ownerId: PropTypes.string,
+    scriptId: PropTypes.string,
+    levelType: PropTypes.string,
+    levelName: PropTypes.string,
+
+    // from redux
+    searchOptions: PropTypes.object.isRequired
   };
-
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      levelName: '',
-      levelType: this.props.searchFields.levelOptions[0][1],
-      scriptId: this.props.searchFields.scriptOptions[0][1],
-      ownerId: this.props.searchFields.ownerOptions[0][1]
-    };
-  }
 
   handleSearch = _.debounce(
     () => {
-      const {levelName, levelType, scriptId, ownerId} = this.state;
-      this.props.handleSearch(levelName, levelType, scriptId, ownerId);
+      this.props.handleSearch();
     },
     1000,
     {
@@ -47,41 +50,26 @@ export default class AddLevelFilters extends Component {
     }
   );
 
-  handleInputChange = event => {
-    this.setState({levelName: event.target.value});
-  };
-
-  handleChangeLevelType = event => {
-    this.setState({levelType: event.target.value});
-  };
-
-  handleChangeScript = event => {
-    this.setState({scriptId: event.target.value});
-  };
-
-  handleChangeOwner = event => {
-    this.setState({ownerId: event.target.value});
-  };
-
   render() {
     return (
       <div style={styles.filters}>
         <label style={styles.label}>
           By Name:
           <input
-            style={styles.dropdown}
-            onChange={this.handleInputChange}
-            value={this.state.levelName}
+            style={styles.input}
+            onChange={this.props.handleChangeLevelName}
+            value={this.props.levelName}
           />
         </label>
         <label style={styles.label}>
           By Type:
           <select
             style={styles.dropdown}
-            onChange={this.handleChangeLevelType}
-            value={this.state.levelType}
+            onChange={this.props.handleChangeLevelType}
+            value={this.props.levelType}
+            id={'add-level-type'}
           >
-            {this.props.searchFields.levelOptions.map(levelType => (
+            {this.props.searchOptions.levelOptions.map(levelType => (
               <option key={levelType[0]} value={levelType[1]}>
                 {levelType[0]}
               </option>
@@ -92,10 +80,10 @@ export default class AddLevelFilters extends Component {
           By Script:
           <select
             style={styles.dropdown}
-            onChange={this.handleChangeScript}
-            value={this.state.scriptId}
+            onChange={this.props.handleChangeScript}
+            value={this.props.scriptId}
           >
-            {this.props.searchFields.scriptOptions.map(script => (
+            {this.props.searchOptions.scriptOptions.map(script => (
               <option key={script[0]} value={script[1]}>
                 {script[0]}
               </option>
@@ -106,11 +94,11 @@ export default class AddLevelFilters extends Component {
           By Owner:
           <select
             style={styles.dropdown}
-            onChange={this.handleChangeOwner}
-            value={this.state.ownerId}
+            onChange={this.props.handleChangeOwner}
+            value={this.props.ownerId}
           >
-            {this.props.searchFields.ownerOptions.map(owner => (
-              <option key={owner[0]} value={owner[1]}>
+            {this.props.searchOptions.ownerOptions.map(owner => (
+              <option key={owner[1]} value={owner[1]}>
                 {owner[0]}
               </option>
             ))}
@@ -123,3 +111,9 @@ export default class AddLevelFilters extends Component {
     );
   }
 }
+
+export const UnconnectedAddLevelFilters = AddLevelFilters;
+
+export default connect(state => ({
+  searchOptions: state.searchOptions
+}))(AddLevelFilters);
