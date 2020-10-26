@@ -59,6 +59,8 @@ describe('LessonOverview', () => {
       'The purpose of the lesson is for people to learn'
     );
     expect(safeMarkdowns.at(2).props().markdown).to.contain('- One');
+
+    expect(wrapper.find('LessonAgenda').length).to.equal(1);
   });
 
   it('renders correct number of activities', () => {
