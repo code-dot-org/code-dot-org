@@ -1,0 +1,1 @@
+export {initAll} from './index';

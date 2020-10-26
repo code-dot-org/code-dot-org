@@ -1,35 +1,110 @@
+const {CleanWebpackPlugin} = require('clean-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 const path = require("path");
-const webpack = require("webpack");
 
-module.exports = {
-  entry: "./src/index.js",
-  mode: "development",
-  module: {
-    rules: [
-      {
-        test: /\.(js|jsx)$/,
-        exclude: /(node_modules|bower_components)/,
-        loader: "babel-loader",
-        options: { presets: ["@babel/env"] }
-      },
-      {
-        test: /\.css$/,
-        use: ["style-loader", "css-loader"]
-      }
-    ]
+const commonConfig = {
+  devtool: 'eval-cheap-module-source-map',
+  resolve: {
+    extensions: ["*", ".js", ".jsx"],
+    // Note: Separate aliases are required for aliases to work in unit tests. These should
+    // be added in package.json in the jest configuration.
+    alias: {
+      '@ml': path.resolve(__dirname, 'src'),
+      '@public': path.resolve(__dirname, 'public')
+    }
   },
-  resolve: { extensions: ["*", ".js", ".jsx"] },
   output: {
-    //path: path.resolve(__dirname, "dist/"),
-    //publicPath: "/",
     filename: "[name].js",
     libraryTarget: 'umd'
   },
-  devServer: {
-    contentBase: path.join(__dirname, "public/"),
-    port: 8080,
-    publicPath: "http://localhost:8080/",
-    hotOnly: true
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        loader: 'babel-loader'
+      },
+      {test: /\.css$/, loader: 'style-loader!css-loader'},
+      {
+        test: /\.jsx$/,
+        enforce: 'pre',
+        exclude: /(node_modules)/,
+        use: [
+          {
+            loader: 'babel-loader',
+            options: {
+              presets: ['react', 'env'],
+              plugins: ['transform-class-properties']
+            }
+          }
+        ]
+      }
+    ]
   },
-  plugins: [new webpack.HotModuleReplacementPlugin()]
+  performance: {
+    assetFilter: function(assetFilename) {
+      return /^assets\//.test(assetFilename);
+    },
+    maxAssetSize: 300000,
+    maxEntrypointSize: 10500000
+  }
 };
+
+const firstConfigOnly = {
+  plugins: [
+    new CleanWebpackPlugin(),
+    new CopyPlugin([
+      {
+        from: 'public/datasets/*.csv',
+        to: 'assets/datasets/',
+        flatten: true
+      }
+    ])
+  ]
+};
+
+const externalConfig = {
+  externals: {
+    lodash: 'lodash',
+    radium: 'radium',
+    react: 'react',
+    'react-dom': 'react-dom'
+  }
+};
+
+const defaultConfig = [
+  {
+    entry: {
+      assetPath: './src/assetPath.js'
+    },
+    ...commonConfig,
+    ...firstConfigOnly,
+    ...externalConfig
+  },
+  {
+    entry: {
+      ailab: './src/indexDev.js'
+    },
+    ...commonConfig
+  }
+];
+
+const productionConfig = [
+  {
+    entry: {
+      main: './src/indexProduction.js'
+    },
+    ...commonConfig,
+    ...externalConfig
+  }
+];
+
+module.exports = (env, argv) => {
+  if (argv.mode === 'production') {
+    return [...defaultConfig, ...productionConfig];
+  }
+
+  console.log("!!" ,defaultConfig);
+
+  return defaultConfig;
+};
+

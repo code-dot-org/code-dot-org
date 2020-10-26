@@ -7,7 +7,7 @@ import {
   resetState,
   setImportedData,
   setColumnsByDataType,
-  ColumnTypes
+  ColumnTypes,
 } from "../redux";
 import { availableDatasets } from "../datasetManifest";
 
@@ -15,7 +15,7 @@ class CSVReaderWrapper extends Component {
   static propTypes = {
     resetState: PropTypes.func.isRequired,
     setImportedData: PropTypes.func.isRequired,
-    setColumnsByDataType: PropTypes.func.isRequired
+    setColumnsByDataType: PropTypes.func.isRequired,
   };
 
   constructor(props) {
@@ -24,23 +24,23 @@ class CSVReaderWrapper extends Component {
     this.state = {
       csvfile: undefined,
       download: false,
-      data: undefined
+      data: undefined,
     };
   }
 
-  handleChange = event => {
+  handleChange = (event) => {
     this.props.resetState();
     this.setState({
       csvfile: event.target.files[0],
-      download: false
+      download: false,
     });
   };
 
-  handleChangeSelect = event => {
+  handleChangeSelect = (event) => {
     this.props.resetState();
     this.setState({
       csvfile: event.target.value,
-      download: true
+      download: true,
     });
   };
 
@@ -49,23 +49,25 @@ class CSVReaderWrapper extends Component {
     Papa.parse(csvfile, {
       complete: this.updateData,
       header: true,
-      download: download
+      download: download,
     });
   };
 
-  updateData = result => {
+  updateData = (result) => {
     var data = result.data;
     this.props.setImportedData(data);
     this.setDefaultColumnDataType(data);
   };
 
-  setDefaultColumnDataType = data => {
-    Object.keys(data[0]).map(column =>
+  setDefaultColumnDataType = (data) => {
+    Object.keys(data[0]).map((column) =>
       this.props.setColumnsByDataType(column, ColumnTypes.OTHER)
     );
   };
 
   render() {
+    const assetPath = global.__ml_playground_asset_public_path__;
+
     return (
       <div>
         <h2>Which dataset would you like to use?</h2>
@@ -74,9 +76,12 @@ class CSVReaderWrapper extends Component {
             <h2>Select a dataset from the collection</h2>
             <select onChange={this.handleChangeSelect}>
               <option>{""}</option>
-              {availableDatasets.map(dataset => {
+              {availableDatasets.map((dataset) => {
                 return (
-                  <option key={dataset["id"]} value={dataset["path"]}>
+                  <option
+                    key={dataset["id"]}
+                    value={assetPath + dataset["path"]}
+                  >
                     {dataset["name"]}
                   </option>
                 );
@@ -89,7 +94,7 @@ class CSVReaderWrapper extends Component {
         <input
           className="csv-input"
           type="file"
-          ref={input => {
+          ref={(input) => {
             this.filesInput = input;
           }}
           name="file"
@@ -107,8 +112,8 @@ class CSVReaderWrapper extends Component {
 }
 
 export default connect(
-  state => ({}),
-  dispatch => ({
+  (state) => ({}),
+  (dispatch) => ({
     resetState() {
       dispatch(resetState());
     },
@@ -117,6 +122,6 @@ export default connect(
     },
     setColumnsByDataType(column, dataType) {
       dispatch(setColumnsByDataType(column, dataType));
-    }
+    },
   })
 )(CSVReaderWrapper);

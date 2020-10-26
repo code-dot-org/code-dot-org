@@ -2,7 +2,10 @@
   "name": "@code-dot-org/ml-playground",
   "version": "0.0.5",
   "main": "dist/main.js",
-  "repository": "git@github.com:code-dot-org/ml-playground.git",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/code-dot-org/ml-playground.git"
+  },
   "author": "",
   "license": "MIT",
   "private": false,
@@ -12,18 +15,36 @@
   },
   "scripts": {
     "build": "webpack -p",
-    "start": "webpack-dev-server --mode development --content-base public",
+    "start": "yarn run dev",
+    "dev": "webpack-dev-server --mode development --content-base public --host 0.0.0.0 --disable-host-check",
+    "lint": "eslint --ext .js,.jsx src",
     "test": "yarn run lint && jest",
-    "lint": "eslint --ext .js,.jsx src"
+    "test:unit": "jest ./test/unit/*.js",
+    "preversion": "yarn install && yarn run test",
+    "version": "yarn run build",
+    "postversion": "git push && git push --tags && yarn publish"
   },
-  "dependencies": {
+  "devDependencies": {
     "babel-core": "^6.26.3",
+    "babel-eslint": "^7.1.1",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-syntax-async-functions": "^6.8.0",
+    "babel-plugin-transform-class-properties": "^6.23.0",
+    "babel-plugin-transform-es2015-classes": "^6.9.0",
+    "babel-plugin-transform-object-rest-spread": "^6.8.0",
+    "babel-plugin-transform-react-jsx": "^6.8.0",
+    "babel-plugin-transform-regenerator": "^6.26.0",
     "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.5.0",
     "babelify": "^10.0.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^5.0.5",
     "core-js": "^3",
     "eslint": "4.18.2",
     "eslint-plugin-react": "7.11.0",
+    "jest": "^23.6.0",
     "ml-knn": "^3.0.0",
     "react": "~15.4.0",
     "react-dom": "~15.4.0",
@@ -31,23 +52,13 @@
     "react-redux": "^5.0.0",
     "redux": "^4.0.5",
     "svm": "^0.1.1",
-    "webpack": "^4.44.1",
-    "webpack-cli": "^3.3.12",
-    "webpack-dev-server": "^3.11.0"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.11.6",
-    "@babel/plugin-proposal-class-properties": "^7.10.4",
-    "@babel/preset-env": "^7.0.0",
-    "@babel/preset-react": "^7.0.0",
-    "babel-eslint": "^7.1.1",
-    "babel-loader": "^8.1.0",
-    "babel-plugin-transform-class-properties": "^6.24.1",
-    "babel-preset-stage-1": "^6.24.1",
-    "jest": "^26.4.2"
+    "webpack": "4.19.1",
+    "webpack-bundle-analyzer": "^3.6.0",
+    "webpack-cli": "^3.3.6",
+    "webpack-dev-server": "^3.1.4"
   },
   "files": [
-    "dist/**/!(oceans.js)",
-    "i18n/oceans.json"
+    "dist/**/!(ailab.js)",
+    "i18n/ailab.json"
   ]
 }
