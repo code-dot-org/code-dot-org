@@ -85,7 +85,6 @@ class ActivitiesControllerTest < ActionController::TestCase
 
   def build_expected_response(options = {})
     {
-      total_lines: 35,
       redirect: build_script_level_path(@script_level_next),
     }.merge options
   end
@@ -650,7 +649,6 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_response :success
 
     expected_response = build_expected_response(
-      total_lines: 0,
       level_source: "http://test.host/c/#{assigns(:level_source).id}"
     )
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
@@ -661,7 +659,6 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     # set up existing session
     client_state.set_level_progress(@script_level_prev, 50)
-    client_state.add_lines(10)
 
     # do all the logging
     @controller.expects :log_milestone
@@ -676,7 +673,6 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_response :success
 
     expected_response = build_expected_response(
-      total_lines: 10,
       level_source: "http://test.host/c/#{assigns(:level_source).id}"
     )
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
@@ -684,8 +680,6 @@ class ActivitiesControllerTest < ActionController::TestCase
 
   test "anonymous milestone not passing" do
     sign_out @user
-
-    client_state.add_lines(10)
 
     # do all the logging
     @controller.expects :log_milestone
@@ -703,9 +697,6 @@ class ActivitiesControllerTest < ActionController::TestCase
     # record activity in session
     assert_equal 0, client_state.level_progress(@script_level)
 
-    # lines in session does not change
-    assert_equal 10, client_state.lines
-
     assert_response :success
     assert_equal_expected_keys build_try_again_response, JSON.parse(@response.body)
   end
@@ -715,7 +706,6 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     # set up existing session
     client_state.set_level_progress(@script_level_prev, 50)
-    client_state.add_lines(10)
 
     # do all the logging
     @controller.expects :log_milestone
@@ -736,7 +726,6 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_response :success
 
     expected_response = build_expected_response(
-      total_lines: 10,
       level_source: "http://test.host/c/#{assigns(:level_source).id}"
     )
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
@@ -747,7 +736,6 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     # set up existing session
     client_state.set_level_progress(@script_level_prev, 50)
-    client_state.add_lines(10)
 
     # do all the logging
     @controller.expects :log_milestone
