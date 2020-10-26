@@ -10,7 +10,8 @@ const styles = {
   container: {
     position: 'relative',
     margin: '0 auto',
-    userSelect: 'none'
+    userSelect: 'none',
+    overflow: 'scroll'
   },
   containerReact: {
     position: 'absolute',
@@ -156,7 +157,7 @@ class AilabView extends React.Component {
       <StudioAppWrapper>
         <CodeWorkspaceContainer topMargin={0}>
           <div
-            id="oceans-container"
+            id="ailab-container"
             style={{
               ...styles.container,
               width: Math.round(containerWidth),

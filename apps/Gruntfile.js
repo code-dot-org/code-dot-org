@@ -180,6 +180,12 @@ describe('entry tests', () => {
           src: ['**'],
           dest: 'build/package/media/skins/fish'
         },
+        {
+          expand: true,
+          cwd: 'node_modules/@code-dot-org/ml-playground/dist/assets',
+          src: ['**'],
+          dest: 'build/package/media/skins/ailab'
+        },
 
         // We have to do some weird stuff to get our fallback video player working.
         // video.js expects some of its own files to be served by the application, so
