@@ -59,6 +59,7 @@ function mergeProgressData(scriptName, serverProgress) {
 
   // The server returned progress. This is the source of truth.
   store.dispatch(useDbProgress());
+  clientState.clearProgress();
 
   // Clear any existing redux state.
   store.dispatch(

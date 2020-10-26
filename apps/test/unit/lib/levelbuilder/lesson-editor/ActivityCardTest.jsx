@@ -11,15 +11,17 @@ describe('ActivityCard', () => {
     removeActivity,
     moveActivity,
     updateActivityField,
-    setActivitySectionMetrics,
-    setTargetActivitySection;
+    setActivitySectionRef,
+    updateTargetActivitySection,
+    updateActivitySectionMetrics;
   beforeEach(() => {
     addActivitySection = sinon.spy();
     removeActivity = sinon.spy();
     moveActivity = sinon.spy();
     updateActivityField = sinon.spy();
-    setActivitySectionMetrics = sinon.spy();
-    setTargetActivitySection = sinon.spy();
+    setActivitySectionRef = sinon.spy();
+    updateTargetActivitySection = sinon.spy();
+    updateActivitySectionMetrics = sinon.spy();
     defaultProps = {
       activity: sampleActivities[0],
       activitiesCount: 1,
@@ -27,10 +29,11 @@ describe('ActivityCard', () => {
       removeActivity,
       moveActivity,
       updateActivityField,
-      setActivitySectionMetrics,
-      setTargetActivitySection,
+      setActivitySectionRef,
+      updateTargetActivitySection,
+      updateActivitySectionMetrics,
       targetActivitySectionPos: 1,
-      activitySectionMetrics: {}
+      activitySectionMetrics: []
     };
   });
 
