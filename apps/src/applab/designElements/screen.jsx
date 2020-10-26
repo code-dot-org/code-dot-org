@@ -12,6 +12,7 @@ import * as applabConstants from '../constants';
 import * as elementUtils from './elementUtils';
 import themeValues from '../themeValues';
 import {getStore} from '../../redux';
+import {generateEventHandler} from './utils';
 
 class ScreenProperties extends React.Component {
   static propTypes = {
@@ -86,15 +87,7 @@ class ScreenEvents extends React.Component {
   // event.targetId === "<id>" here, at the expense of added complexity.
   getClickEventCode() {
     const id = elementUtils.getId(this.props.element);
-    const code =
-      'onEvent("' +
-      id +
-      '", "click", function(event) {\n' +
-      '  console.log("' +
-      id +
-      ' clicked!");\n' +
-      '});\n';
-    return code;
+    return generateEventHandler(id, 'click');
   }
 
   insertClick = () => {
@@ -103,13 +96,7 @@ class ScreenEvents extends React.Component {
 
   getKeyEventCode() {
     const id = elementUtils.getId(this.props.element);
-    const code =
-      'onEvent("' +
-      id +
-      '", "keydown", function(event) {\n' +
-      '  console.log("Key: " + event.key);\n' +
-      '});\n';
-    return code;
+    return generateEventHandler(id, 'keydown');
   }
 
   insertKey = () => {

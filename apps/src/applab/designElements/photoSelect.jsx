@@ -13,6 +13,7 @@ import * as elementUtils from './elementUtils';
 import designMode from '../designMode';
 import elementLibrary from './library';
 import i18n from '@cdo/applab/locale';
+import {generateEventHandler} from './utils';
 
 class PhotoChooserProperties extends React.Component {
   static propTypes = {
@@ -110,8 +111,7 @@ class PhotoChooserEvents extends React.Component {
 
   getPhotoSelectedEventCode() {
     const id = elementUtils.getId(this.props.element);
-    const code = `onEvent("${id}", "change", function() {\n  console.log("${id} photo selected!");\n  console.log(getImageURL("${id}"));\n});\n`;
-    return code;
+    return generateEventHandler(id, 'change');
   }
 
   insertPhotoSelected = () =>

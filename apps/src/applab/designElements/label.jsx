@@ -16,6 +16,7 @@ import * as gridUtils from '../gridUtils';
 import designMode from '../designMode';
 import themeValues from '../themeValues';
 import elementLibrary from './library';
+import {generateEventHandler} from './utils';
 
 class LabelProperties extends React.Component {
   static propTypes = {
@@ -142,15 +143,7 @@ class LabelEvents extends React.Component {
 
   getClickEventCode() {
     const id = elementUtils.getId(this.props.element);
-    const code =
-      'onEvent("' +
-      id +
-      '", "click", function(event) {\n' +
-      '  console.log("' +
-      id +
-      ' clicked!");\n' +
-      '});\n';
-    return code;
+    return generateEventHandler(id, 'click');
   }
 
   insertClick = () => {

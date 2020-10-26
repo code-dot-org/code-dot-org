@@ -16,6 +16,7 @@ import * as elementUtils from './elementUtils';
 import designMode from '../designMode';
 import elementLibrary from './library';
 import RGBColor from 'rgbcolor';
+import {generateEventHandler} from './utils';
 
 class DropdownProperties extends React.Component {
   static propTypes = {
@@ -140,15 +141,7 @@ class DropdownEvents extends React.Component {
 
   getChangeEventCode() {
     const id = elementUtils.getId(this.props.element);
-    const code =
-      'onEvent("' +
-      id +
-      '", "change", function(event) {\n' +
-      '  console.log("Selected option: " + getText("' +
-      id +
-      '"));\n' +
-      '});\n';
-    return code;
+    return generateEventHandler(id, 'change');
   }
 
   insertChange = () => {
