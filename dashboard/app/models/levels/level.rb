@@ -790,7 +790,7 @@ class Level < ActiveRecord::Base
       ],
       ownerOptions: [
         ['Any owner', ''],
-        *Level.joins(:user).distinct.pluck('users.name, users.id').sort_by {|a| a[0]}
+        *Level.joins(:user).distinct.pluck('users.name, users.id').select {|a| !a[0].blank? && !a[1].blank?}.sort_by {|a| a[0]}
       ]
     }
   end
