@@ -5,13 +5,16 @@ import styleConstants from '@cdo/apps/styleConstants';
 
 const styles = {
   header: {
-    borderBottom: '1px solid black'
+    borderBottom: '1px solid rgb(204, 204, 204)'
   },
   icon: {
     marginRight: 10
   },
   editors: {
     padding: 10
+  },
+  title: {
+    fontSize: 20
   }
 };
 
@@ -44,6 +47,7 @@ export default class CollapsibleEditorSection extends Component {
             onClick={() => {
               this.setState({collapsed: !this.state.collapsed});
             }}
+            style={styles.title}
           >
             <FontAwesome
               icon={this.state.collapsed ? 'expand' : 'compress'}

@@ -182,6 +182,9 @@ export default class LessonEditor extends Component {
             label={'Student Overview'}
             name={'studentOverview'}
             inputRows={5}
+            helpTip={
+              'This overview will appear on the students Lessons Resources page.'
+            }
           />
         </CollapsibleEditorSection>
 
