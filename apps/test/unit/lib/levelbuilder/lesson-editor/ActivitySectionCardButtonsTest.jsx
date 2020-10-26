@@ -14,6 +14,7 @@ describe('ActivitySectionCardButtons', () => {
     removeTip = sinon.spy();
     defaultProps = {
       activitySection: sampleActivities[0].activitySections[1],
+      activityPosition: 1,
       addTip,
       updateTip,
       addLevel,
