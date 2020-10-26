@@ -13,7 +13,6 @@ import {ICON_PREFIX_REGEX} from '../constants';
 import EnumPropertyRow from './EnumPropertyRow';
 import BorderProperties from './BorderProperties';
 import * as elementUtils from './elementUtils';
-import {generateEventHandler} from './utils';
 
 class ImageProperties extends React.Component {
   static propTypes = {
@@ -131,7 +130,15 @@ class ImageEvents extends React.Component {
 
   getClickEventCode() {
     const id = elementUtils.getId(this.props.element);
-    return generateEventHandler(id, 'click');
+    const code =
+      'onEvent("' +
+      id +
+      '", "click", function(event) {\n' +
+      '  console.log("' +
+      id +
+      ' clicked!");\n' +
+      '});\n';
+    return code;
   }
 
   insertClick = () => {
