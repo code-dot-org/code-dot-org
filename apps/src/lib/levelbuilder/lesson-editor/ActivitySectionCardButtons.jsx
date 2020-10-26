@@ -181,9 +181,8 @@ class ActivitySectionCardButtons extends Component {
         <AddLevelDialog
           isOpen={this.state.addLevelOpen}
           handleConfirm={this.handleCloseAddLevel}
-          currentScriptLevels={this.props.activitySection.scriptLevels}
           addLevel={this.props.addLevel}
-          activitySectionPosition={this.props.activitySection.position}
+          activitySection={this.props.activitySection}
           activityPosition={this.props.activityPosition}
         />
       </div>
