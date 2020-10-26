@@ -536,8 +536,8 @@ class Lesson < ActiveRecord::Base
   def fetch_activity(activity)
     if activity['id']
       lesson_activity = lesson_activities.find(activity['id'])
-      raise "LessonActivity id #{activity['id']} not found in Lesson id #{id}" unless lesson_activity
-      return lesson_activity
+      return lesson_activity if lesson_activity
+      raise ActiveRecord::RecordNotFound.new("LessonActivity id #{activity['id']} not found in Lesson id #{id}")
     end
 
     lesson_activities.create(
