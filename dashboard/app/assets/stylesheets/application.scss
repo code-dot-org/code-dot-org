@@ -60,6 +60,10 @@ body.pin_bottom {
   left: 0;
 }
 
+body.oceans-blue {
+  background-color: $oceans_deep_blue;
+}
+
 h1 {
   font-family: $gotham-extra-bold;
   font-weight: normal;
@@ -756,6 +760,11 @@ $small-footer-standard-width: 400px;
 #locale {
   font-family: sans-serif;
   height: 24px;
+}
+
+.oceans-blue .small-footer-base {
+  background-color: initial;
+  border-top: initial;
 }
 
 .header_separator {
