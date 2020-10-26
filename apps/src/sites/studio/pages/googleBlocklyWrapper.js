@@ -77,7 +77,6 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('FieldRectangularDropdown');
   blocklyWrapper.wrapReadOnlyProperty('FieldTextInput');
   blocklyWrapper.wrapReadOnlyProperty('FieldVariable');
-  blocklyWrapper.wrapReadOnlyProperty('fireUiEvent');
   blocklyWrapper.wrapReadOnlyProperty('fish_locale');
   blocklyWrapper.wrapReadOnlyProperty('Flyout');
   blocklyWrapper.wrapReadOnlyProperty('FunctionalBlockUtils');
@@ -85,6 +84,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('FunctionEditor');
   blocklyWrapper.wrapReadOnlyProperty('functionEditor');
   blocklyWrapper.wrapReadOnlyProperty('gamelab_locale');
+  blocklyWrapper.wrapReadOnlyProperty('getMainWorkspace');
   blocklyWrapper.wrapReadOnlyProperty('Generator');
   blocklyWrapper.wrapReadOnlyProperty('geras');
   blocklyWrapper.wrapReadOnlyProperty('getRelativeXY');
@@ -103,6 +103,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('RTL');
   blocklyWrapper.wrapReadOnlyProperty('Scrollbar');
   blocklyWrapper.wrapReadOnlyProperty('selected');
+  blocklyWrapper.wrapReadOnlyProperty('svgResize');
   blocklyWrapper.wrapReadOnlyProperty('tutorialExplorer_locale');
   blocklyWrapper.wrapReadOnlyProperty('useContractEditor');
   blocklyWrapper.wrapReadOnlyProperty('useModalFunctionEditor');
@@ -257,6 +258,13 @@ function initializeBlocklyWrapper(blocklyInstance) {
       Blockly.Xml.deleteNext(blockXml);
     }
     return blockXml;
+  };
+
+  // Used by StudioApp to tell Blockly to resize for Mobile Safari.
+  blocklyWrapper.fireUiEvent = function(element, eventName, opt_properties) {
+    if (eventName === 'resize') {
+      blocklyWrapper.svgResize(blocklyWrapper.getMainWorkspace());
+    }
   };
 
   // Aliasing Google's domToBlock() so that we can override it, but still be able

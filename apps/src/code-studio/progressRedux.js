@@ -10,7 +10,6 @@ import {ViewType, SET_VIEW_TYPE} from './viewAsRedux';
 import {processedLevel} from '@cdo/apps/templates/progress/progressHelpers';
 import {setVerified} from '@cdo/apps/code-studio/verifiedTeacherRedux';
 import {authorizeLockable} from './stageLockRedux';
-import clientState from './clientState';
 
 // Action types
 export const INIT_PROGRESS = 'progress/INIT_PROGRESS';
@@ -419,12 +418,9 @@ export const clearProgress = () => ({
   type: CLEAR_PROGRESS
 });
 
-export const useDbProgress = () => {
-  return dispatch => {
-    clientState.clearProgress();
-    dispatch({type: USE_DB_PROGRESS});
-  };
-};
+export const useDbProgress = () => ({
+  type: USE_DB_PROGRESS
+});
 
 export const mergeProgress = levelProgress => ({
   type: MERGE_PROGRESS,

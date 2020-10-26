@@ -11,7 +11,11 @@ import {
 import reducers, {
   init
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
-import {levelKeyList, sampleActivities} from './activitiesTestData';
+import {
+  levelKeyList,
+  sampleActivities,
+  searchOptions
+} from './activitiesTestData';
 import {Provider} from 'react-redux';
 
 describe('LessonEditor', () => {
@@ -21,7 +25,7 @@ describe('LessonEditor', () => {
     registerReducers({...reducers});
 
     store = getStore();
-    store.dispatch(init(sampleActivities, levelKeyList));
+    store.dispatch(init(sampleActivities, levelKeyList, searchOptions));
     defaultProps = {
       displayName: 'Lesson Name',
       overview: 'Lesson Overview',
