@@ -44,7 +44,13 @@ const defaultLevel = {
 const blocklyLevel = {
   id: 11,
   position: 1,
-  levels: [{id: 4}],
+  levels: [
+    {
+      id: 4,
+      name: 'blockly:Studio:playlab_1',
+      url: 'levels/59800/edit'
+    }
+  ],
   activeId: 4
 };
 
