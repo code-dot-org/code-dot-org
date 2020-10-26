@@ -622,14 +622,6 @@ export class DetailViewContents extends React.Component {
             >
               Delete Application
             </MenuItem>
-            <ConfirmationDialog
-              show={this.state.showDeleteApplicationConfirmation}
-              onOk={this.handleDeleteApplicationConfirmed}
-              onCancel={this.handleDeleteApplicationCancel}
-              headerText="Delete Application"
-              bodyText="Are you sure you want to delete this application? You will not be able to undo this."
-              okText="Delete"
-            />
             {this.props.applicationData.registered_fit_weekend && (
               <MenuItem
                 style={styles.delete}
@@ -652,7 +644,18 @@ export class DetailViewContents extends React.Component {
         </div>
       );
     } else {
-      return <Button onClick={this.handleEditClick}>Edit</Button>;
+      return [
+        <Button id="edit" key="edit" onClick={this.handleEditClick}>
+          Edit
+        </Button>,
+        <Button
+          id="delete"
+          key="delete"
+          onClick={this.handleDeleteApplicationClick}
+        >
+          Delete
+        </Button>
+      ];
     }
   };
 
@@ -703,6 +706,14 @@ export class DetailViewContents extends React.Component {
         {selectControl}
         <InputGroup.Button style={styles.editButton}>
           {this.renderEditButtons()}
+          <ConfirmationDialog
+            show={this.state.showDeleteApplicationConfirmation}
+            onOk={this.handleDeleteApplicationConfirmed}
+            onCancel={this.handleDeleteApplicationCancel}
+            headerText="Delete Application"
+            bodyText="Are you sure you want to delete this application? You will not be able to undo this."
+            okText="Delete"
+          />
         </InputGroup.Button>
       </InputGroup>
     );

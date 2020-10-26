@@ -22,6 +22,7 @@ import {TestResults, KeyCodes} from './constants';
 import QRCode from 'qrcode.react';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import experiments from '@cdo/apps/util/experiments';
+import clientState from '@cdo/apps/code-studio/clientState';
 
 // Types of blocks that do not count toward displayed block count. Used
 // by FeedbackUtils.blockShouldBeCounted_
@@ -650,7 +651,9 @@ FeedbackUtils.prototype.getNumBlocksUsed = function() {
  */
 FeedbackUtils.prototype.getNumCountableBlocks = function() {
   var i;
-  if (this.studioApp_.editCode) {
+  if (getStore().getState().pageConstants.isBramble) {
+    return 0;
+  } else if (this.studioApp_.editCode) {
     var codeLines = 0;
     // quick and dirty method to count non-blank lines that don't start with //
     var lines = this.getGeneratedCodeString_().split('\n');
@@ -660,8 +663,9 @@ FeedbackUtils.prototype.getNumCountableBlocks = function() {
       }
     }
     return codeLines;
+  } else {
+    return this.getCountableBlocks_().length;
   }
-  return this.getCountableBlocks_().length;
 };
 
 /**
@@ -1130,13 +1134,9 @@ FeedbackUtils.prototype.getShowCodeComponent_ = function(
   challenge = false
 ) {
   const numLinesWritten = this.getNumBlocksUsed();
-  const shouldShowTotalLines =
-    options.response &&
-    options.response.total_lines &&
-    options.response.total_lines !== numLinesWritten;
-  const totalNumLinesWritten = shouldShowTotalLines
-    ? options.response.total_lines
-    : 0;
+  // Use the response from the server if we have one. Otherwise use the client's data.
+  const totalLines =
+    (options.response && options.response.total_lines) || clientState.lines();
 
   const generatedCodeProperties = this.getGeneratedCodeProperties({
     generatedCodeDescription:
@@ -1146,7 +1146,7 @@ FeedbackUtils.prototype.getShowCodeComponent_ = function(
   return (
     <CodeWritten
       numLinesWritten={numLinesWritten}
-      totalNumLinesWritten={totalNumLinesWritten}
+      totalNumLinesWritten={totalLines}
       useChallengeStyles={challenge}
     >
       <GeneratedCode
@@ -1185,7 +1185,9 @@ FeedbackUtils.prototype.shouldPromptForHint = function(feedbackType) {
  * Retrieve a string containing the user's generated Javascript code.
  */
 FeedbackUtils.prototype.getGeneratedCodeString_ = function() {
-  if (this.studioApp_.editCode) {
+  if (getStore().getState().pageConstants.isBramble) {
+    return '';
+  } else if (this.studioApp_.editCode) {
     return this.studioApp_.editor ? this.studioApp_.editor.getValue() : '';
   } else {
     return codegen.workspaceCode(Blockly);
@@ -1663,7 +1665,10 @@ FeedbackUtils.prototype.getMissingBlocks_ = function(blocks, maxBlocksToFlag) {
  * @return {boolean}
  */
 FeedbackUtils.prototype.hasExtraTopBlocks = function() {
-  if (this.studioApp_.editCode) {
+  if (
+    this.studioApp_.editCode ||
+    getStore().getState().pageConstants.isBramble
+  ) {
     return false;
   }
   var topBlocks = Blockly.mainBlockSpace.getTopBlocks();
@@ -1706,6 +1711,9 @@ FeedbackUtils.prototype.getTestResults = function(
   options
 ) {
   options = options || {};
+  if (getStore().getState().pageConstants.isBramble) {
+    return TestResults.FREE_PLAY;
+  }
   if (this.studioApp_.editCode) {
     if (levelComplete) {
       return TestResults.ALL_PASS;

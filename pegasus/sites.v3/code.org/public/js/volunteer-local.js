@@ -152,10 +152,7 @@ function getLocations(results) {
       var id = volunteers[index].id;
       var html = compileHTML(index, volunteers[index]);
       var contact_title = compileContact(index, volunteers[index]);
-      var contact_link =
-        '<a id="contact-trigger-' +
-        index +
-        '" class="contact-trigger" onclick="return contactVolunteer()">Contact</a>';
+      var contact_link = `<a id="contact-trigger-${index}" class="contact-trigger" onclick="return contactVolunteer(${id}, '${title}')">Contact</a>`;
 
       var location = {
         lat: lat,
@@ -239,14 +236,32 @@ function loadMap(locations) {
 
   mapboxMap.on("load", function() {
     mapboxMap.loadImage(
-      "/images/map-markers/star-marker.png",
+      "/images/map-markers/dot-marker.png",
       (error, image) => {
         if (error) {
           console.log(error);
           return;
         }
 
-        mapboxMap.addImage("star-marker", image);
+        mapboxMap.addImage("dot-marker", image);
+        if (mapOptions.locations && mapOptions.locations.length > 0) {
+          for (var i = 0; i < mapOptions.locations.length; i++) {
+            const location = mapOptions.locations[i];
+            const feature = {
+              type: "Feature",
+              properties: {
+                id: i,
+                description: location.html,
+                title: location.title
+              },
+              geometry: {
+                type: "Point",
+                coordinates: [location.lon, location.lat]
+              }
+            };
+            mapboxStores.features.push(feature);
+          }
+        }
         mapboxMap.addSource("places", {
           type: "geojson",
           data: {
@@ -261,33 +276,17 @@ function loadMap(locations) {
           type: "symbol",
           source: "places",
           layout: {
-            "icon-image": "star-marker",
-            "icon-size": 0.5,
-            "icon-anchor": "bottom",
+            "icon-image": "dot-marker",
+            "icon-size": 1.1,
             "icon-allow-overlap": true
           }
         });
+        mapboxMap.addControl(
+          new mapboxgl.NavigationControl({ showCompass: false }),
+          "bottom-right"
+        );
 
         if (mapOptions.locations && mapOptions.locations.length > 0) {
-          for (var i = 0; i < mapOptions.locations.length; i++) {
-            const location = mapOptions.locations[i];
-            const feature = {
-              type: "Feature",
-              properties: {
-                id: i,
-                description: location.html,
-                title: location.title,
-                "icon-image": "star-marker",
-                "icon-size": 22
-              },
-              geometry: {
-                type: "Point",
-                coordinates: [location.lon, location.lat]
-              }
-            };
-            mapboxStores.features.push(feature);
-          }
-
           addMarkers(mapboxStores);
 
           if (mapOptions.locations.length > 1) {
@@ -582,12 +581,14 @@ function compileContact(index, location) {
 }
 
 /* eslint-disable no-unused-vars */
-function contactVolunteer() {
+function contactVolunteer(id, name) {
+  $("#name").text(name);
   $("#name").show();
   $("#volunteer-contact").show();
   $("#success-message").hide();
   $("#error-message").hide();
   adjustScroll("volunteer-contact");
+  $("#volunteer-id").val(id);
 
   return false;
 }

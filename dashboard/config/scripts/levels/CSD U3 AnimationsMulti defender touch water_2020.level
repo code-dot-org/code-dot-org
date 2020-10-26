@@ -59,7 +59,7 @@
     "mini_rubric": "false",
     "preload_asset_list": null,
     "encrypted": "false",
-    "validation_enabled": "false",
+    "validation_enabled": "true",
     "libraries_enabled": "false"
   },
   "published": true,

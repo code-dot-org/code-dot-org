@@ -6,7 +6,7 @@
 #  lesson_id   :integer          not null
 #  seeding_key :string(255)      not null
 #  position    :integer          not null
-#  properties  :string(255)
+#  properties  :text(65535)
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
 #
@@ -32,14 +32,25 @@ class LessonActivity < ApplicationRecord
     duration
   )
 
-  def summarize_for_edit
+  def summarize
     {
       id: id,
       position: position,
       name: name,
       duration: duration,
-      activitySections: activity_sections.map(&:summarize_for_edit)
     }
+  end
+
+  def summarize_for_lesson_show
+    summary = summarize
+    summary[:activitySections] = activity_sections.map(&:summarize_for_lesson_show)
+    summary
+  end
+
+  def summarize_for_edit
+    summary = summarize
+    summary[:activitySections] = activity_sections.map(&:summarize_for_edit)
+    summary
   end
 
   # Updates this object's activity_sections to match the activity sections
@@ -60,6 +71,7 @@ class LessonActivity < ApplicationRecord
         description: section['description'],
         tips: section['tips']
       )
+      activity_section.update_script_levels(section['scriptLevels'] || [])
       activity_section
     end
   end
