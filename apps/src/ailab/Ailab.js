@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import AilabView from './AilabView';
 import {Provider} from 'react-redux';
 import {getStore} from '../redux';
-import {setAssetPath} from '@code-dot-org/ml-activities/dist/assetPath';
+import {setAssetPath} from '@code-dot-org/ml-playground/dist/assetPath';
 import {TestResults} from '@cdo/apps/constants';
 import ailabMsg from './locale';
 
@@ -119,9 +119,9 @@ Ailab.prototype.initMLActivities = function() {
   const canvas = document.getElementById('activity-canvas');
   const backgroundCanvas = document.getElementById('background-canvas');
 
-  setAssetPath('/blockly/media/skins/fish/');
+  setAssetPath('/blockly/media/skins/ailab/');
 
-  const {initAll} = require('@code-dot-org/ml-playground'); // adding /dist/main works
+  const {initAll} = require('@code-dot-org/ml-playground');
 
   // Set initial state for UI elements.
   initAll({
