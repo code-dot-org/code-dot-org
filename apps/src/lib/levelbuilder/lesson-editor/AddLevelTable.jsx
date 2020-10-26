@@ -1,17 +1,16 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
+import PaginationWrapper from '@cdo/apps/templates/PaginationWrapper';
 import AddLevelTableRow from '@cdo/apps/lib/levelbuilder/lesson-editor/AddLevelTableRow';
-
-const styles = {
-  pages: {
-    marginTop: 10
-  }
-};
+import color from '@cdo/apps/util/color';
 
 export default class AddLevelTable extends Component {
   static propTypes = {
     addLevel: PropTypes.func,
-    levels: PropTypes.array
+    levels: PropTypes.array,
+    currentPage: PropTypes.number,
+    setCurrentPage: PropTypes.func,
+    numPages: PropTypes.number
   };
 
   render() {
@@ -37,16 +36,16 @@ export default class AddLevelTable extends Component {
             ))}
           </tbody>
         </table>
-        <div style={styles.pages}>
-          <span>{'1 '}</span>
-          <a>2 </a>
-          <a>3 </a>
-          <a>4 </a>
-          <a>5 </a>
-          ...
-          <a>Next></a>
-          <a>Last>></a>
-        </div>
+        {this.props.levels.length === 0 && (
+          <div style={{color: color.red}}>
+            {'There are no levels matching the search you entered.'}
+          </div>
+        )}
+        <PaginationWrapper
+          totalPages={this.props.numPages}
+          currentPage={this.props.currentPage}
+          onChangePage={this.props.setCurrentPage}
+        />
       </div>
     );
   }

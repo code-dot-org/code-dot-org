@@ -36,10 +36,11 @@ export const NEW_LEVEL_ID = -1;
 
 // NOTE: Position for Activities, Activity Sections and Levels is 1 based.
 
-export const init = (activities, levelKeyList) => ({
+export const init = (activities, levelKeyList, searchOptions) => ({
   type: INIT,
   activities,
-  levelKeyList
+  levelKeyList,
+  searchOptions
 });
 
 export const addActivity = (activityPosition, activityKey) => ({
@@ -195,12 +196,14 @@ export const moveLevelToActivitySection = (
   activityPosition,
   activitySectionPosition,
   scriptLevelPosition,
+  newActivityPosition,
   newActivitySectionPosition
 ) => ({
   type: MOVE_LEVEL_TO_ACTIVITY_SECTION,
   activityPosition,
   activitySectionPosition,
   scriptLevelPosition,
+  newActivityPosition,
   newActivitySectionPosition
 });
 
@@ -287,10 +290,16 @@ function updateActivitySectionPositions(activities) {
   });
 }
 
-function updateScriptLevelPositions(scriptLevels) {
-  for (let i = 0; i < scriptLevels.length; i++) {
-    scriptLevels[i].position = i + 1;
-  }
+function updateScriptLevelPositions(activities) {
+  let nextLevelNumber = 1;
+  activities.forEach(activity => {
+    activity.activitySections.forEach(section => {
+      section.scriptLevels.forEach((scriptLevel, index) => {
+        scriptLevel.position = index + 1;
+        scriptLevel.levelNumber = nextLevelNumber++;
+      });
+    });
+  });
 }
 
 function getScriptLevels(newState, action) {
@@ -454,13 +463,13 @@ function activities(state = [], action) {
       validateScriptLevel(action.level, action.type);
       const scriptLevels = getScriptLevels(newState, action);
       scriptLevels.push(action.level);
-      updateScriptLevelPositions(scriptLevels);
+      updateScriptLevelPositions(newState);
       break;
     }
     case REMOVE_LEVEL: {
       const scriptLevels = getScriptLevels(newState, action);
       scriptLevels.splice(action.scriptLevelPosition - 1, 1);
-      updateScriptLevelPositions(scriptLevels);
+      updateScriptLevelPositions(newState);
       break;
     }
     case REORDER_LEVEL: {
@@ -470,7 +479,7 @@ function activities(state = [], action) {
         1
       );
       scriptLevels.splice(action.newScriptLevelPosition - 1, 0, temp[0]);
-      updateScriptLevelPositions(scriptLevels);
+      updateScriptLevelPositions(newState);
       break;
     }
     case MOVE_LEVEL_TO_ACTIVITY_SECTION: {
@@ -480,23 +489,15 @@ function activities(state = [], action) {
         action.scriptLevelPosition - 1,
         1
       )[0];
-      updateScriptLevelPositions(scriptLevels);
+      updateScriptLevelPositions(newState);
 
       // add level to new activitySection
-      let newActivityPosition = null;
-      newState.forEach(activity => {
-        activity.activitySections.forEach(activitySection => {
-          if (activitySection.position === action.newActivitySectionPosition) {
-            newActivityPosition = activity.position;
-          }
-        });
-      });
       const newActivitySections =
-        newState[newActivityPosition - 1].activitySections;
+        newState[action.newActivityPosition - 1].activitySections;
       const newScriptLevels =
         newActivitySections[action.newActivitySectionPosition - 1].scriptLevels;
       newScriptLevels.push(scriptLevel);
-      updateScriptLevelPositions(newScriptLevels);
+      updateScriptLevelPositions(newState);
       break;
     }
     case SET_SCRIPT_LEVEL_FIELD: {
@@ -560,6 +561,14 @@ function levelKeyList(state = {}, action) {
   return state;
 }
 
+function searchOptions(state = {}, action) {
+  switch (action.type) {
+    case INIT:
+      return action.searchOptions;
+  }
+  return state;
+}
+
 function levelNameToIdMap(state = {}, action) {
   switch (action.type) {
     case INIT: {
@@ -603,6 +612,7 @@ function validateScriptLevel(scriptLevel, location) {
 export default {
   activities,
   levelKeyList,
+  searchOptions,
   levelNameToIdMap
 };
 

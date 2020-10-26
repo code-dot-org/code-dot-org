@@ -41,7 +41,7 @@ export default class ProgressionDetails extends Component {
       icon: activeLevel.icon,
       isConceptLevel: activeLevel.isConceptLevel,
       isUnplugged: scriptLevel.display_as_unplugged,
-      levelNumber: scriptLevel.position,
+      levelNumber: scriptLevel.levelNumber,
       bonus: scriptLevel.bonus
     };
   };
