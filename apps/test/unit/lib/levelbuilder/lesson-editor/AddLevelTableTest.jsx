@@ -5,10 +5,15 @@ import AddLevelTable from '@cdo/apps/lib/levelbuilder/lesson-editor/AddLevelTabl
 import sinon from 'sinon';
 
 describe('AddLevelTable', () => {
-  let defaultProps;
+  let defaultProps, addLevel, setCurrentPage;
   beforeEach(() => {
+    addLevel = sinon.spy();
+    setCurrentPage = sinon.spy();
     defaultProps = {
-      addLevel: sinon.spy(),
+      addLevel,
+      currentPage: 1,
+      setCurrentPage,
+      numPages: 7,
       levels: [
         {
           id: 1,
@@ -49,7 +54,27 @@ describe('AddLevelTable', () => {
     expect(wrapper.contains('Type')).to.be.true;
     expect(wrapper.contains('Owner')).to.be.true;
     expect(wrapper.contains('Last Updated')).to.be.true;
-    expect(wrapper.find('button').length).to.equal(8); // 2 buttons for each level
-    expect(wrapper.find('tr').length).to.equal(5); // 1 for the headers and 1 for each level
+
+    expect(wrapper.find('PaginationWrapper').length).to.equal(1);
+    expect(wrapper.find('tr').length).to.equal(1);
+    expect(wrapper.find('AddLevelTableRow').length).to.equal(4);
+  });
+
+  it('renders message when no levels found', () => {
+    defaultProps.levels = [];
+    const wrapper = shallow(<AddLevelTable {...defaultProps} />);
+    expect(wrapper.contains('Actions')).to.be.true;
+    expect(wrapper.contains('Name')).to.be.true;
+    expect(wrapper.contains('Type')).to.be.true;
+    expect(wrapper.contains('Owner')).to.be.true;
+    expect(wrapper.contains('Last Updated')).to.be.true;
+
+    expect(wrapper.find('PaginationWrapper').length).to.equal(1);
+    expect(wrapper.find('tr').length).to.equal(1);
+    expect(wrapper.find('AddLevelTableRow').length).to.equal(0);
+
+    expect(
+      wrapper.contains('There are no levels matching the search you entered.')
+    ).to.be.true;
   });
 });

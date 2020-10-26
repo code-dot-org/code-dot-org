@@ -40,8 +40,33 @@ export default class MicroBitBoard extends EventEmitter {
    */
   connect() {
     return Promise.resolve()
-      .then(() => this.boardClient_.connectBoard())
+      .then(() => this.checkExpectedFirmware())
       .then(() => this.initializeComponents());
+  }
+
+  /**
+   * Connect to the micro:bit firmata client. After connecting, check the firmata
+   * version and firmware version response on the boardClient. If not connected
+   * or a different firmware version discovered, reject. Otherwise, resolve.
+   * Exposed as a separate step here for the sake of the setup page; generally
+   * recommended to just call connect(), above.
+   * @returns {Promise<void>}
+   */
+  checkExpectedFirmware() {
+    return Promise.resolve()
+      .then(() => this.boardClient_.connectBoard())
+      .then(() => {
+        // Expect this.boardClient_.firmataVersion to equal "Firmata Protocol <version number>"
+        // Expect this.boardClient_.firmwareVersion to contain "micro:bit Firmata 1.0"
+        if (
+          this.boardClient_.firmataVersion.includes('Firmata Protocol') &&
+          this.boardClient_.firmwareVersion.includes('micro:bit Firmata')
+        ) {
+          return Promise.resolve();
+        } else {
+          return Promise.reject();
+        }
+      });
   }
 
   /**
@@ -58,8 +83,6 @@ export default class MicroBitBoard extends EventEmitter {
       };
     });
   }
-
-  initializeEventForwarding() {}
 
   /**
    * Enable existing board components

@@ -14,6 +14,10 @@ module Geocoder
           end
         end
       end
+
+      def relevance
+        1.0
+      end
     end
 
     # This override for the Mapbox class is being added because we are transition from call the Google Maps location
@@ -32,6 +36,11 @@ module Geocoder
       end
 
       def country_code
+        # The Mapbox result parser in the Geocoder gem doesn't extract the country code direct searches of a country
+        # so we will extract the country code ourselves.
+        if @data['place_type'] == ['country']
+          return @data['properties']&.[]('short_code')&.upcase
+        end
         mapbox_context('country')&.[]('short_code')&.upcase
       end
 
@@ -55,12 +64,44 @@ module Geocoder
         data['place_name']
       end
 
+      def relevance
+        data['relevance']
+      end
+
+      # This following methods should be removed once the Geocoder gem is updated
+      # https://github.com/code-dot-org/code-dot-org/pull/37192/files
+      def city
+        mapbox_context('place')&.[]('text')
+      end
+
+      def state
+        mapbox_context('region')&.[]('text')
+      end
+
+      def postal_code
+        mapbox_context('postcode')&.[]('text')
+      end
+
+      def country
+        mapbox_context('country')&.[]('text')
+      end
+
+      def neighborhood
+        mapbox_context('neighborhood')&.[]('text')
+      end
+
       private
 
       def mapbox_context(name)
-        data['context'].map do |c|
+        context.map do |c|
           c if c['id'] =~ Regexp.new(name)
         end&.compact&.first
+      end
+
+      # This should removed once the Geocoder gem is updated
+      # https://github.com/code-dot-org/code-dot-org/pull/37192/files
+      def context
+        Array(data['context'])
       end
     end
     Mapbox.send :prepend, CdoResultAdapter
@@ -69,6 +110,8 @@ module Geocoder
   MIN_ADDRESS_LENGTH = 10
 
   def self.find_potential_street_address(text)
+    return nil unless text
+
     # Starting from the first number in the string, try parsing with Geocoder
     number_to_end_search = text.scan /([0-9]+.*)/
     return nil if number_to_end_search.empty?
@@ -77,14 +120,16 @@ module Geocoder
 
     return nil if Float(first_number_to_end) rescue false # is a number
     return nil if first_number_to_end.length < MIN_ADDRESS_LENGTH # too short to be an address
+    return nil if first_number_to_end.count(' ') < 2 # too few words to be an address
 
     results = Geocoder.search(first_number_to_end)
     return nil if results.empty?
 
-    if results.first&.street_address
-      return first_number_to_end
-    end
-    nil
+    # Return nil if none of the results returned from Geocoder matched on a
+    # street address with relevance >= 0.8
+    return nil if results.none? {|r| r.relevance >= 0.8 && r.street_address}
+
+    first_number_to_end
   end
 
   # Temporarily, for a given block, configure Geocoder to raise all errors.

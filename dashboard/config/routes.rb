@@ -247,7 +247,6 @@ Dashboard::Application.routes.draw do
 
   resources :levels do
     collection do
-      get 'get_filters'
       get 'get_filtered_levels'
     end
     member do
@@ -315,6 +314,7 @@ Dashboard::Application.routes.draw do
 
   resources :lessons, only: [:show, :edit, :update]
 
+  resources :resources, only: [:create]
   get '/resourcesearch/:q/:limit', to: 'resources#search', defaults: {format: 'json'}
 
   get '/beta', to: redirect('/')
@@ -451,6 +451,8 @@ Dashboard::Application.routes.draw do
         get :workshop_organizer_survey_report, action: :workshop_organizer_survey_report, controller: 'workshop_organizer_survey_report'
 
         get 'foorm/generic_survey_report', action: :generic_survey_report, controller: 'workshop_survey_foorm_report'
+        get 'foorm/csv_survey_report', action: :csv_survey_report, controller: 'workshop_survey_foorm_report'
+        get 'foorm/forms_for_workshop', action: :forms_for_workshop, controller: 'workshop_survey_foorm_report'
       end
 
       resources :workshop_summary_report, only: :index
@@ -500,6 +502,8 @@ Dashboard::Application.routes.draw do
 
       post 'foorm/form_with_library_items', action: :fill_in_library_items, controller: 'foorm'
       get 'foorm/form_questions', action: :get_form_questions, controller: 'foorm'
+      get 'foorm/submissions_csv', action: :get_submissions_as_csv, controller: 'foorm'
+      get 'foorm/form_names', action: :get_form_names_and_versions, controller: 'foorm'
     end
   end
 

@@ -112,3 +112,12 @@ export const lessonGroupShape = PropTypes.shape({
   description: PropTypes.string,
   lessons: PropTypes.arrayOf(lessonShape)
 });
+
+export const relatedLessonShape = PropTypes.shape({
+  scriptTitle: PropTypes.string.isRequired,
+  versionYear: PropTypes.string.isRequired,
+  lockable: PropTypes.bool,
+  relativePosition: PropTypes.number.isRequired,
+  id: PropTypes.number.isRequired,
+  editUrl: PropTypes.string.isRequired
+});

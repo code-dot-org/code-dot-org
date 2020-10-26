@@ -2449,20 +2449,20 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal 2, script.script_levels[4].position
   end
 
-  test 'raise error if lesson with no levels' do
+  test 'can add lesson with no levels' do
     dsl = <<-SCRIPT
       lesson_group 'content', display_name: 'Content'
       lesson 'Lesson1', display_name: 'Lesson1'
 
     SCRIPT
 
-    raise = assert_raises do
-      Script.add_script(
-        {name: 'lesson-group-test-script'},
-        ScriptDSL.parse(dsl, 'a filename')[0][:lesson_groups]
-      )
-    end
-    assert_equal 'Lessons must have at least one level in them.  Lesson: Lesson1.', raise.message
+    script = Script.add_script(
+      {name: 'lesson-group-test-script'},
+      ScriptDSL.parse(dsl, 'a filename')[0][:lesson_groups]
+    )
+    lesson = script.lessons.first
+    assert_equal 'Lesson1', lesson.key
+    assert_equal 0, lesson.script_levels.count
   end
 
   test 'raise error if try to change key of lesson in stable and i18n script' do
@@ -2639,6 +2639,76 @@ class ScriptTest < ActiveSupport::TestCase
       expected = {'script.name' => script.name}
       assert_equal expected, script.seeding_key(ScriptSeed::SeedContext.new)
     end
+  end
+
+  test 'fix script level positions' do
+    script = create :script
+    lesson_group = create :lesson_group, script: script
+
+    lesson_1 = create :lesson, script: script, lesson_group: lesson_group
+
+    activity_1 = create :lesson_activity, lesson: lesson_1
+    section_1 = create :activity_section, lesson_activity: activity_1
+    script_level_1_a = create :script_level, activity_section: section_1, activity_section_position: 1, lesson: lesson_1, chapter: 1, position: 1
+    script_level_1_b = create :script_level, activity_section: section_1, activity_section_position: 2, lesson: lesson_1, chapter: 2, position: 2
+
+    lesson_2 = create :lesson, script: script, lesson_group: lesson_group
+
+    activity_2_1 = create :lesson_activity, lesson: lesson_2
+    section_2_1 = create :activity_section, lesson_activity: activity_2_1
+    script_level_2_1_a = create :script_level, activity_section: section_2_1, activity_section_position: 1, lesson: lesson_2, chapter: 3, position: 1
+    script_level_2_1_b = create :script_level, activity_section: section_2_1, activity_section_position: 2, lesson: lesson_2, chapter: 4, position: 2
+
+    activity_2_2 = create :lesson_activity, lesson: lesson_2
+    section_2_2 = create :activity_section, lesson_activity: activity_2_2
+    script_level_2_2_a = create :script_level, activity_section: section_2_2, activity_section_position: 1, lesson: lesson_2, chapter: 5, position: 3
+    script_level_2_2_b = create :script_level, activity_section: section_2_2, activity_section_position: 2, lesson: lesson_2, chapter: 6, position: 4
+
+    expected_script_levels = [
+      script_level_1_a,
+      script_level_1_b,
+      script_level_2_1_a,
+      script_level_2_1_b,
+      script_level_2_2_a,
+      script_level_2_2_b
+    ]
+
+    assert_equal [1, 2, 1, 2, 1, 2], expected_script_levels.map(&:activity_section_position)
+    assert_equal [1, 2, 1, 2, 3, 4], expected_script_levels.map(&:position)
+    assert_equal [1, 2, 3, 4, 5, 6], expected_script_levels.map(&:chapter)
+    assert_equal expected_script_levels.map(&:id), script.script_levels.map(&:id)
+
+    script_level_2_1_b.destroy
+    script.fix_script_level_positions
+
+    expected_script_levels = [
+      script_level_1_a,
+      script_level_1_b,
+      script_level_2_1_a,
+      script_level_2_2_a,
+      script_level_2_2_b
+    ]
+
+    expected_script_levels.each(&:reload)
+    script.reload
+    assert_equal [1, 2, 1, 1, 2], expected_script_levels.map(&:activity_section_position)
+    assert_equal [1, 2, 1, 2, 3], expected_script_levels.map(&:position)
+    assert_equal [1, 2, 3, 4, 5], expected_script_levels.map(&:chapter)
+    assert_equal expected_script_levels, script.script_levels
+  end
+
+  test 'cannot fix position of legacy script levels' do
+    script = create :script
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, script: script, lesson_group: lesson_group
+
+    # this is a legacy script level because it does not have an activity section
+    create :script_level, lesson: lesson, chapter: 1, position: 1
+
+    error = assert_raises do
+      script.fix_script_level_positions
+    end
+    assert_includes error.message, "cannot fix position of legacy script levels"
   end
 
   private

@@ -1,20 +1,16 @@
 import React, {Component} from 'react';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import PropTypes from 'prop-types';
-
-const styles = {
-  orderIcon: {
-    float: 'right'
-  },
-  pages: {
-    marginTop: 10
-  }
-};
+import PaginationWrapper from '@cdo/apps/templates/PaginationWrapper';
+import AddLevelTableRow from '@cdo/apps/lib/levelbuilder/lesson-editor/AddLevelTableRow';
+import color from '@cdo/apps/util/color';
 
 export default class AddLevelTable extends Component {
   static propTypes = {
     addLevel: PropTypes.func,
-    levels: PropTypes.array
+    levels: PropTypes.array,
+    currentPage: PropTypes.number,
+    setCurrentPage: PropTypes.func,
+    numPages: PropTypes.number
   };
 
   render() {
@@ -32,51 +28,24 @@ export default class AddLevelTable extends Component {
           </thead>
           <tbody>
             {this.props.levels.map(level => (
-              <tr key={level.id}>
-                <td>
-                  <button
-                    type="button"
-                    onClick={() => {
-                      console.log('Add');
-                    }}
-                  >
-                    <FontAwesome icon="plus" />
-                  </button>
-                  <button
-                    type="button"
-                    onClick={() => {
-                      console.log('Clone and Add');
-                    }}
-                  >
-                    <FontAwesome icon="files-o" />
-                  </button>
-                </td>
-                <td>
-                  <div>{level.name}</div>
-                </td>
-                <td>
-                  <div>{level.type}</div>
-                </td>
-                <td>
-                  <div>{level.owner}</div>
-                </td>
-                <td>
-                  <div>{level.updated_at}</div>
-                </td>
-              </tr>
+              <AddLevelTableRow
+                key={level.id}
+                addLevel={this.props.addLevel}
+                level={level}
+              />
             ))}
           </tbody>
         </table>
-        <div style={styles.pages}>
-          <span>{'1 '}</span>
-          <a>2 </a>
-          <a>3 </a>
-          <a>4 </a>
-          <a>5 </a>
-          ...
-          <a>Next></a>
-          <a>Last>></a>
-        </div>
+        {this.props.levels.length === 0 && (
+          <div style={{color: color.red}}>
+            {'There are no levels matching the search you entered.'}
+          </div>
+        )}
+        <PaginationWrapper
+          totalPages={this.props.numPages}
+          currentPage={this.props.currentPage}
+          onChangePage={this.props.setCurrentPage}
+        />
       </div>
     );
   }
