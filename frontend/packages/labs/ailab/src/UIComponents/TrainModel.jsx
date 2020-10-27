@@ -7,7 +7,8 @@ import {
   setShowPredict,
   getAccuracy,
   readyToTrain,
-  readyToTrainErrors
+  readyToTrainErrors,
+  validationMessages
 } from "../redux";
 
 const styles = {
@@ -25,6 +26,7 @@ class TrainModel extends Component {
     labelColumn: PropTypes.string,
     readyToTrain: PropTypes.bool,
     readyToTrainErrors: PropTypes.object,
+    validationMessages: PropTypes.array,
     setShowPredict: PropTypes.func.isRequired,
     selectedTrainer: PropTypes.string,
     accuracy: PropTypes.string,
@@ -50,51 +52,20 @@ class TrainModel extends Component {
   };
 
   render() {
-    const { readyToTrainErrors } = this.props;
     return (
       <div>
         <h2>Are you ready to train the model?</h2>
-        {readyToTrainErrors.noFeature && (
-          <p style={styles.error}>
-            Please select at least one feature to train on
-          </p>
-        )}
-        {!readyToTrainErrors.noFeature && (
-          <p style={styles.ready}>At least one feature is selected</p>
-        )}
-        {readyToTrainErrors.noLabel && (
-          <p style={styles.error}>
-            Please designate one column as the label column
-          </p>
-        )}
-        {!readyToTrainErrors.noLabel && (
-          <p style={styles.ready}>Label column has been selected</p>
-        )}
-        {readyToTrainErrors.noAlgorithm && (
-          <p style={styles.error}>Please select a trainer to use</p>
-        )}
-        {!readyToTrainErrors.noAlgorithm && (
-          <p style={styles.ready}> Trainer selected</p>
-        )}
-        {readyToTrainErrors.labelFeatureDupe && (
-          <p style={styles.error}>Labels can not also be features</p>
-        )}
-        {readyToTrainErrors.badLabelAlgorithmCombo && (
-          <p style={styles.error}>
-            The label datatype is incompatible with the selected trainer.{" "}
-            {readyToTrainErrors.labelDatatype} can not be used to train a{" "}
-            {readyToTrainErrors.trainerMltype} model.
-          </p>
-        )}
-        {!readyToTrainErrors.badLabelAlgorithmCombo &&
-          this.props.selectedTrainer &&
-          this.props.labelColumn && (
-            <p style={styles.ready}>
-              The label datatype is compatible with the selected trainer. A{" "}
-              {readyToTrainErrors.labelDatatype} label can be used to train a{" "}
-              {readyToTrainErrors.trainerMltype} model.
+        {this.props.validationMessages.map((msg, index) => {
+          return msg.readyToTrain ? (
+            <p key={index} style={styles.ready}>
+              {msg.successString}{" "}
             </p>
-          )}
+          ) : (
+            <p key={index} style={styles.error}>
+              {msg.errorString}{" "}
+            </p>
+          );
+        })}
         {this.props.readyToTrain && (
           <div>
             <h2>Train the Model</h2>
@@ -152,7 +123,7 @@ export default connect(
     accuracyCheckLabels: state.accuracyCheckLabels,
     accuracyCheckPredictedLabels: state.accuracyCheckPredictedLabels,
     readyToTrain: readyToTrain(state),
-    readyToTrainErrors: readyToTrainErrors(state)
+    validationMessages: validationMessages(state)
   }),
   dispatch => ({
     setShowPredict(showPredict) {
