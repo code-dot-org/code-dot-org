@@ -159,7 +159,6 @@ var NetSimLobby = (module.exports = function(rootDiv, netsim, options) {
    * @private {function}
    */
   this.showTeacherLogCallback_ = options.showTeacherLogCallback;
-
   // Figure out the list of user sections, which requires an async request
   // and re-render if the user is signed in.
   if (options.user.isSignedIn) {
