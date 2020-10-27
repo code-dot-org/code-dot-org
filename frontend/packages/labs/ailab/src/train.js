@@ -15,11 +15,7 @@ import {
   setAccuracyCheckLabels,
   ColumnTypes
 } from "./redux";
-
-export const MLTypes = {
-  CLASSIFICATION: "classification",
-  REGRESSION: "regression"
-};
+import { ColumnTypes, MLTypes } from "./constants.js";
 
 export const availableTrainers = {
   binarySvm: {

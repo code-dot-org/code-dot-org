@@ -8,10 +8,10 @@ import {
   setShowPredict,
   setColumnsByDataType,
   getFeatures,
-  ColumnTypes,
   getSelectableFeatures,
   getSelectableLabels
 } from "../redux";
+import { ColumnTypes } from "../constants.js";
 
 class DataDisplay extends Component {
   static propTypes = {

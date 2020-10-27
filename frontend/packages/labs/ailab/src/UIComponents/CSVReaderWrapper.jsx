@@ -3,13 +3,9 @@ import PropTypes from "prop-types";
 import React, { Component } from "react";
 import Papa from "papaparse";
 import { connect } from "react-redux";
-import {
-  resetState,
-  setImportedData,
-  setColumnsByDataType,
-  ColumnTypes
-} from "../redux";
+import { resetState, setImportedData, setColumnsByDataType } from "../redux";
 import { availableDatasets } from "../datasetManifest";
+import { ColumnTypes } from "../constants.js";
 
 class CSVReaderWrapper extends Component {
   static propTypes = {

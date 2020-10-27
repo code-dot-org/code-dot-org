@@ -1,5 +1,4 @@
 import {
-  MLTypes,
   availableTrainers,
   getRegressionTrainers,
   getClassificationTrainers
@@ -12,6 +11,8 @@ import {
   trainerSelected,
   compatibleLabelAndTrainer
 } from "./validate.js";
+
+import { MLTypes, ColumnTypes } from "./constants.js";
 
 // Action types
 const RESET_STATE = "RESET_STATE";
@@ -360,6 +361,7 @@ export function getAccuracy(state) {
   }
   return ((numCorrect / numPredictedLabels) * 100).toFixed(2);
 }
+<<<<<<< HEAD
 
 export function validationMessages(state) {
   const validationMessages = [];
@@ -402,3 +404,5 @@ export const ColumnTypes = {
   CONTINUOUS: "continuous",
   OTHER: "other"
 };
+=======
+>>>>>>> fix-imports
