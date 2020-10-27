@@ -3,10 +3,12 @@ import {shallow} from 'enzyme';
 import {expect} from '../../../../util/reconfiguredChai';
 import {SelectedStudentInfo} from '@cdo/apps/code-studio/components/progress/SelectedStudentInfo';
 import {LevelStatus} from '@cdo/apps/util/sharedConstants';
+import {levelProgressWithStatus} from '@cdo/apps/templates/progress/progressHelpers';
 
 const defaultProps = {
   selectedStudent: {id: 1, name: 'Student 1'},
   level: {
+    id: 123,
     assessment: null,
     contained: false,
     driver: null,
@@ -15,9 +17,9 @@ const defaultProps = {
     navigator: null,
     paired: null,
     passed: false,
-    status: LevelStatus.not_tried,
     user_id: 1
   },
+  levelProgress: levelProgressWithStatus(LevelStatus.not_tried),
   students: [{id: 1, name: 'Student 1'}, {id: 2, name: 'Student 2'}],
   onSelectUser: () => {},
   getSelectedUserId: () => {}

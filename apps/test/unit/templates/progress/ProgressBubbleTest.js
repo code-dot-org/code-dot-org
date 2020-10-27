@@ -4,16 +4,17 @@ import {shallow} from 'enzyme';
 import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
 import color from '@cdo/apps/util/color';
 import {LevelStatus, LevelKind} from '@cdo/apps/util/sharedConstants';
+import {levelProgressWithStatus} from '@cdo/apps/templates/progress/progressHelpers';
 
 const defaultProps = {
   level: {
     levelNumber: 1,
-    status: LevelStatus.perfect,
     url: '/foo/bar',
     name: 'level_name',
     progression: 'progression_name',
     progressionDisplayName: 'progression_display_name'
   },
+  studentLevelProgress: levelProgressWithStatus(LevelStatus.perfect),
   disabled: false
 };
 
@@ -74,9 +75,11 @@ describe('ProgressBubble', () => {
         {...defaultProps}
         level={{
           ...defaultProps.level,
-          kind: LevelKind.assessment,
-          status: LevelStatus.completed_assessment
+          kind: LevelKind.assessment
         }}
+        studentLevelProgress={levelProgressWithStatus(
+          LevelStatus.completed_assessment
+        )}
       />
     );
 
@@ -99,10 +102,7 @@ describe('ProgressBubble', () => {
     const wrapper = shallow(
       <ProgressBubble
         {...defaultProps}
-        level={{
-          ...defaultProps.level,
-          status: LevelStatus.attempted
-        }}
+        studentLevelProgress={levelProgressWithStatus(LevelStatus.attempted)}
       />
     );
     const tooltipDiv = wrapper.find('div').at(1);
@@ -115,10 +115,7 @@ describe('ProgressBubble', () => {
     const wrapper = shallow(
       <ProgressBubble
         {...defaultProps}
-        level={{
-          ...defaultProps.level,
-          status: LevelStatus.passed
-        }}
+        studentLevelProgress={levelProgressWithStatus(LevelStatus.passed)}
       />
     );
     const tooltipDiv = wrapper.find('div').at(1);
@@ -133,9 +130,9 @@ describe('ProgressBubble', () => {
         {...defaultProps}
         level={{
           ...defaultProps.level,
-          kind: LevelKind.assessment,
-          status: LevelStatus.submitted
+          kind: LevelKind.assessment
         }}
+        studentLevelProgress={levelProgressWithStatus(LevelStatus.submitted)}
       />
     );
     const tooltipDiv = wrapper.find('div').at(1);
@@ -151,9 +148,11 @@ describe('ProgressBubble', () => {
         {...defaultProps}
         level={{
           ...defaultProps.level,
-          kind: LevelKind.peer_review,
-          status: LevelStatus.review_rejected
+          kind: LevelKind.peer_review
         }}
+        studentLevelProgress={levelProgressWithStatus(
+          LevelStatus.review_rejected
+        )}
       />
     );
     const tooltipDiv = wrapper.find('div').at(1);
@@ -172,9 +171,11 @@ describe('ProgressBubble', () => {
         {...defaultProps}
         level={{
           ...defaultProps.level,
-          kind: LevelKind.peer_review,
-          status: LevelStatus.review_accepted
+          kind: LevelKind.peer_review
         }}
+        studentLevelProgress={levelProgressWithStatus(
+          LevelStatus.review_accepted
+        )}
       />
     );
     const tooltipDiv = wrapper.find('div').at(1);
@@ -297,7 +298,6 @@ describe('ProgressBubble', () => {
 
   it('renders a progress pill for unplugged lessons', () => {
     const unpluggedLevel = {
-      status: LevelStatus.perfect,
       kind: LevelKind.unplugged,
       url: '/foo/bar',
       isUnplugged: true
@@ -315,7 +315,6 @@ describe('ProgressBubble', () => {
 
   it('does not render a progress pill for unplugged when small', () => {
     const unpluggedLevel = {
-      status: LevelStatus.perfect,
       kind: LevelKind.unplugged,
       url: '/foo/bar',
       isUnplugged: true
@@ -358,7 +357,7 @@ describe('ProgressBubble', () => {
         <ProgressBubble
           {...defaultProps}
           currentLocation={fakeLocation}
-          selectedSectionId="12345"
+          selectedSectionId={12345}
         />
       );
       assert.include(wrapper.find('a').prop('href'), 'section_id=12345');
@@ -370,8 +369,8 @@ describe('ProgressBubble', () => {
         <ProgressBubble
           {...defaultProps}
           currentLocation={fakeLocation}
-          selectedSectionId="12345"
-          selectedStudentId="207"
+          selectedSectionId={12345}
+          selectedStudentId={207}
         />
       );
       assert.include(wrapper.find('a').prop('href'), 'user_id=207');
@@ -395,7 +394,7 @@ describe('ProgressBubble', () => {
         <ProgressBubble
           {...defaultProps}
           currentLocation={fakeLocation}
-          selectedSectionId="12345"
+          selectedSectionId={12345}
         />
       );
       const href = wrapper.find('a').prop('href');

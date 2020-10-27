@@ -27,15 +27,15 @@ describe('VirtualizedSummaryView', () => {
     stubRedux();
     registerReducers({sectionProgress, scriptSelection, currentUser});
     defaultProps = {
-      levelsByLesson: {
+      levelProgressByStudent: {
         0: {
-          0: [{id: 789, status: 'perfect'}]
+          789: {status: 'perfect'}
         },
         1: {
-          0: [{id: 789, status: 'perfect'}]
+          789: {status: 'perfect'}
         },
         3: {
-          0: [{id: 789, status: 'perfect'}]
+          789: {status: 'perfect'}
         }
       },
       lessonOfInterest: 1,

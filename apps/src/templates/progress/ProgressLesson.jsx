@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 import ProgressLessonContent from './ProgressLessonContent';
 import FontAwesome from '../FontAwesome';
 import color from '@cdo/apps/util/color';
-import {levelType, lessonType} from './progressTypes';
+import {lessonType, studentLevelProgressType} from './progressTypes';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import i18n from '@cdo/locale';
 import {
@@ -71,16 +71,16 @@ const styles = {
 class ProgressLesson extends React.Component {
   static propTypes = {
     lesson: lessonType.isRequired,
-    levels: PropTypes.arrayOf(levelType).isRequired,
 
     // redux provided
+    studentProgress: PropTypes.objectOf(studentLevelProgressType),
     currentStageId: PropTypes.number,
     showTeacherInfo: PropTypes.bool.isRequired,
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     showLockIcon: PropTypes.bool.isRequired,
     lessonIsVisible: PropTypes.func.isRequired,
     lessonLockedForSection: PropTypes.func.isRequired,
-    selectedSectionId: PropTypes.string
+    selectedSectionId: PropTypes.number
   };
 
   constructor(props) {
@@ -92,6 +92,7 @@ class ProgressLesson extends React.Component {
         props.viewAs !== ViewType.Teacher &&
         props.currentStageId !== props.lesson.id
     };
+    this.toggleCollapsed = this.toggleCollapsed.bind(this);
   }
 
   componentWillReceiveProps(nextProps) {
@@ -105,15 +106,16 @@ class ProgressLesson extends React.Component {
     }
   }
 
-  toggleCollapsed = () =>
+  toggleCollapsed() {
     this.setState({
       collapsed: !this.state.collapsed
     });
+  }
 
   render() {
     const {
       lesson,
-      levels,
+      studentProgress,
       showTeacherInfo,
       viewAs,
       showLockIcon,
@@ -141,7 +143,8 @@ class ProgressLesson extends React.Component {
     // (b) it is locked for all students in the section (in the case of a teacher)
     const locked =
       lesson.lockable &&
-      (stageLocked(levels) || lessonLockedForSection(lesson.id));
+      (stageLocked(lesson.levels, studentProgress) ||
+        lessonLockedForSection(lesson.id));
 
     const hiddenOrLocked = hiddenForStudents || locked;
     const tooltipId = _.uniqueId();
@@ -155,7 +158,7 @@ class ProgressLesson extends React.Component {
     // as the url for the lesson.
     // TODO: Make the back-end return a lesson url as part of the lesson metadata so we
     // don't need to pass it separately from lesson here and in ProgressLessonTeacherInfo.
-    const lessonUrl = levels[0] && levels[0].url;
+    const lessonUrl = lesson.levels[0] && lesson.levels[0].url;
     return (
       <div
         style={{
@@ -205,7 +208,7 @@ class ProgressLesson extends React.Component {
           {!this.state.collapsed && (
             <ProgressLessonContent
               description={description}
-              levels={levels}
+              levels={lesson.levels}
               disabled={locked && viewAs !== ViewType.Teacher}
               selectedSectionId={selectedSectionId}
             />
@@ -232,5 +235,6 @@ export default connect(state => ({
   lessonLockedForSection: lessonId =>
     lessonIsLockedForAllStudents(lessonId, state),
   lessonIsVisible: (lesson, viewAs) => lessonIsVisible(lesson, state, viewAs),
-  selectedSectionId: state.teacherSections.selectedSectionId.toString()
+  selectedSectionId: state.teacherSections.selectedSectionId,
+  studentProgress: state.progress.progressByLevel
 }))(ProgressLesson);

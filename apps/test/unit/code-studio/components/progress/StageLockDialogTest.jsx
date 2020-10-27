@@ -9,16 +9,14 @@ const MINIMUM_PROPS = {
   isOpen: false,
   handleClose: () => {},
   initialLockStatus: [],
-  selectedSectionId: '',
+  selectedSectionId: 1,
   saving: false,
   saveDialog: () => {}
 };
 
 describe('StageLockDialog', () => {
   it('renders with a selected section', () => {
-    const wrapper = shallow(
-      <StageLockDialog {...MINIMUM_PROPS} selectedSectionId="fakeSectionId" />
-    );
+    const wrapper = shallow(<StageLockDialog {...MINIMUM_PROPS} />);
     expect(wrapper).not.to.be.null;
   });
 
@@ -113,14 +111,12 @@ describe('StageLockDialog', () => {
     afterEach(() => window.open.restore());
 
     it('opens a window to the section assessments page', () => {
-      const wrapper = shallow(
-        <StageLockDialog {...MINIMUM_PROPS} selectedSectionId="fakeSectionId" />
-      );
+      const wrapper = shallow(<StageLockDialog {...MINIMUM_PROPS} />);
       expect(window.open).not.to.have.been.called;
 
       wrapper.instance().viewSection();
       expect(window.open).to.have.been.calledOnce.and.calledWith(
-        '/teacher_dashboard/sections/fakeSectionId/assessments'
+        '/teacher_dashboard/sections/1/assessments'
       );
     });
   });
@@ -130,7 +126,6 @@ describe('StageLockDialog', () => {
     const wrapper = shallow(
       <StageLockDialog
         {...MINIMUM_PROPS}
-        selectedSectionId="fakeSectionId"
         initialLockStatus={[
           {name: 'fakeStage1', lockStatus: LockStatus.Editable},
           {name: 'fakeStage2', lockStatus: LockStatus.Editable}
@@ -142,7 +137,7 @@ describe('StageLockDialog', () => {
 
     wrapper.instance().handleSave();
     expect(saveDialog).to.have.been.calledOnce.and.calledWith(
-      'fakeSectionId',
+      1,
       wrapper.state().lockStatus
     );
   });
