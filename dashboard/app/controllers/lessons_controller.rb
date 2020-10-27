@@ -24,7 +24,7 @@ class LessonsController < ApplicationController
         link: @lesson.script.link,
         lessons: @lesson.script.lessons.map {|lesson| {displayName: lesson.localized_name, link: lesson_path(id: lesson.id)}}
       },
-      displayName: @lesson.localized_title,
+      displayName: @lesson.name,
       overview: @lesson.overview || '',
       announcements: @lesson.announcements,
       purpose: @lesson.purpose || '',
@@ -65,6 +65,7 @@ class LessonsController < ApplicationController
     # for now, only allow editing of fields that cannot be edited on the
     # script edit page.
     lp = lp.permit(
+      :name,
       :overview,
       :student_overview,
       :assessment,

@@ -115,6 +115,7 @@ class LessonsTest < ActionDispatch::IntegrationTest
     get edit_lesson_path(id: @lesson.id)
     assert_response :success
     lesson_data = JSON.parse(css_select('script[data-lesson]').first.attribute('data-lesson').to_s)
+    lesson_data['name'] = 'new lesson name'
     lesson_data['studentOverview'] = 'new student overview'
 
     activity_data = lesson_data['activities'].first
@@ -148,6 +149,7 @@ class LessonsTest < ActionDispatch::IntegrationTest
     patch lesson_path(id: @lesson.id, as: :json, params: lesson_data)
     assert_response :redirect
     @lesson.reload
+    assert_equal 'new lesson name', @lesson.name
     assert_equal 'lesson overview', @lesson.overview
     assert_equal 'new student overview', @lesson.student_overview
 
