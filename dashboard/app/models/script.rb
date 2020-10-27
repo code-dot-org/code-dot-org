@@ -151,6 +151,7 @@ class Script < ActiveRecord::Base
     curriculum_umbrella
     tts
     is_course
+    background
   )
 
   def self.twenty_hour_script
@@ -1291,7 +1292,8 @@ class Script < ActiveRecord::Base
       assigned_section_id: assigned_section_id,
       hasStandards: has_standards_associations?,
       tts: tts?,
-      is_course: is_course?
+      is_course: is_course?,
+      background: background
     }
 
     #TODO: lessons should be summarized through lesson groups in the future
@@ -1462,6 +1464,7 @@ class Script < ActiveRecord::Base
       :pilot_experiment,
       :editor_experiment,
       :curriculum_umbrella,
+      :background,
     ]
     boolean_keys = [
       :has_verified_resources,
