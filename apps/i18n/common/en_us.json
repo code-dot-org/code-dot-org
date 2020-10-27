@@ -1191,6 +1191,8 @@
   "numBlocksUsedLabel": "Blocks",
   "numLanguages": "{numLanguages} Languages",
   "numLinesOfCodeWritten": "You just wrote {numLines, plural, one {1 line} other {# lines}} of code!",
+  "objectives": "Objectives",
+  "objectivesSubheading": "Students will be able to:",
   "ok": "OK",
   "okay": "Okay",
   "online": "Online",

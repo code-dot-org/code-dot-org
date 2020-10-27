@@ -28,4 +28,15 @@ class Objective < ActiveRecord::Base
   def summarize_for_edit
     {id: id, description: description}
   end
+
+  def summarize_for_lesson_show
+    {id: id, description: localized_description}
+  end
+
+  private
+
+  def localized_description
+    # TODO: localize the descriptions
+    description
+  end
 end
