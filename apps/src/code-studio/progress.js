@@ -16,12 +16,13 @@ import {getHiddenStages, initializeHiddenScripts} from './hiddenStageRedux';
 import {TestResults} from '@cdo/apps/constants';
 import {
   initProgress,
-  mergeProgress,
+  mergeProgressResults,
   disablePostMilestone,
   setIsHocScript,
   setIsAge13Required,
   setStudentDefaultsSummaryView,
   setStageExtrasEnabled,
+  setCurrentStageId,
   queryUserProgress as reduxQueryUserProgress
 } from './progressRedux';
 import {setVerified} from '@cdo/apps/code-studio/verifiedTeacherRedux';
@@ -87,7 +88,8 @@ progress.generateStageProgress = function(
   currentLevelId,
   saveAnswersBeforeNavigation,
   signedIn,
-  stageExtrasEnabled
+  stageExtrasEnabled,
+  onLessonExtras
 ) {
   const store = getStore();
 
@@ -107,11 +109,12 @@ progress.generateStageProgress = function(
     },
     currentLevelId,
     false,
-    saveAnswersBeforeNavigation
+    saveAnswersBeforeNavigation,
+    onLessonExtras
   );
 
   store.dispatch(
-    mergeProgress(
+    mergeProgressResults(
       _.mapValues(progressData.levels, level =>
         level.submitted ? TestResults.SUBMITTED_RESULT : level.result
       )
@@ -261,13 +264,15 @@ function queryUserProgress(store, scriptData, currentLevelId) {
  * @param {boolean} isFullProgress - True if this contains progress for the entire
  *   script vs. a single stage.
  * @param {boolean} [saveAnswersBeforeNavigation]
+ * @param {boolean} [onLessonExtras]
  */
 function initializeStoreWithProgress(
   store,
   scriptData,
   currentLevelId,
   isFullProgress,
-  saveAnswersBeforeNavigation = false
+  saveAnswersBeforeNavigation = false,
+  onLessonExtras = false
 ) {
   store.dispatch(
     initProgress({
@@ -283,9 +288,14 @@ function initializeStoreWithProgress(
       scriptDescription: scriptData.description,
       betaTitle: scriptData.beta_title,
       courseId: scriptData.course_id,
-      isFullProgress: isFullProgress
+      isFullProgress: isFullProgress,
+      onLessonExtras: onLessonExtras
     })
   );
+
+  if (scriptData.lessons.length === 1) {
+    store.dispatch(setCurrentStageId(scriptData.lessons[0].id));
+  }
 
   if (scriptData.disablePostMilestone) {
     store.dispatch(disablePostMilestone());
@@ -310,7 +320,9 @@ function initializeStoreWithProgress(
   // We should use client state XOR database state to track user progress
   if (!store.getState().progress.usingDbProgress) {
     store.dispatch(
-      mergeProgress(clientState.allLevelsProgress()[scriptData.name] || {})
+      mergeProgressResults(
+        clientState.allLevelsProgress()[scriptData.name] || {}
+      )
     );
   }
 
@@ -353,7 +365,7 @@ function initializeStoreWithSections(store, scriptData) {
     };
   }
   store.dispatch(setSections(sections));
-  store.dispatch(selectSection(currentSection.id.toString()));
+  store.dispatch(selectSection(currentSection.id));
 }
 
 function initializeGooglePlatformApi(store) {

@@ -507,6 +507,7 @@ class ScriptLevel < ApplicationRecord
     lesson_extra_user_level = student.user_levels.where(script: script, level: bonus_level_ids)&.first
     if lesson_extra_user_level
       {
+        id: lesson_extra_user_level.id,
         bonus: true,
         user_id: student.id,
         status: SharedConstants::LEVEL_STATUS.perfect,
@@ -514,6 +515,7 @@ class ScriptLevel < ApplicationRecord
       }.merge!(lesson_extra_user_level.attributes)
     else
       {
+        id: bonus_level_ids.first.id,
         bonus: true,
         user_id: student.id,
         passed: false,
@@ -550,6 +552,7 @@ class ScriptLevel < ApplicationRecord
     end
 
     teacher_panel_summary = {
+      id: level.id,
       contained: contained,
       submitLevel: level.properties['submittable'] == 'true',
       paired: paired,

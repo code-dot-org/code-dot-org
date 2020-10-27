@@ -140,7 +140,7 @@ module UsersHelper
       user_levels_by_level = user.user_levels_by_level(script)
       paired_user_levels = PairedUserLevel.pairs(user_levels_by_level.values.map(&:id))
       user_data[:completed] = Policies::ScriptActivity.completed?(user, script)
-      user_data[:levels] = merge_user_progress_by_level(
+      user_data[:progress] = merge_user_progress_by_level(
         script: script,
         user: user,
         user_levels_by_level: user_levels_by_level,
@@ -163,7 +163,7 @@ module UsersHelper
   # @return [Hash<Integer, Hash>]
   #   a map from level_id to a progress summary for the level.
   private def merge_user_progress_by_level(script:, user:, user_levels_by_level:, paired_user_levels:, include_timestamp: false)
-    levels = {}
+    progress = {}
     script.script_levels.each do |sl|
       sl.level_ids.each do |level_id|
         # if we have a contained level or BubbleChoice level, use that to represent progress
@@ -182,13 +182,13 @@ module UsersHelper
             if completion_status == LEVEL_STATUS.not_tried
               # for now, we don't allow authorized teachers to be "locked"
               if locked && !user.authorized_teacher?
-                levels[level_id] = {
+                progress[level_id] = {
                   status: LEVEL_STATUS.locked
                 }
               end
               next
             end
-            levels[sublevel.id] = {
+            progress[sublevel.id] = {
               status: completion_status,
               result: ul.try(:best_result) || 0,
               submitted: submitted ? true : nil,
@@ -213,14 +213,14 @@ module UsersHelper
         if completion_status == LEVEL_STATUS.not_tried
           # for now, we don't allow authorized teachers to be "locked"
           if locked && !user.authorized_teacher?
-            levels[level_id] = {
+            progress[level_id] = {
               status: LEVEL_STATUS.locked
             }
           end
           next
         end
 
-        levels[level_id] = {
+        progress[level_id] = {
           status: completion_status,
           result: ul.try(:best_result) || 0,
           submitted: submitted ? true : nil,
@@ -237,9 +237,9 @@ module UsersHelper
 
         next unless pages_completed
 
-        levels[level_id][:pages_completed] = pages_completed
+        progress[level_id][:pages_completed] = pages_completed
         pages_completed.each_with_index do |result, index|
-          levels["#{level_id}_#{index}"] = {
+          progress["#{level_id}_#{index}"] = {
             result: result,
             submitted: submitted ? true : nil,
             readonly_answers: readonly_answers ? true : nil
@@ -247,7 +247,7 @@ module UsersHelper
         end
       end
     end
-    levels
+    progress
   end
 
   # Given a user and a script-level, returns a nil if there is only one page, or an array of
