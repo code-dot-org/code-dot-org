@@ -8,26 +8,11 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import moment from 'moment';
-import {FormControl, InputGroup, Dropdown, MenuItem} from 'react-bootstrap';
+import {FormControl, InputGroup} from 'react-bootstrap';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {TIME_FORMAT} from '../workshopConstants';
 
 const styles = {
-  dropdown: {
-    width: '100%'
-  },
-  toggle: {
-    padding: 0,
-    border: 0,
-    margin: 0,
-    width: '100%'
-  },
-  menu: {
-    height: 'auto',
-    maxHeight: 300,
-    overflowX: 'hidden',
-    width: '100%'
-  },
   input: {
     fontFamily: '"Gotham 4r"'
   },
@@ -39,16 +24,12 @@ const styles = {
   }
 };
 
-const INTERVAL = {minutes: 30};
-
 export default class TimeSelect extends React.Component {
   static propTypes = {
     id: PropTypes.string.isRequired,
     value: PropTypes.string,
     readOnly: PropTypes.bool,
-    onChange: PropTypes.func.isRequired,
-    minTime: PropTypes.object, // moment
-    maxTime: PropTypes.object // moment
+    onChange: PropTypes.func.isRequired
   };
 
   handleChange = e => {
@@ -71,7 +52,7 @@ export default class TimeSelect extends React.Component {
     this.props.onChange(time);
   };
 
-  renderInput() {
+  render() {
     return (
       <InputGroup>
         <FormControl
@@ -89,54 +70,6 @@ export default class TimeSelect extends React.Component {
           </InputGroup.Addon>
         )}
       </InputGroup>
-    );
-  }
-
-  render() {
-    if (this.props.readOnly) {
-      return this.renderInput();
-    }
-
-    const times = [];
-    const minTime = moment(this.props.minTime, TIME_FORMAT);
-    const maxTime = moment(this.props.maxTime, TIME_FORMAT);
-    const intervalDuration = moment.duration(INTERVAL);
-
-    // Show times every INTERVAL (i.e. 30 minutes) starting from the next full INTERVAL
-    // on or after minTime and ending on or before maxTime.
-    const startTime = moment(
-      Math.ceil(+minTime / +intervalDuration) * +intervalDuration
-    );
-    const endTime = moment(
-      Math.floor(+maxTime / +intervalDuration) * +intervalDuration
-    );
-    for (
-      let time = startTime;
-      time.isSameOrBefore(endTime);
-      time = time.add(INTERVAL)
-    ) {
-      times.push(time.format(TIME_FORMAT));
-    }
-    const menuItems = times.map((time, i) => {
-      return (
-        <MenuItem
-          key={i}
-          eventKey={time}
-          active={time === this.props.value}
-          onSelect={this.handleSelect}
-        >
-          {time}
-        </MenuItem>
-      );
-    });
-
-    return (
-      <Dropdown id={this.props.id} style={styles.dropdown}>
-        <Dropdown.Toggle noCaret useAnchor={true} style={styles.toggle}>
-          {this.renderInput()}
-        </Dropdown.Toggle>
-        <Dropdown.Menu style={styles.menu}>{menuItems}</Dropdown.Menu>
-      </Dropdown>
     );
   }
 }

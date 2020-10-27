@@ -11,9 +11,6 @@ import TimeSelect from './time_select';
 import DatePicker from './date_picker';
 import {DATE_FORMAT, TIME_FORMAT} from '../workshopConstants';
 
-const MIN_TIME = moment('12:00am', TIME_FORMAT);
-const MAX_TIME = moment('11:59pm', TIME_FORMAT);
-
 export default class SessionFormPart extends React.Component {
   static propTypes = {
     session: PropTypes.shape({
@@ -76,24 +73,6 @@ export default class SessionFormPart extends React.Component {
     return null;
   }
 
-  // Return the time 1 minute before specified maxTime, bounded by MAX_TIME
-  getBoundedMaxTime(maxTime) {
-    const m = moment(maxTime, TIME_FORMAT);
-    if (!m.isValid()) {
-      return MAX_TIME;
-    }
-    return moment.min(MAX_TIME, m.subtract({minutes: 1}));
-  }
-
-  // Return the time 1 minute after specified minTime, bounded by MIN_TIME
-  getBoundedMinTime(minTime) {
-    const m = moment(minTime, TIME_FORMAT);
-    if (!m.isValid()) {
-      return MIN_TIME;
-    }
-    return moment.max(MIN_TIME, m.add({minutes: 1}));
-  }
-
   render() {
     const style = {};
     const help = {};
@@ -116,14 +95,14 @@ export default class SessionFormPart extends React.Component {
       help.startTime = 'Required.';
     } else if (!startTime.isValid()) {
       style.startTime = 'error';
-      help.startTime = 'Invalid format.';
+      help.startTime = 'Invalid format. Format example: 9:00am';
     }
     if (!this.props.session.endTime) {
       style.endTime = 'error';
       help.endTime = 'Required.';
     } else if (!endTime.isValid()) {
       style.endTime = 'error';
-      help.endTime = 'Invalid format.';
+      help.endTime = 'Invalid format. Format example: 3:00pm';
     }
     if (
       startTime.isValid() &&
@@ -150,12 +129,10 @@ export default class SessionFormPart extends React.Component {
         <Col sm={3}>
           <FormGroup validationState={style.startTime}>
             <TimeSelect
-              id="startTime-select"
+              id="startTime"
               onChange={this.handleStartTimeChange}
               value={this.props.session.startTime}
               readOnly={this.props.readOnly}
-              minTime={MIN_TIME}
-              maxTime={this.getBoundedMaxTime(this.props.session.endTime)}
             />
             <HelpBlock>{help.startTime}</HelpBlock>
           </FormGroup>
@@ -163,12 +140,10 @@ export default class SessionFormPart extends React.Component {
         <Col sm={3}>
           <FormGroup validationState={style.endTime}>
             <TimeSelect
-              id="endTime-select"
+              id="endTime"
               onChange={this.handleEndTimeChange}
               value={this.props.session.endTime}
               readOnly={this.props.readOnly}
-              minTime={this.getBoundedMinTime(this.props.session.startTime)}
-              maxTime={MAX_TIME}
             />
             <HelpBlock>{help.endTime}</HelpBlock>
           </FormGroup>
