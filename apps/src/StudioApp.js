@@ -64,7 +64,7 @@ import {setIsRunning, setIsEditWhileRun, setStepSpeed} from './redux/runState';
 import {isEditWhileRun} from './lib/tools/jsdebugger/redux';
 import {setPageConstants} from './redux/pageConstants';
 import {setVisualizationScale} from './redux/layout';
-import {mergeProgress} from './code-studio/progressRedux';
+import {mergeProgressResults} from './code-studio/progressRedux';
 import {createLibraryClosure} from '@cdo/apps/code-studio/components/libraries/libraryParser';
 import {
   setAchievements,
@@ -1661,7 +1661,7 @@ StudioApp.prototype.displayFeedback = function(options) {
     // Some apps (Weblab, Oceans) don't have a config. Skip this step
     // for those.
     store.dispatch(
-      mergeProgress({[this.config.serverLevelId]: options.feedbackType})
+      mergeProgressResults({[this.config.serverLevelId]: options.feedbackType})
     );
   }
 
