@@ -161,7 +161,8 @@ export default class ResourcesEditor extends Component {
                 <th style={{width: '20%'}}>Key</th>
                 <th style={{width: '20%'}}>Name</th>
                 <th style={{width: '10%'}}>Type</th>
-                <th style={{width: '40%'}}>URL</th>
+                <th style={{width: '10%'}}>Audience</th>
+                <th style={{width: '30%'}}>URL</th>
                 <th style={{width: '10%'}}>Actions</th>
               </tr>
             </thead>
@@ -174,6 +175,9 @@ export default class ResourcesEditor extends Component {
                   <td>{resource.key}</td>
                   <td>{resource.name}</td>
                   <td>{resource.properties ? resource.properties.type : ''}</td>
+                  <td>
+                    {resource.properties ? resource.properties.audience : ''}
+                  </td>
                   <td>{resource.url}</td>
                   <td style={{backgroundColor: 'white'}}>
                     <div
