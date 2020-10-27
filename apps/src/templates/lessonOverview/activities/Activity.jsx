@@ -20,7 +20,7 @@ export default class Activity extends Component {
 
     return (
       <div>
-        <h2 style={styles.activityHeader}>
+        <h2 style={styles.activityHeader} id={`activity-${activity.key}`}>
           {i18n.activityHeader({
             activityName: activity.displayName,
             activityDuration: activity.duration
