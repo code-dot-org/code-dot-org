@@ -129,17 +129,8 @@ class TextInputEvents extends React.Component {
 
   getChangeEventCode() {
     const id = elementUtils.getId(this.props.element);
-    const code =
-      'onEvent("' +
-      id +
-      '", "change", function(event) {\n' +
-      '  console.log("' +
-      id +
-      ' entered text: " + getText("' +
-      id +
-      '"));\n' +
-      '});\n';
-    return code;
+    const callback = `function( ) {\n\tconsole.log("${id} entered text: " + getText("${id}"));\n}`;
+    return `onEvent("${id}", "change", ${callback});`;
   }
 
   insertChange = () => {
@@ -148,17 +139,8 @@ class TextInputEvents extends React.Component {
 
   getInputEventCode() {
     const id = elementUtils.getId(this.props.element);
-    const code =
-      'onEvent("' +
-      id +
-      '", "input", function(event) {\n' +
-      '  console.log("' +
-      id +
-      ' current text: " + getText("' +
-      id +
-      '"));\n' +
-      '});\n';
-    return code;
+    const callback = `function( ) {\n\tconsole.log("${id} current text: " + getText("${id}"));\n}`;
+    return `onEvent("${id}", "input", ${callback});`;
   }
 
   insertInput = () => {
