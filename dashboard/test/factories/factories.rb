@@ -801,6 +801,10 @@ FactoryGirl.define do
     sequence(:key) {|n| "key-#{n}"}
   end
 
+  factory :objective do
+    description 'fake description'
+  end
+
   factory :callout do
     sequence(:element_id) {|n| "#pageElement#{n}"}
     localization_key 'drag_blocks'
