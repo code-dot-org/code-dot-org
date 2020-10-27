@@ -1,7 +1,5 @@
 # We need "press keys" to type into the React form's fields, but that doesn't work on IE.
 @no_ie
-@no_firefox
-@no_safari
 @no_mobile
 Feature: Using the Lesson Edit Page
   Scenario: Save changes using the lesson edit page
