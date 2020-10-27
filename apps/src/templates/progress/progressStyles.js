@@ -65,28 +65,25 @@ const statusStyle = {
  * Given a level object, figure out styling related to its color, border color,
  * and background color
  */
-export const levelProgressStyle = (level, disabled) => {
+export const levelProgressStyle = (levelStatus, disabled) => {
   let style = {
     borderWidth: 2,
     color: color.charcoal,
     backgroundColor: color.level_not_tried
   };
 
-  if (disabled) {
-    style = {
-      ...style,
-      ...(!disabled && hoverStyle)
-    };
-  } else {
-    if (level.status !== LevelStatus.not_tried) {
-      style.borderColor = color.level_perfect;
-    }
-
-    style = {
-      ...style,
-      ...statusStyle[level.status]
-    };
+  if ((disabled && levelStatus !== LevelStatus.submitted) || !levelStatus) {
+    return style;
   }
+
+  if (levelStatus !== LevelStatus.not_tried) {
+    style.borderColor = color.level_perfect;
+  }
+
+  style = {
+    ...style,
+    ...statusStyle[levelStatus]
+  };
 
   return style;
 };
