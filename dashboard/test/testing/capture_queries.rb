@@ -58,7 +58,6 @@ module CaptureQueries
       # whole name.
       #
       # Once we update to Rails 5.1, we can remove the `include?` line.
-      #next if %w(CACHE SCHEMA).include? payload[:name]
       next if payload[:name] == "CACHE"
       next if payload.fetch(:cached, false)
 
