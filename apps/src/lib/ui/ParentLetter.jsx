@@ -76,9 +76,7 @@ class ParentLetter extends React.Component {
     const loginType = section.loginType;
     const student =
       students.length !== 0 && studentId
-        ? students
-            .filter(student => student.id.toString() === studentId)
-            .shift()
+        ? students.filter(student => student.id === studentId).shift()
         : null;
     const studentName = student ? student.name : 'your student';
     const secretPicturePath = student ? student.secret_picture_path : null;

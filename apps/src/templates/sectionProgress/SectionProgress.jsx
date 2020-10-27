@@ -12,7 +12,6 @@ import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import {h3Style} from '../../lib/ui/Headings';
 import {
-  getCurrentProgress,
   getCurrentScriptData,
   setLessonOfInterest,
   setCurrentView
@@ -282,11 +281,10 @@ export default connect(
     validScripts: state.scriptSelection.validScripts,
     currentView: state.sectionProgress.currentView,
     scriptData: getCurrentScriptData(state),
-    studentLevelProgress: getCurrentProgress(state),
     isLoadingProgress: state.sectionProgress.isLoadingProgress,
     showStandardsIntroDialog: !state.currentUser.hasSeenStandardsReportInfo,
     studentTimestamps:
-      state.sectionProgress.studentTimestampsByScript[
+      state.sectionProgress.studentLastUpdateByScript[
         state.scriptSelection.scriptId
       ],
     localeCode: state.locales.localeCode

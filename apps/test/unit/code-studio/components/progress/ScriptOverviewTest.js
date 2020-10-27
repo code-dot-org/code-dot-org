@@ -11,7 +11,7 @@ const defaultProps = {
   isSignedIn: true,
   isVerifiedTeacher: true,
   hasVerifiedResources: true,
-  perLevelProgress: {},
+  hasStudentProgress: false,
   scriptCompleted: false,
   scriptId: 123,
   scriptName: 'csp1',

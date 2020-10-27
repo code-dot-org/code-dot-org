@@ -5,11 +5,7 @@ import {connect} from 'react-redux';
 import DetailProgressTable from '@cdo/apps/templates/progress/DetailProgressTable';
 import SummaryProgressTable from '@cdo/apps/templates/progress/SummaryProgressTable';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import {
-  levelType,
-  lessonType,
-  lessonGroupType
-} from '@cdo/apps/templates/progress/progressTypes';
+import {lessonGroupType} from '@cdo/apps/templates/progress/progressTypes';
 import color from '@cdo/apps/util/color';
 import LessonGroupInfoDialog from '@cdo/apps/templates/progress/LessonGroupInfoDialog';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
@@ -58,23 +54,31 @@ class LessonGroup extends React.Component {
   static propTypes = {
     scriptId: PropTypes.number,
     lessonGroup: lessonGroupType,
-    lessons: PropTypes.arrayOf(lessonType).isRequired,
-    levelsByLesson: PropTypes.arrayOf(PropTypes.arrayOf(levelType)).isRequired,
     isPlc: PropTypes.bool.isRequired,
     isSummaryView: PropTypes.bool.isRequired
   };
+
+  constructor(props) {
+    super(props);
+    this.toggleCollapsed = this.toggleCollapsed.bind(this);
+    this.openLessonGroupInfoDialog = this.openLessonGroupInfoDialog.bind(this);
+    this.closeLessonGroupInfoDialog = this.closeLessonGroupInfoDialog.bind(
+      this
+    );
+  }
 
   state = {
     collapsed: false,
     lessonGroupInfoDialogOpen: false
   };
 
-  toggleCollapsed = () =>
+  toggleCollapsed() {
     this.setState({
       collapsed: !this.state.collapsed
     });
+  }
 
-  openLessonGroupInfoDialog = () => {
+  openLessonGroupInfoDialog() {
     /*
     Because the info button is on the header which collapses when clicked we have to
     reverse the collapsing when you click the info button
@@ -95,20 +99,14 @@ class LessonGroup extends React.Component {
       },
       {includeUserId: true}
     );
-  };
+  }
 
-  closeLessonGroupInfoDialog = () => {
+  closeLessonGroupInfoDialog() {
     this.setState({lessonGroupInfoDialogOpen: false});
-  };
+  }
 
   render() {
-    const {
-      lessonGroup,
-      lessons,
-      levelsByLesson,
-      isSummaryView,
-      isPlc
-    } = this.props;
+    const {lessonGroup, isSummaryView, isPlc} = this.props;
 
     const TableType = isSummaryView
       ? SummaryProgressTable
@@ -150,7 +148,7 @@ class LessonGroup extends React.Component {
               styles.bottom
             ]}
           >
-            <TableType lessons={lessons} levelsByLesson={levelsByLesson} />
+            <TableType lessons={lessonGroup.lessons} />
           </div>
         )}
       </div>

@@ -217,7 +217,7 @@ describe('TeacherPanel', () => {
               section: {
                 students: students
               },
-              section_script_levels: [{user_id: 1}]
+              section_script_levels: [{id: 11, user_id: 1}]
             }}
           />
         );
@@ -250,7 +250,7 @@ describe('TeacherPanel', () => {
               section: {
                 students: students
               },
-              section_script_levels: [{user_id: 1}]
+              section_script_levels: [{id: 11, user_id: 1}]
             }}
           />
         );
@@ -268,7 +268,7 @@ describe('TeacherPanel', () => {
               section: {
                 students: students
               },
-              section_script_levels: [{user_id: 1}]
+              section_script_levels: [{id: 11, user_id: 1}]
             }}
           />
         );

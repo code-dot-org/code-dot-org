@@ -47,7 +47,7 @@ class ScriptOverview extends React.Component {
     minimal: PropTypes.bool,
 
     // redux provided
-    perLevelProgress: PropTypes.object.isRequired,
+    hasStudentProgress: PropTypes.bool.isRequired,
     scriptCompleted: PropTypes.bool.isRequired,
     scriptId: PropTypes.number.isRequired,
     scriptName: PropTypes.string.isRequired,
@@ -83,7 +83,7 @@ class ScriptOverview extends React.Component {
       onOverviewPage,
       excludeCsfColumnInLegend,
       teacherResources,
-      perLevelProgress,
+      hasStudentProgress,
       scriptCompleted,
       scriptId,
       scriptName,
@@ -113,7 +113,7 @@ class ScriptOverview extends React.Component {
     let scriptProgress = NOT_STARTED;
     if (scriptCompleted) {
       scriptProgress = COMPLETED;
-    } else if (Object.keys(perLevelProgress).length > 0) {
+    } else if (hasStudentProgress) {
       scriptProgress = IN_PROGRESS;
     }
 
@@ -173,7 +173,7 @@ class ScriptOverview extends React.Component {
 
 export const UnconnectedScriptOverview = Radium(ScriptOverview);
 export default connect((state, ownProps) => ({
-  perLevelProgress: state.progress.levelProgress,
+  hasStudentProgress: Object.keys(state.progress.progressByLevel).length > 0,
   scriptCompleted: !!state.progress.scriptCompleted,
   scriptId: state.progress.scriptId,
   scriptName: state.progress.scriptName,

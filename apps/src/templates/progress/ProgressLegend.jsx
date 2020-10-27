@@ -5,6 +5,7 @@ import i18n from '@cdo/locale';
 import ProgressBubble from './ProgressBubble';
 import FontAwesome from '../FontAwesome';
 import {LevelStatus} from '@cdo/apps/util/sharedConstants';
+import {levelProgressWithStatus} from '@cdo/apps/templates/progress/progressHelpers';
 
 const styles = {
   table: {
@@ -157,10 +158,13 @@ export default class ProgressLegend extends Component {
               <div style={styles.center}>
                 <ProgressBubble
                   level={{
-                    status: LevelStatus.not_tried,
+                    id: 1,
                     isConceptLevel: true,
                     name: `${i18n.concept()}: ${i18n.notStarted()}`
                   }}
+                  studentLevelProgress={levelProgressWithStatus(
+                    LevelStatus.not_tried
+                  )}
                   disabled={false}
                 />
               </div>
@@ -169,10 +173,13 @@ export default class ProgressLegend extends Component {
               <div style={styles.center}>
                 <ProgressBubble
                   level={{
-                    status: LevelStatus.attempted,
+                    id: 1,
                     isConceptLevel: true,
                     name: `${i18n.concept()}: ${i18n.inProgress()}`
                   }}
+                  studentLevelProgress={levelProgressWithStatus(
+                    LevelStatus.attempted
+                  )}
                   disabled={false}
                 />
               </div>
@@ -182,10 +189,13 @@ export default class ProgressLegend extends Component {
               <div style={styles.center}>
                 <ProgressBubble
                   level={{
-                    status: LevelStatus.perfect,
+                    id: 1,
                     isConceptLevel: true,
                     name: `${i18n.concept()}: ${i18n.completed()} (${i18n.perfect()})`
                   }}
+                  studentLevelProgress={levelProgressWithStatus(
+                    LevelStatus.perfect
+                  )}
                   disabled={false}
                 />
               </div>
@@ -230,10 +240,13 @@ export default class ProgressLegend extends Component {
               <div style={styles.center}>
                 <ProgressBubble
                   level={{
-                    status: LevelStatus.not_tried,
+                    id: 1,
                     isConceptLevel: false,
                     name: `${i18n.activity()}: ${i18n.notStarted()}`
                   }}
+                  studentLevelProgress={levelProgressWithStatus(
+                    LevelStatus.not_tried
+                  )}
                   disabled={false}
                 />
               </div>
@@ -242,10 +255,13 @@ export default class ProgressLegend extends Component {
               <div style={styles.center}>
                 <ProgressBubble
                   level={{
-                    status: LevelStatus.attempted,
+                    id: 1,
                     isConceptLevel: false,
                     name: `${i18n.activity()}: ${i18n.inProgress()}`
                   }}
+                  studentLevelProgress={levelProgressWithStatus(
+                    LevelStatus.attempted
+                  )}
                   disabled={false}
                 />
               </div>
@@ -255,10 +271,13 @@ export default class ProgressLegend extends Component {
                 <div style={styles.center}>
                   <ProgressBubble
                     level={{
-                      status: LevelStatus.passed,
+                      id: 1,
                       isConceptLevel: false,
                       name: `${i18n.activity()}: ${i18n.completed()} (${i18n.tooManyBlocks()})`
                     }}
+                    studentLevelProgress={levelProgressWithStatus(
+                      LevelStatus.passed
+                    )}
                     disabled={false}
                   />
                 </div>
@@ -268,10 +287,13 @@ export default class ProgressLegend extends Component {
               <div style={styles.center}>
                 <ProgressBubble
                   level={{
-                    status: LevelStatus.perfect,
+                    id: 1,
                     isConceptLevel: false,
                     name: `${i18n.activity()}: ${i18n.completed()} (${i18n.perfect()})`
                   }}
+                  studentLevelProgress={levelProgressWithStatus(
+                    LevelStatus.perfect
+                  )}
                   disabled={false}
                 />
               </div>
@@ -280,10 +302,13 @@ export default class ProgressLegend extends Component {
               <div style={styles.center}>
                 <ProgressBubble
                   level={{
-                    status: LevelStatus.submitted,
+                    id: 1,
                     isConceptLevel: false,
                     name: `${i18n.activity()}: ${i18n.submitted()}`
                   }}
+                  studentLevelProgress={levelProgressWithStatus(
+                    LevelStatus.submitted
+                  )}
                   disabled={false}
                 />
               </div>

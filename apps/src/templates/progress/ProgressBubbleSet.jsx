@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 import Radium from 'radium';
 import ProgressBubble from './ProgressBubble';
 import color from '@cdo/apps/util/color';
-import {levelType} from './progressTypes';
+import {levelType, studentLevelProgressType} from './progressTypes';
 import {DOT_SIZE, DIAMOND_DOT_SIZE} from './progressStyles';
 
 const styles = {
@@ -60,17 +60,11 @@ const styles = {
 class ProgressBubbleSet extends React.Component {
   static propTypes = {
     levels: PropTypes.arrayOf(levelType).isRequired,
+    studentProgress: PropTypes.objectOf(studentLevelProgressType).isRequired,
     disabled: PropTypes.bool.isRequired,
     style: PropTypes.object,
-    //TODO: (ErinB) probably change to use just number during post launch clean-up.
-    selectedSectionId: PropTypes.oneOfType([
-      PropTypes.string,
-      PropTypes.number
-    ]),
-    selectedStudentId: PropTypes.oneOfType([
-      PropTypes.string,
-      PropTypes.number
-    ]),
+    selectedSectionId: PropTypes.number,
+    selectedStudentId: PropTypes.number,
     hideToolTips: PropTypes.bool,
     pairingIconEnabled: PropTypes.bool,
     stageExtrasEnabled: PropTypes.bool,
@@ -78,7 +72,13 @@ class ProgressBubbleSet extends React.Component {
     showSublevels: PropTypes.bool
   };
 
-  bubbleDisabled = level => {
+  constructor(props) {
+    super(props);
+    this.bubbleDisabled = this.bubbleDisabled.bind(this);
+    this.renderBubble = this.renderBubble.bind(this);
+  }
+
+  bubbleDisabled(level) {
     const {disabled, stageExtrasEnabled} = this.props;
     // Bonus level (aka stage extras) bubble is disabled if stage extras are disabled
     // for the current section.
@@ -87,16 +87,17 @@ class ProgressBubbleSet extends React.Component {
       return true;
     }
     return false;
-  };
+  }
 
-  renderBubble = (level, index, isSublevel) => {
+  renderBubble(level, index, isSublevel) {
     const {
       levels,
+      studentProgress,
       selectedSectionId,
       selectedStudentId,
       hideAssessmentIcon
     } = this.props;
-
+    const levelProgress = studentProgress[level.id];
     return (
       <div style={styles.withBackground} key={index}>
         <div
@@ -120,6 +121,7 @@ class ProgressBubbleSet extends React.Component {
         >
           <ProgressBubble
             level={level}
+            studentLevelProgress={levelProgress}
             disabled={this.bubbleDisabled(level)}
             smallBubble={isSublevel}
             selectedSectionId={selectedSectionId}
@@ -131,7 +133,7 @@ class ProgressBubbleSet extends React.Component {
         </div>
       </div>
     );
-  };
+  }
 
   render() {
     const {levels, style, showSublevels} = this.props;

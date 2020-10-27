@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Radium from 'radium';
 import ProgressBubbleSet from './ProgressBubbleSet';
 import color from '@cdo/apps/util/color';
-import {levelType} from './progressTypes';
+import {levelType, studentLevelProgressType} from './progressTypes';
 import {getIconForLevel} from './progressHelpers';
 import ProgressPill from './ProgressPill';
 
@@ -63,12 +63,19 @@ class ProgressLevelSet extends React.Component {
   static propTypes = {
     name: PropTypes.string,
     levels: PropTypes.arrayOf(levelType).isRequired,
+    studentProgress: PropTypes.objectOf(studentLevelProgressType).isRequired,
     disabled: PropTypes.bool.isRequired,
-    selectedSectionId: PropTypes.string
+    selectedSectionId: PropTypes.number
   };
 
   render() {
-    const {name, levels, disabled, selectedSectionId} = this.props;
+    const {
+      name,
+      levels,
+      studentProgress,
+      disabled,
+      selectedSectionId
+    } = this.props;
 
     const multiLevelStep = levels.length > 1;
     const url = multiLevelStep ? undefined : levels[0].url;
@@ -84,14 +91,18 @@ class ProgressLevelSet extends React.Component {
       }
     }
 
+    const level = levels[0];
+    const progress = studentProgress[level.id];
     return (
       <table style={styles.table}>
         <tbody>
           <tr>
             <td style={styles.col1}>
               <ProgressPill
-                levels={levels}
-                icon={getIconForLevel(levels[0])}
+                level={level}
+                levelStatus={progress && progress.status}
+                multilevel={multiLevelStep}
+                icon={getIconForLevel(levels)}
                 text={pillText}
                 disabled={disabled}
                 selectedSectionId={selectedSectionId}
@@ -115,6 +126,7 @@ class ProgressLevelSet extends React.Component {
               <td style={styles.col2}>
                 <ProgressBubbleSet
                   levels={levels}
+                  studentProgress={studentProgress}
                   disabled={disabled}
                   selectedSectionId={selectedSectionId}
                 />

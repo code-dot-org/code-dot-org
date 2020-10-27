@@ -398,12 +398,10 @@ describe('TeacherContentToggle', () => {
         selectedSectionId: {},
         progress: {
           currentStageId: 123,
-          stages: [
-            {
-              id: 123,
-              lockable: true
-            }
-          ]
+          currentLesson: {
+            id: 123,
+            lockable: true
+          }
         },
         teacherSections: {},
         hiddenStage: {},

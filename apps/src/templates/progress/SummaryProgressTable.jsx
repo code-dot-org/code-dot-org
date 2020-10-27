@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
-import {levelType, lessonType} from './progressTypes';
+import {lessonType} from './progressTypes';
 import SummaryProgressRow, {styles as rowStyles} from './SummaryProgressRow';
 import {connect} from 'react-redux';
 import {lessonIsVisible, lessonIsLockedForAllStudents} from './progressHelpers';
@@ -25,7 +25,6 @@ const styles = {
 class SummaryProgressTable extends React.Component {
   static propTypes = {
     lessons: PropTypes.arrayOf(lessonType).isRequired,
-    levelsByLesson: PropTypes.arrayOf(PropTypes.arrayOf(levelType)).isRequired,
     minimal: PropTypes.bool,
 
     // redux provided
@@ -35,11 +34,7 @@ class SummaryProgressTable extends React.Component {
   };
 
   render() {
-    const {lessons, levelsByLesson, viewAs, minimal} = this.props;
-
-    if (lessons.length !== levelsByLesson.length) {
-      throw new Error('Inconsistent number of lessons');
-    }
+    const {lessons, viewAs, minimal} = this.props;
 
     return (
       <table style={styles.table}>
@@ -64,7 +59,6 @@ class SummaryProgressTable extends React.Component {
             .map((item, filteredIndex) => (
               <SummaryProgressRow
                 key={item.unfilteredIndex}
-                levels={levelsByLesson[item.unfilteredIndex]}
                 lesson={item.lesson}
                 dark={filteredIndex % 2 === 1}
                 lockedForSection={this.props.lessonLockedForSection(
@@ -81,6 +75,7 @@ class SummaryProgressTable extends React.Component {
 }
 
 export const UnconnectedSummaryProgressTable = SummaryProgressTable;
+
 export default connect(state => ({
   viewAs: state.viewAs,
   lessonLockedForSection: lessonId =>

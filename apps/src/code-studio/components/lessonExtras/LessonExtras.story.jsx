@@ -1,6 +1,8 @@
 import React from 'react';
 import LessonExtras from './LessonExtras';
-import progress, {mergeProgress} from '@cdo/apps/code-studio/progressRedux';
+import progress, {
+  mergeProgressResults
+} from '@cdo/apps/code-studio/progressRedux';
 import {Provider} from 'react-redux';
 import {createStore, combineReducers} from 'redux';
 import {withInfo} from '@storybook/addon-info';
@@ -12,7 +14,7 @@ function configureStore() {
     })
   );
   store.dispatch(
-    mergeProgress({
+    mergeProgressResults({
       6: 100,
       7: 100,
       8: 100

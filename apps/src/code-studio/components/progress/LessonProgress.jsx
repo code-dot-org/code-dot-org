@@ -5,12 +5,15 @@ import color from '../../../util/color';
 import LessonExtrasProgressBubble from '@cdo/apps/templates/progress/LessonExtrasProgressBubble';
 import LessonTrophyProgressBubble from '@cdo/apps/templates/progress/LessonTrophyProgressBubble';
 import {
-  levelsForLessonId,
-  lessonExtrasUrl,
-  getPercentPerfect
+  levelsForCurrentLesson,
+  extrasUrlForCurrentLesson
 } from '@cdo/apps/code-studio/progressRedux';
 import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
-import {levelType} from '@cdo/apps/templates/progress/progressTypes';
+import {getPercentPerfect} from '@cdo/apps/templates/progress/progressHelpers';
+import {
+  levelType,
+  studentLevelProgressType
+} from '@cdo/apps/templates/progress/progressTypes';
 import $ from 'jquery';
 
 const styles = {
@@ -77,11 +80,13 @@ const styles = {
 class LessonProgress extends Component {
   static propTypes = {
     levels: PropTypes.arrayOf(levelType).isRequired,
+    studentProgress: PropTypes.objectOf(studentLevelProgressType).isRequired,
     lessonExtrasUrl: PropTypes.string,
-    onLessonExtras: PropTypes.bool,
     lessonTrophyEnabled: PropTypes.bool,
     width: PropTypes.number,
-    setDesiredWidth: PropTypes.func
+    setDesiredWidth: PropTypes.func,
+    currentLevelId: PropTypes.number,
+    onLessonExtras: PropTypes.bool
   };
 
   getFullWidth() {
@@ -103,7 +108,7 @@ class LessonProgress extends Component {
     this.setDesiredWidth();
   }
 
-  shouldComponentUpdate(nextProps, nextState) {
+  shouldComponentUpdate(nextProps) {
     for (
       let levelIndex = 0;
       levelIndex < this.props.levels.length;
@@ -160,16 +165,21 @@ class LessonProgress extends Component {
   }
 
   render() {
-    const {lessonExtrasUrl, onLessonExtras, lessonTrophyEnabled} = this.props;
-    let levels = this.props.levels;
-
-    // Only puzzle levels (non-concept levels) should count towards mastery.
-    if (lessonTrophyEnabled) {
-      levels = levels.filter(level => !level.isConceptLevel);
-    }
+    const {
+      lessonExtrasUrl,
+      lessonTrophyEnabled,
+      levels,
+      studentProgress,
+      currentLevelId,
+      onLessonExtras
+    } = this.props;
 
     // Bonus levels should not count towards mastery.
-    levels = levels.filter(level => !level.bonus);
+    let filteredLevels = levels.filter(level => !level.bonus);
+    // Only puzzle levels (non-concept levels) should count towards mastery.
+    if (lessonTrophyEnabled) {
+      filteredLevels = filteredLevels.filter(level => !level.isConceptLevel);
+    }
 
     const {
       headerFullProgressOffset,
@@ -194,20 +204,21 @@ class LessonProgress extends Component {
             style={styles.inner}
           >
             {lessonTrophyEnabled && <div style={styles.spacer} />}
-            {levels.map((level, index) => (
+            {filteredLevels.map((level, index) => (
               <div
                 key={index}
-                ref={level.isCurrentLevel ? 'currentLevel' : null}
+                ref={level.id === currentLevelId ? 'currentLevel' : null}
                 style={{
                   ...(level.isUnplugged &&
-                    level.isCurrentLevel &&
+                    level.id === currentLevelId &&
                     styles.pillContainer)
                 }}
               >
                 <ProgressBubble
                   level={level}
+                  studentLevelProgress={studentProgress[level.id]}
                   disabled={false}
-                  smallBubble={!level.isCurrentLevel}
+                  smallBubble={level.id !== currentLevelId}
                   lessonTrophyEnabled={lessonTrophyEnabled}
                 />
               </div>
@@ -222,7 +233,10 @@ class LessonProgress extends Component {
             )}
             {lessonTrophyEnabled && (
               <LessonTrophyProgressBubble
-                percentPerfect={getPercentPerfect(levels)}
+                percentPerfect={getPercentPerfect(
+                  filteredLevels,
+                  studentProgress
+                )}
               />
             )}
           </div>
@@ -236,10 +250,9 @@ class LessonProgress extends Component {
 export const UnconnectedLessonProgress = LessonProgress;
 
 export default connect(state => ({
-  levels: levelsForLessonId(state.progress, state.progress.currentStageId),
-  lessonExtrasUrl: lessonExtrasUrl(
-    state.progress,
-    state.progress.currentStageId
-  ),
-  onLessonExtras: state.progress.currentLevelId === 'stage_extras'
+  levels: levelsForCurrentLesson(state.progress),
+  studentProgress: state.progress.progressByLevel,
+  lessonExtrasUrl: extrasUrlForCurrentLesson(state.progress),
+  currentLevelId: state.progress.currentLevelId,
+  onLessonExtras: state.progress.onLessonExtras
 }))(LessonProgress);

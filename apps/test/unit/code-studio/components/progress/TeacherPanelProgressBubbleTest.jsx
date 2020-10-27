@@ -4,21 +4,22 @@ import {assert, expect} from '../../../../util/reconfiguredChai';
 import {TeacherPanelProgressBubble} from '@cdo/apps/code-studio/components/progress/TeacherPanelProgressBubble';
 import color from '@cdo/apps/util/color';
 import {LevelKind, LevelStatus} from '@cdo/apps/util/sharedConstants';
+import {levelProgressWithStatus} from '@cdo/apps/templates/progress/progressHelpers';
 
 const defaultProps = {
   level: {
+    id: 123,
     assessment: null,
     contained: false,
     driver: null,
     isConceptLevel: false,
     levelNumber: 4,
     navigator: null,
-    paired: false,
     passed: false,
     bonus: false,
-    status: LevelStatus.not_tried,
     user_id: 1
-  }
+  },
+  levelProgress: levelProgressWithStatus(LevelStatus.not_tried)
 };
 
 describe('StudentTable', () => {
@@ -28,9 +29,9 @@ describe('StudentTable', () => {
         {...defaultProps}
         level={{
           ...defaultProps.level,
-          paired: true,
           driver: 'My Friend'
         }}
+        levelProgress={{...defaultProps.levelProgress, paired: true}}
       />
     );
 
@@ -43,9 +44,9 @@ describe('StudentTable', () => {
         {...defaultProps}
         level={{
           ...defaultProps.level,
-          paired: true,
           navigator: 'My Friend'
         }}
+        levelProgress={{...defaultProps.levelProgress, paired: true}}
       />
     );
 
@@ -66,8 +67,11 @@ describe('StudentTable', () => {
         level={{
           ...defaultProps.level,
           passed: true,
-          status: LevelStatus.perfect,
           assessment: false
+        }}
+        levelProgress={{
+          ...defaultProps.levelProgress,
+          status: LevelStatus.perfect
         }}
       />
     );
@@ -83,7 +87,10 @@ describe('StudentTable', () => {
         level={{
           ...defaultProps.level,
           passed: true,
-          kind: LevelKind.assessment,
+          kind: LevelKind.assessment
+        }}
+        levelProgress={{
+          ...defaultProps.levelProgress,
           status: LevelStatus.completed_assessment
         }}
       />
@@ -97,8 +104,8 @@ describe('StudentTable', () => {
     const wrapper = shallow(
       <TeacherPanelProgressBubble
         {...defaultProps}
-        level={{
-          ...defaultProps.level,
+        levelProgress={{
+          ...defaultProps.levelProgress,
           status: LevelStatus.attempted
         }}
       />
@@ -114,7 +121,10 @@ describe('StudentTable', () => {
         {...defaultProps}
         level={{
           ...defaultProps.level,
-          passed: true,
+          passed: true
+        }}
+        levelProgress={{
+          ...defaultProps.levelProgress,
           status: LevelStatus.passed
         }}
       />
@@ -131,8 +141,11 @@ describe('StudentTable', () => {
         level={{
           ...defaultProps.level,
           kind: LevelKind.assessment,
-          status: LevelStatus.submitted,
           passed: true
+        }}
+        levelProgress={{
+          ...defaultProps.levelProgress,
+          status: LevelStatus.submitted
         }}
       />
     );

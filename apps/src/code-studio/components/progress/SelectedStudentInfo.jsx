@@ -4,9 +4,13 @@ import i18n from '@cdo/locale';
 import {TeacherPanelProgressBubble} from '@cdo/apps/code-studio/components/progress/TeacherPanelProgressBubble';
 import Button from '@cdo/apps/templates/Button';
 import {LevelStatus} from '@cdo/apps/util/sharedConstants';
+import {
+  studentType,
+  levelType,
+  studentLevelProgressType
+} from '@cdo/apps/templates/progress/progressTypes';
 import Radium from 'radium';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import {studentShape} from './StudentTable';
 
 const RadiumFontAwesome = Radium(FontAwesome);
 
@@ -45,14 +49,23 @@ const styles = {
 
 export class SelectedStudentInfo extends React.Component {
   static propTypes = {
-    students: PropTypes.arrayOf(studentShape).isRequired,
+    students: PropTypes.arrayOf(studentType).isRequired,
     selectedStudent: PropTypes.object,
-    level: PropTypes.object,
+    level: levelType.isRequired,
+    levelProgress: studentLevelProgressType.isRequired,
     onSelectUser: PropTypes.func.isRequired,
     getSelectedUserId: PropTypes.func.isRequired
   };
 
-  onUnsubmit = () => {
+  constructor(props) {
+    super(props);
+    this.onUnsubmit = this.onUnsubmit.bind(this);
+    this.onClearResponse = this.onClearResponse.bind(this);
+    this.nextStudent = this.nextStudent.bind(this);
+    this.previousStudent = this.previousStudent.bind(this);
+  }
+
+  onUnsubmit() {
     $.ajax({
       url: `/user_levels/${this.props.level.id}`,
       method: 'PUT',
@@ -68,9 +81,9 @@ export class SelectedStudentInfo extends React.Component {
         location.reload();
       })
       .fail(err => console.error(err));
-  };
+  }
 
-  onClearResponse = () => {
+  onClearResponse() {
     $.ajax({
       url: `/user_levels/${this.props.level.id}`,
       method: 'DELETE'
@@ -80,9 +93,9 @@ export class SelectedStudentInfo extends React.Component {
         location.reload();
       })
       .fail(err => console.error(err));
-  };
+  }
 
-  nextStudent = () => {
+  nextStudent() {
     const currentUserId = this.props.getSelectedUserId();
     const currentStudentIndex = this.props.students.findIndex(
       student => student.id === currentUserId
@@ -92,9 +105,9 @@ export class SelectedStudentInfo extends React.Component {
     } else {
       this.props.onSelectUser(this.props.students[currentStudentIndex + 1].id);
     }
-  };
+  }
 
-  previousStudent = () => {
+  previousStudent() {
     const currentUserId = this.props.getSelectedUserId();
     const currentStudentIndex = this.props.students.findIndex(
       student => student.id === currentUserId
@@ -108,10 +121,10 @@ export class SelectedStudentInfo extends React.Component {
     } else {
       this.props.onSelectUser(this.props.students[currentStudentIndex - 1].id);
     }
-  };
+  }
 
   render() {
-    const {selectedStudent, level} = this.props;
+    const {selectedStudent, level, levelProgress} = this.props;
 
     return (
       <div style={styles.main}>
@@ -138,13 +151,16 @@ export class SelectedStudentInfo extends React.Component {
             </div>
           )}
           <div style={styles.bubble}>
-            <TeacherPanelProgressBubble level={level} />
+            <TeacherPanelProgressBubble
+              level={level}
+              levelProgress={levelProgress}
+            />
           </div>
           {!level.submitLevel && (
             <div>
               <div style={styles.timeHeader}>{i18n.lastUpdatedNoTime()}</div>
               <div>
-                {level.status !== LevelStatus.not_tried
+                {levelProgress.status !== LevelStatus.not_tried
                   ? new Date(level.updated_at).toLocaleString()
                   : i18n.notApplicable()}
               </div>
@@ -154,7 +170,7 @@ export class SelectedStudentInfo extends React.Component {
             <div>
               <div style={styles.timeHeader}>{i18n.submittedOn()}</div>
               <div>
-                {level.status === LevelStatus.submitted
+                {levelProgress.status === LevelStatus.submitted
                   ? new Date(level.updated_at).toLocaleString()
                   : i18n.notApplicable()}
               </div>
@@ -164,7 +180,7 @@ export class SelectedStudentInfo extends React.Component {
                 color="blue"
                 onClick={this.onUnsubmit}
                 id="unsubmit-button-uitest"
-                disabled={level.status !== LevelStatus.submitted}
+                disabled={levelProgress.status !== LevelStatus.submitted}
               />
             </div>
           )}

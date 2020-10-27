@@ -55,7 +55,7 @@ class ProgressLessonTeacherInfo extends React.Component {
 
   onClickHiddenToggle(value) {
     const {scriptName, section, lesson, toggleHiddenStage} = this.props;
-    const sectionId = (section && section.id.toString()) || '';
+    const sectionId = section && section.id;
     toggleHiddenStage(scriptName, sectionId, lesson.id, value === 'hidden');
     firehoseClient.putRecord(
       {
@@ -88,7 +88,7 @@ class ProgressLessonTeacherInfo extends React.Component {
       lessonUrl
     } = this.props;
 
-    const sectionId = (section && section.id.toString()) || '';
+    const sectionId = section && section.id;
     const showHiddenForSectionToggle =
       section && scriptAllowsHiddenStages && !hasNoSections;
     const isHidden =

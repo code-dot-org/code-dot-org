@@ -2,7 +2,8 @@ import {assert} from '../../../util/reconfiguredChai';
 import Immutable from 'immutable';
 import {
   fakeLesson,
-  fakeLevels
+  fakeLevels,
+  fakeProgressForLevels
 } from '@cdo/apps/templates/progress/progressTestHelpers';
 import {LevelKind, LevelStatus} from '@cdo/apps/util/sharedConstants';
 import {
@@ -24,11 +25,11 @@ describe('progressHelpers', () => {
 
     const state = {
       teacherSections: {
-        selectedSectionId: '11'
+        selectedSectionId: 11
       },
       hiddenStage: Immutable.fromJS({
         stagesBySection: {
-          '11': {'3': true}
+          11: {3: true}
         }
       })
     };
@@ -257,7 +258,8 @@ describe('progressHelpers', () => {
   describe('summarizeProgressInStage', () => {
     it('summarizes all untried levels', () => {
       const levels = fakeLevels(3);
-      const summarizedStage = summarizeProgressInStage(levels);
+      const studentProgress = fakeProgressForLevels(levels);
+      const summarizedStage = summarizeProgressInStage(studentProgress, levels);
       assert.equal(summarizedStage.total, 3);
       assert.equal(summarizedStage.incomplete, 3);
       assert.equal(summarizedStage.completed, 0);
@@ -265,11 +267,12 @@ describe('progressHelpers', () => {
 
     it('summarizes all completed levels', () => {
       const levels = fakeLevels(3);
-      levels[0].status = LevelStatus.perfect;
-      levels[1].status = LevelStatus.submitted;
-      levels[2].status = LevelStatus.readonly;
+      const studentProgress = fakeProgressForLevels(levels);
+      studentProgress[0].status = LevelStatus.perfect;
+      studentProgress[1].status = LevelStatus.submitted;
+      studentProgress[2].status = LevelStatus.readonly;
 
-      const summarizedStage = summarizeProgressInStage(levels);
+      const summarizedStage = summarizeProgressInStage(studentProgress, levels);
       assert.equal(summarizedStage.total, 3);
       assert.equal(summarizedStage.incomplete, 0);
       assert.equal(summarizedStage.completed, 3);
@@ -277,11 +280,12 @@ describe('progressHelpers', () => {
     });
 
     it('summarizes all attempted levels', () => {
-      const levels = fakeLevels(2).map(level => ({
-        ...level,
-        status: LevelStatus.attempted
-      }));
-      const summarizedStage = summarizeProgressInStage(levels);
+      const levels = fakeLevels(2);
+      const studentProgress = fakeProgressForLevels(
+        levels,
+        LevelStatus.attempted
+      );
+      const summarizedStage = summarizeProgressInStage(studentProgress, levels);
       assert.equal(summarizedStage.total, 2);
       assert.equal(summarizedStage.incomplete, 2);
       assert.equal(summarizedStage.completed, 0);
@@ -290,14 +294,15 @@ describe('progressHelpers', () => {
 
     it('summarizes a mix of levels', () => {
       const levels = fakeLevels(7);
-      levels[0].status = LevelStatus.submitted;
-      levels[1].status = LevelStatus.perfect;
-      levels[2].status = LevelStatus.attempted;
-      levels[3].status = LevelStatus.passed;
-      levels[4].status = LevelStatus.free_play_complete;
-      levels[5].status = 'other';
+      const studentProgress = fakeProgressForLevels(levels);
+      studentProgress[0].status = LevelStatus.submitted;
+      studentProgress[1].status = LevelStatus.perfect;
+      studentProgress[2].status = LevelStatus.attempted;
+      studentProgress[3].status = LevelStatus.passed;
+      studentProgress[4].status = LevelStatus.free_play_complete;
+      studentProgress[5].status = 'other';
 
-      const summarizedStage = summarizeProgressInStage(levels);
+      const summarizedStage = summarizeProgressInStage(studentProgress, levels);
       assert.equal(summarizedStage.total, 7);
       assert.equal(summarizedStage.incomplete, 3);
       assert.equal(summarizedStage.completed, 3);
@@ -307,10 +312,11 @@ describe('progressHelpers', () => {
 
     it('does not summarize bonus levels', () => {
       const levels = fakeLevels(1);
-      levels[0].status = LevelStatus.submitted;
+      const studentProgress = fakeProgressForLevels(levels);
+      studentProgress[0].status = LevelStatus.submitted;
       levels[0].bonus = true;
 
-      const summarizedStage = summarizeProgressInStage(levels);
+      const summarizedStage = summarizeProgressInStage(studentProgress, levels);
       assert.equal(summarizedStage.total, 0);
       assert.equal(summarizedStage.incomplete, 0);
       assert.equal(summarizedStage.completed, 0);

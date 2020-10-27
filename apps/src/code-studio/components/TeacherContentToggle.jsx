@@ -138,9 +138,8 @@ export const mapStateToProps = state => {
     );
   } else if (!state.verifiedTeacher.isVerified) {
     // if not-authorized teacher
-    isLockedStage = state.progress.stages.some(
-      stage => stage.id === currentStageId && stage.lockable
-    );
+    isLockedStage =
+      state.progress.currentLesson && state.progress.currentLesson.lockable;
   }
 
   return {

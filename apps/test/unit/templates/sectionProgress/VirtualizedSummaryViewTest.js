@@ -13,6 +13,8 @@ import {
   restoreRedux
 } from '@cdo/apps/redux';
 import {Provider} from 'react-redux';
+import {LevelStatus} from '@cdo/apps/util/sharedConstants';
+import {levelProgressWithStatus} from '@cdo/apps/templates/progress/progressHelpers';
 
 const studentData = [
   {id: 1, name: 'studentb'},
@@ -27,15 +29,15 @@ describe('VirtualizedSummaryView', () => {
     stubRedux();
     registerReducers({sectionProgress, scriptSelection, currentUser});
     defaultProps = {
-      levelsByLesson: {
+      levelProgressByStudent: {
         0: {
-          0: [{id: 789, status: 'perfect'}]
+          789: levelProgressWithStatus(LevelStatus.perfect)
         },
         1: {
-          0: [{id: 789, status: 'perfect'}]
+          789: levelProgressWithStatus(LevelStatus.perfect)
         },
         3: {
-          0: [{id: 789, status: 'perfect'}]
+          789: levelProgressWithStatus(LevelStatus.perfect)
         }
       },
       lessonOfInterest: 1,
@@ -92,13 +94,13 @@ describe('VirtualizedSummaryView', () => {
     expect(wrapper.find('StudentProgressSummaryCell')).to.have.length(3);
   });
 
-  it('updates the grid when the levels change', () => {
+  it('updates the grid when progress changes', () => {
     const forceUpdateGridsSpy = sinon.spy();
     const wrapper = shallow(
       <UnconnectedVirtualizedSummaryView {...defaultProps} />
     );
     wrapper.instance().summaryView = {forceUpdateGrids: forceUpdateGridsSpy};
-    wrapper.setProps({levelsByLesson: {}});
+    wrapper.setProps({levelProgressByStudent: {}});
     expect(forceUpdateGridsSpy).to.have.been.calledOnce;
   });
 });

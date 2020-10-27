@@ -1,11 +1,10 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
-import {groupedLessons} from '@cdo/apps/code-studio/progressRedux';
 import SummaryProgressTable from './SummaryProgressTable';
 import DetailProgressTable from './DetailProgressTable';
 import LessonGroup from './LessonGroup';
-import {levelType, lessonType, lessonGroupType} from './progressTypes';
+import {lessonGroupType} from './progressTypes';
 
 export const styles = {
   hidden: {
@@ -17,13 +16,7 @@ class ProgressTable extends React.Component {
   static propTypes = {
     isPlc: PropTypes.bool.isRequired,
     isSummaryView: PropTypes.bool.isRequired,
-    groupedLessons: PropTypes.arrayOf(
-      PropTypes.shape({
-        lessonGroup: lessonGroupType,
-        lessons: PropTypes.arrayOf(lessonType).isRequired,
-        levels: PropTypes.arrayOf(PropTypes.arrayOf(levelType)).isRequired
-      })
-    ).isRequired,
+    lessonGroups: PropTypes.arrayOf(lessonGroupType).isRequired,
     minimal: PropTypes.bool
   };
 
@@ -43,39 +36,33 @@ class ProgressTable extends React.Component {
   }
 
   render() {
-    const {isSummaryView, isPlc, groupedLessons, minimal} = this.props;
+    const {isSummaryView, isPlc, lessonGroups, minimal} = this.props;
 
-    if (groupedLessons.length === 1) {
+    if (lessonGroups.length === 1) {
       // Render both tables, and toggle hidden state via CSS as this has better
       // perf implications than rendering just one at a time when toggling.
       return (
         <div>
           <div style={isSummaryView ? {} : styles.hidden}>
             <SummaryProgressTable
-              lessons={groupedLessons[0].lessons}
-              levelsByLesson={groupedLessons[0].levels}
+              lessons={lessonGroups[0].lessons}
               minimal={minimal}
             />
           </div>
           <div style={isSummaryView ? styles.hidden : {}}>
-            <DetailProgressTable
-              lessons={groupedLessons[0].lessons}
-              levelsByLesson={groupedLessons[0].levels}
-            />
+            <DetailProgressTable lessons={lessonGroups[0].lessons} />
           </div>
         </div>
       );
     } else {
       return (
         <div>
-          {groupedLessons.map(group => (
+          {lessonGroups.map(group => (
             <LessonGroup
-              key={group.lessonGroup.displayName}
+              key={group.displayName}
               isPlc={isPlc}
-              lessonGroup={group.lessonGroup}
+              lessonGroup={group}
               isSummaryView={isSummaryView}
-              lessons={group.lessons}
-              levelsByLesson={group.levels}
             />
           ))}
         </div>
@@ -88,5 +75,5 @@ export const UnconnectedProgressTable = ProgressTable;
 export default connect(state => ({
   isPlc: state.progress.professionalLearningCourse,
   isSummaryView: state.progress.isSummaryView,
-  groupedLessons: groupedLessons(state.progress)
+  lessonGroups: state.progress.lessonGroups
 }))(ProgressTable);

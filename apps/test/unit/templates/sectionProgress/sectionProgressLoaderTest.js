@@ -9,6 +9,7 @@ import * as redux from '@cdo/apps/redux';
 const serverScriptResponse = {
   csf: true,
   family_name: 'courseb',
+  name: 'courseb-2020',
   hasStandards: false,
   id: 123,
   path: 'test/url',
@@ -17,26 +18,31 @@ const serverScriptResponse = {
   version_year: '2020'
 };
 
-const timeInSeconds = Date.now() / 1000;
+const timeInSeconds = 321;
 const serverProgressResponse = {
   pagination: {
     page: 1,
     per: 50,
     total_pages: 1
   },
-  student_timestamps: {
+  students_last_update: {
     100: null,
     101: timeInSeconds,
     102: timeInSeconds + 1
   },
-  students: {
+  students_status: {
     100: {},
     101: {
-      2000: {status: 'locked'},
+      2000: {
+        status: 'locked',
+        result: 1001,
+        paired: false,
+        time_spent: undefined
+      },
       2001: {status: 'perfect', result: 30, paired: true, time_spent: 12345}
     },
     102: {
-      2000: {status: 'perfect', result: 100, time_spent: 6789}
+      2000: {status: 'perfect', result: 100, paired: false, time_spent: 6789}
     }
   }
 };
@@ -47,14 +53,19 @@ const firstServerProgressResponse = {
     per: 2,
     total_pages: 2
   },
-  student_timestamps: {
+  students_last_update: {
     100: null,
     101: timeInSeconds
   },
-  students: {
+  students_status: {
     100: {},
     101: {
-      2000: {status: 'locked'},
+      2000: {
+        status: 'locked',
+        result: 1001,
+        paired: false,
+        time_spent: undefined
+      },
       2001: {status: 'perfect', result: 30, paired: true, time_spent: 12345}
     }
   }
@@ -66,28 +77,22 @@ const secondServerProgressResponse = {
     per: 2,
     total_pages: 2
   },
-  student_timestamps: {
+  students_last_update: {
     102: timeInSeconds + 1
   },
-  students: {
+  students_status: {
     102: {
-      2000: {status: 'perfect', result: 100, time_spent: 6789}
+      2000: {status: 'perfect', result: 100, paired: false, time_spent: 6789}
     }
   }
 };
 
 const fullExpectedResult = {
-  levelsByLessonByScript: {
-    123: {
-      100: {},
-      101: {},
-      102: {}
-    }
-  },
   scriptDataByScript: {
     123: {
       csf: true,
       family_name: 'courseb',
+      name: 'courseb-2020',
       hasStandards: false,
       id: 123,
       path: 'test/url',
@@ -96,43 +101,24 @@ const fullExpectedResult = {
       version_year: '2020'
     }
   },
-  studentLevelPairingByScript: {
-    123: {
-      100: {},
-      101: {
-        2000: false,
-        2001: true
-      },
-      102: {
-        2000: false
-      }
-    }
-  },
   studentLevelProgressByScript: {
     123: {
       100: {},
       101: {
-        2000: 1001,
-        2001: 30
+        2000: {
+          status: 'locked',
+          result: 1001,
+          paired: false,
+          time_spent: undefined
+        },
+        2001: {status: 'perfect', result: 30, paired: true, time_spent: 12345}
       },
       102: {
-        2000: 100
+        2000: {status: 'perfect', result: 100, paired: false, time_spent: 6789}
       }
     }
   },
-  studentLevelTimeSpentByScript: {
-    123: {
-      100: {},
-      101: {
-        2000: undefined,
-        2001: 12345
-      },
-      102: {
-        2000: 6789
-      }
-    }
-  },
-  studentTimestampsByScript: {
+  studentLastUpdateByScript: {
     123: {
       100: 0,
       101: timeInSeconds * 1000,
@@ -259,7 +245,6 @@ describe('sectionProgressLoader.loadScript', () => {
       });
 
       sinon.stub(progressHelpers, 'processedLevel');
-      sinon.stub(progress, 'levelsByLesson').returns({});
       addDataByScriptStub = sinon.spy(sectionProgress, 'addDataByScript');
       fetchStub.onCall(0).returns({
         then: sinon.stub().returns({
@@ -279,7 +264,6 @@ describe('sectionProgressLoader.loadScript', () => {
       loadScript(123, 0);
       expect(addDataByScriptStub).to.have.been.calledWith(fullExpectedResult);
       progressHelpers.processedLevel.restore();
-      progress.levelsByLesson.restore();
     });
 
     describe('the first time', () => {
@@ -326,11 +310,11 @@ describe('sectionProgressLoader.loadScript', () => {
           lessons: [{levels: ['fail']}]
         };
         const expectedResult = {
-          levelsByLessonByScript: {0: {}},
           scriptDataByScript: {
             0: {
               csf: undefined,
               family_name: undefined,
+              name: undefined,
               hasStandards: undefined,
               id: undefined,
               path: undefined,
@@ -339,10 +323,8 @@ describe('sectionProgressLoader.loadScript', () => {
               version_year: undefined
             }
           },
-          studentLevelPairingByScript: {0: {}},
           studentLevelProgressByScript: {0: {}},
-          studentLevelTimeSpentByScript: {0: {}},
-          studentTimestampsByScript: {0: {}}
+          studentLastUpdateByScript: {0: {}}
         };
 
         fetchStub.onCall(0).returns({

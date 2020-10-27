@@ -34,11 +34,16 @@ class SectionSelector extends React.Component {
         id: PropTypes.number.isRequired
       })
     ).isRequired,
-    selectedSectionId: PropTypes.string,
+    selectedSectionId: PropTypes.number,
     selectSection: PropTypes.func.isRequired
   };
 
-  handleSelectChange = event => {
+  constructor(props) {
+    super(props);
+    this.handleSelectChange = this.handleSelectChange.bind(this);
+  }
+
+  handleSelectChange(event) {
     const newSectionId = event.target.value;
 
     if (this.props.logToFirehose) {
@@ -56,7 +61,7 @@ class SectionSelector extends React.Component {
     } else {
       this.props.selectSection(newSectionId);
     }
-  };
+  }
 
   render() {
     const {style, requireSelection, sections, selectedSectionId} = this.props;
@@ -74,7 +79,7 @@ class SectionSelector extends React.Component {
           ...styles.select,
           ...style
         }}
-        value={selectedSectionId}
+        value={selectedSectionId || undefined}
         onChange={this.handleSelectChange}
       >
         {!requireSelection && (
@@ -96,7 +101,7 @@ export const UnconnectedSectionSelector = SectionSelector;
 
 export default connect(
   state => ({
-    selectedSectionId: state.teacherSections.selectedSectionId.toString(),
+    selectedSectionId: state.teacherSections.selectedSectionId,
     sections: sectionsNameAndId(state.teacherSections)
   }),
   dispatch => ({

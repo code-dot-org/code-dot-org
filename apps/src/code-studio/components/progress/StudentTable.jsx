@@ -5,6 +5,11 @@ import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 import {TeacherPanelProgressBubble} from '@cdo/apps/code-studio/components/progress/TeacherPanelProgressBubble';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import {
+  studentType,
+  levelType,
+  studentLevelProgressType
+} from '@cdo/apps/templates/progress/progressTypes';
 
 const styles = {
   table: {
@@ -52,22 +57,26 @@ const styles = {
   }
 };
 
-export const studentShape = PropTypes.shape({
-  id: PropTypes.number.isRequired,
-  name: PropTypes.string.isRequired
-});
-
 class StudentTable extends React.Component {
   static propTypes = {
-    students: PropTypes.arrayOf(studentShape).isRequired,
+    students: PropTypes.arrayOf(studentType).isRequired,
     onSelectUser: PropTypes.func.isRequired,
     getSelectedUserId: PropTypes.func.isRequired,
-    levels: PropTypes.array,
+    levels: PropTypes.arrayOf(levelType),
+    levelProgressByStudent: PropTypes.objectOf(
+      PropTypes.objectOf(studentLevelProgressType)
+    ),
     sectionId: PropTypes.number,
     scriptName: PropTypes.string
   };
 
-  getRowLink = studentId => {
+  constructor(props) {
+    super(props);
+    this.getRowLink = this.getRowLink.bind(this);
+    this.getRowStyle = this.getRowStyle.bind(this);
+  }
+
+  getRowLink(studentId) {
     let url;
     const queryStr = `?section_id=${this.props.sectionId}&user_id=${studentId}`;
 
@@ -80,19 +89,25 @@ class StudentTable extends React.Component {
     }
 
     return url + queryStr;
-  };
+  }
 
-  getRowStyle = (selectedUserId, id) => {
+  getRowStyle(selectedUserId, id) {
     const isSelected = selectedUserId === id;
     if (isSelected) {
       return [styles.tr, styles.selected];
     } else {
       return styles.tr;
     }
-  };
+  }
 
   render() {
-    const {students, onSelectUser, getSelectedUserId, levels} = this.props;
+    const {
+      students,
+      onSelectUser,
+      getSelectedUserId,
+      levels,
+      levelProgressByStudent
+    } = this.props;
     const selectedUserId = getSelectedUserId();
 
     return (
@@ -104,36 +119,47 @@ class StudentTable extends React.Component {
           >
             <td style={styles.meRow}>{i18n.studentTableTeacherDemo()}</td>
           </tr>
-          {students.map(student => (
-            <tr
-              key={`tr-${student.id}`}
-              style={this.getRowStyle(selectedUserId, student.id)}
-              onClick={() => onSelectUser(student.id)}
-            >
-              <td key={`td-${student.id}`} style={styles.td}>
-                <div style={styles.studentTableRow}>
-                  {levels && (
-                    <TeacherPanelProgressBubble
-                      level={levels.find(level => student.id === level.user_id)}
-                    />
-                  )}
-                  <div
-                    style={levels ? styles.nameWithBubble : styles.nameInScript}
-                  >
-                    {student.name}
-                    <a
-                      href={this.getRowLink(student.id)}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      style={styles.linkIcon}
+          {students.map(student => {
+            let level;
+            let levelProgress;
+            if (levels) {
+              level = levels.find(level => student.id === level.user_id);
+              levelProgress = levelProgressByStudent[student.id][level.id];
+            }
+            return (
+              <tr
+                key={`tr-${student.id}`}
+                style={this.getRowStyle(selectedUserId, student.id)}
+                onClick={() => onSelectUser(student.id)}
+              >
+                <td key={`td-${student.id}`} style={styles.td}>
+                  <div style={styles.studentTableRow}>
+                    {levels && (
+                      <TeacherPanelProgressBubble
+                        level={level}
+                        levelProgress={levelProgress}
+                      />
+                    )}
+                    <div
+                      style={
+                        levels ? styles.nameWithBubble : styles.nameInScript
+                      }
                     >
-                      <FontAwesome icon="external-link" />
-                    </a>
+                      {student.name}
+                      <a
+                        href={this.getRowLink(student.id)}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={styles.linkIcon}
+                      >
+                        <FontAwesome icon="external-link" />
+                      </a>
+                    </div>
                   </div>
-                </div>
-              </td>
-            </tr>
-          ))}
+                </td>
+              </tr>
+            );
+          })}
         </tbody>
       </table>
     );

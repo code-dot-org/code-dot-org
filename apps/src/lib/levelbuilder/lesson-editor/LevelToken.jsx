@@ -8,7 +8,6 @@ import {scriptLevelShape} from '@cdo/apps/lib/levelbuilder/shapes';
 import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
 import LevelTokenDetails from '@cdo/apps/lib/levelbuilder/lesson-editor/LevelTokenDetails';
 import {toggleExpand} from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
-import {LevelStatus} from '@cdo/apps/util/sharedConstants';
 
 const styles = {
   levelToken: {
@@ -103,32 +102,40 @@ class LevelToken extends Component {
     toggleExpand: PropTypes.func
   };
 
-  handleDragStart = e => {
-    this.props.handleDragStart(this.props.scriptLevel.position, e);
-  };
+  constructor(props) {
+    super(props);
+    this.handleDragStart = this.handleDragStart.bind(this);
+    this.toggleExpand = this.toggleExpand.bind(this);
+    this.handleRemove = this.handleRemove.bind(this);
+    this.scriptLevelForProgressBubble = this.scriptLevelForProgressBubble.bind(
+      this
+    );
+  }
 
-  toggleExpand = () => {
+  handleDragStart(e) {
+    this.props.handleDragStart(this.props.scriptLevel.position, e);
+  }
+
+  toggleExpand() {
     this.props.toggleExpand(
       this.props.activityPosition,
       this.props.activitySectionPosition,
       this.props.scriptLevel.position
     );
-  };
+  }
 
-  handleRemove = () => {
+  handleRemove() {
     this.props.removeLevel(this.props.scriptLevel.position);
-  };
+  }
 
-  scriptLevelForProgressBubble = activeLevel => {
+  scriptLevelForProgressBubble(activeLevel) {
     let progressBubbleLevel = activeLevel;
 
-    progressBubbleLevel['isCurrentLevel'] = false;
-    progressBubbleLevel['status'] = LevelStatus.not_tried;
     progressBubbleLevel['levelNumber'] = this.props.scriptLevel.levelNumber;
     progressBubbleLevel['kind'] = this.props.scriptLevel.kind;
 
     return progressBubbleLevel;
-  };
+  }
 
   render() {
     const {draggedLevelPos, scriptLevel} = this.props;
