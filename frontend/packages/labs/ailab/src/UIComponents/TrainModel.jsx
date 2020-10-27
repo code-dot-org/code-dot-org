@@ -84,32 +84,28 @@ class TrainModel extends Component {
                   the newly trained model.
                 </p>
                 <div>
-                  <p>
-                    10% of the training data was reserved to test the accuracy
-                    of the newly trained model.
-                  </p>
-                  <div>
-                    <table>
-                      <thead>
-                        <tr>
-                          <th>Expected</th>
-                          <th>Predicted</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        {this.props.accuracyCheckLabels.map((label, index) => {
-                          return (
-                            <tr key={index}>
-                              <td>{label}</td>
-                              <td>
-                                {this.props.accuracyCheckPredictedLabels[index]}
-                              </td>
-                            </tr>
-                          );
-                        })}
-                      </tbody>
-                    </table>
-                  </div>
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Expected</th>
+                        <th>Predicted</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {this.props.accuracyCheckLabels.map((label, index) => {
+                        return (
+                          <tr key={index}>
+                            <td>{label}</td>
+                            <td>
+                              {this.props.accuracyCheckPredictedLabels[index]}
+                            </td>
+                          </tr>
+                        );
+                      })}
+                    </tbody>
+                  </table>
+                </div>
+                <div>
                   <h3>The calculated accuracy of this model is:</h3>
                   {this.props.accuracy}%
                 </div>
