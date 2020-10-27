@@ -160,7 +160,7 @@ class DataDisplay extends Component {
                     value={this.props.labelColumn}
                     onChange={this.handleChangeSelect}
                   >
-                    <option value={undefined}>{""}</option>
+                    <option>{""}</option>
                     {this.props.selectableLabels.map((feature, index) => {
                       return (
                         <option key={index} value={feature}>

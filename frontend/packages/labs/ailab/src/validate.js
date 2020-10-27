@@ -28,16 +28,9 @@ export function compatibleLabelAndTrainer(state) {
   const trainerLabelType = state.selectedTrainer
     ? availableTrainers[state.selectedTrainer].labelType
     : undefined;
-  console.log("state.selectedTrainer", state.selectedTrainer);
-  console.log(
-    "availableTrainers[state.selectedTrainer]",
-    availableTrainers[state.selectedTrainer]
-  );
-  console.log("trainerLabelType", trainerLabelType);
   const labelDatatype = state.labelColumn
     ? state.columnsByDataType[state.labelColumn]
     : undefined;
-  console.log("labelDatatype", labelDatatype);
   const compatible = labelAndTrainerSelected
     ? trainerLabelType === labelDatatype
     : false;

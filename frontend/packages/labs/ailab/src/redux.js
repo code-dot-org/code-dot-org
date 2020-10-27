@@ -263,7 +263,6 @@ export function getSelectableFeatures(state) {
 }
 
 export function getSelectableLabels(state) {
-  console.log("MLTYPES", MLTypes);
   const eligibleColumns = getContinuousColumns(state).concat(
     getCategoricalColumns(state)
   );
