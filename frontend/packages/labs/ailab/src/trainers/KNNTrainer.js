@@ -10,7 +10,11 @@ export default class KNNTrainer {
     this.knn = new ML.KNN(state.trainingExamples, state.trainingLabels, {
       k: 5
     });
-    this.batchPredict(state.accuracyCheckExamples);
+    if (state.accuracyCheckExamples.length > 0) {
+      this.batchPredict(state.accuracyCheckExamples);
+    } else {
+      store.dispatch(setAccuracyCheckPredictedLabels([]));
+    }
   }
 
   batchPredict(accuracyCheckExamples) {

@@ -47,7 +47,11 @@ export default class SVMTrainer {
       this.convertLabel(labelOption, state.featureNumberKey[state.labelColumn])
     );
     this.train(trainingExamples, trainingLabels);
-    this.batchPredict(state.accuracyCheckExamples);
+    if (state.accuracyCheckExamples.length > 0) {
+      this.batchPredict(state.accuracyCheckExamples);
+    } else {
+      store.dispatch(setAccuracyCheckPredictedLabels([]));
+    }
   }
 
   train(trainingExamples, trainingLabels) {
