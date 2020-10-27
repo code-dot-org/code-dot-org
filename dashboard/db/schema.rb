@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20201016003134) do
+ActiveRecord::Schema.define(version: 20201027033056) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 20201016003134) do
     t.index ["user_id", "level_id"], name: "index_activities_on_user_id_and_level_id", using: :btree
   end
 
-  create_table "activity_sections", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+  create_table "activity_sections", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci" do |t|
     t.integer  "lesson_activity_id", null: false
     t.string   "seeding_key",        null: false, comment: "unique key which is stable across environments for seeding purposes"
     t.integer  "position",           null: false
@@ -530,7 +530,7 @@ ActiveRecord::Schema.define(version: 20201016003134) do
     t.index ["school_id"], name: "index_ib_school_codes_on_school_id", unique: true, using: :btree
   end
 
-  create_table "lesson_activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+  create_table "lesson_activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci" do |t|
     t.integer  "lesson_id",   null: false
     t.string   "seeding_key", null: false, comment: "unique key which is stable across environments for seeding purposes"
     t.integer  "position",    null: false
@@ -552,7 +552,7 @@ ActiveRecord::Schema.define(version: 20201016003134) do
     t.index ["script_id", "key"], name: "index_lesson_groups_on_script_id_and_key", unique: true, using: :btree
   end
 
-  create_table "lessons_resources", id: false, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+  create_table "lessons_resources", id: false, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci" do |t|
     t.integer "lesson_id",   null: false
     t.integer "resource_id", null: false
     t.index ["lesson_id", "resource_id"], name: "index_lessons_resources_on_lesson_id_and_resource_id", using: :btree
@@ -650,7 +650,7 @@ ActiveRecord::Schema.define(version: 20201016003134) do
     t.float    "value",       limit: 24, null: false
   end
 
-  create_table "objectives", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+  create_table "objectives", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci" do |t|
     t.text     "properties", limit: 65535
     t.integer  "lesson_id"
     t.datetime "created_at",               null: false
@@ -1282,7 +1282,7 @@ ActiveRecord::Schema.define(version: 20201016003134) do
     t.index ["school_district_id"], name: "index_regional_partners_school_districts_on_school_district_id", using: :btree
   end
 
-  create_table "resources", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+  create_table "resources", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci" do |t|
     t.string   "name"
     t.string   "url",               null: false
     t.string   "key",               null: false
@@ -1581,19 +1581,19 @@ ActiveRecord::Schema.define(version: 20201016003134) do
     t.index ["user_id"], name: "index_survey_results_on_user_id", using: :btree
   end
 
-  create_table "teacher_feedbacks", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.text     "comment",                  limit: 65535
+  create_table "teacher_feedbacks", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci" do |t|
+    t.text     "comment",                  limit: 16777215
     t.integer  "student_id"
-    t.integer  "level_id",                               null: false
-    t.integer  "teacher_id",                             null: false
-    t.datetime "created_at",                             null: false
-    t.datetime "updated_at",                             null: false
+    t.integer  "level_id",                                  null: false
+    t.integer  "teacher_id",                                null: false
+    t.datetime "created_at",                                null: false
+    t.datetime "updated_at",                                null: false
     t.datetime "deleted_at"
     t.string   "performance"
     t.integer  "student_visit_count"
     t.datetime "student_first_visited_at"
     t.datetime "student_last_visited_at"
-    t.integer  "script_level_id",                        null: false
+    t.integer  "script_level_id",                           null: false
     t.datetime "seen_on_feedback_page_at"
     t.index ["student_id", "level_id", "teacher_id"], name: "index_feedback_on_student_and_level_and_teacher_id", using: :btree
   end
