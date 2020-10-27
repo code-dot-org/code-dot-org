@@ -564,6 +564,14 @@ export default class ScriptEditor extends React.Component {
           )}
         </CollapsibleEditorSection>
 
+        {this.props.beta && (
+          <input
+            type="hidden"
+            name="old_script_text"
+            value={this.props.lessonLevelData}
+          />
+        )}
+
         <div style={styles.saveButtonBackground}>
           <button
             className="btn btn-primary"

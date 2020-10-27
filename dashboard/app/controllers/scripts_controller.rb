@@ -122,6 +122,19 @@ class ScriptsController < ApplicationController
   end
 
   def update
+    if params[:old_script_text]
+      current_script_text = ScriptDSL.serialize_lesson_groups(@script).strip
+      # puts current_script_text
+      old_script_text = params[:old_script_text].strip
+      # puts old_script_text
+      if old_script_text != current_script_text
+        msg = "Could not update the script because the contents of one of its lessons or levels has changed outside of this editor. BEFORE:\n#{old_script_text}\n\nAFTER:#{current_script_text}"
+        puts msg
+        render(:conflict, text: msg)
+        return
+      end
+      puts "old_script_text == current_script_text"
+    end
     script_text = params[:script_text]
     if @script.update_text(script_params, script_text, i18n_params, general_params)
       redirect_to @script, notice: I18n.t('crud.updated', model: Script.model_name.human)
