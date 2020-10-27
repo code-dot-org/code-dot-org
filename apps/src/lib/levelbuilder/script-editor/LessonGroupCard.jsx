@@ -6,7 +6,6 @@ import ReactDOM from 'react-dom';
 import {borderRadius, tokenMargin} from '@cdo/apps/lib/levelbuilder/constants';
 import OrderControls from '@cdo/apps/lib/levelbuilder/OrderControls';
 import {
-  moveLesson,
   moveGroup,
   removeLesson,
   addLesson,
@@ -69,12 +68,12 @@ class LessonGroupCard extends Component {
     lessonGroupMetrics: PropTypes.object,
     setTargetLessonGroup: PropTypes.func,
     targetLessonGroupPos: PropTypes.number,
+    lessonKeys: PropTypes.array.isRequired,
 
     // from redux
     addLesson: PropTypes.func.isRequired,
     moveGroup: PropTypes.func.isRequired,
     removeGroup: PropTypes.func.isRequired,
-    moveLesson: PropTypes.func.isRequired,
     removeLesson: PropTypes.func.isRequired,
     setLessonGroup: PropTypes.func.isRequired,
     reorderLesson: PropTypes.func.isRequired,
@@ -214,11 +213,7 @@ class LessonGroupCard extends Component {
 
   generateLessonKey = () => {
     let lessonNumber = this.props.lessonGroup.lessons.length + 1;
-    while (
-      this.props.lessonGroup.lessons.some(
-        lesson => lesson.key === `lesson-${lessonNumber}`
-      )
-    ) {
+    while (this.props.lessonKeys.includes(`lesson-${lessonNumber}`)) {
       lessonNumber++;
     }
 
@@ -255,7 +250,7 @@ class LessonGroupCard extends Component {
   handleChangeLessonGroupName = event => {
     this.props.updateLessonGroupField(
       this.props.lessonGroup.position,
-      'name',
+      'displayName',
       event.target.value
     );
   };
@@ -272,53 +267,49 @@ class LessonGroupCard extends Component {
             : styles.lessonGroupCard
         }
       >
-        <div style={styles.lessonGroupCardHeader}>
-          {lessonGroup.userFacing && (
-            <span>
+        {lessonGroup.userFacing && (
+          <div>
+            <div style={styles.lessonGroupCardHeader}>
               <span style={styles.title}>Lesson Group Name:</span>
               <input
                 value={this.props.lessonGroup.displayName}
                 onChange={this.handleChangeLessonGroupName}
                 style={{width: 300}}
               />
-            </span>
-          )}
-          {lessonGroup.userFacing && (
-            <OrderControls
-              name={lessonGroup.key || '(none)'}
-              move={this.handleMoveLessonGroup}
-              remove={this.handleRemoveLessonGroup}
-            />
-          )}
-        </div>
-        {lessonGroup.userFacing && (
-          <div>
-            <label>
-              Description
-              <textarea
-                value={this.props.lessonGroup.description}
-                rows={Math.max(
-                  this.props.lessonGroup.description.split(/\r\n|\r|\n/)
-                    .length + 1,
-                  2
-                )}
-                style={styles.input}
-                onChange={this.handleChangeDescription}
+              <OrderControls
+                name={lessonGroup.key || '(none)'}
+                move={this.handleMoveLessonGroup}
+                remove={this.handleRemoveLessonGroup}
               />
-            </label>
-            <label>
-              Big Questions
-              <textarea
-                value={this.props.lessonGroup.bigQuestions}
-                rows={Math.max(
-                  this.props.lessonGroup.bigQuestions.split(/\r\n|\r|\n/)
-                    .length + 1,
-                  2
-                )}
-                style={styles.input}
-                onChange={this.handleChangeBigQuestions}
-              />
-            </label>
+            </div>
+            <div>
+              <label>
+                Description
+                <textarea
+                  value={this.props.lessonGroup.description}
+                  rows={Math.max(
+                    this.props.lessonGroup.description.split(/\r\n|\r|\n/)
+                      .length + 1,
+                    2
+                  )}
+                  style={styles.input}
+                  onChange={this.handleChangeDescription}
+                />
+              </label>
+              <label>
+                Big Questions
+                <textarea
+                  value={this.props.lessonGroup.bigQuestions}
+                  rows={Math.max(
+                    this.props.lessonGroup.bigQuestions.split(/\r\n|\r|\n/)
+                      .length + 1,
+                    2
+                  )}
+                  style={styles.input}
+                  onChange={this.handleChangeBigQuestions}
+                />
+              </label>
+            </div>
           </div>
         )}
         {lessonGroup.lessons.map(lesson => (
@@ -362,7 +353,6 @@ export const UnconnectedLessonGroupCard = LessonGroupCard;
 export default connect(
   state => ({}),
   {
-    moveLesson,
     moveGroup,
     removeLesson,
     removeGroup,
