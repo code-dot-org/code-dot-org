@@ -361,7 +361,6 @@ export function getAccuracy(state) {
   }
   return ((numCorrect / numPredictedLabels) * 100).toFixed(2);
 }
-<<<<<<< HEAD
 
 export function validationMessages(state) {
   const validationMessages = [];
@@ -398,11 +397,3 @@ export function validationMessages(state) {
 export function readyToTrain(state) {
   return uniqLabelFeaturesSelected(state) && compatibleLabelAndTrainer(state);
 }
-
-export const ColumnTypes = {
-  CATEGORICAL: "categorical",
-  CONTINUOUS: "continuous",
-  OTHER: "other"
-};
-=======
->>>>>>> fix-imports

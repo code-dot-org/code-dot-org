@@ -12,8 +12,7 @@ import {
   setTrainingExamples,
   setTrainingLabels,
   setAccuracyCheckExamples,
-  setAccuracyCheckLabels,
-  ColumnTypes
+  setAccuracyCheckLabels
 } from "./redux";
 import { ColumnTypes, MLTypes } from "./constants.js";
 
