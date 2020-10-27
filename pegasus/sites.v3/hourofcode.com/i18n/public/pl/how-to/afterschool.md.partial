@@ -10,7 +10,7 @@ nav: how_to_nav
 
 ### Przyłącz się do tej inicjatywy i wprowadź swoich uczniów w dziedzinę informatyki w sposób następujący.
 
-Myślenie komputacyjne pomaga rozwijać umiejętność rozwiązywania problemów, logikę oraz kreatywność. A technologia zmienia każdą branżę na świecie. Uczniowie dnia dzisiejszego powinni się uczyć, jak tworzyć technologię, a nie tylko jak z niej korzystać. Rozpoczęcie nauki na wczesnym etapie da im podwaliny sukcesu na dowolnej ścieżce zawodowej na miarę XXI wieku.
+Myślenie informatyczne pomaga rozwijać umiejętność rozwiązywania problemów, logikę oraz kreatywność. A technologia zmienia każdą branżę na świecie. Uczniowie dnia dzisiejszego powinni się uczyć, jak tworzyć technologię, a nie tylko jak z niej korzystać. Rozpoczęcie nauki na wczesnym etapie da im podwaliny sukcesu na dowolnej ścieżce zawodowej na miarę XXI wieku.
 
 Akcja godzina kodowania to prosty i przyjemny sposób na zapoznanie dzieci z podstawami informatyki. Jeśli potrzebujesz wsparcia, [ poszukaj wolontariusza ]({{ urls/volunteer_local }}), który pomoże poprowadzić Godzinę kodowania na twoich pozaszkolnych zajęciach.
 
@@ -38,7 +38,7 @@ Promuj swoją Godzinę Kodowania [przy pomocy tych materiałów ]({{ urls/promot
 
 Najlepsze efekty z Godziną Kodowania zapewnią komputery z dostępem do Internetu. Jednak wcale **nie potrzebujesz komputera ** dla każdego dziecka, możesz przeprowadzić Godzinę Kodowania nawet bez komputerów.
 
-Przetestuj samouczki na komputerach lub innych urządzeniach uczniów, aby upewnić się, że działają poprawnie w przeglądarkach z dźwiękiem i wideo. **Jeśli masz zbyt wolne łącze internetowe,** to wyświetl filmy przed całą klasą, aby każdy uczeń nie musiał pobierać swojego filmu. Or try the unplugged / offline tutorials.
+Przetestuj samouczki na komputerach lub innych urządzeniach uczniów, aby upewnić się, że działają poprawnie w przeglądarkach z dźwiękiem i wideo. **Jeśli masz zbyt wolne łącze internetowe,** to wyświetl filmy przed całą klasą, aby każdy uczeń nie musiał pobierać swojego filmu. Lub wypróbuj samouczki w trybie "unplugged" - bez komputera lub w trybie offline - bez dostępu do sieci.
 
 Zapewnij uczniom słuchawki lub poproś, by przynieśli własne, jeśli samouczek, który wybrałeś, działa najlepiej z dźwiękiem.
 
@@ -61,15 +61,15 @@ Rozpocznij Godzinę Kodowania inspirując uczestników i dyskutując, jaki jest 
 - Wymień rzeczy, które używają oprogramowania w codziennym życiu.
 - Wskazówki, jak zainteresować dziewczęta informatyką, zobacz [tutaj]({{ urls/girls }}).
 
-**Need more guidance?** Download this [template lesson plan](/files/AfterschoolEducatorLessonPlanOutline.docx).
+**Potrzebujesz więcej wskazówek?** Ściągnij ten [szablonowy plan zajęć](/files/AfterschoolEducatorLessonPlanOutline.docx).
 
 ## 6. Programuj!
 
-**Direct participants to the activity** - Write the tutorial link on a whiteboard. Znajdź link wymieniony [w informacji dla wybranego przez Ciebie samouczka]({{ urls/learn }}) pod liczbą uczestników.
+** Skieruj uczestników na zajęcia ** - Napisz link do samouczka na tablicy. Znajdź link wymieniony [w informacji dla wybranego przez Ciebie samouczka]({{ urls/learn }}) pod liczbą uczestników.
 
-**When someone comes across difficulties it's okay to respond:** - “I don’t know. Rozwiążmy to razem.” - „Technologia nie zawsze działa tak, jak chcemy”. - „Nauka programowania jest jak nauka nowego języka; nie od razu będziesz biegły. ”
+** Gdy ktoś napotka trudności, to w porządku jest odpowiedzieć: ** - „Nie wiem. Rozwiążmy to razem.” - „Technologia nie zawsze działa tak, jak chcemy”. - „Nauka programowania jest jak nauka nowego języka; nie od razu będziesz biegły. ”
 
-**What to do if someone finishes early?** - Encourage participants to try another Hour of Code activity at [hourofcode.com/learn]({{ urls/learn }}) - Or, ask those who finish early to help others who are having trouble.
+** Co zrobić, jeśli ktoś skończy wcześniej? ** - Zachęć uczestników do wypróbowania kolejnych zajęć w ramach "Godziny kodowania" na [hourofcode.com/learn]({{ urls/learn }}) - Lub poproś tych, którzy skończą wcześniej, aby pomogli innym, którzy mają kłopoty.
 
 ## 7. Świętuj
 

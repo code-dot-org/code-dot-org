@@ -80,10 +80,20 @@ class TestController < ApplicationController
       relative_position: 1,
       absolute_position: 1
     )
-    script_level = lesson.script_levels.create(
+    activity = lesson.lesson_activities.create(
+      position: 1,
+      seeding_key: SecureRandom.uuid
+    )
+    section = activity.activity_sections.create(
+      position: 1,
+      seeding_key: SecureRandom.uuid
+    )
+    script_level = section.script_levels.create(
       script: script,
+      lesson: lesson,
       chapter: 1,
-      position: 1
+      position: 1,
+      activity_section_position: 1
     )
     level = Level.find_by_name('Applab test')
     script_level.levels.push(level)

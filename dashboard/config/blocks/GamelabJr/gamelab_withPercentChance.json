@@ -2,7 +2,7 @@
   "category": "Logic",
   "config": {
     "func": "withPercentChance",
-    "blockText": "with {NUM} % chance\n{STATEMENT}",
+    "blockText": "if {NUM}% chance\n{STATEMENT}",
     "args": [
       {
         "name": "NUM",

@@ -17,12 +17,41 @@ describe('LessonOverview', () => {
       lesson: {
         unit: {
           displayName: 'Unit 1',
-          link: '/s/unit-1'
+          link: '/s/unit-1',
+          lessons: [
+            {
+              displayName: 'Lesson 1',
+              link: '/lessons/1'
+            },
+            {
+              displayName: 'Lesson 2',
+              link: '/lessons/2'
+            }
+          ]
         },
         displayName: 'Lesson Name',
         overview: 'Lesson Overview',
         purpose: 'The purpose of the lesson is for people to learn',
-        preparation: '- One'
+        preparation: '- One',
+        resources: {
+          Teacher: [
+            {
+              key: 'teacher-resource',
+              name: 'Teacher Resource',
+              url: 'fake.url',
+              type: 'Slides'
+            }
+          ],
+          Student: [
+            {
+              key: 'student-resource',
+              name: 'Student Resource',
+              url: 'fake.url',
+              download_url: 'download.fake.url',
+              type: 'Activity Guide'
+            }
+          ]
+        }
       },
       activities: [],
       announcements: [],
@@ -33,9 +62,13 @@ describe('LessonOverview', () => {
 
   it('renders default props', () => {
     const wrapper = shallow(<LessonOverview {...defaultProps} />);
-    const navLinks = wrapper.find('a');
-    expect(navLinks.props().href).to.contain('/s/unit-1');
-    expect(navLinks.contains('< Unit 1')).to.be.true;
+    const navLink = wrapper.find('a').at(0);
+    expect(navLink.props().href).to.contain('/s/unit-1');
+    expect(navLink.contains('< Unit 1')).to.be.true;
+
+    expect(wrapper.find('DropdownButton').length).to.equal(1);
+    const dropdown = wrapper.find('DropdownButton');
+    expect(dropdown.find('a').length).to.equal(2);
 
     expect(wrapper.contains('Lesson Name'), 'Lesson Name').to.be.true;
 
@@ -45,6 +78,8 @@ describe('LessonOverview', () => {
       'The purpose of the lesson is for people to learn'
     );
     expect(safeMarkdowns.at(2).props().markdown).to.contain('- One');
+
+    expect(wrapper.find('LessonAgenda').length).to.equal(1);
   });
 
   it('renders correct number of activities', () => {
@@ -81,5 +116,11 @@ describe('LessonOverview', () => {
       />
     );
     assert.equal(wrapper.find('Announcements').props().announcements.length, 1);
+  });
+
+  it('displays the resources', () => {
+    const wrapper = shallow(<LessonOverview {...defaultProps} />);
+    const resourceSection = wrapper.find('#resource-section');
+    assert.equal(resourceSection.find('ul').length, 2);
   });
 });

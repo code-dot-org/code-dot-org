@@ -17,7 +17,10 @@ import {levelKeyList} from '../../../../../test/unit/lib/levelbuilder/lesson-edi
 $(document).ready(function() {
   const lessonData = getScriptData('lesson');
   const relatedLessons = getScriptData('relatedLessons');
+  const searchOptions = getScriptData('searchOptions');
+
   const activities = lessonData.activities;
+  const objectives = lessonData.objectives || [];
 
   // Rename any keys that are different on the backend.
   activities.forEach(activity => {
@@ -50,6 +53,14 @@ $(document).ready(function() {
       activitySection.scriptLevels = activitySection.scriptLevels || [];
       activitySection.scriptLevels.forEach(scriptLevel => {
         scriptLevel.status = LevelStatus.not_tried;
+
+        // The position within the lesson
+        scriptLevel.levelNumber = scriptLevel.position;
+
+        // The position within the activity section
+        scriptLevel.position = scriptLevel.activitySectionPosition;
+
+        delete scriptLevel.activitySectionPosition;
       });
 
       activitySection.tips = activitySection.tips || [];
@@ -65,11 +76,16 @@ $(document).ready(function() {
     activities.push(emptyActivity);
   }
 
+  // Do the same thing for objective keys as for activity keys above.
+  // React needs unique keys for all objects, but objectives don't get
+  // a key until they're saved to the server, which happens after lesson save.
+  objectives.forEach(objective => (objective.key = objective.id + ''));
+
   registerReducers({...reducers});
   const store = getStore();
 
   //TODO Switch to using real data once we have activity data
-  store.dispatch(init(activities, levelKeyList));
+  store.dispatch(init(activities, levelKeyList, searchOptions));
 
   ReactDOM.render(
     <Provider store={store}>
@@ -86,6 +102,7 @@ $(document).ready(function() {
         announcements={lessonData.announcements || []}
         resources={lessonData.resources}
         relatedLessons={relatedLessons}
+        objectives={objectives}
       />
     </Provider>,
     document.getElementById('edit-container')

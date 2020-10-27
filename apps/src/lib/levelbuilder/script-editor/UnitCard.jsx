@@ -116,7 +116,7 @@ class UnitCard extends Component {
    */
   serializeLesson = lesson => {
     let s = [];
-    let t = `lesson '${escape(lesson.name)}'`;
+    let t = `lesson '${escape(lesson.key)}'`;
     if (lesson.name) {
       t += `, display_name: '${escape(lesson.name)}'`;
     }
@@ -226,6 +226,13 @@ class UnitCard extends Component {
   render() {
     const {lessonGroups} = this.props;
 
+    let lessonKeys = [];
+    lessonGroups.forEach(lessonGroup => {
+      lessonGroup.lessons.forEach(lesson => {
+        lessonKeys.push(lesson.key);
+      });
+    });
+
     return (
       <div>
         <div style={styles.unitHeader}>Unit</div>
@@ -234,6 +241,7 @@ class UnitCard extends Component {
             <LessonGroupCard
               key={`lesson-group-${index}`}
               lessonGroupsCount={lessonGroups.length}
+              lessonKeys={lessonKeys}
               lessonGroup={lessonGroup}
               ref={lessonGroupCard => {
                 if (lessonGroupCard) {
