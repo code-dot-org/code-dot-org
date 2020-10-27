@@ -59,20 +59,24 @@ class TrainModel extends Component {
                   </p>
                   <div>
                     <table>
-                      <tr>
-                        <th>Expected</th>
-                        <th>Predicted</th>
-                      </tr>
-                      {this.props.accuracyCheckLabels.map((label, index) => {
-                        return (
-                          <tr>
-                            <td>{label}</td>
-                            <td>
-                              {this.props.accuracyCheckPredictedLabels[index]}
-                            </td>
-                          </tr>
-                        );
-                      })}
+                      <thead>
+                        <tr>
+                          <th>Expected</th>
+                          <th>Predicted</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {this.props.accuracyCheckLabels.map((label, index) => {
+                          return (
+                            <tr key={index}>
+                              <td>{label}</td>
+                              <td>
+                                {this.props.accuracyCheckPredictedLabels[index]}
+                              </td>
+                            </tr>
+                          );
+                        })}
+                      </tbody>
                     </table>
                   </div>
                   <h3>The calculated accuracy of this model is:</h3>

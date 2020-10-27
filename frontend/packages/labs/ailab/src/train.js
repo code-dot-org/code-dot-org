@@ -4,7 +4,7 @@ import SVMTrainer from "./trainers/SVMTrainer";
 import KNNTrainer from "./trainers/KNNTrainer";
 
 import { store } from "./index.js";
-import ColumnTypes, {
+import {
   getUniqueOptions,
   getCategoricalColumns,
   getSelectedCategoricalColumns,
@@ -14,11 +14,7 @@ import ColumnTypes, {
   setAccuracyCheckExamples,
   setAccuracyCheckLabels
 } from "./redux";
-
-export const MLTypes = {
-  CLASSIFICATION: "classification",
-  REGRESSION: "regression"
-};
+import { ColumnTypes, MLTypes } from "./constants.js";
 
 export const availableTrainers = {
   binarySvm: {

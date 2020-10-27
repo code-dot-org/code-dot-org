@@ -1,11 +1,11 @@
 import {
-  MLTypes,
   availableTrainers,
   getRegressionTrainers,
   getClassificationTrainers
 } from "./train.js";
-// Action types
+import { MLTypes, ColumnTypes } from "./constants.js";
 
+// Action types
 const RESET_STATE = "RESET_STATE";
 const SET_IMPORTED_DATA = "SET_IMPORTED_DATA";
 const SET_SELECTED_TRAINER = "SET_SELECTED_TRAINER";
@@ -24,7 +24,6 @@ const SET_TEST_DATA = "SET_TEST_DATA";
 const SET_PREDICTION = "SET_PREDICTION";
 
 // Action creators
-
 export function setImportedData(data) {
   return { type: SET_IMPORTED_DATA, data };
 }
@@ -120,7 +119,6 @@ const initialState = {
 };
 
 // Reducer
-
 export default function rootReducer(state = initialState, action) {
   if (action.type === SET_IMPORTED_DATA) {
     return {
@@ -353,9 +351,3 @@ export function getAccuracy(state) {
   }
   return ((numCorrect / numPredictedLabels) * 100).toFixed(2);
 }
-
-export const ColumnTypes = {
-  CATEGORICAL: "categorical",
-  CONTINUOUS: "continuous",
-  OTHER: "other"
-};
