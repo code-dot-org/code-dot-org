@@ -26,7 +26,7 @@ const styles = {
     flexDirection: 'column'
   },
   textInput: {
-    width: '100%'
+    width: '98%'
   },
   selectAndLabel: {
     display: 'flex',
