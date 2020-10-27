@@ -57,7 +57,8 @@ class LessonOverview extends Component {
       displayName: PropTypes.string.isRequired,
       overview: PropTypes.string.isRequired,
       purpose: PropTypes.string.isRequired,
-      preparation: PropTypes.string.isRequired
+      preparation: PropTypes.string.isRequired,
+      resources: PropTypes.object
     }).isRequired,
     activities: PropTypes.array,
 
@@ -70,6 +71,41 @@ class LessonOverview extends Component {
   linkWithQueryParams = link => {
     const queryParams = window.location.search || '';
     return link + queryParams;
+  };
+
+  normalizeUrl = url => {
+    const httpRegex = /https?:\/\//;
+    if (httpRegex.test(url)) {
+      return url;
+    } else {
+      return 'https://' + url;
+    }
+  };
+
+  compileResourceList = key => {
+    const {lesson} = this.props;
+    return (
+      <ul>
+        {lesson.resources[key].map(resource => (
+          <li key={resource.key}>
+            <a href={this.normalizeUrl(resource.url)} target="_blank">
+              {resource.name}
+            </a>
+            {resource.type && ` -  ${resource.type}`}
+            {resource.download_url && (
+              <span>
+                {' ('}
+                <a
+                  href={this.normalizeUrl(resource.download_url)}
+                  target="_blank"
+                >{`${i18n.download()}`}</a>
+                {')'}
+              </span>
+            )}
+          </li>
+        ))}
+      </ul>
+    );
   };
 
   render() {
@@ -119,6 +155,29 @@ class LessonOverview extends Component {
           <div style={styles.right}>
             <h2>{i18n.preparation()}</h2>
             <SafeMarkdown markdown={lesson.preparation} />
+            {lesson.resources && (
+              <div id="resource-section">
+                <h2>{i18n.links()}</h2>
+                {lesson.resources['Teacher'] && (
+                  <div>
+                    <h3>{i18n.forTheTeachers()}</h3>
+                    {this.compileResourceList('Teacher')}
+                  </div>
+                )}
+                {lesson.resources['Student'] && (
+                  <div>
+                    <h3>{i18n.forTheStudents()}</h3>
+                    {this.compileResourceList('Student')}
+                  </div>
+                )}
+                {lesson.resources['All'] && (
+                  <div>
+                    <h3>{i18n.forAll()}</h3>
+                    {this.compileResourceList('All')}
+                  </div>
+                )}
+              </div>
+            )}
           </div>
         </div>
 
