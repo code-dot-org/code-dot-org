@@ -7,7 +7,7 @@ import reducer, {
   initProgress,
   isPerfect,
   getPercentPerfect,
-  mergeProgress,
+  mergeProgressResults,
   mergePeerReviewProgress,
   disablePostMilestone,
   setIsHocScript,
@@ -216,7 +216,7 @@ describe('progressReduxTest', () => {
       );
 
       // Create a mergeProgress action with level progress, but no peer reviews
-      const action = mergeProgress({
+      const action = mergeProgressResults({
         // stage 2 level 2 is pass
         339: TestResults.ALL_PASS,
         // stage 2 level 3 is incomplete
@@ -255,7 +255,7 @@ describe('progressReduxTest', () => {
       };
 
       // update progress to perfect
-      const action = mergeProgress({341: TestResults.ALL_PASS});
+      const action = mergeProgressResults({341: TestResults.ALL_PASS});
       const nextState = reducer(state, action);
       assert.equal(nextState.levelProgress[341], TestResults.ALL_PASS);
     });
@@ -282,7 +282,7 @@ describe('progressReduxTest', () => {
       };
 
       // try to update progress to a worse result
-      const action = mergeProgress({
+      const action = mergeProgressResults({
         341: TestResults.MISSING_RECOMMENDED_BLOCK_UNFINISHED
       });
       const nextState = reducer(state, action);
@@ -617,7 +617,7 @@ describe('progressReduxTest', () => {
       );
 
       // merge some progress so that we have statuses
-      const action = mergeProgress({
+      const action = mergeProgressResults({
         // stage 2 level 2 is pass
         339: TestResults.ALL_PASS,
         // stage 2 level 3 is incomplete
@@ -628,6 +628,7 @@ describe('progressReduxTest', () => {
       const expected = [
         [
           {
+            id: 2106,
             status: 'not_tried',
             url:
               'http://localhost-studio.code.org:3000/s/course3/stage/1/puzzle/1',
@@ -646,6 +647,7 @@ describe('progressReduxTest', () => {
             sublevels: []
           },
           {
+            id: 323,
             status: 'not_tried',
             url:
               'http://localhost-studio.code.org:3000/s/course3/stage/1/puzzle/2',
@@ -664,6 +666,7 @@ describe('progressReduxTest', () => {
             sublevels: []
           },
           {
+            id: 322,
             status: 'not_tried',
             url:
               'http://localhost-studio.code.org:3000/s/course3/stage/1/puzzle/3',
@@ -684,6 +687,7 @@ describe('progressReduxTest', () => {
         ],
         [
           {
+            id: 330,
             status: 'not_tried',
             url:
               'http://localhost-studio.code.org:3000/s/course3/stage/2/puzzle/1',
@@ -702,6 +706,7 @@ describe('progressReduxTest', () => {
             sublevels: []
           },
           {
+            id: 339,
             status: 'perfect',
             url:
               'http://localhost-studio.code.org:3000/s/course3/stage/2/puzzle/2',
@@ -720,6 +725,7 @@ describe('progressReduxTest', () => {
             sublevels: []
           },
           {
+            id: 341,
             status: 'attempted',
             url:
               'http://localhost-studio.code.org:3000/s/course3/stage/2/puzzle/3',

@@ -58,18 +58,22 @@ const styles = {
  */
 class ProgressPill extends React.Component {
   static propTypes = {
-    levels: PropTypes.arrayOf(levelType),
+    level: levelType.isRequired,
+    levelStatus: PropTypes.string,
+    multilevel: PropTypes.bool,
     icon: PropTypes.string,
     text: PropTypes.string,
     tooltip: PropTypes.element,
     disabled: PropTypes.bool,
-    selectedSectionId: PropTypes.string,
+    selectedSectionId: PropTypes.number,
     progressStyle: PropTypes.bool
   };
 
   render() {
     const {
-      levels,
+      level,
+      levelStatus,
+      multilevel,
       icon,
       text,
       tooltip,
@@ -78,8 +82,7 @@ class ProgressPill extends React.Component {
       progressStyle
     } = this.props;
 
-    const multiLevelStep = levels.length > 1;
-    let url = multiLevelStep || disabled ? undefined : levels[0].url;
+    let url = multilevel || disabled ? undefined : level.url;
     if (url && selectedSectionId) {
       url += stringifyQueryParams({section_id: selectedSectionId});
     }
@@ -87,7 +90,7 @@ class ProgressPill extends React.Component {
     let style = {
       ...styles.levelPill,
       ...(url && hoverStyle),
-      ...(!multiLevelStep && levelProgressStyle(levels[0], false))
+      ...(!multilevel && levelProgressStyle(levelStatus, false))
     };
 
     // If we're passed a tooltip, we also need to reference it from our div
@@ -100,8 +103,7 @@ class ProgressPill extends React.Component {
     }
 
     // Only put the assessment icon on if its a single assessment level (not set)
-    const levelIsAssessment =
-      isLevelAssessment(levels[0]) && levels.length === 1;
+    const showAssessmentIcon = !multilevel && isLevelAssessment(level);
 
     const textStyle = progressStyle ? styles.textProgressStyle : styles.text;
 
@@ -125,7 +127,7 @@ class ProgressPill extends React.Component {
             </div>
           )}
           {tooltip}
-          {levelIsAssessment && <SmallAssessmentIcon />}
+          {showAssessmentIcon && <SmallAssessmentIcon />}
         </div>
       </a>
     );
