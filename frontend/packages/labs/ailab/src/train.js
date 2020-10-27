@@ -1,7 +1,8 @@
 /* Generic machine learning handlers that route to the selected trainer. */
 
-import SVMTrainer from "./SVMTrainer";
-import KNNTrainer from "./KNNTrainer";
+import SVMTrainer from "./trainers/SVMTrainer";
+import KNNTrainer from "./trainers/KNNTrainer";
+
 import { store } from "./index.js";
 import {
   getUniqueOptions,
@@ -9,22 +10,59 @@ import {
   getSelectedCategoricalColumns,
   setFeatureNumberKey,
   setTrainingExamples,
-  setTrainingLabels
+  setTrainingLabels,
+  setAccuracyCheckExamples,
+  setAccuracyCheckLabels
 } from "./redux";
+import { ColumnTypes, MLTypes } from "./constants.js";
 
 export const availableTrainers = {
-  binary_svm: {
+  binarySvm: {
     name: "Binary SVM",
     description:
-      "Uses the Support Vector Machine algorithm to classify an example as one of two options. Features can be categorical or continuous.",
-    mlType: "binary"
+      "Uses the Support Vector Machine algorithm to classify an example as one of two options.",
+    mlType: MLTypes.CLASSIFICATION,
+    binary: true,
+    supportedFeatureTypes: [ColumnTypes.CATEGORICAL, ColumnTypes.CONTINUOUS],
+    labelType: ColumnTypes.CATEGORICAL
   },
-  knn: {
-    name: "KNN",
+  knnClassify: {
+    name: "KNN Classifier",
     description:
-      "Uses the K-Nearest Neighbor algorithm to classify an example as one of N options.  Features can be categorical or continuous. K is currently set to 2, but this is customizable.",
-    mlType: "multi"
+      "Uses the K-Nearest Neighbor algorithm to classify an example as one of N options.",
+    mlType: MLTypes.CLASSIFICATION,
+    binary: false,
+    supportedFeatureTypes: [ColumnTypes.CATEGORICAL, ColumnTypes.CONTINUOUS],
+    labelType: ColumnTypes.CATEGORICAL
+  },
+  knnRegress: {
+    name: "KNN Regression",
+    description:
+      "Uses the K-Nearest Neighbor algorithm to predict a floating point label.",
+    mlType: MLTypes.REGRESSION,
+    binary: false,
+    supportedFeatureTypes: [ColumnTypes.CATEGORICAL, ColumnTypes.CONTINUOUS],
+    labelType: ColumnTypes.CONTINUOUS
   }
+};
+
+const filterTrainersByType = type => {
+  let trainersOfType = {};
+  const trainerKeys = Object.keys(availableTrainers).filter(
+    trainerKey => availableTrainers[trainerKey].mlType === type
+  );
+  trainerKeys.forEach(
+    trainerKey => (trainersOfType[trainerKey] = availableTrainers[trainerKey])
+  );
+  return trainersOfType;
+};
+
+export const getClassificationTrainers = () => {
+  return filterTrainersByType(MLTypes.CLASSIFICATION);
+};
+
+export const getRegressionTrainers = () => {
+  return filterTrainersByType(MLTypes.REGRESSION);
 };
 
 /* Builds a hash that maps a feature's categorical options to numbers because
@@ -114,23 +152,46 @@ const extractExamples = (state, row) => {
   state.selectedFeatures.forEach(feature =>
     exampleValues.push(convertValue(state, feature, row))
   );
-  return exampleValues.filter(label => label !== undefined && label !== "");
+  return exampleValues.filter(
+    label => label !== undefined && label !== "" && !isNaN(label)
+  );
 };
 
 const extractLabel = (state, row) => {
   return convertValue(state, state.labelColumn, row);
 };
 
+const getRandomInt = max => {
+  return Math.floor(Math.random() * Math.floor(max));
+};
+
 const prepareTrainingData = () => {
   const updatedState = store.getState();
   const trainingExamples = updatedState.data
     .map(row => extractExamples(updatedState, row))
-    .filter(example => example.length > 0);
+    .filter(example => example.length > 0 && example !== undefined);
   const trainingLabels = updatedState.data
     .map(row => extractLabel(updatedState, row))
-    .filter(label => label !== undefined && label !== "");
+    .filter(label => label !== undefined && label !== "" && !isNaN(label));
+  // Randomly select 10% of examples and corresponding labels from the training // set to reserve for a post-training accuracy calculation. The accuracy check
+  // examples and labels are excluded from the training set when the model is
+  // trained and saved to state separately to test the model's accuracy.
+  const accuracyCheckExamples = [];
+  const accuracyCheckLabels = [];
+  const numToReserve = parseInt(trainingExamples.length * 0.1);
+  let numReserved = 0;
+  while (numReserved < numToReserve) {
+    let randomIndex = getRandomInt(trainingExamples.length - 1);
+    accuracyCheckExamples.push(trainingExamples[randomIndex]);
+    trainingExamples.splice(randomIndex, 1);
+    accuracyCheckLabels.push(trainingLabels[randomIndex]);
+    trainingLabels.splice(randomIndex, 1);
+    numReserved++;
+  }
   store.dispatch(setTrainingExamples(trainingExamples));
   store.dispatch(setTrainingLabels(trainingLabels));
+  store.dispatch(setAccuracyCheckExamples(accuracyCheckExamples));
+  store.dispatch(setAccuracyCheckLabels(accuracyCheckLabels));
 };
 
 const prepareTestData = () => {
@@ -147,14 +208,15 @@ const init = () => {
   const state = store.getState();
   let trainer;
   switch (state.selectedTrainer) {
-    case "binary_svm":
+    case "binarySvm":
       trainer = new SVMTrainer();
       break;
-    case "knn":
+    case "knnClassify":
       trainer = new KNNTrainer();
       break;
-    default:
-      trainer = new SVMTrainer();
+    case "knnRegress":
+      trainer = new KNNTrainer();
+      break;
   }
   trainingState.trainer = trainer;
   buildOptionNumberKeysByFeature(state);

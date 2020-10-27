@@ -1,6 +1,20 @@
-import { availableTrainers } from "./train.js";
-// Action types
+import {
+  availableTrainers,
+  getRegressionTrainers,
+  getClassificationTrainers
+} from "./train.js";
 
+import {
+  minOneFeatureSelected,
+  oneLabelSelected,
+  uniqLabelFeaturesSelected,
+  trainerSelected,
+  compatibleLabelAndTrainer
+} from "./validate.js";
+
+import { MLTypes, ColumnTypes } from "./constants.js";
+
+// Action types
 const RESET_STATE = "RESET_STATE";
 const SET_IMPORTED_DATA = "SET_IMPORTED_DATA";
 const SET_SELECTED_TRAINER = "SET_SELECTED_TRAINER";
@@ -8,6 +22,10 @@ const SET_COLUMNS_BY_DATA_TYPE = "SET_COLUMNS_BY_DATA_TYPE";
 const SET_SELECTED_FEATURES = "SET_SELECTED_FEATURES";
 const SET_LABEL_COLUMN = "SET_LABEL_COLUMN";
 const SET_FEATURE_NUMBER_KEY = "SET_FEATURE_NUMBER_KEY";
+const SET_ACCURACY_CHECK_EXAMPLES = "SET_ACCURACY_CHECK_EXAMPLES";
+const SET_ACCURACY_CHECK_LABELS = "SET_ACCURACY_CHECK_LABELS";
+const SET_ACCURACY_CHECK_PREDICTED_LABELS =
+  "SET_ACCURACY_CHECK_PREDICTED_LABELS";
 const SET_TRAINING_EXAMPLES = "SET_TRAINING_EXAMPLES";
 const SET_TRAINING_LABELS = "SET_TRAINING_LABELS";
 const SET_SHOW_PREDICT = "SET_SHOW_PREDICT";
@@ -15,7 +33,6 @@ const SET_TEST_DATA = "SET_TEST_DATA";
 const SET_PREDICTION = "SET_PREDICTION";
 
 // Action creators
-
 export function setImportedData(data) {
   return { type: SET_IMPORTED_DATA, data };
 }
@@ -57,6 +74,18 @@ export function setFeatureNumberKey(featureNumberKey) {
   return { type: SET_FEATURE_NUMBER_KEY, featureNumberKey };
 }
 
+export function setAccuracyCheckExamples(accuracyCheckExamples) {
+  return { type: SET_ACCURACY_CHECK_EXAMPLES, accuracyCheckExamples };
+}
+
+export function setAccuracyCheckLabels(accuracyCheckLabels) {
+  return { type: SET_ACCURACY_CHECK_LABELS, accuracyCheckLabels };
+}
+
+export function setAccuracyCheckPredictedLabels(predictedLabels) {
+  return { type: SET_ACCURACY_CHECK_PREDICTED_LABELS, predictedLabels };
+}
+
 export function setTrainingExamples(trainingExamples) {
   return { type: SET_TRAINING_EXAMPLES, trainingExamples };
 }
@@ -90,13 +119,15 @@ const initialState = {
   featureNumberKey: {},
   trainingExamples: [],
   trainingLabels: [],
+  accuracyCheckExamples: [],
+  accuracyCheckLabels: [],
+  accuracyCheckPredictedLabels: [],
   showPredict: false,
   testData: {},
   prediction: {}
 };
 
 // Reducer
-
 export default function rootReducer(state = initialState, action) {
   if (action.type === SET_IMPORTED_DATA) {
     return {
@@ -147,6 +178,24 @@ export default function rootReducer(state = initialState, action) {
     return {
       ...state,
       trainingLabels: action.trainingLabels
+    };
+  }
+  if (action.type === SET_ACCURACY_CHECK_EXAMPLES) {
+    return {
+      ...state,
+      accuracyCheckExamples: action.accuracyCheckExamples
+    };
+  }
+  if (action.type === SET_ACCURACY_CHECK_LABELS) {
+    return {
+      ...state,
+      accuracyCheckLabels: action.accuracyCheckLabels
+    };
+  }
+  if (action.type === SET_ACCURACY_CHECK_PREDICTED_LABELS) {
+    return {
+      ...state,
+      accuracyCheckPredictedLabels: action.predictedLabels
     };
   }
   if (action.type === SET_SHOW_PREDICT) {
@@ -214,13 +263,34 @@ export function getSelectableFeatures(state) {
 }
 
 export function getSelectableLabels(state) {
-  const selectableLabels =
-    availableTrainers[state.selectedTrainer] &&
-    availableTrainers[state.selectedTrainer].mlType === "binary"
-      ? getCategoricalColumns(state).filter(
-          column => getUniqueOptions(state, column).length === 2
-        )
-      : getCategoricalColumns(state);
+  const eligibleColumns = getContinuousColumns(state).concat(
+    getCategoricalColumns(state)
+  );
+  let labelsRestrictedByTrainer;
+  switch (true) {
+    case availableTrainers[state.selectedTrainer] &&
+      availableTrainers[state.selectedTrainer].mlType ===
+        MLTypes.CLASSIFICATION &&
+      availableTrainers[state.selectedTrainer].binary:
+      labelsRestrictedByTrainer = getCategoricalColumns(state).filter(
+        column => getUniqueOptions(state, column).length === 2
+      );
+      break;
+    case availableTrainers[state.selectedTrainer] &&
+      availableTrainers[state.selectedTrainer].mlType ===
+        MLTypes.CLASSIFICATION:
+      labelsRestrictedByTrainer = getCategoricalColumns(state);
+      break;
+    case availableTrainers[state.selectedTrainer] &&
+      availableTrainers[state.selectedTrainer].mlType === MLTypes.REGRESSION:
+      labelsRestrictedByTrainer = getContinuousColumns(state);
+      break;
+    default:
+      labelsRestrictedByTrainer = eligibleColumns;
+  }
+  const selectableLabels = labelsRestrictedByTrainer.filter(
+    x => !state.selectedFeatures.includes(x)
+  );
   return selectableLabels;
 }
 
@@ -262,8 +332,67 @@ export function getConvertedPredictedLabel(state) {
   }
 }
 
-export const ColumnTypes = {
-  CATEGORICAL: "categorical",
-  CONTINUOUS: "continuous",
-  OTHER: "other"
-};
+export function getCompatibleTrainers(state) {
+  let compatibleTrainers;
+  switch (true) {
+    case state.columnsByDataType[state.labelColumn] === ColumnTypes.CATEGORICAL:
+      compatibleTrainers = getClassificationTrainers();
+      break;
+    case state.columnsByDataType[state.labelColumn] === ColumnTypes.CONTINUOUS:
+      compatibleTrainers = getRegressionTrainers();
+      break;
+    default:
+      compatibleTrainers = availableTrainers;
+  }
+  return compatibleTrainers;
+}
+
+export function getAccuracy(state) {
+  let numCorrect = 0;
+  const numPredictedLabels = state.accuracyCheckPredictedLabels.length;
+  for (let i = 0; i < numPredictedLabels; i++) {
+    if (
+      state.accuracyCheckLabels[i].toString() ===
+      state.accuracyCheckPredictedLabels[i].toString()
+    ) {
+      numCorrect++;
+    }
+  }
+  return ((numCorrect / numPredictedLabels) * 100).toFixed(2);
+}
+
+export function validationMessages(state) {
+  const validationMessages = [];
+  validationMessages.push({
+    readyToTrain: oneLabelSelected(state),
+    errorString: "Please designate one column as the label column.",
+    successString: "Label column has been selected."
+  });
+  validationMessages.push({
+    readyToTrain: minOneFeatureSelected(state),
+    errorString: "Please select at least one feature to train.",
+    successString: "At least one feature is selected."
+  });
+  validationMessages.push({
+    readyToTrain: uniqLabelFeaturesSelected(state),
+    errorString:
+      "A column can not be selected as a both a feature and a label.",
+    successString: "Label and feature(s) columns are unique."
+  });
+  validationMessages.push({
+    readyToTrain: trainerSelected(state),
+    errorString: "Please select a training algorithm.",
+    successString: "Training algorithm selected."
+  });
+  validationMessages.push({
+    readyToTrain: compatibleLabelAndTrainer(state),
+    errorString:
+      "The label datatype must be compatiable with the training algorithm.",
+    successString: "The label datatype and training algorithm are compatible."
+  });
+  return validationMessages;
+}
+
+export function readyToTrain(state) {
+  return uniqLabelFeaturesSelected(state) && compatibleLabelAndTrainer(state);
+}

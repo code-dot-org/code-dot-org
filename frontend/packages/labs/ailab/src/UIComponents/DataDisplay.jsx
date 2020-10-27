@@ -8,10 +8,10 @@ import {
   setShowPredict,
   setColumnsByDataType,
   getFeatures,
-  ColumnTypes,
   getSelectableFeatures,
   getSelectableLabels
 } from "../redux";
+import { ColumnTypes } from "../constants.js";
 
 class DataDisplay extends Component {
   static propTypes = {
@@ -143,11 +143,18 @@ class DataDisplay extends Component {
               <form>
                 <label>
                   <h2>Which column contains the labels for your dataset?</h2>
+                  <h3>Classification requires categorical labels.</h3>
                   <p>
-                    The model will be trained to predict which catgegory from
-                    the label column an example (a set of attributes or
-                    features) is most likely to belong to. Labels are
-                    categorical.
+                    If you select a categorical label, the model will be trained
+                    to predict which category from the label column an example
+                    (a set of attributes or features) is most likely to belong
+                    to.
+                  </p>
+                  <h3>Regression requires continuous labels.</h3>
+                  <p>
+                    If you select a continuous label, the model will be trained
+                    to predict a numerical value that is most likely to fit with
+                    an example's features or attributes.
                   </p>
                   <select
                     value={this.props.labelColumn}
