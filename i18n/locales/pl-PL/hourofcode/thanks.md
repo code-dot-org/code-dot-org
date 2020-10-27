@@ -6,7 +6,7 @@ title: Dziękujemy za rejestrację jako organizator Godziny Kodowania!
 
 <br /> ** Godzina Kodowania odbędzie się {{campaign_date / full}} Będziemy informować o nowych samouczkach i aktualizacjach, gdy tylko się pojawią. Co możesz zrobić w międzyczasie? **
 
-W ramach specjalnych podziękowań dla organizatorów "Godziny kodowania" mamy nowy plakat z Malalą, Stephenem Curry, Shakirą i innymi sławami, które można zamówić na stronie [ z rabatem 50% od spółki Amazon](https://www.amazon.com/promocode/A3QAYNZUZTSSNQ). W tym roku, każdy zestaw zawiera 6 plakatów i 126 naklejek "I did the Hour of Code" ["Zaliczyłem <<Godzinę kodowania>>]. Wraz z rabatem otrzymasz ją za mniej niż koszt wytworzenia. Zapasy są ograniczone zatem zamów swoje plakaty szybko. Jeśli przebywasz poza terytorium Stanów Zjednoczonych możesz [pobrać i wydrukować wszystkie plakaty]({{ promote/promote_posters_url }}).
+W ramach specjalnych podziękowań dla organizatorów "Godziny kodowania" mamy nowy plakat z Malalą, Stephenem Curry, Shakirą i innymi sławami, które można zamówić na stronie [ z rabatem 50% od spółki Amazon](https://www.amazon.com/promocode/A3QAYNZUZTSSNQ). W tym roku, każdy zestaw zawiera 6 plakatów i 126 naklejek "I did the Hour of Code" ["Zaliczyłem Godzinę kodowania]. Wraz z rabatem otrzymasz ją za mniej niż koszt wytworzenia. Zapasy są ograniczone zatem zamów swoje plakaty szybko. Jeśli przebywasz poza terytorium Stanów Zjednoczonych możesz [pobrać i wydrukować wszystkie plakaty]({{ promote/promote_posters_url }}).
 
 ## Rozpowszechniaj informacje w swojej szkole i pośród znajomych
 

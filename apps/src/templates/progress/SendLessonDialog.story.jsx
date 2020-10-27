@@ -9,7 +9,7 @@ export default storybook => {
       story: () => {
         return (
           <ExampleDialogButton>
-            <SendLessonDialog />
+            <SendLessonDialog lessonUrl="https://studio.code.org/s/coursee-2020/stage/2/puzzle/1" />
           </ExampleDialogButton>
         );
       }
@@ -19,7 +19,10 @@ export default storybook => {
       story: () => {
         return (
           <ExampleDialogButton>
-            <SendLessonDialog showGoogleButton />
+            <SendLessonDialog
+              lessonUrl="https://studio.code.org/s/coursee-2020/stage/2/puzzle/1"
+              showGoogleButton
+            />
           </ExampleDialogButton>
         );
       }
