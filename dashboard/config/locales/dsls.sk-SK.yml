@@ -2463,7 +2463,7 @@ sk-SK:
             len ak je pod oblakom kvet.
         questions:
         - text: Tento oblak zacláňa vo výhľade. Môže pod ním byť kvet. Ak je pod oblakom
-            kvet, včela pozberá nektár. Ak tam kvet nie je, včela by nemala robiť
+            kvet, včela pozbiera nektár. Ak tam kvet nie je, včela by nemala robiť
             nič. Dobre si prezri tento kód.  Čo myslíš, že sa stane, keď stlačíš "Spustiť"?
       courseD_multi_bee_conditionals1_predict1_2018:
         answers:
@@ -2484,7 +2484,7 @@ sk-SK:
             len ak je pod oblakom kvet.
         questions:
         - text: Tento oblak zacláňa vo výhľade. Môže pod ním byť kvet. Ak je pod oblakom
-            kvet, včela pozberá nektár. Ak tam kvet nie je, včela by nemala robiť
+            kvet, včela pozbiera nektár. Ak tam kvet nie je, včela by nemala robiť
             nič. Dobre si prezri tento kód.  Čo myslíš, že sa stane, keď stlačíš "Spustiť"?
       courseD_multi_bee_conditionals1_predict1_2018_2019:
         answers:
@@ -2505,7 +2505,7 @@ sk-SK:
             len ak je pod oblakom kvet.
         questions:
         - text: Tento oblak zacláňa vo výhľade. Môže pod ním byť kvet. Ak je pod oblakom
-            kvet, včela pozberá nektár. Ak tam kvet nie je, včela by nemala robiť
+            kvet, včela pozbiera nektár. Ak tam kvet nie je, včela by nemala robiť
             nič. Dobre si prezri tento kód.  Čo myslíš, že sa stane, keď stlačíš "Spustiť"?
       courseD_multi_bee_conditionals1_predict1_2018_2019_2020:
         answers:
@@ -2526,7 +2526,7 @@ sk-SK:
             len ak je pod oblakom kvet.
         questions:
         - text: Tento oblak zacláňa vo výhľade. Môže pod ním byť kvet. Ak je pod oblakom
-            kvet, včela pozberá nektár. Ak tam kvet nie je, včela by nemala robiť
+            kvet, včela pozbiera nektár. Ak tam kvet nie je, včela by nemala robiť
             nič. Dobre si prezri tento kód.  Čo myslíš, že sa stane, keď stlačíš "Spustiť"?
       courseD_multi_bee_conditionals1_predict1_copy:
         answers:
@@ -2587,18 +2587,17 @@ sk-SK:
             *jeden* kvet.'
       courseD_multi_bee_conditionals7_predict2_2018_2019:
         answers:
-        - text: '"Včela dostane nektár pri každej kvetine a pri každom plástve vytvorí
-            med."'
+        - text: Včela získa nektár pri každom kvete a pri každom pláste vyrobí med.
           correct: true
           feedback: Správne!
         - text: Včela sa pokúsi zobrať nektár z kvetu aj z plástu.
-          feedback: Nesprávne. Blok `ak na kvete` umožní včele zobrať nektár z každého
+          feedback: Nesprávne. Blok `ak na kvete` umožní včele získať nektár z každého
             kvetu a vyrobiť med na každom pláste.
         - text: Včela sa pokúsi vyrobiť med na kvete aj na pláste.
-          feedback: Nesprávne. Nesprávne. Blok `ak na kvete` umožní včele zobrať nektár
+          feedback: Nesprávne. Nesprávne. Blok `ak na kvete` umožní včele získať nektár
             z každého kvetu a vyrobiť med na každom pláste.
         - text: Neviem.
-          feedback: Blok `ak na kvete` umožní včele zobrať nektár z každého kvetu
+          feedback: Blok `ak na kvete` umožní včele získať nektár z každého kvetu
             a vyrobiť med na každom pláste.
         questions:
         - text: '"Pozri si pozorne tento kód.  Čo myslíš, že sa stane, keď stlačíš
@@ -2606,18 +2605,17 @@ sk-SK:
             *jeden* kvet."'
       courseD_multi_bee_conditionals7_predict2_2018_2019_2020:
         answers:
-        - text: '"Včela dostane nektár pri každej kvetine a pri každom plástve vytvorí
-            med."'
+        - text: Včela získa nektár pri každom kvete a pri každom pláste vyrobí med.
           correct: true
           feedback: Správne!
         - text: Včela sa pokúsi zobrať nektár z kvetu aj z plástu.
-          feedback: Nesprávne. Blok `ak na kvete` umožní včele zobrať nektár z každého
+          feedback: Nesprávne. Blok `ak na kvete` umožní včele získať nektár z každého
             kvetu a vyrobiť med na každom pláste.
         - text: Včela sa pokúsi vyrobiť med na kvete aj na pláste.
-          feedback: Nesprávne. Nesprávne. Blok `ak na kvete` umožní včele zobrať nektár
+          feedback: Nesprávne. Nesprávne. Blok `ak na kvete` umožní včele získať nektár
             z každého kvetu a vyrobiť med na každom pláste.
         - text: Neviem.
-          feedback: Blok `ak na kvete` umožní včele zobrať nektár z každého kvetu
+          feedback: Blok `ak na kvete` umožní včele získať nektár z každého kvetu
             a vyrobiť med na každom pláste.
         questions:
         - text: '"Pozri si pozorne tento kód.  Čo myslíš, že sa stane, keď stlačíš
@@ -2694,10 +2692,16 @@ sk-SK:
       courseD_multi_bee_nestedLoops9_predict2:
         answers:
         - text: '4'
+          feedback: Nesprávne. Včela získa 2 nektáre v cykle posuň sa dopredu, potom
+            2 nektáre v cykle posuň sa dole. To všetko je vnútri iného cyklu, ktorý
+            sa zopakuje dvakrát. 4 krát 2 je 8!
         - text: '8'
           correct: true
           feedback: Správne!
         - text: '12'
+          feedback: Nesprávne. Včela získa 2 nektáre v cykle posuň sa dopredu, potom
+            2 nektáre v cykle posuň sa dole. To všetko je vnútri iného cyklu, ktorý
+            sa zopakuje dvakrát. 4 krát 2 je 8!
         - text: Neviem.
         questions:
         - text: Pozri sa pozorne na tento kód. Koľko medu včela vyrobí, keď klikneš
@@ -2705,10 +2709,16 @@ sk-SK:
       courseD_multi_bee_nestedLoops9_predict2_2018:
         answers:
         - text: '4'
+          feedback: Nesprávne. Včela získa 2 nektáre v cykle posuň sa dopredu, potom
+            2 nektáre v cykle posuň sa dole. To všetko je vnútri iného cyklu, ktorý
+            sa zopakuje dvakrát. 4 krát 2 je 8!
         - text: '8'
           correct: true
           feedback: Správne!
         - text: '12'
+          feedback: Nesprávne. Včela získa 2 nektáre v cykle posuň sa dopredu, potom
+            2 nektáre v cykle posuň sa dole. To všetko je vnútri iného cyklu, ktorý
+            sa zopakuje dvakrát. 4 krát 2 je 8!
         - text: Neviem.
         questions:
         - text: Pozri sa pozorne na tento kód. Koľko medu včela vyrobí, keď klikneš
@@ -2716,10 +2726,16 @@ sk-SK:
       courseD_multi_bee_nestedLoops9_predict2_2018_2019:
         answers:
         - text: '4'
+          feedback: Nesprávne. Včela získa 2 nektáre v cykle posuň sa dopredu, potom
+            2 nektáre v cykle posuň sa dole. To všetko je vnútri iného cyklu, ktorý
+            sa zopakuje dvakrát. 4 krát 2 je 8!
         - text: '8'
           correct: true
           feedback: Správne!
         - text: '12'
+          feedback: Nesprávne. Včela získa 2 nektáre v cykle posuň sa dopredu, potom
+            2 nektáre v cykle posuň sa dole. To všetko je vnútri iného cyklu, ktorý
+            sa zopakuje dvakrát. 4 krát 2 je 8!
         - text: Neviem.
         questions:
         - text: Pozri sa pozorne na tento kód. Koľko medu včela vyrobí, keď klikneš
@@ -2727,10 +2743,16 @@ sk-SK:
       courseD_multi_bee_nestedLoops9_predict2_2018_2019_2020:
         answers:
         - text: '4'
+          feedback: Nesprávne. Včela získa 2 nektáre v cykle posuň sa dopredu, potom
+            2 nektáre v cykle posuň sa dole. To všetko je vnútri iného cyklu, ktorý
+            sa zopakuje dvakrát. 4 krát 2 je 8!
         - text: '8'
           correct: true
           feedback: Správne!
         - text: '12'
+          feedback: Nesprávne. Včela získa 2 nektáre v cykle posuň sa dopredu, potom
+            2 nektáre v cykle posuň sa dole. To všetko je vnútri iného cyklu, ktorý
+            sa zopakuje dvakrát. 4 krát 2 je 8!
         - text: Neviem.
         questions:
         - text: Pozri sa pozorne na tento kód. Koľko medu včela vyrobí, keď klikneš
@@ -2935,8 +2957,8 @@ sk-SK:
         answers:
         - correct: true
           feedback: Správne!
-        - text: '"Zombík sa dostane k slnečnici."'
-        - text: Zombík sa na prvej ceste otočí doprava a navždy bude chodiť dokola.
+        - text: Zombík sa dostane k slnečnici.
+        - text: Zombík sa na prvej ceste otočí doprava a donekonečna bude chodiť dokola.
         - text: Neviem.
         questions:
         - text: Pozorne si prezri tento kód.  Čo sa stane, keď klikneš "Spustiť"?
@@ -2945,10 +2967,10 @@ sk-SK:
         - text: Zombík minie správnu cestu a bude chodiť donekonečna hore dole.
           correct: true
           feedback: Správne!
-        - text: '"Zombík sa dostane k slnečnici."'
+        - text: Zombík sa dostane k slnečnici.
           feedback: Nesprávne. Zombík minie správnu cestu a bude chodiť donekonečna
             hore dole.
-        - text: Zombík sa na prvej ceste otočí doprava a navždy bude chodiť dokola.
+        - text: Zombík sa na prvej ceste otočí doprava a donekonečna bude chodiť dokola.
           feedback: Nesprávne. Zombík minie správnu cestu a bude chodiť donekonečna
             hore dole.
         - text: Neviem.
@@ -2961,10 +2983,10 @@ sk-SK:
         - text: Zombík minie správnu cestu a bude chodiť donekonečna hore dole.
           correct: true
           feedback: Správne!
-        - text: '"Zombík sa dostane k slnečnici."'
+        - text: Zombík sa dostane k slnečnici.
           feedback: Nesprávne. Zombík minie správnu cestu a bude chodiť donekonečna
             hore dole.
-        - text: Zombík sa na prvej ceste otočí doprava a navždy bude chodiť dokola.
+        - text: Zombík sa na prvej ceste otočí doprava a donekonečna bude chodiť dokola.
           feedback: Nesprávne. Zombík minie správnu cestu a bude chodiť donekonečna
             hore dole.
         - text: Neviem.
@@ -2977,10 +2999,10 @@ sk-SK:
         - text: Zombík minie správnu cestu a bude chodiť donekonečna hore dole.
           correct: true
           feedback: Správne!
-        - text: '"Zombík sa dostane k slnečnici."'
+        - text: Zombík sa dostane k slnečnici.
           feedback: Nesprávne. Zombík minie správnu cestu a bude chodiť donekonečna
             hore dole.
-        - text: Zombík sa na prvej ceste otočí doprava a navždy bude chodiť dokola.
+        - text: Zombík sa na prvej ceste otočí doprava a donekonečna bude chodiť dokola.
           feedback: Nesprávne. Zombík minie správnu cestu a bude chodiť donekonečna
             hore dole.
         - text: Neviem.
@@ -2995,6 +3017,9 @@ sk-SK:
           correct: true
           feedback: Správne!
         - text: Vták sa posunie dopredu a narazí do TNT.
+          feedback: Nesprávne. Tento kód prinúti vtáčika posunúť sa dopredu, pokiaľ
+            je cesta bezpečná, a potom sa otočí vľavo. Stále to robí, až kým nedosiahne
+            prasiatko!
         - text: Neviem.
           feedback: Tento kód bude vtáka posúvať dopredu tak dlho, kým je pred ním
             cesta a potom ho otočí doľava. Toto bude robiť, až kým sa nedostane ku
@@ -3009,6 +3034,9 @@ sk-SK:
           correct: true
           feedback: Správne!
         - text: Vták sa posunie dopredu a narazí do TNT.
+          feedback: Nesprávne. Tento kód prinúti vtáčika posunúť sa dopredu, pokiaľ
+            je cesta bezpečná, a potom sa otočí vľavo. Stále to robí, až kým nedosiahne
+            prasiatko!
         - text: Neviem.
           feedback: Tento kód bude vtáka posúvať dopredu tak dlho, kým je pred ním
             cesta a potom ho otočí doľava. Toto bude robiť, až kým sa nedostane ku
@@ -3023,6 +3051,9 @@ sk-SK:
           correct: true
           feedback: Správne!
         - text: Vták sa posunie dopredu a narazí do TNT.
+          feedback: Nesprávne. Tento kód prinúti vtáčika posunúť sa dopredu, pokiaľ
+            je cesta bezpečná, a potom sa otočí vľavo. Stále to robí, až kým nedosiahne
+            prasiatko!
         - text: Neviem.
           feedback: Tento kód bude vtáka posúvať dopredu tak dlho, kým je pred ním
             cesta a potom ho otočí doľava. Toto bude robiť, až kým sa nedostane ku
@@ -3037,6 +3068,9 @@ sk-SK:
           correct: true
           feedback: Správne!
         - text: Vták sa posunie dopredu a narazí do TNT.
+          feedback: Nesprávne. Tento kód prinúti vtáčika posunúť sa dopredu, pokiaľ
+            je cesta bezpečná, a potom sa otočí vľavo. Stále to robí, až kým nedosiahne
+            prasiatko!
         - text: Neviem.
           feedback: Tento kód bude vtáka posúvať dopredu tak dlho, kým je pred ním
             cesta a potom ho otočí doľava. Toto bude robiť, až kým sa nedostane ku
@@ -4140,12 +4174,12 @@ sk-SK:
         markdown: |-
           # Podmienky s kartami
 
-          Zahraj si kartovú hru a vytvor pravidlá ako "ak si potiahnem červenú kartu, dostanem bod" a "ak si potiahnem čiernu kartu, ty dostaneš bod".
+          Zahraj si kartovú hru a vytvor pravidlá ako napr. "ak si potiahnem červenú kartu, dostanem bod" a "ak si potiahnem čiernu kartu, dostaneš bod ty".
       ConditionalsWithCards-Unplugged_2020:
         markdown: |-
           # Podmienky s kartami
 
-          Zahraj si kartovú hru a vytvor pravidlá ako "ak si potiahnem červenú kartu, dostanem bod" a "ak si potiahnem čiernu kartu, ty dostaneš bod".
+          Zahraj si kartovú hru a vytvor pravidlá ako napr. "ak si potiahnem červenú kartu, dostanem bod" a "ak si potiahnem čiernu kartu, dostaneš bod ty".
       GraphPaperProgramming-Unplugged:
         markdown: |-
           # Programovanie na štvorčekovom papieri
