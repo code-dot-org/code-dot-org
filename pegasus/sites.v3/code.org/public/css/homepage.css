@@ -150,38 +150,33 @@ body.modal-open .supreme-container{
   font-family: 'Gotham 5r', sans-serif !important;
 }
 
+.codebytes-img {
+  width: 750px;
+  max-width: 90%;
+  margin: auto;
+  display: block;
+}
+
+#homepage .hero-message-codebytes {
+  color: #4d575f;
+  clear: both;
+}
+
 @media screen and (min-width: 601px) {
   #homepage .hero-message-codebytes {
     margin: 15px auto 15px auto;
-    color: #4d575f;
     font-size: 24px;
     line-height: 32px;
     width: 750px;
     max-width: 90%;
-    clear: both;
-  }
-
-  .codebytes-img {
-    width: 750px;
-    max-width: 90%;
-    margin: auto;
-    display: block;
   }
 }
 
 @media screen and (min-width: 0px) and (max-width: 600px) {
   #homepage .hero-message-codebytes {
     margin: 0 auto 30px auto;
-    color: #4d575f;
     font-size: 16px;
     line-height: 24px;
-    clear: both;
-  }
-
-  .codebytes-img {
-    max-width: 90%;
-    margin: 0px auto 0px auto;
-    display: block;
   }
 }
 
