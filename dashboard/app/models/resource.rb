@@ -56,9 +56,10 @@ class Resource < ApplicationRecord
     potential_clashes = potential_clashes.where("resources.key like '#{key_prefix}%'").pluck(:key)
     return key_prefix unless potential_clashes.include?(key_prefix)
     key_suffix_num = 1
-    while potential_clashes.include?(key_prefix)
-      key_prefix = "#{key_prefix}_#{key_suffix_num}"
+    new_key = key_prefix
+    while potential_clashes.include?(new_key)
+      new_key = "#{key_prefix}_#{key_suffix_num}"
     end
-    key_prefix
+    new_key
   end
 end
