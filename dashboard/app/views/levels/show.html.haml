@@ -71,3 +71,20 @@
 
 - if @script && current_user.try(:teacher?) && !@script.professional_learning_course?
   = render partial: 'levels/teacher_panel'
+
+%h1 PWA goes here
+:javascript
+  if ("serviceWorker" in navigator) {
+    console.log("=============Found serviceWorker=============");
+
+    navigator.serviceWorker.register("/sw.js")
+      .then(registration => {
+        console.log("=============SW is registered, scope is", registration.scope);
+        console.log(registration);
+      })
+      .catch(
+        error => console.error(error)
+      );
+  } else {
+    console.log("=============No serviceWorker=============");
+  }
