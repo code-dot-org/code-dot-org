@@ -48,10 +48,6 @@ export default class TimeSelect extends React.Component {
     }
   };
 
-  handleSelect = time => {
-    this.props.onChange(time);
-  };
-
   render() {
     return (
       <InputGroup>
