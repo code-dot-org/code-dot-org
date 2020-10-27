@@ -56,6 +56,7 @@ class Foorm::FormTest < ActiveSupport::TestCase
     submission = submission_workshop_metadata.foorm_submission
 
     other_headers = {
+      'created_at' => 'created_at',
       'user_id' => 'user_id',
       'pd_workshop_id' => 'pd_workshop_id',
       'pd_session_id' => 'pd_session_id'
@@ -91,6 +92,7 @@ class Foorm::FormTest < ActiveSupport::TestCase
     general_submission = general_submission_workshop_metadata.foorm_submission
 
     other_general_headers = {
+      'created_at' => 'created_at',
       'user_id' => 'user_id',
       'pd_workshop_id' => 'pd_workshop_id',
       'pd_session_id' => 'pd_session_id'
@@ -98,7 +100,7 @@ class Foorm::FormTest < ActiveSupport::TestCase
 
     expected_headers = other_general_headers.
       merge(form.readable_questions[:general]).
-      merge(form.readable_questions_with_facilitator_number(1))
+      merge(form.readable_questions_with_facilitator_number(form.readable_questions, 1))
 
     expected_response = general_submission.formatted_answers
 
@@ -117,6 +119,7 @@ class Foorm::FormTest < ActiveSupport::TestCase
     facilitator_submission = facilitator_submission_workshop_metadata.foorm_submission
 
     other_general_headers = {
+      'created_at' => 'created_at',
       'user_id' => 'user_id',
       'pd_workshop_id' => 'pd_workshop_id',
       'pd_session_id' => 'pd_session_id'
@@ -130,7 +133,7 @@ class Foorm::FormTest < ActiveSupport::TestCase
     expected_headers = other_general_headers.
       merge(form.readable_questions[:general]).
       merge(other_facilitator_headers).
-      merge(form.readable_questions_with_facilitator_number(1))
+      merge(form.readable_questions_with_facilitator_number(form.readable_questions, 1))
 
     expected_response = general_submission.formatted_answers.
       merge(facilitator_submission.formatted_answers_with_facilitator_number(1))
@@ -152,6 +155,7 @@ class Foorm::FormTest < ActiveSupport::TestCase
     general_submission_2 = general_submission_workshop_metadata_2.foorm_submission
 
     other_general_headers = {
+      'created_at' => 'created_at',
       'user_id' => 'user_id',
       'pd_workshop_id' => 'pd_workshop_id',
       'pd_session_id' => 'pd_session_id'
@@ -165,7 +169,7 @@ class Foorm::FormTest < ActiveSupport::TestCase
     expected_headers = other_general_headers.
       merge(form.readable_questions[:general]).
       merge(other_facilitator_headers).
-      merge(form.readable_questions_with_facilitator_number(1))
+      merge(form.readable_questions_with_facilitator_number(form.readable_questions, 1))
 
     expected_response_1 = general_submission_1.formatted_answers.
       merge(facilitator_submission_1.formatted_answers_with_facilitator_number(1))
@@ -195,6 +199,7 @@ class Foorm::FormTest < ActiveSupport::TestCase
     facilitator_submission_1 = facilitator_submission_workshop_metadata_1.foorm_submission
 
     other_general_headers = {
+      'created_at' => 'created_at',
       'user_id' => 'user_id',
       'pd_workshop_id' => 'pd_workshop_id',
       'pd_session_id' => 'pd_session_id'
@@ -208,7 +213,7 @@ class Foorm::FormTest < ActiveSupport::TestCase
     expected_headers = other_general_headers.
       merge(form.readable_questions[:general]).
       merge(other_facilitator_headers).
-      merge(form.readable_questions_with_facilitator_number(1))
+      merge(form.readable_questions_with_facilitator_number(form.readable_questions, 1))
 
     expected_response_1 = general_submission_1.formatted_answers.
       merge(facilitator_submission_1.formatted_answers_with_facilitator_number(1))
@@ -237,6 +242,7 @@ class Foorm::FormTest < ActiveSupport::TestCase
     other_submission = other_form_workshop_metadata.foorm_submission
 
     other_general_headers = {
+      'created_at' => 'created_at',
       'user_id' => 'user_id',
       'pd_workshop_id' => 'pd_workshop_id',
       'pd_session_id' => 'pd_session_id'
@@ -250,7 +256,7 @@ class Foorm::FormTest < ActiveSupport::TestCase
     expected_headers = other_general_headers.
       merge(form.readable_questions[:general]).
       merge(other_facilitator_headers).
-      merge(form.readable_questions_with_facilitator_number(1))
+      merge(form.readable_questions_with_facilitator_number(form.readable_questions, 1))
 
     expected_response_1 = general_submission_1.formatted_answers.
       merge(facilitator_submission_1.formatted_answers_with_facilitator_number(1))
