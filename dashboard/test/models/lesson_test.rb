@@ -475,6 +475,14 @@ class LessonTest < ActiveSupport::TestCase
     end
   end
 
+  test 'verified teacher resources are only return if user is verified' do
+    lesson = create :lesson
+    create :resource, name: 'teacher resource', audience: 'Teacher', lessons: [lesson]
+    create :resource, name: 'verified teacher resource', audience: 'Verified Teacher', lessons: [lesson]
+    assert_equal 2, lesson.resources_for_lesson_plan(true)['Teacher'].count
+    assert_equal 1, lesson.resources_for_lesson_plan(false)['Teacher'].count
+  end
+
   def create_swapped_lockable_lesson
     script = create :script
     level1 = create :level_group, name: 'level1', title: 'title1', submittable: true
