@@ -1,5 +1,4 @@
 @no_mobile
-@skip
 Feature: Using the Script Edit Page
 
 Scenario: View the script edit page
