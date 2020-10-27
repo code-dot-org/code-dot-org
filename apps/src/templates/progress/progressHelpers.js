@@ -2,6 +2,12 @@ import {fullyLockedStageMapping} from '@cdo/apps/code-studio/stageLockRedux';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {isStageHiddenForSection} from '@cdo/apps/code-studio/hiddenStageRedux';
 import {LevelStatus, LevelKind} from '@cdo/apps/util/sharedConstants';
+import {TestResults} from '@cdo/apps/constants';
+import {
+  activityCssClass,
+  mergeActivityResult
+} from '@cdo/apps/code-studio/activityUtils';
+import _ from 'lodash';
 
 /**
  * This is conceptually similar to being a selector, except that it operates on
@@ -16,6 +22,8 @@ import {LevelStatus, LevelKind} from '@cdo/apps/util/sharedConstants';
 export function lessonIsVisible(lesson, state, viewAs) {
   if (!viewAs) {
     throw new Error('missing param viewAs in lessonIsVisible');
+  } else if (viewAs === ViewType.Teacher) {
+    return true;
   }
 
   // Don't show stage if not authorized to see lockable
@@ -31,7 +39,7 @@ export function lessonIsVisible(lesson, state, viewAs) {
     sectionId,
     lesson.id
   );
-  return !isHidden || viewAs === ViewType.Teacher;
+  return !isHidden;
 }
 
 /**
@@ -55,7 +63,7 @@ export function lessonIsLockedForAllStudents(lessonId, state) {
  * @returns {boolean} True if we should consider the stage to be locked for the
  *   current user.
  */
-export function stageLocked(levels) {
+export function stageLocked(levels, studentProgress) {
   // For lockable stages, there is a requirement that they have exactly one LevelGroup,
   // and that it be the last level in the stage. Because LevelGroup's can have
   // multiple "pages", and single LevelGroup might appear as multiple levels/bubbles
@@ -64,9 +72,13 @@ export function stageLocked(levels) {
   // Given this, we should be able to look at the last level in our collection
   // to determine whether the LG (and thus the stage) should be considered locked.
   const level = levels[levels.length - 1];
+  const progress = studentProgress[level.id];
+  if (!progress) {
+    return false;
+  }
   return (
-    level.status === LevelStatus.locked ||
-    (level.kind === 'assessment' && level.status === 'submitted')
+    progress.status === LevelStatus.locked ||
+    (level.kind === 'assessment' && progress.status === 'submitted')
   );
 }
 
@@ -119,57 +131,106 @@ export function stageIsAllAssessment(levels) {
 
 /**
  * Summarizes stage progress data.
- * @param {[]} levelsWithStatus An array of objects each representing
- * students progress in a level
+ * @param {[]} studentProgress An object keyed by level id containing objects
+ * representing the student's progress in that level
+ * @param {[]} stageLevels An array of the levels in a stage
  * @returns {object} An object with a total count of levels in each of the
  * following buckets: total, completed, imperfect, incomplete, attempted.
  */
-export function summarizeProgressInStage(levelsWithStatus) {
+export function summarizeProgressInStage(studentProgress, stageLevels) {
   // Filter any bonus levels as they do not count toward progress.
-  levelsWithStatus = levelsWithStatus.filter(level => !level.bonus);
+  stageLevels = stageLevels.filter(level => !level.bonus);
 
   // Get counts of statuses
   let statusCounts = {
-    total: levelsWithStatus.length,
+    total: 0,
     completed: 0,
     imperfect: 0,
     incomplete: 0,
     attempted: 0
   };
-  for (let i = 0; i < levelsWithStatus.length; i++) {
-    const status = levelsWithStatus[i].status;
-    switch (status) {
+
+  stageLevels.forEach(level => {
+    const levelProgress = studentProgress[level.id];
+    if (!levelProgress) {
+      return;
+    }
+    statusCounts.total++;
+    switch (levelProgress.status) {
       case LevelStatus.perfect:
       case LevelStatus.submitted:
       case LevelStatus.free_play_complete:
       case LevelStatus.completed_assessment:
       case LevelStatus.readonly:
-        statusCounts.completed = statusCounts.completed + 1;
+        statusCounts.completed++;
         break;
       case LevelStatus.not_tried:
-        statusCounts.incomplete = statusCounts.incomplete + 1;
+        statusCounts.incomplete++;
         break;
       case LevelStatus.attempted:
-        statusCounts.incomplete = statusCounts.incomplete + 1;
-        statusCounts.attempted = statusCounts.attempted + 1;
+        statusCounts.incomplete++;
+        statusCounts.attempted++;
         break;
       case LevelStatus.passed:
-        statusCounts.imperfect = statusCounts.imperfect + 1;
+        statusCounts.imperfect++;
         break;
       // All others are assumed to be not tried
       default:
-        statusCounts.incomplete = statusCounts.incomplete + 1;
+        statusCounts.incomplete++;
     }
-  }
+  });
   return statusCounts;
 }
+
+/**
+ * Given a set of levels, groups them in sets of progressions, where each
+ * progression is a set of adjacent levels sharing the same progression name
+ * Any given level's progression name is determined by first looking to see if
+ * the server provided us one as level.progression, otherwise we fall back to
+ * just level.name
+ * @param {Level[]} levels
+ * @returns {object[]} An array of progressions, where each consists of a name,
+ *   the position of the progression in the input array, and the set of levels
+ *   in the progression
+ */
+export const progressionsFromLevels = levels => {
+  const progressions = [];
+  if (levels.length === 0) {
+    return progressions;
+  }
+  let currentProgression = {
+    start: 0,
+    name: levels[0].progression || levels[0].name,
+    displayName: levels[0].progressionDisplayName || levels[0].name,
+    levels: [levels[0]]
+  };
+
+  levels.slice(1).forEach((level, index) => {
+    const progressionName = level.progression || level.name;
+    if (progressionName === currentProgression.name) {
+      currentProgression.levels.push(level);
+    } else {
+      progressions.push(currentProgression);
+      currentProgression = {
+        // + 1 because we sliced off the first element
+        start: index + 1,
+        name: level.progression || level.name,
+        displayName: level.progressionDisplayName || level.name,
+        levels: [level]
+      };
+    }
+  });
+  progressions.push(currentProgression);
+  return progressions;
+};
 
 /**
  * The level object passed down to use via the server (and stored in stage.stages.levels)
  * contains more data than we need. This filters to the parts our views care about.
  */
-export const processedLevel = level => {
+export const processedLevel = (level, isSublevel = false) => {
   return {
+    id: isSublevel ? level.level_id : level.activeId,
     url: level.url,
     name: level.name,
     progression: level.progression,
@@ -180,6 +241,176 @@ export const processedLevel = level => {
     levelNumber: level.kind === LevelKind.unplugged ? undefined : level.title,
     isConceptLevel: level.is_concept_level,
     bonus: level.bonus,
-    sublevels: level.sublevels
+    sublevels:
+      level.sublevels &&
+      level.sublevels.map(level => processedLevel(level, true))
   };
+};
+
+/**
+ * Given a level progress object that we get from the server using either
+ * /api/user_progress or /dashboardapi/section_level_progress,
+ * extracts the result, appropriately discerning a locked/submitted
+ * result for certain levels.
+ */
+const getLevelResult = serverProgress => {
+  if (serverProgress.status === LevelStatus.locked) {
+    return TestResults.LOCKED_RESULT;
+  }
+  if (serverProgress.readonly_answers) {
+    return TestResults.READONLY_SUBMISSION_RESULT;
+  }
+  if (serverProgress.submitted) {
+    return TestResults.SUBMITTED_RESULT;
+  }
+
+  return serverProgress.result || TestResults.NO_TESTS_RUN;
+};
+
+export const levelProgressFromServer = serverObject => {
+  return {
+    status: serverObject.status || LevelStatus.not_tried,
+    result: getLevelResult(serverObject),
+    paired: serverObject.paired || false,
+    timeSpent: serverObject.time_spent || 0
+  };
+};
+
+export const processServerStudentProgress = serverStudentProgress => {
+  return _.mapValues(serverStudentProgress, progress =>
+    levelProgressFromServer(progress)
+  );
+};
+
+export const processServerSectionProgress = serverSectionProgress => {
+  const studentProgress = _.mapValues(serverSectionProgress, student =>
+    processServerStudentProgress(student)
+  );
+  return studentProgress;
+};
+
+export const levelProgressWithStatus = status => {
+  return levelProgressFromServer({status: status});
+};
+
+export const levelProgressFromResult = result => {
+  return levelProgressWithStatus(activityCssClass(result));
+};
+
+export const mergeLevelProgressWithResult = (progress, result) => {
+  if (!progress) {
+    return levelProgressFromResult(result);
+  }
+  const mergedResult = mergeActivityResult(progress.result, result);
+  if (mergedResult === result) {
+    return progress;
+  }
+  return levelProgressFromResult(mergedResult);
+};
+
+const lessonFromServer = (serverObject, stageNumber, overrides = {}) => {
+  return {
+    name: overrides.name || serverObject.name,
+    id: overrides.id || serverObject.id,
+    lockable: overrides.lockable || serverObject.lockable,
+    lesson_plan_html_url:
+      overrides.lesson_plan_html_url || serverObject.lesson_plan_html_url,
+    description_student:
+      overrides.description_student || serverObject.description_student,
+    description_teacher:
+      overrides.description_teacher || serverObject.description_teacher,
+    stageNumber: stageNumber,
+    levels:
+      overrides.levels ||
+      serverObject.levels.map(level => processedLevel(level))
+  };
+};
+
+const levelGroupFromServer = serverObject => {
+  return {
+    id: serverObject.id,
+    displayName: serverObject.display_name,
+    bigQuestions: serverObject.big_questions,
+    description: serverObject.description,
+    lessons: []
+  };
+};
+
+/**
+ * Extract lesson group from our peerReviewLessonInfo if we have one.
+ * We want this to end up having the same fields as our non-peer review groups.
+ */
+const peerReviewLessonGroup = peerReviewLessonInfo => {
+  const levels = peerReviewLessonInfo.levels.map((level, index) => ({
+    // These aren't true levels (i.e. we won't have an entry in levelProgress),
+    // so always use a specific id that won't collide with real levels
+    id: -1,
+    url: level.url,
+    name: level.name,
+    icon: level.locked ? level.icon : undefined,
+    levelNumber: index + 1,
+    kind: LevelKind.peer_review
+  }));
+  const lesson = lessonFromServer(peerReviewLessonInfo, null, {
+    id: -1,
+    lockable: false,
+    levels: levels
+  });
+  return {
+    // Peer reviews do not have descriptions or big questions
+    // so they won't need an id to track clicks
+    id: null,
+    displayName: peerReviewLessonInfo.lesson_group_display_name,
+    description: null,
+    bigQuestions: null,
+    lessons: [lesson]
+  };
+};
+
+export const processLessonGroupData = (
+  stages,
+  isPlc,
+  lessonGroups,
+  peerReviewLessonInfo,
+  includeBonusLevels = false
+) => {
+  const groupIndices = {};
+  const groups = [];
+  lessonGroups.forEach((group, index) => {
+    groups.push(levelGroupFromServer(group));
+    groupIndices[group.display_name] = index;
+  });
+
+  let nextStageNumber = 1;
+  stages.forEach((stage, index) => {
+    const stageNumber = !isPlc && !stage.lockable ? nextStageNumber++ : null;
+    const lesson = lessonFromServer(stage, stageNumber);
+    if (!includeBonusLevels) {
+      lesson.levels = lesson.levels.filter(level => !level.bonus);
+    }
+    groups[groupIndices[stage.lesson_group_display_name]].lessons.push(lesson);
+  });
+
+  if (peerReviewLessonInfo) {
+    groups.push(peerReviewLessonGroup(peerReviewLessonInfo));
+  }
+
+  return groups;
+};
+
+export const getPercentPerfect = (levels, studentProgress) => {
+  const puzzleLevels = levels.filter(level => !level.isConceptLevel);
+  if (puzzleLevels.length === 0) {
+    return 0;
+  }
+
+  const perfected = puzzleLevels.reduce(
+    (accumulator, level) =>
+      accumulator +
+      ((studentProgress[level.id] &&
+        studentProgress[level.id].status === LevelStatus.perfect) ||
+        0),
+    0
+  );
+  return perfected / puzzleLevels.length;
 };
