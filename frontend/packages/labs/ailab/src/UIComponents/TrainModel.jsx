@@ -7,7 +7,6 @@ import {
   setShowPredict,
   getAccuracy,
   readyToTrain,
-  readyToTrainErrors,
   validationMessages
 } from "../redux";
 
@@ -25,7 +24,6 @@ class TrainModel extends Component {
     selectedFeatures: PropTypes.array,
     labelColumn: PropTypes.string,
     readyToTrain: PropTypes.bool,
-    readyToTrainErrors: PropTypes.object,
     validationMessages: PropTypes.array,
     setShowPredict: PropTypes.func.isRequired,
     selectedTrainer: PropTypes.string,
