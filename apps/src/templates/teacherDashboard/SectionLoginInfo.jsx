@@ -38,12 +38,11 @@ class SectionLoginInfo extends React.Component {
 
   render() {
     const {studioUrlPrefix, section} = this.props;
-    const singleStudentId = queryParams('studentId');
+    const studentIdStr = queryParams('studentId');
+    const singleStudentId = studentIdStr && parseInt(studentIdStr);
     const autoPrint = !!singleStudentId || !!queryParams('autoPrint');
     const students = singleStudentId
-      ? this.props.students.filter(
-          student => student.id.toString() === singleStudentId
-        )
+      ? this.props.students.filter(student => student.id === singleStudentId)
       : this.props.students;
 
     return (

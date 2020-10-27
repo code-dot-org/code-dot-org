@@ -26,7 +26,7 @@ export default class HeaderPopup extends Component {
   static propTypes = {
     scriptName: PropTypes.string,
     scriptData: PropTypes.object,
-    currentLevelId: PropTypes.string,
+    currentLevelId: PropTypes.number,
     linesOfCodeText: PropTypes.string,
     minimal: PropTypes.bool,
     windowHeight: PropTypes.number

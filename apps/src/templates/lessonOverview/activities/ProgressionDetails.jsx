@@ -3,7 +3,6 @@ import React, {Component} from 'react';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import ProgressLevelSet from '@cdo/apps/templates/progress/ProgressLevelSet';
 import color from '@cdo/apps/util/color';
-import {LevelStatus} from '@cdo/apps/util/sharedConstants';
 
 const styles = {
   progressionBox: {
@@ -25,7 +24,7 @@ export default class ProgressionDetails extends Component {
     progression: PropTypes.object
   };
 
-  convertScriptLevelForProgression = scriptLevel => {
+  convertScriptLevelForProgression(scriptLevel) {
     const activeLevel =
       scriptLevel.levels.length > 1
         ? scriptLevel.levels.filter(level => {
@@ -34,7 +33,7 @@ export default class ProgressionDetails extends Component {
         : scriptLevel.levels[0];
 
     return {
-      status: LevelStatus.not_tried,
+      id: -1,
       url: scriptLevel.url,
       name: activeLevel.name,
       kind: scriptLevel.kind,
@@ -44,7 +43,7 @@ export default class ProgressionDetails extends Component {
       levelNumber: scriptLevel.levelNumber,
       bonus: scriptLevel.bonus
     };
-  };
+  }
 
   render() {
     const {progression} = this.props;
@@ -57,6 +56,7 @@ export default class ProgressionDetails extends Component {
             this.convertScriptLevelForProgression(scriptLevel)
           )}
           disabled={false}
+          studentProgress={{}}
           selectedSectionId={null}
         />
         <div style={styles.description}>

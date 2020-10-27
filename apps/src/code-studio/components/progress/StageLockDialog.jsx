@@ -77,7 +77,7 @@ class StageLockDialog extends React.Component {
         lockStatus: PropTypes.oneOf(Object.values(LockStatus)).isRequired
       })
     ),
-    selectedSectionId: PropTypes.string.isRequired,
+    selectedSectionId: PropTypes.number.isRequired,
     saving: PropTypes.bool.isRequired,
     saveDialog: PropTypes.func.isRequired
   };
@@ -331,7 +331,7 @@ export default connect(
     initialLockStatus: state.stageLock.lockStatus,
     isOpen: !!state.stageLock.lockDialogStageId,
     saving: state.stageLock.saving,
-    selectedSectionId: state.teacherSections.selectedSectionId.toString()
+    selectedSectionId: state.teacherSections.selectedSectionId
   }),
   dispatch => ({
     saveDialog(sectionId, lockStatus) {
