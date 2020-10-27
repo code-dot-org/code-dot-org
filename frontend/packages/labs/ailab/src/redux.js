@@ -1,11 +1,20 @@
 import {
-  MLTypes,
   availableTrainers,
   getRegressionTrainers,
   getClassificationTrainers
 } from "./train.js";
-// Action types
 
+import {
+  minOneFeatureSelected,
+  oneLabelSelected,
+  uniqLabelFeaturesSelected,
+  trainerSelected,
+  compatibleLabelAndTrainer
+} from "./validate.js";
+
+import { MLTypes, ColumnTypes } from "./constants.js";
+
+// Action types
 const RESET_STATE = "RESET_STATE";
 const SET_IMPORTED_DATA = "SET_IMPORTED_DATA";
 const SET_SELECTED_TRAINER = "SET_SELECTED_TRAINER";
@@ -24,7 +33,6 @@ const SET_TEST_DATA = "SET_TEST_DATA";
 const SET_PREDICTION = "SET_PREDICTION";
 
 // Action creators
-
 export function setImportedData(data) {
   return { type: SET_IMPORTED_DATA, data };
 }
@@ -120,7 +128,6 @@ const initialState = {
 };
 
 // Reducer
-
 export default function rootReducer(state = initialState, action) {
   if (action.type === SET_IMPORTED_DATA) {
     return {
@@ -354,8 +361,38 @@ export function getAccuracy(state) {
   return ((numCorrect / numPredictedLabels) * 100).toFixed(2);
 }
 
-export const ColumnTypes = {
-  CATEGORICAL: "categorical",
-  CONTINUOUS: "continuous",
-  OTHER: "other"
-};
+export function validationMessages(state) {
+  const validationMessages = [];
+  validationMessages.push({
+    readyToTrain: oneLabelSelected(state),
+    errorString: "Please designate one column as the label column.",
+    successString: "Label column has been selected."
+  });
+  validationMessages.push({
+    readyToTrain: minOneFeatureSelected(state),
+    errorString: "Please select at least one feature to train.",
+    successString: "At least one feature is selected."
+  });
+  validationMessages.push({
+    readyToTrain: uniqLabelFeaturesSelected(state),
+    errorString:
+      "A column can not be selected as a both a feature and a label.",
+    successString: "Label and feature(s) columns are unique."
+  });
+  validationMessages.push({
+    readyToTrain: trainerSelected(state),
+    errorString: "Please select a training algorithm.",
+    successString: "Training algorithm selected."
+  });
+  validationMessages.push({
+    readyToTrain: compatibleLabelAndTrainer(state),
+    errorString:
+      "The label datatype must be compatiable with the training algorithm.",
+    successString: "The label datatype and training algorithm are compatible."
+  });
+  return validationMessages;
+}
+
+export function readyToTrain(state) {
+  return uniqLabelFeaturesSelected(state) && compatibleLabelAndTrainer(state);
+}
