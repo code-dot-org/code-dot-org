@@ -113,8 +113,6 @@ class TrainModel extends Component {
                   <h3>The calculated accuracy of this model is:</h3>
                   {this.props.accuracy}%
                 </div>
-                <h3>The calculated accuracy of this model is:</h3>
-                {this.props.accuracy}%
               </div>
             )}
           </div>
