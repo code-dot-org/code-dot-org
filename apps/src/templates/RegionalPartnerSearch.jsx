@@ -341,7 +341,7 @@ class RegionalPartnerSearch extends Component {
                 <h3>Workshop information (hosted by {partnerInfo.name}):</h3>
                 {workshopCollections[0].workshops.length === 0 &&
                   workshopCollections[1].workshops.length === 0 && (
-                    <div>Workshops not currently available in your region.</div>
+                    <div>Workshop details coming soon!</div>
                   )}
 
                 {workshopCollections.map(

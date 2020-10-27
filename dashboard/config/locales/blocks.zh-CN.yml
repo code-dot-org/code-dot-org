@@ -993,6 +993,8 @@ zh-CN:
         text: 点击 {SPRITE}
       gamelab_comment:
         text: 注释： {COMMENT}
+      gamelab_cos:
+        text: cos {NUM}
       gamelab_countByAnimation:
         text: "{SPRITE} 的数量"
       gamelab_createNewSprite:
@@ -1209,6 +1211,8 @@ zh-CN:
             '"x"': x位置
             '"y"': y位置
             '"direction"': 移动方向
+      gamelab_setQuestion:
+        text: 为变量{VAR}问问题{QUESTION}
       gamelab_setSizes:
         text: 设置 {SPRITE} {PROPERTY} 为 {N}%
         options:
@@ -1227,6 +1231,8 @@ zh-CN:
           {SPRITE3N}{SPRITE3COSTUME}
       gamelab_showTitleScreen:
         text: 显示标题屏幕 {BREAK} 标题 {TITLE} 文本 {SUBTITLE}
+      gamelab_sin:
+        text: sin {NUM}
       gamelab_spriteClicked:
         text: "{CONDITION} {SPRITE} 被点击"
         options:
@@ -1262,6 +1268,8 @@ zh-CN:
             '"d"': d
       gamelab_whenLeftArrow:
         text: 当按左方向键时
+      gamelab_whenQuestionAnswered:
+        text: 当{VAR}被回答
       gamelab_whenRightArrow:
         text: 当按右方向键时
       gamelab_whenTouching:

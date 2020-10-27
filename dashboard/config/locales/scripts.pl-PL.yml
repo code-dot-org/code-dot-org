@@ -1324,11 +1324,11 @@ pl:
             Lesson Chunk 1- Sending Binary Messages:
               name: Lekcja 1 - Wysyłanie wiadomości binarnych
             Lesson Chunk 2- Encoding and Sending Numbers:
-              name: Lekcja 2 - Kodowanie i wysyłanie liczb
+              name: Częć lekcji 2 - Kodowanie i wysyłanie liczb
             Lesson Chunk 3- Encoding and Sending Text:
-              name: Lekcja 3 -  Kodowanie i wysyłanie tekstu
+              name: Część lekcji 3 -  Kodowanie i wysyłanie tekstu
             Lesson Chunk 4- Compressing and Storing Information:
-              name: Lekcja 4 - Kompresja i przechowywanie informacji
+              name: Część lekcji 4 - Kompresja i przechowywanie informacji
             Practice PT:
               name: Praktyka PT
             Welcome to the Course!:
@@ -1356,9 +1356,9 @@ pl:
             The Big Event:
               name: Wielkie wydarzenie
         vigenere:
-          description: Używanie gadżetu kodu Vigenere, aby badać szyfrowanie i rozszyfrowywanie
+          description: Używanie gadżetu kodu Vigenere, aby zbadać szyfrowanie i rozszyfrowywanie
             wiadomości z użyciem kodu Vigenere.
-          description_short: Używanie gadżetu kodu Vigenere, aby badać szyfrowanie
+          description_short: Używanie gadżetu kodu Vigenere, aby zbadać szyfrowanie
             i rozszyfrowywanie wiadomości z użyciem kodu Vigenere.
           lessons:
             Vigenere:
@@ -2047,7 +2047,7 @@ pl:
             csp3_1:
               display_name: 'Rozdział 1: Języki Programowania i Algorytmy'
             cspAssessment:
-              display_name: Ocena Rozdziału
+              display_name: Sprawdzian z rozdziału
             cspSurvey:
               display_name: Ankieta
           lessons:
@@ -2108,7 +2108,7 @@ pl:
             csp4_1:
               display_name: 'Rozdział 1: Świat giga danych i szyfrowania'
             cspAssessment:
-              display_name: Ocena Rozdziału
+              display_name: Sprawdzian z rozdziału
             cspSurvey:
               display_name: Ankieta
           lessons:
@@ -2222,21 +2222,21 @@ pl:
             Unit 5 Assessment 2:
               name: Jednostka 5 Sprawdzian 2
             "'If' Statements Unplugged":
-              name: Instrukcje "Jeśli" w trybie "unplugged" - bez komputera
+              name: Instrukcje "jeśli" bez komputera
             '"If" Statements Unplugged':
-              name: Instrukcje "Jeśli" w trybie "unplugged" - bez komputera
+              name: Instrukcje "jeśli" bez komputera
             Getting started with If Statements:
-              name: Początek z instrukcjami "jeśli"
+              name: Pierwsze kroki z instrukcjami "jeśli"
             Unit 3 Chapter 1 Assessment 3:
               name: Jednostka 3 Rozdział 1 Sprawdzian 3
             If statements:
-              name: Instrukcje "Jeśli"
+              name: Instrukcje "jeśli"
             Unit 3 Assessment 3:
               name: Jednostka 3 Sprawdzian 3
             Unit 3 Assessment 4:
               name: Jednostka 3 Sprawdzian 4
             If-else-if and Conditional Logic:
-              name: '"Jeśli- w przeciwnym razie - jeśli" oraz logika warunkowa'
+              name: '"jeśli/w przeciwnym razie" oraz logika warunkowa'
             'Building an App: Color Sleuth':
               name: 'Budowanie aplikacji: Detektyw kolorów'
             Possibly use later:
@@ -2246,9 +2246,9 @@ pl:
             Unit 5 Assessment 4:
               name: Jednostka 5 Sprawdzian 4
             Boolean Expressions and "If" Statements:
-              name: Wyrażenie boolowskie i instrukcje "if"
+              name: Wyrażenie boolowskie i instrukcje "jeśli"
             '"if-else-if" and Conditional Logic':
-              name: '"if-else-if" oraz logika warunkowa'
+              name: '"jeśli/w przeciwnym razie" oraz logika warunkowa'
             'Building an App: Multi-Screen App':
               name: 'Budowanie aplikacji: Aplikacja wieloekranowa'
             'Building an App: Clicker Game':
@@ -2258,9 +2258,10 @@ pl:
             'Building an App: Canvas Painter':
               name: 'Budowanie aplikacji: Malarz na płótnie'
             Unit 5 Assessment 5 - Practice AP questions:
-              name: Część 5 Ocena 5 - Praktyka pytań AP
+              name: Jednostka 5 Sprawdzian 5 - Praktykuj pytania AP
             Unit 5 Assessment 5 - AP Pseudocode Practice Questions:
-              name: Część 5 Ocena 5 - Pytania dotyczące praktyki pseudokodu AP
+              name: Jednostka 5 Sprawdzian 5 - Pytania dotyczące praktyki pseudokodu
+                AP
             CSP Student Post Survey Staging:
               name: Podział na etapy badania ex post uczniów CSP
             Participate in a longitudinal study!:
@@ -2268,7 +2269,7 @@ pl:
             CSP Student Post-Course Survey:
               name: Ankieta dla uczniów po odbyciu kursu CSD
             '"if" Statements Unplugged':
-              name: Instrukcje "Jeśli" w trybie "unplugged" - bez komputera
+              name: Instrukcje "jeśli" bez komputera
             Boolean Expressions and "if" Statements:
               name: Wyrażenie boolowskie i instrukcje "jeśli"
             Post-Course Survey:
@@ -2284,15 +2285,15 @@ pl:
             Explore PT Prep:
               name: Zbadaj przygotowanie PT
             Create PT Prep - Reviewing the Task:
-              name: Twórz przygotowanie PT - Weryfikacja zadania
+              name: Utwórz przygotowanie PT - Przeglądanie zadania
             Create PT Prep - Making a Plan:
-              name: Twórz przygotowanie PT - Sporządzanie planu
+              name: Utwórz przygotowanie PT - Sporządzanie planu
             Create PT - Complete the Task:
-              name: Twórz PT - Wykonaj zadanie
+              name: Utwórz PT - Wykonaj zadanie
             Explore PT Prep - Reviewing the Task:
-              name: Eksploracja przygotowania PT - Weryfikacja zadania
+              name: Zbadaj przygotowania PT - Przeglądanie zadania
             Explore PT - Making a Plan:
-              name: Eksploruj PT - Sporządzanie planu
+              name: Zgadaj PT - Sporządzanie planu
             Explore PT - Complete the Task:
               name: Zbadaj PT - Wykonaj zadanie
             Tech Setup - Your AP Digital Portfolio and Other Tools:
@@ -2331,7 +2332,7 @@ pl:
             Sprites and Properties:
               name: Duszki i właściwości
             Variables Unplugged:
-              name: Zmienne w trybie "unplugged" - bez komputera
+              name: Zmienne bez komputera
             Variables and Animation:
               name: Zmienne i animacja
             Functions:
@@ -2554,14 +2555,14 @@ pl:
             obejmującego 50 pytań.
           lessons:
             CS Principles Culminating Assessment Part 1:
-              name: Ocena kulminacyjna zasad informatyki - część 1
+              name: Kulminacyjny sprawdzian Zasad informatyki  - Część 1
         cspexam2-AKwgAh1ac5:
           description_short: Ta ocena w formie testu wyboru obejmuje pytania dotyczące
             7 ważnych koncepcji informatycznych. To jest część 2 dwuczęściowego egzaminu
             obejmującego 50 pytań.
           lessons:
             CS Principles Culminating Assessment Part 2:
-              name: Ocena kulminacyjna zasad informatyki - część 2
+              name: Kulminacyjny sprawdzian Zasad informatyki  - Część 2
         CSDU4-Draft:
           lessons:
             Adding Functionality (optional):
@@ -2579,7 +2580,7 @@ pl:
             UCD Micro Activity:
               name: Mikroaktywność UCD
             Designing for Social Impact:
-              name: Projektowanie oddziaływania społecznego
+              name: Projektowanie dla oddziaływania społecznego
             Conducting User-Centered Interviews:
               name: Prowadzenie wywiadów skoncentrowanych na użytkowniku
             Analyzing Interviews:
@@ -2615,7 +2616,7 @@ pl:
         CSDU1-Draft:
           lessons:
             Exploring Apps:
-              name: Odkrywanie aplikacji
+              name: Badanie aplikacji
             Processing Information:
               name: Przetwarzanie informacji
         CSDU2-Draft:
@@ -2631,7 +2632,7 @@ pl:
             Images on the Web:
               name: Zdjęcia w Internecie
             'Personal Website: Finalizing Site':
-              name: 'Prywatna strona internetowa: finalizacja strony'
+              name: 'Prywatna strona internetowa: Finalizacja strony'
             Quality Websites:
               name: Wysokiej jakości strony internetowe
             Text on the Web:
@@ -2661,7 +2662,7 @@ pl:
             Designing Web Pages:
               name: Projektowanie stron www
             Holding:
-              name: Prowaszenie
+              name: Prowadzenie
             Describing Web pages:
               name: Opisywanie stron
             Multi-Page Websites:
@@ -2687,7 +2688,7 @@ pl:
             Sample Stage:
               name: Przykładowy etap
             The same thing with named levels:
-              name: Ta sama rzecz o nazwanych poziomach
+              name: To samo z nazwanymi poziomami
             You are a coding STAR:
               name: Jesteś GWIAZDĄ kodowania
         artistExemplar:
@@ -2704,7 +2705,7 @@ pl:
             Balancing Teachers and Tools:
               name: Równoważenie nauczycieli i narzędzi
             Discovery Learning:
-              name: Odkrywanie nauki
+              name: Uczenie się przez odkrywanie
             Group Work and Peer Learning:
               name: Praca w grupach i nauka w grupach rówieśniczych
             Introduction to Teachercon:
@@ -2712,11 +2713,11 @@ pl:
             Lesson 1,10:
               name: 'Lekcja 1.10: Routery i nadmiarowość'
             Lesson 1,11:
-              name: 'Lekcja 1.11: Pakiety i tworzenie niezawodnego internetu'
+              name: 'Lekcja 1.11: Pakiety i tworzenie niezawodnego Internetu'
             Lesson 1,4:
               name: 'Lekcja 1.4: Systemy liczbowe (Koło Trójkąt Kwadrat)'
             Lesson 1,6:
-              name: 'Lekcja 1.6: Wysyłanie numerów'
+              name: 'Lekcja 1.6: Wysyłanie liczb'
             Lesson 1,9:
               name: 'Lekcja 1.9: Adresowanie internetowe (Okręt bojowy)'
             Lesson 2,10:
@@ -2726,7 +2727,7 @@ pl:
             Lesson 2,3:
               name: 'Lekcja 2.3.: Czarno-biała pikselacja'
             Measuring Student Learning:
-              name: Pomiar nauki ucznia
+              name: Pomiar osignięć ucznia
         kinderTest:
           lessons:
             'Bee: Conditionals':
@@ -2776,7 +2777,7 @@ pl:
             Digital Citizenship:
               name: Cyfrowe obywatelstwo
             Explore project ideas:
-              name: Odkrywanie pomysłów na projekt
+              name: Badanie pomysłów na projekt
             'Farmer: Functions (New)':
               name: 'Farmerka: Funkcje (Nowe)'
             Final Project - Presentation Day:
@@ -2845,7 +2846,7 @@ pl:
             Digital Citizenship:
               name: Cyfrowe obywatelstwo
             Explore project ideas:
-              name: Odkrywanie pomysłów na projekt
+              name: Badanie pomysłów na projekt
             Final Project - Presentation Day:
               name: Projekt końcowy - dzień prezentacji
             Final Project - Review/Revise Day:
@@ -2995,7 +2996,7 @@ pl:
             Robot Running the Farm:
               name: Robot  prowadzący farmę
             Unplugged Conditionals with Loops:
-              name: Wyrażenie warunkowe w trybie unplugged z pętlami
+              name: Wyrażenie warunkowe z pętlami bez komputera
         alltheplcthings:
           lesson_groups:
             required:
@@ -3030,7 +3031,7 @@ pl:
             Test stage with bubbles:
               name: Test sprawdzający z bańkami
         csd3-2017:
-          title: Część 3 CSP - Animacje i gry ('17- '18)
+          title: CSP Jednostka 3 - Animacje i gry ('17- '18)
           description: W dziale 3 będziesz korzystać z doświadczeń w zakresie kodowania
             w trakcie programowania animacji, sztuki interaktywną i gry w Game Lab.Dział
             rozpoczyna się  od prostych kształtów i buduje się w nim bardziej wyszukane
@@ -3076,7 +3077,7 @@ pl:
             Sprites and Properties:
               name: Duszki i właściwości
             Variables Unplugged:
-              name: Zmienne w trybie "unplugged" - bez komputera
+              name: Zmienne bez komputera
             Variables and Animation:
               name: Zmienne i animacja
             Velocity:
@@ -3442,7 +3443,7 @@ pl:
             At The Dog Park:
               name: W parku psów
             Caring for My New Pet:
-              name: Troszczenie się o moje nowe zwierze
+              name: Troszczenie się o moje nowe zwierzę
             Exploring the Neighborhood:
               name: Badanie sąsiedztwa
             Flappy:
@@ -3452,7 +3453,7 @@ pl:
             Make a Dog Tag:
               name: Niech pies zagra w berka
             More CS with Run Marco:
-              name: Więcej informatyki z "Run Marco"
+              name: Więcej informatyki z Run Marco
             New Home for My Pet:
               name: Nowy dom dla mojego zwierzaka
             Online Internet Safety:
@@ -3466,7 +3467,7 @@ pl:
             Puppy Loops:
               name: Pętle ze szczeniakiem
             How to behave in the lab_How to use Code_org puzzles:
-              name: Jak się zachowywać w labie/ Jak używać łamigłówek Code.org
+              name: Jak się zachowywać w pracowni/ Jak używać łamigłówek Code.org
             Programming at home with my pet:
               name: Programowanie w domu z moim zwierzakiem
             Binary Bracelets:
@@ -3478,9 +3479,9 @@ pl:
         transferring-over:
           lessons:
             20-hr Stage 2:
-              name: 20 godzinny 2 etap
+              name: 20 godzinny Etap 2
             20-hr Stage 9:
-              name: 20 godzinny 9 etap
+              name: 20 godzinny Etap 9
             Course 2 Stage 17:
               name: Kurs 2 Etap 17
             Course 3 Stage 16:
@@ -3526,9 +3527,9 @@ pl:
         csp-pre-survey:
           lessons:
             Anonymous student pre-survey:
-              name: Anonimowa wstępna ankieta dla studentów
+              name: Anonimowa wstępna ankieta dla uczniów
             NEW Unit 1 Chapter 1 Assessment:
-              name: NOWEA Część 1 Rozdział 1 - Ocena
+              name: NOWA Jednostka 1 Rozdział 1 - Sprawdzian
             Unit 1 Chapter 1 Assessment:
               name: Jednostka 1 Rozdział 1 - Sprawdzian
             Unit 3 Chapter 1 Assessment:
@@ -3599,7 +3600,7 @@ pl:
                 w ramach procesu, aby zamieścić je na plakatach, których będzie używany
                 w trakcie realizacji tej części oraz w trakcie roku. '
             Exploring Problem Solving:
-              name: Odkrywanie rozwiązywania problemów
+              name: Zgłębianie rozwiązywania problemów
               description_student: 'Na tej lekcji klasa stosuje proces rozwiązywania
                 problemu do trzech różnych problemów: wyszukiwania słowa, rozmieszczenia
                 gości przy stole na przyjęciu urodzinowym oraz planowania wycieczki.
@@ -3641,7 +3642,7 @@ pl:
                 najtrudniejszych kategoryzacji. Nauczyciel wprowadza definicję komputera
                 i pozwala grupom zweryfikować ich plakaty według nowej definicji.
             Representing Information:
-              name: Przedstawianie informacji
+              name: Reprezentowanie informacji
             Processing with Bits:
               name: Przetwarzanie przy pomocy bitów
             Human vs. Computer Processing:
@@ -3651,7 +3652,7 @@ pl:
             'Project: Apps and Problem Solving':
               name: 'Projekt: Aplikacje i rozwiązywanie problemów'
             Human vs Computer Processing:
-              name: Człowiek kontra przetwarzanie komputerowe
+              name: Człowiek versus przetwarzanie komputerowe
             Input and Output:
               name: Wejście i Wyjście
               description_student: Na tych zajęciach uczniowie rozpatrzą kilka urządzeń
@@ -3778,9 +3779,9 @@ pl:
             Balancing Teachers and Tools:
               name: Równoważenie nauczycieli i narzędzi
             Discovery Learning:
-              name: Odkrywanie nauki
+              name: Uczenie się przez odkrywanie
             Measuring Student Learning:
-              name: Pomiar nauki ucznia
+              name: Pomiar osignięć ucznia
             'Lessons 4-6: Encoding and Sending Numbers':
               name: 'Lekcje 4-6: Kodowanie i wysyłanie liczb'
             'Lesson 7: Encoding and Sending Text':
@@ -3872,9 +3873,9 @@ pl:
             Balancing Teachers and Tools:
               name: Równoważenie nauczycieli i narzędzi
             Discovery Learning:
-              name: Odkrywanie nauki
+              name: Uczenie się przez odkrywanie
             Measuring Student Learning:
-              name: Pomiar nauki ucznia
+              name: Pomiar osignięć ucznia
             AP Preparation and Support:
               name: Przygotowanie i wsparcie AP
         basketball:
@@ -3999,7 +4000,7 @@ pl:
             Intellectual Property:
               name: Własność intelektualna
             'Personal Website: Finalizing Site':
-              name: 'Prywatna strona internetowa: finalizacja strony'
+              name: 'Prywatna strona internetowa: Finalizacja strony'
             'Project: Personal Portfolio Website':
               name: Projekt - Własna strona internetowa portfolio
             Images in HTML:
@@ -4230,9 +4231,9 @@ pl:
             Balancing Teachers and Tools:
               name: Równoważenie nauczycieli i narzędzi
             Discovery Learning:
-              name: Odkrywanie nauki
+              name: Uczenie się przez odkrywanie
             Measuring Student Learning:
-              name: Pomiar nauki ucznia
+              name: Pomiar osignięć ucznia
             AP Preparation and Support:
               name: Przygotowanie i wsparcie AP
         csd4-2017:
@@ -4316,7 +4317,7 @@ pl:
                 i uzyskają informację zwrotną na temat tego, w jakim stopniu produkt
                 zaspokaja wybraną przez nich potrzebę użytkownika.
             Designing for Social Impact:
-              name: Projektowanie oddziaływania społecznego
+              name: Projektowanie dla oddziaływania społecznego
             Conducting User-Centered Interviews:
               name: Prowadzenie wywiadów skoncentrowanych na użytkowniku
             Analyzing Interviews:
@@ -4629,11 +4630,11 @@ pl:
         flappy-impact-study:
           lessons:
             Pre Hour of Code Survey:
-              name: Ankieta przed "Godziną kodowania"
+              name: Ankieta przed Godziną Kodowania
             Flappy Code:
               name: Kod Flappiego
             Post Hour of Code Survey:
-              name: Ankieta po "Godzinie kodowania"
+              name: Ankieta po Godzinie Kodowania
         coursea-draft:
           description_short: Wprowadzenie do informatyki dla osób uczących się czytać.
           lessons:
@@ -4644,9 +4645,9 @@ pl:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algorytmy z życia wzięte: sadź nasiona'
             Learn to Drag and Drop:
-              name: Nauka metody "przeciągnij i upuść"
+              name: Nauka metody przeciągać i upuszczać
             'Programming: Happy Maps':
-              name: 'Programowanie: Szczęśliwe mapy (Happy Maps)'
+              name: 'Programowanie: Szczęśliwe mapy'
             Programming in Maze:
               name: Programowanie w labiryncie
             Being Safe Online:
@@ -4677,7 +4678,7 @@ pl:
             Sequence & Algorithms:
               name: Sekwencja i algorytmy
             Learn to Drag and Drop:
-              name: Nauka metody "przeciągnij i upuść"
+              name: Nauka metody przeciągać i upuszczać
             Being Safe Online:
               name: Bycie bezpiecznym w sieci
             'Programming: My Robotic Friends':
@@ -4727,7 +4728,7 @@ pl:
             Build a Flappy Game:
               name: Zbuduj grę z Flappym
             More CS with Run Marco:
-              name: Więcej informatyki z "Run Marco"
+              name: Więcej informatyki z Run Marco
             Binary Bracelets:
               name: Binarne bransoletki
             Events in Play Lab:
@@ -4900,20 +4901,20 @@ pl:
           description_short: Poznaj podstawy informatyki z wieloma zabawnymi postaciami!
           lessons:
             Pre Hour of Code Survey:
-              name: Ankieta przed "Godziną kodowania"
+              name: Ankieta przed Godziną Kodowania
             Hour of Code 2013:
               name: Godzina Kodowania 2013
             Post Hour of Code Survey:
-              name: Ankieta po "Godzinie kodowania"
+              name: Ankieta po Godzinie Kodowania
         hoc-impact-study:
           description_short: Poznaj podstawy informatyki z wieloma zabawnymi postaciami!
           lessons:
             Pre Hour of Code Survey:
-              name: Ankieta przed "Godziną kodowania"
+              name: Ankieta przed Godziną Kodowania
             Hour of Code 2013:
               name: Godzina Kodowania 2013
             Post Hour of Code Survey:
-              name: Ankieta po "Godzinie kodowania"
+              name: Ankieta po Godzinie Kodowania
         sports:
           title: Zakoduj własną grę sportową
           description_short: Mieszaj i łącz różne dyscypliny sportowe
@@ -4984,9 +4985,9 @@ pl:
             Balancing Teachers and Tools:
               name: Równoważenie nauczycieli i narzędzi
             Discovery Learning:
-              name: Odkrywanie nauki
+              name: Uczenie się przez odkrywanie
             Measuring Student Learning:
-              name: Pomiar nauki ucznia
+              name: Pomiar osignięć ucznia
             AP Preparation and Support:
               name: Przygotowanie i wsparcie AP
         csdgraveyard:
@@ -5023,9 +5024,9 @@ pl:
             Balancing Teachers and Tools:
               name: Równoważenie nauczycieli i narzędzi
             Discovery Learning:
-              name: Odkrywanie nauki
+              name: Uczenie się przez odkrywanie
             Measuring Student Learning:
-              name: Pomiar nauki ucznia
+              name: Pomiar osignięć ucznia
             Unit 4 Overview:
               name: Jednostka 4 Przeląd
         sciencepd4:
@@ -5117,9 +5118,9 @@ pl:
             Balancing Teachers and Tools:
               name: Równoważenie nauczycieli i narzędzi
             Discovery Learning:
-              name: Odkrywanie nauki
+              name: Uczenie się przez odkrywanie
             Measuring Student Learning:
-              name: Pomiar nauki ucznia
+              name: Pomiar osignięć ucznia
         csppostap-2017:
           title: CSP Po-AP - Bazy danych i używanie danych w Twoich aplikacjach ('17-'18)
           description_short: Naucz się zbierać i korzystać z danych w aplikacjach
@@ -5230,7 +5231,7 @@ pl:
             Making Music:
               name: Tworzenie muzyki
             Arrays and For Loops:
-              name: Tablice i pętle for
+              name: Tablice i pętle "dla"
             Circuits and Physical Prototypes:
               name: Obwody i prototypy fizyczne
             Accelerometer:
@@ -5249,7 +5250,7 @@ pl:
             csd5_1:
               display_name: 'Rozdział 1: Reprezentowanie Informacji'
             csd5_2:
-              display_name: 'Rozdział 2: Rozwiązywanie Problemów z Danymi'
+              display_name: 'Rozdział 2: Rozwiązywanie problemów z danymi'
           lessons:
             new stage:
               name: nowy etap
@@ -5258,21 +5259,21 @@ pl:
             Data in the Real World:
               name: Dane w świecie rzeczywistym
             Combining Representations:
-              name: Łączenie przedstawień
+              name: Łączenie reprezentacji
             Representing Images:
-              name: Przedstawianie obrazków
+              name: Reprezentowanie obrazów
             Representation Matters:
               name: Przedstawienie ma znaczenie
             Patterns and Representation:
-              name: Wzorce i przedstawienie
+              name: Wzorce i reprezentacje
             ASCII and Binary Representation:
-              name: ASCII i zapis binarny
+              name: ASCII i reprezentacja binarna
             Representing Numbers Part 1:
-              name: Przedstawianie liczb - Część 1
+              name: Reprezentacja liczb - Część 1
             Representing Numbers Part 2:
-              name: Przedstawianie liczb - Część 2
+              name: Reprezentacja liczb - Część 2
             Project - Create a Representation:
-              name: Projekt - Twórz przedstawienie
+              name: Projekt - Twórz reprezentację
             Problem Solving and Data:
               name: Rozwiązywanie problemów i dane
             Making Decisions with Data:
@@ -5300,7 +5301,7 @@ pl:
             coś tworzą.
           lessons:
             App Lab Workshop:
-              name: Warsztat w zakresie App Lab
+              name: Warsztat App Lab
             Digital Design:
               name: Projekt cyfrowy
             Event Driven Programming:
@@ -5681,7 +5682,7 @@ pl:
                 Gdy uczniowie nauczą się wygrywać nuty dzwonkiem, używają tablic do
                 utrzymania i odgrywania sekwencji nut, tworząc proste piosenki.
             Arrays and For Loops:
-              name: Tablice i pętle for
+              name: Tablice i pętle "dla"
               description_student: Scalanie _list_ i  _pętli "dla"_ pozwala napisać
                 kod, który oddziałuje na każdy element listy, bez względu na jego
                 długość. Klasa używa tej konstrukcji do pisania programów, które przetwarzają
@@ -5895,7 +5896,7 @@ pl:
                 Gdy uczniowie nauczą się wygrywać nuty dzwonkiem, używają tablic do
                 utrzymania i odgrywania sekwencji nut, tworząc proste piosenki.
             Arrays and For Loops_:
-              name: Tablice i pętle for
+              name: Tablice i pętle "dla"
               description_student: Scalanie _list_ i  _pętli "dla"_ pozwala napisać
                 kod, który oddziałuje na każdy element listy, bez względu na jego
                 długość. Klasa używa tej konstrukcji do pisania programów, które przetwarzają
@@ -6053,7 +6054,7 @@ pl:
             csd5_1:
               display_name: 'Rozdział 1: Reprezentowanie Informacji'
             csd5_2:
-              display_name: 'Rozdział 2: Rozwiązywanie Problemów z Danymi'
+              display_name: 'Rozdział 2: Rozwiązywanie problemów z danymi'
             csd_survey:
               display_name: Ankieta po odbyciu kursu
           lessons:
@@ -6079,7 +6080,7 @@ pl:
                 danych dotyczących posiłku wpłynęły na sposób, w jaki uczniowie są
                 w stanie rozwiązywać różne problemy.
             Patterns and Representation:
-              name: Wzorce i przedstawienie
+              name: Wzorce i reprezentacje
               description_student: Na tej lekcji przyjrzymy się bliżej temu, co jest
                 potrzebne do utworzenia systemu reprezentacji. Grupy tworzą systemy,
                 które mogą reprezentować dowolna literę alfabetu używając do tego
@@ -6104,7 +6105,7 @@ pl:
                 skutecznych rozwiązań problemu, ale ważne jest to, aby każdy stosował
                 ten sam arbitralny system do komunikacji.
             ASCII and Binary Representation:
-              name: ASCII i zapis binarny
+              name: ASCII i reprezentacja binarna
               description_student: Ta lekcja wprowadza formalny system binarny na
                 potrzeby kodowania informacji, system ASCII do przedstawiania liter
                 i innych znaków. Na początku lekcji nauczyciel  wprowadza fakt, że
@@ -6122,7 +6123,7 @@ pl:
                 z użyciem ASCII. Odbywająca się na końcu lekcji rozmowa podsumowująca
                 pomaga syntetyzować kluczowe cele edukacyjne zajęć.
             Representing Images:
-              name: Przedstawianie obrazków
+              name: Reprezentowanie obrazów
               description_student: Ta lekcja stanowi kontynuację badania nad systemami
                 reprezentacji binarnej, tym razem z obrazkami. Klasie wprowadza się
                 koncepcję dzielenia obrazków na kwadraciki lub "piksele", które można
@@ -6143,11 +6144,11 @@ pl:
                 pomiędzy systemem reprezentacji obrazków a systemem do przedstawiania
                 tekstu, który poznała na poprzedniej lekcji.
             Representing Numbers Part 1:
-              name: Przedstawianie liczb - Część 1
+              name: Reprezentacja liczb - Część 1
             Representing Numbers Part 2:
-              name: Przedstawianie liczb - Część 2
+              name: Reprezentacja liczb - Część 2
             Combining Representations:
-              name: Łączenie przedstawień
+              name: Łączenie reprezentacji
               description_student: Ta lekcja łączy w sobie trzy typy systemów reprezentacji
                 binarnej (znaki ASCII, liczba binarna i obrazki), aby umożliwić kodowanie
                 bardziej złożonych typów informacji w zapisie. Po zobaczeniu serii
@@ -6163,7 +6164,7 @@ pl:
                 który jest używany, jak i znaczenie zakodowanych informacji. Potem
                 mogą odkodować zapis przedstawiający zwierzę w oparciu o daną strukturę.
             Project - Create a Representation:
-              name: Projekt - Twórz przedstawienie
+              name: Projekt - Twórz reprezentację
               description_student: Klasa projektuje strukturę do przedstawienia ich
                 idealnego dnia używając systemów reprezentacji binarnej, o której
                 uczyła się w ramach tego rozdziału. Po podjęciu decyzji, które informacje
@@ -6390,8 +6391,8 @@ pl:
             CSD Post-Course Survey:
               name: Ankieta po zakończeniu kursu  CSP
         csd3-old:
-          title: Dział 3 CSD (NIEAKTUALNY)
-          description_short: Program działu 3 CSD 2016/2017
+          title: CSD Jednostka 3 (NIEAKTUALNA)
+          description_short: Szkic CSD Jednostki 3 2016/2017
           description: To jest oryginalny projekt działu 3 CSD, ujawniony jesienią
             2016. Jeśli uczniowie nie używają obecnie tego kursu, należy zamiast tego
             użyć zaktualizowanej wersji tego działu na studio.code.org/s/csd3-2019
@@ -6402,7 +6403,7 @@ pl:
             Draw Loop and Randomization:
               name: Rysuj pętlę i losowość
             Variables Unplugged:
-              name: Zmienne w trybie "unplugged" - bez komputera
+              name: Zmienne bez komputera
             Variables and Animation:
               name: Zmienne i animacja
             Sprites and Properties:
@@ -6434,8 +6435,8 @@ pl:
             'Project: Design a Game':
               name: 'Projekt: Zaprojektuj grę'
         csd1-old:
-          title: Dział 1 CSD (NIEAKTUALNY)
-          description_short: Program działu 1 CSD 2016/2017
+          title: CSD Jednostka 1 (NIEAKTUALNA)
+          description_short: Szkic CSD Jednostki 1 2016/2017
           description: To jest oryginalny projekt działu 1 CSD, ujawniony po raz pierwszy
             jesienią 2016. Tę wersję zastąpiono działem zaktualizowanym w studio.code.org/s/csd1-2019,
             który będzie dostępny tylko do 1 lipca 2017 roku.
@@ -6445,15 +6446,15 @@ pl:
             The Problem Solving Process:
               name: Proces rozwiązywania problemów
             Exploring Problem Solving:
-              name: Odkrywanie rozwiązywania problemów
+              name: Zgłębianie rozwiązywania problemów
             What is a Computer?:
               name: Czym jest komputer?
             Representing Information:
-              name: Przedstawianie informacji
+              name: Reprezentowanie informacji
             Processing with Bits:
               name: Przetwarzanie przy pomocy bitów
             Human vs Computer Processing:
-              name: Człowiek kontra przetwarzanie komputerowe
+              name: Człowiek versus przetwarzanie komputerowe
             Processing with Apps:
               name: Przetwarzanie z aplikacjami
             'Project: Apps and Problem Solving':
@@ -6505,7 +6506,7 @@ pl:
             The Problem Solving Process:
               name: Proces rozwiązywania problemów
             Exploring Problem Solving:
-              name: Odkrywanie rozwiązywania problemów
+              name: Zgłębianie rozwiązywania problemów
             What is a Computer?:
               name: Czym jest komputer?
             Inputs and Outputs:
@@ -6744,7 +6745,7 @@ pl:
                 a następnie przechodzą oni do korzystania z komputera, aby ukończyć
                 łamigłówki online.
             'Programming: Happy Maps':
-              name: 'Programowanie: Szczęśliwe mapy (Happy Maps)'
+              name: 'Programowanie: Szczęśliwe mapy'
               description_teacher: Przejście od algorytmów do programowania może być
                 szybkie, jeśli uczniowie zrozumieją różnicę między zaplanowaniem sekwencji
                 a zakodowaniem tej sekwencji w odpowiednim języku. Te zajęcia pomogą
@@ -7610,9 +7611,9 @@ pl:
             AP Eksploruj zadanie wydajnościowe.
           lessons:
             Explore PT Prep - Reviewing the Task:
-              name: Eksploracja przygotowania PT - Weryfikacja zadania
+              name: Zbadaj przygotowania PT - Przeglądanie zadania
             Explore PT - Making a Plan:
-              name: Eksploruj PT - Sporządzanie planu
+              name: Zgadaj PT - Sporządzanie planu
             Explore PT - Complete the Task:
               name: Zbadaj PT - Wykonaj zadanie
         csp-create-task:
@@ -7622,11 +7623,11 @@ pl:
             AP Twórz zadanie wydajnościowe.
           lessons:
             Create PT Prep - Reviewing the Task:
-              name: Twórz przygotowanie PT - Weryfikacja zadania
+              name: Utwórz przygotowanie PT - Przeglądanie zadania
             Create PT Prep - Making a Plan:
-              name: Twórz przygotowanie PT - Sporządzanie planu
+              name: Utwórz przygotowanie PT - Sporządzanie planu
             Create PT - Complete the Task:
-              name: Twórz PT - Wykonaj zadanie
+              name: Utwórz PT - Wykonaj zadanie
         csp-ap-tech-setup:
           title: Cyfrowy portfel i inne narzędzia AP CSP
           description: Obejmuje układ "Portfela cyfrowego AP" oraz inne narzędzia
@@ -7652,15 +7653,15 @@ pl:
             Tech Setup - Your AP Digital Portfolio and Other Tools:
               name: Układ techniczny - Twoje cyfrowe portfolio AP i inne narzędzia
             Create PT Prep - Reviewing the Task:
-              name: Twórz przygotowanie PT - Weryfikacja zadania
+              name: Utwórz przygotowanie PT - Przeglądanie zadania
             Create PT Prep - Making a Plan:
-              name: Twórz przygotowanie PT - Sporządzanie planu
+              name: Utwórz przygotowanie PT - Sporządzanie planu
             Create PT - Complete the Task:
-              name: Twórz PT - Wykonaj zadanie
+              name: Utwórz PT - Wykonaj zadanie
             Explore PT Prep - Reviewing the Task:
-              name: Eksploracja przygotowania PT - Weryfikacja zadania
+              name: Zbadaj przygotowania PT - Przeglądanie zadania
             Explore PT - Making a Plan:
-              name: Eksploruj PT - Sporządzanie planu
+              name: Zgadaj PT - Sporządzanie planu
             Explore PT - Complete the Task:
               name: Zbadaj PT - Wykonaj zadanie
             Participate in a longitudinal study!:
@@ -8165,7 +8166,7 @@ pl:
             csp3_1:
               display_name: 'Rozdział 1: Języki Programowania i Algorytmy'
             cspAssessment:
-              display_name: Ocena Rozdziału
+              display_name: Sprawdzian z rozdziału
             cspSurvey:
               display_name: Ankieta
           lessons:
@@ -8650,24 +8651,24 @@ pl:
             csd5_1:
               display_name: 'Rozdział 1: Reprezentowanie Informacji'
             csd5_2:
-              display_name: 'Rozdział 2: Rozwiązywanie Problemów z Danymi'
+              display_name: 'Rozdział 2: Rozwiązywanie problemów z danymi'
           lessons:
             Representation Matters:
               name: Przedstawienie ma znaczenie
             Patterns and Representation:
-              name: Wzorce i przedstawienie
+              name: Wzorce i reprezentacje
             ASCII and Binary Representation:
-              name: ASCII i zapis binarny
+              name: ASCII i reprezentacja binarna
             Representing Images:
-              name: Przedstawianie obrazków
+              name: Reprezentowanie obrazów
             Representing Numbers:
               name: Reprezentacja liczb
             8-bit Numbers:
               name: Liczby 8 bitowe
             Combining Representations:
-              name: Łączenie przedstawień
+              name: Łączenie reprezentacji
             Project - Create a Representation:
-              name: Projekt - Twórz przedstawienie
+              name: Projekt - Twórz reprezentację
             Problem Solving and Data:
               name: Rozwiązywanie problemów i dane
             Making Decisions with Data:
@@ -8771,7 +8772,7 @@ pl:
             csp3_1:
               display_name: 'Rozdział 1: Języki Programowania i Algorytmy'
             cspAssessment:
-              display_name: Ocena Rozdziału
+              display_name: Sprawdzian z rozdziału
           lessons:
             The Need For Programming Languages:
               name: Potrzeba języków programowania
@@ -8943,9 +8944,9 @@ pl:
             new stage:
               name: nowy etap
             Explore PT Prep - Reviewing the Task:
-              name: Eksploracja przygotowania PT - Weryfikacja zadania
+              name: Zbadaj przygotowania PT - Przeglądanie zadania
             Explore PT - Making a Plan:
-              name: Eksploruj PT - Sporządzanie planu
+              name: Zgadaj PT - Sporządzanie planu
             Explore PT - Complete the Task:
               name: Zbadaj PT - Wykonaj zadanie
             Tech Setup - Your AP Digital Portfolio and Other Tools:
@@ -8976,11 +8977,11 @@ pl:
             Tech Setup - Your AP Digital Portfolio and Other Tools:
               name: Układ techniczny - Twoje cyfrowe portfolio AP i inne narzędzia
             Create PT Prep - Reviewing the Task:
-              name: Twórz przygotowanie PT - Weryfikacja zadania
+              name: Utwórz przygotowanie PT - Przeglądanie zadania
             Create PT Prep - Making a Plan:
-              name: Twórz przygotowanie PT - Sporządzanie planu
+              name: Utwórz przygotowanie PT - Sporządzanie planu
             Create PT - Complete the Task:
-              name: Twórz PT - Wykonaj zadanie
+              name: Utwórz PT - Wykonaj zadanie
             Post-Course Survey:
               name: Ankieta po odbyciu kursu
         csp3-reovery:
@@ -9931,7 +9932,7 @@ pl:
                 nasiono. Celem zajęć jest tutaj budowanie umiejętności przenoszenia
                 rzeczywistych sytuacji na scenariusze online i odwrotnie. \r"
             Learn to Drag and Drop:
-              name: Nauka metody "przeciągnij i upuść"
+              name: Nauka metody przeciągać i upuszczać
               description_teacher: Ta lekcja da uczniom wyobrażenie, czego się spodziewać
                 po wejściu do laboratorium komputerowego. Zaczyna się od krótkiej
                 dyskusji wprowadzającej ich do zachowania się w laboratorium komputerowym,
@@ -10171,7 +10172,7 @@ pl:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algorytmy z życia wzięte: sadź nasiona'
             Learn to Drag and Drop:
-              name: Nauka metody "przeciągnij i upuść"
+              name: Nauka metody przeciągać i upuszczać
             Your Digital Footprint:
               name: Twój cyfrowy ślad
             'Programming: My Robotic Friends':
@@ -10485,7 +10486,7 @@ pl:
             Making Music:
               name: Tworzenie muzyki
             Arrays and For Loops:
-              name: Tablice i pętle for
+              name: Tablice i pętle "dla"
             Accelerometer:
               name: Akcelerometr
             Functions with Parameters:
@@ -11112,7 +11113,7 @@ pl:
                 w ramach procesu, aby zamieścić je na plakatach, których będzie używany
                 w trakcie realizacji tej części oraz w trakcie roku. '
             Exploring Problem Solving:
-              name: Odkrywanie rozwiązywania problemów
+              name: Zgłębianie rozwiązywania problemów
               description_student: 'Na tej lekcji klasa stosuje proces rozwiązywania
                 problemu do trzech różnych problemów: wyszukiwania słowa, rozmieszczenia
                 gości przy stole na przyjęciu urodzinowym oraz planowania wycieczki.
@@ -11584,7 +11585,7 @@ pl:
             csd5_1:
               display_name: 'Rozdział 1: Reprezentowanie Informacji'
             csd5_2:
-              display_name: 'Rozdział 2: Rozwiązywanie Problemów z Danymi'
+              display_name: 'Rozdział 2: Rozwiązywanie problemów z danymi'
             cspSurvey:
               display_name: Ankieta
           lessons:
@@ -11610,7 +11611,7 @@ pl:
                 danych dotyczących posiłku wpłynęły na sposób, w jaki uczniowie są
                 w stanie rozwiązywać różne problemy.
             Patterns and Representation:
-              name: Wzorce i przedstawienie
+              name: Wzorce i reprezentacje
               description_student: Na tej lekcji przyjrzymy się bliżej temu, co jest
                 potrzebne do utworzenia systemu reprezentacji. Grupy tworzą systemy,
                 które mogą reprezentować dowolna literę alfabetu używając do tego
@@ -11635,7 +11636,7 @@ pl:
                 skutecznych rozwiązań problemu, ale ważne jest to, aby każdy stosował
                 ten sam arbitralny system do komunikacji.
             ASCII and Binary Representation:
-              name: ASCII i zapis binarny
+              name: ASCII i reprezentacja binarna
               description_student: Ta lekcja wprowadza formalny system binarny na
                 potrzeby kodowania informacji, system ASCII do przedstawiania liter
                 i innych znaków. Na początku lekcji nauczyciel  wprowadza fakt, że
@@ -11653,7 +11654,7 @@ pl:
                 z użyciem ASCII. Odbywająca się na końcu lekcji rozmowa podsumowująca
                 pomaga syntetyzować kluczowe cele edukacyjne zajęć.
             Representing Images:
-              name: Przedstawianie obrazków
+              name: Reprezentowanie obrazów
               description_student: Ta lekcja stanowi kontynuację badania nad systemami
                 reprezentacji binarnej, tym razem z obrazkami. Klasie wprowadza się
                 koncepcję dzielenia obrazków na kwadraciki lub "piksele", które można
@@ -11703,7 +11704,7 @@ pl:
                 notki tego partnera. Zajęcia kończą się rozmową na temat znaczenia
                 bezpieczeństwa zarówno w wymiarze fizycznym, jak i cyfrowym.
             Combining Representations:
-              name: Łączenie przedstawień
+              name: Łączenie reprezentacji
               description_student: Ta lekcja łączy w sobie trzy typy systemów reprezentacji
                 binarnej (znaki ASCII, liczba binarna i obrazki), aby umożliwić kodowanie
                 bardziej złożonych typów informacji w zapisie. Po zobaczeniu serii
@@ -11719,7 +11720,7 @@ pl:
                 który jest używany, jak i znaczenie zakodowanych informacji. Potem
                 mogą odkodować zapis przedstawiający zwierzę w oparciu o daną strukturę.
             Project - Create a Representation:
-              name: Projekt - Twórz przedstawienie
+              name: Projekt - Twórz reprezentację
               description_student: Klasa projektuje strukturę do przedstawienia ich
                 idealnego dnia używając systemów reprezentacji binarnej, o której
                 uczyła się w ramach tego rozdziału. Po podjęciu decyzji, które informacje
@@ -11905,7 +11906,7 @@ pl:
             csp2_1_2018:
               display_name: 'Jednostka 2: Cyfrowe informacje'
             cspAssessment:
-              display_name: Ocena Rozdziału
+              display_name: Sprawdzian z rozdziału
           lessons:
             Bytes and File Sizes:
               name: Bajty i rozmiary plików
@@ -11956,7 +11957,7 @@ pl:
             csp3_1_2018:
               display_name: 'Jednostka 3: Wprowadzenie do programowania'
             cspAssessment:
-              display_name: Ocena Rozdziału
+              display_name: Sprawdzian z rozdziału
             cspSurvey:
               display_name: Ankieta
           lessons:
@@ -12008,9 +12009,9 @@ pl:
               display_name: Ankieta
           lessons:
             Explore PT Prep - Reviewing the Task:
-              name: Eksploracja przygotowania PT - Weryfikacja zadania
+              name: Zbadaj przygotowania PT - Przeglądanie zadania
             Explore PT - Making a Plan:
-              name: Eksploruj PT - Sporządzanie planu
+              name: Zgadaj PT - Sporządzanie planu
             Explore PT - Complete the Task:
               name: Zbadaj PT - Wykonaj zadanie
             Mid-Year Survey:
@@ -12034,11 +12035,11 @@ pl:
               display_name: Ankieta
           lessons:
             Create PT Prep - Reviewing the Task:
-              name: Twórz przygotowanie PT - Weryfikacja zadania
+              name: Utwórz przygotowanie PT - Przeglądanie zadania
             Create PT Prep - Making a Plan:
-              name: Twórz przygotowanie PT - Sporządzanie planu
+              name: Utwórz przygotowanie PT - Sporządzanie planu
             Create PT - Complete the Task:
-              name: Twórz PT - Wykonaj zadanie
+              name: Utwórz PT - Wykonaj zadanie
             CS Principles Post-Course Survey:
               name: Ankieta po kursie "Zasady informatyki"
         csp4-2018:
@@ -12056,7 +12057,7 @@ pl:
             csp4_1_2018:
               display_name: 'Dział 4: Ważne dane i prywatność'
             cspAssessment:
-              display_name: Ocena Rozdziału
+              display_name: Sprawdzian z rozdziału
             cspSurvey:
               display_name: Ankieta
           lessons:
@@ -12126,11 +12127,11 @@ pl:
             User Input and Strings:
               name: Dane użytkownika oraz łańcuchy
             '"If" Statements Unplugged':
-              name: Instrukcje "Jeśli" w trybie "unplugged" - bez komputera
+              name: Instrukcje "jeśli" bez komputera
             Boolean Expressions and "If" Statements:
-              name: Wyrażenie boolowskie i instrukcje "if"
+              name: Wyrażenie boolowskie i instrukcje "jeśli"
             '"if-else-if" and Conditional Logic':
-              name: '"if-else-if" oraz logika warunkowa'
+              name: '"jeśli/w przeciwnym razie" oraz logika warunkowa'
             'Building an App: Color Sleuth':
               name: 'Budowanie aplikacji: Detektyw kolorów'
             Unit 5 Assessment 2:
@@ -12156,7 +12157,8 @@ pl:
             'Practice PT: Create':
               name: 'Praktyka PT: Twórz'
             Unit 5 Assessment 5 - AP Pseudocode Practice Questions:
-              name: Część 5 Ocena 5 - Pytania dotyczące praktyki pseudokodu AP
+              name: Jednostka 5 Sprawdzian 5 - Pytania dotyczące praktyki pseudokodu
+                AP
             Participate in a longitudinal study!:
               name: Weź udział w badaniu podłużnym!
             Mid-Year Survey:
@@ -12773,7 +12775,7 @@ pl:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algorytmy z życia wzięte: sadź nasiona'
             Learn to Drag and Drop:
-              name: Nauka metody "przeciągnij i upuść"
+              name: Nauka metody przeciągać i upuszczać
             'Online Safety: Your Digital Footprint':
               name: 'Bezpieczeństwo online: Twój cyfrowy ślad'
             'Programming: My Robotic Friends':
@@ -14096,7 +14098,7 @@ pl:
                 w ramach procesu, aby zamieścić je na plakatach, których będzie używany
                 w trakcie realizacji tej części oraz w trakcie roku. '
             Exploring Problem Solving:
-              name: Odkrywanie rozwiązywania problemów
+              name: Zgłębianie rozwiązywania problemów
               description_student: 'Na tej lekcji klasa stosuje proces rozwiązywania
                 problemu do trzech różnych problemów: wyszukiwania słowa, rozmieszczenia
                 gości przy stole na przyjęciu urodzinowym oraz planowania wycieczki.
@@ -14605,7 +14607,7 @@ pl:
                 pętle tworzą wzorce. Pod koniec tego etapu uczniowie będą mieli możliwość
                 tworzenia własnych obrazów za pomocą pętli.
             Learn to Drag and Drop:
-              name: Nauka metody "przeciągnij i upuść"
+              name: Nauka metody przeciągać i upuszczać
               description_student: Kliknij i przeciągnij, by ukończyć łamigłówki.
               description_teacher: Ta lekcja da uczniom wyobrażenie, czego się spodziewać
                 po wejściu do laboratorium komputerowego. Zaczyna się od krótkiej
@@ -14825,7 +14827,7 @@ pl:
             Spelling Bee:
               name: Literująca Pszczółka
             Learn to Drag and Drop:
-              name: Nauka metody "przeciągnij i upuść"
+              name: Nauka metody przeciągać i upuszczać
             Programming in Maze:
               name: Programowanie z Angry Birds
             Programming in Harvester:
@@ -15494,7 +15496,7 @@ pl:
             csd4_2:
               display_name: 'Rozdział 2: Prototypowanie aplikacji'
             csd5_2:
-              display_name: 'Rozdział 2: Rozwiązywanie Problemów z Danymi'
+              display_name: 'Rozdział 2: Rozwiązywanie problemów z danymi'
             cspSurvey:
               display_name: Ankieta
           lessons:
@@ -15787,7 +15789,7 @@ pl:
             csd5_1:
               display_name: 'Rozdział 1: Reprezentowanie Informacji'
             csd5_2:
-              display_name: 'Rozdział 2: Rozwiązywanie Problemów z Danymi'
+              display_name: 'Rozdział 2: Rozwiązywanie problemów z danymi'
             cspSurvey:
               display_name: Ankieta
           lessons:
@@ -15813,7 +15815,7 @@ pl:
                 danych dotyczących posiłku wpłynęły na sposób, w jaki uczniowie są
                 w stanie rozwiązywać różne problemy.
             Patterns and Representation:
-              name: Wzorce i przedstawienie
+              name: Wzorce i reprezentacje
               description_student: Na tej lekcji przyjrzymy się bliżej temu, co jest
                 potrzebne do utworzenia systemu reprezentacji. Grupy tworzą systemy,
                 które mogą reprezentować dowolna literę alfabetu używając do tego
@@ -15838,7 +15840,7 @@ pl:
                 skutecznych rozwiązań problemu, ale ważne jest to, aby każdy stosował
                 ten sam arbitralny system do komunikacji.
             ASCII and Binary Representation:
-              name: ASCII i zapis binarny
+              name: ASCII i reprezentacja binarna
               description_student: Ta lekcja wprowadza formalny system binarny na
                 potrzeby kodowania informacji, system ASCII do przedstawiania liter
                 i innych znaków. Na początku lekcji nauczyciel  wprowadza fakt, że
@@ -15856,7 +15858,7 @@ pl:
                 z użyciem ASCII. Odbywająca się na końcu lekcji rozmowa podsumowująca
                 pomaga syntetyzować kluczowe cele edukacyjne zajęć.
             Representing Images:
-              name: Przedstawianie obrazków
+              name: Reprezentowanie obrazów
               description_student: Ta lekcja stanowi kontynuację badania nad systemami
                 reprezentacji binarnej, tym razem z obrazkami. Klasie wprowadza się
                 koncepcję dzielenia obrazków na kwadraciki lub "piksele", które można
@@ -15906,7 +15908,7 @@ pl:
                 notki tego partnera. Zajęcia kończą się rozmową na temat znaczenia
                 bezpieczeństwa zarówno w wymiarze fizycznym, jak i cyfrowym.
             Combining Representations:
-              name: Łączenie przedstawień
+              name: Łączenie reprezentacji
               description_student: Ta lekcja łączy w sobie trzy typy systemów reprezentacji
                 binarnej (znaki ASCII, liczba binarna i obrazki), aby umożliwić kodowanie
                 bardziej złożonych typów informacji w zapisie. Po zobaczeniu serii
@@ -15922,7 +15924,7 @@ pl:
                 który jest używany, jak i znaczenie zakodowanych informacji. Potem
                 mogą odkodować zapis przedstawiający zwierzę w oparciu o daną strukturę.
             Project - Create a Representation:
-              name: Projekt - Twórz przedstawienie
+              name: Projekt - Twórz reprezentację
               description_student: Klasa projektuje strukturę do przedstawienia ich
                 idealnego dnia używając systemów reprezentacji binarnej, o której
                 uczyła się w ramach tego rozdziału. Po podjęciu decyzji, które informacje
@@ -16134,7 +16136,7 @@ pl:
             Making Music:
               name: Tworzenie muzyki
             Arrays and For Loops:
-              name: Tablice i pętle for
+              name: Tablice i pętle "dla"
             Accelerometer:
               name: Akcelerometr
             Functions with Parameters:
@@ -16306,7 +16308,7 @@ pl:
             csp2_1_2018:
               display_name: 'Jednostka 2: Cyfrowe informacje'
             cspAssessment:
-              display_name: Ocena Rozdziału
+              display_name: Sprawdzian z rozdziału
             cspSurvey:
               display_name: Ankieta
           lessons:
@@ -16333,7 +16335,7 @@ pl:
             csp3_1_2018:
               display_name: 'Jednostka 3: Wprowadzenie do programowania'
             cspAssessment:
-              display_name: Ocena Rozdziału
+              display_name: Sprawdzian z rozdziału
             cspSurvey:
               display_name: Ankieta
           lessons:
@@ -16378,7 +16380,7 @@ pl:
             csp4_1_2018:
               display_name: 'Dział 4: Ważne dane i prywatność'
             cspAssessment:
-              display_name: Ocena Rozdziału
+              display_name: Sprawdzian z rozdziału
             cspSurvey:
               display_name: Ankieta
           lessons:
@@ -16444,11 +16446,11 @@ pl:
             User Input and Strings:
               name: Dane użytkownika oraz łańcuchy
             '"If" Statements Unplugged':
-              name: Instrukcje "Jeśli" w trybie "unplugged" - bez komputera
+              name: Instrukcje "jeśli" bez komputera
             Boolean Expressions and "If" Statements:
-              name: Wyrażenie boolowskie i instrukcje "if"
+              name: Wyrażenie boolowskie i instrukcje "jeśli"
             '"if-else-if" and Conditional Logic':
-              name: '"if-else-if" oraz logika warunkowa'
+              name: '"jeśli/w przeciwnym razie" oraz logika warunkowa'
             'Building an App: Color Sleuth':
               name: 'Budowanie aplikacji: Detektyw kolorów'
             Unit 5 Assessment 2:
@@ -16472,7 +16474,8 @@ pl:
             Unit 5 Assessment 4:
               name: Jednostka 5 Sprawdzian 4
             Unit 5 Assessment 5 - AP Pseudocode Practice Questions:
-              name: Część 5 Ocena 5 - Pytania dotyczące praktyki pseudokodu AP
+              name: Jednostka 5 Sprawdzian 5 - Pytania dotyczące praktyki pseudokodu
+                AP
             Mid-Year Survey:
               name: Badanie w trakcie roku
             CS Principles Post Course survey:
@@ -16495,9 +16498,9 @@ pl:
               display_name: Ankieta
           lessons:
             Explore PT Prep - Reviewing the Task:
-              name: Eksploracja przygotowania PT - Weryfikacja zadania
+              name: Zbadaj przygotowania PT - Przeglądanie zadania
             Explore PT - Making a Plan:
-              name: Eksploruj PT - Sporządzanie planu
+              name: Zgadaj PT - Sporządzanie planu
             Explore PT - Complete the Task:
               name: Zbadaj PT - Wykonaj zadanie
             Mid-Year Survey:
@@ -16521,11 +16524,11 @@ pl:
               display_name: Ankieta
           lessons:
             Create PT Prep - Reviewing the Task:
-              name: Twórz przygotowanie PT - Weryfikacja zadania
+              name: Utwórz przygotowanie PT - Przeglądanie zadania
             Create PT Prep - Making a Plan:
-              name: Twórz przygotowanie PT - Sporządzanie planu
+              name: Utwórz przygotowanie PT - Sporządzanie planu
             Create PT - Complete the Task:
-              name: Twórz PT - Wykonaj zadanie
+              name: Utwórz PT - Wykonaj zadanie
             CS Principles Post Course survey:
               name: Ankieta po kursie "Zasady informatyki"
         csppostap-2019:
@@ -16669,7 +16672,7 @@ pl:
             'Lesson 14: Unit Assessment':
               name: 'Lekcja 14: Sprawdzian jednostki'
             Representing Information:
-              name: Przedstawianie informacji
+              name: Reprezentowanie informacji
             Representing Text:
               name: Reprezentowanie Tekstu
             Circle Square Patterns:
@@ -17706,7 +17709,7 @@ pl:
                 w ramach procesu, aby zamieścić je na plakatach, których będzie używany
                 w trakcie realizacji tej części oraz w trakcie roku. '
             Exploring Problem Solving:
-              name: Odkrywanie rozwiązywania problemów
+              name: Zgłębianie rozwiązywania problemów
               description_student: 'Na tej lekcji klasa stosuje proces rozwiązywania
                 problemu do trzech różnych problemów: wyszukiwania słowa, rozmieszczenia
                 gości przy stole na przyjęciu urodzinowym oraz planowania wycieczki.
@@ -19467,7 +19470,7 @@ pl:
             Create PT - Make a Plan:
               name: Twórz PT - Sporządź plan
             Create PT - Complete the Task:
-              name: Twórz PT - Wykonaj zadanie
+              name: Utwórz PT - Wykonaj zadanie
         csp4-2020:
           title: CSP Jednostka 4 - Zmienne, instrukcje warunkowe i funkcje ('20-'21)
           lesson_groups:
@@ -20160,7 +20163,7 @@ pl:
                 których będzie używany w trakcie realizacji tej części oraz w trakcie
                 roku. "
             Exploring Problem Solving:
-              name: Odkrywanie rozwiązywania problemów
+              name: Zgłębianie rozwiązywania problemów
               description_student: "**Pytanie dnia: Jak możemy stosować proces rozwiązywania
                 problemów do wielu różnych rodzajów problemów?**\r\n\r\nNa tej lekcji
                 klasa stosuje proces rozwiązywania problemu do trzech różnych problemów:
@@ -20509,7 +20512,7 @@ pl:
             csd4_2:
               display_name: 'Rozdział 2: Prototypowanie aplikacji'
             csd5_2:
-              display_name: 'Rozdział 2: Rozwiązywanie Problemów z Danymi'
+              display_name: 'Rozdział 2: Rozwiązywanie problemów z danymi'
             cspSurvey:
               display_name: Ankieta
           lessons:
@@ -20802,7 +20805,7 @@ pl:
             csd5_1:
               display_name: 'Rozdział 1: Reprezentowanie Informacji'
             csd5_2:
-              display_name: 'Rozdział 2: Rozwiązywanie Problemów z Danymi'
+              display_name: 'Rozdział 2: Rozwiązywanie problemów z danymi'
             cspSurvey:
               display_name: Ankieta
           lessons:
@@ -20828,7 +20831,7 @@ pl:
                 danych dotyczących posiłku wpłynęły na sposób, w jaki uczniowie są
                 w stanie rozwiązywać różne problemy.
             Patterns and Representation:
-              name: Wzorce i przedstawienie
+              name: Wzorce i reprezentacje
               description_student: Na tej lekcji przyjrzymy się bliżej temu, co jest
                 potrzebne do utworzenia systemu reprezentacji. Grupy tworzą systemy,
                 które mogą reprezentować dowolna literę alfabetu używając do tego
@@ -20853,7 +20856,7 @@ pl:
                 skutecznych rozwiązań problemu, ale ważne jest to, aby każdy stosował
                 ten sam arbitralny system do komunikacji.
             ASCII and Binary Representation:
-              name: ASCII i zapis binarny
+              name: ASCII i reprezentacja binarna
               description_student: Ta lekcja wprowadza formalny system binarny na
                 potrzeby kodowania informacji, system ASCII do przedstawiania liter
                 i innych znaków. Na początku lekcji nauczyciel  wprowadza fakt, że
@@ -20871,7 +20874,7 @@ pl:
                 z użyciem ASCII. Odbywająca się na końcu lekcji rozmowa podsumowująca
                 pomaga syntetyzować kluczowe cele edukacyjne zajęć.
             Representing Images:
-              name: Przedstawianie obrazków
+              name: Reprezentowanie obrazów
               description_student: Ta lekcja stanowi kontynuację badania nad systemami
                 reprezentacji binarnej, tym razem z obrazkami. Klasie wprowadza się
                 koncepcję dzielenia obrazków na kwadraciki lub "piksele", które można
@@ -20921,7 +20924,7 @@ pl:
                 notki tego partnera. Zajęcia kończą się rozmową na temat znaczenia
                 bezpieczeństwa zarówno w wymiarze fizycznym, jak i cyfrowym.
             Combining Representations:
-              name: Łączenie przedstawień
+              name: Łączenie reprezentacji
               description_student: Ta lekcja łączy w sobie trzy typy systemów reprezentacji
                 binarnej (znaki ASCII, liczba binarna i obrazki), aby umożliwić kodowanie
                 bardziej złożonych typów informacji w zapisie. Po zobaczeniu serii
@@ -20937,7 +20940,7 @@ pl:
                 który jest używany, jak i znaczenie zakodowanych informacji. Potem
                 mogą odkodować zapis przedstawiający zwierzę w oparciu o daną strukturę.
             Project - Create a Representation:
-              name: Projekt - Twórz przedstawienie
+              name: Projekt - Twórz reprezentację
               description_student: Klasa projektuje strukturę do przedstawienia ich
                 idealnego dnia używając systemów reprezentacji binarnej, o której
                 uczyła się w ramach tego rozdziału. Po podjęciu decyzji, które informacje
@@ -21151,7 +21154,7 @@ pl:
             Making Music:
               name: Tworzenie muzyki
             Arrays and For Loops:
-              name: Tablice i pętle for
+              name: Tablice i pętle "dla"
             Accelerometer:
               name: Akcelerometr
             Functions with Parameters:
@@ -21776,7 +21779,7 @@ pl:
                 się również, że mogą odwiedzać wiele ciekawych miejsc w Internecie,
                 ale muszą przestrzegać pewnych zasad, aby zachować bezpieczeństwo.
             Learn to Drag and Drop:
-              name: Nauka metody "przeciągnij i upuść"
+              name: Nauka metody przeciągać i upuszczać
               description_student: Kliknij i przeciągnij, by ukończyć łamigłówki.
               description_teacher: Ta lekcja da uczniom wyobrażenie, czego się spodziewać
                 po wejściu do laboratorium komputerowego. Zaczyna się od krótkiej
@@ -23066,7 +23069,7 @@ pl:
               display_name: Zdarzenia
           lessons:
             Learn to Drag and Drop:
-              name: Nauka metody "przeciągnij i upuść"
+              name: Nauka metody przeciągać i upuszczać
               description_teacher: Ta lekcja da uczniom wyobrażenie, czego się spodziewać
                 po wejściu do laboratorium komputerowego. Zaczyna się od krótkiej
                 dyskusji wprowadzającej ich do zachowania się w laboratorium komputerowym,
@@ -23158,7 +23161,7 @@ pl:
             Welcome to CSP:
               name: Witamy w CSP
             Representing Information:
-              name: Przedstawianie informacji
+              name: Reprezentowanie informacji
             Circle Square Patterns:
               name: Otocz kółkiem wzorce kwadratu
             Binary Numbers:
@@ -23269,7 +23272,7 @@ pl:
             Create PT - Make a Plan:
               name: Twórz PT - Sporządź plan
             Create PT - Complete the Task:
-              name: Twórz PT - Wykonaj zadanie
+              name: Utwórz PT - Wykonaj zadanie
         csp9-2020:
           title: CSP Jednostka 9 - Dane ('20-'21)
           lesson_groups:
@@ -23633,11 +23636,11 @@ pl:
             User Input and Strings:
               name: Dane użytkownika oraz łańcuchy
             '"If" Statements Unplugged':
-              name: Instrukcje "Jeśli" w trybie "unplugged" - bez komputera
+              name: Instrukcje "jeśli" bez komputera
             Boolean Expressions and "If" Statements:
-              name: Wyrażenie boolowskie i instrukcje "if"
+              name: Wyrażenie boolowskie i instrukcje "jeśli"
             '"if-else-if" and Conditional Logic':
-              name: '"if-else-if" oraz logika warunkowa'
+              name: '"jeśli/w przeciwnym razie" oraz logika warunkowa'
             'Building an App: Color Sleuth':
               name: 'Budowanie aplikacji: Detektyw kolorów'
             Unit 5 Assessment 2:
@@ -23661,7 +23664,8 @@ pl:
             Unit 5 Assessment 4:
               name: Jednostka 5 Sprawdzian 4
             Unit 5 Assessment 5 - AP Pseudocode Practice Questions:
-              name: Część 5 Ocena 5 - Pytania dotyczące praktyki pseudokodu AP
+              name: Jednostka 5 Sprawdzian 5 - Pytania dotyczące praktyki pseudokodu
+                AP
             CS Principles Post Course survey:
               name: Ankieta po kursie "Zasady informatyki"
             Intro to App Lab:
@@ -23923,7 +23927,8 @@ pl:
             Unit 5 Assessment 4:
               name: Jednostka 5 Sprawdzian 4
             Unit 5 Assessment 5 - AP Pseudocode Practice Questions:
-              name: Część 5 Ocena 5 - Pytania dotyczące praktyki pseudokodu AP
+              name: Jednostka 5 Sprawdzian 5 - Pytania dotyczące praktyki pseudokodu
+                AP
         k5-onlinepd-2020:
           description: Dowiedz się, jak uczyć informatyki korzystając z Podstaw Informatyki
             Code.org z pomocą tego bezpłatnego kursu internetowego, przerabianego
@@ -24619,4 +24624,20 @@ pl:
           description_short: Poziomy, które są bezpośrednio powiązane z planami lekcji,
             ale nie pojawiają się w innych skryptach.
         ml-playground:
+          lessons:
+            USE Programs:
+              name: Programy USE (tylko AppLab)
+            MODIFY Programs:
+              name: Programy MODIFY (AppLab -> Widget -> AppLab)
           description_short: Jednostka ML/AI
+        outbreak:
+          lessons:
+            Virus Simulation for Code Bytes:
+              name: Symulowanie wirusa
+          lesson_groups:
+            outbreak:
+              display_name: Symulowanie przerwania
+          title: Przerwanie
+          description_short: Użyj Sprite Lab, aby zaprogramować symulację epidemii
+            wirusa.
+          description: Użyj Sprite Lab, aby zaprogramować symulację epidemii wirusa.

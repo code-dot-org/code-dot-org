@@ -117,7 +117,9 @@ sk:
       4:
         text: "Pre napísanie kódu pre toto vytiahnime von náš blok \"if\" a vložme doňho bloky \"zabočiť doľava\"."
       5:
+        text: "Teraz, keď nad neho položíme blok „posuň sa dopredu“ a okolo všetkého dáme blok „opakuj“, zombie skontroluje zakaždým, keď sa pohne, či existuje cesta vľavo a otočí sa. Príkaz „opakuj“ je kritický, aby sa pri každom kroku skontrolovalo otočenie."
       6:
+        text: "Podmienky Ak sú v informatike skutočne dôležité. Jedným z prvých programov, ktoré som napísal, bola hra typu „piškvorky“, a tam bola podmienka Ak, ​​ktorá hovorila, AK sa druhá osoba chystá vyhrať, blokuj miesto, ktoré jej umožní vyhrať."
       7:
         text: "Zabávaj sa používaním \"if\" bloku!"
     if_else:

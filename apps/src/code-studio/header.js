@@ -13,6 +13,7 @@ import {
   setShowTryAgainDialog
 } from './headerRedux';
 import {useDbProgress} from './progressRedux';
+import clientState from './clientState';
 
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -77,6 +78,7 @@ header.build = function(
   const store = getStore();
   if (progressData) {
     store.dispatch(useDbProgress());
+    clientState.clearProgress();
   }
   scriptData = scriptData || {};
   lessonGroupData = lessonGroupData || {};

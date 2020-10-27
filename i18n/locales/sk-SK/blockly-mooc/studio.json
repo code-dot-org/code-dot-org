@@ -34,7 +34,7 @@
   "bird": "vták",
   "calloutPutCommandsHereRunStart": "Príkazy umiestnené sem sa spustia pri spustení programu",
   "calloutBlocklyPlaceGoUpHere": "Umiestni blok \"choď hore\" aby si šiel hore",
-  "calloutBlocklyPlaceMoveUpHere": "Aby si sa pohol dohora použi blok \"posuň robota hore\"",
+  "calloutBlocklyPlaceMoveUpHere": "Pre pohyb dohora použi blok \"posuň droida hore\"",
   "calloutClickEvents": "Kliknutím na tlačidlo Udalosti (Events) zobrazíš bloky v tejto skupine.",
   "calloutUseArrowButtons": "Stlačením týchto tlačidiel alebo šípok na klávesnici môžeš pohybovať postavami",
   "calloutUseArrowButtonsAutoSteer": "Skryli sme kód ktorý si napísal, ale naďalej môžeš na pohyb používať šípky",

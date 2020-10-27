@@ -32,7 +32,26 @@ describe('LessonOverview', () => {
         displayName: 'Lesson Name',
         overview: 'Lesson Overview',
         purpose: 'The purpose of the lesson is for people to learn',
-        preparation: '- One'
+        preparation: '- One',
+        resources: {
+          Teacher: [
+            {
+              key: 'teacher-resource',
+              name: 'Teacher Resource',
+              url: 'fake.url',
+              type: 'Slides'
+            }
+          ],
+          Student: [
+            {
+              key: 'student-resource',
+              name: 'Student Resource',
+              url: 'fake.url',
+              download_url: 'download.fake.url',
+              type: 'Activity Guide'
+            }
+          ]
+        }
       },
       activities: [],
       announcements: [],
@@ -59,6 +78,8 @@ describe('LessonOverview', () => {
       'The purpose of the lesson is for people to learn'
     );
     expect(safeMarkdowns.at(2).props().markdown).to.contain('- One');
+
+    expect(wrapper.find('LessonAgenda').length).to.equal(1);
   });
 
   it('renders correct number of activities', () => {
@@ -95,5 +116,11 @@ describe('LessonOverview', () => {
       />
     );
     assert.equal(wrapper.find('Announcements').props().announcements.length, 1);
+  });
+
+  it('displays the resources', () => {
+    const wrapper = shallow(<LessonOverview {...defaultProps} />);
+    const resourceSection = wrapper.find('#resource-section');
+    assert.equal(resourceSection.find('ul').length, 2);
   });
 });
