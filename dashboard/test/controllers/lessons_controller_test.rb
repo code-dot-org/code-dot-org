@@ -391,6 +391,22 @@ class LessonsControllerTest < ActionController::TestCase
     refute @lesson.resources.include?(resource_to_remove)
   end
 
+  test 'lesson is not partially updated if any data is bad' do
+    resource = create :resource
+
+    sign_in @levelbuilder
+
+    new_update_params = @update_params.merge({resources: [resource.key].to_json})
+    new_update_params['activities'] = [{id: 'bogus'}].to_json
+
+    put :update, params: new_update_params
+    assert_response :not_acceptable
+
+    @lesson.reload
+    assert_equal 0, @lesson.resources.count
+    assert_equal 'lesson overview', @lesson.overview
+  end
+
   test 'update lesson with new objectives' do
     sign_in @levelbuilder
     new_update_params = @update_params.merge({objectives: [{id: nil, description: 'description'}].to_json})
