@@ -74,7 +74,10 @@ class SendLessonDialog extends Component {
   renderShareToGoogleRow() {
     return (
       <div style={styles.row}>
-        <GoogleClassroomShareButton height={48} url={this.props.lessonUrl} />
+        <GoogleClassroomShareButton
+          height={styles.button.height}
+          url={this.props.lessonUrl}
+        />
       </div>
     );
   }
