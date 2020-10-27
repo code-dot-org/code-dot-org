@@ -10,7 +10,7 @@ title: Hour of Code - So planen Sie Ihre virtuelle Veranstaltung
 
 ***
 
-Obwohl die Hour of Code traditionell in Klassenzimmern auf der ganzen Welt stattfindet, müssen Sie nicht dort anwesend sein, um den Spaß mitzumachen! Sie können eine interaktive und spannende Hour of Code für SchülerInnen auch virtuell moderieren. Verwenden Sie dafür unsere Empfehlungen.  Take a look at our <a href="https://hourofcode.com/files/participation-guide-virtual.pdf">guide for virtual events</a> if you still have questions.
+Obwohl die Hour of Code traditionell in Klassenzimmern auf der ganzen Welt stattfindet, müssen Sie nicht dort anwesend sein, um den Spaß mitzumachen! Sie können eine interaktive und spannende Hour of Code für SchülerInnen auch virtuell moderieren. Verwenden Sie dafür unsere Empfehlungen.  Take a look at our [guide for virtual events]({{ localized_files/participation_guide_virtual }}) if you still have questions.
 
 <br><br>
 
@@ -41,9 +41,9 @@ Es kann für Sie zweckdienlich sein, im Voraus ein bis drei 3 Tutorien zu ihrer 
 
 Wenn von Ihrer Klasse erwartet wird, dass sie ihre Aktivität unmittelbar nach Beginn Ihrer Veranstaltung beginnt, könnten Sie einen virtuellen Konferenzraum, eine Chat-Plattform oder ein anderes Kommunikationsmittel offenhalten, damit Sie die SchülerInnen bei Bedarf mit Fragen kontaktieren können.
 
-<stark x-id="1">Hour of Code Aktivität gemeinsam online</stark><br> Wenn Sie es vorziehen, dass Ihre TeilnehmerInnen während der gesamten Dauer Ihrer Veranstaltung an derselben Videokonferenz teilnehmen, beachten Sie bitte, dass sie immer zwei Fenster geöffnet haben müssen - eines für die Videokonferenzplattform und das andere für die SchülerInnen, damit Sie an ihrer Aktivität arbeiten können.
+**Hour of Code Aktivität gemeinsam online**<br> Wenn Sie es vorziehen, dass Ihre TeilnehmerInnen während der gesamten Dauer Ihrer Veranstaltung an derselben Videokonferenz teilnehmen, beachten Sie bitte, dass sie immer zwei Fenster geöffnet haben müssen - eines für die Videokonferenzplattform und das andere für die SchülerInnen, damit Sie an ihrer Aktivität arbeiten können.
 
-<stark x-id="1">Einbeziehen der Eltern</stark><br> Bei SchülerInnen bis zur 4. Klasse könnten Sie ihre Eltern zu ermutigen, eine Hour of Code zu Hause zu moderieren. Sie können sie dabei mit einigen empfohlenen Tutorials sowie mit dieser hilfreichen <a href="https://hourofcode.com/us/how-to/parents">Anleitung für Eltern</a> unterstützen.
+**Einbeziehen der Eltern**<br> Bei SchülerInnen bis zur 4. Klasse könnten Sie ihre Eltern zu ermutigen, eine Hour of Code zu Hause zu moderieren. Sie können sie dabei mit einigen empfohlenen Tutorials sowie mit dieser hilfreichen <a href="https://hourofcode.com/us/how-to/parents">Anleitung für Eltern</a> unterstützen.
 
 [<img src="/images/fit-600/Marketing//happy-father-and-child-browsing-laptop-in-bedroom-4545778.jpg" />](https://hourofcode.com/us/how-to/parents)
 
@@ -62,7 +62,7 @@ Schauen Sie unten nach Ideen, wie Sie Ihre virtuelle Hour of Code feiern können
 - Erlauben Sie den SchülerInnen, ihre fertigen Projekte mit dem Rest der Klasse zu teilen. Wenn es Ihre Konferenzplattform zulässt, können Sie sie sogar dazu ermutigen, einen Screenshot ihrer Projekte zu machen und diesen als virtuellen Hintergrund zu verwenden!
 - Besprechend Sie, was gelernt wurde: Was haben die SchülerInnen über Informatik oder Technologie gelernt? Was haben sie getan, wenn sie auf ein Problem gestoßen sind, wie haben sie es gelöst?
 - <a href="https://code.org/certificates">Erstellen Sie Zertifikate und verteilen Sie sie</a> an Ihre TeilnehmerInnen
-- Posten Sie Fotos und Videos Ihrer Hour of Code in den Sozialen Medien. Benutzen #HourofCode und @codeorg, damit wir auch Ihren Erfolg hervorheben können!
+- Posten Sie Fotos und Videos Ihrer Hour of Code in den Sozialen Medien. Erwähnen Sie dabei #HourofCode und @codeorg, damit wir Ihren gemeinsamen Erfolg mitfeiern können!
 
 [<img src="/images/fit-600/Marketing/g8TUlHzF.jpeg" />]({{ urls/learn }})
 

@@ -24,7 +24,7 @@ Frå venstre til høgre: *Guvernørar frå Arkensas, Nord-Carolina og Arizona de
 
 ### 1. Les vår info på ei side
 
-See [why computer science education is important](/files/hoc-one-pager.pdf), and how you can help the effort by supporting the Hour of Code.
+See [why computer science education is important]({{ localized_files/hoc_one_pager }}), and how you can help the effort by supporting the Hour of Code.
 
 ### 2. Rekrutter lokale skular og distrikt
 

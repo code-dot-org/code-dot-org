@@ -352,7 +352,7 @@ cs:
       artist: 'Umělec'
       artist_k1: 'Umělec (předškolák)'
       basketball: 'Basketbal'
-      bounce: 'Odraz'
+      bounce: 'Bounce'
       dance: 'Taneční večírek'
       flappy: 'Flappy'
       frozen: 'Frozen'
@@ -564,7 +564,7 @@ cs:
   video_coming_soon: 'Video již brzy!'
   share_code:
     title: "Klepněte na \"Spustit\", abyste viděli svůj program v akci"
-    bounce_og_title: "Zkontrolujte hru Bounce"
+    bounce_og_title: "Podívej se na moji hru"
     flappy_og_title: "Podívej se na moji hru Flappy"
     studio_og_title: "Zkontrolujte svůj Play Lab App"
     check_out_what_i_made: "Zkontrolujte, co jsem udělal"

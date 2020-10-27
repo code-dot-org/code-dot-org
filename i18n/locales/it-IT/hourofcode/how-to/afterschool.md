@@ -1,5 +1,5 @@
 ---
-title: Hour of Code How-to Guide for After-school
+title: Guida pratica all'Ora del Codice per il doposcuola
 ---
 
 {{ signup_button }}
@@ -10,9 +10,9 @@ title: Hour of Code How-to Guide for After-school
 
 Il pensiero computazionale aiuta a coltivare capacità di risoluzione dei problemi, logica e creatività. La tecnologia sta trasformando tutti i settore del pianeta. Gli studenti oggi dovrebbero imparare a creare tecnologia, non solo a usarla. Iniziando presto, avranno le basi per il successo in qualsiasi percorso di carriera del 21° secolo.
 
-Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time. If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
+Provare un'Ora di Codice è un modo semplice e divertente per presentare l'informatica agli studenti, forse per la prima volta. Se hai bisogno di una mano, puoi trovare (solo per gli USA) un [volontario locale]({{ urls/volunteer_local }}) che ti aiuti a svolgere l'Ora del Codice nella tua classe del doposcuola o del tuo club.
 
-### An Hour of Code can also be hosted remotely! To get started, check out our [tips for hosting a virtual Hour of Code event](https://hourofcode.com/us/how-to/virtual).
+### Un'Ora del Codice può anche essere ospitata a distanza! Per iniziare, dai un'occhiata ai nostri [suggerimenti per ospitare un evento virtuale dell'Ora del Codice](https://hourofcode.com/us/how-to/virtual). 
 
 * * *
 
@@ -20,27 +20,27 @@ Trying an Hour of Code is a simple and fun way to introduce students to computer
 
 ## 2. Scegli un'esercitazione
 
-We provide a variety of [fun, hour-long tutorials]({{ urls/learn }}) for participants all ages, created by a variety of partners. [Try them out!]({{ urls/learn }})
+Forniamo una varietà di [ esercitazioni divertenti di un'ora ]({{ urls/learn }}) per partecipanti di tutte le età, creati da diversi partner. [ Provale! ]({{ urls/learn }})
 
-**All Hour of Code tutorials** require minimal prep-time for organizers, and are self-guided - allowing kids to work at their own pace and skill-level.
+**Tutte le esercitazioni dell'Ora del Codice** richiedono un tempo di preparazione minimo per gli organizzatori e sono autoguidate in modo da permettere ai ragazzi di lavorare seguendo il proprio ritmo e livello di abilità.
 
 [![](/images/fit-700/tutorials.png)]({{ urls/learn }})
 
-**Need a lesson plan for your afterschool Hour of Code?** Check out this [template](/files/AfterschoolEducatorLessonPlanOutline.docx)!
+**Ti serve un piano di lavoro per organizzare la tua Ora del Codice nel doposcuola?** Prova ad adattare questo [modello (in inglese)](/files/AfterschoolEducatorLessonPlanOutline.docx)! 
 
 ## 3. Promuovi la tua Ora del Codice
 
-Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage others to host their own events.
+Promuovi la tua Ora del Codice [con questi strumenti]({{ urls/promote }}) e incoraggia altre persone ad ospitare i loro eventi.
 
 ## 4. Pianifica le tue necessità tecnologiche - i computer non sono indispensabili
 
-Il miglior modo per godersi l'Ora del Codice è avere computer connessi a Internet. But you **don’t** need a computer for every child, and you can even do the Hour of Code without a computer at all.
+Il miglior modo per godersi l'Ora del Codice è avere computer connessi a Internet. Tuttavia **non** è necessario un computer per ogni ragazzo e si può addirittura svolgere l'Ora del Codice senza alcun computer.
 
-Esegui dei test sui computer degli studenti per verificare che le esercitazioni funzionino correttamente sui browser utilizzati anche con audio e video. **Have low bandwidth?** Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the unplugged / offline tutorials.
+Esegui dei test sui computer degli studenti per verificare che le esercitazioni funzionino correttamente sui browser utilizzati anche con audio e video. **C'è una scarsa connessione ad Internet?** Pianifica di mostrare i video a tutta la classe, in modo da evitare che ogni studente scarichi singolarmente i video. Oppure prova le lezioni offline/tradizionali.
 
 Se l'esercitazione che hai scelto funziona meglio con il sonoro, fornisci delle cuffie alla tua classe o chiedi agli studenti di portarsi le loro.
 
-**Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). Quando gli studenti lavorano in coppia, si aiutano a vicenda e fanno meno affidamento sull'insegnante. In questo modo capiscono anche che l'informatica è un'attività che favorisce la collaborazione e le relazioni sociali.
+**Non hai abbastanza dispositivi per tutti gli studenti?** Usa la [programmazione in coppia](https://www.youtube.com/watch?v=vgkahOzFH2Q). Quando gli studenti lavorano in coppia, si aiutano a vicenda e fanno meno affidamento sull'insegnante. In questo modo capiscono anche che l'informatica è un'attività che favorisce la collaborazione e le relazioni sociali.
 
 ## 5. Inizia la tua Ora del Codice con un video stimolante
 
@@ -53,21 +53,21 @@ Dai il via alla tua Ora del Codice stimolando i partecipanti e discutendo di com
 - [Il messaggio del Presidente Obama che invita tutti gli studenti ad imparare informatica](https://www.youtube.com/watch?v=6XvmhE1J9PY) (in inglese).
 - Puoi trovare altri video stimolanti in inglese [qui](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP) oppure [alcuni in italiano](https://www.programmailfuturo.it/notizie/messaggeri-del-codice) sul sito di Programma il Futuro.
 
-**It’s okay if you are all brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
+**Non preoccuparti se sei digiuno di informatica. Ecco alcune idee per farti familiarizzare con le attività dell'Ora del Codice:**
 
 - Spiega in che modo la tecnologia influisce sulle nostre vite con degli esempi che interessino sia i ragazzi che le ragazze (puoi parlare di app e tecnologie che vengono utilizzate per salvare delle vite, aiutare la gente, mettere in comunicazione le persone, ecc.).
 - Elenca tutto ciò che utilizza programmi informatici nella vita quotidiana.
 - Vedi interessare le ragazze all'informatica [qui]({{ urls/girls }}).
 
-**Need more guidance?** Download this [template lesson plan](/files/AfterschoolEducatorLessonPlanOutline.docx).
+**Hai bisogno di altre indicazioni? Scarica questo[modello di piano di lavoro della lezione ](/files/AfterschoolEducatorLessonPlanOutline.docx).</p> 
 
 ## 6. Scrivi del codice!
 
-**Direct participants to the activity** - Write the tutorial link on a whiteboard. Trova il link scritto sul [informazioni sul tutorial che hai selezionato]({{ urls/learn }}) sotto il numero di partecipanti.
+**Guida i partecipanti all'attività** - Scrivi il link dell'esercitazione su una lavagna. Trova il link scritto sul [informazioni sul tutorial che hai selezionato]({{ urls/learn }}) sotto il numero di partecipanti.
 
-**When someone comes across difficulties it's okay to respond:** - “I don’t know. Scopriamolo insieme.” - “La tecnologia non funziona sempre come vogliamo.” - "Imparare a programmare è come imparare una nuova lingua, non puoi sentirti sicuro da subito."
+**Se qualcuno incontra delle difficoltà, può andare benissimo rispondere:** - “Non lo so. Scopriamolo insieme.” - “La tecnologia non funziona sempre come vogliamo.” - "Imparare a programmare è come imparare una nuova lingua, non puoi sentirti sicuro da subito."
 
-**What to do if someone finishes early?** - Encourage participants to try another Hour of Code activity at [hourofcode.com/learn]({{ urls/learn }}) - Or, ask those who finish early to help others who are having trouble.
+**Cosa fare se qualcuno finisce prima?** - Incoraggiare i partecipanti a provare un'altra attività dell'Ora del Codice all'indirizzo [hourofcode.com/learn]({{ urls/learn }}) - Oppure chiedi a quelli che finiscono prima di aiutare chi incontra difficoltà.
 
 ## 7. Festeggia
 
@@ -85,6 +85,6 @@ Dai il via alla tua Ora del Codice stimolando i partecipanti e discutendo di com
 
 ## Cosa c'è dopo l'Ora del Codice?
 
-The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. Help students continue their journey and encourage them to [learn more online](/beyond)!
+L'Ora del Codice è solo il primo passo di un percorso per imparare come funziona la tecnologia e come creare applicazioni software. Aiuta gli studenti a continuare il loro viaggio e incoraggiarli a[imparare di più online](/beyond)!
 
 {{ signup_button }}

@@ -12,7 +12,7 @@ title: Come organizzare un'Ora del Codice - Aziende
 ## Connettiti con classi locali e volontari per l'Ora del Codice
 Code.org offre ai dipendenti delle aziende e organizzazioni l'opportunità di [mettersi in contatto]({{ urls/volunteer }}) con classi locali che svolgono l'Ora del Codice per condividere la loro esperienza in ambito tecnologico ed ispirare gli studenti a studiare informatica.
 
-[<button>Sign up to volunteer!</button>]({{ urls/volunteer }})
+[<button>Iscriviti come volontario!</button>]({{ urls/volunteer }})
 <br>
 <br>
 
@@ -22,7 +22,7 @@ Per maggiori informazioni su come mettere in comunicazione i tuoi dipendenti con
 
 - Chiedendo al tuo Amministratore Delegato di [inviare una email a tutta l'azienda]({{ promote/sample_emails }}) sottolineando l'importanza dell'informatica ed incoraggiando i dipendenti a spargere la voce.
 - Organizzando un'Happy Hour dedicata all'Ora del Codice con colleghi per provare le [attività disponibili]({{ urls/learn }}).
-- Host an Hour of Code event for a local classroom of students or non profits partners to do an Hour of Code at your company’s office. See event how-to guide below.
+- Ospita un evento dell'Ora del Codice per una classe locale di studenti o per un partner non-profit per svolgere un'Ora di Codice negli uffici della tua azienda. Vedi di seguito, la guida all'evento.
 
 
 # Come ospitare un evento dell'Ora del Codice con gli studenti
@@ -31,27 +31,27 @@ Per maggiori informazioni su come mettere in comunicazione i tuoi dipendenti con
 - Promuovi il tuo evento dell'[Ora del Codice]({{ urls/promote }}) ed incoraggia altri ad organizzarlo.
 - Incoraggia gli esperti informatici della tua azienda a far visita ad una scuola della tua città per aiutare a svolgere un'Ora del Codice e stimolare gli studenti a studiare informatica. Possono [iscriversi qui]({{ urls/volunteer_engineer }}) per essere messi in comunicazione con una classe (solo per gli USA).
 
-## 2. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe>
+## 2. 2) Guarda questo video istruttivo <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe>
 
-## 3. Choose an activity
-We host a variety of [fun, hour-long activities]({{ urls/learn }}) for participants of all ages, created by a variety of partners. [Try them out!]({{ urls/learn }})
+## 3. Scegli un'attività
+Ospitiamo una varietà di [attività divertenti della durata di un'ora]({{ urls/learn }}) per partecipanti di tutte le età, create da diversi partner. [Provale!]({{ urls/learn }})
 
-**All Hour of Code activities** require minimal prep-time, and are self-guided - allowing participants to work at their own pace and skill-level.
+**Tutte le attività dell'Ora del Codice** richiedono un tempo di preparazione minimo e sono autoguidate, il che permette ai partecipanti di lavorare seguendo il proprio ritmo e livello di abilità.
 
 [<img src="/images/fit-700/tutorials.png" />]({{ urls/learn }})
 
-## 4. Plan your technology needs - computers are optional
+## 4. 4. Pianifica le tue necessità tecnologiche - i computer sono facoltativi
 
-Il miglior modo per godersi l'Ora del Codice è avere computer connessi a Internet. But you **don’t** need a computer for every participant, and you can even do the Hour of Code without a computer at all.
+Il miglior modo per godersi l'Ora del Codice è avere computer connessi a Internet. Tuttavia **non** è necessario un computer per ciascun partecipante e si può addirittura svolgere l'Ora del Codice senza alcun computer.
 
-**Plan Ahead!** Do the following before your event starts:
+**Preparati prima!** Prima che inizi il tuo evento, assicurati di svolgere le seguenti operazioni:
 
-- Test activities on computers or devices. Make sure they work properly on browsers with sound and video.
+- Prova le esercitazioni sul tuo computer o altro dispositivo. Assicurati che funzionino correttamente sul browser con audio e video.
 - Se l'esercitazione che hai scelto funziona meglio con il sonoro, fornisci delle cuffie ai partecipanti o chiedi di portarsi le proprie.
-- **Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). Quando i partecipanti lavorano insieme, si aiutano reciprocamente e si affidano meno all'aiuto dell'insegnante. In questo modo capiscono anche che l'informatica è un'attività che favorisce la collaborazione e le relazioni sociali.
-- **Have low bandwidth?** Plan to show videos at the front of the event, so each participant isn't downloading their own videos. Or try the unplugged / offline activities.
+- **Non hai abbastanza dispositivi per tutti gli studenti??** Usa la [programmazione in coppia](https://www.youtube.com/watch?v=vgkahOzFH2Q). Quando i partecipanti lavorano insieme, si aiutano reciprocamente e si affidano meno all'aiuto dell'insegnante. In questo modo capiscono anche che l'informatica è un'attività che favorisce la collaborazione e le relazioni sociali.
+- **C'è una scarsa connessione ad Internet?** Pianifica di mostrare i video a tutta la classe, in modo da evitare che ogni studente scarichi singolarmente i video. Oppure prova le lezioni offline/tradizionali
 
-## 5.  Start your Hour of Code off with an inspiring video
+## 5.  Inizia la tua Ora del Codice con un video stimolante
 Dai il via alla tua Ora del Codice stimolando i partecipanti e discutendo di come l'informatica influisca su ogni parte delle nostre vite. Racconta loro di cosa ti ha spinto ad approfondire lo studio dell'informatica e qual è il tuo ruolo in azienda.
 
 **Mostra un video stimolante:**
@@ -69,10 +69,10 @@ Dai il via alla tua Ora del Codice stimolando i partecipanti e discutendo di com
 - Invita esperti della tua azienda a parlare del perchè hanno deciso di studiare informatica e dei progetti su cui stanno lavorando.
 - Vedi interessare le ragazze all'informatica [qui]({{ urls/girls }}).
 
-## 6. Code!
+## 6. Codifica!
 **Guida i partecipanti nell'attività**
 
-- Write the activity link on a whiteboard. Find the link listed on the [information for your selected activity]({{ urls/learn }}) under the number of participants.
+- Scrivi l'indirizzo dell'attività sulla lavagna. Trova il collegamento elencato sulle [informazioni per l'attività selezionata]({{ urls/learn }}) sotto il numero di partecipanti.
 - Per gli studenti più giovani, carica la pagina dell'esercitazione in anticipo o salvala come un segnalibro.
 
 **Quando i partecipanti incontrano delle difficoltà, si può rispondere così:**

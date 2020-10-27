@@ -24,7 +24,7 @@ Da sinistra a destra: *Governatori dell'Arkansas, del North Carolina e dell'Ariz
 
 ### 1. Leggi il nostro volantino
 
-See [why computer science education is important](/files/hoc-one-pager.pdf), and how you can help the effort by supporting the Hour of Code.
+Vedi [perché l'educazione informatica è importante]({{ localized_files/hoc_one_pager }}), e come puoi aiutarci nel nostro sforzo sostenendo l'Ora del Codice. 
 
 ### 2. Coinvolgi le scuole locali
 

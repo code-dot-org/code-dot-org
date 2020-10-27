@@ -63,9 +63,9 @@ Donnez le coup d'envoi de votre Heure de Code en dynamisant les participants et 
 
 ## 6) Programmez !
 
-**Direct participants to the activity** - Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
+**Direct participants to the activity** - Write the tutorial link on a whiteboard. Trouvez le lien, listé dans les [informations pour le tutoriel choisi]({{ urls/learn }}), sous le nombre des participants. 
 
-**When someone comes across difficulties it's okay to respond:** - “I don’t know. Let’s figure this out together.” - “Technology doesn’t always work out the way we want.” - “Learning to program is like learning a new language; you won’t be fluent right away.”
+**When someone comes across difficulties it's okay to respond:** - “I don’t know. "« Réfléchissons-y ensemble. » - « La technologie ne fonctionne pas toujours de la manière qu’on le souhaiterait. » - « Apprendre à programmer, c’est comme apprendre une nouvelle langue ; vous devez parler couramment tout de suite. »" 
 
 **What to do if someone finishes early?** - Encourage participants to try another Hour of Code activity at [hourofcode.com/learn]({{ urls/learn }}) - Or, ask those who finish early to help others who are having trouble.
 

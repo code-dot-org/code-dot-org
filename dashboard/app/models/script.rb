@@ -151,6 +151,7 @@ class Script < ActiveRecord::Base
     curriculum_umbrella
     tts
     is_course
+    background
   )
 
   def self.twenty_hour_script
@@ -241,14 +242,14 @@ class Script < ActiveRecord::Base
   end
 
   class << self
-    private
-
     def all_scripts
       all_scripts = Rails.cache.fetch('valid_scripts/all') do
         Script.all.to_a
       end
       all_scripts.freeze
     end
+
+    private
 
     def visible_scripts
       visible_scripts = Rails.cache.fetch('valid_scripts/valid') do
@@ -983,6 +984,33 @@ class Script < ActiveRecord::Base
     end
   end
 
+  # Script levels unfortunately have 3 position values:
+  # 1. chapter: position within the Script
+  # 2. position: position within the Lesson
+  # 3. activity_section_position: position within the ActivitySection.
+  # This method uses activity_section_position as the source of truth to set the
+  # values of position and chapter on all script levels in the script.
+  def fix_script_level_positions
+    reload
+    if script_levels.reject(&:activity_section).any?
+      raise "cannot fix position of legacy script levels"
+    end
+
+    chapter = 0
+    lessons.each do |lesson|
+      position = 0
+      lesson.lesson_activities.each do |activity|
+        activity.activity_sections.each do |section|
+          section.script_levels.each do |sl|
+            sl.chapter = (chapter += 1)
+            sl.position = (position += 1)
+            sl.save!
+          end
+        end
+      end
+    end
+  end
+
   # Clone this script, appending a dash and the suffix to the name of this
   # script. Also clone all the levels in the script, appending an underscore and
   # the suffix to the name of each level. Mark the new script as hidden, and
@@ -1264,7 +1292,8 @@ class Script < ActiveRecord::Base
       assigned_section_id: assigned_section_id,
       hasStandards: has_standards_associations?,
       tts: tts?,
-      is_course: is_course?
+      is_course: is_course?,
+      background: background
     }
 
     #TODO: lessons should be summarized through lesson groups in the future
@@ -1435,6 +1464,7 @@ class Script < ActiveRecord::Base
       :pilot_experiment,
       :editor_experiment,
       :curriculum_umbrella,
+      :background,
     ]
     boolean_keys = [
       :has_verified_resources,

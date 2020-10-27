@@ -2653,11 +2653,11 @@
         "courseE_farmer_ramp12b_2019": "Maintenant, la moissonneuse doit ramasser toute la laitue. Utilise `tant qu'il y a de la laitue` à l'intérieur d'une boucle `répéter` pour toute la ramasser !",
         "courseE_farmer_ramp12b_2020": "Maintenant, la moissonneuse doit ramasser toute la laitue. Utilise `tant qu'il y a de la laitue` à l'intérieur d'une boucle `répéter` pour toute la ramasser !",
         "courseE_farmer_ramp12c": "La laitue est seulement au bout du chemin maintenant.\\\nAvance le long du chemin **jusqu'à** ce que tu atteigne une tête de laitue, puis continue à la récolter **tant** qu'il y ai encore.",
-        "courseE_farmer_ramp12c_2018": "The lettuce is now only at the\nend of the path.  \\\r\nTravel down the path **until** you reach a head of lettuce,\nthen continue to pick it **while** there is still some left.  ",
+        "courseE_farmer_ramp12c_2018": "La laitue est seulement au bout du chemin maintenant.\\\nAvance le long du chemin **jusqu'à** ce que tu atteigne une tête de laitue, puis continue à la récolter **tant** qu'il y ai encore.",
         "courseE_farmer_ramp12c_2019": "La laitue est seulement au bout du chemin maintenant.\\\nAvance le long du chemin **jusqu'à** ce que tu atteigne une tête de laitue, puis continue à la récolter **tant** qu'il y ai encore.",
         "courseE_farmer_ramp12c_2020": "La laitue est seulement au bout du chemin maintenant.\\\nAvance le long du chemin **jusqu'à** ce que tu atteigne une tête de laitue, puis continue à la récolter **tant** qu'il y ai encore.",
         "courseE_farmer_ramp12d": "La laitue est dispersée autour du jardin.\\\nAvance le long du chemin **jusqu'à** ce que tu atteigne une tête de laitue, puis continue à la récolter **tant** qu'il y ai encore.",
-        "courseE_farmer_ramp12d_2018": "The lettuce is scattered all\nover the garden.  \\\r\nTravel down each path **until** you reach a head of\nlettuce, then continue to pick it **while** there is still some left.  ",
+        "courseE_farmer_ramp12d_2018": "La laitue est dispersée autour du jardin.\\\nAvance le long du chemin **jusqu'à** ce que tu atteigne une tête de laitue, puis continue à la récolter **tant** qu'il y ai encore.",
         "courseE_farmer_ramp12d_2019": "La laitue est dispersée autour du jardin.\\\nAvance le long du chemin **jusqu'à** ce que tu atteigne une tête de laitue, puis continue à la récolter **tant** qu'il y ai encore.",
         "courseE_farmer_ramp12d_2020": "La laitue est dispersée autour du jardin.\\\nAvance le long du chemin **jusqu'à** ce que tu atteigne une tête de laitue, puis continue à la récolter **tant** qu'il y ai encore.",
         "courseE_farmer_ramp12e": "La laitue est dispersée autour du jardin.\\\nAvance le long du chemin **jusqu'à** ce que tu atteigne une tête de laitue, puis continue à la récolter **tant** qu'il y ai encore.",
@@ -2949,7 +2949,12 @@
         "courseA_artist_loops2_2018": "Aide l'artiste à dessiner cette ligne 2 fois vers l'avant.\n\n![](https://images.code.org/04501f26a36673460f5c8fe04e3e7686-image-1498002095108.gif)",
         "courseA_artist_loops2_2019": "Aide l'artiste à dessiner cette ligne 2 fois vers l'avant.\n\n![](https://images.code.org/04501f26a36673460f5c8fe04e3e7686-image-1498002095108.gif)",
         "courseA_artist_loops2_2020": "Aide l'artiste à dessiner cette ligne 2 fois vers l'avant.\n\n![](https://images.code.org/04501f26a36673460f5c8fe04e3e7686-image-1498002095108.gif)",
-        "courseE_farmer_functions2ba": "_\"Je me sens tellement fonctionnel!\"_\n\nAs-tu remarqué qu'il y avait du code répété dans le dernier puzzle? On ne peut pas mettre tout le code dans une boucle, mais on **peut** utiliser des fonctions.\n\nPour ce casse-tête, on a déplacé le code répété dans une fonction appelée `maïs et citrouille`. Maintenant, tout ce que tu dois faire est mettre le petit **bloc fonction** `maïs et citrouille` dans le code où tu en as besoin.\n\n* * *\n\n##### Chaque germe poussera soit _un_ maïs, soit rien du tout."
+        "courseE_farmer_functions2ba": "_\"Je me sens tellement fonctionnel!\"_\n\nAs-tu remarqué qu'il y avait du code répété dans le dernier puzzle? On ne peut pas mettre tout le code dans une boucle, mais on **peut** utiliser des fonctions.\n\nPour ce casse-tête, on a déplacé le code répété dans une fonction appelée `maïs et citrouille`. Maintenant, tout ce que tu dois faire est mettre le petit **bloc fonction** `maïs et citrouille` dans le code où tu en as besoin.\n\n* * *\n\n##### Chaque germe poussera soit _un_ maïs, soit rien du tout.",
+        "courseC_video_angles": "Aide Scrat à atteindre le gland !",
+        "courseD_video_nestedLoopsArtist": "Utilise ce que tu as appris pour dessiner ce triangle.\n\n* * *\n\n##### Les côtés font 100 pixels de long. Tu auras besoin de tourner de 120 degrés à chaque coin.",
+        "courseE_bee_ramp14": "La laitue est dispersée autour du jardin.\\\nAvance le long du chemin **jusqu'à** ce que tu atteigne une tête de laitue, puis continue à la récolter **tant** qu'il y ai encore.",
+        "courseE_farmer_predict1": "Maintenant, la moissonneuse doit ramasser toute la laitue. Utilise `tant qu'il y a de la laitue` à l'intérieur d'une boucle `répéter` pour toute la ramasser !",
+        "courseE_farmer_predict2": "La laitue est dispersée autour du jardin.\\\nAvance le long du chemin **jusqu'à** ce que tu atteigne une tête de laitue, puis continue à la récolter **tant** qu'il y ai encore."
       }
     }
   }

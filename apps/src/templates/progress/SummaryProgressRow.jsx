@@ -188,7 +188,7 @@ export default class SummaryProgressRow extends React.Component {
           }}
         >
           {levels.length === 0 ? (
-            'This lesson contains no levels.'
+            i18n.lessonContainsNoLevels()
           ) : (
             <ProgressBubbleSet
               levels={levels}

@@ -20,6 +20,7 @@ zh-TW:
         hoc_category_name: 一小時玩程式
         math_category_name: 運算
         research_studies_category_name: 研究
+        other_category_name: 其它
       name:
         course1:
           title: 課程 1

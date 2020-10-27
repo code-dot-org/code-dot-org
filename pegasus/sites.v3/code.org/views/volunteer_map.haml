@@ -79,6 +79,11 @@
     color: #00a1e6;
   }
 
+  .mapboxgl-popup-content {
+    max-height: 180px;
+    overflow-y: scroll;
+  }
+
 :javascript
   mapboxgl.accessToken = "#{CDO.mapbox_access_token}";
 

@@ -5,6 +5,7 @@ ta:
       category:
         hoc_category_name: நிரல்வரி நேரம்
         math_category_name: கணிதம்
+        other_category_name: வேறு
       name:
         course1:
           title: கோர்ஸ் 1

@@ -39,7 +39,7 @@ social:
           %a{href: "/dance"}
             %button.tutorial-info-start.tutorial-gray= I18n.t(:go)
           .tutorial-info-guide
-            %a{href: hacky_localized_lesson_plan_url("/hoc/plugged/8/")}
+            %a{href: CDO.curriculum_url(I18n.locale, "/hoc/plugged/8/")}
               = I18n.t(:hoc_overview_view_teacher_guide)
 
   .col-50
@@ -54,7 +54,7 @@ social:
           %a{href: "/oceans"}
             %button.tutorial-info-start.tutorial-gray= I18n.t(:go)
           .tutorial-info-guide
-            %a{href: hacky_localized_lesson_plan_url("/hoc/plugged/9/")}
+            %a{href: CDO.curriculum_url(I18n.locale, "/hoc/plugged/9/")}
               = I18n.t(:hoc_overview_view_teacher_guide)
 
 .tile-container-responsive

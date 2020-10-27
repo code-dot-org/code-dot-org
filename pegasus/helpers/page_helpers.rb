@@ -88,35 +88,3 @@ def youtube_embed(youtube_url)
 
   %Q{<iframe title="YouTube video player" width="250" height="141" src="http://www.youtube.com/embed/#{youtube_id}" frameborder="0" allowfullscreen></iframe>}.html_safe
 end
-
-# A hacky method to generate locale-aware links to our lesson plans. This is
-# hacky primarily because we are forced to hardcode here a list of supported
-# languages; a list which we have no guarantee will remain accurate in the long
-# term.
-def hacky_localized_lesson_plan_url(path)
-  # This is the list of languages currently supported by the CurriculumBuilder
-  # i18n sync. This list should be kept in sync with the LANGUAGES settings
-  # variable in the curriculumbuilder project. (curriculumBuilder/settings.py)
-  curriculumbuilder_languages = [
-    'ar-sa', 'es-mx', 'es-es', 'fr-fr', 'hi-in', 'it-it', 'pl-pl', 'pt-br', 'sk-sk', 'th-th'
-  ]
-
-  # This is a list of additional languages we want to support. These are
-  # languages for which there does exist content in that language on
-  # curriculum.code.org, but which aren't regularly synced.
-  # Be particularly cautious about adding languages to this list; not only is
-  # the content for that language not updated regularly, but new content is not
-  # added automatically. This means if you try to link to a recently-added
-  # lesson plan, it may not be there for any of these languages.
-  additional_languages = [
-    'de-de', 'id-id', 'ko-kr', 'tr-tr', 'zh-cn', 'zh-tw'
-  ]
-
-  supported_languages = curriculumbuilder_languages + additional_languages
-  domain = "https://curriculum.code.org"
-  current_locale = I18n.locale.to_s.downcase
-
-  supported_languages.include?(current_locale) ?
-    File.join(domain, current_locale, path) :
-    File.join(domain, path)
-end

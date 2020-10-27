@@ -63,9 +63,9 @@ Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage o
 
 ## 6. Программируйте!
 
-**Direct participants to the activity** - Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
+**Direct participants to the activity** - Write the tutorial link on a whiteboard. Найдите ссылку в списке [информации о выбранном вами пособии]({{ urls/learn }}) под количеством участников. 
 
-**When someone comes across difficulties it's okay to respond:** - “I don’t know. - "Давайте научимся этому вместе." - "Технология не всегда работает так, как мы хотим." - "Изучение программирования - это как изучение нового языка; вы не будете сразу свободно разговаривать."
+**When someone comes across difficulties it's okay to respond:** - “I don’t know. ""Давай разберемся вместе"". –“Технология не всегда работает так, как мы хотим”. – “Изучение программирования - это как изучение нового языка, вы не сразу заговорите свободно”.
 
 **What to do if someone finishes early?** - Encourage participants to try another Hour of Code activity at [hourofcode.com/learn]({{ urls/learn }}) - Or, ask those who finish early to help others who are having trouble.
 
