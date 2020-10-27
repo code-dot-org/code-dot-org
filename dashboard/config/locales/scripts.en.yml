@@ -18277,3 +18277,26 @@ en:
           description_audience: ''
           description_short: 'Use Sprite Lab to program a simulation out of a virus outbreak. '
           description: 'Use Sprite Lab to program a simulation out of a virus outbreak. '
+        dave:
+          lessons:
+            lesson-1:
+              name: Lesson One
+            lesson-2:
+              name: Lesson Two
+            lesson-3:
+              name: Lesson Three
+            lesson-4:
+              name: Lesson Four
+            lesson-5:
+              name: Lesson Five
+            lesson-6:
+              name: Lesson Six
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+            lessonGroup-3:
+              display_name: Content
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
