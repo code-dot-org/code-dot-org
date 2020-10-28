@@ -59,6 +59,7 @@ class Resource < ApplicationRecord
     new_key = key_prefix
     while potential_clashes.include?(new_key)
       new_key = "#{key_prefix}_#{key_suffix_num}"
+      key_suffix_num += 1
     end
     new_key
   end
