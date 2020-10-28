@@ -43,4 +43,7 @@ export default function initializeBlocklyXml(blocklyWrapper) {
     return blocklyWrapper.Xml.domToWorkspace(xml, blockSpace);
   };
   blocklyWrapper.Xml.blockSpaceToDom = blocklyWrapper.Xml.workspaceToDom;
+
+  // We don't want to save absolute position in the block XML
+  blocklyWrapper.Xml.blockToDomWithXY = blocklyWrapper.Xml.blockToDom;
 }
