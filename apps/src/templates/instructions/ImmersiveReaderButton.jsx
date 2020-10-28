@@ -12,7 +12,9 @@ class ImmersiveReaderButton extends Component {
 
   componentDidMount() {
     // Applies inline styling to the .immersive-reader-button elements
-    renderButtons();
+    renderButtons({
+      elements: [this.container]
+    });
   }
 
   render() {
@@ -21,6 +23,7 @@ class ImmersiveReaderButton extends Component {
     const locale = cookies.get('language_') || 'en-US';
     return (
       <div
+        ref={el => (this.container = el)}
         className={'immersive-reader-button'}
         data-button-style={'icon'}
         data-locale={locale}
