@@ -145,11 +145,9 @@ function lessonGroups(state = [], action) {
     }
     case REMOVE_GROUP: {
       newState.splice(action.groupPosition - 1, 1);
-      console.log(newState);
       if (newState.length === 0) {
         newState.push(emptyNonUserFacingGroup);
       }
-      updateGroupPositions(newState);
       updateLessonPositions(newState);
       break;
     }
