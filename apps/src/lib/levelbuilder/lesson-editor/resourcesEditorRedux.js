@@ -2,7 +2,7 @@ import _ from 'lodash';
 
 const INIT = 'resourcesEditor/INIT';
 const ADD_RESOURCE = 'resourcesEditor/ADD_RESOURCE';
-const REMOVE_RESOURCE = 'resourcesEditor/ADD_RESOURCE';
+const REMOVE_RESOURCE = 'resourcesEditor/REMOVE_RESOURCE';
 
 export const initResources = resources => ({
   type: INIT,
@@ -24,11 +24,9 @@ export default function resources(state = [], action) {
 
   switch (action.type) {
     case INIT:
-      console.log('here');
-      console.log(action.resources);
       return action.resources;
     case ADD_RESOURCE: {
-      newState.concat([action.newResource]);
+      newState = newState.concat([action.newResource]);
       break;
     }
     case REMOVE_RESOURCE: {

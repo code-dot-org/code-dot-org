@@ -84,7 +84,7 @@ $(document).ready(function() {
   // a key until they're saved to the server, which happens after lesson save.
   objectives.forEach(objective => (objective.key = objective.id + ''));
 
-  registerReducers({...reducers, resourcesEditor});
+  registerReducers({...reducers, resources: resourcesEditor});
   const store = getStore();
 
   //TODO Switch to using real data once we have activity data
