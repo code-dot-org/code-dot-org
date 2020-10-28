@@ -82,7 +82,7 @@ const defaultConfig = [
   },
   {
     entry: {
-      ailab: './src/indexDev.js'
+      mainDev: './src/indexDev.js'
     },
     ...commonConfig
   }
@@ -91,7 +91,7 @@ const defaultConfig = [
 const productionConfig = [
   {
     entry: {
-      main: './src/indexProduction.js'
+      main: './src/indexProd.js'
     },
     ...commonConfig,
     ...externalConfig

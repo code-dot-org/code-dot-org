@@ -1,6 +1,6 @@
 {
   "name": "@code-dot-org/ml-playground",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "main": "dist/main.js",
   "repository": {
     "type": "git",
@@ -58,7 +58,7 @@
     "webpack-dev-server": "^3.1.4"
   },
   "files": [
-    "dist/**/!(ailab.js)",
+    "dist/**/!(mainDev.js)",
     "i18n/ailab.json"
   ]
 }
