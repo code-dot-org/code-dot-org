@@ -19,4 +19,12 @@ class ResourceTest < ActiveSupport::TestCase
     resource2 = create :resource, lessons: [lesson]
     assert_equal [resource1, resource2], lesson.resources
   end
+
+  test "summarize for lesson plan" do
+    resource = create :resource, key: 'my key', name: 'test resource', url: 'test.url',  audience: 'Teacher', type: 'Activity Guide'
+    assert_equal(
+      {key: 'my key', name: 'test resource', url: 'test.url', download_url: nil, audience: 'Teacher', type: 'Activity Guide'},
+      resource.summarize_for_lesson_plan
+    )
+  end
 end

@@ -62,6 +62,7 @@ export const sampleActivities = [
               }
             ],
             position: 1,
+            levelNumber: 1,
             activeId: 1,
             kind: 'puzzle',
             bonus: false,
@@ -98,6 +99,7 @@ export const sampleActivities = [
               }
             ],
             position: 2,
+            levelNumber: 2,
             activeId: 2,
             kind: 'assessment',
             bonus: false,

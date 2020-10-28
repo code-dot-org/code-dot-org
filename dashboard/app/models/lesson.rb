@@ -269,7 +269,7 @@ class Lesson < ActiveRecord::Base
   def summarize_for_script_edit
     summary = summarize.dup
     # Do not let script name override lesson name when there is only one lesson
-    summary[:name] = I18n.t("data.script.name.#{script.name}.lessons.#{key}.name")
+    summary[:name] = name
     summary.freeze
   end
 
@@ -528,6 +528,16 @@ class Lesson < ActiveRecord::Base
     end
   end
 
+  def resources_for_lesson_plan(verified_teacher)
+    grouped_resources = resources.map(&:summarize_for_lesson_plan).group_by {|r| r[:audience]}
+    if verified_teacher && grouped_resources.key?('Verified Teacher')
+      grouped_resources['Teacher'] ||= []
+      grouped_resources['Teacher'] += grouped_resources['Verified Teacher']
+    end
+    grouped_resources.delete('Verified Teacher')
+    grouped_resources
+  end
+
   private
 
   # Finds the LessonActivity by id, or creates a new one if id is not specified.
@@ -536,8 +546,8 @@ class Lesson < ActiveRecord::Base
   def fetch_activity(activity)
     if activity['id']
       lesson_activity = lesson_activities.find(activity['id'])
-      raise "LessonActivity id #{activity['id']} not found in Lesson id #{id}" unless lesson_activity
-      return lesson_activity
+      return lesson_activity if lesson_activity
+      raise ActiveRecord::RecordNotFound.new("LessonActivity id #{activity['id']} not found in Lesson id #{id}")
     end
 
     lesson_activities.create(

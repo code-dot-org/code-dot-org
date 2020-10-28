@@ -31,6 +31,7 @@ class ScriptDSL < BaseDSL
     @curriculum_umbrella = nil
     @tts = false
     @is_course = false
+    @background = nil
   end
 
   integer :id
@@ -59,6 +60,7 @@ class ScriptDSL < BaseDSL
   string :pilot_experiment
   string :editor_experiment
   string :curriculum_umbrella
+  string :background
 
   def teacher_resources(resources)
     @teacher_resources = resources
@@ -161,7 +163,8 @@ class ScriptDSL < BaseDSL
       curriculum_umbrella: @curriculum_umbrella,
       tts: @tts,
       lesson_groups: @lesson_groups,
-      is_course: @is_course
+      is_course: @is_course,
+      background: @background
     }
   end
 
@@ -348,6 +351,7 @@ class ScriptDSL < BaseDSL
     s << "curriculum_umbrella '#{script.curriculum_umbrella}'" if script.curriculum_umbrella
     s << 'tts true' if script.tts
     s << 'is_course true' if script.is_course
+    s << "background '#{script.background}'" if script.background
 
     s << '' unless s.empty?
     s << serialize_lesson_groups(script)
