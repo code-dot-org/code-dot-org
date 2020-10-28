@@ -2,6 +2,10 @@
 
 import { availableTrainers } from "./train.js";
 
+export function datasetSize(state) {
+  return !!state.data.length > 0;
+}
+
 export function minOneFeatureSelected(state) {
   return state.selectedFeatures.length !== 0;
 }

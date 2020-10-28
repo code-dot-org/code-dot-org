@@ -5,6 +5,7 @@ import {
 } from "./train.js";
 
 import {
+  datasetSize,
   minOneFeatureSelected,
   oneLabelSelected,
   uniqLabelFeaturesSelected,
@@ -375,6 +376,11 @@ export function getAccuracy(state) {
 
 export function validationMessages(state) {
   const validationMessages = [];
+  validationMessages.push({
+    readyToTrain: datasetSize(state),
+    errorString: "There is not enough data to train a model.",
+    successString: `There are ${state.data.length} rows of data.`
+  });
   validationMessages.push({
     readyToTrain: oneLabelSelected(state),
     errorString: "Please designate one column as the label column.",
