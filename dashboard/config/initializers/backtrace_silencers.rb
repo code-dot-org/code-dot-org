@@ -7,12 +7,7 @@
 # Rails.backtrace_cleaner.remove_silencers!
 
 # silence annoying deprecations
-silenced = [
-  /ActionController::TestCase HTTP request methods/,
-  /ActionDispatch::IntegrationTest HTTP request methods/,
-  /`render :text` is deprecated/,
-  /alias_method_chain is deprecated/
-]
+silenced = []
 
 silenced_expr = Regexp.new(silenced.join('|'))
 
