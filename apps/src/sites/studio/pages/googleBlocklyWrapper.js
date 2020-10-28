@@ -22,6 +22,12 @@ const BlocklyWrapper = function(blocklyInstance) {
   this.version = BlocklyVersion.GOOGLE;
   this.blockly_ = blocklyInstance;
 
+  /**
+   * If an id is not specified, the Block constructor will randomly generate a 20-character
+   * uid string. In UI tests, we want to be able to reference blocks by their id, which won't
+   * work if the ids are randomly generated. To get around this problem, we can just use a
+   * global counter as the block ids.
+   */
   this.uidCounter_ = 0;
 
   this.wrapReadOnlyProperty = function(propertyName) {
