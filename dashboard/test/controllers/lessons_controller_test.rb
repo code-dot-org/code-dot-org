@@ -500,6 +500,63 @@ class LessonsControllerTest < ActionController::TestCase
     assert_equal ['level-to-add'], script_level.levels.map(&:name)
   end
 
+  test 'add anonymous survey level via lesson update' do
+    sign_in @levelbuilder
+
+    activity = @lesson.lesson_activities.create(
+      name: 'activity name',
+      position: 1,
+      seeding_key: 'activity-key'
+    )
+    section = activity.activity_sections.create(
+      name: 'section name',
+      position: 1,
+      seeding_key: 'section-key'
+    )
+
+    survey_to_add = create :level_group, name: 'survey-to-add'
+    survey_to_add.update!(properties: {anonymous: "true"})
+
+    @update_params['activities'] = [
+      {
+        id: activity.id,
+        name: 'activity name',
+        position: 1,
+        activitySections: [
+          {
+            id: section.id,
+            name: 'section name',
+            position: 1,
+            scriptLevels: [
+              activitySectionPosition: 1,
+              activeId: survey_to_add.id,
+              levels: [
+                {
+                  id: survey_to_add.id,
+                  name: survey_to_add.name
+                }
+              ]
+            ]
+          }
+        ]
+      }
+    ].to_json
+
+    put :update, params: @update_params
+
+    assert_redirected_to "/lessons/#{@lesson.id}"
+    @lesson.reload
+
+    assert_equal activity, @lesson.lesson_activities.first
+    assert_equal section, activity.activity_sections.first
+
+    assert_equal 1, section.script_levels.count
+    script_level = section.script_levels.first
+    assert_equal ['survey-to-add'], script_level.levels.map(&:name)
+    assert script_level.anonymous?
+    assert script_level.assessment
+  end
+
   test 'remove script level via lesson update' do
     sign_in @levelbuilder
 
