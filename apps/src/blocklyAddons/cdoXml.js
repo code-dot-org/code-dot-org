@@ -38,10 +38,79 @@ export default function initializeBlocklyXml(blocklyWrapper) {
     }
     return null;
   };
+
   blocklyWrapper.Xml.domToBlockSpace = function(blockSpace, xml) {
-    // Switch argument order
-    return blocklyWrapper.Xml.domToWorkspace(xml, blockSpace);
+    const metrics = blockSpace.getMetrics();
+    const width = metrics ? metrics.viewWidth : 0;
+    const padding = 16;
+    const verticalSpaceBetweenBlocks = 10;
+
+    // Block positioning rules:
+    //  if the block has been given an absolute X coordinate, use it
+    //  (taking into account that RTL languages position from the left)
+    //  if the block has been given an absolute Y coordinate, use it
+    //  otherwise, the block "flows" with the other blocks from top to
+    //  bottom. Any block positioned absolutely with Y does not influence
+    //  the flow of the other blocks.
+    let cursor = {
+      x: blockSpace.RTL ? width - padding : padding,
+      y: padding
+    };
+
+    const positionBlock = function(block) {
+      const heightWidth = block.blockly_block.getHeightWidth();
+
+      if (isNaN(block.x)) {
+        block.x = cursor.x;
+      } else {
+        block.x = blockSpace.RTL ? width - block.x : block.x;
+      }
+
+      if (isNaN(block.y)) {
+        block.y = cursor.y;
+        cursor.y += heightWidth.height + verticalSpaceBetweenBlocks;
+      }
+      block.blockly_block.moveTo(
+        new Blockly.utils.Coordinate(block.x, block.y)
+      );
+    };
+
+    // To position the blocks, we first render them all to the Block Space
+    //  and parse any X or Y coordinates set in the XML. Then, we store
+    //  the rendered blocks and the coordinates in an array so that we can
+    //  position them in two passes.
+    //  In the first pass, we position the visible blocks. In the second
+    //  pass, we position the invisible blocks. We do this so that
+    //  invisible blocks don't cause the visible blocks to flow
+    //  differently, which could leave gaps between the visible blocks.
+    const blocks = [];
+    xml.childNodes.forEach(xmlChild => {
+      const blockly_block = Blockly.Xml.domToBlock(xmlChild, blockSpace);
+      const x = parseInt(xmlChild.getAttribute('x'), 10);
+      const y = parseInt(xmlChild.getAttribute('y'), 10);
+      blocks.push({
+        blockly_block: blockly_block,
+        x: x,
+        y: y
+      });
+    });
+
+    blocks
+      .filter(function(block) {
+        return block.blockly_block.isVisible();
+      })
+      .forEach(positionBlock);
+
+    blocks
+      .filter(function(block) {
+        return !block.blockly_block.isVisible();
+      })
+      .forEach(positionBlock);
+
+    blockSpace.render();
+    return blocks;
   };
+
   blocklyWrapper.Xml.blockSpaceToDom = blocklyWrapper.Xml.workspaceToDom;
 
   // We don't want to save absolute position in the block XML
