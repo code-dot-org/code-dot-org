@@ -36,7 +36,7 @@ describe('ActivitySectionCardButtons', () => {
 
     const button = wrapper.find('button').at(0);
     expect(button.text()).to.include('Level');
-    button.simulate('mouseDown');
+    button.simulate('click');
     expect(wrapper.state().addLevelOpen).to.equal(true);
   });
 

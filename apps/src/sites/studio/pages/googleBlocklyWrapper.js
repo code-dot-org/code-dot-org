@@ -24,10 +24,10 @@ const BlocklyWrapper = function(blocklyInstance) {
   this.blockly_ = blocklyInstance;
 
   /**
-   * If an id is not specified, the Block constructor will randomly generate a 20-character
-   * uid string. In UI tests, we want to be able to reference blocks by their id, which won't
-   * work if the ids are randomly generated. To get around this problem, we can just use a
-   * global counter as the block ids.
+   * Google Blockly sets Block ids to randomly generated 20-character strings.
+   * CDO Blockly set Block ids using a global counter. There are several places in our code and
+   * tests that assume Block ids will be numbers, so we want to re-implement the global counter
+   * and pass the id in the Block constructor, rather than leaving it to Google Blockly.
    */
   this.uidCounter_ = 0;
 
