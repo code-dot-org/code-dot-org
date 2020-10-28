@@ -8,9 +8,6 @@
 
 # silence annoying deprecations
 silenced = [
-  /ActionController::TestCase HTTP request methods/,
-  /ActionDispatch::IntegrationTest HTTP request methods/,
-
   # Added in https://github.com/rails/rails/pull/25337 for Rails 5.1; will be removed in Rails 5.2
   /The behavior of `[\w\?]*` inside of after callbacks will be changing in the next version of Rails./,
 ]
