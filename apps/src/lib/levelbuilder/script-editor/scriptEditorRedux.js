@@ -148,6 +148,7 @@ function lessonGroups(state = [], action) {
       if (newState.length === 0) {
         newState.push(emptyNonUserFacingGroup);
       }
+      updateGroupPositions(newState);
       updateLessonPositions(newState);
       break;
     }
