@@ -103,8 +103,6 @@ module.exports = (env, argv) => {
     return [...defaultConfig, ...productionConfig];
   }
 
-  console.log("!!" ,defaultConfig);
-
   return defaultConfig;
 };
 
