@@ -23,7 +23,7 @@ function rototateRight
 function canMove(direction);
 ```
 
-Which code segment will guarantee that the robot makes it to the grey square?
+Which code segment will guarantee that the robot makes it to the grey square without hitting a wall or a barrier (black square)?
 
 ![](https://images.code.org/38a33896798110989862a99a7ccefe66-image-1581103498011.png)
 
