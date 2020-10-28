@@ -60,6 +60,10 @@ body.pin_bottom {
   left: 0;
 }
 
+body.oceans-blue {
+  background-color: $oceans_deep_blue;
+}
+
 h1 {
   font-family: $gotham-extra-bold;
   font-weight: normal;
@@ -758,6 +762,11 @@ $small-footer-standard-width: 400px;
   height: 24px;
 }
 
+.oceans-blue .small-footer-base {
+  background-color: initial;
+  border-top: initial;
+}
+
 .header_separator {
   padding-left: 2px;
   margin-bottom: -18px;
@@ -1192,6 +1201,18 @@ input.header_input {
   border-style: solid;
   border-width: 2px;
   padding: 5px;
+}
+
+.oceans-blue {
+  #codeApp {
+    .loading {
+      background: image-url("spinner-big-oceans-blue.gif") no-repeat center center;
+    }
+
+    .slow_load {
+      color: $white;
+    }
+  }
 }
 
 #codeApp {

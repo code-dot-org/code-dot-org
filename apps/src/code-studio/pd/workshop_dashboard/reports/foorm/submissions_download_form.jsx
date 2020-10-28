@@ -1,10 +1,20 @@
 // Pop-up modal for downloading all Foorm submissions for a single form as a csv.
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Modal, Button} from 'react-bootstrap';
+import {
+  Modal,
+  Button,
+  FormGroup,
+  ControlLabel,
+  Col,
+  Row
+} from 'react-bootstrap';
 import 'react-select/dist/react-select.css';
 import Select from 'react-select/lib/Select';
+import ReactTooltip from 'react-tooltip';
 import {SelectStyleProps} from '../../../constants.js';
+import DatePicker from '../../components/date_picker.jsx';
+import FontAwesome from '../../../../../templates/FontAwesome.jsx';
 
 const styles = {
   modalHeader: {
@@ -22,8 +32,16 @@ const styles = {
     margin: '25px 0px 25px 0px',
     float: 'right'
   },
-  select: {
-    marginTop: 5
+  selectRow: {
+    margin: '5px 0px 5px 0px'
+  },
+  questionTooltip: {
+    cursor: 'pointer',
+    marginLeft: '0.5em',
+    marginRight: '0.5em'
+  },
+  tooltipText: {
+    maxWidth: 200
   }
 };
 
@@ -42,7 +60,9 @@ export default class SubmissionsDownloadForm extends React.Component {
       loadingFormNames: false,
       selectedForm: {name: '', version: ''},
       selectedFormValue: null,
-      showing: false
+      showing: false,
+      startDate: null,
+      endDate: null
     };
   }
 
@@ -84,9 +104,26 @@ export default class SubmissionsDownloadForm extends React.Component {
   };
 
   getQueryParams() {
-    return `?name=${this.state.selectedForm.name}&version=${
-      this.state.selectedForm.version
-    }`;
+    if (this.props.workshopId) {
+      return `?name=${this.state.selectedForm.name}&version=${
+        this.state.selectedForm.version
+      }`;
+    } else {
+      let queryParams = `?name=${this.state.selectedForm.name}&version=${
+        this.state.selectedForm.version
+      }`;
+      if (this.state.startDate) {
+        queryParams = `${queryParams}&start_date=${this.formatStartDate(
+          this.state.startDate
+        )}`;
+      }
+      if (this.state.endDate) {
+        queryParams = `${queryParams}&end_date=${this.formatEndDate(
+          this.state.endDate
+        )}`;
+      }
+      return queryParams;
+    }
   }
 
   onSelectChange = change => {
@@ -97,6 +134,30 @@ export default class SubmissionsDownloadForm extends React.Component {
         version: selectedFormNameVersion[1]
       },
       selectedFormValue: change.value
+    });
+  };
+
+  formatStartDate(date) {
+    return date ? date.toISOString() : null;
+  }
+
+  formatEndDate(date) {
+    if (date) {
+      // set end date to end of day
+      date = new Date(date.year(), date.month(), date.date(), 23, 59, 59, 999);
+    }
+    return date ? date.toISOString() : null;
+  }
+
+  handleStartChange = date => {
+    this.setState({
+      startDate: date
+    });
+  };
+
+  handleEndChange = date => {
+    this.setState({
+      endDate: date
     });
   };
 
@@ -125,6 +186,12 @@ export default class SubmissionsDownloadForm extends React.Component {
   }
 
   render() {
+    let isDownloadButtonDisabled = this.props.workshopId
+      ? this.state.selectedFormValue === null
+      : this.state.selectedFormValue === null ||
+        this.state.startDate === null ||
+        this.state.endDate === null;
+
     return (
       <div style={this.props.style}>
         <span onClick={this.open}>{this.props.children}</span>
@@ -136,19 +203,73 @@ export default class SubmissionsDownloadForm extends React.Component {
             <div>
               {this.state.formNamesAndVersions && (
                 <div>
-                  Form
-                  <Select
-                    options={this.getFormattedFormNameSelectOptions()}
-                    value={this.state.selectedFormValue}
-                    onChange={this.onSelectChange}
-                    style={styles.select}
-                    {...SelectStyleProps}
-                  />
+                  <Row style={styles.selectRow}>
+                    <FormGroup>
+                      <ControlLabel>Form</ControlLabel>
+                      <Select
+                        options={this.getFormattedFormNameSelectOptions()}
+                        value={this.state.selectedFormValue}
+                        onChange={this.onSelectChange}
+                        {...SelectStyleProps}
+                      />
+                    </FormGroup>
+                  </Row>
+                  {!this.props.workshopId && (
+                    <div>
+                      <Row className="submission-download-datepicker">
+                        <Col md={6}>
+                          <FormGroup>
+                            <ControlLabel>
+                              From
+                              <span data-for="date-tooltip" data-tip>
+                                <FontAwesome
+                                  icon="question-circle-o"
+                                  style={styles.questionTooltip}
+                                />
+                                <ReactTooltip
+                                  role="tooltip"
+                                  id="date-tooltip"
+                                  effect="solid"
+                                >
+                                  <div style={styles.tooltipText}>
+                                    You must provide a date range in order to
+                                    download submissions. If the download times
+                                    out, please shorten the date range.
+                                  </div>
+                                </ReactTooltip>
+                              </span>
+                            </ControlLabel>
+                            <DatePicker
+                              date={this.state.startDate}
+                              onChange={this.handleStartChange}
+                              selectsStart
+                              startDate={this.state.startDate}
+                              endDate={this.state.endDate}
+                              clearable
+                            />
+                          </FormGroup>
+                        </Col>
+                        <Col md={6}>
+                          <FormGroup>
+                            <ControlLabel>To</ControlLabel>
+                            <DatePicker
+                              date={this.state.endDate}
+                              onChange={this.handleEndChange}
+                              selectsEnd
+                              startDate={this.state.startDate}
+                              endDate={this.state.endDate}
+                              clearable
+                            />
+                          </FormGroup>
+                        </Col>
+                      </Row>
+                    </div>
+                  )}
                   <div>
                     <Button
                       onClick={this.handleDownloadCsvClick}
                       style={styles.downloadButton}
-                      disabled={this.state.selectedFormValue === null}
+                      disabled={isDownloadButtonDisabled}
                     >
                       Download as CSV
                     </Button>
