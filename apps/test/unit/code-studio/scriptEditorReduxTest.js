@@ -57,6 +57,7 @@ describe('scriptEditorRedux reducer tests', () => {
     let nextState = reducer(initialState, removeGroup(1));
     let lessonGroups = nextState.lessonGroups;
     assert.equal(lessonGroups.length, 1);
+    assert.equal(lessonGroups[0].position, 1);
     assert.equal(lessonGroups[0].key, 'lg-key-2');
 
     // Remove lesson group when there is only one lesson group left
@@ -65,6 +66,7 @@ describe('scriptEditorRedux reducer tests', () => {
     lessonGroups = nextState.lessonGroups;
     assert.equal(lessonGroups.length, 1);
     assert.equal(lessonGroups[0].key, emptyNonUserFacingGroup.key);
+    assert.equal(lessonGroups[0].position, 1);
     assert.equal(lessonGroups[0].userFacing, false);
   });
 

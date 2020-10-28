@@ -48,6 +48,17 @@ class Resource < ApplicationRecord
     self.key = generate_key_from_name
   end
 
+  def summarize_for_lesson_plan
+    {
+      key: key,
+      name: I18n.t("data.resource.#{key}.name", default: name),
+      url: url,
+      download_url: download_url,
+      audience: audience || 'All',
+      type: type
+    }
+  end
+
   private
 
   def generate_key_from_name

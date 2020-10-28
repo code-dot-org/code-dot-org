@@ -528,6 +528,16 @@ class Lesson < ActiveRecord::Base
     end
   end
 
+  def resources_for_lesson_plan(verified_teacher)
+    grouped_resources = resources.map(&:summarize_for_lesson_plan).group_by {|r| r[:audience]}
+    if verified_teacher && grouped_resources.key?('Verified Teacher')
+      grouped_resources['Teacher'] ||= []
+      grouped_resources['Teacher'] += grouped_resources['Verified Teacher']
+    end
+    grouped_resources.delete('Verified Teacher')
+    grouped_resources
+  end
+
   private
 
   # Finds the LessonActivity by id, or creates a new one if id is not specified.
