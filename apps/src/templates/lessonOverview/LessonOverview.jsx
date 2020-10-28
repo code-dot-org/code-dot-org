@@ -54,6 +54,8 @@ class LessonOverview extends Component {
           })
         ).isRequired
       }).isRequired,
+      position: PropTypes.string.isRequired,
+      lockable: PropTypes.bool.isRequired,
       displayName: PropTypes.string.isRequired,
       overview: PropTypes.string.isRequired,
       purpose: PropTypes.string.isRequired,
@@ -139,7 +141,12 @@ class LessonOverview extends Component {
             viewAs={viewAs}
           />
         )}
-        <h1>{lesson.displayName}</h1>
+        <h1>{lesson.lockable
+            ? lesson.displayName : i18n.lessonNumbered({
+                lessonNumber: lesson.position,
+                lessonName: lesson.displayName
+              })
+        }</h1>
 
         <div style={styles.frontPage}>
           <div style={styles.left}>
