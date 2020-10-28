@@ -500,6 +500,92 @@ class LessonsControllerTest < ActionController::TestCase
     assert_equal ['level-to-add'], script_level.levels.map(&:name)
   end
 
+  test 'add anonymous survey level via lesson update' do
+    sign_in @levelbuilder
+
+    activity = @lesson.lesson_activities.create(
+      name: 'activity name',
+      position: 1,
+      seeding_key: 'activity-key'
+    )
+    section = activity.activity_sections.create(
+      name: 'section name',
+      position: 1,
+      seeding_key: 'section-key'
+    )
+
+    existing_survey = create :level_group, name: 'existing-survey'
+    existing_survey.update!(properties: {anonymous: "true"})
+
+    existing_script_level = section.script_levels.create(
+      position: 1,
+      activity_section_position: 1,
+      lesson: @lesson,
+      script: @lesson.script,
+      levels: [existing_survey],
+      assessment: true
+    )
+
+    existing_summary = existing_script_level.summarize_for_edit
+    assert_equal 1, existing_summary[:activitySectionPosition]
+    assert_equal existing_survey.id, existing_summary[:activeId]
+    existing_summary[:assessment] = false
+
+    survey_to_add = create :level_group, name: 'survey-to-add'
+    survey_to_add.update!(properties: {anonymous: "true"})
+
+    @update_params['activities'] = [
+      {
+        id: activity.id,
+        name: 'activity name',
+        position: 1,
+        activitySections: [
+          {
+            id: section.id,
+            name: 'section name',
+            position: 1,
+            scriptLevels: [
+              existing_summary,
+              {
+                activitySectionPosition: 2,
+                activeId: survey_to_add.id,
+                levels: [
+                  {
+                    id: survey_to_add.id,
+                    name: survey_to_add.name
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ].to_json
+
+    put :update, params: @update_params
+
+    assert_redirected_to "/lessons/#{@lesson.id}"
+    @lesson.reload
+
+    assert_equal activity, @lesson.lesson_activities.first
+    assert_equal section, activity.activity_sections.first
+    assert_equal 2, section.script_levels.count
+
+    # when the user marks an existing anonymous survey as not an assessment,
+    # the update method marks it as an assessment so that we pass validations.
+    script_level = section.script_levels.first
+    assert_equal ['existing-survey'], script_level.levels.map(&:name)
+    assert script_level.anonymous?
+    assert script_level.assessment
+
+    # when the user adds a new anonymous survey to an activity section, the
+    # update method marks it as an assessment so that we pass validations.
+    script_level = section.script_levels.last
+    assert_equal ['survey-to-add'], script_level.levels.map(&:name)
+    assert script_level.anonymous?
+    assert script_level.assessment
+  end
+
   test 'remove script level via lesson update' do
     sign_in @levelbuilder
 

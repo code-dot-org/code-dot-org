@@ -659,8 +659,15 @@ class ScriptLevel < ActiveRecord::Base
 
   # @param [Array<Hash>] levels_data - Array of hashes each representing a level
   def update_levels(levels_data)
-    self.levels = levels_data.map do |level_data|
+    levels = levels_data.map do |level_data|
       Level.find(level_data['id'])
     end
+
+    # Script levels containing anonymous levels must be assessments.
+    if levels.any? {|l| l.properties["anonymous"] == "true"}
+      self.assessment = true
+      save! if changed?
+    end
+    self.levels = levels
   end
 end
