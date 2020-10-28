@@ -22,7 +22,7 @@ class LessonsController < ApplicationController
       unit: {
         displayName: @lesson.script.localized_title,
         link: @lesson.script.link,
-        lessons: @lesson.script.lessons.map {|lesson| {displayName: lesson.localized_name, link: lesson_path(id: lesson.id)}}
+        lessons: @lesson.script.lessons.map {|lesson| {displayName: lesson.localized_name, link: lesson_path(id: lesson.id), position: lesson.relative_position, lockable: lesson.lockable}}
       },
       position: @lesson.relative_position,
       lockable: @lesson.lockable,
