@@ -30,7 +30,7 @@ Scenario: Applab with free response contained level
   Then I close my eyes
 
 Scenario: GameLab with a submittable contained level
-  When I open my eyes to test "gamelab contained level"
+  When I open my eyes to test "gamelab submittable contained level"
   Given I am on "http://studio.code.org/s/allthethings/stage/41/puzzle/7"
   And I rotate to landscape
   And I wait for the page to fully load
@@ -42,9 +42,10 @@ Scenario: GameLab with a submittable contained level
   And I press "submitButton"
   And I press "confirm-button"
   And I wait until current URL contains "/stage/41/puzzle/8"
+  Then I close my eyes
 
 Scenario: Gamelab with multiple choice contained level
-  When I open my eyes to test "gamelab contained level"
+  When I open my eyes to test "gamelab multiple choice contained level"
   Given I am on "http://studio.code.org/s/allthethings/stage/41/puzzle/2"
   And I rotate to landscape
   And I wait for the page to fully load

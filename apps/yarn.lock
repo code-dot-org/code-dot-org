@@ -1623,10 +1623,10 @@
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@code-dot-org/maze/-/maze-1.1.0.tgz#7c8185adf06a9172e3bde4ccd6f6738a787b2a7c"
 
-"@code-dot-org/ml-activities@0.0.25":
-  version "0.0.25"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/ml-activities/-/ml-activities-0.0.25.tgz#e7308b02d7cc37e6efb970ca4596eaa459b89cc0"
-  integrity sha512-Ic8H7GnQum1PZyjToWxmM1XetBc+5aXmqdDSBmI4IMT32zeJH9CCvyMRlCLXFIGo7VVGXz+GEcYLBi1pFTzCCw==
+"@code-dot-org/ml-activities@0.0.26":
+  version "0.0.26"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/ml-activities/-/ml-activities-0.0.26.tgz#a4b2fdc2c23fbb8bdd9e56082ec3c2fdaa401576"
+  integrity sha512-t+gt6DE65uQjw00mo5xwQo+iM2bltnF882q4ATFV94AbQ8he95EHMSa1uSSHcVXakTRNQAT47JloDG0X/sgQ3g==
   dependencies:
     "@fortawesome/fontawesome-svg-core" "^1.2.25"
     "@fortawesome/free-solid-svg-icons" "^5.11.2"
@@ -3643,10 +3643,10 @@ block-stream@*:
   dependencies:
     inherits "~2.0.0"
 
-blockly@3.20200625.2:
-  version "3.20200625.2"
-  resolved "https://registry.yarnpkg.com/blockly/-/blockly-3.20200625.2.tgz#266b6c3078aad460afc7e831e6e8f7616073d314"
-  integrity sha512-+0aUynP4kAFjg+m9uSyctWB+KwT3/BDmqy4Fm7vwWq7cuMtgIsqqA8VGb6INVpFx9WZUXSZ5enFAco6CM85bpA==
+blockly@3.20200924.2:
+  version "3.20200924.2"
+  resolved "https://registry.yarnpkg.com/blockly/-/blockly-3.20200924.2.tgz#469611b42e869f9d50e4b562e5fe2ae48fab075f"
+  integrity sha512-2wiK8bj3qPuqb26U7HgD925nVmmcBwgoRmAqqoEJLCn+yWidrceQuDr/9aGCWxwLo0DEMStz10lhC3+Hqul83g==
   dependencies:
     jsdom "^15.2.1"
 

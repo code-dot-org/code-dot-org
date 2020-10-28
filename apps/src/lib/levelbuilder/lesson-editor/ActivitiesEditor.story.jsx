@@ -6,14 +6,15 @@ import reducers, {
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
 import {Provider} from 'react-redux';
 import {
+  sampleActivities,
   levelKeyList,
-  activities
-} from '@cdo/apps/lib/levelbuilder/lesson-editor/SampleActivitiesData';
+  searchOptions
+} from '../../../../test/unit/lib/levelbuilder/lesson-editor/activitiesTestData';
 
 const createStore = () => {
   registerReducers({...reducers});
   const store = createStoreWithReducers();
-  store.dispatch(init(activities, levelKeyList));
+  store.dispatch(init(sampleActivities, levelKeyList, searchOptions));
   return store;
 };
 export default storybook => {

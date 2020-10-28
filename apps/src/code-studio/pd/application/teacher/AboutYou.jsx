@@ -118,43 +118,20 @@ export default class AboutYou extends LabeledFormComponent {
       <FormGroup>
         {nominated && (
           <p>
-            Congratulations on your nomination for a scholarship to the Code.org
-            Professional Learning Program! We will let your local partner know
-            that you’ve been nominated as they consider your application for the
-            regional scholarship or discounts they have available.
+            Congratulations on being nominated for a scholarship to cover the
+            costs of the Code.org Professional Learning Program! We will let
+            your local partner know that you’ve been nominated as they consider
+            your application for the regional scholarship or discounts they have
+            available.
           </p>
         )}
 
         <p>
-          Thanks for your interest in the Professional Learning Program! This
-          application should take 10 - 15 minutes to complete. Fields marked
-          with a <span style={{color: 'red'}}>*</span> are required.
+          Thanks for your interest in the Code.org Professional Learning
+          Program! This application should take 10 - 15 minutes to complete.
+          Fields marked with a <span style={{color: 'red'}}>*</span> are
+          required.
         </p>
-
-        {!nominated && (
-          <div>
-            <h3> When will I hear back?</h3>
-            <p>
-              In most regions, applications are accepted on a rolling basis. And
-              in most cases, our local partner will get back to you within 2
-              weeks to let you know your application status.
-            </p>
-          </div>
-        )}
-
-        {nominated && (
-          <div>
-            <h3>When will I hear back about the scholarships and discounts?</h3>
-            <p>
-              In most regions, applications are accepted on a rolling basis. And
-              in most cases, our local partner will get back to you within 2
-              weeks to let you know your application status. Even if you don’t
-              get selected for the scholarship, you will still be able to attend
-              if you are an eligible teacher and your school can pay a
-              discounted price (thanks to generous donors).
-            </p>
-          </div>
-        )}
 
         <h3>Need more information? </h3>
         <p>

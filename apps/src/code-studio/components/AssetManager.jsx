@@ -20,6 +20,12 @@ export const AudioErrorType = {
   INITIALIZE: 'initialize',
   SAVE: 'save'
 };
+export const ImageMode = {
+  FILE: 'file',
+  ICON: 'icon',
+  URL: 'url',
+  DEFAULT: 'default'
+};
 
 const errorMessages = {
   403: 'Quota exceeded. Please delete some files and try again.',

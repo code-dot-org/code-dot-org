@@ -113,13 +113,7 @@ class LevelLoader
     # Delete entries for all other attributes that may no longer be specified in the xml.
     # Fixes issue #75863324 (delete removed level properties on import)
     level.send(:write_attribute, 'properties', {})
-    loaded_attributes = level.load_level_xml(xml_node)
-
-    # activerecord-import 0.28.2 doesn't play nicely with the datetime values serialized in our .level files for some reason.
-    # Without this line, it passes the serialized String value directly into the SQL insert statement as-is, which fails
-    # since it's not the format MySQL wants. Parsing it into a TimeWithZone object first seems to make it work.
-    loaded_attributes['created_at'] = Time.zone.parse(loaded_attributes['created_at']) if loaded_attributes['created_at']
-    level.assign_attributes(loaded_attributes)
+    level.assign_attributes(level.load_level_xml(xml_node))
 
     level
   end

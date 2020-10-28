@@ -360,15 +360,16 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
 
   test 'confirmation, partial previous, blank, manual' do
     complete_school_info = SchoolInfo.create({country: 'United States', school_type: 'public', school_name: 'Philly High Harmony', full_address: 'Seattle, Washington', validation_type: SchoolInfo::VALIDATION_COMPLETE})
-    @teacher.update(school_info: complete_school_info)
+    assert @teacher.update(school_info: complete_school_info)
 
     Timecop.travel 1.year
+    @teacher.reload
 
     partial_school_info = SchoolInfo.create({country: 'United States', school_type: 'public', school_name: nil, full_address: 'Seattle, Washington', validation_type: SchoolInfo::VALIDATION_COMPLETE})
-    result = @teacher.update(school_info: partial_school_info)
-    assert_equal false, result
+    refute @teacher.update(school_info: partial_school_info)
 
     Timecop.travel 7.days
+    @teacher.reload
 
     sign_in @teacher
     submit_blank_school_info
@@ -380,14 +381,16 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
 
   test 'confirmation, partial previous, unchanged, manual' do
     complete_school_info = SchoolInfo.create({country: 'US', school_type: 'public', school_name: 'Philly High Harmony', full_address: 'Seattle, Washington', validation_type: SchoolInfo::VALIDATION_COMPLETE})
-    @teacher.update(school_info: complete_school_info)
+    assert @teacher.update(school_info: complete_school_info)
 
     Timecop.travel 1.year
+    @teacher.reload
 
     partial_school_info = SchoolInfo.create({country: 'US', school_type: 'public', school_name: nil, full_address: 'Seattle, Washington', validation_type: SchoolInfo::VALIDATION_COMPLETE})
-    @teacher.update(school_info: partial_school_info)
+    refute @teacher.update(school_info: partial_school_info)
 
     Timecop.travel 7.days
+    @teacher.reload
 
     sign_in @teacher
     submit_unchanged_school_info partial_school_info
@@ -401,14 +404,16 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
 
   test 'confirmation, partial previous, partial, manual' do
     complete_school_info = SchoolInfo.create({country: 'United States', school_type: 'public', school_name: 'Philly High Harmony', full_address: 'Seattle, Washington', validation_type: SchoolInfo::VALIDATION_COMPLETE})
-    @teacher.update(school_info: complete_school_info)
+    assert @teacher.update(school_info: complete_school_info)
 
     Timecop.travel 1.year
+    @teacher.reload
 
     partial_school_info = SchoolInfo.create({country: 'United States', school_type: 'public', school_name: nil, full_address: 'Seattle, Washington', validation_type: SchoolInfo::VALIDATION_COMPLETE})
-    @teacher.update(school_info: partial_school_info)
+    refute @teacher.update(school_info: partial_school_info)
 
     Timecop.travel 7.days
+    @teacher.reload
 
     sign_in @teacher
     submit_partial_school_info
@@ -425,14 +430,16 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     new_school = create :school
 
     complete_school_info = SchoolInfo.create({country: 'United States', school_type: 'public', school_name: 'Philly High Harmony', full_address: 'Seattle, Washington', validation_type: SchoolInfo::VALIDATION_COMPLETE})
-    @teacher.update(school_info: complete_school_info)
+    assert @teacher.update(school_info: complete_school_info)
 
     Timecop.travel 1.year
+    @teacher.reload
 
     partial_school_info = SchoolInfo.create({country: 'United States', school_type: 'public', school_name: nil, full_address: 'Seattle, Washington', validation_type: SchoolInfo::VALIDATION_COMPLETE})
-    @teacher.update(school_info: partial_school_info)
+    refute @teacher.update(school_info: partial_school_info)
 
     Timecop.travel 7.days
+    @teacher.reload
 
     sign_in @teacher
     submit_complete_school_info_from_dropdown(new_school)
@@ -447,14 +454,16 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
 
   test 'confirmation, partial previous, complete, manual' do
     complete_school_info = SchoolInfo.create({country: 'United States', school_type: 'public', school_name: 'Philly High Harmony', full_address: 'Seattle, Washington', validation_type: SchoolInfo::VALIDATION_COMPLETE})
-    @teacher.update(school_info: complete_school_info)
+    assert @teacher.update(school_info: complete_school_info)
 
     Timecop.travel 1.year
+    @teacher.reload
 
     partial_school_info = SchoolInfo.create({country: 'United States', school_type: 'public', school_name: nil, full_address: 'Seattle, Washington', validation_type: SchoolInfo::VALIDATION_COMPLETE})
-    @teacher.update(school_info: partial_school_info)
+    refute @teacher.update(school_info: partial_school_info)
 
     Timecop.travel 7.days
+    @teacher.reload
 
     sign_in @teacher
     submit_complete_school_info_manual
@@ -473,18 +482,20 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     new_school = create :school
 
     complete_school_info = SchoolInfo.create({country: 'United States', school_type: 'public', school_name: 'Philly High Harmony', full_address: 'Seattle, Washington', validation_type: SchoolInfo::VALIDATION_COMPLETE})
-    @teacher.update(school_info: complete_school_info)
+    assert @teacher.update(school_info: complete_school_info)
 
     second_teacher_complete_school_info = SchoolInfo.create({country: 'United States', school_type: 'public', school_name: 'School of Rock', full_address: 'Harrisburg, PA', validation_type: SchoolInfo::VALIDATION_COMPLETE})
-    @second_teacher.update(school_info: second_teacher_complete_school_info)
+    assert @second_teacher.update(school_info: second_teacher_complete_school_info)
 
     Timecop.travel 1.year
+    @teacher.reload
 
     partial_school_info = SchoolInfo.create({country: 'United States', school_type: 'public', school_name: nil, full_address: 'Seattle, Washington', validation_type: SchoolInfo::VALIDATION_COMPLETE})
-    @teacher.update(school_info: partial_school_info)
-    @second_teacher.update(school_info: partial_school_info)
+    refute @teacher.update(school_info: partial_school_info)
+    refute @second_teacher.update(school_info: partial_school_info)
 
     Timecop.travel 7.days
+    @teacher.reload
 
     sign_in @teacher
     submit_complete_school_info_from_dropdown(new_school)
