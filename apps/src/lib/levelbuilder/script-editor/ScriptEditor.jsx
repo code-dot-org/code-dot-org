@@ -104,7 +104,6 @@ export default class ScriptEditor extends React.Component {
     super(props);
 
     this.state = {
-      curriculumUmbrella: this.props.curriculumUmbrella,
       familyName: this.props.familyName
     };
   }
@@ -113,11 +112,6 @@ export default class ScriptEditor extends React.Component {
     $(this.supportedLocaleSelect)
       .children('option')
       .removeAttr('selected', true);
-  };
-
-  handleUmbrellaSelectChange = event => {
-    const curriculumUmbrella = event.target.value;
-    this.setState({curriculumUmbrella});
   };
 
   handleFamilyNameChange = event => {
@@ -316,7 +310,6 @@ export default class ScriptEditor extends React.Component {
                   name="curriculum_umbrella"
                   style={styles.dropdown}
                   defaultValue={this.props.curriculumUmbrella}
-                  onChange={this.handleUmbrellaSelectChange}
                 >
                   <option value="">(None)</option>
                   {CURRICULUM_UMBRELLAS.map(curriculumUmbrella => (
@@ -344,7 +337,7 @@ export default class ScriptEditor extends React.Component {
                 Family Name
                 <select
                   name="family_name"
-                  defaultValue={this.state.familyName}
+                  value={this.state.familyName}
                   style={styles.dropdown}
                   disabled={this.props.hasCourse}
                   onChange={this.handleFamilyNameChange}
