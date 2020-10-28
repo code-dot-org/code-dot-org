@@ -3,6 +3,8 @@ import React, {Component} from 'react';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 import Button from '@cdo/apps/templates/Button';
+import {connect} from 'react-redux';
+import {resourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
 
 const styles = {
   dialog: {
@@ -15,10 +17,11 @@ const styles = {
 
 // TODO: Hook up adding a resource when resources are associated with lessons
 
-export default class FindResourceDialog extends Component {
+class FindResourceDialog extends Component {
   static propTypes = {
     isOpen: PropTypes.bool.isRequired,
-    handleConfirm: PropTypes.func.isRequired
+    handleConfirm: PropTypes.func.isRequired,
+    resources: PropTypes.arrayOf(resourceShape)
   };
 
   render() {
@@ -33,9 +36,11 @@ export default class FindResourceDialog extends Component {
         <label>
           <span>Add link to resource:</span>
           <select onChange={() => {}}>
-            <option>Slides</option>
-            <option>Activity Guide</option>
-            <option>Video</option>
+            {this.props.resources.map(resource => (
+              <option key={resource.key} value={resource.key}>
+                {resource.name}
+              </option>
+            ))}
           </select>
         </label>
         <DialogFooter rightAlign>
@@ -49,3 +54,9 @@ export default class FindResourceDialog extends Component {
     );
   }
 }
+
+export const UnconnectedFindResourceDialog = FindResourceDialog;
+
+export default connect(state => ({
+  resources: state.resources
+}))(FindResourceDialog);
