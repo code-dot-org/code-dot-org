@@ -35,6 +35,10 @@ import googlePlatformApi, {
   loadGooglePlatformApi
 } from '@cdo/apps/templates/progress/googlePlatformApiRedux';
 import {queryLockStatus, renderTeacherPanel} from './teacherPanelHelpers';
+import {
+  OAuthSectionTypes,
+  OAuthProviders
+} from '@cdo/apps/lib/ui/accounts/constants';
 
 var progress = module.exports;
 
@@ -145,7 +149,6 @@ progress.renderCourseProgress = function(scriptData) {
   const store = getStore();
   initializeStoreWithProgress(store, scriptData, null, true);
   initializeStoreWithSections(store, scriptData);
-  initializeGooglePlatformApi(store);
 
   if (scriptData.student_detail_progress_view) {
     store.dispatch(setStudentDefaultsSummaryView(false));
@@ -352,9 +355,15 @@ function initializeStoreWithSections(store, scriptData) {
   }
   store.dispatch(setSections(sections));
   store.dispatch(selectSection(currentSection.id.toString()));
-}
 
-function initializeGooglePlatformApi(store) {
-  registerReducers({googlePlatformApi});
-  store.dispatch(loadGooglePlatformApi()).catch(e => console.warn(e));
+  // If our current section is a google classroom and teacher is conntected
+  // to google, load the google classroom share button api.
+  if (
+    currentSection.login_type === OAuthSectionTypes.google_classroom &&
+    scriptData.user_providers &&
+    scriptData.user_providers.includes(OAuthProviders.google)
+  ) {
+    registerReducers({googlePlatformApi});
+    store.dispatch(loadGooglePlatformApi()).catch(e => console.warn(e));
+  }
 }

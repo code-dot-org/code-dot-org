@@ -118,7 +118,7 @@ export default class EditTipDialog extends Component {
             onConfirmDelete={this.handleDelete}
           />
           <Button
-            text={i18n.closeAndSave()}
+            text={i18n.saveAndClose()}
             onClick={this.handleCloseAndSave}
             color={Button.ButtonColor.orange}
           />
