@@ -11,7 +11,7 @@ class CSVReaderWrapper extends Component {
   static propTypes = {
     resetState: PropTypes.func.isRequired,
     setImportedData: PropTypes.func.isRequired,
-    setColumnsByDataType: PropTypes.func.isRequired,
+    setColumnsByDataType: PropTypes.func.isRequired
   };
 
   constructor(props) {
@@ -20,7 +20,7 @@ class CSVReaderWrapper extends Component {
     this.state = {
       csvfile: undefined,
       download: false,
-      data: undefined,
+      data: undefined
     };
   }
 
@@ -28,7 +28,7 @@ class CSVReaderWrapper extends Component {
     this.props.resetState();
     this.setState({
       csvfile: event.target.files[0],
-      download: false,
+      download: false
     });
   };
 
@@ -36,7 +36,7 @@ class CSVReaderWrapper extends Component {
     this.props.resetState();
     this.setState({
       csvfile: event.target.value,
-      download: true,
+      download: true
     });
   };
 
@@ -45,7 +45,7 @@ class CSVReaderWrapper extends Component {
     Papa.parse(csvfile, {
       complete: this.updateData,
       header: true,
-      download: download,
+      download: download
     });
   };
 
@@ -118,6 +118,6 @@ export default connect(
     },
     setColumnsByDataType(column, dataType) {
       dispatch(setColumnsByDataType(column, dataType));
-    },
+    }
   })
 )(CSVReaderWrapper);
