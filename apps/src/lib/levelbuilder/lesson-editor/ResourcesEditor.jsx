@@ -130,7 +130,6 @@ class ResourcesEditor extends Component {
   };
 
   render() {
-    console.log(this.props.resources);
     return (
       <div>
         <AddResourceDialog
