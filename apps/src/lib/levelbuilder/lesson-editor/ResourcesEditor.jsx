@@ -8,7 +8,10 @@ import color from '@cdo/apps/util/color';
 import AddResourceDialog from './AddResourceDialog';
 import Button from '@cdo/apps/templates/Button';
 import {connect} from 'react-redux';
-import {addResource, removeResource} from '@cdo/apps/lib/levelbuilder/lesson-editor/resourcesEditorRedux';
+import {
+  addResource,
+  removeResource
+} from '@cdo/apps/lib/levelbuilder/lesson-editor/resourcesEditorRedux';
 
 const styles = {
   resourceSearch: {
@@ -127,7 +130,6 @@ class ResourcesEditor extends Component {
   };
 
   render() {
-
     console.log(this.props.resources);
     return (
       <div>

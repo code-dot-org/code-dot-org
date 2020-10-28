@@ -4,21 +4,20 @@ const INIT = 'resourcesEditor/INIT';
 const ADD_RESOURCE = 'resourcesEditor/ADD_RESOURCE';
 const REMOVE_RESOURCE = 'resourcesEditor/ADD_RESOURCE';
 
-export const initResources = (resources) => ({
+export const initResources = resources => ({
   type: INIT,
   resources
 });
 
-export const addResource = (newResource) => ({
+export const addResource = newResource => ({
   type: ADD_RESOURCE,
   newResource
 });
 
-export const removeResource = (key) => ({
+export const removeResource = key => ({
   type: REMOVE_RESOURCE,
   key
 });
-
 
 export default function resources(state = [], action) {
   let newState = _.cloneDeep(state);
@@ -42,4 +41,4 @@ export default function resources(state = [], action) {
   }
 
   return newState;
-};
+}
