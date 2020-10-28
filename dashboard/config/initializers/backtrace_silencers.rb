@@ -10,7 +10,6 @@
 silenced = [
   /ActionController::TestCase HTTP request methods/,
   /ActionDispatch::IntegrationTest HTTP request methods/,
-  /alias_method_chain is deprecated/
 ]
 
 silenced_expr = Regexp.new(silenced.join('|'))
