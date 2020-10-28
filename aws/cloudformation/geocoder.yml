@@ -228,3 +228,7 @@ Outputs:
   Version:
     Description: ECS Cloudformation template version
     Value: 3.0.0
+  DNSName:
+    Description: Internal DNS name of the service.
+    Value: !GetAtt EcsElasticLoadBalancer.DNSName
+    Export: {Name: !Sub "${AWS::StackName}-DNSName"}

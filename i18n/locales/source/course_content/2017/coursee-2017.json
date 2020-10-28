@@ -1813,6 +1813,9 @@
       "do something": {
         "name": "do something"
       }
+    },
+    "placeholder_texts": {
+      "22b45b2cf2d4a2a3d7b3faa522013b26": "Count to three and I will disappear!  Guess a number between 1 and 400 to find me!"
     }
   },
   "https://studio.code.org/s/coursee-2017/stage/22/puzzle/1": {

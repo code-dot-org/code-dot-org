@@ -14,7 +14,7 @@ describe('Activity', () => {
 
   it('renders title and time', () => {
     const wrapper = shallow(<Activity {...defaultProps} />);
-    expect(wrapper.contains('Main Activity(20 minutes)'));
+    expect(wrapper.contains('Main Activity (20 minutes)')).to.be.true;
   });
 
   it('renders correct number of activity sections', () => {

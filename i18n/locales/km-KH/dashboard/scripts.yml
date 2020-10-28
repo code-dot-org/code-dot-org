@@ -5,6 +5,7 @@ km:
       category:
         hoc_category_name: ពេលវេលា​នៃ​កូដ
         math_category_name: គណិត​វិទ្យា
+        other_category_name: ផ្សេងៗ
       name:
         course2:
           lessons:
@@ -187,6 +188,10 @@ km:
           lessons:
             Lists:
               name: បញ្ជី
+        workshop-gamelab:
+          lessons:
+            Input:
+              name: ធាតុបញ្ចូល
         coursee-ramp:
           lessons:
             Conditionals:

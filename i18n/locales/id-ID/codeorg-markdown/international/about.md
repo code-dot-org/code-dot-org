@@ -5,7 +5,7 @@ title: Tentang
 # Tentang Kami
 
 <div class="col-60">
-  Code.org® adalah organisasi nirlaba yang didedikasikan untuk memperluas penyebaran akses ilmu komputer di sekolah dan meningkatkan partisipasi perempuan dan minoritas yang kurang terwakili. Visi kami adalah bahwa setiap siswa di setiap sekolah memiliki kesempatan untuk belajar ilmu komputer, seperti biologi, kimia, atau aljabar. Kami menyediakan kurikulum yang paling sering digunakan untuk mengajar ilmu komputer di sekolah dasar dan menengah dan juga menyelenggarakan kampanye <a href="https://hourofcode.com">Hour of Code</a> tahunan, yang telah melibatkan 10% dari semua siswa di dunia. Code.org didukung oleh pendonor seperti, Amazon, Facebook, Google, Infosys Foundation, Microsoft, dan <a href="/about/donors">lebih banyak lagi</a>.
+  Code.org® is a nonprofit dedicated to expanding access to computer science in schools and increasing participation by young women and students from other underrepresented groups. Visi kami adalah bahwa setiap siswa di setiap sekolah memiliki kesempatan untuk belajar ilmu komputer, seperti biologi, kimia, atau aljabar. Kami menyediakan kurikulum yang paling sering digunakan untuk mengajar ilmu komputer di sekolah dasar dan menengah dan juga menyelenggarakan kampanye <a href="https://hourofcode.com">Hour of Code</a> tahunan, yang telah melibatkan 10% dari semua siswa di dunia. Code.org didukung oleh pendonor seperti, Amazon, Facebook, Google, Infosys Foundation, Microsoft, dan <a href="/about/donors">lebih banyak lagi</a>.
 </div>
 
 [col-40]

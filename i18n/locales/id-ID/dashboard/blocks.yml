@@ -348,7 +348,7 @@ id:
             '"border"': batas
             '"inner"': di dalam persegi
             '"diamond"': berlian
-            '"circle"': lingkaran
+            '"circle"': loop
             '"grid"': Kisi
             '"top"': baris atas
             '"row"': baris
@@ -457,7 +457,7 @@ id:
             '"border"': batas
             '"inner"': di dalam persegi
             '"diamond"': berlian
-            '"circle"': lingkaran
+            '"circle"': loop
             '"grid"': Kisi
             '"top"': baris atas
             '"row"': baris

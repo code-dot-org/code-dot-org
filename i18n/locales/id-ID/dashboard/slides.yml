@@ -74,7 +74,7 @@ id:
         text: "Jika seseorang mengklik atau mengetuk atau mengetik di komputer atau telepon, yang menghasilkan sebuah EVENT, dan ada beberapa kode yang dapat memutuskan apa yang harus dilakukan ketika ini terjadi."
       3:
         image: 'notes/flappy03.jpg'
-        text: "Contohnya, Kamu bisa mendapatkan pesan 'EVEN-HANDLER' isinya \"ketika maus ditekan, mainkan sebuah bunyi\" "
+        text: "Contohnya, Anda bisa mendapatkan pesan 'EVEN-HANDLER' isinya \"ketika maus ditekan, mainkan sebuah bunyi\" "
       4:
         image: 'notes/flappy04.jpg'
         text: "Pernahkan kamu mendengar permainan FlappyBird? Dengan menggunakan 'Event Handlers', kita akan belajar untuk memprogram FlappyBird buatan kita sendiri!"
@@ -174,7 +174,7 @@ id:
       3:
         text: "Hal ini membuat keputusan dan melakukan salah satu dari dua tindakan berdasarkan keputusan itu. Dan seperti halnya  blok \"if\" / \"jika\", Anda dapat menempatkan blok \"if-else\" / \"kecuali-jika\" dalam blok \"ulangi\" ."
       4:
-        text: "Sekarang mari kita membantu Scrat tupai mendapatkan bijinya itu!"
+        text: "Sekarang mari kita membantu Scrat tupai mendapatkan biji akorn!"
     function:
       1:
         text: "Halo, saya Brina, seorang programer dari Instagram. Fungsi adalah baris-baris tertentu kode yang Anda ingin menggunakan berkali-kali. Daripada menulis kode yang sama setiap kali, Anda cukup menggunakan satu blok."
@@ -318,7 +318,7 @@ id:
         text: "Ini adalah balok-balok lompatan. Ketika kamu menggunakannya, artismu pindah tapi tidak menggambar, maka gunakanlah ini untuk melompat ke garis abu-abu berikutnya."
     C1_bee_level_intro:
       1:
-        text: "Kerenkan? Pada teka-teki selanjutnya, target kamu adalah membantu lebah menemukan bunga dan mendapatkan nektar dari bunga tersebut dan terbang ke sarang lebah untuk membuat madu. Kamu akan memakai balok \"dapatkan nektar\" dan balok \"buat madu\" untuk latihan ini."
+        text: "Kerenkan? Pada teka-teki selanjutnya, target kamu adalah membantu lebah menemukan bunga dan mendapatkan nektar dari bunga tersebut dan terbang ke sarang lebah untuk membuat madu. Anda akan memakai balok \"dapatkan nektar\" dan balok \"buat madu\" untuk latihan ini."
       2:
         text: "Setiap bunga memiliki jumlah nektar yang berbeda: 1, 2, 3, atau lebih. Kita mengetahui berapa banyak nektar di bunga-bunga merah, dengan jumlah kecil di sudut. Jadi pastikan untuk mendapatkan semua madu dari bunga sebelum anda bergerak maju. Juga, setiap sarang lebah hanya dapat menampung begitu banyak madu: 1, 2, 3, atau lebih. Jadi pastikan untuk membuat madu sebanyak yang dapat ditampung oleh sarang lebah."
       3:
@@ -1184,25 +1184,25 @@ id:
       2:
         text: "Semua komputer menggunakan pernyataan jika, termasuk ponsel saya. Misalnya, saat saya membuka ponsel, maka beberapa kode dijalankan yang mengatakan bahwa jika saya memasukkan kata sandi dengan benar, maka ponsel akan terbuka. Atau, menunjukkan pesan kesalahan."
       3:
-        text: "Kamu dapat menggunakan pernyataan jika dalam kode untuk membuat Steve dan Alice menanggapi apa yang mereka lihat di dunia. Misalnya, jika ada batu di depan, mereka akan berbelok ke kiri. Atau berbelok ke kanan jika ada pohon di sana."
+        text: "Anda dapat menggunakan pernyataan jika dalam kode untuk membuat Steve dan Alice menanggapi apa yang mereka lihat di dunia. Misalnya, jika ada batu di depan, mereka akan berbelok ke kiri. Atau berbelok ke kanan jika ada pohon di sana."
       4:
         text: "Dalam hal ini, tentu saja kita tidak mau jatuh ke dalam lava. Mudah saja untuk merencanakan lava. Kita dapat melihatnya di layar. Tapi bagaimana dengan lava yang tidak dapat kita lihat di bawah batu?"
       5:
         text: "Setelah menggali batu, kita harus memeriksa apakah ada lava di tempat itu sebelum bergerak maju. Jika ada lava, kita harus memindahkan batu di depan karakter kita sebelum dapat bergerak maju. Dengan begitu kita dapat bergerak dengan aman. Saatnya menggali lebih banyak! Dan ingatlah untuk menggunakan pernyataan jika untuk memperhatikan langkahmu."
     mc_congrats_share:
       1:
-        text: "Selamat! Kamu baru saja mempelajari balok pembangunan dasar menurut ilmu komputer."
+        text: "Selamat! Anda baru saja mempelajari balok pembangunan dasar menurut ilmu komputer."
       2:
-        text: "Sekarang kamu dapat menggunakan balok ini untuk membangun kreasimu sendiri. Tidak ada lagi instruksi dan teka-teki yang harus dipecahkan. Kamu bisa membangun apa saja yang kamu inginkan. Kamu harus memilih."
+        text: "Sekarang kamu dapat menggunakan balok ini untuk membangun kreasimu sendiri. Tidak ada lagi instruksi dan teka-teki yang harus dipecahkan. Anda bisa membangun apa saja yang kamu inginkan. Anda harus memilih."
       3:
         text: "[siswa berkata] Ini sungguhan. Cukur. Aku membuat huruf L dari obor. Aku membuat huruf A dari papan pohon birch. Berhasil, berhasil. Kami membangun rumah dari wol!"
       4:
         text: "Setelah selesai dengan kreasimu, pilih bagikan agar mendapatkan tautan untuk membagikannya dengan teman-teman kamu. Selamat bersenang-senang!"
     mc_congrats_no_share:
       1:
-        text: "Selamat! Kamu baru saja mempelajari balok pembangunan dasar menurut ilmu komputer."
+        text: "Selamat! Anda baru saja mempelajari balok pembangunan dasar menurut ilmu komputer."
       2:
-        text: "Sekarang kamu dapat menggunakan balok ini untuk membangun kreasimu sendiri. Tidak ada lagi instruksi dan teka-teki yang harus dipecahkan. Kamu bisa membangun apa saja yang kamu inginkan. Kamu harus memilih."
+        text: "Sekarang kamu dapat menggunakan balok ini untuk membangun kreasimu sendiri. Tidak ada lagi instruksi dan teka-teki yang harus dipecahkan. Anda bisa membangun apa saja yang kamu inginkan. Anda harus memilih."
       3:
         text: "[siswa berkata] Ini sungguhan. Cukur. Aku membuat huruf L dari obor. Aku membuat huruf A dari papan pohon birch. Berhasil, berhasil. Kami membangun rumah dari wol!"
       4:

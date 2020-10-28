@@ -5,7 +5,7 @@ title: 정보
 # 우리에 대한
 
 <div class="col-60">
-  Code.org®는 학교에서 컴퓨터 과학에 대한 접근성을 확대하고 여성과 소수 민족의 소외 계층이 참여하는 비영리 단체입니다. 우리에 목표는 모든 학교에 있는 모든 학생들이 과학, 생물학, 화학처럼 컴퓨터 과학을 배울 기회를 가지는 것 입니다. We provide the most broadly used curriculum for teaching computer science in primary and secondary school and also organize the annual <a href="https://hourofcode.com">Hour of Code</a> campaign, which has engaged 10% of all students in the world. Code.org는 Amazon, Facebook, Google, the Infosys Foundation, Microsoft등과 같은 기업들로부터 기부를 받고 있습니다.
+  Code.org® is a nonprofit dedicated to expanding access to computer science in schools and increasing participation by young women and students from other underrepresented groups. 우리에 목표는 모든 학교에 있는 모든 학생들이 과학, 생물학, 화학처럼 컴퓨터 과학을 배울 기회를 가지는 것 입니다. We provide the most broadly used curriculum for teaching computer science in primary and secondary school and also organize the annual <a href="https://hourofcode.com">Hour of Code</a> campaign, which has engaged 10% of all students in the world. Code.org는 Amazon, Facebook, Google, the Infosys Foundation, Microsoft등과 같은 기업들로부터 기부를 받고 있습니다.
 </div>
 
 [col-40]

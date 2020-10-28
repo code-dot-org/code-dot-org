@@ -144,7 +144,7 @@ See http://hourofcode.com/{{ country }} for details, and help spread the word. <
 
 **Subject line**: Local school joins mission to introduce students to computer science
 
-Computers are everywhere, changing every industry on the planet, but only 45% of all high schools teach computer science. 計算機課堂上的女性和少數族裔學生嚴重不足，在整個科技產業亦是如此。 好消息是我們正在改變此狀況。
+Computers are everywhere, changing every industry on the planet, but only 45% of all high schools teach computer science. Young women and students from marginalized racial and ethnic groups are severely underrepresented in computer science classes, and in the tech industry. 好消息是我們正在改變此狀況。
 
 因為《編程一小時》，計算機科學已經登上谷歌，MSN，雅虎和迪斯尼的主頁。 超過 100 個合作夥伴共同支持這項活動。 世界上每個蘋果專賣店都有舉辦過《編程一小時》。 甚至連奧巴馬總統也曾在競選活動中寫下了自己的第一行編程。
 

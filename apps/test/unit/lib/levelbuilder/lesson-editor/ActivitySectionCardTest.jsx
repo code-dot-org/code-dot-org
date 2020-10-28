@@ -8,19 +8,21 @@ import {sampleActivities} from './activitiesTestData';
 describe('ActivitySectionCard', () => {
   let defaultProps,
     setTargetActivitySection,
+    updateTargetActivitySection,
+    updateActivitySectionMetrics,
     moveActivitySection,
     removeActivitySection,
     updateActivitySectionField,
-    addTip,
     reorderLevel,
     moveLevelToActivitySection,
     addLevel;
   beforeEach(() => {
     setTargetActivitySection = sinon.spy();
+    updateTargetActivitySection = sinon.spy();
+    updateActivitySectionMetrics = sinon.spy();
     moveActivitySection = sinon.spy();
     removeActivitySection = sinon.spy();
     updateActivitySectionField = sinon.spy();
-    addTip = sinon.spy();
     reorderLevel = sinon.spy();
     moveLevelToActivitySection = sinon.spy();
     addLevel = sinon.spy();
@@ -29,7 +31,9 @@ describe('ActivitySectionCard', () => {
       activityPosition: 1,
       activitySectionsCount: 3,
       activitiesCount: 1,
-      activitySectionMetrics: {},
+      activitySectionMetrics: [],
+      updateTargetActivitySection,
+      updateActivitySectionMetrics,
       setTargetActivitySection,
       targetActivitySectionPos: 1,
 
@@ -37,7 +41,6 @@ describe('ActivitySectionCard', () => {
       moveActivitySection,
       removeActivitySection,
       updateActivitySectionField,
-      addTip,
       reorderLevel,
       moveLevelToActivitySection,
       addLevel
@@ -46,12 +49,14 @@ describe('ActivitySectionCard', () => {
 
   it('renders activity section without levels', () => {
     const wrapper = shallow(<ActivitySectionCard {...defaultProps} />);
-    expect(wrapper.find('ActivitySectionCardButtons').length).to.equal(1);
+    expect(wrapper.find('Connect(ActivitySectionCardButtons)').length).to.equal(
+      1
+    );
     expect(wrapper.find('LevelToken').length).to.equal(0);
     expect(wrapper.find('textarea').length).to.equal(1);
     expect(wrapper.find('OrderControls').length).to.equal(1);
-    expect(wrapper.contains('Slides'));
-    expect(wrapper.contains('Remarks'));
+    expect(wrapper.contains('Slides')).to.be.true;
+    expect(wrapper.contains('Remarks')).to.be.true;
   });
 
   it('renders activity section with levels', () => {
@@ -61,11 +66,13 @@ describe('ActivitySectionCard', () => {
         activitySection={sampleActivities[0].activitySections[2]}
       />
     );
-    expect(wrapper.find('ActivitySectionCardButtons').length).to.equal(1);
+    expect(wrapper.find('Connect(ActivitySectionCardButtons)').length).to.equal(
+      1
+    );
     expect(wrapper.find('Connect(LevelToken)').length).to.equal(2);
     expect(wrapper.find('textarea').length).to.equal(1);
     expect(wrapper.find('OrderControls').length).to.equal(1);
-    expect(wrapper.contains('Slides'));
+    expect(wrapper.contains('Slides')).to.be.true;
   });
 
   it('edit activity section title', () => {

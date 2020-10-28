@@ -5,11 +5,12 @@ ko:
       category:
         csf_category_name: CS 기초
         csf2_draft_category_name: '개발중: 코스 A - F'
-        csp_category_name: "CS의 원리"
+        csp_category_name: CS의 원리
         cspexams_category_name: 컴퓨터과학(정보과학) 기초/개념/원리 연습 테스트
         csp17_category_name: '''16 - ''17 CS 원리'
         hoc_category_name: Hour of Code
         math_category_name: 계산
+        other_category_name: 기타
       name:
         course1:
           title: 과정1

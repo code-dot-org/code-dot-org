@@ -981,6 +981,7 @@ zh-TW:
         options:
           UNIT:
             '"seconds"': 秒
+            '"frames"': 頁框
       gamelab_bounceOff:
         text: "{SPRITE} 跳離 {TARGET}"
       gamelab_changePropBy:
@@ -1004,6 +1005,8 @@ zh-TW:
         text: 點擊 {SPRITE}
       gamelab_comment:
         text: 註解：{COMMENT}
+      gamelab_countByAnimation:
+        text: "{SPRITE} 個"
       gamelab_createNewSprite:
         text: |-
           角色 創建一個新的 {COSTUME}
@@ -1033,12 +1036,15 @@ zh-TW:
             '"this"': 這個
             '"other"': 其它
       gamelab_getTime:
+        text: 在 {UNIT} 時間內
         options:
           UNIT:
             '"seconds"': 秒
+            '"frames"': 頁框
       gamelab_hideTitleScreen:
         text: 標題畫面隱藏
       gamelab_isKeyPressed:
+        text: 按下 {KEY}  鍵
         options:
           KEY:
             '"up"': 向上
@@ -1119,6 +1125,7 @@ zh-TW:
       gamelab_locationAt:
         text: '座標 x: {X} y: {Y}'
       gamelab_locationModifier:
+        text: 在 {LOCATION} 往{DIRECTION} 方向的 {DISTANCE} 像素
         options:
           DIRECTION:
             '"North"': 北
@@ -1133,6 +1140,8 @@ zh-TW:
         text: "{LOCATION}"
       gamelab_makeNewSpriteAnon:
         text: 角色 創建一個新的 {ANIMATION_NAME} 定位到 {LOCATION}
+      gamelab_makeNumSprites:
+        text: 產生 {NUM} 個新的 {ANIMATION_NAME} 小怪
       gamelab_mirrorSprite:
         text: 角色 {SPRITE} 面朝 {DIRECTION} 向
         options:
@@ -1157,6 +1166,8 @@ zh-TW:
         text: 角色 {SPRITE} 面朝 {TARGET} 移動 {DISTANCE} 像素
       gamelab_objectSpritePointer:
         text: 物件 {SPRITE}
+      gamelab_patrollingUpDown:
+        text: 到處巡邏
       gamelab_playSound:
         text: 播放音效 {SOUND}
       gamelab_pointInDirection:

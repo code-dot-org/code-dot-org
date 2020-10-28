@@ -3231,6 +3231,7 @@ ar-SA:
         questions:
         - text: انظر إلى الكود البرمجي أدناه. كم عدد وحدات الرحيق التي ستجمعها النحلة
             في النهاية؟
+        title: 'متغيرات النحلة المتعددة '
       courseF_bee_variables_8a_2018_2019:
         answers:
         - text: لن تجمع النحلة أي رحيق لأن المتغيِّر لا يُسمَّى "اجمع".
@@ -3246,6 +3247,7 @@ ar-SA:
         questions:
         - text: انظر إلى الكود البرمجي أدناه. كم عدد وحدات الرحيق التي ستجمعها النحلة
             في النهاية؟
+        title: 'متغيرات النحلة المتعددة '
       courseF_bee_variables_8a_2018_2019_2020:
         answers:
         - text: لن تجمع النحلة أي رحيق لأن المتغيِّر لا يُسمَّى "اجمع".
@@ -3261,6 +3263,7 @@ ar-SA:
         questions:
         - text: انظر إلى الكود البرمجي أدناه. كم عدد وحدات الرحيق التي ستجمعها النحلة
             في النهاية؟
+        title: 'متغيرات النحلة المتعددة '
       courseF_external_variableConstant:
         markdown: '<h2>More on Variables</h2><img src="https://images.code.org/082c757f5c939bd353eacda9589ca54f-image-1477349401281.35.08.png"
           style="padding-left: 30px; width:300px; float:right;"/><h3>You''ve just
@@ -3996,3 +3999,51 @@ ar-SA:
           # حيي في النت
 
           ## كيف تذهب في النت إلى أماكن بأمان؟
+      courseD_external_binary1:
+        markdown: |-
+          <h1>ارسم باستخدام النظام الثنائي</h1>
+
+          <h3>النظام الثنائي إحدى وسائل تمثيل المعلومات باستخدام خيارين فقط. وهما في هذه الحالة نمط <b>عدم التشغيل</b>و<b>نمط التشغيل</b><br/>
+          وسنستخدِم هنا الرقم<b>0</b>ككود برمجي لنمط "عدم التشغيل"، والرقم<b>1</b>ككود برمجي لنمط "التشغيل".
+          <br/>
+          <table>
+          <tr><td><img src="https://images.code.org/50283881d577c17ac6f1d1648d8f361f-image-1483640342574.09.14.png" width="75px"/></td><td><img src="https://images.code.org/ba6f0a000b18f2dd87160e6255e8a71c-image-1483640355103.09.24.png" width="90px"/></td></tr>
+          <tr padding="0px"><td align="center"><b>0</b></td><td align="center"><b>1</b></td></tr></table><img src="https://images.code.org/934883837aa59bca1d5c1ded0e0ac675-image-1483640120036.51.06.png" float="left"/><h3>قدَّمنا لك في هذه المرحلة شبكة من وحدات "البكسل" يمكنك التدريب عليها وعمل التصميمات عن طريق تشغيل بعض المربعات!</h3>
+
+          ![](https://images.code.org/c53e00cde9acbae72d02fb9cc2a20e53-image-1483639858942.png)
+      courseD_external_binary1_2018:
+        markdown: |-
+          <h1>ارسم باستخدام النظام الثنائي</h1>
+
+          <h3>النظام الثنائي إحدى وسائل تمثيل المعلومات باستخدام خيارين فقط. وهما في هذه الحالة نمط <b>عدم التشغيل</b>و<b>نمط التشغيل</b><br/>
+          وسنستخدِم هنا الرقم<b>0</b>ككود برمجي لنمط "عدم التشغيل"، والرقم<b>1</b>ككود برمجي لنمط "التشغيل".
+          <br/>
+          <table>
+          <tr><td><img src="https://images.code.org/50283881d577c17ac6f1d1648d8f361f-image-1483640342574.09.14.png" width="75px"/></td><td><img src="https://images.code.org/ba6f0a000b18f2dd87160e6255e8a71c-image-1483640355103.09.24.png" width="90px"/></td></tr>
+          <tr padding="0px"><td align="center"><b>0</b></td><td align="center"><b>1</b></td></tr></table><img src="https://images.code.org/934883837aa59bca1d5c1ded0e0ac675-image-1483640120036.51.06.png" float="left"/><h3>قدَّمنا لك في هذه المرحلة شبكة من وحدات "البكسل" يمكنك التدريب عليها وعمل التصميمات عن طريق تشغيل بعض المربعات!</h3>
+
+          ![](https://images.code.org/c53e00cde9acbae72d02fb9cc2a20e53-image-1483639858942.png)
+      courseD_external_binary1_2018_2019:
+        markdown: |-
+          <h1>ارسم باستخدام النظام الثنائي</h1>
+
+          <h3>النظام الثنائي إحدى وسائل تمثيل المعلومات باستخدام خيارين فقط. وهما في هذه الحالة نمط <b>عدم التشغيل</b>و<b>نمط التشغيل</b><br/>
+          وسنستخدِم هنا الرقم<b>0</b>ككود برمجي لنمط "عدم التشغيل"، والرقم<b>1</b>ككود برمجي لنمط "التشغيل".
+          <br/>
+          <table>
+          <tr><td><img src="https://images.code.org/50283881d577c17ac6f1d1648d8f361f-image-1483640342574.09.14.png" width="75px"/></td><td><img src="https://images.code.org/ba6f0a000b18f2dd87160e6255e8a71c-image-1483640355103.09.24.png" width="90px"/></td></tr>
+          <tr padding="0px"><td align="center"><b>0</b></td><td align="center"><b>1</b></td></tr></table><img src="https://images.code.org/934883837aa59bca1d5c1ded0e0ac675-image-1483640120036.51.06.png" float="left"/><h3>قدَّمنا لك في هذه المرحلة شبكة من وحدات "البكسل" يمكنك التدريب عليها وعمل التصميمات عن طريق تشغيل بعض المربعات!</h3>
+
+          ![](https://images.code.org/c53e00cde9acbae72d02fb9cc2a20e53-image-1483639858942.png)
+      courseD_external_binary1_2018_2019_2020:
+        markdown: |-
+          <h1>ارسم باستخدام النظام الثنائي</h1>
+
+          <h3>النظام الثنائي إحدى وسائل تمثيل المعلومات باستخدام خيارين فقط. وهما في هذه الحالة نمط <b>عدم التشغيل</b>و<b>نمط التشغيل</b><br/>
+          وسنستخدِم هنا الرقم<b>0</b>ككود برمجي لنمط "عدم التشغيل"، والرقم<b>1</b>ككود برمجي لنمط "التشغيل".
+          <br/>
+          <table>
+          <tr><td><img src="https://images.code.org/50283881d577c17ac6f1d1648d8f361f-image-1483640342574.09.14.png" width="75px"/></td><td><img src="https://images.code.org/ba6f0a000b18f2dd87160e6255e8a71c-image-1483640355103.09.24.png" width="90px"/></td></tr>
+          <tr padding="0px"><td align="center"><b>0</b></td><td align="center"><b>1</b></td></tr></table><img src="https://images.code.org/934883837aa59bca1d5c1ded0e0ac675-image-1483640120036.51.06.png" float="left"/><h3>قدَّمنا لك في هذه المرحلة شبكة من وحدات "البكسل" يمكنك التدريب عليها وعمل التصميمات عن طريق تشغيل بعض المربعات!</h3>
+
+          ![](https://images.code.org/c53e00cde9acbae72d02fb9cc2a20e53-image-1483639858942.png)

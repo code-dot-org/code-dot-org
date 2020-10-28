@@ -1,5 +1,8 @@
+import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import Button from '@cdo/apps/templates/Button';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import _ from 'lodash';
+import {connect} from 'react-redux';
 
 const styles = {
   filters: {
@@ -7,80 +10,110 @@ const styles = {
     flexDirection: 'row',
     alignItems: 'center'
   },
-  dropdown: {
-    width: 125,
+  input: {
+    width: 195,
     margin: 5
+  },
+  dropdown: {
+    width: 150,
+    margin: 5
+  },
+  label: {
+    marginRight: 15
   }
 };
 
-//TODO Hook up the filtering system to work on the real levels
-//Selects need real data added into them
+class AddLevelFilters extends Component {
+  static propTypes = {
+    handleSearch: PropTypes.func,
+    handleChangeLevelName: PropTypes.func,
+    handleChangeLevelType: PropTypes.func,
+    handleChangeScript: PropTypes.func,
+    handleChangeOwner: PropTypes.func,
+    ownerId: PropTypes.string,
+    scriptId: PropTypes.string,
+    levelType: PropTypes.string,
+    levelName: PropTypes.string,
 
-export default class AddLevelFilters extends Component {
-  static propTypes = {};
+    // from redux
+    searchOptions: PropTypes.object.isRequired
+  };
+
+  handleSearch = _.debounce(
+    () => {
+      this.props.handleSearch();
+    },
+    1000,
+    {
+      leading: true,
+      trailing: false
+    }
+  );
 
   render() {
     return (
       <div style={styles.filters}>
-        <label>
+        <label style={styles.label}>
           By Name:
           <input
-            style={styles.dropdown}
-            onChange={() => {
-              console.log('filter by name');
-            }}
+            style={styles.input}
+            onChange={this.props.handleChangeLevelName}
+            value={this.props.levelName}
           />
         </label>
-        <label>
+        <label style={styles.label}>
           By Type:
           <select
             style={styles.dropdown}
-            onClick={() => {
-              console.log('filter by type');
-            }}
+            onChange={this.props.handleChangeLevelType}
+            value={this.props.levelType}
+            id={'add-level-type'}
           >
-            <option>All Types</option>
-            <option>App Lab</option>
-            <option>Game Lab</option>
-            <option>Standalone Video</option>
+            {this.props.searchOptions.levelOptions.map(levelType => (
+              <option key={levelType[0]} value={levelType[1]}>
+                {levelType[0]}
+              </option>
+            ))}
           </select>
         </label>
-        <label>
+        <label style={styles.label}>
           By Script:
           <select
             style={styles.dropdown}
-            onClick={() => {
-              console.log('filer by script');
-            }}
+            onChange={this.props.handleChangeScript}
+            value={this.props.scriptId}
           >
-            <option>All Scripts</option>
-            <option>csp1-2020</option>
-            <option>csd3-2020</option>
-            <option>coursea-2020</option>
+            {this.props.searchOptions.scriptOptions.map(script => (
+              <option key={script[0]} value={script[1]}>
+                {script[0]}
+              </option>
+            ))}
           </select>
         </label>
-        <label>
+        <label style={styles.label}>
           By Owner:
           <select
             style={styles.dropdown}
-            onClick={() => {
-              console.log('filter by owner');
-            }}
+            onChange={this.props.handleChangeOwner}
+            value={this.props.ownerId}
           >
-            <option>Any Owner</option>
-            <option>Hannah</option>
-            <option>Mike</option>
-            <option>Dan</option>
+            {this.props.searchOptions.ownerOptions.map(owner => (
+              <option key={owner[1]} value={owner[1]}>
+                {owner[0]}
+              </option>
+            ))}
           </select>
         </label>
-        <Button
-          icon="search"
-          text={''}
-          onClick={() => {
-            console.log('Search');
-          }}
-        />
+        <button type="button" onClick={this.handleSearch}>
+          <FontAwesome icon="search" />
+        </button>
       </div>
     );
   }
 }
+
+export const UnconnectedAddLevelFilters = AddLevelFilters;
+
+export default connect(state => ({
+  searchOptions: state.searchOptions
+}))(AddLevelFilters);

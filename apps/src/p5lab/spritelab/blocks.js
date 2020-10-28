@@ -348,6 +348,24 @@ const customInputTypes = {
     generateCode(block, arg) {
       return `'${block.getTitleValue(arg.name)}'`;
     }
+  },
+  // Custom input for a variable input that generates the name of the variable
+  // rather than the value of the variable.
+  variableNamePicker: {
+    addInputRow(blockly, block, inputConfig) {
+      return block.appendValueInput(inputConfig.name);
+    },
+
+    generateCode(block, arg) {
+      const input = block.getInput(arg.name);
+      if (input) {
+        const targetBlock = input.connection.targetBlock();
+        if (targetBlock && targetBlock.type === 'variables_get') {
+          return `'${Blockly.JavaScript.blockToCode(targetBlock)[0]}'`;
+        }
+      }
+      return '';
+    }
   }
 };
 
@@ -467,6 +485,7 @@ export default {
         // blocks, disallow editing the behavior, because renaming the behavior
         // can break things.
         if (
+          appOptions && // appOptions is not available on level edit page
           appOptions.level.toolbox &&
           !appOptions.readonlyWorkspace &&
           !Blockly.hasCategories
@@ -608,6 +627,7 @@ export default {
     // blockInstallOptions is undefined.
     if (
       !blockInstallOptions ||
+      !blockInstallOptions.level ||
       blockInstallOptions.level.editBlocks !== TOOLBOX_EDIT_MODE
     ) {
       Blockly.Flyout.configure(Blockly.BlockValueType.BEHAVIOR, {

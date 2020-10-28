@@ -1,33 +1,33 @@
 ---
-title: Supporting special needs students for the Hour of Code
+title: 아워오브코드를 하기 위해 특별한 도움이 필요한 학생 지원
 ---
 
-# Supporting students with disabilities for the Hour of Code
+# 아워오브코드를 하기 위한 장애 학생 지원
 
-Anyone can try an Hour of Code during Computer Science Education Week. Often, students with autism, ADHD or other learning differences find they love programming. Encourage all the students in your classroom to give it a try! In setting up the experience for your classroom, reward participation rather than completion. You can give everyone a [certificate]({{ supporting-special-needs-students/certificate }}) no matter how many puzzles or challenges they complete within the hour. [Pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q) is another great way to teach collaboration and have students work together to solve problems.
+누구나 컴퓨터 과학 교육 주간 동안 아워오브코드를 해 볼 수 있습니다. 종종, 자폐증 또는 ADHD, 기타 학습 차이를 갖는 학생은 그들이 프로그래밍을 좋아하는 걸 발견합니다. 교실에 있는 모든 학생에게 시도해 보라고 북돋아 줍니다! 교실에서의 학습경험 설정 시, 완료 보다는 참여에 점수를 더 주십시오. 한 시간 안에 몇 개의 퍼즐 또는 문제를 풀었던 상관 없이 모든 학생에게 [인증서]({{ supporting-special-needs-students/certificate }})를 줄 수 잇습니다. [페어 프로그래밍](https://www.youtube.com/watch?v=vgkahOzFH2Q)은 협업을 가르치는 또 다른 좋은 방법이며 학생들은 함께 문제를 풀 수 있습니다.
 
-## Fit a variety of needs with unplugged and online tutorials
+## 언플러그드와 온라인 튜토리얼로 다양한 필요에 적합합니다.
 
-In finding the right activity for everyone in your class, consider both online and “unplugged” options that do not require computers. Unplugged activities allow students to get hands on with computer science concepts. The [Big Event](https://studio.code.org/s/course1/stage/15/puzzle/1) puts teachers in control over the actions of students, allowing for a great opportunity to tailor the content to the abilities of each student.
+학급 내 모든 학생들에게 맞는 활동을 찾을 때, 온라인과 컴퓨터가 필요 없는 "언플러그드" 옵션 모두를 고려하세요. 언플러그드 활동은 학생들에게 컴퓨터 과학 개념을 직접 체험할 수 있게 합니다. [빅 이벤트](https://studio.code.org/s/course1/stage/15/puzzle/1)는 교사에게 학생의 액센에 대한 통제권을 부여하여 각 학생의 능력에 맞게 내용을 맞춤형으로 구성할 좋은 기회를 허용합니다.
 
-For other students, the accommodations available on the computer may allow them to participate better than an unplugged choice. For example, students who are deaf or hard of hearing can participate fully in the online tutorials.
+기타 학생들의 경우, 컴퓨터 상에 설치 가능한 보조 장치는 언플러그드 선택 보다 더 나은 참여 기회를 허용합니다. 예를 들어, 청각 장애가 있는 학생은 온라인 튜토리얼에 참여할 수 있습니다.
 
-The most inclusive choice may also depend on whether you have an accessible computer lab or laptops.
+대부분의 포용적 선택은 또한 컴퓨터 실습실 또는 노트북에 접근 가능한지 여부로 결정됩니다.
 
-For example, do your students have reduced mobility or dexterity? If all your students have access to technology at your school, ask your students or tech teacher what accommodations your students typically use with the computers available.
+예를 들어, 학생 중에 이동성 또는 손이나 머리를 쓰는 재주가 감소된 학생이 있습니까? 모든 학생이 학교에서 기술 장비를 사용할 수 잇으면 학생 또는 기술 교사에게 학생들이 주로 컴퓨터에 장착된 보조 장비로 어떤 것을 사용하는지 물어보세요.
 
-## Sensory Impairments
+## 감각 손상
 
-### Students who are blind or low vision
+### 맹인 또는 시력이 아주 안 좋은 학생
 
-For students who use a screen reader, the [Quorum tutorial for beginners](https://quorumlanguage.com/hourofcode/astro1.html) or the [Quorum tutorial for comfortable students](https://quorumlanguage.com/hourofcode/part1.html) is a great place to start. Quorum started as an interpreted language designed to be accessible to screen reader users. Eventually, it became a general purpose programming language designed for any user. You can use these Hour of Code tutorials with your entire classroom. And, if you want to go beyond an Hour of Code, the team at Quorum has additional tools and curriculum.
+스크린 리더를 사용하는 학생은[초보자를 위한 쿼럼 튜토리얼](https://quorumlanguage.com/hourofcode/astro1.html) 또는 [능숙한 숙련자학생을 위한 쿼럼 튜토리얼](https://quorumlanguage.com/hourofcode/part1.html)이 시작하기에 좋습니다. 쿼럼은 스크린 리더 사용자에게 접근 가능하도록 고안된 해석된 언어로서 시작했습니다 드디어, 모든 사용자를 위해 설계된 일반용 프로그래밍 언어가 되었습니다. 아워오브코드 튜토리얼을 전체 학급용으로 사용할 수 있습니다. 아워오브코드를 너머 더 배우고 싶으면, 쿼럼 내 팀은 추가적인 도구와 커리큘럼을 갖고 있습니다.
 
-If your student uses other accommodations in technology classes, you may use those to help with Hour of Code as well. These can include larger monitors, software screen magnification, high contrast settings in their operating system, voice control and more.
+학생들이 기술 수업에서 다른 보조 장치를 사용하면 그러한 장치를 아워오브코드를 할 때에도 사용할 수 있습니다. 여기에는 더 큰 모니터와 소프트웨어 화면 확대기, 운영 시스템 내 하이 콘트라스트 설정, 음성 조절 등이 포함됩니다. 
 
-### Students who are deaf or hard of hearing
+### 청각장애인 학생
 
-The [Code.org tutorials](https://studio.code.org/) are all designed to be used with or without sound. All the videos have captions. Some students can also benefit from headphones set to a higher volume.
+[Code.org 튜토리얼](https://studio.code.org/) 모두는 소리가 나오거나 또는 나오지 않게 설계되었습니다. 모든 동영상에는 자막이 들어 있습니다. 또한 일부 학생은 더 높은 볼륨으로 설정된 헤드폰을 사용할 수 있습니다. 
 
-## Learn more
+## 더보기
 
-To learn more about computer science education and special needs students, we recommend this [online book]({{ supporting-special-needs-students/book }}).
+컴퓨터 과학 교육과 특별한 도움이 필요한 학생에 관한 더 자세한 내용은 이 [온라인 책]({{ supporting-special-needs-students/book }})을 읽어보시길 추천합니다.

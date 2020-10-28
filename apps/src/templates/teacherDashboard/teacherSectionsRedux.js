@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import $ from 'jquery';
 import {reload} from '@cdo/apps/utils';
-import {OAuthSectionTypes} from './shapes';
+import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 /**
@@ -155,6 +155,16 @@ export const toggleSectionHidden = sectionId => (dispatch, getState) => {
 };
 
 /**
+ * Removes null values from stringified object before sending firehose record
+ */
+function removeNullValues(key, val) {
+  if (val === null || typeof val === undefined) {
+    return undefined;
+  }
+  return val;
+}
+
+/**
  * Assigns a course to a given section, persisting these changes to
  * the server
  * @param {number} sectionId
@@ -162,6 +172,22 @@ export const toggleSectionHidden = sectionId => (dispatch, getState) => {
  * @param {number} scriptId
  */
 export const assignToSection = (sectionId, courseId, scriptId, pageType) => {
+  firehoseClient.putRecord(
+    {
+      study: 'assignment',
+      event: 'course-assigned-to-section',
+      data_json: JSON.stringify(
+        {
+          sectionId,
+          scriptId,
+          courseId,
+          date: new Date()
+        },
+        removeNullValues
+      )
+    },
+    {includeUserId: true}
+  );
   return (dispatch, getState) => {
     dispatch(beginEditingSection(sectionId, true));
     dispatch(
@@ -181,7 +207,24 @@ export const assignToSection = (sectionId, courseId, scriptId, pageType) => {
  */
 export const unassignSection = sectionId => (dispatch, getState) => {
   dispatch(beginEditingSection(sectionId, true));
+  const {initialCourseId, initialScriptId} = getState().teacherSections;
   dispatch(editSectionProperties({courseId: '', scriptId: ''}));
+  firehoseClient.putRecord(
+    {
+      study: 'assignment',
+      event: 'course-unassigned-from-section',
+      data_json: JSON.stringify(
+        {
+          sectionId,
+          scriptId: initialScriptId,
+          courseId: initialCourseId,
+          date: new Date()
+        },
+        removeNullValues
+      )
+    },
+    {includeUserId: true}
+  );
   return dispatch(finishEditingSection());
 };
 

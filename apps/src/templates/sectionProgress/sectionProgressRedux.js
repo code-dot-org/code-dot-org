@@ -2,7 +2,8 @@ import {
   NAME_COLUMN_WIDTH,
   PROGRESS_BUBBLE_WIDTH,
   DIAMOND_BUBBLE_WIDTH,
-  PILL_BUBBLE_WIDTH
+  PILL_BUBBLE_WIDTH,
+  MIN_COLUMN_WIDTH
 } from './multiGridConstants';
 import {SMALL_DOT_SIZE} from '@cdo/apps/templates/progress/progressStyles';
 import {SET_SCRIPT} from '@cdo/apps/redux/scriptSelectionRedux';
@@ -227,7 +228,7 @@ export const getColumnWidthsForDetailView = state => {
           width + levels[levelIndex].sublevels.length * SMALL_DOT_SIZE * 2;
       }
     }
-    columnLengths.push(width || 0);
+    columnLengths.push(Math.max(width, MIN_COLUMN_WIDTH));
   }
   return columnLengths;
 };

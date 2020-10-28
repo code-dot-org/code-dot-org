@@ -473,6 +473,13 @@
         },
         "frozen square snowflake": {
           "replace_questions": "Použij drop-down k nahrazení \"???\" číslem"
+        },
+        "2-3 Bee Conditionals 5": {
+          "Bee_Cond_5_1a": "Fialová květinka může obsahovat buď 1 nebo 0 nektaru. Počet ale zjistíš až po spuštění kódu!"
+        },
+        "courseD_video_nestedLoopsArtist": {
+          "courseE_artist_ramp8_1": "Tohle číslo můžeš změnit.",
+          "courseE_artist_ramp8_2": "Klikni sem, abys napsal(a) počet opakování svého kódu."
         }
       }
     }

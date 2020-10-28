@@ -94,7 +94,8 @@ export default class CensusTeacherBanner extends Component {
     teacherEmail: PropTypes.string.isRequired,
     showInvalidError: PropTypes.bool,
     showUnknownError: PropTypes.bool,
-    submittedSuccessfully: PropTypes.bool
+    submittedSuccessfully: PropTypes.bool,
+    mapboxAccessToken: PropTypes.string
   };
 
   componentDidMount() {
@@ -335,7 +336,8 @@ export default class CensusTeacherBanner extends Component {
             schoolState={this.state.schoolState}
             schoolZip={this.state.schoolZip}
             schoolLocation={this.state.schoolLocation}
-            useGoogleLocationSearch={true}
+            useLocationSearch={true}
+            mapboxAccessToken={this.props.mapboxAccessToken}
             showErrors={this.state.showSchoolInfoErrors}
             showRequiredIndicator={true}
           />

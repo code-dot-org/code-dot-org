@@ -937,7 +937,7 @@ nn:
       gamelab_clickedOn:
         text: når du klikkar på {SPRITE}
       gamelab_clickedSpritePointer:
-        text: klikka på {SPRITE}
+        text: "{SPRITE}"
       gamelab_comment:
         text: 'kommentar: {COMMENT}'
       gamelab_createNewSprite:
@@ -1077,7 +1077,7 @@ nn:
       gamelab_moveToward:
         text: flytt {SPRITE} piksler {DISTANCE} mot {TARGET}
       gamelab_objectSpritePointer:
-        text: klikka på {SPRITE}
+        text: "{SPRITE}"
       gamelab_playSound:
         text: spillLyd {SOUND}
       gamelab_pointInDirection:
@@ -1133,7 +1133,7 @@ nn:
             '"when"': når
             '"while"': så lenge
       gamelab_subjectSpritePointer:
-        text: klikka på {SPRITE}
+        text: "{SPRITE}"
       gamelab_turn:
         options:
           DIRECTION:

@@ -744,6 +744,19 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_equal script_level, assigns(:script_level)
   end
 
+  test "show with the login_required param should redirect when not logged in" do
+    script_level = Script.find_by_name('courseb-2017').script_levels.first
+
+    get :show, params: {
+      script_id: script_level.script,
+      stage_position: script_level.lesson.absolute_position,
+      id: script_level.position,
+      login_required: "true"
+    }
+
+    assert_redirected_to_sign_in
+  end
+
   test "show with the reset param should reset session when not logged in" do
     client_state.set_level_progress(create(:script_level), 10)
     refute client_state.level_progress_is_empty_for_test

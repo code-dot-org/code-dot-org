@@ -1,127 +1,127 @@
 ---
-title: Hour of Code How-To Guide for Companies
+title: Guide pratique de l'Heure de Code pour les entreprises
 ---
 
 {{ signup_button }}
 
-# How your company can engage with the Hour of Code
+# Comment votre entreprise peut-elle prendre part à l'Heure de Code ?
 
 ### Découvrez comment vous et vos employés pouvez inspirer les étudiants à essayer l'informatique!
 
 * * *
 
-Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
+La pensée computationnelle contribue à développer les compétences de résolution de problèmes, la logique et la créativité. Et la technologie transforme toutes les industries de la planète. Les étudiants d'aujourd'hui doivent apprendre à créer la technologie, et pas seulement à l'utiliser. En commençant tôt, ils auront les bases pour réussir dans tout cheminement de carrière du 21ème siècle.
 
-During the Hour of Code campaign, your company can help raise awareness of the computer science movement. Whether you volunteer as an individual or plan an event for your company, all of your efforts can make a huge impact on the way young women and students from marginalized racial and ethnic groups view computer science and their own potential.
+Pendant la campagne Heure de Code, votre entreprise peut contribuer à sensibiliser le public au mouvement de l'informatique. Que vous soyez bénévole en tant qu'individu ou que vous planifiez un événement pour votre entreprise, tous vos efforts peuvent avoir une influence énorme sur la façon dont les jeunes femmes et les étudiants, issus de groupes raciaux et ethniques marginalisés, perçoivent l'informatique et leur propre potentiel.
 
-- [Encourage employees to volunteer with a classroom](#encourage-employees)
-- [Connect your company with a school](#connect-with-a-school)
-- [Host your own Hour of Code event](#host-hour-of-code)
+- [Encouragez vos employés à faire du bénévolat dans une salle de classe](#encourage-employees)
+- [Connectez votre entreprise avec une école](#connect-with-a-school)
+- [Organisez votre propre événement Heure de Code](#host-hour-of-code)
 - [Promouvoir Une Heure de Code](#promote-hour-of-code)
-- [More ways to support the Hour of Code](#support-hour-of-code)
+- [Autres manières de soutenir l'Heure de Code](#support-hour-of-code)
 
 * * *
 
 <a id="encourage-employees"></a>
 
-## Encourage employees to volunteer with a classroom
+## Encouragez vos employés à faire du bénévolat dans une salle de classe
 
 [![](/images/fit-600/Marketing/pexels-andrea-piacquadio-3762940.jpg)]({{ urls/learn }})
 
-One of the most fulfilling ways to participate in the Hour of Code is to volunteer with a local classroom, either in-person or virtually. Best of all, you don’t have to be an engineer in order to volunteer. You can still provide a meaningful experience to students by sharing your own career experience and how CS or technology have impacted your role.
+L'une des façons les plus enrichissantes de participer à l'Heure de Code est de faire du bénévolat dans une salle de classe locale, en personne ou virtuellement. Surtout, il n'y a pas besoin d'être un ingénieur pour faire du bénévolat. Vous pouvez toujours offrir une expérience significative aux étudiants en partageant votre propre expérience de carrière et l'influence que l'informatique ou la technologie a eu sur votre rôle.
 
-[<button>Sign up to volunteer</button>]({{ urls/volunteer }})
+[<button>Inscrivez-vous en tant que bénévole</button>]({{ urls/volunteer }})
 
-Once a volunteer registers, a teacher can review their profile on our [volunteer map](https://code.org/volunteer/local) - so profiles should be submitted as complete as possible. If you’re a good fit for their classroom, a teacher will contact you through the platform (we will never share your email address with the teacher). You can then coordinate details directly with the teacher around [how to best volunteer with their classroom](https://hourofcode.com/us/how-to/volunteers).
+Une fois qu'un bénévole s'inscrit, un enseignant peut examiner son profil sur notre [ carte des bénévoles](https://code.org/volunteer/local) - Les profils doivent, par conséquent, être soumis aussi complets que possible. Si votre profil correspond à sa salle de classe, un enseignant vous contactera via la plate-forme (nous ne partagerons jamais votre adresse électronique avec l'enseignant). Vous pouvez ensuite parler plus en détail, directement avec l'enseignant, et décider [comment offrir le meilleur bénévolat à sa classe](https://hourofcode.com/us/how-to/volunteers).
 
-For more guidance on volunteering and sample messaging to get your company excited about the Hour of Code, check out our [guide for corporate partners](https://staging.hourofcode.com/files/hoc-corporate-toolkit.pdf).
+For more guidance on volunteering and sample messaging to get your company excited about the Hour of Code, check out our [guide for corporate partners]({{ localized_files/hoc_corporate_toolkit }}).
 
 * * *
 
 <a id="connect-with-a-school"></a>
 
-## Connect your company with a school
+## Connectez votre entreprise avec une école
 
-You don’t have to use our volunteer map in order to connect with a classroom or school. Oftentimes, we recommend starting locally. Consider if there are schools that you or your employees have a strong connection to such as an alma mater, a child’s school, or an organization or school that is focused on serving a population that has been historically underrepresented in computer science.
+Vous n'avez pas besoin d'utiliser notre carte des bénévoles pour vous connecter avec une salle de classe ou une école. En général, nous recommandons de commencer localement. Voyez s'il y a des écoles avec lesquelles vous ou vos employés avez un lien fort, comme une université, une école pour enfants, ou une organisation ou une école qui oriente ses efforts sur une population historiquement sous-représentée en informatique.
 
 [![](/images/fit-600/Marketing/2018_HoC-392.jpg)]({{ urls/learn }})
 
-From there, you can visit the school’s website to find appropriate contacts to reach out to such as administrators like a Principal or Vice Principal, technology or computer science instructors, or even the school’s PTSA. You could also partner with organizations such as the Boys & Girls Clubs of America, a YMCA branch, and more to co-host an event.
+À partir de là, vous pouvez visiter le site Web de l'école pour trouver des personnes compétentes à contacter tels que les administrateurs, comme un directeur ou Directeur Adjoint, les instructeurs en technologie ou informatique, ou même l'association des parents d'élèves de l'école. Vous pouvez également vous associer à des organisations tels que les Boys & Girls Clubs of America, une branche de la YMCA, ou d'autres encore, pour co-organiser un événement.
 
-If you are unable to connect with a school, please [contact us](https://support.code.org/hc/en-us/requests/new) and we’ll connect you with one of our local partners if possible.
+Si vous ne parvenez pas à vous connecter avec une école, veuillez [nous contacter](https://support.code.org/hc/en-us/requests/new) et nous vous mettrons en contact avec l'un de nos partenaires locaux, si possible.
 
 * * *
 
-<h4><font color="00adbc"><i>"J'ai ADORÉ voir les enfants pleins de joie. One amazing thing was the teachers noticed some of the students who didn’t do as well academically were excelling at thinking like a developer and helping others - giving them a place to feel confident.”</i></font></h4>
+<h4><font color="00adbc"><i>"J'ai ADORÉ voir les enfants pleins de joie. Une chose magnifique est que les enseignants ont remarqué que certains des étudiants, qui rencontraient des difficultés sur le plan académique, excellaient à penser comme un développeur et à aider les autres - leur offrant un environnement où ils avaient confiance en eux. »</i></font></h4>
 
--Hour of Code volunteer
+- Bénévole pour l'Heure de Code
 
 * * *
 
 <a id="host-hour-of-code"></a>
 
-## Host your own Hour of Code event
+## Organisez votre propre événement Heure de Code
 
-If you want to go the extra mile, your company can also host an Hour of Code event. There is no specific formula for hosting an event so we encourage you to be creative! Given that our staff size is small (but mighty!), Code.org does not have a team dedicated to coordinating Hour of Code events. However, here are some tips to get started.
+Si vous voulez aller encore plus loin, votre entreprise peut également organiser un événement Heure de Code. Il n'y a pas de formule spécifique pour organiser un événement. Nous vous encourageons donc à faire preuve de créativité ! Étant donné que notre effectif est petit (mais costaud !), Code.org n'a pas d'équipe dédiée à la coordination des événements Heure de Code. Cependant, voici quelques conseils pour commencer.
 
 ### 1. Regarder cette vidéo de formation <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
-### 2. Determine a date, format, and location for your event
+### 2. Déterminez la date, le format et l'emplacement de votre événement
 
-We’ve seen events that are [virtual](https://hourofcode.com/us/how-to/virtual) or in-person, at the company office or held in the community, and for students of all ages! You can also take a look at what other [corporate partners](https://medium.com/@codeorg/amazon-microsoft-google-vista-and-more-rally-to-bring-the-hour-of-code-to-students-worldwide-4641325542cf) and [donors](https://medium.com/@codeorg/how-code-orgs-corporate-supporters-helped-spread-the-love-for-2019-s-hour-of-code-73a3c088f10f) have done in the past for some inspiring ideas.
+Nous avons vu des événements [virtuels](https://hourofcode.com/us/how-to/virtual) ou en personne, au bureau de l'entreprise ou dans la communauté, et pour des étudiants de tous âges ! Vous pouvez également jeter un œil à ce que d'autres [entreprises partenaires](https://medium.com/@codeorg/amazon-microsoft-google-vista-and-more-rally-to-bring-the-hour-of-code-to-students-worldwide-4641325542cf) et [donneurs](https://medium.com/@codeorg/how-code-orgs-corporate-supporters-helped-spread-the-love-for-2019-s-hour-of-code-73a3c088f10f) ont fait, dans le passé, pour trouver de l'inspiration.
 
 <br />
 
-#### Sample Agenda:
+#### Exemple d'ordre du jour :
 
-|Time | Agenda Item | |\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---- | \---\---\---\---\----- | |1-5 minutes | Show an [inspirational video](https://hourofcode.com/us/promote/resources#videos)|  
-|5-10 minutes | Introduce yourself and learn more about the students: Where do you work, what do you do, and what do you love most about your job? Quelle est la personne ou la chose qui vous inspire ? Comment en êtes-vous venu à vous intéresser à l'informatique ? Avez-vous eu un mentor ? Posez des questions aux élèves et gardez du temps pour leurs questions. |  
-|30-60 minutes | Code! If your event is in-person, this is the time to answer questions and guide students through tough puzzles. Try not to give them the solution outright, instead, try asking them questions so they can answer themselves what went wrong, and encourage students to ask each other if they have questions. If you are volunteering virtually, work with the teacher on what the best approach might be. It may make more sense to return at the end of the session to see what progress students have made. | | |1-3 minutes | Thank everyone and share inspirational parting words. Hand out any of your company swag ([stickers](#celebrate) are awesome)! | | <br />
+|Durée | Point à l'ordre du jour| |\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---- | \---\---\---\---\----- ||1 à 5 minutes | Afficher une [vidéo qui inspire](https://hourofcode.com/us/promote/resources#videos)|  
+|5 à10 minutes | Présentez-vous, et informez-vous sur les élèves. Dîtes où vous travaillez, ce que faites, et ce que vous aimez le plus dans votre travail ? Quelle est la personne ou la chose qui t'inspire ? Comment en es-tu venu à t'intéresser à l'informatique ? As-tu un mentor ? Posez des questions aux élèves et gardez du temps pour un questions-réponses. |  
+|30 à 60 minutes | Code ! Si vous animez votre événement en personne, c'est le moment de répondre aux questions et de guider les élèves à travers des énigmes complexes. Essayez de ne pas leur donner la solution directement. Tentez plutôt de leur poser des questions afin qu'ils puissent déterminer, eux-mêmes, l'origine du problème, et encouragez les élèves à se demander les uns aux autres s'ils ont des questions. Si vous faites du bénévolat virtuellement, travaillez avec l'enseignant sur la meilleure approche. Il peut être plus logique de revenir à la fin de la session pour voir les progrès réalisés par les élèves. | ||1 à 3 minutes | Remerciez tout le monde, et partagez des mots d'au revoir qui inspireront. Distribuez des cadeaux aux couleurs de votre entreprise ([les autocollants](#celebrate) sont parfaits) ! | | <br />
 
-#### Other ideas to add to your event
+#### Autres idées à ajouter à votre événement
 
-- Explain ways technology impacts our lives, with examples that students of all backgrounds will care about - talk about technology that’s saving lives, helping people, connecting people. 
-- If you are a tech company, demo fun, innovative products your company is working on. If you aren’t a tech company, discuss ways your company uses technology to solve problems and accomplish goals.
-- Invite software engineers from your company to speak about why they decided to study computer science and the projects they work on.
-- If you have a group of staff that will be facilitating your event or volunteering with a local school, consider ordering [custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your employees.
+- Expliquez comment la technologie a une influence sur nos vies, avec des exemples qui concerneront les étudiants de tous horizons. Parlez de la technologie qui sauve des vies, aide les gens, connecte les gens. 
+- Si vous êtes une entreprise technologique, présentez des produits amusants et innovants sur lesquels votre entreprise travaille. Si vous n'êtes pas une entreprise technologique, discutez des façons dont votre entreprise utilise la technologie pour résoudre des problèmes et atteindre ses objectifs.
+- Invitez les ingénieurs en informatique de votre entreprise à discuter des raisons pour lesquelles ils ont décidé d'étudier l'informatique et des projets sur lesquels ils travaillent. 
+- Lorsque des membres de votre personnel animeront votre événement ou feront du bénévolat avec une école locale, pensez à commander des [t-shirts personnalisés](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) pour vos employés.
 
-### 3. Plan your technology needs
+### 3. Planifiez vos besoins technologiques
 
 [![](/images/fit-600/Marketing/Excel-Charter-SchoolHoC-2015-stills-9.jpg)]({{ urls/learn }})
 
-#### Devices:
+#### Appareils :
 
-Pour tirer le meilleur parti de l'Heure de Code, il est préférable de disposer d'ordinateurs reliés à internet. But you don’t need a computer for every child, and you can even do the Hour of Code without a computer at all! For unplugged activities, simply filter the Classroom Technology section to show options for “No computers or devices”.
+Pour tirer le meilleur parti de l'Heure de Code, il est préférable de disposer d'ordinateurs reliés à internet. Mais vous n’avez pas besoin d’un ordinateur pour chaque enfant, et vous pouvez même faire une Heure de Code sans ordinateur du tout ! Pour les activités débranchées, il suffit de filtrer la section Technologie de la classe pour afficher les options "Pas d'ordinateurs ou d'appareils".
 
-- **Test activities** on computers or devices. Make sure they work properly on browsers with sound and video.
-- **Don't have enough devices?** Use pair programming. Quand les élèves sont en équipe, ils s'entraident et sollicitent moins leur enseignant. Ils découvriront ainsi que l'informatique est une discipline qui favorise les interactions sociales et la collaboration.
-- **Provide headphones** for your participants or ask them to bring their own if they’ll be trying tutorials that work best with sounds.
-- **Have low bandwidth**? Plan to show videos at the front of the event, so each participant isn't downloading their own videos. Or try the unplugged / offline activities.
+- **Testez les activités** sur des ordinateurs ou des appareils. Assurez-vous qu'elles fonctionnent correctement sur les navigateurs, avec son et vidéo.
+- **Nombre d'appareils insuffisant ?** Utilisez la programmation par paires. Quand les élèves sont en équipe, ils s'entraident et sollicitent moins leur enseignant. Ils découvriront ainsi que l'informatique est une discipline qui favorise les interactions sociales et la collaboration.
+- **Fournissez des écouteurs** à vos participants ou demandez qu'ils apportent les leurs s'ils doivent essayer des tutoriels qui nécessitent le son pour le meilleur rendu.
+- < b>Faible débit</b> ? Prévoyez de montrer les vidéos au début de l'événement, afin que chaque participant ne télécharge pas ses propres vidéos. Ou essayez les activités débranchées / hors ligne.
 
-#### Virtual Events:
+#### Événements virtuels :
 
-If your event is going to be virtual, you’ll want to decide on your conference platform (and test it) prior to your event. This may impact the number of students you feel comfortable engaging, so it’s best to determine this prior to inviting a classroom or promoting your event. For ideas on how to run a remote Hour of Code, read our [tips for a virtual Hour of Code event](https://hourofcode.com/us/how-to/virtual).
+Si votre événement doit être virtuel, vous devrez décider de votre plate-forme de conférence (et la tester) avant votre événement. Cela peut influer sur le nombre d'étudiants que vous vous sentez à l'aise de convier. Il est donc préférable de déterminer cela avant d'inviter une salle de classe ou de promouvoir votre événement. Pour des idées sur la façon de mener une Heure de Code à distance, lisez nos <a href = "https://hourofcode.com/us/how-to/virtual">conseils pour un événement virtuel d'une Heure de Code</a>.
 
-### 4. Choose an activity
+### 4. Choisissez une activité
 
-We provide a variety of fun, student-guided tutorials for all age groups and experience levels. It’s popular for students to try self-led tutorials, though you may want to begin the event with an [inspirational video](https://hourofcode.com/us/promote/resources#videos) for everyone to view together.
+Nous offrons une variété de tutoriels amusants, et guidés par les étudiants, pour tous les groupes d'âge et niveaux d'expérience. Les étudiants apprécient d'essayer des tutoriels autodirigés, mais vous souhaiterez, peut-être, commencer l'événement avec une [vidéo qui inspire](https://hourofcode.com/us/promote/resources#videos) que tout le monde regardera ensemble.
 
-<a href="https://hourofcode.com/us/learn">Explore the activities</a> and decide ahead of time if you want to choose a single tutorial for all of your guests, or let each child pick their own. **All Hour of Code activities** require minimal prep-time, and are self-guided - allowing participants to work at their own pace and skill-level.
+<a href="https://hourofcode.com/us/learn">Explorez les activités</a> et décidez, à l'avance, si vous choisirez un seul tutoriel pour tous vos invités, ou laisserez chaque enfant choisir le sien. **Toutes les activités de l'Heure de Code** nécessitent un minimum de temps de préparation et sont autoguidées - ce qui permet aux participants de travailler à leur propre rythme et niveau de compétence.
 
 [![](/images/fit-700/tutorials.png)]({{ urls/learn }})
 
-Once you have a solid roadmap for your event, you can then start inviting students, a school, or the larger community. We recommend starting with a local school you have a relationship with or [browsing our map](https://hourofcode.com/us/map) of Hour of Code events.
+Une fois que vous avez une feuille de route définie, pour votre événement, vous pouvez commencer à inviter des étudiants, une école ou la communauté plus large. Nous vous recommandons de commencer par une école locale, avec laquelle vous avez une relation ou de [parcourir notre carte](https://hourofcode.com/us/map) des événements de l'Heure de Code.
 
 <a id="celebrate"></a>
 
-### 5. Celebrate
+### 5. Célébrez
 
 [![](/images/fit-600/Marketing/2018_HoC-391.jpg)]({{ urls/learn }})
 
-After students or guests have completed their Hour of Code, it’s time to celebrate their success. Here are some ideas for making your event even more fun:
+Une fois que les étudiants ou les invités ont terminé leur Heure de Code, il est temps de célébrer leur succès. Voici quelques idées pour rendre votre événement encore plus amusant :
 
-- [Print certificates]({{ urls/certificates }}) for participants and students.
-- [Print "I did an Hour of Code! stickers"]({{ promote/resources_stickers }}) or find other prizes and swag on the [Code.org Amazon Store](https://code.org/shop). 
+- [Imprimez des certificats]({{ urls/certificates }}) pour les participants et les étudiants. 
+- [Imprimez des autocollants "J'ai fait une Heure de Code !"]({{ promote/resources_stickers }}) ou trouvez d'autres prix et cadeaux stylisés sur le [Code.org Amazon Store](https://code.org/shop). 
 - Partagez les photos et les vidéos de votre événement l'Heure de Code sur les réseaux sociaux. Utilisez les mots-clefs #HourOfCode et @codeorg, pour que nous aussi, nous puissions mettre en avant votre réussite !
 
 * * *
@@ -130,56 +130,56 @@ After students or guests have completed their Hour of Code, it’s time to celeb
 
 ## Promouvoir Une Heure de Code
 
-One of the best ways to help is to spread the word and promote the Hour of Code.
+L'une des meilleures façons d'aider est de faire passer le mot et de promouvoir l'Heure de Code.
 
 [![](/images/fit-600/Marketing/g8TUlHzF.jpeg)]({{ urls/learn }})
 
-### 1. Register Your Event
+### 1. Enregistrez votre événement
 
-When you sign-up your Hour of Code event, you’ll receive helpful email communications with news and tips for hosting a successful Hour of Code. It’s also how you can let local schools or parents know that you’re hosting an event near them.
+Après avoir enregistré votre événement Heure de Code, vous recevrez des courriels informatifs utiles contenant des nouvelles et des conseils pour animer une Heure de Code avec succès. C'est aussi de cette manière que vous pourrez faire savoir aux écoles locales ou aux parents que vous organisez un événement près de chez eux.
 
-### 2. Post on Social Media
+### 2. Publiez sur les média sociaux
 
-Help raise awareness of the computer science movement with this sample content to post on social media and share with your employees.
+Aidez à sensibiliser le public au mouvement de l'informatique avec cet exemple de contenu à publier sur les média sociaux et à partager avec vos employés.
 
-#### Hour of Code general announcement
+#### Annonce générale Heure de Code
 
-- Computer science is changing our world. Help students be part of this change starting with one #HourOfCode. https://hourofcode.com/ 
-- Don’t just use technology—learn how to build it. Help someone start with an #HourOfCode. https://hourofcode.com/ 
+- L'informatique est en train de changer notre monde. Aidez les élèves à prendre part à ce changement en commençant par une #HourOfCode. https://hourofcode.com/ 
+- Ne vous contentez pas d'utiliser la technologie - apprenez à la construire. Aidez quelqu'un à commencer avec une #HourOfCode. https://hourofcode.com/ 
 
-#### Stats
+#### Statistiques
 
-- Did you know only 45% of U.S. schools teach computer science? Give every student the chance to learn one #HourOfCode https://hourofcode.com/ 
-- In the U.S., only 26% of software professionals are women. Introduce more young women to computer science with #HourOfCode https://hourofcode.com/ 
-- 67% of computing jobs in the U.S. are not in the tech sector. Help put computer science in the standard curriculum with #HourOfCode https://hourofcode.com/ 
+- Saviez-vous que seulement 45% des écoles américaines enseignent l'informatique ? Donnez à chaque élève la chance d'apprendre une #HourOfCode https://hourofcode.com/ 
+- Aux États-Unis, seulement 26% des professionnels en informatique sont des femmes. Initiez plus de jeunes femmes à l'informatique avec #HourOfCode https://hourofcode.com/ 
+- 67% des emplois informatiques aux États-Unis ne se trouvent pas dans le secteur de la technologie. Aidez à mettre l'informatique dans le programme scolaire standard avec #HourOfCode https://hourofcode.com/ 
 
-#### Create your own
+#### Créez la vôtre
 
-- One #HourOfCode can lead to [fill in your story]. https://hourofcode.com/ 
-- I’m supporting #HourOfCode because [fill in your thoughts]. Join us https://hourofcode.com 
+- Une #HourOfCode peut conduire à [racontez votre histoire]. https://hourofcode.com/ 
+- Je soutiens #HourOfCode parce que [dites vos pensées]. Rejoignez-nous https://hourofcode.com 
 
-#### Engineer-specific
+#### Spécifique aux ingénieurs
 
-- If your very first line of code changed your life, help students near you write their first #HourOfCode https://code.org/volunteer 
-- If you learned to code—what’s your story? Inspire a student near you through their first #HourOfCode https://code.org/volunteer
+- Si votre toute première ligne de code a changé votre vie, aidez les élèves, près de chez vous, à écrire leur première #HourOfCode https://code.org/volunteer 
+- Si vous avez appris à coder - quelle est votre histoire ? Inspirez un étudiant, près de chez vous, grâce à sa première #HourOfCode https://code.org/volunteer
 
-<a href="https://hourofcode.com/promote/resources#posters">Learn more</a> about posters, videos, stickers and other ways to promote your event to your community.
+<a href="https://hourofcode.com/promote/resources#posters" mark= "crwd-mark">En savoir plus</a> sur les affiches, vidéos, autocollants et autres façons de promouvoir votre événement auprès de votre communauté.
 
 * * *
 
 <a id="support-hour-of-code"></a>
 
-## More ways to support the Hour of Code
+## Autres manières de soutenir l'Heure de Code
 
 [![](/images/fit-600/Marketing/girl-strong-coding.png)]({{ urls/learn }})
 
-- Spread awareness by wearing [Code.org swag](https://store.code.org/) (all proceeds go to supporting more students gain access to computer science education).
-- Choose to benefit Code.org when you shop on [AmazonSmile](https://code.org/donate/amazonsmile). 
-- Ask your CEO to send a company-wide email emphasizing the importance of computer science and encouraging employees to spread the word.
-- Have some fun with co-workers in a [giving campaign](https://medium.com/@codeorg/how-a-haircut-happy-hour-turned-into-a-fundraiser-for-code-org-1952b197faa2).
-- [Sign this petition](https://code.org/promote) to make sure that every student has the opportunity to learn computer science. 
-- [Donate](https://code.org/donate) to Code.org so that we can keep our educational resources free and accessible to all. 
+- Sensibilisez le public en arborant le [style Code.org](https://store.code.org/) (tous les profits vont au soutien de l'accès de plus d'étudiants à l'enseignement de l'informatique).
+- Choisissez d'aider Code.org lorsque vous achetez sur [ AmazonSmile](https://code.org/donate/amazonsmile). 
+- Demandez à votre PDG d'envoyer un courriel à l'ensemble de l'entreprise, soulignant l'importance de l'informatique, et encourageant les employés à faire passer le mot.
+- Amusez-vous avec vos collègues dans une [campagne de don](https://medium.com/@codeorg/how-a-haircut-happy-hour-turned-into-a-fundraiser-for-code-org-1952b197faa2).
+- [ Signez cette pétition](https://code.org/promote) pour vous assurer que chaque étudiant ait la possibilité d'apprendre l'informatique. 
+- [Faites un don](https://code.org/donate) à Code.org afin que nous puissions garder nos ressources éducatives libres et accessibles à tous. 
 
-For more suggestions on how to support Code.org and the Hour of Code, visit [Code.org/Help](https://code.org/help)
+Pour plus de suggestions sur la façon de soutenir Code.org et l'Heure de Code, visitez [Code.org/Help](https://code.org/help)
 
 {{ signup_button }}

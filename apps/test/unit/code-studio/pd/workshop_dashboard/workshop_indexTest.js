@@ -34,7 +34,15 @@ describe('WorkshopIndex', () => {
       ],
       [Organizer, ['New Workshop', 'Attendance Reports', 'Filter View']],
       [ProgramManager, ['New Workshop', 'Attendance Reports', 'Filter View']],
-      [WorkshopAdmin, ['New Workshop', 'Attendance Reports', 'Filter View']]
+      [
+        WorkshopAdmin,
+        [
+          'New Workshop',
+          'Attendance Reports',
+          'Filter View',
+          'Export Survey Results'
+        ]
+      ]
     ]);
 
     permissionButtonMap.forEach(function(buttons, permissionName) {
