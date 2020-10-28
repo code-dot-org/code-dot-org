@@ -2,8 +2,30 @@
 
 import { availableTrainers } from "./train.js";
 
-export function datasetSize(state) {
-  return !!state.data.length > 0;
+export function datasetUploaded(state) {
+  return state.data.length > 0;
+}
+
+export function getColumnNames(state) {
+  const columnNames = datasetUploaded(state) ? Object.keys(state.data[0]) : [];
+  return columnNames;
+}
+
+export function columnsNamed(state) {
+  const columnNames = getColumnNames(state);
+  return (
+    columnNames.length > 0 &&
+    !columnNames.includes("") &&
+    !columnNames.includes(undefined)
+  );
+}
+
+export function uniqueColumnNames(state) {
+  const columnNames = getColumnNames(state);
+  const uniqueColumnNames = columnNames.filter(
+    (value, index, self) => self.indexOf(value) === index
+  );
+  return columnsNamed(state) && columnNames.length === uniqueColumnNames.length;
 }
 
 export function minOneFeatureSelected(state) {

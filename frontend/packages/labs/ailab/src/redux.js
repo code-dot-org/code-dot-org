@@ -5,7 +5,8 @@ import {
 } from "./train.js";
 
 import {
-  datasetSize,
+  datasetUploaded,
+  uniqueColumnNames,
   minOneFeatureSelected,
   oneLabelSelected,
   uniqLabelFeaturesSelected,
@@ -377,9 +378,15 @@ export function getAccuracy(state) {
 export function validationMessages(state) {
   const validationMessages = [];
   validationMessages.push({
-    readyToTrain: datasetSize(state),
+    readyToTrain: datasetUploaded(state),
     errorString: "There is not enough data to train a model.",
     successString: `There are ${state.data.length} rows of data.`
+  });
+  validationMessages.push({
+    readyToTrain: uniqueColumnNames(state),
+    errorString:
+      "Each column must have a name, and column names must be unique.",
+    successString: "Each column has a unique name."
   });
   validationMessages.push({
     readyToTrain: oneLabelSelected(state),
