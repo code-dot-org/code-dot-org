@@ -1,7 +1,5 @@
 # We need "press keys" to type into the React form's fields, but that doesn't work on IE.
 @no_ie
-@no_firefox
-@no_safari
 @no_mobile
 Feature: Using the Lesson Edit Page
   Scenario: Save changes using the lesson edit page
@@ -42,8 +40,7 @@ Feature: Using the Lesson Edit Page
 
     # Open the Add Level dialog, search for an artist level and add the first one
 
-    # TODO: use regular click instead once button responds to click events
-    When execute JavaScript expression "$('.uitest-open-add-level-button').first().simulate('mousedown')"
+    And I press ".uitest-open-add-level-button:first" using jQuery
     And I wait until element "h2" contains text "Add Levels"
     And I wait until element "#add-level-type" is visible
     # If the next step fails, we should consider replacing "Artist" with any other
@@ -56,7 +53,7 @@ Feature: Using the Lesson Edit Page
     # confirmed earlier that there were no Artist levels in the initial view.
     And I wait until element ".uitest-level-dialog-content td" contains text "Artist"
     And element ".uitest-level-dialog-content td .fa-plus" is visible
-    And I press the first ".uitest-level-dialog-content td .fa-plus" element
+    And I press ".uitest-level-dialog-content td .fa-plus:first" using jQuery
     And I click selector ".save-add-levels-button"
     And I wait until element "h2" does not contain text "Add Levels"
 

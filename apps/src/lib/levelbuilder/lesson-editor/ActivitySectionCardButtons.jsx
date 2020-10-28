@@ -126,7 +126,7 @@ class ActivitySectionCardButtons extends Component {
         <div style={styles.bottomControls}>
           <span>
             <button
-              onMouseDown={this.handleOpenAddLevel}
+              onClick={this.handleOpenAddLevel}
               className="btn uitest-open-add-level-button"
               style={styles.addButton}
               type="button"

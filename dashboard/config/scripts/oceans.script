@@ -1,5 +1,6 @@
 hidden false
 has_lesson_plan true
+background 'oceans-blue'
 
 lesson 'Oceans', display_name: 'Oceans'
 level 'Oceans_Video_Machine_Learning'
@@ -10,4 +11,3 @@ level 'Oceans_Video_Training_Data'
 level 'Oceans_Short'
 level 'Oceans_Video_Societal_Implications'
 level 'Oceans_Long'
-
