@@ -35,9 +35,19 @@ class Api::V1::Pd::FoormController < ::ApplicationController
 
     form_name = params[:name]
     form_version = params[:version]
+    start_date = params[:start_date]
+    end_date = params[:end_date]
     form = Foorm::Form.where(name: form_name, version: form_version).first
     filename = "#{form_name}_submissions.csv"
-    csv = form.submissions_to_csv
+    submissions = nil
+    if start_date || end_date
+      # we did not start using foorm until May 2020, if no start date was provided use 5/1/2020
+      start_date = start_date ? DateTime.parse(start_date) : DateTime.new(2020, 5, 1, 0, 0, 0)
+      end_date = end_date ? DateTime.parse(end_date) : DateTime.now
+      time_range = start_date..end_date
+      submissions = form.submissions.where(created_at: time_range)
+    end
+    csv = form.submissions_to_csv(submissions)
     send_csv_attachment(csv, filename)
   end
 end

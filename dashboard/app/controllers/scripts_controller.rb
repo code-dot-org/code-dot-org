@@ -199,6 +199,7 @@ class ScriptsController < ApplicationController
       :announcements,
       :pilot_experiment,
       :editor_experiment,
+      :background,
       resourceTypes: [],
       resourceLinks: [],
       project_widget_types: [],

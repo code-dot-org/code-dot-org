@@ -5076,7 +5076,7 @@ es-ES:
         - {}
       courseC_multi_maze_programming8_predict1:
         answers:
-        - text: El pájaro quedará a un paso del cerdo.
+        - text: El pájaro se quedará a un paso del cerdo.
           feedback: Incorrecto. En este código, el pájaro llega perfectamente hasta
             el cerdo.
         - text: El pájaro logrará llegar hasta el cerdo.
@@ -5086,13 +5086,13 @@ es-ES:
           feedback: Incorrecto. En este código, el pájaro llega perfectamente hasta
             el cerdo.
         - text: No lo sé.
-          feedback: En este código, el pájaro llega perfectamente hasta el cerdo.
+          feedback: Con este programa, el pájaro llega perfectamente hasta el cerdo.
         questions:
         - text: Lee el siguiente código con atención. ¿Qué sucederá cuando hagas clic
             en "Ejecutar"?
       courseC_multi_maze_programming8_predict1_2018:
         answers:
-        - text: El pájaro quedará a un paso del cerdo.
+        - text: El pájaro se quedará a un paso del cerdo.
           feedback: Incorrecto. En este código, el pájaro llega perfectamente hasta
             el cerdo.
         - text: El pájaro logrará llegar hasta el cerdo.
@@ -5102,13 +5102,13 @@ es-ES:
           feedback: Incorrecto. En este código, el pájaro llega perfectamente hasta
             el cerdo.
         - text: No lo sé.
-          feedback: En este código, el pájaro llega perfectamente hasta el cerdo.
+          feedback: Con este programa, el pájaro llega perfectamente hasta el cerdo.
         questions:
         - text: Lee el siguiente código con atención. ¿Qué sucederá cuando hagas clic
             en "Ejecutar"?
       courseC_multi_maze_programming8_predict1_2018_2019:
         answers:
-        - text: El pájaro quedará a un paso del cerdo.
+        - text: El pájaro se quedará a un paso del cerdo.
           feedback: Incorrecto. En este código, el pájaro llega perfectamente hasta
             el cerdo.
         - text: El pájaro logrará llegar hasta el cerdo.
@@ -5118,13 +5118,13 @@ es-ES:
           feedback: Incorrecto. En este código, el pájaro llega perfectamente hasta
             el cerdo.
         - text: No lo sé.
-          feedback: En este código, el pájaro llega perfectamente hasta el cerdo.
+          feedback: Con este programa, el pájaro llega perfectamente hasta el cerdo.
         questions:
         - text: Lee el siguiente código con atención. ¿Qué sucederá cuando hagas clic
             en "Ejecutar"?
       courseC_multi_maze_programming8_predict1_2018_2019_2020:
         answers:
-        - text: El pájaro quedará a un paso del cerdo.
+        - text: El pájaro se quedará a un paso del cerdo.
           feedback: Incorrecto. En este código, el pájaro llega perfectamente hasta
             el cerdo.
         - text: El pájaro logrará llegar hasta el cerdo.
@@ -5134,7 +5134,7 @@ es-ES:
           feedback: Incorrecto. En este código, el pájaro llega perfectamente hasta
             el cerdo.
         - text: No lo sé.
-          feedback: En este código, el pájaro llega perfectamente hasta el cerdo.
+          feedback: Con este programa, el pájaro llega perfectamente hasta el cerdo.
         questions:
         - text: Lee el siguiente código con atención. ¿Qué sucederá cuando hagas clic
             en "Ejecutar"?
@@ -6926,7 +6926,7 @@ es-ES:
         content1: descripción aquí
       grade2_multi_collector_A_predict1:
         answers:
-        - text: Laurel recogerá 4 piezas del tesoro con este código.
+        - text: Laurel recogerá 4 piezas del tesoro con este programa.
           feedback: Incorrecto. Laurel trata de recoger el tesoro donde no lo hay,
             y esto provoca un error.
         - text: Laurel intentará recoger el tesoro donde no lo hay y eso causará un
@@ -6937,15 +6937,15 @@ es-ES:
           feedback: Incorrecto. Laurel trata de recoger el tesoro donde no lo hay,
             y esto provoca un error.
         - text: No lo sé.
-          feedback: Laurel trata de recoger el tesoro donde no lo hay, y ésto provoca
+          feedback: Laurel trata de recoger el tesoro donde no lo hay, y esto provoca
             un error.
         questions:
         - text: Mira el siguiente código con atención. Si el código se ejecutara hasta
-            el final (e ignorase cualquier error), ¿cuántas partes del tesoro recogería
+            el final (ignorando los errores), ¿cuántas partes del tesoro recogería
             Laurel?
       grade2_multi_collector_A_predict1_2018:
         answers:
-        - text: Laurel recogerá 4 piezas del tesoro con este código.
+        - text: Laurel recogerá 4 piezas del tesoro con este programa.
           feedback: Incorrecto. Laurel trata de recoger el tesoro donde no lo hay,
             y esto provoca un error.
         - text: Laurel intentará recoger el tesoro donde no lo hay y eso causará un
@@ -6956,14 +6956,14 @@ es-ES:
           feedback: Incorrecto. Laurel trata de recoger el tesoro donde no lo hay,
             y esto provoca un error.
         - text: No lo sé.
-          feedback: Laurel trata de recoger el tesoro donde no lo hay, y ésto provoca
+          feedback: Laurel trata de recoger el tesoro donde no lo hay, y esto provoca
             un error.
         questions:
         - text: Observa este código cuidadosamente. ¿Qué crees que ocurrirá cuando
             ejecutes el programa?
       grade2_multi_collector_A_predict1_2018_2019:
         answers:
-        - text: Laurel recogerá 4 piezas del tesoro con este código.
+        - text: Laurel recogerá 4 piezas del tesoro con este programa.
           feedback: Incorrecto. Laurel trata de recoger el tesoro donde no lo hay,
             y esto provoca un error.
         - text: Laurel intentará recoger el tesoro donde no lo hay y eso causará un
@@ -6974,14 +6974,14 @@ es-ES:
           feedback: Incorrecto. Laurel trata de recoger el tesoro donde no lo hay,
             y esto provoca un error.
         - text: No lo sé.
-          feedback: Laurel trata de recoger el tesoro donde no lo hay, y ésto provoca
+          feedback: Laurel trata de recoger el tesoro donde no lo hay, y esto provoca
             un error.
         questions:
         - text: Observa este código cuidadosamente. ¿Qué crees que ocurrirá cuando
             ejecutes el programa?
       grade2_multi_collector_A_predict1_2018_2019_2020:
         answers:
-        - text: Laurel recogerá 4 piezas del tesoro con este código.
+        - text: Laurel recogerá 4 piezas del tesoro con este programa.
           feedback: Incorrecto. Laurel trata de recoger el tesoro donde no lo hay,
             y esto provoca un error.
         - text: Laurel intentará recoger el tesoro donde no lo hay y eso causará un
@@ -6992,7 +6992,7 @@ es-ES:
           feedback: Incorrecto. Laurel trata de recoger el tesoro donde no lo hay,
             y esto provoca un error.
         - text: No lo sé.
-          feedback: Laurel trata de recoger el tesoro donde no lo hay, y ésto provoca
+          feedback: Laurel trata de recoger el tesoro donde no lo hay, y esto provoca
             un error.
         questions:
         - text: Observa este código cuidadosamente. ¿Qué crees que ocurrirá cuando

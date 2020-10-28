@@ -39,6 +39,12 @@ $(document).ready(function() {
         // React key
         tip.key = _.uniqueId();
       });
+
+      activitySection.scriptLevels.forEach(scriptLevel => {
+        // The position within the lesson
+        scriptLevel.levelNumber = scriptLevel.position;
+        delete scriptLevel.position;
+      });
     });
   });
 

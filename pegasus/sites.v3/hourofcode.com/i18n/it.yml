@@ -498,9 +498,9 @@ it:
     con l'Ora del Codice. Apriremo le iscrizioni per il festeggiamento annuale in
     ottobre.
   signup_header: |-
-    Organizza un'Ora del Codice %{campaign_date}, e registrati qui.<br>
-    <br>
-    <b>Se sei in Italia, crea il tuo profilo attraverso il sito italiano <a href="https://programmailfuturo.it/chi/chi-puo-partecipare" target="_blank">Programma il Futuro</a>, sarà tutto più semplice!</b>
+    Organizza un'Ora del Codice %{campaign_date}, e registrati qui.
+
+    Se sei in Italia, crea il tuo profilo attraverso il sito italiano di Programma il Futuro, sarà tutto più semplice! www.programmailfuturo.it
   signup_name_label: Il tuo nome
   signup_name_error: Il Nome è richiesto.
   signup_email_label: Il tuo indirizzo di posta elettronica
@@ -539,7 +539,7 @@ it:
   signup_registration_deadline: Le iscrizioni per l'Ora del Codice del 2019 si chiudono
     il 16 dicembre.
   signup_name_placeholder: Il tuo nome
-  signup_email_placeholder: Per esempio, nome@istruzione.it
+  signup_email_placeholder: Per esempio, nome.cognome@posta.istruzione.it
   signup_organization_name_placeholder: Per esempio, Liceo Dante Alighieri
   signup_event_country_label: Paese dell'evento
   signup_event_country_error: È necessario inserire il paese dell'evento.

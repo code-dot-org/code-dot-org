@@ -89,8 +89,8 @@ class ActivitySection < ApplicationRecord
   def fetch_script_level(sl_data)
     if sl_data['id']
       script_level = script_levels.find(sl_data['id'])
-      raise "ScriptLevel id #{sl_data['id']} not found in ActivitySection id #{id}" unless script_level
-      return script_level
+      return script_level if script_level
+      raise ActiveRecord::RecordNotFound.new("ScriptLevel id #{sl_data['id']} not found in ActivitySection id #{id}")
     end
 
     script_levels.create(
