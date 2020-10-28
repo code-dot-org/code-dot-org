@@ -1,8 +1,10 @@
 class FoormEditorController < ApplicationController
+  before_action :require_levelbuilder_mode_or_test_env
+  before_action :authenticate_user!
+
   # GET '/foorm/editor/'
   def index
-    # only show for admins on non-production
-    return render_404 if Rails.env.production? || !current_user.admin?
+    return render_404 unless current_user && current_user.levelbuilder?
 
     formatted_names_and_versions = Foorm::Form.all.map {|form| {name: form.name, version: form.version}}
 
