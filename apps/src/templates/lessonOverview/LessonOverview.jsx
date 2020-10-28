@@ -128,7 +128,9 @@ class LessonOverview extends Component {
             >
               {lesson.unit.lessons.map((l, index) => (
                 <a key={index} href={this.linkWithQueryParams(l.link)}>
-                  {`${index + 1} ${l.displayName}`}
+                  {l.lockable
+                    ? l.displayName
+                    : `${l.position} ${l.displayName}`}
                 </a>
               ))}
             </DropdownButton>
