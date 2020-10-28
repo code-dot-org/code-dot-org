@@ -82,7 +82,7 @@ module BlocklyHelpers
 
   # Google Blockly encodes the id in the DOM element as the "data-id", CDO Blockly calls it the "block-id"
   def get_id_selector
-    google_blockly? ? 'data-id' : 'block_id'
+    google_blockly? ? 'data-id' : 'block-id'
   end
 end
 
