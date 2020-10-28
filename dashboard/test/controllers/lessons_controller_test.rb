@@ -497,6 +497,7 @@ class LessonsControllerTest < ActionController::TestCase
     script_level = section.script_levels.first
     assert script_level.assessment
     refute script_level.bonus
+    assert_equal 'section name', script_level.progression
     assert_equal ['level-to-add'], script_level.levels.map(&:name)
   end
 
