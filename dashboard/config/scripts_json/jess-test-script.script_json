@@ -2140,7 +2140,7 @@
       "position": 2,
       "assessment": null,
       "properties": {
-        "progression": "Theme Introduction"
+        "progression": "Theme Introduction (~5 mins)"
       },
       "named_level": null,
       "bonus": null,
@@ -2203,7 +2203,7 @@
       "position": 5,
       "assessment": null,
       "properties": {
-        "progression": "Unit 6: Lesson 1 - Innovations in Computing (~10 mins)"
+        "progression": "Unit 6: Lesson 2 - Designing Screens with Code (~20 mins)"
       },
       "named_level": null,
       "bonus": null,
@@ -2497,7 +2497,7 @@
       "position": 19,
       "assessment": null,
       "properties": {
-        "progression": "Preview Part I: Alternate Unit to Unit 6 (~5 mins)"
+        "progression": "Preview Part 1: Alternate Unit to Unit 6 (~5 mins)"
       },
       "named_level": null,
       "bonus": null,
@@ -2518,20 +2518,20 @@
       "position": 20,
       "assessment": null,
       "properties": {
-        "progression": "Equity Journey (~5 mins)"
+        "progression": "Preview Part 2: Another Alternate Unit to Unit 6 (~5 mins)"
       },
       "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
-          "VPL - CSD Module 7 - Equity Journey"
+          "VPL - CSD Module 8 - Alternative Unit"
         ],
         "lesson.key": "Module 7",
         "lesson_group.key": "",
         "script.name": "jess-test-script"
       },
       "level_keys": [
-        "VPL - CSD Module 7 - Equity Journey"
+        "VPL - CSD Module 8 - Alternative Unit"
       ]
     },
     {
@@ -2791,20 +2791,20 @@
       "position": 12,
       "assessment": null,
       "properties": {
-        "progression": "Preview Part II: Another Alternate Unit to Unit 6 (~5 mins)"
+        "progression": "Equity Journey (~5 mins)"
       },
       "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
-          "VPL - CSD Module 8 - Alternative Unit"
+          "VPL - CSD Module 7 - Equity Journey"
         ],
         "lesson.key": "Module 8",
         "lesson_group.key": "",
         "script.name": "jess-test-script"
       },
       "level_keys": [
-        "VPL - CSD Module 8 - Alternative Unit"
+        "VPL - CSD Module 7 - Equity Journey"
       ]
     },
     {
@@ -2812,7 +2812,7 @@
       "position": 13,
       "assessment": null,
       "properties": {
-        "progression": "Equity (~5 mins)"
+        "progression": "Equity Journey (~5 mins)"
       },
       "named_level": null,
       "bonus": null,
@@ -4085,9 +4085,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "VPL - CSD Module 7 - Equity Journey",
+        "level.key": "VPL - CSD Module 8 - Alternative Unit",
         "script_level.level_keys": [
-          "VPL - CSD Module 7 - Equity Journey"
+          "VPL - CSD Module 8 - Alternative Unit"
         ],
         "lesson.key": "Module 7",
         "lesson_group.key": "",
@@ -4228,9 +4228,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "VPL - CSD Module 8 - Alternative Unit",
+        "level.key": "VPL - CSD Module 7 - Equity Journey",
         "script_level.level_keys": [
-          "VPL - CSD Module 8 - Alternative Unit"
+          "VPL - CSD Module 7 - Equity Journey"
         ],
         "lesson.key": "Module 8",
         "lesson_group.key": "",
