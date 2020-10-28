@@ -141,12 +141,14 @@ class LessonOverview extends Component {
             viewAs={viewAs}
           />
         )}
-        <h1>{lesson.lockable
-            ? lesson.displayName : i18n.lessonNumbered({
+        <h1>
+          {lesson.lockable
+            ? lesson.displayName
+            : i18n.lessonNumbered({
                 lessonNumber: lesson.position,
                 lessonName: lesson.displayName
-              })
-        }</h1>
+              })}
+        </h1>
 
         <div style={styles.frontPage}>
           <div style={styles.left}>
