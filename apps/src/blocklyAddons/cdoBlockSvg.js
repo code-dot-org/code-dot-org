@@ -3,7 +3,7 @@ import BlockSvgUnused from './blockSvgUnused';
 
 export default class BlockSvg extends GoogleBlockly.BlockSvg {
   constructor(workspace, prototypeName, opt_id) {
-    super(workspace, prototypeName, opt_id);
+    super(workspace, prototypeName, ++Blockly.uidCounter_); // Use counter instead of randomly generated IDs
     this.canDisconnectFromParent_ = true;
   }
 
