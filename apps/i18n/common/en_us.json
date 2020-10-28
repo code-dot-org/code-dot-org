@@ -12,7 +12,7 @@
   "achievements": "Achievements",
   "activity": "Activity",
   "activityHeaderName": "{activityName}",
-  "activityHeaderTime": "({activityDuration} minutes)",
+  "activityHeaderTime": " ({activityDuration} minutes)",
   "actions": "Actions",
   "add": "Add",
   "addNewSection": "Add New Section",
