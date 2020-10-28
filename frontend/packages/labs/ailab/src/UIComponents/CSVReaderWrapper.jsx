@@ -24,7 +24,7 @@ class CSVReaderWrapper extends Component {
     };
   }
 
-  handleChange = (event) => {
+  handleChange = event => {
     this.props.resetState();
     this.setState({
       csvfile: event.target.files[0],
@@ -32,7 +32,7 @@ class CSVReaderWrapper extends Component {
     });
   };
 
-  handleChangeSelect = (event) => {
+  handleChangeSelect = event => {
     this.props.resetState();
     this.setState({
       csvfile: event.target.value,
@@ -49,14 +49,14 @@ class CSVReaderWrapper extends Component {
     });
   };
 
-  updateData = (result) => {
+  updateData = result => {
     var data = result.data;
     this.props.setImportedData(data);
     this.setDefaultColumnDataType(data);
   };
 
-  setDefaultColumnDataType = (data) => {
-    Object.keys(data[0]).map((column) =>
+  setDefaultColumnDataType = data => {
+    Object.keys(data[0]).map(column =>
       this.props.setColumnsByDataType(column, ColumnTypes.OTHER)
     );
   };
@@ -72,7 +72,7 @@ class CSVReaderWrapper extends Component {
             <h2>Select a dataset from the collection</h2>
             <select onChange={this.handleChangeSelect}>
               <option>{""}</option>
-              {availableDatasets.map((dataset) => {
+              {availableDatasets.map(dataset => {
                 return (
                   <option
                     key={dataset["id"]}
@@ -90,7 +90,7 @@ class CSVReaderWrapper extends Component {
         <input
           className="csv-input"
           type="file"
-          ref={(input) => {
+          ref={input => {
             this.filesInput = input;
           }}
           name="file"
@@ -108,8 +108,8 @@ class CSVReaderWrapper extends Component {
 }
 
 export default connect(
-  (state) => ({}),
-  (dispatch) => ({
+  state => ({}),
+  dispatch => ({
     resetState() {
       dispatch(resetState());
     },
