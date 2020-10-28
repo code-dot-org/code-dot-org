@@ -30,12 +30,12 @@ class Objective < ActiveRecord::Base
   end
 
   def summarize_for_lesson_show
-    {id: id, description: localized_description}
+    {id: id, description: display_description}
   end
 
   private
 
-  def localized_description
+  def display_description
     # TODO: localize the descriptions
     description
   end
