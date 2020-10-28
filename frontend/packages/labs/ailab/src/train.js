@@ -178,7 +178,8 @@ const prepareTrainingData = () => {
   // trained and saved to state separately to test the model's accuracy.
   const accuracyCheckExamples = [];
   const accuracyCheckLabels = [];
-  const numToReserve = parseInt(trainingExamples.length * 0.1);
+  const percent = updatedState.percentDataToReserve / 100;
+  const numToReserve = parseInt(trainingExamples.length * percent);
   let numReserved = 0;
   while (numReserved < numToReserve) {
     let randomIndex = getRandomInt(trainingExamples.length - 1);

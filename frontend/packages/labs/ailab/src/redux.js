@@ -22,6 +22,7 @@ const SET_COLUMNS_BY_DATA_TYPE = "SET_COLUMNS_BY_DATA_TYPE";
 const SET_SELECTED_FEATURES = "SET_SELECTED_FEATURES";
 const SET_LABEL_COLUMN = "SET_LABEL_COLUMN";
 const SET_FEATURE_NUMBER_KEY = "SET_FEATURE_NUMBER_KEY";
+const SET_PERCENT_DATA_TO_RESERVE = "SET_PERCENT_DATA_TO_RESERVE";
 const SET_ACCURACY_CHECK_EXAMPLES = "SET_ACCURACY_CHECK_EXAMPLES";
 const SET_ACCURACY_CHECK_LABELS = "SET_ACCURACY_CHECK_LABELS";
 const SET_ACCURACY_CHECK_PREDICTED_LABELS =
@@ -74,6 +75,10 @@ export function setFeatureNumberKey(featureNumberKey) {
   return { type: SET_FEATURE_NUMBER_KEY, featureNumberKey };
 }
 
+export function setPercentDataToReserve(percentDataToReserve) {
+  return { type: SET_PERCENT_DATA_TO_RESERVE, percentDataToReserve };
+}
+
 export function setAccuracyCheckExamples(accuracyCheckExamples) {
   return { type: SET_ACCURACY_CHECK_EXAMPLES, accuracyCheckExamples };
 }
@@ -119,6 +124,7 @@ const initialState = {
   featureNumberKey: {},
   trainingExamples: [],
   trainingLabels: [],
+  percentDataToReserve: 10,
   accuracyCheckExamples: [],
   accuracyCheckLabels: [],
   accuracyCheckPredictedLabels: [],
@@ -178,6 +184,12 @@ export default function rootReducer(state = initialState, action) {
     return {
       ...state,
       trainingLabels: action.trainingLabels
+    };
+  }
+  if (action.type === SET_PERCENT_DATA_TO_RESERVE) {
+    return {
+      ...state,
+      percentDataToReserve: action.percentDataToReserve
     };
   }
   if (action.type === SET_ACCURACY_CHECK_EXAMPLES) {
