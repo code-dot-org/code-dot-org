@@ -14,6 +14,12 @@ export default class BlockSvg extends GoogleBlockly.BlockSvg {
     this.unusedSvg_.render(this.svgGroup_);
   }
 
+  isVisible() {
+    // TODO (eventually), but all Flappy blocks are visible, so this won't be a problem
+    // until we convert other labs
+    return true;
+  }
+
   setCanDisconnectFromParent(canDisconnect) {
     this.canDisconnectFromParent_ = canDisconnect;
   }
