@@ -1,4 +1,4 @@
-/** @file Top-level view for Fish */
+/** @file Top-level view for Ailab */
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';

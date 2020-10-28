@@ -10,7 +10,7 @@ import ailabMsg from './locale';
 /**
  * On small mobile devices, when in portrait orientation, we show an overlay
  * image telling the user to rotate their device to landscape mode.  Because
- * the fish app is able to render at a minimum width of 480px, we set this
+ * the ailab app is able to render at a minimum width of 480px, we set this
  * width to be somewhat larger.  We will use this width to set the viewport
  * on the mobile device, and correspondingly to scale up the overlay image to
  * properly fit on the mobile device for that viewport.
@@ -18,7 +18,7 @@ import ailabMsg from './locale';
 const MOBILE_PORTRAIT_WIDTH = 600;
 
 /**
- * An instantiable Fish class
+ * An instantiable Ailab class
  */
 
 const Ailab = function() {
@@ -41,7 +41,7 @@ Ailab.prototype.injectStudioApp = function(studioApp) {
  */
 Ailab.prototype.init = function(config) {
   if (!this.studioApp_) {
-    throw new Error('Fish requires a StudioApp');
+    throw new Error('Ailab requires a StudioApp');
   }
 
   this.skin = config.skin;
@@ -54,7 +54,7 @@ Ailab.prototype.init = function(config) {
   config.pinWorkspaceToBottom = true;
 
   const onMount = () => {
-    // NOTE: Other apps call studioApp.init(), except WebLab. Fish is imitating WebLab
+    // NOTE: Other apps call studioApp.init(), except WebLab. Ailab is imitating WebLab.
     this.studioApp_.setConfigValues_(config);
 
     // NOTE: if we called studioApp_.init(), the code here would be executed
@@ -100,7 +100,7 @@ Ailab.prototype.onContinue = function() {
   };
 
   this.studioApp_.report({
-    app: 'fish',
+    app: 'ailab',
     level: this.level.id,
     result: true,
     testResult: TestResults.ALL_PASS,
