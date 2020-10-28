@@ -104,7 +104,8 @@ export default class ScriptEditor extends React.Component {
     super(props);
 
     this.state = {
-      curriculumUmbrella: this.props.curriculumUmbrella
+      curriculumUmbrella: this.props.curriculumUmbrella,
+      familyName: this.props.familyName
     };
   }
 
@@ -117,6 +118,10 @@ export default class ScriptEditor extends React.Component {
   handleUmbrellaSelectChange = event => {
     const curriculumUmbrella = event.target.value;
     this.setState({curriculumUmbrella});
+  };
+
+  handleFamilyNameChange = event => {
+    this.setState({familyName: event.target.value});
   };
 
   presubmit = e => {
@@ -339,9 +344,10 @@ export default class ScriptEditor extends React.Component {
                 Family Name
                 <select
                   name="family_name"
-                  defaultValue={this.props.familyName}
+                  defaultValue={this.state.familyName}
                   style={styles.dropdown}
                   disabled={this.props.hasCourse}
+                  onChange={this.handleFamilyNameChange}
                 >
                   <option value="">(None)</option>
                   {this.props.scriptFamilies.map(familyOption => (
@@ -413,6 +419,7 @@ export default class ScriptEditor extends React.Component {
                   name="is_course"
                   type="checkbox"
                   defaultChecked={this.props.isCourse}
+                  disabled={!this.state.familyName}
                   style={styles.checkbox}
                 />
                 <HelpTip>
@@ -420,6 +427,10 @@ export default class ScriptEditor extends React.Component {
                     (Still in development) If checked, indicates that this Unit
                     represents a standalone course. Examples of such Units
                     include CourseA-F, Express, and Pre-Express.
+                  </p>
+                  <p>
+                    You must select a family name in order to mark something as
+                    a standalone course.
                   </p>
                 </HelpTip>
               </label>
