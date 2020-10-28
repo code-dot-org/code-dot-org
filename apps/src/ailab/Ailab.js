@@ -37,7 +37,7 @@ Ailab.prototype.injectStudioApp = function(studioApp) {
 };
 
 /**
- * Initialize this WebLab instance.  Called on page load.
+ * Initialize this Ailab instance.  Called on page load.
  */
 Ailab.prototype.init = function(config) {
   if (!this.studioApp_) {
@@ -54,7 +54,7 @@ Ailab.prototype.init = function(config) {
   config.pinWorkspaceToBottom = true;
 
   const onMount = () => {
-    // NOTE: Other apps call studioApp.init(), except WebLab. Ailab is imitating WebLab.
+    // NOTE: Most other apps call studioApp.init().  Like WebLab and Fish, we don't.
     this.studioApp_.setConfigValues_(config);
 
     // NOTE: if we called studioApp_.init(), the code here would be executed
@@ -93,7 +93,7 @@ Ailab.prototype.init = function(config) {
   );
 };
 
-// Called by the fish app when it wants to go to the next level.
+// Called by the ailab app when it wants to go to the next level.
 Ailab.prototype.onContinue = function() {
   const onReportComplete = result => {
     this.studioApp_.onContinue();
