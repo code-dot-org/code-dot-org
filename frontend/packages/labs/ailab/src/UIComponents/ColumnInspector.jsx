@@ -2,7 +2,11 @@
 import PropTypes from "prop-types";
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { getSelectedColumns, setColumnsByDataType } from "../redux";
+import {
+  getSelectedColumns,
+  setColumnsByDataType,
+  getUniqueOptionsByColumn
+} from "../redux";
 import { ColumnTypes } from "../constants.js";
 
 class ColumnInspector extends Component {
@@ -10,7 +14,9 @@ class ColumnInspector extends Component {
     getSelectedColumns: PropTypes.func,
     selectedColumns: PropTypes.array,
     columnsByDataType: PropTypes.object,
-    setColumnsByDataType: PropTypes.func.isRequired
+    setColumnsByDataType: PropTypes.func.isRequired,
+    getUniqueOptionsByColumn: PropTypes.func,
+    uniqueOptionsByColumn: PropTypes.object
   };
 
   handleChangeDataType = (event, feature) => {
@@ -63,6 +69,20 @@ class ColumnInspector extends Component {
                         </select>
                       </label>
                     )}
+                    {this.props.columnsByDataType[column] ===
+                      ColumnTypes.CATEGORICAL && (
+                      <div>
+                        <p>
+                          {this.props.uniqueOptionsByColumn[column].length}{" "}
+                          unique values for {column}:{" "}
+                        </p>
+                        {this.props.uniqueOptionsByColumn[column].map(
+                          (option, index) => {
+                            return <div key={index}>{option}</div>;
+                          }
+                        )}
+                      </div>
+                    )}
                     <br />
                     <br />
                   </div>
@@ -79,7 +99,8 @@ class ColumnInspector extends Component {
 export default connect(
   state => ({
     selectedColumns: getSelectedColumns(state),
-    columnsByDataType: state.columnsByDataType
+    columnsByDataType: state.columnsByDataType,
+    uniqueOptionsByColumn: getUniqueOptionsByColumn(state)
   }),
   dispatch => ({
     setColumnsByDataType(column, dataType) {

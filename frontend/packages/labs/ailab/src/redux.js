@@ -258,8 +258,8 @@ export function getSelectedColumns(state) {
 }
 
 export function getSelectedCategoricalColumns(state) {
-  let intersection = getCategoricalColumns(state).filter(x =>
-    state.selectedFeatures.includes(x)
+  let intersection = getCategoricalColumns(state).filter(
+    x => state.selectedFeatures.includes(x) || x === state.labelColumn
   );
   return intersection;
 }
@@ -280,33 +280,7 @@ export function getSelectableFeatures(state) {
 }
 
 export function getSelectableLabels(state) {
-  const eligibleColumns = getFeatures(state);
-  let labelsRestrictedByTrainer;
-  switch (true) {
-    case availableTrainers[state.selectedTrainer] &&
-      availableTrainers[state.selectedTrainer].mlType ===
-        MLTypes.CLASSIFICATION &&
-      availableTrainers[state.selectedTrainer].binary:
-      labelsRestrictedByTrainer = getCategoricalColumns(state).filter(
-        column => getUniqueOptions(state, column).length === 2
-      );
-      break;
-    case availableTrainers[state.selectedTrainer] &&
-      availableTrainers[state.selectedTrainer].mlType ===
-        MLTypes.CLASSIFICATION:
-      labelsRestrictedByTrainer = getCategoricalColumns(state);
-      break;
-    case availableTrainers[state.selectedTrainer] &&
-      availableTrainers[state.selectedTrainer].mlType === MLTypes.REGRESSION:
-      labelsRestrictedByTrainer = getContinuousColumns(state);
-      break;
-    default:
-      labelsRestrictedByTrainer = eligibleColumns;
-  }
-  const selectableLabels = labelsRestrictedByTrainer.filter(
-    x => !state.selectedFeatures.includes(x)
-  );
-  return selectableLabels;
+  return getFeatures(state).filter(x => !state.selectedFeatures.includes(x));
 }
 
 export function getUniqueOptions(state, column) {
