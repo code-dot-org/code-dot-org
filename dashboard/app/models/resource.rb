@@ -40,4 +40,15 @@ class Resource < ApplicationRecord
     download_url
     include_in_pdf
   )
+
+  def summarize_for_lesson_plan
+    {
+      key: key,
+      name: I18n.t("data.resource.#{key}.name", default: name),
+      url: url,
+      download_url: download_url,
+      audience: audience || 'All',
+      type: type
+    }
+  end
 end

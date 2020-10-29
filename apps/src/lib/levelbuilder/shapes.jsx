@@ -66,8 +66,9 @@ export const activityShape = PropTypes.shape({
   key: PropTypes.string.isRequired,
   displayName: PropTypes.string,
   position: PropTypes.number.isRequired,
-  duration: PropTypes.number,
-  activitySections: PropTypes.arrayOf(activitySectionShape).isRequired
+  duration: PropTypes.oneOfType([PropTypes.number, PropTypes.oneOf([''])])
+    .isRequired,
+  activitySections: PropTypes.arrayOf(activitySectionShape)
 });
 
 export const resourceShape = PropTypes.shape({

@@ -139,7 +139,9 @@ class ActivityCard extends Component {
     this.props.updateActivityField(
       this.props.activity.position,
       'duration',
-      event.target.value
+      Number.isNaN(parseInt(event.target.value))
+        ? ''
+        : parseInt(event.target.value)
     );
   };
 

@@ -6,7 +6,6 @@ import ReactDOM from 'react-dom';
 import {borderRadius, tokenMargin} from '@cdo/apps/lib/levelbuilder/constants';
 import OrderControls from '@cdo/apps/lib/levelbuilder/OrderControls';
 import {
-  moveLesson,
   moveGroup,
   removeLesson,
   addLesson,
@@ -75,7 +74,6 @@ class LessonGroupCard extends Component {
     addLesson: PropTypes.func.isRequired,
     moveGroup: PropTypes.func.isRequired,
     removeGroup: PropTypes.func.isRequired,
-    moveLesson: PropTypes.func.isRequired,
     removeLesson: PropTypes.func.isRequired,
     setLessonGroup: PropTypes.func.isRequired,
     reorderLesson: PropTypes.func.isRequired,
@@ -355,7 +353,6 @@ export const UnconnectedLessonGroupCard = LessonGroupCard;
 export default connect(
   state => ({}),
   {
-    moveLesson,
     moveGroup,
     removeLesson,
     removeGroup,
