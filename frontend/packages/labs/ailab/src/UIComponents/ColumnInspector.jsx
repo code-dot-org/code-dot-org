@@ -84,9 +84,6 @@ export default connect(
   dispatch => ({
     setColumnsByDataType(column, dataType) {
       dispatch(setColumnsByDataType(column, dataType));
-    },
-    setShowPredict(showPredict) {
-      dispatch(setShowPredict(showPredict));
     }
   })
 )(ColumnInspector);
