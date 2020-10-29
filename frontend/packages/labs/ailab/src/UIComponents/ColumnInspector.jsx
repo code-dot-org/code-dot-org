@@ -1,4 +1,4 @@
-/* React component to handle displaying imported data. */
+/* React component to handle setting datatype for selected columns and displaying an overview of column contents. */
 import PropTypes from "prop-types";
 import React, { Component } from "react";
 import { connect } from "react-redux";
@@ -92,6 +92,63 @@ class DataDisplay extends Component {
             )}
             {!this.state.showRawData && (
               <p onClick={this.toggleRawData}>show data</p>
+            )}
+            {this.props.selectableLabels.length > 0 && (
+              <form>
+                <label>
+                  <h2>Which column contains the labels for your dataset?</h2>
+                  <h3>Classification requires categorical labels.</h3>
+                  <p>
+                    If you select a categorical label, the model will be trained
+                    to predict which category from the label column an example
+                    (a set of attributes or features) is most likely to belong
+                    to.
+                  </p>
+                  <h3>Regression requires continuous labels.</h3>
+                  <p>
+                    If you select a continuous label, the model will be trained
+                    to predict a numerical value that is most likely to fit with
+                    an example's features or attributes.
+                  </p>
+                  <select
+                    value={this.props.labelColumn}
+                    onChange={this.handleChangeSelect}
+                  >
+                    <option>{""}</option>
+                    {this.props.selectableLabels.map((feature, index) => {
+                      return (
+                        <option key={index} value={feature}>
+                          {feature}
+                        </option>
+                      );
+                    })}
+                  </select>
+                </label>
+              </form>
+            )}
+            {this.props.selectableFeatures.length > 0 && (
+              <form>
+                <label>
+                  <h2>Which features are you interested in training on?</h2>
+                  <p>
+                    Features are the attributes the model will use to make a
+                    prediction. Features can be categorical or continuous.
+                  </p>
+                  <select
+                    multiple={true}
+                    value={this.props.selectedFeatures}
+                    onChange={this.handleChangeMultiSelect}
+                  >
+                    {this.props.selectableFeatures.map((feature, index) => {
+                      return (
+                        <option key={index} value={feature}>
+                          {feature}
+                        </option>
+                      );
+                    })}
+                  </select>
+                </label>
+              </form>
             )}
             <h2>Describe the data in each of your columns</h2>
             <p>

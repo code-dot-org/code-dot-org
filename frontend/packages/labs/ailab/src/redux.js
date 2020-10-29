@@ -269,15 +269,11 @@ export function getContinuousColumns(state) {
 }
 
 export function getSelectableFeatures(state) {
-  return getContinuousColumns(state)
-    .concat(getCategoricalColumns(state))
-    .filter(column => column !== state.labelColumn);
+  return getFeatures(state).filter(column => column !== state.labelColumn);
 }
 
 export function getSelectableLabels(state) {
-  const eligibleColumns = getContinuousColumns(state).concat(
-    getCategoricalColumns(state)
-  );
+  const eligibleColumns = getFeatures(state);
   let labelsRestrictedByTrainer;
   switch (true) {
     case availableTrainers[state.selectedTrainer] &&
@@ -403,6 +399,10 @@ export function validationMessages(state) {
     successString: "The label datatype and training algorithm are compatible."
   });
   return validationMessages;
+}
+
+export function isDataUploaded(state) {
+  return state.data.length > 0;
 }
 
 export function readyToTrain(state) {
