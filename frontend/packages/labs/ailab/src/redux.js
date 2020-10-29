@@ -399,7 +399,7 @@ export function validationMessages(state) {
     errorString:
       "Feature and label columns must contain only continuous or categorical data.",
     successString:
-      "Selected features and label contain continiuous or categorical data"
+      "Selected features and label contain continuous or categorical data"
   });
   validationMessages.push({
     readyToTrain: trainerSelected(state),
