@@ -275,6 +275,16 @@ class ActivitySectionCard extends Component {
     );
   };
 
+  appendResourceLink = resourceKey => {
+    const currentText = this.props.activitySection.text;
+    this.props.updateActivitySectionField(
+      this.props.activityPosition,
+      this.props.activitySection.position,
+      'text',
+      currentText + `\n[r ${resourceKey}]`
+    );
+  };
+
   handleRemoveLevel = levelPos => {
     this.setState({levelPosToRemove: levelPos});
   };
@@ -414,6 +424,7 @@ class ActivitySectionCard extends Component {
           activitySection={this.props.activitySection}
           addLevel={this.handleAddLevel}
           activityPosition={this.props.activityPosition}
+          appendResourceLink={this.appendResourceLink}
         />
         {/* This dialog lives outside LevelToken because moving it inside can
            interfere with drag and drop or fail to show the modal backdrop. */}
