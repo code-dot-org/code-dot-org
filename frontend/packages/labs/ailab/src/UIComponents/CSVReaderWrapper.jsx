@@ -62,6 +62,8 @@ class CSVReaderWrapper extends Component {
   };
 
   render() {
+    const assetPath = global.__ml_playground_asset_public_path__;
+
     return (
       <div>
         <h2>Which dataset would you like to use?</h2>
@@ -72,7 +74,10 @@ class CSVReaderWrapper extends Component {
               <option>{""}</option>
               {availableDatasets.map(dataset => {
                 return (
-                  <option key={dataset["id"]} value={dataset["path"]}>
+                  <option
+                    key={dataset["id"]}
+                    value={assetPath + dataset["path"]}
+                  >
                     {dataset["name"]}
                   </option>
                 );

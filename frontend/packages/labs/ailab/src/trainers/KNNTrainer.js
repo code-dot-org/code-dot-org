@@ -4,10 +4,12 @@ https://github.com/mljs/knn */
 import { store } from "../index.js";
 import { setPrediction, setAccuracyCheckPredictedLabels } from "../redux";
 
+const KNN = require('ml-knn');
+
 export default class KNNTrainer {
   startTraining() {
     const state = store.getState();
-    this.knn = new ML.KNN(state.trainingExamples, state.trainingLabels, {
+    this.knn = new KNN(state.trainingExamples, state.trainingLabels, {
       k: 5
     });
     if (state.accuracyCheckExamples.length > 0) {

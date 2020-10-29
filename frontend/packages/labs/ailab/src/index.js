@@ -7,9 +7,11 @@ import rootReducer from "./redux";
 
 export const store = createStore(rootReducer);
 
-ReactDOM.render(
-  <Provider store={store}>
-    <App />
-  </Provider>,
-  document.getElementById("root")
-);
+export const initAll = function(options) {
+  ReactDOM.render(
+    <Provider store={store}>
+      <App />
+    </Provider>,
+    document.getElementById("root")
+  );
+};
