@@ -34,7 +34,8 @@ class ActivitySectionCardButtons extends Component {
     addTip: PropTypes.func,
     addLevel: PropTypes.func,
     updateTip: PropTypes.func,
-    removeTip: PropTypes.func
+    removeTip: PropTypes.func,
+    appendResourceLink: PropTypes.func
   };
 
   constructor(props) {
@@ -108,8 +109,11 @@ class ActivitySectionCardButtons extends Component {
     this.setState({addResourceOpen: true});
   };
 
-  handleCloseAddResource = () => {
-    this.setState({addResourceOpen: false});
+  handleCloseAddResource = resourceKey => {
+    this.setState(
+      {addResourceOpen: false},
+      this.props.appendResourceLink(resourceKey)
+    );
   };
 
   handleDeleteTip = tipKey => {
@@ -168,6 +172,7 @@ class ActivitySectionCardButtons extends Component {
         <FindResourceDialog
           isOpen={this.state.addResourceOpen}
           handleConfirm={this.handleCloseAddResource}
+          handleClose={() => this.setState({addResourceOpen: false})}
         />
         {/* Prevent dialog from trying to render when there is no tip to edit*/}
         {this.state.tipToEdit !== null && (
