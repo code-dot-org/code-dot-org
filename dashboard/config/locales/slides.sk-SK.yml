@@ -156,6 +156,16 @@ sk:
       4:
         text: Pre napísanie kódu pre toto vytiahnime von náš blok "if" a vložme doňho
           bloky "zabočiť doľava".
+      5:
+        text: Teraz, keď nad neho položíme blok „posuň sa dopredu“ a okolo všetkého
+          dáme blok „opakuj“, zombie skontroluje zakaždým, keď sa pohne, či existuje
+          cesta vľavo a otočí sa. Príkaz „opakuj“ je kritický, aby sa pri každom kroku
+          skontrolovalo otočenie.
+      6:
+        text: Podmienky Ak sú v informatike skutočne dôležité. Jedným z prvých programov,
+          ktoré som napísal, bola hra typu „piškvorky“, a tam bola podmienka Ak, ​​ktorá
+          hovorila, AK sa druhá osoba chystá vyhrať, blokuj miesto, ktoré jej umožní
+          vyhrať.
       7:
         text: Zabávaj sa používaním "if" bloku!
     if_else:
@@ -618,7 +628,7 @@ sk:
         text: Biela oblasť vpravo sa nazýva pracovný priestor, na tomto mieste budeme
           vytvárať náš program.
       9:
-        text: Ak by si niekedy chcel odstrániť blok, tak ho iba odstráň z pracovnej
+        text: Ak niekedy budeš chcieť odstrániť blok, tak ho iba odstráň z pracovnej
           plochy a presuň ho späť do panela nástrojov.
     starwars_blocks_events:
       3:
@@ -648,7 +658,7 @@ sk:
       4:
         text: Naučíš sa koncepty, ktoré počítačoví programátori používajú každý deň
           a ktoré tvoria základ informatiky. Tu v Mojangu používame tie isté koncepty
-          nato, aby sme sfunkčnili Minecraft.
+          na to, aby sme sfunkčnili Minecraft.
       5:
         text: Predtým než začneš, vyberieš si svoju postavu. Ja si vyberiem Alex.
           Poďme vytvoriť kód pre program, ktorý jej pomôže hýbať sa po obrazovke.
@@ -664,7 +674,7 @@ sk:
           budeme budovať náš program.
       9:
         text: Ak potiahneme do nášho pracovného priestoru blok PosuňSaDopredu(); a
-          potom klikneme Spustiť, čo sa stane? Alexa sa pohne vpred o jedno pole.
+          potom klikneme Spustiť, čo sa stane? Alex sa pohne vpred o jedno pole.
       10:
         text: A čo ak chceme urobiť niečo potom, čo sa pohla o jedno pole? Môžeme
           do nášho programu pridať ďalší blok. Vyberiem si blok OtočSaVpravo(); a
@@ -673,13 +683,13 @@ sk:
           "Spustiť", Alex vykoná príkazy z nášho pracovného priestoru v poradí zhora
           nadol.
       11:
-        text: Ak by si niekedy chcel odstrániť blok, tak ho iba presuň z pracovnej
+        text: Ak niekedy budeš chcieť odstrániť blok, tak ho iba presuň z pracovnej
           plochy späť do panela nástrojov.
       12:
-        text: 'Keď chceš zrušiť svoje zmeny a vrátiť sa späť tam, kde si začal, použi
-          tlačidlo "Začať znova" v pravom hornom rohu pracovnej plochy. Ešte jedna
-          vec: vidíš malý trojuholník na bloku "otoč sa"? Kedykoľvek, keď vidíš takýto
-          trojuholník, tak si môžeš vybrať inú možnosť. Pustime sa do kódovania!'
+        text: 'Keď chceš zrušiť svoje zmeny a vrátiť sa späť na začiatok, použi tlačidlo
+          "Začať znova" v pravom hornom rohu pracovnej plochy. Ešte jedna vec: vidíš
+          malý trojuholník na bloku "otoč sa"? Kedykoľvek, keď vidíš takýto trojuholník,
+          tak si môžeš vybrať inú možnosť. Pustime sa do kódovania!'
     mc_repeat:
       1:
         text: Som Lydia Winters, riaditeľka firmy Mojang, kde vytvárame drobnú hru
@@ -690,10 +700,10 @@ sk:
           nadšená, že si tiež môžem prejsť týmto Minecraft kurzom a sama sa naučím
           trocha kódovať.
       3:
-        text: Predošlý level využíval množstvo blokov PosuňSaDopredu();. Bolo by to
-          jednoduchšie, ak by sme dokázali počítaču povedať, aby vykonal príkaz PosuňSaDopredu();
-          štyri alebo päť krát. Našťastie, počítače sú veľmi dobré v opakovaní príkazov
-          pomocou opakovacích cyklov.
+        text: V predošlej úlohe sme potrebovali množstvo blokov PosuňSaDopredu();.
+          Bolo by jednoduchšie, ak by sme počítaču mohli povedať, nech príkaz PosuňSaDopredu();
+          vykoná štyri alebo päť krát. Počítače sú našťastie veľmi dobré v opakovaní
+          príkazov pomocou opakovacích cyklov.
       4:
         text: Pri stavbe Mincraftu používame opakovacie cykly, aby sme umiestnili
           všetky začiatočné materiály na vytvorenie nového sveta. Sú to tisíce a tisíce
@@ -704,12 +714,12 @@ sk:
         text: Prichádza noc, takže v najbližších leveloch si postavíme dom, aby sme
           zostali v bezpečí. Použijeme blok opakuj, aby sme to urobili veľmi jednoducho.
       6:
-        text: Aby sme postavili stenu nášho domu, môžeme buď povedať Alex PosuňSaDopredu();
-          a umiestni dosky štyrikrát, alebo jej môžeme povedať PosuňSaDopredu(); a
-          umiestniť jednu dosku, potom vziať tento príkaz a použiť bloky opakovania,
-          aby to vykonala viacerokrát. Teraz klikneme na blok opakovania a povieme
-          jej, koľkokrát chceme, aby vykonala túto akciu. Teraz postavme náš dom predtým,
-          než príde noc! Veľa zábavy!
+        text: Aby sme postavili stenu nášho domu, môžeme buď štyrikrát za sebou Alex
+          prikázať "PosuňSaDopredu(); a umiestni dosky", alebo jej môžeme povedať
+          "PosuňSaDopredu(); a umiestniť jednu dosku", potom vziať tento príkaz a
+          použiť blok opakovania na to, aby aktivitu vykonala viackrát. Teraz klikneme
+          na blok opakovania a povieme jej, koľkokrát má túto akciu vykonať. A teraz
+          postavme náš dom skôr, než príde noc! Veľa zábavy!
     mc_if_statements:
       1:
         text: Teraz sa naučíme o príkaze "ak". Príkazy "ak" patria k základným programovacím
@@ -815,7 +825,7 @@ sk:
           blok pustím a oba bloky sa spoja dokopy. Ak znova stlačím tlačidlo "Spustiť",
           kurča spraví dva kroky.
       8:
-        text: Ak by si niekedy chcel odstrániť blok, tak ho iba odstráň z pracovnej
+        text: Ak niekedy budeš chcieť odstrániť blok, tak ho iba odstráň z pracovnej
           plochy a presuň ho späť do panela nástrojov.
       9:
         text: Potom, čo stlačíš "Spustiť", môžeš vždy stlačiť tlačidlo "Obnoviť",
@@ -855,12 +865,12 @@ sk:
           niečomu, čo sa volá udalosti. Udalosti hovoria tvojmu programu, aby počúvali
           alebo čakali na niečo, čo sa stane. A keď sa to stane, niečo spravia.
       4:
-        text: Doteraz si použil len jednu udalosť. Kód, ktorý si vložil do poľa "po
-          vytvorení" sa spustí, keď sa vytvorí postava alebo keď začne hra. V ďalších
-          leveloch budeš mať nové polia pre udalosti ako napríklad "po dotknutí sa",
-          ktorý sa spustí, keď sa dotkneš postavy, alebo "po použití", keď postavu
-          použiješ. Alebo ak chceš, aby zombík pri východe slnka zmizol, vlož akciu
-          do poľa "po východe slnka"
+        text: Doteraz sme použili len jednu udalosť. Kód vložený za príkaz "po vytvorení"
+          sa spustí, keď sa vytvorí postava, alebo keď začne hra. V ďalších úlohách
+          budemať nové bloky pre udalosti ako napríklad "po dotknutí sa", ktorý sa
+          spustí, keď sa dotkneš postavy, alebo "po použití", keď postavu použiješ.
+          Alebo ak chceš, aby zombík pri východe slnka zmizol, vlož akciu do poľa
+          "po východe slnka".
     mc_2016_spawn:
       1:
         text: V hrách, vytvárame postavy príkazom "vytvor postavu". V tomto leveli

@@ -6,7 +6,7 @@
 #  lesson_activity_id :integer          not null
 #  seeding_key        :string(255)      not null
 #  position           :integer          not null
-#  properties         :string(255)
+#  properties         :text(65535)
 #  created_at         :datetime         not null
 #  updated_at         :datetime         not null
 #
@@ -74,7 +74,8 @@ class ActivitySection < ApplicationRecord
       sl.update!(
         # position and chapter will be updated based on activity_section_position later
         activity_section_position: sl_data['activitySectionPosition'] || 0,
-        assessment: !!sl_data['assessment'],
+        # Script levels containing anonymous levels must be assessments.
+        assessment: !!sl_data['assessment'] || sl.anonymous?,
         bonus: !!sl_data['bonus'],
         challenge: !!sl_data['challenge'],
       )
@@ -89,8 +90,8 @@ class ActivitySection < ApplicationRecord
   def fetch_script_level(sl_data)
     if sl_data['id']
       script_level = script_levels.find(sl_data['id'])
-      raise "ScriptLevel id #{sl_data['id']} not found in ActivitySection id #{id}" unless script_level
-      return script_level
+      return script_level if script_level
+      raise ActiveRecord::RecordNotFound.new("ScriptLevel id #{sl_data['id']} not found in ActivitySection id #{id}")
     end
 
     script_levels.create(

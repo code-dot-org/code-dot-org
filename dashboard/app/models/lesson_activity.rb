@@ -6,7 +6,7 @@
 #  lesson_id   :integer          not null
 #  seeding_key :string(255)      not null
 #  position    :integer          not null
-#  properties  :string(255)
+#  properties  :text(65535)
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
 #
@@ -84,8 +84,8 @@ class LessonActivity < ApplicationRecord
   def fetch_activity_section(section)
     if section['id']
       activity_section = activity_sections.find(section['id'])
-      raise "ActivitySection id #{section['id']} not found in LessonActivity id #{id}" unless activity_section
-      return activity_section
+      return activity_section if activity_section
+      raise ActiveRecord::RecordNotFound.new("ActivitySection id #{section['id']} not found in LessonActivity id #{id}")
     end
 
     activity_sections.create(

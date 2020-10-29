@@ -72,54 +72,30 @@ class LevelsControllerTest < ActionController::TestCase
     )
   end
 
-  test "should get filters" do
-    get :get_filters, params: {}
-    assert_equal JSON.parse(@response.body)["levelOptions"].map {|option| option[0]}, [
-      "All types", "Applab", "Artist", "Bounce", "BubbleChoice", "Calc", "ContractMatch",
-      "Craft", "CurriculumReference", "Dancelab", "Eval", "EvaluationMulti", "External",
-      "ExternalLink", "Fish", "Flappy", "FreeResponse", "FrequencyAnalysis", "Gamelab",
-      "GamelabJr", "Karel", "LevelGroup", "Map", "Match", "Maze", "Multi", "NetSim",
-      "Odometer", "Pixelation", "PublicKeyCryptography", "StandaloneVideo",
-      "StarWarsGrid", "Studio", "TextCompression", "TextMatch", "Unplugged",
-      "Vigenere", "Weblab"
-    ]
-    scripts = [
-      "All scripts", "20-hour", "algebra", "artist", "course1", "course2",
-      "course3", "course4", "coursea-2017", "courseb-2017", "coursec-2017",
-      "coursed-2017", "coursee-2017", "coursef-2017", "express-2017", "flappy",
-      "frozen", "hourofcode", "jigsaw", "playlab", "pre-express-2017", "starwars"
-    ]
-    assert (scripts - JSON.parse(@response.body)["scriptOptions"].map {|option| option[0]}).empty?
-    assert (["Any owner"] - JSON.parse(@response.body)["ownerOptions"].map {|option| option[0]}).empty?
-  end
-
   test "should get filtered levels with just page param" do
     get :get_filtered_levels, params: {page: 1}
-    assert_equal JSON.parse(@response.body).length, 7
+    assert_equal 7, JSON.parse(@response.body)['levels'].length
+    assert_equal 22, JSON.parse(@response.body)['numPages']
   end
 
   test "should get filtered levels with level_type" do
     get :get_filtered_levels, params: {page: 1, level_type: 'Odometer'}
-    assert_equal JSON.parse(@response.body).length, 1
-    assert_equal JSON.parse(@response.body)[0]["name"], "Odometer"
+    assert_equal 1, JSON.parse(@response.body)['levels'].length
+    assert_equal "Odometer", JSON.parse(@response.body)['levels'][0]["name"]
+    assert_equal 1, JSON.parse(@response.body)['numPages']
   end
 
   test "should get filtered levels with script_id" do
     get :get_filtered_levels, params: {page: 1, script_id: 2}
-    assert_equal JSON.parse(@response.body).length, 7
+    assert_equal 7, JSON.parse(@response.body)['levels'].length
+    assert_equal 3, JSON.parse(@response.body)['numPages']
   end
 
   test "should get filtered levels with owner_id" do
     level = create :level, user: @levelbuilder
     get :get_filtered_levels, params: {page: 1, owner_id: @levelbuilder.id}
-    assert_equal JSON.parse(@response.body)[0]["name"], level[:name]
-  end
-
-  test "get_filters gets no content if not levelbuilder" do
-    sign_out @levelbuilder
-    sign_in create(:teacher)
-    get :get_filters, params: {}
-    assert_response :forbidden
+    assert_equal level[:name], JSON.parse(@response.body)['levels'][0]["name"]
+    assert_equal 1, JSON.parse(@response.body)['numPages']
   end
 
   test "get_filtered_levels gets no content if not levelbuilder" do

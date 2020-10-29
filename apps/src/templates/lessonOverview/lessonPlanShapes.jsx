@@ -9,13 +9,17 @@ export const lessonShape = PropTypes.shape({
         key: PropTypes.string.isRequired,
         position: PropTypes.number.isRequired,
         displayName: PropTypes.string.isRequired,
-        link: PropTypes.string.isRequired
+        link: PropTypes.string.isRequired,
+        lockable: PropTypes.bool.isRequired
       })
     ).isRequired
   }).isRequired,
+  position: PropTypes.number.isRequired,
+  lockable: PropTypes.bool.isRequired,
   key: PropTypes.string.isRequired,
   displayName: PropTypes.string.isRequired,
   overview: PropTypes.string.isRequired,
   purpose: PropTypes.string.isRequired,
-  preparation: PropTypes.string.isRequired
+  preparation: PropTypes.string.isRequired,
+  resources: PropTypes.object
 });

@@ -12,6 +12,7 @@ import styleConstants from '@cdo/apps/styleConstants';
 import color from '@cdo/apps/util/color';
 import LessonNavigationDropdown from '@cdo/apps/templates/lessonOverview/LessonNavigationDropdown';
 import {lessonShape} from '@cdo/apps/templates/lessonOverview/lessonPlanShapes';
+import LessonAgenda from '@cdo/apps/templates/lessonOverview/LessonAgenda';
 
 const styles = {
   frontPage: {
@@ -53,6 +54,41 @@ class LessonOverview extends Component {
     return link + queryParams;
   };
 
+  normalizeUrl = url => {
+    const httpRegex = /https?:\/\//;
+    if (httpRegex.test(url)) {
+      return url;
+    } else {
+      return 'https://' + url;
+    }
+  };
+
+  compileResourceList = key => {
+    const {lesson} = this.props;
+    return (
+      <ul>
+        {lesson.resources[key].map(resource => (
+          <li key={resource.key}>
+            <a href={this.normalizeUrl(resource.url)} target="_blank">
+              {resource.name}
+            </a>
+            {resource.type && ` -  ${resource.type}`}
+            {resource.download_url && (
+              <span>
+                {' ('}
+                <a
+                  href={this.normalizeUrl(resource.download_url)}
+                  target="_blank"
+                >{`${i18n.download()}`}</a>
+                {')'}
+              </span>
+            )}
+          </li>
+        ))}
+      </ul>
+    );
+  };
+
   render() {
     const {lesson, announcements, isSignedIn, viewAs} = this.props;
     return (
@@ -73,7 +109,14 @@ class LessonOverview extends Component {
             viewAs={viewAs}
           />
         )}
-        <h1>{lesson.displayName}</h1>
+        <h1>
+          {lesson.lockable
+            ? lesson.displayName
+            : i18n.lessonNumbered({
+                lessonNumber: lesson.position,
+                lessonName: lesson.displayName
+              })}
+        </h1>
 
         <div style={styles.frontPage}>
           <div style={styles.left}>
@@ -82,10 +125,36 @@ class LessonOverview extends Component {
 
             <h2>{i18n.purpose()}</h2>
             <SafeMarkdown markdown={lesson.purpose} />
+
+            <h2>{i18n.agenda()}</h2>
+            <LessonAgenda activities={this.props.activities} />
           </div>
           <div style={styles.right}>
             <h2>{i18n.preparation()}</h2>
             <SafeMarkdown markdown={lesson.preparation} />
+            {lesson.resources && (
+              <div id="resource-section">
+                <h2>{i18n.links()}</h2>
+                {lesson.resources['Teacher'] && (
+                  <div>
+                    <h3>{i18n.forTheTeachers()}</h3>
+                    {this.compileResourceList('Teacher')}
+                  </div>
+                )}
+                {lesson.resources['Student'] && (
+                  <div>
+                    <h3>{i18n.forTheStudents()}</h3>
+                    {this.compileResourceList('Student')}
+                  </div>
+                )}
+                {lesson.resources['All'] && (
+                  <div>
+                    <h3>{i18n.forAll()}</h3>
+                    {this.compileResourceList('All')}
+                  </div>
+                )}
+              </div>
+            )}
           </div>
         </div>
 
