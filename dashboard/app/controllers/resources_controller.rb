@@ -26,6 +26,6 @@ class ResourcesController < ApplicationController
   end
 
   def resource_params
-    params.permit(:name, :url, :downloadUrl, :assessment, :type, :audence, :include_in_pdf)
+    params.permit(:name, :url, :downloadUrl, :assessment, :type, :audience, :include_in_pdf)
   end
 end
