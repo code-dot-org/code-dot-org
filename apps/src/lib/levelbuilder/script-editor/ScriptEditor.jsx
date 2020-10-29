@@ -136,6 +136,19 @@ export default class ScriptEditor extends React.Component {
         e.preventDefault();
       }
     }
+    // HACK: until the script edit page no longer overwrites changes to the
+    // arrangement of levels within lessons, give the user a warning
+    if (
+      window.lessonEditorOpened &&
+      !confirm(
+        'WARNING: It looks like you opened a lesson edit page from this script edit page. ' +
+          'If you made any changes on the lesson edit page which you do not ' +
+          'wish to lose, please click cancel now and reload this page before ' +
+          'saving any changes to this script edit page.'
+      )
+    ) {
+      e.preventDefault();
+    }
   };
 
   render() {
@@ -251,9 +264,11 @@ export default class ScriptEditor extends React.Component {
           <label>
             Supported locales
             <p>
-              Select additional locales supported by this script. Select
+              <span>
+                {'Select additional locales supported by this script. Select '}
+              </span>
               <a onClick={this.handleClearSupportedLocalesSelectClick}>none</a>
-              or shift-click or cmd-click to select multiple.
+              <span>{' or shift-click or cmd-click to select multiple.'}</span>
             </p>
             <select
               name="supported_locales[]"

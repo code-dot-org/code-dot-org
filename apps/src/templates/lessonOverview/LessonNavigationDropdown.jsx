@@ -116,7 +116,9 @@ export default class LessonNavigationDropdown extends Component {
                       ...(listItem.key === lesson.key && styles.boldText)
                     }}
                   >
-                    {`${listItem.position} - ${listItem.displayName}`}
+                    {listItem.lockable
+                      ? listItem.displayName
+                      : `${listItem.position} - ${listItem.displayName}`}
                   </span>
                 </span>
               )}
