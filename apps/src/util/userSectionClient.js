@@ -1,4 +1,5 @@
 /* globals $ */
+import $ from 'jquery';
 
 /**
  * Send a request to dashboard and retrieve a JSON array listing the
