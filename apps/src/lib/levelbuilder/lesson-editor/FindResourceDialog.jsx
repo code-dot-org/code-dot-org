@@ -15,27 +15,42 @@ const styles = {
   }
 };
 
-// TODO: Hook up adding a resource when resources are associated with lessons
-
 class FindResourceDialog extends Component {
   static propTypes = {
     isOpen: PropTypes.bool.isRequired,
     handleConfirm: PropTypes.func.isRequired,
+    handleClose: PropTypes.func.isRequired,
     resources: PropTypes.arrayOf(resourceShape)
+  };
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      selectedResourceKey: this.props.resources[0]
+        ? this.props.resources[0].key
+        : ''
+    };
+  }
+
+  onResourceSelect = e => {
+    this.setState({selectedResourceKey: e.target.value});
   };
 
   render() {
     return (
       <BaseDialog
         isOpen={this.props.isOpen}
-        handleClose={this.props.handleConfirm}
+        handleClose={this.props.handleClose}
         useUpdatedStyles
         style={styles.dialog}
       >
         <h2>Add Resource</h2>
         <label>
           <span>Add link to resource:</span>
-          <select onChange={() => {}}>
+          <select
+            onChange={this.onResourceSelect}
+            value={this.state.selectedResourceKey}
+          >
             {this.props.resources.map(resource => (
               <option key={resource.key} value={resource.key}>
                 {resource.name}
@@ -46,7 +61,10 @@ class FindResourceDialog extends Component {
         <DialogFooter rightAlign>
           <Button
             text={'Close and Add'}
-            onClick={this.props.handleConfirm}
+            onClick={e => {
+              e.preventDefault();
+              this.props.handleConfirm(this.state.selectedResourceKey);
+            }}
             color={Button.ButtonColor.orange}
           />
         </DialogFooter>
