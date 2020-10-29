@@ -18,6 +18,7 @@ class LevelsController < ApplicationController
 
   # All level types that can be requested via /levels/new
   LEVEL_CLASSES = [
+    Ailab,
     Applab,
     Artist,
     Bounce,
@@ -339,6 +340,8 @@ class LevelsController < ApplicationController
         @game = Game.fish
       elsif @type_class == CurriculumReference
         @game = Game.curriculum_reference
+      elsif @type_class <= Ailab
+        @game = Game.ailab
       end
       @level = @type_class.new
       render :edit
