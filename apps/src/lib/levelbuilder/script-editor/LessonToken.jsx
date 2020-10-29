@@ -146,6 +146,7 @@ export default class LessonToken extends Component {
               <div
                 style={styles.edit}
                 onClick={() => {
+                  window.lessonEditorOpened = true;
                   const win = window.open(
                     `/lessons/${this.props.lesson.id}/edit`,
                     '_blank'

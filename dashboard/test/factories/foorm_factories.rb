@@ -171,6 +171,28 @@ FactoryGirl.define do
     end
   end
 
+  factory :pd_pre_workshop_foorm_submission, class: 'Pd::WorkshopSurveyFoormSubmission' do
+    association :pd_workshop, factory: :csd_summer_workshop
+    association :user, factory: :teacher
+    day 0
+
+    association :foorm_submission, factory: :pre_workshop_foorm_submission
+  end
+
+  # this factory uses the real summer workshop pre survey.
+  factory :pre_workshop_foorm_submission, class: 'Foorm::Submission' do
+    form_name "surveys/pd/summer_workshop_pre_survey"
+    foorm_submission_metadata
+
+    answers '{"workshop_course":"CS Discoveries","workshop_subject":"5-day Summer","regional_partner_name":"Partner1",
+              "is_virtual":"true","num_facilitators":"1","day":"0","is_friday_institute":"false","workshop_agenda":"",
+              "required_course_status":"required","course_length_weeks":"11_15","section_time_minutes":"50_less",
+              "grade_levels_csd":["11","9"],"total_pd_time":"16_35","cs_community":{"someone_to_turn_to":"6",
+              "know_teacher_leaders":"6"},"lead_learner":"4","recruit_responsibility":"2",
+              "highest_level_cs_education":"college_courses","assigned_or_chose_to_teach":"assigned",
+              "gender_identity":"female","racial_ethnic_identity":["white"]}'
+  end
+
   factory :day_0_workshop_foorm_submission, class: 'Pd::WorkshopSurveyFoormSubmission' do
     association :pd_workshop, factory: :csd_summer_workshop
     association :user, factory: :teacher

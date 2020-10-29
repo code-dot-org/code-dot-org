@@ -8,6 +8,7 @@ import {connect} from 'react-redux';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import InlineMarkdown from '@cdo/apps/templates/InlineMarkdown';
 import styleConstants from '@cdo/apps/styleConstants';
 import color from '@cdo/apps/util/color';
 import Button from '@cdo/apps/templates/Button';
@@ -50,14 +51,20 @@ class LessonOverview extends Component {
         lessons: PropTypes.arrayOf(
           PropTypes.shape({
             displayName: PropTypes.string.isRequired,
-            link: PropTypes.string.isRequired
+            link: PropTypes.string.isRequired,
+            position: PropTypes.number.isRequired,
+            lockable: PropTypes.bool.isRequired
           })
         ).isRequired
       }).isRequired,
+      position: PropTypes.number.isRequired,
+      lockable: PropTypes.bool.isRequired,
       displayName: PropTypes.string.isRequired,
       overview: PropTypes.string.isRequired,
       purpose: PropTypes.string.isRequired,
-      preparation: PropTypes.string.isRequired
+      preparation: PropTypes.string.isRequired,
+      resources: PropTypes.object.isRequired,
+      objectives: PropTypes.arrayOf(PropTypes.object).isRequired
     }).isRequired,
     activities: PropTypes.array,
 
@@ -70,6 +77,41 @@ class LessonOverview extends Component {
   linkWithQueryParams = link => {
     const queryParams = window.location.search || '';
     return link + queryParams;
+  };
+
+  normalizeUrl = url => {
+    const httpRegex = /https?:\/\//;
+    if (httpRegex.test(url)) {
+      return url;
+    } else {
+      return 'https://' + url;
+    }
+  };
+
+  compileResourceList = key => {
+    const {lesson} = this.props;
+    return (
+      <ul>
+        {lesson.resources[key].map(resource => (
+          <li key={resource.key}>
+            <a href={this.normalizeUrl(resource.url)} target="_blank">
+              {resource.name}
+            </a>
+            {resource.type && ` -  ${resource.type}`}
+            {resource.download_url && (
+              <span>
+                {' ('}
+                <a
+                  href={this.normalizeUrl(resource.download_url)}
+                  target="_blank"
+                >{`${i18n.download()}`}</a>
+                {')'}
+              </span>
+            )}
+          </li>
+        ))}
+      </ul>
+    );
   };
 
   render() {
@@ -90,7 +132,9 @@ class LessonOverview extends Component {
             >
               {lesson.unit.lessons.map((l, index) => (
                 <a key={index} href={this.linkWithQueryParams(l.link)}>
-                  {`${index + 1} ${l.displayName}`}
+                  {l.lockable
+                    ? l.displayName
+                    : `${l.position} ${l.displayName}`}
                 </a>
               ))}
             </DropdownButton>
@@ -103,7 +147,14 @@ class LessonOverview extends Component {
             viewAs={viewAs}
           />
         )}
-        <h1>{lesson.displayName}</h1>
+        <h1>
+          {lesson.lockable
+            ? lesson.displayName
+            : i18n.lessonNumbered({
+                lessonNumber: lesson.position,
+                lessonName: lesson.displayName
+              })}
+        </h1>
 
         <div style={styles.frontPage}>
           <div style={styles.left}>
@@ -117,8 +168,44 @@ class LessonOverview extends Component {
             <LessonAgenda activities={this.props.activities} />
           </div>
           <div style={styles.right}>
+            {lesson.objectives.length > 0 && (
+              <div>
+                <h2>{i18n.objectives()}</h2>
+                <h3>{i18n.objectivesSubheading()}</h3>
+                <ul>
+                  {lesson.objectives.map(objective => (
+                    <li key={objective.id}>
+                      <InlineMarkdown markdown={objective.description} />
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
             <h2>{i18n.preparation()}</h2>
             <SafeMarkdown markdown={lesson.preparation} />
+            {Object.keys(lesson.resources).length > 0 && (
+              <div id="resource-section">
+                <h2>{i18n.links()}</h2>
+                {lesson.resources['Teacher'] && (
+                  <div>
+                    <h3>{i18n.forTheTeachers()}</h3>
+                    {this.compileResourceList('Teacher')}
+                  </div>
+                )}
+                {lesson.resources['Student'] && (
+                  <div>
+                    <h3>{i18n.forTheStudents()}</h3>
+                    {this.compileResourceList('Student')}
+                  </div>
+                )}
+                {lesson.resources['All'] && (
+                  <div>
+                    <h3>{i18n.forAll()}</h3>
+                    {this.compileResourceList('All')}
+                  </div>
+                )}
+              </div>
+            )}
           </div>
         </div>
 

@@ -1,0 +1,34 @@
+name 'VPL - CSD - Module 8 - U6L7'
+editor_experiment ''
+display_name 'Introduction to Debugging'
+
+title 'Debugging Session'
+markdown <<MARKDOWN
+#Unit 6 - Lesson 7:  Analog Input 
+**Estimated time: 20 minutes**
+
+
+
+
+## Investigation Goals
+
+**Become familiar with taking input from Analog Sensors**
+
+**Identify what students will be doing with the Circuit Playground in App Lab**
+
+## Investigation Tasks
+
+* If you have a Circuit Playground, **complete** Levels 1 through 5
+
+* If you do not have a Circuit Playground, **preview** Levels 1 through 5 
+
+Click continue to begin Levels 1 through 5 https://studio.code.org/s/csd6-2020/stage/7/puzzle/1?section_id=2839944
+
+
+
+
+
+
+
+
+MARKDOWN

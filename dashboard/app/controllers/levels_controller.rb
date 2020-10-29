@@ -18,6 +18,7 @@ class LevelsController < ApplicationController
 
   # All level types that can be requested via /levels/new
   LEVEL_CLASSES = [
+    Ailab,
     Applab,
     Artist,
     Bounce,
@@ -290,9 +291,9 @@ class LevelsController < ApplicationController
     begin
       @level = type_class.create_from_level_builder(params, create_level_params)
     rescue ArgumentError => e
-      render(status: :not_acceptable, text: e.message) && return
+      render(status: :not_acceptable, plain: e.message) && return
     rescue ActiveRecord::RecordInvalid => invalid
-      render(status: :not_acceptable, text: invalid) && return
+      render(status: :not_acceptable, plain: invalid) && return
     end
     if params[:do_not_redirect]
       render json: @level
@@ -339,6 +340,8 @@ class LevelsController < ApplicationController
         @game = Game.fish
       elsif @type_class == CurriculumReference
         @game = Game.curriculum_reference
+      elsif @type_class <= Ailab
+        @game = Game.ailab
       end
       @level = @type_class.new
       render :edit
@@ -360,9 +363,9 @@ class LevelsController < ApplicationController
       render json: {redirect: edit_level_url(@new_level)}
     end
   rescue ArgumentError => e
-    render(status: :not_acceptable, text: e.message)
+    render(status: :not_acceptable, plain: e.message)
   rescue ActiveRecord::RecordInvalid => invalid
-    render(status: :not_acceptable, text: invalid)
+    render(status: :not_acceptable, plain: invalid)
   end
 
   # GET /levels/:id/embed_level

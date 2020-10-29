@@ -3627,25 +3627,25 @@ fr-FR:
           prédéterminés (intervalle de pas)\n"
       courseF_markdown_forloops_intro:
         content1: Page du Manuel du Test Markdown
-        markdown: "# **Dans cette leçon...**   ### Aujourd'hui, tu apprendras un nouveau
-          type de boucle de `répéter`. Voici un aperçu du bloc que tu utiliseras :
-          \  ![] (https://images.code.org/d9cb4b829fe4e688b10c19e879cf4a4b-image-1531938148965.png)###
+        markdown: "# **Dans cette leçon...**   \n\n### Aujourd'hui, tu apprendras
+          un nouveau type de boucle de `répéter`. Voici un aperçu du bloc que tu utiliseras
+          :   \n\n![](https://images.code.org/d9cb4b829fe4e688b10c19e879cf4a4b-image-1531938148965.png)\n\n###
           Grâce à cette boucle, tu as une solution *pour*  facilement résoudre des
-          énigmes comme celle-ci !   ! [] (https://images.code.org/072230b389feb9c6c6998619a245b8af-image-1524773190948.png)\n"
+          énigmes comme celle-ci !   \n\n![](https://images.code.org/072230b389feb9c6c6998619a245b8af-image-1524773190948.png)\n"
       courseF_markdown_forloops_intro_2019:
         content1: Page du Manuel du Test Markdown
-        markdown: "# **Dans cette leçon...**   ### Aujourd'hui, tu apprendras un nouveau
-          type de boucle de `répéter`. Voici un aperçu du bloc que tu utiliseras :
-          \  ![] (https://images.code.org/d9cb4b829fe4e688b10c19e879cf4a4b-image-1531938148965.png)###
+        markdown: "# **Dans cette leçon...**   \n\n### Aujourd'hui, tu apprendras
+          un nouveau type de boucle de `répéter`. Voici un aperçu du bloc que tu utiliseras
+          :   \n\n![](https://images.code.org/d9cb4b829fe4e688b10c19e879cf4a4b-image-1531938148965.png)\n\n###
           Grâce à cette boucle, tu as une solution *pour*  facilement résoudre des
-          énigmes comme celle-ci !   ! [] (https://images.code.org/072230b389feb9c6c6998619a245b8af-image-1524773190948.png)\n"
+          énigmes comme celle-ci !   \n\n![](https://images.code.org/072230b389feb9c6c6998619a245b8af-image-1524773190948.png)\n"
       courseF_markdown_forloops_intro_2019_2020:
         content1: Page du Manuel du Test Markdown
-        markdown: "# **Dans cette leçon...**   ### Aujourd'hui, tu apprendras un nouveau
-          type de boucle de `répéter`. Voici un aperçu du bloc que tu utiliseras :
-          \  ![] (https://images.code.org/d9cb4b829fe4e688b10c19e879cf4a4b-image-1531938148965.png)###
+        markdown: "# **Dans cette leçon...**   \n\n### Aujourd'hui, tu apprendras
+          un nouveau type de boucle de `répéter`. Voici un aperçu du bloc que tu utiliseras
+          :   \n\n![](https://images.code.org/d9cb4b829fe4e688b10c19e879cf4a4b-image-1531938148965.png)\n\n###
           Grâce à cette boucle, tu as une solution *pour*  facilement résoudre des
-          énigmes comme celle-ci !   ! [] (https://images.code.org/072230b389feb9c6c6998619a245b8af-image-1524773190948.png)\n"
+          énigmes comme celle-ci !   \n\n![](https://images.code.org/072230b389feb9c6c6998619a245b8af-image-1524773190948.png)\n"
       courseF_markdown_loops_end:
         content1: Page du Manuel du Test Markdown
         markdown: "# **Tu viens d'apprendre les « boucles » !**  ### **Une boucle

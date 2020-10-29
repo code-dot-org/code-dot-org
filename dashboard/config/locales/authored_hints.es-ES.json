@@ -297,7 +297,7 @@
         "Course 4 Artist 12": {
           "Course_4_Artist_12_a": "Cada forma repetida es la combinación de \\*\\* la mitad de un hexágono \\*\\*, seguida de \\*\\* 2/3 de un triángulo \\*\\*. ",
           "Course_4_Artist_12_b": "La forma de la unidad es casi la misma que en el último acertijo, excepto que el medio hexágono es un poco más grande. ",
-          "Course_4_Artist_12_c": "1.  Las primeras tres líneas tienen 60 píxeles de largo y necesitas girar 60 grados.\n     2) Las siguientes dos líneas tienen 80 píxeles de largo y necesitas girar 120 grados ",
+          "Course_4_Artist_12_c": "1.  Las primeras tres líneas tienen 60 píxeles de largo y necesitas girar 60 grados.\n     2\\) Las siguientes dos líneas tienen 80 píxeles de largo y necesitas girar 120 grados ",
           "Course_4_Artist_12_d": "**Solución:**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"draw_colour\" inline=\"true\" id=\"draw-color\">\n        <value name=\"COLOUR\">\n          <block type=\"colour_picker\">\n            <title name=\"COLOUR\">#843179</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">6</title>\n            <statement name=\"DO\">\n              <block type=\"controls_repeat\">\n                <title name=\"TIMES\">3</title>\n                <statement name=\"DO\">\n                  <block type=\"draw_move_by_constant\">\n                    <title name=\"DIR\">moveForward</title>\n                    <title name=\"VALUE\">60</title>\n                    <next>\n                      <block type=\"draw_turn_by_constant\">\n                        <title name=\"DIR\">turnRight</title>\n                        <title name=\"VALUE\">60</title>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n                <next>\n                  <block type=\"controls_repeat\">\n                    <title name=\"TIMES\">2</title>\n                    <statement name=\"DO\">\n                      <block type=\"draw_move_by_constant\">\n                        <title name=\"DIR\">moveForward</title>\n                        <title name=\"VALUE\">80</title>\n                        <next>\n                          <block type=\"draw_turn_by_constant\">\n                            <title name=\"DIR\">turnRight</title>\n                            <title name=\"VALUE\">120</title>\n                          </block>\n                        </next>\n                      </block>\n                    </statement>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "Course 4 Artist 6": {
@@ -1330,7 +1330,7 @@
           "courseF_bee_functions_challenge2_b": "**Solución:**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_ext\" inline=\"true\">\n        <value name=\"TIMES\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">4</title>\n          </block>\n        </value>\n        <statement name=\"DO\">\n          <block type=\"maze_untilBlocked\">\n            <statement name=\"DO\">\n              <block type=\"maze_move\">\n                <title name=\"DIR\">moveForward</title>\n                <next>\n                  <block type=\"maze_if\">\n                    <title name=\"DIR\">isPathRight</title>\n                    <statement name=\"DO\">\n                      <block type=\"procedures_callnoreturn\" id=\"function\">\n                        <mutation name=\"move and check\"/>\n                      </block>\n                    </statement>\n                  </block>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnLeft</title>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n  <block type=\"procedures_defnoreturn\" editable=\"false\" usercreated=\"true\">\n    <mutation/>\n    <title name=\"NAME\">check nectar or honey</title>\n    <statement name=\"STACK\">\n      <block type=\"bee_ifElseFlower\">\n        <title name=\"LOC\">atFlower</title>\n        <statement name=\"DO\">\n          <block type=\"bee_whileNectarAmount\">\n            <title name=\"ARG1\">nectarRemaining</title>\n            <title name=\"OP\">&gt;</title>\n            <title name=\"ARG2\">0</title>\n            <statement name=\"DO\">\n              <block type=\"maze_nectar\"/>\n            </statement>\n          </block>\n        </statement>\n        <statement name=\"ELSE\">\n          <block type=\"bee_whileNectarAmount\">\n            <title name=\"ARG1\">honeyAvailable</title>\n            <title name=\"OP\">&gt;</title>\n            <title name=\"ARG2\">0</title>\n            <statement name=\"DO\">\n              <block type=\"maze_honey\"/>\n            </statement>\n          </block>\n        </statement>\n      </block>\n    </statement>\n  </block>\n  <block type=\"procedures_defnoreturn\" deletable=\"false\" movable=\"false\" editable=\"false\">\n    <mutation/>\n    <title name=\"NAME\">move and check</title>\n    <statement name=\"STACK\">\n      <block type=\"controls_repeat_ext\" inline=\"true\">\n        <value name=\"TIMES\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">2</title>\n          </block>\n        </value>\n        <statement name=\"DO\">\n          <block type=\"procedures_callnoreturn\">\n            <mutation name=\"check nectar or honey\"/>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n                <next>\n                  <block type=\"maze_untilBlocked\">\n                    <statement name=\"DO\">\n                      <block type=\"maze_move\">\n                        <title name=\"DIR\">moveForward</title>\n                      </block>\n                    </statement>\n                    <next>\n                      <block type=\"maze_turn\">\n                        <title name=\"DIR\">turnRight</title>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </statement>\n  </block>\n</xml>"
         },
         "course3_collector_debugging_challenge2": {
-          "courseD_collector_debugging_challenge2_b": "A continuación, recoge las gemas restantes en esta fila.\n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)\nAgrega estos bloques a tu programa.\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n\n        </statement>\n      </block>\n\n</xml>",
+          "courseD_collector_debugging_challenge2_b": "A continuación, recoge las gemas restantes en esta fila.\n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)\nAgrega estos bloques a tu programa.\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>",
           "courseD_collector_debugging_challenge2_c": "Finalmente, recoge el tesoro restante. Agrega estos bloques a tu programa.\n\n<xml>\n  <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>",
           "courseD_collector_debugging_challenge2_d": "Esta es la solución completa para el desafío.\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">4</title>\n            <statement name=\"DO\">\n              <block type=\"controls_repeat\">\n                <title name=\"TIMES\">2</title>\n                <statement name=\"DO\">\n                  <block type=\"maze_move\">\n                    <title name=\"DIR\">moveForward</title>\n                    <next>\n                      <block type=\"controls_repeat\">\n                        <title name=\"TIMES\">2</title>\n                        <statement name=\"DO\">\n                          <block type=\"collector_collect\"/>\n                        </statement>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n                <next>\n                  <block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
@@ -3852,19 +3852,19 @@
         },
         "courseC_artist_prog3": {
           "courseC_artist_prog3_a": "Para crear esta ventana, dibuja un cuadrado de 100 pixeles de lado.\n\n-   avanzar\n-   girar\n-   avanzar\n-   girar\n-   avanzar\n-   girar\n-   avanzar",
-          "courseC_artist_prog3_b": "¿Quieres acortar el código? Intenta usar un loop en este desafío."
+          "courseC_artist_prog3_b": "¿Quieres hacer el programa más corto? Intenta usar un loop en este puzle."
         },
         "courseC_artist_prog3_2018": {
           "courseC_artist_prog3_a": "Para crear esta ventana, dibuja un cuadrado de 100 pixeles de lado.\n\n-   avanzar\n-   girar\n-   avanzar\n-   girar\n-   avanzar\n-   girar\n-   avanzar",
-          "courseC_artist_prog3_b": "¿Quieres acortar el código? Intenta usar un loop en este desafío."
+          "courseC_artist_prog3_b": "¿Quieres hacer el programa más corto? Intenta usar un loop en este puzle."
         },
         "courseC_artist_prog3_2019": {
           "courseC_artist_prog3_a": "Para crear esta ventana, dibuja un cuadrado de 100 pixeles de lado.\n\n-   avanzar\n-   girar\n-   avanzar\n-   girar\n-   avanzar\n-   girar\n-   avanzar",
-          "courseC_artist_prog3_b": "¿Quieres acortar el código? Intenta usar un loop en este desafío."
+          "courseC_artist_prog3_b": "¿Quieres hacer el programa más corto? Intenta usar un loop en este puzle."
         },
         "courseC_artist_prog3_2020": {
           "courseC_artist_prog3_a": "Para crear esta ventana, dibuja un cuadrado de 100 pixeles de lado.\n\n-   avanzar\n-   girar\n-   avanzar\n-   girar\n-   avanzar\n-   girar\n-   avanzar",
-          "courseC_artist_prog3_b": "¿Quieres acortar el código? Intenta usar un loop en este desafío."
+          "courseC_artist_prog3_b": "¿Quieres hacer el programa más corto? Intenta usar un loop en este puzle."
         },
         "courseC_artist_prog4": {
           "courseC_artist_prog4_a": "Para terminar el cohete, ¡simplemente dibuja el triángulo en la parte superior!",
@@ -3888,46 +3888,46 @@
         },
         "courseC_artist_prog5": {
           "courseC_artist_prog5_a": "Reduce la velocidad del deslizador hasta que puedas ejecutar tu código línea por línea para ver dónde van las cosas mal.",
-          "courseC_artist_prog5_b": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el desafío.",
+          "courseC_artist_prog5_b": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el puzle.",
           "courseC_artist_prog5_c": "¡Puedes utilizar el menú desplegable en los bloques 'girar' para ver qué ángulo necesitas!",
           "courseC_artist_prog5_d": "Cada giro debe ser de 90 grados a la derecha."
         },
         "courseC_artist_prog5_2018": {
           "courseC_artist_prog5_a": "Reduce la velocidad del deslizador hasta que puedas ejecutar tu código línea por línea para ver dónde van las cosas mal.",
-          "courseC_artist_prog5_b": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el desafío.",
+          "courseC_artist_prog5_b": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el puzle.",
           "courseC_artist_prog5_c": "¡Puedes utilizar el menú desplegable en los bloques 'girar' para ver qué ángulo necesitas!",
           "courseC_artist_prog5_d": "Cada giro debe ser de 90 grados a la derecha."
         },
         "courseC_artist_prog5_2019": {
           "courseC_artist_prog5_a": "Reduce la velocidad del deslizador hasta que puedas ejecutar tu código línea por línea para ver dónde van las cosas mal.",
-          "courseC_artist_prog5_b": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el desafío.",
+          "courseC_artist_prog5_b": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el puzle.",
           "courseC_artist_prog5_c": "¡Puedes utilizar el menú desplegable en los bloques 'girar' para ver qué ángulo necesitas!",
           "courseC_artist_prog5_d": "Cada giro debe ser de 90 grados a la derecha."
         },
         "courseC_artist_prog5_2020": {
           "courseC_artist_prog5_a": "Reduce la velocidad del deslizador hasta que puedas ejecutar tu código línea por línea para ver dónde van las cosas mal.",
-          "courseC_artist_prog5_b": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el desafío.",
+          "courseC_artist_prog5_b": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el puzle.",
           "courseC_artist_prog5_c": "¡Puedes utilizar el menú desplegable en los bloques 'girar' para ver qué ángulo necesitas!",
           "courseC_artist_prog5_d": "Cada giro debe ser de 90 grados a la derecha."
         },
         "courseC_artist_prog6": {
-          "courseC_artist_prog6_a": "El artista ya está enfrentando la forma correcta de dibujar su primera línea.",
-          "courseC_artist_prog6_b": "Este diamante es realmente solo un cuadrado que está parado en su esquina.",
+          "courseC_artist_prog6_a": "El artista ya está colocado correctamente para dibujar su primera línea.",
+          "courseC_artist_prog6_b": "Este diamante es realmente solo un cuadrado que está colocado en su esquina.",
           "courseC_artist_prog6_c": "Como este diamante también es cuadrado, asegúrate de girar 90 grados en las esquinas."
         },
         "courseC_artist_prog6_2018": {
-          "courseC_artist_prog6_a": "El artista ya está enfrentando la forma correcta de dibujar su primera línea.",
-          "courseC_artist_prog6_b": "Este diamante es realmente solo un cuadrado que está parado en su esquina.",
+          "courseC_artist_prog6_a": "El artista ya está colocado correctamente para dibujar su primera línea.",
+          "courseC_artist_prog6_b": "Este diamante es realmente solo un cuadrado que está colocado en su esquina.",
           "courseC_artist_prog6_c": "Como este diamante también es cuadrado, asegúrate de girar 90 grados en las esquinas."
         },
         "courseC_artist_prog6_2019": {
-          "courseC_artist_prog6_a": "El artista ya está enfrentando la forma correcta de dibujar su primera línea.",
-          "courseC_artist_prog6_b": "Este diamante es realmente solo un cuadrado que está parado en su esquina.",
+          "courseC_artist_prog6_a": "El artista ya está colocado correctamente para dibujar su primera línea.",
+          "courseC_artist_prog6_b": "Este diamante es realmente solo un cuadrado que está colocado en su esquina.",
           "courseC_artist_prog6_c": "Como este diamante también es cuadrado, asegúrate de girar 90 grados en las esquinas."
         },
         "courseC_artist_prog6_2020": {
-          "courseC_artist_prog6_a": "El artista ya está enfrentando la forma correcta de dibujar su primera línea.",
-          "courseC_artist_prog6_b": "Este diamante es realmente solo un cuadrado que está parado en su esquina.",
+          "courseC_artist_prog6_a": "El artista ya está colocado correctamente para dibujar su primera línea.",
+          "courseC_artist_prog6_b": "Este diamante es realmente solo un cuadrado que está colocado en su esquina.",
           "courseC_artist_prog6_c": "Como este diamante también es cuadrado, asegúrate de girar 90 grados en las esquinas."
         },
         "courseC_artist_prog7": {
@@ -3935,28 +3935,28 @@
           "courseC_artist_prog7_b": "¿Funciona en el primer paso?\\\\ \n¿Y en el segundo?\\\\ \n¿Dónde está el error?",
           "courseC_artist_prog7_c": "¡Puedes usar el menú desplegable en los bloques girar para ver qué ángulo necesitas!",
           "courseC_artist_prog7_d": "Tendrás que: \n\n-   avanzar \n-   girar 45 grados a la derecha \n-   avanzar \n-   girar 90 grados a la derecha \n-   avanzar \n-   girar 45 grados a la derecha \n\n¡Repite este patrón 2 veces!",
-          "courseC_artist_prog7_e": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el desafío."
+          "courseC_artist_prog7_e": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el puzle."
         },
         "courseC_artist_prog7_2018": {
           "courseC_artist_prog7_a": "Cada ángulo es 45 ó 90 grados.",
           "courseC_artist_prog7_b": "¿Funciona en el primer paso?\\\\ \n¿Y en el segundo?\\\\ \n¿Dónde está el error?",
           "courseC_artist_prog7_c": "¡Puedes usar el menú desplegable en los bloques girar para ver qué ángulo necesitas!",
           "courseC_artist_prog7_d": "Tendrás que: \n\n-   avanzar \n-   girar 45 grados a la derecha \n-   avanzar \n-   girar 90 grados a la derecha \n-   avanzar \n-   girar 45 grados a la derecha \n\n¡Repite este patrón 2 veces!",
-          "courseC_artist_prog7_e": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el desafío."
+          "courseC_artist_prog7_e": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el puzle."
         },
         "courseC_artist_prog7_2019": {
           "courseC_artist_prog7_a": "Cada ángulo es 45 ó 90 grados.",
           "courseC_artist_prog7_b": "¿Funciona en el primer paso?\\\\ \n¿Y en el segundo?\\\\ \n¿Dónde está el error?",
           "courseC_artist_prog7_c": "¡Puedes usar el menú desplegable en los bloques girar para ver qué ángulo necesitas!",
           "courseC_artist_prog7_d": "Tendrás que: \n\n-   avanzar \n-   girar 45 grados a la derecha \n-   avanzar \n-   girar 90 grados a la derecha \n-   avanzar \n-   girar 45 grados a la derecha \n\n¡Repite este patrón 2 veces!",
-          "courseC_artist_prog7_e": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el desafío."
+          "courseC_artist_prog7_e": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el puzle."
         },
         "courseC_artist_prog7_2020": {
           "courseC_artist_prog7_a": "Cada ángulo es 45 ó 90 grados.",
           "courseC_artist_prog7_b": "¿Funciona en el primer paso?\\\\ \n¿Y en el segundo?\\\\ \n¿Dónde está el error?",
           "courseC_artist_prog7_c": "¡Puedes usar el menú desplegable en los bloques girar para ver qué ángulo necesitas!",
           "courseC_artist_prog7_d": "Tendrás que: \n\n-   avanzar \n-   girar 45 grados a la derecha \n-   avanzar \n-   girar 90 grados a la derecha \n-   avanzar \n-   girar 45 grados a la derecha \n\n¡Repite este patrón 2 veces!",
-          "courseC_artist_prog7_e": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el desafío."
+          "courseC_artist_prog7_e": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el puzle."
         },
         "courseC_artist_prog_challenge1": {
           "courseC_artist_prog_challenge1_a": "¡Puedes dibujar esto como un rectángulo con una línea en el medio o dos cuadrados diferentes!"
@@ -3999,135 +3999,135 @@
           "courseC_maze_loops_challenge2_b": "¡Utiliza los loops de tal manera de no quedarse sin los bloques \"recoger\"!"
         },
         "courseC_collector_prog1": {
-          "courseC_collector_prog1_a": "Cuando estás parado en un espacio con tesoros, utiliza el <xml><block type=\"collector_collect\"/></xml> bloque para recogerlo.",
-          "courseC_collector_prog1_b": "La solución más simple sería avanzar una vez, luego recoger el tesoro."
+          "courseC_collector_prog1_a": "Cuando estés en un espacio con tesoros, utiliza el <xml><block type=\"collector_collect\"/></xml> bloque para recogerlo.",
+          "courseC_collector_prog1_b": "La solución más sencilla sería avanzar una vez y entonces recoger el tesoro."
         },
         "courseC_collector_prog1_2018": {
-          "courseC_collector_prog1_a": "Cuando estás parado en un espacio con tesoros, utiliza el <xml><block type=\"collector_collect\"/></xml> bloque para recogerlo.",
-          "courseC_collector_prog1_b": "La solución más simple sería avanzar una vez, luego recoger el tesoro."
+          "courseC_collector_prog1_a": "Cuando estés en un espacio con tesoros, utiliza el <xml><block type=\"collector_collect\"/></xml> bloque para recogerlo.",
+          "courseC_collector_prog1_b": "La solución más sencilla sería avanzar una vez y entonces recoger el tesoro."
         },
         "courseC_collector_prog1_2019": {
-          "courseC_collector_prog1_a": "Cuando estás parado en un espacio con tesoros, utiliza el <xml><block type=\"collector_collect\"/></xml> bloque para recogerlo.",
-          "courseC_collector_prog1_b": "La solución más simple sería avanzar una vez, luego recoger el tesoro."
+          "courseC_collector_prog1_a": "Cuando estés en un espacio con tesoros, utiliza el <xml><block type=\"collector_collect\"/></xml> bloque para recogerlo.",
+          "courseC_collector_prog1_b": "La solución más sencilla sería avanzar una vez y entonces recoger el tesoro."
         },
         "courseC_collector_prog1_2020": {
-          "courseC_collector_prog1_a": "Cuando estás parado en un espacio con tesoros, utiliza el <xml><block type=\"collector_collect\"/></xml> bloque para recogerlo.",
-          "courseC_collector_prog1_b": "La solución más simple sería avanzar una vez, luego recoger el tesoro."
+          "courseC_collector_prog1_a": "Cuando estés en un espacio con tesoros, utiliza el <xml><block type=\"collector_collect\"/></xml> bloque para recogerlo.",
+          "courseC_collector_prog1_b": "La solución más sencilla sería avanzar una vez y entonces recoger el tesoro."
         },
         "courseC_collector_prog2": {
           "courseC_collector_prog2_a": "Puedes utilizar cuatro bloques <xml><block type=\"maze_move\"><title name=\"DIR\">moveForward</title></block></xml> o utilizar el bloque <xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> para que tu programa sea más corto.",
-          "courseC_collector_prog2_b": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el desafío."
+          "courseC_collector_prog2_b": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el puzle."
         },
         "courseC_collector_prog2_2018": {
           "courseC_collector_prog2_a": "Puedes utilizar cuatro bloques <xml><block type=\"maze_move\"><title name=\"DIR\">moveForward</title></block></xml> o utilizar el bloque <xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> para que tu programa sea más corto.",
-          "courseC_collector_prog2_b": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el desafío."
+          "courseC_collector_prog2_b": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el puzle."
         },
         "courseC_collector_prog2_2019": {
           "courseC_collector_prog2_a": "Puedes utilizar cuatro bloques <xml><block type=\"maze_move\"><title name=\"DIR\">moveForward</title></block></xml> o utilizar el bloque <xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> para que tu programa sea más corto.",
-          "courseC_collector_prog2_b": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el desafío."
+          "courseC_collector_prog2_b": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el puzle."
         },
         "courseC_collector_prog2_2020": {
           "courseC_collector_prog2_a": "Puedes utilizar cuatro bloques <xml><block type=\"maze_move\"><title name=\"DIR\">moveForward</title></block></xml> o utilizar el bloque <xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> para que tu programa sea más corto.",
-          "courseC_collector_prog2_b": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el desafío."
+          "courseC_collector_prog2_b": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el puzle."
         },
         "courseC_collector_prog3": {
           "courseC_collector_prog3_a": "El programa solo ejecutará los bloques que están conectados al bloque <xml><block type=\"when_run\"/></xml>.",
-          "courseC_collector_prog3_b": "Intenta usar el botón \"Paso\" para ejecutar tu código una línea a la vez. ¿Ves dónde falla el código?",
-          "courseC_collector_prog3_c": "Si tienes problemas para descifrar este desafío, intenta escribir los movimientos en un papel."
+          "courseC_collector_prog3_b": "Prueba a usar el botón \"Paso\" para ejecutar tu código línea a línea. ¿Ves dónde falla el código?",
+          "courseC_collector_prog3_c": "Si tienes problemas para resolver este puzle, prueba escribiendo los movimientos en un trozo de papel."
         },
         "courseC_collector_prog3_2018": {
           "courseC_collector_prog3_a": "El programa solo ejecutará los bloques que están conectados al bloque <xml><block type=\"when_run\"/></xml>.",
-          "courseC_collector_prog3_b": "Intenta usar el botón \"Paso\" para ejecutar tu código una línea a la vez. ¿Ves dónde falla el código?",
-          "courseC_collector_prog3_c": "Si tienes problemas para descifrar este desafío, intenta escribir los movimientos en un papel."
+          "courseC_collector_prog3_b": "Prueba a usar el botón \"Paso\" para ejecutar tu código línea a línea. ¿Ves dónde falla el código?",
+          "courseC_collector_prog3_c": "Si tienes problemas para resolver este puzle, prueba escribiendo los movimientos en un trozo de papel."
         },
         "courseC_collector_prog3_2019": {
           "courseC_collector_prog3_a": "El programa solo ejecutará los bloques que están conectados al bloque <xml><block type=\"when_run\"/></xml>.",
-          "courseC_collector_prog3_b": "Intenta usar el botón \"Paso\" para ejecutar tu código una línea a la vez. ¿Ves dónde falla el código?",
-          "courseC_collector_prog3_c": "Si tienes problemas para descifrar este desafío, intenta escribir los movimientos en un papel."
+          "courseC_collector_prog3_b": "Prueba a usar el botón \"Paso\" para ejecutar tu código línea a línea. ¿Ves dónde falla el código?",
+          "courseC_collector_prog3_c": "Si tienes problemas para resolver este puzle, prueba escribiendo los movimientos en un trozo de papel."
         },
         "courseC_collector_prog3_2020": {
           "courseC_collector_prog3_a": "El programa solo ejecutará los bloques que están conectados al bloque <xml><block type=\"when_run\"/></xml>.",
-          "courseC_collector_prog3_b": "Intenta usar el botón \"Paso\" para ejecutar tu código una línea a la vez. ¿Ves dónde falla el código?",
-          "courseC_collector_prog3_c": "Si tienes problemas para descifrar este desafío, intenta escribir los movimientos en un papel."
+          "courseC_collector_prog3_b": "Prueba a usar el botón \"Paso\" para ejecutar tu código línea a línea. ¿Ves dónde falla el código?",
+          "courseC_collector_prog3_c": "Si tienes problemas para resolver este puzle, prueba escribiendo los movimientos en un trozo de papel."
         },
         "courseC_collector_prog4": {
           "courseC_collector_prog4_a": "Si te quedas atascado, intenta escribir los pasos en una hoja de papel.",
-          "courseC_collector_prog4_b": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el desafío.",
-          "courseC_collector_prog4_c": "Pruebe esta opción para una ruta."
+          "courseC_collector_prog4_b": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el puzle.",
+          "courseC_collector_prog4_c": "Pruebe esta opción para un camino."
         },
         "courseC_collector_prog4_2018": {
           "courseC_collector_prog4_a": "Si te quedas atascado, intenta escribir los pasos en una hoja de papel.",
-          "courseC_collector_prog4_b": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el desafío.",
-          "courseC_collector_prog4_c": "Pruebe esta opción para una ruta."
+          "courseC_collector_prog4_b": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el puzle.",
+          "courseC_collector_prog4_c": "Pruebe esta opción para un camino."
         },
         "courseC_collector_prog4_2019": {
           "courseC_collector_prog4_a": "Si te quedas atascado, intenta escribir los pasos en una hoja de papel.",
-          "courseC_collector_prog4_b": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el desafío.",
-          "courseC_collector_prog4_c": "Pruebe esta opción para una ruta."
+          "courseC_collector_prog4_b": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el puzle.",
+          "courseC_collector_prog4_c": "Pruebe esta opción para un camino."
         },
         "courseC_collector_prog4_2020": {
           "courseC_collector_prog4_a": "Si te quedas atascado, intenta escribir los pasos en una hoja de papel.",
-          "courseC_collector_prog4_b": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el desafío.",
-          "courseC_collector_prog4_c": "Pruebe esta opción para una ruta."
+          "courseC_collector_prog4_b": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el puzle.",
+          "courseC_collector_prog4_c": "Pruebe esta opción para un camino."
         },
         "courseC_collector_prog5": {
-          "courseC_collector_prog5_a": "\"¿Funciona en el primer paso? ¿Funciona en el segundo paso? \n¿Dónde van las cosas mal?\"",
-          "courseC_collector_prog5_b": "Si corregiste un error y el programa todavía no funciona, utiliza los pasos de arriba para encontrar más errores.",
+          "courseC_collector_prog5_a": "\"¿Funciona el primer paso?\n¿Funciona el segundo paso?\n¿Dónde deja de funcionar?\"",
+          "courseC_collector_prog5_b": "Si has solucionado un fallo y el programa todavía no funciona, prueba a usar los pasos anteriores para encontrar más fallos.",
           "courseC_collector_prog5_c": "Si te quedas atascado, intenta escribir los pasos en una hoja de papel.",
           "courseC_collector_prog5_d": "Sigue el camino para recoger el tesoro."
         },
         "courseC_collector_prog5_2018": {
-          "courseC_collector_prog5_a": "\"¿Funciona en el primer paso? ¿Funciona en el segundo paso? \n¿Dónde van las cosas mal?\"",
-          "courseC_collector_prog5_b": "Si corregiste un error y el programa todavía no funciona, utiliza los pasos de arriba para encontrar más errores.",
+          "courseC_collector_prog5_a": "\"¿Funciona el primer paso?\n¿Funciona el segundo paso?\n¿Dónde deja de funcionar?\"",
+          "courseC_collector_prog5_b": "Si has solucionado un fallo y el programa todavía no funciona, prueba a usar los pasos anteriores para encontrar más fallos.",
           "courseC_collector_prog5_c": "Si te quedas atascado, intenta escribir los pasos en una hoja de papel.",
           "courseC_collector_prog5_d": "Sigue el camino para recoger el tesoro."
         },
         "courseC_collector_prog5_2019": {
-          "courseC_collector_prog5_a": "\"¿Funciona en el primer paso? ¿Funciona en el segundo paso? \n¿Dónde van las cosas mal?\"",
-          "courseC_collector_prog5_b": "Si corregiste un error y el programa todavía no funciona, utiliza los pasos de arriba para encontrar más errores.",
+          "courseC_collector_prog5_a": "\"¿Funciona el primer paso?\n¿Funciona el segundo paso?\n¿Dónde deja de funcionar?\"",
+          "courseC_collector_prog5_b": "Si has solucionado un fallo y el programa todavía no funciona, prueba a usar los pasos anteriores para encontrar más fallos.",
           "courseC_collector_prog5_c": "Si te quedas atascado, intenta escribir los pasos en una hoja de papel.",
           "courseC_collector_prog5_d": "Sigue el camino para recoger el tesoro."
         },
         "courseC_collector_prog5_2020": {
-          "courseC_collector_prog5_a": "\"¿Funciona en el primer paso? ¿Funciona en el segundo paso? \n¿Dónde van las cosas mal?\"",
-          "courseC_collector_prog5_b": "Si corregiste un error y el programa todavía no funciona, utiliza los pasos de arriba para encontrar más errores.",
+          "courseC_collector_prog5_a": "\"¿Funciona el primer paso?\n¿Funciona el segundo paso?\n¿Dónde deja de funcionar?\"",
+          "courseC_collector_prog5_b": "Si has solucionado un fallo y el programa todavía no funciona, prueba a usar los pasos anteriores para encontrar más fallos.",
           "courseC_collector_prog5_c": "Si te quedas atascado, intenta escribir los pasos en una hoja de papel.",
           "courseC_collector_prog5_d": "Sigue el camino para recoger el tesoro."
         },
         "courseC_collector_prog6": {
-          "courseC_collector_prog6_a": "¿Puedes descubrir qué no está funcionando?   \n\nIntenta usar el botón \"Paso\" para buscar errores ejecutando su código línea por línea.",
+          "courseC_collector_prog6_a": "¿Puedes descubrir qué es lo que no está funcionando?   \n\nIntenta usar el botón \"Paso\" para buscar errores ejecutando tu código línea por línea.",
           "courseC_collector_prog6_b": "¿Atascado? Prueba este camino para recolectar el tesoro."
         },
         "courseC_collector_prog6_2018": {
-          "courseC_collector_prog6_a": "¿Puedes descubrir qué no está funcionando?   \n\nIntenta usar el botón \"Paso\" para buscar errores ejecutando su código línea por línea.",
+          "courseC_collector_prog6_a": "¿Puedes descubrir qué es lo que no está funcionando?   \n\nIntenta usar el botón \"Paso\" para buscar errores ejecutando tu código línea por línea.",
           "courseC_collector_prog6_b": "¿Atascado? Prueba este camino para recolectar el tesoro."
         },
         "courseC_collector_prog6_2019": {
-          "courseC_collector_prog6_a": "¿Puedes descubrir qué no está funcionando?   \n\nIntenta usar el botón \"Paso\" para buscar errores ejecutando su código línea por línea.",
+          "courseC_collector_prog6_a": "¿Puedes descubrir qué es lo que no está funcionando?   \n\nIntenta usar el botón \"Paso\" para buscar errores ejecutando tu código línea por línea.",
           "courseC_collector_prog6_b": "¿Atascado? Prueba este camino para recolectar el tesoro."
         },
         "courseC_collector_prog6_2020": {
-          "courseC_collector_prog6_a": "¿Puedes descubrir qué no está funcionando?   \n\nIntenta usar el botón \"Paso\" para buscar errores ejecutando su código línea por línea.",
+          "courseC_collector_prog6_a": "¿Puedes descubrir qué es lo que no está funcionando?   \n\nIntenta usar el botón \"Paso\" para buscar errores ejecutando tu código línea por línea.",
           "courseC_collector_prog6_b": "¿Atascado? Prueba este camino para recolectar el tesoro."
         },
         "courseC_collector_prog7": {
-          "courseC_collector_prog7_a": "Ya hay demasiado código en el espacio de trabajo. No necesitas eliminar nada para resolver este desafío.  ",
-          "courseC_collector_prog7_b": "¿No ves el bloque que necesitas para que la aventurera se mueva en la dirección correcta? Toma uno de la caja de herramientas.",
+          "courseC_collector_prog7_a": "Ya hay mucho código bien hecho en el espacio de trabajo. No necesitas borrar nada para solucionar este puzle.  ",
+          "courseC_collector_prog7_b": "¿No ves el bloque que necesitas para que la aventurera se mueva en la dirección correcta? Saca uno de la caja de herramientas.",
           "courseC_collector_prog7_c": "¿Tienes problemas para ver una ruta para recoger todo el tesoro? ¡Prueba este camino!"
         },
         "courseC_collector_prog7_2018": {
-          "courseC_collector_prog7_a": "Ya hay demasiado código en el espacio de trabajo. No necesitas eliminar nada para resolver este desafío.  ",
-          "courseC_collector_prog7_b": "¿No ves el bloque que necesitas para que la aventurera se mueva en la dirección correcta? Toma uno de la caja de herramientas.",
+          "courseC_collector_prog7_a": "Ya hay mucho código bien hecho en el espacio de trabajo. No necesitas borrar nada para solucionar este puzle.  ",
+          "courseC_collector_prog7_b": "¿No ves el bloque que necesitas para que la aventurera se mueva en la dirección correcta? Saca uno de la caja de herramientas.",
           "courseC_collector_prog7_c": "¿Tienes problemas para ver una ruta para recoger todo el tesoro? ¡Prueba este camino!"
         },
         "courseC_collector_prog7_2019": {
-          "courseC_collector_prog7_a": "Ya hay demasiado código en el espacio de trabajo. No necesitas eliminar nada para resolver este desafío.  ",
-          "courseC_collector_prog7_b": "¿No ves el bloque que necesitas para que la aventurera se mueva en la dirección correcta? Toma uno de la caja de herramientas.",
+          "courseC_collector_prog7_a": "Ya hay mucho código bien hecho en el espacio de trabajo. No necesitas borrar nada para solucionar este puzle.  ",
+          "courseC_collector_prog7_b": "¿No ves el bloque que necesitas para que la aventurera se mueva en la dirección correcta? Saca uno de la caja de herramientas.",
           "courseC_collector_prog7_c": "¿Tienes problemas para ver una ruta para recoger todo el tesoro? ¡Prueba este camino!"
         },
         "courseC_collector_prog7_2020": {
-          "courseC_collector_prog7_a": "Ya hay demasiado código en el espacio de trabajo. No necesitas eliminar nada para resolver este desafío.  ",
-          "courseC_collector_prog7_b": "¿No ves el bloque que necesitas para que la aventurera se mueva en la dirección correcta? Toma uno de la caja de herramientas.",
+          "courseC_collector_prog7_a": "Ya hay mucho código bien hecho en el espacio de trabajo. No necesitas borrar nada para solucionar este puzle.  ",
+          "courseC_collector_prog7_b": "¿No ves el bloque que necesitas para que la aventurera se mueva en la dirección correcta? Saca uno de la caja de herramientas.",
           "courseC_collector_prog7_c": "¿Tienes problemas para ver una ruta para recoger todo el tesoro? ¡Prueba este camino!"
         },
         "courseC_collector_prog_challenge1": {
@@ -4455,126 +4455,126 @@
         },
         "courseC_maze_debugging1": {
           "courseC_maze_debugging1_a": "-   ¿Funciona todo después del primer paso?\n-   ¿Funciona después del segundo?\n-   ¿Cuándo deja de funcionar?",
-          "courseC_maze_debugging1_b": "Hay un bloque que necesitas agregar para completar este desafío."
+          "courseC_maze_debugging1_b": "Necesitas añadir un bloque para completar este desafío."
         },
         "courseC_maze_debugging1_2018": {
           "courseC_maze_debugging1_a": "-   ¿Funciona todo después del primer paso?\n-   ¿Funciona después del segundo?\n-   ¿Cuándo deja de funcionar?",
-          "courseC_maze_debugging1_b": "Hay un bloque que necesitas agregar para completar este desafío."
+          "courseC_maze_debugging1_b": "Necesitas añadir un bloque para completar este desafío."
         },
         "courseC_maze_debugging1_2019": {
           "courseC_maze_debugging1_a": "-   ¿Funciona todo después del primer paso?\n-   ¿Funciona después del segundo?\n-   ¿Cuándo deja de funcionar?",
-          "courseC_maze_debugging1_b": "Hay un bloque que necesitas agregar para completar este desafío."
+          "courseC_maze_debugging1_b": "Necesitas añadir un bloque para completar este desafío."
         },
         "courseC_maze_debugging1_2020": {
           "courseC_maze_debugging1_a": "-   ¿Funciona todo después del primer paso?\n-   ¿Funciona después del segundo?\n-   ¿Cuándo deja de funcionar?",
-          "courseC_maze_debugging1_b": "Hay un bloque que necesitas agregar para completar este desafío."
+          "courseC_maze_debugging1_b": "Necesitas añadir un bloque para completar este desafío."
         },
         "courseC_maze_debugging2": {
-          "courseC_maze_debugging2_a": "Hay un montón de código valioso en el espacio de trabajo. ¡No lo elimines todo y comienza de nuevo!",
+          "courseC_maze_debugging2_a": "Hay un montón de código valioso en el espacio de trabajo. ¡No lo elimines todo y comiences de nuevo!",
           "courseC_maze_debugging2_b": "-   ¿Funciona todo después del primer paso?\n-   ¿Funciona después del segundo?\n-   ¿Cuándo deja de funcionar?",
           "courseC_maze_debugging2_c": "¿No puede descubrir qué pasa? Intenta ejecutar el código un par de veces para ver qué pasa."
         },
         "courseC_maze_debugging2_2018": {
-          "courseC_maze_debugging2_a": "Hay un montón de código valioso en el espacio de trabajo. ¡No lo elimines todo y comienza de nuevo!",
+          "courseC_maze_debugging2_a": "Hay un montón de código valioso en el espacio de trabajo. ¡No lo elimines todo y comiences de nuevo!",
           "courseC_maze_debugging2_b": "-   ¿Funciona todo después del primer paso?\n-   ¿Funciona después del segundo?\n-   ¿Cuándo deja de funcionar?",
           "courseC_maze_debugging2_c": "¿No puede descubrir qué pasa? Intenta ejecutar el código un par de veces para ver qué pasa."
         },
         "courseC_maze_debugging2_2019": {
-          "courseC_maze_debugging2_a": "Hay un montón de código valioso en el espacio de trabajo. ¡No lo elimines todo y comienza de nuevo!",
+          "courseC_maze_debugging2_a": "Hay un montón de código valioso en el espacio de trabajo. ¡No lo elimines todo y comiences de nuevo!",
           "courseC_maze_debugging2_b": "-   ¿Funciona todo después del primer paso?\n-   ¿Funciona después del segundo?\n-   ¿Cuándo deja de funcionar?",
           "courseC_maze_debugging2_c": "¿No puede descubrir qué pasa? Intenta ejecutar el código un par de veces para ver qué pasa."
         },
         "courseC_maze_debugging2_2020": {
-          "courseC_maze_debugging2_a": "Hay un montón de código valioso en el espacio de trabajo. ¡No lo elimines todo y comienza de nuevo!",
+          "courseC_maze_debugging2_a": "Hay un montón de código valioso en el espacio de trabajo. ¡No lo elimines todo y comiences de nuevo!",
           "courseC_maze_debugging2_b": "-   ¿Funciona todo después del primer paso?\n-   ¿Funciona después del segundo?\n-   ¿Cuándo deja de funcionar?",
           "courseC_maze_debugging2_c": "¿No puede descubrir qué pasa? Intenta ejecutar el código un par de veces para ver qué pasa."
         },
         "courseC_maze_debugging3": {
-          "courseC_maze_debugging3_a": "Para eliminar un bloque en el medio de tu código, arrastra todos los bloques a otro lugar del espacio de trabajo.\n\nArrastra el bloque que deseas eliminar a la caja de herramientas.\n\nFinalmente, vuelve a poner el resto de los bloques a donde pertenecen.\n\n![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)",
+          "courseC_maze_debugging3_a": "Para eliminar un bloque del medio de tu programa, pon todos los bloques a otro lugar del espacio de trabajo.\n\nArrastra el bloque que deseas eliminar a la caja de herramientas.\n\nFinalmente, vuelve a poner el resto de los bloques a donde tienen que estar.\n\n![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)",
           "courseC_maze_debugging3_b": "¿No puede descubrir qué pasa? Intenta ejecutar el código un par de veces para ver qué pasa."
         },
         "courseC_maze_debugging3_2018": {
-          "courseC_maze_debugging3_a": "Para eliminar un bloque en el medio de tu código, arrastra todos los bloques a otro lugar del espacio de trabajo.\n\nArrastra el bloque que deseas eliminar a la caja de herramientas.\n\nFinalmente, vuelve a poner el resto de los bloques a donde pertenecen.\n\n![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)",
+          "courseC_maze_debugging3_a": "Para eliminar un bloque del medio de tu programa, pon todos los bloques a otro lugar del espacio de trabajo.\n\nArrastra el bloque que deseas eliminar a la caja de herramientas.\n\nFinalmente, vuelve a poner el resto de los bloques a donde tienen que estar.\n\n![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)",
           "courseC_maze_debugging3_b": "¿No puede descubrir qué pasa? Intenta ejecutar el código un par de veces para ver qué pasa."
         },
         "courseC_maze_debugging3_2019": {
-          "courseC_maze_debugging3_a": "Para eliminar un bloque en el medio de tu código, arrastra todos los bloques a otro lugar del espacio de trabajo.\n\nArrastra el bloque que deseas eliminar a la caja de herramientas.\n\nFinalmente, vuelve a poner el resto de los bloques a donde pertenecen.\n\n![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)",
+          "courseC_maze_debugging3_a": "Para eliminar un bloque del medio de tu programa, pon todos los bloques a otro lugar del espacio de trabajo.\n\nArrastra el bloque que deseas eliminar a la caja de herramientas.\n\nFinalmente, vuelve a poner el resto de los bloques a donde tienen que estar.\n\n![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)",
           "courseC_maze_debugging3_b": "¿No puede descubrir qué pasa? Intenta ejecutar el código un par de veces para ver qué pasa."
         },
         "courseC_maze_debugging3_2020": {
-          "courseC_maze_debugging3_a": "Para eliminar un bloque en el medio de tu código, arrastra todos los bloques a otro lugar del espacio de trabajo.\n\nArrastra el bloque que deseas eliminar a la caja de herramientas.\n\nFinalmente, vuelve a poner el resto de los bloques a donde pertenecen.\n\n![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)",
+          "courseC_maze_debugging3_a": "Para eliminar un bloque del medio de tu programa, pon todos los bloques a otro lugar del espacio de trabajo.\n\nArrastra el bloque que deseas eliminar a la caja de herramientas.\n\nFinalmente, vuelve a poner el resto de los bloques a donde tienen que estar.\n\n![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)",
           "courseC_maze_debugging3_b": "¿No puede descubrir qué pasa? Intenta ejecutar el código un par de veces para ver qué pasa."
         },
         "courseC_maze_debugging4": {
-          "courseC_maze_debugging4_a": "Usa el botón \"Paso\" para ejecutar las instrucciones una a la vez. ¿Te ayuda ésto a encontrar la línea donde las cosas van mal?",
+          "courseC_maze_debugging4_a": "Usa el botón \"Paso\" para ejecutar las instrucciones de una en una. ¿Te ayuda ésto a encontrar la línea donde las cosas van mal?",
           "courseC_maze_debugging4_b": "Uno de los giros está haciendo que Scrat vaya en la dirección equivocada. ¿Puedes averiguar cuál?"
         },
         "courseC_maze_debugging4_2018": {
-          "courseC_maze_debugging4_a": "Usa el botón \"Paso\" para ejecutar las instrucciones una a la vez. ¿Te ayuda ésto a encontrar la línea donde las cosas van mal?",
+          "courseC_maze_debugging4_a": "Usa el botón \"Paso\" para ejecutar las instrucciones de una en una. ¿Te ayuda ésto a encontrar la línea donde las cosas van mal?",
           "courseC_maze_debugging4_b": "Uno de los giros está haciendo que Scrat vaya en la dirección equivocada. ¿Puedes averiguar cuál?"
         },
         "courseC_maze_debugging4_2019": {
-          "courseC_maze_debugging4_a": "Usa el botón \"Paso\" para ejecutar las instrucciones una a la vez. ¿Te ayuda ésto a encontrar la línea donde las cosas van mal?",
+          "courseC_maze_debugging4_a": "Usa el botón \"Paso\" para ejecutar las instrucciones de una en una. ¿Te ayuda ésto a encontrar la línea donde las cosas van mal?",
           "courseC_maze_debugging4_b": "Uno de los giros está haciendo que Scrat vaya en la dirección equivocada. ¿Puedes averiguar cuál?"
         },
         "courseC_maze_debugging4_2020": {
-          "courseC_maze_debugging4_a": "Usa el botón \"Paso\" para ejecutar las instrucciones una a la vez. ¿Te ayuda ésto a encontrar la línea donde las cosas van mal?",
+          "courseC_maze_debugging4_a": "Usa el botón \"Paso\" para ejecutar las instrucciones de una en una. ¿Te ayuda ésto a encontrar la línea donde las cosas van mal?",
           "courseC_maze_debugging4_b": "Uno de los giros está haciendo que Scrat vaya en la dirección equivocada. ¿Puedes averiguar cuál?"
         },
         "courseC_maze_debugging5": {
-          "courseC_maze_debugging5_a": "Hay muchos bloques útiles en el área de trabajo. ¡No los borres!\n\nUsa el botón \"Paso\" para recorrer el código y averiguar donde hay un error.",
+          "courseC_maze_debugging5_a": "Hay muchos bloques útiles en el área de trabajo. ¡No los borres todos!\n\nUsa el botón \"Paso\" para recorrer el código y averiguar donde el programa deja de funcionar.",
           "courseC_maze_debugging5_b": "Intenta decir lo que Scrat debería hacer en voz alta. ¿Es lo mismo que el código en el área de trabajo? ¿Dónde falla?"
         },
         "courseC_maze_debugging5_2018": {
-          "courseC_maze_debugging5_a": "Hay muchos bloques útiles en el área de trabajo. ¡No los borres!\n\nUsa el botón \"Paso\" para recorrer el código y averiguar donde hay un error.",
+          "courseC_maze_debugging5_a": "Hay muchos bloques útiles en el área de trabajo. ¡No los borres todos!\n\nUsa el botón \"Paso\" para recorrer el código y averiguar donde el programa deja de funcionar.",
           "courseC_maze_debugging5_c": "Puedes cambiar la dirección del bloque de turno haciendo clic en el menú desplegable.",
           "courseC_maze_debugging5_b": "Intenta decir lo que Scrat debería hacer en voz alta. ¿Es lo mismo que el código en el área de trabajo? ¿Dónde falla?"
         },
         "courseC_maze_debugging5_2019": {
-          "courseC_maze_debugging5_a": "Hay muchos bloques útiles en el área de trabajo. ¡No los borres!\n\nUsa el botón \"Paso\" para recorrer el código y averiguar donde hay un error.",
+          "courseC_maze_debugging5_a": "Hay muchos bloques útiles en el área de trabajo. ¡No los borres todos!\n\nUsa el botón \"Paso\" para recorrer el código y averiguar donde el programa deja de funcionar.",
           "courseC_maze_debugging5_c": "Puedes cambiar la dirección del bloque de turno haciendo clic en el menú desplegable.",
           "courseC_maze_debugging5_b": "Intenta decir lo que Scrat debería hacer en voz alta. ¿Es lo mismo que el código en el área de trabajo? ¿Dónde falla?"
         },
         "courseC_maze_debugging5_2020": {
-          "courseC_maze_debugging5_a": "Hay muchos bloques útiles en el área de trabajo. ¡No los borres!\n\nUsa el botón \"Paso\" para recorrer el código y averiguar donde hay un error.",
+          "courseC_maze_debugging5_a": "Hay muchos bloques útiles en el área de trabajo. ¡No los borres todos!\n\nUsa el botón \"Paso\" para recorrer el código y averiguar donde el programa deja de funcionar.",
           "courseC_maze_debugging5_c": "Puedes cambiar la dirección del bloque de turno haciendo clic en el menú desplegable.",
           "courseC_maze_debugging5_b": "Intenta decir lo que Scrat debería hacer en voz alta. ¿Es lo mismo que el código en el área de trabajo? ¿Dónde falla?"
         },
         "courseC_maze_debugging6": {
-          "courseC_maze_debugging6_a": "-   ¿Qué se supone que haga Scrat?\n-   ¿Qué hace Scrat?\n-   ¿Qué te dice eso?",
-          "courseC_maze_debugging6_b": "Una vez que hayas encontrado el primer bug, asegúrate de realizar el proceso de depuración para encontrar el segundo error.\n\n¡Repite el proceso hasta que el programa funcione!"
+          "courseC_maze_debugging6_a": "-   ¿Qué se supone que tiene que hacer Scrat?\n-   ¿Qué hace Scrat?\n-   ¿Qué te dice eso?",
+          "courseC_maze_debugging6_b": "Una vez que hayas encontrado el primer fallo, asegúrate de realizar el proceso de depuración para encontrar el segundo error.\n\n¡Repite el proceso hasta que el programa funcione!"
         },
         "courseC_maze_debugging6_2018": {
-          "courseC_maze_debugging6_a": "-   ¿Qué se supone que haga Scrat?\n-   ¿Qué hace Scrat?\n-   ¿Qué te dice eso?",
-          "courseC_maze_debugging6_b": "Una vez que hayas encontrado el primer bug, asegúrate de realizar el proceso de depuración para encontrar el segundo error.\n\n¡Repite el proceso hasta que el programa funcione!"
+          "courseC_maze_debugging6_a": "-   ¿Qué se supone que tiene que hacer Scrat?\n-   ¿Qué hace Scrat?\n-   ¿Qué te dice eso?",
+          "courseC_maze_debugging6_b": "Una vez que hayas encontrado el primer fallo, asegúrate de realizar el proceso de depuración para encontrar el segundo error.\n\n¡Repite el proceso hasta que el programa funcione!"
         },
         "courseC_maze_debugging6_2019": {
-          "courseC_maze_debugging6_a": "-   ¿Qué se supone que haga Scrat?\n-   ¿Qué hace Scrat?\n-   ¿Qué te dice eso?",
-          "courseC_maze_debugging6_b": "Una vez que hayas encontrado el primer bug, asegúrate de realizar el proceso de depuración para encontrar el segundo error.\n\n¡Repite el proceso hasta que el programa funcione!"
+          "courseC_maze_debugging6_a": "-   ¿Qué se supone que tiene que hacer Scrat?\n-   ¿Qué hace Scrat?\n-   ¿Qué te dice eso?",
+          "courseC_maze_debugging6_b": "Una vez que hayas encontrado el primer fallo, asegúrate de realizar el proceso de depuración para encontrar el segundo error.\n\n¡Repite el proceso hasta que el programa funcione!"
         },
         "courseC_maze_debugging6_2020": {
-          "courseC_maze_debugging6_a": "-   ¿Qué se supone que haga Scrat?\n-   ¿Qué hace Scrat?\n-   ¿Qué te dice eso?",
-          "courseC_maze_debugging6_b": "Una vez que hayas encontrado el primer bug, asegúrate de realizar el proceso de depuración para encontrar el segundo error.\n\n¡Repite el proceso hasta que el programa funcione!"
+          "courseC_maze_debugging6_a": "-   ¿Qué se supone que tiene que hacer Scrat?\n-   ¿Qué hace Scrat?\n-   ¿Qué te dice eso?",
+          "courseC_maze_debugging6_b": "Una vez que hayas encontrado el primer fallo, asegúrate de realizar el proceso de depuración para encontrar el segundo error.\n\n¡Repite el proceso hasta que el programa funcione!"
         },
         "courseC_maze_debugging7": {
-          "courseC_maze_debugging7_a": "-   ¿Todo funciona desde el primer paso?\n-   ¿Qué pasa en el segundo?\n-   ¿Dónde está el error?",
+          "courseC_maze_debugging7_a": "-   ¿Funciona todo en el primer paso?\n-   ¿Qué pasa en el segundo?\n-   ¿Dónde deja de funcionar?",
           "courseC_maze_debugging7_b": "¡No olvides usar el botón 'Paso' para ejecutar el programa línea por línea!",
-          "courseC_maze_debugging7_c": "Despues de encontrar y arreglar el primer error, asegurate de usar el proceso de depuración para encontrar el iguiente.\n\n¡Repite el proceso de depuración hasta que el programa funcione!"
+          "courseC_maze_debugging7_c": "Despues de encontrar y arreglar el primer error, asegurate de usar el proceso de depuración otra vez para encontrar el siguiente.\n\n¡Repite el proceso de depuración hasta que el programa funcione!"
         },
         "courseC_maze_debugging7_2018": {
-          "courseC_maze_debugging7_a": "-   ¿Todo funciona desde el primer paso?\n-   ¿Qué pasa en el segundo?\n-   ¿Dónde está el error?",
+          "courseC_maze_debugging7_a": "-   ¿Funciona todo en el primer paso?\n-   ¿Qué pasa en el segundo?\n-   ¿Dónde deja de funcionar?",
           "courseC_maze_debugging7_b": "¡No olvides usar el botón 'Paso' para ejecutar el programa línea por línea!",
-          "courseC_maze_debugging7_c": "Despues de encontrar y arreglar el primer error, asegurate de usar el proceso de depuración para encontrar el iguiente.\n\n¡Repite el proceso de depuración hasta que el programa funcione!"
+          "courseC_maze_debugging7_c": "Despues de encontrar y arreglar el primer error, asegurate de usar el proceso de depuración otra vez para encontrar el siguiente.\n\n¡Repite el proceso de depuración hasta que el programa funcione!"
         },
         "courseC_maze_debugging7_2019": {
-          "courseC_maze_debugging7_a": "-   ¿Todo funciona desde el primer paso?\n-   ¿Qué pasa en el segundo?\n-   ¿Dónde está el error?",
+          "courseC_maze_debugging7_a": "-   ¿Funciona todo en el primer paso?\n-   ¿Qué pasa en el segundo?\n-   ¿Dónde deja de funcionar?",
           "courseC_maze_debugging7_b": "¡No olvides usar el botón 'Paso' para ejecutar el programa línea por línea!",
-          "courseC_maze_debugging7_c": "Despues de encontrar y arreglar el primer error, asegurate de usar el proceso de depuración para encontrar el iguiente.\n\n¡Repite el proceso de depuración hasta que el programa funcione!"
+          "courseC_maze_debugging7_c": "Despues de encontrar y arreglar el primer error, asegurate de usar el proceso de depuración otra vez para encontrar el siguiente.\n\n¡Repite el proceso de depuración hasta que el programa funcione!"
         },
         "courseC_maze_debugging7_2020": {
-          "courseC_maze_debugging7_a": "-   ¿Todo funciona desde el primer paso?\n-   ¿Qué pasa en el segundo?\n-   ¿Dónde está el error?",
+          "courseC_maze_debugging7_a": "-   ¿Funciona todo en el primer paso?\n-   ¿Qué pasa en el segundo?\n-   ¿Dónde deja de funcionar?",
           "courseC_maze_debugging7_b": "¡No olvides usar el botón 'Paso' para ejecutar el programa línea por línea!",
-          "courseC_maze_debugging7_c": "Despues de encontrar y arreglar el primer error, asegurate de usar el proceso de depuración para encontrar el iguiente.\n\n¡Repite el proceso de depuración hasta que el programa funcione!"
+          "courseC_maze_debugging7_c": "Despues de encontrar y arreglar el primer error, asegurate de usar el proceso de depuración otra vez para encontrar el siguiente.\n\n¡Repite el proceso de depuración hasta que el programa funcione!"
         },
         "courseC_maze_debugging_challenge1": {
           "courseC_maze_debugging_challenge1_a": "¿Izquierda o derecha? ¡Es tu decisión!",
@@ -4629,140 +4629,140 @@
           "courseC_maze_loops_challenge1_b": "¿Recuerdas cómo usar los loops para repetir el patrón de escalera?"
         },
         "courseC_maze_programming1": {
-          "courseC_maze_programming1_0": "Asegúrate que todos los bloques se hayan ensamblado por completo, luego haz clic en \"Ejecutar\" nuevamente."
+          "courseC_maze_programming1_0": "Asegúrate que todos los bloques se han unido correctamente, luego haz clic en \"Ejecutar\" nuevamente."
         },
         "courseC_maze_programming1_2018": {
-          "courseC_maze_programming1_0": "Asegúrate que todos los bloques se hayan ensamblado por completo, luego haz clic en \"Ejecutar\" nuevamente."
+          "courseC_maze_programming1_0": "Asegúrate que todos los bloques se han unido correctamente, luego haz clic en \"Ejecutar\" nuevamente."
         },
         "courseC_maze_programming1_2019": {
-          "courseC_maze_programming1_0": "Asegúrate que todos los bloques se hayan ensamblado por completo, luego haz clic en \"Ejecutar\" nuevamente."
+          "courseC_maze_programming1_0": "Asegúrate que todos los bloques se han unido correctamente, luego haz clic en \"Ejecutar\" nuevamente."
         },
         "courseC_maze_programming1_2020": {
-          "courseC_maze_programming1_0": "Asegúrate que todos los bloques se hayan ensamblado por completo, luego haz clic en \"Ejecutar\" nuevamente."
+          "courseC_maze_programming1_0": "Asegúrate que todos los bloques se han unido correctamente, luego haz clic en \"Ejecutar\" nuevamente."
         },
         "courseC_maze_programming2": {
-          "courseC_maze_programming2_a": "Para utilizar un bloque <xml><block type=\"maze_moveForward\"/></xml>, arrástralo fuera de la caja de herramientas y encájalo al bloque <xml><block type=\"when_run\"/></xml>.",
-          "courseC_maze_programming2_b": "Asegúrate que todos los bloques se hayan ensamblado por completo, luego haz clic en \"Ejecutar\" nuevamente."
+          "courseC_maze_programming2_a": "Para utilizar un bloque <xml><block type=\"maze_moveForward\"/></xml>, arrástralo fuera de la caja de herramientas y únelo al bloque <xml><block type=\"when_run\"/></xml>.",
+          "courseC_maze_programming2_b": "Asegúrate que todos los bloques se han unido correctamente, luego haz clic en \"Ejecutar\" nuevamente."
         },
         "courseC_maze_programming2_2018": {
-          "courseC_maze_programming2_a": "Para utilizar un bloque <xml><block type=\"maze_moveForward\"/></xml>, arrástralo fuera de la caja de herramientas y encájalo al bloque <xml><block type=\"when_run\"/></xml>.",
-          "courseC_maze_programming2_b": "Asegúrate que todos los bloques se hayan ensamblado por completo, luego haz clic en \"Ejecutar\" nuevamente."
+          "courseC_maze_programming2_a": "Para utilizar un bloque <xml><block type=\"maze_moveForward\"/></xml>, arrástralo fuera de la caja de herramientas y únelo al bloque <xml><block type=\"when_run\"/></xml>.",
+          "courseC_maze_programming2_b": "Asegúrate que todos los bloques se han unido correctamente, luego haz clic en \"Ejecutar\" nuevamente."
         },
         "courseC_maze_programming2_2019": {
-          "courseC_maze_programming2_a": "Para utilizar un bloque <xml><block type=\"maze_moveForward\"/></xml>, arrástralo fuera de la caja de herramientas y encájalo al bloque <xml><block type=\"when_run\"/></xml>.",
-          "courseC_maze_programming2_b": "Asegúrate que todos los bloques se hayan ensamblado por completo, luego haz clic en \"Ejecutar\" nuevamente."
+          "courseC_maze_programming2_a": "Para utilizar un bloque <xml><block type=\"maze_moveForward\"/></xml>, arrástralo fuera de la caja de herramientas y únelo al bloque <xml><block type=\"when_run\"/></xml>.",
+          "courseC_maze_programming2_b": "Asegúrate que todos los bloques se han unido correctamente, luego haz clic en \"Ejecutar\" nuevamente."
         },
         "courseC_maze_programming2_2020": {
-          "courseC_maze_programming2_a": "Para utilizar un bloque <xml><block type=\"maze_moveForward\"/></xml>, arrástralo fuera de la caja de herramientas y encájalo al bloque <xml><block type=\"when_run\"/></xml>.",
-          "courseC_maze_programming2_b": "Asegúrate que todos los bloques se hayan ensamblado por completo, luego haz clic en \"Ejecutar\" nuevamente."
+          "courseC_maze_programming2_a": "Para utilizar un bloque <xml><block type=\"maze_moveForward\"/></xml>, arrástralo fuera de la caja de herramientas y únelo al bloque <xml><block type=\"when_run\"/></xml>.",
+          "courseC_maze_programming2_b": "Asegúrate que todos los bloques se han unido correctamente, luego haz clic en \"Ejecutar\" nuevamente."
         },
         "courseC_maze_programming3": {
-          "courseC_maze_programming3_a": "Intenta ejecutar el código primero para ver dónde sale mal.",
-          "courseC_maze_programming3_b": "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nPara eliminar un bloque del medio de tu código, arrastra todos los bloques a otro lugar del espacio de trabajo.\n\nVuelve a arrastrar el bloque que deseas eliminar a la caja de herramientas. \n\nFinalmente, vuelve a colocar los otros bloques a donde pertenecen."
+          "courseC_maze_programming3_a": "Prueba a ejecutar el programa primero para ver dónde está mal.",
+          "courseC_maze_programming3_b": "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nPara eliminar un bloque de la mitad de tu programa, arrastra todos los bloques a otra parte del espacio de trabajo.\n\nArrastra el bloque que quieres borrar de vuelta a la caja de herramientas.\n\nPara terminar, pon otra vez los otros bloques donde estaban."
         },
         "courseC_maze_programming3_2018": {
-          "courseC_maze_programming3_a": "Intenta ejecutar el código primero para ver dónde sale mal.",
-          "courseC_maze_programming3_b": "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nPara eliminar un bloque del medio de tu código, arrastra todos los bloques a otro lugar del espacio de trabajo.\n\nVuelve a arrastrar el bloque que deseas eliminar a la caja de herramientas. \n\nFinalmente, vuelve a colocar los otros bloques a donde pertenecen."
+          "courseC_maze_programming3_a": "Prueba a ejecutar el programa primero para ver dónde está mal.",
+          "courseC_maze_programming3_b": "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nPara eliminar un bloque de la mitad de tu programa, arrastra todos los bloques a otra parte del espacio de trabajo.\n\nArrastra el bloque que quieres borrar de vuelta a la caja de herramientas.\n\nPara terminar, pon otra vez los otros bloques donde estaban."
         },
         "courseC_maze_programming3_2019": {
-          "courseC_maze_programming3_a": "Intenta ejecutar el código primero para ver dónde sale mal.",
-          "courseC_maze_programming3_b": "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nPara eliminar un bloque del medio de tu código, arrastra todos los bloques a otro lugar del espacio de trabajo.\n\nVuelve a arrastrar el bloque que deseas eliminar a la caja de herramientas. \n\nFinalmente, vuelve a colocar los otros bloques a donde pertenecen."
+          "courseC_maze_programming3_a": "Prueba a ejecutar el programa primero para ver dónde está mal.",
+          "courseC_maze_programming3_b": "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nPara eliminar un bloque de la mitad de tu programa, arrastra todos los bloques a otra parte del espacio de trabajo.\n\nArrastra el bloque que quieres borrar de vuelta a la caja de herramientas.\n\nPara terminar, pon otra vez los otros bloques donde estaban."
         },
         "courseC_maze_programming3_2020": {
-          "courseC_maze_programming3_a": "Intenta ejecutar el código primero para ver dónde sale mal.",
-          "courseC_maze_programming3_b": "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nPara eliminar un bloque del medio de tu código, arrastra todos los bloques a otro lugar del espacio de trabajo.\n\nVuelve a arrastrar el bloque que deseas eliminar a la caja de herramientas. \n\nFinalmente, vuelve a colocar los otros bloques a donde pertenecen."
+          "courseC_maze_programming3_a": "Prueba a ejecutar el programa primero para ver dónde está mal.",
+          "courseC_maze_programming3_b": "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nPara eliminar un bloque de la mitad de tu programa, arrastra todos los bloques a otra parte del espacio de trabajo.\n\nArrastra el bloque que quieres borrar de vuelta a la caja de herramientas.\n\nPara terminar, pon otra vez los otros bloques donde estaban."
         },
         "courseC_maze_programming4": {
-          "courseC_maze_programming4_a": "Recuerda que, cuando giras, lo haces desde el punto de vista del _pájaro_. Si giras a la derecha, el pájaro apuntará hacia abajo.",
-          "courseC_maze_programming4_b": "Para seguir el camino: \n\n-   avanzar \n-   girar hacia un lado \n-   avanzar \n-   girar hacia el otro lado \n-   avanzar"
+          "courseC_maze_programming4_a": "Recuerda que, cuando giras, lo haces desde el punto de vista del pájaro. Si giras a la derecha, el pájaro apuntará hacia abajo.",
+          "courseC_maze_programming4_b": "Para seguir el camino:\n\n-   avanza\n-   gira a un lado\n-   avanza\n-   gira al otro lado\n-   avanza"
         },
         "courseC_maze_programming4_2018": {
-          "courseC_maze_programming4_a": "Recuerda que, cuando giras, lo haces desde el punto de vista del _pájaro_. Si giras a la derecha, el pájaro apuntará hacia abajo.",
-          "courseC_maze_programming4_b": "Para seguir el camino: \n\n-   avanzar \n-   girar hacia un lado \n-   avanzar \n-   girar hacia el otro lado \n-   avanzar"
+          "courseC_maze_programming4_a": "Recuerda que, cuando giras, lo haces desde el punto de vista del pájaro. Si giras a la derecha, el pájaro apuntará hacia abajo.",
+          "courseC_maze_programming4_b": "Para seguir el camino:\n\n-   avanza\n-   gira a un lado\n-   avanza\n-   gira al otro lado\n-   avanza"
         },
         "courseC_maze_programming4_2019": {
-          "courseC_maze_programming4_a": "Recuerda que, cuando giras, lo haces desde el punto de vista del _pájaro_. Si giras a la derecha, el pájaro apuntará hacia abajo.",
-          "courseC_maze_programming4_b": "Para seguir el camino: \n\n-   avanzar \n-   girar hacia un lado \n-   avanzar \n-   girar hacia el otro lado \n-   avanzar"
+          "courseC_maze_programming4_a": "Recuerda que, cuando giras, lo haces desde el punto de vista del pájaro. Si giras a la derecha, el pájaro apuntará hacia abajo.",
+          "courseC_maze_programming4_b": "Para seguir el camino:\n\n-   avanza\n-   gira a un lado\n-   avanza\n-   gira al otro lado\n-   avanza"
         },
         "courseC_maze_programming4_2020": {
-          "courseC_maze_programming4_a": "Recuerda que, cuando giras, lo haces desde el punto de vista del _pájaro_. Si giras a la derecha, el pájaro apuntará hacia abajo.",
-          "courseC_maze_programming4_b": "Para seguir el camino: \n\n-   avanzar \n-   girar hacia un lado \n-   avanzar \n-   girar hacia el otro lado \n-   avanzar"
+          "courseC_maze_programming4_a": "Recuerda que, cuando giras, lo haces desde el punto de vista del pájaro. Si giras a la derecha, el pájaro apuntará hacia abajo.",
+          "courseC_maze_programming4_b": "Para seguir el camino:\n\n-   avanza\n-   gira a un lado\n-   avanza\n-   gira al otro lado\n-   avanza"
         },
         "courseC_maze_programming5": {
           "courseC_maze_programming5_a": "Intenta usar el botón \"Paso\" para ejecutar tu código línea por línea. ¿Puedes averiguar lo que tienes que hacer a continuación?",
-          "courseC_maze_programming5_b": "El pájaro tendrá que hacer un giro para completar este desafío. ¿Puedes descubrir en qué dirección?",
+          "courseC_maze_programming5_b": "El pájaro tendrá que hacer un giro para completar este puzle. ¿Puedes descubrir en qué dirección?",
           "courseC_maze_programming5_c": "La solución tendrá dos bloques \"avanzar\", un giro, y dos bloques más \"avanzar\"."
         },
         "courseC_maze_programming5_2018": {
           "courseC_maze_programming5_a": "Intenta usar el botón \"Paso\" para ejecutar tu código línea por línea. ¿Puedes averiguar lo que tienes que hacer a continuación?",
-          "courseC_maze_programming5_b": "El pájaro tendrá que hacer un giro para completar este desafío. ¿Puedes descubrir en qué dirección?",
+          "courseC_maze_programming5_b": "El pájaro tendrá que hacer un giro para completar este puzle. ¿Puedes descubrir en qué dirección?",
           "courseC_maze_programming5_c": "La solución tendrá dos bloques \"avanzar\", un giro, y dos bloques más \"avanzar\"."
         },
         "courseC_maze_programming5_2019": {
           "courseC_maze_programming5_a": "Intenta usar el botón \"Paso\" para ejecutar tu código línea por línea. ¿Puedes averiguar lo que tienes que hacer a continuación?",
-          "courseC_maze_programming5_b": "El pájaro tendrá que hacer un giro para completar este desafío. ¿Puedes descubrir en qué dirección?",
+          "courseC_maze_programming5_b": "El pájaro tendrá que hacer un giro para completar este puzle. ¿Puedes descubrir en qué dirección?",
           "courseC_maze_programming5_c": "La solución tendrá dos bloques \"avanzar\", un giro, y dos bloques más \"avanzar\"."
         },
         "courseC_maze_programming5_2020": {
           "courseC_maze_programming5_a": "Intenta usar el botón \"Paso\" para ejecutar tu código línea por línea. ¿Puedes averiguar lo que tienes que hacer a continuación?",
-          "courseC_maze_programming5_b": "El pájaro tendrá que hacer un giro para completar este desafío. ¿Puedes descubrir en qué dirección?",
+          "courseC_maze_programming5_b": "El pájaro tendrá que hacer un giro para completar este puzle. ¿Puedes descubrir en qué dirección?",
           "courseC_maze_programming5_c": "La solución tendrá dos bloques \"avanzar\", un giro, y dos bloques más \"avanzar\"."
         },
         "courseC_maze_programming6": {
           "courseC_maze_programming6_a": "¡Hay dos formas de resolver este desafío!",
-          "courseC_maze_programming6_b": "Sigue con tu dedo desde pájaro al cerdo, ¿qué pasos tomó?",
-          "courseC_maze_programming6_c": "Recuerda que debes dar la vuelta primero, ya que el pájaro comienza mirando hacia una pared.",
-          "courseC_maze_programming6_d": "¿Te sientes atrapado? ¡Mira este camino!"
+          "courseC_maze_programming6_b": "Sigue con el dedo el camino del pájaro al cerdo, ¿qué pasos has dado?",
+          "courseC_maze_programming6_c": "Recuerda que debes girar primero, ya que el pájaro empieza mirando a una pared.",
+          "courseC_maze_programming6_d": "¿Atascado? ¡Mira este camino!"
         },
         "courseC_maze_programming6_2018": {
           "courseC_maze_programming6_a": "¡Hay dos formas de resolver este desafío!",
-          "courseC_maze_programming6_b": "Sigue con tu dedo desde pájaro al cerdo, ¿qué pasos tomó?",
-          "courseC_maze_programming6_c": "Recuerda que debes dar la vuelta primero, ya que el pájaro comienza mirando hacia una pared.",
-          "courseC_maze_programming6_d": "¿Te sientes atrapado? ¡Mira este camino!"
+          "courseC_maze_programming6_b": "Sigue con el dedo el camino del pájaro al cerdo, ¿qué pasos has dado?",
+          "courseC_maze_programming6_c": "Recuerda que debes girar primero, ya que el pájaro empieza mirando a una pared.",
+          "courseC_maze_programming6_d": "¿Atascado? ¡Mira este camino!"
         },
         "courseC_maze_programming6_2019": {
           "courseC_maze_programming6_a": "¡Hay dos formas de resolver este desafío!",
-          "courseC_maze_programming6_b": "Sigue con tu dedo desde pájaro al cerdo, ¿qué pasos tomó?",
-          "courseC_maze_programming6_c": "Recuerda que debes dar la vuelta primero, ya que el pájaro comienza mirando hacia una pared.",
-          "courseC_maze_programming6_d": "¿Te sientes atrapado? ¡Mira este camino!"
+          "courseC_maze_programming6_b": "Sigue con el dedo el camino del pájaro al cerdo, ¿qué pasos has dado?",
+          "courseC_maze_programming6_c": "Recuerda que debes girar primero, ya que el pájaro empieza mirando a una pared.",
+          "courseC_maze_programming6_d": "¿Atascado? ¡Mira este camino!"
         },
         "courseC_maze_programming6_2020": {
           "courseC_maze_programming6_a": "¡Hay dos formas de resolver este desafío!",
-          "courseC_maze_programming6_b": "Sigue con tu dedo desde pájaro al cerdo, ¿qué pasos tomó?",
-          "courseC_maze_programming6_c": "Recuerda que debes dar la vuelta primero, ya que el pájaro comienza mirando hacia una pared.",
-          "courseC_maze_programming6_d": "¿Te sientes atrapado? ¡Mira este camino!"
+          "courseC_maze_programming6_b": "Sigue con el dedo el camino del pájaro al cerdo, ¿qué pasos has dado?",
+          "courseC_maze_programming6_c": "Recuerda que debes girar primero, ya que el pájaro empieza mirando a una pared.",
+          "courseC_maze_programming6_d": "¿Atascado? ¡Mira este camino!"
         },
         "courseC_maze_programming7": {
           "courseC_maze_programming7_a": "No te olvides de utilizar el botón \"Paso\" para ir bloque por bloque buscando errores.",
-          "courseC_maze_programming7_b": "Si tienes problemas para descifrar este desafío, intenta escribir los movimientos en un papel."
+          "courseC_maze_programming7_b": "Si tienes problemas para resolver este puzle, prueba escribiendo los movimientos en un trozo de papel."
         },
         "courseC_maze_programming7_2018": {
           "courseC_maze_programming7_a": "No te olvides de utilizar el botón \"Paso\" para ir bloque por bloque buscando errores.",
-          "courseC_maze_programming7_b": "Si tienes problemas para descifrar este desafío, intenta escribir los movimientos en un papel."
+          "courseC_maze_programming7_b": "Si tienes problemas para resolver este puzle, prueba escribiendo los movimientos en un trozo de papel."
         },
         "courseC_maze_programming7_2019": {
           "courseC_maze_programming7_a": "No te olvides de utilizar el botón \"Paso\" para ir bloque por bloque buscando errores.",
-          "courseC_maze_programming7_b": "Si tienes problemas para descifrar este desafío, intenta escribir los movimientos en un papel."
+          "courseC_maze_programming7_b": "Si tienes problemas para resolver este puzle, prueba escribiendo los movimientos en un trozo de papel."
         },
         "courseC_maze_programming7_2020": {
           "courseC_maze_programming7_a": "No te olvides de utilizar el botón \"Paso\" para ir bloque por bloque buscando errores.",
-          "courseC_maze_programming7_b": "Si tienes problemas para descifrar este desafío, intenta escribir los movimientos en un papel."
+          "courseC_maze_programming7_b": "Si tienes problemas para resolver este puzle, prueba escribiendo los movimientos en un trozo de papel."
         },
         "courseC_maze_programming8": {
           "courseC_maze_programming8_a": "Recuerda que puedes usar el botón \"Paso\" para revisar tu código línea por línea si te quedas atascado.",
-          "courseC_maze_programming8_b": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el desafío."
+          "courseC_maze_programming8_b": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el puzle."
         },
         "courseC_maze_programming8_2018": {
           "courseC_maze_programming8_a": "Recuerda que puedes usar el botón \"Paso\" para revisar tu código línea por línea si te quedas atascado.",
-          "courseC_maze_programming8_b": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el desafío."
+          "courseC_maze_programming8_b": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el puzle."
         },
         "courseC_maze_programming8_2019": {
           "courseC_maze_programming8_a": "Recuerda que puedes usar el botón \"Paso\" para revisar tu código línea por línea si te quedas atascado.",
-          "courseC_maze_programming8_b": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el desafío."
+          "courseC_maze_programming8_b": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el puzle."
         },
         "courseC_maze_programming8_2020": {
           "courseC_maze_programming8_a": "Recuerda que puedes usar el botón \"Paso\" para revisar tu código línea por línea si te quedas atascado.",
-          "courseC_maze_programming8_b": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el desafío."
+          "courseC_maze_programming8_b": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el puzle."
         },
         "courseC_maze_programming_challenge1": {
           "courseC_maze_programming_challenge1_a": "Hay muchas maneras de llegar al cerdo. ¡Usa tu dedo para encontrar un camino y luego programarlo!"
@@ -5763,16 +5763,16 @@
           "courseD_bee_conditionals_challenge1_b": "En este rompecabezas, cada espacio podría tener una flor, un panal de miel o nada. Eso significa que puedes repetir tu condicional `si/si no` en cada cuadrado."
         },
         "courseD_bee_conditionals_challenge2": {
-          "courseD_bee_conditionals_challenge1_b": "Al igual que los bloques `si en una flor`, el código dentro de `mientras néctar > 0` solo se ejecuta si la abeja está en una flor. La diferencia es que este código se ejecutará una y otra vez hasta que no quede néctar. Prueba este patrón:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "Al igual que los bloques `si en una flor`, el código dentro de `mientras néctar > 0` solo se ejecuta si la abeja está en una flor. La diferencia es que este código se ejecutará una y otra vez hasta que no quede néctar. Prueba este patrón:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_conditionals_challenge2_2018": {
-          "courseD_bee_conditionals_challenge1_b": "Al igual que los bloques `si en una flor`, el código dentro de `mientras néctar > 0` solo se ejecuta si la abeja está en una flor. La diferencia es que este código se ejecutará una y otra vez hasta que no quede néctar. Prueba este patrón:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "Al igual que los bloques `si en una flor`, el código dentro de `mientras néctar > 0` solo se ejecuta si la abeja está en una flor. La diferencia es que este código se ejecutará una y otra vez hasta que no quede néctar. Prueba este patrón:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_conditionals_challenge2_2019": {
-          "courseD_bee_conditionals_challenge1_b": "Al igual que los bloques `si en una flor`, el código dentro de `mientras néctar > 0` solo se ejecuta si la abeja está en una flor. La diferencia es que este código se ejecutará una y otra vez hasta que no quede néctar. Prueba este patrón:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "Al igual que los bloques `si en una flor`, el código dentro de `mientras néctar > 0` solo se ejecuta si la abeja está en una flor. La diferencia es que este código se ejecutará una y otra vez hasta que no quede néctar. Prueba este patrón:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_conditionals_challenge2_2020": {
-          "courseD_bee_conditionals_challenge1_b": "Al igual que los bloques `si en una flor`, el código dentro de `mientras néctar > 0` solo se ejecuta si la abeja está en una flor. La diferencia es que este código se ejecutará una y otra vez hasta que no quede néctar. Prueba este patrón:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "Al igual que los bloques `si en una flor`, el código dentro de `mientras néctar > 0` solo se ejecuta si la abeja está en una flor. La diferencia es que este código se ejecutará una y otra vez hasta que no quede néctar. Prueba este patrón:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_debugging_challenge1": {
           "courseD_bee_debugging_challenge1_a": "¿Por qué funciona la primera mitad de este programa? Piensa por qué la abeja necesita moverse hacia atrás. ¿Cuánto néctar recoge la abeja cada vez que se mueve sobre una flor?",
@@ -6053,8 +6053,8 @@
           "courseD_collector_debugging9_b": "Averigua cómo resolverías el acertijo, luego muévete paso a paso para intentar que el código coincida con lo que tienes en la cabeza."
         },
         "courseD_collector_debugging_challenge2": {
-          "courseD_collector_debugging_challenge2_a": "Para comenzar, recoge solo **dos** gemas de cada una de las primeras **dos** pilas.\n\n![](<https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png>)\nUsa estos bloques.\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n  </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title name=\"DIR\">moveForward</title>\n                  </block>\n                  \n \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n    <title name=\"TIMES\">2</title>\n  </block>\n\n</xml>",
-          "courseD_collector_debugging_challenge2_b": "A continuación, recoge las gemas restantes en esta fila.\n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)\nAgrega estos bloques a tu programa.\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n\n        </statement>\n      </block>\n\n</xml>",
+          "courseD_collector_debugging_challenge2_a": "Para comenzar, recoge solo **dos** gemas de cada una de las primeras **dos** pilas.\n\n![](<https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png>)\nUsa estos bloques.\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n  </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title name=\"DIR\">moveForward</title>\n                  </block>\n                  \n \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n    <title name=\"TIMES\">2</title>\n  </block>\n\n\n\n</xml>",
+          "courseD_collector_debugging_challenge2_b": "A continuación, recoge las gemas restantes en esta fila.\n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)\nAgrega estos bloques a tu programa.\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>",
           "courseD_collector_debugging_challenge2_c": "Finalmente, recoge el tesoro restante. Agrega estos bloques a tu programa.\n\n<xml>\n  <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>",
           "courseD_collector_debugging_challenge2_d": "Esta es la solución completa para el desafío.\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">4</title>\n            <statement name=\"DO\">\n              <block type=\"controls_repeat\">\n                <title name=\"TIMES\">2</title>\n                <statement name=\"DO\">\n                  <block type=\"maze_move\">\n                    <title name=\"DIR\">moveForward</title>\n                    <next>\n                      <block type=\"controls_repeat\">\n                        <title name=\"TIMES\">2</title>\n                        <statement name=\"DO\">\n                          <block type=\"collector_collect\"/>\n                        </statement>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n                <next>\n                  <block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
@@ -6572,12 +6572,12 @@
         "courseD_maze_intro5a_2019": {
           "courseC_maze_programming5_a": "Intenta usar el botón \"Paso\" para ejecutar tu código línea por línea. ¿Puedes averiguar lo que tienes que hacer a continuación?",
           "courseC_maze_programming5_b": "Recuerda que los giros son desde la perspectiva de Red.",
-          "courseC_maze_programming5_c": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el desafío."
+          "courseC_maze_programming5_c": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el puzle."
         },
         "courseD_maze_intro5a_2020": {
           "courseC_maze_programming5_a": "Intenta usar el botón \"Paso\" para ejecutar tu código línea por línea. ¿Puedes averiguar lo que tienes que hacer a continuación?",
           "courseC_maze_programming5_b": "Recuerda que los giros son desde la perspectiva de Red.",
-          "courseC_maze_programming5_c": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el desafío."
+          "courseC_maze_programming5_c": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el puzle."
         },
         "courseD_maze_nestedLoops3": {
           "courseD_maze_nestedLoops3_a": "Para resolver este desafío, deberás \"anidar\" un loop 'repetir' dentro de otro.",
@@ -6656,20 +6656,20 @@
           "courseD_maze_nestedLoops6_c": "Tomará dos pares de loops 'repetir' anidados para resolver este desafío."
         },
         "courseD_maze_ramp1": {
-          "courseC_maze_programming1_a": "Si el pájaro no llega hasta el cerdo, asegúrate de que los tres bloques están juntos y, luego, vuelve a hacer clic en \"Ejecutar\".",
-          "courseC_maze_programming1_b": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el desafío."
+          "courseC_maze_programming1_a": "Si el pájaro no llega hasta el cerdo, asegúrate de que los tres bloques están totalmente juntos y, luego, vuelve a hacer clic en \"Ejecutar\".",
+          "courseC_maze_programming1_b": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el puzle."
         },
         "courseD_maze_ramp1_2018": {
-          "courseC_maze_programming1_a": "Si el pájaro no llega hasta el cerdo, asegúrate de que los tres bloques están juntos y, luego, vuelve a hacer clic en \"Ejecutar\".",
-          "courseC_maze_programming1_b": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el desafío."
+          "courseC_maze_programming1_a": "Si el pájaro no llega hasta el cerdo, asegúrate de que los tres bloques están totalmente juntos y, luego, vuelve a hacer clic en \"Ejecutar\".",
+          "courseC_maze_programming1_b": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el puzle."
         },
         "courseD_maze_ramp1_2019": {
-          "courseC_maze_programming1_a": "Si el pájaro no llega hasta el cerdo, asegúrate de que los tres bloques están juntos y, luego, vuelve a hacer clic en \"Ejecutar\".",
-          "courseC_maze_programming1_b": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el desafío."
+          "courseC_maze_programming1_a": "Si el pájaro no llega hasta el cerdo, asegúrate de que los tres bloques están totalmente juntos y, luego, vuelve a hacer clic en \"Ejecutar\".",
+          "courseC_maze_programming1_b": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el puzle."
         },
         "courseD_maze_ramp1_2020": {
-          "courseC_maze_programming1_a": "Si el pájaro no llega hasta el cerdo, asegúrate de que los tres bloques están juntos y, luego, vuelve a hacer clic en \"Ejecutar\".",
-          "courseC_maze_programming1_b": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el desafío."
+          "courseC_maze_programming1_a": "Si el pájaro no llega hasta el cerdo, asegúrate de que los tres bloques están totalmente juntos y, luego, vuelve a hacer clic en \"Ejecutar\".",
+          "courseC_maze_programming1_b": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el puzle."
         },
         "courseD_maze_ramp2": {
           "courseC_maze_programming2_a": "Para usar un bloque `avanzar`, arrástralo desde la barra de herramientas hacia el espacio de trabajo y conéctalo al bloque `cuando se ejecuta`.",
@@ -6717,63 +6717,63 @@
         },
         "courseD_maze_ramp5": {
           "courseC_maze_programming5_a": "Intenta usar el botón \"Paso\" para ejecutar tu código línea por línea. ¿Puedes averiguar lo que tienes que hacer a continuación?",
-          "courseC_maze_programming5_b": "Recuerda que girar a la derecha e izquierda es desde la perspectiva del pájaro.",
-          "courseC_maze_programming5_c": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el desafío."
+          "courseC_maze_programming5_b": "Recuerda que los giros se hacen desde la perspectiva del pájaro.",
+          "courseC_maze_programming5_c": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el puzle."
         },
         "courseD_maze_ramp5_2018": {
           "courseC_maze_programming5_a": "Intenta usar el botón \"Paso\" para ejecutar tu código línea por línea. ¿Puedes averiguar lo que tienes que hacer a continuación?",
-          "courseC_maze_programming5_b": "Recuerda que girar a la derecha e izquierda es desde la perspectiva del pájaro.",
-          "courseC_maze_programming5_c": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el desafío."
+          "courseC_maze_programming5_b": "Recuerda que los giros se hacen desde la perspectiva del pájaro.",
+          "courseC_maze_programming5_c": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el puzle."
         },
         "courseD_maze_ramp5_2019": {
           "courseC_maze_programming5_a": "Intenta usar el botón \"Paso\" para ejecutar tu código línea por línea. ¿Puedes averiguar lo que tienes que hacer a continuación?",
-          "courseC_maze_programming5_b": "Recuerda que girar a la derecha e izquierda es desde la perspectiva del pájaro.",
-          "courseC_maze_programming5_c": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el desafío."
+          "courseC_maze_programming5_b": "Recuerda que los giros se hacen desde la perspectiva del pájaro.",
+          "courseC_maze_programming5_c": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el puzle."
         },
         "courseD_maze_ramp5_2020": {
           "courseC_maze_programming5_a": "Intenta usar el botón \"Paso\" para ejecutar tu código línea por línea. ¿Puedes averiguar lo que tienes que hacer a continuación?",
-          "courseC_maze_programming5_b": "Recuerda que girar a la derecha e izquierda es desde la perspectiva del pájaro.",
-          "courseC_maze_programming5_c": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el desafío."
+          "courseC_maze_programming5_b": "Recuerda que los giros se hacen desde la perspectiva del pájaro.",
+          "courseC_maze_programming5_c": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el puzle."
         },
         "courseD_maze_ramp5a": {
           "courseC_maze_programming5_a": "Intenta usar el botón \"Paso\" para ejecutar tu código línea por línea. ¿Puedes averiguar lo que tienes que hacer a continuación?",
-          "courseC_maze_programming5_b": "Recuerda que girar a la derecha e izquierda es desde la perspectiva del pájaro.",
-          "courseC_maze_programming5_c": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el desafío."
+          "courseC_maze_programming5_b": "Recuerda que los giros se hacen desde la perspectiva del pájaro.",
+          "courseC_maze_programming5_c": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el puzle."
         },
         "courseD_maze_ramp5a_2018": {
           "courseC_maze_programming5_a": "Intenta usar el botón \"Paso\" para ejecutar tu código línea por línea. ¿Puedes averiguar lo que tienes que hacer a continuación?",
-          "courseC_maze_programming5_b": "Recuerda que girar a la derecha e izquierda es desde la perspectiva del pájaro.",
-          "courseC_maze_programming5_c": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el desafío."
+          "courseC_maze_programming5_b": "Recuerda que los giros se hacen desde la perspectiva del pájaro.",
+          "courseC_maze_programming5_c": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el puzle."
         },
         "courseD_maze_ramp5a_2019": {
           "courseC_maze_programming5_a": "Intenta usar el botón \"Paso\" para ejecutar tu código línea por línea. ¿Puedes averiguar lo que tienes que hacer a continuación?",
           "courseC_maze_programming5_b": "Recuerde que girar a la derecha e izquierda es desde la perspectiva del pájaro.",
-          "courseC_maze_programming5_c": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el desafío."
+          "courseC_maze_programming5_c": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el puzle."
         },
         "courseD_maze_ramp5a_2020": {
           "courseC_maze_programming5_a": "Intenta usar el botón \"Paso\" para ejecutar tu código línea por línea. ¿Puedes averiguar lo que tienes que hacer a continuación?",
           "courseC_maze_programming5_b": "Recuerde que girar a la derecha e izquierda es desde la perspectiva del pájaro.",
-          "courseC_maze_programming5_c": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el desafío."
+          "courseC_maze_programming5_c": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el puzle."
         },
         "courseD_maze_ramp5b": {
           "courseC_maze_programming5_a": "Intenta usar el botón \"Paso\" para ejecutar tu código línea por línea. ¿Puedes averiguar lo que tienes que hacer a continuación?",
-          "courseC_maze_programming5_b": "Recuerda que girar a la derecha e izquierda es desde la perspectiva del pájaro.",
-          "courseC_maze_programming5_c": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el desafío."
+          "courseC_maze_programming5_b": "Recuerda que los giros se hacen desde la perspectiva del pájaro.",
+          "courseC_maze_programming5_c": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el puzle."
         },
         "courseD_maze_ramp5b_2018": {
           "courseC_maze_programming5_a": "Intenta usar el botón \"Paso\" para ejecutar tu código línea por línea. ¿Puedes averiguar lo que tienes que hacer a continuación?",
-          "courseC_maze_programming5_b": "Recuerda que girar a la derecha e izquierda es desde la perspectiva del pájaro.",
-          "courseC_maze_programming5_c": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el desafío."
+          "courseC_maze_programming5_b": "Recuerda que los giros se hacen desde la perspectiva del pájaro.",
+          "courseC_maze_programming5_c": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el puzle."
         },
         "courseD_maze_ramp5b_2019": {
           "courseC_maze_programming5_a": "Intenta usar el botón \"Paso\" para ejecutar tu código línea por línea. ¿Puedes averiguar lo que tienes que hacer a continuación?",
-          "courseC_maze_programming5_b": "Recuerda que girar a la derecha e izquierda es desde la perspectiva del pájaro.",
-          "courseC_maze_programming5_c": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el desafío."
+          "courseC_maze_programming5_b": "Recuerda que los giros se hacen desde la perspectiva del pájaro.",
+          "courseC_maze_programming5_c": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el puzle."
         },
         "courseD_maze_ramp5b_2020": {
           "courseC_maze_programming5_a": "Intenta usar el botón \"Paso\" para ejecutar tu código línea por línea. ¿Puedes averiguar lo que tienes que hacer a continuación?",
-          "courseC_maze_programming5_b": "Recuerda que girar a la derecha e izquierda es desde la perspectiva del pájaro.",
-          "courseC_maze_programming5_c": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el desafío."
+          "courseC_maze_programming5_b": "Recuerda que los giros se hacen desde la perspectiva del pájaro.",
+          "courseC_maze_programming5_c": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el puzle."
         },
         "courseD_maze_ramp6": {
           "courseC_maze_programming6_a": "¡Hay dos formas de resolver este desafío!",
@@ -6971,7 +6971,7 @@
         },
         "courseD_scrat_ramp1": {
           "courseC_maze_programming1_a": "Si Scrat no llega hasta la bellota, asegúrate de que los tres bloques estén juntos y, luego, vuelve a hacer clic en \"Ejecutar\".",
-          "courseC_maze_programming1_b": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el desafío."
+          "courseC_maze_programming1_b": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el puzle."
         },
         "courseD_scrat_ramp2": {
           "courseC_maze_programming2_a": "Para usar un bloque `avanzar`, arrástralo desde la barra de herramientas hacia el espacio de trabajo y conéctalo al bloque `cuando se ejecuta`.",
@@ -6984,7 +6984,7 @@
         "courseD_scrat_ramp4": {
           "courseC_maze_programming4_a": "Puedes girar a la derecha o a la izquierda desde el punto de vista de Scrat. Si estás mirando hacia la derecha, girar a la derecha te hará apuntar hacia abajo.",
           "courseC_maze_programming4_b": "Para seguir el camino, avanza y gira en un sentido, luego muévete de nuevo y gira en el sentido opuesto. Avanza una vez más para alcanzar la bellota.",
-          "courseC_maze_programming4_c": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el desafío."
+          "courseC_maze_programming4_c": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el puzle."
         },
         "courseD_scrat_ramp5": {
           "courseC_maze_programming5_a": "Intenta usar el botón \"Paso\" para ejecutar tu código línea por línea. ¿Puedes averiguar lo que tienes que hacer a continuación?",
@@ -6997,12 +6997,12 @@
         "courseD_scrat_ramp7": {
           "courseD_scrat_programming6_a": "¡Hay dos formas de resolver este desafío!",
           "courseD_scrat_programming6_b": "Recuerda girar primero antes de moverte, ya que Scrat está mirando en la dirección incorrecta.",
-          "courseD_scrat_programming6_c": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el desafío."
+          "courseD_scrat_programming6_c": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el puzle."
         },
         "courseD_scrat_ramp8": {
           "courseD_maze_ramp7_b": "No te olvides de utilizar el botón \"Paso\" para ir bloque por bloque buscando errores.",
           "courseD_maze_ramp7_a": "Usa bloques repetir para ejecutar un solo bloque o un fragmento de código una y otra vez.",
-          "courseD_maze_ramp7_c": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el desafío."
+          "courseD_maze_ramp7_c": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el puzle."
         },
         "courseE_artist_concept1": {
           "courseE_artist_concept1_a": "Los hexágonos tienen lados de 50 pixeles y giros de 60 grados hacia la derecha.",
@@ -8694,7 +8694,7 @@
         "courseC_video_angles": {
           "courseD_scrat_programming6_a": "¡Hay dos formas de resolver este desafío!",
           "courseD_scrat_programming6_b": "Recuerda girar primero antes de moverte, ya que Scrat está mirando en la dirección incorrecta.",
-          "courseD_scrat_programming6_c": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el desafío."
+          "courseD_scrat_programming6_c": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el puzle."
         },
         "courseD_video_nestedLoopsArtist": {
           "courseE_artist_ramp8_a": "Para dibujar un lado, utiliza el bloque `avanzar 100 pixeles`, y cambiar el 100 a un 200.",

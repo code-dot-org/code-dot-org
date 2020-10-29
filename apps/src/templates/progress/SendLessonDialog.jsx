@@ -4,6 +4,7 @@ import i18n from '@cdo/locale';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import Button from '@cdo/apps/templates/Button';
 import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
+import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 
 const styles = {
   dialog: {
@@ -36,6 +37,7 @@ export default class SendLessonDialog extends Component {
   static propTypes = {
     isOpen: PropTypes.bool,
     handleClose: PropTypes.func,
+    lessonUrl: PropTypes.string.isRequired,
     showGoogleButton: PropTypes.bool
   };
 
@@ -43,12 +45,13 @@ export default class SendLessonDialog extends Component {
     return (
       <div>
         <Button
+          id="ui-test-copy-button"
           text=""
           icon="copy"
           iconStyle={styles.buttonIcon}
           color="white"
           style={styles.button}
-          onClick={() => {}} // TODO: Implement this!
+          onClick={() => copyToClipboard(this.props.lessonUrl)}
         />
         {i18n.sendLessonCopyLink()}
       </div>
