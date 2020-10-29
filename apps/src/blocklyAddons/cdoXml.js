@@ -83,7 +83,11 @@ export default function initializeBlocklyXml(blocklyWrapper) {
     //  invisible blocks don't cause the visible blocks to flow
     //  differently, which could leave gaps between the visible blocks.
     const blocks = [];
-    xml.childNodes.forEach(xmlChild => {
+    /**
+     * NodeList.forEach() is not supported on IE. Use Array.prototype.forEach.call() as a workaround.
+     * https://developer.mozilla.org/en-US/docs/Web/API/NodeList/forEach
+     */
+    Array.prototype.forEach.call(xml.childNodes, function(xmlChild) {
       const blockly_block = Blockly.Xml.domToBlock(xmlChild, blockSpace);
       const x = parseInt(xmlChild.getAttribute('x'), 10);
       const y = parseInt(xmlChild.getAttribute('y'), 10);
