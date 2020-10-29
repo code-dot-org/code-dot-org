@@ -110,8 +110,10 @@ class ActivitySectionCardButtons extends Component {
   };
 
   handleCloseAddResource = resourceKey => {
-    this.setState({addResourceOpen: false});
-    this.props.appendResourceLink(resourceKey);
+    this.setState(
+      {addResourceOpen: false},
+      this.props.appendResourceLink(resourceKey)
+    );
   };
 
   handleDeleteTip = tipKey => {
