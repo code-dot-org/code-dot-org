@@ -17,7 +17,7 @@ export default function NewScriptForm() {
         <HelpTip>
           <p>
             The script slug is used to create the link to the script. It is in
-            the format of studio.code.org/s/script_slug_here. A script slug can
+            the format of studio.code.org/s/script-slug-here. A script slug can
             only contain lowercase letters, numbers and dashes. Once you set the
             slug it can not be updated.
           </p>
