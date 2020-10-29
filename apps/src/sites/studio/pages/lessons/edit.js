@@ -7,6 +7,9 @@ import reducers, {
   init,
   emptyActivity
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
+import resourcesEditor, {
+  initResources
+} from '@cdo/apps/lib/levelbuilder/lesson-editor/resourcesEditorRedux';
 import {Provider} from 'react-redux';
 import _ from 'lodash';
 import {LevelStatus} from '@cdo/apps/util/sharedConstants';
@@ -38,7 +41,7 @@ $(document).ready(function() {
     activity.displayName = activity.name || '';
     delete activity.name;
 
-    activity.duration = activity.duration || 0;
+    activity.duration = activity.duration || '';
 
     activity.activitySections.forEach(activitySection => {
       // React key
@@ -81,11 +84,12 @@ $(document).ready(function() {
   // a key until they're saved to the server, which happens after lesson save.
   objectives.forEach(objective => (objective.key = objective.id + ''));
 
-  registerReducers({...reducers});
+  registerReducers({...reducers, resources: resourcesEditor});
   const store = getStore();
 
   //TODO Switch to using real data once we have activity data
   store.dispatch(init(activities, levelKeyList, searchOptions));
+  store.dispatch(initResources(lessonData.resources || []));
 
   ReactDOM.render(
     <Provider store={store}>
@@ -100,7 +104,6 @@ $(document).ready(function() {
         purpose={lessonData.purpose}
         preparation={lessonData.preparation}
         announcements={lessonData.announcements || []}
-        resources={lessonData.resources}
         relatedLessons={relatedLessons}
         objectives={objectives}
       />

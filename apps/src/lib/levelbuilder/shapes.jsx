@@ -65,7 +65,7 @@ export const activityShape = PropTypes.shape({
   key: PropTypes.string,
   displayName: PropTypes.string,
   position: PropTypes.number,
-  duration: PropTypes.number,
+  duration: PropTypes.oneOfType([PropTypes.number, PropTypes.oneOf([''])]),
   activitySections: PropTypes.arrayOf(activitySectionShape)
 });
 
