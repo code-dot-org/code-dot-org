@@ -68,6 +68,7 @@ describe('entry tests', () => {
 
   /** @const {string[]} */
   var ALL_APPS = [
+    'ailab',
     'applab',
     'bounce',
     'calc',
@@ -178,6 +179,12 @@ describe('entry tests', () => {
           cwd: 'node_modules/@code-dot-org/ml-activities/dist/assets',
           src: ['**'],
           dest: 'build/package/media/skins/fish'
+        },
+        {
+          expand: true,
+          cwd: 'node_modules/@code-dot-org/ml-playground/dist/assets',
+          src: ['**'],
+          dest: 'build/package/media/skins/ailab'
         },
 
         // We have to do some weird stuff to get our fallback video player working.

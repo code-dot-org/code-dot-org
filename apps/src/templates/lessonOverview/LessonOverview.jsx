@@ -8,6 +8,7 @@ import {connect} from 'react-redux';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import InlineMarkdown from '@cdo/apps/templates/InlineMarkdown';
 import styleConstants from '@cdo/apps/styleConstants';
 import color from '@cdo/apps/util/color';
 import Button from '@cdo/apps/templates/Button';
@@ -50,15 +51,20 @@ class LessonOverview extends Component {
         lessons: PropTypes.arrayOf(
           PropTypes.shape({
             displayName: PropTypes.string.isRequired,
-            link: PropTypes.string.isRequired
+            link: PropTypes.string.isRequired,
+            position: PropTypes.number.isRequired,
+            lockable: PropTypes.bool.isRequired
           })
         ).isRequired
       }).isRequired,
+      position: PropTypes.number.isRequired,
+      lockable: PropTypes.bool.isRequired,
       displayName: PropTypes.string.isRequired,
       overview: PropTypes.string.isRequired,
       purpose: PropTypes.string.isRequired,
       preparation: PropTypes.string.isRequired,
-      resources: PropTypes.object
+      resources: PropTypes.object.isRequired,
+      objectives: PropTypes.arrayOf(PropTypes.object).isRequired
     }).isRequired,
     activities: PropTypes.array,
 
@@ -126,7 +132,9 @@ class LessonOverview extends Component {
             >
               {lesson.unit.lessons.map((l, index) => (
                 <a key={index} href={this.linkWithQueryParams(l.link)}>
-                  {`${index + 1} ${l.displayName}`}
+                  {l.lockable
+                    ? l.displayName
+                    : `${l.position} ${l.displayName}`}
                 </a>
               ))}
             </DropdownButton>
@@ -139,7 +147,14 @@ class LessonOverview extends Component {
             viewAs={viewAs}
           />
         )}
-        <h1>{lesson.displayName}</h1>
+        <h1>
+          {lesson.lockable
+            ? lesson.displayName
+            : i18n.lessonNumbered({
+                lessonNumber: lesson.position,
+                lessonName: lesson.displayName
+              })}
+        </h1>
 
         <div style={styles.frontPage}>
           <div style={styles.left}>
@@ -153,9 +168,22 @@ class LessonOverview extends Component {
             <LessonAgenda activities={this.props.activities} />
           </div>
           <div style={styles.right}>
+            {lesson.objectives.length > 0 && (
+              <div>
+                <h2>{i18n.objectives()}</h2>
+                <h3>{i18n.objectivesSubheading()}</h3>
+                <ul>
+                  {lesson.objectives.map(objective => (
+                    <li key={objective.id}>
+                      <InlineMarkdown markdown={objective.description} />
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
             <h2>{i18n.preparation()}</h2>
             <SafeMarkdown markdown={lesson.preparation} />
-            {lesson.resources && (
+            {Object.keys(lesson.resources).length > 0 && (
               <div id="resource-section">
                 <h2>{i18n.links()}</h2>
                 {lesson.resources['Teacher'] && (

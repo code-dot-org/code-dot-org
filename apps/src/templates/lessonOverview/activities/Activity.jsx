@@ -21,10 +21,16 @@ export default class Activity extends Component {
     return (
       <div>
         <h2 style={styles.activityHeader} id={`activity-${activity.key}`}>
-          {i18n.activityHeader({
-            activityName: activity.displayName,
-            activityDuration: activity.duration
+          {i18n.activityHeaderName({
+            activityName: activity.displayName
           })}
+          {activity.duration > 0 && (
+            <span>
+              {i18n.activityHeaderTime({
+                activityDuration: activity.duration
+              })}
+            </span>
+          )}
         </h2>
         {activity.activitySections.map(item => {
           return <ActivitySection key={item.key} section={item} />;

@@ -17,7 +17,8 @@ describe('ScriptEditor', () => {
     name: 'test-script',
     scriptFamilies: [],
     teacherResources: [],
-    versionYearOptions: []
+    versionYearOptions: [],
+    familyName: ''
   };
 
   describe('Script Editor', () => {
@@ -27,7 +28,7 @@ describe('ScriptEditor', () => {
       expect(wrapper.find('input[type="checkbox"]').length).to.equal(11);
       expect(wrapper.find('textarea').length).to.equal(2);
       expect(wrapper.find('select').length).to.equal(5);
-      expect(wrapper.find('CollapsibleEditorSection').length).to.equal(6);
+      expect(wrapper.find('CollapsibleEditorSection').length).to.equal(7);
     });
 
     it('has correct markdown for preview of unit description', () => {
@@ -38,6 +39,24 @@ describe('ScriptEditor', () => {
       ).to.equal(
         '# Title \n This is the unit description with [link](https://studio.code.org/home) **Bold** *italics*'
       );
+    });
+
+    it('must set family name in order to check standalone course', () => {
+      const wrapper = mount(<ScriptEditor {...DEFAULT_PROPS} hidden={false} />);
+      let courseCheckbox = wrapper.find('input[name="is_course"]');
+      let familyNameSelect = wrapper.find('select[name="family_name"]');
+
+      expect(courseCheckbox.props().disabled).to.be.true;
+      expect(familyNameSelect.props().value).to.equal('');
+
+      familyNameSelect.simulate('change', {target: {value: 'Family'}});
+
+      // have to re-find the items inorder to see updates
+      courseCheckbox = wrapper.find('input[name="is_course"]');
+      familyNameSelect = wrapper.find('select[name="family_name"]');
+
+      expect(familyNameSelect.props().value).to.equal('Family');
+      expect(courseCheckbox.props().disabled).to.be.false;
     });
   });
 
