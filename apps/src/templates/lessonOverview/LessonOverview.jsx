@@ -51,10 +51,14 @@ class LessonOverview extends Component {
         lessons: PropTypes.arrayOf(
           PropTypes.shape({
             displayName: PropTypes.string.isRequired,
-            link: PropTypes.string.isRequired
+            link: PropTypes.string.isRequired,
+            position: PropTypes.number.isRequired,
+            lockable: PropTypes.bool.isRequired
           })
         ).isRequired
       }).isRequired,
+      position: PropTypes.number.isRequired,
+      lockable: PropTypes.bool.isRequired,
       displayName: PropTypes.string.isRequired,
       overview: PropTypes.string.isRequired,
       purpose: PropTypes.string.isRequired,
@@ -128,7 +132,9 @@ class LessonOverview extends Component {
             >
               {lesson.unit.lessons.map((l, index) => (
                 <a key={index} href={this.linkWithQueryParams(l.link)}>
-                  {`${index + 1} ${l.displayName}`}
+                  {l.lockable
+                    ? l.displayName
+                    : `${l.position} ${l.displayName}`}
                 </a>
               ))}
             </DropdownButton>
@@ -141,7 +147,14 @@ class LessonOverview extends Component {
             viewAs={viewAs}
           />
         )}
-        <h1>{lesson.displayName}</h1>
+        <h1>
+          {lesson.lockable
+            ? lesson.displayName
+            : i18n.lessonNumbered({
+                lessonNumber: lesson.position,
+                lessonName: lesson.displayName
+              })}
+        </h1>
 
         <div style={styles.frontPage}>
           <div style={styles.left}>
