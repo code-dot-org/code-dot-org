@@ -21,15 +21,21 @@ describe('LessonOverview', () => {
           lessons: [
             {
               displayName: 'Lesson 1',
-              link: '/lessons/1'
+              link: '/lessons/1',
+              position: 1,
+              lockable: false
             },
             {
               displayName: 'Lesson 2',
-              link: '/lessons/2'
+              link: '/lessons/2',
+              position: 2,
+              lockable: false
             }
           ]
         },
-        displayName: 'Lesson Name',
+        position: 1,
+        lockable: false,
+        displayName: 'Lesson 1',
         overview: 'Lesson Overview',
         purpose: 'The purpose of the lesson is for people to learn',
         preparation: '- One',
@@ -71,7 +77,7 @@ describe('LessonOverview', () => {
     const dropdown = wrapper.find('DropdownButton');
     expect(dropdown.find('a').length).to.equal(2);
 
-    expect(wrapper.contains('Lesson Name'), 'Lesson Name').to.be.true;
+    expect(wrapper.contains('Lesson 1: Lesson 1'), 'Lesson Name').to.be.true;
 
     const safeMarkdowns = wrapper.find('SafeMarkdown');
     expect(safeMarkdowns.at(0).props().markdown).to.contain('Lesson Overview');

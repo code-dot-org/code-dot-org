@@ -7,6 +7,11 @@ import 'react-select/dist/react-select.css';
 import color from '@cdo/apps/util/color';
 import AddResourceDialog from './AddResourceDialog';
 import Button from '@cdo/apps/templates/Button';
+import {connect} from 'react-redux';
+import {
+  addResource,
+  removeResource
+} from '@cdo/apps/lib/levelbuilder/lesson-editor/resourcesEditorRedux';
 
 const styles = {
   resourceSearch: {
@@ -31,16 +36,17 @@ const styles = {
   }
 };
 
-export default class ResourcesEditor extends Component {
+class ResourcesEditor extends Component {
   static propTypes = {
-    resources: PropTypes.arrayOf(resourceShape)
+    resources: PropTypes.arrayOf(resourceShape),
+    addResource: PropTypes.func.isRequired,
+    removeResource: PropTypes.func.isRequired
   };
 
   constructor(props) {
     super(props);
 
     this.state = {
-      resources: props.resources || [],
       resourceInput: '',
       searchValue: '',
       newResourceDialogOpen: false
@@ -74,7 +80,7 @@ export default class ResourcesEditor extends Component {
     fetch(searchUrl, {headers: {'X-Requested-With': 'XMLHttpRequest'}})
       .then(response => (response.ok ? response.json() : []))
       .then(json => {
-        const resourceKeysAdded = this.state['resources'].map(
+        const resourceKeysAdded = this.props.resources.map(
           resource => resource.key
         );
         const resources = json
@@ -107,16 +113,11 @@ export default class ResourcesEditor extends Component {
   };
 
   addResource = resource => {
-    var {resources} = this.state;
-    resources = resources.concat([resource]);
-    this.setState({resources});
+    this.props.addResource(resource);
   };
 
   handleRemove = key => {
-    const {resources} = this.state;
-    const resourceToRemove = resources.find(resource => resource.key === key);
-    resources.splice(resources.indexOf(resourceToRemove), 1);
-    this.setState({resources});
+    this.props.removeResource(key);
   };
 
   handleAddResourceClick = e => {
@@ -140,7 +141,7 @@ export default class ResourcesEditor extends Component {
         <input
           type="hidden"
           name="resources"
-          value={JSON.stringify(this.state.resources.map(r => r.key))}
+          value={JSON.stringify(this.props.resources.map(r => r.key))}
         />
         <div style={styles.resourceBox}>
           <div style={styles.resourceSearch}>
@@ -167,7 +168,7 @@ export default class ResourcesEditor extends Component {
               </tr>
             </thead>
             <tbody>
-              {this.state.resources.map((resource, index) => (
+              {this.props.resources.map((resource, index) => (
                 <tr
                   key={resource.key}
                   style={index % 2 === 1 ? styles.oddRow : {}}
@@ -201,3 +202,15 @@ export default class ResourcesEditor extends Component {
     );
   }
 }
+
+export const UnconnectedResourcesEditor = ResourcesEditor;
+
+export default connect(
+  state => ({
+    resources: state.resources
+  }),
+  {
+    addResource,
+    removeResource
+  }
+)(ResourcesEditor);

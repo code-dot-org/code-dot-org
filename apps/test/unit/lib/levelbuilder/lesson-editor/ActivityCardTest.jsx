@@ -73,6 +73,6 @@ describe('ActivityCard', () => {
 
     const titleInput = wrapper.find('input').at(1);
     titleInput.simulate('change', {target: {value: '1000'}});
-    expect(updateActivityField).to.have.been.calledWith(1, 'duration', '1000');
+    expect(updateActivityField).to.have.been.calledWith(1, 'duration', 1000);
   });
 });
