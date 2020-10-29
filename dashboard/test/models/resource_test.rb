@@ -47,8 +47,8 @@ class ResourceTest < ActiveSupport::TestCase
     assert_equal 'my_students_projects_code.org', resource.key
   end
 
-  test "resource names downcased for key generation" do
-    resource = create :resource, key: nil, name: "Plotting Shapes"
+  test "resource downcases and strips whitespace for key generation" do
+    resource = create :resource, key: nil, name: "   Plotting Shapes "
     assert_equal 'plotting_shapes', resource.key
   end
 
