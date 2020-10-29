@@ -8,6 +8,7 @@ import {
   minOneFeatureSelected,
   oneLabelSelected,
   uniqLabelFeaturesSelected,
+  selectedColumnsHaveDatatype,
   trainerSelected,
   compatibleLabelAndTrainer
 } from "./validate.js";
@@ -250,6 +251,12 @@ export function getCategoricalColumns(state) {
   return filterColumnsByType(state, ColumnTypes.CATEGORICAL);
 }
 
+export function getSelectedColumns(state) {
+  return state.selectedFeatures
+    .concat(state.labelColumn)
+    .filter(column => column !== undefined && column !== "");
+}
+
 export function getSelectedCategoricalColumns(state) {
   let intersection = getCategoricalColumns(state).filter(x =>
     state.selectedFeatures.includes(x)
@@ -386,6 +393,13 @@ export function validationMessages(state) {
     errorString:
       "A column can not be selected as a both a feature and a label.",
     successString: "Label and feature(s) columns are unique."
+  });
+  validationMessages.push({
+    readyToTrain: selectedColumnsHaveDatatype(state),
+    errorString:
+      "Feature and label columns must contain only continuous or categorical data.",
+    successString:
+      "Selected features and label contain continiuous or categorical data"
   });
   validationMessages.push({
     readyToTrain: trainerSelected(state),
