@@ -405,7 +405,7 @@ export default class ScriptEditor extends React.Component {
                   name="is_course"
                   type="checkbox"
                   checked={this.state.isCourse}
-                  disabled={!this.state.familyName || this.props.hasCourse}
+                  disabled={!this.state.familyName}
                   style={styles.checkbox}
                   onChange={this.handleStandaloneCourseChange}
                 />
