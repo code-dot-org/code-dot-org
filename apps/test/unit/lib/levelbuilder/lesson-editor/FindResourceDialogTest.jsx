@@ -1,15 +1,18 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../../../util/reconfiguredChai';
-import FindResourceDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/FindResourceDialog';
+import {UnconnectedFindResourceDialog as FindResourceDialog} from '@cdo/apps/lib/levelbuilder/lesson-editor/FindResourceDialog';
 import sinon from 'sinon';
+import resourceTestData from './resourceTestData';
 
 describe('FindResourceDialog', () => {
   let defaultProps;
   beforeEach(() => {
     defaultProps = {
       isOpen: true,
-      handleConfirm: sinon.spy()
+      handleConfirm: sinon.spy(),
+      handleClose: sinon.spy(),
+      resources: resourceTestData
     };
   });
 
