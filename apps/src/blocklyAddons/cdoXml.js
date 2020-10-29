@@ -46,12 +46,11 @@ export default function initializeBlocklyXml(blocklyWrapper) {
     const verticalSpaceBetweenBlocks = 10;
 
     // Block positioning rules:
-    //  if the block has been given an absolute X coordinate, use it
-    //  (taking into account that RTL languages position from the left)
-    //  if the block has been given an absolute Y coordinate, use it
-    //  otherwise, the block "flows" with the other blocks from top to
-    //  bottom. Any block positioned absolutely with Y does not influence
-    //  the flow of the other blocks.
+    // If the block XML has X/Y coordinates, use them to set the block
+    // position. Note that RTL languages position from the left.
+    // Otherwise, position the block in line with other blocks,
+    // flowing from top to bottom. Blocks with absolute Y positions
+    // do not influence the placement of other blocks.
     let cursor = {
       x: blockSpace.RTL ? width - padding : padding,
       y: padding
