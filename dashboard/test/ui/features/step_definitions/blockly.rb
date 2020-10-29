@@ -197,6 +197,7 @@ Then(/^block "([^"]*)" has (not )?been deleted$/) do |block_id, negation|
 end
 
 Then /^block "([^"]*)" has class "(.*?)"$/ do |block_id, class_name|
+  id_selector = get_id_selector
   item = @browser.find_element(:css, "g[#{id_selector}='#{get_block_id(block_id)}']")
   classes = item.attribute("class")
   expect(classes.include?(class_name)).to eq(true)
