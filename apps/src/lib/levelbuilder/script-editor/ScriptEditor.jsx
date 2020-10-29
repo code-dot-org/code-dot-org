@@ -231,9 +231,10 @@ export default class ScriptEditor extends React.Component {
             />
             <HelpTip>
               <p>
-                By default students start in the summary view. When this box is
-                checked, we instead stick everyone into detail view to start for
-                this script.
+                By default students start in the summary view (only shows the
+                levels). When this box is checked, we instead stick everyone
+                into detail view (shows the levels broken into progression) to
+                start for this script.
               </p>
             </HelpTip>
           </label>
@@ -307,12 +308,21 @@ export default class ScriptEditor extends React.Component {
           )}
           <label>
             Wrap-up Video
+            <HelpTip>
+              <p>
+                Deprecated setting only used for older courses. Please add
+                videos in levels instead.
+              </p>
+            </HelpTip>
             <input
               name="wrapup_video"
               defaultValue={this.props.wrapupVideo}
               style={styles.input}
             />
           </label>
+        </CollapsibleEditorSection>
+
+        <CollapsibleEditorSection title="Announcements">
           <AnnouncementsEditor
             defaultAnnouncements={this.props.announcements}
             inputStyle={styles.input}
@@ -374,6 +384,16 @@ export default class ScriptEditor extends React.Component {
                       a course, and redirecting to the latest version of a
                       specific unit within a course is deprecated. Please go to
                       the course page to edit this field.
+                    </p>
+                  </HelpTip>
+                )}
+                {!this.props.hasCourse && (
+                  <HelpTip>
+                    <p>
+                      The family name is used to group together scripts that are
+                      different version years of the same standalone course so
+                      that users can be redirected between different version
+                      years.
                     </p>
                   </HelpTip>
                 )}
@@ -488,14 +508,16 @@ export default class ScriptEditor extends React.Component {
               </p>
             </HelpTip>
           </label>
-          <label>
-            Curriculum Path
-            <input
-              name="curriculum_path"
-              defaultValue={this.props.curriculumPath}
-              style={styles.input}
-            />
-          </label>
+          {!this.props.beta && (
+            <label>
+              Curriculum Path
+              <input
+                name="curriculum_path"
+                defaultValue={this.props.curriculumPath}
+                style={styles.input}
+              />
+            </label>
+          )}
           <label>
             Allow Teachers to Hide Lessons
             <input
@@ -516,10 +538,12 @@ export default class ScriptEditor extends React.Component {
             projectWidgetTypes={this.props.projectWidgetTypes}
             projectWidgetVisible={this.props.projectWidgetVisible}
           />
-          <LessonDescriptions
-            scriptName={this.props.name}
-            currentDescriptions={this.props.i18nData.stageDescriptions}
-          />
+          {!this.props.beta && (
+            <LessonDescriptions
+              scriptName={this.props.name}
+              currentDescriptions={this.props.i18nData.stageDescriptions}
+            />
+          )}
         </CollapsibleEditorSection>
 
         <CollapsibleEditorSection title="Teacher Resources Settings">
