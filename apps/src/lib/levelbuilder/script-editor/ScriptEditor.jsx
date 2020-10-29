@@ -374,6 +374,15 @@ export default class ScriptEditor extends React.Component {
                     </p>
                   </HelpTip>
                 )}
+                {!this.props.hasCourse && (
+                  <HelpTip>
+                    <p>
+                      The family name is associate scripts that are standalone
+                      courses so that users can be redirected between different
+                      version years.
+                    </p>
+                  </HelpTip>
+                )}
               </label>
               <label>
                 Version Year
