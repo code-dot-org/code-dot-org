@@ -8,6 +8,7 @@ import {connect} from 'react-redux';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import InlineMarkdown from '@cdo/apps/templates/InlineMarkdown';
 import styleConstants from '@cdo/apps/styleConstants';
 import color from '@cdo/apps/util/color';
 import LessonNavigationDropdown from '@cdo/apps/templates/lessonOverview/LessonNavigationDropdown';
@@ -130,9 +131,22 @@ class LessonOverview extends Component {
             <LessonAgenda activities={this.props.activities} />
           </div>
           <div style={styles.right}>
+            {lesson.objectives.length > 0 && (
+              <div>
+                <h2>{i18n.objectives()}</h2>
+                <h3>{i18n.objectivesSubheading()}</h3>
+                <ul>
+                  {lesson.objectives.map(objective => (
+                    <li key={objective.id}>
+                      <InlineMarkdown markdown={objective.description} />
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
             <h2>{i18n.preparation()}</h2>
             <SafeMarkdown markdown={lesson.preparation} />
-            {lesson.resources && (
+            {Object.keys(lesson.resources).length > 0 && (
               <div id="resource-section">
                 <h2>{i18n.links()}</h2>
                 {lesson.resources['Teacher'] && (
