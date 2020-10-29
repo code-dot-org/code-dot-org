@@ -28,6 +28,23 @@ export function uniqueColumnNames(state) {
   return columnsNamed(state) && columnNames.length === uniqueColumnNames.length;
 }
 
+export function emptyCellFinder(state) {
+  let columns = getColumnNames(state);
+  let emptyCells = [];
+  state.data.forEach(function(row, i) {
+    columns.forEach(function(column) {
+      if (row[column] === "" || row[column] === undefined) {
+        emptyCells.push({ row: i, column: column });
+      }
+    });
+  });
+  return emptyCells;
+}
+
+export function noEmptyCells(state) {
+  return datasetUploaded(state) && emptyCellFinder(state).length === 0;
+}
+
 export function minOneFeatureSelected(state) {
   return state.selectedFeatures.length !== 0;
 }

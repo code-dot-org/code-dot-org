@@ -7,6 +7,7 @@ import {
 import {
   datasetUploaded,
   uniqueColumnNames,
+  noEmptyCells,
   minOneFeatureSelected,
   oneLabelSelected,
   uniqLabelFeaturesSelected,
@@ -387,6 +388,11 @@ export function validationMessages(state) {
     errorString:
       "Each column must have a name, and column names must be unique.",
     successString: "Each column has a unique name."
+  });
+  validationMessages.push({
+    readyToTrain: noEmptyCells(state),
+    errorString: "There can't be any empty cells.",
+    successString: "Each cell has a value!"
   });
   validationMessages.push({
     readyToTrain: oneLabelSelected(state),
