@@ -227,9 +227,10 @@ export default class ScriptEditor extends React.Component {
             />
             <HelpTip>
               <p>
-                By default students start in the summary view. When this box is
-                checked, we instead stick everyone into detail view to start for
-                this script.
+                By default students start in the summary view (only shows the
+                levels). When this box is checked, we instead stick everyone
+                into detail view (shows the levels broken into progression) to
+                start for this script.
               </p>
             </HelpTip>
           </label>
