@@ -2,15 +2,21 @@
 
 import { availableTrainers } from "./train.js";
 
+// Checks to see if there is any data.
+// @return {boolean}
 export function datasetUploaded(state) {
   return state.data.length > 0;
 }
 
+// Gets the names of each column in the dataset.
+// @return {array} of {string} column names
 export function getColumnNames(state) {
   const columnNames = datasetUploaded(state) ? Object.keys(state.data[0]) : [];
   return columnNames;
 }
 
+// Checks that each column is named.
+// @return {boolean}
 export function columnsNamed(state) {
   const columnNames = getColumnNames(state);
   return (
@@ -20,6 +26,8 @@ export function columnsNamed(state) {
   );
 }
 
+// Checks that each column is named, and that the names are unique.
+// @return {boolean}
 export function uniqueColumnNames(state) {
   const columnNames = getColumnNames(state);
   const uniqueColumnNames = columnNames.filter(
@@ -28,6 +36,15 @@ export function uniqueColumnNames(state) {
   return columnsNamed(state) && columnNames.length === uniqueColumnNames.length;
 }
 
+/* Iterates through the data and tracks location of empty cells.
+  @return {array} of {objects} indicating where the empty cells are.
+  [
+    {
+      row: index,
+      column: columnName
+    }
+  ]
+*/
 export function emptyCellFinder(state) {
   let columns = getColumnNames(state);
   let emptyCells = [];
@@ -41,18 +58,26 @@ export function emptyCellFinder(state) {
   return emptyCells;
 }
 
+// Checks if there are any identified empty cells in dataset.
+// @return {boolean}
 export function noEmptyCells(state) {
   return datasetUploaded(state) && emptyCellFinder(state).length === 0;
 }
 
+// Checks if at least one feature is selected.
+// @return {boolean}
 export function minOneFeatureSelected(state) {
   return state.selectedFeatures.length !== 0;
 }
 
+// Checks if one label is selected.
+// @return {boolean}
 export function oneLabelSelected(state) {
   return !!state.labelColumn;
 }
 
+// Checks that the same column is not selected as both a label and a feature.
+// @return {boolean}
 export function uniqLabelFeaturesSelected(state) {
   return (
     minOneFeatureSelected(state) &&
@@ -61,10 +86,15 @@ export function uniqLabelFeaturesSelected(state) {
   );
 }
 
+// Checks that a training algorithm has been selected.
+// @return {boolean}
 export function trainerSelected(state) {
   return !!state.selectedTrainer;
 }
 
+/* Checks that a training algorithm and the selected label datatype are compatible. Classification algorithms only work with categorical data, and regression algorithms only work with continuous data.
+ @return {boolean}
+ */
 export function compatibleLabelAndTrainer(state) {
   const labelAndTrainerSelected =
     oneLabelSelected(state) && trainerSelected(state);
