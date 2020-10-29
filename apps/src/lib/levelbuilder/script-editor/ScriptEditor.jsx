@@ -386,9 +386,10 @@ export default class ScriptEditor extends React.Component {
                 {!this.props.hasCourse && (
                   <HelpTip>
                     <p>
-                      The family name is associate scripts that are standalone
-                      courses so that users can be redirected between different
-                      version years.
+                      The family name is used to group together scripts that are
+                      different version years of the same standalone course so
+                      that users can be redirected between different version
+                      years.
                     </p>
                   </HelpTip>
                 )}
