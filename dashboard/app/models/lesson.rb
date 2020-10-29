@@ -313,7 +313,8 @@ class Lesson < ActiveRecord::Base
       purpose: purpose || '',
       preparation: preparation || '',
       activities: lesson_activities.map(&:summarize_for_lesson_show),
-      resources: resources_for_lesson_plan(user&.authorized_teacher?)
+      resources: resources_for_lesson_plan(user&.authorized_teacher?),
+      objectives: objectives.map(&:summarize_for_lesson_show)
     }
   end
 
