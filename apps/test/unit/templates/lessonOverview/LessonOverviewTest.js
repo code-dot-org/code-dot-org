@@ -51,7 +51,8 @@ describe('LessonOverview', () => {
               type: 'Activity Guide'
             }
           ]
-        }
+        },
+        objectives: [{id: 1, description: 'what students will learn'}]
       },
       activities: [],
       announcements: [],
@@ -78,6 +79,11 @@ describe('LessonOverview', () => {
       'The purpose of the lesson is for people to learn'
     );
     expect(safeMarkdowns.at(2).props().markdown).to.contain('- One');
+
+    const inlineMarkdowns = wrapper.find('InlineMarkdown');
+    expect(inlineMarkdowns.at(0).props().markdown).to.contain(
+      'what students will learn'
+    );
 
     expect(wrapper.find('LessonAgenda').length).to.equal(1);
   });
