@@ -1,16 +1,19 @@
 import React from 'react';
 import {shallow} from 'enzyme';
+import sinon from 'sinon';
 import {expect} from '../../../../util/reconfiguredChai';
-import ResourcesEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/ResourcesEditor';
+import {UnconnectedResourcesEditor as ResourcesEditor} from '@cdo/apps/lib/levelbuilder/lesson-editor/ResourcesEditor';
 import resourceTestData from './resourceTestData';
 
 describe('ResourcesEditor', () => {
-  let defaultProps;
+  let defaultProps, addResource, removeResource;
   beforeEach(() => {
+    addResource = sinon.spy();
+    removeResource = sinon.spy();
     defaultProps = {
       resources: resourceTestData,
-      typeOptions: ['Activity Guide', 'Handout'],
-      audienceOptions: ['Teacher', 'Student']
+      addResource,
+      removeResource
     };
   });
 
@@ -29,18 +32,17 @@ describe('ResourcesEditor', () => {
       .first()
       .parent();
     removeResourceButton.simulate('mouseDown');
-    expect(wrapper.find('tr').length).to.equal(numResources - 1);
+    expect(removeResource).to.have.been.calledOnce;
   });
 
   it('can add a resource', () => {
     const wrapper = shallow(<ResourcesEditor {...defaultProps} />);
-    const numResources = wrapper.find('tr').length;
     wrapper.instance().addResource({
       key: 'added-resource',
       name: 'name of resource',
       url: 'fake.fake',
       properties: {}
     });
-    expect(wrapper.find('tr').length).to.equal(numResources + 1);
+    expect(addResource).to.have.been.calledOnce;
   });
 });
