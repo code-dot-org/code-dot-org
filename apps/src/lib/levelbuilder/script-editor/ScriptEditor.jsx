@@ -104,7 +104,8 @@ export default class ScriptEditor extends React.Component {
     super(props);
 
     this.state = {
-      curriculumUmbrella: this.props.curriculumUmbrella
+      familyName: this.props.familyName || '',
+      isCourse: this.props.isCourse
     };
   }
 
@@ -114,9 +115,12 @@ export default class ScriptEditor extends React.Component {
       .removeAttr('selected', true);
   };
 
-  handleUmbrellaSelectChange = event => {
-    const curriculumUmbrella = event.target.value;
-    this.setState({curriculumUmbrella});
+  handleFamilyNameChange = event => {
+    this.setState({familyName: event.target.value});
+  };
+
+  handleStandaloneCourseChange = () => {
+    this.setState({isCourse: !this.state.isCourse});
   };
 
   presubmit = e => {
@@ -324,7 +328,6 @@ export default class ScriptEditor extends React.Component {
                   name="curriculum_umbrella"
                   style={styles.dropdown}
                   defaultValue={this.props.curriculumUmbrella}
-                  onChange={this.handleUmbrellaSelectChange}
                 >
                   <option value="">(None)</option>
                   {CURRICULUM_UMBRELLAS.map(curriculumUmbrella => (
@@ -352,11 +355,12 @@ export default class ScriptEditor extends React.Component {
                 Family Name
                 <select
                   name="family_name"
-                  defaultValue={this.props.familyName}
+                  value={this.state.familyName}
                   style={styles.dropdown}
                   disabled={this.props.hasCourse}
+                  onChange={this.handleFamilyNameChange}
                 >
-                  <option value="">(None)</option>
+                  {!this.state.isCourse && <option value="">(None)</option>}
                   {this.props.scriptFamilies.map(familyOption => (
                     <option key={familyOption} value={familyOption}>
                       {familyOption}
@@ -370,6 +374,14 @@ export default class ScriptEditor extends React.Component {
                       a course, and redirecting to the latest version of a
                       specific unit within a course is deprecated. Please go to
                       the course page to edit this field.
+                    </p>
+                  </HelpTip>
+                )}
+                {this.state.isCourse && (
+                  <HelpTip>
+                    <p>
+                      If you want to clear the family name you need to uncheck
+                      standalone course.
                     </p>
                   </HelpTip>
                 )}
@@ -401,6 +413,42 @@ export default class ScriptEditor extends React.Component {
                 )}
               </label>
               <label>
+                Is a Standalone Course
+                <input
+                  name="is_course"
+                  type="checkbox"
+                  checked={this.state.isCourse}
+                  disabled={!this.state.familyName}
+                  style={styles.checkbox}
+                  onChange={this.handleStandaloneCourseChange}
+                />
+                {this.state.familyName && !this.props.hasCourse && (
+                  <HelpTip>
+                    <p>
+                      (Still in development) If checked, indicates that this
+                      Unit represents a standalone course. Examples of such
+                      Units include CourseA-F, Express, and Pre-Express.
+                    </p>
+                  </HelpTip>
+                )}
+                {!this.state.familyName && !this.props.hasCourse && (
+                  <HelpTip>
+                    <p>
+                      You must select a family name in order to mark something
+                      as a standalone course.
+                    </p>
+                  </HelpTip>
+                )}
+                {this.props.hasCourse && (
+                  <HelpTip>
+                    <p>
+                      This unit is already part of a course so it can not be a
+                      standalone course.
+                    </p>
+                  </HelpTip>
+                )}
+              </label>
+              <label>
                 Can be recommended (aka stable)
                 <input
                   name="is_stable"
@@ -420,22 +468,6 @@ export default class ScriptEditor extends React.Component {
                 visible={!this.props.hidden}
                 pilotExperiment={this.props.pilotExperiment}
               />
-              <label>
-                Is a Standalone Course
-                <input
-                  name="is_course"
-                  type="checkbox"
-                  defaultChecked={this.props.isCourse}
-                  style={styles.checkbox}
-                />
-                <HelpTip>
-                  <p>
-                    (Still in development) If checked, indicates that this Unit
-                    represents a standalone course. Examples of such Units
-                    include CourseA-F, Express, and Pre-Express.
-                  </p>
-                </HelpTip>
-              </label>
             </div>
           )}
         </CollapsibleEditorSection>
