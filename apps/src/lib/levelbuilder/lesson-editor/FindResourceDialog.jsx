@@ -26,9 +26,8 @@ class FindResourceDialog extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectedResourceKey: this.props.resources[0]
-        ? this.props.resources[0].key
-        : ''
+      selectedResourceKey:
+        this.props.resources.length > 0 ? this.props.resources[0].key : ''
     };
   }
 
