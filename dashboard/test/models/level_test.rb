@@ -1129,7 +1129,7 @@ class LevelTest < ActiveSupport::TestCase
   test "get search options" do
     search_options = Level.search_options
     assert_equal search_options[:levelOptions].map {|option| option[0]}, [
-      "All types", "Applab", "Artist", "Bounce", "BubbleChoice", "Calc", "ContractMatch",
+      "All types", "Ailab", "Applab", "Artist", "Bounce", "BubbleChoice", "Calc", "ContractMatch",
       "Craft", "CurriculumReference", "Dancelab", "Eval", "EvaluationMulti", "External",
       "ExternalLink", "Fish", "Flappy", "FreeResponse", "FrequencyAnalysis", "Gamelab",
       "GamelabJr", "Karel", "LevelGroup", "Map", "Match", "Maze", "Multi", "NetSim",
