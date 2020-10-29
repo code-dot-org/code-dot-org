@@ -9,6 +9,7 @@ import {
   oneLabelSelected,
   uniqLabelFeaturesSelected,
   selectedColumnsHaveDatatype,
+  continuousColumnsHaveOnlyNumbers,
   trainerSelected,
   compatibleLabelAndTrainer
 } from "./validate.js";
@@ -265,8 +266,8 @@ export function getSelectedCategoricalColumns(state) {
 }
 
 export function getSelectedContinuousColumns(state) {
-  let intersection = getContinuousColumns(state).filter(x =>
-    state.selectedFeatures.includes(x)
+  let intersection = getContinuousColumns(state).filter(
+    x => state.selectedFeatures.includes(x) || x === state.labelColumn
   );
   return intersection;
 }
@@ -295,6 +296,21 @@ export function getUniqueOptionsByColumn(state) {
     column => (uniqueOptionsByColumn[column] = getUniqueOptions(state, column))
   );
   return uniqueOptionsByColumn;
+}
+
+export function getRangesByColumn(state) {
+  let rangesByColumn = {};
+  getSelectedContinuousColumns(state).map(
+    column => (rangesByColumn[column] = getRange(state, column))
+  );
+  return rangesByColumn;
+}
+
+export function getRange(state, column) {
+  let range = {};
+  range.max = Math.max(...state.data.map(row => parseFloat(row[column])));
+  range.min = Math.min(...state.data.map(row => parseFloat(row[column])));
+  return range;
 }
 
 function getKeyByValue(object, value) {
@@ -374,6 +390,11 @@ export function validationMessages(state) {
       "Feature and label columns must contain only continuous or categorical data.",
     successString:
       "Selected features and label contain continuous or categorical data"
+  });
+  validationMessages.push({
+    readyToTrain: continuousColumnsHaveOnlyNumbers(state),
+    errorString: "Continuous columns should contain only numbers.",
+    successString: "Continuous columns contain only numbers."
   });
   validationMessages.push({
     readyToTrain: trainerSelected(state),

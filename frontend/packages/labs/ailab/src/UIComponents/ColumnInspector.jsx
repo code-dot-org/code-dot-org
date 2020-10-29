@@ -5,9 +5,10 @@ import { connect } from "react-redux";
 import {
   getSelectedColumns,
   setColumnsByDataType,
-  getUniqueOptionsByColumn
+  getUniqueOptionsByColumn,
+  getRangesByColumn
 } from "../redux";
-import { ColumnTypes } from "../constants.js";
+import { ColumnTypes, styles } from "../constants.js";
 
 class ColumnInspector extends Component {
   static propTypes = {
@@ -16,7 +17,9 @@ class ColumnInspector extends Component {
     columnsByDataType: PropTypes.object,
     setColumnsByDataType: PropTypes.func.isRequired,
     getUniqueOptionsByColumn: PropTypes.func,
-    uniqueOptionsByColumn: PropTypes.object
+    uniqueOptionsByColumn: PropTypes.object,
+    getRangesByColumn: PropTypes.func,
+    rangesByColumn: PropTypes.object
   };
 
   handleChangeDataType = (event, feature) => {
@@ -83,6 +86,25 @@ class ColumnInspector extends Component {
                         )}
                       </div>
                     )}
+                    {this.props.columnsByDataType[column] ===
+                      ColumnTypes.CONTINUOUS && (
+                      <div>
+                        {this.props.rangesByColumn[column] && (
+                          <div>
+                            {isNaN(this.props.rangesByColumn[column].min) && (
+                              <p style={styles.error}>
+                                Continuous columns should contain only numbers.
+                              </p>
+                            )}
+                            <br />
+                            min: {this.props.rangesByColumn[column].min}
+                            <br />
+                            <br />
+                            max: {this.props.rangesByColumn[column].max}
+                          </div>
+                        )}
+                      </div>
+                    )}
                     <br />
                     <br />
                   </div>
@@ -100,7 +122,8 @@ export default connect(
   state => ({
     selectedColumns: getSelectedColumns(state),
     columnsByDataType: state.columnsByDataType,
-    uniqueOptionsByColumn: getUniqueOptionsByColumn(state)
+    uniqueOptionsByColumn: getUniqueOptionsByColumn(state),
+    rangesByColumn: getRangesByColumn(state)
   }),
   dispatch => ({
     setColumnsByDataType(column, dataType) {

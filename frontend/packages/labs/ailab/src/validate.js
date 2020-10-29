@@ -2,6 +2,7 @@
 
 import { availableTrainers } from "./train.js";
 import { ColumnTypes } from "./constants.js";
+import { getSelectedContinuousColumns } from "./redux.js";
 
 export function minOneFeatureSelected(state) {
   return state.selectedFeatures.length !== 0;
@@ -34,6 +35,22 @@ export function selectedColumnsHaveDatatype(state) {
     }
   }
   return selectedColumns.length > 0 && columnTypesOk;
+}
+
+// Check that selected continuous columns only contain numbers.
+// @return {boolean}
+export function continuousColumnsHaveOnlyNumbers(state) {
+  const columns = getSelectedContinuousColumns(state);
+  let allNumbers = true;
+  state.data.forEach(function(row, i) {
+    for (const column of columns) {
+      if (isNaN(parseFloat(row[column]))) {
+        allNumbers = false;
+        return allNumbers;
+      }
+    }
+  });
+  return columns.length > 0 && allNumbers;
 }
 
 export function trainerSelected(state) {
