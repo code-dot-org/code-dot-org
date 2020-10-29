@@ -912,6 +912,7 @@
   "justDidHourOfCode": "I just did the #HourOfCode - check it out! @codeorg",
   "justDidHourOfCodeDonor": "I just did the #HourOfCode - check it out! (Thanks {donor_twitter} for supporting @codeorg)",
   "keepPlaying": "Keep playing",
+  "keepWorking": "Keep working",
   "keyWithColon": "Key: ",
   "keyConcept": "Key Concept",
   "keyValueCaption": "Use key/value pairs to store a list of unique keys that map to values.",
