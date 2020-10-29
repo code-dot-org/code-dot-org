@@ -457,14 +457,16 @@ export default class ScriptEditor extends React.Component {
               </p>
             </HelpTip>
           </label>
-          <label>
-            Curriculum Path
-            <input
-              name="curriculum_path"
-              defaultValue={this.props.curriculumPath}
-              style={styles.input}
-            />
-          </label>
+          {!this.props.beta && (
+            <label>
+              Curriculum Path
+              <input
+                name="curriculum_path"
+                defaultValue={this.props.curriculumPath}
+                style={styles.input}
+              />
+            </label>
+          )}
           <label>
             Allow Teachers to Hide Lessons
             <input
@@ -485,10 +487,12 @@ export default class ScriptEditor extends React.Component {
             projectWidgetTypes={this.props.projectWidgetTypes}
             projectWidgetVisible={this.props.projectWidgetVisible}
           />
-          <LessonDescriptions
-            scriptName={this.props.name}
-            currentDescriptions={this.props.i18nData.stageDescriptions}
-          />
+          {!this.props.beta && (
+            <LessonDescriptions
+              scriptName={this.props.name}
+              currentDescriptions={this.props.i18nData.stageDescriptions}
+            />
+          )}
         </CollapsibleEditorSection>
 
         <CollapsibleEditorSection title="Teacher Resources Settings">
