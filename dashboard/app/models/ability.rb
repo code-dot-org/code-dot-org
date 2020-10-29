@@ -49,7 +49,8 @@ class Ability
       Pd::InternationalOptIn,
       :maker_discount,
       :edit_manifest,
-      :update_manifest
+      :update_manifest,
+      :foorm_editor
     ]
     cannot :index, Level
 
@@ -233,6 +234,7 @@ class Ability
         Script,
         ScriptLevel,
         Video,
+        :foorm_editor
       ]
 
       # Only custom levels are editable.
