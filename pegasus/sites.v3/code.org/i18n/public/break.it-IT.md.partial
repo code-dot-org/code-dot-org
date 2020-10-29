@@ -24,7 +24,7 @@ social:
 
 <a href="#activities"><button style="background-color: #ffa400;border-color: #ffa400;color: #FFFFFF;font-size: 16px;">Visualizza episodi</button></a>
 
-<p><br>While our live episodes have ended for now, you can still watch past episodes and complete the activities. To keep the fun going, you can also try some of our recommended projects and activities for <a href="https://code.org/athome">learning at home</a>.</p>
+<p><br>Anche se al momento i nostri episodi dal vivo sono terminati, puoi sempre guardare gli episodi precedenti e completare le attività. Per continuare il divertimento, puoi anche provare alcuni dei nostri progetti e attività consigliati per <a href="https://code.org/athome"> imparare da casa </a>.</p>
 <br>
 
 <div style="max-width:490px; position:relative;">{{ codebreak_promoreel }}</div>

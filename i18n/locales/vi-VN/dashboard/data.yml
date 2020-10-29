@@ -263,7 +263,7 @@ vi:
         Unplug7: Sáng tác nhạc
         Unplug8: Trừu tượng
         Unplug9: Chương trình chuyển tiếp
-        Unplug10: Kết nối mạng
+        Unplug10: internet
         Unplug11: Gói gọn
         C1_happy_maps_unplugged: Bản đồ thú vị
         C1_moveitmoveit_unplugged: Di chuyển nó, di chuyển nó
@@ -312,7 +312,7 @@ vi:
         C3_playlab_create_game: 'Phòng trò chơi: Thiết kế trò chơi'
         C3_computational_thinking: Tư duy máy tính
         C3_dice_race: Vòng quay xúc sắc
-        C3_internet: Kết nối mạng
+        C3_internet: internet
         C3_crowdsourcing: Đa nguồn
         C3_functional_suncatchers: Chức năng của tấm hứng ánh nắng
         C3_songwriting_with_parameters: Sáng tác nhạc với tham số

@@ -13,11 +13,12 @@ dashboard/brakeman_security_report.htm
 .tmputils
 .rakeTasks
 .idea/
+jsconfig.json
 /bin/i18n/*_credentials.yml
 npm-debug.log
 /.dropbox.cache
 /.gdrive_session
-/.ruby-version
+.ruby-version
 /apps/.babel-cache
 /apps/build
 /apps/build-times.log

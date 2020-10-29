@@ -11,7 +11,38 @@ sv:
   campaign_date_short: 5-11 December
   campaign_date_full: 5-11 december
   campaign_date_year: '2017'
-  campaign_date_full_year: 4-10 december 2017
+  campaign_date_full_year: 7-13 december 2020
+  latam_campaign_date_start_short: Oct. 1
+  latam_campaign_date_start_long: October 1
+  latam_campaign_date_short: Oct. 1 - Dec. 18
+  latam_campaign_date_full: October 1 - December 18
+  latam_campaign_date_year: '2017'
+  latam_campaign_date_full_year: October 1, 2020 - December 18, 2020
+  europe_campaign_date_start_short: Oct. 10
+  europe_campaign_date_start_long: October 10
+  europe_campaign_date_short: Oct. 10-25
+  europe_campaign_date_full: October 10-25
+  europe_campaign_date_year: '2017'
+  europe_campaign_date_full_year: October 10-25, 2020
+  africa_campaign_date_start_short: Oct. 1
+  africa_campaign_date_start_long: October 1
+  africa_campaign_date_short: Oct. 1-31
+  africa_campaign_date_full: October 1-31
+  africa_campaign_date_year: '2017'
+  africa_campaign_date_full_year: October 1-31, 2020
+  hoc2020_header: Learn today, build a brighter tomorrow.
+  hoc2020_header_with_line_break_markdown: |-
+    Learn today,
+
+    build a brighter tomorrow.
+  social_hoc2020_cs_important: 'CS is more important than ever. Let''s build the future
+    we want. #CSforGood'
+  social_hoc2020_hoc_is_about_csforgood: 'The #HourOfCode is about #CSforGood. Learn
+    today, build a brighter tomorrow.'
+  social_hoc2020_global_movement: Hour of Code är en global rörelse som når tiotals
+    miljoner elever. Entimmes-övningar finns tillgängliga på 45+ språk för alla åldrar.
+  social_hoc2020_coming_dates: The Hour of Code is coming December 7-13, 2020. Computer
+    science is foundational for every student to learn.
   hoc2019_header: Lär dig datavetenskap. Förändra världen.
   hoc2019_header_line1_mobile: Lär dig datavetenskap.
   hoc2019_header_line2_mobile: Förändra världen.
@@ -87,6 +118,13 @@ sv:
     samtidigt som du utforskar etiska dilemman och hur AI kan användas för att adressera
     världsproblem. Datavetenskap handlar om så mycket mer än programmering! Njut av
     Code.org:s första steg i sin nya resa att lära ut mer om AI genom vår läroplan.
+  hoc_live: Hour of Code Live
+  hoc_live_sign_up_title: Sign up for Hour of Code Live
+  hoc_live_sign_up_message: Learn in real time alongside special guests! Students
+    of all ages and abilities, including those without computers, are welcome. Join
+    our mailing list to receive recordings of the episodes and resources to continue
+    learning at home.
+  hoc_live_join_us: Delta
   hoc_overview_oceans_tutorial_header: AI för haven
   hoc_overview_oceans_tutorial_desc: Lär dig om AI, maskininlärning, träningsdata,
     och bias, samtidigt som du utforskar etiska dilemman och hur AI kan användas för
@@ -165,6 +203,8 @@ sv:
   codeorg_homepage_special2020_body2: 'Se våra rekommenderade resurser för inlärning. '
   codeorg_homepage_special2020_body: 'Är skolan stängd? Lär dig hemma. Ta en Kodrast,
     eller se resurser för studenter, föräldrar och lärare. '
+  codeorg_homepage_remote2020_body: Are you teaching in a remote or socially-distanced
+    classroom this semester? View our resources.
   codeorg_homepage_special2020_link_text: Kom igång
   codeorg_homepage_code_break_body: 'Ta en Kodrast! Veckans dos av inspiration, gemenskap
     och datavetenskap! '
@@ -338,6 +378,7 @@ sv:
   how_to_nav_companies: För företag
   how_to_nav_afterschool_educators: För efter-skolan lärare
   how_to_nav_volunteers: För volontärer
+  how_to_nav_virtual: For virtual events
   whats_next_header: Vad kommer härnäst?
   whats_next_description: Vi kommer att skicka material och praktiska tips för ditt
     evenemang. Nya 2016 övningar kommer snart för alla webbläsare, smartphones – eller
@@ -468,6 +509,7 @@ sv:
   signup_send_posters_address_placeholder: Denna adress kommer inte att visas på kartan
   signup_event_type_in_school: I en skola
   signup_event_type_out_of_school: Utanför skolan
+  signup_event_type_at_home: Home
   signup_submit_census_label: Skicka in
   signup_submit_census_error_message: Beklagar, det blev fel. Försök skicka in formuläret
     igen.
@@ -865,7 +907,8 @@ sv:
   highlights_title: Höjdpunkter
   highlights_header: Höjdpunkter under Hour of Code
   highlights_description: Några av våra favoritögonblick från Hour of Code.
-  higlights_see_more: Se fler höjdpunkter
+  highlights_previous: Highlights from previous years
+  highlights_see_more: See more highlights
   highlights_readmore: Läs mer
   highlights_watchvideo: Se filmen
   highlights_facebook: Dela på Facebook
@@ -2720,7 +2763,7 @@ sv:
     "Breaking News: 400 students at Roosevelt participate in the Hour of Code"'
   tutorial_kodable-pre_longdescription: Kodable is a self-guided game that introduces
     kids 5+ to programming basics. Having a teacher or parent nearby is optimal, but
-    not necessary.
+    not necessary. Happy koding!
   tutorial_highseas_longdescription: Animate an ocean wave to create a setting, then
     tell a story that takes place on the high seas.
   tutorial_capython_longdescription: Python is an engaging and simple language to
@@ -4894,18 +4937,17 @@ sv:
     they will create a program to teach their KIBO to dance to the music. Students
     will learn how to create a program to express an idea (in this case, a dance),
     with a focus on sequencing ability.
-  tutorial_buildcharacters_longdescription: The most popular pre-reader app now includes
-    a digital Maker Space! Make levels, design games, or build characters. Choose
-    your activity and start creating with Kodable!  Featuring JavaScript for upper
+  tutorial_buildcharacters_longdescription: What are some character traits you can
+    identify in books or people you know? Design your own fuzz and use code to modify
+    its properties and bring your character to life! Featuring JavaScript for upper
     elementary.
   tutorial_designgames_longdescription: The most popular pre-reader app now includes
     a digital Maker Space! Make levels, design games, or build characters. Choose
     your activity and start creating with Kodable!  Featuring JavaScript for upper
     elementary.
-  tutorial_makelevels_longdescription: The most popular pre-reader app now includes
-    a digital Maker Space! Make levels, design games, or build characters. Choose
-    your activity and start creating with Kodable!  Featuring JavaScript for upper
-    elementary.
+  tutorial_makelevels_longdescription: Can you build a symmetrical maze? A maze with
+    right angles? Get creative and complete maze-building challenges with basic coding
+    concepts. Aligned with K-5 Common Core math.
   tutorial_wizard_longdescription: Journey into the world of Code Magic as a Code
     Wizard. Learn to create and cast spells to customize your castle.
   tutorial_mbscratchcards_longdescription: Connect the physical world of micro:bit
@@ -6826,7 +6868,7 @@ sv:
     phone, Android phone, iPhone
   tutorial_gpbcatapult_string_platforms: Alla moderna webbläsare
   tutorial_quorumastro_string_platforms: All modern browsers, Android tablet, iPad,
-    Windows phone, Android phone, iPhone
+    Windows phone, Android phone, iPhone, Screen reader
   tutorial_alicewonder_string_platforms: Alla moderna webbläsare
   tutorial_rginter_string_platforms: Chrome, Firefox, Android tablet
   tutorial_cssgrid_string_platforms: Alla moderna webbläsare
@@ -8221,8 +8263,8 @@ sv:
   tutorial_codewards_string_detail_programming_languages: CoffeeScript
   tutorial_olympics_string_detail_programming_languages: CoffeeScript
   tutorial_codinismhero_string_detail_programming_languages: Python
-  tutorial_discovery_string_detail_programming_languages: Block
-  tutorial_csfirstname_string_detail_programming_languages: Block
+  tutorial_discovery_string_detail_programming_languages: Blocks, Scratch
+  tutorial_csfirstname_string_detail_programming_languages: Blocks, Scratch
   tutorial_obstaclecourse_string_detail_programming_languages: Block
   tutorial_edisonmove_string_detail_programming_languages: Python, EdPy, a text-based
     programming language based on Python.
@@ -8370,7 +8412,7 @@ sv:
   tutorial_careconfigure_name: ReconFigure of Speech
   tutorial_rpiscratch_name: Scratch 3.0 phrasebook
   tutorial_ozaria_name: Ozaria by CodeCombat
-  tutorial_ttovum_name: Ovum City
+  tutorial_ttovum_name: Ovun City
   tutorial_ttpassage_name: The Passage
   tutorial_tynkerhtmlen_name: Affordable and Clean Energy (HTML)
   tutorial_ttfrog_name: Frog Squash
@@ -8462,8 +8504,8 @@ sv:
     Room style project, the learner joins Marlee and Tyrell as they learn about binary
     numbers, light, color, and more to unravel Professor Photon's Color Conundrum,
     and restore color to the world's devices.
-  tutorial_kodablebeach_longdescription: Learn to program using basic commands and
-    clean up the beach to protect ocean life.
+  tutorial_kodablebeach_longdescription: Save the beach babies! Learn to program using
+    basic commands and clean up the beach to protect ocean life.
   tutorial_tynkeren_longdescription: 'Part of the UN Sustainable Development Goals
     project, this coding prompt shows off projects exploring renewable energy, energy
     efficiency, and access to energy. Readers can play with working projects and advanced
@@ -8587,9 +8629,9 @@ sv:
     where you learn to type real code, navigate through 15 game levels, and make your
     own game in order to help save the world of Ozaria.
   tutorial_ttovum_longdescription: Can you control the chaos? Hack your way into the
-    cyberpunk world of Ovum City. Debug broken code, solve puzzles, and upgrade your
+    cyberpunk world of Ovun City. Debug broken code, solve puzzles, and upgrade your
     hardware as you explore self guided open world. Don't get caught by the drones!
-    It's up to you how Ovum City evolves.
+    It's up to you how Ovun City evolves.
   tutorial_ttpassage_longdescription: Immerse yourself in an alien world to help Ada
     escape unknown dangers. Play through this 2D platforming self-guided adventure
     and learn coding techniques along the way. Players will become familiar with coding
@@ -9001,7 +9043,8 @@ sv:
     iPad
   tutorial_scratchcartoon_string_platforms: Alla moderna webbläsare, Android-surfplatta,
     iPad
-  tutorial_codemonkeyjr_string_platforms: Android tablet, iPad, Android phone, iPhone
+  tutorial_codemonkeyjr_string_platforms: Alla moderna webbläsare, Android-surfplatta,
+    iPad, Android-telefon, iPhone
   tutorial_bananatales_string_platforms: Alla moderna webbläsare
   tutorial_scratchtales_string_platforms: Alla moderna webbläsare, Android-surfplatta,
     iPad
@@ -9029,7 +9072,7 @@ sv:
   tutorial_hyperpadpong_string_platforms: iPad
   tutorial_tynkerland_string_platforms: Alla moderna webbläsare, iPad, inte uppkopplad
   tutorial_trinketgirl_string_platforms: All modern browsers, Android tablet, iPad,
-    Windows phone, Android phone, iPhone
+    Windows phone, Android phone, iPhone, Screen reader
   tutorial_rpimosquito_string_platforms: Alla moderna webbläsare, Android-surfplatta,
     iPad
   tutorial_tynkermars_string_platforms: Alla moderna webbläsare, iPad, inte uppkopplad
@@ -9215,7 +9258,7 @@ sv:
   tutorial_ai-oceans_string_detail_platforms: ''
   tutorial_scratchimagine_string_detail_programming_languages: Block
   tutorial_codesterspsa_string_detail_programming_languages: Python
-  tutorial_googlehero_string_detail_programming_languages: Block
+  tutorial_googlehero_string_detail_programming_languages: Blocks, Scratch
   tutorial_codestersbball_string_detail_programming_languages: Python
   tutorial_scratchcartoon_string_detail_programming_languages: Block
   tutorial_codemonkeyjr_string_detail_programming_languages: Block
@@ -9380,3 +9423,4 @@ sv:
   some: Några
   all: Alla
   dont_know: Jag vet inte
+  language_label: Language

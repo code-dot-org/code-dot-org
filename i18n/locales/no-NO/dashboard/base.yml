@@ -906,6 +906,8 @@
       school_name: 'Skolens navn'
       school_city: 'Skolens poststed'
       school_country: 'Landet til skolen'
+      colombian_school_city: 'Skolens poststed'
+      colombian_school_name: 'Skolens navn'
     form_entries:
       gender:
         male: 'Mann'

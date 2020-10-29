@@ -1,1 +1,95 @@
---- {}
+---
+se:
+  devise:
+    confirmations:
+      confirmed: Du epoastačujuhus lea dohkkehuvvon.
+      send_instructions: Dutnje sáddejuvvo moatti minuhta geahčen epoasta mas leat
+        dieđut movt dohkkehat iežat konto.
+      send_paranoid_instructions: Jus dus lea juo epoastačujuhus min databásas, de
+        dutnje sáddejuvvo moatti minuhta geahčen epoasta mas leat dieđut movt dohkkehat
+        iežat konto.
+    failure:
+      already_authenticated: Don leat juo loggejuvvon sisa.
+      inactive: Du kontto ii leat vel aktiverejuvvon.
+      invalid: Boasttu epoastačujuhus dahje čoavddasátni.
+      invalid_token: Boasttu dohkkehan-token.
+      locked: Du kontto lea lássejuvvon.
+      not_found_in_database: Boasttu epoastačujuhus dahje čoavddasátni.
+      timeout: Du bargovuorru lea nohkan. Logge sisa fas jus áiggut joatkit.
+      unauthenticated: Don fertet logget sisa dahje ráhkadit kontto ovdal beasat joatkit.
+      unconfirmed: Don fertet duođaštit iežat kontto ovdal beasat joatkit.
+    mailer:
+      confirmation_instructions:
+        subject: Code.org duođaštanneavvagat
+      reset_password_instructions:
+        subject: Code.org čoavddasáni rievdadeami neavvagat
+      unlock_instructions:
+        subject: Raba Neavvagiid
+    omniauth_callbacks:
+      failure: Ii sáhttán dohkkehit du dás %{kind} danne go "%{reason}".
+      success: Dohkkeheapmi lea ortnegis dás %{kind} konto.
+    passwords:
+      no_token: Don it beasa dán siidui jus don it leat epoastačujuhusas mas lea čoavddasáni
+        rievdadeapmi. Jus dus lea epoastačujuhus mas lea čoavddasáni rievdadeapmi,
+        de fertet muitit ahte geavahat ollislaš čállon URL:a.
+      send_instructions: Dutnje sáddejuvvo moatti minuhta geahčen epoasta mas leat
+        dieđut movt rievdadat iežat čoavddasáni.
+      send_paranoid_instructions: Jus dus lea juo epoastačujuhus min databásas, de
+        dutnje sáddejuvvo moatti minuhta geahčen epoasta mas lea čujuhus gos sáhtát
+        oažžut ruovttoluotta iežat čoavddasáni.
+      updated: Du čoavddasátni lea rievdaduvvon. Don leat dál loggejuvvon sisa.
+      updated_not_active: Du čoavddasátni lea rievdaduvvon.
+    registrations:
+      destroyed: Mana dearvan! Du konto lea sihkkojuvvon. Sávvat fas du oaidnit dáppe.
+      signed_up: Bures boahtin! Don leat loggejuvvon sisa.
+      signed_up_but_inactive: 'Don leat ráhkadan kontto. Muhto, mii eat sáhttán luoitit
+        du sisa go du konto ii leat vuos aktiverejuvvon. '
+      signed_up_but_locked: Don leat ráhkadan kontto. Muhto, mii eat sáhttán luoitit
+        du sisa go du konto lea lássejuvvon.
+      signed_up_but_unconfirmed: 'Diehtu mas lea dohkkehanliŋka lea sáddejuvvon du
+        epoastačujuhussii. Deaddil liŋkka nu ahte du konto aktiverejuvvo. '
+      update_needs_confirmation: Don leat ođastan du kontto, muhto mii bivdit du duođaštit
+        du ođđa epoastačujuhusa. Iskka iežat epoastta ja deaddil duođaštanliŋkka nu
+        ahte leat dohkkehan iežat ođđa epoastačujuhusa.
+      updated: Don leat ođastan du kontto.
+    sessions:
+      signed_out: Don leat loggen olggos.
+    unlocks:
+      send_instructions: Dutnje sáddejuvvo moatti minuhta geahčen epoasta mas leat
+        dieđut movt rabat iežat kontto.
+      send_paranoid_instructions: Jus dus lea konto ovdalaččas, de sáddejuvvo dutnje
+        moatti minuhta geahčen epoasta mas leat dieđut movt rabat iežat kontto.
+      unlocked: Du konto lea rahppojuvvon. Logge sisa ja joatkke.
+  errors:
+    messages:
+      already_confirmed: lea juo duođaštuvvon, geahččal logget sisa
+      confirmation_period_expired: ferte duođaštuvvot dán áigái %{period}, bivdde
+        ođđa
+      expired: lea nohkan, bivdde ođđa
+      not_found: ii gávdno
+      not_locked: ii leat lássejuvvon
+      not_saved:
+        one: '1 boastuvuohta dagahii %{resource} ahte ii sáhte vurkejuvvot:'
+        other: "%{count} boastuvuođat dagahedje %{resource} ahte eai sáhte vurkejuvvot:"
+    invitations:
+      send_instructions: Bovdehus epoasta lea sáddejuvvon %{email}.
+      invitation_token_invalid: Sáddejuvvon bovdehus-token ii leat dohkkálaš!
+      updated: Du čoavddasátni lea biddjon. Don leat dál loggejuvvon sisa.
+      no_invitations_remaining: Eai leat bovdejumit báhcán.
+      invitation_removed: Du bovdejupmi lea sihkojuvvon.
+      new:
+        header: Sádde bovdejumi
+        submit_button: Sádde ovtta bovdejumi
+      edit:
+        header: Ráhkat alccat čoavddasáni
+        submit_button: Ráhkat mu čoavddasáni
+    mailer:
+      invitation_instructions:
+        subject: Bovdehusneavvagat
+        hello: Bures %{email}
+        someone_invited_you: Soames lea du bovden deike %{url}, don sáhtát dohkkehit
+          dan liŋkkain mii lea vuolabealde.
+        accept: Dohkket bovdehusa
+        ignore: Jus it hálit dohkkehit bovdehusa, de ale beroš dán epoasttas.<br />Dutnje
+          ii ráhkaduvvo konto ovdal go ieš deaddilat liŋkka bajabealde ja ráhkadat
+          alccat čoavddasáni.

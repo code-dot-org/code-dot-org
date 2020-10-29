@@ -1121,6 +1121,8 @@ fil:
       school_name: Pangalan ng Paaralan
       school_city: Lungsod ng Paaralan
       school_country: Bansa ng Paaralan
+      colombian_school_city: Lungsod ng Paaralan
+      colombian_school_name: Pangalan ng Paaralan
     form_entries:
       gender:
         male: Lalaki

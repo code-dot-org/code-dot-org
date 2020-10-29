@@ -1,0 +1,58 @@
+{
+ "pages": [
+  {
+   "name": "page_1",
+   "elements": [
+    {
+     "type": "html",
+     "name": "environment131",
+     "html": "<h2>{workshop_course} Academic Year Workshops Kick-off Call</h2><p>"
+    },
+    {
+     "type": "rating",
+     "name": "feel_prepared",
+     "title": "I feel more prepared to teach {workshop_course} than I did before this kick-off call.",
+     "rateMax": 7,
+     "minRateDescription": "Strongly Disagree",
+     "maxRateDescription": "Strongly Agree"
+    },
+    {
+     "type": "rating",
+     "name": "teacher_community",
+     "title": "I feel like I am connected to a community of teachers in my {workshop_course} workshop.",
+     "rateMax": 7,
+     "minRateDescription": "Strongly Disagree",
+     "maxRateDescription": "Strongly Agree"
+    },
+    {
+     "type": "rating",
+     "name": "excited_about_next_time",
+     "title": "I am excited about what we will do next time in this workshop.",
+     "rateMax": 7,
+     "minRateDescription": "Strongly Disagree",
+     "maxRateDescription": "Strongly Agree"
+    },
+  
+     {
+      "type":"library_item",
+      "library_name":"surveys/pd/facilitator_panel",
+      "library_version": 0,
+      "name":"facilitator_heading"
+    },
+    {
+      "type":"library_item",
+      "library_name":"surveys/pd/facilitator_panel",
+      "library_version": 0,
+      "name":"facilitators"
+    },
+    {
+      "type":"library_item",
+      "library_name":"surveys/pd/workshop_elements",
+      "library_version": 0,
+      "baker_comment":"Update this after learning what thank you page is actually",
+      "name":"thank_you_heading"
+    }
+]
+}
+]
+}

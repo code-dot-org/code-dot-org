@@ -2,8 +2,8 @@
 /** @file Droplet-friendly command defintions for audio commands. */
 import * as assetPrefix from '@cdo/apps/assetManagement/assetPrefix';
 import {apiValidateType, OPTIONAL} from './javascriptMode';
-import {textToSpeech} from './speech';
 import Sounds from '../../Sounds';
+import {textToSpeech} from './speech';
 
 /**
  * Inject an executeCmd method so this mini-library can be used in both
@@ -116,15 +116,26 @@ export const commands = {
    * Start playing given text as speech.
    * @param {string} opts.text The text to play as speech.
    * @param {string} opts.gender The gender of the voice to play.
+   * @param {string} opts.language The language of the text to play.
    */
-  playSpeech(opts) {
+  async playSpeech(opts) {
     apiValidateType(opts, 'playSpeech', 'text', opts.text, 'string');
     apiValidateType(opts, 'playSpeech', 'gender', opts.gender, 'string');
+    apiValidateType(
+      opts,
+      'playSpeech',
+      'language',
+      opts.language,
+      'string',
+      OPTIONAL
+    );
     textToSpeech(
       opts.text,
       opts.gender,
+      opts.language,
       appOptions.azureSpeechServiceToken,
-      appOptions.azureSpeechServiceRegion
+      appOptions.azureSpeechServiceRegion,
+      appOptions.azureSpeechServiceLanguages
     );
   }
 };
@@ -137,6 +148,7 @@ export const executors = {
   playSound: (url, loop = false, callback) =>
     executeCmd(null, 'playSound', {url, loop, callback}),
   stopSound: url => executeCmd(null, 'stopSound', {url}),
-  playSpeech: (text, gender) => executeCmd(null, 'playSpeech', {text, gender})
+  playSpeech: (text, gender, language = 'en-US') =>
+    executeCmd(null, 'playSpeech', {text, gender, language})
 };
 // Note to self - can we use _.zipObject to map argumentNames to arguments here?

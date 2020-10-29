@@ -9,6 +9,7 @@ import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {AbuseConstants} from '@cdo/apps/util/sharedConstants';
 import experiments from '@cdo/apps/util/experiments';
 import NameFailureError from '../NameFailureError';
+import {CP_API} from '../../lib/kits/maker/boards/circuitPlayground/PlaygroundConstants';
 
 // Attempt to save projects every 30 seconds
 var AUTOSAVE_INTERVAL = 30 * 1000;
@@ -26,7 +27,7 @@ var sourcesPublic = require('./clientApi').create('/v3/sources-public');
 var channels = require('./clientApi').create('/v3/channels');
 
 var showProjectAdmin = require('../showProjectAdmin');
-var header = require('../header');
+import header from '../header';
 import {queryParams, hasQueryParam, updateQueryParam} from '../utils';
 
 // Name of the packed source file
@@ -104,7 +105,7 @@ let thumbnailPngBlob = null;
 var currentSources = {
   source: null,
   html: null,
-  makerAPIsEnabled: false,
+  makerAPIsEnabled: null,
   animations: null,
   selectedSong: null
 };
@@ -295,10 +296,14 @@ var projects = (module.exports = {
   },
 
   /**
-   * Whether this project's source has Maker APIs enabled.
-   * @returns {boolean}
+   * Whether this project's source has the micro:bit or Circuit Playground Maker APIs enabled.
+   * Deprecated values: false/true.
+   * Updated values: 'circuitPlayground', 'microbit', or null.
+   * Deprecated value {false} maps to updated value {null}.
+   * Deprecated value {true} maps to updated value {circuitPlayground}.
+   * @returns {string}
    */
-  useMakerAPIs() {
+  getMakerAPIs() {
     return currentSources.makerAPIsEnabled;
   },
 
@@ -344,9 +349,9 @@ var projects = (module.exports = {
   },
 
   /**
-   * Sets abuse score to zero, saves the project, and reloads the page
+   * Sets abuse score, saves the project, and reloads the page
    */
-  adminResetAbuseScore() {
+  adminResetAbuseScore(score = 0) {
     var id = this.getCurrentId();
     if (!id) {
       return;
@@ -355,16 +360,16 @@ var projects = (module.exports = {
       if (err) {
         throw err;
       }
-      assets.patchAll(id, 'abuse_score=0', null, function(err, result) {
+      assets.patchAll(id, `abuse_score=${score}`, null, function(err, result) {
         if (err) {
           throw err;
         }
       });
-      files.patchAll(id, 'abuse_score=0', null, function(err, result) {
+      files.patchAll(id, `abuse_score=${score}`, null, function(err, result) {
         if (err) {
           throw err;
         }
-        $('.admin-abuse-score').text(0);
+        $('.admin-abuse-score').text(score);
       });
     });
   },
@@ -490,6 +495,9 @@ var projects = (module.exports = {
     },
     setCurrentData(data) {
       current = data;
+    },
+    setCurrentSources(data) {
+      currentSources = data;
     },
     setSourceVersionInterval(seconds) {
       newSourceVersionInterval = seconds * 1000;
@@ -666,7 +674,7 @@ var projects = (module.exports = {
 
       setMakerAPIsStatusFromLevel();
       setMakerAPIsStatusFromQueryParams();
-      if (currentSources.makerAPIsEnabled) {
+      if (this.getMakerAPIs()) {
         sourceHandler.setMakerAPIsEnabled(currentSources.makerAPIsEnabled);
       }
 
@@ -955,6 +963,40 @@ var projects = (module.exports = {
       });
     });
   },
+
+  /**
+   * Tests whether provided sample code is different from the current project code.
+   * This also normalizes the code so incidental differences in line endings or
+   * empty xml tags are not recognized as differences.
+   * @param {string} sampleCodeInput the code to diff against the current project code
+   */
+  isCurrentCodeDifferent(sampleCodeInput) {
+    // We can't use a default param here because we need to check for null and undefined
+    const sampleCode = sampleCodeInput || '';
+    const currentCode = currentSources.source || '';
+    let normalizedSample, normalizedCurrent;
+    const parser = new DOMParser();
+    const parsedCurrent = parser.parseFromString(currentCode, 'text/xml');
+    const parsedSample = parser.parseFromString(sampleCode, 'text/xml');
+    // We normalize in different ways due to the difference in how droplet and blockly
+    // store code. Blockly is xml based and Droplet is plaintext based.
+    if (
+      parsedCurrent.getElementsByTagName('parsererror').length > 0 ||
+      parsedSample.getElementsByTagName('parsererror').length > 0
+    ) {
+      // Remove all whitespace from the code.
+      normalizedSample = sampleCode.replace(/\s+/g, '');
+      normalizedCurrent = currentCode.replace(/\s+/g, '');
+    } else {
+      // Normalize XML to ignore differences in closing tags.
+      const serializer = new XMLSerializer();
+      normalizedSample = serializer.serializeToString(parsedSample);
+      normalizedCurrent = serializer.serializeToString(parsedCurrent);
+    }
+
+    return normalizedSample !== normalizedCurrent;
+  },
+
   /**
    * Saves the project to the Channels API.
    * @param {boolean} forceNewVersion If true, explicitly create a new version.
@@ -1213,17 +1255,17 @@ var projects = (module.exports = {
   },
 
   /**
-   * Save the project with the maker API state toggled, then reload the page
+   * Save the project with the maker API state set, then reload the page
    * so that the toolbox gets re-initialized.
    * @returns {Promise} (mostly useful for tests)
    */
-  toggleMakerEnabled() {
+  setMakerEnabled(apisEnabled) {
     return new Promise(resolve => {
       this.getUpdatedSourceAndHtml_(sourceAndHtml => {
         this.saveSourceAndHtml_(
           {
             ...sourceAndHtml,
-            makerAPIsEnabled: !sourceAndHtml.makerAPIsEnabled
+            makerAPIsEnabled: apisEnabled
           },
           () => {
             resolve();
@@ -1868,12 +1910,12 @@ function fetchAbuseScoreAndPrivacyViolations(project) {
  */
 function setMakerAPIsStatusFromQueryParams() {
   if (hasQueryParam('enableMaker')) {
-    currentSources.makerAPIsEnabled = true;
+    currentSources.makerAPIsEnabled = CP_API;
     updateQueryParam('enableMaker', undefined, true);
   }
 
   if (hasQueryParam('disableMaker')) {
-    currentSources.makerAPIsEnabled = false;
+    currentSources.makerAPIsEnabled = null;
     updateQueryParam('disableMaker', undefined, true);
   }
 }
@@ -1883,10 +1925,12 @@ function setMakerAPIsStatusFromQueryParams() {
  * This is the case with New Maker Lab Project.level, and projects created
  * based off of that template (/p/makerlab), done prior to maker API support
  * within applab.
+ *
+ * Note: for backwards compatibility, levels with makerLabEnabled default to circuitPlayground
  */
 function setMakerAPIsStatusFromLevel() {
   if (appOptions.level.makerlabEnabled) {
-    currentSources.makerAPIsEnabled = appOptions.level.makerlabEnabled;
+    currentSources.makerAPIsEnabled = CP_API;
   }
 }
 

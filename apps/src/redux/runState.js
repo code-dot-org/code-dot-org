@@ -4,6 +4,7 @@
 import _ from 'lodash';
 
 const SET_IS_RUNNING = 'runState/SET_IS_RUNNING';
+const SET_IS_EDIT_WHILE_RUN = 'runState/SET_IS_EDIT_WHILE_RUN';
 const SET_IS_DEBUGGER_PAUSED = 'runState/SET_IS_DEBUGGER_PAUSED';
 const SET_STEP_SPEED = 'runState/SET_STEP_SPEED';
 const SET_AWAITING_CONTAINED_RESPONSE =
@@ -12,6 +13,7 @@ const SET_IS_DEBUGGING_SPRITES = 'runState/SET_IS_DEBUGGING_SPRITES';
 
 const initialState = {
   isRunning: false,
+  isEditWhileRun: false,
   isDebuggerPaused: false,
   nextStep: null,
   stepSpeed: 1,
@@ -33,6 +35,12 @@ export default function reducer(state, action) {
         action.isRunning === false ? false : state.isDebuggerPaused,
       isDebuggingSprites:
         action.isRunning === false ? false : state.isDebuggingSprites
+    });
+  }
+
+  if (action.type === SET_IS_EDIT_WHILE_RUN) {
+    return _.assign({}, state, {
+      isEditWhileRun: action.isEditWhileRun
     });
   }
 
@@ -77,6 +85,14 @@ export default function reducer(state, action) {
 export const setIsRunning = isRunning => ({
   type: SET_IS_RUNNING,
   isRunning: isRunning
+});
+
+/**
+ * @param {boolean} isRunning - Whether the app is currently running or not.
+ */
+export const setIsEditWhileRun = isEditWhileRun => ({
+  type: SET_IS_EDIT_WHILE_RUN,
+  isEditWhileRun: isEditWhileRun
 });
 
 /**

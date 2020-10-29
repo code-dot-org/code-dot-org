@@ -10,10 +10,10 @@ import {
   COMPLETED
 } from '@cdo/apps/code-studio/components/progress/ScriptOverviewTopRow';
 import Button from '@cdo/apps/templates/Button';
-import DropdownButton from '@cdo/apps/templates/DropdownButton';
 import SectionAssigner from '@cdo/apps/templates/teacherDashboard/SectionAssigner';
 import ResourceType from '@cdo/apps/templates/courseOverview/resourceType';
 import ProgressDetailToggle from '@cdo/apps/templates/progress/ProgressDetailToggle';
+import TeacherResourcesDropdown from '@cdo/apps/code-studio/components/progress/TeacherResourcesDropdown';
 
 const defaultProps = {
   sectionsForDropdown: [],
@@ -150,19 +150,18 @@ describe('ScriptOverviewTopRow', () => {
     );
     expect(
       wrapper.containsMatchingElement(
-        <div>
-          <DropdownButton
-            text={i18n.teacherResources()}
-            color={Button.ButtonColor.blue}
-          >
-            <a href="https://example.com/a" target="_blank">
-              {i18n.curriculum()}
-            </a>
-            <a href="https://example.com/b" target="_blank">
-              {i18n.vocabulary()}
-            </a>
-          </DropdownButton>
-        </div>
+        <TeacherResourcesDropdown
+          resources={[
+            {
+              type: ResourceType.curriculum,
+              link: 'https://example.com/a'
+            },
+            {
+              type: ResourceType.vocabulary,
+              link: 'https://example.com/b'
+            }
+          ]}
+        />
       )
     ).to.be.true;
   });

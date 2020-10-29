@@ -42,7 +42,7 @@ ky,ky,ky,ky-KG,Кыргызча,Kyrgyz,TRUE,TRUE,ky,Kyrgyz,FALSE,FALSE,FALSE,FAL
 lt,lt,lt,lt-LT,Lietuvių,Lithuanian,TRUE,FALSE,lt,Lithuanian,FALSE,FALSE,FALSE,FALSE,TRUE
 lv,lv,lv,lv-LV,Latviešu,Latvian,TRUE,TRUE,lv,Latvian,FALSE,FALSE,FALSE,FALSE,FALSE
 mi,mi,mi,mi-NZ,Māori (NZ),Maori,TRUE,TRUE,mi,Maori,FALSE,FALSE,FALSE,FALSE,TRUE
-mk,mk,mk,mk-MK,Mакедонски,Macedonian (FYROM),FALSE,FALSE,mk,Macedonian (FYROM),FALSE,FALSE,FALSE,FALSE,FALSE
+mk,mk,mk,mk-MK,Mакедонски,Macedonian (FYROM),FALSE,FALSE,mk,Macedonian,FALSE,FALSE,FALSE,FALSE,FALSE
 mn,mn,mn,mn-MN,Монгол хэл,Mongolian,TRUE,FALSE,mn,Mongolian,FALSE,FALSE,FALSE,FALSE,FALSE
 mr,mr,mr,mr-IN,मराठी,Marathi,TRUE,TRUE,mr,Marathi,FALSE,FALSE,FALSE,FALSE,FALSE
 ms,ms,ms,ms-MY,بهاس ملايو,Malay,FALSE,TRUE,ms,Malay,FALSE,FALSE,FALSE,FALSE,FALSE

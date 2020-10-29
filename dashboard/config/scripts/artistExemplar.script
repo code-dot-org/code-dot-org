@@ -1,4 +1,4 @@
-lesson 'Artist Exemplar'
+lesson 'Artist Exemplar', display_name: 'Artist Exemplar'
 level 'aEstory1'
 level 'aE1'
 level 'aE2'
@@ -11,3 +11,4 @@ level 'aE6'
 level 'aE7'
 level 'aE8'
 level 'aEfreeplay'
+

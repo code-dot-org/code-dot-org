@@ -260,6 +260,8 @@ export default storybook => {
             transferData={blankStudentTransfer}
             transferStatus={{}}
             sectionId={53}
+            sectionCode="ABCDEF"
+            sectionName="My Section"
           />
         )
       },
@@ -276,6 +278,8 @@ export default storybook => {
             transferData={blankStudentTransfer}
             transferStatus={{}}
             sectionId={53}
+            sectionCode="ABCDEF"
+            sectionName="My Section"
           />
         )
       },
@@ -292,6 +296,8 @@ export default storybook => {
             transferData={blankStudentTransfer}
             transferStatus={{}}
             sectionId={53}
+            sectionCode="ABCDEF"
+            sectionName="My Section"
           />
         )
       },
@@ -307,6 +313,8 @@ export default storybook => {
             transferData={blankStudentTransfer}
             transferStatus={{}}
             sectionId={53}
+            sectionCode="ABCDEF"
+            sectionName="My Section"
           />
         )
       },
@@ -322,6 +330,8 @@ export default storybook => {
             transferData={blankStudentTransfer}
             transferStatus={{}}
             sectionId={53}
+            sectionCode="ABCDEF"
+            sectionName="My Section"
           />
         )
       }

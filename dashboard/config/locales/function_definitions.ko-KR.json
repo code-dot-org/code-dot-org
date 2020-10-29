@@ -1,0 +1,1624 @@
+{
+  "ko-KR": {
+    "data": {
+      "function_definitions": {
+        "2-3 Artist 11": {
+          "x": {
+            "name": "x"
+          }
+        },
+        "2-3 Artist 12": {
+          "details": {
+            "name": "세부 사항"
+          },
+          "draw eyebrow": {
+            "name": "눈썹 그리기"
+          },
+          "draw pupil": {
+            "name": "눈동자 그리기"
+          }
+        },
+        "2-3 Artist 3.4": {
+          "draw a circle": {
+            "name": "원 그리기"
+          },
+          "draw a car": {
+            "name": "자동차 그리기"
+          }
+        },
+        "2-3 Artist 7": {
+          "draw_rect": {
+            "name": "사각형 그리기",
+            "parameters": {
+              "width": "너비",
+              "height": "높이:"
+            }
+          }
+        },
+        "2-3 Artist Debugging 10": {
+          "draw square": {
+            "name": "사각형 그리기",
+            "parameters": {
+              "width": "너비",
+              "height": "높이:"
+            }
+          },
+          "jump to middle": {
+            "name": "가운데로 점프하기"
+          },
+          "draw a circle": {
+            "name": "원 그리기"
+          },
+          "draw a button": {
+            "name": "버튼 그리기"
+          },
+          "draw cord": {
+            "name": "줄 그리기"
+          }
+        },
+        "2-3 Artist Debugging 5": {
+          "draw left leg": {
+            "name": "왼쪽 다리 그리기"
+          },
+          "draw right leg": {
+            "name": "왼쪽 다리 그리기"
+          },
+          "draw body and arms": {
+            "name": "몸과 팔 그리기"
+          },
+          "draw a head": {
+            "name": "머리 그리기"
+          }
+        },
+        "2-3 Artist Debugging 6": {
+          "draw right leg": {
+            "name": "왼쪽 다리 그리기"
+          },
+          "draw head": {
+            "name": "머리 그리기"
+          },
+          "draw arms": {
+            "name": "팔 그리기"
+          },
+          "draw left leg": {
+            "name": "왼쪽 다리 그리기"
+          }
+        },
+        "2-3 Artist Debugging 7": {
+          "draw O": {
+            "name": "O 그리기"
+          },
+          "draw D": {
+            "name": "D 그리기"
+          },
+          "draw E": {
+            "name": "E 그리기"
+          }
+        },
+        "2-3 Artist Functions 11": {
+          "draw a hexagon": {
+            "name": "6각형 그리기"
+          }
+        },
+        "2-3 Artist Functions 11.5": {
+          "draw a hexagon": {
+            "name": "6각형 그리기"
+          }
+        },
+        "2-3 Artist Functions 12": {
+          "draw a flower": {
+            "name": "꽃 그리기"
+          }
+        },
+        "2-3 Artist Functions 2": {
+          "draw a square": {
+            "name": "사각형 그리기"
+          }
+        },
+        "2-3 Artist Functions 3": {
+          "draw a square": {
+            "name": "사각형 그리기"
+          }
+        },
+        "2-3 Artist Functions 4": {
+          "draw a square": {
+            "name": "사각형 그리기"
+          }
+        },
+        "2-3 Artist Functions 9": {
+          "draw a snowflake": {
+            "name": "해바라기 그리기"
+          }
+        },
+        "2-3 Bee Functions 1": {
+          "get 2 nectar": {
+            "name": "꽃꿀 2개 구하기"
+          }
+        },
+        "2-3 Bee Functions 10": {
+          "collect purple nectar": {
+            "name": "보라색 꽃꿀 구하기"
+          }
+        },
+        "2-3 Bee Functions 2": {
+          "get 5": {
+            "name": "5개 구하기"
+          }
+        },
+        "2-3 Bee Functions 4": {
+          "move and get nectar": {
+            "name": "이동해서 꽃꿀을 구하기"
+          }
+        },
+        "2-3 Bee Functions 5": {
+          "move and get 4": {
+            "name": "이동해서 4개를 구하기"
+          }
+        },
+        "2-3 Bee Functions 6": {
+          "move and get 4": {
+            "name": "이동해서 4개를 구하기"
+          }
+        },
+        "2-3 Bee Functions 8": {
+          "get 7 nectar make 7 honey": {
+            "name": "꽃꿀을 7개 구해서 꿀 7개를 만들기"
+          }
+        },
+        "2-3 Bee Functions 9": {
+          "get 7 make 7": {
+            "name": "7개 구해서 7개 만들기"
+          }
+        },
+        "2-3 Bee Functions Assessment 1": {
+          "get 7": {
+            "name": "7개 구하기"
+          }
+        },
+        "2-3 Bee Functions Assessment 2": {
+          "move and get 3": {
+            "name": "이동하여 3개 구하기"
+          }
+        },
+        "4-5 Artist 3": {
+          "draw a flower": {
+            "name": "꽃 그리기"
+          }
+        },
+        "4-5 Artist 6": {
+          "draw a tree": {
+            "name": "나무 그리기"
+          }
+        },
+        "4-5 Artist 7": {
+          "draw triangle": {
+            "name": "삼각형 그리기"
+          },
+          "draw a circle": {
+            "name": "원 그리기"
+          },
+          "draw a car": {
+            "name": "자동차 그리기"
+          }
+        },
+        "4-5 Artist 8": {
+          "draw circle": {
+            "name": "원 그리기"
+          }
+        },
+        "Course 4 Bee Params 8": {
+          "get nectar make honey": {
+            "parameters": {
+              "honey": "꿀"
+            }
+          }
+        },
+        "Course 4 Play Lab Params 1": {
+          "jump": {
+            "name": "점프"
+          }
+        },
+        "Course 4 Play Lab Params 10": {
+          "score_points": {
+            "parameters": {
+              "points": "점수"
+            }
+          }
+        },
+        "Course 4 Play Lab Params 2": {
+          "jump": {
+            "name": "점프"
+          }
+        },
+        "Course 4 Play Lab Params 3": {
+          "jump": {
+            "name": "점프",
+            "parameters": {
+              "height": "높이:",
+              "actor": "캐릭터"
+            }
+          }
+        },
+        "Course 4 Play Lab Params 4": {
+          "do something": {
+            "name": "함수 이름"
+          }
+        },
+        "Course 4 Play Lab Params 5": {
+          "patrol": {
+            "parameters": {
+              "actor": "캐릭터"
+            }
+          }
+        },
+        "Course 4 Play Lab Params 6": {
+          "patrol": {
+            "parameters": {
+              "actor": "캐릭터"
+            }
+          }
+        },
+        "Course 4 Play Lab Params 7": {
+          "patrol": {
+            "parameters": {
+              "actor": "캐릭터",
+              "speed": "스피드"
+            }
+          }
+        },
+        "Course 4 Play Lab Params 8": {
+          "patrol": {
+            "parameters": {
+              "actor": "캐릭터",
+              "speed": "스피드"
+            }
+          }
+        },
+        "Course 4 Play Lab Params 9": {
+          "score_points": {
+            "parameters": {
+              "points": "점수"
+            }
+          }
+        },
+        "Course 4 Play Lab Vars 1": {
+          "set score": {
+            "name": "점수 등록"
+          }
+        },
+        "Course 4 Play Lab Vars 2": {
+          "set score": {
+            "name": "점수 등록"
+          }
+        },
+        "Course 4 SCF 1": {
+          "draw a hexagon": {
+            "name": "6각형 그리기"
+          }
+        },
+        "Course 4 SCF 1a": {
+          "get nectar": {
+            "name": "꽃꿀 얻기",
+            "parameters": {
+              "counter": "counter"
+            }
+          }
+        },
+        "Course 4 SCF 3": {
+          "do something": {
+            "name": "함수 이름"
+          },
+          "draw an octagon": {
+            "parameters": {
+              "length": "length"
+            }
+          }
+        },
+        "Course E: Play Lab Project": {
+          "do something": {
+            "name": "함수 이름"
+          }
+        },
+        "Find the Wizard": {
+          "do something": {
+            "name": "함수 이름"
+          }
+        },
+        "FoodFight": {
+          "score_points": {
+            "parameters": {
+              "points": "점수"
+            }
+          }
+        },
+        "Function intro Ryan": {
+          "build bridge": {
+            "name": "다리 짓기"
+          }
+        },
+        "Function intro Ryan_2019": {
+          "build bridge": {
+            "name": "다리 짓기"
+          }
+        },
+        "Function intro Ryan_2020": {
+          "build bridge": {
+            "name": "다리 짓기"
+          }
+        },
+        "Geometric Sun": {
+          "diamond": {
+            "name": "다이아몬드"
+          },
+          "draw a house": {
+            "name": "집 그리기"
+          }
+        },
+        "Geometric Sun_2018": {
+          "diamond": {
+            "name": "다이아몬드"
+          },
+          "draw a house": {
+            "name": "집 그리기"
+          }
+        },
+        "InspirationalArtwork": {
+          "n-sided shape": {
+            "parameters": {
+              "length": "length"
+            }
+          },
+          "draw a loop": {
+            "parameters": {
+              "length": "length"
+            }
+          },
+          "draw spiral circle": {
+            "parameters": {
+              "size": "크기"
+            }
+          }
+        },
+        "InspirationalArtwork_2018": {
+          "draw a loop": {
+            "parameters": {
+              "length": "length"
+            }
+          },
+          "draw spiral circle": {
+            "parameters": {
+              "size": "크기"
+            }
+          }
+        },
+        "MC_HOC_2017_07_Cole": {
+          "clear path": {
+            "name": "경로 확보하기"
+          }
+        },
+        "MC_HOC_2017_07_Cole_2019": {
+          "clear path": {
+            "name": "경로 확보하기"
+          }
+        },
+        "MC_HOC_2017_07_Cole_2020": {
+          "clear path": {
+            "name": "경로 확보하기"
+          }
+        },
+        "MC_HOC_2017_10_RETRY": {
+          "fix long path": {
+            "name": "긴 길 고치기"
+          },
+          "fix short path": {
+            "name": "짧은 길 고치기"
+          }
+        },
+        "MC_HOC_2017_10_RETRY_2019": {
+          "fix long path": {
+            "name": "긴 길 고치기"
+          },
+          "fix short path": {
+            "name": "짧은 길 고치기"
+          }
+        },
+        "MC_HOC_2017_10_RETRY_2020": {
+          "fix long path": {
+            "name": "긴 길 고치기"
+          },
+          "fix short path": {
+            "name": "짧은 길 고치기"
+          }
+        },
+        "MC_HOC_2017_Ali": {
+          "build short bridge": {
+            "name": "짧은 다리 짓기"
+          },
+          "build long bridge": {
+            "name": "긴 다리 짓기"
+          }
+        },
+        "MC_HOC_2017_Ali_2019": {
+          "build short bridge": {
+            "name": "짧은 다리 짓기"
+          },
+          "build long bridge": {
+            "name": "긴 다리 짓기"
+          }
+        },
+        "MC_HOC_2017_Ali_2020": {
+          "build short bridge": {
+            "name": "짧은 다리 짓기"
+          },
+          "build long bridge": {
+            "name": "긴 다리 짓기"
+          }
+        },
+        "MC_HOC_2017_FP20x20": {
+          "function 1": {
+            "name": "함수 1"
+          },
+          "function 2": {
+            "name": "함수 2"
+          }
+        },
+        "MC_HOC_2017_FP20x20_2019": {
+          "function 1": {
+            "name": "함수 1"
+          },
+          "function 2": {
+            "name": "함수 2"
+          }
+        },
+        "MC_HOC_2017_FP20x20_2020": {
+          "function 1": {
+            "name": "함수 1"
+          },
+          "function 2": {
+            "name": "함수 2"
+          }
+        },
+        "NEW Course 4 Artist Functions 14": {
+          "empty function": {
+            "name": "빈 함수"
+          }
+        },
+        "NEW Course 4 Artist Functions 3": {
+          "draw a square": {
+            "name": "사각형 그리기"
+          }
+        },
+        "NEW Course 4 Artist Functions 4": {
+          "draw a square": {
+            "name": "사각형 그리기"
+          }
+        },
+        "NEW Course 4 Artist Functions 7": {
+          "draw a square": {
+            "name": "사각형 그리기"
+          }
+        },
+        "NEW Course 4 Artist Functions 8": {
+          "draw a triangle": {
+            "name": "삼각형 그리기"
+          }
+        },
+        "NEW Course 4 Artist Functions 9": {
+          "draw a square": {
+            "name": "사각형 그리기"
+          },
+          "draw a triangle": {
+            "name": "삼각형 그리기"
+          }
+        },
+        "NEW Course 4 Artist Params 1": {
+          "draw a square": {
+            "name": "사각형 그리기"
+          }
+        },
+        "NEW Course 4 Artist Params 10": {
+          "do something": {
+            "name": "함수 이름"
+          },
+          "draw a hexagon": {
+            "name": "6각형 그리기",
+            "parameters": {
+              "length": "length"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 11": {
+          "draw a polygon": {
+            "parameters": {
+              "length": "length"
+            }
+          },
+          "do something": {
+            "name": "함수 이름",
+            "parameters": {
+              "length": "length"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 12": {
+          "draw a polygon": {
+            "parameters": {
+              "length": "length"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 12a": {
+          "draw a polygon": {
+            "parameters": {
+              "length": "length"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 13": {
+          "draw a polygon": {
+            "parameters": {
+              "length": "length"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 14": {
+          "draw a spiral edge": {
+            "parameters": {
+              "length": "length"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 15": {
+          "draw a star": {
+            "name": "별 그리기",
+            "parameters": {
+              "points": "점수",
+              "length": "length"
+            }
+          },
+          "draw a circle": {
+            "name": "원 그리기"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "length",
+              "repeat": "반복"
+            }
+          },
+          "draw a triangle": {
+            "name": "삼각형 그리기",
+            "parameters": {
+              "length": "length"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "length"
+            }
+          },
+          "draw a house": {
+            "name": "집 그리기",
+            "parameters": {
+              "length": "length"
+            }
+          },
+          "draw a square": {
+            "name": "사각형 그리기",
+            "parameters": {
+              "length": "length"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 2": {
+          "do something": {
+            "name": "함수 이름"
+          },
+          "draw a triangle": {
+            "name": "삼각형 그리기",
+            "description": "삼각형 그리기"
+          }
+        },
+        "NEW Course 4 Artist Params 3": {
+          "draw a triangle": {
+            "name": "삼각형 그리기"
+          }
+        },
+        "NEW Course 4 Artist Params 4": {
+          "draw a triangle with length": {
+            "parameters": {
+              "length": "length"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 5": {
+          "draw a pentagon": {
+            "parameters": {
+              "length": "length"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 6": {
+          "draw a triangle": {
+            "name": "삼각형 그리기",
+            "parameters": {
+              "length": "length"
+            }
+          },
+          "draw a hexagon": {
+            "name": "6각형 그리기",
+            "parameters": {
+              "length": "length"
+            }
+          },
+          "draw a square": {
+            "name": "사각형 그리기",
+            "parameters": {
+              "length": "length"
+            }
+          },
+          "draw a sqaure": {
+            "parameters": {
+              "length": "length"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 7": {
+          "draw a triangle": {
+            "name": "삼각형 그리기",
+            "parameters": {
+              "length": "length"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 8": {
+          "draw a triangle with length": {
+            "parameters": {
+              "length": "length"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 9": {
+          "draw a square": {
+            "name": "사각형 그리기",
+            "parameters": {
+              "length": "length"
+            }
+          },
+          "do something": {
+            "name": "함수 이름"
+          }
+        },
+        "NEW Course 4 Artist Params inspire": {
+          "draw a polygon": {
+            "parameters": {
+              "length": "length"
+            }
+          }
+        },
+        "NEW Course 4 Play Lab Params 11": {
+          "jump": {
+            "name": "점프",
+            "parameters": {
+              "height": "높이:",
+              "actor": "캐릭터"
+            }
+          },
+          "patrol": {
+            "parameters": {
+              "actor": "캐릭터",
+              "speed": "스피드"
+            }
+          }
+        },
+        "New Artist Project": {
+          "draw a star": {
+            "name": "별 그리기",
+            "parameters": {
+              "points": "점수",
+              "length": "length"
+            }
+          },
+          "draw a circle": {
+            "name": "원 그리기"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "length",
+              "repeat": "반복"
+            }
+          },
+          "draw a triangle": {
+            "name": "삼각형 그리기",
+            "parameters": {
+              "length": "length"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "length"
+            }
+          },
+          "draw a house": {
+            "name": "집 그리기",
+            "parameters": {
+              "length": "length"
+            }
+          },
+          "draw a square": {
+            "name": "사각형 그리기",
+            "parameters": {
+              "length": "length"
+            }
+          }
+        },
+        "New Minecraft Hero Project": {
+          "function 1": {
+            "name": "함수 1"
+          },
+          "function 2": {
+            "name": "함수 2"
+          }
+        },
+        "New Play Lab Project": {
+          "jump": {
+            "name": "점프",
+            "parameters": {
+              "height": "높이:",
+              "actor": "캐릭터"
+            }
+          },
+          "patrol": {
+            "parameters": {
+              "actor": "캐릭터",
+              "speed": "스피드"
+            }
+          }
+        },
+        "Robot Doodle": {
+          "draw head": {
+            "name": "머리 그리기"
+          }
+        },
+        "Robot Doodle_2018": {
+          "draw head": {
+            "name": "머리 그리기"
+          }
+        },
+        "Standalone_Artist_7": {
+          "draw a flower": {
+            "name": "꽃 그리기"
+          }
+        },
+        "Standalone_Artist_9": {
+          "my function": {
+            "name": "내가 만든 함수"
+          }
+        },
+        "course3_artist_functions_challenge1": {
+          "do something": {
+            "name": "함수 이름"
+          }
+        },
+        "course3_artist_functions_challenge2": {
+          "do something": {
+            "name": "함수 이름"
+          }
+        },
+        "course3_bee_functions_challenge1": {
+          "do something": {
+            "name": "함수 이름"
+          }
+        },
+        "course3_bee_functions_challenge2": {
+          "do something": {
+            "name": "함수 이름"
+          }
+        },
+        "course4_artist_functions_challenge2": {
+          "do something": {
+            "name": "함수 이름"
+          }
+        },
+        "course4_artist_fwp_challenge1": {
+          "draw background": {
+            "parameters": {
+              "color": "색깔"
+            }
+          },
+          "do something": {
+            "name": "함수 이름"
+          }
+        },
+        "course4_bee_fwp_challenge1": {
+          "pick row": {
+            "parameters": {
+              "length": "length"
+            }
+          }
+        },
+        "course4_bee_fwp_challenge2": {
+          "pick row": {
+            "parameters": {
+              "length": "length"
+            }
+          }
+        },
+        "courseC_artist_prog3": {
+          "draw flame": {
+            "parameters": {
+              "x": "x"
+            }
+          }
+        },
+        "courseC_artist_prog3_2018": {
+          "draw flame": {
+            "parameters": {
+              "x": "x"
+            }
+          }
+        },
+        "courseC_artist_prog3_2019": {
+          "draw flame": {
+            "parameters": {
+              "x": "x"
+            }
+          }
+        },
+        "courseC_artist_prog3_2020": {
+          "draw flame": {
+            "parameters": {
+              "x": "x"
+            }
+          }
+        },
+        "courseC_data wizard": {
+          "do something": {
+            "name": "함수 이름"
+          }
+        },
+        "courseC_data wizard_2020": {
+          "do something": {
+            "name": "함수 이름"
+          }
+        },
+        "courseE_artist_concept1": {
+          "do something": {
+            "name": "함수 이름"
+          },
+          "draw a hexagon": {
+            "name": "6각형 그리기"
+          }
+        },
+        "courseE_artist_concept1_2018": {
+          "draw a hexagon": {
+            "name": "6각형 그리기"
+          }
+        },
+        "courseE_artist_concept4": {
+          "draw a square": {
+            "name": "사각형 그리기"
+          }
+        },
+        "courseE_artist_concept4_2018": {
+          "draw a square": {
+            "name": "사각형 그리기"
+          }
+        },
+        "courseE_artist_concept_challenge1": {
+          "do something": {
+            "name": "함수 이름"
+          }
+        },
+        "courseE_artist_concept_challenge1_2018": {
+          "do something": {
+            "name": "함수 이름"
+          }
+        },
+        "courseE_artist_functions10": {
+          "do something": {
+            "name": "함수 이름"
+          }
+        },
+        "courseE_artist_functions10_2018": {
+          "do something": {
+            "name": "함수 이름"
+          }
+        },
+        "courseE_artist_functions10_2019": {
+          "do something": {
+            "name": "함수 이름"
+          }
+        },
+        "courseE_artist_functions10_2020": {
+          "do something": {
+            "name": "함수 이름"
+          }
+        },
+        "courseE_artist_functions2": {
+          "draw a square": {
+            "name": "사각형 그리기"
+          }
+        },
+        "courseE_artist_functions2_2018": {
+          "draw a square": {
+            "name": "사각형 그리기"
+          }
+        },
+        "courseE_artist_functions2_2019": {
+          "draw a square": {
+            "name": "사각형 그리기"
+          }
+        },
+        "courseE_artist_functions2_2020": {
+          "draw a square": {
+            "name": "사각형 그리기"
+          }
+        },
+        "courseE_artist_functions2_copy": {
+          "draw a square": {
+            "name": "사각형 그리기"
+          }
+        },
+        "courseE_artist_functions3_2018": {
+          "draw a star": {
+            "name": "별 그리기"
+          }
+        },
+        "courseE_artist_functions3_2019": {
+          "draw a star": {
+            "name": "별 그리기"
+          }
+        },
+        "courseE_artist_functions3_2020": {
+          "draw a star": {
+            "name": "별 그리기"
+          }
+        },
+        "courseE_artist_functions4": {
+          "draw a star": {
+            "name": "별 그리기"
+          }
+        },
+        "courseE_artist_functions4_copy": {
+          "draw a star": {
+            "name": "별 그리기"
+          }
+        },
+        "courseE_artist_functions5": {
+          "draw a star": {
+            "name": "별 그리기"
+          }
+        },
+        "courseE_artist_functions5_2018": {
+          "draw a star": {
+            "name": "별 그리기"
+          }
+        },
+        "courseE_artist_functions5_2019": {
+          "draw a star": {
+            "name": "별 그리기"
+          }
+        },
+        "courseE_artist_functions5_2020": {
+          "draw a star": {
+            "name": "별 그리기"
+          }
+        },
+        "courseE_artist_functions5_copy": {
+          "draw a star": {
+            "name": "별 그리기"
+          }
+        },
+        "courseE_artist_functions7": {
+          "draw a house": {
+            "name": "집 그리기"
+          }
+        },
+        "courseE_artist_functions7_2018": {
+          "draw a house": {
+            "name": "집 그리기"
+          }
+        },
+        "courseE_artist_functions7_2020": {
+          "draw a house": {
+            "name": "집 그리기"
+          }
+        },
+        "courseE_artist_functions8": {
+          "do something": {
+            "name": "함수 이름"
+          },
+          "draw square": {
+            "name": "사각형 그리기"
+          }
+        },
+        "courseE_artist_functions8_2018": {
+          "do something": {
+            "name": "함수 이름"
+          },
+          "draw square": {
+            "name": "사각형 그리기"
+          }
+        },
+        "courseE_artist_functions8_2019": {
+          "do something": {
+            "name": "함수 이름"
+          },
+          "draw square": {
+            "name": "사각형 그리기"
+          }
+        },
+        "courseE_artist_functions8_2020": {
+          "do something": {
+            "name": "함수 이름"
+          },
+          "draw square": {
+            "name": "사각형 그리기"
+          }
+        },
+        "courseE_artist_functions8a_2018": {
+          "draw a square": {
+            "name": "사각형 그리기"
+          },
+          "do something": {
+            "name": "함수 이름"
+          }
+        },
+        "courseE_artist_functions8a_2019": {
+          "draw a square": {
+            "name": "사각형 그리기"
+          },
+          "do something": {
+            "name": "함수 이름"
+          }
+        },
+        "courseE_artist_functions8a_2020": {
+          "draw a square": {
+            "name": "사각형 그리기"
+          },
+          "do something": {
+            "name": "함수 이름"
+          }
+        },
+        "courseE_artist_functions8b_2018": {
+          "draw square": {
+            "name": "사각형 그리기"
+          },
+          "do something": {
+            "name": "함수 이름"
+          }
+        },
+        "courseE_artist_functions8b_2019": {
+          "draw square": {
+            "name": "사각형 그리기"
+          },
+          "do something": {
+            "name": "함수 이름"
+          }
+        },
+        "courseE_artist_functions8b_2020": {
+          "draw square": {
+            "name": "사각형 그리기"
+          },
+          "do something": {
+            "name": "함수 이름"
+          }
+        },
+        "courseE_artist_functions8c_2018": {
+          "draw square": {
+            "name": "사각형 그리기"
+          },
+          "do something": {
+            "name": "함수 이름"
+          }
+        },
+        "courseE_artist_functions8c_2019": {
+          "draw square": {
+            "name": "사각형 그리기"
+          },
+          "do something": {
+            "name": "함수 이름"
+          }
+        },
+        "courseE_artist_functions8c_2020": {
+          "draw square": {
+            "name": "사각형 그리기"
+          },
+          "do something": {
+            "name": "함수 이름"
+          }
+        },
+        "courseE_artist_functions9": {
+          "do something": {
+            "name": "함수 이름"
+          },
+          "draw triangle": {
+            "name": "삼각형 그리기"
+          }
+        },
+        "courseE_artist_functions9_2018": {
+          "do something": {
+            "name": "함수 이름"
+          },
+          "draw triangle": {
+            "name": "삼각형 그리기"
+          }
+        },
+        "courseE_artist_functions9_2019": {
+          "do something": {
+            "name": "함수 이름"
+          },
+          "draw triangle": {
+            "name": "삼각형 그리기"
+          }
+        },
+        "courseE_artist_functions9_2020": {
+          "do something": {
+            "name": "함수 이름"
+          },
+          "draw triangle": {
+            "name": "삼각형 그리기"
+          }
+        },
+        "courseE_artist_functionsProj_2018": {
+          "draw square": {
+            "name": "사각형 그리기"
+          }
+        },
+        "courseE_artist_functionsProj_2019": {
+          "draw square": {
+            "name": "사각형 그리기"
+          }
+        },
+        "courseE_artist_functionsProj_2020": {
+          "draw square": {
+            "name": "사각형 그리기"
+          }
+        },
+        "courseE_artist_functions_challenge1": {
+          "do something": {
+            "name": "함수 이름"
+          }
+        },
+        "courseE_artist_functions_challenge1_2018": {
+          "do something": {
+            "name": "함수 이름"
+          }
+        },
+        "courseE_artist_functions_challenge1_2019": {
+          "do something": {
+            "name": "함수 이름"
+          }
+        },
+        "courseE_artist_functions_challenge1_2020": {
+          "do something": {
+            "name": "함수 이름"
+          }
+        },
+        "courseE_artist_functions_challenge2": {
+          "do something": {
+            "name": "함수 이름"
+          }
+        },
+        "courseE_artist_functions_challenge2_2018": {
+          "do something": {
+            "name": "함수 이름"
+          }
+        },
+        "courseE_artist_functions_challenge2_2019": {
+          "do something": {
+            "name": "함수 이름"
+          }
+        },
+        "courseE_artist_functions_challenge2_2020": {
+          "do something": {
+            "name": "함수 이름"
+          }
+        },
+        "courseE_artist_functions_predict1": {
+          "draw a square": {
+            "name": "사각형 그리기"
+          }
+        },
+        "courseE_artist_functions_predict1_2018": {
+          "draw a square": {
+            "name": "사각형 그리기"
+          }
+        },
+        "courseE_artist_functions_predict1_2019": {
+          "draw a square": {
+            "name": "사각형 그리기"
+          }
+        },
+        "courseE_artist_functions_predict1_2020": {
+          "draw a square": {
+            "name": "사각형 그리기"
+          }
+        },
+        "courseE_artist_functions_predict1_copy": {
+          "draw a square": {
+            "name": "사각형 그리기"
+          }
+        },
+        "courseE_artist_functions_predict2": {
+          "do something": {
+            "name": "함수 이름"
+          }
+        },
+        "courseE_artist_functions_predict2_2018": {
+          "do something": {
+            "name": "함수 이름"
+          }
+        },
+        "courseE_artist_functions_predict2_2019": {
+          "do something": {
+            "name": "함수 이름"
+          }
+        },
+        "courseE_artist_functions_predict2_2020": {
+          "do something": {
+            "name": "함수 이름"
+          }
+        },
+        "courseE_bee_functions1": {
+          "do something": {
+            "name": "함수 이름"
+          }
+        },
+        "courseE_bee_functions2": {
+          "get 2 nectar": {
+            "name": "꽃꿀 2개 구하기"
+          }
+        },
+        "courseE_bee_functions3": {
+          "get 5": {
+            "name": "5개 구하기"
+          }
+        },
+        "courseE_bee_functions4": {
+          "move and get nectar": {
+            "name": "이동해서 꽃꿀을 구하기"
+          }
+        },
+        "courseE_bee_functions5": {
+          "move and get 4": {
+            "name": "이동해서 4개를 구하기"
+          }
+        },
+        "courseE_bee_functions6": {
+          "get 7 nectar make 7 honey": {
+            "name": "꽃꿀을 7개 구해서 꿀 7개를 만들기"
+          }
+        },
+        "courseE_bee_functions7": {
+          "get 7 make 7": {
+            "name": "7개 구해서 7개 만들기"
+          }
+        },
+        "courseE_bee_functions_challenge1": {
+          "do something": {
+            "name": "함수 이름"
+          }
+        },
+        "courseE_bee_functions_challenge2": {
+          "do something": {
+            "name": "함수 이름"
+          }
+        },
+        "courseE_farmer_concept1": {
+          "do something": {
+            "name": "함수 이름"
+          }
+        },
+        "courseE_farmer_concept2": {
+          "do something": {
+            "name": "함수 이름"
+          }
+        },
+        "courseE_farmer_concept3": {
+          "do something": {
+            "name": "함수 이름"
+          }
+        },
+        "courseE_playLab_scaffold1": {
+          "do something": {
+            "name": "함수 이름"
+          }
+        },
+        "courseE_playLab_scaffold2": {
+          "do something": {
+            "name": "함수 이름"
+          }
+        },
+        "courseE_playLab_scaffold3": {
+          "do something": {
+            "name": "함수 이름"
+          }
+        },
+        "courseE_playLab_scaffold4": {
+          "do something": {
+            "name": "함수 이름"
+          }
+        },
+        "courseF_artist_fwp1": {
+          "draw a square": {
+            "name": "사각형 그리기"
+          },
+          "checker": {
+            "parameters": {
+              "size": "크기",
+              "color": "색깔"
+            }
+          },
+          "do something": {
+            "name": "함수 이름"
+          },
+          "Make gingham": {
+            "parameters": {
+              "size": "크기"
+            }
+          },
+          "black outline": {
+            "parameters": {
+              "length": "length"
+            }
+          }
+        },
+        "courseF_artist_fwp2": {
+          "draw a square": {
+            "name": "사각형 그리기",
+            "parameters": {
+              "length": "length"
+            }
+          },
+          "checker": {
+            "parameters": {
+              "size": "크기",
+              "color": "색깔"
+            }
+          },
+          "do something": {
+            "name": "함수 이름"
+          },
+          "Make gingham": {
+            "parameters": {
+              "size": "크기"
+            }
+          },
+          "black outline": {
+            "parameters": {
+              "length": "length"
+            }
+          }
+        },
+        "courseF_artist_fwp2_predict1": {
+          "draw a square": {
+            "name": "사각형 그리기",
+            "parameters": {
+              "length": "length"
+            }
+          }
+        },
+        "courseF_artist_fwp3": {
+          "draw a square": {
+            "name": "사각형 그리기",
+            "parameters": {
+              "length": "length"
+            }
+          },
+          "draw a square2": {
+            "parameters": {
+              "size": "크기"
+            }
+          },
+          "filled square": {
+            "parameters": {
+              "size": "크기",
+              "color": "색깔"
+            }
+          },
+          "black outline": {
+            "parameters": {
+              "length": "length"
+            }
+          }
+        },
+        "courseF_artist_fwp4": {
+          "draw a polygon": {
+            "parameters": {
+              "length": "length"
+            }
+          }
+        },
+        "courseF_artist_fwp5": {
+          "draw a polygon": {
+            "parameters": {
+              "length": "length"
+            }
+          }
+        },
+        "courseF_artist_fwp6": {
+          "draw a spiral edge": {
+            "parameters": {
+              "length": "length"
+            }
+          }
+        },
+        "courseF_artist_fwp7": {
+          "draw a spiral edge": {
+            "parameters": {
+              "length": "length",
+              "min": "최소"
+            }
+          }
+        },
+        "courseF_artist_fwp8": {
+          "draw a spiral edge": {
+            "parameters": {
+              "length": "length",
+              "min": "최소"
+            }
+          }
+        },
+        "courseF_artist_fwp9": {
+          "draw a star": {
+            "name": "별 그리기",
+            "parameters": {
+              "points": "점수",
+              "length": "length"
+            }
+          },
+          "draw a circle": {
+            "name": "원 그리기"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "length",
+              "repeat": "반복"
+            }
+          },
+          "draw a triangle": {
+            "name": "삼각형 그리기",
+            "parameters": {
+              "length": "length"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "length"
+            }
+          },
+          "draw a house": {
+            "name": "집 그리기",
+            "parameters": {
+              "length": "length"
+            }
+          },
+          "draw a square": {
+            "name": "사각형 그리기",
+            "parameters": {
+              "length": "length"
+            }
+          },
+          "draw a spiral edge": {
+            "parameters": {
+              "length": "length",
+              "min": "최소"
+            }
+          }
+        },
+        "courseF_artist_fwp_challenge1": {
+          "draw background": {
+            "parameters": {
+              "color": "색깔"
+            }
+          },
+          "do something": {
+            "name": "함수 이름"
+          }
+        },
+        "courseF_artist_fwp_challenge2": {
+          "do something": {
+            "name": "함수 이름"
+          },
+          "draw an octagon": {
+            "parameters": {
+              "length": "length"
+            }
+          }
+        },
+        "courseF_bee_functions8a": {
+          "do something": {
+            "name": "함수 이름"
+          }
+        },
+        "courseF_bee_fwp4": {
+          "rowOfNectar": {
+            "parameters": {
+              "length": "length"
+            }
+          }
+        },
+        "courseF_bee_fwp5": {
+          "rowOfNectar": {
+            "parameters": {
+              "width": "너비"
+            }
+          }
+        },
+        "courseF_bee_fwp6": {
+          "rowOfNectar": {
+            "parameters": {
+              "width": "너비"
+            }
+          }
+        },
+        "courseF_bee_fwp7": {
+          "rowOfNectarOrHoney": {
+            "parameters": {
+              "width": "너비"
+            }
+          }
+        },
+        "courseF_bee_fwp8": {
+          "rowOfNectarOrHoney": {
+            "parameters": {
+              "width": "너비"
+            }
+          }
+        },
+        "courseF_bee_fwp9_predict1": {
+          "rowOfNectarOrHoney": {
+            "parameters": {
+              "width": "너비"
+            }
+          }
+        },
+        "courseF_bee_fwp_challenge1": {
+          "pick row": {
+            "parameters": {
+              "length": "length"
+            }
+          }
+        },
+        "courseF_bee_fwp_challenge2": {
+          "pick row": {
+            "parameters": {
+              "length": "length"
+            }
+          }
+        },
+        "courseF_bee_variables_7_2018": {
+          "collect": {
+            "name": "모으세요."
+          }
+        },
+        "courseF_bee_variables_7_2019": {
+          "collect": {
+            "name": "모으세요."
+          }
+        },
+        "courseF_bee_variables_7_2020": {
+          "collect": {
+            "name": "모으세요."
+          }
+        },
+        "courseF_bee_variables_8_2018": {
+          "collect": {
+            "name": "모으세요."
+          }
+        },
+        "courseF_bee_variables_8_2019": {
+          "collect": {
+            "name": "모으세요."
+          }
+        },
+        "courseF_bee_variables_8_2020": {
+          "collect": {
+            "name": "모으세요."
+          }
+        }
+      }
+    }
+  }
+}

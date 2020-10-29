@@ -1,0 +1,64 @@
+{
+  "pl-PL": {
+    "data": {
+      "placeholder_texts": {
+        "Course 4 Play Lab Params 10": {
+          "46e888cc716ac8ec6fad01e85eb7c37c": "Poziom: ",
+          "013405bba4219ed238e87658786699b6": "Punkty:"
+        },
+        "CourseE_hoops": {
+          "498cd895eb5a102c5aeb977e2b928dee": "Dziękujemy!"
+        },
+        "courseC_data wizard": {
+          "d93dfc24c6ce3e53d8ee07416c743e60": "Pies!",
+          "336ad881e37e713ba0325500a8fa1f00": " psy!",
+          "27944770529dd15319a983bee8951560": "Kot!",
+          "22f6f6821f4d6d0a08653935b466ac2f": " koty!",
+          "1c64ef29c853587fbe94f69f05272b79": "Ptak!",
+          "5b402e6ea05e847a076e03ad74420c45": "ptaki!"
+        },
+        "courseC_data wizard_2020": {
+          "d93dfc24c6ce3e53d8ee07416c743e60": "Pies!",
+          "336ad881e37e713ba0325500a8fa1f00": " psy!",
+          "27944770529dd15319a983bee8951560": "Kot!",
+          "22f6f6821f4d6d0a08653935b466ac2f": " koty!",
+          "1c64ef29c853587fbe94f69f05272b79": "Ptak!",
+          "5b402e6ea05e847a076e03ad74420c45": "ptaki!"
+        },
+        "courseE_Dogger_2": {
+          "e8a10c04d72b2f135dabe360c4bdd534": "Wygrywasz!"
+        },
+        "courseE_aboutme_3": {
+          "ed076287532e86365e841e92bfc50d8c": "Witaj świecie!"
+        },
+        "courseE_aboutme_3_2020": {
+          "ed076287532e86365e841e92bfc50d8c": "Witaj świecie!"
+        },
+        "courseE_aboutme_4": {
+          "ed076287532e86365e841e92bfc50d8c": "Witaj świecie!"
+        },
+        "courseE_aboutme_4_2020": {
+          "ed076287532e86365e841e92bfc50d8c": "Witaj świecie!"
+        },
+        "courseE_aboutme_5": {
+          "ed076287532e86365e841e92bfc50d8c": "Witaj świecie!",
+          "6ae99d4d2de5e3cbd29fec87ae7d76eb": "Hej!"
+        },
+        "courseE_aboutme_5_2020": {
+          "ed076287532e86365e841e92bfc50d8c": "Witaj świecie!",
+          "6ae99d4d2de5e3cbd29fec87ae7d76eb": "Hej!"
+        },
+        "courseF_playlab_variables2b": {
+          "48d6215903dff56238e52e8891380c8f": "niebieski"
+        },
+        "courseF_playlab_variables5c": {
+          "bda9643ac6601722a28f238714274da4": "czerwony"
+        },
+        "courseF_project_1": {
+          "e8a10c04d72b2f135dabe360c4bdd534": "Wygrywasz!",
+          "498cd895eb5a102c5aeb977e2b928dee": "Dziękujemy!"
+        }
+      }
+    }
+  }
+}

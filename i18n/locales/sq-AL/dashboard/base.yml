@@ -715,6 +715,7 @@ sq:
       email: 'Email'
       school_name: 'Emri i shkollës'
       school_country: 'Qyteti i shkollës'
+      colombian_school_name: 'Emri i shkollës'
     form_entries:
       gender:
         male: 'Mashkull'

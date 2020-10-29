@@ -53,15 +53,18 @@ module UsersHelper
 
   def log_account_takeover_to_firehose(source_user:, destination_user:, type:, provider:, error: nil)
     FirehoseClient.instance.put_record(
-      study: 'user-soft-delete-audit-v2',
-      event: "#{type}-account-takeover", # Silent or OAuth takeover
-      user_id: source_user.id, # User account being "taken over" (deleted)
-      data_int: destination_user.id, # User account after takeover
-      data_string: provider, # OAuth provider
-      data_json: {
-        user_type: destination_user.user_type,
-        error: error,
-      }.to_json
+      :analysis,
+      {
+        study: 'user-soft-delete-audit-v2',
+        event: "#{type}-account-takeover", # Silent or OAuth takeover
+        user_id: source_user.id, # User account being "taken over" (deleted)
+        data_int: destination_user.id, # User account after takeover
+        data_string: provider, # OAuth provider
+        data_json: {
+          user_type: destination_user.user_type,
+          error: error,
+        }.to_json
+      }
     )
   end
 
@@ -115,10 +118,8 @@ module UsersHelper
       user_data[:isTeacher] = true if user.teacher?
       user_data[:isVerifiedTeacher] = true if user.authorized_teacher?
       user_data[:linesOfCode] = user.total_lines
-    else
-      user_data[:linesOfCode] = client_state.lines
+      user_data[:linesOfCodeText] = I18n.t('nav.popup.lines', lines: user_data[:linesOfCode])
     end
-    user_data[:linesOfCodeText] = I18n.t('nav.popup.lines', lines: user_data[:linesOfCode])
     user_data
   end
 
@@ -194,7 +195,8 @@ module UsersHelper
               readonly_answers: readonly_answers ? true : nil,
               paired: (paired_user_levels.include? ul.try(:id)) ? true : nil,
               locked: locked ? true : nil,
-              last_progress_at: include_timestamp ? ul&.updated_at&.to_i : nil
+              last_progress_at: include_timestamp ? ul&.updated_at&.to_i : nil,
+              time_spent: ul&.time_spent&.to_i
             }.compact
           end
         end
@@ -225,7 +227,8 @@ module UsersHelper
           readonly_answers: readonly_answers ? true : nil,
           paired: (paired_user_levels.include? ul.try(:id)) ? true : nil,
           locked: locked ? true : nil,
-          last_progress_at: include_timestamp ? ul&.updated_at&.to_i : nil
+          last_progress_at: include_timestamp ? ul&.updated_at&.to_i : nil,
+          time_spent: ul&.time_spent&.to_i
         }.compact
 
         # Just in case this level has multiple pages, in which case we add an additional

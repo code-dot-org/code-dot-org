@@ -703,8 +703,8 @@ es-MX:
           la reflexión y el diseño de soluciones accesibles para aplicaciones hipotéticas.
       courseE_simon_says_2019:
         title: Simón dice
-        desc: Juega y piensa qué comandos son necesarios para obtener los resultados
-          adecuados.
+        desc: "Juega y piensa qué comandos son necesarios para obtener los resultados
+          adecuados.\r\n\r\n![test image](https://code.org/images/logo.png)"
       courseB_unplugged_passwords_2019:
         title: Contraseñas seguras
         desc: Explora por qué las personas utilizan contraseñas, aprende los beneficios

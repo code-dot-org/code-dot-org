@@ -1,31 +1,31 @@
 teacher_resources [["lessonPlans", "https://curriculum.code.org/pwc/ayp"]]
 
-lesson 'Personal Innovations'
+lesson 'Personal Innovations', display_name: 'Personal Innovations'
 level 'pwc_problemsolving', named: true
 level 'Computer Science is Changing Everything', named: true
 
-lesson 'What is a Computer?'
+lesson 'What is a Computer?', display_name: 'What is a Computer?'
 level 'pwc_technologyfoundations', named: true
 level 'CSD What Makes a Computer a Computer Video', named: true
 
-lesson 'Problem Solving with Big Data'
+lesson 'Problem Solving with Big Data', display_name: 'Problem Solving with Big Data'
 level 'pwc_data', named: true
 level 'CSD U5 Waze Data Video', progression: 'Problem Solving', named: true
 level 'CSD U5 Amazon Data Video', progression: 'Problem Solving', named: true
 
-lesson 'Programming - Hour of Code'
+lesson 'Programming - Hour of Code', display_name: 'Programming - Hour of Code'
 level 'pwc_programming', named: true
 
-lesson 'Creating Webpages'
+lesson 'Creating Webpages', display_name: 'Creating Webpages'
 level 'pwc_webdevelopment', named: true
 
-lesson 'User Interfaces'
+lesson 'User Interfaces', display_name: 'User Interfaces'
 level 'pwc_appdevunplugged', named: true
 
-lesson 'Intro to App Lab (13+)'
+lesson 'Intro to App Lab (13+)', display_name: 'Intro to App Lab (13+)'
 level 'pwc_appdev', named: true
 
-lesson 'Simple Encryption'
+lesson 'Simple Encryption', display_name: 'Simple Encryption'
 level 'pwc_cybersecurity', named: true
 level 'Crack a Caesar Cipher', named: true
 level 'Terminology Recap', named: true
@@ -34,5 +34,6 @@ level 'Crack Random Substitution', named: true
 level 'Technique: Frequency Analysis', named: true
 level 'Video - Encryption and Public Keys', named: true
 
-lesson 'Smart Clothing Design'
+lesson 'Smart Clothing Design', display_name: 'Smart Clothing Design'
 level 'pwc_internetofthings', named: true
+

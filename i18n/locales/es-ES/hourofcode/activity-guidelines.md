@@ -119,6 +119,7 @@ Qué necesitas:
     * 1 hora solamente
     * 1 hora con curso de seguimiento
     * 2 a 6 horas (pueden ser varias lecciones)
+* A list of accessibility accommodations, if your activity has them. These include screen reader compatibility, text-to-speech capabilities, use of high-contrast colors, or any other accommodations made for learners with disabilities.
 
 #### Cosas adicionales que necesitarás cuando envíes planes de lecciones
 

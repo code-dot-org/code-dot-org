@@ -38,19 +38,29 @@ Dostępny jest nowy zestaw plakatów, z gościnnie występującymi na nich Malal
 
 ## Użyj logo Godziny Kodowania, aby ją promować
 
-[![obraz]({{ hoc_logo_fit_200 }})]({{ hoc_logo }})
+[![obraz]({{ hoc_logo_fit_200 }})]({{ hoc_logo }}) [![obraz]({{ hdc_logo_fit_200 }})]({{ hdc_logo }})
 
 [Pobierz logo w wysokiej rozdzielczości](http://images.code.org/share/hour-of-code-logo.zip)
 
-**"Godzina Kodowania" jest znakiem towarowym. Nie chcemy ograniczać używania tej nazwy, ale chcemy mieć pewność, że spełnionych jest kilka warunków:**
+**"Hour of Code" ["Godzina Kodowania"] I "Hora del Código" są znakami towarowymi. Nie chcemy zabraniać używania tych nazw, ale chcemy mieć pewność, że odbywa się to zgodnie z kilkoma ograniczeniami:**
 
-1. Wszelkie odniesienia do "Godziny Kodowania" powinny być stosowane w sposób, który nie sugeruje, że jest to Twoja własna marka, ale odnosi się do Godziny Kodowania jako inicjatywy społecznej. **Przykład dobrego użycia**: "Weź udział w Godzinie Kodowania™ na ACMECorp.com." **Przykład złego użycia**: "Wypróbuj Godzinę Kodowania od ACME Corp."
-2. Używaj znaku "TM" jako indeksu górnego po frazie "Godzina Kodowania" w najbardziej znaczących miejscach, zarówno na Twojej stronie internetowej, jak i w opisach aplikacji.
-3. Na swojej stronie internetowej (np. w stopce) umieść informację a w niej linki do stron CSEdWeek i [Code.org]({{ codeorg_link }}), która brzmi, jak poniżej:
+1. Wszelkie odniesienia do "Hour of Code" [ "Godziny Kodowania"] lub "Hora del Código" powinny być stosowane w sposób, który nie sugeruje, że jest to Twoja własna marka, ale odnosi się do "Godziny kodowania" jako inicjatywy społecznej.
+
+<ul style="margin-top: 0px">
+  <li>
+    Dobry przykład użycia: "Weź udział w "Godzinie kodowania™" na TWOJA-FIRMA.com."
+  </li>
+  <li>
+    <strong>Przykład niewłaściwego użycia</strong>: "Wypróbuj "Godzinę kodowania" TWOJEJ-FIRMY."
+  </li>
+</ul>
+
+1. Stosuj górny indeks "TM" w najbardziej widocznych miejscach, gdzie używasz zwrotu "Godzina kodowania" i górny indeks "Ⓡ" w najbardziej widocznych miejscach, gdzie używasz zwrotu "Hora del Código", zarówno na swojej stronie jak i w opisach aplikacji.
+2. Na swojej stronie internetowej (np. w stopce) umieść informację a w niej linki do stron CSEdWeek i [Code.org]({{ codeorg_link }}), która brzmi, jak poniżej:
     
-    *"Godzina Kodowania™" jest krajową inicjatywą Computer Science Education Week [csedweek.org] i Code.org [code.org], której celem jest udział milionów uczniów w godzinie informatyki i programowaniu komputerów."*
+    *“The 'Hour of Code™'/'Hora del Código®' ["Godzina Kodowania™" jest krajową inicjatywą Computer Science Education Week [csedweek.org] i Code.org [code.org], której celem jest udział milionów uczniów w godzinie informatyki i programowania komputerowego."*
 
-4. Zakaz używania frazy "Godzina Kodowania" w nazwach aplikacji.
+3. Zakaz używania zwrotu "Hour of Code" ["Godzina Kodowania"] lub "Hora del Código" w nazwach aplikacji.
 
 <a id="stickers"></a>
 
@@ -134,7 +144,7 @@ Odwiedź http://hourofcode.com/{{ country }} po szczegółowe informacje i pomag
 
 **Temat:** Lokalna szkoła włącza się w misję wprowadzania uczniów do informatyki
 
-Komputery są wszędzie, zmieniają każdą branżę na Ziemi, ale tylko 45% wszystkich szkół średnich uczy informatyki. Dziewczęta i mniejszości społeczne są zdecydowanie niedostatecznie reprezentowane na studiach informatycznych i w branży zaawansowanych technologii. Dobrą wiadomością jest, że zamierzamy to zmienić.
+Komputery są wszędzie, zmieniają każdą branżę na Ziemi, ale tylko 45% wszystkich szkół średnich uczy informatyki. Młode kobiety i uczniowie wywodzący się z grup marginalizowanych ze względów rasowych i etnicznych są zdecydowanie niedostatecznie reprezentowani na zajęciach z informatyki oraz w branży zaawansowanych technologii. Dobrą wiadomością jest, że zamierzamy to zmienić.
 
 Dzięki Godzinie Kodowania, zajęcia informatyki pojawiły się na stronach domowych Google, MSN, Yahoo! Ponad 100 partnerskich firm wsparło tę inicjatywę. Każdy salon Apple na świecie organizował Godzinę Kodowania. Nawet Prezydent Obama napisał swoją pierwszą linię kodu w ramach tej inicjatywy.
 

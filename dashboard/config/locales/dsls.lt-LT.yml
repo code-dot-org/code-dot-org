@@ -452,6 +452,8 @@ lt-LT:
         content1: aprašymas čia
       Begin planning your project_2018_2019:
         content1: aprašymas čia
+      Begin planning your project_2018_2019_2020:
+        content1: aprašymas čia
       CSD Header Size MC:
         answers:
         - {}
@@ -1128,7 +1130,23 @@ lt-LT:
         - {}
         questions:
         - {}
+      behaviors 1 predict_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       behaviors 4 predict:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      behaviors 4 predict_2020:
         answers:
         - {}
         - {}
@@ -1160,6 +1178,14 @@ lt-LT:
         - {}
         questions:
         - {}
+      courseC_multi_artist_prog6_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseC_multi_harvester_loops11_predict1:
         answers:
         - {}
@@ -1177,6 +1203,14 @@ lt-LT:
         questions:
         - {}
       courseC_multi_harvester_loops11_predict1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_harvester_loops11_predict1_2018_2019_2020:
         answers:
         - {}
         - {}
@@ -1208,6 +1242,14 @@ lt-LT:
         - {}
         questions:
         - {}
+      courseC_multi_maze_debugging8_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseC_multi_maze_programming8_predict1:
         answers:
         - {}
@@ -1225,6 +1267,14 @@ lt-LT:
         questions:
         - {}
       courseC_multi_maze_programming8_predict1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_maze_programming8_predict1_2018_2019_2020:
         answers:
         - {}
         - {}
@@ -1256,6 +1306,14 @@ lt-LT:
         - text: Nežinau
         questions:
         - {}
+      courseC_multi_starWars_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - text: Nežinau
+        questions:
+        - {}
       courseC_multi_starWars_predict2:
         answers:
         - {}
@@ -1273,6 +1331,14 @@ lt-LT:
         questions:
         - {}
       courseC_multi_starWars_predict2_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_starWars_predict2_2018_2019_2020:
         answers:
         - {}
         - {}
@@ -1304,6 +1370,14 @@ lt-LT:
         - text: D
         questions:
         - {}
+      courseD_multi_artist_binary8_predict1_2018_2019_2020:
+        answers:
+        - text: A
+        - text: B
+        - text: C
+        - text: D
+        questions:
+        - {}
       courseD_multi_artist_nestedLoops9_predict1:
         answers:
         - text: A
@@ -1328,6 +1402,14 @@ lt-LT:
         - {}
         questions:
         - {}
+      courseD_multi_artist_nestedLoops9_predict1_2018_2019_2020:
+        answers:
+        - text: A
+        - text: B
+        - text: C
+        - {}
+        questions:
+        - {}
       courseD_multi_bee_conditionals1_predict1:
         answers:
         - {}
@@ -1345,6 +1427,14 @@ lt-LT:
         questions:
         - {}
       courseD_multi_bee_conditionals1_predict1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_2018_2019_2020:
         answers:
         - {}
         - {}
@@ -1384,6 +1474,14 @@ lt-LT:
         - {}
         questions:
         - {}
+      courseD_multi_bee_conditionals7_predict2_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_bee_nestedLoops2_predict1:
         answers:
         - {}
@@ -1408,6 +1506,14 @@ lt-LT:
         - {}
         questions:
         - {}
+      courseD_multi_bee_nestedLoops2_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_bee_nestedLoops9_predict2:
         answers:
         - {}
@@ -1425,6 +1531,14 @@ lt-LT:
         questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict2_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops9_predict2_2018_2019_2020:
         answers:
         - {}
         - {}
@@ -1464,6 +1578,14 @@ lt-LT:
         - {}
         questions:
         - {}
+      courseD_multi_farmer_condLoops9_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_farmer_ramp13:
         answers:
         - {}
@@ -1496,6 +1618,14 @@ lt-LT:
         - {}
         questions:
         - {}
+      courseD_multi_farmer_while10_predict2_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_farmer_while4_predict1:
         answers:
         - {}
@@ -1513,6 +1643,14 @@ lt-LT:
         questions:
         - {}
       courseD_multi_farmer_while4_predict1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while4_predict1_2018_2019_2020:
         answers:
         - {}
         - {}
@@ -1544,6 +1682,14 @@ lt-LT:
         - {}
         questions:
         - {}
+      courseD_multi_maze_until10_predict2_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_maze_until2_predict1:
         answers:
         - {}
@@ -1561,6 +1707,14 @@ lt-LT:
         questions:
         - {}
       courseD_multi_maze_until2_predict1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_maze_until2_predict1_2018_2019_2020:
         answers:
         - {}
         - {}
@@ -1608,6 +1762,14 @@ lt-LT:
         - {}
         questions:
         - {}
+      courseE_multi_farmer_functions11_predict_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseE_prediction_artistFunction1:
         answers:
         - {}
@@ -1625,6 +1787,14 @@ lt-LT:
         questions:
         - {}
       courseE_prediction_artistFunction1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_2018_2019_2020:
         answers:
         - {}
         - {}
@@ -1656,6 +1826,14 @@ lt-LT:
         - {}
         questions:
         - {}
+      courseF_bee_variables_8a_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseF_multi_artist_for10_predict1:
         answers:
         - {}
@@ -1673,6 +1851,14 @@ lt-LT:
         questions:
         - {}
       courseF_multi_artist_for10_predict1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_artist_for10_predict1_2018_2019_2020:
         answers:
         - {}
         - {}
@@ -1705,6 +1891,14 @@ lt-LT:
         questions:
         - {}
       courseF_multi_artist_variables3a_predict1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_artist_variables3a_predict1_2018_2019_2020:
         answers:
         - {}
         - {}
@@ -1752,6 +1946,14 @@ lt-LT:
         - {}
         questions:
         - {}
+      courseF_multi_bee_for3_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseF_multi_bee_fwp9_predict1:
         answers:
         - {}
@@ -1792,6 +1994,20 @@ lt-LT:
         - {}
         questions:
         - {}
+      coursee_prediction_artistfunction2_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      csf_be_a_super_digital_citizen:
+        content1: aprašymas čia
+      csf_password_power-up:
+        content1: aprašymas čia
+      csf_putting_a_stop_to_online_meanness:
+        content1: aprašymas čia
       grade2_multi_collector_A_predict1:
         answers:
         - {}
@@ -1809,6 +2025,14 @@ lt-LT:
         questions:
         - {}
       grade2_multi_collector_A_predict1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      grade2_multi_collector_A_predict1_2018_2019_2020:
         answers:
         - {}
         - {}

@@ -5,6 +5,7 @@ require 'dynamic_config/gatekeeper'
 require 'firebase_token_generator'
 require 'image_size'
 require 'cdo/firehose'
+require 'cdo/languages'
 require 'net/http'
 require 'uri'
 require 'json'
@@ -238,7 +239,7 @@ module LevelsHelper
     @app_options =
       if @level.is_a? Blockly
         blockly_options
-      elsif @level.is_a?(Weblab) || @level.is_a?(Fish)
+      elsif @level.is_a?(Weblab) || @level.is_a?(Fish) || @level.is_a?(Ailab)
         non_blockly_puzzle_options
       elsif @level.is_a?(DSLDefined) || @level.is_a?(FreeResponse) || @level.is_a?(CurriculumReference)
         question_options
@@ -310,10 +311,12 @@ module LevelsHelper
     use_blockly = !use_droplet && !use_netsim && !use_weblab
     use_p5 = @level.is_a?(Gamelab)
     hide_source = app_options[:hideSource]
+    use_google_blockly = view_options[:useGoogleBlockly]
     render partial: 'levels/apps_dependencies',
       locals: {
         app: app_options[:app],
         use_droplet: use_droplet,
+        use_google_blockly: use_google_blockly,
         use_blockly: use_blockly,
         use_applab: use_applab,
         use_gamelab: use_gamelab,
@@ -347,8 +350,12 @@ module LevelsHelper
   end
 
   def set_hint_prompt_options(level_options)
-    if @script && @script.hint_prompt_enabled?
-      level_options[:hintPromptAttemptsThreshold] = @level.hint_prompt_attempts_threshold
+    # Default was selected based on analysis of calculated thresholds for
+    # levels in Courses 2, 3, 4 and the 2017 versions of Courses A-F. See PR
+    # #36507 for more details.
+    default_hint_prompt_attempts_threshold = 6.5
+    if @script&.hint_prompt_enabled?
+      level_options[:hintPromptAttemptsThreshold] = @level.hint_prompt_attempts_threshold || default_hint_prompt_attempts_threshold
     end
   end
 
@@ -461,16 +468,43 @@ module LevelsHelper
 
   def azure_speech_service_options
     speech_service_options = {}
+
     if @level.game.use_azure_speech_service? && !CDO.azure_speech_service_region.nil? && !CDO.azure_speech_service_key.nil?
-      uri = URI.parse("https://#{CDO.azure_speech_service_region}.api.cognitive.microsoft.com/sts/v1.0/issueToken")
-      header = {'Ocp-Apim-Subscription-Key': CDO.azure_speech_service_key}
-      http = Net::HTTP.new(uri.host, uri.port)
-      http.use_ssl = true
-      http.verify_mode = OpenSSL::SSL::VERIFY_PEER
-      request = Net::HTTP::Post.new(uri.request_uri, header)
-      response = http.request(request)
-      speech_service_options[:azureSpeechServiceToken] = response.body
+      # First, get the token
+      token_uri = URI.parse("https://#{CDO.azure_speech_service_region}.api.cognitive.microsoft.com/sts/v1.0/issueToken")
+      token_header = {'Ocp-Apim-Subscription-Key': CDO.azure_speech_service_key}
+      token_http_request = Net::HTTP.new(token_uri.host, token_uri.port)
+      token_http_request.use_ssl = true
+      token_http_request.verify_mode = OpenSSL::SSL::VERIFY_PEER
+      token_request = Net::HTTP::Post.new(token_uri.request_uri, token_header)
+      token_response = token_http_request.request(token_request)
+      speech_service_options[:azureSpeechServiceToken] = token_response.body
       speech_service_options[:azureSpeechServiceRegion] = CDO.azure_speech_service_region
+
+      # Then, get the list of voices and languages
+      voice_uri = URI.parse("https://#{CDO.azure_speech_service_region}.tts.speech.microsoft.com/cognitiveservices/voices/list")
+      voice_header = {'Authorization': 'Bearer ' + token_response.body}
+      voice_http_request = Net::HTTP.new(voice_uri.host, voice_uri.port)
+      voice_http_request.use_ssl = true
+      voice_http_request.verify_mode = OpenSSL::SSL::VERIFY_PEER
+      voice_request = Net::HTTP::Get.new(voice_uri.request_uri, voice_header)
+      voice_response = voice_http_request.request(voice_request)
+
+      all_voices = voice_response.body && voice_response.body.length >= 2 ? JSON.parse(voice_response.body) : {}
+      language_dictionary = {}
+      language_dictionary = language_dictionary.transform_keys {|locale| Languages.get_native_name_by_locale(locale)}
+      speech_service_options[:azureSpeechServiceLanguages] = language_dictionary
+      all_voices.each do |voice|
+        native_locale_name = Languages.get_native_name_by_locale(voice["Locale"])
+        next if native_locale_name.empty?
+        language_dictionary[native_locale_name[0][:native_name_s]] ||= {}
+        language_dictionary[native_locale_name[0][:native_name_s]][voice["Gender"].downcase] ||= voice["ShortName"]
+        language_dictionary[native_locale_name[0][:native_name_s]]["languageCode"] ||= voice["Locale"]
+      end
+
+      language_dictionary.delete_if {|_, voices| voices.length < 3}
+
+      speech_service_options[:azureSpeechServiceLanguages] = language_dictionary
     end
     speech_service_options
   rescue SocketError, Net::OpenTimeout, Net::ReadTimeout, Errno::ECONNRESET, Errno::ECONNREFUSED, Errno::ENETUNREACH
@@ -565,7 +599,7 @@ module LevelsHelper
       callback: @callback,
       sublevelCallback: @sublevel_callback,
     }
-    dev_with_credentials = rack_env?(:development) && (!!CDO.aws_access_key || !!CDO.aws_role) && !!CDO.cloudfront_key_pair_id
+    dev_with_credentials = rack_env?(:development) && !!CDO.cloudfront_key_pair_id
     use_restricted_songs = CDO.cdn_enabled || dev_with_credentials || (rack_env?(:test) && ENV['CI'])
     app_options[:useRestrictedSongs] = use_restricted_songs if @game == Game.dance
     app_options[:isStartMode] = @is_start_mode || false
@@ -799,12 +833,15 @@ module LevelsHelper
       else
         error_message = I18n.t("errors.messages.too_young")
         FirehoseClient.instance.put_record(
-          study: "redirect_under_13",
-          event: "student_with_no_teacher_redirected",
-          user_id: current_user.id,
-          data_json: {
-            game: level.game.name
-          }.to_json
+          :analysis,
+          {
+            study: "redirect_under_13",
+            event: "student_with_no_teacher_redirected",
+            user_id: current_user.id,
+            data_json: {
+              game: level.game.name
+            }.to_json
+          }
         )
       end
       redirect_to '/', flash: {alert: error_message}

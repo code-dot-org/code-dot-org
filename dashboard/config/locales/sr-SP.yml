@@ -489,6 +489,7 @@ sr:
     form_labels:
       email: Електронска пошта
       school_name: Име школе
+      colombian_school_name: Име школе
     form_entries:
       gender:
         male: Мушко

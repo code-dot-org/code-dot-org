@@ -1,17 +1,27 @@
-- course = local_assigns[:course]
+- unit_group = local_assigns[:unit_group]
 
 - data = {}
-- data[:course_summary] = course.summarize(@current_user)
+- data[:course_summary] = unit_group.summarize(@current_user)
 - data[:sections] = @sections_with_assigned_info || []
 - data[:is_teacher] = @current_user.try(:teacher?) || false
 - data[:is_verified_teacher] = @current_user.try(:authorized_teacher?) || false
-- data[:hidden_scripts] = @current_user.try(:get_hidden_script_ids, course)
-- data[:show_version_warning] = course.has_older_version_progress?(@current_user) && !course.has_dismissed_version_warning?(@current_user)
+- data[:hidden_scripts] = @current_user.try(:get_hidden_script_ids, unit_group)
+- data[:show_version_warning] = unit_group.has_older_version_progress?(@current_user) && !unit_group.has_dismissed_version_warning?(@current_user)
 - data[:show_redirect_warning] = redirect_warning
-- data[:redirect_to_course_url] = course.redirect_to_course_url(@current_user)
+- data[:redirect_to_course_url] = unit_group.redirect_to_course_url(@current_user)
 - data[:user_id] = @current_user.try(:id)
 
 - content_for(:head) do
   %script{ src: webpack_asset_path('js/courses/show.js'), data: {courses_show: data.to_json}}
 
 #course_overview
+
+- if can? :edit, unit_group
+  = render layout: 'shared/extra_links' do
+    %strong= unit_group.name
+    %ul
+      - if Rails.application.config.levelbuilder_mode
+        %li= link_to "Edit", edit_course_path(unit_group)
+      - else
+        - lb_path = "https://levelbuilder-studio.code.org#{course_path(unit_group)}"
+        %li= link_to "View on levelbuilder", lb_path

@@ -16,6 +16,65 @@ class ApiController < ApplicationController
     end
   end
 
+  # Calls Azure Cognitive Services in order to get a temporary OAuth token with access to the Immersive Reader API.
+  # Requires the following configurations
+  #   CDO.imm_reader_tenant_id
+  #   CDO.imm_reader_client_id
+  #   CDO.imm_reader_subdomain
+  #   CDO.imm_reader_client_secret
+  # @return [Hash] {token: 'string', subdomain: 'string'}
+  # @return [Hash] {error: 'string'}
+  def immersive_reader_token
+    tenant_id = CDO.imm_reader_tenant_id
+    client_id = CDO.imm_reader_client_id
+    subdomain = CDO.imm_reader_subdomain
+    client_secret = CDO.imm_reader_client_secret # Do not log this secret
+    if tenant_id.blank? || client_id.blank? || subdomain.blank? || client_secret.blank?
+      return render status: :internal_server_error, json: {error: 'Environment not configured for Immersive Reader.'}
+    end
+
+    begin
+      headers = {
+        'content-type' => 'application/x-www-form-urlencoded'
+      }
+      url = "https://login.windows.net/#{tenant_id}/oauth2/token"
+      form = {
+        'grant_type' => 'client_credentials',
+        'client_id' => client_id,
+        'client_secret' => client_secret, # Do not log this secret
+        'resource' => 'https://cognitiveservices.azure.com/'
+      }
+      auth_response = JSON.parse(RestClient.post(url, form, headers))
+      response = {
+        token: auth_response['access_token'],
+        subdomain: subdomain,
+      }
+      render json: response
+    rescue RestClient::Exception => e
+      Honeybadger.notify(
+        e,
+        error_message: "Failed to retrieve OAuth token from Azure for use with the Immersive Reader API.",
+        context: {
+          client_id: tenant_id,
+          tenant_id: client_id,
+          subdomain: subdomain,
+        }
+      )
+      render status: :failed_dependency, json: {error: 'Unable to get token from Azure.'}
+    rescue JSON::JSONError => e
+      Honeybadger.notify(
+        e,
+        error_message: "Failed to parse response from Azure when trying to get OAuth token for use with the Immersive Reader API.",
+        context: {
+          client_id: tenant_id,
+          tenant_id: client_id,
+          subdomain: subdomain,
+        }
+      )
+      render status: :internal_server_error, json: {error: 'Unable to get token from Azure.'}
+    end
+  end
+
   def clever_classrooms
     return head :forbidden unless current_user
 
@@ -108,7 +167,7 @@ class ApiController < ApplicationController
     @user_header_options = {}
     @user_header_options[:current_user] = current_user
     @user_header_options[:show_pairing_dialog] = show_pairing_dialog
-    @user_header_options[:session_pairings] = session[:pairings]
+    @user_header_options[:session_pairings] = pairing_user_ids
     @user_header_options[:loc_prefix] = 'nav.user.'
   end
 
@@ -371,11 +430,8 @@ class ApiController < ApplicationController
       user_level = current_user.last_attempt(level, script)
       level_source = user_level.try(:level_source).try(:data)
 
-      response[:progress] = current_user.
-        user_levels.
-        by_stage(stage).
-        pluck(:level_id, :best_result).
-        to_h
+      # Temporarily return the full set of progress so we can overwrite what the sessionStorage changed
+      response[:progress] = summarize_user_progress(script, current_user)[:levels]
 
       if user_level
         response[:lastAttempt] = {
@@ -462,11 +518,14 @@ class ApiController < ApplicationController
     event = original_data['event']
     project_id = original_data['project_id'] || nil
     FirehoseClient.instance.put_record(
-      study: 'firehose-error-unreachable',
-      event: event,
-      project_id: project_id,
-      data_string: params.require(:error_text),
-      data_json: original_data.to_json
+      :analysis,
+      {
+        study: 'firehose-error-unreachable',
+        event: event,
+        project_id: project_id,
+        data_string: params.require(:error_text),
+        data_json: original_data.to_json
+      }
     )
   end
 

@@ -490,6 +490,7 @@ az:
     form_labels:
       email: 'E-poçt'
       school_name: 'Məktəbin adı'
+      colombian_school_name: 'Məktəbin adı'
     form_entries:
       gender:
         male: 'Kişi'

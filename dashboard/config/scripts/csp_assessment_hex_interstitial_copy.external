@@ -1,0 +1,17 @@
+name 'CSP assessment Hex interstitial copy'
+title 'Hexadecimal'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+The next question refers to *hexadecimal* which is a base-16 number system - a number system that uses one of 16 possible digits for each place value.  You may not have explicitly covered hexadecimal in your class yet, that's okay.  Consider this a challenge question and try your best using your intuition about what you already know.
+
+
+The 16 digits used in hexadecimal are: **0 1 2 3 4 5 6 7 8 9 A B C D E F**.  These represent the decimal values 0-15, respectively.  Hex is just another number system so, for example the value "fourteen" can be represented in  Decimal, Binary and Hexadecimal like so:
+
+<pre>
+    Decimal: 14
+     Binary: 1110
+Hexadecimal: E
+</pre>
+
+MARKDOWN

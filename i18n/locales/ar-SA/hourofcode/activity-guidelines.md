@@ -131,6 +131,7 @@ title: إرشادات النشاط
         * ساعة واحدة
         * ساعة واحدة مع دورة متابعة
         * 2 - 6 ساعات (يمكن أن تكون دروسًا متعددة)
+    * A list of accessibility accommodations, if your activity has them. These include screen reader compatibility, text-to-speech capabilities, use of high-contrast colors, or any other accommodations made for learners with disabilities.
     
     #### الأشياء الإضافية التي ستحتاج إليها عند إرسال خطط الدرس
     

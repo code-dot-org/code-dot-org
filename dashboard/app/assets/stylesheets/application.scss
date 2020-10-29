@@ -60,6 +60,10 @@ body.pin_bottom {
   left: 0;
 }
 
+body.oceans-blue {
+  background-color: $oceans_deep_blue;
+}
+
 h1 {
   font-family: $gotham-extra-bold;
   font-weight: normal;
@@ -139,8 +143,9 @@ img.video_thumbnail {
 
 .header-wrapper {
   padding-top: 0;
-  min-height: 60px;
+  min-height: 50px;
   position: relative;
+  user-select: none;
 
   .header {
     position: absolute;
@@ -186,8 +191,6 @@ img.video_thumbnail {
   }
 
   .project_info {
-    padding-top: 7px;
-
     .header_text, .header_button {
       float: left;
     }
@@ -210,7 +213,10 @@ img.video_thumbnail {
 
   .header_text {
     font-size: 16px;
-    display: inline-block;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   @media screen and (min-width: 971px) {
@@ -233,7 +239,6 @@ img.video_thumbnail {
 
   .headerlinks {
     margin-top: 12px;
-    margin-left: 74px;
 
     .headerlink {
       font-family: 'Gotham 4r', sans-serif;
@@ -252,7 +257,7 @@ img.video_thumbnail {
     }
 
     html[dir=rtl] & {
-      padding-right: 350px;
+      padding-right: 30px;
     }
   }
 
@@ -272,6 +277,7 @@ img.video_thumbnail {
     box-sizing: border-box;
     float: left;
     cursor: pointer;
+    white-space: nowrap;
     a:hover {
       text-decoration: none;
       background-color: $orange;
@@ -343,20 +349,69 @@ img.video_thumbnail {
 }
 
 #header-banner {
-  top: 0;
-  position: absolute;
-  width: 100%;
-  height: 320px;
-  z-index: -1000;
-  background-position: 90% 10%;
   background-size: cover;
+  background-position: 90% 30%;
+  display: flex;
+  justify-content: center;
 
-  &.header-banner-short {
-    height: 180px;
+  .bannerContent {
+    max-width: 60%;
   }
 
-  &.header-banner-courses {
-    background-position: 75% 10%;
+  /*
+    The banner background image leaves an open space for text on the left. Therefore, in Right-to-Left languages, the
+    banner needs to be flipped horizontally so the background image empty space is on the right.
+   */
+  html[dir=rtl] & {
+    transform: scaleX(-1);
+    /*
+      Since the whole banner was flipped horizontally, we need to un-flip all the content in the header. So the text and
+      layout is not backwards
+     */
+    .bannerContentContainer {
+      transform: scaleX(-1);
+    }
+  }
+
+  #projects-page & {
+    margin-bottom: 16px;
+  }
+}
+
+#header-banner-overflow {
+  margin: 16px;
+}
+
+#header-banner, #header-banner-overflow {
+  .children {
+    margin-top: 16px;
+  }
+}
+
+.bannerContentContainer {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 16px;
+}
+#courses-container {
+  #header-banner {
+    background-position: 75% 40%;
+  }
+
+  .announcements {
+    margin-top: 16px;
+  }
+
+  .contentContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+
+    .content {
+      width: 100%;
+      margin: 0 16px;
+    }
   }
 }
 
@@ -445,6 +500,37 @@ html, body {
   .dim {
     display: inline-block;
     opacity: 0.5;
+  }
+
+  .container {
+    html[dir=rtl] & {
+      float: right;
+    }
+
+    .row {
+      [class*="span"] {
+        html[dir=rtl] & {
+          float: right;
+          margin-right: 20px;
+          margin-left: 0;
+        }
+
+        a {
+          html[dir=rtl] & {
+            float: right;
+          }
+        }
+
+        div.dim {
+          html[dir=rtl] & {
+            float: right;
+            margin-left: 4px;
+            margin-right: 4px;
+          }
+        }
+      }
+    }
+
   }
 }
 
@@ -676,6 +762,11 @@ $small-footer-standard-width: 400px;
   height: 24px;
 }
 
+.oceans-blue .small-footer-base {
+  background-color: initial;
+  border-top: initial;
+}
+
 .header_separator {
   padding-left: 2px;
   margin-bottom: -18px;
@@ -717,6 +808,7 @@ $small-footer-standard-width: 400px;
 .full_container {
   padding: 0 25px 25px 25px;
 }
+
 body.embedded_iframe {
   .full_container {
     padding-left: 0;
@@ -726,7 +818,6 @@ body.embedded_iframe {
 .responsive_full_container {
   padding: 0 10px 10px 10px;
 }
-
 
 $default-modal-width: 640px;
 
@@ -807,6 +898,7 @@ $default-modal-width: 640px;
 .video-player-rounded-corners {
   border-radius: 10px;
   border-width: 0;
+  overflow: hidden;
 }
 
 .video-player-full-width {
@@ -821,52 +913,6 @@ $default-modal-width: 640px;
   position: relative;
   // Specifically supports 16x9 aspect ratio
   padding-top: 56.25%;
-}
-
-@media screen and (max-height: 1330px) {
-  .standalone-video-full-width {
-    max-width: 1973px;
-  }
-}
-@media screen and (max-height: 1240px) {
-  .standalone-video-full-width {
-    max-width: 1813px;
-  }
-}
-@media screen and (max-height: 1150px) {
-  .standalone-video-full-width {
-    max-width: 1653px;
-  }
-}
-@media screen and (max-height: 1060px) {
-  .standalone-video-full-width {
-    max-width: 1493px;
-  }
-}
-@media screen and (max-height: 970px) {
-  .standalone-video-full-width {
-    max-width: 1333px;
-  }
-}
-@media screen and (max-height: 880px) {
-  .standalone-video-full-width {
-    max-width: 1173px;
-  }
-}
-@media screen and (max-height: 790px) {
-  .standalone-video-full-width {
-    max-width: 1013px;
-  }
-}
-@media screen and (max-height: 700px) {
-  .standalone-video-full-width {
-    max-width: 853px;
-  }
-}
-@media screen and (max-height: 610px) {
-  .standalone-video-full-width {
-    max-width: 693px;
-  }
 }
 
 .buttons-right-aligned {
@@ -905,12 +951,11 @@ $default-modal-width: 640px;
 }
 
 .header_left {
-  position: absolute;
-  left: 25px;
+  display: flex;
+  float: left;
   z-index: 2;
-  .header_button, .header_input, .header_text {
-    margin-left: 10px;
-  }
+  flex-shrink: 0;
+  flex-grow: 0;
 }
 
 .header_left, .header_right {
@@ -940,6 +985,11 @@ $default-modal-width: 640px;
   }
   .project_name_wrapper {
     min-width: 160px;
+
+    html[dir=rtl] & {
+      padding-left: 5px;
+      padding-right: 5px;
+    }
   }
   .project_name_wrapper .header_text {
     float: left;
@@ -1016,12 +1066,24 @@ $default-modal-width: 640px;
   }
 }
 
+@keyframes header_fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .header_middle {
-  position: absolute;
-  left: 0;
-  right: 0;
-  .header_button {
-    margin-top: 3px;
+  display: flex;
+  flex-shrink: 1;
+  flex-grow: 1;
+  min-width: 0;
+  float: left;
+
+  .header_button, .header_input {
+    margin-left: 10px;
   }
 }
 
@@ -1032,21 +1094,35 @@ $default-modal-width: 640px;
 }
 
 .header_level {
-  padding-top: 2px;
-  padding-bottom: 0;
-  text-align: center;
   font-size: 150%;
   cursor: default;
-  white-space: nowrap;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   .progress_container {
-    display: inline-block;
+    overflow: hidden;
   }
 }
 
+.script_name_container {
+  overflow: hidden;
+  padding-right: 5px;
+}
+
 .header_right {
-  position: absolute;
-  right: 16px;
+  float: right;
+  margin-right: 13px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#sign_in_or_user {
+  float: left;
 }
 
 input.header_input {
@@ -1063,8 +1139,8 @@ input.header_input {
 }
 
 .header_popup {
-  display: none;
   position: absolute;
+  text-align: left;
   // Set to have a 4 px gap with the bottom of the header
   top: 48px;
   right: 0;
@@ -1094,47 +1170,29 @@ input.header_input {
   color: $charcoal;
 
   .loading {
-    height: 400px;
     margin: 20px;
     background: image-url("spinner-big.gif") no-repeat center center;
   }
 }
 
-.header_popup_link {
-  min-width: 40px;
-  display: inline-block;
-  text-align: center;
-  vertical-align: middle;
-  height: 26px;
-  cursor: pointer;
-}
-
 .header_finished_link {
   display: inline-block;
   font-size: 16px;
+  overflow: hidden;
+  padding-left: 5px;
+  box-sizing: border-box;
+
+  a {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 }
 
 .header_finished_link:hover {
   background-color: transparent;
   text-decoration: underline;
-}
-
-.header_popup_link:hover {
-  background-color: transparent;
-  text-decoration: none;
-}
-
-.header_popup_link_glyph {
-  font-size: 22px;
-  color: $orange;
-  line-height: 10px;
-}
-
-.header_popup_link_text {
-  font-size: 10px;
-  color: $header_text;
-  display: inline-block;
-  line-height: 20px;
 }
 
 #alert {
@@ -1143,6 +1201,18 @@ input.header_input {
   border-style: solid;
   border-width: 2px;
   padding: 5px;
+}
+
+.oceans-blue {
+  #codeApp {
+    .loading {
+      background: image-url("spinner-big-oceans-blue.gif") no-repeat center center;
+    }
+
+    .slow_load {
+      color: $white;
+    }
+  }
 }
 
 #codeApp {
@@ -1321,18 +1391,49 @@ body.iframe_embed_app_and_code {
   }
 
   html[dir=rtl] .flip-x-close & {
-    left: auto;
-    right: $cornerOffset;
+    right: auto;
+    left: $cornerOffset;
   }
 
   html[dir=rtl] .flip-x-close &:hover {
-    left: auto;
-    right: $cornerOffset - $movement;
+    right: auto;
+    left: $cornerOffset - $movement;
   }
 }
 
 .x-close {
   @include close-button($cornerOffset: -20px);
+}
+
+.open-link {
+  $startWidth: 61px;
+  $startHeight: 59px;
+  $cornerOffset: -20px;
+  $growth: 3px;
+  $movement: 1px;
+
+  position: absolute;
+  cursor: pointer;
+  z-index: 1;
+  background: image-url("open_button.png") no-repeat center center;
+  background-size: 100% auto;
+
+  top: $cornerOffset;
+  right: -30px + $startWidth;
+  width: $startWidth;
+  height: $startHeight;
+  &:hover {
+    width: $startWidth + $growth;
+    height: $startHeight + $growth;
+  }
+}
+.open-link > a {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
 }
 
 .qtip-content {
@@ -2297,7 +2398,7 @@ a.download-video {
 
 .standalone-video {
   width: 853px;
-  margin: auto;
+  margin: 10px auto 0 auto;
 
   .video-link, .slides-link, #fallback-player-caption-dialog-link {
     display: inline-block;
@@ -3193,6 +3294,10 @@ code {
   }
 }
 
+.breadcrumb-header {
+  margin-top: 10px;
+}
+
 #survey-submission-thankyou {
   color: $purple;
   font-size: 18px;
@@ -3351,6 +3456,10 @@ h2.danger {
   text-align: center;
 }
 
+.foorm-adjust-dropdown-height {
+  height: calc(2em + 10px) !important;
+}
+
 #parent-email-banner {
   position: fixed;
   bottom: 0;
@@ -3459,5 +3568,62 @@ h2.danger {
   /* mobile */
   @media screen and (min-width: 0px) and (max-width: 970px) {
     display: none;
+  }
+}
+
+// Some images must not be flipped over even in RTL
+html[dir=rtl] {
+  img[src="/blockly/media/skins/jigsaw/blocks.png"] {
+    -webkit-transform: none !important;
+    transform: none !important;
+  }
+}
+#add-parent-email {
+  #remove-parent-email-link {
+    color: $red;
+  }
+}
+
+.immersive-reader-button {
+  /* !important is used to override the default styling from the Microsoft immersive-reader-sdk */
+  background-color: $lightest_purple !important;
+  float: right;
+  margin-top: 1px !important;
+  height: 16px !important;
+  padding: 8px !important;
+  border-radius: 4px !important;
+
+  html[dir=rtl] & {
+    float: left;
+  }
+
+  &:hover {
+    background-color: $cyan !important;
+    border-radius: 4px !important;
+
+    /* The TTS buttons overlap this button, so make this button's z-index higher as a temp fix */
+    position: relative;
+    z-index: 1000;
+  }
+
+  img {
+    filter: grayscale(1);
+  }
+}
+
+#mapbox-location-search-container {
+  .mapboxgl-ctrl-geocoder {
+    min-width: 100%;
+    z-index: 2;
+    box-shadow: none;
+    border: 1px solid $bootstrap_border_color;
+    font-family: inherit;
+    font-size: inherit;
+  }
+  input {
+    height: 36px;
+    margin: 0;
+    border: none;
+    padding: 0 34px;
   }
 }

@@ -535,9 +535,9 @@ FactoryGirl.define do
   end
 
   factory :census_inaccuracy_investigation, class: 'Census::CensusInaccuracyInvestigation' do
-    user {build :user}
+    user {build :teacher}
     notes "Some notes from my investigation"
-    census_submission {build :census_your_school2017v7}
+    census_submission {build :census_your_school2017v7, submitter_email_address: user&.email}
 
     trait :without_submission do
       census_submission nil

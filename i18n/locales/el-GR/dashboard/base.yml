@@ -748,6 +748,7 @@ el:
       email: 'Ηλεκτρονικό ταχυδρομείο'
       school_name: 'Όνομα σχολείου'
       school_country: 'Χώρα σχολείου'
+      colombian_school_name: 'Όνομα σχολείου'
     form_entries:
       gender:
         male: 'Αγόρι'

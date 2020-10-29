@@ -122,7 +122,6 @@
   "dropletBlock_setSpritePosition_description": "Flyttar ein figur direkte til gitt plassering.",
   "dropletBlock_setSpriteSpeed_description": "Set farta til ein figur.",
   "dropletBlock_setSprite_description": "Set utsjånaden til skodespelar",
-  "dropletBlock_setSprite_param0": "",
   "dropletBlock_setSprite_param0_description": "Indeksen (startar på 0) viser kva figur som skal endrast.",
   "dropletBlock_setSprite_param1": "bilete",
   "dropletBlock_setSprite_param1_description": "Namn på bilete av figuren.",

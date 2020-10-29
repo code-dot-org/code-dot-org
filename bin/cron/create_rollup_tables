@@ -3,9 +3,9 @@
 # This script populates (after truncating) the contained_levels,
 # contained_level_answers, and the level_sources_multi_type tables.
 
-require_relative '../../lib/cdo/only_one'
+require_relative 'only_one'
 
-exit unless only_one_running?(__FILE__)
+abort 'Script already running' unless only_one_running?(__FILE__)
 
 require_relative '../../dashboard/config/environment'
 

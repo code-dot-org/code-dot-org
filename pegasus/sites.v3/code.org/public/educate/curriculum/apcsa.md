@@ -34,9 +34,6 @@ pedagogical techniques and content-specific strategies that you can use in your 
 ### [A+ Computer Science](https://www.apluscompsci.com/material.htm)
 Curriculum package for AP CSA includes lab assignments (with startup files, descriptions, and solutions), slides (with code samples and notes pages), tests and quizzes (multiple formats provided including Word, Examview, Moodle, and Blackboard), and worksheets. Half-day, full-day, and multi-day Computer Science workshops are available upon request. $535 in year 1, $325 for renewal.
 
-### [Advanced Topics Summer Workshop](http://advanced-topics.cs.princeton.edu/)
-A free summer professional development workshop for teachers who want to learn what comes after AP CS A at the college level.
-
 ### [AP CS A Resources](https://www.smore.com/upzfa-ap-computer-science)
 An AP CS A teacher-curated list of links to recommended java courses, video tutorials, and practice problems
 

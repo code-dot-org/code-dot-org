@@ -231,7 +231,6 @@ module ScriptConstants
     APPLAB_2HOUR = 'applab-2hour'.freeze,
     CSD_POST_SURVEY = 'csd-post-survey'.freeze,
     DEEPDIVE_DEBUGGING = 'deepdive-debugging'.freeze,
-    FESBINARY = 'fesbinary'.freeze,
     FREQUENCY_ANALYSIS = 'frequency_analysis'.freeze,
     GAMELAB = 'gamelab'.freeze,
     K1HOC_2017 = 'k1hoc2017'.freeze,
@@ -244,12 +243,6 @@ module ScriptConstants
   ]
 
   DEFAULT_VERSION_YEAR = '2017'
-
-  # An allowlist of all family names for courses.
-  COURSE_FAMILY_NAMES = [
-    CSD = 'csd'.freeze,
-    CSP = 'csp'.freeze,
-  ].freeze
 
   # An allowlist of all family names for scripts.
   FAMILY_NAMES = [
@@ -284,7 +277,9 @@ module ScriptConstants
     CSD3 = "csd3".freeze,
     CSD4 = "csd4".freeze,
     CSD5 = "csd5".freeze,
-    CSD6 = "csd6".freeze
+    CSD6 = "csd6".freeze,
+
+    TEST = 'ui-test-versioned-script'.freeze
   ].freeze
 
   def self.script_in_category?(category, script)
@@ -405,6 +400,7 @@ module ScriptConstants
       ScriptConstants.script_in_category?(:csf, script) ||
       ScriptConstants.script_in_category?(:csf_2018, script) ||
       ScriptConstants.script_in_category?(:csf_2019, script) ||
+      ScriptConstants.script_in_category?(:csf_2020, script) ||
       ScriptConstants.script_in_category?(:csd, script) ||
       ScriptConstants.script_in_category?(:csd_2018, script) ||
       ScriptConstants.script_in_category?(:csd_2019, script) ||

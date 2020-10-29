@@ -412,6 +412,11 @@ button {
   margin-top: 10px;
 }
 
+#map .mapboxgl-popup-close-button {
+  margin-top: 0px;
+  background-color: #ffa400;
+}
+
 /* Promote page */
 #promote-page h1 {
   float: left;

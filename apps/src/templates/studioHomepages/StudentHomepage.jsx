@@ -33,24 +33,32 @@ export default class StudentHomepage extends Component {
   render() {
     const {courses, sections, topCourse, hasFeedback, isEnglish} = this.props;
     const {canViewAdvancedTools, studentId} = this.props;
+    // Verify background image works for both LTR and RTL languages.
+    const backgroundUrl = '/shared/images/banners/teacher-homepage-hero.jpg';
 
     return (
       <div>
-        <HeaderBanner headingText={i18n.homepageHeading()} short={true} />
-        <ProtectedStatefulDiv ref="flashes" />
-        {isEnglish && <SpecialAnnouncement isTeacher={false} />}
-        {hasFeedback && <StudentFeedbackNotification studentId={studentId} />}
-        <RecentCourses
-          courses={courses}
-          topCourse={topCourse}
-          isTeacher={false}
-          hasFeedback={hasFeedback}
+        <HeaderBanner
+          headingText={i18n.homepageHeading()}
+          short={true}
+          backgroundUrl={backgroundUrl}
         />
-        <ProjectWidgetWithData
-          canViewFullList={true}
-          canViewAdvancedTools={canViewAdvancedTools}
-        />
-        <StudentSections initialSections={sections} />
+        <div className={'container main'}>
+          <ProtectedStatefulDiv ref="flashes" />
+          {isEnglish && <SpecialAnnouncement isTeacher={false} />}
+          {hasFeedback && <StudentFeedbackNotification studentId={studentId} />}
+          <RecentCourses
+            courses={courses}
+            topCourse={topCourse}
+            isTeacher={false}
+            hasFeedback={hasFeedback}
+          />
+          <ProjectWidgetWithData
+            canViewFullList={true}
+            canViewAdvancedTools={canViewAdvancedTools}
+          />
+          <StudentSections initialSections={sections} />
+        </div>
       </div>
     );
   }

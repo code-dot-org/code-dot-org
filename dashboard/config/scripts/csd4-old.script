@@ -4,36 +4,36 @@ student_detail_progress_view true
 has_verified_resources true
 
 lesson_group 'csd4_1', display_name: 'Chapter 1: User Centered Design'
-lesson 'Analysis of Design'
+lesson 'Analysis of Design', display_name: 'Analysis of Design'
 level 'CSD U4L01 SFLP', named: true
 
-lesson 'Understanding Your User'
+lesson 'Understanding Your User', display_name: 'Understanding Your User'
 level 'CSD U4L02 SFLP', named: true
 
-lesson 'User-Centered Design Micro Activity'
+lesson 'User-Centered Design Micro Activity', display_name: 'User-Centered Design Micro Activity'
 level 'CSD U4L03 SFLP', named: true
 
-lesson 'User Interface and Prototype Testing'
+lesson 'User Interface and Prototype Testing', display_name: 'User Interface and Prototype Testing'
 level 'CSD U4L04 SFLP', named: true
 
-lesson 'Feedback and Prototypes'
+lesson 'Feedback and Prototypes', display_name: 'Feedback and Prototypes'
 level 'CSD U4L05 SFLP', named: true
 
-lesson 'Identifying User Needs'
+lesson 'Identifying User Needs', display_name: 'Identifying User Needs'
 level 'CSD U4L06 SFLP', named: true
 
-lesson 'Project - Paper Prototype'
+lesson 'Project - Paper Prototype', display_name: 'Project - Paper Prototype'
 level 'CSD U4L07 SFLP', named: true
 level 'csd-pulse-check-survey-1-levelgroup U4Ch1', progression: 'Reflection', assessment: true
 
 lesson_group 'csd4_2', display_name: 'Chapter 2: App Prototyping'
-lesson 'Designing Apps for Good'
+lesson 'Designing Apps for Good', display_name: 'Designing Apps for Good'
 level 'CSD U4L08 SFLP', named: true
 
-lesson 'Market Research'
+lesson 'Market Research', display_name: 'Market Research'
 level 'CSD U4L09 SFLP', named: true
 
-lesson 'Paper Prototypes'
+lesson 'Paper Prototypes', display_name: 'Paper Prototypes'
 level 'CSD U4L10 SFLP', named: true
 level 'Example App Types', named: true
 level 'CSDU4 Quiz App Demo', progression: 'Demo Apps'
@@ -41,10 +41,10 @@ level 'CSDU4 Decision App Demo', progression: 'Demo Apps'
 level 'CSDU4 List App Demo', progression: 'Demo Apps'
 level 'CSDU4 Crowdsource App Demo', progression: 'Demo Apps'
 
-lesson 'Prototype Testing'
+lesson 'Prototype Testing', display_name: 'Prototype Testing'
 level 'CSD U4L11 SFLP', named: true
 
-lesson 'Digital Design'
+lesson 'Digital Design', display_name: 'Digital Design'
 level 'CSD U4L12 SFLP', named: true
 level 'Building a UI with Design Mode', named: true
 level 'CSDU4 Design Mode Video', progression: 'Intro to Design Mode'
@@ -59,7 +59,7 @@ level 'CSDU4 - Design Mode - 18', progression: 'Designing Screens'
 level 'Design a Screen for your App', named: true
 level 'CSD U4 - Design Mode Project', named: true
 
-lesson 'Event Driven Programming'
+lesson 'Event Driven Programming', display_name: 'Event Driven Programming'
 level 'CSD U4L13 SFLP', named: true
 level 'Responding to User Input', named: true
 level 'CSDU4 - Design Mode - 16', progression: 'User Input'
@@ -73,7 +73,7 @@ level 'CSDU4 Connecting Screens Getting Back', progression: 'Connecting Screens'
 level 'Importing Screens', named: true
 level 'CSDU4 Project Import', named: true
 
-lesson 'Basic App Functionality'
+lesson 'Basic App Functionality', display_name: 'Basic App Functionality'
 level 'CSD U4L14 SFLP', named: true
 level 'Changing Design Elements with Code', named: true
 level 'CSDU4 Functionality setText', progression: 'Changing Text'
@@ -92,13 +92,14 @@ level 'CSDU4 - Design Mode - 28', progression: 'Other Forms of Input'
 level 'Adding Functionality to your App', named: true
 level 'CSDU4 Project Functionality', named: true
 
-lesson 'Testing the App'
+lesson 'Testing the App', display_name: 'Testing the App'
 level 'CSD U4L15 SFLP', named: true
 
-lesson 'Improving and Iterating'
+lesson 'Improving and Iterating', display_name: 'Improving and Iterating'
 level 'CSD U4L16 SFLP', named: true
 level 'CSDU4 Project Bug Feature', named: true
 
-lesson 'App Presentation'
+lesson 'App Presentation', display_name: 'App Presentation'
 level 'CSD U4L17 SFLP', named: true
 level 'csd-pulse-check-survey-1-levelgroup U4Ch2', progression: 'Reflection', assessment: true
+

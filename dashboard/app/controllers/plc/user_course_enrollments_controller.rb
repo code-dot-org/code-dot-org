@@ -9,7 +9,7 @@ class Plc::UserCourseEnrollmentsController < ApplicationController
 
   def group_view
     # This is a method to view many different people's course enrollments
-    @courses = Plc::Course.all
+    @plc_courses = Plc::Course.all
 
     if current_user.admin?
       # This should be okay with a thousand enrollments but it's really just a placeholder while we develop this

@@ -1,7 +1,7 @@
 <GamelabJr>
   <config><![CDATA[{
   "game_id": 64,
-  "created_at": "2018-08-07T17:04:45.000Z",
+  "created_at": "2019-06-23T19:34:38.000Z",
   "level_num": "custom",
   "user_id": 182,
   "properties": {
@@ -41,7 +41,6 @@
     "expand_debugger": "false",
     "debugger_disabled": "false",
     "pause_animations_by_default": "false",
-    "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"b50983a5-8b96-4e86-b49d-d8b4afa0d58e\",\r\n    \"8afa3289-b32d-4cd0-8e92-124d3df091d4\",\r\n    \"dbca8a4a-9d2d-4729-9dc9-2f4546c5ae6d\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"b50983a5-8b96-4e86-b49d-d8b4afa0d58e\": {\r\n      \"name\": \"fish_1\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/ExJSNVXBGGpxGKnnAw7O8EcRtySt_NqI/category_animals/fish.png\",\r\n      \"frameSize\": {\r\n        \"x\": 128,\r\n        \"y\": 128\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"ExJSNVXBGGpxGKnnAw7O8EcRtySt_NqI\"\r\n    },\r\n    \"8afa3289-b32d-4cd0-8e92-124d3df091d4\": {\r\n      \"name\": \"flower\",\r\n      \"sourceUrl\": \"https://studio.code.org/v3/animations/iTOmsM973WBQJzGvV52WJQMTz74WCbU8dtEORv5NEzo/8afa3289-b32d-4cd0-8e92-124d3df091d4.png?version=3TNOw7xXGkhqjDmfqlsEHRff4o2RWLgd\",\r\n      \"frameSize\": {\r\n        \"x\": 128,\r\n        \"y\": 127\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 4,\r\n      \"version\": \"3TNOw7xXGkhqjDmfqlsEHRff4o2RWLgd\"\r\n    },\r\n    \"dbca8a4a-9d2d-4729-9dc9-2f4546c5ae6d\": {\r\n      \"name\": \"planeRed1_1\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/oO2CEHRYhRHeulN6V5OdX2JAKtk.6N0K/category_vehicles/planeRed1.png\",\r\n      \"frameSize\": {\r\n        \"x\": 88,\r\n        \"y\": 73\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"oO2CEHRYhRHeulN6V5OdX2JAKtk.6N0K\"\r\n    }\r\n  }\r\n}",
     "hide_custom_blocks": "true",
     "custom_helper_library": "function turning(sprite) {\r\n  var behavior = function(sprite) {\r\n    sprite.rotation +=6;\r\n  };\r\n  behavior.name = 'turning';\r\n  return behavior;\r\n}\r\n",
     "custom_blocks": "[\r\n  {\r\n    \"func\": \"turning\",\r\n    \"blockText\": \"turning\",\r\n    \"returnType\": \"Behavior\",\r\n    \"color\": [\r\n      136,\r\n      \".84\",\r\n      \".80\"\r\n    ]\r\n  }\r\n]",
@@ -54,7 +53,8 @@
     ],
     "name_suffix": "_simple",
     "include_shared_functions": "false",
-    "block_pool": "gamelab"
+    "block_pool": "gamelab",
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",

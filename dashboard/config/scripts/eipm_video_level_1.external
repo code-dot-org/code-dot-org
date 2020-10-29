@@ -1,0 +1,16 @@
+name 'EIPM Video Level 1'
+editor_experiment ''
+video_key 'codebreak_e01'
+display_as_unplugged 'false'
+use_large_video_player 'true'
+hide_reference_area 'true'
+markdown <<MARKDOWN
+# Lesson 1: Algorithms with Hill Harper  
+  
+  
+## Take a Code Break
+Thanks for being one of the first to join Code Break! Together let’s build the world’s largest live interactive classroom!
+
+## Sign Up
+If you haven't already, [sign up](https://code.org/break) to receive the Weekly Challenge email, and information about each episode.
+MARKDOWN

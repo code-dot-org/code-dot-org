@@ -4,7 +4,7 @@ login_required true
 student_detail_progress_view true
 
 lesson_group 'required', display_name: 'Overview'
-lesson 'Unit 2 Overview'
+lesson 'Unit 2 Overview', display_name: 'Unit 2 Overview'
 level 'What\'s inside and how is it organized?', named: true
 level 'Introduction to Unit 2', named: true
 level 'Curriculum Framework Connections in Unit 2', named: true
@@ -12,12 +12,12 @@ level 'Unit 2 Tool Talk', named: true
 level 'Practice Performance Tasks in Unit 2', named: true
 level 'Unit 2 Self-Assessment', named: true
 
-lesson 'AP Preparation and Support'
+lesson 'AP Preparation and Support', display_name: 'AP Preparation and Support'
 level 'Unit 2 Vocab and Concept Review Activity', named: true
 level 'AP Test Prep Guidance', named: true
 
 lesson_group 'content', display_name: 'Content'
-lesson 'Lessons 1 - 2: Bytes, File Sizes, and Text Compression'
+lesson 'Lessons 1 - 2: Bytes, File Sizes, and Text Compression', display_name: 'Lessons 1 - 2: Bytes, File Sizes, and Text Compression'
 level '2.1 and 2.2 Lesson Connections', named: true
 level 'Overview of File Sizes and Metrics', named: true
 level 'Introduction to Lossless Compression and the Text Compression Widget', named: true
@@ -27,7 +27,7 @@ level 'Widget: Text Compression', named: true
 level 'Task: Write your own Heuristic', named: true
 level 'U2 L1 - 2: Teaching and Student Support Plan', named: true
 
-lesson 'Lessons 3 - 4 : Encoding Images'
+lesson 'Lessons 3 - 4 : Encoding Images', display_name: 'Lessons 3 - 4 : Encoding Images'
 level '2.3 and 2.4 Lesson Connections', named: true
 level 'How are Images Encoded?', named: true
 level 'A Note On Metadata in the Curriculum Framework', named: true
@@ -37,14 +37,14 @@ level 'Widget: Color Pixelation', named: true
 level 'Task: Make your own Favicon', named: true
 level 'U2 L3 - 4: Teaching and Student Support Plan', named: true
 
-lesson 'Lessons 5 - 6: Compression Formats and Developing your own Encoding Scheme'
+lesson 'Lessons 5 - 6: Compression Formats and Developing your own Encoding Scheme', display_name: 'Lessons 5 - 6: Compression Formats and Developing your own Encoding Scheme'
 level '2.5 and 2.6 Lesson Connections', named: true
 level 'Introduction to Lossy Compression', named: true
 level 'Lossy vs. Lossless Compression', named: true
 level 'Task: Encode an Experience', named: true
 level 'U2 L5 - 6: Teaching and Student Support Plan', named: true
 
-lesson 'Lessons 7 - 10: Interpreting Visual Data'
+lesson 'Lessons 7 - 10: Interpreting Visual Data', display_name: 'Lessons 7 - 10: Interpreting Visual Data'
 level '2.7 -  10 Lesson Connections', named: true
 level 'How to: Setup your Class Data Tracker', named: true
 level 'Correlation vs Causation', named: true
@@ -54,7 +54,7 @@ level 'What Makes an Effective Visualization?', named: true
 level 'Data Visualizations 101', named: true
 level 'U2 L7 - 10: Teaching and Student Support Plan', named: true
 
-lesson 'Lessons 11 - 15: Communicating with Visualizations'
+lesson 'Lessons 11 - 15: Communicating with Visualizations', display_name: 'Lessons 11 - 15: Communicating with Visualizations'
 level '2.11 - 15 Lesson Connections', named: true
 level 'How to: Make Charts from your Data', named: true
 level 'Selecting an Appropriate Visualization for your Data', named: true
@@ -63,28 +63,29 @@ level 'Summary Tables 101', named: true
 level 'U2 L11 - 15: Teaching and Student Support Plan', named: true
 
 lesson_group 'practice', display_name: 'Teaching Practices'
-lesson 'Group Work and Peer Learning'
+lesson 'Group Work and Peer Learning', display_name: 'Group Work and Peer Learning'
 level 'Overview: Group Work and Peer Learning', named: true
 level 'Collaborative Learning and Group Work: Description and Strategies', named: true
 level 'The Official Peer Instruction Blog', named: true
 level 'the Journal of Peer Learning', named: true
 level 'Unit 2 Teaching Practice Plan: Group Work and Peer Learning', named: true
 
-lesson 'Balancing Teachers and Tools'
+lesson 'Balancing Teachers and Tools', display_name: 'Balancing Teachers and Tools'
 level 'Overview: Balancing Teachers and Tools', named: true
 level 'Classroom Management Tips for School Computer Labs', named: true
 level 'Considerations for the 1-to-1 Classroom', named: true
 level 'Unit 2 Teaching Practice Plan: Balancing Teacher and Tools', named: true
 
-lesson 'Discovery Learning'
+lesson 'Discovery Learning', display_name: 'Discovery Learning'
 level 'Overview: Discovery Learning', named: true
 level 'Discovery learning definition and history', named: true
 level 'Discovery learning techniques', named: true
 level 'Unit 2 Teaching Practice Plan: Discovery Learning', named: true
 
-lesson 'Measuring Student Learning'
+lesson 'Measuring Student Learning', display_name: 'Measuring Student Learning'
 level 'Overview: Capturing Student Learning', named: true
 level 'What is the difference between formative and summative assessment?', named: true
 level 'Designing Assessment Questions', named: true
 level 'Classroom Assessment Techniques', named: true
 level 'Unit 2 Teaching Practice Plan: Assessing Student Learning', named: true
+

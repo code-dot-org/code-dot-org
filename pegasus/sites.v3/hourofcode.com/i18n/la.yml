@@ -5,12 +5,44 @@ la:
   language: Inglés
   front_title: Únete al mayor evento educativo de la historia, %{campaign_date}
   coming_soon: Próximamente
-  campaign_date_start_short: 4 dic.
-  campaign_date_start_long: 4 de diciembre
-  campaign_date_short: 4-10 dic.
-  campaign_date_full: Del 4 al 10 de diciembre
-  campaign_date_year: '2017'
-  campaign_date_full_year: Del 4 al 10 de diciembre de 2017
+  campaign_date_start_short: 7 Dic.
+  campaign_date_start_long: 7 de diciembre
+  campaign_date_short: 7-13 dic.
+  campaign_date_full: Del 7 al 13 de diciembre
+  campaign_date_year: '2020'
+  campaign_date_full_year: Del 7 al 13 de diciembre de 2020
+  latam_campaign_date_start_short: Oct. 1
+  latam_campaign_date_start_long: Octubre 1
+  latam_campaign_date_short: Oct. 1 - Dic. 18
+  latam_campaign_date_full: Octubre 1 - Diciembre 18
+  latam_campaign_date_year: '2020'
+  latam_campaign_date_full_year: Octubre 1, 2020 - Diciembre 18, 2020
+  europe_campaign_date_start_short: Oct. 10
+  europe_campaign_date_start_long: Octubre 10
+  europe_campaign_date_short: Oct. 10-25
+  europe_campaign_date_full: Octubre 10-25
+  europe_campaign_date_year: '2020'
+  europe_campaign_date_full_year: Octubre 10-25, 2020
+  africa_campaign_date_start_short: Oct. 1
+  africa_campaign_date_start_long: Octubre 1
+  africa_campaign_date_short: Oct. 1-31
+  africa_campaign_date_full: Octubre 1-31
+  africa_campaign_date_year: '2020'
+  africa_campaign_date_full_year: Octubre 1-31, 2020
+  hoc2020_header: Aprende hoy y construye un mejor futuro.
+  hoc2020_header_with_line_break_markdown: |-
+    Aprende hoy y
+
+    construye un mejor futuro.
+  social_hoc2020_cs_important: 'CS is more important than ever. Let''s build the future
+    we want. #CSforGood'
+  social_hoc2020_hoc_is_about_csforgood: 'The #HourOfCode is about #CSforGood. Learn
+    today, build a brighter tomorrow.'
+  social_hoc2020_global_movement: La Hora del Código es un movimiento global en el
+    que participan decenas de millones de estudiantes. Los tutoriales de una hora
+    están disponibles en más de 45 idiomas para todas las edades.
+  social_hoc2020_coming_dates: The Hour of Code is coming December 7-13, 2020. Computer
+    science is foundational for every student to learn.
   hoc2019_header: Aprende programación. Cambia el mundo.
   hoc2019_header_line1_mobile: Aprende programación.
   hoc2019_header_line2_mobile: Cambia el mundo.
@@ -103,6 +135,13 @@ la:
     ¡Las ciencias de la computación son mucho más que programar! Disfruta del primer
     paso de Code.org en un nuevo viaje para enseñar más sobre IA en nuestro plan de
     estudios.
+  hoc_live: Hora del Código En Vivo
+  hoc_live_sign_up_title: Regístrate para la Hora del Código En Vivo
+  hoc_live_sign_up_message: "¡Aprende en vivo junto a invitados especiales! Estudiantes
+    de todas las edades y habilidades, incluso aquellos sin computadoras, son bienvenidos.
+    Únete a nuestra lista de distribución para recibir recordatorios de los episodios
+    y recursos para continuar el aprendizaje en casa."
+  hoc_live_join_us: Únete
   hoc_overview_oceans_tutorial_header: Océanos de AI
   hoc_overview_oceans_tutorial_desc: Aprende sobre inteligencia artificial (IA), aprendizaje
     automático, datos de entrenamiento y sesgos, mientras exploras cuestiones éticas
@@ -172,7 +211,7 @@ la:
   codeorg_homepage_hoc2018_video: Mira nuestro video
   hourofcode_homepage_hoc2018_header_line1: Cualquier persona, en cualquier lugar,
     puede organizar una Hora del Código. Hay tutoriales de una hora en más de 45 idiomas.
-    No se necesita experiencia.
+    No se necesita experiencia previa en programación.
   hourofcode_homepage_hoc2018_header_line2: De 4 a 104 años.
   hoc2018_tutorial_mchoc_description: "¡Minecraft está de vuelta para la Hora del
     Código con una actividad nueva! Viaja a través de Minecraft con el código."
@@ -186,6 +225,8 @@ la:
   codeorg_homepage_special2020_body: "¿Tu escuela está cerrada? Aprende desde casa.
     Toma un descanso con código, o ve los recursos para estudiantes, padres de familia,
     y educadores. "
+  codeorg_homepage_remote2020_body: "¿Estás enseñando en un aula remota o socialmente
+    distanciada este semestre? Mira nuestros recursos."
   codeorg_homepage_special2020_link_text: Comenzar
   codeorg_homepage_code_break_body: "¡Tómate un recreo con código! Tu dosis semanal
     de inspiración , comunidad, y ciencias de la computación."
@@ -359,6 +400,7 @@ la:
   how_to_nav_companies: Para empresas
   how_to_nav_afterschool_educators: Para docentes extracurriculares
   how_to_nav_volunteers: Para voluntarios
+  how_to_nav_virtual: Para eventos virtuales
   whats_next_header: Próximos pasos
   whats_next_description: Te enviaremos materiales y consejos útiles para tu evento.
     <a href='http://code.org/learn'> Prueba los tutoriales</a> para cualquier navegador
@@ -496,6 +538,7 @@ la:
     mapa
   signup_event_type_in_school: En una escuela
   signup_event_type_out_of_school: Fuera de la escuela
+  signup_event_type_at_home: Página principal
   signup_submit_census_label: Enviar
   signup_submit_census_error_message: Lo sentimos. Se produjo un error. Intenta enviar
     el formulario otra vez.
@@ -780,25 +823,12 @@ la:
     que se dan cuenta de que las ciencias de la computación son algo que sus estudiantes
     desean y que sus docentes están capacitados para enseñar. <br/><br/> Pero, sobre
     todo, los participantes aprenden en una hora que son capaces de hacer todo esto.
-  hoc_faq_one_hour_a_markdown: La meta de la Hora del Código no es enseñar a cualquiera
-    para que se convierta en un científico de computación experto en una hora. Una
-    hora es suficiente para aprender que las ciencias de la computación son divertidas
-    y creativas, y accesibles a estudiantes de todas las edades, sin importar su situación.
-    La medida del éxito de esta campaña no es cuántos estudiantes aprenden ciencias
-    de computación, sino la amplia participación entre los distintos grupos de género,
-    étnicos y socioeconómicos, y el consecuente aumento de las inscripciones y la
-    participación en cursos de ciencias de la computación en todos los niveles. Millones
-    de docentes y estudiantes han decidido ir más allá de una hora, para aprender
-    durante un día entero, una semana o más, y muchos estudiantes han decidido inscribirse
-    en un curso completo (inclusive en una universidad). <br/><br/> Junto a los estudiantes,
-    otro "aprendiz" es el educador que, luego de una hora, gana la confianza para
-    enseñar ciencias de la computación aún cuando no tiene un grado universitario
-    como científico de computación. Decenas de miles de docentes deciden continuar
-    con las ciencias de la computación, ya sea inscribiéndose en un doctorado, en
-    cursos en línea, o en ambos. Y esto aplica también a escuelas de administradores,
-    que se dan cuenta de que las ciencias de la computación son algo que sus estudiantes
-    desean y que sus docentes están capacitados para enseñar. <br/><br/> Pero, sobre
-    todo, los participantes aprenden en una hora que son capaces de hacer todo esto.
+  hoc_faq_one_hour_a_markdown: |-
+    La meta de la Hora del Código no es enseñar a cualquiera para que se convierta en un científico de computación experto en una hora. Una hora es suficiente para aprender que las ciencias de la computación son divertidas y creativas, y accesibles a estudiantes de todas las edades, sin importar su situación. La medida del éxito de esta campaña no es cuántos estudiantes aprenden ciencias de computación, sino la amplia participación entre los distintos grupos de género, étnicos y socioeconómicos, y el consecuente aumento de las inscripciones y la participación en cursos de ciencias de la computación en todos los niveles. Millones de docentes y estudiantes han decidido ir más allá de una hora, para aprender durante un día entero, una semana o más, y muchos estudiantes han decidido inscribirse en un curso completo (inclusive en una universidad).
+
+    Junto a los estudiantes, otro "aprendiz" es el educador que, luego de una hora, gana la confianza para enseñar ciencias de la computación aún cuando no tiene un grado universitario como científico de computación. Decenas de miles de docentes deciden continuar con las ciencias de la computación, ya sea inscribiéndose en un doctorado, en cursos en línea, o en ambos. Y esto aplica también a escuelas de administradores, que se dan cuenta de que las ciencias de la computación son algo que sus estudiantes desean y que sus docentes están capacitados para enseñar.
+
+    Pero, sobre todo, los participantes aprenden en una hora que son capaces de hacer todo esto.
   hoc_faq_more_questions_q: "¿Aún tienes preguntas?"
   hoc_faq_more_questions_a: Intenta encontrar una respuesta en nuestro <a href='http://support.code.org'>foro
     de soporte</a>.
@@ -872,7 +902,7 @@ la:
   resources_press_kit: Paquete de prensa
   resources_social: Social
   resources_country_resources: Recursos específicos para cada país
-  resources_stickers: Pegatinas
+  resources_stickers: Etiquetas
   resources_how_to_guides: Guías prácticas
   resources_promote: Promover
   resources_nav_tutorials: Prueba los tutoriales
@@ -942,7 +972,8 @@ la:
   highlights_header: Destacados de la Hora del Código
   highlights_description: Algunos de nuestros momentos favoritos de la campaña de
     la Hora del Código.
-  higlights_see_more: Ver más destacados
+  highlights_previous: Highlights from previous years
+  highlights_see_more: See more highlights
   highlights_readmore: Leer más
   highlights_watchvideo: Mira el video
   highlights_facebook: Compartir en Facebook
@@ -8765,8 +8796,8 @@ la:
   tutorial_codewards_string_detail_programming_languages: CoffeeScript
   tutorial_olympics_string_detail_programming_languages: CoffeeScript
   tutorial_codinismhero_string_detail_programming_languages: Python
-  tutorial_discovery_string_detail_programming_languages: Bloques
-  tutorial_csfirstname_string_detail_programming_languages: Bloques
+  tutorial_discovery_string_detail_programming_languages: Bloques, Scratch
+  tutorial_csfirstname_string_detail_programming_languages: Bloques, Scratch
   tutorial_obstaclecourse_string_detail_programming_languages: Bloques
   tutorial_edisonmove_string_detail_programming_languages: Python, EdPy, un lenguaje
     de programación basado en texto basado en Python.
@@ -9591,8 +9622,8 @@ la:
     Android, iPad
   tutorial_scratchcartoon_string_platforms: Todos los navegadores modernos, tablets
     Android, iPad
-  tutorial_codemonkeyjr_string_platforms: Tablets Android, iPad, teléfonos Android,
-    iPhone
+  tutorial_codemonkeyjr_string_platforms: Todos los navegadores modernos, tableta
+    Android, iPad, teléfono Android, iPhone
   tutorial_bananatales_string_platforms: Todos los navegadores modernos
   tutorial_scratchtales_string_platforms: Todos los navegadores modernos, tablets
     Android, iPad
@@ -9807,7 +9838,7 @@ la:
   tutorial_ai-oceans_string_detail_platforms: ''
   tutorial_scratchimagine_string_detail_programming_languages: Bloques
   tutorial_codesterspsa_string_detail_programming_languages: Python
-  tutorial_googlehero_string_detail_programming_languages: Bloques
+  tutorial_googlehero_string_detail_programming_languages: Bloques, Scratch
   tutorial_codestersbball_string_detail_programming_languages: Python
   tutorial_scratchcartoon_string_detail_programming_languages: Bloques
   tutorial_codemonkeyjr_string_detail_programming_languages: Bloques
@@ -9977,3 +10008,4 @@ la:
   some: Algunos
   all: Todos
   dont_know: No sé
+  language_label: Idioma

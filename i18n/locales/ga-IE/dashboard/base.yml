@@ -957,6 +957,8 @@ ga:
       school_name: 'Ainm na Scoile'
       school_city: 'Cathair na Scoile'
       school_country: 'Tír na Scoile'
+      colombian_school_city: 'Cathair na Scoile'
+      colombian_school_name: 'Ainm na Scoile'
       ages: 'Cad iad na haoiseanna atá tú ag múineadh i mbliana?'
       subjects: 'Cad iad na hábhair atá tú ag múineadh i mbliana?'
       resources: 'Cé acu de na hacmhainní ríomheolaíochta seo a leanas a úsáideann tú?'

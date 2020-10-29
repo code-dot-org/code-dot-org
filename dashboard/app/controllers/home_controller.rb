@@ -32,12 +32,12 @@ class HomeController < ApplicationController
     if current_user
       render 'index', layout: false, formats: [:html]
     else
-      render text: ''
+      render plain: ''
     end
   end
 
   def health_check
-    render text: 'healthy!'
+    render plain: 'healthy!'
   end
 
   # Signed in student, with an assigned course/script: redirect to course overview page
@@ -92,6 +92,8 @@ class HomeController < ApplicationController
   def init_homepage
     raise 'init_homepage can only be called when there is a current_user' unless current_user
 
+    view_options(full_width: true, responsive_content: false, no_padding_container: true, has_i18n: true)
+
     @homepage_data = {}
     @homepage_data[:valid_grades] = Section.valid_grades
     @homepage_data[:lessonExtrasScriptIds] = Script.lesson_extras_script_ids
@@ -99,6 +101,7 @@ class HomeController < ApplicationController
     @homepage_data[:locale] = Script.locale_english_name_map[request.locale]
     @homepage_data[:canViewAdvancedTools] = !(current_user.under_13? && current_user.terms_version.nil?)
     @homepage_data[:providers] = current_user.providers
+    @homepage_data[:mapboxAccessToken] = CDO.mapbox_access_token
 
     @force_race_interstitial = params[:forceRaceInterstitial]
     @force_school_info_confirmation_dialog = params[:forceSchoolInfoConfirmationDialog]

@@ -517,6 +517,7 @@ lv:
       last_name: Uzvārds
       email: E-pasts
       school_name: Skolas nosaukums
+      colombian_school_name: Skolas nosaukums
     form_entries:
       gender:
         male: Vīrietis

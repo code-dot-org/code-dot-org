@@ -12,7 +12,8 @@ class StageLockTest < ActionDispatch::IntegrationTest
     Follower.create!(section_id: @section.id, student_user_id: @student.id, user: @teacher)
 
     @script = create :script
-    @lockable_stage = create(:lesson, script: @script, name: 'Lockable Stage', lockable: true)
+    @lesson_group = create :lesson_group, script: @script
+    @lockable_stage = create(:lesson, script: @script, name: 'Lockable Stage', lockable: true, lesson_group: @lesson_group)
     external = create(:external, name: 'markdown level')
     @lockable_external_sl = create(:script_level, script: @script, lesson: @lockable_stage, levels: [external])
     @level_group = create(:level_group, :with_sublevels, name: 'assessment 1')

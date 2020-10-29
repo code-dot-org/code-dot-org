@@ -6,13 +6,13 @@ Scenario: Data Browser
   Given I open my eyes to test "Applab Data Browser"
 
   When I start a new Applab project
-  Then I see no difference for "initial load"
+  Then I see no difference for "initial load" using stitch mode "none"
 
   When I switch to data mode
   Then I see no difference for "data overview"
 
-  When I press keys "foo" for element "#data-library-container input"
-  And I click selector "#data-library-container button:contains(Add)"
+  When I press keys "foo" for element "#data-browser input"
+  And I click selector "#data-browser button:contains(Add)"
   And I wait until element "#dataTable" is visible
   Then I see no difference for "data table"
 

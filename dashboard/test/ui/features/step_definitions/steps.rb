@@ -586,10 +586,6 @@ Then /^execute JavaScript expression "([^"]*)"$/ do |expression|
   @browser.execute_script("return #{expression}")
 end
 
-Then /^mark the current level as completed on the client/ do
-  @browser.execute_script 'dashboard.clientState.trackProgress(true, 1, 100, "hourofcode", appOptions.serverLevelId)'
-end
-
 Then /^I navigate to the course page for "([^"]*)"$/ do |course|
   steps %{
     Then I am on "http://studio.code.org/s/#{course}"
@@ -1010,13 +1006,15 @@ Given(/^I am assigned to script "([^"]*)"$/) do |script_name|
   )
 end
 
-Given(/^I create a temp script$/) do
+Given(/^I create a temp script and lesson$/) do
   response = browser_request(
     url: '/api/test/create_script',
     method: 'POST'
   )
-  @temp_script_name = JSON.parse(response)['script_name']
-  puts "created temp script named '#{@temp_script_name}'"
+  data = JSON.parse(response)
+  @temp_script_name = data['script_name']
+  @temp_lesson_id = data['lesson_id']
+  puts "created temp script named '#{@temp_script_name}' and temp lesson with id #{@temp_lesson_id}"
 end
 
 Given(/^I view the temp script overview page$/) do
@@ -1026,20 +1024,28 @@ Given(/^I view the temp script overview page$/) do
   }
 end
 
-Given(/^I view the temp script edit page$/) do
+Given(/^I view the temp script (legacy|gui) edit page$/) do |type|
+  params = type == 'gui' ? '?beta=1' : ''
   steps %{
-    Given I am on "http://studio.code.org/s/#{@temp_script_name}/edit"
+    Given I am on "http://studio.code.org/s/#{@temp_script_name}/edit#{params}"
     And I wait until element ".edit_script" is visible
   }
 end
 
-Given(/^I try to view the temp script edit page$/) do
+Given(/^I try to view the temp script legacy edit page$/) do
   steps %{
     Given I am on "http://studio.code.org/s/#{@temp_script_name}/edit"
   }
 end
 
-Given(/^I delete the temp script$/) do
+Given(/^I view the temp lesson edit page$/) do
+  steps %{
+    Given I am on "http://studio.code.org/lessons/#{@temp_lesson_id}/edit"
+    And I wait until element "#edit-container" is visible
+  }
+end
+
+Given(/^I delete the temp script and lesson$/) do
   browser_request(
     url: '/api/test/destroy_script',
     method: 'POST',
@@ -1060,6 +1066,10 @@ def generate_user(name)
     email: email
   }
   return email, password
+end
+
+def find_test_user_by_name(name)
+  User.find_by(email: @users[name][:email])
 end
 
 And /^I check the pegasus URL$/ do
@@ -1141,6 +1151,13 @@ And /^I dismiss the language selector$/ do
   steps %Q{
     And I click selector ".close" if I see it
     And I wait until I don't see selector ".close"
+  }
+end
+
+And /^I dismiss the teacher panel$/ do
+  steps %Q{
+    And I click selector ".teacher-panel > .hide-handle > .fa-chevron-right"
+    And I wait until I see selector ".teacher-panel > .show-handle > .fa-chevron-left"
   }
 end
 
@@ -1261,7 +1278,8 @@ def create_user(name, url: '/users.json', code: 201, **user_opts)
           password_confirmation: password,
           name: name,
           age: '16',
-          terms_of_service_version: '1'
+          terms_of_service_version: '1',
+          sign_in_count: 2
         }.merge(user_opts)
       },
       code: code
@@ -1269,9 +1287,11 @@ def create_user(name, url: '/users.json', code: 201, **user_opts)
   end
 end
 
-And(/^I create a (young )?student named "([^"]*)"( and go home)?$/) do |young, name, home|
+And(/^I create a (young )?student( who has never signed in)? named "([^"]*)"( and go home)?$/) do |young, new_account, name, home|
   age = young ? '10' : '16'
-  create_user(name, age: age)
+  sign_in_count = new_account ? 0 : 2
+
+  create_user(name, age: age, sign_in_count: sign_in_count)
   navigate_to replace_hostname('http://studio.code.org') if home
 end
 
@@ -1282,8 +1302,10 @@ And(/^I create a student in the eu named "([^"]*)"$/) do |name|
   )
 end
 
-And(/^I create a teacher named "([^"]*)"( and go home)?$/) do |name, home|
-  create_user(name, age: '21+', user_type: 'teacher', email_preference_opt_in: 'yes')
+And(/^I create a teacher( who has never signed in)? named "([^"]*)"( and go home)?$/) do |new_account, name, home|
+  sign_in_count = new_account ? 0 : 2
+
+  create_user(name, age: '21+', user_type: 'teacher', email_preference_opt_in: 'yes', sign_in_count: sign_in_count)
   navigate_to replace_hostname('http://studio.code.org') if home
 end
 
@@ -1362,6 +1384,12 @@ end
 
 When(/^I am not signed in/) do
   steps 'element ".header_user:contains(Sign in)" is visible'
+end
+
+And(/^I delete the cookie named "([^"]*)"$/) do |cookie_name|
+  if @browser.manage.all_cookies.any? {|cookie| cookie[:name] == cookie_name}
+    @browser.manage.delete_cookie cookie_name
+  end
 end
 
 When(/^I debug cookies$/) do
@@ -1787,6 +1815,17 @@ Then /^I navigate to the saved URL$/ do
   steps %Q{Then I am on "#{saved_url}"}
 end
 
+channel_id = nil
+Then /^I save the channel id$/ do
+  channel_id = @browser.execute_script('return (appOptions && appOptions.channel)')
+end
+
+And /^I type the saved channel id into element "([^"]*)"/ do |selector|
+  individual_steps %Q{
+    And I press keys "#{channel_id}" for element "#{selector}"
+  }
+end
+
 Then /^I sign out using jquery$/ do
   code = <<-JAVASCRIPT
     window.signOutComplete = false;
@@ -1807,6 +1846,13 @@ Then /^I open the Manage Assets dialog$/ do
   steps <<-STEPS
     Then I click selector ".settings-cog"
     And I click selector ".pop-up-menu-item"
+  STEPS
+end
+
+Then /^I open the Manage Libraries dialog$/ do
+  steps <<-STEPS
+    Then I click selector ".settings-cog"
+    And I click selector ".pop-up-menu-item:contains(Manage Libraries)"
   STEPS
 end
 

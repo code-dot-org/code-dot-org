@@ -82,6 +82,7 @@ my:
     form_labels:
       email: email လိပ္စာ
       school_city: ကျောင်းမြို့
+      colombian_school_city: ကျောင်းမြို့
     form_entries:
       subjects:
         cs: ကွန်ပျုတာသိပ္ပံ

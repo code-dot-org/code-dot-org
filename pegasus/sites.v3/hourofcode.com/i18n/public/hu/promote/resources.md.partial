@@ -40,25 +40,35 @@ Az új posztereken Malala, Stephen Curry, Shakira és még sokan mások is szere
 
 ## Használd a Kódolás órája logóját a népszerűsítéshez
 
-[![kép]({{ hoc_logo_fit_200 }})]({{ hoc_logo }})
+[![kép]({{ hoc_logo_fit_200 }})]({{ hoc_logo }}) [![kép]({{ hdc_logo_fit_200 }})]({{ hdc_logo }})
 
 [Töltsd le a nagy felbontású verziót](http://images.code.org/share/hour-of-code-logo.zip)
 
-**A Kódolás órája kifejezés védjeggyel biztosított. Nem szeretnénk megakadályozni a használatát, viszont szeretnénk meggyőződni arról, hogy a leírtak megfelelnek az alábbi kiritériumoknak:**
+**A "Kódolás Órája" és a "Hora del Código" védjegy. Nem akarjuk megakadályozni a használatukat, de szeretnénk megbizonyosodni arról, hogy a felhasználási feltételek megegyeznek a mi elképzeléseinkkel is:**
 
-1. A Kódolás órájára történő bármilyen utalást csak az alábbi módokon szabad alkalmazni. **Példa helyes felhasználásra**: "Vegyél részt a Kódolás óráján™ az ACMECorp.com-on." **Példa rossz felhasználásra:**: "Próbáld ki a Kódolás óráját az ACME Corp-nál."
-2. Használd a "TM" feliratot a legfontosabb megjelenésekkor, weboldalakon vagy az alkalmazásleírásokban.
-3. Használj kapcsolódó linkeket a weboldaladon (vagy akár egy láblécben), amelyek a [ Code.org ]({{ codeorg_link }}) webhelyre vagy a Számítástechnikai Oktatási Hét honlapjára mutatnak:
+1. A "Kódolás Órája" vagy a "Hora del Código" hivatkozásokat olyan módon kell használni, amely nem azt sugallja, hogy ez a saját márkaneved lenne, hanem inkább egy alulról szerveződő mozgalomként utal rá.
+
+<ul style="margin-top: 0px">
+  <li>
+    <strong> Jó példa erre</strong>: "Vegyen részt a Kódolás Óráján™ a TE CÉG NEVED.com címen."
+  </li>
+  <li>
+    <strong>Rossz példa erre</strong>: "Próbáld ki a Kódolás Óráját a TE CÉG NEVED-nél."
+  </li>
+</ul>
+
+1. Használd a „TM” felső indexet a legismertebb helyeken, amiket a „Kódolás Órája” megemlít, és egy „Ⓡ” felső indexet a leghíresebb helyeken, amelyeket a „Hora del Código” megemlít, mind a saját webhelyeden, mind az alkalmazásleírásokban.
+2. HIvatkozd meg az oldaladon (vagy a láblécben) az olyan weboldalakat, mint a Számítástechnikai Oktatási Hét (CSEdWeek) és a [ Code.org ]({{ codeorg_link }}), amelyek a következőket hirdetik:
     
-    *"A Kódolás órája™ egy országos kezdeményezés, amelyet a Számítástechnikai Oktatási Hét [csedweek.org] és a Code.org [code.org] közösen hívott életre, hogy több millió diákot vezessen be egy óra leforgás alatt a számítástechnika és a számítógépes programozás világába. "*
+    *„A Kódolás Órája™ vagy Hora del Código®, a Számítástechnikai Oktatási Hét [csedweek.org] és a Code.org [code.org] globális kezdeményezése, amelynek célja, hogy hallgatók millióinak nyújtson lehetőséget egy órányi informatika és számítógép programozási ismeretek elsajátításához."*
 
-4. Ne használd a Kódolás órája kifejezést applikációk elnevezésekor.
+3. Az alkalmazásnevekben nem használható a „Kódolás Órája” vagy a „Hora del Código” elnevezés.
 
 <a id="stickers"></a>
 
 ## Nyomtasd ki ezeket a matricákat és add oda a diákjaidnak
 
-(A matrica átmérője 2,54 cm, laponként 63 darabot tartalmaz.) <br />
+(A matrica átmérője 2,54 cm, laponként 63 darabot tartalmaz.)<br />
 
 [![kép](/images/fit-250/hour-of-code-stickers.png)](/images/hour-of-code-stickers.pdf)
 
@@ -136,7 +146,7 @@ További részletek a http://hourofcode.com/{{ country }} weboldalon. Segíts, h
 
 **Tárgy**: Helyi iskola küldetésének teszi, hogy bemutassa a számítástechnikát diákok számára
 
-A számítógépek mindenütt jelen vannak, megváltoztatják a bolygó minden iparágát, de érdekes módon a középiskolák csak 45%-a tanít számítástechnikát. Lányok és kisebbségek rendkívül alulreprezentáltak a számítástechnika órákon és az IT iparban. A jó hír az, hogy mi már dolgozunk azon, hogy ez megváltozzon.
+A számítógépek mindenütt jelen vannak, megváltoztatják a bolygó minden iparágát, de érdekes módon a középiskolák csak 45%-a tanít számítástechnikát. A marginalizált faji és etnikai csoportokból származó fiatal nők és diákok súlyosan alulreprezentáltak az informatika órákon és a technológiai iparban. A jó hír az, hogy mi már dolgozunk azon, hogy ez megváltozzon.
 
 A Kódolás Órájával, a számítástechnika tudomány a Google, MSN, Yahoo! és a Disney honlapján is szerepelt. Több, mint 100 partner csatlakozott, hogy támogassa a mozgalmat. Minden Apple Store a világon tartott már egy Kódolás Órája eseményt. Még Obama elnök úr is megírta élete első kódját a kampány részeként.
 

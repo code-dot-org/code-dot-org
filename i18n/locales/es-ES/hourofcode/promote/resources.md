@@ -38,19 +38,29 @@ title: Recursos
 
 ## Usa el logo de la Hora del Código para difundir la noticia
 
-[![imagen]({{ hoc_logo_fit_200 }})]({{ hoc_logo }})
+[![imagen]({{ hoc_logo_fit_200 }})]({{ hoc_logo }}) [![imagen]({{ hdc_logo_fit_200 }})]({{ hdc_logo }})
 
 [Descarga versiones en alta resolución](http://images.code.org/share/hour-of-code-logo.zip)
 
-**La "Hora del Código" es una marca registrada. No queremos evitar su uso, pero queremos que quede dentro de ciertos límites:**
+**"Hour of Code" and "Hora del Código" are trademarked. We don't want to prevent their usage, but we do want to make sure usage fits within a few limits:**
 
-1. Cualquier referencia a "Hora del Código" debe usarse de tal manera que no sugiera que es el nombre de tu propia marca, sino que haga referencia a la "Hora del Código" como un movimiento de base. **Correcto**: "Participa en la Hora del Código™ en ACMECorp.com." **Incorrecto**: "Participa en la Hora del Código de ACME Corp."
-2. Usa un "TM" como superíndice en los lugares más importantes donde menciones la "Hora del Código", ya sea en tu sitio web o en las descripciones de aplicaciones.
-3. Incluye mensajes en tu página (o en el pie de página), como enlaces a la Semana por la Educación en Ciencias de la Computación y a los sitios web de[Code.org]({{ codeorg_link }}), que digan lo siguiente:
+1. Any reference to "Hour of Code" or "Hora del Código" should be used in a fashion that doesn't suggest that it's your own brand name, but rather referencing the Hour of Code as a grassroots movement.
+
+<ul style="margin-top: 0px">
+  <li>
+    <strong>Good example</strong>: "Participate in the Hour of Code™ at YOUR-COMPANY.com."
+  </li>
+  <li>
+    <strong>Bad example</strong>: "Try Hour of Code by YOUR-COMPANY."
+  </li>
+</ul>
+
+1. Use a "TM" superscript in the most prominent places you mention "Hour of Code" and a "Ⓡ" superscript in the most prominent places you mention "Hora del Código", both on your web site and in app descriptions.
+2. Include language on your page (or in the footer), including links to the CSEdWeek and [Code.org]({{ codeorg_link }}) websites, that says the following:
     
-    *"La 'Hora del Código™' es una iniciativa nacional de la Semana por la Educación en Ciencias de Computación [csedweek.org] y Code.org [code.org] para que millones de estudiantes participen en una hora de ciencias de la computación y programación."*
+    *“The 'Hour of Code™'/'Hora del Código®' is a global initiative by Computer Science Education Week [csedweek.org] and Code.org [code.org] to introduce millions of students to one hour of computer science and computer programming.”*
 
-4. No usar la marca "Hora del Código" en nombres de apps.
+3. No use of "Hour of Code" or "Hora del Código" in app names.
 
 <a id="stickers"></a>
 
@@ -134,7 +144,7 @@ Visita http://hourofcode.com/{{ country }} para ver más detalles y ayudar a dif
 
 **Asunto**: Escuela local se une a la misión de introducir a los estudiantes en las ciencias de la computación
 
-Las computadoras están en todas partes y cambian todas las industrias del planeta, pero solo el 45% de las escuelas secundarias enseñan ciencias de la computación. Las niñas y las minorías no tienen presencia suficiente en las clases de ciencias de la computación y en la industria de la tecnología. La buena noticia es que estamos trabajando para cambiar esto.
+Las computadoras están en todas partes y cambian todas las industrias del planeta, pero solo el 45% de las escuelas secundarias enseñan ciencias de la computación. Young women and students from marginalized racial and ethnic groups are severely underrepresented in computer science classes, and in the tech industry. La buena noticia es que estamos trabajando para cambiar esto.
 
 Con la Hora del Código, las ciencias de la computación han estado en las páginas principales de Google, MSN, Yahoo! y Disney. Más de 100 socios se han unido para apoyar este movimiento. Todos los Apple Store del mundo han organizado una Hora del Código. Incluso el presidente Obama escribió su primera línea de código como parte de la campaña.
 
