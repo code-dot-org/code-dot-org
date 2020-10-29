@@ -133,7 +133,7 @@ Whether it’s organizing the worldwide Hour of Code, advocating for policy chan
   <img src="/images/alt-about/photo.png" style="width: 100%">
 </div>
 <div class="col-75">
-  <p style="margin-top:10px"><a href="https://advocacy.code.org/current-legislation">45 states passed new policies or initiatives</a> to help expand computer science education in 2019. All fifty US states (plus Washington DC) have now <a href="https://docs.google.com/document/d/e/2PACX-1vTIZJaNtmPRBNb7_ZFHBxsGwyZqBSdpJN0iJ_pOgF-K-MNYikEeKTTj49ezDkMFRb1C_1w45gSrkcq6/pub">adopted one or more of the nine policies for CS education</a> promoted by the Code.org Advocacy Coalition.</p>
+  <p style="margin-top:10px"><a href="https://advocacy.code.org/current-legislation">45 states passed new policies or initiatives</a> to help expand computer science education in 2019. All fifty US states (plus Washington DC) have now <a href="/advocacy/landscape.pdf">adopted one or more of the nine policies for CS education</a> promoted by the Code.org Advocacy Coalition.</p>
 </div>
 <div style="clear: both; margin-bottom: 10px"></div>
 <div class="col-25" style="padding-right: 20px;">
