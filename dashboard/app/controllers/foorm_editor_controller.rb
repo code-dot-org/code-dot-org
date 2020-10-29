@@ -1,3 +1,4 @@
+# Foorm Editor is only available on levelbuilder or test, for those with levelbuilder permissions.
 class FoormEditorController < ApplicationController
   before_action :require_levelbuilder_mode_or_test_env
   before_action :authenticate_user!
