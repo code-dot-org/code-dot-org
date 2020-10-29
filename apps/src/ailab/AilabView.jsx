@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 import StudioAppWrapper from '../templates/StudioAppWrapper';
+import InstructionsWithWorkspace from '../templates/instructions/InstructionsWithWorkspace';
 import CodeWorkspaceContainer from '../templates/CodeWorkspaceContainer';
 import _ from 'lodash';
 
@@ -155,22 +156,24 @@ class AilabView extends React.Component {
 
     return (
       <StudioAppWrapper>
-        <CodeWorkspaceContainer topMargin={0}>
-          <div
-            id="ailab-container"
-            style={{
-              ...styles.container,
-              width: Math.round(containerWidth),
-              height: Math.round(containerHeight)
-            }}
-            dir="ltr"
-          >
+        <InstructionsWithWorkspace>
+          <CodeWorkspaceContainer topMargin={0}>
             <div
-              id="root"
-              style={{...styles.containerReact, fontSize: baseFontSize}}
-            />
-          </div>
-        </CodeWorkspaceContainer>
+              id="ailab-container"
+              style={{
+                ...styles.container,
+                width: Math.round(containerWidth),
+                height: Math.round(containerHeight)
+              }}
+              dir="ltr"
+            >
+              <div
+                id="root"
+                style={{...styles.containerReact, fontSize: baseFontSize}}
+              />
+            </div>
+          </CodeWorkspaceContainer>
+        </InstructionsWithWorkspace>
       </StudioAppWrapper>
     );
   }
