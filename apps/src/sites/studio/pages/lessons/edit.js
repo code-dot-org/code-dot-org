@@ -41,7 +41,7 @@ $(document).ready(function() {
     activity.displayName = activity.name || '';
     delete activity.name;
 
-    activity.duration = activity.duration || 0;
+    activity.duration = activity.duration || '';
 
     activity.activitySections.forEach(activitySection => {
       // React key

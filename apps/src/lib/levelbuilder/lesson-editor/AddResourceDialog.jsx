@@ -69,7 +69,6 @@ const TYPE_OPTIONS = [
 const AUDIENCE_OPTIONS = ['Student', 'Teacher', 'Verified Teacher'];
 
 const initialState = {
-  key: '',
   name: '',
   type: '',
   audience: '',
@@ -94,21 +93,18 @@ export default class AddResourceDialog extends Component {
   }
 
   validateResource = () => {
-    const {key, name, url} = this.state;
+    const {name, url} = this.state;
     let error = '';
     if (name === '') {
       error += 'Name is required. ';
     }
     if (url === '') {
-      error += 'URL is required. ';
+      error += 'URL is required.';
     }
-    if (key === '') {
-      error += 'Embed slug is required.';
-    }
+    this.setState({error});
     if (error === '') {
       return true;
     } else {
-      this.setState({error});
       return false;
     }
   };
@@ -245,16 +241,6 @@ export default class AddResourceDialog extends Component {
                 type="text"
                 name="downloadUrl"
                 value={this.state.downloadUrl}
-                onChange={this.handleInputChange}
-              />
-            </label>
-            <label style={styles.inputAndLabel}>
-              Embed Slug *
-              <input
-                style={styles.textInput}
-                type="txt"
-                name="key"
-                value={this.state.key}
                 onChange={this.handleInputChange}
               />
             </label>

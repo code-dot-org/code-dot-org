@@ -1,0 +1,35 @@
+  .policy-summary {
+    padding-top: 12px;
+    max-width: 724px;
+  }
+  body {
+    font-family: 'Gotham 4r', sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: normal;
+    color: dimgray;
+  }
+  ul.state-facts {
+    padding-left:48px;
+  }
+  h1 {
+    color: #7665a0;
+    line-height: 36px;
+  }
+  h2 {
+    color: #00adbc;
+  }
+  a {
+    color: #7665a0;
+  }
+  ul.link-bar {
+    padding-left:0px; 
+  }
+  ul.link-bar li {
+    display: inline;
+    margin-right:12px;
+  }
+  img {
+  	float:left;
+  	margin-right: 16px;
+  }
