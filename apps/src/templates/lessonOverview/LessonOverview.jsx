@@ -50,11 +50,13 @@ class LessonOverview extends Component {
         lessons: PropTypes.arrayOf(
           PropTypes.shape({
             displayName: PropTypes.string.isRequired,
-            link: PropTypes.string.isRequired
+            link: PropTypes.string.isRequired,
+            position: PropTypes.number.isRequired,
+            lockable: PropTypes.bool.isRequired
           })
         ).isRequired
       }).isRequired,
-      position: PropTypes.string.isRequired,
+      position: PropTypes.number.isRequired,
       lockable: PropTypes.bool.isRequired,
       displayName: PropTypes.string.isRequired,
       overview: PropTypes.string.isRequired,
