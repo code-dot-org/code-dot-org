@@ -316,6 +316,9 @@ export default class ScriptEditor extends React.Component {
               style={styles.input}
             />
           </label>
+        </CollapsibleEditorSection>
+
+        <CollapsibleEditorSection title="Announcements">
           <AnnouncementsEditor
             defaultAnnouncements={this.props.announcements}
             inputStyle={styles.input}
