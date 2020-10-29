@@ -35,7 +35,7 @@ $(document).on('change', $('.ap-dw-optional-input'), function() {
 **Amazon.com customers:**
 Do your shopping at [smile.amazon.com](https://smile.amazon.com/) to donate a % of all purchases to Code.org
 
-[![image](/images/guidestar.png)](http://www.guidestar.org/organizations/46-0858543/code-org.aspx)
+[![image](/images/guidestar-logo.png)](https://www.guidestar.org/profile/46-0858543)
 
 <br />
 <br />

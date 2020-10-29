@@ -103,7 +103,7 @@ module Pd::Application
       ]
     }
 
-    has_many :emails, class_name: 'Pd::Application::Email'
+    has_many :emails, class_name: 'Pd::Application::Email', foreign_key: 'pd_application_id'
     has_and_belongs_to_many :tags, class_name: 'Pd::Application::Tag', foreign_key: 'pd_application_id', association_foreign_key: 'pd_application_tag_id'
 
     after_initialize -> {self.status = :unreviewed}, if: :new_record?
@@ -112,6 +112,7 @@ module Pd::Application
     before_validation :set_type_and_year
     before_save :update_accepted_date, if: :status_changed?
     before_create :generate_application_guid, if: -> {application_guid.blank?}
+    after_destroy :delete_unsent_email
 
     serialized_attrs %w(
       notes_2
@@ -194,6 +195,13 @@ module Pd::Application
         title: email.email_type + '_email'
       }
       update(status_timestamp_change_log: sanitize_status_timestamp_change_log.append(entry).to_json)
+    end
+
+    # Used as an after-destroy hook; deleting an application should
+    # also delete any unsent email, which can no longer be sent
+    # successfully anyway.
+    def delete_unsent_email
+      emails.unsent.destroy_all
     end
 
     # Override in derived class

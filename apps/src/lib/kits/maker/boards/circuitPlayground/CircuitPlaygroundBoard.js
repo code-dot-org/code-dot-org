@@ -22,13 +22,9 @@ import {
   J5_CONSTANTS
 } from './PlaygroundConstants';
 import Led from './Led';
-import {
-  isNodeSerialAvailable,
-  ADAFRUIT_VID,
-  CIRCUIT_PLAYGROUND_EXPRESS_PID,
-  CIRCUIT_PLAYGROUND_PID
-} from '../../portScanning';
+import {isNodeSerialAvailable} from '../../portScanning';
 import PlaygroundButton from './Button';
+import {detectBoardTypeFromPort, BOARD_TYPE} from '../../util/boardUtils';
 
 // Polyfill node's process.hrtime for the browser, gets used by johnny-five.
 process.hrtime = require('browser-process-hrtime');
@@ -38,12 +34,6 @@ const SERIAL_BAUD = 57600;
 
 /** Maps the Circuit Playground Express pins to Circuit Playground Classic*/
 const pinMapping = {A0: 12, A1: 6, A2: 9, A3: 10, A4: 3, A5: 2, A6: 0, A7: 1};
-
-export const BOARD_TYPE = {
-  CLASSIC: 'classic',
-  EXPRESS: 'express',
-  OTHER: 'other'
-};
 
 /**
  * Controller interface for an Adafruit Circuit Playground board using
@@ -103,7 +93,10 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
         this.serialPort_ = serialPort;
         this.fiveBoard_ = board;
         this.fiveBoard_.samplingInterval(100);
-        this.boardType_ = this.detectBoardType();
+        this.boardType_ = detectBoardTypeFromPort();
+        if (this.boardType_ === BOARD_TYPE.EXPRESS) {
+          this.fiveBoard_.isExpressBoard = true;
+        }
         if (experiments.isEnabled('detect-board')) {
           this.detectFirmwareVersion(playground);
         }
@@ -126,33 +119,6 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
           playground.firmware.version.minor
       );
     });
-  }
-
-  /**
-   * Detects the type of board plugged into the serial port
-   */
-  detectBoardType() {
-    const vendorId =
-      this.port_ && this.port_.vendorId
-        ? parseInt(this.port_.vendorId, 16)
-        : null;
-    const productId =
-      this.port_ && this.port_.productId
-        ? parseInt(this.port_.productId, 16)
-        : null;
-    let boardType = BOARD_TYPE.OTHER;
-    if (vendorId === ADAFRUIT_VID && productId === CIRCUIT_PLAYGROUND_PID) {
-      boardType = BOARD_TYPE.CLASSIC;
-    } else if (
-      vendorId === ADAFRUIT_VID &&
-      productId === CIRCUIT_PLAYGROUND_EXPRESS_PID
-    ) {
-      boardType = BOARD_TYPE.EXPRESS;
-      if (this.fiveBoard_) {
-        this.fiveBoard_.isExpressBoard = true;
-      }
-    }
-    return boardType;
   }
 
   /**

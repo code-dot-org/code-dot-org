@@ -1,21 +1,21 @@
 login_required true
 has_lesson_plan true
 
-lesson 'Intro to Data'
+lesson 'Intro to Data', display_name: 'Introduction to Data'
 level 'U4L01 Student Lesson Introduction'
 
-lesson 'Finding Trends with Visualizations'
+lesson 'Finding Trends with Visualizations', display_name: 'Finding Trends with Visualizations'
 level 'U4L02v2 - Finding Trends'
 
-lesson 'Check Your Assumptions'
+lesson 'Check Your Assumptions', display_name: 'Check Your Assumptions'
 level 'U4L03v2 - Student Introduction'
 
-lesson 'Good and Bad Data Visualizations'
+lesson 'Good and Bad Data Visualizations', display_name: 'Good and Bad Data Visualizations'
 level 'U4L04v2 - Student Introduction'
 level 'GoodBadVisualizations_v1'
 level 'GoodBadVisualizations_v2'
 
-lesson 'Making Data Visualizations'
+lesson 'Making Data Visualizations', display_name: 'Making Data Visualizations'
 level 'U4 - Making Data Visualizations - Student Introduction'
 level 'U4 - Making Data Visualizations - Getting Started'
 level 'U4 - Making Data Visualizations - Scatter Plot'
@@ -24,38 +24,39 @@ level 'U4 - Making Data Visualizations - Bar Chart'
 level 'U4 - Making Data Visualizations - Edit Chart Appearance'
 level 'U4 - Making Data Visualizations - Free Play'
 
-lesson 'Discover a Data Story'
+lesson 'Discover a Data Story', display_name: 'Discover a Data Story'
 level 'U4L06v2 Student Lesson Introduction'
 
-lesson 'Cleaning Data'
+lesson 'Cleaning Data', display_name: 'Cleaning Data'
 level 'U4L16 Student Lesson Introduction'
 level 'U4 - Cleaning Data - Activity Guide'
 level 'U4 Cleaning Data Activity Guide Pt2'
 level 'U4 Cleaning Data Activity Guide Pt3'
 
-lesson 'Creating Summary Tables'
+lesson 'Creating Summary Tables', display_name: 'Creating Summary Tables'
 level 'U4L08v2 Student Intro'
 level 'U4L08v2 Making Pivot Tables'
 level 'U4L08v2 Making Pivot Tables Part 2'
 level 'U4L08v2 Making Pivot Tables Part 3'
 
-lesson 'Practice PT - Tell a Data Story'
+lesson 'Practice PT - Tell a Data Story', display_name: 'Practice PT - Tell a Data Story'
 level 'U4L09 Student Lesson Introduction'
 
-lesson 'What is Big Data?'
+lesson 'What is Big Data?', display_name: 'What is Big Data?'
 level 'U4L10 Student Lesson Introduction'
 
-lesson 'Rapid Research - Data Innovations'
+lesson 'Rapid Research - Data Innovations', display_name: 'Rapid Research - Data Innovations'
 level 'U4L11 Student Lesson Introduction'
 level 'Video - Data and Medicine', named: true
 level 'Video - CS is Changing Everything', named: true
 
-lesson 'Identifying People with Data'
+lesson 'Identifying People with Data', display_name: 'Identifying People with Data'
 level 'U4L12 Student Lesson Introduction'
 
-lesson 'The Cost of Free'
+lesson 'The Cost of Free', display_name: 'The Cost of Free'
 level 'U4L13 Student Lesson Introduction'
 level 'U4 - Privacy Abandoned - Hot On Your Trail Video'
 
-lesson 'Practice PT - Propose an Innovation'
+lesson 'Practice PT - Propose an Innovation', display_name: 'Practice PT - Propose an Innovation'
 level 'U4L14 Student Lesson Introduction'
+

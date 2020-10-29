@@ -272,7 +272,7 @@ class SourcesTest < FilesApiTestBase
   end
 
   def test_replace_version
-    FirehoseClient.instance.expects(:putRecord).never
+    FirehoseClient.instance.expects(:put_record).never
 
     # Upload a source file.
     filename = MAIN_JSON
@@ -324,12 +324,13 @@ class SourcesTest < FilesApiTestBase
     Timecop.travel 1
 
     # log when replacing non-current version.
-    FirehoseClient.instance.expects(:put_record).with do |data|
+    FirehoseClient.instance.expects(:put_record).with do |stream, data|
       data_json_data = JSON.parse(data[:data_json])
       data[:study] == 'project-data-integrity' &&
         data[:event] == 'reject-comparing-older-main-json' &&
         data[:project_id] == @channel &&
-        data_json_data['currentVersionId'] == version1
+        data_json_data['currentVersionId'] == version1 &&
+        stream == :analysis
     end
 
     file_data = 'version 3'

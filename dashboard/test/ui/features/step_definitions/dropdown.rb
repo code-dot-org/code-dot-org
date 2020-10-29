@@ -9,8 +9,21 @@ And /^I press dropdown number (\d+)$/ do |n|
     # Click mouse in element location using Actions API as a workaround.
     @browser.action.move_to(text).click.perform
   else
-    text.find_element(:xpath, '../*[last()]').click
+    google_blockly? ? text.click : text.find_element(:xpath, '../*[last()]').click
   end
+end
+
+Then /^the Google Blockly dropdown is (.*)$/ do |visibility|
+  if visibility == "visible"
+    expected = 1
+  elsif visibility == "hidden"
+    expected = 0
+  else
+    raise "unexpected visibility"
+  end
+
+  element = @browser.find_element(:class, 'blocklyDropDownDiv')
+  expect(element.attribute('style').match(Regexp.new("opacity: #{expected}"))).not_to eq(nil)
 end
 
 Then /^the dropdown is (.*)$/ do |visibility|
@@ -32,7 +45,8 @@ Then /^I select item (\d+) from the dropdown$/ do |n|
 end
 
 Then /^the dropdown field has text "(.*?)"$/ do |text|
-  element_has_text("[block-id='4'] .blocklyEditableText", text)
+  id_selector = get_id_selector
+  element_has_text("[#{id_selector}='4'] .blocklyEditableText", text)
 end
 
 And /^I press the image dropdown$/ do

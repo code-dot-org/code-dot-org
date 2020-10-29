@@ -12,20 +12,15 @@ function showAmazonFutureEngineerEligibility() {
   );
 
   let signedIn = false;
-  let schoolData = {};
+  let accountInformation = {};
 
   $.ajax({
     type: 'GET',
     url: '/dashboardapi/v1/users/me/donor_teacher_banner_details'
   })
     .done(results => {
-      // This request returns a 403 if the user isn't signed in,
-      // and 204 (no content) if a user is signed in to a student account.
       signedIn = true;
-
-      if (results) {
-        schoolData = results;
-      }
+      accountInformation = results;
     })
     .complete(() => {
       firehoseClient.putRecord({
@@ -38,9 +33,12 @@ function showAmazonFutureEngineerEligibility() {
           ReactDOM.render(
             <AmazonFutureEngineerEligibility
               signedIn={signedIn}
-              schoolId={schoolData.nces_school_id || ''}
-              schoolEligible={schoolData.afe_high_needs || null}
-              accountEmail={schoolData.teacher_email || null}
+              schoolId={accountInformation.nces_school_id || ''}
+              schoolEligible={accountInformation.afe_high_needs || null}
+              accountEmail={accountInformation.teacher_email || null}
+              isStudentAccount={
+                accountInformation.user_type === 'student' ? true : false
+              }
             />,
             amazonFutureEngineerEligibilityElement
           );

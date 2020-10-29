@@ -6,6 +6,10 @@ module Foorm
     # GET '/form/:misc_form_path'
     # misc_form_path references the configuration in foorm/misc_survey, which maps a
     # form path to a set of survey variables and a form name.
+    # Survey variables can be provided in the following format:
+    # '/form/:misc_form_path?survey_data[variable1]=value1&survey_data[variable2]=value2'
+    # If no variables are provided, will use survey variables from the configuration in foorm/misc_survey,
+    # or use no variables if there are none in the configuration.
     def new
       return render :logged_out unless current_user
       return render :not_teacher unless current_user.teacher?
@@ -34,7 +38,7 @@ module Foorm
           formQuestions: form_questions,
           formName: form_data[:form_name],
           formVersion: latest_version,
-          surveyData: form_data[:survey_data],
+          surveyData: params[:survey_data] || form_data[:survey_data],
           submitApi: MISC_FOORM_SUBMIT_API,
           submitParams: key_params
         }.to_json

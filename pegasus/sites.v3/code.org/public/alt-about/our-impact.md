@@ -133,7 +133,7 @@ Whether it’s organizing the worldwide Hour of Code, advocating for policy chan
   <img src="/images/alt-about/photo.png" style="width: 100%">
 </div>
 <div class="col-75">
-  <p style="margin-top:10px"><a href="https://advocacy.code.org/current-legislation">45 states passed new policies or initiatives</a> to help expand computer science education in 2019. All fifty US states (plus Washington DC) have now <a href="https://docs.google.com/document/d/e/2PACX-1vTIZJaNtmPRBNb7_ZFHBxsGwyZqBSdpJN0iJ_pOgF-K-MNYikEeKTTj49ezDkMFRb1C_1w45gSrkcq6/pub">adopted one or more of the nine policies for CS education</a> promoted by the Code.org Advocacy Coalition.</p>
+  <p style="margin-top:10px"><a href="https://advocacy.code.org/current-legislation">45 states passed new policies or initiatives</a> to help expand computer science education in 2019. All fifty US states (plus Washington DC) have now <a href="/advocacy/landscape.pdf">adopted one or more of the nine policies for CS education</a> promoted by the Code.org Advocacy Coalition.</p>
 </div>
 <div style="clear: both; margin-bottom: 10px"></div>
 <div class="col-25" style="padding-right: 20px;">
@@ -167,8 +167,11 @@ Whether it’s organizing the worldwide Hour of Code, advocating for policy chan
 
 <hr/>
 
-<a href="http://www.guidestar.org/organizations/46-0858543/code-org.aspx" target="_blank">
-    <img src="https://widgets.guidestar.org/gximage2?o=9218725&l=v3" />
-</a> [![image](/images/fit-150/student_privacy_pledge.png)](http://studentprivacypledge.org/)
+<a href="https://www.guidestar.org/profile/46-0858543" target="_blank" rel="noopener noreferrer">
+  <object data="https://widgets.guidestar.org/gximage2?o=9218725&l=v4" type="image/png" style="vertical-align: middle; margin-right: 40px">
+    <img src="/images/guidestar-logo.png" />
+  </object>
+</a> 
+[![image](/images/fit-150/student_privacy_pledge.png)](http://studentprivacypledge.org/)
 
 <p><a href="#top">[Back to top]</a></p>

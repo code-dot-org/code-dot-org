@@ -60,6 +60,14 @@ module Cdo::CloudFormation
       lambda_zip(*files, 'node_modules', key_prefix: 'lambdajs')
     end
 
+    def ruby_zip(name)
+      dir = aws_dir('lambda', name)
+      Dir.chdir(dir) do
+        RakeUtils.bundle_install '--deployment'
+        lambda_zip("#{name}.rb", 'vendor', key_prefix: 'lambdarb')
+      end
+    end
+
     # Helper function to call a Lambda-function-based AWS::CloudFormation::CustomResource.
     # Ref: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cfn-customresource.html
     def lambda_fn(function_name, properties={})

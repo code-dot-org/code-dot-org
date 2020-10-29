@@ -20,6 +20,26 @@ class AnimationLibraryApi < Sinatra::Base
   end
 
   #
+  # GET /api/v1/animation-library/level_animations/<version-id>/<filename>
+  # Retrieve an animation that was uploaded by a levelbuilder (for use in level start_animations)
+  #
+  get %r{/api/v1/animation-library/level_animations/([^/]+)/(.+)} do |version_id, animation_name|
+    not_found if version_id.empty? || animation_name.empty?
+
+    begin
+      result = Aws::S3::Bucket.
+        new(ANIMATION_LIBRARY_BUCKET, client: AWS::S3.create_client).
+        object("level_animations/#{animation_name}").
+        get(version_id: version_id)
+      content_type result.content_type
+      cache_for 3600
+      result.body
+    rescue
+      not_found
+    end
+  end
+
+  #
   # GET /api/v1/animation-library/(spritelab|gamelab)/<version-id>/<filename>
   #
   # Retrieve a file from the animation library for the given app type
@@ -40,13 +60,16 @@ class AnimationLibraryApi < Sinatra::Base
     end
   end
 
-  # Retrieve the manifest from S3. This will be extended to take in
-  # a locale to get a language-specific version as well as supporting
-  # the gamelab animation manifest
-  get %r{/api/v1/animation-library/manifest/spritelab} do
+  #
+  # GET /api/v1/animation-library/manifest/spritelab/<locale>
+  #
+  # Retrieve the manifest from S3. The locale should be in the form xx_xx
+  get %r{/api/v1/animation-library/manifest/(spritelab|gamelab)/(.+)} do |app_type, locale|
+    manifest_filename = (app_type == 'spritelab') ? 'spritelabCostumeLibrary' : 'gamelabAnimationLibrary'
+    manifest_extension = (app_type == 'spritelab' && locale != 'en_us') ? "#{locale}.json" : 'json'
     result = Aws::S3::Bucket.
       new(ANIMATION_LIBRARY_BUCKET, client: AWS::S3.create_client).
-      object("manifests/spritelabCostumeLibrary.json").
+      object("manifests/#{manifest_filename}.#{manifest_extension}").
       get
     content_type result.content_type
     cache_for 3600
@@ -56,6 +79,8 @@ class AnimationLibraryApi < Sinatra::Base
   end
 
   #
+  # Legacy animation API, but do not delete, because old Gamelab and Spritelab projects will still
+  # have animations that use this api.
   # GET /api/v1/animation-library/<version-id>/<filename>
   #
   # Retrieve a file from the animation library

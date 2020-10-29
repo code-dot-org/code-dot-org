@@ -103,6 +103,3 @@ export default class Attachments extends React.Component {
     );
   }
 }
-
-window.dashboard = window.dashboard || {};
-window.dashboard.Attachments = Attachments;

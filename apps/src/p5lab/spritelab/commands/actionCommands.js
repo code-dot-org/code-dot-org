@@ -49,6 +49,19 @@ export const commands = {
     let sprites = coreLibrary.getSpriteArray(spriteArg);
     sprites.forEach(sprite => this.edges.displace(sprite));
   },
+
+  isCostumeEqual(spriteArg, costumeName) {
+    let sprites = coreLibrary.getSpriteArray(spriteArg);
+    if (sprites.length === 0) {
+      return false;
+    }
+    return sprites.every(sprite => sprite.getAnimationLabel() === costumeName);
+  },
+
+  isKeyPressed(key) {
+    return this.keyDown(key);
+  },
+
   isTouchingEdges(spriteArg) {
     if (!this.edges) {
       this.createEdgeSprites();

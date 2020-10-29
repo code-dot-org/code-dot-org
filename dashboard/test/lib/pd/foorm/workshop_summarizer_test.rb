@@ -4,9 +4,16 @@ module Pd::Foorm
   class WorkshopSummarizerTest < ActiveSupport::TestCase
     self.use_transactional_test_case = true
     setup_all do
-      daily_survey_day_0 = ::Foorm::Form.find_by_name('surveys/pd/summer_workshop_pre_survey')
-      daily_survey_day_5 = ::Foorm::Form.find_by_name('surveys/pd/summer_workshop_pre_survey')
-      @parsed_forms = FoormParser.parse_forms([daily_survey_day_0, daily_survey_day_5])
+      @daily_survey_day_0 = create :foorm_form_summer_pre_survey
+      @daily_survey_day_5 = create :foorm_form_summer_post_survey
+      @csf_intro_post_survey = create :foorm_form_csf_intro_post_survey
+      @parsed_forms = FoormParser.parse_forms([@daily_survey_day_0, @daily_survey_day_5])
+    end
+
+    teardown_all do
+      @daily_survey_day_0.delete
+      @daily_survey_day_5.delete
+      @csf_intro_post_survey.delete
     end
 
     test 'summarizes survey results without error' do
@@ -26,7 +33,7 @@ module Pd::Foorm
         'Pre Workshop': {
           general: {
             response_count: 2,
-            'surveys/pd/summer_workshop_pre_survey.0': {
+            'surveys/pd/summer_workshop_pre_survey_test.0': {
               course_length_weeks: {
                 '5_fewer': 1,
                 '30_more': 1
@@ -83,15 +90,14 @@ module Pd::Foorm
       ws_submissions = Pd::WorkshopSurveyFoormSubmission.where(pd_workshop_id: workshop.id)
       submission_ids = ws_submissions.pluck(:foorm_submission_id)
       foorm_submissions = ::Foorm::Submission.find(submission_ids)
-      csf_form = ::Foorm::Form.find_by_name('surveys/pd/workshop_csf_intro_post')
-      parsed_form = FoormParser.parse_forms([csf_form])
+      parsed_form = FoormParser.parse_forms([@csf_intro_post_survey])
       summarized_answers = WorkshopSummarizer.summarize_answers_by_survey(
         foorm_submissions,
         parsed_form,
         ws_submissions
       ).with_indifferent_access
 
-      facilitator_answers = summarized_answers['Post Workshop'.to_s][:facilitator]['surveys/pd/workshop_csf_intro_post.0']
+      facilitator_answers = summarized_answers['Post Workshop'.to_s][:facilitator]['surveys/pd/workshop_csf_intro_post_test.0']
       assert_not_empty facilitator_answers
       expected_matrix_data = {
         demonstrated_knowledge: {"7": 1, "1": 1},
@@ -122,8 +128,7 @@ module Pd::Foorm
       ws_submissions = Pd::WorkshopSurveyFoormSubmission.where(pd_workshop_id: workshop.id)
       submission_ids = ws_submissions.pluck(:foorm_submission_id)
       foorm_submissions = ::Foorm::Submission.find(submission_ids)
-      csf_form = ::Foorm::Form.find_by_name('surveys/pd/workshop_csf_intro_post')
-      parsed_form = FoormParser.parse_forms([csf_form])
+      parsed_form = FoormParser.parse_forms([@csf_intro_post_survey])
       summarized_answers = WorkshopSummarizer.summarize_answers_by_survey(
         foorm_submissions,
         parsed_form,
@@ -148,7 +153,7 @@ module Pd::Foorm
         healthy_relationship: {"1": 3}
       }.with_indifferent_access
 
-      facilitator_answers = summarized_answers['Post Workshop'.to_s][:facilitator]['surveys/pd/workshop_csf_intro_post.0']
+      facilitator_answers = summarized_answers['Post Workshop'.to_s][:facilitator]['surveys/pd/workshop_csf_intro_post_test.0']
       assert_not_empty facilitator_answers
 
       assert_equal expected_matrix_data_high, facilitator_answers[:facilitator_effectiveness][facilitator1.id]

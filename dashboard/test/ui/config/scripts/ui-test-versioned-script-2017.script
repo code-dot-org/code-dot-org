@@ -1,0 +1,8 @@
+hidden false
+family_name 'ui-test-versioned-script'
+version_year '2017'
+is_stable true
+
+lesson_group 'lg_1', display_name: 'Content'
+lesson 'Lesson', display_name: 'Lesson'
+level 'courseB_video_Unspotted'

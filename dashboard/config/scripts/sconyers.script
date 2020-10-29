@@ -1,6 +1,6 @@
 project_widget_types ["applab"]
 
-lesson 'Digital Design'
+lesson 'Digital Design', display_name: 'Digital Design'
 level 'CSD U4L12 autoSFLP_2018', named: true
 level 'CSD U4 Design Mode Map_2018', named: true
 level 'CSDU4 Design Mode Video_2018', named: true
@@ -15,7 +15,7 @@ level 'U4 Model Design 7_2018', progression: 'Finish a Screen'
 level 'Design a Screen for your App_2018', named: true
 level 'CSD U4 - Design Mode Project_2018', progression: 'App Project: Screen Design', assessment: true
 
-lesson 'Linking Screens'
+lesson 'Linking Screens', display_name: 'Linking Screens'
 level 'CSD U4L13 autoSFLP_2018', named: true
 level 'CSD U4 Mult Screen Map_2018', progression: 'Adding Screens'
 level 'U4 Model Program 1_2018', progression: 'Adding Screens'
@@ -31,6 +31,7 @@ level 'U4 Model Program 5_2018', progression: 'Linking Screens'
 level 'CSDU4 Project Import_2018', named: true
 level 'CSDU4 Project Events_2018', named: true
 
-lesson 'Test Lesson'
+lesson 'Test Lesson', display_name: 'Test Lesson'
 level 'TraceySconyers_Level1_Test', named: true
 level 'TraceySconyers_Level2_Test', named: true
+

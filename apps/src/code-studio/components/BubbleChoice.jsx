@@ -34,7 +34,7 @@ export default class BubbleChoice extends React.Component {
       display_name: PropTypes.string.isRequired,
       description: PropTypes.string.isRequired,
       previous_level_url: PropTypes.string,
-      next_level_url: PropTypes.string,
+      redirect_url: PropTypes.string,
       script_url: PropTypes.string,
       sublevels: PropTypes.arrayOf(
         PropTypes.shape({
@@ -58,7 +58,7 @@ export default class BubbleChoice extends React.Component {
   renderButtons = () => {
     const {level} = this.props;
     const backButtonUrl = level.previous_level_url || level.script_url;
-    const continueButtonUrl = level.next_level_url || level.script_url;
+    const finishButtonUrl = level.redirect_url || level.script_url;
 
     return (
       <div>
@@ -71,13 +71,13 @@ export default class BubbleChoice extends React.Component {
             {i18n.back()}
           </button>
         )}
-        {continueButtonUrl && (
+        {finishButtonUrl && (
           <button
             type="button"
-            onClick={() => this.goToUrl(continueButtonUrl)}
+            onClick={() => this.goToUrl(finishButtonUrl)}
             style={{...styles.btn, ...styles.btnOrange}}
           >
-            {level.next_level_url ? i18n.continue() : i18n.finish()}
+            {i18n.finish()}
           </button>
         )}
       </div>

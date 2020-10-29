@@ -39,8 +39,10 @@ export function getTables() {
 }
 
 export function getColumns() {
-  return function() {
-    const tableName = stripQuotes(getFirstParam('getColumn', this.parent));
+  return function(editor) {
+    const tableName = stripQuotes(
+      getFirstParam('getColumn', this.parent, editor)
+    );
     return [
       {
         text: msg.choosePrefix(),

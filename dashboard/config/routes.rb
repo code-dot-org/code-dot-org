@@ -146,8 +146,7 @@ Dashboard::Application.routes.draw do
     patch '/users/parent_email', to: 'registrations#set_parent_email'
     patch '/users/user_type', to: 'registrations#set_user_type'
     get '/users/cancel', to: 'registrations#cancel'
-    get '/users/auth/:provider/connect', to: 'authentication_options#connect', as: :connect_authentication_option
-    delete '/users/auth/:id/disconnect', to: 'authentication_options#disconnect'
+    post '/users/auth/:id/disconnect', to: 'authentication_options#disconnect'
     get '/users/migrate_to_multi_auth', to: 'registrations#migrate_to_multi_auth'
     get '/users/demigrate_from_multi_auth', to: 'registrations#demigrate_from_multi_auth'
     get '/users/to_destroy', to: 'registrations#users_to_destroy'
@@ -239,7 +238,7 @@ Dashboard::Application.routes.draw do
     end
   end
 
-  resources :datasets, param: 'dataset_name', only: [:index, :show, :update, :destroy] do
+  resources :datasets, param: 'dataset_name', constraints: {dataset_name: /[^\/]+/}, only: [:index, :show, :update, :destroy] do
     collection do
       get '/manifest/edit', to: 'datasets#edit_manifest'
       post '/manifest/update', to: 'datasets#update_manifest'
@@ -247,6 +246,9 @@ Dashboard::Application.routes.draw do
   end
 
   resources :levels do
+    collection do
+      get 'get_filtered_levels'
+    end
     member do
       get 'get_rubric'
       get 'embed_level'
@@ -309,6 +311,11 @@ Dashboard::Application.routes.draw do
 
   resources :courses, param: 'course_name'
   get '/course/:course_name', to: redirect('/courses/%{course_name}')
+
+  resources :lessons, only: [:show, :edit, :update]
+
+  resources :resources, only: [:create]
+  get '/resourcesearch/:q/:limit', to: 'resources#search', defaults: {format: 'json'}
 
   get '/beta', to: redirect('/')
 
@@ -444,6 +451,8 @@ Dashboard::Application.routes.draw do
         get :workshop_organizer_survey_report, action: :workshop_organizer_survey_report, controller: 'workshop_organizer_survey_report'
 
         get 'foorm/generic_survey_report', action: :generic_survey_report, controller: 'workshop_survey_foorm_report'
+        get 'foorm/csv_survey_report', action: :csv_survey_report, controller: 'workshop_survey_foorm_report'
+        get 'foorm/forms_for_workshop', action: :forms_for_workshop, controller: 'workshop_survey_foorm_report'
       end
 
       resources :workshop_summary_report, only: :index
@@ -493,6 +502,8 @@ Dashboard::Application.routes.draw do
 
       post 'foorm/form_with_library_items', action: :fill_in_library_items, controller: 'foorm'
       get 'foorm/form_questions', action: :get_form_questions, controller: 'foorm'
+      get 'foorm/submissions_csv', action: :get_submissions_as_csv, controller: 'foorm'
+      get 'foorm/form_names', action: :get_form_names_and_versions, controller: 'foorm'
     end
   end
 
@@ -525,11 +536,21 @@ Dashboard::Application.routes.draw do
     get 'workshop_survey/csf/post101(/:enrollment_code)', to: 'workshop_daily_survey#new_csf_post101'
     get 'workshop_survey/csf/pre201', to: 'workshop_daily_survey#new_csf_pre201'
     get 'workshop_survey/csf/post201(/:enrollment_code)', to: 'workshop_daily_survey#new_csf_post201'
+    get 'workshop_survey/foorm/csf/post201(/:enrollment_code)', to: 'workshop_daily_survey#new_csf_post201_foorm'
+    get 'workshop_survey/foorm/csf/pre201', to: 'workshop_daily_survey#new_csf_pre201_foorm'
     get 'workshop_survey/thanks', to: 'workshop_daily_survey#thanks'
 
     get 'post_course_survey/thanks', to: 'post_course_survey#thanks'
     post 'post_course_survey/submit', to: 'post_course_survey#submit'
     get 'post_course_survey/:course_initials', to: 'post_course_survey#new'
+
+    # Academic year workshops
+    get '/:workshop_subject/pre/(*agenda)', to: 'workshop_daily_survey#new_ayw_pre',
+        constraints: {agenda: /module\/[0-9_]+/}
+    get '/:workshop_subject/day/:day', to: 'workshop_daily_survey#new_ayw_daily',
+        constraints: {day: /\d/}
+    get '/:workshop_subject/post/(*agenda)', to: 'workshop_daily_survey#new_ayw_post',
+        constraints: {agenda: /(module\/[0-9_]+)|(in_person)/}
 
     namespace :application do
       get 'facilitator', to: 'facilitator_application#new'
@@ -730,4 +751,6 @@ Dashboard::Application.routes.draw do
   get '/help', to: redirect("https://support.code.org")
 
   get '/form/:misc_form_path', to: 'foorm/misc_survey#new'
+
+  post '/i18n/track_string_usage', action: :track_string_usage, controller: :i18n
 end

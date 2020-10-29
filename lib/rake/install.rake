@@ -17,6 +17,9 @@ namespace :install do
       path = "../../tools/hooks/#{f}"
       RakeUtils.ln_s path, "#{git_path}/#{f}"
     end
+
+    # Include custom `.gitconfig`.
+    RakeUtils.system 'git config', '--local include.path ../.gitconfig'
   end
 
   desc 'Create default locals.yml file if it doesn\'t exist'
@@ -45,7 +48,7 @@ namespace :install do
           # yet because doing so would break unit tests.
           RakeUtils.rake 'db:create db:test:prepare'
         else
-          RakeUtils.rake 'dashboard:setup_db'
+          RakeUtils.rake_stream_output 'dashboard:setup_db', ([:adhoc, :development].include?(rack_env) ? '--trace' : nil)
         end
       end
     end

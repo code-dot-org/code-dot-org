@@ -1,10 +1,20 @@
 import * as coreLibrary from '../coreLibrary';
 import {getStore} from '@cdo/apps/redux';
 import {addConsoleMessage} from '../textConsoleModule';
+import {addQuestion} from '../spritelabInputModule';
 
 export const commands = {
   comment(text) {
     /* no-op */
+  },
+
+  getTime(unit) {
+    if (unit === 'seconds') {
+      return this.World.seconds || 0;
+    } else if (unit === 'frames') {
+      return this.World.frameCount || 0;
+    }
+    return 0;
   },
 
   hideTitleScreen() {
@@ -24,6 +34,11 @@ export const commands = {
       let backgroundImage = this._preloadedBackgrounds[img];
       coreLibrary.background = backgroundImage;
     }
+  },
+
+  setQuestion(questionText, variableName, setterCallback) {
+    coreLibrary.registerQuestion(questionText, variableName, setterCallback);
+    getStore().dispatch(addQuestion(questionText, variableName));
   },
 
   showTitleScreen(title, subtitle) {

@@ -1,25 +1,26 @@
 professional_learning_course 'Equity Support'
 
-lesson 'Getting Started'
+lesson 'Getting Started', display_name: 'Getting Started'
 level 'Equity Welcome'
 level 'Equity About'
 level 'Equity Participation'
 level 'Equity Stage1Go'
 
-lesson 'Introduction to Equity'
+lesson 'Introduction to Equity', display_name: 'Introduction to Equity'
 level 'Equity Define'
 level 'Equity CS'
 level 'Equity Strategies'
 level 'Equity Stage2Go'
 
-lesson 'Creating Equitable Learning Environments'
+lesson 'Creating Equitable Learning Environments', display_name: 'Creating Equitable Learning Environments'
 level 'Equity Self Assess'
 level 'Equity Goals'
 level 'Equity Resources'
 level 'Equity Reflection'
 level 'Equity Stage3Go'
 
-lesson 'Next Steps'
+lesson 'Next Steps', display_name: 'Next Steps'
 level 'Equity Review'
 level 'Equity Keep Learning'
 level 'Equity Celebrate'
+

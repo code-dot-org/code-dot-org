@@ -14,8 +14,8 @@ theme: responsive
 
 ### Lesson Plans:
 
-- [Make a Flappy Game (English)](/files/hoc-flappy-lp.pdf)
-- [Make a Flappy Game (Spanish)](/files/hoc-flappy-lp-spanish.pdf)
+- [Make a Flappy Game (English)](https://curriculum.code.org/hoc/plugged/3)
+- [Make a Flappy Game (Spanish - LATAM)](https://curriculum.code.org/es-mx/hoc/plugged/3)
 
 ### Extension Activities:
 

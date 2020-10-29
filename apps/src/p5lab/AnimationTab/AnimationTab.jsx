@@ -62,10 +62,10 @@ class AnimationTab extends React.Component {
   static propTypes = {
     channelId: PropTypes.string.isRequired,
     onColumnWidthsChange: PropTypes.func.isRequired,
-    getLibraryManifest: PropTypes.func.isRequired,
-    categories: PropTypes.object.isRequired,
+    libraryManifest: PropTypes.object.isRequired,
     hideUploadOption: PropTypes.bool.isRequired,
     hideAnimationNames: PropTypes.bool.isRequired,
+    hideBackgrounds: PropTypes.bool.isRequired,
 
     // Provided by Redux
     columnSizes: PropTypes.arrayOf(PropTypes.number).isRequired,
@@ -86,7 +86,7 @@ class AnimationTab extends React.Component {
         >
           <div style={styles.animationsColumn}>
             <P5LabVisualizationHeader />
-            <AnimationList />
+            <AnimationList hideBackgrounds={this.props.hideBackgrounds} />
           </div>
           <div style={styles.editorColumn}>
             <PiskelEditor style={styles.piskelEl} />
@@ -101,10 +101,12 @@ class AnimationTab extends React.Component {
           <AnimationPicker
             channelId={this.props.channelId}
             allowedExtensions=".png,.jpg,.jpeg"
-            getLibraryManifest={this.props.getLibraryManifest}
-            categories={this.props.categories}
+            libraryManifest={this.props.libraryManifest}
             hideUploadOption={this.props.hideUploadOption}
             hideAnimationNames={this.props.hideAnimationNames}
+            navigable={true}
+            canDraw={true}
+            hideBackgrounds={this.props.hideBackgrounds}
           />
         )}
       </div>

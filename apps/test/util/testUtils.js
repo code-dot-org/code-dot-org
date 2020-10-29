@@ -23,7 +23,7 @@ export function setExternalGlobals(beforeFunc = before, afterFunc = after) {
     sinon.stub(project, 'hasPrivacyProfanityViolation').returns(false);
     sinon.stub(project, 'getCurrentId').returns('fake_id');
     sinon.stub(project, 'isEditing').returns(true);
-    sinon.stub(project, 'useMakerAPIs').returns(false);
+    sinon.stub(project, 'getMakerAPIs').returns(false);
 
     sinon.stub(assets.listStore, 'reset');
     sinon.stub(assets.listStore, 'add').returns([]);
@@ -36,7 +36,7 @@ export function setExternalGlobals(beforeFunc = before, afterFunc = after) {
     project.hasPrivacyProfanityViolation.restore();
     project.getCurrentId.restore();
     project.isEditing.restore();
-    project.useMakerAPIs.restore();
+    project.getMakerAPIs.restore();
 
     assets.listStore.reset.restore();
     assets.listStore.add.restore();

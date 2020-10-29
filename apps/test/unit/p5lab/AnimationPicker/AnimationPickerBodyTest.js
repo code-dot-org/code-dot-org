@@ -6,7 +6,7 @@ import {
   WarningLabel,
   UnconnectedAnimationPickerBody as AnimationPickerBody
 } from '@cdo/apps/p5lab/AnimationPicker/AnimationPickerBody';
-import spriteCostumeLibrary from '@cdo/apps/p5lab/spritelab/spriteCostumeLibrary.json';
+import testAnimationLibrary from '../testAnimationLibrary.json';
 import {CostumeCategories} from '@cdo/apps/p5lab/spritelab/constants';
 
 const emptyFunction = function() {};
@@ -17,10 +17,13 @@ describe('AnimationPickerBody', function() {
     onPickLibraryAnimation: emptyFunction,
     onUploadClick: emptyFunction,
     playAnimations: false,
-    getLibraryManifest: () => spriteCostumeLibrary,
+    libraryManifest: testAnimationLibrary,
     categories: CostumeCategories,
     hideUploadOption: false,
-    hideAnimationNames: false
+    hideAnimationNames: false,
+    navigable: true,
+    hideBackgrounds: false,
+    canDraw: true
   };
 
   describe('upload warning', function() {

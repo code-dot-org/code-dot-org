@@ -2,10 +2,11 @@ import * as utils from '../utils';
 import {
   ICON_PREFIX,
   ICON_PREFIX_REGEX,
-  DATA_URL_PREFIX_REGEX
+  DATA_URL_PREFIX_REGEX,
+  ABSOLUTE_REGEXP
 } from '../assetManagement/assetPrefix';
 
-export {ICON_PREFIX, ICON_PREFIX_REGEX, DATA_URL_PREFIX_REGEX};
+export {ICON_PREFIX, ICON_PREFIX_REGEX, DATA_URL_PREFIX_REGEX, ABSOLUTE_REGEXP};
 export const FOOTER_HEIGHT = 30;
 export const APP_WIDTH = 320;
 export const WIDGET_WIDTH = 600;
@@ -40,7 +41,22 @@ export const themeOptions = [
   'glowInTheDark',
   'bubblegum',
   'millennial',
-  'robot'
+  'robot',
+  'coralReef',
+  'mintChip',
+  'lavender',
+  'cherryVanilla',
+  'berryPatch',
+  'cucumber',
+  'crushedVelvet',
+  'playtime',
+  'underTheSea',
+  'blueAndGold',
+  'blueSteel',
+  'darkscheme',
+  'twoTone',
+  'pastel',
+  'peachy'
 ];
 
 const THEME_ICON_BASE_URL = '/blockly/media/applab/theme_dropdown/';
@@ -115,6 +131,81 @@ export const themeOptionsForSelect = [
     option: 'robot',
     displayName: 'Robot',
     icon: THEME_ICON_BASE_URL + 'robot.png'
+  },
+  {
+    option: 'coralReef',
+    displayName: 'Coral Reef',
+    icon: THEME_ICON_BASE_URL + 'coral_reef.png'
+  },
+  {
+    option: 'mintChip',
+    displayName: 'Mint Chip',
+    icon: THEME_ICON_BASE_URL + 'mint_chip.png'
+  },
+  {
+    option: 'lavender',
+    displayName: 'Lavender',
+    icon: THEME_ICON_BASE_URL + 'lavender.png'
+  },
+  {
+    option: 'cherryVanilla',
+    displayName: 'Cherry Vanilla',
+    icon: THEME_ICON_BASE_URL + 'cherry_vanilla.png'
+  },
+  {
+    option: 'berryPatch',
+    displayName: 'Berry Patch',
+    icon: THEME_ICON_BASE_URL + 'berry_patch.png'
+  },
+  {
+    option: 'cucumber',
+    displayName: 'Cucumber',
+    icon: THEME_ICON_BASE_URL + 'cucumber.png'
+  },
+  {
+    option: 'crushedVelvet',
+    displayName: 'Crushed Velvet',
+    icon: THEME_ICON_BASE_URL + 'crushed_velvet.png'
+  },
+  {
+    option: 'playtime',
+    displayName: 'Playtime',
+    icon: THEME_ICON_BASE_URL + 'playtime.png'
+  },
+  {
+    option: 'underTheSea',
+    displayName: 'Under the Sea',
+    icon: THEME_ICON_BASE_URL + 'under_the_sea.png'
+  },
+  {
+    option: 'blueAndGold',
+    displayName: 'Blue and Gold',
+    icon: THEME_ICON_BASE_URL + 'blue_and_gold.png'
+  },
+  {
+    option: 'blueSteel',
+    displayName: 'Blue Steel',
+    icon: THEME_ICON_BASE_URL + 'blue_steel.png'
+  },
+  {
+    option: 'darkscheme',
+    displayName: 'Darkscheme',
+    icon: THEME_ICON_BASE_URL + 'darkscheme.png'
+  },
+  {
+    option: 'twoTone',
+    displayName: 'Two Tone',
+    icon: THEME_ICON_BASE_URL + 'two_tone.png'
+  },
+  {
+    option: 'pastel',
+    displayName: 'Pastel',
+    icon: THEME_ICON_BASE_URL + 'pastel.png'
+  },
+  {
+    option: 'peachy',
+    displayName: 'Peachy',
+    icon: THEME_ICON_BASE_URL + 'peachy.png'
   }
 ];
 

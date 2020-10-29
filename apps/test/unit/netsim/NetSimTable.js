@@ -485,12 +485,7 @@ describe('NetSimTable', function() {
     assert.equal(notifyCount, 1);
   });
 
-  // A number of NetSim tests are failing intermittently, but semi-frequently
-  // for me. Some initial investigation pointed to the issue possibly being with
-  // makeThrottledRefresh_ causing us not to hit NetSimTable.prototype.refresh
-  // when we expect. Disabling these tests until Brad has a chance to investigate
-  // further
-  describe.skip('polling', function() {
+  describe('polling', function() {
     it('polls table on tick', function() {
       // Initial tick always triggers a poll event.
       netsimTable.tick();
@@ -511,7 +506,7 @@ describe('NetSimTable', function() {
     });
   });
 
-  describe.skip('initial delay coalescing', function() {
+  describe('initial delay coalescing', function() {
     const COALESCE_WINDOW = 100; // ms
 
     beforeEach(function() {
@@ -563,7 +558,7 @@ describe('NetSimTable', function() {
     });
   });
 
-  describe.skip('refresh throttling', function() {
+  describe('refresh throttling', function() {
     beforeEach(function() {
       // Re-enable 50ms refreshTable_ throttle to test throttling feature
       netsimTable.setMinimumDelayBetweenRefreshes(50);
@@ -681,7 +676,7 @@ describe('NetSimTable', function() {
     });
   });
 
-  describe.skip('incremental update', function() {
+  describe('incremental update', function() {
     beforeEach(function() {
       // New table configured for incremental refresh
       netsimTable = NetSimTestUtils.overrideNetSimTableApi(

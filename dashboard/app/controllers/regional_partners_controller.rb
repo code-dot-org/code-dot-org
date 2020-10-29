@@ -55,10 +55,9 @@ class RegionalPartnersController < ApplicationController
   def update
     update_params = regional_partner_params.to_h
     %w(csd csp).each do |course|
-      %w(teacher facilitator).each do |role|
+      %w(facilitator).each do |role|
         %w(open close).each do |state|
           key = "apps_#{state}_date_#{course}_#{role}".to_sym
-
           # Do a date validation.  An exception will result if invalid.
           Date.parse(regional_partner_params[key]) if regional_partner_params[key].presence
         end
@@ -66,6 +65,8 @@ class RegionalPartnersController < ApplicationController
     end
 
     # Do a date validation.  An exception will result if invalid.
+    Date.parse(regional_partner_params[:apps_open_date_teacher]) if regional_partner_params[:apps_open_date_teacher].presence
+    Date.parse(regional_partner_params[:apps_close_date_teacher]) if regional_partner_params[:apps_close_date_teacher].presence
     Date.parse(regional_partner_params[:apps_priority_deadline_date]) if regional_partner_params[:apps_priority_deadline_date].presence
 
     if @regional_partner.update(update_params)
@@ -152,13 +153,11 @@ class RegionalPartnersController < ApplicationController
       urban
       cohort_capacity_csd
       cohort_capacity_csp
-      apps_open_date_csd_teacher
+      apps_open_date_teacher
+      apps_close_date_teacher
       apps_open_date_csd_facilitator
-      apps_open_date_csp_teacher
       apps_open_date_csp_facilitator
-      apps_close_date_csd_teacher
       apps_close_date_csd_facilitator
-      apps_close_date_csp_teacher
       apps_close_date_csp_facilitator
       apps_priority_deadline_date
       applications_principal_approval

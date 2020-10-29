@@ -2,7 +2,8 @@ import Firebase from 'firebase';
 import {
   loadConfig,
   getProjectDatabase,
-  showRateLimitAlert
+  showRateLimitAlert,
+  getPathRef
 } from './firebaseUtils';
 import {WarningType} from './constants';
 
@@ -26,11 +27,11 @@ import {WarningType} from './constants';
  * @returns {Promise}
  */
 export function enforceTableCount(config, tableName) {
-  const tablesRef = getProjectDatabase().child(`counters/tables`);
+  const tablesRef = getPathRef(getProjectDatabase(), 'counters/tables');
   return tablesRef.once('value').then(snapshot => {
     if (
       snapshot.numChildren() >= config.maxTableCount &&
-      snapshot.child(tableName).val() === null
+      getPathRef(snapshot, tableName).val() === null
     ) {
       return Promise.reject({
         type: WarningType.MAX_TABLES_EXCEEDED,
@@ -63,7 +64,8 @@ export function updateTableCounters(tableName, rowCountChange, updateNextId) {
       return Promise.resolve(config);
     })
     .then(config => {
-      const tableRef = getProjectDatabase().child(
+      const tableRef = getPathRef(
+        getProjectDatabase(),
         `counters/tables/${tableName}`
       );
       return updateTableCountersHelper(
@@ -150,7 +152,10 @@ function updateTableCountersHelper(
  * @returns {Promise}
  */
 function incrementIntervalCounters(maxWriteCount, interval, currentTimeMs) {
-  const limitRef = getProjectDatabase().child(`counters/limits/${interval}`);
+  const limitRef = getPathRef(
+    getProjectDatabase(),
+    `counters/limits/${interval}`
+  );
   const intervalMs = Number(interval) * 1000;
   return limitRef
     .transaction(limitData => {
@@ -290,7 +295,8 @@ function getCurrentTime() {
  * current table, or 0 if no rows exist in the table or the table does not exist.
  */
 export function getLastRecordId(tableName) {
-  const lastIdRef = getProjectDatabase().child(
+  const lastIdRef = getPathRef(
+    getProjectDatabase(),
     `counters/tables/${tableName}/lastId`
   );
   return lastIdRef.once('value').then(snapshot => {

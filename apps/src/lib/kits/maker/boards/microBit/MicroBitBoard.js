@@ -10,6 +10,7 @@ import {
 import MBFirmataWrapper from './MBFirmataWrapper';
 import ExternalLed from './ExternalLed';
 import ExternalButton from './ExternalButton';
+import CapacitiveTouchSensor from './CapacitiveTouchSensor';
 
 /**
  * Controller interface for BBC micro:bit board using
@@ -29,6 +30,8 @@ export default class MicroBitBoard extends EventEmitter {
 
     /** @private {Array} List of dynamically-created component controllers. */
     this.dynamicComponents_ = [];
+
+    this.interpreterReference_ = null;
   }
 
   /**
@@ -37,8 +40,33 @@ export default class MicroBitBoard extends EventEmitter {
    */
   connect() {
     return Promise.resolve()
-      .then(() => this.boardClient_.connectBoard())
+      .then(() => this.checkExpectedFirmware())
       .then(() => this.initializeComponents());
+  }
+
+  /**
+   * Connect to the micro:bit firmata client. After connecting, check the firmata
+   * version and firmware version response on the boardClient. If not connected
+   * or a different firmware version discovered, reject. Otherwise, resolve.
+   * Exposed as a separate step here for the sake of the setup page; generally
+   * recommended to just call connect(), above.
+   * @returns {Promise<void>}
+   */
+  checkExpectedFirmware() {
+    return Promise.resolve()
+      .then(() => this.boardClient_.connectBoard())
+      .then(() => {
+        // Expect this.boardClient_.firmataVersion to equal "Firmata Protocol <version number>"
+        // Expect this.boardClient_.firmwareVersion to contain "micro:bit Firmata 1.0"
+        if (
+          this.boardClient_.firmataVersion.includes('Firmata Protocol') &&
+          this.boardClient_.firmwareVersion.includes('micro:bit Firmata')
+        ) {
+          return Promise.resolve();
+        } else {
+          return Promise.reject();
+        }
+      });
   }
 
   /**
@@ -55,8 +83,6 @@ export default class MicroBitBoard extends EventEmitter {
       };
     });
   }
-
-  initializeEventForwarding() {}
 
   /**
    * Enable existing board components
@@ -106,6 +132,25 @@ export default class MicroBitBoard extends EventEmitter {
     return newButton;
   }
 
+  createCapacitiveTouchSensor(pin) {
+    const newSensor = new CapacitiveTouchSensor({mb: this.boardClient_, pin});
+    // Add the capacitive touch sensor to the interpreter
+    // The interpreter reference is set during the board connection so
+    // should be not-null here
+    if (this.interpreterReference_) {
+      this.interpreterReference_.addCustomMarshalObject({
+        instance: CapacitiveTouchSensor
+      });
+      this.interpreterReference_.createGlobalProperty(
+        'CapacitiveTouchSensor',
+        CapacitiveTouchSensor
+      );
+    }
+
+    this.dynamicComponents_.push(newSensor);
+    return newSensor;
+  }
+
   /**
    * Disconnect and clean up the board controller and all components.
    */
@@ -125,6 +170,7 @@ export default class MicroBitBoard extends EventEmitter {
     if (this.prewiredComponents_) {
       cleanupMicroBitComponents(
         this.prewiredComponents_,
+        this.dynamicComponents_,
         true /* shouldDestroyComponents */
       );
     }
@@ -145,6 +191,7 @@ export default class MicroBitBoard extends EventEmitter {
    * @param {JSInterpreter} jsInterpreter
    */
   installOnInterpreter(jsInterpreter) {
+    this.interpreterReference_ = jsInterpreter;
     Object.keys(componentConstructors).forEach(key => {
       jsInterpreter.addCustomMarshalObject({
         instance: componentConstructors[key]
@@ -160,6 +207,7 @@ export default class MicroBitBoard extends EventEmitter {
   reset() {
     cleanupMicroBitComponents(
       this.prewiredComponents_,
+      this.dynamicComponents_,
       false /* shouldDestroyComponents */
     );
   }

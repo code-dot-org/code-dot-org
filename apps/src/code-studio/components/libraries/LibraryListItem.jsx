@@ -158,6 +158,7 @@ export class LibraryListItem extends React.Component {
             >
               <button
                 type="button"
+                className="ui-test-remove-library"
                 key={'remove-' + library.id}
                 onClick={() => this.props.onRemove(library.channelId)}
                 style={[styles.actionBtn, styles.removeBtn]}

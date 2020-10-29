@@ -75,10 +75,26 @@ describe('WorkshopManagement', () => {
         {context}
       ).instance().surveyUrl;
 
+    it('uses foorm results for 5-day summer workshop past May 2020', () => {
+      const surveyUrl = getSurveyUrlForProps({
+        date: '2020-06-01',
+        subject: '5-day Summer'
+      });
+      expect(surveyUrl).to.eql('/workshop_daily_survey_results/123');
+    });
+
+    it('uses foorm results for Intro workshop past May 2020', () => {
+      const surveyUrl = getSurveyUrlForProps({
+        date: '2020-05-08',
+        subject: 'Intro'
+      });
+      expect(surveyUrl).to.eql('/workshop_daily_survey_results/123');
+    });
+
     it('uses daily results for academic year workshop past August 2018', () => {
       const surveyUrl = getSurveyUrlForProps({
         date: '2018-09-01',
-        subject: 'Workshop 1: Unit 3'
+        subject: 'Academic Year Workshop 1'
       });
       expect(surveyUrl).to.eql('/daily_survey_results/123');
     });
@@ -86,7 +102,7 @@ describe('WorkshopManagement', () => {
     it('uses survey results for academic year workshop before August 2018', () => {
       const surveyUrl = getSurveyUrlForProps({
         date: '2018-07-01',
-        subject: 'Workshop 1: Unit 3'
+        subject: 'Academic Year Workshop 1'
       });
       expect(surveyUrl).to.eql(null);
     });
@@ -337,7 +353,7 @@ describe('WorkshopManagement', () => {
     });
   });
 
-  describe('For a local summer workshop in 2018 or later', () => {
+  describe('For a local summer workshop in 2018', () => {
     it('Renders the correct survey results URL', () => {
       mockRouter
         .expects('createHref')
@@ -354,6 +370,29 @@ describe('WorkshopManagement', () => {
           showSurveyUrl={true}
           subject="5-day Summer"
           date="2018-06-04T09:00:00.000Z"
+        />,
+        {context}
+      );
+    });
+  });
+
+  describe('For a local summer workshop in 2020 or later', () => {
+    it('Renders the correct survey results URL', () => {
+      mockRouter
+        .expects('createHref')
+        .withExactArgs('viewUrl')
+        .returns('viewHref');
+      mockRouter
+        .expects('createHref')
+        .withExactArgs('/workshop_daily_survey_results/123')
+        .returns('surveyResultsHref');
+
+      workshopManagement = shallow(
+        <WorkshopManagement
+          {...defaultProps}
+          showSurveyUrl={true}
+          subject="5-day Summer"
+          date="2020-06-04T09:00:00.000Z"
         />,
         {context}
       );

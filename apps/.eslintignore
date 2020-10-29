@@ -5,3 +5,5 @@
 /lib
 /build
 node_modules
+
+/test/interpreter/test262

@@ -1,7 +1,7 @@
 <Gamelab>
   <config><![CDATA[{
   "game_id": 50,
-  "created_at": "2020-06-29T16:42:33.000Z",
+  "created_at": "2020-06-30T19:19:12.000Z",
   "level_num": "custom",
   "user_id": 106,
   "properties": {
@@ -46,7 +46,7 @@
     "show_debug_watch": "true",
     "expand_debugger": "false",
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"CSD_U3_variables\",\r\n  \"callout_text\": \"Change the number here\",\r\n  \"element_id\": \"\",\r\n  \"on\": \"code_triggered\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\",\r\n     \"codeString\": \"var\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"right center\",\r\n    \"at\": \"left center\",\r\n    \"adjust\": {\r\n     \"x\": 60,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
-    "long_instructions": "# Using Variables\r\n\r\nIn this program, the variable `xPosition` is used to store the x-coordinate of the circle.\r\n\r\n# Do This\r\n* Run the program to see how it works.\r\n* Change the number that is stored into the variable ([Show me where](#triggercallout=code_triggered)) and run the code again.",
+    "long_instructions": "# Predict\r\n\r\nRead the code below and make a prediction.\r\n\r\n* What will show on the screen?\r\n* Where will it be displayed?",
     "parent_level_id": 23035,
     "name_suffix": "_virtual_2020",
     "reference_links": [
@@ -59,9 +59,6 @@
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
     "show_type_hints": "false",
-    "contained_level_names": [
-      "CSD game text predict_virtual_2020"
-    ],
     "encrypted": "false",
     "mini_rubric": "false",
     "libraries_enabled": "false",
@@ -69,7 +66,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-02 17:36:51 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-05-11 17:44:19 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-05-11 17:45:10 +0000\",\"changed\":[\"code_functions\",\"never_autoplay_video\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-08-18 00:56:20 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-03-30 07:39:59 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-03-30 07:41:52 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-06-02 17:36:51 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-05-11 17:44:19 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-05-11 17:45:10 +0000\",\"changed\":[\"code_functions\",\"never_autoplay_video\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-08-18 00:56:20 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-03-30 07:39:59 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-03-30 07:41:52 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-07-06 15:00:35 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"long_instructions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

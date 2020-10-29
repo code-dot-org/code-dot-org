@@ -51,6 +51,14 @@ export const commands = {
     actionCommands.edgesDisplace.apply(this, [spriteArg]);
   },
 
+  isCostumeEqual(spriteArg, costumeName) {
+    return actionCommands.isCostumeEqual(spriteArg, costumeName);
+  },
+
+  isKeyPressed(key) {
+    return actionCommands.isKeyPressed.apply(this, [key]);
+  },
+
   isTouchingEdges(spriteArg) {
     return actionCommands.isTouchingEdges.apply(this, [spriteArg]);
   },
@@ -87,6 +95,10 @@ export const commands = {
     actionCommands.setProp.apply(this, [spriteArg, prop, val]);
   },
 
+  setQuestion(questionText, variableName, callback) {
+    worldCommands.setQuestion(questionText, variableName, callback);
+  },
+
   setTint(spriteArg, color) {
     actionCommands.setProp(spriteArg, 'tint', color);
   },
@@ -117,6 +129,10 @@ export const commands = {
   },
 
   // Event commands
+  atTime(n, unit, callback) {
+    eventCommands.atTime(n, unit, callback);
+  },
+
   checkTouching(condition, sprite1, sprite2, callback) {
     eventCommands.checkTouching(condition, sprite1, sprite2, callback);
   },
@@ -125,13 +141,25 @@ export const commands = {
     eventCommands.keyPressed(condition, key, callback);
   },
 
+  repeatForever(callback) {
+    eventCommands.repeatForever(callback);
+  },
+
   spriteClicked(condition, spriteArg, callback) {
     eventCommands.spriteClicked(condition, spriteArg, callback);
+  },
+
+  whenQuestionAnswered(variableName, callback) {
+    eventCommands.whenQuestionAnswered(variableName, callback);
   },
 
   // Location commands
   locationAt(x, y) {
     return locationCommands.locationAt(x, y);
+  },
+
+  locationModifier(distance, direction, location) {
+    return locationCommands.locationModifier(distance, direction, location);
   },
 
   locationMouse() {
@@ -147,8 +175,8 @@ export const commands = {
   },
 
   // Sprite commands
-  countByAnimation(animation) {
-    return spriteCommands.countByAnimation(animation);
+  countByAnimation(spriteArg) {
+    return spriteCommands.countByAnimation(spriteArg);
   },
 
   createNewSprite(name, animation, location) {
@@ -179,6 +207,14 @@ export const commands = {
     ]);
   },
 
+  makeNumSprites(num, animation) {
+    for (let i = 0; i < num; i++) {
+      spriteCommands.makeSprite.apply(this, [
+        {animation: animation, location: locationCommands.randomLocation()}
+      ]);
+    }
+  },
+
   setAnimation(spriteArg, animation) {
     spriteCommands.setAnimation(spriteArg, animation);
   },
@@ -186,6 +222,10 @@ export const commands = {
   // World commands
   comment(text) {
     worldCommands.comment(text);
+  },
+
+  getTime(unit) {
+    return worldCommands.getTime.apply(this, [unit]);
   },
 
   hideTitleScreen() {

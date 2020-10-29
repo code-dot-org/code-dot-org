@@ -1,0 +1,82 @@
+{
+  "script": {
+    "name": "csp-post-survey",
+    "wrapup_video_id": null,
+    "hidden": false,
+    "login_required": true,
+    "properties": {
+      "has_verified_resources": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "seeding_key": {
+      "script.name": "csp-post-survey"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "cspSurvey",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Survey"
+      },
+      "seeding_key": {
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp-post-survey"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "CSP post-course survey",
+      "name": "CSP post-course survey",
+      "absolute_position": 1,
+      "lockable": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "CSP post-course survey",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp-post-survey"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "CS Principles Post-course Survey"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp-post-survey-2018-levelgroup"
+        ],
+        "lesson.key": "CSP post-course survey",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp-post-survey"
+      },
+      "level_keys": [
+        "csp-post-survey-2018-levelgroup"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "csp-post-survey-2018-levelgroup",
+        "script_level.level_keys": [
+          "csp-post-survey-2018-levelgroup"
+        ],
+        "lesson.key": "CSP post-course survey",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp-post-survey"
+      }
+    }
+  ]
+}

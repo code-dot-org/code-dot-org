@@ -1,0 +1,79 @@
+{
+  "script": {
+    "name": "csp-ca-a",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": false,
+    "properties": {
+    },
+    "new_name": null,
+    "family_name": null,
+    "seeding_key": {
+      "script.name": "csp-ca-a"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "csp-ca-a"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Commutative Assessment A",
+      "name": "Commutative Assessment A",
+      "absolute_position": 1,
+      "lockable": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Commutative Assessment A",
+        "lesson_group.key": "",
+        "script.name": "csp-ca-a"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "assessment": true,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP Cumulative Assess A"
+        ],
+        "lesson.key": "Commutative Assessment A",
+        "lesson_group.key": "",
+        "script.name": "csp-ca-a"
+      },
+      "level_keys": [
+        "CSP Cumulative Assess A"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "CSP Cumulative Assess A",
+        "script_level.level_keys": [
+          "CSP Cumulative Assess A"
+        ],
+        "lesson.key": "Commutative Assessment A",
+        "lesson_group.key": "",
+        "script.name": "csp-ca-a"
+      }
+    }
+  ]
+}

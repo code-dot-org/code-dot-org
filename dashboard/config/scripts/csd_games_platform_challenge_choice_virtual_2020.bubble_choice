@@ -1,11 +1,10 @@
 name 'CSD games platform challenge choice_virtual_2020'
-editor_experiment ''
 display_name 'Challenges'
 description 'Improve your game with these challenges!'
 
 sublevels
-level 'CSD U3 platform challenge animationfacing'
-level 'CSD U3 platform challenge lives'
-level 'CSD U3 platform challenge differentitem'
-level 'CSD U3 platform challenge sidewalls'
-level 'CSD U3 platform challenge animations'
+level 'CSD U3 platform challenge animationfacing_virtual_2020'
+level 'CSD U3 platform challenge lives_virtual_2020'
+level 'CSD U3 platform challenge differentitem_virtual_2020'
+level 'CSD U3 platform challenge sidewalls_virtual_2020'
+level 'CSD U3 platform challenge animations_virtual_2020'

@@ -1,26 +1,27 @@
 professional_learning_course 'CS Discoveries TeacherCon Novice'
 
-lesson 'Welcome'
+lesson 'Welcome', display_name: 'Welcome'
 level 'welcome-csd-novice', named: true
 
-lesson 'Tuesday'
+lesson 'Tuesday', display_name: 'Tuesday'
 level 'csd-tuesday-unit', progression: 'Unit Reflection'
 level 'csd-tuesday-unit2', progression: 'Unit Reflection'
 level 'csd-tuesday-pedagogy', named: true
 level 'csd-tuesday-facilitation', named: true
 
-lesson 'Wednesday'
+lesson 'Wednesday', display_name: 'Wednesday'
 level 'csd-wednesday-unit', progression: 'Unit Reflection'
 level 'csd-wednesday-unit2', progression: 'Unit Reflection'
 level 'csd-wednesday-pedagogy', named: true
 level 'csd-wednesday-facilitation', named: true
 
-lesson 'Thursday'
+lesson 'Thursday', display_name: 'Thursday'
 level 'csd-thursday-unit', progression: 'Unit Reflection'
 level 'csd-thursday-unit2', progression: 'Unit Reflection'
 level 'csd-thursday-pedagogy', progression: 'Pedagogy Reflection'
 level 'csd-thursday-pedagogy2', progression: 'Pedagogy Reflection'
 level 'csd-thursday-facilitation', named: true
 
-lesson 'Wrap Up'
+lesson 'Wrap Up', display_name: 'Wrap Up'
 level 'csd-novice-congrats', named: true
+

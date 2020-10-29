@@ -1,0 +1,104 @@
+{
+ "title":"Standard Facilitator effectiveness panel",
+ "pages": [
+  {
+   "name": "page1",
+   "elements": [
+    {
+     "type": "html",
+     "name": "facilitator_heading",
+     "html": "<h2>Facilitator Feedback</h2>\n<p>Below we present the same sets of questions for each facilitator of your workshop. Please be thoughtful in your responses for each individual.</p>"
+   },
+   {
+     "type": "paneldynamic",
+     "name": "facilitators",
+     "title": "Facilitators",
+     "allowAddPanel": false,
+     "allowRemovePanel": false,
+     "templateElements": [
+      {
+       "type": "html",
+       "name": "facilitator_name_heading",
+       "html": "<p>Below, please leave feedback for <strong>{panel.facilitator_name}</strong></p>"
+     },
+     {
+       "type": "matrix",
+       "name": "facilitator_effectiveness",
+       "title": "During my workshop, {panel.facilitator_name} did the following:",
+       "columns": [
+        {
+         "value": "1",
+         "text": "Strongly Disagree"
+       },
+       {
+         "value": "2",
+         "text": "Disagree"
+       },
+       {
+         "value": "3",
+         "text": "Slightly Disagree"
+       },
+       {
+         "value": "4",
+         "text": "Neutral"
+       },
+       {
+         "value": "5",
+         "text": "Slightly Agree"
+       },
+       {
+         "value": "6",
+         "text": "Agree"
+       },
+       {
+         "value": "7",
+         "text": "Strongly Agree"
+       }
+     ],
+       "rows": [
+        {
+         "value": "demonstrated_knowledge",
+         "text": "Demonstrated knowledge of the curriculum."
+       },
+       {
+         "value": "equitable_workshop_environment",
+         "text": "Built and sustained an equitable learning environment in our workshop."
+       },
+       {
+         "value": "on_track",
+         "text": "Kept the workshop and participants on track."
+       },
+       {
+         "value": "productive_discussions",
+         "text": "Supported productive workshop discussions."
+       },
+       {
+         "value": "create_equity_for_students",
+         "text": "Helped me see ways to create and support an equitable learning environment for my students."
+       },
+       {
+         "value": "healthy_relationship",
+         "text": "Demonstrated a healthy working relationship with their co-facilitator (if applicable)."
+       }
+     ]
+     },
+     {
+       "type": "comment",
+       "name": "facilitator_did_well_fr",
+       "title": "What were two things {panel.facilitator_name} did well?",
+              "maxLength": 4000,
+       "rows": 2
+     },
+     {
+       "type": "comment",
+       "name": "facilitator_could_improve_fr",
+       "title": "What were two things {panel.facilitator_name} could do better?",
+              "maxLength": 4000,
+       "rows": 2
+     }
+   ]
+   }
+ ]
+ }
+]
+}

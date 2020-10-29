@@ -52,15 +52,18 @@ class AnimationBucket < BucketHelper
     # If the fallback is successful, let's notify Firehose, because we'd
     # like these to go down over time.
     FirehoseClient.instance.put_record(
-      study: 'bucket-warning',
-      study_group: self.class.name,
-      event: 'served-latest-version',
-      data_string: 'AnimationBucket served latest version instead of requested version',
-      data_json: {
-        s3_key: key,
-        requested_version: version,
-        served_version: s3_object.version_id
-      }.to_json
+      :analysis,
+      {
+        study: 'bucket-warning',
+        study_group: self.class.name,
+        event: 'served-latest-version',
+        data_string: 'AnimationBucket served latest version instead of requested version',
+        data_json: {
+          s3_key: key,
+          requested_version: version,
+          served_version: s3_object.version_id
+        }.to_json
+      }
     )
     s3_object
   end

@@ -645,6 +645,8 @@ def cucumber_arguments_for_browser(browser, options)
 
   arguments += skip_tag('@no_mobile') if browser['mobile']
   arguments += skip_tag('@only_mobile') unless browser['mobile']
+  arguments += skip_tag('@no_phone') if browser['name'] == 'iPhone'
+  arguments += skip_tag('@only_phone') unless browser['name'] == 'iPhone'
   arguments += skip_tag('@no_circle') if options.is_circle
   arguments += skip_tag('@no_ie') if browser['browserName'] == 'Internet Explorer'
 
@@ -728,7 +730,7 @@ def run_feature(browser, feature, options)
 
   # Force Applitools eyes to use a consistent host OS identifier for now
   # BrowserStack was reporting Windows 6.0 and 6.1, causing different baselines
-  run_environment['APPLITOOLS_HOST_OS'] = 'Windows 6x' unless browser['mobile']
+  run_environment['APPLITOOLS_HOST_OS'] = browser['mobile'] ? 'iOS 11.3' : 'Windows 6x'
 
   max_reruns = how_many_reruns?(test_run_string)
 

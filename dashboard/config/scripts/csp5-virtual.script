@@ -4,7 +4,7 @@ hideable_lessons true
 student_detail_progress_view true
 project_sharing true
 
-lesson 'Intro to App Lab'
+lesson 'Intro to App Lab', display_name: 'Intro to App Lab'
 level 'CSPU5_HOC_virtual1', progression: 'Setting Properties'
 level 'CSPU5_HOC_virtual2', progression: 'Setting Properties'
 level 'CSPU5_HOC_virtual3', progression: 'Setting Properties'
@@ -20,7 +20,7 @@ level 'CSPU5_HOC_virtual12', progression: 'Design Mode'
 level 'CSPU5_HOC_virtual13', progression: 'Design Mode'
 level 'CSPU5_HOC_virtual15', progression: 'Design Mode'
 
-lesson 'Buttons and Events'
+lesson 'Buttons and Events', display_name: 'Buttons and Events'
 level 'CSPU5_video_new_debugging_virtual', progression: 'Intro to Debugging and Common Problems'
 level 'CSPU5_predict_applab_onEventWithWrongID_virtual', progression: 'Intro to Debugging and Common Problems'
 level 'CSPU5_Debugging predict unexpected behavior - two onEvents to _virtual', progression: 'Intro to Debugging and Common Problems'
@@ -34,7 +34,7 @@ level 'CSPU5_playWithEventTypes_virtual', progression: 'Event Types'
 level 'How Images Work_2018_2019_virtual', progression: 'How Images Work'
 level 'Finalize Your Chaser Game v.1_virtual', progression: 'Chaser Game v.1'
 
-lesson 'Multi-screen Apps'
+lesson 'Multi-screen Apps', display_name: 'Multi-screen Apps'
 level 'CSPU5 First Time Console.log_virtual', progression: 'Debugging with Console.log'
 level 'CSPU5 console.log in event v. global_virtual', progression: 'Debugging with Console.log'
 level 'CSPU5 console.log debug when mouse events happen_virtual', progression: 'Debugging with Console.log'
@@ -46,7 +46,7 @@ level 'CSPU5 Add welcome screen to chaser game_virtual', progression: 'Making a 
 level 'CSPU5 Add full screen image to bg of chaser game_virtual', progression: 'Making a Multi-Screen Chaser Game v.2'
 level 'CSPU5 Add game over screen_virtual', progression: 'Project: Multi-Screen Chaser Game'
 
-lesson 'Variables'
+lesson 'Variables', display_name: 'Variables'
 level 'Introduction to Variables - Part 1_virtual', progression: 'Introduction to Variables - Part 1'
 level 'CSPU5_U3L19 - three basic ops of variables_virtual', progression: 'Basic Mechanics of Variables'
 level 'CSPU5_U3L19 - fix the var name syntax error v2_virtual', progression: 'Basic Mechanics of Variables'
@@ -66,7 +66,7 @@ level 'The Mental Model for Variables_2018_2019_virtual', progression: 'The Ment
 level 'CSPU5_U3L14 - Variable ReAssignment pt2_virtual', progression: 'The Mental Model for Variables'
 level 'CSPU5_U3L19 - variable reassignment challenge pt2_virtual', progression: 'The Mental Model for Variables'
 
-lesson 'Building an App: Clicker Game'
+lesson 'Building an App: Clicker Game', display_name: 'Building an App: Clicker Game'
 level 'CSPU5_U3 full clicker demo_virtual', progression: 'Clicker Game Demonstration'
 level 'CSPU5_U3L15 - practice with setText_virtual', progression: 'AppLab Practice'
 level 'CSPU5_U3L15 - DEMO up down count practice app_virtual', progression: 'AppLab Practice'
@@ -79,14 +79,14 @@ level 'CSPU5_U3L15 - count upDown bug logic error wrong update_virtual', progres
 level 'CSPU5_U3L15 - mini clicker update score_virtual', progression: 'Using Variables'
 level 'CSPU5_U3L15 click add lives_virtual', progression: 'Using Variables'
 
-lesson 'If-Statements'
+lesson 'If-Statements', display_name: 'If-Statements'
 level 'Simple Decisions with if-statements_2018_2019_virtual', progression: 'Simple Decisions with if-statements'
 level 'CSPU5_U3L15 - Simple If-statements in UpDown App_virtual', progression: 'Simple Decisions with if-statements'
 level 'CSPU5_U3L15 - Add reset button to UpDown app_virtual', progression: 'Simple Decisions with if-statements'
 level 'CSPU5_U3L15 - Debugging Simple If-statements =v==_virtual', progression: 'Simple Decisions with if-statements'
 level 'CSPU5_U3L15 - Debug forget to update var on reset in UpDown ap_virtual', progression: 'Simple Decisions with if-statements'
 
-lesson 'User Input and Strings'
+lesson 'User Input and Strings', display_name: 'User Input and Strings'
 level 'CSPU5_U3L16 Mad Lib Demo_virtual', progression: 'Mad Lib Demonstration'
 level 'CSPU5_U3L16 - introStrings_virtual', progression: 'Strings in Apps'
 level 'CSPU5_U3L16 - doubleQuotes_virtual', progression: 'Strings in Apps'
@@ -99,7 +99,7 @@ level 'CSPU5_U3L16 Mad Lib setText_virtual', progression: 'Mad Lib Game'
 level 'CSPU5_U3L16 Mad Lib getText_virtual', progression: 'Mad Lib Game'
 level 'CSPU5_U3L16 Mad Lib Clear Input_virtual', progression: 'Mad Lib Game'
 
-lesson 'Boolean Expressions and "If" Statements'
+lesson 'Boolean Expressions and "If" Statements', display_name: 'Boolean Expressions and "If" Statements'
 level 'Introduction to Conditionals: Boolean Expressions_virtual', progression: 'Introduction to Conditionals: Boolean Expressions'
 level 'Boolean Expressions and Comparison Operators_2018_2019_virtual', progression: 'Boolean Expressions and Comparison Operators'
 level 'CSPU5_U3L18 comparison operators_virtual', progression: 'Comparison Operators Practice'
@@ -117,7 +117,7 @@ level 'How Dropdown Menus Work_2018_2019_virtual', progression: 'Dropdown Menus'
 level 'U5 if-else dropdown movie checker_virtual', progression: 'Dropdown Menus'
 level 'U5 if-else dropdown guess dice_virtual', progression: 'Dropdown Menus'
 
-lesson '"if-else-if" and Conditional Logic'
+lesson '"if-else-if" and Conditional Logic', display_name: '"if-else-if" and Conditional Logic'
 level 'Introduction to Conditionals: if-else-if Statements_virtual', progression: 'Introduction to Conditionals: if-else-if Statements'
 level 'How "if-else-if" Works_2018_2019_virtual', progression: 'How "if-else-if" Works'
 level 'U5 if-else-if movie example_virtual', progression: 'How "if-else-if" Works'
@@ -131,7 +131,7 @@ level 'CSPU5_U3 - Conditionals - Combine AND OR Simple_virtual', progression: 'H
 level 'U5 compound boolean museum example_virtual', progression: 'How Compound Boolean Expressions Work'
 level 'CSPU5_U3 - Conditionals - Combine AND OR and NOT_virtual', progression: 'How Compound Boolean Expressions Work'
 
-lesson 'Building an App: Color Sleuth'
+lesson 'Building an App: Color Sleuth', display_name: 'Building an App: Color Sleuth'
 level 'CSPU5 Color Sleuth Demo_virtual', progression: 'Color Sleuth - Demo and Overview'
 level 'CSP5 virtual RGB intro_virtual', progression: 'RGB Colors'
 level 'How Set Property Works_2018_2019_virtual', progression: 'Specifying Colors'
@@ -151,7 +151,7 @@ level 'U5 ColorSleuth scoring pt1 vars function stub console_virtual', progressi
 level 'U5 ColorSleuth scoring pt3 update UI for scoring_virtual', progression: 'Updating the Score'
 level 'Project: Finish Color Sleuth_virtual', progression: 'Project: Color Sleuth'
 
-lesson 'Keep Going!'
+lesson 'Keep Going!', display_name: 'Keep Going!'
 level 'csp5 virtual bubblechoice'
 level 'csp5 virtual ending'
 

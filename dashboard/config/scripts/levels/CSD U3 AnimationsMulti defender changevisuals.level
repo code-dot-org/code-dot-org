@@ -53,7 +53,8 @@
       "/docs/concepts/game-lab/sprites/sprite-properties/",
       "/docs/concepts/game-lab/sprites/velocity/",
       "/docs/concepts/game-lab/animation-tab/",
-      "/docs/concepts/game-lab/animation-tab/editing-images/"
+      "/docs/concepts/game-lab/animation-tab/editing-images/",
+      "/docs/concepts/game-lab/animation-tab/multi-frame-animations/"
     ],
     "mini_rubric": "false",
     "encrypted": "false",
@@ -62,11 +63,12 @@
     "bubble_choice_description": "Change the visuals of the game so that your player, enemies, or cake look different",
     "thumbnail_url": "https://images.code.org/d24cf273adfbb600322584879d8da3ca-image-1585847729338.png",
     "libraries_enabled": "false",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "validation_enabled": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-08 20:44:45 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-03-05 23:34:26 +0000\",\"changed\":[\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-04-02 03:12:22 +0000\",\"changed\":[\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-04-02 16:26:15 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-04-02 16:48:29 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"display_name\",\"bubble_choice_description\",\"preload_asset_list\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"},{\"changed_at\":\"2020-04-02 17:15:48 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"thumbnail_url\",\"preload_asset_list\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"},{\"changed_at\":\"2020-05-07 20:58:53 +0000\",\"changed\":[\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"},{\"changed_at\":\"2020-05-21 19:11:13 +0000\",\"changed\":[\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-08 20:44:45 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-03-05 23:34:26 +0000\",\"changed\":[\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-04-02 03:12:22 +0000\",\"changed\":[\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-04-02 16:26:15 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-04-02 16:48:29 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"display_name\",\"bubble_choice_description\",\"preload_asset_list\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"},{\"changed_at\":\"2020-04-02 17:15:48 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"thumbnail_url\",\"preload_asset_list\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"},{\"changed_at\":\"2020-05-07 20:58:53 +0000\",\"changed\":[\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"},{\"changed_at\":\"2020-05-21 19:11:13 +0000\",\"changed\":[\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"},{\"changed_at\":\"2020-10-08 01:26:18 +0000\",\"changed\":[\"encrypted_examples\",\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1198,\"changed_by_email\":\"dan@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

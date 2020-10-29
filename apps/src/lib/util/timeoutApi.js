@@ -15,7 +15,7 @@ export function injectExecuteCmd(fn) {
 }
 
 function onTimerFired(opts) {
-  if (opts.callback) {
+  if (typeof opts.callback === 'function') {
     opts.callback.call(null);
   }
 }

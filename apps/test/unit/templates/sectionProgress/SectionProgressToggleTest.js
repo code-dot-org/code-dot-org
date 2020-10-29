@@ -2,7 +2,7 @@ import React from 'react';
 import {shallow, mount} from 'enzyme';
 import {expect} from '../../../util/reconfiguredChai';
 import {UnconnectedSectionProgressToggle} from '@cdo/apps/templates/sectionProgress/SectionProgressToggle';
-import {ViewType} from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
+import {ViewType} from '@cdo/apps/templates/sectionProgress/sectionProgressConstants';
 
 describe('SectionProgressToggle', () => {
   let DEFAULT_PROPS;
