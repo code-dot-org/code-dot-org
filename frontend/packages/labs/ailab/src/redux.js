@@ -14,7 +14,7 @@ import {
   compatibleLabelAndTrainer
 } from "./validate.js";
 
-import { MLTypes, ColumnTypes } from "./constants.js";
+import { ColumnTypes } from "./constants.js";
 
 // Action types
 const RESET_STATE = "RESET_STATE";
