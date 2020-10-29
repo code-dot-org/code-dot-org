@@ -304,6 +304,12 @@ export default class ScriptEditor extends React.Component {
           )}
           <label>
             Wrap-up Video
+            <HelpTip>
+              <p>
+                Deprecated setting only used for older courses. Please add
+                videos in levels instead.
+              </p>
+            </HelpTip>
             <input
               name="wrapup_video"
               defaultValue={this.props.wrapupVideo}
