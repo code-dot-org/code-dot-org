@@ -11,6 +11,7 @@ import GoogleClassroomShareButton from './GoogleClassroomShareButton';
 
 const styles = {
   dialog: {
+    textAlign: 'left',
     paddingLeft: 20,
     paddingRight: 20,
     paddingBottom: 20
@@ -49,6 +50,9 @@ class SendLessonDialog extends Component {
     isOpen: PropTypes.bool,
     handleClose: PropTypes.func,
     lessonUrl: PropTypes.string.isRequired,
+    lessonTitle: PropTypes.string,
+    courseid: PropTypes.number,
+    analyticsData: PropTypes.string,
 
     // redux provided
     showGoogleButton: PropTypes.bool
@@ -77,6 +81,10 @@ class SendLessonDialog extends Component {
         <GoogleClassroomShareButton
           height={styles.button.height}
           url={this.props.lessonUrl}
+          itemtype="assignment"
+          title={this.props.lessonTitle}
+          courseid={this.props.courseid}
+          analyticsData={this.props.analyticsData}
         />
       </div>
     );

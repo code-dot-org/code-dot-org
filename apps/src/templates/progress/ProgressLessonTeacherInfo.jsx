@@ -7,6 +7,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
+import experiments from '@cdo/apps/util/experiments';
 import {lessonType} from './progressTypes';
 import HiddenForSectionToggle from './HiddenForSectionToggle';
 import StageLock from './StageLock';
@@ -20,6 +21,7 @@ import TeacherInfoBox from './TeacherInfoBox';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import GoogleClassroomShareButton from './GoogleClassroomShareButton';
 import {canShowGoogleShareButton} from './googlePlatformApiRedux';
+import SendLesson from './SendLesson';
 
 const styles = {
   buttonContainer: {
@@ -40,7 +42,7 @@ const styles = {
 class ProgressLessonTeacherInfo extends React.Component {
   static propTypes = {
     lesson: lessonType.isRequired,
-    levelUrl: PropTypes.string,
+    lessonUrl: PropTypes.string,
 
     // redux provided
     section: sectionShape,
@@ -90,7 +92,7 @@ class ProgressLessonTeacherInfo extends React.Component {
       hiddenStageState,
       hasNoSections,
       lesson,
-      levelUrl,
+      lessonUrl,
       showGoogleClassroomButton
     } = this.props;
 
@@ -106,6 +108,7 @@ class ProgressLessonTeacherInfo extends React.Component {
         section.code &&
         parseInt(section.code.substring(2))) ||
       null;
+    const loginRequiredLessonUrl = lessonUrl + '?login_required=true';
     const shouldRender =
       lesson.lesson_plan_html_url ||
       (lesson.lockable && !hasNoSections) ||
@@ -130,6 +133,17 @@ class ProgressLessonTeacherInfo extends React.Component {
             />
           </div>
         )}
+        {experiments.isEnabled(experiments.SEND_LESSON_DIALOG) && lessonUrl && (
+          <div style={styles.buttonContainer}>
+            <SendLesson
+              lessonUrl={loginRequiredLessonUrl}
+              title={lesson.name}
+              courseid={courseId}
+              analyticsData={JSON.stringify(this.firehoseData())}
+              buttonStyle={styles.button}
+            />
+          </div>
+        )}
         {lesson.lockable && !hasNoSections && <StageLock lesson={lesson} />}
         {showHiddenForSectionToggle && (
           <HiddenForSectionToggle
@@ -137,18 +151,20 @@ class ProgressLessonTeacherInfo extends React.Component {
             onChange={this.onClickHiddenToggle}
           />
         )}
-        {showGoogleClassroomButton && levelUrl && (
-          <div
-            style={{...styles.buttonContainer, ...styles.googleButtonMargin}}
-          >
-            <GoogleClassroomShareButton
-              url={levelUrl}
-              title={lesson.name}
-              courseid={courseId}
-              analyticsData={JSON.stringify(this.firehoseData())}
-            />
-          </div>
-        )}
+        {!experiments.isEnabled(experiments.SEND_LESSON_DIALOG) &&
+          showGoogleClassroomButton &&
+          lessonUrl && (
+            <div
+              style={{...styles.buttonContainer, ...styles.googleButtonMargin}}
+            >
+              <GoogleClassroomShareButton
+                url={lessonUrl}
+                title={lesson.name}
+                courseid={courseId}
+                analyticsData={JSON.stringify(this.firehoseData())}
+              />
+            </div>
+          )}
       </TeacherInfoBox>
     );
   }
