@@ -196,8 +196,7 @@ gem 'newrelic_rpm', group: [:staging, :development, :production], # perf/error/e
 
 gem 'redcarpet', '~> 3.3.4'
 
-# Ref: https://github.com/alexreisner/geocoder/pull/1085 (pending new RubyGems release)
-gem 'geocoder', github: 'wjordan/geocoder', ref: 'rack-request-fix'
+gem 'geocoder'
 
 gem 'mini_magick', ">=4.9.4"
 gem 'rmagick'

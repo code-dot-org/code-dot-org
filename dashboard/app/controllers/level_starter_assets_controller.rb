@@ -21,7 +21,7 @@ class LevelStarterAssetsController < ApplicationController
   # GET /level_starter_assets/:level_name/:filename
   # Returns requested file body as an IO stream.
   def file
-    friendly_name = params[:filename]
+    friendly_name = "#{params[:filename]}.#{params[:format]}"
     uuid_name = @level.starter_assets[friendly_name]
     file_obj = get_object(uuid_name)
     content_type = file_content_type(File.extname(uuid_name))
