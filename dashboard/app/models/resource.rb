@@ -62,7 +62,7 @@ class Resource < ApplicationRecord
   private
 
   def generate_key_from_name
-    key_prefix = name.gsub(/[^a-z0-9\-\_\.]+/, '_')
+    key_prefix = name.strip.downcase.gsub(/[^a-z0-9\-\_\.]+/, '_')
     potential_clashes = course_version_id ? Resource.where(course_version_id: course_version_id) : Resource.all
     potential_clashes = potential_clashes.where("resources.key like '#{key_prefix}%'").pluck(:key)
     return key_prefix unless potential_clashes.include?(key_prefix)

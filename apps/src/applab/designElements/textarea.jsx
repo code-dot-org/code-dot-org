@@ -147,17 +147,8 @@ class TextAreaEvents extends React.Component {
 
   getChangeEventCode() {
     const id = elementUtils.getId(this.props.element);
-    const code =
-      'onEvent("' +
-      id +
-      '", "change", function(event) {\n' +
-      '  console.log("' +
-      id +
-      ' entered text: " + getText("' +
-      id +
-      '"));\n' +
-      '});\n';
-    return code;
+    const callback = `function( ) {\n\tconsole.log("${id} entered text: " + getText("${id}"));\n}`;
+    return `onEvent("${id}", "change", ${callback});`;
   }
 
   insertChange = () => {
