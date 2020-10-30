@@ -159,7 +159,6 @@ var NetSimLobby = (module.exports = function(rootDiv, netsim, options) {
    * @private {function}
    */
   this.showTeacherLogCallback_ = options.showTeacherLogCallback;
-
   // Figure out the list of user sections, which requires an async request
   // and re-render if the user is signed in.
   if (options.user.isSignedIn) {
@@ -555,9 +554,10 @@ NetSimLobby.prototype.buildShardChoiceList_ = function(
     });
   }
 
-  // Add user's sections to the shard list
+  // Add user's active (non-archived) sections to the shard list
+  const unarchivedSections = sectionList.filter(section => !section.hidden);
   this.shardChoices_ = this.shardChoices_.concat(
-    sectionList.map(
+    unarchivedSections.map(
       function(section) {
         return {
           shardSeed: section.id,
