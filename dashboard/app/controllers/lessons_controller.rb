@@ -57,7 +57,7 @@ class LessonsController < ApplicationController
 
     redirect_to lesson_path(id: @lesson.id)
   rescue ActiveRecord::RecordNotFound, ActiveRecord::RecordInvalid => e
-    render(status: :not_acceptable, plain: e.message)
+    render(status: :not_acceptable, text: e.message)
   end
 
   private
