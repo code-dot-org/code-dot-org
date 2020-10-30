@@ -5,6 +5,9 @@ import {
 } from "./train.js";
 
 import {
+  datasetUploaded,
+  uniqueColumnNames,
+  noEmptyCells,
   minOneFeatureSelected,
   oneLabelSelected,
   uniqLabelFeaturesSelected,
@@ -378,6 +381,22 @@ export function getAccuracy(state) {
 
 export function validationMessages(state) {
   const validationMessages = [];
+  validationMessages.push({
+    readyToTrain: datasetUploaded(state),
+    errorString: "There is not enough data to train a model.",
+    successString: `There are ${state.data.length} rows of data.`
+  });
+  validationMessages.push({
+    readyToTrain: uniqueColumnNames(state),
+    errorString:
+      "Each column must have a name, and column names must be unique.",
+    successString: "Each column has a unique name."
+  });
+  validationMessages.push({
+    readyToTrain: noEmptyCells(state),
+    errorString: "There can't be any empty cells.",
+    successString: "Each cell has a value!"
+  });
   validationMessages.push({
     readyToTrain: oneLabelSelected(state),
     errorString: "Please designate one column as the label column.",
