@@ -1061,6 +1061,39 @@ Given(/^I delete the temp script and lesson$/) do
   )
 end
 
+Given(/^I create a temp multi level$/) do
+  level_name = "temp-level-#{Time.now.to_i}-#{rand(1_000_000)}"
+  steps "And I am on \"http://studio.code.org/levels/new?type=Multi\""
+  dsl = <<~DSL
+    name '#{level_name}'
+    title 'title'
+    description 'description here'
+    question 'Question'
+    wrong 'wrong answer'
+    right 'right answer'
+  DSL
+  steps 'And I press backspace to clear element "#level_dsl_text"'
+  steps "And I press keys #{dsl.dump} for element \"#level_dsl_text\""
+  steps 'And I click "input[type=\'submit\']" to load a new page'
+  @temp_level_id = @browser.current_url.split('/')[-2]
+  puts "created temp level with id #{@temp_level_id}"
+end
+
+Given(/^I check I am on the temp level (show|edit) page$/) do |page|
+  suffix = (page == 'edit') ? '/edit' : ''
+  url = "http://studio.code.org/levels/#{@temp_level_id}#{suffix}"
+  url = replace_hostname(url)
+  expect(@browser.current_url.split('?').first).to eq(url)
+end
+
+Given(/^I delete the temp level$/) do
+  browser_request(
+    url: '/api/test/destroy_level',
+    method: 'POST',
+    body: {id: @temp_level_id}
+  )
+end
+
 Then(/^I fake completion of the assessment$/) do
   browser_request(url: '/api/test/fake_completion_assessment', method: 'POST', code: 204)
 end
