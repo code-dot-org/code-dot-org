@@ -31,6 +31,7 @@ experiments.TEXT_TO_SPEECH_BLOCK = 'text-to-speech-block';
 experiments.FINISH_DIALOG_METRICS = 'finish-dialog-metrics';
 experiments.I18N_TRACKING = 'i18n-tracking';
 experiments.SPRITELAB_INPUT = 'spritelabInput';
+experiments.SEND_LESSON_DIALOG = 'send-lesson-dialog';
 
 /**
  * Get our query string. Provided as a method so that tests can mock this.
