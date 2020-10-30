@@ -11,6 +11,7 @@ import {
   minOneFeatureSelected,
   oneLabelSelected,
   uniqLabelFeaturesSelected,
+  selectedColumnsHaveDatatype,
   trainerSelected,
   compatibleLabelAndTrainer
 } from "./validate.js";
@@ -253,6 +254,12 @@ export function getCategoricalColumns(state) {
   return filterColumnsByType(state, ColumnTypes.CATEGORICAL);
 }
 
+export function getSelectedColumns(state) {
+  return state.selectedFeatures
+    .concat(state.labelColumn)
+    .filter(column => column !== undefined && column !== "");
+}
+
 export function getSelectedCategoricalColumns(state) {
   let intersection = getCategoricalColumns(state).filter(x =>
     state.selectedFeatures.includes(x)
@@ -272,15 +279,11 @@ export function getContinuousColumns(state) {
 }
 
 export function getSelectableFeatures(state) {
-  return getContinuousColumns(state)
-    .concat(getCategoricalColumns(state))
-    .filter(column => column !== state.labelColumn);
+  return getFeatures(state).filter(column => column !== state.labelColumn);
 }
 
 export function getSelectableLabels(state) {
-  const eligibleColumns = getContinuousColumns(state).concat(
-    getCategoricalColumns(state)
-  );
+  const eligibleColumns = getFeatures(state);
   let labelsRestrictedByTrainer;
   switch (true) {
     case availableTrainers[state.selectedTrainer] &&
@@ -411,6 +414,13 @@ export function validationMessages(state) {
     successString: "Label and feature(s) columns are unique."
   });
   validationMessages.push({
+    readyToTrain: selectedColumnsHaveDatatype(state),
+    errorString:
+      "Feature and label columns must contain only continuous or categorical data.",
+    successString:
+      "Selected features and label contain continuous or categorical data"
+  });
+  validationMessages.push({
     readyToTrain: trainerSelected(state),
     errorString: "Please select a training algorithm.",
     successString: "Training algorithm selected."
@@ -422,6 +432,10 @@ export function validationMessages(state) {
     successString: "The label datatype and training algorithm are compatible."
   });
   return validationMessages;
+}
+
+export function isDataUploaded(state) {
+  return state.data.length > 0;
 }
 
 export function readyToTrain(state) {
