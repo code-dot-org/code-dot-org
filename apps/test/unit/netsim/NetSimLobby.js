@@ -21,10 +21,13 @@ describe('NetSimLobby', () => {
     netsim = new NetSim();
   });
 
+  afterEach(function() {
+    userSectionClient.getUserSections.restore();
+  });
+
   it('performs an async request to fetch user sections', () => {
     new NetSimLobby(rootDiv, netsim, SIGNED_IN_USER);
     expect(getUserSectionsStub).to.have.been.calledOnce;
-    userSectionClient.getUserSections.restore();
   });
 
   it('filters out archived sections', () => {
