@@ -13,21 +13,27 @@ social:
   "og:video:height": ""
   "og:video:type": ""
 ---
-<div style="background-color: #00adbc; padding: 15px; margin-top:50px;"><img src="/images/athome/CodeBreak-horizontal.png" style="max-width: 100%"/></div>
-<h1>Take a Code Break</h1>
+<center><div style="background-color: #FFFFFF; padding: 10px; margin-top:50px;"><img src="/images/marketing/CodeBytes_CandyAsset.png" style="max-width: 80%"/></div></center>
+
+<h1>Daily mini-lessons brought to you live!</h1>
 <div class="col-66" style="padding-right: 28px; padding-bottom: 20px;">
 
-<p>Keep computer science fun by taking a Code Break! With a dozen <a href="#activities">episodes and activities</a> to choose from, you can create a cypher with Ashton Kutcher, learn about variables with Yara Shahidi, and even explore how the Internet works with the actual inventor of the Internet, Vint Cerf.</p>
+<p>Planning for the Hour of Code with your classroom that’s gone virtual? Try a <b>CodeByte</b>! Designed to fit smoothly into a distance learning plan, Code Bytes are <font color="00adbc"><b>easy-to-digest, 20 minute interactive lessons</b></font> that will stream during Computer Science Education Week, <b>December 7-11</b>.</p>
 
-<p>Each episode is lead by Code.org Founder, <a href="https://code.org/about/leadership/hadi_partovi">Hadi Partovi</a>, and includes inspiring guests, mini-lessons on computer science concepts, and a weekly challenge to engage students of all ages and abilities, even those without computers.</p>
+<p>We saw how many people love taking a Code Break earlier this year. So, we’re packaging up that CS goodness into 5 different fun-size CodeBytes during the week!</p>
 
-<a href="#activities"><button style="background-color: #ffa400;border-color: #ffa400;color: #FFFFFF;font-size: 16px;">View  episodes</button></a>
+<p>Every episode features a new lesson that blends computer science with real-world topics. One day, students will use Dance Party to get creative and express themselves. Another day, they’ll explore environmental sustainability with Artificial Intelligence.</p> 
 
-<p><br>While our live episodes have ended for now, you can still watch past episodes and complete the activities. To keep the fun going, you can also try some of our recommended projects and activities for <a href="https://code.org/athome">learning at home</a>.</p>
-<br>
+<center><a href="#"><button style="background-color: #ffa400;border-color: #ffa400;color: #FFFFFF;font-size: 16px;">Tune-in</button></a><br><em>(Zoom link when live. See below for YouTube links)</em></center><br>
 
-<div style="max-width:490px; position:relative;">{{ codebreak_promoreel }}</div>
-<p>Follow us on <a href="http://facebook.com/code.org">Facebook</a> or on <a href="http://twitter.com/codeorg">Twitter</a>.</p>
+Plus, you have two chances to catch each lesson live! Episodes take place twice daily. First, at XXX PST / XXX EST. Next, at XXX PST / XXX EST.
+
+<h2>CodeBytes are great for:</h2>
+<li>Young students who may not be ready for fully self-led Hour of Code activities</li>
+<li>Older students who want to engage in a group lesson</li>
+<li>Parents and caretakers looking to supplement their child’s learning at home</li>
+<li>Educators looking for a simple, pre-planned way to bring the Hour of Code to their virtual classrooms</li>
+
 </div>
 
 <div class="col-33" style=" border: solid 1px #bbb; border-radius: 5px; overflow: hidden; position: relative; float: left; box-sizing: border-box;">
@@ -39,31 +45,38 @@ social:
 
 </div></div>
 
-<div style="clear: both;"></div>
-<div style="max-width:100%;">
-<h2>Fun and foundational</h2>
-<p>Computer science is <i>super fun</i> because it is creative and playful. Whether it’s solving a puzzle, coding art, or designing an app, students prefer learning by exploring rather than memorizing. Students even rank CS their <a href="https://code.org/promote">favorite subject</a> after art, music, and dance.</p>
-<p>Computer science is <a href="/promote">foundational</a> to all fields of study, but since many schools don’t offer it yet, this could be a unique chance to support your child in a fun new learning opportunity. Plus, <a href="https://medium.com/@codeorg/cs-helps-students-outperform-in-school-college-and-workplace-66dd64a69536">recent studies show</a>: children who study computer science perform better in other subjects, excel at problem-solving, and are <font color="00adbc"><b>17% more likely to enroll in college</font></b>.</p></div>
+<div class="col-50" style="padding-top:20px;">
+<div style="max-width:100%; position:relative;">{{ codebreak_promoreel }}</div>
+<p>Follow us on <a href="http://facebook.com/code.org">Facebook</a> or on <a href="http://twitter.com/codeorg">Twitter</a>.</p>
+</div>
+
+<div class="col-50" style="padding-top: 20px; padding-left:28px; padding-bottom: 10px;">
+<p>Lessons are created and led by our very own Code.org staff, many of whom were teachers themselves previously! This means you don’t need any additional resources or lesson plans in order to organize a fun and educational Hour of Code event to your class even when they are participating from home. All you and your students have to do is <a href="#">tune-in</a>!</p>
+</div>
 
 <div style="clear: both;"></div>
 <a id="activities"></a>
 
-<div style="background-color: #7665a0; margin-top:50px;"><h1 style="color: #FFFFFF; padding-top: 15px; padding-bottom: 15px; padding-left: 10px; padding-right: 10px;">Weekly Activities &amp; Past Episodes</h1></div>
-<h2>Episode 1 - Algorithms with Hill Harper</h2>
+<div style="background-color: #7665a0; margin-top:50px;"><h1 style="color: #FFFFFF; padding-top: 15px; padding-bottom: 15px; padding-left: 10px; padding-right: 10px;">Tune-in daily at XXX PST / XXX EST or XXX PST / XXX EST. </h1></div>
+
+<h2>Episode 2 - Prototypes with Mark Cuban & Lyndsey Scott</h2>
 <div class="col-33" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Watch the 3/25 episode</h4>
-<a href="https://www.youtube.com/watch?v=IiHveVqxvcw"><img src="/images/marketing/episode-1-hill-harper.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br> <a href="https://www.youtube.com/watch?v=IiHveVqxvcw"><i>View on Youtube</a></i> I <i><a href="https://www.facebook.com/Code.org/videos/212168439992679/">View on Facebook</i></a></div>
+<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Episode 1</h4>
+<img src="/images/marketing/code-break-callout-episode-0.jpg" style="max-width:100%">
+<br> <a href="https://www.youtube.com/watch?v=IiHveVqxvcw"><i>View Youtube Recording</a></i><br><i><a href="https://www.facebook.com/Code.org/videos/212168439992679/">View Facebook Recording</i></a></div>
 
 <div class="col-66" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Weekly Activity - Algorithms</h4>
+<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Episode 1</h4>
+<h3 style="background:#ffffff;color:#00adbc; padding:8px;">Monday, December 7th</h3>
+<p>Code your own characters and choreography in Dance Party! We’ll share our creations and discuss diversity and representation in computer science.</p>
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
-<p><span style="font-weight:bold">Younger students:</span> No sign-in needed</p>
-<a href="http://studio.code.org/s/code-break-younger/stage/1/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Go (ages 6-12)</button></a>
+<p><span style="font-weight:bold">XX:00 PT</span></p>
+<a href="http://studio.code.org/s/code-break-younger/stage/1/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Tune-in live</button></a>
 </div>
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
-<p><span style="font-weight:bold">Older students:</span> Requires sign-in</p>
-<a href="http://studio.code.org/s/code-break/stage/1/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Go (ages 13+)</button></a>
+<p><span style="font-weight:bold">YY:00 PT</span></p>
+<a href="http://studio.code.org/s/code-break/stage/1/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Tune-in live</button></a>
 </div>
 
 </div>
