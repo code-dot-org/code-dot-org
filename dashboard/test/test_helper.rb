@@ -447,6 +447,8 @@ class ActionController::TestCase
   def self.test_user_gets_response_for(action, method: :get, response: :success,
     user: nil, params: {}, name: nil, queries: nil, redirected_to: nil, &block)
 
+    refute_nil params, "params in controller tests cannot be nil"
+
     unless name.present?
       raise 'name is required when a block is provided' if block
       user_display_name =
