@@ -89,16 +89,14 @@ class ActivitySection < ApplicationRecord
   private
 
   def fetch_script_level(sl_data)
-    if sl_data['id']
-      script_level = ScriptLevel.find_by_id(sl_data['id'])
-      if script_level
-        unless script_level.activity_section.lesson == lesson
-          # add a safeguard to make sure we never take a script level from another
-          # lesson. this case should not be possible to hit using our editing UI.
-          raise "cannot move script level #{script_level.id} between lessons"
-        end
-        return script_level
+    script_level = sl_data['id'] && ScriptLevel.find_by_id(sl_data['id'])
+    if script_level
+      unless script_level.activity_section.lesson == lesson
+        # add a safeguard to make sure we never take a script level from another
+        # lesson. this case should not be possible to hit using our editing UI.
+        raise "cannot move script level #{script_level.id} between lessons"
       end
+      return script_level
     end
 
     script_levels.create(
