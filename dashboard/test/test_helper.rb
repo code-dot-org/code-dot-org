@@ -474,7 +474,7 @@ class ActionController::TestCase
       end
 
       assert_queries queries do
-        send method, action, params: params
+        send method, action, params: (params || {})
         assert_response response
       end
 
