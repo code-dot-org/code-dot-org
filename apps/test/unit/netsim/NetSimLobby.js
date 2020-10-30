@@ -13,17 +13,17 @@ const SIGNED_IN_USER = {
   }
 };
 describe('NetSimLobby', () => {
-  let rootDiv, netsim;
+  let rootDiv, netsim, getUserSectionsStub;
   beforeEach(function() {
+    getUserSectionsStub = sinon.stub(userSectionClient, 'getUserSections');
     NetSimTestUtils.initializeGlobalsToDefaultValues();
     rootDiv = $('<div>');
     netsim = new NetSim();
   });
 
   it('performs an async request to fetch user sections', () => {
-    const getUserSectionsSpy = sinon.spy(userSectionClient, 'getUserSections');
     new NetSimLobby(rootDiv, netsim, SIGNED_IN_USER);
-    expect(getUserSectionsSpy).to.have.been.calledOnce;
+    expect(getUserSectionsStub).to.have.been.calledOnce;
     userSectionClient.getUserSections.restore();
   });
 
