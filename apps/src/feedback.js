@@ -683,6 +683,8 @@ FeedbackUtils.prototype.getFeedbackButtons_ = function(options) {
       tryAgainText = msg.reviewCode();
     } else if (options.feedbackType === TestResults.FREE_PLAY) {
       tryAgainText = msg.keepPlaying();
+    } else if (options.feedbackType === TestResults.FREE_PLAY_UNCHANGED_FAIL) {
+      tryAgainText = msg.keepWorking();
     } else if (options.feedbackType < TestResults.MINIMUM_OPTIMAL_RESULT) {
       tryAgainText = msg.tryAgain();
     } else {
