@@ -47,6 +47,11 @@ class ResourceTest < ActiveSupport::TestCase
     assert_equal 'my_students_projects_code.org', resource.key
   end
 
+  test "resource downcases and strips whitespace for key generation" do
+    resource = create :resource, key: nil, name: "   Plotting Shapes "
+    assert_equal 'plotting_shapes', resource.key
+  end
+
   test "summarize for lesson plan" do
     resource = create :resource, key: 'my key', name: 'test resource', url: 'test.url',  audience: 'Teacher', type: 'Activity Guide'
     assert_equal(
