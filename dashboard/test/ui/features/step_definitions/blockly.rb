@@ -55,8 +55,8 @@ end
 
 Then /^block "([^"]*)" is near offset "([^"]*), ([^"]*)"$/ do |block, x, y|
   point = get_block_coordinates(get_block_id(block))
-  expect(point.x).to be_within(2).of(x.to_i)
-  expect(point.y).to be_within(2).of(y.to_i)
+  expect(point.x).to be_within(3).of(x.to_i)
+  expect(point.y).to be_within(3).of(y.to_i)
 end
 
 Then /^block "([^"]*)" is((?:n't| not)?) at ((?:blockly )?)location "([^"]*)"$/ do |block, negation, is_blockly, location_identifier|
