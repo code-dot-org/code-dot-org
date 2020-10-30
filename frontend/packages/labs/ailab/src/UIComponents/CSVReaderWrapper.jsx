@@ -45,7 +45,8 @@ class CSVReaderWrapper extends Component {
     Papa.parse(csvfile, {
       complete: this.updateData,
       header: true,
-      download: download
+      download: download,
+      skipEmptyLines: true
     });
   };
 
