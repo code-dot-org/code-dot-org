@@ -1072,7 +1072,7 @@ Given(/^I create a temp multi level$/) do
     wrong 'wrong answer'
     right 'right answer'
   DSL
-  steps 'And I press backspace to clear element "#level_dsl_text"'
+  steps 'And I clear the text from element "#level_dsl_text"'
   steps "And I press keys #{dsl.dump} for element \"#level_dsl_text\""
   steps 'And I click "input[type=\'submit\']" to load a new page'
   @temp_level_id = @browser.current_url.split('/')[-2]
@@ -1477,6 +1477,11 @@ end
 
 When /^I press keys "([^"]*)"$/ do |keys|
   @browser.action.send_keys(*convert_keys(keys)).perform
+end
+
+When /^I clear the text from element "([^"]*)"$/ do |selector|
+  element = @browser.find_element(:css, selector)
+  element.clear
 end
 
 # Press backspace repeatedly to clear an element.  Handy for React.
