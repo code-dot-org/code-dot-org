@@ -653,7 +653,7 @@ class ManageStudentsTable extends Component {
     firehoseClient.putRecord(
       {
         study: 'teacher-dashboard',
-        study_group: 'manage-students',
+        study_group: 'manage-students-actions',
         event: 'no-section-code-link',
         data_json: JSON.stringify({
           sectionId: sectionId
