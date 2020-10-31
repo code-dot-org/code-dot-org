@@ -13,19 +13,6 @@ And /^I press dropdown number (\d+)$/ do |n|
   end
 end
 
-Then /^the Google Blockly dropdown is (.*)$/ do |visibility|
-  if visibility == "visible"
-    expected = 1
-  elsif visibility == "hidden"
-    expected = 0
-  else
-    raise "unexpected visibility"
-  end
-
-  element = @browser.find_element(:class, 'blocklyDropDownDiv')
-  expect(element.attribute('style').match(Regexp.new("opacity: #{expected}"))).not_to eq(nil)
-end
-
 Then /^the dropdown is (.*)$/ do |visibility|
   if visibility == "visible"
     expected = 'block'
