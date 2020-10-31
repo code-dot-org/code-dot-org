@@ -1,7 +1,7 @@
 Feature: Dropdowns work as expected
 
 Background:
-  Given I am on "http://studio.code.org/s/basketball/stage/1/puzzle/5"
+  Given I am on "http://studio.code.org/s/sports/stage/1/puzzle/5"
 
 Scenario: Drag a dropdown and select a different option.
   When I rotate to landscape
