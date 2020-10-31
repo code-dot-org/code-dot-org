@@ -46,7 +46,7 @@ end
 
 Then /^the dropdown field has text "(.*?)"$/ do |text|
   id_selector = get_id_selector
-  element_has_text("[#{id_selector}='4'] .blocklyEditableText", text)
+  element_has_text("[#{id_selector}='9'] .blocklyEditableText", text)
 end
 
 And /^I press the image dropdown$/ do
