@@ -27,6 +27,10 @@ const styles = {
   remarksHeader: {
     marginLeft: 5,
     fontStyle: 'italic'
+  },
+  textAndProgression: {
+    display: 'flex',
+    flexDirection: 'column'
   }
 };
 
@@ -38,15 +42,11 @@ export default class ActivitySection extends Component {
   render() {
     const {section} = this.props;
 
-    const isProgressionSection = section.scriptLevels.length > 0;
-
     const sectionHasTips = section.tips.length > 0;
 
     return (
       <div>
-        {!isProgressionSection && (
-          <h4 id={`activity-section-${section.key}`}>{section.displayName}</h4>
-        )}
+        <h4 id={`activity-section-${section.key}`}>{section.displayName}</h4>
         {section.remarks && (
           <div>
             <h4>
@@ -74,8 +74,17 @@ export default class ActivitySection extends Component {
               );
             })}
           </div>
-          {!isProgressionSection && <SafeMarkdown markdown={section.text} />}
-          {isProgressionSection && <ProgressionDetails progression={section} />}
+          <div
+            style={{
+              ...styles.textAndProgression,
+              ...(!sectionHasTips && {width: '90%'})
+            }}
+          >
+            <SafeMarkdown markdown={section.text} />
+            {section.scriptLevels.length > 0 && (
+              <ProgressionDetails progression={section} />
+            )}
+          </div>
           <div style={{...styles.tips, ...(sectionHasTips && {width: '40%'})}}>
             {section.tips.map((tip, index) => {
               return <LessonTip key={`tip-${index}`} tip={tip} />;
