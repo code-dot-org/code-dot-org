@@ -49,7 +49,9 @@ export default class GDPRDialog extends Component {
         style={styles.dialog}
         uncloseable
       >
-        <h2 className="ui-test-gdpr-dialog">{i18n.gdprDialogHeaderUpdated()}</h2>
+        <h2 className="ui-test-gdpr-dialog">
+          {i18n.gdprDialogHeaderUpdated()}
+        </h2>
         <div>{i18n.gdprDialogDetailsUpdated()}</div>
         <div style={styles.instructions}>
           <a
