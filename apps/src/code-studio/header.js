@@ -62,6 +62,9 @@ const PUZZLE_PAGE_NONE = -1;
  *   user, null otherwise
  * @param {boolean} stageExtrasEnabled Whether this user is in a section with
  *   stageExtras enabled for this script
+ * @param {object} scriptNameData
+ * @param {boolean} onLessonExtras Boolean indicating we are not on a script
+ * level and therefore are on lesson extras
  */
 header.build = function(
   scriptData,

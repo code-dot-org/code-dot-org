@@ -1,22 +1,56 @@
 import PropTypes from 'prop-types';
 
+/**
+ * @typedef {Object} Student
+ *
+ * @property {number} id
+ * @property {string} name
+ */
 export const studentType = PropTypes.shape({
   id: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired
 });
 
+/**
+ * @typedef {Object} Level
+ *
+ * @property {number} id
+ * @property {number} levelNumber
+ * @property {string} kind
+ * @property {string} url
+ * @property {string} name
+ * @property {string} icon
+ * @property {bool} isUnplugged
+ * @property {bool} isConceptLevel
+ * @property {levelType[]} sublevels
+ */
 export const levelType = PropTypes.shape({
   id: PropTypes.number.isRequired,
+  levelNumber: PropTypes.number,
+  kind: PropTypes.string,
   url: PropTypes.string,
   name: PropTypes.string,
   icon: PropTypes.string,
   isUnplugged: PropTypes.bool,
-  levelNumber: PropTypes.number,
   isConceptLevel: PropTypes.bool,
-  kind: PropTypes.string,
-  sublevels: PropTypes.arrayOf(PropTypes.object)
+  sublevels: PropTypes.arrayOf(levelType)
 });
 
+/**
+ * @typedef {Object} StudentLevelProgress
+ *
+ * @property {string} status
+ * A string enum representing student progress status on a level.
+ * See src/util/sharedConstants.LevelKind.
+ * @property {number} result
+ * A numerical enum of the TestResult a student received for a level.
+ * See src/constants.TestResult.
+ * See src/code-studio/activityUtils.activityCssClass for a mapping to status.
+ * @property {bool} paired
+ * A boolean indicating if a student was paired on a level.
+ * @property {number} timeSpent
+ * An optional value indicating the time a student spent on a level.
+ */
 export const studentLevelProgressType = PropTypes.shape({
   status: PropTypes.string.isRequired,
   result: PropTypes.number.isRequired,
@@ -31,6 +65,10 @@ export const studentLevelProgressType = PropTypes.shape({
  * @property {number} id
  * @property {bool} lockable
  * @property {number} stageNumber
+ * @property {string} lesson_plan_html_url
+ * @property {string} description_student
+ * @property {string} description_teacher
+ * @property {levelType[]} levels
  */
 export const lessonType = PropTypes.shape({
   name: PropTypes.string.isRequired,
@@ -48,8 +86,9 @@ export const lessonType = PropTypes.shape({
  *
  * @property {string} displayName
  * @property {number} id
- * @property {array} bigQuestion
+ * @property {string} bigQuestion
  * @property {string} description
+ * @property {lessonType[]} lessons
  */
 export const lessonGroupType = PropTypes.shape({
   id: PropTypes.number,

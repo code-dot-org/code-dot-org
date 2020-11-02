@@ -79,6 +79,8 @@ progress.showDisabledBubblesAlert = function() {
  *   user, null otherwise
  * @param {boolean} stageExtrasEnabled Whether this user is in a section with
  *   stageExtras enabled for this script
+ * @param {boolean} onLessonExtras Boolean indicating we are not on a script
+ * level and therefore are on lesson extras
  */
 progress.generateStageProgress = function(
   scriptData,
@@ -264,7 +266,8 @@ function queryUserProgress(store, scriptData, currentLevelId) {
  * @param {boolean} isFullProgress - True if this contains progress for the entire
  *   script vs. a single stage.
  * @param {boolean} [saveAnswersBeforeNavigation]
- * @param {boolean} [onLessonExtras]
+ * @param {boolean} [onLessonExtras] Optional boolean indicating we are not on
+ * a script level and therefore are on lesson extras
  */
 function initializeStoreWithProgress(
   store,
@@ -293,6 +296,7 @@ function initializeStoreWithProgress(
     })
   );
 
+  // If we only have one lesson, auto-select it.
   if (scriptData.lessons.length === 1) {
     store.dispatch(setCurrentStageId(scriptData.lessons[0].id));
   }

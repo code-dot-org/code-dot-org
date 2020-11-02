@@ -9,6 +9,8 @@ import {
 } from '@cdo/apps/code-studio/activityUtils';
 import _ from 'lodash';
 
+export const PEER_REVIEW_ID_OFFSET = -100;
+
 /**
  * This is conceptually similar to being a selector, except that it operates on
  * the entire store state. It is used by components to determine whether a
@@ -22,13 +24,13 @@ import _ from 'lodash';
 export function lessonIsVisible(lesson, state, viewAs) {
   if (!viewAs) {
     throw new Error('missing param viewAs in lessonIsVisible');
-  } else if (viewAs === ViewType.Teacher) {
-    return true;
   }
 
   // Don't show stage if not authorized to see lockable
   if (lesson.lockable && !state.stageLock.lockableAuthorized) {
     return false;
+  } else if (viewAs === ViewType.Teacher) {
+    return true;
   }
 
   const hiddenStageState = state.hiddenStage;
@@ -59,7 +61,7 @@ export function lessonIsLockedForAllStudents(lessonId, state) {
 }
 
 /**
- * @param {level[]} levels - A set of levels for a given stage
+ * @param {levelType[]} levels - A set of levels for a given stage
  * @returns {boolean} True if we should consider the stage to be locked for the
  *   current user.
  */
@@ -122,7 +124,7 @@ export function isLevelAssessment(level) {
 
 /**
  * Checks if a whole stage is assessment levels
- * @param {[]} levels An array of levels
+ * @param {levelType[]} levels An array of levels
  * @returns {bool} If all the levels in a stage are assessment levels
  */
 export function stageIsAllAssessment(levels) {
@@ -131,15 +133,15 @@ export function stageIsAllAssessment(levels) {
 
 /**
  * Summarizes stage progress data.
- * @param {[]} studentProgress An object keyed by level id containing objects
- * representing the student's progress in that level
- * @param {[]} stageLevels An array of the levels in a stage
+ * @param {{id:studentLevelProgressType}} studentProgress An object keyed by
+ * level id containing objects representing the student's progress in that level
+ * @param {levelType[]} levels An array of the levels in a stage
  * @returns {object} An object with a total count of levels in each of the
  * following buckets: total, completed, imperfect, incomplete, attempted.
  */
-export function summarizeProgressInStage(studentProgress, stageLevels) {
+export function summarizeProgressInStage(studentProgress, levels) {
   // Filter any bonus levels as they do not count toward progress.
-  stageLevels = stageLevels.filter(level => !level.bonus);
+  const filteredLevels = levels.filter(level => !level.bonus);
 
   // Get counts of statuses
   let statusCounts = {
@@ -150,7 +152,7 @@ export function summarizeProgressInStage(studentProgress, stageLevels) {
     attempted: 0
   };
 
-  stageLevels.forEach(level => {
+  filteredLevels.forEach(level => {
     const levelProgress = studentProgress[level.id];
     if (!levelProgress) {
       return;
@@ -188,7 +190,7 @@ export function summarizeProgressInStage(studentProgress, stageLevels) {
  * Any given level's progression name is determined by first looking to see if
  * the server provided us one as level.progression, otherwise we fall back to
  * just level.name
- * @param {Level[]} levels
+ * @param {levelType[]} levels
  * @returns {object[]} An array of progressions, where each consists of a name,
  *   the position of the progression in the input array, and the set of levels
  *   in the progression
@@ -225,8 +227,8 @@ export const progressionsFromLevels = levels => {
 };
 
 /**
- * The level object passed down to use via the server (and stored in stage.stages.levels)
- * contains more data than we need. This filters to the parts our views care about.
+ * The level object passed down to use from the server contains more data than
+ * we need. This filters to the parts our views care about.
  */
 export const processedLevel = (level, isSublevel = false) => {
   return {
@@ -247,12 +249,6 @@ export const processedLevel = (level, isSublevel = false) => {
   };
 };
 
-/**
- * Given a level progress object that we get from the server using either
- * /api/user_progress or /dashboardapi/section_level_progress,
- * extracts the result, appropriately discerning a locked/submitted
- * result for certain levels.
- */
 const getLevelResult = serverProgress => {
   if (serverProgress.status === LevelStatus.locked) {
     return TestResults.LOCKED_RESULT;
@@ -267,6 +263,13 @@ const getLevelResult = serverProgress => {
   return serverProgress.result || TestResults.NO_TESTS_RUN;
 };
 
+/**
+ * Parse a level progress object that we get from the server using either
+ * /api/user_progress or /dashboardapi/section_level_progress into our
+ * canonical studentLevelProgressType shape.
+ * @param {object} serverObject A progress object from the server
+ * @returns {studentLevelProgressType} Our canonical progress shape
+ */
 export const levelProgressFromServer = serverObject => {
   return {
     status: serverObject.status || LevelStatus.not_tried,
@@ -276,12 +279,25 @@ export const levelProgressFromServer = serverObject => {
   };
 };
 
+/**
+ * Given an object from the server with student progress data keyed by level ID,
+ * parse the progress data into our canonical studenLevelProgressType
+ * @param {{levelId:serverProgress}} serverStudentProgress
+ * @returns {{levelId:studentLevelProgressType}}
+ */
 export const processServerStudentProgress = serverStudentProgress => {
   return _.mapValues(serverStudentProgress, progress =>
     levelProgressFromServer(progress)
   );
 };
 
+/**
+ * Given an object from the server with section progress data keyed by student
+ * ID and level ID, parse the progress data into our canonical
+ * studenLevelProgressType
+ * @param {{studenId:{levelId:serverProgress}}} serverSectionProgress
+ * @returns {{studenId:{levelId:studentLevelProgressType}}}
+ */
 export const processServerSectionProgress = serverSectionProgress => {
   const studentProgress = _.mapValues(serverSectionProgress, student =>
     processServerStudentProgress(student)
@@ -289,14 +305,31 @@ export const processServerSectionProgress = serverSectionProgress => {
   return studentProgress;
 };
 
+/**
+ * Create a studentLevelProgressType object with the provided status string
+ * @param {string} status
+ * @returns {studentLevelProgressType}
+ */
 export const levelProgressWithStatus = status => {
   return levelProgressFromServer({status: status});
 };
 
+/**
+ * Create a studentLevelProgressType object from the provided result value.
+ * This is used to merge progress data from session storage which only includes
+ * a result value into our data model that uses studentLevelProgressType objects.
+ * @param {number} result
+ * @returns {studentLevelProgressType}
+ */
 export const levelProgressFromResult = result => {
   return levelProgressWithStatus(activityCssClass(result));
 };
 
+/**
+ * Merge a student result from session storage with a studentLevelProgressType
+ * object from redux.
+ * @returns {studentLevelProgressType}
+ */
 export const mergeLevelProgressWithResult = (progress, result) => {
   if (!progress) {
     return levelProgressFromResult(result);
@@ -342,9 +375,9 @@ const levelGroupFromServer = serverObject => {
  */
 const peerReviewLessonGroup = peerReviewLessonInfo => {
   const levels = peerReviewLessonInfo.levels.map((level, index) => ({
-    // These aren't true levels (i.e. we won't have an entry in levelProgress),
+    // These aren't true levels (i.e. we won't have an entry in progressByLevel),
     // so always use a specific id that won't collide with real levels
-    id: -1,
+    id: PEER_REVIEW_ID_OFFSET,
     url: level.url,
     name: level.name,
     icon: level.locked ? level.icon : undefined,
@@ -352,7 +385,7 @@ const peerReviewLessonGroup = peerReviewLessonInfo => {
     kind: LevelKind.peer_review
   }));
   const lesson = lessonFromServer(peerReviewLessonInfo, null, {
-    id: -1,
+    id: PEER_REVIEW_ID_OFFSET,
     lockable: false,
     levels: levels
   });
@@ -367,6 +400,15 @@ const peerReviewLessonGroup = peerReviewLessonInfo => {
   };
 };
 
+/**
+ * Post-process lesson data sent from the server into our lessonGroup structure
+ * to store in redux.
+ * @param {[object]} stages Lesson data from server
+ * @param {boolean} isPlc Whether lessons are PLC
+ * @param {[object]} peerReviewLessonInfo Optional object with peer review info
+ * @param {[boolean]} includeBonusLevels Optional flag to include bonus levels
+ * @returns {lessonGroupType[lessonType[levelType[]]]}
+ */
 export const processLessonGroupData = (
   stages,
   isPlc,
@@ -382,7 +424,7 @@ export const processLessonGroupData = (
   });
 
   let nextStageNumber = 1;
-  stages.forEach((stage, index) => {
+  stages.forEach(stage => {
     const stageNumber = !isPlc && !stage.lockable ? nextStageNumber++ : null;
     const lesson = lessonFromServer(stage, stageNumber);
     if (!includeBonusLevels) {
