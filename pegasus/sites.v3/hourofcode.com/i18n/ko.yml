@@ -195,12 +195,6 @@ ko:
   front_watch_regular_video: 동영상 보기
   front_volunteers: 전공 자원봉사자 모집합니다.
   front_start_learning: 학습 시작
-  gdpr_dialog_heading: 미국에 기반을 둔 웹사이트의 사용에 동의하십니까?
-  gdpr_dialog_message: 본 사이트 사용에 따라 생성된 데이터는 미국으로 전송되어 보관 또는 처리될 수 있습니다.
-  gdpr_dialog_link_intro: 세부내용은 당사의
-  gdpr_dialog_privacy_policy: 개인정보 보호정책을 참조하십시오.
-  gdpr_dialog_logout: 로그아웃
-  gdpr_dialog_yes: 예
   header_menu_resources: 각종 자료
   header_menu_faq: 자주 묻는 질문 (FAQ)
   header_menu_how_to: 방법

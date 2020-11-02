@@ -232,13 +232,6 @@ sk:
   front_watch_regular_video: Pozrite si video
   front_volunteers: Hľadáme technicky zdatných dobrovoľníkov
   front_start_learning: Začnite sa učiť
-  gdpr_dialog_heading: Do you agree to using a web site based in the United States?
-  gdpr_dialog_message: Data from your use of this site may be sent to and stored or
-    processed in the United States.
-  gdpr_dialog_link_intro: For details see our
-  gdpr_dialog_privacy_policy: privacy policy
-  gdpr_dialog_logout: Logout
-  gdpr_dialog_yes: 'Yes'
   header_menu_resources: Zdroje
   header_menu_faq: Časté otázky
   header_menu_how_to: Ako na to
