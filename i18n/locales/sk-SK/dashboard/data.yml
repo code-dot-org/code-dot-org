@@ -99,7 +99,7 @@ sk:
         turtle_4_9: Tu je riešenie na predchádzajúce puzzle. O koľko stupňov sa musíte obrátiť na dokončenie výkresu? (Pravdepodobne musíte háadať niekoľko krát)
         turtle_4_10: Tu je riešenie predchádzajúcej úlohy. Koľko krát by si to mal opakovať aby si dokončil kresbu?
         turtle_4_11: Skús zmeniť čísla v "otoč" a "zopakuj" blokoch aby si spravil iné vzory, alebo experimentuj zmenením zvyšku kódu aby si nakreslil čo chceš.
-        maze_karel_1_1: Ahoj, ja som farmárka. Potrebujem tvoju pomoc s vyrovnaním poľa na mojej farme tak, aby bolo pripravené pre výsadbu. Presuň ma na hromadu hliny a použi blok "odstráň", aby si ju odstránil.
+        maze_karel_1_1: Ahoj, ja som farmárka. Potrebujem tvoju pomoc s vyrovnaním poľa na mojej farme tak, aby bolo pripravené pre výsadbu. Presuň ma na hromadu hliny a použi blok "odstráň" na jej odstránenie.
         maze_karel_1_2: Ďalej ma posuň do diery a vyplň ju dvoma plnými lopatami hliny, použitím bloku "vyplň".
         maze_karel_1_3: Posuň ma na hromadu hliny a povedz mi koľko plných lopát treba odstrániť s použitím tak málo blokov ako sa len dá.
         maze_karel_1_4: 'Dokázal by si mi pomôcť odstrániť všetky štyri hromady hliny? Poznámka: použi blok opakuj ak môžeš.'
@@ -268,7 +268,7 @@ sk:
         if_else: Blok "Ak/inak"
         if_else_scrat: Blok "Ak/inak"
         function: Funkcie
-        loop_while: Blok "Kým"
+        loop_while: Blok "Pokiaľ"
         loop_for: Blok "Počítadlo"
         parameters: Funkcie s parametrami
         hoc_wrapup: Zhrnutie Hodiny Kódu
