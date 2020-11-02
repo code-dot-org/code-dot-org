@@ -916,6 +916,8 @@ bs:
         text: nasumična boja
       gamelab_randomColor:
         text: nasumična boja
+      gamelab_repeatForever:
+        text: ponavljaj zauvijek
       gamelab_setBackground:
         text: podesi boju pozadine {COLOR}
       gamelab_setBackgroundImage:
