@@ -13,7 +13,7 @@ export default class CdoTrashcan extends GoogleBlockly.Trashcan {
      * https://developer.mozilla.org/en-US/docs/Web/API/NodeList/forEach
      */
     Array.prototype.forEach.call(this.svgGroup_.childNodes, function(node) {
-      if (node.name === 'image') {
+      if (node.nodeName === 'image') {
         node.setAttributeNS(
           Blockly.utils.dom.XLINK_NS,
           'xlink:href',
