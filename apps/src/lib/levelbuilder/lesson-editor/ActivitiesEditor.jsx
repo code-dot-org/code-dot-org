@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import color from '@cdo/apps/util/color';
-import ActivityCard from '@cdo/apps/lib/levelbuilder/lesson-editor/ActivityCard';
-import Activity from '@cdo/apps/templates/lessonOverview/activities/Activity';
+import ActivityCardAndPreview from '@cdo/apps/lib/levelbuilder/lesson-editor/ActivityCardAndPreview';
 import {connect} from 'react-redux';
 import {
   addActivity,
@@ -14,23 +13,6 @@ import ReactDOM from 'react-dom';
 const styles = {
   activityEditAndPreview: {
     margin: 10
-  },
-  cardAndPreview: {
-    display: 'flex',
-    flexDirection: 'row',
-    margin: 10,
-    width: '100%'
-  },
-  editor: {
-    width: '55%'
-  },
-  preview: {
-    width: '45%',
-    marginLeft: 20
-  },
-  previewBox: {
-    border: '1px solid black',
-    padding: '0px 10px 10px 10px'
   },
   addActivity: {
     fontSize: 14,
@@ -166,26 +148,17 @@ class ActivitiesEditor extends Component {
     return (
       <div style={styles.activityEditAndPreview}>
         {activities.map(activity => (
-          <div style={styles.cardAndPreview}>
-            <div style={styles.editor}>
-              <ActivityCard
-                activity={activity}
-                activitiesCount={activities.length}
-                key={activity.key}
-                setActivitySectionRef={this.setActivitySectionRef}
-                updateTargetActivitySection={this.updateTargetActivitySection}
-                targetActivityPos={this.state.targetActivityPos}
-                targetActivitySectionPos={this.state.targetActivitySectionPos}
-                activitySectionMetrics={this.sectionMetrics}
-                updateActivitySectionMetrics={this.updateActivitySectionMetrics}
-              />
-            </div>
-            <div style={styles.preview}>
-              <div style={styles.previewBox}>
-                <Activity activity={activity} key={activity.key} />
-              </div>
-            </div>
-          </div>
+          <ActivityCardAndPreview
+            key={activity.key}
+            activity={activity}
+            activitiesCount={activities.length}
+            setActivitySectionRef={this.setActivitySectionRef}
+            updateTargetActivitySection={this.updateTargetActivitySection}
+            targetActivityPos={this.state.targetActivityPos}
+            targetActivitySectionPos={this.state.targetActivitySectionPos}
+            activitySectionMetrics={this.sectionMetrics}
+            updateActivitySectionMetrics={this.updateActivitySectionMetrics}
+          />
         ))}
         <button
           onMouseDown={this.handleAddActivity}
