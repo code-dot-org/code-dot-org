@@ -768,10 +768,6 @@ hu:
         opt_in_no: 'Nem'
   cookie_banner:
     accept: 'Egyetértek'
-  gdpr_dialog:
-    heading: 'Elfogadod, hogy egy Egyesült Államokban létrejött weboldalt használj?'
-    message: 'A weboldal használatából keletkező adatok tárolása és feldolgozása esetlegesen az Egyesült Államokban történik.'
-    yes: 'Igen'
   copy: 'Másol'
   parent_email_banner:
     text: "**Ön szülő vagy gondviselő?** Kapcsolja az e-mail címét ehhez a fiókhoz, így friss információkat kaphat gyermeke fejlődéséről és projektjeiről!"
