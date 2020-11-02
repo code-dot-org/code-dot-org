@@ -962,6 +962,9 @@ is:
         options:
           UNIT:
             '"seconds"': sekúndur
+            '"frames"': rammar
+      gamelab_bounceOff:
+        text: "{SPRITE} endurkastast af {TARGET}"
       gamelab_changePropBy:
         text: breyta {SPRITE} {PROPERTY} um {VAL}
         options:
@@ -983,6 +986,8 @@ is:
         text: ásmellt vera
       gamelab_comment:
         text: 'athugasemd: {COMMENT}'
+      gamelab_countByAnimation:
+        text: fjöldi {SPRITE}
       gamelab_createNewSprite:
         text: "búa til nýja veru \n nafn {NAME} \n búningur {COSTUME} \n staður {LOCATION}"
       gamelab_destroy:
@@ -991,6 +996,8 @@ is:
         text: er hægt að draga
       gamelab_edgesDisplace:
         text: brúnir hindra {SPRITE} að hreyfast
+      gamelab_getAllSprites:
+        text: allir kvikar
       gamelab_getProp:
         text: "{SPRITE} {PROPERTY}"
         options:
@@ -1006,13 +1013,23 @@ is:
         options:
           CHOICE:
             '"this"': þetta
+            '"other"': annað
       gamelab_getTime:
+        text: tíminn í {UNIT}
         options:
           UNIT:
             '"seconds"': sekúndur
+            '"frames"': rammar
       gamelab_hideTitleScreen:
         text: fela titilinn
+      gamelab_ifVarEquals:
+        text: |-
+          ef {NUM} ={VAL}
+          {STATEMENT}
+      gamelab_isCostumeEqual:
+        text: búningur {SPRITE} er {COSTUME}
       gamelab_isKeyPressed:
+        text: ýtt er á {KEY}
         options:
           KEY:
             '"up"': upp
@@ -1048,6 +1065,8 @@ is:
             '"z"': z
       gamelab_isTouchingEdges:
         text: "{SPRITE} snertir brúnir"
+      gamelab_isTouchingSprite:
+        text: "{SPRITE} snertir {TARGET}"
       gamelab_jumpTo:
         text: "{SPRITE} hoppa til {LOCATION}"
       gamelab_keyPressed:
@@ -1091,6 +1110,7 @@ is:
       gamelab_locationAt:
         text: 'staður x: {X} y: {Y}'
       gamelab_locationModifier:
+        text: "{DISTANCE} dílar {DIRECTION} af {LOCATION}"
         options:
           DIRECTION:
             '"North"': norður
@@ -1105,6 +1125,8 @@ is:
         text: "{LOCATION}"
       gamelab_makeNewSpriteAnon:
         text: aalab búa til nýja {ANIMATION_NAME} veru á stað {LOCATION}
+      gamelab_makeNumSprites:
+        text: búa til {NUM} nýja {ANIMATION_NAME} kvika
       gamelab_mirrorSprite:
         text: "{SPRITE} snýr {DIRECTION}"
         options:
@@ -1155,6 +1177,8 @@ is:
         text: vera {SPRITE} hættir {BEHAVIOR}
       gamelab_removeTint:
         text: fjarlægja lit af {THIS}
+      gamelab_repeatForever:
+        text: endurtaka endalaust
       gamelab_setAnimation:
         text: breyta búningi {THIS} í {ANIMATION}
       gamelab_setBackground:
@@ -1184,6 +1208,8 @@ is:
             '"x"': x staða
             '"y"': y staða
             '"direction"': stefna hreyfingar
+      gamelab_setQuestion:
+        text: fá svar við {QUESTION} fyrir breytu {VAR}
       gamelab_setSizes:
         text: stilla {SPRITE} {PROPERTY} á {N}%
         options:
@@ -1237,6 +1263,8 @@ is:
             '"d"': d
       gamelab_whenLeftArrow:
         text: þegar ýtt er á vinstri ör
+      gamelab_whenQuestionAnswered:
+        text: þegar {VAR} er svarað
       gamelab_whenRightArrow:
         text: þegar ýtt er á hægri ör
       gamelab_whenTouching:
@@ -1266,6 +1294,10 @@ is:
         text: meðan {SPRITE1} snertir {SPRITE2}
       gamelab_whileUpArrow:
         text: meðan ýtt er á ör upp
+      gamelab_withPercentChance:
+        text: |-
+          ef {NUM}% líkindi
+          {STATEMENT}
       gamelab_xLocationOf:
         text: x hnit {SPRITE}
       gamelab_yLocationOf:
