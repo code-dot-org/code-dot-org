@@ -64,7 +64,8 @@ export default class LessonEditor extends Component {
     announcements: PropTypes.arrayOf(announcementShape),
     resources: PropTypes.arrayOf(resourceShape),
     relatedLessons: PropTypes.arrayOf(relatedLessonShape).isRequired,
-    objectives: PropTypes.arrayOf(PropTypes.object).isRequired
+    objectives: PropTypes.arrayOf(PropTypes.object).isRequired,
+    courseVersionId: PropTypes.number
   };
 
   render() {
@@ -212,7 +213,7 @@ export default class LessonEditor extends Component {
           collapsed={true}
           fullWidth={true}
         >
-          <ResourcesEditor />
+          <ResourcesEditor courseVersionId={this.props.courseVersionId} />
         </CollapsibleEditorSection>
 
         <CollapsibleEditorSection
