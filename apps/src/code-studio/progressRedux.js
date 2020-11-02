@@ -6,6 +6,7 @@ import _ from 'lodash';
 import {LevelKind} from '@cdo/apps/util/sharedConstants';
 import {ViewType, SET_VIEW_TYPE} from './viewAsRedux';
 import {
+  PEER_REVIEW_ID_OFFSET,
   mergeLevelProgressWithResult,
   levelProgressFromResult,
   processServerStudentProgress,
@@ -114,6 +115,9 @@ export default function reducer(state = initialState, action) {
       progressByLevel: action.progressByLevel
     };
   }
+  // If we are getting progress from session storage, we only have the
+  // `results` values and have to generate the `studentLevelProgressType`
+  // objects from those.
   if (action.type === OVERWRITE_PROGRESS_RESULTS) {
     const progress = {};
     Object.entries(action.levelProgressResults).forEach(([levelId, result]) => {
@@ -138,18 +142,29 @@ export default function reducer(state = initialState, action) {
     };
   }
   if (action.type === MERGE_PEER_REVIEW_PROGRESS) {
+    // We use level progress bubbles to represent peer review work in the UI,
+    // so we need to create "fake" levels for it in our data model.
+    //
+    // To indicate peer reviews to be completed, we create a set of fake
+    // locked levels (see progressHelpers.peerReviewLessonGroup).
+    //
+    // If we recieve peer review progress data from the server, we update those
+    // fake levels to map them to progress objects. Since the fake levels don't
+    // have real ids, we increment from PEER_REVIEW_ID_OFFSET as keys to map
+    // our fake level objects to their corresponding progress objects.
     const mergedGroup = _.cloneDeep(state.lessonGroups.pop());
     const mergedProgress = {...state.progressByLevel};
     action.peerReviewsPerformed.forEach((review, index) => {
+      const progressKey = PEER_REVIEW_ID_OFFSET + index + 1;
       mergedGroup.lessons[0].levels[index] = {
-        id: index,
+        id: progressKey,
         url: review.url,
         name: review.name,
         icon: review.icon,
         levelNumber: index + 1,
         kind: LevelKind.peer_review
       };
-      mergedProgress[index] = {
+      mergedProgress[progressKey] = {
         status: review.status,
         result: review.result,
         paired: false
@@ -245,12 +260,7 @@ export default function reducer(state = initialState, action) {
 export const getLesson = (state, id) => {
   let foundLesson;
   for (const group of state.lessonGroups) {
-    for (const lesson of group.lessons) {
-      if (lesson.id === id) {
-        foundLesson = lesson;
-        break;
-      }
-    }
+    foundLesson = group.lessons.find(lesson => lesson.id === id);
     if (foundLesson) {
       break;
     }
