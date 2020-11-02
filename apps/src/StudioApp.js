@@ -85,6 +85,8 @@ import {userAlreadyReportedAbuse} from '@cdo/apps/reportAbuse';
 import {setArrowButtonDisabled} from '@cdo/apps/templates/arrowDisplayRedux';
 import {workspace_running_background, white} from '@cdo/apps/util/color';
 import WorkspaceAlert from '@cdo/apps/code-studio/components/WorkspaceAlert';
+import {LevelStatus} from '@cdo/apps/util/sharedConstants';
+
 var copyrightStrings;
 
 /**
@@ -560,7 +562,7 @@ StudioApp.prototype.init = function(config) {
     document.body.appendChild(startDialogDiv);
     const progress = getStore().getState().progress;
     const isComplete =
-      progress.levelProgress[progress.currentLevelId] >=
+      progress.progressByLevel[progress.currentLevelId].result >=
       TestResults.MINIMUM_OPTIMAL_RESULT;
     ReactDOM.render(
       <ChallengeDialog
@@ -3423,8 +3425,10 @@ StudioApp.prototype.isNotStartedLevel = function(config) {
     return config.readonlyWorkspace && !config.channel;
   } else {
     return (
-      config.readonlyWorkspace &&
-      progress.levelProgress[progress.currentLevelId] === undefined
+      (config.readonlyWorkspace &&
+        progress.progressByLevel[progress.currentLevelId] === undefined) ||
+      progress.progressByLevel[progress.currentLevelId].status ===
+        LevelStatus.not_tried
     );
   }
 };
