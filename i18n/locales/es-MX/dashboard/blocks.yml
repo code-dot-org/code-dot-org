@@ -1171,6 +1171,8 @@ es-MX:
         text: sprite {SPRITE} detiene {BEHAVIOR}
       gamelab_removeTint:
         text: eliminar color de {THIS}
+      gamelab_repeatForever:
+        text: Repetir para siempre
       gamelab_setAnimation:
         text: cambiar {THIS} disfraz a {ANIMATION}
       gamelab_setBackground:
