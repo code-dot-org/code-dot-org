@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20201016003134) do
+ActiveRecord::Schema.define(version: 20201029231229) do
 
   create_table "activities", id: :integer, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer "user_id"
@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(version: 20201016003134) do
     t.integer "lesson_activity_id", null: false
     t.string "seeding_key", null: false, comment: "unique key which is stable across environments for seeding purposes"
     t.integer "position", null: false
-    t.string "properties"
+    t.text "properties"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["lesson_activity_id"], name: "index_activity_sections_on_lesson_activity_id"
@@ -460,6 +460,7 @@ ActiveRecord::Schema.define(version: 20201016003134) do
     t.text "questions", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "published", default: true, null: false
     t.index ["name", "version"], name: "index_foorm_forms_on_name_and_version", unique: true
   end
 
@@ -470,6 +471,7 @@ ActiveRecord::Schema.define(version: 20201016003134) do
     t.text "question", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "published", default: true, null: false
     t.index ["library_name", "library_version", "question_name"], name: "index_foorm_library_questions_on_multiple_fields", unique: true
   end
 
@@ -534,7 +536,7 @@ ActiveRecord::Schema.define(version: 20201016003134) do
     t.integer "lesson_id", null: false
     t.string "seeding_key", null: false, comment: "unique key which is stable across environments for seeding purposes"
     t.integer "position", null: false
-    t.string "properties"
+    t.text "properties"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["lesson_id"], name: "index_lesson_activities_on_lesson_id"
@@ -650,7 +652,7 @@ ActiveRecord::Schema.define(version: 20201016003134) do
     t.float "value", limit: 24, null: false
   end
 
-  create_table "objectives", id: :integer, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci" do |t|
+  create_table "objectives", id: :integer, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.text "properties"
     t.integer "lesson_id"
     t.datetime "created_at", null: false
