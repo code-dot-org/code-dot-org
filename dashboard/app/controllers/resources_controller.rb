@@ -3,7 +3,8 @@ class ResourcesController < ApplicationController
 
   # GET /resourcesearch/:q/:limit
   def search
-    render json: ResourcesAutocomplete.get_search_matches(params[:q], params[:limit])
+    puts params
+    render json: ResourcesAutocomplete.get_search_matches(params[:query], params[:limit], params[:courseVersionId])
   end
 
   def create

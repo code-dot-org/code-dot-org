@@ -106,6 +106,7 @@ $(document).ready(function() {
         announcements={lessonData.announcements || []}
         relatedLessons={relatedLessons}
         objectives={objectives}
+        courseVersionId={lessonData.course_version_id}
       />
     </Provider>,
     document.getElementById('edit-container')
