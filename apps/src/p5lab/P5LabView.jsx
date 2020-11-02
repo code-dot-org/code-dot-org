@@ -61,7 +61,7 @@ class P5LabView extends React.Component {
     // temporarily pull from local env for testing purposes
     if (app === 'spritelab') {
       this.setState({
-        libraryManifest: require('./customSpritelabCostumeLibrary.json')
+        libraryManifest: require('./spritelab/spriteCostumeLibrary.json')
       });
     } else {
       fetch(`/api/v1/animation-library/manifest/${app}/${locale}`)
