@@ -2,7 +2,6 @@
 # teacher-dashboard in pegasus and the api) to manipulate Followers,
 # which means joining and leaving Sections (see Follower and Section
 # models).
-
 class FollowersController < ApplicationController
   before_action :load_section
 
@@ -26,10 +25,15 @@ class FollowersController < ApplicationController
     end
 
     Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
-      if @user.save && @section&.add_student(@user)
-        sign_in(:user, @user)
-        redirect_to root_path, notice: I18n.t('follower.registered', section_name: @section.name)
-        return
+      if !verify_recaptcha
+        # TODO: Make changes in here with recaptcha
+        flash[:alert] = "Recaptcha Required"
+      else
+        if @user.save && @section&.add_student(@user)
+          sign_in(:user, @user)
+          redirect_to root_path, notice: I18n.t('follower.registered', section_name: @section.name)
+          return
+        end
       end
     end
 
