@@ -162,7 +162,6 @@ class FishView extends React.Component {
               width: Math.round(containerWidth),
               height: Math.round(containerHeight)
             }}
-            dir="ltr"
           >
             <div
               id="container-react"
