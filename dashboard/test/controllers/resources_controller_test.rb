@@ -20,4 +20,15 @@ class ResourcesControllerTest < ActionController::TestCase
     assert(@response.body.include?('Teacher'))
     assert(@response.body.include?('download.url'))
   end
+
+  test 'can create resource with course version' do
+    sign_in @levelbuilder
+    course_version = create :course_version
+    assert_creates(Resource) do
+      post :create, params: {name: 'resource name', url: 'code.org', downloadUrl: 'download.url', type: 'Slides', audience: 'Teacher', courseVersionId: course_version.id}
+      assert_response :success
+    end
+    response_resource = JSON.parse(@response.body)
+    assert_equal course_version.id, Resource.find_by_key(response_resource["key"]).course_version_id
+  end
 end

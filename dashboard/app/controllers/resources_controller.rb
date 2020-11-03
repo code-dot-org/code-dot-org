@@ -3,7 +3,6 @@ class ResourcesController < ApplicationController
 
   # GET /resourcesearch/:q/:limit
   def search
-    puts params
     render json: ResourcesAutocomplete.get_search_matches(params[:query], params[:limit], params[:courseVersionId])
   end
 
