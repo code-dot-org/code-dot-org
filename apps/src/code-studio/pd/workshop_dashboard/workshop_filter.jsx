@@ -435,7 +435,7 @@ export class WorkshopFilter extends React.Component {
             </Col>
           )}
           {this.props.permission.has(WorkshopAdmin) && (
-            <Col sm={3}>
+            <Col md={3} sm={4}>
               <FormGroup>
                 <ControlLabel>Virtual</ControlLabel>
                 <Select
