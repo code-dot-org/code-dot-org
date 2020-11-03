@@ -86,6 +86,10 @@ module Pd::WorkshopFilters
 
       if current_user.permission?(UserPermission::WORKSHOP_ADMIN)
         if params[:virtual]
+          # Note this is an inefficient workaround required
+          # because we store a workshop's virtual status as
+          # a serialized attribute, which cannot be queried easily
+          # via the typical ActiveRecord where method.
           virtual_status = params[:virtual] == 'yes'
           workshops_array = workshops.select do |workshop|
             workshop.virtual? == virtual_status
