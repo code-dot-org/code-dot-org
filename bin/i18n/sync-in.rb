@@ -363,8 +363,10 @@ def localize_markdown_content
     csforgood.md
     hourofcode/artist.md
     hourofcode/flappy.md
+    hourofcode/frozen.md
     hourofcode/hourofcode.md
     hourofcode/infinity.md
+    hourofcode/mc.md
     hourofcode/playlab.md
     hourofcode/starwars.md
     hourofcode/unplugged-conditionals-with-cards.md
