@@ -32,7 +32,10 @@ describe('SendLesson', () => {
 
     // click the button
     assert.equal(wrapper.find('Button').length, 1);
-    wrapper.find('Button').simulate('click');
+    wrapper
+      .find('Button')
+      .props()
+      .onClick();
 
     // dialog should now be open
     assert.equal(wrapper.find('Connect(SendLessonDialog)').length, 1);
