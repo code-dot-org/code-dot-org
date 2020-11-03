@@ -35,6 +35,18 @@ class FindResourceDialog extends Component {
     this.setState({selectedResourceKey: e.target.value});
   };
 
+  formatResourceName = resource => {
+    console.log(resource);
+    let formattedName = resource.name;
+    if (resource.properties.type) {
+      formattedName += ` - ${resource.properties.type} `;
+    }
+    if (resource.properties.audience) {
+      formattedName += ` - ${resource.properties.audience} `;
+    }
+    return formattedName;
+  };
+
   render() {
     return (
       <BaseDialog
@@ -52,7 +64,7 @@ class FindResourceDialog extends Component {
           >
             {this.props.resources.map(resource => (
               <option key={resource.key} value={resource.key}>
-                {resource.name}
+                {this.formatResourceName(resource)}
               </option>
             ))}
           </select>
