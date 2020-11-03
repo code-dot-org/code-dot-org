@@ -373,7 +373,7 @@ class ScriptLevelsController < ApplicationController
     return if params[:user_id].blank?
 
     if current_user.nil?
-      render plain: 'Teacher view is not available for this puzzle', layout: true
+      render text: 'Teacher view is not available for this puzzle', layout: true
       return
     end
 
