@@ -31,18 +31,12 @@ Scenario: Save changes to a script
   And element "#script_text" contains text "level 'Applab test'"
   And I scroll the ".btn-primary" element into view
   And I type "lesson 'temp-lesson', display_name: 'Temp Lesson'\nlevel 'Standalone_Artist_1'\nlevel 'Standalone_Artist_2'\n" into "#script_text"
+  And I remove the temp script from the cache
   And I click selector ".btn-primary" to load a new page
   And I wait until element "#script-title" is visible
 
   Then element ".uitest-bubble" contains text "1"
-
-  # this check is disabled because the script cache is enabled on the test machine,
-  # which means that during a DTT the rails server may return a cached copy of the
-  # script on the script overview page which only has bubble "1" but not bubble "2".
-  # TODO(dave): re-enable once we have a way to update/invalidate the cache on
-  # script save.
-
-  # And element ".uitest-bubble" contains text "2"
+  And element ".uitest-bubble" contains text "2"
 
   And I delete the temp script and lesson
 
