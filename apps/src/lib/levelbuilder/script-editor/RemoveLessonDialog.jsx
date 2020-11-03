@@ -33,10 +33,13 @@ export class UnconnectedRemoveLessonDialog extends Component {
 
   render() {
     const {lessonName, handleClose, lessonPosToRemove} = this.props;
-    let bodyText = `Are you sure you want to remove the level named "${lessonName}" from the script?`;
+    let bodyText = `Are you sure you want to permanently delete the lesson named "${lessonName}" and all its contents?`;
+    let footerText =
+      'This will delete any details within the lesson, such as level progressions and lesson plan markdown. Individual levels will not be deleted.';
     return (
       <Dialog
         body={bodyText}
+        footer={footerText}
         cancelText="Cancel"
         confirmText="Delete"
         confirmType="danger"
