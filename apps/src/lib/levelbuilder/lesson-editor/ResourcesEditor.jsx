@@ -41,7 +41,7 @@ class ResourcesEditor extends Component {
     courseVersionId: PropTypes.number,
 
     // Provided by redux
-    resources: PropTypes.arrayOf(resourceShape),
+    resources: PropTypes.arrayOf(resourceShape).isRequired,
     addResource: PropTypes.func.isRequired,
     removeResource: PropTypes.func.isRequired
   };
