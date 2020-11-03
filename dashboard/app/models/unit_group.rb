@@ -18,7 +18,7 @@ require 'cdo/script_constants'
 class UnitGroup < ApplicationRecord
   # Some Courses will have an associated Plc::Course, most will not
   has_one :plc_course, class_name: 'Plc::Course', foreign_key: 'course_id'
-  has_many :default_unit_group_units, -> {where(experiment_name: nil).order('position ASC')}, class_name: 'UnitGroupUnit', dependent: :destroy, foreign_key: 'course_id'
+  has_many :default_unit_group_units, -> {where(experiment_name: nil).order(Arel.sql("position ASC"))}, class_name: 'UnitGroupUnit', dependent: :destroy, foreign_key: 'course_id'
   has_many :default_scripts, through: :default_unit_group_units, source: :script
   has_many :alternate_unit_group_units, -> {where.not(experiment_name: nil)}, class_name: 'UnitGroupUnit', dependent: :destroy, foreign_key: 'course_id'
   has_one :course_version, as: :content_root
@@ -457,11 +457,11 @@ class UnitGroup < ApplicationRecord
 
     UnitGroup.
       # select only courses in the same course family.
-      where("properties -> '$.family_name' = ?", family_name).
+      where(Arel.sql("properties -> '$.family_name' = ?", family_name)).
       # select only stable courses.
-      where("properties -> '$.is_stable'").
+      where(Arel.sql("properties -> '$.is_stable'")).
       # order by version year.
-      order("properties -> '$.version_year' DESC")&.
+      order(Arel.sql("properties -> '$.version_year' DESC"))&.
       first
   end
 
@@ -476,9 +476,9 @@ class UnitGroup < ApplicationRecord
       # select only courses assigned to this user.
       where(id: assigned_course_ids).
       # select only courses in the same course family.
-      where("properties -> '$.family_name' = ?", family_name).
+      where(Arel.sql("properties -> '$.family_name' = ?", family_name)).
       # order by version year.
-      order("properties -> '$.version_year' DESC")&.
+      order(Arel.sql("properties -> '$.version_year' DESC"))&.
       first
   end
 

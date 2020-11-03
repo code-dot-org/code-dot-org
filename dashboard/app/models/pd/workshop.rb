@@ -211,7 +211,7 @@ class Pd::Workshop < ActiveRecord::Base
   def self.order_by_scheduled_start(desc: false)
     joins(:sessions).
       group_by_id.
-      order('DATE(MIN(pd_sessions.start))' + (desc ? ' DESC' : ''))
+      order(Arel.sql('DATE(MIN(pd_sessions.start))' + (desc ? ' DESC' : '')))
   end
 
   # Orders by the number of active enrollments
@@ -219,18 +219,20 @@ class Pd::Workshop < ActiveRecord::Base
   def self.order_by_enrollment_count(desc: false)
     left_outer_joins(:enrollments).
       group_by_id.
-      order('COUNT(pd_enrollments.id)' + (desc ? ' DESC' : ''))
+      order(Arel.sql('COUNT(pd_enrollments.id)' + (desc ? ' DESC' : '')))
   end
 
   # Orders by the workshop state, in order: Not Started, In Progress, Ended
   # @param :desc [Boolean] optional - when true, sort descending
   def self.order_by_state(desc: false)
-    order(%Q(
-      CASE
-        WHEN started_at IS NULL THEN "#{STATE_NOT_STARTED}"
-        WHEN ended_at IS NULL THEN "#{STATE_IN_PROGRESS}"
-        ELSE "#{STATE_ENDED}"
-      END #{desc ? ' DESC' : ''})
+    order(Arel.sql(
+      %Q(
+        CASE
+          WHEN started_at IS NULL THEN "#{STATE_NOT_STARTED}"
+          WHEN ended_at IS NULL THEN "#{STATE_IN_PROGRESS}"
+          ELSE "#{STATE_ENDED}"
+        END #{desc ? ' DESC' : ''})
+      )
     )
   end
 
@@ -273,7 +275,7 @@ class Pd::Workshop < ActiveRecord::Base
   def self.nearest
     joins(:sessions).
       select("pd_workshops.*, ABS(DATEDIFF(pd_sessions.start, '#{Date.today}')) AS day_diff").
-      order("day_diff ASC").
+      order(:day_diff).
       first
   end
 
@@ -283,7 +285,7 @@ class Pd::Workshop < ActiveRecord::Base
   def self.with_nearest_attendance_by(teacher)
     joins(sessions: :attendances).where(pd_attendances: {teacher_id: teacher.id}).
       select("pd_workshops.*, ABS(DATEDIFF(pd_sessions.start, '#{Date.today}')) AS day_diff").
-      order("day_diff").
+      order(:day_diff).
       first
   end
 

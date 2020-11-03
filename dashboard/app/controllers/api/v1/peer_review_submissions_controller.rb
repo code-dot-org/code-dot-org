@@ -54,7 +54,7 @@ class Api::V1::PeerReviewSubmissionsController < ApplicationController
     reviews = reviews.
       page(page).
       per(per).
-      order('id DESC').
+      order(id: :desc).
       group(:submitter_id, :level_id).
       select('max(peer_reviews.id) id, submitter_id, level_id')
 

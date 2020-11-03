@@ -127,17 +127,17 @@ module Pd::WorkshopFilters
         field, direction = parsed[1..2]
         case field
           when 'location_name'
-            workshops = workshops.order("location_name #{direction}".strip)
+            workshops = workshops.order(location_name: direction)
           when 'on_map'
-            workshops = workshops.order("on_map #{direction}".strip)
+            workshops = workshops.order(on_map: direction)
           when 'funded'
-            workshops = workshops.order("funded #{direction}".strip)
+            workshops = workshops.order(funded: direction)
           when 'course'
-            workshops = workshops.order("course #{direction}".strip)
+            workshops = workshops.order(course: direction)
           when 'subject'
-            workshops = workshops.order("subject #{direction}".strip)
+            workshops = workshops.order(subject: direction)
           when 'virtual'
-            workshops = workshops.order("virtual #{direction}".strip)
+            workshops = workshops.order(virtual: direction)
           when 'date'
             workshops = workshops.order_by_scheduled_start(desc: direction == 'desc')
           when 'enrollments'

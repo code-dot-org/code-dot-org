@@ -416,7 +416,7 @@ class User < ActiveRecord::Base
   before_create :update_default_share_setting
 
   # a bit of trickery to sort most recently started/assigned/progressed scripts first and then completed
-  has_many :user_scripts, -> {order "-completed_at asc, greatest(coalesce(started_at, 0), coalesce(assigned_at, 0), coalesce(last_progress_at, 0)) desc, user_scripts.id asc"}
+  has_many :user_scripts, -> {order Arel.sql("-completed_at asc, greatest(coalesce(started_at, 0), coalesce(assigned_at, 0), coalesce(last_progress_at, 0)) desc, user_scripts.id asc")}
   has_many :scripts, -> {where hidden: false}, through: :user_scripts, source: :script
 
   validates :name, presence: true, unless: -> {purged_at}
@@ -1215,7 +1215,7 @@ class User < ActiveRecord::Base
   def last_attempt(level, script = nil)
     query = UserLevel.where(user_id: id, level_id: level.id)
     query = query.where(script_id: script.id) unless script.nil?
-    query.order('updated_at DESC').first
+    query.order(updated_at: :desc).first
   end
 
   # Returns the most recent (via updated_at) user_level for any of the specified

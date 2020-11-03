@@ -464,7 +464,7 @@ class Script < ActiveRecord::Base
   end
 
   def self.get_family_without_cache(family_name)
-    Script.where(family_name: family_name).order("properties -> '$.version_year' DESC")
+    Script.where(family_name: family_name).order(Arel.sql("properties -> '$.version_year' DESC"))
   end
 
   # Returns all scripts within a family from the Rails cache.
@@ -627,7 +627,7 @@ class Script < ActiveRecord::Base
       # select only scripts in the same family.
       where(family_name: family_name).
       # order by version year descending.
-      order("properties -> '$.version_year' DESC")&.
+      order(Arel.sql("properties -> '$.version_year' DESC"))&.
       first
   end
 
@@ -702,8 +702,8 @@ class Script < ActiveRecord::Base
 
   def self.scripts_with_standards
     Script.
-      where("properties -> '$.curriculum_umbrella' = 'CSF'").
-      where("properties -> '$.version_year' >= '2019'").
+      where(Arel.sql("properties -> '$.curriculum_umbrella' = 'CSF'")).
+      where(Arel.sql("properties -> '$.version_year' >= '2019'")).
       map {|script| [script.title_for_display, script.name]}
   end
 

@@ -18,7 +18,7 @@ class Api::V1::SchoolAutocomplete < AutocompleteHelper
       matches = match_terms.join ' + '
       rows = rows.
         where("MATCH(name, city) AGAINST(? IN BOOLEAN MODE)", terms.join(' ')).
-        order("(#{matches}) DESC, state, city, name")
+        order(Arel.sql("(#{matches}) DESC, state, city, name"))
     elsif search_by_zip?((query = query.strip))
       query = "#{query[0, 5]}%"
       rows = rows.where("zip LIKE ?", query)
