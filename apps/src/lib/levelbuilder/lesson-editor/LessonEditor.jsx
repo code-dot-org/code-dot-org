@@ -105,8 +105,9 @@ export default class LessonEditor extends Component {
             />
             <HelpTip>
               <p>
-                Check this box if this lesson should be locked for students and
-                teachers can unlock it for their students.
+                Check this box if this lesson should be locked for students. If
+                checked, teachers will be able to unlock the lesson for their
+                students.
               </p>
             </HelpTip>
           </label>
