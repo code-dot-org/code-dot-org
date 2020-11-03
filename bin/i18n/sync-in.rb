@@ -355,11 +355,20 @@ def redact_block_content
 end
 
 def localize_markdown_content
-  markdown_files_to_localize = ['international/about.md.partial',
-                                'educate/curriculum/csf-transition-guide.md',
-                                'athome.md.partial',
-                                'break.md.partial',
-                                'csforgood.md']
+  markdown_files_to_localize = %w[
+    international/about.md.partial
+    educate/curriculum/csf-transition-guide.md
+    athome.md.partial
+    break.md.partial
+    csforgood.md
+    hourofcode/artist.md
+    hourofcode/flappy.md
+    hourofcode/hourofcode.md
+    hourofcode/infinity.md
+    hourofcode/playlab.md
+    hourofcode/starwars.md
+    hourofcode/unplugged-conditionals-with-cards.md
+  ]
   markdown_files_to_localize.each do |path|
     original_path = File.join('pegasus/sites.v3/code.org/public', path)
     original_path_exists = File.exist?(original_path)
