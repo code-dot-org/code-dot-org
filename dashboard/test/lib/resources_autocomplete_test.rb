@@ -6,29 +6,39 @@ class ResourcesAutocompleteTest < ActiveSupport::TestCase
   # as fixtures. These are defined in test/fixtures/resource.yml
 
   test "finds resource with matching name" do
-    matches = ResourcesAutocomplete.get_search_matches('Studi', 5)
+    matches = ResourcesAutocomplete.get_search_matches('Studi', 5, nil)
     assert_equal 1, matches.length
     assert_equal 'Code Studio', matches[0]['name']
   end
 
   test "finds resource with matching url" do
-    matches = ResourcesAutocomplete.get_search_matches("wikip", 5)
+    matches = ResourcesAutocomplete.get_search_matches("wikip", 5, nil)
     assert_equal 1, matches.length
     assert_equal 'wiki', matches[0]['name']
   end
 
   test "finds multiple matches" do
-    matches = ResourcesAutocomplete.get_search_matches("class", 5)
+    matches = ResourcesAutocomplete.get_search_matches("class", 5, nil)
     assert_equal 2, matches.length
   end
 
+  test "limits matches by course version id" do
+    matches = ResourcesAutocomplete.get_search_matches("class", 5, nil)
+    assert_equal 2, matches.length
+
+    # Check that specifying a course version id finds an associated resource
+    course_version_id = CourseVersion.find_by_key('2019').id
+    matches = ResourcesAutocomplete.get_search_matches("class", 5, course_version_id)
+    assert_equal 1, matches.length
+  end
+
   test "only returns up to limit matches" do
-    matches = ResourcesAutocomplete.get_search_matches("class", 1)
+    matches = ResourcesAutocomplete.get_search_matches("class", 1, nil)
     assert_equal 1, matches.length
   end
 
   test "returns empty list for short query" do
-    matches = ResourcesAutocomplete.get_search_matches("cl", 5)
+    matches = ResourcesAutocomplete.get_search_matches("cl", 5, nil)
     assert_equal [], matches
   end
 end
