@@ -1062,21 +1062,26 @@ Given(/^I delete the temp script and lesson$/) do
 end
 
 Given(/^I create a temp multi level$/) do
-  level_name = "temp-level-#{Time.now.to_i}-#{rand(1_000_000)}"
+  @temp_level_name = "temp-level-#{Time.now.to_i}-#{rand(1_000_000)}"
   steps "And I am on \"http://studio.code.org/levels/new?type=Multi\""
+  steps 'And I enter temp level multi dsl text'
+  steps 'And I click "input[type=\'submit\']" to load a new page'
+  @temp_level_id = @browser.current_url.split('/')[-2]
+  puts "created temp level with id #{@temp_level_id}"
+end
+
+Given(/^I enter temp level multi dsl text$/) do
   dsl = <<~DSL
-    name '#{level_name}'
+    name '#{@temp_level_name}'
     title 'title'
     description 'description here'
     question 'Question'
     wrong 'wrong answer'
     right 'right answer'
+    wrong 'incorrect answer'
   DSL
   steps 'And I clear the text from element "#level_dsl_text"'
   steps "And I press keys #{dsl.dump} for element \"#level_dsl_text\""
-  steps 'And I click "input[type=\'submit\']" to load a new page'
-  @temp_level_id = @browser.current_url.split('/')[-2]
-  puts "created temp level with id #{@temp_level_id}"
 end
 
 Given(/^I check I am on the temp level (show|edit) page$/) do |page|
