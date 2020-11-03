@@ -70,6 +70,7 @@ export default class ActivitySection extends Component {
                 <FontAwesome
                   key={`tipIcon-${index}`}
                   icon={tipTypes[tip.type].icon}
+                  style={{color: tipTypes[tip.type].color}}
                 />
               );
             })}
