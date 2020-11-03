@@ -6,11 +6,11 @@ import color from '@cdo/apps/util/color';
 
 export default class AddLevelTable extends Component {
   static propTypes = {
-    addLevel: PropTypes.func,
-    levels: PropTypes.array,
-    currentPage: PropTypes.number,
-    setCurrentPage: PropTypes.func,
-    numPages: PropTypes.number
+    addLevel: PropTypes.func.isRequired,
+    levels: PropTypes.array.isRequired,
+    currentPage: PropTypes.number.isRequired,
+    setCurrentPage: PropTypes.func.isRequired,
+    numPages: PropTypes.number.isRequired
   };
 
   render() {
