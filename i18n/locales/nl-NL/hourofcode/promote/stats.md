@@ -38,7 +38,7 @@ Technologie verandert elke industrie op de planeet. In 2015, 7 miljoen open bane
 
 #### Over Code.org
 
-Code.org® is een 501c3 publieke non-profit die zich richt op het uitbreiden van deelname aan programmeren en het vergroten van de deelname door vrouwen en studenten uit ondergerepresenteerde getinte leerlingen. Its vision is that every student in every school has the opportunity to learn computer programming. Na de lancering in 2013, organiseerde Code.org het CodeUur campagne – die meer dan 100 miljoen studenten geïntroduceerd heeft aan programmeren - en heeft meer dan 70 openbare schooldistricten landelijk als partners om programmeren te verspreiden. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. For more information, please visit: [code.org]({{ codeorg_link }}).
+Code.org is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by young women and students from other underrepresented groups. Its vision is that every student in every school has the opportunity to learn computer programming. Na de lancering in 2013, organiseerde Code.org het CodeUur campagne – die meer dan 100 miljoen studenten geïntroduceerd heeft aan programmeren - en heeft meer dan 70 openbare schooldistricten landelijk als partners om programmeren te verspreiden. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. For more information, please visit: [code.org]({{ codeorg_link }}).
 
 ## Share these on social media and in emails
 

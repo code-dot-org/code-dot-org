@@ -270,7 +270,7 @@
         "Dance Party 6_2019": "エイリアンが走り回っている！ベルを鳴らして、エイリアンを落ち着かせよう。\n\n最初にベルのスプライトを作ります。\n\nベルがクリックされたら、<xml><block type=\"gamelab_removeAllBehaviors\" block-text=\"the stops everything block\"><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"blue alien\"</title></block></value></block></xml> を使って エイリアンの動きを止めます！",
         "Dance Party 6_2020": "エイリアンが走り回っている！ベルを鳴らして、エイリアンを落ち着かせよう。\n\n最初にベルのスプライトを作ります。\n\nベルがクリックされたら、<xml><block type=\"gamelab_removeAllBehaviors\" block-text=\"the stops everything block\"><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"blue alien\"</title></block></value></block></xml> を使って エイリアンの動きを止めます！",
         "Dance Party 7": "最後に「私のベル」という新しいベルスプライトを追加します。",
-        "Dance Party 7_2019": "ピンクのエイリアンも楽しくなってきました！だれかにさわってダンスさせるように しましょう！\n\n<xml><block type=\"gamelab_checkTouching\" block-text=\"the when touching event block\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE1\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"blue alien\"</title></block></value><value name=\"SPRITE2\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"pink alien\"</title></block></value></block></xml> を使って、ピンクのエイリアンが青いエイリアンにさわったら、青いエイリアンがダンスするようにします。",
+        "Dance Party 7_2019": "最後に「私のベル」という新しいベルスプライトを追加します。",
         "Dance Party 7_2020": "ピンクのエイリアンも楽しくなってきました！だれかにさわってダンスさせるように しましょう！\n\n<xml><block type=\"gamelab_checkTouching\" block-text=\"the when touching event block\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE1\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"blue alien\"</title></block></value><value name=\"SPRITE2\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"pink alien\"</title></block></value></block></xml> を使って、ピンクのエイリアンが青いエイリアンにさわったら、青いエイリアンがダンスするようにします。",
         "Dance Party Freeplay": "さあ、あなたのエイリアンディスコを作りましょう！ひらめきが欲しいですか？次のアイデアを試してみてください。\n\n-   ベルスプライトを2つ作って、エイリアンにそれぞれ別のダンスの動きをさせる\n-   エイリアンが互いに触れるたびに新しいダンスの動きをさせる",
         "Dance Party Freeplay_2019": "さあ、あなたのエイリアンディスコを作りましょう！ひらめきが欲しいですか？次のアイデアを試してみてください。\n\n-   ベルスプライトを2つ作って、エイリアンにそれぞれ別のダンスの動きをさせる\n-   エイリアンが互いに触れるたびに新しいダンスの動きをさせる",
@@ -2320,7 +2320,12 @@
         "simconfig": "# 修正と予測\n\n変数の1つを 変更したら、結果が どうのように 変わるか 予測してみよう。\n\n予測を紙に書いたら、5回実行して、結果を比べてみよう。予測はあってたかな？",
         "simconfig_2020": "# 修正と予測\n\n変数の1つを 変更したら、結果が どうのように 変わるか 予測してみよう。\n\n予測を紙に書いたら、5回実行して、結果を比べてみよう。予測はあってたかな？",
         "simstarter": "# データを集める\n\n5回実行してみよう。画面に記録が出てくるので、データを集めましょう。\n\n-   ゾウはいくつリンゴを集めましたか？\n-   カバはいくつリンゴを集めましたか？\n-   リンゴをすべて集めるのに、何回、実行しましたか？",
-        "simstarter_2020": "# データを集める\n\n5回実行してみよう。画面に記録が出てくるので、データを集めましょう。\n\n-   ゾウはいくつリンゴを集めましたか？\n-   カバはいくつリンゴを集めましたか？\n-   リンゴをすべて集めるのに、何回、実行しましたか？"
+        "simstarter_2020": "# データを集める\n\n5回実行してみよう。画面に記録が出てくるので、データを集めましょう。\n\n-   ゾウはいくつリンゴを集めましたか？\n-   カバはいくつリンゴを集めましたか？\n-   リンゴをすべて集めるのに、何回、実行しましたか？",
+        "courseC_video_angles": "スクラットを ドングリのところへ つれていって！",
+        "courseD_video_nestedLoopsArtist": "こんどは、三角形をかいてみよう。\n\n* * *\n\n##### １つの辺の長さは100ピクセルで、曲がる角度は120度だよ。",
+        "courseE_bee_ramp14": "庭のあちらこちらにレタスがなっています。\\\n**までを くりかえします** を使ってレタスのところへ行って、**以下の間** を使ってレタスを しゅうかく しよう。  ",
+        "courseE_farmer_predict1": "レタスを すべて しゅうかく します。`くりかえし` の中に`以下の間 レタスがあります`を入れて、レタスを すべて しゅうかく しよう！",
+        "courseE_farmer_predict2": "庭のあちらこちらにレタスがなっています。\\\n**までを くりかえします** を使ってレタスのところへ行って、**以下の間** を使ってレタスを しゅうかく しよう。  "
       }
     }
   }

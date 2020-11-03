@@ -14,8 +14,8 @@ theme: responsive
 
 ### Lesson Plans:
 
-- [Write your first computer program (English)](/files/hoc-maze-lp.pdf)
-- [Write your first computer program (Spanish)](/files/hoc-maze-lp-spanish.pdf)
+- [Write your first computer program (English)](https://curriculum.code.org/hoc/plugged/1)
+- [Write your first computer program (Spanish - LATAM)](https://curriculum.code.org/es-mx/hoc/plugged/1)
 
 ### Extension Activities:
 

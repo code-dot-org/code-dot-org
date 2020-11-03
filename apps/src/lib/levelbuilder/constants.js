@@ -1,2 +1,2 @@
 export const borderRadius = 3;
-export const levelTokenMargin = 7;
+export const tokenMargin = 7;

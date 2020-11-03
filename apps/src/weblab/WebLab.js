@@ -168,6 +168,7 @@ WebLab.prototype.init = function(config) {
     this.studioApp_.initProjectTemplateWorkspaceIconCallout();
     this.studioApp_.alertIfCompletedWhilePairing(config);
     this.studioApp_.initVersionHistoryUI(config);
+    this.studioApp_.initTimeSpent();
 
     let finishButton = document.getElementById('finishButton');
     if (finishButton) {
@@ -189,7 +190,8 @@ WebLab.prototype.init = function(config) {
     documentationUrl: 'https://studio.code.org/docs/weblab/',
     isProjectLevel: !!config.level.isProjectLevel,
     isSubmittable: !!config.level.submittable,
-    isSubmitted: !!config.level.submitted
+    isSubmitted: !!config.level.submitted,
+    validationEnabled: !!config.level.validationEnabled
   });
 
   this.readOnly = config.readonlyWorkspace;
@@ -234,6 +236,7 @@ WebLab.prototype.init = function(config) {
   }
 
   function onRefreshPreview() {
+    this.studioApp_.debouncedSilentlyReport(this.level.id);
     project.autosave(() => {
       if (this.brambleHost) {
         this.brambleHost.refreshPreview();
@@ -297,22 +300,47 @@ WebLab.prototype.init = function(config) {
   };
 };
 
-WebLab.prototype.onFinish = function(submit) {
-  const onComplete = submit
-    ? onSubmitComplete
-    : this.studioApp_.onContinue.bind(this.studioApp_);
+WebLab.prototype.reportResult = function(submit, validated) {
+  let onComplete, testResult;
+
+  if (validated) {
+    testResult = TestResults.FREE_PLAY;
+    onComplete = submit
+      ? onSubmitComplete
+      : this.studioApp_.onContinue.bind(this.studioApp_);
+  } else {
+    testResult = TestResults.FREE_PLAY_UNCHANGED_FAIL;
+    onComplete = submit
+      ? onSubmitComplete
+      : () => {
+          this.studioApp_.displayFeedback({
+            feedbackType: testResult,
+            level: this.level
+          });
+        };
+  }
 
   project.autosave(() => {
     this.studioApp_.report({
       app: 'weblab',
       level: this.level.id,
-      result: true,
-      testResult: TestResults.FREE_PLAY,
+      result: validated,
+      testResult: testResult,
       program: this.getCurrentFilesVersionId() || '',
       submitted: submit,
       onComplete: onComplete
     });
   });
+};
+
+WebLab.prototype.onFinish = function(submit) {
+  if (this.level.validationEnabled) {
+    this.brambleHost.validateProjectChanged(validated =>
+      this.reportResult(submit, validated)
+    );
+  } else {
+    this.reportResult(submit, true /* validated */);
+  }
 };
 
 WebLab.prototype.getCodeAsync = function() {

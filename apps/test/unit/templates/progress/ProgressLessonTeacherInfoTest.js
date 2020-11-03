@@ -1,9 +1,31 @@
-import {assert} from '../../../util/deprecatedChai';
+import {assert} from '../../../util/reconfiguredChai';
 import React from 'react';
 import Immutable from 'immutable';
 import {shallow} from 'enzyme';
 import {UnconnectedProgressLessonTeacherInfo as ProgressLessonTeacherInfo} from '@cdo/apps/templates/progress/ProgressLessonTeacherInfo';
 import {fakeLesson} from '@cdo/apps/templates/progress/progressTestHelpers';
+import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
+
+const MOCK_GOOGLE_SECTION = {
+  id: 1,
+  name: 'intro to computer science I',
+  stageExtras: true,
+  pairingAllowed: true,
+  studentCount: 6,
+  code: 'G-149414657094',
+  providerManaged: true,
+  loginType: OAuthSectionTypes.google_classroom
+};
+
+const MOCK_NON_GOOGLE_SECTION = {
+  id: 2,
+  name: 'intro to computer science II',
+  stageExtras: true,
+  pairingAllowed: true,
+  studentCount: 4,
+  code: 'TQGSJR',
+  providerManaged: false
+};
 
 describe('ProgressLessonTeacherInfo', () => {
   it('renders a blue Button if and only if we have a lesson plan', () => {
@@ -20,7 +42,8 @@ describe('ProgressLessonTeacherInfo', () => {
       shallow(
         <ProgressLessonTeacherInfo
           lesson={lesson}
-          sectionId={'11'}
+          section={MOCK_NON_GOOGLE_SECTION}
+          levelUrl={'code.org'}
           scriptAllowsHiddenStages={false}
           hiddenStageState={Immutable.fromJS({
             stagesBySection: {11: {}}
@@ -28,6 +51,7 @@ describe('ProgressLessonTeacherInfo', () => {
           scriptName="My Script"
           hasNoSections={false}
           toggleHiddenStage={() => {}}
+          showGoogleClassroomButton={false}
         />
       )
     );
@@ -47,7 +71,8 @@ describe('ProgressLessonTeacherInfo', () => {
       shallow(
         <ProgressLessonTeacherInfo
           lesson={lesson}
-          sectionId={'11'}
+          section={MOCK_NON_GOOGLE_SECTION}
+          levelUrl={'code.org'}
           scriptAllowsHiddenStages={false}
           hiddenStageState={Immutable.fromJS({
             stagesBySection: {11: {}}
@@ -55,6 +80,7 @@ describe('ProgressLessonTeacherInfo', () => {
           scriptName="My Script"
           hasNoSections={false}
           toggleHiddenStage={() => {}}
+          showGoogleClassroomButton={false}
         />
       )
     );
@@ -69,7 +95,8 @@ describe('ProgressLessonTeacherInfo', () => {
     const wrapper = shallow(
       <ProgressLessonTeacherInfo
         lesson={lockableLesson}
-        sectionId={'11'}
+        section={MOCK_NON_GOOGLE_SECTION}
+        levelUrl={'code.org'}
         scriptAllowsHiddenStages={false}
         hiddenStageState={Immutable.fromJS({
           stagesBySection: {11: {}}
@@ -77,18 +104,23 @@ describe('ProgressLessonTeacherInfo', () => {
         scriptName="My Script"
         hasNoSections={true}
         toggleHiddenStage={() => {}}
+        showGoogleClassroomButton={false}
       />
     );
 
     assert.equal(wrapper.find('Connect(StageLock)').length, 0);
   });
 
-  it('renders our HiddenForSectionToggle when we have a section id', () => {
-    const [withId, withoutId] = ['11', undefined].map(sectionId =>
+  it('renders our HiddenForSectionToggle when we have a section', () => {
+    const [withSection, withoutSection] = [
+      MOCK_NON_GOOGLE_SECTION,
+      undefined
+    ].map(section =>
       shallow(
         <ProgressLessonTeacherInfo
           lesson={fakeLesson('Maze', 1)}
-          sectionId={sectionId}
+          section={section}
+          levelUrl={'code.org'}
           scriptAllowsHiddenStages={true}
           hiddenStageState={Immutable.fromJS({
             stagesBySection: {11: {}}
@@ -96,11 +128,37 @@ describe('ProgressLessonTeacherInfo', () => {
           scriptName="My Script"
           hasNoSections={false}
           toggleHiddenStage={() => {}}
+          showGoogleClassroomButton={false}
         />
       )
     );
 
-    assert.equal(withId.find('HiddenForSectionToggle').length, 1);
-    assert.equal(withoutId.find('HiddenForSectionToggle').length, 0);
+    assert.equal(withSection.find('HiddenForSectionToggle').length, 1);
+    assert.equal(withoutSection.find('HiddenForSectionToggle').length, 0);
+  });
+
+  it('only renders google share button when showGoogleClassroomButton is true', () => {
+    const [shouldShow, shouldNotShow] = [true, false].map(
+      showGoogleClassroomButton =>
+        shallow(
+          <ProgressLessonTeacherInfo
+            lesson={fakeLesson('Maze', 1)}
+            section={MOCK_GOOGLE_SECTION}
+            levelUrl={'code.org'}
+            scriptAllowsHiddenStages={true}
+            hiddenStageState={Immutable.fromJS({
+              stagesBySection: {11: {}}
+            })}
+            scriptName="My Script"
+            hasNoSections={false}
+            toggleHiddenStage={() => {}}
+            showGoogleClassroomButton={showGoogleClassroomButton}
+          />
+        )
+    );
+
+    const button = 'GoogleClassroomShareButton';
+    assert.equal(shouldShow.find(button).length, 1);
+    assert.equal(shouldNotShow.find(button).length, 0);
   });
 });

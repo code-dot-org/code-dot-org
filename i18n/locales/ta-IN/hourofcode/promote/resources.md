@@ -144,7 +144,7 @@ See http://hourofcode.com/{{ country }} for details, and help spread the word. <
 
 **Subject line**: Local school joins mission to introduce students to computer science
 
-Computers are everywhere, changing every industry on the planet, but only 45% of all high schools teach computer science. கம்ப்யூட்டர் மற்றும் சிறுபான்மையினர் கணினி அறிவியல் வகுப்புகளிலும், டெக்னாலஜி துறையில் கடுமையாக குறைத்துள்ளனர். நல்ல செய்தி, இதை மாற்றுவதற்கு நாங்கள் எங்கள் வழியில் இருக்கிறோம்
+Computers are everywhere, changing every industry on the planet, but only 45% of all high schools teach computer science. Young women and students from marginalized racial and ethnic groups are severely underrepresented in computer science classes, and in the tech industry. நல்ல செய்தி, இதை மாற்றுவதற்கு நாங்கள் எங்கள் வழியில் இருக்கிறோம்
 
 கோட் ஹவர் உடன், கணினி அறிவியல் Google, MSN, Yahoo !, டிஸ்னி ஆகியவற்றின் முகப்புகளில் உள்ளது. இந்த இயக்கத்தை ஆதரிக்க 100 க்கும் மேற்பட்ட பங்காளிகள் ஒன்று சேர்ந்துள்ளனர். உலகில் ஒவ்வொரு ஆப்பிள் ஸ்டோர் கோடரியின் ஒரு மணி நேரமும் வழங்கப்படுகிறது. பிரச்சாரத்தின் ஒரு பகுதியாக, ஒபாமா கூட தனது முதல் கோட் குறியீட்டை எழுதினார்.
 

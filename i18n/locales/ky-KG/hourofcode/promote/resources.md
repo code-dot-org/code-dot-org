@@ -144,7 +144,7 @@ See http://hourofcode.com/{{ country }} for details, and help spread the word. <
 
 **Subject line**: Local school joins mission to introduce students to computer science
 
-Computers are everywhere, changing every industry on the planet, but only 45% of all high schools teach computer science. Кыздар жана азчылыктар компүтердик билим берүү жана технологиялар класстарында аз. Жакшы жаңылык - биз бул абалды өзгөртүүдөбүз.
+Computers are everywhere, changing every industry on the planet, but only 45% of all high schools teach computer science. Young women and students from marginalized racial and ethnic groups are severely underrepresented in computer science classes, and in the tech industry. Жакшы жаңылык - биз бул абалды өзгөртүүдөбүз.
 
 Код сааты менен информатика Google, MSN, Yahoo жана Disney'дин башбарактарынан орун алды. 100 ашык өнөк бул кыймылды колдоо үчүн биригишти. Ар бир Apple Store Код саатын өткөздү. Жада калса өнөктүктүн алкагында экс-президент Обама өзү бир сап код жазды.
 

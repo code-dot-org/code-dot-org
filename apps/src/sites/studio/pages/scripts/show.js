@@ -6,6 +6,7 @@ import {
 } from '@cdo/apps/code-studio/verifiedTeacherRedux';
 import {getStore} from '@cdo/apps/code-studio/redux';
 import {registerReducers} from '@cdo/apps/redux';
+import {setCurrentUserId} from '@cdo/apps/templates/currentUserRedux';
 import plcHeaderReducer, {
   setPlcHeader
 } from '@cdo/apps/code-studio/plc/plcHeaderRedux';
@@ -34,6 +35,10 @@ function initPage() {
     );
   }
 
+  if (scriptData.user_id) {
+    store.dispatch(setCurrentUserId(scriptData.user_id));
+  }
+
   if (scriptData.has_verified_resources) {
     store.dispatch(setVerifiedResources(true));
   }
@@ -42,9 +47,9 @@ function initPage() {
     store.dispatch(setVerified());
   }
 
-  if (scriptData.script_announcements) {
+  if (scriptData.announcements) {
     registerReducers({announcements: announcementsReducer});
-    scriptData.script_announcements.forEach(announcement =>
+    scriptData.announcements.forEach(announcement =>
       store.dispatch(
         addAnnouncement(
           announcement.notice,

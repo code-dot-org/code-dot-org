@@ -5,6 +5,7 @@ sr:
       category:
         hoc_category_name: Час кода
         math_category_name: Математика
+        other_category_name: Други
       name:
         course1:
           title: Курс 1

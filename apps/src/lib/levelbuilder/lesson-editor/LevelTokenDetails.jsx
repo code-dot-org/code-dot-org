@@ -6,9 +6,10 @@ import {
   addVariant,
   removeVariant,
   setActiveVariant,
-  setField
+  setLevelField,
+  setScriptLevelField
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
-import {levelShape} from '@cdo/apps/lib/levelbuilder/shapes';
+import {scriptLevelShape} from '@cdo/apps/lib/levelbuilder/shapes';
 import LevelNameInput from '@cdo/apps/lib/levelbuilder/lesson-editor/LevelNameInput';
 import ReactTooltip from 'react-tooltip';
 import _ from 'lodash';
@@ -74,13 +75,10 @@ const styles = {
 };
 
 const tooltipText = {
+  bonus: 'Include in lesson extras at the end of the lesson',
   assessment:
     'Visibly mark this level as an assessment, and show it in the Assessments tab in Teacher Dashboard.',
-  named:
-    'Show this level on a line by itself, with the Display Name of the level as the label. This option is deprecated. Please specify a progression name instead.',
-  challenge: 'Show students the Challenge dialog when viewing this level.',
-  progression:
-    'Group this level with other levels in the same progression, with this text as the label.'
+  challenge: 'Show students the Challenge dialog when viewing this level.'
 };
 
 const ArrowRenderer = ({onMouseDown}) => {
@@ -90,7 +88,7 @@ ArrowRenderer.propTypes = {onMouseDown: PropTypes.func.isRequried};
 
 class LevelTokenDetails extends Component {
   static propTypes = {
-    level: levelShape.isRequired,
+    scriptLevel: scriptLevelShape.isRequired,
     activitySectionPosition: PropTypes.number.isRequired,
     activityPosition: PropTypes.number.isRequired,
 
@@ -101,26 +99,13 @@ class LevelTokenDetails extends Component {
     addVariant: PropTypes.func.isRequired,
     removeVariant: PropTypes.func.isRequired,
     setActiveVariant: PropTypes.func.isRequired,
-    setField: PropTypes.func.isRequired
+    setLevelField: PropTypes.func.isRequired,
+    setScriptLevelField: PropTypes.func.isRequired
   };
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      // Variants are deprecated. Only show them if they are already in use.
-      // If the number of variants is reduced to 1, keep showing the Add
-      // Variants button for the rest of this editing session.
-      showAddVariants: props.level.ids.length > 1,
-      // Named levels are deprecated. Only show the checkbox if the level is
-      // already marked as named, otherwise the author can name the level by
-      // specifying a name in the progression field.
-      showNamed: props.level.named
-    };
-  }
-
   containsLegacyLevel() {
-    return this.props.level.ids.some(id =>
-      /^blockly:/.test(this.props.levelKeyList[id])
+    return this.props.scriptLevel.levels.some(level =>
+      /^blockly:/.test(this.props.levelKeyList[level.id])
     );
   }
 
@@ -128,7 +113,7 @@ class LevelTokenDetails extends Component {
     this.props.chooseLevel(
       this.props.activityPosition,
       this.props.activitySectionPosition,
-      this.props.level.position,
+      this.props.scriptLevel.position,
       variant,
       levelId
     );
@@ -138,7 +123,7 @@ class LevelTokenDetails extends Component {
     this.props.addVariant(
       this.props.activityPosition,
       this.props.activitySectionPosition,
-      this.props.level.position
+      this.props.scriptLevel.position
     );
   };
 
@@ -146,7 +131,7 @@ class LevelTokenDetails extends Component {
     this.props.removeVariant(
       this.props.activityPosition,
       this.props.activitySectionPosition,
-      this.props.level.position,
+      this.props.scriptLevel.position,
       levelId
     );
   };
@@ -155,16 +140,16 @@ class LevelTokenDetails extends Component {
     this.props.setActiveVariant(
       this.props.activityPosition,
       this.props.activitySectionPosition,
-      this.props.level.position,
+      this.props.scriptLevel.position,
       id
     );
   };
 
   handleFieldChange = (field, event) => {
-    this.props.setField(
+    this.props.setLevelField(
       this.props.activityPosition,
       this.props.activitySectionPosition,
-      this.props.level.position,
+      this.props.scriptLevel.position,
       {
         [field]: event.target.value
       }
@@ -172,26 +157,31 @@ class LevelTokenDetails extends Component {
   };
 
   handleCheckboxChange = field => {
-    this.props.setField(
+    this.props.setScriptLevelField(
       this.props.activityPosition,
       this.props.activitySectionPosition,
-      this.props.level.position,
+      this.props.scriptLevel.position,
       {
-        [field]: !this.props.level[field]
+        [field]: !this.props.scriptLevel[field]
       }
     );
   };
 
   render() {
-    const {showAddVariants} = this.state;
     const tooltipIds = {};
     Object.keys(tooltipText).forEach(option => {
       tooltipIds[option] = _.uniqueId();
     });
-    const scriptLevelOptions = ['assessment', 'challenge'];
-    if (this.state.showNamed) {
-      scriptLevelOptions.push('named');
-    }
+    const scriptLevelOptions = ['bonus', 'assessment', 'challenge'];
+
+    const hasVariants = this.props.scriptLevel.levels.length > 1;
+
+    const activeLevel = hasVariants
+      ? this.props.scriptLevel.levels.filter(level => {
+          return level.id === this.props.scriptLevel.activeId;
+        })[0]
+      : this.props.scriptLevel.levels[0];
+
     return (
       <div style={styles.levelTokenActive}>
         <span className="level-token-checkboxes">
@@ -205,7 +195,7 @@ class LevelTokenDetails extends Component {
               <input
                 type="checkbox"
                 style={styles.checkboxInput}
-                checked={!!this.props.level[option]}
+                checked={!!this.props.scriptLevel[option]}
                 onChange={this.handleCheckboxChange.bind(this, option)}
               />
               &nbsp;
@@ -222,14 +212,14 @@ class LevelTokenDetails extends Component {
             <div style={{clear: 'both'}} />
             <span style={styles.levelFieldLabel}>Skin:</span>
             <input
-              defaultValue={this.props.level.skin}
+              defaultValue={activeLevel.skin}
               type="text"
               style={styles.shortTextInput}
               onChange={event => this.handleFieldChange('skin', event)}
             />
             <span style={styles.levelFieldLabel}>Video key:</span>
             <input
-              defaultValue={this.props.level.videoKey}
+              defaultValue={activeLevel.videoKey}
               type="text"
               style={styles.shortTextInput}
               onChange={event => this.handleFieldChange('videoKey', event)}
@@ -237,7 +227,7 @@ class LevelTokenDetails extends Component {
             <div style={{clear: 'both'}} />
             <span style={styles.levelFieldLabel}>Difficulty:</span>
             <input
-              defaultValue={this.props.level.conceptDifficulty}
+              defaultValue={activeLevel.conceptDifficulty}
               type="text"
               style={styles.shortTextInput}
               onChange={event =>
@@ -246,32 +236,37 @@ class LevelTokenDetails extends Component {
             />
             <span style={styles.levelFieldLabel}>Concepts:</span>
             <input
-              defaultValue={this.props.level.concepts}
+              defaultValue={activeLevel.concepts}
               type="text"
               style={styles.shortTextInput}
               onChange={event => this.handleFieldChange('concepts', event)}
             />
           </div>
         )}
-        {this.props.level.ids.length > 1 &&
-          this.props.level.ids.map((id, index) => (
-            <div key={id}>
+        {hasVariants &&
+          this.props.scriptLevel.levels.map((level, index) => (
+            <div key={level.id}>
               <div>
                 <hr style={styles.divider} />
                 <span>
                   <span style={styles.levelFieldLabel}>Active</span>
                   <input
                     type="radio"
-                    onChange={this.handleActiveVariantChanged.bind(this, id)}
-                    defaultChecked={id === this.props.level.activeId}
+                    onChange={this.handleActiveVariantChanged.bind(
+                      this,
+                      level.id
+                    )}
+                    defaultChecked={
+                      level.id === this.props.scriptLevel.activeId
+                    }
                     style={styles.checkbox}
-                    name={`radio-${this.props.level.position}`}
+                    name={`radio-${this.props.scriptLevel.position}`}
                   />
                 </span>
-                {id !== this.props.level.activeId && (
+                {level.id !== this.props.scriptLevel.activeId && (
                   <span style={styles.removeVariant}>
                     <button
-                      onMouseDown={() => this.handleRemoveVariant(id)}
+                      onMouseDown={() => this.handleRemoveVariant(level.id)}
                       className="btn"
                       style={styles.button}
                       type="button"
@@ -288,26 +283,28 @@ class LevelTokenDetails extends Component {
               )}
               <span style={{...styles.levelFieldLabel}}>Level name:</span>
               <LevelNameInput
-                onSelectLevel={id => this.handleLevelSelected(index, id)}
+                onSelectLevel={this.handleLevelSelected.bind(
+                  this,
+                  index,
+                  level.id
+                )}
                 levelNameToIdMap={this.props.levelNameToIdMap}
-                initialLevelName={this.props.levelKeyList[id] || ''}
+                initialLevelName={this.props.levelKeyList[level.id] || ''}
               />
             </div>
           ))}
-        {showAddVariants && (
-          <div>
-            <hr style={styles.divider} />
-            <button
-              onMouseDown={this.handleAddVariant}
-              className="btn"
-              style={styles.button}
-              type="button"
-            >
-              <i style={{marginRight: 7}} className="fa fa-plus-circle" />
-              Add Variant
-            </button>
-          </div>
-        )}
+        <div>
+          <hr style={styles.divider} />
+          <button
+            onMouseDown={this.handleAddVariant}
+            className="btn"
+            style={styles.button}
+            type="button"
+          >
+            <i style={{marginRight: 7}} className="fa fa-plus-circle" />
+            Add Variant
+          </button>
+        </div>
       </div>
     );
   }
@@ -325,6 +322,7 @@ export default connect(
     addVariant,
     removeVariant,
     setActiveVariant,
-    setField
+    setLevelField,
+    setScriptLevelField
   }
 )(LevelTokenDetails);

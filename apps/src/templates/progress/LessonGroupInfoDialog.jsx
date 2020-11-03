@@ -33,7 +33,7 @@ export default class LessonGroupInfoDialog extends Component {
     displayName: PropTypes.string.isRequired,
     description: PropTypes.string,
     closeDialog: PropTypes.func,
-    bigQuestions: PropTypes.array
+    bigQuestions: PropTypes.string
   };
 
   render() {
@@ -53,19 +53,12 @@ export default class LessonGroupInfoDialog extends Component {
             />
           </div>
         )}
-        {this.props.bigQuestions && this.props.bigQuestions.length > 0 && (
+        {this.props.bigQuestions && (
           <div style={styles.description}>
-            <h5 style={styles.bigQuestion}>{i18n.bigQuestions()}</h5>
-            <ul>
-              {this.props.bigQuestions.map(question => (
-                <li key={question}>
-                  <SafeMarkdown
-                    openExternalLinksInNewTab={true}
-                    markdown={question}
-                  />
-                </li>
-              ))}
-            </ul>
+            <SafeMarkdown
+              openExternalLinksInNewTab={true}
+              markdown={this.props.bigQuestions}
+            />
           </div>
         )}
         <DialogFooter rightAlign>

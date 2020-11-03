@@ -1058,6 +1058,12 @@ en:
             '"frames"': frames
       gamelab_hideTitleScreen:
         text: hide title screen
+      gamelab_ifVarEquals:
+        text: |-
+          if {NUM} ={VAL}
+          {STATEMENT}
+      gamelab_isCostumeEqual:
+        text: "{SPRITE} costume is {COSTUME}"
       gamelab_isKeyPressed:
         text: "{KEY} is pressed"
         options:
@@ -1207,6 +1213,8 @@ en:
         text: sprite {SPRITE} stops {BEHAVIOR}
       gamelab_removeTint:
         text: remove color from {THIS}
+      gamelab_repeatForever:
+        text: repeat forever
       gamelab_setAnimation:
         text: change {THIS} costume to {ANIMATION}
       gamelab_setBackground:
@@ -1254,6 +1262,8 @@ en:
             '"x"': x position
             '"y"': y position
             '"direction"': movement direction
+      gamelab_setQuestion:
+        text: prompt user {QUESTION} for variable {VAR}
       gamelab_setSizes:
         text: set {SPRITE} {PROPERTY} to {N}%
         options:
@@ -1307,6 +1317,8 @@ en:
             '"d"': d
       gamelab_whenLeftArrow:
         text: when left arrow pressed
+      gamelab_whenQuestionAnswered:
+        text: when {VAR} is answered
       gamelab_whenRightArrow:
         text: when right arrow pressed
       gamelab_whenTouching:
@@ -1336,6 +1348,10 @@ en:
         text: while {SPRITE1} is touching {SPRITE2}
       gamelab_whileUpArrow:
         text: while up arrow pressed
+      gamelab_withPercentChance:
+        text: |-
+          if {NUM}% chance
+          {STATEMENT}
       gamelab_xLocationOf:
         text: x coordinate of {SPRITE}
       gamelab_yLocationOf:

@@ -24,7 +24,7 @@ Da sinistra a destra: *Governatori dell'Arkansas, del North Carolina e dell'Ariz
 
 ### 1. Leggi il nostro volantino
 
-Leggi la nostra presentazione sul perché la formazione informatica è importante e come si può aiutare sostenendo l'Ora del Codice. [Scarica qui la presentazione (in inglese)](/files/hoc-one-pager.pdf).
+Vedi [perché l'educazione informatica è importante]({{ localized_files/hoc_one_pager }}), e come puoi aiutarci nel nostro sforzo sostenendo l'Ora del Codice. 
 
 ### 2. Coinvolgi le scuole locali
 

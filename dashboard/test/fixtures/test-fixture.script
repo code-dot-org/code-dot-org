@@ -1,4 +1,4 @@
-script_announcements [{"notice"=>"foo", "details"=>"bar", "link"=>"", "type"=>"information"}]
+announcements [{"notice"=>"foo", "details"=>"bar", "link"=>"", "type"=>"information"}]
 
 lesson 'lesson1', display_name: 'Lesson One'
 level 'Level 1'

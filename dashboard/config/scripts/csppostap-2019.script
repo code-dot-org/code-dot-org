@@ -5,7 +5,7 @@ student_detail_progress_view true
 has_verified_resources true
 has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/{LOCALE}/csp-19/post-ap/{LESSON}'
-script_announcements [{"notice"=>"No Lesson Plans in Chapter 2", "details"=>"Please note there are no lesson plans for Chapter 2 of this unit.", "link"=>"", "type"=>"information", "visibility"=>"Teacher-only"}]
+announcements [{"notice"=>"No Lesson Plans in Chapter 2", "details"=>"Please note there are no lesson plans for Chapter 2 of this unit.", "link"=>"", "type"=>"information", "visibility"=>"Teacher-only"}]
 family_name 'csppostap'
 version_year '2019'
 is_stable true

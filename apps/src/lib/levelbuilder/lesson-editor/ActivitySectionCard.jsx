@@ -1,9 +1,6 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import {
-  levelTokenMargin,
-  borderRadius
-} from '@cdo/apps/lib/levelbuilder/constants';
+import {tokenMargin, borderRadius} from '@cdo/apps/lib/levelbuilder/constants';
 import OrderControls from '@cdo/apps/lib/levelbuilder/OrderControls';
 import ActivitySectionCardButtons from './ActivitySectionCardButtons';
 import {connect} from 'react-redux';
@@ -11,7 +8,6 @@ import {
   moveActivitySection,
   removeActivitySection,
   updateActivitySectionField,
-  addTip,
   reorderLevel,
   moveLevelToActivitySection,
   addLevel,
@@ -54,13 +50,6 @@ const styles = {
     display: 'flex',
     justifyContent: 'space-between'
   },
-  addLevel: {
-    fontSize: 14,
-    background: '#eee',
-    border: '1px solid #ddd',
-    boxShadow: 'inset 0 1px 0 0 rgba(255, 255, 255, 0.8)',
-    margin: '0 5px 0 0'
-  },
   checkboxesAndButtons: {
     display: 'flex',
     flexDirection: 'row',
@@ -99,15 +88,16 @@ class ActivitySectionCard extends Component {
     activityPosition: PropTypes.number,
     activitySectionsCount: PropTypes.number,
     activitiesCount: PropTypes.number,
-    activitySectionMetrics: PropTypes.object,
-    setTargetActivitySection: PropTypes.func,
+    activitySectionMetrics: PropTypes.array.isRequired,
+    updateTargetActivitySection: PropTypes.func.isRequired,
+    targetActivityPos: PropTypes.number,
     targetActivitySectionPos: PropTypes.number,
+    updateActivitySectionMetrics: PropTypes.func.isRequired,
 
     //redux
     moveActivitySection: PropTypes.func,
     removeActivitySection: PropTypes.func,
     updateActivitySectionField: PropTypes.func,
-    addTip: PropTypes.func,
     reorderLevel: PropTypes.func,
     moveLevelToActivitySection: PropTypes.func,
     addLevel: PropTypes.func
@@ -133,17 +123,22 @@ class ActivitySectionCard extends Component {
     // page since the last time this component was updated. Therefore, force the
     // component to rerender so that this.metrics will be up to date.
     this.forceUpdate(() => {
-      const startingPositions = this.props.activitySection.levels.map(level => {
-        const metrics = this.metrics[level.position];
-        return metrics.top + metrics.height / 2;
-      });
-      this.setState({
-        draggedLevelPos: position,
-        dragHeight: this.metrics[position].height + levelTokenMargin,
-        initialClientY: clientY,
-        newPosition: position,
-        startingPositions
-      });
+      const startingPositions = this.props.activitySection.scriptLevels.map(
+        scriptLevel => {
+          const metrics = this.metrics[scriptLevel.position];
+          return metrics.top + metrics.height / 2;
+        }
+      );
+      this.setState(
+        {
+          draggedLevelPos: position,
+          dragHeight: this.metrics[position].height + tokenMargin,
+          initialClientY: clientY,
+          newPosition: position,
+          startingPositions
+        },
+        () => this.props.updateActivitySectionMetrics()
+      );
       window.addEventListener('selectstart', this.preventSelect);
       window.addEventListener('mousemove', this.handleDrag);
       window.addEventListener('mouseup', this.handleDragStop);
@@ -175,34 +170,20 @@ class ActivitySectionCard extends Component {
       }
     );
     this.setState({currentPositions, newPosition});
-    const targetActivitySectionPos = this.getTargetActivitySection(clientY);
-    this.props.setTargetActivitySection(targetActivitySectionPos);
-  };
-
-  // Given a clientY value of a location on the screen, find the ActivitySectionCard
-  // corresponding to that location, and return the position of the
-  // corresponding activity section within the script.
-  getTargetActivitySection = y => {
-    const {activitySectionMetrics} = this.props;
-    const activitySectionPos = Object.keys(activitySectionMetrics).find(
-      activitySectionPos => {
-        const activitySectionRect = activitySectionMetrics[activitySectionPos];
-        return (
-          y > activitySectionRect.top &&
-          y < activitySectionRect.top + activitySectionRect.height
-        );
-      }
-    );
-    return activitySectionPos ? Number(activitySectionPos) : null;
+    this.props.updateTargetActivitySection(clientY);
   };
 
   handleDragStop = () => {
     const {
       activitySection,
       activityPosition,
+      targetActivityPos,
       targetActivitySectionPos
     } = this.props;
-    if (targetActivitySectionPos === activitySection.position) {
+    if (
+      targetActivityPos === activityPosition &&
+      targetActivitySectionPos === activitySection.position
+    ) {
       // When dragging within a activitySection, reorder the level within that activitySection.
       if (this.state.draggedLevelPos !== this.state.newPosition) {
         this.props.reorderLevel(
@@ -212,16 +193,19 @@ class ActivitySectionCard extends Component {
           this.state.newPosition
         );
       }
-    } else if (targetActivitySectionPos) {
+    } else if (targetActivityPos && targetActivitySectionPos) {
       // When dragging between activitySections, move it to the end of the new activitySection.
       this.props.moveLevelToActivitySection(
         activityPosition,
         activitySection.position,
         this.state.draggedLevelPos,
+        targetActivityPos,
         targetActivitySectionPos
       );
     }
-    this.props.setTargetActivitySection(null);
+
+    // shortcut to clear target activity section
+    this.props.updateTargetActivitySection(-1);
 
     this.setState({
       draggedLevelPos: null,
@@ -291,17 +275,14 @@ class ActivitySectionCard extends Component {
     );
   };
 
-  handleAddTip = tip => {
-    this.props.addTip(
+  appendResourceLink = resourceKey => {
+    const currentText = this.props.activitySection.text;
+    this.props.updateActivitySectionField(
       this.props.activityPosition,
       this.props.activitySection.position,
-      tip
+      'text',
+      currentText + `\n[r ${resourceKey}]`
     );
-  };
-
-  //TODO: Hook up editing the tip when you click on the icon
-  handleEditTip = tip => {
-    console.log(`edit tip ${tip}`);
   };
 
   handleRemoveLevel = levelPos => {
@@ -316,33 +297,34 @@ class ActivitySectionCard extends Component {
     e.preventDefault();
   }
 
-  //TODO: Hook up being able to actually pick a level to add instead of holding place level
-  handleAddLevel = () => {
-    const newLevelPosition = this.props.activitySection.levels.length + 1;
+  handleAddLevel = level => {
+    const newLevelPosition = this.props.activitySection.scriptLevels.length + 1;
     this.props.addLevel(
       this.props.activityPosition,
       this.props.activitySection.position,
       {
-        ids: [NEW_LEVEL_ID],
-        activeId: NEW_LEVEL_ID,
-        status: 'not started',
-        url: 'https://levelbuilder-studio.code.org/levels/598/edit',
-        icon: 'fa-desktop',
-        name: `Level ${newLevelPosition}`,
-        isUnplugged: false,
-        levelNumber: newLevelPosition,
-        isCurrentLevel: false,
-        isConceptLevel: false,
-        sublevels: [],
+        id: NEW_LEVEL_ID,
+        levels: [
+          {
+            id: level.id,
+            name: level.name,
+            url: `/levels/${level.id}/edit`,
+            icon: level.icon || 'fa-desktop',
+            isUnplugged: level.isUnplugged,
+            isConceptLevel: level.isConceptLevel,
+            skin: level.skin,
+            videoKey: level.videoKey,
+            concepts: level.concepts,
+            conceptDifficulty: level.conceptDifficulty
+          }
+        ],
+        activeId: level.id,
         position: newLevelPosition,
         kind: 'puzzle',
-        skin: null,
-        videoKey: null,
-        concepts: '',
-        conceptDifficulty: '',
-        named: false,
+        bonus: false,
         assessment: false,
-        challenge: false
+        challenge: false,
+        expand: false
       }
     );
   };
@@ -350,11 +332,13 @@ class ActivitySectionCard extends Component {
   render() {
     const {
       activitySection,
+      targetActivityPos,
       targetActivitySectionPos,
       activityPosition
     } = this.props;
     const {draggedLevelPos, levelPosToRemove} = this.state;
     const isTargetActivitySection =
+      targetActivityPos === activityPosition &&
       targetActivitySectionPos === activitySection.position;
     return (
       <div
@@ -382,7 +366,7 @@ class ActivitySectionCard extends Component {
           </label>
           <div style={styles.checkboxesAndButtons}>
             <span style={styles.checkboxes}>
-              {this.props.activitySection.levels.length === 0 && (
+              {this.props.activitySection.scriptLevels.length === 0 && (
                 <label style={styles.labelAndCheckbox}>
                   Remarks
                   <input
@@ -414,34 +398,33 @@ class ActivitySectionCard extends Component {
           style={styles.input}
           onChange={this.handleChangeText}
         />
-        {this.props.activitySection.levels.length > 0 &&
-          this.props.activitySection.levels.map(level => (
+        {this.props.activitySection.scriptLevels.length > 0 &&
+          this.props.activitySection.scriptLevels.map(scriptLevel => (
             <LevelToken
               ref={levelToken => {
                 if (levelToken) {
                   const metrics = ReactDOM.findDOMNode(
                     levelToken
                   ).getBoundingClientRect();
-                  this.metrics[level.position] = metrics;
+                  this.metrics[scriptLevel.position] = metrics;
                 }
               }}
-              key={level.position + '_' + level.ids[0]}
-              level={level}
+              key={scriptLevel.position + '_' + scriptLevel.activeId[0]}
+              scriptLevel={scriptLevel}
               removeLevel={this.handleRemoveLevel}
               activitySectionPosition={this.props.activitySection.position}
               activityPosition={activityPosition}
               dragging={!!draggedLevelPos}
-              draggedLevelPos={level.position === draggedLevelPos}
-              delta={this.state.currentPositions[level.position - 1] || 0}
+              draggedLevelPos={scriptLevel.position === draggedLevelPos}
+              delta={this.state.currentPositions[scriptLevel.position - 1] || 0}
               handleDragStart={this.handleDragStart}
             />
           ))}
         <ActivitySectionCardButtons
           activitySection={this.props.activitySection}
-          addTip={this.handleAddTip}
-          editTip={this.handleEditTip}
           addLevel={this.handleAddLevel}
           activityPosition={this.props.activityPosition}
+          appendResourceLink={this.appendResourceLink}
         />
         {/* This dialog lives outside LevelToken because moving it inside can
            interfere with drag and drop or fail to show the modal backdrop. */}
@@ -466,7 +449,6 @@ export default connect(
     addLevel,
     moveActivitySection,
     removeActivitySection,
-    updateActivitySectionField,
-    addTip
+    updateActivitySectionField
   }
 )(ActivitySectionCard);

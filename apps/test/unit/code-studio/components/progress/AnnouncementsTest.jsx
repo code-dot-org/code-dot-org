@@ -2,42 +2,18 @@ import React from 'react';
 import {assert} from '../../../../util/reconfiguredChai';
 import {shallow} from 'enzyme';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import {NotificationType} from '@cdo/apps/templates/Notification';
-import {VisibilityType} from '../../../../../src/code-studio/announcementsRedux';
 import Announcements from '@cdo/apps/code-studio/components/progress/Announcements';
+import {
+  fakeStudentAnnouncement,
+  fakeTeacherAndStudentAnnouncement,
+  fakeTeacherAnnouncement,
+  fakeOldTeacherAnnouncement
+} from './FakeAnnouncementsTestData';
 
 const defaultProps = {
   announcements: [],
   viewAs: ViewType.Teacher,
   width: 1000
-};
-
-const fakeTeacherAnnouncement = {
-  notice: 'Notice - Teacher',
-  details: 'Teachers are the best',
-  link: '/foo/bar/teacher',
-  type: NotificationType.information,
-  visibility: VisibilityType.teacher
-};
-const fakeOldTeacherAnnouncement = {
-  notice: 'Notice - Teacher',
-  details: 'Teachers are the best',
-  link: '/foo/bar/teacher',
-  type: NotificationType.information
-};
-const fakeStudentAnnouncement = {
-  notice: 'Notice - Student',
-  details: 'Students are the best',
-  link: '/foo/bar/student',
-  type: NotificationType.information,
-  visibility: VisibilityType.student
-};
-const fakeTeacherAndStudentAnnouncement = {
-  notice: 'Notice - Teacher And Student',
-  details: 'More detail here',
-  link: '/foo/bar/teacherAndStudent',
-  type: NotificationType.information,
-  visibility: VisibilityType.teacherAndStudent
 };
 
 describe('Announcements', () => {

@@ -2798,6 +2798,69 @@
           "draw bit": {
             "name": "parça çiz"
           }
+        },
+        "MC_HOC_2017_07_Cole": {
+          "clear path": {
+            "name": "açık yol"
+          }
+        },
+        "MC_HOC_2017_07_Cole_2019": {
+          "clear path": {
+            "name": "açık yol"
+          }
+        },
+        "MC_HOC_2017_07_Cole_2020": {
+          "clear path": {
+            "name": "açık yol"
+          }
+        },
+        "MC_HOC_2017_10_RETRY": {
+          "fix long path": {
+            "name": "Sabit uzun yol"
+          },
+          "fix short path": {
+            "name": "sabit kısa yol"
+          }
+        },
+        "MC_HOC_2017_10_RETRY_2019": {
+          "fix long path": {
+            "name": "Sabit uzun yol"
+          },
+          "fix short path": {
+            "name": "sabit kısa yol"
+          }
+        },
+        "MC_HOC_2017_10_RETRY_2020": {
+          "fix long path": {
+            "name": "Sabit uzun yol"
+          },
+          "fix short path": {
+            "name": "sabit kısa yol"
+          }
+        },
+        "MC_HOC_2017_Ali": {
+          "build short bridge": {
+            "name": "kısa köpru kur"
+          },
+          "build long bridge": {
+            "name": "uzun köprü kur"
+          }
+        },
+        "MC_HOC_2017_Ali_2019": {
+          "build short bridge": {
+            "name": "kısa köpru kur"
+          },
+          "build long bridge": {
+            "name": "uzun köprü kur"
+          }
+        },
+        "MC_HOC_2017_Ali_2020": {
+          "build short bridge": {
+            "name": "kısa köpru kur"
+          },
+          "build long bridge": {
+            "name": "uzun köprü kur"
+          }
         }
       }
     }

@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import LessonGroups from '@cdo/apps/lib/levelbuilder/script-editor/LessonGroups';
+import UnitCard from '@cdo/apps/lib/levelbuilder/script-editor/UnitCard';
 import LessonDescriptions from '@cdo/apps/lib/levelbuilder/script-editor/LessonDescriptions';
 import AnnouncementsEditor from '@cdo/apps/lib/levelbuilder/announcementsEditor/AnnouncementsEditor';
 import $ from 'jquery';
@@ -12,6 +12,7 @@ import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import LessonExtrasEditor from '@cdo/apps/lib/levelbuilder/script-editor/LessonExtrasEditor';
 import color from '@cdo/apps/util/color';
 import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
+import CollapsibleEditorSection from '@cdo/apps/lib/levelbuilder/CollapsibleEditorSection';
 
 const styles = {
   input: {
@@ -34,6 +35,22 @@ const styles = {
     marginBottom: 10,
     border: '1px solid ' + color.light_gray,
     padding: 10
+  },
+  saveButtonBackground: {
+    margin: 0,
+    position: 'fixed',
+    bottom: 0,
+    left: 0,
+    backgroundColor: color.lightest_gray,
+    borderColor: color.lightest_gray,
+    height: 50,
+    width: '100%',
+    zIndex: 900,
+    display: 'flex',
+    justifyContent: 'flex-end'
+  },
+  saveButton: {
+    margin: '10px 50px 10px 20px'
   }
 };
 
@@ -87,7 +104,8 @@ export default class ScriptEditor extends React.Component {
     super(props);
 
     this.state = {
-      curriculumUmbrella: this.props.curriculumUmbrella
+      familyName: this.props.familyName || '',
+      isCourse: this.props.isCourse
     };
   }
 
@@ -97,9 +115,12 @@ export default class ScriptEditor extends React.Component {
       .removeAttr('selected', true);
   };
 
-  handleUmbrellaSelectChange = event => {
-    const curriculumUmbrella = event.target.value;
-    this.setState({curriculumUmbrella});
+  handleFamilyNameChange = event => {
+    this.setState({familyName: event.target.value});
+  };
+
+  handleStandaloneCourseChange = () => {
+    this.setState({isCourse: !this.state.isCourse});
   };
 
   presubmit = e => {
@@ -118,6 +139,19 @@ export default class ScriptEditor extends React.Component {
       ) {
         e.preventDefault();
       }
+    }
+    // HACK: until the script edit page no longer overwrites changes to the
+    // arrangement of levels within lessons, give the user a warning
+    if (
+      window.lessonEditorOpened &&
+      !confirm(
+        'WARNING: It looks like you opened a lesson edit page from this script edit page. ' +
+          'If you made any changes on the lesson edit page which you do not ' +
+          'wish to lose, please click cancel now and reload this page before ' +
+          'saving any changes to this script edit page.'
+      )
+    ) {
+      e.preventDefault();
     }
   };
 
@@ -173,375 +207,442 @@ export default class ScriptEditor extends React.Component {
           name={'description'}
           inputRows={5}
         />
-        <h2>Basic Settings</h2>
-        <label>
-          Require Login To Use
-          <input
-            name="login_required"
-            type="checkbox"
-            defaultChecked={this.props.loginRequired}
-            style={styles.checkbox}
-          />
-          <HelpTip>
-            <p>Require users to log in before viewing this script.</p>
-          </HelpTip>
-        </label>
-        <label>
-          Default Progress to Detail View
-          <input
-            name="student_detail_progress_view"
-            type="checkbox"
-            defaultChecked={this.props.studentDetailProgressView}
-            style={styles.checkbox}
-          />
-          <HelpTip>
-            <p>
-              By default students start in the summary view. When this box is
-              checked, we instead stick everyone into detail view to start for
-              this script.
-            </p>
-          </HelpTip>
-        </label>
-        <label>
-          Display project sharing column in Teacher Dashboard
-          <input
-            name="project_sharing"
-            type="checkbox"
-            defaultChecked={this.props.projectSharing}
-            style={styles.checkbox}
-          />
-          <HelpTip>
-            <p>
-              If checked, the "Sharing" column in the "Manage Students" tab of
-              Teacher Dashboard will be displayed by default for sections
-              assigned to this script.
-            </p>
-          </HelpTip>
-        </label>
-        <label>
-          Enable Text-to-Speech
-          <input
-            name="tts"
-            type="checkbox"
-            defaultChecked={this.props.tts}
-            style={styles.checkbox}
-          />
-          <HelpTip>
-            <p>Check to enable text-to-speech for this script.</p>
-          </HelpTip>
-        </label>
-        <label>
-          Supported locales
-          <p>
-            Select additional locales supported by this script. Select
-            <a onClick={this.handleClearSupportedLocalesSelectClick}> none </a>
-            or shift-click or cmd-click to select multiple.
-          </p>
-          <select
-            name="supported_locales[]"
-            multiple
-            defaultValue={this.props.supportedLocales}
-            ref={select => (this.supportedLocaleSelect = select)}
-          >
-            {this.props.locales
-              .filter(locale => !locale[1].startsWith('en'))
-              .map(locale => (
-                <option key={locale[1]} value={locale[1]}>
-                  {locale[1]}
-                </option>
-              ))}
-          </select>
-        </label>
-        {this.props.isLevelbuilder && (
+
+        <CollapsibleEditorSection title="Basic Settings">
           <label>
-            Editor Experiment
+            Require Login To Use
+            <input
+              name="login_required"
+              type="checkbox"
+              defaultChecked={this.props.loginRequired}
+              style={styles.checkbox}
+            />
+            <HelpTip>
+              <p>Require users to log in before viewing this script.</p>
+            </HelpTip>
+          </label>
+          <label>
+            Default Progress to Detail View
+            <input
+              name="student_detail_progress_view"
+              type="checkbox"
+              defaultChecked={this.props.studentDetailProgressView}
+              style={styles.checkbox}
+            />
             <HelpTip>
               <p>
-                If specified, users with this experiment on the levelbuilder
-                machine will be able to edit this script.
+                By default students start in the summary view (only shows the
+                levels). When this box is checked, we instead stick everyone
+                into detail view (shows the levels broken into progression) to
+                start for this script.
+              </p>
+            </HelpTip>
+          </label>
+          <label>
+            Display project sharing column in Teacher Dashboard
+            <input
+              name="project_sharing"
+              type="checkbox"
+              defaultChecked={this.props.projectSharing}
+              style={styles.checkbox}
+            />
+            <HelpTip>
+              <p>
+                If checked, the "Sharing" column in the "Manage Students" tab of
+                Teacher Dashboard will be displayed by default for sections
+                assigned to this script.
+              </p>
+            </HelpTip>
+          </label>
+          <label>
+            Enable Text-to-Speech
+            <input
+              name="tts"
+              type="checkbox"
+              defaultChecked={this.props.tts}
+              style={styles.checkbox}
+            />
+            <HelpTip>
+              <p>Check to enable text-to-speech for this script.</p>
+            </HelpTip>
+          </label>
+          <label>
+            Supported locales
+            <p>
+              <span>
+                {'Select additional locales supported by this script. Select '}
+              </span>
+              <a onClick={this.handleClearSupportedLocalesSelectClick}>none</a>
+              <span>{' or shift-click or cmd-click to select multiple.'}</span>
+            </p>
+            <select
+              name="supported_locales[]"
+              multiple
+              defaultValue={this.props.supportedLocales}
+              ref={select => (this.supportedLocaleSelect = select)}
+            >
+              {this.props.locales
+                .filter(locale => !locale[1].startsWith('en'))
+                .map(locale => (
+                  <option key={locale[1]} value={locale[1]}>
+                    {locale[1]}
+                  </option>
+                ))}
+            </select>
+          </label>
+          {this.props.isLevelbuilder && (
+            <label>
+              Editor Experiment
+              <HelpTip>
+                <p>
+                  If specified, users with this experiment on the levelbuilder
+                  machine will be able to edit this script.
+                </p>
+              </HelpTip>
+              <input
+                name="editor_experiment"
+                defaultValue={this.props.editorExperiment}
+                style={styles.input}
+              />
+            </label>
+          )}
+          <label>
+            Wrap-up Video
+            <HelpTip>
+              <p>
+                Deprecated setting only used for older courses. Please add
+                videos in levels instead.
               </p>
             </HelpTip>
             <input
-              name="editor_experiment"
-              defaultValue={this.props.editorExperiment}
+              name="wrapup_video"
+              defaultValue={this.props.wrapupVideo}
               style={styles.input}
             />
           </label>
-        )}
-        <label>
-          Wrap-up Video
-          <input
-            name="wrapup_video"
-            defaultValue={this.props.wrapupVideo}
-            style={styles.input}
-          />
-        </label>
-        <AnnouncementsEditor
-          defaultAnnouncements={this.props.announcements}
-          inputStyle={styles.input}
-          curriculumObject={'script'}
-        />
-        <h2>Publishing Settings</h2>
-        {this.props.isLevelbuilder && (
-          <div>
-            <label>
-              Core Course
-              <select
-                name="curriculum_umbrella"
-                style={styles.dropdown}
-                defaultValue={this.props.curriculumUmbrella}
-                onChange={this.handleUmbrellaSelectChange}
-              >
-                <option value="">(None)</option>
-                {CURRICULUM_UMBRELLAS.map(curriculumUmbrella => (
-                  <option key={curriculumUmbrella} value={curriculumUmbrella}>
-                    {curriculumUmbrella}
-                  </option>
-                ))}
-              </select>
-              <HelpTip>
-                <p>
-                  By selecting, this script will have a property,
-                  curriculum_umbrella, specific to that course regardless of
-                  version.
-                </p>
-                <p>
-                  If you select CSF, CSF-specific elements will show in the
-                  progress tab of the teacher dashboard. For example, the
-                  progress legend will include a separate column for levels
-                  completed with too many blocks and there will be information
-                  about CSTA Standards.
-                </p>
-              </HelpTip>
-            </label>
-            <label>
-              Family Name
-              <select
-                name="family_name"
-                defaultValue={this.props.familyName}
-                style={styles.dropdown}
-                disabled={this.props.hasCourse}
-              >
-                <option value="">(None)</option>
-                {this.props.scriptFamilies.map(familyOption => (
-                  <option key={familyOption} value={familyOption}>
-                    {familyOption}
-                  </option>
-                ))}
-              </select>
-              {this.props.hasCourse && (
-                <HelpTip>
-                  <p>
-                    This field cannot be edited because this script belongs to a
-                    course, and redirecting to the latest version of a specific
-                    unit within a course is deprecated. Please go to the course
-                    page to edit this field.
-                  </p>
-                </HelpTip>
-              )}
-            </label>
-            <label>
-              Version Year
-              <select
-                name="version_year"
-                defaultValue={this.props.versionYear}
-                style={styles.dropdown}
-                disabled={this.props.hasCourse}
-              >
-                <option value="">(None)</option>
-                {this.props.versionYearOptions.map(year => (
-                  <option key={year} value={year}>
-                    {year}
-                  </option>
-                ))}
-              </select>
-              {this.props.hasCourse && (
-                <HelpTip>
-                  <p>
-                    This field cannot be edited because this script belongs to a
-                    course, and redirecting to the latest version of a specific
-                    unit within a course is deprecated. Please go to the course
-                    page to edit this field.
-                  </p>
-                </HelpTip>
-              )}
-            </label>
-            <label>
-              Can be recommended (aka stable)
-              <input
-                name="is_stable"
-                type="checkbox"
-                defaultChecked={this.props.isStable}
-                style={styles.checkbox}
-              />
-              <HelpTip>
-                <p>
-                  If checked, this unit will be eligible to be the recommended
-                  version of the unit. The most recent eligible version will be
-                  the recommended version.
-                </p>
-              </HelpTip>
-            </label>
-            <VisibleAndPilotExperiment
-              visible={!this.props.hidden}
-              pilotExperiment={this.props.pilotExperiment}
-            />
-            <label>
-              Is a Standalone Course
-              <input
-                name="is_course"
-                type="checkbox"
-                defaultChecked={this.props.isCourse}
-                style={styles.checkbox}
-              />
-              <HelpTip>
-                <p>
-                  (Still in development) If checked, indicates that this Unit
-                  represents a standalone course. Examples of such Units include
-                  CourseA-F, Express, and Pre-Express.
-                </p>
-              </HelpTip>
-            </label>
-          </div>
-        )}
+        </CollapsibleEditorSection>
 
-        <h2>Lesson Settings</h2>
-        <label>
-          Show Lesson Plan Links
-          <input
-            name="has_lesson_plan"
-            type="checkbox"
-            defaultChecked={this.props.hasLessonPlan}
-            style={styles.checkbox}
-          />
-          <HelpTip>
-            <p>
-              Check if this script has lesson plans (on Curriculum Builder or in
-              PDF form) that we should provide links to.
-            </p>
-          </HelpTip>
-        </label>
-        <label>
-          Curriculum Path
-          <input
-            name="curriculum_path"
-            defaultValue={this.props.curriculumPath}
-            style={styles.input}
-          />
-        </label>
-        <label>
-          Allow Teachers to Hide Lessons
-          <input
-            name="hideable_lessons"
-            type="checkbox"
-            defaultChecked={this.props.hideableLessons}
-            style={styles.checkbox}
-          />
-          <HelpTip>
-            <p>
-              Allow teachers to toggle whether or not specific lessons in this
-              script are visible to students in their section.
-            </p>
-          </HelpTip>
-        </label>
-        <LessonExtrasEditor
-          lessonExtrasAvailable={this.props.lessonExtrasAvailable}
-          projectWidgetTypes={this.props.projectWidgetTypes}
-          projectWidgetVisible={this.props.projectWidgetVisible}
-        />
-        <LessonDescriptions
-          scriptName={this.props.name}
-          currentDescriptions={this.props.i18nData.stageDescriptions}
-        />
-        <h2>Teacher Resources Settings</h2>
-        <label>
-          Has Resources for Verified Teachers
-          <input
-            name="has_verified_resources"
-            type="checkbox"
-            defaultChecked={this.props.hasVerifiedResources}
-            style={styles.checkbox}
-          />
-          <HelpTip>
-            <p>
-              Check if this script has resources for verified teachers, and we
-              want to notify non-verified teachers that this is the case.
-            </p>
-          </HelpTip>
-        </label>
-        <div>
-          <h4>Teacher Resources</h4>
-          <div>
-            Select the Teacher Resources buttons you'd like to have show up on
-            the top of the script overview page
-          </div>
-          <ResourcesEditor
+        <CollapsibleEditorSection title="Announcements">
+          <AnnouncementsEditor
+            defaultAnnouncements={this.props.announcements}
             inputStyle={styles.input}
-            resources={this.props.teacherResources}
           />
-        </div>
-        <h2>Professional Learning Settings</h2>
-        {this.props.isLevelbuilder && (
+        </CollapsibleEditorSection>
+
+        <CollapsibleEditorSection title="Publishing Settings">
+          {this.props.isLevelbuilder && (
+            <div>
+              <label>
+                Core Course
+                <select
+                  name="curriculum_umbrella"
+                  style={styles.dropdown}
+                  defaultValue={this.props.curriculumUmbrella}
+                >
+                  <option value="">(None)</option>
+                  {CURRICULUM_UMBRELLAS.map(curriculumUmbrella => (
+                    <option key={curriculumUmbrella} value={curriculumUmbrella}>
+                      {curriculumUmbrella}
+                    </option>
+                  ))}
+                </select>
+                <HelpTip>
+                  <p>
+                    By selecting, this script will have a property,
+                    curriculum_umbrella, specific to that course regardless of
+                    version.
+                  </p>
+                  <p>
+                    If you select CSF, CSF-specific elements will show in the
+                    progress tab of the teacher dashboard. For example, the
+                    progress legend will include a separate column for levels
+                    completed with too many blocks and there will be information
+                    about CSTA Standards.
+                  </p>
+                </HelpTip>
+              </label>
+              <label>
+                Family Name
+                <select
+                  name="family_name"
+                  value={this.state.familyName}
+                  style={styles.dropdown}
+                  disabled={this.props.hasCourse}
+                  onChange={this.handleFamilyNameChange}
+                >
+                  {!this.state.isCourse && <option value="">(None)</option>}
+                  {this.props.scriptFamilies.map(familyOption => (
+                    <option key={familyOption} value={familyOption}>
+                      {familyOption}
+                    </option>
+                  ))}
+                </select>
+                {this.props.hasCourse && (
+                  <HelpTip>
+                    <p>
+                      This field cannot be edited because this script belongs to
+                      a course, and redirecting to the latest version of a
+                      specific unit within a course is deprecated. Please go to
+                      the course page to edit this field.
+                    </p>
+                  </HelpTip>
+                )}
+                {!this.props.hasCourse && (
+                  <HelpTip>
+                    <p>
+                      The family name is used to group together scripts that are
+                      different version years of the same standalone course so
+                      that users can be redirected between different version
+                      years.
+                    </p>
+                  </HelpTip>
+                )}
+                {this.state.isCourse && (
+                  <HelpTip>
+                    <p>
+                      If you want to clear the family name you need to uncheck
+                      standalone course.
+                    </p>
+                  </HelpTip>
+                )}
+              </label>
+              <label>
+                Version Year
+                <select
+                  name="version_year"
+                  defaultValue={this.props.versionYear}
+                  style={styles.dropdown}
+                  disabled={this.props.hasCourse}
+                >
+                  <option value="">(None)</option>
+                  {this.props.versionYearOptions.map(year => (
+                    <option key={year} value={year}>
+                      {year}
+                    </option>
+                  ))}
+                </select>
+                {this.props.hasCourse && (
+                  <HelpTip>
+                    <p>
+                      This field cannot be edited because this script belongs to
+                      a course, and redirecting to the latest version of a
+                      specific unit within a course is deprecated. Please go to
+                      the course page to edit this field.
+                    </p>
+                  </HelpTip>
+                )}
+              </label>
+              <label>
+                Is a Standalone Course
+                <input
+                  name="is_course"
+                  type="checkbox"
+                  checked={this.state.isCourse}
+                  disabled={!this.state.familyName}
+                  style={styles.checkbox}
+                  onChange={this.handleStandaloneCourseChange}
+                />
+                {this.state.familyName && !this.props.hasCourse && (
+                  <HelpTip>
+                    <p>
+                      (Still in development) If checked, indicates that this
+                      Unit represents a standalone course. Examples of such
+                      Units include CourseA-F, Express, and Pre-Express.
+                    </p>
+                  </HelpTip>
+                )}
+                {!this.state.familyName && !this.props.hasCourse && (
+                  <HelpTip>
+                    <p>
+                      You must select a family name in order to mark something
+                      as a standalone course.
+                    </p>
+                  </HelpTip>
+                )}
+                {this.props.hasCourse && (
+                  <HelpTip>
+                    <p>
+                      This unit is already part of a course so it can not be a
+                      standalone course.
+                    </p>
+                  </HelpTip>
+                )}
+              </label>
+              <label>
+                Can be recommended (aka stable)
+                <input
+                  name="is_stable"
+                  type="checkbox"
+                  defaultChecked={this.props.isStable}
+                  style={styles.checkbox}
+                />
+                <HelpTip>
+                  <p>
+                    If checked, this unit will be eligible to be the recommended
+                    version of the unit. The most recent eligible version will
+                    be the recommended version.
+                  </p>
+                </HelpTip>
+              </label>
+              <VisibleAndPilotExperiment
+                visible={!this.props.hidden}
+                pilotExperiment={this.props.pilotExperiment}
+              />
+            </div>
+          )}
+        </CollapsibleEditorSection>
+
+        <CollapsibleEditorSection title="Lesson Settings">
           <label>
-            Professional Learning Course
+            Show Lesson Plan Links
+            <input
+              name="has_lesson_plan"
+              type="checkbox"
+              defaultChecked={this.props.hasLessonPlan}
+              style={styles.checkbox}
+            />
             <HelpTip>
               <p>
-                When filled out, the course unit associated with this script
-                will be associated with the course named in this box. If the
-                course unit does not exist, and if the course does not exist it
-                will be created.
+                Check if this script has lesson plans (on Curriculum Builder or
+                in PDF form) that we should provide links to.
               </p>
             </HelpTip>
+          </label>
+          {!this.props.beta && (
+            <label>
+              Curriculum Path
+              <input
+                name="curriculum_path"
+                defaultValue={this.props.curriculumPath}
+                style={styles.input}
+              />
+            </label>
+          )}
+          <label>
+            Allow Teachers to Hide Lessons
             <input
-              name="professional_learning_course"
-              defaultValue={this.props.professionalLearningCourse}
+              name="hideable_lessons"
+              type="checkbox"
+              defaultChecked={this.props.hideableLessons}
+              style={styles.checkbox}
+            />
+            <HelpTip>
+              <p>
+                Allow teachers to toggle whether or not specific lessons in this
+                script are visible to students in their section.
+              </p>
+            </HelpTip>
+          </label>
+          <LessonExtrasEditor
+            lessonExtrasAvailable={this.props.lessonExtrasAvailable}
+            projectWidgetTypes={this.props.projectWidgetTypes}
+            projectWidgetVisible={this.props.projectWidgetVisible}
+          />
+          {!this.props.beta && (
+            <LessonDescriptions
+              scriptName={this.props.name}
+              currentDescriptions={this.props.i18nData.stageDescriptions}
+            />
+          )}
+        </CollapsibleEditorSection>
+
+        <CollapsibleEditorSection title="Teacher Resources Settings">
+          <label>
+            Has Resources for Verified Teachers
+            <input
+              name="has_verified_resources"
+              type="checkbox"
+              defaultChecked={this.props.hasVerifiedResources}
+              style={styles.checkbox}
+            />
+            <HelpTip>
+              <p>
+                Check if this script has resources for verified teachers, and we
+                want to notify non-verified teachers that this is the case.
+              </p>
+            </HelpTip>
+          </label>
+          <div>
+            <h4>Teacher Resources</h4>
+            <div>
+              Select the Teacher Resources buttons you'd like to have show up on
+              the top of the script overview page
+            </div>
+            <ResourcesEditor
+              inputStyle={styles.input}
+              resources={this.props.teacherResources}
+            />
+          </div>
+        </CollapsibleEditorSection>
+
+        <CollapsibleEditorSection title="Professional Learning Settings">
+          {this.props.isLevelbuilder && (
+            <label>
+              Professional Learning Course
+              <HelpTip>
+                <p>
+                  When filled out, the course unit associated with this script
+                  will be associated with the course named in this box. If the
+                  course unit does not exist, and if the course does not exist
+                  it will be created.
+                </p>
+              </HelpTip>
+              <input
+                name="professional_learning_course"
+                defaultValue={this.props.professionalLearningCourse}
+                style={styles.input}
+              />
+            </label>
+          )}
+          <label>
+            Number of Peer Reviews to Complete
+            <HelpTip>
+              <p>Currently only supported for professional learning courses</p>
+            </HelpTip>
+            <input
+              name="peer_reviews_to_complete"
+              defaultValue={this.props.peerReviewsRequired}
               style={styles.input}
             />
           </label>
-        )}
-        <label>
-          Number of Peer Reviews to Complete
-          <HelpTip>
-            <p>Currently only supported for professional learning courses</p>
-          </HelpTip>
-          <input
-            name="peer_reviews_to_complete"
-            defaultValue={this.props.peerReviewsRequired}
-            style={styles.input}
-          />
-        </label>
+        </CollapsibleEditorSection>
 
-        <h2>Lessons and Levels</h2>
-        {this.props.beta ? (
-          <LessonGroups />
-        ) : (
-          <div>
-            {betaWarning || (
-              <a href="?beta=true">
-                Try the beta Script Editor (will reload the page without saving)
-              </a>
-            )}
-            <textarea
-              id="script_text"
-              name="script_text"
-              rows={textAreaRows}
-              style={styles.input}
-              defaultValue={
-                this.props.lessonLevelData ||
-                "lesson_group 'lesson group', display_name: 'display name'\nlesson 'new lesson'\n"
-              }
-              ref={textArea => (this.scriptTextArea = textArea)}
-            />
-          </div>
-        )}
-        <button
-          className="btn btn-primary"
-          type="submit"
-          style={{margin: 0}}
-          onClick={this.presubmit}
-        >
-          Save Changes
-        </button>
+        <CollapsibleEditorSection title="Lesson Groups and Lessons">
+          {this.props.beta ? (
+            <UnitCard />
+          ) : (
+            <div>
+              {betaWarning || (
+                <a href="?beta=true">
+                  Try the beta Script Editor (will reload the page without
+                  saving)
+                </a>
+              )}
+              <textarea
+                id="script_text"
+                name="script_text"
+                rows={textAreaRows}
+                style={styles.input}
+                defaultValue={
+                  this.props.lessonLevelData ||
+                  "lesson_group 'lesson group', display_name: 'display name'\nlesson 'new lesson'\n"
+                }
+                ref={textArea => (this.scriptTextArea = textArea)}
+              />
+            </div>
+          )}
+        </CollapsibleEditorSection>
+
+        <div style={styles.saveButtonBackground}>
+          <button
+            className="btn btn-primary"
+            type="submit"
+            style={styles.saveButton}
+            onClick={this.presubmit}
+          >
+            Save Changes
+          </button>
+        </div>
       </div>
     );
   }

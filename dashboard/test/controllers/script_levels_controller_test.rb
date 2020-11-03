@@ -744,6 +744,19 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_equal script_level, assigns(:script_level)
   end
 
+  test "show with the login_required param should redirect when not logged in" do
+    script_level = Script.find_by_name('courseb-2017').script_levels.first
+
+    get :show, params: {
+      script_id: script_level.script,
+      stage_position: script_level.lesson.absolute_position,
+      id: script_level.position,
+      login_required: "true"
+    }
+
+    assert_redirected_to_sign_in
+  end
+
   test "show with the reset param should reset session when not logged in" do
     client_state.set_level_progress(create(:script_level), 10)
     refute client_state.level_progress_is_empty_for_test
@@ -994,6 +1007,22 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     }
 
     assert_equal last_attempt_data, assigns(:last_attempt)
+  end
+
+  test 'renders error message when attempting to view a student\'s work while not signed in' do
+    # Note that this also applies when trying to view a student's work for a
+    # cached page, as we tend to do for high-traffic levels.
+
+    get :show, params: {
+      script_id: @script,
+      stage_position: @script_level.lesson,
+      id: @script_level.position,
+      user_id: @student.id,
+      section_id: @section.id
+    }
+
+    assert_response :success
+    assert_includes response.body, 'Teacher view is not available for this puzzle'
   end
 
   test 'loads applab if you are a teacher viewing your student and they have a channel id' do

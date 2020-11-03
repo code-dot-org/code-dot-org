@@ -33,6 +33,7 @@
     "CONTROLS_FOREACH_INPUT_INLIST": "ro‘yxatda",
     "CONTROLS_FOREACH_INPUT_ITEM": "har bir element uchun",
     "CONTROLS_FOREACH_TOOLTIP": "Ro‘yxatning har bir elementi qiymatini '%1' deb olib, so‘ngra biror buyruqni bajaradi.",
+    "CONTROLS_FOR_INPUT_COUNTER": "har bir %1 uchun %2 dan %3 gacha %4 qadam bilan",
     "CONTROLS_FOR_INPUT_FROM_TO_BY": "%1 dan %2 gacha %3 lik qadam bilan",
     "CONTROLS_FOR_INPUT_WITH": "for",
     "CONTROLS_FOR_TOOLTIP": "%1 o‘zgaruvchini olib, boshlang‘ich sondan oxirgi songacha berilgan qadam bilan har bir qiymatni qo‘yib chiqadi va aytilgan buyruqni bajaradi.",

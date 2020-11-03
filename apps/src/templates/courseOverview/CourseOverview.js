@@ -30,6 +30,9 @@ import AssignmentVersionSelector, {
 import StudentFeedbackNotification from '@cdo/apps/templates/feedback/StudentFeedbackNotification';
 import {sectionsForDropdown} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import SafeMarkdown from '../SafeMarkdown';
+import Announcements from '@cdo/apps/code-studio/components/progress/Announcements';
+import {SignInState} from '@cdo/apps/templates/currentUserRedux';
+import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
 
 const styles = {
   main: {
@@ -87,7 +90,9 @@ class CourseOverview extends Component {
     showAssignButton: PropTypes.bool,
     userId: PropTypes.number,
     // Redux
-    sectionsForDropdown: PropTypes.arrayOf(sectionForDropdownShape).isRequired
+    announcements: PropTypes.arrayOf(announcementShape),
+    sectionsForDropdown: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
+    isSignedIn: PropTypes.bool.isRequired
   };
 
   constructor(props) {
@@ -154,7 +159,8 @@ class CourseOverview extends Component {
       showRedirectWarning,
       redirectToCourseUrl,
       showAssignButton,
-      userId
+      userId,
+      isSignedIn
     } = this.props;
 
     // We currently set .container.main to have a width of 940 at a pretty high
@@ -213,6 +219,13 @@ class CourseOverview extends Component {
             onDismiss={this.onDismissVersionWarning}
           />
         )}
+        {isSignedIn && (
+          <Announcements
+            announcements={this.props.announcements}
+            width={styleConstants['content-width']}
+            viewAs={viewAs}
+          />
+        )}
         <div style={styles.titleWrapper}>
           <h1 style={styles.title}>{assignmentFamilyTitle}</h1>
           {filteredVersions.length > 1 && (
@@ -269,5 +282,7 @@ export default connect((state, ownProps) => ({
     null,
     ownProps.id,
     true
-  )
+  ),
+  isSignedIn: state.currentUser.signInState === SignInState.SignedIn,
+  announcements: state.announcements || []
 }))(CourseOverview);

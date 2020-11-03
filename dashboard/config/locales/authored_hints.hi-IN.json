@@ -4244,16 +4244,16 @@
           "courseD_bee_conditionals_challenge1_b": "इस पहेली में, प्रत्येक स्थान के पास फूल, मधु का छत्ता हो सकता है या कुछ नहीं भी हो सकता है।  इसका अर्थ है कि आप प्रत्येक वर्ग में  अपने नियमबद्ध `इफ/एल्स` को दोहरा सकते हैं।"
         },
         "courseD_bee_conditionals_challenge2": {
-          "courseD_bee_conditionals_challenge1_b": "बिल्कुल वैसे, जैसे `जब मधुरस > 0` के अंदर कोड, `यदि फूल पर` ब्लॉक्स केवल तभी चलेगा, यदि मधुमक्खी फूल पर हो।   इतना अंतर है कि अंदर का कोड बार-बार चलेगा, जब तक मधुरस नहीं बचेगा।  यह पैटर्न आजमाएं:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "बिल्कुल वैसे, जैसे `जब मधुरस > 0` के अंदर कोड, `यदि फूल पर` ब्लॉक्स केवल तभी चलेगा, यदि मधुमक्खी फूल पर हो।   इतना अंतर है कि अंदर का कोड बार-बार चलेगा, जब तक मधुरस नहीं बचेगा।  यह पैटर्न आजमाएं:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_conditionals_challenge2_2018": {
-          "courseD_bee_conditionals_challenge1_b": "बिल्कुल वैसे, जैसे `जब मधुरस > 0` के अंदर कोड, `यदि फूल पर` ब्लॉक्स केवल तभी चलेगा, यदि मधुमक्खी फूल पर हो।   इतना अंतर है कि अंदर का कोड बार-बार चलेगा, जब तक मधुरस नहीं बचेगा।  यह पैटर्न आजमाएं:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "बिल्कुल वैसे, जैसे `जब मधुरस > 0` के अंदर कोड, `यदि फूल पर` ब्लॉक्स केवल तभी चलेगा, यदि मधुमक्खी फूल पर हो।   इतना अंतर है कि अंदर का कोड बार-बार चलेगा, जब तक मधुरस नहीं बचेगा।  यह पैटर्न आजमाएं:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_conditionals_challenge2_2019": {
-          "courseD_bee_conditionals_challenge1_b": "बिल्कुल वैसे, जैसे `जब मधुरस > 0` के अंदर कोड, `यदि फूल पर` ब्लॉक्स केवल तभी चलेगा, यदि मधुमक्खी फूल पर हो।   इतना अंतर है कि अंदर का कोड बार-बार चलेगा, जब तक मधुरस नहीं बचेगा।  यह पैटर्न आजमाएं:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "बिल्कुल वैसे, जैसे `जब मधुरस > 0` के अंदर कोड, `यदि फूल पर` ब्लॉक्स केवल तभी चलेगा, यदि मधुमक्खी फूल पर हो।   इतना अंतर है कि अंदर का कोड बार-बार चलेगा, जब तक मधुरस नहीं बचेगा।  यह पैटर्न आजमाएं:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_conditionals_challenge2_2020": {
-          "courseD_bee_conditionals_challenge1_b": "बिल्कुल वैसे, जैसे `जब मधुरस > 0` के अंदर कोड, `यदि फूल पर` ब्लॉक्स केवल तभी चलेगा, यदि मधुमक्खी फूल पर हो।   इतना अंतर है कि अंदर का कोड बार-बार चलेगा, जब तक मधुरस नहीं बचेगा।  यह पैटर्न आजमाएं:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "बिल्कुल वैसे, जैसे `जब मधुरस > 0` के अंदर कोड, `यदि फूल पर` ब्लॉक्स केवल तभी चलेगा, यदि मधुमक्खी फूल पर हो।   इतना अंतर है कि अंदर का कोड बार-बार चलेगा, जब तक मधुरस नहीं बचेगा।  यह पैटर्न आजमाएं:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_debugging_challenge1": {
           "courseD_bee_debugging_challenge1_a": "इस प्रोग्राम का पहला आधा भाग क्या काम करता है? इस बारे में सोचें कि मधुमक्खी को पीछे की ओर मूव करने की जरूरत क्यों है। मधुमक्खी जब हर बार फूल की ओर मूव करती है तो कितना मधुरस एकत्र कर लेती है?"
@@ -6654,6 +6654,19 @@
         "iceage_warn_ice_age": {
           "iceage_warn_ice_age_a": "इस पहेली को वहां प्राप्त करने के लिए, जहां यह होनी चाहिए, आपको केवल दो ब्लॉक्स जोड़ने होंगे। ",
           "iceage_warn_ice_age_b": "प्रोग्राम शुरू होने के बाद तुरंत उन्हें सक्रिय करने के लिए `जब चलाया जाए` इवेंट के नीचे दोनों नए ब्लॉक्स जोड़ें।"
+        },
+        "courseC_video_angles": {
+          "courseD_scrat_programming6_a": "इस पहेली को हल करने के दो तरीके हैं!",
+          "courseD_scrat_programming6_b": "मूव करने से पहले मुड़ना याद रखें, क्योंकि स्क्रैट गलत दिशा के सामने है।",
+          "courseD_scrat_programming6_c": "गलती होने से न डरें! यह देखने के लिए कि क्या होगा, ब्लॉक्स जोड़ने और कोड चलाने का प्रयास करें, चाहे आपको लगता है कि आपने अभी तक पहेली को हल नहीं किया है।"
+        },
+        "courseD_video_nestedLoopsArtist": {
+          "courseE_artist_ramp8_a": "To draw a side, use the `move forward by 100 pixels` block, and change the 100 to a 200.",
+          "courseE_artist_ramp8_b": "4 भुजाएं खींचने के लिए, दोहराएं लूप के अंदर `200 पिक्सल तक आगे की ओर मूव करें` ब्लॉक रखें और सुनिश्चित करें कि लूप 4 बार खींचने के लिए सेट है।\n\nउसके बाद मुड़ना न भूलें!",
+          "courseE_artist_ramp8_c": "आपकी लूप के अंदर दो ब्लॉक्स होने चाहिएं: `आगे की ओर मूव करें` और `90 डिग्री तक दाएं मुड़ें`।",
+          "courseD_artist_ramp12_a": "यह वर्ग के समान कैसे है?  यह अलग कैसे है?",
+          "courseD_artist_ramp12_b": "यह देखने के लिए आपको कौन-से कोण की जरूरत है, आप `मुड़ें` ब्लॉक्स पर ड्रॉप डाउन मेन्यु का उपयोग कर सकते हैं!",
+          "courseD_artist_ramp12_c": "प्रत्येक भुजा खींचने के लिए, आपको 100 पिक्सल आगे की ओर मूव करने, फिर 120 डिग्री दाएं मुड़ने की जरूरत होगी। आपको कितनी भुजाओं की जरूरत है?"
         }
       }
     }

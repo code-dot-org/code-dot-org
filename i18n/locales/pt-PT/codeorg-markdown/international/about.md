@@ -5,7 +5,7 @@ title: Sobre
 # About Us
 
 <div class="col-60">
-  Code.org® é uma organização sem fins lucrativos dedicada à expansão do acesso à informática nas escolas e aumento da participação de mulheres e minorias sub-representadas. A nossa visão é que todos alunos de cada escola tenham a oportunidade de aprender informática assim, como a biologia, química ou álgebra. We provide the most broadly used curriculum for teaching computer science in primary and secondary school and also organize the annual <a href="https://hourofcode.com">Hour of Code</a> campaign, which has engaged 10% of all students in the world. O Code.org é apoiado por doadores generosos, incluindo a Amazon, Facebook, Google, a Infosys Foundation, Microsoft e <a href="/about/donors">muitas outras</a>.
+  Code.org® is a nonprofit dedicated to expanding access to computer science in schools and increasing participation by young women and students from other underrepresented groups. A nossa visão é que todos alunos de cada escola tenham a oportunidade de aprender informática assim, como a biologia, química ou álgebra. We provide the most broadly used curriculum for teaching computer science in primary and secondary school and also organize the annual <a href="https://hourofcode.com">Hour of Code</a> campaign, which has engaged 10% of all students in the world. O Code.org é apoiado por doadores generosos, incluindo a Amazon, Facebook, Google, a Infosys Foundation, Microsoft e <a href="/about/donors">muitas outras</a>.
 </div>
 
 [col-40]

@@ -8,11 +8,15 @@ zh-TW:
       Adding Screens: 新增畫面
       Animate Your Scene: 為你的場景賦予生命
       Animating Sprites: 動畫角色
+      Artist Intro with JR Hildebrand: 由 JR 希爾布蘭來介紹畫家
+      Artist Intro with JR Hildebrande: 由 JR 希爾布蘭來介紹畫家
       Artist Project: 藝術專案
       'Artist: Variables': 小藝術家 - 變數（Variables）
+      Attribution: 根目錄 -> 資料 -> 進度 -> 屬性
       Basic Conditionals: 基本條件判斷
       Binary Numbers: 二進位數
       Board Events: 電路板事件
+      Board Input and Output: 根目錄 -> 資料 -> 進度 -> 輸入輸出控制板
       Boolean Comparison: 布林值比較
       Build a Screen: 建造一個畫面
       Building an App: 構建一個手機應用程式
@@ -20,6 +24,7 @@ zh-TW:
       CS Discoveries Post-Course Survey: 電腦科學探索課後問卷調查
       CS Discoveries Post-course Survey: 電腦科學探索課後問卷調查
       Cake Defender: 蛋糕守衛者
+      Challenge: 挑戰
       Challenge Levels: 挑戰等級
       Challenges: 挑戰
       Change: 改變
@@ -29,6 +34,7 @@ zh-TW:
       Collisions: 碰撞
       Collisions in Games: 遊戲中的碰撞
       Color LEDs: 彩色顯示器
+      Combining Projects: 合併專案
       Combining Representations: 組合表示
       'Conditionals: If Statements': If-條件陳述式
       'Conditionals: If and If/Else Statements': If 以及 If/Else -條件陳述式
@@ -48,10 +54,12 @@ zh-TW:
       Example projects: 範例專案
       Expanding Personal Website: 擴展個人網站
       Expanding Your Website: 擴展你的網站
+      Experiment with Web Lab: 使用網路實驗室進行實驗
       Exploring more CSS: 探索更多的CSS
       Finish a Screen: 完成一個畫面
       Finish the Prototype: 完成原型
       Finishing Functions: 完成函式
+      Finishing Touches: 最後微調
       Flyer Game: 飛行遊戲
       Follow the Mouse: 跟著滑鼠指標走
       Fonts and Style: 字型與樣式
@@ -65,17 +73,63 @@ zh-TW:
       Headings: 標題
       How to Create a Simple Function: 如何建立一個簡單的函示
       How to Make a Sprite: 如何建立一個角色
+      Ice Age Loops: 冰原歷險記迴圈
+      Images and Sounds: 圖案與聲音
+      Input Examples: 輸入範例
+      Input with If-Else: 使用 If-Else 的輸入
+      Intro to For Loops: 迴圈介紹
+      Intro to Sprites: 精靈圖介紹
+      Intro to Variables: 參數介紹
       Introducing Sprite Lab: Sprite Lab 簡介
       Introduction to Arrays: 陣列（Arrays）的介紹
+      Iteration and Parameters: 迭代和參數
       Keeping Data Secret: 讓資料保密
       Keyboard Input: 鍵盤輸入
+      LED Apps: 發光二極管 應用程式
+      Layout with CSS: CSS佈局
       Lesson Extras: 額外關卡
+      Light Show: 燈光表演
       Linking Pages: 鏈接頁面
       Linking Screens: 連結不同畫面
       Lists: 清單
+      Loops with the Artist: 讓畫家進行迴圈操作
       Make a Prediction: 預測一下
+      Make it Interactive: 讓他變得更有互動性
+      Making Scenes: 製作場景
+      Making Songs: 製作歌曲
+      Making Sounds: 發出聲音
+      'Maze Intro: Programming with Blocks': '迷宮介紹: 使用積木來寫程式'
       Measures: 小節
+      'Mini-Project: Alien Dance Moves': '小專案: 外星人的舞步'
+      'Mini-Project: Alien Dance Party': '小專案: 外星人跳舞派對'
+      'Mini-Project: Royal Battle': '小專案: 皇家對戰'
+      'Mini-Project: Snowflake #1': '小專案: 雪花一號'
+      'Mini-Project: Snowflake #2': '小專案: 雪花二號'
+      'Mini-Project: Swimming Fish': '小專案: 游泳的魚兒'
+      'Mini-Project: Swimming Fish (continued)': '小專案: 游泳的魚兒(續)
+
+'
+      'Mini-Project: Virtual Pet': '小專案: 虛擬寵物'
+      'Mini-project: Chase Game': '小專案: 西洋棋遊戲'
+      'Mini-project: Flappy Game': '小專案: 像素鳥遊戲'
+      'Mini-project: Interactive Poster': '小專案: 互動式海報'
+      'Mini-project: Jorge the Dog': '小專案: 喬治狗兒'
+      'Mini-project: Sticker Design': '小專案: 設計貼紙'
+      Modify simulation variables: 修改模擬變數
+      More Input: 更多輸入
+      More Parameters: 更多參數
+      Motorcycle: 摩托車
+      Movement with the Counter Pattern: 使用計數器來移動
+      Multiframe Animations: 多視窗動畫
+      Musical Arrays: 音樂陣列
+      Nested Loops with the Bee: 跟著蜜蜂一起使用巢狀迴圈
+      New Shapes: 新的形狀
+      Orientation: 螢幕方向
       Pair Programming: 結對編程
+      Platform Jumper - Background and Variables: 平台跳跳人 - 背景與變數
+      Platform Jumper - Items: 平台跳跳人 - 道具
+      Platform Jumper - Platforms: 平台跳跳人 - 平台
+      Platform Jumper - Player: 平台跳跳人 -  玩家
       Playing Notes: 遊玩筆記
       Playing with Notes: 遊玩筆記
       Post-Course Survey Instructions: 課後問券指示
@@ -87,13 +141,17 @@ zh-TW:
       Project: 專案
       Project - Background and Variables: 專案-背景以及變數
       Project - Sprites and Interactions: 專案 - 小怪跟互動
+      Project Work: '專案: 工作'
       Properties: 屬性
+      Publishing Your Website: Publishing Your Website
       RGB Exploration: 三原色的探索
       Reading Sensors: 讀取感測器
       Reflection: 反思
       Repeat Blocks: 重複區塊
       Repeat Blocks with BB-8: BB-8機器人的重複區塊
+      Repeat Blocks with the Artist: 讓畫家使用重複積木
       Repeat Unit Statements: 重複單位陳述式
+      Repeat Until Statements: 重複... 直到... 陳述式
       Representing Images: 表示圖像
       Run a simulation: 執行一個模擬程式
       Sample Programs: 範例程式
@@ -113,6 +171,7 @@ zh-TW:
       Styling Text: 文字樣式化
       Styling with Classes: 利用類別進行樣式化
       Styling your Website: 樣式化你的網站
+      The Artist in Code Studio: 在程式碼工作室裡面的畫家
       The Buzzer: 蜂鳴器
       The Collector: 搜集者
       The Harvester: 收割者
@@ -131,3 +190,4 @@ zh-TW:
       While Loops with the Farmer: 與農夫一起嘗試 while（當）迴圈
       Wrap-up: 總結
       Your Personal Website: 你的個人主頁
+      isTouching: 是否碰到了

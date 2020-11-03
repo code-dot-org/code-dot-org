@@ -1035,7 +1035,7 @@
           "courseC_maze_programming3_3": "Diese Blöcke sind aus Stein und können nicht weggeworfen werden."
         },
         "courseC_maze_programming4": {
-          "courseC_maze_programming4_1": "Dies ist deine maximal Anzahl an Blöcken. Die Zahl sagt dir, wie viele dieser Blöcke du noch verwenden kannst."
+          "courseC_maze_programming4_1": "Dies ist deine maximale Anzahl an Blöcken. Die Zahl sagt dir, wie viele dieser Blöcke du noch verwenden kannst."
         },
         "courseC_maze_programming4_2018": {
           "courseC_maze_programming4_1": "Dies ist deine maximal Anzahl an Blöcken. Die Zahl sagt dir, wie viele dieser Blöcke du noch verwenden kannst."
@@ -1205,7 +1205,7 @@
           "stone_block_2": "Graue Bausteine können nicht entfernt werden."
         },
         "courseD_maze_ramp4": {
-          "courseC_maze_programming4_1": "Dies ist deine maximal Anzahl an Blöcken. Die Zahl sagt dir, wie viele dieser Blöcke du noch verwenden kannst."
+          "courseC_maze_programming4_1": "Dies ist deine maximale Anzahl an Blöcken. Die Zahl sagt dir, wie viele dieser Blöcke du noch verwenden kannst."
         },
         "courseD_maze_ramp4_2018": {
           "courseC_maze_programming4_1": "Dies ist deine maximal Anzahl an Blöcken. Die Zahl sagt dir, wie viele dieser Blöcke du noch verwenden kannst."
@@ -1603,6 +1603,19 @@
         },
         "grade5_artist_variables_triangles1_2020": {
           "grade5_artist_variables_triangles1_1": "Beachte dabei, dass es bei den Blöcken jetzt eine neue Art der Zahleneingabe gibt. Diese `Mathe`-Blöcke können herausgezogen und verschoben werden!"
+        },
+        "CSD U3 Draw Loop Plugged wiggle sprite y_2018": {
+          "": "[empty string]"
+        },
+        "CSD U3 Draw Loop Plugged wiggle sprite y_2019": {
+          "": "[empty string]"
+        },
+        "courseC_video_angles": {
+          "courseD_maze_ramp6_1": "Egal, welchen Code du hier eingibst, er wird so oft wiederholt, wie du es vorschreibst, und führt dann das verbleibende Programm aus."
+        },
+        "courseD_video_nestedLoopsArtist": {
+          "courseE_artist_ramp8_1": "Du kannst diese Zahl ändern",
+          "courseE_artist_ramp8_2": "Klicke hier, um die Anzahl der Wiederholungen deines Codes einzugeben."
         }
       }
     }

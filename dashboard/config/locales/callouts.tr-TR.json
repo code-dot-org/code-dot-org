@@ -1480,6 +1480,13 @@
         },
         "grade5_artist_variables_triangles1_2020": {
           "grade5_artist_variables_triangles1_1": "Artık bloklarda sayı girmenin yeni bir yolu olduğuna dikkat edin. Bu 'matematik' blokları dışarı çekilebilir ve hareket ettirilebilir!"
+        },
+        "courseC_video_angles": {
+          "courseD_maze_ramp6_1": "Buraya koyduğun kod kaç kere tekrarlamasını istediysen o kadar çalışır sonra devam eden bloklara geçer."
+        },
+        "courseD_video_nestedLoopsArtist": {
+          "courseE_artist_ramp8_1": "Bu sayıyı değiştirebilirsiniz.",
+          "courseE_artist_ramp8_2": "Kodun tekrar edilmesini istediğiniz sayıyı girmek için buraya tıklayın."
         }
       }
     }

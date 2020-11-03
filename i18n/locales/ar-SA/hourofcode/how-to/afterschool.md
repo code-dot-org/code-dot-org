@@ -6,13 +6,13 @@ title: Hour of Code How-to Guide for After-school
 
 # كيف تدرس "ساعة من البرمجة" لفصول وأندية "ما بعد المدرسة"
 
-### Join the movement and introduce your students to computer science with these steps.
+### انضم إلى الحركة، وعرِّف الطلاب بمجال علوم الكمبيوتر من خلال هذه الخطوات.
 
-Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
+فالتفكير الحسابي يُساعِد في تنمية مهارات حل المشكلات والمنطق والابتكار. فالتفكير الحسابي يُساعِد في تنمية مهارات حل المشكلات والمنطق والابتكار. ينبغي للطلاب اليوم أن يتعلَّموا كيفية تصميم التقنية، وليس استخدامها فحسب. ومع بدء الطلاب للتعلُّم في مرحلة مبكرة، سيصبح لديهم أساسًا للنجاح في أي مسارٍ مهني في القرن الحادي والعشرين.
 
 Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time. If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
 
-### An Hour of Code can also be hosted remotely! To get started, check out our [tips for hosting a virtual Hour of Code event](https://hourofcode.com/us/how-to/virtual).
+### تُنظَّم فعالية "ساعة من البرمجة" أيضًا عن بُعد! وللبدء، يُرجى مراجعة [نصائحنا لفعالية افتراضية من "ساعة من البرمجة"](https://hourofcode.com/us/how-to/virtual).
 
 * * *
 
@@ -36,7 +36,7 @@ Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage o
 
 تشتمل أفضل تجربة لأنشطة "ساعة البرمجة" على أجهزة كمبيوتر متصلة بالإنترنت. But you **don’t** need a computer for every child, and you can even do the Hour of Code without a computer at all.
 
-تأكَّد من اختبار البرامج التعليمية على أجهزة كمبيوتر الطلاب أو أجهزتهم للتأكد من أنها تعمل بشكل صحيح على المتصفحات بالصوت والصورة. **Have low bandwidth?** Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the unplugged / offline tutorials.
+تأكَّد من اختبار البرامج التعليمية على أجهزة كمبيوتر الطلاب أو أجهزتهم للتأكد من أنها تعمل على ما يرام على المتصفحات مع الصوت والفيديو. **Have low bandwidth?** Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the unplugged / offline tutorials.
 
 وفِّر سماعات رأس داخل الفصل الدراسي، أو اطلب من الطلاب إحضار سماعاتهم الخاصة، إذا كان البرنامج التعليمي الذي تختاره يعمل بشكل أفضل مع الصوت.
 
@@ -63,7 +63,7 @@ Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage o
 
 ## 6. ابدأ البرمجة!
 
-**Direct participants to the activity** - Write the tutorial link on a whiteboard. اعثر على الرابط المدرج في [معلومات حول دورتك التعليمية المختارة]({{ urls/learn }}) تحت عدد المشاركين.
+**Direct participants to the activity** - Write the tutorial link on a whiteboard. ابحث عن الرابط المذكور في [معلومات عن برنامجك التعليمي المختار]({{ urls/learn }}) تحت عدد المشاركين. 
 
 **When someone comes across difficulties it's okay to respond:** - “I don’t know. دعونا نكتشف ذلك معًا." - "التكنولوجيا لا تعمل دائمًا بالطريقة التي نريدها." - "تعلم البرمجة يشبه تعلم لغة جديدة، فأنت لن تتحدث بطلاقة على الفور."
 
