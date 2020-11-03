@@ -1969,16 +1969,21 @@ a.download-video {
 
     #gdpr-section {
       flex-wrap: wrap;
-
+      .checkbox {
+        label {
+          align-items: baseline;
+          input[type=checkbox] {
+            align-self: auto;
+          }
+        }
+      }
       #gdpr-label {
         margin: 0 10px;
-
         span {
           padding: 0;
         }
       }
     }
-
   }
 }
 
