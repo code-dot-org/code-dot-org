@@ -8,7 +8,6 @@ class ResourcesController < ApplicationController
 
   def create
     resource = Resource.new(
-      key: resource_params.require(:key),
       name: resource_params.require(:name),
       url: resource_params.require(:url),
       properties: {
@@ -27,6 +26,6 @@ class ResourcesController < ApplicationController
   end
 
   def resource_params
-    params.permit(:key, :name, :url, :downloadUrl, :assessment, :type, :audence, :include_in_pdf)
+    params.permit(:name, :url, :downloadUrl, :assessment, :type, :audience, :include_in_pdf)
   end
 end

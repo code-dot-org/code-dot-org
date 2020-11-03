@@ -263,7 +263,7 @@ Dashboard::Application.routes.draw do
 
   resources :level_starter_assets, only: [:show], param: 'level_name', constraints: {level_name: /[^\/]+/} do
     member do
-      get '/:filename', to: 'level_starter_assets#file'
+      get '/:filename', to: 'level_starter_assets#file', format: true
       post '', to: 'level_starter_assets#upload'
       delete '/:filename', to: 'level_starter_assets#destroy'
     end
@@ -501,7 +501,7 @@ Dashboard::Application.routes.draw do
       end
 
       post 'foorm/form_with_library_items', action: :fill_in_library_items, controller: 'foorm'
-      get 'foorm/form_questions', action: :get_form_questions, controller: 'foorm'
+      get 'foorm/form_data', action: :get_form_data, controller: 'foorm'
       get 'foorm/submissions_csv', action: :get_submissions_as_csv, controller: 'foorm'
       get 'foorm/form_names', action: :get_form_names_and_versions, controller: 'foorm'
     end

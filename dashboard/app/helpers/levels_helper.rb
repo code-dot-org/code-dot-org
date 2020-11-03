@@ -311,11 +311,12 @@ module LevelsHelper
     use_blockly = !use_droplet && !use_netsim && !use_weblab
     use_p5 = @level.is_a?(Gamelab)
     hide_source = app_options[:hideSource]
+    use_google_blockly = view_options[:useGoogleBlockly]
     render partial: 'levels/apps_dependencies',
       locals: {
         app: app_options[:app],
         use_droplet: use_droplet,
-        use_google_blockly: view_options[:useGoogleBlockly],
+        use_google_blockly: use_google_blockly,
         use_blockly: use_blockly,
         use_applab: use_applab,
         use_gamelab: use_gamelab,

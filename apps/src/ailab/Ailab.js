@@ -51,6 +51,16 @@ Ailab.prototype.init = function(config) {
   config.wireframeShare = true;
   config.noHowItWorks = true;
 
+  // We don't want icons in instructions
+  config.skin.staticAvatar = null;
+  config.skin.smallStaticAvatar = null;
+  config.skin.failureAvatar = null;
+  config.skin.winAvatar = null;
+
+  // Provide a way for us to have top pane instructions disabled by default, but
+  // able to turn them on.
+  config.noInstructionsWhenCollapsed = true;
+
   config.pinWorkspaceToBottom = true;
 
   const onMount = () => {
