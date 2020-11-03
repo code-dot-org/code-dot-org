@@ -2,6 +2,8 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../../util/reconfiguredChai';
 import LessonNavigationDropdown from '@cdo/apps/templates/lessonOverview/LessonNavigationDropdown';
+import sinon from 'sinon';
+import * as utils from '@cdo/apps/utils';
 
 const shortLessonList = [
   {
@@ -109,5 +111,24 @@ describe('LessonNavigationDropdown', () => {
     expect(wrapper.contains('13 - Lesson 13')).to.be.true;
     expect(wrapper.contains('14 - Lesson 14')).to.be.true;
     expect(wrapper.contains('15 - Lesson 15')).to.be.true;
+  });
+
+  it('navigates when click lesson', () => {
+    sinon.stub(utils, 'navigateToHref');
+
+    lesson.unit.lessons = longLessonList;
+    const wrapper = shallow(<LessonNavigationDropdown lesson={lesson} />);
+    expect(wrapper.find('a').length).to.equal(12);
+    let lesson1 = wrapper.find('a').at(1);
+    expect(
+      wrapper
+        .find('a')
+        .at(1)
+        .contains('1 - Lesson 1')
+    ).to.be.true;
+    lesson1.simulate('click');
+
+    expect(utils.navigateToHref).to.have.been.calledWith('/lessons/1');
+    utils.navigateToHref.restore();
   });
 });
