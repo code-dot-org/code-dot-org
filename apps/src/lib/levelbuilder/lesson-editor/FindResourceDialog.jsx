@@ -38,10 +38,10 @@ class FindResourceDialog extends Component {
   formatResourceName = resource => {
     let formattedName = resource.name;
     if (resource.properties.type) {
-      formattedName += ` - ${resource.properties.type} `;
+      formattedName += ` - ${resource.properties.type}`;
     }
     if (resource.properties.audience) {
-      formattedName += ` - ${resource.properties.audience} `;
+      formattedName += ` - ${resource.properties.audience}`;
     }
     return formattedName;
   };
