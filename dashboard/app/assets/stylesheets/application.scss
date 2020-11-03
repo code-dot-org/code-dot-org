@@ -1969,7 +1969,16 @@ a.download-video {
 
     #gdpr-section {
       flex-wrap: wrap;
+
+      #gdpr-label {
+        margin: 0 10px;
+
+        span {
+          padding: 0;
+        }
+      }
     }
+
   }
 }
 
