@@ -13,6 +13,7 @@ describe('ActivityCard', () => {
     updateActivityField,
     setActivitySectionRef,
     updateTargetActivitySection,
+    handleCollapse,
     updateActivitySectionMetrics;
   beforeEach(() => {
     addActivitySection = sinon.spy();
@@ -22,6 +23,7 @@ describe('ActivityCard', () => {
     setActivitySectionRef = sinon.spy();
     updateTargetActivitySection = sinon.spy();
     updateActivitySectionMetrics = sinon.spy();
+    handleCollapse = sinon.spy();
     defaultProps = {
       activity: sampleActivities[0],
       activitiesCount: 1,
@@ -33,7 +35,9 @@ describe('ActivityCard', () => {
       updateTargetActivitySection,
       updateActivitySectionMetrics,
       targetActivitySectionPos: 1,
-      activitySectionMetrics: []
+      activitySectionMetrics: [],
+      handleCollapse,
+      collapsed: false
     };
   });
 

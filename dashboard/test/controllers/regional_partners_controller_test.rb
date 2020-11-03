@@ -10,7 +10,7 @@ class RegionalPartnersControllerTest < ActionController::TestCase
     @regional_partner = create :regional_partner
   end
 
-  def self.test_workshop_admin_only(method, action, params = nil)
+  def self.test_workshop_admin_only(method, action, params = {})
     %i(student teacher facilitator workshop_organizer).each do |user_type|
       test_user_gets_response_for action, user: user_type, method: method, params: params, response: :forbidden
     end
