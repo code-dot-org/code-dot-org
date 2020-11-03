@@ -94,7 +94,7 @@ export const levelShapeForScript = PropTypes.shape({
 });
 
 export const lessonShape = PropTypes.shape({
-  id: PropTypes.number.isRequired,
+  id: PropTypes.number,
   key: PropTypes.string.isRequired,
   name: PropTypes.string,
   position: PropTypes.number.isRequired,
