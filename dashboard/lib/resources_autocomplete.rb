@@ -3,10 +3,7 @@ class ResourcesAutocomplete < AutocompleteHelper
     limit = format_limit(limit)
 
     rows = Resource.limit(limit)
-    if course_version_id
-      puts course_version_id
-      rows = rows.where(course_version_id: course_version_id)
-    end
+    rows = rows.where(course_version_id: course_version_id)
     return [] if query.length < MIN_WORD_LENGTH
     query = format_query(query)
     rows = rows.
