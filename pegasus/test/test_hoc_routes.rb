@@ -1,4 +1,5 @@
 require_relative './test_helper'
+require 'helpers/auth_helpers'
 require 'minitest/autorun'
 require 'rack/test'
 require 'mocha/mini_test'
