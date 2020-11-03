@@ -25,8 +25,7 @@ class FoormEditor extends React.Component {
     formVersion: PropTypes.number,
     // populated by redux
     formQuestions: PropTypes.object,
-    formHasError: PropTypes.bool,
-    isFormPublished: PropTypes.bool
+    formHasError: PropTypes.bool
   };
 
   constructor(props) {
@@ -240,7 +239,6 @@ class FoormEditor extends React.Component {
 export default connect(
   state => ({
     formQuestions: state.foorm.formQuestions || {},
-    isFormPublished: state.foorm.isFormPublished,
     formHasError: state.foorm.hasError
   }),
   dispatch => ({})
