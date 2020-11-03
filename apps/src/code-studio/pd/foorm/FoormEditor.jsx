@@ -7,6 +7,7 @@ import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import Foorm from './Foorm';
 import FontAwesome from '../../../templates/FontAwesome';
+import ToggleGroup from '@cdo/apps/templates/ToggleGroup';
 
 const facilitator_names = ['Alice', 'Bob', 'Carly', 'Dave'];
 
@@ -39,6 +40,9 @@ const styles = {
   }
 };
 
+const PREVIEW_ON = 'preview-on';
+const PREVIEW_OFF = 'preview-off';
+
 class FoormEditor extends React.Component {
   static propTypes = {
     populateCodeMirror: PropTypes.func.isRequired,
@@ -54,6 +58,7 @@ class FoormEditor extends React.Component {
     super(props);
 
     this.state = {
+      livePreviewStatus: PREVIEW_ON,
       formKey: 0,
       formPreviewQuestions: null,
       num_facilitators: 2,
@@ -75,7 +80,9 @@ class FoormEditor extends React.Component {
       ],
       day: 1,
       is_friday_institute: false,
-      workshop_agenda: 'module1'
+      workshop_agenda: 'module1',
+      libraryError: false,
+      libraryErrorMessage: null
     };
   }
 
@@ -115,21 +122,37 @@ class FoormEditor extends React.Component {
   };
 
   previewFoorm = () => {
-    // fill in form with any library items
-    $.ajax({
-      url: '/api/v1/pd/foorm/form_with_library_items',
-      type: 'post',
-      contentType: 'application/json',
-      processData: false,
-      data: JSON.stringify({
-        form_questions: this.props.formQuestions
+    if (this.state.livePreviewStatus === PREVIEW_ON) {
+      // fill in form with any library items
+      $.ajax({
+        url: '/api/v1/pd/foorm/form_with_library_items',
+        type: 'post',
+        contentType: 'application/json',
+        processData: false,
+        data: JSON.stringify({
+          form_questions: this.props.formQuestions
+        })
       })
-    }).done(result => {
-      this.setState({
-        formKey: this.state.formKey + 1,
-        formPreviewQuestions: result
-      });
-    });
+        .done(result => {
+          this.setState({
+            formKey: this.state.formKey + 1,
+            formPreviewQuestions: result,
+            libraryError: false,
+            libraryErrorMessage: null
+          });
+        })
+        .fail(result => {
+          console.log(result);
+          this.setState({
+            libraryError: true,
+            libraryErrorMessage: result.responseJSON.error
+          });
+        });
+    }
+  };
+
+  livePreviewToggled = toggleValue => {
+    this.setState({livePreviewStatus: toggleValue});
   };
 
   render() {
@@ -158,13 +181,22 @@ class FoormEditor extends React.Component {
           />
         </div>
         <div style={styles.options} className="foorm-options">
-          {this.props.formHasError ? (
+          {this.props.formHasError && (
             <div style={styles.errorMessage}>
               <FontAwesome icon="exclamation-triangle" /> There is a parsing
               error in the survey configuration. Errors are noted on the left
               side of the editor.
             </div>
-          ) : (
+          )}
+          {this.state.libraryError && (
+            <div style={styles.errorMessage}>
+              <FontAwesome icon="exclamation-triangle" />
+              {`There is an error in the use of at least one library question. The error is: ${
+                this.state.libraryErrorMessage
+              }`}
+            </div>
+          )}
+          {!this.props.formHasError && !this.state.libraryError && (
             <div>
               <form>
                 <h3>Survey Variables</h3>
@@ -245,31 +277,44 @@ class FoormEditor extends React.Component {
                   />
                 </label>
               </form>
+              <ToggleGroup
+                onChange={this.livePreviewToggled}
+                selected={this.state.livePreviewStatus}
+              >
+                <button type="button" value={PREVIEW_ON}>
+                  Live Preview On
+                </button>
+                <button type="button" value={PREVIEW_OFF}>
+                  Live Preview Off
+                </button>
+              </ToggleGroup>
             </div>
           )}
         </div>
         <div style={styles.preview} className="foorm-preview">
-          {this.state.formPreviewQuestions && !this.props.formHasError && (
-            // key allows us to force re-render when preview is called
-            <Foorm
-              formQuestions={this.state.formPreviewQuestions}
-              formName={'preview'}
-              formVersion={0}
-              submitApi={'/none'}
-              key={`form-${this.state.formKey}`}
-              surveyData={{
-                facilitators: this.state.facilitators,
-                num_facilitators: this.state.num_facilitators,
-                workshop_course: this.state.workshop_course,
-                workshop_subject: this.state.workshop_subject,
-                regional_partner_name: this.state.regional_partner_name,
-                is_virtual: this.state.is_virtual,
-                day: this.state.day,
-                is_friday_institute: this.state.is_friday_institute,
-                workshop_agenda: this.state.workshop_agenda
-              }}
-            />
-          )}
+          {this.state.formPreviewQuestions &&
+            !this.props.formHasError &&
+            !this.state.libraryError && (
+              // key allows us to force re-render when preview is called
+              <Foorm
+                formQuestions={this.state.formPreviewQuestions}
+                formName={'preview'}
+                formVersion={0}
+                submitApi={'/none'}
+                key={`form-${this.state.formKey}`}
+                surveyData={{
+                  facilitators: this.state.facilitators,
+                  num_facilitators: this.state.num_facilitators,
+                  workshop_course: this.state.workshop_course,
+                  workshop_subject: this.state.workshop_subject,
+                  regional_partner_name: this.state.regional_partner_name,
+                  is_virtual: this.state.is_virtual,
+                  day: this.state.day,
+                  is_friday_institute: this.state.is_friday_institute,
+                  workshop_agenda: this.state.workshop_agenda
+                }}
+              />
+            )}
         </div>
       </div>
     );
