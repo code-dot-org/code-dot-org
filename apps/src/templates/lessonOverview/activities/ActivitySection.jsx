@@ -18,6 +18,7 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
     width: 20,
+    padding: 5,
     alignItems: 'center'
   },
   tips: {
@@ -43,6 +44,18 @@ export default class ActivitySection extends Component {
     const {section} = this.props;
 
     const sectionHasTips = section.tips.length > 0;
+
+    let tipsTotalLength = 0;
+    section.tips.forEach(tip => {
+      tipsTotalLength += tip.markdown.length;
+    });
+    const totalLengthOfSectionText = section.text.length + tipsTotalLength;
+    // The width of the tip based on the length of the text of the tip and the activity section
+    // The minimum width the activity section can have is 25
+    const tipWidth = Math.min(
+      Math.round((tipsTotalLength / totalLengthOfSectionText) * 100),
+      75
+    );
 
     return (
       <div>
@@ -70,6 +83,7 @@ export default class ActivitySection extends Component {
                 <FontAwesome
                   key={`tipIcon-${index}`}
                   icon={tipTypes[tip.type].icon}
+                  style={{color: tipTypes[tip.type].color}}
                 />
               );
             })}
@@ -77,7 +91,7 @@ export default class ActivitySection extends Component {
           <div
             style={{
               ...styles.textAndProgression,
-              ...(!sectionHasTips && {width: '90%'})
+              ...(!sectionHasTips && {width: `${100 - tipWidth}%`})
             }}
           >
             <SafeMarkdown markdown={section.text} />
@@ -85,7 +99,12 @@ export default class ActivitySection extends Component {
               <ProgressionDetails progression={section} />
             )}
           </div>
-          <div style={{...styles.tips, ...(sectionHasTips && {width: '40%'})}}>
+          <div
+            style={{
+              ...styles.tips,
+              ...(sectionHasTips && {width: `${tipWidth}%`, marginLeft: 5})
+            }}
+          >
             {section.tips.map((tip, index) => {
               return <LessonTip key={`tip-${index}`} tip={tip} />;
             })}
