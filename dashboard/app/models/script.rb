@@ -480,6 +480,10 @@ class Script < ActiveRecord::Base
     end
   end
 
+  def self.remove_from_cache(script_name)
+    script_cache.delete(script_name)
+  end
+
   def self.get_script_family_redirect_for_user(family_name, user: nil, locale: 'en-US')
     return nil unless family_name
 
