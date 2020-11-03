@@ -462,6 +462,7 @@ class ActionController::TestCase
 
     test name do
       # params can be a hash, or a proc that returns a hash at runtime
+      refute_nil params, "params in controller tests cannot be nil"
       params = instance_exec(&params) if params.is_a? Proc
 
       if user
