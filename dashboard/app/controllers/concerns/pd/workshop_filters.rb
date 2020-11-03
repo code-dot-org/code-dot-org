@@ -91,9 +91,7 @@ module Pd::WorkshopFilters
           # a serialized attribute, which cannot be queried easily
           # via the typical ActiveRecord where method.
           virtual_status = params[:virtual] == 'yes'
-          workshops_array = workshops.select do |workshop|
-            workshop.virtual? == virtual_status
-          end
+          workshops_array = workshops.select {|workshop| workshop.virtual? == virtual_status}
           workshops = workshops.where(id: workshops_array.map(&:id))
         end
         workshops = workshops.where(organizer_id: params[:organizer_id]) if params[:organizer_id]
