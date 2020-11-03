@@ -7,8 +7,12 @@ export default class CdoTrashcan extends GoogleBlockly.Trashcan {
   createDom() {
     super.createDom();
 
-    // Use our trashcan png instead of Google's
-    this.svgGroup_.childNodes.forEach(node => {
+    /**
+     * Use our trashcan png instead of Google's
+     * NodeList.forEach() is not supported on IE. Use Array.prototype.forEach.call() as a workaround.
+     * https://developer.mozilla.org/en-US/docs/Web/API/NodeList/forEach
+     */
+    Array.prototype.forEach.call(this.svgGroup_.childNodes, function(node) {
       if (node.nodeName === 'image') {
         node.setAttributeNS(
           Blockly.utils.dom.XLINK_NS,
