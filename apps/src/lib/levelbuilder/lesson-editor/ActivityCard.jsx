@@ -68,8 +68,8 @@ const styles = {
 
 class ActivityCard extends Component {
   static propTypes = {
-    activity: activityShape,
-    activitiesCount: PropTypes.number,
+    activity: activityShape.isRequired,
+    activitiesCount: PropTypes.number.isRequired,
     setActivitySectionRef: PropTypes.func.isRequired,
     updateTargetActivitySection: PropTypes.func.isRequired,
     targetActivityPos: PropTypes.number,
@@ -80,10 +80,10 @@ class ActivityCard extends Component {
     collapsed: PropTypes.bool.isRequired,
 
     //redux
-    addActivitySection: PropTypes.func,
-    removeActivity: PropTypes.func,
-    moveActivity: PropTypes.func,
-    updateActivityField: PropTypes.func
+    addActivitySection: PropTypes.func.isRequired,
+    removeActivity: PropTypes.func.isRequired,
+    moveActivity: PropTypes.func.isRequired,
+    updateActivityField: PropTypes.func.isRequired
   };
 
   handleAddActivitySection = () => {
