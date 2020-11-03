@@ -16,7 +16,3 @@ Feature: Using the Level Edit Page
     And I check I am on the temp level show page
     And element "body" contains text "incorrect answer"
     And I delete the temp level
-
-
-
-
