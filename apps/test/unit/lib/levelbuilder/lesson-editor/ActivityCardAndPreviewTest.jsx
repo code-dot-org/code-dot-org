@@ -1,11 +1,11 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../../../util/reconfiguredChai';
-import {UnconnectedActivityCard as ActivityCard} from '@cdo/apps/lib/levelbuilder/lesson-editor/ActivityCard';
+import ActivityCardAndPreview from '@cdo/apps/lib/levelbuilder/lesson-editor/ActivityCardAndPreview';
 import {sampleActivities} from './activitiesTestData';
 import sinon from 'sinon';
 
-describe('ActivityCard', () => {
+describe('ActivityCardAndPreview', () => {
   let defaultProps,
     addActivitySection,
     removeActivity,
@@ -13,7 +13,6 @@ describe('ActivityCard', () => {
     updateActivityField,
     setActivitySectionRef,
     updateTargetActivitySection,
-    handleCollapse,
     updateActivitySectionMetrics;
   beforeEach(() => {
     addActivitySection = sinon.spy();
@@ -23,7 +22,6 @@ describe('ActivityCard', () => {
     setActivitySectionRef = sinon.spy();
     updateTargetActivitySection = sinon.spy();
     updateActivitySectionMetrics = sinon.spy();
-    handleCollapse = sinon.spy();
     defaultProps = {
       activity: sampleActivities[0],
       activitiesCount: 1,
@@ -35,14 +33,12 @@ describe('ActivityCard', () => {
       updateTargetActivitySection,
       updateActivitySectionMetrics,
       targetActivitySectionPos: 1,
-      activitySectionMetrics: [],
-      handleCollapse,
-      collapsed: false
+      activitySectionMetrics: []
     };
   });
 
   it('renders default props', () => {
-    const wrapper = shallow(<ActivityCard {...defaultProps} />);
+    const wrapper = shallow(<ActivityCardAndPreview {...defaultProps} />);
     expect(wrapper.contains('Activity:')).to.be.true;
     expect(wrapper.contains('Duration:')).to.be.true;
     expect(wrapper.find('OrderControls').length).to.equal(1);
@@ -51,7 +47,7 @@ describe('ActivityCard', () => {
   });
 
   it('adds activity section when button pressed', () => {
-    const wrapper = shallow(<ActivityCard {...defaultProps} />);
+    const wrapper = shallow(<ActivityCardAndPreview {...defaultProps} />);
     expect(wrapper.find('button').length).to.equal(1);
 
     const button = wrapper.find('button');
@@ -61,7 +57,7 @@ describe('ActivityCard', () => {
   });
 
   it('edit activity title', () => {
-    const wrapper = shallow(<ActivityCard {...defaultProps} />);
+    const wrapper = shallow(<ActivityCardAndPreview {...defaultProps} />);
 
     const titleInput = wrapper.find('input').at(0);
     titleInput.simulate('change', {target: {value: 'New Title'}});
@@ -73,7 +69,7 @@ describe('ActivityCard', () => {
   });
 
   it('edit activity duration', () => {
-    const wrapper = shallow(<ActivityCard {...defaultProps} />);
+    const wrapper = shallow(<ActivityCardAndPreview {...defaultProps} />);
 
     const titleInput = wrapper.find('input').at(1);
     titleInput.simulate('change', {target: {value: '1000'}});
