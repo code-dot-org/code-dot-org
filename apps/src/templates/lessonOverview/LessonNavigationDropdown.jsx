@@ -4,6 +4,7 @@ import Button from '@cdo/apps/templates/Button';
 import DropdownButton from '@cdo/apps/templates/DropdownButton';
 import color from '@cdo/apps/util/color';
 import {lessonShape} from '@cdo/apps/templates/lessonOverview/lessonPlanShapes';
+import {navigateToHref} from '@cdo/apps/utils';
 
 const styles = {
   dropdown: {
@@ -15,6 +16,14 @@ const styles = {
 };
 
 const LESSONS_PER_SECTION = 10;
+
+/*
+ Component used to navigate between lesson plans. When the list
+ is longer than 11 lessons the list is broken into sections of
+ 10 lessons. Each section has its own item in the list. In addition
+ one section of lessons will be open meaning that you will see
+ those 10 lessons listed and can click to navigate to one of them.
+ */
 
 export default class LessonNavigationDropdown extends Component {
   static propTypes = {
@@ -42,12 +51,27 @@ export default class LessonNavigationDropdown extends Component {
 
   handleDropdownClick = listItem => {
     if (listItem.link) {
-      window.location.href = this.linkWithQueryParams(listItem.link);
+      navigateToHref(this.linkWithQueryParams(listItem.link));
     } else {
       this.setState({currentSection: listItem.sectionNumber});
     }
   };
 
+  /*
+    Give a list of lessons will add an item for:
+    1) Each set of 10 lessons
+    2) Each lesson in the open section of lessons
+
+    Example: You have 15 lessons and the second section is open. The
+    list will look like:
+    - Lessons 1 to 10
+    - Lessons 10 to 15
+    - Lesson 11
+    - Lesson 12
+    - Lesson 13
+    - Lesson 14
+    - Lesson 15
+   */
   createSectionsOfLessons = () => {
     const {lesson} = this.props;
     const numLessons = lesson.unit.lessons.length;
