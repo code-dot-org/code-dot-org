@@ -30,6 +30,14 @@ require 'csv'
 # where quartile = 4
 # group by 1;
 
+# To generate attempts for the CSF 2020 levels we re-ran the query above
+# with the following adjustments:
+#
+#  script names: 'coursea-2020', 'courseb-2020', 'coursec-2020', 'coursed-2020',
+#     'coursee2020', 'coursef-2020',
+#  birthday between: '2008-01-01' and '2013-01-01',
+#  created_at::date >= '2020-01-01'
+
 thresholds_csv = ARGV[0]
 unless thresholds_csv
   puts 'Usage: import_hint_prompt_thresholds thresholds.csv'

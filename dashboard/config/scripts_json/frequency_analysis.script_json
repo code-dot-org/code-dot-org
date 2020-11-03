@@ -1,0 +1,80 @@
+{
+  "script": {
+    "name": "frequency_analysis",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": false,
+    "properties": {
+      "peer_reviews_to_complete": 0
+    },
+    "new_name": null,
+    "family_name": null,
+    "seeding_key": {
+      "script.name": "frequency_analysis"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "frequency_analysis"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Frequency Analysis",
+      "name": "Frequency Analysis",
+      "absolute_position": 1,
+      "lockable": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Frequency Analysis",
+        "lesson_group.key": "",
+        "script.name": "frequency_analysis"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Frequency Analysis"
+        ],
+        "lesson.key": "Frequency Analysis",
+        "lesson_group.key": "",
+        "script.name": "frequency_analysis"
+      },
+      "level_keys": [
+        "Frequency Analysis"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "Frequency Analysis",
+        "script_level.level_keys": [
+          "Frequency Analysis"
+        ],
+        "lesson.key": "Frequency Analysis",
+        "lesson_group.key": "",
+        "script.name": "frequency_analysis"
+      }
+    }
+  ]
+}

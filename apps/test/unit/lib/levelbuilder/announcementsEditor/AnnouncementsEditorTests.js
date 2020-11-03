@@ -13,8 +13,7 @@ const sampleAnnouncement = {
 
 const defaultProps = {
   defaultAnnouncements: [],
-  inputStyle: {},
-  curriculumObject: 'script'
+  inputStyle: {}
 };
 
 describe('AnnouncementsEditor', () => {

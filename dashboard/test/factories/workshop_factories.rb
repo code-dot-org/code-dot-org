@@ -1,11 +1,13 @@
 # Most academic year workshops are one day workshops.
 # These specific workshop types are two day workshops.
-TWO_DAY_AYW_SUBJECTS = [
-  Pd::Workshop::SUBJECT_CSD_WORKSHOP_1_2,
-  Pd::Workshop::SUBJECT_CSD_WORKSHOP_3_4,
-  Pd::Workshop::SUBJECT_CSP_WORKSHOP_1_2,
-  Pd::Workshop::SUBJECT_CSP_WORKSHOP_3_4
-]
+unless defined? TWO_DAY_AYW_SUBJECTS
+  TWO_DAY_AYW_SUBJECTS = [
+    Pd::Workshop::SUBJECT_CSD_WORKSHOP_1_2,
+    Pd::Workshop::SUBJECT_CSD_WORKSHOP_3_4,
+    Pd::Workshop::SUBJECT_CSP_WORKSHOP_1_2,
+    Pd::Workshop::SUBJECT_CSP_WORKSHOP_3_4
+  ]
+end
 
 #
 # Factories for different types of PD workshops

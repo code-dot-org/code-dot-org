@@ -1,5 +1,4 @@
 hidden false
-has_lesson_plan true
 
 lesson 'Black & White Pixelation Tutorial', display_name: 'Black & White Pixelation Tutorial'
 level 'Pixelation 4x4 Empty'

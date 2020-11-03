@@ -5,7 +5,7 @@
 .row
   .span8
     = form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post }) do |f|
-      = devise_error_messages!
+      = render "devise/shared/error_messages", resource: resource
       = f.email_field :email, :autofocus => true, style: "width: 400px", placeholder: t('password.reset_form.email')
       = recaptcha_tags unless (current_user && current_user.admin?)
       = show_flashes.html_safe

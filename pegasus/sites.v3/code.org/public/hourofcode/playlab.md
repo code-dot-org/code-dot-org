@@ -14,7 +14,8 @@ theme: responsive
 
 ### Lesson Plans:
 
-- [Play Lab](/files/hoc-playlab-lp.pdf)
+- [Play Lab (English)](https://curriculum.code.org/hoc/plugged/4)
+- [Play Lab (Spanish - LATAM)](https://curriculum.code.org/es-mx/hoc/plugged/4)
 
 ### Extension Activities:
 

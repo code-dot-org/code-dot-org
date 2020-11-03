@@ -7,14 +7,6 @@ social:
   og:image:width: '1200'
   og:image:height: '630'
 ---
-:ruby
-  @header["social"]["twitter:url"] = 'https://' + request.host + '/hourofcode/overview'
-  @header["social"]["twitter:title"] = hoc_s(:hour_of_code)
-  @header["social"]["twitter:description"] = hoc_s(:social_hoc2018_global_movement)
-  @header["social"]["twitter:image:src"] = 'https://' + request.host + '/images/social-media/code-2018-creativity.png'
-  @header["social"]["og:title"] = hoc_s(:hour_of_code)
-  @header["social"]["og:description"] = hoc_s(:social_hoc2018_global_movement)
-  @header["social"]["og:image"] = 'https://' + request.host + '/images/social-media/code-2018-creativity.png'
 
 %link{href: "/css/student.css", rel: "stylesheet"}
 %link{href: "/css/tools.css", rel: "stylesheet"}
@@ -28,11 +20,10 @@ social:
 
 != I18n.t(:hoc_overview_subtitle_markdown, markdown: :inline)
 
-- if request.language == 'en'
-  %br/
-  %br/
-  = view :at_home_banner
-  %br/
+%br/
+%br/
+= view :virtual_hoc_banner
+%br/
 
 
 .tile-container-responsive{style: "margin-top: 20px;"}
@@ -48,7 +39,7 @@ social:
           %a{href: "/dance"}
             %button.tutorial-info-start.tutorial-gray= I18n.t(:go)
           .tutorial-info-guide
-            %a{href: "https://curriculum.code.org/hoc/plugged/8/"}
+            %a{href: CDO.curriculum_url(I18n.locale, "/hoc/plugged/8/")}
               = I18n.t(:hoc_overview_view_teacher_guide)
 
   .col-50
@@ -63,7 +54,7 @@ social:
           %a{href: "/oceans"}
             %button.tutorial-info-start.tutorial-gray= I18n.t(:go)
           .tutorial-info-guide
-            %a{href: "https://curriculum.code.org/hoc/plugged/9/"}
+            %a{href: CDO.curriculum_url(I18n.locale, "/hoc/plugged/9/")}
               = I18n.t(:hoc_overview_view_teacher_guide)
 
 .tile-container-responsive
@@ -71,7 +62,7 @@ social:
 .clear
 
 .full-resource-block
-  %img.full-resource-image{src: "/images/csforgood-logo.png"}
+  %img.full-resource-image{src: "/images/hoc2020-banner.png"}
   .activities-info
     %span
       %h2.resource-title.white= I18n.t(:hoc_overview_partner_activities_title)

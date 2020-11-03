@@ -239,7 +239,7 @@ module LevelsHelper
     @app_options =
       if @level.is_a? Blockly
         blockly_options
-      elsif @level.is_a?(Weblab) || @level.is_a?(Fish)
+      elsif @level.is_a?(Weblab) || @level.is_a?(Fish) || @level.is_a?(Ailab)
         non_blockly_puzzle_options
       elsif @level.is_a?(DSLDefined) || @level.is_a?(FreeResponse) || @level.is_a?(CurriculumReference)
         question_options
@@ -311,11 +311,12 @@ module LevelsHelper
     use_blockly = !use_droplet && !use_netsim && !use_weblab
     use_p5 = @level.is_a?(Gamelab)
     hide_source = app_options[:hideSource]
+    use_google_blockly = @level.is_a?(Flappy) || view_options[:useGoogleBlockly]
     render partial: 'levels/apps_dependencies',
       locals: {
         app: app_options[:app],
         use_droplet: use_droplet,
-        use_google_blockly: view_options[:useGoogleBlockly],
+        use_google_blockly: use_google_blockly,
         use_blockly: use_blockly,
         use_applab: use_applab,
         use_gamelab: use_gamelab,
@@ -598,7 +599,7 @@ module LevelsHelper
       callback: @callback,
       sublevelCallback: @sublevel_callback,
     }
-    dev_with_credentials = rack_env?(:development) && (!!CDO.aws_access_key || !!CDO.aws_role) && !!CDO.cloudfront_key_pair_id
+    dev_with_credentials = rack_env?(:development) && !!CDO.cloudfront_key_pair_id
     use_restricted_songs = CDO.cdn_enabled || dev_with_credentials || (rack_env?(:test) && ENV['CI'])
     app_options[:useRestrictedSongs] = use_restricted_songs if @game == Game.dance
     app_options[:isStartMode] = @is_start_mode || false

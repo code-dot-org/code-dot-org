@@ -1,0 +1,110 @@
+{
+  "script": {
+    "name": "gamelab-hackathon",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": true,
+    "properties": {
+    },
+    "new_name": null,
+    "family_name": null,
+    "seeding_key": {
+      "script.name": "gamelab-hackathon"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "gamelab-hackathon"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Middle_School_Hackathon",
+      "name": "Middle_School_Hackathon",
+      "absolute_position": 1,
+      "lockable": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Middle_School_Hackathon",
+        "lesson_group.key": "",
+        "script.name": "gamelab-hackathon"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Middle School Hackathon Pt 1"
+        ],
+        "lesson.key": "Middle_School_Hackathon",
+        "lesson_group.key": "",
+        "script.name": "gamelab-hackathon"
+      },
+      "level_keys": [
+        "Middle School Hackathon Pt 1"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Middle School Hackathon Pt 2"
+        ],
+        "lesson.key": "Middle_School_Hackathon",
+        "lesson_group.key": "",
+        "script.name": "gamelab-hackathon"
+      },
+      "level_keys": [
+        "Middle School Hackathon Pt 2"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "Middle School Hackathon Pt 1",
+        "script_level.level_keys": [
+          "Middle School Hackathon Pt 1"
+        ],
+        "lesson.key": "Middle_School_Hackathon",
+        "lesson_group.key": "",
+        "script.name": "gamelab-hackathon"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Middle School Hackathon Pt 2",
+        "script_level.level_keys": [
+          "Middle School Hackathon Pt 2"
+        ],
+        "lesson.key": "Middle_School_Hackathon",
+        "lesson_group.key": "",
+        "script.name": "gamelab-hackathon"
+      }
+    }
+  ]
+}

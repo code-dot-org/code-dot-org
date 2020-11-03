@@ -1,4 +1,3 @@
-is_course true
 hidden false
 hideable_lessons true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csf-20/coursea/"], ["teacherForum", "http://forum.code.org/c/csf"], ["vocabulary", "https://curriculum.code.org/csf-20/coursea/vocab/"], ["standardMappings", "https://curriculum.code.org/csf-20/coursea/standards/"], ["curriculumGuide", "https://docs.google.com/document/d/1hstUHTGIdvtPP0TDdEfQeXG3zQ0q6ys237n2BY9CQmg/preview"]]
@@ -7,12 +6,12 @@ has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/{LOCALE}/csf-20/coursea/{LESSON}'
 project_widget_visible true
 project_widget_types ["playlab_k1", "artist_k1"]
-script_announcements [{"notice"=>"Our 2020 CS Fundamentals Lessons are Live!", "details"=>"Click \"Learn More\" to view all of the lesson plans for the 2020 version of Course A!", "link"=>"https://curriculum.code.org/csf-20/coursea", "type"=>"information", "visibility"=>"Teacher-only"}]
 family_name 'coursea'
 version_year '2020'
 is_stable true
 curriculum_umbrella 'CSF'
 tts true
+is_course true
 
 lesson_group 'csf_digcit', display_name: 'Digital Citizenship'
 lesson 'Safety in My Online Neighborhood', display_name: 'Safety in My Online Neighborhood'

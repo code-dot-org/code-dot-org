@@ -18,9 +18,15 @@ const levelNameToIdMap = {
   'blockly:Studio:playlab_1': 4
 };
 
-const defaultLevel = {
+const defaultScriptLevel = {
+  id: 10,
   position: 1,
-  ids: [2],
+  levels: [
+    {
+      name: 'Level 1',
+      id: 2
+    }
+  ],
   activeId: 2
 };
 
@@ -49,14 +55,20 @@ const assertButtonVisible = (wrapper, name, visible) => {
 };
 
 describe('LevelTokenDetails', () => {
-  let chooseLevel, addVariant, removeVariant, setActiveVariant, setField;
+  let chooseLevel,
+    addVariant,
+    removeVariant,
+    setActiveVariant,
+    setLevelField,
+    setScriptLevelField;
   let defaultProps;
   beforeEach(() => {
     chooseLevel = sinon.spy();
     addVariant = sinon.spy();
     removeVariant = sinon.spy();
     setActiveVariant = sinon.spy();
-    setField = sinon.spy();
+    setLevelField = sinon.spy();
+    setScriptLevelField = sinon.spy();
 
     defaultProps = {
       levelKeyList,
@@ -65,8 +77,9 @@ describe('LevelTokenDetails', () => {
       addVariant,
       removeVariant,
       setActiveVariant,
-      setField,
-      level: defaultLevel,
+      setLevelField,
+      setScriptLevelField,
+      scriptLevel: defaultScriptLevel,
       activitySectionPosition: 5,
       activityPosition: 1
     };
@@ -75,14 +88,15 @@ describe('LevelTokenDetails', () => {
   it('renders with default props', () => {
     const wrapper = shallow(<LevelTokenDetails {...defaultProps} />);
 
-    assertCheckboxVisible(wrapper, 'named', false);
+    assertCheckboxVisible(wrapper, 'bonus', true);
     assertCheckboxVisible(wrapper, 'assessment', true);
     assertCheckboxVisible(wrapper, 'challenge', true);
 
+    assertChecked(wrapper, 'bonus', false);
     assertChecked(wrapper, 'assessment', false);
     assertChecked(wrapper, 'challenge', false);
 
-    assertButtonVisible(wrapper, 'Add Variant', false);
+    assertButtonVisible(wrapper, 'Add Variant', true);
     assertButtonVisible(wrapper, 'Remove Variant', false);
   });
 
@@ -90,7 +104,7 @@ describe('LevelTokenDetails', () => {
     const wrapper = shallow(
       <LevelTokenDetails
         {...defaultProps}
-        level={{...defaultLevel, ids: [2, -1]}}
+        scriptLevel={{...defaultScriptLevel, levels: [{id: 2}, {id: -1}]}}
       />
     );
     //assertButtonVisible(wrapper, 'Add Variant', false);
@@ -101,7 +115,7 @@ describe('LevelTokenDetails', () => {
     const wrapper = shallow(
       <LevelTokenDetails
         {...defaultProps}
-        level={{...defaultLevel, ids: [2, 3]}}
+        scriptLevel={{...defaultScriptLevel, levels: [{id: 2}, {id: 3}]}}
       />
     );
     //assertButtonVisible(wrapper, 'Add Variant', true);
@@ -112,15 +126,15 @@ describe('LevelTokenDetails', () => {
     const wrapper = shallow(
       <LevelTokenDetails
         {...defaultProps}
-        level={{
-          ...defaultLevel,
-          named: true,
+        scriptLevel={{
+          ...defaultScriptLevel,
+          bonus: true,
           assessment: true,
           challenge: true
         }}
       />
     );
-    assertChecked(wrapper, 'named', true);
+    assertChecked(wrapper, 'bonus', true);
     assertChecked(wrapper, 'assessment', true);
     assertChecked(wrapper, 'challenge', true);
   });

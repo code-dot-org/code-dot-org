@@ -62,7 +62,7 @@ describe('loadApp.js', () => {
 
   it('stores attempts for logged-out users against the server level id', () => {
     setupApp(appOptions);
-    appOptions.onAttempt({});
+    appOptions.onAttempt({program: 'program'});
 
     expect(writtenLevelId).to.equal(SERVER_LEVEL_ID);
   });
@@ -70,7 +70,7 @@ describe('loadApp.js', () => {
   it('stores attempts for logged-out users against the server project level id for template backed level', () => {
     appOptions.serverProjectLevelId = SERVER_PROJECT_LEVEL_ID;
     setupApp(appOptions);
-    appOptions.onAttempt({});
+    appOptions.onAttempt({program: 'program'});
 
     expect(writtenLevelId).to.equal(SERVER_PROJECT_LEVEL_ID);
   });

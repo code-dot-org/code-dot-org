@@ -1,4 +1,5 @@
 require 'test_helper'
+require 'services/script_seed'
 
 class CourseOfferingTest < ActiveSupport::TestCase
   test "course offering associations" do
@@ -15,12 +16,21 @@ class CourseOfferingTest < ActiveSupport::TestCase
   # Other cases are covered by directly testing add_course_offering below.
   test "Script.setup creates CourseOffering and CourseVersion if is_course is true" do
     script_file = File.join(self.class.fixture_path, 'test-script-course-version.script')
-    scripts, _ = Script.setup([script_file])
-    script = scripts.first
+    script_names, _ = Script.setup([script_file])
+    script = Script.find_by!(name: script_names.first)
 
     offering = script.course_version.course_offering
     assert_equal 'xyz', offering.key
-    assert_equal [CourseVersion.find_by(key: '1234')], offering.course_versions
+    assert_equal CourseVersion.where(key: '1234'), offering.course_versions
+  end
+
+  test "ScriptSeed.seed_from_json_file creates CourseOffering and CourseVersion if is_course is true" do
+    script_file = File.join(self.class.fixture_path, 'test-new-seed-course-offering.script_json')
+    script = ScriptSeed.seed_from_json_file(script_file)
+
+    offering = script.course_version.course_offering
+    assert_equal 'xyz', offering.key
+    assert_equal CourseVersion.where(key: '1234'), offering.course_versions
   end
 
   test "UnitGroup.load_from_path creates CourseOffering and CourseVersion if is_course is true" do
@@ -29,7 +39,7 @@ class CourseOfferingTest < ActiveSupport::TestCase
 
     offering = unit_group.course_version.course_offering
     assert_equal 'xyz', offering.key
-    assert_equal [CourseVersion.find_by(key: '1234')], offering.course_versions
+    assert_equal CourseVersion.where(key: '1234'), offering.course_versions
   end
 
   # "Unit tests", parameterized so they test both types of content roots (Scripts and UnitGroups).

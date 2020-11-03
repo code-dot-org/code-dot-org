@@ -60,6 +60,7 @@ class ScreenProperties extends React.Component {
         <ImagePickerPropertyRow
           desc={'image'}
           initialValue={element.getAttribute('data-canonical-image-url') || ''}
+          currentImageType={element.getAttribute('data-image-type') || ''}
           handleChange={this.props.handleChange.bind(this, 'screen-image')}
           elementId={elementUtils.getId(element)}
         />
@@ -85,15 +86,8 @@ class ScreenEvents extends React.Component {
   // event.targetId === "<id>" here, at the expense of added complexity.
   getClickEventCode() {
     const id = elementUtils.getId(this.props.element);
-    const code =
-      'onEvent("' +
-      id +
-      '", "click", function(event) {\n' +
-      '  console.log("' +
-      id +
-      ' clicked!");\n' +
-      '});\n';
-    return code;
+    const callback = `function( ) {\n\tconsole.log("${id} clicked!");\n}`;
+    return `onEvent("${id}", "click", ${callback});`;
   }
 
   insertClick = () => {
@@ -102,13 +96,8 @@ class ScreenEvents extends React.Component {
 
   getKeyEventCode() {
     const id = elementUtils.getId(this.props.element);
-    const code =
-      'onEvent("' +
-      id +
-      '", "keydown", function(event) {\n' +
-      '  console.log("Key: " + event.key);\n' +
-      '});\n';
-    return code;
+    const callback = `function(event) {\n\tconsole.log("Key pressed: " + event.key);\n}`;
+    return `onEvent("${id}", "keydown", ${callback});`;
   }
 
   insertKey = () => {

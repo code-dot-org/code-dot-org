@@ -18,8 +18,7 @@ const styles = {
 export default class AnnouncementsEditor extends Component {
   static propTypes = {
     defaultAnnouncements: PropTypes.arrayOf(announcementShape),
-    inputStyle: PropTypes.object.isRequired,
-    curriculumObject: PropTypes.string
+    inputStyle: PropTypes.object.isRequired
   };
 
   constructor(props) {
@@ -65,7 +64,7 @@ export default class AnnouncementsEditor extends Component {
       <div>
         <input
           type="hidden"
-          name={`${this.props.curriculumObject}_announcements`}
+          name="announcements"
           value={JSON.stringify(announcements)}
         />
         <h4>
@@ -89,7 +88,8 @@ export default class AnnouncementsEditor extends Component {
           />
         ))}
         <button className="btn" type="button" onClick={this.add}>
-          Additional Announcement
+          <i style={{marginRight: 7}} className="fa fa-plus-circle" />
+          Add Announcement
         </button>
         {announcements.length > 0 && (
           <div>

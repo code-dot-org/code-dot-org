@@ -514,6 +514,9 @@ exports.appendNewFunctions = function(blocksXml, functionsXml) {
  * @property {boolean} defer Indicates that this input should be wrapped in a
  *   function before being passed into func, so that evaluation can be deferred
  *   until later.
+ * @property {boolean} variableInput Indicates that an input is a variable. The block
+ *   will have a dropown selector populated with all the variables in the program.
+ *   The generated code will be the variable, which will be defined as a global variable in the program.
  */
 
 /**
@@ -529,6 +532,7 @@ const VALUE_INPUT = 'value';
 const DUMMY_INPUT = 'dummy';
 const STATEMENT_INPUT = 'statement';
 const FIELD_INPUT = 'field';
+const VARIABLE_INPUT = 'variable';
 
 /**
  * Splits a blockText into labelled inputs, each match will a label followed by
@@ -595,6 +599,8 @@ const determineInputs = function(text, args, strictTypes = []) {
         mode = STATEMENT_INPUT;
       } else if (arg.empty) {
         mode = DUMMY_INPUT;
+      } else if (arg.variableInput) {
+        mode = VARIABLE_INPUT;
       } else {
         mode = VALUE_INPUT;
       }
@@ -698,6 +704,49 @@ const STANDARD_INPUT_TYPES = {
         code = JSON.stringify(code);
       }
       return code;
+    }
+  },
+  [VARIABLE_INPUT]: {
+    addInput(blockly, block, inputConfig, currentInputRow) {
+      // Make sure the variable name gets declared at the top of the program
+      block.getVars = function() {
+        return {
+          [Blockly.Variables.DEFAULT_CATEGORY]: [
+            block.getTitleValue(inputConfig.name)
+          ]
+        };
+      };
+
+      // The following functions make sure that the variable naming/renaming options work for this block
+      block.renameVar = function(oldName, newName) {
+        if (
+          Blockly.Names.equals(oldName, block.getTitleValue(inputConfig.name))
+        ) {
+          block.setTitleValue(newName, inputConfig.name);
+        }
+      };
+      block.removeVar = function(oldName) {
+        if (
+          Blockly.Names.equals(oldName, block.getTitleValue(inputConfig.name))
+        ) {
+          block.dispose(true, true);
+        }
+      };
+      block.superSetTitleValue = block.setTitleValue;
+      block.setTitleValue = function(newValue, name) {
+        if (name === inputConfig.name && block.blockSpace.isFlyout) {
+          newValue = Blockly.Variables.generateUniqueName(newValue);
+        }
+        block.superSetTitleValue(newValue, name);
+      };
+
+      // Add the variable field to the block
+      currentInputRow
+        .appendTitle(inputConfig.label)
+        .appendTitle(new Blockly.FieldVariable(null), inputConfig.name);
+    },
+    generateCode(block, inputConfig) {
+      return block.getTitleValue(inputConfig.name);
     }
   },
   [FIELD_INPUT]: {
@@ -1146,6 +1195,17 @@ exports.createJsWrapperBlockCreator = function(
           values.push(`function (${params}) {\n${handlerCode}}`);
         } else {
           values.push(`function () {\n${handlerCode}}`);
+        }
+      }
+
+      if (this.type === 'gamelab_setQuestion') {
+        const input = this.getInput('VAR');
+        if (input) {
+          const targetBlock = input.connection.targetBlock();
+          if (targetBlock && targetBlock.type === 'variables_get') {
+            const varName = Blockly.JavaScript.blockToCode(targetBlock)[0];
+            values.push(`function(val) {${varName} = val;}`);
+          }
         }
       }
 

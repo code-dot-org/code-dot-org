@@ -22,6 +22,7 @@ export default class SchoolInfoInputs extends Component {
     onSchoolTypeChange: PropTypes.func.isRequired,
     onSchoolChange: PropTypes.func.isRequired,
     onSchoolNotFoundChange: PropTypes.func.isRequired,
+    mapboxAccessToken: PropTypes.string,
     country: PropTypes.string,
     schoolType: PropTypes.string,
     ncesSchoolId: PropTypes.string,
@@ -30,7 +31,7 @@ export default class SchoolInfoInputs extends Component {
     schoolState: PropTypes.string,
     schoolZip: PropTypes.string,
     schoolLocation: PropTypes.string,
-    useGoogleLocationSearch: PropTypes.bool,
+    useLocationSearch: PropTypes.bool,
     fieldNames: PropTypes.object,
     showErrors: PropTypes.bool,
     showRequiredIndicator: PropTypes.bool,
@@ -46,7 +47,7 @@ export default class SchoolInfoInputs extends Component {
     schoolState: '',
     schoolZip: '',
     schoolLocation: '',
-    useGoogleLocationSearch: false,
+    useLocationSearch: false,
     fieldNames: {
       schoolType: 'user[school_info_attributes][school_type]',
       country: 'user[school_info_attributes][country]',
@@ -175,7 +176,8 @@ export default class SchoolInfoInputs extends Component {
             singleLineLayout
             showRequiredIndicators={this.props.showRequiredIndicator}
             schoolNameLabel={schoolNameLabel}
-            useGoogleLocationSearch={this.props.useGoogleLocationSearch}
+            useLocationSearch={this.props.useLocationSearch}
+            mapboxAccessToken={this.props.mapboxAccessToken}
           />
         )}
       </div>

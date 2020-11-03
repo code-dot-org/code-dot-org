@@ -11,6 +11,7 @@ function setGlobals() {
   var blockly = require('@code-dot-org/blockly');
   var initializeCdoBlocklyWrapper = require('../../src/sites/studio/pages/cdoBlocklyWrapper');
   window.Blockly = initializeCdoBlocklyWrapper(blockly);
+
   try {
     require('../../lib/blockly/en_us');
   } catch (err) {
