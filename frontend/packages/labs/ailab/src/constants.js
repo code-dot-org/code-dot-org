@@ -10,3 +10,12 @@ export const MLTypes = {
 };
 
 export const TRAINING_DATA_PERCENTS = [0, 5, 10, 15, 20];
+
+export const styles = {
+  error: {
+    color: "red"
+  },
+  ready: {
+    color: "green"
+  }
+};

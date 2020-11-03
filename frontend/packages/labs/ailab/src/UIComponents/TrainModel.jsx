@@ -10,16 +10,7 @@ import {
   readyToTrain,
   validationMessages
 } from "../redux";
-import { TRAINING_DATA_PERCENTS } from "../constants";
-
-const styles = {
-  error: {
-    color: "red"
-  },
-  ready: {
-    color: "green"
-  }
-};
+import { TRAINING_DATA_PERCENTS, styles } from "../constants";
 
 class TrainModel extends Component {
   static propTypes = {

@@ -12,11 +12,12 @@ import {
   oneLabelSelected,
   uniqLabelFeaturesSelected,
   selectedColumnsHaveDatatype,
+  continuousColumnsHaveOnlyNumbers,
   trainerSelected,
   compatibleLabelAndTrainer
 } from "./validate.js";
 
-import { MLTypes, ColumnTypes } from "./constants.js";
+import { ColumnTypes } from "./constants.js";
 
 // Action types
 const RESET_STATE = "RESET_STATE";
@@ -261,15 +262,15 @@ export function getSelectedColumns(state) {
 }
 
 export function getSelectedCategoricalColumns(state) {
-  let intersection = getCategoricalColumns(state).filter(x =>
-    state.selectedFeatures.includes(x)
+  let intersection = getCategoricalColumns(state).filter(
+    x => state.selectedFeatures.includes(x) || x === state.labelColumn
   );
   return intersection;
 }
 
 export function getSelectedContinuousColumns(state) {
-  let intersection = getContinuousColumns(state).filter(x =>
-    state.selectedFeatures.includes(x)
+  let intersection = getContinuousColumns(state).filter(
+    x => state.selectedFeatures.includes(x) || x === state.labelColumn
   );
   return intersection;
 }
@@ -283,33 +284,7 @@ export function getSelectableFeatures(state) {
 }
 
 export function getSelectableLabels(state) {
-  const eligibleColumns = getFeatures(state);
-  let labelsRestrictedByTrainer;
-  switch (true) {
-    case availableTrainers[state.selectedTrainer] &&
-      availableTrainers[state.selectedTrainer].mlType ===
-        MLTypes.CLASSIFICATION &&
-      availableTrainers[state.selectedTrainer].binary:
-      labelsRestrictedByTrainer = getCategoricalColumns(state).filter(
-        column => getUniqueOptions(state, column).length === 2
-      );
-      break;
-    case availableTrainers[state.selectedTrainer] &&
-      availableTrainers[state.selectedTrainer].mlType ===
-        MLTypes.CLASSIFICATION:
-      labelsRestrictedByTrainer = getCategoricalColumns(state);
-      break;
-    case availableTrainers[state.selectedTrainer] &&
-      availableTrainers[state.selectedTrainer].mlType === MLTypes.REGRESSION:
-      labelsRestrictedByTrainer = getContinuousColumns(state);
-      break;
-    default:
-      labelsRestrictedByTrainer = eligibleColumns;
-  }
-  const selectableLabels = labelsRestrictedByTrainer.filter(
-    x => !state.selectedFeatures.includes(x)
-  );
-  return selectableLabels;
+  return getFeatures(state).filter(x => !state.selectedFeatures.includes(x));
 }
 
 export function getUniqueOptions(state, column) {
@@ -324,6 +299,21 @@ export function getUniqueOptionsByColumn(state) {
     column => (uniqueOptionsByColumn[column] = getUniqueOptions(state, column))
   );
   return uniqueOptionsByColumn;
+}
+
+export function getRangesByColumn(state) {
+  let rangesByColumn = {};
+  getSelectedContinuousColumns(state).map(
+    column => (rangesByColumn[column] = getRange(state, column))
+  );
+  return rangesByColumn;
+}
+
+export function getRange(state, column) {
+  let range = {};
+  range.max = Math.max(...state.data.map(row => parseFloat(row[column])));
+  range.min = Math.min(...state.data.map(row => parseFloat(row[column])));
+  return range;
 }
 
 function getKeyByValue(object, value) {
@@ -419,6 +409,11 @@ export function validationMessages(state) {
       "Feature and label columns must contain only continuous or categorical data.",
     successString:
       "Selected features and label contain continuous or categorical data"
+  });
+  validationMessages.push({
+    readyToTrain: continuousColumnsHaveOnlyNumbers(state),
+    errorString: "Continuous columns should contain only numbers.",
+    successString: "Continuous columns contain only numbers."
   });
   validationMessages.push({
     readyToTrain: trainerSelected(state),

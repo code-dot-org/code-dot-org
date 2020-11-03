@@ -2,15 +2,24 @@
 import PropTypes from "prop-types";
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { getSelectedColumns, setColumnsByDataType } from "../redux";
-import { ColumnTypes } from "../constants.js";
+import {
+  getSelectedColumns,
+  setColumnsByDataType,
+  getUniqueOptionsByColumn,
+  getRangesByColumn
+} from "../redux";
+import { ColumnTypes, styles } from "../constants.js";
 
 class ColumnInspector extends Component {
   static propTypes = {
     getSelectedColumns: PropTypes.func,
     selectedColumns: PropTypes.array,
     columnsByDataType: PropTypes.object,
-    setColumnsByDataType: PropTypes.func.isRequired
+    setColumnsByDataType: PropTypes.func.isRequired,
+    getUniqueOptionsByColumn: PropTypes.func,
+    uniqueOptionsByColumn: PropTypes.object,
+    getRangesByColumn: PropTypes.func,
+    rangesByColumn: PropTypes.object
   };
 
   handleChangeDataType = (event, feature) => {
@@ -63,6 +72,39 @@ class ColumnInspector extends Component {
                         </select>
                       </label>
                     )}
+                    {this.props.columnsByDataType[column] ===
+                      ColumnTypes.CATEGORICAL && (
+                      <div>
+                        <p>
+                          {this.props.uniqueOptionsByColumn[column].length}{" "}
+                          unique values for {column}:{" "}
+                        </p>
+                        {this.props.uniqueOptionsByColumn[column].map(
+                          (option, index) => {
+                            return <div key={index}>{option}</div>;
+                          }
+                        )}
+                      </div>
+                    )}
+                    {this.props.columnsByDataType[column] ===
+                      ColumnTypes.CONTINUOUS && (
+                      <div>
+                        {this.props.rangesByColumn[column] && (
+                          <div>
+                            {isNaN(this.props.rangesByColumn[column].min) && (
+                              <p style={styles.error}>
+                                Continuous columns should contain only numbers.
+                              </p>
+                            )}
+                            <br />
+                            min: {this.props.rangesByColumn[column].min}
+                            <br />
+                            <br />
+                            max: {this.props.rangesByColumn[column].max}
+                          </div>
+                        )}
+                      </div>
+                    )}
                     <br />
                     <br />
                   </div>
@@ -79,7 +121,9 @@ class ColumnInspector extends Component {
 export default connect(
   state => ({
     selectedColumns: getSelectedColumns(state),
-    columnsByDataType: state.columnsByDataType
+    columnsByDataType: state.columnsByDataType,
+    uniqueOptionsByColumn: getUniqueOptionsByColumn(state),
+    rangesByColumn: getRangesByColumn(state)
   }),
   dispatch => ({
     setColumnsByDataType(column, dataType) {
