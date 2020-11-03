@@ -7,7 +7,9 @@ Feature: Using the Level Edit Page
     Given I create a levelbuilder named "Levi"
     And I create a temp multi level
     And I check I am on the temp level edit page
+    And I wait for 2 seconds
     And I press keys "wrong 'incorrect answer'" for element "#level_dsl_text"
+    And I wait for 2 seconds
     And I click "input[type='submit']"
     And I wait for 5 seconds
     And I scroll the "#validation-error" element into view
