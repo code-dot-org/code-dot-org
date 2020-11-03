@@ -296,7 +296,7 @@ class Lesson < ActiveRecord::Base
       purpose: purpose,
       preparation: preparation,
       announcements: announcements,
-      activities: lesson_activities.map(&:summarize_for_edit),
+      activities: lesson_activities.map(&:summarize_for_lesson_edit),
       resources: resources,
       objectives: objectives.map(&:summarize_for_edit)
     }
