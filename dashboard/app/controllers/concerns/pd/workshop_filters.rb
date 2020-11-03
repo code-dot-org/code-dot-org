@@ -92,7 +92,9 @@ module Pd::WorkshopFilters
           # via the typical ActiveRecord where method.
           virtual_status = params[:virtual] == 'yes'
           workshops_array = workshops.select {|workshop| workshop.virtual? == virtual_status}
-          workshops = workshops.where(id: workshops_array.map(&:id))
+          workshops = workshops_array.empty? ?
+            workshops.none :
+            workshops.where(id: workshops_array.map(&:id))
         end
         workshops = workshops.where(organizer_id: params[:organizer_id]) if params[:organizer_id]
         workshops = workshops.facilitated_by(User.find_by(id: params[:facilitator_id])) if params[:facilitator_id]
