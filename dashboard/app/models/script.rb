@@ -481,7 +481,7 @@ class Script < ActiveRecord::Base
   end
 
   def self.remove_from_cache(script_name)
-    script_cache.delete(script_name)
+    script_cache.delete(script_name) if script_cache
   end
 
   def self.get_script_family_redirect_for_user(family_name, user: nil, locale: 'en-US')
