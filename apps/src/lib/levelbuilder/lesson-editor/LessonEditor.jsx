@@ -212,7 +212,7 @@ export default class LessonEditor extends Component {
           collapsed={true}
           fullWidth={true}
         >
-          <ResourcesEditor resources={this.props.resources} />
+          <ResourcesEditor />
         </CollapsibleEditorSection>
 
         <CollapsibleEditorSection
