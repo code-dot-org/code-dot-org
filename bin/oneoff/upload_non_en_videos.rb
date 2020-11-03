@@ -32,7 +32,7 @@ def parse_options(args)
       options[:client_secrets_path] = client_secrets_path
     end
 
-    opts.on("-m", "--map_file MAP_CSV", "Location of csv file mapping filenames to video keys. Must have columns titled 'Folder', 'Partner filename', 'Key', and 'Video Title'") do |map_path|
+    opts.on("-m", "--map_file MAP_CSV", "Location of csv file mapping filenames to video keys. Must have columns titled 'Folder', 'Filename', 'Key' (the video key on levelbuilder), and 'Video Title'. Capitalization must match.") do |map_path|
       options[:map_path] = map_path
     end
 
@@ -56,7 +56,7 @@ end
 # Let's get a set of the videos we're going to upload
 def parse_video_file_paths(map_file, video_file_directory)
   videos = CSV.read(map_file, headers: true).map do |row|
-    {key: row['Key'], file_path: File.join([video_file_directory, row['Folder'], row['Partner filename']].compact), title: row['Video Title']}
+    {key: row['Key'], file_path: File.join([video_file_directory, row['Folder'], row['Filename']].compact), title: row['Video Title']}
   end
   videos
 end
