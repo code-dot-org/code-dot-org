@@ -124,4 +124,9 @@ class GeocoderTest < Minitest::Test
     assert_equal("0", location.latitude)
     assert_equal("0", location.longitude)
   end
+
+  def test_freegeoip_overrides
+    # Our self-hosted FreeGeoIP service only supports HTTP
+    assert_equal([:http], Geocoder::Lookup::Freegeoip.new.supported_protocols)
+  end
 end

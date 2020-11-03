@@ -1,6 +1,7 @@
 require 'geocoder'
 require 'geocoder/results/mapbox'
 require 'redis'
+require 'geocoder/lookups/freegeoip'
 
 module Geocoder
   module Result
@@ -162,6 +163,16 @@ module Geocoder
   end
   singleton_class.prepend LocahostOverride
 end
+
+# We need to override some of the behavior of Geocoder::Lookup::Freegeoip in order for is to work with our self-hosted
+# FreeGeoIP service.
+module FreegeoipOverride
+  # Our self-hosted service only supports HTTP but Geocoder::Lookup::Freegeoip is configured to only use HTTPS.
+  def supported_protocols
+    [:http]
+  end
+end
+Geocoder::Lookup::Freegeoip.send :prepend, FreegeoipOverride
 
 def geocoder_config
   {
