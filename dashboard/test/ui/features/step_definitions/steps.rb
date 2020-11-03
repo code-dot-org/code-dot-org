@@ -1045,6 +1045,14 @@ Given(/^I view the temp lesson edit page$/) do
   }
 end
 
+Given (/^I remove the temp script from the cache$/) do
+  browser_request(
+    url: '/api/test/invalidate_script',
+    method: 'POST',
+    body: {script_name: @temp_script_name}
+  )
+end
+
 Given(/^I delete the temp script and lesson$/) do
   browser_request(
     url: '/api/test/destroy_script',

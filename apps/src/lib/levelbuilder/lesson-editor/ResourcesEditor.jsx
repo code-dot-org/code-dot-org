@@ -38,7 +38,7 @@ const styles = {
 
 class ResourcesEditor extends Component {
   static propTypes = {
-    resources: PropTypes.arrayOf(resourceShape),
+    resources: PropTypes.arrayOf(resourceShape).isRequired,
     addResource: PropTypes.func.isRequired,
     removeResource: PropTypes.func.isRequired
   };
