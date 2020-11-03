@@ -164,7 +164,8 @@ export default class WorkshopTable extends React.Component {
       {
         property: 'virtual',
         header: {
-          label: 'Virtual'
+          label: 'Virtual',
+          transforms: [sortable]
         },
         cell: {
           formatters: [this.formatBoolean]

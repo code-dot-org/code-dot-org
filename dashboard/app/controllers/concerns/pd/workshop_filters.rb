@@ -131,6 +131,8 @@ module Pd::WorkshopFilters
             workshops = workshops.order("course #{direction}".strip)
           when 'subject'
             workshops = workshops.order("subject #{direction}".strip)
+          when 'virtual'
+            workshops = workshops.order("virtual #{direction}".strip)
           when 'date'
             workshops = workshops.order_by_scheduled_start(desc: direction == 'desc')
           when 'enrollments'
