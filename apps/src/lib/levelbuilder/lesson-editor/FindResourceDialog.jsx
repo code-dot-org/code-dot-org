@@ -40,9 +40,6 @@ class FindResourceDialog extends Component {
     if (resource.properties.type) {
       formattedName += ` - ${resource.properties.type}`;
     }
-    if (resource.properties.audience) {
-      formattedName += ` - ${resource.properties.audience}`;
-    }
     return formattedName;
   };
 
