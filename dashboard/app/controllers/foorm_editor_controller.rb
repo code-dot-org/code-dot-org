@@ -1,9 +1,11 @@
+# Foorm Editor is only available on levelbuilder or test, for those with levelbuilder permissions.
 class FoormEditorController < ApplicationController
+  before_action :require_levelbuilder_mode_or_test_env
+  before_action :authenticate_user!
+  authorize_resource class: false
+
   # GET '/foorm/editor/'
   def index
-    # only show for admins on non-production
-    return render_404 if Rails.env.production? || !current_user.admin?
-
     formatted_names_and_versions = Foorm::Form.all.map {|form| {name: form.name, version: form.version}}
 
     @script_data = {
