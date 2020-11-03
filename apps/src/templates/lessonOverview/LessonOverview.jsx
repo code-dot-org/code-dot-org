@@ -21,10 +21,10 @@ const styles = {
     flexDirection: 'row'
   },
   left: {
-    flexGrow: 2
+    width: '60%'
   },
   right: {
-    flexGrow: 1,
+    width: '40%',
     padding: 10,
     borderLeft: 'solid 1px black'
   },
