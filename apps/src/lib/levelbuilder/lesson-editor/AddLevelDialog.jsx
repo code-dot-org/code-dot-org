@@ -51,9 +51,9 @@ export default class AddLevelDialog extends Component {
   static propTypes = {
     isOpen: PropTypes.bool.isRequired,
     handleConfirm: PropTypes.func.isRequired,
-    addLevel: PropTypes.func,
-    activityPosition: PropTypes.number,
-    activitySection: activitySectionShape
+    addLevel: PropTypes.func.isRequired,
+    activityPosition: PropTypes.number.isRequired,
+    activitySection: activitySectionShape.isRequired
   };
 
   state = {
