@@ -13,9 +13,6 @@ require 'rubygems'
 require 'csv'
 require 'optparse'
 
-# Switch this to false when ready to run
-DRY_RUN = true
-
 APPLICATION_NAME = 'Dubbed Video Batch Upload'
 
 # This is the URI so that we can authorize from a browser. Don't change this.
@@ -44,6 +41,10 @@ def parse_options(args)
       options[:video_directory] = video_directory
     end
 
+    opts.on("-r", "--run", "Actually upload the files to YouTube and S3") do |run|
+      options[:run] = run
+    end
+
     opts.on('-h', '--help', 'Show command line arguments') do
       puts opts
       exit
@@ -61,8 +62,8 @@ def parse_video_file_paths(map_file, video_file_directory)
   videos
 end
 
-def upload_to_s3(filename)
-  if !DRY_RUN
+def upload_to_s3(filename, upload_files)
+  if upload_files
     File.open(filename, 'rb') do |file|
       s3_filename = File.basename(filename).parameterize + '.mp4'
       AWS::S3.upload_to_bucket(
@@ -95,16 +96,16 @@ def authorize(client_secrets_path)
   auth_client
 end
 
-def initialize_youtube(client_secrets_path)
+def initialize_youtube(client_secrets_path, upload_files)
   service = Google::Apis::YoutubeV3::YouTubeService.new
   service.client_options.application_name = APPLICATION_NAME
-  service.authorization = authorize(client_secrets_path) unless DRY_RUN
+  service.authorization = authorize(client_secrets_path) unless upload_files
   service
 end
 
 # Returns the YouTube code
-def upload_to_youtube(service, filename, title)
-  if DRY_RUN
+def upload_to_youtube(service, filename, title, upload_files)
+  if !upload_files
     'youtube_code'
   else
     properties = {'snippet': {'category_id': '22',
@@ -126,13 +127,13 @@ end
 
 def main(options)
   videos = parse_video_file_paths(options[:map_path], options[:video_directory])
-  service = initialize_youtube(options[:client_secrets_path])
+  service = initialize_youtube(options[:client_secrets_path], options[:run])
   uploaded_videos = 0
   videos.each do |video|
     if validate_key(video[:key], options[:locale])
       puts "uploading " + video[:key]
-      download = upload_to_s3(File.open(video[:file_path]))
-      youtube_code = upload_to_youtube(service, video[:file_path], video[:title])
+      download = upload_to_s3(File.open(video[:file_path]), options[:run])
+      youtube_code = upload_to_youtube(service, video[:file_path], video[:title], options[:run])
       Video.merge_and_write_attributes(video[:key], youtube_code, download, options[:locale], 'dashboard/config/videos.csv')
       uploaded_videos += 1
     else
