@@ -162,6 +162,15 @@ export default class WorkshopTable extends React.Component {
         }
       },
       {
+        property: 'virtual',
+        header: {
+          label: 'Virtual'
+        },
+        cell: {
+          formatters: [this.formatBoolean]
+        }
+      },
+      {
         property: 'enrollments',
         header: {
           label: 'Signups',
