@@ -33,7 +33,8 @@ class LessonsController < ApplicationController
       preparation: @lesson.preparation || '',
       activities: @lesson.lesson_activities.map(&:summarize_for_lesson_show),
       resources: @lesson.resources_for_lesson_plan(@current_user&.authorized_teacher?),
-      objectives: @lesson.objectives.map(&:summarize_for_lesson_show)
+      objectives: @lesson.objectives.map(&:summarize_for_lesson_show),
+      is_teacher: @current_user&.teacher?
     }
   end
 
