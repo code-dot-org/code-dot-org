@@ -85,6 +85,13 @@ module Pd::WorkshopFilters
       workshops = workshops.where(subject: params[:subject]) if params[:subject]
 
       if current_user.permission?(UserPermission::WORKSHOP_ADMIN)
+        if params[:virtual]
+          virtual_status = params[:virtual] == 'yes'
+          workshops_array = workshops.select do |workshop|
+            workshop.virtual? == virtual_status
+          end
+          workshops = workshops.where(id: workshops_array.map(&:id))
+        end
         workshops = workshops.where(organizer_id: params[:organizer_id]) if params[:organizer_id]
         workshops = workshops.facilitated_by(User.find_by(id: params[:facilitator_id])) if params[:facilitator_id]
       end
@@ -147,6 +154,7 @@ module Pd::WorkshopFilters
       :end,
       :course,
       :subject,
+      :virtual,
       :facilitator_id,
       :organizer_id,
       :teacher_email,
