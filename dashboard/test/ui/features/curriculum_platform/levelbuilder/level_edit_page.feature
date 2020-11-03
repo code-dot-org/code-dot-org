@@ -7,7 +7,11 @@ Feature: Using the Level Edit Page
     Given I create a levelbuilder named "Levi"
     And I create a temp multi level
     And I check I am on the temp level edit page
-    And I press keys "wrong 'incorrect answer'" for element "#level_dsl_text"
+    # The dsl on the level edit page gets loaded from the level dsl file. This
+    # file won't have been updated in the test environment because level dsl
+    # files are only written in levelbuilder mode, so we have to enter all
+    # of the DSL text again.
+    And I enter temp level multi dsl text
     And I click "input[type='submit']" to load a new page
     And I check I am on the temp level show page
     And element "body" contains text "incorrect answer"
