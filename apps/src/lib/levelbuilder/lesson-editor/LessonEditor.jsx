@@ -62,7 +62,7 @@ export default class LessonEditor extends Component {
     purpose: PropTypes.string,
     preparation: PropTypes.string,
     announcements: PropTypes.arrayOf(announcementShape),
-    resources: PropTypes.arrayOf(resourceShape),
+    resources: PropTypes.arrayOf(resourceShape).isRequired,
     relatedLessons: PropTypes.arrayOf(relatedLessonShape).isRequired,
     objectives: PropTypes.arrayOf(PropTypes.object).isRequired
   };
