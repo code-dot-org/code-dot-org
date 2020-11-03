@@ -150,6 +150,7 @@ class ResourcesEditor extends Component {
           isOpen={this.state.newResourceDialogOpen}
           onSave={this.addResource}
           handleClose={this.handleNewResourceDialogClose}
+          courseVersionId={this.props.courseVersionId}
         />
         Resources
         <input
