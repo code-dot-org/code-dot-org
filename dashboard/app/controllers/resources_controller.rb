@@ -19,6 +19,10 @@ class ResourcesController < ApplicationController
         include_in_pdf: resource_params[:include_in_pdf]
       }
     )
+    if resource_params[:courseVersionId]
+      course_version = CourseVersion.find(resource_params[:courseVersionId])
+      resource.course_version = course_version if course_version
+    end
     if resource.save
       render json: resource.attributes
     else
@@ -27,6 +31,6 @@ class ResourcesController < ApplicationController
   end
 
   def resource_params
-    params.permit(:name, :url, :downloadUrl, :assessment, :type, :audience, :include_in_pdf)
+    params.permit(:name, :url, :downloadUrl, :assessment, :type, :audience, :include_in_pdf, :courseVersionId)
   end
 end
