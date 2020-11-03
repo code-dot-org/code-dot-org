@@ -37,7 +37,9 @@ export default class LessonTipIconWithTooltip extends Component {
           effect="solid"
           disable={false}
         >
-          <LessonTip tip={tip} />
+          <div style={{maxWidth: 400}}>
+            <LessonTip tip={tip} />
+          </div>
         </ReactTooltip>
       </span>
     );
