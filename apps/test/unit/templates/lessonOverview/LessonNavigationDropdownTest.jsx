@@ -128,7 +128,7 @@ describe('LessonNavigationDropdown', () => {
     ).to.be.true;
     lesson1.simulate('click');
 
-    expect(utils.navigateToHref).to.have.been.calledWith('/lessons/1');
+    expect(utils.navigateToHref).to.have.been.calledOnce;
     utils.navigateToHref.restore();
   });
 });
