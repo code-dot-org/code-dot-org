@@ -1076,9 +1076,8 @@ Given(/^I enter temp level multi dsl text$/) do
     title 'title'
     description 'description here'
     question 'Question'
-    wrong 'wrong answer'
-    right 'right answer'
     wrong 'incorrect answer'
+    right 'correct answer'
   DSL
   steps 'And I clear the text from element "#level_dsl_text"'
   steps "And I press keys #{dsl.dump} for element \"#level_dsl_text\""
