@@ -32,12 +32,12 @@ class HomeController < ApplicationController
     if current_user
       render 'index', layout: false, formats: [:html]
     else
-      render text: ''
+      render plain: ''
     end
   end
 
   def health_check
-    render text: 'healthy!'
+    render plain: 'healthy!'
   end
 
   # Signed in student, with an assigned course/script: redirect to course overview page
