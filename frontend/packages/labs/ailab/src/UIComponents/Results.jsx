@@ -71,26 +71,16 @@ class Results extends Component {
   }
 }
 
-export default connect(
-  state => ({
-    showPredict: state.showPredict,
-    selectedFeatures: state.selectedFeatures,
-    labelColumn: state.labelColumn,
-    accuracy: getAccuracy(state),
-    accuracyCheckExamples: state.accuracyCheckExamples,
-    accuracyCheckLabels: getConvertedLabels(state, state.accuracyCheckLabels),
-    accuracyCheckPredictedLabels: getConvertedLabels(
-      state,
-      state.accuracyCheckPredictedLabels
-    ),
-    percentDataToReserve: state.percentDataToReserve
-  }),
-  dispatch => ({
-    setShowPredict(showPredict) {
-      dispatch(setShowPredict(showPredict));
-    },
-    setPercentDataToReserve(percentDataToReserve) {
-      dispatch(setPercentDataToReserve(percentDataToReserve));
-    }
-  })
-)(Results);
+export default connect(state => ({
+  showPredict: state.showPredict,
+  selectedFeatures: state.selectedFeatures,
+  labelColumn: state.labelColumn,
+  accuracy: getAccuracy(state),
+  accuracyCheckExamples: state.accuracyCheckExamples,
+  accuracyCheckLabels: getConvertedLabels(state, state.accuracyCheckLabels),
+  accuracyCheckPredictedLabels: getConvertedLabels(
+    state,
+    state.accuracyCheckPredictedLabels
+  ),
+  percentDataToReserve: state.percentDataToReserve
+}))(Results);
