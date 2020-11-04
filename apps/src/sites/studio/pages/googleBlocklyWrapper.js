@@ -134,7 +134,15 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.blockly_.Trashcan = CdoTrashcan;
   blocklyWrapper.blockly_.WorkspaceSvg = CdoWorkspaceSvg;
 
-  const disabledContextMenuOptions = ['blockCollapseExpand'];
+  const disabledContextMenuOptions = [
+    'blockCollapseExpand',
+    'blockComment',
+    'blockDisable',
+    'blockHelp',
+    'blockInline',
+    'collapseWorkspace',
+    'expandWorkspace'
+  ];
   disabledContextMenuOptions.forEach(optionId =>
     blocklyWrapper.blockly_.ContextMenuRegistry.registry.unregister(optionId)
   );
