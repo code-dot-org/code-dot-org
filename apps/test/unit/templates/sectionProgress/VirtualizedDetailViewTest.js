@@ -29,13 +29,25 @@ describe('VirtualizedSummaryView', () => {
     defaultProps = {
       levelProgressByStudent: {
         0: {
-          789: {status: 'perfect'}
+          789: {
+            status: 'perfect',
+            result: 1,
+            paired: false
+          }
         },
         1: {
-          789: {status: 'perfect'}
+          789: {
+            status: 'perfect',
+            result: 1,
+            paired: false
+          }
         },
         3: {
-          789: {status: 'perfect'}
+          789: {
+            status: 'perfect',
+            result: 1,
+            paired: false
+          }
         }
       },
       lessonOfInterest: 1,
@@ -96,7 +108,7 @@ describe('VirtualizedSummaryView', () => {
       <UnconnectedVirtualizedDetailView {...defaultProps} />
     );
     wrapper.instance().detailView = {forceUpdateGrids: forceUpdateGridsSpy};
-    wrapper.setProps({levelsByLesson: {}});
+    wrapper.setProps({levelProgressByStudent: {}});
     expect(forceUpdateGridsSpy).to.have.been.calledOnce;
   });
 });

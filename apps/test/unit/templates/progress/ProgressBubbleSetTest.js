@@ -5,6 +5,7 @@ import ProgressBubbleSet from '@cdo/apps/templates/progress/ProgressBubbleSet';
 import {fakeLevels} from '@cdo/apps/templates/progress/progressTestHelpers';
 
 const defaultProps = {
+  studentProgress: {},
   levels: fakeLevels(5),
   disabled: false,
   stageExtrasEnabled: true

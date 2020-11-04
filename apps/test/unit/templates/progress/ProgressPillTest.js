@@ -6,11 +6,13 @@ import {LevelStatus, LevelKind} from '@cdo/apps/util/sharedConstants';
 import ReactTooltip from 'react-tooltip';
 
 const unpluggedLevel = {
+  id: 1,
   kind: LevelKind.unplugged,
   isUnplugged: true
 };
 
 const assessmentLevel = {
+  id: 1,
   kind: LevelKind.assessment,
   isUnplugged: false
 };

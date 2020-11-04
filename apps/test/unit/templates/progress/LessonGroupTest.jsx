@@ -10,10 +10,9 @@ const DEFAULT_PROPS = {
   lessonGroup: {
     displayName: 'jazz',
     description: 'A chapter about conditionals',
-    bigQuestions: 'Why is the earth round? Can pigs fly?'
-  },
-  lessons: [],
-  levelsByLesson: []
+    bigQuestions: 'Why is the earth round? Can pigs fly?',
+    lessons: []
+  }
 };
 
 const NO_QUESTION_OR_DESCRIPTION_PROPS = {
@@ -23,10 +22,9 @@ const NO_QUESTION_OR_DESCRIPTION_PROPS = {
   lessonGroup: {
     displayName: 'jazz',
     description: null,
-    bigQuestions: null
-  },
-  lessons: [],
-  levelsByLesson: []
+    bigQuestions: null,
+    lessons: []
+  }
 };
 
 describe('LessonGroup', () => {

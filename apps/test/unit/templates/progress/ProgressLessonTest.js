@@ -1,30 +1,34 @@
-import {assert} from '../../../util/deprecatedChai';
+import {assert} from '../../../util/reconfiguredChai';
 import React from 'react';
 import {shallow} from 'enzyme';
 import {UnconnectedProgressLesson as ProgressLesson} from '@cdo/apps/templates/progress/ProgressLesson';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {
   fakeLesson,
-  fakeLevels
+  fakeLevels,
+  fakeProgressForLevels
 } from '@cdo/apps/templates/progress/progressTestHelpers';
 import color from '@cdo/apps/util/color';
 import {LevelStatus} from '@cdo/apps/util/sharedConstants';
 
 describe('ProgressLesson', () => {
+  const levels = fakeLevels(3);
   const defaultProps = {
+    studentProgress: fakeProgressForLevels(levels),
     currentStageId: 1,
     lesson: {
       ...fakeLesson('lesson1', 1),
       description_teacher: 'Teacher description here',
-      description_student: 'Student description here'
+      description_student: 'Student description here',
+      levels: levels
     },
-    levels: fakeLevels(3),
     lessonNumber: 3,
     showTeacherInfo: false,
     viewAs: ViewType.Teacher,
     showLockIcon: true,
     lessonIsVisible: () => true,
-    lessonLockedForSection: () => false
+    lessonLockedForSection: () => false,
+    selectedSectionId: 1
   };
 
   it('renders with gray background when not hidden', () => {
@@ -57,66 +61,81 @@ describe('ProgressLesson', () => {
   });
 
   it('renders with dashed border when section is locked', () => {
-    const wrapper = shallow(
-      <ProgressLesson
-        {...defaultProps}
-        lesson={fakeLesson('lesson1', 1, true)}
-        lessonLockedForSection={() => true}
-      />
-    );
+    const props = {
+      ...defaultProps,
+      lesson: {
+        ...fakeLesson('lesson1', 1, true),
+        levels: levels
+      },
+      lessonLockedForSection: () => true
+    };
+    const wrapper = shallow(<ProgressLesson {...props} />);
     assert.equal(wrapper.props().style.background, color.lightest_gray);
     assert.equal(wrapper.props().style.borderWidth, 4);
     assert.equal(wrapper.props().style.borderStyle, 'dashed');
   });
 
   it('disables bubbles when section is locked', () => {
-    const wrapper = shallow(
-      <ProgressLesson
-        {...defaultProps}
-        viewAs={ViewType.Student}
-        lesson={fakeLesson('lesson1', 1, true)}
-        lessonLockedForSection={() => true}
-      />
+    const props = {
+      ...defaultProps,
+      lesson: {
+        ...fakeLesson('lesson1', 1, true),
+        levels: levels
+      },
+      viewAs: ViewType.Student,
+      lessonLockedForSection: () => true
+    };
+    const wrapper = shallow(<ProgressLesson {...props} />);
+    assert.equal(
+      wrapper.find('Connect(ProgressLessonContent)').props().disabled,
+      true
     );
-    assert.equal(wrapper.find('ProgressLessonContent').props().disabled, true);
   });
 
-  it('renders with dashbed border when locked for individual student', () => {
-    const wrapper = shallow(
-      <ProgressLesson
-        {...defaultProps}
-        lesson={fakeLesson('lesson1', 1, true)}
-        lessonLockedForSection={() => false}
-        levels={defaultProps.levels.map(level => ({
-          ...level,
-          status: LevelStatus.locked
-        }))}
-      />
-    );
+  it('renders with dashed border when locked for individual student', () => {
+    const progress = fakeProgressForLevels(levels);
+    Object.keys(progress).forEach(key => {
+      progress[key].status = LevelStatus.locked;
+    });
+    const props = {
+      ...defaultProps,
+      studentProgress: progress,
+      lesson: {
+        ...fakeLesson('lesson1', 1, true),
+        levels: levels
+      },
+      viewAs: ViewType.Student,
+      lessonLockedForSection: () => false
+    };
+    const wrapper = shallow(<ProgressLesson {...props} />);
     assert.equal(wrapper.props().style.background, color.lightest_gray);
     assert.equal(wrapper.props().style.borderWidth, 4);
     assert.equal(wrapper.props().style.borderStyle, 'dashed');
   });
 
   it('renders with gray background when section is lockable but unlocked', () => {
-    const wrapper = shallow(
-      <ProgressLesson
-        {...defaultProps}
-        lesson={fakeLesson('lesson1', 1, true)}
-        lessonLockedForSection={() => false}
-      />
-    );
+    const props = {
+      ...defaultProps,
+      lesson: {
+        ...fakeLesson('lesson1', 1, true),
+        levels: levels
+      },
+      lessonLockedForSection: () => false
+    };
+    const wrapper = shallow(<ProgressLesson {...props} />);
     assert.equal(wrapper.props().style.background, color.lightest_gray);
   });
 
   it('has an unlocked icon when section is lockable but unlocked', () => {
-    const wrapper = shallow(
-      <ProgressLesson
-        {...defaultProps}
-        lesson={fakeLesson('lesson1', 1, true)}
-        lessonLockedForSection={() => false}
-      />
-    );
+    const props = {
+      ...defaultProps,
+      lesson: {
+        ...fakeLesson('lesson1', 1, true),
+        levels: levels
+      },
+      lessonLockedForSection: () => false
+    };
+    const wrapper = shallow(<ProgressLesson {...props} />);
     assert.equal(
       wrapper
         .find('FontAwesome')
@@ -134,13 +153,15 @@ describe('ProgressLesson', () => {
   });
 
   it('has a locked icon when section is lockable and locked', () => {
-    const wrapper = shallow(
-      <ProgressLesson
-        {...defaultProps}
-        lesson={fakeLesson('lesson1', 1, true)}
-        lessonLockedForSection={() => true}
-      />
-    );
+    const props = {
+      ...defaultProps,
+      lesson: {
+        ...fakeLesson('lesson1', 1, true),
+        levels: levels
+      },
+      lessonLockedForSection: () => true
+    };
+    const wrapper = shallow(<ProgressLesson {...props} />);
     assert.equal(
       wrapper
         .find('FontAwesome')
@@ -158,14 +179,16 @@ describe('ProgressLesson', () => {
   });
 
   it('has both a hidden and a locked icon when section is lockable and locked and hidden', () => {
-    const wrapper = shallow(
-      <ProgressLesson
-        {...defaultProps}
-        lesson={fakeLesson('lesson1', 1, true)}
-        lessonIsVisible={(lesson, viewAs) => viewAs !== ViewType.Student}
-        lessonLockedForSection={() => true}
-      />
-    );
+    const props = {
+      ...defaultProps,
+      lesson: {
+        ...fakeLesson('lesson1', 1, true),
+        levels: levels
+      },
+      lessonIsVisible: (_, viewAs) => viewAs !== ViewType.Student,
+      lessonLockedForSection: () => true
+    };
+    const wrapper = shallow(<ProgressLesson {...props} />);
     assert.equal(
       wrapper
         .find('FontAwesome')
@@ -190,13 +213,15 @@ describe('ProgressLesson', () => {
   });
 
   it('does not have an unlocked icon if showLockIcon=false', () => {
-    const wrapper = shallow(
-      <ProgressLesson
-        {...defaultProps}
-        showLockIcon={false}
-        lesson={fakeLesson('lesson1', 1, true)}
-      />
-    );
+    const props = {
+      ...defaultProps,
+      lesson: {
+        ...fakeLesson('lesson1', 1, true),
+        levels: levels
+      },
+      showLockIcon: false
+    };
+    const wrapper = shallow(<ProgressLesson {...props} />);
     assert.equal(wrapper.find('FontAwesome').length, 1);
     assert.equal(
       wrapper
@@ -276,7 +301,7 @@ describe('ProgressLesson', () => {
       <ProgressLesson {...defaultProps} viewAs={ViewType.Student} />
     );
     assert.equal(
-      wrapper.find('ProgressLessonContent').props().description,
+      wrapper.find('Connect(ProgressLessonContent)').props().description,
       'Student description here'
     );
   });
@@ -286,7 +311,7 @@ describe('ProgressLesson', () => {
       <ProgressLesson {...defaultProps} viewAs={ViewType.Teacher} />
     );
     assert.equal(
-      wrapper.find('ProgressLessonContent').props().description,
+      wrapper.find('Connect(ProgressLessonContent)').props().description,
       'Teacher description here'
     );
   });
@@ -294,22 +319,27 @@ describe('ProgressLesson', () => {
   it('does not lock non-lockable stages, such as peer reviews', () => {
     // Simulate a peer review section, where the levels may be locked, but the lesson
     // itself is not lockable
-    const wrapper = shallow(
-      <ProgressLesson
-        {...defaultProps}
-        lessonLockedForSection={() => true}
-        levels={defaultProps.levels.map(level => ({
-          ...level,
-          status: LevelStatus.locked
-        }))}
-        lesson={{
-          ...defaultProps.lesson,
-          lockable: false
-        }}
-      />
-    );
+    const progress = fakeProgressForLevels(levels);
+    Object.keys(progress).forEach(key => {
+      progress[key].status = LevelStatus.locked;
+    });
+    const props = {
+      ...defaultProps,
+      studentProgress: progress,
+      lesson: {
+        ...defaultProps.lesson,
+        lockable: false,
+        levels: levels
+      },
+      showLockIcon: false,
+      lessonLockedForSection: () => true
+    };
+    const wrapper = shallow(<ProgressLesson {...props} />);
     // If locked, it would have a dashed border
     assert.equal(wrapper.props().style.borderStyle, 'solid');
-    assert.equal(wrapper.find('ProgressLessonContent').props().disabled, false);
+    assert.equal(
+      wrapper.find('Connect(ProgressLessonContent)').props().disabled,
+      false
+    );
   });
 });

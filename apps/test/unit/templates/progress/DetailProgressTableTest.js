@@ -1,11 +1,8 @@
-import {assert} from '../../../util/deprecatedChai';
+import {assert} from '../../../util/reconfiguredChai';
 import React from 'react';
 import {shallow} from 'enzyme';
 import DetailProgressTable from '@cdo/apps/templates/progress/DetailProgressTable';
-import {
-  fakeLesson,
-  fakeLevels
-} from '@cdo/apps/templates/progress/progressTestHelpers';
+import {fakeLesson} from '@cdo/apps/templates/progress/progressTestHelpers';
 
 describe('DetailProgressTable', () => {
   const lessons = [
@@ -15,30 +12,9 @@ describe('DetailProgressTable', () => {
     fakeLesson('lesson4', 4)
   ];
 
-  const levelsByLesson = [
-    fakeLevels(3),
-    fakeLevels(3),
-    fakeLevels(3),
-    fakeLevels(3)
-  ];
-
   it('has ProgressLesson for each lesson', () => {
-    const wrapper = shallow(
-      <DetailProgressTable lessons={lessons} levelsByLesson={levelsByLesson} />
-    );
-
+    const wrapper = shallow(<DetailProgressTable lessons={lessons} />);
     const rows = wrapper.props().children;
     assert.equal(rows.length, 4);
-  });
-
-  it('throws if passed mismatched props', () => {
-    assert.throws(() =>
-      shallow(
-        <DetailProgressTable
-          lessons={lessons}
-          levelsByLesson={levelsByLesson.slice(1)}
-        />
-      )
-    );
   });
 });
