@@ -134,6 +134,11 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.blockly_.Trashcan = CdoTrashcan;
   blocklyWrapper.blockly_.WorkspaceSvg = CdoWorkspaceSvg;
 
+  const disabledContextMenuOptions = ['blockCollapseExpand'];
+  disabledContextMenuOptions.forEach(optionId =>
+    blocklyWrapper.blockly_.ContextMenuRegistry.registry.unregister(optionId)
+  );
+
   // These are also wrapping read only properties, but can't use wrapReadOnlyProperty
   // because the alias name is not the same as the underlying property name.
   Object.defineProperty(blocklyWrapper, 'mainBlockSpace', {
