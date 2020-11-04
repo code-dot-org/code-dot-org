@@ -8,6 +8,7 @@ import {levelProgressWithStatus} from '@cdo/apps/templates/progress/progressHelp
 
 const defaultProps = {
   level: {
+    id: 1,
     levelNumber: 1,
     url: '/foo/bar',
     name: 'level_name',
@@ -298,6 +299,7 @@ describe('ProgressBubble', () => {
 
   it('renders a progress pill for unplugged lessons', () => {
     const unpluggedLevel = {
+      id: 1,
       kind: LevelKind.unplugged,
       url: '/foo/bar',
       isUnplugged: true
@@ -315,6 +317,7 @@ describe('ProgressBubble', () => {
 
   it('does not render a progress pill for unplugged when small', () => {
     const unpluggedLevel = {
+      id: 1,
       kind: LevelKind.unplugged,
       url: '/foo/bar',
       isUnplugged: true

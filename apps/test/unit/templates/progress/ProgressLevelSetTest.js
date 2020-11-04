@@ -4,15 +4,18 @@ import {shallow} from 'enzyme';
 import ProgressLevelSet from '@cdo/apps/templates/progress/ProgressLevelSet';
 import {
   fakeLevels,
-  fakeLevel
+  fakeLevel,
+  fakeProgressForLevels
 } from '@cdo/apps/templates/progress/progressTestHelpers';
 
 describe('ProgressLevelSet', function() {
   it('has a pill and no bubbles for a single level', () => {
+    const levels = fakeLevels(1);
     const wrapper = shallow(
       <ProgressLevelSet
+        studentProgress={fakeProgressForLevels(levels)}
         name="My Level Name"
-        levels={fakeLevels(1)}
+        levels={levels}
         disabled={false}
       />
     );
@@ -23,10 +26,12 @@ describe('ProgressLevelSet', function() {
   });
 
   it('has a pill and bubbles when we have multiple levels', () => {
+    const levels = fakeLevels(3);
     const wrapper = shallow(
       <ProgressLevelSet
+        studentProgress={fakeProgressForLevels(levels)}
         name="My Progression Name"
-        levels={fakeLevels(3)}
+        levels={levels}
         disabled={false}
       />
     );
@@ -37,12 +42,14 @@ describe('ProgressLevelSet', function() {
   });
 
   it('renders a pill with no text when first level is unplugged', () => {
+    const levels = [fakeLevel({isUnplugged: true}), ...fakeLevels(5)].map(
+      level => ({...level, name: undefined})
+    );
     const wrapper = shallow(
       <ProgressLevelSet
+        studentProgress={fakeProgressForLevels(levels)}
         name={undefined}
-        levels={[fakeLevel({isUnplugged: true}), ...fakeLevels(5)].map(
-          level => ({...level, name: undefined})
-        )}
+        levels={levels}
         disabled={false}
       />
     );
@@ -50,12 +57,14 @@ describe('ProgressLevelSet', function() {
   });
 
   it('renders a pill with no text when last level is unplugged', () => {
+    const levels = [...fakeLevels(5), fakeLevel({isUnplugged: true})].map(
+      level => ({...level, name: undefined})
+    );
     const wrapper = shallow(
       <ProgressLevelSet
+        studentProgress={fakeProgressForLevels(levels)}
         name={undefined}
-        levels={[...fakeLevels(5), fakeLevel({isUnplugged: true})].map(
-          level => ({...level, name: undefined})
-        )}
+        levels={levels}
         disabled={false}
       />
     );
