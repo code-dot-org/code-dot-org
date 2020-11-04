@@ -49,7 +49,7 @@ class LessonActivity < ApplicationRecord
 
   def summarize_for_edit
     summary = summarize
-    summary[:activitySections] = activity_sections.map(&:summarize_for_edit)
+    summary[:activitySections] = activity_sections.map(&:summarize_for_lesson_edit)
     summary
   end
 
