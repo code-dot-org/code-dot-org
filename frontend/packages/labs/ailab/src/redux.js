@@ -40,9 +40,8 @@ const SET_TEST_DATA = "SET_TEST_DATA";
 const SET_PREDICTION = "SET_PREDICTION";
 
 // Action creators
-export function setSelectedCSV(csvfilePath) {
-  console.log("setSelectedCSV was called!");
-  return { type: SET_SELECTED_CSV, csvfilePath };
+export function setSelectedCSV(csvfile) {
+  return { type: SET_SELECTED_CSV, csvfile };
 }
 
 export function setImportedData(data) {
@@ -127,7 +126,7 @@ export function resetState() {
 }
 
 const initialState = {
-  csvfilePath: undefined,
+  csvfile: undefined,
   data: [],
   selectedTrainer: undefined,
   columnsByDataType: {},
@@ -148,10 +147,9 @@ const initialState = {
 // Reducer
 export default function rootReducer(state = initialState, action) {
   if (action.type === SET_SELECTED_CSV) {
-    console.log("in setSelectedCSV, csvfilePath", action.csvfilePath);
     return {
       ...state,
-      csvfilePath: action.csvfilePath
+      csvfile: action.csvfile
     };
   }
   if (action.type === SET_IMPORTED_DATA) {
