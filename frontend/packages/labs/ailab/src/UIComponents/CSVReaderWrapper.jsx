@@ -3,12 +3,19 @@ import PropTypes from "prop-types";
 import React, { Component } from "react";
 import Papa from "papaparse";
 import { connect } from "react-redux";
-import { resetState, setImportedData, setColumnsByDataType } from "../redux";
-import { availableDatasets } from "../datasetManifest";
+import {
+  setSelectedCSV,
+  resetState,
+  setImportedData,
+  setColumnsByDataType
+} from "../redux";
+import { allDatasets } from "../datasetManifest";
 import { ColumnTypes } from "../constants.js";
 
 class CSVReaderWrapper extends Component {
   static propTypes = {
+    setSelectedCSV: PropTypes.func.isRequired,
+    csvfilePath: PropTypes.string,
     resetState: PropTypes.func.isRequired,
     setImportedData: PropTypes.func.isRequired,
     setColumnsByDataType: PropTypes.func.isRequired
@@ -18,31 +25,30 @@ class CSVReaderWrapper extends Component {
     super(props);
 
     this.state = {
-      csvfile: undefined,
-      download: false,
-      data: undefined
+      download: false
     };
   }
 
   handleChange = event => {
     this.props.resetState();
+    this.props.setSelectedCSV(event.target.files[0]);
     this.setState({
-      csvfile: event.target.files[0],
       download: false
     });
   };
 
   handleChangeSelect = event => {
     this.props.resetState();
+    this.props.setSelectedCSV(event.target.value);
     this.setState({
-      csvfile: event.target.value,
       download: true
     });
   };
 
   importCSV = () => {
-    const { csvfile, download } = this.state;
-    Papa.parse(csvfile, {
+    const { csvfilePath } = this.props;
+    const { download } = this.state;
+    Papa.parse(csvfilePath, {
       complete: this.updateData,
       header: true,
       download: download,
@@ -73,7 +79,7 @@ class CSVReaderWrapper extends Component {
             <h2>Select a dataset from the collection</h2>
             <select onChange={this.handleChangeSelect}>
               <option>{""}</option>
-              {availableDatasets.map(dataset => {
+              {allDatasets.map(dataset => {
                 return (
                   <option
                     key={dataset["id"]}
@@ -109,10 +115,15 @@ class CSVReaderWrapper extends Component {
 }
 
 export default connect(
-  state => ({}),
+  state => ({
+    csvfilePath: state.csvfilePath
+  }),
   dispatch => ({
     resetState() {
       dispatch(resetState());
+    },
+    setSelectedCSV(csvfilePath) {
+      dispatch(setSelectedCSV(csvfilePath));
     },
     setImportedData(data) {
       dispatch(setImportedData(data));
