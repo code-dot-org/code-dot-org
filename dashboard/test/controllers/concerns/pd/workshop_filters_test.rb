@@ -131,6 +131,23 @@ class Pd::WorkshopFiltersTest < ActionController::TestCase
     @controller.filter_workshops @workshop_query
   end
 
+  test 'filter_workshops with virtual status' do
+    # WIP, doesn't work yet.
+
+    # Without virtual workshop, check where gets called with blank array.
+    # Once virtual workshop is created, check where gets called with array with
+    #   ID from workshop that was created.
+    params virtual: 'yes'
+    @controller.filter_workshops @workshop_query
+
+    create :workshop,
+      virtual: true,
+      suppress_email: true
+    @workshop_query.expects(:where)
+
+    @controller.filter_workshops @workshop_query
+  end
+
   test 'filter_workshops with facilitator_id' do
     User.stubs(:find_by).with(id: 789).returns(@user)
     expects(:facilitated_by).with(@user)
@@ -251,6 +268,7 @@ class Pd::WorkshopFiltersTest < ActionController::TestCase
       :end,
       :course,
       :subject,
+      :virtual,
       :organizer_id,
       :teacher_email,
       :only_attended,
