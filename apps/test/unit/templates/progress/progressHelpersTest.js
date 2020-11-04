@@ -158,10 +158,10 @@ describe('progressHelpers', () => {
     it('returns true when we only have a level group and it is locked', () => {
       const levels = fakeLevels(3).map(level => ({
         ...level,
-        kind: LevelKind.assessment,
-        status: LevelStatus.locked
+        kind: LevelKind.assessment
       }));
-      assert.strictEqual(true, stageLocked(levels));
+      const progress = fakeProgressForLevels(levels, LevelStatus.locked);
+      assert.strictEqual(true, stageLocked(levels, progress));
     });
 
     describe('level group preceeded by another level', () => {
@@ -172,19 +172,14 @@ describe('progressHelpers', () => {
       }));
 
       it('returns true when level group is locked', () => {
-        const levels = baseLevels.map(level => ({
-          ...level,
-          // lock assessment levels/pages
-          status:
-            level.kind === LevelKind.assessment
-              ? LevelStatus.locked
-              : level.status
-        }));
-        assert.strictEqual(true, stageLocked(levels));
+        const progress = fakeProgressForLevels(baseLevels, LevelStatus.locked);
+        progress[1].status = LevelStatus.not_tried;
+        assert.strictEqual(true, stageLocked(baseLevels, progress));
       });
 
       it('returns false when level group is not locked', () => {
-        assert.strictEqual(false, stageLocked(baseLevels));
+        const progress = fakeProgressForLevels(baseLevels);
+        assert.strictEqual(false, stageLocked(baseLevels, progress));
       });
     });
   });
@@ -268,9 +263,9 @@ describe('progressHelpers', () => {
     it('summarizes all completed levels', () => {
       const levels = fakeLevels(3);
       const studentProgress = fakeProgressForLevels(levels);
-      studentProgress[0].status = LevelStatus.perfect;
-      studentProgress[1].status = LevelStatus.submitted;
-      studentProgress[2].status = LevelStatus.readonly;
+      studentProgress[1].status = LevelStatus.perfect;
+      studentProgress[2].status = LevelStatus.submitted;
+      studentProgress[3].status = LevelStatus.readonly;
 
       const summarizedStage = summarizeProgressInStage(studentProgress, levels);
       assert.equal(summarizedStage.total, 3);
@@ -295,12 +290,12 @@ describe('progressHelpers', () => {
     it('summarizes a mix of levels', () => {
       const levels = fakeLevels(7);
       const studentProgress = fakeProgressForLevels(levels);
-      studentProgress[0].status = LevelStatus.submitted;
-      studentProgress[1].status = LevelStatus.perfect;
-      studentProgress[2].status = LevelStatus.attempted;
-      studentProgress[3].status = LevelStatus.passed;
-      studentProgress[4].status = LevelStatus.free_play_complete;
-      studentProgress[5].status = 'other';
+      studentProgress[1].status = LevelStatus.submitted;
+      studentProgress[2].status = LevelStatus.perfect;
+      studentProgress[3].status = LevelStatus.attempted;
+      studentProgress[4].status = LevelStatus.passed;
+      studentProgress[5].status = LevelStatus.free_play_complete;
+      studentProgress[6].status = 'other';
 
       const summarizedStage = summarizeProgressInStage(studentProgress, levels);
       assert.equal(summarizedStage.total, 7);
@@ -313,7 +308,7 @@ describe('progressHelpers', () => {
     it('does not summarize bonus levels', () => {
       const levels = fakeLevels(1);
       const studentProgress = fakeProgressForLevels(levels);
-      studentProgress[0].status = LevelStatus.submitted;
+      studentProgress[1].status = LevelStatus.submitted;
       levels[0].bonus = true;
 
       const summarizedStage = summarizeProgressInStage(studentProgress, levels);
