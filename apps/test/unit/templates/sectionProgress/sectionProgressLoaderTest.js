@@ -3,7 +3,6 @@ import sinon from 'sinon';
 import {loadScript} from '@cdo/apps/templates/sectionProgress/sectionProgressLoader';
 import * as sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 import * as progressHelpers from '@cdo/apps/templates/progress/progressHelpers';
-import * as progress from '@cdo/apps/code-studio/progressRedux';
 import * as redux from '@cdo/apps/redux';
 
 const serverScriptResponse = {
@@ -25,12 +24,12 @@ const serverProgressResponse = {
     per: 50,
     total_pages: 1
   },
-  students_last_update: {
+  student_last_updates: {
     100: null,
     101: timeInSeconds,
     102: timeInSeconds + 1
   },
-  students_status: {
+  student_progress: {
     100: {},
     101: {
       2000: {
@@ -53,11 +52,11 @@ const firstServerProgressResponse = {
     per: 2,
     total_pages: 2
   },
-  students_last_update: {
+  student_last_updates: {
     100: null,
     101: timeInSeconds
   },
-  students_status: {
+  student_progress: {
     100: {},
     101: {
       2000: {
@@ -77,10 +76,10 @@ const secondServerProgressResponse = {
     per: 2,
     total_pages: 2
   },
-  students_last_update: {
+  student_last_updates: {
     102: timeInSeconds + 1
   },
-  students_status: {
+  student_progress: {
     102: {
       2000: {status: 'perfect', result: 100, paired: false, time_spent: 6789}
     }
@@ -109,12 +108,12 @@ const fullExpectedResult = {
           status: 'locked',
           result: 1001,
           paired: false,
-          time_spent: undefined
+          timeSpent: 0
         },
-        2001: {status: 'perfect', result: 30, paired: true, time_spent: 12345}
+        2001: {status: 'perfect', result: 30, paired: true, timeSpent: 12345}
       },
       102: {
-        2000: {status: 'perfect', result: 100, paired: false, time_spent: 6789}
+        2000: {status: 'perfect', result: 100, paired: false, timeSpent: 6789}
       }
     }
   },
@@ -344,7 +343,6 @@ describe('sectionProgressLoader.loadScript', () => {
 
       it('transforms the data provided by the server', () => {
         sinon.stub(progressHelpers, 'processedLevel');
-        sinon.stub(progress, 'levelsByLesson').returns({});
         addDataByScriptStub = sinon.spy(sectionProgress, 'addDataByScript');
         fetchStub.onCall(0).returns({
           then: sinon.stub().returns({
@@ -359,7 +357,6 @@ describe('sectionProgressLoader.loadScript', () => {
         loadScript(123, 0);
         expect(addDataByScriptStub).to.have.been.calledWith(fullExpectedResult);
         progressHelpers.processedLevel.restore();
-        progress.levelsByLesson.restore();
       });
     });
   });
