@@ -7,7 +7,7 @@ import StageLockDialog from '@cdo/apps/code-studio/components/progress/StageLock
 import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
 
-const FAKE_SECTION_ID = 'fake-section-id';
+const FAKE_SECTION_ID = 22;
 const FAKE_LESSON_ID = 33;
 const DEFAULT_PROPS = {
   lesson: {

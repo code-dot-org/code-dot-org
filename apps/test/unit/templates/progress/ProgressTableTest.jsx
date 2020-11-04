@@ -1,30 +1,22 @@
 import React from 'react';
-import {expect} from '../../../util/deprecatedChai';
+import {expect} from '../../../util/reconfiguredChai';
 import {shallow} from 'enzyme';
-import {
-  UnconnectedProgressTable as ProgressTable,
-  styles
-} from '@cdo/apps/templates/progress/ProgressTable';
-import SummaryProgressTable from '@cdo/apps/templates/progress/SummaryProgressTable';
-import DetailProgressTable from '@cdo/apps/templates/progress/DetailProgressTable';
-import LessonGroup from '@cdo/apps/templates/progress/LessonGroup';
+import {UnconnectedProgressTable as ProgressTable} from '@cdo/apps/templates/progress/ProgressTable';
 
 const FAKE_LESSONS = [];
-const FAKE_LEVELS = [];
+
 const FAKE_LESSON_1 = {
-  lessonGroup: {displayName: 'jazz'},
-  lessons: FAKE_LESSONS,
-  levels: FAKE_LEVELS
+  displayName: 'jazz',
+  lessons: FAKE_LESSONS
 };
 const FAKE_LESSON_2 = {
-  lessonGroup: {displayName: 'samba'},
-  lessons: FAKE_LESSONS,
-  levels: FAKE_LEVELS
+  displayName: 'samba',
+  lessons: FAKE_LESSONS
 };
 const DEFAULT_PROPS = {
   isPlc: false,
   isSummaryView: false,
-  groupedLessons: [FAKE_LESSON_1]
+  lessonGroups: [FAKE_LESSON_1]
 };
 
 describe('ProgressTable', () => {
@@ -33,22 +25,10 @@ describe('ProgressTable', () => {
       <ProgressTable {...DEFAULT_PROPS} isSummaryView={false} />,
       {disableLifecycleMethods: true}
     );
-    expect(wrapper).to.containMatchingElement(
-      <div>
-        <div style={styles.hidden}>
-          <SummaryProgressTable
-            lessons={FAKE_LESSONS}
-            levelsByLesson={FAKE_LEVELS}
-          />
-        </div>
-        <div style={{}}>
-          <DetailProgressTable
-            lessons={FAKE_LESSONS}
-            levelsByLesson={FAKE_LEVELS}
-          />
-        </div>
-      </div>
-    );
+    const summaryTable = wrapper.find('Connect(SummaryProgressTable)');
+    expect(summaryTable.props().lessons).to.equal(FAKE_LESSONS);
+    const detailTable = wrapper.find('DetailProgressTable');
+    expect(detailTable.props().lessons).to.equal(FAKE_LESSONS);
   });
 
   it('renders a single lesson in summary view', () => {
@@ -56,51 +36,37 @@ describe('ProgressTable', () => {
       <ProgressTable {...DEFAULT_PROPS} isSummaryView={true} />,
       {disableLifecycleMethods: true}
     );
-    expect(wrapper).to.containMatchingElement(
-      <div>
-        <div style={{}}>
-          <SummaryProgressTable
-            lessons={FAKE_LESSONS}
-            levelsByLesson={FAKE_LEVELS}
-          />
-        </div>
-        <div style={styles.hidden}>
-          <DetailProgressTable
-            lessons={FAKE_LESSONS}
-            levelsByLesson={FAKE_LEVELS}
-          />
-        </div>
-      </div>
-    );
+    const summaryTable = wrapper.find('Connect(SummaryProgressTable)');
+    expect(summaryTable.props().lessons).to.equal(FAKE_LESSONS);
+    const detailTable = wrapper.find('DetailProgressTable');
+    expect(detailTable.props().lessons).to.equal(FAKE_LESSONS);
   });
 
   it('renders multiple lessons as LessonGroups', () => {
     const wrapper = shallow(
       <ProgressTable
         {...DEFAULT_PROPS}
-        groupedLessons={[FAKE_LESSON_1, FAKE_LESSON_2]}
+        lessonGroups={[FAKE_LESSON_1, FAKE_LESSON_2]}
       />,
       {disableLifecycleMethods: true}
     );
-    expect(wrapper).to.containMatchingElement(
-      <div>
-        <LessonGroup
-          key={FAKE_LESSON_1.lessonGroup.displayName}
-          isPlc={DEFAULT_PROPS.isPlc}
-          lessonGroup={FAKE_LESSON_1.lessonGroup}
-          isSummaryView={DEFAULT_PROPS.isSummaryView}
-          lessons={FAKE_LESSON_1.lessons}
-          levelsByLesson={FAKE_LESSON_1.levels}
-        />
-        <LessonGroup
-          key={FAKE_LESSON_2.lessonGroup.displayName}
-          isPlc={DEFAULT_PROPS.isPlc}
-          lessonGroup={FAKE_LESSON_2.lessonGroup}
-          isSummaryView={DEFAULT_PROPS.isSummaryView}
-          lessons={FAKE_LESSON_2.lessons}
-          levelsByLesson={FAKE_LESSON_2.levels}
-        />
-      </div>
+    const firstLessonGroup = wrapper.find('Connect(LessonGroup)').first();
+    expect(firstLessonGroup.props().lessonGroup.displayName).to.equal(
+      FAKE_LESSON_1.displayName
+    );
+    expect(firstLessonGroup.props().isPlc).to.equal(DEFAULT_PROPS.isPlc);
+    expect(firstLessonGroup.props().lessonGroup).to.equal(FAKE_LESSON_1);
+    expect(firstLessonGroup.props().isSummaryView).to.equal(
+      DEFAULT_PROPS.isSummaryView
+    );
+    const lastLessonGroup = wrapper.find('Connect(LessonGroup)').last();
+    expect(lastLessonGroup.props().lessonGroup.displayName).to.equal(
+      FAKE_LESSON_2.displayName
+    );
+    expect(lastLessonGroup.props().isPlc).to.equal(DEFAULT_PROPS.isPlc);
+    expect(lastLessonGroup.props().lessonGroup).to.equal(FAKE_LESSON_2);
+    expect(lastLessonGroup.props().isSummaryView).to.equal(
+      DEFAULT_PROPS.isSummaryView
     );
   });
 });
