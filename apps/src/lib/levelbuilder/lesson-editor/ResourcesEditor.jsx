@@ -82,7 +82,6 @@ class ResourcesEditor extends Component {
     const query_params = Object.keys(params)
       .map(key => `${key}=${params[key]}`)
       .join('&');
-    console.log(query_params);
     const searchUrl = `/resourcesearch?${query_params}`;
     // Note, we don't return the fetch promise chain because in a debounced
     // function we're not guaranteed to return anything, and it's not a great
