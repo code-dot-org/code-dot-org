@@ -281,9 +281,23 @@ export function getSelectedCategoricalColumns(state) {
   return intersection;
 }
 
+export function getSelectedCategoricalFeatures(state) {
+  let intersection = getCategoricalColumns(state).filter(x =>
+    state.selectedFeatures.includes(x)
+  );
+  return intersection;
+}
+
 export function getSelectedContinuousColumns(state) {
   let intersection = getContinuousColumns(state).filter(
     x => state.selectedFeatures.includes(x) || x === state.labelColumn
+  );
+  return intersection;
+}
+
+export function getSelectedContinuousFeatures(state) {
+  let intersection = getContinuousColumns(state).filter(x =>
+    state.selectedFeatures.includes(x)
   );
   return intersection;
 }
@@ -337,20 +351,23 @@ function isEmpty(object) {
   return Object.keys(object).length === 0;
 }
 
-export function getConvertedPredictedLabel(state) {
-  if (
-    state.labelColumn &&
-    !isEmpty(state.featureNumberKey) &&
-    !isEmpty(state.prediction)
-  ) {
-    const label = getCategoricalColumns(state).includes(state.labelColumn)
-      ? getKeyByValue(
-          state.featureNumberKey[state.labelColumn],
-          state.prediction.predictedLabel
-        )
-      : state.prediction.predictedLabel;
-    return label;
+export function getConvertedLabel(state, rawLabel) {
+  if (state.labelColumn && !isEmpty(state.featureNumberKey)) {
+    const convertedLabel = getCategoricalColumns(state).includes(
+      state.labelColumn
+    )
+      ? getKeyByValue(state.featureNumberKey[state.labelColumn], rawLabel)
+      : rawLabel;
+    return convertedLabel;
   }
+}
+
+export function getConvertedPredictedLabel(state) {
+  return getConvertedLabel(state, state.prediction.predictedLabel);
+}
+
+export function getConvertedLabels(state, rawLabels) {
+  return rawLabels.map(label => getConvertedLabel(state, label));
 }
 
 export function getCompatibleTrainers(state) {

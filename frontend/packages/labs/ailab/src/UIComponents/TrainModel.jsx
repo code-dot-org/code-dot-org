@@ -7,6 +7,7 @@ import {
   setShowPredict,
   setPercentDataToReserve,
   getAccuracy,
+  getConvertedLabels,
   readyToTrain,
   validationMessages
 } from "../redux";
@@ -147,8 +148,11 @@ export default connect(
     labelColumn: state.labelColumn,
     selectedTrainer: state.selectedTrainer,
     accuracy: getAccuracy(state),
-    accuracyCheckLabels: state.accuracyCheckLabels,
-    accuracyCheckPredictedLabels: state.accuracyCheckPredictedLabels,
+    accuracyCheckLabels: getConvertedLabels(state, state.accuracyCheckLabels),
+    accuracyCheckPredictedLabels: getConvertedLabels(
+      state,
+      state.accuracyCheckPredictedLabels
+    ),
     readyToTrain: readyToTrain(state),
     validationMessages: validationMessages(state),
     percentDataToReserve: state.percentDataToReserve

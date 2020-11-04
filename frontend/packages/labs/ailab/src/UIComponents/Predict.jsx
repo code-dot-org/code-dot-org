@@ -5,8 +5,8 @@ import { connect } from "react-redux";
 import train from "../train";
 import {
   setTestData,
-  getSelectedContinuousColumns,
-  getSelectedCategoricalColumns,
+  getSelectedContinuousFeatures,
+  getSelectedCategoricalFeatures,
   getUniqueOptionsByColumn,
   getConvertedPredictedLabel
 } from "../redux";
@@ -15,8 +15,8 @@ class Predict extends Component {
   static propTypes = {
     showPredict: PropTypes.bool,
     labelColumn: PropTypes.string,
-    selectedCategoricalColumns: PropTypes.array,
-    selectedContinuousColumns: PropTypes.array,
+    selectedCategoricalFeatures: PropTypes.array,
+    selectedContinuousFeatures: PropTypes.array,
     uniqueOptionsByColumn: PropTypes.object,
     testData: PropTypes.object,
     setTestData: PropTypes.func.isRequired,
@@ -41,7 +41,7 @@ class Predict extends Component {
           <div>
             <h2>Test the Model</h2>
             <form>
-              {this.props.selectedContinuousColumns.map((feature, index) => {
+              {this.props.selectedContinuousFeatures.map((feature, index) => {
                 return (
                   <span key={index}>
                     <label>
@@ -58,7 +58,7 @@ class Predict extends Component {
             <br />
             <br />
             <form>
-              {this.props.selectedCategoricalColumns.map((feature, index) => {
+              {this.props.selectedCategoricalFeatures.map((feature, index) => {
                 return (
                   <span key={index}>
                     <label>
@@ -112,8 +112,8 @@ export default connect(
     predictedLabel: getConvertedPredictedLabel(state),
     confidence: state.prediction.confidence,
     labelColumn: state.labelColumn,
-    selectedContinuousColumns: getSelectedContinuousColumns(state),
-    selectedCategoricalColumns: getSelectedCategoricalColumns(state),
+    selectedContinuousFeatures: getSelectedContinuousFeatures(state),
+    selectedCategoricalFeatures: getSelectedCategoricalFeatures(state),
     uniqueOptionsByColumn: getUniqueOptionsByColumn(state)
   }),
   dispatch => ({
