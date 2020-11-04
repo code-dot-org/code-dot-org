@@ -68,6 +68,7 @@ var NetSim = (module.exports = function() {
    * @private
    */
   this.currentUser_ = DashboardUser.getCurrentUser();
+  console.log('currentUser:', this.currentUser_);
 
   /**
    * Accessor object for select simulation shard's tables, where an shard
@@ -164,6 +165,7 @@ NetSim.prototype.injectStudioApp = function(studioApp) {
  * @param {function} config.loadAudio
  */
 NetSim.prototype.init = function(config) {
+  console.log('NetSim init called');
   if (!this.studioApp_) {
     throw new Error('NetSim requires a StudioApp');
   }
@@ -229,6 +231,7 @@ NetSim.prototype.init = function(config) {
   config.loadAudio = this.loadAudio_.bind(this);
 
   var onMount = function() {
+    console.log('called onMount');
     // Override certain StudioApp methods - netsim does a lot of configuration
     // itself, because of its nonstandard layout.
     this.studioApp_.configureDom = NetSim.configureDomOverride_.bind(
@@ -254,8 +257,10 @@ NetSim.prototype.init = function(config) {
     this.studioApp_.init(config);
 
     // Create netsim lobby widget in page
+    // TODO: async -- causing flaky tests?
     this.currentUser_.whenReady(
       function() {
+        console.log('calling initWithUser');
         this.initWithUser_(this.currentUser_);
       }.bind(this)
     );
@@ -368,6 +373,10 @@ NetSim.prototype.initWithUser_ = function(user) {
   this.visualization_ = new NetSimVisualization(
     $('#netsim-visualization'),
     this.runLoop_
+  );
+  console.log(
+    'visualization after newing NetSimVisualization:',
+    this.visualization_
   );
 
   // Lobby panel: Controls for picking a remote node and connecting to it.
@@ -1131,6 +1140,7 @@ NetSim.prototype.onShardChange_ = function(shard, localNode) {
   }
 
   // Shard changes almost ALWAYS require a re-render
+  console.log('calling setShard with visualization:', this.visualization_);
   this.visualization_.setShard(shard);
   this.visualization_.setLocalNode(localNode);
   this.render();

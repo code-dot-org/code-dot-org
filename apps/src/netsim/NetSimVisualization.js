@@ -183,6 +183,7 @@ NetSimVisualization.prototype.render = function(clock) {
  * @param {?NetSimShard} newShard - null if disconnected
  */
 NetSimVisualization.prototype.setShard = function(newShard) {
+  console.log('in setShard, this:', this);
   this.shard_ = newShard;
 
   // If we were registered for shard events, unregister old handlers.
