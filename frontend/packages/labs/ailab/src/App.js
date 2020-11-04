@@ -5,6 +5,7 @@ import SelectFeatures from "./UIComponents/SelectFeatures";
 import ColumnInspector from "./UIComponents/ColumnInspector";
 import SelectTrainer from "./UIComponents/SelectTrainer";
 import TrainModel from "./UIComponents/TrainModel";
+import Results from "./UIComponents/Results";
 import Predict from "./UIComponents/Predict";
 
 export default class App extends Component {
@@ -17,6 +18,7 @@ export default class App extends Component {
         <ColumnInspector />
         <SelectTrainer />
         <TrainModel />
+        <Results />
         <Predict />
       </div>
     );
