@@ -59,6 +59,7 @@ class Pd::Enrollment < ActiveRecord::Base
   validates_presence_of :email, unless: :deleted?
   validates_confirmation_of :email, unless: :deleted?
   validates_email_format_of :email, allow_blank: true
+  validate :email_unique_in_workshop
 
   validate :school_forbidden, if: -> {new_record? || school_changed?}
   validates_presence_of :school_info, unless: -> {deleted? || created_before_school_info?}
@@ -112,6 +113,12 @@ class Pd::Enrollment < ActiveRecord::Base
 
   def school_info_country_required
     errors.add(:school_info, 'must have a country') unless school_info.try(:country)
+  end
+
+  def email_unique_in_workshop
+    if workshop.enrollments.pluck(:email).include? email
+      errors.add(:email, 'email has already signed up for this workshop')
+    end
   end
 
   def self.for_school_district(school_district)
