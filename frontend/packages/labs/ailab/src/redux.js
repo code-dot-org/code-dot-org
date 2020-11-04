@@ -8,6 +8,7 @@ import {
   datasetUploaded,
   uniqueColumnNames,
   noEmptyCells,
+  emptyCellFinder,
   minOneFeatureSelected,
   oneLabelSelected,
   uniqLabelFeaturesSelected,
@@ -435,4 +436,11 @@ export function isDataUploaded(state) {
 
 export function readyToTrain(state) {
   return uniqLabelFeaturesSelected(state) && compatibleLabelAndTrainer(state);
+}
+
+export function getEmptyCellDetails(state) {
+  const emptyCellLocations = emptyCellFinder(state).map(cellDetails => {
+    return `Column: ${cellDetails.column} Row: ${cellDetails.row}`;
+  });
+  return emptyCellLocations;
 }
