@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { getAccuracy, getConvertedLabels } from "../redux";
+import { styles } from "../constants";
 
 class Results extends Component {
   static propTypes = {
@@ -53,6 +54,10 @@ class Results extends Component {
                           <td>
                             {this.props.accuracyCheckPredictedLabels[index]}
                           </td>
+                          {this.props.accuracyCheckLabels[index] ===
+                            this.props.accuracyCheckPredictedLabels[index] && (
+                            <td style={styles.ready}>&#x2713;</td>
+                          )}
                         </tr>
                       );
                     })}
