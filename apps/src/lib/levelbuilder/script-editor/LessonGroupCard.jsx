@@ -63,7 +63,7 @@ styles.targetLessonGroupCard = {
 
 class LessonGroupCard extends Component {
   static propTypes = {
-    lessonGroup: lessonGroupShape,
+    lessonGroup: lessonGroupShape.isRequired,
     lessonGroupsCount: PropTypes.number.isRequired,
     lessonGroupMetrics: PropTypes.object,
     setTargetLessonGroup: PropTypes.func,

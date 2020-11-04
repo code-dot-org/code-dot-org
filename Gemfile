@@ -10,7 +10,7 @@ git_source(:github) do |repo_name|
 end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.0.7.2'
+gem 'rails', '5.1.7'
 gem 'rails-controller-testing', '~> 1.0.5'
 
 # Compile Sprockets assets concurrently in `assets:precompile`.
@@ -196,8 +196,7 @@ gem 'newrelic_rpm', group: [:staging, :development, :production], # perf/error/e
 
 gem 'redcarpet', '~> 3.3.4'
 
-# Ref: https://github.com/alexreisner/geocoder/pull/1085 (pending new RubyGems release)
-gem 'geocoder', github: 'wjordan/geocoder', ref: 'rack-request-fix'
+gem 'geocoder'
 
 gem 'mini_magick', ">=4.9.4"
 gem 'rmagick'
