@@ -113,4 +113,20 @@ class GeocoderTest < Minitest::Test
     location = Geocoder.search('Croatia').first
     assert_equal('HR', location.country_code)
   end
+
+  def test_localhost_lookup
+    # Verify localhost lookups result in the same behavior as FreeGeoIP service for backwards compatibility
+    # https://github.com/alexreisner/geocoder/blob/350cf0cc6a158d510aec3d91594d9b5718f877a9/lib/geocoder/lookups/freegeoip.rb#L41-L54
+    location = Geocoder.search("127.0.0.1").first
+    assert_equal("127.0.0.1", location.ip)
+    assert_equal("RD", location.country_code)
+    assert_equal("Reserved", location.country)
+    assert_equal("0", location.latitude)
+    assert_equal("0", location.longitude)
+  end
+
+  def test_freegeoip_overrides
+    # Our self-hosted FreeGeoIP service only supports HTTP
+    assert_equal([:http], Geocoder::Lookup::Freegeoip.new.supported_protocols)
+  end
 end
