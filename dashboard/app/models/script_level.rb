@@ -450,7 +450,7 @@ class ScriptLevel < ActiveRecord::Base
     summary
   end
 
-  def summarize_for_edit
+  def summarize_for_lesson_edit
     summary = summarize(for_edit: true)
     summary[:id] = id
     summary[:activitySectionPosition] = activity_section_position
