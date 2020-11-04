@@ -85,6 +85,9 @@ module Pd::WorkshopFilters
       workshops = workshops.where(subject: params[:subject]) if params[:subject]
 
       if current_user.permission?(UserPermission::WORKSHOP_ADMIN)
+        workshops = workshops.where(organizer_id: params[:organizer_id]) if params[:organizer_id]
+        workshops = workshops.facilitated_by(User.find_by(id: params[:facilitator_id])) if params[:facilitator_id]
+
         if params[:virtual]
           # Note this is an inefficient workaround required
           # because we store a workshop's virtual status as
@@ -96,8 +99,6 @@ module Pd::WorkshopFilters
             workshops.none :
             workshops.where(id: workshops_array.map(&:id))
         end
-        workshops = workshops.where(organizer_id: params[:organizer_id]) if params[:organizer_id]
-        workshops = workshops.facilitated_by(User.find_by(id: params[:facilitator_id])) if params[:facilitator_id]
       end
 
       if params[:regional_partner_id] && params[:regional_partner_id] != 'all'
