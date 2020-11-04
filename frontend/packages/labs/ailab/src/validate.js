@@ -52,7 +52,7 @@ export function emptyCellFinder(state) {
   state.data.forEach(function(row, i) {
     columns.forEach(function(column) {
       if (row[column] === "" || row[column] === undefined) {
-        emptyCells.push({ row: i, column: column });
+        emptyCells.push({ row: i + 1, column: column });
       }
     });
   });
