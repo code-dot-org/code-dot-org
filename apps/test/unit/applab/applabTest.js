@@ -1,6 +1,6 @@
 import $ from 'jquery';
 import sinon from 'sinon';
-import {assert, expect} from '../../util/deprecatedChai';
+import {assert, expect} from '../../util/reconfiguredChai';
 import project from '@cdo/apps/code-studio/initApp/project';
 import commonMsg from '@cdo/locale';
 import applabMsg from '@cdo/applab/locale';
@@ -15,6 +15,7 @@ import {
   restoreRedux
 } from '@cdo/apps/redux';
 import {reducers} from '@cdo/apps/applab/redux/applab';
+import progress from '@cdo/apps/code-studio/progressRedux';
 var Applab = require('@cdo/apps/applab/applab');
 var designMode = require('@cdo/apps/applab/designMode');
 var applabCommands = require('@cdo/apps/applab/commands');
@@ -540,7 +541,7 @@ describe('applab', () => {
     beforeEach(stubRedux);
     afterEach(restoreRedux);
 
-    beforeEach(() => registerReducers(reducers));
+    beforeEach(() => registerReducers({...reducers, progress}));
     describe('the expandDebugger level option', () => {
       let config;
       beforeEach(() => {
