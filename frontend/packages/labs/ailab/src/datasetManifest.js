@@ -1,4 +1,4 @@
-export const availableDatasets = [
+export const allDatasets = [
   {
     id: 1,
     name: "Erin's Candy Preferences - all binary",

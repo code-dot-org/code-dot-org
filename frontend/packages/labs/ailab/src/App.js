@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import CSVReaderWrapper from "./UIComponents/CSVReaderWrapper";
+import SelectDataset from "./UIComponents/SelectDataset";
 import DataDisplay from "./UIComponents/DataDisplay";
 import SelectFeatures from "./UIComponents/SelectFeatures";
 import ColumnInspector from "./UIComponents/ColumnInspector";
@@ -11,7 +11,7 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        <CSVReaderWrapper />
+        <SelectDataset />
         <DataDisplay />
         <SelectFeatures />
         <ColumnInspector />

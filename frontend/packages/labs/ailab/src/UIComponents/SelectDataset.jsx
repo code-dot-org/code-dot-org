@@ -1,65 +1,44 @@
 /* React component to handle importing CSVs and pushing data to Redux store. */
 import PropTypes from "prop-types";
 import React, { Component } from "react";
-import Papa from "papaparse";
 import { connect } from "react-redux";
-import { resetState, setImportedData, setColumnsByDataType } from "../redux";
-import { availableDatasets } from "../datasetManifest";
-import { ColumnTypes } from "../constants.js";
+import { setSelectedCSV, resetState } from "../redux";
+import { parseCSV } from "../csvReaderWrapper";
+import { allDatasets } from "../datasetManifest";
 
-class CSVReaderWrapper extends Component {
+class SelectDataset extends Component {
   static propTypes = {
-    resetState: PropTypes.func.isRequired,
-    setImportedData: PropTypes.func.isRequired,
-    setColumnsByDataType: PropTypes.func.isRequired
+    setSelectedCSV: PropTypes.func.isRequired,
+    csvfile: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
+    resetState: PropTypes.func.isRequired
   };
 
   constructor(props) {
     super(props);
 
     this.state = {
-      csvfile: undefined,
-      download: false,
-      data: undefined
+      download: false
     };
   }
 
   handleChange = event => {
     this.props.resetState();
+    this.props.setSelectedCSV(event.target.files[0]);
     this.setState({
-      csvfile: event.target.files[0],
       download: false
     });
   };
 
   handleChangeSelect = event => {
     this.props.resetState();
+    this.props.setSelectedCSV(event.target.value);
     this.setState({
-      csvfile: event.target.value,
       download: true
     });
   };
 
   importCSV = () => {
-    const { csvfile, download } = this.state;
-    Papa.parse(csvfile, {
-      complete: this.updateData,
-      header: true,
-      download: download,
-      skipEmptyLines: true
-    });
-  };
-
-  updateData = result => {
-    var data = result.data;
-    this.props.setImportedData(data);
-    this.setDefaultColumnDataType(data);
-  };
-
-  setDefaultColumnDataType = data => {
-    Object.keys(data[0]).map(column =>
-      this.props.setColumnsByDataType(column, ColumnTypes.OTHER)
-    );
+    parseCSV(this.props.csvfile, this.state.download);
   };
 
   render() {
@@ -73,7 +52,7 @@ class CSVReaderWrapper extends Component {
             <h2>Select a dataset from the collection</h2>
             <select onChange={this.handleChangeSelect}>
               <option>{""}</option>
-              {availableDatasets.map(dataset => {
+              {allDatasets.map(dataset => {
                 return (
                   <option
                     key={dataset["id"]}
@@ -109,16 +88,15 @@ class CSVReaderWrapper extends Component {
 }
 
 export default connect(
-  state => ({}),
+  state => ({
+    csvfile: state.csvfile
+  }),
   dispatch => ({
     resetState() {
       dispatch(resetState());
     },
-    setImportedData(data) {
-      dispatch(setImportedData(data));
-    },
-    setColumnsByDataType(column, dataType) {
-      dispatch(setColumnsByDataType(column, dataType));
+    setSelectedCSV(csvfilePath) {
+      dispatch(setSelectedCSV(csvfilePath));
     }
   })
-)(CSVReaderWrapper);
+)(SelectDataset);
