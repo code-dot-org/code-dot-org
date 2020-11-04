@@ -6,8 +6,6 @@ import train, { availableTrainers } from "../train";
 import {
   setShowPredict,
   setPercentDataToReserve,
-  getAccuracy,
-  getConvertedLabels,
   readyToTrain,
   validationMessages
 } from "../redux";
@@ -22,34 +20,18 @@ class TrainModel extends Component {
     setShowPredict: PropTypes.func.isRequired,
     selectedTrainer: PropTypes.string,
     percentDataToReserve: PropTypes.number,
-    setPercentDataToReserve: PropTypes.func,
-    accuracy: PropTypes.string,
-    accuracyCheckLabels: PropTypes.array,
-    accuracyCheckPredictedLabels: PropTypes.array
+    setPercentDataToReserve: PropTypes.func
   };
-
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      showAccuracy: false
-    };
-  }
 
   handleChange = event => {
     this.props.setPercentDataToReserve(parseInt(event.target.value));
-    this.setState({
-      showAccuracy: false
-    });
+    this.props.setShowPredict(false);
   };
 
   onClickTrainModel = () => {
     train.init();
     train.onClickTrain();
     this.props.setShowPredict(true);
-    this.setState({
-      showAccuracy: true
-    });
   };
 
   render() {
@@ -85,7 +67,6 @@ class TrainModel extends Component {
             </select>
           </label>
         </form>
-
         {this.props.readyToTrain && (
           <div>
             <h2>Train the Model</h2>
@@ -99,42 +80,6 @@ class TrainModel extends Component {
             <button type="button" onClick={this.onClickTrainModel}>
               Train model
             </button>
-            {this.state.showAccuracy && (
-              <div>
-                <p>
-                  {this.props.percentDataToReserve}% of the training data was
-                  reserved to test the accuracy of the newly trained model.
-                </p>
-                {this.props.percentDataToReserve > 0 && (
-                  <div>
-                    <table>
-                      <thead>
-                        <tr>
-                          <th>Expected</th>
-                          <th>Predicted</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        {this.props.accuracyCheckLabels.map((label, index) => {
-                          return (
-                            <tr key={index}>
-                              <td>{label}</td>
-                              <td>
-                                {this.props.accuracyCheckPredictedLabels[index]}
-                              </td>
-                            </tr>
-                          );
-                        })}
-                      </tbody>
-                    </table>
-                    <div>
-                      <h3>The calculated accuracy of this model is:</h3>
-                      {this.props.accuracy}%
-                    </div>
-                  </div>
-                )}
-              </div>
-            )}
           </div>
         )}
       </div>
@@ -147,12 +92,6 @@ export default connect(
     selectedFeatures: state.selectedFeatures,
     labelColumn: state.labelColumn,
     selectedTrainer: state.selectedTrainer,
-    accuracy: getAccuracy(state),
-    accuracyCheckLabels: getConvertedLabels(state, state.accuracyCheckLabels),
-    accuracyCheckPredictedLabels: getConvertedLabels(
-      state,
-      state.accuracyCheckPredictedLabels
-    ),
     readyToTrain: readyToTrain(state),
     validationMessages: validationMessages(state),
     percentDataToReserve: state.percentDataToReserve
