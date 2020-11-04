@@ -104,7 +104,8 @@ export default class ScriptEditor extends React.Component {
     super(props);
 
     this.state = {
-      curriculumUmbrella: this.props.curriculumUmbrella
+      familyName: this.props.familyName || '',
+      isCourse: this.props.isCourse
     };
   }
 
@@ -114,9 +115,12 @@ export default class ScriptEditor extends React.Component {
       .removeAttr('selected', true);
   };
 
-  handleUmbrellaSelectChange = event => {
-    const curriculumUmbrella = event.target.value;
-    this.setState({curriculumUmbrella});
+  handleFamilyNameChange = event => {
+    this.setState({familyName: event.target.value});
+  };
+
+  handleStandaloneCourseChange = () => {
+    this.setState({isCourse: !this.state.isCourse});
   };
 
   presubmit = e => {
@@ -135,6 +139,19 @@ export default class ScriptEditor extends React.Component {
       ) {
         e.preventDefault();
       }
+    }
+    // HACK: until the script edit page no longer overwrites changes to the
+    // arrangement of levels within lessons, give the user a warning
+    if (
+      window.lessonEditorOpened &&
+      !confirm(
+        'WARNING: It looks like you opened a lesson edit page from this script edit page. ' +
+          'If you made any changes on the lesson edit page which you do not ' +
+          'wish to lose, please click cancel now and reload this page before ' +
+          'saving any changes to this script edit page.'
+      )
+    ) {
+      e.preventDefault();
     }
   };
 
@@ -214,9 +231,10 @@ export default class ScriptEditor extends React.Component {
             />
             <HelpTip>
               <p>
-                By default students start in the summary view. When this box is
-                checked, we instead stick everyone into detail view to start for
-                this script.
+                By default students start in the summary view (only shows the
+                levels). When this box is checked, we instead stick everyone
+                into detail view (shows the levels broken into progression) to
+                start for this script.
               </p>
             </HelpTip>
           </label>
@@ -290,12 +308,21 @@ export default class ScriptEditor extends React.Component {
           )}
           <label>
             Wrap-up Video
+            <HelpTip>
+              <p>
+                Deprecated setting only used for older courses. Please add
+                videos in levels instead.
+              </p>
+            </HelpTip>
             <input
               name="wrapup_video"
               defaultValue={this.props.wrapupVideo}
               style={styles.input}
             />
           </label>
+        </CollapsibleEditorSection>
+
+        <CollapsibleEditorSection title="Announcements">
           <AnnouncementsEditor
             defaultAnnouncements={this.props.announcements}
             inputStyle={styles.input}
@@ -311,7 +338,6 @@ export default class ScriptEditor extends React.Component {
                   name="curriculum_umbrella"
                   style={styles.dropdown}
                   defaultValue={this.props.curriculumUmbrella}
-                  onChange={this.handleUmbrellaSelectChange}
                 >
                   <option value="">(None)</option>
                   {CURRICULUM_UMBRELLAS.map(curriculumUmbrella => (
@@ -339,11 +365,12 @@ export default class ScriptEditor extends React.Component {
                 Family Name
                 <select
                   name="family_name"
-                  defaultValue={this.props.familyName}
+                  value={this.state.familyName}
                   style={styles.dropdown}
                   disabled={this.props.hasCourse}
+                  onChange={this.handleFamilyNameChange}
                 >
-                  <option value="">(None)</option>
+                  {!this.state.isCourse && <option value="">(None)</option>}
                   {this.props.scriptFamilies.map(familyOption => (
                     <option key={familyOption} value={familyOption}>
                       {familyOption}
@@ -357,6 +384,24 @@ export default class ScriptEditor extends React.Component {
                       a course, and redirecting to the latest version of a
                       specific unit within a course is deprecated. Please go to
                       the course page to edit this field.
+                    </p>
+                  </HelpTip>
+                )}
+                {!this.props.hasCourse && (
+                  <HelpTip>
+                    <p>
+                      The family name is used to group together scripts that are
+                      different version years of the same standalone course so
+                      that users can be redirected between different version
+                      years.
+                    </p>
+                  </HelpTip>
+                )}
+                {this.state.isCourse && (
+                  <HelpTip>
+                    <p>
+                      If you want to clear the family name you need to uncheck
+                      standalone course.
                     </p>
                   </HelpTip>
                 )}
@@ -388,6 +433,42 @@ export default class ScriptEditor extends React.Component {
                 )}
               </label>
               <label>
+                Is a Standalone Course
+                <input
+                  name="is_course"
+                  type="checkbox"
+                  checked={this.state.isCourse}
+                  disabled={!this.state.familyName}
+                  style={styles.checkbox}
+                  onChange={this.handleStandaloneCourseChange}
+                />
+                {this.state.familyName && !this.props.hasCourse && (
+                  <HelpTip>
+                    <p>
+                      (Still in development) If checked, indicates that this
+                      Unit represents a standalone course. Examples of such
+                      Units include CourseA-F, Express, and Pre-Express.
+                    </p>
+                  </HelpTip>
+                )}
+                {!this.state.familyName && !this.props.hasCourse && (
+                  <HelpTip>
+                    <p>
+                      You must select a family name in order to mark something
+                      as a standalone course.
+                    </p>
+                  </HelpTip>
+                )}
+                {this.props.hasCourse && (
+                  <HelpTip>
+                    <p>
+                      This unit is already part of a course so it can not be a
+                      standalone course.
+                    </p>
+                  </HelpTip>
+                )}
+              </label>
+              <label>
                 Can be recommended (aka stable)
                 <input
                   name="is_stable"
@@ -407,22 +488,6 @@ export default class ScriptEditor extends React.Component {
                 visible={!this.props.hidden}
                 pilotExperiment={this.props.pilotExperiment}
               />
-              <label>
-                Is a Standalone Course
-                <input
-                  name="is_course"
-                  type="checkbox"
-                  defaultChecked={this.props.isCourse}
-                  style={styles.checkbox}
-                />
-                <HelpTip>
-                  <p>
-                    (Still in development) If checked, indicates that this Unit
-                    represents a standalone course. Examples of such Units
-                    include CourseA-F, Express, and Pre-Express.
-                  </p>
-                </HelpTip>
-              </label>
             </div>
           )}
         </CollapsibleEditorSection>
@@ -443,14 +508,16 @@ export default class ScriptEditor extends React.Component {
               </p>
             </HelpTip>
           </label>
-          <label>
-            Curriculum Path
-            <input
-              name="curriculum_path"
-              defaultValue={this.props.curriculumPath}
-              style={styles.input}
-            />
-          </label>
+          {!this.props.beta && (
+            <label>
+              Curriculum Path
+              <input
+                name="curriculum_path"
+                defaultValue={this.props.curriculumPath}
+                style={styles.input}
+              />
+            </label>
+          )}
           <label>
             Allow Teachers to Hide Lessons
             <input
@@ -471,10 +538,12 @@ export default class ScriptEditor extends React.Component {
             projectWidgetTypes={this.props.projectWidgetTypes}
             projectWidgetVisible={this.props.projectWidgetVisible}
           />
-          <LessonDescriptions
-            scriptName={this.props.name}
-            currentDescriptions={this.props.i18nData.stageDescriptions}
-          />
+          {!this.props.beta && (
+            <LessonDescriptions
+              scriptName={this.props.name}
+              currentDescriptions={this.props.i18nData.stageDescriptions}
+            />
+          )}
         </CollapsibleEditorSection>
 
         <CollapsibleEditorSection title="Teacher Resources Settings">

@@ -8,8 +8,7 @@ class LevelsController < ApplicationController
   include LevelsHelper
   include ActiveSupport::Inflector
   before_action :authenticate_user!, except: [:show, :embed_level, :get_rubric]
-  before_action :require_levelbuilder_mode, except: [:show, :embed_level, :get_rubric, :get_filtered_levels]
-  before_action :require_levelbuilder_mode_or_test_env, only: [:get_filtered_levels]
+  before_action :require_levelbuilder_mode_or_test_env, except: [:show, :embed_level, :get_rubric]
   load_and_authorize_resource except: [:create]
 
   before_action :set_level, only: [:show, :edit, :update, :destroy]
@@ -18,6 +17,7 @@ class LevelsController < ApplicationController
 
   # All level types that can be requested via /levels/new
   LEVEL_CLASSES = [
+    Ailab,
     Applab,
     Artist,
     Bounce,
@@ -290,9 +290,9 @@ class LevelsController < ApplicationController
     begin
       @level = type_class.create_from_level_builder(params, create_level_params)
     rescue ArgumentError => e
-      render(status: :not_acceptable, text: e.message) && return
+      render(status: :not_acceptable, plain: e.message) && return
     rescue ActiveRecord::RecordInvalid => invalid
-      render(status: :not_acceptable, text: invalid) && return
+      render(status: :not_acceptable, plain: invalid) && return
     end
     if params[:do_not_redirect]
       render json: @level
@@ -339,6 +339,8 @@ class LevelsController < ApplicationController
         @game = Game.fish
       elsif @type_class == CurriculumReference
         @game = Game.curriculum_reference
+      elsif @type_class <= Ailab
+        @game = Game.ailab
       end
       @level = @type_class.new
       render :edit
@@ -360,9 +362,9 @@ class LevelsController < ApplicationController
       render json: {redirect: edit_level_url(@new_level)}
     end
   rescue ArgumentError => e
-    render(status: :not_acceptable, text: e.message)
+    render(status: :not_acceptable, plain: e.message)
   rescue ActiveRecord::RecordInvalid => invalid
-    render(status: :not_acceptable, text: invalid)
+    render(status: :not_acceptable, plain: invalid)
   end
 
   # GET /levels/:id/embed_level

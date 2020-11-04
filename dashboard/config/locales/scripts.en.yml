@@ -1222,6 +1222,8 @@ en:
               name: Contained Levels
             ML Fish:
               name: ML Fish
+            AI Lab:
+              name: AI Lab
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: 'Phase 2 Online: Blended Summer Study'
@@ -18261,6 +18263,10 @@ en:
               name: USE Programs (AppLab Only)
             MODIFY Programs:
               name: MODIFY Programs (AppLab -> Widget -> AppLab)
+            Does Code.org Like Your Dog?:
+              name: Does Code.org Like Your Dog?
+            dog:
+              name: Does Code.org Like Your Dog?
           lesson_groups: {}
           title: Ml/AI Unit - CSD
           description_audience: ''
@@ -18277,3 +18283,12 @@ en:
           description_audience: ''
           description_short: 'Use Sprite Lab to program a simulation out of a virus outbreak. '
           description: 'Use Sprite Lab to program a simulation out of a virus outbreak. '
+        apps-for-good:
+          lessons:
+            Build an App for Good:
+              name: Build an App for Good
+          lesson_groups: {}
+          title: Apps for Good
+          description_audience: ''
+          description_short: ''
+          description: ''

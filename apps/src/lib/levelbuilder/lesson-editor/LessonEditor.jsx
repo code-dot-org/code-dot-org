@@ -62,7 +62,7 @@ export default class LessonEditor extends Component {
     purpose: PropTypes.string,
     preparation: PropTypes.string,
     announcements: PropTypes.arrayOf(announcementShape),
-    resources: PropTypes.arrayOf(resourceShape),
+    resources: PropTypes.arrayOf(resourceShape).isRequired,
     relatedLessons: PropTypes.arrayOf(relatedLessonShape).isRequired,
     objectives: PropTypes.arrayOf(PropTypes.object).isRequired
   };
@@ -105,9 +105,9 @@ export default class LessonEditor extends Component {
             />
             <HelpTip>
               <p>
-                Check this box if this lesson should be locked from teachers.
-                Only validated teachers will be able to see it and unlock the
-                materials.
+                Check this box if this lesson should be locked for students. If
+                checked, teachers will be able to unlock the lesson for their
+                students.
               </p>
             </HelpTip>
           </label>
@@ -212,7 +212,7 @@ export default class LessonEditor extends Component {
           collapsed={true}
           fullWidth={true}
         >
-          <ResourcesEditor resources={this.props.resources} />
+          <ResourcesEditor />
         </CollapsibleEditorSection>
 
         <CollapsibleEditorSection
