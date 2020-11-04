@@ -10,7 +10,6 @@
 silenced = [
   /ActionController::TestCase HTTP request methods/,
   /ActionDispatch::IntegrationTest HTTP request methods/,
-  /`render :text` is deprecated/,
   /alias_method_chain is deprecated/
 ]
 

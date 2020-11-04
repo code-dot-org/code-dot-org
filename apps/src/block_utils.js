@@ -875,7 +875,7 @@ exports.createJsWrapperBlockCreator = function(
 ) {
   const {ORDER_FUNCTION_CALL, ORDER_MEMBER, ORDER_NONE} = Blockly.JavaScript;
 
-  const generator = blockly.Generator.get('JavaScript');
+  const generator = blockly.getGenerator();
 
   const inputTypes = {
     ...STANDARD_INPUT_TYPES,

@@ -11,21 +11,26 @@ import {
 import reducers, {
   init
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
+import resourcesEditor, {
+  initResources
+} from '@cdo/apps/lib/levelbuilder/lesson-editor/resourcesEditorRedux';
 import {
   levelKeyList,
   sampleActivities,
   searchOptions
 } from './activitiesTestData';
+import resourceTestData from './resourceTestData';
 import {Provider} from 'react-redux';
 
 describe('LessonEditor', () => {
   let defaultProps, store;
   beforeEach(() => {
     stubRedux();
-    registerReducers({...reducers});
+    registerReducers({...reducers, resources: resourcesEditor});
 
     store = getStore();
     store.dispatch(init(sampleActivities, levelKeyList, searchOptions));
+    store.dispatch(initResources(resourceTestData));
     defaultProps = {
       displayName: 'Lesson Name',
       overview: 'Lesson Overview',
@@ -38,7 +43,8 @@ describe('LessonEditor', () => {
       preparation: '- One',
       announcements: [],
       relatedLessons: [],
-      objectives: []
+      objectives: [],
+      resources: []
     };
   });
 
@@ -73,6 +79,7 @@ describe('LessonEditor', () => {
     expect(wrapper.find('select').length).to.equal(1);
     expect(wrapper.find('AnnouncementsEditor').length).to.equal(1);
     expect(wrapper.find('CollapsibleEditorSection').length).to.equal(7);
+    expect(wrapper.find('ResourcesEditor').length).to.equal(1);
   });
 
   it('can add activity', () => {

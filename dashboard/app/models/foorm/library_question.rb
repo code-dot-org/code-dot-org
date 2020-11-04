@@ -9,6 +9,7 @@
 #  question        :text(65535)      not null
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
+#  published       :boolean          default(TRUE), not null
 #
 # Indexes
 #
