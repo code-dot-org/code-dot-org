@@ -30,7 +30,8 @@ const styles = {
     margin: '0 0 0 7px'
   },
   dropdown: {
-    margin: '0 6px'
+    margin: '0 6px',
+    width: 300
   },
   saveButtonBackground: {
     margin: 0,
@@ -67,6 +68,23 @@ export default class LessonEditor extends Component {
     objectives: PropTypes.arrayOf(PropTypes.object).isRequired
   };
 
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      displayName: this.props.displayName,
+      overview: this.props.overview,
+      studentOverview: this.props.studentOverview,
+      unplugged: this.props.unplugged,
+      lockable: this.props.lockable,
+      creativeCommonsLicense: this.props.creativeCommonsLicense,
+      assessment: this.props.assessment,
+      purpose: this.props.purpose,
+      preparation: this.props.preparation,
+      announcements: this.props.announcements
+    };
+  }
+
   render() {
     const {
       displayName,
@@ -78,15 +96,20 @@ export default class LessonEditor extends Component {
       assessment,
       purpose,
       preparation,
-      announcements,
-      relatedLessons
-    } = this.props;
+      announcements
+    } = this.state;
+    const {relatedLessons} = this.props;
     return (
       <div style={styles.editor}>
         <h1>Editing Lesson "{displayName}"</h1>
         <label>
           Title
-          <input name="name" defaultValue={displayName} style={styles.input} />
+          <input
+            name="name"
+            value={displayName}
+            style={styles.input}
+            onChange={e => this.setState({displayName: e.target.value})}
+          />
         </label>
 
         <RelatedLessons relatedLessons={relatedLessons} />
@@ -100,8 +123,9 @@ export default class LessonEditor extends Component {
             <input
               name="lockable"
               type="checkbox"
-              defaultChecked={lockable}
+              checked={lockable}
               style={styles.checkbox}
+              onClick={() => this.setState({lockable: !lockable})}
             />
             <HelpTip>
               <p>
@@ -116,8 +140,9 @@ export default class LessonEditor extends Component {
             <input
               name="assessment"
               type="checkbox"
-              defaultChecked={assessment}
+              checked={assessment}
               style={styles.checkbox}
+              onClick={() => this.setState({assessment: !assessment})}
             />
             <HelpTip>
               <p>Check this box if this lesson is an assessment or project. </p>
@@ -128,8 +153,9 @@ export default class LessonEditor extends Component {
             <input
               name="unplugged"
               type="checkbox"
-              defaultChecked={unplugged}
+              checked={unplugged}
               style={styles.checkbox}
+              onClick={() => this.setState({unplugged: !unplugged})}
             />
             <HelpTip>
               <p>
@@ -142,7 +168,10 @@ export default class LessonEditor extends Component {
             <select
               name="creativeCommonsLicense"
               style={styles.dropdown}
-              defaultValue={creativeCommonsLicense}
+              value={creativeCommonsLicense}
+              onChange={e =>
+                this.setState({creativeCommonsLicense: e.target.value})
+              }
             >
               <option value="Creative Commons BY-NC-SA">
                 Creative Commons BY-NC-SA
