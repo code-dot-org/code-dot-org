@@ -177,7 +177,7 @@ class LessonTest < ActiveSupport::TestCase
       }
     )
 
-    summary = lesson.summarize_for_lesson_show
+    summary = lesson.summarize_for_lesson_show(@student)
     assert_equal 'lesson-1', summary[:key]
     assert_equal 'lesson overview', summary[:overview]
     assert_equal 'learning', summary[:purpose]
