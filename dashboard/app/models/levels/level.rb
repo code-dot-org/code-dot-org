@@ -312,12 +312,6 @@ class Level < ActiveRecord::Base
     hash
   end
 
-  def self.write_custom_levels
-    level_paths = Dir.glob(Rails.root.join('config/scripts/**/*.level'))
-    written_level_paths = Level.custom_levels.map(&:write_custom_level_file)
-    (level_paths - written_level_paths).each {|path| File.delete path}
-  end
-
   def should_write_custom_level_file?
     changed = changed? || (level_concept_difficulty && level_concept_difficulty.changed?)
     changed && write_to_file? && published
