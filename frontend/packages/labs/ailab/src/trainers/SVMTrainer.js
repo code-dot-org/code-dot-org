@@ -81,8 +81,7 @@ export default class SVMTrainer {
 
   predict(testValues) {
     let prediction = {};
-    prediction.predictedLabel = this.svm.predict([testValues])[0];
-    prediction.confidence = Math.abs(this.svm.marginOne(testValues));
+    prediction.predictedLabel = this.svm.predict(testValues);
     store.dispatch(setPrediction(prediction));
   }
 
