@@ -56,7 +56,7 @@ describe('ActivitySectionCardButtons', () => {
     const wrapper = shallow(<ActivitySectionCardButtons {...defaultProps} />);
 
     const button = wrapper.find('button').at(1);
-    expect(button.text()).to.include('Tip');
+    expect(button.text()).to.include('Callout');
     button.simulate('mouseDown');
     expect(wrapper.state().tipToEdit).to.not.be.null;
   });
