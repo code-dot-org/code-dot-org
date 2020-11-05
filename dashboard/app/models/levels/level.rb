@@ -319,7 +319,7 @@ class Level < ActiveRecord::Base
   end
 
   def should_write_custom_level_file?
-    changed = changed? || (level_concept_difficulty && level_concept_difficulty.changed?)
+    changed = saved_changes? || (level_concept_difficulty && level_concept_difficulty.saved_changes?)
     changed && write_to_file? && published
   end
 

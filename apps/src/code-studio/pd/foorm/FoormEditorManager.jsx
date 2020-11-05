@@ -18,6 +18,7 @@ const styles = {
 class FoormEditorManager extends React.Component {
   static propTypes = {
     updateFormQuestions: PropTypes.func,
+    updateFormData: PropTypes.func,
     populateCodeMirror: PropTypes.func,
     resetCodeMirror: PropTypes.func,
     formNamesAndVersions: PropTypes.array,
@@ -60,22 +61,22 @@ class FoormEditorManager extends React.Component {
 
   loadConfiguration(formName, formVersion) {
     $.ajax({
-      url: '/api/v1/pd/foorm/form_questions',
+      url: '/api/v1/pd/foorm/form_data',
       type: 'get',
       data: {name: formName, version: formVersion}
     })
       .done(result => {
-        this.props.updateFormQuestions(result);
+        this.props.updateFormData(result);
         this.setState({
           showCodeMirror: true,
           formName: formName,
           formVersion: formVersion,
           hasLoadError: false
         });
-        this.props.resetCodeMirror(result);
+        this.props.resetCodeMirror(result['questions']);
       })
       .fail(() => {
-        this.props.updateFormQuestions({});
+        this.props.updateFormData({questions: {}, published: null});
         this.setState({
           showCodeMirror: true,
           formName: null,
@@ -123,6 +124,8 @@ class FoormEditorManager extends React.Component {
 }
 
 export default connect(
-  state => ({formQuestions: state.foorm.formQuestions || {}}),
+  state => ({
+    formQuestions: state.foorm.formQuestions || {}
+  }),
   dispatch => ({})
 )(FoormEditorManager);
