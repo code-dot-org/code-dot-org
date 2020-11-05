@@ -145,7 +145,7 @@ class ActivitySectionCardButtons extends Component {
               type="button"
             >
               <i style={{marginRight: 7}} className="fa fa-plus-circle" />
-              Tip
+              Callout
             </button>
             <button
               onMouseDown={this.handleOpenAddResource}
