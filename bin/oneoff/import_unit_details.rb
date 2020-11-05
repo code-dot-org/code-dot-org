@@ -24,8 +24,8 @@ def parse_options
         options.local = true
       end
 
-      opts.on('-u', '--unit_name UnitName1,UnitName2', Array, 'Unit names to import') do |f|
-        options.unit_name = f
+      opts.on('-u', '--unit_names UnitName1,UnitName2', Array, 'Unit names to import') do |unit_names|
+        options.unit_names = unit_names
       end
 
       opts.on('-n', '--dry-run', 'Perform basic validation without importing any data.') do
@@ -43,12 +43,14 @@ def parse_options
 end
 
 def main(options)
-  script = Script.find_by_name!(options.unit_name)
-  puts "found code studio script name #{script.name} with id #{script.id}"
+  options.unit_names.each do |unit_name|
+    script = Script.find_by_name!(unit_name)
+    puts "found code studio script name #{script.name} with id #{script.id}"
+  end
 end
 
 options = parse_options
-raise "unit name is required. Use -h for options." unless options.unit_name
+raise "unit name is required. Use -h for options." unless options.unit_names.present?
 
 # Wait until after initial error checking before loading the rails environment.
 puts "loading rails environment..."
