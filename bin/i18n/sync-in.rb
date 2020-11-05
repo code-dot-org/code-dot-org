@@ -361,15 +361,15 @@ def localize_markdown_content
     athome.md.partial
     break.md.partial
     csforgood.md
-    hourofcode/artist.md
-    hourofcode/flappy.md
-    hourofcode/frozen.md
-    hourofcode/hourofcode.md
-    hourofcode/infinity.md
-    hourofcode/mc.md
-    hourofcode/playlab.md
-    hourofcode/starwars.md
-    hourofcode/unplugged-conditionals-with-cards.md
+    hourofcode/artist.md.partial
+    hourofcode/flappy.md.partial
+    hourofcode/frozen.md.partial
+    hourofcode/hourofcode.md.partial
+    hourofcode/infinity.md.partial
+    hourofcode/mc.md.partial
+    hourofcode/playlab.md.partial
+    hourofcode/starwars.md.partial
+    hourofcode/unplugged-conditionals-with-cards.md.partial
   ]
   markdown_files_to_localize.each do |path|
     original_path = File.join('pegasus/sites.v3/code.org/public', path)
