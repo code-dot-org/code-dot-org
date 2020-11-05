@@ -67,6 +67,11 @@ export default class LessonEditor extends Component {
     objectives: PropTypes.arrayOf(PropTypes.object).isRequired
   };
 
+  handleSaveAndKeepEditing = e => {
+    e.preventDefault();
+    console.log('Save and Keep Editing');
+  };
+
   render() {
     const {
       displayName,
@@ -228,6 +233,14 @@ export default class LessonEditor extends Component {
         </CollapsibleEditorSection>
 
         <div style={styles.saveButtonBackground}>
+          <button
+            className="btn btn-primary"
+            type="submit"
+            style={styles.saveButton}
+            onClick={this.handleSaveAndKeepEditing}
+          >
+            Save and Keep Editing
+          </button>
           <button
             className="btn btn-primary"
             type="submit"
