@@ -33,7 +33,7 @@ def parse_options
 
         Example: runner.rb -u coursea-2021
         Example: runner.rb -l -u csd1-2021
-        Example: runner.rb -l -u csp2-2020,csp3-2021,csp4-2021
+        Example: runner.rb -l -u csp2-2021,csp3-2021,csp4-2021
       BANNER
 
       opts.separator ""
