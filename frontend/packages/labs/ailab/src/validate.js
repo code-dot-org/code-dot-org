@@ -118,7 +118,7 @@ export function continuousColumnsHaveOnlyNumbers(state) {
       }
     }
   });
-  return columns.length > 0 && allNumbers;
+  return columns.length === 0 || allNumbers;
 }
 
 // Checks that a training algorithm has been selected.
