@@ -285,6 +285,7 @@ class Lesson < ActiveRecord::Base
   # the client.
   def summarize_for_lesson_edit
     {
+      id: id,
       name: name,
       overview: overview,
       studentOverview: student_overview,
