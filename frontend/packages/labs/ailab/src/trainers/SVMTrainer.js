@@ -1,10 +1,11 @@
 /* Training and prediction using a binary SVM machine learning model from
-(https://github.com/karpathy/svmjs) */
+https://github.com/mljs/svm */
 
 /* eslint-env node */
-const svmjs = require("svm");
 import { store } from "../index.js";
 import { setPrediction, setAccuracyCheckPredictedLabels } from "../redux";
+
+const SVM = require("ml-svm");
 
 export default class SVMTrainer {
   constructor() {
@@ -12,7 +13,17 @@ export default class SVMTrainer {
   }
 
   initTrainingState() {
-    this.svm = new svmjs.SVM();
+    var options = {
+      C: 0.01,
+      tol: 10e-4,
+      maxPasses: 10,
+      maxInterations: 10000,
+      kernel: "rbf",
+      kernelOptions: {
+        sigma: 0.5
+      }
+    };
+    this.svm = new SVM(options);
     this.converter = {};
   }
 
@@ -24,15 +35,17 @@ export default class SVMTrainer {
   */
   convertLabel = (labelOption, key) => {
     const converter = {};
-    converter[key[Object.keys(key)[0]]] = -1;
-    converter[key[Object.keys(key)[1]]] = 1;
+    converter[key[Object.keys(key)[0]]] = 1;
+    converter[key[Object.keys(key)[1]]] = -1;
     this.converter = converter;
     return converter[labelOption];
   };
 
   convertPredictedLabel = predictedLabel => {
-    return Object.keys(this.converter).find(
-      key => this.converter[key] === predictedLabel
+    return parseInt(
+      Object.keys(this.converter).find(
+        key => this.converter[key] === predictedLabel
+      )
     );
   };
 
