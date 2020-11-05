@@ -16,13 +16,15 @@ export const nonUserFacingGroup = {
       id: 100,
       name: 'A',
       position: 1,
-      key: 'lesson-1'
+      key: 'lesson-1',
+      levels: []
     },
     {
       name: 'B',
       id: 101,
       position: 2,
-      key: 'lesson-2'
+      key: 'lesson-2',
+      levels: []
     }
   ]
 };
@@ -75,13 +77,15 @@ describe('LessonGroupCard', () => {
             id: 100,
             name: 'A',
             position: 1,
-            key: 'lesson-1'
+            key: 'lesson-1',
+            levels: []
           },
           {
             name: 'B',
             id: 101,
             position: 2,
-            key: 'lesson-2'
+            key: 'lesson-2',
+            levels: []
           }
         ]
       }

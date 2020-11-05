@@ -1,0 +1,19 @@
+{
+  "category": "Logic",
+  "config": {
+    "func": "costumeImage",
+    "blockText": "{COSTUME}",
+    "args": [
+      {
+        "name": "COSTUME",
+        "customInput": "costumePicker"
+      }
+    ],
+    "returnType": "String",
+    "color": [
+      158,
+      0.43,
+      0.64
+    ]
+  }
+}
