@@ -67,15 +67,15 @@ class Predict extends Component {
                         onChange={event => this.handleChange(event, feature)}
                       >
                         <option>{""}</option>
-                        {this.props.uniqueOptionsByColumn[feature].map(
-                          (option, index) => {
+                        {this.props.uniqueOptionsByColumn[feature]
+                          .sort()
+                          .map((option, index) => {
                             return (
                               <option key={index} value={option}>
                                 {option}
                               </option>
                             );
-                          }
-                        )}
+                          })}
                       </select>
                     </label>
                   </span>
