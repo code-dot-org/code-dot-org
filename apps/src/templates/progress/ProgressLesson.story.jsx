@@ -4,22 +4,24 @@ import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {fakeLesson, fakeLevels} from './progressTestHelpers';
 import {LevelStatus} from '@cdo/apps/util/sharedConstants';
 
+let defaultLesson = fakeLesson('Maze', 1);
+defaultLesson.levels = [
+  {
+    ...fakeLevels(1)[0],
+    name: 'First progression'
+  },
+  ...fakeLevels(5, {startLevel: 2}).map(level => ({
+    ...level,
+    progression: 'Second Progression'
+  })),
+  {
+    ...fakeLevels(1)[0],
+    name: 'Last progression'
+  }
+];
+
 const defaultProps = {
-  lesson: fakeLesson('Maze', 1),
-  levels: [
-    {
-      ...fakeLevels(1)[0],
-      name: 'First progression'
-    },
-    ...fakeLevels(5, {startLevel: 2}).map(level => ({
-      ...level,
-      progression: 'Second Progression'
-    })),
-    {
-      ...fakeLevels(1)[0],
-      name: 'Last progression'
-    }
-  ],
+  lesson: defaultLesson,
   showTeacherInfo: false,
   viewAs: ViewType.Teacher,
   showLockIcon: true,

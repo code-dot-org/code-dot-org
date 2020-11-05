@@ -1,12 +1,17 @@
 import React from 'react';
 import ProgressLevelSet from './ProgressLevelSet';
 import {LevelStatus} from '@cdo/apps/util/sharedConstants';
-import {fakeLevels, fakeLevel} from './progressTestHelpers';
+import {
+  fakeLevels,
+  fakeLevel,
+  fakeProgressForLevels
+} from './progressTestHelpers';
 
 const levels = fakeLevels(5).map((level, index) => ({
-  ...level,
-  status: index === 0 ? LevelStatus.perfect : level.status
+  ...level
 }));
+let progress = fakeProgressForLevels(levels);
+progress[0].status = LevelStatus.perfect;
 
 export default storybook => {
   storybook.storiesOf('Progress/ProgressLevelSet', module).addStoryTable([
@@ -17,6 +22,7 @@ export default storybook => {
           name="Images, Pixels, and RGB"
           levels={levels.slice(0, 1)}
           disabled={false}
+          studentProgress={progress}
         />
       )
     },
@@ -27,6 +33,7 @@ export default storybook => {
           name="Writing Exercises"
           levels={levels}
           disabled={false}
+          studentProgress={progress}
         />
       )
     },
@@ -37,18 +44,30 @@ export default storybook => {
           name="Writing Exercises"
           levels={fakeLevels(5, 4)}
           disabled={false}
+          studentProgress={progress}
         />
       )
     },
     {
       name: 'disabled',
       story: () => (
-        <ProgressLevelSet name="Assessment" levels={levels} disabled={true} />
+        <ProgressLevelSet
+          name="Assessment"
+          levels={levels}
+          disabled={true}
+          studentProgress={progress}
+        />
       )
     },
     {
       name: 'Unnamed progression',
-      story: () => <ProgressLevelSet levels={levels} disabled={false} />
+      story: () => (
+        <ProgressLevelSet
+          levels={levels}
+          disabled={false}
+          studentProgress={progress}
+        />
+      )
     },
     {
       name: 'with unplugged level',
@@ -59,6 +78,7 @@ export default storybook => {
             level => ({...level, name: undefined})
           )}
           disabled={false}
+          studentProgress={progress}
         />
       )
     }
