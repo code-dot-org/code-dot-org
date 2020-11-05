@@ -1,23 +1,32 @@
 import React, {Component} from 'react';
+import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import Button from '@cdo/apps/templates/Button';
 import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
+import {canShowGoogleShareButton} from './googlePlatformApiRedux';
+import GoogleClassroomShareButton from './GoogleClassroomShareButton';
 
 const styles = {
   dialog: {
+    textAlign: 'left',
     paddingLeft: 20,
     paddingRight: 20,
     paddingBottom: 20
   },
   detailsLine: {
-    marginBottom: 25
+    marginBottom: 32
+  },
+  row: {
+    marginTop: 8,
+    marginBottom: 8
   },
   button: {
     width: 48,
     height: 48,
+    margin: 0,
     // use longhand properties for border radius and padding to properly
     // override the longhand properties in Button
     borderTopLeftRadius: 0,
@@ -30,20 +39,28 @@ const styles = {
   buttonIcon: {
     margin: 0,
     fontSize: 24
+  },
+  buttonLabel: {
+    paddingLeft: 16
   }
 };
 
-export default class SendLessonDialog extends Component {
+class SendLessonDialog extends Component {
   static propTypes = {
     isOpen: PropTypes.bool,
     handleClose: PropTypes.func,
     lessonUrl: PropTypes.string.isRequired,
+    lessonTitle: PropTypes.string,
+    courseid: PropTypes.number,
+    analyticsData: PropTypes.string,
+
+    // redux provided
     showGoogleButton: PropTypes.bool
   };
 
   renderCopyToClipboardRow() {
     return (
-      <div>
+      <div style={styles.row}>
         <Button
           id="ui-test-copy-button"
           text=""
@@ -53,24 +70,22 @@ export default class SendLessonDialog extends Component {
           style={styles.button}
           onClick={() => copyToClipboard(this.props.lessonUrl)}
         />
-        {i18n.sendLessonCopyLink()}
+        <span style={styles.buttonLabel}>{i18n.sendLessonCopyLink()}</span>
       </div>
     );
   }
 
   renderShareToGoogleRow() {
     return (
-      <div>
-        {/* TODO: Replace placeholder button with actual implementation */}
-        <Button
-          text=""
-          icon="users"
-          iconStyle={styles.buttonIcon}
-          color="white"
-          style={styles.button}
-          onClick={() => {}}
+      <div style={styles.row}>
+        <GoogleClassroomShareButton
+          height={styles.button.height}
+          url={this.props.lessonUrl}
+          itemtype="assignment"
+          title={this.props.lessonTitle}
+          courseid={this.props.courseid}
+          analyticsData={this.props.analyticsData}
         />
-        {i18n.sendLessonShareToGoogle()}
       </div>
     );
   }
@@ -106,3 +121,10 @@ export default class SendLessonDialog extends Component {
     );
   }
 }
+
+// Export unconnected dialog for unit testing
+export const UnconnectedSendLessonDialog = SendLessonDialog;
+
+export default connect(state => ({
+  showGoogleButton: canShowGoogleShareButton(state)
+}))(SendLessonDialog);
