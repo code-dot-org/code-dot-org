@@ -12,7 +12,9 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        <SelectDataset />
+        {this.props.mode.id !== "load_dataset" && (
+          <SelectDataset />
+        )}
         <DataDisplay />
         <SelectFeatures />
         <ColumnInspector />
