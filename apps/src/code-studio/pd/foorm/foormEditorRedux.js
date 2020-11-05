@@ -2,11 +2,16 @@ const SET_FORM_QUESTIONS = 'foormEditor/SET_FORM_QUESTIONS';
 const SET_HAS_ERROR = 'foormEditor/SET_HAS_ERROR';
 const SET_FORM_DATA = 'foormEditor/SET_FORM_DATA';
 
+// formQuestions is an object in surveyJS format that represents
+// a single survey
 export const setFormQuestions = formQuestions => ({
   type: SET_FORM_QUESTIONS,
   formQuestions
 });
 
+// formData is an object in the format
+// {published: true/false, questions: {...questions...}}
+// where questions is a survey in surveyJS format.
 export const setFormData = formData => ({
   type: SET_FORM_DATA,
   formData
