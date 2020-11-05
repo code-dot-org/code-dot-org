@@ -20,7 +20,8 @@ class TrainModel extends Component {
     setShowPredict: PropTypes.func.isRequired,
     selectedTrainer: PropTypes.string,
     percentDataToReserve: PropTypes.number,
-    setPercentDataToReserve: PropTypes.func
+    setPercentDataToReserve: PropTypes.func,
+    modelSize: PropTypes.number
   };
 
   handleChange = event => {
@@ -80,6 +81,9 @@ class TrainModel extends Component {
             <button type="button" onClick={this.onClickTrainModel}>
               Train model
             </button>
+            {this.props.modelSize && (
+              <p>The trained model is {this.props.modelSize} KB big.</p>
+            )}
           </div>
         )}
       </div>
@@ -94,7 +98,8 @@ export default connect(
     selectedTrainer: state.selectedTrainer,
     readyToTrain: readyToTrain(state),
     validationMessages: validationMessages(state),
-    percentDataToReserve: state.percentDataToReserve
+    percentDataToReserve: state.percentDataToReserve,
+    modelSize: state.modelSize
   }),
   dispatch => ({
     setShowPredict(showPredict) {
