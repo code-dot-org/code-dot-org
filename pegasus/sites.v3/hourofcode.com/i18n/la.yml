@@ -140,7 +140,7 @@ la:
   hoc_live_sign_up_message: "¡Aprende en vivo junto a invitados especiales! Estudiantes
     de todas las edades y habilidades, incluso aquellos sin computadoras, son bienvenidos.
     Únete a nuestra lista de distribución para recibir recordatorios de los episodios
-    y recursos para continuar el aprendizaje en casa."
+    y recursos para continuar el aprendizaje en casa. Ver episodios anteriores [aquí](%{episodes_url})."
   hoc_live_join_us: Únete
   hoc_overview_oceans_tutorial_header: Océanos de AI
   hoc_overview_oceans_tutorial_desc: Aprende sobre inteligencia artificial (IA), aprendizaje

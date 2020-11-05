@@ -238,7 +238,7 @@ export default class AnimationPickerBody extends React.Component {
           {(searchQuery !== '' || categoryQuery !== '') &&
             results.length === 0 && (
               <div style={animationPickerStyles.emptyResults}>
-                Sorry, no results found.
+                {msg.animationPicker_noResultsFound()}
               </div>
             )}
           {((searchQuery === '' && categoryQuery === '') ||
