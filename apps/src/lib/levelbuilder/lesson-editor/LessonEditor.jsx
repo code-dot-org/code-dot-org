@@ -12,6 +12,7 @@ import {resourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
 import RelatedLessons from './RelatedLessons';
 import {relatedLessonShape} from '../shapes';
 import color from '@cdo/apps/util/color';
+import $ from 'jquery';
 
 const styles = {
   editor: {
@@ -52,6 +53,7 @@ const styles = {
 
 export default class LessonEditor extends Component {
   static propTypes = {
+    id: PropTypes.number.isRequired,
     displayName: PropTypes.string.isRequired,
     overview: PropTypes.string,
     studentOverview: PropTypes.string,
@@ -70,6 +72,20 @@ export default class LessonEditor extends Component {
   handleSaveAndKeepEditing = e => {
     e.preventDefault();
     console.log('Save and Keep Editing');
+
+    $.ajax({
+      url: `/lessons/${this.props.id}?do_not_redirect=true`,
+      method: 'PUT',
+      dataType: 'json',
+      contentType: 'application/json;charset=UTF-8',
+      data: JSON.stringify({overview: 'Dani overview'})
+    })
+      .done(data => {
+        console.log(data);
+      })
+      .fail(error => {
+        console.log(error);
+      });
   };
 
   render() {

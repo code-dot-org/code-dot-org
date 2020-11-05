@@ -94,6 +94,7 @@ $(document).ready(function() {
   ReactDOM.render(
     <Provider store={store}>
       <LessonEditor
+        id={lessonData.id}
         displayName={lessonData.name}
         overview={lessonData.overview}
         studentOverview={lessonData.studentOverview}

@@ -56,7 +56,11 @@ class LessonsController < ApplicationController
       @lesson.update_objectives(JSON.parse(params[:objectives])) if params[:objectives]
     end
 
-    redirect_to lesson_path(id: @lesson.id)
+    if params[:do_not_redirect]
+      puts "here"
+    else
+      redirect_to lesson_path(id: @lesson.id)
+    end
   rescue ActiveRecord::RecordNotFound, ActiveRecord::RecordInvalid => e
     render(status: :not_acceptable, plain: e.message)
   end
