@@ -72,14 +72,19 @@ def main(options)
     log "found code studio script name #{script.name} with id #{script.id}"
 
     url = "#{cb_url_prefix}/export/unit/#{unit_name}.json?format=json"
-    log "fetching unit json from #{url}"
-    curl_opts = $verbose ? '' : ' -s'
-    cb_unit_json = `curl#{curl_opts} #{url}`
-    log "received #{cb_unit_json.length} bytes of unit json."
+    cb_unit_json = fetch(url)
 
     cb_unit = JSON.parse(cb_unit_json)
     validate_unit(script, cb_unit)
   end
+end
+
+def fetch(url)
+  log "fetching unit json from #{url}"
+  curl_opts = $verbose ? '' : ' -s'
+  cb_unit_json = `curl#{curl_opts} #{url}`
+  log "received #{cb_unit_json.length} bytes of unit json."
+  cb_unit_json
 end
 
 def validate_unit(script, cb_unit)
