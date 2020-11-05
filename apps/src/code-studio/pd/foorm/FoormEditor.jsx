@@ -28,11 +28,13 @@ const styles = {
   },
   options: {
     minWidth: 215,
-    width: '15%'
+    width: '15%',
+    maxWidth: 255
   },
   preview: {
     minWidth: 560,
-    width: '40%'
+    width: '40%',
+    maxWidth: '60%'
   },
   editorHeader: {
     display: 'flex',
@@ -90,8 +92,14 @@ class FoormEditor extends React.Component {
     this.props.populateCodeMirror();
   }
 
-  componentDidUpdate(prevProps) {
-    if (prevProps.formQuestions !== this.props.formQuestions) {
+  componentDidUpdate(prevProps, prevState) {
+    // call preview form if we got new form questions or we have switched
+    // on live preview.
+    if (
+      prevProps.formQuestions !== this.props.formQuestions ||
+      (prevState.livePreviewStatus === PREVIEW_OFF &&
+        this.state.livePreviewStatus === PREVIEW_ON)
+    ) {
       this.previewFoorm();
     }
   }
