@@ -2,6 +2,8 @@
 
 require 'json'
 require 'optparse'
+require 'uri'
+require 'net/http'
 require_relative '../../deployment'
 
 # Once this script is ready, only levelbuilder should be added to this list.
@@ -71,7 +73,11 @@ def main(options)
     script = Script.find_by_name!(unit_name)
     log "found code studio script name #{script.name} with id #{script.id}"
 
-    url = "#{cb_url_prefix}/export/unit/#{unit_name}.json?format=json"
+    # If a path is not found, curriculum builder returns a 302 redirect the same
+    # path with the /en-us prefix, which then returns 404. to make error
+    # handling a bit easier, just include the /en-us prefix so that we get a 404
+    # on the first try if the script cannot be found.
+    url = "#{cb_url_prefix}/en-us/export/unit/#{unit_name}.json?format=json"
     cb_unit_json = fetch(url)
 
     cb_unit = JSON.parse(cb_unit_json)
@@ -81,10 +87,12 @@ end
 
 def fetch(url)
   log "fetching unit json from #{url}"
-  curl_opts = $verbose ? '' : ' -s'
-  cb_unit_json = `curl#{curl_opts} #{url}`
-  log "received #{cb_unit_json.length} bytes of unit json."
-  cb_unit_json
+  uri = URI(url)
+  response = Net::HTTP.get_response(uri)
+  raise "HTTP status #{response.code} fetching #{uri}" unless response.is_a? Net::HTTPSuccess
+  body = response.body
+  log "received #{body.length} bytes of unit json."
+  body
 end
 
 def validate_unit(script, cb_unit)
