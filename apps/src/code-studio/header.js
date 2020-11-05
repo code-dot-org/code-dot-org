@@ -24,6 +24,7 @@ import {getStore} from '../redux';
 
 import {PUZZLE_PAGE_NONE} from '@cdo/apps/templates/progress/progressTypes';
 import HeaderMiddle from '@cdo/apps/code-studio/components/header/HeaderMiddle';
+import SignInCallout from './components/header/SignInCallout';
 
 /**
  * Dynamic header generation and event bindings for header actions.
@@ -118,6 +119,10 @@ header.build = function(
         />
       </Provider>,
       document.querySelector('.header_level')
+    );
+    ReactDOM.render(
+      <SignInCallout />,
+      document.querySelector('.signin_callout')
     );
   });
 };
