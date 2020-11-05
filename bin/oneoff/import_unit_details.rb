@@ -43,9 +43,16 @@ def parse_options
 end
 
 def main(options)
+  cb_url_prefix = options.local ? 'http://localhost:8000' : 'https://www.codecurricula.com'
+
   options.unit_names.each do |unit_name|
     script = Script.find_by_name!(unit_name)
     puts "found code studio script name #{script.name} with id #{script.id}"
+
+    url = "#{cb_url_prefix}/export/unit/#{unit_name}.json?format=json"
+    puts "fetching unit json from #{url}"
+    cb_unit_json = `curl #{url}`
+    puts "received #{cb_unit_json.length} bytes of unit json."
   end
 end
 
