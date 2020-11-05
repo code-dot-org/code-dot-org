@@ -83,7 +83,7 @@ export default class EditTipDialog extends Component {
         style={styles.dialog}
       >
         <div style={styles.dialogContent}>
-          <h2>Add Tip</h2>
+          <h2>Add Callout</h2>
           <select
             onChange={this.handleTipTypeChange}
             value={this.state.tip.type}
@@ -109,7 +109,7 @@ export default class EditTipDialog extends Component {
         </div>
         <DialogFooter>
           <ConfirmDeleteButton
-            title={'Delete Tip?'}
+            title={'Delete Callout?'}
             body={`Are you sure you want to remove the ${
               tipTypes[this.state.tip.type].displayName
             } with key "${this.state.tip.key}" from the Activity?`}
