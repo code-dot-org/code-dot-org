@@ -3425,10 +3425,10 @@ StudioApp.prototype.isNotStartedLevel = function(config) {
     return config.readonlyWorkspace && !config.channel;
   } else {
     return (
-      (config.readonlyWorkspace &&
-        progress.progressByLevel[progress.currentLevelId] === undefined) ||
-      progress.progressByLevel[progress.currentLevelId].status ===
-        LevelStatus.not_tried
+      config.readonlyWorkspace &&
+      (progress.progressByLevel[progress.currentLevelId] === undefined ||
+        progress.progressByLevel[progress.currentLevelId].status ===
+          LevelStatus.not_tried)
     );
   }
 };
