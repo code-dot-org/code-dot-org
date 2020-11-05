@@ -100,9 +100,22 @@ class TestController < ApplicationController
     render json: {script_name: script.name, lesson_id: lesson.id}
   end
 
+  # invalidate the specified script from the script cache, so that it will be
+  # reloaded from the DB the next time it is requested.
+  def invalidate_script
+    Script.remove_from_cache(params[:script_name])
+    head :ok
+  end
+
   def destroy_script
     script = Script.find_by!(name: params[:script_name])
     script.destroy
+    head :ok
+  end
+
+  def destroy_level
+    level = Level.find(params[:id])
+    level.destroy
     head :ok
   end
 end

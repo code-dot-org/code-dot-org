@@ -8,12 +8,20 @@ class Api::V1::Pd::FoormController < ::ApplicationController
     render json: filled_in_form
   end
 
-  # GET api/v1/pd/foorm/form_questions
-  def get_form_questions
+  # GET api/v1/pd/foorm/form_data
+  def get_form_data
     form_name = params[:name]
     form_version = params[:version]
-    form_questions = JSON.parse(Foorm::Form.where(name: form_name, version: form_version).first&.questions)
-    render json: form_questions
+    form_data = Foorm::Form.where(name: form_name, version: form_version).first
+    if form_data
+      data_to_return = {
+        questions: JSON.parse(form_data.questions),
+        published: form_data.published
+      }
+      render json: data_to_return
+    else
+      render json: {}
+    end
   end
 
   # GET api/v1/pd/foorm/form_names
