@@ -53,7 +53,15 @@ def main(options)
     puts "fetching unit json from #{url}"
     cb_unit_json = `curl #{url}`
     puts "received #{cb_unit_json.length} bytes of unit json."
+
+    cb_unit_data = JSON.parse(cb_unit_json)
+    validate_unit(script, cb_unit_data)
   end
+end
+
+def validate_unit(script, cb_unit_data)
+  raise "unexpected unit_name #{cb_unit_data['unit_name']}" unless cb_unit_data['unit_name'] == script.name
+  puts "validated unit data for #{script.name}"
 end
 
 options = parse_options
