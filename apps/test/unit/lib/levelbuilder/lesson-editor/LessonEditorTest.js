@@ -43,8 +43,7 @@ describe('LessonEditor', () => {
       preparation: '- One',
       announcements: [],
       relatedLessons: [],
-      objectives: [],
-      resources: []
+      objectives: []
     };
   });
 
