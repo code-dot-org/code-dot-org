@@ -7,6 +7,7 @@ import initializeCodeMirror from '@cdo/apps/code-studio/initializeCodeMirror';
 import FoormEditorManager from '@cdo/apps/code-studio/pd/foorm/FoormEditorManager';
 import foorm, {
   setFormQuestions,
+  setFormData,
   setHasError
 } from '@cdo/apps/code-studio/pd/foorm/foormEditorRedux';
 
@@ -21,6 +22,7 @@ $(document).ready(function() {
     <Provider store={store}>
       <FoormEditorManager
         updateFormQuestions={updateFormQuestions}
+        updateFormData={updateFormData}
         populateCodeMirror={populateCodeMirror}
         resetCodeMirror={resetCodeMirror}
         {...getScriptData('props')}
@@ -53,6 +55,11 @@ function onCodeMirrorChange(editor) {
 
 const updateFormQuestions = formQuestions => {
   getStore().dispatch(setFormQuestions(formQuestions));
+  getStore().dispatch(setHasError(false));
+};
+
+const updateFormData = formData => {
+  getStore().dispatch(setFormData(formData));
   getStore().dispatch(setHasError(false));
 };
 
