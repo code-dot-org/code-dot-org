@@ -68,29 +68,23 @@ const styles = {
 
 class ActivityCard extends Component {
   static propTypes = {
-    activity: activityShape,
-    activitiesCount: PropTypes.number,
+    activity: activityShape.isRequired,
+    activitiesCount: PropTypes.number.isRequired,
     setActivitySectionRef: PropTypes.func.isRequired,
     updateTargetActivitySection: PropTypes.func.isRequired,
     targetActivityPos: PropTypes.number,
     targetActivitySectionPos: PropTypes.number,
     activitySectionMetrics: PropTypes.array.isRequired,
     updateActivitySectionMetrics: PropTypes.func.isRequired,
+    handleCollapse: PropTypes.func.isRequired,
+    collapsed: PropTypes.bool.isRequired,
 
     //redux
-    addActivitySection: PropTypes.func,
-    removeActivity: PropTypes.func,
-    moveActivity: PropTypes.func,
-    updateActivityField: PropTypes.func
+    addActivitySection: PropTypes.func.isRequired,
+    removeActivity: PropTypes.func.isRequired,
+    moveActivity: PropTypes.func.isRequired,
+    updateActivityField: PropTypes.func.isRequired
   };
-
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      collapsed: false
-    };
-  }
 
   handleAddActivitySection = () => {
     this.props.addActivitySection(
@@ -158,17 +152,13 @@ class ActivityCard extends Component {
         <div
           style={{
             ...styles.activityHeader,
-            ...(this.state.collapsed && {marginBottom: 10})
+            ...(this.props.collapsed && {marginBottom: 10})
           }}
         >
           <div style={styles.inputsAndIcon}>
             <FontAwesome
-              icon={this.state.collapsed ? 'expand' : 'compress'}
-              onClick={() => {
-                this.setState({
-                  collapsed: !this.state.collapsed
-                });
-              }}
+              icon={this.props.collapsed ? 'expand' : 'compress'}
+              onClick={this.props.handleCollapse}
             />
             <label style={styles.labelAndInput}>
               <span style={styles.label}>{`Activity:`}</span>
@@ -196,7 +186,7 @@ class ActivityCard extends Component {
             remove={this.handleRemoveActivity}
           />
         </div>
-        <div style={styles.activityBody} hidden={this.state.collapsed}>
+        <div style={styles.activityBody} hidden={this.props.collapsed}>
           {activity.activitySections.map(section => (
             <ActivitySectionCard
               key={section.key}
