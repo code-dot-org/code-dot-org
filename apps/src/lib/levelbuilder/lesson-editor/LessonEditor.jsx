@@ -104,7 +104,7 @@ export default class LessonEditor extends Component {
         studentOverview: this.state.studentOverview,
         purpose: this.state.purpose,
         preparation: this.state.preparation,
-        objectives: this.state.objectives
+        objectives: JSON.stringify(this.state.objectives)
       })
     })
       .done(data => {
