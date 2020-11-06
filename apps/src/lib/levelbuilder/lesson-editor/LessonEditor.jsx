@@ -95,7 +95,7 @@ export default class LessonEditor extends Component {
       dataType: 'json',
       contentType: 'application/json;charset=UTF-8',
       data: JSON.stringify({
-        displayName: this.state.displayName,
+        name: this.state.displayName,
         lockable: this.state.lockable,
         creativeCommonsLicense: this.state.creativeCommonsLicense,
         assessment: this.state.assessment,
