@@ -150,7 +150,7 @@ export default class LessonEditor extends Component {
               type="checkbox"
               checked={lockable}
               style={styles.checkbox}
-              onClick={() => this.setState({lockable: !lockable})}
+              onChange={() => this.setState({lockable: !lockable})}
             />
             <HelpTip>
               <p>
@@ -167,7 +167,7 @@ export default class LessonEditor extends Component {
               type="checkbox"
               checked={assessment}
               style={styles.checkbox}
-              onClick={() => this.setState({assessment: !assessment})}
+              onChange={() => this.setState({assessment: !assessment})}
             />
             <HelpTip>
               <p>Check this box if this lesson is an assessment or project. </p>
@@ -180,7 +180,7 @@ export default class LessonEditor extends Component {
               type="checkbox"
               checked={unplugged}
               style={styles.checkbox}
-              onClick={() => this.setState({unplugged: !unplugged})}
+              onChange={() => this.setState({unplugged: !unplugged})}
             />
             <HelpTip>
               <p>
@@ -228,16 +228,20 @@ export default class LessonEditor extends Component {
           <TextareaWithMarkdownPreview
             markdown={overview}
             label={'Overview'}
-            name={'overview'}
             inputRows={5}
+            handleMarkdownChange={e =>
+              this.setState({overview: e.target.value})
+            }
           />
           <TextareaWithMarkdownPreview
             markdown={studentOverview}
             label={'Student Overview'}
-            name={'studentOverview'}
             inputRows={5}
             helpTip={
               'This overview will appear on the students Lessons Resources page.'
+            }
+            handleMarkdownChange={e =>
+              this.setState({studentOverview: e.target.value})
             }
           />
         </CollapsibleEditorSection>
@@ -250,14 +254,16 @@ export default class LessonEditor extends Component {
           <TextareaWithMarkdownPreview
             markdown={purpose}
             label={'Purpose'}
-            name={'purpose'}
             inputRows={5}
+            handleMarkdownChange={e => this.setState({purpose: e.target.value})}
           />
           <TextareaWithMarkdownPreview
             markdown={preparation}
             label={'Preparation'}
-            name={'preparation'}
             inputRows={5}
+            handleMarkdownChange={e =>
+              this.setState({preparation: e.target.value})
+            }
           />
         </CollapsibleEditorSection>
 

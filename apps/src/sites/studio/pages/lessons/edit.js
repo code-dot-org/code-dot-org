@@ -96,14 +96,14 @@ $(document).ready(function() {
       <LessonEditor
         id={lessonData.id}
         displayName={lessonData.name}
-        overview={lessonData.overview}
-        studentOverview={lessonData.studentOverview}
+        overview={lessonData.overview || ''}
+        studentOverview={lessonData.studentOverview || ''}
         unplugged={lessonData.unplugged}
         lockable={lessonData.lockable}
         creativeCommonsLicense={lessonData.creativeCommonsLicense}
         assessment={lessonData.assessment}
-        purpose={lessonData.purpose}
-        preparation={lessonData.preparation}
+        purpose={lessonData.purpose || ''}
+        preparation={lessonData.preparation || ''}
         announcements={lessonData.announcements || []}
         relatedLessons={relatedLessons}
         objectives={objectives}
