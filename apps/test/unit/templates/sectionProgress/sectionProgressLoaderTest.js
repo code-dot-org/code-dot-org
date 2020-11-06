@@ -105,15 +105,28 @@ const fullExpectedResult = {
       100: {},
       101: {
         2000: {
+          pages: null,
           status: 'locked',
           result: 1001,
           paired: false,
           timeSpent: 0
         },
-        2001: {status: 'perfect', result: 30, paired: true, timeSpent: 12345}
+        2001: {
+          pages: null,
+          status: 'perfect',
+          result: 30,
+          paired: true,
+          timeSpent: 12345
+        }
       },
       102: {
-        2000: {status: 'perfect', result: 100, paired: false, timeSpent: 6789}
+        2000: {
+          pages: null,
+          status: 'perfect',
+          result: 100,
+          paired: false,
+          timeSpent: 6789
+        }
       }
     }
   },
