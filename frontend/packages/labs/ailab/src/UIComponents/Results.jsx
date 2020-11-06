@@ -2,8 +2,8 @@
 import PropTypes from "prop-types";
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { getAccuracy, getConvertedLabels } from "../redux";
-import { styles } from "../constants";
+import { getConvertedLabels, getSummaryStat } from "../redux";
+import { styles, MLTypes } from "../constants";
 
 class Results extends Component {
   static propTypes = {
@@ -11,7 +11,7 @@ class Results extends Component {
     selectedFeatures: PropTypes.array,
     labelColumn: PropTypes.string,
     percentDataToReserve: PropTypes.number,
-    accuracy: PropTypes.string,
+    summaryStat: PropTypes.object,
     accuracyCheckExamples: PropTypes.array,
     accuracyCheckLabels: PropTypes.array,
     accuracyCheckPredictedLabels: PropTypes.array
@@ -29,8 +29,23 @@ class Results extends Component {
                 reserved to test the accuracy of the newly trained model.
               </p>
               <div>
-                <h3>The calculated accuracy of this model is:</h3>
-                {this.props.accuracy}%
+                {this.props.summaryStat.type === MLTypes.REGRESSION && (
+                  <div>
+                    <h3>
+                      The average difference between expected and predicted
+                      labels is:
+                    </h3>{" "}
+                    {this.props.summaryStat.stat}
+                  </div>
+                )}
+                {this.props.summaryStat.type === MLTypes.CLASSIFICATION && (
+                  <div>
+                    <h3>The calculated accuracy of this model is:</h3>{" "}
+                    {this.props.summaryStat.stat}%
+                  </div>
+                )}
+                <br />
+                <br />
               </div>
               <div>
                 <table>
@@ -75,7 +90,7 @@ export default connect(state => ({
   showPredict: state.showPredict,
   selectedFeatures: state.selectedFeatures,
   labelColumn: state.labelColumn,
-  accuracy: getAccuracy(state),
+  summaryStat: getSummaryStat(state),
   accuracyCheckExamples: state.accuracyCheckExamples,
   accuracyCheckLabels: getConvertedLabels(state, state.accuracyCheckLabels),
   accuracyCheckPredictedLabels: getConvertedLabels(

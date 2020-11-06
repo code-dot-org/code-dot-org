@@ -1,7 +1,8 @@
 import {
   availableTrainers,
   getRegressionTrainers,
-  getClassificationTrainers
+  getClassificationTrainers,
+  getMLType
 } from "./train.js";
 
 import {
@@ -18,7 +19,7 @@ import {
   compatibleLabelAndTrainer
 } from "./validate.js";
 
-import { ColumnTypes } from "./constants.js";
+import { ColumnTypes, MLTypes } from "./constants.js";
 
 // Action types
 const RESET_STATE = "RESET_STATE";
@@ -162,7 +163,7 @@ export default function rootReducer(state = initialState, action) {
     return {
       ...state,
       mode: action.mode
-    }
+    };
   }
   if (action.type === SET_SELECTED_CSV) {
     return {
@@ -408,6 +409,23 @@ export function getCompatibleTrainers(state) {
   return compatibleTrainers;
 }
 
+function getSum(total, num) {
+  return total + num;
+}
+
+function getAverageDiff(state) {
+  let diffs = [];
+  const numPredictedLabels = state.accuracyCheckPredictedLabels.length;
+  for (let i = 0; i < numPredictedLabels; i++) {
+    diffs.push(
+      Math.abs(
+        state.accuracyCheckLabels[i] - state.accuracyCheckPredictedLabels[i]
+      )
+    );
+  }
+  return (diffs.reduce(getSum, 0) / numPredictedLabels).toFixed(2);
+}
+
 export function getAccuracy(state) {
   let numCorrect = 0;
   const numPredictedLabels = state.accuracyCheckPredictedLabels.length;
@@ -420,6 +438,20 @@ export function getAccuracy(state) {
     }
   }
   return ((numCorrect / numPredictedLabels) * 100).toFixed(2);
+}
+
+export function getSummaryStat(state) {
+  let summaryStat = {};
+  const mlType = getMLType(state.selectedTrainer);
+  if (mlType === MLTypes.REGRESSION) {
+    summaryStat.type = MLTypes.REGRESSION;
+    summaryStat.stat = getAverageDiff(state);
+  }
+  if (mlType === MLTypes.CLASSIFICATION) {
+    summaryStat.type = MLTypes.CLASSIFICATION;
+    summaryStat.stat = getAccuracy(state);
+  }
+  return summaryStat;
 }
 
 export function validationMessages(state) {
