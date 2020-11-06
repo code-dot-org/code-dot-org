@@ -105,7 +105,8 @@ export default class ScriptEditor extends React.Component {
 
     this.state = {
       familyName: this.props.familyName || '',
-      isCourse: this.props.isCourse
+      isCourse: this.props.isCourse,
+      description: this.props.i18nData.description
     };
   }
 
@@ -202,10 +203,12 @@ export default class ScriptEditor extends React.Component {
           />
         </label>
         <TextareaWithMarkdownPreview
-          markdown={this.props.i18nData.description}
+          markdown={this.state.description}
           label={'Description'}
-          name={'description'}
           inputRows={5}
+          handleMarkdownChange={e =>
+            this.setState({description: e.target.value})
+          }
         />
 
         <CollapsibleEditorSection title="Basic Settings">

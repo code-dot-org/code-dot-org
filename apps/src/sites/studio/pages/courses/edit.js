@@ -29,8 +29,12 @@ function showCourseEditor() {
         isStable={courseEditorData.course_summary.is_stable}
         pilotExperiment={courseEditorData.course_summary.pilot_experiment}
         descriptionShort={courseEditorData.course_summary.description_short}
-        descriptionStudent={courseEditorData.course_summary.description_student}
-        descriptionTeacher={courseEditorData.course_summary.description_teacher}
+        descriptionStudent={
+          courseEditorData.course_summary.description_student || ''
+        }
+        descriptionTeacher={
+          courseEditorData.course_summary.description_teacher || ''
+        }
         scriptsInCourse={courseEditorData.course_summary.scripts.map(
           script => script.name
         )}
