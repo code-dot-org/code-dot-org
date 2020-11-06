@@ -62,9 +62,14 @@ export default class CourseEditor extends Component {
 
     this.state = {
       descriptionStudent: this.props.descriptionStudent,
-      descriptionTeacher: this.props.descriptionTeacher
+      descriptionTeacher: this.props.descriptionTeacher,
+      announcements: this.props.announcements
     };
   }
+
+  handleUpdateAnnouncements = newAnnouncements => {
+    this.setState({announcements: newAnnouncements});
+  };
 
   render() {
     const {
@@ -181,8 +186,9 @@ export default class CourseEditor extends Component {
             />
           </label>
           <AnnouncementsEditor
-            defaultAnnouncements={announcements}
+            announcements={announcements}
             inputStyle={styles.input}
+            updateAnnouncements={this.handleUpdateAnnouncements}
           />
         </CollapsibleEditorSection>
 
