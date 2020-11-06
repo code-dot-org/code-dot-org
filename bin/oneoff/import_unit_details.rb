@@ -109,18 +109,17 @@ def validate_unit(script, cb_unit)
   end
 
   chapters = get_chapters(cb_unit)
+  cb_lessons = chapters.map {|ch| ch['lessons']}.flatten
 
   # Compare non-lockable lessons from CB and Code Studio.
-  lessons = script.lessons.reject(&:lockable)
-  cb_lessons = chapters.map {|ch| ch['lessons']}.
-    flatten.
-    # In 2020, a code_studio_url indicates a lockable lesson in CSP.
-    reject {|lesson| lesson['code_studio_url'].present?}
-  unless lessons.count == cb_lessons.count
+  lessons_nonlockable = script.lessons.reject(&:lockable)
+  # In 2020, a code_studio_url indicates a lockable lesson in CSP.
+  cb_lessons_nonlockable = cb_lessons.reject {|lesson| lesson['code_studio_url'].present?}
+  unless lessons_nonlockable.count == cb_lessons_nonlockable.count
     raise "mismatched lesson counts for unit #{script.name} CS: #{lesson_names.count} CB: #{cb_lesson_names.count}"
   end
   mismatched_names = []
-  lessons.each.with_index do |lesson, index|
+  lessons_nonlockable.each.with_index do |lesson, index|
     cb_lesson = cb_lessons[index]
     position = index + 1
     raise "unexpected position for lesson '#{lesson.name}'" unless lesson.relative_position == position
