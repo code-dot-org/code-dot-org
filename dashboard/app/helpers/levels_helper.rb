@@ -1,5 +1,6 @@
 require 'cdo/script_config'
 require 'cdo/redcarpet/inline'
+require 'cdo/honeybadger'
 require 'digest/sha1'
 require 'dynamic_config/gatekeeper'
 require 'firebase_token_generator'
@@ -474,9 +475,13 @@ module LevelsHelper
     token_request = Net::HTTP::Post.new(token_uri.request_uri, {'Ocp-Apim-Subscription-Key': api_key})
 
     token_http_request.request(token_request)&.body
+  rescue => e
+    Honeybadger.notify(e, error_message: 'Request for authentication token from Azure Speech Service failed')
+    nil
   end
 
   def get_azure_speech_service_voices(region, token)
+    # TODO: cache list of voices
     voice_uri = URI.parse("https://#{region}.tts.speech.microsoft.com/cognitiveservices/voices/list")
     voice_http_request = Net::HTTP.new(voice_uri.host, voice_uri.port)
     voice_http_request.use_ssl = true
@@ -485,10 +490,16 @@ module LevelsHelper
 
     response = voice_http_request.request(voice_request)&.body
     response.length >= 2 ? JSON.parse(response) : {}
+  rescue => e
+    Honeybadger.notify(e, 'Request for list of voices from Azure Speech Service failed')
+    nil
   end
 
   def azure_speech_service_options
-    return {} unless @level.game.use_azure_speech_service? && CDO.azure_speech_service_region.present? && CDO.azure_speech_service_key.present?
+    # TODO: add Gatekeeper flag and make timeouts configurable via DCDO
+    return {} unless @level.game.use_azure_speech_service? &&
+      CDO.azure_speech_service_region.present? &&
+      CDO.azure_speech_service_key.present?
 
     # First, get the token and region
     options = {}
@@ -497,22 +508,21 @@ module LevelsHelper
     options[:region] = CDO.azure_speech_service_region
 
     # Then, get the list of voices and languages
+    voices = get_azure_speech_service_voices(options[:region], options[:token])
+    return {} unless voices.present?
     language_dictionary = {}
-    get_azure_speech_service_voices(options[:region], options[:token]).each do |voice|
+    voices.each do |voice|
       native_locale_name = Languages.get_native_name_by_locale(voice["Locale"])
       next if native_locale_name.empty?
-      language_dictionary[native_locale_name[0][:native_name_s]] ||= {}
-      language_dictionary[native_locale_name[0][:native_name_s]][voice["Gender"].downcase] ||= voice["ShortName"]
-      language_dictionary[native_locale_name[0][:native_name_s]]["languageCode"] ||= voice["Locale"]
+      native_name_s = native_locale_name[0][:native_name_s]
+      language_dictionary[native_name_s] ||= {}
+      language_dictionary[native_name_s][voice["Gender"].downcase] ||= voice["ShortName"]
+      language_dictionary[native_name_s]["languageCode"] ||= voice["Locale"]
     end
 
-    # Only keep voices that contain 2+ genders and a languageCode
-    language_dictionary.delete_if {|_, voices| voices.length < 3}
+    # Only keep languages that contain 2+ genders and a languageCode
+    options[:languages] = language_dictionary.reject {|_, opt| opt.length < 3}
 
-    options[:languages] = language_dictionary
-    options
-  rescue SocketError, Net::OpenTimeout, Net::ReadTimeout, Errno::ECONNRESET, Errno::ECONNREFUSED, Errno::ENETUNREACH
-    # TODO: catch all errors and log to honeybadger
     options
   end
 
