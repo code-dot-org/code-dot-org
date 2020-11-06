@@ -1,5 +1,4 @@
 /** @file Board controller for BBC micro:bit */
-/* global SerialPort */ // Maybe provided by the Code.org Browser
 import {EventEmitter} from 'events'; // provided by webpack's node-libs-browser
 import {
   createMicroBitComponents,
@@ -11,8 +10,7 @@ import MBFirmataWrapper from './MBFirmataWrapper';
 import ExternalLed from './ExternalLed';
 import ExternalButton from './ExternalButton';
 import CapacitiveTouchSensor from './CapacitiveTouchSensor';
-import {isNodeSerialAvailable} from '../../portScanning';
-import ChromeSerialPort from 'chrome-serialport';
+import {serialPortType} from '../../util/browserChecks';
 
 /**
  * Controller interface for BBC micro:bit board using
@@ -27,7 +25,7 @@ export default class MicroBitBoard extends EventEmitter {
     /** @private {Object} Map of component controllers */
     this.prewiredComponents_ = null;
 
-    let portType = isNodeSerialAvailable() ? SerialPort : ChromeSerialPort;
+    let portType = serialPortType(true);
 
     /** @private {MicrobitFirmataClient} serial port controller */
     this.boardClient_ = new MBFirmataWrapper(portType);
@@ -54,9 +52,7 @@ export default class MicroBitBoard extends EventEmitter {
    */
   openSerialPort() {
     const portName = this.port ? this.port.comName : undefined;
-    const SerialPortType = isNodeSerialAvailable()
-      ? SerialPort
-      : ChromeSerialPort.SerialPort;
+    const SerialPortType = serialPortType(false);
 
     /** @const {number} serial port transfer rate */
     const SERIAL_BAUD = 57600;
