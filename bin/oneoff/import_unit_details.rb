@@ -136,6 +136,22 @@ def validate_unit(script, cb_unit)
       mismatched_names.push([lesson.name, cb_lesson['title']])
     end
   end
+
+  # Compare lockable lessons. Most lockable lessons won't have a lesson plan,
+  # so just make sure we can find the corresponding code studio lesson for any
+  # lesson plan belonging to a lockable lesson.
+  cb_lessons_lockable = cb_lessons.select {|cb_lesson| cb_lesson['code_studio_url'].present?}
+  cb_lessons_lockable.each do |cb_lesson|
+    lockable_position = %r{/s/#{script.name}/lockable/(\d+)/}.match(cb_lesson['code_studio_url'])&.captures&.first
+    unless lockable_position
+      raise "could not parse code_studio_url: #{cb_lesson['code_studio_url']} for cb lesson '#{cb_lesson['title']}' in unit #{script.name}"
+    end
+    lesson = script.lessons.find_by!(lockable: true, relative_position: lockable_position)
+    unless lesson.name.downcase.strip == cb_lesson['title'].downcase.strip
+      mismatched_names.push([lesson.name, cb_lesson['title']])
+    end
+  end
+
   if mismatched_names.any?
     mismatch_summary = mismatched_names.map do |left, right|
       "'#{left}' --> '#{right}'"
