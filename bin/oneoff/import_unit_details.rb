@@ -106,18 +106,7 @@ end
 def validate_unit(script, cb_unit)
   raise "unexpected unit_name #{cb_unit['unit_name']}" unless cb_unit['unit_name'] == script.name
 
-  # In 2020, CSF and CSD lessons are all inside chapters, and CSP does not use
-  # chapters. Therefore, we can simplify the merge logic by assuming that
-  # lessons are all inside chapters when chapters are present.
-  if cb_unit['chapters'].present? && cb_unit['lessons'].present?
-    raise "found #{cb_unit['lessons'].count} unexpected lessons outside of chapters"
-  end
-
-  if cb_unit['chapters'].blank? && cb_unit['lessons'].blank?
-    raise "no chapters or lessons found"
-  end
-
-  chapters = get_chapters(cb_unit)
+  chapters = get_validated_chapters(cb_unit)
   cb_lessons = chapters.map {|ch| ch['lessons']}.flatten
 
   # Compare non-lockable lessons from CB and Code Studio.
@@ -171,7 +160,18 @@ def validate_unit(script, cb_unit)
   log "validated unit data for #{script.name}"
 end
 
-def get_chapters(cb_unit)
+def get_validated_chapters(cb_unit)
+  # In 2020, CSF and CSD lessons are all inside chapters, and CSP does not use
+  # chapters. Therefore, we can simplify the merge logic by assuming that
+  # lessons are all inside chapters when chapters are present.
+  if cb_unit['chapters'].present? && cb_unit['lessons'].present?
+    raise "found #{cb_unit['lessons'].count} unexpected lessons outside of chapters"
+  end
+
+  if cb_unit['chapters'].blank? && cb_unit['lessons'].blank?
+    raise "no chapters or lessons found"
+  end
+
   cb_unit['chapters'].presence || [{'lessons' => cb_unit['lessons']}]
 end
 
