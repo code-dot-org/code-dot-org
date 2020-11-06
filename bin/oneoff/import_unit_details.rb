@@ -91,6 +91,8 @@ def main(options)
 
     cb_unit = JSON.parse(cb_unit_json)
     validate_unit(script, cb_unit)
+    chapters = get_validated_chapters(cb_unit)
+    validate_lessons(script, chapters)
   end
 end
 
@@ -105,11 +107,6 @@ end
 
 def validate_unit(script, cb_unit)
   raise "unexpected unit_name #{cb_unit['unit_name']}" unless cb_unit['unit_name'] == script.name
-
-  chapters = get_validated_chapters(cb_unit)
-  validate_lessons(script, chapters)
-
-  log "validated unit data for #{script.name}"
 end
 
 def get_validated_chapters(cb_unit)
