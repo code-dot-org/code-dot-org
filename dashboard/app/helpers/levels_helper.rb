@@ -1,5 +1,6 @@
 require 'cdo/script_config'
 require 'cdo/redcarpet/inline'
+require 'cdo/honeybadger'
 require 'digest/sha1'
 require 'dynamic_config/gatekeeper'
 require 'firebase_token_generator'
@@ -239,7 +240,7 @@ module LevelsHelper
     @app_options =
       if @level.is_a? Blockly
         blockly_options
-      elsif @level.is_a?(Weblab) || @level.is_a?(Fish)
+      elsif @level.is_a?(Weblab) || @level.is_a?(Fish) || @level.is_a?(Ailab)
         non_blockly_puzzle_options
       elsif @level.is_a?(DSLDefined) || @level.is_a?(FreeResponse) || @level.is_a?(CurriculumReference)
         question_options
@@ -311,11 +312,12 @@ module LevelsHelper
     use_blockly = !use_droplet && !use_netsim && !use_weblab
     use_p5 = @level.is_a?(Gamelab)
     hide_source = app_options[:hideSource]
+    use_google_blockly = @level.is_a?(Flappy) || view_options[:useGoogleBlockly]
     render partial: 'levels/apps_dependencies',
       locals: {
         app: app_options[:app],
         use_droplet: use_droplet,
-        use_google_blockly: view_options[:useGoogleBlockly],
+        use_google_blockly: use_google_blockly,
         use_blockly: use_blockly,
         use_applab: use_applab,
         use_gamelab: use_gamelab,
@@ -465,49 +467,67 @@ module LevelsHelper
     fb_options
   end
 
+  def get_azure_speech_service_token(region, api_key, timeout)
+    token_uri = URI.parse("https://#{region}.api.cognitive.microsoft.com/sts/v1.0/issueToken")
+    token_http_request = Net::HTTP.new(token_uri.host, token_uri.port)
+    token_http_request.use_ssl = true
+    token_http_request.verify_mode = OpenSSL::SSL::VERIFY_PEER
+    # TODO: Change read_timeout to write_timeout when we upgrade to Ruby 2.6+.
+    token_http_request.read_timeout = timeout
+    token_request = Net::HTTP::Post.new(token_uri.request_uri, {'Ocp-Apim-Subscription-Key': api_key})
+
+    token_http_request.request(token_request)&.body
+  rescue => e
+    Honeybadger.notify(e, error_message: 'Request for authentication token from Azure Speech Service failed')
+    nil
+  end
+
+  def get_azure_speech_service_voices(region, token, timeout)
+    # TODO: cache list of voices
+    voice_uri = URI.parse("https://#{region}.tts.speech.microsoft.com/cognitiveservices/voices/list")
+    voice_http_request = Net::HTTP.new(voice_uri.host, voice_uri.port)
+    voice_http_request.use_ssl = true
+    voice_http_request.verify_mode = OpenSSL::SSL::VERIFY_PEER
+    voice_http_request.read_timeout = timeout
+    voice_request = Net::HTTP::Get.new(voice_uri.request_uri, {'Authorization': 'Bearer ' + token})
+
+    response = voice_http_request.request(voice_request)&.body
+    response.length >= 2 ? JSON.parse(response) : []
+  rescue => e
+    Honeybadger.notify(e, error_message: 'Request for list of voices from Azure Speech Service failed')
+    nil
+  end
+
   def azure_speech_service_options
-    speech_service_options = {}
+    return {} unless Gatekeeper.allows('azure_speech_service', default: true) &&
+      @level.game.use_azure_speech_service? &&
+      CDO.azure_speech_service_region.present? &&
+      CDO.azure_speech_service_key.present?
 
-    if @level.game.use_azure_speech_service? && !CDO.azure_speech_service_region.nil? && !CDO.azure_speech_service_key.nil?
-      # First, get the token
-      token_uri = URI.parse("https://#{CDO.azure_speech_service_region}.api.cognitive.microsoft.com/sts/v1.0/issueToken")
-      token_header = {'Ocp-Apim-Subscription-Key': CDO.azure_speech_service_key}
-      token_http_request = Net::HTTP.new(token_uri.host, token_uri.port)
-      token_http_request.use_ssl = true
-      token_http_request.verify_mode = OpenSSL::SSL::VERIFY_PEER
-      token_request = Net::HTTP::Post.new(token_uri.request_uri, token_header)
-      token_response = token_http_request.request(token_request)
-      speech_service_options[:azureSpeechServiceToken] = token_response.body
-      speech_service_options[:azureSpeechServiceRegion] = CDO.azure_speech_service_region
+    # First, get the token and region
+    options = {}
+    timeout = DCDO.get('azure_speech_service_timeout', 5)
+    options[:token] = get_azure_speech_service_token(CDO.azure_speech_service_region, CDO.azure_speech_service_key, timeout)
+    return {} unless options[:token].present?
+    options[:region] = CDO.azure_speech_service_region
 
-      # Then, get the list of voices and languages
-      voice_uri = URI.parse("https://#{CDO.azure_speech_service_region}.tts.speech.microsoft.com/cognitiveservices/voices/list")
-      voice_header = {'Authorization': 'Bearer ' + token_response.body}
-      voice_http_request = Net::HTTP.new(voice_uri.host, voice_uri.port)
-      voice_http_request.use_ssl = true
-      voice_http_request.verify_mode = OpenSSL::SSL::VERIFY_PEER
-      voice_request = Net::HTTP::Get.new(voice_uri.request_uri, voice_header)
-      voice_response = voice_http_request.request(voice_request)
-
-      all_voices = voice_response.body && voice_response.body.length >= 2 ? JSON.parse(voice_response.body) : {}
-      language_dictionary = {}
-      language_dictionary = language_dictionary.transform_keys {|locale| Languages.get_native_name_by_locale(locale)}
-      speech_service_options[:azureSpeechServiceLanguages] = language_dictionary
-      all_voices.each do |voice|
-        native_locale_name = Languages.get_native_name_by_locale(voice["Locale"])
-        next if native_locale_name.empty?
-        language_dictionary[native_locale_name[0][:native_name_s]] ||= {}
-        language_dictionary[native_locale_name[0][:native_name_s]][voice["Gender"].downcase] ||= voice["ShortName"]
-        language_dictionary[native_locale_name[0][:native_name_s]]["languageCode"] ||= voice["Locale"]
-      end
-
-      language_dictionary.delete_if {|_, voices| voices.length < 3}
-
-      speech_service_options[:azureSpeechServiceLanguages] = language_dictionary
+    # Then, get the list of voices and languages
+    voices = get_azure_speech_service_voices(options[:region], options[:token], timeout)
+    return {} unless (voices&.length || 0) > 0
+    language_dictionary = {}
+    voices.each do |voice|
+      native_locale_name = Languages.get_native_name_by_locale(voice["Locale"])
+      next if native_locale_name.empty?
+      native_name_s = native_locale_name[0][:native_name_s]
+      language_dictionary[native_name_s] ||= {}
+      language_dictionary[native_name_s][voice["Gender"].downcase] ||= voice["ShortName"]
+      language_dictionary[native_name_s]["languageCode"] ||= voice["Locale"]
     end
-    speech_service_options
-  rescue SocketError, Net::OpenTimeout, Net::ReadTimeout, Errno::ECONNRESET, Errno::ECONNREFUSED, Errno::ENETUNREACH
-    speech_service_options
+
+    # Only keep languages that contain 2+ genders and a languageCode
+    options[:languages] = language_dictionary.reject {|_, opt| opt.length < 3}
+
+    options
   end
 
   # Options hash for Blockly

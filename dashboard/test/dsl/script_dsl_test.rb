@@ -35,7 +35,8 @@ class ScriptDslTest < ActiveSupport::TestCase
     project_sharing: nil,
     curriculum_umbrella: nil,
     tts: false,
-    is_course: false
+    is_course: false,
+    background: nil
   }
 
   test 'test Script DSL' do

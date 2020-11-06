@@ -4,19 +4,28 @@ class LessonsTest < ActionDispatch::IntegrationTest
   setup do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
-    @script = create(
-      :script,
-      name: 'unit-1'
-    )
-
+    @script = create :script, name: 'unit-1'
+    lesson_group = create :lesson_group, script: @script
     @lesson = create(
       :lesson,
-      name: 'lesson display name',
       script_id: @script.id,
+      lesson_group: lesson_group,
+      name: 'lesson display name',
+      relative_position: 1,
+      absolute_position: 1,
       properties: {
         overview: 'lesson overview',
         student_overview: 'student overview'
       }
+    )
+
+    @lesson2 = create(
+      :lesson,
+      script_id: @script.id,
+      lesson_group: lesson_group,
+      name: 'second lesson',
+      relative_position: 2,
+      absolute_position: 2
     )
 
     @activity = create(
@@ -63,6 +72,8 @@ class LessonsTest < ActionDispatch::IntegrationTest
     lesson_data = JSON.parse(css_select('script[data-lesson]').first.attribute('data-lesson').to_s)
     assert_equal 'lesson overview', lesson_data['overview']
     assert_equal '/s/unit-1', lesson_data['unit']['link']
+    assert_equal lesson_path(id: @lesson.id), lesson_data['unit']['lessons'][0]['link']
+    assert_equal lesson_path(id: @lesson2.id), lesson_data['unit']['lessons'][1]['link']
   end
 
   test 'lesson edit page contains expected data' do
@@ -104,6 +115,7 @@ class LessonsTest < ActionDispatch::IntegrationTest
     get edit_lesson_path(id: @lesson.id)
     assert_response :success
     lesson_data = JSON.parse(css_select('script[data-lesson]').first.attribute('data-lesson').to_s)
+    lesson_data['name'] = 'new lesson name'
     lesson_data['studentOverview'] = 'new student overview'
 
     activity_data = lesson_data['activities'].first
@@ -137,6 +149,7 @@ class LessonsTest < ActionDispatch::IntegrationTest
     patch lesson_path(id: @lesson.id, as: :json, params: lesson_data)
     assert_response :redirect
     @lesson.reload
+    assert_equal 'new lesson name', @lesson.name
     assert_equal 'lesson overview', @lesson.overview
     assert_equal 'new student overview', @lesson.student_overview
 

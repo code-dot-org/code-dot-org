@@ -12,7 +12,6 @@ import {
   removeActivity,
   updateActivityField
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
-import ReactDOM from 'react-dom';
 import {activityShape} from '@cdo/apps/lib/levelbuilder/shapes';
 
 const styles = {
@@ -50,7 +49,12 @@ const styles = {
     marginRight: 5
   },
   labelAndInput: {
-    marginLeft: 5,
+    marginLeft: 10,
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'flex-start'
+  },
+  inputsAndIcon: {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'flex-start'
@@ -64,27 +68,23 @@ const styles = {
 
 class ActivityCard extends Component {
   static propTypes = {
-    activity: activityShape,
-    activitiesCount: PropTypes.number,
-    setActivitySectionMetrics: PropTypes.func.isRequired,
-    setTargetActivitySection: PropTypes.func.isRequired,
+    activity: activityShape.isRequired,
+    activitiesCount: PropTypes.number.isRequired,
+    setActivitySectionRef: PropTypes.func.isRequired,
+    updateTargetActivitySection: PropTypes.func.isRequired,
+    targetActivityPos: PropTypes.number,
     targetActivitySectionPos: PropTypes.number,
-    activitySectionMetrics: PropTypes.object.isRequired,
+    activitySectionMetrics: PropTypes.array.isRequired,
+    updateActivitySectionMetrics: PropTypes.func.isRequired,
+    handleCollapse: PropTypes.func.isRequired,
+    collapsed: PropTypes.bool.isRequired,
 
     //redux
-    addActivitySection: PropTypes.func,
-    removeActivity: PropTypes.func,
-    moveActivity: PropTypes.func,
-    updateActivityField: PropTypes.func
+    addActivitySection: PropTypes.func.isRequired,
+    removeActivity: PropTypes.func.isRequired,
+    moveActivity: PropTypes.func.isRequired,
+    updateActivityField: PropTypes.func.isRequired
   };
-
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      collapsed: false
-    };
-  }
 
   handleAddActivitySection = () => {
     this.props.addActivitySection(
@@ -133,54 +133,60 @@ class ActivityCard extends Component {
     this.props.updateActivityField(
       this.props.activity.position,
       'duration',
-      event.target.value
+      Number.isNaN(parseInt(event.target.value))
+        ? ''
+        : parseInt(event.target.value)
     );
   };
 
   render() {
-    const {activity} = this.props;
+    const {
+      activity,
+      setActivitySectionRef,
+      updateTargetActivitySection,
+      updateActivitySectionMetrics
+    } = this.props;
 
     return (
       <div className="uitest-activity-card">
         <div
           style={{
             ...styles.activityHeader,
-            ...(this.state.collapsed && {marginBottom: 10})
+            ...(this.props.collapsed && {marginBottom: 10})
           }}
         >
-          <FontAwesome
-            icon={this.state.collapsed ? 'expand' : 'compress'}
-            onClick={() => {
-              this.setState({
-                collapsed: !this.state.collapsed
-              });
-            }}
-          />
-          <label style={styles.labelAndInput}>
-            <span style={styles.label}>{`Activity:`}</span>
-            <input
-              value={activity.displayName}
-              style={{width: 150}}
-              onChange={this.handleChangeDisplayName}
-              className="uitest-activity-name-input"
+          <div style={styles.inputsAndIcon}>
+            <FontAwesome
+              icon={this.props.collapsed ? 'expand' : 'compress'}
+              onClick={this.props.handleCollapse}
             />
-          </label>
-          <label style={styles.labelAndInput}>
-            <span style={styles.label}>{`Duration:`}</span>
-            <input
-              value={activity.duration}
-              style={{width: 35}}
-              onChange={this.handleChangeDuration}
-            />
-            <span style={{fontSize: 10}}>{'(mins)'}</span>
-          </label>
+            <label style={styles.labelAndInput}>
+              <span style={styles.label}>{`Activity:`}</span>
+              <input
+                value={activity.displayName}
+                style={{width: 200}}
+                onChange={this.handleChangeDisplayName}
+                className="uitest-activity-name-input"
+              />
+            </label>
+            <label style={styles.labelAndInput}>
+              <span style={styles.label}>{`Duration:`}</span>
+              <input
+                value={activity.duration}
+                style={{width: 35}}
+                onChange={this.handleChangeDuration}
+                className="uitest-activity-duration-input"
+              />
+              <span style={{fontSize: 10}}>{'(mins)'}</span>
+            </label>
+          </div>
           <OrderControls
             name={activity.key || '(none)'}
             move={this.handleMoveActivity}
             remove={this.handleRemoveActivity}
           />
         </div>
-        <div style={styles.activityBody} hidden={this.state.collapsed}>
+        <div style={styles.activityBody} hidden={this.props.collapsed}>
           {activity.activitySections.map(section => (
             <ActivitySectionCard
               key={section.key}
@@ -188,25 +194,19 @@ class ActivityCard extends Component {
               activityPosition={activity.position}
               activitySectionsCount={activity.activitySections.length}
               activitiesCount={this.props.activitiesCount}
-              ref={activitySectionCard => {
-                if (activitySectionCard) {
-                  const metrics = ReactDOM.findDOMNode(
-                    activitySectionCard
-                  ).getBoundingClientRect();
-                  this.props.setActivitySectionMetrics(
-                    metrics,
-                    section.position
-                  );
-                }
+              ref={ref => {
+                setActivitySectionRef(ref, activity.position, section.position);
               }}
               activitySectionMetrics={this.props.activitySectionMetrics}
-              setTargetActivitySection={this.props.setTargetActivitySection}
+              updateTargetActivitySection={updateTargetActivitySection}
+              targetActivityPos={this.props.targetActivityPos}
               targetActivitySectionPos={this.props.targetActivitySectionPos}
+              updateActivitySectionMetrics={updateActivitySectionMetrics}
             />
           ))}
           <button
             onMouseDown={this.handleAddActivitySection.bind()}
-            className="btn"
+            className="btn add-activity-section"
             style={styles.addButton}
             type="button"
           >

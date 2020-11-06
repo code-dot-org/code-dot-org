@@ -26,18 +26,52 @@
 # @attr [Boolean] assessment - indicates whether this resource is an assessment
 # @attr [String] audience - who this resource is targeted toward (eg teacher, student, etc)
 # @attr [String] download_url - URL that can download the file
-# @attr [Boolean] printable_student_handout - indicates whether the file will be included in a PDF handout
+# @attr [Boolean] include_in_pdf - indicates whether the file will be included in a PDF handout
 class Resource < ApplicationRecord
   include SerializedProperties
 
   has_and_belongs_to_many :lessons, join_table: :lessons_resources
   belongs_to :course_version
 
-  serialized_attrs %(
+  before_validation :generate_key, on: :create
+
+  serialized_attrs %w(
     type
     assessment
     audience
     download_url
-    printable_student_handout
+    include_in_pdf
   )
+
+  def generate_key
+    return if key
+    self.key = generate_key_from_name
+  end
+
+  def summarize_for_lesson_plan
+    {
+      key: key,
+      name: I18n.t("data.resource.#{key}.name", default: name),
+      url: url,
+      download_url: download_url,
+      audience: audience || 'All',
+      type: type
+    }
+  end
+
+  private
+
+  def generate_key_from_name
+    key_prefix = name.strip.downcase.gsub(/[^a-z0-9\-\_\.]+/, '_')
+    potential_clashes = course_version_id ? Resource.where(course_version_id: course_version_id) : Resource.all
+    potential_clashes = potential_clashes.where("resources.key like '#{key_prefix}%'").pluck(:key)
+    return key_prefix unless potential_clashes.include?(key_prefix)
+    key_suffix_num = 1
+    new_key = key_prefix
+    while potential_clashes.include?(new_key)
+      new_key = "#{key_prefix}_#{key_suffix_num}"
+      key_suffix_num += 1
+    end
+    new_key
+  end
 end

@@ -9,21 +9,21 @@ class GeocoderTest < Minitest::Test
   def test_finding_potential_addresses
     Geocoder.configure lookup: :mapbox, api_key: nil
     assert_nil(Geocoder.find_potential_street_address('this is just some text'))
-    assert(Geocoder.find_potential_street_address('1 Embarcadero Blvd SF CA'))
     assert_equal('1 Embarcadero Blvd SF CA', Geocoder.find_potential_street_address('1 Embarcadero Blvd SF CA'))
     assert_equal('123 Post Road Westport CT', Geocoder.find_potential_street_address('Hi I live at 123 Post Road Westport CT'))
     assert_equal('123, Post Road, Westport, CT', Geocoder.find_potential_street_address('Hi I live at 123, Post Road, Westport, CT'))
-    assert_equal('123, Post Road, Westport, CT and other stuff', Geocoder.find_potential_street_address('Hi I live at 123, Post Road, Westport, CT and other stuff'))
+    assert_nil(Geocoder.find_potential_street_address('Hi I live at 123 Post'))
+    assert_equal('123 Post Road', Geocoder.find_potential_street_address('Hi I live at 123 Post Road'))
+    assert_nil(Geocoder.find_potential_street_address('Hi I live at 123, Post Road, Westport, CT and other stuff'))
     assert_nil(Geocoder.find_potential_street_address('1b'))
     assert_nil(Geocoder.find_potential_street_address('300b'))
     assert_nil(Geocoder.find_potential_street_address('300'))
-    assert_nil(Geocoder.find_potential_street_address('250'))
-    assert_nil(Geocoder.find_potential_street_address('400'))
     assert_nil(Geocoder.find_potential_street_address('1500000000'))
     assert_nil(Geocoder.find_potential_street_address('1500000001230b'))
     assert_nil(Geocoder.find_potential_street_address('1_Counter'))
     assert_nil(Geocoder.find_potential_street_address(nil))
     assert_nil(Geocoder.find_potential_street_address(''))
+    assert_nil(Geocoder.find_potential_street_address('2019 Dance Party Example'))
   end
 
   def test_with_errors
@@ -112,5 +112,21 @@ class GeocoderTest < Minitest::Test
     # This search resulted in a null context being returned in production
     location = Geocoder.search('Croatia').first
     assert_equal('HR', location.country_code)
+  end
+
+  def test_localhost_lookup
+    # Verify localhost lookups result in the same behavior as FreeGeoIP service for backwards compatibility
+    # https://github.com/alexreisner/geocoder/blob/350cf0cc6a158d510aec3d91594d9b5718f877a9/lib/geocoder/lookups/freegeoip.rb#L41-L54
+    location = Geocoder.search("127.0.0.1").first
+    assert_equal("127.0.0.1", location.ip)
+    assert_equal("RD", location.country_code)
+    assert_equal("Reserved", location.country)
+    assert_equal("0", location.latitude)
+    assert_equal("0", location.longitude)
+  end
+
+  def test_freegeoip_overrides
+    # Our self-hosted FreeGeoIP service only supports HTTP
+    assert_equal([:http], Geocoder::Lookup::Freegeoip.new.supported_protocols)
   end
 end

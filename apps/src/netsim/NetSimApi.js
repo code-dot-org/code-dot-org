@@ -150,11 +150,8 @@ var tableApi = {
    * Remove multiple rows at once.
    * @param {number[]} ids - The row IDs to remove.
    * @param {NodeStyleCallback} callback - Expected result is TRUE.
-   * @param {boolean} [async] default TRUE.
    */
-  deleteRows: function(ids, callback, async) {
-    async = async !== false; // `undefined` maps to true
-
+  deleteRows: function(ids, callback) {
     // Generate query string in the form "id[]=1&id[]=2&..."
     var queryString = ids
       .map(function(id) {
@@ -165,8 +162,7 @@ var tableApi = {
     $.ajax({
       url: this.baseUrl + '?' + queryString,
       type: 'delete',
-      dataType: 'json',
-      async: async
+      dataType: 'json'
     })
       .done(function(data, text) {
         callback(null, true);
@@ -174,6 +170,39 @@ var tableApi = {
       .fail(function(request, status, error) {
         callback(new NetSimApiError(request), false);
       });
+  },
+
+  /**
+   * Remove multiple rows at once while user is navigating away from the page.
+   * Uses the fetch API for its 'keepalive' property as browsers have deprecated
+   * synchronous calls during unload events: https://www.chromestatus.com/feature/4664843055398912
+   * @param {number[]} ids - The row IDs to remove.
+   * @param {NodeStyleCallback} callback - Expected result is TRUE.
+   */
+  deleteRowsOnUnload: function(ids, callback) {
+    // Generate query string in the form "id[]=1&id[]=2&..."
+    var queryString = ids
+      .map(function(id) {
+        return 'id[]=' + id;
+      })
+      .join('&');
+
+    /**
+     * Caveat: This request may be cancelled in IE. We use whatwg-fetch as a polyfill
+     * for the fetch API, which doesn't support the 'keepalive' property. This is still
+     * an improvement because currently rows aren't deleted at all when a user navigates
+     * away from the page.
+     */
+    fetch(this.baseUrl + '?' + queryString, {
+      method: 'DELETE',
+      keepalive: true
+    }).then(response => {
+      if (response.ok) {
+        callback(null, true);
+      } else {
+        callback(new NetSimApiError(response), false);
+      }
+    });
   },
 
   /**

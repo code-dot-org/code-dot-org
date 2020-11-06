@@ -35,6 +35,12 @@
       = hoc_s(:hoc2020_header_with_line_break_markdown, markdown: true)
     .hero-sub-message
       = hoc_s(:codeorg_homepage_hoc2018_header_line1)
+  - elsif show_single_hero == "codebytes2020"
+    .hero-message-codebytes
+      Join us during this year's
+      %a{href: resolve_url('hourofcode/overview')} Hour of Code
+      for our live CodeBytes interactive mini-lessons! If your classroom has gone virtual, CodeBytes is a
+      fun and easy way to learn!
   .action_buttons
     - actions.each do |entry|
       - if ["cta_button", "cta_button_solid_white", "cta_button_hollow_white", "cta_button_solid_yellow"].include? entry[:type]
@@ -175,6 +181,11 @@
               %h3{style: "font-weight: 900; color:#191919; margin-top: 10px; margin-bottom: 6px;"} Bret Taylor
 
         %div{style: "clear:both;"}
+  - elsif show_single_hero == "codebytes2020"
+    %div
+      %img.codebytes-img{src: "/images/homepage/codebytes2020_foreground.png"}
+    #actions
+      = main_actions
 
   - elsif show_single_hero
     #actions

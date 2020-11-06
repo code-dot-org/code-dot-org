@@ -142,15 +142,8 @@ class LabelEvents extends React.Component {
 
   getClickEventCode() {
     const id = elementUtils.getId(this.props.element);
-    const code =
-      'onEvent("' +
-      id +
-      '", "click", function(event) {\n' +
-      '  console.log("' +
-      id +
-      ' clicked!");\n' +
-      '});\n';
-    return code;
+    const callback = `function( ) {\n\tconsole.log("${id} clicked!");\n}`;
+    return `onEvent("${id}", "click", ${callback});`;
   }
 
   insertClick = () => {
