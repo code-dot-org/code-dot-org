@@ -510,6 +510,7 @@ uk:
       щоб бути в курсі успіхів і проектів дитини. Ви також зможете скористуватися
       цією електронною поштою для відновлення пароля.
     parent_guardian_email_label: Електронна пошта батьків/опікуна
+    remove_parent_email_label: Видалити
     none: Немає
     only_one_parent_email_supported_warning: Примітка. Наразі ми можемо зареєструвати
       лише одну електронну пошту батьків/опікуна на один обліковий запис учня.
@@ -1171,11 +1172,19 @@ uk:
         math: Математика
         science: Природничі науки
         la: Мови
+        music: Музика
+        art: Мистецтво
+        other: 'Інше:'
       resources:
+        bootstrap: Bootstrap
+        codecademy: CodeCademy
+        khan: Khan Academy
         kodable: Kodable
         lightbot: Світлячок
+        other: 'Інше:'
       robotics:
         kodable: Kodable
+        other: 'Інше:'
       workshop_course:
         csp: "'16-'17 принципи інформатики"
       email_opt_in:

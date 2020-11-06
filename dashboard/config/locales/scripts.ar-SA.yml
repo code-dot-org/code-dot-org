@@ -11,7 +11,7 @@ ar:
         csf_2019_category_name: أساسيات علوم الكمبيوتر (2019)
         csf_international_category_name: أساسيات علوم الكمبيوتر دوليًا
         csf2_draft_category_name: 'قيد التطوير: الدورتان "أ" - "و"'
-        csp_category_name: 'مبادئ علوم الكمبيوتر ''15-''16 '
+        csp_category_name: مبادئ علوم الكمبيوتر '15-'16
         csp_2018_category_name: مبادئ علوم الكمبيوتر (2018-2019)
         csp_2019_category_name: مبادئ علوم الكمبيوتر (2019 - 2020)
         cspexams_category_name: اختبار التدرب على دورة مبادئ علوم الكمبيوتر
@@ -20,6 +20,7 @@ ar:
         hoc_category_name: ساعة البرمجة
         math_category_name: العمليات الحسابية
         research_studies_category_name: دراسات بحثية
+        other_category_name: الأخرى
       name:
         course1:
           title: الدرس الأول

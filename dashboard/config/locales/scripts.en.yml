@@ -1222,6 +1222,8 @@ en:
               name: Contained Levels
             ML Fish:
               name: ML Fish
+            AI Lab:
+              name: AI Lab
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: 'Phase 2 Online: Blended Summer Study'
@@ -4825,7 +4827,7 @@ en:
           title: Unit 5 Online Professional Learning Course
           description_audience: ''
           description_short: Teacher Professional Learning Course for CSP Unit 5
-          description: This is a set of online supports arranged into a Professional Learning Course for CSP teachers preparing to teach Unit 5.
+          description: "####  **This course is associated with a version of the course that is no longer supported.  Please visit our Courses Overview page (https://studio.code.org/courses) to see our most current curricula.**\r\n\r\nThis is a set of online supports arranged into a Professional Learning Course for CSP teachers preparing to teach Unit 5."
           lesson_groups:
             required:
               display_name: Overview
@@ -18261,6 +18263,10 @@ en:
               name: USE Programs (AppLab Only)
             MODIFY Programs:
               name: MODIFY Programs (AppLab -> Widget -> AppLab)
+            Does Code.org Like Your Dog?:
+              name: Does Code.org Like Your Dog?
+            dog:
+              name: Does Code.org Like Your Dog?
           lesson_groups: {}
           title: Ml/AI Unit - CSD
           description_audience: ''
@@ -18269,7 +18275,7 @@ en:
         outbreak:
           lessons:
             Virus Simulation for Code Bytes:
-              name: Simulating a Virus
+              name: Coding a Simulation
           lesson_groups:
             outbreak:
               display_name: Outbreak Simulation
@@ -18277,3 +18283,12 @@ en:
           description_audience: ''
           description_short: 'Use Sprite Lab to program a simulation out of a virus outbreak. '
           description: 'Use Sprite Lab to program a simulation out of a virus outbreak. '
+        apps-for-good:
+          lessons:
+            Build an App for Good:
+              name: Build an App for Good
+          lesson_groups: {}
+          title: Apps for Good
+          description_audience: ''
+          description_short: ''
+          description: ''

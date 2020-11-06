@@ -146,6 +146,40 @@ body.modal-open .supreme-container{
   line-height: 32px;
 }
 
+#homepage .hero-message-codebytes a {
+  font-family: 'Gotham 5r', sans-serif !important;
+}
+
+.codebytes-img {
+  width: 750px;
+  max-width: 90%;
+  margin: auto;
+  display: block;
+}
+
+#homepage .hero-message-codebytes {
+  color: #4d575f;
+  clear: both;
+}
+
+@media screen and (min-width: 601px) {
+  #homepage .hero-message-codebytes {
+    margin: 15px auto 15px auto;
+    font-size: 24px;
+    line-height: 32px;
+    width: 750px;
+    max-width: 90%;
+  }
+}
+
+@media screen and (min-width: 0px) and (max-width: 600px) {
+  #homepage .hero-message-codebytes {
+    margin: 0 auto 30px auto;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
 @media screen and (min-width: 0px) and (max-width: 600px) {
   #homepage .hero-sub-message {
     margin-bottom: 80px;

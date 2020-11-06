@@ -20,6 +20,7 @@ de:
         hoc_category_name: Hour of Code
         math_category_name: Mathematik
         research_studies_category_name: Forschung
+        other_category_name: Andere
       name:
         course1:
           title: Kurs 1
@@ -26918,3 +26919,10 @@ de:
             CS Discoveries:
               name: CS Entdeckungen
           description: "[empty string]"
+        virustest:
+          description_audience: "[empty string]"
+          description: "[empty string]"
+        ml-playground:
+          description_audience: "[empty string]"
+        outbreak:
+          description_audience: "[empty string]"

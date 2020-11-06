@@ -3711,7 +3711,7 @@
           "courseC_artist_loops1a_b": "使用此模块来绘制贴纸！\n\n<xml>\n<block type=\"sticker\">\n    <title name=\"VALUE\">Bird</title>\n  </block>\n</xml>"
         },
         "courseC_artist_loops1a_2019": {
-          "courseC_artist_loops1a_a": "这是您将需要的第一个模块：\n\n<xml>\n  <block type=\"jump_to\">\n    <title name=\"VALUE\">13</title>\n  </block>\n</xml>",
+          "courseC_artist_loops1a_a": "这是您将需要的第一个模块：\n\n<xml>\n<block type=\"jump_to_xy\">\n<title name=\"XPOS\">200</title>\n<title name=\"YPOS\">200</title>\n</block>\n</xml>",
           "courseC_artist_loops1a_b": "使用此模块来绘制贴纸！\n\n<xml>\n<block type=\"sticker\">\n    <title name=\"VALUE\">Bird</title>\n  </block>\n</xml>"
         },
         "courseC_artist_loops1a_2020": {
@@ -3763,7 +3763,7 @@
           "courseC_artist_loops4a_a": "使用此模块向前跳转：\n\n<xml>\n<block type=\"jump_by_constant\">\n    <title name=\"DIR\">jumpForward</title>\n    <title name=\"VALUE\">100</title>\n  </block>\n</xml>\n\n不要忘记更改跳多远！"
         },
         "courseC_artist_loops4a_2019": {
-          "courseC_artist_loops4a_a": "使用此模块向前跳转：\n\n<xml>\n<block type=\"jump_by_constant\">\n    <title name=\"DIR\">jumpForward</title>\n    <title name=\"VALUE\">???</title>\n  </block>\n</xml>\n\n不要忘记更改跳多远！",
+          "courseC_artist_loops4a_a": "使用此模块向前跳转：\n\n<xml>\n<block type=\"jump_by_constant\">\n<title name=\"DIR\">jumpForward</title>\n<title name=\"VALUE\">100</title>\n</block>\n</xml>\n\n不要忘记更改跳多远！",
           "courseC_artist_loops4a_b": "你的程序应该类似于这个！\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">???</title>\n        <statement name=\"DO\">\n          <block type=\"jump_to\">\n            <title name=\"VALUE\">13</title>\n            <next>\n              <block type=\"draw_turn_by_constant_dropdown\">\n                <title name=\"DIR\">???</title>\n                <title name=\"VALUE\" config=\"1,2,5,10,12,20,30,45,60,90,120,180\">???</title>\n                <next>\n                  <block type=\"sticker\">\n                    <title name=\"VALUE\">Cat</title>\n                    <next>\n                      <block type=\"jump_by_constant\">\n                        <title name=\"DIR\">jumpForward</title>\n                        <title name=\"VALUE\">???</title>\n                        <next>\n                          <block type=\"sticker\">\n                            <title name=\"VALUE\">Dog</title>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseC_artist_loops4a_2020": {
@@ -3793,7 +3793,7 @@
         "courseC_artist_loops5b_2019": {
           "courseC_artist_loops5b_a": "使用此模块设置线条的图案：\n\n<xml>\n<block type=\"draw_line_style_pattern\">\n    <title name=\"VALUE\">DEFAULT</title>\n  </block>\n</xml>",
           "courseC_artist_loops5b_b": "要制作和上面类似设计, 向后移动与向前移动必须是相同的数量。",
-          "courseC_artist_loops5b_c": "你的程序应该类似于这个！\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"draw_line_style_pattern\">\n        <title name=\"VALUE\">rainbowLine</title>\n        <next>\n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">4</title>\n            <statement name=\"DO\">\n              <block type=\"jump_to\">\n                <title name=\"VALUE\">13</title>\n                <next>\n                  <block type=\"draw_move_by_constant\">\n                    <title name=\"DIR\">moveForward</title>\n                    <title name=\"VALUE\">???</title>\n                    <next>\n                      <block type=\"draw_move_by_constant\">\n                        <title name=\"DIR\">moveBackward</title>\n                        <title name=\"VALUE\">???</title>\n                        <next>\n                          <block type=\"draw_turn_by_constant_dropdown\">\n                            <title name=\"DIR\">???</title>\n                            <title name=\"VALUE\" config=\"1,2,5,10,12,20,30,45,60,90,120,180\">???</title>\n                            <next>\n                              <block type=\"sticker\">\n                                <title name=\"VALUE\">Cat</title>\n                                <next>\n                                  <block type=\"jump_by_constant\">\n                                    <title name=\"DIR\">jumpForward</title>\n                                    <title name=\"VALUE\">???</title>\n                                    <next>\n                                      <block type=\"sticker\">\n                                        <title name=\"VALUE\">Dog</title>\n                                      </block>\n                                    </next>\n                                  </block>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "courseC_artist_loops5b_c": "你的程序应该类似于这个！\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"draw_line_style_pattern\">\n<title name=\"VALUE\">彩虹条</title>\n<next>\n<block type=\"controls_repeat\">\n<title name=\"TIMES\">4</title>\n<statement name=\"DO\">\n<block type=\"jump_to\">\n<title name=\"VALUE\">13</title>\n<next>\n<block type=\"draw_move_by_constant\">\n<title name=\"DIR\">向前移动</title>\n<title name=\"VALUE\">???</title>\n<next>\n<block type=\"draw_move_by_constant\">\n<title name=\"DIR\">向后移动</title>\n<title name=\"VALUE\">???</title>\n<next>\n<block type=\"draw_turn_by_constant_dropdown\">\n<title name=\"DIR\">???</title>\n<title name=\"VALUE\" config=\"1,2,5,10,12,20,30,45,60,90,120,180\">???</title>\n<next>\n<block type=\"sticker\">\n<title name=\"VALUE\">猫</title>\n<next>\n<block type=\"jump_by_constant\">\n<title name=\"DIR\">向前跳</title>\n<title name=\"VALUE\">???</title>\n<next>\n<block type=\"sticker\">\n<title name=\"VALUE\">狗</title>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</statement>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseC_artist_loops5b_2020": {
           "courseC_artist_loops5b_a": "使用此模块设置线条的图案：\n\n<xml>\n<block type=\"draw_line_style_pattern\">\n    <title name=\"VALUE\">DEFAULT</title>\n  </block>\n</xml>",
@@ -3857,8 +3857,8 @@
           "courseC_artist_loopsPrePre1a_b": "要向前移动50像素, 请使用以下模块：\n\n<xml><block type=\"draw_move_by_constant\">\n    <title name=\"DIR\">moveForward</title>\n    <title name=\"VALUE\">50</title>\n  </block></xml>"
         },
         "courseC_artist_prog2": {
-          "courseC_artist_prog2_a": "如果使用模块让我 '前进 100 像素'，我会自动画一条线。",
-          "courseC_artist_prog2_b": "怎么才能转弯呢？使用 '向右转 90 度' 模块。"
+          "courseC_artist_prog2_a": "如果使用模块让我 '前进  <xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">moveForward</title><title name=\"VALUE\">100</title></block></xml> 像素'，我会自动画一条线。",
+          "courseC_artist_prog2_b": "怎么才能转弯呢？使用 '向右转  <xml><block type=\"draw_turn_by_constant_dropdown\"><title name=\"DIR\">turnRight</title><title name=\"VALUE\" config=\"45,60,90,120,180\">90</title></block></xml> 度' 模块。"
         },
         "courseC_artist_prog2_2018": {
           "courseC_artist_prog2_a": "如果使用模块让我 '前进  <xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">moveForward</title><title name=\"VALUE\">100</title></block></xml> 像素'，我会自动画一条线。",
@@ -8735,6 +8735,25 @@
         "iceage_warn_ice_age": {
           "iceage_warn_ice_age_a": "您只需要在需要的地方添加两个模块来过关。 ",
           "iceage_warn_ice_age_b": "在 \"当运行时\" 事件下添加两个新模块, 使其在程序启动后立即运行。"
+        },
+        "courseC_video_angles": {
+          "courseD_scrat_programming6_a": "有两种方法来解决这个难题 ！",
+          "courseD_scrat_programming6_b": "记住在移动前先转向, 因为斯奎特朝着错误的方向。",
+          "courseD_scrat_programming6_c": "不要害怕犯错误! 即使你不认为你已经解决了这个关卡，尝试添加模块并运行代码, 看看会发生什么,。"
+        },
+        "courseD_video_nestedLoopsArtist": {
+          "courseE_artist_ramp8_a": "若要绘制一条边，使用`向前移动100像素`模块，并将100更改为200。",
+          "courseE_artist_ramp8_b": "若要绘制4条边，请将`向前移动100像素`模块放在重复循环里面，并确保该循环设置为4次。然后别忘了转向！",
+          "courseE_artist_ramp8_c": "你的循环应该有两个模块在里面：`向前移动`和`向右转90度`。",
+          "courseD_artist_ramp12_a": "这和正方形有什么相似之处？ 又有什么不同？",
+          "courseD_artist_ramp12_b": "您可以使用`转向`模块的下拉菜单来查看所需的角度!",
+          "courseD_artist_ramp12_c": "若要绘制每条边，需要向前移动100像素，然后向右转120度。你需要几条边？"
+        },
+        "courseE_bee_ramp14": {
+          "courseE_farmer_ramp12d_b": "你仍然需要把你的`直到`和`当`循环放到`重复`循环中来通过这个关卡!"
+        },
+        "courseE_farmer_predict2": {
+          "courseE_farmer_ramp12e_b": "这个关卡的解决方案看起来很像最后一个关卡的解决方案, 除了转向了另一个方向。"
         }
       }
     }

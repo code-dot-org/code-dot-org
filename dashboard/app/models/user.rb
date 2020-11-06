@@ -147,7 +147,7 @@ class User < ActiveRecord::Base
 
   # courses a facilitator is able to teach
   has_many :courses_as_facilitator,
-    class_name: Pd::CourseFacilitator,
+    class_name: 'Pd::CourseFacilitator',
     foreign_key: :facilitator_id,
     dependent: :destroy
 
@@ -192,7 +192,7 @@ class User < ActiveRecord::Base
   accepts_nested_attributes_for :school_info, reject_if: :preprocess_school_info
 
   has_many :user_school_infos
-  after_save :update_and_add_users_school_infos, if: :school_info_id_changed?
+  after_save :update_and_add_users_school_infos, if: :saved_change_to_school_info_id?
   validate :complete_school_info, if: :school_info_id_changed?, unless: proc {|u| u.purged_at.present?}
 
   has_one :circuit_playground_discount_application
@@ -432,8 +432,8 @@ class User < ActiveRecord::Base
   USERNAME_REGEX = /\A#{UserHelpers::USERNAME_ALLOWED_CHARACTERS.source}+\z/i
   validates_length_of :username, within: 5..20, allow_blank: true
   validates_format_of :username, with: USERNAME_REGEX, on: :create, allow_blank: true
-  validates_uniqueness_of :username, allow_blank: true, case_sensitive: false, on: :create, if: 'errors.blank?'
-  validates_uniqueness_of :username, case_sensitive: false, on: :update, if: 'errors.blank? && username_changed?'
+  validates_uniqueness_of :username, allow_blank: true, case_sensitive: false, on: :create, if: -> {errors.blank?}
+  validates_uniqueness_of :username, case_sensitive: false, on: :update, if: -> {errors.blank? && username_changed?}
   validates_presence_of :username, if: :username_required?
   before_validation :generate_username, on: :create
 
@@ -441,7 +441,7 @@ class User < ActiveRecord::Base
   validates_confirmation_of :password, if: :password_required?
   validates_length_of       :password, within: 6..128, allow_blank: true
 
-  validate :email_matches_for_oauth_upgrade, if: 'oauth? && user_type_changed?', on: :update
+  validate :email_matches_for_oauth_upgrade, if: -> {oauth? && user_type_changed?}, on: :update
 
   def email_matches_for_oauth_upgrade
     if user_type == User::TYPE_TEACHER
@@ -646,7 +646,7 @@ class User < ActiveRecord::Base
       :email_or_hashed_email_required?, on: :create
   validates :email, no_utf8mb4: true
   validates_email_format_of :email, allow_blank: true, if: :email_changed?, unless: -> {email.to_s.utf8mb4?}
-  validate :email_and_hashed_email_must_be_unique, if: 'email_changed? || hashed_email_changed?'
+  validate :email_and_hashed_email_must_be_unique, if: -> {email_changed? || hashed_email_changed?}
   validate :presence_of_hashed_email_or_parent_email, if: :requires_email?
 
   def requires_email?

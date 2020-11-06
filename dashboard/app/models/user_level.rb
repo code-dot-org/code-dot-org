@@ -115,7 +115,7 @@ class UserLevel < ActiveRecord::Base
   end
 
   def submitted_or_resubmitted?
-    submitted_changed?(to: true) || (submitted? && level_source_id_changed?)
+    saved_change_to_submitted?(to: true) || (submitted? && saved_change_to_level_source_id?)
   end
 
   def after_submit

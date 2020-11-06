@@ -159,6 +159,43 @@ class LessonTest < ActiveSupport::TestCase
     assert_equal 'Lesson1', summary[:key]
   end
 
+  test 'can summarize lesson for lesson plan' do
+    script = create :script
+    lesson_group = create :lesson_group, script: script
+    lesson = create(
+      :lesson,
+      lesson_group: lesson_group,
+      script: script,
+      name: 'Lesson 1',
+      key: 'lesson-1',
+      relative_position: 1,
+      absolute_position: 1,
+      properties: {
+        overview: 'lesson overview',
+        purpose: 'learning',
+        preparation: 'do things'
+      }
+    )
+
+    summary = lesson.summarize_for_lesson_show(@student)
+    assert_equal 'lesson-1', summary[:key]
+    assert_equal 'lesson overview', summary[:overview]
+    assert_equal 'learning', summary[:purpose]
+    assert_equal 'do things', summary[:preparation]
+    assert_equal script.summarize_for_lesson_show, summary[:unit]
+  end
+
+  test 'can summarize lesson for lesson plan dropdown' do
+    script = create :script
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, lesson_group: lesson_group, script: script, name: 'Lesson 1', key: 'lesson-1', relative_position: 1, absolute_position: 1
+
+    summary = lesson.summarize_for_lesson_dropdown
+    assert_equal 'lesson-1', summary[:key]
+    assert_equal "/lessons/#{lesson.id}", summary[:link]
+    assert_equal 1, summary[:position]
+  end
+
   test 'raises error when creating invalid lockable lessons' do
     script = create :script
     lesson_group = create :lesson_group, script: script
@@ -473,6 +510,14 @@ class LessonTest < ActiveSupport::TestCase
     assert_queries(2) do
       assert_equal [], lesson1.related_lessons
     end
+  end
+
+  test 'verified teacher resources are only return if user is verified' do
+    lesson = create :lesson
+    create :resource, name: 'teacher resource', audience: 'Teacher', lessons: [lesson]
+    create :resource, name: 'verified teacher resource', audience: 'Verified Teacher', lessons: [lesson]
+    assert_equal 2, lesson.resources_for_lesson_plan(true)['Teacher'].count
+    assert_equal 1, lesson.resources_for_lesson_plan(false)['Teacher'].count
   end
 
   def create_swapped_lockable_lesson

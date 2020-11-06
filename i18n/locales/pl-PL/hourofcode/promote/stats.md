@@ -38,7 +38,7 @@ Technologia zmienia każdą branżę na świecie. W 2015 r. było w USA 7 milion
 
 #### O Code.org
 
-Code.org is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by young women and students from other underrepresented groups. Jego wizja polega na tym, że każdy uczeń w każdej szkole ma możliwość nauki programowania komputerów. Po uruchomieniu w 2013, Code.org zainicjowała Godzinę Kodowania, która do dzisiaj stała się wprowadzeniem do informatyki dla ponad 100 milionów uczniów, współpracując z 70 okręgami szkół publicznych w USA, aby rozwijać programy zajęć informatycznych. Organizacja Code.org jest wspierana przez dobroczynne darowizny od korporacji, fundacji i hojnych osób, w tym Microsoft, Facebook, Infosys Foundation, USA, Amazon i inne. Aby uzyskać więcej informacji, odwiedź [code.org]({{ codeorg_link }}).
+Code.org to publiczna organizacja non-profit 501c3, której celem jest poszerzanie udziału w informatyce oraz zwiększanie udziału młodych kobiet i uczniów z innych, niedostatecznie reprezentowanych grup. Jego wizja polega na tym, że każdy uczeń w każdej szkole ma możliwość nauki programowania komputerów. Po uruchomieniu w 2013, Code.org zainicjowała Godzinę Kodowania, która do dzisiaj stała się wprowadzeniem do informatyki dla ponad 100 milionów uczniów, współpracując z 70 okręgami szkół publicznych w USA, aby rozwijać programy zajęć informatycznych. Organizacja Code.org jest wspierana przez dobroczynne darowizny od korporacji, fundacji i hojnych osób, w tym Microsoft, Facebook, Infosys Foundation, USA, Amazon i inne. Aby uzyskać więcej informacji, odwiedź [code.org]({{ codeorg_link }}).
 
 ## Udostępnij je w mediach społecznościowych i w przekazach e-mail
 

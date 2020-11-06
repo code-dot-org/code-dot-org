@@ -10,62 +10,63 @@ title: 가상 이벤트를 위한 아워오브코드 하우 투 가이드
 
 ***
 
-아워오브코드는 전통적으로 교실에서 열리지만 재미를 즐기기 위해 꼭 그곳에 직접 갈 필욘느 없습니다. 다음의 추천사항으로 학생들을 위한 인터랙티브하고 영감을 주는 아워오브코드를 멀리서도 주최할 수 있습니다.  여전히 질문이 있으시면아 <a href="https://hourofcode.com/files/participation-guide-virtual.pdf">가상 이벤트 가이드</a>를 살펴보십시오.
+아워오브코드는 흔히 교실에서 열리지만 재미를 즐기기 위해 꼭 그 곳에 직접 갈 필요는 없습니다. 다음의 추천사항으로 학생들을 위한 인터랙티브하고 영감을 주는 아워오브코드를 원격으로도 주최할 수 있습니다.  질문이 있으시면 <a href="https://hourofcode.com/files/participation-guide-virtual.pdf">가상 이벤트 가이드</a>를 살펴보십시오.
 
 <br><br>
 
 [<img src="/images/fit-600/Marketing/pexels-andrea-piacquadio-3762940.jpg" />]({{ urls/learn }})
 
 ## 떨어져 있을 수 있지만 여전히 함께 시작할 수 있습니다.
-Even if you plan for students to complete their activities independently, we recommend starting your event with a virtual kick-off online to get participants excited. There are several interesting ways you can start your event: 
+학생이 누구의 도움도 없이 독립적으로 활동을 완료하도록 계획했더라도, 참가자들이 더 재미있어 하도록 온라인 가상 개회식으로 이벤트를 시작할 것을 권장합니다.  이벤트를 시작하는 몇 가지 흥미로운 방법이 있습니다. 
 
 <ul>
-<li><b>Invite a guest speaker</b>: Thousands of volunteers from all backgrounds are waiting to hear from you! Simply use our <a href="https://code.org/volunteer/local">volunteer map</a> to search for them. With a virtual Hour of Code, you’re not limited by distance so if needed, consider searching outside of your zip code for volunteers that are offering to help remotely. Once you’ve connected with a volunteer, you can reference the <a href="http://hourofcode.com/us/how-to/volunteers">Hour of Code Volunteer How-To</a> as a guide for determining potential topics, discussion questions, and more.</li> 
-<li><b>Show an inspirational video</b>: Another reliable option to start your event, is showing participants one of our many <a href="http://hourofcode.com/us/promote/resources#videos">inspirational videos</a>. Many videos are less than 5 minutes long and feature inspiration and encouragement from celebrities your students will recognize.</li> 
-<li><b>Discuss computer science for good</b>: Turn your Hour of Code event into a deeper understanding of computer science by considering the impact of technology on our everyday lives. Ask students guiding questions and turn the beginning of your event into an interactive discussion. For ideas on how to get the conversation started, check out these <a href="https://code.org/csforgood#prompts">discussion questions</a>.</li>
+<li><b>초청 강연자 초대</b>: 다양한 배경을 가진 수 천명의 자원봉사자들이 여러분의 초대를 기다리고 있습니다! <a href="https://code.org/volunteer/local">자원봉사자 맵</a>을 이용하여 검색하기만 하면 됩니다. 가상 아워오브코드인 경우, 거리에 구애를 받지 않으므로, 필요할 경우 원격으로 도움을 제공하는 자원봉사자를 검색해 보십시오. 자원봉사자와 연결되면, <a href="http://hourofcode.com/us/how-to/volunteers">아워오브코드 자원봉사자 안내</a>를 참조하여 잠재적 주제, 토론 질문 등을 결정할 수 있습니다.</li> 
+<li><b>영감을 주는 동영상을 보여주세요</b>: 이벤트를 시작하는 또 다른 신뢰할 수 있는 옵션은 참가자들에게 저희의 수 많은 <a href="http://hourofcode.com/us/promote/resources#videos">영감을 주는 동영상</a> 중 하나를 보여주는 것입니다. 동영상 상영시간은 5분 미만이며 학생들이 알고 있는 유명인들의 격려 및 동기 부여가 되는 말을 담고 있습니다.</li> 
+<li><b>컴퓨터 과학에 대해 토론</b>: 테크놀로지가 우리의 일상에 미치는 영향을 생각함으로써 아워오브코드 이벤트를 컴퓨터 과학에 대한 심도 깊은 이해의 시간으로 바꾸세요. 학생들에게 질문을 하고 이벤트를 상호 교류하는 토론으로 시작하세요. 대화를 시작하는 방법에 대한 아이디어는 <a href="https://code.org/csforgood#prompts">토론 질문</a>을 확인하세요.</li>
 </ul>
 
 ---
 
-## What to prepare ahead of time
+## 미리 준비할 것
 
-### 1. Determine your video conferencing platform
-Chances are you’re probably familiar with platforms like Cisco Webex, Google Meet, Microsoft Teams, Skype, or Zoom by now. Whichever tool you prefer, we just encourage you to familiarize yourself, test out it’s capabilities, and run through your Hour of Code agenda prior to your event date.
+### 1. 화상 회의 플랫폼 결정
+Cisco Webex, Google Meet, Microsoft Teams, Skype 또는 Zoom 등과 같은 플랫폼에 아마도 익숙하실 수도 있습니다. 어떠한 도구를 선호하시든, 이벤트 날짜 이전에 익숙해질 수 있도록 다뤄 보시고, 도구의 성능을 테스트해보고, 아워오브코드 안건을 실행시켜 보십시오.
 
 [<img src="/images/fit-600/Marketing/photo-of-boy-video-calling-with-a-woman-4145197.jpg" />]({{ urls/learn }})
 
-### 2. Plan how students will participate
-**Self-led Hour of Code activity**<br> We recommend that after your kickoff, you allow students to leave the video conference to work through their <a href="https://hourofcode.com/us/learn">Hour of Code activities</a> on their own rather than live together. This will allow students to immerse themselves in their own projects and gain a stronger understanding of the CS concepts. It will also minimize the distraction and obstacle of having to have a video conference window open.
+### 2. 학생들의 참여 방법 계획
+**자기 주도형 아워오브코드 활동**<br> 일단 시작한 후에 학생들에게 화상 회의에서 나가게 한 다음, 함께 라이브로진행하는 것보다 <a href="https://hourofcode.com/us/learn">아워오브코드 활동</a>을 스스로 해보는 시간을 갖게 해주십시오. 이렇게 하면 학생들이 자기 자신의 프로젝트에 몰입하게 되고 CS 개념에 대해 더 깊이 이해하게 됩니다. 또한 화상 회의 창이 열려 있는 동안 주의가 산만해지거나 장애가 발생하는 일을 최소화할 수 있습니다.
 
-It may be helpful for you to determine 1-3 tutorial options for them to choose from ahead of time. This allows you to choose activities that are best suited for their grade level. Plus, if students have questions that require your assistance you’ll be better prepared to help if you’re already familiar with the tutorials they’re working on.
+미리 1-3가지의 튜토리얼 옵션을 준비하여 학생들이 선택하게 하는 것도 도움이 될 수 있습니다. 이렇게 하면 학생의 학년 수준에 가장 적합한 활동을 선택할 수 있습니다. 또한, 만약 학생이 도움을 필요로 하는 질문을 갖고 있다면 학생이 공부할 튜토리얼을 미리 숙지함으로써 학생을 더욱 잘 도울 수 있게 준비할 수 있습니다.
 
-If your class is expected to do their activity immediately after kickoff, you might consider keeping a virtual conference room, chat platform, or other means of communication open so they can reconnect with you with questions as needed.
+귀하의 학급이 개시 후 바로 활동에 들어 갈것이라 예상하면, 가상 회의방, 채팅 플랫폼 또는 기타 통신 수단을 계속 열어 놓아 학생들이 질문할 때마다 귀하와 다시 연결할 수 있게 할 수도 있습니다.
 
-**Hour of Code activity together online**<br> If you prefer to keep your participants on the same video call for the duration of your event, please note that they’ll need to have two windows open at all times - one for the video conferencing platform, and the other for students to work on their activity.
+**온라인으로 함께 아워오브코드 활동하기**<br> 이벤트 중에 참가자들과 동일한 비디오 콜에 있기를 원하면, 참가자들이 항상 두 개의 창을 열어 놓아야 한다는 점에 유의하십시오. 하나는 화상 회의 플랫폼이고 다른 하나는 활동을 하기 위한 창입니다.
 
-**With parents**<br> For students that are Grade 4 and below, consider encouraging their parents to host an Hour of Code at home. You can support them with some recommended tutorials as well as this helpful <a href="https://hourofcode.com/us/how-to/parents">How-To for Parents</a>.
+**학부모와 함께**<br> 4학년 이하인 학생의 경우, 학부모에게 아워오브코드를 집에서 하도록 권할 수도 있습니다. 일부 추천 튜토리얼 및 도움이 되는  <a href="https://hourofcode.com/us/how-to/parents">학부모를 위한 안내서</a>로 지원할 수 있습니다.
 
 [<img src="/images/fit-600/Marketing//happy-father-and-child-browsing-laptop-in-bedroom-4545778.jpg" />](https://hourofcode.com/us/how-to/parents)
 
-### 3. Enlist a volunteer
-You can find a volunteer suited to your needs by visiting our <a href="https://code.org/volunteer/local">volunteer map</a>. Many are available for remote participation and are more than willing to speak about their experience in computer science, how technology impacts their roles, or simply to help you with troubleshooting student questions. Once you find a volunteer, make sure you set up a meeting with them ahead of time to discuss their role for the event, work out technical requirements, and establish the logistics of participating online.
+### 3. 자원봉사자 모집
 
-### 4. Celebration supplies
-Take a look below for ideas on celebrating your virtual Hour of Code. Some may require you to prepare ahead of time such as creating completion <a href="https://code.org/certificates">certificates</a> for all of your participants.
+<a href="https://code.org/volunteer/local">자원봉사자 맵</a>을 방문하여 귀하의 필요에 맞는 자원봉사자를 찾을 수 있습니다. 원격 참가가 가능한 사람이 많으며 컴퓨터 과학에 대한 경험이나, 테크놀로지가 그들의 역할에 어떻게 영향을 미치는지 얘기하거나, 또는 간단히 학생들의 질문을 해결하는 것을 도와줄 것입니다.  자원봉사자를 찾으면, 미리 그들과 미팅 약속을 정하여 이벤트에서의 역할을 논의하고, 기술적 요건을 계획하며, 온라인 참여 계획을 수립하십시오.
+
+### 4. 축하 물품
+가상 아워오브코드를 기념할 아이디어에 대해 아래를 참조하십시오. 일부는 모든 참가자를 위한 <a href="https://code.org/certificates">수료증</a> 등을 미리 준비하도록 요구할 수도 있습니다.
 
 ---
 
-## Celebrate together
+## 함께 축하하세요
 
-Similar to how you started the event, come together afterwards to celebrate! Here are some ideas for making your virtual celebration interactive and special:
+이벤트를 시작하는 것과 비슷하게, 끝난 후에 다 같이 모여 축하하세요! 다음은 가상 축하를 인터랙티브하고 특별하게 만들기 위한 아이디어들입니다:
 
-- Allow students to share their completed projects with the rest of the class. If your conferencing platform allows, you can even encourage students to take a screenshot of their projects and set it as their virtual background!
-- Discuss learnings: What have they learned about computer science or technology? What did they do when they ran into a problem, how did they solve it?
-- <a href="https://code.org/certificates">Create and share certificates</a> for your participants
-- Share photos and videos of your virtual Hour of Code on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
+- 학생들이 완료한 프로젝트를 학급의 다른 학생들과 공유하도록 허용. 회의 플랫폼이 허용하면, 학생들에게 프로젝트의 스크린샷을 캡처한 다음 이것을 가상 배경으로 설정하게 할 수도 있습니다!
+- 학습내용 토론: 컴퓨터 과학 또는 기술에 대해 무엇을 배웠습니까? 학생들이 문제에 부딪혔을 때, 어떻게 해결했습니까?
+- <a href="https://code.org/certificates">참가자를 위한 수료증을 만들어 공유하세요</a>
+- 가상 아워오브코드의 사진과 비디오를 소셜 미디어에서 공유. 우리 역시 여러분의 성공을 강조할 수 있게 #HourOfCode 및 @codeorg을 사용하세요!
 
 [<img src="/images/fit-600/Marketing/g8TUlHzF.jpeg" />]({{ urls/learn }})
 
-Lastly, if you didn’t start the event with a <a href="https://code.org/volunteer/local">guest speaker</a>, <a href="https://hourofcode.com/us/promote/resources#">inspirational video</a>, or <a href="https://code.org/csforgood#prompts">discussion questions</a>, this would be another great opportunity to incorporate one of those experiences as well.
+마지막으로, 이벤트를 <a href="https://code.org/volunteer/local">초청 강연자</a>, <a href="https://hourofcode.com/us/promote/resources#">영감을 주는 동영상</a> 또는 <a href="https://code.org/csforgood#prompts">토론 질문</a>으로 시작하지 않았으면, 그와 같은 경험 중 하나를 도입할 수 있는 또 다른 좋은 기회가 될 것입니다.
 
 {{ signup_button }}

@@ -10,6 +10,7 @@ ko:
         csp17_category_name: "'16 - '17 CS 원리"
         hoc_category_name: Hour of Code
         math_category_name: 계산
+        other_category_name: 기타
       name:
         course1:
           title: 과정1

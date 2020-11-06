@@ -1,0 +1,35 @@
+name 'VPL - CSD - Module 8 - U6L6'
+editor_experiment ''
+display_name 'Introduction to Debugging'
+
+title 'Debugging Session'
+markdown <<MARKDOWN
+#Unit 6 - Lesson 6:  Getting Properties  
+**Estimated time: 20 minutes**
+
+
+
+
+## Investigation Goals
+
+**Experiment with taking input with getProperty()**
+
+## Investigation Tasks
+
+* Complete Levels 2 through 4 
+* Review Level 5 as it is a prediction level
+* Review Level 6 as it is an assessment level
+
+Click continue to begin.
+
+**Note:** Levels 5 and 6 require using a Circuit Playground.  However, if you do not have a Circuit Playground in front of you as you review these levels, read through them to know how students are expected to engage with these levels. 
+
+
+
+
+
+
+
+
+
+MARKDOWN

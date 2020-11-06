@@ -10,7 +10,7 @@ title: Guide pratique de l'Heure de Code pour les événements virtuels
 
 ***
 
-Bien que l'Heure de Code soit traditionnellement tenue dans les salles de classe, à travers le monde, vous n'avez pas besoin de vous y trouver, en personne, pour passer un bon moment ! Vous pouvez quand même animer une Heure de Code interactive, qui inspire les étudiants, à distance, en appliquant certaines de ces recommandations.  Take a look at our <a href="https://hourofcode.com/files/participation-guide-virtual.pdf">guide for virtual events</a> if you still have questions.
+Bien que l'Heure de Code soit traditionnellement tenue dans les salles de classe, à travers le monde, vous n'avez pas besoin de vous y trouver, en personne, pour passer un bon moment ! Vous pouvez quand même animer une Heure de Code interactive, qui inspire les étudiants, à distance, en appliquant certaines de ces recommandations.  Jetez un œil à notre <a href="https://hourofcode.com/files/participation-guide-virtual.pdf">guide des événement virtuels</a> si vous avez d’autres questions.
 
 <br><br>
 
@@ -64,7 +64,7 @@ Tout comme vous avez démarré l'événement, rassemblez-vous, ensuite, pour cé
 - Donnez l'opportunité aux élèves de partager leurs projets avec le reste de la classe. Si votre plate-forme de conférence le permet, vous pouvez même encourager les étudiants à effectuer une capture d'écran de leurs projets et à la définir comme arrière-plan virtuel !
 - Discutez de leur apprentissage : qu'ont-ils appris sur l'informatique ou la technologie ? Qu'ont-ils fait quand ils ont rencontré un problème ? Comment l'ont-ils résolu ?
 - <a href="https://code.org/certificates" marque="crwd-marque">Créez et partagez des certificats</a> pour vos participants
-- Partagez des photos et des vidéos de votre Heure de Code virtuelle sur les médias sociaux. Use #HourOfCode and @codeorg so we can highlight your success, too!
+- Partagez des photos et des vidéos de votre Heure de Code virtuelle sur les médias sociaux. Utilisez #HourOfCode et @codeorg pour que nous puissions souligner votre succès, également !
 
 [<img src="/images/fit-600/Marketing/g8TUlHzF.jpeg" />]({{ urls/learn }})
 

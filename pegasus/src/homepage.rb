@@ -106,6 +106,7 @@ class Homepage
 
   def self.get_actions(request)
     code_break_takeover = promote_code_break(request)
+    code_bytes_takeover = promote_code_bytes(request)
     # Show a Latin American specific video to users browsing in Spanish or
     # Portuguese to promote LATAM HOC.
     latam_language_codes = [:"es-MX", :"es-ES", :"pt-BR", :"pt-PT"]
@@ -134,6 +135,14 @@ class Homepage
         },
         {
           type: "code_break_home"
+        }
+      ]
+    elsif code_bytes_takeover
+      [
+        {
+          type: "cta_button_solid_yellow",
+          text: "homepage_action_text_join_us",
+          url: "/bytes"
         }
       ]
     elsif hoc_mode == "actual-hoc"
@@ -369,8 +378,12 @@ class Homepage
     DCDO.get("promote_code_break", nil) && request.language == "en"
   end
 
+  def self.promote_code_bytes(request)
+    DCDO.get("promote_code_bytes", nil) && request.language == "en"
+  end
+
   def self.show_single_hero(request)
-    promote_code_break(request) ? "codebreak2020" : "hoc2020"
+    promote_code_bytes(request) ? "codebytes2020" : "hoc2020"
   end
 
   def self.get_heroes_arranged(request)
@@ -386,6 +399,9 @@ class Homepage
       [{centering: "40% 80%", type: "stat", textposition: "bottom", image: "/images/homepage/blank_paper.jpg"}]
     hero_hoc2020 = [
       {text: "homepage_hero_text_stat_students", centering: "50% 80%", type: "stat", textposition: "bottom", image: "/images/homepage/hoc2020.jpg"}
+    ]
+    hero_codebytes2020 = [
+      {centering: "50% 50%", type: "stat", textposition: "bottom", image: "/images/homepage/codebytes2020_background.jpg"}
     ]
     # Generate a random set of hero images alternating between non-celeb and celeb.
     heroes = get_heroes
@@ -405,6 +421,8 @@ class Homepage
       heroes_arranged = hero_oceans2019
     elsif show_single_hero(request) == "codebreak2020"
       heroes_arranged = hero_codebreak2020
+    elsif show_single_hero(request) == "codebytes2020"
+      heroes_arranged = hero_codebytes2020
     else
       # The order alternates person & stat.  Person alternates non-celeb and
       # celeb.  Non-celeb is student or teacher. We open with a celeb, i.e.,

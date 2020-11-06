@@ -19,6 +19,7 @@ fr:
         hoc_category_name: Heure de Code
         math_category_name: Math
         research_studies_category_name: Études de Recherche
+        other_category_name: Autre
       name:
         course1:
           title: Cours 1

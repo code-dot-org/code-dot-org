@@ -22,11 +22,11 @@ Możesz wypróbować "Godziny kodowania" korzystając z komputera, tabletu, smar
 
 Istnieją niezliczone  <a href="https://hourofcode.com/us/learn"> zajęcia w ramach "Godziny kodowania"</a> dostępne dla Ciebie jeśli pracujesz na komputerze z dostępem do internetu. Zachęcamy, aby z pewnym wyprzedzeniem czasowym zerknąć na opcje tak, abyś mógł pomagać w prowadzeniu swojego dziecka w kierunku ćwiczeń, które będą im się podobać.
 
-Wszystkie nasze zajęcia obejmują zagadnienia rozwiązywania problemów i krytycznego myślenia w sposób atrakcyjny i kreatywny, a tutaj podajemy kilku faworytów uczniów:
+Wszystkie nasze zajęcia obejmują zagadnienia rozwiązywania problemów i krytycznego myślenia w sposób atrakcyjny i kreatywny, a tutaj podajemy kilka ulubionych przez uczniów:
 
 - Dla dziecka, które uwielbia się bawić: <a href="https://code.org/minecraft">Minecraft</a> lub <a href="https://code.org/dance">Potańcówka</a>
-- Dla dziecka, które uwielbia Disney'a: <a href="https://code.org/starwars">Star Wars</a>, <a href="https://studio.code.org/s/frozen/stage/1/puzzle/1">Frozen</a>, or <a href="https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C">Moana</a>
-- Dla dziecka, które uwielbia się uczyć: <a href="https://code.org/oceans">AI dla oceanów "</a> or <a href="https://scratch.mit.edu/projects/editor/?tutorial=music&utm_source=codeorg">Twórz muzykę ze Scratchem</a>
+- Dla dziecka, które uwielbia Disneya: <a href="https://code.org/starwars">Star Wars</a>, <a href="https://studio.code.org/s/frozen/stage/1/puzzle/1">Frozen</a>, or <a href="https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C">Moana</a>
+- Dla dziecka, które uwielbia się uczyć: <a href="https://code.org/oceans">AI dla oceanów "</a> lub <a href="https://scratch.mit.edu/projects/editor/?tutorial=music&utm_source=codeorg">Twórz muzykę ze Scratchem</a>
 
 <h3>Niski poziom technologii lub brak technologii?</h3>
 Jeśli będziesz korzystać z technologii w ograniczonym zakresie lub nie będziesz z niej korzystać możesz filtrować <a href="https://hourofcode.com/us/learn">zajęcia w ramach "Godziny kodowania"</a> wybierając "Brak komputerów lub innych urządzeń” w części <em>"Technologia w klasie"</em>.
@@ -36,14 +36,14 @@ Jeśli będziesz korzystać z technologii w ograniczonym zakresie lub nie będzi
 Można również obejrzeć te <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNcpfa4LtbaIl35gqir_5XUu">krótkie filmy wideo</a>, aby uzyskać więcej pomysłów jak prowadzić zajęcia w trybie "unplugged" w domu!
 
 ## 2) Przygotuj z wyprzedzeniem czasowym
-Teraz, gdy masz już w głowie nasze pewne samouczki, być może warto wypróbować te zajęcia na swoim urządzeniu zanim wprowadzicie je swoim dzieciom.
+Teraz, gdy masz już w głowie niektóre nasze samouczki, być może warto wypróbować te zajęcia na swoim urządzeniu zanim wprowadzicie je swoim dzieciom.
 
 [<img src="/images/fit-600/Marketing/father-and-children-looking-at-a-laptop-4260749.jpg" />]({{ urls/learn }})
 
 <h3>Masz w domu więcej niż jedno dziecko?</h3>
 Rozważ możliwość udostępnienia każdemu ze swoich dzieci słuchawek jeśli będą pracować na odrębnych urządzeniach. W ten sposób będziemy w stanie brać czynny udział w zajęciach z dźwiękiem nie przeszkadzając sobie wzajemnie.
 
-Jeśli będziesz korzystać tylko z jednego urządzenia lub po prostu chcesz sprawić, aby zajęcia "Godzina kodowania" były bardziej interaktywne wypróbuj <<a href="https://www.youtube.com/watch?v=vgkahOzFH2Q"> programowanie w parach</a>. Programowanie w parach zachęca dzieci do współpracy. Gdy dobierają się w pary, to pomagają sobie nawzajem w zakresie zagadnienia rozwiązywania problemów. Zobaczą także, że praca z komputerem jest działalnością zespołową i uspołeczniającą.
+Jeśli będziesz korzystać tylko z jednego urządzenia lub po prostu chcesz sprawić, aby zajęcia "Godzina kodowania" były bardziej interaktywne wypróbuj <<a href="https://www.youtube.com/watch?v=vgkahOzFH2Q"> programowanie w parach</a>. Programowanie w parach zachęca dzieci do współpracy. Gdy dobierają się w pary, to pomagają sobie nawzajem w rozwiązywania problemów. Zobaczą także, że praca z komputerem jest działalnością zespołową i uspołeczniającą.
 
 <h3>Wywołaj w dzieciach entuzjazm! </h3>
 Stanowi to świetną okazję do dodania nowego rodzaj zajęć do programu dnia Twojego dziecka. Można zwiększyć atrakcyjność wychodząc poza granice samouczka przy pomocy takich sugestii:
@@ -140,5 +140,5 @@ Na zakończenie - gdy  Twoje dziecko napotka trudności, można odpowiedzieć:
 
     
     <p spaces-before="0">
-      Informatyka nie musi kończyć się z Godziną Kodowania! Chociaż 90% rodziców chce, aby dziecko uczyło się informatyki, w większości szkół się jej nie wykłada. Nasz program nauczania ma charakter sieciowy i można z niego korzystać bezpłatnie, zawsze, aby nieść pomoc. <<a href="https://code.org/yourschool">Dowiedz się, jak </a> wprowadzić informatykę w szkole Twojego dziecka już dzisiaj.
+      Informatyka nie musi kończyć się z Godziną Kodowania! Chociaż 90% rodziców chce, aby dziecko uczyło się informatyki, w większości szkół się jej nie wykłada. Nasz program nauczania działa w Internecie i można z niego korzystać bezpłatnie, zawsze, aby nieść pomoc. <<a href="https://code.org/yourschool">Dowiedz się, jak </a> wprowadzić informatykę w szkole Twojego dziecka już dzisiaj.
     </p>

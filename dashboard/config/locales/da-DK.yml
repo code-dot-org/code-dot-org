@@ -35,8 +35,8 @@ da:
         parent_email: Forælderens eller værgens e-mailadresse
         personal_email: Personlig e-mail adresse <a href="%{url}"> (Klik her hvis
           du ikke har en e-mail-adresse)</a>
-        personal_email_markdown: Personleg epostadresse[(klikk her om du ikkje har
-          ei epostadresse)](%{url})
+        personal_email_markdown: Personlig e-mailadresse [(klik her, hvis du ikke
+          har en e-mailadresse)](%{url})
         username: brugernavn
         password: Adgangskode
         password_confirmation: Bekræft adgangskode
@@ -197,8 +197,8 @@ da:
     my_data_to_us: Data fra min brug af dette websted kan sendes til og gemmes eller
       behandles i USA.
     student_terms_markdown: E-mailadresser er ikke gemt i form af, at vi kontakter
-      studerende. Studerende vil aldrig modtage e-mails fra Code.org, bortset fra,
-      at hvis det er genopretning af adgangskoder. Se vores [fortrolighedspolitik](http://code.org/privacy)
+      eleverne. Elever vil aldrig modtage e-mails fra Code.org, bortset fra, at hvis
+      det er genopretning af adgangskoder. Se vores [privatlivspolitik](http://code.org/privacy)
       for mere information.
     additional_information: Vi har brug for nogle ekstra oplysninger til at fortsætte
       med at logge dig.
@@ -211,7 +211,7 @@ da:
     error: Der opstod en fejl.
     email_preference_question: Kan vi e-maile dig om opdateringer til vores kurser,
       lokale muligheder eller andre nyheder om computervidenskab?
-    email_preference_privacy: "(Se vores fortrolighedspolitik)"
+    email_preference_privacy: "(Se vores privatlivspolitik)"
     email_preference_yes: Ja
     email_preference_no: Nej
     email_preference_required: Du skal angive en e-mail adresse.
@@ -355,7 +355,7 @@ da:
           Du kan nu logge på din konto med dit brugernavn (%{username}) og din adgangskode
   nav:
     header:
-      finished_hoc: Jeg har afsluttet min Hour of Code
+      finished_hoc: Jeg er færdig!
       sign_in_to_save: Log ind for at gemme fremskridt
       my_dashboard: Hjem
       course_catalog: Kursuskatalog
@@ -483,7 +483,7 @@ da:
       deres sektion, før du kan slette din konto.
     delete_text_teacher_note: 'Bemærk venligst: Sletning af din konto vil ikke slette
       dine studerendes konti.'
-    delete_confirm: Sikker på, at du vil slette din konto?
+    delete_confirm: Er du sikker på, at du vil slette din konto?
     deleted_user: slettet bruger
     no_password_because_oauth: Ingen adgangskode, fordi du tilmeldte dig ved brug
       af en tredjepartsudbyder.
@@ -508,33 +508,36 @@ da:
       eg har løyve frå foreldre eller førsette til å bruke Code.org sine tenester,
       sjølv utan ein lærar tilstade.
     create_personal_login_email_note: 'Bemærkelse: E-mailadresser er ikke gemt i form
-      af, at vi kontakter studerende. Studerende vil aldrig modtage e-mails fra Code.org,
+      af, at vi kontakter elevene. Elever vil aldrig modtage e-mails fra Code.org,
       bortset fra, at hvis det er genopretning af adgangskoder. Se vores <a href=''%{privacy_policy_url}'',
-      target=''_blank''>fortrolighedspolitik</a> for mere information.'
+      target=''_blank''>privatlivspolitik</a> for mere information.'
     create_personal_login_email_note_markdown: 'Merk: E-postadresser er ikkje lagra
       i eit format som gjer det mogleg for oss å kontakte elevar. Dei vil aldri få
       epost frå Code.org med unntak av for å få lenke til passordgjenoppretting. Sjå
       våre [retningsliner for personvern](%{privacy_policy_url}) for meir informasjon.'
+    enter_new_login_info: Indtast dit nye log-in information
     parent_email_label: 'Forælderens eller værgens e-mail (valgfrit) '
     parent_email_hint: "(det her kan bruges til genopretning af adgangskode)"
     enter_parent_email: Indtast dine forældres eller din værges e-mailadresse (til
       genopreting af adgangskode)
-    update: Opdater Konto
+    update: Opdater konto
     account_successfully_updated: Konto opdateret
     auth_option_saved: 'Du har linket din %{provider} konto med email %{email}.
 
 '
     auth_option_saved_no_email: Du har sammenkoblet din %{provider}-konto med succes.
     update_email: Opdater
-    for_parents_and_guardians: For forældre og værger
-    link_a_parent_email: Knyt en forælder / værges e-mail-adresse til denne konto
-      for at holde dig opdateret om dit barns fremskridt og projekter. Du vil også
-      være i stand til at bruge denne e-mail-adresse til gendannelse af adgangskode.
+    for_parents_and_guardians: Til forældre og værger
+    link_a_parent_email: Knyt en forælders eller en værges e-mailadresse til denne
+      konto for at holde dig opdateret om dit barns fremskridt og barnets projekter.
+      Du vil også være i stand til at bruge denne e-mailadresse til gendannelse af
+      adgangskode.
     parent_guardian_email_label: Forælderens eller værgens e-mailadresse
     remove_parent_email_label: Fjern
     none: Ingen
     only_one_parent_email_supported_warning: 'Bemærk: Vi er kun i stand til at understøtte
       en forælder / værges e-mail-adresse pr. studiekonto på dette tidspunkt.'
+    encrypted: krypteret
   user_level:
     completed: Fuldført
     tried: Forsøgt
@@ -674,12 +677,28 @@ da:
     download: Hent Video
     show_notes: Vis noter
     show_video: Vis videoen
+    label: Video
   compatibility:
     upgrade:
       unsupported_message: Din browser er ikke understøttet. Opgrader venligst din
         browser til [en af vores understøttende browsere](%{supported_browsers_url}).
         Du kan prøve at vise siden, men forvent at funktionaliteten er dårlig.
       link: Lær mere
+      applab_unsupported_tablet: App Lab kører bedst på en stationær eller på en bærbar
+        med en mus og et tastatur. Du kan opleve problemer ved brug af dette værktøj
+        på din nuværende enhed.
+      gamelab_unsupported_tablet: Game Lab kører bedst på en stationær eller på en
+        bærbar med en mus og et tastatur. Du kan opleve problemer ved brug af dette
+        værktøj på din nuværende enhed.
+      oceans_unsupported_browser: Denne browser understøtter ikke denne vejledning.
+        Prøv venligst at besøge denne side ved brug af Edge, Chrome, Firefox eller
+        en anden moderne browser.
+      weblab_unsupported_browser: Desværre oplever vi på nuværende tidspunkt problemer
+        med indlæsning af Web Lab på denne browser. Du bliver nød til at bruge en
+        anden browser indtil problemet er løst. Beklager ulejligheden.
+      weblab_unsupported_locale_storage: Du kan opleve problemer ved at bruge Web
+        Lab i privat-browsing tilstand. Indlæs venligst dit projekt i normal tilstand.
+        Beklager ulejligheden.
   slow_loading: Dette tager længere tid end normalt...
   try_reloading: Prøv at genindlæse siden
   next_stage: Færdig! Fortsæt til næste fase
@@ -716,7 +735,13 @@ da:
   upsell:
     applab:
       title: App Lab
+      body: App Lab er et programmeringsmiljø, hvor du kan lave simple apps. Design
+        en app, kod med blokke eller brug JavaScript for at få det til at virke, og
+        så derefter del din app på få sekunder.
+      body_short: Design en app, kod med blokke eller brug JavaScript for at få det
+        til at virke, og så derefter del din app på få sekunder.
       audience: Alder 13+
+      cta: Lær hvordan
     dance:
       title: Dance Party
     dance-2019:
@@ -742,11 +767,17 @@ da:
       body: Se et galleri af app og kunstnerbilleder skabt af vores brugere
     gamelab:
       title: Spil Laboratoriet
+      body: Game Lab er et programmeringsmiljø, hvor du kan lave simple animationer
+        og spil med genstande og figurer, der interagere med hinanden.
       audience: Alder 13+
+      cta: Lær hvordan
     hoc-encryption:
       title: Enkel kryptering
     weblab:
+      body: Web Lab er et programmeringsmiljø, hvor du kan lave simple websider ved
+        at bruge HTML og CSS. Design dine websider og del din side på få sekunder.
       audience: Alder 13+
+      cta: Lær hvordan
     frozen:
       title: Frozen
     starwars:
@@ -760,6 +791,7 @@ da:
       body: Udforsk en Minecraft-verden gennem kode
     minecraft2016:
       title: Minecraft
+      body: Programmer dyr og andre Minecraft-væsner i din egen udgave af Minecraft.
     aquatic:
       title: Minecraft
     hero:
@@ -770,6 +802,8 @@ da:
       audience: Alder 4+
     unplugged_conditionals:
       title: Betingelser
+    widgets:
+      cta: Lær hvordan
   landing:
     report_bug: Rapporter fejl
     support: Få hjælp
@@ -783,7 +817,9 @@ da:
     correct_body: Det er det korrekte svar.
   multi-submittable:
     wrong_title: Tak skal du have
+    wrong_body: Tak for at du indsendte et svar.
     correct_title: Tak skal du have
+    correct_body: Tak for at du indsendte et svar.
   level_group:
     wrong_title: Tak skal du have
     correct_title: Tak skal du have
@@ -853,7 +889,7 @@ da:
   donor_interstitial:
     title: Dine gratis datalogikurser er blevet muliggjort af...
     support_codeorg_2: "[Doner nu](%{donate_url}) for at støtte Code.org."
-    get_started: Kom i gang på Code.org
+    get_started: Kom i gang med Code.org
   school_info_interstitial:
     save: Gem
   race_interstitial:
@@ -877,6 +913,7 @@ da:
     completed_perfect: Afsluttet, perfekt
     furthest_level_attempted: længst opnåede niveau
     assessment: vurdering
+    submitted: indsendt
   studio:
     courses_working_on: Kurser du er i gang med
     completed_courses: Afsluttede kurser
@@ -888,11 +925,15 @@ da:
     new: Opret nyt
     exit: Vend tilbage til kursus
     project_gallery: Projekter
+    publish: Offentliggør
+    unpublish: Fjern offentliggørelse
     share_title: Del dit projekt
     share_copy_link: 'Kopiér linket:'
     share_u13_warning: Spørg din lærer, før du deler noget. Kun del noget med andre
       på din skole.
     advanced_share: Vis avancerede indstillinger
+    no_projects: Du har på nuværende tidspunkt ingen projekter. Klik på en af knapperne
+      ovenover for at starte et projekt.
     name: Navn
     updated: Opdateret
     project_type: Projekttype
@@ -935,6 +976,10 @@ da:
   peer_review:
     accepted:
       name: Accepteret
+      description_markdown: "**Ja**, denne indsendelse **opfylder** kravene"
+    rejected:
+      name: Afvist
+      description_markdown: "**Nej**, denne indsendelse **opfylder ikke** kravene"
     escalated:
       name: Eskalerede
   hoc_download:
@@ -1051,13 +1096,14 @@ da:
         opt_in_yes: Ja
         opt_in_no: Nej
   cookie_banner:
+    more_information: Se Code.org's privatlivspolitik.
     accept: Jeg er enig
   gdpr_dialog:
     heading: Accepterer du at bruge en hjemmeside baseret i USA?
     message: Data fra din brug af dette websted kan sendes til og gemmes eller behandles
       i USA.
     link_intro: For nærmere oplysninger se vores
-    privacy_policy: Privatlivspolitik
+    privacy_policy: privatlivspolitik
     logout: Log af
     true: Ja
   copy: Kopier
@@ -1066,3 +1112,5 @@ da:
       holde dig opdateret om dit barns fremskridt og projekter!"
     link_your_email: Knyt din e-mail
     not_now: Ikke nu
+  behaviors:
+    this_sprite: denne figur

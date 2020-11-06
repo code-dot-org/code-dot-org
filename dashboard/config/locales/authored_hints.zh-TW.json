@@ -8725,6 +8725,25 @@
         },
         "courseA_collector_preLoops6": {
           "courseA_collector_preLoops6_a": "您將需要使用 [0] 積木來通過這個關卡。"
+        },
+        "courseC_video_angles": {
+          "courseD_scrat_programming6_a": "有 2 個方法可以完成這個關卡！",
+          "courseD_scrat_programming6_b": "請記住在移動之前要先轉彎，因為鼠奎特面朝錯誤的方向。",
+          "courseD_scrat_programming6_c": "不要害怕犯錯！嘗試添加模塊並運行程式看看會發生什麼，即使您還沒有通關。"
+        },
+        "courseD_video_nestedLoopsArtist": {
+          "courseE_artist_ramp8_a": "若要繪製一條邊，請用`移動向前 100 像素`積木，並把 100 改成 200。",
+          "courseE_artist_ramp8_b": "若要畫出 4 條邊，可以把`移動-向前 100 像素`積木放到重複迴圈裡，並設定重複次數為 4 次。",
+          "courseE_artist_ramp8_c": "你的迴圈中應包含兩個積木：`移動-向前`和 `轉向 - 右邊 90 度`。",
+          "courseD_artist_ramp12_a": "這和正方形有什麼類似的地方？又有哪些不同呢？",
+          "courseD_artist_ramp12_b": "你可以使用`轉向`積木上的下拉式功能表查看所需的角度！",
+          "courseD_artist_ramp12_c": "畫出每條邊時，你需要向前移動 100 像素，然後向右旋轉 120 度。一共需要多少條邊？"
+        },
+        "courseE_bee_ramp14": {
+          "courseE_farmer_ramp12d_b": "你仍然需要把你的`直到`和`重複 判斷`迴圈放在`重複`迴圈內來解決這個關卡！"
+        },
+        "courseE_farmer_predict2": {
+          "courseE_farmer_ramp12e_b": "這個關卡的解法和上一個關卡的解法很像，但要轉到另一個方向。"
         }
       }
     }

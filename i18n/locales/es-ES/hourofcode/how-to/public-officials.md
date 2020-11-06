@@ -24,7 +24,7 @@ De izquierda a derecha: *los gobernadores de Arkansas, California del Norte y Ar
 
 ### 1. Lee nuestra página informativa
 
-See [why computer science education is important](/files/hoc-one-pager.pdf), and how you can help the effort by supporting the Hour of Code.
+See [why computer science education is important]({{ localized_files/hoc_one_pager }}), and how you can help the effort by supporting the Hour of Code.
 
 ### 2. Involucra a escuelas locales y distritos
 

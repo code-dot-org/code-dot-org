@@ -3076,7 +3076,12 @@
         "ramp_artist_loops9": "通过绘制正方形来解决这个关卡。",
         "ramp_artist_loops9_2018": "通过绘制正方形来解决这个关卡。",
         "ramp_artist_loops9_2019": "通过绘制正方形来解决这个关卡。",
-        "ramp_artist_loops9_2020": "通过绘制正方形来解决这个关卡。"
+        "ramp_artist_loops9_2020": "通过绘制正方形来解决这个关卡。",
+        "courseC_video_angles": "帮助斯奎特得到橡子！",
+        "courseD_video_nestedLoopsArtist": "用你学过的画这个三角形。",
+        "courseE_bee_ramp14": "向前移动直到到达莴苣，然后用一个`当`循环来捡起所有的莴苣。",
+        "courseE_farmer_predict1": "当有莴苣的时候,，捡起莴苣！",
+        "courseE_farmer_predict2": "向前移动直到到达莴苣，然后用一个`当`循环来捡起所有的莴苣。"
       }
     }
   }

@@ -24,10 +24,12 @@ const defaultScriptLevel = {
   levels: [
     {
       name: 'Level 1',
-      id: 2
+      id: 2,
+      url: '/fake/url/'
     }
   ],
-  activeId: 2
+  activeId: 2,
+  expand: true
 };
 
 const assertCheckboxVisible = (wrapper, name, visible) => {
@@ -104,7 +106,13 @@ describe('LevelTokenDetails', () => {
     const wrapper = shallow(
       <LevelTokenDetails
         {...defaultProps}
-        scriptLevel={{...defaultScriptLevel, levels: [{id: 2}, {id: -1}]}}
+        scriptLevel={{
+          ...defaultScriptLevel,
+          levels: [
+            {id: 2, name: 'Name 1', url: '/this/url'},
+            {id: -1, name: 'Name 2', url: '/that/url'}
+          ]
+        }}
       />
     );
     //assertButtonVisible(wrapper, 'Add Variant', false);
@@ -115,7 +123,13 @@ describe('LevelTokenDetails', () => {
     const wrapper = shallow(
       <LevelTokenDetails
         {...defaultProps}
-        scriptLevel={{...defaultScriptLevel, levels: [{id: 2}, {id: 3}]}}
+        scriptLevel={{
+          ...defaultScriptLevel,
+          levels: [
+            {id: 2, name: 'Name 1', url: '/this/url'},
+            {id: 3, name: 'Name 2', url: '/that/url'}
+          ]
+        }}
       />
     );
     //assertButtonVisible(wrapper, 'Add Variant', true);

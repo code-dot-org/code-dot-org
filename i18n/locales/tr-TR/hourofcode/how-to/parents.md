@@ -16,7 +16,7 @@ Kodlama Saati yeni başlayanlar için bile çok kolaydır! Çocuklarınızın he
 
 Hour of Code'u bir bilgisayar, tablet veya akıllı telefon ile veya tamamen bağlantısız şekilde deneyebilirsiniz! Şu şekilde başlayacaksınız.
 
-[<button>PDF Rehberi görüntüleyin</button>](https://hourofcode.com/files/HourofCode-Parent-How-To.pdf)
+[<button>PDF Rehberi görüntüleyin</button>]({{ localized_files/hourofcode_parent_how_to }})
 
 * * *
 
@@ -95,4 +95,4 @@ Hour of Code küresel bir etkinlik ve aileniz de kutlama yapmayı hak ediyor. Ho
 
 Bilgisayar bilimi Hour of Code ile sona ermek zorunda değil! Ebeveynlerin %90'ı çocuklarının bilgisayar bilimi öğrenmesini istiyor ancak çoğu okul hala bu eğitimi vermiyor. Yardımcı olmak için, müfredatımız web tabanlıdır ve her zaman ücretsizdir. Bilgisayar Bilimini çocuğunuzun okuluna nasıl taşıyabileceğiniz hakkında [bilgi edinin](https://code.org/yourschool).
 
-[<button>PDF Rehberi görüntüleyin</button>](https://hourofcode.com/files/HourofCode-Parent-How-To.pdf)
+[<button>PDF Rehberi görüntüleyin</button>]({{ localized_files/hourofcode_parent_how_to }})

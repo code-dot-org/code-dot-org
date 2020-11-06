@@ -36,6 +36,7 @@ class Lesson < ActiveRecord::Base
   has_many :script_levels, -> {order(:chapter)}, foreign_key: 'stage_id', dependent: :destroy
   has_many :levels, through: :script_levels
   has_and_belongs_to_many :resources, join_table: :lessons_resources
+  has_many :objectives, dependent: :destroy
 
   has_one :plc_learning_module, class_name: 'Plc::LearningModule', inverse_of: :lesson, foreign_key: 'stage_id', dependent: :destroy
   has_and_belongs_to_many :standards, foreign_key: 'stage_id'
@@ -268,7 +269,7 @@ class Lesson < ActiveRecord::Base
   def summarize_for_script_edit
     summary = summarize.dup
     # Do not let script name override lesson name when there is only one lesson
-    summary[:name] = I18n.t("data.script.name.#{script.name}.lessons.#{key}.name")
+    summary[:name] = name
     summary.freeze
   end
 
@@ -295,7 +296,36 @@ class Lesson < ActiveRecord::Base
       preparation: preparation,
       announcements: announcements,
       activities: lesson_activities.map(&:summarize_for_edit),
-      resources: resources
+      resources: resources,
+      objectives: objectives.map(&:summarize_for_edit)
+    }
+  end
+
+  def summarize_for_lesson_show(user)
+    {
+      unit: script.summarize_for_lesson_show,
+      position: relative_position,
+      lockable: lockable,
+      key: key,
+      displayName: localized_title,
+      overview: overview || '',
+      announcements: announcements,
+      purpose: purpose || '',
+      preparation: preparation || '',
+      activities: lesson_activities.map(&:summarize_for_lesson_show),
+      resources: resources_for_lesson_plan(user&.authorized_teacher?),
+      objectives: objectives.map(&:summarize_for_lesson_show),
+      is_teacher: user&.teacher?
+    }
+  end
+
+  def summarize_for_lesson_dropdown
+    {
+      key: key,
+      displayName: localized_name,
+      link: lesson_path(id: id),
+      position: relative_position,
+      lockable: lockable
     }
   end
 
@@ -419,6 +449,17 @@ class Lesson < ActiveRecord::Base
     script.fix_script_level_positions
   end
 
+  def update_objectives(objectives)
+    return unless objectives
+
+    self.objectives = objectives.map do |objective|
+      persisted_objective = objective['id'].blank? ? Objective.new : Objective.find(objective['id'])
+      persisted_objective.description = objective['description']
+      persisted_objective.save!
+      persisted_objective
+    end
+  end
+
   # Used for seeding from JSON. Returns the full set of information needed to uniquely identify this object.
   # If the attributes of this object alone aren't sufficient, and associated objects are needed, then data from
   # the seeding_keys of those objects should be included as well.
@@ -515,6 +556,16 @@ class Lesson < ActiveRecord::Base
     end
   end
 
+  def resources_for_lesson_plan(verified_teacher)
+    grouped_resources = resources.map(&:summarize_for_lesson_plan).group_by {|r| r[:audience]}
+    if verified_teacher && grouped_resources.key?('Verified Teacher')
+      grouped_resources['Teacher'] ||= []
+      grouped_resources['Teacher'] += grouped_resources['Verified Teacher']
+    end
+    grouped_resources.delete('Verified Teacher')
+    grouped_resources
+  end
+
   private
 
   # Finds the LessonActivity by id, or creates a new one if id is not specified.
@@ -523,8 +574,8 @@ class Lesson < ActiveRecord::Base
   def fetch_activity(activity)
     if activity['id']
       lesson_activity = lesson_activities.find(activity['id'])
-      raise "LessonActivity id #{activity['id']} not found in Lesson id #{id}" unless lesson_activity
-      return lesson_activity
+      return lesson_activity if lesson_activity
+      raise ActiveRecord::RecordNotFound.new("LessonActivity id #{activity['id']} not found in Lesson id #{id}")
     end
 
     lesson_activities.create(

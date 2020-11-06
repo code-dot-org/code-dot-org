@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import ProgressLevelSet from '@cdo/apps/templates/progress/ProgressLevelSet';
 import color from '@cdo/apps/util/color';
 import {LevelStatus} from '@cdo/apps/util/sharedConstants';
@@ -13,7 +12,7 @@ const styles = {
     margin: '10px, 0px',
     width: '100%',
     backgroundColor: color.lightest_gray,
-    padding: 20
+    padding: '0px 10px 10px 10px'
   },
   description: {
     marginTop: 10
@@ -35,13 +34,13 @@ export default class ProgressionDetails extends Component {
 
     return {
       status: LevelStatus.not_tried,
-      url: activeLevel.url,
+      url: scriptLevel.url,
       name: activeLevel.name,
-      kind: activeLevel.kind,
+      kind: scriptLevel.kind,
       icon: activeLevel.icon,
       isConceptLevel: activeLevel.isConceptLevel,
-      isUnplugged: activeLevel.isUnplugged,
-      levelNumber: scriptLevel.position,
+      isUnplugged: scriptLevel.display_as_unplugged,
+      levelNumber: scriptLevel.levelNumber,
       bonus: scriptLevel.bonus
     };
   };
@@ -56,12 +55,9 @@ export default class ProgressionDetails extends Component {
           levels={progression.scriptLevels.map(scriptLevel =>
             this.convertScriptLevelForProgression(scriptLevel)
           )}
-          disabled={true}
+          disabled={false}
           selectedSectionId={null}
         />
-        <div style={styles.description}>
-          <SafeMarkdown markdown={progression.text} />
-        </div>
       </div>
     );
   }

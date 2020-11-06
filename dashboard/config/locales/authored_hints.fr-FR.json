@@ -8699,6 +8699,25 @@
         "iceage_warn_ice_age": {
           "iceage_warn_ice_age_a": "Tu devrais seulement avoir besoin d'ajouter 2 blocs pour amener ce puzzle où il devrait être. ",
           "iceage_warn_ice_age_b": "Ajouter les 2 nouveaux blocs sous `lorsque l'exécution commence` pour qu'ils démarrent juste après le départ du programme."
+        },
+        "courseC_video_angles": {
+          "courseD_scrat_programming6_a": "Il y a deux façons de résoudre cette énigme !",
+          "courseD_scrat_programming6_b": "Souviens toi de tourner avant de bouger, puisque Scrat est dirigé dans la mauvaise direction.",
+          "courseD_scrat_programming6_c": "N'aie pas peur de faire une erreur ! Essaie d'ajouter des blocs et d'exécuter ton code, pour voir ce qui va se passer, même si tu ne penses pas avoir encore résolu l’énigme."
+        },
+        "courseD_video_nestedLoopsArtist": {
+          "courseE_artist_ramp8_a": "Pour dessiner un côté, utilise le bloc `move forward by 100 pixels`, et remplace 100 par 200.",
+          "courseE_artist_ramp8_b": "Pour dessiner 4 côtés, met le bloc `avancer de 100 pixels` dans la boucle et assure-toi que la boucle soit bien configurée pour dessiner 4 fois !\n\nN'oublie pas de tourner après!",
+          "courseE_artist_ramp8_c": "Ta boucle a 2 blocs à l'intérieur: `avancer`et `tourner à droite de 90 degrés`.",
+          "courseD_artist_ramp12_a": "Comment est-ce similaire à un carré ?  Qu'est-ce qui est différent ?",
+          "courseD_artist_ramp12_b": "Tu peux utiliser le menu déroulant des blocs ˋtourner\\` pour voir de quel angle tu as besoin !",
+          "courseD_artist_ramp12_c": "Pour dessiner chaque côté, tu devras avancer de 100 pixels, puis tourner de 120 degrés. De combien de côté as-tu besoin ?"
+        },
+        "courseE_bee_ramp14": {
+          "courseE_farmer_ramp12d_b": "Tu devras encore mettre tes boucles `jusqu'à` et `tant que` à l'intérieur d'une boucle `répéter` pour résoudre cette énigme !"
+        },
+        "courseE_farmer_predict2": {
+          "courseE_farmer_ramp12e_b": "La solution à cette énigme ressemblera beaucoup à la solution au dernier puzzle, mais en tournant dans l'autre sens."
         }
       }
     }

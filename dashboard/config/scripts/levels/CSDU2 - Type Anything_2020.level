@@ -15,6 +15,7 @@
     "name_suffix": "_2020",
     "encrypted": "false",
     "mini_rubric": "false",
+    "validation_enabled": "true",
     "teacher_markdown": "After giving students some time to explore the tool, ask them to share out anything that they have discovered.  The video on the next level will give them a short tour, so it's okay if they don't notice everything."
   },
   "published": true,

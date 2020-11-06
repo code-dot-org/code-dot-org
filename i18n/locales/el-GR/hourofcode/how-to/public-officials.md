@@ -24,7 +24,7 @@ title: Οδηγίες για δημόσιους αξιωματούχους
 
 ### 1. Διαβάστε το φυλλάδιό μας
 
-See [why computer science education is important](/files/hoc-one-pager.pdf), and how you can help the effort by supporting the Hour of Code.
+See [why computer science education is important]({{ localized_files/hoc_one_pager }}), and how you can help the effort by supporting the Hour of Code.
 
 ### 2. Καλέστε τοπικά σχολεία και περιφέρειες
 

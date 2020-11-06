@@ -24,7 +24,7 @@ title: அரசு அதிகாரிகளுக்கான எவ்வ�
 
 ### 1. எங்கள் ஒரு பேஜர் வாசிக்கவும்
 
-See [why computer science education is important](/files/hoc-one-pager.pdf), and how you can help the effort by supporting the Hour of Code.
+See [why computer science education is important]({{ localized_files/hoc_one_pager }}), and how you can help the effort by supporting the Hour of Code.
 
 ### 2. உள்ளூர் பள்ளிகளையும் மாவட்டங்களையும் சேர்ப்பது
 

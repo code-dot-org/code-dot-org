@@ -24,7 +24,7 @@ Die "Hour of Code" ist eine einstündige Einführung in die Informatik mit dem Z
 - [Weitere Möglichkeiten zur Unterstützung der Hour of Code](#support-hour-of-code)
 - [Häufig gestellte Fragen für Freiwillige](#faq)
 
-Unabhängig davon, ob Sie sich virtuell, privat oder zusammen mit Ihrem Unternehmen als Freiwillige(r) engagieren, werden Ihre Bemühungen ganz sicher einen großen Einfluss darauf haben, wie die SchülerInnen das Fach Informatik und ihr eigenes Potenzial bewerten. Take a look at our [volunteer toolkit if you still have questions](https://hourofcode.com/files/hoc-volunteer-toolkit.pdf).
+Unabhängig davon, ob Sie sich virtuell, privat oder zusammen mit Ihrem Unternehmen als Freiwillige(r) engagieren, werden Ihre Bemühungen ganz sicher einen großen Einfluss darauf haben, wie die SchülerInnen das Fach Informatik und ihr eigenes Potenzial bewerten. Take a look at our [volunteer toolkit if you still have questions]({{ localized_files/hoc_volunteer_toolkit }}).
 
 * * *
 
@@ -134,7 +134,7 @@ Besprechen Sie mit der Schule oder dem Lehrer/der Lehrerin, was am sinnvollsten 
 
 - Beschreiben Sie, wie Technologien unser Leben beeinflussen, mit Beispielen, die SchülerInnen mit unterschiedlichem Hintergrund interessieren (beschreiben Sie Technologien, die Leben retten, Menschen helfen, Menschen verbinden, usw.). 
 - Wenn Sie bei einem Technologieunternehmen tätig sind, zeigen Sie interessante, innovative Produkte, an denen Ihr Unternehmen arbeitet. Wenn Sie nicht bei einem Technologieunternehmen tätig sind, sprechen Sie darüber, wie Ihr Unternehmen Technologie einsetzt, um Probleme zu lösen und Ziele zu erreichen.
-- Laden Sie Programmier Ihrer Firma ein und lassen Sie diese erzählen, warum sie Informatik studiert haben und an welchen Projekten sie gerade arbeiten.
+- Bitten Sie Programmierer aus Ihrem Unternehmen, etwas darüber erzählen, warum sie Informatik studiert haben und an welcher Art von Projekten sie arbeiten. 
 - Wenn es eine Gruppe von Mitarbeitern gibt, die Ihre Veranstaltung moderieren oder als Freiwillige mit einer örtlichen Schule zusammenarbeiten, könnten Sie die[speziellen T-Shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) für sie bestellen.
 
 ### 3. Planen Sie Ihren Technologiebedarf
@@ -143,7 +143,7 @@ Besprechen Sie mit der Schule oder dem Lehrer/der Lehrerin, was am sinnvollsten 
 
 #### Geräte:
 
-Die beste "Hour of Code"-Erfahrung macht man mit Computern, die einen Internetzugang haben. Aber Sie brauchen ein Computer für jedes Kind nicht und Sie können sogar Hour of Code ohne ein Computer machen! Für Aktivitäten ohne Computer filtern Sie einfach im Bereich „Technologie der Klasse“ Optionen für „keine Computer oder Geräte“ heraus.
+Die beste "Hour of Code"-Erfahrung macht man mit Computern, die einen Internetzugang haben. Es ist zum einen nicht erforderlich, dass jedes Kind einen eigenen Computer vor sich hat - und eine Hour of Code kann man sogar ganz ohne Computer veranstalten! Für Aktivitäten ohne Computer filtern Sie einfach im Bereich „Technologie der Klasse“ Optionen für „keine Computer oder Geräte“ heraus.
 
 - ** Testen Sie Aktivitäten ** auf Computern oder Geräten. Prüfen Sie, ob sie im Browser ordnungsgemäß mit Ton und Bild funktionieren.
 - **Nicht genug Geräte?** Verwenden Sie die Programmierung zu zweit. Wenn Schüler in Paaren arbeiten, helfen sich sich gegenseitig und sind weniger auf den Lehrer angewiesen. Sie werden dann auch festellen, dass Programieren sozial und kooperativ ist.
