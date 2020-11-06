@@ -2812,6 +2812,69 @@
       "position": 13,
       "assessment": null,
       "properties": {
+        "progression": "Unit 6 - Lesson 7 - Analog Input (~20 mins)"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD M8 - U6L7 - Level 3"
+        ],
+        "lesson.key": "Module 8",
+        "lesson_group.key": "",
+        "script.name": "jess-test-script"
+      },
+      "level_keys": [
+        "VPL - CSD M8 - U6L7 - Level 3"
+      ]
+    },
+    {
+      "chapter": 128,
+      "position": 14,
+      "assessment": null,
+      "properties": {
+        "progression": "Unit 6 - Lesson 7 - Analog Input (~20 mins)"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD - M8 - U6L7 - Level 4"
+        ],
+        "lesson.key": "Module 8",
+        "lesson_group.key": "",
+        "script.name": "jess-test-script"
+      },
+      "level_keys": [
+        "VPL - CSD - M8 - U6L7 - Level 4"
+      ]
+    },
+    {
+      "chapter": 129,
+      "position": 15,
+      "assessment": null,
+      "properties": {
+        "progression": "Unit 6 - Lesson 7 - Analog Input (~20 mins)"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD - M8 - U6L7 - Level 5"
+        ],
+        "lesson.key": "Module 8",
+        "lesson_group.key": "",
+        "script.name": "jess-test-script"
+      },
+      "level_keys": [
+        "VPL - CSD - M8 - U6L7 - Level 5"
+      ]
+    },
+    {
+      "chapter": 130,
+      "position": 16,
+      "assessment": null,
+      "properties": {
         "progression": "Conclusions and Connections (~10 mins)"
       },
       "named_level": null,
@@ -2829,8 +2892,8 @@
       ]
     },
     {
-      "chapter": 128,
-      "position": 14,
+      "chapter": 131,
+      "position": 17,
       "assessment": null,
       "properties": {
         "progression": "Conclusions and Connections (~10 mins)"
@@ -2850,8 +2913,8 @@
       ]
     },
     {
-      "chapter": 129,
-      "position": 15,
+      "chapter": 132,
+      "position": 18,
       "assessment": null,
       "properties": {
         "progression": "Unit 6: Lesson 9 - Project Make a Game (~20 mins)"
@@ -2871,8 +2934,8 @@
       ]
     },
     {
-      "chapter": 130,
-      "position": 16,
+      "chapter": 133,
+      "position": 19,
       "assessment": null,
       "properties": {
         "progression": "Conclusions and Connections (~10 mins)"
@@ -2892,8 +2955,8 @@
       ]
     },
     {
-      "chapter": 131,
-      "position": 17,
+      "chapter": 134,
+      "position": 20,
       "assessment": null,
       "properties": {
         "progression": "Equity Journey (~5 mins)"
@@ -2913,8 +2976,8 @@
       ]
     },
     {
-      "chapter": 132,
-      "position": 18,
+      "chapter": 135,
+      "position": 21,
       "assessment": null,
       "properties": {
         "progression": "Module 8 Asynchronous Wrap Up (~10 mins)"
@@ -4315,6 +4378,39 @@
         "level.key": "VPL - CSD - M8 - U6L7 - Level 2",
         "script_level.level_keys": [
           "VPL - CSD - M8 - U6L7 - Level 2"
+        ],
+        "lesson.key": "Module 8",
+        "lesson_group.key": "",
+        "script.name": "jess-test-script"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD M8 - U6L7 - Level 3",
+        "script_level.level_keys": [
+          "VPL - CSD M8 - U6L7 - Level 3"
+        ],
+        "lesson.key": "Module 8",
+        "lesson_group.key": "",
+        "script.name": "jess-test-script"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD - M8 - U6L7 - Level 4",
+        "script_level.level_keys": [
+          "VPL - CSD - M8 - U6L7 - Level 4"
+        ],
+        "lesson.key": "Module 8",
+        "lesson_group.key": "",
+        "script.name": "jess-test-script"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD - M8 - U6L7 - Level 5",
+        "script_level.level_keys": [
+          "VPL - CSD - M8 - U6L7 - Level 5"
         ],
         "lesson.key": "Module 8",
         "lesson_group.key": "",
