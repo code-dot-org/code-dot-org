@@ -92,7 +92,8 @@ def main(options)
     cb_unit = JSON.parse(cb_unit_json)
     validate_unit(script, cb_unit)
     chapters = get_validated_chapters(cb_unit)
-    validate_lessons(script, chapters)
+    lesson_pairs = get_validated_lesson_pairs(script, chapters)
+    log lesson_pairs.join("\n")
   end
 end
 
@@ -124,7 +125,9 @@ def get_validated_chapters(cb_unit)
   cb_unit['chapters'].presence || [{'lessons' => cb_unit['lessons']}]
 end
 
-def validate_lessons(script, chapters)
+def get_validated_lesson_pairs(script, chapters)
+  validated_lesson_pairs = []
+
   cb_lessons = chapters.map {|ch| ch['lessons']}.flatten
 
   # Compare non-lockable lessons from CB and Code Studio.
@@ -140,6 +143,7 @@ def validate_lessons(script, chapters)
     position = index + 1
     raise "unexpected position for lesson '#{lesson.name}'" unless lesson.relative_position == position
     raise "unexpected number for cb lesson '#{cb_lesson['title']}'" unless cb_lesson['number'] == position
+    validated_lesson_pairs.push([lesson, cb_lesson])
 
     # The code studio lesson name should generally match the cb lesson title.
     # Warn if the names differ.
@@ -163,6 +167,7 @@ def validate_lessons(script, chapters)
       raise "could not parse code_studio_url: #{cb_lesson['code_studio_url']} for cb lesson '#{cb_lesson['title']}' in unit #{script.name}"
     end
     lesson = script.lessons.find_by!(lockable: true, relative_position: lockable_position)
+    validated_lesson_pairs.push([lesson, cb_lesson])
     unless lesson.name.downcase.strip == cb_lesson['title'].downcase.strip
       mismatched_names.push([lesson.name, cb_lesson['title']])
     end
@@ -174,6 +179,8 @@ def validate_lessons(script, chapters)
     end.join("\n")
     warn "WARNING: some lesson names differ for unit #{script.name}:\n#{mismatch_summary}"
   end
+
+  validated_lesson_pairs
 end
 
 options = parse_options
