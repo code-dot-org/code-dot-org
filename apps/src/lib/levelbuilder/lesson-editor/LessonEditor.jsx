@@ -11,7 +11,8 @@ import CollapsibleEditorSection from '@cdo/apps/lib/levelbuilder/CollapsibleEdit
 import RelatedLessons from './RelatedLessons';
 import {
   relatedLessonShape,
-  activityShape
+  activityShape,
+  resourceShape
 } from '@cdo/apps/lib/levelbuilder/shapes';
 import color from '@cdo/apps/util/color';
 import $ from 'jquery';
@@ -72,7 +73,8 @@ class LessonEditor extends Component {
     announcements: PropTypes.arrayOf(announcementShape),
     relatedLessons: PropTypes.arrayOf(relatedLessonShape).isRequired,
     objectives: PropTypes.arrayOf(PropTypes.object).isRequired,
-    activities: PropTypes.arrayOf(activityShape).isRequired
+    activities: PropTypes.arrayOf(activityShape).isRequired,
+    resources: PropTypes.arrayOf(resourceShape).isRequired
   };
 
   constructor(props) {
@@ -112,7 +114,8 @@ class LessonEditor extends Component {
         purpose: this.state.purpose,
         preparation: this.state.preparation,
         objectives: JSON.stringify(this.state.objectives),
-        activities: this.serializeActivities()
+        activities: this.serializeActivities(),
+        resources: JSON.stringify(this.props.resources.map(r => r.key))
       })
     })
       .done(data => {
@@ -368,5 +371,6 @@ class LessonEditor extends Component {
 export const UnconnectedLessonEditor = LessonEditor;
 
 export default connect(state => ({
-  activities: state.activities
+  activities: state.activities,
+  resources: state.resources
 }))(LessonEditor);
