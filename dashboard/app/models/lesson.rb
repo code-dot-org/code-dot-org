@@ -450,11 +450,11 @@ class Lesson < ActiveRecord::Base
   #   ]
   # }
   # @param [Hash] cb_lesson_data - Lesson and activity data to import.
-  def update_from_curriculum_builder(cb_lesson_data)
+  def update_from_curriculum_builder(_cb_lesson_data)
     # In the future, only levelbuilder should be added to this list.
     raise unless [:development, :adhoc].include? rack_env
 
-    puts "TODO: update lesson #{id} with cb lesson data: #{cb_lesson_data.to_json[0, 50]}..."
+    # puts "TODO: update lesson #{id} with cb lesson data: #{cb_lesson_data.to_json[0, 50]}..."
   end
 
   # Used for seeding from JSON. Returns the full set of information needed to uniquely identify this object.
