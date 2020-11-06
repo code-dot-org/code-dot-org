@@ -8,7 +8,6 @@ import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
 import AnnouncementsEditor from '@cdo/apps/lib/levelbuilder/announcementsEditor/AnnouncementsEditor';
 import CollapsibleEditorSection from '@cdo/apps/lib/levelbuilder/CollapsibleEditorSection';
-import {resourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
 import RelatedLessons from './RelatedLessons';
 import {relatedLessonShape} from '../shapes';
 import color from '@cdo/apps/util/color';
@@ -63,7 +62,6 @@ export default class LessonEditor extends Component {
     purpose: PropTypes.string,
     preparation: PropTypes.string,
     announcements: PropTypes.arrayOf(announcementShape),
-    resources: PropTypes.arrayOf(resourceShape).isRequired,
     relatedLessons: PropTypes.arrayOf(relatedLessonShape).isRequired,
     objectives: PropTypes.arrayOf(PropTypes.object).isRequired
   };
