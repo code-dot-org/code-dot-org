@@ -9,9 +9,15 @@ import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
 import AnnouncementsEditor from '@cdo/apps/lib/levelbuilder/announcementsEditor/AnnouncementsEditor';
 import CollapsibleEditorSection from '@cdo/apps/lib/levelbuilder/CollapsibleEditorSection';
 import RelatedLessons from './RelatedLessons';
-import {relatedLessonShape} from '../shapes';
+import {
+  relatedLessonShape,
+  activityShape
+} from '@cdo/apps/lib/levelbuilder/shapes';
 import color from '@cdo/apps/util/color';
 import $ from 'jquery';
+import _ from 'lodash';
+import {connect} from 'react-redux';
+import {NEW_LEVEL_ID} from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
 
 const styles = {
   editor: {
@@ -51,7 +57,7 @@ const styles = {
   }
 };
 
-export default class LessonEditor extends Component {
+class LessonEditor extends Component {
   static propTypes = {
     id: PropTypes.number.isRequired,
     displayName: PropTypes.string.isRequired,
@@ -65,7 +71,8 @@ export default class LessonEditor extends Component {
     preparation: PropTypes.string,
     announcements: PropTypes.arrayOf(announcementShape),
     relatedLessons: PropTypes.arrayOf(relatedLessonShape).isRequired,
-    objectives: PropTypes.arrayOf(PropTypes.object).isRequired
+    objectives: PropTypes.arrayOf(PropTypes.object).isRequired,
+    activities: PropTypes.arrayOf(activityShape).isRequired
   };
 
   constructor(props) {
@@ -104,7 +111,8 @@ export default class LessonEditor extends Component {
         studentOverview: this.state.studentOverview,
         purpose: this.state.purpose,
         preparation: this.state.preparation,
-        objectives: JSON.stringify(this.state.objectives)
+        objectives: JSON.stringify(this.state.objectives),
+        activities: this.serializeActivities()
       })
     })
       .done(data => {
@@ -117,6 +125,42 @@ export default class LessonEditor extends Component {
 
   handleUpdateObjectives = newObjectives => {
     this.setState({objectives: newObjectives});
+  };
+
+  // Serialize the activities into JSON, renaming any keys which are different
+  // on the backend.
+  serializeActivities = () => {
+    const activities = _.cloneDeep(this.props.activities);
+    activities.forEach(activity => {
+      activity.name = activity.displayName;
+      delete activity.displayName;
+
+      activity.activitySections.forEach(activitySection => {
+        activitySection.name = activitySection.displayName;
+        delete activitySection.displayName;
+
+        activitySection.description = activitySection.text;
+        delete activitySection.text;
+
+        activitySection.scriptLevels.forEach(scriptLevel => {
+          // The server expects id to be absent if a new script level is to be
+          // created.
+          if (scriptLevel.id === NEW_LEVEL_ID) {
+            delete scriptLevel.id;
+          }
+
+          // The position within the activity section
+          scriptLevel.activitySectionPosition = scriptLevel.position;
+
+          // Other position values will be recomputed from the
+          // activitySectionPosition on the server.
+          delete scriptLevel.position;
+          delete scriptLevel.levelNumber;
+        });
+      });
+    });
+
+    return JSON.stringify(activities);
   };
 
   render() {
@@ -296,7 +340,7 @@ export default class LessonEditor extends Component {
         </CollapsibleEditorSection>
 
         <CollapsibleEditorSection title="Activities & Levels" fullWidth={true}>
-          <ActivitiesEditor />
+          <ActivitiesEditor serializeActivities={this.serializeActivities} />
         </CollapsibleEditorSection>
 
         <div style={styles.saveButtonBackground}>
@@ -320,3 +364,9 @@ export default class LessonEditor extends Component {
     );
   }
 }
+
+export const UnconnectedLessonEditor = LessonEditor;
+
+export default connect(state => ({
+  activities: state.activities
+}))(LessonEditor);
