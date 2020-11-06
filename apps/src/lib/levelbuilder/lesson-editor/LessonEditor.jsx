@@ -81,13 +81,13 @@ export default class LessonEditor extends Component {
       assessment: this.props.assessment,
       purpose: this.props.purpose,
       preparation: this.props.preparation,
-      announcements: this.props.announcements
+      announcements: this.props.announcements,
+      objectives: this.props.objectives
     };
   }
 
   handleSaveAndKeepEditing = e => {
     e.preventDefault();
-    console.log('Save and Keep Editing');
 
     $.ajax({
       url: `/lessons/${this.props.id}?do_not_redirect=true`,
@@ -103,7 +103,8 @@ export default class LessonEditor extends Component {
         overview: this.state.overview,
         studentOverview: this.state.studentOverview,
         purpose: this.state.purpose,
-        preparation: this.state.preparation
+        preparation: this.state.preparation,
+        objectives: this.state.objectives
       })
     })
       .done(data => {
@@ -112,6 +113,10 @@ export default class LessonEditor extends Component {
       .fail(error => {
         console.log(error);
       });
+  };
+
+  handleUpdateObjectives = newObjectives => {
+    this.setState({objectives: newObjectives});
   };
 
   render() {
@@ -284,7 +289,10 @@ export default class LessonEditor extends Component {
           collapsed={true}
           fullWidth={true}
         >
-          <ObjectivesEditor objectives={this.props.objectives} />
+          <ObjectivesEditor
+            objectives={this.state.objectives}
+            updateObjectives={this.handleUpdateObjectives}
+          />
         </CollapsibleEditorSection>
 
         <CollapsibleEditorSection title="Activities & Levels" fullWidth={true}>
