@@ -79,9 +79,14 @@ export default class LessonEditor extends Component {
       assessment: this.props.assessment,
       purpose: this.props.purpose,
       preparation: this.props.preparation,
-      announcements: this.props.announcements
+      announcements: this.props.announcements,
+      objectives: this.props.objectives
     };
   }
+
+  handleUpdateObjectives = newObjectives => {
+    this.setState({objectives: newObjectives});
+  };
 
   render() {
     const {
@@ -253,7 +258,10 @@ export default class LessonEditor extends Component {
           collapsed={true}
           fullWidth={true}
         >
-          <ObjectivesEditor objectives={this.props.objectives} />
+          <ObjectivesEditor
+            objectives={this.state.objectives}
+            updateObjectives={this.handleUpdateObjectives}
+          />
         </CollapsibleEditorSection>
 
         <CollapsibleEditorSection title="Activities & Levels" fullWidth={true}>
