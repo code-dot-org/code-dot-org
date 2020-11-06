@@ -103,7 +103,6 @@ export default class ProjectCard extends React.Component {
     const shouldShowPublishedAt =
       isPublicGallery && isDetailView && projectData.publishedAt;
     const noTimeOnCardStyle = shouldShowPublishedAt ? {} : styles.noTime;
-    console.log(projectData);
     return (
       <div className="project_card">
         <div style={styles.card}>
