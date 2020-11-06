@@ -492,9 +492,9 @@ module LevelsHelper
     voice_request = Net::HTTP::Get.new(voice_uri.request_uri, {'Authorization': 'Bearer ' + token})
 
     response = voice_http_request.request(voice_request)&.body
-    response.length >= 2 ? JSON.parse(response) : {}
+    response.length >= 2 ? JSON.parse(response) : []
   rescue => e
-    Honeybadger.notify(e, 'Request for list of voices from Azure Speech Service failed')
+    Honeybadger.notify(e, error_message: 'Request for list of voices from Azure Speech Service failed')
     nil
   end
 
@@ -513,7 +513,7 @@ module LevelsHelper
 
     # Then, get the list of voices and languages
     voices = get_azure_speech_service_voices(options[:region], options[:token], timeout)
-    return {} unless voices.present?
+    return {} unless (voices&.length || 0) > 0
     language_dictionary = {}
     voices.each do |voice|
       native_locale_name = Languages.get_native_name_by_locale(voice["Locale"])
