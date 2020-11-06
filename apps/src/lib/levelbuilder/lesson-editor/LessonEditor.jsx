@@ -99,7 +99,11 @@ export default class LessonEditor extends Component {
         lockable: this.state.lockable,
         creativeCommonsLicense: this.state.creativeCommonsLicense,
         assessment: this.state.assessment,
-        unplugged: this.state.unplugged
+        unplugged: this.state.unplugged,
+        overview: this.state.overview,
+        studentOverview: this.state.studentOverview,
+        purpose: this.state.purpose,
+        preparation: this.state.preparation
       })
     })
       .done(data => {
