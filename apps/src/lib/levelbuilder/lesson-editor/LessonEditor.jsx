@@ -84,6 +84,10 @@ export default class LessonEditor extends Component {
     };
   }
 
+  handleUpdateAnnouncements = newAnnouncements => {
+    this.setState({announcements: newAnnouncements});
+  };
+
   handleUpdateObjectives = newObjectives => {
     this.setState({objectives: newObjectives});
   };
@@ -193,8 +197,9 @@ export default class LessonEditor extends Component {
         </CollapsibleEditorSection>
         <CollapsibleEditorSection title="Announcements" collapsed={true}>
           <AnnouncementsEditor
-            defaultAnnouncements={announcements}
+            announcements={announcements}
             inputStyle={styles.input}
+            updateAnnouncements={this.handleUpdateAnnouncements}
           />
         </CollapsibleEditorSection>
 

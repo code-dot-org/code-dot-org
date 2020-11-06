@@ -12,8 +12,9 @@ const sampleAnnouncement = {
 };
 
 const defaultProps = {
-  defaultAnnouncements: [],
-  inputStyle: {}
+  announcements: [],
+  inputStyle: {},
+  updateAnnouncements: () => {}
 };
 
 describe('AnnouncementsEditor', () => {

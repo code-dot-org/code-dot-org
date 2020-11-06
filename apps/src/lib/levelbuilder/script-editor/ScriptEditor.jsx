@@ -106,9 +106,14 @@ export default class ScriptEditor extends React.Component {
     this.state = {
       familyName: this.props.familyName || '',
       isCourse: this.props.isCourse,
-      description: this.props.i18nData.description
+      description: this.props.i18nData.description,
+      announcements: this.props.announcements
     };
   }
+
+  handleUpdateAnnouncements = newAnnouncements => {
+    this.setState({announcements: newAnnouncements});
+  };
 
   handleClearSupportedLocalesSelectClick = () => {
     $(this.supportedLocaleSelect)
@@ -327,8 +332,9 @@ export default class ScriptEditor extends React.Component {
 
         <CollapsibleEditorSection title="Announcements">
           <AnnouncementsEditor
-            defaultAnnouncements={this.props.announcements}
+            announcements={this.state.announcements}
             inputStyle={styles.input}
+            updateAnnouncements={this.handleUpdateAnnouncements}
           />
         </CollapsibleEditorSection>
 
