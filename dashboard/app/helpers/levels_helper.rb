@@ -467,11 +467,12 @@ module LevelsHelper
     fb_options
   end
 
-  def request_azure_speech_service_token(region, api_key)
+  def request_azure_speech_service_token(region, api_key, timeout)
     token_uri = URI.parse("https://#{region}.api.cognitive.microsoft.com/sts/v1.0/issueToken")
     token_http_request = Net::HTTP.new(token_uri.host, token_uri.port)
     token_http_request.use_ssl = true
     token_http_request.verify_mode = OpenSSL::SSL::VERIFY_PEER
+    token_http_request.write_timeout = timeout
     token_request = Net::HTTP::Post.new(token_uri.request_uri, {'Ocp-Apim-Subscription-Key': api_key})
 
     token_http_request.request(token_request)&.body
@@ -480,12 +481,13 @@ module LevelsHelper
     nil
   end
 
-  def get_azure_speech_service_voices(region, token)
+  def get_azure_speech_service_voices(region, token, timeout)
     # TODO: cache list of voices
     voice_uri = URI.parse("https://#{region}.tts.speech.microsoft.com/cognitiveservices/voices/list")
     voice_http_request = Net::HTTP.new(voice_uri.host, voice_uri.port)
     voice_http_request.use_ssl = true
     voice_http_request.verify_mode = OpenSSL::SSL::VERIFY_PEER
+    voice_http_request.read_timeout = timeout
     voice_request = Net::HTTP::Get.new(voice_uri.request_uri, {'Authorization': 'Bearer ' + token})
 
     response = voice_http_request.request(voice_request)&.body
@@ -496,19 +498,20 @@ module LevelsHelper
   end
 
   def azure_speech_service_options
-    # TODO: add Gatekeeper flag and make timeouts configurable via DCDO
+    # TODO: add Gatekeeper flag
     return {} unless @level.game.use_azure_speech_service? &&
       CDO.azure_speech_service_region.present? &&
       CDO.azure_speech_service_key.present?
 
     # First, get the token and region
     options = {}
-    options[:token] = request_azure_speech_service_token(CDO.azure_speech_service_region, CDO.azure_speech_service_key)
+    timeout = DCDO.get('azure_speech_service_timeout', 5)
+    options[:token] = request_azure_speech_service_token(CDO.azure_speech_service_region, CDO.azure_speech_service_key, timeout)
     return {} unless options[:token].present?
     options[:region] = CDO.azure_speech_service_region
 
     # Then, get the list of voices and languages
-    voices = get_azure_speech_service_voices(options[:region], options[:token])
+    voices = get_azure_speech_service_voices(options[:region], options[:token], timeout)
     return {} unless voices.present?
     language_dictionary = {}
     voices.each do |voice|
