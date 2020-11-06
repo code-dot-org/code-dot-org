@@ -26,8 +26,7 @@ class FollowersController < ApplicationController
 
     Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
       if !verify_recaptcha
-        # TODO: Make changes in here with recaptcha
-        flash[:alert] = "Recaptcha Required"
+        flash[:alert] = I18n.t('follower.captcha_required')
       else
         if @user.save && @section&.add_student(@user)
           sign_in(:user, @user)
