@@ -108,6 +108,42 @@ def validate_unit(script, cb_unit)
     raise "no chapters or lessons found"
   end
 
+  chapters = get_chapters(cb_unit)
+
+  # Compare non-lockable lessons from CB and Code Studio.
+  lessons = script.lessons.reject(&:lockable)
+  cb_lessons = chapters.map {|ch| ch['lessons']}.
+    flatten.
+    # In 2020, a code_studio_url indicates a lockable lesson in CSP.
+    reject {|lesson| lesson['code_studio_url'].present?}
+  unless lessons.count == cb_lessons.count
+    raise "mismatched lesson counts for unit #{script.name} CS: #{lesson_names.count} CB: #{cb_lesson_names.count}"
+  end
+  mismatched_names = []
+  lessons.each.with_index do |lesson, index|
+    cb_lesson = cb_lessons[index]
+    position = index + 1
+    raise "unexpected position for lesson '#{lesson.name}'" unless lesson.relative_position == position
+    raise "unexpected number for cb lesson '#{cb_lesson['title']}'" unless cb_lesson['number'] == position
+
+    # The code studio lesson name should generally match the cb lesson title.
+    # Warn if the names differ.
+    #
+    # Also look at the stage_name, which comes from code studio stage details
+    # having been pulled through to CB. If the lesson name matches that name
+    # exactly, then do not warn, because that's a strong signal that we found
+    # the right lesson.
+    unless [cb_lesson['stage_name'], cb_lesson['title']].any? {|name| name.strip.downcase == lesson.name.strip.downcase}
+      mismatched_names.push([lesson.name, cb_lesson['title']])
+    end
+  end
+  if mismatched_names.any?
+    mismatch_summary = mismatched_names.map do |left, right|
+      "'#{left}' --> '#{right}'"
+    end.join("\n")
+    puts "WARNING: some lesson names differ for unit #{script.name}:\n#{mismatch_summary}"
+  end
+
   log "validated unit data for #{script.name}"
 end
 
