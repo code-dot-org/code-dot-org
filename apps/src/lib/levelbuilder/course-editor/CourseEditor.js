@@ -57,6 +57,15 @@ export default class CourseEditor extends Component {
     announcements: PropTypes.arrayOf(announcementShape).isRequired
   };
 
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      descriptionStudent: this.props.descriptionStudent,
+      descriptionTeacher: this.props.descriptionTeacher
+    };
+  }
+
   render() {
     const {
       name,
@@ -123,16 +132,20 @@ export default class CourseEditor extends Component {
           />
         </label>
         <TextareaWithMarkdownPreview
-          markdown={this.props.descriptionStudent}
+          markdown={this.state.descriptionStudent}
           label={'Student Description'}
-          name={'description_student'}
           inputRows={5}
+          handleMarkdownChange={e =>
+            this.setState({descriptionStudent: e.target.value})
+          }
         />
         <TextareaWithMarkdownPreview
-          markdown={this.props.descriptionTeacher}
+          markdown={this.state.descriptionTeacher}
           label={'Teacher Description'}
-          name={'description_teacher'}
           inputRows={5}
+          handleMarkdownChange={e =>
+            this.setState({descriptionTeacher: e.target.value})
+          }
         />
 
         <CollapsibleEditorSection title="Basic Settings">
