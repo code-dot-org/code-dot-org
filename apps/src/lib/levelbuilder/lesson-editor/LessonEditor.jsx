@@ -115,7 +115,8 @@ class LessonEditor extends Component {
         preparation: this.state.preparation,
         objectives: JSON.stringify(this.state.objectives),
         activities: this.serializeActivities(),
-        resources: JSON.stringify(this.props.resources.map(r => r.key))
+        resources: JSON.stringify(this.props.resources.map(r => r.key)),
+        announcements: this.state.announcements
       })
     })
       .done(data => {
@@ -124,6 +125,10 @@ class LessonEditor extends Component {
       .fail(error => {
         console.log(error);
       });
+  };
+
+  handleUpdateAnnouncements = newAnnouncements => {
+    this.setState({announcements: newAnnouncements});
   };
 
   handleUpdateObjectives = newObjectives => {
@@ -271,8 +276,9 @@ class LessonEditor extends Component {
         </CollapsibleEditorSection>
         <CollapsibleEditorSection title="Announcements" collapsed={true}>
           <AnnouncementsEditor
-            defaultAnnouncements={announcements}
+            announcements={announcements}
             inputStyle={styles.input}
+            updateAnnouncements={this.handleUpdateAnnouncements}
           />
         </CollapsibleEditorSection>
 
