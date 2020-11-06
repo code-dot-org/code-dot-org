@@ -1,22 +1,26 @@
 import {assert} from '../../../util/deprecatedChai';
 import React from 'react';
 import {shallow} from 'enzyme';
-import SummaryProgressRow from '@cdo/apps/templates/progress/SummaryProgressRow';
+import {UnconnectedSummaryProgressRow as SummaryProgressRow} from '@cdo/apps/templates/progress/SummaryProgressRow';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {
   fakeLesson,
-  fakeLevels
+  fakeLevels,
+  fakeProgressForLevels
 } from '@cdo/apps/templates/progress/progressTestHelpers';
 import {LevelStatus} from '@cdo/apps/util/sharedConstants';
 
 describe('SummaryProgressRow', () => {
+  let baseLesson = fakeLesson('Maze', 1);
+  const baseLevels = fakeLevels(4);
+  baseLesson.levels = baseLevels;
   const baseProps = {
     dark: false,
-    lesson: fakeLesson('Maze', 1),
+    lesson: baseLesson,
     lessonNumber: 3,
-    levels: fakeLevels(4),
     lockedForSection: false,
-    lessonIsVisible: () => true
+    lessonIsVisible: () => true,
+    studentProgress: fakeProgressForLevels(baseLevels)
   };
 
   it('does not render when lessonIsVisible is false', () => {
@@ -44,14 +48,12 @@ describe('SummaryProgressRow', () => {
   });
 
   it('renders with dashed border when locked for particular student', () => {
+    let progress = fakeProgressForLevels(baseLevels);
+    Object.keys(progress).forEach(key => {
+      progress[key].status = LevelStatus.locked;
+    });
     const wrapper = shallow(
-      <SummaryProgressRow
-        {...baseProps}
-        levels={baseProps.levels.map(level => ({
-          ...level,
-          status: LevelStatus.locked
-        }))}
-      />
+      <SummaryProgressRow {...baseProps} studentProgress={progress} />
     );
     assert.equal(wrapper.props().style.borderStyle, 'dashed');
   });
@@ -67,14 +69,12 @@ describe('SummaryProgressRow', () => {
   });
 
   it('disables bubbles when locked for particular student', () => {
+    let progress = fakeProgressForLevels(baseLevels);
+    Object.keys(progress).forEach(key => {
+      progress[key].status = LevelStatus.locked;
+    });
     const wrapper = shallow(
-      <SummaryProgressRow
-        {...baseProps}
-        levels={baseProps.levels.map(level => ({
-          ...level,
-          status: LevelStatus.locked
-        }))}
-      />
+      <SummaryProgressRow {...baseProps} studentProgress={progress} />
     );
     assert.strictEqual(
       wrapper.find('ProgressBubbleSet').props().disabled,
@@ -100,10 +100,13 @@ describe('SummaryProgressRow', () => {
   });
 
   it('has a lock icon when lockable and locked', () => {
+    let lesson = fakeLesson('Maze', 1, true);
+    const levels = fakeLevels(4);
+    lesson.levels = levels;
     const wrapper = shallow(
       <SummaryProgressRow
         {...baseProps}
-        lesson={fakeLesson('Maze', 1, true)}
+        lesson={lesson}
         lockedForSection={true}
       />
     );
@@ -117,10 +120,13 @@ describe('SummaryProgressRow', () => {
   });
 
   it('has an unlock icon when lockable and unlocked', () => {
+    let lesson = fakeLesson('Maze', 1, true);
+    const levels = fakeLevels(4);
+    lesson.levels = levels;
     const wrapper = shallow(
       <SummaryProgressRow
         {...baseProps}
-        lesson={fakeLesson('Maze', 1, true)}
+        lesson={lesson}
         lockedForSection={false}
       />
     );
@@ -134,10 +140,13 @@ describe('SummaryProgressRow', () => {
   });
 
   it('has two icons when locked and hidden', () => {
+    let lesson = fakeLesson('Maze', 1, true);
+    const levels = fakeLevels(4);
+    lesson.levels = levels;
     const wrapper = shallow(
       <SummaryProgressRow
         {...baseProps}
-        lesson={fakeLesson('Maze', 1, true)}
+        lesson={lesson}
         lockedForSection={true}
         lessonIsVisible={(lesson, viewAs) => viewAs !== ViewType.Student}
       />
