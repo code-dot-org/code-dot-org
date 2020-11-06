@@ -138,7 +138,6 @@ class ProgressBubble extends React.Component {
   render() {
     const {
       level,
-      studentLevelProgress,
       smallBubble,
       selectedSectionId,
       selectedStudentId,
@@ -147,8 +146,13 @@ class ProgressBubble extends React.Component {
       pairingIconEnabled,
       hideAssessmentIcon
     } = this.props;
-
     const levelIsAssessment = isLevelAssessment(level);
+
+    let studentLevelProgress = this.props.studentLevelProgress;
+    if (levelIsAssessment && studentLevelProgress.pages) {
+      // we store per-page progress for multi-page assessments
+      studentLevelProgress = studentLevelProgress.pages[level.levelNumber - 1];
+    }
 
     const number = level.levelNumber;
     const url = level.url;

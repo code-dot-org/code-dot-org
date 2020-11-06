@@ -275,7 +275,14 @@ export const levelProgressFromServer = serverObject => {
     status: serverObject.status || LevelStatus.not_tried,
     result: getLevelResult(serverObject),
     paired: serverObject.paired || false,
-    timeSpent: serverObject.time_spent || 0
+    timeSpent: serverObject.time_spent || 0,
+    pages: serverObject.pages_completed
+      ? serverObject.pages_completed.map(
+          pageResult =>
+            (pageResult && levelProgressFromResult(pageResult)) ||
+            levelProgressWithStatus(LevelStatus.not_tried)
+        )
+      : null
   };
 };
 

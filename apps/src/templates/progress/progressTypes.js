@@ -50,13 +50,23 @@ export const levelType = PropTypes.shape({
  * A boolean indicating if a student was paired on a level.
  * @property {number} timeSpent
  * An optional value indicating the time a student spent on a level.
+ * @property {array} pages
+ * Array of StudentLevelProgress objects representing progress on individual
+ * pages of a multi-page assessment
  */
-export const studentLevelProgressType = PropTypes.shape({
+const studentLevelProgressShape = {
   status: PropTypes.string.isRequired,
   result: PropTypes.number.isRequired,
   paired: PropTypes.bool.isRequired,
   timeSpent: PropTypes.number
-});
+};
+// Avoid recursive definition
+studentLevelProgressShape.pages = PropTypes.arrayOf(
+  PropTypes.shape(studentLevelProgressShape)
+);
+export const studentLevelProgressType = PropTypes.shape(
+  studentLevelProgressShape
+);
 
 /**
  * @typedef {Object} Lesson

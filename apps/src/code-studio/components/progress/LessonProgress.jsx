@@ -14,6 +14,7 @@ import {
   levelType,
   studentLevelProgressType
 } from '@cdo/apps/templates/progress/progressTypes';
+import {LevelKind} from '@cdo/apps/util/sharedConstants';
 import $ from 'jquery';
 
 const styles = {
@@ -181,6 +182,11 @@ class LessonProgress extends Component {
       filteredLevels = filteredLevels.filter(level => !level.isConceptLevel);
     }
 
+    const location = window.location.href;
+    const currentPage = parseInt(
+      location.substring(location.lastIndexOf('/') + 1)
+    );
+
     const {
       headerFullProgressOffset,
       vignetteStyle
@@ -204,25 +210,44 @@ class LessonProgress extends Component {
             style={styles.inner}
           >
             {lessonTrophyEnabled && <div style={styles.spacer} />}
-            {filteredLevels.map((level, index) => (
-              <div
-                key={index}
-                ref={level.id === currentLevelId ? 'currentLevel' : null}
-                style={{
-                  ...(level.isUnplugged &&
-                    level.id === currentLevelId &&
-                    styles.pillContainer)
-                }}
-              >
-                <ProgressBubble
-                  level={level}
-                  studentLevelProgress={studentProgress[level.id]}
-                  disabled={false}
-                  smallBubble={level.id !== currentLevelId}
-                  lessonTrophyEnabled={lessonTrophyEnabled}
-                />
-              </div>
-            ))}
+            {filteredLevels.map((level, index) => {
+              let isCurrentLevel = level.id === currentLevelId;
+              let progress = studentProgress[level.id];
+
+              // This is a hack to handle multi-page assessments. The pages are
+              // each represented by level objects with the same id, but with
+              // different level numbers. So we use the page number from the
+              // current url to determined the current active level.
+              if (level.kind === LevelKind.assessment) {
+                isCurrentLevel =
+                  isCurrentLevel && level.levelNumber === currentPage;
+
+                // For multi-page assessments we want page-specific progress
+                if (progress.pages) {
+                  progress = progress.pages[level.levelNumber - 1];
+                }
+              }
+
+              return (
+                <div
+                  key={index}
+                  ref={isCurrentLevel ? 'currentLevel' : null}
+                  style={{
+                    ...(level.isUnplugged &&
+                      isCurrentLevel &&
+                      styles.pillContainer)
+                  }}
+                >
+                  <ProgressBubble
+                    level={level}
+                    studentLevelProgress={progress}
+                    disabled={false}
+                    smallBubble={!isCurrentLevel}
+                    lessonTrophyEnabled={lessonTrophyEnabled}
+                  />
+                </div>
+              );
+            })}
             {lessonExtrasUrl && !lessonTrophyEnabled && (
               <div ref={onLessonExtras ? 'currentLevel' : null}>
                 <LessonExtrasProgressBubble
