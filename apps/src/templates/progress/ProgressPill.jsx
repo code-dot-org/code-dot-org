@@ -90,7 +90,7 @@ class ProgressPill extends React.Component {
     let style = {
       ...styles.levelPill,
       ...(url && hoverStyle),
-      ...(!multilevel && levelProgressStyle(levelStatus, false))
+      ...(!multilevel && levelProgressStyle(levelStatus, level.kind, false))
     };
 
     // If we're passed a tooltip, we also need to reference it from our div
