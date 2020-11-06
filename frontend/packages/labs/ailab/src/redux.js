@@ -22,6 +22,7 @@ import { ColumnTypes } from "./constants.js";
 
 // Action types
 const RESET_STATE = "RESET_STATE";
+const SET_MODE = "SET_MODE";
 const SET_SELECTED_CSV = "SET_SELECTED_CSV";
 const SET_IMPORTED_DATA = "SET_IMPORTED_DATA";
 const SET_SELECTED_TRAINER = "SET_SELECTED_TRAINER";
@@ -42,6 +43,10 @@ const SET_PREDICTION = "SET_PREDICTION";
 const SET_MODEL_SIZE = "SET_MODEL_SIZE";
 
 // Action creators
+export function setMode(mode) {
+  return { type: SET_MODE, mode };
+}
+
 export function setSelectedCSV(csvfile) {
   return { type: SET_SELECTED_CSV, csvfile };
 }
@@ -153,6 +158,12 @@ const initialState = {
 
 // Reducer
 export default function rootReducer(state = initialState, action) {
+  if (action.type === SET_MODE) {
+    return {
+      ...state,
+      mode: action.mode
+    }
+  }
   if (action.type === SET_SELECTED_CSV) {
     return {
       ...state,
