@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 import SelectDataset from "./UIComponents/SelectDataset";
 import DataDisplay from "./UIComponents/DataDisplay";
 import SelectFeatures from "./UIComponents/SelectFeatures";
@@ -9,10 +10,14 @@ import Results from "./UIComponents/Results";
 import Predict from "./UIComponents/Predict";
 
 export default class App extends Component {
+  static propTypes = {
+    mode: PropTypes.object
+  };
+
   render() {
     return (
       <div>
-        {this.props.mode.id !== "load_dataset" && (
+        {(!this.props.mode || this.props.mode.id !== "load_dataset") && (
           <SelectDataset />
         )}
         <DataDisplay />

@@ -46,6 +46,7 @@
     "eslint-plugin-react": "7.14.3",
     "jest": "^23.6.0",
     "ml-knn": "^3.0.0",
+    "query-string": "4.1.0",
     "react": "~15.4.0",
     "react-dom": "~15.4.0",
     "react-papaparse": "^3.8.0",

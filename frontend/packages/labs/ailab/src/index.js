@@ -10,9 +10,9 @@ import { parseCSV } from "./csvReaderWrapper";
 export const store = createStore(rootReducer);
 
 export const initAll = function(options) {
+  // Handle an optional mode.
   const mode = options && options.mode;
-
-  setMode(mode);
+  store.dispatch(setMode(mode));
   processMode(mode);
 
   ReactDOM.render(
@@ -23,12 +23,15 @@ export const initAll = function(options) {
   );
 };
 
+// Process an optional mode.
 const processMode = mode => {
   const assetPath = global.__ml_playground_asset_public_path__;
 
-  if (mode.id === "load_dataset") {
-    const path = allDatasets.filter(item => {return item.id === mode.setId})[0].path;
-    store.dispatch(setSelectedCSV(assetPath + path));
-    parseCSV(assetPath + path, true);
+  if (mode) {
+    if (mode.id === "load_dataset") {
+      const path = allDatasets.filter(item => {return item.id === mode.setId})[0].path;
+      store.dispatch(setSelectedCSV(assetPath + path));
+      parseCSV(assetPath + path, true);
+    }
   }
 };
