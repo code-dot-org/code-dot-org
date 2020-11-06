@@ -23,22 +23,29 @@ const styles = {
     width: '100%'
   },
   editor: {
-    minWidth: 560,
-    width: '40%'
+    minWidth: 560
   },
   options: {
     minWidth: 215,
-    width: '15%',
     maxWidth: 255
   },
   preview: {
-    minWidth: 560,
-    width: '40%',
-    maxWidth: '60%'
+    width: '45%',
+    marginRight: 12
   },
   editorHeader: {
     display: 'flex',
     justifyContent: 'space-between'
+  },
+  editorAndOptions: {
+    minWidth: 560,
+    display: 'flex',
+    flexDirection: 'column',
+    width: '45%',
+    marginRight: 12
+  },
+  previewBox: {
+    border: '1px solid #eee'
   }
 };
 
@@ -166,163 +173,170 @@ class FoormEditor extends React.Component {
   render() {
     return (
       <div style={styles.foormEditor}>
-        <div style={styles.editor} className="foorm-editor">
-          {this.props.formName && (
-            <div style={styles.editorHeader}>
-              <h3>{`${this.props.formName}, version ${
-                this.props.formVersion
-              }`}</h3>
-              <h3>{`Form State: ${
-                this.props.isFormPublished ? 'Published' : 'Draft'
-              }`}</h3>
-            </div>
-          )}
-          {/* textarea is filled by populateCodeMirror()*/}
-          <textarea
-            ref="content"
-            // 3rd parameter specifies number of spaces to insert
-            // into the output JSON string for readability purposes.
-            // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify
-            value={JSON.stringify(this.props.formQuestions, null, 2)}
-            // Change handler is required for this element, but changes will be handled by the code mirror.
-            onChange={() => {}}
-          />
-        </div>
-        <div style={styles.options} className="foorm-options">
-          {this.props.formHasError && (
-            <div style={styles.errorMessage}>
-              <FontAwesome icon="exclamation-triangle" /> There is a parsing
-              error in the survey configuration. Errors are noted on the left
-              side of the editor.
-            </div>
-          )}
-          {this.state.libraryError && (
-            <div style={styles.errorMessage}>
-              <FontAwesome icon="exclamation-triangle" />
-              {`There is an error in the use of at least one library question. The error is: ${
-                this.state.libraryErrorMessage
-              }`}
-            </div>
-          )}
-          {!this.props.formHasError && !this.state.libraryError && (
-            <div>
-              <form>
-                <h3>Survey Variables</h3>
-                <label>
-                  workshop_course <br />
-                  <input
-                    type="text"
-                    value={this.state.workshop_course}
-                    onChange={e =>
-                      this.setState({workshop_course: e.target.value})
-                    }
-                  />
-                </label>
-                <label>
-                  workshop_subject <br />
-                  <input
-                    type="text"
-                    value={this.state.workshop_subject}
-                    onChange={e =>
-                      this.setState({workshop_subject: e.target.value})
-                    }
-                  />
-                </label>
-                <label>
-                  num_facilitators
-                  <br />
-                  <input
-                    type="number"
-                    value={this.state.num_facilitators}
-                    onChange={this.updateFacilitators}
-                  />
-                </label>
-                <label>
-                  regional_partner_name <br />
-                  <input
-                    type="text"
-                    value={this.state.regional_partner_name}
-                    onChange={e =>
-                      this.setState({regional_partner_name: e.target.value})
-                    }
-                  />
-                </label>
-                <label>
-                  is_virtual <br />
-                  <input
-                    type="boolean"
-                    value={this.state.is_virtual}
-                    onChange={e => this.setState({is_virtual: e.target.value})}
-                  />
-                </label>
-                <label>
-                  is_friday_institute <br />
-                  <input
-                    type="boolean"
-                    value={this.state.is_friday_institute}
-                    onChange={e =>
-                      this.setState({is_friday_institute: e.target.value})
-                    }
-                  />
-                </label>
+        <div style={styles.editorAndOptions}>
+          <div style={styles.editor} className="foorm-editor">
+            {this.props.formName && (
+              <div style={styles.editorHeader}>
+                <h3>{`${this.props.formName}, version ${
+                  this.props.formVersion
+                }`}</h3>
+                <h3>{`Form State: ${
+                  this.props.isFormPublished ? 'Published' : 'Draft'
+                }`}</h3>
+              </div>
+            )}
+            {/* textarea is filled by populateCodeMirror()*/}
+            <textarea
+              ref="content"
+              // 3rd parameter specifies number of spaces to insert
+              // into the output JSON string for readability purposes.
+              // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify
+              value={JSON.stringify(this.props.formQuestions, null, 2)}
+              // Change handler is required for this element, but changes will be handled by the code mirror.
+              onChange={() => {}}
+            />
+          </div>
+          <div style={styles.options} className="foorm-options">
+            {!this.props.formHasError && !this.state.libraryError && (
+              <div>
+                <form>
+                  <h3>Survey Variables</h3>
+                  <label>
+                    workshop_course <br />
+                    <input
+                      type="text"
+                      value={this.state.workshop_course}
+                      onChange={e =>
+                        this.setState({workshop_course: e.target.value})
+                      }
+                    />
+                  </label>
+                  <label>
+                    workshop_subject <br />
+                    <input
+                      type="text"
+                      value={this.state.workshop_subject}
+                      onChange={e =>
+                        this.setState({workshop_subject: e.target.value})
+                      }
+                    />
+                  </label>
+                  <label>
+                    num_facilitators
+                    <br />
+                    <input
+                      type="number"
+                      value={this.state.num_facilitators}
+                      onChange={this.updateFacilitators}
+                    />
+                  </label>
+                  <label>
+                    regional_partner_name <br />
+                    <input
+                      type="text"
+                      value={this.state.regional_partner_name}
+                      onChange={e =>
+                        this.setState({regional_partner_name: e.target.value})
+                      }
+                    />
+                  </label>
+                  <label>
+                    is_virtual <br />
+                    <input
+                      type="boolean"
+                      value={this.state.is_virtual}
+                      onChange={e =>
+                        this.setState({is_virtual: e.target.value})
+                      }
+                    />
+                  </label>
+                  <label>
+                    is_friday_institute <br />
+                    <input
+                      type="boolean"
+                      value={this.state.is_friday_institute}
+                      onChange={e =>
+                        this.setState({is_friday_institute: e.target.value})
+                      }
+                    />
+                  </label>
 
-                <label>
-                  day <br />
-                  <input
-                    type="number"
-                    value={this.state.day}
-                    onChange={e => this.setState({day: e.target.value})}
-                  />
-                </label>
-                <label>
-                  workshop_agenda <br />
-                  <input
-                    type="text"
-                    value={this.state.workshop_agenda}
-                    onChange={e =>
-                      this.setState({workshop_agenda: e.target.value})
-                    }
-                  />
-                </label>
-              </form>
-              <ToggleGroup
-                onChange={this.livePreviewToggled}
-                selected={this.state.livePreviewStatus}
-              >
-                <button type="button" value={PREVIEW_ON}>
-                  Live Preview On
-                </button>
-                <button type="button" value={PREVIEW_OFF}>
-                  Live Preview Off
-                </button>
-              </ToggleGroup>
-            </div>
-          )}
+                  <label>
+                    day <br />
+                    <input
+                      type="number"
+                      value={this.state.day}
+                      onChange={e => this.setState({day: e.target.value})}
+                    />
+                  </label>
+                  <label>
+                    workshop_agenda <br />
+                    <input
+                      type="text"
+                      value={this.state.workshop_agenda}
+                      onChange={e =>
+                        this.setState({workshop_agenda: e.target.value})
+                      }
+                    />
+                  </label>
+                </form>
+                <ToggleGroup
+                  onChange={this.livePreviewToggled}
+                  selected={this.state.livePreviewStatus}
+                >
+                  <button type="button" value={PREVIEW_ON}>
+                    Live Preview On
+                  </button>
+                  <button type="button" value={PREVIEW_OFF}>
+                    Live Preview Off
+                  </button>
+                </ToggleGroup>
+              </div>
+            )}
+          </div>
         </div>
         <div style={styles.preview} className="foorm-preview">
-          {this.state.formPreviewQuestions &&
-            !this.props.formHasError &&
-            !this.state.libraryError && (
-              // key allows us to force re-render when preview is called
-              <Foorm
-                formQuestions={this.state.formPreviewQuestions}
-                formName={'preview'}
-                formVersion={0}
-                submitApi={'/none'}
-                key={`form-${this.state.formKey}`}
-                surveyData={{
-                  facilitators: this.state.facilitators,
-                  num_facilitators: this.state.num_facilitators,
-                  workshop_course: this.state.workshop_course,
-                  workshop_subject: this.state.workshop_subject,
-                  regional_partner_name: this.state.regional_partner_name,
-                  is_virtual: this.state.is_virtual,
-                  day: this.state.day,
-                  is_friday_institute: this.state.is_friday_institute,
-                  workshop_agenda: this.state.workshop_agenda
-                }}
-              />
+          <h3>Preview</h3>
+          <div style={styles.previewBox}>
+            {this.props.formHasError && (
+              <div style={styles.errorMessage}>
+                <FontAwesome icon="exclamation-triangle" /> There is a parsing
+                error in the survey configuration. Errors are noted on the left
+                side of the editor.
+              </div>
             )}
+            {this.state.libraryError && (
+              <div style={styles.errorMessage}>
+                <FontAwesome icon="exclamation-triangle" />
+                {`There is an error in the use of at least one library question. The error is: ${
+                  this.state.libraryErrorMessage
+                }`}
+              </div>
+            )}
+            {this.state.formPreviewQuestions &&
+              !this.props.formHasError &&
+              !this.state.libraryError && (
+                // key allows us to force re-render when preview is called
+                <Foorm
+                  formQuestions={this.state.formPreviewQuestions}
+                  formName={'preview'}
+                  formVersion={0}
+                  submitApi={'/none'}
+                  key={`form-${this.state.formKey}`}
+                  surveyData={{
+                    facilitators: this.state.facilitators,
+                    num_facilitators: this.state.num_facilitators,
+                    workshop_course: this.state.workshop_course,
+                    workshop_subject: this.state.workshop_subject,
+                    regional_partner_name: this.state.regional_partner_name,
+                    is_virtual: this.state.is_virtual,
+                    day: this.state.day,
+                    is_friday_institute: this.state.is_friday_institute,
+                    workshop_agenda: this.state.workshop_agenda
+                  }}
+                />
+              )}
+          </div>
         </div>
       </div>
     );
