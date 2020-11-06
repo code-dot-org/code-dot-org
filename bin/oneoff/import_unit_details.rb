@@ -14,6 +14,11 @@ def log(str)
   puts str if $verbose
 end
 
+$quiet = false
+def warn(str)
+  puts str unless $quiet && !$verbose
+end
+
 # Wait until after initial error checking before loading the rails environment.
 def require_rails_env
   log "loading rails environment..."
@@ -50,6 +55,10 @@ def parse_options
 
       opts.on('-n', '--dry-run', 'Perform basic validation without importing any data.') do
         options.dry_run = true
+      end
+
+      opts.on('-q', '--quiet', 'Silence warnings.') do
+        $quiet = true
       end
 
       opts.on('-v', '--verbose', 'Use verbose debug logging.') do
@@ -154,9 +163,9 @@ def validate_unit(script, cb_unit)
 
   if mismatched_names.any?
     mismatch_summary = mismatched_names.map do |left, right|
-      "'#{left}' --> '#{right}'"
+      "  '#{left}' --> '#{right}'"
     end.join("\n")
-    puts "WARNING: some lesson names differ for unit #{script.name}:\n#{mismatch_summary}"
+    warn "WARNING: some lesson names differ for unit #{script.name}:\n#{mismatch_summary}"
   end
 
   log "validated unit data for #{script.name}"
