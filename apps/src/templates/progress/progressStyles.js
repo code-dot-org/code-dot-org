@@ -1,5 +1,5 @@
 import color from '@cdo/apps/util/color';
-import {LevelStatus} from '@cdo/apps/util/sharedConstants';
+import {LevelStatus, LevelKind} from '@cdo/apps/util/sharedConstants';
 
 export const DOT_SIZE = 30;
 export const DIAMOND_DOT_SIZE = 22;
@@ -65,7 +65,7 @@ const statusStyle = {
  * Given a level object, figure out styling related to its color, border color,
  * and background color
  */
-export const levelProgressStyle = (levelStatus, disabled) => {
+export const levelProgressStyle = (levelStatus, levelKind, disabled) => {
   let style = {
     borderWidth: 2,
     color: color.charcoal,
@@ -77,7 +77,10 @@ export const levelProgressStyle = (levelStatus, disabled) => {
   }
 
   if (levelStatus !== LevelStatus.not_tried) {
-    style.borderColor = color.level_perfect;
+    style.borderColor =
+      levelKind === LevelKind.assessment
+        ? color.level_submitted
+        : color.level_perfect;
   }
 
   style = {
