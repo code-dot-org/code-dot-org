@@ -396,6 +396,12 @@ class LevelsHelperTest < ActionView::TestCase
     assert_equal expected_options, azure_speech_service_options
   end
 
+  test 'azure_speech_service_options returns an empty object if gatekeeper disallows it' do
+    expects(:get_azure_speech_service_token).never
+    Gatekeeper.expects(:allows).with('azure_speech_service', default: true).returns(false)
+    assert_empty azure_speech_service_options
+  end
+
   test 'azure_speech_service_options returns empty object if any responses are empty' do
     @level.game.stubs(:use_azure_speech_service?).returns(true)
     CDO.stubs(:azure_speech_service_region).returns('westus')
