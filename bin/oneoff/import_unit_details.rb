@@ -111,6 +111,10 @@ def validate_unit(script, cb_unit)
   log "validated unit data for #{script.name}"
 end
 
+def get_chapters(cb_unit)
+  cb_unit['chapters'].presence || [{'lessons' => cb_unit['lessons']}]
+end
+
 options = parse_options
 raise "unit name is required. Use -h for options." unless options.unit_names.present?
 
