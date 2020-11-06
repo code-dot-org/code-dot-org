@@ -64,7 +64,7 @@ export class TeacherPanelProgressBubble extends React.Component {
 
     const number = level.levelNumber;
 
-    const hideNumber = level.paired || level.bonus;
+    const hideNumber = levelProgress.paired || level.bonus;
 
     const style = {
       ...styles.main,
@@ -86,7 +86,7 @@ export class TeacherPanelProgressBubble extends React.Component {
         <div style={style}>
           <div
             style={{
-              fontSize: level.paired || level.bonus ? 14 : 16,
+              fontSize: levelProgress.paired || level.bonus ? 14 : 16,
               ...styles.contents,
               ...(level.isConceptLevel && styles.diamondContents)
             }}

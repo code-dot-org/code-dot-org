@@ -135,7 +135,7 @@ export class SelectedStudentInfo extends React.Component {
         />
         <div style={styles.studentInfo}>
           <div style={styles.name}>{selectedStudent.name}</div>
-          {level.paired && (
+          {levelProgress.paired && (
             <div>
               <div>{i18n.workedWith()}</div>
               {level.navigator && (

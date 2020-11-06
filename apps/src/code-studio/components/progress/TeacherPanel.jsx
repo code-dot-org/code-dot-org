@@ -16,7 +16,11 @@ import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {studentType} from '@cdo/apps/templates/progress/progressTypes';
-import {levelProgressFromServer} from '@cdo/apps/templates/progress/progressHelpers';
+import {LevelStatus} from '@cdo/apps/util/sharedConstants';
+import {
+  levelProgressFromServer,
+  levelProgressWithStatus
+} from '@cdo/apps/templates/progress/progressHelpers';
 
 const styles = {
   scrollable: {
@@ -123,7 +127,7 @@ class TeacherPanel extends React.Component {
       );
     } else {
       return {
-        id: null,
+        id: -1,
         name: i18n.studentTableTeacherDemo()
       };
     }
@@ -175,11 +179,14 @@ class TeacherPanel extends React.Component {
     } = this.props;
 
     const sectionId = selectedSection && selectedSection.id;
+    const studentProgress =
+      (this.currentStudent &&
+        this.levelProgressByStudent[this.currentStudent.id]) ||
+      {};
     const levelProgress =
-      this.currentStudent &&
-      this.levelProgressByStudent[this.currentStudent.id][
-        this.currentStudentLevel.id
-      ];
+      (this.currentStudentLevel &&
+        studentProgress[this.currentStudentLevel.id]) ||
+      levelProgressWithStatus(LevelStatus.not_tried);
 
     return (
       <TeacherPanelContainer logToFirehose={this.logToFirehose}>

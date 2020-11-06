@@ -375,7 +375,7 @@ export const useDbProgress = () => ({
   type: USE_DB_PROGRESS
 });
 
-const setProgress = progressByLevel => ({
+export const setProgress = progressByLevel => ({
   type: SET_PROGRESS,
   progressByLevel
 });

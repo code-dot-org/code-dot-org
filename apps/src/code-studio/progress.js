@@ -2,7 +2,6 @@ import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
-import _ from 'lodash';
 import queryString from 'query-string';
 import clientState from './clientState';
 import {convertAssignmentVersionShapeFromServer} from '@cdo/apps/templates/teacherDashboard/shapes';
@@ -13,10 +12,10 @@ import {getStore} from './redux';
 import {registerReducers} from '@cdo/apps/redux';
 import {setViewType, ViewType} from './viewAsRedux';
 import {getHiddenStages, initializeHiddenScripts} from './hiddenStageRedux';
-import {TestResults} from '@cdo/apps/constants';
 import {
   initProgress,
   mergeProgressResults,
+  setProgress,
   disablePostMilestone,
   setIsHocScript,
   setIsAge13Required,
@@ -25,6 +24,7 @@ import {
   setCurrentStageId,
   queryUserProgress as reduxQueryUserProgress
 } from './progressRedux';
+import {processServerStudentProgress} from '@cdo/apps/templates/progress/progressHelpers';
 import {setVerified} from '@cdo/apps/code-studio/verifiedTeacherRedux';
 import {
   selectSection,
@@ -116,11 +116,7 @@ progress.generateStageProgress = function(
   );
 
   store.dispatch(
-    mergeProgressResults(
-      _.mapValues(progressData.levels, level =>
-        level.submitted ? TestResults.SUBMITTED_RESULT : level.result
-      )
-    )
+    setProgress(processServerStudentProgress(progressData.progress))
   );
 
   store.dispatch(setIsHocScript(isHocScript));
