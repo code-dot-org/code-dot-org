@@ -9,9 +9,9 @@ export default class MicrobitFirmataWrapper extends MBFirmataClient {
     this.digitalCallbacks = [];
   }
 
-  connectBoard() {
+  connectBoard(port) {
     return Promise.resolve()
-      .then(() => this.connect())
+      .then(() => this.setSerialPort(port))
       .then(() => {
         return this.setAnalogSamplingInterval(SAMPLE_INTERVAL);
       });
