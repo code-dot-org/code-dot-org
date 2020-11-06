@@ -103,7 +103,7 @@ export default class ProjectCard extends React.Component {
     const shouldShowPublishedAt =
       isPublicGallery && isDetailView && projectData.publishedAt;
     const noTimeOnCardStyle = shouldShowPublishedAt ? {} : styles.noTime;
-
+    console.log(projectData);
     return (
       <div className="project_card">
         <div style={styles.card}>
@@ -145,13 +145,18 @@ export default class ProjectCard extends React.Component {
               </span>
             )}
           </div>
-          {shouldShowPublishedAt && (
+          {shouldShowPublishedAt && !projectData.isFeatured && (
             <div style={styles.lastEdit}>
               {i18n.published()}:&nbsp;
               <UnlocalizedTimeAgo
                 style={styles.bold}
                 dateString={projectData.publishedAt}
               />
+            </div>
+          )}
+          {shouldShowPublishedAt && projectData.isFeatured && (
+            <div style={styles.lastEdit}>
+              <span style={styles.bold}>{i18n.featuredProject()}</span>
             </div>
           )}
           {isPersonalGallery && projectData.updatedAt && (

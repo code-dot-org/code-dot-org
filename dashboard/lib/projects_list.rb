@@ -224,7 +224,8 @@ module ProjectsList
           "type" => project_details[:project_type],
           "publishedAt" => project_details[:published_at],
           "studentName" => UserHelpers.initial(project_details[:name]),
-          "studentAgeRange" => UserHelpers.age_range_from_birthday(project_details[:birthday])
+          "studentAgeRange" => UserHelpers.age_range_from_birthday(project_details[:birthday]),
+          "isFeatured" => true
         }
         data_for_featured_project_cards << data_for_featured_project_card
       end
