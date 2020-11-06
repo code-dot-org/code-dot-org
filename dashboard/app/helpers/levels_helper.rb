@@ -499,8 +499,8 @@ module LevelsHelper
   end
 
   def azure_speech_service_options
-    # TODO: add Gatekeeper flag
-    return {} unless @level.game.use_azure_speech_service? &&
+    return {} unless Gatekeeper.allows('azure_speech_service', default: true) &&
+      @level.game.use_azure_speech_service? &&
       CDO.azure_speech_service_region.present? &&
       CDO.azure_speech_service_key.present?
 
