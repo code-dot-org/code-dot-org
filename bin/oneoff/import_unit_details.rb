@@ -86,12 +86,11 @@ def main(options)
 end
 
 def fetch(url)
-  log "fetching unit json from #{url}"
   uri = URI(url)
   response = Net::HTTP.get_response(uri)
   raise "HTTP status #{response.code} fetching #{uri}" unless response.is_a? Net::HTTPSuccess
   body = response.body
-  log "received #{body.length} bytes of unit json."
+  log "fetched #{body.length} bytes of unit json from #{uri}"
   body
 end
 
