@@ -467,7 +467,7 @@ module LevelsHelper
     fb_options
   end
 
-  def request_azure_speech_service_token(region, api_key, timeout)
+  def get_azure_speech_service_token(region, api_key, timeout)
     token_uri = URI.parse("https://#{region}.api.cognitive.microsoft.com/sts/v1.0/issueToken")
     token_http_request = Net::HTTP.new(token_uri.host, token_uri.port)
     token_http_request.use_ssl = true
@@ -507,7 +507,7 @@ module LevelsHelper
     # First, get the token and region
     options = {}
     timeout = DCDO.get('azure_speech_service_timeout', 5)
-    options[:token] = request_azure_speech_service_token(CDO.azure_speech_service_region, CDO.azure_speech_service_key, timeout)
+    options[:token] = get_azure_speech_service_token(CDO.azure_speech_service_region, CDO.azure_speech_service_key, timeout)
     return {} unless options[:token].present?
     options[:region] = CDO.azure_speech_service_region
 
