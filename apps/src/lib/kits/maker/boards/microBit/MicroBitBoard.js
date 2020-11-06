@@ -11,6 +11,8 @@ import MBFirmataWrapper from './MBFirmataWrapper';
 import ExternalLed from './ExternalLed';
 import ExternalButton from './ExternalButton';
 import CapacitiveTouchSensor from './CapacitiveTouchSensor';
+import {isNodeSerialAvailable} from '../../portScanning';
+import ChromeSerialPort from 'chrome-serialport';
 
 /**
  * Controller interface for BBC micro:bit board using
@@ -25,8 +27,10 @@ export default class MicroBitBoard extends EventEmitter {
     /** @private {Object} Map of component controllers */
     this.prewiredComponents_ = null;
 
+    let portType = isNodeSerialAvailable() ? SerialPort : ChromeSerialPort;
+
     /** @private {MicrobitFirmataClient} serial port controller */
-    this.boardClient_ = new MBFirmataWrapper(SerialPort);
+    this.boardClient_ = new MBFirmataWrapper(portType);
 
     /** @private {Array} List of dynamically-created component controllers. */
     this.dynamicComponents_ = [];
@@ -45,6 +49,37 @@ export default class MicroBitBoard extends EventEmitter {
   }
 
   /**
+   * Create a serial port controller and open the serial port immediately.
+   * @return {SerialPort}
+   */
+  openSerialPort() {
+    const portName = this.port ? this.port.comName : undefined;
+    const SerialPortType = isNodeSerialAvailable()
+      ? SerialPort
+      : ChromeSerialPort.SerialPort;
+
+    /** @const {number} serial port transfer rate */
+    const SERIAL_BAUD = 57600;
+
+    let serialPort;
+
+    let constructorFunction = callback => {
+      serialPort = new SerialPortType(
+        portName,
+        {
+          baudRate: SERIAL_BAUD
+        },
+        true,
+        callback
+      );
+      console.log(serialPort);
+    };
+    return new Promise(resolve => constructorFunction(resolve)).then(() =>
+      Promise.resolve(serialPort)
+    );
+  }
+
+  /**
    * Connect to the micro:bit firmata client. After connecting, check the firmata
    * version and firmware version response on the boardClient. If not connected
    * or a different firmware version discovered, reject. Otherwise, resolve.
@@ -54,6 +89,7 @@ export default class MicroBitBoard extends EventEmitter {
    */
   checkExpectedFirmware() {
     return Promise.resolve()
+      .then(() => this.openSerialPort())
       .then(() => this.boardClient_.connectBoard())
       .then(() => {
         // Expect this.boardClient_.firmataVersion to equal "Firmata Protocol <version number>"
