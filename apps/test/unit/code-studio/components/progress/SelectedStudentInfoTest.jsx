@@ -15,7 +15,6 @@ const defaultProps = {
     isConceptLevel: false,
     levelNumber: 4,
     navigator: null,
-    paired: null,
     passed: false,
     user_id: 1
   },
@@ -40,7 +39,10 @@ describe('SelectedStudentInfo', () => {
         level={{
           ...defaultProps.level,
           submitLevel: true,
-          submitted: true,
+          submitted: true
+        }}
+        levelProgress={{
+          ...defaultProps.levelProgress,
           status: LevelStatus.submitted
         }}
       />
@@ -56,7 +58,10 @@ describe('SelectedStudentInfo', () => {
         {...defaultProps}
         level={{
           ...defaultProps.level,
-          contained: true,
+          contained: true
+        }}
+        levelProgress={{
+          ...defaultProps.levelProgress,
           status: LevelStatus.perfect
         }}
       />
@@ -71,9 +76,12 @@ describe('SelectedStudentInfo', () => {
         {...defaultProps}
         level={{
           ...defaultProps.level,
-          paired: true,
-          status: LevelStatus.perfect,
           navigator: 'Student 2'
+        }}
+        levelProgress={{
+          ...defaultProps.levelProgress,
+          paired: true,
+          status: LevelStatus.perfect
         }}
       />
     );
@@ -89,9 +97,12 @@ describe('SelectedStudentInfo', () => {
         {...defaultProps}
         level={{
           ...defaultProps.level,
-          paired: true,
-          status: LevelStatus.perfect,
           driver: 'Student 2'
+        }}
+        levelProgress={{
+          ...defaultProps.levelProgress,
+          paired: true,
+          status: LevelStatus.perfect
         }}
       />
     );
