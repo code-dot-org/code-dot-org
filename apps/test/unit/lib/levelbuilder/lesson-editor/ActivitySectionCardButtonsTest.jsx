@@ -15,6 +15,7 @@ describe('ActivitySectionCardButtons', () => {
     appendResourceLink = sinon.spy();
     defaultProps = {
       activitySection: sampleActivities[0].activitySections[1],
+      activityPosition: 1,
       addTip,
       updateTip,
       addLevel,
@@ -55,7 +56,7 @@ describe('ActivitySectionCardButtons', () => {
     const wrapper = shallow(<ActivitySectionCardButtons {...defaultProps} />);
 
     const button = wrapper.find('button').at(1);
-    expect(button.text()).to.include('Tip');
+    expect(button.text()).to.include('Callout');
     button.simulate('mouseDown');
     expect(wrapper.state().tipToEdit).to.not.be.null;
   });

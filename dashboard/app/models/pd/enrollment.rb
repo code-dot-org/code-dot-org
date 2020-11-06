@@ -66,7 +66,7 @@ class Pd::Enrollment < ActiveRecord::Base
 
   before_validation :autoupdate_user_field
   after_create :set_default_scholarship_info
-  after_save :enroll_in_corresponding_online_learning, if: -> {!deleted? && (user_id_changed? || email_changed?)}
+  after_save :enroll_in_corresponding_online_learning, if: -> {!deleted? && (saved_change_to_user_id? || saved_change_to_email?)}
   after_save :authorize_teacher_account
 
   serialized_attrs %w(
