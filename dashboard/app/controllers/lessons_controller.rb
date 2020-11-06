@@ -18,23 +18,7 @@ class LessonsController < ApplicationController
 
   # GET /lessons/1
   def show
-    @lesson_data = {
-      unit: {
-        displayName: @lesson.script.localized_title,
-        link: @lesson.script.link,
-        lessons: @lesson.script.lessons.map {|lesson| {displayName: lesson.localized_name, link: lesson_path(id: lesson.id), position: lesson.relative_position, lockable: lesson.lockable}}
-      },
-      position: @lesson.relative_position,
-      lockable: @lesson.lockable,
-      displayName: @lesson.name,
-      overview: @lesson.overview || '',
-      announcements: @lesson.announcements,
-      purpose: @lesson.purpose || '',
-      preparation: @lesson.preparation || '',
-      activities: @lesson.lesson_activities.map(&:summarize_for_lesson_show),
-      resources: @lesson.resources_for_lesson_plan(@current_user&.authorized_teacher?),
-      objectives: @lesson.objectives.map(&:summarize_for_lesson_show)
-    }
+    @lesson_data = @lesson.summarize_for_lesson_show(@current_user)
   end
 
   # GET /lessons/1/edit
@@ -57,7 +41,7 @@ class LessonsController < ApplicationController
 
     redirect_to lesson_path(id: @lesson.id)
   rescue ActiveRecord::RecordNotFound, ActiveRecord::RecordInvalid => e
-    render(status: :not_acceptable, text: e.message)
+    render(status: :not_acceptable, plain: e.message)
   end
 
   private

@@ -8,7 +8,6 @@ import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
 import AnnouncementsEditor from '@cdo/apps/lib/levelbuilder/announcementsEditor/AnnouncementsEditor';
 import CollapsibleEditorSection from '@cdo/apps/lib/levelbuilder/CollapsibleEditorSection';
-import {resourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
 import RelatedLessons from './RelatedLessons';
 import {relatedLessonShape} from '../shapes';
 import color from '@cdo/apps/util/color';
@@ -62,7 +61,6 @@ export default class LessonEditor extends Component {
     purpose: PropTypes.string,
     preparation: PropTypes.string,
     announcements: PropTypes.arrayOf(announcementShape),
-    resources: PropTypes.arrayOf(resourceShape),
     relatedLessons: PropTypes.arrayOf(relatedLessonShape).isRequired,
     objectives: PropTypes.arrayOf(PropTypes.object).isRequired
   };
@@ -105,9 +103,9 @@ export default class LessonEditor extends Component {
             />
             <HelpTip>
               <p>
-                Check this box if this lesson should be locked from teachers.
-                Only validated teachers will be able to see it and unlock the
-                materials.
+                Check this box if this lesson should be locked for students. If
+                checked, teachers will be able to unlock the lesson for their
+                students.
               </p>
             </HelpTip>
           </label>

@@ -80,12 +80,12 @@ const styles = {
 export default class LessonToken extends Component {
   static propTypes = {
     lessonGroupPosition: PropTypes.number.isRequired,
-    lesson: lessonShape,
+    lesson: lessonShape.isRequired,
     dragging: PropTypes.bool,
     draggedLessonPos: PropTypes.bool,
     delta: PropTypes.number,
     handleDragStart: PropTypes.func,
-    removeLesson: PropTypes.func
+    removeLesson: PropTypes.func.isRequired
   };
 
   handleDragStart = e => {
