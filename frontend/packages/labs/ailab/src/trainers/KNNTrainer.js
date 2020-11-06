@@ -2,9 +2,13 @@
 https://github.com/mljs/knn */
 
 import { store } from "../index.js";
-import { setPrediction, setAccuracyCheckPredictedLabels } from "../redux";
+import {
+  setModelSize,
+  setPrediction,
+  setAccuracyCheckPredictedLabels
+} from "../redux";
 
-const KNN = require('ml-knn');
+const KNN = require("ml-knn");
 
 export default class KNNTrainer {
   startTraining() {
@@ -12,6 +16,10 @@ export default class KNNTrainer {
     this.knn = new KNN(state.trainingExamples, state.trainingLabels, {
       k: 5
     });
+    var model = this.knn.toJSON();
+    const size = Buffer.byteLength(JSON.stringify(model));
+    const kiloBytes = size / 1024;
+    store.dispatch(setModelSize(kiloBytes));
     if (state.accuracyCheckExamples.length > 0) {
       this.batchPredict(state.accuracyCheckExamples);
     } else {

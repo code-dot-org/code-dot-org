@@ -3,7 +3,11 @@ https://github.com/mljs/svm */
 
 /* eslint-env node */
 import { store } from "../index.js";
-import { setPrediction, setAccuracyCheckPredictedLabels } from "../redux";
+import {
+  setPrediction,
+  setAccuracyCheckPredictedLabels,
+  setModelSize
+} from "../redux";
 
 const SVM = require("ml-svm");
 
@@ -69,6 +73,10 @@ export default class SVMTrainer {
 
   train(trainingExamples, trainingLabels) {
     this.svm.train(trainingExamples, trainingLabels);
+    var model = this.svm.toJSON();
+    const size = Buffer.byteLength(JSON.stringify(model));
+    const kiloBytes = size / 1024;
+    store.dispatch(setModelSize(kiloBytes));
   }
 
   batchPredict(accuracyCheckExamples) {
