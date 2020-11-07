@@ -10,6 +10,7 @@ import {
   getUniqueOptionsByColumn,
   getConvertedPredictedLabel
 } from "../redux";
+import { styles } from "../constants";
 
 class Predict extends Component {
   static propTypes = {
@@ -36,10 +37,10 @@ class Predict extends Component {
 
   render() {
     return (
-      <div>
+      <div id="predict">
         {this.props.showPredict && (
           <div>
-            <h2>Test the Model</h2>
+            <div style={styles.largeText}>Test the Model</div>
             <form>
               {this.props.selectedContinuousFeatures.map((feature, index) => {
                 return (
@@ -89,7 +90,7 @@ class Predict extends Component {
             </button>
             {this.props.predictedLabel && (
               <div>
-                <h2> The Machine Learning model predicts... </h2>
+                <div style={styles.largeText}> The Machine Learning model predicts... </div>
                 <span>
                   {this.props.labelColumn}: {this.props.predictedLabel}
                   {this.props.confidence && (

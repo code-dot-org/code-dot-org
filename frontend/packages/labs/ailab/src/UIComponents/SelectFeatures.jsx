@@ -10,6 +10,7 @@ import {
   getSelectableFeatures,
   getSelectableLabels
 } from "../redux";
+import { styles } from "../constants";
 
 class SelectFeatures extends Component {
   static propTypes = {
@@ -38,13 +39,13 @@ class SelectFeatures extends Component {
 
   render() {
     return (
-      <div>
+      <div id="select-features">
         {this.props.isDataUploaded && (
-          <div>
+          <div style={styles.panel}>
             {this.props.selectableLabels.length > 0 && (
               <form>
                 <label>
-                  <h2>Which column contains the labels for your dataset?</h2>
+                  <div style={styles.largeText}>Which column contains the labels for your dataset?</div>
                   <p>
                     The label is the column you'd like to train the model to
                     predict.
@@ -67,8 +68,9 @@ class SelectFeatures extends Component {
             )}
             {this.props.selectableFeatures.length > 0 && (
               <form>
+                <p/>
                 <label>
-                  <h2>Which features are you interested in training on?</h2>
+                  <div style={styles.largeText}>Which features are you interested in training on?</div>
                   <p>
                     Features are the attributes the model will use to make a
                     prediction.
