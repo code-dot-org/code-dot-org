@@ -101,9 +101,7 @@ export default class ProjectCard extends React.Component {
     }
 
     const shouldShowPublicDetails =
-      isPublicGallery &&
-      isDetailView &&
-      (projectData.publishedAt || projectData.isFeatured);
+      isPublicGallery && isDetailView && projectData.publishedAt;
     const noTimeOnCardStyle = shouldShowPublicDetails ? {} : styles.noTime;
 
     return (
