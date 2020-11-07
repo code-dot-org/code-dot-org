@@ -31,7 +31,7 @@ class Results extends Component {
               <div>
                 {this.props.summaryStat.type === MLTypes.REGRESSION && (
                   <div>
-                    <div style={styles.mediumText}>
+                    <div>
                       The average difference between expected and predicted
                       labels is:
                     </div>
@@ -42,7 +42,9 @@ class Results extends Component {
                 )}
                 {this.props.summaryStat.type === MLTypes.CLASSIFICATION && (
                   <div>
-                    <div style={styles.mediumText}>The calculated accuracy of this model is:</div>
+                    <div style={styles.mediumText}>
+                      The calculated accuracy of this model is:
+                    </div>
                     <div style={styles.subPanel}>
                       {this.props.summaryStat.stat}%
                     </div>
