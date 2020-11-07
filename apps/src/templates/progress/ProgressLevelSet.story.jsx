@@ -11,7 +11,7 @@ const levels = fakeLevels(5).map((level, index) => ({
   ...level
 }));
 let progress = fakeProgressForLevels(levels);
-progress[0].status = LevelStatus.perfect;
+progress[1].status = LevelStatus.perfect;
 
 export default storybook => {
   storybook.storiesOf('Progress/ProgressLevelSet', module).addStoryTable([
