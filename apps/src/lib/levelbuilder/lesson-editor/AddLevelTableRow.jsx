@@ -6,8 +6,8 @@ import color from '@cdo/apps/util/color';
 
 export default class AddLevelTableRow extends Component {
   static propTypes = {
-    addLevel: PropTypes.func,
-    level: PropTypes.object
+    addLevel: PropTypes.func.isRequired,
+    level: PropTypes.object.isRequired
   };
 
   constructor(props) {

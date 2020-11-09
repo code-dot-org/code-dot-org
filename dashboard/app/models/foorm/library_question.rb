@@ -35,6 +35,8 @@ class Foorm::LibraryQuestion < ApplicationRecord
       # Let's load the JSON text.
       begin
         source_questions = JSON.parse(File.read(path))
+        # if published is not provided, default to true
+        published = source_questions['published'].nil? ? true : source_questions['published']
 
         source_questions["pages"].map do |page|
           page["elements"].map do |element|
@@ -42,7 +44,8 @@ class Foorm::LibraryQuestion < ApplicationRecord
               library_name: full_name,
               library_version: version,
               question_name: element["name"],
-              question: element.to_json
+              question: element.to_json,
+              published: published
             }
           end
         end

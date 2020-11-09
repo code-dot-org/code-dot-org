@@ -29,13 +29,13 @@ const styles = {
 
 class ActivitySectionCardButtons extends Component {
   static propTypes = {
-    activitySection: activitySectionShape,
-    activityPosition: PropTypes.number,
-    addTip: PropTypes.func,
-    addLevel: PropTypes.func,
-    updateTip: PropTypes.func,
-    removeTip: PropTypes.func,
-    appendResourceLink: PropTypes.func
+    activitySection: activitySectionShape.isRequired,
+    activityPosition: PropTypes.number.isRequired,
+    addTip: PropTypes.func.isRequired,
+    addLevel: PropTypes.func.isRequired,
+    updateTip: PropTypes.func.isRequired,
+    removeTip: PropTypes.func.isRequired,
+    appendResourceLink: PropTypes.func.isRequired
   };
 
   constructor(props) {
@@ -145,7 +145,7 @@ class ActivitySectionCardButtons extends Component {
               type="button"
             >
               <i style={{marginRight: 7}} className="fa fa-plus-circle" />
-              Tip
+              Callout
             </button>
             <button
               onMouseDown={this.handleOpenAddResource}
@@ -175,7 +175,7 @@ class ActivitySectionCardButtons extends Component {
           handleClose={() => this.setState({addResourceOpen: false})}
         />
         {/* Prevent dialog from trying to render when there is no tip to edit*/}
-        {this.state.tipToEdit !== null && (
+        {this.state.tipToEdit && (
           <EditTipDialog
             isOpen={true}
             handleConfirm={this.handleCloseAddTip}

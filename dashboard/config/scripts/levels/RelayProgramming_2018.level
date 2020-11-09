@@ -1,12 +1,12 @@
 <Unplugged>
   <config><![CDATA[{
-  "game_id": 31,
-  "created_at": "2018-05-14T21:48:53.000Z",
-  "user_id": 1,
   "properties": {
     "video_key": "C2_relay_programming",
     "parent_level_id": 9458
   },
+  "game_id": 31,
+  "created_at": "2018-05-14T21:48:53.000Z",
+  "user_id": 1,
   "published": true,
   "audit_log": "[{\"changed_at\":\"2017-08-15 15:09:32 +0000\",\"changed\":[],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2018-05-14 21:51:08 +0000\",\"changed\":[],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
   "level_concept_difficulty": {
