@@ -142,7 +142,7 @@ class Homepage
         {
           type: "cta_button_solid_yellow",
           text: "homepage_action_text_join_us",
-          url: "/bytes"
+          url: "/codebytes"
         }
       ]
     elsif hoc_mode == "actual-hoc"

@@ -12,6 +12,4 @@ Scenario Outline: Simple page view
 Examples:
   | url                                                               | test_name                  |
   | http://advocacy.code.org/                                         | advocacy.code.org home     |
-  | http://csedweek.org/                                              | csedweek.org home          |
-  | http://csedweek.org/about                                         | csedweek.org about         |
   | http://code.org/curriculum/unplugged                              | code.org curriculum        |
