@@ -52,35 +52,35 @@ const styles = {
 
 export default class LessonEditor extends Component {
   static propTypes = {
-    displayName: PropTypes.string.isRequired,
-    overview: PropTypes.string,
-    studentOverview: PropTypes.string,
-    unplugged: PropTypes.bool,
-    lockable: PropTypes.bool,
-    assessment: PropTypes.bool,
-    creativeCommonsLicense: PropTypes.string,
-    purpose: PropTypes.string,
-    preparation: PropTypes.string,
-    announcements: PropTypes.arrayOf(announcementShape),
+    initialDisplayName: PropTypes.string.isRequired,
+    initialOverview: PropTypes.string,
+    initialStudentOverview: PropTypes.string,
+    initialUnplugged: PropTypes.bool,
+    initialLockable: PropTypes.bool,
+    initialAssessment: PropTypes.bool,
+    initialCreativeCommonsLicense: PropTypes.string,
+    initialPurpose: PropTypes.string,
+    initialPreparation: PropTypes.string,
+    initialAnnouncements: PropTypes.arrayOf(announcementShape),
     relatedLessons: PropTypes.arrayOf(relatedLessonShape).isRequired,
-    objectives: PropTypes.arrayOf(PropTypes.object).isRequired
+    initialObjectives: PropTypes.arrayOf(PropTypes.object).isRequired
   };
 
   constructor(props) {
     super(props);
 
     this.state = {
-      displayName: this.props.displayName,
-      overview: this.props.overview,
-      studentOverview: this.props.studentOverview,
-      unplugged: this.props.unplugged,
-      lockable: this.props.lockable,
-      creativeCommonsLicense: this.props.creativeCommonsLicense,
-      assessment: this.props.assessment,
-      purpose: this.props.purpose,
-      preparation: this.props.preparation,
-      announcements: this.props.announcements,
-      objectives: this.props.objectives
+      displayName: this.props.initialDisplayName,
+      overview: this.props.initialOverview,
+      studentOverview: this.props.initialStudentOverview,
+      unplugged: this.props.initialUnplugged,
+      lockable: this.props.initialLockable,
+      creativeCommonsLicense: this.props.initialCreativeCommonsLicense,
+      assessment: this.props.initialAssessment,
+      purpose: this.props.initialPurpose,
+      preparation: this.props.initialPreparation,
+      announcements: this.props.initialAnnouncements,
+      objectives: this.props.initialObjectives
     };
   }
 
