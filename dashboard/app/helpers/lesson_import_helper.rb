@@ -1,6 +1,6 @@
 module LessonImportHelper
 
-  def self.create_activity_sections(activity_markdown, position)
+  def self.create_activity_sections(activity_markdown, position, levels)
     #tips = parse_tips(activity_markdown)
     #return [ActivitySection.new(description: activity_markdown, seeding_key: SecureRandom.uuid, position: 1, tips: tips)]
     tip_matches = find_tips(activity_markdown).map { |m| {index:activity_markdown.index(m[0]), type: 'tip', match: m, substring: m[0]}}
@@ -13,49 +13,62 @@ module LessonImportHelper
     sorted_matches = find_markdown_chunks(activity_markdown, sorted_matches)
     sections = []
     tip_match_map = {}
+    tip_matches.each do |match|
+      key = match[:match][3] || "#{match[:match][1]}-0"
+      tip_match_map[key] = match
+    end
     sorted_matches.each_with_index do |match, i|
       activity_section = nil
       if match[:type] == 'tip'
-        tip_match_map[match[:match][3]] = match
+        #key = match[:match][3] || "#{match[:match][1]}-0"
+        #tip_match_map[key] = match
         next
       elsif match[:type] == 'tiplink'
         activity_section = create_activity_section_with_tip(match[:match], tip_match_map)
       elsif match[:type] == 'remark'
         activity_section = create_activity_section_with_remark(match[:match])
       elsif match[:type] == 'pullthrough'
-        activity_section = create_activity_section_with_levels(match[:match])
+        activity_section = create_activity_section_with_levels(match[:match], levels)
       else
         activity_section = ActivitySection.new(description: match[:substring].strip)
       end
       activity_section.position = i+1
-      activity_section.seeding_key = SecureRandom.uuid
+      activity_section.seeding_key ||= SecureRandom.uuid
       sections = sections + [activity_section]
     end
     sections
   end
 
-  def self.create_lesson_activities(activities_json)
-    activities_data = activities_json
+  def self.create_lesson_activities(activities_data, levels = {})
     activities = activities_data.map.with_index(1) do |a, i|
-      activity = LessonActivity.new
-      activity.name = a['name']
-      activity.activity_sections = create_activity_sections(a['content'], i)
-      activity.seeding_key = SecureRandom.uuid
-      activity.position = i
-      activity
+      @lesson_activity = LessonActivity.new
+      @lesson_activity.name = a['name']
+      @lesson_activity.duration = a['duration'].split[0]
+      @lesson_activity.lesson = @lesson
+      @lesson_activity.lesson_id = @lesson.id
+      @lesson_activity.seeding_key = SecureRandom.uuid
+      @lesson_activity.position = i
+      @lesson_activity.save!
+      @lesson_activity.reload
+      @lesson_activity.activity_sections = create_activity_sections(a['content'], i, levels)
+      @lesson_activity
     end
     activities
   end
 
-  def self.create_lesson(lesson_json, persisted_lesson = nil)
-    lesson_data = JSON.parse(lesson_json)
-    lesson = persisted_lesson || Lesson.new
-    lesson.name = lesson_data['title']
-    lesson.key = lesson.name.tr(' ', '_').downcase
-    lesson.overview = lesson_data['overview']
-    lesson.relative_position = lesson_data['number'] || 1
-    lesson.lesson_activities = create_lesson_activities(lesson_data['activities'])
-    lesson
+  def self.create_lesson(lesson_data, persisted_lesson = nil, levels = {})
+    #lesson_data = JSON.parse(lesson_json)
+    @lesson = persisted_lesson || Lesson.new
+    @lesson.save!
+    puts @lesson.inspect
+    @lesson.name = lesson_data['title']
+    @lesson.key ||= lesson.name.tr(' ', '_').downcase
+    @lesson.overview = lesson_data['teacher_desc']
+    @lesson.student_overview = lesson_data['student_desc']
+    @lesson.relative_position = lesson_data['number'] || 1
+    @lesson.save!
+    @lesson.lesson_activities = create_lesson_activities(lesson_data['activities'], levels)
+    #@lesson.script_levels = levels
   end
 
   # https://github.com/code-dot-org/curriculumbuilder/blob/57cad8f62e50b03e4f16bf77cd9e2e1da5c3e44e/curriculumBuilder/codestudio.py
@@ -64,9 +77,22 @@ module LessonImportHelper
     markdown.to_enum(:scan, regex).map { Regexp.last_match }
   end
 
-  def self.create_activity_section_with_levels(match)
+  def self.create_activity_section_with_levels(match, levels)
     activity_section = ActivitySection.new
-    activity_section.description = "levels #{match[2] || 0} to #{match[3] || 'end'}"
+    activity_section.seeding_key ||= SecureRandom.uuid
+    activity_section.position = 0
+    activity_section.lesson_activity = @lesson_activity
+    activity_section.lesson_activity_id = @lesson_activity.id
+    activity_section.save!
+    range_start = match[2] || 0
+    range_end = match[3] || levels.length-1
+    activity_section.description = "levels #{range_start} to #{range_end}"
+    unless levels.empty?
+      #activity_section.script_levels = levels[range_start..range_end]
+      sl_data = levels[range_start..range_end].map{|l| JSON.parse({id: l.id, assessment: l.assessment, bonus: l.bonus, challenge:l.challenge, levels: l.levels}.to_json)}
+      activity_section.update_script_levels(sl_data)
+      puts activity_section.script_levels.count
+    end
     activity_section
   end
 
@@ -86,7 +112,7 @@ module LessonImportHelper
   def self.find_tips(markdown)
     #regex = /^!!! ?([\w-]+)(?: "(.*?)")?(?: <(.*?)>)\n([\d\D]+?)([\w-]+)!!!(.*?)$/
     #regex = /^!!!?([\w-]+)(?: "(.*?)")?(?: <(.*?)>)[\n\r]([\d\D]+?)^([\w-]+)!!![a-zA-Z0-9\-]+(?:<!-- place where you'd like the icon -->)?(.+?)$/
-    regex = /^!!!?([\w-]+)(?: "(.*?)")?(?: <(.*?)>)(?:[\s]+$)+([\d\D]+?)(?=^\S)/
+    regex = /^!!! *?([\w-]+)(?: "(.*?)")?(?: <(.*?)>)?(?:[\s]+$)+([\d\D]+?)(?=^\S)/
     markdown.to_enum(:scan, regex).map { Regexp.last_match }
   end
 
@@ -103,6 +129,8 @@ module LessonImportHelper
       "discussion" => "discussionGoal",
       "assessment" => "assessmentOpportunity"
     }
+    puts tip_link_match[2].inspect
+    puts tip_match_map.inspect
     tip_match = tip_match_map[tip_link_match[2]][:match]
     activity_section = ActivitySection.new
     activity_section.description = tip_link_match[3].strip

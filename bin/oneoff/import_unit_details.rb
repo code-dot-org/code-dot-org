@@ -99,7 +99,9 @@ def main(options)
     next if options.dry_run
 
     lesson_pairs.each do |lesson, cb_lesson|
-      lesson.update_from_curriculum_builder(cb_lesson)
+      puts "Importing #{lesson.name}"
+      LessonImportHelper.create_lesson(cb_lesson, lesson, lesson.script_levels)
+      #lesson.update_from_curriculum_builder(cb_lesson)
     end
     log "updated #{lesson_pairs.count} lessons in unit #{script.name}"
   end
@@ -143,7 +145,7 @@ def get_validated_lesson_pairs(script, chapters)
   # In 2020, a code_studio_url indicates a lockable lesson in CSP.
   cb_lessons_nonlockable = cb_lessons.reject {|lesson| lesson['code_studio_url'].present?}
   unless lessons_nonlockable.count == cb_lessons_nonlockable.count
-    raise "mismatched lesson counts for unit #{script.name} CS: #{lesson_names.count} CB: #{cb_lesson_names.count}"
+    raise "mismatched lesson counts for unit #{script.name} CS: #{lessons_nonlockable.count} CB: #{cb_lessons_nonlockable.count}"
   end
   mismatched_names = []
   lessons_nonlockable.each.with_index do |lesson, index|
