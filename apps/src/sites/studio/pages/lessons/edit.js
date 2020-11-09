@@ -95,18 +95,18 @@ $(document).ready(function() {
     <Provider store={store}>
       <LessonEditor
         id={lessonData.id}
-        displayName={lessonData.name}
-        overview={lessonData.overview || ''}
-        studentOverview={lessonData.studentOverview || ''}
-        unplugged={lessonData.unplugged}
-        lockable={lessonData.lockable}
-        creativeCommonsLicense={lessonData.creativeCommonsLicense}
-        assessment={lessonData.assessment}
-        purpose={lessonData.purpose || ''}
-        preparation={lessonData.preparation || ''}
-        announcements={lessonData.announcements || []}
+        initialDisplayName={lessonData.name}
+        initialOverview={lessonData.overview || ''}
+        initialStudentOverview={lessonData.studentOverview || ''}
+        initialUnplugged={lessonData.unplugged}
+        initialLockable={lessonData.lockable}
+        initialCreativeCommonsLicense={lessonData.creativeCommonsLicense}
+        initialAssessment={lessonData.assessment}
+        initialPurpose={lessonData.purpose || ''}
+        initialPreparation={lessonData.preparation || ''}
+        initialAnnouncements={lessonData.announcements || []}
         relatedLessons={relatedLessons}
-        objectives={objectives}
+        initialObjectives={objectives}
       />
     </Provider>,
     document.getElementById('edit-container')
