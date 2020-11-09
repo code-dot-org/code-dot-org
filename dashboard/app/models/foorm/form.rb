@@ -43,12 +43,15 @@ class Foorm::Form < ActiveRecord::Base
 
       # Let's load the JSON text.
       questions = File.read(path)
+      # if published is not provided, default to true
+      published = questions['published'].nil? ? true : questions['published']
 
       {
         id: id,
         name: full_name,
         version: version,
-        questions: questions
+        questions: questions,
+        published: published
       }
     end
 
