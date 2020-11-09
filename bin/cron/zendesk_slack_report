@@ -43,6 +43,7 @@ MONITORING_GROUPS = {
   'plc-engineering' => ['PLC Tools'],
   'product' => ['Product'],
   'reaching-out' => ['Outreach'],
+  'regional_managers' => ['Outreach'],
   'star-labs-cabal' => ['*Labs']
 }
 

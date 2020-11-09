@@ -23,7 +23,7 @@ describe('EditTipDialog', () => {
 
   it('renders default props', () => {
     const wrapper = shallow(<EditTipDialog {...defaultProps} />);
-    expect(wrapper.contains('Add Tip')).to.be.true;
+    expect(wrapper.contains('Add Callout')).to.be.true;
     expect(wrapper.find('LessonTip').length).to.equal(1);
     expect(wrapper.find('select').length).to.equal(1);
     expect(wrapper.find('textarea').length).to.equal(1);
