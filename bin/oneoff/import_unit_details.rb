@@ -133,6 +133,19 @@ def get_validated_cb_chapters(cb_unit)
   cb_unit['chapters'].presence || [{'lessons' => cb_unit['lessons']}]
 end
 
+# Because not all lockable lessons in code studio have lesson plans in
+# Curriculum Builder, there may be a mismatch between the number of lessons in
+# CB and Code Studio. This method does the following:
+# 1. Verifies that every non-lockable lesson in Code Studio has a lesson plan in CB.
+# 2. Verifies that every lesson plan in CB has a corresponding lesson in Code Studio,
+#    including any lesson plans for lockable lessons.
+# 3. Returns a list of pairs of all Code Studio Lessons with corresponding
+#    CB lesson data to update them with.
+#
+# @param [Script] script - Code Studio Script/Unit object.
+# @param [Array<Hash>] - Array of CB chapters
+# @return [Array<Array.<Lesson, Hash>>] - Array of pairs of Code Studio Lesson
+#   objects and CB lesson data objects.
 def get_validated_lesson_pairs(script, cb_chapters)
   validated_lesson_pairs = []
 
