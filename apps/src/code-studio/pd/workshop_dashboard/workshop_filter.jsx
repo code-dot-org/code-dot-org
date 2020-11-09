@@ -176,6 +176,11 @@ export class WorkshopFilter extends React.Component {
     this.updateLocationAndSetFilters({subject});
   };
 
+  handleVirtualChange = selected => {
+    const virtual = selected ? selected.value : null;
+    this.updateLocationAndSetFilters({virtual});
+  };
+
   handleFacilitatorChange = selected => {
     const facilitator_id = selected ? selected.value : null;
     this.updateLocationAndSetFilters({facilitator_id});
@@ -263,6 +268,7 @@ export class WorkshopFilter extends React.Component {
       state: urlParams.state,
       course: urlParams.course,
       subject: urlParams.subject,
+      virtual: urlParams.virtual,
       facilitator_id: urlParams.facilitator_id,
       organizer_id: urlParams.organizer_id,
       teacher_email: urlParams.teacher_email,
@@ -423,6 +429,23 @@ export class WorkshopFilter extends React.Component {
                   onChange={this.handleSubjectChange}
                   placeholder={null}
                   options={this.subjectOptions[filters.course]}
+                  {...SelectStyleProps}
+                />
+              </FormGroup>
+            </Col>
+          )}
+          {this.props.permission.has(WorkshopAdmin) && (
+            <Col md={3} sm={4}>
+              <FormGroup>
+                <ControlLabel>Virtual</ControlLabel>
+                <Select
+                  value={filters.virtual}
+                  options={[
+                    {value: 'no', label: 'No'},
+                    {value: 'yes', label: 'Yes'}
+                  ]}
+                  onChange={this.handleVirtualChange}
+                  placeholder={null}
                   {...SelectStyleProps}
                 />
               </FormGroup>
