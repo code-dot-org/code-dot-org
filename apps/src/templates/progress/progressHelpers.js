@@ -29,7 +29,10 @@ export function lessonIsVisible(lesson, state, viewAs) {
   // Don't show stage if not authorized to see lockable
   if (lesson.lockable && !state.stageLock.lockableAuthorized) {
     return false;
-  } else if (viewAs === ViewType.Teacher) {
+  }
+
+  // Teachers can see all lessons
+  if (viewAs === ViewType.Teacher) {
     return true;
   }
 
