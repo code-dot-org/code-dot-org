@@ -122,7 +122,7 @@ Ailab.prototype.onContinue = function() {
 };
 
 Ailab.prototype.initMLActivities = function() {
-  const mode = JSON.parse(this.level.mode);
+  const mode = this.level.mode ? JSON.parse(this.level.mode) : null;
   const onContinue = this.onContinue.bind(this);
 
   setAssetPath('/blockly/media/skins/ailab/');
