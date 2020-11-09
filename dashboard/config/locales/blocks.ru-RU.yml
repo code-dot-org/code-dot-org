@@ -1174,6 +1174,8 @@ ru:
         text: Спрайт {SPRITE} Останавливается {BEHAVIOR}
       gamelab_removeTint:
         text: удалить цвет из {THIS}
+      gamelab_repeatForever:
+        text: повторять бесконечно
       gamelab_setAnimation:
         text: Изменить {THIS} костюм для {ANIMATION}
       gamelab_setBackground:

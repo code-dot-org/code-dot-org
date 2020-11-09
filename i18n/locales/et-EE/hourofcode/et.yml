@@ -231,14 +231,6 @@ et:
   front_watch_regular_video: Vaata videot
   front_volunteers: Otsime tehnilise abi vabatahtlikke
   front_start_learning: Alusta õppimist
-  gdpr_dialog_heading: Kas olete nõus kasutama kodulehte Ameeria Ühendriikides asuvat
-    kodulehekülge?
-  gdpr_dialog_message: Selle kodulehe andmeid võidakse saata ja salvestada või töödelda
-    Ameerika Ühendriikides.
-  gdpr_dialog_link_intro: Täpsem info meie
-  gdpr_dialog_privacy_policy: privaatsuse reeglites
-  gdpr_dialog_logout: Logi välja
-  gdpr_dialog_yes: Jah
   header_menu_resources: Materjalid
   header_menu_faq: KKK
   header_menu_how_to: Abi

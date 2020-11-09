@@ -732,6 +732,4 @@ lt:
         opt_in_no: Ne
   cookie_banner:
     accept: Sutinku
-  gdpr_dialog:
-    true: Taip
   copy: Kopijuoti

@@ -225,12 +225,6 @@ cn:
   front_watch_regular_video: 观看视频
   front_volunteers: 需要技术志愿者
   front_start_learning: 开始学习
-  gdpr_dialog_heading: 您是否同意使用来自美国的网站？
-  gdpr_dialog_message: 您使用本网站的数据可能会在美国发送和存储或处理。
-  gdpr_dialog_link_intro: 有关详细信息，请参阅我们
-  gdpr_dialog_privacy_policy: 隐私政策
-  gdpr_dialog_logout: 退出登录
-  gdpr_dialog_yes: 是的
   header_menu_resources: 资源
   header_menu_faq: 常见问题
   header_menu_how_to: 操作方法

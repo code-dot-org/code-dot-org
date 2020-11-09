@@ -1157,6 +1157,8 @@ pt:
         text: Sprite {SPRITE} Pára {BEHAVIOR}
       gamelab_removeTint:
         text: remover cor de {THIS}
+      gamelab_repeatForever:
+        text: repetir para sempre
       gamelab_setAnimation:
         text: Mudar {THIS} traje para {ANIMATION}
       gamelab_setBackground:
