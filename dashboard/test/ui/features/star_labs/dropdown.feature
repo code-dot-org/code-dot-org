@@ -1,15 +1,15 @@
 Feature: Dropdowns work as expected
 
 Background:
-  Given I am on "http://studio.code.org/flappy/1?noautoplay=true"
+  Given I am on "http://studio.code.org/s/sports/stage/1/puzzle/5?noautoplay=true"
 
 Scenario: Drag a dropdown and select a different option.
   When I rotate to landscape
   And I wait for the page to fully load
-  And I drag the play sound block to offset "200, 100"
-  And I press dropdown number 6
+  And I drag block "4" to offset "250, 100"
+  And I press dropdown number 11
   Then the dropdown is visible
-  Then I select item 9 from the dropdown
+  Then I select item 2 from the dropdown
   And I wait for 1 seconds
   Then the dropdown is hidden
-  And the dropdown field has text "crash ▼"
+  And the dropdown field has text "whistle ▼"

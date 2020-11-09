@@ -11,8 +11,8 @@ import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import InlineMarkdown from '@cdo/apps/templates/InlineMarkdown';
 import styleConstants from '@cdo/apps/styleConstants';
 import color from '@cdo/apps/util/color';
-import Button from '@cdo/apps/templates/Button';
-import DropdownButton from '@cdo/apps/templates/DropdownButton';
+import LessonNavigationDropdown from '@cdo/apps/templates/lessonOverview/LessonNavigationDropdown';
+import {lessonShape} from '@cdo/apps/templates/lessonOverview/lessonPlanShapes';
 import LessonAgenda from '@cdo/apps/templates/lessonOverview/LessonAgenda';
 
 const styles = {
@@ -21,10 +21,10 @@ const styles = {
     flexDirection: 'row'
   },
   left: {
-    flexGrow: 2
+    width: '60%'
   },
   right: {
-    flexGrow: 1,
+    width: '40%',
     padding: 10,
     borderLeft: 'solid 1px black'
   },
@@ -36,36 +36,12 @@ const styles = {
   navLink: {
     fontSize: 18,
     color: color.purple
-  },
-  dropdown: {
-    display: 'inline-block'
   }
 };
 
 class LessonOverview extends Component {
   static propTypes = {
-    lesson: PropTypes.shape({
-      unit: PropTypes.shape({
-        displayName: PropTypes.string.isRequired,
-        link: PropTypes.string.isRequired,
-        lessons: PropTypes.arrayOf(
-          PropTypes.shape({
-            displayName: PropTypes.string.isRequired,
-            link: PropTypes.string.isRequired,
-            position: PropTypes.number.isRequired,
-            lockable: PropTypes.bool.isRequired
-          })
-        ).isRequired
-      }).isRequired,
-      position: PropTypes.number.isRequired,
-      lockable: PropTypes.bool.isRequired,
-      displayName: PropTypes.string.isRequired,
-      overview: PropTypes.string.isRequired,
-      purpose: PropTypes.string.isRequired,
-      preparation: PropTypes.string.isRequired,
-      resources: PropTypes.object.isRequired,
-      objectives: PropTypes.arrayOf(PropTypes.object).isRequired
-    }).isRequired,
+    lesson: lessonShape.isRequired,
     activities: PropTypes.array,
 
     // from redux
@@ -125,20 +101,7 @@ class LessonOverview extends Component {
           >
             {`< ${lesson.unit.displayName}`}
           </a>
-          <div style={styles.dropdown}>
-            <DropdownButton
-              text={i18n.otherLessonsInUnit()}
-              color={Button.ButtonColor.purple}
-            >
-              {lesson.unit.lessons.map((l, index) => (
-                <a key={index} href={this.linkWithQueryParams(l.link)}>
-                  {l.lockable
-                    ? l.displayName
-                    : `${l.position} ${l.displayName}`}
-                </a>
-              ))}
-            </DropdownButton>
-          </div>
+          <LessonNavigationDropdown lesson={lesson} />
         </div>
         {isSignedIn && (
           <Announcements
