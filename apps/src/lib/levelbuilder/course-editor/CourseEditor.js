@@ -45,8 +45,8 @@ export default class CourseEditor extends Component {
     isStable: PropTypes.bool.isRequired,
     pilotExperiment: PropTypes.string,
     descriptionShort: PropTypes.string,
-    descriptionStudent: PropTypes.string,
-    descriptionTeacher: PropTypes.string,
+    initialDescriptionStudent: PropTypes.string,
+    initialDescriptionTeacher: PropTypes.string,
     scriptsInCourse: PropTypes.arrayOf(PropTypes.string).isRequired,
     scriptNames: PropTypes.arrayOf(PropTypes.string).isRequired,
     teacherResources: PropTypes.arrayOf(resourceShape).isRequired,
@@ -54,16 +54,16 @@ export default class CourseEditor extends Component {
     hasNumberedUnits: PropTypes.bool.isRequired,
     courseFamilies: PropTypes.arrayOf(PropTypes.string).isRequired,
     versionYearOptions: PropTypes.arrayOf(PropTypes.string).isRequired,
-    announcements: PropTypes.arrayOf(announcementShape).isRequired
+    initialAnnouncements: PropTypes.arrayOf(announcementShape).isRequired
   };
 
   constructor(props) {
     super(props);
 
     this.state = {
-      descriptionStudent: this.props.descriptionStudent,
-      descriptionTeacher: this.props.descriptionTeacher,
-      announcements: this.props.announcements
+      descriptionStudent: this.props.initialDescriptionStudent,
+      descriptionTeacher: this.props.initialDescriptionTeacher,
+      announcements: this.props.initialAnnouncements
     };
   }
 
@@ -83,9 +83,9 @@ export default class CourseEditor extends Component {
       scriptNames,
       teacherResources,
       courseFamilies,
-      versionYearOptions,
-      announcements
+      versionYearOptions
     } = this.props;
+    const {announcements} = this.state;
     return (
       <div>
         <h1>{name}</h1>
