@@ -151,7 +151,10 @@ class ProgressLesson extends React.Component {
         ? lesson.description_teacher
         : lesson.description_student;
 
-    const levelUrl = levels[0] && levels[0].url;
+    // There's no url for a lesson so use the url of the first level of the lesson
+    // as the url for the lesson.
+    // TODO: Make the back-end support lesson urls and redirect to the first level.
+    const lessonUrl = levels[0] && levels[0].url;
     return (
       <div
         style={{
@@ -208,7 +211,7 @@ class ProgressLesson extends React.Component {
           )}
         </div>
         {showTeacherInfo && viewAs === ViewType.Teacher && (
-          <ProgressLessonTeacherInfo lesson={lesson} levelUrl={levelUrl} />
+          <ProgressLessonTeacherInfo lesson={lesson} lessonUrl={lessonUrl} />
         )}
         {lesson.isFocusArea && <FocusAreaIndicator />}
       </div>
