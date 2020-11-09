@@ -10,6 +10,7 @@ import {
   getUniqueOptionsByColumn,
   getConvertedPredictedLabel
 } from "../redux";
+import { styles } from "../constants";
 
 class Predict extends Component {
   static propTypes = {
@@ -36,14 +37,14 @@ class Predict extends Component {
 
   render() {
     return (
-      <div>
+      <div id="predict">
         {this.props.showPredict && (
-          <div>
-            <h2>Test the Model</h2>
+          <div style={styles.panel}>
+            <div style={styles.largeText}>Test the Model</div>
             <form>
               {this.props.selectedContinuousFeatures.map((feature, index) => {
                 return (
-                  <span key={index}>
+                  <div key={index}>
                     <label>
                       {feature}:
                       <input
@@ -51,11 +52,10 @@ class Predict extends Component {
                         onChange={event => this.handleChange(event, feature)}
                       />
                     </label>
-                  </span>
+                  </div>
                 );
               })}
             </form>
-            <br />
             <br />
             <form>
               {this.props.selectedCategoricalFeatures.map((feature, index) => {
@@ -83,19 +83,19 @@ class Predict extends Component {
               })}
             </form>
             <br />
-            <br />
             <button type="button" onClick={this.onClickPredict}>
               Predict!
             </button>
+            <p/>
             {this.props.predictedLabel && (
               <div>
-                <h2> The Machine Learning model predicts... </h2>
-                <span>
+                <div> The Machine Learning model predicts... </div>
+                <div style={styles.subPanel}>
                   {this.props.labelColumn}: {this.props.predictedLabel}
                   {this.props.confidence && (
                     <p>Confidence: {this.props.confidence}</p>
                   )}
-                </span>
+                </div>
               </div>
             )}
           </div>

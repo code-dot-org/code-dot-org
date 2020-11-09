@@ -5,6 +5,7 @@ import { connect } from "react-redux";
 import { setSelectedCSV, resetState } from "../redux";
 import { parseCSV } from "../csvReaderWrapper";
 import { allDatasets } from "../datasetManifest";
+import { styles } from "../constants";
 
 class SelectDataset extends Component {
   static propTypes = {
@@ -45,11 +46,13 @@ class SelectDataset extends Component {
     const assetPath = global.__ml_playground_asset_public_path__;
 
     return (
-      <div>
-        <h2>Which dataset would you like to use?</h2>
+      <div id="select-dataset" style={styles.panel}>
+        <div style={styles.largeText}>Which dataset would you like to use?</div>
         <form>
-          <label>
-            <h2>Select a dataset from the collection</h2>
+          <div style={styles.subPanel}>
+            <div>
+              Select a dataset from the collection
+            </div>
             <select onChange={this.handleChangeSelect}>
               <option>{""}</option>
               {allDatasets.map(dataset => {
@@ -63,22 +66,22 @@ class SelectDataset extends Component {
                 );
               })}
             </select>
-          </label>
+          </div>
         </form>
-        <h2>OR</h2>
-        <h2>Import CSV File</h2>
-        <input
-          className="csv-input"
-          type="file"
-          ref={input => {
-            this.filesInput = input;
-          }}
-          name="file"
-          placeholder={null}
-          onChange={this.handleChange}
-        />
+        <div style={styles.subPanel}>
+          <div>or import a CSV File</div>
+          <input
+            className="csv-input"
+            type="file"
+            ref={input => {
+              this.filesInput = input;
+            }}
+            name="file"
+            placeholder={null}
+            onChange={this.handleChange}
+          />
+        </div>
         <p />
-        <h2>Upload the selected dataset</h2>
         <button type="button" onClick={this.importCSV}>
           Upload now!
         </button>

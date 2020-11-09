@@ -19,11 +19,11 @@ class Results extends Component {
 
   render() {
     return (
-      <div>
+      <div id="results">
         {this.props.showPredict &&
           this.props.percentDataToReserve > 0 &&
           this.props.accuracyCheckExamples.length > 0 && (
-            <div>
+            <div style={styles.panel}>
               <p>
                 {this.props.percentDataToReserve}% of the training data was
                 reserved to test the accuracy of the newly trained model.
@@ -31,23 +31,29 @@ class Results extends Component {
               <div>
                 {this.props.summaryStat.type === MLTypes.REGRESSION && (
                   <div>
-                    <h3>
+                    <div>
                       The average difference between expected and predicted
                       labels is:
-                    </h3>{" "}
-                    {this.props.summaryStat.stat}
+                    </div>
+                    <div style={styles.subPanel}>
+                      {this.props.summaryStat.stat}
+                    </div>
                   </div>
                 )}
                 {this.props.summaryStat.type === MLTypes.CLASSIFICATION && (
                   <div>
-                    <h3>The calculated accuracy of this model is:</h3>{" "}
-                    {this.props.summaryStat.stat}%
+                    <div style={styles.mediumText}>
+                      The calculated accuracy of this model is:
+                    </div>
+                    <div style={styles.subPanel}>
+                      {this.props.summaryStat.stat}%
+                    </div>
                   </div>
                 )}
                 <br />
                 <br />
               </div>
-              <div>
+              <div style={styles.subPanel}>
                 <table>
                   <thead>
                     <tr>
