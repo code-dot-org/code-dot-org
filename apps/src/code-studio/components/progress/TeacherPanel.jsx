@@ -102,11 +102,13 @@ class TeacherPanel extends React.Component {
   }
 
   /**
-   * This is the only place in our code where we get levels from
-   * ScriptLevel.summarize_for_teacher_panel or
-   * ScriptLevel.summarize_as_bonus_for_teacher_panel,
-   * both of which return levels with status imbedded, so simpler to parse the
-   * progress here rather than in the rails code.
+   * Whereas our redux stores get progress data and level data from separate
+   * api endpoints, the teacher panel gets level data directly from the rails
+   * methods ScriptLevel.summarize_for_teacher_panel and
+   * ScriptLevel.summarize_as_bonus_for_teacher_panel, both of which return
+   * level data with progress status imbedded. Rather than refactor that
+   * backend code to separate out the progress data, it is simpler to just
+   * separate it out here.
    */
   getLevelProgress(levels) {
     const levelProgress = {};

@@ -43,7 +43,7 @@ const initialState = {
   professionalLearningCourse: null,
   // used on multi-page assessments
   saveAnswersBeforeNavigation: null,
-  lessonGroups: null,
+  lessonGroups: [],
   scriptId: null,
   scriptName: null,
   scriptTitle: null,
