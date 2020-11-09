@@ -9,7 +9,10 @@ import 'react-select/dist/react-select.css';
 const styles = {
   outerContainer: {
     marginBottom: 8,
-    width: 240
+    width: 240,
+    '.SelectArrowZone': {
+      display: 'table-cell !important'
+    }
   },
   description: {
     paddingLeft: 2,
@@ -73,6 +76,12 @@ export default class ThemeDropdown extends React.Component {
           onChange={this.handleChange}
           options={renderedOptions}
           placeholder={''}
+          clearable={false}
+          style={{
+            dropdownIndicator: {
+              display: 'table-cell !important'
+            }
+          }}
         />
       </div>
     );
