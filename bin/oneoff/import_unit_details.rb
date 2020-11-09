@@ -91,8 +91,8 @@ def main(options)
 
     cb_unit = JSON.parse(cb_unit_json)
     validate_unit(script, cb_unit)
-    chapters = get_validated_chapters(cb_unit)
-    lesson_pairs = get_validated_lesson_pairs(script, chapters)
+    cb_chapters = get_validated_cb_chapters(cb_unit)
+    lesson_pairs = get_validated_lesson_pairs(script, cb_chapters)
 
     log "validated unit #{script.name} data"
 
@@ -118,10 +118,10 @@ def validate_unit(script, cb_unit)
   raise "unexpected unit_name #{cb_unit['unit_name']}" unless cb_unit['unit_name'] == script.name
 end
 
-def get_validated_chapters(cb_unit)
-  # In 2020, CSF and CSD lessons are all inside chapters, and CSP does not use
-  # chapters. Therefore, we can simplify the merge logic by assuming that
-  # lessons are all inside chapters when chapters are present.
+def get_validated_cb_chapters(cb_unit)
+  # In 2020 on Curriculum Builder, CSF and CSD lessons are all inside chapters,
+  # and CSP does not use chapters. Therefore, we can simplify the merge logic by
+  # assuming that lessons are all inside chapters when chapters are present.
   if cb_unit['chapters'].present? && cb_unit['lessons'].present?
     raise "found #{cb_unit['lessons'].count} unexpected lessons outside of chapters"
   end
@@ -133,14 +133,17 @@ def get_validated_chapters(cb_unit)
   cb_unit['chapters'].presence || [{'lessons' => cb_unit['lessons']}]
 end
 
-def get_validated_lesson_pairs(script, chapters)
+def get_validated_lesson_pairs(script, cb_chapters)
   validated_lesson_pairs = []
 
-  cb_lessons = chapters.map {|ch| ch['lessons']}.flatten
+  cb_lessons = cb_chapters.map {|ch| ch['lessons']}.flatten
 
   # Compare non-lockable lessons from CB and Code Studio.
   lessons_nonlockable = script.lessons.reject(&:lockable)
-  # In 2020, a code_studio_url indicates a lockable lesson in CSP.
+  # In 2020 on Curriculum Builder, code_studio_url only appears on lesson plans
+  # for lockable lessons in CSP. However, not every CSP 2020 lesson in Code
+  # Studio has a corresponding lesson plan in CB. CSD also has many lockable
+  # lessons, none of which have lesson plans on CB.
   cb_lessons_nonlockable = cb_lessons.reject {|lesson| lesson['code_studio_url'].present?}
   unless lessons_nonlockable.count == cb_lessons_nonlockable.count
     raise "mismatched lesson counts for unit #{script.name} CS: #{lesson_names.count} CB: #{cb_lesson_names.count}"
