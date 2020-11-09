@@ -151,6 +151,8 @@
   "finalStageTrophies": "Čestitamo! Završena je posljednja etapa i osvajaš {numTrophies, plural, one {trofej} other {# trofeja}}.",
   "finish": "Kraj",
   "forTeachersOnly": "Samo za nastavnike",
+  "gdprDialogDetailsUpdated": "Code.org je neprofitna internetska stranica sa sjedištem u SAD-u i zakoni koji uređuju prikupljanje podataka u SAD-u mogu se razlikovati od zakona u Vašoj zemlji.",
+  "gdprDialogVisitPrivacyPolicy": "Posjetite Code.orgova Pravila privatnosti da biste saznali više.",
   "gdprDialogYes": "Da",
   "gender": "Spol",
   "genderMale": "Muško",

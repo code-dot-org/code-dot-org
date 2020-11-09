@@ -237,14 +237,6 @@ de:
   front_watch_regular_video: Video ansehen
   front_volunteers: Technische Freiwillige gesucht
   front_start_learning: Beginnen sie jetzt
-  gdpr_dialog_heading: Stimmst du zu, eine Website zu nutzen, die ihren Sitz in den
-    USA hat?
-  gdpr_dialog_message: Daten aus deiner Nutzung dieser Site können in die USA geschickt
-    werden und dort gespeichert und verarbeitet werden.
-  gdpr_dialog_link_intro: Für Details siehe unsere
-  gdpr_dialog_privacy_policy: Datenschutzerklärung
-  gdpr_dialog_logout: Abmelden
-  gdpr_dialog_yes: Ja
   header_menu_resources: Ressourcen
   header_menu_faq: Häufige Fragen
   header_menu_how_to: Anleitung

@@ -6215,6 +6215,10 @@ sk:
               name: Premenné
             For Loops:
               name: Cykly "For"
+            End-of-course projects:
+              name: Záverečné projekty
+            End of Course projects:
+              name: Záverečné projekty
         dance-extras-2019:
           description: Pokračuj za hranice prvej hodiny s nápadmi na ďalšie projekty.
           description_short: Pokračuj za hranice Hodiny Kódu s touto aktivitou nadväzujúcou na Code.org Tanečnú Párty.
@@ -7262,6 +7266,8 @@ sk:
               name: Udalosti
             Conditionals:
               name: Podmienky
+            End of Course projects:
+              name: Záverečné projekty
             Functions:
               name: Funkcie
             Variables:

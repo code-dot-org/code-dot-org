@@ -1192,6 +1192,8 @@ zh-TW:
         text: 角色 {SPRITE} 停止 {BEHAVIOR}
       gamelab_removeTint:
         text: 角色 {THIS} 顏色移除
+      gamelab_repeatForever:
+        text: 重複無限次
       gamelab_setAnimation:
         text: 角色 {THIS} 造型設為 {ANIMATION}
       gamelab_setBackground:
