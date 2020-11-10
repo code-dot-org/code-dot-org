@@ -146,9 +146,7 @@ def get_validated_lesson_pairs(script, cb_unit)
     raise "no chapters or lessons found"
   end
 
-  cb_chapters = cb_unit['chapters'].presence || [{'lessons' => cb_unit['lessons']}]
-
-  cb_lessons = cb_chapters.map {|ch| ch['lessons']}.flatten
+  cb_lessons = cb_unit['lessons'].presence || cb_unit['chapters'].map {|ch| ch['lessons']}.flatten
 
   # Compare non-lockable lessons from CB and Code Studio.
   lessons_nonlockable = script.lessons.reject(&:lockable)
