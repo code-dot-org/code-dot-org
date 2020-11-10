@@ -288,6 +288,9 @@ end
 
 # Canonicalize a lesson name or lesson group name to increase the chances of a
 # match when names are compared across CB and Code Studio.
+# * ignores prefixes like "Lesson 1: " or "Chapter 12: "
+# * ignores - and : characters
+# * ignores differences in case and whitespace
 def canonicalize(str)
   match = /^(Lesson|Chapter) \d+: (.*)/.match(str)
   str = match&.captures&.last if match
