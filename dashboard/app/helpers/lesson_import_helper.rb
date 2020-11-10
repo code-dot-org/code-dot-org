@@ -3,7 +3,7 @@ module LessonImportHelper
   def self.create_activity_sections(activity_markdown, position, levels)
     #tips = parse_tips(activity_markdown)
     #return [ActivitySection.new(description: activity_markdown, seeding_key: SecureRandom.uuid, position: 1, tips: tips)]
-    tip_matches = find_tips(activity_markdown).map { |m| {index:activity_markdown.index(m[0]), type: 'tip', match: m, substring: m[0]}}
+    tip_matches = find_tips(activity_markdown).select{|m| m[1] != 'say'}.map { |m| {index:activity_markdown.index(m[0]), type: 'tip', match: m, substring: m[0]}}
     tip_link_matches = find_tip_links(activity_markdown).map { |m| {index:activity_markdown.index(m[0]), type: 'tiplink', match: m, substring: m[0]}}
     remark_matches = find_remarks(activity_markdown).map { |m| {index:activity_markdown.index(m[0]), type: 'remark', match: m, substring: m[0]}}
     pullthrough_matches = find_code_studio_pullthroughs(activity_markdown).map { |m| {index:activity_markdown.index(m[0]), type: 'pullthrough', match: m, substring: m[0]}}
@@ -32,9 +32,18 @@ module LessonImportHelper
       else
         activity_section = ActivitySection.new(description: match[:substring].strip)
       end
+      next unless activity_section
       activity_section.position = i+1
       activity_section.seeding_key ||= SecureRandom.uuid
-      sections = sections + [activity_section]
+      sections = sections.push(activity_section)
+    end
+    tip_match_map.each do |key, value|
+      match = value[:match]
+      activity_section = ActivitySection.new
+      activity_section.position = sections.length + 1
+      activity_section.seeding_key ||= SecureRandom.uuid
+      activity_section.tips = [create_tip(key, match[1] || "tip", match[4] || "no markdown found")]
+      sections.push(activity_section)
     end
     sections
   end
@@ -43,7 +52,7 @@ module LessonImportHelper
     activities = activities_data.map.with_index(1) do |a, i|
       @lesson_activity = LessonActivity.new
       @lesson_activity.name = a['name']
-      @lesson_activity.duration = a['duration'].split[0]
+      @lesson_activity.duration = a['duration'].split[0].to_i
       @lesson_activity.lesson = @lesson
       @lesson_activity.lesson_id = @lesson.id
       @lesson_activity.seeding_key = SecureRandom.uuid
@@ -53,7 +62,7 @@ module LessonImportHelper
       @lesson_activity.activity_sections = create_activity_sections(a['content'], i, levels)
       @lesson_activity
     end
-    unless levels.empty?
+    if levels.any?{|sl| !sl["inActivitySection"]}
       @lesson_activity = LessonActivity.new
       @lesson_activity.name = "Leftover levels"
       @lesson_activity.lesson = @lesson
@@ -69,20 +78,17 @@ module LessonImportHelper
   end
 
   def self.create_lesson(lesson_data, persisted_lesson)
-    #lesson_data = JSON.parse(lesson_json)
-    levels = persisted_lesson.script_levels.each_with_index.map{|l,i| JSON.parse({id: l.id, assessment: l.assessment, bonus: l.bonus, challenge:l.challenge, levels: l.levels, activitySectionPosition: i}.to_json)}
+    levels = persisted_lesson.script_levels.each_with_index.map{|l,i| JSON.parse({id: l.id, assessment: l.assessment, bonus: l.bonus, challenge:l.challenge, levels: l.levels, activitySectionPosition: i, inActivitySection: false}.to_json)}
     @lesson = persisted_lesson || Lesson.new
-    @lesson.script_levels = []
-    @lesson.save!
     @lesson.name = lesson_data['title']
     @lesson.key ||= lesson.name.tr(' ', '_').downcase
     @lesson.overview = lesson_data['teacher_desc']
     @lesson.student_overview = lesson_data['student_desc']
     @lesson.relative_position = lesson_data['number'] || 1
     @lesson.save!
+    @lesson.reload
+    @lesson.script_levels.delete_all
     @lesson.lesson_activities = create_lesson_activities(lesson_data['activities'], levels)
-    #@lesson.script_levels = levels
-    @lesson.script.fix_script_level_positions
   end
 
   # https://github.com/code-dot-org/curriculumbuilder/blob/57cad8f62e50b03e4f16bf77cd9e2e1da5c3e44e/curriculumBuilder/codestudio.py
@@ -92,9 +98,12 @@ module LessonImportHelper
   end
 
   def self.create_activity_section_with_levels(match, levels)
-    range_start = match[2] || 0
-    range_end = match[3] || levels.length-1
-    create_activity_section_with_level_ranges(range_start, range_end, levels)
+    range_start = match[2] ? match[2].to_i - 1 : 0
+    range_end = match[3] ? match[3].to_i - 1 : levels.length-1
+    if range_start > range_end
+      return nil
+    end
+    create_activity_section_with_level_ranges([range_start, 0].max, [range_end, levels.count].min, levels)
   end
 
   def self.create_activity_section_with_level_ranges(range_start, range_end, levels)
@@ -108,14 +117,17 @@ module LessonImportHelper
     unless levels.empty?
       #activity_section.script_levels = levels[range_start..range_end]
       #sl_data = levels[range_start..range_end].each_with_index.map{|l,i| JSON.parse({id: l.id, assessment: l.assessment, bonus: l.bonus, challenge:l.challenge, levels: l.levels, activitySectionPosition: i}.to_json)}
-      sl_data = levels.slice!(range_start..range_end)
-      activity_section.update_script_levels(sl_data)
+      sl_data = levels.slice(range_start..range_end)
+
+      sl_data = sl_data.select{|sl| !sl["inActivitySection"] }
+      activity_section.update_script_levels(sl_data) unless sl_data.blank?
+      sl_data.each{|sl| sl["inActivitySection"] = true}
     end
     activity_section
   end
 
   def self.find_remarks(markdown)
-    regex = /^!!!say\s+?[\n\r]+([\d\D]+?)(?=^( {0,3}|\S))/
+    regex = /^!!!say\s+?[\n\r]+([\d\D]+?)(?=^\S)/
     markdown.to_enum(:scan, regex).map { Regexp.last_match }
   end
 
@@ -140,18 +152,26 @@ module LessonImportHelper
     markdown.to_enum(:scan, regex).map { Regexp.last_match }
   end
 
-  def self.create_activity_section_with_tip(tip_link_match, tip_match_map)
+  def self.create_tip(type, key, markdown)
     tip_map = {
       "tip" => "teachingTip",
       "content" => "contentCorner",
       "discussion" => "discussionGoal",
       "assessment" => "assessmentOpportunity"
     }
-    tip_match = tip_match_map[tip_link_match[2]][:match]
+    {key: key, type: tip_map[key], markdown: markdown.strip}
+  end
+
+  def self.create_activity_section_with_tip(tip_link_match, tip_match_map)
+    tip = tip_match_map[tip_link_match[2]]
+    unless tip
+      return ActivitySection.new(description: tip_link_match[3].strip)
+    end
+    tip_match = tip[:match]
+    tip_match_map.delete(tip_link_match[2]) if tip_match
     activity_section = ActivitySection.new
     activity_section.description = tip_link_match[3].strip
-    tip = {key: tip_match[3] || "#{tip_match[1]}-0", type: tip_map[tip_match[1]] || "teachingTip", markdown: tip_match[4]}
-    activity_section.tips = [tip]
+    activity_section.tips = [create_tip(tip_match[3] || "#{tip_match[1]}-0", tip_match[1] || "tip", tip_match[4])]
     activity_section
   end
 

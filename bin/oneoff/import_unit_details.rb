@@ -103,6 +103,22 @@ def main(options)
       LessonImportHelper.create_lesson(cb_lesson, lesson)
       #lesson.update_from_curriculum_builder(cb_lesson)
     end
+    script.lessons.select(&:lockable).each do |lesson|
+      lesson_activity = LessonActivity.new
+      lesson_activity.seeding_key = SecureRandom.uuid
+      lesson_activity.position = 1
+      lesson.lesson_activities = [lesson_activity]
+      activity_section = ActivitySection.new
+      levels = lesson.script_levels.each_with_index.map{|l,i| JSON.parse({id: l.id, assessment: l.assessment, bonus: l.bonus, challenge:l.challenge, levels: l.levels, activitySectionPosition: i, inActivitySection: false}.to_json)}
+      activity_section.seeding_key = SecureRandom.uuid
+      activity_section.position = 1
+      activity_section.lesson_activity = lesson_activity
+      activity_section.save!
+      activity_section.update_script_levels(levels)
+      lesson_activity.activity_sections = [activity_section]
+      activity_section.save!
+      lesson.script_levels = []
+    end
     script.fix_script_level_positions
     log "updated #{lesson_pairs.count} lessons in unit #{script.name}"
   end
