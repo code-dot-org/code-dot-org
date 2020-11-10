@@ -2,6 +2,10 @@ ru:
   data:
     progressions:
       '"If/Else" with the Bee': '"If/Else" с Пчёлкой'
+      Accelerometer Events: События акселерометра
+      Adding Images: Добавление изображений
+      Adding Screens: Добавление экранов
+      Animate Your Scene: Анимируйте свою сцену
       Artist Project: Проект "Художник"
       'Artist: Variables': 'Художник: Переменные'
       Binary Numbers: Двоичные числа
@@ -21,6 +25,8 @@ ru:
       Lists: Списки
       Measures: Такты
       Pair Programming: Программирование в парах
+      Practice: Практика
+      Programming with Rey and BB-8: Программирование с Рееем и BB-8
       Project: Проект
       Properties: Свойства
       Reflection: Рефлексия

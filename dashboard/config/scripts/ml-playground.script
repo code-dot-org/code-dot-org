@@ -3,7 +3,7 @@ login_required true
 lesson 'dog', display_name: 'Does Code.org Like Your Dog?'
 level 'ml-code dog-1'
 level 'AIlab-test-1'
-level 'ml-candy modify-6'
+level 'ml-code dog-export'
 
 lesson 'USE Programs', display_name: 'USE Programs (AppLab Only)'
 level 'ml-netflix use-1', progression: 'Movie Recommendations (AppLab Only)'

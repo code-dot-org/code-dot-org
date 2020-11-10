@@ -234,13 +234,6 @@ az:
   front_watch_regular_video: Videoya baxın
   front_volunteers: Texniki biliyi olan könüllülər axtarılır
   front_start_learning: Öyrənməyə başlayın
-  gdpr_dialog_heading: ABŞ-da yerləşən bir veb-saytı istifadə etməyə razısınız?
-  gdpr_dialog_message: Bu saytı istifadə edərkən toplanan verilənlər ABŞ-da saxlanmaq
-    və ya emal olunmaq üçün göndərilə bilər.
-  gdpr_dialog_link_intro: For details see our
-  gdpr_dialog_privacy_policy: məxfilik siyasəti
-  gdpr_dialog_logout: Çıxış
-  gdpr_dialog_yes: Bəli
   header_menu_resources: Resurslar
   header_menu_faq: Tez-tez verilən suallar
   header_menu_how_to: Təlimatlar
@@ -6170,7 +6163,7 @@ az:
   tutorial_grokem_string_detail_grades: Grades 6+
   tutorial_kodmaze_string_detail_grades: Pre-reader - Grade 5
   tutorial_codestersa_string_detail_grades: Grades 2-8
-  tutorial_cmdodo_string_detail_grades: Grades 2-5
+  tutorial_cmdodo_string_detail_grades: Grades 3-5
   tutorial_tynkerspace_string_detail_grades: Grades 2-5
   tutorial_gfbloons_string_detail_grades: Grades 9+
   tutorial_raspipong_string_detail_grades: Grades 9+

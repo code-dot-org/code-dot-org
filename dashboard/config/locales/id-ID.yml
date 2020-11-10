@@ -194,6 +194,17 @@ id:
       di Amerika Serikat.
     my_data_to_us: Data dari penggunaan situs ini saya dapat dikirimkan ke dan disimpan
       atau diproses di Amerika Serikat.
+    agree_us_data_transfer_student: "**Saya setuju bila Code.org dapat mentransfer
+      data (termasuk data pribadi) dari penggunaan situs ini ke Amerika Serikat**
+      untuk tujuan hosting dan pemrosesan data terkait."
+    agree_us_data_transfer_teacher: "**Saya setuju bila Code.org dapat mentransfer
+      data saya dari penggunaan situs ini ke Amerika Serikat** untuk tujuan hosting
+      dan pemrosesan data terkait."
+    data_collection_us: Saya mengetahui bahwa Code.org adalah situs web nirlaba yang
+      berbasis di AS dan hukum yang mengatur pengumpulan data di AS mungkin berbeda
+      dari hukum di negara saya.
+    visit_privacy: Kunjungi [Kebijakan Privasi](%{privacy_url}) Code.org untuk mempelajari
+      selengkapnya.
     student_terms_markdown: Alamat email tidak tersimpan dalam bentuk yang dapat membuat
       kami menghubungi murid. Murid tidak akan menerima email dari Code.org kecuali
       untuk pemulihan kata sandi. Lihatlah [privacy policy](http://code.org/privacy)
@@ -1349,15 +1360,6 @@ id:
       Anda setuju dengan penyimpanan cookies pada komputer atau alat Anda.
     more_information: Lihat Privacy Policy Code.org's.
     accept: Saya setuju
-  gdpr_dialog:
-    heading: Apakah Anda setuju untuk menggunakan sebuah situs web yang berbasis di
-      Amerika Serikat?
-    message: Data dari penggunaan Anda atas situs ini dapat dikirimkan ke dan disimpan
-      atau diproses di Amerika Serikat.
-    link_intro: Untuk Rincian lihat
-    privacy_policy: Kebijakan privasi
-    logout: Keluar
-    true: Ya
   page_not_found_title: Halaman tidak ditemukan
   page_not_found_header: '404: halaman tidak ditemukan'
   page_not_found_description: Halaman yang anda cari tidak ada di alamat ini. Periksa

@@ -7362,6 +7362,7 @@ zh-CN:
 
           ##资料
           * [铝箔船](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf) - 活动指导 (微软版(https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc), [谷歌文档](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))
+        title: 计算机科学发现学生课前问卷
       csd-pulse-check-survey-1-levelgroup U1Ch2:
         title: 计算机科学发现快速问卷！
       csd-pulse-check-survey-1-levelgroup U1Ch2_2018:
@@ -7647,3 +7648,18 @@ zh-CN:
           <img src ="https://images.code.org/8b3fcfcf0120bed0dc34c014f1f81071-image-1548976153188.png" />
 
           <br/>
+      CSD U1 Test:
+        title: 计算机和解决问题 项目后测试
+      CSD U5 test:
+        title: 数据和社会 项目后测试
+      Unit 1 Lesson 1 Overview:
+        markdown: |
+          #概述
+          班级作业是组队设计一个能装尽可能多硬币的铝箔船。当课程最后，小组回顾他们的活动经历、以及与解决的问题建立的联系时，他们就会主动完成剩下的课程。
+
+          ##资料
+          * [铝箔船](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf) - 活动指导 (微软版(https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc), [谷歌文档](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))
+      csd-pre-survey-2017-levelgroup_2018:
+        title: 计算机科学发现学生课前问卷
+      csd-pre-survey-levelgroup_2019:
+        title: 计算机科学发现学生课前问卷

@@ -121,14 +121,14 @@
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
-          "ml-candy modify-6"
+          "ml-code dog-export"
         ],
         "lesson.key": "dog",
         "lesson_group.key": "",
         "script.name": "ml-playground"
       },
       "level_keys": [
-        "ml-candy modify-6"
+        "ml-code dog-export"
       ]
     },
     {
@@ -640,9 +640,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "ml-candy modify-6",
+        "level.key": "ml-code dog-export",
         "script_level.level_keys": [
-          "ml-candy modify-6"
+          "ml-code dog-export"
         ],
         "lesson.key": "dog",
         "lesson_group.key": "",

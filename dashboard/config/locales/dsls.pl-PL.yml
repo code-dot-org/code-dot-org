@@ -3807,6 +3807,7 @@ pl-PL:
           Zasoby\n\n* [Aluminum Boats](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf)
           - Activity Guide (copy as [MS Word](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc),
           [Google Doc](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))\n"
+        title: 'Przedkursowa ankieta uczniowska CS Discoveries '
       csf_be_a_super_digital_citizen:
         content1: opis tutaj
       csf_password_power-up:
@@ -4458,3 +4459,58 @@ pl-PL:
 
       courseF_project_exemplars_2019_2020:
         content1: Strona testowa podręcznika o obniżkach
+      GoingPlacesSafely-unplugged:
+        markdown: |-
+          # Bezpieczne udawanie się do różnych miejsc
+
+          Internet jest potężny, ale czasami jest to niebezpieczne miejsce. Chroń bezpieczeństwo chodząc po Internecie.
+
+          <p align=center>
+      HappyLoops-Unplugged:
+        markdown: |
+          # Wesołe pętle [Happy Loops]
+
+          Na tej lekcji będziesz się uczyć o pętlach!
+
+          ![](https://images.code.org/6aac7f675f0c69033f42ccac6a733f68-image-1557769673400.png)
+      HappyLoops-Unplugged_2020:
+        markdown: |
+          # Wesołe pętle [Happy Loops]
+
+          Na tej lekcji będziesz się uczyć o pętlach!
+
+          ![](https://images.code.org/6aac7f675f0c69033f42ccac6a733f68-image-1557769673400.png)
+      HappyMaps-Unplugged:
+        markdown: |-
+          # "Wesołe mapy" [Happy Maps]
+
+          Utwórz algorytm, aby przeprowadzić postać przez labirynt.
+      HappyMaps-Unplugged_2020:
+        markdown: |-
+          # "Wesołe mapy" [Happy Maps]
+
+          Utwórz algorytm, aby przeprowadzić postać przez labirynt.
+      TheRightAppMarkdownLevel_2019:
+        markdown: "# Właściwa aplikacja \n\n* Obecnie każdy korzysta z komputera,
+          w szczególności ze smartfonów. \n* Aplikacje na smartfona pomagają ludziom
+          robić takie rzeczy, jak rozmawiać z przyjaciółmi, słuchać muzyki, robić
+          zakupy lub chodzić po Internecie.\n* Dla programistów, ważne jest zrozumienie
+          potrzeb innych osób i projektowanie aplikacji mając je na uwadze!\n\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)1555611687284.png)"
+      TheRightAppMarkdownLevel_2019_2020:
+        markdown: "# Właściwa aplikacja \n\n* Obecnie każdy korzysta z komputera,
+          w szczególności ze smartfonów. \n* Aplikacje na smartfona pomagają ludziom
+          robić takie rzeczy, jak rozmawiać z przyjaciółmi, słuchać muzyki, robić
+          zakupy lub chodzić po Internecie.\n* Dla programistów, ważne jest zrozumienie
+          potrzeb innych osób i projektowanie aplikacji mając je na uwadze!\n\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)1555611687284.png)"
+      Unit 1 Lesson 1 Overview:
+        markdown: "#Podsumowanie\nKlasa pracuje w grupach, projektując łódki z folii
+          aluminiowej, które pomieszczą jak najwięcej groszówek. Na koniec lekcji
+          grupy zastanowią się, jakie doświadczenia wyniosły z ćwiczenia i powiążą
+          je z problemami, które będą rozwiązywać w dalszej części kursu.  \n\n##
+          Zasoby\n\n* [Aluminum Boats](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf)
+          - Activity Guide (copy as [MS Word](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc),
+          [Google Doc](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))\n"
+      csd-pre-survey-2017-levelgroup_2018:
+        title: 'Przedkursowa ankieta uczniowska CS Discoveries '
+      csd-pre-survey-levelgroup_2019:
+        title: 'Przedkursowa ankieta uczniowska CS Discoveries '
