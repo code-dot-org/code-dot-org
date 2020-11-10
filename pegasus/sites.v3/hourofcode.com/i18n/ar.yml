@@ -231,13 +231,6 @@ ar:
   front_watch_regular_video: شاهد الفيديو
   front_volunteers: مطلوب متطوعين تقنيين
   front_start_learning: البدء في التعلم
-  gdpr_dialog_heading: هل توافق على استخدام موقع إلكتروني مقره الولايات المتحدة؟
-  gdpr_dialog_message: قد يتم إرسال البيانات الخاصة باستخدامك لهذا الموقع وتخزينها
-    أو معالجتها في الولايات المتحدة.
-  gdpr_dialog_link_intro: للمزيد من التفاصيل، يرجى الرجوع إلى
-  gdpr_dialog_privacy_policy: سياسة الخصوصية
-  gdpr_dialog_logout: تسجيل الخروج
-  gdpr_dialog_yes: نعم
   header_menu_resources: المصادر
   header_menu_faq: الأسئلة المتداولة
   header_menu_how_to: الدليل الإرشادي

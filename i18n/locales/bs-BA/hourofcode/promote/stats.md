@@ -30,7 +30,7 @@ Mi se nadamo da će izazvati interes kod učenika da nastave učiti. Istraživan
 
 #### Zašto je ovo važno?
 
-Tehnologija transformiše svaku industriju na planeti. In 2015, 7 million openings in the U.S. were in occupations—including art and design—that value coding skills. But 55 percent of schools in the U.S. don't teach computer science. Vrijeme je da sustignemo 21. stoljeće. Mi znamo da bez obzira šta će naši učenici da budu kad odrastu, bilo da odu u medicinu, poslovanje, politiku, ili umjetnost, znanje o tome kako napraviti tehnologiju će im dati samopouzdanje i takmičarski duh. <br /> <br />
+Tehnologija transformiše svaku industriju na planeti. In 2015, 7 million openings in the U.S. were in occupations—including art and design—that value coding skills. But 53 percent of schools in the U.S. don't teach computer science. Vrijeme je da sustignemo 21. stoljeće. Mi znamo da bez obzira šta će naši učenici da budu kad odrastu, bilo da odu u medicinu, poslovanje, politiku, ili umjetnost, znanje o tome kako napraviti tehnologiju će im dati samopouzdanje i takmičarski duh. <br /> <br />
 
 #### A quote you can use in materials
 

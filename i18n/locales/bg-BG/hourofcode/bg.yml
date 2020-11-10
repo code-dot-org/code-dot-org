@@ -238,13 +238,6 @@ bg:
   front_watch_regular_video: Гледай видеото
   front_volunteers: Технически доброволци се търсят
   front_start_learning: Започнете обучение
-  gdpr_dialog_heading: Съгласни ли сте да използвате web сайт, базиран в Сащ?
-  gdpr_dialog_message: Данни от използването на този сайт може да се изпраща, съхранява
-    или обработва в Съединените щати.
-  gdpr_dialog_link_intro: За подробности вижте нашия
-  gdpr_dialog_privacy_policy: политика за защита на личните данни
-  gdpr_dialog_logout: Изход
-  gdpr_dialog_yes: Да
   header_menu_resources: Ресурси
   header_menu_faq: ЧЕСТО ЗАДАВАНИ ВЪПРОСИ
   header_menu_how_to: Практически съвети
@@ -6168,7 +6161,7 @@ bg:
   tutorial_grokem_string_detail_grades: Grades 6+
   tutorial_kodmaze_string_detail_grades: Pre-reader - Grade 5
   tutorial_codestersa_string_detail_grades: Grades 2-8
-  tutorial_cmdodo_string_detail_grades: Grades 2-5
+  tutorial_cmdodo_string_detail_grades: Grades 3-5
   tutorial_tynkerspace_string_detail_grades: Grades 2-5
   tutorial_gfbloons_string_detail_grades: Класове 9+
   tutorial_raspipong_string_detail_grades: Класове 9+

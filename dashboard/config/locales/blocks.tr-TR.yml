@@ -1170,6 +1170,8 @@ tr:
         text: sprite {SPRITE} durur {BEHAVIOR}
       gamelab_removeTint:
         text: "{THIS} gelen rengi kaldır"
+      gamelab_repeatForever:
+        text: Sonsuza kadar tekrarla
       gamelab_setAnimation:
         text: "{THIS} kostüm {ANIMATION} değiştirmek"
       gamelab_setBackground:

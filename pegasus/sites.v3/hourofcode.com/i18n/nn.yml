@@ -232,13 +232,6 @@ nn:
   front_watch_regular_video: Sjå videoen
   front_volunteers: Vi treng fleire tekniske frivillige
   front_start_learning: Start læringa
-  gdpr_dialog_heading: Godtar du å nytte deg av ein nettstad basert i USA?
-  gdpr_dialog_message: Data frå bruken av denne nettstaden kan bli sendt til, bli
-    lagra og prosessert i USA.
-  gdpr_dialog_link_intro: For detaljar, sjå våre
-  gdpr_dialog_privacy_policy: retningslinjer for personvern
-  gdpr_dialog_logout: Logg ut
-  gdpr_dialog_yes: Ja
   header_menu_resources: Ressursar
   header_menu_faq: Spørsmål og svar
   header_menu_how_to: Slik gjer du
@@ -6143,7 +6136,7 @@ nn:
   tutorial_grokem_string_detail_grades: Frå 6. klasse
   tutorial_kodmaze_string_detail_grades: Frå ikkje-lesar til 5. klasse
   tutorial_codestersa_string_detail_grades: Frå 2. - 8. klasse
-  tutorial_cmdodo_string_detail_grades: Grades 2-5
+  tutorial_cmdodo_string_detail_grades: Grades 3-5
   tutorial_tynkerspace_string_detail_grades: Grades 2-5
   tutorial_gfbloons_string_detail_grades: Frå 8. klasse
   tutorial_raspipong_string_detail_grades: Frå 8. klasse

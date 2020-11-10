@@ -1152,12 +1152,6 @@
   courses_category: Alle kurs
   cookie_banner:
     accept: Jeg samtykker
-  gdpr_dialog:
-    heading: Aksepterer du å bruke et nettsted som er basert i USA?
-    message: Dine data fra bruken av dette nettstedet kan sendes til, lagres eller
-      behandles i USA.
-    logout: Logg ut
-    true: Ja
   page_not_found_title: Side Ikke Funnet
   page_not_found_header: '404: Side Ikke Funnet'
   page_not_found_description: Siden du leter etter finnes ikke på denne adressen.
