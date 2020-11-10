@@ -92,9 +92,10 @@ def main(options)
     cb_unit = JSON.parse(cb_unit_json)
     validate_unit(script, cb_unit)
     lesson_pairs = get_validated_lesson_pairs(script, cb_unit)
+    lesson_group_pairs = get_lesson_group_pairs(script, cb_unit['chapters'], lesson_pairs)
 
     if options.dry_run
-      log "validated #{lesson_pairs.count} lessons in unit #{script.name}"
+      log "validated #{lesson_pairs.count} lessons and #{lesson_group_pairs.count} lesson groups in unit #{script.name}"
       next
     end
 
@@ -102,7 +103,7 @@ def main(options)
       lesson.update_from_curriculum_builder(cb_lesson)
     end
 
-    log "updated #{lesson_pairs.count} lessons in unit #{script.name}"
+    log "updated #{lesson_pairs.count} lessons and #{lesson_group_pairs.count} lesson groups in unit #{script.name}"
   end
 end
 
@@ -210,6 +211,72 @@ def get_validated_lesson_pairs(script, cb_unit)
   end
 
   validated_lesson_pairs
+end
+
+# Validates the following preconditions:
+
+# 1. Every CB chapter has a corresponding LessonGroup in Code Studio.
+# 2. If the CB unit uses chapters, then for each Code Studio chapter containing
+# lessons which have lesson plans, there is a corresponding CB chapter.
+# 3. For each LessonGroup with a corresponding CB chapter, the number of Lessons
+# in the Lesson Group which have lesson plans equals the number of lessons in
+# the CB chapter.
+# 4. we do not validate that the lesson names match like we did earlier, to
+# avoid duplicate warnings.
+#
+# Then, returns an array of pairs of LessonGroups and corresponding CB chapters.
+#
+# @param [Script] script - Code Studio Script/Unit object.
+# @param [Array<Hash>] - Array of CB chapters
+# @param [Array<Array.<Lesson, Hash>>] - Array of pairs of Code Studio Lesson
+#   objects and CB lessons.
+# @return [Array<Array<LessonGroup, Hash>>] lesson_pairs - Array of pairs of
+#   Code Studio LessonGroup objects and CB chapters.
+def get_lesson_group_pairs(script, cb_chapters, lesson_pairs)
+  return [] unless cb_chapters.present?
+
+  # Compute a list of all code studio lessons embedded in the lesson_pairs array.
+  paired_lessons = lesson_pairs.map(&:first)
+
+  # Filter out any Code Studio lesson groups which do not contain any lessons
+  # which were paired with lesson plans.
+  filtered_lesson_groups = script.lesson_groups.all.select do |lg|
+    lg.lessons.any? {|lesson| paired_lessons.include?(lesson)}
+  end
+
+  # Now we expect the filtered lesson groups to have a one-to-one correspondence
+  # with CB chapters.
+  unless filtered_lesson_groups.count == cb_chapters.count
+    raise "unexpected chapter count for unit #{script.name}: #{filtered_lesson_groups.count} != #{cb_chapters.count}."
+  end
+
+  lesson_group_pairs = []
+  mismatched_names = []
+  filtered_lesson_groups.each.with_index do |lesson_group, index|
+    # Of those lesson groups which contained any lessons which have lesson plans,
+    # only look at the subset of lessons which have lesson plans.
+    filtered_lessons = lesson_group.lessons.all.select {|lesson| paired_lessons.include?(lesson)}
+    cb_chapter = cb_chapters[index]
+
+    unless filtered_lessons.count == cb_chapter['lessons'].count
+      raise "lesson count mismatch for lesson group #{lesson_group.display_name}: "\
+              "#{filtered_lessons.count} != #{cb_chapter['lessons'].count}"
+    end
+
+    lesson_group_pairs.push([lesson_group, cb_chapter])
+    unless lesson_group.display_name == cb_chapter['title']
+      mismatched_names.push([lesson_group.display_name, cb_chapter['title']])
+    end
+  end
+
+  if mismatched_names.any?
+    mismatch_summary = mismatched_names.map do |left, right|
+      "  '#{left}' --> '#{right}'"
+    end.join("\n")
+    warn "WARNING: some lesson group names differ for unit #{script.name}:\n#{mismatch_summary}"
+  end
+
+  lesson_group_pairs
 end
 
 options = parse_options
