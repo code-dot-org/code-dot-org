@@ -136,7 +136,7 @@
     "/how-to/volunteers-old.md": "\"b0516a9eaf02d4163fd1f66898abb07b\""
   },
   "az": {
-    "/en.yml": "\"e1ee90af460d5f65d8a95a4b6e7dbd61\"",
+    "/en.yml": "\"37d8bf5c7f30b3e61b51c5452d4ecf83\"",
     "/how-to/volunteers.md": "\"5a41dd7a1c51c02826a0a2eb9b7d4325\"",
     "/how-to/parents.md": "\"5343865c39d73cc9d4c9ab12a5b00871\"",
     "/how-to/events.md": "\"2dbdfa2cb7c43eabe344b8c918f4e7f5\"",
@@ -148,11 +148,11 @@
     "/how-to/2019.md": "\"6e1254350f9a5685c2ec50a3f76667b6\"",
     "/promote/op-ed.md": "\"e42ed70c40ed16bccd92e8bc9e6f56e3\"",
     "/promote/proclamation.md": "\"979b77328272199658b9d7898edbb998\"",
-    "/promote/press-kit.md": "\"6e1254350f9a5685c2ec50a3f76667b6\"",
+    "/promote/press-kit.md": "\"3f01bc6c8e860056a4b8074d3c6bf851\"",
     "/promote/index.md": "\"0140eda88b89e9f026035df6df014e04\"",
     "/promote/official-press-release.md": "\"30668653e6165a1fd4e22495bb31d883\"",
-    "/promote/resources.md": "\"3ddafde41dfe256e6a9f9e6282c1450f\"",
-    "/promote/stats.md": "\"979b77328272199658b9d7898edbb998\"",
+    "/promote/resources.md": "\"c0be308013ac77909c0a17c59c906aea\"",
+    "/promote/stats.md": "\"3f01bc6c8e860056a4b8074d3c6bf851\"",
     "/promote/previous-posters.md": "\"1d28473fbc47022761e17fba0abcf362\"",
     "/promote/country-resources.md": "W/\"781737623654d72ca1f54afe1fbe1873\"",
     "/thanks.md": "\"4d6c62156e392bc34d5a45a1429ebaa2\"",
@@ -816,14 +816,14 @@
     "/how-to/volunteers-old.md": "\"b0516a9eaf02d4163fd1f66898abb07b\""
   },
   "fr": {
-    "/en.yml": "\"a8aa5d67a53f0553bd9165e2946310d5\"",
-    "/how-to/volunteers.md": "\"5a41dd7a1c51c02826a0a2eb9b7d4325\"",
-    "/how-to/parents.md": "\"5343865c39d73cc9d4c9ab12a5b00871\"",
+    "/en.yml": "\"5966083b1ab6b450aba99fa21768bb3c\"",
+    "/how-to/volunteers.md": "\"fa5429fea8373dae13e56fd89e22f9ef\"",
+    "/how-to/parents.md": "\"fa5429fea8373dae13e56fd89e22f9ef\"",
     "/how-to/events.md": "\"2dbdfa2cb7c43eabe344b8c918f4e7f5\"",
     "/how-to/public-officials.md": "\"3ddafde41dfe256e6a9f9e6282c1450f\"",
     "/how-to/districts.md": "\"30668653e6165a1fd4e22495bb31d883\"",
     "/how-to/index.md": "\"b0516a9eaf02d4163fd1f66898abb07b\"",
-    "/how-to/companies.md": "\"30668653e6165a1fd4e22495bb31d883\"",
+    "/how-to/companies.md": "\"fa5429fea8373dae13e56fd89e22f9ef\"",
     "/how-to/afterschool.md": "\"1d28473fbc47022761e17fba0abcf362\"",
     "/how-to/2019.md": "\"6e1254350f9a5685c2ec50a3f76667b6\"",
     "/promote/op-ed.md": "\"e42ed70c40ed16bccd92e8bc9e6f56e3\"",
@@ -844,9 +844,9 @@
     "/whole-school.md": "\"e42ed70c40ed16bccd92e8bc9e6f56e3\"",
     "/activity-guidelines.md": "\"0140eda88b89e9f026035df6df014e04\"",
     "/review-committee.md": "W/\"cab34c420cfaed7b06d0b41e6db87f44\"",
-    "/how-to/parents-new.md": "\"4d6c62156e392bc34d5a45a1429ebaa2\"",
+    "/how-to/parents-new.md": "\"2fa5236249777ab9bd5352d45e579b66\"",
     "/how-to/companies-old.md": "\"c45a56c638cd4c5e261256d2108be1c5\"",
-    "/how-to/virtual.md": "\"2dbdfa2cb7c43eabe344b8c918f4e7f5\"",
+    "/how-to/virtual.md": "\"fa5429fea8373dae13e56fd89e22f9ef\"",
     "/how-to/volunteers-old.md": "\"b0516a9eaf02d4163fd1f66898abb07b\""
   },
   "gl": {
@@ -1428,7 +1428,7 @@
     "/how-to/volunteers-old.md": "\"b0516a9eaf02d4163fd1f66898abb07b\""
   },
   "ko": {
-    "/en.yml": "\"199a0d18a9a08d504472482ba4f233b4\"",
+    "/en.yml": "\"6f78df652811d8a84c79e1ac9aae117e\"",
     "/how-to/volunteers.md": "\"5a41dd7a1c51c02826a0a2eb9b7d4325\"",
     "/how-to/parents.md": "\"5343865c39d73cc9d4c9ab12a5b00871\"",
     "/how-to/events.md": "\"2dbdfa2cb7c43eabe344b8c918f4e7f5\"",
@@ -2346,7 +2346,7 @@
     "/how-to/volunteers-old.md": "\"b0516a9eaf02d4163fd1f66898abb07b\""
   },
   "es-ES": {
-    "/en.yml": "\"7d848100335871f8586c4fab2d4786d9\"",
+    "/en.yml": "\"dcb4112ab1046afa50dc2e7828bd86d9\"",
     "/how-to/volunteers.md": "\"5a41dd7a1c51c02826a0a2eb9b7d4325\"",
     "/how-to/parents.md": "\"fa28c5d9e5102ae2e8d1a59018e77532\"",
     "/how-to/events.md": "\"2dbdfa2cb7c43eabe344b8c918f4e7f5\"",
@@ -2380,7 +2380,7 @@
     "/how-to/volunteers-old.md": "\"b0516a9eaf02d4163fd1f66898abb07b\""
   },
   "es-MX": {
-    "/en.yml": "\"7d848100335871f8586c4fab2d4786d9\"",
+    "/en.yml": "\"788f069dff1c7a371a7481ad85056b2b\"",
     "/how-to/volunteers.md": "\"09ac846672355cc3e04edebfb4eb3e75\"",
     "/how-to/parents.md": "\"fa28c5d9e5102ae2e8d1a59018e77532\"",
     "/how-to/events.md": "\"2dbdfa2cb7c43eabe344b8c918f4e7f5\"",

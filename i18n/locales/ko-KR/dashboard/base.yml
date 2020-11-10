@@ -234,6 +234,7 @@ ko:
       picture: '사진 암호'
       word: '비밀단어'
       email: '이메일'
+      google_classroom: '구글 클래스룸'
       clever: '영리 계정'
   follower:
     invite_sent: '초대 메일을 발송하였습니다'
@@ -333,6 +334,7 @@ ko:
       algebra_game: '대수학'
       applab: '앱 연구실'
       artist: '화가'
+      basketball: '농구'
       bounce: '바운스'
       calc: '계산'
       dance: '댄스 파티'
@@ -347,6 +349,7 @@ ko:
       minecraft_adventurer: 'Minecraft 모험가'
       minecraft_designer: '마인크래프트'
       playlab: 'Play Lab'
+      sports: '스포츠'
       spritelab: '스프라이트 연구소'
       starwars: '스타워즈'
       starwarsblocks: '스타워즈 (블록)'
@@ -418,6 +421,7 @@ ko:
     parent_guardian_email_label: "부모/보호자 이메일"
     none: "없음"
     only_one_parent_email_supported_warning: "주: 현재는 학생 한 명당 하나의 부모/보호자 이메일 주소만 지원할 수 있습니다."
+    encrypted: "암호화됨"
   user_level:
     completed: '완료'
     tried: '시도함'
@@ -603,6 +607,8 @@ ko:
     hero:
       title: "마인크래프트"
       body: "마인크래프트가 새로운 활동과 함께 코딩의 시간을 위해 돌아왔습니다! 코딩과 함께 마인크래프트를 여행하세요."
+    sports:
+      title: "스포츠"
     unplugged:
       title: "언플러그드 레슨"
       audience: "6세 이상"
@@ -860,7 +866,9 @@ ko:
     form_labels:
       email: '이메일'
       school_name: '학교 이름'
+      school_city: '학교 도시'
       school_country: '학교 국가정보'
+      colombian_school_city: '학교 도시'
       colombian_school_name: '학교 이름'
     form_entries:
       gender:
