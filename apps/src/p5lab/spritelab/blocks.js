@@ -40,10 +40,10 @@ function animations(areBackgrounds) {
         return [url, `"${animation.name}"`];
       }
     });
-  // In case either all backgrounds or all costumes are missing and we request them, this allows the create
-  // new sprite and set background as blocks to continue working without crashing. When they are used without sprites
-  // being set, the image dropdown for those blocks will be empty except for the "More" button. The user will have to
-  // add sprites/backgrounds to this dropdown one by one using the "More" button.
+  // In case either all backgrounds or all costumes are missing and we request them, this allows the "create
+  // new sprite" and "set background as" blocks to continue working without crashing.
+  // When they are used without sprites being set, the image dropdown for those blocks will be empty except
+  // for the "More" button. The user will have to add sprites/backgrounds to this dropdown one by one using the "More" button.
   if (results.length === 0) {
     return [['sprites missing', 'null']];
   }
