@@ -29,7 +29,8 @@ const styles = {
     margin: '0 0 0 7px'
   },
   dropdown: {
-    margin: '0 6px'
+    margin: '0 6px',
+    width: 300
   },
   saveButtonBackground: {
     margin: 0,
@@ -51,18 +52,44 @@ const styles = {
 
 export default class LessonEditor extends Component {
   static propTypes = {
-    displayName: PropTypes.string.isRequired,
-    overview: PropTypes.string,
-    studentOverview: PropTypes.string,
-    unplugged: PropTypes.bool,
-    lockable: PropTypes.bool,
-    assessment: PropTypes.bool,
-    creativeCommonsLicense: PropTypes.string,
-    purpose: PropTypes.string,
-    preparation: PropTypes.string,
-    announcements: PropTypes.arrayOf(announcementShape),
+    initialDisplayName: PropTypes.string.isRequired,
+    initialOverview: PropTypes.string,
+    initialStudentOverview: PropTypes.string,
+    initialUnplugged: PropTypes.bool,
+    initialLockable: PropTypes.bool,
+    initialAssessment: PropTypes.bool,
+    initialCreativeCommonsLicense: PropTypes.string,
+    initialPurpose: PropTypes.string,
+    initialPreparation: PropTypes.string,
+    initialAnnouncements: PropTypes.arrayOf(announcementShape),
     relatedLessons: PropTypes.arrayOf(relatedLessonShape).isRequired,
-    objectives: PropTypes.arrayOf(PropTypes.object).isRequired
+    initialObjectives: PropTypes.arrayOf(PropTypes.object).isRequired
+  };
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      displayName: this.props.initialDisplayName,
+      overview: this.props.initialOverview,
+      studentOverview: this.props.initialStudentOverview,
+      unplugged: this.props.initialUnplugged,
+      lockable: this.props.initialLockable,
+      creativeCommonsLicense: this.props.initialCreativeCommonsLicense,
+      assessment: this.props.initialAssessment,
+      purpose: this.props.initialPurpose,
+      preparation: this.props.initialPreparation,
+      announcements: this.props.initialAnnouncements,
+      objectives: this.props.initialObjectives
+    };
+  }
+
+  handleUpdateAnnouncements = newAnnouncements => {
+    this.setState({announcements: newAnnouncements});
+  };
+
+  handleUpdateObjectives = newObjectives => {
+    this.setState({objectives: newObjectives});
   };
 
   render() {
@@ -76,15 +103,20 @@ export default class LessonEditor extends Component {
       assessment,
       purpose,
       preparation,
-      announcements,
-      relatedLessons
-    } = this.props;
+      announcements
+    } = this.state;
+    const {relatedLessons} = this.props;
     return (
       <div style={styles.editor}>
         <h1>Editing Lesson "{displayName}"</h1>
         <label>
           Title
-          <input name="name" defaultValue={displayName} style={styles.input} />
+          <input
+            name="name"
+            value={displayName}
+            style={styles.input}
+            onChange={e => this.setState({displayName: e.target.value})}
+          />
         </label>
 
         <RelatedLessons relatedLessons={relatedLessons} />
@@ -98,8 +130,9 @@ export default class LessonEditor extends Component {
             <input
               name="lockable"
               type="checkbox"
-              defaultChecked={lockable}
+              checked={lockable}
               style={styles.checkbox}
+              onChange={() => this.setState({lockable: !lockable})}
             />
             <HelpTip>
               <p>
@@ -114,8 +147,9 @@ export default class LessonEditor extends Component {
             <input
               name="assessment"
               type="checkbox"
-              defaultChecked={assessment}
+              checked={assessment}
               style={styles.checkbox}
+              onChange={() => this.setState({assessment: !assessment})}
             />
             <HelpTip>
               <p>Check this box if this lesson is an assessment or project. </p>
@@ -126,8 +160,9 @@ export default class LessonEditor extends Component {
             <input
               name="unplugged"
               type="checkbox"
-              defaultChecked={unplugged}
+              checked={unplugged}
               style={styles.checkbox}
+              onChange={() => this.setState({unplugged: !unplugged})}
             />
             <HelpTip>
               <p>
@@ -140,7 +175,10 @@ export default class LessonEditor extends Component {
             <select
               name="creativeCommonsLicense"
               style={styles.dropdown}
-              defaultValue={creativeCommonsLicense}
+              value={creativeCommonsLicense}
+              onChange={e =>
+                this.setState({creativeCommonsLicense: e.target.value})
+              }
             >
               <option value="Creative Commons BY-NC-SA">
                 Creative Commons BY-NC-SA
@@ -159,8 +197,9 @@ export default class LessonEditor extends Component {
         </CollapsibleEditorSection>
         <CollapsibleEditorSection title="Announcements" collapsed={true}>
           <AnnouncementsEditor
-            defaultAnnouncements={announcements}
+            announcements={announcements}
             inputStyle={styles.input}
+            updateAnnouncements={this.handleUpdateAnnouncements}
           />
         </CollapsibleEditorSection>
 
@@ -172,16 +211,20 @@ export default class LessonEditor extends Component {
           <TextareaWithMarkdownPreview
             markdown={overview}
             label={'Overview'}
-            name={'overview'}
             inputRows={5}
+            handleMarkdownChange={e =>
+              this.setState({overview: e.target.value})
+            }
           />
           <TextareaWithMarkdownPreview
             markdown={studentOverview}
             label={'Student Overview'}
-            name={'studentOverview'}
             inputRows={5}
             helpTip={
               'This overview will appear on the students Lessons Resources page.'
+            }
+            handleMarkdownChange={e =>
+              this.setState({studentOverview: e.target.value})
             }
           />
         </CollapsibleEditorSection>
@@ -194,14 +237,16 @@ export default class LessonEditor extends Component {
           <TextareaWithMarkdownPreview
             markdown={purpose}
             label={'Purpose'}
-            name={'purpose'}
             inputRows={5}
+            handleMarkdownChange={e => this.setState({purpose: e.target.value})}
           />
           <TextareaWithMarkdownPreview
             markdown={preparation}
             label={'Preparation'}
-            name={'preparation'}
             inputRows={5}
+            handleMarkdownChange={e =>
+              this.setState({preparation: e.target.value})
+            }
           />
         </CollapsibleEditorSection>
 
@@ -218,7 +263,10 @@ export default class LessonEditor extends Component {
           collapsed={true}
           fullWidth={true}
         >
-          <ObjectivesEditor objectives={this.props.objectives} />
+          <ObjectivesEditor
+            objectives={this.state.objectives}
+            updateObjectives={this.handleUpdateObjectives}
+          />
         </CollapsibleEditorSection>
 
         <CollapsibleEditorSection title="Activities & Levels" fullWidth={true}>
