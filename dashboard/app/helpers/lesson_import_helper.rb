@@ -17,7 +17,7 @@ module LessonImportHelper
       lesson.script_levels = []
   end
 
-  def self.create_activity_sections(activity_markdown, position, levels)
+  def self.create_activity_sections(activity_markdown, position)
     tip_matches = find_tips(activity_markdown).select{|m| m[1] != 'say'}.map { |m| {index:activity_markdown.index(m[0]), type: 'tip', match: m, substring: m[0]}}
     tip_link_matches = find_tip_links(activity_markdown).map { |m| {index:activity_markdown.index(m[0]), type: 'tiplink', match: m, substring: m[0]}}
     remark_matches = find_remarks(activity_markdown).map { |m| {index:activity_markdown.index(m[0]), type: 'remark', match: m, substring: m[0]}}
@@ -41,7 +41,7 @@ module LessonImportHelper
       elsif match[:type] == 'remark'
         activity_section = create_activity_section_with_remark(match[:match])
       elsif match[:type] == 'pullthrough'
-        activity_section = create_activity_section_with_levels(match[:match], levels)
+        next
       else
         activity_section = ActivitySection.new(description: match[:substring].strip)
       end
@@ -61,7 +61,7 @@ module LessonImportHelper
     sections
   end
 
-  def self.create_lesson_activities(activities_data, levels = {})
+  def self.create_lesson_activities(activities_data, levels)
     activities = activities_data.map.with_index(1) do |a, i|
       @lesson_activity = LessonActivity.new
       @lesson_activity.name = a['name']
@@ -72,21 +72,19 @@ module LessonImportHelper
       @lesson_activity.position = i
       @lesson_activity.save!
       @lesson_activity.reload
-      @lesson_activity.activity_sections = create_activity_sections(a['content'], i, levels)
+      @lesson_activity.activity_sections = create_activity_sections(a['content'], i)
       @lesson_activity
     end
-    if levels.any?{|sl| !sl["inActivitySection"]}
-      @lesson_activity = LessonActivity.new
-      @lesson_activity.name = "Leftover levels"
-      @lesson_activity.lesson = @lesson
-      @lesson_activity.lesson_id = @lesson.id
-      @lesson_activity.seeding_key = SecureRandom.uuid
-      @lesson_activity.position = activities.length + 1
-      @lesson_activity.save!
-      @lesson_activity.reload
-      @lesson_activity.activity_sections = [create_activity_section_with_level_ranges(0, levels.count-1, levels)]
-      activities.push(@lesson_activity)
-    end
+    @lesson_activity = LessonActivity.new
+    @lesson_activity.name = "Levels"
+    @lesson_activity.lesson = @lesson
+    @lesson_activity.lesson_id = @lesson.id
+    @lesson_activity.seeding_key = SecureRandom.uuid
+    @lesson_activity.position = activities.length + 1
+    @lesson_activity.save!
+    @lesson_activity.reload
+    @lesson_activity.activity_sections = [create_activity_section_with_level_ranges(0, levels.count-1, levels)]
+    activities.push(@lesson_activity)
     activities.flatten
   end
 
@@ -105,18 +103,9 @@ module LessonImportHelper
   end
 
   # https://github.com/code-dot-org/curriculumbuilder/blob/57cad8f62e50b03e4f16bf77cd9e2e1da5c3e44e/curriculumBuilder/codestudio.py
-  def self.find_code_studio_pullthroughs(markdown)
-    regex = /(\[code-studio\s*)(\d+)?-?(\d+)?\]/
+  def self.find_skippable_syntax(markdown)
+    regex = /\[code-studio\s*(?:\d+)?-?(?:\d+)?\]|\[\/?guide\]/
     markdown.to_enum(:scan, regex).map { Regexp.last_match }
-  end
-
-  def self.create_activity_section_with_levels(match, levels)
-    range_start = match[2] ? match[2].to_i - 1 : 0
-    range_end = match[3] ? match[3].to_i - 1 : levels.length-1
-    if range_start > range_end
-      return nil
-    end
-    create_activity_section_with_level_ranges([range_start, 0].max, [range_end, levels.count].min, levels)
   end
 
   def self.create_activity_section_with_level_ranges(range_start, range_end, levels)
@@ -201,5 +190,10 @@ module LessonImportHelper
       matches.push({index: 0, type: 'markdown', substring: markdown[existing_matches.last[:index] + existing_matches.last[:substring].length...markdown.length]})
     end
     matches
+  end
+
+  def self.find_level_chunks(levels, existing_level_chunks)
+    start = 1
+
   end
 end
