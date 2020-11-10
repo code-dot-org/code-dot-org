@@ -5,7 +5,7 @@ import ScriptEditor from '@cdo/apps/lib/levelbuilder/script-editor/ScriptEditor'
 
 describe('ScriptEditor', () => {
   const DEFAULT_PROPS = {
-    announcements: [],
+    initialAnnouncements: [],
     curriculumUmbrella: 'CSF',
     i18nData: {
       stageDescriptions: [],
@@ -18,7 +18,7 @@ describe('ScriptEditor', () => {
     scriptFamilies: [],
     teacherResources: [],
     versionYearOptions: [],
-    familyName: ''
+    initialFamilyName: ''
   };
 
   describe('Script Editor', () => {
