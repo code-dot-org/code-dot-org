@@ -1,10 +1,4 @@
 {
-  "clicked": "",
-  "clickedSprite": "",
-  "subject": "",
-  "subjectSprite": "",
-  "object": "",
-  "objectSprite": "",
   "errorLoadingAnimation": "Es scheint als gäb es ein Problem deine Animation \"{animationName}\" zu laden. Stelle sicher, dass du eine gute Internetverbindung hast und versuche die Seite erneut zu laden. Wenn das Problem bestehen bleibt, dann ist deine Animation vermutlich unbrauchbar. In diesem Fall müsstest du die Animation entfernen und ohne weiter machen.",
   "reinfFeedbackMsg": "Du bist fertig! Klicke auf \"Weiter\" um zum nächsten Level zu gelangen.",
   "shareGame": "Teile dein Spiel:",

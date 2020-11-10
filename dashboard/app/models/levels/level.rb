@@ -312,12 +312,6 @@ class Level < ActiveRecord::Base
     hash
   end
 
-  def self.write_custom_levels
-    level_paths = Dir.glob(Rails.root.join('config/scripts/**/*.level'))
-    written_level_paths = Level.custom_levels.map(&:write_custom_level_file)
-    (level_paths - written_level_paths).each {|path| File.delete path}
-  end
-
   def should_write_custom_level_file?
     changed = saved_changes? || (level_concept_difficulty && level_concept_difficulty.saved_changes?)
     changed && write_to_file? && published
@@ -631,8 +625,8 @@ class Level < ActiveRecord::Base
       icon: icon,
       kind: unplugged? ? LEVEL_KIND.unplugged : LEVEL_KIND.puzzle,
       title: try(:title),
-      unplugged: display_as_unplugged?,
-      is_concept_level: concept_level?,
+      isUnplugged: display_as_unplugged?,
+      isConceptLevel: concept_level?,
       sublevels: try(:sublevels),
       skin: try(:skin),
       videoKey: video_key,

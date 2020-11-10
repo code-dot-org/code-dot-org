@@ -695,6 +695,4 @@ gl:
         opt_in_no: 'Non'
   cookie_banner:
     accept: 'Acepto'
-  gdpr_dialog:
-    yes: 'Si'
   copy: 'Copiar'

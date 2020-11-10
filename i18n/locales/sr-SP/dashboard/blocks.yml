@@ -460,6 +460,8 @@ sr:
         text: насумична боја
       gamelab_randomColor:
         text: насумична боја
+      gamelab_repeatForever:
+        text: понављај заувек
       gamelab_setBackgroundImage:
         options:
           IMG:

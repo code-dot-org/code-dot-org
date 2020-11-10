@@ -366,6 +366,8 @@ ja:
           lessons:
             Creating Functions:
               name: 関数の作成
+            Introduction to Arrays:
+              name: Introduction to Arrays
             While Loops:
               name: Whileループ
         algebraPD3:
@@ -514,6 +516,8 @@ ja:
           description_audience: 10-18 才
         cspunit3temp:
           lessons:
+            Introduction to Arrays:
+              name: Introduction to Arrays
             While Loops:
               name: Whileループ
         starwars:
@@ -590,6 +594,8 @@ ja:
             cspSurvey:
               display_name: アンケート
           lessons:
+            Introduction to Arrays:
+              name: Introduction to Arrays
             While Loops:
               name: Whileループ
             Post-Course Survey:
@@ -650,6 +656,8 @@ ja:
               name: みつばち：条件文（じょうけんぶん）
         gradeKinder:
           lessons:
+            Debugging:
+              name: Debugging
             Events:
               name: イベント
             'Jigsaw: Learn to drag and drop':
@@ -664,6 +672,8 @@ ja:
               name: 作詞作曲
         grade1:
           lessons:
+            Debugging:
+              name: Debugging
             Events:
               name: イベント
             'Jigsaw: Learn to drag and drop':
@@ -787,6 +797,9 @@ ja:
               display_name: '第 1章: 問題解決プロセス'
             csd1_2:
               display_name: 第 2 章コンピューターと問題解決
+          lessons:
+            The Problem Solving Process:
+              name: The Problem Solving Process
         csp-online-test:
           lesson_groups:
             required:
@@ -920,6 +933,10 @@ ja:
               name: あなたのデジタルフットプリント
             Building a Foundation:
               name: ピラミッドをたてよう
+            Loops in Harvester:
+              name: 'Loops in Harvester
+
+'
         coursed-draft:
           lessons:
             Conditionals with Cards:
@@ -1114,10 +1131,18 @@ ja:
               name: 速度
             Functions:
               name: 関数(かんすう)
+        csd1-old:
+          lessons:
+            The Problem Solving Process:
+              name: The Problem Solving Process
         csd2-draft:
           lessons:
             Lists:
               name: リスト
+        csd1-draft:
+          lessons:
+            The Problem Solving Process:
+              name: The Problem Solving Process
         csd3-chapters:
           lessons:
             Variables:
@@ -1144,6 +1169,8 @@ ja:
               name: ピア ・ レビュー
         artist-and-bb8:
           lessons:
+            Loops with BB-8:
+              name: Loops with BB-8
             Bounce:
               name: バウンド
         coursea-2017:
@@ -1199,6 +1226,10 @@ ja:
               name: めいろ のプログラミング
             'Real-life Algorithms: Paper Planes':
               name: '現実世界のアルゴリズム: 紙飛行機を作る場合'
+            Loops in Harvester:
+              name: 'Loops in Harvester
+
+'
             'Events: The Big Event':
               name: 'イベント: おおきなイベント'
             Events in Play Lab:
@@ -1417,6 +1448,8 @@ ja:
               name: ピラミッドをたてよう
             Loops in Artist:
               name: アーティストくりかえし
+            Loops in Ice Age:
+              name: アイス・エイジのループ
         csp3-a:
           lesson_groups:
             csp3_1:
@@ -1710,6 +1743,8 @@ ja:
               name: バイナリ画像
             Artist Binary:
               name: アーティスト：バイナリ
+            Loops in Ice Age:
+              name: アイス・エイジのループ
             Graph Paper Programming:
               name: グラフ用紙のプログラミング
             Relay Programming:
@@ -1802,6 +1837,9 @@ ja:
               display_name: '第 1章: 問題解決プロセス'
             csd1_2:
               display_name: 第 2 章コンピューターと問題解決
+          lessons:
+            The Problem Solving Process:
+              name: The Problem Solving Process
         csd4-2018:
           lesson_groups:
             csd4_1:
@@ -1851,6 +1889,8 @@ ja:
           lessons:
             While Loops:
               name: Whileループ
+            Introduction to Arrays:
+              name: Introduction to Arrays
         csppostap-2018:
           lesson_groups:
             cspSurvey:
@@ -2078,6 +2118,8 @@ ja:
               name: グラフ用紙のプログラミング
             Relay Programming:
               name: プログラミングをリレーする
+            Loops in Ice Age:
+              name: アイス・エイジのループ
             Loops in Artist:
               name: アーティストくりかえし
             Conditionals with Cards:
@@ -2160,6 +2202,9 @@ ja:
               display_name: '第 1章: 問題解決プロセス'
             csd1_2:
               display_name: 第 2 章コンピューターと問題解決
+          lessons:
+            The Problem Solving Process:
+              name: The Problem Solving Process
         andrea-test:
           lesson_groups:
             required:
@@ -2244,6 +2289,8 @@ ja:
               name: 動かせ！動かせ！
             Your Digital Footprint:
               name: あなたのデジタルフットプリント
+            Loops in Ice Age:
+              name: アイス・エイジのループ
             Loops in Collector:
               name: くりかえし あつめる
             Loops in Artist:
@@ -2397,6 +2444,8 @@ ja:
           lessons:
             While Loops:
               name: Whileループ
+            Introduction to Arrays:
+              name: Introduction to Arrays
         csp-explore-2019:
           lesson_groups:
             cspSurvey:
@@ -2534,6 +2583,9 @@ ja:
               display_name: '第 1章: 問題解決プロセス'
             csd1_2:
               display_name: 第 2 章コンピューターと問題解決
+          lessons:
+            The Problem Solving Process:
+              name: The Problem Solving Process
         csd2-pilot:
           lesson_groups:
             csd2_1:
@@ -2568,6 +2620,9 @@ ja:
               display_name: 内容
             required:
               display_name: 概要
+          lessons:
+            Debugging:
+              name: Debugging
         csl-vn:
           lesson_groups:
             csf_sequencing:
@@ -2579,6 +2634,8 @@ ja:
           lessons:
             Programming in Maze:
               name: めいろ のプログラミング
+            Loops in Ice Age:
+              name: アイス・エイジのループ
             Ocean Scene with Loops:
               name: アーティストくりかえし
         dlp19-csd-mod-fit:
@@ -2785,6 +2842,9 @@ ja:
               display_name: '第 1章: 問題解決プロセス'
             csd1_2:
               display_name: 第 2 章コンピューターと問題解決
+          lessons:
+            The Problem Solving Process:
+              name: The Problem Solving Process
         csd4-2020:
           lesson_groups:
             csd4_1:
@@ -2916,6 +2976,8 @@ ja:
               name: グラフ用紙のプログラミング
             Relay Programming:
               name: プログラミングをリレーする
+            Loops in Ice Age:
+              name: アイス・エイジのループ
             Loops in Artist:
               name: アーティストくりかえし
             Conditionals with Cards:
@@ -2993,6 +3055,8 @@ ja:
               name: めいろ のプログラミング
             Spelling Bee:
               name: つづりみつばち
+            Loops in Ice Age:
+              name: アイス・エイジのループ
             Loops in Collector:
               name: くりかえし あつめる
             Ocean Scene with Loops:
@@ -3013,6 +3077,10 @@ ja:
               display_name: "(old) Unit 1: デジタル情報"
             cspSurvey:
               display_name: アンケート
+        csp3-2020:
+          lessons:
+            Debugging:
+              name: Debugging
         csp3-virtual:
           lessons:
             Creating Functions:
@@ -3023,6 +3091,8 @@ ja:
               name: 'Tools
 
 '
+            Debugging:
+              name: Debugging
         csd2-virtual:
           lesson_groups:
             csd2_1:
@@ -3033,6 +3103,8 @@ ja:
           lessons:
             While Loops:
               name: Whileループ
+            Introduction to Arrays:
+              name: Introduction to Arrays
             Variables:
               name: 変数（へんすう）
         virtual-holding-place:
@@ -3056,6 +3128,8 @@ ja:
           lessons:
             While Loops:
               name: Whileループ
+            Introduction to Arrays:
+              name: Introduction to Arrays
         k5-onlinepd-2020:
           lessons:
             Sequencing:

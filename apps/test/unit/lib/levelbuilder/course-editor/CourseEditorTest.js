@@ -19,9 +19,9 @@ const defaultProps = {
   visible: false,
   isStable: false,
   descriptionShort: 'Desc here',
-  descriptionStudent:
+  initialDescriptionStudent:
     '# Student description \n This is the course description with [link](https://studio.code.org/home) **Bold** *italics* ',
-  descriptionTeacher:
+  initialDescriptionTeacher:
     '# Teacher description \n This is the course description with [link](https://studio.code.org/home) **Bold** *italics* ',
   scriptsInCourse: ['CSP Unit 1', 'CSP Unit 2'],
   scriptNames: ['CSP Unit 1', 'CSP Unit 2'],
@@ -30,7 +30,7 @@ const defaultProps = {
   hasNumberedUnits: false,
   courseFamilies: ['CSP', 'CSD', 'CSF'],
   versionYearOptions: ['2017', '2018', '2019'],
-  announcements: []
+  initialAnnouncements: []
 };
 
 describe('CourseEditor', () => {

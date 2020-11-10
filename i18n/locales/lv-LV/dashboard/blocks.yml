@@ -262,6 +262,8 @@ lv:
         text: nejauša krāsa
       gamelab_randomColor:
         text: nejauša krāsa
+      gamelab_repeatForever:
+        text: mūžīgi atkārtot
       gamelab_setBackgroundImage:
         options:
           IMG:
