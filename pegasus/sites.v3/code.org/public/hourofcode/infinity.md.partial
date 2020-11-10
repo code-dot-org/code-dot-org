@@ -7,9 +7,7 @@ video_player: true
 
 # Infinity Play Lab: An Hour of Code Tutorial
 
-<div style="width:600px; max-width:100%; margin-left:auto; margin-right:auto;">
-    {{ hoc_infinity_video }}
-</div>
+{{ hoc_infinity_video }}
 
 [col-50]
 

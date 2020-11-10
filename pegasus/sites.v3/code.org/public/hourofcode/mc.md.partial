@@ -8,9 +8,7 @@ style_min: true
 
 # MINECRAFT Hour of Code
 
-<div style="width:600px; max-width:100%; margin-left:auto; margin-right:auto;">
-    {{ hoc_mc_video }}
-</div>
+{{ hoc_mc_video }}
 
 [col-50]
 

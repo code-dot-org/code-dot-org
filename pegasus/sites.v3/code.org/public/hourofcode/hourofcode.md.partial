@@ -7,9 +7,7 @@ video_player: true
 
 # Write your first computer program: An Hour of Code Tutorial
 
-<div style="width:600px; max-width:100%; margin-left:auto; margin-right:auto;">
-    {{ hoc_maze_video }}
-</div>
+{{ hoc_maze_video }}
 
 [col-50]
 
