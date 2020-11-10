@@ -58,7 +58,8 @@ export default class TutorialExplorer extends React.Component {
     showSortDropdown: PropTypes.bool.isRequired,
     disabledTutorials: PropTypes.arrayOf(PropTypes.string).isRequired,
     defaultSortBy: PropTypes.oneOf(Object.keys(TutorialsSortByOptions))
-      .isRequired
+      .isRequired,
+    cbPrefix: PropTypes.string.isRequired
   };
 
   constructor(props) {
@@ -573,6 +574,8 @@ export default class TutorialExplorer extends React.Component {
                   localeEnglish={false}
                   disabledTutorials={this.props.disabledTutorials}
                   grade={grade}
+                  locale={this.props.locale}
+                  cbPrefix={this.props.cbPrefix}
                 />
               )}
             </div>
@@ -637,6 +640,8 @@ export default class TutorialExplorer extends React.Component {
                     localeEnglish={this.isLocaleEnglish()}
                     disabledTutorials={this.props.disabledTutorials}
                     grade={grade}
+                    locale={this.props.locale}
+                    cbPrefix={this.props.cbPrefix}
                   />
                 )}
               </div>
@@ -863,6 +868,7 @@ window.TutorialExplorerManager = function(options) {
         showSortDropdown={options.showSortDropdown}
         disabledTutorials={options.disabledTutorials}
         defaultSortBy={defaultSortBy}
+        cbPrefix={options.cbPrefix}
       />,
       element
     );

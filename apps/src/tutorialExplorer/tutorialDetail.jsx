@@ -113,7 +113,9 @@ export default class TutorialDetail extends React.Component {
     changeTutorial: PropTypes.func.isRequired,
     localeEnglish: PropTypes.bool.isRequired,
     disabledTutorial: PropTypes.bool.isRequired,
-    grade: PropTypes.string.isRequired
+    grade: PropTypes.string.isRequired,
+    locale: PropTypes.string.isRequired,
+    cbPrefix: PropTypes.string.isRequired
   };
 
   componentDidMount() {
@@ -209,6 +211,16 @@ export default class TutorialDetail extends React.Component {
       </div>
     );
 
+    //Make the CB lesson plan locale-specific where relevant
+    const cbDomain = 'https://curriculum.code.org/';
+    const localeLowercase = this.props.locale.toLowerCase();
+    const teachersNotes =
+      this.props.item.teachers_notes &&
+      this.props.item.teachers_notes.includes(cbDomain) &&
+      !this.props.item.teachers_notes.includes(localeLowercase)
+        ? this.props.item.teachers_notes.replace(cbDomain, this.props.cbPrefix)
+        : this.props.item.teachers_notes;
+
     return (
       <div id="tutorialPopupFullWidth" style={styles.popupFullWidth}>
         <div
@@ -298,16 +310,13 @@ export default class TutorialDetail extends React.Component {
                 <div style={{clear: 'both'}} />
                 <table style={styles.tutorialDetailsTable}>
                   <tbody>
-                    {this.props.item.teachers_notes && (
+                    {teachersNotes && (
                       <tr key={0}>
                         <td style={styles.tutorialDetailsTableTitle}>
                           {i18n.tutorialDetailsMoreResources()}
                         </td>
                         <td style={styles.tutorialDetailsTableBody}>
-                          <a
-                            href={this.props.item.teachers_notes}
-                            target="_blank"
-                          >
+                          <a href={teachersNotes} target="_blank">
                             <i
                               className="fa fa-external-link"
                               aria-hidden={true}

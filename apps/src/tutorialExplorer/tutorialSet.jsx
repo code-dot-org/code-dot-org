@@ -22,7 +22,9 @@ export default class TutorialSet extends React.Component {
     tutorials: PropTypes.arrayOf(shapes.tutorial.isRequired).isRequired,
     localeEnglish: PropTypes.bool.isRequired,
     disabledTutorials: PropTypes.arrayOf(PropTypes.string).isRequired,
-    grade: PropTypes.string.isRequired
+    grade: PropTypes.string.isRequired,
+    locale: PropTypes.string.isRequired,
+    cbPrefix: PropTypes.string.isRequired
   };
 
   state = {
@@ -60,6 +62,8 @@ export default class TutorialSet extends React.Component {
           disabledTutorial={disabledTutorial}
           changeTutorial={this.changeTutorial}
           grade={this.props.grade}
+          locale={this.props.locale}
+          cbPrefix={this.props.cbPrefix}
         />
         {this.props.tutorials.map(item => (
           <Tutorial
