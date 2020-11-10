@@ -25,6 +25,11 @@ class LevelsHelperTest < ActionView::TestCase
     stubs(:storage_decrypt_channel_id).returns([123, 456])
   end
 
+  teardown do
+    # Some tests access and store data in the cache, so clear between tests to avoid state leakage
+    Rails.cache.clear
+  end
+
   test "blockly_options refuses to generate options for non-blockly levels" do
     @level = create(:match)
     assert_raises(ArgumentError) do
@@ -350,18 +355,28 @@ class LevelsHelperTest < ActionView::TestCase
   test 'get_azure_speech_service_voices returns voices array on success' do
     region = 'eastus'
     mock_token = 'a1b2c3d4'
+    voices_url = "https://#{region}.tts.speech.microsoft.com/cognitiveservices/voices/list"
 
     # Empty response
-    stub_request(:get, "https://#{region}.tts.speech.microsoft.com/cognitiveservices/voices/list").
+    stub_request(:get, voices_url).
       with(headers: {'Authorization' => "Bearer #{mock_token}"}).
       to_return(status: 200, body: '')
     assert_equal [], get_azure_speech_service_voices(region, mock_token, 1)
 
+    # Voices are cached, so delete cache key
+    Rails.cache.delete("azure_speech_service/voices")
+
     # Voices list response
     mock_voices = [{'Locale': 'en-US', 'Gender': 'female'}].to_json
-    stub_request(:get, "https://#{region}.tts.speech.microsoft.com/cognitiveservices/voices/list").
+    stub_request(:get, voices_url).
       with(headers: {'Authorization' => "Bearer #{mock_token}"}).
       to_return(status: 200, body: mock_voices)
+    assert_equal JSON.parse(mock_voices), get_azure_speech_service_voices(region, mock_token, 1)
+
+    # Make sure voices are cached
+    stub_request(:get, voices_url).
+      with(headers: {'Authorization' => "Bearer #{mock_token}"}).
+      to_raise(ArgumentError)
     assert_equal JSON.parse(mock_voices), get_azure_speech_service_voices(region, mock_token, 1)
   end
 
