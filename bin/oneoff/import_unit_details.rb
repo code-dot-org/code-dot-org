@@ -95,7 +95,7 @@ def main(options)
     lesson_group_pairs = get_lesson_group_pairs(script, cb_unit['chapters'], lesson_pairs)
 
     if options.dry_run
-      log "validated #{lesson_pairs.count} lessons and #{lesson_group_pairs.count} lesson groups in unit #{script.name}"
+      puts "validated #{lesson_pairs.count} lessons and #{lesson_group_pairs.count} lesson groups in unit #{script.name}"
       next
     end
 
@@ -110,7 +110,7 @@ def main(options)
       lesson_group.update_from_curriculum_builder(cb_chapter)
     end
 
-    log "updated #{lesson_pairs.count} lessons and #{lesson_group_pairs.count} lesson groups in unit #{script.name}"
+    puts "updated #{lesson_pairs.count} lessons and #{lesson_group_pairs.count} lesson groups in unit #{script.name}"
   end
 end
 
