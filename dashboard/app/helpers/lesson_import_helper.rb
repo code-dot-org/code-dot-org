@@ -1,8 +1,23 @@
 module LessonImportHelper
 
+  def self.update_lockable_lesson(lesson)
+      lesson_activity = LessonActivity.new
+      lesson_activity.seeding_key = SecureRandom.uuid
+      lesson_activity.position = 1
+      lesson.lesson_activities = [lesson_activity]
+      activity_section = ActivitySection.new
+      levels = lesson.script_levels.each_with_index.map{|l,i| JSON.parse({id: l.id, assessment: l.assessment, bonus: l.bonus, challenge:l.challenge, levels: l.levels, activitySectionPosition: i, inActivitySection: false}.to_json)}
+      activity_section.seeding_key = SecureRandom.uuid
+      activity_section.position = 1
+      activity_section.lesson_activity = lesson_activity
+      activity_section.save!
+      activity_section.update_script_levels(levels)
+      lesson_activity.activity_sections = [activity_section]
+      activity_section.save!
+      lesson.script_levels = []
+  end
+
   def self.create_activity_sections(activity_markdown, position, levels)
-    #tips = parse_tips(activity_markdown)
-    #return [ActivitySection.new(description: activity_markdown, seeding_key: SecureRandom.uuid, position: 1, tips: tips)]
     tip_matches = find_tips(activity_markdown).select{|m| m[1] != 'say'}.map { |m| {index:activity_markdown.index(m[0]), type: 'tip', match: m, substring: m[0]}}
     tip_link_matches = find_tip_links(activity_markdown).map { |m| {index:activity_markdown.index(m[0]), type: 'tiplink', match: m, substring: m[0]}}
     remark_matches = find_remarks(activity_markdown).map { |m| {index:activity_markdown.index(m[0]), type: 'remark', match: m, substring: m[0]}}
@@ -20,8 +35,6 @@ module LessonImportHelper
     sorted_matches.each_with_index do |match, i|
       activity_section = nil
       if match[:type] == 'tip'
-        #key = match[:match][3] || "#{match[:match][1]}-0"
-        #tip_match_map[key] = match
         next
       elsif match[:type] == 'tiplink'
         activity_section = create_activity_section_with_tip(match[:match], tip_match_map)
@@ -115,8 +128,6 @@ module LessonImportHelper
     activity_section.save!
     activity_section.description = "levels #{range_start} to #{range_end}"
     unless levels.empty?
-      #activity_section.script_levels = levels[range_start..range_end]
-      #sl_data = levels[range_start..range_end].each_with_index.map{|l,i| JSON.parse({id: l.id, assessment: l.assessment, bonus: l.bonus, challenge:l.challenge, levels: l.levels, activitySectionPosition: i}.to_json)}
       sl_data = levels.slice(range_start..range_end)
 
       sl_data = sl_data.select{|sl| !sl["inActivitySection"] }
@@ -140,8 +151,6 @@ module LessonImportHelper
 
   # https://github.com/code-dot-org/remark-plugins/blob/master/src/tip.js
   def self.find_tips(markdown)
-    #regex = /^!!! ?([\w-]+)(?: "(.*?)")?(?: <(.*?)>)\n([\d\D]+?)([\w-]+)!!!(.*?)$/
-    #regex = /^!!!?([\w-]+)(?: "(.*?)")?(?: <(.*?)>)[\n\r]([\d\D]+?)^([\w-]+)!!![a-zA-Z0-9\-]+(?:<!-- place where you'd like the icon -->)?(.+?)$/
     regex = /^!!! *?([\w-]+)(?: "(.*?)")?(?: <(.*?)>)?(?:[\s]+$)+([\d\D]+?)(?=^\S)/
     markdown.to_enum(:scan, regex).map { Regexp.last_match }
   end
