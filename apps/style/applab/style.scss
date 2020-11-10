@@ -555,14 +555,15 @@ div#visualizationResizeBar {
       }
     }
   }
+  .Select-value-label .checkbox {
+    visibility: hidden;
+  }
   .Select-menu, .Select-menu-outer {
     height: 75vh;
     max-height: 75vh;
     border-bottom: 1px solid #ccc;
     border-radius: 4px;
-  }
-  .Select-menu .is-selected {
-    background-color: lightblue;
+    text-align: center;
   }
 
   .Select-control {
