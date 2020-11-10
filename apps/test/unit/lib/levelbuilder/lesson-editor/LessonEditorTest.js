@@ -32,18 +32,18 @@ describe('LessonEditor', () => {
     store.dispatch(init(sampleActivities, levelKeyList, searchOptions));
     store.dispatch(initResources(resourceTestData));
     defaultProps = {
-      displayName: 'Lesson Name',
-      overview: 'Lesson Overview',
-      studentOverview: 'Overview of the lesson for students',
-      unplugged: false,
-      lockable: false,
-      assessment: false,
-      creativeCommonsLicense: 'Creative Commons BY-NC-SA',
-      purpose: 'The purpose of the lesson is for people to learn',
-      preparation: '- One',
-      announcements: [],
+      initialDisplayName: 'Lesson Name',
+      initialOverview: 'Lesson Overview',
+      initialStudentOverview: 'Overview of the lesson for students',
+      initialUnplugged: false,
+      initialLockable: false,
+      initialAssessment: false,
+      initialCreativeCommonsLicense: 'Creative Commons BY-NC-SA',
+      initialPurpose: 'The purpose of the lesson is for people to learn',
+      initialPreparation: '- One',
+      initialAnnouncements: [],
       relatedLessons: [],
-      objectives: []
+      initialObjectives: []
     };
   });
 
