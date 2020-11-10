@@ -10,17 +10,15 @@ markdown <<MARKDOWN
 
 Welcome to the asynchronous work for Module 8 for CS Discoveries!  
 
-Module 8 is a continuation of Unit 6 - The Design Process.  During Module 7 we explored Chapter 1 and focused on how software interacts with hardware. During Module 8 we will finish exploring Chapter 1 and look at how to gather information from the user as well as how computers can sense and respond to their environment. We will have an opportunity to explore Chapter 2 during the synchronous workshop.
-
-The asynchronous work here will feed into the upcoming synchronous workshop of this module and help you understand the content and curriculum as you prepare to teach your own students. Combined, these asynchronous tasks should take about 90 minutes to complete, but you can start and stop at your own pace.
+Module 8 is a continuation of Unit 6 - The Design Process.  During Module 7 we explored Chapter 1 and explored how software interacts with hardware. During this asynchronous work in Module 8, we will finish exploring Chapter 1 which includes exploring how information is gathered from the user and how computers can sense and respond to their environment. We will explore Unit 6: Chapter 2 during the synchronous workshop. The asynchronous tasks during this Module should take about 90 minutes to complete, but you can start and stop at your own pace.
 
 
 **During this asynchronous work you will:**
 
-* Become familiar with the getProperty block
-* Become familiar with analog inputs on the Circuit Playground
-* 
-* Reflect on where you are in supporting an equitable and inclusive CS Discoveries classroom
+* Become familiar with the getProperty() block to gather information from users
+* Become familiar with analog sensors as a new form of input using the Circuit Playground
+* Become familiar with the end of chapter project in Lesson 9 for Unit 6: Chapter 1
+* Reflect on where you are in supporting the equity goal of bringing CS to all students
 
 
 ### Let's get started!

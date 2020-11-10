@@ -14,6 +14,11 @@ def log(str)
   puts str if $verbose
 end
 
+$quiet = false
+def warn(str)
+  puts str unless $quiet && !$verbose
+end
+
 # Wait until after initial error checking before loading the rails environment.
 def require_rails_env
   log "loading rails environment..."
@@ -52,6 +57,10 @@ def parse_options
         options.dry_run = true
       end
 
+      opts.on('-q', '--quiet', 'Silence warnings.') do
+        $quiet = true
+      end
+
       opts.on('-v', '--verbose', 'Use verbose debug logging.') do
         $verbose = true
       end
@@ -82,22 +91,104 @@ def main(options)
 
     cb_unit = JSON.parse(cb_unit_json)
     validate_unit(script, cb_unit)
+    chapters = get_validated_chapters(cb_unit)
+    lesson_pairs = get_validated_lesson_pairs(script, chapters)
+
+    log "validated unit #{script.name} data"
+
+    next if options.dry_run
+
+    lesson_pairs.each do |lesson, cb_lesson|
+      lesson.update_from_curriculum_builder(cb_lesson)
+    end
+    log "updated #{lesson_pairs.count} lessons in unit #{script.name}"
   end
 end
 
 def fetch(url)
-  log "fetching unit json from #{url}"
   uri = URI(url)
   response = Net::HTTP.get_response(uri)
   raise "HTTP status #{response.code} fetching #{uri}" unless response.is_a? Net::HTTPSuccess
   body = response.body
-  log "received #{body.length} bytes of unit json."
+  log "fetched #{body.length} bytes of unit json from #{uri}"
   body
 end
 
 def validate_unit(script, cb_unit)
   raise "unexpected unit_name #{cb_unit['unit_name']}" unless cb_unit['unit_name'] == script.name
-  log "validated unit data for #{script.name}"
+end
+
+def get_validated_chapters(cb_unit)
+  # In 2020, CSF and CSD lessons are all inside chapters, and CSP does not use
+  # chapters. Therefore, we can simplify the merge logic by assuming that
+  # lessons are all inside chapters when chapters are present.
+  if cb_unit['chapters'].present? && cb_unit['lessons'].present?
+    raise "found #{cb_unit['lessons'].count} unexpected lessons outside of chapters"
+  end
+
+  if cb_unit['chapters'].blank? && cb_unit['lessons'].blank?
+    raise "no chapters or lessons found"
+  end
+
+  cb_unit['chapters'].presence || [{'lessons' => cb_unit['lessons']}]
+end
+
+def get_validated_lesson_pairs(script, chapters)
+  validated_lesson_pairs = []
+
+  cb_lessons = chapters.map {|ch| ch['lessons']}.flatten
+
+  # Compare non-lockable lessons from CB and Code Studio.
+  lessons_nonlockable = script.lessons.reject(&:lockable)
+  # In 2020, a code_studio_url indicates a lockable lesson in CSP.
+  cb_lessons_nonlockable = cb_lessons.reject {|lesson| lesson['code_studio_url'].present?}
+  unless lessons_nonlockable.count == cb_lessons_nonlockable.count
+    raise "mismatched lesson counts for unit #{script.name} CS: #{lesson_names.count} CB: #{cb_lesson_names.count}"
+  end
+  mismatched_names = []
+  lessons_nonlockable.each.with_index do |lesson, index|
+    cb_lesson = cb_lessons[index]
+    position = index + 1
+    raise "unexpected position for lesson '#{lesson.name}'" unless lesson.relative_position == position
+    raise "unexpected number for cb lesson '#{cb_lesson['title']}'" unless cb_lesson['number'] == position
+    validated_lesson_pairs.push([lesson, cb_lesson])
+
+    # The code studio lesson name should generally match the cb lesson title.
+    # Warn if the names differ.
+    #
+    # Also look at the stage_name, which comes from code studio stage details
+    # having been pulled through to CB. If the lesson name matches that name
+    # exactly, then do not warn, because that's a strong signal that we found
+    # the right lesson.
+    unless [cb_lesson['stage_name'], cb_lesson['title']].any? {|name| name.strip.downcase == lesson.name.strip.downcase}
+      mismatched_names.push([lesson.name, cb_lesson['title']])
+    end
+  end
+
+  # Compare lockable lessons. Most lockable lessons won't have a lesson plan,
+  # so just make sure we can find the corresponding code studio lesson for any
+  # lesson plan belonging to a lockable lesson.
+  cb_lessons_lockable = cb_lessons.select {|cb_lesson| cb_lesson['code_studio_url'].present?}
+  cb_lessons_lockable.each do |cb_lesson|
+    lockable_position = %r{/s/#{script.name}/lockable/(\d+)/}.match(cb_lesson['code_studio_url'])&.captures&.first
+    unless lockable_position
+      raise "could not parse code_studio_url: #{cb_lesson['code_studio_url']} for cb lesson '#{cb_lesson['title']}' in unit #{script.name}"
+    end
+    lesson = script.lessons.find_by!(lockable: true, relative_position: lockable_position)
+    validated_lesson_pairs.push([lesson, cb_lesson])
+    unless lesson.name.downcase.strip == cb_lesson['title'].downcase.strip
+      mismatched_names.push([lesson.name, cb_lesson['title']])
+    end
+  end
+
+  if mismatched_names.any?
+    mismatch_summary = mismatched_names.map do |left, right|
+      "  '#{left}' --> '#{right}'"
+    end.join("\n")
+    warn "WARNING: some lesson names differ for unit #{script.name}:\n#{mismatch_summary}"
+  end
+
+  validated_lesson_pairs
 end
 
 options = parse_options

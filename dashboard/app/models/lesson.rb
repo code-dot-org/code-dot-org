@@ -461,6 +461,31 @@ class Lesson < ActiveRecord::Base
     end
   end
 
+  # This method takes lesson and activity data exported from curriculum builder
+  # and updates corresponding fields of this lesson to match it. The expected
+  # input format is as follows:
+  # {
+  #   "title": "Lesson Title",
+  #   "number": 1,
+  #   "student_desc": "Student-facing description",
+  #   "teacher_desc": "Teacher-facing description",
+  #   "activities": [
+  #     {
+  #       "name": "Activity name",
+  #       "duration": "5-10 minutes",
+  #       "content": "Activity markdown"
+  #     },
+  #     ...
+  #   ]
+  # }
+  # @param [Hash] cb_lesson_data - Lesson and activity data to import.
+  def update_from_curriculum_builder(_cb_lesson_data)
+    # In the future, only levelbuilder should be added to this list.
+    raise unless [:development, :adhoc].include? rack_env
+
+    # puts "TODO: update lesson #{id} with cb lesson data: #{cb_lesson_data.to_json[0, 50]}..."
+  end
+
   # Used for seeding from JSON. Returns the full set of information needed to uniquely identify this object.
   # If the attributes of this object alone aren't sufficient, and associated objects are needed, then data from
   # the seeding_keys of those objects should be included as well.
