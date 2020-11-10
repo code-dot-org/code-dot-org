@@ -24,7 +24,7 @@ export const studentType = PropTypes.shape({
  * @property {bool} isConceptLevel
  * @property {levelType[]} sublevels
  */
-export const levelType = PropTypes.shape({
+const levelShape = {
   id: PropTypes.number.isRequired,
   levelNumber: PropTypes.number,
   kind: PropTypes.string,
@@ -32,9 +32,11 @@ export const levelType = PropTypes.shape({
   name: PropTypes.string,
   icon: PropTypes.string,
   isUnplugged: PropTypes.bool,
-  isConceptLevel: PropTypes.bool,
-  sublevels: PropTypes.arrayOf(levelType)
-});
+  isConceptLevel: PropTypes.bool
+};
+// Avoid recursive definition
+levelShape.sublevels = PropTypes.arrayOf(PropTypes.shape(levelShape));
+export const levelType = PropTypes.shape(levelShape);
 
 /**
  * @typedef {Object} StudentLevelProgress
