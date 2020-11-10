@@ -91,8 +91,7 @@ def main(options)
 
     cb_unit = JSON.parse(cb_unit_json)
     validate_unit(script, cb_unit)
-    cb_chapters = get_validated_cb_chapters(cb_unit)
-    lesson_pairs = get_validated_lesson_pairs(script, cb_chapters)
+    lesson_pairs = get_validated_lesson_pairs(script, cb_unit)
 
     if options.dry_run
       log "validated #{lesson_pairs.count} lessons in unit #{script.name}"
@@ -145,11 +144,13 @@ end
 #    CB lesson data to update them with.
 #
 # @param [Script] script - Code Studio Script/Unit object.
-# @param [Array<Hash>] - Array of CB chapters
+# @param [Hash] - Curriculum Builder Unit
 # @return [Array<Array.<Lesson, Hash>>] - Array of pairs of Code Studio Lesson
 #   objects and CB lesson data objects.
-def get_validated_lesson_pairs(script, cb_chapters)
+def get_validated_lesson_pairs(script, cb_unit)
   validated_lesson_pairs = []
+
+  cb_chapters = get_validated_cb_chapters(cb_unit)
 
   cb_lessons = cb_chapters.map {|ch| ch['lessons']}.flatten
 
