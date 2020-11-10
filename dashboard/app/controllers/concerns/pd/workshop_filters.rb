@@ -87,6 +87,18 @@ module Pd::WorkshopFilters
       if current_user.permission?(UserPermission::WORKSHOP_ADMIN)
         workshops = workshops.where(organizer_id: params[:organizer_id]) if params[:organizer_id]
         workshops = workshops.facilitated_by(User.find_by(id: params[:facilitator_id])) if params[:facilitator_id]
+
+        if params[:virtual]
+          # Note this is an inefficient workaround required
+          # because we store a workshop's virtual status as
+          # a serialized attribute, which cannot be queried easily
+          # via the typical ActiveRecord where method.
+          virtual_status = params[:virtual] == 'yes'
+          workshops_array = workshops.select {|workshop| workshop.virtual? == virtual_status}
+          workshops = workshops_array.empty? ?
+            workshops.none :
+            workshops.where(id: workshops_array.map(&:id))
+        end
       end
 
       if params[:regional_partner_id] && params[:regional_partner_id] != 'all'
@@ -124,6 +136,8 @@ module Pd::WorkshopFilters
             workshops = workshops.order("course #{direction}".strip)
           when 'subject'
             workshops = workshops.order("subject #{direction}".strip)
+          when 'virtual'
+            workshops = workshops.order("virtual #{direction}".strip)
           when 'date'
             workshops = workshops.order_by_scheduled_start(desc: direction == 'desc')
           when 'enrollments'
@@ -147,6 +161,7 @@ module Pd::WorkshopFilters
       :end,
       :course,
       :subject,
+      :virtual,
       :facilitator_id,
       :organizer_id,
       :teacher_email,

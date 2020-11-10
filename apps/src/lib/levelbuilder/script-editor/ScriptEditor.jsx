@@ -85,29 +85,35 @@ export default class ScriptEditor extends React.Component {
     curriculumPath: PropTypes.string,
     pilotExperiment: PropTypes.string,
     editorExperiment: PropTypes.string,
-    announcements: PropTypes.arrayOf(announcementShape).isRequired,
+    initialAnnouncements: PropTypes.arrayOf(announcementShape).isRequired,
     supportedLocales: PropTypes.arrayOf(PropTypes.string),
     locales: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.string)).isRequired,
     projectSharing: PropTypes.bool,
     curriculumUmbrella: PropTypes.oneOf(CURRICULUM_UMBRELLAS),
-    familyName: PropTypes.string,
+    initialFamilyName: PropTypes.string,
     versionYear: PropTypes.string,
     scriptFamilies: PropTypes.arrayOf(PropTypes.string).isRequired,
     versionYearOptions: PropTypes.arrayOf(PropTypes.string).isRequired,
     isLevelbuilder: PropTypes.bool,
     tts: PropTypes.bool,
     hasCourse: PropTypes.bool,
-    isCourse: PropTypes.bool
+    initialIsCourse: PropTypes.bool
   };
 
   constructor(props) {
     super(props);
 
     this.state = {
-      familyName: this.props.familyName || '',
-      isCourse: this.props.isCourse
+      familyName: this.props.initialFamilyName || '',
+      isCourse: this.props.initialIsCourse,
+      description: this.props.i18nData.description,
+      announcements: this.props.initialAnnouncements
     };
   }
+
+  handleUpdateAnnouncements = newAnnouncements => {
+    this.setState({announcements: newAnnouncements});
+  };
 
   handleClearSupportedLocalesSelectClick = () => {
     $(this.supportedLocaleSelect)
@@ -202,10 +208,12 @@ export default class ScriptEditor extends React.Component {
           />
         </label>
         <TextareaWithMarkdownPreview
-          markdown={this.props.i18nData.description}
+          markdown={this.state.description}
           label={'Description'}
-          name={'description'}
           inputRows={5}
+          handleMarkdownChange={e =>
+            this.setState({description: e.target.value})
+          }
         />
 
         <CollapsibleEditorSection title="Basic Settings">
@@ -324,8 +332,9 @@ export default class ScriptEditor extends React.Component {
 
         <CollapsibleEditorSection title="Announcements">
           <AnnouncementsEditor
-            defaultAnnouncements={this.props.announcements}
+            announcements={this.state.announcements}
             inputStyle={styles.input}
+            updateAnnouncements={this.handleUpdateAnnouncements}
           />
         </CollapsibleEditorSection>
 
