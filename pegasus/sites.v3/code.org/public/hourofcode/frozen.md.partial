@@ -7,9 +7,7 @@ video_player: true
 
 # Code with Anna and Elsa: An Hour of Code Tutorial
 
-<div style="width:600px; max-width:100%; margin-left:auto; margin-right:auto;">
-    {{ hoc_frozen_video }}
-</div>
+{{ hoc_frozen_video }}
 
 [col-50]
 
