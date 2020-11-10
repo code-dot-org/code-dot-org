@@ -63,7 +63,7 @@ export default class ThemeDropdown extends React.Component {
           <div className="theme-dropdown-label" style={styles.dropdownLabel}>
             <img style={styles.icon} src={themeOption.icon} />
             <div style={styles.label}>{themeOption.displayName}</div>
-            <div>
+            <div className="checkbox">
               {selectedValue === themeOption.option ? (
                 <FontAwesome icon="check" />
               ) : (
