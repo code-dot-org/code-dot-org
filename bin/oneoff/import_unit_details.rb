@@ -94,13 +94,15 @@ def main(options)
     cb_chapters = get_validated_cb_chapters(cb_unit)
     lesson_pairs = get_validated_lesson_pairs(script, cb_chapters)
 
-    log "validated unit #{script.name} data"
-
-    next if options.dry_run
+    if options.dry_run
+      log "validated #{lesson_pairs.count} lessons in unit #{script.name}"
+      next
+    end
 
     lesson_pairs.each do |lesson, cb_lesson|
       lesson.update_from_curriculum_builder(cb_lesson)
     end
+
     log "updated #{lesson_pairs.count} lessons in unit #{script.name}"
   end
 end
