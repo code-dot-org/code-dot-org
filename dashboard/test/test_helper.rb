@@ -304,8 +304,7 @@ class ActiveSupport::TestCase
     expected_directives = [
       'no-cache',
       'no-store',
-      'must-revalidate',
-      'max-age=0'
+      'private'
     ]
     assert_cache_control_match expected_directives, cache_control_header
   end
