@@ -825,7 +825,12 @@
         "grade5_artist_binary5": "Fiecare şir binar reprezintă o linie din această imagine. Poţi să rearanjezi liniile astfel încât desenul să reprezinte o faţă zâmbitoare în loc de o faţă tristă?",
         "grade5_artist_binary8": "Finalizează acest desen.",
         "grade5_artist_binary9": "Aici este o pânză de rezoluţie mai mare pentru a desena - 16 pixeli 16 pixeli! \\\r \\\r Vezi ce se întâmplă atunci când începem sa cream cu biţi?",
-        "k-1 maze 1": "Poţi să mă muţi spre vest pentru a ajunge la porc?"
+        "k-1 maze 1": "Poţi să mă muţi spre vest pentru a ajunge la porc?",
+        "scrat 16": "Ghindă! Ghindă! Ghindă! Utilizaţi un bloc \"dacă\" pentru a mă duce acolo cu cel mai mic număr de blocuri.",
+        "scrat 17": "OK, haideți să exersăm din nou - nu este foarte diferit, dar fiți atenți la perete!",
+        "scrat 18": "Blocurile \"dacă-altfel\" verifică o condiţie şi apoi execută un lucru SAU altul. Pentru a mă duce la ghindă încercaţi să utilizaţi acest bloc nou.",
+        "scrat 19": "Încă un exercițiu de practică cu blocul \"dacă-altfel\", poate reușești chiar prima încercare?",
+        "scrat 20": "Puteți să mai adăugați doar 3 blocuri pentru a mă ajuta să rezolv un labirint mai complex? Dacă o faceți bine, voi putea să merg pe orice traseu curbat, indiferent de lungime. Uraaa! Gheața se topește!"
       }
     }
   }

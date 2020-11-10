@@ -690,13 +690,15 @@
           "n-sided shape": {
             "name": "n-hliða form",
             "parameters": {
-              "length": "lengd"
+              "length": "lengd",
+              "sides": "hliðar"
             }
           },
           "draw a loop": {
             "name": "teikna lykkju",
             "parameters": {
-              "length": "lengd"
+              "length": "lengd",
+              "sides": "hliðar"
             }
           },
           "draw spiral circle": {
@@ -710,7 +712,8 @@
           "draw a loop": {
             "name": "teikna lykkju",
             "parameters": {
-              "length": "lengd"
+              "length": "lengd",
+              "sides": "hliðar"
             }
           },
           "n-sided shape": {
@@ -917,13 +920,15 @@
           "draw a polygon": {
             "name": "teikna marghyrning",
             "parameters": {
-              "length": "lengd"
+              "length": "lengd",
+              "sides": "hliðar"
             }
           },
           "do something": {
             "name": "gera eitthvað",
             "parameters": {
-              "length": "lengd"
+              "length": "lengd",
+              "sides": "hliðar"
             }
           }
         },
@@ -931,7 +936,8 @@
           "draw a polygon": {
             "name": "teikna marghyrning",
             "parameters": {
-              "length": "lengd"
+              "length": "lengd",
+              "sides": "hliðar"
             }
           }
         },
@@ -939,7 +945,8 @@
           "draw a polygon": {
             "name": "teikna marghyrning",
             "parameters": {
-              "length": "lengd"
+              "length": "lengd",
+              "sides": "hliðar"
             }
           }
         },
@@ -947,7 +954,8 @@
           "draw a polygon": {
             "name": "teikna marghyrning",
             "parameters": {
-              "length": "lengd"
+              "length": "lengd",
+              "sides": "hliðar"
             }
           }
         },
@@ -955,7 +963,8 @@
           "draw a spiral edge": {
             "name": "teikna útlínu spírals",
             "parameters": {
-              "length": "lengd"
+              "length": "lengd",
+              "sides": "hliðar"
             }
           }
         },
@@ -965,16 +974,22 @@
             "parameters": {
               "points": "stig",
               "length": "lengd"
-            }
+            },
+            "description": "teikna stjörnu með tiltekinn fjölda geisla og hliðar af tiltekinni lengd"
           },
           "draw a circle": {
-            "name": "teikna hring"
+            "name": "teikna hring",
+            "description": "teikna hring með tiltekinn radíus",
+            "parameters": {
+              "radius": "radius"
+            }
           },
           "draw a pinwheel": {
             "name": "teikna rellu",
             "parameters": {
               "length": "lengd",
-              "repeat": "endurtaka"
+              "repeat": "endurtaka",
+              "sides": "hliðar"
             }
           },
           "draw a triangle": {
@@ -986,7 +1001,8 @@
           "draw a shape": {
             "name": "teikna form",
             "parameters": {
-              "length": "lengd"
+              "length": "lengd",
+              "sides": "hliðar"
             }
           },
           "draw a house": {
@@ -998,7 +1014,8 @@
           "draw a square": {
             "name": "teikna ferning",
             "parameters": {
-              "length": "lengd"
+              "length": "lengd",
+              "sides": "hliðar"
             }
           }
         },
@@ -1089,7 +1106,8 @@
           "draw a polygon": {
             "name": "teikna marghyrning",
             "parameters": {
-              "length": "lengd"
+              "length": "lengd",
+              "sides": "hliðar"
             }
           }
         },
@@ -1099,7 +1117,8 @@
             "parameters": {
               "height": "hæð",
               "actor": "leikmaður"
-            }
+            },
+            "description": "fallkubbur fyrir hopp með stika fyrir hæð og leikveru"
           },
           "patrol": {
             "name": "rása",
@@ -1328,7 +1347,10 @@
             }
           },
           "draw a polygon": {
-            "name": "teikna marghyrning"
+            "name": "teikna marghyrning",
+            "parameters": {
+              "sides": "hliðar"
+            }
           },
           "draw a square 20": {
             "name": "teikna ferning 20"
@@ -3080,7 +3102,8 @@
           "draw a polygon": {
             "name": "teikna marghyrning",
             "parameters": {
-              "length": "lengd"
+              "length": "lengd",
+              "sides": "hliðar"
             }
           }
         },
@@ -3088,7 +3111,8 @@
           "draw a polygon": {
             "name": "teikna marghyrning",
             "parameters": {
-              "length": "lengd"
+              "length": "lengd",
+              "sides": "hliðar"
             }
           }
         },
@@ -3096,7 +3120,8 @@
           "draw a spiral edge": {
             "name": "teikna útlínu spírals",
             "parameters": {
-              "length": "lengd"
+              "length": "lengd",
+              "sides": "hliðar"
             }
           }
         },
@@ -3105,7 +3130,8 @@
             "name": "teikna útlínu spírals",
             "parameters": {
               "length": "lengd",
-              "min": "min"
+              "min": "min",
+              "sides": "hliðar"
             }
           }
         },
@@ -3114,7 +3140,8 @@
             "name": "teikna útlínu spírals",
             "parameters": {
               "length": "lengd",
-              "min": "min"
+              "min": "min",
+              "sides": "hliðar"
             }
           }
         },
@@ -3124,16 +3151,22 @@
             "parameters": {
               "points": "stig",
               "length": "lengd"
-            }
+            },
+            "description": "teikna stjörnu með tiltekinn fjölda geisla og hliðar af tiltekinni lengd"
           },
           "draw a circle": {
-            "name": "teikna hring"
+            "name": "teikna hring",
+            "description": "teikna hring með tiltekinn radíus",
+            "parameters": {
+              "radius": "radius"
+            }
           },
           "draw a pinwheel": {
             "name": "teikna rellu",
             "parameters": {
               "length": "lengd",
-              "repeat": "endurtaka"
+              "repeat": "endurtaka",
+              "sides": "hliðar"
             }
           },
           "draw a triangle": {
@@ -3145,7 +3178,8 @@
           "draw a shape": {
             "name": "teikna form",
             "parameters": {
-              "length": "lengd"
+              "length": "lengd",
+              "sides": "hliðar"
             }
           },
           "draw a house": {
@@ -3164,7 +3198,8 @@
             "name": "teikna útlínu spírals",
             "parameters": {
               "length": "lengd",
-              "min": "min"
+              "min": "min",
+              "sides": "hliðar"
             }
           }
         },
@@ -3176,7 +3211,10 @@
             }
           },
           "draw a polygon": {
-            "name": "teikna marghyrning"
+            "name": "teikna marghyrning",
+            "parameters": {
+              "sides": "hliðar"
+            }
           },
           "draw a square 20": {
             "name": "teikna ferning 20"

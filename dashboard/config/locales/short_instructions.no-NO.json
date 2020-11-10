@@ -598,7 +598,12 @@
         "course1_artist_loops_challenge3": "\"Kan du hjelpe meg å lage to fuglekasser?\"",
         "course1_maze_debugging_challenge1": "Finn feilene i denne oppgaven. Fjern de blokkene som ikke skal være der og legg til de som mangler. Få fuglen bort til grisen!",
         "course1_playlab_events_challenge1": "\"Hvor gjemmer vennene mine seg? Kan du skrive kode som viser resten av vennene mine?\"",
-        "course1_playlab_events_challenge2": "\"La oss ha en fest! Gi vennene mine noe å gjøre når du trykker på dem.\""
+        "course1_playlab_events_challenge2": "\"La oss ha en fest! Gi vennene mine noe å gjøre når du trykker på dem.\"",
+        "scrat 16": "Nøtt! Nøtt! Nøtt!, Bruk en \"if\"-blokk får å få meg dit med så få blokker som mulig.",
+        "scrat 17": "Ok, la oss gjøre det igjen for å øve - denne er ikke så annerledes, men se opp for veggen!",
+        "scrat 18": "\"If-else\"-blokkene sjekker en betingelse, og gjør deretter en ting ELLER en annen. Prøv å bruke denne nye blokken for å få meg til nøtten.",
+        "scrat 19": "En siste øvelse med \"hvis-ellers\"-blokken. Klarer du å gjøre det riktig på første forsøk?",
+        "scrat 20": "Kan du legge til kun 3 blokker for å hjelpe meg med å løse en mer kompleks labyrint? Hvis du gjør det riktig kan jeg gå en buet bane uansett lengde. Skynd deg! Isen smelter!"
       }
     }
   }

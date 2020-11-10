@@ -75,8 +75,8 @@ Semmi gond, ha neked és gyermekednek is teljesen új a számítástechnika vil�
 <h3>Problémamegoldás közösen</h3>
 **Ha valaki nehézségekbe ütközik, akkor természetes válasz az, hogy:** - Nem tudom!
 
-- “I don’t know. Let’s figure this out together.”
-- "A technika nem mindig úgy működik, mint ahogy azt mi elképzeljük."
+- Nem tudom. Találjuk ki együtt
+- "A technika nem mindig úgy működik, mint ahogy azt mi szeretnénk."
 - "Programozni tanulni, olyan mint egy nyelvet tanulni, nem tudsz azonnal folyékonyan beszélni."
 
 A számítástechnika arról szól, hogy megtanulják, hogyan lehet „hibakeresést” végezni olyan helyzetekben, amelyek nem úgy alakultak, ahogy azt gondolták.  Te és gyermeked együtt gondolkodhatnak a probléma megoldásának kreatív módjain!
@@ -91,10 +91,10 @@ A Kódolás Órája egy globális esemény, amelynek megünneplését a te csal�
 - Nyomtasd ki a [ Kódolás Órája tanúsítványokat ](https://staging.code.org/certificates), amelyeket oda tudsz adni a gyerekeknek, ha befejezték a feladatot.
 - [ Nyomtass matricákat](https://staging.hourofcode.com/us/promote/resources#stickers) otthon vagy  vásárold meg őket online meglepetésként.</li> 
   
-  - Oszd meg a Kódolás Órája-hoz kapcsolódó fotóidat, videóidat a közösségi hálón. Use #HourOfCode and @codeorg so we can highlight your success, too!</ul> 
+  - Oszd meg a Kódolás Órája-hoz kapcsolódó fotóidat, videóidat a közösségi hálón. Használd #HourOfCode-t és a @codeorg-ot így kiemelhetjük a sikeredet!</ul> 
 
 [<img src="/images/fit-600/Marketing/g8TUlHzF.jpeg" />]({{ urls/learn }})
 
 <h2>Mi jön a "Hour of Code" esemény után?</h2>
 
-Computer science doesn’t have to end with the Hour of Code! Míg a szülők 90%-a szeretné, hogy gyermeke informatikát tanuljon, az iskolák többségében még mindig nem létező tantárgy. Segítségül tantervünk webalapú és ingyenesen használható, örökre. [ További információ ](https://code.org/yourschool) arról, hogyan csempészhetsz informatikát gyermeked iskolájába.
+A számítástechnikának nem kell véget érnie a Kódolás órájával! Míg a szülők 90%-a szeretné, hogy gyermeke informatikát tanuljon, az iskolák többségében még mindig nem létező tantárgy. Segítségül tantervünk webalapú és ingyenesen használható, örökre. [ További információ ](https://code.org/yourschool) arról, hogyan csempészhetsz informatikát gyermeked iskolájába.

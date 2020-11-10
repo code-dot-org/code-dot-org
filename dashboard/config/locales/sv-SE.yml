@@ -951,13 +951,6 @@ sv:
         opt_in_no: Nej
   cookie_banner:
     accept: Jag håller med
-  gdpr_dialog:
-    heading: Samtycker du till att använda en webbplats baserad i USA?
-    message: När du använder denna webbplats kan information om detta skickas till
-      och lagras eller bearbetas i USA.
-    privacy_policy: sekretesspolicy
-    logout: Logga ut
-    true: Ja
   copy: Kopiera
   parent_email_banner:
     text: "**Är du förälder eller vårdnadshavare?** Koppla din e-post till det här

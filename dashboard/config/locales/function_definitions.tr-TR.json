@@ -1522,6 +1522,9 @@
           },
           "draw a line of squares": {
             "name": "bir satır kareler çiz"
+          },
+          "draw a plane of squares": {
+            "name": "bir kareler düzlemi çiz"
           }
         },
         "courseE_artist_concept4_2018": {
@@ -1530,6 +1533,9 @@
           },
           "draw a line of squares": {
             "name": "bir satır kareler çiz"
+          },
+          "draw a plane of squares": {
+            "name": "bir kareler düzlemi çiz"
           }
         },
         "courseE_artist_concept_challenge1": {
@@ -1710,6 +1716,9 @@
           },
           "draw square": {
             "name": "kare çiz"
+          },
+          "staggered squares": {
+            "name": "aşamalı kareler"
           }
         },
         "courseE_artist_functions8_2019": {
@@ -1721,6 +1730,9 @@
           },
           "draw square": {
             "name": "kare çiz"
+          },
+          "staggered squares": {
+            "name": "aşamalı kareler"
           }
         },
         "courseE_artist_functions8_2020": {
@@ -1732,6 +1744,9 @@
           },
           "draw square": {
             "name": "kare çiz"
+          },
+          "staggered squares": {
+            "name": "aşamalı kareler"
           }
         },
         "courseE_artist_functions8a_2018": {
@@ -1800,6 +1815,9 @@
           },
           "do something": {
             "name": "bir şeyler yap"
+          },
+          "staggered squares": {
+            "name": "aşamalı kareler"
           }
         },
         "courseE_artist_functions8c_2019": {
@@ -1811,6 +1829,9 @@
           },
           "do something": {
             "name": "bir şeyler yap"
+          },
+          "staggered squares": {
+            "name": "aşamalı kareler"
           }
         },
         "courseE_artist_functions8c_2020": {
@@ -1822,6 +1843,9 @@
           },
           "do something": {
             "name": "bir şeyler yap"
+          },
+          "staggered squares": {
+            "name": "aşamalı kareler"
           }
         },
         "courseE_artist_functions9": {
@@ -1880,6 +1904,9 @@
           },
           "draw square": {
             "name": "kare çiz"
+          },
+          "staggered squares": {
+            "name": "aşamalı kareler"
           }
         },
         "courseE_artist_functionsProj_2019": {
@@ -1894,6 +1921,9 @@
           },
           "draw square": {
             "name": "kare çiz"
+          },
+          "staggered squares": {
+            "name": "aşamalı kareler"
           }
         },
         "courseE_artist_functionsProj_2020": {
@@ -1908,6 +1938,9 @@
           },
           "draw square": {
             "name": "kare çiz"
+          },
+          "staggered squares": {
+            "name": "aşamalı kareler"
           }
         },
         "courseE_artist_functions_challenge1": {
@@ -1981,6 +2014,9 @@
           },
           "do something": {
             "name": "bir şeyler yap"
+          },
+          "draw line of polygons": {
+            "name": "çokgen çizgileri çiz"
           }
         },
         "courseE_artist_functions_predict2_2018": {
@@ -1989,6 +2025,9 @@
           },
           "do something": {
             "name": "bir şeyler yap"
+          },
+          "draw line of polygons": {
+            "name": "çokgen çizgileri çiz"
           }
         },
         "courseE_artist_functions_predict2_2019": {
@@ -1997,6 +2036,9 @@
           },
           "do something": {
             "name": "bir şeyler yap"
+          },
+          "draw line of polygons": {
+            "name": "çokgen çizgileri çiz"
           }
         },
         "courseE_artist_functions_predict2_2020": {
@@ -2005,6 +2047,9 @@
           },
           "do something": {
             "name": "bir şeyler yap"
+          },
+          "draw line of polygons": {
+            "name": "çokgen çizgileri çiz"
           }
         },
         "courseE_bee_concept4": {
@@ -2109,6 +2154,9 @@
           },
           "pumpkin square": {
             "name": "bal kabağı karesi"
+          },
+          "pick along path": {
+            "name": "yolu seçin"
           }
         },
         "courseE_farmer_functions10a1_2019": {
@@ -2120,6 +2168,9 @@
           },
           "pumpkin square": {
             "name": "bal kabağı karesi"
+          },
+          "pick along path": {
+            "name": "yolu seçin"
           }
         },
         "courseE_farmer_functions10a1_2020": {
@@ -2131,6 +2182,9 @@
           },
           "pumpkin square": {
             "name": "bal kabağı karesi"
+          },
+          "pick along path": {
+            "name": "yolu seçin"
           }
         },
         "courseE_farmer_functions10b": {
@@ -2161,6 +2215,9 @@
           },
           "get all pumpkins": {
             "name": "tüm bal kabaklarını al"
+          },
+          "pick along path": {
+            "name": "yolu seçin"
           }
         },
         "courseE_farmer_functions11_predict_2019": {
@@ -2175,6 +2232,9 @@
           },
           "get all pumpkins": {
             "name": "tüm bal kabaklarını al"
+          },
+          "pick along path": {
+            "name": "yolu seçin"
           }
         },
         "courseE_farmer_functions11_predict_2020": {
@@ -2189,6 +2249,9 @@
           },
           "get all pumpkins": {
             "name": "tüm bal kabaklarını al"
+          },
+          "pick along path": {
+            "name": "yolu seçin"
           }
         },
         "courseE_farmer_functions13_2018": {
@@ -2200,6 +2263,9 @@
           },
           "lettuce stairs": {
             "name": "marul merdiveni"
+          },
+          "pick along path": {
+            "name": "yolu seçin"
           }
         },
         "courseE_farmer_functions13_2019": {
@@ -2211,6 +2277,9 @@
           },
           "lettuce stairs": {
             "name": "marul merdiveni"
+          },
+          "pick along path": {
+            "name": "yolu seçin"
           }
         },
         "courseE_farmer_functions13_2020": {
@@ -2222,6 +2291,9 @@
           },
           "lettuce stairs": {
             "name": "marul merdiveni"
+          },
+          "pick along path": {
+            "name": "yolu seçin"
           }
         },
         "courseE_farmer_functions1a_2018": {
@@ -2294,6 +2366,9 @@
           },
           "get all pumpkins": {
             "name": "tüm bal kabaklarını al"
+          },
+          "pick along path": {
+            "name": "yolu seçin"
           }
         },
         "courseE_farmer_functions3c1_2019": {
@@ -2302,6 +2377,9 @@
           },
           "get all pumpkins": {
             "name": "tüm bal kabaklarını al"
+          },
+          "pick along path": {
+            "name": "yolu seçin"
           }
         },
         "courseE_farmer_functions3c1_2020": {
@@ -2310,6 +2388,9 @@
           },
           "get all pumpkins": {
             "name": "tüm bal kabaklarını al"
+          },
+          "pick along path": {
+            "name": "yolu seçin"
           }
         },
         "courseE_farmer_functions3c_2018": {

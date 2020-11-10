@@ -1361,14 +1361,6 @@ it:
       la memorizzazione dei cookie sul tuo computer o dispositivo.
     more_information: Leggi l'informativa sulla privacy di Code.org.
     accept: Accetto
-  gdpr_dialog:
-    heading: Accetti di utilizzare un sito web con sede negli Stati Uniti?
-    message: I dati relativi al tuo utilizzo di questo sito Web possono essere inviati
-      e archiviati o elaborati negli Stati Uniti.
-    link_intro: Per ulteriori informazioni vedi la nostra
-    privacy_policy: informativa sulla privacy
-    logout: Esci
-    true: Sì
   page_not_found_title: Pagina non trovata
   page_not_found_header: 404 Pagina non trovata
   page_not_found_description: La pagina che stai cercando non esiste a questo indirizzo.

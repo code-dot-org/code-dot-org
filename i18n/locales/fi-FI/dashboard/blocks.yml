@@ -1148,6 +1148,8 @@ fi:
         text: sprite {SPRITE} lopettaa {BEHAVIOR}
       gamelab_removeTint:
         text: poista väri {THIS}
+      gamelab_repeatForever:
+        text: toista jatkuvasti
       gamelab_setAnimation:
         text: muutos {THIS} puku {ANIMATION}
       gamelab_setBackground:

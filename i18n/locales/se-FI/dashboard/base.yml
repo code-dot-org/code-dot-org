@@ -964,12 +964,6 @@ se:
   cookie_banner:
     message: 'Jus joatkát geavahit min neahttasiiddu dahje deaddilat "Mun dohkkehan," don dohkkehat ahte diehtočoahkut vurkejuvvojit du dihtorii dahje reidui.'
     more_information: "Geahča Code.org Persovdnasuodjaleami."
-  gdpr_dialog:
-    heading: 'Dohkkehat go geavahit neahttasiidu mas lea vuođđu Ámerihkás?'
-    message: 'Data du geavaheamis dán siiddus sáhttá sáddejuvvot ja vurkejuvvot dahje gieđahallot Ámerihkás.'
-    link_intro: 'Detáljaid dihte, geahča min'
-    privacy_policy: 'persovdnasuodjaleapmi'
-    logout: 'Logge olggos'
   maker:
     google_oauth:
       login_with_google: 'Logge sisa Maker App:i Google:in'

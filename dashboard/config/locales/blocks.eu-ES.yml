@@ -621,6 +621,8 @@ eu:
         text: ausazko kolorea
       gamelab_randomColor:
         text: ausazko kolorea
+      gamelab_repeatForever:
+        text: errepikatu betirako
       gamelab_setBackgroundImage:
         options:
           IMG:
