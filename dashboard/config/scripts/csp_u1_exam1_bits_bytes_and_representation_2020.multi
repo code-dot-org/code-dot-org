@@ -12,7 +12,7 @@ teacher_markdown <<MARKDOWN
 
 This came up in [Lesson 4 - Binary Numbers](https://curriculum.code.org/csp-20/unit1/4/)
 
-::: details [**Essential Knowledge This Question Touches On**]
+::: details [**Essential Knowledge Connected To This Question**]
 
 DAT-1.A.2: Computing devices represent data digitally, meaning that the lowest-level components of any value are bits.
 
