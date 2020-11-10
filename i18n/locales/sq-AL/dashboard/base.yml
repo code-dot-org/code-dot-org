@@ -736,7 +736,4 @@ sq:
         opt_in_no: 'Jo'
   cookie_banner:
     accept: 'Pranoj'
-  gdpr_dialog:
-    message: 'Të dhënat nga përdorimi im i kësaj faqeje mund të dërgohen dhe të ruhen ose përpunohen në Shtetet e Bashkuara.'
-    yes: 'Po'
   copy: 'Kopjo'

@@ -2938,7 +2938,12 @@
         "courseD_video_nestedLoopsArtist": "Usa ciò che hai imparato per disegnare questo triangolo.",
         "courseE_bee_ramp14": "Vai avanti fino a che raggiungi la lattuga, poi prendila tutta usando un ciclo `mentre`.",
         "courseE_farmer_predict1": "Mentre c'è lattuga, raccogli la lattuga!",
-        "courseE_farmer_predict2": "Vai avanti fino a che raggiungi la lattuga, poi prendila tutta usando un ciclo `mentre`."
+        "courseE_farmer_predict2": "Vai avanti fino a che raggiungi la lattuga, poi prendila tutta usando un ciclo `mentre`.",
+        "scrat 16": "Ghianda! Ghianda! Ghianda! Usa un blocco \"se\" per farmi arrivare lì con il minor numero di blocchi.",
+        "scrat 17": "Ok, esercitiamoci di nuovo per far pratica: questo esercizio non è molto diverso, ma stai attento al muro!",
+        "scrat 18": "Il blocco \"se-altrimenti\" controlla una condizione, e poi fa una cosa OPPURE un'altra. Prova ad usare questo nuovo blocco per farmi raggiungere la ghianda.",
+        "scrat 19": "Ancora un esercizio con il blocco \"se-altrimenti\": riesci a risolverlo correttamente al primo tentativo?",
+        "scrat 20": "Riesci ad aggiungere solo 3 blocchi per farmi uscire da un labirinto più complesso? Se lo fai correttamente, riuscirò a camminare lungo un percorso tortuoso di qualsiasi lunghezza. Sbrigati! Il ghiaccio si sta sciogliendo!"
       }
     }
   }

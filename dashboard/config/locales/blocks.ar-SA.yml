@@ -1162,6 +1162,8 @@ ar:
         text: العفريت {SPRITE} توقف {BEHAVIOR}
       gamelab_removeTint:
         text: إزالة اللون من {THIS}
+      gamelab_repeatForever:
+        text: التكرار للأبد
       gamelab_setAnimation:
         text: تغيير {THIS} زي ل {ANIMATION}
       gamelab_setBackground:

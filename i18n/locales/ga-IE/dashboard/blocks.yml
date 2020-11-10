@@ -1116,6 +1116,8 @@ ga:
         text: nuair a stopann {SPRITE} {BEHAVIOR}
       gamelab_removeTint:
         text: bain an dath de {THIS}
+      gamelab_repeatForever:
+        text: go deo na ndeor
       gamelab_setAnimation:
         text: athraigh culaith {THIS} go {ANIMATION}
       gamelab_setBackground:

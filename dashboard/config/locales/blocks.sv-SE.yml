@@ -1146,6 +1146,8 @@ sv:
         text: Sprite {SPRITE} Stannar {BEHAVIOR}
       gamelab_removeTint:
         text: ta bort färg från {THIS}
+      gamelab_repeatForever:
+        text: upprepa för evigt
       gamelab_setAnimation:
         text: Ändra {THIS} kostym till {ANIMATION}
       gamelab_setBackground:

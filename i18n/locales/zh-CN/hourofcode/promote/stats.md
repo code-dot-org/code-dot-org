@@ -30,7 +30,7 @@ With technology changing every industry on the planet, computing knowledge has b
 
 #### 为什么这很重要？
 
-科技正改变着地球上的每一个行业。 在 2015 年，美国有700 万工作机会看重编程技能，其中包括艺术和设计。 But 55 percent of schools in the U.S. don't teach computer science. 现在是我们应该迎头赶上21世界步伐的时候了。 我们知道，无论我们的学生们长大后做什么，无论他们从事医药，商业，政治或者艺术工作，知道如何使用科技将会给他们信心并让他们知道成功的诀窍。 <br /> <br />
+科技正改变着地球上的每一个行业。 在 2015 年，美国有700 万工作机会看重编程技能，其中包括艺术和设计。 But 53 percent of schools in the U.S. don't teach computer science. 现在是我们应该迎头赶上21世界步伐的时候了。 我们知道，无论我们的学生们长大后做什么，无论他们从事医药，商业，政治或者艺术工作，知道如何使用科技将会给他们信心并让他们知道成功的诀窍。 <br /> <br />
 
 #### A quote you can use in materials
 

@@ -233,13 +233,6 @@ is:
   front_watch_regular_video: Horfa á myndbandið
   front_volunteers: Sjálfboðaliðar með tæknikunnáttu óskast
   front_start_learning: Byrja að læra
-  gdpr_dialog_heading: Samþykkir þú að nota vef sem er staðsettur í Bandaríkjunum?
-  gdpr_dialog_message: Gögn um notkun þína á þessum vef kunna að verða send til og
-    geymd eða greind í Bandaríkjunum.
-  gdpr_dialog_link_intro: 'Nánari upplýsingar hér:'
-  gdpr_dialog_privacy_policy: persónuverndarstefna
-  gdpr_dialog_logout: Útskráning
-  gdpr_dialog_yes: Já
   header_menu_resources: Tilföng
   header_menu_faq: Algengar spurningar
   header_menu_how_to: Hvernig

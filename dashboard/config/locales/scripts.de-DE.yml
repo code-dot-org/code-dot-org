@@ -26926,3 +26926,7 @@ de:
           description_audience: "[empty string]"
         outbreak:
           description_audience: "[empty string]"
+        apps-for-good:
+          description_audience: "[empty string]"
+          description_short: "[empty string]"
+          description: "[empty string]"

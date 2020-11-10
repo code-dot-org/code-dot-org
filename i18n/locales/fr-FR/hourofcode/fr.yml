@@ -56,8 +56,8 @@ fr:
     computer science. Change the world.'
   social_hoc2019_coming_dates: L'Heure du Code est du 9 au 15 décembre 2019. L'informatique
     est un apprentissage fondamental pour tous les élèves.
-  social_hoc2019_dance: Featuring Katy Perry, Shawn Mendes, Panic! At The Disco, Lil
-    Nas X, Jonas Brothers, Nicki Minaj, and 34 more!
+  social_hoc2019_dance: Avec Katy Perry, Shawn Mendes, Panic! At The Disco, Lil Nas
+    X, Jonas Brothers, Nicki Minaj, et 34 autres artistes !
   oceans_landing_title: IA pour les Océans
   oceans_landing_description: Learn about machine learning and ethical use of AI.
   cs_for_good_hashtag: "#CSforGood"
@@ -239,13 +239,6 @@ fr:
   front_watch_regular_video: Regardez la vidéo
   front_volunteers: Bénévoles techniques recherchés
   front_start_learning: Commencer à apprendre
-  gdpr_dialog_heading: Acceptez-vous d’utiliser un site web basé aux États-Unis ?
-  gdpr_dialog_message: Les données relatives à votre consulation de ce site peuvent
-    être envoyées et stockées ou traitées aux États-Unis.
-  gdpr_dialog_link_intro: Pour plus d’informations, consultez notre
-  gdpr_dialog_privacy_policy: politique de confidentialité
-  gdpr_dialog_logout: Déconnexion
-  gdpr_dialog_yes: Oui
   header_menu_resources: Ressources
   header_menu_faq: FAQ
   header_menu_how_to: Guide pratique
@@ -555,7 +548,7 @@ fr:
     in! Are you?'
   social_hoc2018_dance_party: 'Heure de Code : Soirée Dansante'
   social_hoc2018_dance_what_create: Avec Katy Perry, Madonna, J. Balvin, Sia, Keith
-    Urban, Ciara et 25 autres !
+    Urban, Ciara et 25 autres artistes !
   social_hoc2018_every_student: Every student deserves the opportunity to express
     their creativity with computer science.
   social_hoc2018_every_student_try_what_create: Every student deserves the opportunity
@@ -2854,7 +2847,7 @@ fr:
   tutorial_n2y_shortdescription: Help Bitt Bott explore Earth using direction arrows.
   tutorial_dance2019_longdescription: Code une Soirée Dansante à partager avec tes
     amis. Avec Katy Perry, Shawn Mendes, Panic ! At The Disco, Lil Nas X, Jonas Brothers,
-    Nicki Minaj, et 34 autres !
+    Nicki Minaj, et 34 autres artistes !
   tutorial_danceparty_longdescription: Programme une Soirée Dansante à partager avec
     tes amis. Avec Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara et 25 autres
     !
@@ -6313,7 +6306,7 @@ fr:
   tutorial_grokem_string_detail_grades: Grades 6+
   tutorial_kodmaze_string_detail_grades: K-5
   tutorial_codestersa_string_detail_grades: Grades 2-8
-  tutorial_cmdodo_string_detail_grades: Grades 2-5
+  tutorial_cmdodo_string_detail_grades: Grades 3-5
   tutorial_tynkerspace_string_detail_grades: Grades 2-5
   tutorial_gfbloons_string_detail_grades: A partir de 9 ans
   tutorial_raspipong_string_detail_grades: A partir de 9 ans

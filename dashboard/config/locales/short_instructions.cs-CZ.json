@@ -1302,7 +1302,12 @@
         "course2_collector_prog_challenge1": "Podívejte se pozorně! Můžete získat všech _10_ kousků pokladu?",
         "2-3 Artist Nested Loops 11": "Zopakuj tento kód 4-krát abys vytvořil tento vzor. Pootoč se o 90 stupňů po každém kolečku.",
         "2-3 Artist Nested Loops 8": "Domaluj na obrázek trávu.  \n\nJednotlivé trsy jsou od sebe vzdáleny 50 pixelů.",
-        "courseC_video_angles": "Pomoz Scratovi k žaludu!"
+        "courseC_video_angles": "Pomoz Scratovi k žaludu!",
+        "scrat 16": "Žalud! Žalud! Žalud! Použij blok \"když\" a dostaň mě k němu za použití co nejmenšího počtu bloků.",
+        "scrat 17": "Dobře, pro procvičení si to zopakujme. Tentokrát to není o moc jiné, ale pozor na zeď!",
+        "scrat 18": "Blok \"když - jinak\" zkontroluje podmínku a podle ní udělá buď jednu NEBO druhou věc. Zkus použít tento nový blok, abych se dostal k žaludu.",
+        "scrat 19": "Další cvičení pro blok \"pokud-jinak\". Zvládneš to na první pokus?",
+        "scrat 20": "Můžeš mi pomoci vyřešit mnohem složitější bludiště přidáním jen tří bloků? Když to uděláš dobře, můžu projít jakoukoliv klikatou cestou bez ohledu na její délku. Pospěš si, led začíná tát!"
       }
     }
   }

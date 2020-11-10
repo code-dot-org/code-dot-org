@@ -905,13 +905,6 @@ da:
   cookie_banner:
     more_information: "Se Code.org's privatlivspolitik."
     accept: 'Jeg er enig'
-  gdpr_dialog:
-    heading: 'Accepterer du at bruge en hjemmeside baseret i USA?'
-    message: 'Data fra din brug af dette websted kan sendes til og gemmes eller behandles i USA.'
-    link_intro: 'For nærmere oplysninger se vores'
-    privacy_policy: 'privatlivspolitik'
-    logout: 'Log af'
-    yes: 'Ja'
   copy: 'Kopier'
   parent_email_banner:
     text: "** Er du forælder eller værge? ** Knyt din e-mail til denne konto for at holde dig opdateret om dit barns fremskridt og projekter!"
