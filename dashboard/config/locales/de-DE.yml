@@ -1381,15 +1381,6 @@ de:
       stimmen Sie der Speicherung von Cookies auf Ihrem Computer oder Gerät zu.
     more_information: Siehe Datenschutzerklärung von Code.org.
     accept: Ich stimme zu
-  gdpr_dialog:
-    heading: Sind Sie damit einverstanden, eine Website mit Sitz in den Vereinigten
-      Staaten zu nutzen?
-    message: Daten aus deiner Nutzung dieser Site können in die USA geschickt werden
-      und dort gespeichert und verarbeitet werden.
-    link_intro: Für Details siehe unsere
-    privacy_policy: Datenschutzerklärung
-    logout: Abmelden
-    true: Ja
   page_not_found_title: Seite nicht gefunden
   page_not_found_header: '404: Seite nicht gefunden'
   page_not_found_description: Die Seite die Sie suchen gibt es nicht unter dieser

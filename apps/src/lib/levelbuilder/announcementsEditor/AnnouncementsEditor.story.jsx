@@ -43,8 +43,11 @@ export default storybook => {
         name: 'AnnouncementsEditor',
         story: () => (
           <AnnouncementsEditor
-            defaultAnnouncements={announcements}
+            announcements={announcements}
             inputStyle={inputStyle}
+            updateAnnouncements={() => {
+              console.log('update announcements');
+            }}
           />
         )
       }

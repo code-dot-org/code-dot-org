@@ -1442,6 +1442,13 @@
         },
         "courseC_video_angles": {
           "courseD_scrat_programming6_a": "이 퍼즐을 푸는 데는 두 가지 방법이 있습니다!"
+        },
+        "courseB_maze_seq1": {
+          "courseB_maze_seq1_a": "블록을 블록에 연결하여 새를 움직이게 하라!",
+          "courseB_maze_seq1_b": "이 화살들 중 세 개를 끌고 나와서 블록에 연결해서 새를 돼지에게 데려오도록 해라."
+        },
+        "courseB_maze_seq2": {
+          "courseB_maze_seq2_a": "이 프로그램은 한 블록이 빠져 있다. 어떤 건지 알아낼 수 있어?"
         }
       }
     }

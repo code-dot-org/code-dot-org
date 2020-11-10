@@ -8291,6 +8291,7 @@ pt-BR:
           restante do curso.\n\n\n## Recursos\n* [Barcos de Alumínio](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf)
           \n- Guia de atividade (copiar como [Microsoft Word](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc),
           [Google Doc](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))\n"
+        title: Questionário prévio para Estudantes do Descobertas de CC
       csd-pulse-check-survey-1-levelgroup U1Ch2:
         title: |2-
 
@@ -8592,3 +8593,19 @@ pt-BR:
 
       csd-post-survey-levelgroup_2019:
         title: Pesquisa de estudantes ao final do curso do CS Discoveries
+      CSD U1 Test:
+        title: Teste Pós-Projeto para Computadores e Resolução de Problemas
+      CSD U5 test:
+        title: Teste pós-projeto de dados e sociedade
+      Unit 1 Lesson 1 Overview:
+        markdown: "# Visão Geral\n\nA turma se divide em grupos para projetar barcos
+          de folha de alumínio que suportarão tantos centavos quanto for possível.
+          \ No final da aula, os grupos refletirão sobre sua experiência com a atividade
+          e farão conexões com os tipos de solução de problemas que usarão para o
+          restante do curso.\n\n\n## Recursos\n* [Barcos de Alumínio](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf)
+          \n- Guia de atividade (copiar como [Microsoft Word](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc),
+          [Google Doc](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))\n"
+      csd-pre-survey-2017-levelgroup_2018:
+        title: Questionário prévio para Estudantes do Descobertas de CC
+      csd-pre-survey-levelgroup_2019:
+        title: Questionário prévio para Estudantes do Descobertas de CC

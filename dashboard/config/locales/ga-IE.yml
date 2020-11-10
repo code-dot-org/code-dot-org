@@ -1338,14 +1338,6 @@ ga:
       glacfaidh tú le stóráil fianán ar do ríomhaire nó gléas soghluaiste.
     more_information: Polasaí Príobháideachais Code.org.
     accept: Glacaim leis
-  gdpr_dialog:
-    heading: An bhfuil tú sásta suíomh Gréasáin bunaithe sna Stáit Aonraithe a úsáid?
-    message: D'fhéadfaí sonraí a bhaineann le do ghníomhaíocht ar an suíomh seo a
-      sheoladh chuig nó a phróiseáil i Stáit Aontaithe Mheiriceá.
-    link_intro: Chun tuilleadh eolais a fháil, féach ár
-    privacy_policy: bpolasaí príobháideachais
-    logout: Logáil amach
-    true: Tá
   page_not_found_title: Níor aimsíodh an leathanach
   page_not_found_header: '404: Níor aimsíodh an leathanach'
   page_not_found_description: Níl aon leathanach ag an seoladh seo. Deimhnigh go bhfuil

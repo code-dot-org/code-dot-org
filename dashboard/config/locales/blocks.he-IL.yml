@@ -1150,6 +1150,8 @@ he:
         text: ספרייט {SPRITE} תחנות {BEHAVIOR}
       gamelab_removeTint:
         text: הסר צבע מ- {THIS}
+      gamelab_repeatForever:
+        text: חזור לנצח
       gamelab_setAnimation:
         text: לשנות {THIS} תחפושת ל {ANIMATION}
       gamelab_setBackground:
