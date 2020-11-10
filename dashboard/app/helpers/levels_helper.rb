@@ -483,16 +483,17 @@ module LevelsHelper
   end
 
   def get_azure_speech_service_voices(region, token, timeout)
-    # TODO: cache list of voices
-    voice_uri = URI.parse("https://#{region}.tts.speech.microsoft.com/cognitiveservices/voices/list")
-    voice_http_request = Net::HTTP.new(voice_uri.host, voice_uri.port)
-    voice_http_request.use_ssl = true
-    voice_http_request.verify_mode = OpenSSL::SSL::VERIFY_PEER
-    voice_http_request.read_timeout = timeout
-    voice_request = Net::HTTP::Get.new(voice_uri.request_uri, {'Authorization': 'Bearer ' + token})
+    Rails.cache.fetch("azure_speech_service/voices") do
+      voice_uri = URI.parse("https://#{region}.tts.speech.microsoft.com/cognitiveservices/voices/list")
+      voice_http_request = Net::HTTP.new(voice_uri.host, voice_uri.port)
+      voice_http_request.use_ssl = true
+      voice_http_request.verify_mode = OpenSSL::SSL::VERIFY_PEER
+      voice_http_request.read_timeout = timeout
+      voice_request = Net::HTTP::Get.new(voice_uri.request_uri, {'Authorization': 'Bearer ' + token})
 
-    response = voice_http_request.request(voice_request)&.body
-    response.length >= 2 ? JSON.parse(response) : []
+      response = voice_http_request.request(voice_request)&.body
+      response.length >= 2 ? JSON.parse(response) : []
+    end
   rescue => e
     Honeybadger.notify(e, error_message: 'Request for list of voices from Azure Speech Service failed')
     nil

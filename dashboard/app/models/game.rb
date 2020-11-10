@@ -313,7 +313,7 @@ class Game < ActiveRecord::Base
   )
 
   def self.setup
-    videos_by_key = Video.all.index_by(&:key)
+    videos_by_key = Video.all.where(locale: 'en-US').index_by(&:key)
     games = GAMES_BY_INDEX.map.with_index(1) do |line, id|
       name, app, intro_video_key = line.split ':'
       {id: id, name: name, app: app, intro_video_id: videos_by_key[intro_video_key]&.id}
