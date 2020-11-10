@@ -53,14 +53,27 @@ module LessonImportHelper
       @lesson_activity.activity_sections = create_activity_sections(a['content'], i, levels)
       @lesson_activity
     end
-    activities
+    unless levels.empty?
+      @lesson_activity = LessonActivity.new
+      @lesson_activity.name = "Leftover levels"
+      @lesson_activity.lesson = @lesson
+      @lesson_activity.lesson_id = @lesson.id
+      @lesson_activity.seeding_key = SecureRandom.uuid
+      @lesson_activity.position = activities.length + 1
+      @lesson_activity.save!
+      @lesson_activity.reload
+      @lesson_activity.activity_sections = [create_activity_section_with_level_ranges(0, levels.count-1, levels)]
+      activities.push(@lesson_activity)
+    end
+    activities.flatten
   end
 
-  def self.create_lesson(lesson_data, persisted_lesson = nil, levels = {})
+  def self.create_lesson(lesson_data, persisted_lesson)
     #lesson_data = JSON.parse(lesson_json)
+    levels = persisted_lesson.script_levels.each_with_index.map{|l,i| JSON.parse({id: l.id, assessment: l.assessment, bonus: l.bonus, challenge:l.challenge, levels: l.levels, activitySectionPosition: i}.to_json)}
     @lesson = persisted_lesson || Lesson.new
+    @lesson.script_levels = []
     @lesson.save!
-    puts @lesson.inspect
     @lesson.name = lesson_data['title']
     @lesson.key ||= lesson.name.tr(' ', '_').downcase
     @lesson.overview = lesson_data['teacher_desc']
@@ -69,6 +82,7 @@ module LessonImportHelper
     @lesson.save!
     @lesson.lesson_activities = create_lesson_activities(lesson_data['activities'], levels)
     #@lesson.script_levels = levels
+    @lesson.script.fix_script_level_positions
   end
 
   # https://github.com/code-dot-org/curriculumbuilder/blob/57cad8f62e50b03e4f16bf77cd9e2e1da5c3e44e/curriculumBuilder/codestudio.py
@@ -78,20 +92,24 @@ module LessonImportHelper
   end
 
   def self.create_activity_section_with_levels(match, levels)
+    range_start = match[2] || 0
+    range_end = match[3] || levels.length-1
+    create_activity_section_with_level_ranges(range_start, range_end, levels)
+  end
+
+  def self.create_activity_section_with_level_ranges(range_start, range_end, levels)
     activity_section = ActivitySection.new
     activity_section.seeding_key ||= SecureRandom.uuid
     activity_section.position = 0
     activity_section.lesson_activity = @lesson_activity
     activity_section.lesson_activity_id = @lesson_activity.id
     activity_section.save!
-    range_start = match[2] || 0
-    range_end = match[3] || levels.length-1
     activity_section.description = "levels #{range_start} to #{range_end}"
     unless levels.empty?
       #activity_section.script_levels = levels[range_start..range_end]
-      sl_data = levels[range_start..range_end].map{|l| JSON.parse({id: l.id, assessment: l.assessment, bonus: l.bonus, challenge:l.challenge, levels: l.levels}.to_json)}
+      #sl_data = levels[range_start..range_end].each_with_index.map{|l,i| JSON.parse({id: l.id, assessment: l.assessment, bonus: l.bonus, challenge:l.challenge, levels: l.levels, activitySectionPosition: i}.to_json)}
+      sl_data = levels.slice!(range_start..range_end)
       activity_section.update_script_levels(sl_data)
-      puts activity_section.script_levels.count
     end
     activity_section
   end
@@ -129,8 +147,6 @@ module LessonImportHelper
       "discussion" => "discussionGoal",
       "assessment" => "assessmentOpportunity"
     }
-    puts tip_link_match[2].inspect
-    puts tip_match_map.inspect
     tip_match = tip_match_map[tip_link_match[2]][:match]
     activity_section = ActivitySection.new
     activity_section.description = tip_link_match[3].strip
