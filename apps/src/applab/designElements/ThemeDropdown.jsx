@@ -64,10 +64,8 @@ export default class ThemeDropdown extends React.Component {
             <img style={styles.icon} src={themeOption.icon} />
             <div style={styles.label}>{themeOption.displayName}</div>
             <div className="checkbox">
-              {selectedValue === themeOption.option ? (
+              {selectedValue === themeOption.option && (
                 <FontAwesome icon="check" />
-              ) : (
-                ''
               )}
             </div>
           </div>
@@ -84,16 +82,6 @@ export default class ThemeDropdown extends React.Component {
           options={renderedOptions}
           placeholder={''}
           clearable={false}
-          menuIsOpen
-          styles={{
-            option: (base, state) => ({
-              ...base,
-              backgroundColor: state.isSelected ? 'yellow' : 'red',
-              ':active': {
-                backgroundColor: state.isSelected ? 'green' : 'blue'
-              }
-            })
-          }}
         />
       </div>
     );
