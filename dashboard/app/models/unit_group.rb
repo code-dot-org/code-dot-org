@@ -457,7 +457,7 @@ class UnitGroup < ApplicationRecord
 
     UnitGroup.
       # select only courses in the same course family.
-      where(Arel.sql("properties -> '$.family_name' = ?", family_name)).
+      where(Arel.sql("properties -> '$.family_name' = #{family_name}")).
       # select only stable courses.
       where(Arel.sql("properties -> '$.is_stable'")).
       # order by version year.
@@ -476,7 +476,7 @@ class UnitGroup < ApplicationRecord
       # select only courses assigned to this user.
       where(id: assigned_course_ids).
       # select only courses in the same course family.
-      where(Arel.sql("properties -> '$.family_name' = ?", family_name)).
+      where(Arel.sql("properties -> '$.family_name' = #{family_name}")).
       # order by version year.
       order(Arel.sql("properties -> '$.version_year' DESC"))&.
       first
