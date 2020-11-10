@@ -29,8 +29,12 @@ function showCourseEditor() {
         isStable={courseEditorData.course_summary.is_stable}
         pilotExperiment={courseEditorData.course_summary.pilot_experiment}
         descriptionShort={courseEditorData.course_summary.description_short}
-        descriptionStudent={courseEditorData.course_summary.description_student}
-        descriptionTeacher={courseEditorData.course_summary.description_teacher}
+        initialDescriptionStudent={
+          courseEditorData.course_summary.description_student || ''
+        }
+        initialDescriptionTeacher={
+          courseEditorData.course_summary.description_teacher || ''
+        }
         scriptsInCourse={courseEditorData.course_summary.scripts.map(
           script => script.name
         )}
@@ -42,7 +46,7 @@ function showCourseEditor() {
         hasNumberedUnits={courseEditorData.course_summary.has_numbered_units}
         courseFamilies={courseEditorData.course_families}
         versionYearOptions={courseEditorData.version_year_options}
-        announcements={announcements}
+        initialAnnouncements={announcements}
       />
     </Provider>,
     document.getElementById('course_editor')

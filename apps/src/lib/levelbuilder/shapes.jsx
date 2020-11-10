@@ -34,7 +34,7 @@ export const scriptLevelShape = PropTypes.shape({
   levels: PropTypes.arrayOf(levelShape).isRequired,
 
   // whether this LevelToken is expanded in the UI.
-  expand: PropTypes.bool.isRequired,
+  expand: PropTypes.bool,
 
   // information determined at script level
   kind: PropTypes.string,

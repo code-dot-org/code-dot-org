@@ -103,7 +103,16 @@ class DropdownButton extends Component {
   };
 
   onClickChild = (event, childProps) => {
-    this.collapseDropdown();
+    /*
+      In LessonNavigationDropdown we create sections which we want
+      to be able to expand and collapse. Use the no-navigation class
+      name allows us to mark when we want the dropdown to collapse for
+      each click component
+     */
+    if (childProps.className !== 'no-navigation') {
+      this.collapseDropdown();
+    }
+
     if (childProps.onClick) {
       childProps.onClick(event);
     }
@@ -134,7 +143,8 @@ class DropdownButton extends Component {
                 key={index}
                 style={{
                   ...styles.anchor,
-                  ...(index > 0 && styles.nonFirstAnchor)
+                  ...(index > 0 && styles.nonFirstAnchor),
+                  ...child.props.style
                 }}
               />
             ))}

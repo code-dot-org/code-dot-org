@@ -1362,6 +1362,7 @@
   tutorial_irobotphone_name: "Telephone Drawing"
   tutorial_codeguppydraw_name: "Draw with code"
   tutorial_codejumper_name: "Networks: Messages of Kindness"
+  tutorial_meeempathy_name: "A Minecraft Tale of Two Villages"
 
   tutorial_danceparty_shortdescription: "Code a Dance Party to share with your friends. Featuring Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, and 25 more!"
   tutorial_chibitronics_shortdescription: "Program a paper circuit to light up your own story."
@@ -2638,6 +2639,7 @@
   tutorial_irobotphone_longdescription: "In this coding challenge, students will work together remotely to create a collective program that draws a picture. Modeled after the classic game of Telephone, students will receive, remix, and pass along code down the telephone chain. Will your team fulfill the Picture Goal by the time you reach the end?"
   tutorial_codeguppydraw_longdescription: "Quick introduction to text-based coding using fun and engaging type-in JavaScript programs"
   tutorial_codejumper_longdescription: "In this lesson from the Code Jumper curriculum, learners explore networks in a hands-on unplugged experience using typical materials found in a classroom. The theme for this lesson is around messages of kindness to others. This lesson has been specifically designed to be accessible for students with visual impairments."
+  tutorial_meeempathy_longdescription: "For centuries, the Villagers and Illagers shared the same space but seldom interacted with each other. Now you can use the power of code to bring the two villages together. Players will experience empathy and compassion for their neighbors, learn cooperation and inclusion, and embrace the diversity that makes us all uniquely special."
 
   tutorial_dance2019_language: "Arabic, Chinese, Czech, Danish, Dutch, English, Finnish, French, German, Greek, Hindi, Hungarian, Indonesian, Italian, Japanese, Korean, Malay, Polish, Portuguese, and 10 more!"
   tutorial_danceparty_language: "English, Arabic, Catalan, Chinese, Czech, Danish, Dutch, Finnish, French, German, Greek, Hungarian, Italian, Japanese, Korean, Norwegian, Polish, Portuguese, Russian, Spanish, Swedish, Thai, Turkish, and Vietnamese"
@@ -3330,10 +3332,11 @@
   tutorial_kcjplastic_language: "English, French"
   tutorial_legojourney_language: "English"
   tutorial_legohopper_language: "English"
-  tutorial_catrobatembroidery_language: "Arabic, Bengali, Bosnian, Chinese (Simplified), Croatian, Czech, English, English (UK), French, German, Hindi, Indonesian, Italian, Japanese, Korean, Norwegian (Nynorsk), Other, Polish, Portuguese (Brazil), Portuguese (Portugal), Russian, Serbian (Cyrillic), Spanish (Spain), Spanish (Mexico), Swedish, Tamil, Thai, Turkish, Urdu (Pakistan), Vietnamese"
+  tutorial_catrobatembroidery_language: "Arabic, Bengali, Bosnian, Chinese (Simplified), Croatian, Czech, English, French, German, Hindi, Indonesian, Italian, Japanese, Korean, Norwegian (Nynorsk),Polish, Portuguese, and more!"
   tutorial_irobotphone_language: "English, English (UK)"
   tutorial_codeguppydraw_language: "English, English (UK)"
   tutorial_codejumper_language: "English"
+  tutorial_meeempathy_language: "English"
 
   tutorial_dance2019_string_detail_grades: "Grades 2+"
   tutorial_danceparty_string_detail_grades: "Grades 2+"
@@ -4030,6 +4033,7 @@
   tutorial_irobotphone_string_detail_grades: "Grades 2-8"
   tutorial_codeguppydraw_string_detail_grades: "Grades 6-8"
   tutorial_codejumper_string_detail_grades: "Grades 2-8"
+  tutorial_meeempathy_string_detail_grades: "Grades 2+"
 
   tutorial_dance2019_string_platforms: "All modern browsers, Android tablet, iPad, Unplugged"
   tutorial_danceparty_string_platforms: "All modern browsers, Android tablet, iPad"
@@ -4726,6 +4730,7 @@
   tutorial_irobotphone_string_platforms: "All modern browsers"
   tutorial_codeguppydraw_string_platforms: "All modern browsers"
   tutorial_codejumper_string_platforms: "Unplugged, Sreen reader"
+  tutorial_meeempathy_string_platforms: "All modern browsers, Android tablet, iPad"
 
   tutorial_dance2019_string_detail_platforms: ""
   tutorial_danceparty_string_detail_platforms: ""
@@ -5422,6 +5427,7 @@
   tutorial_irobotphone_string_detail_platforms: "Root robot (optional)"
   tutorial_codeguppydraw_string_detail_platforms: ""
   tutorial_codejumper_string_detail_platforms: ""
+  tutorial_meeempathy_string_detail_platforms: ""
 
   tutorial_dance2019_string_detail_programming_languages: "Blocks"
   tutorial_danceparty_string_detail_programming_languages: "Blocks"
@@ -6118,6 +6124,7 @@
   tutorial_irobotphone_string_detail_programming_languages: "Blocks, iOS/Swift"
   tutorial_codeguppydraw_string_detail_programming_languages: "JavaScript"
   tutorial_codejumper_string_detail_programming_languages: "Unplugged"
+  tutorial_meeempathy_string_detail_programming_languages: "Blocks, Python"
 
   tutorial_scratchimagine_name: "Imagine a World"
   tutorial_codesterspsa_name: "Codesters: Code Your Own PSA"
