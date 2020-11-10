@@ -16,16 +16,11 @@ export default class LessonExtrasEditor extends React.Component {
   static propTypes = {
     projectWidgetVisible: PropTypes.bool,
     projectWidgetTypes: PropTypes.arrayOf(PropTypes.string),
-    lessonExtrasAvailable: PropTypes.bool
+    lessonExtrasAvailable: PropTypes.bool,
+    updateLessonExtrasAvailable: PropTypes.func.isRequired,
+    updateProjectWidgetVisible: PropTypes.func.isRequired,
+    updateProjectWidgetTypes: PropTypes.func.isRequired
   };
-
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      lessonExtras: this.props.lessonExtrasAvailable
-    };
-  }
 
   handleClearProjectWidgetSelectClick = () => {
     $(this.projectWidgetSelect)
@@ -41,9 +36,9 @@ export default class LessonExtrasEditor extends React.Component {
           <input
             name="lesson_extras_available"
             type="checkbox"
-            checked={this.state.lessonExtras}
+            defaultChecked={this.props.lessonExtrasAvailable}
             style={styles.checkbox}
-            onChange={e => this.setState({lessonExtras: e.target.checked})}
+            onChange={e => this.props.updateLessonExtrasAvailable(e)}
           />
           <HelpTip>
             <p>
@@ -52,7 +47,7 @@ export default class LessonExtrasEditor extends React.Component {
             </p>
           </HelpTip>
         </label>
-        {this.state.lessonExtras && (
+        {this.props.lessonExtrasAvailable && (
           <div>
             <label>
               Project widget visible
@@ -61,6 +56,7 @@ export default class LessonExtrasEditor extends React.Component {
                 type="checkbox"
                 defaultChecked={this.props.projectWidgetVisible}
                 style={styles.checkbox}
+                onChange={this.props.updateProjectWidgetVisible}
               />
               <HelpTip>
                 <p>
@@ -82,6 +78,7 @@ export default class LessonExtrasEditor extends React.Component {
                 multiple
                 defaultValue={this.props.projectWidgetTypes}
                 ref={select => (this.projectWidgetSelect = select)}
+                onChange={e => this.props.updateProjectWidgetTypes(e)}
               >
                 <option value="playlab">Play Lab</option>
                 <option value="playlab_k1">Play Lab K1</option>
