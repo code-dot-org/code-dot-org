@@ -541,6 +541,7 @@ module SharedConstants
       "mathMax": null,
       "mathMin": null,
       "mathRandom": null,
+      "mathPow": null,
       "comment_Math": null,
 
       // Variables
