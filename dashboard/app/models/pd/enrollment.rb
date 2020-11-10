@@ -115,12 +115,6 @@ class Pd::Enrollment < ActiveRecord::Base
     errors.add(:school_info, 'must have a country') unless school_info.try(:country)
   end
 
-  def email_unique_in_workshop
-    if workshop.enrollments.where("id != :id", id: id).pluck(:email).include? email
-      errors.add(:email, 'has already signed up for this workshop')
-    end
-  end
-
   def self.for_school_district(school_district)
     joins(:school_info).where(school_infos: {school_district_id: school_district.id})
   end
