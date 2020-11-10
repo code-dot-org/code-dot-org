@@ -119,6 +119,21 @@ def validate_unit(script, cb_unit)
   raise "unexpected unit_name #{cb_unit['unit_name']}" unless cb_unit['unit_name'] == script.name
 end
 
+def get_cb_lessons(cb_unit)
+  # In 2020 on Curriculum Builder, CSF and CSD lessons are all inside chapters,
+  # and CSP does not use chapters. Therefore, we can simplify the merge logic by
+  # assuming that lessons are all inside chapters when chapters are present.
+  if cb_unit['chapters'].present? && cb_unit['lessons'].present?
+    raise "found #{cb_unit['lessons'].count} unexpected lessons outside of chapters"
+  end
+
+  if cb_unit['chapters'].blank? && cb_unit['lessons'].blank?
+    raise "no chapters or lessons found"
+  end
+
+  cb_unit['lessons'].presence || cb_unit['chapters'].map {|ch| ch['lessons']}.flatten
+end
+
 # Because not all lockable lessons in code studio have lesson plans in
 # Curriculum Builder, there may be a mismatch between the number of lessons in
 # CB and Code Studio. This method does the following:
@@ -135,18 +150,7 @@ end
 def get_validated_lesson_pairs(script, cb_unit)
   validated_lesson_pairs = []
 
-  # In 2020 on Curriculum Builder, CSF and CSD lessons are all inside chapters,
-  # and CSP does not use chapters. Therefore, we can simplify the merge logic by
-  # assuming that lessons are all inside chapters when chapters are present.
-  if cb_unit['chapters'].present? && cb_unit['lessons'].present?
-    raise "found #{cb_unit['lessons'].count} unexpected lessons outside of chapters"
-  end
-
-  if cb_unit['chapters'].blank? && cb_unit['lessons'].blank?
-    raise "no chapters or lessons found"
-  end
-
-  cb_lessons = cb_unit['lessons'].presence || cb_unit['chapters'].map {|ch| ch['lessons']}.flatten
+  cb_lessons = get_cb_lessons(cb_unit)
 
   # Compare non-lockable lessons from CB and Code Studio.
   lessons_nonlockable = script.lessons.reject(&:lockable)
