@@ -67,35 +67,36 @@ export default class ScriptEditor extends React.Component {
     betaWarning: PropTypes.string,
     name: PropTypes.string.isRequired,
     i18nData: PropTypes.object.isRequired,
-    hidden: PropTypes.bool,
-    isStable: PropTypes.bool,
-    loginRequired: PropTypes.bool,
-    hideableLessons: PropTypes.bool,
-    studentDetailProgressView: PropTypes.bool,
-    professionalLearningCourse: PropTypes.string,
-    peerReviewsRequired: PropTypes.number,
-    wrapupVideo: PropTypes.string,
-    projectWidgetVisible: PropTypes.bool,
-    projectWidgetTypes: PropTypes.arrayOf(PropTypes.string),
-    teacherResources: PropTypes.arrayOf(resourceShape).isRequired,
-    lessonExtrasAvailable: PropTypes.bool,
-    lessonLevelData: PropTypes.string,
-    hasVerifiedResources: PropTypes.bool,
-    hasLessonPlan: PropTypes.bool,
-    curriculumPath: PropTypes.string,
-    pilotExperiment: PropTypes.string,
-    editorExperiment: PropTypes.string,
+    initialHidden: PropTypes.bool,
+    initialIsStable: PropTypes.bool,
+    initialLoginRequired: PropTypes.bool,
+    initialHideableLessons: PropTypes.bool,
+    initialStudentDetailProgressView: PropTypes.bool,
+    initialProfessionalLearningCourse: PropTypes.string,
+    initialPeerReviewsRequired: PropTypes.number,
+    initialWrapupVideo: PropTypes.string,
+    initialProjectWidgetVisible: PropTypes.bool,
+    initialProjectWidgetTypes: PropTypes.arrayOf(PropTypes.string),
+    initialTeacherResources: PropTypes.arrayOf(resourceShape).isRequired,
+    initialLessonExtrasAvailable: PropTypes.bool,
+    initialLessonLevelData: PropTypes.string,
+    initialHasVerifiedResources: PropTypes.bool,
+    initialHasLessonPlan: PropTypes.bool,
+    initialCurriculumPath: PropTypes.string,
+    initialPilotExperiment: PropTypes.string,
+    initialEditorExperiment: PropTypes.string,
     initialAnnouncements: PropTypes.arrayOf(announcementShape).isRequired,
-    supportedLocales: PropTypes.arrayOf(PropTypes.string),
-    locales: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.string)).isRequired,
-    projectSharing: PropTypes.bool,
-    curriculumUmbrella: PropTypes.oneOf(CURRICULUM_UMBRELLAS),
+    initialSupportedLocales: PropTypes.arrayOf(PropTypes.string),
+    initialLocales: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.string))
+      .isRequired,
+    initialProjectSharing: PropTypes.bool,
+    initialCurriculumUmbrella: PropTypes.oneOf(CURRICULUM_UMBRELLAS),
     initialFamilyName: PropTypes.string,
-    versionYear: PropTypes.string,
+    initialVersionYear: PropTypes.string,
     scriptFamilies: PropTypes.arrayOf(PropTypes.string).isRequired,
     versionYearOptions: PropTypes.arrayOf(PropTypes.string).isRequired,
     isLevelbuilder: PropTypes.bool,
-    tts: PropTypes.bool,
+    initialTts: PropTypes.bool,
     hasCourse: PropTypes.bool,
     initialIsCourse: PropTypes.bool
   };
@@ -107,7 +108,34 @@ export default class ScriptEditor extends React.Component {
       familyName: this.props.initialFamilyName || '',
       isCourse: this.props.initialIsCourse,
       description: this.props.i18nData.description,
-      announcements: this.props.initialAnnouncements
+      announcements: this.props.initialAnnouncements,
+      hidden: this.props.initialHidden,
+      isStable: this.props.initialIsStable,
+      loginRequired: this.props.initialLoginRequired,
+      hideableLessons: this.props.initialHideableLessons,
+      studentDetailProgressView: this.props.initialStudentDetailProgressView,
+      professionalLearningCourse: this.props.initialProfessionalLearningCourse,
+      peerReviewsRequired: this.props.initialPeerReviewsRequired,
+      wrapupVideo: this.props.initialWrapupVideo,
+      projectWidgetVisible: this.props.initialProjectWidgetVisible,
+      projectWidgetTypes: this.props.initialProjectWidgetTypes,
+      teacherResources: this.props.initialTeacherResources,
+      lessonExtrasAvailable: this.props.initialLessonExtrasAvailable,
+      lessonLevelData: this.props.initialLessonLevelData,
+      hasVerifiedResources: this.props.initialHasVerifiedResources,
+      hasLessonPlan: this.props.initialHasLessonPlan,
+      curriculumPath: this.props.initialCurriculumPath,
+      pilotExperiment: this.props.initialPilotExperiment,
+      editorExperiment: this.props.initialEditorExperiment,
+      supportedLocales: this.props.initialSupportedLocales,
+      locales: this.props.initialLocales,
+      projectSharing: this.prosp.initialProjectSharing,
+      curriculumUmbrella: this.props.initialCurriculumUmbrella,
+      versionYear: this.props.initialVersionYear,
+      tts: this.props.initialTts,
+      title: this.props.i18nData.title,
+      descriptionAudience: this.props.i18nData.descriptionAudience,
+      descriptionShort: this.props.i18nData.descriptionShort
     };
   }
 
@@ -131,7 +159,7 @@ export default class ScriptEditor extends React.Component {
 
   presubmit = e => {
     const videoKeysBefore = (
-      this.props.lessonLevelData.match(VIDEO_KEY_REGEX) || []
+      this.state.lessonLevelData.match(VIDEO_KEY_REGEX) || []
     ).length;
     const scriptText = this.props.beta ? '' : this.scriptTextArea.value;
     const videoKeysAfter = (scriptText.match(VIDEO_KEY_REGEX) || []).length;
@@ -163,8 +191,8 @@ export default class ScriptEditor extends React.Component {
 
   render() {
     const {betaWarning} = this.props;
-    const textAreaRows = this.props.lessonLevelData
-      ? this.props.lessonLevelData.split('\n').length + 5
+    const textAreaRows = this.state.lessonLevelData
+      ? this.state.lessonLevelData.split('\n').length + 5
       : 10;
     return (
       <div>
@@ -172,8 +200,9 @@ export default class ScriptEditor extends React.Component {
           Title
           <input
             name="title"
-            defaultValue={this.props.i18nData.title}
+            value={this.state.title}
             style={styles.input}
+            onChange={e => this.setState({title: e.target.value})}
           />
         </label>
         <label>
@@ -189,8 +218,9 @@ export default class ScriptEditor extends React.Component {
           Audience
           <input
             name="description_audience"
-            defaultValue={this.props.i18nData.descriptionAudience}
+            value={this.props.i18nData.descriptionAudience}
             style={styles.input}
+            onChange={e => this.setState({descriptionAudience: e.target.value})}
           />
         </label>
         <label>
@@ -203,8 +233,9 @@ export default class ScriptEditor extends React.Component {
           </HelpTip>
           <input
             name="description_short"
-            defaultValue={this.props.i18nData.descriptionShort}
+            value={this.props.i18nData.descriptionShort}
             style={styles.input}
+            onChange={e => this.setState({descriptionShort: e.target.value})}
           />
         </label>
         <TextareaWithMarkdownPreview
@@ -222,8 +253,11 @@ export default class ScriptEditor extends React.Component {
             <input
               name="login_required"
               type="checkbox"
-              defaultChecked={this.props.loginRequired}
+              checked={this.state.loginRequired}
               style={styles.checkbox}
+              onChange={() =>
+                this.setState({loginRequired: !this.state.loginRequired})
+              }
             />
             <HelpTip>
               <p>Require users to log in before viewing this script.</p>
@@ -234,8 +268,14 @@ export default class ScriptEditor extends React.Component {
             <input
               name="student_detail_progress_view"
               type="checkbox"
-              defaultChecked={this.props.studentDetailProgressView}
+              checked={this.state.studentDetailProgressView}
               style={styles.checkbox}
+              onChange={() =>
+                this.setState({
+                  studentDetailProgressView: !this.state
+                    .studentDetailProgressView
+                })
+              }
             />
             <HelpTip>
               <p>
@@ -251,8 +291,11 @@ export default class ScriptEditor extends React.Component {
             <input
               name="project_sharing"
               type="checkbox"
-              defaultChecked={this.props.projectSharing}
+              checked={this.state.projectSharing}
               style={styles.checkbox}
+              onChange={() =>
+                this.setState({projectSharing: !this.state.projectSharing})
+              }
             />
             <HelpTip>
               <p>
@@ -267,8 +310,9 @@ export default class ScriptEditor extends React.Component {
             <input
               name="tts"
               type="checkbox"
-              defaultChecked={this.props.tts}
+              checked={this.state.tts}
               style={styles.checkbox}
+              onChange={() => this.setState({tts: !this.state.tts})}
             />
             <HelpTip>
               <p>Check to enable text-to-speech for this script.</p>
@@ -286,10 +330,11 @@ export default class ScriptEditor extends React.Component {
             <select
               name="supported_locales[]"
               multiple
-              defaultValue={this.props.supportedLocales}
+              value={this.state.supportedLocales}
               ref={select => (this.supportedLocaleSelect = select)}
+              onChange={e => this.setState({supportedLocales: e.target.value})}
             >
-              {this.props.locales
+              {this.state.locales
                 .filter(locale => !locale[1].startsWith('en'))
                 .map(locale => (
                   <option key={locale[1]} value={locale[1]}>
@@ -309,8 +354,11 @@ export default class ScriptEditor extends React.Component {
               </HelpTip>
               <input
                 name="editor_experiment"
-                defaultValue={this.props.editorExperiment}
+                value={this.state.editorExperiment}
                 style={styles.input}
+                onChange={e =>
+                  this.setState({editorExperiment: e.target.value})
+                }
               />
             </label>
           )}
@@ -324,8 +372,9 @@ export default class ScriptEditor extends React.Component {
             </HelpTip>
             <input
               name="wrapup_video"
-              defaultValue={this.props.wrapupVideo}
+              value={this.state.wrapupVideo}
               style={styles.input}
+              onChange={e => this.setState({wrapupVideo: e.target.value})}
             />
           </label>
         </CollapsibleEditorSection>
@@ -346,7 +395,10 @@ export default class ScriptEditor extends React.Component {
                 <select
                   name="curriculum_umbrella"
                   style={styles.dropdown}
-                  defaultValue={this.props.curriculumUmbrella}
+                  value={this.state.curriculumUmbrella}
+                  onChange={e =>
+                    this.setState({curriculumUmbrella: e.target.value})
+                  }
                 >
                   <option value="">(None)</option>
                   {CURRICULUM_UMBRELLAS.map(curriculumUmbrella => (
@@ -419,9 +471,10 @@ export default class ScriptEditor extends React.Component {
                 Version Year
                 <select
                   name="version_year"
-                  defaultValue={this.props.versionYear}
+                  defaultValue={this.state.versionYear}
                   style={styles.dropdown}
                   disabled={this.props.hasCourse}
+                  onChange={e => this.setState({versionYear: e.target.value})}
                 >
                   <option value="">(None)</option>
                   {this.props.versionYearOptions.map(year => (
@@ -482,8 +535,11 @@ export default class ScriptEditor extends React.Component {
                 <input
                   name="is_stable"
                   type="checkbox"
-                  defaultChecked={this.props.isStable}
+                  checked={this.state.isStable}
                   style={styles.checkbox}
+                  onChange={() =>
+                    this.setState({isStable: !this.state.isStable})
+                  }
                 />
                 <HelpTip>
                   <p>
@@ -494,8 +550,14 @@ export default class ScriptEditor extends React.Component {
                 </HelpTip>
               </label>
               <VisibleAndPilotExperiment
-                visible={!this.props.hidden}
-                pilotExperiment={this.props.pilotExperiment}
+                visible={!this.state.hidden}
+                updateVisible={() =>
+                  this.setState({hidden: !this.state.hidden})
+                }
+                pilotExperiment={this.state.pilotExperiment}
+                updatePilotExperiment={e =>
+                  this.setState({pilotExperiment: e.target.value})
+                }
               />
             </div>
           )}
@@ -507,8 +569,11 @@ export default class ScriptEditor extends React.Component {
             <input
               name="has_lesson_plan"
               type="checkbox"
-              defaultChecked={this.props.hasLessonPlan}
+              checked={this.state.hasLessonPlan}
               style={styles.checkbox}
+              onChange={() =>
+                this.setState({hasLessonPlan: !this.state.hasLessonPlan})
+              }
             />
             <HelpTip>
               <p>
@@ -522,8 +587,9 @@ export default class ScriptEditor extends React.Component {
               Curriculum Path
               <input
                 name="curriculum_path"
-                defaultValue={this.props.curriculumPath}
+                value={this.state.curriculumPath}
                 style={styles.input}
+                onChange={e => this.setState({curriculumPath: e.target.value})}
               />
             </label>
           )}
@@ -532,8 +598,11 @@ export default class ScriptEditor extends React.Component {
             <input
               name="hideable_lessons"
               type="checkbox"
-              defaultChecked={this.props.hideableLessons}
+              defaultChecked={this.state.hideableLessons}
               style={styles.checkbox}
+              onChange={() =>
+                this.setState({hideableLessons: !this.state.hideableLessons})
+              }
             />
             <HelpTip>
               <p>
@@ -543,9 +612,22 @@ export default class ScriptEditor extends React.Component {
             </HelpTip>
           </label>
           <LessonExtrasEditor
-            lessonExtrasAvailable={this.props.lessonExtrasAvailable}
-            projectWidgetTypes={this.props.projectWidgetTypes}
-            projectWidgetVisible={this.props.projectWidgetVisible}
+            lessonExtrasAvailable={this.state.lessonExtrasAvailable}
+            projectWidgetTypes={this.state.projectWidgetTypes}
+            projectWidgetVisible={this.state.projectWidgetVisible}
+            updateLessonExtrasAvailable={() =>
+              this.setState({
+                lessonExtrasAvailable: !this.state.lessonExtrasAvailable
+              })
+            }
+            updateProjectWidgetVisible={() =>
+              this.setState({
+                projectWidgetVisible: !this.state.projectWidgetVisible
+              })
+            }
+            updateProjectWidgetTypes={e =>
+              this.setState({projectWidgetTypes: e.target.value})
+            }
           />
           {!this.props.beta && (
             <LessonDescriptions
@@ -561,8 +643,13 @@ export default class ScriptEditor extends React.Component {
             <input
               name="has_verified_resources"
               type="checkbox"
-              defaultChecked={this.props.hasVerifiedResources}
+              checked={this.state.hasVerifiedResources}
               style={styles.checkbox}
+              onChange={() =>
+                this.setState({
+                  hasVerifiedResources: !this.state.hasVerifiedResources
+                })
+              }
             />
             <HelpTip>
               <p>
@@ -579,7 +666,7 @@ export default class ScriptEditor extends React.Component {
             </div>
             <ResourcesEditor
               inputStyle={styles.input}
-              resources={this.props.teacherResources}
+              resources={this.state.teacherResources}
             />
           </div>
         </CollapsibleEditorSection>
@@ -598,8 +685,11 @@ export default class ScriptEditor extends React.Component {
               </HelpTip>
               <input
                 name="professional_learning_course"
-                defaultValue={this.props.professionalLearningCourse}
+                defaultValue={this.state.professionalLearningCourse}
                 style={styles.input}
+                onChange={e =>
+                  this.setState({professionalLearningCourse: e.target.value})
+                }
               />
             </label>
           )}
@@ -610,8 +700,11 @@ export default class ScriptEditor extends React.Component {
             </HelpTip>
             <input
               name="peer_reviews_to_complete"
-              defaultValue={this.props.peerReviewsRequired}
+              value={this.state.peerReviewsRequired}
               style={styles.input}
+              onChange={e =>
+                this.setState({peerReviewsRequired: e.target.value})
+              }
             />
           </label>
         </CollapsibleEditorSection>
@@ -632,11 +725,12 @@ export default class ScriptEditor extends React.Component {
                 name="script_text"
                 rows={textAreaRows}
                 style={styles.input}
-                defaultValue={
-                  this.props.lessonLevelData ||
+                value={
+                  this.state.lessonLevelData ||
                   "lesson_group 'lesson group', display_name: 'display name'\nlesson 'new lesson'\n"
                 }
                 ref={textArea => (this.scriptTextArea = textArea)}
+                onChange={e => this.setState({lessonLevelData: e.target.value})}
               />
             </div>
           )}
