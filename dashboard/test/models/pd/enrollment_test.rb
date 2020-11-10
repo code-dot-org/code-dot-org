@@ -222,7 +222,7 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
       workshop: enrollment.workshop
 
     duplicate_enrollment.save
-    assert enrollment.errors.added?(:email, 'email has already signed up for this workshop')
+    assert duplicate_enrollment.errors.added?(:email, 'has already been used to enroll in this workshop.')
 
     duplicate_enrollment.email = 'another_email@email.com'
     assert duplicate_enrollment.valid?

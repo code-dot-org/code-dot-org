@@ -59,7 +59,7 @@ class Pd::Enrollment < ActiveRecord::Base
   validates_presence_of :email, unless: :deleted?
   validates_confirmation_of :email, unless: :deleted?
   validates_email_format_of :email, allow_blank: true
-  validate :email_unique_in_workshop
+  validates :email, uniqueness: {message: 'has already been used to enroll in this workshop.'}, unless: :deleted?
 
   validate :school_forbidden, if: -> {new_record? || school_changed?}
   validates_presence_of :school_info, unless: -> {deleted? || created_before_school_info?}
@@ -116,8 +116,8 @@ class Pd::Enrollment < ActiveRecord::Base
   end
 
   def email_unique_in_workshop
-    if workshop.enrollments.pluck(:email).include? email
-      errors.add(:email, 'email has already signed up for this workshop')
+    if workshop.enrollments.where("id != :id", id: id).pluck(:email).include? email
+      errors.add(:email, 'has already signed up for this workshop')
     end
   end
 
