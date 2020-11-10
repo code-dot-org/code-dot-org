@@ -53,23 +53,23 @@ const styles = {
 
 export default class ObjectivesEditor extends Component {
   static propTypes = {
-    objectives: PropTypes.arrayOf(PropTypes.object).isRequired
+    objectives: PropTypes.arrayOf(PropTypes.object).isRequired,
+    updateObjectives: PropTypes.func.isRequired
   };
 
   constructor(props) {
     super(props);
 
     this.state = {
-      objectives: props.objectives,
       objectiveInput: '',
       currentlyEditingIndex: null
     };
   }
 
   generateNewObjectiveKey = () => {
-    let newKey = this.state.objectives.length + 1;
+    let newKey = this.props.objectives.length + 1;
     while (
-      this.state.objectives.some(
+      this.props.objectives.some(
         objective => objective.key === `objective-${newKey}`
       )
     ) {
@@ -79,53 +79,55 @@ export default class ObjectivesEditor extends Component {
   };
 
   handleRemove = idx => {
-    let {objectives} = this.state;
-    objectives = objectives.filter((o, i) => i !== idx);
-    this.setState({objectives});
+    this.props.updateObjectives(
+      this.props.objectives.filter((o, i) => i !== idx)
+    );
   };
 
   handleEdit = idx => {
     this.setState({
       currentlyEditingIndex: idx,
-      objectiveInput: this.state.objectives[idx].description
+      objectiveInput: this.props.objectives[idx].description
     });
   };
 
   handleCancel = () => {
-    let {objectives, currentlyEditingIndex} = this.state;
+    let {currentlyEditingIndex} = this.state;
+    let {objectives} = this.props;
     if (
       objectives[currentlyEditingIndex].description === '' &&
       currentlyEditingIndex === objectives.length - 1
     ) {
-      objectives = objectives.slice(0, objectives.length - 1);
+      this.props.updateObjectives(objectives.slice(0, objectives.length - 1));
     }
     this.setState({
-      objectives,
       objectiveInput: '',
       currentlyEditingIndex: null
     });
   };
 
   handleSave = () => {
-    let {objectives, objectiveInput, currentlyEditingIndex} = this.state;
+    let {objectiveInput, currentlyEditingIndex} = this.state;
+    let {objectives} = this.props;
     const newObjectives = [...objectives];
     newObjectives[currentlyEditingIndex] = {
       ...objectives[currentlyEditingIndex],
       description: objectiveInput
     };
+    this.props.updateObjectives(newObjectives);
     this.setState({
-      objectives: newObjectives,
       objectiveInput: '',
       currentlyEditingIndex: null
     });
   };
 
   addObjective = () => {
-    let {objectives} = this.state;
+    let {objectives} = this.props;
     const newObjectiveKey = this.generateNewObjectiveKey();
-    objectives = objectives.concat([{description: '', key: newObjectiveKey}]);
+    this.props.updateObjectives(
+      objectives.concat([{description: '', key: newObjectiveKey}])
+    );
     this.setState({
-      objectives,
       currentlyEditingIndex: objectives.length - 1,
       objectiveInput: ''
     });
@@ -137,7 +139,7 @@ export default class ObjectivesEditor extends Component {
         <input
           type="hidden"
           name="objectives"
-          value={JSON.stringify(this.state.objectives)}
+          value={JSON.stringify(this.props.objectives)}
         />
         <div style={styles.objectiveBox}>
           <table style={{width: '100%'}}>
@@ -148,7 +150,7 @@ export default class ObjectivesEditor extends Component {
               </tr>
             </thead>
             <tbody>
-              {this.state.objectives.map((objective, index) => (
+              {this.props.objectives.map((objective, index) => (
                 <tr
                   key={objective.key}
                   style={index % 2 === 1 ? styles.oddRow : {}}
