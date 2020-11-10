@@ -19,6 +19,7 @@ import $ from 'jquery';
 import _ from 'lodash';
 import {connect} from 'react-redux';
 import {NEW_LEVEL_ID} from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
 
 const styles = {
   editor: {
@@ -55,6 +56,20 @@ const styles = {
   },
   saveButton: {
     margin: '10px 50px 10px 20px'
+  },
+  spinner: {
+    fontSize: 25,
+    padding: 10
+  },
+  lastSaved: {
+    fontSize: 14,
+    color: color.level_perfect,
+    padding: 15
+  },
+  error: {
+    fontSize: 14,
+    color: color.red,
+    padding: 15
   }
 };
 
@@ -81,6 +96,9 @@ class LessonEditor extends Component {
     super(props);
 
     this.state = {
+      saving: false,
+      error: null,
+      lastSaved: null,
       displayName: this.props.initialDisplayName,
       overview: this.props.initialOverview,
       studentOverview: this.props.initialStudentOverview,
@@ -97,6 +115,8 @@ class LessonEditor extends Component {
 
   handleSaveAndKeepEditing = e => {
     e.preventDefault();
+
+    this.setState({saving: true, lastSaved: null, error: null});
 
     $.ajax({
       url: `/lessons/${this.props.id}?do_not_redirect=true`,
@@ -120,10 +140,10 @@ class LessonEditor extends Component {
       })
     })
       .done(data => {
-        console.log(data);
+        this.setState({lastSaved: data.updated_at, saving: false});
       })
       .fail(error => {
-        console.log(error);
+        this.setState({saving: false, error: error.responseText});
       });
   };
 
@@ -353,11 +373,29 @@ class LessonEditor extends Component {
         </CollapsibleEditorSection>
 
         <div style={styles.saveButtonBackground}>
+          {this.state.lastSaved && !this.state.error && (
+            <div style={styles.lastSaved}>
+              {`Last saved at: ${new Date(
+                this.state.lastSaved
+              ).toLocaleString()}`}
+            </div>
+          )}
+          {this.state.error && (
+            <div style={styles.error}>
+              {`Error Saving: ${this.state.error}`}
+            </div>
+          )}
+          {this.state.saving && (
+            <div style={styles.spinner}>
+              <FontAwesome icon="spinner" className="fa-spin" />
+            </div>
+          )}
           <button
             className="btn btn-primary"
             type="submit"
             style={styles.saveButton}
             onClick={this.handleSaveAndKeepEditing}
+            disabled={this.state.saving}
           >
             Save and Keep Editing
           </button>
@@ -365,6 +403,7 @@ class LessonEditor extends Component {
             className="btn btn-primary"
             type="submit"
             style={styles.saveButton}
+            disabled={this.state.saving}
           >
             Save Changes
           </button>
