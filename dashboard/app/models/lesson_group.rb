@@ -176,6 +176,7 @@ class LessonGroup < ApplicationRecord
   #   "title": "CB Chapter Title",
   #   "number": 1,
   #   "questions": "Big Questions markdown",
+  #   "description": "Description markdown"
   # }
   #
   # @param [Hash] cb_chapter_data - Chapter data to import.
