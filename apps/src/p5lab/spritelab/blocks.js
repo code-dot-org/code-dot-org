@@ -229,7 +229,6 @@ const customInputTypes = {
           }
         ];
       }
-      console.log('about to do things');
       currentInputRow
         .appendTitle(inputConfig.label)
         .appendTitle(
