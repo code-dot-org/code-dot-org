@@ -24,10 +24,10 @@ class FollowersController < ApplicationController
       return render 'student_user_new', formats: [:html]
     end
 
-    Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
-      if !verify_recaptcha
-        flash[:alert] = I18n.t('follower.captcha_required')
-      else
+    if !verify_recaptcha
+      flash[:alert] = I18n.t('follower.captcha_required')
+    else
+      Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
         if @user.save && @section&.add_student(@user)
           sign_in(:user, @user)
           redirect_to root_path, notice: I18n.t('follower.registered', section_name: @section.name)
