@@ -51,17 +51,15 @@ describe('AnnouncementsEditor', () => {
   it('adds an empty Announce when we click add', () => {
     const wrapper = shallow(<AnnouncementsEditor {...defaultProps} />);
     wrapper.find('button').simulate('click');
-    expect(updateAnnouncements).to.have.been.calledWith({
-      announcements: [
-        {
-          details: '',
-          link: '',
-          notice: '',
-          type: 'information',
-          visibility: 'Teacher-only'
-        }
-      ]
-    });
+    expect(updateAnnouncements).to.have.been.calledWith([
+      {
+        details: '',
+        link: '',
+        notice: '',
+        type: 'information',
+        visibility: 'Teacher-only'
+      }
+    ]);
   });
 
   it('removes announcements when we click remove', () => {
@@ -86,7 +84,7 @@ describe('AnnouncementsEditor', () => {
       .dive()
       .find('button')
       .simulate('click');
-    expect(updateAnnouncements).to.have.been.calledWith({announcements: []});
+    expect(updateAnnouncements).to.have.been.calledWith([]);
   });
 
   it('updates notice', () => {
@@ -103,17 +101,15 @@ describe('AnnouncementsEditor', () => {
       .find('input')
       .at(0)
       .simulate('change', {target: {value: 'notice'}});
-    expect(updateAnnouncements).to.have.been.calledWith({
-      announcements: [
-        {
-          details: 'See what changed and how it may affect your classroom.',
-          link: 'https://support.code.org/hc/en-us/articles/115001931251',
-          notice: 'notice',
-          type: 'information',
-          visibility: 'Teacher-only'
-        }
-      ]
-    });
+    expect(updateAnnouncements).to.have.been.calledWith([
+      {
+        details: 'See what changed and how it may affect your classroom.',
+        link: 'https://support.code.org/hc/en-us/articles/115001931251',
+        notice: 'notice',
+        type: 'information',
+        visibility: 'Teacher-only'
+      }
+    ]);
   });
 
   it('updates details', () => {
@@ -130,17 +126,15 @@ describe('AnnouncementsEditor', () => {
       .find('input')
       .at(1)
       .simulate('change', {target: {value: 'details'}});
-    expect(updateAnnouncements).to.have.been.calledWith({
-      announcements: [
-        {
-          details: 'details',
-          link: 'https://support.code.org/hc/en-us/articles/115001931251',
-          notice: 'notice',
-          type: 'information',
-          visibility: 'Teacher-only'
-        }
-      ]
-    });
+    expect(updateAnnouncements).to.have.been.calledWith([
+      {
+        details: 'details',
+        link: 'https://support.code.org/hc/en-us/articles/115001931251',
+        notice: 'notice',
+        type: 'information',
+        visibility: 'Teacher-only'
+      }
+    ]);
   });
 
   it('updates link', () => {
@@ -157,17 +151,15 @@ describe('AnnouncementsEditor', () => {
       .find('input')
       .at(2)
       .simulate('change', {target: {value: 'link'}});
-    expect(updateAnnouncements).to.have.been.calledWith({
-      announcements: [
-        {
-          details: 'details',
-          link: 'link',
-          notice: 'notice',
-          type: 'information',
-          visibility: 'Teacher-only'
-        }
-      ]
-    });
+    expect(updateAnnouncements).to.have.been.calledWith([
+      {
+        details: 'details',
+        link: 'link',
+        notice: 'notice',
+        type: 'information',
+        visibility: 'Teacher-only'
+      }
+    ]);
   });
 
   it('updates type', () => {
@@ -183,17 +175,15 @@ describe('AnnouncementsEditor', () => {
       .dive()
       .find('.uitest-announcement-type')
       .simulate('change', {target: {value: 'bullhorn'}});
-    expect(updateAnnouncements).to.have.been.calledWith({
-      announcements: [
-        {
-          details: 'details',
-          link: 'link',
-          notice: 'notice',
-          type: 'bullhorn',
-          visibility: 'Teacher-only'
-        }
-      ]
-    });
+    expect(updateAnnouncements).to.have.been.calledWith([
+      {
+        details: 'details',
+        link: 'link',
+        notice: 'notice',
+        type: 'bullhorn',
+        visibility: 'Teacher-only'
+      }
+    ]);
   });
 
   it('updates visibility', () => {
@@ -209,17 +199,15 @@ describe('AnnouncementsEditor', () => {
       .dive()
       .find('.uitest-announcement-visibility')
       .simulate('change', {target: {value: 'Student-only'}});
-    expect(updateAnnouncements).to.have.been.calledWith({
-      announcements: [
-        {
-          details: 'details',
-          link: 'link',
-          notice: 'notice',
-          type: 'bullhorn',
-          visibility: 'Student-only'
-        }
-      ]
-    });
+    expect(updateAnnouncements).to.have.been.calledWith([
+      {
+        details: 'details',
+        link: 'link',
+        notice: 'notice',
+        type: 'bullhorn',
+        visibility: 'Student-only'
+      }
+    ]);
   });
 
   it('updates visibility when no visibility in existing announcement', () => {
@@ -242,18 +230,16 @@ describe('AnnouncementsEditor', () => {
       .dive()
       .find('.uitest-announcement-visibility')
       .simulate('change', {target: {value: 'Student-only'}});
-    expect(updateAnnouncements).to.have.been.calledWith({
-      announcements: [
-        {
-          details: "So I don't have a visibility",
-          link: 'https://support.code.org/hc/en-us/articles/115001931251',
-          notice:
-            'This announcement was made before students could see announcements',
-          type: 'information',
-          visibility: 'Student-only'
-        }
-      ]
-    });
+    expect(updateAnnouncements).to.have.been.calledWith([
+      {
+        details: "So I don't have a visibility",
+        link: 'https://support.code.org/hc/en-us/articles/115001931251',
+        notice:
+          'This announcement was made before students could see announcements',
+        type: 'information',
+        visibility: 'Student-only'
+      }
+    ]);
   });
 
   it('includes a hidden input with value for server', () => {
