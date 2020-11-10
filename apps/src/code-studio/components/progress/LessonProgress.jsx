@@ -223,7 +223,7 @@ class LessonProgress extends Component {
                   isCurrentLevel && level.levelNumber === currentPage;
 
                 // For multi-page assessments we want page-specific progress
-                if (progress.pages) {
+                if (progress && progress.pages) {
                   progress = progress.pages[level.levelNumber - 1];
                 }
               }
