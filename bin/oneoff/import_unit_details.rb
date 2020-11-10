@@ -119,6 +119,10 @@ def validate_unit(script, cb_unit)
   raise "unexpected unit_name #{cb_unit['unit_name']}" unless cb_unit['unit_name'] == script.name
 end
 
+# Retrieves all lessons from the CB unit, which could either be in the lessons
+# field or nested within various chapters.
+# @param [Hash] cb_unit - Curriculum Builder Unit
+# @return [Array.<Hash>] - Array of CB Lessons
 def get_cb_lessons(cb_unit)
   # In 2020 on Curriculum Builder, CSF and CSD lessons are all inside chapters,
   # and CSP does not use chapters. Therefore, we can simplify the merge logic by
