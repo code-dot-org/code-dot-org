@@ -103,6 +103,13 @@ def main(options)
       lesson.update_from_curriculum_builder(cb_lesson)
     end
 
+    lesson_group_pairs.each do |lesson_group, cb_chapter|
+      # Make sure the lesson group update does not also try to update lessons.
+      cb_chapter = cb_chapter.reject {|k, _| k == 'lessons'}
+
+      lesson_group.update_from_curriculum_builder(cb_chapter)
+    end
+
     log "updated #{lesson_pairs.count} lessons and #{lesson_group_pairs.count} lesson groups in unit #{script.name}"
   end
 end
