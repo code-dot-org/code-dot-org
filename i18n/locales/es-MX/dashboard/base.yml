@@ -1067,13 +1067,6 @@ es-MX:
     message: 'Si continúas navegando nuestro sitio web o haces clic en "Acepto", aceptas que se guarden las cookies en tu computadora o dispositivo.'
     more_information: "Mira la política de privacidad de Code.org."
     accept: 'Acepto'
-  gdpr_dialog:
-    heading: '¿Aceptas utilizar un sitio web alojado en los Estados Unidos?'
-    message: 'Es posible que los datos de su utilización de este sitio web se envíen y almacenen en Estados Unidos.'
-    link_intro: 'Para más información, mira nuestra'
-    privacy_policy: 'política de privacidad'
-    logout: 'Cerrar sesión'
-    yes: 'Sí'
   page_not_found_title: "No se encontró la página"
   page_not_found_header: '404: no se encontró la página'
   page_not_found_description: "La página que buscas no existe en esta dirección. Comprueba la dirección web y vuelve a enviarla, o regresa a nuestra página de inicio."

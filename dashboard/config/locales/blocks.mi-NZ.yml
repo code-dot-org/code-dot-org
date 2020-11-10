@@ -1065,6 +1065,8 @@ mi:
         text: tae matapōkere
       gamelab_randomColor:
         text: tae matapōkere
+      gamelab_repeatForever:
+        text: tōaitia mō ake ake
       gamelab_setBackground:
         text: kowhiri te tae papamuri {COLOR}
       gamelab_setBackgroundImage:

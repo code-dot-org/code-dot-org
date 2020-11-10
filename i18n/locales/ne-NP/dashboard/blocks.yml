@@ -182,6 +182,8 @@ ne:
         text: कुनै एक  रङ
       gamelab_randomColor:
         text: कुनै एक  रङ
+      gamelab_repeatForever:
+        text: repeat forever
       gamelab_setBackgroundImage:
         options:
           IMG:

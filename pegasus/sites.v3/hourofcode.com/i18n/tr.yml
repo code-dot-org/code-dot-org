@@ -243,14 +243,6 @@ tr:
   front_watch_regular_video: Video İzleyin
   front_volunteers: Teknik gönüllüler istedi
   front_start_learning: Öğrenmeye başlayın
-  gdpr_dialog_heading: Amerika Birleşik Devletleri merkezli bir web sitesi kullanmayı
-    kabul ediyor musunuz?
-  gdpr_dialog_message: Bu siteyi kullanımınıza ilişkin veriler Amerika Birleşik Devletleri’ne
-    gönderilebilir ve Amerika Birleşik Devletleri’nde saklanabilir veya işlenebilir.
-  gdpr_dialog_link_intro: Ayrıntılar için bkz.
-  gdpr_dialog_privacy_policy: gizlilik politikası
-  gdpr_dialog_logout: Oturumu Kapat
-  gdpr_dialog_yes: Evet
   header_menu_resources: Kaynaklar
   header_menu_faq: SSS
   header_menu_how_to: Nasıl Yapılır

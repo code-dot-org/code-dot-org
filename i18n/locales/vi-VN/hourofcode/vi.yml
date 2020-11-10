@@ -238,13 +238,6 @@ vi:
   front_watch_regular_video: Xem video
   front_volunteers: Tuyển tình nguyện viên kỹ thuật
   front_start_learning: Bắt đầu học
-  gdpr_dialog_heading: Bạn có chấp nhận sử dụng trang phép có trụ sở tại Hoa Kỳ?
-  gdpr_dialog_message: Dữ liệu của bạn khi sử dụng trang này có thể được gửi về và
-    lưu trữ hoặc xử lý tại Hoa Kỳ.
-  gdpr_dialog_link_intro: Xem thông tin chi tiết về chúng tôi
-  gdpr_dialog_privacy_policy: chính sách riêng tư
-  gdpr_dialog_logout: Đăng xuất
-  gdpr_dialog_yes: Có
   header_menu_resources: Nguồn tài liệu
   header_menu_faq: Hỏi đáp
   header_menu_how_to: Hướng dẫn
@@ -6177,7 +6170,7 @@ vi:
   tutorial_grokem_string_detail_grades: Grades 6+
   tutorial_kodmaze_string_detail_grades: Pre-reader - Grade 5
   tutorial_codestersa_string_detail_grades: Grades 2-8
-  tutorial_cmdodo_string_detail_grades: Grades 2-5
+  tutorial_cmdodo_string_detail_grades: Grades 3-5
   tutorial_tynkerspace_string_detail_grades: Grades 2-5
   tutorial_gfbloons_string_detail_grades: Grades 9+
   tutorial_raspipong_string_detail_grades: Grades 9+
