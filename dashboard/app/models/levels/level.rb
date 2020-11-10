@@ -625,7 +625,7 @@ class Level < ActiveRecord::Base
       icon: icon,
       kind: unplugged? ? LEVEL_KIND.unplugged : LEVEL_KIND.puzzle,
       title: try(:title),
-      unplugged: display_as_unplugged?,
+      isUnplugged: display_as_unplugged?,
       isConceptLevel: concept_level?,
       sublevels: try(:sublevels),
       skin: try(:skin),
