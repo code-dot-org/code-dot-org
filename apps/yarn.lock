@@ -1634,10 +1634,10 @@
     messageformat "^1.1.0"
     react-typist "^2.0.5"
 
-"@code-dot-org/ml-playground@0.0.8":
-  version "0.0.8"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/ml-playground/-/ml-playground-0.0.8.tgz#3fbd4386c3fe94f106933b3202607b47de040f73"
-  integrity sha512-iKDpkhEV+awXhyMAwnj8V8MbDkzDV+ske1I+3Zdqa1hi5nfMZVbzTvbcV2ibcav0OLAYDlkAqGDBMYs0+hT5Fg==
+"@code-dot-org/ml-playground@0.0.9":
+  version "0.0.9"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/ml-playground/-/ml-playground-0.0.9.tgz#15b309724a5a2c2e17b2e810125b5951de681108"
+  integrity sha512-D3PSL0ceX0+xowSwqOq56V1QgQqOK1PpvlV71+aqAK3XBrZLfLumtzaOGGpZ7ISM1gwrOK9cKsAJ9QcRn4UU/Q==
   dependencies:
     ml-svm "^2.1.2"
 
