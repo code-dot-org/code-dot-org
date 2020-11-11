@@ -1532,6 +1532,52 @@
         },
         "express_maze_debugging9_2020": {
           "express_maze_debugging9_2019_1": "Araç kutusundan çalışma alanına blokları sürükleyin."
+        },
+        "Virtual Pet 2_2019": {
+          "": "Buraya tıklayın!"
+        },
+        "Virtual Pet 2_2020": {
+          "": "Buraya tıklayın!"
+        },
+        "courseE_aboutme_2": {
+          "": "Buraya tıklayın!"
+        },
+        "courseE_aboutme_2_2020": {
+          "": "Buraya tıklayın!"
+        },
+        "behaviors 1": {
+          "behaviors_edit": "Bu davranışın nasıl çalıştığını görmek için buraya tıklayın."
+        },
+        "behaviors 1_2020": {
+          "behaviors_edit": "Bu davranışın nasıl çalıştığını görmek için buraya tıklayın."
+        },
+        "behaviors 3a": {
+          "behavior_callout": "Ortadaki yıldız için bu davranış neden işe yaramıyor?",
+          "star2_callout": "Bu kostüm bloğunu çıkarın ve bunun yerine \"bu hareketli nesne\" bloğunu kullanın.",
+          "this_sprite_callout": "Bununla aşağıdaki kostüm bloğunu değiştirin."
+        },
+        "behaviors 3a_2020": {
+          "behavior_callout": "Ortadaki yıldız için bu davranış neden işe yaramıyor?",
+          "star2_callout": "Bu kostüm bloğunu çıkarın ve bunun yerine \"bu hareketli nesne\" bloğunu kullanın.",
+          "this_sprite_callout": "Bununla aşağıdaki kostüm bloğunu değiştirin."
+        },
+        "behaviors 4": {
+          "behaviors_edit": "Bu davranışın nasıl çalıştığını görmek için buraya tıklayın."
+        },
+        "behaviors 4_2020": {
+          "behaviors_edit": "Bu davranışın nasıl çalıştığını görmek için buraya tıklayın."
+        },
+        "behaviors 5": {
+          "behaviors_edit": "Kodu bu davranışa ekleyin."
+        },
+        "behaviors 5_2020": {
+          "behaviors_edit": "Kodu bu davranışa ekleyin."
+        },
+        "behaviors free play": {
+          "behaviors_edit": "Kodu bu davranışa ekleyin."
+        },
+        "behaviors free play_2020": {
+          "behaviors_edit": "Kodu bu davranışa ekleyin."
         }
       }
     }

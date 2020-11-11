@@ -2947,7 +2947,7 @@
           "courseC_artist_loops1a_b": "Použi tento blok na nakreslenie nálepky!\n\n<xml>\n<block type=\"sticker\">\n<title name=\"VALUE\">Bird</title>\n</block>\n</xml>"
         },
         "courseC_artist_loops1a_2019": {
-          "courseC_artist_loops1a_a": "Toto je prvý blok, ktorý budeš potrebovať:\n\n<xml>\n<block type=\"jump_to\">\n<title name=\"VALUE\">13</title>\n</block>\n</xml>",
+          "courseC_artist_loops1a_a": "Toto je prvý blok, ktorý budeš potrebovať:\n\n<xml>\n<block type=\"jump_to_xy\">\n<title name=\"XPOS\">200</title>\n<title name=\"YPOS\">200</title>\n</block>\n</xml>",
           "courseC_artist_loops1a_b": "Použi tento blok na nakreslenie nálepky!\n\n<xml>\n<block type=\"sticker\">\n<title name=\"VALUE\">Bird</title>\n</block>\n</xml>"
         },
         "courseC_artist_loops1a_2020": {
@@ -2999,7 +2999,7 @@
           "courseC_artist_loops4a_a": "Použi tento blok a skoč dopredu:\n\n<xml>\n<block type=\"jump_by_constant\">\n    <title name=\"DIR\">jumpForward</title>\n    <title name=\"VALUE\">100</title>\n  </block>\n</xml>\n\nNezabudni zmeniť to, ako ďaleko skočíš!"
         },
         "courseC_artist_loops4a_2019": {
-          "courseC_artist_loops4a_a": "Použi tento blok, aby si skočil dopredu:\n\n<xml>\n<block type=\"jump_by_constant\">\n<title name=\"DIR\">jumpForward</title>\n<title name=\"VALUE\">???</title>\n</block>\n</xml>\n\nNezabudni zmeniť to, ako ďaleko skočíš!",
+          "courseC_artist_loops4a_a": "Použi tento blok a skoč dopredu:\n\n<xml>\n<block type=\"jump_by_constant\">\n    <title name=\"DIR\">jumpForward</title>\n    <title name=\"VALUE\">???</title>\n  </block>\n</xml>\n\nNezabudni zmeniť to, ako ďaleko skočíš!",
           "courseC_artist_loops4a_b": "Tvoj program by mal vyzerať takto!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">???</title>\n        <statement name=\"DO\">\n          <block type=\"jump_to\">\n            <title name=\"VALUE\">13</title>\n            <next>\n              <block type=\"draw_turn_by_constant_dropdown\">\n                <title name=\"DIR\">???</title>\n                <title name=\"VALUE\" config=\"1,2,5,10,12,20,30,45,60,90,120,180\">???</title>\n                <next>\n                  <block type=\"sticker\">\n                    <title name=\"VALUE\">Cat</title>\n                    <next>\n                      <block type=\"jump_by_constant\">\n                        <title name=\"DIR\">jumpForward</title>\n                        <title name=\"VALUE\">???</title>\n                        <next>\n                          <block type=\"sticker\">\n                            <title name=\"VALUE\">Dog</title>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseC_artist_loops4a_2020": {
@@ -3029,7 +3029,7 @@
         "courseC_artist_loops5b_2019": {
           "courseC_artist_loops5b_a": "Použi tento blok na nastavenie tvojho vzoru:\n\n<xml>\n<block type=\"draw_line_style_pattern\">\n<title name=\"VALUE\">DEFAULT</title>\n</block>\n</xml>",
           "courseC_artist_loops5b_b": "Na vytvorenie dizajnu, ako je ten hore, použi blok posuň sa dozadu rovnako veľakrát ako blok posuň sa dopredu.",
-          "courseC_artist_loops5b_c": "Tvoj program by mal vyzerať nejako takto!\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"draw_line_style_pattern\">\n<title name=\"VALUE\">rainbowLine</title>\n<next>\n<block type=\"controls_repeat\">\n<title name=\"TIMES\">4</title>\n<statement name=\"DO\">\n<block type=\"jump_to\">\n<title name=\"VALUE\">13</title>\n<next>\n<block type=\"draw_move_by_constant\">\n<title name=\"DIR\">moveForward</title>\n<title name=\"VALUE\">???</title>\n<next>\n<block type=\"draw_move_by_constant\">\n<title name=\"DIR\">moveBackward</title>\n<title name=\"VALUE\">???</title>\n<next>\n<block type=\"draw_turn_by_constant_dropdown\">\n<title name=\"DIR\">???</title>\n<title name=\"VALUE\" config=\"1,2,5,10,12,20,30,45,60,90,120,180\">???</title>\n<next>\n<block type=\"sticker\">\n<title name=\"VALUE\">Cat</title>\n<next>\n<block type=\"jump_by_constant\">\n<title name=\"DIR\">jumpForward</title>\n<title name=\"VALUE\">???</title>\n<next>\n<block type=\"sticker\">\n<title name=\"VALUE\">Dog</title>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</statement>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+          "courseC_artist_loops5b_c": "Tvoj program by mal vyzerať takto!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"draw_line_style_pattern\">\n        <title name=\"VALUE\">rainbowLine</title>\n        <next>\n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">4</title>\n            <statement name=\"DO\">\n              <block type=\"jump_to\">\n                <title name=\"VALUE\">13</title>\n                <next>\n                  <block type=\"draw_move_by_constant\">\n                    <title name=\"DIR\">moveForward</title>\n                    <title name=\"VALUE\">???</title>\n                    <next>\n                      <block type=\"draw_move_by_constant\">\n                        <title name=\"DIR\">moveBackward</title>\n                        <title name=\"VALUE\">???</title>\n                        <next>\n                          <block type=\"draw_turn_by_constant_dropdown\">\n                            <title name=\"DIR\">???</title>\n                            <title name=\"VALUE\" config=\"1,2,5,10,12,20,30,45,60,90,120,180\">???</title>\n                            <next>\n                              <block type=\"sticker\">\n                                <title name=\"VALUE\">Cat</title>\n                                <next>\n                                  <block type=\"jump_by_constant\">\n                                    <title name=\"DIR\">jumpForward</title>\n                                    <title name=\"VALUE\">???</title>\n                                    <next>\n                                      <block type=\"sticker\">\n                                        <title name=\"VALUE\">Dog</title>\n                                      </block>\n                                    </next>\n                                  </block>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseC_artist_loops5b_2020": {
           "courseC_artist_loops5b_a": "Použi tento blok na nastavenie tvojho vzoru:\n\n<xml>\n<block type=\"draw_line_style_pattern\">\n<title name=\"VALUE\">DEFAULT</title>\n</block>\n</xml>",
@@ -3093,8 +3093,8 @@
           "courseC_artist_loopsPrePre1a_b": "Aby si sa posunul dopredu o 50 pixelov, použi tento blok:\n\n<xml><block type=\"draw_move_by_constant\">\n\n<title name=\"DIR\">moveForward</title>\n<title name=\"VALUE\">50</title>\n</block></xml>"
         },
         "courseC_artist_prog2": {
-          "courseC_artist_prog2_a": "-   \"Ak použiješ blok <xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">moveForward</title><title name=\"VALUE\">100</title></block></xml>, nakreslím čiaru.\" \\*",
-          "courseC_artist_prog2_b": "Máš problém, so zabočením? Použi blok <xml><block type=\"draw_turn_by_constant_dropdown\"><title name=\"DIR\">turnRight</title><title name=\"VALUE\" config=\"45,60,90,120,180\">90</title></block></xml>."
+          "courseC_artist_prog2_a": "*\"Ak použiješ blok <xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">moveForward</title><title name=\"VALUE\">100</title></block></xml>, nakreslím čiaru.\"*",
+          "courseC_artist_prog2_b": "Máš problém so zabočením? Použi blok <xml><block type=\"draw_turn_by_constant_dropdown\"><title name=\"DIR\">turnRight</title><title name=\"VALUE\" config=\"45,60,90,120,180\">90</title></block></xml>."
         },
         "courseC_artist_prog2_2018": {
           "courseC_artist_prog2_a": "*\"Ak použiješ blok <xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">moveForward</title><title name=\"VALUE\">100</title></block></xml>, nakreslím čiaru.\"*",
@@ -4401,7 +4401,7 @@
           "courseD_artist_nestedLoops1_c": "Skús si napísať príkazy na papier a hľadaj vzory, ktoré sa dajú zjednodušiť opakovaním."
         },
         "courseD_artist_nestedLoops1a": {
-          "courseD_artist_nestedLoops1a_a": "Musíš nakresliť dokopy 6 trojuholníkov. Po dokončení každého trojuholníka sa otoč o 60 stupňov a skoč na začiatok ďalšieho.\n\n! \\[] (<https://images.code.org/ad6c6d98298df9f4e3cea5bbe5ec776e-image-1497476332024.2_solution2.gif>)",
+          "courseD_artist_nestedLoops1a_a": "Musíš nakresliť dokopy 6 trojuholníkov. Po dokončení každého trojuholníka sa otoč o 60 stupňov a skoč na začiatok ďalšieho.\n\n![](https://images.code.org/ad6c6d98298df9f4e3cea5bbe5ec776e-image-1497476332024.2_solution2.gif)",
           "courseD_artist_nestedLoops1a_b": "Ak vytvoríš trojuholník opakovaním, umelec by mal skončiť natočený smerom k ďalšiemu trojuholníku, ako na začiatku. Tak sa budú robiť 60 stupňové otočky oveľa lahšie.",
           "courseD_artist_nestedLoops1a_c": "Ak chceš meniť farby, použi blok `nastav farbu` vo svojom kóde. Nemusíš použiť tie isté farby, aké sú na predlohe."
         },
@@ -4411,12 +4411,12 @@
           "courseD_artist_nestedLoops1a_c": "Ak chceš meniť farby, použi blok `nastav farbu` vo svojom kóde. Nemusíš použiť tie isté farby, aké sú na predlohe."
         },
         "courseD_artist_nestedLoops1a_2019": {
-          "courseD_artist_nestedLoops1a_a": "Musíš nakresliť dokopy 6 trojuholníkov. Po dokončení každého trojuholníka sa otoč o 60 stupňov a skoč na začiatok ďalšieho.\n\n! \\[] (<https://images.code.org/ad6c6d98298df9f4e3cea5bbe5ec776e-image-1497476332024.2_solution2.gif>)",
+          "courseD_artist_nestedLoops1a_a": "Musíš nakresliť dokopy 6 trojuholníkov. Po dokončení každého trojuholníka sa otoč o 60 stupňov a skoč na začiatok ďalšieho.\n\n![](https://images.code.org/ad6c6d98298df9f4e3cea5bbe5ec776e-image-1497476332024.2_solution2.gif)",
           "courseD_artist_nestedLoops1a_b": "Ak vytvoríš trojuholník opakovaním, umelec by mal skončiť natočený smerom k ďalšiemu trojuholníku, ako na začiatku. Tak sa budú robiť 60 stupňové otočky oveľa lahšie.",
           "courseD_artist_nestedLoops1a_c": "Ak chceš meniť farby, použi blok `nastav farbu` vo svojom kóde. Nemusíš použiť tie isté farby, aké sú na predlohe."
         },
         "courseD_artist_nestedLoops1a_2020": {
-          "courseD_artist_nestedLoops1a_a": "Musíš nakresliť dokopy 6 trojuholníkov. Po dokončení každého trojuholníka sa otoč o 60 stupňov a skoč na začiatok ďalšieho.\n\n! \\[] (<https://images.code.org/ad6c6d98298df9f4e3cea5bbe5ec776e-image-1497476332024.2_solution2.gif>)",
+          "courseD_artist_nestedLoops1a_a": "Musíš nakresliť dokopy 6 trojuholníkov. Po dokončení každého trojuholníka sa otoč o 60 stupňov a skoč na začiatok ďalšieho.\n\n![](https://images.code.org/ad6c6d98298df9f4e3cea5bbe5ec776e-image-1497476332024.2_solution2.gif)",
           "courseD_artist_nestedLoops1a_b": "Ak vytvoríš trojuholník opakovaním, umelec by mal skončiť natočený smerom k ďalšiemu trojuholníku, ako na začiatku. Tak sa budú robiť 60 stupňové otočky oveľa lahšie.",
           "courseD_artist_nestedLoops1a_c": "Ak chceš meniť farby, použi blok `nastav farbu` vo svojom kóde. Nemusíš použiť tie isté farby, aké sú na predlohe."
         },
@@ -4438,139 +4438,139 @@
         },
         "courseD_artist_nestedLoops3": {
           "courseD_artist_nestedLoops3_a": "Skoč z vrchného štvorca na začiatok ďalšieho pomocou bloku `skoč dopredu`. \n\nAk má každý štvorec 20 pixelov a štvorce sú 20 pixelov od seba, o koľko musíš skočiť?",
-          "courseD_artist_nestedLoops3_b": "Nezabudnite použiť vnorené cykly na rýchle vyriešenie úlohy. ",
+          "courseD_artist_nestedLoops3_b": "Nezabudni použiť vnorené cykly na rýchle vyriešenie úlohy. ",
           "courseD_artist_nestedLoops3_c": "Na vyrobenie jedného štvorca použi blok `opakuj`. Potom to 8 krát zopakuj a medzi štvorcami skáč o 40 pixelov. "
         },
         "courseD_artist_nestedLoops3_2018": {
           "courseD_artist_nestedLoops3_a": "Skoč z vrchného štvorca na začiatok ďalšieho pomocou bloku `skoč dopredu`. \n\nAk má každý štvorec 20 pixelov a štvorce sú 20 pixelov od seba, o koľko musíš skočiť?",
-          "courseD_artist_nestedLoops3_b": "Nezabudnite použiť vnorené cykly na rýchle vyriešenie úlohy. ",
+          "courseD_artist_nestedLoops3_b": "Nezabudni použiť vnorené cykly na rýchle vyriešenie úlohy. ",
           "courseD_artist_nestedLoops3_c": "Na vyrobenie jedného štvorca použi blok `opakuj`. Potom to 8 krát zopakuj a medzi štvorcami skáč o 40 pixelov. "
         },
         "courseD_artist_nestedLoops3_2019": {
           "courseD_artist_nestedLoops3_a": "Skoč z vrchného štvorca na začiatok ďalšieho pomocou bloku `skoč dopredu`. \n\nAk má každý štvorec 20 pixelov a štvorce sú 20 pixelov od seba, o koľko musíš skočiť?",
-          "courseD_artist_nestedLoops3_b": "Nezabudnite použiť vnorené cykly na rýchle vyriešenie úlohy. ",
+          "courseD_artist_nestedLoops3_b": "Nezabudni použiť vnorené cykly na rýchle vyriešenie úlohy. ",
           "courseD_artist_nestedLoops3_c": "Na vyrobenie jedného štvorca použi blok `opakuj`. Potom to 8 krát zopakuj a medzi štvorcami skáč o 40 pixelov. "
         },
         "courseD_artist_nestedLoops3_2020": {
           "courseD_artist_nestedLoops3_a": "Skoč z vrchného štvorca na začiatok ďalšieho pomocou bloku `skoč dopredu`. \n\nAk má každý štvorec 20 pixelov a štvorce sú 20 pixelov od seba, o koľko musíš skočiť?",
-          "courseD_artist_nestedLoops3_b": "Nezabudnite použiť vnorené cykly na rýchle vyriešenie úlohy. ",
+          "courseD_artist_nestedLoops3_b": "Nezabudni použiť vnorené cykly na rýchle vyriešenie úlohy. ",
           "courseD_artist_nestedLoops3_c": "Na vyrobenie jedného štvorca použi blok `opakuj`. Potom to 8 krát zopakuj a medzi štvorcami skáč o 40 pixelov. "
         },
         "courseD_artist_nestedLoops4": {
           "courseD_artist_nestedLoops4_d": "Na správne vyriešenie sa musíš **pred** otáčaním najskôr posunúť, inak nakreslíš kruhy kúsok vedľa!",
-          "courseD_artist_nestedLoops4_a": "Aby si nakreslil kruh:\n\n-   Opakuj 360 krát\n-   Posuň sa dopredu o 1 pixel\n-   Otoč sa vľavo o 1 stupeň",
+          "courseD_artist_nestedLoops4_a": "Na nakreslenie kruhu:\n\n-   Opakuj 360 krát\n    -   Posuň sa dopredu o 1 pixel\n    -   Otoč sa vľavo o 1 stupeň",
           "courseD_artist_nestedLoops4_b": "Nezabúdaj skákať dopredu o 50 pixelov po každom kruhu.",
           "courseD_artist_nestedLoops4_c": "Použi vnorené cykly na nakreslenie týchto 4 kruhov."
         },
         "courseD_artist_nestedLoops4_2018": {
           "courseD_artist_nestedLoops4_d": "Na správne vyriešenie sa musíš **pred** otáčaním najskôr posunúť, inak nakreslíš kruhy kúsok vedľa!",
-          "courseD_artist_nestedLoops4_a": "Aby si nakreslil kruh:\n\n-   Opakuj 360 krát\n-   Posuň sa dopredu o 1 pixel\n-   Otoč sa vľavo o 1 stupeň",
+          "courseD_artist_nestedLoops4_a": "Na nakreslenie kruhu:\n\n-   Opakuj 360 krát\n    -   Posuň sa dopredu o 1 pixel\n    -   Otoč sa vľavo o 1 stupeň",
           "courseD_artist_nestedLoops4_b": "Nezabúdaj skákať dopredu o 50 pixelov po každom kruhu.",
           "courseD_artist_nestedLoops4_c": "Použi vnorené cykly na nakreslenie týchto 4 kruhov."
         },
         "courseD_artist_nestedLoops4_2019": {
           "courseD_artist_nestedLoops4_d": "Na správne vyriešenie sa musíš **pred** otáčaním najskôr posunúť, inak nakreslíš kruhy kúsok vedľa!",
-          "courseD_artist_nestedLoops4_a": "Aby si nakreslil kruh:\n\n-   Opakuj 360 krát\n-   Posuň sa dopredu o 1 pixel\n-   Otoč sa vľavo o 1 stupeň",
+          "courseD_artist_nestedLoops4_a": "Na nakreslenie kruhu:\n\n-   Opakuj 360 krát\n    -   Posuň sa dopredu o 1 pixel\n    -   Otoč sa vľavo o 1 stupeň",
           "courseD_artist_nestedLoops4_b": "Nezabúdaj skákať dopredu o 50 pixelov po každom kruhu.",
           "courseD_artist_nestedLoops4_c": "Použi vnorené cykly na nakreslenie týchto 4 kruhov."
         },
         "courseD_artist_nestedLoops4_2020": {
           "courseD_artist_nestedLoops4_d": "Na správne vyriešenie sa musíš **pred** otáčaním najskôr posunúť, inak nakreslíš kruhy kúsok vedľa!",
-          "courseD_artist_nestedLoops4_a": "Aby si nakreslil kruh:\n\n-   Opakuj 360 krát\n-   Posuň sa dopredu o 1 pixel\n-   Otoč sa vľavo o 1 stupeň",
+          "courseD_artist_nestedLoops4_a": "Na nakreslenie kruhu:\n\n-   Opakuj 360 krát\n    -   Posuň sa dopredu o 1 pixel\n    -   Otoč sa vľavo o 1 stupeň",
           "courseD_artist_nestedLoops4_b": "Nezabúdaj skákať dopredu o 50 pixelov po každom kruhu.",
           "courseD_artist_nestedLoops4_c": "Použi vnorené cykly na nakreslenie týchto 4 kruhov."
         },
         "courseD_artist_nestedLoops5": {
-          "courseD_artist_nestedLoops5_a": "Urobíš to ľahko takto:\n\n-   Opakuj 4 krát\n-   Nakresli kruh\n-   Skoč dopredu o 50 pixelov\n-   Otoč sa vpravo o 90 stupňov",
+          "courseD_artist_nestedLoops5_a": "Urobíš to ľahko takto:\n\n-   Opakuj 4 krát\n    -   Nakresli kruh\n    -   Skoč dopredu o 50 pixelov\n    -   Otoč sa vpravo o 90 stupňov",
           "courseD_artist_nestedLoops5_b": "Na nakreslenie kruhu musíš nastaviť opakovanie na 360 krát. Vnútri každého opakovania sa posuň o 1 pixel a otoč o 1 stupeň."
         },
         "courseD_artist_nestedLoops5_2018": {
-          "courseD_artist_nestedLoops5_a": "Urobíš to ľahko takto:\n\n-   Opakuj 4 krát\n-   Nakresli kruh\n-   Skoč dopredu o 50 pixelov\n-   Otoč sa vpravo o 90 stupňov",
+          "courseD_artist_nestedLoops5_a": "Urobíš to ľahko takto:\n\n-   Opakuj 4 krát\n    -   Nakresli kruh\n    -   Skoč dopredu o 50 pixelov\n    -   Otoč sa vpravo o 90 stupňov",
           "courseD_artist_nestedLoops5_b": "Na nakreslenie kruhu musíš nastaviť opakovanie na 360 krát. Vnútri každého opakovania sa posuň o 1 pixel a otoč o 1 stupeň."
         },
         "courseD_artist_nestedLoops5_2019": {
-          "courseD_artist_nestedLoops5_a": "Urobíš to ľahko takto:\n\n-   Opakuj 4 krát\n-   Nakresli kruh\n-   Skoč dopredu o 50 pixelov\n-   Otoč sa vpravo o 90 stupňov",
+          "courseD_artist_nestedLoops5_a": "Urobíš to ľahko takto:\n\n-   Opakuj 4 krát\n    -   Nakresli kruh\n    -   Skoč dopredu o 50 pixelov\n    -   Otoč sa vpravo o 90 stupňov",
           "courseD_artist_nestedLoops5_b": "Na nakreslenie kruhu musíš nastaviť opakovanie na 360 krát. Vnútri každého opakovania sa posuň o 1 pixel a otoč o 1 stupeň."
         },
         "courseD_artist_nestedLoops5_2020": {
-          "courseD_artist_nestedLoops5_a": "Urobíš to ľahko takto:\n\n-   Opakuj 4 krát\n-   Nakresli kruh\n-   Skoč dopredu o 50 pixelov\n-   Otoč sa vpravo o 90 stupňov",
+          "courseD_artist_nestedLoops5_a": "Urobíš to ľahko takto:\n\n-   Opakuj 4 krát\n    -   Nakresli kruh\n    -   Skoč dopredu o 50 pixelov\n    -   Otoč sa vpravo o 90 stupňov",
           "courseD_artist_nestedLoops5_b": "Na nakreslenie kruhu musíš nastaviť opakovanie na 360 krát. Vnútri každého opakovania sa posuň o 1 pixel a otoč o 1 stupeň."
         },
         "courseD_artist_nestedLoops7": {
           "courseD_artist_nestedLoops7_a": "Tu musíš použiť vnorené cykly. Najskôr pomocou cyklu nakresli štvorec. Čo má robiť vonkajší cyklus, keď vnútorný kreslí štvorce?",
-          "courseD_artist_nestedLoops7_b": "Použi vnorené cykly, pričom kód na nakreslenie jedného štvorca je vo vnútornom cykle.\n\n-   Opakuj 6 krát\n-   Nakresli štvorec\n-   Skoč dopredu o **50 pixelov**\n-   Otoč sa o **60 stupňov**"
+          "courseD_artist_nestedLoops7_b": "Použi vnorené cykly, pričom kód na nakreslenie jedného štvorca je vo vnútornom cykle.\n\n-   Opakuj 6 krát\n    -   Nakresli štvorec\n    -   Skoč dopredu o **50 pixelov**\n    -   Otoč sa o **60 stupňov**"
         },
         "courseD_artist_nestedLoops7_2018": {
           "courseD_artist_nestedLoops7_a": "Tu musíš použiť vnorené cykly. Najskôr pomocou cyklu nakresli štvorec. Čo má robiť vonkajší cyklus, keď vnútorný kreslí štvorce?",
-          "courseD_artist_nestedLoops7_b": "Použi vnorené cykly, pričom kód na nakreslenie jedného štvorca je vo vnútornom cykle.\n\n-   Opakuj 6 krát\n-   Nakresli štvorec\n-   Skoč dopredu o **50 pixelov**\n-   Otoč sa o **60 stupňov**"
+          "courseD_artist_nestedLoops7_b": "Použi vnorené cykly, pričom kód na nakreslenie jedného štvorca je vo vnútornom cykle.\n\n-   Opakuj 6 krát\n    -   Nakresli štvorec\n    -   Skoč dopredu o **50 pixelov**\n    -   Otoč sa o **60 stupňov**"
         },
         "courseD_artist_nestedLoops7_2019": {
           "courseD_artist_nestedLoops7_a": "Tu musíš použiť vnorené cykly. Najskôr pomocou cyklu nakresli štvorec. Čo má robiť vonkajší cyklus, keď vnútorný kreslí štvorce?",
-          "courseD_artist_nestedLoops7_b": "Použi vnorené cykly, pričom kód na nakreslenie jedného štvorca je vo vnútornom cykle.\n\n-   Opakuj 6 krát\n-   Nakresli štvorec\n-   Skoč dopredu o **50 pixelov**\n-   Otoč sa o **60 stupňov**"
+          "courseD_artist_nestedLoops7_b": "Použi vnorené cykly, pričom kód na nakreslenie jedného štvorca je vo vnútornom cykle.\n\n-   Opakuj 6 krát\n    -   Nakresli štvorec\n    -   Skoč dopredu o **50 pixelov**\n    -   Otoč sa o **60 stupňov**"
         },
         "courseD_artist_nestedLoops7_2020": {
           "courseD_artist_nestedLoops7_a": "Tu musíš použiť vnorené cykly. Najskôr pomocou cyklu nakresli štvorec. Čo má robiť vonkajší cyklus, keď vnútorný kreslí štvorce?",
-          "courseD_artist_nestedLoops7_b": "Použi vnorené cykly, pričom kód na nakreslenie jedného štvorca je vo vnútornom cykle.\n\n-   Opakuj 6 krát\n-   Nakresli štvorec\n-   Skoč dopredu o **50 pixelov**\n-   Otoč sa o **60 stupňov**"
+          "courseD_artist_nestedLoops7_b": "Použi vnorené cykly, pričom kód na nakreslenie jedného štvorca je vo vnútornom cykle.\n\n-   Opakuj 6 krát\n    -   Nakresli štvorec\n    -   Skoč dopredu o **50 pixelov**\n    -   Otoč sa o **60 stupňov**"
         },
         "courseD_artist_nestedLoops8": {
           "courseD_artist_nestedLoops8_a": "Na vykreslenie 8-ich šesťuholníkov sa musíš otáčať o **45 stupňov** medzi každým z nich. Prečo? Pretože 360 stupňov (úplná otočka) deleno 8-imi (počet šesťuholníkov) je 45 stupňov.",
-          "courseD_artist_nestedLoops8_b": "Ak si nevieš dať rady, pozri si riešenie poslednej úlohy a zmeň časť kódu, ktoré sú odlišné.",
-          "courseD_artist_nestedLoops8_c": "Použi vnorený cyklus::\n\n-   Opakuj 8 krát\n-   Nakresli šesťuholník\n-   Skoč dopredu o 50 pixelov\n-   Otoč sa vpravo o 45 stupňov"
+          "courseD_artist_nestedLoops8_b": "Ak si nevieš dať rady, pozri si riešenie poslednej úlohy a zmeň časti kódu, ktoré sú odlišné.",
+          "courseD_artist_nestedLoops8_c": "Použi vnorený cyklus:\n\n-   Opakuj 8 krát\n    -   Nakresli šesťuholník\n    -   Skoč dopredu o 50 pixelov\n    -   Otoč sa vpravo o 45 stupňov"
         },
         "courseD_artist_nestedLoops8_2018": {
           "courseD_artist_nestedLoops8_a": "Na vykreslenie 8-ich šesťuholníkov sa musíš otáčať o **45 stupňov** medzi každým z nich. Prečo? Pretože 360 stupňov (úplná otočka) deleno 8-imi (počet šesťuholníkov) je 45 stupňov.",
-          "courseD_artist_nestedLoops8_b": "Ak si nevieš dať rady, pozri si riešenie poslednej úlohy a zmeň časť kódu, ktoré sú odlišné.",
-          "courseD_artist_nestedLoops8_c": "Použi vnorený cyklus::\n\n-   Opakuj 8 krát\n-   Nakresli šesťuholník\n-   Skoč dopredu o 50 pixelov\n-   Otoč sa vpravo o 45 stupňov"
+          "courseD_artist_nestedLoops8_b": "Ak si nevieš dať rady, pozri si riešenie poslednej úlohy a zmeň časti kódu, ktoré sú odlišné.",
+          "courseD_artist_nestedLoops8_c": "Použi vnorený cyklus:\n\n-   Opakuj 8 krát\n    -   Nakresli šesťuholník\n    -   Skoč dopredu o 50 pixelov\n    -   Otoč sa vpravo o 45 stupňov"
         },
         "courseD_artist_nestedLoops8_2019": {
           "courseD_artist_nestedLoops8_a": "Na vykreslenie 8-ich šesťuholníkov sa musíš otáčať o **45 stupňov** medzi každým z nich. Prečo? Pretože 360 stupňov (úplná otočka) deleno 8-imi (počet šesťuholníkov) je 45 stupňov.",
-          "courseD_artist_nestedLoops8_b": "Ak si nevieš dať rady, pozri si riešenie poslednej úlohy a zmeň časť kódu, ktoré sú odlišné.",
-          "courseD_artist_nestedLoops8_c": "Použi vnorený cyklus::\n\n-   Opakuj 8 krát\n-   Nakresli šesťuholník\n-   Skoč dopredu o 50 pixelov\n-   Otoč sa vpravo o 45 stupňov"
+          "courseD_artist_nestedLoops8_b": "Ak si nevieš dať rady, pozri si riešenie poslednej úlohy a zmeň časti kódu, ktoré sú odlišné.",
+          "courseD_artist_nestedLoops8_c": "Použi vnorený cyklus:\n\n-   Opakuj 8 krát\n    -   Nakresli šesťuholník\n    -   Skoč dopredu o 50 pixelov\n    -   Otoč sa vpravo o 45 stupňov"
         },
         "courseD_artist_nestedLoops8_2020": {
           "courseD_artist_nestedLoops8_a": "Na vykreslenie 8-ich šesťuholníkov sa musíš otáčať o **45 stupňov** medzi každým z nich. Prečo? Pretože 360 stupňov (úplná otočka) deleno 8-imi (počet šesťuholníkov) je 45 stupňov.",
-          "courseD_artist_nestedLoops8_b": "Ak si nevieš dať rady, pozri si riešenie poslednej úlohy a zmeň časť kódu, ktoré sú odlišné.",
-          "courseD_artist_nestedLoops8_c": "Použi vnorený cyklus::\n\n-   Opakuj 8 krát\n-   Nakresli šesťuholník\n-   Skoč dopredu o 50 pixelov\n-   Otoč sa vpravo o 45 stupňov"
+          "courseD_artist_nestedLoops8_b": "Ak si nevieš dať rady, pozri si riešenie poslednej úlohy a zmeň časti kódu, ktoré sú odlišné.",
+          "courseD_artist_nestedLoops8_c": "Použi vnorený cyklus:\n\n-   Opakuj 8 krát\n    -   Nakresli šesťuholník\n    -   Skoč dopredu o 50 pixelov\n    -   Otoč sa vpravo o 45 stupňov"
         },
         "courseD_artist_nestedLoops9": {
           "courseD_artist_nestedLoops9_a": "Začni s vnoreným cyklom ako v predošlej úlohe, ale tento krát s ním vykresli štvorce.",
           "courseD_artist_nestedLoops9_b": "Pripoj ďalší blok vnorených cyklov k prvému bloku vnorených cyklov, ale tentokrát vykresli trojuholníky.",
-          "courseD_artist_nestedLoops9_c": "Použi dva vnorené cykly:\n\n-   Opakuj 8 krát\n-   Nakresli štvorec\n-   Skoč dopredu o 50 pixelov\n-   Otoč sa vpravo o 45 stupňov\n-   Opakuj 8 krát\n-   Nakresli trojuholník\n-   Skoč dopredu o 50 pixelov\n-   Otoč sa vpravo o 45 stupňov"
+          "courseD_artist_nestedLoops9_c": "Použi dva vnorené cykly:\n\n-   Opakuj 8 krát\n    -   Nakresli štvorec\n    -   Skoč dopredu o 50 pixelov\n    -   Otoč sa vpravo o 45 stupňov\n-   Opakuj 8 krát\n    -   Nakresli trojuholník\n    -   Skoč dopredu o 50 pixelov\n    -   Otoč sa vpravo o 45 stupňov"
         },
         "courseD_artist_nestedLoops9_2018": {
           "courseD_artist_nestedLoops9_a": "Začni s vnoreným cyklom ako v predošlej úlohe, ale tento krát s ním vykresli štvorce.",
           "courseD_artist_nestedLoops9_b": "Pripoj ďalší blok vnorených cyklov k prvému bloku vnorených cyklov, ale tentokrát vykresli trojuholníky.",
-          "courseD_artist_nestedLoops9_c": "Použi dva vnorené cykly:\n\n-   Opakuj 8 krát\n-   Nakresli štvorec\n-   Skoč dopredu o 50 pixelov\n-   Otoč sa vpravo o 45 stupňov\n-   Opakuj 8 krát\n-   Nakresli trojuholník\n-   Skoč dopredu o 50 pixelov\n-   Otoč sa vpravo o 45 stupňov"
+          "courseD_artist_nestedLoops9_c": "Použi dva vnorené cykly:\n\n-   Opakuj 8 krát\n    -   Nakresli štvorec\n    -   Skoč dopredu o 50 pixelov\n    -   Otoč sa vpravo o 45 stupňov\n-   Opakuj 8 krát\n    -   Nakresli trojuholník\n    -   Skoč dopredu o 50 pixelov\n    -   Otoč sa vpravo o 45 stupňov"
         },
         "courseD_artist_nestedLoops9_2019": {
           "courseD_artist_nestedLoops9_a": "Začni s vnoreným cyklom ako v predošlej úlohe, ale tento krát s ním vykresli štvorce.",
           "courseD_artist_nestedLoops9_b": "Pripoj ďalší blok vnorených cyklov k prvému bloku vnorených cyklov, ale tentokrát vykresli trojuholníky.",
-          "courseD_artist_nestedLoops9_c": "Použi dva vnorené cykly:\n\n-   Opakuj 8 krát\n-   Nakresli štvorec\n-   Skoč dopredu o 50 pixelov\n-   Otoč sa vpravo o 45 stupňov\n-   Opakuj 8 krát\n-   Nakresli trojuholník\n-   Skoč dopredu o 50 pixelov\n-   Otoč sa vpravo o 45 stupňov"
+          "courseD_artist_nestedLoops9_c": "Použi dva vnorené cykly:\n\n-   Opakuj 8 krát\n    -   Nakresli štvorec\n    -   Skoč dopredu o 50 pixelov\n    -   Otoč sa vpravo o 45 stupňov\n-   Opakuj 8 krát\n    -   Nakresli trojuholník\n    -   Skoč dopredu o 50 pixelov\n    -   Otoč sa vpravo o 45 stupňov"
         },
         "courseD_artist_nestedLoops9_2020": {
           "courseD_artist_nestedLoops9_a": "Začni s vnoreným cyklom ako v predošlej úlohe, ale tento krát s ním vykresli štvorce.",
           "courseD_artist_nestedLoops9_b": "Pripoj ďalší blok vnorených cyklov k prvému bloku vnorených cyklov, ale tentokrát vykresli trojuholníky.",
-          "courseD_artist_nestedLoops9_c": "Použi dva vnorené cykly:\n\n-   Opakuj 8 krát\n-   Nakresli štvorec\n-   Skoč dopredu o 50 pixelov\n-   Otoč sa vpravo o 45 stupňov\n-   Opakuj 8 krát\n-   Nakresli trojuholník\n-   Skoč dopredu o 50 pixelov\n-   Otoč sa vpravo o 45 stupňov"
+          "courseD_artist_nestedLoops9_c": "Použi dva vnorené cykly:\n\n-   Opakuj 8 krát\n    -   Nakresli štvorec\n    -   Skoč dopredu o 50 pixelov\n    -   Otoč sa vpravo o 45 stupňov\n-   Opakuj 8 krát\n    -   Nakresli trojuholník\n    -   Skoč dopredu o 50 pixelov\n    -   Otoč sa vpravo o 45 stupňov"
         },
         "courseD_artist_nestedLoopsFP": {
-          "courseD_artist_nestedLoopsFP_a": "<img src=\"https://images.code.org/9257cbf61f238f5a749a949059731934-image-1478732674615.02.25.png\" width=\"200px\"/>\n\nTento obrázok bol nakreslený pomocou jediného vnoreného cyklu, ktorý kreslí šesťuholník (o strane 50px) 15 krát a so 48 stupňovými otočkami.",
-          "courseD_artist_nestedLoopsFP_b": "<img src=\"https://images.code.org/31a85d4e5be5209240195d34b17a177b-image-1478732674613.32.53.png\" width=\"200px\"/>\n\nTento obrázok bol nakreslený pomocou podobného kódu, aký už poznáš z predošlých úloh, no tentoraz kresli kruhy (360 krát opakuj: posuň sa dopredu o 1, otoč sa o 1 stupeň).",
-          "courseD_artist_nestedLoopsFP_c": "<img src=\"https://images.code.org/f654f1512860c6c8cf6795c961a8959c-image-1478732674616.02.58.png\" width=\"200px\"/>\n\nTento obrázok bol nakreslený pomocou jediného vnoreného cyklu, ktorý kreslí päťuholník (o strane 50px) 15 krát a so 48 stupňovými otočkami."
+          "courseD_artist_nestedLoopsFP_a": "<img src=\"https://images.code.org/9257cbf61f238f5a749a949059731934-image-1478732674615.02.25.png\" width=\"200px\"/>\n\nTento obrázok bol nakreslený pomocou jediného vnoreného cyklu, ktorý 15 krát nakreslí šesťuholník (so stranou dlhou 50 pixelov) s otočením o 48 stupňov.",
+          "courseD_artist_nestedLoopsFP_b": "<img src=\"https://images.code.org/31a85d4e5be5209240195d34b17a177b-image-1478732674613.32.53.png\" width=\"200px\"/>\n\nTento obrázok bol nakreslený pomocou podobného kódu, aký už poznáš z predošlých úloh, no tentoraz kreslí kruhy (360 krát opakuje: posuň sa dopredu o 1, otoč sa o 1 stupeň).",
+          "courseD_artist_nestedLoopsFP_c": "<img src=\"https://images.code.org/f654f1512860c6c8cf6795c961a8959c-image-1478732674616.02.58.png\" width=\"200px\"/>\n\nTento obrázok bol nakreslený pomocou jediného vnoreného cyklu, ktorý 15 krát nakreslí päťuholník (so stranou dlhou 50 pixelov) a s otočením o 48 stupňov."
         },
         "courseD_artist_nestedLoopsFP_2018": {
-          "courseD_artist_nestedLoopsFP_a": "<img src=\"https://images.code.org/9257cbf61f238f5a749a949059731934-image-1478732674615.02.25.png\" width=\"200px\"/>\n\nTento obrázok bol nakreslený pomocou jediného vnoreného cyklu, ktorý kreslí šesťuholník (o strane 50px) 15 krát a so 48 stupňovými otočkami.",
-          "courseD_artist_nestedLoopsFP_b": "<img src=\"https://images.code.org/31a85d4e5be5209240195d34b17a177b-image-1478732674613.32.53.png\" width=\"200px\"/>\n\nTento obrázok bol nakreslený pomocou podobného kódu, aký už poznáš z predošlých úloh, no tentoraz kresli kruhy (360 krát opakuj: posuň sa dopredu o 1, otoč sa o 1 stupeň).",
-          "courseD_artist_nestedLoopsFP_c": "<img src=\"https://images.code.org/f654f1512860c6c8cf6795c961a8959c-image-1478732674616.02.58.png\" width=\"200px\"/>\n\nTento obrázok bol nakreslený pomocou jediného vnoreného cyklu, ktorý kreslí päťuholník (o strane 50px) 15 krát a so 48 stupňovými otočkami."
+          "courseD_artist_nestedLoopsFP_a": "<img src=\"https://images.code.org/9257cbf61f238f5a749a949059731934-image-1478732674615.02.25.png\" width=\"200px\"/>\n\nTento obrázok bol nakreslený pomocou jediného vnoreného cyklu, ktorý 15 krát nakreslí šesťuholník (so stranou dlhou 50 pixelov) s otočením o 48 stupňov.",
+          "courseD_artist_nestedLoopsFP_b": "<img src=\"https://images.code.org/31a85d4e5be5209240195d34b17a177b-image-1478732674613.32.53.png\" width=\"200px\"/>\n\nTento obrázok bol nakreslený pomocou podobného kódu, aký už poznáš z predošlých úloh, no tentoraz kreslí kruhy (360 krát opakuje: posuň sa dopredu o 1, otoč sa o 1 stupeň).",
+          "courseD_artist_nestedLoopsFP_c": "<img src=\"https://images.code.org/f654f1512860c6c8cf6795c961a8959c-image-1478732674616.02.58.png\" width=\"200px\"/>\n\nTento obrázok bol nakreslený pomocou jediného vnoreného cyklu, ktorý 15 krát nakreslí päťuholník (so stranou dlhou 50 pixelov) a s otočením o 48 stupňov."
         },
         "courseD_artist_nestedLoopsFP_2019": {
-          "courseD_artist_nestedLoopsFP_a": "<img src=\"https://images.code.org/9257cbf61f238f5a749a949059731934-image-1478732674615.02.25.png\" width=\"200px\"/>\n\nTento obrázok bol nakreslený pomocou jediného vnoreného cyklu, ktorý kreslí šesťuholník (o strane 50px) 15 krát a so 48 stupňovými otočkami.",
-          "courseD_artist_nestedLoopsFP_b": "<img src=\"https://images.code.org/31a85d4e5be5209240195d34b17a177b-image-1478732674613.32.53.png\" width=\"200px\"/>\n\nTento obrázok bol nakreslený pomocou podobného kódu, aký už poznáš z predošlých úloh, no tentoraz kresli kruhy (360 krát opakuj: posuň sa dopredu o 1, otoč sa o 1 stupeň).",
-          "courseD_artist_nestedLoopsFP_c": "<img src=\"https://images.code.org/f654f1512860c6c8cf6795c961a8959c-image-1478732674616.02.58.png\" width=\"200px\"/>\n\nTento obrázok bol nakreslený pomocou jediného vnoreného cyklu, ktorý kreslí päťuholník (o strane 50px) 15 krát a so 48 stupňovými otočkami."
+          "courseD_artist_nestedLoopsFP_a": "<img src=\"https://images.code.org/9257cbf61f238f5a749a949059731934-image-1478732674615.02.25.png\" width=\"200px\"/>\n\nTento obrázok bol nakreslený pomocou jediného vnoreného cyklu, ktorý 15 krát nakreslí šesťuholník (so stranou dlhou 50 pixelov) s otočením o 48 stupňov.",
+          "courseD_artist_nestedLoopsFP_b": "<img src=\"https://images.code.org/31a85d4e5be5209240195d34b17a177b-image-1478732674613.32.53.png\" width=\"200px\"/>\n\nTento obrázok bol nakreslený pomocou podobného kódu, aký už poznáš z predošlých úloh, no tentoraz kreslí kruhy (360 krát opakuje: posuň sa dopredu o 1, otoč sa o 1 stupeň).",
+          "courseD_artist_nestedLoopsFP_c": "<img src=\"https://images.code.org/f654f1512860c6c8cf6795c961a8959c-image-1478732674616.02.58.png\" width=\"200px\"/>\n\nTento obrázok bol nakreslený pomocou jediného vnoreného cyklu, ktorý 15 krát nakreslí päťuholník (so stranou dlhou 50 pixelov) a s otočením o 48 stupňov."
         },
         "courseD_artist_nestedLoopsFP_2020": {
-          "courseD_artist_nestedLoopsFP_a": "<img src=\"https://images.code.org/9257cbf61f238f5a749a949059731934-image-1478732674615.02.25.png\" width=\"200px\"/>\n\nTento obrázok bol nakreslený pomocou jediného vnoreného cyklu, ktorý kreslí šesťuholník (o strane 50px) 15 krát a so 48 stupňovými otočkami.",
-          "courseD_artist_nestedLoopsFP_b": "<img src=\"https://images.code.org/31a85d4e5be5209240195d34b17a177b-image-1478732674613.32.53.png\" width=\"200px\"/>\n\nTento obrázok bol nakreslený pomocou podobného kódu, aký už poznáš z predošlých úloh, no tentoraz kresli kruhy (360 krát opakuj: posuň sa dopredu o 1, otoč sa o 1 stupeň).",
-          "courseD_artist_nestedLoopsFP_c": "<img src=\"https://images.code.org/f654f1512860c6c8cf6795c961a8959c-image-1478732674616.02.58.png\" width=\"200px\"/>\n\nTento obrázok bol nakreslený pomocou jediného vnoreného cyklu, ktorý kreslí päťuholník (o strane 50px) 15 krát a so 48 stupňovými otočkami."
+          "courseD_artist_nestedLoopsFP_a": "<img src=\"https://images.code.org/9257cbf61f238f5a749a949059731934-image-1478732674615.02.25.png\" width=\"200px\"/>\n\nTento obrázok bol nakreslený pomocou jediného vnoreného cyklu, ktorý 15 krát nakreslí šesťuholník (so stranou dlhou 50 pixelov) s otočením o 48 stupňov.",
+          "courseD_artist_nestedLoopsFP_b": "<img src=\"https://images.code.org/31a85d4e5be5209240195d34b17a177b-image-1478732674613.32.53.png\" width=\"200px\"/>\n\nTento obrázok bol nakreslený pomocou podobného kódu, aký už poznáš z predošlých úloh, no tentoraz kreslí kruhy (360 krát opakuje: posuň sa dopredu o 1, otoč sa o 1 stupeň).",
+          "courseD_artist_nestedLoopsFP_c": "<img src=\"https://images.code.org/f654f1512860c6c8cf6795c961a8959c-image-1478732674616.02.58.png\" width=\"200px\"/>\n\nTento obrázok bol nakreslený pomocou jediného vnoreného cyklu, ktorý 15 krát nakreslí päťuholník (so stranou dlhou 50 pixelov) a s otočením o 48 stupňov."
         },
         "courseD_artist_nestedLoops_challenge1": {
           "courseD_artist_nestedLoops_challenge1_a": "Začni tým, že zmeníš farbu na modrú a potom vytvor osemuholník so stranami dlhými 50 pixelov a otočkami vľavo o 45 stupňov.",
@@ -4629,19 +4629,19 @@
           "courseD_artist_project1_b": "Pamätaj, že `posuň sa dopredu` nakreslí čiaru, ale `skoč dopredu` nie."
         },
         "courseD_artist_project1a": {
-          "courseD_artist_project1a_a": "Na tento krok po schodoch sa použije otočka pod 76 stupňami a zopakuje sa to 4-krát.\n\n<img src=\"https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png\" width=\"200px\" />",
+          "courseD_artist_project1a_a": "Na tento krok po schodoch sa použije otočenie o 76 stupňov a zopakuje sa 4 krát.\n\n<img src=\"https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png\" width=\"200px\" />",
           "courseD_artist_project1a_b": "Tieto vzory sú podobné krokom po schodoch z iných úloh, ale používa sa iný uhol."
         },
         "courseD_artist_project1a_2018": {
-          "courseD_artist_project1a_a": "Na tento krok po schodoch sa použije otočka pod 76 stupňami a zopakuje sa to 4-krát.\n\n<img src=\"https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png\" width=\"200px\" />",
+          "courseD_artist_project1a_a": "Na tento krok po schodoch sa použije otočenie o 76 stupňov a zopakuje sa 4 krát.\n\n<img src=\"https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png\" width=\"200px\" />",
           "courseD_artist_project1a_b": "Tieto vzory sú podobné krokom po schodoch z iných úloh, ale používa sa iný uhol."
         },
         "courseD_artist_project1a_2019": {
-          "courseD_artist_project1a_a": "Na tento krok po schodoch sa použije otočka pod 76 stupňami a zopakuje sa to 4-krát.\n\n<img src=\"https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png\" width=\"200px\" />",
+          "courseD_artist_project1a_a": "Na tento krok po schodoch sa použije otočenie o 76 stupňov a zopakuje sa 4 krát.\n\n<img src=\"https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png\" width=\"200px\" />",
           "courseD_artist_project1a_b": "Tieto vzory sú podobné krokom po schodoch z iných úloh, ale používa sa iný uhol."
         },
         "courseD_artist_project1a_2020": {
-          "courseD_artist_project1a_a": "Na tento krok po schodoch sa použije otočka pod 76 stupňami a zopakuje sa to 4-krát.\n\n<img src=\"https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png\" width=\"200px\" />",
+          "courseD_artist_project1a_a": "Na tento krok po schodoch sa použije otočenie o 76 stupňov a zopakuje sa 4 krát.\n\n<img src=\"https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png\" width=\"200px\" />",
           "courseD_artist_project1a_b": "Tieto vzory sú podobné krokom po schodoch z iných úloh, ale používa sa iný uhol."
         },
         "courseD_artist_project2": {
@@ -4674,19 +4674,19 @@
         },
         "courseD_artist_project3": {
           "courseD_artist_project3_a": "Použi rozbaľovacie menu na blokoch  `otoč sa` a vyber si uhol, ktorý potrebuješ!",
-          "courseD_artist_project3_b": "Skús vnorené cykly!\n\nPouži kód, ktorý si vytvoril na kresbu čiar tvarov a vlož ju do vnútra iného cyklu. Skôr ako sa vonkajší cyklus skončí, pridaj na spodok blok, ktorý bude otáčať Elzu.\n\n-   Skús 72 stupňov, ak opakuješ vonkajší cyklus 5-krát\n-   Skús 60 stupňov, ak opakuješ vonkajší cyklus 6-krát"
+          "courseD_artist_project3_b": "Skús vnorené cykly!\n\nPouži kód vytvorený na kresbu čiar tvarov a vlož ho do vnútra iného cyklu. Skôr ako sa vonkajší cyklus skončí, pridaj na spodok blok, ktorý bude otáčať Elzu.\n\n-   Skús 72 stupňov, ak opakuješ vonkajší cyklus 5-krát\n-   Skús 60 stupňov, ak opakuješ vonkajší cyklus 6-krát"
         },
         "courseD_artist_project3_2018": {
           "courseD_artist_project3_a": "Použi rozbaľovacie menu na blokoch  `otoč sa` a vyber si uhol, ktorý potrebuješ!",
-          "courseD_artist_project3_b": "Skús vnorené cykly!\n\nPouži kód, ktorý si vytvoril na kresbu čiar tvarov a vlož ju do vnútra iného cyklu. Skôr ako sa vonkajší cyklus skončí, pridaj na spodok blok, ktorý bude otáčať Elzu.\n\n-   Skús 72 stupňov, ak opakuješ vonkajší cyklus 5-krát\n-   Skús 60 stupňov, ak opakuješ vonkajší cyklus 6-krát"
+          "courseD_artist_project3_b": "Skús vnorené cykly!\n\nPouži kód vytvorený na kresbu čiar tvarov a vlož ho do vnútra iného cyklu. Skôr ako sa vonkajší cyklus skončí, pridaj na spodok blok, ktorý bude otáčať Elzu.\n\n-   Skús 72 stupňov, ak opakuješ vonkajší cyklus 5-krát\n-   Skús 60 stupňov, ak opakuješ vonkajší cyklus 6-krát"
         },
         "courseD_artist_project3_2019": {
           "courseD_artist_project3_a": "Použi rozbaľovacie menu na blokoch  `otoč sa` a vyber si uhol, ktorý potrebuješ!",
-          "courseD_artist_project3_b": "Skús vnorené cykly!\n\nPouži kód, ktorý si vytvoril na kresbu čiar tvarov a vlož ju do vnútra iného cyklu. Skôr ako sa vonkajší cyklus skončí, pridaj na spodok blok, ktorý bude otáčať Elzu.\n\n-   Skús 72 stupňov, ak opakuješ vonkajší cyklus 5-krát\n-   Skús 60 stupňov, ak opakuješ vonkajší cyklus 6-krát"
+          "courseD_artist_project3_b": "Skús vnorené cykly!\n\nPouži kód vytvorený na kresbu čiar tvarov a vlož ho do vnútra iného cyklu. Skôr ako sa vonkajší cyklus skončí, pridaj na spodok blok, ktorý bude otáčať Elzu.\n\n-   Skús 72 stupňov, ak opakuješ vonkajší cyklus 5-krát\n-   Skús 60 stupňov, ak opakuješ vonkajší cyklus 6-krát"
         },
         "courseD_artist_project3_2020": {
           "courseD_artist_project3_a": "Použi rozbaľovacie menu na blokoch  `otoč sa` a vyber si uhol, ktorý potrebuješ!",
-          "courseD_artist_project3_b": "Skús vnorené cykly!\n\nPouži kód, ktorý si vytvoril na kresbu čiar tvarov a vlož ju do vnútra iného cyklu. Skôr ako sa vonkajší cyklus skončí, pridaj na spodok blok, ktorý bude otáčať Elzu.\n\n-   Skús 72 stupňov, ak opakuješ vonkajší cyklus 5-krát\n-   Skús 60 stupňov, ak opakuješ vonkajší cyklus 6-krát"
+          "courseD_artist_project3_b": "Skús vnorené cykly!\n\nPouži kód vytvorený na kresbu čiar tvarov a vlož ho do vnútra iného cyklu. Skôr ako sa vonkajší cyklus skončí, pridaj na spodok blok, ktorý bude otáčať Elzu.\n\n-   Skús 72 stupňov, ak opakuješ vonkajší cyklus 5-krát\n-   Skús 60 stupňov, ak opakuješ vonkajší cyklus 6-krát"
         },
         "courseD_artist_project3a": {
           "courseD_artist_project3a_a": "Môžeš si vybrať koľkorát sa otočí tvoj tvar! Čo tak 18-krát  vždy s otočením o 20 stupňov?"
@@ -6070,60 +6070,60 @@
         },
         "courseE_artist_functions10": {
           "courseD_artist_functions10_b": "Táto kresba je veľmi podobná ako predchádzajúca, ale funkcia `nakresli čiaru` teraz kreslí iný tvar.",
-          "courseD_artist_functions10_a": "Aby si nemusel viackrát použiť  bloky `posuň sa dopredu`, vytvor funkciu `nakresli šesťuholník` a zavolaj ju viac krát.",
+          "courseD_artist_functions10_a": "Nemusíš použiť  bloky `posuň sa dopredu`, stačí ak vytvoríš funkciu `nakresli šesťuholník` a viackrát ju zavoláš.",
           "courseD_artist_functions10_c": "Vidíš, kde by táto kresba mohla použiť funkciu nazvanú `rad šesťuholníkov`?"
         },
         "courseE_artist_functions10_2018": {
           "courseD_artist_functions10_b": "Táto kresba je veľmi podobná ako predchádzajúca, ale funkcia `nakresli čiaru` teraz kreslí iný tvar.",
-          "courseD_artist_functions10_a": "Aby si nemusel viackrát použiť  bloky `posuň sa dopredu`, vytvor funkciu `nakresli šesťuholník` a zavolaj ju viac krát.",
+          "courseD_artist_functions10_a": "Nemusíš použiť  bloky `posuň sa dopredu`, stačí ak vytvoríš funkciu `nakresli šesťuholník` a viackrát ju zavoláš.",
           "courseD_artist_functions10_c": "Vidíš, kde by táto kresba mohla použiť funkciu nazvanú `rad šesťuholníkov`?"
         },
         "courseE_artist_functions10_2019": {
           "courseD_artist_functions10_b": "Táto kresba je veľmi podobná ako predchádzajúca, ale funkcia `nakresli čiaru` teraz kreslí iný tvar.",
-          "courseD_artist_functions10_a": "Aby si nemusel viackrát použiť  bloky `posuň sa dopredu`, vytvor funkciu `nakresli šesťuholník` a zavolaj ju viac krát.",
+          "courseD_artist_functions10_a": "Nemusíš použiť  bloky `posuň sa dopredu`, stačí ak vytvoríš funkciu `nakresli šesťuholník` a viackrát ju zavoláš.",
           "courseD_artist_functions10_c": "Vidíš, kde by táto kresba mohla použiť funkciu nazvanú `rad šesťuholníkov`?"
         },
         "courseE_artist_functions10_2020": {
           "courseD_artist_functions10_b": "Táto kresba je veľmi podobná ako predchádzajúca, ale funkcia `nakresli čiaru` teraz kreslí iný tvar.",
-          "courseD_artist_functions10_a": "Aby si nemusel viackrát použiť  bloky `posuň sa dopredu`, vytvor funkciu `nakresli šesťuholník` a zavolaj ju viac krát.",
+          "courseD_artist_functions10_a": "Nemusíš použiť  bloky `posuň sa dopredu`, stačí ak vytvoríš funkciu `nakresli šesťuholník` a viackrát ju zavoláš.",
           "courseD_artist_functions10_c": "Vidíš, kde by táto kresba mohla použiť funkciu nazvanú `rad šesťuholníkov`?"
         },
         "courseE_artist_functions2_2018": {
           "courseD_artist_functions2_b": "Funkcia by nemala obsahovať celý prgram, iba tú časť, ktorá nakreslí štvorec so stranou dlhou 100 pixelov.",
-          "courseD_artist_functions2_c": "Uisti sa, že použiješ zelený blok  `nakresli štvorec` aby si \"zavolal/a\" tvoju funckiu. Inak kód v tvojej funkcii nepôjde.\n\n <xml><block type=\"procedures_callnoreturn\" limit=\"2\"><mutation name=\"draw a square\"/></block></xml>",
+          "courseD_artist_functions2_c": "Uisti sa, že použiješ zelený blok `nakresli štvorec` a \"zavoláš\" tak svoju funkciu. Inak kód v tvojej funkcii nepôjde.\n\n <xml><block type=\"procedures_callnoreturn\" limit=\"2\"><mutation name=\"draw a square\"/></block></xml>",
           "courseD_artist_functions2_a": "Tvoj program by mal:\n\n-   Použiť tvoju funkciu\n-   Posunúť sa dopredu 100 + 75 pixelov\n-   Znova použiť tvoju funkciu"
         },
         "courseE_artist_functions2_2019": {
           "courseD_artist_functions2_b": "Funkcia by nemala obsahovať celý prgram, iba tú časť, ktorá nakreslí štvorec so stranou dlhou 100 pixelov.",
-          "courseD_artist_functions2_c": "Uisti sa, že použiješ zelený blok  `nakresli štvorec` aby si \"zavolal/a\" tvoju funckiu. Inak kód v tvojej funkcii nepôjde.\n\n <xml><block type=\"procedures_callnoreturn\" limit=\"2\"><mutation name=\"draw a square\"/></block></xml>",
+          "courseD_artist_functions2_c": "Uisti sa, že použiješ zelený blok `nakresli štvorec` a \"zavoláš\" tak svoju funkciu. Inak kód v tvojej funkcii nepôjde.\n\n <xml><block type=\"procedures_callnoreturn\" limit=\"2\"><mutation name=\"draw a square\"/></block></xml>",
           "courseD_artist_functions2_a": "Tvoj program by mal:\n\n-   Použiť tvoju funkciu\n-   Posunúť sa dopredu 100 + 75 pixelov\n-   Znova použiť tvoju funkciu"
         },
         "courseE_artist_functions2_2020": {
           "courseD_artist_functions2_b": "Funkcia by nemala obsahovať celý prgram, iba tú časť, ktorá nakreslí štvorec so stranou dlhou 100 pixelov.",
-          "courseD_artist_functions2_c": "Uisti sa, že použiješ zelený blok  `nakresli štvorec` aby si \"zavolal/a\" tvoju funckiu. Inak kód v tvojej funkcii nepôjde.\n\n <xml><block type=\"procedures_callnoreturn\" limit=\"2\"><mutation name=\"draw a square\"/></block></xml>",
+          "courseD_artist_functions2_c": "Uisti sa, že použiješ zelený blok `nakresli štvorec` a \"zavoláš\" tak svoju funkciu. Inak kód v tvojej funkcii nepôjde.\n\n <xml><block type=\"procedures_callnoreturn\" limit=\"2\"><mutation name=\"draw a square\"/></block></xml>",
           "courseD_artist_functions2_a": "Tvoj program by mal:\n\n-   Použiť tvoju funkciu\n-   Posunúť sa dopredu 100 + 75 pixelov\n-   Znova použiť tvoju funkciu"
         },
         "courseE_artist_functions5": {
-          "courseD_artist_functions5_a": "Nevzdávaj sa! Pamätaj, na to, čo si sa učil.",
+          "courseD_artist_functions5_a": "Nevzdávaj sa! Pamätaj na to, čo už vieš.",
           "courseD_artist_functions5_b": "Funkcie umožnujú zavolať uložený kód kedykoľvek, nie len z vnútra cyklu. "
         },
         "courseE_artist_functions5_2018": {
-          "courseD_artist_functions5_a": "Nevzdávaj sa! Pamätaj, na to, čo si sa učil.",
+          "courseD_artist_functions5_a": "Nevzdávaj sa! Pamätaj na to, čo už vieš.",
           "courseD_artist_functions5_b": "Funkcie umožnujú zavolať uložený kód kedykoľvek, nie len z vnútra cyklu. ",
           "courseD_artist_functions5_c": "Začni vytvorením funkcie `nakresli hviezdu`, potom túto funkciu použi na nakreslenie 3 hviezd!"
         },
         "courseE_artist_functions5_2019": {
-          "courseD_artist_functions5_a": "Nevzdávaj sa! Pamätaj, na to, čo si sa učil.",
+          "courseD_artist_functions5_a": "Nevzdávaj sa! Pamätaj na to, čo už vieš.",
           "courseD_artist_functions5_b": "Funkcie umožnujú zavolať uložený kód kedykoľvek, nie len z vnútra cyklu. ",
           "courseD_artist_functions5_c": "Začni vytvorením funkcie `nakresli hviezdu`, potom túto funkciu použi na nakreslenie 3 hviezd!"
         },
         "courseE_artist_functions5_2020": {
-          "courseD_artist_functions5_a": "Nevzdávaj sa! Pamätaj, na to, čo si sa učil.",
+          "courseD_artist_functions5_a": "Nevzdávaj sa! Pamätaj na to, čo už vieš.",
           "courseD_artist_functions5_b": "Funkcie umožnujú zavolať uložený kód kedykoľvek, nie len z vnútra cyklu. ",
           "courseD_artist_functions5_c": "Začni vytvorením funkcie `nakresli hviezdu`, potom túto funkciu použi na nakreslenie 3 hviezd!"
         },
         "courseE_artist_functions5_copy": {
-          "courseD_artist_functions5_a": "Nevzdávaj sa! Pamätaj, na to, čo si sa učil.",
+          "courseD_artist_functions5_a": "Nevzdávaj sa! Pamätaj na to, čo už vieš.",
           "courseD_artist_functions5_b": "Funkcie umožnujú zavolať uložený kód kedykoľvek, nie len z vnútra cyklu. "
         },
         "courseE_artist_functions6": {
@@ -6134,72 +6134,72 @@
         },
         "courseE_artist_functions7_2018": {
           "courseD_artist_functions7_a": "Najskôr skús vytvoriť funkciu a potom naraz pridaj okná.",
-          "courseD_artist_functions7_b": "Aby si sa dostal/a od vrchných okien ku spodným, otoč umelca doprava, skoč o 150 pixelov a potom ho znovu otoč doprava! Teraz umelec bude otočený správnym smerom, aby mohol dokončiť zvyšo domu!"
+          "courseD_artist_functions7_b": "Ak sa chceš dostať od vrchných okien ku spodným, otoč umelca doprava, skoč o 150 pixelov a potom ho znovu otoč doprava! Teraz bude umelec otočený správnym smerom a ty môžeš dokončiť zvyšok domu!"
         },
         "courseE_artist_functions7_2019": {
           "courseD_artist_functions7_a": "Najskôr skús vytvoriť funkciu a potom naraz pridaj okná.",
-          "courseD_artist_functions7_b": "Aby si sa dostal/a od vrchných okien ku spodným, otoč umelca doprava, skoč o 150 pixelov a potom ho znovu otoč doprava! Teraz umelec bude otočený správnym smerom, aby mohol dokončiť zvyšo domu!"
+          "courseD_artist_functions7_b": "Ak sa chceš dostať od vrchných okien ku spodným, otoč umelca doprava, skoč o 150 pixelov a potom ho znovu otoč doprava! Teraz bude umelec otočený správnym smerom a ty môžeš dokončiť zvyšok domu!"
         },
         "courseE_artist_functions7_2020": {
           "courseD_artist_functions7_a": "Najskôr skús vytvoriť funkciu a potom naraz pridaj okná.",
-          "courseD_artist_functions7_b": "Aby si sa dostal/a od vrchných okien ku spodným, otoč umelca doprava, skoč o 150 pixelov a potom ho znovu otoč doprava! Teraz umelec bude otočený správnym smerom, aby mohol dokončiť zvyšo domu!"
+          "courseD_artist_functions7_b": "Ak sa chceš dostať od vrchných okien ku spodným, otoč umelca doprava, skoč o 150 pixelov a potom ho znovu otoč doprava! Teraz bude umelec otočený správnym smerom a ty môžeš dokončiť zvyšok domu!"
         },
         "courseE_artist_functions8": {
           "courseD_artist_functions8_f": "Budeš potrebovať len jeden blok `posuň sa dopredu`, ale budeš potrebovať niekoľko blokov `skoč dopredu` a/alebo `skoč dozadu`.",
           "courseD_artist_functions8_a": "Začni s tým, že vytvoríš funkciu pre štvorec, potom skús vytvoriť funkciu pre radu štvorcov.",
-          "courseD_artist_functions8_d": "Na vytvorenie rady štvorcov,\n\n-   zopakuj 3-krát\n    -   nakresli štvroec\n    -   posuň sa dopredu o **100 pixelov**",
+          "courseD_artist_functions8_d": "Na vytvorenie rady štvorcov,\n\n-   zopakuj 3-krát\n    -   nakresli štvorec\n    -   posuň sa dopredu o **100 pixelov**",
           "courseD_artist_functions8_b": "Uvažuj o každom riadku v tomto obrázku ako o čiare z 3 štvorcov. Koľko je tam čiar zo štvorcov a kde začneš každú z nich kresliť?"
         },
         "courseE_artist_functions8_2018": {
           "courseD_artist_functions8_f": "Budeš potrebovať len jeden blok `posuň sa dopredu`, ale budeš potrebovať niekoľko blokov `skoč dopredu` a/alebo `skoč dozadu`.",
           "courseD_artist_functions8_a": "Začni s tým, že vytvoríš funkciu pre štvorec, potom skús vytvoriť funkciu pre radu štvorcov.",
-          "courseD_artist_functions8_d": "Na vytvorenie rady štvorcov,\n\n-   zopakuj 3-krát\n    -   nakresli štvroec\n    -   posuň sa dopredu o **100 pixelov**",
+          "courseD_artist_functions8_d": "Na vytvorenie rady štvorcov,\n\n-   zopakuj 3-krát\n    -   nakresli štvorec\n    -   posuň sa dopredu o **100 pixelov**",
           "courseD_artist_functions8_b": "Uvažuj o každom riadku v tomto obrázku ako o čiare z 3 štvorcov. Koľko je tam čiar zo štvorcov a kde začneš každú z nich kresliť?",
           "courseD_artist_functions8_c": "Na konci každého striedavého radu štvorcov, pred začatím nového radu, umelec potrebuje skočiť dole a späť. "
         },
         "courseE_artist_functions8_2019": {
           "courseD_artist_functions8_f": "Budeš potrebovať len jeden blok `posuň sa dopredu`, ale budeš potrebovať niekoľko blokov `skoč dopredu` a/alebo `skoč dozadu`.",
           "courseD_artist_functions8_a": "Začni s tým, že vytvoríš funkciu pre štvorec, potom skús vytvoriť funkciu pre radu štvorcov.",
-          "courseD_artist_functions8_d": "Na vytvorenie rady štvorcov,\n\n-   zopakuj 3-krát\n    -   nakresli štvroec\n    -   posuň sa dopredu o **100 pixelov**",
+          "courseD_artist_functions8_d": "Na vytvorenie rady štvorcov,\n\n-   zopakuj 3-krát\n    -   nakresli štvorec\n    -   posuň sa dopredu o **100 pixelov**",
           "courseD_artist_functions8_b": "Uvažuj o každom riadku v tomto obrázku ako o čiare z 3 štvorcov. Koľko je tam čiar zo štvorcov a kde začneš každú z nich kresliť?",
           "courseD_artist_functions8_c": "Na konci každého striedavého radu štvorcov, pred začatím nového radu, umelec potrebuje skočiť dole a späť. "
         },
         "courseE_artist_functions8_2020": {
           "courseD_artist_functions8_f": "Budeš potrebovať len jeden blok `posuň sa dopredu`, ale budeš potrebovať niekoľko blokov `skoč dopredu` a/alebo `skoč dozadu`.",
           "courseD_artist_functions8_a": "Začni s tým, že vytvoríš funkciu pre štvorec, potom skús vytvoriť funkciu pre radu štvorcov.",
-          "courseD_artist_functions8_d": "Na vytvorenie rady štvorcov,\n\n-   zopakuj 3-krát\n    -   nakresli štvroec\n    -   posuň sa dopredu o **100 pixelov**",
+          "courseD_artist_functions8_d": "Na vytvorenie rady štvorcov,\n\n-   zopakuj 3-krát\n    -   nakresli štvorec\n    -   posuň sa dopredu o **100 pixelov**",
           "courseD_artist_functions8_b": "Uvažuj o každom riadku v tomto obrázku ako o čiare z 3 štvorcov. Koľko je tam čiar zo štvorcov a kde začneš každú z nich kresliť?",
           "courseD_artist_functions8_c": "Na konci každého striedavého radu štvorcov, pred začatím nového radu, umelec potrebuje skočiť dole a späť. "
         },
         "courseE_artist_functions8b_2018": {
           "courseD_artist_functions8_f": "Ak to máš správne, budeš potrebovať už len jeden blok `posuň sa dopredu`!",
           "courseD_artist_functions8_a": "Začni s tým, že vytvoríš funkciu pre štvorec, potom skús vytvoriť funkciu pre radu štvorcov.",
-          "courseD_artist_functions8_d": "Na vytvorenie rady štvorcov,\n\n-   zopakuj 3-krát\n    -   nakresli štvroec\n    -   posuň sa dopredu o **100 pixelov**"
+          "courseD_artist_functions8_d": "Na vytvorenie rady štvorcov,\n\n-   zopakuj 3-krát\n    -   nakresli štvorec\n    -   posuň sa dopredu o **100 pixelov**"
         },
         "courseE_artist_functions8b_2019": {
           "courseD_artist_functions8_f": "Ak to máš správne, budeš potrebovať už len jeden blok `posuň sa dopredu`!",
           "courseD_artist_functions8_a": "Začni s tým, že vytvoríš funkciu pre štvorec, potom skús vytvoriť funkciu pre radu štvorcov.",
-          "courseD_artist_functions8_d": "Na vytvorenie rady štvorcov,\n\n-   zopakuj 3-krát\n    -   nakresli štvroec\n    -   posuň sa dopredu o **100 pixelov**"
+          "courseD_artist_functions8_d": "Na vytvorenie rady štvorcov,\n\n-   zopakuj 3-krát\n    -   nakresli štvorec\n    -   posuň sa dopredu o **100 pixelov**"
         },
         "courseE_artist_functions8b_2020": {
           "courseD_artist_functions8_f": "Ak to máš správne, budeš potrebovať už len jeden blok `posuň sa dopredu`!",
           "courseD_artist_functions8_a": "Začni s tým, že vytvoríš funkciu pre štvorec, potom skús vytvoriť funkciu pre radu štvorcov.",
-          "courseD_artist_functions8_d": "Na vytvorenie rady štvorcov,\n\n-   zopakuj 3-krát\n    -   nakresli štvroec\n    -   posuň sa dopredu o **100 pixelov**"
+          "courseD_artist_functions8_d": "Na vytvorenie rady štvorcov,\n\n-   zopakuj 3-krát\n    -   nakresli štvorec\n    -   posuň sa dopredu o **100 pixelov**"
         },
         "courseE_artist_functions8c_2018": {
-          "courseD_artist_functions8_f": "Toto je jednoduchšie ako by sa mohlo zdať! Nie sú tu potrebné žiadne bloky `pohni sa` alebo `skoč`!",
-          "courseD_artist_functions8_a": "Druhý riadok štvrocov sa líši od prvého 180 stupňovou otočkou!",
-          "courseD_artist_functions8_c": "Na konci každého radu štvorcov, pred začatím nového radu, sa umelec potrebuje otočiť o 180 stupňov. Daj to celé do vnútra opakovacieho cyklu, aby si sa priparavil/a na ďalšie cvičenie!"
+          "courseD_artist_functions8_f": "Toto je jednoduchšie, ako by sa mohlo zdať! Nie sú tu potrebné žiadne bloky `pohni sa` alebo `skoč`!",
+          "courseD_artist_functions8_a": "Druhý riadok štvorcov sa líši od prvého 180 stupňovou otočkou!",
+          "courseD_artist_functions8_c": "Na konci každého radu štvorcov, pred začatím nového radu, sa umelec potrebuje otočiť o 180 stupňov. Daj to celé do vnútra opakovacieho cyklu a priprav sa na ďalšie cvičenie!"
         },
         "courseE_artist_functions8c_2019": {
-          "courseD_artist_functions8_f": "Toto je jednoduchšie ako by sa mohlo zdať! Nie sú tu potrebné žiadne bloky `pohni sa` alebo `skoč`!",
-          "courseD_artist_functions8_a": "Druhý riadok štvrocov sa líši od prvého 180 stupňovou otočkou!",
-          "courseD_artist_functions8_c": "Na konci každého radu štvorcov, pred začatím nového radu, sa umelec potrebuje otočiť o 180 stupňov. Daj to celé do vnútra opakovacieho cyklu, aby si sa priparavil/a na ďalšie cvičenie!"
+          "courseD_artist_functions8_f": "Toto je jednoduchšie, ako by sa mohlo zdať! Nie sú tu potrebné žiadne bloky `pohni sa` alebo `skoč`!",
+          "courseD_artist_functions8_a": "Druhý riadok štvorcov sa líši od prvého 180 stupňovou otočkou!",
+          "courseD_artist_functions8_c": "Na konci každého radu štvorcov, pred začatím nového radu, sa umelec potrebuje otočiť o 180 stupňov. Daj to celé do vnútra opakovacieho cyklu a priprav sa na ďalšie cvičenie!"
         },
         "courseE_artist_functions8c_2020": {
-          "courseD_artist_functions8_f": "Toto je jednoduchšie ako by sa mohlo zdať! Nie sú tu potrebné žiadne bloky `pohni sa` alebo `skoč`!",
-          "courseD_artist_functions8_a": "Druhý riadok štvrocov sa líši od prvého 180 stupňovou otočkou!",
-          "courseD_artist_functions8_c": "Na konci každého radu štvorcov, pred začatím nového radu, sa umelec potrebuje otočiť o 180 stupňov. Daj to celé do vnútra opakovacieho cyklu, aby si sa priparavil/a na ďalšie cvičenie!"
+          "courseD_artist_functions8_f": "Toto je jednoduchšie, ako by sa mohlo zdať! Nie sú tu potrebné žiadne bloky `pohni sa` alebo `skoč`!",
+          "courseD_artist_functions8_a": "Druhý riadok štvorcov sa líši od prvého 180 stupňovou otočkou!",
+          "courseD_artist_functions8_c": "Na konci každého radu štvorcov, pred začatím nového radu, sa umelec potrebuje otočiť o 180 stupňov. Daj to celé do vnútra opakovacieho cyklu a priprav sa na ďalšie cvičenie!"
         },
         "courseE_artist_functions9": {
           "courseD_artist_functions9_e": "Môžeš nájsť všetky štyri miesta, kde pri kreslení môže byť použitý `rad trojuholníkov`?",
@@ -6312,74 +6312,74 @@
         },
         "courseE_farmer_functions1": {
           "courseE_farmer_functions1_a": "Tentokrát je panel nástrojov usporiadaný inak! Klikni na rôzne kategórie a uvidíš, ktoré bloky máš k dispozícii.",
-          "courseE_farmer_functions1_b": "Potrebuješ pozbierať len jednu tekvicu, môžeš však  použiť cyklus na to, aby si sa k nej dostal?"
+          "courseE_farmer_functions1_b": "Potrebuješ pozbierať len jednu tekvicu, vieš ju však získať pomocou cyklu?"
         },
         "courseE_farmer_functions1_2018": {
           "courseE_farmer_functions1_a": "Tentokrát je panel nástrojov usporiadaný inak! Klikni na rôzne kategórie a uvidíš, ktoré bloky máš k dispozícii.",
-          "courseE_farmer_functions1_b": "Potrebuješ pozbierať len jednu tekvicu, môžeš však  použiť cyklus na to, aby si sa k nej dostal?"
+          "courseE_farmer_functions1_b": "Potrebuješ pozbierať len jednu tekvicu, vieš ju však získať pomocou cyklu?"
         },
         "courseE_farmer_functions1_2019": {
           "courseE_farmer_functions1_a": "Tentokrát je panel nástrojov usporiadaný inak! Klikni na rôzne kategórie a uvidíš, ktoré bloky máš k dispozícii.",
-          "courseE_farmer_functions1_b": "Potrebuješ pozbierať len jednu tekvicu, môžeš však  použiť cyklus na to, aby si sa k nej dostal?"
+          "courseE_farmer_functions1_b": "Potrebuješ pozbierať len jednu tekvicu, vieš ju však získať pomocou cyklu?"
         },
         "courseE_farmer_functions1_2020": {
           "courseE_farmer_functions1_a": "Tentokrát je panel nástrojov usporiadaný inak! Klikni na rôzne kategórie a uvidíš, ktoré bloky máš k dispozícii.",
-          "courseE_farmer_functions1_b": "Potrebuješ pozbierať len jednu tekvicu, môžeš však  použiť cyklus na to, aby si sa k nej dostal?"
+          "courseE_farmer_functions1_b": "Potrebuješ pozbierať len jednu tekvicu, vieš ju však získať pomocou cyklu?"
         },
         "courseE_farmer_functions1a": {
           "courseE_farmer_functions1a_b": "Dostaň sa k tekvici a použi na to blok `opakuj pokiaľ neplatí`."
         },
         "courseE_farmer_functions1a_2018": {
-          "courseE_farmer_functions1a_a": "Uisti sa, že si prečítaš definíciu funkcie. Dokážeš povedať čo robí?",
+          "courseE_farmer_functions1a_a": "Uisti sa, že si prečítaš definíciu funkcie. Dokážeš povedať, čo robí?",
           "courseE_farmer_functions1a_b": "Dostaň sa k tekvici a použi na to blok `opakuj pokiaľ neplatí`."
         },
         "courseE_farmer_functions1a_2019": {
-          "courseE_farmer_functions1a_a": "Uisti sa, že si prečítaš definíciu funkcie. Dokážeš povedať čo robí?",
+          "courseE_farmer_functions1a_a": "Uisti sa, že si prečítaš definíciu funkcie. Dokážeš povedať, čo robí?",
           "courseE_farmer_functions1a_b": "Dostaň sa k tekvici a použi na to blok `opakuj pokiaľ neplatí`."
         },
         "courseE_farmer_functions1a_2020": {
-          "courseE_farmer_functions1a_a": "Uisti sa, že si prečítaš definíciu funkcie. Dokážeš povedať čo robí?",
+          "courseE_farmer_functions1a_a": "Uisti sa, že si prečítaš definíciu funkcie. Dokážeš povedať, čo robí?",
           "courseE_farmer_functions1a_b": "Dostaň sa k tekvici a použi na to blok `opakuj pokiaľ neplatí`."
         },
         "courseE_farmer_functions2b": {
-          "courseE_farmer_functions2b_b": "Na spájajúcom chodiníku nie je žiadna kukurica, takže sa môžeš posunúť a otočiť sa.",
-          "courseE_farmer_functions2b_c": "Aby si pozberal celú úrodu, budeš potrebovať 2 separátne bloky `opakuj pokiaľ neplatí`."
+          "courseE_farmer_functions2b_b": "Na spájajúcom chodníku nie je žiadna kukurica, takže sa môžeš posunúť a otočiť sa.",
+          "courseE_farmer_functions2b_c": "Na pozbieranie celej úrody budeš potrebovať 2 separátne bloky `opakuj pokiaľ neplatí`."
         },
         "courseE_farmer_functions2b_2018": {
-          "courseE_farmer_functions2b_a": "Môžeš použiť  `opakuj pokiaľ tam sú tekvice`, aby si sa dostal na koniec oboch ciest.",
-          "courseE_farmer_functions2b_b": "Na spájajúcom chodiníku nie je žiadna kukurica, takže sa môžeš posunúť a otočiť sa.",
-          "courseE_farmer_functions2b_c": "Aby si pozberal celú úrodu, budeš potrebovať 2 separátne bloky `opakuj pokiaľ neplatí`."
+          "courseE_farmer_functions2b_a": "Môžeš použiť  `opakuj pokiaľ tam sú tekvice` a dostaň sa na koniec oboch ciest.",
+          "courseE_farmer_functions2b_b": "Na spájajúcom chodníku nie je žiadna kukurica, takže sa môžeš posunúť a otočiť sa.",
+          "courseE_farmer_functions2b_c": "Na pozbieranie celej úrody budeš potrebovať 2 separátne bloky `opakuj pokiaľ neplatí`."
         },
         "courseE_farmer_functions2b_2019": {
-          "courseE_farmer_functions2b_a": "Môžeš použiť  `opakuj pokiaľ tam sú tekvice`, aby si sa dostal na koniec oboch ciest.",
-          "courseE_farmer_functions2b_b": "Na spájajúcom chodiníku nie je žiadna kukurica, takže sa môžeš posunúť a otočiť sa.",
-          "courseE_farmer_functions2b_c": "Aby si pozberal celú úrodu, budeš potrebovať 2 separátne bloky `opakuj pokiaľ neplatí`."
+          "courseE_farmer_functions2b_a": "Môžeš použiť  `opakuj pokiaľ tam sú tekvice` a dostaň sa na koniec oboch ciest.",
+          "courseE_farmer_functions2b_b": "Na spájajúcom chodníku nie je žiadna kukurica, takže sa môžeš posunúť a otočiť sa.",
+          "courseE_farmer_functions2b_c": "Na pozbieranie celej úrody budeš potrebovať 2 separátne bloky `opakuj pokiaľ neplatí`."
         },
         "courseE_farmer_functions2b_2020": {
-          "courseE_farmer_functions2b_a": "Môžeš použiť  `opakuj pokiaľ tam sú tekvice`, aby si sa dostal na koniec oboch ciest.",
-          "courseE_farmer_functions2b_b": "Na spájajúcom chodiníku nie je žiadna kukurica, takže sa môžeš posunúť a otočiť sa.",
-          "courseE_farmer_functions2b_c": "Aby si pozberal celú úrodu, budeš potrebovať 2 separátne bloky `opakuj pokiaľ neplatí`."
+          "courseE_farmer_functions2b_a": "Môžeš použiť  `opakuj pokiaľ tam sú tekvice` a dostaň sa na koniec oboch ciest.",
+          "courseE_farmer_functions2b_b": "Na spájajúcom chodníku nie je žiadna kukurica, takže sa môžeš posunúť a otočiť sa.",
+          "courseE_farmer_functions2b_c": "Na pozbieranie celej úrody budeš potrebovať 2 separátne bloky `opakuj pokiaľ neplatí`."
         },
         "courseE_farmer_functions2ba_2018": {
-          "courseE_farmer_functions2ba_a": "Použi zelený blok `získaj všetky tekvice`, aby si určite všetky pozbieral/a!"
+          "courseE_farmer_functions2ba_a": "Použi zelený blok `získaj všetky tekvice` a určite ich všetky pozbieraj!"
         },
         "courseE_farmer_functions2ba_2019": {
-          "courseE_farmer_functions2ba_a": "Použi zelený blok `získaj všetky tekvice`, aby si určite všetky pozbieral/a!"
+          "courseE_farmer_functions2ba_a": "Použi zelený blok `získaj všetky tekvice` a určite ich všetky pozbieraj!"
         },
         "courseE_farmer_functions2ba_2020": {
-          "courseE_farmer_functions2ba_a": "Použi zelený blok `získaj všetky tekvice`, aby si určite všetky pozbieral/a!"
+          "courseE_farmer_functions2ba_a": "Použi zelený blok `získaj všetky tekvice` a určite ich všetky pozbieraj!"
         },
         "courseE_farmer_functions3c1_2018": {
-          "coursee_farmer_functions3c1_2018_a": "Na vyriešenie úlohy budete musieť použiť 3-krát funkciu `pozbieraj po ceste`.",
-          "coursee_farmer_functions3c1_2018_b": "Aký kód musíš pridať aby si mohol/la zahýbať?"
+          "coursee_farmer_functions3c1_2018_a": "Na vyriešenie úlohy budeš musieť použiť 3-krát funkciu `pozbieraj po ceste`.",
+          "coursee_farmer_functions3c1_2018_b": "Aký kód musíš pridať, keď chceš zabočiť za roh?"
         },
         "courseE_farmer_functions3c1_2019": {
-          "coursee_farmer_functions3c1_2018_a": "Na vyriešenie úlohy budete musieť použiť 3-krát funkciu `pozbieraj po ceste`.",
-          "coursee_farmer_functions3c1_2018_b": "Aký kód musíš pridať aby si mohol/la zahýbať?"
+          "coursee_farmer_functions3c1_2018_a": "Na vyriešenie úlohy budeš musieť použiť 3-krát funkciu `pozbieraj po ceste`.",
+          "coursee_farmer_functions3c1_2018_b": "Aký kód musíš pridať, keď chceš zabočiť za roh?"
         },
         "courseE_farmer_functions3c1_2020": {
-          "coursee_farmer_functions3c1_2018_a": "Na vyriešenie úlohy budete musieť použiť 3-krát funkciu `pozbieraj po ceste`.",
-          "coursee_farmer_functions3c1_2018_b": "Aký kód musíš pridať aby si mohol/la zahýbať?"
+          "coursee_farmer_functions3c1_2018_a": "Na vyriešenie úlohy budeš musieť použiť 3-krát funkciu `pozbieraj po ceste`.",
+          "coursee_farmer_functions3c1_2018_b": "Aký kód musíš pridať, keď chceš zabočiť za roh?"
         },
         "courseE_farmer_functions4b": {
           "courseE_farmer_functions4b_a": "Neboj sa urobiť chybu! Pridaj bloky,  spusti kód a sleduj, čo sa stane, aj keď úlohu ešte nemáš úplne vyriešenú. "
@@ -6389,42 +6389,42 @@
         },
         "courseE_farmer_functions7a1_2018": {
           "courseE_farmer_functions7a1_2018_a": "Vytvor svoju funkciu v časti `funkcie`, ktorá sa nachádza v paneli nástrojov.",
-          "courseE_farmer_functions7a1_2018_b": "Nezabudni funkciu použiť potom ako si ju dokončil/a!"
+          "courseE_farmer_functions7a1_2018_b": "Nezabudni funkciu použiť hneď po jej dokončení!"
         },
         "courseE_farmer_functions7a1_2019": {
           "courseE_farmer_functions7a1_2018_a": "Vytvor svoju funkciu v časti `funkcie`, ktorá sa nachádza v paneli nástrojov.",
-          "courseE_farmer_functions7a1_2018_b": "Nezabudni funkciu použiť potom ako si ju dokončil/a!"
+          "courseE_farmer_functions7a1_2018_b": "Nezabudni funkciu použiť hneď po jej dokončení!"
         },
         "courseE_farmer_functions7a1_2020": {
           "courseE_farmer_functions7a1_2018_a": "Vytvor svoju funkciu v časti `funkcie`, ktorá sa nachádza v paneli nástrojov.",
-          "courseE_farmer_functions7a1_2018_b": "Nezabudni funkciu použiť potom ako si ju dokončil/a!"
+          "courseE_farmer_functions7a1_2018_b": "Nezabudni funkciu použiť hneď po jej dokončení!"
         },
         "courseE_farmer_functions8a1_2018": {
           "courseE_farmer_functions8a1_2018a": "Začni túto úlohu naprogramovaním rovnakej funkcie, ako v poslednej úlohe.",
-          "courseE_farmer_functions8a1_2018b": "Po prvom spustení funkcie, budeš musieť urobiť jednu extra otočku, predtým ako funkciu znova spustíš."
+          "courseE_farmer_functions8a1_2018b": "Po prvom spustení funkcie budeš musieť urobiť jednu extra otočku predtým, ako funkciu znova spustíš."
         },
         "courseE_farmer_functions8a1_2019": {
           "courseE_farmer_functions8a1_2018a": "Začni túto úlohu naprogramovaním rovnakej funkcie, ako v poslednej úlohe.",
-          "courseE_farmer_functions8a1_2018b": "Po prvom spustení funkcie, budeš musieť urobiť jednu extra otočku, predtým ako funkciu znova spustíš."
+          "courseE_farmer_functions8a1_2018b": "Po prvom spustení funkcie budeš musieť urobiť jednu extra otočku predtým, ako funkciu znova spustíš."
         },
         "courseE_farmer_functions8a1_2020": {
           "courseE_farmer_functions8a1_2018a": "Začni túto úlohu naprogramovaním rovnakej funkcie, ako v poslednej úlohe.",
-          "courseE_farmer_functions8a1_2018b": "Po prvom spustení funkcie, budeš musieť urobiť jednu extra otočku, predtým ako funkciu znova spustíš."
+          "courseE_farmer_functions8a1_2018b": "Po prvom spustení funkcie budeš musieť urobiť jednu extra otočku predtým, ako funkciu znova spustíš."
         },
         "courseE_farmer_functions9a1_2018": {
-          "courseE_farmer_functions9a1_2018a": "Použiješ tú istú funkciu, ktorú si si vytvoril/a v predchádzajúcich úlohách.",
-          "courseE_farmer_functions9a1_2018b": "Na vyriešenie prvej polovice úlohy, použi kroky z predchádzajúcej úlohy.",
-          "courseE_farmer_functions9a1_2018c": "Aby si sa dostal/a aj k poslednému šalátu, budeš sa musieť niekoľko krát `otočiť` a `posunúť dopredu`, urob to predtým ako znovu zavoláš svoju funkciu."
+          "courseE_farmer_functions9a1_2018a": "Použiješ tú istú funkciu, ktorá bola vytvorená už v predchádzajúcich úlohách.",
+          "courseE_farmer_functions9a1_2018b": "Na vyriešenie prvej polovice úlohy použi kroky z predchádzajúcej úlohy.",
+          "courseE_farmer_functions9a1_2018c": "Predtým, ako sa dostaneš aj k poslednému šalátu, sa budeš musieť niekoľkokrát `otočiť` a `posunúť dopredu`, a až potom môžeš zavolať svoju funkciu."
         },
         "courseE_farmer_functions9a1_2019": {
-          "courseE_farmer_functions9a1_2018a": "Použiješ tú istú funkciu, ktorú si si vytvoril/a v predchádzajúcich úlohách.",
-          "courseE_farmer_functions9a1_2018b": "Na vyriešenie prvej polovice úlohy, použi kroky z predchádzajúcej úlohy.",
-          "courseE_farmer_functions9a1_2018c": "Aby si sa dostal/a aj k poslednému šalátu, budeš sa musieť niekoľko krát `otočiť` a `posunúť dopredu`, urob to predtým ako znovu zavoláš svoju funkciu."
+          "courseE_farmer_functions9a1_2018a": "Použiješ tú istú funkciu, ktorá bola vytvorená už v predchádzajúcich úlohách.",
+          "courseE_farmer_functions9a1_2018b": "Na vyriešenie prvej polovice úlohy použi kroky z predchádzajúcej úlohy.",
+          "courseE_farmer_functions9a1_2018c": "Predtým, ako sa dostaneš aj k poslednému šalátu, sa budeš musieť niekoľkokrát `otočiť` a `posunúť dopredu`, a až potom môžeš zavolať svoju funkciu."
         },
         "courseE_farmer_functions9a1_2020": {
-          "courseE_farmer_functions9a1_2018a": "Použiješ tú istú funkciu, ktorú si si vytvoril/a v predchádzajúcich úlohách.",
-          "courseE_farmer_functions9a1_2018b": "Na vyriešenie prvej polovice úlohy, použi kroky z predchádzajúcej úlohy.",
-          "courseE_farmer_functions9a1_2018c": "Aby si sa dostal/a aj k poslednému šalátu, budeš sa musieť niekoľko krát `otočiť` a `posunúť dopredu`, urob to predtým ako znovu zavoláš svoju funkciu."
+          "courseE_farmer_functions9a1_2018a": "Použiješ tú istú funkciu, ktorá bola vytvorená už v predchádzajúcich úlohách.",
+          "courseE_farmer_functions9a1_2018b": "Na vyriešenie prvej polovice úlohy použi kroky z predchádzajúcej úlohy.",
+          "courseE_farmer_functions9a1_2018c": "Predtým, ako sa dostaneš aj k poslednému šalátu, sa budeš musieť niekoľkokrát `otočiť` a `posunúť dopredu`, a až potom môžeš zavolať svoju funkciu."
         },
         "courseE_farmer_ramp11a": {
           "courseE_farmer_ramp12_a": "Namiesto cyklu `opakuj` môžeš teraz použiť blok `pokiaľ tam je hromada` a povedať tak farmárke, koľkokrát má odstrániť hlinu lopatou.  ",
