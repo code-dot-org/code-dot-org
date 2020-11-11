@@ -21,32 +21,37 @@ module LessonImportHelper
     tip_matches = find_tips(activity_markdown).select{|m| m[1] != 'say'}.map { |m| {index:activity_markdown.index(m[0]), type: 'tip', match: m, substring: m[0]}}
     tip_link_matches = find_tip_links(activity_markdown).map { |m| {index:activity_markdown.index(m[0]), type: 'tiplink', match: m, substring: m[0]}}
     remark_matches = find_remarks(activity_markdown).map { |m| {index:activity_markdown.index(m[0]), type: 'remark', match: m, substring: m[0]}}
-    pullthrough_matches = find_code_studio_pullthroughs(activity_markdown).map { |m| {index:activity_markdown.index(m[0]), type: 'pullthrough', match: m, substring: m[0]}}
+    pullthrough_matches = find_skippable_syntax(activity_markdown).map { |m| {index:activity_markdown.index(m[0]), type: 'skippable', match: m, substring: m[0]}}
+    slide_matches = find_slides(activity_markdown).map {|m| {index:activity_markdown.index(m[0]), type: 'slide', match: m, substring: m[0]}}
     matches = tip_matches + remark_matches + tip_link_matches + pullthrough_matches
     sorted_matches = matches.sort_by{|m| m[:index]}
     return [ActivitySection.new(description: activity_markdown.strip, seeding_key: SecureRandom.uuid, position: 1)] if matches.empty?
     sorted_matches = find_markdown_chunks(activity_markdown, sorted_matches)
     sections = []
     tip_match_map = {}
+    slide = false
     tip_matches.each do |match|
       key = match[:match][3] || "#{match[:match][1]}-0"
       tip_match_map[key] = match
     end
     sorted_matches.each_with_index do |match, i|
       activity_section = nil
-      if match[:type] == 'tip'
+      if match[:type] == 'tip' || match[:type] == 'skippable'
+        next
+      elsif match[:type] == 'slide'
+        slide = true
         next
       elsif match[:type] == 'tiplink'
         activity_section = create_activity_section_with_tip(match[:match], tip_match_map)
       elsif match[:type] == 'remark'
         activity_section = create_activity_section_with_remark(match[:match])
-      elsif match[:type] == 'pullthrough'
-        next
       else
         activity_section = ActivitySection.new(description: match[:substring].strip)
       end
       next unless activity_section
       activity_section.position = i+1
+      activity_section.slide = slide
+      slide = false
       activity_section.seeding_key ||= SecureRandom.uuid
       sections = sections.push(activity_section)
     end
@@ -105,6 +110,11 @@ module LessonImportHelper
   # https://github.com/code-dot-org/curriculumbuilder/blob/57cad8f62e50b03e4f16bf77cd9e2e1da5c3e44e/curriculumBuilder/codestudio.py
   def self.find_skippable_syntax(markdown)
     regex = /\[code-studio\s*(?:\d+)?-?(?:\d+)?\]|\[\/?guide\]/
+    markdown.to_enum(:scan, regex).map { Regexp.last_match }
+  end
+
+  def self.find_slides(markdown)
+    regex = /^slide!!!slide-\d+(?:<!-- place where you'd like the icon -->)/
     markdown.to_enum(:scan, regex).map { Regexp.last_match }
   end
 
