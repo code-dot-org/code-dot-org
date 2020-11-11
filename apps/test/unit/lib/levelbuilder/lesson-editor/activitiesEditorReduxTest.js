@@ -1,4 +1,3 @@
-import {assert} from 'chai';
 import {combineReducers} from 'redux';
 import reducers, {
   addActivity,
@@ -20,10 +19,12 @@ import reducers, {
   reorderLevel,
   moveLevelToActivitySection,
   emptyActivity,
-  emptyActivitySection
+  emptyActivitySection,
+  getSerializedActivities
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
 import {sampleActivities} from './activitiesTestData';
 import _ from 'lodash';
+import {expect, assert} from '../../../../util/reconfiguredChai';
 
 const getInitialState = () => ({
   levelKeyList: {},
@@ -35,6 +36,18 @@ const reducer = combineReducers(reducers);
 describe('activitiesEditorRedux reducer tests', () => {
   let initialState;
   beforeEach(() => (initialState = getInitialState()));
+
+  it('getSerializedActivities', () => {
+    let serializedActivities = getSerializedActivities(initialState.activities);
+
+    // Verify that the JSON contains serialized activities.
+    const activities = JSON.parse(serializedActivities);
+    expect(activities.length).to.equal(1);
+    expect(activities[0].key).to.equal('activity-1');
+    const sections = activities[0].activitySections;
+    expect(sections.length).to.equal(3);
+    expect(sections[0].key).to.equal('section-3');
+  });
 
   it('add tip', () => {
     const nextState = reducer(
