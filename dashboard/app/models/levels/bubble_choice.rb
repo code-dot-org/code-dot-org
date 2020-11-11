@@ -142,12 +142,11 @@ class BubbleChoice < DSLDefined
     summary
   end
 
-  # Returns the sublevel id for a user that has the highest best_result.
+  # Returns the sublevel with the highest best_result for a user.
   # @param [User]
-  # @return [Integer]
+  # @return [Level]
   def best_result_sublevel(user)
-    ul = user.user_levels.where(level: sublevels).max_by(&:best_result)
-    ul&.level
+    user.user_levels.where(level: sublevels).max_by(&:best_result)&.level
   end
 
   # Returns an array of BubbleChoice parent levels for any given sublevel name.

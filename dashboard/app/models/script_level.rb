@@ -166,6 +166,10 @@ class ScriptLevel < ActiveRecord::Base
     end
   end
 
+  def bubble_choice_levels
+    levels.select {|l| l.is_a?(BubbleChoice)}
+  end
+
   def find_experiment_level(user, section)
     levels.sort_by(&:created_at).find do |level|
       experiments(level).any? do |experiment_name|
