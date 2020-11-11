@@ -28,7 +28,8 @@ const styles = {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    paddingRight: '10px'
+    paddingRight: '10px',
+    cursor: 'pointer'
   }
 };
 
