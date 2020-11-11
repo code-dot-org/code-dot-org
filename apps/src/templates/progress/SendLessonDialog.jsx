@@ -103,6 +103,7 @@ class SendLessonDialog extends Component {
           {i18n.sendLessonDetails()}{' '}
           <a
             target="_blank"
+            rel="noopener noreferrer"
             href="https://support.code.org/" // TODO: Update this!
           >
             {i18n.learnMore()}
