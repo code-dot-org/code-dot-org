@@ -372,7 +372,7 @@ class LessonEditor extends Component {
           <ActivitiesEditor serializeActivities={this.serializeActivities} />
         </CollapsibleEditorSection>
 
-        <div style={styles.saveButtonBackground}>
+        <div style={styles.saveButtonBackground} className="saveBar">
           {this.state.lastSaved && !this.state.error && (
             <div style={styles.lastSaved}>
               {`Last saved at: ${new Date(
