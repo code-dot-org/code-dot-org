@@ -391,7 +391,7 @@ class LessonEditor extends Component {
             </div>
           )}
           <button
-            className="btn btn-primary"
+            className="btn"
             type="button"
             style={styles.saveButton}
             onClick={this.handleSaveAndKeepEditing}
