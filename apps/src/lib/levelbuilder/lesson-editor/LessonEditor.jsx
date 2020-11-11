@@ -392,7 +392,7 @@ class LessonEditor extends Component {
           )}
           <button
             className="btn btn-primary"
-            type="submit"
+            type="button"
             style={styles.saveButton}
             onClick={this.handleSaveAndKeepEditing}
             disabled={this.state.saving}
