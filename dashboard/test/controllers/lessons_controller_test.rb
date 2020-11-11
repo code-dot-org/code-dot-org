@@ -189,6 +189,16 @@ class LessonsControllerTest < ActionController::TestCase
     assert_equal 0, @lesson.lesson_activities.count
   end
 
+  test 'update lesson return updated lesson when do_not_redirect' do
+    sign_in @levelbuilder
+
+    @update_params[:do_not_redirect] = true
+    put :update, params: @update_params
+
+    assert_equal 'new overview', JSON.parse(@response.body)['properties']['overview']
+    assert_equal 'new student overview', JSON.parse(@response.body)['properties']['student_overview']
+  end
+
   test 'cannot update lesson with legacy script levels' do
     # legacy script level, not owned by an activity section
     create :script_level, lesson: @lesson, script: @lesson.script
