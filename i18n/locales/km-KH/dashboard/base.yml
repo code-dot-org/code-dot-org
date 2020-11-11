@@ -504,6 +504,7 @@ km:
     races:
       other: "ផ្សេងៗ"
     submit: "ដាក់ស្នើរ"
+    decline: "បិទ"
   project:
     projects: "គម្រោង"
     project_gallery: "គម្រោង"
