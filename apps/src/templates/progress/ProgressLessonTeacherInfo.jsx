@@ -133,23 +133,23 @@ class ProgressLessonTeacherInfo extends React.Component {
             />
           </div>
         )}
-        {experiments.isEnabled(experiments.SEND_LESSON_DIALOG) && lessonUrl && (
-          <div style={styles.buttonContainer}>
-            <SendLesson
-              lessonUrl={loginRequiredLessonUrl}
-              title={lesson.name}
-              courseid={courseId}
-              analyticsData={JSON.stringify(this.firehoseData())}
-              buttonStyle={styles.button}
-            />
-          </div>
-        )}
         {lesson.lockable && !hasNoSections && <StageLock lesson={lesson} />}
         {showHiddenForSectionToggle && (
           <HiddenForSectionToggle
             hidden={!!isHidden}
             onChange={this.onClickHiddenToggle}
           />
+        )}
+        {experiments.isEnabled(experiments.SEND_LESSON_DIALOG) && lessonUrl && (
+          <div style={styles.buttonContainer}>
+            <SendLesson
+              lessonUrl={loginRequiredLessonUrl}
+              lessonTitle={lesson.name}
+              courseid={courseId}
+              analyticsData={JSON.stringify(this.firehoseData())}
+              buttonStyle={styles.button}
+            />
+          </div>
         )}
         {!experiments.isEnabled(experiments.SEND_LESSON_DIALOG) &&
           showGoogleClassroomButton &&
