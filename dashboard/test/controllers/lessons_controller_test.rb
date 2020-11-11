@@ -175,7 +175,7 @@ class LessonsControllerTest < ActionController::TestCase
   test_user_gets_response_for :update, params: -> {{id: @lesson.id}}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
   test_user_gets_response_for :update, params: -> {@update_params}, user: :student, response: :forbidden
   test_user_gets_response_for :update, params: -> {@update_params}, user: :teacher, response: :forbidden
-  test_user_gets_response_for :update, params: -> {@update_params}, user: :levelbuilder, response: :redirect
+  test_user_gets_response_for :update, params: -> {@update_params}, user: :levelbuilder, response: :success
 
   test 'update lesson return updated lesson' do
     sign_in @levelbuilder
