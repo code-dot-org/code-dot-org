@@ -103,9 +103,9 @@ class Foorm::Form < ActiveRecord::Base
   end
 
   def validate_questions
-    errors = Foorm::Form.validate_questions(JSON.parse(questions))
-    unless errors.empty?
-      errors.add(:questions, errors)
+    errors_arr = Foorm::Form.validate_questions(JSON.parse(questions))
+    unless errors_arr.empty?
+      errors.add(:questions, errors_arr)
     end
   end
 
@@ -174,6 +174,11 @@ class Foorm::Form < ActiveRecord::Base
           raise InvalidFoormConfigurationError, "Duplicate choice value #{choice[:value]} in question #{question_name}."
         end
         choice_values.add(choice[:value])
+      elsif choice.class == Hash
+        unless choice.key?(:value)
+          error_msg = "Foorm configuration contains question '#{question_name}' without a  value for a choice. Choice text is '#{choice[:text]}'."
+          raise InvalidFoormConfigurationError, error_msg
+        end
       elsif choice.class == String
         error_msg = "Foorm configuration contains question '#{question_name}' without key-value choice. Choice is '#{choice}'."
         raise InvalidFoormConfigurationError,  error_msg
