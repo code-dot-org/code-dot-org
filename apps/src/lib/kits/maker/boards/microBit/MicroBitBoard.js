@@ -11,6 +11,7 @@ import ExternalLed from './ExternalLed';
 import ExternalButton from './ExternalButton';
 import CapacitiveTouchSensor from './CapacitiveTouchSensor';
 import {serialPortType} from '../../util/browserChecks';
+import {isNodeSerialAvailable} from '../../portScanning';
 
 /**
  * Controller interface for BBC micro:bit board using
@@ -19,8 +20,10 @@ import {serialPortType} from '../../util/browserChecks';
  * @implements MakerBoard
  */
 export default class MicroBitBoard extends EventEmitter {
-  constructor() {
+  constructor(port) {
     super();
+
+    this.port = port;
 
     /** @private {Object} Map of component controllers */
     this.prewiredComponents_ = null;
@@ -58,21 +61,26 @@ export default class MicroBitBoard extends EventEmitter {
     const SERIAL_BAUD = 57600;
 
     let serialPort;
-
-    let constructorFunction = callback => {
-      serialPort = new SerialPortType(
-        portName,
-        {
-          baudRate: SERIAL_BAUD
-        },
-        true,
-        callback
+    if (isNodeSerialAvailable()) {
+      serialPort = new SerialPortType(portName, {baudRate: SERIAL_BAUD});
+      return Promise.resolve(serialPort);
+    } else {
+      // Chrome-serialport uses callback to relay when serialport initialization is complete
+      // Wrapping construction function to call promise resolution as callback
+      let constructorFunction = callback => {
+        serialPort = new SerialPortType(
+          portName,
+          {
+            baudRate: SERIAL_BAUD
+          },
+          true,
+          callback
+        );
+      };
+      return new Promise(resolve => constructorFunction(resolve)).then(() =>
+        Promise.resolve(serialPort)
       );
-      console.log(serialPort);
-    };
-    return new Promise(resolve => constructorFunction(resolve)).then(() =>
-      Promise.resolve(serialPort)
-    );
+    }
   }
 
   /**
@@ -86,7 +94,7 @@ export default class MicroBitBoard extends EventEmitter {
   checkExpectedFirmware() {
     return Promise.resolve()
       .then(() => this.openSerialPort())
-      .then(() => this.boardClient_.connectBoard())
+      .then(serialPort => this.boardClient_.connectBoard(serialPort))
       .then(() => {
         // Expect this.boardClient_.firmataVersion to equal "Firmata Protocol <version number>"
         // Expect this.boardClient_.firmwareVersion to contain "micro:bit Firmata 1.0"
