@@ -18292,3 +18292,13 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
+        2021drafting:
+          lessons:
+            Sprite Lab:
+              name: Sprite Lab Blocks
+          lesson_groups:
+            Toolbox Levels:
+              display_name: Toolbox Levels
+          title: Planning script for CI and CSF 2021
+          description_audience: Internal
+          description_short: Internal
