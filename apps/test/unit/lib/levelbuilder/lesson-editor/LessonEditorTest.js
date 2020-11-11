@@ -166,11 +166,11 @@ describe('LessonEditor', () => {
 
     // check the the spinner is showing
     expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(1);
-    expect(lessonEditor.state().saving).to.equal(true);
+    expect(lessonEditor.state().isSaving).to.equal(true);
 
     server.respond();
     lessonEditor.update();
-    expect(lessonEditor.state().saving).to.equal(false);
+    expect(lessonEditor.state().isSaving).to.equal(false);
     expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(0);
     expect(
       wrapper.find('.saveBar').contains('Error Saving: There was an error')

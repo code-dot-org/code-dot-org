@@ -96,7 +96,7 @@ class LessonEditor extends Component {
     super(props);
 
     this.state = {
-      saving: false,
+      isSaving: false,
       error: null,
       lastSaved: null,
       displayName: this.props.initialDisplayName,
@@ -116,7 +116,7 @@ class LessonEditor extends Component {
   handleSaveAndKeepEditing = e => {
     e.preventDefault();
 
-    this.setState({saving: true, lastSaved: null, error: null});
+    this.setState({isSaving: true, lastSaved: null, error: null});
 
     $.ajax({
       url: `/lessons/${this.props.id}?do_not_redirect=true`,
@@ -140,10 +140,10 @@ class LessonEditor extends Component {
       })
     })
       .done(data => {
-        this.setState({lastSaved: data.updated_at, saving: false});
+        this.setState({lastSaved: data.updated_at, isSaving: false});
       })
       .fail(error => {
-        this.setState({saving: false, error: error.responseText});
+        this.setState({isSaving: false, error: error.responseText});
       });
   };
 
@@ -385,7 +385,7 @@ class LessonEditor extends Component {
               {`Error Saving: ${this.state.error}`}
             </div>
           )}
-          {this.state.saving && (
+          {this.state.isSaving && (
             <div style={styles.spinner}>
               <FontAwesome icon="spinner" className="fa-spin" />
             </div>
@@ -395,7 +395,7 @@ class LessonEditor extends Component {
             type="button"
             style={styles.saveButton}
             onClick={this.handleSaveAndKeepEditing}
-            disabled={this.state.saving}
+            disabled={this.state.isSaving}
           >
             Save and Keep Editing
           </button>
@@ -403,7 +403,7 @@ class LessonEditor extends Component {
             className="btn btn-primary"
             type="submit"
             style={styles.saveButton}
-            disabled={this.state.saving}
+            disabled={this.state.isSaving}
           >
             Save Changes
           </button>
