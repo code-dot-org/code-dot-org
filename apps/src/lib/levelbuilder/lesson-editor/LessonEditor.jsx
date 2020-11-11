@@ -16,9 +16,8 @@ import {
 } from '@cdo/apps/lib/levelbuilder/shapes';
 import color from '@cdo/apps/util/color';
 import $ from 'jquery';
-import _ from 'lodash';
 import {connect} from 'react-redux';
-import {NEW_LEVEL_ID} from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
+import {getSerializedActivities} from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 
 const styles = {
@@ -134,7 +133,7 @@ class LessonEditor extends Component {
         purpose: this.state.purpose,
         preparation: this.state.preparation,
         objectives: JSON.stringify(this.state.objectives),
-        activities: this.serializeActivities(),
+        activities: getSerializedActivities(this.props.activities),
         resources: JSON.stringify(this.props.resources.map(r => r.key)),
         announcements: this.state.announcements
       })
@@ -153,42 +152,6 @@ class LessonEditor extends Component {
 
   handleUpdateObjectives = newObjectives => {
     this.setState({objectives: newObjectives});
-  };
-
-  // Serialize the activities into JSON, renaming any keys which are different
-  // on the backend.
-  serializeActivities = () => {
-    const activities = _.cloneDeep(this.props.activities);
-    activities.forEach(activity => {
-      activity.name = activity.displayName;
-      delete activity.displayName;
-
-      activity.activitySections.forEach(activitySection => {
-        activitySection.name = activitySection.displayName;
-        delete activitySection.displayName;
-
-        activitySection.description = activitySection.text;
-        delete activitySection.text;
-
-        activitySection.scriptLevels.forEach(scriptLevel => {
-          // The server expects id to be absent if a new script level is to be
-          // created.
-          if (scriptLevel.id === NEW_LEVEL_ID) {
-            delete scriptLevel.id;
-          }
-
-          // The position within the activity section
-          scriptLevel.activitySectionPosition = scriptLevel.position;
-
-          // Other position values will be recomputed from the
-          // activitySectionPosition on the server.
-          delete scriptLevel.position;
-          delete scriptLevel.levelNumber;
-        });
-      });
-    });
-
-    return JSON.stringify(activities);
   };
 
   render() {
@@ -369,7 +332,7 @@ class LessonEditor extends Component {
         </CollapsibleEditorSection>
 
         <CollapsibleEditorSection title="Activities & Levels" fullWidth={true}>
-          <ActivitiesEditor serializeActivities={this.serializeActivities} />
+          <ActivitiesEditor />
         </CollapsibleEditorSection>
 
         <div style={styles.saveButtonBackground} className="saveBar">

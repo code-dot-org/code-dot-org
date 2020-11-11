@@ -3,7 +3,10 @@ import PropTypes from 'prop-types';
 import color from '@cdo/apps/util/color';
 import ActivityCardAndPreview from '@cdo/apps/lib/levelbuilder/lesson-editor/ActivityCardAndPreview';
 import {connect} from 'react-redux';
-import {addActivity} from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
+import {
+  addActivity,
+  getSerializedActivities
+} from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
 import ReactDOM from 'react-dom';
 import {activityShape} from '@cdo/apps/lib/levelbuilder/shapes';
 
@@ -28,8 +31,6 @@ const styles = {
 
 class ActivitiesEditor extends Component {
   static propTypes = {
-    serializeActivities: PropTypes.func.isRequired,
-
     //redux
     activities: PropTypes.arrayOf(activityShape).isRequired,
     addActivity: PropTypes.func.isRequired
@@ -135,7 +136,7 @@ class ActivitiesEditor extends Component {
         <input
           type="hidden"
           name="activities"
-          value={this.props.serializeActivities()}
+          value={getSerializedActivities(this.props.activities)}
         />
       </div>
     );
