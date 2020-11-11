@@ -60,6 +60,7 @@ export const INITIAL_STATE = {
   selectedColumn1: '',
   selectedColumn2: '',
   filterColumn: '',
+  filterOperator: '=',
   filterValue: '',
   screen: ''
 };
@@ -117,7 +118,7 @@ class VisualizerModal extends React.Component {
     return values;
   });
 
-  filterRecords = memoize((records = [], column, value) => {
+  filterRecords = memoize((records = [], column, operator, value) => {
     let parsedValue;
     if (isNumber(value)) {
       parsedValue = parseFloat(value);
@@ -132,6 +133,10 @@ class VisualizerModal extends React.Component {
       // we filter on the actual value
       parsedValue = value.slice(1, -1);
     }
+    if (operator === '>')
+      return records.filter(record => record[column] > parsedValue);
+    if (operator === '<')
+      return records.filter(record => record[column] < parsedValue);
     return records.filter(record => record[column] === parsedValue);
   });
 
@@ -147,6 +152,16 @@ class VisualizerModal extends React.Component {
         return msg.crossTab();
       default:
         return chartType;
+    }
+  }
+  getDisplayNameForOperator(operator) {
+    switch (operator) {
+      case '>':
+        return msg.greaterThan();
+      case '<':
+        return msg.lessThan();
+      default:
+        return msg.equalTo();
     }
   }
 
@@ -195,6 +210,7 @@ class VisualizerModal extends React.Component {
       filteredRecords = this.filterRecords(
         parsedRecords,
         this.state.filterColumn,
+        this.state.filterOperator,
         this.state.filterValue
       );
     }
@@ -215,7 +231,7 @@ class VisualizerModal extends React.Component {
       ChartType.SCATTER_PLOT,
       ChartType.CROSS_TAB
     ].includes(this.state.chartType);
-
+    const displayNumericFilters = numericColumns.includes(this.state.filterColumn);
     return (
       <span style={styles.container}>
         <button
@@ -355,13 +371,30 @@ class VisualizerModal extends React.Component {
                 onChange={event =>
                   this.setState({
                     filterColumn: event.target.value,
+                    filterOperator: '=',
                     filterValue: ''
                   })
                 }
                 inlineLabel
               />
-              <DropdownField
+              {displayNumericFilters && (
+                <DropdownField
                 displayName={msg.by()}
+                options={[">","=","<"]}
+                getDisplayNameForOption={this.getDisplayNameForOperator}
+                disabledOptions={[]}
+                value={this.state.filterOperator}
+                onChange={event =>
+                  this.setState({
+                    filterOperator: event.target.value,
+                    filterValue: ''
+                  })
+                }
+                inlineLabel
+                />)
+              }
+              <DropdownField
+                displayName={displayNumericFilters ? "" : msg.by()}
                 options={this.getValuesForFilterColumn(
                   parsedRecords,
                   this.state.filterColumn
