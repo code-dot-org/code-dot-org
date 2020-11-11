@@ -99,13 +99,9 @@ def main(options)
     next if options.dry_run
 
     lesson_pairs.each do |lesson, cb_lesson|
-      puts "Importing #{lesson.name}"
-      LessonImportHelper.create_lesson(cb_lesson, lesson)
-      #lesson.update_from_curriculum_builder(cb_lesson)
+      lesson.update_from_curriculum_builder(cb_lesson)
     end
-    script.lessons.select(&:lockable).each do |lesson|
-      LessonImportHelper.update_lockable_lesson(lesson)      
-    end
+    script.lessons.select(&:lockable).each(&:update_from_curriculum_builder)
     script.fix_script_level_positions
     log "updated #{lesson_pairs.count} lessons in unit #{script.name}"
   end
