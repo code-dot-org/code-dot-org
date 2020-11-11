@@ -161,10 +161,10 @@ is:
     student_consent: "Ég staðfesti að ég hef leyfi foreldris eða löglegs forráðamanns til að nota þjónustur Code.org."
     agree_us_website: "Ég samþykki að nota vef sem er staðsettur í Bandaríkjunum."
     my_data_to_us: "Gögn sem verða til með notkun minni á þessum vef kunna að verða send til og geymd eða greind í Bandaríkjunum."
-    agree_us_data_transfer_student: '**Ég gef Code.org leyfi til að flytja gögn (þ. á m. persónulegar upplýsingar) sem verða til við notkun mína á þessum vef til Bandaríkjanna**  til hýsingar og úrvinnslu.'
-    agree_us_data_transfer_teacher: '**Ég gef Code.org leyfi til að flytja gögn (þ. á m. persónulegar upplýsingar) sem verða til við notkun mína (og nemenda minna) á þessum vef til Bandaríkjanna**  til hýsingar og úrvinnslu.'
-    data_collection_us: "Ég skil að Code.org er vefsetur sem er staðsett í Bandaríkjunum og ekki rekið í hagnaðarskyni og að bandarísk lög um söfnun gagna kunna að vera ólík lögum lands míns."
-    visit_privacy: 'Nánar í [Persónuverndarstefnu](%{privacy_url}) Code.org.'
+    agree_us_data_transfer_student: '**Ég samþykki að Code.org flytji gögn (þar með talið persónuupplýsingar) sem til koma vegna notkunar þinnar á vefsvæðinu til Bandaríkjanna til hýsingar og vinnslu upplýsinganna.'
+    agree_us_data_transfer_teacher: '**Ég samþykki að Code.org flytji gögn (þ. á m. persónulegar upplýsingar) sem til verða vegna notkunar minnar (og nemenda minna) á þessu vefsvæði til Bandaríkjanna**  til hýsingar og úrvinnslu gagnanna.'
+    data_collection_us: "Ég skil að Code.org er bandarískt sjálfseignarvefsvæði og að bandarísk lög um söfnun gagna gætu verið önnur en lög í mínu landi."
+    visit_privacy: 'Lestu [Persónuverndarstefnu](%{privacy_url}) Code.org til að fá nánari upplýsingar.'
     student_terms_markdown: "Netföng eru ekki geymd á sniði sem gerir okkur kleift að hafa samband við nemendur. Nemendur munu aldrei fá póst frá Code.org nema til að endurstilla aðgangsorð. Sjá nánar um þetta í [persónuverndarstefnu](http://code.org/privacy) okkar."
     additional_information: "Við þurfum viðbótarupplýsingar til að geta haldið áfram að skrá þig."
     user_type_button: "Uppfæra tegund aðgangs"

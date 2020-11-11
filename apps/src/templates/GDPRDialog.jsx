@@ -56,6 +56,7 @@ export default class GDPRDialog extends Component {
             href={pegasus('/privacy')}
             className="ui-test-gdpr-dialog-privacy-link"
             target="_blank"
+            rel="noopener noreferrer"
           >
             {i18n.gdprDialogSeePrivacyPolicy()}.
           </a>

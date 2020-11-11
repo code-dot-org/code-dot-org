@@ -1,7 +1,7 @@
 {
   "category": "",
   "config": {
-    "func": "setQuestion",
+    "func": "setPrompt",
     "inline": false,
     "blockText": "prompt user {QUESTION} for variable {VAR}",
     "args": [

@@ -322,6 +322,9 @@
         "Find the Wizard": {
           "do something": {
             "name": "함수 이름"
+          },
+          "check guess": {
+            "name": "추측 확인"
           }
         },
         "FoodFight": {
@@ -1348,7 +1351,8 @@
             "parameters": {
               "size": "크기",
               "color": "색깔"
-            }
+            },
+            "name": "확인"
           },
           "do something": {
             "name": "함수 이름"
@@ -1356,12 +1360,14 @@
           "Make gingham": {
             "parameters": {
               "size": "크기"
-            }
+            },
+            "name": "깅엄 만들기"
           },
           "black outline": {
             "parameters": {
               "length": "length"
-            }
+            },
+            "name": "검은 외곽선"
           }
         },
         "courseF_artist_fwp2": {
@@ -1369,13 +1375,15 @@
             "name": "사각형 그리기",
             "parameters": {
               "length": "length"
-            }
+            },
+            "description": "길이 매개변수로 사각형 그리기"
           },
           "checker": {
             "parameters": {
               "size": "크기",
               "color": "색깔"
-            }
+            },
+            "name": "확인"
           },
           "do something": {
             "name": "함수 이름"
@@ -1383,12 +1391,14 @@
           "Make gingham": {
             "parameters": {
               "size": "크기"
-            }
+            },
+            "name": "깅엄 만들기"
           },
           "black outline": {
             "parameters": {
               "length": "length"
-            }
+            },
+            "name": "검은 외곽선"
           }
         },
         "courseF_artist_fwp2_predict1": {
@@ -1396,7 +1406,8 @@
             "name": "사각형 그리기",
             "parameters": {
               "length": "length"
-            }
+            },
+            "description": "길이 매개변수로 사각형 그리기"
           }
         },
         "courseF_artist_fwp3": {
@@ -1409,18 +1420,21 @@
           "draw a square2": {
             "parameters": {
               "size": "크기"
-            }
+            },
+            "name": "사각형2 그리기"
           },
           "filled square": {
             "parameters": {
               "size": "크기",
               "color": "색깔"
-            }
+            },
+            "name": "채워진 사각형"
           },
           "black outline": {
             "parameters": {
               "length": "length"
-            }
+            },
+            "name": "검은 외곽선"
           }
         },
         "courseF_artist_fwp4": {
@@ -1557,21 +1571,24 @@
           "rowOfNectarOrHoney": {
             "parameters": {
               "width": "너비"
-            }
+            },
+            "name": "rowOfNectarOrHoney"
           }
         },
         "courseF_bee_fwp8": {
           "rowOfNectarOrHoney": {
             "parameters": {
               "width": "너비"
-            }
+            },
+            "name": "rowOfNectarOrHoney"
           }
         },
         "courseF_bee_fwp9_predict1": {
           "rowOfNectarOrHoney": {
             "parameters": {
               "width": "너비"
-            }
+            },
+            "name": "rowOfNectarOrHoney"
           }
         },
         "courseF_bee_fwp_challenge1": {
@@ -1616,6 +1633,116 @@
         "courseF_bee_variables_8_2020": {
           "collect": {
             "name": "모으세요."
+          }
+        },
+        "courseE_bee_functions10": {
+          "move and make honey": {
+            "name": "이도아고 꿀을 만드세요"
+          }
+        },
+        "courseE_bee_functions11_predict1": {
+          "move and make honey": {
+            "name": "이도아고 꿀을 만드세요"
+          }
+        },
+        "courseE_bee_functions8": {
+          "collect all nectar": {
+            "name": "과즙 모두를 모으세요"
+          }
+        },
+        "courseE_bee_functions9": {
+          "get all nectar": {
+            "name": "과즙 모두를 얻으세요."
+          }
+        },
+        "Alien Defender": {
+          "game has been won": {
+            "name": "게임에서 이겼습니다."
+          }
+        },
+        "courseE_bee_concept4": {
+          "honey nectar": {
+            "name": "꿀 과즙"
+          }
+        },
+        "courseE_farmer_functions10b": {
+          "navigate": {
+            "name": "네비게이트"
+          }
+        },
+        "courseE_farmer_functions2ba": {
+          "corn and pumpkin": {
+            "name": "옥수수와 호박"
+          }
+        },
+        "courseE_farmer_functions3c": {
+          "corn and pumpkin": {
+            "name": "옥수수와 호박"
+          }
+        },
+        "courseE_farmer_functions4b": {
+          "corn and pumpkin": {
+            "name": "옥수수와 호박"
+          }
+        },
+        "courseE_farmer_functions5c": {
+          "corn and pumpkin": {
+            "name": "옥수수와 호박"
+          }
+        },
+        "courseE_farmer_functions6c": {
+          "corn and pumpkin": {
+            "name": "옥수수와 호박"
+          }
+        },
+        "courseE_farmer_functions8b": {
+          "navigate": {
+            "name": "네비게이트"
+          }
+        },
+        "courseE_farmer_functions9b": {
+          "navigate": {
+            "name": "네비게이트"
+          }
+        },
+        "courseE_farmer_functions11_predict": {
+          "check and pick": {
+            "name": "확인과 따기"
+          },
+          "find pumpkin": {
+            "name": "호박 찾기"
+          },
+          "wander path": {
+            "name": "경로 헤매기"
+          }
+        },
+        "courseF_bee_functions2": {
+          "get only nectar": {
+            "name": "과즙 만 얻기"
+          }
+        },
+        "courseF_bee_functions3": {
+          "only make honey": {
+            "name": "꿀 만 만들기"
+          }
+        },
+        "Choose Your Own Adventure": {
+          "witch ending": {
+            "name": "마녀 엔딩"
+          },
+          "story": {
+            "name": "스토리"
+          },
+          "starting path": {
+            "name": "시작 경로"
+          }
+        },
+        "Guess The Number": {
+          "check guess": {
+            "name": "추측 확인",
+            "parameters": {
+              "theGuess": "추측"
+            }
           }
         }
       }
