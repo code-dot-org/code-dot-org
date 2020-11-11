@@ -496,8 +496,6 @@ class Lesson < ActiveRecord::Base
       self.lesson_activities = LessonImportHelper.create_lesson_activities(cb_lesson_data['activities'], levels_data, id)
     end
     save!
-
-    puts "update lesson #{id} with cb lesson data: #{cb_lesson_data.to_json[0, 50]}..."
   end
 
   # Used for seeding from JSON. Returns the full set of information needed to uniquely identify this object.
