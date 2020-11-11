@@ -270,6 +270,7 @@ class Lesson < ActiveRecord::Base
     summary = summarize.dup
     # Do not let script name override lesson name when there is only one lesson
     summary[:name] = name
+    summary[:lesson_group_display_name] = lesson_group&.display_name
     summary.freeze
   end
 
