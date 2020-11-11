@@ -112,13 +112,14 @@ class LessonEditor extends Component {
     };
   }
 
-  handleSaveAndKeepEditing = e => {
+  handleSave = e => {
+    const isSaveAndClose = e.target.className.includes('btn-primary');
     e.preventDefault();
 
     this.setState({isSaving: true, lastSaved: null, error: null});
 
     $.ajax({
-      url: `/lessons/${this.props.id}?do_not_redirect=true`,
+      url: `/lessons/${this.props.id}`,
       method: 'PUT',
       dataType: 'json',
       contentType: 'application/json;charset=UTF-8',
@@ -139,7 +140,13 @@ class LessonEditor extends Component {
       })
     })
       .done(data => {
-        this.setState({lastSaved: data.updated_at, isSaving: false});
+        if (isSaveAndClose) {
+          window.location = `/lessons/${this.props.id}${
+            window.location.search
+          }`;
+        } else {
+          this.setState({lastSaved: data.updated_at, isSaving: false});
+        }
       })
       .fail(error => {
         this.setState({isSaving: false, error: error.responseText});
@@ -357,7 +364,7 @@ class LessonEditor extends Component {
             className="btn"
             type="button"
             style={styles.saveButton}
-            onClick={this.handleSaveAndKeepEditing}
+            onClick={this.handleSave}
             disabled={this.state.isSaving}
           >
             Save and Keep Editing
@@ -366,6 +373,7 @@ class LessonEditor extends Component {
             className="btn btn-primary"
             type="submit"
             style={styles.saveButton}
+            onClick={this.handleSave}
             disabled={this.state.isSaving}
           >
             Save and Close
