@@ -1199,6 +1199,9 @@ ko:
           title: 당신만의 스포츠게임을 코딩하세요
           description_short: 스포츠 전반 조합하기
           description: 스포츠 전반 조합하기
+          lessons:
+            Sports:
+              name: 스포츠
         2016_sciencePD-phase2b:
           lessons:
             Welcome!:
@@ -1275,6 +1278,8 @@ ko:
               name: 리스트
             For Loops:
               name: 반복을 위한
+            Map:
+              name: 지도
             Functions with Parameters:
               name: 함수(값 전달)
         workshop-gamelab:
@@ -2900,6 +2905,10 @@ ko:
               name: 함수 만들기
             Creating functions with Parameters:
               name: 매개변수가 있는 함수 만들기
+        jess-test-script:
+          lessons:
+            Tools:
+              name: 도구
         csd2-virtual:
           lesson_groups:
             csd2_1:
@@ -2976,18 +2985,30 @@ ko:
             cspSurvey:
               display_name: 콘텐츠
         ui-test-script-in-course-2017:
+          lessons:
+            Lesson:
+              name: 레슨
           lesson_groups:
             lg_1:
               display_name: 콘텐츠
         ui-test-script-in-course-2019:
+          lessons:
+            Lesson:
+              name: 레슨
           lesson_groups:
             lg_1:
               display_name: 콘텐츠
         ui-test-versioned-script-2017:
+          lessons:
+            Lesson:
+              name: 레슨
           lesson_groups:
             lg_1:
               display_name: 콘텐츠
         ui-test-versioned-script-2019:
+          lessons:
+            Lesson:
+              name: 레슨
           lesson_groups:
             lg_1:
               display_name: 콘텐츠
