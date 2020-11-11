@@ -125,11 +125,11 @@ class LessonGroup < ApplicationRecord
   end
 
   def localized_description
-    I18n.t("data.script.name.#{script.name}.lesson_groups.#{key}.description", default: nil)
+    I18n.t("data.script.name.#{script.name}.lesson_groups.#{key}.description", default: description)
   end
 
   def localized_big_questions
-    I18n.t("data.script.name.#{script.name}.lesson_groups.#{key}.big_questions", default: nil)
+    I18n.t("data.script.name.#{script.name}.lesson_groups.#{key}.big_questions", default: big_questions)
   end
 
   def summarize
