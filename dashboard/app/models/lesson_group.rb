@@ -146,6 +146,8 @@ class LessonGroup < ApplicationRecord
 
   def summarize_for_script_edit
     summary = summarize
+    summary[:description] = description
+    summary[:big_questions] = big_questions
     summary[:lessons] = lessons.map(&:summarize_for_script_edit)
     summary
   end
