@@ -133,11 +133,11 @@ describe('LessonEditor', () => {
 
     // check the the spinner is showing
     expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(1);
-    expect(lessonEditor.state().saving).to.equal(true);
+    expect(lessonEditor.state().isSaving).to.equal(true);
 
     server.respond();
     lessonEditor.update();
-    expect(lessonEditor.state().saving).to.equal(false);
+    expect(lessonEditor.state().isSaving).to.equal(false);
     expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(0);
     //check that last saved message is showing
     expect(
@@ -152,9 +152,9 @@ describe('LessonEditor', () => {
     let returnData = 'There was an error';
     let server = sinon.fakeServer.create();
     server.respondWith('PUT', `/lessons/1?do_not_redirect=true`, [
-      200,
+      404,
       {'Content-Type': 'application/json'},
-      JSON.stringify(returnData)
+      returnData
     ]);
 
     const saveBar = wrapper.find('.saveBar');
@@ -171,6 +171,7 @@ describe('LessonEditor', () => {
     server.respond();
     lessonEditor.update();
     expect(lessonEditor.state().isSaving).to.equal(false);
+    expect(lessonEditor.state().error).to.equal('There was an error');
     expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(0);
     expect(
       wrapper.find('.saveBar').contains('Error Saving: There was an error')
