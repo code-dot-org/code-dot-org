@@ -1029,6 +1029,12 @@ zh-CN:
             '"frames"': 帧
       gamelab_hideTitleScreen:
         text: 隐藏标题屏幕
+      gamelab_ifVarEquals:
+        text: |-
+          假如{NUM}={VAL}
+          {STATEMENT}
+      gamelab_isCostumeEqual:
+        text: "{SPRITE}图案是{COSTUME}"
       gamelab_isKeyPressed:
         text: "{KEY} 是否被按下"
         options:
@@ -1178,6 +1184,8 @@ zh-CN:
         text: 精灵图 {SPRITE} 停止 {BEHAVIOR}
       gamelab_removeTint:
         text: 从 {THIS} 删除颜色
+      gamelab_repeatForever:
+        text: 一直重复
       gamelab_setAnimation:
         text: 将 {THIS} 的服装改为 {ANIMATION}
       gamelab_setBackground:
@@ -1209,6 +1217,8 @@ zh-CN:
             '"x"': x位置
             '"y"': y位置
             '"direction"': 移动方向
+      gamelab_setQuestion:
+        text: 为变量{VAR}问问题{QUESTION}
       gamelab_setSizes:
         text: 设置 {SPRITE} {PROPERTY} 为 {N}%
         options:
@@ -1262,6 +1272,8 @@ zh-CN:
             '"d"': d
       gamelab_whenLeftArrow:
         text: 当按左方向键时
+      gamelab_whenQuestionAnswered:
+        text: 当{VAR}被回答
       gamelab_whenRightArrow:
         text: 当按右方向键时
       gamelab_whenTouching:
@@ -1291,6 +1303,10 @@ zh-CN:
         text: 当 {SPRITE1} 碰到 {SPRITE2}
       gamelab_whileUpArrow:
         text: 当上方向键按下时
+      gamelab_withPercentChance:
+        text: |-
+          假如{NUM}%几率
+          {STATEMENT}
       gamelab_xLocationOf:
         text: "{SPRITE} 的x轴坐标"
       gamelab_yLocationOf:

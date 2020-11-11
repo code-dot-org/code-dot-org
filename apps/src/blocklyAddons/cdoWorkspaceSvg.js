@@ -40,12 +40,27 @@ export default class WorkspaceSvg extends GoogleBlockly.WorkspaceSvg {
   // Use visibility:hidden not display:none to hide the trashcan so that it still takes up space, which is important
   // for how the lid opening works.
   hideTrashcan() {
-    document
-      .querySelectorAll('.blocklyFlyout .blocklyWorkspace')
-      .forEach(x => (x.style.visibility = 'visible'));
-    document
-      .querySelectorAll('.blocklyTrash')
-      .forEach(x => (x.style.visibility = 'hidden'));
+    /**
+     * NodeList.forEach() is not supported on IE. Use Array.prototype.forEach.call() as a workaround.
+     * https://developer.mozilla.org/en-US/docs/Web/API/NodeList/forEach
+     */
+    Array.prototype.forEach.call(
+      document.querySelectorAll('.blocklyFlyout .blocklyWorkspace'),
+      function(x) {
+        x.style.visibility = 'visible';
+      }
+    );
+
+    /**
+     * NodeList.forEach() is not supported on IE. Use Array.prototype.forEach.call() as a workaround.
+     * https://developer.mozilla.org/en-US/docs/Web/API/NodeList/forEach
+     */
+    Array.prototype.forEach.call(
+      document.querySelectorAll('.blocklyTrash'),
+      function(x) {
+        x.style.visibility = 'hidden';
+      }
+    );
   }
 
   isReadOnly() {
@@ -53,12 +68,27 @@ export default class WorkspaceSvg extends GoogleBlockly.WorkspaceSvg {
   }
   setEnableToolbox() {} // TODO
   showTrashcan() {
-    document
-      .querySelectorAll('.blocklyFlyout .blocklyWorkspace')
-      .forEach(x => (x.style.visibility = 'hidden'));
-    document
-      .querySelectorAll('.blocklyTrash')
-      .forEach(x => (x.style.visibility = 'visible'));
+    /**
+     * NodeList.forEach() is not supported on IE. Use Array.prototype.forEach.call() as a workaround.
+     * https://developer.mozilla.org/en-US/docs/Web/API/NodeList/forEach
+     */
+    Array.prototype.forEach.call(
+      document.querySelectorAll('.blocklyFlyout .blocklyWorkspace'),
+      function(x) {
+        x.style.visibility = 'hidden';
+      }
+    );
+
+    /**
+     * NodeList.forEach() is not supported on IE. Use Array.prototype.forEach.call() as a workaround.
+     * https://developer.mozilla.org/en-US/docs/Web/API/NodeList/forEach
+     */
+    Array.prototype.forEach.call(
+      document.querySelectorAll('.blocklyTrash'),
+      function(x) {
+        x.style.visibility = 'visible';
+      }
+    );
   }
   traceOn() {} // TODO
 }
@@ -69,4 +99,31 @@ WorkspaceSvg.prototype.blockSpaceEditor = {
     getLimit: () => {} // TODO
   },
   svgResize: () => {} // TODO
+};
+
+/** Force content to start in top-left corner, not scroll in all directions.
+ * @override
+ */
+WorkspaceSvg.getContentDimensionsBounded_ = function(ws, svgSize) {
+  const content = Blockly.WorkspaceSvg.getContentDimensionsExact_(ws);
+
+  // View height and width are both in pixels, and are the same as the SVG size.
+  const containerWidth = svgSize.width;
+  const containerHeight = svgSize.height;
+
+  // Add extra vertical space beneath the last block
+  const extraVerticalSpace = 100;
+  content.bottom += extraVerticalSpace;
+
+  // Workspace height is either the length of the blocks or the height of the container,
+  // whichever is greater.
+  const height = Math.max(content.bottom, containerHeight);
+
+  const dimensions = {
+    left: 0,
+    top: 0,
+    height: height,
+    width: containerWidth // No horizontal scroll
+  };
+  return dimensions;
 };

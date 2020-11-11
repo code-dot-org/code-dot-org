@@ -8,7 +8,7 @@ class LevelsController < ApplicationController
   include LevelsHelper
   include ActiveSupport::Inflector
   before_action :authenticate_user!, except: [:show, :embed_level, :get_rubric]
-  before_action :require_levelbuilder_mode, except: [:show, :embed_level, :get_rubric]
+  before_action :require_levelbuilder_mode_or_test_env, except: [:show, :embed_level, :get_rubric]
   load_and_authorize_resource except: [:create]
 
   before_action :set_level, only: [:show, :edit, :update, :destroy]
@@ -17,6 +17,7 @@ class LevelsController < ApplicationController
 
   # All level types that can be requested via /levels/new
   LEVEL_CLASSES = [
+    Ailab,
     Applab,
     Artist,
     Bounce,
@@ -61,7 +62,7 @@ class LevelsController < ApplicationController
   def index
     # Define search filter fields
 
-    search_options = search_options(current_user)
+    search_options = Level.search_options
     @search_fields = [
       {
         name: :name,
@@ -92,37 +93,18 @@ class LevelsController < ApplicationController
     @levels = @levels.page(params[:page]).per(LEVELS_PER_PAGE)
   end
 
-  # GET /levels/get_filters/
-  # Get all the information to filter levels with
-  def get_filters
-    render json: search_options(current_user)
-  end
-
   # GET /levels/get_filtered_levels/
   # Get all the information for levels after filtering
   def get_filtered_levels
     filter_levels(params)
+
+    @levels = @levels.limit(150)
+    total_levels = @levels.length
+    page_number = (total_levels / 7.0).ceil
+
     @levels = @levels.page(params[:page]).per(7)
     @levels = @levels.map(&:summarize_for_edit)
-    render json: @levels
-  end
-
-  # Define search filter fields
-  def search_options(current_user)
-    {
-      levelOptions: [
-        ['All types', ''],
-        *LEVEL_CLASSES.map {|x| [x.name, x.name]}.sort_by {|a| a[0]}
-      ],
-      scriptOptions: [
-        ['All scripts', ''],
-        *Script.valid_scripts(current_user).pluck(:name, :id).sort_by {|a| a[0]}
-      ],
-      ownerOptions: [
-        ['Any owner', ''],
-        *Level.joins(:user).distinct.pluck('users.name, users.id').sort_by {|a| a[0]}
-      ]
-    }
+    render json: {numPages: page_number, levels: @levels}
   end
 
   def filter_levels(params)
@@ -308,12 +290,15 @@ class LevelsController < ApplicationController
     begin
       @level = type_class.create_from_level_builder(params, create_level_params)
     rescue ArgumentError => e
-      render(status: :not_acceptable, text: e.message) && return
+      render(status: :not_acceptable, plain: e.message) && return
     rescue ActiveRecord::RecordInvalid => invalid
-      render(status: :not_acceptable, text: invalid) && return
+      render(status: :not_acceptable, plain: invalid) && return
     end
-
-    render json: {redirect: edit_level_path(@level)}
+    if params[:do_not_redirect]
+      render json: @level
+    else
+      render json: {redirect: edit_level_path(@level)}
+    end
   end
 
   # DELETE /levels/1
@@ -354,6 +339,8 @@ class LevelsController < ApplicationController
         @game = Game.fish
       elsif @type_class == CurriculumReference
         @game = Game.curriculum_reference
+      elsif @type_class <= Ailab
+        @game = Game.ailab
       end
       @level = @type_class.new
       render :edit
@@ -368,11 +355,16 @@ class LevelsController < ApplicationController
     new_name = params.require(:name)
     editor_experiment = Experiment.get_editor_experiment(current_user)
     @new_level = @level.clone_with_name(new_name, editor_experiment: editor_experiment)
-    render json: {redirect: edit_level_url(@new_level)}
+
+    if params[:do_not_redirect]
+      render json: @new_level
+    else
+      render json: {redirect: edit_level_url(@new_level)}
+    end
   rescue ArgumentError => e
-    render(status: :not_acceptable, text: e.message)
+    render(status: :not_acceptable, plain: e.message)
   rescue ActiveRecord::RecordInvalid => invalid
-    render(status: :not_acceptable, text: invalid)
+    render(status: :not_acceptable, plain: invalid)
   end
 
   # GET /levels/:id/embed_level

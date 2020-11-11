@@ -24,4 +24,19 @@ class Objective < ActiveRecord::Base
   serialized_attrs %w(
     description
   )
+
+  def summarize_for_edit
+    {id: id, description: description}
+  end
+
+  def summarize_for_lesson_show
+    {id: id, description: display_description}
+  end
+
+  private
+
+  def display_description
+    # TODO: localize the descriptions
+    description
+  end
 end

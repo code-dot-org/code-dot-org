@@ -68,6 +68,7 @@ describe('entry tests', () => {
 
   /** @const {string[]} */
   var ALL_APPS = [
+    'ailab',
     'applab',
     'bounce',
     'calc',
@@ -178,6 +179,12 @@ describe('entry tests', () => {
           cwd: 'node_modules/@code-dot-org/ml-activities/dist/assets',
           src: ['**'],
           dest: 'build/package/media/skins/fish'
+        },
+        {
+          expand: true,
+          cwd: 'node_modules/@code-dot-org/ml-playground/dist/assets',
+          src: ['**'],
+          dest: 'build/package/media/skins/ailab'
         },
 
         // We have to do some weird stuff to get our fallback video player working.
@@ -347,7 +354,10 @@ describe('entry tests', () => {
             'build/package/css/publicKeyCryptography.css',
             'style/publicKeyCryptography/publicKeyCryptography.scss'
           ],
-          ['build/package/css/foorm.css', 'style/code-studio/foorm.scss']
+          [
+            'build/package/css/foorm_editor.css',
+            'style/code-studio/foorm_editor.scss'
+          ]
         ].concat(
           appsToBuild.map(function(app) {
             return [
@@ -582,6 +592,8 @@ describe('entry tests', () => {
     'levels/editors/_craft':
       './src/sites/studio/pages/levels/editors/_craft.js',
     'levels/editors/_dsl': './src/sites/studio/pages/levels/editors/_dsl.js',
+    'levels/editors/fields/_animation':
+      './src/sites/studio/pages/levels/editors/fields/_animation.js',
     'levels/editors/fields/_blockly':
       './src/sites/studio/pages/levels/editors/fields/_blockly.js',
     'levels/editors/fields/_callouts':

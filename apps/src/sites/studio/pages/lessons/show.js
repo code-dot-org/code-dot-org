@@ -9,10 +9,12 @@ import {getStore} from '@cdo/apps/code-studio/redux';
 import {registerReducers} from '@cdo/apps/redux';
 import {Provider} from 'react-redux';
 import _ from 'lodash';
+import {setViewType, ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 
 $(document).ready(function() {
   const lessonData = getScriptData('lesson');
   const activities = lessonData['activities'];
+  const isTeacher = lessonData['is_teacher'];
 
   // Rename any keys that are different on the backend.
   activities.forEach(activity => {
@@ -39,10 +41,20 @@ $(document).ready(function() {
         // React key
         tip.key = _.uniqueId();
       });
+
+      activitySection.scriptLevels.forEach(scriptLevel => {
+        // The position within the lesson
+        scriptLevel.levelNumber = scriptLevel.position;
+        delete scriptLevel.position;
+      });
     });
   });
 
   const store = getStore();
+
+  if (isTeacher) {
+    store.dispatch(setViewType(ViewType.Teacher));
+  }
 
   if (lessonData.announcements) {
     registerReducers({announcements: announcementsReducer});

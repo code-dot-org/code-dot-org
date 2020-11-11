@@ -1415,7 +1415,12 @@
         "grade5_artist_binary8": "Maak de tekening af.",
         "grade5_artist_binary9": "Hier is een canvas met een hogere resolutie om op te tekenen - 16 bij 16 pixels!\\\r\n\\\r\nZie je wat er gebeurt als we creatief worden met bitjes?",
         "iceage_hello1": "Help Sid \"Hello!\" zeggen door de `zeg` blok naar buiten te slepen en het te verbinden aan de onderkant van de `als gestart` gebeurtenis.",
-        "k-1 maze 1": "Kun je me naar het Westen bewegen om bij het varken te komen?"
+        "k-1 maze 1": "Kun je me naar het Westen bewegen om bij het varken te komen?",
+        "scrat 16": "Eikel! Eikel! Eikel! Gebruik een \"als\" blok om me op de juiste plek te krijgen met het minste aantal blokken.",
+        "scrat 17": "Ok, laten we dat om te oefenen nog eens doen - dit is bijna hetzelfde, maar let op de muur!",
+        "scrat 18": "Het \"als anders\" blok kijkt naar een voorwaarde en doet het één OF het ander. Gebruik dit blok om me naar de eikel te brengen.",
+        "scrat 19": "Nog een oefening met het \"als-anders\" blok, kun je het in een keer goed doen?",
+        "scrat 20": "Kun jij dit moeilijke doolhof oplossen door maar 3 blokken toe te voegen? Als je het goed doet kan ik ieder kronkelend pad volgen, hoe lang het ook is. Schiet op! Het ijs is aan het smelten!"
       }
     }
   }

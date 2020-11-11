@@ -116,8 +116,6 @@ class ActivitiesController < ApplicationController
 
     total_lines = if current_user && current_user.total_lines
                     current_user.total_lines
-                  else
-                    client_state.lines
                   end
 
     render json: milestone_response(
@@ -252,7 +250,7 @@ class ActivitiesController < ApplicationController
     log_string = 'Milestone Report:'
     log_string +=
       if current_user || session.id
-        "\t#{(current_user ? current_user.id.to_s : ('s:' + session.id))}"
+        "\t#{(current_user ? current_user.id.to_s : ('s:' + session.id.to_s))}"
       else
         "\tanon"
       end

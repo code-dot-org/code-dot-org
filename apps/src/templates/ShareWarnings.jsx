@@ -92,6 +92,7 @@ class ShareWarnings extends Component {
           <a
             style={styles.moreInfo}
             target="_blank"
+            rel="noopener noreferrer"
             href="https://code.org/privacy"
           >
             {commonMsg.shareWarningsMoreInfo()}

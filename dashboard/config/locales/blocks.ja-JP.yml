@@ -1156,6 +1156,8 @@ ja:
         text: スプライト {SPRITE} 停止 {BEHAVIOR}
       gamelab_removeTint:
         text: 色の削除元 {THIS}
+      gamelab_repeatForever:
+        text: ずっと
       gamelab_setAnimation:
         text: 変更 {THIS} 衣装に {ANIMATION}
       gamelab_setBackground:

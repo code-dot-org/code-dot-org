@@ -8,6 +8,7 @@
 #  questions  :text(65535)      not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  published  :boolean          default(TRUE), not null
 #
 # Indexes
 #
@@ -42,12 +43,15 @@ class Foorm::Form < ActiveRecord::Base
 
       # Let's load the JSON text.
       questions = File.read(path)
+      # if published is not provided, default to true
+      published = questions['published'].nil? ? true : questions['published']
 
       {
         id: id,
         name: full_name,
         version: version,
-        questions: questions
+        questions: questions,
+        published: published
       }
     end
 
@@ -173,15 +177,27 @@ class Foorm::Form < ActiveRecord::Base
   # received for that Form. It includes the content of the form submitted
   # by a user, as well as some additional metadata about the context
   # in which the form was submitted (eg, workshop ID, user ID).
-  def submissions_to_csv(file_path)
-    filtered_submissions = submissions.
-      reject {|submission| submission.workshop_metadata&.facilitator_specific?}
+  # @param submissions_to_report: optional array of submissions to write to csv.
+  # If any submissions in the array do not belong to this form they will not be written
+  # to the csv.
+  # @return csv text
+  def submissions_to_csv(submissions_to_report=nil)
+    calculated_readable_questions = readable_questions
+    headers = calculated_readable_questions[:general]
+    has_facilitator_questions = !(calculated_readable_questions[:facilitator].nil_or_empty?)
+    filtered_submissions = submissions_to_report || submissions
+
+    if has_facilitator_questions
+      filtered_submissions = filtered_submissions.
+        reject do |submission|
+          submission.workshop_metadata&.facilitator_specific?
+        end
+    end
 
     # Default headers are the non-facilitator specific set of questions.
-    headers = readable_questions[:general]
-
     parsed_answers = []
     filtered_submissions.each do |submission|
+      next if submission.form_name != name || submission.form_version != version
       answers = submission.formatted_answers
 
       # Add in new headers for questions that are not in the form
@@ -200,37 +216,46 @@ class Foorm::Form < ActiveRecord::Base
 
       headers = potential_new_headers.merge headers
 
-      if submission.associated_facilitator_submissions
-        submission.associated_facilitator_submissions.each_with_index do |facilitator_response, index|
-          next if facilitator_response.nil?
-          facilitator_number = index + 1
+      # look for associated facilitator questions if the form has facilitator questions.
+      if has_facilitator_questions
+        associated_facilitator_submissions = submission.associated_facilitator_submissions
 
-          # Add facilitator number identifier to facilitator-specific questions
-          facilitator_headers_with_facilitator_number = readable_questions_with_facilitator_number(facilitator_number)
+        if associated_facilitator_submissions
+          associated_facilitator_submissions.each_with_index do |facilitator_response, index|
+            next if facilitator_response.nil?
+            facilitator_number = index + 1
 
-          # Add same facilitator number identifier to facilitator-specific questions,
-          # such that they map to the appropriate headers.
-          facilitator_response_with_facilitator_number = facilitator_response.
-            formatted_answers_with_facilitator_number(facilitator_number)
+            # Add facilitator number identifier to facilitator-specific questions
+            facilitator_headers_with_facilitator_number = readable_questions_with_facilitator_number(
+              calculated_readable_questions,
+              facilitator_number
+            )
 
-          # Add facilitator-specific response to answers,
-          # and prep a new set of headers to add to cover facilitator-specific questions.
-          # Don't add to headers array yet, as we want important information
-          # in the response but not in the form itself (eg, facilitator ID)
-          # to come before answers to facilitator-specific questions.
-          facilitator_headers = facilitator_headers_with_facilitator_number
-          answers.merge! facilitator_response_with_facilitator_number
+            # Add same facilitator number identifier to facilitator-specific questions,
+            # such that they map to the appropriate headers.
+            facilitator_response_with_facilitator_number = facilitator_response.
+              formatted_answers_with_facilitator_number(facilitator_number)
 
-          # Add any facilitator-specific questions as headers
-          # that are in the submission but not already in the list of headers.
-          potential_new_headers = Hash[
-            facilitator_response_with_facilitator_number.keys.map {|question_id| [question_id, question_id]}
-          ]
-          facilitator_headers = potential_new_headers.merge facilitator_headers
+            # Add facilitator-specific response to answers,
+            # and prep a new set of headers to add to cover facilitator-specific questions.
+            # Don't add to headers array yet, as we want important information
+            # in the response but not in the form itself (eg, facilitator ID)
+            # to come before answers to facilitator-specific questions.
+            facilitator_headers = facilitator_headers_with_facilitator_number
+            answers.merge! facilitator_response_with_facilitator_number
 
-          headers.merge! facilitator_headers
+            # Add any facilitator-specific questions as headers
+            # that are in the submission but not already in the list of headers.
+            potential_new_headers = Hash[
+              facilitator_response_with_facilitator_number.keys.map {|question_id| [question_id, question_id]}
+            ]
+            facilitator_headers = potential_new_headers.merge facilitator_headers
+
+            headers.merge! facilitator_headers
+          end
         end
       end
+
       # Add combined general and facilitator answers to an array
       parsed_answers << answers
     end
@@ -244,15 +269,16 @@ class Foorm::Form < ActiveRecord::Base
     comma_separated_submissions.each {|row| rows_to_write << row}
 
     # Finally, add the header row and, subsequently, rows of survey responses.
-    CSV.open(file_path, "wb") do |csv|
+    csv_result = CSV.generate do |csv|
       rows_to_write.each {|row| csv << row}
     end
 
-    rows_to_write
+    csv_result
   end
 
   def parsed_questions
-    Pd::Foorm::FoormParser.parse_forms([self])
+    @parsed_questions ||= Pd::Foorm::FoormParser.parse_forms([self])
+    @parsed_questions
   end
 
   # Returns a hash with keys matching what is produced by parsed_questions.
@@ -282,9 +308,9 @@ class Foorm::Form < ActiveRecord::Base
     questions
   end
 
-  def readable_questions_with_facilitator_number(number)
+  def readable_questions_with_facilitator_number(questions, number)
     Hash[
-      readable_questions[:facilitator].map do |question_id, question_text|
+      questions[:facilitator].map do |question_id, question_text|
         [question_id + "_#{number}", "Facilitator #{number}: " + question_text]
       end
     ]

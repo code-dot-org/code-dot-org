@@ -140,15 +140,8 @@ class DropdownEvents extends React.Component {
 
   getChangeEventCode() {
     const id = elementUtils.getId(this.props.element);
-    const code =
-      'onEvent("' +
-      id +
-      '", "change", function(event) {\n' +
-      '  console.log("Selected option: " + getText("' +
-      id +
-      '"));\n' +
-      '});\n';
-    return code;
+    const callback = `function( ) {\n\tconsole.log("Selected option: " + getText("${id}"));\n}`;
+    return `onEvent("${id}", "change", ${callback});`;
   }
 
   insertChange = () => {

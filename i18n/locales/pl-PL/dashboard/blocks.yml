@@ -1014,8 +1014,6 @@ pl:
         text: "{SPRITE}"
       gamelab_comment:
         text: 'komentarz: {COMMENT}'
-      gamelab_cos:
-        text: cos {NUM}
       gamelab_countByAnimation:
         text: liczba {SPRITE}
       gamelab_createNewSprite:
@@ -1052,6 +1050,12 @@ pl:
             '"frames"': ramki
       gamelab_hideTitleScreen:
         text: ukryj ekran tytułowy
+      gamelab_ifVarEquals:
+        text: |-
+          jeśli {NUM} ={VAL}
+          {STATEMENT}
+      gamelab_isCostumeEqual:
+        text: kostium {SPRITE} jest {COSTUME}
       gamelab_isKeyPressed:
         text: czy {KEY} został naciśnięty
         options:
@@ -1201,6 +1205,8 @@ pl:
         text: duszek {SPRITE} zatrzymuje {BEHAVIOR}
       gamelab_removeTint:
         text: usuń kolor z {THIS}
+      gamelab_repeatForever:
+        text: powtarzaj w nieskończoność
       gamelab_setAnimation:
         text: zmień {THIS} kostium na {ANIMATION}
       gamelab_setBackground:
@@ -1230,6 +1236,8 @@ pl:
             '"x"': współrzędna x
             '"y"': współrzędna y
             '"direction"': kierunku ruchu
+      gamelab_setQuestion:
+        text: zadaj pytanie {QUESTION} dla zmiennej {VAR}
       gamelab_setSizes:
         text: ustaw {SPRITE} {PROPERTY} na {N}%
         options:
@@ -1243,8 +1251,6 @@ pl:
         text: "ustaw symulację  {SPRITE1N}{SPRITE1COSTUME} z prędkością \n{SPRITE1SPEED}\nSPRITE2N][3]{SPRITE2COSTUME} z prędkością\n {SPRITE2SPEED}\nzbierając\n{SPRITE3N}{SPRITE3COSTUME}"
       gamelab_showTitleScreen:
         text: pokaż ekran tytułowy {BREAK} tytuł {TITLE} podtytuł {SUBTITLE}
-      gamelab_sin:
-        text: sin {NUM}
       gamelab_spriteClicked:
         text: "{CONDITION} {SPRITE} kliknięty"
         options:
@@ -1280,6 +1286,8 @@ pl:
             '"d"': d
       gamelab_whenLeftArrow:
         text: po naciśnięciu strzałki w lewo
+      gamelab_whenQuestionAnswered:
+        text: gdy {VAR} uzyskała odpowiedź
       gamelab_whenRightArrow:
         text: po naciśnięciu strzałki w prawo
       gamelab_whenTouching:
@@ -1309,6 +1317,10 @@ pl:
         text: dopóki {SPRITE1} dotyka {SPRITE2}
       gamelab_whileUpArrow:
         text: po naciśnięciu strzałki w górę
+      gamelab_withPercentChance:
+        text: |-
+          jeśli {NUM}% szansa
+          {STATEMENT}
       gamelab_xLocationOf:
         text: x współrzędna {SPRITE}
       gamelab_yLocationOf:

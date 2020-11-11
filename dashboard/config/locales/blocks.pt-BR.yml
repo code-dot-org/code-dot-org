@@ -1159,6 +1159,8 @@ pt:
         text: personagem {SPRITE} para {BEHAVIOR}
       gamelab_removeTint:
         text: retirar cor de {THIS}
+      gamelab_repeatForever:
+        text: repita infinitamente
       gamelab_setAnimation:
         text: alterar fantasia de {THIS} para {ANIMATION}
       gamelab_setBackground:

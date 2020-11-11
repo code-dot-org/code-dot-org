@@ -1154,6 +1154,8 @@ ro:
         text: obiectul {SPRITE} opreşte {BEHAVIOR}
       gamelab_removeTint:
         text: elimină culoarea din {THIS}
+      gamelab_repeatForever:
+        text: repetă pentru totdeauna
       gamelab_setAnimation:
         text: schimbă costumul {THIS} cu {ANIMATION}
       gamelab_setBackground:

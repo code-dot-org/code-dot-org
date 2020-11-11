@@ -11,15 +11,19 @@ describe('ActivityCard', () => {
     removeActivity,
     moveActivity,
     updateActivityField,
-    setActivitySectionMetrics,
-    setTargetActivitySection;
+    setActivitySectionRef,
+    updateTargetActivitySection,
+    handleCollapse,
+    updateActivitySectionMetrics;
   beforeEach(() => {
     addActivitySection = sinon.spy();
     removeActivity = sinon.spy();
     moveActivity = sinon.spy();
     updateActivityField = sinon.spy();
-    setActivitySectionMetrics = sinon.spy();
-    setTargetActivitySection = sinon.spy();
+    setActivitySectionRef = sinon.spy();
+    updateTargetActivitySection = sinon.spy();
+    updateActivitySectionMetrics = sinon.spy();
+    handleCollapse = sinon.spy();
     defaultProps = {
       activity: sampleActivities[0],
       activitiesCount: 1,
@@ -27,10 +31,13 @@ describe('ActivityCard', () => {
       removeActivity,
       moveActivity,
       updateActivityField,
-      setActivitySectionMetrics,
-      setTargetActivitySection,
+      setActivitySectionRef,
+      updateTargetActivitySection,
+      updateActivitySectionMetrics,
       targetActivitySectionPos: 1,
-      activitySectionMetrics: {}
+      activitySectionMetrics: [],
+      handleCollapse,
+      collapsed: false
     };
   });
 
@@ -70,6 +77,6 @@ describe('ActivityCard', () => {
 
     const titleInput = wrapper.find('input').at(1);
     titleInput.simulate('change', {target: {value: '1000'}});
-    expect(updateActivityField).to.have.been.calledWith(1, 'duration', '1000');
+    expect(updateActivityField).to.have.been.calledWith(1, 'duration', 1000);
   });
 });

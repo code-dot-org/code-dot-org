@@ -18,35 +18,34 @@ class LessonsController < ApplicationController
 
   # GET /lessons/1
   def show
-    @lesson_data = {
-      unit: {
-        displayName: @lesson.script.localized_title,
-        link: @lesson.script.link,
-        lessons: @lesson.script.lessons.map {|lesson| {displayName: lesson.localized_name, link: lesson_path(id: lesson.id)}}
-      },
-      displayName: @lesson.localized_title,
-      overview: @lesson.overview || '',
-      announcements: @lesson.announcements,
-      purpose: @lesson.purpose || '',
-      preparation: @lesson.preparation || '',
-      activities: @lesson.lesson_activities.map(&:summarize_for_lesson_show)
-    }
+    @lesson_data = @lesson.summarize_for_lesson_show(@current_user)
   end
 
   # GET /lessons/1/edit
   def edit
     @lesson_data = @lesson.summarize_for_lesson_edit
     @related_lessons = @lesson.summarize_related_lessons
+    @search_options = Level.search_options
+    view_options(full_width: true)
   end
 
   # PATCH/PUT /lessons/1
   def update
     resources = (lesson_params['resources'] || []).map {|key| Resource.find_by_key(key)}
-    @lesson.resources = resources.compact
-    @lesson.update!(lesson_params.except(:resources))
-    @lesson.update_activities(JSON.parse(params[:activities])) if params[:activities]
+    ActiveRecord::Base.transaction do
+      @lesson.resources = resources.compact
+      @lesson.update!(lesson_params.except(:resources, :objectives))
+      @lesson.update_activities(JSON.parse(params[:activities])) if params[:activities]
+      @lesson.update_objectives(JSON.parse(params[:objectives])) if params[:objectives]
+    end
 
-    redirect_to lesson_path(id: @lesson.id)
+    if params[:do_not_redirect]
+      render json: @lesson
+    else
+      redirect_to lesson_path(id: @lesson.id)
+    end
+  rescue ActiveRecord::RecordNotFound, ActiveRecord::RecordInvalid => e
+    render(status: :not_acceptable, plain: e.message)
   end
 
   private
@@ -62,6 +61,7 @@ class LessonsController < ApplicationController
     # for now, only allow editing of fields that cannot be edited on the
     # script edit page.
     lp = lp.permit(
+      :name,
       :overview,
       :student_overview,
       :assessment,
@@ -71,7 +71,8 @@ class LessonsController < ApplicationController
       :purpose,
       :preparation,
       :announcements,
-      :resources
+      :resources,
+      :objectives
     )
     lp[:announcements] = JSON.parse(lp[:announcements]) if lp[:announcements]
     lp[:resources] = JSON.parse(lp[:resources]) if lp[:resources]

@@ -5,6 +5,13 @@ import _ from 'lodash';
 import Select from 'react-select';
 import 'react-select/dist/react-select.css';
 import color from '@cdo/apps/util/color';
+import AddResourceDialog from './AddResourceDialog';
+import Button from '@cdo/apps/templates/Button';
+import {connect} from 'react-redux';
+import {
+  addResource,
+  removeResource
+} from '@cdo/apps/lib/levelbuilder/lesson-editor/resourcesEditorRedux';
 
 const styles = {
   resourceSearch: {
@@ -29,18 +36,20 @@ const styles = {
   }
 };
 
-export default class ResourcesEditor extends Component {
+class ResourcesEditor extends Component {
   static propTypes = {
-    resources: PropTypes.arrayOf(resourceShape)
+    resources: PropTypes.arrayOf(resourceShape).isRequired,
+    addResource: PropTypes.func.isRequired,
+    removeResource: PropTypes.func.isRequired
   };
 
   constructor(props) {
     super(props);
 
     this.state = {
-      resources: props.resources || [],
       resourceInput: '',
-      searchValue: ''
+      searchValue: '',
+      newResourceDialogOpen: false
     };
   }
 
@@ -71,7 +80,7 @@ export default class ResourcesEditor extends Component {
     fetch(searchUrl, {headers: {'X-Requested-With': 'XMLHttpRequest'}})
       .then(response => (response.ok ? response.json() : []))
       .then(json => {
-        const resourceKeysAdded = this.state['resources'].map(
+        const resourceKeysAdded = this.props.resources.map(
           resource => resource.key
         );
         const resources = json
@@ -103,27 +112,36 @@ export default class ResourcesEditor extends Component {
     });
   };
 
-  addResource = e => {
-    var {resources} = this.state;
-    resources.push(e.resource);
-    this.setState({resources});
+  addResource = resource => {
+    this.props.addResource(resource);
   };
 
   handleRemove = key => {
-    const {resources} = this.state;
-    const resourceToRemove = resources.find(resource => resource.key === key);
-    resources.splice(resources.indexOf(resourceToRemove), 1);
-    this.setState({resources});
+    this.props.removeResource(key);
+  };
+
+  handleAddResourceClick = e => {
+    e.preventDefault();
+    this.setState({newResourceDialogOpen: true});
+  };
+
+  handleNewResourceDialogClose = () => {
+    this.setState({newResourceDialogOpen: false});
   };
 
   render() {
     return (
       <div>
+        <AddResourceDialog
+          isOpen={this.state.newResourceDialogOpen}
+          onSave={this.addResource}
+          handleClose={this.handleNewResourceDialogClose}
+        />
         Resources
         <input
           type="hidden"
           name="resources"
-          value={JSON.stringify(this.state.resources.map(r => r.key))}
+          value={JSON.stringify(this.props.resources.map(r => r.key))}
         />
         <div style={styles.resourceBox}>
           <div style={styles.resourceSearch}>
@@ -133,7 +151,7 @@ export default class ResourcesEditor extends Component {
               name="resource_search"
               loadOptions={this.getOptions}
               value={this.state.searchValue}
-              onChange={this.addResource}
+              onChange={e => this.addResource(e.resource)}
               onValueClick={this.addResource}
               placeholder={''}
             />
@@ -141,22 +159,26 @@ export default class ResourcesEditor extends Component {
           <table style={{width: '100%'}}>
             <thead>
               <tr>
-                <th style={{width: '10%'}}>Key</th>
-                <th style={{width: '25%'}}>Name</th>
-                <th style={{width: '15%'}}>Type</th>
-                <th style={{width: '40%'}}>URL</th>
+                <th style={{width: '20%'}}>Key</th>
+                <th style={{width: '20%'}}>Name</th>
+                <th style={{width: '10%'}}>Type</th>
+                <th style={{width: '10%'}}>Audience</th>
+                <th style={{width: '30%'}}>URL</th>
                 <th style={{width: '10%'}}>Actions</th>
               </tr>
             </thead>
             <tbody>
-              {this.state.resources.map((resource, index) => (
+              {this.props.resources.map((resource, index) => (
                 <tr
                   key={resource.key}
                   style={index % 2 === 1 ? styles.oddRow : {}}
                 >
                   <td>{resource.key}</td>
                   <td>{resource.name}</td>
-                  <td>{resource.type}</td>
+                  <td>{resource.properties ? resource.properties.type : ''}</td>
+                  <td>
+                    {resource.properties ? resource.properties.audience : ''}
+                  </td>
                   <td>{resource.url}</td>
                   <td style={{backgroundColor: 'white'}}>
                     <div
@@ -170,8 +192,25 @@ export default class ResourcesEditor extends Component {
               ))}
             </tbody>
           </table>
+          <Button
+            onClick={this.handleAddResourceClick}
+            text={'Add New Resource'}
+            color={color.blue}
+          />
         </div>
       </div>
     );
   }
 }
+
+export const UnconnectedResourcesEditor = ResourcesEditor;
+
+export default connect(
+  state => ({
+    resources: state.resources
+  }),
+  {
+    addResource,
+    removeResource
+  }
+)(ResourcesEditor);

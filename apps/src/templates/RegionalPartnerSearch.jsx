@@ -286,6 +286,7 @@ class RegionalPartnerSearch extends Component {
                 <a
                   href="https://docs.google.com/document/d/1OeLNx97wiLon69e8lp45M6ox0BuYLCOSZedzrtMB8_k/edit"
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   this document
                 </a>
@@ -341,7 +342,7 @@ class RegionalPartnerSearch extends Component {
                 <h3>Workshop information (hosted by {partnerInfo.name}):</h3>
                 {workshopCollections[0].workshops.length === 0 &&
                   workshopCollections[1].workshops.length === 0 && (
-                    <div>Workshops not currently available in your region.</div>
+                    <div>Workshop details coming soon!</div>
                   )}
 
                 {workshopCollections.map(
