@@ -14,28 +14,22 @@ theme: responsive
 <p>We want to support teachers, students, and families in any way we can. Below is a set of resources to help your student learn computer science at home. <strong>Parents – if you're considering creating a Code.org account for your student or helping them access an existing account, <a href="https://support.code.org/hc/en-us/articles/360040703792">please read this primer</a>.</strong></p>
 <p>We are also working on <a href="#teacher-support">resources to help teachers mid-course</a> to continue teaching computer science when their students are remote. </p>
 <p><a href="#apps">No computer at home? See smartphone options</a></p>
-
 <br>
 
-<div class="breakoutquote" style="padding: 18px; border-radius: 15px; background-image: linear-gradient(to top left, #a6e3e8, #d9f3f5, #ffffff)">
+<div class="breakoutquote" style="padding: 0 18px; border-radius: 15px; background-image: linear-gradient(to top left, #a6e3e8, #d9f3f5, #ffffff)">
 
-<div class="col-40">
-<a href="https://code.org/codebytes"><img src="/images/marketing/CodeBytes_CandyAsset.png" style="max-width: 85%; padding-left: 25px; margin: auto"></a>
+<div class="col-40" style="margin-top: 18px; margin-bottom: 18px;">
+<a href="https://code.org/codebytes"><img src="/images/marketing/CodeBytes_CandyAsset.png" style="max-width: 95%; padding-left:25px; margin: auto"></a>
 </div>
 
-<div class="col-60" style="padding-right:25px">
+<div class="col-60" style="padding:0 25px 0 25px;margin-top: 18px; margin-bottom: 18px;">
 
 <p style="border: 0; color: #4d575f">Try a CodeByte with Hadi Partovi and the Code.org team</p>
 <p style="font-size: 14px; border: 0; color: #4d575f">Designed to fit smoothly into a virtual or distance learning plan, CodeBytes are easy-to-digest, 20 minute interactive lessons streaming during Computer Science Education Week, December 7-11.</p>
 <p style="font-size: 14px; border: 0; color: #4d575f">Learn more at <a href="https://code.org/codebytes" style="color:#7665a0">code.org/codebytes</a></p>
-
 </div>
 
-<div class="clearboth">
-
-</div>
-
-</div>
+<div class="clearboth"></div></div>
 
 ## Hour of Code: Try these engaging, introductory tutorials
 Try a one-hour tutorial designed for all ages. There are hundreds of activities and tutorials in over 45 languages.
@@ -80,7 +74,6 @@ Try a one-hour tutorial designed for all ages. There are hundreds of activities 
 <br>
 <p><a href="#top">[Back to top]</a></p>
 <div style="clear: both; padding-top: 40px; border-bottom:1px solid #00adbc"></div>
-
 <a id="express"></a>
 ## Learn the fundamentals with our self-paced courses
 ### **Express courses**
@@ -99,7 +92,6 @@ A great option for students getting started on their own. You'll learn the funda
 
 </div>
 <div style="clear: both"></div>
-
 <hr>
 
 ### **Programming Modules for older students**
@@ -107,7 +99,6 @@ A great option for students getting started on their own. You'll learn the funda
 Adapted from our CS Principles courses, these short, self-paced modules for middle and high school students are a great way to learn concepts that span all programming languages and tools.
 
 <div style="clear: both; margin-bottom: 20px"></div>
-
 #### Turtle Programming in App Lab
 
 <div class="col-25" style="padding-right: 20px;">
@@ -124,7 +115,6 @@ Adapted from our CS Principles courses, these short, self-paced modules for midd
 </div>
 
 <div style="clear: both; margin-bottom: 30px"></div>
-
 #### Event-Driven Programming in App Lab
 
 <div class="col-25" style="text-align:center; padding-right: 20px;">
@@ -141,7 +131,6 @@ Adapted from our CS Principles courses, these short, self-paced modules for midd
 </div>
 
 <div style="clear: both; margin-bottom: 30px"></div>
-
 <p><a href="#top">[Back to top]</a></p>
 <div style="clear: both; padding-top: 40px; border-bottom:1px solid #00adbc"></div>
 ## Learn to design and build apps with App Lab
@@ -184,9 +173,7 @@ Adapted from our CS Principles courses, these short, self-paced modules for midd
 
 </div>
 <div style="clear: both; margin-bottom: 15px"></div>
-
 <p><a href="#top">[Back to top]</a></p>
-
 <div style="clear: both; padding-top: 40px; border-bottom:1px solid #00adbc"></div>
 ## Limited or no internet access? Check out these unplugged activities
 * [Hello Ruby](https://www.helloruby.com/play)  - The world's most whimsical way to learn about computers, technology and programming. Activities on a range of CS topics, like the ability to decompose a problem, spot patterns, think algorithmically, debug problems and work together. *(for ages 4-10)*
@@ -219,7 +206,5 @@ A guide for teachers with resources to materials that students can use at home t
 
 </div>
 <div style="clear: both; margin-bottom: 15px"></div>
-
 <p><a href="#top">[Back to top]</a></p>
-
 <div style="clear: both; padding-top: 40px; "></div>

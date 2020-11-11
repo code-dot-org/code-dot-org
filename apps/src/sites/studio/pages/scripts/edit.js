@@ -103,12 +103,12 @@ export default function initPage(scriptEditorData) {
         curriculumPath={scriptData.curriculum_path}
         pilotExperiment={scriptData.pilot_experiment}
         editorExperiment={scriptData.editor_experiment}
-        announcements={announcements}
+        initialAnnouncements={announcements}
         supportedLocales={scriptData.supported_locales}
         locales={locales}
         projectSharing={scriptData.project_sharing}
         curriculumUmbrella={scriptData.curriculum_umbrella}
-        familyName={scriptData.family_name}
+        initialFamilyName={scriptData.family_name}
         versionYear={scriptData.version_year}
         scriptFamilies={scriptEditorData.script_families}
         versionYearOptions={scriptEditorData.version_year_options}
@@ -117,7 +117,7 @@ export default function initPage(scriptEditorData) {
         /* isCourse controls whether this Script/Unit is intended to be the root of a CourseOffering version.
          * hasCourse indicates whether this Script/Unit is part of a UnitGroup. These two in theory should be
          * complements, but currently (August 2020) they are not, so they are separate fields for now. */
-        isCourse={scriptData.is_course}
+        initialIsCourse={scriptData.is_course}
         hasCourse={scriptEditorData.has_course}
       />
     </Provider>,
