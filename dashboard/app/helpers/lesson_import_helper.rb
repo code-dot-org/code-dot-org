@@ -19,15 +19,15 @@ module LessonImportHelper
     lesson.script_levels = []
   end
 
-  def self.create_activity_sections(activity_markdown, position)
+  def self.create_activity_sections(activity_markdown)
     tip_matches = find_tips(activity_markdown).select {|m| m[1] != 'say'}.map {|m| {index: activity_markdown.index(m[0]), type: 'tip', match: m, substring: m[0]}}
     tip_link_matches = find_tip_links(activity_markdown).map {|m| {index: activity_markdown.index(m[0]), type: 'tiplink', match: m, substring: m[0]}}
     remark_matches = find_remarks(activity_markdown).map {|m| {index: activity_markdown.index(m[0]), type: 'remark', match: m, substring: m[0]}}
-    pullthrough_matches = find_skippable_syntax(activity_markdown).map {|m| {index: activity_markdown.index(m[0]), type: 'skippable', match: m, substring: m[0]}}
+    skippable_matches = find_skippable_syntax(activity_markdown).map {|m| {index: activity_markdown.index(m[0]), type: 'skippable', match: m, substring: m[0]}}
     slide_matches = find_slides(activity_markdown).map {|m| {index: activity_markdown.index(m[0]), type: 'slide', match: m, substring: m[0]}}
-    matches = remark_matches + tip_link_matches + pullthrough_matches + slide_matches
+    matches = tip_matches + remark_matches + tip_link_matches + skippable_matches + slide_matches
     sorted_matches = matches.sort_by {|m| m[:index]}
-    return [ActivitySection.new(description: activity_markdown.strip, seeding_key: SecureRandom.uuid, position: position)] if matches.empty?
+    return [ActivitySection.new(description: activity_markdown.strip, seeding_key: SecureRandom.uuid, position: 1)] if matches.empty?
     sorted_matches = find_markdown_chunks(activity_markdown, sorted_matches)
     sections = []
     tip_match_map = {}
@@ -38,7 +38,7 @@ module LessonImportHelper
     end
     sorted_matches.each_with_index do |match, i|
       activity_section = nil
-      if match[:type] == 'skippable'
+      if match[:type] == 'skippable' || match[:type] == 'tip'
         next
       elsif match[:type] == 'slide'
         # For now, if we find the slide token, apply it to the next thing
@@ -80,7 +80,7 @@ module LessonImportHelper
       @lesson_activity.position = i
       @lesson_activity.save!
       @lesson_activity.reload
-      @lesson_activity.activity_sections = create_activity_sections(a['content'], i)
+      @lesson_activity.activity_sections = create_activity_sections(a['content'])
       @lesson_activity
     end
     @lesson_activity = LessonActivity.new
@@ -159,7 +159,7 @@ module LessonImportHelper
 
   # https://github.com/code-dot-org/remark-plugins/blob/master/src/tip.js
   def self.find_tips(markdown)
-    regex = /^!!! *?([\w-]+)(?: "(.*?)")?(?: <(.*?)>)?(?:[\s]+$)+([\d\D]+?)(?=(^\S|$))/
+    regex = /^!!! *?([\w-]+)(?: "(.*?)")?(?: <(.*?)>)?(?:[\s]+$)+([\d\D]+?)(?=(^\S|^$))/
     markdown.to_enum(:scan, regex).map {Regexp.last_match}
   end
 
@@ -171,7 +171,7 @@ module LessonImportHelper
 
   def self.format_tip_markdown(markdown)
     markdown = markdown.chomp.reverse.chomp.reverse
-    markdown.gsub(/^\t/, '')
+    markdown.gsub(/(^\t|^ {4})/, '')
   end
 
   def self.create_tip(type, key, markdown)
