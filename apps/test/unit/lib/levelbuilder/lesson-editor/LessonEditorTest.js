@@ -1,5 +1,5 @@
 import React from 'react';
-import {mount, shallow} from 'enzyme';
+import {mount} from 'enzyme';
 import {expect} from '../../../../util/reconfiguredChai';
 import LessonEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/LessonEditor';
 import {
@@ -112,23 +112,23 @@ describe('LessonEditor', () => {
     expect(wrapper.find('ActivitySection').length).to.equal(4);
   });
 
-
   it('can save and keep editing', () => {
     const wrapper = createWrapper({});
     const lessonEditor = wrapper.find('LessonEditor');
 
     let returnData = {updated_at: '2020-11-06T21:33:32.000Z'};
     let server = sinon.fakeServer.create();
-    server.respondWith(
-      'PUT',
-      `/lessons/1?do_not_redirect=true`,
-      [200, {'Content-Type': 'application/json'}, JSON.stringify(returnData)]
-    );
+    server.respondWith('PUT', `/lessons/1?do_not_redirect=true`, [
+      200,
+      {'Content-Type': 'application/json'},
+      JSON.stringify(returnData)
+    ]);
 
     const saveBar = wrapper.find('.saveBar');
 
     const saveAndKeepEditingButton = saveBar.find('button').at(0);
-    expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).to.be.true;
+    expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).to.be
+      .true;
     saveAndKeepEditingButton.simulate('click');
 
     // check the the spinner is showing
@@ -149,18 +149,19 @@ describe('LessonEditor', () => {
     const wrapper = createWrapper({});
     const lessonEditor = wrapper.find('LessonEditor');
 
-    let returnData = "There was an error";
+    let returnData = 'There was an error';
     let server = sinon.fakeServer.create();
-    server.respondWith(
-      'PUT',
-      `/lessons/1?do_not_redirect=true`,
-      [404, {'Content-Type': 'application/json'}, returnData]
-    );
+    server.respondWith('PUT', `/lessons/1?do_not_redirect=true`, [
+      200,
+      {'Content-Type': 'application/json'},
+      JSON.stringify(returnData)
+    ]);
 
     const saveBar = wrapper.find('.saveBar');
 
     const saveAndKeepEditingButton = saveBar.find('button').at(0);
-    expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).to.be.true;
+    expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).to.be
+      .true;
     saveAndKeepEditingButton.simulate('click');
 
     // check the the spinner is showing
