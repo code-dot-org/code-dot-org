@@ -71,6 +71,7 @@ def apply_text(image, text, pointsize, font, color, x_offset, y_offset, width=ni
       # Center the text in the box.
       self.gravity = Magick::CenterGravity
     end.first
+
     return unless text_overlay
     # remove empty space around the text
     text_overlay.trim!
@@ -83,7 +84,6 @@ def apply_text(image, text, pointsize, font, color, x_offset, y_offset, width=ni
     # until destroyed)
     text_overlay.destroy!
   rescue Magick::ImageMagickError => exception
-    puts exception
     # We want to know what kinds of text we are failing to render.
     Honeybadger.notify(
       exception,
