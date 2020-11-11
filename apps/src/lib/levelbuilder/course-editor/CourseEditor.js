@@ -45,8 +45,8 @@ export default class CourseEditor extends Component {
     isStable: PropTypes.bool.isRequired,
     pilotExperiment: PropTypes.string,
     descriptionShort: PropTypes.string,
-    descriptionStudent: PropTypes.string,
-    descriptionTeacher: PropTypes.string,
+    initialDescriptionStudent: PropTypes.string,
+    initialDescriptionTeacher: PropTypes.string,
     scriptsInCourse: PropTypes.arrayOf(PropTypes.string).isRequired,
     scriptNames: PropTypes.arrayOf(PropTypes.string).isRequired,
     teacherResources: PropTypes.arrayOf(resourceShape).isRequired,
@@ -54,7 +54,21 @@ export default class CourseEditor extends Component {
     hasNumberedUnits: PropTypes.bool.isRequired,
     courseFamilies: PropTypes.arrayOf(PropTypes.string).isRequired,
     versionYearOptions: PropTypes.arrayOf(PropTypes.string).isRequired,
-    announcements: PropTypes.arrayOf(announcementShape).isRequired
+    initialAnnouncements: PropTypes.arrayOf(announcementShape).isRequired
+  };
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      descriptionStudent: this.props.initialDescriptionStudent,
+      descriptionTeacher: this.props.initialDescriptionTeacher,
+      announcements: this.props.initialAnnouncements
+    };
+  }
+
+  handleUpdateAnnouncements = newAnnouncements => {
+    this.setState({announcements: newAnnouncements});
   };
 
   render() {
@@ -69,9 +83,9 @@ export default class CourseEditor extends Component {
       scriptNames,
       teacherResources,
       courseFamilies,
-      versionYearOptions,
-      announcements
+      versionYearOptions
     } = this.props;
+    const {announcements} = this.state;
     return (
       <div>
         <h1>{name}</h1>
@@ -123,16 +137,20 @@ export default class CourseEditor extends Component {
           />
         </label>
         <TextareaWithMarkdownPreview
-          markdown={this.props.descriptionStudent}
+          markdown={this.state.descriptionStudent}
           label={'Student Description'}
-          name={'description_student'}
           inputRows={5}
+          handleMarkdownChange={e =>
+            this.setState({descriptionStudent: e.target.value})
+          }
         />
         <TextareaWithMarkdownPreview
-          markdown={this.props.descriptionTeacher}
+          markdown={this.state.descriptionTeacher}
           label={'Teacher Description'}
-          name={'description_teacher'}
           inputRows={5}
+          handleMarkdownChange={e =>
+            this.setState({descriptionTeacher: e.target.value})
+          }
         />
 
         <CollapsibleEditorSection title="Basic Settings">
@@ -168,8 +186,9 @@ export default class CourseEditor extends Component {
             />
           </label>
           <AnnouncementsEditor
-            defaultAnnouncements={announcements}
+            announcements={announcements}
             inputStyle={styles.input}
+            updateAnnouncements={this.handleUpdateAnnouncements}
           />
         </CollapsibleEditorSection>
 

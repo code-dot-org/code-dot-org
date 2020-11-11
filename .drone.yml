@@ -136,6 +136,8 @@ steps:
       from_secret: FIREBASE_NAME
     FIREBASE_SECRET:
       from_secret: FIREBASE_SECRET
+    FIREBASE_SHARED_SECRET:
+      from_secret: FIREBASE_SHARED_SECRET
     SAUCE_USERNAME:
       from_secret: SAUCE_USERNAME
     SAUCE_ACCESS_KEY:
@@ -183,6 +185,6 @@ trigger:
   - pull_request
 ---
 kind: signature
-hmac: 9a6c116088e71ecaa8d68ed2bb5108763bb6dd1f45aa8568fb13df8616dd9495
+hmac: 87512ba110e67854732dcf411a11d4e968c7c4a6b666095885a0bb0621f3fec5
 
 ...
