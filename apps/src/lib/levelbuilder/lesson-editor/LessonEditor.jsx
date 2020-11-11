@@ -19,6 +19,7 @@ import $ from 'jquery';
 import {connect} from 'react-redux';
 import {getSerializedActivities} from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import {navigateToHref} from '@cdo/apps/utils';
 
 const styles = {
   editor: {
@@ -141,9 +142,7 @@ class LessonEditor extends Component {
     })
       .done(data => {
         if (isSaveAndClose) {
-          window.location = `/lessons/${this.props.id}${
-            window.location.search
-          }`;
+          navigateToHref(`/lessons/${this.props.id}${window.location.search}`);
         } else {
           this.setState({lastSaved: data.updated_at, isSaving: false});
         }
