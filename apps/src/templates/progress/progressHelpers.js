@@ -279,13 +279,14 @@ export const levelProgressFromServer = serverObject => {
     result: getLevelResult(serverObject),
     paired: serverObject.paired || false,
     timeSpent: serverObject.time_spent || 0,
-    pages: serverObject.pages_completed
-      ? serverObject.pages_completed.map(
-          pageResult =>
-            (pageResult && levelProgressFromResult(pageResult)) ||
-            levelProgressWithStatus(LevelStatus.not_tried)
-        )
-      : null
+    pages:
+      serverObject.pages_completed && serverObject.pages_completed.length > 1
+        ? serverObject.pages_completed.map(
+            pageResult =>
+              (pageResult && levelProgressFromResult(pageResult)) ||
+              levelProgressWithStatus(LevelStatus.not_tried)
+          )
+        : null
   };
 };
 
