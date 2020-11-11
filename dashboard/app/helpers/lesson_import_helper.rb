@@ -2,13 +2,12 @@
 module LessonImportHelper
   # Lockable lessons don't need to be merged with curriculumbuilder, but we do
   # need the levels to be part of an activity section.
-  def self.update_lockable_lesson(lesson)
+  def self.update_lockable_lesson(levels, lesson_id)
     lesson_activity = LessonActivity.new
+    lesson_activity.lesson_id = lesson_id
     lesson_activity.seeding_key = SecureRandom.uuid
     lesson_activity.position = 1
-    lesson.lesson_activities = [lesson_activity]
     activity_section = ActivitySection.new
-    levels = lesson.script_levels.each_with_index.map {|l, i| JSON.parse({id: l.id, assessment: l.assessment, bonus: l.bonus, challenge: l.challenge, levels: l.levels, activitySectionPosition: i, inActivitySection: false}.to_json)}
     activity_section.seeding_key = SecureRandom.uuid
     activity_section.position = 1
     activity_section.lesson_activity = lesson_activity
@@ -16,7 +15,7 @@ module LessonImportHelper
     activity_section.update_script_levels(levels)
     lesson_activity.activity_sections = [activity_section]
     activity_section.save!
-    lesson.script_levels = []
+    [lesson_activity]
   end
 
   def self.create_activity_sections(activity_markdown)
@@ -69,13 +68,12 @@ module LessonImportHelper
     sections
   end
 
-  def self.create_lesson_activities(activities_data, levels)
+  def self.create_lesson_activities(activities_data, levels, lesson_id)
     activities = activities_data.map.with_index(1) do |a, i|
       @lesson_activity = LessonActivity.new
       @lesson_activity.name = a['name']
       @lesson_activity.duration = a['duration'].split[0].to_i
-      @lesson_activity.lesson = @lesson
-      @lesson_activity.lesson_id = @lesson.id
+      @lesson_activity.lesson_id = lesson_id
       @lesson_activity.seeding_key = SecureRandom.uuid
       @lesson_activity.position = i
       @lesson_activity.save!
@@ -83,10 +81,12 @@ module LessonImportHelper
       @lesson_activity.activity_sections = create_activity_sections(a['content'])
       @lesson_activity
     end
+
+    # Create a lesson with all the levels in them
+    # TODO use the [code-studio] syntax from CB instead
     @lesson_activity = LessonActivity.new
     @lesson_activity.name = "Levels"
-    @lesson_activity.lesson = @lesson
-    @lesson_activity.lesson_id = @lesson.id
+    @lesson_activity.lesson_id = lesson_id
     @lesson_activity.seeding_key = SecureRandom.uuid
     @lesson_activity.position = activities.length + 1
     @lesson_activity.save!
@@ -94,20 +94,6 @@ module LessonImportHelper
     @lesson_activity.activity_sections = [create_activity_section_with_level_ranges(0, levels.count - 1, levels)]
     activities.push(@lesson_activity)
     activities.flatten
-  end
-
-  def self.create_lesson(lesson_data, persisted_lesson)
-    levels = persisted_lesson.script_levels.each_with_index.map {|l, i| JSON.parse({id: l.id, assessment: l.assessment, bonus: l.bonus, challenge: l.challenge, levels: l.levels, activitySectionPosition: i, inActivitySection: false}.to_json)}
-    @lesson = persisted_lesson || Lesson.new
-    @lesson.name = lesson_data['title']
-    @lesson.key ||= lesson.name.tr(' ', '_').downcase
-    @lesson.overview = lesson_data['teacher_desc']
-    @lesson.student_overview = lesson_data['student_desc']
-    @lesson.relative_position = lesson_data['number'] || 1
-    @lesson.save!
-    @lesson.reload
-    @lesson.script_levels.delete_all
-    @lesson.lesson_activities = create_lesson_activities(lesson_data['activities'], levels)
   end
 
   # https://github.com/code-dot-org/curriculumbuilder/blob/57cad8f62e50b03e4f16bf77cd9e2e1da5c3e44e/curriculumBuilder/codestudio.py
