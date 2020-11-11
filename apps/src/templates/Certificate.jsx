@@ -52,7 +52,7 @@ const blankCertificates = {
   hero: require('@cdo/static/MC_Hour_Of_Code_Certificate_Hero.png'),
   aquatic: require('@cdo/static/MC_Hour_Of_Code_Certificate_Aquatic.png'),
   mee: require('@cdo/static/MC_Hour_Of_Code_Certificate_mee.png'),
-  mee_empathy: require('@cdo/static/MC_Hour_Of_Code_Certificate_meeempathy.jpg')
+  mee_empathy: require('@cdo/static/MC_Hour_Of_Code_Certificate_mee_empathy.png')
 };
 
 class Certificate extends Component {
