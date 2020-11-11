@@ -18292,41 +18292,13 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
-        bethany-script-v2:
+        2021drafting:
           lessons:
-            lesson-1:
-              name: Lesson 1
-            lesson-3:
-              name: Lesson 1.2
-            lesson-2:
-              name: Lesson 2.1
+            Sprite Lab:
+              name: Sprite Lab Blocks
           lesson_groups:
-            lessonGroup-2:
-              display_name: LG 1
-            lessonGroup-3:
-              display_name: LG 2
-        bethany-script:
-          lessons:
-            lesson-1:
-              name: first lesson
-            lesson-2:
-              name: lockable lesson
-          lesson_groups: {}
-        bethany-temp-1026:
-          lessons:
-            lesson-1:
-              name: new lesson
-          lesson_groups: {}
-        import-tests:
-          lessons:
-            lesson-1:
-              name: Websites for Expression
-            websites_for_expression_-_take_2:
-              name: Websites for Expression - take 2
-            websites_for_expression:
-              name: Websites for Expression
-            lesson-4:
-              name: Websites for Expression - manual copy
-          lesson_groups:
-            lessonGroup-2:
-              display_name: CSD 2 2020
+            Toolbox Levels:
+              display_name: Toolbox Levels
+          title: Planning script for CI and CSF 2021
+          description_audience: Internal
+          description_short: Internal
