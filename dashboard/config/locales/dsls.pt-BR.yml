@@ -3670,6 +3670,17 @@ pt-BR:
           Esses aplicativos são _protótipos_; eles permitem que o usuário interaja com o design sem se preocupar com a funcionalidade subjacente. Por exemplo, quando você usa o aplicativo Quiz, cada pergunta sempre responde da mesma maneira, independentemente de qual resposta você escolher.
 
           Concentrando-se primeiro em um protótipo interativo, você pode aprender muito sobre como os usuários podem usar seu aplicativo antes de investir muita energia para fazê-lo realmente funcionar.
+        teacher_markdown: |-
+          Nessa atividade, os alunos serão apresentados a uma pequena quantidade de aplicativos relativamente restritas.
+
+          * Quiz me
+          * Decision Maker
+          * List Manager
+          * Crowdsourcing
+
+          Para alunos mais jovens ou inexperientes você pode limita-los a somente esses tipos de aplicativos. Nós escolhemos especificamente esses exemplos  porque são relativamente fáceis para prototipar no App Lab.
+
+          Se você permitir que os alunos se disperssem desses, esteja atento que alguns tipos de aplicativos são mais difíceis de criar no App Lab e pode requerer mais criatividade ao desenvolver um protótipo. Por exemplo, App Lab não tem a funcionalidade de mapeamento, logo, se os alunos quisessem uma aplicação de mapeamento, eles precisariam encontrar ou criar uma imagem estática de um mapa para usar no aplicativo.
       Example App Types_2018_2019:
         markdown: |
           # Exemplos de tipos de aplicativos
@@ -3687,6 +3698,17 @@ pt-BR:
           Esses aplicativos são _protótipos_; eles permitem que o usuário interaja com o design sem se preocupar com a funcionalidade subjacente. Por exemplo, quando você usa o aplicativo Quiz, cada pergunta sempre responde da mesma maneira, independentemente de qual resposta você escolher.
 
           Concentrando-se primeiro em um protótipo interativo, você pode aprender muito sobre como os usuários podem usar seu aplicativo antes de investir muita energia para fazê-lo realmente funcionar.
+        teacher_markdown: |-
+          Nessa atividade, os alunos serão apresentados a uma pequena quantidade de aplicativos relativamente restritas.
+
+          * Quiz me
+          * Decision Maker
+          * List Manager
+          * Crowdsourcing
+
+          Para alunos mais jovens ou inexperientes você pode limita-los a somente esses tipos de aplicativos. Nós escolhemos especificamente esses exemplos  porque são relativamente fáceis para prototipar no App Lab.
+
+          Se você permitir que os alunos se disperssem desses, esteja atento que alguns tipos de aplicativos são mais difíceis de criar no App Lab e pode requerer mais criatividade ao desenvolver um protótipo. Por exemplo, App Lab não tem a funcionalidade de mapeamento, logo, se os alunos quisessem uma aplicação de mapeamento, eles precisariam encontrar ou criar uma imagem estática de um mapa para usar no aplicativo.
       ForLoopFun-Unplugged:
         markdown: |
           # Divirta-se com Laços For
@@ -8291,6 +8313,7 @@ pt-BR:
           restante do curso.\n\n\n## Recursos\n* [Barcos de Alumínio](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf)
           \n- Guia de atividade (copiar como [Microsoft Word](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc),
           [Google Doc](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))\n"
+        title: Questionário prévio para Estudantes do Descobertas de CC
       csd-pulse-check-survey-1-levelgroup U1Ch2:
         title: |2-
 
@@ -8580,15 +8603,22 @@ pt-BR:
           target=\"top\"> Clique aqui para completar as CS Descobertas Pesquisa pós-curso!!!</a>\n\n(abre
           em uma nova aba)\n\n<br>\n\n\n\n\n\n"
       csd-post-survey-intro-2019:
-        markdown: |+
-          #Pesquisa de pós-curso sobre descobertas da CC
-
-          ** Sua opinião e feedback são importantes para nós! ** Usamos para:
-
-          * entender sua experiência
-          * fazer melhorias no curso
-
-          Obrigado por dedicar um tempo para ajudar a tornar os Princípios da CC ainda melhores!
-
+        markdown: "# Esta pesquisa ainda está em desenvolvimento\n"
       csd-post-survey-levelgroup_2019:
         title: Pesquisa de estudantes ao final do curso do CS Discoveries
+      CSD U1 Test:
+        title: Teste Pós-Projeto para Computadores e Resolução de Problemas
+      CSD U5 test:
+        title: Teste pós-projeto de dados e sociedade
+      Unit 1 Lesson 1 Overview:
+        markdown: "# Visão Geral\n\nA turma se divide em grupos para projetar barcos
+          de folha de alumínio que suportarão tantos centavos quanto for possível.
+          \ No final da aula, os grupos refletirão sobre sua experiência com a atividade
+          e farão conexões com os tipos de solução de problemas que usarão para o
+          restante do curso.\n\n\n## Recursos\n* [Barcos de Alumínio](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf)
+          \n- Guia de atividade (copiar como [Microsoft Word](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc),
+          [Google Doc](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))\n"
+      csd-pre-survey-2017-levelgroup_2018:
+        title: Questionário prévio para Estudantes do Descobertas de CC
+      csd-pre-survey-levelgroup_2019:
+        title: Questionário prévio para Estudantes do Descobertas de CC

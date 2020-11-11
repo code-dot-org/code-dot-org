@@ -1138,6 +1138,8 @@ da:
         text: figur {SPRITE} stopper {BEHAVIOR}
       gamelab_removeTint:
         text: fjern farve fra {THIS}
+      gamelab_repeatForever:
+        text: Gentag for evigt
       gamelab_setAnimation:
         text: ændre {THIS} udseende til {ANIMATION}
       gamelab_setBackground:

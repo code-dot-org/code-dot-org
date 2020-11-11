@@ -803,7 +803,7 @@
         "courseA_maze_seq13_2019": {
           "courseA_maze_seq13_a": "Nếu con đường bạn cần không rõ ràng, dùng ngón tay để vẽ đường từ chú chim đến chú lợn.",
           "courseA_maze_seq13_b": "Đừng lo lắng về việc mắc lỗi! Thử thêm các khối lệnh và chạy chương trình xem điều gì sẽ xảy ra.",
-          "courseA_maze_seq13_c": "Những khối này <xml><block type=\"maze_moveNorth\"/></xml>\n\n<xml><block type=\"maze_moveEast\"/></xml>\n\nsẽ giúp đến gần chú lợn hơn."
+          "courseA_maze_seq13_c": "Những khối <xml><block type=\"maze_moveNorth\"/></xml>\n\n<xml><block type=\"maze_moveEast\"/></xml> sẽ giúp bạn đến gần hơn với chú lợn."
         },
         "courseA_maze_seq13_2020": {
           "courseA_maze_seq13_a": "Nếu con đường bạn cần không rõ ràng, dùng ngón tay để vẽ đường từ chú chim đến chú lợn.",

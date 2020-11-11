@@ -17,7 +17,7 @@ describe('SendLessonDialog', () => {
         .find('#ui-test-copy-button')
         .at(0)
         .props().icon,
-      'copy'
+      'link'
     );
   });
 

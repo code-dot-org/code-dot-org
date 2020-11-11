@@ -451,6 +451,8 @@ ka:
         text: შემთხვევითი ფერი
       gamelab_randomLocation:
         text: შემთხვევითი მდებარეობა
+      gamelab_repeatForever:
+        text: მუდამ გამეორება
       gamelab_setBackgroundImage:
         options:
           IMG:

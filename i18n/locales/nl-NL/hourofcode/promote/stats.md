@@ -30,7 +30,7 @@ We hopen dat leerlingen de smaak te pakken krijgen en blijven leren. Onderzoek t
 
 #### Waarom is dit belangrijk?
 
-Technologie verandert elke industrie op de planeet. In 2015, 7 miljoen open banen in de VS—inclusief kunst en design—die programmeervaardigheden nodig hadden. But 55 percent of schools in the U.S. don't teach computer science. Het wordt tijd dat we aansluiten bij de 21e eeuw. We weten dat wat onze leerlingen ook gaan doen wanneer ze groot worden, of ze nu medicijnen, het bedrijfsleven, de politiek of de kunst in gaan, als ze weten hoe ze op technologie kunnen bouwen geeft ze dat de zelfverzekerdheid en know-how om te slagen. <br /> <br />
+Technologie verandert elke industrie op de planeet. In 2015, 7 miljoen open banen in de VS—inclusief kunst en design—die programmeervaardigheden nodig hadden. But 53 percent of schools in the U.S. don't teach computer science. Het wordt tijd dat we aansluiten bij de 21e eeuw. We weten dat wat onze leerlingen ook gaan doen wanneer ze groot worden, of ze nu medicijnen, het bedrijfsleven, de politiek of de kunst in gaan, als ze weten hoe ze op technologie kunnen bouwen geeft ze dat de zelfverzekerdheid en know-how om te slagen. <br /> <br />
 
 #### A quote you can use in materials
 
