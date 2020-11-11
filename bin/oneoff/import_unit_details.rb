@@ -107,6 +107,9 @@ def main(options)
       # Make sure the lesson group update does not also try to update lessons.
       cb_chapter = cb_chapter.reject {|k, _| k == 'lessons'}
 
+      # Use a heuristic to make sure we do not import CSF chapter descriptions
+      # which are equal to the chapter title.
+      cb_chapter['description'] = nil if cb_chapter['description'] == cb_chapter['title']
       lesson_group.update_from_curriculum_builder(cb_chapter)
     end
 
