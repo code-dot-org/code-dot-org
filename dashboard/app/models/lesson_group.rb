@@ -180,10 +180,20 @@ class LessonGroup < ApplicationRecord
   # }
   #
   # @param [Hash] cb_chapter_data - Chapter data to import.
-  def update_from_curriculum_builder(_cb_chapter_data)
+  def update_from_curriculum_builder(cb_chapter_data)
     # In the future, only levelbuilder should be added to this list.
     raise unless [:development, :adhoc].include? rack_env
 
-    # puts "TODO: update lesson group #{id} with cb chapter data: #{cb_chapter_data.to_json[0, 50]}..."
+    cb_questions = cb_chapter_data['questions']
+    if cb_questions.present? && big_questions.blank?
+      self.big_questions = cb_questions
+    end
+
+    cb_description = cb_chapter_data['description']
+    if cb_description.present? && description.blank?
+      self.description = cb_description
+    end
+
+    save! if changed?
   end
 end
