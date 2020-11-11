@@ -337,7 +337,7 @@ class LessonEditor extends Component {
 
         <div style={styles.saveButtonBackground} className="saveBar">
           {this.state.lastSaved && !this.state.error && (
-            <div style={styles.lastSaved}>
+            <div style={styles.lastSaved} className="lastSavedMessage">
               {`Last saved at: ${new Date(
                 this.state.lastSaved
               ).toLocaleString()}`}

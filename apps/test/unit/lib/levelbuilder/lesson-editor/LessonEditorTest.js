@@ -138,11 +138,10 @@ describe('LessonEditor', () => {
     server.respond();
     lessonEditor.update();
     expect(lessonEditor.state().isSaving).to.equal(false);
+    expect(lessonEditor.state().lastSaved).to.equal('2020-11-06T21:33:32.000Z');
     expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(0);
     //check that last saved message is showing
-    expect(
-      wrapper.find('.saveBar').contains('Last saved at: 11/6/2020, 4:33:32 PM')
-    ).to.be.true;
+    expect(wrapper.find('.lastSavedMessage').length).to.equal(1);
   });
 
   it('shows error when save and keep editing has error saving', () => {
