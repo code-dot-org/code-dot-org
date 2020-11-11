@@ -89,6 +89,7 @@ export default class ChooseYourProgram extends LabeledFormComponent {
           <a
             href="https://code.org/files/facilitator/overview-2019-20.pdf"
             target="_blank"
+            rel="noopener noreferrer"
           >
             2019-20 Facilitator Development Program Description
           </a>
