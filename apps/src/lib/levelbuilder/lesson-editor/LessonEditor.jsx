@@ -181,7 +181,6 @@ class LessonEditor extends Component {
         <label>
           Title
           <input
-            name="name"
             value={displayName}
             style={styles.input}
             onChange={e => this.setState({displayName: e.target.value})}
@@ -197,7 +196,6 @@ class LessonEditor extends Component {
           <label>
             Lockable
             <input
-              name="lockable"
               type="checkbox"
               checked={lockable}
               style={styles.checkbox}
@@ -214,7 +212,6 @@ class LessonEditor extends Component {
           <label>
             Assessment
             <input
-              name="assessment"
               type="checkbox"
               checked={assessment}
               style={styles.checkbox}
@@ -227,7 +224,6 @@ class LessonEditor extends Component {
           <label>
             Unplugged Lesson
             <input
-              name="unplugged"
               type="checkbox"
               checked={unplugged}
               style={styles.checkbox}
@@ -242,7 +238,6 @@ class LessonEditor extends Component {
           <label>
             Creative Commons Image
             <select
-              name="creativeCommonsLicense"
               style={styles.dropdown}
               value={creativeCommonsLicense}
               onChange={e =>
