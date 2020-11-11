@@ -5,7 +5,7 @@ display_name 'Introduction to Debugging'
 title 'Debugging Session'
 markdown <<MARKDOWN
 #Unit 6 - Lesson 7:  Analog Input 
-**Estimated time: 20 minutes**
+**Estimated time: 20 - 25 minutes**
 
 
 
@@ -14,7 +14,7 @@ markdown <<MARKDOWN
 
 **Become familiar with taking input from Analog Sensors on the Circuit Playground**
 
-**Identify how students are expected to engage within Code Studio using the Circuit Playground*
+**Identify how students will engage within Code Studio using the Circuit Playground**
 
 ## Investigation Tasks
 
