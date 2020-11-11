@@ -98,7 +98,7 @@ module LessonImportHelper
 
   # https://github.com/code-dot-org/curriculumbuilder/blob/57cad8f62e50b03e4f16bf77cd9e2e1da5c3e44e/curriculumBuilder/codestudio.py
   def self.find_skippable_syntax(markdown)
-    regex = /\[code-studio\s*(?:\d+)?-?(?:\d+)?\]|\[\/?guide\]/
+    regex = /\[code-studio[\d \-]*\]|\[\/?guide\]/
     markdown.to_enum(:scan, regex).map {Regexp.last_match}
   end
 
