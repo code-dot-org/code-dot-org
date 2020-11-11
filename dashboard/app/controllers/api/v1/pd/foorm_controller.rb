@@ -62,4 +62,15 @@ class Api::V1::Pd::FoormController < ::ApplicationController
     csv = form.submissions_to_csv(submissions)
     send_csv_attachment(csv, filename)
   end
+
+  # POST api/v1/pd/foorm/validate_form
+  def validate_form
+    form_questions = params[:form_questions].as_json
+    errors = Foorm::Form.validate_questions(form_questions)
+    if errors.empty?
+      return render status: 200, json: {}
+    else
+      return render status: 500, json: {error: errors}
+    end
+  end
 end

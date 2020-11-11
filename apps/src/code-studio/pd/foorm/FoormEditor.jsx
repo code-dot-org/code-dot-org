@@ -8,6 +8,8 @@ import PropTypes from 'prop-types';
 import Foorm from './Foorm';
 import FontAwesome from '../../../templates/FontAwesome';
 import ToggleGroup from '@cdo/apps/templates/ToggleGroup';
+import {Button} from 'react-bootstrap';
+import moment from 'moment';
 
 const facilitator_names = ['Alice', 'Bob', 'Carly', 'Dave'];
 
@@ -26,8 +28,7 @@ const styles = {
     minWidth: 560
   },
   options: {
-    minWidth: 215,
-    maxWidth: 255
+    minWidth: 215
   },
   preview: {
     width: '45%',
@@ -46,11 +47,19 @@ const styles = {
   },
   previewBox: {
     border: '1px solid #eee'
+  },
+  validationInfo: {
+    marginTop: 10,
+    marginBottom: 10
+  },
+  validateButton: {
+    marginLeft: 0
   }
 };
 
 const PREVIEW_ON = 'preview-on';
 const PREVIEW_OFF = 'preview-off';
+const TIME_FORMAT = 'h:m a';
 
 class FoormEditor extends React.Component {
   static propTypes = {
@@ -91,7 +100,9 @@ class FoormEditor extends React.Component {
       is_friday_institute: false,
       workshop_agenda: 'module1',
       libraryError: false,
-      libraryErrorMessage: null
+      libraryErrorMessage: null,
+      lastValidated: null,
+      validationError: null
     };
   }
 
@@ -168,6 +179,31 @@ class FoormEditor extends React.Component {
 
   livePreviewToggled = toggleValue => {
     this.setState({livePreviewStatus: toggleValue});
+  };
+
+  validateQuestions = () => {
+    $.ajax({
+      url: '/api/v1/pd/foorm/validate_form',
+      type: 'post',
+      contentType: 'application/json',
+      processData: false,
+      data: JSON.stringify({
+        form_questions: this.props.formQuestions
+      })
+    })
+      .done(result => {
+        this.setState({
+          lastValidated: moment().format(TIME_FORMAT),
+          validationError: false
+        });
+      })
+      .fail(result => {
+        console.log(result);
+        this.setState({
+          lastValidated: moment().format(TIME_FORMAT),
+          validationError: result.responseJSON.error
+        });
+      });
   };
 
   render() {
@@ -291,6 +327,28 @@ class FoormEditor extends React.Component {
                     Live Preview Off
                   </button>
                 </ToggleGroup>
+                <br />
+                <Button
+                  style={styles.validateButton}
+                  onClick={this.validateQuestions}
+                >
+                  Validate
+                </Button>
+                {this.state.lastValidated && (
+                  <div style={styles.validationInfo}>
+                    {this.state.validationError && (
+                      <FontAwesome icon="exclamation-triangle" />
+                    )}
+                    {` Form was last validated at ${
+                      this.state.lastValidated
+                    }. Validation status: ${
+                      this.state.validationError ? 'Invalid.' : 'Valid.'
+                    }`}
+                    <br />
+                    {this.state.validationError &&
+                      `Validation error: ${this.state.validationError}`}
+                  </div>
+                )}
               </div>
             )}
           </div>

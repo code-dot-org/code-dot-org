@@ -103,12 +103,20 @@ class Foorm::Form < ActiveRecord::Base
   end
 
   def validate_questions
+    errors = Foorm::Form.validate_questions(JSON.parse(questions))
+    unless errors.empty?
+      errors.add(:questions, errors)
+    end
+  end
+
+  def self.validate_questions(questions)
     # fill_in_library_items will throw an exception if any library items are invalid.
     # If the questions are not valid JSON, JSON.parse will throw an exception.
+    errors = []
     begin
-      filled_questions = Foorm::Form.fill_in_library_items(JSON.parse(questions))
+      filled_questions = Foorm::Form.fill_in_library_items(questions)
     rescue StandardError => e
-      errors.add(:questions, e.message)
+      errors.append(e.message)
       return
     end
     filled_questions.deep_symbolize_keys!
@@ -118,15 +126,19 @@ class Foorm::Form < ActiveRecord::Base
         # validate_element will throw an exception if the element is invalid
         Foorm::Form.validate_element(element_data, element_names)
       rescue StandardError => e
-        errors.add(:questions, e.message)
+        errors.append(e.message)
       end
     end
+    errors
   end
 
   # Checks that the element name is not in element_names and the choices/rows/columns are unique and all have
   # value/text parameters. If any of the above are not true, will raise an InvalidFoormConfigurationError.
   def self.validate_element(element_data, element_names)
     return unless PANEL_TYPES.include?(element_data[:type]) || QUESTION_TYPES.include?(element_data[:type])
+    unless element_data[:name]
+      raise InvalidFoormConfigurationError, "No name provided for element with title ''#{element_data[:title]}''"
+    end
     if element_names.include?(element_data[:name])
       raise InvalidFoormConfigurationError, "Duplicate element name #{element_data[:name]}."
     end
