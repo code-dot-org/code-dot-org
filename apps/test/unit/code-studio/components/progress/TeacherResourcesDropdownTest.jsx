@@ -30,10 +30,18 @@ describe('TeacherResourcesDropdown', () => {
             text={i18n.teacherResources()}
             color={Button.ButtonColor.blue}
           >
-            <a href="https://example.com/a" target="_blank">
+            <a
+              href="https://example.com/a"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               {i18n.curriculum()}
             </a>
-            <a href="https://example.com/b" target="_blank">
+            <a
+              href="https://example.com/b"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               {i18n.vocabulary()}
             </a>
           </DropdownButton>
