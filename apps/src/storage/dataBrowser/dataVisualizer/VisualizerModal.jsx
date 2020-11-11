@@ -133,10 +133,12 @@ class VisualizerModal extends React.Component {
       // we filter on the actual value
       parsedValue = value.slice(1, -1);
     }
-    if (operator === '>')
+    if (operator === '>') {
       return records.filter(record => record[column] > parsedValue);
-    if (operator === '<')
+    }
+    if (operator === '<') {
       return records.filter(record => record[column] < parsedValue);
+    }
     return records.filter(record => record[column] === parsedValue);
   });
 
@@ -231,7 +233,9 @@ class VisualizerModal extends React.Component {
       ChartType.SCATTER_PLOT,
       ChartType.CROSS_TAB
     ].includes(this.state.chartType);
-    const displayNumericFilters = numericColumns.includes(this.state.filterColumn);
+    const displayNumericFilters = numericColumns.includes(
+      this.state.filterColumn
+    );
     return (
       <span style={styles.container}>
         <button
@@ -379,22 +383,22 @@ class VisualizerModal extends React.Component {
               />
               {displayNumericFilters && (
                 <DropdownField
-                displayName={msg.by()}
-                options={[">","=","<"]}
-                getDisplayNameForOption={this.getDisplayNameForOperator}
-                disabledOptions={[]}
-                value={this.state.filterOperator}
-                onChange={event =>
-                  this.setState({
-                    filterOperator: event.target.value,
-                    filterValue: ''
-                  })
-                }
-                inlineLabel
-                />)
-              }
+                  displayName={msg.by()}
+                  options={['>', '=', '<']}
+                  getDisplayNameForOption={this.getDisplayNameForOperator}
+                  disabledOptions={[]}
+                  value={this.state.filterOperator}
+                  onChange={event =>
+                    this.setState({
+                      filterOperator: event.target.value,
+                      filterValue: ''
+                    })
+                  }
+                  inlineLabel
+                />
+              )}
               <DropdownField
-                displayName={displayNumericFilters ? "" : msg.by()}
+                displayName={displayNumericFilters ? '' : msg.by()}
                 options={this.getValuesForFilterColumn(
                   parsedRecords,
                   this.state.filterColumn
