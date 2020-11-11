@@ -170,6 +170,7 @@ export function summarizeProgressInStage(levelsWithStatus) {
  */
 export const processedLevel = level => {
   return {
+    id: isSublevel ? level.level_id : level.id,
     url: level.url,
     name: level.name,
     progression: level.progression,

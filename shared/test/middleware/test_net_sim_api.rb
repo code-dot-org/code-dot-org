@@ -424,7 +424,7 @@ class NetSimApiTest < Minitest::Test
     assert_equal @shard_id, test_spy.publish_history.last[:channel]
     assert_equal @table_name, test_spy.publish_history.last[:event]
     assert_equal 'delete', test_spy.publish_history.last[:data][:action]
-    assert_equal [record_id], test_spy.publish_history.last[:data][:ids]
+    assert_equal record_id, test_spy.publish_history.last[:data][:id]
   ensure
     assert read_records.first.nil?, 'Table was not empty'
   end

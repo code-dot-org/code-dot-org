@@ -368,15 +368,8 @@ class ScriptLevel < ActiveRecord::Base
         LEVEL_KIND.puzzle
       end
 
-    ids = level_ids
-
-    levels.each do |l|
-      ids.concat(l.contained_levels.map(&:id))
-    end
-
     summary = {
-      ids: ids,
-      activeId: oldest_active_level.id,
+      id: oldest_active_level.id,
       position: position,
       kind: kind,
       icon: level.icon,
@@ -473,7 +466,7 @@ class ScriptLevel < ActiveRecord::Base
   # level summaries.
   def self.summarize_extra_puzzle_pages(last_level_summary)
     extra_levels = []
-    level_id = last_level_summary[:ids].first
+    level_id = last_level_summary[:id]
     level = Script.cache_find_level(level_id)
     extra_level_count = level.pages.length - 1
     (1..extra_level_count).each do |page_index|

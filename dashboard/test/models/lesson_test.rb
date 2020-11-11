@@ -61,8 +61,8 @@ class LessonTest < ActiveSupport::TestCase
     lesson = create :lesson, name: 'lesson1', script: script, lockable: true
     create :script_level, script: script, levels: [level1], assessment: true, lesson: lesson
 
-    # Ensure that a single page long assessment has a uid that ends with "_0".
-    assert_equal lesson.summarize[:levels].first[:uid], "#{lesson.summarize[:levels].first[:ids].first}_0"
+    # Ensure that a single page long assessment has the title '1'.
+    assert_equal lesson.summarize[:levels].first[:title], "1"
   end
 
   test "summary for lesson with extras" do
@@ -82,7 +82,7 @@ class LessonTest < ActiveSupport::TestCase
 
     summary = lesson.summarize(true)
     assert_equal 1, summary[:levels].length
-    assert_equal [level.id], summary[:levels].first[:ids]
+    assert_equal level.id, summary[:levels].first[:id]
   end
 
   test "summary of levels for lesson plan" do

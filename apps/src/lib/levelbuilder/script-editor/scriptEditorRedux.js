@@ -1,6 +1,7 @@
 import _ from 'lodash';
 import PropTypes from 'prop-types';
 import {lessonGroupShape} from '@cdo/apps/lib/levelbuilder/shapes';
+import {LevelKind} from '@cdo/apps/util/sharedConstants';
 
 const INIT = 'scriptEditor/INIT';
 const ADD_GROUP = 'scriptEditor/ADD_GROUP';
@@ -273,13 +274,16 @@ export const mapLessonGroupDataForEditor = rawLessonGroups => {
            * continue to use ScriptDSl for the time being until we are ready
            * to move on to our future system.
            */
-          // Only include the first level of an assessment (uid ending with "_0").
+          // Only include the first level of an assessment (levelNumber === 1).
           levels: lesson.levels
-            .filter(level => !level.uid || /_0$/.test(level.uid))
+            .filter(
+              level =>
+                level.kind !== LevelKind.assessment || level.levelNumber > 1
+            )
             .map(level => ({
               position: level.position,
               activeId: level.activeId,
-              ids: level.ids.slice(),
+              id: level.id,
               kind: level.kind,
               skin: level.skin,
               videoKey: level.videoKey,
@@ -353,7 +357,7 @@ const serializeLesson = (lesson, levelKeyList) => {
   s.push(t);
   if (lesson.levels) {
     lesson.levels.forEach(level => {
-      s = s.concat(serializeLevel(levelKeyList, level.ids[0], level));
+      s = s.concat(serializeLevel(levelKeyList, level));
     });
   }
   s.push('');
@@ -367,13 +371,12 @@ const serializeLesson = (lesson, levelKeyList) => {
  * level information here behind the scenes because it allows us to
  * continue to use ScriptDSl for the time being until we are ready
  * to move on to our future system.
- * @param id
  * @param level
  * @return {string}
  */
-const serializeLevel = (levelKeyList, id, level) => {
+const serializeLevel = (levelKeyList, level) => {
   const s = [];
-  const key = levelKeyList[id];
+  const key = levelKeyList[level.id];
   if (/^blockly:/.test(key)) {
     if (level.skin) {
       s.push(`skin '${escape(level.skin)}'`);
