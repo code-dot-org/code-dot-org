@@ -182,6 +182,7 @@ class LessonGroup < ApplicationRecord
   # }
   #
   # @param [Hash] cb_chapter_data - Chapter data to import.
+  # @return [Boolean] - Whether any changes to this lesson group were saved.
   def update_from_curriculum_builder(cb_chapter_data)
     # In the future, only levelbuilder should be added to this list.
     raise unless [:development, :adhoc].include? rack_env
@@ -196,6 +197,8 @@ class LessonGroup < ApplicationRecord
       self.description = cb_description
     end
 
+    changed = changed?
     save! if changed?
+    changed
   end
 end

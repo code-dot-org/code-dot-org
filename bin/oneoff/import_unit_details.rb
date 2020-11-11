@@ -94,16 +94,15 @@ def main(options)
     lesson_pairs = get_validated_lesson_pairs(script, cb_unit)
     lesson_group_pairs = get_lesson_group_pairs(script, cb_unit['chapters'], lesson_pairs)
 
-    if options.dry_run
-      puts "validated #{lesson_pairs.count} lessons and #{lesson_group_pairs.count} lesson groups in unit #{script.name}"
-      next
-    end
+    log "validated #{lesson_pairs.count} lessons and #{lesson_group_pairs.count} lesson groups in unit #{script.name}"
+
+    next if options.dry_run
 
     lesson_pairs.each do |lesson, cb_lesson|
       lesson.update_from_curriculum_builder(cb_lesson)
     end
 
-    lesson_group_pairs.each do |lesson_group, cb_chapter|
+    updated_lesson_group_count = lesson_group_pairs.count do |lesson_group, cb_chapter|
       # Make sure the lesson group update does not also try to update lessons.
       cb_chapter = cb_chapter.reject {|k, _| k == 'lessons'}
 
@@ -113,7 +112,7 @@ def main(options)
       lesson_group.update_from_curriculum_builder(cb_chapter)
     end
 
-    puts "updated #{lesson_pairs.count} lessons and #{lesson_group_pairs.count} lesson groups in unit #{script.name}"
+    puts "updated #{updated_lesson_group_count} lesson groups in unit #{script.name}"
   end
 end
 
