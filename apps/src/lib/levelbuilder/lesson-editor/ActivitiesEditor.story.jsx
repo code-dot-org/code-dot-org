@@ -27,11 +27,7 @@ export default storybook => {
       name: 'ActivitiesEditor',
       story: () => (
         <Provider store={createStore()}>
-          <ActivitiesEditor
-            serializeActivities={() => {
-              console.log('serializeActivities');
-            }}
-          />
+          <ActivitiesEditor />
         </Provider>
       )
     }

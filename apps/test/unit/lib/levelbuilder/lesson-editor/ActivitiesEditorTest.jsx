@@ -6,14 +6,12 @@ import {UnconnectedActivitiesEditor as ActivitiesEditor} from '@cdo/apps/lib/lev
 import {sampleActivities} from './activitiesTestData';
 
 describe('ActivitiesEditor', () => {
-  let defaultProps, addActivity, serializeActivities;
+  let defaultProps, addActivity;
   beforeEach(() => {
     addActivity = sinon.spy();
-    serializeActivities = sinon.spy();
     defaultProps = {
       activities: sampleActivities,
-      addActivity,
-      serializeActivities
+      addActivity
     };
   });
 
@@ -21,6 +19,9 @@ describe('ActivitiesEditor', () => {
     const wrapper = shallow(<ActivitiesEditor {...defaultProps} />);
     expect(wrapper.find('button').length).to.equal(1);
     expect(wrapper.find('ActivityCardAndPreview').length).to.equal(1);
+
+    const hiddenInputs = wrapper.find('input[type="hidden"]');
+    expect(hiddenInputs.length, 'hidden input').to.equal(1);
   });
 
   it('adds activity when button pressed', () => {
