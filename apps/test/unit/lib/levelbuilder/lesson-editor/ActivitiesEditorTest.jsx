@@ -6,14 +6,14 @@ import {UnconnectedActivitiesEditor as ActivitiesEditor} from '@cdo/apps/lib/lev
 import {sampleActivities} from './activitiesTestData';
 
 describe('ActivitiesEditor', () => {
-  let defaultProps, addActivity, serializeActivties;
+  let defaultProps, addActivity, serializeActivities;
   beforeEach(() => {
     addActivity = sinon.spy();
-    serializeActivties = sinon.spy();
+    serializeActivities = sinon.spy();
     defaultProps = {
       activities: sampleActivities,
       addActivity,
-      serializeActivties
+      serializeActivities
     };
   });
 
