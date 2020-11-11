@@ -168,7 +168,6 @@ class FoormEditor extends React.Component {
           });
         })
         .fail(result => {
-          console.log(result);
           this.setState({
             libraryError: true,
             libraryErrorMessage: result.responseJSON.error
