@@ -397,7 +397,7 @@ class LessonEditor extends Component {
             onClick={this.handleSaveAndKeepEditing}
             disabled={this.state.isSaving}
           >
-            Save and Keep Editing
+            Save
           </button>
           <button
             className="btn btn-primary"
@@ -405,7 +405,7 @@ class LessonEditor extends Component {
             style={styles.saveButton}
             disabled={this.state.isSaving}
           >
-            Save Changes
+            Save and Close
           </button>
         </div>
       </div>
