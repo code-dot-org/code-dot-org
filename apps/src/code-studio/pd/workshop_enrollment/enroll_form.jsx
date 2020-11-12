@@ -147,13 +147,10 @@ export default class EnrollForm extends React.Component {
     this.setState({csf_course_experience: exp});
   };
 
-  handleClickRegister = async () => {
+  handleClickRegister = () => {
     if (this.validateRequiredFields()) {
       this.setState({isSubmitting: true});
-
-      await this.submit();
-
-      this.setState({isSubmitting: false});
+      this.submit();
     }
   };
 
@@ -276,10 +273,10 @@ export default class EnrollForm extends React.Component {
       contentType: 'application/json',
       data: JSON.stringify(params),
       complete: result => {
+        this.setState({isSubmitting: false});
         this.props.onSubmissionComplete(result);
       }
     });
-    return this.submitRequest;
   }
 
   validateRequiredFields() {
