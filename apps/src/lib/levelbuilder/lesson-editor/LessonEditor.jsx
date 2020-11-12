@@ -19,6 +19,7 @@ import $ from 'jquery';
 import {connect} from 'react-redux';
 import {getSerializedActivities} from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import {navigateToHref} from '@cdo/apps/utils';
 
 const styles = {
   editor: {
@@ -112,13 +113,13 @@ class LessonEditor extends Component {
     };
   }
 
-  handleSaveAndKeepEditing = e => {
-    e.preventDefault();
+  handleSave = (event, shouldCloseAfterSave) => {
+    event.preventDefault();
 
     this.setState({isSaving: true, lastSaved: null, error: null});
 
     $.ajax({
-      url: `/lessons/${this.props.id}?do_not_redirect=true`,
+      url: `/lessons/${this.props.id}`,
       method: 'PUT',
       dataType: 'json',
       contentType: 'application/json;charset=UTF-8',
@@ -139,7 +140,11 @@ class LessonEditor extends Component {
       })
     })
       .done(data => {
-        this.setState({lastSaved: data.updated_at, isSaving: false});
+        if (shouldCloseAfterSave) {
+          navigateToHref(`/lessons/${this.props.id}${window.location.search}`);
+        } else {
+          this.setState({lastSaved: data.updated_at, isSaving: false});
+        }
       })
       .fail(error => {
         this.setState({isSaving: false, error: error.responseText});
@@ -174,7 +179,6 @@ class LessonEditor extends Component {
         <label>
           Title
           <input
-            name="name"
             value={displayName}
             style={styles.input}
             onChange={e => this.setState({displayName: e.target.value})}
@@ -190,7 +194,6 @@ class LessonEditor extends Component {
           <label>
             Lockable
             <input
-              name="lockable"
               type="checkbox"
               checked={lockable}
               style={styles.checkbox}
@@ -207,7 +210,6 @@ class LessonEditor extends Component {
           <label>
             Assessment
             <input
-              name="assessment"
               type="checkbox"
               checked={assessment}
               style={styles.checkbox}
@@ -220,7 +222,6 @@ class LessonEditor extends Component {
           <label>
             Unplugged Lesson
             <input
-              name="unplugged"
               type="checkbox"
               checked={unplugged}
               style={styles.checkbox}
@@ -235,7 +236,6 @@ class LessonEditor extends Component {
           <label>
             Creative Commons Image
             <select
-              name="creativeCommonsLicense"
               style={styles.dropdown}
               value={creativeCommonsLicense}
               onChange={e =>
@@ -357,7 +357,7 @@ class LessonEditor extends Component {
             className="btn"
             type="button"
             style={styles.saveButton}
-            onClick={this.handleSaveAndKeepEditing}
+            onClick={e => this.handleSave(e, false)}
             disabled={this.state.isSaving}
           >
             Save and Keep Editing
@@ -366,6 +366,7 @@ class LessonEditor extends Component {
             className="btn btn-primary"
             type="submit"
             style={styles.saveButton}
+            onClick={e => this.handleSave(e, true)}
             disabled={this.state.isSaving}
           >
             Save and Close
