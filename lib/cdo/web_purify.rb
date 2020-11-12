@@ -27,7 +27,15 @@ module WebPurify
       "&text=#{URI.encode(text)}" \
       "&lang=#{language_codes}" \
       "&format=json"
-    result = JSON.parse(open(url, open_timeout: 5, read_timeout: 10).read)
+    result = JSON.
+      parse(
+        open(
+          url,
+          open_timeout: DCDO.get('webpurify_tcp_connect_timeout', 5),
+          read_timeout: DCDO.get('webpurify_http_read_timeout', 10)
+        ).
+        read
+      )
 
     expletive = result['rsp'] && result['rsp']['expletive']
     return nil unless expletive
