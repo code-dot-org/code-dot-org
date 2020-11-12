@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import $ from 'jquery';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 
 const styles = {
@@ -23,9 +22,18 @@ export default class LessonExtrasEditor extends React.Component {
   };
 
   handleClearProjectWidgetSelectClick = () => {
-    $(this.projectWidgetSelect)
-      .children('option')
-      .removeAttr('selected', true);
+    this.props.updateProjectWidgetTypes([]);
+  };
+
+  handleChangeProjectWidgetTypes = e => {
+    var options = e.target.options;
+    var projectWidgetTypes = [];
+    for (var i = 0, l = options.length; i < l; i++) {
+      if (options[i].selected) {
+        projectWidgetTypes.push(options[i].value);
+      }
+    }
+    this.props.updateProjectWidgetTypes(projectWidgetTypes);
   };
 
   render() {
@@ -76,9 +84,8 @@ export default class LessonExtrasEditor extends React.Component {
               <select
                 name="project_widget_types[]"
                 multiple
-                defaultValue={this.props.projectWidgetTypes}
-                ref={select => (this.projectWidgetSelect = select)}
-                onChange={e => this.props.updateProjectWidgetTypes(e)}
+                value={this.props.projectWidgetTypes}
+                onChange={this.handleChangeProjectWidgetTypes}
               >
                 <option value="playlab">Play Lab</option>
                 <option value="playlab_k1">Play Lab K1</option>

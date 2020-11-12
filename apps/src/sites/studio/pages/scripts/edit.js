@@ -98,7 +98,7 @@ export default function initPage(scriptEditorData) {
         initialPeerReviewsRequired={scriptData.peerReviewsRequired}
         initialWrapupVideo={scriptData.wrapupVideo || ''}
         initialProjectWidgetVisible={scriptData.project_widget_visible}
-        initialProjectWidgetTypes={scriptData.project_widget_types}
+        initialProjectWidgetTypes={scriptData.project_widget_types || []}
         initialTeacherResources={teacherResources}
         initialLessonExtrasAvailable={!!scriptData.lesson_extras_available}
         initialLessonLevelData={

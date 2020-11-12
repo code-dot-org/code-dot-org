@@ -3,7 +3,6 @@ import React from 'react';
 import UnitCard from '@cdo/apps/lib/levelbuilder/script-editor/UnitCard';
 import LessonDescriptions from '@cdo/apps/lib/levelbuilder/script-editor/LessonDescriptions';
 import AnnouncementsEditor from '@cdo/apps/lib/levelbuilder/announcementsEditor/AnnouncementsEditor';
-import $ from 'jquery';
 import ResourcesEditor from '@cdo/apps/lib/levelbuilder/course-editor/ResourcesEditor';
 import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
 import VisibleAndPilotExperiment from '@cdo/apps/lib/levelbuilder/script-editor/VisibleAndPilotExperiment';
@@ -153,9 +152,18 @@ export default class ScriptEditor extends React.Component {
   };
 
   handleClearSupportedLocalesSelectClick = () => {
-    $(this.supportedLocaleSelect)
-      .children('option')
-      .removeAttr('selected', true);
+    this.setState({supportedLocales: []});
+  };
+
+  handleChangeSupportedLocales = e => {
+    var options = e.target.options;
+    var supportedLocales = [];
+    for (var i = 0, l = options.length; i < l; i++) {
+      if (options[i].selected) {
+        supportedLocales.push(options[i].value);
+      }
+    }
+    this.setState({supportedLocales});
   };
 
   handleFamilyNameChange = event => {
@@ -340,8 +348,7 @@ export default class ScriptEditor extends React.Component {
               name="supported_locales[]"
               multiple
               value={this.state.supportedLocales}
-              ref={select => (this.supportedLocaleSelect = select)}
-              onChange={e => this.setState({supportedLocales: e.target.value})}
+              onChange={this.handleChangeSupportedLocales}
             >
               {this.state.locales
                 .filter(locale => !locale[1].startsWith('en'))
