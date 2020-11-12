@@ -369,12 +369,12 @@ export function getOptionFrequencies(state, column) {
 }
 
 export function getOptionFrequenciesByColumn(state) {
-  let uniqueOptionsByColumn = {};
+  let optionFrequenciesByColumn = {};
   getSelectedCategoricalColumns(state).map(
     column =>
-      (uniqueOptionsByColumn[column] = getOptionFrequencies(state, column))
+      (optionFrequenciesByColumn[column] = getOptionFrequencies(state, column))
   );
-  return uniqueOptionsByColumn;
+  return optionFrequenciesByColumn;
 }
 
 export function getUniqueOptionsByColumn(state) {
