@@ -159,7 +159,7 @@ const initialState = {
   testData: {},
   prediction: {},
   modelSize: undefined,
-  trainedModel: ""
+  trainedModel: undefined
 };
 
 // Reducer
