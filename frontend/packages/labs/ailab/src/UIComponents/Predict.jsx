@@ -86,7 +86,7 @@ class Predict extends Component {
             <button type="button" onClick={this.onClickPredict}>
               Predict!
             </button>
-            <p/>
+            <p />
             {this.props.predictedLabel && (
               <div>
                 <div> The Machine Learning model predicts... </div>
