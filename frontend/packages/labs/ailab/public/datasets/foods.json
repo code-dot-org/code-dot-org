@@ -2,62 +2,51 @@
   "fields": [
   	{
   		"id": "cook",
-  		"type": "categorical",
-  		"name": "Name"
+  		"type": "categorical"
   	},
   	{
   		"id": "eating_out",
-  		"type": "continuous",
-  		"name": "Name"
+  		"type": "categorical"
   	},
   	{
   		"id": "fav_cuisine_coded",
-  		"type": "categorical",
-  		"name": "Name"
+  		"type": "categorical"
   	},
   	{
   		"id": "fav_food",
-  		"type": "continuous",
-  		"name": "Name"
+  		"type": "categorical"
   	},
   	{
   		"id": "comfort_food_reasons_coded",
-  		"type": "categorical",
-  		"name": "Name"
+  		"type": "categorical"
   	},
   	{
   		"id": "healthy_feeling",
-  		"type": "continuous",
-  		"name": "Name"
+  		"type": "categorical"
   	},
   	{
   		"id": "life_rewarding",
-  		"type": "categorical",
-  		"name": "Name"
+  		"type": "categorical"
   	},
   	{
   		"id": "fruit_day",
-  		"type": "continuous",
-  		"name": "Name"
+  		"type": "continuous"
   	},
   	{
   		"id": "veggies_day",
-  		"type": "categorical",
-  		"name": "Name"
+  		"type": "continuous"
   	},
   	{
   		"id": "sports",
-  		"type": "continuous",
-  		"name": "Name"
+  		"type": "categorical"
   	},
   	{
   		"id": "type_sports?",
-  		"type": "categorical",
-  		"name": "Name"
+  		"type": "categorical"
   	},
     {
       "id": "indian_food",
-      "type": "continuous",
+      "type": "categorical",
       "name": "Name"
     },
     {
@@ -67,7 +56,7 @@
     },
     {
       "id": "Greek_food",
-      "type": "continuous",
+      "type": "categorical",
       "name": "Name"
     },
     {
@@ -77,7 +66,7 @@
     },
     {
       "id": "persian_food",
-      "type": "continuous",
+      "type": "categorical",
       "name": "Name"
     }
   ]

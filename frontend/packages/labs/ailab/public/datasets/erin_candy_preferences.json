@@ -2,58 +2,47 @@
   "fields": [
   	{
   		"id": "name",
-  		"type": "categorical",
-  		"name": "Name"
+  		"type": "categorical"
   	},
   	{
   		"id": "chocolate",
-  		"type": "categorical",
-  		"name": "Name"
+  		"type": "categorical"
   	},
   	{
   		"id": "fruity",
-  		"type": "categorical",
-  		"name": "Name"
+  		"type": "categorical"
   	},
   	{
   		"id": "caramel",
-  		"type": "categorical",
-  		"name": "Name"
+  		"type": "categorical"
   	},
   	{
   		"id": "nuts",
-  		"type": "categorical",
-  		"name": "Name"
+  		"type": "categorical"
   	},
   	{
   		"id": "nougat",
-  		"type": "categorical",
-  		"name": "Name"
+  		"type": "categorical"
   	},
   	{
   		"id": "crispy",
-  		"type": "categorical",
-  		"name": "Name"
+  		"type": "categorical"
   	},
   	{
   		"id": "hard",
-  		"type": "categorical",
-  		"name": "Name"
+  		"type": "categorical"
   	},
   	{
   		"id": "bar",
-  		"type": "categorical",
-  		"name": "Name"
+  		"type": "categorical"
   	},
   	{
   		"id": "pluribus",
-  		"type": "categorical",
-  		"name": "Name"
+  		"type": "categorical"
   	},
   	{
   		"id": "delicious?",
-  		"type": "categorical",
-  		"name": "Name"
+  		"type": "categorical"
   	}
   ]
 }

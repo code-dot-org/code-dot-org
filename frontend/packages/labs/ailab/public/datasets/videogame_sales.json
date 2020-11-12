@@ -2,72 +2,61 @@
   "fields": [
   	{
   		"id": "Name",
-  		"type": "categorical",
-  		"name": "Name"
+  		"type": "categorical"
   	},
   	{
   		"id": "Platform",
-  		"type": "categorical",
-  		"name": "Name"
+  		"type": "categorical"
   	},
   	{
   		"id": "Year_of_Release",
-  		"type": "categorical",
-  		"name": "Name"
+  		"type": "categorical"
   	},
   	{
   		"id": "Genre",
-  		"type": "categorical",
-  		"name": "Name"
+  		"type": "categorical"
   	},
   	{
   		"id": "Publisher",
-  		"type": "categorical",
-  		"name": "Name"
+  		"type": "categorical"
   	},
   	{
   		"id": "NA_Sales",
-  		"type": "categorical",
-  		"name": "Name"
+  		"type": "continuous"
   	},
   	{
   		"id": "EU_Sales",
-  		"type": "categorical",
-  		"name": "Name"
+  		"type": "continuous"
   	},
   	{
   		"id": "JP_Sales",
-  		"type": "categorical",
-  		"name": "Name"
+  		"type": "continuous"
   	},
   	{
   		"id": "Other_Sales",
-  		"type": "categorical",
-  		"name": "Name"
+  		"type": "continuous"
   	},
   	{
   		"id": "Global_Sales",
-  		"type": "categorical",
-  		"name": "Name"
+  		"type": "continuous"
   	},
   	{
   		"id": "Critic_Score",
-  		"type": "categorical",
-  		"name": "Name"
+  		"type": "continuous"
   	},
     {
       "id": "Critic_Count",
-      "type": "categorical",
+      "type": "continuous",
       "name": "Name"
     },
     {
       "id": "User_Score",
-      "type": "categorical",
+      "type": "continuous",
       "name": "Name"
     },
     {
       "id": "User_Count",
-      "type": "categorical",
+      "type": "continuous",
       "name": "Name"
     },
     {
