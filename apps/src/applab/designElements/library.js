@@ -27,7 +27,8 @@ var ElementType = utils.makeEnum(
   'SCREEN',
   'CHART',
   'SLIDER',
-  'PHOTO_SELECT'
+  'PHOTO_SELECT',
+  'ML_PREDICT'
 );
 
 var elements = {};
@@ -44,6 +45,7 @@ elements[ElementType.SCREEN] = require('./screen');
 elements[ElementType.CHART] = require('./chart');
 elements[ElementType.SLIDER] = require('./slider');
 elements[ElementType.PHOTO_SELECT] = require('./photoSelect');
+elements[ElementType.ML_PREDICT] = require('./predictPanel');
 
 export default {
   ElementType: ElementType,

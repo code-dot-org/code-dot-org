@@ -3,6 +3,7 @@ import React from 'react';
 import DesignToolboxElement from './DesignToolboxElement';
 import applabMsg from '@cdo/applab/locale';
 import ThemeDropdown from './designElements/ThemeDropdown';
+import experiments from '@cdo/apps/util/experiments';
 
 const IMAGE_BASE_URL = '/blockly/media/applab/design_toolbox/';
 
@@ -116,6 +117,14 @@ export default class DesignToolbox extends React.Component {
           elementType={'PHOTO_SELECT'}
           handleDragStart={this.props.handleDragStart}
         />
+        {experiments.isEnabled(experiments.APPLAB_ML) && (
+          <DesignToolboxElement
+            imageUrl={IMAGE_BASE_URL + 'ml_predict.png'}
+            desc={'ML Predict'}
+            elementType={'ML_PREDICT'}
+            handleDragStart={this.props.handleDragStart}
+          />
+        )}
       </div>
     );
   }
