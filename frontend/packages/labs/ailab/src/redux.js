@@ -25,7 +25,9 @@ import { ColumnTypes, MLTypes } from "./constants.js";
 const RESET_STATE = "RESET_STATE";
 const SET_MODE = "SET_MODE";
 const SET_SELECTED_CSV = "SET_SELECTED_CSV";
+const SET_SELECTED_JSON = "SET_SELECTED_JSON";
 const SET_IMPORTED_DATA = "SET_IMPORTED_DATA";
+const SET_IMPORTED_METADATA = "SET_IMPORTED_METADATA";
 const SET_SELECTED_TRAINER = "SET_SELECTED_TRAINER";
 const SET_COLUMNS_BY_DATA_TYPE = "SET_COLUMNS_BY_DATA_TYPE";
 const SET_SELECTED_FEATURES = "SET_SELECTED_FEATURES";
@@ -53,8 +55,16 @@ export function setSelectedCSV(csvfile) {
   return { type: SET_SELECTED_CSV, csvfile };
 }
 
+export function setSelectedJSON(jsonfile) {
+  return { type: SET_SELECTED_JSON, jsonfile };
+}
+
 export function setImportedData(data) {
   return { type: SET_IMPORTED_DATA, data };
+}
+
+export function setImportedMetadata(metadata) {
+  return { type: SET_IMPORTED_METADATA, metadata };
 }
 
 export function setSelectedTrainer(selectedTrainer) {
@@ -144,7 +154,9 @@ export function setTrainedModel(trainedModel) {
 
 const initialState = {
   csvfile: undefined,
+  jsonfile: undefined,
   data: [],
+  metadata: {},
   selectedTrainer: undefined,
   columnsByDataType: {},
   selectedFeatures: [],
@@ -177,10 +189,22 @@ export default function rootReducer(state = initialState, action) {
       csvfile: action.csvfile
     };
   }
+  if (action.type === SET_SELECTED_JSON) {
+    return {
+      ...state,
+      jsonfile: action.jsonfile
+    };
+  }
   if (action.type === SET_IMPORTED_DATA) {
     return {
       ...state,
       data: action.data
+    };
+  }
+  if (action.type === SET_IMPORTED_METADATA) {
+    return {
+      ...state,
+      metadata: action.metadata
     };
   }
   if (action.type === SET_SELECTED_TRAINER) {
@@ -541,7 +565,7 @@ export function validationMessages(state) {
   validationMessages.push({
     readyToTrain: compatibleLabelAndTrainer(state),
     errorString:
-      "The label datatype must be compatiable with the training algorithm.",
+      "The label datatype must be compatible with the training algorithm.",
     successString: "The label datatype and training algorithm are compatible."
   });
   return validationMessages;

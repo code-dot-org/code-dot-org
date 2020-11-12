@@ -16,16 +16,25 @@ class ColumnInspector extends Component {
     selectedColumns: PropTypes.array,
     columnsByDataType: PropTypes.object,
     setColumnsByDataType: PropTypes.func.isRequired,
-    getUniqueOptionsByColumn: PropTypes.func,
     uniqueOptionsByColumn: PropTypes.object,
     getRangesByColumn: PropTypes.func,
-    rangesByColumn: PropTypes.object
+    rangesByColumn: PropTypes.object,
+    metadata: PropTypes.object
   };
 
   handleChangeDataType = (event, feature) => {
     event.preventDefault();
     this.props.setColumnsByDataType(feature, event.target.value);
   };
+
+  getMetadataColumnType(column) {
+    return (
+      this.props.metadata.fields &&
+      this.props.metadata.fields.find(field => {
+        return field.id === column;
+      }).type
+    );
+  }
 
   render() {
     return (
@@ -57,21 +66,23 @@ class ColumnInspector extends Component {
                   <div key={index}>
                     {this.props.columnsByDataType[column] && (
                       <label>
-                        {column}:{" "}
-                        <select
-                          onChange={event =>
-                            this.handleChangeDataType(event, column)
-                          }
-                          value={this.props.columnsByDataType[column]}
-                        >
-                          {Object.values(ColumnTypes).map((option, index) => {
-                            return (
-                              <option key={index} value={option}>
-                                {option}
-                              </option>
-                            );
-                          })}
-                        </select>
+                        {column}: {this.getMetadataColumnType(column)}
+                        {!this.getMetadataColumnType(column) && (
+                          <select
+                            onChange={event =>
+                              this.handleChangeDataType(event, column)
+                            }
+                            value={this.props.columnsByDataType[column]}
+                          >
+                            {Object.values(ColumnTypes).map((option, index) => {
+                              return (
+                                <option key={index} value={option}>
+                                  {option}
+                                </option>
+                              );
+                            })}
+                          </select>
+                        )}
                       </label>
                     )}
                     {this.props.columnsByDataType[column] ===
@@ -156,7 +167,8 @@ export default connect(
     selectedColumns: getSelectedColumns(state),
     columnsByDataType: state.columnsByDataType,
     uniqueOptionsByColumn: getOptionFrequenciesByColumn(state),
-    rangesByColumn: getRangesByColumn(state)
+    rangesByColumn: getRangesByColumn(state),
+    metadata: state.metadata
   }),
   dispatch => ({
     setColumnsByDataType(column, dataType) {

@@ -1,0 +1,44 @@
+{
+  "fields": [
+  	{
+  		"id": "Survived",
+  		"type": "categorical",
+  		"name": "Name"
+  	},
+  	{
+  		"id": "Pclass",
+  		"type": "categorical",
+  		"name": "Name"
+  	},
+  	{
+  		"id": "Name",
+  		"type": "categorical",
+  		"name": "Name"
+  	},
+  	{
+  		"id": "Sex",
+  		"type": "categorical",
+  		"name": "Name"
+  	},
+  	{
+  		"id": "Age",
+  		"type": "continuous",
+  		"name": "Name"
+  	},
+  	{
+  		"id": "Siblings/Spouses Aboard",
+  		"type": "categorical",
+  		"name": "Name"
+  	},
+  	{
+  		"id": "Parents/Children Aboard",
+  		"type": "categorical",
+  		"name": "Name"
+  	},
+  	{
+  		"id": "Fare",
+  		"type": "continuous",
+  		"name": "Name"
+  	}
+  ]
+}

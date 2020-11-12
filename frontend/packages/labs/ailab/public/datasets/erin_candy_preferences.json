@@ -1,0 +1,48 @@
+{
+  "fields": [
+  	{
+  		"id": "name",
+  		"type": "categorical"
+  	},
+  	{
+  		"id": "chocolate",
+  		"type": "categorical"
+  	},
+  	{
+  		"id": "fruity",
+  		"type": "categorical"
+  	},
+  	{
+  		"id": "caramel",
+  		"type": "categorical"
+  	},
+  	{
+  		"id": "nuts",
+  		"type": "categorical"
+  	},
+  	{
+  		"id": "nougat",
+  		"type": "categorical"
+  	},
+  	{
+  		"id": "crispy",
+  		"type": "categorical"
+  	},
+  	{
+  		"id": "hard",
+  		"type": "categorical"
+  	},
+  	{
+  		"id": "bar",
+  		"type": "categorical"
+  	},
+  	{
+  		"id": "pluribus",
+  		"type": "categorical"
+  	},
+  	{
+  		"id": "delicious?",
+  		"type": "categorical"
+  	}
+  ]
+}

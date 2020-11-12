@@ -39,7 +39,7 @@ class SelectDataset extends Component {
   };
 
   importCSV = () => {
-    parseCSV(this.props.csvfile, this.state.download);
+    parseCSV(this.props.csvfile, this.state.download, true);
   };
 
   render() {

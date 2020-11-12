@@ -3,19 +3,22 @@ import { store } from "./index.js";
 import { setImportedData, setColumnsByDataType } from "./redux";
 import { ColumnTypes } from "./constants.js";
 
-export const parseCSV = (csvfile, download) => {
+export const parseCSV = (csvfile, download, setColumnsToOther) => {
   Papa.parse(csvfile, {
-    complete: updateData,
+    complete: result => { updateData(result, setColumnsToOther) },
     header: true,
     download: download,
     skipEmptyLines: true
   });
 };
 
-const updateData = result => {
+const updateData = (result, setColumnsToOther) => {
   var data = result.data;
+
   store.dispatch(setImportedData(data));
-  setDefaultColumnDataType(data);
+  if (setColumnsToOther) {
+    setDefaultColumnDataType(data);
+  }
 };
 
 const setDefaultColumnDataType = data => {
