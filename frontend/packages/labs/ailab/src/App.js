@@ -8,10 +8,12 @@ import SelectTrainer from "./UIComponents/SelectTrainer";
 import TrainModel from "./UIComponents/TrainModel";
 import Results from "./UIComponents/Results";
 import Predict from "./UIComponents/Predict";
+import SaveModel from "./UIComponents/SaveModel";
 
 export default class App extends Component {
   static propTypes = {
-    mode: PropTypes.object
+    mode: PropTypes.object,
+    saveTrainedModel: PropTypes.func
   };
 
   render() {
@@ -27,6 +29,7 @@ export default class App extends Component {
         <TrainModel />
         <Results />
         <Predict />
+        <SaveModel saveTrainedModel={this.props.saveTrainedModel} />
       </div>
     );
   }
