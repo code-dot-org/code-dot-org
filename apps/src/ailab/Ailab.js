@@ -124,6 +124,9 @@ Ailab.prototype.onContinue = function() {
 Ailab.prototype.initMLActivities = function() {
   const mode = this.level.mode ? JSON.parse(this.level.mode) : null;
   const onContinue = this.onContinue.bind(this);
+  const saveTrainedModel = () => {
+    console.log('code goes here to save model to s3');
+  };
 
   setAssetPath('/blockly/media/skins/ailab/');
 
@@ -133,7 +136,8 @@ Ailab.prototype.initMLActivities = function() {
   initAll({
     mode,
     onContinue,
-    i18n: ailabMsg
+    i18n: ailabMsg,
+    saveTrainedModel
   });
 };
 
