@@ -37,23 +37,25 @@ class TrainModel extends Component {
 
   render() {
     return (
-      <div>
-        <h2>Are you ready to train the model?</h2>
-        {this.props.validationMessages.map((msg, index) => {
-          return msg.readyToTrain ? (
-            <p key={index} style={styles.ready}>
-              {msg.successString}{" "}
-            </p>
-          ) : (
-            <p key={index} style={styles.error}>
-              {msg.errorString}{" "}
-            </p>
-          );
-        })}
-        <h3>How much of the data would you like to reserve for testing?</h3>
+      <div id="train-model" style={styles.panel}>
+        <div style={styles.largeText}>Are you ready to train the model?</div>
+        <div style={styles.validationMessages}>
+          {this.props.validationMessages.map((msg, index) => {
+            return msg.readyToTrain ? (
+              <p key={index} style={styles.ready}>
+                {msg.successString}{" "}
+              </p>
+            ) : (
+              <p key={index} style={styles.error}>
+                {msg.errorString}{" "}
+              </p>
+            );
+          })}
+        </div>
+        <div>How much of the data would you like to reserve for testing?</div>
         <form>
           <label>
-            Percent of dataset to reserve:
+            Percent of dataset to reserve:{' '}
             <select
               value={this.props.percentDataToReserve}
               onChange={this.handleChange}
@@ -70,7 +72,8 @@ class TrainModel extends Component {
         </form>
         {this.props.readyToTrain && (
           <div>
-            <h2>Train the Model</h2>
+            <p/>
+            <div style={styles.largeText}>Train the Model</div>
             <p>
               The machine learning algorithm you selected,{" "}
               {availableTrainers[this.props.selectedTrainer]["name"]}, is going

@@ -65,6 +65,12 @@ export const getRegressionTrainers = () => {
   return filterTrainersByType(MLTypes.REGRESSION);
 };
 
+export const getMLType = trainerName => {
+  if (availableTrainers[trainerName]) {
+    return availableTrainers[trainerName].mlType;
+  }
+};
+
 /* Builds a hash that maps a feature's categorical options to numbers because
   the ML algorithms only accept numerical inputs.
   @param {string} - feature name

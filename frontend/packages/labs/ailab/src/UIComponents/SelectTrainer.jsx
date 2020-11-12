@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { setSelectedTrainer, getCompatibleTrainers } from "../redux";
+import { styles } from "../constants";
 
 class SelectTrainer extends Component {
   static propTypes = {
@@ -18,8 +19,8 @@ class SelectTrainer extends Component {
   render() {
     const { compatibleTrainers, selectedTrainer } = this.props;
     return (
-      <div>
-        <h2>Pick an Algorithm</h2>
+      <div id="select-trainer" style={styles.panel}>
+        <div style={styles.largeText}>Pick an Algorithm</div>
         <form>
           <label>
             <p>Which Machine Learning Algorithm would you like to use?</p>
@@ -38,7 +39,7 @@ class SelectTrainer extends Component {
             </select>
             {this.props.selectedTrainer && (
               <div>
-                <h3>{compatibleTrainers[selectedTrainer]["mlType"]}</h3>{" "}
+                <div style={styles.mediumText}>{compatibleTrainers[selectedTrainer]["mlType"]}</div>{" "}
                 {compatibleTrainers[selectedTrainer]["description"]}
               </div>
             )}

@@ -29,10 +29,10 @@ class ColumnInspector extends Component {
 
   render() {
     return (
-      <div>
+      <div id="column-inspector">
         {this.props.selectedColumns.length > 0 && (
-          <div>
-            <h2>Describe the data in each of your selected columns</h2>
+          <div style={styles.panel}>
+            <div style={styles.largeText}>Describe the data in each of your selected columns</div>
             <p>
               Categorical columns contain a fixed number of possible values that
               indicate a group. For example, the column "Size" might contain
@@ -55,7 +55,7 @@ class ColumnInspector extends Component {
                   <div key={index}>
                     {this.props.columnsByDataType[column] && (
                       <label>
-                        {column}:
+                        {column}:{' '}
                         <select
                           onChange={event =>
                             this.handleChangeDataType(event, column)
@@ -79,11 +79,13 @@ class ColumnInspector extends Component {
                           {this.props.uniqueOptionsByColumn[column].length}{" "}
                           unique values for {column}:{" "}
                         </p>
-                        {this.props.uniqueOptionsByColumn[column].map(
-                          (option, index) => {
-                            return <div key={index}>{option}</div>;
-                          }
-                        )}
+                        <div style={styles.subPanel}>
+                          {this.props.uniqueOptionsByColumn[column].map(
+                            (option, index) => {
+                              return <div key={index}>{option}</div>;
+                            }
+                          )}
+                        </div>
                       </div>
                     )}
                     {this.props.columnsByDataType[column] ===
@@ -96,11 +98,13 @@ class ColumnInspector extends Component {
                                 Continuous columns should contain only numbers.
                               </p>
                             )}
-                            <br />
-                            min: {this.props.rangesByColumn[column].min}
-                            <br />
-                            <br />
-                            max: {this.props.rangesByColumn[column].max}
+                            {!isNaN(this.props.rangesByColumn[column].min) && (
+                              <div style={styles.subPanel}>
+                                min: {this.props.rangesByColumn[column].min}
+                                <br />
+                                max: {this.props.rangesByColumn[column].max}
+                              </div>
+                            )}
                           </div>
                         )}
                       </div>

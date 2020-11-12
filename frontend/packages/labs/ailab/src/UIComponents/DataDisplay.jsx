@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { getEmptyCellDetails } from "../redux";
+import { styles } from "../constants";
 
 class DataDisplay extends Component {
   static propTypes = {
@@ -33,36 +34,48 @@ class DataDisplay extends Component {
 
   render() {
     return (
-      <div>
+      <div id="data-display">
         {this.props.data.length > 0 && (
-          <div>
-            <h2>Imported Data</h2>
+          <div style={styles.panel}>
+            <div style={styles.largeText}>Imported Data</div>
             {this.state.showRawData && (
               <div>
-                <p onClick={this.toggleRawData}>hide data</p>
-                {JSON.stringify(this.props.data)}
+                <button type="button" onClick={this.toggleRawData}>
+                  hide data
+                </button>
+                <div style={styles.finePrint}>
+                  {JSON.stringify(this.props.data)}
+                </div>
               </div>
             )}
             {!this.state.showRawData && (
-              <p onClick={this.toggleRawData}>show data</p>
+              <button type="button" onClick={this.toggleRawData}>
+                show data
+              </button>
             )}
-            <h3>There are {this.props.data.length} rows of data.</h3>
-            <h3>There are {this.props.emptyCellDetails.length} empty cells.</h3>
+            <div style={styles.mediumText}>
+              There are {this.props.data.length} rows of data.
+            </div>
+
+            <div style={styles.mediumText}>
+              There are {this.props.emptyCellDetails.length} empty cells.
+            </div>
             {this.state.showEmptyCellDetails && (
               <div>
-                <p onClick={this.toggleEmptyCellDetails}>
+                <button type="button" onClick={this.toggleEmptyCellDetails}>
                   hide empty cell details
-                </p>
+                </button>
                 {this.props.emptyCellDetails.map((cellDetails, i) => {
                   return <p key={i}>{cellDetails}</p>;
                 })}
               </div>
             )}
-            {!this.state.showEmptyCellDetails && (
-              <p onClick={this.toggleEmptyCellDetails}>
-                show empty cell details
-              </p>
-            )}
+            {!this.state.showEmptyCellDetails &&
+              this.props.emptyCellDetails.length > 0 && (
+                <button type="button" onClick={this.toggleEmptyCellDetails}>
+                  show empty cell details
+                </button>
+              )}
           </div>
         )}
       </div>

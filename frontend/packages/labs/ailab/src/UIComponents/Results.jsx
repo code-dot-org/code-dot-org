@@ -2,8 +2,8 @@
 import PropTypes from "prop-types";
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { getAccuracy, getConvertedLabels } from "../redux";
-import { styles } from "../constants";
+import { getConvertedLabels, getSummaryStat } from "../redux";
+import { styles, MLTypes } from "../constants";
 
 class Results extends Component {
   static propTypes = {
@@ -11,7 +11,7 @@ class Results extends Component {
     selectedFeatures: PropTypes.array,
     labelColumn: PropTypes.string,
     percentDataToReserve: PropTypes.number,
-    accuracy: PropTypes.string,
+    summaryStat: PropTypes.object,
     accuracyCheckExamples: PropTypes.array,
     accuracyCheckLabels: PropTypes.array,
     accuracyCheckPredictedLabels: PropTypes.array
@@ -19,20 +19,41 @@ class Results extends Component {
 
   render() {
     return (
-      <div>
+      <div id="results">
         {this.props.showPredict &&
           this.props.percentDataToReserve > 0 &&
           this.props.accuracyCheckExamples.length > 0 && (
-            <div>
+            <div style={styles.panel}>
               <p>
                 {this.props.percentDataToReserve}% of the training data was
                 reserved to test the accuracy of the newly trained model.
               </p>
               <div>
-                <h3>The calculated accuracy of this model is:</h3>
-                {this.props.accuracy}%
+                {this.props.summaryStat.type === MLTypes.REGRESSION && (
+                  <div>
+                    <div>
+                      The average difference between expected and predicted
+                      labels is:
+                    </div>
+                    <div style={styles.subPanel}>
+                      {this.props.summaryStat.stat}
+                    </div>
+                  </div>
+                )}
+                {this.props.summaryStat.type === MLTypes.CLASSIFICATION && (
+                  <div>
+                    <div style={styles.mediumText}>
+                      The calculated accuracy of this model is:
+                    </div>
+                    <div style={styles.subPanel}>
+                      {this.props.summaryStat.stat}%
+                    </div>
+                  </div>
+                )}
+                <br />
+                <br />
               </div>
-              <div>
+              <div style={styles.subPanel}>
                 <table>
                   <thead>
                     <tr>
@@ -75,7 +96,7 @@ export default connect(state => ({
   showPredict: state.showPredict,
   selectedFeatures: state.selectedFeatures,
   labelColumn: state.labelColumn,
-  accuracy: getAccuracy(state),
+  summaryStat: getSummaryStat(state),
   accuracyCheckExamples: state.accuracyCheckExamples,
   accuracyCheckLabels: getConvertedLabels(state, state.accuracyCheckLabels),
   accuracyCheckPredictedLabels: getConvertedLabels(

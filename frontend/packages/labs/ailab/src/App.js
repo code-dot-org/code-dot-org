@@ -9,6 +9,7 @@ import TrainModel from "./UIComponents/TrainModel";
 import Results from "./UIComponents/Results";
 import Predict from "./UIComponents/Predict";
 import SaveModel from "./UIComponents/SaveModel";
+import { styles } from "./constants";
 
 export default class App extends Component {
   static propTypes = {
@@ -18,7 +19,7 @@ export default class App extends Component {
 
   render() {
     return (
-      <div>
+      <div style={styles.container}>
         {(!this.props.mode || this.props.mode.id !== "load_dataset") && (
           <SelectDataset />
         )}
