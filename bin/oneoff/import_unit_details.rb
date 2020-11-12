@@ -189,7 +189,7 @@ def get_validated_lesson_pairs(script, cb_unit)
     # having been pulled through to CB. If the lesson name matches that name
     # exactly, then do not warn, because that's a strong signal that we found
     # the right lesson.
-    unless [cb_lesson['stage_name'], cb_lesson['title']].any? {|name| name.strip.downcase == lesson.name.strip.downcase}
+    unless [cb_lesson['stage_name'], cb_lesson['title']].any? {|name| canonicalize(name) == canonicalize(lesson.name)}
       mismatched_names.push([lesson.name, cb_lesson['title']])
     end
   end
@@ -205,7 +205,7 @@ def get_validated_lesson_pairs(script, cb_unit)
     end
     lesson = script.lessons.find_by!(lockable: true, relative_position: lockable_position)
     validated_lesson_pairs.push([lesson, cb_lesson])
-    unless lesson.name.downcase.strip == cb_lesson['title'].downcase.strip
+    unless canonicalize(lesson.name) == canonicalize(cb_lesson['title'])
       mismatched_names.push([lesson.name, cb_lesson['title']])
     end
   end
@@ -271,7 +271,7 @@ def get_lesson_group_pairs(script, cb_chapters, lesson_pairs)
     end
 
     lesson_group_pairs.push([lesson_group, cb_chapter])
-    unless lesson_group.display_name == cb_chapter['title']
+    unless canonicalize(lesson_group.display_name) == canonicalize(cb_chapter['title'])
       mismatched_names.push([lesson_group.display_name, cb_chapter['title']])
     end
   end
@@ -284,6 +284,20 @@ def get_lesson_group_pairs(script, cb_chapters, lesson_pairs)
   end
 
   lesson_group_pairs
+end
+
+# Canonicalize a lesson name or lesson group name to increase the chances of a
+# match when names are compared across CB and Code Studio.
+# * ignores prefixes like "Lesson 1: " or "Chapter 12: "
+# * ignores - and : characters
+# * ignores differences in case and whitespace
+def canonicalize(str)
+  match = /^(Lesson|Chapter) \d+: (.*)/.match(str)
+  str = match&.captures&.last if match
+  str.gsub!(/[-:]/, ' ')
+  # deduplicate spaces
+  str = str.split(' ').compact.join(' ')
+  str.downcase.strip
 end
 
 options = parse_options
