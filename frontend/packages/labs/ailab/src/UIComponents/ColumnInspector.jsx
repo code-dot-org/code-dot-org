@@ -32,7 +32,9 @@ class ColumnInspector extends Component {
       <div id="column-inspector">
         {this.props.selectedColumns.length > 0 && (
           <div style={styles.panel}>
-            <div style={styles.largeText}>Describe the data in each of your selected columns</div>
+            <div style={styles.largeText}>
+              Describe the data in each of your selected columns
+            </div>
             <p>
               Categorical columns contain a fixed number of possible values that
               indicate a group. For example, the column "Size" might contain
@@ -55,7 +57,7 @@ class ColumnInspector extends Component {
                   <div key={index}>
                     {this.props.columnsByDataType[column] && (
                       <label>
-                        {column}:{' '}
+                        {column}:{" "}
                         <select
                           onChange={event =>
                             this.handleChangeDataType(event, column)
