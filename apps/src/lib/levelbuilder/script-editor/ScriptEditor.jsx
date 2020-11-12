@@ -136,7 +136,7 @@ export default class ScriptEditor extends React.Component {
       editorExperiment: this.props.initialEditorExperiment,
       supportedLocales: this.props.initialSupportedLocales,
       locales: this.props.initialLocales,
-      projectSharing: this.prosp.initialProjectSharing,
+      projectSharing: this.props.initialProjectSharing,
       curriculumUmbrella: this.props.initialCurriculumUmbrella,
       versionYear: this.props.initialVersionYear,
       tts: this.props.initialTts,
