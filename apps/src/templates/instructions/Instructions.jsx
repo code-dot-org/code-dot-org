@@ -4,8 +4,6 @@ import MarkdownInstructions from './MarkdownInstructions';
 import NonMarkdownInstructions from './NonMarkdownInstructions';
 import InputOutputTable from './InputOutputTable';
 import AniGifPreview from './AniGifPreview';
-import ImmersiveReaderButton from './ImmersiveReaderButton';
-import i18n from '@cdo/locale';
 
 const styles = {
   inTopPane: {
@@ -75,10 +73,6 @@ class Instructions extends React.Component {
       <div
         style={this.props.inTopPane ? styles.inTopPane : styles.notInTopPane}
       >
-        <ImmersiveReaderButton
-          title={this.props.puzzleTitle || i18n.instructions()}
-          text={this.props.longInstructions || this.props.shortInstructions}
-        />
         {this.renderMainBody()}
 
         {this.props.inputOutputTable && (
