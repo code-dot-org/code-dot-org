@@ -356,6 +356,27 @@ export function getUniqueOptions(state, column) {
   );
 }
 
+export function getOptionFrequencies(state, column) {
+  let optionFrequencies = {};
+  for (let row of state.data) {
+    if (optionFrequencies[row[column]]) {
+      optionFrequencies[row[column]]++;
+    } else {
+      optionFrequencies[row[column]] = 1;
+    }
+  }
+  return optionFrequencies;
+}
+
+export function getOptionFrequenciesByColumn(state) {
+  let optionFrequenciesByColumn = {};
+  getSelectedCategoricalColumns(state).map(
+    column =>
+      (optionFrequenciesByColumn[column] = getOptionFrequencies(state, column))
+  );
+  return optionFrequenciesByColumn;
+}
+
 export function getUniqueOptionsByColumn(state) {
   let uniqueOptionsByColumn = {};
   getSelectedCategoricalColumns(state).map(
