@@ -82,4 +82,15 @@ class HocI18nTest < Minitest::Test
     assert_equal 200, resp.status
     assert_match "<h1>string with embedded html</h1>", resp.body
   end
+
+  def test_hoc_cb_url
+    response = get('/hoc_cb_url/es_mx')
+    assert_match "https://curriculum.code.org/es-mx/hoc/plugged/8", response.body
+
+    response = get('/hoc_cb_url/it_it')
+    assert_match "https://curriculum.code.org/it-it/hoc/plugged/8", response.body
+
+    response = get('/hoc_cb_url/fa_ke')
+    assert_match "https://curriculum.code.org/hoc/plugged/8", response.body
+  end
 end
