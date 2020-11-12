@@ -6,9 +6,9 @@ export const parseJSON = (jsonfile, successCallback) => {
   rawFile.overrideMimeType("application/json");
   rawFile.open("GET", jsonfile, true);
   rawFile.onreadystatechange = function() {
-      if (rawFile.readyState === 4 && rawFile.status === "200") {
-          updateData(rawFile.responseText, successCallback);
-      }
+    if (rawFile.readyState === 4 && rawFile.status === 200) {
+      updateData(rawFile.responseText, successCallback);
+    }
   }
   rawFile.send(null);
 };

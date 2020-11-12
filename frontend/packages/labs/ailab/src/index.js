@@ -40,7 +40,6 @@ const processMode = mode => {
         for (const field of result.fields) {
            store.dispatch(setColumnsByDataType(field.id, field.type));
         }
-        console.log("dispatched json");
       });
     }
   }
