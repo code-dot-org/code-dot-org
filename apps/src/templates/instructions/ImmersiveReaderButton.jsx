@@ -11,8 +11,11 @@ class ImmersiveReaderButton extends Component {
   };
 
   componentDidMount() {
+    console.log('ImmersiveReaderButton.componentDidMount');
     if (this.shouldRender() && !this.renderButtonsCalled) {
       // Applies inline styling to the .immersive-reader-button elements
+
+      console.log('ImmersiveReaderButton.renderButtons');
       renderButtons({
         elements: [this.container]
       });
@@ -21,7 +24,12 @@ class ImmersiveReaderButton extends Component {
     }
   }
 
+  onComponentDidUnmount() {
+    console.log('ImmersiveReaderButton.onComponentDidUnmount');
+  }
+
   render() {
+    console.log('ImmersiveReaderButton.render');
     const {title, text} = this.props;
     // Get the current language from the language cookie.
     const locale = cookies.get('language_') || 'en-US';
