@@ -6,7 +6,19 @@ import ResourceType from '@cdo/apps/templates/courseOverview/resourceType';
 
 const defaultProps = {
   inputStyle: {},
-  resources: []
+  resources: [
+    {link: '', type: ''},
+    {link: '', type: ''},
+    {link: '', type: ''},
+    {link: '', type: ''},
+    {link: '', type: ''},
+    {link: '', type: ''},
+    {link: '', type: ''},
+    {link: '', type: ''},
+    {link: '', type: ''},
+    {link: '', type: ''}
+  ],
+  updateTeacherResources: () => {}
 };
 
 describe('ResourcesEditor', () => {
