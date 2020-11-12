@@ -96,20 +96,22 @@ class ColumnInspector extends Component {
                             <tbody>
                               {Object.keys(
                                 this.props.uniqueOptionsByColumn[column]
-                              ).map((option, index) => {
-                                return (
-                                  <tr key={index}>
-                                    <td>{option}</td>
-                                    <td>
-                                      {
-                                        this.props.uniqueOptionsByColumn[
-                                          column
-                                        ][option]
-                                      }
-                                    </td>
-                                  </tr>
-                                );
-                              })}
+                              )
+                                .sort()
+                                .map((option, index) => {
+                                  return (
+                                    <tr key={index}>
+                                      <td>{option}</td>
+                                      <td>
+                                        {
+                                          this.props.uniqueOptionsByColumn[
+                                            column
+                                          ][option]
+                                        }
+                                      </td>
+                                    </tr>
+                                  );
+                                })}
                             </tbody>
                           </table>
                         </div>
