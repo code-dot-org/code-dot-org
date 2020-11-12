@@ -1,0 +1,84 @@
+{
+  "fields": [
+  	{
+  		"id": "Name",
+  		"type": "categorical",
+  		"name": "Name"
+  	},
+  	{
+  		"id": "Platform",
+  		"type": "categorical",
+  		"name": "Name"
+  	},
+  	{
+  		"id": "Year_of_Release",
+  		"type": "categorical",
+  		"name": "Name"
+  	},
+  	{
+  		"id": "Genre",
+  		"type": "categorical",
+  		"name": "Name"
+  	},
+  	{
+  		"id": "Publisher",
+  		"type": "categorical",
+  		"name": "Name"
+  	},
+  	{
+  		"id": "NA_Sales",
+  		"type": "categorical",
+  		"name": "Name"
+  	},
+  	{
+  		"id": "EU_Sales",
+  		"type": "categorical",
+  		"name": "Name"
+  	},
+  	{
+  		"id": "JP_Sales",
+  		"type": "categorical",
+  		"name": "Name"
+  	},
+  	{
+  		"id": "Other_Sales",
+  		"type": "categorical",
+  		"name": "Name"
+  	},
+  	{
+  		"id": "Global_Sales",
+  		"type": "categorical",
+  		"name": "Name"
+  	},
+  	{
+  		"id": "Critic_Score",
+  		"type": "categorical",
+  		"name": "Name"
+  	},
+    {
+      "id": "Critic_Count",
+      "type": "categorical",
+      "name": "Name"
+    },
+    {
+      "id": "User_Score",
+      "type": "categorical",
+      "name": "Name"
+    },
+    {
+      "id": "User_Count",
+      "type": "categorical",
+      "name": "Name"
+    },
+    {
+      "id": "Developer",
+      "type": "categorical",
+      "name": "Name"
+    },
+    {
+      "id": "Rating",
+      "type": "categorical",
+      "name": "Name"
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "fields": [
+  	{
+  		"id": "cook",
+  		"type": "categorical",
+  		"name": "Name"
+  	},
+  	{
+  		"id": "eating_out",
+  		"type": "continuous",
+  		"name": "Name"
+  	},
+  	{
+  		"id": "fav_cuisine_coded",
+  		"type": "categorical",
+  		"name": "Name"
+  	},
+  	{
+  		"id": "fav_food",
+  		"type": "continuous",
+  		"name": "Name"
+  	},
+  	{
+  		"id": "comfort_food_reasons_coded",
+  		"type": "categorical",
+  		"name": "Name"
+  	},
+  	{
+  		"id": "healthy_feeling",
+  		"type": "continuous",
+  		"name": "Name"
+  	},
+  	{
+  		"id": "life_rewarding",
+  		"type": "categorical",
+  		"name": "Name"
+  	},
+  	{
+  		"id": "fruit_day",
+  		"type": "continuous",
+  		"name": "Name"
+  	},
+  	{
+  		"id": "veggies_day",
+  		"type": "categorical",
+  		"name": "Name"
+  	},
+  	{
+  		"id": "sports",
+  		"type": "continuous",
+  		"name": "Name"
+  	},
+  	{
+  		"id": "type_sports?",
+  		"type": "categorical",
+  		"name": "Name"
+  	},
+    {
+      "id": "indian_food",
+      "type": "continuous",
+      "name": "Name"
+    },
+    {
+      "id": "italian_food",
+      "type": "categorical",
+      "name": "Name"
+    },
+    {
+      "id": "Greek_food",
+      "type": "continuous",
+      "name": "Name"
+    },
+    {
+      "id": "Greek_food",
+      "type": "categorical",
+      "name": "Name"
+    },
+    {
+      "id": "persian_food",
+      "type": "continuous",
+      "name": "Name"
+    }
+  ]
+}

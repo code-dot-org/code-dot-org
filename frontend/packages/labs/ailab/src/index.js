@@ -3,9 +3,10 @@ import ReactDOM from "react-dom";
 import App from "./App.js";
 import { Provider } from "react-redux";
 import { createStore} from "redux";
-import rootReducer, { setMode, setSelectedCSV } from "./redux";
+import rootReducer, { setMode, setSelectedCSV, setSelectedJSON, setColumnsByDataType } from "./redux";
 import { allDatasets } from "./datasetManifest";
 import { parseCSV } from "./csvReaderWrapper";
+import { parseJSON } from "./jsonReaderWrapper";
 
 export const store = createStore(rootReducer);
 
@@ -29,9 +30,18 @@ const processMode = mode => {
 
   if (mode) {
     if (mode.id === "load_dataset") {
-      const path = allDatasets.filter(item => {return item.id === mode.setId})[0].path;
-      store.dispatch(setSelectedCSV(assetPath + path));
-      parseCSV(assetPath + path, true);
+      const item = allDatasets.filter(item => {return item.id === mode.setId})[0];
+      store.dispatch(setSelectedCSV(assetPath + item.path));
+      store.dispatch(setSelectedJSON(assetPath + item.metadataPath));
+      parseCSV(assetPath + item.path, true, false);
+
+      // Also retrieve model metadata and set column data types.
+      parseJSON(assetPath + item.metadataPath, (result) => {
+        for (const field of result.fields) {
+           store.dispatch(setColumnsByDataType(field.id, field.type));
+        }
+        console.log("dispatched json");
+      });
     }
   }
 };

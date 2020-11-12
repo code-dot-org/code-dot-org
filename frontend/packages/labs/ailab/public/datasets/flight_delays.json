@@ -1,0 +1,54 @@
+{
+  "fields": [
+  	{
+  		"id": "Month",
+  		"type": "categorical",
+  		"name": "Name"
+  	},
+  	{
+  		"id": "DayofMonth",
+  		"type": "categorical",
+  		"name": "Name"
+  	},
+  	{
+  		"id": "DayOfWeek",
+  		"type": "categorical",
+  		"name": "Name"
+  	},
+  	{
+  		"id": "DepTime",
+  		"type": "categorical",
+  		"name": "Name"
+  	},
+  	{
+  		"id": "TimeOfDay",
+  		"type": "categorical",
+  		"name": "Name"
+  	},
+  	{
+  		"id": "UniqueCarrier",
+  		"type": "categorical",
+  		"name": "Name"
+  	},
+  	{
+  		"id": "Origin",
+  		"type": "categorical",
+  		"name": "Name"
+  	},
+  	{
+  		"id": "Dest",
+  		"type": "categorical",
+  		"name": "Name"
+  	},
+  	{
+  		"id": "Distance",
+  		"type": "categorical",
+  		"name": "Name"
+  	},
+  	{
+  		"id": "dep_delayed_15min",
+  		"type": "categorical",
+  		"name": "Name"
+  	}
+  ]
+}

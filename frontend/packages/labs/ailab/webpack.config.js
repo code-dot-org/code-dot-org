@@ -54,7 +54,7 @@ const firstConfigOnly = {
     new CleanWebpackPlugin(),
     new CopyPlugin([
       {
-        from: 'public/datasets/*.csv',
+        from: 'public/datasets/*.*',
         to: 'assets/datasets/',
         flatten: true
       }
