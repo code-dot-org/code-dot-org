@@ -85,35 +85,42 @@ export default function initPage(scriptEditorData) {
         betaWarning={scriptEditorData.betaWarning}
         name={scriptEditorData.script.name}
         i18nData={scriptEditorData.i18n}
-        hidden={valueOr(scriptData.hidden, true)}
-        isStable={scriptData.is_stable}
-        loginRequired={scriptData.loginRequired}
-        hideableLessons={scriptData.hideable_lessons}
-        studentDetailProgressView={scriptData.student_detail_progress_view}
-        professionalLearningCourse={scriptData.professionalLearningCourse}
-        peerReviewsRequired={scriptData.peerReviewsRequired}
-        wrapupVideo={scriptData.wrapupVideo}
-        projectWidgetVisible={scriptData.project_widget_visible}
-        projectWidgetTypes={scriptData.project_widget_types}
-        teacherResources={teacherResources}
-        lessonExtrasAvailable={!!scriptData.lesson_extras_available}
-        lessonLevelData={lessonLevelData}
-        hasVerifiedResources={scriptData.has_verified_resources}
-        hasLessonPlan={scriptData.has_lesson_plan}
-        curriculumPath={scriptData.curriculum_path}
-        pilotExperiment={scriptData.pilot_experiment}
-        editorExperiment={scriptData.editor_experiment}
+        initialHidden={valueOr(scriptData.hidden, true)}
+        initialIsStable={scriptData.is_stable}
+        initialLoginRequired={scriptData.loginRequired}
+        initialHideableLessons={scriptData.hideable_lessons}
+        initialStudentDetailProgressView={
+          scriptData.student_detail_progress_view
+        }
+        initialProfessionalLearningCourse={
+          scriptData.professionalLearningCourse || ''
+        }
+        initialPeerReviewsRequired={scriptData.peerReviewsRequired}
+        initialWrapupVideo={scriptData.wrapupVideo}
+        initialProjectWidgetVisible={scriptData.project_widget_visible}
+        initialProjectWidgetTypes={scriptData.project_widget_types}
+        initialTeacherResources={teacherResources}
+        initialLessonExtrasAvailable={!!scriptData.lesson_extras_available}
+        initialLessonLevelData={
+          lessonLevelData ||
+          "lesson_group 'lesson group', display_name: 'display name'\nlesson 'new lesson', display_name: 'display_name'\n"
+        }
+        initialHasVerifiedResources={scriptData.has_verified_resources}
+        initialHasLessonPlan={scriptData.has_lesson_plan}
+        initialCurriculumPath={scriptData.curriculum_path || ''}
+        initialPilotExperiment={scriptData.pilot_experiment}
+        initialEditorExperiment={scriptData.editor_experiment || ''}
         initialAnnouncements={announcements}
-        supportedLocales={scriptData.supported_locales}
-        locales={locales}
-        projectSharing={scriptData.project_sharing}
-        curriculumUmbrella={scriptData.curriculum_umbrella}
-        initialFamilyName={scriptData.family_name}
-        versionYear={scriptData.version_year}
+        initialSupportedLocales={scriptData.supported_locales || []}
+        initialLocales={locales}
+        initialProjectSharing={scriptData.project_sharing}
+        initialCurriculumUmbrella={scriptData.curriculum_umbrella || ''}
+        initialFamilyName={scriptData.family_name || ''}
+        initialVersionYear={scriptData.version_year || ''}
         scriptFamilies={scriptEditorData.script_families}
         versionYearOptions={scriptEditorData.version_year_options}
         isLevelbuilder={scriptEditorData.is_levelbuilder}
-        tts={scriptData.tts}
+        initialTts={scriptData.tts}
         /* isCourse controls whether this Script/Unit is intended to be the root of a CourseOffering version.
          * hasCourse indicates whether this Script/Unit is part of a UnitGroup. These two in theory should be
          * complements, but currently (August 2020) they are not, so they are separate fields for now. */

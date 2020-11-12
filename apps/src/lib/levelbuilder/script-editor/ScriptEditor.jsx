@@ -58,7 +58,7 @@ const styles = {
 
 const VIDEO_KEY_REGEX = /video_key_for_next_level/g;
 
-const CURRICULUM_UMBRELLAS = ['CSF', 'CSD', 'CSP'];
+const CURRICULUM_UMBRELLAS = ['CSF', 'CSD', 'CSP', ''];
 
 /**
  * Component for editing course scripts.
@@ -113,7 +113,7 @@ export default class ScriptEditor extends React.Component {
     }
 
     this.state = {
-      familyName: this.props.initialFamilyName || '',
+      familyName: this.props.initialFamilyName,
       isCourse: this.props.initialIsCourse,
       description: this.props.i18nData.description,
       announcements: this.props.initialAnnouncements,
@@ -140,9 +140,9 @@ export default class ScriptEditor extends React.Component {
       curriculumUmbrella: this.props.initialCurriculumUmbrella,
       versionYear: this.props.initialVersionYear,
       tts: this.props.initialTts,
-      title: this.props.i18nData.title,
-      descriptionAudience: this.props.i18nData.descriptionAudience,
-      descriptionShort: this.props.i18nData.descriptionShort,
+      title: this.props.i18nData.title || '',
+      descriptionAudience: this.props.i18nData.descriptionAudience || '',
+      descriptionShort: this.props.i18nData.descriptionShort || '',
       lessonDescriptions: this.props.i18nData.stageDescriptions,
       teacherResources: resources
     };
@@ -227,7 +227,7 @@ export default class ScriptEditor extends React.Component {
           Audience
           <input
             name="description_audience"
-            value={this.props.i18nData.descriptionAudience}
+            value={this.state.descriptionAudience}
             style={styles.input}
             onChange={e => this.setState({descriptionAudience: e.target.value})}
           />
@@ -242,7 +242,7 @@ export default class ScriptEditor extends React.Component {
           </HelpTip>
           <input
             name="description_short"
-            value={this.props.i18nData.descriptionShort}
+            value={this.state.descriptionShort}
             style={styles.input}
             onChange={e => this.setState({descriptionShort: e.target.value})}
           />
@@ -480,7 +480,7 @@ export default class ScriptEditor extends React.Component {
                 Version Year
                 <select
                   name="version_year"
-                  defaultValue={this.state.versionYear}
+                  value={this.state.versionYear}
                   style={styles.dropdown}
                   disabled={this.props.hasCourse}
                   onChange={e => this.setState({versionYear: e.target.value})}
@@ -607,7 +607,7 @@ export default class ScriptEditor extends React.Component {
             <input
               name="hideable_lessons"
               type="checkbox"
-              defaultChecked={this.state.hideableLessons}
+              checked={this.state.hideableLessons}
               style={styles.checkbox}
               onChange={() =>
                 this.setState({hideableLessons: !this.state.hideableLessons})
@@ -634,8 +634,8 @@ export default class ScriptEditor extends React.Component {
                 projectWidgetVisible: !this.state.projectWidgetVisible
               })
             }
-            updateProjectWidgetTypes={e =>
-              this.setState({projectWidgetTypes: e.target.value})
+            updateProjectWidgetTypes={projectWidgetTypes =>
+              this.setState({projectWidgetTypes})
             }
           />
           {!this.props.beta && (
@@ -700,7 +700,7 @@ export default class ScriptEditor extends React.Component {
               </HelpTip>
               <input
                 name="professional_learning_course"
-                defaultValue={this.state.professionalLearningCourse}
+                value={this.state.professionalLearningCourse}
                 style={styles.input}
                 onChange={e =>
                   this.setState({professionalLearningCourse: e.target.value})
@@ -740,10 +740,7 @@ export default class ScriptEditor extends React.Component {
                 name="script_text"
                 rows={textAreaRows}
                 style={styles.input}
-                value={
-                  this.state.lessonLevelData ||
-                  "lesson_group 'lesson group', display_name: 'display name'\nlesson 'new lesson'\n"
-                }
+                value={this.state.lessonLevelData}
                 ref={textArea => (this.scriptTextArea = textArea)}
                 onChange={e => this.setState({lessonLevelData: e.target.value})}
               />
