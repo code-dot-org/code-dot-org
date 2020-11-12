@@ -564,8 +564,8 @@ export default class ScriptEditor extends React.Component {
                   this.setState({hidden: !this.state.hidden})
                 }
                 pilotExperiment={this.state.pilotExperiment}
-                updatePilotExperiment={e =>
-                  this.setState({pilotExperiment: e.target.value})
+                updatePilotExperiment={pilotExperiment =>
+                  this.setState({pilotExperiment})
                 }
               />
             </div>

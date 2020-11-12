@@ -40,13 +40,13 @@ export default class VisibleAndPilotExperiment extends React.Component {
       <div>
         <VisibleInTeacherDashboard
           checked={this.props.visible}
-          disabled={!!this.state.pilotExperiment}
-          onChange={e => this.props.updateVisible(e)}
+          disabled={!!this.props.pilotExperiment}
+          onChange={this.props.updateVisible}
           paramName={this.props.paramName}
         />
         <PilotExperiment
           value={this.props.pilotExperiment}
-          onChange={e => this.props.updatePilotExperiment(e)}
+          onChange={e => this.props.updatePilotExperiment(e.target.value)}
         />
       </div>
     );
