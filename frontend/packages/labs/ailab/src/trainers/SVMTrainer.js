@@ -91,7 +91,9 @@ export default class SVMTrainer {
 
   predict(testValues) {
     let prediction = {};
-    prediction.predictedLabel = this.svm.predict(testValues);
+    const predictedLabel = this.svm.predict(testValues);
+    const convertedPredictedLabel = this.convertPredictedLabel(predictedLabel);
+    prediction.predictedLabel = convertedPredictedLabel;
     store.dispatch(setPrediction(prediction));
   }
 
