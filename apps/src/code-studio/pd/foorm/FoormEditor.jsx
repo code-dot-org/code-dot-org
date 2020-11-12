@@ -59,7 +59,7 @@ const styles = {
 
 const PREVIEW_ON = 'preview-on';
 const PREVIEW_OFF = 'preview-off';
-const TIME_FORMAT = 'h:m a';
+const TIME_FORMAT = 'h:mm a';
 
 class FoormEditor extends React.Component {
   static propTypes = {
@@ -197,7 +197,6 @@ class FoormEditor extends React.Component {
         });
       })
       .fail(result => {
-        console.log(result);
         this.setState({
           lastValidated: moment().format(TIME_FORMAT),
           validationError: result.responseJSON.error
