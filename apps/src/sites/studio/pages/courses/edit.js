@@ -39,7 +39,7 @@ function showCourseEditor() {
           script => script.name
         )}
         scriptNames={courseEditorData.script_names.sort()}
-        teacherResources={teacherResources}
+        initialTeacherResources={teacherResources}
         hasVerifiedResources={
           courseEditorData.course_summary.has_verified_resources
         }
