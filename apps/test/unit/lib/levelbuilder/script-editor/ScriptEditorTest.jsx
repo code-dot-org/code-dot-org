@@ -1,7 +1,8 @@
-import {expect} from 'chai';
 import React from 'react';
-import {mount} from 'enzyme';
+import {mount, shallow} from 'enzyme';
 import ScriptEditor from '@cdo/apps/lib/levelbuilder/script-editor/ScriptEditor';
+import {assert, expect} from '../../../../util/reconfiguredChai';
+import ResourceType from '@cdo/apps/templates/courseOverview/resourceType';
 
 describe('ScriptEditor', () => {
   const DEFAULT_PROPS = {
@@ -22,6 +23,47 @@ describe('ScriptEditor', () => {
   };
 
   describe('Script Editor', () => {
+    describe('Teacher Resources', () => {
+      it('adds empty resources if passed none', () => {
+        const wrapper = shallow(<ScriptEditor {...DEFAULT_PROPS} />);
+        assert.deepEqual(wrapper.state('teacherResources'), [
+          {type: '', link: ''},
+          {type: '', link: ''},
+          {type: '', link: ''},
+          {type: '', link: ''},
+          {type: '', link: ''},
+          {type: '', link: ''},
+          {type: '', link: ''},
+          {type: '', link: ''},
+          {type: '', link: ''},
+          {type: '', link: ''}
+        ]);
+      });
+
+      it('adds empty resources if passed fewer than max', () => {
+        const wrapper = shallow(
+          <ScriptEditor
+            {...DEFAULT_PROPS}
+            initialTeacherResources={[
+              {type: ResourceType.curriculum, link: '/foo'}
+            ]}
+          />
+        );
+        assert.deepEqual(wrapper.state('resources'), [
+          {type: ResourceType.curriculum, link: '/foo'},
+          {type: '', link: ''},
+          {type: '', link: ''},
+          {type: '', link: ''},
+          {type: '', link: ''},
+          {type: '', link: ''},
+          {type: '', link: ''},
+          {type: '', link: ''},
+          {type: '', link: ''},
+          {type: '', link: ''}
+        ]);
+      });
+    });
+
     it('has the correct number of each editor field type', () => {
       const wrapper = mount(<ScriptEditor {...DEFAULT_PROPS} hidden={false} />);
       expect(wrapper.find('input').length).to.equal(23);

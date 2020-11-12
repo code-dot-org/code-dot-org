@@ -3,8 +3,7 @@ import React, {Component} from 'react';
 import _ from 'lodash';
 import color from '@cdo/apps/util/color';
 import ResourceType, {
-  stringForType,
-  resourceShape
+  stringForType
 } from '@cdo/apps/templates/courseOverview/resourceType';
 import TeacherResourcesDropdown from '@cdo/apps/code-studio/components/progress/TeacherResourcesDropdown';
 
@@ -37,7 +36,7 @@ const defaultLinks = {
 export default class ResourcesEditor extends Component {
   static propTypes = {
     inputStyle: PropTypes.object.isRequired,
-    resources: PropTypes.arrayOf(resourceShape).isRequired,
+    resources: PropTypes.array.isRequired,
     updateTeacherResources: PropTypes.func.isRequired
   };
 
