@@ -113,9 +113,8 @@ class LessonEditor extends Component {
     };
   }
 
-  handleSave = e => {
-    const isSaveAndClose = e.target.className.includes('btn-primary');
-    e.preventDefault();
+  handleSave = (event, shouldCloseAfterSave) => {
+    event.preventDefault();
 
     this.setState({isSaving: true, lastSaved: null, error: null});
 
@@ -141,7 +140,7 @@ class LessonEditor extends Component {
       })
     })
       .done(data => {
-        if (isSaveAndClose) {
+        if (shouldCloseAfterSave) {
           navigateToHref(`/lessons/${this.props.id}${window.location.search}`);
         } else {
           this.setState({lastSaved: data.updated_at, isSaving: false});
@@ -358,7 +357,7 @@ class LessonEditor extends Component {
             className="btn"
             type="button"
             style={styles.saveButton}
-            onClick={this.handleSave}
+            onClick={e => this.handleSave(e, false)}
             disabled={this.state.isSaving}
           >
             Save and Keep Editing
@@ -367,7 +366,7 @@ class LessonEditor extends Component {
             className="btn btn-primary"
             type="submit"
             style={styles.saveButton}
-            onClick={this.handleSave}
+            onClick={e => this.handleSave(e, true)}
             disabled={this.state.isSaving}
           >
             Save and Close
