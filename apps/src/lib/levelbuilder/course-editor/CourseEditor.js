@@ -2,7 +2,6 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import CourseScriptsEditor from '@cdo/apps/lib/levelbuilder/course-editor/CourseScriptsEditor';
 import ResourcesEditor from '@cdo/apps/lib/levelbuilder/course-editor/ResourcesEditor';
-import {resourceShape} from '@cdo/apps/templates/courseOverview/resourceType';
 import VisibleAndPilotExperiment from '@cdo/apps/lib/levelbuilder/script-editor/VisibleAndPilotExperiment';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import color from '@cdo/apps/util/color';
@@ -10,6 +9,9 @@ import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWith
 import CollapsibleEditorSection from '@cdo/apps/lib/levelbuilder/CollapsibleEditorSection';
 import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
 import AnnouncementsEditor from '@cdo/apps/lib/levelbuilder/announcementsEditor/AnnouncementsEditor';
+import ResourceType, {
+  resourceShape
+} from '@cdo/apps/templates/courseOverview/resourceType';
 
 const styles = {
   input: {
@@ -49,7 +51,7 @@ export default class CourseEditor extends Component {
     initialDescriptionTeacher: PropTypes.string,
     scriptsInCourse: PropTypes.arrayOf(PropTypes.string).isRequired,
     scriptNames: PropTypes.arrayOf(PropTypes.string).isRequired,
-    teacherResources: PropTypes.arrayOf(resourceShape).isRequired,
+    initialTeacherResources: PropTypes.arrayOf(resourceShape).isRequired,
     hasVerifiedResources: PropTypes.bool.isRequired,
     hasNumberedUnits: PropTypes.bool.isRequired,
     courseFamilies: PropTypes.arrayOf(PropTypes.string).isRequired,
@@ -60,10 +62,17 @@ export default class CourseEditor extends Component {
   constructor(props) {
     super(props);
 
+    const resources = [...props.initialTeacherResources];
+    // add empty entries to get to max
+    while (resources.length < Object.keys(ResourceType).length) {
+      resources.push({type: '', link: ''});
+    }
+
     this.state = {
       descriptionStudent: this.props.initialDescriptionStudent,
       descriptionTeacher: this.props.initialDescriptionTeacher,
-      announcements: this.props.initialAnnouncements
+      announcements: this.props.initialAnnouncements,
+      teacherResources: resources
     };
   }
 
@@ -81,11 +90,10 @@ export default class CourseEditor extends Component {
       descriptionShort,
       scriptsInCourse,
       scriptNames,
-      teacherResources,
       courseFamilies,
       versionYearOptions
     } = this.props;
-    const {announcements} = this.state;
+    const {announcements, teacherResources} = this.state;
     return (
       <div>
         <h1>{name}</h1>
@@ -252,6 +260,9 @@ export default class CourseEditor extends Component {
           <ResourcesEditor
             inputStyle={styles.input}
             resources={teacherResources}
+            updateTeacherResources={teacherResources =>
+              this.setState({teacherResources})
+            }
           />
         </CollapsibleEditorSection>
 
