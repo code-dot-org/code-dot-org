@@ -2713,6 +2713,9 @@ sk-SK:
             2 nektáre v cykle posuň sa dole. To všetko je vnútri iného cyklu, ktorý
             sa zopakuje dvakrát. 4 krát 2 je 8!
         - text: Neviem.
+          feedback: Včela získa 2 nektáre v cykle posuň sa dopredu, potom 2 nektáre
+            v cykle posuň sa dole. To všetko je vnútri iného cyklu, ktorý sa zopakuje
+            dvakrát. 4 krát 2 je 8!
         questions:
         - text: Pozri sa pozorne na tento kód. Koľko medu včela vyrobí, keď klikneš
             "Spustiť"?
@@ -2730,6 +2733,9 @@ sk-SK:
             2 nektáre v cykle posuň sa dole. To všetko je vnútri iného cyklu, ktorý
             sa zopakuje dvakrát. 4 krát 2 je 8!
         - text: Neviem.
+          feedback: Včela získa 2 nektáre v cykle posuň sa dopredu, potom 2 nektáre
+            v cykle posuň sa dole. To všetko je vnútri iného cyklu, ktorý sa zopakuje
+            dvakrát. 4 krát 2 je 8!
         questions:
         - text: Pozri sa pozorne na tento kód. Koľko medu včela vyrobí, keď klikneš
             "Spustiť"?
@@ -2747,6 +2753,9 @@ sk-SK:
             2 nektáre v cykle posuň sa dole. To všetko je vnútri iného cyklu, ktorý
             sa zopakuje dvakrát. 4 krát 2 je 8!
         - text: Neviem.
+          feedback: Včela získa 2 nektáre v cykle posuň sa dopredu, potom 2 nektáre
+            v cykle posuň sa dole. To všetko je vnútri iného cyklu, ktorý sa zopakuje
+            dvakrát. 4 krát 2 je 8!
         questions:
         - text: Pozri sa pozorne na tento kód. Koľko medu včela vyrobí, keď klikneš
             "Spustiť"?
@@ -2764,6 +2773,9 @@ sk-SK:
             2 nektáre v cykle posuň sa dole. To všetko je vnútri iného cyklu, ktorý
             sa zopakuje dvakrát. 4 krát 2 je 8!
         - text: Neviem.
+          feedback: Včela získa 2 nektáre v cykle posuň sa dopredu, potom 2 nektáre
+            v cykle posuň sa dole. To všetko je vnútri iného cyklu, ktorý sa zopakuje
+            dvakrát. 4 krát 2 je 8!
         questions:
         - text: Pozri sa pozorne na tento kód. Koľko medu včela vyrobí, keď klikneš
             "Spustiť"?
@@ -3129,7 +3141,7 @@ sk-SK:
         - {}
       courseE_multi_farmer_functions11_predict:
         answers:
-        - text: Záhradníčka zoberie dve tekvice.
+        - text: Záhradníčka pozbiera dve tekvice.
         - text: Záhradníčka pozbiera všetky tekvice.
         - text: Záhradníčka pozbiera šalát.
         - text: Záhradníčka pozbiera kukuricu.
@@ -3139,7 +3151,7 @@ sk-SK:
         - text: Pozri si funkcie zadefinované nižšie.  Čo pozbiera záhradníčka?
       courseE_multi_farmer_functions11_predict_2018:
         answers:
-        - text: Záhradníčka zoberie dve tekvice.
+        - text: Záhradníčka pozbiera dve tekvice.
           feedback: Nesprávne. Záhradníčka ide rovno až na koniec cesty, potom sa
             otočí a pôjde späť až dokiaľ nezoberie šalát.
         - text: Záhradníčka pozbiera všetky tekvice.
@@ -3155,7 +3167,7 @@ sk-SK:
         - text: Pozri si funkcie zadefinované nižšie.  Čo pozbiera záhradníčka?
       courseE_multi_farmer_functions11_predict_2018_2019:
         answers:
-        - text: Záhradníčka zoberie dve tekvice.
+        - text: Záhradníčka pozbiera dve tekvice.
           feedback: Nesprávne. Záhradníčka ide rovno až na koniec cesty, potom sa
             otočí a pôjde späť až dokiaľ nezoberie šalát.
         - text: Záhradníčka pozbiera všetky tekvice.
@@ -3171,7 +3183,7 @@ sk-SK:
         - text: Pozri si funkcie zadefinované nižšie.  Čo pozbiera záhradníčka?
       courseE_multi_farmer_functions11_predict_2018_2019_2020:
         answers:
-        - text: Záhradníčka zoberie dve tekvice.
+        - text: Záhradníčka pozbiera dve tekvice.
           feedback: Nesprávne. Záhradníčka ide rovno až na koniec cesty, potom sa
             otočí a pôjde späť až dokiaľ nezoberie šalát.
         - text: Záhradníčka pozbiera všetky tekvice.
@@ -3188,45 +3200,55 @@ sk-SK:
       courseE_prediction_artistFunction1:
         answers:
         - text: Nič. Program funkciu nevolá.
+          feedback: Nesprávne. Funkcia sa v programe v skutočnosti volá dvakrát.
         - text: Umelec nakreslí len jeden štvorec.
+          feedback: Nesprávne. Funkcia sa v programe v skutočnosti volá dvakrát.
         - text: Umelec nakreslí 2 štvorce, ktoré sa prekrývajú.
-        - text: Umelec nakreslé 2 štvorce, medzi ktorými bude malá medzera.
+        - text: Umelec nakreslí 2 štvorce, medzi ktorými bude malá medzera.
           correct: true
         questions:
         - text: Čo sa stane ak stlačíš "Spustiť"?
       courseE_prediction_artistFunction1_2018:
         answers:
         - text: Nič. Program funkciu nevolá.
+          feedback: Nesprávne. Funkcia sa v programe v skutočnosti volá dvakrát.
         - text: Umelec nakreslí len jeden štvorec.
+          feedback: Nesprávne. Funkcia sa v programe v skutočnosti volá dvakrát.
         - text: Umelec nakreslí 2 štvorce, ktoré sa prekrývajú.
-        - text: Umelec nakreslé 2 štvorce, medzi ktorými bude malá medzera.
+        - text: Umelec nakreslí 2 štvorce, medzi ktorými bude malá medzera.
           correct: true
         questions:
         - text: Čo sa stane ak stlačíš "Spustiť"?
       courseE_prediction_artistFunction1_2018_2019:
         answers:
         - text: Nič. Program funkciu nevolá.
+          feedback: Nesprávne. Funkcia sa v programe v skutočnosti volá dvakrát.
         - text: Umelec nakreslí len jeden štvorec.
+          feedback: Nesprávne. Funkcia sa v programe v skutočnosti volá dvakrát.
         - text: Umelec nakreslí 2 štvorce, ktoré sa prekrývajú.
-        - text: Umelec nakreslé 2 štvorce, medzi ktorými bude malá medzera.
+        - text: Umelec nakreslí 2 štvorce, medzi ktorými bude malá medzera.
           correct: true
         questions:
         - text: Čo sa stane ak stlačíš "Spustiť"?
       courseE_prediction_artistFunction1_2018_2019_2020:
         answers:
         - text: Nič. Program funkciu nevolá.
+          feedback: Nesprávne. Funkcia sa v programe v skutočnosti volá dvakrát.
         - text: Umelec nakreslí len jeden štvorec.
+          feedback: Nesprávne. Funkcia sa v programe v skutočnosti volá dvakrát.
         - text: Umelec nakreslí 2 štvorce, ktoré sa prekrývajú.
-        - text: Umelec nakreslé 2 štvorce, medzi ktorými bude malá medzera.
+        - text: Umelec nakreslí 2 štvorce, medzi ktorými bude malá medzera.
           correct: true
         questions:
         - text: Čo sa stane ak stlačíš "Spustiť"?
       courseE_prediction_artistFunction1_copy:
         answers:
         - text: Nič. Program funkciu nevolá.
+          feedback: Nesprávne. Funkcia sa v programe v skutočnosti volá dvakrát.
         - text: Umelec nakreslí len jeden štvorec.
+          feedback: Nesprávne. Funkcia sa v programe v skutočnosti volá dvakrát.
         - text: Umelec nakreslí 2 štvorce, ktoré sa prekrývajú.
-        - text: Umelec nakreslé 2 štvorce, medzi ktorými bude malá medzera.
+        - text: Umelec nakreslí 2 štvorce, medzi ktorými bude malá medzera.
           correct: true
         questions:
         - text: Čo sa stane ak stlačíš "Spustiť"?
@@ -3853,6 +3875,7 @@ sk-SK:
           correct: true
           feedback: Správne!
         - text: Umelec nakreslí len jeden rad štvorcov.
+          feedback: Nesprávne. Program nezavolá funkciu „nakresli rad mnohouholníkov“.
         - text: Umelec nakreslí 4 štvorce postavené jeden na druhom.
         questions:
         - text: Čo sa stane, keď stlačíš tlačidlo "Spustiť"?
@@ -3863,6 +3886,7 @@ sk-SK:
           correct: true
           feedback: Správne!
         - text: Umelec nakreslí len jeden rad štvorcov.
+          feedback: Nesprávne. Program nezavolá funkciu „nakresli rad mnohouholníkov“.
         - text: Umelec nakreslí 4 štvorce postavené jeden na druhom.
         questions:
         - text: Čo sa stane, keď stlačíš tlačidlo "Spustiť"?
@@ -3873,6 +3897,7 @@ sk-SK:
           correct: true
           feedback: Správne!
         - text: Umelec nakreslí len jeden rad štvorcov.
+          feedback: Nesprávne. Program nezavolá funkciu „nakresli rad mnohouholníkov“.
         - text: Umelec nakreslí 4 štvorce postavené jeden na druhom.
         questions:
         - text: Čo sa stane, keď stlačíš tlačidlo "Spustiť"?
@@ -3883,6 +3908,7 @@ sk-SK:
           correct: true
           feedback: Správne!
         - text: Umelec nakreslí len jeden rad štvorcov.
+          feedback: Nesprávne. Program nezavolá funkciu „nakresli rad mnohouholníkov“.
         - text: Umelec nakreslí 4 štvorce postavené jeden na druhom.
         questions:
         - text: Čo sa stane, keď stlačíš tlačidlo "Spustiť"?

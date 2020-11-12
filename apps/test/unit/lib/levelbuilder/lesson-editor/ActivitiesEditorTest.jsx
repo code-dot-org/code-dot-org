@@ -22,15 +22,6 @@ describe('ActivitiesEditor', () => {
 
     const hiddenInputs = wrapper.find('input[type="hidden"]');
     expect(hiddenInputs.length, 'hidden input').to.equal(1);
-    const serializedActivities = hiddenInputs.first().props().value;
-
-    // Verify that the JSON contains serialized activities.
-    const activities = JSON.parse(serializedActivities);
-    expect(activities.length).to.equal(1);
-    expect(activities[0].key).to.equal('activity-1');
-    const sections = activities[0].activitySections;
-    expect(sections.length).to.equal(3);
-    expect(sections[0].key).to.equal('section-3');
   });
 
   it('adds activity when button pressed', () => {

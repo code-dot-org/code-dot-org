@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 import Button from '@cdo/apps/templates/Button';
 import SendLessonDialog from './SendLessonDialog';
 
@@ -24,6 +25,16 @@ export default class SendLesson extends React.Component {
 
   openDialog() {
     this.setState({isDialogOpen: true});
+
+    firehoseClient.putRecord(
+      {
+        study: 'send-to-students-button',
+        study_group: 'v0',
+        event: event,
+        data_json: this.props.analyticsData
+      },
+      {includeUserId: true}
+    );
   }
 
   closeDialog() {

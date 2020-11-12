@@ -492,6 +492,15 @@ sk:
         text: "A toto je otočka o 120 stupňov. Nezabudni - to, o koľko sa umelec posunie
           či otočí, \nmeníš šípkami vedľa hodnôt pixelov a stupňov. Veľa zábavy pri
           kreslení!"
+    C3_artist_nested_loops:
+      1:
+        text: Keď vložíme (ponoríme) cyklus do iného cyklu, hovoríme tomu vnorené
+          cykly. Napríklad tu máme kód, ktorým kreslíme trojuholník so stranami 100
+          pixelov použitím opakovacieho bloku s 3 opakovaniami. Jedno opakovanie pre
+          každú stranu trojuholníka.
+      2:
+        text: Ale my chceme nakresliť 6 trojuholníkov. Preto celý teno kód vložíme
+          do vnútra ďalšieho opakovacieho bloku. Super, však?
     C3_bee_debugging:
       1:
         text: Počul si už niekedy o ladení programu? Týmto spôsobom zistíš čo nefunguje.
@@ -1618,6 +1627,42 @@ sk:
       7:
         text: Na konci lekcie môžeš zdieľať odkaz na svoj výtvor s kamarátmi. Potráp
           svoju predstavivosť a hlavne si to uži!
+    mc_2018_intro:
+      1:
+        text: Ahoj! Si tu práve včas. Vitaj vo Vodnom Dobrodružstve. Chystám sa na
+          výpravu, kde budem hľadať skrytý poklad na dne mora a som veľmi rada, že
+          mi pri tom pomôžeš. Kto vie, čo nás postretne počas týchto tajuplných plavieb?
+          Niekde v tomto doku by sme mali stretnúť nášho prvého sprievodcu.
+      2:
+        text: Vitajte, dobrodruhovia! Na dokončenie okružnej plavby budeš musieť pomocou
+          kódu vyriešiť sériu hádaniek. Pozri, ako to funguje. Obrazovka je rozdelená
+          do troch hlavných častí.
+      3:
+        text: Naľavo sa ti zobrazuje Minecraft svet.
+      4:
+        text: Uprostred nájdeš panel nástrojov, kde sú uložené príkazy na programovanie.
+      5:
+        text: A na veľkej ploche napravo je tvoja pracovná plocha. Tam ukladáš príkazy
+          potrebné na vytvorenie programu a ovládanie pohybu.
+      6:
+        text: Pokyny pre každú úroveň nájdeš v hornej časti obrazovky. Pre výber medzi
+          krátkymi a dlhými pokynmi klikni na znamienko plus.
+      7:
+        text: Skús potiahnuť bloky z panela nástrojov na pracovnú plochu, ulož ich
+          a potom klikni na spúšťacie tlačidlo, ak chceš príkazy vykonať.
+      8:
+        text: Možno budeš potrebovať zopár pokusov, aby ti to vyšlo. Niektoré hádanky
+          majú viac riešení, tak experimentuj a zisti, ktoré funguje.
+      9:
+        text: Ak to chceš vyskúšať znova, klikni na tlačidlo "Obnoviť" pre návrat
+          na začiatok.
+      10:
+        text: Ak potrebuješ príkaz vymazať, potiahni blok z pracovnej plochy späť
+          do panela nástrojov. Nezabudni kliknúť na "Spustiť", keď chceš vidieť, ako
+          kód vyzerá priamo v akcii.
+      11:
+        text: Nezdržujme sa viac, dobrodružstvo čaká. Začnime s kódovaním, nech nájdeme
+          nejaký skrytý podmorský poklad.
     hoc_dance_warmup_2019:
       1:
         text: 'Hodina Kódu | Tanečná Párty: Zahrej sa'
