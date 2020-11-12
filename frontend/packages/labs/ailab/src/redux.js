@@ -42,6 +42,7 @@ const SET_SHOW_PREDICT = "SET_SHOW_PREDICT";
 const SET_TEST_DATA = "SET_TEST_DATA";
 const SET_PREDICTION = "SET_PREDICTION";
 const SET_MODEL_SIZE = "SET_MODEL_SIZE";
+const SET_TRAINED_MODEL = "SET_TRAINED_MODEL";
 
 // Action creators
 export function setMode(mode) {
@@ -137,6 +138,10 @@ export function setModelSize(modelSize) {
   return { type: SET_MODEL_SIZE, modelSize };
 }
 
+export function setTrainedModel(trainedModel) {
+  return { type: SET_TRAINED_MODEL, trainedModel };
+}
+
 const initialState = {
   csvfile: undefined,
   data: [],
@@ -154,7 +159,8 @@ const initialState = {
   showPredict: false,
   testData: {},
   prediction: {},
-  modelSize: undefined
+  modelSize: undefined,
+  trainedModel: undefined
 };
 
 // Reducer
@@ -273,6 +279,12 @@ export default function rootReducer(state = initialState, action) {
     return {
       ...state,
       modelSize: action.modelSize
+    };
+  }
+  if (action.type === SET_TRAINED_MODEL) {
+    return {
+      ...state,
+      trainedModel: action.trainedModel
     };
   }
   return state;
