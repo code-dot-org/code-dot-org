@@ -5,7 +5,6 @@ import LessonDescriptions from '@cdo/apps/lib/levelbuilder/script-editor/LessonD
 import AnnouncementsEditor from '@cdo/apps/lib/levelbuilder/announcementsEditor/AnnouncementsEditor';
 import $ from 'jquery';
 import ResourcesEditor from '@cdo/apps/lib/levelbuilder/course-editor/ResourcesEditor';
-import {resourceShape} from '@cdo/apps/templates/courseOverview/resourceType';
 import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
 import VisibleAndPilotExperiment from '@cdo/apps/lib/levelbuilder/script-editor/VisibleAndPilotExperiment';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
@@ -13,6 +12,9 @@ import LessonExtrasEditor from '@cdo/apps/lib/levelbuilder/script-editor/LessonE
 import color from '@cdo/apps/util/color';
 import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
 import CollapsibleEditorSection from '@cdo/apps/lib/levelbuilder/CollapsibleEditorSection';
+import ResourceType, {
+  resourceShape
+} from '@cdo/apps/templates/courseOverview/resourceType';
 
 const styles = {
   input: {
@@ -104,6 +106,12 @@ export default class ScriptEditor extends React.Component {
   constructor(props) {
     super(props);
 
+    const resources = [...props.initialTeacherResources];
+    // add empty entries to get to max
+    while (resources.length < Object.keys(ResourceType).length) {
+      resources.push({type: '', link: ''});
+    }
+
     this.state = {
       familyName: this.props.initialFamilyName || '',
       isCourse: this.props.initialIsCourse,
@@ -119,7 +127,6 @@ export default class ScriptEditor extends React.Component {
       wrapupVideo: this.props.initialWrapupVideo,
       projectWidgetVisible: this.props.initialProjectWidgetVisible,
       projectWidgetTypes: this.props.initialProjectWidgetTypes,
-      teacherResources: this.props.initialTeacherResources,
       lessonExtrasAvailable: this.props.initialLessonExtrasAvailable,
       lessonLevelData: this.props.initialLessonLevelData,
       hasVerifiedResources: this.props.initialHasVerifiedResources,
@@ -135,7 +142,9 @@ export default class ScriptEditor extends React.Component {
       tts: this.props.initialTts,
       title: this.props.i18nData.title,
       descriptionAudience: this.props.i18nData.descriptionAudience,
-      descriptionShort: this.props.i18nData.descriptionShort
+      descriptionShort: this.props.i18nData.descriptionShort,
+      lessonDescriptions: this.props.i18nData.stageDescriptions,
+      teacherResources: resources
     };
   }
 
@@ -633,6 +642,9 @@ export default class ScriptEditor extends React.Component {
             <LessonDescriptions
               scriptName={this.props.name}
               currentDescriptions={this.props.i18nData.stageDescriptions}
+              updateLessonDescriptions={lessonDescriptions =>
+                this.setState({lessonDescriptions})
+              }
             />
           )}
         </CollapsibleEditorSection>
@@ -667,6 +679,9 @@ export default class ScriptEditor extends React.Component {
             <ResourcesEditor
               inputStyle={styles.input}
               resources={this.state.teacherResources}
+              updateTeacherResources={teacherResources =>
+                this.setState({teacherResources})
+              }
             />
           </div>
         </CollapsibleEditorSection>
