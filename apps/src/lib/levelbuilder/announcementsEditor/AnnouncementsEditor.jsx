@@ -23,31 +23,27 @@ export default class AnnouncementsEditor extends Component {
   };
 
   add = () => {
-    this.props.updateAnnouncements({
-      announcements: this.props.announcements.concat({
+    this.props.updateAnnouncements(
+      this.props.announcements.concat({
         notice: '',
         details: '',
         link: '',
         type: NotificationType.information,
         visibility: VisibilityType.teacher
       })
-    });
+    );
   };
 
   remove = index => {
     const newAnnouncements = [...this.props.announcements];
     newAnnouncements.splice(index, 1);
-    this.props.updateAnnouncements({
-      announcements: newAnnouncements
-    });
+    this.props.updateAnnouncements(newAnnouncements);
   };
 
   change = (index, field, newValue) => {
     const newAnnouncements = [...this.props.announcements];
     newAnnouncements[index][field] = newValue;
-    this.props.updateAnnouncements({
-      announcements: newAnnouncements
-    });
+    this.props.updateAnnouncements(newAnnouncements);
   };
 
   render() {
