@@ -15,8 +15,7 @@ video_player: true
 
 ### Lesson Plans:
 
-- [Write your first computer program (English)](https://curriculum.code.org/hoc/plugged/1)
-- [Write your first computer program (Spanish - LATAM)](https://curriculum.code.org/es-mx/hoc/plugged/1)
+- [Write your first computer program]({{ hoc_hourofcode_cb_url }})
 
 ### Extension Activities:
 
@@ -25,7 +24,7 @@ video_player: true
 
 ### Other Teacher Resources:
 
-- [Hour of Code: How-To Guide for Educators](https://hourofcode.com/us/en/resources/how-to)
+- [Hour of Code: How-To Guide for Educators](https://hourofcode.com/how-to)
 - [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
 - Live Event: [An Educator's Guide to the Hour of Code](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
 
