@@ -25,7 +25,7 @@ const defaultProps = {
     '# Teacher description \n This is the course description with [link](https://studio.code.org/home) **Bold** *italics* ',
   scriptsInCourse: ['CSP Unit 1', 'CSP Unit 2'],
   scriptNames: ['CSP Unit 1', 'CSP Unit 2'],
-  teacherResources: [],
+  initialTeacherResources: [],
   hasVerifiedResources: false,
   hasNumberedUnits: false,
   courseFamilies: ['CSP', 'CSD', 'CSF'],
