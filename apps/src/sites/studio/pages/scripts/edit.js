@@ -96,7 +96,7 @@ export default function initPage(scriptEditorData) {
           scriptData.professionalLearningCourse || ''
         }
         initialPeerReviewsRequired={scriptData.peerReviewsRequired}
-        initialWrapupVideo={scriptData.wrapupVideo}
+        initialWrapupVideo={scriptData.wrapupVideo || ''}
         initialProjectWidgetVisible={scriptData.project_widget_visible}
         initialProjectWidgetTypes={scriptData.project_widget_types}
         initialTeacherResources={teacherResources}
@@ -113,7 +113,7 @@ export default function initPage(scriptEditorData) {
         initialAnnouncements={announcements}
         initialSupportedLocales={scriptData.supported_locales || []}
         initialLocales={locales}
-        initialProjectSharing={scriptData.project_sharing}
+        initialProjectSharing={scriptData.project_sharing || false}
         initialCurriculumUmbrella={scriptData.curriculum_umbrella || ''}
         initialFamilyName={scriptData.family_name || ''}
         initialVersionYear={scriptData.version_year || ''}
