@@ -4,6 +4,7 @@ https://github.com/mljs/knn */
 import { store } from "../index.js";
 import {
   setModelSize,
+  setTrainedModel,
   setPrediction,
   setAccuracyCheckPredictedLabels
 } from "../redux";
@@ -17,6 +18,7 @@ export default class KNNTrainer {
       k: 5
     });
     var model = this.knn.toJSON();
+    store.dispatch(setTrainedModel(model));
     const size = Buffer.byteLength(JSON.stringify(model));
     const kiloBytes = size / 1024;
     store.dispatch(setModelSize(kiloBytes));

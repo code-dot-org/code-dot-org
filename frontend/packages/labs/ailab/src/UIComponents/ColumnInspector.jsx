@@ -5,7 +5,7 @@ import { connect } from "react-redux";
 import {
   getSelectedColumns,
   setColumnsByDataType,
-  getUniqueOptionsByColumn,
+  getOptionFrequenciesByColumn,
   getRangesByColumn
 } from "../redux";
 import { ColumnTypes, styles } from "../constants.js";
@@ -16,7 +16,6 @@ class ColumnInspector extends Component {
     selectedColumns: PropTypes.array,
     columnsByDataType: PropTypes.object,
     setColumnsByDataType: PropTypes.func.isRequired,
-    getUniqueOptionsByColumn: PropTypes.func,
     uniqueOptionsByColumn: PropTypes.object,
     getRangesByColumn: PropTypes.func,
     rangesByColumn: PropTypes.object,
@@ -90,15 +89,42 @@ class ColumnInspector extends Component {
                       ColumnTypes.CATEGORICAL && (
                       <div>
                         <p>
-                          {this.props.uniqueOptionsByColumn[column].length}{" "}
+                          {
+                            Object.keys(
+                              this.props.uniqueOptionsByColumn[column]
+                            ).length
+                          }{" "}
                           unique values for {column}:{" "}
                         </p>
                         <div style={styles.subPanel}>
-                          {this.props.uniqueOptionsByColumn[column].map(
-                            (option, index) => {
-                              return <div key={index}>{option}</div>;
-                            }
-                          )}
+                          <table>
+                            <thead>
+                              <tr>
+                                <th>Option</th>
+                                <th>Frequency</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              {Object.keys(
+                                this.props.uniqueOptionsByColumn[column]
+                              )
+                                .sort()
+                                .map((option, index) => {
+                                  return (
+                                    <tr key={index}>
+                                      <td>{option}</td>
+                                      <td>
+                                        {
+                                          this.props.uniqueOptionsByColumn[
+                                            column
+                                          ][option]
+                                        }
+                                      </td>
+                                    </tr>
+                                  );
+                                })}
+                            </tbody>
+                          </table>
                         </div>
                       </div>
                     )}
@@ -140,7 +166,7 @@ export default connect(
   state => ({
     selectedColumns: getSelectedColumns(state),
     columnsByDataType: state.columnsByDataType,
-    uniqueOptionsByColumn: getUniqueOptionsByColumn(state),
+    uniqueOptionsByColumn: getOptionFrequenciesByColumn(state),
     rangesByColumn: getRangesByColumn(state),
     metadata: state.metadata
   }),
