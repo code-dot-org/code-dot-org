@@ -10,7 +10,39 @@ uk:
   campaign_date_short: 4-10 грудня
   campaign_date_full: 4-10 грудня
   campaign_date_year: '2017'
-  campaign_date_full_year: 4-10 грудня 2017 року
+  campaign_date_full_year: 7-13 грудня 2020 року
+  latam_campaign_date_start_short: Oct. 1
+  latam_campaign_date_start_long: October 1
+  latam_campaign_date_short: Oct. 1 - Dec. 18
+  latam_campaign_date_full: October 1 - December 18
+  latam_campaign_date_year: '2017'
+  latam_campaign_date_full_year: October 1, 2020 - December 18, 2020
+  europe_campaign_date_start_short: Oct. 10
+  europe_campaign_date_start_long: October 10
+  europe_campaign_date_short: Oct. 10-25
+  europe_campaign_date_full: October 10-25
+  europe_campaign_date_year: '2017'
+  europe_campaign_date_full_year: October 10-25, 2020
+  africa_campaign_date_start_short: Oct. 1
+  africa_campaign_date_start_long: October 1
+  africa_campaign_date_short: Oct. 1-31
+  africa_campaign_date_full: October 1-31
+  africa_campaign_date_year: '2017'
+  africa_campaign_date_full_year: October 1-31, 2020
+  hoc2020_header: Learn today, build a brighter tomorrow.
+  hoc2020_header_with_line_break_markdown: |-
+    Learn today,
+
+    build a brighter tomorrow.
+  social_hoc2020_cs_important: 'CS is more important than ever. Let''s build the future
+    we want. #CSforGood'
+  social_hoc2020_hoc_is_about_csforgood: 'The #HourOfCode is about #CSforGood. Learn
+    today, build a brighter tomorrow.'
+  social_hoc2020_global_movement: The Hour of Code is a global movement reaching tens
+    of millions of students. One-hour tutorials are available in 45+ languages for
+    all ages.
+  social_hoc2020_coming_dates: The Hour of Code is coming December 7-13, 2020. Computer
+    science is foundational for every student to learn.
   hoc2019_header: Вивчайте інформатику. Змінюйте світ.
   hoc2019_header_line1_mobile: Вивчайте інформатику.
   hoc2019_header_line2_mobile: Змінюйте світ.
@@ -28,7 +60,7 @@ uk:
   oceans_landing_title: AI for Oceans
   oceans_landing_description: Learn about machine learning and ethical use of AI.
   cs_for_good_hashtag: "#CSforGood"
-  oceans_landing_specs: English only | Grades 3+
+  oceans_landing_specs: Available in 25+ languages | Grades 3+
   oceans_landing_explanation: Computer science is about so much more than coding!
     Learn about artificial intelligence (AI), machine learning, training data, and
     bias, while exploring ethical issues and how AI can be used to address world problems.
@@ -95,6 +127,13 @@ uk:
     bias, while exploring ethical issues and how AI can be used to address world problems.
     Computer science is about so much more than coding! Enjoy Code.org's first step
     in a new journey to teach more about AI throughout our curriculum.
+  hoc_live: Hour of Code Live
+  hoc_live_sign_up_title: Sign up for Hour of Code Live
+  hoc_live_sign_up_message: Learn in real time alongside special guests! Students
+    of all ages and abilities, including those without computers, are welcome. Join
+    our mailing list to receive recordings of the episodes and resources to continue
+    learning at home.
+  hoc_live_join_us: Приєднуйтесь до нас
   hoc_overview_oceans_tutorial_header: AI for Oceans
   hoc_overview_oceans_tutorial_desc: Learn about artificial intelligence (AI), machine
     learning, training data, and bias, while exploring ethical issues and how AI can
@@ -172,7 +211,14 @@ uk:
   codeorg_homepage_special2020_body1: Support for parents and teachers facing school
     closures.
   codeorg_homepage_special2020_body2: See our suggested learning resources.
+  codeorg_homepage_special2020_body: Keep learning this summer! Take a look at our
+    resources for learning at home.
+  codeorg_homepage_remote2020_body: Are you teaching in a remote or socially-distanced
+    classroom this semester? View our resources.
   codeorg_homepage_special2020_link_text: Get started
+  codeorg_homepage_code_break_body: Take a Code Break! Your weekly dose of inspiration,
+    community, and computer science.
+  codeorg_homepage_code_break_link_text: Learn more
   cookie_banner_message: By continuing to browse our site or clicking "I agree," you
     agree to the storing of cookies on your computer or device.
   cookie_banner_more_information: Переглянути політику конфіденційності в Code.org.
@@ -187,13 +233,6 @@ uk:
   front_watch_regular_video: Дивіться відео
   front_volunteers: Потрібні технічні волонтери
   front_start_learning: Початок навчання
-  gdpr_dialog_heading: Do you agree to using a web site based in the United States?
-  gdpr_dialog_message: Data from your use of this site may be sent to and stored or
-    processed in the United States.
-  gdpr_dialog_link_intro: For details see our
-  gdpr_dialog_privacy_policy: privacy policy
-  gdpr_dialog_logout: Logout
-  gdpr_dialog_yes: Так
   header_menu_resources: Ресурси
   header_menu_faq: Часті питання
   header_menu_how_to: Інструкції
@@ -341,6 +380,7 @@ uk:
   how_to_nav_companies: Для компаній
   how_to_nav_afterschool_educators: Для позашкілля
   how_to_nav_volunteers: Для волонтерів
+  how_to_nav_virtual: For virtual events
   whats_next_header: Що далі?
   whats_next_description: Ми надішлемо вам матеріали та корисні поради для вашого
     заходу. Незабаром виходять нові підручники 2015 року для різних браузерів, смартфонів,
@@ -467,6 +507,7 @@ uk:
   signup_send_posters_address_placeholder: Адреса не буде показана на карті
   signup_event_type_in_school: У школі
   signup_event_type_out_of_school: За межами школи
+  signup_event_type_at_home: Home
   signup_submit_census_label: Submit
   signup_submit_census_error_message: We're sorry. An error occurred. Please try submitting
     the form again.
@@ -849,7 +890,8 @@ uk:
   highlights_title: В центрі уваги
   highlights_header: В центрі уваги Години коду
   highlights_description: Деякі з наших улюблених моментів кампанії Години коду.
-  higlights_see_more: See more highlights
+  highlights_previous: Highlights from previous years
+  highlights_see_more: See more highlights
   highlights_readmore: Read more
   highlights_watchvideo: Дивіться відео
   highlights_facebook: Поширити у Facebook
@@ -2789,12 +2831,12 @@ uk:
     Once students complete this activity there is an opportunity to explore with ideas for other changes and activities that can be made.  There is no set goal or outcome as it's an open learning environment, but with just this starting code students come up with amazing projects!
 
     All instruction is contained within the Itch environment so there is no need to be switching screens to follow along with the project. Headphones are recommended.
-  tutorial_vidclim_longdescription: "Students research a fact about the Earth's climate,
+  tutorial_vidclim_longdescription: Students research a fact about the Earth's climate,
     engaging with the work of scientists and artists in response to climate change.
-    Students take their research and plan a video sharing their fact. \n\nVideos can
-    be about\nUnderstanding climate changes and its effects\nPublic responses to the
-    climate change effects\nHow climate change impacts everyday life\nWhat actions
-    can you take to make a difference"
+    Students take their research and plan a video sharing their fact. Videos can be
+    about understanding climate changes and its effects, public responses to climate
+    change, how climate change impacts everyday life, and the actions you can take
+    to make a difference.
   tutorial_matlab_longdescription: Навчання кодуванню — це захопливий інтерактивний
     навчальний підручник, у якому ви вчитеся кодуванню. Застосовуйте MATLAB для з'ясування,
     чи є найближчим місцем зустрічі з друзями кіно, торговельний центр, чи кав'ярня.
@@ -2818,8 +2860,8 @@ uk:
     pop up when clicked.
   tutorial_itchg_longdescription: "Name-IT has you create a game of recognition! \n\nThe
     ending project has students creating a game to name the States of Australia!\n\nYou'll
-    first walk through an and follow directions to create a game to label the three
-    phases of the water cycle. You'll make a fully functioning game, including scoring!\n\nFrom
+    first walk through and follow directions to create a game to label the three phases
+    of the water cycle. You'll make a fully functioning game, including scoring!\n\nFrom
     the coding side you'll learn about variables, conditionals, lists, concatenating
     strings and much, much more. These are coding techniques you'll be able to re-use
     in other projects as you progress on to build your new coding skills!\n\nYou can
@@ -2850,7 +2892,7 @@ uk:
 
     Create a game to name the parts of a biological cell. Learn the parts of the cell while you make the game, and play it again as many times as you need to refresh your memory!
 
-    You'll first walk through an and follow directions to create a game to label the three phases of the water cycle. You'll make a fully functioning game, including scoring!
+    You'll first walk through and follow directions to create a game to label the three phases of the water cycle. You'll make a fully functioning game, including scoring!
 
     From the coding side you'll learn about variables, conditionals, lists, concatenating strings and much, much more. These are coding techniques you'll be able to re-use in other projects as you progress on to build your new coding skills!
 
@@ -3026,7 +3068,6 @@ uk:
     code through a playful action game and master computer science concepts like variables
     and functions. Create your own game in the Sandbox by remixing and expanding on
     existing game code. Then publish and share your game with friends and family.
-    A scripted lesson guide is included for teachers.
   tutorial_capost_longdescription: Starting to learn HTML and CSS is easy and fun
     with this digital postcard. Learn about adding headings, paragraphs, images and
     links to create a holiday card or birthday celebration to share with friends and
@@ -3190,7 +3231,7 @@ uk:
   tutorial_bbcgeo_longdescription: Standards-based lesson plan for grades K-5. Take
     your kids to the computer lab with worksheets in hand, and build apps involving
     geometry.
-  tutorial_chspixel_longdescription: After learning about how graphics work, studetns
+  tutorial_chspixel_longdescription: After learning about how graphics work, students
     will create their own Color by Pixel programs. The lesson plan consists of four
     parts, each covering a specific topic. The entire five-part Color by Pixel lesson
     is designed to run approximately one hour.
@@ -3397,7 +3438,7 @@ uk:
     chance to learn more.
   tutorial_elaseq_longdescription: Students will examine the concept of sequence in
     the context of reading and writing. Through grade level aligned ELA lessons, students
-    will apply their knowledge of sequence to farther their understanding of the role
+    will apply their knowledge of sequence to further their understanding of the role
     sequence plays in programming.
   tutorial_bbcmathi_longdescription: Standards-based lesson plan for grades 3-5. Take
     your kids to the computer lab with worksheets in hand, and build apps involving
@@ -3505,7 +3546,7 @@ uk:
     to human computer interaction (HCI) and in particular why so many gadgets areharder
     to use than need be. Design does make a difference and it is important that interfaces
     are evaluated to check they are easy to use.
-  tutorial_imathematician_longdescription: "This, teacher led, activity provides the
+  tutorial_imathematician_longdescription: "This teacher led activity provides the
     opportunity for pupils to use a cross curricular approach to computer science
     and mathematics.  \n\nPupils will create a computer program to solve a variation
     of a famous problem in a branch of Mathematics (Game Theory), called The Prisoner's
@@ -4027,7 +4068,7 @@ uk:
   tutorial_codehspython_longdescription: Learn the basics of coding with the Python
     programming language by writing programs that you can interact with! This hour
     will cover printing, variables, math, and getting information from users. Write
-    a program that take in and stores data from a user and returns a unique response!
+    a program that takes in and stores data from a user and returns a unique response!
   tutorial_codehsjava_longdescription: Coding in Java with CodeHS
   tutorial_techioda_longdescription: This useful tutorial will interactively teach
     you how to be able to calculate the shortest path between two nodes in a graph
@@ -4264,9 +4305,9 @@ uk:
     are well suited for and finish the lesson by designing their own robot to solve
     a specific problem.
   tutorial_isavesanta_longdescription: In this teacher-led festive activity, adapted
-    for the Hour of Code, the children explore create a computer game using Scratch
-    to save Santa. They design algorithms, use conditional statements as well as test
-    and debug their work. Includes step-by-step lesson plan, pupil resources, support
+    for the Hour of Code, the children create a computer game using Scratch to save
+    Santa. They design algorithms, use conditional statements as well as test and
+    debug their work. Includes step-by-step lesson plan, pupil resources, support
     cards and pre-written program templates.
   tutorial_iorder_longdescription: This teacher led activity, adapted for the Hour
     of Code, develops computational thinking and coding skills using Scratch 2.0.
@@ -4873,18 +4914,17 @@ uk:
     they will create a program to teach their KIBO to dance to the music. Students
     will learn how to create a program to express an idea (in this case, a dance),
     with a focus on sequencing ability.
-  tutorial_buildcharacters_longdescription: The most popular pre-reader app now includes
-    a digital Maker Space! Make levels, design games, or build characters. Choose
-    your activity and start creating with Kodable!  Featuring JavaScript for upper
+  tutorial_buildcharacters_longdescription: What are some character traits you can
+    identify in books or people you know? Design your own fuzz and use code to modify
+    its properties and bring your character to life! Featuring JavaScript for upper
     elementary.
   tutorial_designgames_longdescription: The most popular pre-reader app now includes
     a digital Maker Space! Make levels, design games, or build characters. Choose
     your activity and start creating with Kodable!  Featuring JavaScript for upper
     elementary.
-  tutorial_makelevels_longdescription: The most popular pre-reader app now includes
-    a digital Maker Space! Make levels, design games, or build characters. Choose
-    your activity and start creating with Kodable!  Featuring JavaScript for upper
-    elementary.
+  tutorial_makelevels_longdescription: Can you build a symmetrical maze? A maze with
+    right angles? Get creative and complete maze-building challenges with basic coding
+    concepts. Aligned with K-5 Common Core math.
   tutorial_wizard_longdescription: Journey into the world of Code Magic as a Code
     Wizard. Learn to create and cast spells to customize your castle.
   tutorial_mbscratchcards_longdescription: Connect the physical world of micro:bit
@@ -4922,30 +4962,29 @@ uk:
   tutorial_astropi_longdescription: Code a message and check the ambient air temperature
     on board the ISS using an online simulator of the Astro Pi computer's Sense HAT.
   tutorial_rgart_longdescription: Looking for an easy and intuitive way to teach your
-    students to code? RoboGarden STEAM Activities has fused code practicing with STEAM
-    learning and gamified missions in multiple activities. In the art activity, the
-    student understand color mixing concepts while using coding blocks to solve challenges
+    students to code? RoboGarden STEAM has fused code practicing with STEAM learning
+    and gamified missions in multiple activities. In the art activity, the student
+    understand color mixing concepts while using coding blocks to solve challenges
     in the birthday party.
   tutorial_rgengineer_longdescription: Looking for an easy and intuitive way to teach
-    your students to code? RoboGarden STEAM Activities has fused code practicing with
-    STEAM learning and gamified missions in multiple activities. In the engineering
-    activity, the student learns basic robotics while using coding blocks to solve
-    challenges in the Christmas party.
+    your students to code? RoboGarden STEAM has fused code practicing with STEAM learning
+    and gamified missions in multiple activities. In the engineering activity, the
+    student learns basic robotics while using coding blocks to solve challenges in
+    the Christmas party.
   tutorial_rgmath_longdescription: Looking for an easy and intuitive way to teach
-    your students to code? RoboGarden STEAM Activities has fused code practicing with
-    STEAM learning and gamified missions in multiple activities. In the math activity,
-    the student practices counting, addition and subtraction while solving some coding
-    challenges.
+    your students to code? RoboGarden STEAM has fused code practicing with STEAM learning
+    and gamified missions in multiple activities. In the math activity, the student
+    practices counting, addition and subtraction while solving some coding challenges.
   tutorial_rgscience_longdescription: Looking for an easy and intuitive way to teach
-    your students to code? RoboGarden STEAM Activities has fused code practicing with
-    STEAM learning and gamified missions in multiple activities. In the science activity,
-    the student goes through a journey to the space solving multiple coding challenges
-    and know more about space elements and science facts.
+    your students to code? RoboGarden STEAM has fused code practicing with STEAM learning
+    and gamified missions in multiple activities. In the science activity, the student
+    goes through a journey to the space solving multiple coding challenges and know
+    more about space elements and science facts.
   tutorial_rgtech_longdescription: Looking for an easy and intuitive way to teach
-    your students to code? RoboGarden STEAM Activities has fused code practicing with
-    STEAM learning and gamified missions in multiple activities. In the technology
-    activity, the student goes through a journey to the volcanic islands solving multiple
-    coding challenges by understanding basic concepts of Technology.
+    your students to code? RoboGarden STEAM has fused code practicing with STEAM learning
+    and gamified missions in multiple activities. In the technology activity, the
+    student goes through a journey to the volcanic islands solving multiple coding
+    challenges by understanding basic concepts of Technology.
   tutorial_robotmagic3d_longdescription: Use your imagination to create an animated
     3D logo of your name, your favorite sports team or anything you want. Use code
     to make 3D models and letters come alive with fun. At the end you can download
@@ -5007,7 +5046,7 @@ uk:
     and area of a circle, but have you ever wondered where this number comes from
     or how to calculate it? In this coding activity you will randomly generate points
     similar to a very bad player shooting darts at a dart board. The percentage of
-    darts that land inside the circle can help us calculate Pi Then change the colors
+    darts that land inside the circle can help us calculate Pi. Then change the colors
     of the points just for fun!
   tutorial_stemplanetoids_longdescription: Did you know that the code behind the classic
     Asteroids and Lunar Lander games is simpler than you might think? Did you know
@@ -6814,7 +6853,7 @@ uk:
     phone, Android phone, iPhone
   tutorial_gpbcatapult_string_platforms: Усі сучасні браузери
   tutorial_quorumastro_string_platforms: All modern browsers, Android tablet, iPad,
-    Windows phone, Android phone, iPhone
+    Windows phone, Android phone, iPhone, Screen reader
   tutorial_alicewonder_string_platforms: Усі сучасні браузери
   tutorial_rginter_string_platforms: Chrome, Firefox, Android tablet
   tutorial_cssgrid_string_platforms: Усі сучасні браузери
@@ -7016,7 +7055,7 @@ uk:
   tutorial_groklearningpython_string_platforms: Усі сучасні браузери
   tutorial_htmltimetravel_string_platforms: Усі сучасні браузери
   tutorial_hp_flappy_string_platforms: iPad
-  tutorial_appytappin_string_platforms: Безмашинна
+  tutorial_appytappin_string_platforms: Усі сучасні браузери
   tutorial_icipher_string_platforms: Безмашинна
   tutorial_iguess_string_platforms: Android tablet, iPad, iPhone
   tutorial_imake_string_platforms: Безмашинна
@@ -8196,8 +8235,8 @@ uk:
   tutorial_codewards_string_detail_programming_languages: CoffeeScript
   tutorial_olympics_string_detail_programming_languages: CoffeeScript
   tutorial_codinismhero_string_detail_programming_languages: Python
-  tutorial_discovery_string_detail_programming_languages: Блоки
-  tutorial_csfirstname_string_detail_programming_languages: Блоки
+  tutorial_discovery_string_detail_programming_languages: Блоки, Scratch
+  tutorial_csfirstname_string_detail_programming_languages: Блоки, Scratch
   tutorial_obstaclecourse_string_detail_programming_languages: Блоки
   tutorial_edisonmove_string_detail_programming_languages: Python, EdPy, a text-based
     programming language based on Python.
@@ -8345,7 +8384,7 @@ uk:
   tutorial_careconfigure_name: ReconFigure of Speech
   tutorial_rpiscratch_name: Scratch 3.0 phrasebook
   tutorial_ozaria_name: Ozaria by CodeCombat
-  tutorial_ttovum_name: Ovum City
+  tutorial_ttovum_name: Ovun City
   tutorial_ttpassage_name: The Passage
   tutorial_tynkerhtmlen_name: Affordable and Clean Energy (HTML)
   tutorial_ttfrog_name: Frog Squash
@@ -8438,8 +8477,8 @@ uk:
     Room style project, the learner joins Marlee and Tyrell as they learn about binary
     numbers, light, color, and more to unravel Professor Photon's Color Conundrum,
     and restore color to the world's devices.
-  tutorial_kodablebeach_longdescription: Learn to program using basic commands and
-    clean up the beach to protect ocean life.
+  tutorial_kodablebeach_longdescription: Save the beach babies! Learn to program using
+    basic commands and clean up the beach to protect ocean life.
   tutorial_tynkeren_longdescription: 'Part of the UN Sustainable Development Goals
     project, this coding prompt shows off projects exploring renewable energy, energy
     efficiency, and access to energy. Readers can play with working projects and advanced
@@ -8563,9 +8602,9 @@ uk:
     where you learn to type real code, navigate through 15 game levels, and make your
     own game in order to help save the world of Ozaria.
   tutorial_ttovum_longdescription: Can you control the chaos? Hack your way into the
-    cyberpunk world of Ovum City. Debug broken code, solve puzzles, and upgrade your
+    cyberpunk world of Ovun City. Debug broken code, solve puzzles, and upgrade your
     hardware as you explore self guided open world. Don't get caught by the drones!
-    It's up to you how Ovum City evolves.
+    It's up to you how Ovun City evolves.
   tutorial_ttpassage_longdescription: Immerse yourself in an alien world to help Ada
     escape unknown dangers. Play through this 2D platforming self-guided adventure
     and learn coding techniques along the way. Players will become familiar with coding
@@ -8975,8 +9014,8 @@ uk:
     iPad
   tutorial_scratchcartoon_string_platforms: Всі сучасні браузери, планшет Android,
     iPad
-  tutorial_codemonkeyjr_string_platforms: Планшет Android, iPad, телефон Android,
-    iPhone
+  tutorial_codemonkeyjr_string_platforms: Усі сучасні браузери, планшет на базі Android,
+    iPad, телефон на базі Android, iPhone
   tutorial_bananatales_string_platforms: Усі сучасні браузери
   tutorial_scratchtales_string_platforms: Всі сучасні браузери, планшет Android, iPad
   tutorial_msemoji_string_platforms: Chrome, Safari
@@ -9001,7 +9040,7 @@ uk:
   tutorial_hyperpadpong_string_platforms: iPad
   tutorial_tynkerland_string_platforms: All modern browsers, iPad
   tutorial_trinketgirl_string_platforms: All modern browsers, Android tablet, iPad,
-    Windows phone, Android phone, iPhone
+    Windows phone, Android phone, iPhone, Screen reader
   tutorial_rpimosquito_string_platforms: Всі сучасні браузери, планшет Android, iPad
   tutorial_tynkermars_string_platforms: All modern browsers, iPad
   tutorial_cityx_string_platforms: Планшет Android, iPad, телефон Android, iPhone
@@ -9184,7 +9223,7 @@ uk:
   tutorial_ai-oceans_string_detail_platforms: ''
   tutorial_scratchimagine_string_detail_programming_languages: Блоки
   tutorial_codesterspsa_string_detail_programming_languages: Python
-  tutorial_googlehero_string_detail_programming_languages: Блоки
+  tutorial_googlehero_string_detail_programming_languages: Блоки, Scratch
   tutorial_codestersbball_string_detail_programming_languages: Python
   tutorial_scratchcartoon_string_detail_programming_languages: Блоки
   tutorial_codemonkeyjr_string_detail_programming_languages: Блоки
@@ -9349,3 +9388,4 @@ uk:
   some: Some
   all: All
   dont_know: I don't know
+  language_label: Language

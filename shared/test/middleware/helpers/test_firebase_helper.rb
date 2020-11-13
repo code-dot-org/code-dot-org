@@ -27,8 +27,19 @@ class FirebaseHelperTest < Minitest::Test
 
   def test_delete_channel_with_fake_channel
     fake_channel_name = 'fake-channel-name'
-    Firebase::Client.expects(:new).returns(stub(:delete, nil))
+    fb_client = mock
+    fb_client.expects(:delete).with("/v3/channels/#{fake_channel_name}/")
+    Firebase::Client.expects(:new).returns(fb_client)
     FirebaseHelper.delete_channel fake_channel_name
+  end
+
+  def test_delete_channels_with_fake_channels
+    fake_channel_names = ['fake-channel-name1', 'fake-channel-name2']
+    fb_client = mock
+    fb_client.expects(:delete).with("/v3/channels/#{fake_channel_names[0]}/")
+    fb_client.expects(:delete).with("/v3/channels/#{fake_channel_names[1]}/")
+    Firebase::Client.expects(:new).returns(fb_client)
+    FirebaseHelper.delete_channels fake_channel_names
   end
 
   def test_delete_shared_table

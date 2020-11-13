@@ -4,10 +4,8 @@ import i18n from '@cdo/locale';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import {connect} from 'react-redux';
-import {
-  getCurrentScriptData,
-  scriptDataPropType
-} from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
+import {getCurrentScriptData} from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
+import {scriptDataPropType} from '../sectionProgressConstants';
 import {
   getSelectedScriptFriendlyName,
   getSelectedScriptDescription,
@@ -22,12 +20,12 @@ import {
   setTeacherCommentForReport,
   lessonsByStandard
 } from './sectionStandardsProgressRedux';
-import StandardsLegendForPrint from './StandardsLegendForPrint';
+import StandardsLegend from './StandardsLegend';
 import StandardsReportCurrentCourseInfo from './StandardsReportCurrentCourseInfo';
 import StandardsReportHeader from './StandardsReportHeader';
 import color from '@cdo/apps/util/color';
 import _ from 'lodash';
-import {loadScript} from '../sectionProgressRedux';
+import {loadScript} from '../sectionProgressLoader';
 import PrintReportButton from './PrintReportButton';
 import {cstaStandardsURL} from './standardsConstants';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
@@ -63,7 +61,6 @@ class StandardsReport extends Component {
   static propTypes = {
     //redux
     scriptId: PropTypes.number,
-    loadScript: PropTypes.func.isRequired,
     section: sectionDataPropType.isRequired,
     scriptFriendlyName: PropTypes.string.isRequired,
     scriptData: scriptDataPropType,
@@ -86,7 +83,7 @@ class StandardsReport extends Component {
     const scriptIdFromTD =
       window.opener.teacherDashboardStoreInformation.scriptId;
     this.props.setScriptId(scriptIdFromTD);
-    this.props.loadScript(scriptIdFromTD, this.props.section.id);
+    loadScript(scriptIdFromTD, this.props.section.id);
   }
 
   getLinkToOverview() {
@@ -180,7 +177,7 @@ class StandardsReport extends Component {
                   style={styles.table}
                   isViewingReport={true}
                 />
-                <StandardsLegendForPrint />
+                <StandardsLegend />
                 <h2 style={styles.headerColor}>
                   {i18n.standardsGetInvolved()}
                 </h2>
@@ -224,9 +221,6 @@ export default connect(
     lessonsByStandard: lessonsByStandard(state)
   }),
   dispatch => ({
-    loadScript(scriptId, sectionId) {
-      dispatch(loadScript(scriptId, sectionId));
-    },
     setTeacherCommentForReport(comment) {
       dispatch(setTeacherCommentForReport(comment));
     },

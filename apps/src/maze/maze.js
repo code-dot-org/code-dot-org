@@ -31,8 +31,6 @@ const tiles = maze.tiles;
 const createResultsHandlerForSubtype = require('./results/utils')
   .createResultsHandlerForSubtype;
 
-const MOBILE_PORTRAIT_WIDTH = 700;
-
 module.exports = class Maze {
   constructor() {
     this.scale = {
@@ -40,6 +38,7 @@ module.exports = class Maze {
       stepSpeed: 5
     };
 
+    this.shouldSpeedUpInfiniteLoops = true;
     this.stepSpeed = 100;
     this.animating_ = false;
 
@@ -208,23 +207,10 @@ module.exports = class Maze {
         <AppView
           visualizationColumn={visualizationColumn}
           onMount={studioApp().init.bind(studioApp(), config)}
-          rotateContainerWidth={MOBILE_PORTRAIT_WIDTH}
         />
       </Provider>,
       document.getElementById(config.containerId)
     );
-
-    // studioApp.init calls fixViewportForSmallScreens_ which incorrectly
-    // positions the "Rotate Container" image on iOS devices. We correct this
-    // by calling fixViewportForSpecificWidthForSmallScreens_ after the init is
-    // finished.
-    var viewport = document.querySelector('meta[name="viewport"]');
-    if (viewport) {
-      studioApp().fixViewportForSpecificWidthForSmallScreens_(
-        viewport,
-        MOBILE_PORTRAIT_WIDTH
-      );
-    }
   }
 
   /**
@@ -429,7 +415,7 @@ module.exports = class Maze {
           // possible
           this.result = ResultType.TIMEOUT;
           this.executionInfo.queueAction('finish', null);
-          this.stepSpeed = 0;
+          this.stepSpeed = this.shouldSpeedUpInfiniteLoops ? 0 : 100;
           break;
         case true:
           this.result = ResultType.SUCCESS;
@@ -519,11 +505,6 @@ module.exports = class Maze {
     }
 
     this.animating_ = true;
-
-    if (studioApp().isUsingBlockly()) {
-      // Disable toolbox while running
-      Blockly.mainBlockSpaceEditor.setEnableToolbox(false);
-    }
 
     this.controller.animationsController.stopIdling();
 
@@ -785,10 +766,6 @@ module.exports = class Maze {
         stepButton.removeAttribute('disabled');
       } else {
         this.animating_ = false;
-        if (studioApp().isUsingBlockly()) {
-          // reenable toolbox
-          Blockly.mainBlockSpaceEditor.setEnableToolbox(true);
-        }
         // If stepping and we failed, we want to retain highlighting until
         // clicking reset.  Otherwise we can clear highlighting/disabled
         // blocks now

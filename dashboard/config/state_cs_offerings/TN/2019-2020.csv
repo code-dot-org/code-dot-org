@@ -1,0 +1,647 @@
+school_name,state_school_id,nces_id,course_id,course_name,num_students_enrolled,num_students_female,num_students_black_or_african_american,num_students_hispanic_or_latino,num_students_american_indian_or_native_alaskan,num_students_native_hawaiian_or_pacific_islander,num_students_free_or_reduced_lunch,num_students_special_education_status,num_students_english_language_learner_status
+Anderson County High School,TN-00010-0002,470009001871,C10H01,Dual Enrollment Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Stone Memorial High School,TN-00180-0079,470090002100,C10H01,Dual Enrollment Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Antioch High School,TN-00190-0020,470318001257,C10H01,Dual Enrollment Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Pearl-Cohn High,TN-00190-0555,470318001924,C10H01,Dual Enrollment Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+East Hamilton School,TN-00330-0059,470159002214,C10H01,Dual Enrollment Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+East Ridge High School,TN-00330-0070,470159000501,C10H01,Dual Enrollment Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hamilton County Collegiate High at Chattanooga State,TN-00330-0086,470159001416,C10H01,Dual Enrollment Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hixson High School,TN-00330-0128,470159000750,C10H01,Dual Enrollment Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lookout Valley Middle / High School,TN-00330-0165,470159000781,C10H01,Dual Enrollment Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Soddy Daisy High School,TN-00330-0220,470159000525,C10H01,Dual Enrollment Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Tyner Academy,TN-00330-0237,470159000802,C10H01,Dual Enrollment Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Henry Co High School,TN-00400-0025,470183000617,C10H01,Dual Enrollment Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+East Hickman High School,TN-00410-0018,470186002104,C10H01,Dual Enrollment Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Culleoka Unit School,TN-00600-0030,470276000967,C10H01,Dual Enrollment Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Northeast High,TN-00630-0068,470303001855,C10H01,Dual Enrollment Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cookeville High School,TN-00710-0037,470348001457,C10H01,Dual Enrollment Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Harriman High School,TN-00730-0015,470359000567,C10H01,Dual Enrollment Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Rockwood High School,TN-00730-0085,470359001489,C10H01,Dual Enrollment Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Jo Byrns High School,TN-00740-0045,470360001500,C10H01,Dual Enrollment Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Ridgeway High,TN-00792-2615,470014801142,C10H01,Dual Enrollment Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Sumner County Middle College High School,TN-00830-0155,470402002408,C10H01,Dual Enrollment Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Brentwood High School,TN-00940-0012,470453001894,C10H01,Dual Enrollment Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Centennial High School,TN-00940-0017,470453000511,C10H01,Dual Enrollment Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Ravenwood High School,TN-00940-0074,470453001946,C10H01,Dual Enrollment Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+John Overton High,TN-00190-0395,470318001327,C10H07,IGCSE Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Henry Co High School,TN-00400-0025,470183000617,C10H08,Coding Practicum,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hardin Valley Academy,TN-00470-0126,470222002151,C10H08,Coding Practicum,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Madison Academic Magnet High School,TN-00570-0063,470258002033,C10H08,Coding Practicum,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Arlington High,TN-00793-0001,470015202075,C10H08,Coding Practicum,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bartlett High School,TN-00794-0025,470015301570,C10H08,Coding Practicum,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Sullivan South High School,TN-00820-0183,470399001863,C10H08,Coding Practicum,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Brentwood High School,TN-00940-0012,470453001894,C10H08,Coding Practicum,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Franklin High School,TN-00940-0040,470453001805,C10H08,Coding Practicum,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Independence High School,TN-00940-0052,470453002096,C10H08,Coding Practicum,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Anderson County High School,TN-00010-0002,470009001871,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Clinton High School,TN-00010-0025,470009000008,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Shelbyville Central High School,TN-00020-0020,470018000036,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Heritage High School,TN-00050-0063,470030000072,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Samuel Everett School of Innovation,TN-00050-0123,470030002557,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+William Blount High School,TN-00050-0155,470030001830,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Maryville High School,TN-00052-0015,470270000958,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Maryville Junior High School,TN-00052-0020,470270000959,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bradley Central High School,TN-00060-0020,470033000090,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Walker Valley High School,TN-00060-0078,470033001388,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hampton High School,TN-00100-0030,470051000155,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Happy Valley High School,TN-00100-0040,470051000157,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Elizabethton High School,TN-00101-0015,470111000351,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Chester County High School,TN-00120-0008,470060000894,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Tullahoma High School,TN-00162-0035,470420001715,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Crockett County High School,TN-00170-0003,470085001897,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cumberland County High School,TN-00180-0025,470090000303,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Stone Memorial High School,TN-00180-0079,470090002100,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MNPS Virtual School,TN-00190-0003,470318002256,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hunters Lane High,TN-00190-0358,470318001961,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+John Overton High,TN-00190-0395,470318001327,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Pearl-Cohn High,TN-00190-0555,470318001924,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Knowledge Academies High School,TN-00190-8065,470318002442,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+De Kalb County High School,TN-00210-0025,470099000322,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Creek Wood High School,TN-00220-0017,470102001727,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Dyer County High School,TN-00230-0018,470105002028,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Fayette Ware Comprehensive High School,TN-00240-0026,470117001921,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Franklin Co High School,TN-00260-0050,470129000388,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Humboldt Junior/Senior High School,TN-00271-0020,470195000636,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Gibson County High School,TN-00275-0033,470140000416,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+South Gibson County High School,TN-00275-0037,470140002207,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Chuckey Doak High School,TN-00300-0028,470147000445,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+North Greene High School,TN-00300-0070,470147000453,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+South Greene High School,TN-00300-0080,470147000455,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West Greene High School,TN-00300-0095,470147000458,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Morristown East High,TN-00320-0042,470000101935,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Morristown West High,TN-00320-0045,470000101936,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Central High School,TN-00470-0047,470222000775,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+East Hamilton School,TN-00330-0059,470159002214,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+East Ridge High School,TN-00330-0070,470159000501,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Ooltewah High School,TN-00330-0160,470159000514,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Red Bank High School,TN-00330-0175,470159000517,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Sequoyah High School,TN-00330-0196,470159000521,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Signal Mountain Middle/High School,TN-00330-0210,470159000523,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Soddy Daisy High School,TN-00330-0220,470159000525,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Tyner Academy,TN-00330-0237,470159000802,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hardin County High School,TN-00360-0015,470168000553,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cherokee High School,TN-00370-0017,470174001842,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Haywood High School,TN-00380-0040,470177000597,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lexington High School,TN-00390-0015,470180000603,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+E. W. Grove School,TN-00400-0015,470183000615,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Austin East High/Magnet,TN-00470-0009,470222000767,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bearden High School,TN-00470-0017,470222000769,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Central High School,TN-00470-0047,470222000775,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Farragut High School,TN-00470-0080,470222000735,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Fulton High School,TN-00470-0090,470222000783,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Gibbs High School,TN-00470-0100,470222000741,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hardin Valley Academy,TN-00470-0126,470222002151,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West High School,TN-00470-0305,470222000822,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+L N STEM Academy,TN-00470-0334,470222002269,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Halls High School,TN-00490-0023,470231000834,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Ripley High School,TN-00490-0040,470231000838,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lewis Co High School,TN-00510-0010,470243000874,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lincoln County High School,TN-00520-0056,470249001849,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+McMinn High School,TN-00540-0045,470282000993,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Adamsville High School,TN-00550-0010,470288000998,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+McNairy Central High School,TN-00550-0020,470288001000,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Macon County High School,TN-00560-0021,470255000839,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+North Side High School,TN-00570-0071,470258000920,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Columbia Central High School,TN-00600-0015,470276000964,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Spring Hill High School,TN-00600-0095,470276000981,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Sequoyah High School,TN-00330-0196,470159000521,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Northeast High,TN-00630-0068,470303001855,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Rossview High,TN-00630-0078,470303001477,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West Creek High,TN-00630-0100,470303002153,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Union City High School,TN-00661-0015,470426001729,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Livingston Academy,TN-00670-0030,470333001419,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Polk County High School,TN-00700-0053,470345001900,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Harriman High School,TN-00730-0015,470359000567,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Blackman High School,TN-00750-0004,470369001354,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Central Magnet School,TN-00750-0015,470369002247,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lavergne High School,TN-00750-0063,470369001987,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Riverdale High School,TN-00750-0074,470369001524,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Adamsville High School,TN-00550-0010,470288000998,C10H14,Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Siegel High School,TN-00750-0104,470369002038,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Stewarts Creek High School,TN-00750-0225,470369002318,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Seymour High School,TN-00780-0070,470378001562,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Germantown High,TN-00792-0110,470014801582,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Southwind High,TN-00792-0178,470014802137,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Central High,TN-00792-2090,470014801028,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cordova High School,TN-00792-2119,470014802080,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Craigmont High,TN-00792-2126,470014801040,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Douglass High,TN-00792-2160,470014802150,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+East High,TN-00792-2180,470014801053,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hamilton High,TN-00792-2317,470014801080,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Kingsbury High,TN-00792-2375,470014801093,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Manassas High,TN-00792-2480,470014801113,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Melrose High,TN-00792-2493,470014801115,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Oakhaven High,TN-00792-2545,470014801127,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Overton High,TN-00792-2565,470014801130,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Raleigh-Egypt High,TN-00792-2598,470014801138,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Ridgeway High,TN-00792-2615,470014801142,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Westwood High,TN-00792-2770,470014801176,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+White Station High,TN-00792-2780,470014801178,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Wooddale High,TN-00792-2815,470014801186,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Carver College and Career Academy,TN-00792-2830,470014802221,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Memphis Business Academy High School,TN-00792-8217,470014802178,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Arlington High,TN-00793-0001,470015202075,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bartlett High School,TN-00794-0025,470015301570,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Collierville High School,TN-00795-0060,470014901574,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Houston High School,TN-00796-0111,470015102001,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Millington Central High School,TN-00798-0130,470015001587,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Sullivan Central High School,TN-00820-0060,470399001624,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Sullivan North High School,TN-00820-0182,470399001862,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Sullivan South High School,TN-00820-0183,470399001863,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Tennessee High School,TN-00821-0045,470036000116,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Tennessee Online Public School,TN-00821-0050,470036002308,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Dobyns - Bennett High School,TN-00822-0010,470219000706,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Beech Sr High School,TN-00830-0007,470402001891,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Gallatin Senior High School,TN-00830-0025,470402001659,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hendersonville High School,TN-00830-0040,470402001662,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Station Camp High School,TN-00830-0102,470402001943,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+White House High School,TN-00830-0125,470402001684,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Brighton High School,TN-00840-0011,470408000505,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Munford High School,TN-00840-0050,470408001700,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Unicoi Co High School,TN-00860-0035,470423001723,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Union County Alternative Center,TN-00870-0053,470429001362,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Union County High School,TN-00870-0055,470429000870,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Summit High School,TN-00940-0079,470453002275,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lebanon High School,TN-00950-0025,470455001819,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mt. Juliet High School,TN-00950-0030,470455001820,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Watertown High School,TN-00950-0060,470455001825,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Wilson Central High School,TN-00950-0073,470455001641,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Adamsville High School,TN-00550-0010,470288000998,C10H15,Coding II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Martin Luther King Preparatory High School,TN-00985-8065,470014701064,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Anderson County High School,TN-00010-0002,470009001871,C10H14,Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Clinton High School,TN-00010-0025,470009000008,C10H14,Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Oak Ridge High School,TN-00012-0035,470324001396,C10H14,Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Heritage High School,TN-00050-0063,470030000072,C10H14,Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Samuel Everett School of Innovation,TN-00050-0123,470030002557,C10H14,Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+William Blount High School,TN-00050-0155,470030001830,C10H14,Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bradley Central High School,TN-00060-0020,470033000090,C10H14,Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Walker Valley High School,TN-00060-0078,470033001388,C10H14,Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Campbell County Comprehensive High School,TN-00070-0003,470042000117,C10H14,Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Elizabethton High School,TN-00101-0015,470111000351,C10H14,Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Tullahoma High School,TN-00162-0035,470420001715,C10H14,Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Crockett County High School,TN-00170-0003,470085001897,C10H14,Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cumberland County High School,TN-00180-0025,470090000303,C10H14,Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Stone Memorial High School,TN-00180-0079,470090002100,C10H14,Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MNPS Virtual School,TN-00190-0003,470318002256,C10H14,Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Antioch High School,TN-00190-0020,470318001257,C10H14,Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Knowledge Academies High School,TN-00190-8065,470318002442,C10H14,Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+RePublic High School,TN-00190-8100,470318002446,C10H14,Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+De Kalb County High School,TN-00210-0025,470099000322,C10H14,Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Dyer County High School,TN-00230-0018,470105002028,C10H14,Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Humboldt Junior/Senior High School,TN-00271-0020,470195000636,C10H14,Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Gibson County High School,TN-00275-0033,470140000416,C10H14,Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+South Gibson County High School,TN-00275-0037,470140002207,C10H14,Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Chuckey Doak High School,TN-00300-0028,470147000445,C10H14,Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+North Greene High School,TN-00300-0070,470147000453,C10H14,Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West Greene High School,TN-00300-0095,470147000458,C10H14,Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Greeneville High School,TN-00301-0020,470150000467,C10H14,Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Morristown East High,TN-00320-0042,470000101935,C10H14,Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Morristown West High,TN-00320-0045,470000101936,C10H14,Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Ooltewah High School,TN-00330-0160,470159000514,C10H14,Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Red Bank High School,TN-00330-0175,470159000517,C10H14,Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hardin County High School,TN-00360-0015,470168000553,C10H14,Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lexington High School,TN-00390-0015,470180000603,C10H14,Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Scotts Hill High School,TN-00390-0039,470180001427,C10H14,Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bearden High School,TN-00470-0017,470222000769,C10H14,Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Central High School,TN-00470-0047,470222000775,C10H14,Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Farragut High School,TN-00470-0080,470222000735,C10H14,Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Gibbs High School,TN-00470-0100,470222000741,C10H14,Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hardin Valley Academy,TN-00470-0126,470222002151,C10H14,Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Powell High School,TN-00470-0185,470222000755,C10H14,Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West High School,TN-00470-0305,470222000822,C10H14,Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+L N STEM Academy,TN-00470-0334,470222002269,C10H14,Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lenoir City High School,TN-00531-0005,470240000868,C10H14,Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Adamsville High School,TN-00550-0010,470288000998,G02H44,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+McNairy Central High School,TN-00550-0020,470288001000,C10H14,Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Jackson Central-Merry Early College High,TN-00570-0022,470258002463,C10H14,Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Madison Academic Magnet High School,TN-00570-0063,470258002033,C10H14,Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+North Side High School,TN-00570-0071,470258000920,C10H14,Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Columbia Central High School,TN-00600-0015,470276000964,C10H14,Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Northeast High,TN-00630-0068,470303001855,C10H14,Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Union City High School,TN-00661-0015,470426001729,C10H14,Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Harriman High School,TN-00730-0015,470359000567,C10H14,Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Blackman High School,TN-00750-0004,470369001354,C10H14,Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Central Magnet School,TN-00750-0015,470369002247,C10H14,Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Riverdale High School,TN-00750-0074,470369001524,C10H14,Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Barry Tatum Academy,unspecified,unspecified,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Central High,TN-00792-2090,470014801028,C10H14,Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cordova High School,TN-00792-2119,470014802080,C10H14,Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Craigmont High,TN-00792-2126,470014801040,C10H14,Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Douglass High,TN-00792-2160,470014802150,C10H14,Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Kingsbury High,TN-00792-2375,470014801093,C10H14,Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Manassas High,TN-00792-2480,470014801113,C10H14,Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Middle College High,TN-00792-2515,470014801974,C10H14,Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Overton High,TN-00792-2565,470014801130,C10H14,Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Ridgeway High,TN-00792-2615,470014801142,C10H14,Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Westwood High,TN-00792-2770,470014801176,C10H14,Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Wooddale High,TN-00792-2815,470014801186,C10H14,Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Freedom Preparatory Academy,TN-00792-8234,470014802208,C10H14,Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Memphis Rise Academy,TN-00792-8264,470014802418,C10H14,Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Arlington High,TN-00793-0001,470015202075,C10H14,Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bartlett High School,TN-00794-0025,470015301570,C10H14,Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Houston High School,TN-00796-0111,470015102001,C10H14,Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Sullivan North High School,TN-00820-0182,470399001862,C10H14,Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Sullivan South High School,TN-00820-0183,470399001863,C10H14,Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Tennessee High School,TN-00821-0045,470036000116,C10H14,Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Tennessee Online Public School,TN-00821-0050,470036002308,C10H14,Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Dobyns - Bennett High School,TN-00822-0010,470219000706,C10H14,Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Station Camp High School,TN-00830-0102,470402001943,C10H14,Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Brentwood High School,TN-00940-0012,470453001894,C10H14,Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Centennial High School,TN-00940-0017,470453000511,C10H14,Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Franklin High School,TN-00940-0040,470453001805,C10H14,Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Independence High School,TN-00940-0052,470453002096,C10H14,Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Renaissance High School,TN-00940-0063,470453001031,C10H14,Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Ravenwood High School,TN-00940-0074,470453001946,C10H14,Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Summit High School,TN-00940-0079,470453002275,C10H14,Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lebanon High School,TN-00950-0025,470455001819,C10H14,Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mt. Juliet High School,TN-00950-0030,470455001820,C10H14,Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Watertown High School,TN-00950-0060,470455001825,C10H14,Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Wilson Central High School,TN-00950-0073,470455001641,C10H14,Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Barry Tatum Academy,unspecified,unspecified,C10H14,Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Martin Luther King Preparatory High School,TN-00985-8065,470014701064,C10H14,Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Anderson County High School,TN-00010-0002,470009001871,C10H15,Coding II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Heritage High School,TN-00050-0063,470030000072,C10H15,Coding II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+William Blount High School,TN-00050-0155,470030001830,C10H15,Coding II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bradley Central High School,TN-00060-0020,470033000090,C10H15,Coding II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Walker Valley High School,TN-00060-0078,470033001388,C10H15,Coding II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Elizabethton High School,TN-00101-0015,470111000351,C10H15,Coding II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Tullahoma High School,TN-00162-0035,470420001715,C10H15,Coding II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cumberland County High School,TN-00180-0025,470090000303,C10H15,Coding II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hunters Lane High,TN-00190-0358,470318001961,C10H15,Coding II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Knowledge Academies High School,TN-00190-8065,470318002442,C10H15,Coding II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+RePublic High School,TN-00190-8100,470318002446,C10H15,Coding II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+De Kalb County High School,TN-00210-0025,470099000322,C10H15,Coding II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Dyer County High School,TN-00230-0018,470105002028,C10H15,Coding II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Humboldt Junior/Senior High School,TN-00271-0020,470195000636,C10H15,Coding II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Gibson County High School,TN-00275-0033,470140000416,C10H15,Coding II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+South Gibson County High School,TN-00275-0037,470140002207,C10H15,Coding II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Chuckey Doak High School,TN-00300-0028,470147000445,C10H15,Coding II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+North Greene High School,TN-00300-0070,470147000453,C10H15,Coding II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West Greene High School,TN-00300-0095,470147000458,C10H15,Coding II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Morristown East High,TN-00320-0042,470000101935,C10H15,Coding II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Morristown West High,TN-00320-0045,470000101936,C10H15,Coding II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Ooltewah High School,TN-00330-0160,470159000514,C10H15,Coding II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hardin County High School,TN-00360-0015,470168000553,C10H15,Coding II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lexington High School,TN-00390-0015,470180000603,C10H15,Coding II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bearden High School,TN-00470-0017,470222000769,C10H15,Coding II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Central High School,TN-00470-0047,470222000775,C10H15,Coding II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Farragut High School,TN-00470-0080,470222000735,C10H15,Coding II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Gibbs High School,TN-00470-0100,470222000741,C10H15,Coding II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hardin Valley Academy,TN-00470-0126,470222002151,C10H15,Coding II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Powell High School,TN-00470-0185,470222000755,C10H15,Coding II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West High School,TN-00470-0305,470222000822,C10H15,Coding II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+LEAD Cameron,unspecified,unspecified,G10501,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Liberty Technology Magnet High School,TN-00570-0053,470258002032,C10H15,Coding II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Madison Academic Magnet High School,TN-00570-0063,470258002033,C10H15,Coding II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+North Side High School,TN-00570-0071,470258000920,C10H15,Coding II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Columbia Central High School,TN-00600-0015,470276000964,C10H15,Coding II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Northeast High,TN-00630-0068,470303001855,C10H15,Coding II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Union City High School,TN-00661-0015,470426001729,C10H15,Coding II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Riverdale High School,TN-00750-0074,470369001524,C10H15,Coding II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+LEAD Cameron,unspecified,unspecified,G25X40,Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cordova High School,TN-00792-2119,470014802080,C10H15,Coding II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Craigmont High,TN-00792-2126,470014801040,C10H15,Coding II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Westwood High,TN-00792-2770,470014801176,C10H15,Coding II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Arlington High,TN-00793-0001,470015202075,C10H15,Coding II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bartlett High School,TN-00794-0025,470015301570,C10H15,Coding II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Houston High School,TN-00796-0111,470015102001,C10H15,Coding II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Sullivan North High School,TN-00820-0182,470399001862,C10H15,Coding II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Tennessee Online Public School,TN-00821-0050,470036002308,C10H15,Coding II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Dobyns - Bennett High School,TN-00822-0010,470219000706,C10H15,Coding II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hendersonville High School,TN-00830-0040,470402001662,C10H15,Coding II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Independence High School,TN-00940-0052,470453002096,C10H15,Coding II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Renaissance High School,TN-00940-0063,470453001031,C10H15,Coding II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Summit High School,TN-00940-0079,470453002275,C10H15,Coding II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lebanon High School,TN-00950-0025,470455001819,C10H15,Coding II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mt. Juliet High School,TN-00950-0030,470455001820,C10H15,Coding II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Wilson Central High School,TN-00950-0073,470455001641,C10H15,Coding II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Martin Luther King Preparatory High School,TN-00985-8065,470014701064,C10H15,Coding II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Crockett County High School,TN-00170-0003,470085001897,C10H22,Mobile App Development,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Henry Co High School,TN-00400-0025,470183000617,C10H22,Mobile App Development,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Northeast High,TN-00630-0068,470303001855,C10H22,Mobile App Development,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Sullivan South High School,TN-00820-0183,470399001863,C10H22,Mobile App Development,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Tennessee High School,TN-00821-0045,470036000116,C10H22,Mobile App Development,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Dobyns - Bennett High School,TN-00822-0010,470219000706,C10H22,Mobile App Development,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Pearl-Cohn High,TN-00190-0555,470318001924,C10H28,Dual Enrollment Coding II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Jo Byrns High School,TN-00740-0045,470360001500,C10H28,Dual Enrollment Coding II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Oakland High School,TN-00750-0072,470369001523,G02H16,IB Computer Science I HL,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Oakland High School,TN-00750-0072,470369001523,G02H17,IB Computer Science II HL,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Anderson County High School,TN-00010-0002,470009001871,G02H44,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Clinton High School,TN-00010-0025,470009000008,G02H44,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Oak Ridge High School,TN-00012-0035,470324001396,G02H44,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Shelbyville Central High School,TN-00020-0020,470018000036,G02H44,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Heritage High School,TN-00050-0063,470030000072,G02H44,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Samuel Everett School of Innovation,TN-00050-0123,470030002557,G02H44,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+William Blount High School,TN-00050-0155,470030001830,G02H44,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Maryville High School,TN-00052-0015,470270000958,G02H44,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cleveland High,TN-00061-0020,470069000265,G02H44,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hampton High School,TN-00100-0030,470051000155,G02H44,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Happy Valley High School,TN-00100-0040,470051000157,G02H44,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Unaka High School,TN-00100-0090,470051000167,G02H44,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Chester County High School,TN-00120-0008,470060000894,G02H44,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Coffee County Central High School,TN-00160-0005,470078000285,G02H44,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Tullahoma High School,TN-00162-0035,470420001715,G02H44,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cumberland County High School,TN-00180-0025,470090000303,G02H44,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Antioch High School,TN-00190-0020,470318001257,G02H44,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hillwood High,TN-00190-0340,470318001319,G02H44,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+John Overton High,TN-00190-0395,470318001327,G02H44,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Martin Luther King Jr School,TN-00190-0456,470318001962,G02H44,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+KIPP Nashville Collegiate High School,TN-00190-8011,470318002305,G02H44,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+RePublic High School,TN-00190-8100,470318002446,G02H44,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Dyer County High School,TN-00230-0018,470105002028,G02H44,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West Greene High School,TN-00300-0095,470147000458,G02H44,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Greeneville High School,TN-00301-0020,470150000467,G02H44,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Chattanooga School For Arts And Sciences Upper,TN-00330-0046,470159000669,G02H44,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+East Hamilton School,TN-00330-0059,470159002214,G02H44,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hixson High School,TN-00330-0128,470159000750,G02H44,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Ooltewah High School,TN-00330-0160,470159000514,G02H44,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Red Bank High School,TN-00330-0175,470159000517,G02H44,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Soddy Daisy High School,TN-00330-0220,470159000525,G02H44,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Chattanooga Girls Leadership Academy,TN-00330-8001,470159002211,G02H44,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Haywood High School,TN-00380-0040,470177000597,G02H44,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Henry Co High School,TN-00400-0025,470183000617,G02H44,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+East Hickman High School,TN-00410-0018,470186002104,G02H44,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hickman Co Sr High School,TN-00410-0030,470186000625,G02H44,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Jefferson Co High School,TN-00450-0020,470210000675,G02H44,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bearden High School,TN-00470-0017,470222000769,G02H44,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Central High School,TN-00470-0047,470222000775,G02H44,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+South Doyle High School,TN-00470-0065,470222000732,G02H44,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Farragut High School,TN-00470-0080,470222000735,G02H44,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hardin Valley Academy,TN-00470-0126,470222002151,G02H44,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+L N STEM Academy,TN-00470-0334,470222002269,G02H44,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lake Co High School,TN-00480-0005,470228000826,G02H44,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Ripley High School,TN-00490-0040,470231000838,G02H44,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Memphis Academy Of Science  Engineering Middle/High,TN-00792-8202,470014802273,G02H44,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Montgomery Central High,TN-00630-0025,470303001209,G02H44,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Northwest High,TN-00630-0070,470303001219,G02H44,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West Creek High,TN-00630-0100,470303002153,G02H44,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Polk County High School,TN-00700-0053,470345001900,G02H44,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Oliver Springs High School,TN-00730-0065,470359001484,G02H44,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Roane County High School,TN-00730-0080,470359001486,G02H44,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Rockwood High School,TN-00730-0085,470359001489,G02H44,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Blackman High School,TN-00750-0004,470369001354,G02H44,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Central Magnet School,TN-00750-0015,470369002247,G02H44,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lavergne High School,TN-00750-0063,470369001987,G02H44,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Riverdale High School,TN-00750-0074,470369001524,G02H44,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Siegel High School,TN-00750-0104,470369002038,G02H44,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Seymour High School,TN-00780-0070,470378001562,G02H44,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Germantown High,TN-00792-0110,470014801582,G02H44,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+B. T. Washington High,TN-00792-2030,470014801016,G02H44,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Central High,TN-00792-2090,470014801028,G02H44,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cordova High School,TN-00792-2119,470014802080,G02H44,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+East High,TN-00792-2180,470014801053,G02H44,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hamilton High,TN-00792-2317,470014801080,G02H44,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Middle College High,TN-00792-2515,470014801974,G02H44,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mitchell High,TN-00792-2520,470014801122,G02H44,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Raleigh-Egypt High,TN-00792-2598,470014801138,G02H44,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Westwood High,TN-00792-2770,470014801176,G02H44,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+White Station High,TN-00792-2780,470014801178,G02H44,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+KIPP Memphis Collegiate High School,TN-00792-8202,470014802273,G02H44,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Rockvale High School,unspecified,unspecified,C10H11,Computer Science Foundations,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Arlington High,TN-00793-0001,470015202075,G02H44,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bartlett High School,TN-00794-0025,470015301570,G02H44,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Collierville High School,TN-00795-0060,470014901574,G02H44,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Houston High School,TN-00796-0111,470015102001,G02H44,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Tennessee High School,TN-00821-0045,470036000116,G02H44,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Dobyns - Bennett High School,TN-00822-0010,470219000706,G02H44,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hendersonville High School,TN-00830-0040,470402001662,G02H44,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Munford High School,TN-00840-0050,470408001700,G02H44,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Warren County High School,TN-00890-0080,470435001749,G02H44,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Brentwood High School,TN-00940-0012,470453001894,G02H44,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Centennial High School,TN-00940-0017,470453000511,G02H44,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Independence High School,TN-00940-0052,470453002096,G02H44,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Renaissance High School,TN-00940-0063,470453001031,G02H44,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Ravenwood High School,TN-00940-0074,470453001946,G02H44,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Summit High School,TN-00940-0079,470453002275,G02H44,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mt. Juliet High School,TN-00950-0030,470455001820,G02H44,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Oak Ridge High School,TN-00012-0035,470324001396,G02H45,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Camden Central High School,TN-00030-0025,470024000052,G02H45,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Stone Memorial High School,TN-00180-0079,470090002100,G02H45,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+John Overton High,TN-00190-0395,470318001327,G02H45,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Martin Luther King Jr School,TN-00190-0456,470318001962,G02H45,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+De Kalb County High School,TN-00210-0025,470099000322,G02H45,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Dyer County High School,TN-00230-0018,470105002028,G02H45,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Ooltewah High School,TN-00330-0160,470159000514,G02H45,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Haywood High School,TN-00380-0040,470177000597,G02H45,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Henry Co High School,TN-00400-0025,470183000617,G02H45,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Farragut High School,TN-00470-0080,470222000735,G02H45,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hardin Valley Academy,TN-00470-0126,470222002151,G02H45,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+L N STEM Academy,TN-00470-0334,470222002269,G02H45,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Oliver Springs High School,TN-00730-0065,470359001484,G02H45,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Central Magnet School,TN-00750-0015,470369002247,G02H45,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Middle College High,TN-00792-2515,470014801974,G02H45,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Memphis Rise Academy,TN-00792-8264,470014802418,G02H45,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Houston High School,TN-00796-0111,470015102001,G02H45,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Dobyns - Bennett High School,TN-00822-0010,470219000706,G02H45,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+University School,TN-00900-0105,470438001893,G02H45,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Brentwood High School,TN-00940-0012,470453001894,G02H45,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Centennial High School,TN-00940-0017,470453000511,G02H45,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Fairview High School,TN-00940-0035,470453001804,G02H45,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Franklin High School,TN-00940-0040,470453001805,G02H45,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Fred J Page High School,TN-00940-0042,470453001806,G02H45,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Renaissance High School,TN-00940-0063,470453001031,G02H45,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Nolensville High School,TN-00940-0066,470453002428,G02H45,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Ravenwood High School,TN-00940-0074,470453001946,G02H45,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Summit High School,TN-00940-0079,470453002275,G02H45,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lebanon High School,TN-00950-0025,470455001819,G02H45,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Franklin High School,TN-00940-0040,470453001805,G02H66,IB Computer Science SL,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Signal Mountain Middle/High School,TN-00330-0210,470159000523,G02H69,IB Computer Science I SL/HL,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Fairley High School,TN-00985-8055,470014701058,G02H69,IB Computer Science I SL/HL,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Signal Mountain Middle/High School,TN-00330-0210,470159000523,G02H70,IB Computer Science II SL/HL,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Holladay Elementary,TN-00030-0030,470024000053,G10100,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Allardt Elementary,TN-00250-0005,470123000373,G10100,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+South Fentress Elementary School,TN-00250-0033,470123002029,G10100,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Pine Haven Elementary,TN-00250-0040,470123000381,G10100,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+York Elementary,TN-00250-0060,470123000383,G10100,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Carter's Valley Elementary,TN-00370-0015,470174000573,G10100,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Clinch School,TN-00370-0030,470174000576,G10100,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Surgoinsville Elementary,TN-00370-0095,470174000589,G10100,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Gainesboro Elementary,TN-00440-0025,470207000665,G10100,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Eaton Elementary,TN-00530-0015,470252000892,G10100,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Adamsville Elementary,TN-00550-0005,470288000997,G10100,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bethel Springs Elementary,TN-00550-0015,470288000999,G10100,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Selmer Elementary,TN-00550-0040,470288001003,G10100,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Dayton City Elementary,TN-00721-0005,470093000315,G10100,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Stewartsboro Elementary,TN-00750-0200,470369000115,G10100,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Oneida Elementary,TN-00761-0005,470330001412,G10100,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Idlewild Elementary,TN-00792-2355,470014801088,G10100,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Memphis School of Excellence Elementary,TN-00792-8310,470014802485,G10100,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Tenn School For Blind,TN-00963-0005,470014502138,G10100,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Auburn Elementary,TN-00080-0005,470045000139,G10200,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West Side Elementary,TN-00101-0030,470111000355,G10200,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Allardt Elementary,TN-00250-0005,470123000373,G10200,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Carter's Valley Elementary,TN-00370-0015,470174000573,G10200,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Clinch School,TN-00370-0030,470174000576,G10200,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Keplar Elementary,TN-00370-0045,470174000581,G10200,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Surgoinsville Elementary,TN-00370-0095,470174000589,G10200,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Gainesboro Elementary,TN-00440-0025,470207000665,G10200,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Eaton Elementary,TN-00530-0015,470252000892,G10200,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Adamsville Elementary,TN-00550-0005,470288000997,G10200,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bethel Springs Elementary,TN-00550-0015,470288000999,G10200,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Michie Elementary,TN-00550-0025,470288001001,G10200,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Selmer Elementary,TN-00550-0040,470288001003,G10200,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Dayton City Elementary,TN-00721-0005,470093000315,G10200,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+McFadden School Of Excellence,TN-00750-0070,470369001522,G10200,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Stewartsboro Elementary,TN-00750-0200,470369000115,G10200,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Burchfield Elementary,TN-00760-0005,470372001533,G10200,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Oneida Elementary,TN-00761-0005,470330001412,G10200,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Idlewild Elementary,TN-00792-2355,470014801088,G10200,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Memphis School of Excellence Elementary,TN-00792-8310,470014802485,G10200,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Allardt Elementary,TN-00250-0005,470123000373,G10300,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Carter's Valley Elementary,TN-00370-0015,470174000573,G10300,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Clinch School,TN-00370-0030,470174000576,G10300,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Keplar Elementary,TN-00370-0045,470174000581,G10300,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mt Carmel Elementary,TN-00370-0055,470174000585,G10300,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Surgoinsville Elementary,TN-00370-0095,470174000589,G10300,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Gainesboro Elementary,TN-00440-0025,470207000665,G10300,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Eaton Elementary,TN-00530-0015,470252000892,G10300,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Adamsville Elementary,TN-00550-0005,470288000997,G10300,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bethel Springs Elementary,TN-00550-0015,470288000999,G10300,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Selmer Elementary,TN-00550-0040,470288001003,G10300,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Dayton City Elementary,TN-00721-0005,470093000315,G10300,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+McFadden School Of Excellence,TN-00750-0070,470369001522,G10300,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Stewartsboro Elementary,TN-00750-0200,470369000115,G10300,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Oneida Elementary,TN-00761-0005,470330001412,G10300,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Idlewild Elementary,TN-00792-2355,470014801088,G10300,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Memphis School of Excellence Elementary,TN-00792-8310,470014802485,G10300,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Brighton Elementary,TN-00840-0007,470408001689,G10300,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Covington Integrated Arts Academy,TN-00840-0014,470408002049,G10300,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+East Side Elementary,TN-00080-0020,470045000141,G10401,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West Side Elementary,TN-00101-0030,470111000355,G10401,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Woodbury Grammar,TN-00080-0040,470045000144,G10401,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Woodland Elementary,TN-00080-0045,470045000145,G10401,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Newbern Elementary School,TN-00230-0035,470105000343,G10401,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Allardt Elementary,TN-00250-0005,470123000373,G10401,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Carter's Valley Elementary,TN-00370-0015,470174000573,G10401,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Clinch School,TN-00370-0030,470174000576,G10401,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Keplar Elementary,TN-00370-0045,470174000581,G10401,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mt Carmel Elementary,TN-00370-0055,470174000585,G10401,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Surgoinsville Elementary,TN-00370-0095,470174000589,G10401,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Eaton Elementary,TN-00530-0015,470252000892,G10401,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Adamsville Elementary,TN-00550-0005,470288000997,G10401,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bethel Springs Elementary,TN-00550-0015,470288000999,G10401,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Michie Elementary,TN-00550-0025,470288001001,G10401,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Selmer Elementary,TN-00550-0040,470288001003,G10401,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Dayton City Elementary,TN-00721-0005,470093000315,G10401,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Smyrna Elementary,TN-00750-0090,470369001889,G10401,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Stewartsboro Elementary,TN-00750-0200,470369000115,G10401,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Oneida Elementary,TN-00761-0005,470330001412,G10401,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Idlewild Elementary,TN-00792-2355,470014801088,G10401,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Memphis School of Excellence Elementary,TN-00792-8310,470014802485,G10401,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hillsboro Elementary/ Middle School,TN-00940-0050,470453001808,G10401,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Apollo Middle,TN-00190-0025,470318001258,G10501,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cane Ridge Elementary,TN-00190-0082,470318002288,G10501,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Eagle View Elementary School,TN-00190-0115,470318002494,G10501,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Donelson Middle,TN-00190-0175,470318001243,G10501,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Goodlettsville Middle,TN-00190-0275,470318001305,G10501,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Meigs Middle,TN-00190-0330,470318001317,G10501,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Joelton Middle,TN-00190-0385,470318001325,G10501,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+John F. Kennedy Middle,TN-00190-0393,470318002149,G10501,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cora Howe School,TN-00190-0443,470318000462,G10501,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+McMurray Middle,TN-00190-0480,470318001344,G10501,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+John Trotwood Moore Middle,TN-00190-0490,470318001346,G10501,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+William Henry Oliver Middle,TN-00190-0538,470318002058,G10501,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Rose Park Middle,TN-00190-0595,470318001365,G10501,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Madison Middle,TN-00190-0622,470318002202,G10501,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Thurgood Marshall Middle,TN-00190-0633,470318002121,G10501,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Two Rivers Middle,TN-00190-0650,470318001375,G10501,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West End Middle,TN-00190-0690,470318001382,G10501,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Wright Middle,TN-00190-0715,470318001389,G10501,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Nashville Prep,TN-00190-8008,470318002264,G10501,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Rockvale High School,unspecified,unspecified,C10H14,Coding I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Knowledge Academy,TN-00190-8012,470318002294,G10501,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Nashville Academy of Computer Science,TN-00190-8055,470318002424,G10501,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+KA @ The Crossings,TN-00190-8105,470318002460,G10501,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Allardt Elementary,TN-00250-0005,470123000373,G10501,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+South Fentress Elementary School,TN-00250-0033,470123002029,G10501,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Clinch School,TN-00370-0030,470174000576,G10501,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Keplar Elementary,TN-00370-0045,470174000581,G10501,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Adamsville Elementary,TN-00550-0005,470288000997,G10501,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bethel Springs Elementary,TN-00550-0015,470288000999,G10501,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Michie Elementary,TN-00550-0025,470288001001,G10501,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Dayton City Elementary,TN-00721-0005,470093000315,G10501,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Stewartsboro Elementary,TN-00750-0200,470369000115,G10501,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Oneida Elementary,TN-00761-0005,470330001412,G10501,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Idlewild Elementary,TN-00792-2355,470014801088,G10501,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Memphis School of Excellence Elementary,TN-00792-8310,470014802485,G10501,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hillsboro Elementary/ Middle School,TN-00940-0050,470453001808,G10501,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Brick Church: A LEAD Public School,TN-00985-8005,470014702309,G10501,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Neely's Bend: A LEAD Public School,TN-00985-8090,470014702456,G10501,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+A. Z. Kelley Elementary,TN-00190-0001,470318002116,G10K00,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Andrew Jackson Elementary,TN-00190-0015,470318001256,G10K00,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cane Ridge Elementary,TN-00190-0082,470318002288,G10K00,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Eagle View Elementary School,TN-00190-0115,470318002494,G10K00,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cole Elementary,TN-00190-0130,470318001277,G10K00,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Dodson Elementary,TN-00190-0165,470318001284,G10K00,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+DuPont Elementary,TN-00190-0180,470318001287,G10K00,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Glencliff Elementary,TN-00190-0240,470318001298,G10K00,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Glenview Elementary,TN-00190-0265,470318001303,G10K00,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Goodlettsville Elementary,TN-00190-0270,470318001304,G10K00,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Gower Elementary,TN-00190-0280,470318001306,G10K00,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Henry C. Maxwell Elementary,TN-00190-0318,470318001651,G10K00,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hickman Elementary,TN-00190-0327,470318001698,G10K00,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+J. E. Moss Elementary,TN-00190-0370,470318001986,G10K00,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+John B. Whitsitt Elementary,TN-00190-0390,470318001326,G10K00,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Paragon Mills Elementary,TN-00190-0540,470318001356,G10K00,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Pennington Elementary,TN-00190-0565,470318001360,G10K00,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Ruby Major Elementary,TN-00190-0607,470318002102,G10K00,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+May Werthan Shayne Elementary School,TN-00190-0608,470318002059,G10K00,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Stratton Elementary,TN-00190-0625,470318001371,G10K00,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Tulip Grove Elementary,TN-00190-0637,470318001999,G10K00,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Tusculum Elementary,TN-00190-0645,470318001374,G10K00,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Una Elementary,TN-00190-0655,470318001376,G10K00,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Allardt Elementary,TN-00250-0005,470123000373,G10K00,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+South Fentress Elementary School,TN-00250-0033,470123002029,G10K00,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Pine Haven Elementary,TN-00250-0040,470123000381,G10K00,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+York Elementary,TN-00250-0060,470123000383,G10K00,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Carter's Valley Elementary,TN-00370-0015,470174000573,G10K00,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Clinch School,TN-00370-0030,470174000576,G10K00,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mt Carmel Elementary,TN-00370-0055,470174000585,G10K00,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Surgoinsville Elementary,TN-00370-0095,470174000589,G10K00,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Gainesboro Elementary,TN-00440-0025,470207000665,G10K00,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Eaton Elementary,TN-00530-0015,470252000892,G10K00,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Adamsville Elementary,TN-00550-0005,470288000997,G10K00,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bethel Springs Elementary,TN-00550-0015,470288000999,G10K00,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Rhea Central Elementary,TN-00720-0065,470351002353,G10K00,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+McFadden School Of Excellence,TN-00750-0070,470369001522,G10K00,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Stewartsboro Elementary,TN-00750-0200,470369000115,G10K00,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Oneida Elementary,TN-00761-0005,470330001412,G10K00,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Idlewild Elementary,TN-00792-2355,470014801088,G10K00,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Memphis School of Excellence Elementary,TN-00792-8310,470014802485,G10K00,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hillsboro Elementary/ Middle School,TN-00940-0050,470453001808,G10K00,Computer Science (Self-Contained),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Antioch Middle,TN-00190-0023,470318001052,G25X40,Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Apollo Middle,TN-00190-0025,470318001258,G25X40,Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bellevue Middle,TN-00190-0040,470318001261,G25X40,Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Donelson Middle,TN-00190-0175,470318001243,G25X40,Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+DuPont Hadley Middle,TN-00190-0190,470318001289,G25X40,Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Goodlettsville Middle,TN-00190-0275,470318001305,G25X40,Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Meigs Middle,TN-00190-0330,470318001317,G25X40,Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Joelton Middle,TN-00190-0385,470318001325,G25X40,Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+John F. Kennedy Middle,TN-00190-0393,470318002149,G25X40,Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cora Howe School,TN-00190-0443,470318000462,G25X40,Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Martin Luther King Jr School,TN-00190-0456,470318001962,G25X40,Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+McMurray Middle,TN-00190-0480,470318001344,G25X40,Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+John Trotwood Moore Middle,TN-00190-0490,470318001346,G25X40,Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+William Henry Oliver Middle,TN-00190-0538,470318002058,G25X40,Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Rose Park Middle,TN-00190-0595,470318001365,G25X40,Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Madison Middle,TN-00190-0622,470318002202,G25X40,Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Thurgood Marshall Middle,TN-00190-0633,470318002121,G25X40,Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Two Rivers Middle,TN-00190-0650,470318001375,G25X40,Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West End Middle,TN-00190-0690,470318001382,G25X40,Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Wright Middle,TN-00190-0715,470318001389,G25X40,Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Liberty Collegiate Academy,TN-00190-8005,470318002263,G25X40,Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Nashville Prep,TN-00190-8008,470318002264,G25X40,Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Rockvale High School,unspecified,unspecified,C10H15,Coding II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Knowledge Academy,TN-00190-8012,470318002294,G25X40,Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Nashville Academy of Computer Science,TN-00190-8055,470318002424,G25X40,Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+KA @ The Crossings,TN-00190-8105,470318002460,G25X40,Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Chattanooga Charter School of Excellence Middle,TN-00330-8010,470159002434,G25X40,Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Blanche School,TN-00520-0010,470249000877,G25X40,Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Highland Rim School,TN-00520-0050,470249000885,G25X40,Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+South Lincoln School,TN-00520-0082,470249000079,G25X40,Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Unity School,TN-00520-0090,470249000080,G25X40,Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Rose Hill School,TN-00570-0024,470258002464,G25X40,Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Oneida Middle School,TN-00761-0008,470330000031,G25X40,Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Freedom Middle School,TN-00941-0022,470126000219,G25X40,Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Brick Church: A LEAD Public School,TN-00985-8005,470014702309,G25X40,Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Neely's Bend: A LEAD Public School,TN-00985-8090,470014702456,G25X40,Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified

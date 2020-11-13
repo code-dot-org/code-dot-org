@@ -5,22 +5,24 @@ var LiveReloadPlugin = require('webpack-livereload-plugin');
 var envConstants = require('./envConstants');
 var WebpackNotifierPlugin = require('webpack-notifier');
 
-// Certain packages ship in ES6 and need to be transpiled for our purposes -
-// especially for tests, which run on PhantomJS with _zero_ ES6 support.
+// Certain packages ship in ES6 and need to be transpiled for our purposes.
 var toTranspileWithinNodeModules = [
   // All of our @cdo-aliased files should get transpiled as they are our own
   // source files.
   path.resolve(__dirname, 'node_modules', '@cdo'),
   // playground-io ships in ES6 as of 0.3.0
   path.resolve(__dirname, 'node_modules', 'playground-io'),
-  path.resolve(__dirname, 'node_modules', 'chai-as-promised'),
-  path.resolve(__dirname, 'node_modules', 'enzyme-wait'),
   path.resolve(__dirname, 'node_modules', 'json-parse-better-errors'),
   path.resolve(__dirname, 'node_modules', '@code-dot-org', 'dance-party'),
   path.resolve(__dirname, 'node_modules', '@code-dot-org', 'snack-sdk'),
   // parse5 ships in ES6: https://github.com/inikulin/parse5/issues/263#issuecomment-410745073
   path.resolve(__dirname, 'node_modules', 'parse5'),
-  path.resolve(__dirname, 'node_modules', 'vmsg')
+  path.resolve(__dirname, 'node_modules', 'vmsg'),
+  path.resolve(
+    __dirname,
+    'node_modules',
+    'microsoft-cognitiveservices-speech-sdk'
+  )
 ];
 
 const scssIncludePath = path.resolve(__dirname, '..', 'shared', 'css');

@@ -3,7 +3,10 @@ require_relative '../../deployment'
 
 def main
   `pkill -9 -f brokenLinkChecker`
-  exec(deploy_dir('tools', 'scripts', 'brokenLinkChecker', 'brokenLinkChecker.js'))
+  exec(
+    {'SLACK_ENDPOINT' => CDO.slack_endpoint_broken_links},
+    deploy_dir('tools', 'scripts', 'brokenLinkChecker', 'brokenLinkChecker.js')
+  )
 end
 
 main

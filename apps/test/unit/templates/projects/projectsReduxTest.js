@@ -319,7 +319,11 @@ describe('projectsRedux', () => {
     it('unpublishes library', () => {
       setFetchPersonalProjectsResponse(200);
 
-      const action = unpublishProjectLibrary(projectId, libraryApiStub);
+      const action = unpublishProjectLibrary(
+        projectId,
+        () => {},
+        libraryApiStub
+      );
       store.dispatch(action);
       server.respond();
 
@@ -332,8 +336,8 @@ describe('projectsRedux', () => {
 
       const action = unpublishProjectLibrary(
         projectId,
-        libraryApiStub,
-        onCompleteSpy
+        onCompleteSpy,
+        libraryApiStub
       );
       store.dispatch(action);
       server.respond();

@@ -161,6 +161,18 @@ var PROP_INFO = {
     type: 'string',
     defaultValue: '"red"'
   },
+  photoSelectIconColor: {
+    friendlyName: 'icon-color',
+    internalName: 'textColor',
+    type: 'string',
+    defaultValue: '"red"'
+  },
+  iconSize: {
+    friendlyName: 'icon-size',
+    internalName: 'fontSize',
+    type: 'number',
+    defaultValue: '32'
+  },
   groupId: {
     friendlyName: 'group-id',
     internalName: 'groupId',
@@ -404,6 +416,21 @@ PROPERTIES[ElementType.SLIDER] = {
     'hidden'
   ]
 };
+PROPERTIES[ElementType.PHOTO_SELECT] = {
+  propertyNames: [
+    'width',
+    'height',
+    'x',
+    'y',
+    'iconColor',
+    'backgroundColor',
+    'iconSize',
+    'hidden',
+    'borderWidth',
+    'borderColor',
+    'borderRadius'
+  ]
+};
 
 // Initialize dropdownOptions and infoForFriendlyNames fields in PROPERTIES map.
 for (var elementType in PROPERTIES) {
@@ -420,7 +447,20 @@ for (var elementType in PROPERTIES) {
           elementType
       );
     }
-    elementProperties.infoForFriendlyName[friendlyName] = PROP_INFO[propName];
+
+    // The PhotoSelect element is currently the only element that uses
+    // textColor to modify the color of the icon so we need to make sure that
+    // if we're accessing the icon-color of PhotoSelect, we are
+    // mapping it to the textColor property.
+    if (
+      elementType === ElementType.PHOTO_SELECT &&
+      friendlyName === 'icon-color'
+    ) {
+      elementProperties.infoForFriendlyName[friendlyName] =
+        PROP_INFO['photoSelectIconColor'];
+    } else {
+      elementProperties.infoForFriendlyName[friendlyName] = PROP_INFO[propName];
+    }
     let dropdownOption = constructDropdownOption(propName);
     if (dropdownOption) {
       elementProperties.dropdownOptions.push(dropdownOption);

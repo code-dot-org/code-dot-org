@@ -7,7 +7,7 @@
   "properties": {
     "instructions_important": "false",
     "display_name": "Counter Pattern with Event",
-    "reference": "/docs/concepts/app-lab/patterns/counter-patterns-with-event/"
+    "reference": "/docs/concepts/patterns/counter-patterns-with-event/"
   },
   "published": true,
   "notes": "",

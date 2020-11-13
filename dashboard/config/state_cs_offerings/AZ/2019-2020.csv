@@ -1,0 +1,271 @@
+school_name,state_school_id,nces_id,course_id,course_name,num_students_enrolled,num_students_female,num_students_black_or_african_american,num_students_hispanic_or_latino,num_students_american_indian_or_native_alaskan,num_students_native_hawaiian_or_pacific_islander,num_students_free_or_reduced_lunch,num_students_special_education_status,num_students_english_language_learner_status
+S.T.A.R. ACADEMIC CENTER,AZ-4407-6288,40817000153,AZ10-014,PLTW Computer Science Applications,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+ALHAMBRA HIGH SCHOOL,AZ-4286-5436,40633000538,AZ10-151,Software Development,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+APOLLO HIGH SCHOOL,AZ-4285-5431,40345000275,AZ10-151,Software Development,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BRADSHAW MOUNTAIN HIGH SCHOOL,AZ-4469-6097,40387000306,AZ10-151,Software Development,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CENTRAL HIGH SCHOOL,AZ-4286-5439,40633000542,AZ10-151,Software Development,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+FRANKLIN POLICE AND FIRE HIGH SCHOOL,AZ-4286-89778,40633002859,AZ10-151,Software Development,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+GILBERT CLASSICAL ACADEMY HIGH SCHOOL,AZ-4239-89606,40340002840,AZ10-151,Software Development,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+GREENWAY HIGH SCHOOL,AZ-4285-5433,40345000279,AZ10-151,Software Development,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+INDEPENDENCE HIGH SCHOOL,AZ-4285-5434,40345000284,AZ10-151,Software Development,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MOON VALLEY HIGH SCHOOL,AZ-4285-5430,40345000280,AZ10-151,Software Development,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+PCJTED - AMPHITHEATER HIGH SCHOOL,AZ-89380-89696,40075202793,AZ10-151,Software Development,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+PCJTED - CANYON DEL ORO HIGH SCHOOL,AZ-89380-89697,40075202772,AZ10-151,Software Development,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+PCJTED - CENTRAL CAMPUS,AZ-89380-89709,40075202823,AZ10-151,Software Development,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+PCJTED - CIENEGA HIGH SCHOOL,AZ-89380-89704,40075202807,AZ10-151,Software Development,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+PCJTED - DESERT VIEW HIGH SCHOOL,AZ-89380-89699,40075202773,AZ10-151,Software Development,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+PCJTED - FLOWING WELLS HIGH SCHOOL,AZ-89380-89695,40075202817,AZ10-151,Software Development,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+PCJTED - IRONWOOD RIDGE HIGH SCHOOL,AZ-89380-89698,40075202841,AZ10-151,Software Development,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+PCJTED - MARANA HIGH SCHOOL,AZ-89380-89693,40075202843,AZ10-151,Software Development,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+PCJTED - MOUNTAIN VIEW HIGH SCHOOL,AZ-89380-89694,40075202803,AZ10-151,Software Development,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+PCJTED - SABINO HIGH SCHOOL,AZ-89380-89684,40075202848,AZ10-151,Software Development,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+PCJTED - SUNNYSIDE HIGH SCHOOL,AZ-89380-89700,40075202828,AZ10-151,Software Development,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+PCJTED - TANQUE VERDE HIGH SCHOOL,AZ-89380-89701,40075202814,AZ10-151,Software Development,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+PCJTED - WALDEN GROVE HIGH SCHOOL,AZ-89380-91239,40075203258,AZ10-151,Software Development,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+PHOENIX CODING ACADEMY,AZ-4286-221992,40633003509,AZ10-151,Software Development,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+PHOENIX UNION-WILSON COLLEGE PREPARATORY,AZ-4286-128903,40633003555,AZ10-151,Software Development,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+PIMA COUNTY JTED ANNEX,AZ-89380-90313,40075202977,AZ10-151,Software Development,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+RINCON HIGH SCHOOL,AZ-4403-5760,40880001446,AZ10-151,Software Development,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+S.T.A.R. ACADEMIC CENTER,AZ-4407-6288,40817000153,AZ10-151,Software Development,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SUNNYSLOPE HIGH SCHOOL,AZ-4285-5427,40345000281,AZ10-151,Software Development,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+THUNDERBIRD HIGH SCHOOL,AZ-4285-5432,40345000282,AZ10-151,Software Development,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+WASHINGTON HIGH SCHOOL,AZ-4285-5428,40345000283,AZ10-151,Software Development,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+ALTA VISTA HIGH SCHOOL,AZ-80995-80996,40061903097,AZ10-152,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+COMPADRE HIGH SCHOOL,AZ-4287-5450,40834001576,AZ10-152,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+ESTRELLA HIGH SCHOOL,AZ-79873-78900,40035201898,AZ10-152,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+LIBERTY HIGH SCHOOL,AZ-4216-4878,40009901182,AZ10-152,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MCCLINTOCK HIGH SCHOOL,AZ-4287-5445,40834000794,AZ10-152,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+PEORIA ACCELERATED HIGH SCHOOL,AZ-79875-78817,40035301896,AZ10-152,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+TEMPE HIGH SCHOOL,AZ-4287-5444,40834000795,AZ10-152,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+GILBERT CLASSICAL ACADEMY HIGH SCHOOL,AZ-4239-89606,40340002840,AZ10-154,C++ Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CACTUS HIGH SCHOOL,AZ-4237-5014,40625000508,AZ10-155,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+RAYMOND S. KELLIS,AZ-4237-85835,40625002426,AZ10-155,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SUNFLOWER SCHOOL,AZ-4237-92645,40625003447,AZ10-155,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SUNRISE MOUNTAIN HIGH SCHOOL,AZ-4237-5017,40625000589,AZ10-155,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+ACADEMY OF TUCSON HIGH SCHOOL,AZ-78897-78898,40020201959,AZ10-156,Computer Programming—Other Language,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+ACCELERATED LEARNING LABORATORY,AZ-6364-5891,40012901790,AZ10-157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+APOLLO HIGH SCHOOL,AZ-4285-5431,40345000275,AZ10-157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+COCONINO HIGH SCHOOL,AZ-4192-4820,40286000212,AZ10-157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+COMPADRE HIGH SCHOOL,AZ-4287-5450,40834001576,AZ10-157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+DR. CAMILLE CASTEEL HIGH SCHOOL,AZ-4242-92892,40187003483,AZ10-157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+EMPIRE HIGH SCHOOL,AZ-4413-87875,40885002552,AZ10-157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+EMPOWER COLLEGIATE ACADEMY,AZ-91277-92975,40087703522,AZ10-157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+GREENWAY HIGH SCHOOL,AZ-4285-5433,40345000279,AZ10-157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+INDEPENDENCE HIGH SCHOOL,AZ-4285-5434,40345000284,AZ10-157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MARICOPA INSTITUTE OF TECHNOLOGY,AZ-92988-181823,40095503519,AZ10-157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MOON VALLEY HIGH SCHOOL,AZ-4285-5430,40345000280,AZ10-157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MOUNTAIN POINTE HIGH SCHOOL,AZ-4287-5448,40834001567,AZ10-157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SAN TAN FOOTHILLS HIGH SCHOOL,AZ-4437-89907,40292002896,AZ10-157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SHOW LOW HIGH SCHOOL,AZ-4393-5632,40770000673,AZ10-157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SUNNYSLOPE HIGH SCHOOL,AZ-4285-5427,40345000281,AZ10-157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+TEMPE HIGH SCHOOL,AZ-4287-5444,40834000795,AZ10-157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+THUNDERBIRD HIGH SCHOOL,AZ-4285-5432,40345000282,AZ10-157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+VISTA GRANDE HIGH SCHOOL,AZ-4453-90084,40174002909,AZ10-157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+WASHINGTON HIGH SCHOOL,AZ-4285-5428,40345000283,AZ10-157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+WILLIAMS FIELD HIGH SCHOOL,AZ-4248-89581,40378002835,AZ10-157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+GILBERT CLASSICAL ACADEMY HIGH SCHOOL,AZ-4239-89606,40340002840,AZ10-158,AP Computer Science AB,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+AMERICAN LEADERSHIP ACADEMY GILBERT,AZ-4348-509281,40011203573,AZ10-161,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+APOLLO HIGH SCHOOL,AZ-4285-5431,40345000275,AZ10-161,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CORONADO HIGH SCHOOL,AZ-4240-5067,40757000644,AZ10-161,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CORONADO HIGH SCHOOL,AZ-4240-5067,40757000644,AZ10-161,Software and App Design I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+DESERT MOUNTAIN HIGH SCHOOL,AZ-4240-5070,40757000604,AZ10-161,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+DESERT MOUNTAIN HIGH SCHOOL,AZ-4240-5070,40757000604,AZ10-161,Software and App Design I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+GREENWAY HIGH SCHOOL,AZ-4285-5433,40345000279,AZ10-161,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+INDEPENDENCE HIGH SCHOOL,AZ-4285-5434,40345000284,AZ10-161,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MADISON HIGHLAND PREP,AZ-91935-92605,40090903461,AZ10-161,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MOON VALLEY HIGH SCHOOL,AZ-4285-5430,40345000280,AZ10-161,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SAGUARO HIGH SCHOOL,AZ-4240-5068,40757000659,AZ10-161,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SAGUARO HIGH SCHOOL,AZ-4240-5068,40757000659,AZ10-161,Software and App Design I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SHOW LOW HIGH SCHOOL,AZ-4393-5632,40770000673,AZ10-161,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SUNNYSLOPE HIGH SCHOOL,AZ-4285-5427,40345000281,AZ10-161,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+THUNDERBIRD HIGH SCHOOL,AZ-4285-5432,40345000282,AZ10-161,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+WASHINGTON HIGH SCHOOL,AZ-4285-5428,40345000283,AZ10-161,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+WILLIAMS FIELD HIGH SCHOOL,AZ-4248-89581,40378002835,AZ10-161,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+GIRLS LEADERSHIP ACADEMY OF ARIZONA,AZ-4300-5466,40014401717,AZ10-162,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+ACADEMY OF TUCSON HIGH SCHOOL,AZ-78897-78898,40020201959,AZ10-205,Computer Gaming and Design,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+ESTRELLA HIGH SCHOOL,AZ-79873-78900,40035201898,AZ10-205,Computer Gaming and Design,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+GILBERT CLASSICAL ACADEMY HIGH SCHOOL,AZ-4239-89606,40340002840,AZ10-205,Computer Gaming and Design,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+LIBERTY HIGH SCHOOL,AZ-4216-4878,40009901182,AZ10-205,Computer Gaming and Design,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MARICOPA INSTITUTE OF TECHNOLOGY,AZ-92988-181823,40095503519,AZ10-205,Computer Gaming and Design,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+NORTH HIGH SCHOOL,AZ-4286-5442,40633001244,AZ10-205,Computer Gaming and Design,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+PCJTED - CENTRAL CAMPUS,AZ-89380-89709,40075202823,AZ10-205,Computer Gaming and Design,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+PCJTED - TANQUE VERDE HIGH SCHOOL,AZ-89380-89701,40075202814,AZ10-205,Computer Gaming and Design,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+PEORIA ACCELERATED HIGH SCHOOL,AZ-79875-78817,40035301896,AZ10-205,Computer Gaming and Design,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+PIMA COUNTY JTED ANNEX,AZ-89380-90313,40075202977,AZ10-205,Computer Gaming and Design,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SOUTHERN ARIZONA COMMUNITY HIGH SCHOOL,AZ-79000-79028,40025402074,AZ10-205,Computer Gaming and Design,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+WEST PHOENIX HIGH SCHOOL,AZ-79879-6348,40035501734,AZ10-205,Computer Gaming and Design,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+COMPADRE HIGH SCHOOL,AZ-4287-5450,40834001576,AZ10-206,Mobile Applications,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MCCLINTOCK HIGH SCHOOL,AZ-4287-5445,40834000794,AZ10-206,Mobile Applications,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+TEMPE HIGH SCHOOL,AZ-4287-5444,40834000795,AZ10-206,Mobile Applications,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+ARIZONA COLLEGE PREP ACADEMY,AZ-91773-10733,40086201783,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CORONADO HIGH SCHOOL,AZ-4240-5067,40757000644,unspecified,Software and App Design II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+DEER VALLEY ACADEMY,AZ-79496-79506,40027802168,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+DESERT EDGE HIGH SCHOOL,AZ-4289-79799,40045002273,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+DESERT MOUNTAIN HIGH SCHOOL,AZ-4240-5070,40757000604,unspecified,Software and App Design II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+EVIT NORTH FOUNTAIN HILLS,AZ-4516-165668,40973103544,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+NORTHEAST CAMPUS,AZ-80923-93018,40061503528,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SAGUARO HIGH SCHOOL,AZ-4240-5068,40757000659,unspecified,Software and App Design II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+STEDY- ARIZONA WESTERN COLLEGE,AZ-92705-664373,40092003571,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+STEDY- CENTRAL CAMPUS,AZ-92705-947339,40092003577,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+WEST-MEC - CENTRAL CAMPUS,AZ-80923-87465,40061502521,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BASIS AHWATUKEE,AZ-91339-92030,40089703376,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BASIS MESA,AZ-91949-91997,40089803393,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+EVIT - CHANDLER HIGH SCHOOL,AZ-4516-7284,40973101515,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SAHUARITA HIGH SCHOOL,AZ-4411-5843,40730000626,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+HIGLEY HIGH SCHOOL,AZ-4248-79374,40378002119,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MESA HIGH SCHOOL,AZ-4235-4980,40497000404,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+HA:SAN PREPARATORY & LEADERSHIP SCHOOL,AZ-6369-5872,40014701787,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+TUCSON INTERNATIONAL ACADEMY MIDVALE,AZ-79979-84297,40037302397,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CIENEGA HIGH SCHOOL,AZ-4413-79721,40885002195,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+DESERT VISTA HIGH SCHOOL,AZ-4287-5449,40834000680,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+WEST-MEC - WILLOW CANYON HIGH SCHOOL,AZ-80923-81154,40061502393,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+E-INSTITUTE AT METRO,AZ-79059-90075,40031102919,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+AMERICAN LEADERSHIP ACADEMY - IRONWOOD,AZ-4348-92885,40011203475,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+ARIZONA PREPARATORY ACADEMY,AZ-79701-79702,40030302181,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+EVIT - CORONA DEL SOL HIGH SCHOOL,AZ-4516-86001,40973102465,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+ASU PREPARATORY ACADEMY-POLYTECHNIC HIGH SCHOOL,AZ-91305-91306,40085903251,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+PEORIA HIGH SCHOOL,AZ-4237-5013,40625000514,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BASIS PRESCOTT,AZ-92320-92321,40090303418,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BASIS CHANDLER,AZ-90842-91056,40083003253,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+LIBERTY HIGH SCHOOL,AZ-4237-87520,40625002586,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+PUEBLO HIGH MAGNET SCHOOL,AZ-4403-5759,40880001445,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+DYSART ISCHOOL,AZ-4243-90875,40269003193,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+DOBSON HIGH SCHOOL,AZ-4235-4983,40497001132,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CACTUS SHADOWS HIGH SCHOOL,AZ-4244-5137,40000101204,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+NORTH CANYON HIGH SCHOOL,AZ-4241-5107,40593000488,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+POLARIS HIGH SCHOOL,AZ-4241-5109,40593001421,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+PINNACLE HIGH SCHOOL,AZ-4241-79268,40593001995,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MARCOS DE NIZA HIGH SCHOOL,AZ-4287-5446,40834000793,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+JOSEPH CITY HIGH SCHOOL,AZ-4388-5606,40401000322,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+AMERISCHOOLS ACADEMY - COUNTRY CLUB,AZ-6355-79296,40013102070,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+VISTA GROVE PREPARATORY ACADEMY MIDDLE SCHOOL,AZ-79871-79177,40035102148,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+GREYHILLS ACADEMY HIGH SCHOOL,AZ-D33N22-D33N22,590013300178,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SKYLINE HIGH SCHOOL,AZ-4235-78917,40497001830,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+VAIL ACADEMY & HIGH SCHOOL,AZ-4413-10855,40885001955,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CORONA DEL SOL HIGH SCHOOL,AZ-4287-5447,40834000790,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MONUMENT VALLEY HIGH SCHOOL,AZ-4396-5644,40406000324,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+PCJTED - UNIVERSITY HIGH SCHOOL,AZ-89380-89683,40075202796,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+RED MOUNTAIN HIGH SCHOOL,AZ-4235-4984,40497001411,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+EVIT - EAST VALLEY INSTITUTE OF TECHNOLOGY,AZ-4516-7282,40973101514,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+TOLTEC ELEMENTARY SCHOOL,AZ-4450-5945,40855000806,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MOHAVE ACCELERATED LEARNING CENTER,AZ-79498-79510,40028002186,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+ARIZONA VIRTUAL ACADEMY,AZ-87405-79705,40043202200,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BASIS PHOENIX,AZ-91280-91343,40084303351,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+WESTWOOD HIGH SCHOOL,AZ-4235-4981,40497000419,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+FLOWING WELLS HIGH SCHOOL,AZ-4405-5791,40301000231,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+KOFA HIGH SCHOOL,AZ-4507-6190,40963000996,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BUENA HIGH SCHOOL,AZ-4175-4783,40146000081,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+EVIT - DOBSON HIGH SCHOOL,AZ-4516-85935,40973102459,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+RHODES JUNIOR HIGH SCHOOL,AZ-4235-4974,40497000412,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+ARIZONA CONNECTIONS ACADEMY,AZ-87407-81179,40042703160,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+HERITAGE ACADEMY LAVEEN,AZ-92520-92521,40092603451,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BASIS SCOTTSDALE,AZ-81078-81079,40060803115,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+IRONWOOD HIGH SCHOOL,AZ-4237-5015,40625001315,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+HORIZON HIGH SCHOOL,AZ-4241-5106,40593001084,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+IMAGINE PREP SUPERSTITION,AZ-89788-89789,40078302932,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+UNIVERSITY HIGH SCHOOL,AZ-4403-5766,40880001441,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MESQUITE HIGH SCHOOL,AZ-4239-6007,40340001670,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+AMERICAN LEADERSHIP ACADEMY - QUEEN CREEK,AZ-4348-90769,40011203179,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BASIS TUCSON NORTH,AZ-91309-91766,40087803350,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+ARIZONA COLLEGE PREP ERIE CAMPUS,AZ-4242-89591,40187002822,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+AMPHITHEATER HIGH SCHOOL,AZ-4406-6055,40068000032,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CANYON VIEW HIGH SCHOOL,AZ-4289-932049,40045003559,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BEAVER DAM HIGH SCHOOL,AZ-4374-85821,40441002418,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SONORAN SCIENCE ACADEMY-PEORIA,AZ-90541-90639,40082203221,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CANYON DEL ORO HIGH SCHOOL,AZ-4406-5808,40068000033,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+PARAGON SCIENCE ACADEMY,AZ-89917-89918,40077802902,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MARY MEREDITH K-12 SCHOOL,AZ-4403-6269,40880001606,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CESAR CHAVEZ HIGH SCHOOL,AZ-4286-78847,40633001882,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+NOSOTROS ACADEMY,AZ-79881-79899,40035602287,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MIAMI JUNIOR SENIOR HIGH SCHOOL,AZ-4211-4869,40503001077,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MARYVALE HIGH SCHOOL,AZ-4286-5441,40633000549,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+DEER VALLEY HIGH SCHOOL,AZ-4246-5161,40775001045,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CVIT - MIAMI HIGH SCHOOL,AZ-79391-79789,40031602101,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+WILLOW CANYON HIGH SCHOOL,AZ-4243-81113,40269003126,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SUNNYSIDE HIGH SCHOOL,AZ-4407-5827,40817000743,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+POSTON BUTTE HIGH SCHOOL,AZ-4437-90309,40292002972,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+LAKE HAVASU HIGH SCHOOL,AZ-4368-5565,40428000433,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SAN TAN CHARTER SCHOOL,AZ-89798-89799,40077502916,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+PAN-AMERICAN CHARTER SCHOOL,AZ-79578-79579,40029002177,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+TONOPAH VALLEY HIGH SCHOOL,AZ-4254-85819,40717002483,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+ARIZONA CALL-A-TEEN CENTER FOR EXCELLENCE,AZ-4346-5520,40005700784,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+LA JOYA COMMUNITY HIGH SCHOOL,AZ-4288-80051,40852002339,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BAGDAD MIDDLE / SENIOR HIGH SCHOOL,AZ-4468-6089,40100000053,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+COMBS HIGH SCHOOL,AZ-4445-89859,40399002895,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+TREVOR BROWNE HIGH SCHOOL,AZ-4286-5437,40633000554,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SABINO HIGH SCHOOL,AZ-4403-5761,40880000827,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CHAPARRAL HIGH SCHOOL,AZ-4240-5069,40757000641,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+HORIZON COMMUNITY LEARNING CENTER,AZ-79264-78809,40022501887,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SEDONA RED ROCK HIGH SCHOOL,AZ-4467-6085,40973301040,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+COCONINO HIGH SCHOOL,AZ-4192-4820,40286000212,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BASIS PEORIA,AZ-90841-91055,40082903278,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MARICOPA HIGH SCHOOL,AZ-4441-5910,40472000372,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+PRESCOTT HIGH SCHOOL,AZ-4466-8135,40673000568,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+EAGLERIDGE ENRICHMENT PROGRAM,AZ-4235-4967,40497001188,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+WALDEN GROVE HIGH SCHOOL,AZ-4411-90824,40730003183,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+FOUNTAIN HILLS HIGH SCHOOL,AZ-4247-5167,40304000038,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SALT RIVER HIGH SCHOOL,AZ-4320-5489,40004700744,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+VALLEY VISTA HIGH SCHOOL,AZ-4243-88417,40269002684,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+LEGACY TRADITIONAL SCHOOL - QUEEN CREEK,AZ-92610-90534,40092703190,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MESA ACADEMY FOR ADVANCED STUDIES,AZ-4235-89593,40497002770,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+EDUPRIZE SCHOOL GILBERT,AZ-89412-5479,40074600717,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CORTEZ HIGH SCHOOL,AZ-4285-5429,40345000277,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+HAYDEN HIGH SCHOOL,AZ-4212-4873,40373000293,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+JEFFERSON PREPARATORY HIGH SCHOOL,AZ-90138-92636,40080503444,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+POSTON JUNIOR HIGH SCHOOL,AZ-4235-4973,40497000409,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+PRESIDIO SCHOOL,AZ-4425-5865,40008101010,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+PAYSON HIGH SCHOOL,AZ-4209-4860,40607000500,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+DESERT RIDGE HIGH,AZ-4239-79823,40340002283,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MOUNTAIN VIEW HIGH SCHOOL,AZ-4235-4982,40497000406,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CASA GRANDE UNION HIGH SCHOOL,AZ-4453-5948,40174000113,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BASIS FLAGSTAFF,AZ-90862-90863,40083103196,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BASHA HIGH SCHOOL,AZ-4242-79633,40187002250,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+UNIVERSITY HIGH SCHOOL,AZ-4288-90551,40852003206,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+AGUA FRIA HIGH SCHOOL,AZ-4289-5454,40045000001,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SOUTH MOUNTAIN HIGH SCHOOL,AZ-4286-5443,40633000552,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+METRO TECH HIGH SCHOOL,AZ-4286-6248,40633000539,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SAHUARO HIGH SCHOOL,AZ-4403-5762,40880001447,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+PERRY HIGH SCHOOL,AZ-4242-89613,40187002806,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+LEGACY TRADITIONAL SCHOOL - MARICOPA,AZ-88360-88361,40074502856,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+ST. JOHNS LEARNING CENTER,AZ-4153-89607,40808002871,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+ROCK POINT COMMUNITY SCHOOL,AZ-D35N11-D35N11,590012200016,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BUCKEYE UNION HIGH SCHOOL,AZ-4284-5424,40141000075,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CAMPO VERDE HIGH SCHOOL,AZ-4239-90124,40340002965,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+GLENDALE HIGH SCHOOL,AZ-4285-5426,40345000278,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SHONTO PREPARATORY TECHNOLOGY HIGH SCHOOL,AZ-6353-5653,40015401770,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SANDRA DAY O'CONNOR HIGH SCHOOL,AZ-4246-80317,40775002357,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+TANQUE VERDE HIGH SCHOOL,AZ-4408-87466,40828002550,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+TOLLESON UNION HIGH SCHOOL,AZ-4288-5452,40852000805,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MILLENNIUM HIGH SCHOOL,AZ-4289-78926,40045001884,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+PALO VERDE HIGH MAGNET SCHOOL,AZ-4403-5758,40880001263,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SONORAN SCIENCE ACADEMY - TUCSON,AZ-79049-79127,40022302199,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+ASH FORK HIGH SCHOOL,AZ-4471-6103,40091000048,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CHANDLER HIGH SCHOOL,AZ-4242-5127,40187000123,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CARL HAYDEN HIGH SCHOOL,AZ-4286-5440,40633000541,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+IRONWOOD RIDGE HIGH SCHOOL,AZ-4406-79378,40068002198,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CENTENNIAL HIGH SCHOOL,AZ-4237-5016,40625001500,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+PARADISE VALLEY HIGH SCHOOL,AZ-4241-5105,40593001553,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+FOOTHILLS ACADEMY,AZ-4309-5474,40003600709,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MARANA HIGH SCHOOL,AZ-4404-5781,40463000370,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+PVONLINE,AZ-4241-90782,40593003216,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SUNS-DIAMONDBACKS EDUCATION ACADEMY,AZ-4286-79617,40633002138,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+GILBERT HIGH SCHOOL,AZ-4239-5039,40340000258,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+NOGALES HIGH SCHOOL,AZ-4457-5962,40553000455,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CTD - SAN SIMON HIGH SCHOOL,AZ-79403-79678,40034502259,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MOUNTAIN RIDGE HIGH SCHOOL,AZ-4246-5163,40775000636,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+DESERT VIEW HIGH SCHOOL,AZ-4407-5826,40817001438,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CHINLE HIGH SCHOOL,AZ-4158-4737,40194000137,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+WESTERN SCHOOL OF SCIENCE AND TECHNOLOGY,AZ-91937-92619,40092403436,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MOUNTAIN VIEW HIGH SCHOOL,AZ-4404-5782,40463001372,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SHADOW RIDGE HIGH SCHOOL,AZ-4243-90134,40269002971,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SOUTHWEST LEADERSHIP ACADEMY,AZ-92043-92044,40088003398,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+DYSART HIGH SCHOOL,AZ-4243-5133,40269000198,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+WEST-MEC - GREENWAY HIGH SCHOOL,AZ-80923-87314,40061502511,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BARRY GOLDWATER HIGH SCHOOL,AZ-4246-5162,40775001331,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+LEADING EDGE ONLINE ACADEMY,AZ-79967-91597,40039503335,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SONORAN SCIENCE ACADEMY - PHOENIX,AZ-89914-80974,40077602387,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+HIGHLAND HIGH SCHOOL,AZ-4239-5040,40340000246,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SONORAN SCIENCE ACADEMY - DAVIS MONTHAN,AZ-90284-90285,40080702976,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+HAMILTON HIGH SCHOOL,AZ-4242-6015,40187001677,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BOULDER CREEK HIGH SCHOOL,AZ-4246-85850,40775002433,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+YOUNGKER HIGH SCHOOL,AZ-4284-89573,40141002786,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified

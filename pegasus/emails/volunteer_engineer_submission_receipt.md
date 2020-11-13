@@ -9,7 +9,7 @@ Thank you for submitting your information to help local teachers. Teachers will 
 
 If you need to update your information or want to unsubscribe from teacher requests, use this link:
 
-<%= "https://#{CDO.canonical_hostname('code.org')}/volunteer/engineer/edit/#{form.secret}/" %>
+<<%= "https://#{CDO.canonical_hostname('code.org')}/volunteer/engineer/edit/#{form.secret}/" %>>
 
 Thanks again for your support,
 
@@ -23,6 +23,6 @@ Code.org is a 501c3 non-profit. Our address is 1501 4th Avenue, Suite 900, Seatt
 - [Edit my information](<%= update_preferences %>)
 - [Unsubscribe from additional teacher requests **this year**](<%= update_preferences %>)
 - [Unsubscribe from teacher requests **forever**](<%= update_preferences %>)
-- [Unsubscribe from all Code.org emails](<%= unsubscribe_link %>)
+- [Unsubscribe from all Code.org emails](<%= local_assigns.fetch(:unsubscribe_link, "") %>)
 
-![](<%= tracking_pixel %>)
+![](<%= local_assigns.fetch(:tracking_pixel, "") %>)

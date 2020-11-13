@@ -319,7 +319,7 @@ sk-SK:
   studiobar_teacher_title: Pripravené pre učitelov
   studiobar_teacher_body: Predstavte Code.org vašej triede
   studiobar_frozen_title: Hodina Kódu
-  studiobar_frozen_body: Vytvor zázračnú zimnú krajinu s Annou a Elsou
+  studiobar_frozen_body: Vytvor zimnú krajinu zázrakov s Annou Elsou
   studiobar_donate_title: Prispejte
   studiobar_donate_body: Za každý darovaný dolár sa naučí jedno dieťa
   studiobar_shop_title: Obchod
@@ -526,8 +526,8 @@ sk-SK:
   minecraft_designer_description: Naprogramuj zvieratá a iné postavy a vytvor svoju
     vlastnú verziu hry Minecraft.
   minecraft_designer_button: Spustiť
-  minecraft_adventurer_description: Použi kód, aby si zobral Alex alebo Steva na cestu
-    za dobrodružstvom.
+  minecraft_adventurer_description: Pomocou kódu vezmi Alex alebo Steva na cestu za
+    dobrodružstvom.
   minecraft_adventurer_button: Spustiť
   minecraft_no_internet: Nemáš internet?
   minecraft_download_adventurer: Stiahni si offline verziu Minecraft Objavovateľa.
@@ -848,9 +848,9 @@ sk-SK:
     študentov.'
   dashboard_assessments_summaries: Zhrnutia hodnotení
   dashboard_assessments_answers: Všetky odpovede
-  dashboard_surveys_answers: Anketa
+  dashboard_surveys_answers: Dotazníky
   dashboard_percent: Percento
-  dashboard_filter_by_stage: 'Filter podľa vedomostného stupňa:'
+  dashboard_filter_by_stage: 'Filter:'
   dashboard_filter_all: Všetko
   dashboard_download_csv: Stiahnuť CSV
   dashboard_navigation_home_page: Domovská stránka učiteľa
@@ -864,7 +864,7 @@ sk-SK:
   dashboard_navigation_view_progress: Pokrok
   dashboard_navigation_view_text_responses: Textové odpovede
   dashboard_navigation_view_assessments: Hodnotenia
-  dashboard_navigation_view_assessments_surveys: Hodnotenia/Prieskumy
+  dashboard_navigation_view_assessments_surveys: Hodnotenia/dotazníky
   dashboard_navigation_add_students: Pridať študentov
   dashboard_navigation_manage_students: Správa študentov
   dashboard_navigation_lesson_plans_resources: Plány hodín
@@ -1223,9 +1223,18 @@ sk-SK:
   coursed-2019_name: Kurz D (2019)
   coursee-2019_name: Kurz E (2019)
   coursef-2019_name: Kurz F (2019)
+  coursea-2020_name: Kurz A (2019)
+  courseb-2020_name: Kurz B (2019)
+  coursec-2020_name: Kurz C (2019)
+  coursed-2020_name: Kurz D (2019)
+  coursee-2020_name: Kurz E (2019)
+  coursef-2020_name: Kurz F (2019)
   express-2018_name: Zrýchlený kurz (2018)
   pre-express-2018_name: Zrýchlený kurz pre predškolákov (2018)
   express-2019_name: Zrýchlený kurz (2019)
+  pre-express-2019_name: Zrýchlený kurz pre predškolákov (2019)
+  express-2020_name: Zrýchlený kurz (2019)
+  pre-express-2020_name: Zrýchlený kurz pre predškolákov (2020)
   csd2_name: 'Lekcia 2: Vývoj webových stránok'
   csd3_name: 'Lekcia 3: Animácie a hry'
   accelerated_name: Zrýchlený kurz
@@ -1886,6 +1895,8 @@ sk-SK:
   header_teacher_community: Komunita učiteľov
   header_help_support: 'Pomoc a podpora '
   header_report_bug: Nahlásiť chybu
+  header_legal_privacy: Zásady ochrany súkromia
+  header_legal_tos: Podmienky používania služby
   header_tutorials: Návody
   header_documentation: Dokumentácia
   user_header_label: Ahoj %{username}
@@ -1900,6 +1911,7 @@ sk-SK:
   user_header_gamelab: Game Lab
   user_header_playlab: Play Lab
   user_header_dance: Tanečná Párty
+  user_header_spritelab: Sprite Lab
   user_header_minecraft: Minecraft
   user_header_flappy: Flappy
   user_header_view_all: Zobraziť všetky projekty...
@@ -1915,7 +1927,7 @@ sk-SK:
     krokov:'
   sign_in_instruct_website: Choďte na %{code_org_url}.
   sign_in_instruct_code: 'Vložte kód triedy: %{section_code}.'
-  sign_in_instruct_name: Vyberte svoje meno.
+  sign_in_instruct_name: Vyber svoje meno.
   sign_in_instruct_secret: Vyberte správny prístupový %{secret}.
   sign_in_instruct_button: Kliknite na tlačidlo "Prihlásiť".
   sign_in_overview_cards: Študenti nájdu všetky tieto informácie, vrátane prístupového
@@ -2015,8 +2027,8 @@ sk-SK:
   hoc2018_mc_designer_description: Naprogramuj zvieratá a iné postavy a vytvor svoju
     vlastnú verziu hry Minecraft.
   hoc2018_mc_adventurer_title: Minecraft Objavovateľ
-  hoc2018_mc_adventurer_description: Použi kód, aby si zobral Alex alebo Steva na
-    cestu za dobrodružstvom.
+  hoc2018_mc_adventurer_description: Pomocou kódu vezmi Alex alebo Steva na cestu
+    za dobrodružstvom.
   hoc2018_mc_start: Spustiť
   hoc2018_mc_no_internet: Nemáš internet?
   hoc2018_mc_download_adventurer: Stiahni si offline verziu Minecraft Objavovateľa.
@@ -2120,7 +2132,7 @@ sk-SK:
   hoc2018_dance_measure_colon: 'Takt:'
   hoc2018_aquatic_video1: Minecraft Vodné Dobrodružstvo - Gratulujeme
   hoc2018_aquatic_video2: Minecraft Vodné Dobrodružstvo - Cykly
-  hoc2018_aquatic_video3: Minecraft Vodné Dobrodružstvo - Podmienky
+  hoc2018_aquatic_video3: Minecraft Vodné dobrodružstvo - podmienky
   hoc2018_aquatic_video4: Minecraft Vodné Dobrodružstvo - Gratulujeme
   hoc2018_dance_video1: Tanečná Párty - Úvod
   hoc2018_dance_video2: Tanečná Párty - Udalosti
@@ -2132,3 +2144,4 @@ sk-SK:
     adresu a zadajte ju znova. Alebo prejdite na našu domovskú stránku.
   page_not_found_button: Späť na domovskú stránku
   hoc2018_mc_with_microsoft: V spolupráci s
+  page_not_available_button: Späť na domovskú stránku

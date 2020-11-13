@@ -164,6 +164,8 @@ mt:
       finished_hoc: "Jien lestejt l'Hour of Code tieghi"
       sign_in_to_save: 'Idħol biex tissejvja l-progress'
       project_gallery: "Il-Proġetti"
+      legal_privacy: "Poliza dwar il-Privatezza"
+      legal_tos: "It-Termini tas-Servizz"
     user:
       district_dashboard: 'Pannell tal-Kontroll Distrettwali'
       label: 'Insellmulek %{username}'
@@ -318,16 +320,6 @@ mt:
       title: "Frozen"
     infinity:
       title: "Infinity Play Lab"
-  gallery:
-    students_drew_these_with_code: "Studenti pingewhom billi jiprogrammaw!"
-    students_made_these_with_code: "Studenti ghamluhom billi jiprogrammaw!"
-    picture_count: "Fil-passat<b>%{days}</b>, l-istudenti pingew <b>%{count}</b> stampi billi kitbu programmi tal-kompjuter taghhom. Ikklikkja fuq l-istampi biex tara kull programm jahdem."
-    activity_count: "Fil-passat <b>%{days}</b> il-gurnata, l-istudenti għamlu <b>%{count}</b> app u stampi biilli kitbu il-programmi tal-kompjuter taghhom stess. Ikklikkja fuq l-istampi u screenshots biex tara kull programm jahdem."
-    want_to_make_your_own: "Tixtieq tikteb il-porgramm tieghek stess?"
-    more: "Aktar &rarr;"
-    caption_time_ago: "%{time_ago} ilu"
-    header: "Gallery"
-    report_abuse: "Irrapporta l-Abbuż"
   landing:
     support: "Ikseb l-Għajnuna"
   multi:

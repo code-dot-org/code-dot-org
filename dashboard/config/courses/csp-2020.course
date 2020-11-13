@@ -16,6 +16,7 @@
     "version_year": "2020",
     "family_name": "csp",
     "has_verified_resources": true,
-    "pilot_experiment": "csp-2020-access"
+    "visible": true,
+    "is_stable": true
   }
 }

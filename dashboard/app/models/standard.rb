@@ -14,7 +14,7 @@
 #
 
 class Standard < ActiveRecord::Base
-  has_and_belongs_to_many :stages
+  has_and_belongs_to_many :lessons, association_foreign_key: 'stage_id'
 
   def summarize
     {

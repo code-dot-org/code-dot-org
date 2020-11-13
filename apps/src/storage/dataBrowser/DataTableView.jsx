@@ -13,7 +13,6 @@ import {changeView, showWarning, tableType} from '../redux/data';
 import * as dataStyles from './dataStyles';
 import color from '../../util/color';
 import {connect} from 'react-redux';
-import experiments from '../../util/experiments';
 
 const MIN_TABLE_WIDTH = 600;
 
@@ -26,19 +25,13 @@ const styles = {
   ],
   container: {
     flexDirection: 'column',
-    height: '100%',
+    height: '99%',
     minWidth: MIN_TABLE_WIDTH,
-    maxWidth: '100%',
-    paddingLeft: experiments.isEnabled(experiments.APPLAB_DATASETS)
-      ? '8px'
-      : '0px'
+    maxWidth: '99%',
+    paddingLeft: 8
   },
   table: {
     minWidth: MIN_TABLE_WIDTH
-  },
-  tableWrapper: {
-    flexGrow: 1,
-    overflow: 'scroll'
   },
   pagination: {
     float: 'right',

@@ -3,8 +3,9 @@
 # This script populates (after truncating) the contained_levels,
 # contained_level_answers, and the level_sources_multi_type tables.
 
-require 'cdo/only_one'
-exit unless only_one_running?(__FILE__)
+require_relative 'only_one'
+
+abort 'Script already running' unless only_one_running?(__FILE__)
 
 require_relative '../../dashboard/config/environment'
 
@@ -46,10 +47,9 @@ def main
   contained_level_answers = []
   level_sources_multi_types = []
 
-  Level.where(type: 'LevelGroup').find_each do |level|
-    level.properties['pages'].each_with_index do |page, page_index|
-      page['levels'].each_with_index do |contained_level_name, position_index|
-        contained_level = Level.find_by_name(contained_level_name)
+  LevelGroup.find_each do |level|
+    level.pages.each_with_index do |page, page_index|
+      page.levels.each_with_index do |contained_level, position_index|
         next unless contained_level.type == 'Multi'
         next if contained_levels.
           select {|existing_contained_level| existing_contained_level[:level_id] == contained_level.id}.
@@ -238,3 +238,5 @@ def level_sources_multi_types_row(row_hash)
     )
   ROW
 end
+
+main

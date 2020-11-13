@@ -175,7 +175,7 @@
     },
     "edit_code": true,
     "embed": "true",
-    "long_instructions": "# Example Project\r\n\r\nRun the program a few times and answer the following questions:\r\n\r\n1) Which elements appear to use drawing commands?\r\n\r\n2) Which elements appear to be Sprites?\r\n\r\n3) For each Sprite, which properties are being updated?\r\n\r\n4) Where do you see conditionals being used?\r\n\r\n5) Are there elements that you don’t understand?",
+    "long_instructions": "# Example Project\r\n\r\nRun the program a few times and answer the following questions:\r\n\r\n1) Which elements appear to use drawing commands?\r\n\r\n2) Which elements appear to be sprites?\r\n\r\n3) For each sprite, which properties are being updated?\r\n\r\n4) Where do you see conditionals being used?\r\n\r\n5) Are there elements that you don’t understand?",
     "start_blocks": "var present = createSprite(200, 270, 30, 30);\r\npresent.setAnimation(\"present\");\r\n\r\nvar surprise1 = createSprite(100, 200, 75, 75);\r\nsurprise1.setAnimation(\"bike\");\r\n\r\nsurprise1.visible = false;\r\n\r\nvar surprise2 = createSprite(300, 200, 75, 75);\r\nsurprise2.setAnimation(\"puppy\");\r\nsurprise2.visible = false;\r\n\r\nvar shake_count = 0;\r\n\r\nfunction draw() {\r\n  //draw background table and party balloons\r\n  background(\"lightblue\");\r\n  line(100, 100, 100, 400);\r\n  line(300, 125, 300, 400);\r\n  fill(\"yellow\");\r\n  fill(\"red\");\r\n  ellipse(100, 100, 75, 100);\r\n  ellipse(300, 125, 75, 100);\r\n  // Shake the present when the mouse moves\r\n  if (mouseDidMove()) {\r\n    present.rotation = randomNumber(-10, 10);\r\n    shake_count = shake_count + 1;\r\n  }\r\n  // Open the present when there are enough shakes\r\n  if (shake_count > 100){\r\n    present.visible = false;\r\n    surprise1.visible = true;\r\n    surprise2.visible = true;\r\n    playSound(\"274510__jbeetle__3-men-cheering.mp3\");\r\n  }\r\n  // Make the surprises do cool stuff\r\n  surprise1.rotation = surprise1.rotation + 1;\r\n  surprise2.x = 275 + randomNumber(0,50);\r\n  surprise2.y = 175 + randomNumber(0, 50);\r\n  drawSprites();\r\n  // Put text on the screen\r\n  fill('black');\r\n  textSize(40);\r\n  text(\"Happy Birthday!\", 50, 40, 400, 100);\r\n  textSize(20);\r\n  text(\"Move the mouse to shake your present\", 25, 360);\r\n  text(\"Keep shaking to see your surprise!\", 40, 380);\r\n}\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -209,17 +209,24 @@
     "start_in_animation_tab": "false",
     "show_debug_watch": "true",
     "expand_debugger": "false",
-    "encrypted_examples": "4pusEBGYlXPTlpSz8y4Fy5Tpvh7WMRzGg6niijHHjRtCuBkXNQlsus9m1ZkI\npFLs\n",
+    "encrypted_examples": [
+
+    ],
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
     "parent_level_id": 18587,
     "name_suffix": "_2020",
     "display_name": "Interactive Card",
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "libraries_enabled": "false",
     "preload_asset_list": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-12-04 17:46:09 +0000\",\"changed\":[\"code_functions\",\"embed\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-12-04 17:50:29 +0000\",\"changed\":[\"code_functions\",\"embed\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-03-30 17:46:43 +0000\",\"changed\":[\"code_functions\",\"embed\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-03-30 17:48:01 +0000\",\"changed\":[\"code_functions\",\"all_animations_single_frame\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-04-02 21:54:46 +0000\",\"changed\":[\"code_functions\",\"embed\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-04-03 16:56:03 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-04-03 18:58:01 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-12-04 17:46:09 +0000\",\"changed\":[\"code_functions\",\"embed\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-12-04 17:50:29 +0000\",\"changed\":[\"code_functions\",\"embed\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-03-30 17:46:43 +0000\",\"changed\":[\"code_functions\",\"embed\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-03-30 17:48:01 +0000\",\"changed\":[\"code_functions\",\"all_animations_single_frame\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-04-02 21:54:46 +0000\",\"changed\":[\"code_functions\",\"embed\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-04-03 16:56:03 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-04-03 18:58:01 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-04-30 08:17:34 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-06-04 16:44:46 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Gamelab>

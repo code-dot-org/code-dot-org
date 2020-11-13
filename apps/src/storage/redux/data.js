@@ -86,9 +86,10 @@ export default function(state = initialState, action) {
         if (!action.tableRecords) {
           return state.set('tableRecords', []);
         }
-        const records = Array.isArray(action.tableRecords)
+        let records = Array.isArray(action.tableRecords)
           ? action.tableRecords
           : Object.values(action.tableRecords);
+        records = records.filter(record => record !== undefined);
         return state.set('tableRecords', records);
       }
       return state;

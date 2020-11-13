@@ -1,0 +1,344 @@
+{
+  "published": true,
+  "pages": [
+    {
+      "name": "cspwfrt_questions",
+      "elements": [
+        {
+          "type": "html",
+          "name": "preamble_header_and_text",
+          "html": "<h2>{workshop_course} for Returning Teachers Post-Workshop Survey</h2>\n\n<p><strong>Well done, you've completed a Code.org {workshop_course}  Professional Development workshop!</strong></p>\n<p>This survey asks questions about your experience. Your feedback is crucial to ensuring we best serve educators through continual program improvement. </p>\n<p><strong>Privacy and Confidentiality</strong></p>\n<ul>\n<li>Your individual responses here are completely <strong>confidential.</strong></li>\n<li>Your identity will&nbsp;<strong>never</strong> be revealed publicly or used to tie any responses back to you personally.</li>\n<li>We may share <strong>de-identified</strong>, aggregate data (representing all responses) publicly.</li>\n<li>Your <strong>de-identified&nbsp;</strong>responses will be used by Code.org, our Regional Partners, and our facilitators for program improvement.</li>\n</ul></p>"
+        },
+        {
+          "type": "matrix",
+          "name": "overall_success",
+          "title": "How much do you agree or disagree with the following statements about the workshop overall?",
+          "columns": [
+            {
+              "value": "1",
+              "text": "Strongly Disagree"
+            },
+            {
+              "value": "2",
+              "text": "Disagree"
+            },
+            {
+              "value": "3",
+              "text": "Slightly Disagree"
+            },
+            {
+              "value": "4",
+              "text": "Neutral"
+            },
+            {
+              "value": "5",
+              "text": "Slightly Agree"
+            },
+            {
+              "value": "6",
+              "text": "Agree"
+            },
+            {
+              "value": "7",
+              "text": "Strongly Agree"
+            }
+          ],
+          "rows": [
+            {
+              "value": "more_prepared",
+              "text": "I feel more prepared to teach the material covered in this workshop than before I came."
+            },
+            {
+              "value": "know_where_to_get_help",
+              "text": "I know where to go if I need help preparing to teach this material."
+            },
+            {
+              "value": "suitable_for_my_level",
+              "text": "This professional development was suitable for my level of experience with teaching CS."
+            },
+            {
+              "value": "recommend_to_others",
+              "text": "I would recommend this professional development to others."
+            },
+            {
+              "value": "connected_to_community",
+              "text": "I feel connected to a community of computer science teachers."
+            }
+          ]
+        },
+        {
+          "type": "matrix",
+          "name": "teacher_engagement",
+          "title": "How much do you agree or disagree with the following statements about your level of engagement in the workshop?",
+          "columns": [
+            {
+              "value": "1",
+              "text": "Strongly Disagree"
+            },
+            {
+              "value": "2",
+              "text": "Disagree"
+            },
+            {
+              "value": "3",
+              "text": "Slightly Disagree"
+            },
+            {
+              "value": "4",
+              "text": "Neutral"
+            },
+            {
+              "value": "5",
+              "text": "Slightly Agree"
+            },
+            {
+              "value": "6",
+              "text": "Agree"
+            },
+            {
+              "value": "7",
+              "text": "Strongly Agree"
+            }
+          ],
+          "rows": [
+            {
+              "value": "activities_engaging",
+              "text": "I found the activities we did in this workshop interesting and engaging."
+            },
+            {
+              "value": "highly_active",
+              "text": "I was highly active and participated a lot in the workshop activities."
+            },
+            {
+              "value": "will_use_in_classroom",
+              "text": "I am definitely planning to make use of ideas and content covered in this workshop in my classroom."
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "name": "supported_learning_FR",
+          "title": "What supported your learning the most and why?",
+          "rows": 2
+        },
+        {
+          "type": "comment",
+          "name": "detracted_learning_FR",
+          "title": "What detracted from your learning and why?",
+          "rows": 2
+        },
+        {
+          "type": "matrix",
+          "name": "curriculum_impressions",
+          "title": "Having attended the workshop, what are your overall impressions of the {workshop_course} curriculum?",
+          "columns": [
+            {
+              "value": "1",
+              "text": "Strongly Disagree"
+            },
+            {
+              "value": "2",
+              "text": "Disagree"
+            },
+            {
+              "value": "3",
+              "text": "Slightly Disagree"
+            },
+            {
+              "value": "4",
+              "text": "Neutral"
+            },
+            {
+              "value": "5",
+              "text": "Slightly Agree"
+            },
+            {
+              "value": "6",
+              "text": "Agree"
+            },
+            {
+              "value": "7",
+              "text": "Strongly Agree"
+            }
+          ],
+          "rows": [
+            {
+              "value": "love_curriculum",
+              "text": "I am going to love teaching with this curriculum."
+            },
+            {
+              "value": "lesson_plan_intent",
+              "text": "I intend to use the lesson plans provided in this curriculum."
+            },
+            {
+              "value": "explain_EIPM",
+              "text": "I can explain to a fellow teacher what EIPM means and how it is applied in the new {workshop_course} curriculum."
+            },
+            {
+              "value": "understand_tools_technologies",
+              "text": "I am leaving this workshop with a good understanding of how to use the tools and technologies in this course."
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "name": "most_excited_20_21_FR",
+          "title": "As you have previously taught Code.org's {workshop_course} curriculum, which aspects of the 2020-21 course are you most excited about?",
+          "rows": 2
+        },
+        {
+          "type": "comment",
+          "name": "concerned_20_21_FR",
+          "title": "As you have previously taught Code.org's {workshop_course} curriculum, which aspects of the 2020-21 course are you most concerned or confused about?",
+          "rows": 2
+        },
+        {
+          "type": "comment",
+          "name": "logistics_feedback_FR",
+          "title": "Do you have feedback about the way logistics were run for this workshop? Please be specific and provide suggestions for improvement.",
+          "rows": 2
+        },
+        {
+          "type": "comment",
+          "name": "other_feedback_FR",
+          "title": "Is there anything else you’d like to tell us about your experience at this workshop?",
+          "rows": 2
+        },
+        {
+          "type": "html",
+          "name": "facilitator_feedback_title",
+          "html": "<h2>Facilitator Feedback</h2>\n<p>Next, please share feedback related to your {workshop_course} facilitator(s).  This feedback is informative for facilitators as they plan for future workshops."
+        },
+        {
+          "type": "paneldynamic",
+          "name": "facilitators",
+          "title": "Facilitators",
+          "templateElements": [
+            {
+              "type": "matrix",
+              "name": "facilitator_effectiveness",
+              "title": "During my workshop, {panel.facilitator_name} did the following:",
+              "columns": [
+                {
+                  "value": "1",
+                  "text": "Strongly Disagree"
+                },
+                {
+                  "value": "2",
+                  "text": "Disagree"
+                },
+                {
+                  "value": "3",
+                  "text": "Slightly Disagree"
+                },
+                {
+                  "value": "4",
+                  "text": "Neutral"
+                },
+                {
+                  "value": "5",
+                  "text": "Slightly Agree"
+                },
+                {
+                  "value": "6",
+                  "text": "Agree"
+                },
+                {
+                  "value": "7",
+                  "text": "Strongly Agree"
+                }
+              ],
+              "rows": [
+                {
+                  "value": "demonstrated_knowledge",
+                  "text": "Demonstrated knowledge of the curriculum."
+                },
+                {
+                  "value": "equitable_workshop_environment",
+                  "text": "Built and sustained an equitable learning environment in our workshop."
+                },
+                {
+                  "value": "on_track",
+                  "text": "Kept the workshop and participants on track."
+                },
+                {
+                  "value": "productive_discussions",
+                  "text": "Supported productive workshop discussions."
+                },
+                {
+                  "value": "create_equity_for_students",
+                  "text": "Helped me see ways to create and support an equitable learning environment for my students."
+                },
+                {
+                  "value": "healthy_relationship",
+                  "text": "Demonstrated a healthy working relationship with their co-facilitator (if applicable)."
+                }
+              ]
+            },
+            {
+              "type": "comment",
+              "name": "facilitator_did_well_fr",
+              "title": "What were two things {panel.facilitator_name} did well?",
+              "rows": 2
+            },
+            {
+              "type": "comment",
+              "name": "facilitator_could_improve_fr",
+              "title": "What were two things {panel.facilitator_name} could do better?",
+              "rows": 2
+            }
+          ],
+          "templateTitle": "Facilitator {panel.facilitator_position} - {panel.facilitator_name}",
+          "allowAddPanel": false,
+          "allowRemovePanel": false
+        },
+        {
+          "type": "html",
+          "name": "wrap_up_title",
+          "html": "<h2>Wrapping Up</h2><p>Lastly, we would like to know if we can quote your feedback and stay in touch with you.</p>"
+        },
+        {
+          "type": "radiogroup",
+          "name": "permission_to_quote",
+          "title": "I give the workshop organizer permission to quote my written comments from today for use on social media, promotional materials, and other communications.",
+          "choices": [
+            {
+              "value": "yes",
+              "text": "Yes, I give the workshop organizer permission to quote me and use my name."
+            },
+            {
+              "value": "yes_anon",
+              "text": "Yes, I give the workshop organizer permission to quote me, but I want to be anonymous."
+            },
+            {
+              "value": "no",
+              "text": "No, I do not give the workshop organizer my permission."
+            }
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "willing_talk",
+          "title": " Occasionally, Code.org follows-up with workshop participants to get more insight into their experience and learn how we can continue to improve our programs and products. Would you be willing to talk with Code.org?",
+          "choices": [
+            {
+              "value": "yes",
+              "text": "Yes"
+            },
+            {
+              "value": "no",
+              "text": "No"
+            }
+          ]
+        },
+        {
+          "type": "html",
+          "name": "thank_you_header",
+          "html": "<img style='display: block; margin-left: auto; margin-right: auto;', src='/shared/images/foorm/codeheartyou.png'/>\n<p>Thanks from Code.org for your time, commitment and passion for teaching {workshop_course} this year.</p>\n<p><strong>You are making a difference for your students.</strong> We're looking forward to what's next. Onward!</p>"
+        }
+      ]
+    }
+  ],
+  "showTitle": false,
+  "showPageTitles": false
+}

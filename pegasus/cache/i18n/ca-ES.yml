@@ -1450,6 +1450,8 @@ ca-ES:
   header_teach: Ensenya
   header_help_us: Ajuda'ns
   header_about: Quant a
+  header_legal_privacy: Política de privadesa
+  header_legal_tos: Condicions d'ús
   user_header_label: Hola %{username}
   user_header_team: Equip
   user_header_settings: El meu compte

@@ -14,7 +14,6 @@ import {isEditingSection} from './teacherSectionsRedux';
 function editSectionDialog(Form) {
   class EditSectionDialog extends Component {
     static propTypes = {
-      locale: PropTypes.string,
       isOpen: PropTypes.bool.isRequired // From Redux
     };
 
@@ -28,11 +27,7 @@ function editSectionDialog(Form) {
           uncloseable
         >
           <PadAndCenter>
-            <Form
-              title={i18n.editSectionDetails()}
-              locale={this.props.locale}
-              isNewSection={false}
-            />
+            <Form title={i18n.editSectionDetails()} isNewSection={false} />
           </PadAndCenter>
         </BaseDialog>
       );

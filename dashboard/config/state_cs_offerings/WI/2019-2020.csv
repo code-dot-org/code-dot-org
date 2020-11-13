@@ -1,0 +1,685 @@
+school_name,state_school_id,nces_id,course_id,course_name,num_students_enrolled,num_students_female,num_students_black_or_african_american,num_students_hispanic_or_latino,num_students_american_indian_or_native_alaskan,num_students_native_hawaiian_or_pacific_islander,num_students_free_or_reduced_lunch,num_students_special_education_status,num_students_english_language_learner_status
+D C Everest Middle,WI-4970-0200,551317002534,6490,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Kaleidoscope Academy,WI-0147-0250,550039002759,6419,Computer Gaming and Design,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lake Denoon Middle,WI-3857-0200,551017001850,6419,Computer Gaming and Design,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Silver Lake Intermediate,WI-4060-0135,551089001422,6421,Computer Gaming and Design,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Chetek-Weyerhaeuser Middle,WI-1080-0200,550006102806,6490,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+North Middle,WI-3437-0220,550906001068,6490,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Shattuck Middle,WI-3892-0210,551032002308,6490,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Poynette Middle,WI-4536-0100,551212001581,6490,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Saint Croix Falls Middle,WI-5019-0070,551323002314,6490,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Kettle Moraine Middle,WI-1376-0140,550351000377,6665,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bullen Middle,WI-2793-0070,550732000802,6665,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lance Middle,WI-2793-0320,550732000815,6665,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lincoln Middle,WI-2793-0360,550732000817,6665,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mahone Middle,WI-2793-0215,550732002538,6665,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lake Geneva Middle,WI-2885-0060,550762000881,6665,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lake Shore Middle,WI-3479-0080,550913001086,6665,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Steffen Middle,WI-3479-0140,550913001089,6665,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Random Lake Middle,WI-4641-0020,551245002421,6665,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Richfield Middle,WI-2570-0290,550008003078,6660,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Wisconsin Hills Middle,WI-0714-0270,550177000228,6660,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Pilgrim Park Middle,WI-0714-0150,550177002331,6660,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Freedom Middle,WI-1953-0040,550492000534,6660,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bullen Middle,WI-2793-0070,550732000802,6660,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lance Middle,WI-2793-0320,550732000815,6660,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lincoln Middle,WI-2793-0360,550732000817,6660,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mahone Middle,WI-2793-0215,550732002538,6660,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Kewaunee Middle,WI-2814-0160,550741001726,6660,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Little Chute Middle,WI-3129-0060,550816000902,6660,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Prairie River Middle,WI-3500-0260,550921001506,6660,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mishicot Middle,WI-3661-0120,550975001347,6658,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Muskego Lakes Middle,WI-3857-0010,551017001330,6660,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lake Denoon Middle,WI-3857-0200,551017001850,6660,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Deer Creek Intermediate,WI-5026-0020,551326001747,6660,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Southern Door Middle,WI-5457-0040,551413001835,6660,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Badger Ridge Middle,WI-5901-0120,551533001973,6660,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Sabish Middle,WI-1862-0300,550468000504,6416,Mobile Applications,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Theisen Middle,WI-1862-0335,550468000505,6416,Mobile Applications,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Woodworth Middle,WI-1862-0365,550468002325,6416,Mobile Applications,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Belleville Middle,WI-0350-0060,550099000133,6655,PLTW Introduction to Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Edison Middle,WI-2289-0190,550582000619,6655,PLTW Introduction to Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lombardi Middle,WI-2289-0425,550582000631,6655,PLTW Introduction to Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Washington Middle,WI-2289-0660,550582000641,6655,PLTW Introduction to Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Red Smith K-8,WI-2289-0160,550582001672,6655,PLTW Introduction to Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lancaster Middle,WI-2912-0040,550777000890,6655,PLTW Introduction to Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Glacier Creek Middle,WI-3549-0050,550951000754,6655,PLTW Introduction to Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Kromrey Middle,WI-3549-0030,550951001104,6655,PLTW Introduction to Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Ripon Middle,WI-4872-0140,551302001719,6653,PLTW Introduction to Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Richfield Middle,WI-2570-0290,550008003078,3772,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Amherst Middle,WI-0126-0080,550033000034,3772,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Parkview Middle,WI-0182-0045,550054000083,3772,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cunningham Intermediate,WI-0413-0080,550105000140,3772,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+McNeel Intermediate,WI-0413-0180,550105002330,3772,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Fran Fruzen Intermediate,WI-0413-0170,550105003011,3772,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Elkhorn Area Middle,WI-1638-0060,550429000460,3772,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Sabish Middle,WI-1862-0300,550468000504,3770,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Theisen Middle,WI-1862-0335,550468000505,3770,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Woodworth Middle,WI-1862-0365,550468002325,3770,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Kennedy Middle,WI-2058-0110,550516000554,3772,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bay View Middle,WI-2604-0030,550663000717,3772,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hudson Middle,WI-2611-0070,550669000728,3772,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bullen Middle,WI-2793-0070,550732000802,3772,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lance Middle,WI-2793-0320,550732000815,3772,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lincoln Middle,WI-2793-0360,550732000817,3772,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Washington Middle,WI-2793-0640,550732000831,3772,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mahone Middle,WI-2793-0215,550732002538,3772,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Little Chute Middle,WI-3129-0060,550816000902,3772,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Marinette Middle,WI-3311-0070,550870000996,3772,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+North Middle,WI-3437-0220,550906001068,3772,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+North Lake Elementary,WI-3514-0020,550930002268,3773,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Muskego Lakes Middle,WI-3857-0010,551017001330,3772,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lake Denoon Middle,WI-3857-0200,551017001850,3772,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Necedah Middle,WI-3871-0250,551023003099,3772,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Shattuck Middle,WI-3892-0210,551032002308,3772,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+New Holstein Middle,WI-3941-0200,551053002550,3774,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Prescott Middle,WI-4578-0080,551224001593,3772,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Pulaski Community Middle,WI-4613-0200,551233001888,3772,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Raymond Elementary,WI-4686-0020,551248001656,3770,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Ripon Middle,WI-4872-0140,551302001719,3772,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Saint Croix Falls Middle,WI-5019-0070,551323002314,3772,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+River Bluff Middle,WI-5621-0120,551455001887,3772,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Walker Middle,WI-5642-0080,551461002322,3772,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Weston Middle,WI-6354-0120,551647002156,3772,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Spring Hill Middle,WI-6678-0200,551704002271,3772,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Benjamin Franklin Junior High,WI-5607-0010,551449001868,6595,Data Systems/Processing,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+P J Jacobs Junior High,WI-5607-0240,551449001877,6595,Data Systems/Processing,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Fond du Lac STEM Institute,WI-1862-0210,550468002966,6472,Computer Programming-Other Language,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Fond du Lac STEM Institute,WI-1862-0210,550468002966,6416,Mobile Applications,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+North High,WI-0147-0030,550039000597,6467,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Ashland High,WI-0170-0020,550051000073,6467,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Central High,WI-0714-0020,550177000214,6467,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+East High,WI-0714-0060,550177000215,6467,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cedarburg High,WI-1015-0020,550246000270,6467,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+De Forest High,WI-1316-0040,550318000355,6467,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+De Pere High,WI-1414-0020,550321000361,6467,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+High School of Health Sciences,WI-1376-0470,550351002988,6467,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+East Troy High,WI-1540-0040,550402000410,6467,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Edgerton High,WI-1568-0080,550411000443,6467,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Fort Atkinson High,WI-1883-0080,550474000510,6466,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+North Crawford High,WI-2016-0120,550498000543,6467,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Gibraltar High,WI-2114-0120,550522000561,6466,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Grafton High,WI-2217-0040,550561002248,6467,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+East High,WI-2289-0180,550582000618,6466,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Preble High,WI-2289-0540,550582000636,6466,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Southwest High,WI-2289-0600,550582000638,6466,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West High,WI-2289-0720,550582000644,6466,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Whitnall High,WI-6470-0100,550600000661,6467,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Arrowhead High,WI-2450-0020,550618000678,6467,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hortonville High,WI-2583-0040,550660000715,6467,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bay Port High,WI-2604-0020,550663000716,6467,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Craig High,WI-2695-0060,550702000757,6467,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Parker High,WI-2695-0280,550702000770,6467,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+ARISE Virtual Academy,WI-2695-0860,550702002991,6467,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Kaukauna High,WI-2758-0040,550729000793,6467,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lake Mills High,WI-2898-0040,550771000887,6467,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Luxemburg-Casco High,WI-3220-0140,550834000918,6466,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+East High,WI-3269-0150,550852000925,6467,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Memorial High,WI-3269-0360,550852000937,6467,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+LaFollette High,WI-3269-0420,550852000941,6467,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West High,WI-3269-0840,550852000967,6467,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Rural Virtual Academy,WI-3409-9100,550894002598,6466,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Menomonee Falls High,WI-3437-0110,550906002338,6467,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mercer School,WI-3484-0040,550915001092,6467,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Middleton High,WI-3549-0060,550951001107,6466,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Milton High,WI-3612-0100,550957001118,6467,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lakeland High,WI-3647-0020,550963001274,6467,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mondovi High,WI-3668-0100,550978001287,6466,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Monona Grove High,WI-3675-0060,550981001291,6466,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Monona Grove High,WI-3675-0060,550981001291,6467,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mukwonago High,WI-3822-0060,551006001319,6467,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Muskego High,WI-3857-0180,551017001335,6467,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Eisenhower Middle/High,WI-3925-0050,551047001366,6467,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+New Berlin Middle/High,WI-3925-0140,551047001372,6467,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+New London High,WI-3955-0080,551059001384,6467,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+New Richmond High,WI-3962-0060,551062001390,6466,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Oostburg High,WI-4137-0080,551107001466,6466,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Parkview High,WI-4151-0100,551113001476,6467,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+North High,WI-4179-0290,551119001495,6466,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West High,WI-4179-0300,551119001496,6466,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Pewaukee High,WI-4312-0080,551164001537,6467,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Portage High,WI-4501-0180,551206002284,6466,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Park High,WI-4620-0494,551236001635,6466,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Rio Middle/High,WI-4865-0040,551299001713,6466,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Saint Francis High,WI-5026-0040,551326001748,6467,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Shawano High,WI-5264-0280,551362001780,6467,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+South High,WI-5271-0340,551365001797,6467,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Slinger High,WI-5390-0080,551395001821,6467,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Stevens Point Area Senior High,WI-5607-0270,551449001880,6467,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Sturgeon Bay High,WI-5642-0010,551461001894,6466,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Verona Area High,WI-5901-0100,551533001972,6466,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Watertown High,WI-6125-0140,551575002002,6467,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+North High,WI-6174-0290,551578002019,6466,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+South High,WI-6174-0460,551578002025,6467,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Waunakee High,WI-6181-0040,551581002030,6466,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Waupaca High,WI-6195-0140,551584002035,6467,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Wausau Area Virtual Education,WI-6223-0800,551590003027,6466,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Wauwatosa Virtual Academy,WI-6244-0430,551599002921,6466,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Central High,WI-6300-0020,551626002101,6467,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Nathan Hale High,WI-6300-0340,551626002117,6467,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West De Pere High,WI-6328-0120,551632002138,6467,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Whitewater High,WI-6461-0140,551668002182,6467,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Williams Bay High,WI-6482-0040,551674002187,6467,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Baraboo High,WI-0280-0040,550081000103,6458,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+East High,WI-0714-0060,550177000215,6457,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cedar Grove-Belgium High,WI-1029-0040,550243000267,6457,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Kettle Moraine High,WI-1376-0120,550351000376,6458,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Denmark High,WI-1407-0080,550366000388,6457,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Fall Creek High,WI-1729-0040,550450000481,6457,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Preble High,WI-2289-0540,550582000636,6457,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Greendale High,WI-2296-0060,550591002254,6458,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Holmen High,WI-2562-0040,550654000706,6457,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bay Port High,WI-2604-0020,550663000716,6458,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Craig High,WI-2695-0060,550702000757,6458,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Parker High,WI-2695-0280,550702000770,6458,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Jefferson High,WI-2702-0080,550705000778,6458,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Tremper High,WI-2793-0580,550732000828,6458,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Indian Trail High School and Academy,WI-2793-0410,550732001461,6458,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lakeview Technology Academy,WI-2793-0480,550732001462,6458,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Kimberly High,WI-2835-0080,550747000850,6458,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lodi High,WI-3150-0080,550819000905,6457,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Marathon High,WI-3304-0040,550867000992,6458,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Middleton High,WI-3549-0060,550951001107,6457,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Meir School,WI-3619-0176,550960001164,6458,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+King International,WI-3619-0020,550960001199,6458,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Riverside High,WI-3619-0029,550960001237,6458,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Reagan College Preparatory High,WI-3619-0435,550960003342,6458,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mukwonago High,WI-3822-0060,551006001319,6458,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Neenah High,WI-3892-0180,551032001348,6457,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Oregon High,WI-4144-0060,551110001470,6457,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West High,WI-4179-0300,551119001496,6457,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Platteville High,WI-4389-0060,551185001553,6458,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Port Washington High,WI-4515-0100,551200001568,6458,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Prairie du Chien High,WI-4543-0060,551215001584,6458,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+River Falls High,WI-4893-0080,551305001724,6457,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+D C Everest High,WI-4970-0035,551317001734,6458,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Central High,WI-5054-0020,551329001751,6458,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Sauk Prairie High,WI-5100-0120,551341001759,6457,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Sauk Prairie High,WI-5100-0120,551341001759,6458,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Shawano High,WI-5264-0280,551362001780,6458,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Sun Prairie High,WI-5656-0100,551464001902,6457,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Union Grove High,WI-5852-0020,551515001963,6458,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Verona Area High,WI-5901-0100,551533001972,6457,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+eAchieve Academy - Wisconsin,WI-6174-0470,551578003380,6457,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Whitefish Bay High,WI-6419-0100,551662002170,6457,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Whitehall Memorial Junior/Senior High,WI-6426-0120,551665002176,6458,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Burlington High,WI-0777-0020,550189000237,6495,Business Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Evansville High,WI-1694-0040,550444000478,6495,Business Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Holmen High,WI-2562-0040,550654000706,6496,Business Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+East High,WI-3269-0150,550852000925,6495,Business Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Memorial High,WI-3269-0360,550852000937,6495,Business Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+LaFollette High,WI-3269-0420,550852000941,6495,Business Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West High,WI-3269-0840,550852000967,6495,Business Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Flambeau High,WI-5757-0040,551497001951,6495,Business Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+North High,WI-0147-0030,550039000597,6478,C++ Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Ashland High,WI-0170-0020,550051000073,6480,C++ Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Black River Falls High,WI-0476-0040,550126000175,6480,C++ Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Brillion High,WI-0658-0040,550168000207,6480,C++ Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cadott High,WI-0870-0040,550204000248,6480,C++ Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+East Troy High,WI-1540-0040,550402000410,6479,C++ Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Evansville High,WI-1694-0040,550444000478,6480,C++ Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Grafton High,WI-2217-0040,550561002248,6480,C++ Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hortonville High,WI-2583-0040,550660000715,6480,C++ Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Parker High,WI-2695-0280,550702000770,6481,C++ Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+ARISE Virtual Academy,WI-2695-0860,550702002991,6481,C++ Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Luxemburg-Casco High,WI-3220-0140,550834000918,6480,C++ Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+New London High,WI-3955-0080,551059001384,6480,C++ Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Parkview High,WI-4151-0100,551113001476,6480,C++ Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Pewaukee High,WI-4312-0080,551164001537,6479,C++ Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Rib Lake High,WI-4795-0060,551278001687,6480,C++ Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Richland Center High,WI-4851-0320,551296001707,6481,C++ Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+North High,WI-5271-0280,551365001794,6480,C++ Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+South High,WI-5271-0340,551365001797,6480,C++ Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Sparta High,WI-5460-0160,551416001843,6480,C++ Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Waupaca High,WI-6195-0140,551584002035,6481,C++ Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Central High,WI-6300-0020,551626002101,6480,C++ Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Nathan Hale High,WI-6300-0340,551626002117,6480,C++ Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Albany High,WI-0063-0040,550012000014,6419,Computer Gaming and Design,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Amery High,WI-0119-0040,550030000030,6419,Computer Gaming and Design,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Wisconsin Connections Academy,WI-0147-0850,550039002825,6419,Computer Gaming and Design,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Athens High,WI-0196-0040,550057000087,6419,Computer Gaming and Design,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Baldwin-Woodville High,WI-0231-0040,550072000094,6419,Computer Gaming and Design,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Unity High,WI-0238-0100,550075000098,6419,Computer Gaming and Design,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Unity High,WI-0238-0100,550075000098,6420,Computer Gaming and Design,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Birchwood High,WI-0441-0040,550117000169,6419,Computer Gaming and Design,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Boscobel High,WI-0609-0040,550150000193,6419,Computer Gaming and Design,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Brodhead High,WI-0700-0040,550174000212,6419,Computer Gaming and Design,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Clinton High,WI-1134-0060,550264000296,6419,Computer Gaming and Design,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Kettle Moraine High,WI-1376-0120,550351000376,6419,Computer Gaming and Design,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Elkhorn Options Virtual School,WI-1638-0800,550429003038,6419,Computer Gaming and Design,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Fond du Lac High,WI-1862-0140,550468000498,6419,Computer Gaming and Design,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Nicolet High,WI-2177-0020,550549000584,6419,Computer Gaming and Design,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Grafton High,WI-2217-0040,550561002248,6419,Computer Gaming and Design,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Grantsburg High,WI-2233-0080,550567000602,6419,Computer Gaming and Design,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Greenwood High,WI-2394-0060,550597000657,6419,Computer Gaming and Design,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Arrowhead High,WI-2450-0020,550618000678,6419,Computer Gaming and Design,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bay Port High,WI-2604-0020,550663000716,6419,Computer Gaming and Design,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bay Port High,WI-2604-0020,550663000716,6420,Computer Gaming and Design,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Jefferson High,WI-2702-0080,550705000778,6419,Computer Gaming and Design,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lake Mills High,WI-2898-0040,550771000887,6419,Computer Gaming and Design,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+JEDI Virtual K-12 - Jefferson and Eastern Dane County Interactive,WI-2898-9803,550771002901,6417,Computer Gaming and Design,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Loyal High,WI-3206-0060,550825000912,6421,Computer Gaming and Design,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Little Wolf High,WI-3276-0040,550855000968,6419,Computer Gaming and Design,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Marathon High,WI-3304-0040,550867000992,6419,Computer Gaming and Design,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Wisconsin Virtual Academy High (WIVA),WI-3381-0430,550891002975,6419,Computer Gaming and Design,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Destinations Career Academy of Wisconsin High,WI-3381-0450,550891003039,6419,Computer Gaming and Design,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Melrose-Mindoro Junior/Senior High,WI-3428-0040,550900001051,6419,Computer Gaming and Design,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Milton High,WI-3612-0100,550957001118,6419,Computer Gaming and Design,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Monroe High,WI-3682-0120,550984001298,6419,Computer Gaming and Design,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Monticello High,WI-3696-0040,550990001305,6419,Computer Gaming and Design,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mukwonago High,WI-3822-0060,551006001319,6419,Computer Gaming and Design,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Necedah High,WI-3871-0040,551023001338,6419,Computer Gaming and Design,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Eisenhower Middle/High,WI-3925-0050,551047001366,6420,Computer Gaming and Design,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+New Richmond High,WI-3962-0060,551062001390,6419,Computer Gaming and Design,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Niagara High,WI-3969-0040,551068001394,6419,Computer Gaming and Design,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Oregon High,WI-4144-0060,551110001470,6419,Computer Gaming and Design,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Palmyra-Eagle High,WI-4221-0015,551135002274,6419,Computer Gaming and Design,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Pembine High,WI-4263-0060,551155001530,6419,Computer Gaming and Design,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Prairie du Chien High,WI-4543-0060,551215001584,6419,Computer Gaming and Design,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Rosholt High,WI-4963-0040,551314001733,6419,Computer Gaming and Design,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Central High,WI-5054-0020,551329001751,6419,Computer Gaming and Design,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Sevastopol High,WI-5130-0040,551350001768,6419,Computer Gaming and Design,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Etude High,WI-5271-0451,551365002859,6419,Computer Gaming and Design,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Shiocton High,WI-5348-0040,551377001808,6419,Computer Gaming and Design,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Shullsburg High,WI-5362-0080,551383001814,6421,Computer Gaming and Design,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+River Valley High,WI-5523-0110,551425001855,6419,Computer Gaming and Design,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Stevens Point Area Senior High,WI-5607-0270,551449001880,6419,Computer Gaming and Design,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Verona Area High,WI-5901-0100,551533001972,6419,Computer Gaming and Design,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Washington Island High,WI-6069-0040,551557001987,6417,Computer Gaming and Design,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Waterford High,WI-6083-0020,551560001988,6419,Computer Gaming and Design,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Watertown High,WI-6125-0140,551575002002,6419,Computer Gaming and Design,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West High,WI-6223-0380,551590002064,6419,Computer Gaming and Design,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Webster High,WI-6293-0080,551623002099,6419,Computer Gaming and Design,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Central High,WI-6300-0020,551626002101,6419,Computer Gaming and Design,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Nathan Hale High,WI-6300-0340,551626002117,6419,Computer Gaming and Design,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Westby High,WI-6321-0200,551641002146,6419,Computer Gaming and Design,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Wild Rose High,WI-6475-0060,551671002185,6419,Computer Gaming and Design,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Winter High,WI-6615-0080,551686002195,6419,Computer Gaming and Design,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Blair-Taylor Middle/High,WI-0485-0011,550001602378,6490,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Blair-Taylor Middle/High,WI-0485-0011,550001602378,6491,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Blair-Taylor Middle/High,WI-0485-0011,550001602378,6492,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Chetek-Weyerhaeuser High,WI-1080-0400,550006102807,6490,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Link2Learn Virtual Charter School,WI-1080-0800,550006102897,6492,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Tenor High,WI-8001-8115,550007402637,6490,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Altoona High,WI-0112-0040,550027000026,6490,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+East High,WI-0147-0020,550039000047,6490,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West High,WI-0147-0040,550039000048,6490,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+North High,WI-0147-0030,550039000597,6490,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Arcadia High,WI-0154-0040,550042000068,6490,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Baraboo High,WI-0280-0040,550081000103,6490,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bonduel High,WI-0602-0040,550147000189,6490,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Brillion High,WI-0658-0040,550168000207,6490,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Burlington High,WI-0777-0020,550189000237,6490,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cedarburg High,WI-1015-0020,550246000270,6490,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Clayton High,WI-1120-0040,550258000290,6490,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cornell High,WI-1204-0040,550288000324,6490,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cumberland High,WI-1260-0060,550309000344,6490,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+De Forest High,WI-1316-0040,550318000355,6490,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+De Pere High,WI-1414-0020,550321000361,6490,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+High School of Health Sciences,WI-1376-0470,550351002988,6490,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+East Troy High,WI-1540-0040,550402000410,6490,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Memorial High,WI-1554-0340,550405000429,6490,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Edgar High,WI-1561-0040,550408000441,6491,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Edgerton High,WI-1568-0080,550411000443,6491,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Elkhorn Area High,WI-1638-0040,550429000459,6490,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Ellsworth High,WI-1659-0040,550432000464,6491,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Fennimore High,WI-1813-0040,550459000486,6490,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Florence High,WI-1855-0060,550465000490,6492,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Freedom High,WI-1953-0060,550492000533,6490,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Gibraltar High,WI-2114-0120,550522000561,6490,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Gilmanton High,WI-2142-0060,550537000574,6490,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Goodman High,WI-2212-0040,550558000592,6490,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+iForward,WI-2233-0400,550567002704,6490,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Greenfield High,WI-2303-0120,550594000653,6490,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Whitnall High,WI-6470-0100,550600000661,6490,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Whitnall High,WI-6470-0100,550600000661,6491,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hamilton High,WI-2420-0040,550603000664,6490,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Saint Croix Central High,WI-2422-0060,550606000672,6490,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Saint Croix Central High,WI-2422-0060,550606000672,6491,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hillsboro High,WI-2541-0060,550648000703,6492,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hortonville High,WI-2583-0040,550660000715,6490,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Howards Grove High,WI-2605-0060,550666000721,6490,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hudson High,WI-2611-0080,550669000729,6490,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Craig High,WI-2695-0060,550702000757,6490,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Parker High,WI-2695-0280,550702000770,6490,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+ARISE Virtual Academy,WI-2695-0860,550702002991,6490,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Dodgeland High,WI-2744-0022,550726000787,6490,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Kaukauna High,WI-2758-0040,550729000793,6490,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lakeview Technology Academy,WI-2793-0480,550732001462,6490,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Kohler High,WI-2842-0040,550750000853,6492,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lake Mills High,WI-2898-0040,550771000887,6490,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Laona High,WI-2940-0020,550783000893,6490,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+East High,WI-3269-0150,550852000925,6491,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West High,WI-3269-0840,550852000967,6491,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lincoln High,WI-3290-0140,550861000976,6490,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Marshfield High,WI-3339-0120,550882001021,6489,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Marshfield High,WI-3339-0120,550882001021,6490,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mauston High,WI-3360-0060,550885001025,6490,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Medford High,WI-3409-0220,550894001043,6490,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Rural Virtual Academy,WI-3409-9100,550894002598,6490,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mellen Public School,WI-3427-0800,550897002941,6490,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Menasha High,WI-3430-0100,550903001059,6490,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Menasha High,WI-3430-0100,550903001059,6491,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Menomonee Falls High,WI-3437-0110,550906002338,6489,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bridges Virtual Academy,WI-3500-0800,550921002927,6490,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Middleton High,WI-3549-0060,550951001107,6490,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+WHS Information Technology,WI-3619-0424,550960002608,6490,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+North Division High 0419,WI-3619-0419,550960002730,6490,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mishicot High,WI-3661-0040,550975001283,6490,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Monona Grove High,WI-3675-0060,550981001291,6491,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mount Horeb High,WI-3794-0120,550999001312,6490,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Necedah High,WI-3871-0040,551023001338,6489,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Necedah High,WI-3871-0040,551023001338,6490,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Eisenhower Middle/High,WI-3925-0050,551047001366,6490,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Eisenhower Middle/High,WI-3925-0050,551047001366,6491,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+New Berlin Middle/High,WI-3925-0140,551047001372,6490,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+New Berlin Middle/High,WI-3925-0140,551047001372,6491,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+New Glarus High,WI-3934-0040,551050001376,6490,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+New London High,WI-3955-0080,551059001384,6490,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+New Richmond High,WI-3962-0060,551062001390,6490,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Oak Creek High,WI-4018-0140,551083001411,6490,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Oakfield High,WI-4025-0060,551086001415,6490,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Oconomowoc High,WI-4060-0130,551089001421,6491,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Oconto High,WI-4067-0100,551092001428,6490,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+North High,WI-4179-0290,551119001495,6490,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West High,WI-4179-0300,551119001496,6488,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West High,WI-4179-0300,551119001496,6490,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Palmyra-Eagle High,WI-4221-0015,551135002274,6490,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Pewaukee High,WI-4312-0080,551164001537,6490,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Phelps High,WI-4330-0020,551171001540,6490,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Plum City High,WI-4459-0040,551188001557,6490,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Plymouth High,WI-4473-0100,551194001562,6490,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Portage High,WI-4501-0180,551206002284,6490,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Portage High,WI-4501-0180,551206002284,6491,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Prescott High,WI-4578-0060,551224001592,6490,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Prescott High,WI-4578-0060,551224001592,6491,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Walden III High,WI-4620-0499,551236001644,6490,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Rhinelander High,WI-4781-0180,551272001682,6490,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Ripon High,WI-4872-0120,551302001718,6490,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Saint Francis High,WI-5026-0040,551326001748,6490,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Saint Francis High,WI-5026-0040,551326001748,6491,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Shawano High,WI-5264-0280,551362001780,6490,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+George D Warriner High School for Personalized Learning,WI-5271-0440,551365002695,6490,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Southern Door High,WI-5457-0220,551413001834,6490,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Three Lakes High,WI-5733-0080,551485001929,6490,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Union Grove High,WI-5852-0020,551515001963,6490,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Union Grove High,WI-5852-0020,551515001963,6492,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Valders High,WI-5866-0060,551521001967,6490,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Big Foot High,WI-6013-0020,551548001982,6490,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Watertown High,WI-6125-0140,551575002002,6490,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West High,WI-6174-0560,551578000528,6491,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+North High,WI-6174-0290,551578002019,6491,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+eAchieve Academy - Wisconsin,WI-6174-0470,551578003380,6491,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Waunakee High,WI-6181-0040,551581002030,6490,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Waupaca High,WI-6195-0140,551584002035,6490,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Waupun Area Senior High,WI-6216-0200,551587002045,6490,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Wausaukee High,WI-6230-0100,551593002068,6490,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+East High,WI-6307-0050,551629002128,6490,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West High,WI-6307-0200,551629002135,6490,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Westby High,WI-6321-0200,551641002146,6490,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Whitefish Bay High,WI-6419-0100,551662002170,6490,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Whitewater High,WI-6461-0140,551668002182,6490,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Winneconne High,WI-6608-0060,551683002191,6492,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Wittenberg-Birnamwood High,WI-6692-0140,551710002222,6490,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Central High,WI-0714-0020,550177000214,6470,Computer Programming-Other Language,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+De Soto High,WI-1421-0040,550324000365,6470,Computer Programming-Other Language,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Freedom High,WI-1953-0060,550492000533,6471,Computer Programming-Other Language,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Menomonee Falls High,WI-3437-0110,550906002338,6469,Computer Programming-Other Language,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Menomonee Falls High,WI-3437-0110,550906002338,6470,Computer Programming-Other Language,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Monona Grove High,WI-3675-0060,550981001291,6470,Computer Programming-Other Language,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Eisenhower Middle/High,WI-3925-0050,551047001366,6471,Computer Programming-Other Language,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+New Berlin Middle/High,WI-3925-0140,551047001372,6471,Computer Programming-Other Language,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Parkview High,WI-4151-0100,551113001476,6470,Computer Programming-Other Language,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Pewaukee High,WI-4312-0080,551164001537,6470,Computer Programming-Other Language,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Port Washington High,WI-4515-0100,551200001568,6470,Computer Programming-Other Language,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Slinger High,WI-5390-0080,551395001821,6470,Computer Programming-Other Language,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Watertown High,WI-6125-0140,551575002002,6470,Computer Programming-Other Language,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Waunakee High,WI-6181-0040,551581002030,6470,Computer Programming-Other Language,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lincoln High,WI-6685-0160,551707002209,6471,Computer Programming-Other Language,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Ashwaubenon High,WI-0182-0020,550054000081,6665,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Baldwin-Woodville High,WI-0231-0040,550072000094,6665,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Belleville High,WI-0350-0040,550099000132,6666,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Birchwood High,WI-0441-0040,550117000169,6664,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Boscobel High,WI-0609-0040,550150000193,6665,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cambria Friesland Middle/High,WI-0882-0040,550207000250,6665,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cameron Academy of Virtual Education,WI-0903-0800,550213002851,6666,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Chippewa Falls High,WI-1092-0060,550255000282,6665,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Coleman High,WI-1169-0060,550276000314,6665,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Coleman High,WI-1169-0060,550276000314,6667,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Crandon High,WI-1218-0060,550291000327,6665,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cuba City High,WI-1246-0040,550303000333,6665,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Dodgeville High,WI-1428-0040,550369000392,6667,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Drummond High,WI-1491-0040,550381000396,6665,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Eleva-Strum High,WI-1600-0060,550420000450,6665,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Florence High,WI-1855-0060,550465000490,6667,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Glenwood City High,WI-2198-0080,550552000587,6667,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Grantsburg High,WI-2233-0080,550567000602,6664,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Arrowhead High,WI-2450-0020,550618000678,6665,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Southwestern Wisconsin High,WI-2485-0060,550630000696,6667,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Craig High,WI-2695-0060,550702000757,6665,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Parker High,WI-2695-0280,550702000770,6665,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Johnson Creek Middle and High,WI-2730-0040,550717000783,6664,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Kewaskum High,WI-2800-0080,550738000837,6667,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Kohler High,WI-2842-0040,550750000853,6665,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Badger High,WI-2884-0020,550765000884,6665,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Destinations Career Academy of Wisconsin High,WI-3381-0450,550891003039,6665,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Menomonee Falls High,WI-3437-0110,550906002338,6664,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mishicot High,WI-3661-0040,550975001283,6665,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Necedah High,WI-3871-0040,551023001338,6665,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Eisenhower Middle/High,WI-3925-0050,551047001366,6666,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+New Berlin Middle/High,WI-3925-0140,551047001372,6666,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Oostburg High,WI-4137-0080,551107001466,6663,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Oregon High,WI-4144-0060,551110001470,6665,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Tri-County High,WI-4375-0060,551182001548,6665,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Plymouth High,WI-4473-0100,551194001562,6665,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Richland Center High,WI-4851-0320,551296001707,6665,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Saint Francis High,WI-5026-0040,551326001748,6664,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Sevastopol High,WI-5130-0040,551350001768,6665,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Seymour High,WI-5138-0100,551353001773,6663,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+North High,WI-5271-0280,551365001794,6665,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+George D Warriner High School for Personalized Learning,WI-5271-0440,551365002695,6666,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Union Grove High,WI-5852-0020,551515001963,6665,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Waterloo High,WI-6118-0040,551572001995,6665,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+East High,WI-6244-0020,551599002077,6666,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West High,WI-6244-0280,551599002091,6666,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Central High,WI-6300-0020,551626002101,6665,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Williams Bay High,WI-6482-0040,551674002187,6663,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cornell High,WI-1204-0040,550288000324,6595,Data Systems/Processing,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Central High,WI-5054-0020,551329001751,6596,Data Systems/Processing,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Gresham High,WI-2415-0400,550005602740,6660,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Berlin High,WI-0434-0040,550114000162,6660,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Birchwood High,WI-0441-0040,550117000169,6660,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Black River Falls High,WI-0476-0040,550126000175,6660,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Black River Falls High,WI-0476-0040,550126000175,6661,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Promethean Charter School,WI-0840-0450,550192002751,6660,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Chilton High,WI-1085-0040,550252000279,6660,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Northland Pines High,WI-1526-0090,550386000406,6660,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Northland Pines High,WI-1526-0090,550386000406,6661,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Elk Mound High,WI-1645-0040,550423000453,6661,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+iForward,WI-2233-0400,550567002704,6660,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Saint Croix Central High,WI-2422-0060,550606000672,6660,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hilbert High,WI-2534-0040,550645000701,6660,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hillsboro High,WI-2541-0060,550648000703,6660,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bay Port High,WI-2604-0020,550663000716,6660,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Rock University High,WI-2695-0450,550702002952,6660,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Kohler High,WI-2842-0040,550750000853,6660,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Luxemburg-Casco High,WI-3220-0140,550834000918,6660,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Merrill High,WI-3500-0140,550921001099,6661,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Milton High,WI-3612-0100,550957001118,6660,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mineral Point High,WI-3633-0080,550966001276,6660,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mukwonago High,WI-3822-0060,551006001319,6660,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Onalaska High,WI-4095-0040,551101001447,6660,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Pewaukee High,WI-4312-0080,551164001537,6660,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Pewaukee High,WI-4312-0080,551164001537,6661,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Tri-County High,WI-4375-0060,551182001548,6660,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Laconia High,WI-4956-0050,551310001729,6660,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Southern Door High,WI-5457-0220,551413001834,6660,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Spring Valley High,WI-5586-0080,551434001863,6660,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Suring High,WI-5670-0080,551470001922,6660,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Verona Area High,WI-5901-0100,551533001972,6660,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+East High,WI-6244-0020,551599002077,6658,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West High,WI-6244-0280,551599002091,6658,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Wauwatosa Virtual Academy,WI-6244-0430,551599002921,6660,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Williams Bay High,WI-6482-0040,551674002187,6659,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Baraboo High,WI-0280-0040,550081000103,6464,IB Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Baraboo High,WI-0280-0040,550081000103,6476,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Central High,WI-0714-0020,550177000214,6476,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+East High,WI-0714-0060,550177000215,6476,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cedarburg High,WI-1015-0020,550246000270,6475,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Edgerton High,WI-1568-0080,550411000443,6476,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Franklin High,WI-1900-0060,550483000522,6476,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Saint Croix Central High,WI-2422-0060,550606000672,6475,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Saint Croix Central High,WI-2422-0060,550606000672,6476,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Saint Croix Virtual Academy Inc,WI-2422-0850,550606002989,6475,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Jefferson High,WI-2702-0080,550705000778,6476,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Johnson Creek Middle and High,WI-2730-0040,550717000783,6475,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Reuther Central High,WI-2793-0450,550732000822,6475,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Kenosha eSchool K-12,WI-2793-0800,550732002910,6475,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+East High,WI-3269-0150,550852000925,6475,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+LaFollette High,WI-3269-0420,550852000941,6475,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+McFarland High,WI-3381-0080,550891001035,6475,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Destinations Career Academy of Wisconsin High,WI-3381-0450,550891003039,6475,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Menomonee Falls High,WI-3437-0110,550906002338,6474,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Milton High,WI-3612-0100,550957001118,6475,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mukwonago High,WI-3822-0060,551006001319,6475,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+New Berlin Middle/High,WI-3925-0140,551047001372,6476,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+New London High,WI-3955-0080,551059001384,6475,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Oconto High,WI-4067-0100,551092001428,6475,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Pewaukee High,WI-4312-0080,551164001537,6474,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Portage High,WI-4501-0180,551206002284,6475,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Sheboygan Falls High,WI-5278-0040,551368001802,6475,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Shell Lake Junior/Senior High,WI-5306-0040,551371001805,6475,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Sparta High,WI-5460-0160,551416001843,6477,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Stratford High,WI-5628-0040,551458001891,6476,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Thorp High,WI-5726-0040,551482001926,6476,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Valders High,WI-5866-0060,551521001967,6475,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Watertown High,WI-6125-0140,551575002002,6475,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Watertown High,WI-6125-0140,551575002002,6476,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+North High,WI-6174-0290,551578002019,6475,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+eAchieve Academy - Wisconsin,WI-6174-0470,551578003380,6475,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West High,WI-6223-0380,551590002064,6475,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+East High,WI-6307-0050,551629002128,6475,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West High,WI-6307-0200,551629002135,6475,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Williams Bay High,WI-6482-0040,551674002187,6477,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Central High,WI-0714-0020,550177000214,6414,Mobile Applications,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Fond du Lac High,WI-1862-0140,550468000498,6413,Mobile Applications,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+East High,WI-2289-0180,550582000618,6414,Mobile Applications,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Preble High,WI-2289-0540,550582000636,6414,Mobile Applications,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Southwest High,WI-2289-0600,550582000638,6414,Mobile Applications,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West High,WI-2289-0720,550582000644,6414,Mobile Applications,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Menomonee Falls High,WI-3437-0110,550906002338,6413,Mobile Applications,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Eisenhower Middle/High,WI-3925-0050,551047001366,6415,Mobile Applications,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+New Berlin Middle/High,WI-3925-0140,551047001372,6415,Mobile Applications,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Pewaukee High,WI-4312-0080,551164001537,6414,Mobile Applications,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Waterford High,WI-6083-0020,551560001988,6414,Mobile Applications,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West High,WI-6174-0560,551578000528,6415,Mobile Applications,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+North High,WI-6174-0290,551578002019,6415,Mobile Applications,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+eAchieve Academy - Wisconsin,WI-6174-0470,551578003380,6415,Mobile Applications,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Belleville High,WI-0350-0040,550099000132,6650,PLTW Computer Science Applications,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Greendale High,WI-2296-0060,550591002254,6649,PLTW Computer Science Applications,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Greendale High,WI-2296-0060,550591002254,6650,PLTW Computer Science Applications,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+New Glarus High,WI-3934-0040,551050001376,6650,PLTW Computer Science Applications,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Case High,WI-4620-0491,551236001621,6651,PLTW Computer Science Applications,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Little Chute High,WI-3129-0040,550816000901,6655,PLTW Introduction to Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lincoln High,WI-3290-0140,550861000976,6655,PLTW Introduction to Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lakeland High,WI-3647-0020,550963001274,6655,PLTW Introduction to Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Ripon High,WI-4872-0120,551302001718,6655,PLTW Introduction to Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Wilmot High,WI-6545-0020,551677002188,6655,PLTW Introduction to Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Wilmot High,WI-6545-0020,551677002188,6656,PLTW Introduction to Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Tesla Engineering Charter School,WI-0147-0430,550039002547,3772,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Arcadia High,WI-0154-0040,550042000068,3772,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Ashwaubenon High,WI-0182-0020,550054000081,3772,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bangor Middle/High,WI-0245-0040,550078000101,3770,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Beaver Dam High,WI-0336-0040,550096000123,3772,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Boscobel High,WI-0609-0040,550150000193,3772,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Brillion High,WI-0658-0040,550168000207,3772,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cedar Grove-Belgium High,WI-1029-0040,550243000267,3772,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Clayton High,WI-1120-0040,550258000290,3772,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Clinton High,WI-1134-0060,550264000296,3772,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Clintonville High,WI-1141-0040,550267000302,3772,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+De Pere High,WI-1414-0020,550321000361,3772,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Kettle Moraine Global School for Global Leadership and Innovation,WI-1376-0450,550351002876,3772,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Elkhart Lake High,WI-1631-0040,550426000456,3772,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Ellsworth High,WI-1659-0040,550432000464,3772,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Franklin High,WI-1900-0060,550483000522,3772,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Ozaukee High,WI-1945-0060,550489000530,3772,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Galesville-Ettrick-Trempealeau High,WI-2009-0040,550496000536,3772,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Germantown High,WI-2058-0180,550516000557,3772,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Gibraltar High,WI-2114-0120,550522000561,3772,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hartford High,WI-2436-0020,550612000677,3772,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Holmen High,WI-2562-0040,550654000706,3772,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bay Port High,WI-2604-0020,550663000716,3773,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bay Port High,WI-2604-0020,550663000716,3774,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Howards Grove High,WI-2605-0060,550666000721,3772,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hudson High,WI-2611-0080,550669000729,3772,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hustisford High,WI-2625-0040,550678000738,3772,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Independence High,WI-2632-0040,550681000740,3771,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+ARISE Virtual Academy,WI-2695-0860,550702002991,3774,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Kaukauna High,WI-2758-0040,550729000793,3772,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lakeview Technology Academy,WI-2793-0480,550732001462,3772,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Kohler High,WI-2842-0040,550750000853,3772,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Central High,WI-2849-0020,550753000854,3772,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Logan High,WI-2849-0220,550753000865,3772,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+LaFollette High,WI-3269-0420,550852000941,3772,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Little Wolf High,WI-3276-0040,550855000968,3772,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Marinette High,WI-3311-0060,550870000995,3772,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Menasha High,WI-3430-0100,550903001059,3772,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Menasha High,WI-3430-0100,550903001059,3773,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mercer School,WI-3484-0040,550915001092,3770,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Merrill High,WI-3500-0140,550921001099,3772,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Obama School of Career and Technical Education,WI-3619-0840,550960002993,3772,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Northwood High/Middle,WI-3654-0410,550972002934,3772,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Muskego High,WI-3857-0180,551017001335,3772,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Neenah High,WI-3892-0180,551032001348,3772,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Eisenhower Middle/High,WI-3925-0050,551047001366,3773,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+New Richmond High,WI-3962-0060,551062001390,3772,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Niagara High,WI-3969-0040,551068001394,3772,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Norris Academy,WI-3976-0020,551071001395,3770,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Oostburg High,WI-4137-0080,551107001466,3772,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Osseo-Fairchild High,WI-4186-0080,551122001508,3772,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Pewaukee High,WI-4312-0080,551164001537,3772,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Potosi High,WI-4529-0040,551209001576,3772,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Randolph High,WI-4634-0040,551242001651,3772,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Kickapoo High,WI-5960-0020,551254001658,3772,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Northern Lakes Regional Academy,WI-4802-0450,551281002932,3772,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Sheboygan Falls High,WI-5278-0040,551368001802,3772,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Slinger High,WI-5390-0080,551395001821,3772,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Superior High,WI-5663-0280,551467001918,3772,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Flambeau High,WI-5757-0040,551497001951,3772,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Union Grove High,WI-5852-0020,551515001963,3773,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Verona Area High,WI-5901-0100,551533001972,3772,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+North High,WI-6174-0290,551578002019,3773,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Waupaca High,WI-6195-0140,551584002035,3773,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West De Pere High,WI-6328-0120,551632002138,3772,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Westby High,WI-6321-0200,551641002146,3772,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Whitehall Memorial Junior/Senior High,WI-6426-0120,551665002176,3774,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Winneconne High,WI-6608-0060,551683002191,3773,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Wrightstown High,WI-6734-0040,551719002229,3772,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Barron High,WI-0308-0030,550087000114,6485,Visual Basic (VB) Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Black River Falls High,WI-0476-0040,550126000175,6485,Visual Basic (VB) Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+East Troy High,WI-1540-0040,550402000410,6484,Visual Basic (VB) Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Franklin High,WI-1900-0060,550483000522,6485,Visual Basic (VB) Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Grafton High,WI-2217-0040,550561002248,6486,Visual Basic (VB) Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Whitnall High,WI-6470-0100,550600000661,6485,Visual Basic (VB) Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Whitnall High,WI-6470-0100,550600000661,6486,Visual Basic (VB) Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hudson High,WI-2611-0080,550669000729,6485,Visual Basic (VB) Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Marshfield High,WI-3339-0120,550882001021,6484,Visual Basic (VB) Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Medford High,WI-3409-0220,550894001043,6486,Visual Basic (VB) Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Menomonee Falls High,WI-3437-0110,550906002338,6484,Visual Basic (VB) Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mount Horeb High,WI-3794-0120,550999001312,6485,Visual Basic (VB) Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mukwonago High,WI-3822-0060,551006001319,6485,Visual Basic (VB) Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Muskego High,WI-3857-0180,551017001335,6485,Visual Basic (VB) Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Parkview High,WI-4151-0100,551113001476,6485,Visual Basic (VB) Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Pulaski High,WI-4613-0100,551233001600,6485,Visual Basic (VB) Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Shawano High,WI-5264-0280,551362001780,6485,Visual Basic (VB) Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Sheboygan Falls High,WI-5278-0040,551368001802,6485,Visual Basic (VB) Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Waterford High,WI-6083-0020,551560001988,6485,Visual Basic (VB) Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West High,WI-6223-0380,551590002064,6485,Visual Basic (VB) Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West High,WI-6307-0200,551629002135,6484,Visual Basic (VB) Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Wonewoc-Center High,WI-6713-0080,551713002225,6486,Visual Basic (VB) Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Adams-Friendship High,WI-0014-0040,550006000005,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Central High,WI-5271-0450,551365002879,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Pathways High,WI-8139-8139,550007903064,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Pecatonica High,WI-0490-0040,550131000182,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Tomah High,WI-5747-0180,551491001939,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Washington Street School,WI-6307-0400,551629002666,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified

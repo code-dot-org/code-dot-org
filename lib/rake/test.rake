@@ -90,19 +90,11 @@ namespace :test do
     end
   end
 
-  task :ui_test_flakiness do
-    Dir.chdir(deploy_dir) do
-      flakiness_output = `./bin/test_flakiness -n 5`
-      ChatClient.log "Flakiest tests: <br/><pre>#{flakiness_output}</pre>"
-    end
-  end
-
   task :wait_for_test_server do
     RakeUtils.wait_for_url CDO.studio_url('', CDO.default_scheme)
   end
 
   task ui_live: [
-    :ui_test_flakiness,
     :wait_for_test_server,
     :ui_all
   ]
@@ -219,7 +211,20 @@ namespace :test do
     ENV.delete 'USE_PEGASUS_UNITTEST_DB'
   end
 
-  task ci: [:shared_ci, :pegasus_ci, :dashboard_ci, :ui_live]
+  task :lib_ci do
+    # isolate unit tests from the pegasus_test DB
+    ENV['USE_PEGASUS_UNITTEST_DB'] = '1'
+    TestRunUtils.run_lib_tests
+    ENV.delete 'USE_PEGASUS_UNITTEST_DB'
+  end
+
+  task ci: [
+    :shared_ci,
+    :pegasus_ci,
+    :dashboard_ci,
+    :lib_ci,
+    :ui_live
+  ]
 
   desc 'Runs dashboard tests.'
   task :dashboard do

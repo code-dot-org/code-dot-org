@@ -164,6 +164,8 @@
   header_about: "பற்றி"
   header_help_support: 'உதவி மற்றும் ஆதரவு '
   header_report_bug: "ஒரு பிரச்னையை தெரிவிக்கவும்"
+  header_legal_privacy: "தனியுரிமை கொள்கை"
+  header_legal_tos: "சேவையின் விதிமுறைகள்"
   user_header_label: "வணக்கம் %{username}"
   user_header_settings: "எனது கணக்கு"
   user_header_logout: "வெளியேறு"
@@ -179,3 +181,5 @@
   hoc2018_dance_party_main_heading: "நடன விருந்து"
   hoc2018_dance_party_box_title: "நடன விருந்து"
   hoc2018_dance_party_button: "தொடங்குக"
+  hoc2018_dance_video2: "நடன விருந்து - நிகழ்வுகள்"
+  hoc2018_dance_video3: "நடன விருந்து - பண்புகள்"

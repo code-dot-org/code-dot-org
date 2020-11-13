@@ -144,7 +144,3 @@ export default class SendToPhone extends React.Component {
     );
   }
 }
-
-// We put this on the dashboard namespace so that it's accessible to apps
-window.dashboard = window.dashboard || {};
-window.dashboard.SendToPhone = SendToPhone;

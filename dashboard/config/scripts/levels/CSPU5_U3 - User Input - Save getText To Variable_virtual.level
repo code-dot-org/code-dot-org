@@ -56,12 +56,18 @@
     "fail_on_lint_errors": "false",
     "makerlab_enabled": "false",
     "short_instructions": "Save the age and name of the user in variables (Click to see full instructions)",
-    "long_instructions": "# Saving Text Input in Variables\r\n\r\nOften we want to save the information we pull in from the user for later use in our program. The best way to do this is to save it in a variable.\r\n\r\n# Do This:\r\n\r\n* **Create two variables inside your event handler** to store the **age** and **name** of the user.\r\n* **Use `getText()` to update the values** stored in each of these variables.\r\n* **Change your `console.log` statements to use your variable instead of `getText`**.\r\n\r\n![](https://images.code.org/ca45dcb01ae2d1956ed2f87efeda0264-image-1445976691215.11.13 PM.png)",
+    "long_instructions": "# Saving Text Input in Variables\r\n\r\nOften we want to save the information we pull in from the user to use later in our program. The best way to do this is to save it in a variable.\r\n\r\n**Do This:**\r\n\r\n* Create two variables inside your event handler to store the **age** and **name** of the user.\r\n* Use `getText()` to update the values stored in each of these variables.\r\n* Change your `console.log` statements to use your variable instead of `getText`.\r\n\r\n<details>\r\n<summary><strong>Need a hint? Click here.</strong></summary>\r\n\r\nYour code should look something like this:\r\n\r\n![](https://images.code.org/ca45dcb01ae2d1956ed2f87efeda0264-image-1445976691215.11.13 PM.png)\r\n\r\n<br/></details>\r\n",
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "widget_mode": "false",
+    "libraries_enabled": "false",
     "preload_asset_list": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2018-11-09 20:38:35 +0000\",\"changed\":[\"notes\",\"code_functions\",\"markdown_instructions\",\"instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2018-11-09 20:38:35 +0000\",\"changed\":[\"notes\",\"code_functions\",\"markdown_instructions\",\"instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2020-04-23 03:21:58 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie@code.org\"},{\"changed_at\":\"2020-04-23 03:25:09 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Applab>

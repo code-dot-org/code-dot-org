@@ -31,6 +31,7 @@ Scenario: Can Rename a Project
   And I wait until element ".ui-personal-projects-table" is visible
   And the project table contains 1 row
   And the first project in the table is named "Old Name"
+  Then I scroll the ".ui-projects-table-dropdown" element into view
   Then I click selector ".ui-projects-table-dropdown"
   And I press the child number 0 of class ".pop-up-menu-item"
   And I wait until element ".ui-project-rename-input" is visible
@@ -46,6 +47,7 @@ Scenario: Can Remix a Project
   And I wait until element ".ui-personal-projects-table" is visible
   And the project table contains 1 row
   And the first project in the table is named "Remix Template"
+  Then I scroll the ".ui-projects-table-dropdown" element into view
   Then I click selector ".ui-projects-table-dropdown"
   And I press the child number 1 of class ".pop-up-menu-item"
   And I wait until current URL contains "/edit"
@@ -57,6 +59,7 @@ Scenario: Can Delete a Project
   And I wait until element ".ui-personal-projects-table" is visible
   And the project table contains 1 row
   And the first project in the table is named "To Be Deleted"
+  Then I scroll the ".ui-projects-table-dropdown" element into view
   Then I click selector ".ui-projects-table-dropdown"
   And I press the child number 2 of class ".pop-up-menu-item"
   And I wait until element ".ui-confirm-project-delete-button" is visible

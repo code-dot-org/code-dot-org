@@ -24,6 +24,7 @@ const styles = {
   libraryTitle: {
     fontFamily: "'Gotham 5r', sans-serif",
     fontSize: 16,
+    cursor: 'pointer',
     color: color.link_color,
     ':hover': {
       color: color.link_color
@@ -76,6 +77,12 @@ const styles = {
     ':hover': {
       color: color.white,
       backgroundColor: color.dark_red
+    },
+    ':disabled': {
+      color: color.light_gray,
+      borderColor: color.light_gray,
+      backgroundColor: color.lightest_gray,
+      cursor: 'default'
     }
   }
 };
@@ -141,12 +148,21 @@ export class LibraryListItem extends React.Component {
             </button>
           )}
           {this.props.onRemove && (
-            <Tooltip text={i18n.removeFromProject()} place="bottom">
+            <Tooltip
+              text={
+                library.fromLevelbuilder
+                  ? i18n.cannotDeleteLibrary()
+                  : i18n.removeFromProject()
+              }
+              place="bottom"
+            >
               <button
                 type="button"
+                className="ui-test-remove-library"
                 key={'remove-' + library.id}
-                onClick={() => this.props.onRemove(library.name)}
+                onClick={() => this.props.onRemove(library.channelId)}
                 style={[styles.actionBtn, styles.removeBtn]}
+                disabled={!!library.fromLevelbuilder}
               >
                 <FontAwesome icon="trash-o" style={styles.iconPadding} />
               </button>

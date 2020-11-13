@@ -1,6 +1,19 @@
 import ReactDOM from 'react-dom';
-import Blockly from '@code-dot-org/blockly';
 import $ from 'jquery';
+
+/**
+ * Checks the given inputs to determine whether the instruction panel should be displayed
+ * @param {string} shortInstructions
+ * @param {string} longInstructions
+ * @param {boolean} hasContainedLevels
+ */
+export function hasInstructions(
+  shortInstructions,
+  longInstructions,
+  hasContainedLevels
+) {
+  return !!(shortInstructions || longInstructions || hasContainedLevels);
+}
 
 /**
  * @param {ReactComponent} component

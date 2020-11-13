@@ -3,71 +3,59 @@ title: testing page
 video_player: true
 theme: responsive
 ---
-<div id="gdpr-dialog"></div>
-<script data-gdpr="{}" data-usertype="null" src="/assets/js/code-studiowpb755ed5e31e33d10e190.min.js"></script>
-
-<div id="courses-container">
-<div data-reactroot style="width: 100%; max-width: 970px; margin-left: auto; margin-right: auto;">
-<div data-radium="true" style="width: 100%">
-<div data-radium="true" style="justify-content: space-between; flex-wrap: wrap;">
-    <div>
-        <div class="tutorial-row">
-            <div class="tutorial-block">
-                <div id="dance-2019">
-                    <div class="courseblock-span3 courseblock-tall">
-                        <a href="//code.org/dance">
-                            <img height="120px" width="100%" src="/shared/images/courses/logo_tall_dance-2019.gif" alt="Logo tall dance 2019">
-                        <div class="course-container">
-                            <h3 class="heading">Dance Party</h3>
-                            <div class="text smalltext">Featuring Katy Perry, Shawn Mendes, Panic! At The Disco, Lil Nas X, Jonas Brothers, Nicki Minaj, and 34 more!</div>
-                        </div>
-                        </a>
-                    </div>
-                </div>
+<div class="tile-container-responsive" style="margin-top: 20px;">
+    <div class="col-33">
+        <div class="tutorial-tile">
+            <a href="/dance">
+                <img class="tutorial-tile-img" src="/images/dance_party_2019.gif">
+            </a>
+            <div class="tutorial-info">
+                <span>
+                    <a href="/dance"><h3 class="tutorial-info-h" style="color:#7665a0"><strong>Dance Party</strong></h3></a>
+                    <div class="smalltext">Code a Dance Party to share with your friends. Featuring Katy Perry, Shawn Mendes, Panic! At The Disco, Lil Nas X, Jonas Brothers, Nicki Minaj, and 34 more!</div>
+                </span>
             </div>
-            <div class="tutorial-block">
-                <div id="aquatic">
-                    <div class="courseblock-span3 courseblock-tall">
-                        <a href="//code.org/api/hour/begin/mc">
-                            <img height="120px" width="100%" src="/shared/images/courses/logo_tall_aquatic.jpg" alt="Logo tall aquatic">
-                        <div class="course-container">
-                            <h3 class="heading">Minecraft</h3>
-                            <div class="text smalltext">Use your creativity and problem solving skills to explore and build underwater worlds with code!</div>
-                        </div>
-                        </a>
-                    </div>
-                </div>
+        </div>
+    </div>
+    <div class="col-33">
+        <div class="tutorial-tile">
+            <a href="/oceans">
+                <img class="tutorial-tile-img" src="/images/fill-485x235/oceans/oceans-overview.png">
+            </a>
+            <div class="tutorial-info">
+                <span>
+                    <a href="/oceans"><h3 class="tutorial-info-h" style="color:#7665a0"><strong>AI for Oceans</strong></h3></a>
+                    <div class="smalltext">Learn about artificial intelligence (AI), machine learning, training data, and bias, while exploring ethical issues and how AI can be used to address world problems.</div>
+                </span>
             </div>
-            <div class="tutorial-block">
-                <div id="oceans">
-                    <div class="courseblock-span3 courseblock-tall">
-                        <a href="//code.org/oceans">
-                            <img height="120px" width="100%" src="/shared/images/courses/logo_tall_oceans.jpg" alt="Logo tall oceans">
-                        <div class="course-container">
-                            <h3 class="heading">AI for Oceans</h3>
-                            <div class="text smalltext">Learn how AI and machine learning can be used to address world problems.</div>
-                        </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="tutorial-block">
-                <div id="flappy">
-                    <div class="courseblock-span3 courseblock-tall">
-                        <a href="http://studio.code.org/s/flappy/reset">
-                            <img height="120px" width="100%" src="/shared/images/courses/logo_tall_flappy.jpg" alt="Logo tall flappy">
-                        <div class="course-container">
-                            <h3 class="heading">Flappy Code</h3>
-                            <div class="text smalltext">Wanna write your own game in less than 10 minutes? Try our Flappy Code tutorial!</div>
-                        </div>
-                        </a>
-                    </div>
-                </div>
+        </div>
+    </div>
+    <div class="col-33">
+        <div class="tutorial-tile">
+            <a href="/minecraft">
+                <img class="tutorial-tile-img" src="/shared/images/fill-485x260/courses/logo_tall_aquatic.jpg">
+            </a>
+            <div class="tutorial-info">
+                <span>
+                    <a href="/dance"><h3 class="tutorial-info-h" style="color:#7665a0"><strong>Minecraft Hour of Code</strong></h3></a>
+                    <div class="smalltext">Minecraft is back for the Hour of Code with a brand new activity! Journey through Minecraft with code.</div>
+                </span>
             </div>
         </div>
     </div>
 </div>
-</div>
-</div>
-</div>
 
+    <div class="col-50">
+        <div class="tutorial-tile">
+            <a href="http://studio.code.org/s/flappy/reset">
+                <img class="tutorial-tile-img" src="/shared/images/fill-485x260/courses/logo_tall_flappy.jpg">
+            </a>
+            <div class="tutorial-info">
+                <span>
+                    <a href="http://studio.code.org/s/flappy/reset"><h3 class="tutorial-info-h" style="color:#7665a0"><strong>Flappy Code</strong></h3></a>
+                    <div class="smalltext">Wanna write your own game in less than 10 minutes? Try our Flappy Code tutorial!</div>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>

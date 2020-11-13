@@ -6,6 +6,8 @@ import i18n from '@cdo/locale';
 import StandardDescriptionCell from './StandardDescriptionCell';
 import {connect} from 'react-redux';
 import {lessonsByStandard} from '@cdo/apps/templates/sectionProgress/standards/sectionStandardsProgressRedux';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import _ from 'lodash';
 
 export const COLUMNS = {
   STANDARD_CATEGORY: 0,
@@ -167,6 +169,7 @@ class StandardsProgressTable extends Component {
   };
 
   render() {
+    const loading = _.isEmpty(this.props.lessonsByStandard);
     const columns = this.getColumns();
     const standards = this.props.standards || [];
     const rowData = standards.map((standard, index) => {
@@ -180,14 +183,25 @@ class StandardsProgressTable extends Component {
     });
 
     return (
-      <Table.Provider
-        columns={columns}
-        style={{...tableLayoutStyles.table, ...this.props.style}}
-        id="uitest-progress-standards-table"
-      >
-        <Table.Header />
-        <Table.Body rows={rowData} rowKey="id" />
-      </Table.Provider>
+      <div>
+        {loading && (
+          <FontAwesome
+            id="uitest-spinner"
+            icon="spinner"
+            className="fa-pulse fa-3x"
+          />
+        )}
+        {!loading && (
+          <Table.Provider
+            columns={columns}
+            style={{...tableLayoutStyles.table, ...this.props.style}}
+            id="uitest-progress-standards-table"
+          >
+            <Table.Header />
+            <Table.Body rows={rowData} rowKey="id" />
+          </Table.Provider>
+        )}
+      </div>
     );
   }
 }

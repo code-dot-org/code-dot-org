@@ -15,7 +15,7 @@
   "danceFeedbackPressedKey": "Du tryckte på en tangent men din dansare rörde sig inte.",
   "danceFeedbackNeedTwoDancers": "Du måste skapa två dansare.",
   "danceFeedbackOnlyOneDancerMoved": "Bara en av dina dansare rörde sig.",
-  "danceFeedbackNeedLead": "Du måste också skapa en dansare som leder de andra med <xml><block type=\"Dancelab_makeAnonymousDanceSprite\"><title name=\"COSTUME\">???</title><title name=\"LOCATION\">\\{x: 200, y: 200\\}</title></block></xml>-blocket.",
+  "danceFeedbackNeedLead": "Du måste också skapa en dansare som leder de andra med <xml><block type=\"Dancelab_makeAnonymousDanceSprite\"><title name=\"COSTUME\">???</title><title name=\"LOCATION\">'{'x: 200, y: 200'}'</title></block></xml>-blocket.",
   "danceFeedbackNeedBackup": "Du måste skapa en grupp bakgrundsdansare med <xml><block type=\"Dancelab_makeNewDanceSpriteGroup\"><title name=\"N\">10</title><title name=\"COSTUME\">\"ENHÖRNING\"</title><title name=\"LAYOUT\">\"cirkel\"</title></block></xml>-blocket.",
   "danceFeedbackSetSize": "Du måste ändra storlek på minst en av dansarna när musiken har börjat.",
   "measure": "Åtgärd:"

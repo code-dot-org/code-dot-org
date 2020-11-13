@@ -848,7 +848,23 @@ km-KH:
         - {}
         questions:
         - {}
+      behaviors 1 predict_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       behaviors 4 predict:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      behaviors 4 predict_2020:
         answers:
         - {}
         - {}
@@ -880,6 +896,14 @@ km-KH:
         - {}
         questions:
         - {}
+      courseC_multi_artist_prog6_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseC_multi_harvester_loops11_predict1:
         answers:
         - {}
@@ -897,6 +921,14 @@ km-KH:
         questions:
         - {}
       courseC_multi_harvester_loops11_predict1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_harvester_loops11_predict1_2018_2019_2020:
         answers:
         - {}
         - {}
@@ -928,6 +960,14 @@ km-KH:
         - {}
         questions:
         - {}
+      courseC_multi_maze_debugging8_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseC_multi_maze_programming8_predict1:
         answers:
         - {}
@@ -945,6 +985,14 @@ km-KH:
         questions:
         - {}
       courseC_multi_maze_programming8_predict1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_maze_programming8_predict1_2018_2019_2020:
         answers:
         - {}
         - {}
@@ -976,6 +1024,14 @@ km-KH:
         - text: ខ្ញុំមិនដឹងទេ
         questions:
         - {}
+      courseC_multi_starWars_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - text: ខ្ញុំមិនដឹងទេ
+        questions:
+        - {}
       courseC_multi_starWars_predict2:
         answers:
         - {}
@@ -993,6 +1049,14 @@ km-KH:
         questions:
         - {}
       courseC_multi_starWars_predict2_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_starWars_predict2_2018_2019_2020:
         answers:
         - {}
         - {}
@@ -1024,6 +1088,14 @@ km-KH:
         - text: D
         questions:
         - {}
+      courseD_multi_artist_binary8_predict1_2018_2019_2020:
+        answers:
+        - text: A
+        - text: B
+        - text: C
+        - text: D
+        questions:
+        - {}
       courseD_multi_artist_nestedLoops9_predict1:
         answers:
         - text: A
@@ -1041,6 +1113,14 @@ km-KH:
         questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1_2018_2019:
+        answers:
+        - text: A
+        - text: B
+        - text: C
+        - {}
+        questions:
+        - {}
+      courseD_multi_artist_nestedLoops9_predict1_2018_2019_2020:
         answers:
         - text: A
         - text: B
@@ -1072,6 +1152,22 @@ km-KH:
         - {}
         questions:
         - {}
+      courseD_multi_bee_conditionals1_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_copy:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_bee_conditionals7_predict2:
         answers:
         - {}
@@ -1089,6 +1185,14 @@ km-KH:
         questions:
         - {}
       courseD_multi_bee_conditionals7_predict2_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals7_predict2_2018_2019_2020:
         answers:
         - {}
         - {}
@@ -1120,6 +1224,14 @@ km-KH:
         - {}
         questions:
         - {}
+      courseD_multi_bee_nestedLoops2_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_bee_nestedLoops9_predict2:
         answers:
         - {}
@@ -1137,6 +1249,14 @@ km-KH:
         questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict2_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops9_predict2_2018_2019_2020:
         answers:
         - {}
         - {}
@@ -1176,6 +1296,14 @@ km-KH:
         - {}
         questions:
         - {}
+      courseD_multi_farmer_condLoops9_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_farmer_ramp13:
         answers:
         - {}
@@ -1208,6 +1336,14 @@ km-KH:
         - {}
         questions:
         - {}
+      courseD_multi_farmer_while10_predict2_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_farmer_while4_predict1:
         answers:
         - {}
@@ -1225,6 +1361,14 @@ km-KH:
         questions:
         - {}
       courseD_multi_farmer_while4_predict1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while4_predict1_2018_2019_2020:
         answers:
         - {}
         - {}
@@ -1256,6 +1400,14 @@ km-KH:
         - {}
         questions:
         - {}
+      courseD_multi_maze_until10_predict2_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_maze_until2_predict1:
         answers:
         - {}
@@ -1273,6 +1425,14 @@ km-KH:
         questions:
         - {}
       courseD_multi_maze_until2_predict1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_maze_until2_predict1_2018_2019_2020:
         answers:
         - {}
         - {}
@@ -1320,6 +1480,14 @@ km-KH:
         - {}
         questions:
         - {}
+      courseE_multi_farmer_functions11_predict_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseE_prediction_artistFunction1:
         answers:
         - {}
@@ -1344,6 +1512,22 @@ km-KH:
         - {}
         questions:
         - {}
+      courseE_prediction_artistFunction1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_copy:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseF_bee_variables_8a_2018:
         answers:
         - {}
@@ -1353,6 +1537,14 @@ km-KH:
         questions:
         - {}
       courseF_bee_variables_8a_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_bee_variables_8a_2018_2019_2020:
         answers:
         - {}
         - {}
@@ -1377,6 +1569,14 @@ km-KH:
         questions:
         - {}
       courseF_multi_artist_for10_predict1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_artist_for10_predict1_2018_2019_2020:
         answers:
         - {}
         - {}
@@ -1409,6 +1609,14 @@ km-KH:
         questions:
         - {}
       courseF_multi_artist_variables3a_predict1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_artist_variables3a_predict1_2018_2019_2020:
         answers:
         - {}
         - {}
@@ -1456,6 +1664,14 @@ km-KH:
         - {}
         questions:
         - {}
+      courseF_multi_bee_for3_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseF_multi_bee_fwp9_predict1:
         answers:
         - {}
@@ -1496,6 +1712,14 @@ km-KH:
         - {}
         questions:
         - {}
+      coursee_prediction_artistfunction2_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       grade2_multi_collector_A_predict1:
         answers:
         - {}
@@ -1520,3 +1744,89 @@ km-KH:
         - {}
         questions:
         - {}
+      grade2_multi_collector_A_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      csf_safety_in_my_online_neighborhood:
+        markdown: |-
+          #បណ្តាញអ្នកប្រើប្រាស់អុីនធើណេតដូចខ្ញុំដែរ
+
+          ## តើធ្វើយ៉ាងម៉េចដើម្បីអោយយើងផ្លាស់ពីកន្លែងមួយទៅមួយទៀតនៅលើអ៊ីនធឺណិតប្រកបដោយសុវត្ថិភាព?
+      Unit 1 Lesson 1 Overview:
+        markdown: |
+          #ទិដ្ឋភាពទូទៅ
+
+          នៅក្នុងថ្នាក់នេះ សិស្សត្រូវការធ្វើការជាក្រុមដើម្បីរចនាទូកបន្ទះអាលុយមីញ៉ូមដែលអាចជួយទ្រទ្រង់កាក់ជាច្រើនតាមដែលអាចធ្វើទៅបាន។ នៅចុងបញ្ចប់នៃមេរៀន ក្រុមទាំងអស់ត្រូវឆ្លុះបញ្ចាំងពីបទពិសោធន៍របស់ពួកគេជាមួយនឹងសកម្មភាពទាំងនោះ ព្រមទាំងផ្សារភ្ជាប់ទៅនឹងរបៀបនៃការដោះស្រាយបញ្ហាដែលពួកគេនឹងធ្វើសម្រាប់វគ្គសិក្សានេះទាំងស្រុង។
+        teacher_markdown: |-
+          [key]
+
+          * [ទូកអាលុយមុីញ៉ូម - គំរូ](https://docs.google.com/a/code.org/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/edit?usp=sharing) - Activity Guide ([PDF](https://docs.google.com/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/export?format=pdf) | [DOCX](https://docs.google.com/a/code.org/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/edit?usp=sharing))
+
+          [/key]
+      Unit 1 Lesson 2 Overview:
+        markdown: |-
+          # ទិដ្ឋភាពទូទៅ
+
+          នៅក្នុងមេរៀននេះអ្នកនឹងរៀនអំពីដំណើរការដោះស្រាយបញ្ហា ដែលនឹងជួយអ្នករៀបចំ  រចនាសម្ព័ន្ធ
+          វិធីសាស្រ្តរបស់អ្នក ចំពោះបញ្ហាជាច្រើន។
+
+
+          ## ធនធាន
+
+          * [ដំណើរការដោះស្រាយបញ្ហា - ការណែនាំអំពីសកម្មភាព](https://docs.google.com/document/d/1xEPMYIDy70fWCgyLymBNmxkE-6uJ7BYOXSmV8Vyt-SQ/export?format=pdf)
+        teacher_markdown: "* [ដំណើរការដោះស្រាយបញ្ហា](https://docs.google.com/document/d/1lWv8fKJO2ZRvObUx6Ys1MTVqcSC5ZUfKI8RRXGayRpY/)
+          - Activity Guide ([PDF](https://docs.google.com/document/d/1lWv8fKJO2ZRvObUx6Ys1MTVqcSC5ZUfKI8RRXGayRpY/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/1lWv8fKJO2ZRvObUx6Ys1MTVqcSC5ZUfKI8RRXGayRpY/export?format=doc))\n\n"
+      CSD U1 Lesson 5 Overview:
+        markdown: |-
+          # ទិដ្ឋភាពទូទៅ
+
+          នៅក្នុងមេរៀននេះ អ្នកនឹងរៀនអំពីប្រភេទផ្សេងៗនៃឧបករណ៍បញ្ចូលនិងបញ្ចេញព័ត៌មានដែលប្រើដោយកុំព្យូទ័រនិង ប្រភេទព័ត៌មានដែលពួកគេបញ្ជូននិងទទួល។
+
+          ## ពន្យល់ពាក្យ
+
+          * ** ការបញ្ចូល ** - ឧបករណ៍ ឬសមាសភាគណាមួយដែលអនុញ្ញាតឱ្យផ្តល់ព័ត៌មានទៅកុំព្យូទ័រ
+          * ** លទ្ធផល ** - ឧបករណ៍ឬ​ ឬសមាសភាគណាមួយដែលទទួលព័ត៌មានពីកុំព្យូទ័រ
+
+          ## ធនធាន
+
+          * [ការបញ្ចូលនិងលទ្ធផល - ការណែនាំសកម្មភាព] (https://docs.google.com/document/d/1ObS_kxkXoueaotPYFAEkcCDzn690zumqoLLnrU5kY2Q/export?format=pdf)
+      Unit 1 Lesson 3 Overview:
+        markdown: |-
+          # ទិដ្ឋភាពទូទៅ
+
+          ក្នុងមេរៀននេះ អ្នកនឹងអនុវត្តដំណើរការដោះស្រាយបញ្ហា​​ ទៅនឹងបញ្ហាផ្សេងៗទៀត ដើម្បីស្វែងយល់ពីដំណាក់កាលនីមួយៗដែលជួយអ្នកក្នុងការអភិវឌ្ឍនិង កែលម្អដំណោះស្រាយចំពោះបញ្ហា។
+        teacher_markdown: "[គន្លឹះនៃការដោះស្រាយបញ្ហា](https://docs.google.com/document/d/1hmbWujY2ii04XJRvoafIEtGyK-ZNBkJEtdSMFcXS5Uw/)
+          - Activity Guide ([PDF](https://docs.google.com/document/d/1hmbWujY2ii04XJRvoafIEtGyK-ZNBkJEtdSMFcXS5Uw/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/1hmbWujY2ii04XJRvoafIEtGyK-ZNBkJEtdSMFcXS5Uw/export?format=doc))\n"
+      Unit 1 Lesson 4 Overview:
+        markdown: |2-
+
+          # ទិដ្ឋភាពទូទៅ
+
+          នៅក្នុងមេរៀននេះ​ អ្នកនឹងចាប់ផ្តើមគិតអំពីរបៀបដែលកុំព្យូទ័រជួយដោះស្រាយបញ្ហាមួយចំនួននិង រៀនពីលក្ខណៈសំខាន់ៗរបស់កុំព្យូទ័រនីមួយៗ។
+
+          #ធនធាន
+
+          * [តើកុំព្យូទ័រគឺជាអ្វី? - Activity Guide](https://docs.google.com/document/d/1g4dPcsx2xADEZI0FiMYApLr0hh3_-89NDWd2y86sS6I/export?format=pdf)
+        teacher_markdown: "[តើកុំព្យូរទ័រគឺជាអ្វី? - Exemplar](https://docs.google.com/document/d/19QfEaVJcF85W6iZwITFIcPycO11znVjYTAaKO78VPH0/edit?usp=sharing)
+          - Activity Guide ([PDF](https://docs.google.com/document/d/19QfEaVJcF85W6iZwITFIcPycO11znVjYTAaKO78VPH0/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/19QfEaVJcF85W6iZwITFIcPycO11znVjYTAaKO78VPH0/export?format=doc))"
+      CSD U2 L1 Overview:
+        markdown: |-
+          # ទិដ្ឋភាពទូទៅ
+
+          មេរៀននេះនិយាយអំពីគោលបំណងដែលគេហទំព័រអាចបម្រើទាំងអ្នកប្រើប្រាស់និងអ្នកបង្កើត។ The class explores a handful of the most-used websites in the United States and discusses how each of those sites is useful for users and how it might also serve its creators.
+          ## Vocabulary
+
+          * **Website** - A location connected to the Internet that maintains one or more pages on the World Wide Web.
+
+
+          ## Resources
+
+          * [The Purpose of Websites - Activity Guide](https://docs.google.com/document/d/16M-x8qNr0tdpfoHqyKo4sdbTzFOy5rKp8IBYmTQ7xkU/export?format=pdf)

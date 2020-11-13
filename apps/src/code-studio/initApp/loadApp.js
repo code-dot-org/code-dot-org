@@ -4,9 +4,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {TestResults} from '@cdo/apps/constants';
 import {getStore} from '../redux';
-import {mergeProgress} from '../progressRedux';
+import {overwriteProgress, useDbProgress} from '../progressRedux';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import {setVerified} from '@cdo/apps/code-studio/verifiedTeacherRedux';
+import {
+  setAppLoadStarted,
+  setAppLoaded
+} from '@cdo/apps/code-studio/headerRedux';
 import {files} from '@cdo/apps/clientApi';
 var renderAbusive = require('./renderAbusive');
 var userAgentParser = require('./userAgentParser');
@@ -29,6 +33,7 @@ import queryString from 'query-string';
 import * as imageUtils from '@cdo/apps/imageUtils';
 import trackEvent from '../../util/trackEvent';
 import msg from '@cdo/locale';
+import _ from 'lodash';
 
 // Max milliseconds to wait for last attempt data from the server
 var LAST_ATTEMPT_TIMEOUT = 5000;
@@ -47,19 +52,23 @@ const SHARE_IMAGE_NAME = '_share_image.png';
  * @param {Object<number, TestResult>} serverProgress Mapping from levelId to TestResult
  */
 function mergeProgressData(scriptName, serverProgress) {
+  if (!serverProgress) {
+    return;
+  }
   const store = getStore();
-  store.dispatch(mergeProgress(serverProgress));
 
-  Object.keys(serverProgress).forEach(levelId => {
-    // Write down new progress in sessionStorage
-    clientState.trackProgress(
-      null,
-      null,
-      serverProgress[levelId],
-      scriptName,
-      levelId
-    );
-  });
+  // The server returned progress. This is the source of truth.
+  store.dispatch(useDbProgress());
+  clientState.clearProgress();
+
+  // Clear any existing redux state.
+  store.dispatch(
+    overwriteProgress(
+      _.mapValues(serverProgress, level =>
+        level.submitted ? TestResults.SUBMITTED_RESULT : level.result
+      )
+    )
+  );
 }
 
 /**
@@ -131,7 +140,10 @@ export function setupApp(appOptions) {
         // already stored in the channels API.)
         delete report.program;
         delete report.image;
-      } else if (report.testResult !== TestResults.SKIPPED) {
+      } else if (
+        report.testResult !== TestResults.SKIPPED &&
+        report.program !== undefined
+      ) {
         // Only locally cache non-channel-backed levels. Use a client-generated
         // timestamp initially (it will be updated with a timestamp from the server
         // if we get a response.
@@ -312,7 +324,12 @@ function loadProjectAndCheckAbuse(appOptions) {
         return;
       }
       if (project.getSharingDisabled()) {
-        renderAbusive(project, msg.sharingDisabled());
+        renderAbusive(
+          project,
+          msg.sharingDisabled({
+            sign_in_url: 'https://studio.code.org/users/sign_in'
+          })
+        );
         return;
       }
       resolve(appOptions);
@@ -383,8 +400,7 @@ function loadAppAsync(appOptions) {
         appOptions.disableSocialShare = data.disableSocialShare;
 
         // Merge progress from server (loaded via AJAX)
-        const serverProgress = data.progress || {};
-        mergeProgressData(appOptions.scriptName, serverProgress);
+        mergeProgressData(appOptions.scriptName, data.progress);
 
         if (!lastAttemptLoaded) {
           if (data.lastAttempt) {
@@ -426,6 +442,11 @@ function loadAppAsync(appOptions) {
         }
 
         const store = getStore();
+
+        // Note: We aren't guaranteed that currentUser.signInState will have been set at this point.
+        // It gets set on document.ready. However, it is highly unlikely that the server will return
+        // a response before document.ready is triggered. So far, this hasn't caused problems, so not
+        // worrying about this for now.
         const signInState = store.getState().currentUser.signInState;
         if (signInState === SignInState.SignedIn) {
           progress.showDisabledBubblesAlert();
@@ -486,9 +507,7 @@ const sourceHandler = {
     return new Promise((resolve, reject) => {
       let source;
       let appOptions = getAppOptions();
-      if (appOptions.level && appOptions.level.scratch) {
-        resolve(appOptions.getCode());
-      } else if (window.Blockly) {
+      if (window.Blockly) {
         // If we're readOnly, source hasn't changed at all
         source = Blockly.mainBlockSpace.isReadOnly()
           ? currentLevelSource
@@ -581,8 +600,10 @@ export default function loadAppOptions() {
       // immediately
       resolve(appOptions);
     } else {
+      getStore().dispatch(setAppLoadStarted());
       loadAppAsync(appOptions).then(appOptions => {
         project.init(sourceHandler);
+        getStore().dispatch(setAppLoaded());
         resolve(appOptions);
       });
     }

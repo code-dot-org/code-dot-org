@@ -40,7 +40,7 @@ The goal of Code.org's professional development is to prepare teachers like you 
     <td style="background-color:#d2da0e; color:black; border-style:none; vertical-align: text-top;"">18 lessons, ~18 hours to complete</td>
     <td style="background-color:#68ebf5; color:black; border-style:none; vertical-align: text-top;"">18 lessons, ~18 hours to complete</td>
     <td style="background-color:#9ed7ed; color:black; border-style:none; vertical-align: text-top;"">18 lessons, ~18-20 hours to complete</td>
-    <td style="background-color:#c9c1e9; color:black; border-style:none; vertical-align: text-top;"">18 lessons, ~20-22 hours to complete</td>
+    <td style="background-color:#c9c1e9; color:black; border-style:none; vertical-align: text-top;"">20 lessons, ~20-22 hours to complete</td>
   </tr>
   <tr>
     <td colspan="6" style="text-align:center;width:96%;background-color:#d9d9d9;color:black; border-style:none;">Concepts</td>
@@ -87,19 +87,19 @@ The goal of Code.org's professional development is to prepare teachers like you 
       <ul style="font-style:italic;">
         <li>Sprites</li>
         <li>Digital Citizenship</li>
-        <li>Impacts of Computing</li>
         <li>Nested Loops</li>
         <li>Functions</li>
+          <li>Impacts of Computing</li>
       </ul>
     </td>
     <td style="background-color:#c9c1e9; color:black; border-style:none; vertical-align: text-top;"">
       <ul style="font-style:italic;">
+        <li>Digital Citizenship</li>
         <li>Variables</li>
         <li>Data</li>
         <li>For Loops</li>
         <li>Internet</li>
         <li>Sprites</li>
-        <li>Digital Citizenship</li>
         </ul>
     </td>
 </table>

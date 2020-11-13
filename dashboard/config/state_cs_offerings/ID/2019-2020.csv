@@ -1,0 +1,95 @@
+school_name,state_school_id,nces_id,course_id,course_name,num_students_enrolled,num_students_female,num_students_black_or_african_american,num_students_hispanic_or_latino,num_students_american_indian_or_native_alaskan,num_students_native_hawaiian_or_pacific_islander,num_students_free_or_reduced_lunch,num_students_special_education_status,num_students_english_language_learner_status
+BOISE SENIOR HIGH SCHOOL,ID-001-0007,160036000044,2204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),78,28,1,1,1,0,**,**,**
+BORAH SENIOR HIGH SCHOOL,ID-001-0008,160036000045,2204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),86,27,1,7,1,0,10,**,**
+CAPITAL SENIOR HIGH SCHOOL,ID-001-0009,160036000047,2204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),14,3,0,2,0,0,**,**,**
+CAPITAL SENIOR HIGH SCHOOL,ID-001-0009,160036000047,3208,AP/Dual Credit Computer Science – Science (11th-12th grade content),34,8,0,8,1,0,9,**,**
+TIMBERLINE HIGH SCHOOL,ID-171-0087,160252000445,2204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),3,2,0,2,0,0,**,**,**
+TIMBERLINE HIGH SCHOOL,ID-171-0087,160252000445,3208,AP/Dual Credit Computer Science – Science (11th-12th grade content),110,38,1,5,0,2,7,**,**
+TREASURE VALLEY MATH/SCIENCE,ID-001-0573,160036000823,2204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),55,14,0,4,0,0,**,**,**
+EAST JUNIOR HIGH SCHOOL,ID-001-0677,160036001002,2204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),1,0,0,0,0,0,**,**,**
+EAGLE HIGH SCHOOL,ID-002-0112,160210000318,2204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),1,0,0,0,0,0,**,**,**
+ROCKY MOUNTAIN HIGH SCHOOL,ID-002-0898,160210000985,2204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),1,0,0,0,0,0,**,**,**
+SANDPOINT HIGH SCHOOL,ID-084-0202,160000200087,2204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),64,20,0,3,0,0,9,**,**
+SKYLINE SENIOR HIGH SCHOOL,ID-091-0053,160153000268,2204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),3,3,0,0,0,0,**,**,**
+COMPASS ACADEMY,ID-091-1350,160153001043,2204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),1,0,0,0,0,0,**,**,**
+BUTTE COUNTY MIDDLE/HIGH SCHOOL,ID-111-0059,160049000008,2204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),1,1,0,0,0,0,**,**,**
+SKYVIEW HIGH SCHOOL,ID-131-0994,160234000515,2204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),42,13,1,6,0,0,6,**,**
+CALDWELL SENIOR HIGH SCHOOL,ID-132-0065,160051000104,2204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),23,8,0,11,0,0,5,**,**
+PARMA HIGH SCHOOL,ID-137-0072,160255000451,2204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),2,0,0,0,0,0,**,**,**
+VALLIVUE HIGH SCHOOL,ID-139-0074,160060000118,2204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),72,15,0,16,1,0,23,**,**
+SODA SPRINGS HIGH SCHOOL,ID-150-0079,160300000526,2204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),2,1,0,0,0,0,**,**,**
+SODA SPRINGS HIGH SCHOOL,ID-150-0079,160300000526,3208,AP/Dual Credit Computer Science – Science (11th-12th grade content),10,2,0,0,0,0,**,**,**
+BURLEY SENIOR HIGH SCHOOL,ID-151-0081,160066000124,2204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),1,1,0,1,0,0,**,**,**
+CHALLIS JR/SR HIGH SCHOOL,ID-181-0089,160072000140,2204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),6,4,0,0,0,0,**,**,**
+MACKAY JR/SR HIGH SCHOOL,ID-182-0090,160190000332,2204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),1,1,0,0,0,0,**,**,**
+PRESTON HIGH SCHOOL,ID-201-0096,160096000182,2204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),12,1,0,0,0,0,**,**,**
+NORTH FREMONT JR/SR HIGH SCHOOL,ID-215-0100,160111000203,2204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),1,0,0,0,0,0,**,**,**
+HAGERMAN SCHOOL,ID-233-0280,160138000840,2204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),1,0,0,0,0,0,**,**,**
+BLISS SCHOOL,ID-234-0714,160033000040,2204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),1,0,0,0,0,0,**,**,**
+SALMON RIVER JR/SR HIGH SCHOOL,ID-243-1281,160013800944,2204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),1,0,0,0,0,0,**,**,**
+COEUR D'ALENE HIGH SCHOOL,ID-271-0122,160078000149,2204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),25,7,0,2,0,0,**,**,**
+LAKELAND SENIOR HIGH SCHOOL,ID-272-0124,160180000311,2204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),1,1,0,0,0,0,**,**,**
+TIMBERLAKE SENIOR HIGH SCHOOL,ID-272-0586,160180000843,2204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),2,0,0,1,0,0,**,**,**
+MOSCOW HIGH SCHOOL,ID-281-0130,160222000394,2204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),32,9,1,1,0,0,**,**,**
+RICHFIELD SCHOOL,ID-316-0144,160276000497,2204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),1,0,0,0,0,0,**,**,**
+MADISON SENIOR HIGH SCHOOL,ID-321-0146,160192000341,2204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),22,2,0,0,0,1,**,**,**
+LEWISTON HIGH SCHOOL,ID-340-0153,160186000323,2204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),15,9,0,0,1,2,**,**,**
+MALAD SENIOR HIGH SCHOOL,ID-351-0156,160249000433,3208,AP/Dual Credit Computer Science – Science (11th-12th grade content),9,2,0,0,0,0,**,**,**
+NEW PLYMOUTH HIGH SCHOOL,ID-372-0164,160237000736,2204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),4,0,0,0,0,0,**,**,**
+KELLOGG HIGH SCHOOL,ID-391-0171,160165000293,2204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),12,5,0,1,0,0,**,**,**
+FILER HIGH SCHOOL,ID-413-0181,160105000194,2204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),1,0,0,0,0,0,**,**,**
+MCCALL-DONNELLY HIGH SCHOOL,ID-421-0189,160203000354,3208,AP/Dual Credit Computer Science – Science (11th-12th grade content),17,2,0,0,0,0,**,**,**
+WEISER HIGH SCHOOL,ID-431-0192,160333000568,2204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),39,10,0,10,1,0,13,**,**
+VICTORY CHARTER SCHOOL,ID-451-0868,160000300858,2204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),2,1,0,0,0,0,**,**,**
+IDAHO VIRTUAL ACADEMY,ID-452-0869,160000400859,2204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),1,1,0,0,0,0,**,**,**
+LIBERTY CHARTER SCHOOL,ID-458-0587,160001200867,2204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),5,0,0,1,0,0,**,**,**
+VISION CHARTER SCHOOL,ID-463-0888,160014100942,3208,AP/Dual Credit Computer Science – Science (11th-12th grade content),8,1,0,1,0,0,**,**,**
+iSUCCEED VIRTUAL HIGH SCHOOL,ID-466-0654,160014400967,3208,AP/Dual Credit Computer Science – Science (11th-12th grade content),2,1,0,0,0,0,**,**,**
+NORTH IDAHO STEM CHARTER ACADEMY,ID-480-1342,160016001020,3208,AP/Dual Credit Computer Science – Science (11th-12th grade content),7,0,0,0,0,0,**,**,**
+IDAHO TECHNICAL CAREER ACADEMY,ID-489-1368,160017101069,2204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),1,0,0,0,0,0,**,**,**
+COEUR D'ALENE CHARTER ACADEMY SCHOOL,ID-491-1370,160017300765,2204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),9,2,0,1,0,0,**,**,**
+THOMAS JEFFERSON CHARTER,ID-139-0559,160060000839,2204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),1,0,0,1,0,0,**,**,**
+SOUTHEAST IDAHO PROFESSIONAL TECHNICAL SCHOOL,ID-201-1349,160096001045,2204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),2,0,0,0,0,0,**,**,**
+SOUTHEAST IDAHO PROFESSIONAL TECHNICAL SCHOOL,ID-201-1349,160096001045,3208,AP/Dual Credit Computer Science – Science (11th-12th grade content),1,0,0,0,0,0,**,**,**
+MERIDIAN TECHNICAL CHARTER HIGH SCHOOL,ID-002-0257,160210000759,2204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),1,0,0,1,0,0,**,**,**
+IDAHO ARTS CHARTER SCHOOL,ID-131-0577,160234000834,2204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),1,0,0,0,0,0,**,**,**
+CENTENNIAL HIGH SCHOOL,ID-002-0015,160210000674,101522,Programming & Software Development I,75,7,2,8,0,0,10,**,**
+CENTENNIAL HIGH SCHOOL,ID-002-0015,160210000674,101523,Programming & Software Development II,31,7,0,0,1,0,**,**,**
+KUNA HIGH SCHOOL,ID-003-0014,160177000307,101522,Programming & Software Development I,42,9,0,2,0,0,7,**,**
+KUNA HIGH SCHOOL,ID-003-0014,160177000307,101523,Programming & Software Development II,22,1,0,3,0,0,**,**,**
+CENTURY HIGH SCHOOL,ID-025-0956,160264000646,101520,Computer Programming & Software Development I,70,3,0,5,0,0,27,**,**
+SNAKE RIVER HIGH SCHOOL,ID-052-0032,160297000521,101520,Computer Programming & Software Development I,15,3,0,0,0,1,**,**,**
+BLACKFOOT HIGH SCHOOL,ID-055-0034,160027000022,101520,Computer Programming & Software Development I,21,5,0,5,1,0,13,**,**
+WOOD RIVER HIGH SCHOOL,ID-061-0042,160030000038,101522,Programming & Software Development I,15,2,0,8,0,0,5,7,**
+PRIEST RIVER LAMANNA HIGH,ID-083-0048,160000100084,101520,Computer Programming & Software Development I,6,2,0,0,0,0,**,**,**
+IDAHO FALLS SENIOR HIGH SCHOOL,ID-091-0054,160153000262,101522,Programming & Software Development I,80,17,0,20,0,0,31,8,**
+IDAHO FALLS SENIOR HIGH SCHOOL,ID-091-0054,160153000262,101523,Programming & Software Development II,55,12,1,6,0,0,17,12,**
+BONNEVILLE HIGH SCHOOL,ID-093-0056,160093000169,101520,Computer Programming & Software Development I,11,2,0,3,0,0,5,**,**
+BONNEVILLE ONLINE SCHOOL,ID-093-1319,160093001050,101520,Computer Programming & Software Development I,20,7,0,3,0,0,**,**,**
+TECHNICAL CAREERS HIGH SCHOOL,ID-093-1357,160093001063,101522,Programming & Software Development I,38,2,0,4,0,0,7,10,**
+TECHNICAL CAREERS HIGH SCHOOL,ID-093-1357,160093001063,101523,Programming & Software Development II,13,2,0,1,0,0,**,**,**
+BONNERS FERRY HIGH SCHOOL,ID-101-0057,160042000089,101520,Computer Programming & Software Development I,22,4,0,3,0,0,9,**,**
+COLUMBIA HIGH SCHOOL,ID-131-0638,160234000870,101522,Programming & Software Development I,24,4,0,4,0,0,11,**,**
+COLUMBIA HIGH SCHOOL,ID-131-0638,160234000870,101523,Programming & Software Development II,10,2,0,2,0,0,**,**,**
+RIDGEVUE HIGH SCHOOL,ID-139-1380,160060001078,101522,Programming & Software Development I,16,3,2,3,0,0,5,**,**
+RIDGEVUE HIGH SCHOOL,ID-139-1380,160060001078,101523,Programming & Software Development II,6,1,0,0,0,0,**,**,**
+CASSIA REGIONAL TECHNICAL CENTER,ID-151-0568,160066000782,101522,Programming & Software Development I,33,5,0,14,0,0,19,**,**
+OROFINO HIGH SCHOOL,ID-171-0088,160252000440,101520,Computer Programming & Software Development I,2,0,0,0,0,0,**,**,**
+MOUNTAIN HOME SR HIGH SCHOOL,ID-193-0095,160225000397,101520,Computer Programming & Software Development I,47,12,3,8,0,0,15,8,**
+MOUNTAIN HOME SR HIGH SCHOOL,ID-193-0095,160225000397,101523,Programming & Software Development II,1,0,0,0,0,0,**,**,**
+HAGERMAN SCHOOL,ID-233-0280,160138000840,101520,Computer Programming & Software Development I,1,0,0,0,0,0,**,**,**
+PRAIRIE JR/SR HIGH SCHOOL,ID-242-0111,160081000161,101520,Computer Programming & Software Development I,3,0,0,0,0,0,**,**,**
+RIGBY HIGH SCHOOL,ID-251-0114,160157000277,101520,Computer Programming & Software Development I,72,11,0,13,1,0,26,**,**
+JEROME HIGH SCHOOL,ID-261-0118,160159000284,101522,Programming & Software Development I,68,14,1,25,1,0,29,**,6
+LAKE CITY HIGH SCHOOL,ID-271-0220,160078000291,101522,Programming & Software Development I,2,0,0,0,0,0,**,**,**
+NEZPERCE SCHOOL,ID-302-0272,160240000848,101520,Computer Programming & Software Development I,13,5,0,0,0,0,5,**,**
+KAMIAH HIGH SCHOOL,ID-304-0231,160162000457,101520,Computer Programming & Software Development I,1,0,0,0,0,0,**,**,**
+TWIN FALLS HIGH SCHOOL,ID-411-0178,160324000555,101522,Programming & Software Development I,17,2,0,1,0,0,**,**,**
+CANYON RIDGE HIGH SCHOOL,ID-411-1237,160324000998,10157,AP Computer Science A ,1,0,0,0,0,0,**,**,**
+KIMBERLY HIGH SCHOOL,ID-414-0182,160171000635,101522,Programming & Software Development I,20,1,0,2,0,0,**,**,**
+PROJECT IMPACT STEM ACADEMY,ID-513-1413,160018201102,101522,Programming & Software Development I,8,5,0,2,0,0,**,**,**
+PROJECT IMPACT STEM ACADEMY,ID-513-1413,160018201102,101523,Programming & Software Development II,10,7,0,0,0,0,**,**,**
+ARTE I RPTCS (Regional Professional Technical Charter School),ID-518-1414,160018501095,101522,Programming & Software Development I,9,1,0,1,0,0,**,**,**
+MERIDIAN TECHNICAL CHARTER HIGH SCHOOL,ID-002-0257,160210000759,101522,Programming & Software Development I,16,0,0,1,0,0,**,**,**
+MERIDIAN TECHNICAL CHARTER HIGH SCHOOL,ID-002-0257,160210000759,101523,Programming & Software Development II,7,1,0,0,0,0,**,**,**
+ARTEC CHARTER SCHOOL,ID-331-0639,160219000883,101522,Programming & Software Development I,9,1,0,1,0,0,**,**,**

@@ -15,7 +15,7 @@
   "danceFeedbackPressedKey": "Je drukte op een toets, maar je danser reageerde niet.",
   "danceFeedbackNeedTwoDancers": "Je moet twee dansers maken.",
   "danceFeedbackOnlyOneDancerMoved": "Slechts één van je dansers bewoog.",
-  "danceFeedbackNeedLead": "Je moet ook een leaddancer maken met het blok <xml><block type=\"Dancelab_makeAnonymousDanceSprite\"><title name=\"COSTUME\">???</title><title name=\"LOCATION\">\\{x: 200, y: 200\\}</title></block></xml>.",
+  "danceFeedbackNeedLead": "Je moet ook een leaddancer maken met het blok <xml><block type=\"Dancelab_makeAnonymousDanceSprite\"><title name=\"COSTUME\">???</title><title name=\"LOCATION\">'{'x: 200, y: 200'}'</title></block></xml>.",
   "danceFeedbackNeedBackup": "Je moet een groep back-up dansers met het blok <xml><block type=\"Dancelab_makeNewDanceSpriteGroup\"><title name=\"N\">10</title><title name=\"COSTUME\">\"UNICORN\"</title><title name=\"LAYOUT\">\"circle\"</title></block></xml>.",
   "danceFeedbackSetSize": "Je moet de grootte van ten minste één danser veranderen nadat de muziek begint.",
   "measure": "Maten:"

@@ -14,17 +14,12 @@
   .field
     = f.label :urban
     = f.check_box :urban
-  - %w(csd csp).each do |course|
-    - %w(teacher facilitator).each do |role|
-      .field
-        = f.label nil, "Apps Open Date for #{course.upcase} #{role} (YYYY-MM-DD)"
-        = f.text_field "apps_open_date_#{course}_#{role}".to_sym
-      .field
-        = f.label nil, "Apps Close Date for #{course.upcase} #{role} (YYYY-MM-DD)"
-        = f.text_field "apps_close_date_#{course}_#{role}".to_sym
   .field
-    = f.label nil, "Apps Priority Deadline Date (YYYY-MM-DD)"
-    = f.text_field :apps_priority_deadline_date
+    = f.label nil, "Apps Open Date for Teachers (YYYY-MM-DD)"
+    = f.text_field :apps_open_date_teacher
+  .field
+    = f.label nil, "Apps Close Date for Teachers (YYYY-MM-DD)"
+    = f.text_field :apps_close_date_teacher
   .field
     = f.label nil, "Applications Principal Approval"
     .applications_principal_approval
@@ -46,10 +41,6 @@
   .field
     = f.label :link_to_partner_application
     = f.text_field :link_to_partner_application, {style: 'width: 500px'}
-  -%w(csd csp).each do |course|
-    .field
-      = f.label nil, "#{course.upcase} Cost"
-      = f.text_field "#{course}_cost".to_sym
   .field
     = f.label nil, "Program information"
     = f.text_area :cost_scholarship_information, {style: 'width: 500px'}
@@ -63,27 +54,6 @@
     = f.label :contact_email
     = f.text_field :contact_email
   .field
-    = f.label :attention
-    = f.text_field :attention
-  .field
-    = f.label :street
-    = f.text_field :street
-  .field
-    = f.label :apartment_or_suite
-    = f.text_field :apartment_or_suite
-  .field
-    = f.label :city
-    = f.text_field :city
-  .field
-    = f.label :state
-    = f.text_field :state
-  .field
-    = f.label :zip_code
-    = f.text_field :zip_code
-  .field
     = f.label :phone_number
     = f.text_field :phone_number
-  .field
-    = f.label :notes
-    = f.text_area :notes
   %button.btn.btn-primary{type: 'submit', style: 'margin: 0'} Save

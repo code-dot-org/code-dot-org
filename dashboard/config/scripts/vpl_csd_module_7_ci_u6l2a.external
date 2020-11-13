@@ -1,0 +1,28 @@
+name 'VPL - CSD - Module 7 - CI - U6L2a'
+editor_experiment ''
+display_name 'Introduction to Debugging'
+
+title 'Debugging Session'
+markdown <<MARKDOWN
+#Unit 6 - Lesson 2:  Designing Screens with Code 
+
+Let's put our "student hat" on and explore the same levels we just previewed, but this time keeping our students in mind.
+
+
+## Investigation Goal
+
+**Explore designing in App Lab with setProperties()**
+
+## Investigation Tasks
+
+* Practice using App Lab and setProperties() in Lesson 2, Levels 1 through 5 (click continue to begin)
+
+
+
+
+
+
+
+
+
+MARKDOWN

@@ -120,12 +120,47 @@ class LevelTest < ActiveSupport::TestCase
     assert_not custom_levels.include?(@level)
   end
 
+  test "should not allow pairing with levelgroup type levels" do
+    level = Level.create({type: "LevelGroup"})
+    assert_equal level.should_allow_pairing?(0), false
+  end
+
+  test "should allow pairing with non levelgroup type levels" do
+    level = Level.create
+    assert_equal level.should_allow_pairing?(0), true
+  end
+
+  test "should not allow pairing when the parent is a levelgroup" do
+    parent = create :level_group, name: 'LevelGroupLevel', type: 'LevelGroup'
+    child = create :level
+    parent.child_levels << child
+    script = create :script
+    create :script_level, script: script, levels: [parent]
+    assert_equal [parent], child.parent_levels
+
+    assert_equal child.should_allow_pairing?(script.id), false
+  end
+
   test "summarize returns object with expected fields" do
     summary = @level.summarize
     assert_equal(summary[:level_id], @level.id)
     assert_equal(summary[:type], 'Maze')
     assert_equal(summary[:name], '__bob4')
     assert_nil(summary[:display_name])
+  end
+
+  test "summarize_for_edit returns object with expected fields" do
+    user = User.create(name: 'Best Curriculum Writer')
+    level = Level.create!(name: 'test_level', type: 'Maze', user: user, updated_at: Time.new(2020, 3, 27, 0, 0, 0, "-07:00"))
+
+    summary = level.summarize_for_edit
+
+    assert_equal(summary[:id], level.id)
+    assert_equal(summary[:type], 'Maze')
+    assert_equal(summary[:name], 'test_level')
+    assert_equal(summary[:owner], 'Best Curriculum Writer')
+    assert(summary[:updated_at].include?("03/27/20 at")) # The time is different locally than on drone
+    assert_equal(summary[:url], "/levels/#{level.id}/edit")
   end
 
   test "get_question_text returns question text for free response level" do
@@ -272,12 +307,6 @@ class LevelTest < ActiveSupport::TestCase
       level.save!
     end
     assert_equal time, level.updated_at.to_i
-  end
-
-  test 'update_ideal_level_source does nothing for maze levels' do
-    level = Maze.first
-    level.update_ideal_level_source
-    assert_nil level.ideal_level_source
   end
 
   test 'artist levels are seeded with solutions' do
@@ -995,9 +1024,126 @@ class LevelTest < ActiveSupport::TestCase
 
   test 'contained_level_names filters blank names before validation' do
     level = build :level
+    create :level, name: 'real_name'
     level.contained_level_names = ['', 'real_name']
     assert_equal level.contained_level_names, ['', 'real_name']
     level.valid?
     assert_equal level.contained_level_names, ['real_name']
+  end
+
+  test 'parent levels and child levels' do
+    parent = create :level
+    child = create :level
+    parent.child_levels << child
+    assert_equal [parent], child.parent_levels
+
+    # cannot add the same child a second time
+    assert_raises ActiveRecord::RecordInvalid do
+      parent.child_levels << child
+    end
+
+    # cannot add the same parent a second time
+    assert_raises ActiveRecord::RecordInvalid do
+      child.parent_levels << parent
+    end
+  end
+
+  test 'child levels are in order of position' do
+    parent = create :level
+    child3 = create :level
+    child2 = create :level
+    child1 = create :level
+    ParentLevelsChildLevel.find_or_create_by!(
+      parent_level: parent,
+      child_level: child3,
+      position: 3
+    )
+    ParentLevelsChildLevel.find_or_create_by!(
+      parent_level: parent,
+      child_level: child1,
+      position: 1
+    )
+    ParentLevelsChildLevel.find_or_create_by!(
+      parent_level: parent,
+      child_level: child2,
+      position: 2
+    )
+    assert_equal [child1, child2, child3], parent.child_levels
+  end
+
+  test 'all_descendant_levels works on self-referential project template levels' do
+    level_name = 'project-template-level'
+    level = create :level, name: level_name, properties: {project_template_level_name: level_name}
+    assert_equal level, level.project_template_level
+
+    assert_equal [], level.all_descendant_levels, 'omit self from descendant levels'
+  end
+
+  test 'hint_prompt_enabled is true for levels in a script where hint_prompt_enabled is true' do
+    script = create :csf_script
+    assert script.hint_prompt_enabled?
+    level = create :level
+    create :script_level, levels: [level], script: script
+    assert level.hint_prompt_enabled?
+  end
+
+  test 'hint_prompt_enabled is true for levels in many scripts if at least one script is hint_prompt_enabled' do
+    hint_script = create :csf_script
+    assert hint_script.hint_prompt_enabled?
+    no_hint_script = create :csp_script
+    refute no_hint_script.hint_prompt_enabled?
+    level = create :level
+    create :script_level, levels: [level], script: hint_script
+    create :script_level, levels: [level], script: no_hint_script
+    assert level.hint_prompt_enabled?
+  end
+
+  test 'hint_prompt_enabled is false for levels in scripts where hint_prompt_enabled is false' do
+    no_hint_script = create :csp_script
+    refute no_hint_script.hint_prompt_enabled?
+    level = create :level
+    create :script_level, levels: [level], script: no_hint_script
+    refute level.hint_prompt_enabled?
+  end
+
+  test 'validates game' do
+    error = assert_raises ActiveRecord::RecordInvalid do
+      create :level, game: nil
+    end
+    assert_includes error.message, 'Game required for non-custom levels'
+
+    level = create :level
+    level.game = nil
+    error = assert_raises ActiveRecord::RecordInvalid do
+      level.save!
+    end
+    assert_includes error.message, 'Game required for non-custom levels'
+  end
+
+  test 'key list' do
+    # Make sure there are no levels from test fixtures for which computing a
+    # level key raises errors.
+    Level.key_list
+  end
+
+  test "get search options" do
+    search_options = Level.search_options
+    assert_equal search_options[:levelOptions].map {|option| option[0]}, [
+      "All types", "Ailab", "Applab", "Artist", "Bounce", "BubbleChoice", "Calc", "ContractMatch",
+      "Craft", "CurriculumReference", "Dancelab", "Eval", "EvaluationMulti", "External",
+      "ExternalLink", "Fish", "Flappy", "FreeResponse", "FrequencyAnalysis", "Gamelab",
+      "GamelabJr", "Karel", "LevelGroup", "Map", "Match", "Maze", "Multi", "NetSim",
+      "Odometer", "Pixelation", "PublicKeyCryptography", "StandaloneVideo",
+      "StarWarsGrid", "Studio", "TextCompression", "TextMatch", "Unplugged",
+      "Vigenere", "Weblab"
+    ]
+    scripts = [
+      "All scripts", "20-hour", "algebra", "artist", "course1", "course2",
+      "course3", "course4", "coursea-2017", "courseb-2017", "coursec-2017",
+      "coursed-2017", "coursee-2017", "coursef-2017", "express-2017", "flappy",
+      "frozen", "hourofcode", "jigsaw", "playlab", "pre-express-2017", "starwars"
+    ]
+    assert (scripts - search_options[:scriptOptions].map {|option| option[0]}).empty?
+    assert (["Any owner"] - search_options[:ownerOptions].map {|option| option[0]}).empty?
   end
 end

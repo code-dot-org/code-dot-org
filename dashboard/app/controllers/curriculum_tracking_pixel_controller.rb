@@ -19,7 +19,7 @@ class CurriculumTrackingPixelController < ApplicationController
       # ["csf-18", "pre-express", "11"]
       # ["es-mx", "csf-1718", "coursec", "10"]
 
-      non_en = split_url[0].length == 5 && !!split_url[0].match(/\S{2}-\S{2}/)
+      non_en = split_url[0]&.length == 5 && !!split_url[0].match(/\S{2}-\S{2}/)
 
       locale = non_en ? split_url.shift : "en-us"
 
@@ -42,17 +42,20 @@ class CurriculumTrackingPixelController < ApplicationController
       end
 
       FirehoseClient.instance.put_record(
-        study: STUDY_NAME,
-        study_group: 'v1',
-        event: EVENT_NAME,
-        user_id: user_id,
-        data_string: curriculum_page,
-        data_json: {
-          locale: locale,
-          csx: csx,
-          course_or_unit: course_or_unit,
-          lesson: lesson
-        }.to_json
+        :analysis,
+        {
+          study: STUDY_NAME,
+          study_group: 'v1',
+          event: EVENT_NAME,
+          user_id: user_id,
+          data_string: curriculum_page,
+          data_json: {
+            locale: locale,
+            csx: csx,
+            course_or_unit: course_or_unit,
+            lesson: lesson
+          }.to_json
+        }
       )
     end
 

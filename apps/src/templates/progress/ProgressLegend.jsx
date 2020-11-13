@@ -217,13 +217,13 @@ export default class ProgressLegend extends Component {
               </div>
             </TD>
             <TD style={styles.rightBorder}>
-              <div style={styles.iconAndTextDiv}>
+              <div style={styles.iconAndTextDivTop}>
                 <FontAwesome icon="list-ul" style={styles.icon} />
                 {i18n.question()}
               </div>
-              {/* Blank space to keep spacing consistent */}
-              <div style={styles.conAndTextDivBottom}>
-                <FontAwesome icon="" style={styles.icon} />{' '}
+              <div style={styles.iconAndTextDivBottom}>
+                <FontAwesome icon="sitemap" style={styles.icon} />
+                {i18n.choiceLevel()}
               </div>
             </TD>
             <TD rowSpan={secondRowRowSpan}>

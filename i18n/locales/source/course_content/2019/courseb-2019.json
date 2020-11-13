@@ -38,8 +38,8 @@
     }
   },
   "https://studio.code.org/s/courseb-2019/stage/3/puzzle/5": {
-    "short_instructions": "Add a `North` block to the bottom of the other blocks to finish this code, then click \"Run\".",
-    "long_instructions": "There's an extra block at the end of this code!  \n\nDrag it back to the toolbox to throw it away.",
+    "short_instructions": "Remove the last block in the sequence by dragging it to the toolbox, then click \"Run\".",
+    "long_instructions": "There's an extra [blockly block][0] block at the end of this code!  \n\nDrag it back to the toolbox to throw it away.",
     "authored_hints": {
       "1": "Your code should look like this:\n\n[blockly block][0]"
     }
@@ -529,8 +529,10 @@
       "courseB_artist_loops_challenge2_a": "The code to draw an X is already given to you. All you need to do is repeat the X and `jump` to the next spot.",
       "courseB_artist_loops_challenge2_b": "You can use `jump` blocks to move to other spaces without drawing."
     },
-    "function_names": {
-      "potential solution": "potential solution"
+    "function_definitions": {
+      "potential solution": {
+        "name": "potential solution"
+      }
     }
   },
   "https://studio.code.org/s/courseb-2019/stage/10/puzzle/1": {

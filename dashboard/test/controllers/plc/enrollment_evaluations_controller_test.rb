@@ -10,8 +10,8 @@ class Plc::EnrollmentEvaluationsControllerTest < ActionController::TestCase
 
     # I used the dialogue from Monty Python because it's actually a decent example of an evaluation quiz that isn't
     # the same for everyone. Not all users taking an examination will answer the exact same questions.
-    @course = create(:plc_course)
-    @course_unit = create(:plc_course_unit, plc_course: @course)
+    @plc_course = create(:plc_course)
+    @course_unit = create(:plc_course_unit, plc_course: @plc_course)
 
     @module_required = create(:plc_learning_module, name: 'Required', plc_course_unit: @course_unit, module_type: Plc::LearningModule::REQUIRED_MODULE)
 
@@ -24,7 +24,7 @@ class Plc::EnrollmentEvaluationsControllerTest < ActionController::TestCase
     @user = create :teacher
     sign_in(@user)
 
-    @enrollment = create(:plc_user_course_enrollment, user: @user, plc_course: @course)
+    @enrollment = create(:plc_user_course_enrollment, user: @user, plc_course: @plc_course)
     @unit_assignment = @enrollment.plc_unit_assignments.first
   end
 

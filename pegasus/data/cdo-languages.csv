@@ -25,7 +25,7 @@ ga,ga,ga,ga-IE,Gaeilge,Irish,TRUE,FALSE,ga-IE,Irish,TRUE,TRUE,FALSE,TRUE,TRUE
 gl,gl,gl,gl-ES,Galego,Galician,TRUE,FALSE,gl,Galician,FALSE,FALSE,FALSE,FALSE,FALSE
 haw,ha,haw,haw-HI,ʻŌlelo Hawaiʻi,Hawaiian,FALSE,FALSE,haw,Hawaiian,FALSE,TRUE,FALSE,TRUE,FALSE
 he,he,he,he-IL,עברית,Hebrew,TRUE,TRUE,he,Hebrew,FALSE,FALSE,FALSE,FALSE,FALSE
-hi,hi,hi,hi-IN,हिन्दी,Hindi,FALSE,TRUE,hi,Hindi,FALSE,FALSE,FALSE,TRUE,FALSE
+hi,hi,hi,hi-IN,हिन्दी,Hindi,TRUE,TRUE,hi,Hindi,FALSE,FALSE,FALSE,TRUE,FALSE
 hr,hr,hr,hr-HR,Hrvatski,Croatian,TRUE,TRUE,hr,Croatian,FALSE,TRUE,TRUE,TRUE,FALSE
 hu,hu,hu,hu-HU,Magyar,Hungarian,TRUE,TRUE,hu,Hungarian,TRUE,TRUE,FALSE,TRUE,FALSE
 hy,hy,hy,hy-AM,Հայերեն,Armenian,TRUE,FALSE,hy-AM,Armenian,FALSE,FALSE,FALSE,TRUE,FALSE
@@ -42,7 +42,7 @@ ky,ky,ky,ky-KG,Кыргызча,Kyrgyz,TRUE,TRUE,ky,Kyrgyz,FALSE,FALSE,FALSE,FAL
 lt,lt,lt,lt-LT,Lietuvių,Lithuanian,TRUE,FALSE,lt,Lithuanian,FALSE,FALSE,FALSE,FALSE,TRUE
 lv,lv,lv,lv-LV,Latviešu,Latvian,TRUE,TRUE,lv,Latvian,FALSE,FALSE,FALSE,FALSE,FALSE
 mi,mi,mi,mi-NZ,Māori (NZ),Maori,TRUE,TRUE,mi,Maori,FALSE,FALSE,FALSE,FALSE,TRUE
-mk,mk,mk,mk-MK,Mакедонски,Macedonian (FYROM),FALSE,FALSE,mk,Macedonian (FYROM),FALSE,FALSE,FALSE,FALSE,FALSE
+mk,mk,mk,mk-MK,Mакедонски,Macedonian (FYROM),FALSE,FALSE,mk,Macedonian,FALSE,FALSE,FALSE,FALSE,FALSE
 mn,mn,mn,mn-MN,Монгол хэл,Mongolian,TRUE,FALSE,mn,Mongolian,FALSE,FALSE,FALSE,FALSE,FALSE
 mr,mr,mr,mr-IN,मराठी,Marathi,TRUE,TRUE,mr,Marathi,FALSE,FALSE,FALSE,FALSE,FALSE
 ms,ms,ms,ms-MY,بهاس ملايو,Malay,FALSE,TRUE,ms,Malay,FALSE,FALSE,FALSE,FALSE,FALSE

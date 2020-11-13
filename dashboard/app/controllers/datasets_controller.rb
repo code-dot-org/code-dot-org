@@ -6,7 +6,8 @@ class DatasetsController < ApplicationController
   before_action :initialize_firebase
   authorize_resource class: false
 
-  LIVE_DATASETS = ['Daily Weather', 'Top 200 USA', 'Top 200 Worldwide', 'Viral 50 USA', 'Viral 50 Worldwide']
+  LIVE_DATASETS = ['Daily Weather', 'Top 200 USA', 'Top 200 Worldwide', 'Viral 50 USA', 'Viral 50 Worldwide',
+                   'COVID-19 Cases per US State', 'COVID-19 Cases per Country']
 
   # GET /datasets
   def index
@@ -18,21 +19,27 @@ class DatasetsController < ApplicationController
   # GET /datasets/:dataset_name/
   def show
     @table_name = params[:dataset_name]
-    @dataset = @firebase.get_shared_table URI.escape(params[:dataset_name])
+    @dataset = @firebase.get_shared_table params[:dataset_name]
     @live_datasets = LIVE_DATASETS
   end
 
   # POST /datasets/:dataset_name/
   def update
     records, columns = @firebase.csv_as_table(params[:csv_data])
-    @firebase.delete_shared_table URI.escape(params[:dataset_name])
-    response = @firebase.upload_shared_table(URI.escape(params[:dataset_name]), records, columns)
+    @firebase.delete_shared_table params[:dataset_name]
+    response = @firebase.upload_shared_table(params[:dataset_name], records, columns)
     data = {}
     if response.success?
       data[:records] = records
       data[:columns] = columns
     end
     render json: data, status: response.code
+  end
+
+  # DELETE /datasets/:dataset_name/
+  def destroy
+    response = @firebase.delete_shared_table params[:dataset_name]
+    render json: {}, status: response.code
   end
 
   # GET /datasets/manifest/edit
@@ -44,7 +51,7 @@ class DatasetsController < ApplicationController
   def update_manifest
     parsed_manifest = JSON.parse(params['manifest'])
     response = @firebase.set_library_manifest parsed_manifest
-    return head response.code
+    render json: {}, status: response.code
   rescue JSON::ParserError
     render json: {msg: 'Invalid JSON'}
   end

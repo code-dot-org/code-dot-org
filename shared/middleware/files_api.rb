@@ -323,7 +323,7 @@ class FilesApi < Sinatra::Base
     buckets = get_bucket_impl(endpoint).new
     bad_request unless buckets.allowed_file_name? filename
 
-    # verify that file type is in our whitelist, and that the user-specified
+    # verify that file type is in our allowlist, and that the user-specified
     # mime type matches what Sinatra expects for that file type.
     file_type = File.extname(filename)
     unsupported_media_type unless buckets.allowed_file_type?(file_type)
@@ -336,6 +336,9 @@ class FilesApi < Sinatra::Base
       quota_exceeded(endpoint, encrypted_channel_id) unless app_size + body.length < max_app_size
       quota_crossed_half_used(endpoint, encrypted_channel_id) if quota_crossed_half_used?(app_size, body.length)
     end
+
+    # Block libraries with PII/profanity from being published.
+    return bad_request if endpoint == 'libraries' && ShareFiltering.find_failure(body, request.locale)
 
     # Replacing a non-current version of main.json could lead to perceived data loss.
     # Log to firehose so that we can better troubleshoot issues in this case.
@@ -378,7 +381,7 @@ class FilesApi < Sinatra::Base
     buckets = get_bucket_impl(endpoint).new
     bad_request unless buckets.allowed_file_name? filename
 
-    # verify that file type is in our whitelist, and that the user-specified
+    # verify that file type is in our allowlist, and that the user-specified
     # mime type matches what Sinatra expects for that file type.
     file_type = File.extname(filename)
     unsupported_media_type unless buckets.allowed_file_type?(file_type)

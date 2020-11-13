@@ -1,12 +1,18 @@
 ---
-title: How-to Guide
+title: Hour of Code How-to Guide for After-school
 ---
 
 {{ signup_button }}
 
 # স্কুল ও পড়া শেষে কিভাবে এক ঘন্টায় কোডিং শিখানো যায়
 
-### আগামীর সাথে যোগ দিন এবং নতুন একদল ছাত্রকে কে কম্পিউটার বিজ্ঞানের প্রথম এক ঘন্টার সাথে পরিচয় করিয়ে দিন নিম্নোক্ত ধাপগুলির মাধ্যমে-. আওয়ার অফ কোড খুব সহজেই শিখা ও চালানো যায় - এমনকি নতুনরাও পারে! If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
+### Join the movement and introduce your students to computer science with these steps.
+
+Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
+
+Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time. If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
+
+### An Hour of Code can also be hosted remotely! To get started, check out our [tips for hosting a virtual Hour of Code event](https://hourofcode.com/us/how-to/virtual).
 
 * * *
 
@@ -28,13 +34,13 @@ Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage o
 
 ## 4. Plan your technology needs - computers are optional
 
-কোড অভিজ্ঞতা শ্রেষ্ঠ ঘন্টা ইন্টারনেট সংযুক্ত কম্পিউটার অন্তর্ভুক্ত. কিন্তু আপনি প্রতিটি শিশুর জন্য ** না </ strong> একটি কম্পিউটারের প্রয়োজন, এবং আপনি একটি কম্পিউটার ছাড়াও ঘরের কোডও করতে পারেন.</p> 
+কোড অভিজ্ঞতা শ্রেষ্ঠ ঘন্টা ইন্টারনেট সংযুক্ত কম্পিউটার অন্তর্ভুক্ত. But you **don’t** need a computer for every child, and you can even do the Hour of Code without a computer at all.
 
-শিক্ষার্থীদের কম্পিউটার বা ডিভাইসগুলিতে টিউটোরিয়াল পরীক্ষা করে নিশ্চিত করুন যে তারা শব্দ এবং ভিডিওর মাধ্যমে ব্রাউজারগুলিতে সঠিকভাবে কাজ করে. ** কম ব্যান্ডউইথ আছে? </ strong> বর্গের সামনে ভিডিওগুলি প্রদর্শন করার পরিকল্পনা করুন, যাতে প্রতিটি শিক্ষার্থী তাদের নিজস্ব ভিডিওগুলি ডাউনলোড না করে. অথবা অপ্রচলিত / অফলাইন টিউটোরিয়ালগুলি চেষ্টা করুন.</p> 
+শিক্ষার্থীদের কম্পিউটার বা ডিভাইসগুলিতে টিউটোরিয়াল পরীক্ষা করে নিশ্চিত করুন যে তারা শব্দ এবং ভিডিওর মাধ্যমে ব্রাউজারগুলিতে সঠিকভাবে কাজ করে. **Have low bandwidth?** Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the unplugged / offline tutorials.
 
 আপনার ক্লাসের জন্য হেডফোনগুলি প্রদান করুন, বা শিক্ষার্থীদেরকে তাদের নিজের কাছে নিয়ে আসার জন্য বলুন, যদি আপনার পছন্দসই টিপসটি শব্দটি দিয়ে সেরা কাজ করে.
 
-** যথেষ্ট ডিভাইস নেই? </ strong> [ জোড়া প্রোগ্রামিং ](https://www.youtube.com/watch?v=vgkahOzFH2Q) ব্যবহার করুন. যখন ছাত্ররা অংশীদার হয়, তারা একে অপরকে সাহায্য করে এবং শিক্ষকের উপর নির্ভর করে. তারা দেখতে পাবে যে কম্পিউটার বিজ্ঞান সামাজিক এবং সহযোগী.</p> 
+**Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). যখন ছাত্ররা অংশীদার হয়, তারা একে অপরকে সাহায্য করে এবং শিক্ষকের উপর নির্ভর করে. তারা দেখতে পাবে যে কম্পিউটার বিজ্ঞান সামাজিক এবং সহযোগী.
 
 ## 5. একটি অনুপ্রেরণীয় ভিডিওর সাথে আপনার ঘন্টা কোড বন্ধ করুন
 

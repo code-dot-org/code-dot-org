@@ -19,6 +19,10 @@ var Hammer = require('../third-party/hammer');
 import {getStore} from '../redux';
 import {getRandomDonorTwitter} from '../util/twitterHelper';
 import {KeyCodes, TestResults, ResultType} from '../constants';
+import {
+  showArrowButtons,
+  dismissSwipeOverlay
+} from '@cdo/apps/templates/arrowDisplayRedux';
 
 var SquareType = tiles.SquareType;
 
@@ -501,6 +505,10 @@ Bounce.onTick = function() {
       Bounce.keyState[KeyCodes[key]] &&
       Bounce.keyState[KeyCodes[key]] === 'keydown'
     ) {
+      let store = getStore();
+      if (!store.getState().arrowDisplay.swipeOverlayHasBeenDismissed) {
+        store.dispatch(dismissSwipeOverlay('keyPress'));
+      }
       switch (KeyCodes[key]) {
         case KeyCodes.LEFT:
           Bounce.callUserGeneratedCode(Bounce.whenLeft);
@@ -669,6 +677,10 @@ Bounce.onKey = function(e) {
 };
 
 Bounce.onArrowButtonDown = function(e, idBtn) {
+  let store = getStore();
+  if (!store.getState().arrowDisplay.swipeOverlayHasBeenDismissed) {
+    store.dispatch(dismissSwipeOverlay('buttonPress'));
+  }
   // Store the most recent event type per-button
   Bounce.btnState[idBtn] = ButtonState.DOWN;
   e.preventDefault(); // Stop normal events so we see mouseup later.
@@ -918,6 +930,7 @@ Bounce.reset = function(first) {
   }
   if (softButtonCount) {
     var softButtonsCell = document.getElementById('soft-buttons');
+    getStore().dispatch(showArrowButtons());
     softButtonsCell.className = 'soft-buttons-' + softButtonCount;
   }
 

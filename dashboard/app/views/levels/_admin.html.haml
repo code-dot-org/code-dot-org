@@ -47,9 +47,8 @@
           %li
             sublevels
             %ol
-              - @level.properties['pages'].each do |page|
-                - page['levels'].each do |level_name|
-                  %li= link_to level_name, level_path(Level.find_by_name(level_name))
+              - @level.levels.each do |level|
+                %li= link_to level.name, level_path(level)
         - if contained_level_names = @level.properties['contained_level_names']
           %li
             contained levels
@@ -180,11 +179,16 @@
         %li.reported-abuse{ style: 'display: none;' }
           Manually reported abusive
 
-      .admin-abuse{ :style => "display: none" }
+      .admin-abuse
         Abuse score:
         %span.admin-abuse-score
       %br
-        = link_to 'Reset', '#', { class: 'admin-abuse-reset' }
-
+        %button{id: "admin-abuse-reset", class: "btn btn-default btn-sm"}
+          Reset abuse score to 0
+      %br
+        %button{id: "admin-abuse-buffer", class: "btn btn-default btn-sm"}
+          Set abuse score to -50
+      %br
+      %br
       .admin-report-abuse
         = link_to 'Report Abuse', '/report_abuse'

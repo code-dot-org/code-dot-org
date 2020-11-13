@@ -5,6 +5,7 @@ Dashboard::Application.routes.draw do
   get "404", to: "application#render_404", via: :all
 
   # React-router will handle sub-routes on the client.
+  get 'teacher_dashboard/sections/:section_id/parent_letter', to: 'teacher_dashboard#parent_letter'
   get 'teacher_dashboard/sections/:section_id/*path', to: 'teacher_dashboard#show', via: :all
   get 'teacher_dashboard/sections/:section_id', to: 'teacher_dashboard#show'
 
@@ -27,12 +28,6 @@ Dashboard::Application.routes.draw do
 
   get "/congrats", to: "congrats#index"
 
-  resources :gallery_activities, path: '/gallery' do
-    collection do
-      get 'art', to: 'gallery_activities#index', app: Game::ARTIST
-      get 'apps', to: 'gallery_activities#index', app: Game::PLAYLAB
-    end
-  end
   resources :activity_hints, only: [:update]
 
   resources :hint_view_requests, only: [:create]
@@ -148,10 +143,10 @@ Dashboard::Application.routes.draw do
     patch '/users/upgrade', to: 'registrations#upgrade'
     patch '/users/set_age', to: 'registrations#set_age'
     patch '/users/email', to: 'registrations#set_email'
+    patch '/users/parent_email', to: 'registrations#set_parent_email'
     patch '/users/user_type', to: 'registrations#set_user_type'
     get '/users/cancel', to: 'registrations#cancel'
-    get '/users/auth/:provider/connect', to: 'authentication_options#connect', as: :connect_authentication_option
-    delete '/users/auth/:id/disconnect', to: 'authentication_options#disconnect'
+    post '/users/auth/:id/disconnect', to: 'authentication_options#disconnect'
     get '/users/migrate_to_multi_auth', to: 'registrations#migrate_to_multi_auth'
     get '/users/demigrate_from_multi_auth', to: 'registrations#demigrate_from_multi_auth'
     get '/users/to_destroy', to: 'registrations#users_to_destroy'
@@ -187,6 +182,8 @@ Dashboard::Application.routes.draw do
     end
   end
 
+  get "/gallery", to: redirect("/projects/public")
+
   get 'projects/featured', to: 'projects#featured'
   put '/featured_projects/:project_id/unfeature', to: 'featured_projects#unfeature'
   put '/featured_projects/:project_id/feature', to: 'featured_projects#feature'
@@ -200,6 +197,15 @@ Dashboard::Application.routes.draw do
         get "/#{key}/:channel_id/edit", to: 'projects#edit', key: key.to_s, as: "#{key}_project_edit"
         get "/#{key}/:channel_id/view", to: 'projects#show', key: key.to_s, as: "#{key}_project_view", readonly: true
         get "/#{key}/:channel_id/embed", to: 'projects#show', key: key.to_s, as: "#{key}_project_iframe_embed", iframe_embed: true
+
+        # appending 'embed_app_and_code' to a project renders a page with just the app editor. It is distinct from appending 'embed'
+        # to a project in that appending 'embed' renders only the app, wheras 'embed_app_and_code renders the app and the workspace
+        # for building the app, in view only mode. Specifically, appending 'embed_app_and_code' to a project does the following:
+        #
+        # - set view options to remove headers/footers
+        # - set a view option 'iframeEmbedAppAndCode' to true, setting the config.level.iframeEmbedAppAndCode variable to true on the client side
+        #   This makes a number of changes to how StudioApp behaves, and some changes to how P5Lab.js behaves
+        get "/#{key}/:channel_id/embed_app_and_code", to: 'projects#show', key: key.to_s, as: "#{key}_project_iframe_embed_app_and_code", iframe_embed_app_and_code: true, readonly: true
         get "/#{key}/:channel_id/remix", to: 'projects#remix', key: key.to_s, as: "#{key}_project_remix"
         get "/#{key}/:channel_id/export_create_channel", to: 'projects#export_create_channel', key: key.to_s, as: "#{key}_project_export_create_channel"
         get "/#{key}/:channel_id/export_config", to: 'projects#export_config', key: key.to_s, as: "#{key}_project_export_config"
@@ -232,7 +238,7 @@ Dashboard::Application.routes.draw do
     end
   end
 
-  resources :datasets, param: 'dataset_name', only: [:index, :show, :update] do
+  resources :datasets, param: 'dataset_name', constraints: {dataset_name: /[^\/]+/}, only: [:index, :show, :update, :destroy] do
     collection do
       get '/manifest/edit', to: 'datasets#edit_manifest'
       post '/manifest/update', to: 'datasets#update_manifest'
@@ -240,6 +246,9 @@ Dashboard::Application.routes.draw do
   end
 
   resources :levels do
+    collection do
+      get 'get_filtered_levels'
+    end
     member do
       get 'get_rubric'
       get 'embed_level'
@@ -254,7 +263,7 @@ Dashboard::Application.routes.draw do
 
   resources :level_starter_assets, only: [:show], param: 'level_name', constraints: {level_name: /[^\/]+/} do
     member do
-      get '/:filename', to: 'level_starter_assets#file'
+      get '/:filename', to: 'level_starter_assets#file', format: true
       post '', to: 'level_starter_assets#upload'
       delete '/:filename', to: 'level_starter_assets#destroy'
     end
@@ -302,6 +311,11 @@ Dashboard::Application.routes.draw do
 
   resources :courses, param: 'course_name'
   get '/course/:course_name', to: redirect('/courses/%{course_name}')
+
+  resources :lessons, only: [:show, :edit, :update]
+
+  resources :resources, only: [:create]
+  get '/resourcesearch/:q/:limit', to: 'resources#search', defaults: {format: 'json'}
 
   get '/beta', to: redirect('/')
 
@@ -437,13 +451,14 @@ Dashboard::Application.routes.draw do
         get :workshop_organizer_survey_report, action: :workshop_organizer_survey_report, controller: 'workshop_organizer_survey_report'
 
         get 'foorm/generic_survey_report', action: :generic_survey_report, controller: 'workshop_survey_foorm_report'
+        get 'foorm/csv_survey_report', action: :csv_survey_report, controller: 'workshop_survey_foorm_report'
+        get 'foorm/forms_for_workshop', action: :forms_for_workshop, controller: 'workshop_survey_foorm_report'
       end
 
       resources :workshop_summary_report, only: :index
       resources :teacher_attendance_report, only: :index
       resources :course_facilitators, only: :index
       resources :workshop_organizers, only: :index
-      get 'workshop_organizer_survey_report_for_course/:course', action: :index, controller: 'workshop_organizer_survey_report'
       delete 'enrollments/:enrollment_code', action: 'cancel', controller: 'workshop_enrollments'
       post 'enrollment/:enrollment_id/scholarship_info', action: 'update_scholarship_info', controller: 'workshop_enrollments'
       post 'enrollments/move', action: 'move', controller: 'workshop_enrollments'
@@ -484,12 +499,20 @@ Dashboard::Application.routes.draw do
           get :fit_cohort
         end
       end
+
+      post 'foorm/form_with_library_items', action: :fill_in_library_items, controller: 'foorm'
+      get 'foorm/form_data', action: :get_form_data, controller: 'foorm'
+      get 'foorm/submissions_csv', action: :get_submissions_as_csv, controller: 'foorm'
+      get 'foorm/form_names', action: :get_form_names_and_versions, controller: 'foorm'
     end
   end
 
   get '/dashboardapi/v1/regional_partners/find', to: 'api/v1/regional_partners#find'
   get '/dashboardapi/v1/regional_partners/show/:partner_id', to: 'api/v1/regional_partners#show'
   post '/dashboardapi/v1/pd/regional_partner_mini_contacts', to: 'api/v1/pd/regional_partner_mini_contacts#create'
+  post '/dashboardapi/v1/amazon_future_engineer_submit', to: 'api/v1/amazon_future_engineer#submit'
+
+  post '/dashboardapi/v1/foorm/misc_survey_submission', action: :create, controller: 'api/v1/foorm_misc_survey_submissions'
 
   get 'my-professional-learning', to: 'pd/professional_learning_landing#index', as: 'professional_learning_landing'
 
@@ -503,7 +526,9 @@ Dashboard::Application.routes.draw do
     post 'misc_survey/submit', to: 'misc_survey#submit'
 
     get 'workshop_survey/day/:day', to: 'workshop_daily_survey#new_general'
-    get 'workshop_survey/foorm/day/:day', to: 'workshop_daily_survey#new_general_foorm'
+    get 'workshop_daily_survey/day/:day', to: 'workshop_daily_survey#new_daily_foorm'
+    get 'workshop_pre_survey', to: 'workshop_daily_survey#new_pre_foorm'
+    get 'workshop_post_survey', to: 'workshop_daily_survey#new_post_foorm'
     post 'workshop_survey/submit', to: 'workshop_daily_survey#submit_general'
     get 'workshop_survey/post/:enrollment_code', to: 'workshop_daily_survey#new_post', as: 'new_workshop_survey'
     get 'workshop_survey/facilitators/:session_id(/:facilitator_index)', to: 'workshop_daily_survey#new_facilitator'
@@ -511,11 +536,21 @@ Dashboard::Application.routes.draw do
     get 'workshop_survey/csf/post101(/:enrollment_code)', to: 'workshop_daily_survey#new_csf_post101'
     get 'workshop_survey/csf/pre201', to: 'workshop_daily_survey#new_csf_pre201'
     get 'workshop_survey/csf/post201(/:enrollment_code)', to: 'workshop_daily_survey#new_csf_post201'
+    get 'workshop_survey/foorm/csf/post201(/:enrollment_code)', to: 'workshop_daily_survey#new_csf_post201_foorm'
+    get 'workshop_survey/foorm/csf/pre201', to: 'workshop_daily_survey#new_csf_pre201_foorm'
     get 'workshop_survey/thanks', to: 'workshop_daily_survey#thanks'
 
     get 'post_course_survey/thanks', to: 'post_course_survey#thanks'
     post 'post_course_survey/submit', to: 'post_course_survey#submit'
     get 'post_course_survey/:course_initials', to: 'post_course_survey#new'
+
+    # Academic year workshops
+    get '/:workshop_subject/pre/(*agenda)', to: 'workshop_daily_survey#new_ayw_pre',
+        constraints: {agenda: /module\/[0-9_]+/}
+    get '/:workshop_subject/day/:day', to: 'workshop_daily_survey#new_ayw_daily',
+        constraints: {day: /\d/}
+    get '/:workshop_subject/post/(*agenda)', to: 'workshop_daily_survey#new_ayw_post',
+        constraints: {agenda: /(module\/[0-9_]+)|(in_person)/}
 
     namespace :application do
       get 'facilitator', to: 'facilitator_application#new'
@@ -565,7 +600,6 @@ Dashboard::Application.routes.draw do
 
   get '/dashboardapi/section_progress/:section_id', to: 'api#section_progress'
   get '/dashboardapi/section_text_responses/:section_id', to: 'api#section_text_responses'
-  get '/dashboardapi/student_progress/:section_id/:student_id', to: 'api#student_progress'
   scope 'dashboardapi', module: 'api/v1' do
     concerns :section_api_routes
     concerns :assessments_routes
@@ -593,7 +627,6 @@ Dashboard::Application.routes.draw do
   get '/dashboardapi/script_standards/:script', to: 'api#script_standards'
   get '/api/section_progress/:section_id', to: 'api#section_progress', as: 'section_progress'
   get '/dashboardapi/section_level_progress/:section_id', to: 'api#section_level_progress', as: 'section_level_progress'
-  get '/api/student_progress/:section_id/:student_id', to: 'api#student_progress', as: 'student_progress'
   get '/api/user_progress/:script', to: 'api#user_progress', as: 'user_progress'
   get '/api/user_progress/:script/:stage_position/:level_position', to: 'api#user_progress_for_stage', as: 'user_progress_for_stage'
   get '/api/user_progress/:script/:stage_position/:level_position/:level', to: 'api#user_progress_for_stage', as: 'user_progress_for_stage_and_level'
@@ -634,6 +667,7 @@ Dashboard::Application.routes.draw do
       post 'users/:user_id/postpone_census_banner', to: 'users#postpone_census_banner'
       post 'users/:user_id/dismiss_census_banner', to: 'users#dismiss_census_banner'
       post 'users/:user_id/dismiss_donor_teacher_banner', to: 'users#dismiss_donor_teacher_banner'
+      post 'users/:user_id/dismiss_parent_email_banner', to: 'users#dismiss_parent_email_banner'
 
       get 'school-districts/:state', to: 'school_districts#index', defaults: {format: 'json'}
       get 'schools/:school_district_id/:school_type', to: 'schools#index', defaults: {format: 'json'}
@@ -676,6 +710,7 @@ Dashboard::Application.routes.draw do
   get '/dashboardapi/v1/users/:user_id/school_donor_name', to: 'api/v1/users#get_school_donor_name'
   post '/dashboardapi/v1/users/accept_data_transfer_agreement', to: 'api/v1/users#accept_data_transfer_agreement'
   get '/dashboardapi/v1/school-districts/:state', to: 'api/v1/school_districts#index', defaults: {format: 'json'}
+  get '/dashboardapi/v1/schools/:id/afe_high_needs', to: 'api/v1/schools#afe_high_needs', defaults: {format: 'json'}
   get '/dashboardapi/v1/schools/:school_district_id/:school_type', to: 'api/v1/schools#index', defaults: {format: 'json'}
   get '/dashboardapi/v1/schools/:id', to: 'api/v1/schools#show', defaults: {format: 'json'}
 
@@ -702,7 +737,20 @@ Dashboard::Application.routes.draw do
   get '/dashboardapi/v1/projects/section/:section_id', to: 'api/v1/projects/section_projects#index', defaults: {format: 'json'}
   get '/dashboardapi/courses', to: 'courses#index', defaults: {format: 'json'}
 
+  get 'foorm/preview/:name', to: 'foorm_preview#name', constraints: {name: /.*/}
+  get 'foorm/preview', to: 'foorm_preview#index'
+
+  get 'foorm/editor', to: 'foorm_editor#index', constraints: {name: /.*/}
+
   post '/safe_browsing', to: 'safe_browsing#safe_to_open', defaults: {format: 'json'}
 
   get '/curriculum_tracking_pixel', to: 'curriculum_tracking_pixel#index'
+
+  post '/profanity/find', to: 'profanity#find'
+
+  get '/help', to: redirect("https://support.code.org")
+
+  get '/form/:misc_form_path', to: 'foorm/misc_survey#new'
+
+  post '/i18n/track_string_usage', action: :track_string_usage, controller: :i18n
 end

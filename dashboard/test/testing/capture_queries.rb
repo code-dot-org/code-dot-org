@@ -41,7 +41,7 @@ module CaptureQueries
     # Level-cache queries don't count.
     /script\.rb.*cache_find_(script_level|level)/,
     # Ignore cached script id lookup
-    /stage_extras_script_ids/,
+    /lesson_extras_script_ids/,
     # Ignore random updates to experiment cache.
     /experiment\.rb.*update_cache/
   ]
@@ -50,7 +50,17 @@ module CaptureQueries
     queries = []
     query = lambda do |_name, start, finish, _id, payload|
       duration = finish - start
-      next if %w(CACHE SCHEMA).include? payload[:name]
+
+      # Accomodate both Rails 5.0 and 5.1 methods for determining payload caching.
+      #
+      # payload[:cached] was added in Rails 5.1, and the naming scheme was
+      # changed to prepend "CACHE" to the name rather than overwriting the
+      # whole name.
+      #
+      # Once we update to Rails 5.1, we can remove the `include?` line.
+      next if payload[:name] == "CACHE"
+      next if payload.fetch(:cached, false)
+
       cleaner = Rails::BacktraceCleaner.new
       cleaner.add_silencer {|line| line.include?(__dir__.sub("#{Rails.root}/", ''))}
       cleaner.add_silencer {|line| line =~ /application_controller.*with_locale/}

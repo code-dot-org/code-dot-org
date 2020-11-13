@@ -80,7 +80,12 @@ class SignInOrAgeDialog extends Component {
 
   static propTypes = {
     signedIn: PropTypes.bool.isRequired,
-    age13Required: PropTypes.bool.isRequired
+    age13Required: PropTypes.bool.isRequired,
+    storage: PropTypes.object.isRequired
+  };
+
+  static defaultProps = {
+    storage: window.sessionStorage
   };
 
   onClickAgeOk = () => {
@@ -96,7 +101,7 @@ class SignInOrAgeDialog extends Component {
     }
 
     // Sets cookie to true when anon user is 13+. False otherwise.
-    sessionStorage.setItem(sessionStorageKey, parseInt(value, 10) >= 13);
+    this.props.storage.setItem(sessionStorageKey, parseInt(value, 10) >= 13);
 
     // When opening a new tab, we'll have a new session (and thus show this dialog),
     // but may still be using a storage_id for a previous user. Clear that cookie
@@ -111,14 +116,10 @@ class SignInOrAgeDialog extends Component {
   };
 
   render() {
-    const {signedIn, age13Required} = this.props;
+    const {signedIn, age13Required, storage} = this.props;
     // Don't show dialog unless script requires 13+, we're not signed in, and
     // we haven't already given this dialog our age or we do not require sign-in
-    if (
-      !age13Required ||
-      signedIn ||
-      sessionStorage.getItem(sessionStorageKey)
-    ) {
+    if (!age13Required || signedIn || storage.getItem(sessionStorageKey)) {
       return null;
     }
 

@@ -59,18 +59,21 @@
       "/docs/concepts/javascript/if-else-statements/",
       "/docs/concepts/javascript/functions/"
     ],
-    "mini_rubric": "true",
+    "mini_rubric": "false",
     "encrypted": "false",
     "rubric_key_concept": "Using a structured process to plan and develop a program",
     "rubric_performance_level_1": "The project guide accurately reflects the program, both as shown in the example and as coded by the student.  Relevant functions, variables, and sprites are consistent between the project guide and actual project, with very few exceptions.",
     "rubric_performance_level_2": "The project guide is generally consistent with the sample project and student project, with main functions and sprites included.  There may be some inconsistencies.",
     "rubric_performance_level_3": "The project guide mentions some features of the program and associated functions and sprites, but there are major parts of the program missing from the guide.",
     "rubric_performance_level_4": "The project guide is incomplete or does not seem to describe the program.",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "libraries_enabled": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-08 17:26:19 +0000\",\"changed\":[\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-03-06 00:04:01 +0000\",\"changed\":[\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-04-02 06:24:08 +0000\",\"changed\":[\"encrypted_examples\",\"mini_rubric\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-06-08 17:26:19 +0000\",\"changed\":[\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-03-06 00:04:01 +0000\",\"changed\":[\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-04-02 06:24:08 +0000\",\"changed\":[\"encrypted_examples\",\"mini_rubric\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-04-01 13:46:17 +0000\",\"changed\":[\"encrypted_examples\",\"mini_rubric\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Gamelab>

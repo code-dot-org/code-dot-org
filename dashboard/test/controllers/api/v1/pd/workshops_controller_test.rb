@@ -422,9 +422,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
       assert_response :success
     end
 
-    id = JSON.parse(@response.body)['id']
-    workshop = Pd::Workshop.find id
-    assert_equal 1, workshop.sessions.length
+    assert_equal 1, response_workshop.sessions.length
   end
 
   # TODO: remove this test when workshop_organizer is deprecated
@@ -483,6 +481,28 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
 
     post :create, params: {pd_workshop: workshop_params}
     assert_response :forbidden
+  end
+
+  test 'can create a virtual workshop with suppressed email' do
+    sign_in @organizer
+    post :create, params: {pd_workshop: workshop_params.merge(virtual: true, suppress_email: true)}
+    assert_response :success
+    assert response_workshop.virtual?
+  end
+
+  test 'cannot create a virtual workshop without suppressed email' do
+    sign_in @organizer
+    refute_creates(Pd::Workshop) do
+      post :create, params: {pd_workshop: workshop_params.merge(virtual: true, suppress_email: false)}
+      assert_response :bad_request
+    end
+  end
+
+  test 'can create a workshop with suppressed email' do
+    sign_in @organizer
+    post :create, params: {pd_workshop: workshop_params.merge(suppress_email: true)}
+    assert_response :success
+    assert response_workshop.suppress_email?
   end
 
   # Action: Destroy
@@ -646,6 +666,39 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     params: -> {{id: @workshop.id, pd_workshop: workshop_params}}
   )
 
+  test 'can update a workshop to be virtual with suppressed email' do
+    sign_in @organizer
+    workshop = create :workshop, organizer: @organizer
+    refute workshop.virtual?
+
+    put :update, params: {id: workshop.id, pd_workshop: workshop_params.merge(virtual: true, suppress_email: true)}
+    assert_response :success
+    workshop.reload
+    assert workshop.virtual?
+  end
+
+  test 'cannot update a workshop to be virtual without suppressed email' do
+    sign_in @organizer
+    workshop = create :workshop, organizer: @organizer
+    refute workshop.virtual?
+
+    put :update, params: {id: workshop.id, pd_workshop: workshop_params.merge(virtual: true, suppress_email: false)}
+    assert_response :bad_request
+    workshop.reload
+    refute workshop.virtual?
+  end
+
+  test 'can update a workshop to have suppressed email' do
+    sign_in @organizer
+    workshop = create :workshop, organizer: @organizer
+    refute workshop.suppress_email?
+
+    put :update, params: {id: workshop.id, pd_workshop: workshop_params.merge(suppress_email: true)}
+    assert_response :success
+    workshop.reload
+    assert workshop.suppress_email?
+  end
+
   test 'updating with notify true sends detail change notification emails' do
     sign_in create :admin
 
@@ -654,7 +707,6 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
       create :pd_enrollment, workshop: @workshop
     end
     mock_mail = stub(deliver_now: nil)
-    Pd::WorkshopMailer.any_instance.expects(:check_should_send).times(7)
     Pd::WorkshopMailer.any_instance.expects(:detail_change_notification).times(5).returns(mock_mail)
     Pd::WorkshopMailer.any_instance.expects(:facilitator_detail_change_notification).returns(mock_mail)
     Pd::WorkshopMailer.any_instance.expects(:organizer_detail_change_notification).returns(mock_mail)
@@ -1127,6 +1179,8 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
       course: Pd::Workshop::COURSE_CSF,
       subject: Pd::Workshop::SUBJECT_CSF_101,
       capacity: 10,
+      virtual: false,
+      suppress_email: false,
       sessions_attributes: [
         {
           start: session_start,
@@ -1134,5 +1188,9 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
         }
       ]
     }
+  end
+
+  def response_workshop
+    Pd::Workshop.find(JSON.parse(response.body)['id'])
   end
 end

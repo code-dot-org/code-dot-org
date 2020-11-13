@@ -15,7 +15,8 @@
   "danceFeedbackPressedKey": "أنت ضغطت على المفتاح، لكن الراقص الخاص بك لم يستجيب.",
   "danceFeedbackNeedTwoDancers": "تحتاج أن تقوم بصنع راقصين.",
   "danceFeedbackOnlyOneDancerMoved": "تم تحريك راقص واحد فقط من الراقصين لديك.",
-  "danceFeedbackNeedLead": "أنت تحتاج كذلك إلى راقص رئيسي باستخدام الكتلة البرمجية <xml><block type=\"Dancelab_makeAnonymousDanceSprite\"><title name=\"COSTUME\">???</title><title name=\"LOCATION\">\\{x: 200, y: 200\\}</title></block></xml> .",
+  "danceFeedbackNeedLead": "أنت تحتاج كذلك إلى راقص رئيسي باستخدام الكتلة البرمجية <xml><block type=\"Dancelab_makeAnonymousDanceSprite\"><title name=\"COSTUME\">???</title><title name=\"LOCATION\">'{'x: 200, y: 200'}'</title></block></xml> .",
   "danceFeedbackNeedBackup": "أنت تحتاج إلى إنشاء مجموعة من الراقصين الاحتياطيين باستخدام الكتلة البرمجية<xml><block type=\"Dancelab_makeNewDanceSpriteGroup\"><title name=\"N\">10</title><title name=\"COSTUME\">\"UNICORN\"</title><title name=\"LAYOUT\">\"circle\"</title></block></xml> .",
-  "danceFeedbackSetSize": "أنت تحتاج إلى تغيير حجم راقص واحد على الأقل بعد بدء الموسيقى."
+  "danceFeedbackSetSize": "أنت تحتاج إلى تغيير حجم راقص واحد على الأقل بعد بدء الموسيقى.",
+  "measure": "قياس:"
 }

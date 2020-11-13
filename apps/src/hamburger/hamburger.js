@@ -1,5 +1,9 @@
 import $ from 'jquery';
 import trackEvent from '../util/trackEvent';
+import {
+  getChannelIdFromUrl,
+  userAlreadyReportedAbuse
+} from '@cdo/apps/reportAbuse';
 
 export const initHamburger = function() {
   $(function() {
@@ -68,5 +72,14 @@ export const initHamburger = function() {
         trackEvent('help_ui', 'support', 'studio_footer');
       });
     });
+
+    const channelId = getChannelIdFromUrl(location.href);
+    const alreadyReportedAbuse = userAlreadyReportedAbuse(channelId);
+    if (alreadyReportedAbuse) {
+      let reportAbuseButton = $('#report-abuse');
+      if (reportAbuseButton) {
+        reportAbuseButton.hide();
+      }
+    }
   });
 };

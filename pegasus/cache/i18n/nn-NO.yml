@@ -1994,6 +1994,8 @@ nn-NO:
   header_teacher_community: Lærarforum
   header_help_support: Hjelp og støtte
   header_report_bug: Rapporter feil
+  header_legal_privacy: Personvern
+  header_legal_tos: Vilkår
   header_tutorials: Rettleiingar
   app_lab_documentation: Dokumentasjon i App-lab
   app_lab_tutorials: Øvingar i App-lab
@@ -2281,3 +2283,4 @@ nn-NO:
   hoc2019_dance_previous_versions: "Ser du etter ein tidlegare versjon av Dansefest?
     \nKlikk her for å starte [Del 1](%{dance_2018_link}) og [Del 2](%{dance_extras_2018_link})
     frå i fjor."
+  page_not_available_button: Gå heim

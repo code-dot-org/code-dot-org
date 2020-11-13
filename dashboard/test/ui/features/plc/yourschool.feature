@@ -1,8 +1,9 @@
 @no_ie
+@no_circle
 Feature: Using the YourSchool census page
 
   Scenario: Loading yourschool and fill out form
-    Given I am on "http://code.org/yourschool"
+    Given I am on "http://code.org/yourschool?noautoplay=true"
     Then I see "#map"
     And I see "#census-form"
     Then I press "#schoolNotFoundCheckbox" using jQuery

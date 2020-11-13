@@ -23,7 +23,14 @@ describe('FilterGroupOrgNames', () => {
     const wrapper = shallow(<FilterGroupOrgNames {...DEFAULT_PROPS} />);
     expect(wrapper).to.containMatchingElement(
       <FilterGroupContainer text={i18n.filterOrgNames()}>
-        <select value={TEST_ORG_NAME} className="noFocusButton">
+        <label htmlFor="filter-org-names-dropdown" className="hidden-label">
+          {i18n.filterOrgNames()}
+        </label>
+        <select
+          id="filter-org-names-dropdown"
+          value={TEST_ORG_NAME}
+          className="noFocusButton"
+        >
           <option key="all" value="all">
             {i18n.filterOrgNamesAll()}
           </option>

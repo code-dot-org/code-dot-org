@@ -31,7 +31,7 @@ ________________
 See these resources to plan and run CS Fundamentals workshops. Partners should work with an approved CS Fundamentals facilitator when organizing one of these workshops.
 
 - [CS Fundamentals One Pager](https://docs.google.com/presentation/d/1bsw3vZuFuC5EzDxGN6szQ_IJ0nhVnqlH34enhTqZ2L0/edit?usp=sharing) 
-- <a href="https://docs.google.com/document/d/1oRjTXIu12XF2dR9G6qfo7VfBeNn0GPrUPF_s4Pk3Ckg/edit#" target=_blank>CS Fundamentals Workshop Process Document</a>
+- <a href="https://docs.google.com/document/d/1eMA0RT-id5dsVZS0p_UUt4FKMnjzf-uUBUY1y_Z7hr0/edit" target=_blank>CS Fundamentals Workshop Process Document</a>
 - <a href="https://docs.google.com/document/d/1kJ42QppLmoB1mOkubTRF54HjH6oGUK-EpPKqE_BRSK0/edit?ts=5a96c3a5"target=_blank>CS Fundamentals Facilitator Playbook</a>
 - <a href="https://docs.google.com/document/d/1so6ZyrtydTOmW6YHDgpdpDIUBAssQ_uCI130iCBA8SQ/edit"target=_blank>2019 Intro and Deep Dive Workshop Overview</a>
 - <a href="https://docs.google.com/document/d/1rhqOSkvVoh4LjBoug4pYTXECmifBkOUxlb8rMgRgTAI/edit?usp=drive_web&ouid=101665711587844633285"target=_blank>2019 Deep Dive Workshop FAQ</a>
@@ -99,12 +99,11 @@ Always accommodate vegetarian needs, roughly ⅓ of the order. In communications
 
 <a id="local"></a>
 
-### Local Summer Workshop Specific
+### Summer Workshop Specific
 
 Updated guidance for hosting 2020 Summer Workshops is now available!
 
 - <a href="https://docs.google.com/document/d/1IETwhJmN1lVNo85wQ9d9fxgGxs5KlV7ZDhMj0Toq3eI/edit?usp=sharing" target=_blank>2020 Summer Workshop Process Doc</a> 
-- [2019 Summer Workshop Process Document](https://docs.google.com/document/d/1-1c0JqqnIDjMyj0MpCGVpT8WI75g05Cx3CJ4Tdf5tsw/edit?usp=sharing)
 - [Sample Logistics Questions for Registration](https://docs.google.com/document/d/1PPnxnoWYim-8qWqOEdwHi0fadx2y-Hc2PWd4QWKd3p8/edit?ts=5c5dc1e6#heading=h.9xw1ckl4l6ru)
 - [2019-20 6-12 Supplies Plan for Summer Workshops](https://docs.google.com/document/d/1NJHr2B469TqUjIOFSGomN5yUyu9Pqg9jTI_aYPFmGlY/edit#heading=h.gum5nuvbu7rr)
 - [2019 Summer Workshop Mimeo Marketplace Order Guidance](https://docs.google.com/document/d/1AEsSE76mqM6wehXGUWxwTQZzvfbXoEgRB767hF7JEtI/edit)
@@ -113,8 +112,9 @@ Updated guidance for hosting 2020 Summer Workshops is now available!
 
 ### Academic Year Workshop Specific
 
-- **[2019-20 Guidelines for Scheduling Academic Year Workshops](https://docs.google.com/document/d/1f9W6qwayfHLmx2a66rRu6MpR0Xb47O7JLomMhKGOEww/edit)**
-- **[2019-2020 Academic Year Workshop Process Document] (https://docs.google.com/document/d/1sJUI1F7r270k8LYMbLBBZwqQho7xJMc0G-YUrfiRJwM/edit?usp=sharing)**
+- [2020-21 Academic Year Workshop Procecss Doc](https://docs.google.com/document/d/1P2PMYhmvYxShWRIdzEbGmLrXoGdaVzJs0qrvOIeDqF4/edit?userstoinvite=jessica.salva%40medb.org&ts=5f3ee441&actionButton=1)
+- [2020-21 Guidelines for Scheduling Academic Year Workshops](https://docs.google.com/document/d/1l4z2dGxT24KFI09lSLJDILRz9qXOTierRcdZ1922BLs/edit#)
+- [Guidance for Adapting AYW1 for Returning CS Principles Teachers](https://docs.google.com/document/d/1DjkSGl8hozaJx_s8_ikb8jU1-CkXia7U2b4QsnsXm6o/edit)
 
 <a id="virtual"></a>
 

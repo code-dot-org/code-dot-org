@@ -59,6 +59,16 @@ class Experiment < ApplicationRecord
       allow_joining_via_url: false
     },
     {
+      name: '20-21-virtual-AYW-CSD',
+      label: 'For facilitators in virtual academic year workshops for CSD',
+      allow_joining_via_url: true
+    },
+    {
+      name: '20-21-virtual-AYW-CSP',
+      label: 'For facilitators in virtual academic year workshops for CSP',
+      allow_joining_via_url: true
+    },
+    {
       name: 'csp-preview',
       label: 'CSP Preview',
       allow_joining_via_url: true

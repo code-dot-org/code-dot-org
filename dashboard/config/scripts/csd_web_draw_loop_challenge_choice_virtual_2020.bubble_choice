@@ -1,0 +1,7 @@
+name 'CSD web draw loop challenge choice_virtual_2020'
+display_name 'Draw Loop Challenges'
+description 'Try out these draw loop challenges.'
+
+sublevels
+level 'CSD U3 Draw Loop Plugged update your scene_virtual_2020'
+level 'CSD U3 L7 Freeplay_virtual_2020'

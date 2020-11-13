@@ -16,18 +16,18 @@ class WebPurifyTest < Minitest::Test
     c.filter_sensitive_data('<API_KEY>') {CDO.webpurify_key}
   end
 
-  def test_find_potential_profanity
-    assert_nil WebPurify.find_potential_profanity('not a swear')
-    assert_equal 'shit', WebPurify.find_potential_profanity('holy shit')
-    assert_equal 'shitstain', WebPurify.find_potential_profanity('shitstain')
-    assert_nil WebPurify.find_potential_profanity('assuage')
-    assert_nil WebPurify.find_potential_profanity('8005555555 t')
-    assert_equal 'ass', WebPurify.find_potential_profanity('ass')
+  def test_find_potential_profanities
+    assert_nil WebPurify.find_potential_profanities('not a swear')
+    assert_equal ['sh1t', 'shit'], WebPurify.find_potential_profanities('sh1t! holy shit')
+    assert_equal ['shitstain'], WebPurify.find_potential_profanities('shitstain')
+    assert_nil WebPurify.find_potential_profanities('assuage')
+    assert_nil WebPurify.find_potential_profanities('8005555555 t')
+    assert_equal ['ass'], WebPurify.find_potential_profanities('ass')
   end
 
-  def test_find_potential_profanity_with_language
-    assert_nil WebPurify.find_potential_profanity('scheiße', ['en'])
-    assert_equal 'scheiße', WebPurify.find_potential_profanity('scheiße', ['de'])
-    assert_equal 'puta', WebPurify.find_potential_profanity('puta madre', ['es'])
+  def test_find_potential_profanities_with_language
+    assert_nil WebPurify.find_potential_profanities('scheiße', ['en'])
+    assert_equal ['scheiße'], WebPurify.find_potential_profanities('scheiße', ['de'])
+    assert_equal ['puta'], WebPurify.find_potential_profanities('puta madre', ['es'])
   end
 end

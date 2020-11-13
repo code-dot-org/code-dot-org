@@ -8,6 +8,11 @@ import EditEnrollmentNameDialog from './components/edit_enrollment_name_dialog';
 import Spinner from '../components/spinner';
 import WorkshopEnrollment from './components/workshop_enrollment';
 import WorkshopPanel from './WorkshopPanel';
+import {SubjectNames} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
+import {
+  useFoormSurvey,
+  shouldShowSurveyResults
+} from './workshop_summary_utils';
 
 export const MOVE_ENROLLMENT_BUTTON_NAME = 'moveEnrollment';
 export const EDIT_ENROLLMENT_NAME_BUTTON_NAME = 'editEnrollmentName';
@@ -179,6 +184,23 @@ export default class EnrollmentsPanel extends React.Component {
     });
   };
 
+  getViewSurveyUrl = (workshopId, course, subject, lastSessionDate) => {
+    if (
+      !['CS Discoveries', 'CS Principles', 'CS Fundamentals'].includes(course)
+    ) {
+      return null;
+    }
+
+    if (useFoormSurvey(subject, lastSessionDate)) {
+      return `/pd/workshop_dashboard/workshop_daily_survey_results/${workshopId}`;
+    } else if (subject === SubjectNames.SUBJECT_CSF_101) {
+      // Pegasus-based results are no longer offered.
+      return null;
+    } else {
+      return `/pd/workshop_dashboard/daily_survey_results/${workshopId}`;
+    }
+  };
+
   render() {
     const {
       workshopId,
@@ -254,24 +276,50 @@ export default class EnrollmentsPanel extends React.Component {
       const firstSessionDate = moment
         .utc(workshop.sessions[0].start)
         .format('MMMM Do');
+
+      const lastSessionDate = new Date(
+        workshop.sessions[workshop.sessions.length - 1].end
+      );
+
+      let viewSurveyUrl = this.getViewSurveyUrl(
+        workshopId,
+        workshop.course,
+        workshop.subject,
+        lastSessionDate
+      );
+
       contents = (
-        <WorkshopEnrollment
-          workshopId={workshopId}
-          workshopCourse={workshop.course}
-          workshopSubject={workshop.subject}
-          workshopDate={firstSessionDate}
-          numSessions={workshop.sessions.length}
-          enrollments={enrollments}
-          onDelete={this.handleDeleteEnrollment}
-          onClickSelect={this.handleClickSelect}
-          accountRequiredForAttendance={
-            workshop['account_required_for_attendance?']
-          }
-          scholarshipWorkshop={workshop['scholarship_workshop?']}
-          activeTab={this.state.enrollmentActiveTab}
-          onTabSelect={this.handleEnrollmentActiveTabSelect}
-          selectedEnrollments={this.state.selectedEnrollments}
-        />
+        <div>
+          <WorkshopEnrollment
+            workshopId={workshopId}
+            workshopCourse={workshop.course}
+            workshopSubject={workshop.subject}
+            workshopDate={firstSessionDate}
+            numSessions={workshop.sessions.length}
+            enrollments={enrollments}
+            onDelete={this.handleDeleteEnrollment}
+            onClickSelect={this.handleClickSelect}
+            accountRequiredForAttendance={
+              workshop['account_required_for_attendance?']
+            }
+            scholarshipWorkshop={workshop['scholarship_workshop?']}
+            activeTab={this.state.enrollmentActiveTab}
+            onTabSelect={this.handleEnrollmentActiveTabSelect}
+            selectedEnrollments={this.state.selectedEnrollments}
+          />
+
+          {viewSurveyUrl &&
+            shouldShowSurveyResults(
+              workshop.state,
+              workshop.course,
+              workshop.subject,
+              lastSessionDate
+            ) && (
+              <Button bsSize="xsmall" href={viewSurveyUrl} target="_blank">
+                View Survey Results
+              </Button>
+            )}
+        </div>
       );
     }
 

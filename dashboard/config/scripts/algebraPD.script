@@ -1,7 +1,7 @@
 professional_learning_course 'CS in Algebra Legacy'
 login_required true
 
-stage 'Introduction to PD'
+lesson 'Introduction to PD', display_name: 'Introduction to PD'
 level 'PDAlg Intro'
 level 'PDECS tour'
 level 'PDAlg commitment'
@@ -9,7 +9,7 @@ level 'PDAlg commitment match'
 level 'PDAlg attendance commitment'
 level 'PDAlg Teacher Introduction'
 
-stage 'Course Overview'
+lesson 'Course Overview', display_name: 'Course Overview'
 level 'PDAlg Curriculum Overview'
 level 'PDAlg Scope'
 level 'PDAlg implementation'
@@ -17,12 +17,12 @@ level 'PDAlg course goals'
 level 'PDAlg Attitude Survey'
 level 'AlgPD Break'
 
-stage 'Why Computer Science belongs in Algebra'
+lesson 'Why Computer Science belongs in Algebra', display_name: 'Why Computer Science belongs in Algebra'
 level 'PDAlg functions'
 level 'PDAlg hard video'
 level 'PDAlg functional'
 
-stage 'Evaluation Blocks'
+lesson 'Evaluation Blocks', display_name: 'Evaluation Blocks'
 level 'PDAlg Blocks Video'
 level 'Calc Circles of Eval 1'
 level 'Calc Circles of Eval 2'
@@ -34,12 +34,13 @@ level 'Calc Circles of Eval 8'
 level 'Calc Circles of Eval 9'
 level 'Calc Circles of Eval Free Play'
 
-stage 'Teacher Dashboard'
+lesson 'Teacher Dashboard', display_name: 'Teacher Dashboard'
 level 'PDK5 Teacher Dashboard 1'
 level 'PDK5 Teacher Dashboard 2'
 level 'PDAlg Teacher Dashboard'
 
-stage 'Preparing for in-person PD'
+lesson 'Preparing for in-person PD', display_name: 'Preparing for in-person PD'
 level 'PDAlg Facilitators'
 level 'PDAlg End of P1'
 level 'PDAlg Post Survey'
+

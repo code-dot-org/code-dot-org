@@ -1,9 +1,10 @@
 hidden false
 
-stage 'Simple Encryption'
+lesson 'Simple Encryption', display_name: 'Simple Encryption'
 level 'Crack a Caesar Cipher', named: true
 level 'Terminology Recap', named: true
 level 'New Challenge Introduction', named: true
 level 'Crack Random Substitution', named: true
 level 'Technique: Frequency Analysis', named: true
 level 'Video - Encryption and Public Keys', named: true
+

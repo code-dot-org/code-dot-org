@@ -11,3 +11,4 @@ deploy-*.log
 /.website-ci-built
 /.websites-built
 /.websites-test-built
+vendor/

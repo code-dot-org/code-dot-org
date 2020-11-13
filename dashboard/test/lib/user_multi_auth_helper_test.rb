@@ -17,6 +17,26 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
     assert_nil garbage_token
   end
 
+  test 'oauth_tokens_for_provider returns most recently updated tokens for migrated teacher' do
+    Timecop.freeze do
+      user = create :teacher
+      create :authentication_option,
+        authentication_id: "old-auth-id",
+        credential_type: AuthenticationOption::CLEVER,
+        user: user,
+        data: {oauth_token: 'old-clever-token'}.to_json
+      Timecop.travel(1.minute) do
+        create :authentication_option,
+          authentication_id: "newer-auth-id",
+          credential_type: AuthenticationOption::CLEVER,
+          user: user,
+          data: {oauth_token: 'newer-clever-token'}.to_json
+        clever_token = user.oauth_tokens_for_provider(AuthenticationOption::CLEVER)[:oauth_token]
+        assert_equal 'newer-clever-token', clever_token
+      end
+    end
+  end
+
   test 'oauth_tokens_for_provider returns nil values for migrated email teacher' do
     user = create :teacher
     google_token = user.oauth_tokens_for_provider(AuthenticationOption::GOOGLE)[:oauth_token]

@@ -29,7 +29,7 @@ const sectionRowData = [
     assignmentNames: ['CS Discoveries', 'Unit 1: Problem Solving'],
     assignmentPaths: [
       '//localhost-studio.code.org:3000/courses/csd',
-      '//localhost-studio.code.org:3000/s/csd1'
+      '//localhost-studio.code.org:3000/s/csd1-2019'
     ]
   },
   {
@@ -178,7 +178,7 @@ describe('OwnedSectionsTable', () => {
       );
       assert.equal(
         sectionLink,
-        '//localhost-studio.code.org:3000/s/csd1?section_id=1'
+        '//localhost-studio.code.org:3000/s/csd1-2019?section_id=1'
       );
     });
 

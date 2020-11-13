@@ -35,7 +35,12 @@ class StandardsIntroDialog extends Component {
     setCurrentUserHasSeenStandardsReportInfo: PropTypes.func.isRequired
   };
 
+  state = {
+    pending: false
+  };
+
   dismissStandardsDialog = () => {
+    this.setState({pending: true});
     $.ajax({
       url: '/dashboardapi/v1/users/me/set_standards_report_info_to_seen',
       type: 'post',
@@ -92,6 +97,9 @@ class StandardsIntroDialog extends Component {
             onClick={this.dismissStandardsDialog}
             color={Button.ButtonColor.orange}
             className="uitest-standards-intro-button"
+            disabled={this.state.pending}
+            isPending={this.state.pending}
+            pendingText={i18n.loading()}
           />
         </DialogFooter>
       </BaseDialog>

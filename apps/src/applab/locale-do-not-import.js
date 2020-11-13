@@ -8,4 +8,9 @@
  */
 // locale for applab
 
-export default window.blockly.applab_locale;
+import safeLoadLocale from '@cdo/apps/util/safeLoadLocale';
+import localeWithI18nStringTracker from '@cdo/apps/util/i18nStringTracker';
+
+let locale = safeLoadLocale('applab_locale');
+locale = localeWithI18nStringTracker(locale, 'applab_locale');
+module.exports = locale;

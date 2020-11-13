@@ -1,0 +1,14 @@
+name 'VPL-CSD 2020 - Module 2 CI - Draw Loop'
+display_name 'Curriculum Investigation: The Draw Loop'
+description 'The levels included below are levels that students will complete as a part of Unit 3 Lesson 11: The Draw Loop. Complete as many levels as you need to complete in order to feel comfortable with your ability to **use a draw loop to add movement to sprites in Game Lab.** For this activity, it is best to complete the levels in order. Remember to check the *Help and Tips* tab if you get stuck.
+
+The activities below are only a sample of the activities from Unit 3 Lesson 11: The Draw Loop. If you would like to see how these activities fit into the lesson, check out the full lesson plan. 
+
+><a href="https://curriculum.code.org/csd-20/unit3/11/" target="blank">Unit 3 Lesson 11: The Draw Loop - Lesson Plan</a>'
+
+sublevels
+level 'VPL - CSD U3 Draw Loop Plugged predict 1_2020'
+level 'VPL - CSD U3 Draw Loop Plugged orange and green_2020'
+level 'VPL - CSD U3 Draw Loop Plugged predict 2_2020'
+level 'VPL - CSD U3 dancing alien_2020'
+level 'VPL - CSD U3 Draw Loop Plugged wiggle sprite x_2020'

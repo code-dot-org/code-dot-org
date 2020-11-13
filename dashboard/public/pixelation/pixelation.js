@@ -154,14 +154,35 @@ function initProjects() {
           // this method is expected to return a Promise. Since this file does not go through our
           // pipeline and can't be ES6, return a "then" method with a Promise-like interface
           then: function(callback) {
+            var studentCode = '';
             // Store the source in whichever format the level specifies.
             if (isHexSelected()) {
               var hexCode = pixel_data.value.replace(/[^0-9A-F]/gi, "");
-              callback(isHexLevel() ? hexCode : hexToBinPvt(hexCode));
+              studentCode = isHexLevel() ? hexCode : hexToBinPvt(hexCode);
             } else {
               var binCode = pixel_data.value.replace(/[^01]/gi, "");
-              callback(isHexLevel() ? binToHexPvt(binCode) : binCode);
+              studentCode = isHexLevel() ? binToHexPvt(binCode) : binCode;
             }
+
+            var charactersToTrim = 0;
+            if (options.version === "2") {
+              // length & width
+              charactersToTrim = 2;
+            } else if (options.version === "3") {
+              // length & width & bitsPerPixel
+              charactersToTrim = 3;
+            }
+
+            charactersToTrim = isHexLevel() ? charactersToTrim * 2 : charactersToTrim * 8;
+            studentCode = studentCode.substring(charactersToTrim, studentCode.length);
+            studentCode = JSON.stringify({
+              width: widthText.value,
+              height: heightText.value,
+              bitsPerPixel: bitsPerPixelText.value,
+              binaryCode: studentCode
+            });
+
+            callback(studentCode);
           }
         };
       },
@@ -191,7 +212,7 @@ function initProjects() {
         // the user cannot create any work which we are then unable to save if
         // the initial load fails.
         enableUiControls();
-
+        loadMetadata();
         pixelationDisplay();
       })
       .catch(function() {
@@ -204,8 +225,47 @@ function initProjects() {
   }
 }
 
+/**
+ * Load the project's width and height and bitsPerPixel into the pixelation
+ * widget and (if this is a version 2 or 3 project) prepend them into the code
+ * too.
+*/
+function loadMetadata() {
+  // First check if this is a legacy (pre 2020) project. Legacy projects do not
+  // have the height & width & bitsPerPixel stored, they only have the binary
+  // code stored as a string. If this is a legacy project, do nothing. It will
+  // be migrated when it is saved.
+  try {
+    var projectData = options.projectData && JSON.parse(options.projectData);
+  } catch (e) {
+    return;
+  }
+
+  if (typeof projectData !== "object") {
+    return;
+  }
+
+  // This is a newer project. Get the width & height & bitsPerPixel.
+  widthText.value = widthRange.value = projectData.width;
+  heightText.value = heightRange.value = projectData.height;
+  if (projectData.bitsPerPixel) {
+    // Only V3 projects have bitsPerPixel.
+    bitsPerPixelText.value = bitsPerPixelRange.value = projectData.bitsPerPixel;
+  }
+
+  var sliderBytes = "";
+  if (options.version !== "1") {
+    sliderBytes = getSliderBytes();
+    if (isHexLevel()) {
+      sliderBytes = binToHexPvt(sliderBytes);
+    }
+  }
+
+  pixel_data.value = sliderBytes + projectData.binaryCode;
+}
+
 function pixelationDisplay() {
-  pixel_data.value = options.projectData || options.data;
+  pixel_data.value = pixel_data.value || options.projectData || options.data;
   drawGraph(null, false, true);
   formatBitDisplay();
 }
@@ -264,7 +324,7 @@ function drawGraph(ctx, exportImage, updateControls) {
   }
 
   var bitsPerPix = 1;
-  if (options.version == "1") {
+  if (options.version === "1") {
     image_w = getPositiveValue(widthText);
     image_h = getPositiveValue(heightText);
   } else {
@@ -604,20 +664,30 @@ function getPositiveValue(element) {
   return value >= 1 ? value : 1;
 }
 
-function updateBinaryDataToMatchSliders() {
+/**
+ * Gets the numbers stored in the slider and returns them as a byte string.
+ */
+function getSliderBytes() {
   var heightByte = pad(getPositiveValue(heightRange).toString(2), 8, "0");
   var widthByte = pad(getPositiveValue(widthRange).toString(2), 8, "0");
-  var bppByte = pad(getPositiveValue(bitsPerPixelRange).toString(2), 8, "0");
+  var bitsPerPixelByte = pad(getPositiveValue(bitsPerPixelRange).toString(2), 8, "0");
 
+  var sliderBits = widthByte + heightByte;
+  if (options.version === "3") {
+    sliderBits += bitsPerPixelByte;
+  }
+
+  return sliderBits;
+}
+
+function updateBinaryDataToMatchSliders() {
+  var newBits = getSliderBytes();
   var justBits = pixel_data.value.replace(/[ \n]/g, "");
-
   if (isHexSelected()) {
     justBits = hexToBinPvt(justBits);
   }
 
-  var newBits = widthByte + heightByte;
-  if (options.version == "3") {
-    newBits += bppByte;
+  if (options.version === "3") {
     if (justBits.length > 24) {
       newBits += justBits.substring(24);
     }

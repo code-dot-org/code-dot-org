@@ -1,6 +1,7 @@
 require_relative '../../../deployment'
 require 'aws-sdk-databasemigrationservice'
 require 'ostruct'
+require 'cdo/redshift_import'
 
 module Cdo
   class DMS
@@ -49,7 +50,7 @@ module Cdo
                 'schema-name': schema,
                 'table-name': table,
               },
-              'value': '_import_'
+              'value': RedshiftImport::TEMP_TABLE_PREFIX
             }
           end
 

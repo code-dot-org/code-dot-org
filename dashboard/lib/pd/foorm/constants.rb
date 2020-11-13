@@ -10,10 +10,9 @@ module Pd::Foorm
       TYPE_COMMENT = 'comment'.freeze
     ].freeze
 
-    IGNORED_QUESTION_TYPES = [
-      TYPE_HTML = 'html'.freeze,
-      # use panel later
+    PANEL_TYPES = [
       TYPE_PANEL = 'panel'.freeze,
+      TYPE_PANEL_DYNAMIC = 'paneldynamic'.freeze
     ]
 
     ANSWER_TYPES = [
@@ -38,5 +37,7 @@ module Pd::Foorm
       TYPE_MATRIX => ANSWER_MATRIX,
       TYPE_RATING => ANSWER_RATING
     }
+
+    ROLLUP_CONFIGURATION_FILE = 'config/foorm/rollups/rollups_by_course.json'
   end
 end

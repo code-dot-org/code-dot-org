@@ -36,7 +36,7 @@ class Plc::EnrollmentModuleAssignment < ActiveRecord::Base
 
   def status
     Plc::EnrollmentModuleAssignment.stages_based_status(
-      [plc_learning_module.stage],
+      [plc_learning_module.lesson],
       user,
       plc_enrollment_unit_assignment.plc_course_unit.script
     )

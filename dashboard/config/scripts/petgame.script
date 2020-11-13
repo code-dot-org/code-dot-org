@@ -1,4 +1,4 @@
-stage 'pet game'
+lesson 'pet game', display_name: 'pet game'
 level 'pet game 1'
 level 'pet game 2'
 level 'pet game 3'
@@ -8,3 +8,4 @@ level 'pet game 6'
 level 'pet game 7'
 level 'pet game 8'
 level 'pet game 9'
+

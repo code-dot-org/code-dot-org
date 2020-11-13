@@ -12,12 +12,14 @@
     "long_instructions": "## Questions to Consider\r\n\r\n* Think of a time when a function might have helped you write a program.\r\n  * What code would go in the **definition** of the function?\r\n  * When would you **call** the function?\r\n  * What would you name it?",
     "skip_dialog": true,
     "skip_sound": true,
-    "teacher_markdown": "# Discussion Goals\r\n\r\nMake sure students understand role of the two steps in using functions, as well as seeing functions as a form of \"chunking\" or abstraction.  The function definition should include all of the code that they want to run, and the name of the function should be a short description of the purpose of the code.    The function should be called at each place in the program that the student wants that block of code to run.",
+    "teacher_markdown": "# Discussion Goals\r\n\r\n\r\n**Key Vocabulary:** \r\n\r\n* **Function** - a named bit of programming instructions\r\n\r\nMake sure students understand role of the two steps in using functions, as well as seeing functions as a form of \"chunking\" or abstraction.  The function definition should include all of the code that they want to run, and the name of the function should be a short description of the purpose of the code.    The function should be called at each place in the program that the student wants that block of code to run.",
     "parent_level_id": 18666,
     "name_suffix": "_2020"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2019-04-03 06:51:38 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-04-03 07:12:17 +0000\",\"changed\":[\"video_key\",\"long_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2019-04-03 06:51:38 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-04-03 07:12:17 +0000\",\"changed\":[\"video_key\",\"long_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-04-30 18:30:10 +0000\",\"changed\":[\"teacher_markdown\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
 </StandaloneVideo>

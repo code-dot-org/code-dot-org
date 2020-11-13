@@ -52,7 +52,7 @@ const MultiAnswerStatus = {
   INCORRECT: 'incorrect'
 };
 
-const ANSWER_LETTERS = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'];
+const ANSWER_LETTERS = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K'];
 
 export const ASSESSMENT_FEEDBACK_OPTION_ID = 0;
 
@@ -630,7 +630,7 @@ export const getSurveyFreeResponseQuestions = state => {
 };
 
 /**
- * Returns an array of objects, each of type multipleChoiceSurveyDataPropType
+ * Returns an array of objects, each of type multipleChoiceDataPropType
  * indicating a multiple choice question and the percent of responses received
  * for each answer.
  */
@@ -680,10 +680,12 @@ export const getMultipleChoiceSurveyResults = state => {
             multipleChoiceOption: ANSWER_LETTERS[index],
             percentAnswered: Math.floor(
               (answerTotals[index] / totalAnswered) * 100
-            )
+            ),
+            text: answer
           };
         }),
-        notAnswered: Math.floor((notAnswered / totalAnswered) * 100)
+        notAnswered: Math.floor((notAnswered / totalAnswered) * 100),
+        totalAnswered: totalAnswered
       };
     });
 };

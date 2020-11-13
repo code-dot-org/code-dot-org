@@ -3,10 +3,10 @@ import React from 'react';
 import ToggleGroup from '../ToggleGroup';
 import color from '@cdo/apps/util/color';
 import {connect} from 'react-redux';
-import {setCurrentView, ViewType} from './sectionProgressRedux';
+import {setCurrentView} from './sectionProgressRedux';
+import {ViewType} from './sectionProgressConstants';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import i18n from '@cdo/locale';
-import experiments from '@cdo/apps/util/experiments';
 
 const styles = {
   toggleButton: {
@@ -71,17 +71,16 @@ class SectionProgressToggle extends React.Component {
         >
           <div>{i18n.levels()}</div>
         </button>
-        {experiments.isEnabled(experiments.STANDARDS_REPORT) &&
-          showStandardsToggle && (
-            <button
-              type="button"
-              value={ViewType.STANDARDS}
-              style={styles.toggleButton}
-              id="uitest-standards-toggle"
-            >
-              <div>{i18n.standards()}</div>
-            </button>
-          )}
+        {showStandardsToggle && (
+          <button
+            type="button"
+            value={ViewType.STANDARDS}
+            style={styles.toggleButton}
+            id="uitest-standards-toggle"
+          >
+            <div>{i18n.standards()}</div>
+          </button>
+        )}
       </ToggleGroup>
     );
   }

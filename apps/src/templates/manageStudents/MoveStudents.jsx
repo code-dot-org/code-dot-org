@@ -17,6 +17,7 @@ import {
 } from './manageStudentsRedux';
 import color from '@cdo/apps/util/color';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 const OTHER_TEACHER = 'otherTeacher';
 const PADDING = 20;
@@ -90,6 +91,17 @@ class MoveStudents extends Component {
 
   openDialog = () => {
     this.setState({isDialogOpen: true});
+    firehoseClient.putRecord(
+      {
+        study: 'teacher-dashboard',
+        study_group: 'manage-students-actions',
+        event: 'move-students-button-click',
+        data_json: JSON.stringify({
+          sectionId: this.props.currentSectionId
+        })
+      },
+      {includeUserId: true}
+    );
   };
 
   closeDialog = () => {
@@ -220,6 +232,7 @@ class MoveStudents extends Component {
           onClick={this.openDialog}
           color={Button.ButtonColor.gray}
           text={i18n.moveStudents()}
+          icon="sign-out"
         />
         <BaseDialog
           useUpdatedStyles

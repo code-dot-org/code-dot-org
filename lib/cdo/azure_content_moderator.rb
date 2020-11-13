@@ -105,31 +105,37 @@ class AzureContentModerator
   # Report to Firehose that we're about to make a request to Azure
   def report_request(image_url)
     FirehoseClient.instance.put_record(
-      study: 'azure-content-moderation',
-      study_group: 'v1',
-      event: 'moderation-request',
-      data_json: {
-        ImageUrl: image_url
-      }.to_json
+      :analysis,
+      {
+        study: 'azure-content-moderation',
+        study_group: 'v1',
+        event: 'moderation-request',
+        data_json: {
+          ImageUrl: image_url
+        }.to_json
+      }
     )
   end
 
   # Report the response we got from Azure to Firehose
   def report_response(image_url, rating, data, request_duration)
     FirehoseClient.instance.put_record(
-      study: 'azure-content-moderation',
-      study_group: 'v1',
-      event: 'moderation-result',
-      data_string: rating.to_s,
-      data_json: data.
-        slice(ADULT_SCORE, IS_ADULT, RACY_SCORE, IS_RACY).
-        merge(
-          RequestDuration: request_duration,
-          ImageUrl: image_url,
-          RacyThresholdUsed: racy_threshold,
-          AdultThresholdUsed: adult_threshold,
-        ).
-        to_json
+      :analysis,
+      {
+        study: 'azure-content-moderation',
+        study_group: 'v1',
+        event: 'moderation-result',
+        data_string: rating.to_s,
+        data_json: data.
+          slice(ADULT_SCORE, IS_ADULT, RACY_SCORE, IS_RACY).
+          merge(
+            RequestDuration: request_duration,
+            ImageUrl: image_url,
+            RacyThresholdUsed: racy_threshold,
+            AdultThresholdUsed: adult_threshold,
+          ).
+          to_json
+      }
     )
   end
 

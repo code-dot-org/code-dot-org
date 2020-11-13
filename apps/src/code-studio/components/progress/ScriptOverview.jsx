@@ -24,6 +24,7 @@ import {
   assignmentVersionShape,
   sectionForDropdownShape
 } from '@cdo/apps/templates/teacherDashboard/shapes';
+import GoogleClassroomAttributionLabel from '@cdo/apps/templates/progress/GoogleClassroomAttributionLabel';
 
 /**
  * Stage progress component used in level header and script overview.
@@ -41,9 +42,9 @@ class ScriptOverview extends React.Component {
     showRedirectWarning: PropTypes.bool,
     versions: PropTypes.arrayOf(assignmentVersionShape).isRequired,
     courseName: PropTypes.string,
-    locale: PropTypes.string,
     showAssignButton: PropTypes.bool,
     assignedSectionId: PropTypes.number,
+    minimal: PropTypes.bool,
 
     // redux provided
     perLevelProgress: PropTypes.object.isRequired,
@@ -100,10 +101,10 @@ class ScriptOverview extends React.Component {
       hiddenStageState,
       selectedSectionId,
       courseName,
-      locale,
       showAssignButton,
       userId,
-      assignedSectionId
+      assignedSectionId,
+      minimal
     } = this.props;
 
     const displayRedirectDialog =
@@ -141,7 +142,6 @@ class ScriptOverview extends React.Component {
               showHiddenUnitWarning={isHiddenUnit}
               versions={versions}
               courseName={courseName}
-              locale={locale}
               userId={userId}
             />
             <ScriptOverviewTopRow
@@ -161,10 +161,11 @@ class ScriptOverview extends React.Component {
             />
           </div>
         )}
-        <ProgressTable />
+        <ProgressTable minimal={minimal} />
         {onOverviewPage && (
           <ProgressLegend excludeCsfColumn={excludeCsfColumnInLegend} />
         )}
+        <GoogleClassroomAttributionLabel />
       </div>
     );
   }

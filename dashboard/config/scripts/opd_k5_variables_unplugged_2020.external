@@ -1,0 +1,23 @@
+name 'OPD-K5 variables unplugged_2020'
+title 'Variables unplugged'
+description 'description here'
+markdown <<MARKDOWN
+# Unplugged Lesson: Envelope Variables
+
+> A **variable** is a placeholder for a piece of information that can change.
+
+***
+
+## **1. Review "<a href="https://curriculum.code.org/csf-20/coursef/7/" target="blank">Envelope Variables</a>" Lesson Plan from Course F.**
+<br/>
+Course F is meant for students in Grade 5. This is the only place where variables come up in Courses A-F.
+<br/><br/>
+
+## **2. Watch the student video: Envelope Variables (in the lesson plan)**
+<br/>
+This is a video that you would show your students to help introduce the concept of variables and kick off the unplugged lesson.
+
+***
+<a href="https://curriculum.code.org/csf-20/coursef/7/" target="blank">![](https://images.code.org/69e71d4d68ba6d01299d149ffde9539b-image-1592843228859.png)</a>
+
+MARKDOWN

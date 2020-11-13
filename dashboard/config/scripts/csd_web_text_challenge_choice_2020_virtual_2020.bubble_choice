@@ -1,0 +1,9 @@
+name 'CSD web text challenge choice_2020_virtual_2020'
+display_name 'Text Challenges'
+description 'Try out these new blocks and challenges.'
+
+sublevels
+level 'CSD web text stroke_virtual_2020'
+level 'CSD web challenge stroke_virtual_2020'
+level 'CSD web challenge wrap text_virtual_2020'
+level 'CSD games text freeplay_virtual_2020'

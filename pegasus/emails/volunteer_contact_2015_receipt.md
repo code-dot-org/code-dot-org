@@ -5,9 +5,9 @@ def format_email_address(email, name='')
   "#{name} <#{email}>".strip
 end
 %>
-to: <%= format_email_address(volunteer_email_s, volunteer_name_s).inspect %>
+to: <%= format_email_address(volunteer_email_s, volunteer_name_s).inspect.html_safe %>
 from: 'Code.org Volunteers <volunteers@code.org>'
-reply-to: <%= format_email_address(email_s, name_s).inspect %>
+reply-to: <%= format_email_address(email_s, name_s).inspect.html_safe %>
 subject: "A teacher is requesting your help"
 ---
 
@@ -54,6 +54,6 @@ Getting too many email requests? It means there aren't enough volunteers in your
 
 - [Unsubscribe from additional teacher requests **this year**](<%= update_preferences %>)
 - [Unsubscribe from teacher requests **forever**](<%= update_preferences %>)
-- [Unsubscribe from all Code.org emails](<%= unsubscribe_link %>)
+- [Unsubscribe from all Code.org emails](<%= local_assigns.fetch(:unsubscribe_link, "") %>)
 
-![](<%= tracking_pixel %>)
+![](<%= local_assigns.fetch(:tracking_pixel, "") %>)

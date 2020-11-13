@@ -15,8 +15,8 @@ import {
   Facilitator,
   ProgramManager
 } from './permission';
-import queryString from 'query-string';
 import $ from 'jquery';
+import SubmissionsDownloadForm from './reports/foorm/submissions_download_form';
 
 const FILTER_API_URL = '/api/v1/pd/workshops/filter';
 const defaultFilters = {
@@ -38,6 +38,11 @@ const filterParams = {
     state: 'Ended'
   }
 };
+const styles = {
+  surveySubmissionsButton: {
+    marginLeft: 5
+  }
+};
 
 export class WorkshopIndex extends React.Component {
   static propTypes = {
@@ -54,10 +59,6 @@ export class WorkshopIndex extends React.Component {
 
   handleAttendanceReportsClick = () => {
     this.context.router.push('/reports');
-  };
-
-  handleSurveyResultsClick = () => {
-    this.context.router.push('/survey_results');
   };
 
   handleLegacySurveySummariesClick = () => {
@@ -92,9 +93,11 @@ export class WorkshopIndex extends React.Component {
       Organizer,
       ProgramManager
     );
-    const canSeeLegacySurveySummaries =
-      queryString.parse(window.location.search).legacysurveys &&
-      this.props.permission.hasAny(Facilitator, CsfFacilitator);
+    const canSeeLegacySurveySummaries = this.props.permission.hasAny(
+      Facilitator,
+      CsfFacilitator
+    );
+    const canExportSurveyResults = this.props.permission.has(WorkshopAdmin);
 
     return (
       <div>
@@ -113,11 +116,6 @@ export class WorkshopIndex extends React.Component {
               Attendance Reports
             </Button>
           )}
-          {this.props.permission.hasAny(Facilitator, CsfFacilitator) && (
-            <Button onClick={this.handleSurveyResultsClick}>
-              Facilitator Survey Results
-            </Button>
-          )}
           {canSeeLegacySurveySummaries && (
             <Button onClick={this.handleLegacySurveySummariesClick}>
               Legacy Facilitator Survey Summaries
@@ -129,6 +127,13 @@ export class WorkshopIndex extends React.Component {
           >
             Filter View
           </Button>
+          {canExportSurveyResults && (
+            <SubmissionsDownloadForm>
+              <Button style={styles.surveySubmissionsButton}>
+                Export Survey Results
+              </Button>
+            </SubmissionsDownloadForm>
+          )}
         </ButtonToolbar>
         <h2>In Progress</h2>
         <ServerSortWorkshopTable

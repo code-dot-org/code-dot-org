@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
+import $ from 'jquery';
 import QuickActionsCell from '../tables/QuickActionsCell';
 import PopUpMenu, {MenuBreak} from '@cdo/apps/lib/ui/PopUpMenu';
 import color from '../../util/color';
@@ -16,6 +17,8 @@ import {
 import {connect} from 'react-redux';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 import ConfirmRemoveStudentDialog from './ConfirmRemoveStudentDialog';
+import {getCurrentSection} from '@cdo/apps/util/userSectionClient';
+import {setSection} from '@cdo/apps/redux/sectionDataRedux';
 import i18n from '@cdo/locale';
 import {navigateToHref} from '@cdo/apps/utils';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
@@ -49,7 +52,8 @@ class ManageStudentActionsCell extends Component {
     cancelEditingStudent: PropTypes.func,
     removeStudent: PropTypes.func,
     saveStudent: PropTypes.func,
-    addStudent: PropTypes.func
+    addStudent: PropTypes.func,
+    setSection: PropTypes.func
   };
 
   state = {
@@ -58,7 +62,7 @@ class ManageStudentActionsCell extends Component {
   };
 
   onConfirmDelete = () => {
-    const {removeStudent, id, sectionId} = this.props;
+    const {removeStudent, id, sectionId, setSection} = this.props;
     this.setState({requestInProgress: true});
     $.ajax({
       url: `/dashboardapi/sections/${sectionId}/students/${id}/remove`,
@@ -66,6 +70,19 @@ class ManageStudentActionsCell extends Component {
     })
       .done(() => {
         removeStudent(id);
+        firehoseClient.putRecord(
+          {
+            study: 'teacher-dashboard',
+            study_group: 'manage-students-actions',
+            event: 'single-student-delete',
+            data_json: JSON.stringify({
+              sectionId: sectionId,
+              studentId: id
+            })
+          },
+          {includeUserId: true}
+        );
+        getCurrentSection(sectionId, section => setSection(section));
       })
       .fail((jqXhr, status) => {
         // We may want to handle this more cleanly in the future, but for now this
@@ -84,27 +101,79 @@ class ManageStudentActionsCell extends Component {
   };
 
   onEdit = () => {
-    this.props.startEditingStudent(this.props.id);
+    const {id, sectionId} = this.props;
+    this.props.startEditingStudent(id);
+    firehoseClient.putRecord(
+      {
+        study: 'teacher-dashboard',
+        study_group: 'manage-students-actions',
+        event: 'single-student-start-edit',
+        data_json: JSON.stringify({
+          sectionId: sectionId,
+          studentId: id
+        })
+      },
+      {includeUserId: true}
+    );
   };
 
   onCancel = () => {
+    const {id, sectionId} = this.props;
     if (this.props.rowType === RowType.NEW_STUDENT) {
       this.props.removeStudent(this.props.id);
     } else {
-      this.props.cancelEditingStudent(this.props.id);
+      firehoseClient.putRecord(
+        {
+          study: 'teacher-dashboard',
+          study_group: 'manage-students-actions',
+          event: 'single-student-cancel-edit',
+          data_json: JSON.stringify({
+            sectionId: sectionId,
+            studentId: id
+          })
+        },
+        {includeUserId: true}
+      );
+      this.props.cancelEditingStudent(id);
     }
   };
 
   onSave = () => {
+    const {id, sectionId} = this.props;
     if (this.props.rowType === RowType.NEW_STUDENT) {
       this.onAdd();
     } else {
-      this.props.saveStudent(this.props.id);
+      this.props.saveStudent(id);
+      firehoseClient.putRecord(
+        {
+          study: 'teacher-dashboard',
+          study_group: 'manage-students-actions',
+          event: 'single-student-save',
+          data_json: JSON.stringify({
+            sectionId: sectionId,
+            studentId: id
+          })
+        },
+        {includeUserId: true}
+      );
     }
   };
 
   onAdd = () => {
-    this.props.addStudent(this.props.id);
+    const {id, sectionId} = this.props;
+    this.props.addStudent(id);
+    firehoseClient.putRecord(
+      {
+        study: 'teacher-dashboard',
+        study_group: 'manage-students-actions',
+        event: 'single-student-add',
+        data_json: JSON.stringify({
+          sectionId: sectionId,
+          studentId: id
+        })
+      },
+      {includeUserId: true}
+    );
   };
 
   onPrintLoginInfo = () => {
@@ -128,6 +197,25 @@ class ManageStudentActionsCell extends Component {
     navigateToHref(url);
   };
 
+  onViewParentLetter = () => {
+    const {id, sectionId} = this.props;
+    const url =
+      teacherDashboardUrl(sectionId, '/parent_letter') + `?studentId=${id}`;
+    window.open(url, '_blank');
+    firehoseClient.putRecord(
+      {
+        study: 'teacher-dashboard',
+        study_group: 'manage-students-actions',
+        event: 'single-student-download-parent-letter',
+        data_json: JSON.stringify({
+          sectionId: sectionId,
+          studentId: id
+        })
+      },
+      {includeUserId: true}
+    );
+  };
+
   render() {
     const {rowType, isEditing, loginType} = this.props;
     const canDelete = [
@@ -136,7 +224,7 @@ class ManageStudentActionsCell extends Component {
       SectionLoginType.email
     ].includes(loginType);
 
-    const showLoginCardOption = [
+    const showWordPictureOptions = [
       SectionLoginType.word,
       SectionLoginType.picture
     ].includes(loginType);
@@ -150,9 +238,14 @@ class ManageStudentActionsCell extends Component {
                 {i18n.edit()}
               </PopUpMenu.Item>
             )}
-            {showLoginCardOption && (
+            {showWordPictureOptions && (
               <PopUpMenu.Item onClick={this.onPrintLoginInfo}>
                 {i18n.printLoginCard()}
+              </PopUpMenu.Item>
+            )}
+            {showWordPictureOptions && (
+              <PopUpMenu.Item onClick={this.onViewParentLetter}>
+                {i18n.viewParentLetter()}
               </PopUpMenu.Item>
             )}
             {this.props.canEdit && canDelete && <MenuBreak />}
@@ -226,6 +319,9 @@ export default connect(
     },
     addStudent(id) {
       dispatch(addStudents([id]));
+    },
+    setSection(section) {
+      dispatch(setSection(section));
     }
   })
 )(ManageStudentActionsCell);

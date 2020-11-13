@@ -1,20 +1,20 @@
 ---
-title: About
+title: Մասին
 theme: responsive
 video_player: true
 ---
 
-# About Us
+# Մեր Մասին
 
 <div class="col-60">
-  Code.org® is a nonprofit dedicated to expanding access to computer science in schools and increasing participation by women and underrepresented minorities. Our vision is that every student in every school has the opportunity to learn computer science, just like biology, chemistry, or algebra. We provide the most broadly used curriculum for teaching computer science in primary and secondary school and also organize the annual <a href="https://hourofcode.com">Hour of Code</a> campaign, which has engaged 10% of all students in the world. Code.org is supported by generous donors including Amazon, Facebook, Google, the Infosys Foundation, Microsoft, and <a href="/about/donors">many more</a>.
+  Code.org® is a nonprofit dedicated to expanding access to computer science in schools and increasing participation by women and underrepresented minorities. Մեր տեսիքն է ամեն դպրոցի ամեն սովորողի տալ հնարավորություն սովորել համակարգչային գիտությունը, ինչպիսիք են կենսաբանությունը, քիմիան և հանրահաշիվը։ We provide the most broadly used curriculum for teaching computer science in primary and secondary school and also organize the annual <a href="https://hourofcode.com">Hour of Code</a> campaign, which has engaged 10% of all students in the world. Code.org-ը աջակցվում է գլխավոր հովանավորների կողմից՝ ներառված Amazon, Facebook, Google, Infosys Foundation, Microsoft, և <a href="/about/donors">շատ ուրիշներ</a>։
 </div>
 
 [col-40]
 
 <div style="background-color:#7665a0;height:190px;padding:25px;display:flex;justify-content:center;flex-direction:column">
   
-  <font size="4" color="#FFFFFF"><b>Code.org courses are used by tens of millions of students and by one million teachers all around the world.</b></font>
+  <font size="4" color="#FFFFFF"><b>Code.org-ի դասընթացները օգտագործում են տաս միլիոն ուսանողներ և ավելի քան մեկ միլիոն ուսուցիչներ ամբողջ աշխարհից։</b></font>
  
 </div>
 
@@ -22,22 +22,22 @@ video_player: true
 
 <div style="clear:both"></div>
 
-## History
+## Պատմությունը
 
-In 2013, Code.org was launched by twin brothers Hadi and Ali Partovi with a [video promoting computer science](https://www.youtube.com/watch?v=nKIu9yen5nc). This video became #1 on YouTube for a day, and 15,000 schools reached out to us for help. Since then, we've expanded from a bootstrapped staff of volunteers to build a full organization supporting a worldwide movement. We believe that a quality computer science education should be available to every child, not just a lucky few.
+2013-ին Code.org-ը գործարկեցին երկվորյակ եղբայրներ Հադի և Ալի Պարտովիները՝ [տեսանյութով, որը աջակցում էր համակարգչային գիտությունները](https://www.youtube.com/watch?v=nKIu9yen5nc): Այս տեսանյութը դարձավ #1-ը YouTube-ում և 1 օրում 15,000 դպրոցներ ձեռք մեկնեցին մեզ օգնելու: Since then, we've expanded from a bootstrapped staff of volunteers to build a full organization supporting a worldwide movement. We believe that a quality computer science education should be available to every child, not just a lucky few.
 <br> <iframe width="560" height="315" src="https://www.youtube.com/embed/nKIu9yen5nc" frameborder="0" allowfullscreen mark="crwd-mark"></iframe>
 
-## What We Do
+## Ինչ ենք մենք անում
 
 We do work across the education spectrum: designing [our own courses](https://studio.code.org/courses) or partnering with others, training teachers, partnering with large school districts, helping change government policies, expanding internationally via partnerships, and marketing to break stereotypes. Our work builds on decades of effort, by countless organizations and individuals who have helped establish, fund, and spread computer science education. We're grateful for the tireless work of the broader computer science education community, and we thank all the partners and individuals who have expanded our impact over the years.
 
-## Code.org's International Reach
+## Code.org-ի Միջազգային Արշավը
 
-Over 40% of our website traffic comes from outside of the United States and that number continues to climb. In order to expand global access to computer science, our team works closely with [more than 100 international partners](/about/partners), helping them to promote the Hour of Code, advocate for policy change, and train teachers. We are making computer science part of the international education discourse by partnering with ministries of education from around the world and working with international organizations like the Organisation for Economic Co-operation and Development and the United Nations Educational, Scientific and Cultural Organization.
+ԱՄՆ-ի մեր թրաֆիկի ավելի քան 40%-ը գալիս է դրսից և այդ թիվը գնալով աճում է: In order to expand global access to computer science, our team works closely with [more than 100 international partners](/about/partners), helping them to promote the Hour of Code, advocate for policy change, and train teachers. We are making computer science part of the international education discourse by partnering with ministries of education from around the world and working with international organizations like the Organisation for Economic Co-operation and Development and the United Nations Educational, Scientific and Cultural Organization.
 
 <img alt="Code.org International Partners" src="/images/international/international_partners.jpg" width="100%" />
 
-## Translation
+## Թարգմանություն
 
 Want to have a direct impact on students in your country? Help us make Code.org content available in their native language! If you volunteer to help translate our tutorials and lessons, you'll be joining a community of more than 7,000 translators who help bring computer science education to students around the world. Take a look at our [translation guide](/translate) for more information.
 
@@ -47,7 +47,7 @@ All curriculum resources and tutorials we create will forever be free to use and
 
 <img alt="Students with a laptop" src="/images/international/group_computer.jpg" width="100%" />
 
-## Follow us
+## Հետևեք մեզ
 
 [Sign up to receive status updates](/about/hear-from-us) about progress in the K-12 computer science movement and about the work of Code.org. Or follow Code.org on social media:
 

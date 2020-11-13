@@ -3,3 +3,10 @@
 [user]
 	name = Continuous Integration
 	email = dev@code.org
+
+# https://git-scm.com/docs/git-gc#_configuration
+[gc]
+    # Make git gc --auto return immediately and run in background if the system supports it. Default is true.
+    #
+    # Set false to prevent gc --auto from being interrupted by server shutdown, leaving behind large temp files.
+    autoDetach = false

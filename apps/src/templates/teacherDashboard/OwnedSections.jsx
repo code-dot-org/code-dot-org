@@ -10,8 +10,7 @@ import Button from '@cdo/apps/templates/Button';
 import {
   hiddenSectionIds,
   beginEditingNewSection,
-  beginEditingSection,
-  beginImportRosterFlow
+  beginEditingSection
 } from './teacherSectionsRedux';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
@@ -22,6 +21,7 @@ import SetUpSections from '../studioHomepages/SetUpSections';
 import {recordOpenEditSectionDetails} from './sectionHelpers';
 import experiments from '@cdo/apps/util/experiments';
 import {recordImpression} from './impressionHelpers';
+import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 
 const styles = {
   button: {
@@ -38,21 +38,20 @@ const styles = {
     fontSize: 14,
     paddingBottom: 5,
     color: color.charcoal
+  },
+  spinner: {
+    marginTop: '10px'
   }
 };
 
 class OwnedSections extends React.Component {
   static propTypes = {
-    queryStringOpen: PropTypes.string,
-    locale: PropTypes.string,
-
     // redux provided
     sectionIds: PropTypes.arrayOf(PropTypes.number).isRequired,
     hiddenSectionIds: PropTypes.arrayOf(PropTypes.number).isRequired,
     asyncLoadComplete: PropTypes.bool.isRequired,
     beginEditingNewSection: PropTypes.func.isRequired,
-    beginEditingSection: PropTypes.func.isRequired,
-    beginImportRosterFlow: PropTypes.func.isRequired
+    beginEditingSection: PropTypes.func.isRequired
   };
 
   state = {
@@ -66,14 +65,6 @@ class OwnedSections extends React.Component {
       recordImpression('owned_sections_table_with_dashboard_header_buttons');
     } else {
       recordImpression('owned_sections_table_without_dashboard_header_buttons');
-    }
-  }
-
-  componentDidMount() {
-    const {queryStringOpen, beginImportRosterFlow} = this.props;
-
-    if (queryStringOpen === 'rosterDialog') {
-      beginImportRosterFlow();
     }
   }
 
@@ -102,16 +93,11 @@ class OwnedSections extends React.Component {
   };
 
   render() {
-    const {
-      sectionIds,
-      hiddenSectionIds,
-      asyncLoadComplete,
-      locale
-    } = this.props;
+    const {sectionIds, hiddenSectionIds, asyncLoadComplete} = this.props;
     const {viewHidden} = this.state;
 
     if (!asyncLoadComplete) {
-      return null;
+      return <Spinner size="large" style={styles.spinner} />;
     }
 
     const hasSections = sectionIds.length > 0;
@@ -158,8 +144,8 @@ class OwnedSections extends React.Component {
           </div>
         )}
         <RosterDialog />
-        <AddSectionDialog locale={locale} />
-        <EditSectionDialog locale={locale} />
+        <AddSectionDialog />
+        <EditSectionDialog />
       </div>
     );
   }
@@ -174,7 +160,6 @@ export default connect(
   }),
   {
     beginEditingNewSection,
-    beginEditingSection,
-    beginImportRosterFlow
+    beginEditingSection
   }
 )(OwnedSections);

@@ -89,6 +89,7 @@ $level_current: $orange;
 $level_review_rejected: $red;
 $level_review_accepted: rgb(11, 142, 11); // TODO: $level_passed;
 $assessment: $cyan;
+$workspace_running_background: #e5e5e5;
 
 // Links (used in apps).
 $link_color: #0596CE;
@@ -105,6 +106,7 @@ $bootstrap_error_border: #ebccd1;
 $bootstrap_warning_background: #fcf8e3;
 $bootstrap_warning_text: #c09853;
 $bootstrap_warning_border: #faebcc;
+$bootstrap_border_color: #cccccc;
 
 // Colors taken from droplet, not part of our core theme.
 $droplet_light_green: #d3e965;
@@ -118,3 +120,6 @@ $droplet_pink: #f57ac6;
 $droplet_purple: #bb77c7;
 $droplet_green: #68d995;
 $droplet_white: $white;
+
+// Oceans: deep blue background.
+$oceans_deep_blue: rgb(2, 0, 28);

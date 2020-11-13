@@ -1,0 +1,14 @@
+name 'CSD U2 Sample CSS classes'
+editor_experiment ''
+display_name 'Sample Website'
+css 'unplugged'
+markdown <<MARKDOWN
+# Sample Website
+
+Click the website below to discover some new types of styling for your pages.
+
+
+[![](https://images.code.org/7c31d954229b205eff20e4a131271845-image-1585070245513.png)](https://codeprojects.org/-lbgSOg0xktagjHqalYTlPvYzGmfV3OyQxwifLBmmWE/)
+
+
+MARKDOWN

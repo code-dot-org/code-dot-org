@@ -188,8 +188,8 @@
     },
     "encrypted_examples": "Rup5pYidI0QtDofbCzw2X5ChVSXn8xHhejDMHXdZlUYL4GZsXLieS+U37tye\nO7oX\n",
     "reference_links": [
-      "/docs/concepts/app-lab/patterns/counter-patterns-with-event/",
-      "/docs/concepts/app-lab/patterns/variable-with-string-concatenation-pattern/"
+      "/docs/concepts/patterns/counter-patterns-with-event/",
+      "/docs/concepts/patterns/variable-with-string-concatenation-pattern/"
     ],
     "embed": "true",
     "instructions_important": "false",

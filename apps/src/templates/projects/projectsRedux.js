@@ -498,21 +498,17 @@ export const updateProjectLibrary = (projectId, newData) => {
 
 export const unpublishProjectLibrary = (
   projectId,
-  libraryApi = new LibraryClientApi(projectId),
-  onComplete = () => {}
+  onComplete,
+  libraryApi = new LibraryClientApi(projectId)
 ) => {
   return dispatch => {
     fetchProjectToUpdate(projectId, (error, data) => {
       if (error) {
-        onComplete(error, data);
-      } else {
-        libraryApi.unpublish(data, (error, serverData) => {
-          if (!error) {
-            dispatch(updatePersonalProjectData(projectId, serverData));
-          }
-          onComplete(error, serverData);
-        });
+        onComplete(error);
+        return;
       }
+
+      libraryApi.unpublish(data, (error, _) => onComplete(error));
     });
   };
 };

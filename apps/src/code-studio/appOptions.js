@@ -113,6 +113,7 @@
  * @property {number} puzzle_number
  * @property {number} stage_total
  * @property {boolean} iframeEmbed
+ * @property {boolean} iframeEmbedAppAndCode
  * @property {?} lastAttempt
  * @property {boolean} submittable
  * @property {boolean} final_level
@@ -211,7 +212,6 @@
  * @augments MilestoneResponse
  * @property {?} timestamp
  * @property {{message: ?, type: ?, contents: ?}} share_failure
- * @property {string} save_to_gallery_url - URL to save this submission to the gallery.
  * @property {string} level_source
  * @property {string} level_source_id
  * @property {string} level_source_image_url

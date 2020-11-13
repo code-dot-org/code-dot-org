@@ -228,6 +228,8 @@
   header_about: "Whakamārama"
   header_help_support: 'Māngai tautoko '
   header_report_bug: "Pūrongo mai to raru"
+  header_legal_privacy: "Kaupapahere Tūmataitinga"
+  header_legal_tos: "Ngā Ture Ratonga"
   user_header_label: "Tēnā koe %{username}"
   user_header_team: "Tīma"
   user_header_settings: "Taku pūkete"

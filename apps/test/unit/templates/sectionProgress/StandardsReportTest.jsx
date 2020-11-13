@@ -3,14 +3,16 @@ import {shallow} from 'enzyme';
 import {expect} from '../../../util/reconfiguredChai';
 import {UnconnectedStandardsReport as StandardsReport} from '@cdo/apps/templates/sectionProgress/standards/StandardsReport';
 import {replaceOnWindow, restoreOnWindow} from '../../../util/testUtils';
+import * as progressLoader from '@cdo/apps/templates/sectionProgress/sectionProgressLoader';
+import sinon from 'sinon';
 
 describe('StandardsReport', () => {
   let DEFAULT_PROPS;
 
   beforeEach(() => {
+    sinon.stub(progressLoader, 'loadScript');
     DEFAULT_PROPS = {
       scriptId: 2,
-      loadScript: () => {},
       teacherName: 'Awesome Teacher',
       sectionName: 'Great Section',
       teacherComment: null,
@@ -47,6 +49,7 @@ describe('StandardsReport', () => {
 
   afterEach(() => {
     restoreOnWindow('opener');
+    progressLoader.loadScript.restore();
   });
 
   it('report shows print buttons', () => {

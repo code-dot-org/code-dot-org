@@ -1,19 +1,9 @@
 var skinBase = require('../skins');
+var linePatterns = require('./linePatterns');
 
 exports.load = function(assetUrl, id) {
   var skin = skinBase.load(assetUrl, id);
-
-  skin.linePatterns = {
-    rainbowMenu: assetUrl('media/common_images/rainbow-menuicon.png'),
-    ropeMenu: assetUrl('media/common_images/rope-menuicon.png'),
-    squigglyMenu: assetUrl('media/common_images/squiggly-menuicon.png'),
-    swirlyMenu: assetUrl('media/common_images/swirlyline-menuicon.png'),
-    patternDefault: assetUrl('media/common_images/defaultline-menuicon.png'),
-    rainbowLine: assetUrl('media/common_images/rainbow.png'),
-    ropeLine: assetUrl('media/common_images/rope.png'),
-    squigglyLine: assetUrl('media/common_images/squiggly.png'),
-    swirlyLine: assetUrl('media/common_images/swirlyline.png')
-  };
+  skin.linePatterns = linePatterns.load(assetUrl);
 
   var CONFIGS = {
     anna: {
@@ -68,10 +58,29 @@ exports.load = function(assetUrl, id) {
     artist: {
       // Used to populate the Set Pattern block
       lineStylePatternOptions: [
+        [skin.linePatterns.brickMenu, 'brickLine'],
+        [skin.linePatterns.candycaneMenu, 'candycaneLine'],
+        [skin.linePatterns.dashMenu, 'dashLine'],
+        [skin.linePatterns.diamondMenu, 'diamondLine'],
+        [skin.linePatterns.dotMenu, 'dotLine'],
+        [skin.linePatterns.flowerPinkMenu, 'flowerPinkLine'],
+        [skin.linePatterns.flowerPurpleMenu, 'flowerPurpleLine'],
+        [skin.linePatterns.flowerYellowMenu, 'flowerYellowLine'],
+        [skin.linePatterns.heartPinkMenu, 'heartPinkLine'],
+        [skin.linePatterns.lightningMenu, 'lightningLine'],
+        [skin.linePatterns.pawprintMenu, 'pawprintLine'],
         [skin.linePatterns.rainbowMenu, 'rainbowLine'],
         [skin.linePatterns.ropeMenu, 'ropeLine'],
+        [skin.linePatterns.smileyMenu, 'smileyLine'],
+        [skin.linePatterns.smokeMenu, 'smokeLine'],
+        [skin.linePatterns.smoke2Menu, 'smoke2Line'],
+        [skin.linePatterns.spikyMenu, 'spikyLine'],
         [skin.linePatterns.squigglyMenu, 'squigglyLine'],
-        [skin.linePatterns.swirlyMenu, 'swirlyLine']
+        [skin.linePatterns.swirlyMenu, 'swirlyLine'],
+        [skin.linePatterns.swirly2Menu, 'swirly2Line'],
+        [skin.linePatterns.tiretrackMenu, 'tiretrackLine'],
+        [skin.linePatterns.traintrackMenu, 'traintrackLine'],
+        [skin.linePatterns.waterMenu, 'waterLine']
       ]
     }
   };

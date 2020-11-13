@@ -6,6 +6,8 @@ import ReactDOM from 'react-dom';
 import AgeDropdown from '@cdo/apps/templates/AgeDropdown';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import msg from '@cdo/locale';
+import {getChannelIdFromUrl} from '@cdo/apps/reportAbuse';
+import RailsAuthenticityToken from '../../lib/util/RailsAuthenticityToken';
 
 /**
  * A component containing some text/links for projects that have had abuse
@@ -20,23 +22,8 @@ const DROPDOWN_WIDTH = 514;
 
 const alert = window.alert;
 
-/**
- * Extracts a channel id from the given abuse url
- * @returns {string} Channel id, or undefined if we can't get one.
- */
-export const getChannelIdFromUrl = function(abuseUrl) {
-  let match;
-  if (abuseUrl.indexOf('codeprojects') >= 0) {
-    match = /.*codeprojects.*[^\/]+\/([^\/]+)/.exec(abuseUrl);
-  } else {
-    match = /.*\/projects\/[^\/]+\/([^\/]+)/.exec(abuseUrl);
-  }
-  return match && match[1];
-};
-
 export default class ReportAbuseForm extends React.Component {
   static propTypes = {
-    csrfToken: PropTypes.string.isRequired,
     abuseUrl: PropTypes.string.isRequired,
     name: PropTypes.string,
     email: PropTypes.string,
@@ -96,13 +83,13 @@ export default class ReportAbuseForm extends React.Component {
         <p>{msg.reportAbuseIntro()}</p>
         <br />
         <form action="/report_abuse" method="post">
+          <RailsAuthenticityToken />
           <input
             type="hidden"
-            name="authenticity_token"
-            value={this.props.csrfToken}
+            name="channel_id"
+            defaultValue={this.getChannelId()}
           />
-          <input type="hidden" name="channel_id" value={this.getChannelId()} />
-          <input type="hidden" name="name" value={this.props.name} />
+          <input type="hidden" name="name" defaultValue={this.props.name} />
           <div style={{display: this.props.email ? 'none' : 'block'}}>
             <div>{msg.email()}</div>
             <input
@@ -181,7 +168,3 @@ export default class ReportAbuseForm extends React.Component {
     );
   }
 }
-
-// TODO - just expose renderer on dashboard?
-window.dashboard = window.dashboard || {};
-window.dashboard.ReportAbuseForm = ReportAbuseForm;

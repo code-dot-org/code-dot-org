@@ -1,0 +1,52 @@
+name 'csf_20-21_course_b_cross-curricular_opportunities'
+editor_experiment ''
+title 'Course B: Cross-Curricular Opportunities'
+description 'description here'
+
+markdown <<MARKDOWN
+# Course B: Cross-Curricular Opportunities
+
+## Common Core English Language Arts Standards
+
+<details><summary>
+
+**Language**
+
+</summary>
+
+* **1.L.6** - Use words and phrases acquired through conversations, reading and being read to, and responding to texts, including using frequently occurring conjunctions to signal simple relationships (e.g., because).
+
+</details>
+
+<details><summary>
+
+**Speaking & Listening**
+
+</summary>
+
+* **1.SL.1** - Participate in collaborative conversations with diverse partners about grade 1 topics and texts with peers and adults in small and larger groups.
+
+* **1.SL.1.a** - Follow agreed-upon rules for discussions (e.g., listening to others with care, speaking one at a time about the topics and texts under discussion).
+
+* **1.SL.1.b** - Build on others’ talk in conversations by responding to the comments of others through multiple exchanges.
+
+* **1.SL.1.c** - Ask questions to clear up any confusion about the topics and texts under discussion.
+
+* **1.SL.2** - Ask and answer questions about key details in a text read aloud or information presented orally or through other media.
+
+* **1.SL.5** - Add drawings or other visual displays to descriptions when appropriate to clarify ideas, thoughts, and feelings.
+
+</details>
+
+<details><summary>
+
+**Writing**
+
+</summary>
+
+* **1.W.6** - With guidance and support from adults, use a variety of digital tools to produce and publish writing, including in collaboration with peers
+
+</details>
+
+
+MARKDOWN

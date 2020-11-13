@@ -41,34 +41,22 @@ module Pd
     end
 
     private_class_method def self.course_name(workshop)
-      if workshop.csf?
-        [
-          {
-            string: workshop.course_name,
-            y: -30,
-            pointsize: 70,
-            width: 1600,
-            height: 100,
-          },
-          {
-            string: workshop.friendly_subject,
-            y: 65,
-            pointsize: 60,
-            width: 1600,
-            height: 100,
-          }
-        ]
-      else
-        [
-          {
-            string: workshop.course_name,
-            y: -10,
-            pointsize: 70,
-            width: 1600,
-            height: 100,
-          }
-        ]
-      end
+      [
+        {
+          string: workshop.course_name,
+          y: -30,
+          pointsize: 70,
+          width: 1600,
+          height: 100,
+        },
+        {
+          string: workshop.friendly_subject,
+          y: 65,
+          pointsize: 60,
+          width: 1600,
+          height: 100,
+        }
+      ]
     end
 
     private_class_method def self.pd_hours(workshop)

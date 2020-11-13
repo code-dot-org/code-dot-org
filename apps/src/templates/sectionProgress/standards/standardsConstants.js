@@ -1,3 +1,8 @@
+export const LessonIcons = {
+  PLUGGED: 'desktop',
+  UNPLUGGED: 'scissors'
+};
+
 export const cstaStandardsURL = 'https://www.csteachers.org/page/standards';
 
 // These constants help clarify the meaning of a TeacherScore.score.

@@ -777,7 +777,7 @@ describe('Applab Exporter,', function() {
 });
 
 describe('getAppOptionsFile helper function', () => {
-  it('only exposes the app options that are whitelisted', () => {
+  it('only exposes the app options that are allowlisted', () => {
     setAppOptions({
       puzzleRatingsUrl: 'this should not show up',
       labUserId: 'this should not show up',
@@ -786,7 +786,7 @@ describe('getAppOptionsFile helper function', () => {
         isK1: 'this should not show up',
         skin: 'this should show up'
       },
-      keyMissingFromWhitelist: 'should not show up'
+      keyMissingFromAllowlist: 'should not show up'
     });
     assert.equal(
       getAppOptionsFile(),

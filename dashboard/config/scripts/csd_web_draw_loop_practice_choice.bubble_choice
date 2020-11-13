@@ -1,0 +1,10 @@
+name 'CSD web draw loop practice choice'
+editor_experiment ''
+display_name 'Practice'
+description 'Try out using the draw loop with these activities.'
+
+sublevels
+level 'CSD U3 Draw Loop Plugged wiggle sprite rotation_2020'
+level 'CSD games draw debug blurry'
+level 'CSD games draw debug afterimage'
+level 'CSD games draw debug not moving'

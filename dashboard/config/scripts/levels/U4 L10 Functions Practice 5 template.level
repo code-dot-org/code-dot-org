@@ -33,7 +33,7 @@
     "palette_category_at_start": "variables",
     "mini_rubric": "false",
     "start_html": "<div id=\"designModeViz\" class=\"appModern clip-content\" tabindex=\"1\" data-radium=\"true\" style=\"width: 320px; height: 450px; display: block;\"><div class=\"screen\" tabindex=\"1\" id=\"homescreen\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;\"><label style=\"margin: 0px; padding: 2px; line-height: 1; font-family: Arial, Helvetica, sans-serif; font-size: 14px; overflow: hidden; overflow-wrap: break-word; max-width: 320px; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; width: 320px; height: 450px; position: absolute; left: 0px; top: 0px; background-color: rgb(255, 255, 255);\" id=\"background\"></label><img data-canonical-image-url=\"icon://fa-smile-o\" data-object-fit=\"contain\" id=\"smiley\" style=\"height: 100px; width: 100px; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; position: absolute; left: 110px; top: 145px; margin: 0px;\" data-icon-color=\"#d41180\"><label style=\"margin: 0px; padding: 2px; line-height: 1; font-family: Arial, Helvetica, sans-serif; font-size: 40px; overflow: hidden; overflow-wrap: break-word; color: rgb(0, 0, 0); max-width: 320px; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; width: 300px; height: 50px; position: absolute; left: 10px; top: 390px; text-align: center;\" id=\"score_label\">0</label></div></div>",
-    "map_reference": "/docs/concepts/app-lab/patterns/counter-patterns-with-event/",
+    "map_reference": "/docs/concepts/patterns/counter-patterns-with-event/",
     "preload_asset_list": null,
     "encrypted_examples": [
 

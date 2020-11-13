@@ -12,15 +12,17 @@ import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import {h3Style} from '../../lib/ui/Headings';
 import {
-  ViewType,
-  loadScript,
   getCurrentProgress,
   getCurrentScriptData,
   setLessonOfInterest,
-  scriptDataPropType,
-  setCurrentView,
-  tooltipIdForStudent
+  setCurrentView
 } from './sectionProgressRedux';
+import {loadScript} from './sectionProgressLoader';
+import {
+  ViewType,
+  scriptDataPropType,
+  tooltipIdForStudent
+} from './sectionProgressConstants';
 import {tooltipIdForLessonNumber} from './multiGridConstants';
 import {sectionDataPropType} from '@cdo/apps/redux/sectionDataRedux';
 import {
@@ -29,7 +31,6 @@ import {
 } from '@cdo/apps/redux/scriptSelectionRedux';
 import {stageIsAllAssessment} from '@cdo/apps/templates/progress/progressHelpers';
 import firehoseClient from '../../lib/util/firehose';
-import experiments from '@cdo/apps/util/experiments';
 import ProgressViewHeader from './ProgressViewHeader';
 import moment from 'moment';
 
@@ -80,21 +81,21 @@ class SectionProgress extends Component {
     currentView: PropTypes.oneOf(Object.values(ViewType)),
     setCurrentView: PropTypes.func.isRequired,
     scriptData: scriptDataPropType,
-    loadScript: PropTypes.func.isRequired,
     setScriptId: PropTypes.func.isRequired,
     setLessonOfInterest: PropTypes.func.isRequired,
     isLoadingProgress: PropTypes.bool.isRequired,
     showStandardsIntroDialog: PropTypes.bool,
-    studentTimestamps: PropTypes.object
+    studentTimestamps: PropTypes.object,
+    localeCode: PropTypes.string
   };
 
   componentDidMount() {
-    this.props.loadScript(this.props.scriptId, this.props.section.id);
+    loadScript(this.props.scriptId, this.props.section.id);
   }
 
   onChangeScript = scriptId => {
     this.props.setScriptId(scriptId);
-    this.props.loadScript(scriptId, this.props.section.id);
+    loadScript(scriptId, this.props.section.id);
 
     firehoseClient.putRecord(
       {
@@ -157,7 +158,7 @@ class SectionProgress extends Component {
         effect="solid"
       >
         <span style={styles.studentTooltip}>
-          Last Progress:
+          {i18n.lastProgress()}
           <br />
           {this.tooltipTextForStudent(studentId)}
         </span>
@@ -168,6 +169,10 @@ class SectionProgress extends Component {
   }
 
   tooltipTextForStudent = studentId => {
+    const {localeCode} = this.props;
+    if (localeCode) {
+      moment.locale(localeCode);
+    }
     const timestamp = this.props.studentTimestamps[studentId];
     return timestamp ? moment(timestamp).calendar() : i18n.none();
   };
@@ -196,7 +201,6 @@ class SectionProgress extends Component {
       isLoadingProgress,
       showStandardsIntroDialog
     } = this.props;
-
     const levelDataInitialized = scriptData && !isLoadingProgress;
     const lessons = scriptData ? scriptData.stages : [];
     const scriptWithStandardsSelected =
@@ -254,17 +258,15 @@ class SectionProgress extends Component {
             </div>
           )}
           {levelDataInitialized && this.renderTooltips()}
-          {levelDataInitialized &&
-            experiments.isEnabled(experiments.STANDARDS_REPORT) && (
-              <div id="uitest-standards-view" style={standardsStyle}>
-                <StandardsView
-                  showStandardsIntroDialog={
-                    currentView === ViewType.STANDARDS &&
-                    showStandardsIntroDialog
-                  }
-                />
-              </div>
-            )}
+          {levelDataInitialized && (
+            <div id="uitest-standards-view" style={standardsStyle}>
+              <StandardsView
+                showStandardsIntroDialog={
+                  currentView === ViewType.STANDARDS && showStandardsIntroDialog
+                }
+              />
+            </div>
+          )}
         </div>
       </div>
     );
@@ -286,12 +288,10 @@ export default connect(
     studentTimestamps:
       state.sectionProgress.studentTimestampsByScript[
         state.scriptSelection.scriptId
-      ]
+      ],
+    localeCode: state.locales.localeCode
   }),
   dispatch => ({
-    loadScript(scriptId, sectionId) {
-      dispatch(loadScript(scriptId, sectionId));
-    },
     setScriptId(scriptId) {
       dispatch(setScriptId(scriptId));
     },

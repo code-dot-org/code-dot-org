@@ -5,39 +5,52 @@
 # https://crowdin.com/project/codeorg
 
 require_relative 'i18n_script_utils'
-require 'open3'
+
+require 'cdo/crowdin/utils'
+require 'cdo/crowdin/project'
+
+def with_elapsed
+  before = Time.now
+  yield
+  after = Time.now
+  return Time.at(after - before).utc.strftime('%H:%M:%S')
+end
 
 def sync_down
-  I18nScriptUtils.with_syncronous_stdout do
+  I18nScriptUtils.with_synchronous_stdout do
     puts "Beginning sync down"
+
+    logger = Logger.new(STDOUT)
+    logger.level = Logger::INFO
 
     CROWDIN_PROJECTS.each do |name, options|
       puts "Downloading translations from #{name} project"
-      command = "crowdin --config #{options[:config_file]} --identity #{options[:identity_file]} download translations"
+      api_key = YAML.load_file(options[:identity_file])["api_key"]
+      project_id = YAML.load_file(options[:config_file])["project_identifier"]
+      project = Crowdin::Project.new(project_id, api_key)
+      options = {
+        etags_json: File.join(File.dirname(__FILE__), "crowdin", "#{project_id}_etags.json"),
+        locales_dir: File.join(I18N_SOURCE_DIR, '..'),
+        logger: logger
+      }
 
-      # Filter the output because the crowdin translation download is _super_
-      # verbose; it includes not only a progress spinner, but also information
-      # about each individual file downloaded in each individual language.
-      #
-      # We really only care about general progress monitoring, so we remove or
-      # ignore any things we identify as "noise" in the output.
-      Open3.popen2(command) do |_stdin, stdout, status_thread|
-        while line = stdout.gets
-          # strip out the progress spinner, which is implemented as the sequence
-          # \-/| followed by a backspace character
-          line.gsub!(/[\|\/\-\\][\b]/, '')
-
-          # skip lines detailing individual file extraction
-          next if line.start_with?("Extracting: ")
-
-          # skip warning that happens if the sync is run multiple times in succession
-          next if line == "Warning: Export was skipped. Please note that this method can be invoked only once per 30 minutes.\n"
-
-          puts line
-        end
-
-        raise "Sync down failed"  unless status_thread.value.success?
+      # download strings not in the regular codeorg project to
+      # a specific subdirectory within the locale directory
+      case name.to_s
+      when "codeorg-markdown"
+        options[:locale_subdir] = "codeorg-markdown"
+      when "hour-of-code"
+        options[:locale_subdir] = "hourofcode"
       end
+
+      utils = Crowdin::Utils.new(project, options)
+
+      puts "Fetching list of changed files"
+      elapsed = with_elapsed {utils.fetch_changes}
+      puts "Changes fetched in #{elapsed}"
+      puts "Downloading changed files"
+      elapsed = with_elapsed {utils.download_changed_files}
+      puts "Files downloaded in #{elapsed}"
     end
 
     puts "Sync down complete"

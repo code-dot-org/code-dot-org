@@ -153,18 +153,32 @@ module.exports = {
       runBeforeClick: function(assert) {
         // add a completion on timeout since this is a freeplay level
         tickWrapper.runOnAppTick(Applab, 2, function() {
-          // the single quote is escaped additionally in CSS strings.
+          // the single quote is escaped additionally in CSS strings when
+          // running tests on PhantomJS. Chrome and Firefox do not seem to do this.
+          // We check for both, below, while we are supporting tests in both browsers.
           const cssEscapedImageSuffix = "/%C3%B1%23%3F(%20%22\\'.jpg";
           const escapedImageSuffix = "/%C3%B1%23%3F(%20%22'.jpg";
 
           const imageSrc = $('#image1').attr('src');
-          expect(imageSrc).to.contain(escapedImageSuffix, 'image src');
+          assert(imageSrc.includes(escapedImageSuffix), 'image src');
 
           const buttonImage = $('#button1')[0].style.backgroundImage;
-          expect(buttonImage).to.contain(cssEscapedImageSuffix, 'button image');
+          assert(
+            // Chrome or Firefox
+            buttonImage.includes(escapedImageSuffix) ||
+              // Phantom
+              buttonImage.includes(cssEscapedImageSuffix),
+            'button image'
+          );
 
           const screenImage = $('#screen1')[0].style.backgroundImage;
-          expect(screenImage).to.contain(cssEscapedImageSuffix, 'screen image');
+          assert(
+            // Chrome or Firefox
+            screenImage.includes(escapedImageSuffix) ||
+              //Phantom
+              screenImage.includes(cssEscapedImageSuffix),
+            'screen image'
+          );
 
           Applab.onPuzzleComplete();
         });
@@ -220,7 +234,7 @@ module.exports = {
       editCode: true,
       levelHtml:
         '<div xmlns="http://www.w3.org/1999/xhtml" id="designModeViz" class="appModern withCrosshair" style="width: 320px; height: 450px; display: none;"><div class="screen" tabindex="1" id="screen1" style="display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;"><input type="range" value="50" min="0" max="100" step="1" id="my_slider" style="margin: 0px; padding: 0px; width: 150px; height: 24px; position: absolute; left: 75px; top: 95px;" /></div></div>',
-      xml: `setProperty("my_slider", "value", 51);
+      xml: `setProperty("my_slider", "value", 52);
         console.log("value: " + getProperty("my_slider", "value"));
         setProperty("my_slider", "min", 1);
         console.log("min: " + getProperty("my_slider", "min"));
@@ -233,7 +247,7 @@ module.exports = {
         tickWrapper.runOnAppTick(Applab, 2, function() {
           var slider = document.getElementById('my_slider');
 
-          assert.equal(slider.value, '51');
+          assert.equal(slider.value, '52');
           assert.equal(slider.getAttribute('min'), '1');
           assert.equal(slider.getAttribute('max'), '101');
           assert.equal(slider.getAttribute('step'), '3');
@@ -244,7 +258,7 @@ module.exports = {
         var debugOutput = document.getElementById('debug-output');
         assert.equal(
           debugOutput.textContent,
-          '"value: 51"' + '"min: 1"' + '"max: 101"' + '"step: 3"'
+          '"value: 52"' + '"min: 1"' + '"max: 101"' + '"step: 3"'
         );
         return true;
       },

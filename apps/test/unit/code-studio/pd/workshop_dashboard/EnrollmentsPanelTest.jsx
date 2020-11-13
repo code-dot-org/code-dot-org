@@ -12,6 +12,16 @@ import './workshopFactory';
 
 describe('EnrollmentsPanel', () => {
   let server, loadEnrollments;
+  let sampleCSFWorkshop = {
+    id: 123,
+    state: 'Ended',
+    subject: 'Intro',
+    course: 'CS Fundamentals',
+    'account_required_for_attendance?': false,
+    capacity: 10,
+    enrolled_teacher_count: 5,
+    'scholarship_workshop?': false
+  };
 
   beforeEach(() => {
     server = sinon.createFakeServer();
@@ -254,5 +264,54 @@ describe('EnrollmentsPanel', () => {
     wrapper.instance().handleDeleteEnrollment(enrollmentId);
     server.respond();
     assert(loadEnrollments.calledOnce);
+  });
+
+  it('should show survey results button for CSF Intro past May 2020', () => {
+    sampleCSFWorkshop.sessions = [
+      {start: '2020-05-08T09:00:00.000Z', end: '2020-05-08T17:00:00.000Z'}
+    ];
+
+    const wrapper = mount(
+      <EnrollmentsPanel
+        workshopId={String(sampleCSFWorkshop.id)}
+        workshop={sampleCSFWorkshop}
+        isLoadingEnrollments={false}
+        enrollments={[]}
+        isWorkshopAdmin
+        loadEnrollments={loadEnrollments}
+      />
+    );
+
+    assert(
+      wrapper
+        .find('Button')
+        .filterWhere(n => n.text().includes('View Survey Results'))
+        .exists(),
+      'View Survey Results button was rendered'
+    );
+  });
+
+  it('should not show survey results button for CSF Intro pre May 2020', () => {
+    sampleCSFWorkshop.sessions = [
+      {start: '2020-04-08T09:00:00.000Z', end: '2020-04-08T17:00:00.000Z'}
+    ];
+    const wrapper = mount(
+      <EnrollmentsPanel
+        workshopId={String(sampleCSFWorkshop.id)}
+        workshop={sampleCSFWorkshop}
+        isLoadingEnrollments={false}
+        enrollments={[]}
+        isWorkshopAdmin
+        loadEnrollments={loadEnrollments}
+      />
+    );
+
+    assert(
+      !wrapper
+        .find('Button')
+        .filterWhere(n => n.text().includes('View Survey Results'))
+        .exists(),
+      'View Survey Results button was not rendered'
+    );
   });
 });

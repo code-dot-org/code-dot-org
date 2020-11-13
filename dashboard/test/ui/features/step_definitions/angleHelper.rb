@@ -41,7 +41,7 @@ Then(/^the Angle Helper circle is at coordinates \((\d*),(\d*)\)$/) do |x, y|
   # use a short timeout to accomodate the smoothing animation on the
   # angle helper circle
   wait_short_until do
-    @browser.execute_script("return parseInt($('.blocklyWidgetDiv circle').attr('cx')) === #{x};")
-    @browser.execute_script("return parseInt($('.blocklyWidgetDiv circle').attr('cy')) === #{y};")
+    @browser.execute_script("return parseInt(($('.blocklyWidgetDiv circle')[1]).getAttribute('cx')) === #{x};")
+    @browser.execute_script("return parseInt(($('.blocklyWidgetDiv circle')[1]).getAttribute('cy')) === #{y};")
   end
 end

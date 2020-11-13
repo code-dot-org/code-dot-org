@@ -2,6 +2,23 @@ import * as coreLibrary from '../coreLibrary';
 import {commands as behaviorCommands} from './behaviorCommands';
 
 export const commands = {
+  bounceOff(spriteArg, targetArg) {
+    let sprites = coreLibrary.getSpriteArray(spriteArg);
+    let targets = coreLibrary.getSpriteArray(targetArg);
+    sprites.forEach(sprite => {
+      targets.forEach(target => {
+        if (sprite.isTouching(target)) {
+          sprite.direction = (sprite.direction + 180) % 360;
+          target.direction = (target.direction + 180) % 360;
+          sprite.x += 1 * Math.cos((sprite.direction * Math.PI) / 180);
+          sprite.y += 1 * Math.sin((sprite.direction * Math.PI) / 180);
+          target.x += 1 * Math.cos((target.direction * Math.PI) / 180);
+          target.y += 1 * Math.sin((target.direction * Math.PI) / 180);
+        }
+      });
+    });
+  },
+
   changePropBy(spriteArg, prop, val) {
     if (val === undefined || prop === undefined) {
       return;
@@ -32,6 +49,19 @@ export const commands = {
     let sprites = coreLibrary.getSpriteArray(spriteArg);
     sprites.forEach(sprite => this.edges.displace(sprite));
   },
+
+  isCostumeEqual(spriteArg, costumeName) {
+    let sprites = coreLibrary.getSpriteArray(spriteArg);
+    if (sprites.length === 0) {
+      return false;
+    }
+    return sprites.every(sprite => sprite.getAnimationLabel() === costumeName);
+  },
+
+  isKeyPressed(key) {
+    return this.keyDown(key);
+  },
+
   isTouchingEdges(spriteArg) {
     if (!this.edges) {
       this.createEdgeSprites();
@@ -42,6 +72,20 @@ export const commands = {
       if (sprite.isTouching(this.edges)) {
         touching = true;
       }
+    });
+    return touching;
+  },
+
+  isTouchingSprite(spriteArg, targetArg) {
+    let sprites = coreLibrary.getSpriteArray(spriteArg);
+    let targets = coreLibrary.getSpriteArray(targetArg);
+    let touching = false;
+    sprites.forEach(sprite => {
+      targets.forEach(target => {
+        if (sprite.isTouching(target)) {
+          touching = true;
+        }
+      });
     });
     return touching;
   },

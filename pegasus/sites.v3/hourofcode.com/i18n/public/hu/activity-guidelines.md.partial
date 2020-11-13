@@ -9,21 +9,19 @@ layout: wide
   }
 </style>
 
-{{ signup_button }}
-
 # Útmutató a Kódolás órája™ és a Számítástechnikai Oktatási Hét eseményeihez
+
+A Code.org, a Hour of Code és CSEdWeek webhelyeken különféle, a Kódolás Órájához™ tartozó tevékenységeket, feladatokat és videókat találhattok. A legfrissebb lista az alábbi linken érhető el: [hourofcode.com/learn]({{ urls/learn }}).
 
 A Code.org különféle Kódolás órája™ tevékenységeket, oktatatóanyagokat és videókat tartalmaz a Code.org, a Hour of Code és a CSEdWeek webhelyeken. A jelenlegi lista a [ hourofcode.com/learn ]({{ urls/learn }}) címen található.
 
-Szeretnéd elküldeni saját önálló játékodat, esetleg tanóra tervedet vagy egyéb tevékenységet, amely segít elmagyarázni a számítástechnika alapelvét? Csatlakozz ehhez a globális mozgalomhoz, és segítsd a világ résztvevőit ösztönözni arra, hogy kezdjenek neki a kódolásnak, akár egy órás vagy akár hosszabb időtartamú - több órás, napos vagy hetes - tevékenységek kipróbálásával.
-
-** Az irányelvek elolvasása után elküldheted saját ötletedet a [ Kódolás órája™ tevékenységek benyújtásának ](http://bit.ly/29zt9ki)oldalán. Az ötleteket bármikor be lehet nyújtani, de ahhoz, hogy az adott naptári évben meg is jelenhessen, a határidő október 1. (Például a(z) {{kampány_date / év}} október 1-je után beérkezett ötletek nem kerülnek listázásra a(z) {{kampány, dátum / év}} Kódolás órája eseményen.)** Ha kérdésed merülne fel a tevékenységek benyújtásával kapcsolatban, vedd fel velünk a kapcsolatot a support@code.org címen.
+Szeretnéd elküldeni saját önálló játékodat, esetleg tanóra tervedet vagy egyéb tevékenységet, amely segít elmagyarázni a számítástechnika alapelvét? Csatlakozz ehhez a globális mozgalomhoz, és segítsd a világ résztvevőit ösztönözni arra, hogy kezdjenek neki a kódolásnak, akár egy órás vagy akár hosszabb időtartamú - több órás, napos vagy hetes - tevékenységek kipróbálásával. (Az október 1-je után beküldött feladatok már nem kapnak helyet a Kódolás Órája listájában.) Az időben elvégzett minőségi felülvizsgálat érdekében [(a részletek alább) ](#earlyreview) a benyújtás határideje augusztus 16. </strong> Ha bármilyen kérdése van a tevékenység benyújtásával kapcsolatban, kérjük, forduljon hozzánk az alábbi címen: a support@code.org
 
 Néhány tipp:
 
-1. **Több mint egy ötlet benyújtása**: Ha különböző szintű, különböző korú vagy más kategóriákhoz tartozó tevékenységeket készítettél, akkor ezeket kérlek külön sorold fel, így minden tanár megtalálhatja az osztályához legjobban passzolót. Tehát ha korábban már létrehoztál egy weboldalt, és egyetlen URL-t küldtél meg nekünk a reklámozáshoz, akkor javasoljuk, hogy a jövőben ezt inkább kicsit máshogy csináld. Minden oktatóprogramot, ötletet külön-külön nyújts be nekünk. Tekintettel az elmúlt években beküldött nagyszámú ötletáradatra, a jövőben partnereként csak 5 tevékenység ötletet tudunk felülvizsgálni. Ezt követően mindent megteszünk annak érdekében, hogy minél többet beküldött ötletet ellenőrizzünk a Kódolás órája esemény kezdete előtt.
+1. **Több mint egy ötlet benyújtása**: Ha különböző szintű, különböző korú vagy más kategóriákhoz tartozó tevékenységeket készítettél, akkor ezeket kérlek külön sorold fel, így minden tanár megtalálhatja az osztályához legjobban passzolót. Tehát ha korábban már létrehoztál egy weboldalt, és egyetlen URL-t küldtél meg nekünk a reklámozáshoz, akkor javasoljuk, hogy a jövőben ezt inkább kicsit máshogy csináld. Minden oktatóprogramot, ötletet külön-külön nyújts be nekünk. Tekintettel az elmúlt években beküldött nagyszámú ötletáradatra, a jövőben partnereként csak 5 tevékenység ötletet tudunk felülvizsgálni.
 
-2. ** A kezdeti tanórákon túlmenően**: Azokon az órákon kívül, amelyek a számítástechnikával első alkalommal ismerkedni vágyó tanároknak és diákoknak szólnak, vannak olyan oktatóanyagaink is, amelyek már a programozás iránt komolyabban érdeklődőkre fókuszálnak, akik szeretnének továbblépni az első osztálytermi élményt követően! Segíts nekünk olyan tanóra-tervek benyújtásában, amelyek már az alap információkra támaszkodva a következő lépcsőfokot tűzték ki célul. A célcsoport a 9 és 99 év közötti tanulnivágyók.
+2. ** A kezdeti tanórákon túlmenően**: Azokon az órákon kívül, amelyek a számítástechnikával első alkalommal ismerkedni vágyó tanároknak és diákoknak szólnak, vannak olyan oktatóanyagaink is, amelyek már a programozás iránt komolyabban érdeklődőkre fókuszálnak, akik szeretnének továbblépni az első osztálytermi élményt követően! Segíts nekünk olyan tanóra-tervek benyújtásában, amelyek már az alap információkra támaszkodva a következő lépcsőfokot tűzték ki célul.
 
 3. ** Tantárgyi érintettség**: Van netán egy olyan ötleted, amely integrálja a matematika és a számítástechnika oktatást? Esetleg történelmet? Irodalmat? Tudományt? Művészetet? Vagy más tantárgyat? Számos kérést kaptunk olyan tanároktól, akik szeretnék a Kódolás óráját összekapcsolni egyes tudományterületekkel, tantárgyi anyagokkal (különösen a továbbfejlesztett ISTE-szabványokkal, beleértve az „innovatív tervezés” és a „számítógépes gondolkodás” témaköröket). Ahhoz, hogy a tanárok rá tudjanak keresni az egyes jellemzőkre (évfolyam vagy tantárgy) és ki tudják választani az osztályuknak legmegfelelőbbet, kérlek, segíts kitölteni a tevékenységekre vonatkozó részletesebb adatokat, úgy mint vonatkozó tantárgyi terület, évfolyam/korosztály. Továbbra is fenntartjuk a „Számítástechnika” kategóriát azoknak a tanároknak, akik általános számítástechnikai tevékenységeket keresnek.
 
@@ -35,28 +33,29 @@ Néhány tipp:
 - [Általános irányelvek a Kódolás órája™ tevékenységek létrehozásához](#guidelines)
 - [Hogyan küldd el](#submit)
 - [Hogyan lesznek értékelve az ötletek](#inclusion)
-- [Javaslatok a tevékenységek megtervezéséhez](#design)
-- [Védjegyre vonatkozó irányelvek](#tm)
-- [Pixel követése](#pixel)
-- [A tevékenységek, a Számítástechnikai Oktatási Hét és a Kódolás órája népszerűsítése](#promote)
+- [Javaslatok a tevékenységek megtervezéséhez](#earlyreview)
+- [Védjegyre vonatkozó irányelvek](#design)
+- [Pixel követése](#tm)
+- [A tevékenységek, a Számítástechnikai Oktatási Hét és a Kódolás órája népszerűsítése](#pixel)
+- [Tevékenységek reklámozása, Számítástechnikai Oktatási Hét, Kódolás Órája ](#promote)
 
 <a id="whatsubmit"></a>
 
 ## Mit kell benyújtani
 
-**Önállóan feldolgozható kirakók vagy játékok ([minta](https://code.org/mc))**
+**Önállóan megoldható rejtvény vagy játék ([example](https://code.org/dance))**
 
 Ezeket a tevékenységeket arra tervezték, hogy a diákokat önállóan kalauzolják végig egy-egy gyakorlaton. Nem igényelnek tanári közreműködést vagy sok előkészítő munkát.
 
-**Tanári segítséget igénylő tananyagok ([minta)](https://csedweek.org/csteacher/computerhistory.pdf)<a href = "https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8YxIIJKJYJIJJJJJJJJJ8 „> template </a>)**
+**Tanár által levezényelt foglalkozás ([example](https://studio.code.org/s/course1/stage/2/puzzle/1), [template](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA))**
 
-Most, hogy már több tízezer oktató kipróbálta a Kódolás óráját, sok osztály készen áll az újabb izgalmakra, kreatív tevékenységekre, amelyek megtanítják számukra a számítástechnika alapjait. Annak érdekében, hogy a tapasztaltabb tanárok további inspirációt meríthessenek, összegyűjtjük a tanóra-terveket és gondoskodunk arról, hogy a Kódolás órája veteránjainak is újat tudjunk mutatni.
+Most, hogy már oktatók tízezrei kipróbálták a Kódolás Óráját, sok tanterem készen áll a kreatívabb tevékenységekre, amelyek bevezethetik a gyerekeket a számítástechnika alapjaiba. Annak érdekében, hogy a haladóbb szemléletű tanárok is inspirációt találhassanak, különböző "tanár által levezényelt órákat" és tevékenységeket gyűjtünk a Kódolás Órája veteránjainak.
 
-Az egyik olyan tevékenység, amelyet a tapasztalt tanárok számára hoztunk létre, a „nyitott homokozó” projekt. Ezek a tevékenységek arra ösztönzik a diákokat, hogy készítsenek saját alkalmazást, játékot, weboldalt vagy más projektet. Megfelelő előkészítés esetén a kevésbé keretek közé szorított tevékenységek sokkal inkább megmutatják a számítástechnika kreatív oldalát.
+Most, hogy már több tízezer oktató kipróbálta a Kódolás óráját, sok osztály készen áll az újabb izgalmakra, kreatív tevékenységekre, amelyek megtanítják számukra a számítástechnika alapjait. Annak érdekében, hogy a tapasztaltabb tanárok további inspirációt meríthessenek, összegyűjtjük a tanóra-terveket és gondoskodunk arról, hogy a Kódolás órája veteránjainak is újat tudjunk mutatni. Megfelelő előkészítés esetén a kevésbé keretek közé szorított tevékenységek sokkal inkább megmutatják a számítástechnika kreatív oldalát.
 
 Vannak persze olyan oktatók, akik a Kódolás órája eseményt szeretnék inkább egy hagyományos tanóra mintájára megvalósítani.
 
-Használjátok fel az alábbi [óratervet](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA).
+Vannak persze olyan oktatók, akik a Kódolás órája eseményt szeretnék inkább egy hagyományos tanóra mintájára megvalósítani.
 
 **Tevékenységek más tantárgyak / szakterületek oktatói számára**
 
@@ -85,11 +84,13 @@ A Kódolás órájának célja, hogy közérthető módon mutassa be a számít�
 - A számítástechnika számos területhez és érdeklődési körhöz kapcsolódik. Mindenkinek érdemes lenne megismerkednie vele!
 - Bátorítsd te is diákjaidat, hogy hozzanak létre valami egyedit, amelyet megoszthatnak szüleikkel/barátaikkal, vagy közzétehetnek online. 
 
-Ezeken a tevékenységeken keresztül elsajátíthatók a számítástechnika alapfogalmai és elvei, mint például a ciklus, feltétel, titkosítás vagy az Internet működése. Egy-egy tevékenység azt is megtaníthatja, hogy a számítástechnika hogyan kapcsolódik a mindennapi élethez, egyes szakmákhoz, eseményekhez vagy akár a történelemhez. Erre példa a felhasználói felületek tervezésének oktatása is, amely olyan alkalmazások készítésére irányul, amelyek fontos szerepet töltenek be a mindennapi ember életében. Nem támogatjuk viszont azokat a tevékenységeket, amelyek a koncepcióalkotás helyett a programozás mondattanának elsajátítsára koncentrálnak. Például bár közzéteszük, de nem reklámozzuk azokat a tevékenységeket, amelyek a HTML nyelvet oktatják. Hasonlóképpen elutasítjuk azokat a tanóraterveket, amelyek a konfigurációs beállításokra vagy azok megváltoztatására összpontosítanak, nem pedig az algoritmus vagy a folyamat modellezésére.
+A Kódolás órájának célja, hogy közérthető módon mutassa be a számítástechnikát és a programozás világát mindazoknak, akik elsőként vágnak neki ennek az útnak. Fontosnak tartjuk kihangsúlyozni, hogy: Erre példa a felhasználói felületek tervezésének oktatása is, amely olyan alkalmazások készítésére irányul, amelyek fontos szerepet töltenek be a mindennapi ember életében. Nem támogatjuk viszont azokat a tevékenységeket, amelyek a koncepcióalkotás helyett a programozás mondattanának elsajátítsára koncentrálnak. Például bár közzéteszük, de nem reklámozzuk azokat a tevékenységeket, amelyek a HTML nyelvet oktatják. Hasonlóképpen elutasítjuk azokat a tanóraterveket, amelyek a konfigurációs beállításokra vagy azok megváltoztatására összpontosítanak, nem pedig az algoritmus vagy a folyamat modellezésére.
+
+Ezeken a tevékenységeken keresztül elsajátíthatók a számítástechnika alapfogalmai és elvei, mint például a ciklus, feltétel, titkosítás vagy az Internet működése. Egy-egy tevékenység azt is megtaníthatja, hogy a számítástechnika hogyan kapcsolódik a mindennapi élethez, egyes szakmákhoz, eseményekhez vagy akár a történelemhez. Erre példa a felhasználói felületek tervezésének oktatása is, amely olyan alkalmazások készítésére irányul, amelyek fontos szerepet töltenek be a mindennapi ember életében. Nem támogatjuk viszont azokat a tevékenységeket, amelyek a koncepcióalkotás helyett a programozás mondattanának elsajátítsára koncentrálnak.
 
 * Technikai követelmények: * Mivel az iskolák jellemzően eltérő technológiai felszereltséggel rendelkeznek, a legnépszerűbb feladatokat web vagy mobil alapúra terveztük, illetve vannak olyanok, amelyek eszközök használata nélkül is megoldhatók.(További részletekért látogasd meg a[ http://csunplugged.com/](http://csunplugged.com/) weboldalt). Olyan tevékenységek, amelyek kiegészítő alkalmazások telepítését vagy játékkonzol használatát igénylik, nem a legideálisabbak. Azokat a tevékenységeket, amelyek regisztrációt vagy fizetést igényelnek, nem tesszük közzé. (A robotika tevékenységekhez robotikai kiegészítők vásárlása szükséges.)
 
-* Diákok által (önállóan) vezetett események: * Hagyományosan a Kódolás órája főként az önállóan vezetett gyakorlatok és órák sikerére épül, amelyeket opcionálisan egy tanár is támogathat. Bár rengeteg gyakorlat áll már rendelkezésetekre, de ha mégis újat szeretnétek létrehozni, meg van rá a lehetőség. Ezeket a tevékenységeket úgy érdemes megtervezni, hogy kevés előkészítéssel, illetve limitált előismerettel rendelkező tanári támogatással azok mind az önállóan dolgozó diákok számára, mind pedig egy osztály számára szórakoztatóak legyenek. Fontos, hogy részletes útmutatást nyújtsanak a diákok számára, szemben például egy olyan egy órás kihívással, melynek az eredménye sok mindentől függhet, és többféleképpen alakulhat. Ideális esetben az utasítások és a gyakorlatok közvetlenül a programozói platformba kerülnek integrálásra, hogy elkerülhetőek legyenek a fölösleges a felületek között.
+Ha meg szeretnéd ismerni a létrehozható oktatóanyagok és óratervek sokféleségét, látogass el a [ A Kódolás Órája, Tevékenységek](https://hourofcode.com/us/learn) oldalra.
 
 [**Vissza az elejére**](#top)
 
@@ -105,8 +106,6 @@ Amire szükséged lesz:
 * Tevékenység neve (nem tartalmazhatja a "Kódolás órája" elnevezést)
 * URL link a tevékenységhez
 * Tevékenység leírása 
-    * Egy hosszabb leírás a számítógépes nézethez. Maximális karakterszám: 400
-    * Egy rövidebb leírás a mobilos nézethez. Maximális karakterszám: 75
     * Kérlek, tüntesd fel a leírásban, hogy a tevékenység elsősorban önálló munkát vagy tanári támogatást igényel-e. Mindemellett néhány iskola érdeklődik a Common Core, illetve a Next Generation Science Standardok iránt is. Amennyiben a tevékenység tartalmaz ilyeneket, említsd meg ezeket az információkat is.
 * Ajánlott felhasználói szint(ek). Utalás tehető a Számítástechnika Tanárok Egyesületének K-12 szabványára (https://k12cs.org/framework-statements-by-grade-band/) az egyes szinteket leíró informatika fogalmak kapcsán. Példák az egyes szintekre: 
     * Óvoda - 1. kategória (4-6 éves korig)
@@ -121,15 +120,12 @@ Amire szükséged lesz:
     * 1 órás
     * 1 órás, melyet további tanfolyamrészek követnek
     * 2-6 óra (lehet több óra is)
+* Az akadálymentesített eszközök listája, amennyiben a tevékenységhez szükséges ilyen. Ide tartoznak a képernyőolvasók és kompatibilitási adataik, a szövegfelolvasók képességei, a nagy kontrasztú színek használata vagy bármilyen más, fogyatékossággal élő tanulók számára kialakított eszköz és segédeszköz.
 
 #### További dolgok, amire szükséged van az órai tervek benyújtásakor
 
-* Név
 * Link az óratervedhez. Ez lehet weboldal, dropbox link, google meghajtó vagy hasonló szolgáltatás. 
-* Iskola, ahol tanítassz, továbbá város és ország (választható)
-* Tanított osztály(ok) és tantárgy(ak) (opcionális)
-* Portréfotó rólad (opcionális)
-* Milyen szoftverre lesz szükség az óratervhez (Scratch? Robotok? Más egyéb? Esetleg semmi?)
+* Link az óratervedhez. Ez lehet weboldal, dropbox link, google meghajtó vagy hasonló szolgáltatás. Esetleg semmi?)
 
 #### További dolgok, amelyekre szükséged van online tevékenységek benyújtásakor
 
@@ -144,14 +140,14 @@ Amire szükséged lesz:
         * Android Chrome (mobilra optimalizált)
     * Nem web alapú: add meg a forrás kód platformját (Mac, Win, iOS, Android, xBox, egyéb)
     * Unplugged
-* A Kódolás órája tevékenység képernyőképe vagy marketing képe. Kérlek, küldj legalább egy képet 4:3 méretben. Legyen legalább 520x390 képpont méretű. Amennyiben nem áll rendelkezésre megfelelő kép, előfordulhat, hogy mi készítünk saját képernyőképet az oktatóanyagból, VAGY dönthetünk úgy is, hogy nem soroljuk fel az oktatóanyagot a listában. Az összes képet URL-linkként szükséges elküldeni a .jpg, .jpeg vagy .png fájlhoz.
-* A részvétel pontosabb nyomon követése érdekében a harmadik fél partnereinek 1 kocka méretű nyomkövető képet kell alkalmaznia a Kódolás órája gyakorlataik első oldalán. Helyezd el a pixelt a kezdőlapra. Ne helyezz pixelt az átmeneti oldalakra). További részletekért lásd az alábbi Nyomkövető pixelről szóló részt.
+* A Kódolás órája tevékenység képernyőképe vagy marketing képe. Kérlek, küldj legalább egy képet 4:3 méretben. Legyen legalább 520x390 képpont méretű. Amennyiben nem áll rendelkezésre megfelelő kép, előfordulhat, hogy mi készítünk saját képernyőképet az oktatóanyagból, VAGY dönthetünk úgy is, hogy nem soroljuk fel az oktatóanyagot a listában. Az összes képet URL-linkként szükséges elküldeni a .jpg, .jpeg vagy .png fájlhoz. Az összes képet URL-linkként szükséges elküldeni a .jpg, .jpeg vagy .png fájlhoz.
+* A részvétel pontosabb nyomon követése érdekében a harmadik fél partnereinek 1 kocka méretű nyomkövető képet kell alkalmaznia a Kódolás órája gyakorlataik első oldalán. Helyezd el a pixelt a kezdőlapra.
 * A tevékenység befejezése után a felhasználókat a [ code.org/api/hour/finish ](https://code.org/api/hour/finish) webhelyre szükséges irányítani, ahol képesek lesznek: 
     * Megosztani a hírt a közösségi médiában, hogy befejezték a Kódolás órája gyakorlatot
     * Igazolást kapni arról, hogy teljesítették az egy órás kódot
     * Megtekinteni a ranglistákat arról, hogy mely országok / városok vesznek részt legeredményesebben a Kódolás órája tevékenységekben
     * Azon felhasználók számára, akik bár egy órát eltöltenek a tevékenység megoldásával, de be nem fejezik azt, kérlek, tégy be egy gombot, amelynek felirata az alábbi: „Befejeztem a Kódolás óráját”, amely visszirányítja őket a <a href = "https: // kódra mutat..org / api / hour / finish "> code.org/api/hour/finish </a> oldalra.
-* (Opcionális) Az online felmérés / űrlap hivatkozással nyomon követhetjük a tevékenységekkel kapcsolatos mutatók eredményeit a decemberi esemény hetén. December 9. éjféltől December 15. éjfélig 
+* (Opcionális) Az online felmérés / űrlap hivatkozással nyomon követhetjük a tevékenységekkel kapcsolatos mutatók eredményeit a decemberi esemény hetén. 
     * Online tevékenységekhez (különösen okostelefon- / táblagép-alkalmazásokhoz): 
         * Felhasználók száma
         * Mennyien tejesítették a feladatot
@@ -203,19 +199,42 @@ A tanárok és a diákok képesek lesznek a tevékenységek listájában keresni
 
 [**Vissza az elejére**](#top)
 
-<a id="design"></a>
+<a id="earlyreview"></a>
 
 ## Javaslatok egyórás önálló gyakorlatok megtervezéséhez
+
+Az április 30. és augusztus 16. között benyújtott tevékenységek minőségi szempontból átnézésre kerülnek a  Kódolás Órája Tevékenység Felügyelő Bizottág legalább három tagja által.</p> 
+
+A bírálók a következőkre fognak összpontosítani:
+
+* Mely platformon és böngészőn működik a legjobban az oktatóprogram?
+* Kritikai szempontok - Mit lehetne javítani?
+* Hibák - Vannak-e hibák, szintaktikai problémák vagy nyelvtani elütések? Ha igen, akkor hol tart a tevékenység?
+* Arra ösztönzi ez a tevékenység a diákokat, hogy valami egyedi dolgot alkossanak?
+
+** Tartalmazzon tanároknak szóló feljegyzéseket. ** A legtöbb tevékenységnek bár önállóan végrehajthatónak kell lennie, de ha egy tevékenység során esetleg egy tanár irányítására lesz szükség, kérjük, csatolj egy egyértelmű és egyszerű utasításításokat tartalmazó leírást külön tanári jegyzetek formájában. A tevékenységedhez benyújtott URL nemcsak a hallgatóknak lesz ismeretlen, hanem a tanárok egy részének is. Adj meg olyan információkat, mint például:
+
+**A bizottság általi áttekintés nem arra ad lehetőséget, hogy egy befejezetlen munka esetén visszajelzéseket gyűjthessetek. Minden olyan tevékenységet, amelyet a bíráló túl hiányosnak tart az értékeléséhez, nem fogjuk felülvizsgálni.**
+
+** Ösztönözd a diákokat arra, hogy osszák meg munkájukat a közösségi médiában. ** Például: „Egyórás kódot csináltam ________-kel? #HourOfCode” vagy "#HourOfCode-ot csináltam a #CSEdWeek részeként.
+
+Minden október 1-je előtt beküldött tevékenység normál áttekintésben részesül, függetlenül attól, hogy részt vesz-e a korai felülvizsgálatban. A szokásos felülvizsgálati időszakban (szeptember-október) a bírálók a tevékenységek értékelésére összpontosítanak a fenti "Hogyan értékeljük a tevékenységeket" részben ismertetett kritériumok szerint. Hacsak te nem szeretnél változtatni a tevékenységen, a véleményezők a korai felülvizsgálati visszajelzésekre fognak támaszkodni a tevékenységek értékelésénél.
+
+[**Vissza az elejére**](#top)
+
+<a id="design"></a>
+
+## Védjegyre vonatkozó irányelvek
 
 Az oktatóanyagba beillesztheted a [ A Kódolás órája logóját](https://hourofcode.com/us/promote/resources#logo), de nem kötelező. Ha a Kódolás órája logót használod, olvasd el az alábbi védjegy-irányelveket. <u> A Code.org embléma és név semmilyen körülmények között nem használható fel.</u> Mindkettő védjegyoltalom alatt áll, és kifejezett írásbeli engedély nélkül nem keverhető össze harmadik fél márkanevével.
 
 ** Ügyelj arra, hogy egy átlagos diák is képes legyen egy óra alatt kényelmesen befejezni a gyakorlatot. ** Fontold meg azt is, hogy a végén további tevékenységet adsz hozzá azoknak a hallgatóknak, akik gyorsabban haladnak az óra alatt. Ne feledd, hogy a legtöbb gyerek abszolút kezdőnek számít a számítástechnika és a kódolás területén.
 
-** Tartalmazzon tanároknak szóló feljegyzéseket. ** A legtöbb tevékenységnek bár önállóan végrehajthatónak kell lennie, de ha egy tevékenység során esetleg egy tanár irányítására lesz szükség, kérjük, csatolj egy egyértelmű és egyszerű utasításításokat tartalmazó leírást külön tanári jegyzetek formájában. A tevékenységedhez benyújtott URL nemcsak a hallgatóknak lesz ismeretlen, hanem a tanárok egy részének is. Adj meg olyan információkat, mint például:
+Sok oktatópartnerünk felhasználta már a "Kódolás órája" védjegyet weboldalain. Nem akarjuk mindezt megakadályozni, viszont meg akarunk győződni arról, hogy a használat megfelel az alábbi szabályoknak: Adj meg olyan információkat, mint például:
 
 - Mely platformon és böngészőn működik a legjobban az oktatóprogram?
-- Működik-e okostelefonokon? Tableteken?
-- Ajánlod-e a páros programozást? 
+- Működik-e okostelefonokon? Tableten?
+- Szervezz Te egy rendezvény vagy kérd meg alkalmazottaidat, hogy segítsenek a rendezvények népszerűsítésében a helyi iskolákban, közösségi csoportokban. 
 - Az osztályteremben történő használat szempontjai? Például, ha vannak videók, javasold a tanárokat, hogy mutassák meg a őket az egész osztálynak
 
 ** Adj lehetőséget a visszajelzésre a tevékenységek végén. ** (Pl. „Befejezted a 10. szintet, mellyel megtanultad a loopokat!”. Remek munka!")
@@ -232,7 +251,7 @@ Az oktatóanyagba beillesztheted a [ A Kódolás órája logóját](https://hour
 
 <a id="tm"></a>
 
-## Védjegyre vonatkozó irányelvek
+## Pixel követése
 
 Sok oktatópartnerünk felhasználta már a "Kódolás órája" védjegyet weboldalain. Nem akarjuk mindezt megakadályozni, viszont meg akarunk győződni arról, hogy a használat megfelel az alábbi szabályoknak: 
 
@@ -245,9 +264,9 @@ Sok oktatópartnerünk felhasználta már a "Kódolás órája" védjegyet webol
 
 <a id="pixel"></a>
 
-## Pixel követése
+## Tevékenységeid promotálása, a CSEdWeek és a Kódolás órája
 
-A részvétel pontosabb nyomon követése érdekében a harmadik fél partnereinek 1 kocka méretű nyomkövető képet kell alkalmaznia a Kódolás órája gyakorlataik első oldalán. A pixelképnek csak a kezdőlapon kell megjelennie. Ne tartalmazzon belinkelt oldalakat.
+Kérjük, hogy reklámozd tevékenységeid saját hálózatodon! Hivatkozd meg a Kódolás órája oldaladdal. A felhasználók sokkal nagyobb valószínűséggel reagálnak a Tőled érkező levelekre.
 
 Ez lehetővé teszi számunkra, hogy megszámoljuk azokat a felhasználókat, akik elkészítik a Kódolás óráját. Mindez pontosabb részvételi adatokat eredményez az oktatóprogramban.
 
@@ -271,7 +290,7 @@ Kérjük, hogy reklámozd tevékenységeid saját hálózatodon! Hivatkozd meg a
 - Ajánld a Kódolás óráját és CSEdWeek-et a weboldaladon. Pl.: <http://www.tynker.com/hour-of-code>
 - Reklámozd a Kódolás óráját a közösségi médiában, a hagyományos médiában, levelezőlistákon stb. használva a #HourOfCode hashtag-et (nagybetűkkel H, O, C)
 - Szervezz Te egy rendezvény vagy kérd meg alkalmazottaidat, hogy segítsenek a rendezvények népszerűsítésében a helyi iskolákban, közösségi csoportokban.
-- További információért tekintsd meg erőforrás-készletünket (hamarosan).
+- További információért olvasd el a [erőforráskészletünket](https://hourofcode.com/us/promote).
 
 [**Vissza az elejére**](#top)
 

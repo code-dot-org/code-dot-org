@@ -7,7 +7,7 @@ module.exports = {
 
   add: function(asset) {
     assets = this.remove(asset.filename);
-    assets.push(asset);
+    assets.unshift(asset);
     return assets.slice();
   },
 
