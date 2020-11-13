@@ -1160,6 +1160,8 @@ id:
         text: sprite {SPRITE} Berhenti {BEHAVIOR}
       gamelab_removeTint:
         text: hapus warna dari {THIS}
+      gamelab_repeatForever:
+        text: Ulangi selamanya
       gamelab_setAnimation:
         text: perubahan {THIS} kostum untuk {ANIMATION}
       gamelab_setBackground:

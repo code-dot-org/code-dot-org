@@ -1156,6 +1156,8 @@ nl:
         text: sprite {SPRITE} stopt {BEHAVIOR}
       gamelab_removeTint:
         text: kleur verwijderen van {THIS}
+      gamelab_repeatForever:
+        text: blijven herhalen
       gamelab_setAnimation:
         text: verandering {THIS} kostuum naar {ANIMATION}
       gamelab_setBackground:

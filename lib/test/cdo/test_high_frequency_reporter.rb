@@ -8,6 +8,7 @@ require 'timecop'
 class HighFrequencyReporterTest < MiniTest::Test
   # Second time an event happens, report it to slack
   def test_report_on_second_event
+    skip "Changed temporarily to always report errors"
     # The first time the error occurs, nothing should be reported
     # to Slack.  The Mock with no expectations ensures that for us.
     fake_slack = MiniTest::Mock.new # expects nothing
@@ -58,6 +59,7 @@ class HighFrequencyReporterTest < MiniTest::Test
 
   # Only alerts on events that have occurred in repeated runs
   def test_report_on_multiple_events
+    skip "Changed temporarily to always report errors"
     fake_slack = MiniTest::Mock.new # expects nothing
 
     Tempfile.create do |f|

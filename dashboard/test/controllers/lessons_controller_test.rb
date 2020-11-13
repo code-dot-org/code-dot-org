@@ -175,18 +175,15 @@ class LessonsControllerTest < ActionController::TestCase
   test_user_gets_response_for :update, params: -> {{id: @lesson.id}}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
   test_user_gets_response_for :update, params: -> {@update_params}, user: :student, response: :forbidden
   test_user_gets_response_for :update, params: -> {@update_params}, user: :teacher, response: :forbidden
-  test_user_gets_response_for :update, params: -> {@update_params}, user: :levelbuilder, response: :redirect
+  test_user_gets_response_for :update, params: -> {@update_params}, user: :levelbuilder, response: :success
 
-  test 'update lesson' do
+  test 'update lesson return updated lesson' do
     sign_in @levelbuilder
 
     put :update, params: @update_params
 
-    assert_redirected_to "/lessons/#{@lesson.id}"
-    @lesson.reload
-    assert_equal 'new overview', @lesson.overview
-    assert_equal 'new student overview', @lesson.student_overview
-    assert_equal 0, @lesson.lesson_activities.count
+    assert_equal 'new overview', JSON.parse(@response.body)['properties']['overview']
+    assert_equal 'new student overview', JSON.parse(@response.body)['properties']['student_overview']
   end
 
   test 'cannot update lesson with legacy script levels' do
@@ -217,7 +214,6 @@ class LessonsControllerTest < ActionController::TestCase
 
     put :update, params: @update_params
 
-    assert_redirected_to "/lessons/#{@lesson.id}"
     @lesson.reload
     assert_equal 'new overview', @lesson.overview
     assert_equal 'new student overview', @lesson.student_overview
@@ -260,7 +256,6 @@ class LessonsControllerTest < ActionController::TestCase
     ].to_json
 
     put :update, params: @update_params
-    assert_redirected_to "/lessons/#{@lesson.id}"
 
     @lesson.reload
     assert_equal 2, @lesson.lesson_activities.count
@@ -300,7 +295,6 @@ class LessonsControllerTest < ActionController::TestCase
 
     put :update, params: @update_params
 
-    assert_redirected_to "/lessons/#{@lesson.id}"
     @lesson.reload
 
     assert_equal 1, @lesson.lesson_activities.count
@@ -350,7 +344,6 @@ class LessonsControllerTest < ActionController::TestCase
     ].to_json
 
     put :update, params: @update_params
-    assert_redirected_to "/lessons/#{@lesson.id}"
 
     @lesson.reload
     assert_equal 1, @lesson.lesson_activities.count
@@ -487,7 +480,6 @@ class LessonsControllerTest < ActionController::TestCase
 
     put :update, params: @update_params
 
-    assert_redirected_to "/lessons/#{@lesson.id}"
     @lesson.reload
 
     assert_equal activity, @lesson.lesson_activities.first
@@ -565,7 +557,6 @@ class LessonsControllerTest < ActionController::TestCase
 
     put :update, params: @update_params
 
-    assert_redirected_to "/lessons/#{@lesson.id}"
     @lesson.reload
 
     assert_equal activity, @lesson.lesson_activities.first
@@ -633,7 +624,6 @@ class LessonsControllerTest < ActionController::TestCase
     @update_params['activities'] = activities_data.to_json
 
     put :update, params: @update_params
-    assert_redirected_to "/lessons/#{@lesson.id}"
 
     @lesson.reload
     script_levels = @lesson.lesson_activities.first.activity_sections.first.script_levels
@@ -689,7 +679,6 @@ class LessonsControllerTest < ActionController::TestCase
     @update_params['activities'] = activities_data.to_json
 
     put :update, params: @update_params
-    assert_redirected_to "/lessons/#{@lesson.id}"
 
     @lesson.reload
     script_levels = @lesson.lesson_activities.first.activity_sections.first.script_levels
@@ -746,7 +735,6 @@ class LessonsControllerTest < ActionController::TestCase
     ].to_json
 
     put :update, params: @update_params
-    assert_redirected_to "/lessons/#{@lesson.id}"
 
     @lesson.reload
     assert_equal activity, @lesson.lesson_activities.first

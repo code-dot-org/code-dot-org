@@ -185,6 +185,8 @@ si:
         text: අහඹු වර්ණයක්
       gamelab_randomColor:
         text: අහඹු වර්ණයක්
+      gamelab_repeatForever:
+        text: සදහටම නැවත කරන්න
       gamelab_setBackgroundImage:
         options:
           IMG:
