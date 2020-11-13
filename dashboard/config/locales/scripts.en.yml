@@ -18302,3 +18302,13 @@ en:
           title: Planning script for CI and CSF 2021
           description_audience: Internal
           description_short: Internal
+        better-dsl:
+          lessons:
+            new lesson:
+              name: lesson display name
+          lesson_groups:
+            lesson group:
+              display_name: lesson group display name
+          title: ''
+          description_audience: ''
+          description_short: ''
