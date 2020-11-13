@@ -125,7 +125,7 @@ class ScriptsController < ApplicationController
     script_text = params[:script_text]
     @script.update_text(script_params, script_text, i18n_params, general_params)
 
-    render json: @script
+    render json: @script.summarize_for_script_edit
   end
 
   def instructions
