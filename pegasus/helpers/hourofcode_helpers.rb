@@ -45,18 +45,6 @@ def hoc_s(id, markdown: false, locals: nil)
   string
 end
 
-def hoc_cb_url(locale, teachers_notes)
-  locale = locale.downcase.to_s
-  domain = "https://curriculum.code.org/"
-  if teachers_notes &&
-      teachers_notes.include?(domain) &&
-      !teachers_notes.include?(locale)
-    teachers_notes = teachers_notes.sub(domain, CDO.curriculum_url(locale))
-  end
-
-  teachers_notes
-end
-
 def hoc_canonicalized_i18n_path(uri, query_string)
   _, possible_country_or_company, possible_language, path = uri.split('/', 4)
 
