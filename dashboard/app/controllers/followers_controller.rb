@@ -24,7 +24,7 @@ class FollowersController < ApplicationController
       return render 'student_user_new', formats: [:html]
     end
 
-    if !verify_recaptcha
+    if @user && @user.display_captcha && !verify_recaptcha
       flash[:alert] = I18n.t('follower.captcha_required')
     else
       Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
@@ -67,6 +67,10 @@ class FollowersController < ApplicationController
     # Note that we treat the section as not being found if the section user
     # (i.e., the teacher) does not exist (possibly soft-deleted) or is not a teacher
     unless @section && @section.user&.teacher?
+      # Adjust user properties to track failed section join attempts
+      if current_user
+        current_user.update_section_attempts
+      end
       redirect_to redirect_url, alert: I18n.t('follower.error.section_not_found', section_code: params[:section_code])
       return
     end

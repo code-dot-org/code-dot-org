@@ -2259,6 +2259,27 @@ class User < ActiveRecord::Base
     end
   end
 
+  def num_failed_section_attempts
+    properties['section_attempts'] || 0
+  end
+
+  # Force user to complete a captcha after 3 failed join section attempts within 24 hours
+  def display_captcha
+    properties['section_attempts'] && properties['section_attempts'] > 3
+  end
+
+  # Failed section attemps reset every day
+  def update_section_attempts
+    # if the user never joined a section or not in the last 24 hours
+    if num_failed_section_attempts == 0 || ((DateTime.parse(properties['section_attempts_date']) - DateTime.now) * 24).to_i > 0
+      properties['section_attempts'] = 1
+      properties['section_attempts_date'] = DateTime.now.to_s
+    else
+      properties.merge!({'section_attempts' => 1}) {|_, old_val, increment_val| old_val + increment_val}
+    end
+    save(validate: false)
+  end
+
   private
 
   def hidden_stage_ids(sections)
