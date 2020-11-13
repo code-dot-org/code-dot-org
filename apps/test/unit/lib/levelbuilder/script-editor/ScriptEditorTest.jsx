@@ -122,7 +122,7 @@ describe('ScriptEditor', () => {
 
     it('is unchecked when hidden is true', () => {
       const wrapper = mount(
-        <ScriptEditor {...DEFAULT_PROPS} initialHidden={false} />
+        <ScriptEditor {...DEFAULT_PROPS} initialHidden={true} />
       );
       const checkbox = wrapper.find('input[name="visible_to_teachers"]');
       expect(checkbox.prop('checked')).to.be.false;
