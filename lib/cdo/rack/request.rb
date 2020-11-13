@@ -42,9 +42,10 @@ module Cdo
     end
 
     # Patch: don't use X_FORWARDED_HOST header when determining host from request headers.
-    def host_with_port
-      get_header(Rack::HTTP_HOST) ||
-        "#{get_header(Rack::SERVER_NAME) || get_header(Rack::SERVER_ADDR)}:#{get_header(Rack::SERVER_PORT)}"
+    # Specifically, here we patch the upstream authority method to ignore the "forwarded" authority option
+    # See https://github.com/rack/rack/blob/1741c580d71cfca8e541e96cc372305c8892ee74/lib/rack/request.rb#L222-L229
+    def authority
+      host_authority || server_authority
     end
 
     def site_from_host
