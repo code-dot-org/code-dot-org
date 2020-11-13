@@ -187,7 +187,6 @@ class UnitCard extends Component {
         </div>
         <input
           type="hidden"
-          name="script_text"
           value={getSerializedLessonGroups(lessonGroups, levelKeyList)}
         />
       </div>

@@ -248,11 +248,12 @@ class ScriptEditor extends React.Component {
       dataType: 'json',
       contentType: 'application/json;charset=UTF-8',
       data: JSON.stringify({
+        name: this.props.name,
         family_name: this.state.familyName,
         is_course: this.state.isCourse,
         description: this.state.description,
         announcements: this.state.announcements,
-        hidden: this.state.hidden,
+        visible_to_teachers: !this.state.hidden,
         is_stable: this.state.isStable,
         login_required: this.state.loginRequired,
         hideable_lessons: this.state.hideableLessons,
@@ -283,11 +284,17 @@ class ScriptEditor extends React.Component {
         title: this.state.title,
         description_audience: this.state.descriptionAudience,
         description_short: this.state.descriptionShort,
-        lesson_descriptions: this.state.lessonDescriptions,
-        teacher_resources: this.state.teacherResources
+        stage_descriptions: this.state.lessonDescriptions,
+        resourceLinks: this.state.teacherResources.map(
+          resource => resource.link
+        ),
+        resourceTypes: this.state.teacherResources.map(
+          resource => resource.type
+        )
       })
     })
       .done(data => {
+        console.log(data);
         if (shouldCloseAfterSave) {
           navigateToHref(`/s/${this.props.name}${window.location.search}`);
         } else {
