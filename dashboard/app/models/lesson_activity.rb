@@ -90,7 +90,7 @@ class LessonActivity < ApplicationRecord
 
     activity_sections.create(
       position: section['position'],
-      seeding_key: SecureRandom.uuid
+      key: SecureRandom.uuid
     )
   end
 end
