@@ -3267,19 +3267,19 @@
           "courseC_artist_loopsPrePre1a_b": "Для перемещения вперед на 50 точек используй этот блок:\n\n <xml><block type=\"draw_move_by_constant\">\n    <title name=\"DIR\">moveForward</title>\n    <title name=\"VALUE\">50</title>\n  </block></xml>"
         },
         "courseC_artist_prog2": {
-          "courseC_artist_prog2_a": "Если ты воспользуешься блоком \"двигаться вперёд на 100 пикселей\" на меня, то я нарисую линию автоматически.",
-          "courseC_artist_prog2_b": "Сложности с поворотами на углах? Используй блок \"повернуть направо на 90 градусов\"."
+          "courseC_artist_prog2_a": "*Если ты воспользуешься блоком <xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">moveForward</title><title name=\"VALUE\">100</title></block></xml>, то я нарисую линию.*",
+          "courseC_artist_prog2_b": "Сложности с поворотами на углах? Используй блок <xml><block type=\"draw_turn_by_constant_dropdown\"><title name=\"DIR\">turnRight</title><title name=\"VALUE\" config=\"45,60,90,120,180\">90</title></block></xml>."
         },
         "courseC_artist_prog2_2018": {
-          "courseC_artist_prog2_a": "Если ты воспользуешься блоком \"двигаться вперёд на 100 пикселей\" на меня, то я нарисую линию автоматически.",
+          "courseC_artist_prog2_a": "*Если ты воспользуешься блоком <xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">moveForward</title><title name=\"VALUE\">100</title></block></xml>, то я нарисую линию.*",
           "courseC_artist_prog2_b": "Сложности с поворотами на углах? Используй блок <xml><block type=\"draw_turn_by_constant_dropdown\"><title name=\"DIR\">turnRight</title><title name=\"VALUE\" config=\"45,60,90,120,180\">90</title></block></xml>."
         },
         "courseC_artist_prog2_2019": {
-          "courseC_artist_prog2_a": "Если ты воспользуешься блоком \"двигаться вперёд на 100 пикселей\" на меня, то я нарисую линию автоматически.",
+          "courseC_artist_prog2_a": "*Если ты воспользуешься блоком <xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">moveForward</title><title name=\"VALUE\">100</title></block></xml>, то я нарисую линию.*",
           "courseC_artist_prog2_b": "Сложности с поворотами на углах? Используй блок <xml><block type=\"draw_turn_by_constant_dropdown\"><title name=\"DIR\">turnRight</title><title name=\"VALUE\" config=\"45,60,90,120,180\">90</title></block></xml>."
         },
         "courseC_artist_prog2_2020": {
-          "courseC_artist_prog2_a": "Если ты воспользуешься блоком \"двигаться вперёд на 100 пикселей\" на меня, то я нарисую линию автоматически.",
+          "courseC_artist_prog2_a": "*Если ты воспользуешься блоком <xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">moveForward</title><title name=\"VALUE\">100</title></block></xml>, то я нарисую линию.*",
           "courseC_artist_prog2_b": "Сложности с поворотами на углах? Используй блок <xml><block type=\"draw_turn_by_constant_dropdown\"><title name=\"DIR\">turnRight</title><title name=\"VALUE\" config=\"45,60,90,120,180\">90</title></block></xml>."
         },
         "courseC_artist_prog3": {

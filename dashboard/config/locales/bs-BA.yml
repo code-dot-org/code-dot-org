@@ -693,6 +693,4 @@ bs:
         opt_in_no: Ne
   cookie_banner:
     accept: Slažem se
-  gdpr_dialog:
-    true: Da
   copy: Kopiraj

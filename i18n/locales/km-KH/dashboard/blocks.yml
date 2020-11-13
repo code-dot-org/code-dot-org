@@ -288,6 +288,8 @@ km:
         text: ពណ៌​ព្រាវ
       gamelab_randomColor:
         text: ពណ៌​ព្រាវ
+      gamelab_repeatForever:
+        text: ធ្វើ​ឡើង​វិញ​ជា​រៀង​រហូត
       gamelab_setBackgroundImage:
         options:
           IMG:

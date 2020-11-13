@@ -1155,6 +1155,8 @@ fil:
         text: sprite {SPRITE} tumitigil {BEHAVIOR}
       gamelab_removeTint:
         text: tanggalin ang kulay mula sa {THIS}
+      gamelab_repeatForever:
+        text: ulitin ng walang katapusan
       gamelab_setAnimation:
         text: pagbabago {THIS} costume upang {ANIMATION}
       gamelab_setBackground:

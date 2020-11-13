@@ -49,7 +49,7 @@ const styles = {
 
 class AddLevelDialogTop extends Component {
   static propTypes = {
-    addLevel: PropTypes.func,
+    addLevel: PropTypes.func.isRequired,
 
     // from redux
     searchOptions: PropTypes.object.isRequired

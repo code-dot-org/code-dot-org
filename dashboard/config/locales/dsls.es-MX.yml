@@ -7762,6 +7762,7 @@ es-MX:
         teacher_markdown: "* [Barcos de Aluminio - Ejemplar](https://docs.google.com/a/code.org/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/edit?usp=sharing)
           - Guía de la actividad ([PDF](https://docs.google.com/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/export?format=pdf)
           | [DOCX](https://docs.google.com/a/code.org/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/edit?usp=sharing))"
+        title: Encuesta Pre-Curso al Estudiante sobre CS Descubrimientos
       csf_be_a_super_digital_citizen:
         content1: descripción aquí
       csf_password_power-up:
@@ -7878,3 +7879,20 @@ es-MX:
 
 
 
+      CSD U1 Test:
+        title: Ordenadores y resolución de problemas post-proyecto prueba.
+      Unit 1 Lesson 1 Overview:
+        markdown: "# Resumen\n\nLa clase trabaja en grupos para diseñar barcos de
+          papel aluminio que puedan cargar tantas monedas como sea posible. Al final
+          de la clase, los grupos reflexionan sobre sus experiencias con la actividad
+          y establecen conexiones con los tipos de resoluciones de problemas que llevarán
+          adelante durante el resto del curso. \n\n\n## Recursos\n\n* [Aluminum Boats](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf)
+          - Activity Guide (copy as [MS Word](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc),
+          [Google Doc](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))\n"
+        teacher_markdown: "* [Barcos de Aluminio - Ejemplar](https://docs.google.com/a/code.org/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/edit?usp=sharing)
+          - Guía de la actividad ([PDF](https://docs.google.com/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/export?format=pdf)
+          | [DOCX](https://docs.google.com/a/code.org/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/edit?usp=sharing))"
+      csd-pre-survey-2017-levelgroup_2018:
+        title: Encuesta Pre-Curso al Estudiante sobre CS Descubrimientos
+      csd-pre-survey-levelgroup_2019:
+        title: Encuesta Pre-Curso al Estudiante sobre CS Descubrimientos

@@ -467,12 +467,96 @@ tr-TR:
         title: Labirent çoktan seçmeli
       Begin planning your project:
         content1: açıklama buraya
+        markdown: "# Tasarım Süreci\nYazılım tasarlamak, her zaman çok sayıda küçük
+          sorunu çözmek anlamına gelir. Yazılım tasarımındaki ana sorun, en başta
+          neyin oluşturulacağıdır.\n\nBu süreç, her türlü şey için faydalıdır, ancak
+          uygulama tasarımı için bunu kullanmaya odaklanacağız.\n\n<!-- \"Tanımla\",
+          \"Hazırla\", \"Dene\", \"Yansıt\" terimlerini çevirin ve gerekli görüldüğü
+          takdirde yazı tipi boyutunu ve konumlandırmayı değiştirin-->\n<div style=\"position:
+          relative; text-align: center; font-size: 1em\">\n  <img src=\"https://images.code.org/a157e5f67444573e19e980a507db16fb-image-1563319667694.png\"
+          alt=\"Design Process\" style=\"width: 50%;\">\n  <div style=\"position:
+          absolute; top: 24%; left: 49.8%; transform: translateX(-49.8%); font-weight:
+          bold;\">Tanımla</div> \n  <div style=\"position: absolute; top: 52%; left:
+          61%; transform: translateX(-61%); font-weight: bold;\">Hazırla</div>\n  <div
+          style=\"position: absolute; top: 79%; left: 49.8%; transform: translateX(-49.8%);
+          font-weight: bold;\">Dene</div>\n  <div style=\"position: absolute; top:
+          52%; left: 39%; transform: translateX(-39%); font-weight: bold;\">Yansıt</div>\n</div>\n\n*
+          **Tanımla**\n  * Ne tür bir uygulama oluşturmak istersiniz?\n  * Kısıtlamalarınız
+          neler?\n  * Başarı neye benzer?\n* **Hazırla**\n  * Beyin fırtınası yap
+          / muhtemel elemanları araştır\n  * Avantajları ve dezavantajları karşılaştır\n
+          \ * Bir plan yap\n* **Dene**\n  * Planını eyleme koy\n* **Yansıt**\n  *
+          Uygulamayı tanımlarken belirlediğin hedefler ile sonuçlarını nasıl karşılaştırırsın?\n
+          \ * Bundan ne öğrenebilirsin veya sonraki sefer neyi daha iyi yapabilirsin?\n
+          \ * Ne tür yeni sorunlar buldun?\n\n# Neye benziyor\nSonraki birkaç hafta
+          boyunca, mevcut birkaç oyunu deneme ve öğrendiklerinizi temel alarak kendi
+          oyununuzu tasarlama fırsatınız olacak. Oyununuzu oluşturduktan sonra, bunu
+          başkalarına sunma ve geri bildirim alma şansınız olacak. Bu adımların hepsi,
+          yazılım sanayisinde kritik derecede önemlidir ve tasarım süreci elemanları
+          ile pratik yapmak, daha iyi ürünleri daha verimli bir şekilde oluşturmanıza
+          yardım edecektir.\n\nTasarım süreci hakkında daha fazla şey öğrenirken önümüzdeki
+          haftalarda neler olacak:\n\n1. **Tanımla & Hazırla**\n   * Fikir almak ve
+          sınırlamaları anlamak için mevcut oyunları oyna\n   * Yeni veya değiştirilmiş
+          uygulamanız hakkında beyin fırtınası yap ve planla\n1. **Dene**\n   * Bir
+          uygulama yapmak için planını uygula\n1. **Yansıt & Düzenle**\n   * Projelerini
+          daha iyi hale getirmeye yardımcı olması için uygulamaları başka bir grupla
+          değiştir\n1. **Sun**\n   * Nihai ürününü göster!"
       Begin planning your project_2018:
         content1: açıklama buraya
+        markdown: "# Tasarım Süreci\nYazılım tasarlamak, her zaman çok sayıda küçük
+          sorunu çözmek anlamına gelir. Yazılım tasarımındaki ana sorun, en başta
+          neyin oluşturulacağıdır.\n\nBu süreç, her türlü şey için faydalıdır, ancak
+          uygulama tasarımı için bunu kullanmaya odaklanacağız.\n\n<!-- \"Tanımla\",
+          \"Hazırla\", \"Dene\", \"Yansıt\" terimlerini çevirin ve gerekli görüldüğü
+          takdirde yazı tipi boyutunu ve konumlandırmayı değiştirin-->\n<div style=\"position:
+          relative; text-align: center; font-size: 1em\">\n  <img src=\"https://images.code.org/a157e5f67444573e19e980a507db16fb-image-1563319667694.png\"
+          alt=\"Design Process\" style=\"width: 50%;\">\n  <div style=\"position:
+          absolute; top: 24%; left: 49.8%; transform: translateX(-49.8%); font-weight:
+          bold;\">Tanımla</div> \n  <div style=\"position: absolute; top: 52%; left:
+          61%; transform: translateX(-61%); font-weight: bold;\">Hazırla</div>\n  <div
+          style=\"position: absolute; top: 79%; left: 49.8%; transform: translateX(-49.8%);
+          font-weight: bold;\">Dene</div>\n  <div style=\"position: absolute; top:
+          52%; left: 39%; transform: translateX(-39%); font-weight: bold;\">Yansıt</div>\n</div>\n\n*
+          **Tanımla**\n  * Ne tür bir uygulama oluşturmak istersiniz?\n  * Kısıtlamalarınız
+          neler?\n  * Başarı neye benzer?\n* **Hazırla**\n  * Beyin fırtınası yap
+          / muhtemel elemanları araştır\n  * Avantajları ve dezavantajları karşılaştır\n
+          \ * Bir plan yap\n* **Dene**\n  * Planını eyleme koy\n* **Yansıt**\n  *
+          Uygulamayı tanımlarken belirlediğin hedefler ile sonuçlarını nasıl karşılaştırırsın?\n
+          \ * Bundan ne öğrenebilirsin veya sonraki sefer neyi daha iyi yapabilirsin?\n
+          \ * Ne tür yeni sorunlar buldun?\n\n# Neye benziyor\nSonraki birkaç hafta
+          boyunca, mevcut birkaç oyunu deneme ve öğrendiklerinizi temel alarak kendi
+          oyununuzu tasarlama fırsatınız olacak. Oyununuzu oluşturduktan sonra, bunu
+          başkalarına sunma ve geri bildirim alma şansınız olacak. Bu adımların hepsi,
+          yazılım sanayisinde kritik derecede önemlidir ve tasarım süreci elemanları
+          ile pratik yapmak, daha iyi ürünleri daha verimli bir şekilde oluşturmanıza
+          yardım edecektir.\n\nTasarım süreci hakkında daha fazla şey öğrenirken önümüzdeki
+          haftalarda neler olacak:\n\n1. **Tanımla & Hazırla**\n   * Fikir almak ve
+          sınırlamaları anlamak için mevcut oyunları oyna\n   * Yeni veya değiştirilmiş
+          uygulamanız hakkında beyin fırtınası yap ve planla\n1. **Dene**\n   * Bir
+          uygulama yapmak için planını uygula\n1. **Yansıt & Düzenle**\n   * Projelerini
+          daha iyi hale getirmeye yardımcı olması için uygulamaları başka bir grupla
+          değiştir\n1. **Sun**\n   * Nihai ürününü göster!"
       Begin planning your project_2018_2019:
         content1: açıklama buraya
+        markdown: |-
+          # Proje Örnekleri
+
+          Final projenize başlamak üzeresiniz. Başlamadan önce, örnek projelere bakarak biraz zaman harcayın.
+
+          | Aç Sincap | Uzaylı Hikayesi |
+          |---|---|
+          | [![Aç Sincap (Play Lab)](https://images.code.org/3fda61d18026d6661dccf4b09baea111-image-1565115158327.PNG "Aç Sincap (Play Lab")](https://studio.code.org/projects/playlab/HN1zAX4Om6zdsxVsBBug9Y8mlzKSWUAXhjzRl-64YRs/view) | [![Uzaylı Hikayesi (Play Lab)](https://images.code.org/0bd5ed3674ac9fe3304e27e68974c35f-image-1565115240833.PNG "Uzaylı Hikayesi (Play Lab")](https://studio.code.org/projects/playlab/I_8rcKtpLFRAn8flROC15Oc-KnDu-bkKBnSORoIDs0o/view) |
+          | Bu oyuna sesler ekleyin! | Bu hikayeye başka bir sahne eklemeyi deneyin! |
       Begin planning your project_2018_2019_2020:
         content1: açıklama buraya
+        markdown: |-
+          # Proje Örnekleri
+
+          Final projenize başlamak üzeresiniz. Başlamadan önce, örnek projelere bakarak biraz zaman harcayın.
+
+          | Aç Sincap | Uzaylı Hikayesi |
+          |---|---|
+          | [![Aç Sincap (Play Lab)](https://images.code.org/3fda61d18026d6661dccf4b09baea111-image-1565115158327.PNG "Aç Sincap (Play Lab")](https://studio.code.org/projects/playlab/HN1zAX4Om6zdsxVsBBug9Y8mlzKSWUAXhjzRl-64YRs/view) | [![Uzaylı Hikayesi (Play Lab)](https://images.code.org/0bd5ed3674ac9fe3304e27e68974c35f-image-1565115240833.PNG "Uzaylı Hikayesi (Play Lab")](https://studio.code.org/projects/playlab/I_8rcKtpLFRAn8flROC15Oc-KnDu-bkKBnSORoIDs0o/view) |
+          | Bu oyuna sesler ekleyin! | Bu hikayeye başka bir sahne eklemeyi deneyin! |
       CSD Header Size MC:
         answers:
         - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
@@ -1471,6 +1555,10 @@ tr-TR:
         content1: açıklama buraya
       Prepare for your presentation:
         content1: açıklama buraya
+        markdown: |-
+          # Proje Sunumları
+
+          Projelerinizi sunma zamanı! Öğretmeniniz, çalışmanızı sınıf arkadaşlarınıza nasıl sunacağınız hakkında daha fazla ayrıntı verecektir.
       'Technique: Frequency Analysis':
         content1: açıklama buraya
       Terminology Recap:
@@ -1506,40 +1594,58 @@ tr-TR:
           * [Bilgisayar Nedir - Etkinlik Rehberi](https://docs.google.com/document/d/1g4dPcsx2xADEZI0FiMYApLr0hh3_-89NDWd2y86sS6I/export?format=pdf)
       behaviors 1 predict:
         answers:
-        - feedback: Yanlış.
-        - correct: true
+        - text: Hareketli nesne dönecektir
+          feedback: Yanlış.
+        - text: Hareketli nesne küçülecektir.
+          correct: true
           feedback: Doğru!
-        - feedback: Yanlış.
-        - feedback: Yanlış
+        - text: Hareketli nesne hareket edecektir.
+          feedback: Yanlış.
+        - text: Hareketli nesne renkleri değiştirecektir.
+          feedback: Yanlış
         questions:
-        - {}
+        - text: '''Gizemli davranışın'' nasıl çalıştığını görmek için "düzenle" butonuna
+            tıklayın. İçindeki kodu inceleyin, daha sonra bir tahminde bulunun.'
       behaviors 1 predict_2020:
         answers:
-        - feedback: Yanlış.
-        - correct: true
+        - text: Hareketli nesne dönecektir
+          feedback: Yanlış.
+        - text: Hareketli nesne küçülecektir.
+          correct: true
           feedback: Doğru!
-        - feedback: Yanlış.
-        - feedback: Yanlış
+        - text: Hareketli nesne hareket edecektir.
+          feedback: Yanlış.
+        - text: Hareketli nesne renkleri değiştirecektir.
+          feedback: Yanlış
         questions:
-        - {}
+        - text: '''Gizemli davranışın'' nasıl çalıştığını görmek için "düzenle" butonuna
+            tıklayın. İçindeki kodu inceleyin, daha sonra bir tahminde bulunun.'
       behaviors 4 predict:
         answers:
-        - feedback: Yanlış.
-        - correct: true
+        - text: Sola, daha sonra aşağıya
+          feedback: Yanlış.
+        - text: Bir köşeden diğerine
+          correct: true
           feedback: Doğru!
-        - {}
-        - feedback: Yanlış
+        - text: Zik zak
+          feedback: 'Yanlış. '
+        - text: Aşağıya, sonra sola
+          feedback: Yanlış
         questions:
-        - {}
+        - text: Bir tahminde bulunun! Uydu galaksiye hangi yöne doğru hareket edecek?
       behaviors 4 predict_2020:
         answers:
-        - feedback: Yanlış.
-        - correct: true
+        - text: Sola, daha sonra aşağıya
+          feedback: Yanlış.
+        - text: Bir köşeden diğerine
+          correct: true
           feedback: Doğru!
-        - {}
-        - feedback: Yanlış
+        - text: Zik zak
+          feedback: 'Yanlış. '
+        - text: Aşağıya, sonra sola
+          feedback: Yanlış
         questions:
-        - {}
+        - text: Bir tahminde bulunun! Uydu galaksiye hangi yöne doğru hareket edecek?
       courseC_multi_artist_prog6_predict1:
         answers:
         - text: Artist, üç eşit kenara sahip bir üçgen çizecek.
@@ -1559,7 +1665,8 @@ tr-TR:
           feedback: Yanlış. Artist bir kare çiziyor.
         - text: Artist tek bir çizgi çizecek.
           feedback: Yanlış. Artist bir kare çiziyor.
-        - correct: true
+        - text: Oyuncu bir kare çizecek.
+          correct: true
           feedback: Doğru!
         - text: Bilmiyorum.
           feedback: Artist bir kare çiziyor.
@@ -1571,7 +1678,8 @@ tr-TR:
           feedback: Yanlış. Artist bir kare çiziyor.
         - text: Artist tek bir çizgi çizecek.
           feedback: Yanlış. Artist bir kare çiziyor.
-        - correct: true
+        - text: Oyuncu bir kare çizecek.
+          correct: true
           feedback: Doğru!
         - text: Bilmiyorum.
           feedback: Artist bir kare çiziyor.
@@ -1583,7 +1691,8 @@ tr-TR:
           feedback: Yanlış. Artist bir kare çiziyor.
         - text: Artist tek bir çizgi çizecek.
           feedback: Yanlış. Artist bir kare çiziyor.
-        - correct: true
+        - text: Oyuncu bir kare çizecek.
+          correct: true
           feedback: Doğru!
         - text: Bilmiyorum.
           feedback: Artist bir kare çiziyor.
@@ -1726,6 +1835,7 @@ tr-TR:
       courseC_multi_maze_programming8_predict1_2018:
         answers:
         - text: Kuş, domuza bir adım kala duracak.
+          correct: true
           feedback: Yanlış. Bu kod, kuşu domuza sorunsuz ulaştırıyor.
         - text: Kuş, domuza ulaşmayı başaracak.
           correct: true
@@ -1892,6 +2002,20 @@ tr-TR:
         questions:
         - text: Aşağıdaki kodu iyice inceleyin. "Çalıştır"a bastıktan sonra hangi
             resmi oluşturacak?
+        markdown: |-
+          <table>
+          <tr>
+
+          <td style="padding: 0 30px 0 0;"> <b>A)</b> <img src="https://images.code.org/ca3e26e5b3008075d06db82c2831ab0b-image-1489438562132.43.39a.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>B)</b> <img src="https://images.code.org/6da194be0b14a041291648c12a307495-image-1489438503416.43.39.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>C)</b> <img src="https://images.code.org/dfaa00e3a6260742671d1ac4455fb5d5-image-1489438562133.43.39b.png" width="100px"/></td>
+
+
+          <td style="padding: 0 20px 0 0;"> <b>D)</b> <img src="https://images.code.org/7fc63ed5875b9f9785d0e88aec6eae47-image-1489439110649.43.39d.png" width="100px"/></td>
+          </tr></table>
+          <br/>
       courseD_multi_artist_binary8_predict1_2018:
         answers:
         - text: A
@@ -1906,6 +2030,20 @@ tr-TR:
         questions:
         - text: Aşağıdaki kodu iyice inceleyin. "Çalıştır"a bastıktan sonra hangi
             resmi oluşturacak?
+        markdown: |-
+          <table>
+          <tr>
+
+          <td style="padding: 0 30px 0 0;"> <b>A)</b> <img src="https://images.code.org/ca3e26e5b3008075d06db82c2831ab0b-image-1489438562132.43.39a.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>B)</b> <img src="https://images.code.org/6da194be0b14a041291648c12a307495-image-1489438503416.43.39.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>C)</b> <img src="https://images.code.org/dfaa00e3a6260742671d1ac4455fb5d5-image-1489438562133.43.39b.png" width="100px"/></td>
+
+
+          <td style="padding: 0 20px 0 0;"> <b>D)</b> <img src="https://images.code.org/7fc63ed5875b9f9785d0e88aec6eae47-image-1489439110649.43.39d.png" width="100px"/></td>
+          </tr></table>
+          <br/>
       courseD_multi_artist_binary8_predict1_2018_2019:
         answers:
         - text: A
@@ -1920,6 +2058,20 @@ tr-TR:
         questions:
         - text: Aşağıdaki kodu iyice inceleyin. "Çalıştır"a bastıktan sonra hangi
             resmi oluşturacak?
+        markdown: |-
+          <table>
+          <tr>
+
+          <td style="padding: 0 30px 0 0;"> <b>A)</b> <img src="https://images.code.org/ca3e26e5b3008075d06db82c2831ab0b-image-1489438562132.43.39a.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>B)</b> <img src="https://images.code.org/6da194be0b14a041291648c12a307495-image-1489438503416.43.39.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>C)</b> <img src="https://images.code.org/dfaa00e3a6260742671d1ac4455fb5d5-image-1489438562133.43.39b.png" width="100px"/></td>
+
+
+          <td style="padding: 0 20px 0 0;"> <b>D)</b> <img src="https://images.code.org/7fc63ed5875b9f9785d0e88aec6eae47-image-1489439110649.43.39d.png" width="100px"/></td>
+          </tr></table>
+          <br/>
       courseD_multi_artist_binary8_predict1_2018_2019_2020:
         answers:
         - text: A
@@ -1934,6 +2086,20 @@ tr-TR:
         questions:
         - text: Aşağıdaki kodu iyice inceleyin. "Çalıştır"a bastıktan sonra hangi
             resmi oluşturacak?
+        markdown: |-
+          <table>
+          <tr>
+
+          <td style="padding: 0 30px 0 0;"> <b>A)</b> <img src="https://images.code.org/ca3e26e5b3008075d06db82c2831ab0b-image-1489438562132.43.39a.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>B)</b> <img src="https://images.code.org/6da194be0b14a041291648c12a307495-image-1489438503416.43.39.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>C)</b> <img src="https://images.code.org/dfaa00e3a6260742671d1ac4455fb5d5-image-1489438562133.43.39b.png" width="100px"/></td>
+
+
+          <td style="padding: 0 20px 0 0;"> <b>D)</b> <img src="https://images.code.org/7fc63ed5875b9f9785d0e88aec6eae47-image-1489439110649.43.39d.png" width="100px"/></td>
+          </tr></table>
+          <br/>
       courseD_multi_artist_nestedLoops9_predict1:
         answers:
         - text: A
@@ -1951,6 +2117,12 @@ tr-TR:
         questions:
         - text: Aşağıdaki kodu dikkatle inceleyin. "Çalıştır"a bastığınızda bu program
             hangisini oluşturacak?
+        markdown: |-
+          <table>
+          <tr><td>A</td><td><img src="https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img src="https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>C</td><td><img src="https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png" width="80px" style="mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);"/></td></tr>
+          </table>
+
+          <br/><br/>
       courseD_multi_artist_nestedLoops9_predict1_2018:
         answers:
         - text: A
@@ -1968,6 +2140,12 @@ tr-TR:
         questions:
         - text: Aşağıdaki kodu dikkatle inceleyin. "Çalıştır"a bastığınızda bu program
             hangisini oluşturacak?
+        markdown: |-
+          <table>
+          <tr><td>A</td><td><img src="https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img src="https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>C</td><td><img src="https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png" width="80px" style="mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);"/></td></tr>
+          </table>
+
+          <br/><br/>
       courseD_multi_artist_nestedLoops9_predict1_2018_2019:
         answers:
         - text: A
@@ -1985,6 +2163,12 @@ tr-TR:
         questions:
         - text: Aşağıdaki kodu dikkatle inceleyin. "Çalıştır"a bastığınızda bu program
             hangisini oluşturacak?
+        markdown: |-
+          <table>
+          <tr><td>A</td><td><img src="https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img src="https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>C</td><td><img src="https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png" width="80px" style="mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);"/></td></tr>
+          </table>
+
+          <br/><br/>
       courseD_multi_artist_nestedLoops9_predict1_2018_2019_2020:
         answers:
         - text: A
@@ -2002,6 +2186,12 @@ tr-TR:
         questions:
         - text: Aşağıdaki kodu dikkatle inceleyin. "Çalıştır"a bastığınızda bu program
             hangisini oluşturacak?
+        markdown: |-
+          <table>
+          <tr><td>A</td><td><img src="https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img src="https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>C</td><td><img src="https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png" width="80px" style="mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);"/></td></tr>
+          </table>
+
+          <br/><br/>
       courseD_multi_bee_conditionals1_predict1:
         answers:
         - text: Arı, buluta gidip ne olursa olsun nektar almaya çalışacak
@@ -2130,22 +2320,40 @@ tr-TR:
             çiçek olacak.'
       courseD_multi_bee_conditionals7_predict2_2018_2019:
         answers:
-        - correct: true
+        - text: Arı her çiçekte nektar ve her petekte bal yapacaktır.
+          correct: true
           feedback: Doğru!
         - text: Arı hem çiçeklerden hem de petekten nektar almaya çalışacak.
+          feedback: Yanlış. "Çiçekteyse" bloğu, arının her çiçekte nektar alır ve
+            her petekte bal yapar.
         - text: Arı hem çiçeklerden hem de petekten bal almaya çalışacak.
+          feedback: Yanlış. Yanlış. "Çiçekteyse" bloğu, arının her çiçekte nektar
+            alır ve her petekte bal yapar.
         - text: Bilmiyorum.
+          feedback: '"Çiçekteyse" bloğu, arının her çiçekte nektar alır ve her petekte
+            bal yapar.'
         questions:
-        - {}
+        - text: 'Aşağıdaki kodu dikkatle inceleyin. "Çalıştır"a bastığınızda sizce
+            ne olacak? Unutmayın: Her bulutun ardında yalnızca *bir* petek veya *bir*
+            çiçek olacak.'
       courseD_multi_bee_conditionals7_predict2_2018_2019_2020:
         answers:
-        - correct: true
+        - text: Arı her çiçekte nektar ve her petekte bal yapacaktır.
+          correct: true
           feedback: Doğru!
         - text: Arı hem çiçeklerden hem de petekten nektar almaya çalışacak.
+          feedback: Yanlış. "Çiçekteyse" bloğu, arının her çiçekte nektar alır ve
+            her petekte bal yapar.
         - text: Arı hem çiçeklerden hem de petekten bal almaya çalışacak.
+          feedback: Yanlış. Yanlış. "Çiçekteyse" bloğu, arının her çiçekte nektar
+            alır ve her petekte bal yapar.
         - text: Bilmiyorum.
+          feedback: '"Çiçekteyse" bloğu, arının her çiçekte nektar alır ve her petekte
+            bal yapar.'
         questions:
-        - {}
+        - text: 'Aşağıdaki kodu dikkatle inceleyin. "Çalıştır"a bastığınızda sizce
+            ne olacak? Unutmayın: Her bulutun ardında yalnızca *bir* petek veya *bir*
+            çiçek olacak.'
       courseD_multi_bee_nestedLoops2_predict1:
         answers:
         - text: Arı ilerleyecek ve yalnızca bir kez nektar alacak.
@@ -2328,33 +2536,66 @@ tr-TR:
             her mısırı veya marulu toplamasını sağlayacak. Balkabağı toplamayacak.
         questions:
         - text: Aşağıdaki kodu iyice inceleyin. "Çalıştır"a bastıktan sonra ne olacak?
+        markdown: |-
+          Bu bulmacadaki filizler mısır veya marul olacak.
+          <br/>
       courseD_multi_farmer_condLoops9_predict1_2018:
         answers:
         - text: Çiftçi ürünün tamamını hasat edecek.
-        - {}
-        - correct: true
+          feedback: Yanlış. Burada balkabağı toplamak için kod yok.
+        - text: Çiftçi gittiği yolda ürünlerin hiçbirini toplamayacak.
+          feedback: Yanlış. Kod, hasatçının sürekli bir merdiven deseni yapmasını
+            ve her denk geldiği mısırı veya marulu toplamasını sağlayacak. Balkabağı
+            toplamayacak.
+        - text: Hasatçı, ürünün tamamını toplayacak, balkabağı hariç.
+          correct: true
           feedback: Doğru!
         - text: Bilmiyorum.
+          feedback: Kod, hasatçının sürekli bir merdiven deseni yapmasını ve her denk
+            geldiği mısırı veya marulu toplamasını sağlayacak. Balkabağı toplamayacak.
         questions:
         - text: Aşağıdaki kodu iyice inceleyin. "Çalıştır"a bastıktan sonra ne olacak?
+        markdown: |-
+          Bu bulmacadaki filizler mısır veya marul olacak.
+          <br/>
       courseD_multi_farmer_condLoops9_predict1_2018_2019:
         answers:
         - text: Çiftçi ürünün tamamını hasat edecek.
-        - {}
-        - correct: true
+          feedback: Yanlış. Burada balkabağı toplamak için kod yok.
+        - text: Çiftçi gittiği yolda ürünlerin hiçbirini toplamayacak.
+          feedback: Yanlış. Kod, hasatçının sürekli bir merdiven deseni yapmasını
+            ve her denk geldiği mısırı veya marulu toplamasını sağlayacak. Balkabağı
+            toplamayacak.
+        - text: Hasatçı, ürünün tamamını toplayacak, balkabağı hariç.
+          correct: true
           feedback: Doğru!
         - text: Bilmiyorum.
+          feedback: Kod, hasatçının sürekli bir merdiven deseni yapmasını ve her denk
+            geldiği mısırı veya marulu toplamasını sağlayacak. Balkabağı toplamayacak.
         questions:
         - text: Aşağıdaki kodu iyice inceleyin. "Çalıştır"a bastıktan sonra ne olacak?
+        markdown: |-
+          Bu bulmacadaki filizler mısır veya marul olacak.
+          <br/>
       courseD_multi_farmer_condLoops9_predict1_2018_2019_2020:
         answers:
         - text: Çiftçi ürünün tamamını hasat edecek.
-        - {}
-        - correct: true
+          feedback: Yanlış. Burada balkabağı toplamak için kod yok.
+        - text: Çiftçi gittiği yolda ürünlerin hiçbirini toplamayacak.
+          feedback: Yanlış. Kod, hasatçının sürekli bir merdiven deseni yapmasını
+            ve her denk geldiği mısırı veya marulu toplamasını sağlayacak. Balkabağı
+            toplamayacak.
+        - text: Hasatçı, ürünün tamamını toplayacak, balkabağı hariç.
+          correct: true
           feedback: Doğru!
         - text: Bilmiyorum.
+          feedback: Kod, hasatçının sürekli bir merdiven deseni yapmasını ve her denk
+            geldiği mısırı veya marulu toplamasını sağlayacak. Balkabağı toplamayacak.
         questions:
         - text: Aşağıdaki kodu iyice inceleyin. "Çalıştır"a bastıktan sonra ne olacak?
+        markdown: |-
+          Bu bulmacadaki filizler mısır veya marul olacak.
+          <br/>
       courseD_multi_farmer_ramp13:
         answers:
         - text: Çiftçi, yolun sonuna kadar yürüyecek ve balkabağı hasadı yapacak.
@@ -2524,31 +2765,52 @@ tr-TR:
             olacak?
       courseD_multi_maze_until10_predict2_2018:
         answers:
-        - correct: true
+        - text: Zombi doğru yolu geçecek ve sonsuza kadar ileri ve geri gidecek.
+          correct: true
           feedback: Doğru!
         - text: Zombi, ayçiçeğine ulaşacak.
+          feedback: Yanlış. Zombi doğru yolu geçecek ve sonsuza kadar ileri ve geri
+            gidecek.
         - text: Zombi ilk yolda sağa döner ve sürekli çember çizer.
+          feedback: Yanlış. Zombi doğru yolu geçecek ve sonsuza kadar ileri ve geri
+            gidecek.
         - text: Bilmiyorum.
+          feedback: Bu kodda, zombi doğru yolu geçecek ve sonsuza kadar ileri ve geri
+            gidecek.
         questions:
         - text: Aşağıdaki kodu dikkatle inceleyin. "Çalıştır"a bastıktan sonra ne
             olacak?
       courseD_multi_maze_until10_predict2_2018_2019:
         answers:
-        - correct: true
+        - text: Zombi doğru yolu geçecek ve sonsuza kadar ileri ve geri gidecek.
+          correct: true
           feedback: Doğru!
         - text: Zombi, ayçiçeğine ulaşacak.
+          feedback: Yanlış. Zombi doğru yolu geçecek ve sonsuza kadar ileri ve geri
+            gidecek.
         - text: Zombi ilk yolda sağa döner ve sürekli çember çizer.
+          feedback: Yanlış. Zombi doğru yolu geçecek ve sonsuza kadar ileri ve geri
+            gidecek.
         - text: Bilmiyorum.
+          feedback: Bu kodda, zombi doğru yolu geçecek ve sonsuza kadar ileri ve geri
+            gidecek.
         questions:
         - text: Aşağıdaki kodu dikkatle inceleyin. "Çalıştır"a bastıktan sonra ne
             olacak?
       courseD_multi_maze_until10_predict2_2018_2019_2020:
         answers:
-        - correct: true
+        - text: Zombi doğru yolu geçecek ve sonsuza kadar ileri ve geri gidecek.
+          correct: true
           feedback: Doğru!
         - text: Zombi, ayçiçeğine ulaşacak.
+          feedback: Yanlış. Zombi doğru yolu geçecek ve sonsuza kadar ileri ve geri
+            gidecek.
         - text: Zombi ilk yolda sağa döner ve sürekli çember çizer.
+          feedback: Yanlış. Zombi doğru yolu geçecek ve sonsuza kadar ileri ve geri
+            gidecek.
         - text: Bilmiyorum.
+          feedback: Bu kodda, zombi doğru yolu geçecek ve sonsuza kadar ileri ve geri
+            gidecek.
         questions:
         - text: Aşağıdaki kodu dikkatle inceleyin. "Çalıştır"a bastıktan sonra ne
             olacak?
@@ -2672,31 +2934,49 @@ tr-TR:
       courseE_multi_farmer_functions11_predict_2018:
         answers:
         - text: Çiftçi iki balkabağı toplayacak.
+          feedback: Yanlış. Hasatçı, yolun sonuna kadar ilerler, daha sonra etrafta
+            dolanır ve marul toplayana kadar geri döner.
         - text: Çiftçi balkabaklarının tamamını toplayacak.
+          feedback: Yanlış. Hasatçı, yolun sonuna kadar ilerler, daha sonra etrafta
+            dolanır ve marul toplayana kadar geri döner.
         - text: Çiftçi marulu toplayacak.
           correct: true
           feedback: Doğru!
         - text: Çiftçi mısırı toplayacak.
+          feedback: Yanlış. Hasatçı, yolun sonuna kadar ilerler, daha sonra etrafta
+            dolanır ve marul toplayana kadar geri döner.
         questions:
         - text: Aşağıda tanımlanan fonksiyonları inceleyin. Çiftçi ne toplayacak?
       courseE_multi_farmer_functions11_predict_2018_2019:
         answers:
         - text: Çiftçi iki balkabağı toplayacak.
+          feedback: Yanlış. Hasatçı, yolun sonuna kadar ilerler, daha sonra etrafta
+            dolanır ve marul toplayana kadar geri döner.
         - text: Çiftçi balkabaklarının tamamını toplayacak.
+          feedback: Yanlış. Hasatçı, yolun sonuna kadar ilerler, daha sonra etrafta
+            dolanır ve marul toplayana kadar geri döner.
         - text: Çiftçi marulu toplayacak.
           correct: true
           feedback: Doğru!
         - text: Çiftçi mısırı toplayacak.
+          feedback: Yanlış. Hasatçı, yolun sonuna kadar ilerler, daha sonra etrafta
+            dolanır ve marul toplayana kadar geri döner.
         questions:
         - text: Aşağıda tanımlanan fonksiyonları inceleyin. Çiftçi ne toplayacak?
       courseE_multi_farmer_functions11_predict_2018_2019_2020:
         answers:
         - text: Çiftçi iki balkabağı toplayacak.
+          feedback: Yanlış. Hasatçı, yolun sonuna kadar ilerler, daha sonra etrafta
+            dolanır ve marul toplayana kadar geri döner.
         - text: Çiftçi balkabaklarının tamamını toplayacak.
+          feedback: Yanlış. Hasatçı, yolun sonuna kadar ilerler, daha sonra etrafta
+            dolanır ve marul toplayana kadar geri döner.
         - text: Çiftçi marulu toplayacak.
           correct: true
           feedback: Doğru!
         - text: Çiftçi mısırı toplayacak.
+          feedback: Yanlış. Hasatçı, yolun sonuna kadar ilerler, daha sonra etrafta
+            dolanır ve marul toplayana kadar geri döner.
         questions:
         - text: Aşağıda tanımlanan fonksiyonları inceleyin. Çiftçi ne toplayacak?
       courseE_prediction_artistFunction1:
@@ -2776,31 +3056,52 @@ tr-TR:
         - text: '"Çalıştır"a bastığınızda ne olacak?'
       courseF_bee_variables_8a_2018:
         answers:
-        - {}
-        - correct: true
+        - text: Arı herhangi bir nektar toplamayacaktır, çünkü değişken "topla" olarak
+            çağrılmaz.
+          feedback: 'Yanlış. Değişkeninizin adı, değerini etkilemez. '
+        - text: Arı, yalnızca 2 nektar toplayacaktır.
+          correct: true
           feedback: Doğru!
-        - {}
+        - text: Arı nektarın tamamını toplayacaktır.
+          feedback: Yanlış. Değişken, son iki fonksiyon çağrısından önce 0'a ayarlanır.
         - text: Bilmiyorum.
+          feedback: Değişken, her seferinde 1'in eklendiği son iki fonksiyon çağrısından
+            önce 0'a ayarlanır.  O zaman arı 2 nektar birimi toplar.
         questions:
-        - {}
+        - text: Aşağıdaki koda bakın. Arı en sonra kaç nektar birimi toplayacaktır?
+        title: Çoklu Arı Değişkenleri
       courseF_bee_variables_8a_2018_2019:
         answers:
-        - {}
-        - correct: true
+        - text: Arı herhangi bir nektar toplamayacaktır, çünkü değişken "topla" olarak
+            çağrılmaz.
+          feedback: 'Yanlış. Değişkeninizin adı, değerini etkilemez. '
+        - text: Arı, yalnızca 2 nektar toplayacaktır.
+          correct: true
           feedback: Doğru!
-        - {}
+        - text: Arı nektarın tamamını toplayacaktır.
+          feedback: Yanlış. Değişken, son iki fonksiyon çağrısından önce 0'a ayarlanır.
         - text: Bilmiyorum.
+          feedback: Değişken, her seferinde 1'in eklendiği son iki fonksiyon çağrısından
+            önce 0'a ayarlanır.  O zaman arı 2 nektar birimi toplar.
         questions:
-        - {}
+        - text: Aşağıdaki koda bakın. Arı en sonra kaç nektar birimi toplayacaktır?
+        title: Çoklu Arı Değişkenleri
       courseF_bee_variables_8a_2018_2019_2020:
         answers:
-        - {}
-        - correct: true
+        - text: Arı herhangi bir nektar toplamayacaktır, çünkü değişken "topla" olarak
+            çağrılmaz.
+          feedback: 'Yanlış. Değişkeninizin adı, değerini etkilemez. '
+        - text: Arı, yalnızca 2 nektar toplayacaktır.
+          correct: true
           feedback: Doğru!
-        - {}
+        - text: Arı nektarın tamamını toplayacaktır.
+          feedback: Yanlış. Değişken, son iki fonksiyon çağrısından önce 0'a ayarlanır.
         - text: Bilmiyorum.
+          feedback: Değişken, her seferinde 1'in eklendiği son iki fonksiyon çağrısından
+            önce 0'a ayarlanır.  O zaman arı 2 nektar birimi toplar.
         questions:
-        - {}
+        - text: Aşağıdaki koda bakın. Arı en sonra kaç nektar birimi toplayacaktır?
+        title: Çoklu Arı Değişkenleri
       courseF_external_variableConstant:
         markdown: "<h2>Değişkenler Hakkında</h2>\n\n<img src=\"https://images.code.org/082c757f5c939bd353eacda9589ca54f-image-1477349401281.35.08.png\"
           style=\"padding-left: 30px; width:300px; float:right;\"/>\n<h3>Artık, bir
@@ -2827,6 +3128,8 @@ tr-TR:
             daha kalın bir çizgi çizer.
         questions:
         - text: '"Çalıştır"a tıkladığınızda ne olacak?'
+        markdown: 'Bu çizimdeki fırçanın genişliğini değiştirmek için ''için'' döngümüzden
+          sayacı kullandık.   '
       courseF_multi_artist_for10_predict1_2018:
         answers:
         - text: Sanatçı, oyun alanının bir tarafından diğerine doğru kalınlığı artan
@@ -2845,6 +3148,8 @@ tr-TR:
             daha kalın bir çizgi çizer.
         questions:
         - text: '"Çalıştır"a tıkladığınızda ne olacak?'
+        markdown: 'Bu çizimdeki fırçanın genişliğini değiştirmek için ''için'' döngümüzden
+          sayacı kullandık.   '
       courseF_multi_artist_for10_predict1_2018_2019:
         answers:
         - text: Sanatçı, oyun alanının bir tarafından diğerine doğru kalınlığı artan
@@ -2863,6 +3168,8 @@ tr-TR:
             daha kalın bir çizgi çizer.
         questions:
         - text: '"Çalıştır"a tıkladığınızda ne olacak?'
+        markdown: 'Bu çizimdeki fırçanın genişliğini değiştirmek için ''için'' döngümüzden
+          sayacı kullandık.   '
       courseF_multi_artist_for10_predict1_2018_2019_2020:
         answers:
         - text: Sanatçı, oyun alanının bir tarafından diğerine doğru kalınlığı artan
@@ -2881,6 +3188,8 @@ tr-TR:
             daha kalın bir çizgi çizer.
         questions:
         - text: '"Çalıştır"a tıkladığınızda ne olacak?'
+        markdown: 'Bu çizimdeki fırçanın genişliğini değiştirmek için ''için'' döngümüzden
+          sayacı kullandık.   '
       courseF_multi_artist_fwp2_predict1:
         answers:
         - text: Sanatçı, iki farklı boyutta kutu çizmek için aynı fonksiyonu kullanacak.
@@ -3026,6 +3335,7 @@ tr-TR:
             sağlar ama yalnızca 4 çiçeğe ulaşacak şekilde ayarlanmış.
         questions:
         - text: Aşağıdaki kodu okuyun. "Çalıştır"a bastığınızda ne olacak?
+        markdown: Ah! 'İçin' döngülerinin kullanımı, bu bulmacayı daha da kolaylaştırır!
       courseF_multi_bee_for3_predict1_2018:
         answers:
         - text: 'Arı ilerleyecek ve her çiçekteki nektarın tamamını toplayacak. '
@@ -3038,9 +3348,12 @@ tr-TR:
         - text: 'Arı ilerleyecek ve her çiçekten bir nektar toplayacak. '
           feedback: Yanlış. "For" döngüsü, arının doğru miktarda nektar toplamasını
             sağlar ama yalnızca 4 çiçeğe ulaşacak şekilde ayarlanmış.
-        - {}
+        - text: 'Bilmiyorum. '
+          feedback: '"İçin" döngüsü, arının doğru miktarda nektar toplamasını sağlar
+            ama yalnızca 4 çiçeğe ulaşacak şekilde ayarlanmış.'
         questions:
         - text: Aşağıdaki kodu okuyun. "Çalıştır"a bastığınızda ne olacak?
+        markdown: Ah! 'İçin' döngülerinin kullanımı, bu bulmacayı daha da kolaylaştırır!
       courseF_multi_bee_for3_predict1_2018_2019:
         answers:
         - text: 'Arı ilerleyecek ve her çiçekteki nektarın tamamını toplayacak. '
@@ -3053,9 +3366,12 @@ tr-TR:
         - text: 'Arı ilerleyecek ve her çiçekten bir nektar toplayacak. '
           feedback: Yanlış. "For" döngüsü, arının doğru miktarda nektar toplamasını
             sağlar ama yalnızca 4 çiçeğe ulaşacak şekilde ayarlanmış.
-        - {}
+        - text: 'Bilmiyorum. '
+          feedback: '"İçin" döngüsü, arının doğru miktarda nektar toplamasını sağlar
+            ama yalnızca 4 çiçeğe ulaşacak şekilde ayarlanmış.'
         questions:
         - text: Aşağıdaki kodu okuyun. "Çalıştır"a bastığınızda ne olacak?
+        markdown: Ah! 'İçin' döngülerinin kullanımı, bu bulmacayı daha da kolaylaştırır!
       courseF_multi_bee_for3_predict1_2018_2019_2020:
         answers:
         - text: 'Arı ilerleyecek ve her çiçekteki nektarın tamamını toplayacak. '
@@ -3068,9 +3384,12 @@ tr-TR:
         - text: 'Arı ilerleyecek ve her çiçekten bir nektar toplayacak. '
           feedback: Yanlış. "For" döngüsü, arının doğru miktarda nektar toplamasını
             sağlar ama yalnızca 4 çiçeğe ulaşacak şekilde ayarlanmış.
-        - {}
+        - text: 'Bilmiyorum. '
+          feedback: '"İçin" döngüsü, arının doğru miktarda nektar toplamasını sağlar
+            ama yalnızca 4 çiçeğe ulaşacak şekilde ayarlanmış.'
         questions:
         - text: Aşağıdaki kodu okuyun. "Çalıştır"a bastığınızda ne olacak?
+        markdown: Ah! 'İçin' döngülerinin kullanımı, bu bulmacayı daha da kolaylaştırır!
       courseF_multi_bee_fwp9_predict1:
         answers:
         - text: Arı nektar veya bal toplamayacak.
@@ -3182,6 +3501,7 @@ tr-TR:
           *[Alüminyum botlar](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf) - Aktivite rehberi ([MS Word] olarak kopyala)
           (https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc), [Google Belgesi]
           (https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))
+        title: CS Keşifleri Öğrenci Ön Ders Değerlendirmesi
       csf_be_a_super_digital_citizen:
         content1: açıklama buraya
       csf_password_power-up:
@@ -3222,7 +3542,7 @@ tr-TR:
           feedback: Laurel, hazine olmayan yerde hazine toplamaya çalışıyor ve bu
             hataya neden oluyor.
         questions:
-        - {}
+        - text: Bu koda dikkatlice bakın. Sizce program çalıştığında ne olacak?
       grade2_multi_collector_A_predict1_2018_2019:
         answers:
         - text: Laurel bu kodu kullanarak 4 parça hazine toplayacak.
@@ -3239,7 +3559,7 @@ tr-TR:
           feedback: Laurel, hazine olmayan yerde hazine toplamaya çalışıyor ve bu
             hataya neden oluyor.
         questions:
-        - {}
+        - text: Bu koda dikkatlice bakın. Sizce program çalıştığında ne olacak?
       grade2_multi_collector_A_predict1_2018_2019_2020:
         answers:
         - text: Laurel bu kodu kullanarak 4 parça hazine toplayacak.
@@ -3256,7 +3576,7 @@ tr-TR:
           feedback: Laurel, hazine olmayan yerde hazine toplamaya çalışıyor ve bu
             hataya neden oluyor.
         questions:
-        - {}
+        - text: Bu koda dikkatlice bakın. Sizce program çalıştığında ne olacak?
       gradek1_activity_beNice:
         markdown: "# Bilgisayar Laboratuvarındaki Davranışlar\n  \n<br/><br/>    \n
           \   \n<a href=\"https://docs.google.com/document/d/18KHX5NNlmXX1Eqt8u6LFRzto7PK4dIFNv-tr1F1joUQ/edit?usp=sharing\"
@@ -3270,3 +3590,698 @@ tr-TR:
         display_name: Ders Projesinin Sonu
       courseF_EOC_2020:
         display_name: Ders Projesinin Sonu
+      BigEvent-Unplugged:
+        markdown: |-
+          # Büyük Olay
+
+          Bilgisayar biliminde, olaylar, bir bilgisayarın izlediği hareketlerdir. Bu derste, basılan butona göre farklı bir şekilde tepki verecektir.
+      BigEvent-Unplugged_2020:
+        markdown: |-
+          # Büyük Olay
+
+          Bilgisayar biliminde, olaylar, bir bilgisayarın izlediği hareketlerdir. Bu derste, basılan butona göre farklı bir şekilde tepki verecektir.
+      BinaryBracelets-Unplugged:
+        markdown: |-
+          # İkili Bilezikler
+
+          Bilgisayarların anladığı bir sistemde adınızı temsil eden bir bileklik oluşturun!
+
+          ![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)
+      BinaryBracelets-Unplugged_2020:
+        markdown: |-
+          # İkili Bilezikler
+
+          Bilgisayarların anladığı bir sistemde adınızı temsil eden bir bileklik oluşturun!
+
+          ![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)
+      BinaryImages-Unplugged:
+        markdown: |-
+          # İkili Resimler
+
+          Sadece iki basit değeri kullanarak bir resmin nasıl yeniden oluşturulacağını iletin.
+      BinaryImages-Unplugged_2020:
+        markdown: |-
+          # İkili Resimler
+
+          Sadece iki basit değeri kullanarak bir resmin nasıl yeniden oluşturulacağını iletin.
+      ConditionalsWithCards-Unplugged:
+        markdown: |-
+          # Kartlarla Koşullar
+
+          Kart oyunu oynayın ve "Eğer kırmızı kartı çekersem bir puan alırım" ve "Eğer siyah kartı çekersem sen bir puan alırsın" gibi kurallar oluşturun.
+      ConditionalsWithCards-Unplugged_2020:
+        markdown: |-
+          # Kartlarla Koşullar
+
+          Kart oyunu oynayın ve "Eğer kırmızı kartı çekersem bir puan alırım" ve "Eğer siyah kartı çekersem sen bir puan alırsın" gibi kurallar oluşturun.
+      DigitalCitizenship-Unplugged:
+        markdown: |-
+          # Dijital Vatandaşlık
+
+          Bazı bilgileri çevrim içi paylaşmak güvenli değildir. Bu ders, size, güvenli ve özel bilgiler arasındaki farkı öğrenmenizde yardımcı olacak
+      DigitalFootprint-Unplugged:
+        markdown: |-
+          # Dijital Ayak İziniz
+
+          Çevrimiçi ortama kendiniz hakkında bilgi koymak, dijital bir ayak izi oluşturmaktadır.
+      GettingLoopy-Unplugged:
+        markdown: |-
+          # Loopy'ye Başlarken
+
+          Bu ders, bir dans partisi vasıtasıyla döngülerin programlama kavramını getirmektedir.
+      GettingLoopy-Unplugged_2020:
+        markdown: |-
+          # Loopy'ye Başlarken
+
+          Bu ders, bir dans partisi vasıtasıyla döngülerin programlama kavramını getirmektedir.
+      GoingPlacesSafely-unplugged:
+        markdown: |-
+          # Bir Yerlere Güvenli Şekilde Gitmek
+
+          İnternet güçlü, fakat bazen tehlikeli bir yerdir. İnternette gezinirken güvenli kalın!
+      GraphPaperProgramming-Unplugged:
+        markdown: |-
+          #Grafik Kağıdı Programlama
+
+          Sınıf arkadaşlarınızı resimleri çizmek için kullanabileceği algoritmaları yazın.
+      GraphPaperProgramming-Unplugged_2020:
+        markdown: |-
+          #Grafik Kağıdı Programlama
+
+          Sınıf arkadaşlarınızı resimleri çizmek için kullanabileceği algoritmaları yazın.
+      HappyLoops-Unplugged:
+        markdown: |-
+          # Mutlu Döngüler
+
+          Bu derste döngüleri öğreneceksiniz!
+
+          ![](https://images.code.org/6aac7f675f0c69033f42ccac6a733f68-image-1557769673400.png)
+      HappyLoops-Unplugged_2020:
+        markdown: |-
+          # Mutlu Döngüler
+
+          Bu derste döngüleri öğreneceksiniz!
+
+          ![](https://images.code.org/6aac7f675f0c69033f42ccac6a733f68-image-1557769673400.png)
+      HappyMaps-Unplugged:
+        markdown: |-
+          # Mutlu Haritalar
+
+          Bir karakteri bir labirentten ilerletmek için bir algoritma oluşturun.
+      HappyMaps-Unplugged_2020:
+        markdown: |-
+          # Mutlu Haritalar
+
+          Bir karakteri bir labirentten ilerletmek için bir algoritma oluşturun.
+      MoveItMoveIt-Unplugged:
+        markdown: |-
+          # Taşı, Taşı
+
+          Bir harita kullanın ve hedefe ulaşmak için komutlar verin.
+      MoveItMoveIt-Unplugged_2020:
+        markdown: |-
+          # Taşı, Taşı
+
+          Bir harita kullanın ve hedefe ulaşmak için komutlar verin.
+      MyLoopyRoboticFriends-Unplugged:
+        markdown: |-
+          # Loopy Robot Arkadaşlarım
+
+          Döngüleri kullanarak programlarınızı daha da kısaltın!
+      MyLoopyRoboticFriends-Unplugged_2020:
+        markdown: |-
+          # Loopy Robot Arkadaşlarım
+
+          Döngüleri kullanarak programlarınızı daha da kısaltın!
+      MyRoboticFriends-Unplugged:
+        markdown: |-
+          # Robot Arkadaşlarım
+
+          Arkadaşların için kod yazarak programlamayı öğren!
+      MyRoboticFriends-Unplugged_2020:
+        markdown: |-
+          # Robot Arkadaşlarım
+
+          Arkadaşların için kod yazarak programlamayı öğren!
+      PicturingData-Unplugged:
+        markdown: |-
+          # Verileri Resmetme
+
+          Verileri toplamak ve tahmin yapmak için bir Play Lab projesini kullanın.
+
+          ![](https://images.code.org/606a78c09a01133a1bbc1aa9c76f3320-image-1557334268558.png)
+      PicturingData-Unplugged_2020:
+        markdown: |-
+          # Verileri Resmetme
+
+          Verileri toplamak ve tahmin yapmak için bir Play Lab projesini kullanın.
+
+          ![](https://images.code.org/606a78c09a01133a1bbc1aa9c76f3320-image-1557334268558.png)
+      PowerfulPasswords-Unplugged:
+        markdown: |-
+          # Güçlü şifrelerin
+
+          İnsanların neden şifre kullandığını keşfedin, şifre kullanmanın faydalarını öğrenin ve şifrelerin güçlü ve güvenilir şekilde oluşturulmasına ve korunmasına yönelik stratejileri keşfedin.
+
+          ![](https://images.code.org/9e082a5564a289bccc8e2dd79a2cae9f-image-1557869939256.png)
+      RelayProgramming-Unplugged:
+        markdown: |-
+          # Röle Programlama
+
+          Takımlara ayrılın ve resimleri çizen programlar yazmak için birlikte çalışın.
+      RelayProgramming-Unplugged_2020:
+        markdown: |-
+          # Röle Programlama
+
+          Takımlara ayrılın ve resimleri çizen programlar yazmak için birlikte çalışın.
+      ScreenOutTheMean-Unplugged:
+        markdown: |-
+          # Ortalamayı Filtrele
+
+          Bugün birisi çevirimiçi size kötü söz söylerse ne yapmanız gerektiğini öğreneceksiniz.
+      SimonSays-Unplugged:
+        markdown: |-
+          # Simon Diyor ki
+
+          Bir oyun oynayın ve doğru sonu elde etmek için hangi komutların gerektiğini düşünün
+      SimonSays-Unplugged_2020:
+        markdown: |-
+          # Simon Diyor ki
+
+          Bir oyun oynayın ve doğru sonu elde etmek için hangi komutların gerektiğini düşünün
+      TheRightAppMarkdownLevel_2019:
+        markdown: |-
+          # Doğru Uygulama
+
+          * Günümüzde herkes bilgisayarları, özellikle akıllı telefonları kullanır.
+          * Akıllı telefon uygulamaları, insanların arkadaşlarla konuşmak, müzik dinleme, alışveriş yapmak veya yalnızca ağı keşfetmek gibi şeyleri yapmasına yardım eder.
+          * Programcıların başkalarının ihtiyaçlarını anlaması ve bunları akılda tutarak uygulamaları tasarlaması önemlidir!
+
+          ![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)
+      TheRightAppMarkdownLevel_2019_2020:
+        markdown: |-
+          # Doğru Uygulama
+
+          * Günümüzde herkes bilgisayarları, özellikle akıllı telefonları kullanır.
+          * Akıllı telefon uygulamaları, insanların arkadaşlarla konuşmak, müzik dinleme, alışveriş yapmak veya yalnızca ağı keşfetmek gibi şeyleri yapmasına yardım eder.
+          * Programcıların başkalarının ihtiyaçlarını anlaması ve bunları akılda tutarak uygulamaları tasarlaması önemlidir!
+
+          ![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)
+      courseD_external_binary1:
+        markdown: "<h1>İkili sistem ile çizin</h1>\n \n<h3>İkili sistem, yalnızca
+          iki seçenek kullanarak bilgi temsil etme yoludur. Bu durumda, <b>kapalı</b>
+          ve <b>açık</b>.\n<br/>\nBurada, \"kapalı\" için kod olarak <b>0</b> sayısını
+          kullancağız ve \"açık\" için kod olarak ise <b>1</b> sayısını kullanacağız.\n<br/>\n<table>\n<tr><td><img
+          src=\"https://images.code.org/50283881d577c17ac6f1d1648d8f361f-image-1483640342574.09.14.png\"
+          width=\"75px\"/></td><td><img src=\"https://images.code.org/ba6f0a000b18f2dd87160e6255e8a71c-image-1483640355103.09.24.png\"
+          width=\"90px\"/></td></tr>\n<tr padding=\"0px\"><td align=\"center\"><b>0</b></td><td
+          align=\"center\"><b>1</b></td></tr>\n</table><img src=\"https://images.code.org/934883837aa59bca1d5c1ded0e0ac675-image-1483640120036.51.06.png\"
+          float=\"left\"/><h3>Bu aşamada, bazı kareleri açarak üzerinden geçebileceğiniz
+          ve tasarımlar yapabileceğiniz bir \"pikseller\" ızgarası sağladık.</h3>\n\n![](https://images.code.org/c53e00cde9acbae72d02fb9cc2a20e53-image-1483639858942.png)\n"
+      courseD_external_binary1_2018:
+        markdown: "<h1>İkili sistem ile çizin</h1>\n \n<h3>İkili sistem, yalnızca
+          iki seçenek kullanarak bilgi temsil etme yoludur. Bu durumda, <b>kapalı</b>
+          ve <b>açık</b>.\n<br/>\nBurada, \"kapalı\" için kod olarak <b>0</b> sayısını
+          kullancağız ve \"açık\" için kod olarak ise <b>1</b> sayısını kullanacağız.\n<br/>\n<table>\n<tr><td><img
+          src=\"https://images.code.org/50283881d577c17ac6f1d1648d8f361f-image-1483640342574.09.14.png\"
+          width=\"75px\"/></td><td><img src=\"https://images.code.org/ba6f0a000b18f2dd87160e6255e8a71c-image-1483640355103.09.24.png\"
+          width=\"90px\"/></td></tr>\n<tr padding=\"0px\"><td align=\"center\"><b>0</b></td><td
+          align=\"center\"><b>1</b></td></tr>\n</table><img src=\"https://images.code.org/934883837aa59bca1d5c1ded0e0ac675-image-1483640120036.51.06.png\"
+          float=\"left\"/><h3>Bu aşamada, bazı kareleri açarak üzerinden geçebileceğiniz
+          ve tasarımlar yapabileceğiniz bir \"pikseller\" ızgarası sağladık.</h3>\n\n![](https://images.code.org/c53e00cde9acbae72d02fb9cc2a20e53-image-1483639858942.png)\n"
+      courseD_external_binary1_2018_2019:
+        markdown: "<h1>İkili sistem ile çizin</h1>\n \n<h3>İkili sistem, yalnızca
+          iki seçenek kullanarak bilgi temsil etme yoludur. Bu durumda, <b>kapalı</b>
+          ve <b>açık</b>.\n<br/>\nBurada, \"kapalı\" için kod olarak <b>0</b> sayısını
+          kullancağız ve \"açık\" için kod olarak ise <b>1</b> sayısını kullanacağız.\n<br/>\n<table>\n<tr><td><img
+          src=\"https://images.code.org/50283881d577c17ac6f1d1648d8f361f-image-1483640342574.09.14.png\"
+          width=\"75px\"/></td><td><img src=\"https://images.code.org/ba6f0a000b18f2dd87160e6255e8a71c-image-1483640355103.09.24.png\"
+          width=\"90px\"/></td></tr>\n<tr padding=\"0px\"><td align=\"center\"><b>0</b></td><td
+          align=\"center\"><b>1</b></td></tr>\n</table><img src=\"https://images.code.org/934883837aa59bca1d5c1ded0e0ac675-image-1483640120036.51.06.png\"
+          float=\"left\"/><h3>Bu aşamada, bazı kareleri açarak üzerinden geçebileceğiniz
+          ve tasarımlar yapabileceğiniz bir \"pikseller\" ızgarası sağladık.</h3>\n\n![](https://images.code.org/c53e00cde9acbae72d02fb9cc2a20e53-image-1483639858942.png)\n"
+      courseD_external_binary1_2018_2019_2020:
+        markdown: "<h1>İkili sistem ile çizin</h1>\n \n<h3>İkili sistem, yalnızca
+          iki seçenek kullanarak bilgi temsil etme yoludur. Bu durumda, <b>kapalı</b>
+          ve <b>açık</b>.\n<br/>\nBurada, \"kapalı\" için kod olarak <b>0</b> sayısını
+          kullancağız ve \"açık\" için kod olarak ise <b>1</b> sayısını kullanacağız.\n<br/>\n<table>\n<tr><td><img
+          src=\"https://images.code.org/50283881d577c17ac6f1d1648d8f361f-image-1483640342574.09.14.png\"
+          width=\"75px\"/></td><td><img src=\"https://images.code.org/ba6f0a000b18f2dd87160e6255e8a71c-image-1483640355103.09.24.png\"
+          width=\"90px\"/></td></tr>\n<tr padding=\"0px\"><td align=\"center\"><b>0</b></td><td
+          align=\"center\"><b>1</b></td></tr>\n</table><img src=\"https://images.code.org/934883837aa59bca1d5c1ded0e0ac675-image-1483640120036.51.06.png\"
+          float=\"left\"/><h3>Bu aşamada, bazı kareleri açarak üzerinden geçebileceğiniz
+          ve tasarımlar yapabileceğiniz bir \"pikseller\" ızgarası sağladık.</h3>\n\n![](https://images.code.org/c53e00cde9acbae72d02fb9cc2a20e53-image-1483639858942.png)\n"
+      Unit 1 Lesson 1 Overview:
+        markdown: |-
+          # Genel bakış
+
+          Sınıf, mümkün olduğunca fazla bozuk parayı destekleyecek alüminyum folyo tekneler tasarlamak için gruplar halinde çalışır. Dersin sonunda gruplar, etkinlikle ilgili deneyimlerini yansıtırlar ve dersin geri kalanında yapacakları problem çözme türleriyle bağlantı kurarlar.
+
+
+          ## Kaynakça
+
+          *[Alüminyum botlar](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf) - Aktivite rehberi ([MS Word] olarak kopyala)
+          (https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc), [Google Belgesi]
+          (https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))
+      courseD_project_exemplars_2020_2021:
+        content1: Test Etiketleme Ders Kitabı Sayfası
+      courseE_project_exemplars_2019:
+        content1: Test Etiketleme Ders Kitabı Sayfası
+        markdown: |-
+          # Proje Örnekleri
+
+          Son projenize başlamak üzeresiniz. Başlamadan önce, örnek projelere bakara biraz zaman geçirin.
+
+          ## Hareketli Nesne Laboratuvarı
+
+          | Canavar Dansı (Hareketli Nesne Laboratuvarı) | Kek Oyunu (Hareketli Nesne Laboratuvarı) |
+          |---|---|
+          | [![Canavar Dansı (Hareketli Nesne Laboratuvarı)](https://images.code.org/85838ca11b728dce3e1513515c4510e3-image-1556826303297.png "Canavar Dansı (Hareketli Nesne Laboratuvarı")](https://studio.code.org/projects/spritelab/Cj3sVYGhWo2ujgwRoO1FscJazrDPT2qGfU59YXvFXxs/view) | [![Kek Oyunu (Hareketli Nesne Laboratuvarı)](https://images.code.org/c90080aaf05349fb6e1fbb6861e815df-image-1556809855136.png "Kek Oyunu (Hareketli Nesne Laboratuvarı")](https://studio.code.org/projects/spritelab/YMEHR4ps9cDJ0sb4Ks0YrZcpcjGmc4OEiUudZHm-l6g/view) |
+          | Bu oyuna metin veya skor eklemeyi deneyin! | Bu oyuna metin veya skor eklemeyi deneyin! |
+
+          ## Oyuncu
+
+          | Desen (Oyuncu) | Fonksiyon Çiçekleri (Oyuncu) |
+          |---|---|
+          | [![Desen (Oyuncu)](https://images.code.org/2432878706891dda080b69428ddc4a20-image-1556822714214.png "Desen (Oyuncu)")](https://studio.code.org/projects/artist/TznMeJRa4SnHWJvUBEoNUw/view) | [![Fonksiyon Çiçekleri (Oyuncu)](https://images.code.org/1e6da38baf996dace44581572895a4b8-image-1556822184973.png "Fonksiyon Çiçekleri (Oyuncu)")](https://studio.code.org/projects/artist/4uGqFaTnc7V9B6IqCqj21Q/view) |
+          | İçiçe döngüler ile yaratıcı olalım! | Fonksiyonlar ile yaratıcı olalım! |
+      courseE_project_exemplars_2019_2020:
+        content1: Test Etiketleme Ders Kitabı Sayfası
+      courseExpress_project_exemplars_2019_2020:
+        content1: Test Etiketleme Ders Kitabı Sayfası
+      courseF_markdown_algorithms_end:
+        content1: Test Etiketleme Ders Kitabı Sayfası
+        markdown: "# **Daha yeni \"algoritmaları\" öğrendiniz!**  \n\n\n\n### ** Bir
+          algoritma, sadece bir görevi bitirmeye yönelik bir adım listesidir**. Algoritmalar
+          ile ilgili eğlenceli olan şey, adım adım ne olacağına siz karar verirsiniz.\n\n###Bir
+          makine için bir algoritma yazdığınızda, buna bir **program** denir.  \n\n---\n\n##
+          **Bilinmesi Gereken Kelimeler**\n\n* ### **Algoritma** - Bir görevi bitirmeye
+          yönelik bir adım listesi\n\n* ### **Program** - Bir makine tarafından çalıştırılabilen
+          bir şeye kodlanmış bir algoritma"
+      courseF_markdown_algorithms_intro:
+        content1: Test Etiketleme Ders Kitabı Sayfası
+        markdown: |-
+          # **Bu derste...**
+
+          ### Hiç birine tam olarak ne yapacağını söylemek istediniz mi? Her zaman sizi dinliyorlar mı?
+
+          ### Artık, bir makineye adım adım ne yapacağını söyleyeceksiniz ve o sizi dinleyecek!
+
+          ---
+
+          ## **Bilinmesi Gereken Bloklar**
+
+          ![](https://images.code.org/b2376dc67948e29247931dec5e9fef8f-image-1524678585868.png)
+
+          ![](https://images.code.org/bd2de01f2c3b86109329b10eb544a6e6-image-1524678600994.png)
+
+          ![](https://images.code.org/db76d28bb3dbabdb78edb2cf54c6cb11-image-1524678618646.png)
+      courseF_markdown_conditionals_end:
+        content1: Test Etiketleme Ders Kitabı Sayfası
+        markdown: "# **Az önce \"koşulları\" öğrendiniz!**\n\n### Koşullar, bilgisayar
+          biliminde süper faydalıdır. En sevdiğiniz web sitesine girdiğini ve şifrenizi
+          yazdığınızı düşünün. Web sitesi, girdiğini şifrenin, kullanıcı adınız için
+          kaydettiğiniz şifre ile eşleşip *eşleşmediğini* kontrol etmek için koşulları
+          kullanmak zorundadır.\n\n### `Eğer` eşleşirse, girer! \n\n### `Değilse`,
+          kullanıcıya bir hata verir.  \n\n---\n\n## **Bilinmesi Gereken Kelimeler**\n\n*
+          ### **Koşul** - Bir programın, bir harekete izin vermeden önce kontrol ettiği
+          bir şey\n\n* ### **Koşullar** - Yalnızca belirli koşullar altında çalışan
+          ifadeler"
+      courseF_markdown_conditionals_intro:
+        content1: Test Etiketleme Ders Kitabı Sayfası
+        markdown: "# **Bu derste...**\n\n### **Koşullar**, doğru veya yanlış olabilen
+          şeylerdir. \n\n### Bir şeyin doğru olduğu 'süresince', doğru olana 'kadar'
+          veya doğru 'ise' bir şeylerin olmasını sağlamak için bir programda koşulları
+          nasıl kullanacağınızı öğreneceksiniz!\n---\n\n## **Bilinmesi Gereken Bloklar**\n\n![](https://images.code.org/8c6cc9ffa31c916fc970c67382d83b8d-image-1524770260439.png)\n\n![](https://images.code.org/c2fbbaf80b348d47ba2dac4497ae2624-image-1524770272898.png)\n\n![](https://images.code.org/6b90e2dfb025609f8762014ff0ba51dc-image-1524770241058.png)\n"
+      courseF_markdown_debugging_end:
+        content1: Test Etiketleme Ders Kitabı Sayfası
+        markdown: |-
+          # **Az önce "hata ayıklamayı" öğrendiniz!**
+
+          ### **Bir hata, yanlış giden bir şeydir.** Bir programdaki bir yanlışlıktır. Bu yanlışlıkları bulduğunuzda ve düzelttiğinizde, bir sorunun **hatasını ayıklıyor** olursunuz.
+
+          ### Tüm hataları bulmak ve düzeltmek için, **ısrar** pratiği yapmalısınız, başka bir deyişle vazgeçmemelisiniz.
+
+          ---
+
+          ## **Bilinmesi Gereken Kelimeler**
+
+          * ### **Hata** - Bir programın düzgün çalışmayan kısmı
+
+          * ### **Hata ayıklama** - Bir algoritmadaki veya programdaki sorunları bulma ve düzeltme
+
+          * ### **Israr** - Vazgeçmeme
+      courseF_markdown_debugging_intro:
+        content1: Test Etiketleme Ders Kitabı Sayfası
+        markdown: |-
+          # Bu derste...
+
+          ### Hatalar hakkında ne düşünüyorsunuz?
+
+          ###  Çoğu insan hatalar hakkında düşündüğünde, börtü böcekleri düşünür. Bilgisayar biliminde hatalar canlı değildir, ancak yine de hileli olabilir.
+
+          ### Bu dersteki bulmacalar zaten sizin için çözüldü! Ama o kadar da hızlı olmaz - yine de çalışıyor gibi görünmüyorlar. Tüm bunların arkasında hatalar mı var?
+
+          ---
+
+          ## Bilinmesi Gereken Bloklar
+
+          ![](https://images.code.org/b2376dc67948e29247931dec5e9fef8f-image-1524678585868.png)
+
+          ![](https://images.code.org/bd2de01f2c3b86109329b10eb544a6e6-image-1524678600994.png)
+
+          ![](https://images.code.org/db76d28bb3dbabdb78edb2cf54c6cb11-image-1524678618646.png)
+      courseF_markdown_forloops_end:
+        content1: Test Etiketleme Ders Kitabı Sayfası
+        markdown: "# **Az önce \"için döngülerini\" kullandınız!**\n\n### **İçin döngüleri,
+          başlangıç, durma ve döngü değerlerini ayarladığınız döngülerdir.**\n\n###
+          Bu yeni türde 'tekrarla' döngüsü, döngünüzün ne zaman başladığı, ne zaman
+          bittiği ve her çalıştığında döngünüzün ne zaman artması gerektiği konusunda
+          daha fazla kontrol verir.\n\n### Daha fazla kontrol, bulmacaları çok daha
+          hızlı çözebileceğiniz anlamına gelir! \n\n---\n\n## **Bilinmesi Gereken
+          Kelimeler**\n\n### **İçin döngüsü** - İçin döngüleri, önceden belirlenmiş
+          bir başlangıç, bitiş ve artışa (adım aralığı) sahip olan döngülerdir.\n"
+      courseF_markdown_forloops_end_2019:
+        content1: Test Etiketleme Ders Kitabı Sayfası
+        markdown: "# **Az önce \"için döngülerini\" kullandınız!**\n\n### **İçin döngüleri,
+          başlangıç, durma ve döngü değerlerini ayarladığınız döngülerdir.**\n\n###
+          Bu yeni türde 'tekrarla' döngüsü, döngünüzün ne zaman başladığı, ne zaman
+          bittiği ve her çalıştığında döngünüzün ne zaman artması gerektiği konusunda
+          daha fazla kontrol verir.\n\n### Daha fazla kontrol, bulmacaları çok daha
+          hızlı çözebileceğiniz anlamına gelir! \n\n---\n\n## **Bilinmesi Gereken
+          Kelimeler**\n\n### **İçin döngüsü** - İçin döngüleri, önceden belirlenmiş
+          bir başlangıç, bitiş ve artışa (adım aralığı) sahip olan döngülerdir.\n"
+      courseF_markdown_forloops_end_2019_2020:
+        content1: Test Etiketleme Ders Kitabı Sayfası
+        markdown: "# **Az önce \"için döngülerini\" kullandınız!**\n\n### **İçin döngüleri,
+          başlangıç, durma ve döngü değerlerini ayarladığınız döngülerdir.**\n\n###
+          Bu yeni türde 'tekrarla' döngüsü, döngünüzün ne zaman başladığı, ne zaman
+          bittiği ve her çalıştığında döngünüzün ne zaman artması gerektiği konusunda
+          daha fazla kontrol verir.\n\n### Daha fazla kontrol, bulmacaları çok daha
+          hızlı çözebileceğiniz anlamına gelir! \n\n---\n\n## **Bilinmesi Gereken
+          Kelimeler**\n\n### **İçin döngüsü** - İçin döngüleri, önceden belirlenmiş
+          bir başlangıç, bitiş ve artışa (adım aralığı) sahip olan döngülerdir.\n"
+      courseF_markdown_forloops_intro:
+        content1: Test Etiketleme Ders Kitabı Sayfası
+        markdown: |
+          # **Bu derste...**
+
+          ### Bugün, yeni türde bir 'tekrarla' döngüsünü öğreneceksiniz. İşte size kullanacağınız bloğun bir ön izlemesi:
+
+          ![](https://images.code.org/d9cb4b829fe4e688b10c19e879cf4a4b-image-1531938148965.png)
+
+          ### *Neyse ki*, bu yeni döngü, bunun gibi bulmacaları çözmeyi gerçekten de kolaylaştırır!
+
+          ![](https://images.code.org/072230b389feb9c6c6998619a245b8af-image-1524773190948.png)
+      courseF_markdown_forloops_intro_2019:
+        content1: Test Etiketleme Ders Kitabı Sayfası
+        markdown: |
+          # **Bu derste...**
+
+          ### Bugün, yeni türde bir 'tekrarla' döngüsünü öğreneceksiniz. İşte size kullanacağınız bloğun bir ön izlemesi:
+
+          ![](https://images.code.org/d9cb4b829fe4e688b10c19e879cf4a4b-image-1531938148965.png)
+
+          ### *Neyse ki*, bu yeni döngü, bunun gibi bulmacaları çözmeyi gerçekten de kolaylaştırır!
+
+          ![](https://images.code.org/072230b389feb9c6c6998619a245b8af-image-1524773190948.png)
+      courseF_markdown_forloops_intro_2019_2020:
+        content1: Test Etiketleme Ders Kitabı Sayfası
+        markdown: |
+          # **Bu derste...**
+
+          ### Bugün, yeni türde bir 'tekrarla' döngüsünü öğreneceksiniz. İşte size kullanacağınız bloğun bir ön izlemesi:
+
+          ![](https://images.code.org/d9cb4b829fe4e688b10c19e879cf4a4b-image-1531938148965.png)
+
+          ### *Neyse ki*, bu yeni döngü, bunun gibi bulmacaları çözmeyi gerçekten de kolaylaştırır!
+
+          ![](https://images.code.org/072230b389feb9c6c6998619a245b8af-image-1524773190948.png)
+      courseF_markdown_loops_end:
+        content1: Test Etiketleme Ders Kitabı Sayfası
+        markdown: "# **Az önce \"döngüleri\" öğrendiniz!**  \n\n### **Bir döngü, bir
+          şeyi tekrar tekrar yapma hareketidir.** Tekrar bir şeyi \n###  Döngüler,
+          gerçekten de desenleri tekrarlamak için faydalıdır. İlk başta herhangi bir
+          döngü olmadan programınızı yazmak, daha sonra bir desen bulmaya çalışmak
+          faydalı olabilir.\n\n### Bir desen gördüğünüzde, bu deseni bir 'tekrarla'
+          bloğuna yerleştirin!\n\n---\n\n## **Bilinmesi Gereken Kelimeler**\n\n* ###
+          **Döngü** - Bir şeyi tekrar tekrar yapma hareketi\n* ### **Tekrarla** -
+          Tekrar bir şeyi yap\n"
+      courseF_markdown_loops_intro:
+        content1: Test Etiketleme Ders Kitabı Sayfası
+        markdown: "# Bu derste...\n\n### Karakterinizin **5** kere ileri gitmesini
+          istediğinizi düşünün. Bu çok kolay olurdur- sadece **5** ileri git bloğunu
+          sürükleyin. Şimdi, karakterinizin **5.000** kere ileri gitmesini istediğinizi
+          düşünün!\n\n### **5.000** bloğu sürüklemek ne kadar zaman alır? \n\n###
+          Keşke bunu yapmanın kolay bir yolu olsa? İşte bu!\n\n---\n\n## Bilinmesi
+          Gereken Bloklar\n\n![](https://images.code.org/2d949be303e653f4ea203cc00f0b06c3-image-1524697677509.png)#
+          In this lesson...\n\n### Karakterinizin **5** kere ileri gitmesini istediğinizi
+          düşünün. Bu çok kolay olurdur- sadece **5** ileri git bloğunu sürükleyin.
+          Şimdi, karakterinizin **5.000** kere ileri gitmesini istediğinizi düşünün!
+          \n\n### **5.000** bloğu sürüklemek ne kadar zaman alır? \n\n### Keşke bunu
+          yapmanın kolay bir yolu olsa? İşte bu!\n\n---\n\n## Bilinmesi Gereken Bloklar\n\n![](https://images.code.org/2d949be303e653f4ea203cc00f0b06c3-image-1524697677509.png)"
+      courseF_markdown_nestedloops_end:
+        content1: Test Etiketleme Ders Kitabı Sayfası
+        markdown: |-
+          # **Az önce "içiçe döngüleri" öğrendiniz!**
+
+          ### **Bir içiçe döngü, bir döngü içindeki döngüdür.** Hepsi konforlu ve rahat olan ve dış döngünün içinde içe içe geçmiş başka bir döngüye sahip bir dış döngü gibi düşünün.
+
+          ### İçiçe döngüler, desenlerin tekrarlama desenleri için mükemmeldir. Doğru bir şekilde kullanılırlarsa çok güçlü olabilirler!
+
+          ---
+
+          ## **Bilinmesi Gereken Kelimeler**
+
+          ### __İçiçe döngüler__ - Bir döngü içindeki bir döngü
+      courseF_markdown_nestedloops_intro:
+        content1: Test Etiketleme Ders Kitabı Sayfası
+        markdown: |-
+          # **Bu derste...**
+
+          ### Bir döngüyü *başka bir döngünün içerisine* koysanız ne olacağını hiç merak ettiniz mi?
+
+          ### Bu sadece sizi çılgına çevirir!
+
+          ### Normal bir döngü, desenleri tekrarlamada iyiyse, başka bir döngü içindeki bir döngü neyde iyi olur? Hadi bulalım!
+
+          ---
+
+          ## **Bilinmesi Gereken Bloklar**
+
+          ![](https://images.code.org/cecea12a6973648b56512ff0990da6fb-image-1524759116715.gif)
+      courseF_markdown_variables_end:
+        content1: Test Etiketleme Ders Kitabı Sayfası
+        markdown: |-
+          # **Az önce "değişkenleri" öğrendiniz!**
+
+          ### Bir değişkeni kullanmak için, bu değişkenin bir ismi ve bir değeri olması gerekir. İsim değişmez ancak değer değişebilir. Bu şekilde, programınızda istediğiniz her yerde değişkenin ismini ayrılmış bir bilgi alanı olarak kullanabilirsiniz!
+
+          ---
+
+          ## **Bilinmesi Gereken Kelimeler**
+
+          ### **Değişken** - Değişebilen bir bilgi parçası için ayrılmış bir bilgi alanı
+      courseF_markdown_variables_end_2019:
+        content1: Test Etiketleme Ders Kitabı Sayfası
+        markdown: |-
+          # **Az önce "değişkenleri" öğrendiniz!**
+
+          ### Bir değişkeni kullanmak için, bu değişkenin bir ismi ve bir değeri olması gerekir. İsim değişmez ancak değer değişebilir. Bu şekilde, programınızda istediğiniz her yerde değişkenin ismini ayrılmış bir bilgi alanı olarak kullanabilirsiniz!
+
+          ---
+
+          ## **Bilinmesi Gereken Kelimeler**
+
+          ### **Değişken** - Değişebilen bir bilgi parçası için ayrılmış bir bilgi alanı
+      courseF_markdown_variables_end_2019_2020:
+        content1: Test Etiketleme Ders Kitabı Sayfası
+        markdown: |-
+          # **Az önce "değişkenleri" öğrendiniz!**
+
+          ### Bir değişkeni kullanmak için, bu değişkenin bir ismi ve bir değeri olması gerekir. İsim değişmez ancak değer değişebilir. Bu şekilde, programınızda istediğiniz her yerde değişkenin ismini ayrılmış bir bilgi alanı olarak kullanabilirsiniz!
+
+          ---
+
+          ## **Bilinmesi Gereken Kelimeler**
+
+          ### **Değişken** - Değişebilen bir bilgi parçası için ayrılmış bir bilgi alanı
+      courseF_markdown_variables_intro:
+        content1: Test Etiketleme Ders Kitabı Sayfası
+        markdown: |
+          # **Bu derste...**
+
+          ### *Değişkenler*, değişebilen bilgiler için ayrılmış bilgi alanlarıdır.  Ayrılmış bir bilgi alanının olması, tüm değerlerinizi daha sonraya kadar bilmeseniz bile, bir program yazmayı mümkün kılar!
+
+
+          ---
+
+          ## **Bilinmesi Gereken Bloklar**
+
+          ![](https://images.code.org/2e5804ee6783390a6b86b7b2d7153594-image-1524772405748.png)
+      courseF_markdown_variables_intro_2019:
+        content1: Test Etiketleme Ders Kitabı Sayfası
+        markdown: |
+          # **Bu derste...**
+
+          ### *Değişkenler*, değişebilen bilgiler için ayrılmış bilgi alanlarıdır.  Ayrılmış bir bilgi alanının olması, tüm değerlerinizi daha sonraya kadar bilmeseniz bile, bir program yazmayı mümkün kılar!
+
+
+          ---
+
+          ## **Bilinmesi Gereken Bloklar**
+
+          ![](https://images.code.org/2e5804ee6783390a6b86b7b2d7153594-image-1524772405748.png)
+      courseF_markdown_variables_intro_2019_2020:
+        content1: Test Etiketleme Ders Kitabı Sayfası
+        markdown: |
+          # **Bu derste...**
+
+          ### *Değişkenler*, değişebilen bilgiler için ayrılmış bilgi alanlarıdır.  Ayrılmış bir bilgi alanının olması, tüm değerlerinizi daha sonraya kadar bilmeseniz bile, bir program yazmayı mümkün kılar!
+
+
+          ---
+
+          ## **Bilinmesi Gereken Bloklar**
+
+          ![](https://images.code.org/2e5804ee6783390a6b86b7b2d7153594-image-1524772405748.png)
+      courseF_project_exemplars_2019:
+        content1: Test Etiketleme Ders Kitabı Sayfası
+        markdown: |-
+          # Proje Örnekleri
+
+          Son projenize başlamak üzeresiniz. Başlamadan önce, örnek projelere bakara biraz zaman geçirin.
+
+          ## Hareketli Nesne Laboratuvarı
+
+          | Kek Oyunu (Hareketli Nesne Laboratuvarı) | Helikopter Oyunu (Hareketli Nesne Laboratuvarı) |
+          |---|---|
+          | [![#Kek Oyunu(Hareketli Nesne Laboratuvarı)](https://images.code.org/c90080aaf05349fb6e1fbb6861e815df-image-1556809855136.png)](https://studio.code.org/projects/spritelab/YMEHR4ps9cDJ0sb4Ks0YrZcpcjGmc4OEiUudZHm-l6g/view) | [![#Helikopter Oyunu (Hareketli Nesne Laboratuvarı)](https://images.code.org/1a273fd447b952367792423a70c5087a-image-1556812149075.png)](https://studio.code.org/projects/spritelab/STSNFsfSpabSzZcZYC7o2HLgTz-vKlZm-vqRyp94pk4/view) |
+          | Bu oyuna metin veya skor eklemeyi deneyin! | Bu oyuna metin veya skor eklemeyi deneyin! |
+
+          ## Oyuncu
+
+          | Çiçekler (Oyuncu) | Sarmal (Oyuncu) |
+          |---|---|
+          | [![Çiçekler (Oyuncu)](https://images.code.org/0f5adf63c318eab8c8acb397d9db7f2a-image-1556821537577.png)](https://studio.code.org/projects/artist/MIMh2pV2IiLm1ZzaiA6N7kKvg534lFck3abLXTsvZU8/view) | [![Sarmal (Oyuncu)](https://images.code.org/06514571a8cf2f8b0346006ac1adc219-image-1556819399386.png)](https://studio.code.org/projects/artist/66scPDPWa8RNNHkcXDaXdA/view) |
+          | Değişkenler ile yaratıcı olalım! | İçin Döngüleri ile yaratıcı olalım! |
+      courseF_project_exemplars_2019_2020:
+        content1: Test Etiketleme Ders Kitabı Sayfası
+      csd-pre-survey-2017-levelgroup_2018:
+        title: CS Keşifleri Öğrenci Ön Ders Değerlendirmesi
+      csd-pre-survey-levelgroup_2019:
+        title: CS Keşifleri Öğrenci Ön Ders Değerlendirmesi
+      Prepare for your presentation_2018:
+        markdown: |-
+          # Proje Sunumları
+
+          Projelerinizi sunma zamanı! Öğretmeniniz, çalışmanızı sınıf arkadaşlarınıza nasıl sunacağınız hakkında daha fazla ayrıntı verecektir.
+      courseF_external_variableConstant_2018:
+        markdown: "<h2>Değişkenler hakkında daha fazla bilgi</h2>\n\n<img src=\"https://images.code.org/082c757f5c939bd353eacda9589ca54f-image-1477349401281.35.08.png\"
+          style=\"padding-left: 30px; width:300px; float:right;\"/><h3> Az önce bir
+          değişkeni kullanmanın mükemmel bir yolunu öğrendiniz... bir sabit olarak!
+          \ \nBir değişkeni bir sabit olarak kullandığınızda, bir değeri bir kere
+          ayarlarsınız, daha sonra \"Çalıştır\"a tıkladıktan sonra bu *aynı* değeri
+          programınızda değiştirmeden birçok kere kullanırsınız.</h3>\n<br/><hr/>\n<h3>Sonraki
+          seri kısmında, program içinde *değişen* değişkenler ile kod yazacaksınız.</h3>"
+      courseF_external_variableConstant_2018_2019:
+        markdown: "<h2>Değişkenler hakkında daha fazla bilgi</h2>\n\n<img src=\"https://images.code.org/082c757f5c939bd353eacda9589ca54f-image-1477349401281.35.08.png\"
+          style=\"padding-left: 30px; width:300px; float:right;\"/><h3> Az önce bir
+          değişkeni kullanmanın mükemmel bir yolunu öğrendiniz... bir sabit olarak!
+          \ \nBir değişkeni bir sabit olarak kullandığınızda, bir değeri bir kere
+          ayarlarsınız, daha sonra \"Çalıştır\"a tıkladıktan sonra bu *aynı* değeri
+          programınızda değiştirmeden birçok kere kullanırsınız.</h3>\n<br/><hr/>\n<h3>Sonraki
+          seri kısmında, program içinde *değişen* değişkenler ile kod yazacaksınız.</h3>"
+      courseF_external_variableConstant_2018_2019_2020:
+        markdown: "<h2>Değişkenler hakkında daha fazla bilgi</h2>\n\n<img src=\"https://images.code.org/082c757f5c939bd353eacda9589ca54f-image-1477349401281.35.08.png\"
+          style=\"padding-left: 30px; width:300px; float:right;\"/><h3> Az önce bir
+          değişkeni kullanmanın mükemmel bir yolunu öğrendiniz... bir sabit olarak!
+          \ \nBir değişkeni bir sabit olarak kullandığınızda, bir değeri bir kere
+          ayarlarsınız, daha sonra \"Çalıştır\"a tıkladıktan sonra bu *aynı* değeri
+          programınızda değiştirmeden birçok kere kullanırsınız.</h3>\n<br/><hr/>\n<h3>Sonraki
+          seri kısmında, program içinde *değişen* değişkenler ile kod yazacaksınız.</h3>"
+      DesigningForAccessibilityMarkdownLevel_2019:
+        markdown: |-
+          # Erişilebilirlik için Tasarlama
+
+          * Bilgisayar bilimi dünyasında **erişilebilirlik**, engelli insanlar için teknoloji yaratma ile ilgilidir.
+          * Engellilik halleri fiziksel, işitsel, görsel ve başkalarını içerir.
+          * Engellilik halleri farklıdır ve **akıllı telefon uygulamaları** gibi teknolojiyi nasıl kullandıkları dahil olmak üzere farklı biçimlerde insaları etkiler.
+          * Engelli insanlar için erişilebilir olan uygulamaların tasarlanması, bu uygulamaların herkes için daha iyi olmasını sağlar!
+
+          ![](https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)
+      DesigningForAccessibilityMarkdownLevel_2019_2020:
+        markdown: |-
+          # Erişilebilirlik için Tasarlama
+
+          * Bilgisayar bilimi dünyasında **erişilebilirlik**, engelli insanlar için teknoloji yaratma ile ilgilidir.
+          * Engellilik halleri fiziksel, işitsel, görsel ve başkalarını içerir.
+          * Engellilik halleri farklıdır ve **akıllı telefon uygulamaları** gibi teknolojiyi nasıl kullandıkları dahil olmak üzere farklı biçimlerde insaları etkiler.
+          * Engelli insanlar için erişilebilir olan uygulamaların tasarlanması, bu uygulamaların herkes için daha iyi olmasını sağlar!
+
+          ![](https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)
+      PrivatePersonalInformation-Unplugged:
+        markdown: |-
+          # Özel ve Kişisel Bilgiler
+
+          Ortak Düşünce Eğitimi tarafından geliştirilen bu ders, çevrimiçi ortamda paylaşmak için güvenli olan bilgi ve güvenli olmayan bilgi arasındaki fark hakkındadır.
+
+          ![](https://images.code.org/872576b170b9d8aec9b29f684a1ad94e-image-1557878406833.png)
+      Songwriting-Unplugged:
+        markdown: |-
+          # Şarkı yazma
+
+          Fonksiyonları tanımlamayı ve çağırmayı öğrenmek için bir şarkıdaki koro kavramını kullanın.
+      Songwriting-Unplugged_2020:
+        markdown: |-
+          # Şarkı yazma
+
+          Fonksiyonları tanımlamayı ve çağırmayı öğrenmek için bir şarkıdaki koro kavramını kullanın.
+      EnvelopeVariables-Unplugged:
+        markdown: "# Zarf Değişkenleri \n\nDeğişkenler, bilgisayar biliminde bir sürü
+          serbestlik sağlar. Bu ders, değişkenlerin ne olduğunu ve bunları birçok
+          farklı biçimde nasıl kullanabileceğimizi açıklamaya yardımcı olur."
+      EnvelopeVariables-Unplugged_2020:
+        markdown: "# Zarf Değişkenleri \n\nDeğişkenler, bilgisayar biliminde bir sürü
+          serbestlik sağlar. Bu ders, değişkenlerin ne olduğunu ve bunları birçok
+          farklı biçimde nasıl kullanabileceğimizi açıklamaya yardımcı olur."
+      ForLoopFun-Unplugged:
+        markdown: |-
+          # İçin Döngüsü Eğlencesi
+
+          Döngülerin, bir şeyleri tekrar tekrar yapmamızı sağladığını biliyoruz, fakat şimdi döngülerin içinde inşa edilmiş ekstra yapıya sahip olan döngülerin nasıl kullanılacağını öğreneceğiz.
+      ForLoopFun-Unplugged_2020:
+        markdown: |-
+          # İçin Döngüsü Eğlencesi
+
+          Döngülerin, bir şeyleri tekrar tekrar yapmamızı sağladığını biliyoruz, fakat şimdi döngülerin içinde inşa edilmiş ekstra yapıya sahip olan döngülerin nasıl kullanılacağını öğreneceğiz.
+      Internet-Unplugged:
+        markdown: |-
+          # İnternet
+
+          Yalnızca kağıt parçalarını kullanarak sınıfa kendi İnternetinizi kurun.
+      Internet-Unplugged_2020:
+        markdown: |-
+          # İnternet
+
+          Yalnızca kağıt parçalarını kullanarak sınıfa kendi İnternetinizi kurun.
+      Crowdsourcing-Unplugged:
+        markdown: |-
+          # Kitle kaynak kullanımı
+
+          Bilgisayar biliminde genel bir problem çözme tekniği olan kitle kaynağının, tek başına yaptığınız duruma kıyasla bir sınıf olarak bir görevi daha verimli bir şekilde tamamlamanıza yardım edebilir.
+      DigitalSharing-Unplugged:
+        markdown: |-
+          # Dijital Paylaşım
+
+          Bu derste, özellikle dijital ortamlarda mülkiyet ve telif hakkına uymanın zorluklarını ve faydalarını göz önünde bulunduracaksınız.
+      DigitalSharing-Unplugged_2020:
+        markdown: |-
+          # Dijital Paylaşım
+
+          Bu derste, özellikle dijital ortamlarda mülkiyet ve telif hakkına uymanın zorluklarını ve faydalarını göz önünde bulunduracaksınız.
+      PowerOfWords-Unplugged:
+        markdown: |-
+          # Kelimelerin Gücü
+
+          Bugün birisi çevirimiçi size kötü söz söylerse ne yapmanız gerektiğini öğreneceksiniz.

@@ -48,7 +48,7 @@ module.exports = {
     "react/jsx-first-prop-new-line": ["error", "multiline"],
     "react/jsx-indent-props": ["error", 2], // autofixable
     "react/jsx-key": "off",
-    "react/jsx-no-target-blank": "off",
+    "react/jsx-no-target-blank": "error",
     "react/jsx-wrap-multilines": "error", // autofixable
     "react/no-find-dom-node": "off",
     "react/no-render-return-value": "off",

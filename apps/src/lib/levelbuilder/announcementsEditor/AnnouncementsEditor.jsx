@@ -17,49 +17,37 @@ const styles = {
 
 export default class AnnouncementsEditor extends Component {
   static propTypes = {
-    defaultAnnouncements: PropTypes.arrayOf(announcementShape),
-    inputStyle: PropTypes.object.isRequired
+    announcements: PropTypes.arrayOf(announcementShape),
+    inputStyle: PropTypes.object.isRequired,
+    updateAnnouncements: PropTypes.func.isRequired
   };
 
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      announcements: props.defaultAnnouncements
-    };
-  }
-
   add = () => {
-    this.setState({
-      announcements: this.state.announcements.concat({
+    this.props.updateAnnouncements(
+      this.props.announcements.concat({
         notice: '',
         details: '',
         link: '',
         type: NotificationType.information,
         visibility: VisibilityType.teacher
       })
-    });
+    );
   };
 
   remove = index => {
-    const newAnnouncements = [...this.state.announcements];
+    const newAnnouncements = [...this.props.announcements];
     newAnnouncements.splice(index, 1);
-    this.setState({
-      announcements: newAnnouncements
-    });
+    this.props.updateAnnouncements(newAnnouncements);
   };
 
   change = (index, field, newValue) => {
-    const newAnnouncements = [...this.state.announcements];
+    const newAnnouncements = [...this.props.announcements];
     newAnnouncements[index][field] = newValue;
-    this.setState({
-      announcements: newAnnouncements
-    });
+    this.props.updateAnnouncements(newAnnouncements);
   };
 
   render() {
-    const {inputStyle} = this.props;
-    const {announcements} = this.state;
+    const {inputStyle, announcements} = this.props;
     return (
       <div>
         <input
