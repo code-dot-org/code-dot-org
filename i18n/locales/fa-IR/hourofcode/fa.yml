@@ -232,14 +232,6 @@ fa:
   front_watch_regular_video: ویدیو را مشاهده کنید
   front_volunteers: نیازمندی به داوطلبان فنی
   front_start_learning: شروع یادگیری
-  gdpr_dialog_heading: با استفاده از سایتی که در ایالات متحده‌ی آمریکا ثبت شده است
-    موافق هستید؟
-  gdpr_dialog_message: داده‌های استفاده شده توسط شما در این سایت ممکن است به ایالات
-    متحده‌ی آمریکا ارسال و در آنجا پردازش و ذخیره شوند.
-  gdpr_dialog_link_intro: For details see our
-  gdpr_dialog_privacy_policy: سیاست حریم خصوصی
-  gdpr_dialog_logout: خروج
-  gdpr_dialog_yes: بله
   header_menu_resources: منابع
   header_menu_faq: پرسش و پاسخ
   header_menu_how_to: چگونه
@@ -6151,7 +6143,7 @@ fa:
   tutorial_grokem_string_detail_grades: Grades 6+
   tutorial_kodmaze_string_detail_grades: Pre-reader - Grade 5
   tutorial_codestersa_string_detail_grades: Grades 2-8
-  tutorial_cmdodo_string_detail_grades: Grades 2-5
+  tutorial_cmdodo_string_detail_grades: Grades 3-5
   tutorial_tynkerspace_string_detail_grades: Grades 2-5
   tutorial_gfbloons_string_detail_grades: Grades 9+
   tutorial_raspipong_string_detail_grades: Grades 9+

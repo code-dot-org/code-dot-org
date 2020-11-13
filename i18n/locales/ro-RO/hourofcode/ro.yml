@@ -234,14 +234,6 @@ ro:
   front_watch_regular_video: Urmăriţi clipul video
   front_volunteers: Cautam voluntari tehnici
   front_start_learning: Începe sa înveti
-  gdpr_dialog_heading: Sunteţi de acord să folosiți un site web localizat în Statele
-    Unite?
-  gdpr_dialog_message: Datele obținute prin utilizarea dvs. a acestui site pot fi
-    trimise și stocate sau prelucrate în Statele Unite.
-  gdpr_dialog_link_intro: Pentru detalii vedeți a noastră
-  gdpr_dialog_privacy_policy: politică de confidențialitate
-  gdpr_dialog_logout: Deconectare
-  gdpr_dialog_yes: Da
   header_menu_resources: Resurse
   header_menu_faq: Întrebări frecvente
   header_menu_how_to: Tutoriale informative
@@ -6289,7 +6281,7 @@ ro:
   tutorial_grokem_string_detail_grades: Grades 6+
   tutorial_kodmaze_string_detail_grades: Pre-reader - Grade 5
   tutorial_codestersa_string_detail_grades: Grades 2-8
-  tutorial_cmdodo_string_detail_grades: Grades 2-5
+  tutorial_cmdodo_string_detail_grades: Grades 3-5
   tutorial_tynkerspace_string_detail_grades: Grades 2-5
   tutorial_gfbloons_string_detail_grades: Clasele IX+
   tutorial_raspipong_string_detail_grades: Clasele IX+

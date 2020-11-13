@@ -935,11 +935,4 @@ he:
   cookie_banner:
     more_information: "הצג את מדיניות הפרטיות של Code.org."
     accept: 'מסכים'
-  gdpr_dialog:
-    heading: 'האם אתה מאשר להשתמש באתר המבוסס בשטח ארצות הברית?'
-    message: 'יתכן ונתוני השימוש שלך באתר ישלחו, ישמרו או יעובדו בארצות הברית.'
-    link_intro: 'לפרטים נוספים ראה את'
-    privacy_policy: 'מדיניות פרטיות'
-    logout: 'התנתק'
-    yes: 'כן'
   copy: 'העתק'

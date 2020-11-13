@@ -29,11 +29,11 @@ az:
   africa_campaign_date_full: October 1-31
   africa_campaign_date_year: '2017'
   africa_campaign_date_full_year: October 1-31, 2020
-  hoc2020_header: Learn today, build a brighter tomorrow.
+  hoc2020_header: Bu gün öyrənin, sabah daha parlaq gələcək qurun.
   hoc2020_header_with_line_break_markdown: |-
-    Learn today,
+    Bu gün öyrənin,
 
-    build a brighter tomorrow.
+    sabah daha parlaq gələcək qurun.
   social_hoc2020_cs_important: 'CS is more important than ever. Let''s build the future
     we want. #CSforGood'
   social_hoc2020_hoc_is_about_csforgood: 'The #HourOfCode is about #CSforGood. Learn
@@ -77,7 +77,7 @@ az:
   oceans_landing_teacher_resources_desc: Lesson plans and activities to help you teach
     AI, machine learning, training data, and bias, while exploring ethical issues.
   oceans_landing_resource_button: Materiallara baxın
-  oceans_landing_cs_for_good: CS for Good
+  oceans_landing_cs_for_good: Xeyirxah informatika
   oceans_landing_cs_for_good_desc: Resources to help students understand the role
     computer science could play in creating a more equitable world.
   oceans_landing_videos: Videos about AI and Machine Learning
@@ -234,13 +234,6 @@ az:
   front_watch_regular_video: Videoya baxın
   front_volunteers: Texniki biliyi olan könüllülər axtarılır
   front_start_learning: Öyrənməyə başlayın
-  gdpr_dialog_heading: ABŞ-da yerləşən bir veb-saytı istifadə etməyə razısınız?
-  gdpr_dialog_message: Bu saytı istifadə edərkən toplanan verilənlər ABŞ-da saxlanmaq
-    və ya emal olunmaq üçün göndərilə bilər.
-  gdpr_dialog_link_intro: For details see our
-  gdpr_dialog_privacy_policy: məxfilik siyasəti
-  gdpr_dialog_logout: Çıxış
-  gdpr_dialog_yes: Bəli
   header_menu_resources: Resurslar
   header_menu_faq: Tez-tez verilən suallar
   header_menu_how_to: Təlimatlar
@@ -554,7 +547,7 @@ az:
     all ages.
   map_title: Kod Saatı xəritəsi
   map_header: 'Bütün dünyada # Kod Saatı tədbiri'
-  map_header_count_year: "%{event_count} events registered in %{year}"
+  map_header_count_year: "%{year} üçün %{event_count} tədbir qeydiyyata salınıb"
   see_all_events: Bütün tədbirləri nəzərdən keçirin
   map_header_company: "# şirkətlər tərəfindən"
   map_header_country: 'ölkənizdə (%{country}) # tədbir'
@@ -6170,7 +6163,7 @@ az:
   tutorial_grokem_string_detail_grades: Grades 6+
   tutorial_kodmaze_string_detail_grades: Pre-reader - Grade 5
   tutorial_codestersa_string_detail_grades: Grades 2-8
-  tutorial_cmdodo_string_detail_grades: Grades 2-5
+  tutorial_cmdodo_string_detail_grades: Grades 3-5
   tutorial_tynkerspace_string_detail_grades: Grades 2-5
   tutorial_gfbloons_string_detail_grades: Grades 9+
   tutorial_raspipong_string_detail_grades: Grades 9+

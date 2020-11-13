@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 import _ from 'lodash';
 import queryString from 'query-string';
+import experiments from '@cdo/apps/util/experiments';
 import clientState from './clientState';
 import {convertAssignmentVersionShapeFromServer} from '@cdo/apps/templates/teacherDashboard/shapes';
 import ScriptOverview from './components/progress/ScriptOverview.jsx';
@@ -149,6 +150,15 @@ progress.renderCourseProgress = function(scriptData) {
   const store = getStore();
   initializeStoreWithProgress(store, scriptData, null, true);
   initializeStoreWithSections(store, scriptData);
+
+  // Initialize google platform api for teachers if we're using the new send
+  // lesson dialog.  (Otherwise, it's intialized in initializeStoreWithSections.)
+  if (
+    experiments.isEnabled(experiments.SEND_LESSON_DIALOG) &&
+    scriptData.user_type === 'teacher'
+  ) {
+    initializeGooglePlatformApi(store);
+  }
 
   if (scriptData.student_detail_progress_view) {
     store.dispatch(setStudentDefaultsSummaryView(false));
@@ -359,6 +369,7 @@ function initializeStoreWithSections(store, scriptData) {
   // If our current section is a google classroom and teacher is conntected
   // to google, load the google classroom share button api.
   if (
+    !experiments.isEnabled(experiments.SEND_LESSON_DIALOG) &&
     currentSection.login_type === OAuthSectionTypes.google_classroom &&
     scriptData.user_providers &&
     scriptData.user_providers.includes(OAuthProviders.google)
@@ -366,4 +377,9 @@ function initializeStoreWithSections(store, scriptData) {
     registerReducers({googlePlatformApi});
     store.dispatch(loadGooglePlatformApi()).catch(e => console.warn(e));
   }
+}
+
+function initializeGooglePlatformApi(store) {
+  registerReducers({googlePlatformApi});
+  store.dispatch(loadGooglePlatformApi()).catch(e => console.warn(e));
 }

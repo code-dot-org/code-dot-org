@@ -288,6 +288,8 @@ ky:
         text: кокус түс
       gamelab_randomColor:
         text: кокус түс
+      gamelab_repeatForever:
+        text: дайым кайтала
       gamelab_setBackgroundImage:
         options:
           IMG:

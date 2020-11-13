@@ -889,10 +889,6 @@ vi:
         opt_in_no: 'Không'
   cookie_banner:
     accept: 'Tôi đồng ý'
-  gdpr_dialog:
-    heading: 'Bạn có đồng ý với việc sử dụng trang web đặt tại Hoa Kỳ không?'
-    message: 'Dữ liệu từ việc bạn sử dụng trang web này có thể được gửi đến và lưu trữ hoặc xử lý tại Hoa Kỳ.'
-    yes: 'Đồng ý'
   copy: 'Sao chép'
   parent_email_banner:
     text: "**Bạn có phải là phụ huynh hay người giám hộ không?** Hãy liên kết thư điện tử của bạn với tài khoản này để cập nhật thông tin về tiến triển và các bài tập của trẻ!"

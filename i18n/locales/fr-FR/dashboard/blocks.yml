@@ -1158,6 +1158,8 @@ fr:
         text: le lutin {SPRITE} arrête de {BEHAVIOR}
       gamelab_removeTint:
         text: supprimer la couleur de {THIS}
+      gamelab_repeatForever:
+        text: répéter à l'infini
       gamelab_setAnimation:
         text: Changer le costume de {THIS} en {ANIMATION}
       gamelab_setBackground:

@@ -285,6 +285,7 @@ class Lesson < ActiveRecord::Base
   # the client.
   def summarize_for_lesson_edit
     {
+      id: id,
       name: name,
       overview: overview,
       studentOverview: student_overview,
@@ -299,6 +300,34 @@ class Lesson < ActiveRecord::Base
       resources: resources,
       objectives: objectives.map(&:summarize_for_edit),
       course_version_id: lesson_group.script.course_version&.id
+    }
+  end
+
+  def summarize_for_lesson_show(user)
+    {
+      unit: script.summarize_for_lesson_show,
+      position: relative_position,
+      lockable: lockable,
+      key: key,
+      displayName: localized_title,
+      overview: overview || '',
+      announcements: announcements,
+      purpose: purpose || '',
+      preparation: preparation || '',
+      activities: lesson_activities.map(&:summarize_for_lesson_show),
+      resources: resources_for_lesson_plan(user&.authorized_teacher?),
+      objectives: objectives.map(&:summarize_for_lesson_show),
+      is_teacher: user&.teacher?
+    }
+  end
+
+  def summarize_for_lesson_dropdown
+    {
+      key: key,
+      displayName: localized_name,
+      link: lesson_path(id: id),
+      position: relative_position,
+      lockable: lockable
     }
   end
 
@@ -431,6 +460,31 @@ class Lesson < ActiveRecord::Base
       persisted_objective.save!
       persisted_objective
     end
+  end
+
+  # This method takes lesson and activity data exported from curriculum builder
+  # and updates corresponding fields of this lesson to match it. The expected
+  # input format is as follows:
+  # {
+  #   "title": "Lesson Title",
+  #   "number": 1,
+  #   "student_desc": "Student-facing description",
+  #   "teacher_desc": "Teacher-facing description",
+  #   "activities": [
+  #     {
+  #       "name": "Activity name",
+  #       "duration": "5-10 minutes",
+  #       "content": "Activity markdown"
+  #     },
+  #     ...
+  #   ]
+  # }
+  # @param [Hash] cb_lesson_data - Lesson and activity data to import.
+  def update_from_curriculum_builder(_cb_lesson_data)
+    # In the future, only levelbuilder should be added to this list.
+    raise unless [:development, :adhoc].include? rack_env
+
+    # puts "TODO: update lesson #{id} with cb lesson data: #{cb_lesson_data.to_json[0, 50]}..."
   end
 
   # Used for seeding from JSON. Returns the full set of information needed to uniquely identify this object.

@@ -4773,12 +4773,12 @@ de-DE:
         - text: Der Zombie wird auf dem ersten Weg nach rechts abbiegen und endlos
             im Kreis herumlaufen.
           correct: true
-          feedback: Falsch. Der Zombie sucht nur nach einer Drehung nach rechts oder
-            nach einem geraden Weg. Er will niemals nach links abbiegen, also bleibt
-            er fast sofort stecken.
+          feedback: Falsch. Der Zombie sucht nur nach einer Rechtsabbiegung oder nach
+            einem geraden Weg. Er will niemals nach links abbiegen, also bleibt er
+            fast sofort stecken.
         - text: Ich weiß es nicht.
           correct: true
-          feedback: In diesem Code sucht er nach einer Drehung nach rechts *bevor*
+          feedback: In diesem Code sucht er nach einer Abbiegung nach rechts *bevor*
             er Ausschau hält, ob er geradeaus gehen kann. Daran scheitert die Aufgabe.
         questions:
         - text: Schau dir den nachfolgenden Code genau an. Was passiert, wenn du auf
@@ -6433,3 +6433,17 @@ de-DE:
           class=\"btn btn-large btn-primary next-stage submitButton\">Weiter</a>"
       csd-post-survey-intro-2019:
         markdown: "# Diese Umfrage befindet sich noch in der Entwicklung\n"
+      CSD U1 Test:
+        title: Projektbezogener Test zum Thema Computer und Problemlösung
+      CSD U5 test:
+        title: Daten und Gesellschaft Test nach Ende des Projekts
+      Unit 1 Lesson 1 Overview:
+        markdown: |
+          # Übersicht
+
+          Die Klasse arbeitet in Gruppen, um Aluminiumfolienboote zu entwerfen, die so viele Cent-Stücke wie möglich tragen.  Am Ende des Unterrichts reflektieren die Gruppen ihre Erfahrungen mit der Aktivität und stellen Verbindungen zu den Arten der Problemlösung her, die sie für den Rest des Kurses durchführen werden.
+
+
+          ## Ressourcen
+
+          * [Aluminiumfolienboote](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf) - Activity Guide (kopiere als [MS Word](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc), [Google Doc](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))

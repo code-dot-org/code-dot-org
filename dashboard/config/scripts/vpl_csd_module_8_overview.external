@@ -8,18 +8,22 @@ markdown <<MARKDOWN
 
 ## Module 8 Overview
 
-Welcome to the asynchronous work for Module 8 for CS Discoveries!  
+Welcome to the asynchronous work for Module 8 for CS Discoveries!
 
-Module 8 is a continuation of Unit 6 - The Design Process and continues with the theme of "Learning in Context". The asynchronous work here will feed into the upcoming synchronous workshop of this module and help you understand the content and curriculum as you prepare to teach your own students. Combined, these asynchronous tasks should take about 90 minutes to complete, but you can start and stop at your own pace.
+Module 8 is a continuation of Unit 6: Chapter 1 - The Design Process and you will explore how information is gathered from the user and how computers can sense and respond to their environment. Unit 6: Chapter 2 will be discussed during the Module 8 synchronous workshop. 
 
-Module 8 focuses on investigating and reflecting on how to implement Unit 6 lessons with students. Although it does not cover all unit content, core concepts are highlighted. As you progress through this asynchronous work, consider how you will support students to play an active role in their learning.
+The suggested alternatives to teaching Unit 6 will also be discussed during the Module 8 synchronous workshop.  Add any questions you have about the suggested alternatives to the "Questions from Asynchronous Work" slide. 
+
+The asynchronous tasks during this module should take about 90 minutes to complete, but you can start and stop at your own pace
+
+
 
 **During this asynchronous work you will:**
 
-* Review key vocabulary 
-* Identify resources to reference throughout the lessons
-* Become familiar with the Design Mode features within App Lab
-* Reflect on the role of the student and active learning
+* Identify how the getProperty() block to gathers information from users
+* Become familiar with analog sensors as a new form of input using the Circuit Playground
+* Review the resources for the end of chapter project in Lesson 9 for Unit 6: Chapter 1
+* Reflect on where you are in building an equitable and inclusive classroom
 
 
 ### Let's get started!
