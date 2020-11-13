@@ -15,8 +15,7 @@ video_player: true
 
 ### Lesson Plans:
 
-- [Code with Anna and Elsa (English)](https://curriculum.code.org/hoc/plugged/2)
-- [Code with Anna and Elsa (Spanish - LATAM)](https://curriculum.code.org/es-mx/hoc/plugged/2)
+- [Code with Anna and Elsa]({{ hoc_frozen_cb_url }})
 - [Answer Sheet](https://docs.google.com/presentation/d/1McUzaAQyGLfgJKR2Mbre-L-bL9xNAW3KdPQmH4nGR78/edit?usp=sharing)
 - OPTIONAL: [The Drawing Machine](http://code.org/curriculum/misc/hocunplugged/Teacher)
 
@@ -27,7 +26,7 @@ video_player: true
 
 ### Other Teacher Resources:
 
-- [Hour of Code: How-To Guide for Educators](https://hourofcode.com/resources/how-to)
+- [Hour of Code: How-To Guide for Educators](https://hourofcode.com/how-to)
 - [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
 - Live Event: [An Educator's Guide to the Hour of Code](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
 
