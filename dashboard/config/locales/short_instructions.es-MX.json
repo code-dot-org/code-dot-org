@@ -3058,7 +3058,12 @@
         "courseD_video_nestedLoopsArtist": "Usa lo que has aprendido para dibujar este triángulo.",
         "courseE_bee_ramp14": "Muévete hacia adelante hasta que alcances la lechuga, y luego usa un bucle `mientras` para recogerla toda.",
         "courseE_farmer_predict1": "¡Cuando haya lechuga, recoge la lechuga!",
-        "courseE_farmer_predict2": "Muévete hacia adelante hasta que alcances la lechuga, y luego usa un bucle `mientras` para recogerla toda."
+        "courseE_farmer_predict2": "Muévete hacia adelante hasta que alcances la lechuga, y luego usa un bucle `mientras` para recogerla toda.",
+        "scrat 16": "¡Bellota! ¡Bellota! ¡Bellota! Utiliza un bloque \"si\" para llevarme hasta allí con el menor número de bloques.",
+        "scrat 17": "Ok, vamos a hacerlo de nuevo para practicar - este no es muy diferente, ¡Pero ten cuidado con la pared!",
+        "scrat 18": "El bloque \"si-si no\" verifica una condición y después hace o una cosa u otra. Para llevarme a la bellota intenta usar este nuevo bloque.",
+        "scrat 19": "Una práctica más del bloque \"si-sino\", ¿puedes hacerlo bien en tu primer intento?",
+        "scrat 20": "¿Puedes agregar sólo 3 bloques para ayudarme a resolver un laberinto más complejo? Si lo haces correctamente puedo caminar cualquier camino curvo sin importar su longitud. !Date prisa! ¡El hielo se está derritiendo!"
       }
     }
   }

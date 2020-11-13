@@ -370,8 +370,6 @@ ms:
         opt_in_no: 'Tidak'
   cookie_banner:
     accept: 'saya setuju'
-  gdpr_dialog:
-    yes: 'Ya'
   copy: 'Salin'
   parent_email_banner:
     text: "**Adakah anda ibubapa atau penjaga?** Sambungkan e-mel anda ke akaun ini untuk kemaskini kemajuan dan projek anak anda!"

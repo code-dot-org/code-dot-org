@@ -1146,6 +1146,8 @@ vi:
         text: sprite {SPRITE} điểm dừng {BEHAVIOR}
       gamelab_removeTint:
         text: loại bỏ màu từ {THIS}
+      gamelab_repeatForever:
+        text: lặp lại mãi mãi
       gamelab_setAnimation:
         text: thay đổi {THIS} trang phục để {ANIMATION}
       gamelab_setBackground:

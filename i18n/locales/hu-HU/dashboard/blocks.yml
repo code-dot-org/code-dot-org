@@ -960,9 +960,12 @@ hu:
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
       gamelab_atTime:
+        text: "{N} {UNIT} nél"
         options:
           UNIT:
             '"seconds"': másodperc
+      gamelab_bounceOff:
+        text: "{SPRITE} lepattan itt: {TARGET}"
       gamelab_changePropBy:
         text: 'módosítás: {SPRITE} {PROPERTY} ennyivel: {VAL}'
         options:
@@ -984,6 +987,8 @@ hu:
         text: kattintott {SPRITE}
       gamelab_comment:
         text: 'megjegyzés: {COMMENT}'
+      gamelab_countByAnimation:
+        text: "{SPRITE} -száma"
       gamelab_createNewSprite:
         text: "készíts új sprite-ot\n neve {NAME} \n viselete {COSTUME} \n helye {LOCATION}"
       gamelab_destroy:
@@ -1152,6 +1157,8 @@ hu:
         text: sprite {SPRITE} abbahagyja {BEHAVIOR}
       gamelab_removeTint:
         text: "{THIS} színének eltávolítása"
+      gamelab_repeatForever:
+        text: ismételd végtelenszer
       gamelab_setAnimation:
         text: 'cseréld {THIS} jelmezét erre: {ANIMATION}'
       gamelab_setBackground:

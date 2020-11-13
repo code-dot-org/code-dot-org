@@ -15,7 +15,7 @@
           "4_5_Bee_Conditionals_2_1": "Ingat, periksa untuk melihat jika SETIAP awan yang memiliki BUNGA. Anda tidak perlu untuk memeriksa semua sarang."
         },
         "AppLab Intro 7 - Change Screen Color": {
-          "applab_hoc_finish": "Apakah layarnya hijau? Jika ya, tekan 'Finish'. Jika tidak, tekan ' Reset ', ubah kode Anda, dan tekan 'Run' lagi."
+          "applab_hoc_finish": "Apakah layarnya hijau? Jika ya, tekan 'Finish'. Jika tidak, tekan ' Reset ', ubah kode Anda, dan tekan 'Jalankan' lagi."
         },
         "AppLab Intro 7 - thisOrThatAddButton": {
           "AppLabHoCFinal11": "Anda sekarang dalam Mode desain."
@@ -321,16 +321,16 @@
           "Infinity_repeat_callout": "Tempatkan blok Gerak di sini"
         },
         "InspirationalArtwork": {
-          "InspirationalArtwork_1": "Coba gunakan blok 'komentar` yang baru di bawah label ini untuk meninggalkan catatan anda sendiri di dalam program anda!"
+          "InspirationalArtwork_1": "Coba gunakan blok `comment` yang baru di bawah label ini untuk meninggalkan catatan sendiri di dalam program Anda!"
         },
         "InspirationalArtwork_2018": {
           "InspirationalArtwork_1": "Coba gunakan blok `komentar` di bawah label ini untuk meninggalkan catatan Anda sendiri di dalam program Anda!"
         },
         "MC HOC 2016 Level 2-2": {
-          "craft2_run_button_callout": "Ketika anda sudah siap, tekan \"Run\" untuk mencoba program anda."
+          "craft2_run_button_callout": "Ketika anda sudah siap, tekan \"Jalankan\" untuk mencoba program anda."
         },
         "MC HOC 2016 New Walk": {
-          "MC_HOC_2016_New_Walk_callout2": "Tekan \"Run\" untuk mulai bergerak."
+          "MC_HOC_2016_New_Walk_callout2": "Tekan \"Jalankan\" untuk mulai bergerak."
         },
         "MC_HOC_2017_03_Cole": {
           "MC_HOC_2017_03_Cole_1": "Ini adalah loop `repeat`!  Klik untuk memasukkannya ke ruang kerja dan tambahkan kode yang ingin Anda jalankan berulang kali."
@@ -431,7 +431,7 @@
         },
         "Overworld Move to Sheep": {
           "craft_run_button_callout": "Klik \"Run\" untuk mencoba program kamu",
-          "craft_drag_block_callout": "Seret blok \"gerak\" dan pasang di bawah blok lain"
+          "craft_drag_block_callout": "Tarik blok \"move forward\" dan pasang di bawah blok lain"
         },
         "Overworld Move to Sheep_2019": {
           "craft_run_button_callout": "Klik \"Run\" untuk mencoba program kamu",
@@ -615,10 +615,10 @@
           "courseA_collector_loops1_1": "Apakah anda melihat beberapa blok baru di kotak alat? Jangan khawatir, kami akan menunjukkan cara menggunakannya nanti dalam tahapan."
         },
         "courseA_maze_ramp2_2019": {
-          "courseC_maze_programming2_1": "Ini adalah kotak perlengkapan. Dimana kamu akan menemukan blok-blok tambahan untuk menyelesaikan teka-teki yang kamu kerjakan."
+          "courseC_maze_programming2_1": "Ini adalah kotak perlengkapan. Dimana kamu akan menemukan blok-blok tambahan untuk menyelesaikan puzzle yang kamu kerjakan."
         },
         "courseA_maze_ramp2_2020": {
-          "courseC_maze_programming2_1": "Ini adalah kotak perlengkapan. Dimana kamu akan menemukan blok-blok tambahan untuk menyelesaikan teka-teki yang kamu kerjakan."
+          "courseC_maze_programming2_1": "Ini adalah kotak perlengkapan. Dimana kamu akan menemukan blok-blok tambahan untuk menyelesaikan puzzle yang kamu kerjakan."
         },
         "courseA_maze_ramp3a_2018": {
           "courseC_maze_programming2_1": "Ini adalah kotak perlengkapan. Dimana kamu akan menemukan blok-blok tambahan untuk menyelesaikan puzzle yang kamu kerjakan."
@@ -693,16 +693,16 @@
           "courseC_maze_programming2_1": "Ini adalah kotak perlengkapan. Dimana kamu akan menemukan blok-blok tambahan untuk menyelesaikan puzzle yang kamu kerjakan."
         },
         "courseB_artist_loops3": {
-          "courseB_artist_loops3_1": "Hanya ada satu dari blok-blok tersebut yang ada didalam kotak peralatan. Bagaimana digunakan untuk apa?"
+          "courseB_artist_loops3_1": "Hanya ada satu dari blok-blok tersebut di dalam toolbox. Bagaimana cara Anda menggunakannya?"
         },
         "courseB_artist_loops3_2018": {
           "courseB_artist_loops3_1": "Hanya ada satu dari blok-blok tersebut yang ada didalam kotak peralatan. Bagaimana digunakan untuk apa?"
         },
         "courseB_artist_loops3_2019": {
-          "courseB_artist_loops3_1": "Hanya ada satu dari blok-blok tersebut yang ada didalam kotak peralatan. Mau digunakan untuk apa?"
+          "courseB_artist_loops3_1": "Hanya ada satu dari blok-blok tersebut yang ada didalam kotak peralatan. Bagaimana digunakan untuk apa?"
         },
         "courseB_artist_loops3_2020": {
-          "courseB_artist_loops3_1": "Hanya ada satu dari blok-blok tersebut yang ada didalam kotak peralatan. Mau digunakan untuk apa?"
+          "courseB_artist_loops3_1": "Hanya ada satu dari blok-blok tersebut yang ada didalam kotak peralatan. Bagaimana digunakan untuk apa?"
         },
         "courseB_artist_loops5": {
           "courseB_artist_loops5_1": "Angka ini berarti bahwa tidak ada lagi blok yang tersedia di dalam kotak peralatan."
@@ -1119,22 +1119,22 @@
           "grade2_CaringForNewPet_0_1": "Setelah menghubungkan semua blok, tekan \"Run\" untuk memulai program."
         },
         "courseD_scrat_ramp2": {
-          "courseC_maze_programming2_1": "Ini adalah kotak perlengkapan. Dimana kamu akan menemukan blok-blok tambahan untuk menyelesaikan puzzle yang kamu kerjakan."
+          "courseC_maze_programming2_1": "Ini adalah toolbox. Di sinilah Anda akan menemukan blok tambahan untuk menyelesaikan puzzle."
         },
         "courseD_scrat_ramp3": {
-          "courseC_maze_programming3_2": "Anda bisa menarik blok-blok tambahan ke dalam kotak perlengkapan untuk membuangnya."
+          "courseC_maze_programming3_2": "Anda dapat membuang blok tambahan dengan cara menariknya ke dalam toolbox."
         },
         "courseD_scrat_ramp4": {
-          "courseC_maze_programming4_1": "Ini adalah batas jumlah blok kamu. Menunjukkan kepada kamu masih ada berapa blok yang bisa kamu gunakan."
+          "courseC_maze_programming4_1": "Ini adalah batas jumlah blok Anda. Batas ini menunjukkan jumlah blok yang masih tersisa untuk digunakan."
         },
         "courseD_scrat_ramp5": {
           "": "Blok ini tidak memiliki angka. Anda dapat menggunakan sebanyak mungkin!"
         },
         "courseD_scrat_ramp6": {
-          "courseD_maze_ramp6_1": "Apapun kode yang anda masukkan ke sini akan mengulangi sebanyak yang anda kirimkan, kemudian klik tombol lanjutkan untuk menyelesaikan program itu."
+          "courseD_maze_ramp6_1": "Apa pun kode yang Anda masukkan di sini akan mengulang sebanyak perintah Anda, kemudian melanjutkan untuk menyelesaikan program itu."
         },
         "courseD_scrat_ramp7": {
-          "courseD_maze_ramp6_1": "Apapun kode yang anda masukkan ke sini akan mengulangi sebanyak yang anda kirimkan, kemudian klik tombol lanjutkan untuk menyelesaikan program itu."
+          "courseD_maze_ramp6_1": "Apa pun kode yang Anda masukkan di sini akan mengulang sebanyak perintah Anda, kemudian melanjutkan untuk menyelesaikan program itu."
         },
         "courseD_scrat_ramp8": {
           "courseD_maze_ramp7_1": "Ini merupakan tantangan puzzle kamu yang pertama! Puzzle ini sulit dan mungkin perlu dicoba beberapa kali sebelum berhasil."
@@ -1270,7 +1270,7 @@
           "courseE_playLab_scaffold3_1": "Bawalah aktor ke bendera ini untuk maju ke tahap selanjutnya."
         },
         "courseF_artist_for1": {
-          "courseF_artist_for1_1": "Toolbox berada di mode \"category\" untuk memberikan lebih banyak ruang bagi kode kamu. Kategori loop`for` tinggal disini."
+          "courseF_artist_for1_1": "Toolbox berada di mode \"category\" untuk memberi ruang lebih besar bagi kode Anda. Loop`for` ada di sini."
         },
         "courseF_artist_for1_2018": {
           "courseF_artist_for1_1": "Toolbox berada di mode \"category\" untuk memberikan lebih banyak ruang bagi kode kamu. Kategori loop`for` tinggal disini."
@@ -1282,16 +1282,16 @@
           "courseF_artist_for1_1": "Toolbox berada di mode \"category\" untuk memberikan lebih banyak ruang bagi kode kamu. Kategori loop`for` tinggal disini."
         },
         "courseF_artist_fwp1": {
-          "courseF_artist_fwp1_1": "Klik tombol \"edit\" untuk mengubah kode dibagian dalam fungsi."
+          "courseF_artist_fwp1_1": "Klik tombol \"edit\" untuk mengubah kode di bagian dalam function."
         },
         "courseF_artist_fwp4": {
-          "courseF_artist_fwp4_1": "Untuk menyelesaikan poligon kamu, pastikan kamu selalu berputar 360 ÷ derajat `sisi bidang`."
+          "courseF_artist_fwp4_1": "Untuk menyelesaikan poligon, pastikan selalu berputar 360 ÷ derajat `sides`."
         },
         "courseF_artist_fwp5": {
-          "courseF_artist_fwp5_1": "Anda akan menemukan fungsi poligon disini."
+          "courseF_artist_fwp5_1": "Anda akan menemukan function poligon di sini."
         },
         "courseF_artist_variables3": {
-          "courseF_artist_variables3_a": "Gunakan ini untuk menetapkan nilai dari variabel `panjang`"
+          "courseF_artist_variables3_a": "Gunakan ini untuk menetapkan nilai dari variabel `length`"
         },
         "courseF_artist_variables3_2018": {
           "courseF_artist_variables3_a": "Gunakan ini untuk menetapkan nilai dari variabel `panjang`"
@@ -1303,7 +1303,7 @@
           "courseF_artist_variables3_a": "Gunakan ini untuk menetapkan nilai dari variabel `panjang`"
         },
         "courseF_artist_variables6": {
-          "courseF_artist_variables6_1": "Variabel-variable akan berguna ketika kamu harus mengubah salinan yang banyak dari satu nomor yang sama."
+          "courseF_artist_variables6_1": "Variable dapat membantu Anda ketika harus mengubah banyak salinan yang berangka sama."
         },
         "courseF_artist_variables6_2018": {
           "courseF_artist_variables6_1": "Variabel-variable akan berguna ketika kamu harus mengubah salinan yang banyak dari satu nomor yang sama."
@@ -1315,7 +1315,7 @@
           "courseF_artist_variables6_1": "Variabel-variable akan berguna ketika kamu harus mengubah salinan yang banyak dari satu nomor yang sama."
         },
         "courseF_artist_variables6a": {
-          "courseF_artist_variables6a_1": "Variabel-variable akan berguna ketika kamu harus mengubah salinan yang banyak dari satu nomor yang sama."
+          "courseF_artist_variables6a_1": "Variable dapat membantu Anda ketika harus mengubah banyak salinan yang berangka sama."
         },
         "courseF_artist_variables6a_2018": {
           "courseF_artist_variables6a_1": "Variabel-variable akan berguna ketika kamu harus mengubah salinan yang banyak dari satu nomor yang sama."
@@ -1327,10 +1327,10 @@
           "courseF_artist_variables6a_1": "Variabel-variable akan berguna ketika kamu harus mengubah salinan yang banyak dari satu nomor yang sama."
         },
         "courseF_bee_conditionals2": {
-          "courseF_bee_conditionals2_2": "Kotak alat sekarang dalam kategori mode. Semua blok yang anda butuhkan berada dibawah label ini!"
+          "courseF_bee_conditionals2_2": "Kini toolbox ada dalam mode kategori.  Semua blok yang Anda butuhkan ada di bawah label ini!"
         },
         "courseF_bee_conditionals5": {
-          "courseF_bee_conditionals5_1": "Gunakan blok ini ketika panjang jalur berubah (seperti di bagian sisi persegi panjang!)"
+          "courseF_bee_conditionals5_1": "Gunakan blok ini ketika panjang jalur berubah (seperti pada sisi-sisi persegi panjang!)"
         },
         "courseF_bee_for4": {
           "courseF_bee_for4_1": "Anda akan menemukan loop 'for` di sini!"
@@ -1345,7 +1345,7 @@
           "courseF_bee_for4_1": "Anda akan menemukan loop 'for` di sini!"
         },
         "courseF_bee_for9": {
-          "courseF_bee_for9_1": "Anda akan menemukan blok `matematika` disini."
+          "courseF_bee_for9_1": "Anda akan menemukan blok `math` disini."
         },
         "courseF_bee_for9_2018": {
           "courseF_bee_for9_1": "Anda akan menemukan blok `matematika` disini."
@@ -1357,29 +1357,29 @@
           "courseF_bee_for9_1": "Anda akan menemukan blok `matematika` disini."
         },
         "courseF_bee_functions2": {
-          "courseF_bee_functions2_1": "Blok ini memanggil fungsi. Klik tombol \"sunting\" ini untuk melihat isinya!"
+          "courseF_bee_functions2_1": "Blok ini memanggil function. Klik tombol \"edit\" ini untuk melihat isinya!"
         },
         "courseF_bee_functions6": {
           "courseF_bee_functions6_1": "Jangan lupa melihat di sini untuk lebih banyak blok yang dapat membantu mempermudah ini!"
         },
         "courseF_bee_functions_challenge1": {
           "courseF_bee_functions_challenge1_1": "Kode apa yang harus anda masukkan ke dalam fungsi ini?",
-          "courseF_bee_functions_challenge1_2": "Fungsi \"periksa nektar atau madu\" dapat digunakan di sini jika anda menyuntingnya untuk membuat madu beberapa kali."
+          "courseF_bee_functions_challenge1_2": "Function \"check nectar or honey\" dapat digunakan di sini atau editlah untuk membuat madu beberapa kali."
         },
         "courseF_bee_fwp1": {
-          "courseF_bee_fwp1_1": "Anda bisa menemukan pernyataan `jika` disini."
+          "courseF_bee_fwp1_1": "Anda bisa menemukan pernyataan `if` di sini."
         },
         "courseF_bee_fwp2": {
-          "courseF_bee_fwp2_a": "Blok yang memanggil fungsi anda berada di sini."
+          "courseF_bee_fwp2_a": "Blok yang memanggil function Anda ada di sini."
         },
         "courseF_bee_fwp3": {
-          "courseF_bee_fwp3_1": "Fungsi yang sama ini bisa digunakan saat melakukan pengeceka untuk ruangan-ruangan kosong seperti awan."
+          "courseF_bee_fwp3_1": "Function yang sama ini bisa digunakan saat mengecek ruang-ruang kosong dan juga awan."
         },
         "courseF_bee_fwp4": {
           "courseF_bee_fwp4_1": "Tekan tombol \"edit\" untuk menambahkan parameter ke fungsi ini."
         },
         "courseF_bee_fwp_challenge2": {
-          "courseF_bee_fwp_challenge2_callout1": "Fungsi ini akan melakukan pekerjaan yang baik dengan jagung, tapi bagaimana dengan sayuran lainnya?"
+          "courseF_bee_fwp_challenge2_callout1": "Function ini akan cocok sekali dengan jagung, tapi bagaimana dengan sayuran lainnya?"
         },
         "courseF_bee_variables_1_2018": {
           "courseF_bee_functions_1_2018_1": "Anda dapat menemukan variabel Anda di bawah sini!"
@@ -1391,16 +1391,16 @@
           "courseF_bee_functions_1_2018_1": "Anda dapat menemukan variabel Anda di bawah sini!"
         },
         "courseF_playlab_variables1a": {
-          "courseF_playlab_variables1a_1": "Toolbox telah disusun kedalam kategori-kategori untuk mempermudah menemukan blok-blok yang kamu butuhkan."
+          "courseF_playlab_variables1a_1": "Toolbox telah disusun ke dalam kategori untuk mempermudah menemukan blok yang Anda butuhkan."
         },
         "courseF_playlab_variables5c": {
-          "courseF_playlab_variables5c_1": "Anda akan menemukan blok variabel anda di sini."
+          "courseF_playlab_variables5c_1": "Anda akan menemukan blok variabel di sini."
         },
         "courseF_playlab_variables6c": {
-          "courseF_playlab_variables5c_1": "Anda akan menemukan blok variabel anda di sini."
+          "courseF_playlab_variables5c_1": "Anda akan menemukan blok variabel di sini."
         },
         "courseF_playlab_variables7c": {
-          "courseF_playlab_variables7c_1": "Temukan blok `tanya` disini!"
+          "courseF_playlab_variables7c_1": "Temukan blok `ask` di sini!"
         },
         "coursea_maze_ramp1_2018": {
           "grade2_CaringForNewPet_0_1": "Setelah menggabungkan semua blok, tekan \"Jalankan\" untuk memulai program Anda."
@@ -1418,7 +1418,7 @@
           "express_maze_debugging9_2019_1": "Pindahkan blok dari kotak peralatan ke ruang kerja Anda."
         },
         "frozen circle function with parameter": {
-          "frozen_circle_function_with_parameter_circle": "Gunakan blok \"buat lingkaran\" dan ubah ukurannya."
+          "frozen_circle_function_with_parameter_circle": "Gunakan blok \"buat loop\" dan ubah ukurannya."
         },
         "frozen cross": {
           "repeat_blocks_1": "(1) Gunakan blok ini dan Letakkan di sekitar blok abu-abu didalam ruang kerja",
@@ -1437,7 +1437,7 @@
           "snowflake_dropdown": "Gunakan drop-down untuk membuat kepingan salju yang berbeda!"
         },
         "frozen line": {
-          "run": "Tekan \"Run\" untuk mencoba program anda!",
+          "run": "Tekan \"Jalankan\" untuk mencoba program anda!",
           "move_elsa_forward": "Tarik blok \"Maju\" dan pasang di bawah blok \"Jalankan\" untuk membuat Elsa maju"
         },
         "frozen perpendicular": {
@@ -1459,7 +1459,7 @@
           "replace_questions": "Gunakan drop-down untuk menggantikan \"???\" dengan sebuah angka"
         },
         "grade5_artist_variables_triangles1": {
-          "grade5_artist_variables_triangles1_1": "Perhatikan bahwa blok-blok sekarang memiliki cara baru untuk memasukkan nomor. Blok-blok `matematika` tersebut bisa ditarik dan dipindah-pindahkan!"
+          "grade5_artist_variables_triangles1_1": "Perhatikan bahwa kini blok memiliki cara baru untuk memasukkan bilangan. Blok `math` tersebut bisa ditarik dan dipindah-pindahkan!"
         },
         "grade5_artist_variables_triangles1_2018": {
           "grade5_artist_variables_triangles1_1": "Perhatikan bahwa blok-blok sekarang memiliki cara baru untuk memasukkan nomor. Blok-blok `matematika` tersebut bisa ditarik dan dipindah-pindahkan!"

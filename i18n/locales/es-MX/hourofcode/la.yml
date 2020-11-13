@@ -140,7 +140,7 @@ la:
   hoc_live_sign_up_message: "¡Aprende en vivo junto a invitados especiales! Estudiantes
     de todas las edades y habilidades, incluso aquellos sin computadoras, son bienvenidos.
     Únete a nuestra lista de distribución para recibir recordatorios de los episodios
-    y recursos para continuar el aprendizaje en casa."
+    y recursos para continuar el aprendizaje en casa. Ver episodios anteriores [aquí](%{episodes_url})."
   hoc_live_join_us: Únete
   hoc_overview_oceans_tutorial_header: Océanos de AI
   hoc_overview_oceans_tutorial_desc: Aprende sobre inteligencia artificial (IA), aprendizaje
@@ -246,13 +246,6 @@ la:
   front_watch_regular_video: Mira el video
   front_volunteers: Buscamos voluntarios técnicos
   front_start_learning: Comienza a aprender
-  gdpr_dialog_heading: "¿Aceptas utilizar un sitio web localizado en Estados Unidos?"
-  gdpr_dialog_message: La información que utilices en este sitio puede ser enviada,
-    almacenada y procesada en Estados Unidos.
-  gdpr_dialog_link_intro: Para obtener más información, consulta nuestra
-  gdpr_dialog_privacy_policy: política de privacidad
-  gdpr_dialog_logout: Cerrar sesión
-  gdpr_dialog_yes: Sí
   header_menu_resources: Recursos
   header_menu_faq: Preguntas frecuentes
   header_menu_how_to: Cómo hacerlo

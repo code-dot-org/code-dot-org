@@ -1150,6 +1150,8 @@ ko:
         text: 스프라이트 {SPRITE} 중지 {BEHAVIOR}
       gamelab_removeTint:
         text: "{THIS}에서 색상 제거"
+      gamelab_repeatForever:
+        text: 무한반복
       gamelab_setAnimation:
         text: 변경 {THIS} 의상을 {ANIMATION}
       gamelab_setBackground:

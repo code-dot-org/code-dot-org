@@ -505,6 +505,4 @@ sr:
         opt_in_no: не
   cookie_banner:
     accept: Слажем се
-  gdpr_dialog:
-    true: Да
   copy: Копирај

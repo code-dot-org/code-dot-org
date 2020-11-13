@@ -176,6 +176,18 @@ hu:
       használok.
     my_data_to_us: A weboldal használatából keletkező adatok tárolása és feldolgozása
       esetlegesen az Egyesült Államokban történik.
+    agree_us_data_transfer_student: "**Hozzájárulok ahhoz, hogy a Code.org adatokat
+      továbbítson (beleértve személyes adatokat is) az Egyesült Államokba azok tárolása
+      és feldolgozása céljából arról, hogy én hogyan használom ezt a webhelyet."
+    agree_us_data_transfer_teacher: "**Hozzájárulok ahhoz, hogy a Code.org adatokat
+      továbbítson (beleértve személyes adatokat is) az Egyesült Államokba azok tárolása
+      és feldolgozása céljából arról, hogy én (és a diákjaim) hogyan használják ezt
+      a webhelyet."
+    data_collection_us: Tudom, hogy a Code.org egy nonprofit webhely, amelynek székhelye
+      az USA-ban van, és az USA adatgyűjtésre vonatkozó törvényei eltérhetnek az én
+      hazám törvényeitől.
+    visit_privacy: További információkért keresd fel a Code.org webhelyen az [Adatvédelmi
+      Szabályokat](%{privacy_url}).
     additional_information: Még szükségünk van néhány adatra  a regisztráció folytatásához.
     user_type_button: Felhasználói fiók-típus módosítása
     user_type_label: Fióktípus
@@ -894,11 +906,6 @@ hu:
         opt_in_no: Nem
   cookie_banner:
     accept: Egyetértek
-  gdpr_dialog:
-    heading: Elfogadod, hogy egy Egyesült Államokban létrejött weboldalt használj?
-    message: A weboldal használatából keletkező adatok tárolása és feldolgozása esetlegesen
-      az Egyesült Államokban történik.
-    true: Igen
   copy: Másol
   parent_email_banner:
     text: "**Ön szülő vagy gondviselő?** Kapcsolja az e-mail címét ehhez a fiókhoz,

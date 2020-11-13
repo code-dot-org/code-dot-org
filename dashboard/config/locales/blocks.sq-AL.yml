@@ -230,6 +230,8 @@ sq:
         text: ngjyrë e rastësishme
       gamelab_randomColor:
         text: ngjyrë e rastësishme
+      gamelab_repeatForever:
+        text: përsërit përgjithmonë
       gamelab_setBackgroundImage:
         options:
           IMG:
