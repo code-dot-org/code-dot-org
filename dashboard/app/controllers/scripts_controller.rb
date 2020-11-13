@@ -112,7 +112,7 @@ class ScriptsController < ApplicationController
       i18n: @script ? @script.summarize_i18n_for_edit : {},
       beta: beta,
       betaWarning: beta_warning,
-      levelKeyList: beta && Level.key_list,
+      levelKeyList: beta ? Level.key_list : {},
       lessonLevelData: @script_file,
       locales: options_for_locale_select,
       script_families: ScriptConstants::FAMILY_NAMES,
@@ -123,9 +123,11 @@ class ScriptsController < ApplicationController
 
   def update
     script_text = params[:script_text]
-    @script.update_text(script_params, script_text, i18n_params, general_params)
-
-    render json: @script.summarize_for_script_edit
+    if @script.update_text(script_params, script_text, i18n_params, general_params)
+      render json: @script.summarize_for_script_edit
+    else
+      render json: @script.errors
+    end
   end
 
   def instructions

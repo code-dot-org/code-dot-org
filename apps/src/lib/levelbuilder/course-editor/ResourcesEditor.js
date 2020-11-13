@@ -124,7 +124,6 @@ const Resource = ({
     Resource {id}
     <div>Type</div>
     <select
-      name="resourceTypes[]"
       style={inputStyle}
       value={resource.type}
       onChange={handleChangeType}
@@ -141,7 +140,6 @@ const Resource = ({
     <div>Link</div>
     <input
       style={inputStyle}
-      name="resourceLinks[]"
       value={resource.link}
       onChange={handleChangeLink}
     />
