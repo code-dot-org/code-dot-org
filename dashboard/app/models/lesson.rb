@@ -299,7 +299,7 @@ class Lesson < ActiveRecord::Base
       activities: lesson_activities.map(&:summarize_for_edit),
       resources: resources,
       objectives: objectives.map(&:summarize_for_edit),
-      course_version_id: lesson_group.script.course_version&.id
+      courseVersionId: lesson_group.script.course_version&.id
     }
   end
 

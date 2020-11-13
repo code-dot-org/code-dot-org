@@ -31,4 +31,11 @@ class ResourcesControllerTest < ActionController::TestCase
     response_resource = JSON.parse(@response.body)
     assert_equal course_version.id, Resource.find_by_key(response_resource["key"]).course_version_id
   end
+
+  test 'resource creation fails with invalid course version' do
+    sign_in @levelbuilder
+    post :create, params: {name: 'resource name', url: 'code.org', downloadUrl: 'download.url', type: 'Slides', audience: 'Teacher', courseVersionId: -1}
+    assert_response 400
+    assert @response.body.include? "course version not found"
+  end
 end
