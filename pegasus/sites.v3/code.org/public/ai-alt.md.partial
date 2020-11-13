@@ -1,0 +1,77 @@
+---
+title: Artificial Intelligence at Code.org
+video_player: true
+theme: responsive
+style_min: true
+---
+<a id="top"></a>
+<h1 style="margin-top:30px; margin-bottom:20px">Artificial Intelligence (AI) at Code.org</h1>
+
+Code.org&reg; is a nonprofit dedicated to expanding access to computer science in schools and increasing participation by women and underrepresented youth. Our vision is that <u><b>every student in every school has the opportunity to learn computer science</b></u>, just like biology, chemistry or algebra. Code.org provides the leading curriculum for K-12 computer science in the largest school districts in the United States and Code.org also organizes the annual <a href="http://hourofcode.com"> Hour of Code</a> campaign which has engaged more than 15% of all students in the world. Code.org is supported by generous donors including Amazon, Facebook, Google, the Infosys Foundation, Microsoft, and <a href="/about/donors">many more</a>.
+
+<div style="clear: both; margin-bottom: 20px"></div>
+<div class="col-100" style="text-align:center">
+  <a href="#impact">Our Impact</a>  |  <a href="#work">Our Work</a>     |     <a href="#values">Our Values</a>      |     <a href="#history">History and Philosophy</a>     |     <a href="#more">More</a>
+</div>
+<br>
+<hr/>
+<br>
+
+<a id="work"></a>
+
+<div class="col-33">
+  <div class="tutorial-tile" style="padding-right:20px">
+      <a href="/oceans">
+        <img class="tutorial-tile-img" src="/images/fill-485x235/oceans/oceans-overview.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 25px 25px 0 0">
+      </a>
+    <div class="tutorial-info" style="background-color: #ffffff; border: 1px #696969; border-radius: 0 0 25px 25px; padding: 15px 25px 25px 25px">
+      <span>
+        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px"><strong>AI for Oceans</strong></h3>
+        <div class="smalltext" style="color: dimgray; text-align: left">Computer science is about so much more than coding! Learn about AI, machine learning, training data, and bias, while exploring ethical issues and how AI can be used to address world problems.</div>
+        <button href="/oceans">Try now</button>
+    </span>
+  </div>
+</div>
+</div>
+
+<div class="col-33">
+  <div class="tutorial-tile" style="padding-right:20px">
+      <a href="/oceans">
+        <img class="tutorial-tile-img" src="/images/fill-485x235/oceans/oceans-overview.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 25px 25px 0 0">
+      </a>
+    <div class="tutorial-info" style="background-color: #ffffff; border: 1px #696969; border-radius: 0 0 25px 25px; padding: 15px 25px 25px 25px">
+      <span>
+        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px"><strong>How AI Works</strong></h3>
+        <div class="smalltext" style="color: dimgray; text-align: left">Computer science is about so much more than coding! Learn about AI, machine learning, training data, and bias, while exploring ethical issues and how AI can be used to address world problems.</div>
+        <button href="/oceans">Try now</button>
+    </span>
+  </div>
+</div>
+</div>
+
+<div class="col-33">
+  <div class="tutorial-tile" style="padding-right:20px">
+      <a href="/oceans">
+        <img class="tutorial-tile-img" src="/images/fill-485x235/oceans/oceans-overview.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 25px 25px 0 0">
+      </a>
+    <div class="tutorial-info" style="background-color: #ffffff; border: 1px #696969; border-radius: 0 0 25px 25px; padding: 15px 25px 25px 25px">
+      <span>
+        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px"><strong>AI and Ethics</strong></h3>
+        <div class="smalltext" style="color: dimgray; text-align: left">Computer science is about so much more than coding! Learn about AI, machine learning, training data, and bias, while exploring ethical issues and how AI can be used to address world problems.</div>
+        <button href="/oceans">Try now</button>
+    </span>
+  </div>
+</div>
+</div>
+
+<div style="clear: both; margin-bottom: 20px"></div>
+
+<p><a href="#top">[Back to top]</a></p>
+
+<hr/>
+
+{{ ai_videos }}
+
+<hr/>
+
+{{ ai_ml_resources_table }}

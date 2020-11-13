@@ -131,7 +131,12 @@ class ProjectsList extends React.Component {
       this.props.studioUrlPrefix
     }/projects/${type}/${channel}/view`;
     return (
-      <a href={url} style={tableLayoutStyles.link} target="_blank">
+      <a
+        href={url}
+        style={tableLayoutStyles.link}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         {name}
       </a>
     );
