@@ -1,5 +1,5 @@
 # Helper module for importing data from curriculumbuilder
-module LessonImportHelper
+module Services::LessonImportHelper
   # Lockable lessons don't need to be merged with curriculumbuilder, but we do
   # need the levels to be part of an activity section.
   def self.update_lockable_lesson(script_levels, lesson_id)
