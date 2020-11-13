@@ -60,16 +60,16 @@ module Services::LessonImportHelper
 
   def self.create_lesson_activities(activities_data, levels, lesson_id)
     activities = activities_data.map.with_index(1) do |a, i|
-      @lesson_activity = LessonActivity.new
-      @lesson_activity.name = a['name']
-      @lesson_activity.duration = a['duration'].split[0].to_i
-      @lesson_activity.lesson_id = lesson_id
-      @lesson_activity.seeding_key = SecureRandom.uuid
-      @lesson_activity.position = i
-      @lesson_activity.save!
-      @lesson_activity.reload
-      @lesson_activity.activity_sections = create_activity_sections(a['content'])
-      @lesson_activity
+      lesson_activity = LessonActivity.new
+      lesson_activity.name = a['name']
+      lesson_activity.duration = a['duration'].split[0].to_i
+      lesson_activity.lesson_id = lesson_id
+      lesson_activity.seeding_key = SecureRandom.uuid
+      lesson_activity.position = i
+      lesson_activity.save!
+      lesson_activity.reload
+      lesson_activity.activity_sections = create_activity_sections(a['content'])
+      lesson_activity
     end
 
     # Create a lesson with all the levels in them
