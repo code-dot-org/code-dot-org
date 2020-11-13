@@ -43,9 +43,9 @@ export default class CourseEditor extends Component {
     versionTitle: PropTypes.string,
     familyName: PropTypes.string,
     versionYear: PropTypes.string,
-    visible: PropTypes.bool.isRequired,
+    initialVisible: PropTypes.bool.isRequired,
     isStable: PropTypes.bool.isRequired,
-    pilotExperiment: PropTypes.string,
+    initialPilotExperiment: PropTypes.string,
     descriptionShort: PropTypes.string,
     initialDescriptionStudent: PropTypes.string,
     initialDescriptionTeacher: PropTypes.string,
@@ -72,6 +72,8 @@ export default class CourseEditor extends Component {
       descriptionStudent: this.props.initialDescriptionStudent,
       descriptionTeacher: this.props.initialDescriptionTeacher,
       announcements: this.props.initialAnnouncements,
+      visible: this.props.initialVisible,
+      pilotExperiment: this.props.initialPilotExperiment,
       teacherResources: resources
     };
   }
@@ -232,8 +234,12 @@ export default class CourseEditor extends Component {
             </select>
           </label>
           <VisibleAndPilotExperiment
-            visible={this.props.visible}
-            pilotExperiment={this.props.pilotExperiment}
+            visible={this.state.visible}
+            updateVisible={() => this.setState({visible: !this.state.visible})}
+            pilotExperiment={this.state.pilotExperiment}
+            updatePilotExperiment={pilotExperiment =>
+              this.setState({pilotExperiment})
+            }
             paramName="visible"
           />
           <label>
