@@ -482,18 +482,16 @@ class Lesson < ActiveRecord::Base
     # In the future, only levelbuilder should be added to this list.
     raise unless [:development, :adhoc].include? rack_env
 
-    levels_data = script_levels.each_with_index.map {|l, i| JSON.parse({id: l.id, assessment: l.assessment, bonus: l.bonus, challenge: l.challenge, levels: l.levels, activitySectionPosition: i, inActivitySection: false}.to_json)}
-
     if lockable || cb_lesson_data.empty?
-      self.lesson_activities = LessonImportHelper.update_lockable_lesson(levels_data, id)
+      self.lesson_activities = LessonImportHelper.update_lockable_lesson(script_levels, id)
       self.script_levels = []
     else
       self.name = cb_lesson_data['title']
       self.overview = cb_lesson_data['teacher_desc']
       self.student_overview = cb_lesson_data['student_desc']
       self.relative_position = cb_lesson_data['number'] || 1
+      self.lesson_activities = LessonImportHelper.create_lesson_activities(cb_lesson_data['activities'], script_levels, id)
       self.script_levels = []
-      self.lesson_activities = LessonImportHelper.create_lesson_activities(cb_lesson_data['activities'], levels_data, id)
     end
     save!
   end
