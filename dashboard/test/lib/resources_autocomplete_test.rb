@@ -23,13 +23,19 @@ class ResourcesAutocompleteTest < ActiveSupport::TestCase
   end
 
   test "limits matches by course version id" do
+    # There are three resources that have a name or url matching "class".
+    # Two are not associated with a course version and one is. Let's make
+    # sure the correct ones are fetched in each case.
     matches = ResourcesAutocomplete.get_search_matches("class", 5, nil)
     assert_equal 2, matches.length
+    puts matches.inspect
+    assert_equal ['resource_103', 'resource_104'], matches.map {|m| m["key"]}.sort
 
     # Check that specifying a course version id finds an associated resource
     course_version_id = CourseVersion.find_by_key('2019').id
     matches = ResourcesAutocomplete.get_search_matches("class", 5, course_version_id)
     assert_equal 1, matches.length
+    assert_equal 'resource_105', matches[0]["key"]
   end
 
   test "only returns up to limit matches" do

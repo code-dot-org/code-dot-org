@@ -107,7 +107,7 @@ $(document).ready(function() {
         initialAnnouncements={lessonData.announcements || []}
         relatedLessons={relatedLessons}
         initialObjectives={objectives}
-        courseVersionId={lessonData.course_version_id}
+        courseVersionId={lessonData.courseVersionId}
       />
     </Provider>,
     document.getElementById('edit-container')
