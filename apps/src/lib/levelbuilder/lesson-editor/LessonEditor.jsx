@@ -9,8 +9,17 @@ import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
 import AnnouncementsEditor from '@cdo/apps/lib/levelbuilder/announcementsEditor/AnnouncementsEditor';
 import CollapsibleEditorSection from '@cdo/apps/lib/levelbuilder/CollapsibleEditorSection';
 import RelatedLessons from './RelatedLessons';
-import {relatedLessonShape} from '../shapes';
+import {
+  relatedLessonShape,
+  activityShape,
+  resourceShape
+} from '@cdo/apps/lib/levelbuilder/shapes';
 import color from '@cdo/apps/util/color';
+import $ from 'jquery';
+import {connect} from 'react-redux';
+import {getSerializedActivities} from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import {navigateToHref} from '@cdo/apps/utils';
 
 const styles = {
   editor: {
@@ -47,11 +56,26 @@ const styles = {
   },
   saveButton: {
     margin: '10px 50px 10px 20px'
+  },
+  spinner: {
+    fontSize: 25,
+    padding: 10
+  },
+  lastSaved: {
+    fontSize: 14,
+    color: color.level_perfect,
+    padding: 15
+  },
+  error: {
+    fontSize: 14,
+    color: color.red,
+    padding: 15
   }
 };
 
-export default class LessonEditor extends Component {
+class LessonEditor extends Component {
   static propTypes = {
+    id: PropTypes.number.isRequired,
     initialDisplayName: PropTypes.string.isRequired,
     initialOverview: PropTypes.string,
     initialStudentOverview: PropTypes.string,
@@ -63,13 +87,18 @@ export default class LessonEditor extends Component {
     initialPreparation: PropTypes.string,
     initialAnnouncements: PropTypes.arrayOf(announcementShape),
     relatedLessons: PropTypes.arrayOf(relatedLessonShape).isRequired,
-    initialObjectives: PropTypes.arrayOf(PropTypes.object).isRequired
+    initialObjectives: PropTypes.arrayOf(PropTypes.object).isRequired,
+    activities: PropTypes.arrayOf(activityShape).isRequired,
+    resources: PropTypes.arrayOf(resourceShape).isRequired
   };
 
   constructor(props) {
     super(props);
 
     this.state = {
+      isSaving: false,
+      error: null,
+      lastSaved: null,
       displayName: this.props.initialDisplayName,
       overview: this.props.initialOverview,
       studentOverview: this.props.initialStudentOverview,
@@ -83,6 +112,44 @@ export default class LessonEditor extends Component {
       objectives: this.props.initialObjectives
     };
   }
+
+  handleSave = (event, shouldCloseAfterSave) => {
+    event.preventDefault();
+
+    this.setState({isSaving: true, lastSaved: null, error: null});
+
+    $.ajax({
+      url: `/lessons/${this.props.id}`,
+      method: 'PUT',
+      dataType: 'json',
+      contentType: 'application/json;charset=UTF-8',
+      data: JSON.stringify({
+        name: this.state.displayName,
+        lockable: this.state.lockable,
+        creativeCommonsLicense: this.state.creativeCommonsLicense,
+        assessment: this.state.assessment,
+        unplugged: this.state.unplugged,
+        overview: this.state.overview,
+        studentOverview: this.state.studentOverview,
+        purpose: this.state.purpose,
+        preparation: this.state.preparation,
+        objectives: JSON.stringify(this.state.objectives),
+        activities: getSerializedActivities(this.props.activities),
+        resources: JSON.stringify(this.props.resources.map(r => r.key)),
+        announcements: this.state.announcements
+      })
+    })
+      .done(data => {
+        if (shouldCloseAfterSave) {
+          navigateToHref(`/lessons/${this.props.id}${window.location.search}`);
+        } else {
+          this.setState({lastSaved: data.updated_at, isSaving: false});
+        }
+      })
+      .fail(error => {
+        this.setState({isSaving: false, error: error.responseText});
+      });
+  };
 
   handleUpdateAnnouncements = newAnnouncements => {
     this.setState({announcements: newAnnouncements});
@@ -112,7 +179,6 @@ export default class LessonEditor extends Component {
         <label>
           Title
           <input
-            name="name"
             value={displayName}
             style={styles.input}
             onChange={e => this.setState({displayName: e.target.value})}
@@ -128,7 +194,6 @@ export default class LessonEditor extends Component {
           <label>
             Lockable
             <input
-              name="lockable"
               type="checkbox"
               checked={lockable}
               style={styles.checkbox}
@@ -145,7 +210,6 @@ export default class LessonEditor extends Component {
           <label>
             Assessment
             <input
-              name="assessment"
               type="checkbox"
               checked={assessment}
               style={styles.checkbox}
@@ -158,7 +222,6 @@ export default class LessonEditor extends Component {
           <label>
             Unplugged Lesson
             <input
-              name="unplugged"
               type="checkbox"
               checked={unplugged}
               style={styles.checkbox}
@@ -173,7 +236,6 @@ export default class LessonEditor extends Component {
           <label>
             Creative Commons Image
             <select
-              name="creativeCommonsLicense"
               style={styles.dropdown}
               value={creativeCommonsLicense}
               onChange={e =>
@@ -273,16 +335,51 @@ export default class LessonEditor extends Component {
           <ActivitiesEditor />
         </CollapsibleEditorSection>
 
-        <div style={styles.saveButtonBackground}>
+        <div style={styles.saveButtonBackground} className="saveBar">
+          {this.state.lastSaved && !this.state.error && (
+            <div style={styles.lastSaved} className="lastSavedMessage">
+              {`Last saved at: ${new Date(
+                this.state.lastSaved
+              ).toLocaleString()}`}
+            </div>
+          )}
+          {this.state.error && (
+            <div style={styles.error}>
+              {`Error Saving: ${this.state.error}`}
+            </div>
+          )}
+          {this.state.isSaving && (
+            <div style={styles.spinner}>
+              <FontAwesome icon="spinner" className="fa-spin" />
+            </div>
+          )}
+          <button
+            className="btn"
+            type="button"
+            style={styles.saveButton}
+            onClick={e => this.handleSave(e, false)}
+            disabled={this.state.isSaving}
+          >
+            Save and Keep Editing
+          </button>
           <button
             className="btn btn-primary"
             type="submit"
             style={styles.saveButton}
+            onClick={e => this.handleSave(e, true)}
+            disabled={this.state.isSaving}
           >
-            Save Changes
+            Save and Close
           </button>
         </div>
       </div>
     );
   }
 }
+
+export const UnconnectedLessonEditor = LessonEditor;
+
+export default connect(state => ({
+  activities: state.activities,
+  resources: state.resources
+}))(LessonEditor);
