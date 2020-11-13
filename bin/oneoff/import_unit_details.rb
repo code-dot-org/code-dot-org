@@ -100,7 +100,7 @@ def main(options)
 
     lesson_pairs.each do |lesson, cb_lesson|
       lesson.update_from_curriculum_builder(cb_lesson)
-      log("update lesson #{lesson.id} with cb lesson data: #{cb_lesson_data.to_json[0, 50]}...")
+      log("update lesson #{lesson.id} with cb lesson data: #{cb_lesson.to_json[0, 50]}...")
     end
     script.lessons.select(&:lockable).each(&:update_from_curriculum_builder)
     script.fix_script_level_positions

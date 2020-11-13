@@ -2,20 +2,8 @@
 module LessonImportHelper
   # Lockable lessons don't need to be merged with curriculumbuilder, but we do
   # need the levels to be part of an activity section.
-  def self.update_lockable_lesson(levels, lesson_id)
-    lesson_activity = LessonActivity.new
-    lesson_activity.lesson_id = lesson_id
-    lesson_activity.seeding_key = SecureRandom.uuid
-    lesson_activity.position = 1
-    activity_section = ActivitySection.new
-    activity_section.seeding_key = SecureRandom.uuid
-    activity_section.position = 1
-    activity_section.lesson_activity = lesson_activity
-    activity_section.save!
-    activity_section.update_script_levels(levels)
-    lesson_activity.activity_sections = [activity_section]
-    activity_section.save!
-    [lesson_activity]
+  def self.update_lockable_lesson(script_levels, lesson_id)
+    [create_activity_with_levels(script_levels, lesson_id, 1)]
   end
 
   def self.create_activity_sections(activity_markdown)
@@ -35,7 +23,8 @@ module LessonImportHelper
       key = match[:match][3] || "#{match[:match][1]}-0"
       tip_match_map[key] = match
     end
-    sorted_matches.each_with_index do |match, i|
+    position = 1
+    sorted_matches.each do |match|
       activity_section = nil
       if match[:type] == 'skippable' || match[:type] == 'tip'
         next
@@ -51,7 +40,8 @@ module LessonImportHelper
         activity_section = ActivitySection.new(description: match[:substring].strip)
       end
       next unless activity_section
-      activity_section.position = i + 1
+      activity_section.position = position
+      position += 1
       activity_section.slide = slide
       slide = false
       activity_section.seeding_key ||= SecureRandom.uuid
@@ -84,15 +74,9 @@ module LessonImportHelper
 
     # Create a lesson with all the levels in them
     # TODO use the [code-studio] syntax from CB instead
-    @lesson_activity = LessonActivity.new
-    @lesson_activity.name = "Levels"
-    @lesson_activity.lesson_id = lesson_id
-    @lesson_activity.seeding_key = SecureRandom.uuid
-    @lesson_activity.position = activities.length + 1
-    @lesson_activity.save!
-    @lesson_activity.reload
-    @lesson_activity.activity_sections = [create_activity_section_with_level_ranges(0, levels.count - 1, levels)]
-    activities.push(@lesson_activity)
+    unless levels.empty?
+      activities.push(create_activity_with_levels(levels, lesson_id, activities.length + 1))
+    end
     activities.flatten
   end
 
@@ -107,20 +91,51 @@ module LessonImportHelper
     markdown.to_enum(:scan, regex).map {Regexp.last_match}
   end
 
-  def self.create_activity_section_with_level_ranges(range_start, range_end, levels)
+  def self.create_activity_with_levels(levels, lesson_id, position)
+    lesson_activity = LessonActivity.new
+    lesson_activity.name = "Levels"
+    lesson_activity.lesson_id = lesson_id
+    lesson_activity.seeding_key = SecureRandom.uuid
+    lesson_activity.position = position
+    lesson_activity.save!
+    lesson_activity.reload
+    activity_sections = []
+    current_progression_levels = []
+    current_progression = nil
+    levels.each do |level|
+      if current_progression.nil? || current_progression == level.progression
+        current_progression = level.progression if current_progression.nil?
+        current_progression_levels.push(level)
+      else
+        section = create_activity_section_with_levels(current_progression_levels, lesson_activity.id)
+        section.name = current_progression
+        section.position = activity_sections.length + 1
+        section.save!
+        activity_sections.push(section)
+        current_progression_levels = [level]
+        current_progression = level.progression
+      end
+    end
+    unless current_progression_levels.empty?
+      section = create_activity_section_with_levels(current_progression_levels, lesson_activity.id)
+      section.name = current_progression
+      section.position = activity_sections.length + 1
+      section.save!
+      activity_sections.push(section)
+    end
+    lesson_activity.activity_sections = activity_sections
+    lesson_activity
+  end
+
+  def self.create_activity_section_with_levels(script_levels, lesson_activity_id)
+    return nil if script_levels.empty?
     activity_section = ActivitySection.new
     activity_section.seeding_key ||= SecureRandom.uuid
     activity_section.position = 0
-    activity_section.lesson_activity = @lesson_activity
-    activity_section.lesson_activity_id = @lesson_activity.id
+    activity_section.lesson_activity_id = lesson_activity_id
     activity_section.save!
-    unless levels.empty?
-      sl_data = levels.slice(range_start..range_end)
-
-      sl_data = sl_data.select {|sl| !sl["inActivitySection"]}
-      activity_section.update_script_levels(sl_data) unless sl_data.blank?
-      sl_data.each {|sl| sl["inActivitySection"] = true}
-    end
+    sl_data = script_levels.each_with_index.map {|l, i| JSON.parse({id: l.id, assessment: l.assessment, bonus: l.bonus, challenge: l.challenge, levels: l.levels, activitySectionPosition: i}.to_json)}
+    activity_section.update_script_levels(sl_data) unless sl_data.blank?
     activity_section
   end
 
