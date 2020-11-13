@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20201029231229) do
+ActiveRecord::Schema.define(version: 20201113054822) do
 
   create_table "activities", id: :integer, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer "user_id"
@@ -30,13 +30,13 @@ ActiveRecord::Schema.define(version: 20201029231229) do
 
   create_table "activity_sections", id: :integer, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer "lesson_activity_id", null: false
-    t.string "seeding_key", null: false, comment: "unique key which is stable across environments for seeding purposes"
+    t.string "key", null: false
     t.integer "position", null: false
     t.text "properties"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["key"], name: "index_activity_sections_on_key", unique: true
     t.index ["lesson_activity_id"], name: "index_activity_sections_on_lesson_activity_id"
-    t.index ["seeding_key"], name: "index_activity_sections_on_seeding_key", unique: true
   end
 
   create_table "ap_cs_offerings", id: :integer, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
@@ -534,13 +534,13 @@ ActiveRecord::Schema.define(version: 20201029231229) do
 
   create_table "lesson_activities", id: :integer, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer "lesson_id", null: false
-    t.string "seeding_key", null: false, comment: "unique key which is stable across environments for seeding purposes"
+    t.string "key", null: false
     t.integer "position", null: false
     t.text "properties"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["key"], name: "index_lesson_activities_on_key", unique: true
     t.index ["lesson_id"], name: "index_lesson_activities_on_lesson_id"
-    t.index ["seeding_key"], name: "index_lesson_activities_on_seeding_key", unique: true
   end
 
   create_table "lesson_groups", id: :integer, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
