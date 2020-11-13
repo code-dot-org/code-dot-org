@@ -95,8 +95,8 @@ export const commands = {
     actionCommands.setProp.apply(this, [spriteArg, prop, val]);
   },
 
-  setQuestion(questionText, variableName, callback) {
-    worldCommands.setQuestion(questionText, variableName, callback);
+  setPrompt(promptText, variableName, callback) {
+    worldCommands.setPrompt(promptText, variableName, callback);
   },
 
   setTint(spriteArg, color) {
