@@ -112,6 +112,8 @@ def main(options)
       lesson_group.update_from_curriculum_builder(cb_chapter)
     end
 
+    script.update!(show_calendar: !!cb_unit['show_calendar'])
+
     puts "updated #{updated_lesson_group_count} lesson groups in unit #{script.name}"
   end
 end
