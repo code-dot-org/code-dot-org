@@ -149,8 +149,8 @@ export const commands = {
     eventCommands.spriteClicked(condition, spriteArg, callback);
   },
 
-  whenQuestionAnswered(variableName, callback) {
-    eventCommands.whenQuestionAnswered(variableName, callback);
+  whenPromptAnswered(variableName, callback) {
+    eventCommands.whenPromptAnswered(variableName, callback);
   },
 
   // Location commands
