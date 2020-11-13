@@ -16,7 +16,7 @@ const defaultProps = {
   title: 'Computer Science Principles 2017',
   familyName: 'CSP',
   versionYear: '2017',
-  visible: false,
+  initialVisible: false,
   isStable: false,
   descriptionShort: 'Desc here',
   initialDescriptionStudent:
@@ -91,7 +91,7 @@ describe('CourseEditor', () => {
     });
 
     it('is checked when visible is true', () => {
-      const wrapper = createWrapper({visible: true});
+      const wrapper = createWrapper({initialVisible: true});
       const checkbox = wrapper.find('input[name="visible"]');
       expect(checkbox.prop('checked')).to.be.true;
     });
