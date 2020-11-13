@@ -118,7 +118,7 @@ class VisualizerModal extends React.Component {
     return values;
   });
 
-  filterRecords = memoize((records = [], column, operator, value) => {
+  filterRecords = memoize((records = [], column, value, operator = '=') => {
     let parsedValue;
     if (isNumber(value)) {
       parsedValue = parseFloat(value);
@@ -138,6 +138,12 @@ class VisualizerModal extends React.Component {
     }
     if (operator === '<') {
       return records.filter(record => record[column] < parsedValue);
+    }
+    if (operator === '<=') {
+      return records.filter(record => record[column] <= parsedValue);
+    }
+    if (operator === '>=') {
+      return records.filter(record => record[column] >= parsedValue);
     }
     return records.filter(record => record[column] === parsedValue);
   });
@@ -160,8 +166,12 @@ class VisualizerModal extends React.Component {
     switch (operator) {
       case '>':
         return msg.greaterThan();
+      case '>=':
+        return msg.greaterThanOrEqualTo();
       case '<':
         return msg.lessThan();
+      case '<=':
+        return msg.lessThanOrEqualTo();
       default:
         return msg.equalTo();
     }
@@ -212,8 +222,8 @@ class VisualizerModal extends React.Component {
       filteredRecords = this.filterRecords(
         parsedRecords,
         this.state.filterColumn,
-        this.state.filterOperator,
-        this.state.filterValue
+        this.state.filterValue,
+        this.state.filterOperator
       );
     }
     const numericColumns = this.findNumericColumns(
@@ -384,7 +394,7 @@ class VisualizerModal extends React.Component {
               {displayNumericFilters && (
                 <DropdownField
                   displayName={msg.by()}
-                  options={['>', '=', '<']}
+                  options={['>', '>=', '=', '<=', '<']}
                   getDisplayNameForOption={this.getDisplayNameForOperator}
                   disabledOptions={[]}
                   value={this.state.filterOperator}
