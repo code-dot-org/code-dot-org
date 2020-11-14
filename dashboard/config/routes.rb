@@ -754,4 +754,9 @@ Dashboard::Application.routes.draw do
   get '/form/:misc_form_path', to: 'foorm/misc_survey#new'
 
   post '/i18n/track_string_usage', action: :track_string_usage, controller: :i18n
+
+  namespace :foorm do
+    post 'form/(*name)/:version', action: :create, controller: :forms
+    put 'form/(*name)/:version', action: :update, controller: :forms
+  end
 end
