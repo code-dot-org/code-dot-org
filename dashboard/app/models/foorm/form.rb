@@ -24,6 +24,8 @@ class Foorm::Form < ActiveRecord::Base
   has_many :submissions, foreign_key: [:form_name, :form_version], primary_key: [:name, :version]
   validate :validate_questions
 
+  after_save :write_form_file
+
   # We have a uniqueness constraint on form name and version for this table.
   # This key format is used elsewhere in Foorm to uniquely identify a form.
   def key
@@ -58,6 +60,18 @@ class Foorm::Form < ActiveRecord::Base
     transaction do
       Foorm::Form.delete_all
       Foorm::Form.import! forms
+    end
+  end
+
+  def validate_questions
+    errors_arr = Foorm::Form.validate_questions(JSON.parse(questions))
+    errors_arr.each {|error| errors[:questions] << error}
+  end
+
+  def write_form_file
+    if write_to_file? && saved_changes?
+      file_path = Rails.root.join("config/foorm/forms/#{name}.#{version}.json")
+      File.write(file_path, questions)
     end
   end
 
@@ -100,13 +114,6 @@ class Foorm::Form < ActiveRecord::Base
       end
     end
     return questions
-  end
-
-  def validate_questions
-    errors_arr = Foorm::Form.validate_questions(JSON.parse(questions))
-    unless errors_arr.empty?
-      errors.add(:questions, errors_arr)
-    end
   end
 
   def self.validate_questions(questions)
@@ -331,5 +338,9 @@ class Foorm::Form < ActiveRecord::Base
         [question_id + "_#{number}", "Facilitator #{number}: " + question_text]
       end
     ]
+  end
+
+  def write_to_file?
+    Rails.application.config.levelbuilder_mode
   end
 end
