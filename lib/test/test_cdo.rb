@@ -30,5 +30,8 @@ class CdoTest < Minitest::Test
 
     # correctly handles full CB link
     assert_equal CDO.curriculum_url("es-mx", "https://curriculum.code.org/test"), "https://curriculum.code.org/es-mx/test"
+
+    # correctly handles undefined uri
+    assert_nil CDO.curriculum_url("es-mx", nil)
   end
 end
