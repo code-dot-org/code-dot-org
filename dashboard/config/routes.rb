@@ -504,6 +504,7 @@ Dashboard::Application.routes.draw do
       get 'foorm/form_data', action: :get_form_data, controller: 'foorm'
       get 'foorm/submissions_csv', action: :get_submissions_as_csv, controller: 'foorm'
       get 'foorm/form_names', action: :get_form_names_and_versions, controller: 'foorm'
+      post 'foorm/validate_form', action: :validate_form, controller: 'foorm'
     end
   end
 
