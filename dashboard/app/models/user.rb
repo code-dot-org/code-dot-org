@@ -2263,20 +2263,31 @@ class User < ActiveRecord::Base
     properties['section_attempts'] || 0
   end
 
+  def reset_section_attempts?
+    num_failed_section_attempts == 0 || (DateTime.now - DateTime.parse(properties['section_attempts_date'])).to_i > 0
+  end
+
+  # If 24 hours has passed, reset the section attempts value to zero.
+  # Initialize the key/value pair in properties if it does not yet exist.
+  def reset_failed_section_attempts
+    if reset_section_attempts?
+      properties['section_attempts'] = 0
+      properties['section_attempts_date'] = DateTime.now.to_s
+      save(validate: false)
+    end
+  end
+
   # Force user to complete a captcha after 3 failed join section attempts within 24 hours
+  # Check to see if 24 hours have passed. If so, reset to zero.
   def display_captcha
-    properties['section_attempts'] && properties['section_attempts'] > 3
+    reset_failed_section_attempts
+    num_failed_section_attempts > 3
   end
 
   # Failed section attemps reset every day
   def update_section_attempts
-    # if the user never joined a section or not in the last 24 hours
-    if num_failed_section_attempts == 0 || ((DateTime.parse(properties['section_attempts_date']) - DateTime.now) * 24).to_i > 0
-      properties['section_attempts'] = 1
-      properties['section_attempts_date'] = DateTime.now.to_s
-    else
-      properties.merge!({'section_attempts' => 1}) {|_, old_val, increment_val| old_val + increment_val}
-    end
+    reset_failed_section_attempts
+    properties.merge!({'section_attempts' => 1}) {|_, old_val, increment_val| old_val + increment_val}
     save(validate: false)
   end
 
