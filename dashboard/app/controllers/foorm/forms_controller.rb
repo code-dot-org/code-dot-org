@@ -13,9 +13,9 @@ module Foorm
       unless form_query.any?
         return render(status: 500, plain: "Form with name #{form_name} and version #{form_version} does not already exist.")
       end
+
       form = Foorm::Form.where(name: form_name, version: form_version).first
       form.questions = form_questions
-
       save_form(form)
     end
 
@@ -27,6 +27,7 @@ module Foorm
       if Foorm::Form.where(name: form_name, version: form_version).any?
         return render(status: 409, plain: "Form with name #{form_name} and version #{form_version} already exists")
       end
+
       form = Foorm::Form.new(name: form_name, version: form_version, questions: form_questions)
       save_form(form)
     end
