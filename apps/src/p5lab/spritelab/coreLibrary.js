@@ -151,7 +151,7 @@ export function deleteSprite(spriteId) {
   delete nativeSpriteMap[spriteId];
 }
 
-export function registerQuestion(questionText, variableName, setterCallback) {
+export function registerPrompt(promptText, variableName, setterCallback) {
   if (!userInputEventCallbacks[variableName]) {
     userInputEventCallbacks[variableName] = {
       setterCallbacks: [],
@@ -161,7 +161,7 @@ export function registerQuestion(questionText, variableName, setterCallback) {
   userInputEventCallbacks[variableName].setterCallbacks.push(setterCallback);
 }
 
-export function registerQuestionAnswerCallback(variableName, userCallback) {
+export function registerPromptAnswerCallback(variableName, userCallback) {
   if (!userInputEventCallbacks[variableName]) {
     userInputEventCallbacks[variableName] = {
       setterCallbacks: [],
@@ -171,7 +171,7 @@ export function registerQuestionAnswerCallback(variableName, userCallback) {
   userInputEventCallbacks[variableName].userCallbacks.push(userCallback);
 }
 
-export function onQuestionAnswer(variableName, userInput) {
+export function onPromptAnswer(variableName, userInput) {
   const callbacks = userInputEventCallbacks[variableName];
   if (callbacks) {
     // Make sure to call the setter callback to set the variable
