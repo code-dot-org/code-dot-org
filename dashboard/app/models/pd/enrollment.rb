@@ -29,8 +29,6 @@
 require 'cdo/code_generation'
 require 'cdo/safe_names'
 
-EMAIL_UNIQUE_ERROR_MESSAGE = 'has already been used to enroll in this workshop. Please contact support@code.org if you need assistance.'
-
 class Pd::Enrollment < ActiveRecord::Base
   include SchoolInfoDeduplicator
   include Rails.application.routes.url_helpers
@@ -61,7 +59,7 @@ class Pd::Enrollment < ActiveRecord::Base
   validates_presence_of :email, unless: :deleted?
   validates_confirmation_of :email, unless: :deleted?
   validates_email_format_of :email, allow_blank: true
-  validates :email, uniqueness: {scope: :pd_workshop_id, message: EMAIL_UNIQUE_ERROR_MESSAGE}, unless: :deleted?
+  validates :email, uniqueness: {scope: :pd_workshop_id, message: 'already enrolled in workshop'}, unless: :deleted?
 
   validate :school_forbidden, if: -> {new_record? || school_changed?}
   validates_presence_of :school_info, unless: -> {deleted? || created_before_school_info?}
