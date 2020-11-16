@@ -68,6 +68,20 @@
         "lesson_group.key": "",
         "script.name": "ml-playground"
       }
+    },
+    {
+      "key": "AI for Oceans",
+      "name": "AI for Oceans",
+      "absolute_position": 4,
+      "lockable": false,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "AI for Oceans",
+        "lesson_group.key": "",
+        "script.name": "ml-playground"
+      }
     }
   ],
   "script_levels": [

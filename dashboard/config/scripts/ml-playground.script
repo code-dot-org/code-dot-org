@@ -32,3 +32,5 @@ level 'ml-candy modify-4', progression: 'Candy Predictor'
 level 'ml-candy modify-5', progression: 'Candy Predictor'
 level 'ml-candy modify-6', progression: 'Candy Predictor'
 
+lesson 'AI for Oceans', display_name: 'AI for Oceans'
+
