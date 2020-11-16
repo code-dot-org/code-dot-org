@@ -1,26 +1,20 @@
 require 'aws-sdk-s3'
 require 'cdo/aws/s3'
 
-ML_MODELS_BUCKET = 'cdo-v3-trained-ml-models'.freeze
+class Api::V1::MlModelsController < ApplicationController
+  skip_before_action :verify_authenticity_token
 
-class Api::V1::MLModelsController < Api::V1::JsonApiController
-  authorize_resource
-
-  # POST api/v1//ml_models
+  # POST api/v1//ml_models/:model_id/save
   # Save a trained ML model to S3
   def create
-    puts
-    puts
-    puts "Create ML Models was called!"
-    puts
-    puts
-    upload_to_s3(@model.id, @model.trained_model)
+    upload_to_s3(params[:model_id], params[:ml_model].to_json)
+    render json: "hooray!"
   end
 
   private
 
   def upload_to_s3(model_id, trained_model)
-    AWS::S3.upload_to_bucket(ML_MODELS_BUCKET, model_id, trained_model, no_random: true)
+    AWS::S3.upload_to_bucket('cdo-v3-trained-ml-models', model_id, trained_model, no_random: true)
   end
 
   # Never trust parameters from the scary internet, only allow the white list through.
