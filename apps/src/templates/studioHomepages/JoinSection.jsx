@@ -5,6 +5,7 @@ import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 import styleConstants from '../../styleConstants';
 import Button from '@cdo/apps/templates/Button';
+import ReCaptchaValidationDialog from './ReCaptchaValidationDialog';
 
 const styles = {
   main: {
@@ -62,18 +63,23 @@ const styles = {
   },
   clear: {
     clear: 'both'
+  },
+  dialog: {
+    padding: '20px'
   }
 };
 
 const INITIAL_STATE = {
-  sectionCode: ''
+  sectionCode: '',
+  displayCaptchaDialog: false
 };
 
 export default class JoinSection extends React.Component {
   static propTypes = {
     enrolledInASection: PropTypes.bool.isRequired,
     updateSections: PropTypes.func.isRequired,
-    updateSectionsResult: PropTypes.func.isRequired
+    updateSectionsResult: PropTypes.func.isRequired,
+    requireCaptcha: PropTypes.bool.isRequired
   };
 
   state = {...INITIAL_STATE};
@@ -88,10 +94,19 @@ export default class JoinSection extends React.Component {
     }
   };
 
+  joinSectionIfVerified = () => {
+    if (!this.props.requireCaptcha) {
+      this.joinSection();
+    } else {
+      this.setState({displayCaptchaDialog: true});
+    }
+  };
+
+  normalizeSectionCode = () => this.state.sectionCode.trim().toUpperCase();
+
   joinSection = () => {
     const sectionCode = this.state.sectionCode;
-    const normalizedSectionCode = sectionCode.trim().toUpperCase();
-
+    const normalizedSectionCode = this.normalizedSectionCode();
     this.setState(INITIAL_STATE);
 
     $.post({
@@ -124,6 +139,8 @@ export default class JoinSection extends React.Component {
       });
   };
 
+  close = () => this.setState({displayCaptchaDialog: false});
+
   render() {
     const {enrolledInASection} = this.props;
 
@@ -150,13 +167,21 @@ export default class JoinSection extends React.Component {
           />
           <Button
             __useDeprecatedTag
-            onClick={this.joinSection}
+            onClick={this.joinSectionIfVerified}
             color={Button.ButtonColor.gray}
             text={i18n.joinSection()}
             style={styles.button}
           />
         </div>
         <div style={styles.clear} />
+        {this.state.displayCaptchaDialog && (
+          <ReCaptchaValidationDialog
+            onVerification={this.joinSection}
+            isOpen={this.state.displayCaptchaDialog}
+            handleClose={this.close}
+            sectionCode={this.normalizeSectionCode()}
+          />
+        )}
       </div>
     );
   }

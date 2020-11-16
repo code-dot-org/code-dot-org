@@ -20,7 +20,8 @@ export default class StudentHomepage extends Component {
     sections: shapes.sections,
     canViewAdvancedTools: PropTypes.bool,
     studentId: PropTypes.number.isRequired,
-    isEnglish: PropTypes.bool.isRequired
+    isEnglish: PropTypes.bool.isRequired,
+    requireCaptcha: PropTypes.bool.isRequired
   };
 
   componentDidMount() {
@@ -31,7 +32,14 @@ export default class StudentHomepage extends Component {
   }
 
   render() {
-    const {courses, sections, topCourse, hasFeedback, isEnglish} = this.props;
+    const {
+      courses,
+      sections,
+      topCourse,
+      hasFeedback,
+      isEnglish,
+      requireCaptcha
+    } = this.props;
     const {canViewAdvancedTools, studentId} = this.props;
     // Verify background image works for both LTR and RTL languages.
     const backgroundUrl = '/shared/images/banners/teacher-homepage-hero.jpg';
@@ -57,7 +65,10 @@ export default class StudentHomepage extends Component {
             canViewFullList={true}
             canViewAdvancedTools={canViewAdvancedTools}
           />
-          <StudentSections initialSections={sections} />
+          <StudentSections
+            initialSections={sections}
+            requireCaptcha={requireCaptcha}
+          />
         </div>
       </div>
     );

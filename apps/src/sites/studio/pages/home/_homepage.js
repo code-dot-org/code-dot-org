@@ -80,6 +80,7 @@ function showHomepage() {
             schoolYear={homepageData.currentSchoolYear}
             specialAnnouncement={specialAnnouncement}
             mapboxAccessToken={mapboxAccessToken}
+            requireCaptcha={homepageData.requireCaptcha}
           />
         )}
         {!isTeacher && (
@@ -91,6 +92,7 @@ function showHomepage() {
             canViewAdvancedTools={homepageData.canViewAdvancedTools}
             studentId={homepageData.studentId}
             isEnglish={isEnglish}
+            requireCaptcha={homepageData.requireCaptcha}
           />
         )}
       </div>

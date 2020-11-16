@@ -46,7 +46,8 @@ export class UnconnectedTeacherHomepage extends Component {
     schoolYear: PropTypes.number,
     specialAnnouncement: shapes.specialAnnouncement,
     beginGoogleImportRosterFlow: PropTypes.func,
-    mapboxAccessToken: PropTypes.string
+    mapboxAccessToken: PropTypes.string,
+    requireCaptcha: PropTypes.bool.isRequired
   };
 
   state = {
@@ -174,7 +175,8 @@ export class UnconnectedTeacherHomepage extends Component {
       teacherEmail,
       canViewAdvancedTools,
       isEnglish,
-      specialAnnouncement
+      specialAnnouncement,
+      requireCaptcha
     } = this.props;
 
     // Whether we show the regular announcement/notification
@@ -277,7 +279,11 @@ export class UnconnectedTeacherHomepage extends Component {
             canViewFullList={true}
             canViewAdvancedTools={canViewAdvancedTools}
           />
-          <StudentSections initialSections={joinedSections} isTeacher={true} />
+          <StudentSections
+            initialSections={joinedSections}
+            isTeacher={true}
+            requireCaptcha={requireCaptcha}
+          />
         </div>
       </div>
     );

@@ -102,6 +102,7 @@ class HomeController < ApplicationController
     @homepage_data[:canViewAdvancedTools] = !(current_user.under_13? && current_user.terms_version.nil?)
     @homepage_data[:providers] = current_user.providers
     @homepage_data[:mapboxAccessToken] = CDO.mapbox_access_token
+    @homepage_data[:requireCaptcha] = current_user.display_captcha
 
     @force_race_interstitial = params[:forceRaceInterstitial]
     @force_school_info_confirmation_dialog = params[:forceSchoolInfoConfirmationDialog]
