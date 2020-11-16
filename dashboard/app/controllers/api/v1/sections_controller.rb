@@ -7,8 +7,10 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
 
   rescue_from ActiveRecord::RecordNotFound do |e|
     if e.model == "Section" && %w(join leave).include?(request.filtered_parameters['action'])
+      current_user.update_section_attempts
       render json: {
-        result: 'section_notfound'
+        result: 'section_notfound',
+        captchaRequired: current_user.display_captcha
       }, status: :bad_request
     else
       head :forbidden

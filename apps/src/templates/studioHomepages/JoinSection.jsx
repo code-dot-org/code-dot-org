@@ -82,7 +82,7 @@ export default class JoinSection extends React.Component {
     requireCaptcha: PropTypes.bool.isRequired
   };
 
-  state = {...INITIAL_STATE};
+  state = {...INITIAL_STATE, requireCaptcha: this.props.requireCaptcha};
 
   handleChange = event => this.setState({sectionCode: event.target.value});
 
@@ -95,7 +95,7 @@ export default class JoinSection extends React.Component {
   };
 
   joinSectionIfVerified = () => {
-    if (!this.props.requireCaptcha) {
+    if (!this.state.requireCaptcha) {
       this.joinSection();
     } else {
       this.setState({displayCaptchaDialog: true});
@@ -106,7 +106,7 @@ export default class JoinSection extends React.Component {
 
   joinSection = () => {
     const sectionCode = this.state.sectionCode;
-    const normalizedSectionCode = this.normalizedSectionCode();
+    const normalizedSectionCode = this.normalizeSectionCode();
     this.setState(INITIAL_STATE);
 
     $.post({
@@ -136,6 +136,11 @@ export default class JoinSection extends React.Component {
           null,
           normalizedSectionCode
         );
+        const displayCaptcha =
+          data.responseJSON && data.responseJSON.captchaRequired
+            ? data.responseJSON.captchaRequired
+            : false;
+        this.setState({requireCaptcha: displayCaptcha});
       });
   };
 
