@@ -300,6 +300,16 @@ class Foorm::FormTest < ActiveSupport::TestCase
     form.save
   end
 
+  test 'form only writes to file on save if it has changed' do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    File.expects(:write).once
+
+    # should write to file
+    form = create :foorm_form
+    # should not write to file, form did not change
+    form.save
+  end
+
   private
 
   def get_csv_string(expected_values)
