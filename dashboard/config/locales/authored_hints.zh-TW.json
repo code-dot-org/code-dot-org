@@ -1210,7 +1210,7 @@
         },
         "course1_collector_loops_challenge1": {
           "courseA_collector_loops_challenge1_a": "如果出錯了，可以試試修改每個迴圈裡的數值。",
-          "courseA_collector_loops_challenge1_b": "如果你只要執行某段指令一次，就不需要用到迴圈。",
+          "courseA_collector_loops_challenge1_b": "如果你的指令只需要執行一次，就不需要使用到迴圈。",
           "courseA_collector_loops_challenge1_c": "右邊的洞穴有 6 個寶石，而你只需移動並收集 5 次，你知道怎麼做嗎？"
         },
         "course1_collector_loops_challenge2": {
@@ -1245,15 +1245,15 @@
         },
         "course1_playlab_events_challenge1": {
           "courseA_playlab_events_challenge1_a": "當你點擊Robin的時候，你就可以看到企鵝的樣子了！\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n      </block>\n    </next>\n  </block></xml>",
-          "courseA_playlab_events_challenge1_b": "當你點擊企鵝時做鬼表演！\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n      </block>\n    </next>\n  </block></xml>",
-          "courseA_playlab_events_challenge1_c": "當你點擊Boo時，讓Jayden成為“模糊怪物秀”！\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n      </block>\n    </next>\n  </block></xml>",
-          "courseA_playlab_events_challenge1_d": "當你點擊怪物時，讓 Spiff 的機器人表演！\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_b": "當你點擊企鵝 (Waddles) ，讓幽靈 (Boo) 出現！\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_c": "當你點擊幽靈 (Boo) 時，讓毛茸茸的怪獸 (Jayden) 出現！\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_d": "當你點擊怪物時，讓 Spiff 機器人表演！\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n      </block>\n    </next>\n  </block></xml>",
           "courseA_playlab_events_challenge1_e": "最後，當你點擊 Spiff 時，讓巫師 Wendel 出現！\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">7</title>\n      </block>\n    </next>\n  </block></xml>"
         },
         "course1_playlab_events_challenge2": {
           "courseA_playlab_events_challenge2_a": "你可以讓一隻鳥唱歌。\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n          </block>\n    </next>\n  </block></xml>",
           "courseA_playlab_events_challenge2_b": "你可以讓機器人發出嗶嗶聲.\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n  </block></xml>",
-          "courseA_playlab_events_challenge2_c": "你可以製造一個憤怒的怪物咆哮。\n\n<xml>  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSpriteEmotion\">\n        <title name=\"SPRITE\">5</title>\n        <title name=\"VALUE\">2</title>\n        <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">5</title>\n            <title name=\"TEXT\">Roar!</title>\n            <next>\n              <block type=\"studio_setSpriteEmotion\">\n                <title name=\"SPRITE\">5</title>\n                <title name=\"VALUE\">0</title>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block></xml>"
+          "courseA_playlab_events_challenge2_c": "你可以製造一個正在咆哮的憤怒怪物。\n\n<xml>  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSpriteEmotion\">\n        <title name=\"SPRITE\">5</title>\n        <title name=\"VALUE\">2</title>\n        <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">5</title>\n            <title name=\"TEXT\">Roar!</title>\n            <next>\n              <block type=\"studio_setSpriteEmotion\">\n                <title name=\"SPRITE\">5</title>\n                <title name=\"VALUE\">0</title>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block></xml>"
         },
         "course2_artist_nestedLoops_challenge1": {
           "courseD_artist_nestedLoops_challenge1_a": "首先創建一個嵌套循環來創建四個八邊形。轉動45度生成八邊形。跳起來，然後每一個都轉90度。",
@@ -1397,11 +1397,11 @@
           "courseF_playlab_variables_challenge1_a": "您需要工具箱中的其他模塊才能讓演員講話。\n\n[blockly block] [0]"
         },
         "courseA_artist_loops2": {
-          "courseA_artist_loops2_a": "不清楚如何畫線？先將積木添加到 <xml><block type=\"when_run\"/></xml> 積木，看看會發生什麼。",
+          "courseA_artist_loops2_a": "不知道怎麼畫嗎？先將程式積木添加到 <xml><block type=\"when_run\"/></xml> 積木中，看看會發生什麼事。",
           "courseA_artist_loops2_b": "使用這個積木 <xml><block type=\"simple_move_right\"/></xml> 來過關。"
         },
         "courseA_artist_loops2_2018": {
-          "courseA_artist_loops2_a": "不清楚如何畫線？先將積木添加到 <xml><block type=\"when_run\"/></xml> 積木，看看會發生什麼。",
+          "courseA_artist_loops2_a": "不知道怎麼畫嗎？先將程式積木添加到 <xml><block type=\"when_run\"/></xml> 積木中，看看會發生什麼事。",
           "courseA_artist_loops2_b": "使用這個積木 <xml><block type=\"simple_move_right\"/></xml> 來過關。"
         },
         "courseA_artist_loops2_2019": {
@@ -1413,20 +1413,20 @@
           "courseA_artist_loops2_b": "使用這個積木 <xml><block type=\"simple_move_right\"/></xml> 來過關。"
         },
         "courseA_artist_loops3": {
-          "courseA_artist_loops3_a": "用手指在程式中緩慢跟蹤，來查看錯誤的地方。",
-          "courseA_artist_loops3_b": "你會想要用一個像這樣的程式積木來過這個關卡。\n\n![](<https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png>)"
+          "courseA_artist_loops3_a": "在程式中，用手指慢慢追蹤程式碼運行的過程，來查看錯誤的地方。",
+          "courseA_artist_loops3_b": "你會想要用一個像這樣的程式積木，來通過這個關卡。\n\n![](<https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png>)"
         },
         "courseA_artist_loops3_2018": {
-          "courseA_artist_loops3_a": "用手指在程式中緩慢跟蹤，來查看錯誤的地方。",
-          "courseA_artist_loops3_b": "你會想要用一個像這樣的程式積木來過這個關卡。\n\n![](<https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png>)"
+          "courseA_artist_loops3_a": "在程式中，用手指慢慢追蹤程式碼運行的過程，來查看錯誤的地方。",
+          "courseA_artist_loops3_b": "你會想要用一個像這樣的程式積木，來通過這個關卡。\n\n![](<https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png>)"
         },
         "courseA_artist_loops3_2019": {
           "courseA_artist_loops3_a": "用手指在程式中緩慢跟蹤，來查看錯誤的地方。",
-          "courseA_artist_loops3_b": "你會想要用一個像這樣的程式積木來過這個關卡。\n\n![](<https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png>)"
+          "courseA_artist_loops3_b": "你會想要用一個像這樣的程式積木，來通過這個關卡。\n\n![](<https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png>)"
         },
         "courseA_artist_loops3_2020": {
           "courseA_artist_loops3_a": "用手指在程式中緩慢跟蹤，來查看錯誤的地方。",
-          "courseA_artist_loops3_b": "你會想要用一個像這樣的程式積木來過這個關卡。\n\n![](<https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png>)"
+          "courseA_artist_loops3_b": "你會想要用一個像這樣的程式積木，來通過這個關卡。\n\n![](<https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png>)"
         },
         "courseA_artist_loops4": {
           "courseA_artist_loops4_a": "如果你想要重複程式 4 次以上，你可以修改積木上的數字。",
@@ -1445,14 +1445,14 @@
           "courseA_artist_loops4_b": "因為你只能用一個 <xml><block type=\"simple_move_right\"/></xml>\n\n程式積木，所以試試將它放在 <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"2-6\">5</title></block></xml> 迴圈裡。"
         },
         "courseA_artist_loops5": {
-          "courseA_artist_loops5_a": "試著用你學到的 <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> 來完成這個關卡！",
+          "courseA_artist_loops5_a": "試著用你學到的重複積木來完成這個關卡！",
           "courseA_artist_loops5_b": "如果你想要重複程式 4 次以上，你可以修改積木上的數字。",
-          "courseA_artist_loops5_c": "因為你只能用一個 <xml><block type=\"simple_move_right\"/></xml> 程式積木，所以試試將它放在 \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>\n\n迴圈裡。"
+          "courseA_artist_loops5_c": "因為你只能用一個 <xml><block type=\"simple_move_right\"/></xml> 程式積木，所以試著將它放在 \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>\n\n迴圈裡。"
         },
         "courseA_artist_loops5_2018": {
           "courseA_artist_loops5_a": "試著用你學到的 <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> 來完成這個關卡！",
           "courseA_artist_loops5_b": "如果你想要重複程式 4 次以上，你可以修改積木上的數字。",
-          "courseA_artist_loops5_c": "因為你只能用一個 <xml><block type=\"simple_move_right\"/></xml> 程式積木，所以試試將它放在 \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>\n\n迴圈裡。"
+          "courseA_artist_loops5_c": "因為你只能用一個 <xml><block type=\"simple_move_right\"/></xml> 程式積木，所以試著將它放在 \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>\n\n迴圈裡。"
         },
         "courseA_artist_loops5_2019": {
           "courseA_artist_loops5_a": "試著用你學到的 <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> 來完成這個關卡！",
@@ -1465,29 +1465,29 @@
           "courseA_artist_loops5_c": "因為你只能用一個 <xml><block type=\"simple_move_right\"/></xml> 程式積木，所以試試將它放在 \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>\n\n迴圈裡。"
         },
         "courseA_artist_loops6": {
-          "courseA_artist_loops6_a": "不清楚怎樣造出一座山？嘗試不同的積木，看看每個積木都有什麼作用。",
-          "courseA_artist_loops6_b": "你將會需要兩個不同方向的程式積木來過這一關。"
+          "courseA_artist_loops6_a": "不清楚如何創造出一座山？嘗試使用不同的積木，看看每個積木有什麼樣的作用。",
+          "courseA_artist_loops6_b": "你將會需要兩個不同方向的程式積木，來通過這一關。"
         },
         "courseA_artist_loops6_2018": {
-          "courseA_artist_loops6_a": "不清楚怎樣造出一座山？嘗試不同的積木，看看每個積木都有什麼作用。",
-          "courseA_artist_loops6_b": "你將會需要兩個不同方向的程式積木來過這一關。"
+          "courseA_artist_loops6_a": "不清楚如何創造出一座山？嘗試使用不同的積木，看看每個積木有什麼樣的作用。",
+          "courseA_artist_loops6_b": "你將會需要兩個不同方向的程式積木，來通過這一關。"
         },
         "courseA_artist_loops6_2019": {
           "courseA_artist_loops6_a": "不清楚怎樣造出一座山？嘗試不同的積木，看看每個積木都有什麼作用。",
-          "courseA_artist_loops6_b": "你將會需要兩個不同方向的程式積木來過這一關。"
+          "courseA_artist_loops6_b": "你將會需要兩個不同方向的程式積木，來通過這一關。"
         },
         "courseA_artist_loops6_2020": {
           "courseA_artist_loops6_a": "不清楚怎樣造出一座山？嘗試不同的積木，看看每個積木都有什麼作用。",
-          "courseA_artist_loops6_b": "你將會需要兩個不同方向的程式積木來過這一關。"
+          "courseA_artist_loops6_b": "你將會需要兩個不同方向的程式積木，來通過這一關。"
         },
         "courseA_artist_loops7": {
-          "courseA_artist_loops7_a": "不知道該把這個迴圈放在哪裡？嘗試一步一步地編寫代碼，並尋找規律。",
-          "courseA_artist_loops7_b": "首先為一個波浪編寫代碼，然後重複繪製另外兩個波浪。",
+          "courseA_artist_loops7_a": "不知道該把這個迴圈放在哪裡？嘗試一步一步地編寫程式，並且尋找規律。",
+          "courseA_artist_loops7_b": "首先為一個波浪編寫程式，然後重複繪製另外兩個波浪。",
           "courseA_artist_loops7_c": "記得你可以放多於一塊程式積木在 <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> 迴圈裡。"
         },
         "courseA_artist_loops7_2018": {
-          "courseA_artist_loops7_a": "不知道該把這個迴圈放在哪裡？嘗試一步一步地編寫代碼，並尋找規律。",
-          "courseA_artist_loops7_b": "首先為一個波浪編寫代碼，然後重複繪製另外兩個波浪。",
+          "courseA_artist_loops7_a": "不知道該把這個迴圈放在哪裡？嘗試一步一步地編寫程式，並且尋找規律。",
+          "courseA_artist_loops7_b": "首先為一個波浪編寫程式，然後重複繪製另外兩個波浪。",
           "courseA_artist_loops7_c": "記得你可以放多於一塊程式積木在 <xml><block type=\"controls_repeat\">\n\n<title name=\"TIMES\">???</title>\n</block></xml>迴圈裡。"
         },
         "courseA_artist_loops7_2019": {
@@ -1501,13 +1501,13 @@
           "courseA_artist_loops7_c": "記得你可以放多於一塊程式積木在 <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">???</title>\n  </block></xml> 迴圈裡。"
         },
         "courseA_artist_loops8": {
-          "courseA_artist_loops8_a": "嘗試運行代碼來查看為你編寫的內容。",
-          "courseA_artist_loops8_b": "你將如何用我們提供給你的代碼來進行迴圈？",
+          "courseA_artist_loops8_a": "嘗試「運行」代碼來查看已經組合的積木有什麼效果。",
+          "courseA_artist_loops8_b": "你會如何運用已經寫好給你的代碼，來編寫迴圈呢？",
           "courseA_artist_loops8_c": "它做了什麼？\\\n它應該做什麼？\\\n這告訴你什麼？\\\\"
         },
         "courseA_artist_loops8_2018": {
-          "courseA_artist_loops8_a": "嘗試運行代碼來查看為你編寫的內容。",
-          "courseA_artist_loops8_b": "你將如何用我們提供給你的代碼來進行迴圈？",
+          "courseA_artist_loops8_a": "嘗試「運行」代碼來查看已經組合的積木有什麼效果。",
+          "courseA_artist_loops8_b": "你會如何運用已經寫好給你的代碼，來編寫迴圈呢？",
           "courseA_artist_loops8_c": "它做了什麼？\\\n它應該做什麼？\\\n這告訴你什麼？\\\\"
         },
         "courseA_artist_loops8_2019": {
@@ -1521,24 +1521,24 @@
           "courseA_artist_loops8_c": "它做了什麼？\\\n它應該做什麼？\\\n這告訴你什麼？\\\\"
         },
         "courseA_artist_loops9": {
-          "courseA_artist_loops9_a": "在你得到的代碼中添加另一個積木來繪製其餘的樓梯。",
+          "courseA_artist_loops9_a": "在已經寫好的代碼中，添加另一個積木來繪製剩下的樓梯。",
           "courseA_artist_loops9_b": "你應該把程式積木放在 \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block>\n</xml>\n\n迴圈裡。",
-          "courseA_artist_loops9_c": "如果你不知道把迴圈放在哪裡，試試一步一步地寫你的程式碼並留意重複出現的模式。"
+          "courseA_artist_loops9_c": "如果你不知道要把迴圈放在哪個位置，試試看一步一步地編寫你的程式，並且留意它的規律。"
         },
         "courseA_artist_loops9_2018": {
-          "courseA_artist_loops9_a": "在你得到的代碼中添加另一個積木來繪製其餘的樓梯。",
+          "courseA_artist_loops9_a": "在已經寫好的代碼中，添加另一個積木來繪製剩下的樓梯。",
           "courseA_artist_loops9_b": "你應該把程式積木放在 \n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block>\n</xml>迴圈裡。",
-          "courseA_artist_loops9_c": "如果你不知道把迴圈放在哪裡，試試一步一步地寫你的程式碼並留意重複出現的模式。"
+          "courseA_artist_loops9_c": "如果你不知道要把迴圈放在哪個位置，試試看一步一步地編寫你的程式，並且留意它的規律。"
         },
         "courseA_artist_loops9_2019": {
           "courseA_artist_loops9_a": "在你得到的代碼中添加另一個積木來繪製其餘的樓梯。",
           "courseA_artist_loops9_b": "你應該把程式積木放在 \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block>\n</xml>\n\n迴圈裡。",
-          "courseA_artist_loops9_c": "如果你不知道把迴圈放在哪裡，試試一步一步地寫你的程式碼並留意重複出現的模式。"
+          "courseA_artist_loops9_c": "如果你不知道要把迴圈放在哪個位置，試試看一步一步地編寫你的程式，並且留意它的規律。"
         },
         "courseA_artist_loops9_2020": {
           "courseA_artist_loops9_a": "在你得到的代碼中添加另一個積木來繪製其餘的樓梯。",
           "courseA_artist_loops9_b": "你應該把程式積木放在 \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block>\n</xml>\n\n迴圈裡。",
-          "courseA_artist_loops9_c": "如果你不知道把迴圈放在哪裡，試試一步一步地寫你的程式碼並留意重複出現的模式。"
+          "courseA_artist_loops9_c": "如果你不知道要把迴圈放在哪個位置，試試看一步一步地編寫你的程式，並且留意它的規律。"
         },
         "courseA_artist_loops_challenge2a": {
           "courseA_artist_loops_challenge2_a": "像這樣的程式積木：<xml>  <block type=\"simple_move_up_left\"/></xml> 可以讓小藝術家斜著移動！",
@@ -1561,44 +1561,44 @@
           "courseA_artist_loops_challenge2_c": "你的所有積木都必須位於迴圈內才能通過此關。"
         },
         "courseA_collector_loops1": {
-          "courseA_collector_loops1_a": "當你已經到達寶物的地點，記得用這個積木來取得它。\n\n<xml>  <block type=\"collector_collect\"/></xml>",
-          "courseA_collector_loops1_b": "向東移動兩次來得到寶物會是一個簡單的解決之道。"
+          "courseA_collector_loops1_a": "當你已經到達寶石的位置，記得用這個積木來將它撿起來。\n\n<xml>  <block type=\"collector_collect\"/></xml>",
+          "courseA_collector_loops1_b": "向東移動兩次來得到寶物，會是一個簡單的解決方法。"
         },
         "courseA_collector_loops1_2018": {
-          "courseA_collector_loops1_a": "當你已經到達寶物的地點，記得用這個積木來取得它。\n\n<xml>  <block type=\"collector_collect\"/></xml>",
-          "courseA_collector_loops1_b": "向東移動兩次來得到寶物會是一個簡單的解決之道。"
+          "courseA_collector_loops1_a": "當你已經到達寶石的位置，記得用這個積木來將它撿起來。\n\n<xml>  <block type=\"collector_collect\"/></xml>",
+          "courseA_collector_loops1_b": "向東移動兩次來得到寶物，會是一個簡單的解決方法。"
         },
         "courseA_collector_loops1_2019": {
-          "courseA_collector_loops1_a": "當你已經到達寶物的地點，記得用這個積木來取得它。\n\n<xml>  <block type=\"collector_collect\"/></xml>",
-          "courseA_collector_loops1_b": "向東移動兩次來得到寶物會是一個簡單的解決之道。"
+          "courseA_collector_loops1_a": "當你已經到達寶石的位置，記得用這個積木來將它撿起來。\n\n<xml>  <block type=\"collector_collect\"/></xml>",
+          "courseA_collector_loops1_b": "向東移動兩次來得到寶物，會是一個簡單的解決方法。"
         },
         "courseA_collector_loops1_2020": {
-          "courseA_collector_loops1_a": "當你已經到達寶物的地點，記得用這個積木來取得它。\n\n<xml>  <block type=\"collector_collect\"/></xml>",
-          "courseA_collector_loops1_b": "向東移動兩次來得到寶物會是一個簡單的解決之道。"
+          "courseA_collector_loops1_a": "當你已經到達寶石的位置，記得用這個積木來將它撿起來。\n\n<xml>  <block type=\"collector_collect\"/></xml>",
+          "courseA_collector_loops1_b": "向東移動兩次來得到寶物，會是一個簡單的解決方法。"
         },
         "courseA_collector_loops2": {
-          "courseA_collector_loops2_a": "在你可以搜集寶物之前，你得要移動",
-          "courseA_collector_loops2_b": "當你已經到達寶物的地點，記得用這個積木來取得它。\n\n<xml>  <block type=\"collector_collect\"/></xml>"
+          "courseA_collector_loops2_a": "在你可以蒐集寶物之前，你必須要移動",
+          "courseA_collector_loops2_b": "當你已經到達寶石的位置，記得用這個積木來將它撿起來。\n\n<xml>  <block type=\"collector_collect\"/></xml>"
         },
         "courseA_collector_loops2_2018": {
-          "courseA_collector_loops2_a": "在你可以搜集寶物之前，你得要移動",
-          "courseA_collector_loops2_b": "當你已經到達寶物的地點，記得用這個積木來取得它。\n\n<xml>  <block type=\"collector_collect\"/></xml>"
+          "courseA_collector_loops2_a": "在你可以蒐集寶物之前，你必須要移動",
+          "courseA_collector_loops2_b": "當你已經到達寶石的位置，記得用這個積木來將它撿起來。\n\n<xml>  <block type=\"collector_collect\"/></xml>"
         },
         "courseA_collector_loops2_2019": {
-          "courseA_collector_loops2_a": "在你可以搜集寶物之前，你得要移動",
-          "courseA_collector_loops2_b": "當你已經到達寶物的地點，記得用這個積木來取得它。\n\n<xml>  <block type=\"collector_collect\"/></xml>"
+          "courseA_collector_loops2_a": "在你可以蒐集寶物之前，你必須要移動",
+          "courseA_collector_loops2_b": "當你已經到達寶石的位置，記得用這個積木來將它撿起來。\n\n<xml>  <block type=\"collector_collect\"/></xml>"
         },
         "courseA_collector_loops2_2020": {
-          "courseA_collector_loops2_a": "在你可以搜集寶物之前，你得要移動",
-          "courseA_collector_loops2_b": "當你已經到達寶物的地點，記得用這個積木來取得它。\n\n<xml>  <block type=\"collector_collect\"/></xml>"
+          "courseA_collector_loops2_a": "在你可以蒐集寶物之前，你必須要移動",
+          "courseA_collector_loops2_b": "當你已經到達寶石的位置，記得用這個積木來將它撿起來。\n\n<xml>  <block type=\"collector_collect\"/></xml>"
         },
         "courseA_collector_loops3": {
           "courseA_collector_loops3_a": "試試用一個 <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> 迴圈來完成！                  ",
-          "courseA_collector_loops3_b": "記得在一個  <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> 迴圈裡你可以用多於一塊程式積木。"
+          "courseA_collector_loops3_b": "記得在一個  <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>  迴圈裡，你可以加入多個程式積木。"
         },
         "courseA_collector_loops3_2018": {
           "courseA_collector_loops3_a": "試試用一個 <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> 迴圈來完成！                  ",
-          "courseA_collector_loops3_b": "記得在一個  <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> 迴圈裡你可以用多於一塊程式積木。"
+          "courseA_collector_loops3_b": "記得在一個  <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>  迴圈裡，你可以加入多個程式積木。"
         },
         "courseA_collector_loops3_2019": {
           "courseA_collector_loops3_a": "試著使用一個 \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>\n\n 迴圈!",
@@ -1609,116 +1609,116 @@
           "courseA_collector_loops3_b": "記得在一個  <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> 迴圈裡你可以用多於一塊程式積木。"
         },
         "courseA_collector_loops4": {
-          "courseA_collector_loops4_a": "要更改 Laurel 的運行距離，請更改迴圈運行的次數。",
-          "courseA_collector_loops4_b": "不要忘了 Laurel 完成 <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> 個迴圈後需要走下來收集寶藏！"
+          "courseA_collector_loops4_a": "要更改 Laurel 的移動距離，請更改迴圈執行的次數。",
+          "courseA_collector_loops4_b": "不要忘了 Laurel 完成 <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> 個迴圈後，需要再向下走，來收集寶藏！"
         },
         "courseA_collector_loops4_2018": {
-          "courseA_collector_loops4_a": "要更改 Laurel 的運行距離，請更改迴圈運行的次數。",
-          "courseA_collector_loops4_b": "不要忘了 Laurel 完成 <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> 個迴圈後需要走下來收集寶藏！"
+          "courseA_collector_loops4_a": "要更改 Laurel 的移動距離，請更改迴圈執行的次數。",
+          "courseA_collector_loops4_b": "不要忘了 Laurel 完成 <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> 個迴圈後，需要再向下走，來收集寶藏！"
         },
         "courseA_collector_loops4_2019": {
-          "courseA_collector_loops4_a": "要更改 Laurel 的運行距離，請更改迴圈運行的次數。",
+          "courseA_collector_loops4_a": "要更改 Laurel 的移動距離，請更改迴圈執行的次數。",
           "courseA_collector_loops4_b": "不要忘了 Laurel 完成 <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> 個迴圈後需要走下來收集寶藏！"
         },
         "courseA_collector_loops4_2020": {
-          "courseA_collector_loops4_a": "要更改 Laurel 的運行距離，請更改迴圈運行的次數。",
+          "courseA_collector_loops4_a": "要更改 Laurel 的移動距離，請更改迴圈執行的次數。",
           "courseA_collector_loops4_b": "不要忘了 Laurel 完成 <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> 個迴圈後需要走下來收集寶藏！"
         },
         "courseA_collector_loops5": {
-          "courseA_collector_loops5_a": "如果你不能立即找出答案，請嘗試在紙上找出所需的箭頭並尋找規律。",
-          "courseA_collector_loops5_b": "嘗試將問題分為兩部分，先側向移動然後向下移動。",
-          "courseA_collector_loops5_c": "你需要從 <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> 迴圈開始，讓 Laurel 向西移動並收集寶藏。"
+          "courseA_collector_loops5_a": "如果你不能馬上找到答案，可以試著透過白紙找到你需要哪些箭頭，並且找出規律。",
+          "courseA_collector_loops5_b": "嘗試將問題分為兩部分，先往旁邊移動然後再向下移動。",
+          "courseA_collector_loops5_c": "你需要從 <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> 迴圈開始，讓 Laurel 向西移動並收集寶石。"
         },
         "courseA_collector_loops5_2018": {
-          "courseA_collector_loops5_a": "如果你不能立即找出答案，請嘗試在紙上找出所需的箭頭並尋找規律。",
-          "courseA_collector_loops5_b": "嘗試將問題分為兩部分，先側向移動然後向下移動。",
-          "courseA_collector_loops5_c": "你需要從 <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> 迴圈開始，讓 Laurel 向西移動並收集寶藏。"
+          "courseA_collector_loops5_a": "如果你不能馬上找到答案，可以試著透過白紙找到你需要哪些箭頭，並且找出規律。",
+          "courseA_collector_loops5_b": "嘗試將問題分為兩部分，先往旁邊移動然後再向下移動。",
+          "courseA_collector_loops5_c": "你需要從 <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> 迴圈開始，讓 Laurel 向西移動並收集寶石。"
         },
         "courseA_collector_loops5_2019": {
-          "courseA_collector_loops5_a": "如果你不能立即找出答案，請嘗試在紙上找出所需的箭頭並尋找規律。",
-          "courseA_collector_loops5_b": "嘗試將問題分為兩部分，先側向移動然後向下移動。",
-          "courseA_collector_loops5_c": "你需要從 <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> 迴圈開始，讓 Laurel 向西移動並收集寶藏。"
+          "courseA_collector_loops5_a": "如果你不能馬上找到答案，可以試著透過白紙找到你需要哪些箭頭，並且找出規律。",
+          "courseA_collector_loops5_b": "嘗試將問題分為兩部分，先往旁邊移動然後再向下移動。",
+          "courseA_collector_loops5_c": "你需要從 <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> 迴圈開始，讓 Laurel 向西移動並收集寶石。"
         },
         "courseA_collector_loops5_2020": {
-          "courseA_collector_loops5_a": "如果你不能立即找出答案，請嘗試在紙上找出所需的箭頭並尋找規律。",
-          "courseA_collector_loops5_b": "嘗試將問題分為兩部分，先側向移動然後向下移動。",
-          "courseA_collector_loops5_c": "你需要從 <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> 迴圈開始，讓 Laurel 向西移動並收集寶藏。"
+          "courseA_collector_loops5_a": "如果你不能馬上找到答案，可以試著透過白紙找到你需要哪些箭頭，並且找出規律。",
+          "courseA_collector_loops5_b": "嘗試將問題分為兩部分，先往旁邊移動然後再向下移動。",
+          "courseA_collector_loops5_c": "你需要從 <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> 迴圈開始，讓 Laurel 向西移動並收集寶石。"
         },
         "courseA_collector_loops6": {
-          "courseA_collector_loops6_a": "無法找出問題所在？嘗試運行幾次代碼，看看會發生什麼。",
-          "courseA_collector_loops6_b": "最短的解決方案有 2 個 <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> 迴圈，一個跟在另一個後面。"
+          "courseA_collector_loops6_a": "不知道哪裡出問題了嗎？試著執行幾次程式，看看會發生什麼事吧。",
+          "courseA_collector_loops6_b": "最短的解決方案會使用 2 個 <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> 迴圈，一個接在另一個下面。"
         },
         "courseA_collector_loops6_2018": {
-          "courseA_collector_loops6_a": "無法找出問題所在？嘗試運行幾次代碼，看看會發生什麼。",
-          "courseA_collector_loops6_b": "最短的解決方案有 2 個 <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> 迴圈，一個跟在另一個後面。"
+          "courseA_collector_loops6_a": "不知道哪裡出問題了嗎？試著執行幾次程式，看看會發生什麼事吧。",
+          "courseA_collector_loops6_b": "最短的解決方案會使用 2 個 <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> 迴圈，一個接在另一個下面。"
         },
         "courseA_collector_loops6_2019": {
-          "courseA_collector_loops6_a": "無法找出問題所在？嘗試運行幾次代碼，看看會發生什麼。",
+          "courseA_collector_loops6_a": "不知道哪裡出問題了嗎？試著執行幾次程式，看看會發生什麼事吧。",
           "courseA_collector_loops6_b": "最短的解決方案有 2 個 <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> 迴圈，一個跟在另一個後面。"
         },
         "courseA_collector_loops6_2020": {
-          "courseA_collector_loops6_a": "無法找出問題所在？嘗試運行幾次代碼，看看會發生什麼。",
+          "courseA_collector_loops6_a": "不知道哪裡出問題了嗎？試著執行幾次程式，看看會發生什麼事吧。",
           "courseA_collector_loops6_b": "最短的解決方案有 2 個 <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> 迴圈，一個跟在另一個後面。"
         },
         "courseA_collector_loops7": {
-          "courseA_collector_loops7_a": "如果你不知道接下來會發生什麼，請嘗試運行代碼來查看 Laurel 的結局。"
+          "courseA_collector_loops7_a": "如果你不知道接下來會發生什麼，請試著執行程式來看看 Laurel 最後會到哪兒。"
         },
         "courseA_collector_loops7_2018": {
-          "courseA_collector_loops7_a": "如果你不知道接下來會發生什麼，請嘗試運行代碼來查看 Laurel 的結局。"
+          "courseA_collector_loops7_a": "如果你不知道接下來會發生什麼，請試著執行程式來看看 Laurel 最後會到哪兒。"
         },
         "courseA_collector_loops7_2019": {
-          "courseA_collector_loops7_a": "如果你不知道接下來會發生什麼，請嘗試運行代碼來查看 Laurel 的結局。"
+          "courseA_collector_loops7_a": "如果你不知道接下來會發生什麼，請試著執行程式來看看 Laurel 最後會到哪兒。"
         },
         "courseA_collector_loops7_2020": {
-          "courseA_collector_loops7_a": "如果你不知道接下來會發生什麼，請嘗試運行代碼來查看 Laurel 的結局。"
+          "courseA_collector_loops7_a": "如果你不知道接下來會發生什麼，請試著執行程式來看看 Laurel 最後會到哪兒。"
         },
         "courseA_collector_loops8": {
-          "courseA_collector_loops8_a": "如果你在通過這個關卡時遇到困難，請嘗試將動作寫在紙上並尋找規律。",
-          "courseA_collector_loops8_b": "嘗試將此關分解為 3 個獨立的問題，並為每個問題編寫迴圈。",
-          "courseA_collector_loops8_c": "記住，你可以一次編寫一段代碼，然後按「運行」來確定還需要什麼。"
+          "courseA_collector_loops8_a": "如果你在關卡遇到困難，請試著將動作寫在紙上並且尋找規律。",
+          "courseA_collector_loops8_b": "試著將這關分解成 3 個獨立的問題，並且為每個問題來編寫迴圈。",
+          "courseA_collector_loops8_c": "記住，你可以一次編寫一段代碼，然後按「運行」，觀察結果來找出還需要哪些積木。"
         },
         "courseA_collector_loops8_2018": {
-          "courseA_collector_loops8_a": "如果你在通過這個關卡時遇到困難，請嘗試將動作寫在紙上並尋找規律。",
-          "courseA_collector_loops8_b": "嘗試將此關分解為 3 個獨立的問題，並為每個問題編寫迴圈。",
-          "courseA_collector_loops8_c": "記住，你可以一次編寫一段代碼，然後按「運行」來確定還需要什麼。"
+          "courseA_collector_loops8_a": "如果你在關卡遇到困難，請試著將動作寫在紙上並且尋找規律。",
+          "courseA_collector_loops8_b": "試著將這關分解成 3 個獨立的問題，並且為每個問題來編寫迴圈。",
+          "courseA_collector_loops8_c": "記住，你可以一次編寫一段代碼，然後按「運行」，觀察結果來找出還需要哪些積木。"
         },
         "courseA_collector_loops8_2019": {
-          "courseA_collector_loops8_a": "如果你在通過這個關卡時遇到困難，請嘗試將動作寫在紙上並尋找規律。",
-          "courseA_collector_loops8_b": "嘗試將此關分解為 3 個獨立的問題，並為每個問題編寫迴圈。",
+          "courseA_collector_loops8_a": "如果你在關卡遇到困難，請試著將動作寫在紙上並且尋找規律。",
+          "courseA_collector_loops8_b": "試著將這關分解成 3 個獨立的問題，並且為每個問題來編寫迴圈。",
           "courseA_collector_loops8_c": "記住，你可以一次編寫一段代碼，然後按「運行」來確定還需要什麼。"
         },
         "courseA_collector_loops8_2020": {
-          "courseA_collector_loops8_a": "如果你在通過這個關卡時遇到困難，請嘗試將動作寫在紙上並尋找規律。",
-          "courseA_collector_loops8_b": "嘗試將此關分解為 3 個獨立的問題，並為每個問題編寫迴圈。",
+          "courseA_collector_loops8_a": "如果你在關卡遇到困難，請試著將動作寫在紙上並且尋找規律。",
+          "courseA_collector_loops8_b": "試著將這關分解成 3 個獨立的問題，並且為每個問題來編寫迴圈。",
           "courseA_collector_loops8_c": "記住，你可以一次編寫一段代碼，然後按「運行」來確定還需要什麼。"
         },
         "courseA_collector_loops9": {
-          "courseA_collector_loops9_a": "如果你不知道把迴圈放在哪裡，試試一步一步地寫你的程式碼並留意重複出現的規律。",
-          "courseA_collector_loops9_b": "嘗試將你的 <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> 迴圈中的 2 個放入另一個迴圈中，來縮短代碼！"
+          "courseA_collector_loops9_a": "如果你不知道把迴圈放在哪裡，試著一步一步地編寫程式並且留意重複出現的規律。",
+          "courseA_collector_loops9_b": "嘗試將 2 個 <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> 迴圈，放入放入另一個更大的迴圈中，來縮短代碼！"
         },
         "courseA_collector_loops9_2018": {
-          "courseA_collector_loops9_a": "如果你不知道把迴圈放在哪裡，試試一步一步地寫你的程式碼並留意重複出現的規律。",
-          "courseA_collector_loops9_b": "嘗試將你的 <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> 迴圈中的 2 個放入另一個迴圈中，來縮短代碼！"
+          "courseA_collector_loops9_a": "如果你不知道把迴圈放在哪裡，試著一步一步地編寫程式並且留意重複出現的規律。",
+          "courseA_collector_loops9_b": "嘗試將 2 個 <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> 迴圈，放入放入另一個更大的迴圈中，來縮短代碼！"
         },
         "courseA_collector_loops9_2019": {
-          "courseA_collector_loops9_a": "如果你不知道把迴圈放在哪裡，試試一步一步地寫你的程式碼並留意重複出現的規律。",
+          "courseA_collector_loops9_a": "如果你不知道把迴圈放在哪裡，試著一步一步地編寫程式並且留意重複出現的規律。",
           "courseA_collector_loops9_b": "嘗試將你的 <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> 迴圈中的 2 個放入另一個迴圈中，來縮短代碼！"
         },
         "courseA_collector_loops9_2020": {
-          "courseA_collector_loops9_a": "如果你不知道把迴圈放在哪裡，試試一步一步地寫你的程式碼並留意重複出現的規律。",
+          "courseA_collector_loops9_a": "如果你不知道把迴圈放在哪裡，試著一步一步地編寫程式並且留意重複出現的規律。",
           "courseA_collector_loops9_b": "嘗試將你的 <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> 迴圈中的 2 個放入另一個迴圈中，來縮短代碼！"
         },
         "courseA_collector_loops_challenge1": {
           "courseA_collector_loops_challenge1_a": "如果出錯了，可以試試修改每個迴圈裡的數值。",
-          "courseA_collector_loops_challenge1_b": "如果你只要執行某段指令一次，就不需要用到迴圈。",
+          "courseA_collector_loops_challenge1_b": "如果你的指令只需要執行一次，就不需要使用到迴圈。",
           "courseA_collector_loops_challenge1_c": "右邊的洞穴有 6 個寶石，而你只需移動並收集 5 次，你知道怎麼做嗎？",
-          "courseA_collector_loops_challenge1_d": "一開始的程式不會收集最後 2 個寶石。嘗試在最後添加以下代碼：\n\n<xml><block type=\"maze_moveEast\">\n                        <next>\n                          <block type=\"collector_collect_simplified\">\n                            <next>\n                              <block type=\"maze_moveSouth\">\n                                <next>\n                                  <block type=\"collector_collect\"/>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block></xml>"
+          "courseA_collector_loops_challenge1_d": "一開始的程式不會收集到最後 2 個寶石。嘗試在最後增加以下程式積木：\n\n<xml><block type=\"maze_moveEast\">\n                        <next>\n                          <block type=\"collector_collect_simplified\">\n                            <next>\n                              <block type=\"maze_moveSouth\">\n                                <next>\n                                  <block type=\"collector_collect\"/>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block></xml>"
         },
         "courseA_collector_loops_challenge1_2018": {
           "courseA_collector_loops_challenge1_a": "如果出錯了，可以試試修改每個迴圈裡的數值。",
-          "courseA_collector_loops_challenge1_b": "如果你只要執行某段指令一次，就不需要用到迴圈。",
+          "courseA_collector_loops_challenge1_b": "如果你的指令只需要執行一次，就不需要使用到迴圈。",
           "courseA_collector_loops_challenge1_c": "右邊的洞穴有 6 個寶石，而你只需移動並收集 5 次，你知道怎麼做嗎？",
-          "courseA_collector_loops_challenge1_d": "一開始的程式不會收集最後 2 個寶石。嘗試在最後添加以下代碼：\n\n<xml><block type=\"maze_moveEast\">\n                        <next>\n                          <block type=\"collector_collect_simplified\">\n                            <next>\n                              <block type=\"maze_moveSouth\">\n                                <next>\n                                  <block type=\"collector_collect\"/>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block></xml>"
+          "courseA_collector_loops_challenge1_d": "一開始的程式不會收集到最後 2 個寶石。嘗試在最後增加以下程式積木：\n\n<xml><block type=\"maze_moveEast\">\n                        <next>\n                          <block type=\"collector_collect_simplified\">\n                            <next>\n                              <block type=\"maze_moveSouth\">\n                                <next>\n                                  <block type=\"collector_collect\"/>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block></xml>"
         },
         "courseA_collector_loops_challenge1_2019": {
           "courseA_collector_loops_challenge1_a": "如果出錯了，可以試試修改每個迴圈裡的數值。",
@@ -1737,11 +1737,11 @@
           "courseA_collector_loops_challenge2_a": "在往南移動之前，你可以重複移動到相同路徑。\n\n![](<https://images.code.org/88c28c76dbea70e20253083d22b5f5fd-image-1491001404225.01.21 PM.png>)"
         },
         "courseA_collector_loops_challenge2kp": {
-          "courseA_collector_loops_challenge2kp_b": "試試用這條路解決問題。",
+          "courseA_collector_loops_challenge2kp_b": "試試用這條路徑來解決問題。",
           "courseA_collector_loops_challenge2kp_a": "你能用迴圈過關嗎？"
         },
         "courseA_collector_loops_challenge2kp_2018": {
-          "courseA_collector_loops_challenge2kp_b": "試試用這條路解決問題。",
+          "courseA_collector_loops_challenge2kp_b": "試試用這條路徑來解決問題。",
           "courseA_collector_loops_challenge2kp_a": "你能用迴圈過關嗎？"
         },
         "courseA_collector_loops_challenge2kp_2019": {
@@ -1753,7 +1753,7 @@
           "courseA_collector_loops_challenge2kp_a": "你能用迴圈過關嗎？"
         },
         "courseA_collector_preLoops7": {
-          "courseA_collector_loops2_b": "當你已經到達寶物的地點，記得用這個積木來取得它。\n\n<xml>  <block type=\"collector_collect\"/></xml>"
+          "courseA_collector_loops2_b": "當你已經到達寶石的位置，記得用這個積木來將它撿起來。\n\n<xml>  <block type=\"collector_collect\"/></xml>"
         },
         "courseA_harvester_loops1": {
           "courseA_harvester_loops1_a": "\"當你到達玉米地之後，就用這個積木來摘玉米！\n\n<xml><block type=\"harvester_corn\"/></xml>\""
@@ -1801,17 +1801,17 @@
           "courseA_harvester_loops4_b": "那裡有幾顆玉米？你的程式碼重複了多少次?"
         },
         "courseA_harvester_loops5": {
-          "courseA_harvester_loops5_a": "如果卡住了，請嘗試分兩部分來解決關卡，一個在拐角前，一個在拐角後。",
+          "courseA_harvester_loops5_a": "如果卡住了，請試試看分成兩個部分來解決關卡，一個在轉角前，一個在轉角後。",
           "courseA_harvester_loops5_b": "你最終的程式碼將有**一個**`重複`<xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">6</title>\n    </block></xml> 迴圈，**一個**`移動 - 南`<xml><block type=\"maze_moveSouth\" limit=\"1\"/></xml> 積木，以及**一個**`移動 - 東`<xml><block type=\"maze_moveEast\" limit=\"1\"/> </xml> 積木。",
           "courseA_harvester_loops5_c": "從這條路來摘取所有玉米！"
         },
         "courseA_harvester_loops5_2019": {
-          "courseA_harvester_loops5_a": "如果卡住了，請嘗試分兩部分來解決關卡，一個在拐角前，一個在拐角後。",
+          "courseA_harvester_loops5_a": "如果卡住了，請試試看分成兩個部分來解決關卡，一個在轉角前，一個在轉角後。",
           "courseA_harvester_loops5_b": "你最終的程式碼將有**一個**`重複`<xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">6</title>\n    </block></xml> 迴圈，**一個**`移動 - 南`<xml><block type=\"maze_moveSouth\" limit=\"1\"/></xml> 積木，以及**一個**`移動 - 東`<xml><block type=\"maze_moveEast\" limit=\"1\"/> </xml> 積木。",
           "courseA_harvester_loops5_c": "從這條路來摘取所有玉米！"
         },
         "courseA_harvester_loops5_2020": {
-          "courseA_harvester_loops5_a": "如果卡住了，請嘗試分兩部分來解決關卡，一個在拐角前，一個在拐角後。",
+          "courseA_harvester_loops5_a": "如果卡住了，請試試看分成兩個部分來解決關卡，一個在轉角前，一個在轉角後。",
           "courseA_harvester_loops5_b": "你最終的程式碼將有**一個**`重複`<xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">6</title>\n    </block></xml> 迴圈，**一個**`移動 - 南`<xml><block type=\"maze_moveSouth\" limit=\"1\"/></xml> 積木，以及**一個**`移動 - 東`<xml><block type=\"maze_moveEast\" limit=\"1\"/> </xml> 積木。",
           "courseA_harvester_loops5_c": "從這條路來摘取所有玉米！"
         },
@@ -2062,12 +2062,12 @@
           "1": "你的程式看起來要像這樣：\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveWest\">\n        <next>\n          <block type=\"maze_moveWest\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseA_maze_seq1": {
-          "courseA_maze_seq1_a": "如果你不知道怎麼讓小鳥移動，請確認積木被放置於 <xml>\n  <block type=\"when_run\"/>\n</xml> 底下",
-          "courseA_maze_seq1_b": "這隻小鳥需要往西移三次才能到小豬那裡。用這個積木：\n\n<xml><block type=\"maze_moveWest\"/></xml>"
+          "courseA_maze_seq1_a": "如果你不知道怎麼讓小鳥移動，可以確認積木是不是被放在 <xml>\n  <block type=\"when_run\"/>\n</xml> 的底下",
+          "courseA_maze_seq1_b": "這隻小鳥需要往西移動三次才能到小豬的位置。用這個積木：\n\n<xml><block type=\"maze_moveWest\"/></xml>"
         },
         "courseA_maze_seq10": {
           "courseA_maze_seq10_a": "如果遇到麻煩，請嘗試將步驟記在紙上。",
-          "courseA_maze_seq10_b": "你需要向 3 個方向移動才能過關。"
+          "courseA_maze_seq10_b": "你需要往 3 種方向移動，才能過關。"
         },
         "courseA_maze_seq10_2018": {
           "courseA_maze_seq10_a": "如果遇到麻煩，請嘗試將步驟記在紙上。",
@@ -2083,56 +2083,56 @@
         },
         "courseA_maze_seq10_copy": {
           "courseA_maze_seq10_a": "如果遇到麻煩，請嘗試將步驟記在紙上。",
-          "courseA_maze_seq10_b": "你需要向 3 個方向移動才能過關。"
+          "courseA_maze_seq10_b": "你需要往 3 種方向移動，才能過關。"
         },
         "courseA_maze_seq13": {
-          "courseA_maze_seq13_a": "如果不清楚所需的路徑，請用手指畫出從鳥到豬的路徑。",
-          "courseA_maze_seq13_b": "不要害怕犯錯！嘗試添加積木並運行代碼來查看會發生什麼。",
-          "courseA_maze_seq13_c": "這些 <xml><block type=\"maze_moveNorth\"/></xml> <xml><block type=\"maze_moveEast\"/></xml> 程式積木將會幫助移動更靠近豬，"
+          "courseA_maze_seq13_a": "如果你不太清楚程式積木執行的過程，請用手指畫出小鳥移動到豬豬的路徑。",
+          "courseA_maze_seq13_b": "不要害怕犯錯！嘗試添加積木並執行程式來看看會發生什麼事。",
+          "courseA_maze_seq13_c": "這些 <xml><block type=\"maze_moveNorth\"/></xml> <xml><block type=\"maze_moveEast\"/></xml> 程式積木將會讓小鳥移動地更離豬更近一點"
         },
         "courseA_maze_seq13_2018": {
-          "courseA_maze_seq13_a": "如果不清楚所需的路徑，請用手指畫出從鳥到豬的路徑。",
-          "courseA_maze_seq13_b": "不要害怕犯錯！嘗試添加積木並運行代碼來查看會發生什麼。",
-          "courseA_maze_seq13_c": "這些 <xml><block type=\"maze_moveNorth\"/></xml> <xml><block type=\"maze_moveEast\"/></xml> 程式積木將會幫助移動更靠近豬，"
+          "courseA_maze_seq13_a": "如果你不太清楚程式積木執行的過程，請用手指畫出小鳥移動到豬豬的路徑。",
+          "courseA_maze_seq13_b": "不要害怕犯錯！嘗試添加積木並執行程式來看看會發生什麼事。",
+          "courseA_maze_seq13_c": "這些 <xml><block type=\"maze_moveNorth\"/></xml> <xml><block type=\"maze_moveEast\"/></xml> 程式積木將會讓小鳥移動地更離豬更近一點"
         },
         "courseA_maze_seq13_2019": {
-          "courseA_maze_seq13_a": "如果不清楚所需的路徑，請用手指畫出從鳥到豬的路徑。",
-          "courseA_maze_seq13_b": "不要害怕犯錯！嘗試添加積木並運行代碼來查看會發生什麼。",
+          "courseA_maze_seq13_a": "如果你不太清楚程式積木執行的過程，請用手指畫出小鳥移動到豬豬的路徑。",
+          "courseA_maze_seq13_b": "不要害怕犯錯！嘗試添加積木並執行程式來看看會發生什麼事。",
           "courseA_maze_seq13_c": "這些 <xml><block type=\"maze_moveNorth\"/></xml>\n\n<xml><block type=\"maze_moveEast\"/></xml>\n\n 程式積木將會幫助移動更靠近豬，"
         },
         "courseA_maze_seq13_2020": {
-          "courseA_maze_seq13_a": "如果不清楚所需的路徑，請用手指畫出從鳥到豬的路徑。",
-          "courseA_maze_seq13_b": "不要害怕犯錯！嘗試添加積木並運行代碼來查看會發生什麼。",
+          "courseA_maze_seq13_a": "如果你不太清楚程式積木執行的過程，請用手指畫出小鳥移動到豬豬的路徑。",
+          "courseA_maze_seq13_b": "不要害怕犯錯！嘗試添加積木並執行程式來看看會發生什麼事。",
           "courseA_maze_seq13_c": "這些 <xml><block type=\"maze_moveNorth\"/></xml>\n\n<xml><block type=\"maze_moveEast\"/></xml>\n\n 程式積木將會幫助移動更靠近豬，"
         },
         "courseA_maze_seq1_2018": {
-          "courseA_maze_seq1_a": "如果你不知道怎麼讓小鳥移動，請確認積木被放置於 <xml>\n  <block type=\"when_run\"/>\n</xml> 底下",
-          "courseA_maze_seq1_b": "這隻小鳥需要往西移三次才能到小豬那裡。用這個積木：\n\n<xml><block type=\"maze_moveWest\"/></xml>"
+          "courseA_maze_seq1_a": "如果你不知道怎麼讓小鳥移動，可以確認積木是不是被放在 <xml>\n  <block type=\"when_run\"/>\n</xml> 的底下",
+          "courseA_maze_seq1_b": "這隻小鳥需要往西移動三次才能到小豬的位置。用這個積木：\n\n<xml><block type=\"maze_moveWest\"/></xml>"
         },
         "courseA_maze_seq1_2019": {
-          "courseA_maze_seq1_a": "如果你不知道怎麼讓小鳥移動，請確認積木被放置於 <xml>\n  <block type=\"when_run\"/>\n</xml> 底下",
-          "courseA_maze_seq1_b": "這隻小鳥需要往西移三次才能到小豬那裡。用這個積木：\n\n<xml><block type=\"maze_moveWest\"/></xml>"
+          "courseA_maze_seq1_a": "如果你不知道怎麼讓小鳥移動，可以確認積木是不是被放在 <xml>\n  <block type=\"when_run\"/>\n</xml> 的底下",
+          "courseA_maze_seq1_b": "這隻小鳥需要往西移動三次才能到小豬的位置。用這個積木：\n\n<xml><block type=\"maze_moveWest\"/></xml>"
         },
         "courseA_maze_seq1_2020": {
-          "courseA_maze_seq1_a": "如果你不知道怎麼讓小鳥移動，請確認積木被放置於 <xml>\n  <block type=\"when_run\"/>\n</xml> 底下",
-          "courseA_maze_seq1_b": "這隻小鳥需要往西移三次才能到小豬那裡。用這個積木：\n\n<xml><block type=\"maze_moveWest\"/></xml>"
+          "courseA_maze_seq1_a": "如果你不知道怎麼讓小鳥移動，可以確認積木是不是被放在 <xml>\n  <block type=\"when_run\"/>\n</xml> 的底下",
+          "courseA_maze_seq1_b": "這隻小鳥需要往西移動三次才能到小豬的位置。用這個積木：\n\n<xml><block type=\"maze_moveWest\"/></xml>"
         },
         "courseA_maze_seq2": {
           "courseA_maze_seq2_a": "這個程式少了 1 個積木，你知道是哪個嗎？",
-          "courseA_maze_seq2_b": "首先嘗試運行代碼，來查看鳥的最終位置。你還需要什麼？"
+          "courseA_maze_seq2_b": "先試著執行你的程式，來看看小鳥最後會在哪裡。如果要到達目標位置，你還需要什麼呢？"
         },
         "courseA_maze_seq3": {
-          "courseA_maze_seq3_a": "1 個積木使鳥朝錯誤的方向移動。您能找出是哪一個並用正確的積木替換嗎？",
-          "courseA_maze_seq3_b": "嘗試使用「分步」按鈕查找程式在哪裡出錯。是第一步嗎？還是第二步？",
-          "courseA_maze_seq3_c": "<xml><block type=\"maze_moveNorth\"/></xml> 積木似乎沒有讓鳥朝正確的方向移動鳥。可以用其他積木替換嗎？"
+          "courseA_maze_seq3_a": "有一個積木讓小鳥往錯誤的方向移動了。你可以找出是哪一個並且使用正確的積木替換嗎？",
+          "courseA_maze_seq3_b": "嘗試使用「步進按鈕」來找出程式錯誤的地方。是第一步嗎？還是第二步呢？",
+          "courseA_maze_seq3_c": "<xml><block type=\"maze_moveNorth\"/></xml> 積木似乎沒有讓小鳥朝正確的方向移動。你可以用其他的積木替換嗎？"
         },
         "courseA_maze_seq4": {
           "courseA_maze_seq4_a": "如果遇到問題，請嘗試找出正確的路徑，然後移除不適合的積木。",
-          "courseA_maze_seq4_b": "嘗試按原樣運行代碼。出現什麼問題了？你可以移除哪一塊積木？要如何解決？"
+          "courseA_maze_seq4_b": "試試看執行你原本的程式。發生什麼問題了呢？你覺得可以移除哪一個積木，以及要如何解決這個問題呢？"
         },
         "courseA_maze_seq5": {
           "courseA_maze_seq5_a": "嘗試在紙上寫下步驟來過關！",
-          "courseA_maze_seq5_b": "你將需要 2 個積木，指向 2 個方向。"
+          "courseA_maze_seq5_b": "你會需要使用到 2 個不同方向的積木。"
         },
         "courseA_maze_seq5_2018": {
           "1": "嘗試在紙上寫下步驟來過關！",
@@ -2148,7 +2148,7 @@
         },
         "courseA_maze_seq5_copy": {
           "courseA_maze_seq5_a": "嘗試在紙上寫下步驟來過關！",
-          "courseA_maze_seq5_b": "你將需要 2 個積木，指向 2 個方向。"
+          "courseA_maze_seq5_b": "你會需要使用到 2 個不同方向的積木。"
         },
         "courseA_maze_seq5a_2018": {
           "1": "大聲的唸出每個步驟，看看這樣能不能幫你找到答案。"
@@ -2161,30 +2161,30 @@
         },
         "courseA_maze_seq6": {
           "courseA_maze_seq6_a": "最後的程式應該要有 3 個移動積木。",
-          "courseA_maze_seq6_b": "如果卡住了，請嘗試分兩部分來解決關卡，一個在拐角前，一個在拐角後。"
+          "courseA_maze_seq6_b": "如果卡住了，請試試看分成兩個部分來解決關卡，一個在轉角前，一個在轉角後。"
         },
         "courseA_maze_seq6_2018": {
           "courseA_maze_seq6_a": "最後的程式應該要有 3 個移動積木。",
-          "courseA_maze_seq6_b": "如果卡住了，請嘗試分兩部分來解決關卡，一個在拐角前，一個在拐角後。"
+          "courseA_maze_seq6_b": "如果卡住了，請試試看分成兩個部分來解決關卡，一個在轉角前，一個在轉角後。"
         },
         "courseA_maze_seq6_2019": {
           "courseA_maze_seq6_a": "最後的程式應該要有 3 個移動積木。",
-          "courseA_maze_seq6_b": "如果卡住了，請嘗試分兩部分來解決關卡，一個在拐角前，一個在拐角後。"
+          "courseA_maze_seq6_b": "如果卡住了，請試試看分成兩個部分來解決關卡，一個在轉角前，一個在轉角後。"
         },
         "courseA_maze_seq6_2020": {
           "courseA_maze_seq6_a": "最後的程式應該要有 3 個移動積木。",
-          "courseA_maze_seq6_b": "如果卡住了，請嘗試分兩部分來解決關卡，一個在拐角前，一個在拐角後。"
+          "courseA_maze_seq6_b": "如果卡住了，請試試看分成兩個部分來解決關卡，一個在轉角前，一個在轉角後。"
         },
         "courseA_maze_seq6_copy": {
           "courseA_maze_seq6_a": "最後的程式應該要有 3 個移動積木。",
-          "courseA_maze_seq6_b": "如果卡住了，請嘗試分兩部分來解決關卡，一個在拐角前，一個在拐角後。"
+          "courseA_maze_seq6_b": "如果卡住了，請試試看分成兩個部分來解決關卡，一個在轉角前，一個在轉角後。"
         },
         "courseA_maze_seq7": {
-          "courseA_maze_seq7_a": "你需要添加 1 個積木才能將鳥移到豬上。",
+          "courseA_maze_seq7_a": "你需要添加 1 個積木才能讓小鳥移動到豬豬的位置。",
           "courseA_maze_seq7_b": "如果你不知道該怎麼辦，請嘗試在紙上畫出關卡，然後用手指找出移動的方式。"
         },
         "courseA_maze_seq7_copy": {
-          "courseA_maze_seq7_a": "你需要添加 1 個積木才能將鳥移到豬上。",
+          "courseA_maze_seq7_a": "你需要添加 1 個積木才能讓小鳥移動到豬豬的位置。",
           "courseA_maze_seq7_b": "如果你不知道該怎麼辦，請嘗試在紙上畫出關卡，然後用手指找出移動的方式。"
         },
         "courseA_maze_seq8": {
@@ -2203,9 +2203,9 @@
           "courseA_maze_seq8_a": "如果卡住了，請嘗試在紙上繪製圖像，以確定小鳥應該如何移動。"
         },
         "courseA_maze_seq9": {
-          "courseA_maze_seq9_a": "卡住了？嘗試用手指畫出鳥的路徑。",
-          "courseA_maze_seq9_b": "如果不確定該怎麼做，請嘗試按「重新開始」，然後運行代碼來查看出了什麼問題。",
-          "courseA_maze_seq9_c": "你需要向 3 個方向移動才能過關。"
+          "courseA_maze_seq9_a": "卡住了？嘗試用手指畫出小鳥的移動路徑。",
+          "courseA_maze_seq9_b": "如果不確定該怎麼做，請嘗試按「重新開始」的按鈕，然後再一次執行程式來看看出了什麼問題。",
+          "courseA_maze_seq9_c": "你需要往 3 種方向移動，才能過關。"
         },
         "courseA_maze_seq_challenge1": {
           "courseA_maze_seq_challenge1_a": "有 2 個方法可以完成這個關卡！"
@@ -2232,12 +2232,12 @@
           "courseA_maze_seq_challenge2_a": "試著用你的手指頭點出要移動的空格數（你站的那一格不要算！）"
         },
         "courseA_playLab_events2": {
-          "courseA_playLab_events2_a": "尋找使狗說話的積木。",
-          "courseA_playLab_events2_b": "這是完成此關所需的代碼：\n\n<xml>\n<block type=\"when_run\" movable=\"false\" deletable=\"false\">\n<next>\n<block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</next>\n</block>\n</xml>"
+          "courseA_playLab_events2_a": "尋找能讓狗狗說話的積木。",
+          "courseA_playLab_events2_b": "這是完成這關所需要的程式積木：\n\n<xml>\n<block type=\"when_run\" movable=\"false\" deletable=\"false\">\n<next>\n<block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</next>\n</block>\n</xml>"
         },
         "courseA_playLab_events2_2018": {
-          "courseA_playLab_events2_a": "尋找使狗說話的積木。",
-          "courseA_playLab_events2_b": "這是完成此關所需的代碼：\n\n<xml>\n<block type=\"when_run\" movable=\"false\" deletable=\"false\">\n<next>\n<block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</next>\n</block>\n</xml>"
+          "courseA_playLab_events2_a": "尋找能讓狗狗說話的積木。",
+          "courseA_playLab_events2_b": "這是完成這關所需要的程式積木：\n\n<xml>\n<block type=\"when_run\" movable=\"false\" deletable=\"false\">\n<next>\n<block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</next>\n</block>\n</xml>"
         },
         "courseA_playLab_events2_2019": {
           "courseA_playLab_events2_a": "尋找使狗說話的積木。",
@@ -2248,11 +2248,11 @@
           "courseA_playLab_events2_b": "這是完成此關所需的代碼：\n\n<xml>\n<block type=\"when_run\" movable=\"false\" deletable=\"false\">\n<next>\n<block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</next>\n</block>\n</xml>"
         },
         "courseA_playLab_events3": {
-          "courseA_playLab_events3_a": "將此積木 <xml><block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">8</title>\n  </block></xml> 拖出來並放到 <xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">left</title>\n  </block></xml> 的底部",
+          "courseA_playLab_events3_a": "將此積木 <xml><block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">8</title>\n  </block></xml> 拖曳出來，並且放到 <xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">left</title>\n  </block></xml> 的底部",
           "courseA_playLab_events3_b": "記住，編寫好程式之後，就使用左方向鍵讓小狗移到該標誌。當標誌變為綠色時，你就過關了！"
         },
         "courseA_playLab_events3_2018": {
-          "courseA_playLab_events3_a": "將此積木 <xml><block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">8</title>\n  </block></xml> 拖出來並放到 <xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">left</title>\n  </block></xml> 的底部",
+          "courseA_playLab_events3_a": "將此積木 <xml><block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">8</title>\n  </block></xml> 拖曳出來，並且放到 <xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">left</title>\n  </block></xml> 的底部",
           "courseA_playLab_events3_b": "記住，編寫好程式之後，就使用左方向鍵讓小狗移到該標誌。當標誌變為綠色時，你就過關了！"
         },
         "courseA_playLab_events3_2019": {
@@ -2264,12 +2264,12 @@
           "courseA_playLab_events3_b": "記住，編寫好程式之後，就使用左方向鍵讓小狗移到該標誌。當標誌變為綠色時，你就過關了！"
         },
         "courseA_playLab_events4": {
-          "courseA_playLab_events4_a": "這是讓小狗向右移動所需的事件積木：\n\n<xml><block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">2</title>\n  </block></xml>",
-          "courseA_playLab_events4_b": "這是完成此關所需的代碼：\n\n<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">right</title>\n    <next>\n  <block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">2</title>\n  </block></next></block></xml>"
+          "courseA_playLab_events4_a": "這是讓小狗向右移動所需要使用的事件積木：\n\n<xml><block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">2</title>\n  </block></xml>",
+          "courseA_playLab_events4_b": "這是完成此關所需要的程式：\n\n<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">right</title>\n    <next>\n  <block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">2</title>\n  </block></next></block></xml>"
         },
         "courseA_playLab_events4_2018": {
-          "courseA_playLab_events4_a": "這是讓小狗向右移動所需的事件積木：\n\n<xml><block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">2</title>\n  </block></xml>",
-          "courseA_playLab_events4_b": "這是完成此關所需的代碼：\n\n<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">right</title>\n    <next>\n  <block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">2</title>\n  </block></next></block></xml>"
+          "courseA_playLab_events4_a": "這是讓小狗向右移動所需要使用的事件積木：\n\n<xml><block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">2</title>\n  </block></xml>",
+          "courseA_playLab_events4_b": "這是完成此關所需要的程式：\n\n<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">right</title>\n    <next>\n  <block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">2</title>\n  </block></next></block></xml>"
         },
         "courseA_playLab_events4_2019": {
           "courseA_playLab_events4_a": "這是讓小狗向右移動所需的事件積木：\n\n<xml><block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">2</title>\n  </block></xml>",
@@ -2296,12 +2296,12 @@
           "courseA_playLab_events5_b": "你知道嗎？點擊積木，你就可以修改方向鍵囉！\n\n![](https://images.code.org/b010b6a8131689af53b33148753c15b4-image-1492639642316.gif)"
         },
         "courseA_playLab_events6": {
-          "courseA_playLab_events6_a": "這是點擊一下小狗讓它做某事的事件積木：\n\n<xml><block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">1</title>\n  </block></xml>",
+          "courseA_playLab_events6_a": "這個事件積木 <xml><block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">1</title>\n  </block></xml>：當你用滑鼠點擊一下小狗 (Jorge)，他就會開始做些什麼。",
           "courseA_playLab_events6_b": "這是用來更改背景的積木：\n\n<xml><block type=\"studio_setBackground\">\n    <title name=\"VALUE\">random</title>\n  </block></xml>",
           "courseA_playLab_events6_c": "這是用來播放隨機聲音的積木：\n\n<xml><block type=\"studio_playSound\">\n    <title name=\"SOUND\">random</title>\n  </block></xml>"
         },
         "courseA_playLab_events6_2018": {
-          "courseA_playLab_events6_a": "這是點擊一下小狗讓它做某事的事件積木：\n\n<xml><block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">1</title>\n  </block></xml>",
+          "courseA_playLab_events6_a": "這個事件積木 <xml><block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">1</title>\n  </block></xml>：當你用滑鼠點擊一下小狗 (Jorge)，他就會開始做些什麼。",
           "courseA_playLab_events6_b": "這是用來更改背景的積木：\n\n<xml><block type=\"studio_setBackground\">\n    <title name=\"VALUE\">random</title>\n  </block></xml>",
           "courseA_playLab_events6_c": "這是用來播放隨機聲音的積木：\n\n<xml><block type=\"studio_playSound\">\n    <title name=\"SOUND\">random</title>\n  </block></xml>"
         },
@@ -2329,16 +2329,16 @@
         },
         "courseA_playlab_events_challenge1": {
           "courseA_playlab_events_challenge1_a": "當你點擊Robin的時候，你就可以看到企鵝的樣子了！\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n      </block>\n    </next>\n  </block></xml>",
-          "courseA_playlab_events_challenge1_b": "當你點擊企鵝時做鬼表演！\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n      </block>\n    </next>\n  </block></xml>",
-          "courseA_playlab_events_challenge1_c": "當你點擊Boo時，讓Jayden成為“模糊怪物秀”！\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n      </block>\n    </next>\n  </block></xml>",
-          "courseA_playlab_events_challenge1_d": "當你點擊怪物時，讓 Spiff 的機器人表演！\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_b": "當你點擊企鵝 (Waddles) ，讓幽靈 (Boo) 出現！\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_c": "當你點擊幽靈 (Boo) 時，讓毛茸茸的怪獸 (Jayden) 出現！\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_d": "當你點擊怪物時，讓 Spiff 機器人表演！\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n      </block>\n    </next>\n  </block></xml>",
           "courseA_playlab_events_challenge1_e": "最後，當你點擊 Spiff 時，讓巫師 Wendel 出現！\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">7</title>\n      </block>\n    </next>\n  </block></xml>"
         },
         "courseA_playlab_events_challenge1_2018": {
           "courseA_playlab_events_challenge1_a": "當你點擊Robin的時候，你就可以看到企鵝的樣子了！\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n      </block>\n    </next>\n  </block></xml>",
-          "courseA_playlab_events_challenge1_b": "當你點擊企鵝時做鬼表演！\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n      </block>\n    </next>\n  </block></xml>",
-          "courseA_playlab_events_challenge1_c": "當你點擊Boo時，讓Jayden成為“模糊怪物秀”！\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n      </block>\n    </next>\n  </block></xml>",
-          "courseA_playlab_events_challenge1_d": "當你點擊怪物時，讓 Spiff 的機器人表演！\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_b": "當你點擊企鵝 (Waddles) ，讓幽靈 (Boo) 出現！\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_c": "當你點擊幽靈 (Boo) 時，讓毛茸茸的怪獸 (Jayden) 出現！\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_d": "當你點擊怪物時，讓 Spiff 機器人表演！\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n      </block>\n    </next>\n  </block></xml>",
           "courseA_playlab_events_challenge1_e": "最後，當你點擊 Spiff 時，讓巫師 Wendel 出現！\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">7</title>\n      </block>\n    </next>\n  </block></xml>"
         },
         "courseA_playlab_events_challenge1_2019": {
@@ -2358,12 +2358,12 @@
         "courseA_playlab_events_challenge2": {
           "courseA_playlab_events_challenge2_a": "你可以讓一隻鳥唱歌。\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n          </block>\n    </next>\n  </block></xml>",
           "courseA_playlab_events_challenge2_b": "你可以讓機器人發出嗶嗶聲.\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n  </block></xml>",
-          "courseA_playlab_events_challenge2_c": "你可以製造一個憤怒的怪物咆哮。\n\n<xml>  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSpriteEmotion\">\n        <title name=\"SPRITE\">5</title>\n        <title name=\"VALUE\">2</title>\n        <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">5</title>\n            <title name=\"TEXT\">Roar!</title>\n            <next>\n              <block type=\"studio_setSpriteEmotion\">\n                <title name=\"SPRITE\">5</title>\n                <title name=\"VALUE\">0</title>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block></xml>"
+          "courseA_playlab_events_challenge2_c": "你可以製造一個正在咆哮的憤怒怪物。\n\n<xml>  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSpriteEmotion\">\n        <title name=\"SPRITE\">5</title>\n        <title name=\"VALUE\">2</title>\n        <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">5</title>\n            <title name=\"TEXT\">Roar!</title>\n            <next>\n              <block type=\"studio_setSpriteEmotion\">\n                <title name=\"SPRITE\">5</title>\n                <title name=\"VALUE\">0</title>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block></xml>"
         },
         "courseA_playlab_events_challenge2_2018": {
           "courseA_playlab_events_challenge2_a": "你可以讓一隻鳥唱歌。\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n          </block>\n    </next>\n  </block></xml>",
           "courseA_playlab_events_challenge2_b": "你可以讓機器人發出嗶嗶聲.\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n  </block></xml>",
-          "courseA_playlab_events_challenge2_c": "你可以製造一個憤怒的怪物咆哮。\n\n<xml>  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSpriteEmotion\">\n        <title name=\"SPRITE\">5</title>\n        <title name=\"VALUE\">2</title>\n        <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">5</title>\n            <title name=\"TEXT\">Roar!</title>\n            <next>\n              <block type=\"studio_setSpriteEmotion\">\n                <title name=\"SPRITE\">5</title>\n                <title name=\"VALUE\">0</title>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block></xml>"
+          "courseA_playlab_events_challenge2_c": "你可以製造一個正在咆哮的憤怒怪物。\n\n<xml>  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSpriteEmotion\">\n        <title name=\"SPRITE\">5</title>\n        <title name=\"VALUE\">2</title>\n        <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">5</title>\n            <title name=\"TEXT\">Roar!</title>\n            <next>\n              <block type=\"studio_setSpriteEmotion\">\n                <title name=\"SPRITE\">5</title>\n                <title name=\"VALUE\">0</title>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block></xml>"
         },
         "courseA_playlab_events_challenge2_2019": {
           "courseA_playlab_events_challenge2_a": "你可以讓一隻鳥唱歌。\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n          </block>\n    </next>\n  </block></xml>",
@@ -2547,12 +2547,12 @@
         "courseB_artist_loops9": {
           "courseB_artist_loops9_a": "記住跳躍模塊可以用於在不畫線的情況下移動。",
           "courseB_artist_loops9_b": "您將需要使用W模塊來通過本關。",
-          "courseB_artist_loops9_c": "不知道該把這個迴圈放在哪裡？嘗試一步一步地編寫代碼，並尋找規律。"
+          "courseB_artist_loops9_c": "不知道該把這個迴圈放在哪裡？嘗試一步一步地編寫程式，並且尋找規律。"
         },
         "courseB_artist_loops9_2018": {
           "courseB_artist_loops9_a": "記住跳躍模塊可以用於在不畫線的情況下移動。",
           "courseB_artist_loops9_b": "您將需要使用W模塊來通過本關。",
-          "courseB_artist_loops9_c": "不知道該把這個迴圈放在哪裡？嘗試一步一步地編寫代碼，並尋找規律。"
+          "courseB_artist_loops9_c": "不知道該把這個迴圈放在哪裡？嘗試一步一步地編寫程式，並且尋找規律。"
         },
         "courseB_artist_loops9_2019": {
           "courseB_artist_loops9_a": "記住跳躍模塊可以用於在不畫線的情況下移動。",
@@ -2629,19 +2629,19 @@
           "courseB_collector_loops1_a": "當您站在上面的時候，<xml><block type=\"collector_collect_simplified\"/></xml>模塊可用於撿起寶藏。"
         },
         "courseB_collector_loops2": {
-          "courseB_collector_loops2_a": "在你可以搜集寶物之前，你得要移動",
+          "courseB_collector_loops2_a": "在你可以蒐集寶物之前，你必須要移動",
           "courseB_collector_loops2_b": "當你已經到達寶物的地點，記得用「取得寶物」程式積木來取得它。"
         },
         "courseB_collector_loops2_2018": {
-          "courseB_collector_loops2_a": "在你可以搜集寶物之前，你得要移動",
+          "courseB_collector_loops2_a": "在你可以蒐集寶物之前，你必須要移動",
           "courseB_collector_loops2_b": "當您到達一個寶藏地點，使用<xml><block type=\"collector_collect\"/></xml>模塊來撿起它。"
         },
         "courseB_collector_loops2_2019": {
-          "courseB_collector_loops2_a": "在你可以搜集寶物之前，你得要移動",
+          "courseB_collector_loops2_a": "在你可以蒐集寶物之前，你必須要移動",
           "courseB_collector_loops2_b": "當您到達一個寶藏地點，使用<xml><block type=\"collector_collect\"/></xml>模塊來撿起它。"
         },
         "courseB_collector_loops2_2020": {
-          "courseB_collector_loops2_a": "在你可以搜集寶物之前，你得要移動",
+          "courseB_collector_loops2_a": "在你可以蒐集寶物之前，你必須要移動",
           "courseB_collector_loops2_b": "當您到達一個寶藏地點，使用<xml><block type=\"collector_collect\"/></xml>模塊來撿起它。"
         },
         "courseB_collector_loops3": {
@@ -2662,22 +2662,22 @@
         },
         "courseB_collector_loops4": {
           "courseB_collector_loops4_a": "嘗試使用步驟鍵，想一想是哪裡出錯了。",
-          "courseB_collector_loops4_b": "要更改 Laurel 的運行距離，請更改迴圈運行的次數。",
+          "courseB_collector_loops4_b": "要更改 Laurel 的移動距離，請更改迴圈執行的次數。",
           "courseB_collector_loops4_c": "在完成「repeat」迴圈後，Laurel需要繼續往前走收集寶藏！"
         },
         "courseB_collector_loops4_2018": {
           "courseB_collector_loops4_a": "嘗試使用步驟鍵，想一想是哪裡出錯了。",
-          "courseB_collector_loops4_b": "要更改 Laurel 的運行距離，請更改迴圈運行的次數。",
+          "courseB_collector_loops4_b": "要更改 Laurel 的移動距離，請更改迴圈執行的次數。",
           "courseB_collector_loops4_c": "Laurel 需要在完成`重複`<xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> 迴圈後走下去並收集寶藏！"
         },
         "courseB_collector_loops4_2019": {
           "courseB_collector_loops4_a": "嘗試使用步驟鍵，想一想是哪裡出錯了。",
-          "courseB_collector_loops4_b": "要更改 Laurel 的運行距離，請更改迴圈運行的次數。",
+          "courseB_collector_loops4_b": "要更改 Laurel 的移動距離，請更改迴圈執行的次數。",
           "courseB_collector_loops4_c": "Laurel 需要在完成`重複`<xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> 迴圈後走下去並收集寶藏！"
         },
         "courseB_collector_loops4_2020": {
           "courseB_collector_loops4_a": "嘗試使用步驟鍵，想一想是哪裡出錯了。",
-          "courseB_collector_loops4_b": "要更改 Laurel 的運行距離，請更改迴圈運行的次數。",
+          "courseB_collector_loops4_b": "要更改 Laurel 的移動距離，請更改迴圈執行的次數。",
           "courseB_collector_loops4_c": "Laurel 需要在完成`重複`<xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> 迴圈後走下去並收集寶藏！"
         },
         "courseB_collector_loops5": {
@@ -4474,38 +4474,38 @@
         "courseC_maze_debugging2": {
           "courseC_maze_debugging2_a": "工作區中有很多有價值的代碼。不要一口氣全部移除重新開始！",
           "courseC_maze_debugging2_b": "-   第一步之後一切正常嗎？\n-   第二步之後仍然正常嗎？\n-   哪裡出問題了？",
-          "courseC_maze_debugging2_c": "無法找出問題所在？嘗試運行幾次代碼，看看會發生什麼。"
+          "courseC_maze_debugging2_c": "不知道哪裡出問題了嗎？試著執行幾次程式，看看會發生什麼事吧。"
         },
         "courseC_maze_debugging2_2018": {
           "courseC_maze_debugging2_a": "工作區中有很多有價值的代碼。不要一口氣全部移除重新開始！",
           "courseC_maze_debugging2_b": "-   第一步之後一切正常嗎？\n-   第二步之後仍然正常嗎？\n-   哪裡出問題了？",
-          "courseC_maze_debugging2_c": "無法找出問題所在？嘗試運行幾次代碼，看看會發生什麼。"
+          "courseC_maze_debugging2_c": "不知道哪裡出問題了嗎？試著執行幾次程式，看看會發生什麼事吧。"
         },
         "courseC_maze_debugging2_2019": {
           "courseC_maze_debugging2_a": "工作區中有很多有價值的代碼。不要一口氣全部移除重新開始！",
           "courseC_maze_debugging2_b": "-   第一步之後一切正常嗎？\n-   第二步之後仍然正常嗎？\n-   哪裡出問題了？",
-          "courseC_maze_debugging2_c": "無法找出問題所在？嘗試運行幾次代碼，看看會發生什麼。"
+          "courseC_maze_debugging2_c": "不知道哪裡出問題了嗎？試著執行幾次程式，看看會發生什麼事吧。"
         },
         "courseC_maze_debugging2_2020": {
           "courseC_maze_debugging2_a": "工作區中有很多有價值的代碼。不要一口氣全部移除重新開始！",
           "courseC_maze_debugging2_b": "-   第一步之後一切正常嗎？\n-   第二步之後仍然正常嗎？\n-   哪裡出問題了？",
-          "courseC_maze_debugging2_c": "無法找出問題所在？嘗試運行幾次代碼，看看會發生什麼。"
+          "courseC_maze_debugging2_c": "不知道哪裡出問題了嗎？試著執行幾次程式，看看會發生什麼事吧。"
         },
         "courseC_maze_debugging3": {
           "courseC_maze_debugging3_a": "要從代碼中間移除一個積木，請將所有積木拖到工作區的另一部分。\n\n將要移除的積木拖回工具箱。\n\n最後，將其他積木放回它們所屬的位置。\n\n![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)",
-          "courseC_maze_debugging3_b": "無法找出問題所在？嘗試運行幾次代碼，看看會發生什麼。"
+          "courseC_maze_debugging3_b": "不知道哪裡出問題了嗎？試著執行幾次程式，看看會發生什麼事吧。"
         },
         "courseC_maze_debugging3_2018": {
           "courseC_maze_debugging3_a": "要從代碼中間移除一個積木，請將所有積木拖到工作區的另一部分。\n\n將要移除的積木拖回工具箱。\n\n最後，將其他積木放回它們所屬的位置。\n\n![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)",
-          "courseC_maze_debugging3_b": "無法找出問題所在？嘗試運行幾次代碼，看看會發生什麼。"
+          "courseC_maze_debugging3_b": "不知道哪裡出問題了嗎？試著執行幾次程式，看看會發生什麼事吧。"
         },
         "courseC_maze_debugging3_2019": {
           "courseC_maze_debugging3_a": "要從代碼中間移除一個積木，請將所有積木拖到工作區的另一部分。\n\n將要移除的積木拖回工具箱。\n\n最後，將其他積木放回它們所屬的位置。\n\n![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)",
-          "courseC_maze_debugging3_b": "無法找出問題所在？嘗試運行幾次代碼，看看會發生什麼。"
+          "courseC_maze_debugging3_b": "不知道哪裡出問題了嗎？試著執行幾次程式，看看會發生什麼事吧。"
         },
         "courseC_maze_debugging3_2020": {
           "courseC_maze_debugging3_a": "要從代碼中間移除一個積木，請將所有積木拖到工作區的另一部分。\n\n將要移除的積木拖回工具箱。\n\n最後，將其他積木放回它們所屬的位置。\n\n![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)",
-          "courseC_maze_debugging3_b": "無法找出問題所在？嘗試運行幾次代碼，看看會發生什麼。"
+          "courseC_maze_debugging3_b": "不知道哪裡出問題了嗎？試著執行幾次程式，看看會發生什麼事吧。"
         },
         "courseC_maze_debugging4": {
           "courseC_maze_debugging4_a": "使用「分步」按鈕逐條運行指令。這是否有助於你找到問題所在？",
