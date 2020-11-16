@@ -22,7 +22,7 @@ title: Hour of Code Event How-To
 - Give an intro overviewing the importance of computer science, using these [stats and infographics]({{ promote/stats_url }}).   
       
     
-- **Other event ideas**: 
+- **Các ý tưởng sự kiện khác**: 
     - Mời một nhà lãnh đạo ngành công nghiệp địa phương để thảo luận về công việc của mình liên quan đến khoa học máy tính.
     - Mời một chính trị gia địa phương đến và để cho học sinh dạy ông/bà ấy biết cách lập trình.
     - Mời một nhóm học sinh làm mẫu thử một hoạt động mà không cần máy vi tính.
