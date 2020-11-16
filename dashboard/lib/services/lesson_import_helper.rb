@@ -37,7 +37,8 @@ module Services::LessonImportHelper
       elsif match[:type] == 'remark'
         activity_section = create_activity_section_with_remark(match[:match])
       else
-        activity_section = ActivitySection.new(description: match[:substring].strip)
+        #activity_section = ActivitySection.new(description: match[:substring].strip)
+        activity_section = create_basic_activity_section(match[:substring].strip)
       end
       next unless activity_section
       activity_section.position = position
@@ -208,7 +209,26 @@ module Services::LessonImportHelper
     activity_section
   end
 
+  # No levels, no tips, just markdown
+  def self.create_basic_activity_section(markdown)
+    stripped_markdown = markdown.strip
+    name = ''
+    description = markdown
+    if stripped_markdown.starts_with?('### ')
+      # /^### (.+)$/ looks for a line that begins with ### plus a space then captures the rest of the line
+      header_match = stripped_markdown.match(/^### (.+)$/)
+      # If we're here, we should have found a match and it should be the beginning of the string,
+      # but let's be safe and double check
+      if header_match && stripped_markdown.starts_with?(header_match[0])
+        name = header_match[1]
+        description = stripped_markdown[header_match[0].length...stripped_markdown.length].strip
+      end
+    end
+    ActivitySection.new(name: name, description: description)
+  end
+
   def self.find_markdown_chunks(markdown, existing_matches)
+    return [{index: 0, type: 'markdown', substring: markdown}] if existing_matches.empty?
     matches = []
     unless existing_matches.first[:index] == 0
       matches.push({index: 0, type: 'markdown', substring: markdown[0...existing_matches[0][:index]]})
