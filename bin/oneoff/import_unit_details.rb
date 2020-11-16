@@ -104,6 +104,10 @@ def main(options)
       log("update lesson #{lesson.id} with cb lesson data: #{cb_lesson.to_json[0, 50]}...")
     end
 
+    paired_lesson_ids = lesson_pairs.map {|lesson, _| lesson.id}
+    lockable_lessons_to_update = script.lessons.select(&:lockable?).reject {|l| paired_lesson_ids.include?(l.id)}
+    lockable_lessons_to_update.each(&:update_from_curriculum_builder)
+
     lesson_group_pairs.each do |lesson_group, cb_chapter|
       # Make sure the lesson group update does not also try to update lessons.
       cb_chapter = cb_chapter.reject {|k, _| k == 'lessons'}

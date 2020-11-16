@@ -483,13 +483,14 @@ class Lesson < ActiveRecord::Base
     # In the future, only levelbuilder should be added to this list.
     raise unless [:development, :adhoc].include? rack_env
 
-    if lockable || cb_lesson_data.empty?
+    if cb_lesson_data.empty?
       self.lesson_activities = Services::LessonImportHelper.update_lockable_lesson(script_levels, id)
       self.script_levels = []
     else
       self.name = cb_lesson_data['title']
       self.overview = cb_lesson_data['teacher_desc']
       self.student_overview = cb_lesson_data['student_desc']
+      self.creative_commons_license = cb_lesson_data['creative_commons_license']
       self.relative_position = cb_lesson_data['number'] || 1
       self.lesson_activities = Services::LessonImportHelper.create_lesson_activities(cb_lesson_data['activities'], script_levels, id)
       self.script_levels = []
