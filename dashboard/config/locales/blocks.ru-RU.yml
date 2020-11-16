@@ -1197,6 +1197,8 @@ ru:
               водой
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': зима
             undefined: none
+      gamelab_setBackgroundImageAs:
+        text: установить фон для {IMG}
       gamelab_setProp:
         text: установить {SPRITE} {PROPERTY} в {VAL}
         options:
@@ -1742,7 +1744,6 @@ ru:
             '"stoneBricks"': каменные кирпичи
             '"mossyStoneBricks"': замшелые каменные кирпичи
             '"crackedStoneBricks"': потрескавшиеся каменные кирпичи
-            '"decorativeStoneBricks"': декоративные каменные кирпичи
             '"blueCoralBlock"': блок синих кораллов
             '"pinkCoralBlock"': блок розовых кораллов
             '"magentaCoralBlock"': блок пурпурных кораллов
