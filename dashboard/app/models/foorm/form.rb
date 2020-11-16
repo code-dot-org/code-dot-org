@@ -24,7 +24,7 @@ class Foorm::Form < ActiveRecord::Base
   has_many :submissions, foreign_key: [:form_name, :form_version], primary_key: [:name, :version]
   validate :validate_questions
 
-  after_save :write_form_file
+  after_save :write_form_to_file
 
   # We have a uniqueness constraint on form name and version for this table.
   # This key format is used elsewhere in Foorm to uniquely identify a form.
@@ -68,7 +68,7 @@ class Foorm::Form < ActiveRecord::Base
     errors_arr.each {|error| errors[:questions] << error}
   end
 
-  def write_form_file
+  def write_form_to_file
     if write_to_file? && saved_changes?
       file_path = Rails.root.join("config/foorm/forms/#{name}.#{version}.json")
       file_directory = File.dirname(file_path)
