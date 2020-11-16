@@ -29,10 +29,7 @@
 require 'cdo/code_generation'
 require 'cdo/safe_names'
 
-EMAIL_UNIQUE_ERROR_MESSAGE = <<~MESSAGE
-  has already been used to enroll in this workshop.
-  Please contact support@code.org if you need assistance.
-  MESSAGE
+EMAIL_UNIQUE_ERROR_MESSAGE = 'has already been used to enroll in this workshop. Please contact support@code.org if you need assistance.'
 
 class Pd::Enrollment < ActiveRecord::Base
   include SchoolInfoDeduplicator
