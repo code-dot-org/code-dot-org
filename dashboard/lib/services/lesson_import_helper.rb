@@ -83,11 +83,16 @@ module Services::LessonImportHelper
 
   # https://github.com/code-dot-org/curriculumbuilder/blob/57cad8f62e50b03e4f16bf77cd9e2e1da5c3e44e/curriculumBuilder/codestudio.py
   def self.find_skippable_syntax(markdown)
+    # Regex explanation: looks for
+    #   - code studio pullthrough, i.e. "[code-studio]", "[code-studio 17]", "[code-studio 1-5]"
+    #   - guide syntax, i.e. "[guide]" and "[/guide]"
     regex = /\[code-studio[\d \-]*\]|\[\/?guide\]/
     markdown.to_enum(:scan, regex).map {Regexp.last_match}
   end
 
   def self.find_slides(markdown)
+    # Regex explanation: looks for slide!!!slide-<number>. It is possible that
+    # there is a placeholder comment, this is optional for the match.
     regex = /^slide!!!slide-\d+(?:<!-- place where you'd like the icon -->)?/
     markdown.to_enum(:scan, regex).map {Regexp.last_match}
   end
@@ -141,6 +146,12 @@ module Services::LessonImportHelper
   end
 
   def self.find_remarks(markdown)
+    # Regex explanation:
+    #  - line starts with "!!! say", with any number of spaces between !!! and say
+    #  - There can be any number of line breaks between this and the content
+    #  - Captures all content until either:
+    #    - there is a line that starts with non-whitespace OR
+    #    - it reaches the end of the string
     regex = /^!!! *say\s+?[\n\r]*([\d\D]+?)(?=(^\S|$))/
     markdown.to_enum(:scan, regex).map {Regexp.last_match}
   end
@@ -159,18 +170,19 @@ module Services::LessonImportHelper
     activity_section
   end
 
-  # https://github.com/code-dot-org/remark-plugins/blob/master/src/tip.js
   def self.find_tips(markdown)
+    # See https://github.com/code-dot-org/remark-plugins/blob/master/src/tip.js
     regex = /^!!! *?([\w-]+)(?: "(.*?)")?(?: <(.*?)>)?(?:[\s]+$)+([\d\D]+?)(?=(^\S|^$))/
     markdown.to_enum(:scan, regex).map {Regexp.last_match}
   end
 
-  # https://github.com/code-dot-org/remark-plugins/blob/master/src/tiplink.js
   def self.find_tip_links(markdown)
+    # See https://github.com/code-dot-org/remark-plugins/blob/master/src/tiplink.js
     regex = /^([\w-]+)!!! ?([\w-]+)(?:<!-- place where you'd like the icon -->)?(.+?)$/
     markdown.to_enum(:scan, regex).map {Regexp.last_match}
   end
 
+  # Removes tabs (or 4 spaces) at the beginning of lines
   def self.format_tip_markdown(markdown)
     markdown = markdown.chomp.reverse.chomp.reverse
     markdown.gsub(/(^\t|^ {4})/, '')
