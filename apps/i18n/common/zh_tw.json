@@ -1528,6 +1528,7 @@
   "selectSong": "選擇歌曲：",
   "selectStudent": "按學生篩選",
   "selectStudentsToMove": "選擇要移動到新的學習小組的學生。在下方的下拉選單中選取要把學生移到哪個學習小組。如果你想要移到其他老師建立的學習小組，請選擇「其他老師」。被移動學生的進度不會被清除。",
+  "sendLessonLinkCopied": "已複製連結！",
   "sendToPhone": "發送到手機（限美國地區）",
   "settings": "設定",
   "setUpClass": "設定你的班級",

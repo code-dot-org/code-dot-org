@@ -1393,6 +1393,7 @@
   "selectSong": "Sélectionnez la chanson :",
   "selectStudent": "Filtrer par élève",
   "selectStudentsToMove": "Sélectionnez les élèves à changer de section dans le tableau. Sélectionnez la section dans laquelle vous souhaitez déplacer vos élèves dans le menu déroulant ci-dessous. Choisissez \"Autre enseignant\" si vous souhaitez déplacer les élèves vers la section d'un autre enseignant. Bouger un élève n'effacera pas son progrès.",
+  "sendLessonLinkCopied": "Lien copié !",
   "sendToPhone": "Envoyer vers le téléphone",
   "settings": "Paramètres",
   "setUpClassroom": "Configurer votre classe",
