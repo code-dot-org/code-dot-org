@@ -6,6 +6,7 @@ import InputOutputTable from './InputOutputTable';
 import AniGifPreview from './AniGifPreview';
 import ImmersiveReaderButton from './ImmersiveReaderButton';
 import i18n from '@cdo/locale';
+import queryString from 'query-string';
 
 const styles = {
   inTopPane: {
@@ -71,14 +72,20 @@ class Instructions extends React.Component {
   }
 
   render() {
+    // Looks for ?noreaderbutton=true and disables the ImmersiveReaderButton if it is found.
+    // This is a temporary until we resolve https://codeorg.zendesk.com/agent/tickets/302956
+    const renderImmersiveReaderButton = !queryString.parse(location.search)
+      .noreaderbutton;
     return (
       <div
         style={this.props.inTopPane ? styles.inTopPane : styles.notInTopPane}
       >
-        <ImmersiveReaderButton
-          title={this.props.puzzleTitle || i18n.instructions()}
-          text={this.props.longInstructions || this.props.shortInstructions}
-        />
+        {renderImmersiveReaderButton && (
+          <ImmersiveReaderButton
+            title={this.props.puzzleTitle || i18n.instructions()}
+            text={this.props.longInstructions || this.props.shortInstructions}
+          />
+        )}
         {this.renderMainBody()}
 
         {this.props.inputOutputTable && (
