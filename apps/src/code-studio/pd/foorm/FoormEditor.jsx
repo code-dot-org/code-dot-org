@@ -10,6 +10,7 @@ import FontAwesome from '../../../templates/FontAwesome';
 import ToggleGroup from '@cdo/apps/templates/ToggleGroup';
 import {Button} from 'react-bootstrap';
 import moment from 'moment';
+import color from '@cdo/apps/util/color';
 
 const facilitator_names = ['Alice', 'Bob', 'Carly', 'Dave'];
 
@@ -54,6 +55,22 @@ const styles = {
   },
   validateButton: {
     marginLeft: 0
+  },
+  saveButtonBackground: {
+    margin: 0,
+    position: 'fixed',
+    bottom: 0,
+    left: 0,
+    backgroundColor: color.lightest_gray,
+    borderColor: color.lightest_gray,
+    height: 50,
+    width: '100%',
+    zIndex: 900,
+    display: 'flex',
+    justifyContent: 'flex-end'
+  },
+  saveButton: {
+    margin: '10px 50px 10px 20px'
   }
 };
 
@@ -201,6 +218,24 @@ class FoormEditor extends React.Component {
           lastValidated: moment().format(TIME_FORMAT),
           validationError: result.responseJSON.error
         });
+      });
+  };
+
+  save = () => {
+    $.ajax({
+      url: `/foorm/form/${this.props.formName}/${this.props.formVersion}`,
+      type: 'put',
+      contentType: 'application/json',
+      processData: false,
+      data: JSON.stringify({
+        questions: this.props.formQuestions
+      })
+    })
+      .done(result => {
+        console.log('saved!');
+      })
+      .fail(result => {
+        console.log('save failed!');
       });
   };
 
@@ -393,6 +428,15 @@ class FoormEditor extends React.Component {
                 />
               )}
           </div>
+        </div>
+        <div style={styles.saveButtonBackground}>
+          <Button
+            className="btn btn-primary"
+            onClick={this.save}
+            style={styles.saveButton}
+          >
+            Save Changes
+          </Button>
         </div>
       </div>
     );
