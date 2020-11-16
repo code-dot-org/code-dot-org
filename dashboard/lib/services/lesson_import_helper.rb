@@ -17,11 +17,11 @@ module Services::LessonImportHelper
     return [ActivitySection.new(description: activity_markdown.strip, seeding_key: SecureRandom.uuid, position: 1)] if matches.empty?
     sorted_matches = find_markdown_chunks(activity_markdown, sorted_matches)
     sections = []
-    tip_match_map = {}
+    tip_match_map = Hash.new([])
     slide = false
     tip_matches.each do |match|
-      key = match[:match][3] || "#{match[:match][1]}-0"
-      tip_match_map[key] = match
+      key = match[:match][3]&.strip || "#{match[:match][1]}-0"
+      tip_match_map[key].push(match)
     end
     position = 1
     sorted_matches.each do |match|
@@ -186,7 +186,7 @@ module Services::LessonImportHelper
   end
 
   def self.create_activity_section_with_tip(tip_link_match, tip_match_map)
-    tip = tip_match_map[tip_link_match[2]]
+    tip = tip_match_map[tip_link_match[2]].shift
     unless tip
       return ActivitySection.new(description: tip_link_match[3].strip)
     end
