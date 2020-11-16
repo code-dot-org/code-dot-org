@@ -606,7 +606,7 @@ class Lesson < ActiveRecord::Base
 
     lesson_activities.create(
       position: activity['position'],
-      seeding_key: SecureRandom.uuid
+      key: SecureRandom.uuid
     )
   end
 end
