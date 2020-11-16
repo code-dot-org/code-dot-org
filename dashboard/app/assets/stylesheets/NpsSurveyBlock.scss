@@ -4,7 +4,6 @@ $box_shadow: rgba(255, 255, 255, 0.63);
 
 .nps-survey-root {
   margin-top: 0;
-  // color: rgb(80, 80, 80);
   color: $charcoal;
   font-size: 25px;
 }
@@ -35,7 +34,7 @@ $box_shadow: rgba(255, 255, 255, 0.63);
   background-color: $teal;
 }
 
-.sv-visuallyhidden {
+.nps-survey-q-rating-item .sv-visuallyhidden {
   display: none;
 }
 

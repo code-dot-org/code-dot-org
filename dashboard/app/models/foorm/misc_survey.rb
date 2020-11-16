@@ -24,8 +24,7 @@ class Foorm::MiscSurvey < ActiveRecord::Base
       {
         form_name: 'surveys/teachers/nps_survey',
         misc_form_path: 'nps_survey',
-        allow_multiple_submissions: true
-        # allow_multiple_submissions: false
+        allow_multiple_submissions: false
       },
       {
         form_name: 'surveys/teachers/teacher_end_of_year_survey',
