@@ -71,6 +71,10 @@ class Foorm::Form < ActiveRecord::Base
   def write_form_file
     if write_to_file? && saved_changes?
       file_path = Rails.root.join("config/foorm/forms/#{name}.#{version}.json")
+      file_directory = File.dirname(file_path)
+      unless Dir.exist?(file_directory)
+        FileUtils.mkdir_p(file_directory)
+      end
       File.write(file_path, questions)
     end
   end
