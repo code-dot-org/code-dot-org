@@ -32,5 +32,45 @@ level 'ml-candy modify-4', progression: 'Candy Predictor'
 level 'ml-candy modify-5', progression: 'Candy Predictor'
 level 'ml-candy modify-6', progression: 'Candy Predictor'
 
-lesson 'AI for Oceans', display_name: 'AI for Oceans'
+lesson 'oceans', display_name: 'lesson Machine Learning with AI for Oceans'
+
+lesson 'intro', display_name: 'Introduction to Machine Learning'
+
+lesson 'society', display_name: 'Machine Learning & Societal Impact'
+
+lesson 'decisions', display_name: 'Decision Making with Models'
+
+lesson 'visualizing', display_name: 'Visualizing Data'
+
+lesson 'knn-train', display_name: 'Train a model with continuous labels (KNN)'
+
+lesson 'knn-use', display_name: 'Act out model with continuous labels (KNN)'
+
+lesson 'knn-app', display_name: 'Make an app with continuous labels (KNN)'
+
+lesson 'svm-train', display_name: 'Train a model with categorical labels (SVM)'
+
+lesson 'svm-use', display_name: 'Act out model with categorical labels (SVM)'
+
+lesson 'svm-app', display_name: 'Make an app with categorical labels (SVM)'
+
+lesson 'model', display_name: 'Model Card'
+
+lesson 'data', display_name: 'Explore datasets & choose one for your app'
+
+lesson 'project-app', display_name: 'Mini-Project: Make an ML App'
+
+lesson 'miseducation', display_name: 'Mis-education of the Machine'
+
+lesson 'ethics', display_name: 'App Ethics Challenge'
+
+lesson 'ethics-hoc2020', display_name: 'AI & Ethics Hour of Code 2020'
+
+lesson 'hypothesis', display_name: 'Creating a Data Hypothesis'
+
+lesson 'goldilocks', display_name: 'Goldilocks Principles'
+
+lesson 'collection', display_name: 'Collecting Your Own Data'
+
+lesson 'project', display_name: 'Project'
 

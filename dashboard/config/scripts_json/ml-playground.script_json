@@ -70,15 +70,295 @@
       }
     },
     {
-      "key": "AI for Oceans",
-      "name": "AI for Oceans",
+      "key": "oceans",
+      "name": "lesson Machine Learning with AI for Oceans",
       "absolute_position": 4,
       "lockable": false,
       "relative_position": 4,
       "properties": {
       },
       "seeding_key": {
-        "lesson.key": "AI for Oceans",
+        "lesson.key": "oceans",
+        "lesson_group.key": "",
+        "script.name": "ml-playground"
+      }
+    },
+    {
+      "key": "intro",
+      "name": "Introduction to Machine Learning",
+      "absolute_position": 5,
+      "lockable": false,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "intro",
+        "lesson_group.key": "",
+        "script.name": "ml-playground"
+      }
+    },
+    {
+      "key": "society",
+      "name": "Machine Learning & Societal Impact",
+      "absolute_position": 6,
+      "lockable": false,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "society",
+        "lesson_group.key": "",
+        "script.name": "ml-playground"
+      }
+    },
+    {
+      "key": "decisions",
+      "name": "Decision Making with Models",
+      "absolute_position": 7,
+      "lockable": false,
+      "relative_position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "decisions",
+        "lesson_group.key": "",
+        "script.name": "ml-playground"
+      }
+    },
+    {
+      "key": "visualizing",
+      "name": "Visualizing Data",
+      "absolute_position": 8,
+      "lockable": false,
+      "relative_position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "visualizing",
+        "lesson_group.key": "",
+        "script.name": "ml-playground"
+      }
+    },
+    {
+      "key": "knn-train",
+      "name": "Train a model with continuous labels (KNN)",
+      "absolute_position": 9,
+      "lockable": false,
+      "relative_position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "knn-train",
+        "lesson_group.key": "",
+        "script.name": "ml-playground"
+      }
+    },
+    {
+      "key": "knn-use",
+      "name": "Act out model with continuous labels (KNN)",
+      "absolute_position": 10,
+      "lockable": false,
+      "relative_position": 10,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "knn-use",
+        "lesson_group.key": "",
+        "script.name": "ml-playground"
+      }
+    },
+    {
+      "key": "knn-app",
+      "name": "Make an app with continuous labels (KNN)",
+      "absolute_position": 11,
+      "lockable": false,
+      "relative_position": 11,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "knn-app",
+        "lesson_group.key": "",
+        "script.name": "ml-playground"
+      }
+    },
+    {
+      "key": "svm-train",
+      "name": "Train a model with categorical labels (SVM)",
+      "absolute_position": 12,
+      "lockable": false,
+      "relative_position": 12,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "svm-train",
+        "lesson_group.key": "",
+        "script.name": "ml-playground"
+      }
+    },
+    {
+      "key": "svm-use",
+      "name": "Act out model with categorical labels (SVM)",
+      "absolute_position": 13,
+      "lockable": false,
+      "relative_position": 13,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "svm-use",
+        "lesson_group.key": "",
+        "script.name": "ml-playground"
+      }
+    },
+    {
+      "key": "svm-app",
+      "name": "Make an app with categorical labels (SVM)",
+      "absolute_position": 14,
+      "lockable": false,
+      "relative_position": 14,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "svm-app",
+        "lesson_group.key": "",
+        "script.name": "ml-playground"
+      }
+    },
+    {
+      "key": "model",
+      "name": "Model Card",
+      "absolute_position": 15,
+      "lockable": false,
+      "relative_position": 15,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "model",
+        "lesson_group.key": "",
+        "script.name": "ml-playground"
+      }
+    },
+    {
+      "key": "data",
+      "name": "Explore datasets & choose one for your app",
+      "absolute_position": 16,
+      "lockable": false,
+      "relative_position": 16,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "data",
+        "lesson_group.key": "",
+        "script.name": "ml-playground"
+      }
+    },
+    {
+      "key": "project-app",
+      "name": "Mini-Project: Make an ML App",
+      "absolute_position": 17,
+      "lockable": false,
+      "relative_position": 17,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "project-app",
+        "lesson_group.key": "",
+        "script.name": "ml-playground"
+      }
+    },
+    {
+      "key": "miseducation",
+      "name": "Mis-education of the Machine",
+      "absolute_position": 18,
+      "lockable": false,
+      "relative_position": 18,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "miseducation",
+        "lesson_group.key": "",
+        "script.name": "ml-playground"
+      }
+    },
+    {
+      "key": "ethics",
+      "name": "App Ethics Challenge",
+      "absolute_position": 19,
+      "lockable": false,
+      "relative_position": 19,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "ethics",
+        "lesson_group.key": "",
+        "script.name": "ml-playground"
+      }
+    },
+    {
+      "key": "ethics-hoc2020",
+      "name": "AI & Ethics Hour of Code 2020",
+      "absolute_position": 20,
+      "lockable": false,
+      "relative_position": 20,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "ethics-hoc2020",
+        "lesson_group.key": "",
+        "script.name": "ml-playground"
+      }
+    },
+    {
+      "key": "hypothesis",
+      "name": "Creating a Data Hypothesis",
+      "absolute_position": 21,
+      "lockable": false,
+      "relative_position": 21,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "hypothesis",
+        "lesson_group.key": "",
+        "script.name": "ml-playground"
+      }
+    },
+    {
+      "key": "goldilocks",
+      "name": "Goldilocks Principles",
+      "absolute_position": 22,
+      "lockable": false,
+      "relative_position": 22,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "goldilocks",
+        "lesson_group.key": "",
+        "script.name": "ml-playground"
+      }
+    },
+    {
+      "key": "collection",
+      "name": "Collecting Your Own Data",
+      "absolute_position": 23,
+      "lockable": false,
+      "relative_position": 23,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "collection",
+        "lesson_group.key": "",
+        "script.name": "ml-playground"
+      }
+    },
+    {
+      "key": "project",
+      "name": "Project",
+      "absolute_position": 24,
+      "lockable": false,
+      "relative_position": 24,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "project",
         "lesson_group.key": "",
         "script.name": "ml-playground"
       }
