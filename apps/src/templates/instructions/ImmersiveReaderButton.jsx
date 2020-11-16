@@ -12,12 +12,12 @@ class ImmersiveReaderButton extends Component {
 
   componentDidMount() {
     if (this.shouldRender() && !this.renderButtonsCalled) {
+      // Make sure renderButtons() is only called once.
+      this.renderButtonsCalled = true;
       // Applies inline styling to the .immersive-reader-button elements
       renderButtons({
         elements: [this.container]
       });
-      // Make sure renderButtons() is only called once.
-      this.renderButtonsCalled = true;
     }
   }
 
