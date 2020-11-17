@@ -5492,161 +5492,179 @@ es-ES:
         answers:
         - text: 'La abeja se moverá a la nube y tratará de obtener el néctar, pase
             lo que pase. '
-          feedback: Incorrecto. El bloque 'si hay flor' condiciona que la abeja intentará
-            obtener néctar solamente si hay una flor debajo de la nube.
-        - text: La abeja ira a la nube y tratará de conseguir néctar solo si hay una
+          feedback: Incorrecto. El bloque 'si hay flor' asegura que la abeja intentará
+            recoger néctar solamente si hay una flor debajo de la nube.
+        - text: La abeja ira a la nube y tratará de recoger néctar sólo si hay una
             flor debajo.
           correct: true
           feedback: "¡Correcto!"
         - text: 'La abeja se moverá a la nube y no hará nada, pase lo que pase. '
-          feedback: El bloque 'si hay flor' condiciona que la abeja intentará obtener
-            néctar solamente si hay una flor debajo de la nube.
+          feedback: Incorrecto. El bloque 'si hay flor' asegura que la abeja intentará
+            recoger néctar solamente si hay una flor debajo de la nube.
         - text: No lo sé.
-          feedback: El bloque 'si hay flor' condiciona que la abeja intentará obtener
+          feedback: El bloque 'si hay flor' asegura que la abeja intentará recoger
             néctar solamente si hay una flor debajo de la nube.
         questions:
         - text: La nube bloquea la vista. Podría haber una flor debajo de esta nube.
-            Si hay una flor, la abeja necesitará obtener el néctar una vez. Si no
-            hay una flor, la abeja no debería hacer nada. Observa el siguiente código
+            Si hay una flor, la abeja tendría que recoger néctar una vez. Si no hay
+            una flor, la abeja no debería hacer nada. Observa el siguiente código
             con atención. ¿Qué crees que sucederá si haces clic en "Ejecutar"?
       courseD_multi_bee_conditionals1_predict1_2018:
         answers:
         - text: 'La abeja se moverá a la nube y tratará de obtener el néctar, pase
             lo que pase. '
-          feedback: Incorrecto. El bloque 'si hay flor' condiciona que la abeja intentará
-            obtener néctar solamente si hay una flor debajo de la nube.
-        - text: La abeja ira a la nube y tratará de conseguir néctar solo si hay una
+          feedback: Incorrecto. El bloque 'si hay flor' asegura que la abeja intentará
+            recoger néctar solamente si hay una flor debajo de la nube.
+        - text: La abeja ira a la nube y tratará de recoger néctar sólo si hay una
             flor debajo.
           correct: true
           feedback: "¡Correcto!"
         - text: 'La abeja se moverá a la nube y no hará nada, pase lo que pase. '
-          feedback: El bloque 'si hay flor' condiciona que la abeja intentará obtener
-            néctar solamente si hay una flor debajo de la nube.
+          feedback: Incorrecto. El bloque 'si hay flor' asegura que la abeja intentará
+            recoger néctar solamente si hay una flor debajo de la nube.
         - text: No lo sé.
-          feedback: El bloque 'si hay flor' condiciona que la abeja intentará obtener
+          feedback: El bloque 'si hay flor' asegura que la abeja intentará recoger
             néctar solamente si hay una flor debajo de la nube.
         questions:
         - text: La nube bloquea la vista. Podría haber una flor debajo de esta nube.
-            Si hay una flor, la abeja necesitará obtener el néctar una vez. Si no
-            hay una flor, la abeja no debería hacer nada. Observa el siguiente código
+            Si hay una flor, la abeja tendría que recoger néctar una vez. Si no hay
+            una flor, la abeja no debería hacer nada. Observa el siguiente código
             con atención. ¿Qué crees que sucederá si haces clic en "Ejecutar"?
       courseD_multi_bee_conditionals1_predict1_2018_2019:
         answers:
         - text: 'La abeja se moverá a la nube y tratará de obtener el néctar, pase
             lo que pase. '
-          feedback: Incorrecto. El bloque 'si hay flor' condiciona que la abeja intentará
-            obtener néctar solamente si hay una flor debajo de la nube.
-        - text: La abeja ira a la nube y tratará de conseguir néctar solo si hay una
+          feedback: Incorrecto. El bloque 'si hay flor' asegura que la abeja intentará
+            recoger néctar solamente si hay una flor debajo de la nube.
+        - text: La abeja ira a la nube y tratará de recoger néctar sólo si hay una
             flor debajo.
           correct: true
           feedback: "¡Correcto!"
         - text: 'La abeja se moverá a la nube y no hará nada, pase lo que pase. '
-          feedback: El bloque 'si hay flor' condiciona que la abeja intentará obtener
-            néctar solamente si hay una flor debajo de la nube.
+          feedback: Incorrecto. El bloque 'si hay flor' asegura que la abeja intentará
+            recoger néctar solamente si hay una flor debajo de la nube.
         - text: No lo sé.
-          feedback: El bloque 'si hay flor' condiciona que la abeja intentará obtener
+          feedback: El bloque 'si hay flor' asegura que la abeja intentará recoger
             néctar solamente si hay una flor debajo de la nube.
         questions:
         - text: La nube bloquea la vista. Podría haber una flor debajo de esta nube.
-            Si hay una flor, la abeja necesitará obtener el néctar una vez. Si no
-            hay una flor, la abeja no debería hacer nada. Observa el siguiente código
+            Si hay una flor, la abeja tendría que recoger néctar una vez. Si no hay
+            una flor, la abeja no debería hacer nada. Observa el siguiente código
             con atención. ¿Qué crees que sucederá si haces clic en "Ejecutar"?
       courseD_multi_bee_conditionals1_predict1_2018_2019_2020:
         answers:
         - text: 'La abeja se moverá a la nube y tratará de obtener el néctar, pase
             lo que pase. '
-          feedback: Incorrecto. El bloque 'si hay flor' condiciona que la abeja intentará
-            obtener néctar solamente si hay una flor debajo de la nube.
-        - text: La abeja ira a la nube y tratará de conseguir néctar solo si hay una
+          feedback: Incorrecto. El bloque 'si hay flor' asegura que la abeja intentará
+            recoger néctar solamente si hay una flor debajo de la nube.
+        - text: La abeja ira a la nube y tratará de recoger néctar sólo si hay una
             flor debajo.
           correct: true
           feedback: "¡Correcto!"
         - text: 'La abeja se moverá a la nube y no hará nada, pase lo que pase. '
-          feedback: El bloque 'si hay flor' condiciona que la abeja intentará obtener
-            néctar solamente si hay una flor debajo de la nube.
+          feedback: Incorrecto. El bloque 'si hay flor' asegura que la abeja intentará
+            recoger néctar solamente si hay una flor debajo de la nube.
         - text: No lo sé.
-          feedback: El bloque 'si hay flor' condiciona que la abeja intentará obtener
+          feedback: El bloque 'si hay flor' asegura que la abeja intentará recoger
             néctar solamente si hay una flor debajo de la nube.
         questions:
         - text: La nube bloquea la vista. Podría haber una flor debajo de esta nube.
-            Si hay una flor, la abeja necesitará obtener el néctar una vez. Si no
-            hay una flor, la abeja no debería hacer nada. Observa el siguiente código
+            Si hay una flor, la abeja tendría que recoger néctar una vez. Si no hay
+            una flor, la abeja no debería hacer nada. Observa el siguiente código
             con atención. ¿Qué crees que sucederá si haces clic en "Ejecutar"?
       courseD_multi_bee_conditionals1_predict1_copy:
         answers:
         - text: 'La abeja se moverá a la nube y tratará de obtener el néctar, pase
             lo que pase. '
-          feedback: Incorrecto. El bloque 'si hay flor' condiciona que la abeja intentará
-            obtener néctar solamente si hay una flor debajo de la nube.
-        - text: La abeja ira a la nube y tratará de conseguir néctar solo si hay una
+          feedback: Incorrecto. El bloque 'si hay flor' asegura que la abeja intentará
+            recoger néctar solamente si hay una flor debajo de la nube.
+        - text: La abeja ira a la nube y tratará de recoger néctar sólo si hay una
             flor debajo.
           correct: true
           feedback: "¡Correcto!"
         - text: 'La abeja se moverá a la nube y no hará nada, pase lo que pase. '
-          feedback: El bloque 'si hay flor' condiciona que la abeja intentará obtener
-            néctar solamente si hay una flor debajo de la nube.
+          feedback: Incorrecto. El bloque 'si hay flor' asegura que la abeja intentará
+            recoger néctar solamente si hay una flor debajo de la nube.
         - text: No lo sé.
-          feedback: El bloque 'si hay flor' condiciona que la abeja intentará obtener
+          feedback: El bloque 'si hay flor' asegura que la abeja intentará recoger
             néctar solamente si hay una flor debajo de la nube.
         questions:
         - text: La nube bloquea la vista. Podría haber una flor debajo de esta nube.
-            Si hay una flor, la abeja necesitará obtener el néctar una vez. Si no
-            hay una flor, la abeja no debería hacer nada. Observa el siguiente código
+            Si hay una flor, la abeja tendría que recoger néctar una vez. Si no hay
+            una flor, la abeja no debería hacer nada. Observa el siguiente código
             con atención. ¿Qué crees que sucederá si haces clic en "Ejecutar"?
       courseD_multi_bee_conditionals7_predict2:
         answers:
-        - text: La abeja obtendrá el néctar de cada flor, y la miel, de cada panal.
+        - text: La abeja recogerá néctar de cada flor, y miel, de cada panal.
           correct: true
           feedback: "¡Correcto!"
-        - text: La abeja tratará de obtener el néctar de las flores y del panal.
+        - text: La abeja tratará de obtener el néctar tanto de las flores como del
+            panal.
           feedback: Incorrecto. El bloque `si en la flor` permite a la abeja tomar
             el néctar de cada flor y la miel de cada panal.
-        - text: La abeja tratará de obtener la miel de las flores y del panal.
+        - text: La abeja tratará de obtener miel tanto de las flores como del panal.
           feedback: Incorrecto. Incorrecto. El bloque 'si hay flor' permite a la abeja
-            tomar néctar de cada flor y miel de cada panal..
+            recoger néctar de cada flor y miel de cada panal..
         - text: No lo sé.
-          feedback: El bloque `si en la flor` permite a la abeja tomar el néctar de
-            cada flor y la miel de cada panal.
+          feedback: El bloque `si en la flor` permite a la abeja obtener el néctar
+            de cada flor y la miel de cada panal.
         questions:
         - text: Mira el siguiente código con atención. ¿Qué crees que sucederá si
             haces clic en "Ejecutar"? Recuerda que solo habrá *un* panal o *una* flor
             detrás de cada nube.
       courseD_multi_bee_conditionals7_predict2_2018:
         answers:
-        - text: La abeja obtendrá el néctar de cada flor, y la miel, de cada panal.
+        - text: La abeja recogerá néctar de cada flor, y miel, de cada panal.
           correct: true
           feedback: "¡Correcto!"
-        - text: La abeja tratará de obtener el néctar de las flores y del panal.
+        - text: La abeja tratará de obtener el néctar tanto de las flores como del
+            panal.
           feedback: Incorrecto. El bloque `si en la flor` permite a la abeja tomar
             el néctar de cada flor y la miel de cada panal.
-        - text: La abeja tratará de obtener la miel de las flores y del panal.
+        - text: La abeja tratará de obtener miel tanto de las flores como del panal.
           feedback: Incorrecto. Incorrecto. El bloque 'si hay flor' permite a la abeja
-            tomar néctar de cada flor y miel de cada panal..
+            recoger néctar de cada flor y miel de cada panal..
         - text: No lo sé.
-          feedback: El bloque `si en la flor` permite a la abeja tomar el néctar de
-            cada flor y la miel de cada panal.
+          feedback: El bloque `si en la flor` permite a la abeja obtener el néctar
+            de cada flor y la miel de cada panal.
         questions:
         - text: Mira el siguiente código con atención. ¿Qué crees que sucederá si
             haces clic en "Ejecutar"? Recuerda que solo habrá *un* panal o *una* flor
             detrás de cada nube.
       courseD_multi_bee_conditionals7_predict2_2018_2019:
         answers:
-        - correct: true
+        - text: La abeja recogerá néctar de cada flor y hará miel en cada panal.
+          correct: true
           feedback: "¡Correcto!"
-        - text: La abeja tratará de obtener el néctar de las flores y del panal.
-        - text: La abeja tratará de obtener la miel de las flores y del panal.
+        - text: La abeja tratará de obtener el néctar tanto de las flores como del
+            panal.
+          feedback: Incorrecto. El bloque ´si en una flor´ le permite a la abeja recoger
+            néctar en cada flor y hacer miel en cada panal.
+        - text: La abeja tratará de obtener miel tanto de las flores como del panal.
+          feedback: Incorrecto. Incorrecto. El bloque ´si en una flor´ le permite
+            a la abeja recoger néctar en cada flor y hacer miel en cada panal.
         - text: No lo sé.
+          feedback: El bloque ´si en una flor´ le permite a la abeja recoger néctar
+            en cada flor y hacer miel en cada panal.
         questions:
         - text: Mira el siguiente código con atención. ¿Qué crees que sucederá si
             haces clic en "Ejecutar"? Recuerda que solo habrá *un* panal o *una* flor
             detrás de cada nube.
       courseD_multi_bee_conditionals7_predict2_2018_2019_2020:
         answers:
-        - correct: true
+        - text: La abeja recogerá néctar de cada flor y hará miel en cada panal.
+          correct: true
           feedback: "¡Correcto!"
-        - text: La abeja tratará de obtener el néctar de las flores y del panal.
-        - text: La abeja tratará de obtener la miel de las flores y del panal.
+        - text: La abeja tratará de obtener el néctar tanto de las flores como del
+            panal.
+          feedback: Incorrecto. El bloque ´si en una flor´ le permite a la abeja recoger
+            néctar en cada flor y hacer miel en cada panal.
+        - text: La abeja tratará de obtener miel tanto de las flores como del panal.
+          feedback: Incorrecto. Incorrecto. El bloque ´si en una flor´ le permite
+            a la abeja recoger néctar en cada flor y hacer miel en cada panal.
         - text: No lo sé.
+          feedback: El bloque ´si en una flor´ le permite a la abeja recoger néctar
+            en cada flor y hacer miel en cada panal.
         questions:
         - text: Mira el siguiente código con atención. ¿Qué crees que sucederá si
             haces clic en "Ejecutar"? Recuerda que solo habrá *un* panal o *una* flor
@@ -6682,17 +6700,17 @@ es-ES:
         answers:
         - text: 'La abeja se moverá a la nube y tratará de obtener el néctar, pase
             lo que pase. '
-          feedback: Incorrecto. El bloque 'si hay flor' condiciona que la abeja intentará
-            obtener néctar solamente si hay una flor debajo de la nube.
-        - text: La abeja ira a la nube y tratará de conseguir néctar solo si hay una
+          feedback: Incorrecto. El bloque 'si hay flor' asegura que la abeja intentará
+            recoger néctar solamente si hay una flor debajo de la nube.
+        - text: La abeja ira a la nube y tratará de recoger néctar sólo si hay una
             flor debajo.
           correct: true
           feedback: "¡Correcto!"
         - text: 'La abeja se moverá a la nube y no hará nada, pase lo que pase. '
-          feedback: El bloque 'si hay flor' condiciona que la abeja intentará obtener
-            néctar solamente si hay una flor debajo de la nube.
+          feedback: Incorrecto. El bloque 'si hay flor' asegura que la abeja intentará
+            recoger néctar solamente si hay una flor debajo de la nube.
         - text: No lo sé.
-          feedback: El bloque 'si hay flor' condiciona que la abeja intentará obtener
+          feedback: El bloque 'si hay flor' asegura que la abeja intentará recoger
             néctar solamente si hay una flor debajo de la nube.
         markdown: 'La nube bloquea la vista. Podría haber una flor debajo de esta
           nube. Si hay una flor, la abeja deberá recoger el néctar **una vez**.
@@ -6706,11 +6724,12 @@ es-ES:
         - text: La abeja recogerá el néctar de cada flor; de lo contrario, hará miel.
           correct: true
           feedback: "¡Correcto!"
-        - text: La abeja tratará de obtener el néctar de las flores y del panal.
+        - text: La abeja tratará de obtener el néctar tanto de las flores como del
+            panal.
           feedback: Incorrecto. El bloque `si en la flor` permite a la abeja obtener
             el néctar de cada flor y hacer la miel si no hay una flor (y, por lo tanto,
             hay un panal).
-        - text: La abeja tratará de obtener la miel de las flores y del panal.
+        - text: La abeja tratará de obtener miel tanto de las flores como del panal.
           feedback: Incorrecto. Incorrecto. El bloque `si en la flor` permite a la
             abeja obtener el néctar de cada flor y la miel de cada panal.
         - text: No lo sé.

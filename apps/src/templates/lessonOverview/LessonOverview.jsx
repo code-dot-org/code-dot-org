@@ -70,7 +70,11 @@ class LessonOverview extends Component {
       <ul>
         {lesson.resources[key].map(resource => (
           <li key={resource.key}>
-            <a href={this.normalizeUrl(resource.url)} target="_blank">
+            <a
+              href={this.normalizeUrl(resource.url)}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               {resource.name}
             </a>
             {resource.type && ` -  ${resource.type}`}
@@ -80,6 +84,7 @@ class LessonOverview extends Component {
                 <a
                   href={this.normalizeUrl(resource.download_url)}
                   target="_blank"
+                  rel="noopener noreferrer"
                 >{`${i18n.download()}`}</a>
                 {')'}
               </span>

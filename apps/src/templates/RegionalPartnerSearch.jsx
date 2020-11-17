@@ -286,6 +286,7 @@ class RegionalPartnerSearch extends Component {
                 <a
                   href="https://docs.google.com/document/d/1OeLNx97wiLon69e8lp45M6ox0BuYLCOSZedzrtMB8_k/edit"
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   this document
                 </a>

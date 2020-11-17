@@ -142,7 +142,7 @@
           "2-3_Bee_Functions_8_a": "Si el desafío parece difícil, intenta crear tu función de a poco.   \n\nAgrega algunos bloques y luego pruébala. Agrega más y vuelve a intentarlo. ¡Pronto lograrás resultados!\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
         },
         "2-3 Bee Functions 9": {
-          "2-3_Bee_Functions_8_a": "Si el rompecabezas parece desafiante, intenta construir tu función de a poco.\n\nAgrega algunos bloques, luego pruébalos. Agrega más, luego pruébalos otra vez. ¡Pronto, llegarás al lugar!",
+          "2-3_Bee_Functions_8_a": "Si el puzle te parece, intenta construir tu función de a poco.\n\nAgrega algunos bloques, luego pruébalos. Agrega más, luego pruébalos otra vez. ¡Pronto, lo tendrás!",
           "2-3_Bee_Functions_8_b": "Recuerda crear tu código dentro del bloque de función verde. \n\n![](https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)"
         },
         "2-3 Bee Loops 2": {
@@ -244,10 +244,10 @@
           "4-5_Artist_Patterns_5_a": "Ahora, cuando el artista termine cada diamante, se encontrará en la dirección opuesta a la que necesita para comenzar la siguiente.   \n\n¿Cuántos grados necesita cambiar para ponerse en línea recta?"
         },
         "4-5 Bee Conditionals 4": {
-          "remember_quantum": "\\*\\* Recuerde: \\*\\* Este desafío cambia cada vez que se ejecuta.   \n\nQuerrás utilizar un bloque condicional  ( `si' o 'si /si no`) para resolver el desafío."
+          "remember_quantum": "\\*\\* Recuerda: \\*\\* Este puzle cambia cada vez que se ejecuta.   \n\nTendrás que utilizar un bloque condicional  ( `si' o 'si /si no`) para resolver el desafío."
         },
         "4-5 Bee Conditionals 5": {
-          "remember_quantum": "\\*\\* Recuerde: \\*\\* Este desafío cambia cada vez que se ejecuta.   \n\nQuerrás utilizar un bloque condicional  ( `si' o 'si /si no`) para resolver el desafío."
+          "remember_quantum": "\\*\\* Recuerda: \\*\\* Este puzle cambia cada vez que se ejecuta.   \n\nTendrás que utilizar un bloque condicional  ( `si' o 'si /si no`) para resolver el desafío."
         },
         "4-5 Bee Conditionals 6": {
           "4-5 Bee Conditionals 6_a": "Puede resolver este rompecabezas usando solo los bloques en el espacio de trabajo. ¿En qué orden deberían ir?",
@@ -1315,11 +1315,11 @@
           "courseD_bee_debugging_challenge1_c": "Una vez que la abeja llegue a la última fina, haz que repita estos comandos:\n\n-   Repetir 2 veces:\n    -   Avanzar\n    -   Hacer 3 mieles\n-   Retroceder"
         },
         "course3_bee_functions_challenge1": {
-          "courseE_bee_functions_challenge1_a": "Si el rompecabezas parece desafiante, intenta construir tu función de a poco.\n\nAgrega algunos bloques, luego pruébalos. Agrega más, luego pruébalos otra vez. ¡Pronto, llegarás al lugar!",
+          "courseE_bee_functions_challenge1_a": "Si el puzle te parece, intenta construir tu función de a poco.\n\nAgrega algunos bloques, luego pruébalos. Agrega más, luego pruébalos otra vez. ¡Pronto, lo tendrás!",
           "courseE_bee_functions_challenge1_b": "Recuerda construir tu código dentro del bloque de función verde."
         },
         "course3_bee_functions_challenge2": {
-          "courseE_bee_functions_challenge1_a": "Si el rompecabezas parece desafiante, intenta construir tu función de a poco.\n\nAgrega algunos bloques, luego pruébalos. Agrega más, luego pruébalos otra vez. ¡Pronto, llegarás al lugar!",
+          "courseE_bee_functions_challenge1_a": "Si el puzle te parece, intenta construir tu función de a poco.\n\nAgrega algunos bloques, luego pruébalos. Agrega más, luego pruébalos otra vez. ¡Pronto, lo tendrás!",
           "courseE_bee_functions_challenge1_b": "Recuerda construir tu código dentro del bloque de función verde."
         },
         "course3_bee_functions_challenge3": {
@@ -3835,8 +3835,8 @@
           "courseC_artist_loopsPrePre1a_b": "Para avanzar 50 píxeles , utiliza este bloque :! \\[] (Https\\://images.code.org/411fca4606a09641e6eedf5069ac4efa-image-1499710237929.08.27 AM.png)"
         },
         "courseC_artist_prog2": {
-          "courseC_artist_prog2_a": "Si utiliza el bloque para hacerme 'avanzar 100 píxeles', sacaré una línea automáticamente.",
-          "courseC_artist_prog2_b": "¿Tienes problemas girando la esquina? Usa el bloque `girar a la derecha 90 grados`."
+          "courseC_artist_prog2_a": "*\"Si utilizas el bloque <xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">moveForward</title><title name=\"VALUE\">100</title></block></xml>, dibujaré una línea.\"*",
+          "courseC_artist_prog2_b": "¿Tienes problemas para girar en la esquina? Utiliza el bloque <xml><block type=\"draw_turn_by_constant_dropdown\"><title name=\"DIR\">turnRight</title><title name=\"VALUE\" config=\"45,60,90,120,180\">90</title></block></xml>."
         },
         "courseC_artist_prog2_2018": {
           "courseC_artist_prog2_a": "*\"Si utilizas el bloque <xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">moveForward</title><title name=\"VALUE\">100</title></block></xml>, dibujaré una línea.\"*",
@@ -5544,33 +5544,33 @@
           "courseD_artist_binary8_c": "¡No tengas miedo de cometer un error! Intenta escribir binario y ejecuta el código para ver qué sucederá, incluso si aún no has resuelto el desafío."
         },
         "courseD_bee_conditionals1_predict1": {
-          "courseD_bee_conditionals1_a": "Usted tendrá que utilizar un bloque `si` para comprobar si hay una flor debajo de la nube antes de tratar de obtener el néctar."
+          "courseD_bee_conditionals1_a": "Tendrás que utilizar un bloque `si` para comprobar si hay una flor debajo de la nube antes de intentar recoger el néctar."
         },
         "courseD_bee_conditionals1_predict1_2018": {
-          "courseD_bee_conditionals1_a": "Usted tendrá que utilizar un bloque `si` para comprobar si hay una flor debajo de la nube antes de tratar de obtener el néctar."
+          "courseD_bee_conditionals1_a": "Tendrás que utilizar un bloque `si` para comprobar si hay una flor debajo de la nube antes de intentar recoger el néctar."
         },
         "courseD_bee_conditionals1_predict1_2019": {
-          "courseD_bee_conditionals1_a": "Usted tendrá que utilizar un bloque `si` para comprobar si hay una flor debajo de la nube antes de tratar de obtener el néctar."
+          "courseD_bee_conditionals1_a": "Tendrás que utilizar un bloque `si` para comprobar si hay una flor debajo de la nube antes de intentar recoger el néctar."
         },
         "courseD_bee_conditionals1_predict1_2020": {
-          "courseD_bee_conditionals1_a": "Usted tendrá que utilizar un bloque `si` para comprobar si hay una flor debajo de la nube antes de tratar de obtener el néctar."
+          "courseD_bee_conditionals1_a": "Tendrás que utilizar un bloque `si` para comprobar si hay una flor debajo de la nube antes de intentar recoger el néctar."
         },
         "courseD_bee_conditionals1_predict1_copy": {
-          "courseD_bee_conditionals1_a": "Usted tendrá que utilizar un bloque `si` para comprobar si hay una flor debajo de la nube antes de tratar de obtener el néctar."
+          "courseD_bee_conditionals1_a": "Tendrás que utilizar un bloque `si` para comprobar si hay una flor debajo de la nube antes de intentar recoger el néctar."
         },
         "courseD_bee_conditionals2": {
           "courseD_bee_conditionals2_hintVid1": "¿Necesitas ayuda para comenzar? ¡Ve el vídeo!",
           "courseD_bee_conditionals2_a": "Algunas veces una flor estará allí, otras no.  Si quieres que tu código se ejecute en ambos casos, asegúrate de utilizar una afirmación  `si`.",
-          "courseD_bee_conditionals2_b": "Puedes usar un loop 'repetir' o un 'mientras camino por delante' para moverse a través de este laberinto.",
+          "courseD_bee_conditionals2_b": "Puedes usar un bucle 'repetir' o 'mientras haya camino por delante' para moverte a través de este laberinto.",
           "courseD_bee_conditionals2_c": "No tienes buscar panales, solo habrá flores o espacios en blanco debajo de las nubes.",
-          "courseD_bee_conditionals2_hintVid2": "Mire este vídeo para ayudar a resolver este desafío."
+          "courseD_bee_conditionals2_hintVid2": "Ve este vídeo como ayuda para resolver este puzle."
         },
         "courseD_bee_conditionals2_2018": {
           "courseD_bee_conditionals2_hintVid1": "¿Necesitas ayuda para comenzar? ¡Ve el vídeo!",
           "courseD_bee_conditionals2_a": "Algunas veces una flor estará allí, otras no.  Si quieres que tu código se ejecute en ambos casos, asegúrate de utilizar una afirmación  `si`.",
-          "courseD_bee_conditionals2_b": "Puedes usar un loop 'repetir' o un 'mientras camino por delante' para moverse a través de este laberinto.",
+          "courseD_bee_conditionals2_b": "Puedes usar un bucle 'repetir' o 'mientras haya camino por delante' para moverte a través de este laberinto.",
           "courseD_bee_conditionals2_c": "No tienes buscar panales, solo habrá flores o espacios en blanco debajo de las nubes.",
-          "courseD_bee_conditionals2_hintVid2": "Mire este vídeo para ayudar a resolver este desafío."
+          "courseD_bee_conditionals2_hintVid2": "Ve este vídeo como ayuda para resolver este puzle."
         },
         "courseD_bee_conditionals2_2019": {
           "courseD_bee_conditionals2_a": "Algunas veces una flor estará allí, otras no.  Si quieres que tu código se ejecute en ambos casos, asegúrate de utilizar una afirmación  `si`.",
@@ -5583,168 +5583,168 @@
         "courseD_bee_conditionals2_copy": {
           "courseD_bee_conditionals2_hintVid1": "¿Necesitas ayuda para comenzar? ¡Ve el vídeo!",
           "courseD_bee_conditionals2_a": "Algunas veces una flor estará allí, otras no.  Si quieres que tu código se ejecute en ambos casos, asegúrate de utilizar una afirmación  `si`.",
-          "courseD_bee_conditionals2_b": "Puedes usar un loop 'repetir' o un 'mientras camino por delante' para moverse a través de este laberinto.",
+          "courseD_bee_conditionals2_b": "Puedes usar un bucle 'repetir' o 'mientras haya camino por delante' para moverte a través de este laberinto.",
           "courseD_bee_conditionals2_c": "No tienes buscar panales, solo habrá flores o espacios en blanco debajo de las nubes.",
-          "courseD_bee_conditionals2_hintVid2": "Mire este vídeo para ayudar a resolver este desafío."
+          "courseD_bee_conditionals2_hintVid2": "Ve este vídeo como ayuda para resolver este puzle."
         },
         "courseD_bee_conditionals3": {
           "courseD_bee_conditionals3_hintVid1": "¿Necesitas ayuda para comenzar? ¡Ve el vídeo!",
-          "courseD_bee_conditionals3_a": "Asegúrate de usar una afirmación 'si' para verificar cada espacio para ver sí tiene una flor o nada.",
-          "courseD_bee_conditionals3_b": "Puedes utilizar un loop 'repetir' o un loop 'mientras' para que la abeja se mantenga en movimiento. ¡Usa el que más te guste!",
+          "courseD_bee_conditionals3_a": "Asegúrate de usar una afirmación 'si' para revisar cada espacio para ver sí tiene una flor o no tiene nada.",
+          "courseD_bee_conditionals3_b": "Puedes utilizar un bucle 'repetir' o un bucle 'mientras' para que la abeja se mantenga en movimiento. ¡Usa el que más te guste!",
           "courseD_bee_conditionals3_c": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si aún no has resuelto el desafío.",
-          "courseD_bee_conditionals3_hintVid2": "Mire este vídeo para ayudar a resolver este desafío."
+          "courseD_bee_conditionals3_hintVid2": "Ve este vídeo como ayuda para resolver este puzle."
         },
         "courseD_bee_conditionals3_2018": {
           "courseD_bee_conditionals3_hintVid1": "¿Necesitas ayuda para comenzar? ¡Ve el vídeo!",
-          "courseD_bee_conditionals3_a": "Asegúrate de usar una afirmación 'si' para verificar cada espacio para ver sí tiene una flor o nada.",
-          "courseD_bee_conditionals3_b": "Puedes utilizar un loop 'repetir' o un loop 'mientras' para que la abeja se mantenga en movimiento. ¡Usa el que más te guste!",
+          "courseD_bee_conditionals3_a": "Asegúrate de usar una afirmación 'si' para revisar cada espacio para ver sí tiene una flor o no tiene nada.",
+          "courseD_bee_conditionals3_b": "Puedes utilizar un bucle 'repetir' o un bucle 'mientras' para que la abeja se mantenga en movimiento. ¡Usa el que más te guste!",
           "courseD_bee_conditionals3_c": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si aún no has resuelto el desafío.",
-          "courseD_bee_conditionals3_hintVid2": "Mire este vídeo para ayudar a resolver este desafío."
+          "courseD_bee_conditionals3_hintVid2": "Ve este vídeo como ayuda para resolver este puzle."
         },
         "courseD_bee_conditionals3_2019": {
-          "courseD_bee_conditionals3_a": "Asegúrate de usar una afirmación 'si' para verificar cada espacio para ver sí tiene una flor o nada.",
+          "courseD_bee_conditionals3_a": "Asegúrate de usar una afirmación 'si' para revisar cada espacio para ver sí tiene una flor o no tiene nada.",
           "courseD_bee_conditionals3_c": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si aún no has resuelto el desafío."
         },
         "courseD_bee_conditionals3_2020": {
-          "courseD_bee_conditionals3_a": "Asegúrate de usar una afirmación 'si' para verificar cada espacio para ver sí tiene una flor o nada.",
+          "courseD_bee_conditionals3_a": "Asegúrate de usar una afirmación 'si' para revisar cada espacio para ver sí tiene una flor o no tiene nada.",
           "courseD_bee_conditionals3_c": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si aún no has resuelto el desafío."
         },
         "courseD_bee_conditionals3_copy": {
           "courseD_bee_conditionals3_hintVid1": "¿Necesitas ayuda para comenzar? ¡Ve el vídeo!",
-          "courseD_bee_conditionals3_a": "Asegúrate de usar una afirmación 'si' para verificar cada espacio para ver sí tiene una flor o nada.",
-          "courseD_bee_conditionals3_b": "Puedes utilizar un loop 'repetir' o un loop 'mientras' para que la abeja se mantenga en movimiento. ¡Usa el que más te guste!",
+          "courseD_bee_conditionals3_a": "Asegúrate de usar una afirmación 'si' para revisar cada espacio para ver sí tiene una flor o no tiene nada.",
+          "courseD_bee_conditionals3_b": "Puedes utilizar un bucle 'repetir' o un bucle 'mientras' para que la abeja se mantenga en movimiento. ¡Usa el que más te guste!",
           "courseD_bee_conditionals3_c": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si aún no has resuelto el desafío.",
-          "courseD_bee_conditionals3_hintVid2": "Mire este vídeo para ayudar a resolver este desafío."
+          "courseD_bee_conditionals3_hintVid2": "Ve este vídeo como ayuda para resolver este puzle."
         },
         "courseD_bee_conditionals4": {
           "courseD_bee_conditionals4_hintVid1": "¿Necesitas ayuda para comenzar? ¡Ve el vídeo!",
           "courseD_bee_conditionals4_a": "Todavía puedes tratar cada espacio como si hubiera una nube sobre él, aunque puedas ver todo el camino.",
-          "courseD_bee_conditionals4_b": "Usa una afirmación \\`si' dentro de tu loop para comprobar si hay néctar en cada espacio. ",
+          "courseD_bee_conditionals4_b": "Usa una afirmación \\`si' dentro de tu bucle para comprobar si hay néctar en cada espacio. ",
           "courseD_bee_conditionals4_c": "Usa un bloque <xml><block type=\"maze_untilBlocked\"/></xml> para avanzar y comprobar si hay una flor. Si hay una flor, ¿qué debería hacer la abeja?",
-          "courseD_bee_conditionals4_hintVid2": "Mire este vídeo para ayudar a resolver este desafío."
+          "courseD_bee_conditionals4_hintVid2": "Ve este vídeo como ayuda para resolver este puzle."
         },
         "courseD_bee_conditionals4_2018": {
           "courseD_bee_conditionals4_hintVid1": "¿Necesitas ayuda para comenzar? ¡Ve el vídeo!",
           "courseD_bee_conditionals4_a": "Todavía puedes tratar cada espacio como si hubiera una nube sobre él, aunque puedas ver todo el camino.",
-          "courseD_bee_conditionals4_b": "Usa una afirmación \\`si' dentro de tu loop para comprobar si hay néctar en cada espacio. ",
+          "courseD_bee_conditionals4_b": "Usa una afirmación \\`si' dentro de tu bucle para comprobar si hay néctar en cada espacio. ",
           "courseD_bee_conditionals4_c": "Usa un bloque <xml><block type=\"maze_untilBlocked\"/></xml> para avanzar y comprobar si hay una flor. Si hay una flor, ¿qué debería hacer la abeja?",
-          "courseD_bee_conditionals4_hintVid2": "Mire este vídeo para ayudar a resolver este desafío."
+          "courseD_bee_conditionals4_hintVid2": "Ve este vídeo como ayuda para resolver este puzle."
         },
         "courseD_bee_conditionals4_2019": {
           "courseD_bee_conditionals4_a": "Todavía puedes tratar cada espacio como si hubiera una nube sobre él, aunque puedas ver todo el camino.",
-          "courseD_bee_conditionals4_b": "Usa una afirmación \\`si' dentro de tu loop para comprobar si hay néctar en cada espacio. "
+          "courseD_bee_conditionals4_b": "Usa una afirmación \\`si' dentro de tu bucle para comprobar si hay néctar en cada espacio. "
         },
         "courseD_bee_conditionals4_2020": {
           "courseD_bee_conditionals4_a": "Todavía puedes tratar cada espacio como si hubiera una nube sobre él, aunque puedas ver todo el camino.",
-          "courseD_bee_conditionals4_b": "Usa una afirmación \\`si' dentro de tu loop para comprobar si hay néctar en cada espacio. "
+          "courseD_bee_conditionals4_b": "Usa una afirmación \\`si' dentro de tu bucle para comprobar si hay néctar en cada espacio. "
         },
         "courseD_bee_conditionals4_copy": {
           "courseD_bee_conditionals4_hintVid1": "¿Necesitas ayuda para comenzar? ¡Ve el vídeo!",
           "courseD_bee_conditionals4_a": "Todavía puedes tratar cada espacio como si hubiera una nube sobre él, aunque puedas ver todo el camino.",
-          "courseD_bee_conditionals4_b": "Usa una afirmación \\`si' dentro de tu loop para comprobar si hay néctar en cada espacio. ",
+          "courseD_bee_conditionals4_b": "Usa una afirmación \\`si' dentro de tu bucle para comprobar si hay néctar en cada espacio. ",
           "courseD_bee_conditionals4_c": "Usa un bloque <xml><block type=\"maze_untilBlocked\"/></xml> para avanzar y comprobar si hay una flor. Si hay una flor, ¿qué debería hacer la abeja?",
-          "courseD_bee_conditionals4_hintVid2": "Mire este vídeo para ayudar a resolver este desafío."
+          "courseD_bee_conditionals4_hintVid2": "Ve este vídeo como ayuda para resolver este puzle."
         },
         "courseD_bee_conditionals5": {
           "courseD_bee_conditionals5_hintVid1": "¿Necesitas ayuda para comenzar? ¡Ve el vídeo!",
-          "courseD_bee_conditionals5_a": "Piensa en cada lado de la ruta rectangular como un camino en sí mismo. Configura un loop anidado con un bloque `repetir` en el exterior y un ciclo`cuando hay un camino por delante` en el interior. ¿Cuántos caminos necesita recorrer la abeja si la abeja necesita recorrer cada lado con una flor?",
-          "courseD_bee_conditionals5_c": "Hay 3 lados del rectángulo con flores, por lo que el código se debe `repetir 3 veces`. En cada repetición, la abeja deberá continuar por el camino, \"mientras haya un camino por delante\". Para continuar por el camino, la abeja deberá 'avanzar'. Mientras que en el camino, la abeja tiene que comprobar si hay una flor. `si hay una flor`, la abeja debería`obtener néctar`.",
-          "courseD_bee_conditionals5_b": "En el interior del bloque`mientras que hay un camino adelante` tendrás que seguir adelante y comprobar si hay una flor. ¿Cómo se comprueba si hay una flor? ¿Qué haces si hay una flor?",
-          "courseD_bee_conditionals5_hintVid2": "Mire este vídeo para ayudar a resolver este desafío."
+          "courseD_bee_conditionals5_a": "Piensa en cada lado de la ruta rectangular como un camino en sí mismo. Crea un bucle anidado con un bloque `repetir` en el exterior y un bucle`mientras haya camino por delante` en el interior. ¿Cuántos caminos necesita recorrer la abeja si la abeja necesita recorrer cada lado con una flor?",
+          "courseD_bee_conditionals5_c": "Hay 3 lados del rectángulo con flores, por lo que el código se debe `repetir 3 veces`. En cada repetición, la abeja deberá avanzar por el camino, \"mientras haya un camino por delante\". Para continuar por el camino, la abeja deberá 'avanzar'. Mientras recorre el camino, la abeja tiene que comprobar si hay una flor. `si hay una flor`, la abeja debería`recoger néctar`.",
+          "courseD_bee_conditionals5_b": "En el interior del bloque`mientras que haya un camino delante` tendrás que avanzar y comprobar si hay una flor. ¿Cómo se comprueba si hay una flor? ¿Qué haces si hay una flor?",
+          "courseD_bee_conditionals5_hintVid2": "Ve este vídeo como ayuda para resolver este puzle."
         },
         "courseD_bee_conditionals5_2018": {
           "courseD_bee_conditionals5_hintVid1": "¿Necesitas ayuda para comenzar? ¡Ve el vídeo!",
           "courseD_bee_conditionals5_a": "Piensa en cada lado de la ruta rectangular como un camino en sí mismo. Configura un loop anidado con un bloque `repetir` en el exterior y un ciclo`cuando hay un camino por delante` en el interior. ¿Cuántos caminos necesita recorrer la abeja si la abeja necesita recorrer cada lado con una flor?",
           "courseD_bee_conditionals5_c": "Hay 3 lados del rectángulo con flores, por lo que el código se debe `repetir 3 veces`. En cada repetición, la abeja deberá continuar por el camino, \"mientras haya un camino por delante\". Para continuar por el camino, la abeja deberá 'avanzar'. Mientras que en el camino, la abeja tiene que comprobar si hay una flor. `si hay una flor`, la abeja debería`obtener néctar`.",
           "courseD_bee_conditionals5_b": "En el interior del bloque`mientras que hay un camino adelante` tendrás que seguir adelante y comprobar si hay una flor. ¿Cómo se comprueba si hay una flor? ¿Qué haces si hay una flor?",
-          "courseD_bee_conditionals5_hintVid2": "Mire este vídeo para ayudar a resolver este desafío."
+          "courseD_bee_conditionals5_hintVid2": "Ve este vídeo como ayuda para resolver este puzle."
         },
         "courseD_bee_conditionals5_copy": {
           "courseD_bee_conditionals5_hintVid1": "¿Necesitas ayuda para comenzar? ¡Ve el vídeo!",
-          "courseD_bee_conditionals5_a": "Piensa en cada lado de la ruta rectangular como un camino en sí mismo. Configura un loop anidado con un bloque `repetir` en el exterior y un ciclo`cuando hay un camino por delante` en el interior. ¿Cuántos caminos necesita recorrer la abeja si la abeja necesita recorrer cada lado con una flor?",
-          "courseD_bee_conditionals5_c": "Hay 3 lados del rectángulo con flores, por lo que el código se debe `repetir 3 veces`. En cada repetición, la abeja deberá continuar por el camino, \"mientras haya un camino por delante\". Para continuar por el camino, la abeja deberá 'avanzar'. Mientras que en el camino, la abeja tiene que comprobar si hay una flor. `si hay una flor`, la abeja debería`obtener néctar`.",
-          "courseD_bee_conditionals5_b": "En el interior del bloque`mientras que hay un camino adelante` tendrás que seguir adelante y comprobar si hay una flor. ¿Cómo se comprueba si hay una flor? ¿Qué haces si hay una flor?",
-          "courseD_bee_conditionals5_hintVid2": "Mire este vídeo para ayudar a resolver este desafío."
+          "courseD_bee_conditionals5_a": "Piensa en cada lado de la ruta rectangular como un camino en sí mismo. Crea un bucle anidado con un bloque `repetir` en el exterior y un bucle`mientras haya camino por delante` en el interior. ¿Cuántos caminos necesita recorrer la abeja si la abeja necesita recorrer cada lado con una flor?",
+          "courseD_bee_conditionals5_c": "Hay 3 lados del rectángulo con flores, por lo que el código se debe `repetir 3 veces`. En cada repetición, la abeja deberá avanzar por el camino, \"mientras haya un camino por delante\". Para continuar por el camino, la abeja deberá 'avanzar'. Mientras recorre el camino, la abeja tiene que comprobar si hay una flor. `si hay una flor`, la abeja debería`recoger néctar`.",
+          "courseD_bee_conditionals5_b": "En el interior del bloque`mientras que haya un camino delante` tendrás que avanzar y comprobar si hay una flor. ¿Cómo se comprueba si hay una flor? ¿Qué haces si hay una flor?",
+          "courseD_bee_conditionals5_hintVid2": "Ve este vídeo como ayuda para resolver este puzle."
         },
         "courseD_bee_conditionals6": {
           "courseD_bee_conditionals6_hintVid1": "¿Necesitas ayuda para comenzar? ¡Ve el vídeo!",
           "courseD_bee_conditionals6_a": "Asegúrate de utilizar una afirmación \\`si' para comprobar si hay panales debajo de cada nube.",
           "courseD_bee_conditionals6_b": "En este caso, no necesitas verificar si hay flores debajo de las nubes.",
-          "courseD_bee_conditionals6_c": "¿Hay algún loop que puedas usar para simplificar tu código?",
-          "courseD_bee_conditionals6_hintVid2": "Mire este vídeo para ayudar a resolver este desafío."
+          "courseD_bee_conditionals6_c": "¿Hay algún bucle que puedas usar para simplificar tu código?",
+          "courseD_bee_conditionals6_hintVid2": "Ve este vídeo como ayuda para resolver este puzle."
         },
         "courseD_bee_conditionals6_2018": {
           "courseD_bee_conditionals6_hintVid1": "¿Necesitas ayuda para comenzar? ¡Ve el vídeo!",
           "courseD_bee_conditionals6_a": "Asegúrate de utilizar una afirmación \\`si' para comprobar si hay panales debajo de cada nube.",
           "courseD_bee_conditionals6_b": "En este caso, no necesitas verificar si hay flores debajo de las nubes.",
-          "courseD_bee_conditionals6_c": "¿Hay algún loop que puedas usar para simplificar tu código?",
-          "courseD_bee_conditionals6_hintVid2": "Mire este vídeo para ayudar a resolver este desafío."
+          "courseD_bee_conditionals6_c": "¿Hay algún bucle que puedas usar para simplificar tu código?",
+          "courseD_bee_conditionals6_hintVid2": "Ve este vídeo como ayuda para resolver este puzle."
         },
         "courseD_bee_conditionals6_2019": {
           "courseD_bee_conditionals6_a": "Asegúrate de utilizar una afirmación \\`si' para comprobar si hay panales debajo de cada nube.",
           "courseD_bee_conditionals6_b": "En este caso, no necesitas verificar si hay flores debajo de las nubes.",
-          "courseD_bee_conditionals6_c": "¿Hay algún loop que puedas usar para simplificar tu código?"
+          "courseD_bee_conditionals6_c": "¿Hay algún bucle que puedas usar para simplificar tu código?"
         },
         "courseD_bee_conditionals6_2020": {
           "courseD_bee_conditionals6_a": "Asegúrate de utilizar una afirmación \\`si' para comprobar si hay panales debajo de cada nube.",
           "courseD_bee_conditionals6_b": "En este caso, no necesitas verificar si hay flores debajo de las nubes.",
-          "courseD_bee_conditionals6_c": "¿Hay algún loop que puedas usar para simplificar tu código?"
+          "courseD_bee_conditionals6_c": "¿Hay algún bucle que puedas usar para simplificar tu código?"
         },
         "courseD_bee_conditionals7": {
           "courseD_bee_conditionals7_hintVid1": "¿Necesitas ayuda para comenzar? ¡Ve el vídeo!",
-          "courseD_bee_conditionals7_a": "\\*\\* Recuerda: \\*\\* Este desafío cambia cada vez que se ejecuta.   \n\nQuerrás utilizar un bloque condicional  ( `si' o 'si / si no`) para resolver el desafío.",
+          "courseD_bee_conditionals7_a": "\\*\\* Recuerda: \\*\\* Este puzle cambia cada vez que se ejecuta.   \n\nTendrás que utilizar un bloque condicional  ( `si' o 'si / si no`) para resolver el desafío.",
           "courseD_bee_conditionals7_b": "Si no hay una flor debajo de la nube, debe haber un panal, por lo que no necesitas pensar en el caso que sea un espacio vacío.",
-          "courseD_bee_conditionals7_hintVid2": "Mire este vídeo para ayudar a resolver este desafío."
+          "courseD_bee_conditionals7_hintVid2": "Ve este vídeo como ayuda para resolver este puzle."
         },
         "courseD_bee_conditionals7_2018": {
           "courseD_bee_conditionals7_hintVid1": "¿Necesitas ayuda para comenzar? ¡Ve el vídeo!",
-          "courseD_bee_conditionals7_a": "\\*\\* Recuerda: \\*\\* Este desafío cambia cada vez que se ejecuta.   \n\nQuerrás utilizar un bloque condicional  ( `si' o 'si / si no`) para resolver el desafío.",
+          "courseD_bee_conditionals7_a": "\\*\\* Recuerda: \\*\\* Este puzle cambia cada vez que se ejecuta.   \n\nTendrás que utilizar un bloque condicional  ( `si' o 'si / si no`) para resolver el desafío.",
           "courseD_bee_conditionals7_b": "Si no hay una flor debajo de la nube, debe haber un panal, por lo que no necesitas pensar en el caso que sea un espacio vacío.",
-          "courseD_bee_conditionals7_hintVid2": "Mire este vídeo para ayudar a resolver este desafío."
+          "courseD_bee_conditionals7_hintVid2": "Ve este vídeo como ayuda para resolver este puzle."
         },
         "courseD_bee_conditionals7_2019": {
-          "courseD_bee_conditionals7_a": "\\*\\* Recuerda: \\*\\* Este desafío cambia cada vez que se ejecuta.   \n\nQuerrás utilizar un bloque condicional  ( `si' o 'si / si no`) para resolver el desafío.",
+          "courseD_bee_conditionals7_a": "\\*\\* Recuerda: \\*\\* Este puzle cambia cada vez que se ejecuta.   \n\nTendrás que utilizar un bloque condicional  ( `si' o 'si / si no`) para resolver el desafío.",
           "courseD_bee_conditionals7_b": "Si no hay una flor debajo de la nube, debe haber un panal, por lo que no necesitas pensar en el caso que sea un espacio vacío."
         },
         "courseD_bee_conditionals7_2020": {
-          "courseD_bee_conditionals7_a": "\\*\\* Recuerda: \\*\\* Este desafío cambia cada vez que se ejecuta.   \n\nQuerrás utilizar un bloque condicional  ( `si' o 'si / si no`) para resolver el desafío.",
+          "courseD_bee_conditionals7_a": "\\*\\* Recuerda: \\*\\* Este puzle cambia cada vez que se ejecuta.   \n\nTendrás que utilizar un bloque condicional  ( `si' o 'si / si no`) para resolver el desafío.",
           "courseD_bee_conditionals7_b": "Si no hay una flor debajo de la nube, debe haber un panal, por lo que no necesitas pensar en el caso que sea un espacio vacío."
         },
         "courseD_bee_conditionals7_predict2": {
-          "courseD_bee_conditionals7_a": "\\*\\* Recuerda: \\*\\* Este desafío cambia cada vez que se ejecuta.   \n\nQuerrás utilizar un bloque condicional  ( `si' o 'si / si no`) para resolver el desafío."
+          "courseD_bee_conditionals7_a": "\\*\\* Recuerda: \\*\\* Este puzle cambia cada vez que se ejecuta.   \n\nTendrás que utilizar un bloque condicional  ( `si' o 'si / si no`) para resolver el desafío."
         },
         "courseD_bee_conditionals7_predict2_2018": {
-          "courseD_bee_conditionals7_a": "\\*\\* Recuerda: \\*\\* Este desafío cambia cada vez que se ejecuta.   \n\nQuerrás utilizar un bloque condicional  ( `si' o 'si / si no`) para resolver el desafío."
+          "courseD_bee_conditionals7_a": "\\*\\* Recuerda: \\*\\* Este puzle cambia cada vez que se ejecuta.   \n\nTendrás que utilizar un bloque condicional  ( `si' o 'si / si no`) para resolver el desafío."
         },
         "courseD_bee_conditionals7_predict2_2019": {
-          "courseD_bee_conditionals7_a": "\\*\\* Recuerda: \\*\\* Este desafío cambia cada vez que se ejecuta.   \n\nQuerrás utilizar un bloque condicional  ( `si' o 'si / si no`) para resolver el desafío."
+          "courseD_bee_conditionals7_a": "\\*\\* Recuerda: \\*\\* Este puzle cambia cada vez que se ejecuta.   \n\nTendrás que utilizar un bloque condicional  ( `si' o 'si / si no`) para resolver el desafío."
         },
         "courseD_bee_conditionals7_predict2_2020": {
-          "courseD_bee_conditionals7_a": "\\*\\* Recuerda: \\*\\* Este desafío cambia cada vez que se ejecuta.   \n\nQuerrás utilizar un bloque condicional  ( `si' o 'si / si no`) para resolver el desafío."
+          "courseD_bee_conditionals7_a": "\\*\\* Recuerda: \\*\\* Este puzle cambia cada vez que se ejecuta.   \n\nTendrás que utilizar un bloque condicional  ( `si' o 'si / si no`) para resolver el desafío."
         },
         "courseD_bee_conditionals8": {
           "courseD_bee_conditionals8_hintVid1": "¿Necesitas ayuda para comenzar? ¡Ve el vídeo!",
-          "courseD_bee_conditionals8_a": "\\*\\* Recuerde: \\*\\* Este desafío cambia cada vez que se ejecuta.   \n\nQuerrás utilizar un bloque condicional  ( `si' o 'si /si no`) para resolver el desafío.",
-          "courseD_bee_conditionals8_b": "Este desafío es difícil, porque no puedes verificar cuadrados en blanco, néctar _y_ miel con un único condicional. \n\nSolo comprueba si hay néctar y miel al final de tu camino.",
-          "courseD_bee_conditionals8_c": "¿Cómo puedes asegurarte de viajar al final de cada camino, sin importar qué tan largo sea el camino?",
-          "courseD_bee_conditionals8_d": "Aunque hay una nube justo frente a ti, no tienes que visitarla primero. Intenta comenzar con la nube que se encuentra en la parte inferior derecha del cuadrado. \n\n![](https://images.code.org/166e71553edf23bf13ecd290a8e7e721-image-1501013509361.09.09.png)",
-          "courseD_bee_conditionals8_hintVid2": "Mire este vídeo para ayudar a resolver este desafío."
+          "courseD_bee_conditionals8_a": "\\*\\* Recuerda: \\*\\* Este puzle cambia cada vez que se ejecuta.   \n\nTendrás que utilizar un bloque condicional  ( `si' o 'si /si no`) para resolver el desafío.",
+          "courseD_bee_conditionals8_b": "Este puzle es difícil, porque no puedes verificar cuadrados en blanco, néctar _y_ miel con un único condicional. \n\nSolo comprueba si hay néctar y miel al final de tu camino.",
+          "courseD_bee_conditionals8_c": "¿Cómo puedes asegurarte de viajar hasta el final de cada camino, sea como sea el camino de largo?",
+          "courseD_bee_conditionals8_d": "Aunque hay una nube justo frente a ti, no tienes que ir hacia ella lo primero. Intenta comenzar con la nube que se encuentra en la parte inferior derecha del cuadrado. \n\n![](https://images.code.org/166e71553edf23bf13ecd290a8e7e721-image-1501013509361.09.09.png)",
+          "courseD_bee_conditionals8_hintVid2": "Ve este vídeo como ayuda para resolver este puzle."
         },
         "courseD_bee_conditionals8_2018": {
           "courseD_bee_conditionals8_hintVid1": "¿Necesitas ayuda para comenzar? ¡Ve el vídeo!",
-          "courseD_bee_conditionals8_a": "\\*\\* Recuerde: \\*\\* Este desafío cambia cada vez que se ejecuta.   \n\nQuerrás utilizar un bloque condicional  ( `si' o 'si /si no`) para resolver el desafío.",
-          "courseD_bee_conditionals8_b": "Este desafío es difícil, porque no puedes verificar cuadrados en blanco, néctar _y_ miel con un único condicional. \n\nSolo comprueba si hay néctar y miel al final de tu camino.",
-          "courseD_bee_conditionals8_c": "¿Cómo puedes asegurarte de viajar al final de cada camino, sin importar qué tan largo sea el camino?",
-          "courseD_bee_conditionals8_d": "Aunque hay una nube justo frente a ti, no tienes que visitarla primero. Intenta comenzar con la nube que se encuentra en la parte inferior derecha del cuadrado. \n\n![](https://images.code.org/166e71553edf23bf13ecd290a8e7e721-image-1501013509361.09.09.png)",
-          "courseD_bee_conditionals8_hintVid2": "Mire este vídeo para ayudar a resolver este desafío."
+          "courseD_bee_conditionals8_a": "\\*\\* Recuerda: \\*\\* Este puzle cambia cada vez que se ejecuta.   \n\nTendrás que utilizar un bloque condicional  ( `si' o 'si /si no`) para resolver el desafío.",
+          "courseD_bee_conditionals8_b": "Este puzle es difícil, porque no puedes verificar cuadrados en blanco, néctar _y_ miel con un único condicional. \n\nSolo comprueba si hay néctar y miel al final de tu camino.",
+          "courseD_bee_conditionals8_c": "¿Cómo puedes asegurarte de viajar hasta el final de cada camino, sea como sea el camino de largo?",
+          "courseD_bee_conditionals8_d": "Aunque hay una nube justo frente a ti, no tienes que ir hacia ella lo primero. Intenta comenzar con la nube que se encuentra en la parte inferior derecha del cuadrado. \n\n![](https://images.code.org/166e71553edf23bf13ecd290a8e7e721-image-1501013509361.09.09.png)",
+          "courseD_bee_conditionals8_hintVid2": "Ve este vídeo como ayuda para resolver este puzle."
         },
         "courseD_bee_conditionals8_2019": {
-          "courseD_bee_conditionals8_a": "\\*\\* Recuerde: \\*\\* Este desafío cambia cada vez que se ejecuta.   \n\nQuerrás utilizar un bloque condicional  ( `si' o 'si /si no`) para resolver el desafío.",
-          "courseD_bee_conditionals8_b": "Este desafío es difícil, porque no puedes verificar cuadrados en blanco, néctar _y_ miel con un único condicional. \n\nSolo comprueba si hay néctar y miel al final de tu camino."
+          "courseD_bee_conditionals8_a": "\\*\\* Recuerda: \\*\\* Este puzle cambia cada vez que se ejecuta.   \n\nTendrás que utilizar un bloque condicional  ( `si' o 'si /si no`) para resolver el desafío.",
+          "courseD_bee_conditionals8_b": "Este puzle es difícil, porque no puedes verificar cuadrados en blanco, néctar _y_ miel con un único condicional. \n\nSolo comprueba si hay néctar y miel al final de tu camino."
         },
         "courseD_bee_conditionals8_2020": {
-          "courseD_bee_conditionals8_a": "\\*\\* Recuerde: \\*\\* Este desafío cambia cada vez que se ejecuta.   \n\nQuerrás utilizar un bloque condicional  ( `si' o 'si /si no`) para resolver el desafío.",
-          "courseD_bee_conditionals8_b": "Este desafío es difícil, porque no puedes verificar cuadrados en blanco, néctar _y_ miel con un único condicional. \n\nSolo comprueba si hay néctar y miel al final de tu camino."
+          "courseD_bee_conditionals8_a": "\\*\\* Recuerda: \\*\\* Este puzle cambia cada vez que se ejecuta.   \n\nTendrás que utilizar un bloque condicional  ( `si' o 'si /si no`) para resolver el desafío.",
+          "courseD_bee_conditionals8_b": "Este puzle es difícil, porque no puedes verificar cuadrados en blanco, néctar _y_ miel con un único condicional. \n\nSolo comprueba si hay néctar y miel al final de tu camino."
         },
         "courseD_bee_conditionals_challenge1": {
           "courseD_bee_conditionals_challenge1_a": "¿Puedes encontrar un camino que llegue a cada flor y panal sin golpear ningún árbol? El mejor camino es una espiral.",
@@ -7358,7 +7358,7 @@
           "courseE_bee_functions10_c": "¡Recuerda llamar a tu función en el programa principal!"
         },
         "courseE_bee_functions2": {
-          "courseE_bee_functions2_a": "La función ha sido escrita por ti, pero deberás llamarla a cada flor.",
+          "courseE_bee_functions2_a": "La función ya está escrita, pero tendrás que aplicarla a cada flor.",
           "courseE_bee_functions2_b": "Este bloque <xml><block type=\"procedures_callnoreturn\"><mutation name=\"get 2 nectar\"/></block></xml> llama a la función que se te ha entregado.",
           "courseE_bee_functions2_c": "Querrás avanzar y obtener néctar dos veces para resolver este desafío."
         },
@@ -7383,7 +7383,7 @@
           "courseE_bee_functions6_b": "En este caso, puede ser útil moverse dentro de la función, pero no todos los bloques de 'movimiento' deben estar allí."
         },
         "courseE_bee_functions7": {
-          "courseE_bee_functions7_a": "Si el rompecabezas parece desafiante, intenta construir tu función de a poco.\n\nAgrega algunos bloques, luego pruébalos. Agrega más, luego pruébalos otra vez. ¡Pronto, llegarás al lugar!",
+          "courseE_bee_functions7_a": "Si el puzle te parece, intenta construir tu función de a poco.\n\nAgrega algunos bloques, luego pruébalos. Agrega más, luego pruébalos otra vez. ¡Pronto, lo tendrás!",
           "courseE_bee_functions7_b": "Recuerda crear tu código dentro del bloque de función verde. \n\n![](https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)",
           "courseE_bee_functions7_c": "Esta función debe hacer que la abeja lo dirija hacia el camino, recoger el néctar, hacer la miel, girar la abeja y traerlo de regreso."
         },
@@ -7397,11 +7397,11 @@
           "courseE_bee_functions9_b": "A pesar de que sabes cuánto néctar tienen algunas de las flores, un loop `mientras` puede realizar una función de trabajo para todos ellos."
         },
         "courseE_bee_functions_challenge1": {
-          "courseE_bee_functions_challenge1_a": "Si el rompecabezas parece desafiante, intenta construir tu función de a poco.\n\nAgrega algunos bloques, luego pruébalos. Agrega más, luego pruébalos otra vez. ¡Pronto, llegarás al lugar!",
+          "courseE_bee_functions_challenge1_a": "Si el puzle te parece, intenta construir tu función de a poco.\n\nAgrega algunos bloques, luego pruébalos. Agrega más, luego pruébalos otra vez. ¡Pronto, lo tendrás!",
           "courseE_bee_functions_challenge1_b": "Recuerda construir tu código dentro del bloque de función verde."
         },
         "courseE_bee_functions_challenge2": {
-          "courseE_bee_functions_challenge1_a": "Si el rompecabezas parece desafiante, intenta construir tu función de a poco.\n\nAgrega algunos bloques, luego pruébalos. Agrega más, luego pruébalos otra vez. ¡Pronto, llegarás al lugar!",
+          "courseE_bee_functions_challenge1_a": "Si el puzle te parece, intenta construir tu función de a poco.\n\nAgrega algunos bloques, luego pruébalos. Agrega más, luego pruébalos otra vez. ¡Pronto, lo tendrás!",
           "courseE_bee_functions_challenge1_b": "Recuerda construir tu código dentro del bloque de función verde."
         },
         "courseE_farmer_concept1": {
@@ -8232,32 +8232,32 @@
         "courseF_bee_conditionals10": {
           "courseF_bee_conditionals10_a": "Imagina que hay una nube en cada sitio. ¿Te ayuda esto a simplificar tu código?",
           "courseF_bee_conditionals10_b": "Usa un bloque 'si/si no' para buscar néctar o miel en cada espacio.",
-          "courseF_bee_conditionals10_c": "¿Ayudaría un loop 'mientras' para llegar al final de este camino?"
+          "courseF_bee_conditionals10_c": "¿Ayudaría un bucle 'mientras' a llegar al final de este camino?"
         },
         "courseF_bee_conditionals2": {
           "courseF_bee_conditionals2_a": "Algunas veces una flor estará allí, otras no.  Si quieres que tu código se ejecute en ambos casos, asegúrate de utilizar una afirmación  `si`.",
-          "courseF_bee_conditionals2_b": "Intentar escribir la secuencia para llegar a todos los espacios, luego agrega la afirmación 'si'."
+          "courseF_bee_conditionals2_b": "Prueba a escribir la secuencia para llegar a todos los espacios, luego agrega la afirmación 'si'."
         },
         "courseF_bee_conditionals3": {
-          "courseF_bee_conditionals3_a": "Asegúrate de usar una afirmación 'si' para verificar cada espacio para ver sí tiene una flor o nada.",
-          "courseF_bee_conditionals3_b": "Un loop 'repetir' sera útil para que sólo tengas que usar un bloque 'si'.",
-          "courseF_bee_conditionals3_c": "Intenta escribir código para revisar la primera nube. ¿Puedes hacer loops para revisarlos todos?"
+          "courseF_bee_conditionals3_a": "Asegúrate de usar una afirmación 'si' para revisar cada espacio para ver sí tiene una flor o no tiene nada.",
+          "courseF_bee_conditionals3_b": "Un bucle 'repetir' sera útil para que sólo tengas que usar un bloque 'si'.",
+          "courseF_bee_conditionals3_c": "Intenta escribir código para revisar la primera nube. ¿Puedes crear un bucle para revisarlas todas?"
         },
         "courseF_bee_conditionals4": {
           "courseD_bee_conditionals4_a": "Todavía puedes tratar cada espacio como si hubiera una nube sobre él, aunque puedas ver todo el camino.",
-          "courseF_bee_conditionals4_b": "Usa una afirmación \\`si' dentro de tu loop para comprobar si hay néctar en cada espacio. ",
+          "courseF_bee_conditionals4_b": "Usa una afirmación \\`si' dentro de tu bucle para comprobar si hay néctar en cada espacio. ",
           "courseF_bee_conditionals4_c": "Usando el bloque 'mientras haya camino adelante', deberías 'avanzar' y buscar una flor. 'Si hay una flor'. ¿que debería hacer la abeja?"
         },
         "courseF_bee_conditionals5": {
-          "courseF_bee_conditionals5_a": "Piensa en cada lado de la ruta rectangular como un camino en sí mismo. Configura un loop anidado con un bloque `repetir` en el exterior y un ciclo`cuando hay un camino por delante` en el interior. ¿Cuántos caminos necesita recorrer la abeja si la abeja necesita recorrer cada lado con una flor?",
-          "courseF_bee_conditionals5_b": "En el interior del bloque`mientras que hay un camino adelante` tendrás que seguir adelante y comprobar si hay una flor. ¿Cómo se comprueba si hay una flor? ¿Qué haces si hay una flor?",
-          "courseF_bee_conditionals5_c": "Hay 3 lados del rectángulo con flores, así que el código necesita 'repetir 3 veces'. En cada repetición, la abeja necesitará continuar a lo largo del camino 'mientras haya camino por delante'. ",
-          "courseF_bee_conditionals5_d": "Para continuar por el camino, la abeja deberá 'avanzar'. Mientras está en el camino, la abeja necesita buscar una flor. ¿Qué debería hacer la abeja si hay una flor?"
+          "courseF_bee_conditionals5_a": "Piensa en cada lado de la ruta rectangular como un camino en sí mismo. Configura un bucle anidado con un bloque `repetir` en el exterior y otro del tipo `mientras haya camino delante` en el interior. ¿Cuántos caminos necesita recorrer la abeja si la abeja necesita recorrer cada lado con una flor?",
+          "courseF_bee_conditionals5_b": "En el interior del bloque`mientras que haya camino delante` tendrás que seguir adelante y comprobar si hay una flor. ¿Cómo se comprueba si hay una flor? ¿Qué haces si hay una flor?",
+          "courseF_bee_conditionals5_c": "Hay 3 lados del rectángulo con flores, así que el código necesita 'repetir 3 veces'. En cada repetición, la abeja tendrá que continuar a lo largo del camino 'mientras haya camino delante'. ",
+          "courseF_bee_conditionals5_d": "Para continuar por el camino, la abeja deberá 'avanzar'. Mientras está en el camino, la abeja tiene que buscar una flor. ¿Qué debería hacer la abeja si hay una flor?"
         },
         "courseF_bee_conditionals8": {
-          "courseF_bee_conditionals8_a": "\\*\\* Recuerde: \\*\\* Este desafío cambia cada vez que se ejecuta.   \n\nQuerrás utilizar un bloque condicional  ( `si' o 'si /si no`) para resolver el desafío.",
-          "courseF_bee_conditionals8_b": "Este desafío es difícil, porque no puedes verificar cuadrados en blanco, néctar _y_ miel con un único condicional. \n\nSolo comprueba si hay néctar y miel al final de tu camino.",
-          "courseF_bee_conditionals8_c": "¿Qué pasa si ignoras la primera flor, luego usas el bloque 'mientras haya camino adelante'?"
+          "courseF_bee_conditionals8_a": "\\*\\* Recuerda: \\*\\* Este puzle cambia cada vez que se ejecuta.   \n\nTendrás que utilizar un bloque condicional  ( `si' o 'si /si no`) para resolver el desafío.",
+          "courseF_bee_conditionals8_b": "Este puzle es difícil, porque no puedes verificar cuadrados en blanco, néctar _y_ miel con un único condicional. \n\nSolo comprueba si hay néctar y miel al final de tu camino.",
+          "courseF_bee_conditionals8_c": "¿Qué pasa si ignoras la primera flor, luego usas el bloque 'mientras haya camino delante'?"
         },
         "courseF_bee_for1": {
           "courseF_bee_for1_a": "Arrastra un bloque de numero morado en el espacio en blanco dentro del loop 'repetir' para decirle cuantas veces repetir.",
@@ -8472,17 +8472,17 @@
           "courseF_bee_for_challenge2_d": "**Solución:**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_for\" inline=\"true\">\n        <title name=\"VAR\">counter</title>\n        <value name=\"FROM\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <value name=\"TO\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">3</title>\n          </block>\n        </value>\n        <value name=\"BY\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <statement name=\"DO\">\n          <block type=\"controls_repeat_ext\" inline=\"true\">\n            <value name=\"TIMES\">\n              <block type=\"variables_get\">\n                <title name=\"VAR\">counter</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"maze_moveForward\"/>\n            </statement>\n            <next>\n              <block type=\"controls_repeat_ext\" inline=\"true\">\n                <value name=\"TIMES\">\n                  <block type=\"variables_get\">\n                    <title name=\"VAR\">counter</title>\n                  </block>\n                </value>\n                <statement name=\"DO\">\n                  <block type=\"maze_nectar\"/>\n                </statement>\n                <next>\n                  <block type=\"maze_turn\">\n                    <title name=\"DIR\">turnLeft</title>\n                    <next>\n                      <block type=\"controls_repeat_ext\" inline=\"true\">\n                        <value name=\"TIMES\">\n                          <block type=\"variables_get\">\n                            <title name=\"VAR\">counter</title>\n                          </block>\n                        </value>\n                        <statement name=\"DO\">\n                          <block type=\"maze_moveForward\"/>\n                        </statement>\n                        <next>\n                          <block type=\"maze_turn\">\n                            <title name=\"DIR\">turnRight</title>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n        <next>\n          <block type=\"maze_turn\">\n            <title name=\"DIR\">turnRight</title>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n                <next>\n                  <block type=\"controls_for\" inline=\"true\">\n                    <title name=\"VAR\">counter</title>\n                    <value name=\"FROM\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">2</title>\n                      </block>\n                    </value>\n                    <value name=\"TO\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">10</title>\n                      </block>\n                    </value>\n                    <value name=\"BY\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">2</title>\n                      </block>\n                    </value>\n                    <statement name=\"DO\">\n                      <block type=\"maze_moveForward\">\n                        <next>\n                          <block type=\"maze_turn\">\n                            <title name=\"DIR\">turnLeft</title>\n                            <next>\n                              <block type=\"maze_moveForward\">\n                                <next>\n                                  <block type=\"maze_turn\">\n                                    <title name=\"DIR\">turnRight</title>\n                                    <next>\n                                      <block type=\"controls_repeat_ext\" inline=\"true\">\n                                        <value name=\"TIMES\">\n                                          <block type=\"variables_get\">\n                                            <title name=\"VAR\">counter</title>\n                                          </block>\n                                        </value>\n                                        <statement name=\"DO\">\n                                          <block type=\"maze_honey\"/>\n                                        </statement>\n                                      </block>\n                                    </next>\n                                  </block>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </statement>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseF_bee_functions2": {
-          "courseF_bee_functions2_a": "La función ha sido escrita por ti, pero deberás llamarla a cada flor.",
+          "courseF_bee_functions2_a": "La función ya está escrita, pero tendrás que aplicarla a cada flor.",
           "courseF_bee_functions2_b": "Haz click en el botón azul de edición en la función 'recolectar sólo néctar' para ver qué hace."
         },
         "courseF_bee_functions3": {
-          "courseF_bee_functions3_a": "Tu función para este desafío sólo necesita hacer miel, no debería tener bloque de 'avanzar' o 'girar'. ",
-          "courseF_bee_functions3_b": "Recuerda que tu función solo debe obtener miel _si_ hay un panal.",
-          "courseF_bee_functions3_c": "Usa el bloque verde `sólo hacer miel` para llamar a tu función.",
+          "courseF_bee_functions3_a": "Tu función para este puzle sólo necesita hacer miel, no debería tener bloque de 'avanzar' o 'girar'. ",
+          "courseF_bee_functions3_b": "Recuerda que tu función solo debe recoger miel _si_ hay un panal.",
+          "courseF_bee_functions3_c": "Usa el bloque verde `sólo hacer miel` para activar tu función.",
           "courseF_bee_functions3_d": "Mira este camino."
         },
         "courseF_bee_functions3a": {
-          "courseF_bee_functions3a_a": "Tu función para este desafío sólo necesita hacer miel u obtener néctar, no debería tener bloque de 'avanzar' o 'girar'. ",
+          "courseF_bee_functions3a_a": "Tu función para este puzle sólo necesita hacer miel u obtener néctar, no debería tener bloque de 'avanzar' o 'girar'. ",
           "courseF_bee_functions3a_b": "Usa un patrón de escalones para verificar las primeras cuatro nubes."
         },
         "courseF_bee_functions4": {
@@ -8490,25 +8490,25 @@
           "courseF_bee_functions4_b": "Intenta crear el programa y usar los bloques de funciones como esperas que se comporte la función, luego crea la función."
         },
         "courseF_bee_functions5a": {
-          "courseF_bee_functions5a_a": "Tu función debería verificar si hay un camino a la derecha, y si lo hay, recorrer los caminos laterales y regresar a la abeja al camino principal.\n\nNo necesitas agregar esa parte a tu programa principal.",
-          "courseF_bee_functions5a_b": "Usa un loop `mientras` para viajar por todas las rutas principales, ya que son de diferentes longitudes.",
-          "courseF_bee_functions5a_c": "Dentro de tu loop `mientras`, asegúrate de avanzar, luego usa tu función para buscar una ruta."
+          "courseF_bee_functions5a_a": "Tu función debería verificar si hay un camino a la derecha, y si lo hay, recorrer los caminos laterales y traer a la abeja de vuelta al camino principal.\n\nNo necesitas agregar esa parte a tu programa principal.",
+          "courseF_bee_functions5a_b": "Usa un bucle `mientras` para viajar por todas las rutas principales, ya que son de diferentes longitudes.",
+          "courseF_bee_functions5a_c": "Dentro de tu bucle `mientras`, asegúrate de avanzar, luego usa tu función para buscar una ruta."
         },
         "courseF_bee_functions6": {
-          "courseF_bee_functions6_a": "Si el desafío parece difícil, intenta crear tu función de a poco.  \n\nAgrega algunos bloques y pruébala. Agrega más y vuelve a probarla. ¡Pronto lograrás el resultado!\n\n<xml>\n  <block type=\"procedures_defnoreturn\" editable=\"false\">\n    <mutation/>\n    <title name=\"NAME\">get nectar make honey</title>\n    <statement name=\"STACK\">\n    </statement>\n  </block>\n</xml>",
-          "courseF_bee_functions6_b": "Tu función debe verificar si hay una flor o un panal, obtener néctar o hacer miel, luego girar.",
-          "courseF_bee_functions6_c": "Dado que estás girando dentro de tu función, sólo necesitas un ciclo`siempre que` para atravesar este laberinto."
+          "courseF_bee_functions6_a": "Si el puzle parece difícil, intenta crear tu función de a poco.  \n\nAgrega algunos bloques y pruébala. Agrega más y vuelve a probarla. ¡Pronto lograrás el resultado!\n\n<xml>\n  <block type=\"procedures_defnoreturn\" editable=\"false\">\n    <mutation/>\n    <title name=\"NAME\">get nectar make honey</title>\n    <statement name=\"STACK\">\n    </statement>\n  </block>\n</xml>",
+          "courseF_bee_functions6_b": "Tu función debe verificar si hay una flor o un panal, recoger néctar o hacer miel, luego girar.",
+          "courseF_bee_functions6_c": "Dado que estás girando dentro de tu función, sólo necesitas un bucle`siempre` para atravesar este laberinto."
         },
         "courseF_bee_functions7": {
-          "courseF_bee_functions7_a": "Puedes repasar el último desafío para ver tu función.",
+          "courseF_bee_functions7_a": "Puedes repasar el último puzle para ver tu función.",
           "courseF_bee_functions7_b": "Trata de dibujar un camino a través de este laberinto con tu dedo. ¿Dónde tendrá que tomar la abeja una decisión?"
         },
         "courseF_bee_functions8a": {
-          "courseF_bee_functions8a_a": "Si el rompecabezas parece desafiante, intenta construir tu función de a poco.\n\nAgrega algunos bloques, luego pruébalos. Agrega más, luego pruébalos otra vez. ¡Pronto, llegarás al lugar!",
+          "courseF_bee_functions8a_a": "Si el puzle te parece, intenta construir tu función de a poco.\n\nAgrega algunos bloques, luego pruébalos. Agrega más, luego pruébalos otra vez. ¡Pronto, lo tendrás!",
           "courseF_bee_functions8a_b": "Recuerda crear el código dentro del editor de funciones."
         },
         "courseF_bee_functionsPre7": {
-          "courseF_bee_functions7_a": "Si el rompecabezas parece desafiante, intenta construir tu función de a poco.\n\nAgrega algunos bloques, luego pruébalos. Agrega más, luego pruébalos otra vez. ¡Pronto, llegarás al lugar!",
+          "courseF_bee_functions7_a": "Si el puzle te parece, intenta construir tu función de a poco.\n\nAgrega algunos bloques, luego pruébalos. Agrega más, luego pruébalos otra vez. ¡Pronto, lo tendrás!",
           "courseF_bee_functions7_b": "Recuerda crear el código dentro del bloque de función verde.\n\n<xml>\n  <block type=\"procedures_defnoreturn\" editable=\"false\">\n    <mutation/>\n    <title name=\"NAME\">get nectar make honey</title>\n    <statement name=\"STACK\">\n    </statement>\n  </block>\n</xml>",
           "courseF_bee_functions7_c": "¿De qué manera deberías girar si hay un panal? ¿Qué tal una flor? ¿Qué pasa si no hay nada?"
         },
@@ -8709,6 +8709,14 @@
         },
         "courseE_farmer_predict2": {
           "courseE_farmer_ramp12e_b": "La solución a este desafío se parecerá mucho a la solución al último desafío, pero girando en la otra dirección."
+        },
+        "courseD_bee_conditionals5_2019": {
+          "courseD_bee_conditionals5_a": "Si utilizas un bloque ´si hay flor´, puedes resolver esto usando un bucle anidado. ¡Escribe un programa para los caminos de la izquierda y de abajo y luego repite todo dos veces!",
+          "courseD_bee_conditionals5_c": "Para continuar avanzando por el camino, la abeja tendrá que ´avanzar´. Según avanza, la abeja tendrá que comprobar si hay flores. ´Si hay flor´, la abeja tendrá que ´recoger néctar´."
+        },
+        "courseD_bee_conditionals5_2020": {
+          "courseD_bee_conditionals5_a": "Si utilizas un bloque ´si hay flor´, puedes resolver esto usando un bucle anidado. ¡Escribe un programa para los caminos de la izquierda y de abajo y luego repite todo dos veces!",
+          "courseD_bee_conditionals5_c": "Para continuar avanzando por el camino, la abeja tendrá que ´avanzar´. Según avanza, la abeja tendrá que comprobar si hay flores. ´Si hay flor´, la abeja tendrá que ´recoger néctar´."
         }
       }
     }

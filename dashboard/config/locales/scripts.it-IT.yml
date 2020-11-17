@@ -811,6 +811,8 @@ it:
               name: Sviluppo Web
             Sprite Lab:
               name: Laboratorio dei Personaggi
+            AI Lab:
+              name: Laboratorio di Intelligenza Artificiale
         algebraPD2b:
           description: 'Fase 2 Online: Studio estivo in modalità ibrida (blended learning)'
           description_short: 'Fase 2 Online: Studio estivo in modalità ibrida (blended
