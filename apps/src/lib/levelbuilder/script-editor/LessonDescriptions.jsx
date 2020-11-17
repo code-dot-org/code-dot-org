@@ -203,15 +203,6 @@ export default class LessonDescriptions extends React.Component {
                   ))}
                 </div>
               )}
-              {hasImported && (
-                <input
-                  name="stage_descriptions"
-                  type="hidden"
-                  defaultValue={JSON.stringify(
-                    this.updatedLessonDescriptions()
-                  )}
-                />
-              )}
               <button
                 type="button"
                 className="btn"
