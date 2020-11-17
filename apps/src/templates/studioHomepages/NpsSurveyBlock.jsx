@@ -3,6 +3,7 @@ import Foorm from '@cdo/apps/code-studio/pd/foorm/Foorm';
 import Button, {ButtonColor} from '@cdo/apps/templates/Button';
 import color from '@cdo/apps/util/color';
 import trackEvent from '@cdo/apps/util/trackEvent';
+import $ from 'jquery';
 
 const styles = {
   container: {
