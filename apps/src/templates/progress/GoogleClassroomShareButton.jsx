@@ -27,6 +27,7 @@ export default class GoogleClassroomShareButton extends React.PureComponent {
     url: PropTypes.string.isRequired,
     itemtype: PropTypes.string.isRequired,
     title: PropTypes.string,
+    theme: PropTypes.string,
     height: PropTypes.number,
     courseid: PropTypes.number,
     analyticsData: PropTypes.string
@@ -34,6 +35,7 @@ export default class GoogleClassroomShareButton extends React.PureComponent {
 
   static defaultProps = {
     itemtype: 'assignment',
+    theme: 'light',
     height: Button.ButtonHeight.default
   };
 
@@ -136,7 +138,7 @@ export default class GoogleClassroomShareButton extends React.PureComponent {
   // https://developers.google.com/classroom/guides/sharebutton
   renderButton() {
     window.gapi.sharetoclassroom.render(this.buttonRef, {
-      theme: 'light',
+      theme: this.props.theme,
       url: this.props.url,
       itemtype: this.props.itemtype,
       title: this.props.title,

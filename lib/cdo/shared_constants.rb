@@ -247,6 +247,7 @@ module SharedConstants
       "mathMax": null,
       "mathMin": null,
       "mathRandom": null,
+      "mathPow": null,
 
       // Variables
       "declareAssign_x": null,
@@ -540,6 +541,7 @@ module SharedConstants
       "mathMax": null,
       "mathMin": null,
       "mathRandom": null,
+      "mathPow": null,
       "comment_Math": null,
 
       // Variables

@@ -4,7 +4,7 @@
 #
 #  id                 :integer          not null, primary key
 #  lesson_activity_id :integer          not null
-#  seeding_key        :string(255)      not null
+#  key                :string(255)      not null
 #  position           :integer          not null
 #  properties         :text(65535)
 #  created_at         :datetime         not null
@@ -12,8 +12,8 @@
 #
 # Indexes
 #
+#  index_activity_sections_on_key                 (key) UNIQUE
 #  index_activity_sections_on_lesson_activity_id  (lesson_activity_id)
-#  index_activity_sections_on_seeding_key         (seeding_key) UNIQUE
 #
 
 # An ActivitySection represents a part of an activity in a lesson plan.
@@ -89,15 +89,11 @@ class ActivitySection < ApplicationRecord
   private
 
   def fetch_script_level(sl_data)
-    if sl_data['id']
-      script_level = ScriptLevel.find(sl_data['id'])
-      unless script_level.activity_section.lesson == lesson
-        # add a safeguard to make sure we never take a script level from another
-        # lesson. this case should not be possible to hit using our editing UI.
-        raise "cannot move script level #{script_level.id} between lessons"
-      end
-      return script_level
-    end
+    # Do not try to find the script level id if it was moved here from another
+    # activity section. Create a new one here, and let the old script level be
+    # destroyed when we update the other activity section.
+    script_level = sl_data['id'] && script_levels.where(id: sl_data['id']).first
+    return script_level if script_level
 
     script_levels.create(
       position: 0,

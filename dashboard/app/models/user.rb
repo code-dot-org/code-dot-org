@@ -192,7 +192,7 @@ class User < ActiveRecord::Base
   accepts_nested_attributes_for :school_info, reject_if: :preprocess_school_info
 
   has_many :user_school_infos
-  after_save :update_and_add_users_school_infos, if: :school_info_id_changed?
+  after_save :update_and_add_users_school_infos, if: :saved_change_to_school_info_id?
   validate :complete_school_info, if: :school_info_id_changed?, unless: proc {|u| u.purged_at.present?}
 
   has_one :circuit_playground_discount_application
@@ -440,19 +440,6 @@ class User < ActiveRecord::Base
   validates_presence_of     :password, if: :password_required?
   validates_confirmation_of :password, if: :password_required?
   validates_length_of       :password, within: 6..128, allow_blank: true
-
-  validate :email_matches_for_oauth_upgrade, if: -> {oauth? && user_type_changed?}, on: :update
-
-  def email_matches_for_oauth_upgrade
-    if user_type == User::TYPE_TEACHER
-      # The stored email must match the passed email
-      unless hashed_email == hashed_email_was
-        errors.add :base, I18n.t('devise.registrations.user.user_type_change_email_mismatch')
-        errors.add :email_mismatch, "Email mismatch" # only used to check for this error's existence
-      end
-    end
-    true
-  end
 
   validates_presence_of :email_preference_opt_in, if: :email_preference_opt_in_required
   validates_presence_of :email_preference_request_ip, if: -> {email_preference_opt_in.present?}

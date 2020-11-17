@@ -4,7 +4,6 @@ import {expect} from '../../util/reconfiguredChai';
 import NetSimLobby from '../../../src/netsim/NetSimLobby.js';
 import * as userSectionClient from '@cdo/apps/util/userSectionClient';
 var NetSimTestUtils = require('../../util/netsimTestUtils');
-import NetSim from '@cdo/apps/netsim/netsim';
 
 const SIGNED_IN_USER = {
   user: {
@@ -18,7 +17,13 @@ describe('NetSimLobby', () => {
     getUserSectionsStub = sinon.stub(userSectionClient, 'getUserSections');
     NetSimTestUtils.initializeGlobalsToDefaultValues();
     rootDiv = $('<div>');
-    netsim = new NetSim();
+    netsim = {
+      debouncedResizeFooter: () => {},
+      shardChange: {register: () => {}},
+      isConnectedToShardID: () => {
+        return true;
+      }
+    };
   });
 
   afterEach(function() {

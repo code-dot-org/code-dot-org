@@ -56,6 +56,7 @@ Fish.prototype.init = function(config) {
   const onMount = () => {
     // NOTE: Other apps call studioApp.init(), except WebLab. Fish is imitating WebLab
     this.studioApp_.setConfigValues_(config);
+    this.studioApp_.initTimeSpent();
 
     // NOTE: if we called studioApp_.init(), the code here would be executed
     // automatically since pinWorkspaceToBottom is true...
