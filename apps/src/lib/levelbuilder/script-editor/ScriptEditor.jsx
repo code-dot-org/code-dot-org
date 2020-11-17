@@ -294,7 +294,6 @@ class ScriptEditor extends React.Component {
       })
     })
       .done(data => {
-        console.log(data);
         if (shouldCloseAfterSave) {
           navigateToHref(`/s/${this.props.name}${window.location.search}`);
         } else {
