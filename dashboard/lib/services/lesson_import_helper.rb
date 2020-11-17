@@ -14,7 +14,7 @@ module Services::LessonImportHelper
     slide_matches = find_slides(activity_markdown).map {|m| {index: activity_markdown.index(m[0]), type: 'slide', match: m, substring: m[0]}}
     matches = tip_matches + remark_matches + tip_link_matches + skippable_matches + slide_matches
     sorted_matches = matches.sort_by {|m| m[:index]}
-    return [ActivitySection.new(description: activity_markdown.strip, seeding_key: SecureRandom.uuid, position: 1)] if matches.empty?
+    return [ActivitySection.new(description: activity_markdown.strip, key: SecureRandom.uuid, position: 1)] if matches.empty?
     sorted_matches = find_markdown_chunks(activity_markdown, sorted_matches)
     sections = []
     tip_match_map = Hash.new([])
@@ -45,14 +45,14 @@ module Services::LessonImportHelper
       position += 1
       activity_section.slide = slide
       slide = false
-      activity_section.seeding_key ||= SecureRandom.uuid
+      activity_section.key ||= SecureRandom.uuid
       sections = sections.push(activity_section)
     end
     tip_match_map.each do |key, value|
       match = value[:match]
       activity_section = ActivitySection.new
       activity_section.position = sections.length + 1
-      activity_section.seeding_key ||= SecureRandom.uuid
+      activity_section.key ||= SecureRandom.uuid
       activity_section.tips = [create_tip(key, match[1] || "tip", match[4] || "no markdown found")]
       sections.push(activity_section)
     end
@@ -65,7 +65,7 @@ module Services::LessonImportHelper
       lesson_activity.name = a['name']
       lesson_activity.duration = a['duration'].split[0].to_i
       lesson_activity.lesson_id = lesson_id
-      lesson_activity.seeding_key = SecureRandom.uuid
+      lesson_activity.key = SecureRandom.uuid
       lesson_activity.position = i
       lesson_activity.save!
       lesson_activity.reload
@@ -101,7 +101,7 @@ module Services::LessonImportHelper
     lesson_activity = LessonActivity.new
     lesson_activity.name = "Levels"
     lesson_activity.lesson_id = lesson_id
-    lesson_activity.seeding_key = SecureRandom.uuid
+    lesson_activity.key = SecureRandom.uuid
     lesson_activity.position = position
     lesson_activity.save!
     lesson_activity.reload
@@ -136,7 +136,7 @@ module Services::LessonImportHelper
   def self.create_activity_section_with_levels(script_levels, lesson_activity_id)
     return nil if script_levels.empty?
     activity_section = ActivitySection.new
-    activity_section.seeding_key ||= SecureRandom.uuid
+    activity_section.key ||= SecureRandom.uuid
     activity_section.position = 0
     activity_section.lesson_activity_id = lesson_activity_id
     activity_section.save!
