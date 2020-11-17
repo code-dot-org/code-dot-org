@@ -515,9 +515,7 @@ export default {
       },
 
       getVars() {
-        return Blockly.Variables.getVars.bind(this)(
-          Blockly.BlockValueType.BEHAVIOR
-        );
+        return {};
       },
 
       renameVar(oldName, newName) {
@@ -606,9 +604,7 @@ export default {
         },
         overrides: {
           getVars(category) {
-            return {
-              Behavior: [this.getTitleValue('NAME')]
-            };
+            return {};
           },
           callType_: 'gamelab_behavior_get'
         }
