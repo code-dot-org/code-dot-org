@@ -45,6 +45,7 @@ export default class VersionRow extends React.Component {
             this.props.versionId
           }
           target="_blank"
+          rel="noopener noreferrer"
         >
           <button type="button" className="version-preview">
             <i className="fa fa-eye" />

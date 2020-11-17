@@ -284,7 +284,7 @@ export default class WorkshopTable extends React.Component {
   formatSignupUrl = workshopId => {
     const signupUrl = `${location.origin}/pd/workshops/${workshopId}/enroll`;
     return (
-      <a href={signupUrl} target="_blank">
+      <a href={signupUrl} target="_blank" rel="noopener noreferrer">
         {signupUrl}
       </a>
     );

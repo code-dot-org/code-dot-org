@@ -285,6 +285,7 @@ class Lesson < ActiveRecord::Base
   # the client.
   def summarize_for_lesson_edit
     {
+      id: id,
       name: name,
       overview: overview,
       studentOverview: student_overview,
@@ -605,7 +606,7 @@ class Lesson < ActiveRecord::Base
 
     lesson_activities.create(
       position: activity['position'],
-      seeding_key: SecureRandom.uuid
+      key: SecureRandom.uuid
     )
   end
 end
