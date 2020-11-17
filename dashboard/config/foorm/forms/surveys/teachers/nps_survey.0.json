@@ -78,7 +78,7 @@
      },
      {
       "type": "comment",
-      "name": "nps_details_comment",
+      "name": "nps_details_explanation",
       "visibleIf": "{nps_value} notempty",
       "title": "Tell us more about your choice above"
      },

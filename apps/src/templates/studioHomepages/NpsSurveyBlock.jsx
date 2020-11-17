@@ -2,6 +2,7 @@ import React from 'react';
 import Foorm from '@cdo/apps/code-studio/pd/foorm/Foorm';
 import Button, {ButtonColor} from '@cdo/apps/templates/Button';
 import color from '@cdo/apps/util/color';
+import trackEvent from '@cdo/apps/util/trackEvent';
 
 const styles = {
   container: {
@@ -22,39 +23,47 @@ const styles = {
   }
 };
 
+// Additonal styles for this component can be found in NpsSurveyBlock.scss
+
+const customCssClasses = {
+  root: 'nps-survey-root',
+  question: {
+    title: 'nps-survey-q-title'
+  },
+  rating: {
+    item: 'nps-survey-q-rating-item',
+    minText: 'nps-survey-rating-min',
+    maxText: 'nps-survey-rating-max',
+    root: 'nps-survey-rating-root',
+    selected: 'nps-survey-rating-selected'
+  },
+  row: 'nps-survey-row',
+  checkbox: {
+    item: 'nps-survey-checkbox',
+    itemControl: 'nps-survey-checkbox-item-control',
+    materialDecorator: 'nps-survey-checkbox-material-decorator',
+    other: 'nps-survey-comment'
+  },
+  error: {
+    locationTop: 'nps-survey-top-error'
+  },
+  navigation: {
+    complete: 'nps-survey-submit-button'
+  },
+  comment: 'nps-survey-comment'
+};
+
 export default class NpsSurveyBlock extends React.Component {
+  constructor(props) {
+    super(props);
+    this.onComplete = this.onComplete.bind(this);
+    this.silentlyDismissSurvey = this.silentlyDismissSurvey.bind(this);
+  }
+
   state = {
     visible: true,
     submitted: false,
     result: undefined
-  };
-
-  customCssClasses = {
-    root: 'nps-survey-root',
-    question: {
-      title: 'nps-survey-q-title'
-    },
-    rating: {
-      item: 'nps-survey-q-rating-item',
-      minText: 'nps-survey-rating-min',
-      maxText: 'nps-survey-rating-max',
-      root: 'nps-survey-rating-root',
-      selected: 'nps-survey-rating-selected'
-    },
-    row: 'nps-survey-row',
-    checkbox: {
-      item: 'nps-survey-checkbox',
-      itemControl: 'nps-survey-checkbox-item-control',
-      materialDecorator: 'nps-survey-checkbox-material-decorator',
-      other: 'nps-survey-comment'
-    },
-    error: {
-      locationTop: 'nps-survey-top-error'
-    },
-    navigation: {
-      complete: 'nps-survey-submit-button'
-    },
-    comment: 'nps-survey-comment'
   };
 
   componentDidMount() {
@@ -68,19 +77,47 @@ export default class NpsSurveyBlock extends React.Component {
     });
   }
 
+  onComplete(data) {
+    trackEvent('survey', 'nps2020', parseInt(data.nps_value));
+    this.setState({submitted: true});
+  }
+
+  silentlyDismissSurvey() {
+    const {formName, formVersion, submitApi, submitParams} = this.state.result;
+    const answers = {nps_value: -1};
+    const requestData = {
+      ...submitParams,
+      answers: answers,
+      form_name: formName,
+      form_version: formVersion
+    };
+
+    this.onComplete(answers);
+    this.setState({visible: false});
+    $.ajax({
+      url: submitApi,
+      type: 'post',
+      dataType: 'json',
+      data: requestData
+    });
+  }
+
   render() {
     if (this.state.visible && this.state.result) {
       return (
         <div style={styles.container}>
           <Foorm
             {...this.state.result}
-            customCssClasses={this.customCssClasses}
-            onComplete={() => this.setState({submitted: true})}
+            customCssClasses={customCssClasses}
+            onComplete={this.onComplete}
           />
           {!this.state.submitted && (
             <Button
               color={ButtonColor.white}
-              onClick={() => this.setState({visible: false})}
+              onClick={this.silentlyDismissSurvey}
+              // We intentionally do not internationalize strings
+              // here because this survey is only displayed to
+              // users in the en-us locale.
               text={'No thanks'}
               style={styles.dismiss}
             />

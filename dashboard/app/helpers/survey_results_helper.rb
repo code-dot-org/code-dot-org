@@ -22,7 +22,6 @@ module SurveyResultsHelper
     return false unless current_user
     return false unless language == "en"
     return false if current_user.under_13?
-    return false if existing_survey_result?(kind)
     return false unless country_us?
     return false unless account_existed_14_days?
 

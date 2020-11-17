@@ -74,7 +74,7 @@ export default class Foorm extends React.Component {
   }
 
   onComplete = (survey, options) => {
-    this.props.onComplete && this.props.onComplete();
+    this.props.onComplete && this.props.onComplete(survey.data);
     let requestData = {
       answers: survey.data,
       form_name: this.props.formName,
@@ -140,7 +140,6 @@ export default class Foorm extends React.Component {
 
   render() {
     const css = {...this.defaultCss, ...this.props.customCssClasses};
-    console.log(css);
     return (
       <div>
         <Survey.Survey
