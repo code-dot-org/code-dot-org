@@ -95,8 +95,8 @@ export const commands = {
     actionCommands.setProp.apply(this, [spriteArg, prop, val]);
   },
 
-  setQuestion(questionText, variableName, callback) {
-    worldCommands.setQuestion(questionText, variableName, callback);
+  setPrompt(promptText, variableName, callback) {
+    worldCommands.setPrompt(promptText, variableName, callback);
   },
 
   setTint(spriteArg, color) {
@@ -149,8 +149,8 @@ export const commands = {
     eventCommands.spriteClicked(condition, spriteArg, callback);
   },
 
-  whenQuestionAnswered(variableName, callback) {
-    eventCommands.whenQuestionAnswered(variableName, callback);
+  whenPromptAnswered(variableName, callback) {
+    eventCommands.whenPromptAnswered(variableName, callback);
   },
 
   // Location commands
