@@ -18,7 +18,8 @@ export default class MicrobitFirmataWrapper extends MBFirmataClient {
       });
   }
 
-  // Used in setSerialPort
+  // Used in setSerialPort, which is copied from setSerialPort in MBFirmataClient,
+  // as a wrapper. Lifted into its own function because of linting.
   dataReceived(data) {
     if (this.inbufCount + data.length < this.inbuf.length) {
       this.inbuf.set(data, this.inbufCount);
@@ -40,27 +41,13 @@ export default class MicrobitFirmataWrapper extends MBFirmataClient {
 
       // get the board serial number (used to determine board version)
       this.boardVersion = '';
-      return Promise.resolve();
 
-      // The below code snippet is from the MBFirmataClient setSerialPort
-      // that is not included in this branch for the ChromeSerialPort.
-      // The Chrome Serial Port doesn't return .list() as a promise, so this\
-      // code doesn't work in that library. As of 11/11/20, we do not use the
-      // boardVersion in our MB integration.
-      // TODO - rewrite this promise code to work for the Chrome Serial Port.
-      /*
-      // get the board serial number (used to determine board version)
-      this.boardVersion = '';
-      return serialport.list()
-      .then((ports) => {
-        for (var i = 0; i < ports.length; i++) {
-          var p = ports[i];
-          if ((p.comName == this.myPort.path)) {
-            this.boardVersion = this.boardVersionFromSerialNumber(p.serialNumber);
-          }
-        }
-        return null;
-      })*/
+      // Above code is directly from setSerialPort in MBFirmataClient.
+      // Returning an empty promise below because Chrome Serial Port doesn't return
+      // .list() as a promise, as expected in MBFirmataClient. Because of the empty
+      // promise we don't set this.boardVersion. As of this edit, we do not use the
+      // boardVersion in our MB integration so no impact.
+      return Promise.resolve();
     }
   }
 
