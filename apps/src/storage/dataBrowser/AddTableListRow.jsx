@@ -39,6 +39,7 @@ class AddTableListRow extends React.Component {
       <tr style={dataStyles.row}>
         <td style={dataStyles.cell}>
           <input
+            className="uitest-add-table-input"
             style={dataStyles.input}
             placeholder={msg.dataTableNamePlaceholder()}
             value={this.state.newTableName}
@@ -48,6 +49,7 @@ class AddTableListRow extends React.Component {
         </td>
         <td style={dataStyles.cell}>
           <button
+            className="uitest-add-table-btn"
             type="button"
             style={dataStyles.blueButton}
             onClick={this.handleAdd}
