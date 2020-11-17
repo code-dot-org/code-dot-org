@@ -97,7 +97,7 @@ export default class AzureTextToSpeech {
       this.setCachedSound(language, gender, text, speechResponse);
     };
 
-    return new Promise(async (resolve, reject) => {
+    return new Promise(async resolve => {
       const profaneWords = await findProfanity(
         text,
         voices[language].languageCode,
@@ -145,7 +145,7 @@ export default class AzureTextToSpeech {
     const {bytes, profaneWords} = sound;
     const {onProfanityFound} = opts;
 
-    return new Promise((resolve, reject) => {
+    return new Promise(resolve => {
       if (profaneWords && profaneWords.length > 0) {
         onProfanityFound(profaneWords);
         resolve(new SpeechResponse(null, profaneWords));
