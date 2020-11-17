@@ -10,6 +10,7 @@ import Button from '@cdo/apps/templates/Button';
 import {connect} from 'react-redux';
 import {
   addResource,
+  editResource,
   removeResource
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/resourcesEditorRedux';
 
@@ -26,11 +27,17 @@ const styles = {
   oddRow: {
     backgroundColor: color.lightest_gray
   },
-
   remove: {
     fontSize: 14,
     color: 'white',
     background: color.dark_red,
+    cursor: 'pointer',
+    textAlign: 'center'
+  },
+  edit: {
+    fontSize: 14,
+    color: 'white',
+    background: color.default_blue,
     cursor: 'pointer',
     textAlign: 'center'
   }
@@ -40,6 +47,7 @@ class ResourcesEditor extends Component {
   static propTypes = {
     resources: PropTypes.arrayOf(resourceShape).isRequired,
     addResource: PropTypes.func.isRequired,
+    editResource: PropTypes.func.isRequired,
     removeResource: PropTypes.func.isRequired
   };
 
@@ -116,8 +124,16 @@ class ResourcesEditor extends Component {
     this.props.addResource(resource);
   };
 
+  saveEditResource = resource => {
+    this.props.editResource(resource);
+  };
+
   handleRemove = key => {
     this.props.removeResource(key);
+  };
+
+  handleEdit = resource => {
+    this.setState({newResourceDialogOpen: true, editingResource: resource});
   };
 
   handleAddResourceClick = e => {
@@ -126,17 +142,24 @@ class ResourcesEditor extends Component {
   };
 
   handleNewResourceDialogClose = () => {
-    this.setState({newResourceDialogOpen: false});
+    this.setState({newResourceDialogOpen: false, editingResource: null});
   };
 
   render() {
     return (
       <div>
-        <AddResourceDialog
-          isOpen={this.state.newResourceDialogOpen}
-          onSave={this.addResource}
-          handleClose={this.handleNewResourceDialogClose}
-        />
+        {this.state.newResourceDialogOpen && (
+          <AddResourceDialog
+            isOpen={this.state.newResourceDialogOpen}
+            onSave={
+              this.state.editingResource
+                ? this.saveEditResource
+                : this.addResource
+            }
+            handleClose={this.handleNewResourceDialogClose}
+            existingResource={this.state.editingResource}
+          />
+        )}
         Resources
         <input
           type="hidden"
@@ -187,6 +210,12 @@ class ResourcesEditor extends Component {
                     >
                       <i className="fa fa-times" />
                     </div>
+                    <div
+                      style={styles.edit}
+                      onMouseDown={() => this.handleEdit(resource)}
+                    >
+                      <i className="fa fa-edit" />
+                    </div>
                   </td>
                 </tr>
               ))}
@@ -211,6 +240,7 @@ export default connect(
   }),
   {
     addResource,
+    editResource,
     removeResource
   }
 )(ResourcesEditor);
