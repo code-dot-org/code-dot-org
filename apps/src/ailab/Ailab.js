@@ -125,10 +125,11 @@ Ailab.prototype.onContinue = function() {
 Ailab.prototype.initMLActivities = function() {
   const mode = this.level.mode ? JSON.parse(this.level.mode) : null;
   const onContinue = this.onContinue.bind(this);
-  const saveTrainedModel = trainedModel => {
+  const saveTrainedModel = (model_name, trainedModel) => {
+    console.log('model_name', model_name);
     $.ajax({
       method: 'POST',
-      url: '/api/v1/ml_models/123/save',
+      url: '/api/v1/ml_models/' + model_name + '/save',
       type: 'json',
       contentType: 'application/json;charset=UTF-8',
       data: JSON.stringify(trainedModel)
