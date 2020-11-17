@@ -390,7 +390,7 @@ FactoryGirl.define do
     association :workshop
     sequence(:first_name) {|n| "Participant#{n}"}
     last_name 'Codeberg'
-    email {"participant_#{(User.maximum(:id) || 0) + 1}@example.com.xx"}
+    email {"participant_#{SecureRandom.hex(10)}@example.com.xx"}
     association :school_info
     code {SecureRandom.hex(10)}
 

@@ -15,6 +15,8 @@
           - if !school_info_error_shown
             %li= "School information is required."
             - school_info_error_shown = true
+        - elsif name.to_s == "email" && message == 'already enrolled in workshop'
+          %li= "This email has already been used to enroll in this workshop. Please contact support@code.org if you need additional assistance."
         - else
           %li= raw @enrollment.errors.full_message(name, message).html_safe
 

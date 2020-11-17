@@ -94,10 +94,9 @@ def main(options)
     lesson_pairs = get_validated_lesson_pairs(script, cb_unit)
     lesson_group_pairs = get_lesson_group_pairs(script, cb_unit['chapters'], lesson_pairs)
 
-    if options.dry_run
-      puts "validated #{lesson_pairs.count} lessons and #{lesson_group_pairs.count} lesson groups in unit #{script.name}"
-      next
-    end
+    log "validated #{lesson_pairs.count} lessons and #{lesson_group_pairs.count} lesson groups in unit #{script.name}"
+
+    next if options.dry_run
 
     lesson_pairs.each do |lesson, cb_lesson|
       lesson.update_from_curriculum_builder(cb_lesson)
@@ -108,15 +107,18 @@ def main(options)
     lockable_lessons_to_update = script.lessons.select(&:lockable?).reject {|l| paired_lesson_ids.include?(l.id)}
     lockable_lessons_to_update.each(&:update_from_curriculum_builder)
 
-    lesson_group_pairs.each do |lesson_group, cb_chapter|
+    updated_lesson_group_count = lesson_group_pairs.count do |lesson_group, cb_chapter|
       # Make sure the lesson group update does not also try to update lessons.
       cb_chapter = cb_chapter.reject {|k, _| k == 'lessons'}
 
+      # Use a heuristic to make sure we do not import CSF chapter descriptions
+      # which are equal to the chapter title.
+      cb_chapter['description'] = nil if cb_chapter['description'] == cb_chapter['title']
       lesson_group.update_from_curriculum_builder(cb_chapter)
     end
     script.fix_script_level_positions
 
-    puts "updated #{lesson_pairs.count} lessons and #{lesson_group_pairs.count} lesson groups in unit #{script.name}"
+    puts "updated #{updated_lesson_group_count} lesson groups in unit #{script.name}"
   end
 end
 
