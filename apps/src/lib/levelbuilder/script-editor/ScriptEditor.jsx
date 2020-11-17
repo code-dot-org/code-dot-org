@@ -532,6 +532,7 @@ class ScriptEditor extends React.Component {
               <label>
                 Family Name
                 <select
+                  className="familyNameSelector"
                   value={this.state.familyName}
                   style={styles.dropdown}
                   disabled={this.props.hasCourse}
@@ -602,6 +603,7 @@ class ScriptEditor extends React.Component {
               <label>
                 Is a Standalone Course
                 <input
+                  className="isCourseCheckbox"
                   type="checkbox"
                   checked={this.state.isCourse}
                   disabled={!this.state.familyName}
