@@ -248,6 +248,7 @@ module SharedConstants
       "mathMin": null,
       "mathRandom": null,
       "mathPow": null,
+      "mathSqrt": null,
 
       // Variables
       "declareAssign_x": null,
@@ -542,6 +543,7 @@ module SharedConstants
       "mathMin": null,
       "mathRandom": null,
       "mathPow": null,
+      "mathSqrt": null,
       "comment_Math": null,
 
       // Variables
