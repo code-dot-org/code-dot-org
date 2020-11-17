@@ -1,13 +1,13 @@
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import React from 'react';
-import {popQuestion} from './spritelabInputModule';
+import {popPrompt} from './spritelabInputModule';
 import * as coreLibrary from './coreLibrary';
 
 class SpritelabInput extends React.Component {
   static propTypes = {
     inputList: PropTypes.array.isRequired,
-    onQuestionAnswer: PropTypes.func.isRequired
+    onPromptAnswer: PropTypes.func.isRequired
   };
 
   state = {
@@ -20,20 +20,20 @@ class SpritelabInput extends React.Component {
     if (!variableName) {
       return;
     }
-    this.props.onQuestionAnswer();
-    coreLibrary.onQuestionAnswer(variableName, this.state.userInput);
+    this.props.onPromptAnswer();
+    coreLibrary.onPromptAnswer(variableName, this.state.userInput);
     this.setState({userInput: ''});
   }
 
   render() {
-    const questionText =
-      this.props.inputList[0] && this.props.inputList[0].questionText;
-    if (!questionText) {
+    const promptText =
+      this.props.inputList[0] && this.props.inputList[0].promptText;
+    if (!promptText) {
       return null;
     }
     return (
       <div id="spritelabInputArea">
-        <div>{`Question: ${questionText}`}</div>
+        <div>{`Prompt: ${promptText}`}</div>
         <div>
           Answer:
           <input
@@ -55,6 +55,6 @@ export default connect(
     inputList: state.spritelabInputList || []
   }),
   dispatch => ({
-    onQuestionAnswer: () => dispatch(popQuestion())
+    onPromptAnswer: () => dispatch(popPrompt())
   })
 )(SpritelabInput);
