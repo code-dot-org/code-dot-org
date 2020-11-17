@@ -20,9 +20,10 @@ class SaveModel extends Component {
   };
 
   onClickSave = () => {
-    console.log("dataToSave", this.props.dataToSave);
     this.props.saveTrainedModel(this.props.dataToSave);
-    alert("Don't get too excited, this doesn't do anything yet :)");
+    alert(
+      "Ok, you can get a little excited now; this saves the trained model to an s3 bucket!"
+    );
   };
 
   render() {
