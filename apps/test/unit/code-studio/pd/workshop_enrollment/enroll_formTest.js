@@ -286,6 +286,36 @@ describe('Enroll Form', () => {
       );
     });
 
+    it('disables submit button after submit', () => {
+      renderForm();
+
+      const params = {
+        first_name: 'Rubeus',
+        last_name: 'Hagrid',
+        email: props.email,
+        school_info: {
+          school_id: '60001411118',
+          school_name: 'Summit Leadership Academy High Desert',
+          school_state: 'CA',
+          school_type: 'charter',
+          school_zip: '92345'
+        },
+        grades_teaching: ['Kindergarten']
+      };
+      enrollForm.setState(params);
+
+      // Submit button should stay enabled if invalid data was provided.
+      // In this case, no "role" was included, which is a required field.
+      expect(enrollForm.find('#submit').prop('disabled')).to.be.false;
+      enrollForm.find('#submit').simulate('click');
+      expect(enrollForm.find('#submit').prop('disabled')).to.be.false;
+
+      // Submit button becomes disabled once legitimate submission is made.
+      enrollForm.setState({role: 'Librarian'});
+      enrollForm.find('#submit').simulate('click');
+      expect(enrollForm.find('#submit').prop('disabled')).to.be.true;
+    });
+
     it('first name is set when rendered as a student', () => {
       // Sometimes a teacher has a student account and fills out this
       // form.  That's fine; they'll be upgraded to a teacher account
