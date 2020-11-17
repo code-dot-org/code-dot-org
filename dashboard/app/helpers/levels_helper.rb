@@ -798,7 +798,7 @@ module LevelsHelper
   def session_id
     # session.id may not be available on the first visit unless we write to the session first.
     session['init'] = true
-    session.id
+    session.id.to_s
   end
 
   def user_or_session_id

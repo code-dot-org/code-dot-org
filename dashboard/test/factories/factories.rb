@@ -812,13 +812,13 @@ FactoryGirl.define do
   end
 
   factory :lesson_activity do
-    sequence(:seeding_key) {|n| "lesson-activity-#{n}"}
+    sequence(:key) {|n| "lesson-activity-#{n}"}
     sequence(:position)
     lesson
   end
 
   factory :activity_section do
-    sequence(:seeding_key) {|n| "activity-section-#{n}"}
+    sequence(:key) {|n| "activity-section-#{n}"}
     sequence(:position)
     lesson_activity
   end
