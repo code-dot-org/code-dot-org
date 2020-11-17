@@ -44,7 +44,7 @@ export default class LessonExtrasEditor extends React.Component {
           <input
             name="lesson_extras_available"
             type="checkbox"
-            defaultChecked={this.props.lessonExtrasAvailable}
+            checked={this.props.lessonExtrasAvailable}
             style={styles.checkbox}
             onChange={e => this.props.updateLessonExtrasAvailable(e)}
           />
@@ -62,7 +62,7 @@ export default class LessonExtrasEditor extends React.Component {
               <input
                 name="project_widget_visible"
                 type="checkbox"
-                defaultChecked={this.props.projectWidgetVisible}
+                checked={this.props.projectWidgetVisible}
                 style={styles.checkbox}
                 onChange={this.props.updateProjectWidgetVisible}
               />
