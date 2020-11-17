@@ -181,7 +181,7 @@ export default class JoinSection extends React.Component {
         <div style={styles.clear} />
         {this.state.displayCaptchaDialog && (
           <ReCaptchaValidationDialog
-            onVerification={this.joinSection}
+            joinSection={this.joinSection}
             isOpen={this.state.displayCaptchaDialog}
             handleClose={this.close}
             sectionCode={this.normalizeSectionCode()}
