@@ -1147,12 +1147,6 @@ cs:
       souhlasíte s uložením cookies na svém počítači nebo přístroji.
     more_information: Zobrazte si zásady ochrany soukromí pro Code.org.
     accept: Souhlasím
-  gdpr_dialog:
-    heading: Souhlasíte s používáním webových stránek provozovaných ve Spojených státech?
-    message: Informace ohledně Vašeho používání těchto stránek mohou být posílány
-      do Spojených států a tamtéž i uchovávány.
-    privacy_policy: zásady ochrany osobních údajů
-    true: Ano
   page_not_found_title: Stránka nebyla nalezena
   page_not_found_header: 404 - Stránka nebyla nalezena
   page_not_found_button: Zpět domů

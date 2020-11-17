@@ -1178,6 +1178,8 @@ de:
         text: Sprite {SPRITE} stoppt {BEHAVIOR}
       gamelab_removeTint:
         text: entferne Farbe von {THIS}
+      gamelab_repeatForever:
+        text: ewig wiederholen
       gamelab_setAnimation:
         text: ändere {THIS} Kostüm in {ANIMATION}
       gamelab_setBackground:

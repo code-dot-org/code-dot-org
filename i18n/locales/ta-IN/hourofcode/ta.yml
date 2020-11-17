@@ -237,14 +237,6 @@ ta:
   front_watch_regular_video: காணொளியைக் காண்க
   front_volunteers: தொழில்நுட்ப தொண்டூழியர்கள் தேவை
   front_start_learning: கற்றுக்கொள்ளத் தொடங்குக
-  gdpr_dialog_heading: அமெரிக்காவை அடிப்படையாகக் கொண்ட ஒரு வலைதளத்தை பயன்படுத்த நீங்கள்
-    ஒப்புக்கொள்கிறீர்களா?
-  gdpr_dialog_message: இந்த வலைத்தளத்தை நீங்கள் பயனப்டுத்துவதற்கான டேட்டா அமெரிக்காவிற்கு
-    அனுப்பப்பட்ட சேகரிக்கப்படும் அல்லது செயல்முறைப்படுத்தப்படும்.
-  gdpr_dialog_link_intro: விபரங்களுக்கு காணவேண்டியது எங்களது
-  gdpr_dialog_privacy_policy: தனியுரிமைக் கொள்கை
-  gdpr_dialog_logout: வெளியேறு
-  gdpr_dialog_yes: ஆம்
   header_menu_resources: வள ஆதாரங்கள்
   header_menu_faq: அடிக்கடி கேட்கப்படும் கேள்விகள்
   header_menu_how_to: எவ்வாறு இதைச் செய்யலாம்
@@ -6207,7 +6199,7 @@ ta:
   tutorial_grokem_string_detail_grades: Grades 6+
   tutorial_kodmaze_string_detail_grades: Pre-reader - Grade 5
   tutorial_codestersa_string_detail_grades: Grades 2-8
-  tutorial_cmdodo_string_detail_grades: Grades 2-5
+  tutorial_cmdodo_string_detail_grades: Grades 3-5
   tutorial_tynkerspace_string_detail_grades: Grades 2-5
   tutorial_gfbloons_string_detail_grades: Grades 9+
   tutorial_raspipong_string_detail_grades: Grades 9+

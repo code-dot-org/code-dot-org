@@ -167,4 +167,23 @@ class LessonGroup < ApplicationRecord
     my_key.merge!(script_seeding_key) {|key, _, _| raise "Duplicate key when generating seeding_key: #{key}"}
     my_key.stringify_keys
   end
+
+  # This method takes chapter data exported from curriculum builder and updates
+  # corresponding fields of this LessonGroup to match it. Only fields on this
+  # LessonGroup will be updated. Lessons themselves are not updated here.
+  # The expected input format is as follows:
+  # {
+  #   "title": "CB Chapter Title",
+  #   "number": 1,
+  #   "questions": "Big Questions markdown",
+  #   "description": "Description markdown"
+  # }
+  #
+  # @param [Hash] cb_chapter_data - Chapter data to import.
+  def update_from_curriculum_builder(_cb_chapter_data)
+    # In the future, only levelbuilder should be added to this list.
+    raise unless [:development, :adhoc].include? rack_env
+
+    # puts "TODO: update lesson group #{id} with cb chapter data: #{cb_chapter_data.to_json[0, 50]}..."
+  end
 end

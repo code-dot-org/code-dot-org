@@ -1154,6 +1154,8 @@ th:
         text: "[SPRITE]สไปรท์[0] หยุด {BEHAVIOR}"
       gamelab_removeTint:
         text: ลบสีจาก {THIS}
+      gamelab_repeatForever:
+        text: ทำซ้ำตลอดไป
       gamelab_setAnimation:
         text: เปลี่ยน {THIS} เครื่องแต่งกาย {ANIMATION}
       gamelab_setBackground:

@@ -480,6 +480,10 @@ class Script < ActiveRecord::Base
     end
   end
 
+  def self.remove_from_cache(script_name)
+    script_cache.delete(script_name) if script_cache
+  end
+
   def self.get_script_family_redirect_for_user(family_name, user: nil, locale: 'en-US')
     return nil unless family_name
 
@@ -1336,6 +1340,14 @@ class Script < ActiveRecord::Base
       isHocScript: hoc?,
       student_detail_progress_view: student_detail_progress_view?,
       age_13_required: logged_out_age_13_required?
+    }
+  end
+
+  def summarize_for_lesson_show
+    {
+      displayName: localized_title,
+      link: link,
+      lessons: lessons.map(&:summarize_for_lesson_dropdown)
     }
   end
 

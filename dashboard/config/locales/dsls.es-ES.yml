@@ -5141,58 +5141,58 @@ es-ES:
       courseC_multi_starWars_predict1:
         answers:
         - text: BB-8 no se moverá.
-          feedback: Incorrecto. El bloque repetir hará que BB-8 avance 5 veces.
+          feedback: Incorrecto. El bloque "repetir" hará que BB-8 avance 5 veces.
         - text: BB-8 se moverá solo un espacio
-          feedback: Incorrecto. El bloque repetir hará que BB-8 avance 5 veces.
+          feedback: Incorrecto. El bloque "repetir" hará que BB-8 avance 5 veces.
         - text: BB-8 se moverá 5 veces y recogerá toda la chatarra
           correct: true
           feedback: "¡Correcto!"
         - text: No lo sé
-          feedback: El bloque repetir hará que BB-8 avance 5 veces.
+          feedback: El bloque "repetir" hará que BB-8 avance 5 veces.
         questions:
         - text: ¿Qué crees que sucederá cuando hagas clic en "Ejecutar"?
       courseC_multi_starWars_predict1_2018:
         answers:
         - text: BB-8 no se moverá.
-          feedback: Incorrecto. El bloque repetir hará que BB-8 avance 5 veces.
+          feedback: Incorrecto. El bloque "repetir" hará que BB-8 avance 5 veces.
         - text: BB-8 se moverá solo un espacio
-          feedback: Incorrecto. El bloque repetir hará que BB-8 avance 5 veces.
+          feedback: Incorrecto. El bloque "repetir" hará que BB-8 avance 5 veces.
         - text: BB-8 se moverá 5 veces y recogerá toda la chatarra
           correct: true
           feedback: "¡Correcto!"
         - text: No lo sé
-          feedback: El bloque repetir hará que BB-8 avance 5 veces.
+          feedback: El bloque "repetir" hará que BB-8 avance 5 veces.
         questions:
         - text: ¿Qué crees que sucederá cuando hagas clic en "Ejecutar"?
       courseC_multi_starWars_predict1_2018_2019:
         answers:
         - text: BB-8 no se moverá.
-          feedback: Incorrecto. El bloque repetir hará que BB-8 avance 5 veces.
+          feedback: Incorrecto. El bloque "repetir" hará que BB-8 avance 5 veces.
         - text: BB-8 se moverá solo un espacio
-          feedback: Incorrecto. El bloque repetir hará que BB-8 avance 5 veces.
+          feedback: Incorrecto. El bloque "repetir" hará que BB-8 avance 5 veces.
         - text: BB-8 se moverá 5 veces y recogerá toda la chatarra
           correct: true
           feedback: "¡Correcto!"
         - text: No lo sé
-          feedback: El bloque repetir hará que BB-8 avance 5 veces.
+          feedback: El bloque "repetir" hará que BB-8 avance 5 veces.
         questions:
         - text: ¿Qué crees que sucederá cuando hagas clic en "Ejecutar"?
       courseC_multi_starWars_predict1_2018_2019_2020:
         answers:
         - text: BB-8 no se moverá.
-          feedback: Incorrecto. El bloque repetir hará que BB-8 avance 5 veces.
+          feedback: Incorrecto. El bloque "repetir" hará que BB-8 avance 5 veces.
         - text: BB-8 se moverá solo un espacio
-          feedback: Incorrecto. El bloque repetir hará que BB-8 avance 5 veces.
+          feedback: Incorrecto. El bloque "repetir" hará que BB-8 avance 5 veces.
         - text: BB-8 se moverá 5 veces y recogerá toda la chatarra
           correct: true
           feedback: "¡Correcto!"
         - text: No lo sé
-          feedback: El bloque repetir hará que BB-8 avance 5 veces.
+          feedback: El bloque "repetir" hará que BB-8 avance 5 veces.
         questions:
         - text: ¿Qué crees que sucederá cuando hagas clic en "Ejecutar"?
       courseC_multi_starWars_predict2:
         answers:
-        - text: BB-8 irá demasiado lejos en el primer bucle.
+        - text: BB-8 llegará demasiado lejos en el primer bucle.
           feedback: Incorrecto. El primer loop sólo le permite a BB-8 avanzar 2 espacios,
             cuando necesita avanzar 3 espacios.
         - text: BB-8 no irá lo suficientemente lejos en el primer bucle para poder
@@ -5203,14 +5203,14 @@ es-ES:
           feedback: Incorrecto. El primer loop sólo le permite a BB-8 avanzar 2 espacios,
             cuando necesita avanzar 3 espacios.
         - text: No lo sé.
-          feedback: El primer loop sólo le permite a BB-8 avanzar 2 espacios, cuando
+          feedback: El primer bucle sólo le permite a BB-8 avanzar 2 espacios, cuando
             necesita avanzar 3 espacios.
         questions:
-        - text: Mira el siguiente código con atención. ¿Qué sucederá cuando hagas
+        - text: Mira el siguiente programa con atención. ¿Qué sucederá cuando hagas
             clic en "Ejecutar"?
       courseC_multi_starWars_predict2_2018:
         answers:
-        - text: BB-8 irá demasiado lejos en el primer bucle.
+        - text: BB-8 llegará demasiado lejos en el primer bucle.
           feedback: Incorrecto. El primer loop sólo le permite a BB-8 avanzar 2 espacios,
             cuando necesita avanzar 3 espacios.
         - text: BB-8 no irá lo suficientemente lejos en el primer bucle para poder
@@ -5221,14 +5221,14 @@ es-ES:
           feedback: Incorrecto. El primer loop sólo le permite a BB-8 avanzar 2 espacios,
             cuando necesita avanzar 3 espacios.
         - text: No lo sé.
-          feedback: El primer loop sólo le permite a BB-8 avanzar 2 espacios, cuando
+          feedback: El primer bucle sólo le permite a BB-8 avanzar 2 espacios, cuando
             necesita avanzar 3 espacios.
         questions:
-        - text: Mira el siguiente código con atención. ¿Qué sucederá cuando hagas
+        - text: Mira el siguiente programa con atención. ¿Qué sucederá cuando hagas
             clic en "Ejecutar"?
       courseC_multi_starWars_predict2_2018_2019:
         answers:
-        - text: BB-8 irá demasiado lejos en el primer bucle.
+        - text: BB-8 llegará demasiado lejos en el primer bucle.
           feedback: Incorrecto. El primer loop sólo le permite a BB-8 avanzar 2 espacios,
             cuando necesita avanzar 3 espacios.
         - text: BB-8 no irá lo suficientemente lejos en el primer bucle para poder
@@ -5239,14 +5239,14 @@ es-ES:
           feedback: Incorrecto. El primer loop sólo le permite a BB-8 avanzar 2 espacios,
             cuando necesita avanzar 3 espacios.
         - text: No lo sé.
-          feedback: El primer loop sólo le permite a BB-8 avanzar 2 espacios, cuando
+          feedback: El primer bucle sólo le permite a BB-8 avanzar 2 espacios, cuando
             necesita avanzar 3 espacios.
         questions:
-        - text: Mira el siguiente código con atención. ¿Qué sucederá cuando hagas
+        - text: Mira el siguiente programa con atención. ¿Qué sucederá cuando hagas
             clic en "Ejecutar"?
       courseC_multi_starWars_predict2_2018_2019_2020:
         answers:
-        - text: BB-8 irá demasiado lejos en el primer bucle.
+        - text: BB-8 llegará demasiado lejos en el primer bucle.
           feedback: Incorrecto. El primer loop sólo le permite a BB-8 avanzar 2 espacios,
             cuando necesita avanzar 3 espacios.
         - text: BB-8 no irá lo suficientemente lejos en el primer bucle para poder
@@ -5257,10 +5257,10 @@ es-ES:
           feedback: Incorrecto. El primer loop sólo le permite a BB-8 avanzar 2 espacios,
             cuando necesita avanzar 3 espacios.
         - text: No lo sé.
-          feedback: El primer loop sólo le permite a BB-8 avanzar 2 espacios, cuando
+          feedback: El primer bucle sólo le permite a BB-8 avanzar 2 espacios, cuando
             necesita avanzar 3 espacios.
         questions:
-        - text: Mira el siguiente código con atención. ¿Qué sucederá cuando hagas
+        - text: Mira el siguiente programa con atención. ¿Qué sucederá cuando hagas
             clic en "Ejecutar"?
       courseD_EOC_2020:
         display_name: Proyecto de fin de curso
@@ -5492,230 +5492,248 @@ es-ES:
         answers:
         - text: 'La abeja se moverá a la nube y tratará de obtener el néctar, pase
             lo que pase. '
-          feedback: Incorrecto. El bloque 'si hay flor' condiciona que la abeja intentará
-            obtener néctar solamente si hay una flor debajo de la nube.
-        - text: La abeja ira a la nube y tratará de conseguir néctar solo si hay una
+          feedback: Incorrecto. El bloque 'si hay flor' asegura que la abeja intentará
+            recoger néctar solamente si hay una flor debajo de la nube.
+        - text: La abeja ira a la nube y tratará de recoger néctar sólo si hay una
             flor debajo.
           correct: true
           feedback: "¡Correcto!"
         - text: 'La abeja se moverá a la nube y no hará nada, pase lo que pase. '
-          feedback: El bloque 'si hay flor' condiciona que la abeja intentará obtener
-            néctar solamente si hay una flor debajo de la nube.
+          feedback: Incorrecto. El bloque 'si hay flor' asegura que la abeja intentará
+            recoger néctar solamente si hay una flor debajo de la nube.
         - text: No lo sé.
-          feedback: El bloque 'si hay flor' condiciona que la abeja intentará obtener
+          feedback: El bloque 'si hay flor' asegura que la abeja intentará recoger
             néctar solamente si hay una flor debajo de la nube.
         questions:
         - text: La nube bloquea la vista. Podría haber una flor debajo de esta nube.
-            Si hay una flor, la abeja necesitará obtener el néctar una vez. Si no
-            hay una flor, la abeja no debería hacer nada. Observa el siguiente código
+            Si hay una flor, la abeja tendría que recoger néctar una vez. Si no hay
+            una flor, la abeja no debería hacer nada. Observa el siguiente código
             con atención. ¿Qué crees que sucederá si haces clic en "Ejecutar"?
       courseD_multi_bee_conditionals1_predict1_2018:
         answers:
         - text: 'La abeja se moverá a la nube y tratará de obtener el néctar, pase
             lo que pase. '
-          feedback: Incorrecto. El bloque 'si hay flor' condiciona que la abeja intentará
-            obtener néctar solamente si hay una flor debajo de la nube.
-        - text: La abeja ira a la nube y tratará de conseguir néctar solo si hay una
+          feedback: Incorrecto. El bloque 'si hay flor' asegura que la abeja intentará
+            recoger néctar solamente si hay una flor debajo de la nube.
+        - text: La abeja ira a la nube y tratará de recoger néctar sólo si hay una
             flor debajo.
           correct: true
           feedback: "¡Correcto!"
         - text: 'La abeja se moverá a la nube y no hará nada, pase lo que pase. '
-          feedback: El bloque 'si hay flor' condiciona que la abeja intentará obtener
-            néctar solamente si hay una flor debajo de la nube.
+          feedback: Incorrecto. El bloque 'si hay flor' asegura que la abeja intentará
+            recoger néctar solamente si hay una flor debajo de la nube.
         - text: No lo sé.
-          feedback: El bloque 'si hay flor' condiciona que la abeja intentará obtener
+          feedback: El bloque 'si hay flor' asegura que la abeja intentará recoger
             néctar solamente si hay una flor debajo de la nube.
         questions:
         - text: La nube bloquea la vista. Podría haber una flor debajo de esta nube.
-            Si hay una flor, la abeja necesitará obtener el néctar una vez. Si no
-            hay una flor, la abeja no debería hacer nada. Observa el siguiente código
+            Si hay una flor, la abeja tendría que recoger néctar una vez. Si no hay
+            una flor, la abeja no debería hacer nada. Observa el siguiente código
             con atención. ¿Qué crees que sucederá si haces clic en "Ejecutar"?
       courseD_multi_bee_conditionals1_predict1_2018_2019:
         answers:
         - text: 'La abeja se moverá a la nube y tratará de obtener el néctar, pase
             lo que pase. '
-          feedback: Incorrecto. El bloque 'si hay flor' condiciona que la abeja intentará
-            obtener néctar solamente si hay una flor debajo de la nube.
-        - text: La abeja ira a la nube y tratará de conseguir néctar solo si hay una
+          feedback: Incorrecto. El bloque 'si hay flor' asegura que la abeja intentará
+            recoger néctar solamente si hay una flor debajo de la nube.
+        - text: La abeja ira a la nube y tratará de recoger néctar sólo si hay una
             flor debajo.
           correct: true
           feedback: "¡Correcto!"
         - text: 'La abeja se moverá a la nube y no hará nada, pase lo que pase. '
-          feedback: El bloque 'si hay flor' condiciona que la abeja intentará obtener
-            néctar solamente si hay una flor debajo de la nube.
+          feedback: Incorrecto. El bloque 'si hay flor' asegura que la abeja intentará
+            recoger néctar solamente si hay una flor debajo de la nube.
         - text: No lo sé.
-          feedback: El bloque 'si hay flor' condiciona que la abeja intentará obtener
+          feedback: El bloque 'si hay flor' asegura que la abeja intentará recoger
             néctar solamente si hay una flor debajo de la nube.
         questions:
         - text: La nube bloquea la vista. Podría haber una flor debajo de esta nube.
-            Si hay una flor, la abeja necesitará obtener el néctar una vez. Si no
-            hay una flor, la abeja no debería hacer nada. Observa el siguiente código
+            Si hay una flor, la abeja tendría que recoger néctar una vez. Si no hay
+            una flor, la abeja no debería hacer nada. Observa el siguiente código
             con atención. ¿Qué crees que sucederá si haces clic en "Ejecutar"?
       courseD_multi_bee_conditionals1_predict1_2018_2019_2020:
         answers:
         - text: 'La abeja se moverá a la nube y tratará de obtener el néctar, pase
             lo que pase. '
-          feedback: Incorrecto. El bloque 'si hay flor' condiciona que la abeja intentará
-            obtener néctar solamente si hay una flor debajo de la nube.
-        - text: La abeja ira a la nube y tratará de conseguir néctar solo si hay una
+          feedback: Incorrecto. El bloque 'si hay flor' asegura que la abeja intentará
+            recoger néctar solamente si hay una flor debajo de la nube.
+        - text: La abeja ira a la nube y tratará de recoger néctar sólo si hay una
             flor debajo.
           correct: true
           feedback: "¡Correcto!"
         - text: 'La abeja se moverá a la nube y no hará nada, pase lo que pase. '
-          feedback: El bloque 'si hay flor' condiciona que la abeja intentará obtener
-            néctar solamente si hay una flor debajo de la nube.
+          feedback: Incorrecto. El bloque 'si hay flor' asegura que la abeja intentará
+            recoger néctar solamente si hay una flor debajo de la nube.
         - text: No lo sé.
-          feedback: El bloque 'si hay flor' condiciona que la abeja intentará obtener
+          feedback: El bloque 'si hay flor' asegura que la abeja intentará recoger
             néctar solamente si hay una flor debajo de la nube.
         questions:
         - text: La nube bloquea la vista. Podría haber una flor debajo de esta nube.
-            Si hay una flor, la abeja necesitará obtener el néctar una vez. Si no
-            hay una flor, la abeja no debería hacer nada. Observa el siguiente código
+            Si hay una flor, la abeja tendría que recoger néctar una vez. Si no hay
+            una flor, la abeja no debería hacer nada. Observa el siguiente código
             con atención. ¿Qué crees que sucederá si haces clic en "Ejecutar"?
       courseD_multi_bee_conditionals1_predict1_copy:
         answers:
         - text: 'La abeja se moverá a la nube y tratará de obtener el néctar, pase
             lo que pase. '
-          feedback: Incorrecto. El bloque 'si hay flor' condiciona que la abeja intentará
-            obtener néctar solamente si hay una flor debajo de la nube.
-        - text: La abeja ira a la nube y tratará de conseguir néctar solo si hay una
+          feedback: Incorrecto. El bloque 'si hay flor' asegura que la abeja intentará
+            recoger néctar solamente si hay una flor debajo de la nube.
+        - text: La abeja ira a la nube y tratará de recoger néctar sólo si hay una
             flor debajo.
           correct: true
           feedback: "¡Correcto!"
         - text: 'La abeja se moverá a la nube y no hará nada, pase lo que pase. '
-          feedback: El bloque 'si hay flor' condiciona que la abeja intentará obtener
-            néctar solamente si hay una flor debajo de la nube.
+          feedback: Incorrecto. El bloque 'si hay flor' asegura que la abeja intentará
+            recoger néctar solamente si hay una flor debajo de la nube.
         - text: No lo sé.
-          feedback: El bloque 'si hay flor' condiciona que la abeja intentará obtener
+          feedback: El bloque 'si hay flor' asegura que la abeja intentará recoger
             néctar solamente si hay una flor debajo de la nube.
         questions:
         - text: La nube bloquea la vista. Podría haber una flor debajo de esta nube.
-            Si hay una flor, la abeja necesitará obtener el néctar una vez. Si no
-            hay una flor, la abeja no debería hacer nada. Observa el siguiente código
+            Si hay una flor, la abeja tendría que recoger néctar una vez. Si no hay
+            una flor, la abeja no debería hacer nada. Observa el siguiente código
             con atención. ¿Qué crees que sucederá si haces clic en "Ejecutar"?
       courseD_multi_bee_conditionals7_predict2:
         answers:
-        - text: La abeja obtendrá el néctar de cada flor, y la miel, de cada panal.
+        - text: La abeja recogerá néctar de cada flor, y miel, de cada panal.
           correct: true
           feedback: "¡Correcto!"
-        - text: La abeja tratará de obtener el néctar de las flores y del panal.
+        - text: La abeja tratará de obtener el néctar tanto de las flores como del
+            panal.
           feedback: Incorrecto. El bloque `si en la flor` permite a la abeja tomar
             el néctar de cada flor y la miel de cada panal.
-        - text: La abeja tratará de obtener la miel de las flores y del panal.
+        - text: La abeja tratará de obtener miel tanto de las flores como del panal.
           feedback: Incorrecto. Incorrecto. El bloque 'si hay flor' permite a la abeja
-            tomar néctar de cada flor y miel de cada panal..
+            recoger néctar de cada flor y miel de cada panal..
         - text: No lo sé.
-          feedback: El bloque `si en la flor` permite a la abeja tomar el néctar de
-            cada flor y la miel de cada panal.
+          feedback: El bloque `si en la flor` permite a la abeja obtener el néctar
+            de cada flor y la miel de cada panal.
         questions:
         - text: Mira el siguiente código con atención. ¿Qué crees que sucederá si
             haces clic en "Ejecutar"? Recuerda que solo habrá *un* panal o *una* flor
             detrás de cada nube.
       courseD_multi_bee_conditionals7_predict2_2018:
         answers:
-        - text: La abeja obtendrá el néctar de cada flor, y la miel, de cada panal.
+        - text: La abeja recogerá néctar de cada flor, y miel, de cada panal.
           correct: true
           feedback: "¡Correcto!"
-        - text: La abeja tratará de obtener el néctar de las flores y del panal.
+        - text: La abeja tratará de obtener el néctar tanto de las flores como del
+            panal.
           feedback: Incorrecto. El bloque `si en la flor` permite a la abeja tomar
             el néctar de cada flor y la miel de cada panal.
-        - text: La abeja tratará de obtener la miel de las flores y del panal.
+        - text: La abeja tratará de obtener miel tanto de las flores como del panal.
           feedback: Incorrecto. Incorrecto. El bloque 'si hay flor' permite a la abeja
-            tomar néctar de cada flor y miel de cada panal..
+            recoger néctar de cada flor y miel de cada panal..
         - text: No lo sé.
-          feedback: El bloque `si en la flor` permite a la abeja tomar el néctar de
-            cada flor y la miel de cada panal.
+          feedback: El bloque `si en la flor` permite a la abeja obtener el néctar
+            de cada flor y la miel de cada panal.
         questions:
         - text: Mira el siguiente código con atención. ¿Qué crees que sucederá si
             haces clic en "Ejecutar"? Recuerda que solo habrá *un* panal o *una* flor
             detrás de cada nube.
       courseD_multi_bee_conditionals7_predict2_2018_2019:
         answers:
-        - correct: true
+        - text: La abeja recogerá néctar de cada flor y hará miel en cada panal.
+          correct: true
           feedback: "¡Correcto!"
-        - text: La abeja tratará de obtener el néctar de las flores y del panal.
-        - text: La abeja tratará de obtener la miel de las flores y del panal.
+        - text: La abeja tratará de obtener el néctar tanto de las flores como del
+            panal.
+          feedback: Incorrecto. El bloque ´si en una flor´ le permite a la abeja recoger
+            néctar en cada flor y hacer miel en cada panal.
+        - text: La abeja tratará de obtener miel tanto de las flores como del panal.
+          feedback: Incorrecto. Incorrecto. El bloque ´si en una flor´ le permite
+            a la abeja recoger néctar en cada flor y hacer miel en cada panal.
         - text: No lo sé.
+          feedback: El bloque ´si en una flor´ le permite a la abeja recoger néctar
+            en cada flor y hacer miel en cada panal.
         questions:
         - text: Mira el siguiente código con atención. ¿Qué crees que sucederá si
             haces clic en "Ejecutar"? Recuerda que solo habrá *un* panal o *una* flor
             detrás de cada nube.
       courseD_multi_bee_conditionals7_predict2_2018_2019_2020:
         answers:
-        - correct: true
+        - text: La abeja recogerá néctar de cada flor y hará miel en cada panal.
+          correct: true
           feedback: "¡Correcto!"
-        - text: La abeja tratará de obtener el néctar de las flores y del panal.
-        - text: La abeja tratará de obtener la miel de las flores y del panal.
+        - text: La abeja tratará de obtener el néctar tanto de las flores como del
+            panal.
+          feedback: Incorrecto. El bloque ´si en una flor´ le permite a la abeja recoger
+            néctar en cada flor y hacer miel en cada panal.
+        - text: La abeja tratará de obtener miel tanto de las flores como del panal.
+          feedback: Incorrecto. Incorrecto. El bloque ´si en una flor´ le permite
+            a la abeja recoger néctar en cada flor y hacer miel en cada panal.
         - text: No lo sé.
+          feedback: El bloque ´si en una flor´ le permite a la abeja recoger néctar
+            en cada flor y hacer miel en cada panal.
         questions:
         - text: Mira el siguiente código con atención. ¿Qué crees que sucederá si
             haces clic en "Ejecutar"? Recuerda que solo habrá *un* panal o *una* flor
             detrás de cada nube.
       courseD_multi_bee_nestedLoops2_predict1:
         answers:
-        - text: La abeja avanzará y obtendrá el néctar solo una vez.
+        - text: La abeja avanzará y recogerá el néctar solo una vez.
           feedback: Incorrecto. La abeja enlaza la acción en bucle de avanzar y recoger
-            el néctar, lo que permite resolver el desafío.
+            el néctar, lo que permite resolver el puzle.
         - text: La abeja recogerá solo 2 unidades de néctar.
           feedback: Incorrecto. La abeja enlaza la acción en bucle de avanzar y recoger
-            el néctar, lo que permite resolver el desafío.
+            el néctar, lo que permite resolver el puzle.
         - text: La abeja recogerá todo el néctar.
           correct: true
           feedback: "¡Correcto!"
         - text: No lo sé.
           feedback: La abeja enlaza la acción en bucle de avanzar y recoger el néctar,
-            lo que permite resolver el desafío.
+            lo que permite resolver el puzle.
         questions:
         - text: Mira detenidamente todos los bucles anidados que hay debajo. ¿Qué
             ocurrirá si haces clic en "Ejecutar"?
       courseD_multi_bee_nestedLoops2_predict1_2018:
         answers:
-        - text: La abeja avanzará y obtendrá el néctar solo una vez.
+        - text: La abeja avanzará y recogerá el néctar solo una vez.
           feedback: Incorrecto. La abeja enlaza la acción en bucle de avanzar y recoger
-            el néctar, lo que permite resolver el desafío.
+            el néctar, lo que permite resolver el puzle.
         - text: La abeja recogerá solo 2 unidades de néctar.
           feedback: Incorrecto. La abeja enlaza la acción en bucle de avanzar y recoger
-            el néctar, lo que permite resolver el desafío.
+            el néctar, lo que permite resolver el puzle.
         - text: La abeja recogerá todo el néctar.
           correct: true
           feedback: "¡Correcto!"
         - text: No lo sé.
           feedback: La abeja enlaza la acción en bucle de avanzar y recoger el néctar,
-            lo que permite resolver el desafío.
+            lo que permite resolver el puzle.
         questions:
         - text: Mira los bucles anidados a continuación. ¿Qué sucederá si haces clic
             en "Ejecutar"?
       courseD_multi_bee_nestedLoops2_predict1_2018_2019:
         answers:
-        - text: La abeja avanzará y obtendrá el néctar solo una vez.
+        - text: La abeja avanzará y recogerá el néctar solo una vez.
           feedback: Incorrecto. La abeja enlaza la acción en bucle de avanzar y recoger
-            el néctar, lo que permite resolver el desafío.
+            el néctar, lo que permite resolver el puzle.
         - text: La abeja recogerá solo 2 unidades de néctar.
           feedback: Incorrecto. La abeja enlaza la acción en bucle de avanzar y recoger
-            el néctar, lo que permite resolver el desafío.
+            el néctar, lo que permite resolver el puzle.
         - text: La abeja recogerá todo el néctar.
           correct: true
           feedback: "¡Correcto!"
         - text: No lo sé.
           feedback: La abeja enlaza la acción en bucle de avanzar y recoger el néctar,
-            lo que permite resolver el desafío.
+            lo que permite resolver el puzle.
         questions:
         - text: Mira los bucles anidados a continuación. ¿Qué sucederá si haces clic
             en "Ejecutar"?
       courseD_multi_bee_nestedLoops2_predict1_2018_2019_2020:
         answers:
-        - text: La abeja avanzará y obtendrá el néctar solo una vez.
+        - text: La abeja avanzará y recogerá el néctar solo una vez.
           feedback: Incorrecto. La abeja enlaza la acción en bucle de avanzar y recoger
-            el néctar, lo que permite resolver el desafío.
+            el néctar, lo que permite resolver el puzle.
         - text: La abeja recogerá solo 2 unidades de néctar.
           feedback: Incorrecto. La abeja enlaza la acción en bucle de avanzar y recoger
-            el néctar, lo que permite resolver el desafío.
+            el néctar, lo que permite resolver el puzle.
         - text: La abeja recogerá todo el néctar.
           correct: true
           feedback: "¡Correcto!"
         - text: No lo sé.
           feedback: La abeja enlaza la acción en bucle de avanzar y recoger el néctar,
-            lo que permite resolver el desafío.
+            lo que permite resolver el puzle.
         questions:
         - text: Mira los bucles anidados a continuación. ¿Qué sucederá si haces clic
             en "Ejecutar"?
@@ -6682,17 +6700,17 @@ es-ES:
         answers:
         - text: 'La abeja se moverá a la nube y tratará de obtener el néctar, pase
             lo que pase. '
-          feedback: Incorrecto. El bloque 'si hay flor' condiciona que la abeja intentará
-            obtener néctar solamente si hay una flor debajo de la nube.
-        - text: La abeja ira a la nube y tratará de conseguir néctar solo si hay una
+          feedback: Incorrecto. El bloque 'si hay flor' asegura que la abeja intentará
+            recoger néctar solamente si hay una flor debajo de la nube.
+        - text: La abeja ira a la nube y tratará de recoger néctar sólo si hay una
             flor debajo.
           correct: true
           feedback: "¡Correcto!"
         - text: 'La abeja se moverá a la nube y no hará nada, pase lo que pase. '
-          feedback: El bloque 'si hay flor' condiciona que la abeja intentará obtener
-            néctar solamente si hay una flor debajo de la nube.
+          feedback: Incorrecto. El bloque 'si hay flor' asegura que la abeja intentará
+            recoger néctar solamente si hay una flor debajo de la nube.
         - text: No lo sé.
-          feedback: El bloque 'si hay flor' condiciona que la abeja intentará obtener
+          feedback: El bloque 'si hay flor' asegura que la abeja intentará recoger
             néctar solamente si hay una flor debajo de la nube.
         markdown: 'La nube bloquea la vista. Podría haber una flor debajo de esta
           nube. Si hay una flor, la abeja deberá recoger el néctar **una vez**.
@@ -6706,11 +6724,12 @@ es-ES:
         - text: La abeja recogerá el néctar de cada flor; de lo contrario, hará miel.
           correct: true
           feedback: "¡Correcto!"
-        - text: La abeja tratará de obtener el néctar de las flores y del panal.
+        - text: La abeja tratará de obtener el néctar tanto de las flores como del
+            panal.
           feedback: Incorrecto. El bloque `si en la flor` permite a la abeja obtener
             el néctar de cada flor y hacer la miel si no hay una flor (y, por lo tanto,
             hay un panal).
-        - text: La abeja tratará de obtener la miel de las flores y del panal.
+        - text: La abeja tratará de obtener miel tanto de las flores como del panal.
           feedback: Incorrecto. Incorrecto. El bloque `si en la flor` permite a la
             abeja obtener el néctar de cada flor y la miel de cada panal.
         - text: No lo sé.
@@ -6918,6 +6937,7 @@ es-ES:
         teacher_markdown: "* [Barcos de Aluminio - Ejemplar](https://docs.google.com/a/code.org/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/edit?usp=sharing)
           - Guía de la actividad ([PDF](https://docs.google.com/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/export?format=pdf)
           | [DOCX](https://docs.google.com/a/code.org/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/edit?usp=sharing))"
+        title: Encuesta Pre-Curso al Estudiante sobre CS Descubrimientos
       csf_be_a_super_digital_citizen:
         content1: descripción aquí
       csf_password_power-up:
@@ -7036,3 +7056,18 @@ es-ES:
 
 
 
+      CSD U1 Test:
+        title: Ordenadores y resolución de problemas post-proyecto prueba.
+      Unit 1 Lesson 1 Overview:
+        markdown: "# Resumen\n\nLa clase trabaja en grupos para diseñar barcos de
+          papel aluminio que puedan cargar tantas monedas como sea posible. Al final
+          de la clase, los grupos reflexionan sobre sus experiencias con la actividad
+          y establecen conexiones con los tipos de resoluciones de problemas que llevarán
+          adelante durante el resto del curso. \n\n\n## Recursos\n\n* [Aluminum Boats](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf)
+          - Activity Guide (copy as [MS Word](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc),
+          [Google Doc](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))\n"
+        teacher_markdown: "* [Barcos de Aluminio - Ejemplar](https://docs.google.com/a/code.org/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/edit?usp=sharing)
+          - Guía de la actividad ([PDF](https://docs.google.com/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/export?format=pdf)
+          | [DOCX](https://docs.google.com/a/code.org/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/edit?usp=sharing))"
+      csd-pre-survey-levelgroup_2019:
+        title: Encuesta Pre-Curso al Estudiante sobre CS Descubrimientos

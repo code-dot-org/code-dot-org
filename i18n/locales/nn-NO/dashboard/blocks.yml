@@ -1100,6 +1100,8 @@ nn:
         text: figur {SPRITE} stopper {BEHAVIOR}
       gamelab_removeTint:
         text: fjern farge fra {THIS}
+      gamelab_repeatForever:
+        text: gjenta for alltid
       gamelab_setBackground:
         text: vel bakgrunnsfarge {COLOR}
       gamelab_setBackgroundImage:

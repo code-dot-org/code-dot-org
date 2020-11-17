@@ -725,8 +725,4 @@ ca:
         opt_in_no: 'No'
   cookie_banner:
     accept: D'acord
-  gdpr_dialog:
-    message: Les dades del meu ús d'aquest lloc poden ser enviades, emmagatzemades
-      o processades als Estats Units.
-    true: Sí
   copy: Copiar

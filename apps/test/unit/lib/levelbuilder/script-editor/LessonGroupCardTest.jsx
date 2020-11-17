@@ -1,5 +1,5 @@
 import React from 'react';
-import {shallow, mount} from 'enzyme';
+import {shallow} from 'enzyme';
 import {expect} from '../../../../util/reconfiguredChai';
 import {UnconnectedLessonGroupCard as LessonGroupCard} from '@cdo/apps/lib/levelbuilder/script-editor/LessonGroupCard';
 import sinon from 'sinon';
@@ -16,13 +16,15 @@ export const nonUserFacingGroup = {
       id: 100,
       name: 'A',
       position: 1,
-      key: 'lesson-1'
+      key: 'lesson-1',
+      levels: []
     },
     {
       name: 'B',
       id: 101,
       position: 2,
-      key: 'lesson-2'
+      key: 'lesson-2',
+      levels: []
     }
   ]
 };
@@ -75,13 +77,15 @@ describe('LessonGroupCard', () => {
             id: 100,
             name: 'A',
             position: 1,
-            key: 'lesson-1'
+            key: 'lesson-1',
+            levels: []
           },
           {
             name: 'B',
             id: 101,
             position: 2,
-            key: 'lesson-2'
+            key: 'lesson-2',
+            levels: []
           }
         ]
       }
@@ -89,7 +93,7 @@ describe('LessonGroupCard', () => {
   });
 
   it('displays LessonGroupCard correctly when user facing', () => {
-    const wrapper = mount(<LessonGroupCard {...defaultProps} />);
+    const wrapper = shallow(<LessonGroupCard {...defaultProps} />);
 
     expect(wrapper.find('OrderControls')).to.have.lengthOf(1);
     expect(wrapper.find('LessonToken')).to.have.lengthOf(2);
@@ -116,7 +120,7 @@ describe('LessonGroupCard', () => {
   });
 
   it('displays LessonGroupCard correctly when not user facing', () => {
-    const wrapper = mount(
+    const wrapper = shallow(
       <LessonGroupCard {...defaultProps} lessonGroup={nonUserFacingGroup} />
     );
 

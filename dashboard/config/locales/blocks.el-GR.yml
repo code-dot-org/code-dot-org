@@ -1151,6 +1151,8 @@ el:
         text: χαρακτήρας {SPRITE} σταματάει {BEHAVIOR}
       gamelab_removeTint:
         text: αφαίρεσε το χρώμα από {THIS}
+      gamelab_repeatForever:
+        text: επαναλάμβανε για πάντα
       gamelab_setAnimation:
         text: άλλαξε {THIS} κοστούμι σε {ANIMATION}
       gamelab_setBackground:

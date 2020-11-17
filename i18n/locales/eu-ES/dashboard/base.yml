@@ -561,6 +561,4 @@ eu:
         opt_in_no: 'Ez'
   cookie_banner:
     accept: 'Ados'
-  gdpr_dialog:
-    yes: 'Bai'
   copy: 'Kopiatu'

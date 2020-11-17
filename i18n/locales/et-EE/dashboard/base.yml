@@ -120,6 +120,10 @@ et:
     valid_password: "Sobilik salasõna!"
     invalid_password: "Salasõna peab olema vähemalt 6 tähemärgi pikkune"
     mismatch_password: "Sinu poolt sisestatud salasõnad ei ühti"
+    agree_us_data_transfer_student: '**Nõustun, et Code.org võib edastada andmeid (muu hulgas isikuandmeid) selle kohta, kuidas ma seda saiti kasutan, Ameerika Ühendriikidesse**, eesmärgiga neid andmeid säilitada ja töödelda.'
+    agree_us_data_transfer_teacher: '**Nõustun, et Code.org võib edastada andmeid (muu hulgas isikuandmeid) selle kohta, kuidas ma (ja minu õpilased) seda saiti kasutan, Ameerika Ühendriikidesse**, eesmärgiga neid andmeid säilitada ja töödelda.'
+    data_collection_us: "Saan aru, et Code.org on Ameerika Ühendriikide mittetulunduslik veebisait ja Ameerika Ühendriikides kehtivad andmekaitseseadused võivad erineda minu koduriigis kehtivatest."
+    visit_privacy: 'Lisateavet leiab veebisaidi Code.org [privaatsuspoliitikast](%{privacy_url}).'
     additional_information: "Meil on vaja täiendavat teavet, et sind registreerida."
     user_type_label: "Konto tüüp"
     user_type_teacher: "Õpetaja"
@@ -774,6 +778,4 @@ et:
         opt_in_no: 'Ei'
   cookie_banner:
     accept: 'Olen nõus'
-  gdpr_dialog:
-    yes: 'Jah'
   copy: 'Kopeeri'
