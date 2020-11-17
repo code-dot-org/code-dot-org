@@ -55,7 +55,7 @@ function chooseAsset(typeFilter, callback) {
 }
 
 function getLanguages() {
-  return Object.keys(appOptions.azureSpeechServiceLanguages).map(
+  return Object.keys(appOptions.azureSpeechServiceVoices).map(
     language => `"${language}"`
   );
 }
