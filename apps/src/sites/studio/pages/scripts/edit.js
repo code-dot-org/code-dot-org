@@ -8,7 +8,7 @@ import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import getScriptData from '@cdo/apps/util/getScriptData';
 import reducers, {
   init,
-  emptyNonUserFacingGroup
+  mapLessonGroupDataForEditor
 } from '@cdo/apps/lib/levelbuilder/script-editor/scriptEditorRedux';
 import ScriptEditor from '@cdo/apps/lib/levelbuilder/script-editor/ScriptEditor';
 import {valueOr} from '@cdo/apps/utils';
@@ -16,55 +16,7 @@ import {valueOr} from '@cdo/apps/utils';
 export default function initPage(scriptEditorData) {
   const scriptData = scriptEditorData.script;
   const lessonLevelData = scriptEditorData.lessonLevelData;
-  let lessonGroups = (scriptData.lesson_groups || [])
-    .filter(lesson_group => lesson_group.id)
-    .map(lesson_group => ({
-      key: lesson_group.key,
-      displayName: lesson_group.display_name,
-      userFacing: lesson_group.user_facing,
-      position: lesson_group.position,
-      description: lesson_group.description || '',
-      bigQuestions: lesson_group.big_questions || '',
-      lessons: lesson_group.lessons
-        .filter(lesson => lesson.id)
-        .map((lesson, lessonIndex) => ({
-          id: lesson.id,
-          key: lesson.key,
-          position: lessonIndex + 1,
-          lockable: lesson.lockable,
-          assessment: lesson.assessment,
-          unplugged: lesson.unplugged,
-          name: lesson.name,
-          /*
-           * NOTE: The Script Edit GUI no longer includes the editing of levels
-           * as those have been moved out to the lesson edit page. We include
-           * level information here behind the scenes because it allows us to
-           * continue to use ScriptDSl for the time being until we are ready
-           * to move on to our future system.
-           */
-          // Only include the first level of an assessment (uid ending with "_0").
-          levels: lesson.levels
-            .filter(level => !level.uid || /_0$/.test(level.uid))
-            .map(level => ({
-              position: level.position,
-              activeId: level.activeId,
-              ids: level.ids.slice(),
-              kind: level.kind,
-              skin: level.skin,
-              videoKey: level.videoKey,
-              concepts: level.concepts,
-              conceptDifficulty: level.conceptDifficulty,
-              progression: level.progression,
-              named: !!level.name,
-              bonus: level.bonus,
-              assessment: level.assessment,
-              challenge: level.challenge
-            }))
-        }))
-    }));
-  if (lessonGroups.length === 0) {
-    lessonGroups = [emptyNonUserFacingGroup];
-  }
+  const lessonGroups = mapLessonGroupDataForEditor(scriptData.lesson_groups);
 
   const locales = scriptEditorData.locales;
 
