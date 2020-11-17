@@ -1,6 +1,6 @@
 import {assert, expect} from '../../../../util/reconfiguredChai';
 import React from 'react';
-import {mount} from 'enzyme';
+import {mount, shallow} from 'enzyme';
 import CourseEditor from '@cdo/apps/lib/levelbuilder/course-editor/CourseEditor';
 import {
   stubRedux,
@@ -10,6 +10,7 @@ import {
 } from '@cdo/apps/redux';
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {Provider} from 'react-redux';
+import ResourceType from '@cdo/apps/templates/courseOverview/resourceType';
 
 const defaultProps = {
   name: 'csp',
@@ -51,6 +52,47 @@ describe('CourseEditor', () => {
       </Provider>
     );
   };
+
+  describe('Teacher Resources', () => {
+    it('adds empty resources if passed none', () => {
+      const wrapper = shallow(<CourseEditor {...defaultProps} />);
+      assert.deepEqual(wrapper.state('teacherResources'), [
+        {type: '', link: ''},
+        {type: '', link: ''},
+        {type: '', link: ''},
+        {type: '', link: ''},
+        {type: '', link: ''},
+        {type: '', link: ''},
+        {type: '', link: ''},
+        {type: '', link: ''},
+        {type: '', link: ''},
+        {type: '', link: ''}
+      ]);
+    });
+
+    it('adds empty resources if passed fewer than max', () => {
+      const wrapper = shallow(
+        <CourseEditor
+          {...defaultProps}
+          initialTeacherResources={[
+            {type: ResourceType.curriculum, link: '/foo'}
+          ]}
+        />
+      );
+      assert.deepEqual(wrapper.state('teacherResources'), [
+        {type: ResourceType.curriculum, link: '/foo'},
+        {type: '', link: ''},
+        {type: '', link: ''},
+        {type: '', link: ''},
+        {type: '', link: ''},
+        {type: '', link: ''},
+        {type: '', link: ''},
+        {type: '', link: ''},
+        {type: '', link: ''},
+        {type: '', link: ''}
+      ]);
+    });
+  });
 
   it('renders full course editor page', () => {
     const wrapper = createWrapper({});
