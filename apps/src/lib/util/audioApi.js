@@ -150,7 +150,7 @@ export const commands = {
       onProfanityFound,
       token: appOptions.azureSpeechServiceToken,
       region: appOptions.azureSpeechServiceRegion,
-      voices: appOptions.azureSpeechServiceLanguages /* TODO: rename */
+      voices: appOptions.azureSpeechServiceVoices
     });
   }
 };

@@ -512,21 +512,21 @@ module LevelsHelper
     return {} unless options[:token].present?
     options[:region] = CDO.azure_speech_service_region
 
-    # Then, get the list of voices and languages
+    # Then, get the list of voices
     voices = get_azure_speech_service_voices(options[:region], options[:token], timeout)
     return {} unless (voices&.length || 0) > 0
-    language_dictionary = {}
+    voice_dictionary = {}
     voices.each do |voice|
       native_locale_name = Languages.get_native_name_by_locale(voice["Locale"])
       next if native_locale_name.empty?
       native_name_s = native_locale_name[0][:native_name_s]
-      language_dictionary[native_name_s] ||= {}
-      language_dictionary[native_name_s][voice["Gender"].downcase] ||= voice["ShortName"]
-      language_dictionary[native_name_s]["languageCode"] ||= voice["Locale"]
+      voice_dictionary[native_name_s] ||= {}
+      voice_dictionary[native_name_s][voice["Gender"].downcase] ||= voice["ShortName"]
+      voice_dictionary[native_name_s]["languageCode"] ||= voice["Locale"]
     end
 
-    # Only keep languages that contain 2+ genders and a languageCode
-    options[:languages] = language_dictionary.reject {|_, opt| opt.length < 3}
+    # Only keep voices that contain 2+ genders and a languageCode
+    options[:voices] = voice_dictionary.reject {|_, opt| opt.length < 3}
 
     options
   end

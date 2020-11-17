@@ -322,7 +322,7 @@ class ProjectsController < ApplicationController
       game_display_name: data_t("game.name", @game.name),
       azure_speech_service_token: azure_speech_service[:token],
       azure_speech_service_region: azure_speech_service[:region],
-      azure_speech_service_languages: azure_speech_service[:languages]
+      azure_speech_service_voices: azure_speech_service[:voices]
     )
 
     if params[:key] == 'artist'
