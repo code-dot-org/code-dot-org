@@ -1,9 +1,10 @@
 /* globals appOptions */
 /** @file Droplet-friendly command defintions for audio commands. */
 import * as assetPrefix from '@cdo/apps/assetManagement/assetPrefix';
-import {apiValidateType, OPTIONAL} from './javascriptMode';
+import {apiValidateType, OPTIONAL, outputWarning} from './javascriptMode';
+import i18n from '@cdo/locale';
 import Sounds from '../../Sounds';
-import {textToSpeech} from './speech';
+import AzureTextToSpeech from '../../AzureTextToSpeech';
 
 /**
  * Inject an executeCmd method so this mini-library can be used in both
@@ -129,14 +130,28 @@ export const commands = {
       'string',
       OPTIONAL
     );
-    textToSpeech(
-      opts.text,
-      opts.gender,
-      opts.language,
-      appOptions.azureSpeechServiceToken,
-      appOptions.azureSpeechServiceRegion,
-      appOptions.azureSpeechServiceLanguages
-    );
+
+    const MAX_TEXT_LENGTH = 750;
+    if (opts.text.length > MAX_TEXT_LENGTH) {
+      opts.text = opts.text.slice(0, MAX_TEXT_LENGTH);
+      outputWarning(i18n.textToSpeechTruncation());
+    }
+
+    const onProfanityFound = profaneWords => {
+      outputWarning(
+        i18n.textToSpeechProfanity({
+          profanityCount: profaneWords.length,
+          profaneWords: profaneWords.join(', ')
+        })
+      );
+    };
+    AzureTextToSpeech.getSingleton().play({
+      ...opts,
+      onProfanityFound,
+      token: appOptions.azureSpeechServiceToken,
+      region: appOptions.azureSpeechServiceRegion,
+      voices: appOptions.azureSpeechServiceLanguages /* TODO: rename */
+    });
   }
 };
 
