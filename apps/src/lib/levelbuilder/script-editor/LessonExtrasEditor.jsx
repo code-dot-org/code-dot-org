@@ -43,7 +43,7 @@ export default class LessonExtrasEditor extends React.Component {
           Allow Teachers to Enable Lesson Extras
           <input
             type="checkbox"
-            defaultChecked={this.props.lessonExtrasAvailable}
+            checked={this.props.lessonExtrasAvailable}
             style={styles.checkbox}
             onChange={e => this.props.updateLessonExtrasAvailable(e)}
           />
@@ -60,7 +60,7 @@ export default class LessonExtrasEditor extends React.Component {
               Project widget visible
               <input
                 type="checkbox"
-                defaultChecked={this.props.projectWidgetVisible}
+                checked={this.props.projectWidgetVisible}
                 style={styles.checkbox}
                 onChange={this.props.updateProjectWidgetVisible}
               />
