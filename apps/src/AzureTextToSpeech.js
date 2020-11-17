@@ -7,8 +7,9 @@ import {findProfanity} from '@cdo/apps/code-studio/components/libraries/util';
 const READY_STATE_DONE = 4;
 
 class SpeechResponse {
-  constructor(bytes, profaneWords = [], error = null) {
+  constructor(bytes, playbackOptions, profaneWords = [], error = null) {
     this.bytes = bytes;
+    this.playbackOptions = playbackOptions;
     this.profaneWords = profaneWords;
     this.error = error;
   }
@@ -30,11 +31,12 @@ export default class AzureTextToSpeech {
     this.cachedSounds = {};
     this.defaultLanguage = 'English';
     this.defaultGender = 'female';
-    this.soundSettings = {
+    this.playbackOptions = {
       volume: 1.0,
       loop: false,
       forceHTML5: false,
-      allowHTML5Mobile: true
+      allowHTML5Mobile: true,
+      onEnded: this.onSpeechComplete
     };
   }
 
@@ -53,8 +55,8 @@ export default class AzureTextToSpeech {
     this.cachedSounds[key] = speechResponse;
   };
 
-  enqueue = (promise, playbackOptions) => {
-    this.queue.push({promise, playbackOptions});
+  enqueue = promise => {
+    this.queue.push(promise);
   };
 
   dequeue = () => {
@@ -66,24 +68,33 @@ export default class AzureTextToSpeech {
       return;
     }
 
-    const nextSound = this.dequeue();
-    if (!nextSound) {
+    const nextSoundPromise = this.dequeue();
+    if (!nextSoundPromise) {
       return;
     }
 
     this.playing = true;
-    let response = await nextSound.promise;
+    let response = await nextSoundPromise;
     if (response.profaneWords.length > 0 || response.error) {
-      nextSound.playbackOptions.onEnded();
+      response.playbackOptions.onEnded();
     } else {
       Sounds.getSingleton().playBytes(
         response.bytes.slice(0),
-        nextSound.playbackOptions
+        response.playbackOptions
       );
     }
   };
 
-  createSoundPromise = opts => {
+  createSpeechResponse = opts => {
+    return new SpeechResponse(
+      opts.bytes,
+      this.playbackOptions,
+      opts.profaneWords,
+      opts.error
+    );
+  };
+
+  createSoundPromise = (sound, opts) => {
     const {
       text,
       voices,
@@ -96,6 +107,22 @@ export default class AzureTextToSpeech {
     const wrappedSetCachedSound = speechResponse => {
       this.setCachedSound(language, gender, text, speechResponse);
     };
+    const wrappedCreateSpeechResponse = opts => {
+      return this.createSpeechResponse(opts);
+    };
+
+    if (sound) {
+      const {bytes, profaneWords} = sound;
+
+      return new Promise(resolve => {
+        if (profaneWords && profaneWords.length > 0) {
+          onProfanityFound(profaneWords);
+          resolve(wrappedCreateSpeechResponse({profaneWords}));
+        } else {
+          resolve(wrappedCreateSpeechResponse({bytes}));
+        }
+      });
+    }
 
     return new Promise(async resolve => {
       const profaneWords = await findProfanity(
@@ -106,9 +133,10 @@ export default class AzureTextToSpeech {
 
       if (profaneWords && profaneWords.length > 0) {
         onProfanityFound(profaneWords);
-        const speechResponse = new SpeechResponse(null, profaneWords);
+        const speechResponse = wrappedCreateSpeechResponse({profaneWords});
         wrappedSetCachedSound(speechResponse);
         resolve(speechResponse);
+        return;
       }
 
       let request = new XMLHttpRequest();
@@ -118,11 +146,13 @@ export default class AzureTextToSpeech {
         }
 
         if (request.status >= 200 && request.status < 300) {
-          const speechResponse = new SpeechResponse(request.response);
+          const speechResponse = wrappedCreateSpeechResponse({
+            bytes: request.response
+          });
           wrappedSetCachedSound(speechResponse);
           resolve(speechResponse);
         } else {
-          resolve(new SpeechResponse(null, [], request.statusText));
+          resolve(wrappedCreateSpeechResponse({error: request.statusText}));
         }
       };
 
@@ -138,20 +168,6 @@ export default class AzureTextToSpeech {
       const voice = voices[language][gender];
       const requestSSML = `<speak version="1.0" xmlns="https://www.w3.org/2001/10/synthesis" xml:lang="en-US"><voice name="${voice}">${text}</voice></speak>`;
       request.send(requestSSML);
-    });
-  };
-
-  createCachedSoundPromise = (sound, opts) => {
-    const {bytes, profaneWords} = sound;
-    const {onProfanityFound} = opts;
-
-    return new Promise(resolve => {
-      if (profaneWords && profaneWords.length > 0) {
-        onProfanityFound(profaneWords);
-        resolve(new SpeechResponse(null, profaneWords));
-      }
-
-      resolve(new SpeechResponse(bytes));
     });
   };
 
@@ -171,13 +187,7 @@ export default class AzureTextToSpeech {
     }
 
     const cachedSound = this.getCachedSound(language, gender, text);
-    const soundPromise = cachedSound
-      ? this.createCachedSoundPromise(cachedSound, opts)
-      : this.createSoundPromise(opts);
-    this.enqueue(soundPromise, {
-      ...this.soundSettings,
-      onEnded: this.onSpeechComplete
-    });
+    this.enqueue(this.createSoundPromise(cachedSound, opts));
     this.playFromQueue();
   };
 }
