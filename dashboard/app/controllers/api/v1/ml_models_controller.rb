@@ -4,10 +4,15 @@ require 'cdo/aws/s3'
 class Api::V1::MlModelsController < ApplicationController
   skip_before_action :verify_authenticity_token
 
-  # POST api/v1//ml_models/:model_name/save
+  # POST api/v1//ml_models/save
   # Save a trained ML model to S3
   def save
     model_id = generate_id
+    UserMlModel.create!(
+      user_id: current_user.id,
+      model_id: model_id,
+      name: params["name"]
+    )
     upload_to_s3(model_id, params["trainedModel"].to_json)
     render json: "hooray!"
   end
@@ -24,6 +29,6 @@ class Api::V1::MlModelsController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def ml_model_params
-    params.require(:ml_model).permit(:model_name, :trained_model)
+    params.require(:ml_model).permit(:trained_model)
   end
 end
