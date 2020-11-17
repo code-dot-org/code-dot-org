@@ -7,6 +7,9 @@ module Services::LessonImportHelper
   end
 
   def self.create_activity_sections(activity_markdown)
+    # Find any special syntax, such as tips or remarks, and gather them.
+    # TODO tips and remarks both show up in tip_matches. We filter out remarks
+    # but we should try to do something a bit smarter here.
     tip_matches = find_tips(activity_markdown).select {|m| m[1] != 'say'}.map {|m| {index: activity_markdown.index(m[0]), type: 'tip', match: m, substring: m[0]}}
     tip_link_matches = find_tip_links(activity_markdown).map {|m| {index: activity_markdown.index(m[0]), type: 'tiplink', match: m, substring: m[0]}}
     remark_matches = find_remarks(activity_markdown).map {|m| {index: activity_markdown.index(m[0]), type: 'remark', match: m, substring: m[0]}}
@@ -15,21 +18,27 @@ module Services::LessonImportHelper
     matches = tip_matches + remark_matches + tip_link_matches + skippable_matches + slide_matches
     sorted_matches = matches.sort_by {|m| m[:index]}
     return [ActivitySection.new(description: activity_markdown.strip, key: SecureRandom.uuid, position: 1)] if matches.empty?
+
     sorted_matches = find_markdown_chunks(activity_markdown, sorted_matches)
-    sections = []
+
+    # Create a map of tip key -> an array of tip matches
+    # Sometimes, a key is used multiple times in the same activity. To handle
+    # this we'll, just pair them with the tip links in order.
     tip_match_map = Hash.new([])
-    slide = false
     tip_matches.each do |match|
       key = match[:match][3]&.strip || "#{match[:match][1]}-0"
       tip_match_map[key].push(match)
     end
+
+    sections = []
+    slide = false
     position = 1
     sorted_matches.each do |match|
       activity_section = nil
       if match[:type] == 'skippable' || match[:type] == 'tip'
         next
       elsif match[:type] == 'slide'
-        # For now, if we find the slide token, apply it to the next thing
+        # For now, if we find the slide token, apply it to the next match
         slide = true
         next
       elsif match[:type] == 'tiplink'
@@ -37,7 +46,6 @@ module Services::LessonImportHelper
       elsif match[:type] == 'remark'
         activity_section = create_activity_section_with_remark(match[:match])
       else
-        #activity_section = ActivitySection.new(description: match[:substring].strip)
         activity_section = create_basic_activity_section(match[:substring].strip)
       end
       next unless activity_section
@@ -48,6 +56,9 @@ module Services::LessonImportHelper
       activity_section.key ||= SecureRandom.uuid
       sections = sections.push(activity_section)
     end
+
+    # If there are any tips that didn't have a match, put them at the end
+    # TODO ideally, we'd put them in the spot they were written.
     tip_match_map.each do |key, value|
       match = value[:match]
       activity_section = ActivitySection.new
@@ -56,6 +67,7 @@ module Services::LessonImportHelper
       activity_section.tips = [create_tip(key, match[1] || "tip", match[4] || "no markdown found")]
       sections.push(activity_section)
     end
+
     sections
   end
 
@@ -172,12 +184,19 @@ module Services::LessonImportHelper
 
   def self.find_tips(markdown)
     # See https://github.com/code-dot-org/remark-plugins/blob/master/src/tip.js
+    # Looks for tips that look like "!!!tip <tip-0>" followed by text. It will
+    # capture the text until it hits either the end of the string or a line that
+    # starts with a non-whitespace character.
     regex = /^!!! *?([\w-]+)(?: "(.*?)")?(?: <(.*?)>)?(?:[\s]+$)+([\d\D]+?)(?=(^\S|^$))/
     markdown.to_enum(:scan, regex).map {Regexp.last_match}
   end
 
   def self.find_tip_links(markdown)
     # See https://github.com/code-dot-org/remark-plugins/blob/master/src/tiplink.js
+    # Looks for the location where tip icons should appear
+    # Example: tip!!!tip-0<!-- place where you'd like the icon --> some text
+    # <!-- place where you'd like the icon --> is optional but is written out
+    # in this regex in order to be able to correctly the text that should be displayed
     regex = /^([\w-]+)!!! ?([\w-]+)(?:<!-- place where you'd like the icon -->)?(.+?)$/
     markdown.to_enum(:scan, regex).map {Regexp.last_match}
   end
