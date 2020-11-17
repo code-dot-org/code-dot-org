@@ -161,14 +161,14 @@ columns:
     collation: 
     comment: 
   - &70 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
-    name: seeding_key
+    name: key
     table_name: activity_sections
     sql_type_metadata: *5
     'null': false
     default: 
     default_function: 
     collation: utf8_unicode_ci
-    comment: unique key which is stable across environments for seeding purposes
+    comment: 
   - &71 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: position
     table_name: activity_sections
@@ -3419,14 +3419,14 @@ columns:
     collation: 
     comment: 
   - &416 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
-    name: seeding_key
+    name: key
     table_name: lesson_activities
     sql_type_metadata: *5
     'null': false
     default: 
     default_function: 
     collation: utf8_unicode_ci
-    comment: unique key which is stable across environments for seeding purposes
+    comment: 
   - &417 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: position
     table_name: lesson_activities
@@ -12108,7 +12108,7 @@ columns_hash:
   activity_sections:
     id: *68
     lesson_activity_id: *69
-    seeding_key: *70
+    key: *70
     position: *71
     properties: *72
     created_at: *73
@@ -12499,7 +12499,7 @@ columns_hash:
   lesson_activities:
     id: *414
     lesson_id: *415
-    seeding_key: *416
+    key: *416
     position: *417
     properties: *418
     created_at: *419
@@ -13840,4 +13840,4 @@ data_sources:
   users: true
   users_view: true
   videos: true
-version: 20201029231229
+version: 20201113054822
