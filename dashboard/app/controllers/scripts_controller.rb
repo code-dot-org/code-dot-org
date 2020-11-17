@@ -124,6 +124,7 @@ class ScriptsController < ApplicationController
   def update
     script_text = params[:script_text]
     if @script.update_text(script_params, script_text, i18n_params, general_params)
+      @script.reload
       render json: @script.summarize_for_script_edit
     else
       render json: @script.errors
