@@ -73,7 +73,7 @@ const initialState = {
   name: '',
   type: '',
   audience: '',
-  pdf: false,
+  include_in_pdf: false,
   assessment: false,
   url: '',
   downloadUrl: '',
@@ -91,20 +91,22 @@ export default class AddResourceDialog extends Component {
   constructor(props) {
     super(props);
 
+    console.log(props);
     if (props.existingResource) {
       this.state = {
         name: props.existingResource.name,
         type: props.existingResource.type,
         audience: props.existingResource.audience,
-        pdf: props.existingResource.pdf,
+        include_in_pdf: props.existingResource.include_in_pdf,
         assessment: props.existingResource.assessment,
         url: props.existingResource.url,
-        downloadUrl: props.existingResource.downloadUrl,
+        download_url: props.existingResource.downloadUrl,
         error: ''
       };
     } else {
       this.state = {...initialState};
     }
+    console.log(this.state);
   }
 
   validateResource = () => {
@@ -146,6 +148,7 @@ export default class AddResourceDialog extends Component {
         .then(response => (response.ok ? response.json() : {}))
         .then(json => {
           if (json !== {}) {
+            console.log(json);
             this.resetState();
             if (this.props.onSave) {
               this.props.onSave(json);
@@ -160,6 +163,7 @@ export default class AddResourceDialog extends Component {
   handleInputChange = e => {
     const target = e.target;
     const value = target.type === 'checkbox' ? target.checked : target.value;
+    console.log(value);
     this.setState({[target.name]: value});
   };
 
@@ -229,7 +233,7 @@ export default class AddResourceDialog extends Component {
                   type="checkbox"
                   style={styles.checkboxInput}
                   name="assessment"
-                  value={this.state.assessment}
+                  checked={this.state.assessment}
                   onChange={this.handleInputChange}
                 />
               </label>
@@ -238,8 +242,8 @@ export default class AddResourceDialog extends Component {
                 <input
                   type="checkbox"
                   style={styles.checkboxInput}
-                  name="pdf"
-                  value={this.state.pdf}
+                  name="include_in_pdf"
+                  checked={this.state.include_in_pdf}
                   onChange={this.handleInputChange}
                 />
               </label>

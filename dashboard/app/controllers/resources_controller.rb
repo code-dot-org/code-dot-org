@@ -18,7 +18,7 @@ class ResourcesController < ApplicationController
       include_in_pdf: resource_params[:include_in_pdf]
     )
     if resource.save
-      render json: resource.attributes
+      render json: resource.summarize_for_lesson_edit
     else
       render json: {status: 400, error: resource.errors.full_message.to_json}
     end
@@ -29,7 +29,7 @@ class ResourcesController < ApplicationController
     resource = Resource.find_by_id(resource_params[:id])
     if resource
       resource.update!(resource_params)
-      render json: resource
+      render json: resource.summarize_for_lesson_edit
     else
       render json: {status: 404, error: "Resource #{resource_params[:id]} not found"}
     end
