@@ -147,7 +147,10 @@ body {
 
 #powered-by-aws {
   width: 100%;
-  margin-top: 8%;
+}
+
+#powered-by-aws img {
+  margin-top: 12px;
 }
 
 /* styling for the embedded dashboard components... */
@@ -244,6 +247,7 @@ body {
   #powered-by-aws {
     width: 100%;
     text-align: center;
+    margin-top: 12px;
   }
 }
 
@@ -291,11 +295,16 @@ body {
   }
 
   #copyright {
-    padding: 12px 12px 36px 12px;
+    padding: 12px 12px 12px 12px;
   }
 
   #powered-by-aws {
     width: 100%;
     text-align: center;
+    margin-top: 0;
+  }
+
+  #powered-by-aws img {
+    margin-bottom: 12px;
   }
 }
