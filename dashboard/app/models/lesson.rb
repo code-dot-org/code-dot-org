@@ -494,6 +494,10 @@ class Lesson < ActiveRecord::Base
       self.creative_commons_license = cb_lesson_data['creative_commons_license']
       self.relative_position = cb_lesson_data['number'] || 1
       self.lesson_activities = Services::LessonImportHelper.create_lesson_activities(cb_lesson_data['activities'], script_levels, id)
+      course_version_id = script&.get_course_version&.id
+      if course_version_id
+        self.resources = Services::LessonImportHelper.create_lesson_resources(cb_lesson_data['resources'], course_version_id)
+      end
       self.script_levels = []
     end
     save!
