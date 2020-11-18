@@ -496,7 +496,12 @@ class Lesson < ActiveRecord::Base
       self.name = cb_lesson_data['title']
       self.overview = cb_lesson_data['teacher_desc']
       self.student_overview = cb_lesson_data['student_desc']
+      self.purpose = cb_lesson_data['cs_content']
+      self.preparation = cb_lesson_data['prep']
       self.creative_commons_license = cb_lesson_data['creative_commons_license']
+      self.objectives = cb_lesson_data['objectives'].map do |o|
+        Objective.new(description: o["name"])
+      end
       self.lesson_activities = Services::LessonImportHelper.create_lesson_activities(cb_lesson_data['activities'], script_levels, id)
       self.resources = Services::LessonImportHelper.create_lesson_resources(cb_lesson_data['resources'], course_version_id)
       self.script_levels = []
