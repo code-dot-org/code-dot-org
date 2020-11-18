@@ -753,7 +753,7 @@ Dashboard::Application.routes.draw do
 
   get '/form/:misc_form_path', to: 'foorm/misc_survey#new'
 
-  get '/form_data/:misc_form_path', to: 'foorm/misc_survey#show'
+  get '/form/:misc_form_path/show', to: 'foorm/misc_survey#show'
 
   post '/i18n/track_string_usage', action: :track_string_usage, controller: :i18n
 end
