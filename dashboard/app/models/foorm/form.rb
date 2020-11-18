@@ -31,7 +31,7 @@ class Foorm::Form < ActiveRecord::Base
   end
 
   def self.setup
-    forms = Dir.glob('config/foorm/forms/**/*.json').sort.map.with_index(1) do |path, id|
+    Dir.glob('config/foorm/forms/**/*.json').each do |path|
       # Given: "config/foorm/forms/surveys/pd/pre_workshop_survey.0.json"
       # we get full_name: "surveys/pd/pre_workshop_survey"
       #      and version: 0
@@ -46,18 +46,10 @@ class Foorm::Form < ActiveRecord::Base
       # if published is not provided, default to true
       published = questions['published'].nil? ? true : questions['published']
 
-      {
-        id: id,
-        name: full_name,
-        version: version,
-        questions: questions,
-        published: published
-      }
-    end
-
-    transaction do
-      Foorm::Form.delete_all
-      Foorm::Form.import! forms
+      form = Foorm::Form.find_or_initialize_by(name: full_name, version: version)
+      form.questions = questions
+      form.published = published
+      form.save! if form.changed?
     end
   end
 
