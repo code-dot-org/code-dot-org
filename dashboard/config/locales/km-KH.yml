@@ -527,6 +527,7 @@ km:
     races:
       other: ផ្សេងៗ
     submit: ដាក់ស្នើរ
+    decline: បិទ
   project:
     projects: គម្រោង
     project_gallery: គម្រោង
@@ -561,6 +562,4 @@ km:
         opt_in_no: ទេ
   cookie_banner:
     accept: ខ្ញុំ​យល់​ព្រម
-  gdpr_dialog:
-    true: យល់ព្រម
   copy: ចម្លង

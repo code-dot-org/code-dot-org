@@ -187,20 +187,14 @@ ko:
   cookie_banner_more_information: Code.org의 개인정보 보호정책 참조
   cookie_banner_accept: 동의합니다
   front_header_banner: 역사상 가장 큰 학습 이벤트에 참여하세요. %{campaign_date}
-  front_intro_default: Hour of Code는 전세계 180개 이상의 국가에서 이루어지는 국제적 운동입니다. 어느 누구나 어디에서든지
-    Hour of Code 행사를 운영할 수 있습니다. 한 시간 분량의 튜토리얼은 40여개 이상의 언어로 준비되어 있습니다. <strong>4살에서
-    104세</strong>까지 누구든 참여할 수 있습니다.
+  front_intro_default: 아워오브코드는 전세계 180개 이상의 국가에서 이루어지는 국제적 운동입니다. 어느 누구나 어디에서든지 아워오브코드
+    행사를 운영할 수 있습니다. 한 시간 분량의 튜토리얼은 40여개 이상의 언어로 준비되어 있습니다. <strong>4살에서 104세</strong>까지
+    누구든 참여할 수 있습니다.
   front_intro_default_2: 180개 이상의 국가에서의 글로벌 운동
   front_watch_video: 새로운 동영상 보기
   front_watch_regular_video: 동영상 보기
   front_volunteers: 전공 자원봉사자 모집합니다.
   front_start_learning: 학습 시작
-  gdpr_dialog_heading: 미국에 기반을 둔 웹사이트의 사용에 동의하십니까?
-  gdpr_dialog_message: 본 사이트 사용에 따라 생성된 데이터는 미국으로 전송되어 보관 또는 처리될 수 있습니다.
-  gdpr_dialog_link_intro: 세부내용은 당사의
-  gdpr_dialog_privacy_policy: 개인정보 보호정책을 참조하십시오.
-  gdpr_dialog_logout: 로그아웃
-  gdpr_dialog_yes: 예
   header_menu_resources: 각종 자료
   header_menu_faq: 자주 묻는 질문 (FAQ)
   header_menu_how_to: 방법

@@ -270,6 +270,7 @@ class Lesson < ActiveRecord::Base
     summary = summarize.dup
     # Do not let script name override lesson name when there is only one lesson
     summary[:name] = name
+    summary[:lesson_group_display_name] = lesson_group&.display_name
     summary.freeze
   end
 
@@ -285,6 +286,7 @@ class Lesson < ActiveRecord::Base
   # the client.
   def summarize_for_lesson_edit
     {
+      id: id,
       name: name,
       overview: overview,
       studentOverview: student_overview,
@@ -297,7 +299,8 @@ class Lesson < ActiveRecord::Base
       announcements: announcements,
       activities: lesson_activities.map(&:summarize_for_edit),
       resources: resources,
-      objectives: objectives.map(&:summarize_for_edit)
+      objectives: objectives.map(&:summarize_for_edit),
+      courseVersionId: lesson_group.script.course_version&.id
     }
   end
 
@@ -478,11 +481,22 @@ class Lesson < ActiveRecord::Base
   #   ]
   # }
   # @param [Hash] cb_lesson_data - Lesson and activity data to import.
-  def update_from_curriculum_builder(_cb_lesson_data)
+  def update_from_curriculum_builder(cb_lesson_data = {})
     # In the future, only levelbuilder should be added to this list.
     raise unless [:development, :adhoc].include? rack_env
 
-    # puts "TODO: update lesson #{id} with cb lesson data: #{cb_lesson_data.to_json[0, 50]}..."
+    if cb_lesson_data.empty?
+      self.lesson_activities = Services::LessonImportHelper.update_lockable_lesson(script_levels, id)
+      self.script_levels = []
+    else
+      self.name = cb_lesson_data['title']
+      self.overview = cb_lesson_data['teacher_desc']
+      self.student_overview = cb_lesson_data['student_desc']
+      self.creative_commons_license = cb_lesson_data['creative_commons_license']
+      self.lesson_activities = Services::LessonImportHelper.create_lesson_activities(cb_lesson_data['activities'], script_levels, id)
+      self.script_levels = []
+    end
+    save!
   end
 
   # Used for seeding from JSON. Returns the full set of information needed to uniquely identify this object.
@@ -605,7 +619,7 @@ class Lesson < ActiveRecord::Base
 
     lesson_activities.create(
       position: activity['position'],
-      seeding_key: SecureRandom.uuid
+      key: SecureRandom.uuid
     )
   end
 end

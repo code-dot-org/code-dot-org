@@ -202,6 +202,18 @@ it:
     agree_us_website: Accetto di utilizzare un sito Web con sede negli Stati Uniti.
     my_data_to_us: I dati relativi al mio utilizzo di questo sito Web possono essere
       inviati e archiviati o elaborati negli Stati Uniti.
+    agree_us_data_transfer_student: "**Accetti che Code.org possa trasferire dati
+      (compresi i dati personali) sul tuo utilizzo di questo sito agli Stati Uniti**
+      allo scopo di eseguire l'hosting e l'elaborazione dei dati."
+    agree_us_data_transfer_teacher: "**Accetto che Code.org possa trasferire dati
+      (compresi i dati personali) sul mio utilizzo (e l'utilizzo da parte degli studenti)
+      di questo sito agli Stati Uniti** allo scopo di eseguire l'hosting e l'elaborazione
+      dei dati."
+    data_collection_us: Sono consapevole che Code.org è un sito web statunitense senza
+      fini di lucro, e che le leggi che disciplinano la raccolta dei dati negli Stati
+      Uniti potrebbero essere diverse dalle leggi nel mio paese.
+    visit_privacy: Consulta [l'informativa sulla privacy] (%{privacy_url}) di Code.org
+      per saperne di più.
     student_terms_markdown: Gli indirizzi di posta elettronica vengono memorizzati
       in modo tale da impedirci di contattare gli studenti. Gli studenti non riceveranno
       mai messaggi di posta elettronica da Code.org, tranne nel caso essi stessi richiedano
@@ -1361,14 +1373,6 @@ it:
       la memorizzazione dei cookie sul tuo computer o dispositivo.
     more_information: Leggi l'informativa sulla privacy di Code.org.
     accept: Accetto
-  gdpr_dialog:
-    heading: Accetti di utilizzare un sito web con sede negli Stati Uniti?
-    message: I dati relativi al tuo utilizzo di questo sito Web possono essere inviati
-      e archiviati o elaborati negli Stati Uniti.
-    link_intro: Per ulteriori informazioni vedi la nostra
-    privacy_policy: informativa sulla privacy
-    logout: Esci
-    true: Sì
   page_not_found_title: Pagina non trovata
   page_not_found_header: 404 Pagina non trovata
   page_not_found_description: La pagina che stai cercando non esiste a questo indirizzo.

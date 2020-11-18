@@ -725,6 +725,8 @@ bg:
         text: случаен цвят
       gamelab_randomColor:
         text: случаен цвят
+      gamelab_repeatForever:
+        text: повтаряй завинаги
       gamelab_setBackgroundImage:
         options:
           IMG:

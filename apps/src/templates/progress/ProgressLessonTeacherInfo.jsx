@@ -7,7 +7,6 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
-import experiments from '@cdo/apps/util/experiments';
 import {lessonType} from './progressTypes';
 import HiddenForSectionToggle from './HiddenForSectionToggle';
 import StageLock from './StageLock';
@@ -19,8 +18,6 @@ import {sectionShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 import Button from '../Button';
 import TeacherInfoBox from './TeacherInfoBox';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
-import GoogleClassroomShareButton from './GoogleClassroomShareButton';
-import {canShowGoogleShareButton} from './googlePlatformApiRedux';
 import SendLesson from './SendLesson';
 
 const styles = {
@@ -33,9 +30,6 @@ const styles = {
     width: '100%',
     paddingLeft: 0,
     paddingRight: 0
-  },
-  googleButtonMargin: {
-    marginBottom: 5
   }
 };
 
@@ -50,8 +44,7 @@ class ProgressLessonTeacherInfo extends React.Component {
     hiddenStageState: PropTypes.object.isRequired,
     scriptName: PropTypes.string.isRequired,
     hasNoSections: PropTypes.bool.isRequired,
-    toggleHiddenStage: PropTypes.func.isRequired,
-    showGoogleClassroomButton: PropTypes.bool.isRequired
+    toggleHiddenStage: PropTypes.func.isRequired
   };
 
   constructor(props) {
@@ -92,8 +85,7 @@ class ProgressLessonTeacherInfo extends React.Component {
       hiddenStageState,
       hasNoSections,
       lesson,
-      lessonUrl,
-      showGoogleClassroomButton
+      lessonUrl
     } = this.props;
 
     const sectionId = (section && section.id.toString()) || '';
@@ -103,17 +95,13 @@ class ProgressLessonTeacherInfo extends React.Component {
       scriptAllowsHiddenStages &&
       isStageHiddenForSection(hiddenStageState, sectionId, lesson.id);
     const courseId =
-      (showGoogleClassroomButton &&
-        section &&
-        section.code &&
-        parseInt(section.code.substring(2))) ||
-      null;
+      (section && section.code && parseInt(section.code.substring(2))) || null;
     const loginRequiredLessonUrl = lessonUrl + '?login_required=true';
     const shouldRender =
       lesson.lesson_plan_html_url ||
       (lesson.lockable && !hasNoSections) ||
-      showHiddenForSectionToggle ||
-      showGoogleClassroomButton;
+      lessonUrl ||
+      showHiddenForSectionToggle;
     if (!shouldRender) {
       return null;
     }
@@ -133,38 +121,24 @@ class ProgressLessonTeacherInfo extends React.Component {
             />
           </div>
         )}
-        {experiments.isEnabled(experiments.SEND_LESSON_DIALOG) && lessonUrl && (
+        {lesson.lockable && !hasNoSections && <StageLock lesson={lesson} />}
+        {lessonUrl && (
           <div style={styles.buttonContainer}>
             <SendLesson
               lessonUrl={loginRequiredLessonUrl}
-              title={lesson.name}
+              lessonTitle={lesson.name}
               courseid={courseId}
               analyticsData={JSON.stringify(this.firehoseData())}
               buttonStyle={styles.button}
             />
           </div>
         )}
-        {lesson.lockable && !hasNoSections && <StageLock lesson={lesson} />}
         {showHiddenForSectionToggle && (
           <HiddenForSectionToggle
             hidden={!!isHidden}
             onChange={this.onClickHiddenToggle}
           />
         )}
-        {!experiments.isEnabled(experiments.SEND_LESSON_DIALOG) &&
-          showGoogleClassroomButton &&
-          lessonUrl && (
-            <div
-              style={{...styles.buttonContainer, ...styles.googleButtonMargin}}
-            >
-              <GoogleClassroomShareButton
-                url={lessonUrl}
-                title={lesson.name}
-                courseid={courseId}
-                analyticsData={JSON.stringify(this.firehoseData())}
-              />
-            </div>
-          )}
       </TeacherInfoBox>
     );
   }
@@ -181,8 +155,7 @@ export default connect(
     scriptName: state.progress.scriptName,
     hasNoSections:
       state.teacherSections.sectionsAreLoaded &&
-      state.teacherSections.sectionIds.length === 0,
-    showGoogleClassroomButton: canShowGoogleShareButton(state)
+      state.teacherSections.sectionIds.length === 0
   }),
   {toggleHiddenStage}
 )(ProgressLessonTeacherInfo);
