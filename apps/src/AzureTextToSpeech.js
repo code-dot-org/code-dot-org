@@ -23,6 +23,9 @@ class SoundResponse {
 let singleton;
 
 export default class AzureTextToSpeech {
+  /**
+   * Instantiate or get class singleton. Using this is recommended to take advantage of caching.
+   */
   static getSingleton() {
     if (!singleton) {
       singleton = new AzureTextToSpeech();
@@ -53,7 +56,8 @@ export default class AzureTextToSpeech {
   };
 
   /**
-   * Returns a promise representing a TTS sound that can be enqueued and played.
+   * Returns a promise representing a TTS sound that can be enqueued and played. Utilizes a sound cache --
+   * will check for a cache hit to avoid duplicate network requests, and caches network responses for re-use.
    * @param {Object} opts
    * @param {string} opts.text
    * @param {string} opts.gender
@@ -140,7 +144,7 @@ export default class AzureTextToSpeech {
   };
 
   /**
-   * Plays the next sound in the queue. Automatically ends playback if the SoundResponse was not successful.
+   * Plays the next sound in the queue. Automatically ends playback if the SoundResponse was unsuccessful.
    */
   playFromQueue = async () => {
     if (this.playing) {
