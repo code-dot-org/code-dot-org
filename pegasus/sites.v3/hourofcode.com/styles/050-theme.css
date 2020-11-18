@@ -145,6 +145,11 @@ body {
   opacity: 0.5;
 }
 
+#powered-by-aws {
+  width: 100%;
+  margin-top: 8%;
+}
+
 /* styling for the embedded dashboard components... */
 
 #sign_in_or_user .button-signin {
