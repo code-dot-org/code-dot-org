@@ -78,9 +78,7 @@ export default class AzureTextToSpeech {
     const wrappedSetCachedSound = soundResponse => {
       this.setCachedSound(languageCode, gender, text, soundResponse);
     };
-    const wrappedCreateSoundResponse = opts => {
-      return this.createSoundResponse(opts);
-    };
+    const wrappedCreateSoundResponse = this.createSoundResponse;
 
     // If we have the sound already, resolve immediately.
     if (cachedSound) {
