@@ -10,7 +10,7 @@ video_player: true
 
 # 2020 Computer Science State Policy Forum Series
 
-The annual Computer Science State Policy Forum brings together legislators, education officials, state advocates, industry, national organizations, and representatives from state executive offices committed to K-12 computer science education. This year the forum went virtual. Fin the policy forum plenary video [here](https://code.zoom.us/rec/share/BWbb4kz3BUmyhh2QQGqWyGzlcMluwdGHSGUezEedhgsYwym_Bt6KUg6U83hx0sjK.StQEPHgoJwZDE-Zt) and recordings of the topical webinar series below:
+The annual Computer Science State Policy Forum brings together legislators, education officials, state advocates, industry, national organizations, and representatives from state executive offices committed to K-12 computer science education. This year the forum went virtual. Find the policy forum plenary video [here](https://code.zoom.us/rec/share/BWbb4kz3BUmyhh2QQGqWyGzlcMluwdGHSGUezEedhgsYwym_Bt6KUg6U83hx0sjK.StQEPHgoJwZDE-Zt) and recordings of the topical webinar series below:
 
 Session | Description |Link|
 --------------|------------|--------|
