@@ -2,18 +2,18 @@
 #
 # Table name: lesson_activities
 #
-#  id          :integer          not null, primary key
-#  lesson_id   :integer          not null
-#  seeding_key :string(255)      not null
-#  position    :integer          not null
-#  properties  :text(65535)
-#  created_at  :datetime         not null
-#  updated_at  :datetime         not null
+#  id         :integer          not null, primary key
+#  lesson_id  :integer          not null
+#  key        :string(255)      not null
+#  position   :integer          not null
+#  properties :text(65535)
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
 #
 # Indexes
 #
-#  index_lesson_activities_on_lesson_id    (lesson_id)
-#  index_lesson_activities_on_seeding_key  (seeding_key) UNIQUE
+#  index_lesson_activities_on_key        (key) UNIQUE
+#  index_lesson_activities_on_lesson_id  (lesson_id)
 #
 
 # A LessonActivity represents a classroom activity within a Lesson
@@ -90,7 +90,7 @@ class LessonActivity < ApplicationRecord
 
     activity_sections.create(
       position: section['position'],
-      seeding_key: SecureRandom.uuid
+      key: SecureRandom.uuid
     )
   end
 end
