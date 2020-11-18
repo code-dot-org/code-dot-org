@@ -34,7 +34,7 @@ class ChannelToken < ApplicationRecord
     # If `create` fails because it was beat by a competing request, a second
     # `find_by` should succeed.
     # Read from primary to minimize write conflicts.
-    SeamlessDatabasePool.use_master_connection do
+    ActiveRecord::Base.connected_to(role: :primary) do
       Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
         # your own channel
         find_or_create_by!(level: level.host_level, storage_id: user_storage_id) do |ct|
