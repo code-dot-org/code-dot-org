@@ -446,14 +446,14 @@
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
-          "ml-model"
+          "ml-model card-unplugged"
         ],
         "lesson.key": "App",
         "lesson_group.key": "",
         "script.name": "ml-playground"
       },
       "level_keys": [
-        "ml-model"
+        "ml-model card-unplugged"
       ]
     },
     {
@@ -1429,9 +1429,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "ml-model",
+        "level.key": "ml-model card-unplugged",
         "script_level.level_keys": [
-          "ml-model"
+          "ml-model card-unplugged"
         ],
         "lesson.key": "App",
         "lesson_group.key": "",
