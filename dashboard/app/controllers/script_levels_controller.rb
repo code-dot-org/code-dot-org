@@ -74,89 +74,90 @@ class ScriptLevelsController < ApplicationController
     redirect_to(path) && return
   end
 
-  use_database_pool show: :persistent
   def show
-    @current_user = current_user && User.includes(:teachers).where(id: current_user.id).first
-    authorize! :read, ScriptLevel
-    @script = ScriptLevelsController.get_script(request)
+    ActiveRecord::Base.connected_to(role: :reading) do
+      @current_user = current_user && User.includes(:teachers).where(id: current_user.id).first
+      authorize! :read, ScriptLevel
+      @script = ScriptLevelsController.get_script(request)
 
-    # @view_as_user is used to determine redirect path for bubble choice levels
-    view_as_other = params[:user_id] && current_user && params[:user_id] != current_user.id
-    @view_as_user = view_as_other ? User.find(params[:user_id]) : current_user
+      # @view_as_user is used to determine redirect path for bubble choice levels
+      view_as_other = params[:user_id] && current_user && params[:user_id] != current_user.id
+      @view_as_user = view_as_other ? User.find(params[:user_id]) : current_user
 
-    # Redirect to the same script level within @script.redirect_to.
-    # There are too many variations of the script level path to use
-    # a path helper, so use a regex to compute the new path.
-    if @script.redirect_to?
-      new_script = Script.get_from_cache(@script.redirect_to)
-      new_path = request.fullpath.sub(%r{^/s/#{params[:script_id]}/}, "/s/#{new_script.name}/")
+      # Redirect to the same script level within @script.redirect_to.
+      # There are too many variations of the script level path to use
+      # a path helper, so use a regex to compute the new path.
+      if @script.redirect_to?
+        new_script = Script.get_from_cache(@script.redirect_to)
+        new_path = request.fullpath.sub(%r{^/s/#{params[:script_id]}/}, "/s/#{new_script.name}/")
 
-      if ScriptConstants::FAMILY_NAMES.include?(params[:script_id])
-        Script.log_redirect(params[:script_id], new_script.name, request, 'unversioned-script-level-redirect', current_user&.user_type)
-      end
+        if ScriptConstants::FAMILY_NAMES.include?(params[:script_id])
+          Script.log_redirect(params[:script_id], new_script.name, request, 'unversioned-script-level-redirect', current_user&.user_type)
+        end
 
-      # avoid a redirect loop if the string substitution failed
-      if new_path == request.fullpath
-        redirect_to build_script_level_path(new_script.starting_level)
+        # avoid a redirect loop if the string substitution failed
+        if new_path == request.fullpath
+          redirect_to build_script_level_path(new_script.starting_level)
+          return
+        end
+
+        redirect_to new_path
         return
       end
 
-      redirect_to new_path
-      return
+      configure_caching(@script)
+
+      @script_level = ScriptLevelsController.get_script_level(@script, params)
+      raise ActiveRecord::RecordNotFound unless @script_level
+      authorize! :read, @script_level, params.slice(:login_required)
+
+      if current_user && current_user.script_level_hidden?(@script_level)
+        view_options(full_width: true)
+        render 'levels/_hidden_stage'
+        return
+      end
+
+      # If the stage is not released yet (visible_after is in the future) then don't
+      # let a user go to the script_level page in that stage
+      return head(:forbidden) unless @script_level.lesson.published?(current_user)
+
+      # In the case of puzzle_page or sublevel_position, send param through to be included in the
+      # generation of the script level path.
+      extra_params = {}
+      if @script_level.long_assessment?
+        extra_params[:puzzle_page] = params[:puzzle_page] ? params[:puzzle_page] : 1
+      end
+      extra_params[:sublevel_position] = params[:sublevel_position] if @script_level.bubble_choice?
+
+      can_view_version = @script_level&.script&.can_view_version?(current_user, locale: locale)
+      override_redirect = VersionRedirectOverrider.override_script_redirect?(session, @script_level&.script)
+      if can_view_version
+        # If user is allowed to see level but is assigned to a newer version of the level's script,
+        # we will show a dialog for the user to choose whether they want to go to the newer version.
+        @redirect_script_url = @script_level&.script&.redirect_to_script_url(current_user, locale: request.locale)
+      elsif !override_redirect && redirect_script = redirect_script(@script_level&.script, request.locale)
+        # Redirect user to the proper script overview page if we think they ended up on the wrong level.
+        redirect_to script_path(redirect_script) + "?redirect_warning=true"
+        return
+      end
+
+      if request.path != (canonical_path = build_script_level_path(@script_level, extra_params))
+        canonical_path << "?#{request.query_string}" unless request.query_string.empty?
+        redirect_to canonical_path, status: :moved_permanently
+        return
+      end
+
+      load_user
+      return if performed?
+      load_section
+
+      @level = select_level
+      return if redirect_under_13_without_tos_teacher(@level)
+
+      @body_classes = @script_level.script.background
+
+      present_level
     end
-
-    configure_caching(@script)
-
-    @script_level = ScriptLevelsController.get_script_level(@script, params)
-    raise ActiveRecord::RecordNotFound unless @script_level
-    authorize! :read, @script_level, params.slice(:login_required)
-
-    if current_user && current_user.script_level_hidden?(@script_level)
-      view_options(full_width: true)
-      render 'levels/_hidden_stage'
-      return
-    end
-
-    # If the stage is not released yet (visible_after is in the future) then don't
-    # let a user go to the script_level page in that stage
-    return head(:forbidden) unless @script_level.lesson.published?(current_user)
-
-    # In the case of puzzle_page or sublevel_position, send param through to be included in the
-    # generation of the script level path.
-    extra_params = {}
-    if @script_level.long_assessment?
-      extra_params[:puzzle_page] = params[:puzzle_page] ? params[:puzzle_page] : 1
-    end
-    extra_params[:sublevel_position] = params[:sublevel_position] if @script_level.bubble_choice?
-
-    can_view_version = @script_level&.script&.can_view_version?(current_user, locale: locale)
-    override_redirect = VersionRedirectOverrider.override_script_redirect?(session, @script_level&.script)
-    if can_view_version
-      # If user is allowed to see level but is assigned to a newer version of the level's script,
-      # we will show a dialog for the user to choose whether they want to go to the newer version.
-      @redirect_script_url = @script_level&.script&.redirect_to_script_url(current_user, locale: request.locale)
-    elsif !override_redirect && redirect_script = redirect_script(@script_level&.script, request.locale)
-      # Redirect user to the proper script overview page if we think they ended up on the wrong level.
-      redirect_to script_path(redirect_script) + "?redirect_warning=true"
-      return
-    end
-
-    if request.path != (canonical_path = build_script_level_path(@script_level, extra_params))
-      canonical_path << "?#{request.query_string}" unless request.query_string.empty?
-      redirect_to canonical_path, status: :moved_permanently
-      return
-    end
-
-    load_user
-    return if performed?
-    load_section
-
-    @level = select_level
-    return if redirect_under_13_without_tos_teacher(@level)
-
-    @body_classes = @script_level.script.background
-
-    present_level
   end
 
   def self.get_script_level(script, params)
