@@ -27,19 +27,26 @@ const styles = {
   oddRow: {
     backgroundColor: color.lightest_gray
   },
+  actionsColumn: {
+    display: 'flex',
+    justifyContent: 'space-evenly',
+    backgroundColor: 'white'
+  },
   remove: {
     fontSize: 14,
     color: 'white',
     background: color.dark_red,
     cursor: 'pointer',
-    textAlign: 'center'
+    textAlign: 'center',
+    width: '48%'
   },
   edit: {
     fontSize: 14,
     color: 'white',
     background: color.default_blue,
     cursor: 'pointer',
-    textAlign: 'center'
+    textAlign: 'center',
+    width: '48%'
   }
 };
 
@@ -198,23 +205,21 @@ class ResourcesEditor extends Component {
                 >
                   <td>{resource.key}</td>
                   <td>{resource.name}</td>
-                  <td>{resource.properties ? resource.properties.type : ''}</td>
-                  <td>
-                    {resource.properties ? resource.properties.audience : ''}
-                  </td>
+                  <td>{resource.type}</td>
+                  <td>{resource.audience}</td>
                   <td>{resource.url}</td>
-                  <td style={{backgroundColor: 'white'}}>
-                    <div
-                      style={styles.remove}
-                      onMouseDown={() => this.handleRemove(resource.key)}
-                    >
-                      <i className="fa fa-times" />
-                    </div>
+                  <td style={styles.actionsColumn}>
                     <div
                       style={styles.edit}
                       onMouseDown={() => this.handleEdit(resource)}
                     >
                       <i className="fa fa-edit" />
+                    </div>
+                    <div
+                      style={styles.remove}
+                      onMouseDown={() => this.handleRemove(resource.key)}
+                    >
+                      <i className="fa fa-times" />
                     </div>
                   </td>
                 </tr>

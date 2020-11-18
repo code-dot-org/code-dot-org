@@ -37,9 +37,10 @@ export default function resources(state = [], action) {
     }
     case EDIT_RESOURCE: {
       const resourceToEdit = newState.find(
-        resource => resource.key === action.editedResource.key
+        resource => resource.key === action.updatedResource.key
       );
-      Object.assign(resourceToEdit, action.editedResource);
+      console.log(resourceToEdit);
+      Object.assign(resourceToEdit, action.updatedResource);
       break;
     }
     case REMOVE_RESOURCE: {
