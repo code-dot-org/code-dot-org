@@ -5,6 +5,7 @@
     "hidden": true,
     "login_required": false,
     "properties": {
+      "peer_reviews_to_complete": 0
     },
     "new_name": null,
     "family_name": null,
@@ -1510,19 +1511,20 @@
       "position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Module 7 overview (~5 minutes)"
       },
       "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
-          "VirtualPLOverview"
+          "CSP-PL Module 7 - Workshop Overview"
         ],
         "lesson.key": "Module 7",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
       },
       "level_keys": [
-        "VirtualPLOverview"
+        "CSP-PL Module 7 - Workshop Overview"
       ]
     },
     {
@@ -1551,19 +1553,20 @@
       "position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Module 8 overview (~5 minutes)"
       },
       "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
-          "VirtualPLOverview"
+          "CSP-PL Module 8 - Workshop Overview"
         ],
         "lesson.key": "Module 8",
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
       },
       "level_keys": [
-        "VirtualPLOverview"
+        "CSP-PL Module 8 - Workshop Overview"
       ]
     },
     {
@@ -2306,9 +2309,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "VirtualPLOverview",
+        "level.key": "CSP-PL Module 7 - Workshop Overview",
         "script_level.level_keys": [
-          "VirtualPLOverview"
+          "CSP-PL Module 7 - Workshop Overview"
         ],
         "lesson.key": "Module 7",
         "lesson_group.key": "",
@@ -2328,9 +2331,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "VirtualPLOverview",
+        "level.key": "CSP-PL Module 8 - Workshop Overview",
         "script_level.level_keys": [
-          "VirtualPLOverview"
+          "CSP-PL Module 8 - Workshop Overview"
         ],
         "lesson.key": "Module 8",
         "lesson_group.key": "",
