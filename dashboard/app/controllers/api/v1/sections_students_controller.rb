@@ -17,16 +17,16 @@ class Api::V1::SectionsStudentsController < Api::V1::JsonApiController
     render json: summaries
   end
 
-  use_database_pool completed_levels_count: :persistent
-
   # GET /sections/<section_id>/students/completed_levels_count
   def completed_levels_count
-    passing_level_counts = UserLevel.count_passed_levels_for_users(@section.students)
-    completed_levels_count_per_student = {}
-    @section.students.each do |student|
-      completed_levels_count_per_student[student.id] = passing_level_counts[student.id] || 0
+    ActiveRecord::Base.connected_to(role: :reading) do
+      passing_level_counts = UserLevel.count_passed_levels_for_users(@section.students)
+      completed_levels_count_per_student = {}
+      @section.students.each do |student|
+        completed_levels_count_per_student[student.id] = passing_level_counts[student.id] || 0
+      end
+      render json: completed_levels_count_per_student
     end
-    render json: completed_levels_count_per_student
   end
 
   # PATCH /sections/<section_id>/students/<id>

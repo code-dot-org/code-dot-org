@@ -229,11 +229,11 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
     render json: @workshop, serializer: Api::V1::Pd::WorkshopSummarySerializer
   end
 
-  use_database_pool potential_organizers: :persistent
-
   # Users who could be re-assigned to be the organizer of this workshop
   def potential_organizers
-    render json: @workshop.potential_organizers.pluck(:name, :id).map {|name, id| {label: name, value: id}}
+    ActiveRecord::Base.connected_to(role: :reading) do
+      render json: @workshop.potential_organizers.pluck(:name, :id).map {|name, id| {label: name, value: id}}
+    end
   end
 
   private
