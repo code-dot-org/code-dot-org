@@ -6,6 +6,25 @@ module Services::LessonImportHelper
     [create_activity_with_levels(script_levels, lesson_id, 1)]
   end
 
+  def self.create_lesson_resources(cb_resources, course_version_id)
+    cb_resources.map do |cb_resource|
+      raise unless cb_resource['slug']
+      resource = Resource.find_or_initialize_by(
+        course_version_id: course_version_id,
+        key: cb_resource['slug']
+      )
+      resource.name = cb_resource['name']
+      resource.url = cb_resource['url']
+      resource.type = cb_resource['type']
+      resource.audience = cb_resource['student'] ? 'Student' : 'Teacher'
+      resource.assessment = false
+      resource.download_url = cb_resource['dl_url']
+      resource.include_in_pdf = cb_resource['gd']
+      resource.save! if resource.changed?
+      resource
+    end
+  end
+
   def self.create_activity_sections(activity_markdown)
     # Find any special syntax, such as tips or remarks, and gather them.
     # TODO tips and remarks both show up in tip_matches. We filter out remarks
