@@ -210,7 +210,7 @@ fr:
     data_collection_us: Je comprends que Code.org est un site Web à but non lucratif
       hébergé aux États-Unis et que les lois régissant la collecte de données aux
       États-Unis peuvent différer des lois de mon pays.
-    visit_privacy: Consultez la politique de confidentialité de Code.org (%{privacy_url})
+    visit_privacy: Consultez [la politique de confidentialité](%{privacy_url}) de Code.org
       pour en savoir plus.
     student_terms_markdown: Les adresses e-mail ne sont pas stockées dans un format
       qui nous permette de contacter les étudiants. Les étudiants ne recevront jamais

@@ -1,7 +1,7 @@
 import * as coreLibrary from '../coreLibrary';
 import {getStore} from '@cdo/apps/redux';
 import {addConsoleMessage} from '../textConsoleModule';
-import {addQuestion} from '../spritelabInputModule';
+import {addPrompt} from '../spritelabInputModule';
 
 export const commands = {
   comment(text) {
@@ -47,9 +47,9 @@ export const commands = {
     }
   },
 
-  setQuestion(questionText, variableName, setterCallback) {
-    coreLibrary.registerQuestion(questionText, variableName, setterCallback);
-    getStore().dispatch(addQuestion(questionText, variableName));
+  setPrompt(promptText, variableName, setterCallback) {
+    coreLibrary.registerPrompt(promptText, variableName, setterCallback);
+    getStore().dispatch(addPrompt(promptText, variableName));
   },
 
   showTitleScreen(title, subtitle) {
