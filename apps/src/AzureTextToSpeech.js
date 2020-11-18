@@ -5,7 +5,7 @@ import {hashString, findProfanity} from '@cdo/apps/utils';
 // https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/readyState
 const READY_STATE_DONE = 4;
 
-class SoundResponse {
+export class SoundResponse {
   constructor(bytes, playbackOptions, profaneWords = [], error = null) {
     this.bytes = bytes;
     this.playbackOptions = playbackOptions;
@@ -50,7 +50,7 @@ export default class AzureTextToSpeech {
    */
   enqueueAndPlay = soundPromise => {
     this.enqueue_(soundPromise);
-    this.playFromQueue_();
+    this.asyncPlayFromQueue_();
   };
 
   /**
@@ -145,7 +145,7 @@ export default class AzureTextToSpeech {
    * Plays the next sound in the queue. Automatically ends playback if the SoundResponse was unsuccessful.
    * @private
    */
-  playFromQueue_ = async () => {
+  asyncPlayFromQueue_ = async () => {
     if (this.playing) {
       return;
     }
@@ -173,7 +173,7 @@ export default class AzureTextToSpeech {
    */
   onSoundComplete_ = () => {
     this.playing = false;
-    this.playFromQueue_();
+    this.asyncPlayFromQueue_();
   };
 
   /**
