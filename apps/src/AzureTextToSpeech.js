@@ -75,8 +75,8 @@ export default class AzureTextToSpeech {
       onProfanityFound
     } = opts;
     const cachedSound = this.getCachedSound(languageCode, gender, text);
-    const wrappedSetCachedSound = SoundResponse => {
-      this.setCachedSound(languageCode, gender, text, SoundResponse);
+    const wrappedSetCachedSound = soundResponse => {
+      this.setCachedSound(languageCode, gender, text, soundResponse);
     };
     const wrappedCreateSoundResponse = opts => {
       return this.createSoundResponse(opts);
@@ -106,9 +106,9 @@ export default class AzureTextToSpeech {
 
       if (profaneWords && profaneWords.length > 0) {
         onProfanityFound(profaneWords);
-        const SoundResponse = wrappedCreateSoundResponse({profaneWords});
-        wrappedSetCachedSound(SoundResponse);
-        resolve(SoundResponse);
+        const soundResponse = wrappedCreateSoundResponse({profaneWords});
+        wrappedSetCachedSound(soundResponse);
+        resolve(soundResponse);
         return;
       }
 
@@ -119,11 +119,11 @@ export default class AzureTextToSpeech {
         }
 
         if (request.status >= 200 && request.status < 300) {
-          const SoundResponse = wrappedCreateSoundResponse({
+          const soundResponse = wrappedCreateSoundResponse({
             bytes: request.response
           });
-          wrappedSetCachedSound(SoundResponse);
-          resolve(SoundResponse);
+          wrappedSetCachedSound(soundResponse);
+          resolve(soundResponse);
         } else {
           resolve(wrappedCreateSoundResponse({error: request.statusText}));
         }
@@ -205,9 +205,9 @@ export default class AzureTextToSpeech {
    * @param {string} text
    * @param {SoundResponse} SoundResponse
    */
-  setCachedSound = (languageCode, gender, text, SoundResponse) => {
+  setCachedSound = (languageCode, gender, text, soundResponse) => {
     const key = this.cacheKey(languageCode, gender, text);
-    this.cachedSounds[key] = SoundResponse;
+    this.cachedSounds[key] = soundResponse;
   };
 
   /**
