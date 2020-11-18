@@ -33,14 +33,14 @@ export default class AzureTextToSpeech {
 
   constructor() {
     this.playing = false;
-    this.queue = [];
-    this.cachedSounds = {};
-    this.playbackOptions = {
+    this.queue_ = [];
+    this.cachedSounds_ = {};
+    this.playbackOptions_ = {
       volume: 1.0,
       loop: false,
       forceHTML5: false,
       allowHTML5Mobile: true,
-      onEnded: this.onSoundComplete
+      onEnded: this.onSoundComplete_
     };
   }
 
@@ -49,8 +49,8 @@ export default class AzureTextToSpeech {
    * @param {Promise<SoundResponse>} soundPromise A promise that returns a SoundResponse when resolved.
    */
   enqueueAndPlay = soundPromise => {
-    this.enqueue(soundPromise);
-    this.playFromQueue();
+    this.enqueue_(soundPromise);
+    this.playFromQueue_();
   };
 
   /**
@@ -76,11 +76,11 @@ export default class AzureTextToSpeech {
       token,
       onProfanityFound
     } = opts;
-    const cachedSound = this.getCachedSound(languageCode, gender, text);
+    const cachedSound = this.getCachedSound_(languageCode, gender, text);
     const wrappedSetCachedSound = soundResponse => {
-      this.setCachedSound(languageCode, gender, text, soundResponse);
+      this.setCachedSound_(languageCode, gender, text, soundResponse);
     };
-    const wrappedCreateSoundResponse = this.createSoundResponse;
+    const wrappedCreateSoundResponse = this.createSoundResponse_;
 
     // If we have the sound already, resolve immediately.
     if (cachedSound) {
@@ -143,13 +143,14 @@ export default class AzureTextToSpeech {
 
   /**
    * Plays the next sound in the queue. Automatically ends playback if the SoundResponse was unsuccessful.
+   * @private
    */
-  playFromQueue = async () => {
+  playFromQueue_ = async () => {
     if (this.playing) {
       return;
     }
 
-    const nextSoundPromise = this.dequeue();
+    const nextSoundPromise = this.dequeue_();
     if (!nextSoundPromise) {
       return;
     }
@@ -167,11 +168,12 @@ export default class AzureTextToSpeech {
   };
 
   /**
-   * Called when a TTS sound is done playing. Set as part of this.playbackOptions.
+   * Called when a TTS sound is done playing. Set as part of this.playbackOptions_.
+   * @private
    */
-  onSoundComplete = () => {
+  onSoundComplete_ = () => {
     this.playing = false;
-    this.playFromQueue();
+    this.playFromQueue_();
   };
 
   /**
@@ -181,8 +183,9 @@ export default class AzureTextToSpeech {
    * @param {string} gender
    * @param {string} text
    * @returns {string} MD5 hash string
+   * @private
    */
-  cacheKey = (languageCode, gender, text) => {
+  cacheKey_ = (languageCode, gender, text) => {
     return hashString([languageCode, gender, text].join('-'));
   };
 
@@ -192,10 +195,11 @@ export default class AzureTextToSpeech {
    * @param {string} gender
    * @param {string} text
    * @returns {SoundResponse|undefined}
+   * @private
    */
-  getCachedSound = (languageCode, gender, text) => {
-    const key = this.cacheKey(languageCode, gender, text);
-    return this.cachedSounds[key];
+  getCachedSound_ = (languageCode, gender, text) => {
+    const key = this.cacheKey_(languageCode, gender, text);
+    return this.cachedSounds_[key];
   };
 
   /**
@@ -204,26 +208,29 @@ export default class AzureTextToSpeech {
    * @param {string} gender
    * @param {string} text
    * @param {SoundResponse} SoundResponse
+   * @private
    */
-  setCachedSound = (languageCode, gender, text, soundResponse) => {
-    const key = this.cacheKey(languageCode, gender, text);
-    this.cachedSounds[key] = soundResponse;
+  setCachedSound_ = (languageCode, gender, text, soundResponse) => {
+    const key = this.cacheKey_(languageCode, gender, text);
+    this.cachedSounds_[key] = soundResponse;
   };
 
   /**
    * Add a promise to the end of the queue.
    * @param {Promise<SoundResponse>} promise A promise that returns a SoundResponse when resolved.
+   * @private
    */
-  enqueue = promise => {
-    this.queue.push(promise);
+  enqueue_ = promise => {
+    this.queue_.push(promise);
   };
 
   /**
    * Get the next promise in the queue.
    * @returns {Promise<SoundResponse>} A promise that returns a SoundResponse when resolved.
+   * @private
    */
-  dequeue = () => {
-    return this.queue.shift();
+  dequeue_ = () => {
+    return this.queue_.shift();
   };
 
   /**
@@ -233,11 +240,12 @@ export default class AzureTextToSpeech {
    * @param {Array<string>} opts.profaneWords Profanity present in requested TTS text.
    * @param {string} opts.error Any error during the TTS request.
    * @returns {SoundResponse}
+   * @private
    */
-  createSoundResponse = opts => {
+  createSoundResponse_ = opts => {
     return new SoundResponse(
       opts.bytes,
-      this.playbackOptions,
+      this.playbackOptions_,
       opts.profaneWords,
       opts.error
     );
