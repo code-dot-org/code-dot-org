@@ -139,6 +139,7 @@ export default class CourseEditor extends Component {
         <TextareaWithMarkdownPreview
           markdown={this.state.descriptionStudent}
           label={'Student Description'}
+          name={'description_student'}
           inputRows={5}
           handleMarkdownChange={e =>
             this.setState({descriptionStudent: e.target.value})
@@ -147,6 +148,7 @@ export default class CourseEditor extends Component {
         <TextareaWithMarkdownPreview
           markdown={this.state.descriptionTeacher}
           label={'Teacher Description'}
+          name={'description_teacher'}
           inputRows={5}
           handleMarkdownChange={e =>
             this.setState({descriptionTeacher: e.target.value})

@@ -4,6 +4,7 @@ import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 import RailsAuthenticityToken from '@cdo/apps/lib/util/RailsAuthenticityToken';
 import color from '@cdo/apps/util/color';
+import _ from 'lodash';
 
 const styles = {
   dialog: {
@@ -83,7 +84,8 @@ export default class AddResourceDialog extends Component {
   static propTypes = {
     isOpen: PropTypes.bool.isRequired,
     onSave: PropTypes.func,
-    handleClose: PropTypes.func.isRequired
+    handleClose: PropTypes.func.isRequired,
+    courseVersionId: PropTypes.number
   };
 
   constructor(props) {
@@ -123,17 +125,22 @@ export default class AddResourceDialog extends Component {
         headers: {'X-CSRF-Token': formData.get('authenticity_token')},
         body: formData
       })
+        .then(response => {
+          if (!response.ok) {
+            this.setState({error: response.statusText});
+          }
+          return response;
+        })
         .then(response => (response.ok ? response.json() : {}))
         .then(json => {
-          if (json !== {}) {
+          if (!_.isEmpty(json)) {
             this.resetState();
             if (this.props.onSave) {
               this.props.onSave(json);
             }
             this.props.handleClose();
           }
-        })
-        .catch(error => this.setState({error}));
+        });
     }
   };
 
@@ -157,6 +164,13 @@ export default class AddResourceDialog extends Component {
         )}
         <form id="create-resource-form" onSubmit={this.saveResource}>
           <RailsAuthenticityToken />
+          {this.props.courseVersionId && (
+            <input
+              type="hidden"
+              name="courseVersionId"
+              value={this.props.courseVersionId}
+            />
+          )}
           <div style={styles.container}>
             <label style={styles.inputAndLabel}>
               Resource Name *
