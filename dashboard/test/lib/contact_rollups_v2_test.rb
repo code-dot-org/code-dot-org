@@ -89,10 +89,13 @@ class ContactRollupsV2Test < ActiveSupport::TestCase
   end
 
   test 'dry run makes no Pardot API calls' do
-    # Called when creating, updating, and deleting Pardot prospects
+    # Called when creating and updating Pardot prospects
     PardotV2.expects(:submit_batch_request).never
     ContactRollupsPardotMemory.expects(:save_accepted_submissions).never
     ContactRollupsPardotMemory.expects(:save_rejected_submissions).never
+
+    # Called when deleting Pardot prospects
+    PardotV2.expects(:delete_prospects_by_email).never
 
     # Called when downloading Pardot ID-email mappings
     PardotV2.expects(:post_with_auth_retry).never
