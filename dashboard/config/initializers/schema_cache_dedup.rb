@@ -103,7 +103,6 @@ module SchemaCacheDedup
 
     def deduplicated
       @name = -name
-      @table_name = -table_name if table_name
       @sql_type_metadata = sql_type_metadata.deduplicate if sql_type_metadata
       @default = -default if default
       @default_function = -default_function if default_function
