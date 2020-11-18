@@ -6,7 +6,7 @@
       1,
       0.74
     ],
-    "func": "whenQuestionAnswered",
+    "func": "whenPromptAnswered",
     "blockText": "when {VAR} is answered",
     "args": [
       {
