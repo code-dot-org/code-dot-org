@@ -131,27 +131,44 @@ export const commands = {
       OPTIONAL
     );
 
+    const {
+      azureSpeechServiceToken: token,
+      azureSpeechServiceRegion: region,
+      azureSpeechServiceVoices: voices
+    } = appOptions;
+    let {text, gender, language} = opts;
+
+    // Fall back to defaults if requested language/gender combination is not available.
+    if (!(voices[language] && voices[language][gender])) {
+      language = 'English';
+      gender = 'female';
+    }
+
     const MAX_TEXT_LENGTH = 750;
-    if (opts.text.length > MAX_TEXT_LENGTH) {
-      opts.text = opts.text.slice(0, MAX_TEXT_LENGTH);
+    if (text.length > MAX_TEXT_LENGTH) {
+      text = text.slice(0, MAX_TEXT_LENGTH);
       outputWarning(i18n.textToSpeechTruncation());
     }
 
-    const onProfanityFound = profaneWords => {
-      outputWarning(
-        i18n.textToSpeechProfanity({
-          profanityCount: profaneWords.length,
-          profaneWords: profaneWords.join(', ')
-        })
-      );
-    };
-    AzureTextToSpeech.getSingleton().play({
-      ...opts,
-      onProfanityFound,
-      token: appOptions.azureSpeechServiceToken,
-      region: appOptions.azureSpeechServiceRegion,
-      voices: appOptions.azureSpeechServiceVoices
+    const voiceName = voices[language][gender];
+    const azureTTS = AzureTextToSpeech.getSingleton();
+    const promise = azureTTS.createSoundPromise({
+      text,
+      gender,
+      languageCode: voices[language].languageCode,
+      url: `https://${region}.tts.speech.microsoft.com/cognitiveservices/v1`,
+      ssml: `<speak version="1.0" xmlns="https://www.w3.org/2001/10/synthesis" xml:lang="en-US"><voice name="${voiceName}">${text}</voice></speak>`,
+      token,
+      onProfanityFound: profaneWords => {
+        outputWarning(
+          i18n.textToSpeechProfanity({
+            profanityCount: profaneWords.length,
+            profaneWords: profaneWords.join(', ')
+          })
+        );
+      }
     });
+    azureTTS.enqueueAndPlay(promise);
   }
 };
 
