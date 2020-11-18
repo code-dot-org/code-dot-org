@@ -1,0 +1,95 @@
+{
+  "completedHtml": "Thank you for your response.",
+  "pages": [
+   {
+    "name": "page1",
+    "elements": [
+     {
+      "type": "rating",
+      "name": "nps_value",
+      "title": "How likely are you to recommend Code.org to a friend or colleague?",
+      "isRequired": true,
+      "requiredErrorText": "Please select a value",
+      "rateMin": 0,
+      "rateMax": 10,
+      "minRateDescription": "Not at all likely",
+      "maxRateDescription": "Extremely likely"
+     },
+     {
+      "type": "checkbox",
+      "name": "nps_details",
+      "visibleIf": "{nps_value} notempty",
+      "title": "What are the top areas of our website and/or curriculum that we should focus on improving? (Choose up to 3)",
+      "validators": [
+       {
+        "type": "answercount",
+        "text": "Please select a maximum of three areas",
+        "minCount": 0,
+        "maxCount": 3
+       }
+      ],
+      "choices": [
+       {
+        "value": "student_sign_in",
+        "text": "Student sign-in and section set-up experience"
+       },
+       {
+        "value": "tracking_progress",
+        "text": "Tracking student progress in courses or keeping students on-track"
+       },
+       {
+        "value": "grading_work",
+        "text": "Grading student work, assessing student learning, or giving feedback to students"
+       },
+       {
+        "value": "differentiation",
+        "text": "More support for different student skill levels in the same class"
+       },
+       {
+        "value": "site_navigation",
+        "text": "Navigating around the website or finding things on the website"
+       },
+       {
+        "value": "more_resources",
+        "text": "More resources (videos, references, etc.) that explain CS concepts for students and teachers"
+       },
+       {
+        "value": "performance",
+        "text": "Performance (how quickly the website loads) or bugs in the coding tools or on the website"
+       },
+       {
+        "value": "lms_integration",
+        "text": "More integration with other tools like Learning Management Systems (LMS)"
+       },
+       {
+        "value": "more_subjects",
+        "text": "Create new curriculum to cover additional subject areas, programming languages, or concepts, etc."
+       },
+       {
+        "value": "curriculum_resources",
+        "text": "Improve existing lesson plans and curriculum resources to support teachers"
+       }
+      ],
+      "hasOther": true,
+      "otherText": "Other (write-in)",
+      "otherErrorText": "Please enter a response for \"Other (write-in)\""
+     },
+     {
+      "type": "comment",
+      "name": "nps_details_explanation",
+      "visibleIf": "{nps_value} notempty",
+      "title": "Tell us more about your choice above"
+     },
+     {
+      "type": "comment",
+      "name": "nps_general_comment",
+      "visibleIf": "{nps_value} notempty",
+      "title": "Is there anything else you’d like to tell us?"
+     }
+    ],
+    "title": "Quick survey"
+   }
+  ],
+  "showQuestionNumbers": "off",
+  "completeText": "Submit"
+ }
