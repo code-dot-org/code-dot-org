@@ -33,7 +33,8 @@ module Services::LessonImportHelper
     tip_link_matches = find_tip_links(activity_markdown).map {|m| {index: activity_markdown.index(m[0]), type: 'tiplink', match: m, substring: m[0]}}
     remark_matches = find_remarks(activity_markdown).map {|m| {index: activity_markdown.index(m[0]), type: 'remark', match: m, substring: m[0]}}
     skippable_matches = find_skippable_syntax(activity_markdown).map {|m| {index: activity_markdown.index(m[0]), type: 'skippable', match: m, substring: m[0]}}
-    slide_matches = find_slides(activity_markdown).map {|m| {index: activity_markdown.index(m[0]), type: 'slide', match: m, substring: m[0]}}
+    #slide_matches = find_slides(activity_markdown).map {|m| {index: activity_markdown.index(m[0]), type: 'slide', match: m, substring: m[0]}}
+    slide_matches = []
     matches = tip_matches + remark_matches + tip_link_matches + skippable_matches + slide_matches
     sorted_matches = matches.sort_by {|m| m[:index]}
     return [ActivitySection.new(description: activity_markdown.strip, key: SecureRandom.uuid, position: 1)] if matches.empty?
@@ -71,7 +72,6 @@ module Services::LessonImportHelper
       next unless activity_section
       activity_section.position = position
       position += 1
-      activity_section.slide = slide
       slide = false
       activity_section.key ||= SecureRandom.uuid
       sections = sections.push(activity_section)
@@ -187,7 +187,7 @@ module Services::LessonImportHelper
     #  - Captures all content until either:
     #    - there is a line that starts with non-whitespace OR
     #    - it reaches the end of the string
-    regex = /^!!! *say\s+?[\n\r]*([\d\D]+?)(?=(^\S|$))/
+    regex = /^!!! *say\s+?([\d\D]+?)(?=(^\S|\z))/
     markdown.to_enum(:scan, regex).map {Regexp.last_match}
   end
 
@@ -197,9 +197,9 @@ module Services::LessonImportHelper
     description = match[1].strip
     slide_matches = find_slides(description)
     if slide_matches.empty? || description.index(slide_matches[0][0]) != 0
-      activity_section.description = description.strip
+      activity_section.description = unindent_markdown(description).strip
     else
-      activity_section.description = description.delete_prefix(slide_matches[0][0])
+      activity_section.description = unindent_markdown(description.delete_prefix(slide_matches[0][0])).strip
       activity_section.slide = true
     end
     activity_section
@@ -220,12 +220,12 @@ module Services::LessonImportHelper
     # Example: tip!!!tip-0<!-- place where you'd like the icon --> some text
     # <!-- place where you'd like the icon --> is optional but is written out
     # in this regex in order to be able to correctly the text that should be displayed
-    regex = /^([\w-]+)!!! ?([\w-]+)(?:<!-- place where you'd like the icon -->)?(.+?)$/
+    regex = /^([\w-]+)!!! ?([\w-]+)(?:<!-- place where you'd like the icon -->)?(.*\n?.*)$/
     markdown.to_enum(:scan, regex).map {Regexp.last_match}
   end
 
   # Removes tabs (or 4 spaces) at the beginning of lines
-  def self.format_tip_markdown(markdown)
+  def self.unindent_markdown(markdown)
     markdown = markdown.chomp.reverse.chomp.reverse
     markdown.gsub(/(^\t|^ {4})/, '')
   end
@@ -237,10 +237,25 @@ module Services::LessonImportHelper
       "discussion" => "discussionGoal",
       "assessment" => "assessmentOpportunity"
     }
-    {key: key, type: tip_map[key], markdown: format_tip_markdown(markdown)}
+    {key: key, type: tip_map[key], markdown: unindent_markdown(markdown)}
+  end
+
+  def self.create_slide_activity_section(markdown, tip_match_map)
+    embedded_tip_links = find_tip_links(markdown.strip)
+    if embedded_tip_links.empty?
+      activity_section = create_basic_activity_section(markdown)
+    else
+      puts "found multiple tip links in a slide activity section" if embedded_tip_links.length > 1
+      activity_section = create_activity_section_with_tip(embedded_tip_links[0], tip_match_map)
+    end
+    activity_section.slide = true
+    activity_section
   end
 
   def self.create_activity_section_with_tip(tip_link_match, tip_match_map)
+    if tip_link_match[1] == 'slide'
+      return create_slide_activity_section(tip_link_match[3], tip_match_map)
+    end
     tip = tip_match_map[tip_link_match[2]]&.shift
     unless tip
       return ActivitySection.new(description: tip_link_match[3].strip)
