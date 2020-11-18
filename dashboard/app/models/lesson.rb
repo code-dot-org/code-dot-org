@@ -494,7 +494,6 @@ class Lesson < ActiveRecord::Base
       self.purpose = cb_lesson_data['cs_content']
       self.preparation = cb_lesson_data['prep']
       self.creative_commons_license = cb_lesson_data['creative_commons_license']
-      self.relative_position = cb_lesson_data['number'] || 1
       self.objectives = cb_lesson_data['objectives'].map do |o|
         Objective.new(description: o["name"])
       end
