@@ -24,9 +24,10 @@ module Services::LessonImportHelper
     # Create a map of tip key -> an array of tip matches
     # Sometimes, a key is used multiple times in the same activity. To handle
     # this we'll, just pair them with the tip links in order.
-    tip_match_map = Hash.new([])
+    tip_match_map = {}
     tip_matches.each do |match|
       key = match[:match][3]&.strip || "#{match[:match][1]}-0"
+      tip_match_map[key] ||= []
       tip_match_map[key].push(match)
     end
 
@@ -59,13 +60,16 @@ module Services::LessonImportHelper
 
     # If there are any tips that didn't have a match, put them at the end
     # TODO ideally, we'd put them in the spot they were written.
-    tip_match_map.each do |key, value|
-      match = value[:match]
-      activity_section = ActivitySection.new
-      activity_section.position = sections.length + 1
-      activity_section.key ||= SecureRandom.uuid
-      activity_section.tips = [create_tip(key, match[1] || "tip", match[4] || "no markdown found")]
-      sections.push(activity_section)
+    puts "Adding unpaired tips at the end" if tip_match_map.any? {|_, a| a.count > 0}
+    tip_match_map.each do |key, tip_list|
+      tip_list.each do |tip|
+        match = tip[:match]
+        activity_section = ActivitySection.new
+        activity_section.position = sections.length + 1
+        activity_section.key ||= SecureRandom.uuid
+        activity_section.tips = [create_tip(key, match[1] || "tip", match[4] || "no markdown found")]
+        sections.push(activity_section)
+      end
     end
 
     sections
@@ -218,7 +222,7 @@ module Services::LessonImportHelper
   end
 
   def self.create_activity_section_with_tip(tip_link_match, tip_match_map)
-    tip = tip_match_map[tip_link_match[2]].shift
+    tip = tip_match_map[tip_link_match[2]]&.shift
     unless tip
       return ActivitySection.new(description: tip_link_match[3].strip)
     end
