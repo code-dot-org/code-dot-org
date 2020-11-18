@@ -495,9 +495,9 @@ class Lesson < ActiveRecord::Base
       self.relative_position = cb_lesson_data['number'] || 1
       self.lesson_activities = Services::LessonImportHelper.create_lesson_activities(cb_lesson_data['activities'], script_levels, id)
       course_version_id = script&.get_course_version&.id
-      if course_version_id
-        self.resources = Services::LessonImportHelper.create_lesson_resources(cb_lesson_data['resources'], course_version_id)
-      end
+      # course version id should always be present for CSF/CSD/CSP 2020 courses.
+      raise unless course_version_id
+      self.resources = Services::LessonImportHelper.create_lesson_resources(cb_lesson_data['resources'], course_version_id)
       self.script_levels = []
     end
     save!
