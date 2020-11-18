@@ -1,0 +1,7 @@
+name 'ml-society'
+title 'Machine Learning & Societal Impact'
+description ''
+
+markdown <<MARKDOWN
+Here is another unplugged lesson.
+MARKDOWN
