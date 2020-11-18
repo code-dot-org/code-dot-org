@@ -207,21 +207,21 @@ export default class SmallFooter extends React.Component {
             />
             <p>{this.props.copyrightStrings.help_from_html}</p>
             <SafeMarkdown
-              markdown={decodeURIComponent(
-                this.props.copyrightStrings.art_from_html
-              )}
-            />
-            <SafeMarkdown
-              markdown={decodeURIComponent(
-                this.props.copyrightStrings.google_copyright
-              )}
+              markdown={
+                decodeURIComponent(this.props.copyrightStrings.art_from_html) +
+                '<br />' +
+                decodeURIComponent(
+                  this.props.copyrightStrings.google_copyright
+                ) +
+                '<br />' +
+                this.props.copyrightStrings.powered_by_aws
+              }
             />
             <SafeMarkdown
               markdown={decodeURIComponent(
                 this.props.copyrightStrings.code_from_html
               )}
             />
-            <p>{this.props.copyrightStrings.powered_by_aws}</p>
             <p>{this.props.copyrightStrings.built_on_github}</p>
             <a href="https://aws.amazon.com/what-is-cloud-computing">
               <img
