@@ -46,7 +46,7 @@ module Foorm
     end
 
     # Gets a json format of a general misc survey.
-    # GET '/form_data/:misc_form_path'
+    # GET '/form/:misc_form_path/show'
     # This is intended for surveys that need to be integrated, with custom rendering, into
     # an existing page. One example of this is the NPS survey which is rendered as part
     # of the teacher homepage. The client will handle the custom rendering of the survey.

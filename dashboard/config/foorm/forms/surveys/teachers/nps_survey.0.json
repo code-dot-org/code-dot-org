@@ -24,7 +24,7 @@
        {
         "type": "answercount",
         "text": "Please select a maximum of three areas",
-        "minCount": 1,
+        "minCount": 0,
         "maxCount": 3
        }
       ],
