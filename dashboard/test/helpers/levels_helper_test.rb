@@ -405,7 +405,7 @@ class LevelsHelperTest < ActionView::TestCase
 
     expected_options = {
       token: 'a1b2c3',
-      region: 'westus',
+      url: "https://westus.tts.speech.microsoft.com/cognitiveservices/v1",
       voices: {'English' => {'female' => 'Alice', 'languageCode' => 'en-US', 'male' => 'Bob'}}
     }
     assert_equal expected_options, azure_speech_service_options

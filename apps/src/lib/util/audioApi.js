@@ -133,7 +133,7 @@ export const commands = {
 
     const {
       azureSpeechServiceToken: token,
-      azureSpeechServiceRegion: region,
+      azureSpeechServiceUrl: url,
       azureSpeechServiceVoices: voices
     } = appOptions;
     let {text, gender, language} = opts;
@@ -156,7 +156,7 @@ export const commands = {
       text,
       gender,
       languageCode: voices[language].languageCode,
-      url: `https://${region}.tts.speech.microsoft.com/cognitiveservices/v1`,
+      url,
       ssml: `<speak version="1.0" xmlns="https://www.w3.org/2001/10/synthesis" xml:lang="en-US"><voice name="${voiceName}">${text}</voice></speak>`,
       token,
       onProfanityFound: profaneWords => {
