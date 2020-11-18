@@ -246,6 +246,60 @@ export const emptyNonUserFacingGroup = {
   lessons: []
 };
 
+export const mapLessonGroupDataForEditor = rawLessonGroups => {
+  let lessonGroups = (rawLessonGroups || [])
+    .filter(lesson_group => lesson_group.id)
+    .map(lesson_group => ({
+      key: lesson_group.key,
+      displayName: lesson_group.display_name,
+      userFacing: lesson_group.user_facing,
+      position: lesson_group.position,
+      description: lesson_group.description || '',
+      bigQuestions: lesson_group.big_questions || '',
+      lessons: lesson_group.lessons
+        .filter(lesson => lesson.id)
+        .map((lesson, lessonIndex) => ({
+          id: lesson.id,
+          key: lesson.key,
+          position: lessonIndex + 1,
+          lockable: lesson.lockable,
+          assessment: lesson.assessment,
+          unplugged: lesson.unplugged,
+          name: lesson.name,
+          /*
+           * NOTE: The Script Edit GUI no longer includes the editing of levels
+           * as those have been moved out to the lesson edit page. We include
+           * level information here behind the scenes because it allows us to
+           * continue to use ScriptDSl for the time being until we are ready
+           * to move on to our future system.
+           */
+          // Only include the first level of an assessment (uid ending with "_0").
+          levels: lesson.levels
+            .filter(level => !level.uid || /_0$/.test(level.uid))
+            .map(level => ({
+              position: level.position,
+              activeId: level.activeId,
+              ids: level.ids.slice(),
+              kind: level.kind,
+              skin: level.skin,
+              videoKey: level.videoKey,
+              concepts: level.concepts,
+              conceptDifficulty: level.conceptDifficulty,
+              progression: level.progression,
+              named: !!level.name,
+              bonus: level.bonus,
+              assessment: level.assessment,
+              challenge: level.challenge
+            }))
+        }))
+    }));
+  if (lessonGroups.length === 0) {
+    lessonGroups = [emptyNonUserFacingGroup];
+  }
+
+  return lessonGroups;
+};
+
 // Replace ' with \'
 const escape = str => str.replace(/'/, "\\'");
 
