@@ -43,7 +43,7 @@ export default class SendLesson extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="uitest-sendlesson">
         <Button
           __useDeprecatedTag
           onClick={this.openDialog}

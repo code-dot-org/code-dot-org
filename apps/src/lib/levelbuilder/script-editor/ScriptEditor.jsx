@@ -357,6 +357,7 @@ class ScriptEditor extends React.Component {
         <TextareaWithMarkdownPreview
           markdown={this.state.description}
           label={'Description'}
+          name={'description'}
           inputRows={5}
           handleMarkdownChange={e =>
             this.setState({description: e.target.value})

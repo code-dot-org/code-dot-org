@@ -1,0 +1,7 @@
+name 'ml-svm-act'
+title 'Act out model with categorical labels (SVM)'
+description ''
+
+markdown <<MARKDOWN
+This is an unplugged level.
+MARKDOWN
