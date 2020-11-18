@@ -7,7 +7,7 @@ import {hashString} from '@cdo/apps/utils';
 // https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/readyState
 const READY_STATE_DONE = 4;
 
-class SpeechResponse {
+class SoundResponse {
   constructor(bytes, playbackOptions, profaneWords = [], error = null) {
     this.bytes = bytes;
     this.playbackOptions = playbackOptions;
@@ -34,39 +34,116 @@ export default class AzureTextToSpeech {
     this.playing = false;
     this.queue = [];
     this.cachedSounds = {};
-    this.defaultLanguage = 'English';
-    this.defaultGender = 'female';
     this.playbackOptions = {
       volume: 1.0,
       loop: false,
       forceHTML5: false,
       allowHTML5Mobile: true,
-      onEnded: this.onSpeechComplete
+      onEnded: this.onSoundComplete
     };
   }
 
-  cacheKey = (language, gender, text) => {
-    return hashString([language, gender, text].join('-'));
+  /**
+   *
+   * @param {Promise<SoundResponse>} soundPromise A promise that returns a SoundResponse when resolved.
+   */
+  enqueueAndPlay = soundPromise => {
+    this.enqueue(soundPromise);
+    this.playFromQueue();
   };
 
-  getCachedSound = (language, gender, text) => {
-    const key = this.cacheKey(language, gender, text);
-    return this.cachedSounds[key];
+  /**
+   * Returns a promise representing a TTS sound that can be enqueued and played.
+   * @param {Object} opts
+   * @param {string} opts.text
+   * @param {string} opts.gender
+   * @param {string} opts.languageCode
+   * @param {string} opts.url
+   * @param {string} opts.ssml
+   * @param {string} opts.token Authentication token from Azure.
+   * @param {function(Array<string>)} opts.onProfanityFound Called if the given text contains profanity.
+   * @returns {Promise<SoundResponse>} A promise that returns a SoundResponse when resolved.
+   */
+  createSoundPromise = opts => {
+    const {
+      text,
+      gender,
+      languageCode,
+      url,
+      ssml,
+      token,
+      onProfanityFound
+    } = opts;
+    const cachedSound = this.getCachedSound(languageCode, gender, text);
+    const wrappedSetCachedSound = SoundResponse => {
+      this.setCachedSound(languageCode, gender, text, SoundResponse);
+    };
+    const wrappedCreateSoundResponse = opts => {
+      return this.createSoundResponse(opts);
+    };
+
+    // If we have the sound already, resolve immediately.
+    if (cachedSound) {
+      const {bytes, profaneWords} = cachedSound;
+
+      return new Promise(resolve => {
+        if (profaneWords && profaneWords.length > 0) {
+          onProfanityFound(profaneWords);
+          resolve(wrappedCreateSoundResponse({profaneWords}));
+        } else {
+          resolve(wrappedCreateSoundResponse({bytes}));
+        }
+      });
+    }
+
+    // Otherwise, check the text for profanity and request the TTS sound.
+    return new Promise(async resolve => {
+      const profaneWords = await findProfanity(
+        text,
+        languageCode,
+        true /* shouldCache */
+      );
+
+      if (profaneWords && profaneWords.length > 0) {
+        onProfanityFound(profaneWords);
+        const SoundResponse = wrappedCreateSoundResponse({profaneWords});
+        wrappedSetCachedSound(SoundResponse);
+        resolve(SoundResponse);
+        return;
+      }
+
+      let request = new XMLHttpRequest();
+      request.onreadystatechange = function() {
+        if (request.readyState !== READY_STATE_DONE) {
+          return;
+        }
+
+        if (request.status >= 200 && request.status < 300) {
+          const SoundResponse = wrappedCreateSoundResponse({
+            bytes: request.response
+          });
+          wrappedSetCachedSound(SoundResponse);
+          resolve(SoundResponse);
+        } else {
+          resolve(wrappedCreateSoundResponse({error: request.statusText}));
+        }
+      };
+
+      request.open('POST', url, true);
+      request.responseType = 'arraybuffer';
+      request.setRequestHeader('Authorization', `Bearer ${token}`);
+      request.setRequestHeader('Content-Type', 'application/ssml+xml');
+      request.setRequestHeader(
+        'X-Microsoft-OutputFormat',
+        'audio-16khz-32kbitrate-mono-mp3'
+      );
+      request.send(ssml);
+    });
   };
 
-  setCachedSound = (language, gender, text, speechResponse) => {
-    const key = this.cacheKey(language, gender, text);
-    this.cachedSounds[key] = speechResponse;
-  };
-
-  enqueue = promise => {
-    this.queue.push(promise);
-  };
-
-  dequeue = () => {
-    return this.queue.shift();
-  };
-
+  /**
+   * Plays the next sound in the queue. Automatically ends playback if the SoundResponse was not successful.
+   */
   playFromQueue = async () => {
     if (this.playing) {
       return;
@@ -89,109 +166,80 @@ export default class AzureTextToSpeech {
     }
   };
 
-  createSpeechResponse = opts => {
-    return new SpeechResponse(
+  /**
+   * Called when a TTS sound is done playing. Set as part of this.playbackOptions.
+   */
+  onSoundComplete = () => {
+    this.playing = false;
+    this.playFromQueue();
+  };
+
+  /**
+   * Generates the cache key, which is an MD5 hash of the composite key (languageCode-gender-text).
+   * We hash the composite key to avoid extra-long cache keys (as the text is part of the key).
+   * @param {string} languageCode
+   * @param {string} gender
+   * @param {string} text
+   * @returns {string} MD5 hash string
+   */
+  cacheKey = (languageCode, gender, text) => {
+    return hashString([languageCode, gender, text].join('-'));
+  };
+
+  /**
+   * Returns the cached SoundResponse if it exists.
+   * @param {string} languageCode
+   * @param {string} gender
+   * @param {string} text
+   * @returns {SoundResponse|undefined}
+   */
+  getCachedSound = (languageCode, gender, text) => {
+    const key = this.cacheKey(languageCode, gender, text);
+    return this.cachedSounds[key];
+  };
+
+  /**
+   * Adds the given SoundResponse to the cache.
+   * @param {string} languageCode
+   * @param {string} gender
+   * @param {string} text
+   * @param {SoundResponse} SoundResponse
+   */
+  setCachedSound = (languageCode, gender, text, SoundResponse) => {
+    const key = this.cacheKey(languageCode, gender, text);
+    this.cachedSounds[key] = SoundResponse;
+  };
+
+  /**
+   * Add a promise to the end of the queue.
+   * @param {Promise<SoundResponse>} promise A promise that returns a SoundResponse when resolved.
+   */
+  enqueue = promise => {
+    this.queue.push(promise);
+  };
+
+  /**
+   * Get the next promise in the queue.
+   * @returns {Promise<SoundResponse>} A promise that returns a SoundResponse when resolved.
+   */
+  dequeue = () => {
+    return this.queue.shift();
+  };
+
+  /**
+   * Wrapper for creating a new SoundResponse.
+   * @param {Object} opts
+   * @param {ArrayBuffer} opts.bytes Bytes representing the sound to be played.
+   * @param {Array<string>} opts.profaneWords Profanity present in requested TTS text.
+   * @param {string} opts.error Any error during the TTS request.
+   * @returns {SoundResponse}
+   */
+  createSoundResponse = opts => {
+    return new SoundResponse(
       opts.bytes,
       this.playbackOptions,
       opts.profaneWords,
       opts.error
     );
-  };
-
-  createSoundPromise = (sound, opts) => {
-    const {
-      text,
-      voices,
-      language,
-      gender,
-      region,
-      token,
-      onProfanityFound
-    } = opts;
-    const wrappedSetCachedSound = speechResponse => {
-      this.setCachedSound(language, gender, text, speechResponse);
-    };
-    const wrappedCreateSpeechResponse = opts => {
-      return this.createSpeechResponse(opts);
-    };
-
-    if (sound) {
-      const {bytes, profaneWords} = sound;
-
-      return new Promise(resolve => {
-        if (profaneWords && profaneWords.length > 0) {
-          onProfanityFound(profaneWords);
-          resolve(wrappedCreateSpeechResponse({profaneWords}));
-        } else {
-          resolve(wrappedCreateSpeechResponse({bytes}));
-        }
-      });
-    }
-
-    return new Promise(async resolve => {
-      const profaneWords = await findProfanity(
-        text,
-        voices[language].languageCode,
-        true /* shouldCache */
-      );
-
-      if (profaneWords && profaneWords.length > 0) {
-        onProfanityFound(profaneWords);
-        const speechResponse = wrappedCreateSpeechResponse({profaneWords});
-        wrappedSetCachedSound(speechResponse);
-        resolve(speechResponse);
-        return;
-      }
-
-      let request = new XMLHttpRequest();
-      request.onreadystatechange = function() {
-        if (request.readyState !== READY_STATE_DONE) {
-          return;
-        }
-
-        if (request.status >= 200 && request.status < 300) {
-          const speechResponse = wrappedCreateSpeechResponse({
-            bytes: request.response
-          });
-          wrappedSetCachedSound(speechResponse);
-          resolve(speechResponse);
-        } else {
-          resolve(wrappedCreateSpeechResponse({error: request.statusText}));
-        }
-      };
-
-      const url = `https://${region}.tts.speech.microsoft.com/cognitiveservices/v1`;
-      request.open('POST', url, true);
-      request.responseType = 'arraybuffer';
-      request.setRequestHeader('Authorization', `Bearer ${token}`);
-      request.setRequestHeader('Content-Type', 'application/ssml+xml');
-      request.setRequestHeader(
-        'X-Microsoft-OutputFormat',
-        'audio-16khz-32kbitrate-mono-mp3'
-      );
-      const voice = voices[language][gender];
-      const requestSSML = `<speak version="1.0" xmlns="https://www.w3.org/2001/10/synthesis" xml:lang="en-US"><voice name="${voice}">${text}</voice></speak>`;
-      request.send(requestSSML);
-    });
-  };
-
-  onSpeechComplete = () => {
-    this.playing = false;
-    this.playFromQueue();
-  };
-
-  play = opts => {
-    let {language, gender} = opts;
-    const {text, voices} = opts;
-
-    // Fall back to defaults if requested language/gender combination is not available.
-    if (!(voices[language] && voices[language][gender])) {
-      language = this.defaultLanguage;
-      gender = this.defaultGender;
-    }
-
-    const cachedSound = this.getCachedSound(language, gender, text);
-    this.enqueue(this.createSoundPromise(cachedSound, opts));
-    this.playFromQueue();
   };
 }
