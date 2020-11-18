@@ -73,7 +73,6 @@ describe('scriptEditorRedux reducer tests', () => {
       initialState.lessonGroups
     );
 
-    // Verify that the JSON contains serialized lesson groups.
     expect(mappedLessonGroups.length).to.equal(2);
     expect(mappedLessonGroups[0].lessons.length).to.equal(3);
     expect(mappedLessonGroups[0].lessons[0].levels.length).to.equal(0);
