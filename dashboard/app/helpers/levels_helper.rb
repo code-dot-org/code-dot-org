@@ -508,12 +508,13 @@ module LevelsHelper
     # First, get the token and region
     options = {}
     timeout = DCDO.get('azure_speech_service_timeout', 5)
-    options[:token] = get_azure_speech_service_token(CDO.azure_speech_service_region, CDO.azure_speech_service_key, timeout)
+    region = CDO.azure_speech_service_region
+    options[:token] = get_azure_speech_service_token(region, CDO.azure_speech_service_key, timeout)
     return {} unless options[:token].present?
-    options[:region] = CDO.azure_speech_service_region
+    options[:url] = "https://#{region}.tts.speech.microsoft.com/cognitiveservices/v1"
 
     # Then, get the list of voices
-    voices = get_azure_speech_service_voices(options[:region], options[:token], timeout)
+    voices = get_azure_speech_service_voices(region, options[:token], timeout)
     return {} unless (voices&.length || 0) > 0
     voice_dictionary = {}
     voices.each do |voice|

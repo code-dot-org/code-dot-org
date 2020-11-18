@@ -36,7 +36,7 @@ module ViewOptionsHelper
     :answerdash,
     :signed_replay_log_url,
     :azure_speech_service_token,
-    :azure_speech_service_region,
+    :azure_speech_service_url,
     :azure_speech_service_voices,
     :useGoogleBlockly
   )
