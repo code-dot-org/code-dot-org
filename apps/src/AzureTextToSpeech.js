@@ -112,8 +112,17 @@ export default class AzureTextToSpeech {
         return;
       }
 
+      // As of 11/18/2020, jQuery does not support arraybuffer as a responseType; use XMLHttpRequest instead.
       let request = new XMLHttpRequest();
-      request.onreadystatechange = function() {
+      request.open('POST', url, true);
+      request.setRequestHeader('Authorization', `Bearer ${token}`);
+      request.setRequestHeader('Content-Type', 'application/ssml+xml');
+      request.setRequestHeader(
+        'X-Microsoft-OutputFormat',
+        'audio-16khz-32kbitrate-mono-mp3'
+      );
+      request.responseType = 'arraybuffer';
+      request.onreadystatechange = () => {
         if (request.readyState !== READY_STATE_DONE) {
           return;
         }
@@ -128,15 +137,6 @@ export default class AzureTextToSpeech {
           resolve(wrappedCreateSoundResponse({error: request.statusText}));
         }
       };
-
-      request.open('POST', url, true);
-      request.responseType = 'arraybuffer';
-      request.setRequestHeader('Authorization', `Bearer ${token}`);
-      request.setRequestHeader('Content-Type', 'application/ssml+xml');
-      request.setRequestHeader(
-        'X-Microsoft-OutputFormat',
-        'audio-16khz-32kbitrate-mono-mp3'
-      );
       request.send(ssml);
     });
   };
