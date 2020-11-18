@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import msg from '@cdo/locale';
 import {getFirstParam} from '../dropletUtils';
-import {stripQuotes} from '../utils';
 import GetColumnParamPicker, {ParamType} from './GetColumnParamPicker';
 
 function openModal(type, callback, table) {
@@ -40,9 +39,8 @@ export function getTables() {
 
 export function getColumns() {
   return function(editor) {
-    const tableName = stripQuotes(
-      getFirstParam('getColumn', this.parent, editor)
-    );
+    const firstParam = getFirstParam('getColumn', this.parent, editor);
+    const tableName = firstParam.substring(1, firstParam.length - 1);
     return [
       {
         text: msg.choosePrefix(),
