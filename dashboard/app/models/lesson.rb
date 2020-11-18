@@ -270,6 +270,7 @@ class Lesson < ActiveRecord::Base
     summary = summarize.dup
     # Do not let script name override lesson name when there is only one lesson
     summary[:name] = name
+    summary[:lesson_group_display_name] = lesson_group&.display_name
     summary.freeze
   end
 
@@ -298,7 +299,8 @@ class Lesson < ActiveRecord::Base
       announcements: announcements,
       activities: lesson_activities.map(&:summarize_for_edit),
       resources: resources,
-      objectives: objectives.map(&:summarize_for_edit)
+      objectives: objectives.map(&:summarize_for_edit),
+      courseVersionId: lesson_group.script.course_version&.id
     }
   end
 

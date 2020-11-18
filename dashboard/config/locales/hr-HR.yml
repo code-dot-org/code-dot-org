@@ -91,10 +91,10 @@ hr:
     valid_password: Ispravna lozinka!
     invalid_password: Lozinka mora biti duga najmanje 6 znakova
     mismatch_password: Dvije lozinke koje ste unijeli ne podudaraju se
-    agree_us_data_transfer_student: "** Pristajem na to da Code.org može prenositi
+    agree_us_data_transfer_student: "**Pristajem na to da Code.org može prenositi
       podatke (uključujući osobne podatke) prikupljene mojim korištenjem ove stranice
-      u Sjedinjene Države u svrhu hostinga i obrade takvih podataka."
-    agree_us_data_transfer_teacher: "** Pristajem na to da Code.org može prenositi
+      u Sjedinjene Države** u svrhu hostinga i obrade takvih podataka."
+    agree_us_data_transfer_teacher: "**Pristajem na to da Code.org može prenositi
       podatke (uključujući osobne podatke) prikupljene mojim korištenjem (i korištenjem
       mojih učenika) ove stranice u Sjedinjene Države** u svrhu hostinga i obrade
       takvih podataka."
