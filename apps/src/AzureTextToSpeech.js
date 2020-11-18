@@ -1,7 +1,5 @@
 import Sounds from '@cdo/apps/Sounds';
-// TODO: move this function to shared util file
-import {findProfanity} from '@cdo/apps/code-studio/components/libraries/util';
-import {hashString} from '@cdo/apps/utils';
+import {hashString, findProfanity} from '@cdo/apps/utils';
 
 // XMLHttpRequest readyState 4 means the request is done.
 // https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/readyState
