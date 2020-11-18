@@ -21,8 +21,9 @@
         !=I18n.t(:footer_powered_by_aws)
         %br
         !=I18n.t(:footer_built_on_github)
-      %a.whitefooterlink{:href=>"https://aws.amazon.com/what-is-cloud-computing"}
-        %img{:src=>"/shared/images/Powered-By_logo-horiz_RGB_REV.png", :alt=>"Powered by AWS Cloud Computing", :style=>"width: 190px"}
+      %div.powered-by-aws
+        %a{:href=>"https://aws.amazon.com/what-is-cloud-computing"}
+          %img{:src=>"/shared/images/Powered-By_logo-horiz_RGB_REV.png", :alt=>"Powered by AWS Cloud Computing", :style=>"width: 190px"}
     .right{:style=>"float:right"}
       .language-dropdown
         =view :language
