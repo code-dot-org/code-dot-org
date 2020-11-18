@@ -60,8 +60,8 @@ export default class AzureTextToSpeech {
    * @param {string} opts.text
    * @param {string} opts.gender
    * @param {string} opts.languageCode
-   * @param {string} opts.url
-   * @param {string} opts.ssml
+   * @param {string} opts.url URL to request sound from.
+   * @param {string} opts.ssml SSML in request body.
    * @param {string} opts.token Authentication token from Azure.
    * @param {function(Array<string>)} opts.onProfanityFound Called if the given text contains profanity.
    * @returns {Promise<SoundResponse>} A promise that returns a SoundResponse when resolved.
