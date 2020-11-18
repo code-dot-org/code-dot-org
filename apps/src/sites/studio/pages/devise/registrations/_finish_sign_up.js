@@ -9,14 +9,16 @@ import firehoseClient from '@cdo/apps/lib/util/firehose';
 const TEACHER_ONLY_FIELDS = [
   '#teacher-name-label',
   '#school-info-section',
-  '#email-preference-radio'
+  '#email-preference-radio',
+  '#teacher-gdpr'
 ];
 const STUDENT_ONLY_FIELDS = [
   '#student-name-label',
   '#gender-dropdown',
   '#age-dropdown',
   '#student-consent',
-  '#parent-email-container'
+  '#parent-email-container',
+  '#student-gdpr'
 ];
 
 // Values loaded from scriptData are always initial values, not the latest
