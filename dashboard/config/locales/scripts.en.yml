@@ -18270,9 +18270,9 @@ en:
             AI for Oceans:
               name: AI for Oceans
             oceans:
-              name: lesson Machine Learning with AI for Oceans
+              name: Machine Learning with AI for Oceans
             intro:
-              name: Introduction to Machine Learning
+              name: Introduction
             society:
               name: Machine Learning & Societal Impact
             decisions:
@@ -18300,7 +18300,7 @@ en:
             miseducation:
               name: Mis-education of the Machine
             ethics:
-              name: App Ethics Challenge
+              name: Ethics
             ethics-hoc2020:
               name: AI & Ethics Hour of Code 2020
             hypothesis:
@@ -18310,9 +18310,21 @@ en:
             collection:
               name: Collecting Your Own Data
             project:
-              name: Project
+              name: Final project
+            KNN:
+              name: KNN
+            SVM:
+              name: SVM
+            App:
+              name: Making an app
+            Ethics:
+              name: Ethics
+            Project:
+              name: Final project
+            appendix:
+              name: Appendix
           lesson_groups: {}
-          title: Ml/AI Unit - CSD
+          title: ML/AI Unit - CSD
           description_audience: ''
           description_short: ML/AI Unit
           description: Brainstorm / Playground area for ML/AI Unit Development for CSD. For future questions about this, ask Dan Schneider.
