@@ -85,6 +85,7 @@ class ContactRollupsV2
     # However, if the build steps above fail, none of them should run.
     sync_new_contacts_with_pardot
     sync_updated_contacts_with_pardot
+    delete_contacts_from_pardot
   end
 
   # Collects raw contact data from multiple tables into ContactRollupsRaw.
@@ -190,6 +191,21 @@ class ContactRollupsV2
   ensure
     @log_collector.record_metrics(
       {SyncUpdatedContactsDuration: Time.now - start_time}
+    )
+  end
+
+  def delete_contacts_from_pardot
+    start_time = Time.now
+    @log_collector.time_and_continue('Delete contacts marked for deletion from Pardot') do
+      results = ContactRollupsPardotMemory.delete_pardot_prospects(is_dry_run: @is_dry_run)
+      @log_collector.record_metrics(
+        ProspectsDeleted: results[:prospects_deleted],
+        ProspectDeletionsRejected: results[:prospect_deletions_rejected]
+      )
+    end
+  ensure
+    @log_collector.record_metrics(
+      {DeleteContactsDuration: Time.now - start_time}
     )
   end
 
