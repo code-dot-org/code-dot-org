@@ -4,7 +4,10 @@ import sinon from 'sinon';
 import {expect} from '../../../../util/reconfiguredChai';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import {ChartType} from '@cdo/apps/storage/dataBrowser/dataUtils';
-import {UnconnectedVisualizerModal as VisualizerModal} from '@cdo/apps/storage/dataBrowser/dataVisualizer/VisualizerModal';
+import {
+  UnconnectedVisualizerModal as VisualizerModal,
+  OperatorType
+} from '@cdo/apps/storage/dataBrowser/dataVisualizer/VisualizerModal';
 import DropDownField from '@cdo/apps/storage/dataBrowser/dataVisualizer/DropdownField';
 
 const DEFAULT_PROPS = {
@@ -257,26 +260,38 @@ describe('VisualizerModal', () => {
         {id: 5, filterCol: 0, chartCol: 5}
       ];
       expect(
-        wrapper.instance().filterRecords(records, 'filterCol', '123', '>')
-      ).to.deep.equal([records[1], records[3]]);
+        wrapper
+          .instance()
+          .filterRecords(records, 'filterCol', '123', OperatorType.GREATER_THAN)
+      ).to.deep.equal([records[1]]);
 
       expect(
-        wrapper.instance().filterRecords(records, 'filterCol', '456', '<')
+        wrapper
+          .instance()
+          .filterRecords(records, 'filterCol', '456', OperatorType.LESS_THAN)
       ).to.deep.equal([records[0], records[2], records[4]]);
 
       expect(
-        wrapper.instance().filterRecords(records, 'filterCol', '456', '<=')
-      ).to.deep.equal([
-        records[0],
-        records[1],
-        records[2],
-        records[3],
-        records[4]
-      ]);
+        wrapper
+          .instance()
+          .filterRecords(
+            records,
+            'filterCol',
+            '456',
+            OperatorType.LESS_THAN_OR_EQUAL
+          )
+      ).to.deep.equal([records[0], records[1], records[2], records[4]]);
 
       expect(
-        wrapper.instance().filterRecords(records, 'filterCol', '123', '>=')
-      ).to.deep.equal([records[0], records[1], records[2], records[3]]);
+        wrapper
+          .instance()
+          .filterRecords(
+            records,
+            'filterCol',
+            '123',
+            OperatorType.GREATER_THAN_OR_EQUAL
+          )
+      ).to.deep.equal([records[0], records[1], records[2]]);
     });
     it('works with booleans', () => {
       let records = [
