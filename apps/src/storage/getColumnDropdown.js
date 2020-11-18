@@ -37,10 +37,14 @@ export function getTables() {
   };
 }
 
+function getTableNameFromColumnSocket(socket, editor) {
+  const paramValue = getFirstParam('getColumn', socket.parent);
+  return paramValue.substring(1, paramValue.length - 1);
+}
+
 export function getColumns() {
   return function(editor) {
-    const firstParam = getFirstParam('getColumn', this.parent, editor);
-    const tableName = firstParam.substring(1, firstParam.length - 1);
+    const tableName = getTableNameFromColumnSocket(this, editor);
     return [
       {
         text: msg.choosePrefix(),
@@ -53,3 +57,7 @@ export function getColumns() {
     ];
   };
 }
+
+export var __TestInterface = {
+  getTableNameFromColumnSocket: getTableNameFromColumnSocket
+};
