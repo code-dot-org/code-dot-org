@@ -1,17 +1,6 @@
-<%
-# TODO: Rails 4.1 may be able to be configured with the database url
-# instead of having to parse it here. Actually 4.0 can do that too but
-# it doesn't work with the way seamless_database_pool wants to
-# configure the read pool
-
-writer = URI.parse(CDO.dashboard_db_writer) if CDO.dashboard_db_writer
-reader = URI.parse(CDO.dashboard_db_reader) if CDO.dashboard_db_reader
-%>
-
 mysql_defaults: &mysql_defaults
-  adapter: seamless_database_pool
+  adapter: mysql2
   prepared_statements: false
-  pool_adapter: mysql2
   encoding: utf8mb4
   collation: utf8mb4_unicode_ci
   default_group: 'cdo'
@@ -20,6 +9,7 @@ mysql_defaults: &mysql_defaults
   # See: https://api.rubyonrails.org/classes/ActiveRecord/ConnectionAdapters/ConnectionPool.html
   # maximum number of connections the pool may manage (default 5).
   pool: 5
+
   # number of seconds to wait for a connection to become available before giving up and raising a timeout error (default 5 seconds).
   checkout_timeout: 3
 
@@ -45,37 +35,38 @@ mysql_defaults: &mysql_defaults
   # There is a retry if necessary, so the total effective timeout value is two times the option value.
   write_timeout: 5
 
-  # Seamless Database Pool settings:
-  # See: https://github.com/bdurand/seamless_database_pool#configuration
-  master:
+database_defaults: &database_defaults
+  <%
+    writer = URI.parse(CDO.dashboard_db_writer) if CDO.dashboard_db_writer
+    reader = URI.parse(CDO.dashboard_db_reader) if CDO.dashboard_db_reader
+  %>
+
+  primary:
+    <<: *mysql_defaults
     username: <%= writer.user || 'root' %>
     password: <%= writer.password || '' %>
     host: <%= writer.host || 'localhost' %>
     port: <%= writer.port || 3306 %>
     database: <%= writer.path.sub(%r{^/},"") || "dashboard_#{Rails.env}" %>
   <% if reader && reader != writer %>
-    # When there is a separate read-only database configured, do NOT
-    # include the master database in the read pool.
-    # Ref: https://github.com/bdurand/seamless_database_pool#the-master-connection
-    # "By default, the master connection will be included in the read pool.
-    #  If you would like to dedicate this connection only for write operations, you should set the pool weight to zero."
-    pool_weight: 0
-  read_pool:
-   - username: <%= reader.user %>
-     password: <%= reader.password %>
-     host: <%= reader.host %>
-     port: <%= reader.port || 3306 %>
-     database: <%= reader.path.sub(%r{^/},"") %>
+  primary_replica:
+    <<: *mysql_defaults
+    username: <%= reader.user %>
+    password: <%= reader.password %>
+    host: <%= reader.host %>
+    port: <%= reader.port || 3306 %>
+    database: <%= reader.path.sub(%r{^/},"") %>
+    replica: true
   <% end %>
 
 development:
-  <<: *mysql_defaults
+  <<: *database_defaults
 
 staging: &staging
-  <<: *mysql_defaults
+  <<: *database_defaults
 
 adhoc:
-  <<: *mysql_defaults
+  <<: *database_defaults
 
 # levelbuilder environment extends the staging environment
 levelbuilder:
@@ -99,4 +90,4 @@ test:
   default_group: 'cdo'
 
 production:
-  <<: *mysql_defaults
+  <<: *database_defaults
