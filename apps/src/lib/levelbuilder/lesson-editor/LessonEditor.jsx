@@ -89,7 +89,8 @@ class LessonEditor extends Component {
     relatedLessons: PropTypes.arrayOf(relatedLessonShape).isRequired,
     initialObjectives: PropTypes.arrayOf(PropTypes.object).isRequired,
     activities: PropTypes.arrayOf(activityShape).isRequired,
-    resources: PropTypes.arrayOf(resourceShape).isRequired
+    resources: PropTypes.arrayOf(resourceShape).isRequired,
+    courseVersionId: PropTypes.number
   };
 
   constructor(props) {
@@ -317,7 +318,7 @@ class LessonEditor extends Component {
           collapsed={true}
           fullWidth={true}
         >
-          <ResourcesEditor />
+          <ResourcesEditor courseVersionId={this.props.courseVersionId} />
         </CollapsibleEditorSection>
 
         <CollapsibleEditorSection
