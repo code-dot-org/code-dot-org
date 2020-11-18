@@ -484,6 +484,10 @@ class Lesson < ActiveRecord::Base
     # In the future, only levelbuilder should be added to this list.
     raise unless [:development, :adhoc].include? rack_env
 
+    # course version id should always be present for CSF/CSD/CSP 2020 courses.
+    course_version_id = script&.get_course_version&.id
+    raise unless course_version_id
+
     if cb_lesson_data.empty?
       self.lesson_activities = Services::LessonImportHelper.update_lockable_lesson(script_levels, id)
       self.script_levels = []
@@ -494,9 +498,6 @@ class Lesson < ActiveRecord::Base
       self.creative_commons_license = cb_lesson_data['creative_commons_license']
       self.relative_position = cb_lesson_data['number'] || 1
       self.lesson_activities = Services::LessonImportHelper.create_lesson_activities(cb_lesson_data['activities'], script_levels, id)
-      course_version_id = script&.get_course_version&.id
-      # course version id should always be present for CSF/CSD/CSP 2020 courses.
-      raise unless course_version_id
       self.resources = Services::LessonImportHelper.create_lesson_resources(cb_lesson_data['resources'], course_version_id)
       self.script_levels = []
     end
