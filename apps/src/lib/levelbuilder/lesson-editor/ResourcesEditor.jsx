@@ -38,6 +38,9 @@ const styles = {
 
 class ResourcesEditor extends Component {
   static propTypes = {
+    courseVersionId: PropTypes.number,
+
+    // Provided by redux
     resources: PropTypes.arrayOf(resourceShape).isRequired,
     addResource: PropTypes.func.isRequired,
     removeResource: PropTypes.func.isRequired
@@ -69,7 +72,17 @@ class ResourcesEditor extends Component {
    */
   debouncedSearch = _.debounce((q, callback) => {
     const searchLimit = 7;
-    const searchUrl = `/resourcesearch/${encodeURIComponent(q)}/${searchLimit}`;
+    const params = {
+      query: encodeURIComponent(q),
+      limit: searchLimit
+    };
+    if (this.props.courseVersionId) {
+      params['courseVersionId'] = this.props.courseVersionId;
+    }
+    const query_params = Object.keys(params)
+      .map(key => `${key}=${params[key]}`)
+      .join('&');
+    const searchUrl = `/resourcesearch?${query_params}`;
     // Note, we don't return the fetch promise chain because in a debounced
     // function we're not guaranteed to return anything, and it's not a great
     // interface to sometimes return undefined when there's still async work
@@ -136,6 +149,7 @@ class ResourcesEditor extends Component {
           isOpen={this.state.newResourceDialogOpen}
           onSave={this.addResource}
           handleClose={this.handleNewResourceDialogClose}
+          courseVersionId={this.props.courseVersionId}
         />
         Resources
         <input
