@@ -43,21 +43,10 @@ export default class TextareaWithMarkdownPreview extends React.Component {
   static propTypes = {
     markdown: PropTypes.string,
     label: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
+    name: PropTypes.string,
     inputRows: PropTypes.number,
-    helpTip: PropTypes.string
-  };
-
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      markdown: this.props.markdown || ''
-    };
-  }
-
-  handleMarkdownChange = event => {
-    this.setState({markdown: event.target.value});
+    helpTip: PropTypes.string,
+    handleMarkdownChange: PropTypes.func.isRequired
   };
 
   render() {
@@ -74,10 +63,10 @@ export default class TextareaWithMarkdownPreview extends React.Component {
             <div style={{marginBottom: 5}}>Markdown:</div>
             <textarea
               name={this.props.name}
-              defaultValue={this.state.markdown}
+              value={this.props.markdown}
               rows={this.props.inputRows || 5}
               style={styles.input}
-              onChange={this.handleMarkdownChange}
+              onChange={this.props.handleMarkdownChange}
             />
           </div>
           <div style={styles.container}>
@@ -85,7 +74,7 @@ export default class TextareaWithMarkdownPreview extends React.Component {
             <div style={styles.preview}>
               <SafeMarkdown
                 openExternalLinksInNewTab={true}
-                markdown={this.state.markdown}
+                markdown={this.props.markdown}
               />
             </div>
           </div>

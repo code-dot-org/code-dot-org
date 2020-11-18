@@ -1198,7 +1198,7 @@ exports.createJsWrapperBlockCreator = function(
         }
       }
 
-      if (this.type === 'gamelab_setQuestion') {
+      if (this.type === 'gamelab_setPrompt') {
         const input = this.getInput('VAR');
         if (input) {
           const targetBlock = input.connection.targetBlock();
