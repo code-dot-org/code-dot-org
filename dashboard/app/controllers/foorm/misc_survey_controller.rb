@@ -45,6 +45,11 @@ module Foorm
       }
     end
 
+    # Gets a json format of a general misc survey.
+    # GET '/form_data/:misc_form_path'
+    # This is intended for surveys that need to be integrated, with custom rendering, into
+    # an existing page. One example of this is the NPS survey which is rendered as part
+    # of the teacher homepage. The client will handle the custom rendering of the survey.
     def show
       return render json: {}, status: :no_content unless current_user&.teacher? && current_user.email.present?
 

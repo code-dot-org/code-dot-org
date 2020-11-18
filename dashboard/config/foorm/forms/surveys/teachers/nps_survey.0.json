@@ -19,9 +19,7 @@
       "type": "checkbox",
       "name": "nps_details",
       "visibleIf": "{nps_value} notempty",
-      "title": "What is the top area of our website and curriculum that we should focus on improving?",
-      "isRequired": true,
-      "requiredErrorText": "Please select up to three areas",
+      "title": "What are the top areas of our website and/or curriculum that we should focus on improving? (Choose up to 3)",
       "validators": [
        {
         "type": "answercount",
