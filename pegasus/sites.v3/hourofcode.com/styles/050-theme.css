@@ -235,6 +235,11 @@ body {
     float: none;
     text-align: center;
   }
+
+  #powered-by-aws {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 @media (max-width: 768px) {
@@ -282,5 +287,10 @@ body {
 
   #copyright {
     padding: 12px 12px 36px 12px;
+  }
+
+  #powered-by-aws {
+    width: 100%;
+    text-align: center;
   }
 }
