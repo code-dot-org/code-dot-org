@@ -82,11 +82,11 @@ class TestController < ApplicationController
     )
     activity = lesson.lesson_activities.create(
       position: 1,
-      seeding_key: SecureRandom.uuid
+      key: SecureRandom.uuid
     )
     section = activity.activity_sections.create(
       position: 1,
-      seeding_key: SecureRandom.uuid
+      key: SecureRandom.uuid
     )
     script_level = section.script_levels.create(
       script: script,
