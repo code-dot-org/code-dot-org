@@ -15,8 +15,8 @@ class SpeechResponse {
     this.error = error;
   }
 
-  hasProfanity = () => {
-    return this.profaneWords.length > 0;
+  success = () => {
+    return this.bytes && this.profaneWords.length === 0 && !this.error;
   };
 }
 
@@ -79,13 +79,13 @@ export default class AzureTextToSpeech {
 
     this.playing = true;
     let response = await nextSoundPromise;
-    if (response.hasProfanity() || response.error) {
-      response.playbackOptions.onEnded();
-    } else {
+    if (response.success()) {
       Sounds.getSingleton().playBytes(
         response.bytes.slice(0),
         response.playbackOptions
       );
+    } else {
+      response.playbackOptions.onEnded();
     }
   };
 
