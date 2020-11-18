@@ -34,20 +34,15 @@
             </block>
           </value>
           <statement name="DO0">
-            <block type="gamelab_moveForward">
+            <block type="gamelab_moveBackward">
               <value name="SPRITE">
                 <block type="sprite_parameter_get">
                   <title name="VAR">this sprite</title>
                 </block>
               </value>
               <value name="DISTANCE">
-                <block type="math_single">
-                  <title name="OP">NEG</title>
-                  <value name="NUM">
-                    <block type="math_number">
-                      <title name="NUM">5</title>
-                    </block>
-                  </value>
+                <block type="math_number">
+                  <title name="NUM">5</title>
                 </block>
               </value>
             </block>
