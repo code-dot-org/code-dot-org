@@ -76,10 +76,10 @@ level 'CSP-PL M6 - Role of teacher', progression: 'Role of the teacher during th
 level 'CSP - Module 6 Wrap Up', progression: 'Module 6 Asynchronous Wrap-Up (~10 minutes)'
 
 lesson 'Module 7', display_name: 'Module 7'
-level 'VirtualPLOverview'
+level 'CSP-PL Module 7 - Workshop Overview', progression: 'Module 7 overview (~5 minutes)'
 level 'CSP - Module 3 Wrap Up', progression: 'Module 7 Asynchronous Wrap-Up (~10 minutes)'
 
 lesson 'Module 8', display_name: 'Module 8'
-level 'VirtualPLOverview'
+level 'CSP-PL Module 8 - Workshop Overview', progression: 'Module 8 overview (~5 minutes)'
 level 'CSP - Module 3 Wrap Up', progression: 'Module 8 Asynchronous Wrap-Up (~10 minutes)'
 
