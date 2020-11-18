@@ -24,7 +24,7 @@ export const fakeLesson = (
   isFocusArea: false
 });
 
-export const fakeLevel = overrides => {
+export const fakeLevel = (overrides = {}) => {
   const levelNumber = overrides.levelNumber || 1;
   return {
     id: overrides.id || levelNumber,

@@ -31,6 +31,13 @@ levels.forEach(
 const pairedProgress = fakeProgressForLevels(levels);
 pairedProgress[levels[0].id].paired = true;
 
+const sublevels = fakeLevels(5);
+sublevels.forEach((sub, index) => {
+  sub.letter = String.fromCharCode('a'.charCodeAt(0) + index);
+});
+const levelWithSublevels = fakeLevels(1)[0];
+levelWithSublevels.sublevels = sublevels;
+
 export default storybook => {
   storybook.storiesOf('Progress/ProgressBubbleSet', module).addStoryTable([
     {
@@ -111,6 +118,18 @@ export default storybook => {
           levels={[unpluggedLevel]}
           studentProgress={studentProgress}
           disabled={false}
+        />
+      )
+    },
+    {
+      name: 'level with sublevels',
+      description: 'Should show small dots for sublevels',
+      story: () => (
+        <ProgressBubbleSet
+          levels={[levelWithSublevels]}
+          studentProgress={studentProgress}
+          disabled={false}
+          showSublevels={true}
         />
       )
     }

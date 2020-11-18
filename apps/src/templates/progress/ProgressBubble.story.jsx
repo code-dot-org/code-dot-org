@@ -1,8 +1,10 @@
 import React from 'react';
 import ProgressBubble from './ProgressBubble';
-import {LevelStatus} from '@cdo/apps/util/sharedConstants';
+import {levelProgressWithStatus} from '@cdo/apps/templates/progress/progressHelpers';
+import {LevelKind, LevelStatus} from '@cdo/apps/util/sharedConstants';
 
 const statuses = Object.values(LevelStatus);
+const perfectProgress = levelProgressWithStatus(LevelStatus.perfect);
 
 export default storybook => {
   storybook.storiesOf('Progress/ProgressBubble', module).addStoryTable(
@@ -12,12 +14,16 @@ export default storybook => {
         story: () => (
           <ProgressBubble
             level={{
+              kind:
+                status === LevelStatus.completed_assessment
+                  ? LevelKind.assessment
+                  : LevelKind.level,
+              icon: status === LevelStatus.locked ? 'fa-lock' : 'fa-document',
               id: 1,
               levelNumber: 3,
-              status: status,
-              url: '/foo/bar',
-              icon: status === LevelStatus.locked ? 'fa-lock' : 'fa-document'
+              url: '/foo/bar'
             }}
+            studentLevelProgress={levelProgressWithStatus(status)}
             disabled={status === LevelStatus.locked}
           />
         )
@@ -30,10 +36,10 @@ export default storybook => {
               level={{
                 id: 1,
                 levelNumber: 3,
-                status: LevelStatus.perfect,
-                url: '/foo/bar',
-                icon: 'fa-document'
+                icon: 'fa-document',
+                kind: LevelKind.level
               }}
+              studentLevelProgress={perfectProgress}
               disabled={false}
             />
           )
@@ -46,10 +52,11 @@ export default storybook => {
               level={{
                 id: 1,
                 levelNumber: 3,
-                status: LevelStatus.perfect,
-                url: '/foo/bar',
-                icon: 'fa-document'
+                icon: 'fa-document',
+                kind: LevelKind.level,
+                url: '/foo/bar'
               }}
+              studentLevelProgress={perfectProgress}
               disabled={true}
             />
           )
@@ -62,10 +69,11 @@ export default storybook => {
               level={{
                 id: 1,
                 levelNumber: 3,
-                status: LevelStatus.perfect,
+                kind: LevelKind.level,
                 url: '/foo/bar',
                 icon: 'fa-document'
               }}
+              studentLevelProgress={perfectProgress}
               hideToolTips={true}
               disabled={false}
             />
@@ -79,11 +87,11 @@ export default storybook => {
               level={{
                 id: 1,
                 levelNumber: 3,
-                status: LevelStatus.perfect,
+                kind: LevelKind.level,
                 url: '/foo/bar',
-                icon: 'fa-document',
-                paired: true
+                icon: 'fa-document'
               }}
+              studentLevelProgress={{...perfectProgress, paired: true}}
               hideToolTips={true}
               disabled={false}
               pairingIconEnabled={true}
@@ -98,9 +106,12 @@ export default storybook => {
               level={{
                 id: 1,
                 levelNumber: 3,
-                status: LevelStatus.attempted,
+                kind: LevelKind.level,
                 url: '/foo/bar',
-                icon: 'fa-document',
+                icon: 'fa-document'
+              }}
+              studentLevelProgress={{
+                ...levelProgressWithStatus(LevelStatus.attempted),
                 paired: true
               }}
               hideToolTips={true}
