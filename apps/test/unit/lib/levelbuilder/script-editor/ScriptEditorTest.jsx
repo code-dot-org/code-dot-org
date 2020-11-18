@@ -120,6 +120,7 @@ describe('ScriptEditor', () => {
       expect(wrapper.find('textarea').length).to.equal(2);
       expect(wrapper.find('select').length).to.equal(5);
       expect(wrapper.find('CollapsibleEditorSection').length).to.equal(7);
+      expect(wrapper.find('SaveBar').length).to.equal(1);
     });
 
     it('has correct markdown for preview of unit description', () => {
@@ -168,7 +169,7 @@ describe('ScriptEditor', () => {
         JSON.stringify(returnData)
       ]);
 
-      const saveBar = wrapper.find('.saveBar');
+      const saveBar = wrapper.find('SaveBar');
 
       const saveAndKeepEditingButton = saveBar.find('button').at(0);
       expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).to.be
@@ -203,7 +204,7 @@ describe('ScriptEditor', () => {
         returnData
       ]);
 
-      const saveBar = wrapper.find('.saveBar');
+      const saveBar = wrapper.find('SaveBar');
 
       const saveAndKeepEditingButton = saveBar.find('button').at(0);
       expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).to.be
@@ -239,7 +240,7 @@ describe('ScriptEditor', () => {
         JSON.stringify(returnData)
       ]);
 
-      const saveBar = wrapper.find('.saveBar');
+      const saveBar = wrapper.find('SaveBar');
 
       const saveAndCloseButton = saveBar.find('button').at(1);
       expect(saveAndCloseButton.contains('Save and Close')).to.be.true;
@@ -270,7 +271,7 @@ describe('ScriptEditor', () => {
         returnData
       ]);
 
-      const saveBar = wrapper.find('.saveBar');
+      const saveBar = wrapper.find('SaveBar');
 
       const saveAndCloseButton = saveBar.find('button').at(1);
       expect(saveAndCloseButton.contains('Save and Close')).to.be.true;
