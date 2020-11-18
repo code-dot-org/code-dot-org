@@ -20,6 +20,8 @@ module SurveyResultsHelper
 
   def show_nps_survey?(kind)
     return false unless current_user
+    # Nov 2020: only display to half of teachers
+    return false unless current_user.id.even?
     return false unless language == "en"
     return false if current_user.under_13?
     return false unless country_us?
