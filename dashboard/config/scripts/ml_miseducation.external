@@ -1,0 +1,7 @@
+name 'ml-miseducation'
+title 'Mis-education of the Machine'
+description ''
+
+markdown <<MARKDOWN
+This is an unplugged level.
+MARKDOWN
