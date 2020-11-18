@@ -1,5 +1,6 @@
 import $ from 'jquery';
 import Immutable from 'immutable';
+import MD5 from 'crypto-js/md5';
 import RGBColor from 'rgbcolor';
 import {Position} from './constants';
 import {dataURIFromURI} from './imageUtils';
@@ -813,4 +814,13 @@ export function calculateOffsetCoordinates(element, clientX, clientY) {
 
 export function escapeRegExp(str) {
   return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+/**
+ * Convert a string to an MD5 hash.
+ * @param {string} str
+ * @returns {string} A string representing an MD5 hash.
+ */
+export function hashString(str) {
+  return MD5(str).toString();
 }
