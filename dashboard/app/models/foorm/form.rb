@@ -22,7 +22,7 @@ class Foorm::Form < ActiveRecord::Base
   class InvalidFoormConfigurationError < StandardError; end
 
   has_many :submissions, foreign_key: [:form_name, :form_version], primary_key: [:name, :version]
-  validate :validate_questions
+  validate :validate_questions, :validate_published
 
   after_save :write_form_to_file
 
@@ -58,6 +58,15 @@ class Foorm::Form < ActiveRecord::Base
   def validate_questions
     errors_arr = Foorm::Form.validate_questions(JSON.parse(questions))
     errors_arr.each {|error| errors[:questions] << error}
+  end
+
+  def validate_published
+    parsed_questions = JSON.parse(questions)
+    unless parsed_questions['published'].nil?
+      if published != parsed_questions['published']
+        errors[:questions] << 'Mismatch between published state in questions and published state in model'
+      end
+    end
   end
 
   def write_form_to_file

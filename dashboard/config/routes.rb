@@ -756,7 +756,11 @@ Dashboard::Application.routes.draw do
   post '/i18n/track_string_usage', action: :track_string_usage, controller: :i18n
 
   namespace :foorm do
-    post 'form/(*name)/:version', action: :create, controller: :forms
-    put 'form/(*name)/:version', action: :update, controller: :forms
+    resources :forms, only: [:create] do
+      member do
+        put :edit_questions
+        put :publish
+      end
+    end
   end
 end
