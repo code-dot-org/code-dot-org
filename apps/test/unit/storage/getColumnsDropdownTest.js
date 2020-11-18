@@ -9,6 +9,7 @@ describe('getTableNameFromColumnSocket', () => {
           type: 'socketStart',
           next: {
             type: 'text',
+            // The value in the socket has an extra set of double quotes
             value: `"${tableName}"`
           }
         }
