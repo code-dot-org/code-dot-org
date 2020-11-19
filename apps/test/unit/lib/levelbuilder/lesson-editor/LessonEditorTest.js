@@ -84,6 +84,7 @@ describe('LessonEditor', () => {
     expect(wrapper.find('AnnouncementsEditor').length).to.equal(1);
     expect(wrapper.find('CollapsibleEditorSection').length).to.equal(7);
     expect(wrapper.find('ResourcesEditor').length).to.equal(1);
+    expect(wrapper.find('SaveBar').length).to.equal(1);
   });
 
   it('can add activity', () => {
@@ -127,7 +128,7 @@ describe('LessonEditor', () => {
       JSON.stringify(returnData)
     ]);
 
-    const saveBar = wrapper.find('.saveBar');
+    const saveBar = wrapper.find('SaveBar');
 
     const saveAndKeepEditingButton = saveBar.find('button').at(0);
     expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).to.be
@@ -160,7 +161,7 @@ describe('LessonEditor', () => {
       returnData
     ]);
 
-    const saveBar = wrapper.find('.saveBar');
+    const saveBar = wrapper.find('SaveBar');
 
     const saveAndKeepEditingButton = saveBar.find('button').at(0);
     expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).to.be
@@ -196,7 +197,7 @@ describe('LessonEditor', () => {
       JSON.stringify(returnData)
     ]);
 
-    const saveBar = wrapper.find('.saveBar');
+    const saveBar = wrapper.find('SaveBar');
 
     const saveAndCloseButton = saveBar.find('button').at(1);
     expect(saveAndCloseButton.contains('Save and Close')).to.be.true;
@@ -227,7 +228,7 @@ describe('LessonEditor', () => {
       returnData
     ]);
 
-    const saveBar = wrapper.find('.saveBar');
+    const saveBar = wrapper.find('SaveBar');
 
     const saveAndCloseButton = saveBar.find('button').at(1);
     expect(saveAndCloseButton.contains('Save and Close')).to.be.true;

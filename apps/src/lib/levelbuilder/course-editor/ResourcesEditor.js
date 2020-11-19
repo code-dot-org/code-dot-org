@@ -3,8 +3,7 @@ import React, {Component} from 'react';
 import _ from 'lodash';
 import color from '@cdo/apps/util/color';
 import ResourceType, {
-  stringForType,
-  resourceShape
+  stringForType
 } from '@cdo/apps/templates/courseOverview/resourceType';
 import TeacherResourcesDropdown from '@cdo/apps/code-studio/components/progress/TeacherResourcesDropdown';
 
@@ -33,29 +32,24 @@ const defaultLinks = {
   [ResourceType.videos]: '/link/to/videos'
 };
 
+//Editor for Teacher Resources
 export default class ResourcesEditor extends Component {
   static propTypes = {
     inputStyle: PropTypes.object.isRequired,
-    resources: PropTypes.arrayOf(resourceShape).isRequired
+    resources: PropTypes.array.isRequired,
+    updateTeacherResources: PropTypes.func.isRequired
   };
 
   constructor(props) {
     super(props);
 
-    const resources = [...props.resources];
-    // add empty entries to get to max
-    while (resources.length < Object.keys(ResourceType).length) {
-      resources.push({type: '', link: ''});
-    }
-
     this.state = {
-      resources,
       errorString: ''
     };
   }
 
   handleChangeType = (event, index) => {
-    const oldResources = this.state.resources;
+    const oldResources = this.props.resources;
     const newResources = _.cloneDeep(oldResources);
     const type = event.target.value;
     newResources[index].type = type;
@@ -70,18 +64,20 @@ export default class ResourcesEditor extends Component {
       errorString = 'Your resource types contains a duplicate';
     }
 
-    this.setState({resources: newResources, errorString});
+    this.setState({errorString});
+    this.props.updateTeacherResources(newResources);
   };
 
   handleChangeLink = (event, index) => {
-    const newResources = _.cloneDeep(this.state.resources);
+    const newResources = _.cloneDeep(this.props.resources);
     const link = event.target.value;
     newResources[index].link = link;
-    this.setState({resources: newResources});
+    this.props.updateTeacherResources(newResources);
   };
 
   render() {
-    const {resources, errorString} = this.state;
+    const {errorString} = this.state;
+    const {resources} = this.props;
 
     // avoid showing multiple empty resources
     const lastNonEmpty = _.findLastIndex(

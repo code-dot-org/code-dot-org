@@ -1,0 +1,7 @@
+name 'ml-knn-act'
+title 'Act out model with continuous labels (KNN)'
+description ''
+
+markdown <<MARKDOWN
+This is an unplugged level.
+MARKDOWN

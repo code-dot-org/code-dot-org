@@ -22,6 +22,11 @@ class Foorm::MiscSurvey < ActiveRecord::Base
   def self.all_form_data
     [
       {
+        form_name: 'surveys/teachers/nps_survey',
+        misc_form_path: 'nps_survey',
+        allow_multiple_submissions: false
+      },
+      {
         form_name: 'surveys/teachers/teacher_end_of_year_survey',
         misc_form_path: 'csf_post_course',
         survey_data: {course: 'CS Fundamentals', pd: false},
