@@ -315,7 +315,7 @@ Dashboard::Application.routes.draw do
   resources :lessons, only: [:show, :edit, :update]
 
   resources :resources, only: [:create, :update]
-  get '/resourcesearch/:q/:limit', to: 'resources#search', defaults: {format: 'json'}
+  get '/resourcesearch', to: 'resources#search', defaults: {format: 'json'}
 
   get '/beta', to: redirect('/')
 
@@ -752,6 +752,8 @@ Dashboard::Application.routes.draw do
   get '/help', to: redirect("https://support.code.org")
 
   get '/form/:misc_form_path', to: 'foorm/misc_survey#new'
+
+  get '/form/:misc_form_path/show', to: 'foorm/misc_survey#show'
 
   post '/i18n/track_string_usage', action: :track_string_usage, controller: :i18n
 end
