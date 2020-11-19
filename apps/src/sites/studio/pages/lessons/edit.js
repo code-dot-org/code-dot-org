@@ -23,8 +23,6 @@ $(document).ready(function() {
   const searchOptions = getScriptData('searchOptions');
 
   const activities = lessonData.activities;
-  console.log(activities);
-  console.log(lessonData.resources);
   const objectives = lessonData.objectives || [];
 
   // Rename any keys that are different on the backend.
