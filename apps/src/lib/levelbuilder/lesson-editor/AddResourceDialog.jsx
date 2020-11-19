@@ -76,7 +76,7 @@ const initialState = {
   include_in_pdf: false,
   assessment: false,
   url: '',
-  downloadUrl: '',
+  download_url: '',
   error: ''
 };
 
@@ -97,7 +97,7 @@ export default class AddResourceDialog extends Component {
         name: props.existingResource.name,
         type: props.existingResource.type,
         audience: props.existingResource.audience,
-        include_in_pdf: props.existingResource.include_in_pdf,
+        include_in_pdf: props.existingResource.includeInPdf,
         assessment: props.existingResource.assessment,
         url: props.existingResource.url,
         download_url: props.existingResource.downloadUrl,
@@ -233,6 +233,7 @@ export default class AddResourceDialog extends Component {
                   type="checkbox"
                   style={styles.checkboxInput}
                   name="assessment"
+                  value={this.state.assessment}
                   checked={this.state.assessment}
                   onChange={this.handleInputChange}
                 />
@@ -243,6 +244,7 @@ export default class AddResourceDialog extends Component {
                   type="checkbox"
                   style={styles.checkboxInput}
                   name="include_in_pdf"
+                  value={this.state.include_in_pdf}
                   checked={this.state.include_in_pdf}
                   onChange={this.handleInputChange}
                 />
@@ -264,7 +266,7 @@ export default class AddResourceDialog extends Component {
                 style={styles.textInput}
                 type="text"
                 name="download_url"
-                value={this.state.downloadUrl}
+                value={this.state.download_url}
                 onChange={this.handleInputChange}
               />
             </label>
