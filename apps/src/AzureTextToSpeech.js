@@ -26,6 +26,11 @@ export class SoundResponse {
 
 let singleton;
 
+/**
+ * Converts text to sound bytes using Azure Speech Service. Before requesting sound bytes from Azure, we check for profanity
+ * in the text through our servers. If profanity is found, the sound will not be played.
+ * Uses an in-memory cache to reduce network calls (for both checking profanity and requesting sound bytes from Azure).
+ */
 export default class AzureTextToSpeech {
   /**
    * Instantiate or get class singleton. Using this is recommended to take advantage of caching.
