@@ -76,7 +76,7 @@ def parse_options
 end
 
 def main(options)
-  cb_url_prefix = options.local ? 'http://localhost:8000' : 'https://curriculum.code.org'
+  cb_url_prefix = options.local ? 'http://localhost:8000' : 'http://www.codecurricula.com'
 
   options.unit_names.each do |unit_name|
     script = Script.find_by_name!(unit_name)
