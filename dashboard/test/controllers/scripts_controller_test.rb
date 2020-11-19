@@ -341,7 +341,7 @@ class ScriptsControllerTest < ActionController::TestCase
       script: {name: @partner_script.name},
       script_text: '',
     }
-    assert_response :redirect
+    assert_response :success
   end
 
   # These two tests are the only remaining dependency on script seed order.  Check that /s/1 redirects to /s/20-hour in
@@ -429,7 +429,7 @@ class ScriptsControllerTest < ActionController::TestCase
       script_text: '',
       visible_to_teachers: true
     }
-    assert_response :redirect
+    assert_response :success
     script.reload
     refute script.hidden
   end
@@ -447,7 +447,7 @@ class ScriptsControllerTest < ActionController::TestCase
       script_text: '',
       visible_to_teachers: true
     }
-    assert_response :redirect
+    assert_response :success
     script.reload
     refute script.hidden
   end
@@ -573,7 +573,7 @@ class ScriptsControllerTest < ActionController::TestCase
         resourceTypes: ['curriculum', 'something_else'],
         resourceLinks: ['/link/to/curriculum', 'link/to/something_else']
       }
-      assert_response :redirect
+      assert_response :success
       script.reload
 
       assert_equal [['curriculum', '/link/to/curriculum'], ['something_else', 'link/to/something_else']], script.teacher_resources
@@ -631,7 +631,7 @@ class ScriptsControllerTest < ActionController::TestCase
       script: {name: script.name},
       script_text: '',
     }.merge(general_params)
-    assert_response :redirect
+    assert_response :success
     script.reload
 
     general_params.each do |k, v|
@@ -686,7 +686,7 @@ class ScriptsControllerTest < ActionController::TestCase
     }
     script.reload
 
-    assert_response :redirect
+    assert_response :success
     assert_equal level, script.lessons.first.script_levels.first.level
   end
 
