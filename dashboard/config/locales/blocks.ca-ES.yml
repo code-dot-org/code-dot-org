@@ -765,6 +765,8 @@ ca:
         text: color aleatori
       gamelab_randomColor:
         text: color aleatori
+      gamelab_repeatForever:
+        text: repetir per sempre
       gamelab_setBackground:
         text: definir el color de fons {COLOR}
       gamelab_setBackgroundImage:

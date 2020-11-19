@@ -1346,14 +1346,6 @@ pt:
       concorda com o armazenamento de cookies em seu computador ou dispositivo.
     more_information: Consulte a Política de Privacidade do Code.org.
     accept: Aceito
-  gdpr_dialog:
-    heading: Você concorda em usar um site situado nos Estados Unidos?
-    message: Os dados gerados pelo seu uso deste site podem ser enviados e armazenados
-      ou processados nos Estados Unidos.
-    link_intro: Para obter detalhes, consulte nosso
-    privacy_policy: política de privacidade
-    logout: Sair
-    true: Sim
   page_not_found_title: Página não encontrada
   page_not_found_header: '404: Página não encontrada'
   page_not_found_description: A página que você está procurando não existe neste endereço.

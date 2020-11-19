@@ -1155,6 +1155,8 @@ uk:
         text: Спрайт {SPRITE} Зупиняється {BEHAVIOR}
       gamelab_removeTint:
         text: зняти колір з {THIS}
+      gamelab_repeatForever:
+        text: повторювати завжди
       gamelab_setAnimation:
         text: Змінити {THIS} костюм, щоб {ANIMATION}
       gamelab_setBackground:

@@ -234,6 +234,8 @@ lt:
         text: Atsitiktinė spalva
       gamelab_randomColor:
         text: Atsitiktinė spalva
+      gamelab_repeatForever:
+        text: kartok visada
       gamelab_setBackgroundImage:
         options:
           IMG:

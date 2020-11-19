@@ -250,13 +250,6 @@ it:
   front_watch_regular_video: Guarda il video
   front_volunteers: Siamo alla ricerca di volontari tecnici (solo per gli USA)
   front_start_learning: Inizia a imparare
-  gdpr_dialog_heading: Accetti di utilizzare di un sito web basato negli Stati Uniti?
-  gdpr_dialog_message: I dati relativi al tuo utilizzo di questo sito Web possono
-    essere inviati e archiviati o elaborati negli Stati Uniti.
-  gdpr_dialog_link_intro: Per ulteriori informazioni vedere la nostra
-  gdpr_dialog_privacy_policy: privacy policy
-  gdpr_dialog_logout: Esci
-  gdpr_dialog_yes: Sì
   header_menu_resources: Risorse
   header_menu_faq: FAQ
   header_menu_how_to: Come

@@ -1175,6 +1175,8 @@ cs:
         text: postava {SPRITE} zastav {BEHAVIOR}
       gamelab_removeTint:
         text: odstraň barvu z {THIS}
+      gamelab_repeatForever:
+        text: opakuj do nekonečna
       gamelab_setAnimation:
         text: změň kostým {THIS} na {ANIMATION}
       gamelab_setBackground:

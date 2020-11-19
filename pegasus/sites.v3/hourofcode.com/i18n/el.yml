@@ -244,14 +244,6 @@ el:
   front_watch_regular_video: Δείτε το βίντεο
   front_volunteers: Ζητούνται εθελοντές Τεχνικοί
   front_start_learning: Αρχίστε να μαθαίνετε
-  gdpr_dialog_heading: Συμφωνείτε να χρησιμοποιείτε μια τοποθεσία ιστού που βρίσκεται
-    στις Ηνωμένες Πολιτείες;
-  gdpr_dialog_message: Δεδομένα από τη χρήση αυτής της ιστοσελίδας μπορεί να αποστέλλονται
-    και να αποθηκεύονται για επεξεργασία στις Ηνωμένες Πολιτείες.
-  gdpr_dialog_link_intro: Για λεπτομέρειες δείτε
-  gdpr_dialog_privacy_policy: πολιτική απορρήτου
-  gdpr_dialog_logout: Αποσύνδεση
-  gdpr_dialog_yes: Ναι
   header_menu_resources: Πόροι
   header_menu_faq: Συχνές ερωτήσεις
   header_menu_how_to: Πώς να
@@ -6281,7 +6273,7 @@ el:
   tutorial_grokem_string_detail_grades: Grades 6+
   tutorial_kodmaze_string_detail_grades: Pre-reader - Grade 5
   tutorial_codestersa_string_detail_grades: Grades 2-8
-  tutorial_cmdodo_string_detail_grades: Grades 2-5
+  tutorial_cmdodo_string_detail_grades: Grades 3-5
   tutorial_tynkerspace_string_detail_grades: Grades 2-5
   tutorial_gfbloons_string_detail_grades: 'Τάξεις: από Τρίτη Γυμνασίου και άνω'
   tutorial_raspipong_string_detail_grades: 'Τάξεις: από Τρίτη Γυμνασίου και άνω'

@@ -56,8 +56,8 @@ fr:
     computer science. Change the world.'
   social_hoc2019_coming_dates: L'Heure du Code est du 9 au 15 décembre 2019. L'informatique
     est un apprentissage fondamental pour tous les élèves.
-  social_hoc2019_dance: Featuring Katy Perry, Shawn Mendes, Panic! At The Disco, Lil
-    Nas X, Jonas Brothers, Nicki Minaj, and 34 more!
+  social_hoc2019_dance: Avec Katy Perry, Shawn Mendes, Panic! At The Disco, Lil Nas
+    X, Jonas Brothers, Nicki Minaj, et 34 autres artistes !
   oceans_landing_title: IA pour les Océans
   oceans_landing_description: Learn about machine learning and ethical use of AI.
   cs_for_good_hashtag: "#CSforGood"
@@ -211,8 +211,8 @@ fr:
     !</span>
   codeorg_homepage_hoc2019_dance_heading_markdown: Essaies la nouvelle **Soirée&nbsp;Dansante
     !**
-  codeorg_homepage_special2020_body1: Support for parents and teachers facing school
-    closures.
+  codeorg_homepage_special2020_body1: Soutien pour parents et professeurs face à la
+    fermeture des écoles.
   codeorg_homepage_special2020_body2: See our suggested learning resources.
   codeorg_homepage_special2020_body: Keep learning this summer! Take a look at our
     resources for learning at home.
@@ -239,13 +239,6 @@ fr:
   front_watch_regular_video: Regardez la vidéo
   front_volunteers: Bénévoles techniques recherchés
   front_start_learning: Commencer à apprendre
-  gdpr_dialog_heading: Acceptez-vous d’utiliser un site web basé aux États-Unis ?
-  gdpr_dialog_message: Les données relatives à votre consulation de ce site peuvent
-    être envoyées et stockées ou traitées aux États-Unis.
-  gdpr_dialog_link_intro: Pour plus d’informations, consultez notre
-  gdpr_dialog_privacy_policy: politique de confidentialité
-  gdpr_dialog_logout: Déconnexion
-  gdpr_dialog_yes: Oui
   header_menu_resources: Ressources
   header_menu_faq: FAQ
   header_menu_how_to: Guide pratique
@@ -555,7 +548,7 @@ fr:
     in! Are you?'
   social_hoc2018_dance_party: 'Heure de Code : Soirée Dansante'
   social_hoc2018_dance_what_create: Avec Katy Perry, Madonna, J. Balvin, Sia, Keith
-    Urban, Ciara et 25 autres !
+    Urban, Ciara et 25 autres artistes !
   social_hoc2018_every_student: Every student deserves the opportunity to express
     their creativity with computer science.
   social_hoc2018_every_student_try_what_create: Every student deserves the opportunity
@@ -630,21 +623,23 @@ fr:
     Sa pratique contribue à acquérir des compétences de résolution de problèmes, de
     logique et de créativité. En commençant tôt, les élèves auront les bases pour
     réussir dans n'importe quelle carrière au Xxie siècle. Voir plus de statistiques
-    sur <a href='%{codeorg_url}'>%{partner_url}</a>."
-  hoc_faq_why_cs_a_markdown: _Every_ student should have the opportunity to learn
-    computer science. It helps nurture problem-solving skills, logic and creativity.
-    By starting early, students will have a foundation for success in any 21st-century
-    career path. See more stats [here](%{stats_url}).
+    sur <a href='%{stats_url}'>ici</a>."
+  hoc_faq_why_cs_a_markdown: _Chaque_ élève doit avoir la possibilité d'apprendre
+    l'informatique. Sa pratique contribue à acquérir des compétences de résolution
+    de problèmes, de logique et de créativité. En commençant tôt, les élèves auront
+    les bases pour réussir dans n'importe quelle carrière au Xxie siècle. Voir plus
+    de statistiques -> [here]%{stats_url}
   hoc_faq_how_participate_q: Comment participer à Une Heure de Code?
   hoc_faq_how_participate_a: "<a href='/resources/how-to'> Commencez à planifier ici</a>
     en passant en revue notre guide pratique. Vous pouvez organiser un évènement Une
     Heure de Code dans votre école ou dans votre communauté &mdash; dans votre association
     à but non lucratif ou sur votre lieu de travail par exemple. Ou bien, essayez
     seul quand %{campaign_date} la campagne sera officiellement lancée."
-  hoc_faq_how_participate_a_markdown: "[Start planning here](%{howto}) by reviewing
-    our how-to guide. You can organize an Hour of Code event at your school or in
-    your community — like in an extracurricular club, non-profit or at work. Or, just
-    try it yourself when %{campaign_date} arrives."
+  hoc_faq_how_participate_a_markdown: "[Commencez à planifier ici](%{howto}) en passant
+    en revue notre guide pratique. Vous pouvez organiser un évènement Une Heure de
+    Code dans votre école ou dans votre communauté &mdash; dans votre association
+    à but non lucratif ou sur votre lieu de travail par exemple. Ou bien, essayez
+    seul quand %{campaign_date} la campagne sera officiellement lancée."
   hoc_faq_behind_hoc_q: Qui est derrière Une Heure de Code ?
   hoc_faq_behind_hoc_a: Une Heure de Code est organisée par <a href='https://code.org'>Code.org</a>,
     une association public a but non-lucrative, dédiée à la démocratisation de l'informatique,
@@ -669,11 +664,12 @@ fr:
     au niveau d’expérience, soit de la maternelle à l'enseignement supérieur. Commencez
     à organiser votre évènement en lisant notre <a href='/resources/how-to'>guide
     d'utilisation</a>.
-  hoc_faq_host_a_markdown: Of course. Hour of Code activities are self-guided. All
-    you have to do is [try our current tutorials](%{codeorg_url}/learn), pick the
-    tutorial you want, and pick an hour — we take care of the rest. We also have options
-    for every age and experience-level, from kindergarten and up. Start planning your
-    event by reading our [how to guide](%{howto}).
+  hoc_faq_host_a_markdown: Évidement, les activités d'Une Heure de code sont guidées.
+    Tout ce que vous avez à faire c'est [d'essayer nos tutoriels disponibles](%{codeorg_url}/learn),
+    choisissez celui que vous voulez, prenez une heure &mdash; nous nous occupons
+    du reste. Nous offrons également des options adaptées à l'âge et au niveau d’expérience,
+    soit de la maternelle à l'enseignement supérieur. Commencez à organiser votre
+    évènement en lisant notre [guide d'utilisation](%{howto}).
   hoc_faq_devices_q: Quels appareils utiliser pour mes étudiants?
   hoc_faq_devices_a: Les tutoriels Code.org fonctionnent sur tous les appareils et
     navigateurs. Vous pouvez voir plus d'information sur les besoins des tutoriels
@@ -681,11 +677,13 @@ fr:
     des tutoriels ne provenant pas de Code.org peuvent être trouvés sur <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>
     dans la description spécifique du tutoriel. N'oubliez pas que nous proposons également
     des activités déconnectées si votre école ne peut pas faire fonctionner les tutoriels !
-  hoc_faq_devices_a_markdown: Code.org tutorials work on all devices and browsers.
-    You can see more information about Code.org's tutorial tech needs [here](%{codeorg_url}/educate/it).
-    Tech needs for non-Code.org tutorials can be found on [%{partner_url}/learn](%{codeorg_url}/learn)
-    in the tutorial specific description. Don't forget we also offer [unplugged activities](%{unplugged_url})
-    if your school can't accommodate the tutorials!
+  hoc_faq_devices_a_markdown: Les tutoriels Code.org fonctionnent sur tous les appareils
+    et navigateurs. Vous pouvez voir plus d'information sur les besoins des tutoriels
+    de Code.org ici -> [here](%{codeorg_url}). Les besoins techniques des tutoriels
+    ne provenant pas de Code.org peuvent être trouvés sur [%{partner_url}/learn](%{codeorg_url}/learn)
+    dans la description spécifique du tutoriel. N'oubliez pas que nous proposons également
+    des [activités déconnectées](%{unplugged_url}) si votre école ne peut pas faire
+    fonctionner les tutoriels !
   hoc_faq_need_computers_q: Ai-je besoin d'un ordinateur pour chaque participant ?
   hoc_faq_need_computers_a: Non. Nous proposons des tutoriels d'Une Heure de Code
     sur PC, smartphones, tablettes et certain ne nécessitent pas d'ordinateur du tout
@@ -721,10 +719,11 @@ fr:
     href='targetHOC'> consultez nos instructions</a>. Nous tenons à accueillir une
     variété d'options engageantes, mais le but principal demeure d'optimiser l'expérience
     pour les élèves et les enseignants qui sont débutant en informatique.
-  hoc_faq_tutorial_a_markdown: If you're interested in becoming a tutorial partner,
-    [see our guidelines and instructions](%{tutorial_guidelines}). We'd like to host
-    a variety of engaging options, but the primary goal is to optimize the experience
-    for students and teachers who are new to computer science.
+  hoc_faq_tutorial_a_markdown: Si vous êtes intéressé de devenir un partenaire tutoriel,
+    [consultez nos instructions et lignes directrices](%{tutorial_guidelines}). Nous
+    tenons à accueillir une variété d'options engageantes, mais le but principal est
+    d'optimiser l'expérience pour les étudiants et les enseignants qui sont débutant
+    en informatique.
   hoc_faq_account_q: Les étudiants doivent-ils se connecter en utilisant un compte
     ?
   hoc_faq_account_a: Non. Absolument aucune inscription ou authentification n'est
@@ -770,23 +769,24 @@ fr:
     endroit. De plus, en raison des milliers de personnes qui s'inscrivent pour l'Heure
     de Code, la carte et la liste d'événements met généralement 48 heures à s'actualiser.
     Vérifiez dans quelques jours !
-  hoc_faq_map_a_markdown: We're so sorry you aren't seeing your event on the Hour
-    of Code map. Because of the tens of thousands of organizers who sign up, the map
-    aggregates the data and displays one point for several events. If you click the
-    [events page](%{events_url}) link below the map you will be directed to a list
-    of all events by state and can find your event listed there. Additionally, given
-    the thousands of people signing up for the Hour of Code, the map and event list
-    usually takes 48 hours to update. Check back in a few days!
+  hoc_faq_map_a_markdown: Nous sommes vraiment désolés que vous ne voyiez pas votre
+    événement sur la carte d'Une Heure de Code. À cause des milliers d'organisateurs
+    qui s'inscrivent, la carte combine les données et affiche un point pour plusieurs
+    événements. Si vous cliquez sur [le nombre au-dessus de la carte](%{events_url}),
+    vous serez dirigé vers une liste de tous les événements par état et pourrez trouver
+    votre événement listé à cet endroit. De plus, en raison des milliers de personnes
+    qui s'inscrivent pour l'Heure de Code, la carte et la liste d'événements met généralement
+    48 heures à s'actualiser. Vérifiez dans quelques jours !
   hoc_faq_count_hoc_a: Le compte d'Une Heure de Code n'est pas une science exacte.
     Nous ne comptons pas parfaitement les ID étudiants uniques pendant les évènements,
     en particulier parce que nous n'imposons pas aux étudiants de s'inscrire ou de
     se connecter. En conséquence, nous pouvons aussi bien sur ou sous-estimer le nombre
     de participants au même moment. En savoir plus <a href='%{codeorg_url}/loc'> ici</a>.
-  hoc_faq_count_hoc_a_markdown: The Hour of Code tracker isn't an exact measurement
-    of usage. We do not count unique student IDs perfectly when tracking participation
-    in the Hour of Code, especially because we don't require students to log in or
-    register. As a result, we both over-count and under-count participants at the
-    same time. Read all the details [here](%{codeorg_url}/loc).
+  hoc_faq_count_hoc_a_markdown: Le compte d'Une Heure de Code n'est pas une science
+    exacte. Nous ne comptons pas parfaitement les ID étudiants uniques pendant les
+    évènements, en particulier parce que nous n'imposons pas aux étudiants de s'inscrire
+    ou de se connecter. En conséquence, nous pouvons aussi bien sur ou sous-estimer
+    le nombre de participants au même moment. En savoir plus ici -> [here](%{codeorg_url}/loc).
   hoc_faq_one_hour_q: Que peut-on apprendre en une heure ?
   hoc_faq_one_hour_a: L'objectif de l'Heure de Code n'est pas de permettre à quiconque
     de devenir un informaticien expert en une heure. Une heure est seulement suffisante
@@ -826,29 +826,30 @@ fr:
     à perpétuité. Veuillez consulter <a href='/promote'>nos ressources</a> pour des
     guides pratiques sur les événements et d'autres ressources pour vous aider à réussir
     votre événement Une Heure de Code.
-  hoc_faq_keep_learning_a_markdown: Anyone can host an Hour of Code at any time. The
-    tutorials stay up year-round. You can expect all our tutorials and curriculum
-    to be available on our site in perpetuity. Please go to [our resources](%{promote})
-    for event how-to guides and other resources to help make your Hour of Code event
-    a success.
+  hoc_faq_keep_learning_a_markdown: N'importe qui peut organiser Une Heure de Code
+    à tout moment. Les tutoriels restent présents le long de l'année. Vous pouvez
+    compter sur le fait que tous nos tutoriels et nos parcours resteront disponibles
+    sur notre site à perpétuité. Veuillez consulter [nos ressources](%{promote}) pour
+    des guides pratiques sur les événements et d'autres ressources pour vous aider
+    à réussir votre événement Une Heure de Code.
   hoc_faq_certificates_q: Où puis-je imprimer les certificats de mes étudiants?
   hoc_faq_certificates_a: Rendez-vous sur notre <a href='%{codeorg_url}/certificates'>page
     de certificats</a> sur laquelle vous pouvez imprimer des certificats pour votre
     classe à l'avance. Vous pouvez également imprimer des <a href='%{codeorg_url}/certificates?course=mc'>certificats
     spéciaux</a> pour les étudiants faisant le tutoriel Minecraft.
-  hoc_faq_certificates_a_markdown: Go to our [certificates page](%{codeorg_url}/certificates)
-    where you can print certificates for your entire class ahead of time. You can
-    also print out [special certificates](%{codeorg_url}/certificates?course=mc) for
-    students doing the Minecraft tutorial.
+  hoc_faq_certificates_a_markdown: Rendez-vous sur notre [page de certificats](%{codeorg_url})
+    sur laquelle vous pouvez imprimer des certificats pour votre classe à l'avance.
+    Vous pouvez également imprimer des [certificates](%{codeorg_url}/certificates?course=mc)
+    pour les étudiants faisant le tutoriel Minecraft.
   hoc_faq_logo_q: Y a-t-il des limites sur comment je peux utiliser le logo ou ou
     nom de l'Heure du Code?
   hoc_faq_logo_a: L'Heur du Code est une marque déposée. Nous ne voulons pas empêcher
     son usage, mais nous souhaitons faire en certain que son usage s'inscrit dans
     quelques limites. Veuillez voir <a href='https://support.code.org/hc/en-us/articles/215831637-Are-there-limitations-of-how-I-can-use-the-Hour-of-Code-logo-'>
     ce guide d'usage</a>.
-  hoc_faq_logo_a_markdown: Hour of Code is trademarked. We don't want to prevent its
-    usage, but we want to make sure its usage fits within a few limits. Please see
-    [these guidelines for usage](%{logo_url}).
+  hoc_faq_logo_a_markdown: L'Heur du Code est une marque déposée. Nous ne voulons
+    pas empêcher son usage, mais nous souhaitons faire en certain que son usage s'inscrit
+    dans quelques limites. Veuillez voir [ce guide d'usage](%{logo_url}).
   stats_hoc_2013_image_alt: Statistiques sur l'évènement Une Heure de Code de 2013
   stats_growth: C'était l'évènement qui a atteint 15 millions d'utilisateurs le plus
     rapidement.
@@ -996,9 +997,10 @@ fr:
   learn_banner_blurb: Essayez notre tutoriel d’une heure destiné à tous les âges,
     disponible dans plus de 45 langues.  Rejoignez des millions d’élèves et d’éducateurs
     dans plus de 180 pays en commençant par une Heure de Code.
-  learn_banner_beyond: Envie d’élargir vos connaissances ? <a id='learn_banner_beyond'>Allez
-    au-delà de la première Heure</a>
-  learn_banner_beyond_markdown: Want to keep learning? [Go beyond an hour](%{url})
+  learn_banner_beyond: Voulez-vous continuer à apprendre? <a id='learn_banner_beyond'>Allez
+    au-delà de l'Heure</a>
+  learn_banner_beyond_markdown: Voulez-vous continuer à apprendre? [Allez au-delà
+    de l'Heure](%{url})
   learn_banner_teachers: 'Educateurs : <a id=''teacher_banner_host''> Animez une heure
     de cours</a> ou <a id=''teacher_banner_howto''>consultez le Guide Pratique</a>'
   learn_banner_teachers_markdown: 'Teachers: [Host an hour](%{host_url}) or [read
@@ -2854,7 +2856,7 @@ fr:
   tutorial_n2y_shortdescription: Help Bitt Bott explore Earth using direction arrows.
   tutorial_dance2019_longdescription: Code une Soirée Dansante à partager avec tes
     amis. Avec Katy Perry, Shawn Mendes, Panic ! At The Disco, Lil Nas X, Jonas Brothers,
-    Nicki Minaj, et 34 autres !
+    Nicki Minaj, et 34 autres artistes !
   tutorial_danceparty_longdescription: Programme une Soirée Dansante à partager avec
     tes amis. Avec Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara et 25 autres
     !
@@ -6019,7 +6021,7 @@ fr:
   tutorial_activitypackets_language: Français
   tutorial_googlerookie_language: Français
   tutorial_tommyturtle_language: Français
-  tutorial_mazyad_language: Arabic, English
+  tutorial_mazyad_language: Arabe, anglais
   tutorial_gamemaker_language: Français
   tutorial_duckrace_language: English, German
   tutorial_allcancodeapps_language: Français
@@ -6313,7 +6315,7 @@ fr:
   tutorial_grokem_string_detail_grades: Grades 6+
   tutorial_kodmaze_string_detail_grades: K-5
   tutorial_codestersa_string_detail_grades: Grades 2-8
-  tutorial_cmdodo_string_detail_grades: Grades 2-5
+  tutorial_cmdodo_string_detail_grades: Grades 3-5
   tutorial_tynkerspace_string_detail_grades: Grades 2-5
   tutorial_gfbloons_string_detail_grades: A partir de 9 ans
   tutorial_raspipong_string_detail_grades: A partir de 9 ans

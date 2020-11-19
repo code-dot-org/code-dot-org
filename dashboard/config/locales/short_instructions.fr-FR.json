@@ -2893,7 +2893,7 @@
         "frozen diamond mini snowflake": "Savais-tu que chaque flocon de neige est d’une forme différente ? Maintenant, créons un nouveau flocon de neige en utilisant le bloc «Répéter» pour répéter un parallélogramme 4 fois, en tournant à droite de 90 degrés entre chaque parallélogramme.",
         "frozen diamond snowflake": "Maintenant, créons un nouveau flocon de neige en utilisant le bloc « Répéter » pour répéter un parallélogramme 10 fois, en tournant à droite de 36 degrés entre chacun d’entre eux.",
         "frozen freeplay": "Tu es officiellement devenu un artiste maître ! Crée un merveilleux paysage hivernal.",
-        "frozen line": "Salut! Je suis Elsa de Arendelle. Aide-moi à créer une seule ligne.",
+        "frozen line": "Salut ! Je suis Elsa de Arendelle. Aide-moi à créer une seule ligne.",
         "frozen perpendicular": "Maintenant, voyons si nous pouvons créer deux lignes qui ont une angle de 90 degrés entre elles. Tu devras utiliser le bloc « Tourner » ainsi que le bloc « Avancer ».",
         "frozen snowflake branch": "Essaie d'utiliser le bloc «Créer une branche de flocon de neige» pour créer trois branches, qui commencent à ressembler à un flocon de neige.",
         "frozen snowflake full": "Maintenant, répétons-le 8 fois pour faire un beau flocon de neige !",
@@ -2971,7 +2971,12 @@
         "courseD_video_nestedLoopsArtist": "Utilise tes connaissances pour dessiner ce triangle.",
         "courseE_bee_ramp14": "Avance jusqu'à ce que tu atteignes la laitue, puis ramasse-la toute, en utilisant une boucle `tant que`.",
         "courseE_farmer_predict1": "Tant qu'il y a de la laitue, ramasse la laitue !",
-        "courseE_farmer_predict2": "Avance jusqu'à ce que tu atteignes la laitue, puis ramasse-la toute, en utilisant une boucle `tant que`."
+        "courseE_farmer_predict2": "Avance jusqu'à ce que tu atteignes la laitue, puis ramasse-la toute, en utilisant une boucle `tant que`.",
+        "scrat 16": "Un gland ! Un gland ! Un gland ! Utilise un bloc \"Si\" pour m'y amener avec le plus petit nombre de blocs.",
+        "scrat 17": "Ok, recommençons pour s'entraîner - ce n'est pas très différent, mais fait attention au mur !",
+        "scrat 18": "Le bloc \"Si-Sinon\" vérifie une condition, puis fait une chose OU une autre. Pour me conduire au gland, essaie d'utiliser ce nouveau bloc.",
+        "scrat 19": "Encore un exercice avec le bloc « Si/Sinon » - peux-tu y arriver dès le premier essai?",
+        "scrat 20": "Peux-tu ajouter 3 blocs pour m'aider à résoudre un labyrinthe plus complexe ? Si tu le fais correctement, je peux suivre un chemin sinueux, peut importe sa longueur. Vite ! La glace est en train de fondre !"
       }
     }
   }

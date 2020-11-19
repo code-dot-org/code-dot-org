@@ -108,7 +108,10 @@ class RegionalPartnersControllerTest < ActionController::TestCase
   end
 
   test 'replace mappings on invalid mapping fails and does not delete old mapping' do
-    regional_partner_with_mapping = create :regional_partner_with_mappings
+    regional_partner_with_mapping = create(:regional_partner)
+    regional_partner_with_mapping.mappings << Pd::RegionalPartnerMapping.new(zip_code: 98143, regional_partner: regional_partner_with_mapping)
+    regional_partner_with_mapping.save!
+
     sign_in @workshop_admin
     mapping = fixture_file_upload('regional_partner_mappings_invalid.csv', 'text/csv')
     post :replace_mappings, params: {id: regional_partner_with_mapping.id, regions: mapping}

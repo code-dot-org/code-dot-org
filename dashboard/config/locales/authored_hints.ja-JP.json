@@ -366,7 +366,7 @@
         "Course 4 SCF 3": {
           "Course_4_SCF_3_a": "![](https://images.code.org/9310e6352e85a8265b424c9d57ca28d1-image-1446239776339.gif)",
           "Course_4_SCF_3_b": "八角形の辺の長さに くり返しの counterをセットします。 ",
-          "Course_4_SCF_3_c": "八角形をかく関数は、200から2まで2ずつ減るくり返しの中で呼ばれます。 ",
+          "Course_4_SCF_3_c": "八角形をかく関数は、200から2まで2ずつ減るくり返しの中で呼び出されます。 ",
           "Course_4_SCF_3_d": "くり返しのなかで22.5度曲がるのを忘れないでね。 ",
           "Course_4_SCF_3_e": "八角形の線の色と幅は、変数 `counter`を使って変更します。",
           "Course_4_SCF_3_f": "**答え**\n\n<xml>\n  <block type=\"procedures_defnoreturn\" editable=\"false\">\n    <mutation>\n    <arg name=\"length\"></arg>\n    </mutation>\n    <title name=\"NAME\">draw an octagon</title>\n    <statement name=\"STACK\">\n      <block type=\"controls_repeat_ext\" inline=\"true\">\n        <value name=\"TIMES\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">8</title>\n          </block>\n        </value>\n        <statement name=\"DO\">\n          <block type=\"draw_move\" inline=\"true\">\n            <title name=\"DIR\">moveForward</title>\n            <value name=\"VALUE\">\n              <block type=\"parameters_get\">\n                <title name=\"VAR\">length</title>\n              </block>\n            </value>\n            <next>\n              <block type=\"draw_turn\" inline=\"true\">\n                <title name=\"DIR\">turnRight</title>\n                <value name=\"VALUE\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">45</title>\n                  </block>\n                </value>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </statement>\n  </block>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_for_counter\" inline=\"true\">\n      <mutation counter=\"counter\"></mutation>\n        <value name=\"FROM\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">200</title>\n          </block>\n        </value>\n        <value name=\"TO\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">2</title>\n          </block>\n        </value>\n        <value name=\"BY\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">2</title>\n          </block>\n        </value>\n        <statement name=\"DO\">\n          <block type=\"draw_colour\" inline=\"true\" id=\"draw-color\">\n            <value name=\"COLOUR\">\n              <block type=\"colour_rgb\" inline=\"false\">\n                <value name=\"RED\">\n                  <block type=\"math_arithmetic\" inline=\"true\">\n                    <title name=\"OP\">MINUS</title>\n                    <value name=\"A\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">255</title>\n                      </block>\n                    </value>\n                    <value name=\"B\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                  </block>\n                </value>\n                <value name=\"GREEN\">\n                  <block type=\"variables_get\">\n                    <title name=\"VAR\">counter</title>\n                  </block>\n                </value>\n                <value name=\"BLUE\">\n                  <block type=\"math_arithmetic\" inline=\"true\">\n                    <title name=\"OP\">MULTIPLY</title>\n                    <value name=\"A\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                    <value name=\"B\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">2</title>\n                      </block>\n                    </value>\n                  </block>\n                </value>\n              </block>\n            </value>\n            <next>\n              <block type=\"draw_width\" inline=\"false\">\n                <value name=\"WIDTH\">\n                  <block type=\"math_arithmetic\" inline=\"true\">\n                    <title name=\"OP\">DIVIDE</title>\n                    <value name=\"A\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                    <value name=\"B\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">4</title>\n                      </block>\n                    </value>\n                  </block>\n                </value>\n                <next>\n                  <block type=\"procedures_callnoreturn\" inline=\"false\">\n                    <mutation name=\"draw an octagon\">\n                    <arg name=\"length\"></arg>\n                    </mutation>\n                    <value name=\"ARG0\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_turn\" inline=\"true\">\n                        <title name=\"DIR\">turnLeft</title>\n                        <value name=\"VALUE\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">22.5</title>\n                          </block>\n                        </value>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>"
@@ -824,18 +824,18 @@
           "courseF_bee_for2_b": "くり返しとくり返しの間に前に進むを入れて、全部の花からミツを集めます。"
         },
         "OPD-K5-forloops-5": {
-          "courseF_bee_for4_a": "`まつ`を使えば、1から7まで1づつ数字を変えることができます。",
-          "courseF_bee_for4_b": "`まつ`のなかに `前に すすむ`とミツを集めるくり返しを入れます。",
+          "courseF_bee_for4_a": "`まで`を使えば、1から7まで1づつ数字を変えることができます。",
+          "courseF_bee_for4_b": "`まで`のなかに `前に すすむ`とミツを集めるくり返しを入れます。",
           "courseF_bee_for4_c": "変数 `counter` は、`回くりかえす` を使って ミツを集めるときの回数に使います。"
         },
         "OPD-K5-forloops-6": {
-          "courseF_bee_for6_a": "変数 `counter` は、`回くりかえす`で使います。",
-          "courseF_bee_for6_b": "`まつ`のなかに `前に すすむ`とミツを集めるくり返しを入れます。",
+          "courseF_bee_for6_a": "変数 `counter` は、`くりかえす`で使います。",
+          "courseF_bee_for6_b": "`まで`のなかに `前に すすむ`とミツを集めるくり返しを入れます。",
           "courseF_bee_for6_c": "くり返しは、 **5 から 1 まで**にします。"
         },
         "OPD-K5-forloops-7": {
-          "courseF_bee_for7_a": "`まつ`には、1から７まで２ずつ をセットします。",
-          "courseF_bee_for7_b": "`まつ`のなかに `前に すすむ`とミツを集めるくり返しを入れます。",
+          "courseF_bee_for7_a": "`まで`には、1から７まで2ずつ をセットします。",
+          "courseF_bee_for7_b": "`まで`のなかに `前に すすむ`とミツを集めるくり返しを入れます。",
           "courseF_bee_for7_c": "`回くりかえす` で変数`counter`を使います。"
         },
         "OPD-K5-projects-2": {
@@ -931,15 +931,15 @@
         },
         "Overworld Move to Sheep": {
           "mc_1_a": "`前に すすむ`は、ツールボックスの一番上にあります。",
-          "mc_1_b": "`実行（じっこう）した時` の下に もうひとつ`前に すすむ`を引っ付けよう。"
+          "mc_1_b": "`実行 (じっこう) した時` の下に `前に すすむ`を2つとも引っ付けよう。"
         },
         "Overworld Move to Sheep_2019": {
           "mc_1_a": "`前に すすむ`は、ツールボックスの一番上にあります。",
-          "mc_1_b": "`実行（じっこう）した時` の下に もうひとつ`前に すすむ`を引っ付けよう。"
+          "mc_1_b": "`実行 (じっこう) した時` の下に `前に すすむ`を2つとも引っ付けよう。"
         },
         "Overworld Move to Sheep_2020": {
           "mc_1_a": "`前に すすむ`は、ツールボックスの一番上にあります。",
-          "mc_1_b": "`実行（じっこう）した時` の下に もうひとつ`前に すすむ`を引っ付けよう。"
+          "mc_1_b": "`実行 (じっこう) した時` の下に `前に すすむ`を2つとも引っ付けよう。"
         },
         "Overworld Place Wall": {
           "mc_5_a": "`置く` を行ってから `前に すすむ` を行ってください。",
@@ -957,30 +957,30 @@
           "mc_5_c": "ミスをおそれないで！まちがってもいいから、プログラムを書いたら実行して、どうなるか見てみよう。"
         },
         "Overworld Plant Crops": {
-          "mc_7_a": "`作物を植える` を使て、今立っている場所に作物を植えよう。",
+          "mc_7_a": "`作物を植える` を使って、今立っている場所に作物を植えよう。",
           "mc_7_b": "水の両側の土が茶色くなっているところに 作物を植えよう。",
           "mc_7_c": "`くりかえし`の中には、１つ以上のブロックを 入れることが できます。"
         },
         "Overworld Plant Crops_2019": {
-          "mc_7_a": "`作物を植える` を使て、今立っている場所に作物を植えよう。",
+          "mc_7_a": "`作物を植える` を使って、今立っている場所に作物を植えよう。",
           "mc_7_b": "水の両側の土が茶色くなっているところに 作物を植えよう。",
           "mc_7_c": "`くりかえし`の中には、１つ以上のブロックを 入れることが できます。"
         },
         "Overworld Plant Crops_2020": {
-          "mc_7_a": "`作物を植える` を使て、今立っている場所に作物を植えよう。",
+          "mc_7_a": "`作物を植える` を使って、今立っている場所に作物を植えよう。",
           "mc_7_b": "水の両側の土が茶色くなっているところに 作物を植えよう。",
           "mc_7_c": "`くりかえし`の中には、１つ以上のブロックを 入れることが できます。"
         },
         "Overworld Powered Minecart": {
-          "mc_13_a": "`置く レール`で 今立っている場所に レールを置くことができます。",
+          "mc_13_a": "`レールを置く`で 今立っている場所に レールを置くことができます。",
           "mc_13_b": "`くりかえし`を使って、プログラムを短くしよう。"
         },
         "Overworld Powered Minecart_2019": {
-          "mc_13_a": "`置く レール`で 今立っている場所に レールを置くことができます。",
+          "mc_13_a": "`レールを置く`で 今立っている場所に レールを置くことができます。",
           "mc_13_b": "`くりかえし`を使って、プログラムを短くしよう。"
         },
         "Overworld Powered Minecart_2020": {
-          "mc_13_a": "`置く レール`で 今立っている場所に レールを置くことができます。",
+          "mc_13_a": "`レールを置く`で 今立っている場所に レールを置くことができます。",
           "mc_13_b": "`くりかえし`を使って、プログラムを短くしよう。"
         },
         "Overworld Shear Sheep": {
@@ -1011,33 +1011,33 @@
           "mc_11_b": "`前に すすむ` を入れるのは、 `もし` の中、それとも、後ろ？"
         },
         "Underground If Statements": {
-          "mc_12_a": "赤い点々のあるブロックに レッドストーンはあります。",
+          "mc_12_a": "赤い点々のあるブロックに レッドストーンがあります。",
           "mc_12_b": "`くりかえし`を使って、プログラムを短くできるかな？",
           "mc_12_c": "`もし`で溶岩があるか調べて、丸石を置こう。 "
         },
         "Underground If Statements_2019": {
-          "mc_12_a": "赤い点々のあるブロックに レッドストーンはあります。",
+          "mc_12_a": "赤い点々のあるブロックに レッドストーンがあります。",
           "mc_12_b": "`くりかえし`を使って、プログラムを短くできるかな？",
           "mc_12_c": "`もし`で溶岩があるか調べて、丸石を置こう。 "
         },
         "Underground If Statements_2020": {
-          "mc_12_a": "赤い点々のあるブロックに レッドストーンはあります。",
+          "mc_12_a": "赤い点々のあるブロックに レッドストーンがあります。",
           "mc_12_b": "`くりかえし`を使って、プログラムを短くできるかな？",
           "mc_12_c": "`もし`で溶岩があるか調べて、丸石を置こう。 "
         },
         "Underground Iron": {
           "mc_10_a": "松明の後ろに鉄があります。どうやって行く？",
-          "mc_10_b": "溶岩の向こう側に行くには、`置く 丸石 その前に`を使って橋を作り、その上をわたって行きます。",
+          "mc_10_b": "溶岩の向こう側に行くには、`その前に丸石を置く`を使って橋を作り、その上をわたって行きます。",
           "mc_10_c": "ミスをおそれないで！まちがってもいいから、プログラムを書いたら実行して、どうなるか見てみよう。"
         },
         "Underground Iron_2019": {
           "mc_10_a": "松明の後ろに鉄があります。どうやって行く？",
-          "mc_10_b": "溶岩の向こう側に行くには、`置く 丸石 その前に`を使って橋を作り、その上をわたって行きます。",
+          "mc_10_b": "溶岩の向こう側に行くには、`その前に丸石を置く`を使って橋を作り、その上をわたって行きます。",
           "mc_10_c": "ミスをおそれないで！まちがってもいいから、プログラムを書いたら実行して、どうなるか見てみよう。"
         },
         "Underground Iron_2020": {
           "mc_10_a": "松明の後ろに鉄があります。どうやって行く？",
-          "mc_10_b": "溶岩の向こう側に行くには、`置く 丸石 その前に`を使って橋を作り、その上をわたって行きます。",
+          "mc_10_b": "溶岩の向こう側に行くには、`その前に丸石を置く`を使って橋を作り、その上をわたって行きます。",
           "mc_10_c": "ミスをおそれないで！まちがってもいいから、プログラムを書いたら実行して、どうなるか見てみよう。"
         },
         "Underground Mining Coal": {
@@ -1224,8 +1224,8 @@
           "courseE_artist_functions_challenge1_a": "<xml>\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n\n`ジャンプ` で ゾンビアーティストを いつでも 好きな場所に ジャンプさせることができます。右方向の数字 と 下方向の数字を 指定して使用します。数字は、ゾンビアーティストが いる場所から 数えるのではなく、つねに左上の角から 数えます。\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
         },
         "course3_bee_debugging_challenge1": {
-          "courseD_bee_debugging_challenge1_a": "灰色の部分のプログラムはどんな風に動くかな？ハチが後ろにすすむ理由を考えてみて。花の上と通ったらハチはいくつミツを集めますか？",
-          "courseD_bee_debugging_challenge1_b": "同じパターンでハチをバックさせてみよう。ハチの巣の上を通た時、ハチミツはいくつ必要？",
+          "courseD_bee_debugging_challenge1_a": "灰色の部分のプログラムはどんな風に動くかな？ハチが後ろにすすむ理由を考えてみて。花の上を通ったらハチはいくつミツを集めますか？",
+          "courseD_bee_debugging_challenge1_b": "同じパターンでハチをバックさせてみよう。ハチの巣の上を通る時、ハチミツはいくつ必要？",
           "courseD_bee_debugging_challenge1_c": "ハチが下の段の はしっこ まで行ったら、次のコマンドをくり返そう。\n\n-   くりかえし 2 回\n    -   前に すすむ\n    -   ハチミツを 3回 つくる\n-   後ろに すすむ"
         },
         "course3_bee_functions_challenge1": {
@@ -1237,7 +1237,7 @@
           "courseE_bee_functions_challenge1_b": "緑の関数の中に コーディングしてみよう。"
         },
         "course3_bee_functions_challenge3": {
-          "courseF_bee_functions_challenge1_a": "ツールボックスの中にある関数（かんすう）を使います。関数の中から別の関数を呼ぶことができます。"
+          "courseF_bee_functions_challenge1_a": "ツールボックスの中にある関数 (かんすう) を使います。関数の中から別の関数を呼び出すぶことができます。"
         },
         "course3_bee_functions_challenge4": {
           "courseF_bee_functions_challenge2_a": "道の進み方\n\n-   ミツを集める または ハチミツを作る\n-   横道を右に曲がる\n-   つきあたりまで行く\n-   右に曲がる\n\nこれを2回くり返せば、元いたところにもどって来れます。\n\n**答えを見るには、もう一度ヒントをクリックしてください！**",
@@ -1251,7 +1251,7 @@
         },
         "course3_farmer_condLoops_challenge1": {
           "courseD_farmer_condLoops_challenge1_a": "このパズルでは「ステップ」ボタンが役立ちます。",
-          "courseD_farmer_condLoops_challenge1_b": "カボチャがあれば、`ピック カボチャ`します。カボチャじゃなければ、何をしますか？"
+          "courseD_farmer_condLoops_challenge1_b": "カボチャがあれば、`カボチャを収穫`します。カボチャのところで、他に何をすればいいのでしょうか？"
         },
         "course3_farmer_condLoops_challenge2": {
           "courseD_farmer_condLoops_challenge2_a": "「？」のついた場所では、作物の数がちがいます。「以下の間くりかえし（while loop）」を使いましょう。"
@@ -1279,18 +1279,18 @@
         },
         "course4_artist_variables_challenge1": {
           "courseF_artist_variables_challenge1_a": "上下の移動は10ピクセルで、左右の移動には、変数 `length`を使おう。",
-          "courseF_artist_variables_challenge1_b": "変数`length`は、くり返しのなかで 10ピクセル増やす を２回行います。",
+          "courseF_artist_variables_challenge1_b": "変数`length`は、くり返しのなかで 10ピクセル増やす を2回行います。",
           "courseF_artist_variables_challenge1_c": "使うのは、左に曲がるが2つ、右に曲がるが2つ、前に進むが4つです。",
           "courseF_artist_variables_challenge1_d": "くり返しは１つです。変数を使うことをのぞけば、ジグザグに行くのと同じです。\n\n![](<https://images.code.org/664fdd219502d004fb07886f834fa3d5-image-1496868743379.51.36 PM.png>)\n\nわからなくなったら、このパターンをかいて、水平方向の線の長さを変えるには、どこに変数を使えばいいのか考えよう。",
           "courseF_artist_variables_challenge1_e": "これがジグザグに行くプログラム。\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"variables_set\" inline=\"false\">\n        <title name=\"VAR\">length</title>\n        <value name=\"VALUE\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">10</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"controls_repeat_ext\" inline=\"true\">\n            <value name=\"TIMES\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">18</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"draw_move\" inline=\"true\">\n                <title name=\"DIR\">moveForward</title>\n                <value name=\"VALUE\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">10</title>\n                  </block>\n                </value>\n                <next>\n                  <block type=\"draw_turn\" inline=\"true\">\n                    <title name=\"DIR\">turnRight</title>\n                    <value name=\"VALUE\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">90</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_move\" inline=\"true\">\n                        <title name=\"DIR\">moveForward</title>\n                        <value name=\"VALUE\">\n                          <block type=\"variables_get\">\n                            <title name=\"VAR\">length</title>\n                          </block>\n                        </value>\n                        <next>\n                          <block type=\"variables_set\" inline=\"false\">\n                            <title name=\"VAR\">length</title>\n                            <value name=\"VALUE\">\n                              <block type=\"math_arithmetic\" inline=\"true\">\n                                <title name=\"OP\">ADD</title>\n                                <value name=\"A\">\n                                  <block type=\"variables_get\">\n                                    <title name=\"VAR\">length</title>\n                                  </block>\n                                </value>\n                                <value name=\"B\">\n                                  <block type=\"math_number\">\n                                    <title name=\"NUM\">10</title>\n                                  </block>\n                                </value>\n                              </block>\n                            </value>\n                            <next>\n                              <block type=\"draw_turn\" inline=\"true\">\n                                <title name=\"DIR\">turnLeft</title>\n                                <value name=\"VALUE\">\n                                  <block type=\"math_number\">\n                                    <title name=\"NUM\">90</title>\n                                  </block>\n                                </value>\n                                <next>\n                                  <block type=\"draw_move\" inline=\"true\">\n                                    <title name=\"DIR\">moveForward</title>\n                                    <value name=\"VALUE\">\n                                      <block type=\"math_number\">\n                                        <title name=\"NUM\">10</title>\n                                      </block>\n                                    </value>\n                                    <next>\n                                      <block type=\"draw_turn\" inline=\"true\">\n                                        <title name=\"DIR\">turnLeft</title>\n                                        <value name=\"VALUE\">\n                                          <block type=\"math_number\">\n                                            <title name=\"NUM\">90</title>\n                                          </block>\n                                        </value>\n                                        <next>\n                                          <block type=\"draw_move\" inline=\"true\">\n                                            <title name=\"DIR\">moveForward</title>\n                                            <value name=\"VALUE\">\n                                              <block type=\"variables_get\">\n                                                <title name=\"VAR\">length</title>\n                                              </block>\n                                            </value>\n                                            <next>\n                                              <block type=\"variables_set\" inline=\"false\">\n                                                <title name=\"VAR\">length</title>\n                                                <value name=\"VALUE\">\n                                                  <block type=\"math_arithmetic\" inline=\"true\">\n                                                    <title name=\"OP\">ADD</title>\n                                                    <value name=\"A\">\n                                                      <block type=\"variables_get\">\n                                                        <title name=\"VAR\">length</title>\n                                                      </block>\n                                                    </value>\n                                                    <value name=\"B\">\n                                                      <block type=\"math_number\">\n                                                        <title name=\"NUM\">10</title>\n                                                      </block>\n                                                    </value>\n                                                  </block>\n                                                </value>\n                                                <next>\n                                                  <block type=\"draw_turn\" inline=\"true\">\n                                                    <title name=\"DIR\">turnRight</title>\n                                                    <value name=\"VALUE\">\n                                                      <block type=\"math_number\">\n                                                        <title name=\"NUM\">90</title>\n                                                      </block>\n                                                    </value>\n                                                  </block>\n                                                </next>\n                                              </block>\n                                            </next>\n                                          </block>\n                                        </next>\n                                      </block>\n                                    </next>\n                                  </block>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "course4_bee_fwp_challenge1": {
           "courseF_bee_fwp_challenge1_a": "メインプログラムは、こんな感じです。\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"procedures_callnoreturn\" inline=\"false\">\n        <mutation name=\"pick row\">\n          <arg name=\"length\"/>\n        </mutation>\n        <value name=\"ARG0\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">3</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"maze_move\">\n            <title name=\"DIR\">moveForward</title>\n            <next>\n              <block type=\"maze_move\">\n                <title name=\"DIR\">moveForward</title>\n                <next>\n                  <block type=\"procedures_callnoreturn\" inline=\"false\">\n                    <mutation name=\"pick row\">\n                      <arg name=\"length\"/>\n                    </mutation>\n                    <value name=\"ARG0\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">5</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"maze_move\">\n                        <title name=\"DIR\">moveForward</title>\n                        <next>\n                          <block type=\"maze_move\">\n                            <title name=\"DIR\">moveForward</title>\n                            <next>\n                              <block type=\"procedures_callnoreturn\" inline=\"false\">\n                                <mutation name=\"pick row\">\n                                  <arg name=\"length\"/>\n                                </mutation>\n                                <value name=\"ARG0\">\n                                  <block type=\"math_number\">\n                                    <title name=\"NUM\">6</title>\n                                  </block>\n                                </value>\n                                <next>\n                                  <block type=\"maze_move\">\n                                    <title name=\"DIR\">moveForward</title>\n                                    <next>\n                                      <block type=\"maze_move\">\n                                        <title name=\"DIR\">moveForward</title>\n                                        <next>\n                                          <block type=\"procedures_callnoreturn\" inline=\"false\">\n                                            <mutation name=\"pick row\">\n                                              <arg name=\"length\"/>\n                                            </mutation>\n                                            <value name=\"ARG0\">\n                                              <block type=\"math_number\">\n                                                <title name=\"NUM\">4</title>\n                                              </block>\n                                            </value>\n                                          </block>\n                                        </next>\n                                      </block>\n                                    </next>\n                                  </block>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block></xml>",
-          "courseF_bee_fwp_challenge1_c": "関数の中で使う`まで` には、`1` から `length` まで `1`ずつを指定します。\nこのくり返しの中で、前に進んでとトウモロコシをしゅうかくします。\n\n<xml>\n<block type=\"controls_for\" inline=\"true\">\n            <title name=\"VAR\">counter</title>\n            <value name=\"FROM\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">1</title>\n              </block>\n            </value>\n            <value name=\"TO\">\n              <block type=\"parameters_get\">\n                <title name=\"VAR\">length</title>\n              </block>\n            </value>\n            <value name=\"BY\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">1</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n            </statement>\n</block></xml>",
-          "courseF_bee_fwp_challenge1_e": "**こたえ**\n\n<xml>\n  <block type=\"procedures_defnoreturn\" editable=\"false\" usercreated=\"true\">\n    <mutation>\n      <arg name=\"length\"/>\n    </mutation>\n    <title name=\"NAME\">pick row</title>\n    <statement name=\"STACK\">\n      <block type=\"maze_turn\">\n        <title name=\"DIR\">turnLeft</title>\n        <next>\n          <block type=\"controls_for\" inline=\"true\">\n            <title name=\"VAR\">counter</title>\n            <value name=\"FROM\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">1</title>\n              </block>\n            </value>\n            <value name=\"TO\">\n              <block type=\"parameters_get\">\n                <title name=\"VAR\">length</title>\n              </block>\n            </value>\n            <value name=\"BY\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">1</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"maze_move\">\n                <title name=\"DIR\">moveForward</title>\n                <next>\n                  <block type=\"controls_repeat_ext\" inline=\"true\">\n                    <value name=\"TIMES\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                    <statement name=\"DO\">\n                      <block type=\"harvester_corn\"/>\n                    </statement>\n                  </block>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"controls_repeat_ext\" inline=\"true\">\n                <value name=\"TIMES\">\n                  <block type=\"parameters_get\">\n                    <title name=\"VAR\">length</title>\n                  </block>\n                </value>\n                <statement name=\"DO\">\n                  <block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n                </statement>\n                <next>\n                  <block type=\"maze_turn\">\n                    <title name=\"DIR\">turnRight</title>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </statement>\n    </block></xml>"
+          "courseF_bee_fwp_challenge1_c": "関数の中で使う`まで` には、`1` から `length` まで `1`ずつを指定します。\nこのくり返しの中で、前に進んでとトウモロコシをすべて収かくします。\n\n<xml>\n<block type=\"controls_for\" inline=\"true\">\n            <title name=\"VAR\">counter</title>\n            <value name=\"FROM\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">1</title>\n              </block>\n            </value>\n            <value name=\"TO\">\n              <block type=\"parameters_get\">\n                <title name=\"VAR\">length</title>\n              </block>\n            </value>\n            <value name=\"BY\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">1</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n            </statement>\n</block></xml>",
+          "courseF_bee_fwp_challenge1_e": "**答え**\n\n<xml>\n  <block type=\"procedures_defnoreturn\" editable=\"false\" usercreated=\"true\">\n    <mutation>\n      <arg name=\"length\"/>\n    </mutation>\n    <title name=\"NAME\">pick row</title>\n    <statement name=\"STACK\">\n      <block type=\"maze_turn\">\n        <title name=\"DIR\">turnLeft</title>\n        <next>\n          <block type=\"controls_for\" inline=\"true\">\n            <title name=\"VAR\">counter</title>\n            <value name=\"FROM\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">1</title>\n              </block>\n            </value>\n            <value name=\"TO\">\n              <block type=\"parameters_get\">\n                <title name=\"VAR\">length</title>\n              </block>\n            </value>\n            <value name=\"BY\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">1</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"maze_move\">\n                <title name=\"DIR\">moveForward</title>\n                <next>\n                  <block type=\"controls_repeat_ext\" inline=\"true\">\n                    <value name=\"TIMES\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                    <statement name=\"DO\">\n                      <block type=\"harvester_corn\"/>\n                    </statement>\n                  </block>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"controls_repeat_ext\" inline=\"true\">\n                <value name=\"TIMES\">\n                  <block type=\"parameters_get\">\n                    <title name=\"VAR\">length</title>\n                  </block>\n                </value>\n                <statement name=\"DO\">\n                  <block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n                </statement>\n                <next>\n                  <block type=\"maze_turn\">\n                    <title name=\"DIR\">turnRight</title>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </statement>\n    </block></xml>"
         },
         "course4_bee_fwp_challenge2": {
-          "courseF_bee_fwp_challenge2_a": "どのような関数を作ればいいか考えることことから始めよう。関数は農夫が横道に入って、トウモロコシだけをとるようになっています。三種類の作物のうち、どれがなっているか調べて、しゅうかくするには、どのようにすればいいですか？\n\nトウモロコシ、カボチャ、レタス、どれがなっているか調べる条件判定文を関数に追加しましょう。",
+          "courseF_bee_fwp_challenge2_a": "どのような関数を作ればいいか考えることことから始めよう。関数は農夫が横道に入って、トウモロコシだけをとるようになっています。三種類の作物のうち、どれがなっているか調べて、収かくするには、どのようにすればいいですか？\n\nトウモロコシ、カボチャ、レタス、どれがなっているか調べる条件判定文を関数に追加しましょう。",
           "courseF_bee_fwp_challenge2_c": "**関数は、このようになります。**\n\n<xml><block type=\"procedures_defnoreturn\" deletable=\"false\" movable=\"false\" editable=\"false\" usercreated=\"true\">\n    <mutation>\n      <arg name=\"length\"/>\n    </mutation>\n    <title name=\"NAME\">pick row</title>\n    <statement name=\"STACK\">\n      <block type=\"maze_turn\">\n        <title name=\"DIR\">turnLeft</title>\n        <next>\n          <block type=\"controls_for\" inline=\"true\">\n            <title name=\"VAR\">counter</title>\n            <value name=\"FROM\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">1</title>\n              </block>\n            </value>\n            <value name=\"TO\">\n              <block type=\"parameters_get\">\n                <title name=\"VAR\">length</title>\n              </block>\n            </value>\n            <value name=\"BY\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">1</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"maze_move\">\n                <title name=\"DIR\">moveForward</title>\n                <next>\n                  <block type=\"controls_repeat_ext\" inline=\"true\">\n                    <value name=\"TIMES\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                    <statement name=\"DO\">\n                      <block type=\"harvester_ifHasCrop\">\n                        <title name=\"LOC\">Corn</title>\n                        <statement name=\"DO\">\n                          <block type=\"harvester_corn\"/>\n                        </statement>\n                        <next>\n                          <block type=\"harvester_ifHasCrop\">\n                            <title name=\"LOC\">Pumpkin</title>\n                            <statement name=\"DO\">\n                              <block type=\"harvester_pumpkin\"/>\n                            </statement>\n                            <next>\n                              <block type=\"harvester_ifHasCrop\">\n                                <title name=\"LOC\">Lettuce</title>\n                                <statement name=\"DO\">\n                                  <block type=\"harvester_lettuce\"/>\n                                </statement>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </statement>\n                  </block>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"controls_repeat_ext\" inline=\"true\">\n                <value name=\"TIMES\">\n                  <block type=\"parameters_get\">\n                    <title name=\"VAR\">length</title>\n                  </block>\n                </value>\n                <statement name=\"DO\">\n                  <block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n                </statement>\n                <next>\n                  <block type=\"maze_turn\">\n                    <title name=\"DIR\">turnRight</title>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </statement>\n  </block>\n</xml>",
           "courseF_bee_fwp_challenge2_d": "**メインプログラムは、このようになります。**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_for\" inline=\"true\">\n        <title name=\"VAR\">counter2</title>\n        <value name=\"FROM\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <value name=\"TO\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">6</title>\n          </block>\n        </value>\n        <value name=\"BY\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <statement name=\"DO\">\n          <block type=\"maze_move\">\n            <title name=\"DIR\">moveForward</title>\n            <next>\n              <block type=\"procedures_callnoreturn\" inline=\"false\">\n                <mutation name=\"pick row\">\n                  <arg name=\"length\"/>\n                </mutation>\n                <value name=\"ARG0\">\n                  <block type=\"variables_get\">\n                    <title name=\"VAR\">counter2</title>\n                  </block>\n                </value>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n    </block></xml>"
         },
@@ -3611,19 +3611,19 @@
         },
         "courseC_artist_loops2a": {
           "courseC_artist_loops2a_a": "くり返しの中で200、200にジャンプして、鳥のスタンプを押してから30度曲がってね。",
-          "courseC_artist_loops2a_b": "`くりかえし`ブロックにある数字をクリックして、数を変えよう。"
+          "courseC_artist_loops2a_b": "`くりかえし`ブロックにある数字をクリックして、繰り返す数を変えよう。"
         },
         "courseC_artist_loops2a_2018": {
           "courseC_artist_loops2a_a": "くり返しの中で200、200にジャンプして、鳥のスタンプを押してから30度曲がってね。",
-          "courseC_artist_loops2a_b": "`くりかえし`ブロックにある数字をクリックして、数を変えよう。"
+          "courseC_artist_loops2a_b": "`くりかえし`ブロックにある数字をクリックして、繰り返す数を変えよう。"
         },
         "courseC_artist_loops2a_2019": {
           "courseC_artist_loops2a_a": "くり返しの中に、真ん中にジャンプする、向きをかえる、スタンプをおす を 入れます。",
-          "courseC_artist_loops2a_b": "`くりかえし`ブロックにある数字をクリックして、数を変えよう。"
+          "courseC_artist_loops2a_b": "`くりかえし`ブロックにある数字をクリックして、繰り返す数を変えよう。"
         },
         "courseC_artist_loops2a_2020": {
           "courseC_artist_loops2a_a": "くり返しの中に、真ん中にジャンプする、向きをかえる、スタンプをおす を 入れます。",
-          "courseC_artist_loops2a_b": "`くりかえし`ブロックにある数字をクリックして、数を変えよう。"
+          "courseC_artist_loops2a_b": "`くりかえし`ブロックにある数字をクリックして、繰り返す数を変えよう。"
         },
         "courseC_artist_loops3a": {
           "courseC_artist_loops3a_a": "鳥のスタンプを押した後に、１つだけブロックを追加しよう。",
@@ -4487,22 +4487,22 @@
         "courseC_maze_debugging_challenge1": {
           "courseC_maze_debugging_challenge1_a": "右から行くか、左から行くかは、君しだい！",
           "courseC_maze_debugging_challenge1_b": "通り道は長方形です！ 毎回同じように まがる必要があります。",
-          "courseC_maze_debugging_challenge1_c": "わからなくなったら、いつでもやり直すことができるよ！"
+          "courseC_maze_debugging_challenge1_c": "わからなくなったら、いつでもやり直して新しい方法を見つけられるよ！"
         },
         "courseC_maze_debugging_challenge1_2018": {
           "courseC_maze_debugging_challenge1_a": "右から行くか、左から行くかは、君しだい！",
           "courseC_maze_debugging_challenge1_b": "通り道は長方形です！ 毎回同じように まがる必要があります。",
-          "courseC_maze_debugging_challenge1_c": "わからなくなったら、いつでもやり直すことができるよ！"
+          "courseC_maze_debugging_challenge1_c": "わからなくなったら、いつでもやり直して新しい方法を見つけられるよ！"
         },
         "courseC_maze_debugging_challenge1_2019": {
           "courseC_maze_debugging_challenge1_a": "右から行くか、左から行くかは、君しだい！",
           "courseC_maze_debugging_challenge1_b": "通り道は長方形です！ 毎回同じように まがる必要があります。",
-          "courseC_maze_debugging_challenge1_c": "わからなくなったら、いつでもやり直すことができるよ！"
+          "courseC_maze_debugging_challenge1_c": "わからなくなったら、いつでもやり直して新しい方法を見つけられるよ！"
         },
         "courseC_maze_debugging_challenge1_2020": {
           "courseC_maze_debugging_challenge1_a": "右から行くか、左から行くかは、君しだい！",
           "courseC_maze_debugging_challenge1_b": "通り道は長方形です！ 毎回同じように まがる必要があります。",
-          "courseC_maze_debugging_challenge1_c": "わからなくなったら、いつでもやり直すことができるよ！"
+          "courseC_maze_debugging_challenge1_c": "わからなくなったら、いつでもやり直して新しい方法を見つけられるよ！"
         },
         "courseC_maze_debugging_challenge2": {
           "courseC_maze_debugging_challenge2_b": "わからなくなったら、デバックしてみよう。どこがまちがってるかな？",
@@ -5410,16 +5410,16 @@
           "courseD_artist_project4a_a": "ちがう長さの模様を 30度回転させて重ねてみたわ。\n\n<img src=\"https://images.code.org/45dedb51d89d3e5d0a88fe65ecbd7d7b-image-1495833855890.22.39.png\" width=\"200px\" />"
         },
         "courseD_artist_project5": {
-          "courseD_artist_project4_a": "２つの六角形と4つの三角形で作った模様\n\n<img src=\"https://images.code.org/37ca9779bafd2ccc5cc801f82358008e-image-1495823683964.34.09.png\" width=\"200px\" />"
+          "courseD_artist_project4_a": "2つの六角形と4つの三角形で作った模様\n\n<img src=\"https://images.code.org/37ca9779bafd2ccc5cc801f82358008e-image-1495823683964.34.09.png\" width=\"200px\" />"
         },
         "courseD_artist_project5_2018": {
-          "courseD_artist_project4_a": "２つの六角形と4つの三角形で作った模様\n\n<img src=\"https://images.code.org/37ca9779bafd2ccc5cc801f82358008e-image-1495823683964.34.09.png\" width=\"200px\" />"
+          "courseD_artist_project4_a": "2つの六角形と4つの三角形で作った模様\n\n<img src=\"https://images.code.org/37ca9779bafd2ccc5cc801f82358008e-image-1495823683964.34.09.png\" width=\"200px\" />"
         },
         "courseD_artist_project5_2019": {
-          "courseD_artist_project4_a": "２つの六角形と4つの三角形で作った模様\n\n<img src=\"https://images.code.org/37ca9779bafd2ccc5cc801f82358008e-image-1495823683964.34.09.png\" width=\"200px\" />"
+          "courseD_artist_project4_a": "2つの六角形と4つの三角形で作った模様\n\n<img src=\"https://images.code.org/37ca9779bafd2ccc5cc801f82358008e-image-1495823683964.34.09.png\" width=\"200px\" />"
         },
         "courseD_artist_project5_2020": {
-          "courseD_artist_project4_a": "２つの六角形と4つの三角形で作った模様\n\n<img src=\"https://images.code.org/37ca9779bafd2ccc5cc801f82358008e-image-1495823683964.34.09.png\" width=\"200px\" />"
+          "courseD_artist_project4_a": "2つの六角形と4つの三角形で作った模様\n\n<img src=\"https://images.code.org/37ca9779bafd2ccc5cc801f82358008e-image-1495823683964.34.09.png\" width=\"200px\" />"
         },
         "courseD_artist_ramp11": {
           "courseD_artist_ramp11a": "`前にすすむ 100 ピクセル`の100を200にかえて、へんをかいてください。",
@@ -5535,30 +5535,30 @@
         },
         "courseD_bee_conditionals4": {
           "courseD_bee_conditionals4_hintVid1": "わからないときは、ビデオを見てみよう！",
-          "courseD_bee_conditionals4_a": "花は見えているけど、くものときと同じように花があるか調べよう。",
-          "courseD_bee_conditionals4_b": "くり返しの中で`もし`を使って、花があるかどうか調べよう。 ",
+          "courseD_bee_conditionals4_a": "道は見えているけど、くものときと同じように花があるか調べよう。",
+          "courseD_bee_conditionals4_b": "くり返しの中で`もし`を使って、ミツがあるかどうか調べよう。 ",
           "courseD_bee_conditionals4_c": "<xml><block type=\"maze_untilBlocked\"/></xml> blockを使って、前に進むの と 花があるか 調べるのを くりかえそう。花があれば、ハチは何をすればいいかな？",
           "courseD_bee_conditionals4_hintVid2": "ビデオを見てパズルをクリアしよう。"
         },
         "courseD_bee_conditionals4_2018": {
           "courseD_bee_conditionals4_hintVid1": "わからないときは、ビデオを見てみよう！",
-          "courseD_bee_conditionals4_a": "花は見えているけど、くものときと同じように花があるか調べよう。",
-          "courseD_bee_conditionals4_b": "くり返しの中で`もし`を使って、花があるかどうか調べよう。 ",
+          "courseD_bee_conditionals4_a": "道は見えているけど、くものときと同じように花があるか調べよう。",
+          "courseD_bee_conditionals4_b": "くり返しの中で`もし`を使って、ミツがあるかどうか調べよう。 ",
           "courseD_bee_conditionals4_c": "<xml><block type=\"maze_untilBlocked\"/></xml> blockを使って、前に進むの と 花があるか 調べるのを くりかえそう。花があれば、ハチは何をすればいいかな？",
           "courseD_bee_conditionals4_hintVid2": "ビデオを見てパズルをクリアしよう。"
         },
         "courseD_bee_conditionals4_2019": {
-          "courseD_bee_conditionals4_a": "花は見えているけど、くものときと同じように花があるか調べよう。",
-          "courseD_bee_conditionals4_b": "くり返しの中で`もし`を使って、花があるかどうか調べよう。 "
+          "courseD_bee_conditionals4_a": "道は見えているけど、くものときと同じように花があるか調べよう。",
+          "courseD_bee_conditionals4_b": "くり返しの中で`もし`を使って、ミツがあるかどうか調べよう。 "
         },
         "courseD_bee_conditionals4_2020": {
-          "courseD_bee_conditionals4_a": "花は見えているけど、くものときと同じように花があるか調べよう。",
-          "courseD_bee_conditionals4_b": "くり返しの中で`もし`を使って、花があるかどうか調べよう。 "
+          "courseD_bee_conditionals4_a": "道は見えているけど、くものときと同じように花があるか調べよう。",
+          "courseD_bee_conditionals4_b": "くり返しの中で`もし`を使って、ミツがあるかどうか調べよう。 "
         },
         "courseD_bee_conditionals4_copy": {
           "courseD_bee_conditionals4_hintVid1": "わからないときは、ビデオを見てみよう！",
-          "courseD_bee_conditionals4_a": "花は見えているけど、くものときと同じように花があるか調べよう。",
-          "courseD_bee_conditionals4_b": "くり返しの中で`もし`を使って、花があるかどうか調べよう。 ",
+          "courseD_bee_conditionals4_a": "道は見えているけど、くものときと同じように花があるか調べよう。",
+          "courseD_bee_conditionals4_b": "くり返しの中で`もし`を使って、ミツがあるかどうか調べよう。 ",
           "courseD_bee_conditionals4_c": "<xml><block type=\"maze_untilBlocked\"/></xml> blockを使って、前に進むの と 花があるか 調べるのを くりかえそう。花があれば、ハチは何をすればいいかな？",
           "courseD_bee_conditionals4_hintVid2": "ビデオを見てパズルをクリアしよう。"
         },
@@ -5700,12 +5700,12 @@
           "courseD_bee_conditionals_challenge1_b": "`もし 花で` と同じく、`以下の間 花のミツ > 0`は、花があるところで動くよ。花がなくなるまで動いて、花がなくなったら くりかえしを やめるよ。これをためしてみて。\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_debugging_challenge1": {
-          "courseD_bee_debugging_challenge1_a": "灰色の部分のプログラムはどんな風に動くかな？ハチが後ろにすすむ理由を考えてみて。花の上と通ったらハチはいくつミツを集めますか？",
-          "courseD_bee_debugging_challenge1_b": "同じパターンでハチをバックさせてみよう。ハチの巣の上を通た時、ハチミツはいくつ必要？",
+          "courseD_bee_debugging_challenge1_a": "灰色の部分のプログラムはどんな風に動くかな？ハチが後ろにすすむ理由を考えてみて。花の上を通ったらハチはいくつミツを集めますか？",
+          "courseD_bee_debugging_challenge1_b": "同じパターンでハチをバックさせてみよう。ハチの巣の上を通る時、ハチミツはいくつ必要？",
           "courseD_bee_debugging_challenge1_c": "ハチが下の段の はしっこ まで行ったら、次のコマンドをくり返そう。\n\n-   くりかえし 2 回\n    -   前に すすむ\n    -   ハチミツを 3回 つくる\n-   後ろに すすむ"
         },
         "courseD_bee_debugging_challenge1a": {
-          "courseD_bee_debugging_challenge1_a": "灰色の部分のプログラムはどんな風に動くかな？ハチが後ろにすすむ理由を考えてみて。花の上と通ったらハチはいくつミツを集めますか？",
+          "courseD_bee_debugging_challenge1_a": "灰色の部分のプログラムはどんな風に動くかな？ハチが後ろにすすむ理由を考えてみて。花の上を通ったらハチはいくつミツを集めますか？",
           "courseD_bee_debugging_challenge1_b": "花のミツを集めて ハチミツを 作る くりかえしのパターンを見つけよう。",
           "courseD_bee_debugging_challenge1_c": "下の段では、つぎのパターンをくりかえしてみよう。\n\n<xml><block type=\"controls_repeat\">\n                    <title name=\"TIMES\">2</title>\n                    <statement name=\"DO\">\n                      <block type=\"maze_move\">\n                        <title name=\"DIR\">moveForward</title>\n                        <next>\n                          <block type=\"maze_honey\"/>\n                        </next>\n                      </block>\n                    </statement>\n                    <next>\n                      <block type=\"maze_move\">\n                        <title name=\"DIR\">moveBackward</title>\n                      </block>\n                    </next>\n                  </block></xml>"
         },
@@ -6026,93 +6026,93 @@
         },
         "courseD_farmer_condLoops1": {
           "courseD_farmer_condLoops1_a": "くり返しを使って、トウモロコシがなってるか5回調べます。",
-          "courseD_farmer_condLoops1_b": "`もし トウモロコシがあります。`を使わないと、トウモロコシのないところで収かくしてしまいます。"
+          "courseD_farmer_condLoops1_b": "`もし トウモロコシがあれば`を使わないと、トウモロコシのないところで収かくしてしまいます。"
         },
         "courseD_farmer_condLoops1_2018": {
           "courseD_farmer_condLoops1_a": "くり返しを使って、トウモロコシがなってるか5回調べます。",
-          "courseD_farmer_condLoops1_b": "`もし トウモロコシがあります。`を使わないと、トウモロコシのないところで収かくしてしまいます。"
+          "courseD_farmer_condLoops1_b": "`もし トウモロコシがあれば`を使わないと、トウモロコシのないところで収かくしてしまいます。"
         },
         "courseD_farmer_condLoops1_2019": {
           "courseD_farmer_condLoops1_a": "くり返しを使って、トウモロコシがなってるか5回調べます。",
-          "courseD_farmer_condLoops1_b": "`もし トウモロコシがあります。`を使わないと、トウモロコシのないところで収かくしてしまいます。"
+          "courseD_farmer_condLoops1_b": "`もし トウモロコシがあれば`を使わないと、トウモロコシのないところで収かくしてしまいます。"
         },
         "courseD_farmer_condLoops1_2020": {
           "courseD_farmer_condLoops1_a": "くり返しを使って、トウモロコシがなってるか5回調べます。",
-          "courseD_farmer_condLoops1_b": "`もし トウモロコシがあります。`を使わないと、トウモロコシのないところで収かくしてしまいます。"
+          "courseD_farmer_condLoops1_b": "`もし トウモロコシがあれば`を使わないと、トウモロコシのないところで収かくしてしまいます。"
         },
         "courseD_farmer_condLoops2": {
           "courseD_farmer_condLoops2_a": "一番いい方法は、 `もし`を入れ子にすることです。  ",
-          "courseD_farmer_condLoops2_b": "`もし やること/でなければ` を1つ と `もし`を1つ 使います。",
-          "courseD_farmer_condLoops2_c": "`もし` は、こんな風に使います。\n\n-   もし トウモロコシがあります\n    -   ピック トウモロコシ\n-   でなければ\n    -   もし レタスがあります\n        -   ピック レタス\n\n何もなければ、収かくはしません。"
+          "courseD_farmer_condLoops2_b": "`もし/でなければ` を1つ と `もし` を1つ 使います。",
+          "courseD_farmer_condLoops2_c": "`もし` は、こんな風に使います。\n\n-   もし トウモロコシがあれば\n    -   トウモロコシを収かく\n-   でなければ\n    -   もし レタスがあれば\n        -   レタスを収穫\n\n何もなければ、収かくはしません。"
         },
         "courseD_farmer_condLoops2_2018": {
           "courseD_farmer_condLoops2_a": "一番いい方法は、 `もし`を入れ子にすることです。  ",
-          "courseD_farmer_condLoops2_b": "`もし やること/でなければ` を1つ と `もし`を1つ 使います。",
-          "courseD_farmer_condLoops2_c": "`もし` は、こんな風に使います。\n\n-   もし トウモロコシがあります\n    -   ピック トウモロコシ\n-   でなければ\n    -   もし レタスがあります\n        -   ピック レタス\n\n何もなければ、収かくはしません。"
+          "courseD_farmer_condLoops2_b": "`もし/でなければ` を1つ と `もし` を1つ 使います。",
+          "courseD_farmer_condLoops2_c": "`もし` は、こんな風に使います。\n\n-   もし トウモロコシがあれば\n    -   トウモロコシを収かく\n-   でなければ\n    -   もし レタスがあれば\n        -   レタスを収穫\n\n何もなければ、収かくはしません。"
         },
         "courseD_farmer_condLoops2_2019": {
           "courseD_farmer_condLoops2_a": "一番いい方法は、 `もし`を入れ子にすることです。  ",
-          "courseD_farmer_condLoops2_b": "`もし やること/でなければ` を1つ と `もし`を1つ 使います。",
-          "courseD_farmer_condLoops2_c": "`もし` は、こんな風に使います。\n\n-   もし トウモロコシがあります\n    -   ピック トウモロコシ\n-   でなければ\n    -   もし レタスがあります\n        -   ピック レタス\n\n何もなければ、収かくはしません。"
+          "courseD_farmer_condLoops2_b": "`もし/でなければ` を1つ と `もし` を1つ 使います。",
+          "courseD_farmer_condLoops2_c": "`もし` は、こんな風に使います。\n\n-   もし トウモロコシがあれば\n    -   トウモロコシを収かく\n-   でなければ\n    -   もし レタスがあれば\n        -   レタスを収穫\n\n何もなければ、収かくはしません。"
         },
         "courseD_farmer_condLoops2_2020": {
           "courseD_farmer_condLoops2_a": "一番いい方法は、 `もし`を入れ子にすることです。  ",
-          "courseD_farmer_condLoops2_b": "`もし やること/でなければ` を1つ と `もし`を1つ 使います。",
-          "courseD_farmer_condLoops2_c": "`もし` は、こんな風に使います。\n\n-   もし トウモロコシがあります\n    -   ピック トウモロコシ\n-   でなければ\n    -   もし レタスがあります\n        -   ピック レタス\n\n何もなければ、収かくはしません。"
+          "courseD_farmer_condLoops2_b": "`もし/でなければ` を1つ と `もし` を1つ 使います。",
+          "courseD_farmer_condLoops2_c": "`もし` は、こんな風に使います。\n\n-   もし トウモロコシがあれば\n    -   トウモロコシを収かく\n-   でなければ\n    -   もし レタスがあれば\n        -   レタスを収穫\n\n何もなければ、収かくはしません。"
         },
         "courseD_farmer_condLoops3": {
-          "courseD_farmer_condLoops3_a": "`もし`を三重の入れ子にして、すべての作物を収かくしよう。\n\n`もし`をもうひとつの`もし`の中に入れて、さらに それを`もし`の中に 入れます。",
-          "courseD_farmer_condLoops3_b": "`もし やること/でなければ` を2つと`もし`を1つ使います。"
+          "courseD_farmer_condLoops3_a": "`もし`を三重の入れ子にして、すべての作物を収かくしよう。\n\n`もし`をもうひとつの`もし`の中に入れて、さらに もう1つの`もし`を2番目の`もし`の中に 入れます。",
+          "courseD_farmer_condLoops3_b": "`もし/でなければ` を2つと `もし` を1つ使います。"
         },
         "courseD_farmer_condLoops3_2018": {
-          "courseD_farmer_condLoops3_a": "`もし`を三重の入れ子にして、すべての作物を収かくしよう。\n\n`もし`をもうひとつの`もし`の中に入れて、さらに それを`もし`の中に 入れます。",
-          "courseD_farmer_condLoops3_b": "`もし やること/でなければ` を2つと`もし`を1つ使います。"
+          "courseD_farmer_condLoops3_a": "`もし`を三重の入れ子にして、すべての作物を収かくしよう。\n\n`もし`をもうひとつの`もし`の中に入れて、さらに もう1つの`もし`を2番目の`もし`の中に 入れます。",
+          "courseD_farmer_condLoops3_b": "`もし/でなければ` を2つと `もし` を1つ使います。"
         },
         "courseD_farmer_condLoops3_2019": {
-          "courseD_farmer_condLoops3_a": "`もし`を三重の入れ子にして、すべての作物を収かくしよう。\n\n`もし`をもうひとつの`もし`の中に入れて、さらに それを`もし`の中に 入れます。",
-          "courseD_farmer_condLoops3_b": "`もし やること/でなければ` を2つと`もし`を1つ使います。"
+          "courseD_farmer_condLoops3_a": "`もし`を三重の入れ子にして、すべての作物を収かくしよう。\n\n`もし`をもうひとつの`もし`の中に入れて、さらに もう1つの`もし`を2番目の`もし`の中に 入れます。",
+          "courseD_farmer_condLoops3_b": "`もし/でなければ` を2つと `もし` を1つ使います。"
         },
         "courseD_farmer_condLoops3_2020": {
-          "courseD_farmer_condLoops3_a": "`もし`を三重の入れ子にして、すべての作物を収かくしよう。\n\n`もし`をもうひとつの`もし`の中に入れて、さらに それを`もし`の中に 入れます。",
-          "courseD_farmer_condLoops3_b": "`もし やること/でなければ` を2つと`もし`を1つ使います。"
+          "courseD_farmer_condLoops3_a": "`もし`を三重の入れ子にして、すべての作物を収かくしよう。\n\n`もし`をもうひとつの`もし`の中に入れて、さらに もう1つの`もし`を2番目の`もし`の中に 入れます。",
+          "courseD_farmer_condLoops3_b": "`もし/でなければ` を2つと `もし` を1つ使います。"
         },
         "courseD_farmer_condLoops4": {
-          "grade3_RunningFarm_4courseD_farmer_condLoops4": "葉っぱには、いくつレタスが なっているか わかりません。\n\n`以下の間 レタスがあります` を使えば、レタスがなくなるまで収かくすることができます。",
+          "grade3_RunningFarm_4courseD_farmer_condLoops4": "葉っぱには、いくつレタスが なっているか わかりません。\n\n`レタスがある間` を使えば、レタスがなくなるまで収かくすることができます。",
           "grade3_RunningFarm_4courseD_farmer_condLoops4_b": "`以下の間`は、何もない場所でも使えます。レタスがなければ、何も収かくせず 次の命令を実行します。",
           "grade3_RunningFarm_4courseD_farmer_condLoops4_c": "すべての作物のところに行くには、`前に道がある間` か `くりかえし` を使います。"
         },
         "courseD_farmer_condLoops4_2018": {
-          "grade3_RunningFarm_4courseD_farmer_condLoops4": "葉っぱには、いくつレタスが なっているか わかりません。\n\n`以下の間 レタスがあります` を使えば、レタスがなくなるまで収かくすることができます。",
+          "grade3_RunningFarm_4courseD_farmer_condLoops4": "葉っぱには、いくつレタスが なっているか わかりません。\n\n`レタスがある間` を使えば、レタスがなくなるまで収かくすることができます。",
           "grade3_RunningFarm_4courseD_farmer_condLoops4_b": "`以下の間`は、何もない場所でも使えます。レタスがなければ、何も収かくせず 次の命令を実行します。",
           "grade3_RunningFarm_4courseD_farmer_condLoops4_c": "すべての作物のところに行くには、`前に道がある間` か `くりかえし` を使います。"
         },
         "courseD_farmer_condLoops4_2019": {
-          "grade3_RunningFarm_4courseD_farmer_condLoops4": "葉っぱには、いくつレタスが なっているか わかりません。\n\n`以下の間 レタスがあります` を使えば、レタスがなくなるまで収かくすることができます。",
+          "grade3_RunningFarm_4courseD_farmer_condLoops4": "葉っぱには、いくつレタスが なっているか わかりません。\n\n`レタスがある間` を使えば、レタスがなくなるまで収かくすることができます。",
           "grade3_RunningFarm_4courseD_farmer_condLoops4_b": "`以下の間`は、何もない場所でも使えます。レタスがなければ、何も収かくせず 次の命令を実行します。",
           "grade3_RunningFarm_4courseD_farmer_condLoops4_c": "すべての作物のところに行くには、`前に道がある間` か `くりかえし` を使います。"
         },
         "courseD_farmer_condLoops4_2020": {
-          "grade3_RunningFarm_4courseD_farmer_condLoops4": "葉っぱには、いくつレタスが なっているか わかりません。\n\n`以下の間 レタスがあります` を使えば、レタスがなくなるまで収かくすることができます。",
+          "grade3_RunningFarm_4courseD_farmer_condLoops4": "葉っぱには、いくつレタスが なっているか わかりません。\n\n`レタスがある間` を使えば、レタスがなくなるまで収かくすることができます。",
           "grade3_RunningFarm_4courseD_farmer_condLoops4_b": "`以下の間`は、何もない場所でも使えます。レタスがなければ、何も収かくせず 次の命令を実行します。",
           "grade3_RunningFarm_4courseD_farmer_condLoops4_c": "すべての作物のところに行くには、`前に道がある間` か `くりかえし` を使います。"
         },
         "courseD_farmer_condLoops5": {
-          "courseD_farmer_condLoops5_a": "`までを くりまえします カボチャがあります。`の使い方は、わかりますか？",
+          "courseD_farmer_condLoops5_a": "新しいくり返し`カボチャまでくりまえします`の使い方は、わかりますか？",
           "courseD_farmer_condLoops5_b": "1つの葉っぱから1つ以上 トウモロコシかレタスが収かくできます。`以下の間`を使って、全部収かくしよう！"
         },
         "courseD_farmer_condLoops5_2018": {
-          "courseD_farmer_condLoops5_a": "`までを くりまえします カボチャがあります。`の使い方は、わかりますか？",
+          "courseD_farmer_condLoops5_a": "新しいくり返し`カボチャまでくりまえします`の使い方は、わかりますか？",
           "courseD_farmer_condLoops5_b": "1つの葉っぱから1つ以上 トウモロコシかレタスが収かくできます。`以下の間`を使って、全部収かくしよう！"
         },
         "courseD_farmer_condLoops5_2019": {
           "courseD_farmer_condLoops5_b": "1つの葉っぱから1つ以上 トウモロコシかレタスが収かくできます。`以下の間`を使って、全部収かくしよう！"
         },
         "courseD_farmer_condLoops5_2020": {
-          "courseD_farmer_condLoops5_a": "`までを くりまえします カボチャがあります。`の使い方は、わかりますか？",
+          "courseD_farmer_condLoops5_a": "新しいくり返し`カボチャまでくりまえします`の使い方は、わかりますか？",
           "courseD_farmer_condLoops5_b": "1つの葉っぱから1つ以上 トウモロコシかレタスが収かくできます。`以下の間`を使って、全部収かくしよう！"
         },
         "courseD_farmer_condLoops6": {
-          "courseD_farmer_condLoops6_a": "`以下の間 トウモロコシがあります。` は途中になっているトウモロコシを収かくするのに役立ちます。トウモロコシがなければ、何もしません。",
+          "courseD_farmer_condLoops6_a": "`トウモロコシがある間` は途中になっているトウモロコシを収かくするのに役立ちます。収かくするトウモロコシがなければ、何もしません。",
           "courseD_farmer_condLoops6_b": "前に進む前に`もし`で 目の前に道があるかどうか 調べよう。"
         },
         "courseD_farmer_condLoops6_2018": {
@@ -6144,20 +6144,20 @@
           "courseD_farmer_condLoops7_b": "`前に道がある間` を使えば、農夫を つきあたりまで 行かせることができます。"
         },
         "courseD_farmer_condLoops_challenge1": {
-          "courseD_farmer_condLoops_challenge1_a": "\"ステップ\"ボタンでプログラムを実行してみよう。",
-          "courseD_farmer_condLoops_challenge1_b": "カボチャがあれば、`ピック カボチャ`します。カボチャじゃなければ、何をしますか？"
+          "courseD_farmer_condLoops_challenge1_a": "このチャレンジでは\"ステップ\"ボタンがとても役立ちます。",
+          "courseD_farmer_condLoops_challenge1_b": "カボチャがあれば、`カボチャを収穫`します。カボチャのところで、他に何をすればいいのでしょうか？"
         },
         "courseD_farmer_condLoops_challenge1_2018": {
-          "courseD_farmer_condLoops_challenge1_a": "\"ステップ\"ボタンでプログラムを実行してみよう。",
-          "courseD_farmer_condLoops_challenge1_b": "カボチャがあれば、`ピック カボチャ`します。カボチャじゃなければ、何をしますか？"
+          "courseD_farmer_condLoops_challenge1_a": "このチャレンジでは\"ステップ\"ボタンがとても役立ちます。",
+          "courseD_farmer_condLoops_challenge1_b": "カボチャがあれば、`カボチャを収穫`します。カボチャのところで、他に何をすればいいのでしょうか？"
         },
         "courseD_farmer_condLoops_challenge1_2019": {
-          "courseD_farmer_condLoops_challenge1_a": "\"ステップ\"ボタンでプログラムを実行してみよう。",
-          "courseD_farmer_condLoops_challenge1_b": "カボチャがあれば、`ピック カボチャ`します。カボチャじゃなければ、何をしますか？"
+          "courseD_farmer_condLoops_challenge1_a": "このチャレンジでは\"ステップ\"ボタンがとても役立ちます。",
+          "courseD_farmer_condLoops_challenge1_b": "カボチャがあれば、`カボチャを収穫`します。カボチャのところで、他に何をすればいいのでしょうか？"
         },
         "courseD_farmer_condLoops_challenge1_2020": {
-          "courseD_farmer_condLoops_challenge1_a": "\"ステップ\"ボタンでプログラムを実行してみよう。",
-          "courseD_farmer_condLoops_challenge1_b": "カボチャがあれば、`ピック カボチャ`します。カボチャじゃなければ、何をしますか？"
+          "courseD_farmer_condLoops_challenge1_a": "このチャレンジでは\"ステップ\"ボタンがとても役立ちます。",
+          "courseD_farmer_condLoops_challenge1_b": "カボチャがあれば、`カボチャを収穫`します。カボチャのところで、他に何をすればいいのでしょうか？"
         },
         "courseD_farmer_condLoops_challenge2": {
           "courseD_farmer_condLoops_challenge2_a": "`以下の間`を使えば、その場所にある作物を すべて収かくすることができます。"
@@ -6173,19 +6173,19 @@
         },
         "courseD_farmer_while1": {
           "courseD_farmer_while1_a": "土の山のところに行くには、4回前にすすみます。 `くりかえし` を使ってプログラムできるかな？",
-          "courseD_farmer_while1_b": "土の山のところまで行ったら、`つちをたたづける` で土をかたづけましょう。"
+          "courseD_farmer_while1_b": "土の山のところまで行ったら、`つちをかたづける` で土をかたづけましょう。"
         },
         "courseD_farmer_while1_2018": {
           "courseD_farmer_while1_a": "土の山のところに行くには、4回前にすすみます。 `くりかえし` を使ってプログラムできるかな？",
-          "courseD_farmer_while1_b": "土の山のところまで行ったら、`つちをたたづける` で土をかたづけましょう。"
+          "courseD_farmer_while1_b": "土の山のところまで行ったら、`つちをかたづける` で土をかたづけましょう。"
         },
         "courseD_farmer_while1_2019": {
           "courseD_farmer_while1_a": "土の山のところに行くには、4回前にすすみます。 `くりかえし` を使ってプログラムできるかな？",
-          "courseD_farmer_while1_b": "土の山のところまで行ったら、`つちをたたづける` で土をかたづけましょう。"
+          "courseD_farmer_while1_b": "土の山のところまで行ったら、`つちをかたづける` で土をかたづけましょう。"
         },
         "courseD_farmer_while1_2020": {
           "courseD_farmer_while1_a": "土の山のところに行くには、4回前にすすみます。 `くりかえし` を使ってプログラムできるかな？",
-          "courseD_farmer_while1_b": "土の山のところまで行ったら、`つちをたたづける` で土をかたづけましょう。"
+          "courseD_farmer_while1_b": "土の山のところまで行ったら、`つちをかたづける` で土をかたづけましょう。"
         },
         "courseD_farmer_while2": {
           "courseD_farmer_while2_a": "1回前に進めば、穴のところに行けます。",
@@ -6221,59 +6221,59 @@
         },
         "courseD_farmer_while4": {
           "courseD_farmer_conditionals4_a": "`くりかえし`の代わりに`以下の間`を使えば 山がなくなるまで ほり続けます。",
-          "courseD_farmer_conditionals4_b": "違う種類のくり返しを使えば、このパズルはかんたんにクリアできます。"
+          "courseD_farmer_conditionals4_b": "さっきのパズルと とてもよく似ています。違う種類のくり返しを使えば、このパズルはかんたんにクリアできます。"
         },
         "courseD_farmer_while4_2018": {
           "courseD_farmer_conditionals4_a": "`くりかえし`の代わりに`以下の間`を使えば 山がなくなるまで ほり続けます。",
-          "courseD_farmer_conditionals4_b": "違う種類のくり返しを使えば、このパズルはかんたんにクリアできます。"
+          "courseD_farmer_conditionals4_b": "さっきのパズルと とてもよく似ています。違う種類のくり返しを使えば、このパズルはかんたんにクリアできます。"
         },
         "courseD_farmer_while4_2019": {
           "courseD_farmer_conditionals4_a": "`くりかえし`の代わりに`以下の間`を使えば 山がなくなるまで ほり続けます。",
-          "courseD_farmer_conditionals4_b": "違う種類のくり返しを使えば、このパズルはかんたんにクリアできます。"
+          "courseD_farmer_conditionals4_b": "さっきのパズルと とてもよく似ています。違う種類のくり返しを使えば、このパズルはかんたんにクリアできます。"
         },
         "courseD_farmer_while4_2020": {
           "courseD_farmer_conditionals4_a": "`くりかえし`の代わりに`以下の間`を使えば 山がなくなるまで ほり続けます。",
-          "courseD_farmer_conditionals4_b": "違う種類のくり返しを使えば、このパズルはかんたんにクリアできます。"
+          "courseD_farmer_conditionals4_b": "さっきのパズルと とてもよく似ています。違う種類のくり返しを使えば、このパズルはかんたんにクリアできます。"
         },
         "courseD_farmer_while5": {
           "courseD_farmer_conditionals5a_a": "`くりかえし` の中に `以下の間` を入れてみよう。",
           "courseD_farmer_conditionals5a_b": "端っこまで行くには、5回前にすすみます。ほかにやることは何かな？",
-          "courseD_farmer_conditionals5a_c": "5回前にすすむ。前に進むたびに、`以下の間 山があります。` を使って 土をかたづけよう。"
+          "courseD_farmer_conditionals5a_c": "5回前にすすむ。前に進むたびに、`山がある間` を使って 土をかたづけよう。"
         },
         "courseD_farmer_while5_2018": {
           "courseD_farmer_conditionals5a_a": "`くりかえし` の中に `以下の間` を入れてみよう。",
           "courseD_farmer_conditionals5a_b": "端っこまで行くには、5回前にすすみます。ほかにやることは何かな？",
-          "courseD_farmer_conditionals5a_c": "5回前にすすむ。前に進むたびに、`以下の間 山があります。` を使って 土をかたづけよう。"
+          "courseD_farmer_conditionals5a_c": "5回前にすすむ。前に進むたびに、`山がある間` を使って 土をかたづけよう。"
         },
         "courseD_farmer_while5_2019": {
           "courseD_farmer_conditionals5a_a": "`くりかえし` の中に `以下の間` を入れてみよう。",
           "courseD_farmer_conditionals5a_b": "端っこまで行くには、5回前にすすみます。ほかにやることは何かな？",
-          "courseD_farmer_conditionals5a_c": "5回前にすすむ。前に進むたびに、`以下の間 山があります。` を使って 土をかたづけよう。"
+          "courseD_farmer_conditionals5a_c": "5回前にすすむ。前に進むたびに、`山がある間` を使って 土をかたづけよう。"
         },
         "courseD_farmer_while5_2020": {
           "courseD_farmer_conditionals5a_a": "`くりかえし` の中に `以下の間` を入れてみよう。",
           "courseD_farmer_conditionals5a_b": "端っこまで行くには、5回前にすすみます。ほかにやることは何かな？",
-          "courseD_farmer_conditionals5a_c": "5回前にすすむ。前に進むたびに、`以下の間 山があります。` を使って 土をかたづけよう。"
+          "courseD_farmer_conditionals5a_c": "5回前にすすむ。前に進むたびに、`山がある間` を使って 土をかたづけよう。"
         },
         "courseD_farmer_while6": {
-          "courseD_farmer_conditionals6_a": "`以下の間`を使えば、穴をうめる回数を気にする必要はありません。",
+          "courseD_farmer_conditionals6_a": "`以下の間`を使って、あなをうめる回数を考えよう。",
           "courseD_farmer_conditionals6_b": "ヒント、農夫は階段状に進む必要があります。",
-          "courseD_farmer_conditionals6_c": "階段状に進む方法\n\n-   前に すすむ\n-   あなを うめる\n-   みぎに まがる\n-   前に すすむ\n-   あなを うめる\n-   ひだりに まがる\n\nこれを何回くり返せばいいかな？\n\nあなをうめる時は、`以下の間 あながある` を使います。"
+          "courseD_farmer_conditionals6_c": "階段状に進む方法\n\n-   前に すすむ\n-   あなを うめる\n-   みぎに まがる\n-   前に すすむ\n-   あなを うめる\n-   ひだりに まがる\n\nこれを何回くり返せばいいかな？\n\nあなをうめる時は、`あながある間` を使います。"
         },
         "courseD_farmer_while6_2018": {
-          "courseD_farmer_conditionals6_a": "`以下の間`を使えば、穴をうめる回数を気にする必要はありません。",
+          "courseD_farmer_conditionals6_a": "`以下の間`を使って、あなをうめる回数を考えよう。",
           "courseD_farmer_conditionals6_b": "ヒント、農夫は階段状に進む必要があります。",
-          "courseD_farmer_conditionals6_c": "階段状に進む方法\n\n-   前に すすむ\n-   あなを うめる\n-   みぎに まがる\n-   前に すすむ\n-   あなを うめる\n-   ひだりに まがる\n\nこれを何回くり返せばいいかな？\n\nあなをうめる時は、`以下の間 あながある` を使います。"
+          "courseD_farmer_conditionals6_c": "階段状に進む方法\n\n-   前に すすむ\n-   あなを うめる\n-   みぎに まがる\n-   前に すすむ\n-   あなを うめる\n-   ひだりに まがる\n\nこれを何回くり返せばいいかな？\n\nあなをうめる時は、`あながある間` を使います。"
         },
         "courseD_farmer_while6_2019": {
-          "courseD_farmer_conditionals6_a": "`以下の間`を使えば、穴をうめる回数を気にする必要はありません。",
+          "courseD_farmer_conditionals6_a": "`以下の間`を使って、あなをうめる回数を考えよう。",
           "courseD_farmer_conditionals6_b": "ヒント、農夫は階段状に進む必要があります。",
-          "courseD_farmer_conditionals6_c": "階段状に進む方法\n\n-   前に すすむ\n-   あなを うめる\n-   みぎに まがる\n-   前に すすむ\n-   あなを うめる\n-   ひだりに まがる\n\nこれを何回くり返せばいいかな？\n\nあなをうめる時は、`以下の間 あながある` を使います。"
+          "courseD_farmer_conditionals6_c": "階段状に進む方法\n\n-   前に すすむ\n-   あなを うめる\n-   みぎに まがる\n-   前に すすむ\n-   あなを うめる\n-   ひだりに まがる\n\nこれを何回くり返せばいいかな？\n\nあなをうめる時は、`あながある間` を使います。"
         },
         "courseD_farmer_while6_2020": {
-          "courseD_farmer_conditionals6_a": "`以下の間`を使えば、穴をうめる回数を気にする必要はありません。",
+          "courseD_farmer_conditionals6_a": "`以下の間`を使って、あなをうめる回数を考えよう。",
           "courseD_farmer_conditionals6_b": "ヒント、農夫は階段状に進む必要があります。",
-          "courseD_farmer_conditionals6_c": "階段状に進む方法\n\n-   前に すすむ\n-   あなを うめる\n-   みぎに まがる\n-   前に すすむ\n-   あなを うめる\n-   ひだりに まがる\n\nこれを何回くり返せばいいかな？\n\nあなをうめる時は、`以下の間 あながある` を使います。"
+          "courseD_farmer_conditionals6_c": "階段状に進む方法\n\n-   前に すすむ\n-   あなを うめる\n-   みぎに まがる\n-   前に すすむ\n-   あなを うめる\n-   ひだりに まがる\n\nこれを何回くり返せばいいかな？\n\nあなをうめる時は、`あながある間` を使います。"
         },
         "courseD_farmer_while7": {
           "courseD_farmer_conditionals8_a": "`前に道がある間` を使えば、道の長さがちがっても端っこまで行くことができます。",
@@ -6297,48 +6297,48 @@
         },
         "courseD_farmer_while8": {
           "courseD_farmer_conditionals8_a": "`以下の間`を使うのは、1回じゃないよ。",
-          "courseD_farmer_conditionals8_b": "穴は道の端っこにあるので `以下の間 あながある`を使う前に`前に道がある間` を使います。",
-          "courseD_farmer_conditionals8_c": "ヒント `以下の間 あながある`と`前に道がある間`を、6回繰り返します。"
+          "courseD_farmer_conditionals8_b": "穴は道の端っこにあるので `あながある間`を使う前に`前に道がある間` を使います。",
+          "courseD_farmer_conditionals8_c": "ヒント `あながある間`と`前に道がある間`を、6回繰り返します。"
         },
         "courseD_farmer_while8_2018": {
           "courseD_farmer_conditionals8_a": "`以下の間`を使うのは、1回じゃないよ。",
-          "courseD_farmer_conditionals8_b": "穴は道の端っこにあるので `以下の間 あながある`を使う前に`前に道がある間` を使います。",
-          "courseD_farmer_conditionals8_c": "ヒント `以下の間 あながある`と`前に道がある間`を、6回繰り返します。"
+          "courseD_farmer_conditionals8_b": "穴は道の端っこにあるので `あながある間`を使う前に`前に道がある間` を使います。",
+          "courseD_farmer_conditionals8_c": "ヒント `あながある間`と`前に道がある間`を、6回繰り返します。"
         },
         "courseD_farmer_while8_2019": {
           "courseD_farmer_conditionals8_a": "`以下の間`を使うのは、1回じゃないよ。",
-          "courseD_farmer_conditionals8_b": "穴は道の端っこにあるので `以下の間 あながある`を使う前に`前に道がある間` を使います。",
-          "courseD_farmer_conditionals8_c": "ヒント `以下の間 あながある`と`前に道がある間`を、6回繰り返します。"
+          "courseD_farmer_conditionals8_b": "穴は道の端っこにあるので `あながある間`を使う前に`前に道がある間` を使います。",
+          "courseD_farmer_conditionals8_c": "ヒント `あながある間`と`前に道がある間`を、6回繰り返します。"
         },
         "courseD_farmer_while8_2020": {
           "courseD_farmer_conditionals8_a": "`以下の間`を使うのは、1回じゃないよ。",
-          "courseD_farmer_conditionals8_b": "穴は道の端っこにあるので `以下の間 あながある`を使う前に`前に道がある間` を使います。",
-          "courseD_farmer_conditionals8_c": "ヒント `以下の間 あながある`と`前に道がある間`を、6回繰り返します。"
+          "courseD_farmer_conditionals8_b": "穴は道の端っこにあるので `あながある間`を使う前に`前に道がある間` を使います。",
+          "courseD_farmer_conditionals8_c": "ヒント `あながある間`と`前に道がある間`を、6回繰り返します。"
         },
         "courseD_farmer_while_challenge1": {
           "courseD_farmer_while_challenge1_a": "穴や山は、道の端っこから **1つ手前**にあります。",
-          "courseD_farmer_while_challenge1_b": "`以下の間`を使えば、山や穴があってもなくても だいじょうぶ。農夫は山を平らにしたり 穴を埋めたりすることができます。",
-          "courseD_farmer_conditionals8_c": "`くりかえし`を使わなくても、 `以下の間`だけでパズルをクリアできます。"
+          "courseD_farmer_while_challenge1_b": "`以下の間`を使えば、山や穴があってもなくても だいじょうぶ。農夫はどこにいても山を平らにしたり 穴を埋めたりすることができます。",
+          "courseD_farmer_conditionals8_c": "`くりかえし`を使わなくても、 `以下の間`を4回使うだけでパズルをクリアできます。"
         },
         "courseD_farmer_while_challenge1_2018": {
           "courseD_farmer_while_challenge1_a": "穴や山は、道の端っこから **1つ手前**にあります。",
-          "courseD_farmer_while_challenge1_b": "`以下の間`を使えば、山や穴があってもなくても だいじょうぶ。農夫は山を平らにしたり 穴を埋めたりすることができます。",
-          "courseD_farmer_conditionals8_c": "`くりかえし`を使わなくても、 `以下の間`だけでパズルをクリアできます。"
+          "courseD_farmer_while_challenge1_b": "`以下の間`を使えば、山や穴があってもなくても だいじょうぶ。農夫はどこにいても山を平らにしたり 穴を埋めたりすることができます。",
+          "courseD_farmer_conditionals8_c": "`くりかえし`を使わなくても、 `以下の間`を4回使うだけでパズルをクリアできます。"
         },
         "courseD_farmer_while_challenge1_2019": {
           "courseD_farmer_while_challenge1_a": "穴や山は、道の端っこから **1つ手前**にあります。",
-          "courseD_farmer_while_challenge1_b": "`以下の間`を使えば、山や穴があってもなくても だいじょうぶ。農夫は山を平らにしたり 穴を埋めたりすることができます。",
-          "courseD_farmer_conditionals8_c": "`くりかえし`を使わなくても、 `以下の間`だけでパズルをクリアできます。"
+          "courseD_farmer_while_challenge1_b": "`以下の間`を使えば、山や穴があってもなくても だいじょうぶ。農夫はどこにいても山を平らにしたり 穴を埋めたりすることができます。",
+          "courseD_farmer_conditionals8_c": "`くりかえし`を使わなくても、 `以下の間`を4回使うだけでパズルをクリアできます。"
         },
         "courseD_farmer_while_challenge1_2020": {
           "courseD_farmer_while_challenge1_a": "穴や山は、道の端っこから **1つ手前**にあります。",
-          "courseD_farmer_while_challenge1_b": "`以下の間`を使えば、山や穴があってもなくても だいじょうぶ。農夫は山を平らにしたり 穴を埋めたりすることができます。",
-          "courseD_farmer_conditionals8_c": "`くりかえし`を使わなくても、 `以下の間`だけでパズルをクリアできます。"
+          "courseD_farmer_while_challenge1_b": "`以下の間`を使えば、山や穴があってもなくても だいじょうぶ。農夫はどこにいても山を平らにしたり 穴を埋めたりすることができます。",
+          "courseD_farmer_conditionals8_c": "`くりかえし`を使わなくても、 `以下の間`を4回使うだけでパズルをクリアできます。"
         },
         "courseD_farmer_while_challenge2": {
           "courseD_farmer_while_challenge1_a": "穴や山は、道の端っこから **1つ手前**にあります。",
-          "courseD_farmer_while_challenge1_b": "`以下の間`を使えば、山や穴があってもなくても だいじょうぶ。農夫は山を平らにしたり 穴を埋めたりすることができます。",
-          "courseD_farmer_conditionals8_c": "`くりかえし`を使わなくても、 `以下の間`だけでパズルをクリアできます。"
+          "courseD_farmer_while_challenge1_b": "`以下の間`を使えば、山や穴があってもなくても だいじょうぶ。農夫は同じ場所に立ちながら山を平らにしたり 穴を埋めたりすることができます。",
+          "courseD_farmer_conditionals8_c": "`くりかえし`を使わなくても、 `以下の間`を4回使うだけでパズルをクリアできます。"
         },
         "courseD_harvester_nested_loops_challenge1": {
           "courseD_harvester_nested_loops_challenge1_a": "赤い線を通って、トウモロコシのところへ連れて行って！ ",
@@ -6597,32 +6597,32 @@
           "courseC_maze_programming1_b": "ミスをおそれないで！まちがってもいいから、ブロックを引っ付けたら、どうなるか実行してみよう。"
         },
         "courseD_maze_ramp2": {
-          "courseC_maze_programming2_a": "`前に すすむ`を引っ付けるには、ツールボックスにあるブロックをドラックして、ワークスペースにある `実行（じっこう）した時`の下に持って行ってブロックをはなします。",
+          "courseC_maze_programming2_a": "`前に すすむ`を引っ付けるには、ツールボックスにあるブロックをドラックして、ワークスペースにある `実行 (じっこう) した時`の下に持って行ってブロックをはなします。",
           "courseC_maze_programming2_b": "`実行（じっこう）した時`の下に 3つブロックをひっつけよう。"
         },
         "courseD_maze_ramp2_2018": {
-          "courseC_maze_programming2_a": "`前に すすむ`を引っ付けるには、ツールボックスにあるブロックをドラックして、ワークスペースにある `実行（じっこう）した時`の下に持って行ってブロックをはなします。",
+          "courseC_maze_programming2_a": "`前に すすむ`を引っ付けるには、ツールボックスにあるブロックをドラックして、ワークスペースにある `実行 (じっこう) した時`の下に持って行ってブロックをはなします。",
           "courseC_maze_programming2_b": "`実行（じっこう）した時`の下に 3つブロックをひっつけよう。"
         },
         "courseD_maze_ramp2_2019": {
-          "courseC_maze_programming2_a": "`前に すすむ`を引っ付けるには、ツールボックスにあるブロックをドラックして、ワークスペースにある `実行（じっこう）した時`の下に持って行ってブロックをはなします。",
+          "courseC_maze_programming2_a": "`前に すすむ`を引っ付けるには、ツールボックスにあるブロックをドラックして、ワークスペースにある `実行 (じっこう) した時`の下に持って行ってブロックをはなします。",
           "courseC_maze_programming2_b": "`実行（じっこう）した時`の下に 3つブロックをひっつけよう。"
         },
         "courseD_maze_ramp2_2020": {
-          "courseC_maze_programming2_a": "`前に すすむ`を引っ付けるには、ツールボックスにあるブロックをドラックして、ワークスペースにある `実行（じっこう）した時`の下に持って行ってブロックをはなします。",
+          "courseC_maze_programming2_a": "`前に すすむ`を引っ付けるには、ツールボックスにあるブロックをドラックして、ワークスペースにある `実行 (じっこう) した時`の下に持って行ってブロックをはなします。",
           "courseC_maze_programming2_b": "`実行（じっこう）した時`の下に 3つブロックをひっつけよう。"
         },
         "courseD_maze_ramp3": {
-          "courseC_maze_programming3_a": "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\n真ん中にあるブロックを消すには、そのブロックから下にあるブロックごとを外します。\n\nそこからいらないブロックをツールボックスにドラックして\n\n残ったブロックをもとにもどします。"
+          "courseC_maze_programming3_a": "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\n真ん中にあるブロックを消すには、そのブロックから下にあるブロックごとドラッグして右に外し、ワークスペースにしばらく置いておきます。\n\nそこからいらないブロックをツールボックスにドラックして\n\n残ったブロックをもとにもどします。"
         },
         "courseD_maze_ramp3_2018": {
-          "courseC_maze_programming3_a": "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\n真ん中にあるブロックを消すには、そのブロックから下にあるブロックごとを外します。\n\nそこからいらないブロックをツールボックスにドラックして\n\n残ったブロックをもとにもどします。"
+          "courseC_maze_programming3_a": "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\n真ん中にあるブロックを消すには、そのブロックから下にあるブロックごとドラッグして右に外し、ワークスペースにしばらく置いておきます。\n\nそこからいらないブロックをツールボックスにドラックして\n\n残ったブロックをもとにもどします。"
         },
         "courseD_maze_ramp3_2019": {
-          "courseC_maze_programming3_a": "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\n真ん中にあるブロックを消すには、そのブロックから下にあるブロックごとを外します。\n\nそこからいらないブロックをツールボックスにドラックして\n\n残ったブロックをもとにもどします。"
+          "courseC_maze_programming3_a": "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\n真ん中にあるブロックを消すには、そのブロックから下にあるブロックごとドラッグして右に外し、ワークスペースにしばらく置いておきます。\n\nそこからいらないブロックをツールボックスにドラックして\n\n残ったブロックをもとにもどします。"
         },
         "courseD_maze_ramp3_2020": {
-          "courseC_maze_programming3_a": "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\n真ん中にあるブロックを消すには、そのブロックから下にあるブロックごとを外します。\n\nそこからいらないブロックをツールボックスにドラックして\n\n残ったブロックをもとにもどします。"
+          "courseC_maze_programming3_a": "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\n真ん中にあるブロックを消すには、そのブロックから下にあるブロックごとドラッグして右に外し、ワークスペースにしばらく置いておきます。\n\nそこからいらないブロックをツールボックスにドラックして\n\n残ったブロックをもとにもどします。"
         },
         "courseD_maze_ramp4": {
           "courseC_maze_programming4_a": "曲がる方向の右左は、トリさんが向いている方向で決まります。いま、トリさんは右の方を向いているので、右に回ると下にほうに行きます。",
@@ -6816,9 +6816,9 @@
           "courseD_maze_until7_b": "さっきのパズルより曲がるところは多いけど、`まで くりかえします` を使うのは、さっきと同じです。"
         },
         "courseD_maze_until8": {
-          "courseD_maze_until8_a": "`もし やること/でなければ`を使って、ゾンビを正しい方向に曲がらせよう。",
-          "courseD_maze_until8_b": "`もし やること/でなければ`で、もし 先に道があれば、どうする？",
-          "courseD_maze_until8_c": "`もし やること/でなければ`で、もし 先に道がなければ、どっちに曲がる？"
+          "courseD_maze_until8_a": "`もし/でなければ` を使って、ゾンビを正しい方向に向かわせよう。",
+          "courseD_maze_until8_b": "`もし/でなければ` で、もし 先に道があれば、どうする？",
+          "courseD_maze_until8_c": "`もし/でなければ` で、もし 先に道がなければ、どっちに曲がる？"
         },
         "courseD_maze_until9": {
           "courseD_maze_until8_a": "`もし 先に道があれば`を使って チャンパーのいる道を避けて 道が前にある限り前に進みます。",
@@ -6895,15 +6895,15 @@
           "courseD_playLab_cond6_c": "`ずっと やること`のさいしょに `1 びょう まつ`を 入れてください。安全地帯からすぐ出れば、ポイントが へらないようにしたいので、1秒待った後に かいぞくがいる場所を調べてください（ 1秒まつ のは `もし` のなかでは ありません）。"
         },
         "courseD_scrat_ramp1": {
-          "courseC_maze_programming1_a": "スクラットがドングリのところまで行けないときは、３つのブロックがちゃんとひっついているか確認して、もう一度\"実行（じっこう）\" をクリックしてみよう。",
+          "courseC_maze_programming1_a": "スクラットがドングリのところまで行けないときは、3つのブロックがちゃんとひっついているか確認して、もう一度\"実行 (じっこう) \" をクリックしてみよう。",
           "courseC_maze_programming1_b": "ミスをおそれないで！まちがってもいいから、ブロックを引っ付けたら、どうなるか実行してみよう。"
         },
         "courseD_scrat_ramp2": {
-          "courseC_maze_programming2_a": "`前に すすむ`を引っ付けるには、ツールボックスにあるブロックをドラックして、ワークスペースにある `実行（じっこう）した時`の下に持って行ってブロックをはなします。",
-          "courseC_maze_programming2_b": "`実行（じっこう）した時`の下に `前に すすむ`を 3つ 引っ付けてください。"
+          "courseC_maze_programming2_a": "`前に すすむ`を引っ付けるには、ツールボックスにあるブロックをドラックして、ワークスペースにある `実行 (じっこう) した時`の下に持って行ってブロックをはなします。",
+          "courseC_maze_programming2_b": "`実行 (じっこう) した時`の下に `前に すすむ`を 3つ 引っ付けてください。"
         },
         "courseD_scrat_ramp3": {
-          "courseC_maze_programming3_a": "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\n真ん中にあるブロックを消すには、そのブロックから下にあるブロックごとを外します。\n\nそこからいらないブロックをツールボックスにドラックして\n\n残ったブロックをもとにもどします。",
+          "courseC_maze_programming3_a": "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\n真ん中にあるブロックを消すには、そのブロックから下にあるブロックごとドラッグして右に外し、ワークスペースにしばらく置いておきます。\n\nそこからいらないブロックをツールボックスにドラックして\n\n残ったブロックをもとにもどします。",
           "courseC_maze_programming3_b": "右に曲がるか左に曲がるかは、スクラットが向いている方向で決まります。"
         },
         "courseD_scrat_ramp4": {
@@ -7284,7 +7284,7 @@
           "courseE_bee_functions10_c": "関数を呼ぶのは、メインプログラムからです。"
         },
         "courseE_bee_functions2": {
-          "courseE_bee_functions2_a": "関数は すでに できているので、花のところで関数を呼びます。",
+          "courseE_bee_functions2_a": "関数は すでに できているので、花のところで関数を呼び出します。",
           "courseE_bee_functions2_b": "<xml><block type=\"procedures_callnoreturn\"><mutation name=\"get 2 nectar\"/></block></xml> で関数を呼び出すことができます。",
           "courseE_bee_functions2_c": "このパズルをクリアするには、前に進む と 関数 'ミツを2つとる' を2回行います。"
         },
@@ -7636,22 +7636,22 @@
           "courseF_artist_for1_a": "こんな模様をかくことが できるかな？\n\n![](https://images.code.org/80ae9ab3e449db1ed4e13c86239f7617-image-1475906794954.06.12.png)"
         },
         "courseF_artist_for10": {
-          "courseF_artist_for10_a": "この模様をかくには、`セット アルファ―` にcounterをセットして、線の太さに `counter`÷10をセットします。",
+          "courseF_artist_for10_a": "この模様をかくには、`セット アルファー` にcounterをセットして、線の太さに `counter`÷10をセットします。",
           "courseF_artist_for10_b": "曲がる角度は61度です。",
           "courseF_artist_for10_c": "この模様をかく方法が知りたい？\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"draw_colour\" inline=\"true\" id=\"draw-color\">\n        <value name=\"COLOUR\">\n          <block type=\"colour_picker\">\n            <title name=\"COLOUR\">#ff0000</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"controls_for_counter\" inline=\"true\">\n          <mutation counter=\"counter\"></mutation>\n            <value name=\"FROM\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">15</title>\n              </block>\n            </value>\n            <value name=\"TO\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">175</title>\n              </block>\n            </value>\n            <value name=\"BY\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">2</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"draw_width\" inline=\"false\">\n                <value name=\"WIDTH\">\n                  <block type=\"math_arithmetic\" inline=\"true\">\n                    <title name=\"OP\">DIVIDE</title>\n                    <value name=\"A\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                    <value name=\"B\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">10</title>\n                      </block>\n                    </value>\n                  </block>\n                </value>\n                <next>\n                  <block type=\"alpha\" inline=\"true\" id=\"alpha\">\n                    <value name=\"VALUE\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_move\" inline=\"true\">\n                        <title name=\"DIR\">moveForward</title>\n                        <value name=\"VALUE\">\n                          <block type=\"variables_get\">\n                            <title name=\"VAR\">counter</title>\n                          </block>\n                        </value>\n                        <next>\n                          <block type=\"draw_turn\" inline=\"true\">\n                            <title name=\"DIR\">turnRight</title>\n                            <value name=\"VALUE\">\n                              <block type=\"math_number\">\n                                <title name=\"NUM\">61</title>\n                              </block>\n                            </value>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseF_artist_for10_2018": {
-          "courseF_artist_for10_a": "この模様をかくには、`セット アルファ―` にcounterをセットして、線の太さに `counter`÷10をセットします。",
+          "courseF_artist_for10_a": "この模様をかくには、`セット アルファー` にcounterをセットして、線の太さに `counter`÷10をセットします。",
           "courseF_artist_for10_b": "曲がる角度は61度です。",
           "courseF_artist_for10_c": "この模様をかく方法が知りたい？\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"draw_colour\" inline=\"true\" id=\"draw-color\">\n        <value name=\"COLOUR\">\n          <block type=\"colour_picker\">\n            <title name=\"COLOUR\">#ff0000</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"controls_for_counter\" inline=\"true\">\n          <mutation counter=\"counter\"></mutation>\n            <value name=\"FROM\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">15</title>\n              </block>\n            </value>\n            <value name=\"TO\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">175</title>\n              </block>\n            </value>\n            <value name=\"BY\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">2</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"draw_width\" inline=\"false\">\n                <value name=\"WIDTH\">\n                  <block type=\"math_arithmetic\" inline=\"true\">\n                    <title name=\"OP\">DIVIDE</title>\n                    <value name=\"A\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                    <value name=\"B\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">10</title>\n                      </block>\n                    </value>\n                  </block>\n                </value>\n                <next>\n                  <block type=\"alpha\" inline=\"true\" id=\"alpha\">\n                    <value name=\"VALUE\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_move\" inline=\"true\">\n                        <title name=\"DIR\">moveForward</title>\n                        <value name=\"VALUE\">\n                          <block type=\"variables_get\">\n                            <title name=\"VAR\">counter</title>\n                          </block>\n                        </value>\n                        <next>\n                          <block type=\"draw_turn\" inline=\"true\">\n                            <title name=\"DIR\">turnRight</title>\n                            <value name=\"VALUE\">\n                              <block type=\"math_number\">\n                                <title name=\"NUM\">61</title>\n                              </block>\n                            </value>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseF_artist_for10_2019": {
-          "courseF_artist_for10_a": "この模様をかくには、`セット アルファ―` にcounterをセットして、線の太さに `counter`÷10をセットします。",
+          "courseF_artist_for10_a": "この模様をかくには、`セット アルファー` にcounterをセットして、線の太さに `counter`÷10をセットします。",
           "courseF_artist_for10_b": "曲がる角度は61度です。",
           "courseF_artist_for10_c": "この模様をかく方法が知りたい？\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"draw_colour\" inline=\"true\" id=\"draw-color\">\n        <value name=\"COLOUR\">\n          <block type=\"colour_picker\">\n            <title name=\"COLOUR\">#ff0000</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"controls_for_counter\" inline=\"true\">\n          <mutation counter=\"counter\"></mutation>\n            <value name=\"FROM\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">15</title>\n              </block>\n            </value>\n            <value name=\"TO\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">175</title>\n              </block>\n            </value>\n            <value name=\"BY\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">2</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"draw_width\" inline=\"false\">\n                <value name=\"WIDTH\">\n                  <block type=\"math_arithmetic\" inline=\"true\">\n                    <title name=\"OP\">DIVIDE</title>\n                    <value name=\"A\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                    <value name=\"B\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">10</title>\n                      </block>\n                    </value>\n                  </block>\n                </value>\n                <next>\n                  <block type=\"alpha\" inline=\"true\" id=\"alpha\">\n                    <value name=\"VALUE\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_move\" inline=\"true\">\n                        <title name=\"DIR\">moveForward</title>\n                        <value name=\"VALUE\">\n                          <block type=\"variables_get\">\n                            <title name=\"VAR\">counter</title>\n                          </block>\n                        </value>\n                        <next>\n                          <block type=\"draw_turn\" inline=\"true\">\n                            <title name=\"DIR\">turnRight</title>\n                            <value name=\"VALUE\">\n                              <block type=\"math_number\">\n                                <title name=\"NUM\">61</title>\n                              </block>\n                            </value>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseF_artist_for10_2020": {
-          "courseF_artist_for10_a": "この模様をかくには、`セット アルファ―` にcounterをセットして、線の太さに `counter`÷10をセットします。",
+          "courseF_artist_for10_a": "この模様をかくには、`セット アルファー` にcounterをセットして、線の太さに `counter`÷10をセットします。",
           "courseF_artist_for10_b": "曲がる角度は61度です。",
           "courseF_artist_for10_c": "この模様をかく方法が知りたい？\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"draw_colour\" inline=\"true\" id=\"draw-color\">\n        <value name=\"COLOUR\">\n          <block type=\"colour_picker\">\n            <title name=\"COLOUR\">#ff0000</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"controls_for_counter\" inline=\"true\">\n          <mutation counter=\"counter\"></mutation>\n            <value name=\"FROM\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">15</title>\n              </block>\n            </value>\n            <value name=\"TO\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">175</title>\n              </block>\n            </value>\n            <value name=\"BY\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">2</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"draw_width\" inline=\"false\">\n                <value name=\"WIDTH\">\n                  <block type=\"math_arithmetic\" inline=\"true\">\n                    <title name=\"OP\">DIVIDE</title>\n                    <value name=\"A\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                    <value name=\"B\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">10</title>\n                      </block>\n                    </value>\n                  </block>\n                </value>\n                <next>\n                  <block type=\"alpha\" inline=\"true\" id=\"alpha\">\n                    <value name=\"VALUE\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_move\" inline=\"true\">\n                        <title name=\"DIR\">moveForward</title>\n                        <value name=\"VALUE\">\n                          <block type=\"variables_get\">\n                            <title name=\"VAR\">counter</title>\n                          </block>\n                        </value>\n                        <next>\n                          <block type=\"draw_turn\" inline=\"true\">\n                            <title name=\"DIR\">turnRight</title>\n                            <value name=\"VALUE\">\n                              <block type=\"math_number\">\n                                <title name=\"NUM\">61</title>\n                              </block>\n                            </value>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
@@ -7782,35 +7782,35 @@
         },
         "courseF_artist_for8": {
           "courseF_artist_for8_a": "プログラムはそのままで、曲がる角度だけを変えよう。",
-          "courseF_artist_for8_b": "色を変えることもできます。"
+          "courseF_artist_for8_b": "うずまきの色を変えることもできます。"
         },
         "courseF_artist_for8_2018": {
           "courseF_artist_for8_a": "プログラムはそのままで、曲がる角度だけを変えよう。",
-          "courseF_artist_for8_b": "色を変えることもできます。"
+          "courseF_artist_for8_b": "うずまきの色を変えることもできます。"
         },
         "courseF_artist_for8_2019": {
           "courseF_artist_for8_a": "プログラムはそのままで、曲がる角度だけを変えよう。",
-          "courseF_artist_for8_b": "色を変えることもできます。"
+          "courseF_artist_for8_b": "うずまきの色を変えることもできます。"
         },
         "courseF_artist_for8_2020": {
           "courseF_artist_for8_a": "プログラムはそのままで、曲がる角度だけを変えよう。",
-          "courseF_artist_for8_b": "色を変えることもできます。"
+          "courseF_artist_for8_b": "うずまきの色を変えることもできます。"
         },
         "courseF_artist_for9": {
-          "courseF_artist_for9_a": "`セット アルファ―` を `まで`の中に入れて、変数 `counter`をセットすれば、この模様をかくことができます。",
-          "courseF_artist_for9_b": "`セット アルファ―` で、色の濃淡を変えることができます。値が小さいほど、うすくなります。"
+          "courseF_artist_for9_a": "`セット アルファー` を `まで`の中に入れて、変数 `counter`をセットすれば、この模様をかくことができます。",
+          "courseF_artist_for9_b": "`セット アルファー` で、色の濃淡を変えることができます。値が小さいほど、うすくなります。"
         },
         "courseF_artist_for9_2018": {
-          "courseF_artist_for9_a": "`セット アルファ―` を `まで`の中に入れて、変数 `counter`をセットすれば、この模様をかくことができます。",
-          "courseF_artist_for9_b": "`セット アルファ―` で、色の濃淡を変えることができます。値が小さいほど、うすくなります。"
+          "courseF_artist_for9_a": "`セット アルファー` を `まで`の中に入れて、変数 `counter`をセットすれば、この模様をかくことができます。",
+          "courseF_artist_for9_b": "`セット アルファー` で、色の濃淡を変えることができます。値が小さいほど、うすくなります。"
         },
         "courseF_artist_for9_2019": {
-          "courseF_artist_for9_a": "`セット アルファ―` を `まで`の中に入れて、変数 `counter`をセットすれば、この模様をかくことができます。",
-          "courseF_artist_for9_b": "`セット アルファ―` で、色の濃淡を変えることができます。値が小さいほど、うすくなります。"
+          "courseF_artist_for9_a": "`セット アルファー` を `まで`の中に入れて、変数 `counter`をセットすれば、この模様をかくことができます。",
+          "courseF_artist_for9_b": "`セット アルファー` で、色の濃淡を変えることができます。値が小さいほど、うすくなります。"
         },
         "courseF_artist_for9_2020": {
-          "courseF_artist_for9_a": "`セット アルファ―` を `まで`の中に入れて、変数 `counter`をセットすれば、この模様をかくことができます。",
-          "courseF_artist_for9_b": "`セット アルファ―` で、色の濃淡を変えることができます。値が小さいほど、うすくなります。"
+          "courseF_artist_for9_a": "`セット アルファー` を `まで`の中に入れて、変数 `counter`をセットすれば、この模様をかくことができます。",
+          "courseF_artist_for9_b": "`セット アルファー` で、色の濃淡を変えることができます。値が小さいほど、うすくなります。"
         },
         "courseF_artist_for_challenge1": {
           "courseF_artist_for_challenge1_a": "ペンの太さは 1 です。\n一番小さい四角形は、一辺 50 ピクセルの長さで、50 ピクセルずつ大きくなっていきます。",
@@ -7867,18 +7867,18 @@
         },
         "courseF_artist_fwp2": {
           "courseF_artist_fwp2_a": "関数の中を見るには、 \"編集\"ボタンをクリックします。  パラメータ`length`を追加して、 `前に すすむ`の距離として使ってみよう。",
-          "courseF_artist_fwp2_b": "関数を呼ぶとき、 `まつ`を使うのがベストなコーディングです！"
+          "courseF_artist_fwp2_b": "関数を呼ぶとき、 `まで`を使うのがベストなコーディングです！"
         },
         "courseF_artist_fwp3": {
-          "courseF_artist_fwp3_a": "`まつ`の中で関数を使います。",
+          "courseF_artist_fwp3_a": "`まで`の中で関数を使うと、簡単になります。",
           "courseF_artist_fwp3_b": "次の正方形をかくときに、90度曲がります。\n\n![](https://images.code.org/97bd8eded03c5aa39740876c8e9f7ff8-image-1469224745277.gif)"
         },
         "courseF_artist_fwp4": {
           "courseF_artist_fwp4_b": "パラメータを**もう一つ追加**しましょう。最初からあるものは、消さないでね！",
-          "courseF_artist_fwp4_c": "図形をかくのに関数が3回呼ばれます。"
+          "courseF_artist_fwp4_c": "図形をかくのに関数を3回呼び出します。"
         },
         "courseF_artist_fwp5": {
-          "courseF_artist_fwp5_d": "`まつ` を使いましょう。",
+          "courseF_artist_fwp5_d": "`まで` は本当に役立ちます。",
           "courseF_artist_fwp5_c": "関数をすこし変更する必要があります。アーティストは角で右に曲がるようになっていますが、左に曲がるようにしましょう。",
           "courseF_artist_fwp5_a": "辺の長さは、多角形の角の数の7倍になっています。",
           "courseF_artist_fwp5_b": "次の図形をかくときに100ピクセルジャンプするのを忘れないで。"
@@ -7892,20 +7892,20 @@
           "courseF_artist_fwp7_b": "変数 `min` を、関数のなかの`まで`の1つ目のスロットにセットしよう。"
         },
         "courseF_artist_fwp8": {
-          "courseF_artist_fwp8_a": "関数を変更する必要はありません。",
-          "courseF_artist_fwp8_b": "必要なことは、関数を呼ぶ前に色を変えることだけです。"
+          "courseF_artist_fwp8_a": "関数が正しければ、それを変更する必要はありません。",
+          "courseF_artist_fwp8_b": "必要なことは、関数を呼び出す前に色を変えることだけです。"
         },
         "courseF_artist_fwp9": {
           "courseF_artist_fwp9_a": "次の3つから1つえらんでかいてみよう。\n![](<https://images.code.org/eae6d52956c2bc06b90db3693037df36-image-1493739069435.9.13 hints.png>)"
         },
         "courseF_artist_fwp_challenge1": {
           "courseF_artist_fwp_challenge1_b": "多角形の辺の数に くり返しの counterをセットします。",
-          "courseF_artist_fwp_challenge1_c": "多角形をかく関数は、3から6まで1ずつ変わるくり返しの中で呼ばれます。どんな図形がかかれますか？"
+          "courseF_artist_fwp_challenge1_c": "多角形をかく関数は、3から6まで1ずつ変わるくり返しの中で呼び出されます。どんな図形がかかれますか？"
         },
         "courseF_artist_fwp_challenge2": {
           "courseF_artist_fwp_challenge1_a": "![](https://images.code.org/9310e6352e85a8265b424c9d57ca28d1-image-1446239776339.gif)",
           "courseF_artist_fwp_challenge1_b": "八角形の辺の長さに くり返しの counterをセットします。 ",
-          "courseF_artist_fwp_challenge1_c": "八角形をかく関数は、200から2まで2ずつ減るくり返しの中で呼ばれます。 ",
+          "courseF_artist_fwp_challenge1_c": "八角形をかく関数は、200から2まで2ずつ減るくり返しの中で呼び出されます。 ",
           "courseF_artist_fwp_challenge1_d": "くり返しのなかで22.5度曲がるのを忘れないでね。 ",
           "courseF_artist_fwp_challenge1_e": "八角形の線の色と幅は、変数 `counter`を使って変更します。",
           "courseF_artist_fwp_challenge1_f": "**答え**\n\n![Solution Blocks](https://images.code.org/a82cfea836b95ce6625b08afcc3b7b37-image-1469727289590.png)"
@@ -7944,7 +7944,7 @@
         },
         "courseF_artist_variables3": {
           "courseF_artist_variables3_a": "変数 `length`は、2カ所で使います。三角形の長さ と 次の三角形かくときにすすむ量 です。",
-          "courseF_artist_variables3_b": "50を入れた数字のブロックを使うのは1回だけで、`セット length は`で使います。"
+          "courseF_artist_variables3_b": "50を入れた数字のブロックを使うのは1回だけで、`セット変数 length` の後で使います。"
         },
         "courseF_artist_variables3_2018": {
           "courseF_artist_variables3_a": "変数 `length`は、2カ所で使います。三角形の長さ と 次の三角形かくときにすすむ量 です。",
@@ -8112,28 +8112,28 @@
         },
         "courseF_artist_variables_challenge1": {
           "courseF_artist_variables_challenge1_a": "上下の移動は10ピクセルで、左右の移動には、変数 `length`を使おう。",
-          "courseF_artist_variables_challenge1_b": "変数`length`は、くり返しのなかで 10ピクセル増やす を２回行います。",
+          "courseF_artist_variables_challenge1_b": "変数`length`は、くり返しのなかで 10ピクセル増やす を2回行います。",
           "courseF_artist_variables_challenge1_c": "使うのは、左に曲がるが2つ、右に曲がるが2つ、前に進むが4つです。",
           "courseF_artist_variables_challenge1_d": "くり返しは１つです。変数を使うことをのぞけば、ジグザグに行くのと同じです。\n\n![](<https://images.code.org/664fdd219502d004fb07886f834fa3d5-image-1496868743379.51.36 PM.png>)\n\nわからなくなったら、このパターンをかいて、水平方向の線の長さを変えるには、どこに変数を使えばいいのか考えよう。",
           "courseF_artist_variables_challenge1_e": "これがジグザグに行くプログラム。\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"variables_set\" inline=\"false\">\n        <title name=\"VAR\">length</title>\n        <value name=\"VALUE\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">10</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"controls_repeat_ext\" inline=\"true\">\n            <value name=\"TIMES\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">18</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"draw_move\" inline=\"true\">\n                <title name=\"DIR\">moveForward</title>\n                <value name=\"VALUE\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">10</title>\n                  </block>\n                </value>\n                <next>\n                  <block type=\"draw_turn\" inline=\"true\">\n                    <title name=\"DIR\">turnRight</title>\n                    <value name=\"VALUE\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">90</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_move\" inline=\"true\">\n                        <title name=\"DIR\">moveForward</title>\n                        <value name=\"VALUE\">\n                          <block type=\"variables_get\">\n                            <title name=\"VAR\">length</title>\n                          </block>\n                        </value>\n                        <next>\n                          <block type=\"variables_set\" inline=\"false\">\n                            <title name=\"VAR\">length</title>\n                            <value name=\"VALUE\">\n                              <block type=\"math_arithmetic\" inline=\"true\">\n                                <title name=\"OP\">ADD</title>\n                                <value name=\"A\">\n                                  <block type=\"variables_get\">\n                                    <title name=\"VAR\">length</title>\n                                  </block>\n                                </value>\n                                <value name=\"B\">\n                                  <block type=\"math_number\">\n                                    <title name=\"NUM\">10</title>\n                                  </block>\n                                </value>\n                              </block>\n                            </value>\n                            <next>\n                              <block type=\"draw_turn\" inline=\"true\">\n                                <title name=\"DIR\">turnLeft</title>\n                                <value name=\"VALUE\">\n                                  <block type=\"math_number\">\n                                    <title name=\"NUM\">90</title>\n                                  </block>\n                                </value>\n                                <next>\n                                  <block type=\"draw_move\" inline=\"true\">\n                                    <title name=\"DIR\">moveForward</title>\n                                    <value name=\"VALUE\">\n                                      <block type=\"math_number\">\n                                        <title name=\"NUM\">10</title>\n                                      </block>\n                                    </value>\n                                    <next>\n                                      <block type=\"draw_turn\" inline=\"true\">\n                                        <title name=\"DIR\">turnLeft</title>\n                                        <value name=\"VALUE\">\n                                          <block type=\"math_number\">\n                                            <title name=\"NUM\">90</title>\n                                          </block>\n                                        </value>\n                                        <next>\n                                          <block type=\"draw_move\" inline=\"true\">\n                                            <title name=\"DIR\">moveForward</title>\n                                            <value name=\"VALUE\">\n                                              <block type=\"variables_get\">\n                                                <title name=\"VAR\">length</title>\n                                              </block>\n                                            </value>\n                                            <next>\n                                              <block type=\"variables_set\" inline=\"false\">\n                                                <title name=\"VAR\">length</title>\n                                                <value name=\"VALUE\">\n                                                  <block type=\"math_arithmetic\" inline=\"true\">\n                                                    <title name=\"OP\">ADD</title>\n                                                    <value name=\"A\">\n                                                      <block type=\"variables_get\">\n                                                        <title name=\"VAR\">length</title>\n                                                      </block>\n                                                    </value>\n                                                    <value name=\"B\">\n                                                      <block type=\"math_number\">\n                                                        <title name=\"NUM\">10</title>\n                                                      </block>\n                                                    </value>\n                                                  </block>\n                                                </value>\n                                                <next>\n                                                  <block type=\"draw_turn\" inline=\"true\">\n                                                    <title name=\"DIR\">turnRight</title>\n                                                    <value name=\"VALUE\">\n                                                      <block type=\"math_number\">\n                                                        <title name=\"NUM\">90</title>\n                                                      </block>\n                                                    </value>\n                                                  </block>\n                                                </next>\n                                              </block>\n                                            </next>\n                                          </block>\n                                        </next>\n                                      </block>\n                                    </next>\n                                  </block>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseF_artist_variables_challenge1_2018": {
           "courseF_artist_variables_challenge1_a": "上下の移動は10ピクセルで、左右の移動には、変数 `length`を使おう。",
-          "courseF_artist_variables_challenge1_b": "変数`length`は、くり返しのなかで 10ピクセル増やす を２回行います。",
+          "courseF_artist_variables_challenge1_b": "変数`length`は、くり返しのなかで 10ピクセル増やす を2回行います。",
           "courseF_artist_variables_challenge1_c": "使うのは、左に曲がるが2つ、右に曲がるが2つ、前に進むが4つです。",
           "courseF_artist_variables_challenge1_d": "くり返しは１つです。変数を使うことをのぞけば、ジグザグに行くのと同じです。\n\n![](<https://images.code.org/664fdd219502d004fb07886f834fa3d5-image-1496868743379.51.36 PM.png>)\n\nわからなくなったら、このパターンをかいて、水平方向の線の長さを変えるには、どこに変数を使えばいいのか考えよう。",
           "courseF_artist_variables_challenge1_e": "これがジグザグに行くプログラム。\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"variables_set\" inline=\"false\">\n        <title name=\"VAR\">length</title>\n        <value name=\"VALUE\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">10</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"controls_repeat_ext\" inline=\"true\">\n            <value name=\"TIMES\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">18</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"draw_move\" inline=\"true\">\n                <title name=\"DIR\">moveForward</title>\n                <value name=\"VALUE\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">10</title>\n                  </block>\n                </value>\n                <next>\n                  <block type=\"draw_turn\" inline=\"true\">\n                    <title name=\"DIR\">turnRight</title>\n                    <value name=\"VALUE\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">90</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_move\" inline=\"true\">\n                        <title name=\"DIR\">moveForward</title>\n                        <value name=\"VALUE\">\n                          <block type=\"variables_get\">\n                            <title name=\"VAR\">length</title>\n                          </block>\n                        </value>\n                        <next>\n                          <block type=\"variables_set\" inline=\"false\">\n                            <title name=\"VAR\">length</title>\n                            <value name=\"VALUE\">\n                              <block type=\"math_arithmetic\" inline=\"true\">\n                                <title name=\"OP\">ADD</title>\n                                <value name=\"A\">\n                                  <block type=\"variables_get\">\n                                    <title name=\"VAR\">length</title>\n                                  </block>\n                                </value>\n                                <value name=\"B\">\n                                  <block type=\"math_number\">\n                                    <title name=\"NUM\">10</title>\n                                  </block>\n                                </value>\n                              </block>\n                            </value>\n                            <next>\n                              <block type=\"draw_turn\" inline=\"true\">\n                                <title name=\"DIR\">turnLeft</title>\n                                <value name=\"VALUE\">\n                                  <block type=\"math_number\">\n                                    <title name=\"NUM\">90</title>\n                                  </block>\n                                </value>\n                                <next>\n                                  <block type=\"draw_move\" inline=\"true\">\n                                    <title name=\"DIR\">moveForward</title>\n                                    <value name=\"VALUE\">\n                                      <block type=\"math_number\">\n                                        <title name=\"NUM\">10</title>\n                                      </block>\n                                    </value>\n                                    <next>\n                                      <block type=\"draw_turn\" inline=\"true\">\n                                        <title name=\"DIR\">turnLeft</title>\n                                        <value name=\"VALUE\">\n                                          <block type=\"math_number\">\n                                            <title name=\"NUM\">90</title>\n                                          </block>\n                                        </value>\n                                        <next>\n                                          <block type=\"draw_move\" inline=\"true\">\n                                            <title name=\"DIR\">moveForward</title>\n                                            <value name=\"VALUE\">\n                                              <block type=\"variables_get\">\n                                                <title name=\"VAR\">length</title>\n                                              </block>\n                                            </value>\n                                            <next>\n                                              <block type=\"variables_set\" inline=\"false\">\n                                                <title name=\"VAR\">length</title>\n                                                <value name=\"VALUE\">\n                                                  <block type=\"math_arithmetic\" inline=\"true\">\n                                                    <title name=\"OP\">ADD</title>\n                                                    <value name=\"A\">\n                                                      <block type=\"variables_get\">\n                                                        <title name=\"VAR\">length</title>\n                                                      </block>\n                                                    </value>\n                                                    <value name=\"B\">\n                                                      <block type=\"math_number\">\n                                                        <title name=\"NUM\">10</title>\n                                                      </block>\n                                                    </value>\n                                                  </block>\n                                                </value>\n                                                <next>\n                                                  <block type=\"draw_turn\" inline=\"true\">\n                                                    <title name=\"DIR\">turnRight</title>\n                                                    <value name=\"VALUE\">\n                                                      <block type=\"math_number\">\n                                                        <title name=\"NUM\">90</title>\n                                                      </block>\n                                                    </value>\n                                                  </block>\n                                                </next>\n                                              </block>\n                                            </next>\n                                          </block>\n                                        </next>\n                                      </block>\n                                    </next>\n                                  </block>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseF_artist_variables_challenge1_2019": {
           "courseF_artist_variables_challenge1_a": "上下の移動は10ピクセルで、左右の移動には、変数 `length`を使おう。",
-          "courseF_artist_variables_challenge1_b": "変数`length`は、くり返しのなかで 10ピクセル増やす を２回行います。",
+          "courseF_artist_variables_challenge1_b": "変数`length`は、くり返しのなかで 10ピクセル増やす を2回行います。",
           "courseF_artist_variables_challenge1_c": "使うのは、左に曲がるが2つ、右に曲がるが2つ、前に進むが4つです。",
           "courseF_artist_variables_challenge1_d": "くり返しは１つです。変数を使うことをのぞけば、ジグザグに行くのと同じです。\n\n![](<https://images.code.org/664fdd219502d004fb07886f834fa3d5-image-1496868743379.51.36 PM.png>)\n\nわからなくなったら、このパターンをかいて、水平方向の線の長さを変えるには、どこに変数を使えばいいのか考えよう。",
           "courseF_artist_variables_challenge1_e": "これがジグザグに行くプログラム。\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"variables_set\" inline=\"false\">\n        <title name=\"VAR\">length</title>\n        <value name=\"VALUE\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">10</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"controls_repeat_ext\" inline=\"true\">\n            <value name=\"TIMES\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">18</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"draw_move\" inline=\"true\">\n                <title name=\"DIR\">moveForward</title>\n                <value name=\"VALUE\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">10</title>\n                  </block>\n                </value>\n                <next>\n                  <block type=\"draw_turn\" inline=\"true\">\n                    <title name=\"DIR\">turnRight</title>\n                    <value name=\"VALUE\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">90</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_move\" inline=\"true\">\n                        <title name=\"DIR\">moveForward</title>\n                        <value name=\"VALUE\">\n                          <block type=\"variables_get\">\n                            <title name=\"VAR\">length</title>\n                          </block>\n                        </value>\n                        <next>\n                          <block type=\"variables_set\" inline=\"false\">\n                            <title name=\"VAR\">length</title>\n                            <value name=\"VALUE\">\n                              <block type=\"math_arithmetic\" inline=\"true\">\n                                <title name=\"OP\">ADD</title>\n                                <value name=\"A\">\n                                  <block type=\"variables_get\">\n                                    <title name=\"VAR\">length</title>\n                                  </block>\n                                </value>\n                                <value name=\"B\">\n                                  <block type=\"math_number\">\n                                    <title name=\"NUM\">10</title>\n                                  </block>\n                                </value>\n                              </block>\n                            </value>\n                            <next>\n                              <block type=\"draw_turn\" inline=\"true\">\n                                <title name=\"DIR\">turnLeft</title>\n                                <value name=\"VALUE\">\n                                  <block type=\"math_number\">\n                                    <title name=\"NUM\">90</title>\n                                  </block>\n                                </value>\n                                <next>\n                                  <block type=\"draw_move\" inline=\"true\">\n                                    <title name=\"DIR\">moveForward</title>\n                                    <value name=\"VALUE\">\n                                      <block type=\"math_number\">\n                                        <title name=\"NUM\">10</title>\n                                      </block>\n                                    </value>\n                                    <next>\n                                      <block type=\"draw_turn\" inline=\"true\">\n                                        <title name=\"DIR\">turnLeft</title>\n                                        <value name=\"VALUE\">\n                                          <block type=\"math_number\">\n                                            <title name=\"NUM\">90</title>\n                                          </block>\n                                        </value>\n                                        <next>\n                                          <block type=\"draw_move\" inline=\"true\">\n                                            <title name=\"DIR\">moveForward</title>\n                                            <value name=\"VALUE\">\n                                              <block type=\"variables_get\">\n                                                <title name=\"VAR\">length</title>\n                                              </block>\n                                            </value>\n                                            <next>\n                                              <block type=\"variables_set\" inline=\"false\">\n                                                <title name=\"VAR\">length</title>\n                                                <value name=\"VALUE\">\n                                                  <block type=\"math_arithmetic\" inline=\"true\">\n                                                    <title name=\"OP\">ADD</title>\n                                                    <value name=\"A\">\n                                                      <block type=\"variables_get\">\n                                                        <title name=\"VAR\">length</title>\n                                                      </block>\n                                                    </value>\n                                                    <value name=\"B\">\n                                                      <block type=\"math_number\">\n                                                        <title name=\"NUM\">10</title>\n                                                      </block>\n                                                    </value>\n                                                  </block>\n                                                </value>\n                                                <next>\n                                                  <block type=\"draw_turn\" inline=\"true\">\n                                                    <title name=\"DIR\">turnRight</title>\n                                                    <value name=\"VALUE\">\n                                                      <block type=\"math_number\">\n                                                        <title name=\"NUM\">90</title>\n                                                      </block>\n                                                    </value>\n                                                  </block>\n                                                </next>\n                                              </block>\n                                            </next>\n                                          </block>\n                                        </next>\n                                      </block>\n                                    </next>\n                                  </block>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseF_artist_variables_challenge1_2020": {
           "courseF_artist_variables_challenge1_a": "上下の移動は10ピクセルで、左右の移動には、変数 `length`を使おう。",
-          "courseF_artist_variables_challenge1_b": "変数`length`は、くり返しのなかで 10ピクセル増やす を２回行います。",
+          "courseF_artist_variables_challenge1_b": "変数`length`は、くり返しのなかで 10ピクセル増やす を2回行います。",
           "courseF_artist_variables_challenge1_c": "使うのは、左に曲がるが2つ、右に曲がるが2つ、前に進むが4つです。",
           "courseF_artist_variables_challenge1_d": "くり返しは１つです。変数を使うことをのぞけば、ジグザグに行くのと同じです。\n\n![](<https://images.code.org/664fdd219502d004fb07886f834fa3d5-image-1496868743379.51.36 PM.png>)\n\nわからなくなったら、このパターンをかいて、水平方向の線の長さを変えるには、どこに変数を使えばいいのか考えよう。",
           "courseF_artist_variables_challenge1_e": "これがジグザグに行くプログラム。\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"variables_set\" inline=\"false\">\n        <title name=\"VAR\">length</title>\n        <value name=\"VALUE\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">10</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"controls_repeat_ext\" inline=\"true\">\n            <value name=\"TIMES\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">18</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"draw_move\" inline=\"true\">\n                <title name=\"DIR\">moveForward</title>\n                <value name=\"VALUE\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">10</title>\n                  </block>\n                </value>\n                <next>\n                  <block type=\"draw_turn\" inline=\"true\">\n                    <title name=\"DIR\">turnRight</title>\n                    <value name=\"VALUE\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">90</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_move\" inline=\"true\">\n                        <title name=\"DIR\">moveForward</title>\n                        <value name=\"VALUE\">\n                          <block type=\"variables_get\">\n                            <title name=\"VAR\">length</title>\n                          </block>\n                        </value>\n                        <next>\n                          <block type=\"variables_set\" inline=\"false\">\n                            <title name=\"VAR\">length</title>\n                            <value name=\"VALUE\">\n                              <block type=\"math_arithmetic\" inline=\"true\">\n                                <title name=\"OP\">ADD</title>\n                                <value name=\"A\">\n                                  <block type=\"variables_get\">\n                                    <title name=\"VAR\">length</title>\n                                  </block>\n                                </value>\n                                <value name=\"B\">\n                                  <block type=\"math_number\">\n                                    <title name=\"NUM\">10</title>\n                                  </block>\n                                </value>\n                              </block>\n                            </value>\n                            <next>\n                              <block type=\"draw_turn\" inline=\"true\">\n                                <title name=\"DIR\">turnLeft</title>\n                                <value name=\"VALUE\">\n                                  <block type=\"math_number\">\n                                    <title name=\"NUM\">90</title>\n                                  </block>\n                                </value>\n                                <next>\n                                  <block type=\"draw_move\" inline=\"true\">\n                                    <title name=\"DIR\">moveForward</title>\n                                    <value name=\"VALUE\">\n                                      <block type=\"math_number\">\n                                        <title name=\"NUM\">10</title>\n                                      </block>\n                                    </value>\n                                    <next>\n                                      <block type=\"draw_turn\" inline=\"true\">\n                                        <title name=\"DIR\">turnLeft</title>\n                                        <value name=\"VALUE\">\n                                          <block type=\"math_number\">\n                                            <title name=\"NUM\">90</title>\n                                          </block>\n                                        </value>\n                                        <next>\n                                          <block type=\"draw_move\" inline=\"true\">\n                                            <title name=\"DIR\">moveForward</title>\n                                            <value name=\"VALUE\">\n                                              <block type=\"variables_get\">\n                                                <title name=\"VAR\">length</title>\n                                              </block>\n                                            </value>\n                                            <next>\n                                              <block type=\"variables_set\" inline=\"false\">\n                                                <title name=\"VAR\">length</title>\n                                                <value name=\"VALUE\">\n                                                  <block type=\"math_arithmetic\" inline=\"true\">\n                                                    <title name=\"OP\">ADD</title>\n                                                    <value name=\"A\">\n                                                      <block type=\"variables_get\">\n                                                        <title name=\"VAR\">length</title>\n                                                      </block>\n                                                    </value>\n                                                    <value name=\"B\">\n                                                      <block type=\"math_number\">\n                                                        <title name=\"NUM\">10</title>\n                                                      </block>\n                                                    </value>\n                                                  </block>\n                                                </value>\n                                                <next>\n                                                  <block type=\"draw_turn\" inline=\"true\">\n                                                    <title name=\"DIR\">turnRight</title>\n                                                    <value name=\"VALUE\">\n                                                      <block type=\"math_number\">\n                                                        <title name=\"NUM\">90</title>\n                                                      </block>\n                                                    </value>\n                                                  </block>\n                                                </next>\n                                              </block>\n                                            </next>\n                                          </block>\n                                        </next>\n                                      </block>\n                                    </next>\n                                  </block>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
@@ -8160,7 +8160,7 @@
         },
         "courseF_bee_conditionals10": {
           "courseF_bee_conditionals10_a": "くもがあった時を思い出して、このヒントは役に立った？",
-          "courseF_bee_conditionals10_b": "`もし やること/でなければ`を使えば、そこにあるのが花かハチの巣か調べることができます。",
+          "courseF_bee_conditionals10_b": "`もし/でなければ`を使えば、そこにあるのが花かハチの巣か調べることができます。",
           "courseF_bee_conditionals10_c": "`前に道がある間`を使えば、道を最後まで行くことができます。"
         },
         "courseF_bee_conditionals2": {
@@ -8173,9 +8173,9 @@
           "courseF_bee_conditionals3_c": "１つ目のくもを調べるプログラムを書いて、それをくり返すことができますか？"
         },
         "courseF_bee_conditionals4": {
-          "courseD_bee_conditionals4_a": "花は見えているけど、くものときと同じように花があるか調べよう。",
-          "courseF_bee_conditionals4_b": "くり返しの中で`もし`を使って、花があるかどうか調べよう。 ",
-          "courseF_bee_conditionals4_c": "`前に道がある間`を使って、`前に すすむ`を行い、花があるか調べます。 `もし 花で` で何をしますか？"
+          "courseD_bee_conditionals4_a": "道は見えているけど、くものときと同じように花があるか調べよう。",
+          "courseF_bee_conditionals4_b": "くり返しの中で`もし`を使って、ミツがあるかどうか調べよう。 ",
+          "courseF_bee_conditionals4_c": "`前に道がある間`を使って、`前に すすむ`を行い、花があるか調べます。 `もし 花があるなら` で何をしますか？"
         },
         "courseF_bee_conditionals5": {
           "courseF_bee_conditionals5_a": "長方形のすべての辺を通ることを考えよう。くり返しを入れ子にしよう、外側は`回 くりかえす`で、内側は `前に道がある間`です。全部の辺をまわってミツを集めるには、何回くり返しが必要？",
@@ -8186,7 +8186,7 @@
         "courseF_bee_conditionals8": {
           "courseF_bee_conditionals8_a": "**注意** このパズルは実行するたびにくもの下にあるものが変わります。\n\nこのパズルをクリアするには、条件ブロック (`もし` または `もし やること/でなければ`) を使います。",
           "courseF_bee_conditionals8_b": "1つの条件判断文で、花かハチの巣か、それとも、何もなしか判断すことはできません。\n\n道の角では、花かハチの巣か調べます。",
-          "courseF_bee_conditionals8_c": "`前に道がある間`を使って前に進んで、最初のくもをパスしたらどうなりますか？"
+          "courseF_bee_conditionals8_c": "最初のくもをパスして、`前に道がある間` を使って前に進んだらどうなりますか？"
         },
         "courseF_bee_for1": {
           "courseF_bee_for1_a": "くり返す回数をむらさき色の数字のブロックに入れて、 `くりかえし`のなかにセットしよう。",
@@ -8194,26 +8194,26 @@
         },
         "courseF_bee_for10": {
           "courseF_bee_for10_a": "花までの距離とミツの量の関係はわかるかな？",
-          "courseF_bee_for10_b": "1つ目の花には、**14個**ミツがあります、花までの距離は、**7**（14を2で割った値）です。次のミツの数はいくつ、花までの距離は？",
-          "courseF_bee_for10_c": "1つめの花のミツは**14**、2つ目は**10**、3つ目が**6**で最後が**2**です。\n\n移動する距離は、赤いブロック**7つ** 、オレンジのブロック**5つ**、緑のブロックが**3つ**、最後は青が**1つ** です。 \n\n![](<https://images.code.org/602ce14659299af6a59a79ebd0bdb9d4-image-1493221855089.6.11 Hint Drawing.png>)\n\n数の関係はどうなっているかな？",
+          "courseF_bee_for10_b": "1つ目の花には、**14個**ミツがあります、花までの距離は、**7** (14を2で割った値) です。次のミツの数はいくつで、花までの距離は？",
+          "courseF_bee_for10_c": "1つ目の花のミツは**14**、2つ目は**10**、3つ目が**6**で、最後が**2**です。\n\n移動する距離は、赤いブロック**7つ** 、オレンジのブロック**5つ**、緑のブロックが**3つ**、最後は青が**1つ** です。 \n\n![](<https://images.code.org/602ce14659299af6a59a79ebd0bdb9d4-image-1493221855089.6.11 Hint Drawing.png>)\n\n数の関係はどうなっているかな？",
           "courseF_bee_for10_d": "くり返しは2つ使って、片方には計算ブロックを使います。"
         },
         "courseF_bee_for10_2018": {
           "courseF_bee_for10_a": "花までの距離とミツの量の関係はわかるかな？",
-          "courseF_bee_for10_b": "1つ目の花には、**14個**ミツがあります、花までの距離は、**7**（14を2で割った値）です。次のミツの数はいくつ、花までの距離は？",
-          "courseF_bee_for10_c": "1つめの花のミツは**14**、2つ目は**10**、3つ目が**6**で最後が**2**です。\n\n移動する距離は、赤いブロック**7つ** 、オレンジのブロック**5つ**、緑のブロックが**3つ**、最後は青が**1つ** です。 \n\n![](<https://images.code.org/602ce14659299af6a59a79ebd0bdb9d4-image-1493221855089.6.11 Hint Drawing.png>)\n\n数の関係はどうなっているかな？",
+          "courseF_bee_for10_b": "1つ目の花には、**14個**ミツがあります、花までの距離は、**7** (14を2で割った値) です。次のミツの数はいくつで、花までの距離は？",
+          "courseF_bee_for10_c": "1つ目の花のミツは**14**、2つ目は**10**、3つ目が**6**で、最後が**2**です。\n\n移動する距離は、赤いブロック**7つ** 、オレンジのブロック**5つ**、緑のブロックが**3つ**、最後は青が**1つ** です。 \n\n![](<https://images.code.org/602ce14659299af6a59a79ebd0bdb9d4-image-1493221855089.6.11 Hint Drawing.png>)\n\n数の関係はどうなっているかな？",
           "courseF_bee_for10_d": "くり返しは2つ使って、片方には計算ブロックを使います。"
         },
         "courseF_bee_for10_2019": {
           "courseF_bee_for10_a": "花までの距離とミツの量の関係はわかるかな？",
-          "courseF_bee_for10_b": "1つ目の花には、**14個**ミツがあります、花までの距離は、**7**（14を2で割った値）です。次のミツの数はいくつ、花までの距離は？",
-          "courseF_bee_for10_c": "1つめの花のミツは**14**、2つ目は**10**、3つ目が**6**で最後が**2**です。\n\n移動する距離は、赤いブロック**7つ** 、オレンジのブロック**5つ**、緑のブロックが**3つ**、最後は青が**1つ** です。 \n\n![](<https://images.code.org/602ce14659299af6a59a79ebd0bdb9d4-image-1493221855089.6.11 Hint Drawing.png>)\n\n数の関係はどうなっているかな？",
+          "courseF_bee_for10_b": "1つ目の花には、**14個**ミツがあります、花までの距離は、**7** (14を2で割った値) です。次のミツの数はいくつで、花までの距離は？",
+          "courseF_bee_for10_c": "1つ目の花のミツは**14**、2つ目は**10**、3つ目が**6**で、最後が**2**です。\n\n移動する距離は、赤いブロック**7つ** 、オレンジのブロック**5つ**、緑のブロックが**3つ**、最後は青が**1つ** です。 \n\n![](<https://images.code.org/602ce14659299af6a59a79ebd0bdb9d4-image-1493221855089.6.11 Hint Drawing.png>)\n\n数の関係はどうなっているかな？",
           "courseF_bee_for10_d": "くり返しは2つ使って、片方には計算ブロックを使います。"
         },
         "courseF_bee_for10_2020": {
           "courseF_bee_for10_a": "花までの距離とミツの量の関係はわかるかな？",
-          "courseF_bee_for10_b": "1つ目の花には、**14個**ミツがあります、花までの距離は、**7**（14を2で割った値）です。次のミツの数はいくつ、花までの距離は？",
-          "courseF_bee_for10_c": "1つめの花のミツは**14**、2つ目は**10**、3つ目が**6**で最後が**2**です。\n\n移動する距離は、赤いブロック**7つ** 、オレンジのブロック**5つ**、緑のブロックが**3つ**、最後は青が**1つ** です。 \n\n![](<https://images.code.org/602ce14659299af6a59a79ebd0bdb9d4-image-1493221855089.6.11 Hint Drawing.png>)\n\n数の関係はどうなっているかな？",
+          "courseF_bee_for10_b": "1つ目の花には、**14個**ミツがあります、花までの距離は、**7** (14を2で割った値) です。次のミツの数はいくつで、花までの距離は？",
+          "courseF_bee_for10_c": "1つ目の花のミツは**14**、2つ目は**10**、3つ目が**6**で、最後が**2**です。\n\n移動する距離は、赤いブロック**7つ** 、オレンジのブロック**5つ**、緑のブロックが**3つ**、最後は青が**1つ** です。 \n\n![](<https://images.code.org/602ce14659299af6a59a79ebd0bdb9d4-image-1493221855089.6.11 Hint Drawing.png>)\n\n数の関係はどうなっているかな？",
           "courseF_bee_for10_d": "くり返しは2つ使って、片方には計算ブロックを使います。"
         },
         "courseF_bee_for11": {
@@ -8257,23 +8257,23 @@
           "courseF_bee_for2_b": "くり返しとくり返しの間に前に進むを入れて、全部の花からミツを集めます。"
         },
         "courseF_bee_for4": {
-          "courseF_bee_for4_a": "`まつ`を使えば、1から7まで1づつ数字を変えることができます。",
-          "courseF_bee_for4_b": "`まつ`のなかに `前に すすむ`とミツを集めるくり返しを入れます。",
+          "courseF_bee_for4_a": "`まで`を使えば、1から7まで1づつ数字を変えることができます。",
+          "courseF_bee_for4_b": "`まで`のなかに `前に すすむ`とミツを集めるくり返しを入れます。",
           "courseF_bee_for4_c": "変数 `counter` は、`回くりかえす` を使って ミツを集めるときの回数に使います。"
         },
         "courseF_bee_for4_2018": {
-          "courseF_bee_for4_a": "`まつ`を使えば、1から7まで1づつ数字を変えることができます。",
-          "courseF_bee_for4_b": "`まつ`のなかに `前に すすむ`とミツを集めるくり返しを入れます。",
+          "courseF_bee_for4_a": "`まで`を使えば、1から7まで1づつ数字を変えることができます。",
+          "courseF_bee_for4_b": "`まで`のなかに `前に すすむ`とミツを集めるくり返しを入れます。",
           "courseF_bee_for4_c": "変数 `counter` は、`回くりかえす` を使って ミツを集めるときの回数に使います。"
         },
         "courseF_bee_for4_2019": {
-          "courseF_bee_for4_a": "`まつ`を使えば、1から7まで1づつ数字を変えることができます。",
-          "courseF_bee_for4_b": "`まつ`のなかに `前に すすむ`とミツを集めるくり返しを入れます。",
+          "courseF_bee_for4_a": "`まで`を使えば、1から7まで1づつ数字を変えることができます。",
+          "courseF_bee_for4_b": "`まで`のなかに `前に すすむ`とミツを集めるくり返しを入れます。",
           "courseF_bee_for4_c": "変数 `counter` は、`回くりかえす` を使って ミツを集めるときの回数に使います。"
         },
         "courseF_bee_for4_2020": {
-          "courseF_bee_for4_a": "`まつ`を使えば、1から7まで1づつ数字を変えることができます。",
-          "courseF_bee_for4_b": "`まつ`のなかに `前に すすむ`とミツを集めるくり返しを入れます。",
+          "courseF_bee_for4_a": "`まで`を使えば、1から7まで1づつ数字を変えることができます。",
+          "courseF_bee_for4_b": "`まで`のなかに `前に すすむ`とミツを集めるくり返しを入れます。",
           "courseF_bee_for4_c": "変数 `counter` は、`回くりかえす` を使って ミツを集めるときの回数に使います。"
         },
         "courseF_bee_for5": {
@@ -8297,43 +8297,43 @@
           "courseF_bee_for5_c": "まちがっても だいじょうぶ！プログラムを実行して うまく動かなかったら、修正しよう。"
         },
         "courseF_bee_for6": {
-          "courseF_bee_for6_a": "変数 `counter` は、`回くりかえす`で使います。",
-          "courseF_bee_for6_b": "`まつ`のなかに `前に すすむ`とミツを集めるくり返しを入れます。",
+          "courseF_bee_for6_a": "変数 `counter` は、`くりかえす`で使います。",
+          "courseF_bee_for6_b": "`まで`のなかに `前に すすむ`とミツを集めるくり返しを入れます。",
           "courseF_bee_for6_c": "くり返しは、 **5 から 1 まで**にします。"
         },
         "courseF_bee_for6_2018": {
-          "courseF_bee_for6_a": "変数 `counter` は、`回くりかえす`で使います。",
-          "courseF_bee_for6_b": "`まつ`のなかに `前に すすむ`とミツを集めるくり返しを入れます。",
+          "courseF_bee_for6_a": "変数 `counter` は、`くりかえす`で使います。",
+          "courseF_bee_for6_b": "`まで`のなかに `前に すすむ`とミツを集めるくり返しを入れます。",
           "courseF_bee_for6_c": "くり返しは、 **5 から 1 まで**にします。"
         },
         "courseF_bee_for6_2019": {
-          "courseF_bee_for6_a": "変数 `counter` は、`回くりかえす`で使います。",
-          "courseF_bee_for6_b": "`まつ`のなかに `前に すすむ`とミツを集めるくり返しを入れます。",
+          "courseF_bee_for6_a": "変数 `counter` は、`くりかえす`で使います。",
+          "courseF_bee_for6_b": "`まで`のなかに `前に すすむ`とミツを集めるくり返しを入れます。",
           "courseF_bee_for6_c": "くり返しは、 **5 から 1 まで**にします。"
         },
         "courseF_bee_for6_2020": {
-          "courseF_bee_for6_a": "変数 `counter` は、`回くりかえす`で使います。",
-          "courseF_bee_for6_b": "`まつ`のなかに `前に すすむ`とミツを集めるくり返しを入れます。",
+          "courseF_bee_for6_a": "変数 `counter` は、`くりかえす`で使います。",
+          "courseF_bee_for6_b": "`まで`のなかに `前に すすむ`とミツを集めるくり返しを入れます。",
           "courseF_bee_for6_c": "くり返しは、 **5 から 1 まで**にします。"
         },
         "courseF_bee_for7": {
-          "courseF_bee_for7_a": "`まつ`には、1から７まで２ずつ をセットします。",
-          "courseF_bee_for7_b": "`まつ`のなかに `前に すすむ`とミツを集めるくり返しを入れます。",
+          "courseF_bee_for7_a": "`まで`には、1から７まで2ずつ をセットします。",
+          "courseF_bee_for7_b": "`まで`のなかに `前に すすむ`とミツを集めるくり返しを入れます。",
           "courseF_bee_for7_c": "`回くりかえす` で変数`counter`を使います。"
         },
         "courseF_bee_for7_2018": {
-          "courseF_bee_for7_a": "`まつ`には、1から７まで２ずつ をセットします。",
-          "courseF_bee_for7_b": "`まつ`のなかに `前に すすむ`とミツを集めるくり返しを入れます。",
+          "courseF_bee_for7_a": "`まで`には、1から７まで2ずつ をセットします。",
+          "courseF_bee_for7_b": "`まで`のなかに `前に すすむ`とミツを集めるくり返しを入れます。",
           "courseF_bee_for7_c": "`回くりかえす` で変数`counter`を使います。"
         },
         "courseF_bee_for7_2019": {
-          "courseF_bee_for7_a": "`まつ`には、1から７まで２ずつ をセットします。",
-          "courseF_bee_for7_b": "`まつ`のなかに `前に すすむ`とミツを集めるくり返しを入れます。",
+          "courseF_bee_for7_a": "`まで`には、1から７まで2ずつ をセットします。",
+          "courseF_bee_for7_b": "`まで`のなかに `前に すすむ`とミツを集めるくり返しを入れます。",
           "courseF_bee_for7_c": "`回くりかえす` で変数`counter`を使います。"
         },
         "courseF_bee_for7_2020": {
-          "courseF_bee_for7_a": "`まつ`には、1から７まで２ずつ をセットします。",
-          "courseF_bee_for7_b": "`まつ`のなかに `前に すすむ`とミツを集めるくり返しを入れます。",
+          "courseF_bee_for7_a": "`まで`には、1から７まで2ずつ をセットします。",
+          "courseF_bee_for7_b": "`まで`のなかに `前に すすむ`とミツを集めるくり返しを入れます。",
           "courseF_bee_for7_c": "`回くりかえす` で変数`counter`を使います。"
         },
         "courseF_bee_for8": {
@@ -8359,22 +8359,22 @@
         "courseF_bee_for9": {
           "courseF_bee_for9_a": "変数を使って計算しよう。\n\n花までの距離とミツの量の関係はどうなっているかな？",
           "courseF_bee_for9_c": "くりかえしの最初で曲がる必要があります。",
-          "courseF_bee_for9_b": "**注意** くり返しの中で変数`counter`は、インクリメントずつ変わります。"
+          "courseF_bee_for9_b": "**注意** くり返しの中で変数 `counter` は、インクリメントずつ変わります。"
         },
         "courseF_bee_for9_2018": {
           "courseF_bee_for9_a": "変数を使って計算しよう。\n\n花までの距離とミツの量の関係はどうなっているかな？",
           "courseF_bee_for9_c": "くりかえしの最初で曲がる必要があります。",
-          "courseF_bee_for9_b": "**注意** くり返しの中で変数`counter`は、インクリメントずつ変わります。"
+          "courseF_bee_for9_b": "**注意** くり返しの中で変数 `counter` は、インクリメントずつ変わります。"
         },
         "courseF_bee_for9_2019": {
           "courseF_bee_for9_a": "変数を使って計算しよう。\n\n花までの距離とミツの量の関係はどうなっているかな？",
           "courseF_bee_for9_c": "くりかえしの最初で曲がる必要があります。",
-          "courseF_bee_for9_b": "**注意** くり返しの中で変数`counter`は、インクリメントずつ変わります。"
+          "courseF_bee_for9_b": "**注意** くり返しの中で変数 `counter` は、インクリメントずつ変わります。"
         },
         "courseF_bee_for9_2020": {
           "courseF_bee_for9_a": "変数を使って計算しよう。\n\n花までの距離とミツの量の関係はどうなっているかな？",
           "courseF_bee_for9_c": "くりかえしの最初で曲がる必要があります。",
-          "courseF_bee_for9_b": "**注意** くり返しの中で変数`counter`は、インクリメントずつ変わります。"
+          "courseF_bee_for9_b": "**注意** くり返しの中で変数 `counter` は、インクリメントずつ変わります。"
         },
         "courseF_bee_for_challenge2": {
           "courseF_bee_for_challenge2_a": "まず、花のミツを全部あつめて、そのあと、ハチミツを作りながらもどって来ます。\n\n![](https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)",
@@ -8401,12 +8401,12 @@
           "courseF_bee_for_challenge2_d": "**答え**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_for\" inline=\"true\">\n        <title name=\"VAR\">counter</title>\n        <value name=\"FROM\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <value name=\"TO\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">3</title>\n          </block>\n        </value>\n        <value name=\"BY\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <statement name=\"DO\">\n          <block type=\"controls_repeat_ext\" inline=\"true\">\n            <value name=\"TIMES\">\n              <block type=\"variables_get\">\n                <title name=\"VAR\">counter</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"maze_moveForward\"/>\n            </statement>\n            <next>\n              <block type=\"controls_repeat_ext\" inline=\"true\">\n                <value name=\"TIMES\">\n                  <block type=\"variables_get\">\n                    <title name=\"VAR\">counter</title>\n                  </block>\n                </value>\n                <statement name=\"DO\">\n                  <block type=\"maze_nectar\"/>\n                </statement>\n                <next>\n                  <block type=\"maze_turn\">\n                    <title name=\"DIR\">turnLeft</title>\n                    <next>\n                      <block type=\"controls_repeat_ext\" inline=\"true\">\n                        <value name=\"TIMES\">\n                          <block type=\"variables_get\">\n                            <title name=\"VAR\">counter</title>\n                          </block>\n                        </value>\n                        <statement name=\"DO\">\n                          <block type=\"maze_moveForward\"/>\n                        </statement>\n                        <next>\n                          <block type=\"maze_turn\">\n                            <title name=\"DIR\">turnRight</title>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n        <next>\n          <block type=\"maze_turn\">\n            <title name=\"DIR\">turnRight</title>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n                <next>\n                  <block type=\"controls_for\" inline=\"true\">\n                    <title name=\"VAR\">counter</title>\n                    <value name=\"FROM\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">2</title>\n                      </block>\n                    </value>\n                    <value name=\"TO\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">10</title>\n                      </block>\n                    </value>\n                    <value name=\"BY\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">2</title>\n                      </block>\n                    </value>\n                    <statement name=\"DO\">\n                      <block type=\"maze_moveForward\">\n                        <next>\n                          <block type=\"maze_turn\">\n                            <title name=\"DIR\">turnLeft</title>\n                            <next>\n                              <block type=\"maze_moveForward\">\n                                <next>\n                                  <block type=\"maze_turn\">\n                                    <title name=\"DIR\">turnRight</title>\n                                    <next>\n                                      <block type=\"controls_repeat_ext\" inline=\"true\">\n                                        <value name=\"TIMES\">\n                                          <block type=\"variables_get\">\n                                            <title name=\"VAR\">counter</title>\n                                          </block>\n                                        </value>\n                                        <statement name=\"DO\">\n                                          <block type=\"maze_honey\"/>\n                                        </statement>\n                                      </block>\n                                    </next>\n                                  </block>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </statement>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseF_bee_functions2": {
-          "courseF_bee_functions2_a": "関数は すでに できているので、花のところで関数を呼びます。",
+          "courseF_bee_functions2_a": "関数は すでに できているので、花のところで関数を呼び出します。",
           "courseF_bee_functions2_b": "関数`ミツを集める`で何を行っているか見るには、青い編集ボタンをクリックします。"
         },
         "courseF_bee_functions3": {
           "courseF_bee_functions3_a": "関数の中ではハチミツを作るだけで、`前に すすむ` や `まがる` を使っては いけません。 ",
-          "courseF_bee_functions3_b": "関数の中で行うのは、_ハチの巣があるとき、_ ハチミツを作るだけ。",
+          "courseF_bee_functions3_b": "関数の中で行うのは、_ハチの巣があるとき_ だけ、ハチミツを作ることです。",
           "courseF_bee_functions3_c": "関数を呼び出すには、緑のブロック`ハチミツを作る`を使います。",
           "courseF_bee_functions3_d": "この道を行ってみよう。"
         },
@@ -8434,7 +8434,7 @@
         },
         "courseF_bee_functions8a": {
           "courseF_bee_functions8a_a": "パズルがむつかしいと感じたら、関数を少しずつ作ってみよう。\n\nブロックを追加して、実行する をくり返して、関数を完成させよう！",
-          "courseF_bee_functions8a_b": "編集ボタンをクリックして関数を作りましょう。"
+          "courseF_bee_functions8a_b": "関数エディターの中で関数を作りましょう。"
         },
         "courseF_bee_functionsPre7": {
           "courseF_bee_functions7_a": "パズルがむつかしいと感じたら、関数を少しずつ作ってみよう。\n\nブロックを追加して、実行する をくり返して、関数を完成させよう！",
@@ -8442,7 +8442,7 @@
           "courseF_bee_functions7_c": "ハチの巣があればどっちに曲がる？花の時は？何もないときは？"
         },
         "courseF_bee_functions_challenge1": {
-          "courseF_bee_functions_challenge1_a": "ツールボックスの中にある関数（かんすう）を使います。関数の中から別の関数を呼ぶことができます。"
+          "courseF_bee_functions_challenge1_a": "ツールボックスの中にある関数 (かんすう) を使います。関数の中から別の関数を呼び出すぶことができます。"
         },
         "courseF_bee_functions_challenge2": {
           "courseF_bee_functions_challenge2_a": "道の進み方\n\n-   ミツを集める または ハチミツを作る\n-   横道を右に曲がる\n-   つきあたりまで行く\n-   右に曲がる\n\nこれを2回くり返せば、元いたところにもどって来れます。\n\n**答えを見るには、もう一度ヒントをクリックしてください！**",
@@ -8454,12 +8454,12 @@
         },
         "courseF_bee_fwp2": {
           "courseF_bee_fwp2_a": "関数の中に入れるには、準備しておいた関数ブロックにコードをドラックします。\n\n![](https://images.code.org/4d918c677ecb9f1618c1556566805b32-image-1477621874625.gif)",
-          "courseF_bee_fwp2_b": "`実行（じっこう）したとき`の下に 関数を呼ぶための `ミツの列` ブロックを引っ付けるのをわすれないでね。"
+          "courseF_bee_fwp2_b": "`実行 (じっこう) したとき` の下に 作成したばかりの関数を呼び出すための `ミツの列` ブロックを引っ付けるのをわすれないでね。"
         },
         "courseF_bee_fwp3": {
           "courseF_bee_fwp3_a": "関数は、ハチがどっちを向いていても 大丈夫なように できています。",
-          "courseF_bee_fwp3_b": "花の列が3つあるので、次の列に行くには、どうすればいいですか？",
-          "courseF_bee_fwp3_c": "関数は3回呼びます。 関数と関数の間で、`みぎに まがる`、`前に すすむ` を2回、`みぎに 曲がる` または、`ひだりに まがる`、`前に すすむ` を2回、`ひだりに 曲がる`を行います。"
+          "courseF_bee_fwp3_b": "花の列が3つあるので、次の列に行くには、どうすればいいでしょうか？",
+          "courseF_bee_fwp3_c": "関数は3回呼び出します。 関数と関数の間で、`みぎに まがる`、`前に すすむ` を2回、`みぎに 曲がる` または、`ひだりに まがる`、`前に すすむ` を2回、`ひだりに 曲がる`を行います。"
         },
         "courseF_bee_fwp4": {
           "courseF_bee_fwp4_a": "パラメータを追加して、ループの回数に使おう。",
@@ -8467,32 +8467,32 @@
         },
         "courseF_bee_fwp5": {
           "courseF_bee_fwp5_a": "道の長さを関数のパラメータにセットしよう。",
-          "courseF_bee_fwp5_a_b": "関数を呼ぶ前に曲がるのを忘れないで。"
+          "courseF_bee_fwp5_a_b": "関数を呼び出す前に曲がるのを忘れないで。"
         },
         "courseF_bee_fwp6": {
           "courseF_bee_fwp6_a": "どのブロックを使えば、変数が自動的にカウントアップされて、関数のパラメータにセットすることができますか？",
-          "courseF_bee_fwp6_b": "パズルをクリアするには、`まつ` を使います。"
+          "courseF_bee_fwp6_b": "パズルをクリアするには、`まで` を使います。"
         },
         "courseF_bee_fwp7": {
           "courseF_bee_fwp7_a": "関数に2つ目のパラメータは必要ありません。2つ使うのは、 `もし`です。",
           "courseF_bee_fwp7_b": "花かハチの巣か調べられるよう、関数の中に もうひとつ`もし`を追加しよう。"
         },
         "courseF_bee_fwp8": {
-          "courseF_bee_fwp8_a": "`まつ`を使ってみるのは、どうですか？",
-          "courseF_bee_fwp8_b": "うずまき模様はだんだん小さくなっていくので、 `まつ` のカウンターは減らしていきます。"
+          "courseF_bee_fwp8_a": "`まで`を使ってみるのは、どうですか？",
+          "courseF_bee_fwp8_b": "うずまき模様はだんだん小さくなっていくので、 `まで` のカウンターは減らしていきます。"
         },
         "courseF_bee_fwp_challenge1": {
           "courseF_bee_fwp_challenge1_a": "メインプログラムは、こんな感じです。\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"procedures_callnoreturn\" inline=\"false\">\n        <mutation name=\"pick row\">\n          <arg name=\"length\"/>\n        </mutation>\n        <value name=\"ARG0\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">3</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"maze_move\">\n            <title name=\"DIR\">moveForward</title>\n            <next>\n              <block type=\"maze_move\">\n                <title name=\"DIR\">moveForward</title>\n                <next>\n                  <block type=\"procedures_callnoreturn\" inline=\"false\">\n                    <mutation name=\"pick row\">\n                      <arg name=\"length\"/>\n                    </mutation>\n                    <value name=\"ARG0\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">5</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"maze_move\">\n                        <title name=\"DIR\">moveForward</title>\n                        <next>\n                          <block type=\"maze_move\">\n                            <title name=\"DIR\">moveForward</title>\n                            <next>\n                              <block type=\"procedures_callnoreturn\" inline=\"false\">\n                                <mutation name=\"pick row\">\n                                  <arg name=\"length\"/>\n                                </mutation>\n                                <value name=\"ARG0\">\n                                  <block type=\"math_number\">\n                                    <title name=\"NUM\">6</title>\n                                  </block>\n                                </value>\n                                <next>\n                                  <block type=\"maze_move\">\n                                    <title name=\"DIR\">moveForward</title>\n                                    <next>\n                                      <block type=\"maze_move\">\n                                        <title name=\"DIR\">moveForward</title>\n                                        <next>\n                                          <block type=\"procedures_callnoreturn\" inline=\"false\">\n                                            <mutation name=\"pick row\">\n                                              <arg name=\"length\"/>\n                                            </mutation>\n                                            <value name=\"ARG0\">\n                                              <block type=\"math_number\">\n                                                <title name=\"NUM\">4</title>\n                                              </block>\n                                            </value>\n                                          </block>\n                                        </next>\n                                      </block>\n                                    </next>\n                                  </block>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block></xml>",
           "courseF_bee_fwp_challenge1_b": "トウモロコシの数は、どんなパターンになっていますか？ ",
-          "courseF_bee_fwp_challenge1_b1": "パラメータ`length` は、`まつ`の最大値に指定します。\n\n農夫が道を最後まで行ったら、もといた所に 戻ることを忘れないでね。",
-          "courseF_bee_fwp_challenge1_c": "関数の中で使う`まで` には、`1` から `length` まで `1`ずつを指定します。\nこのくり返しの中で、前に進んでとトウモロコシをしゅうかくします。\n\n<xml>\n<block type=\"controls_for\" inline=\"true\">\n            <title name=\"VAR\">counter</title>\n            <value name=\"FROM\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">1</title>\n              </block>\n            </value>\n            <value name=\"TO\">\n              <block type=\"parameters_get\">\n                <title name=\"VAR\">length</title>\n              </block>\n            </value>\n            <value name=\"BY\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">1</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n            </statement>\n</block></xml>",
-          "courseF_bee_fwp_challenge1_d": "`まで` の中で、`前に すすむ` を行って **counter 回** `ピック トウモロコシ`します。",
+          "courseF_bee_fwp_challenge1_b1": "パラメータ`length` は、`まで`の最大値に指定します。\n\n農夫が道を最後まで行ったら、もといた所に 戻ることを忘れないでね。",
+          "courseF_bee_fwp_challenge1_c": "関数の中で使う`まで` には、`1` から `length` まで `1`ずつを指定します。\nこのくり返しの中で、前に進んでとトウモロコシをすべて収かくします。\n\n<xml>\n<block type=\"controls_for\" inline=\"true\">\n            <title name=\"VAR\">counter</title>\n            <value name=\"FROM\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">1</title>\n              </block>\n            </value>\n            <value name=\"TO\">\n              <block type=\"parameters_get\">\n                <title name=\"VAR\">length</title>\n              </block>\n            </value>\n            <value name=\"BY\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">1</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n            </statement>\n</block></xml>",
+          "courseF_bee_fwp_challenge1_d": "`まで` の中で、`前に すすむ` を行って **counter 回** `トウモロコシを収かく`します。",
           "courseF_bee_fwp_challenge1_d2": "`まで` のあと、**length 回** `後ろに すすむ`を行います。",
-          "courseF_bee_fwp_challenge1_e": "**こたえ**\n\n<xml>\n  <block type=\"procedures_defnoreturn\" editable=\"false\" usercreated=\"true\">\n    <mutation>\n      <arg name=\"length\"/>\n    </mutation>\n    <title name=\"NAME\">pick row</title>\n    <statement name=\"STACK\">\n      <block type=\"maze_turn\">\n        <title name=\"DIR\">turnLeft</title>\n        <next>\n          <block type=\"controls_for\" inline=\"true\">\n            <title name=\"VAR\">counter</title>\n            <value name=\"FROM\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">1</title>\n              </block>\n            </value>\n            <value name=\"TO\">\n              <block type=\"parameters_get\">\n                <title name=\"VAR\">length</title>\n              </block>\n            </value>\n            <value name=\"BY\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">1</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"maze_move\">\n                <title name=\"DIR\">moveForward</title>\n                <next>\n                  <block type=\"controls_repeat_ext\" inline=\"true\">\n                    <value name=\"TIMES\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                    <statement name=\"DO\">\n                      <block type=\"harvester_corn\"/>\n                    </statement>\n                  </block>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"controls_repeat_ext\" inline=\"true\">\n                <value name=\"TIMES\">\n                  <block type=\"parameters_get\">\n                    <title name=\"VAR\">length</title>\n                  </block>\n                </value>\n                <statement name=\"DO\">\n                  <block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n                </statement>\n                <next>\n                  <block type=\"maze_turn\">\n                    <title name=\"DIR\">turnRight</title>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </statement>\n    </block></xml>"
+          "courseF_bee_fwp_challenge1_e": "**答え**\n\n<xml>\n  <block type=\"procedures_defnoreturn\" editable=\"false\" usercreated=\"true\">\n    <mutation>\n      <arg name=\"length\"/>\n    </mutation>\n    <title name=\"NAME\">pick row</title>\n    <statement name=\"STACK\">\n      <block type=\"maze_turn\">\n        <title name=\"DIR\">turnLeft</title>\n        <next>\n          <block type=\"controls_for\" inline=\"true\">\n            <title name=\"VAR\">counter</title>\n            <value name=\"FROM\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">1</title>\n              </block>\n            </value>\n            <value name=\"TO\">\n              <block type=\"parameters_get\">\n                <title name=\"VAR\">length</title>\n              </block>\n            </value>\n            <value name=\"BY\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">1</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"maze_move\">\n                <title name=\"DIR\">moveForward</title>\n                <next>\n                  <block type=\"controls_repeat_ext\" inline=\"true\">\n                    <value name=\"TIMES\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                    <statement name=\"DO\">\n                      <block type=\"harvester_corn\"/>\n                    </statement>\n                  </block>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"controls_repeat_ext\" inline=\"true\">\n                <value name=\"TIMES\">\n                  <block type=\"parameters_get\">\n                    <title name=\"VAR\">length</title>\n                  </block>\n                </value>\n                <statement name=\"DO\">\n                  <block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n                </statement>\n                <next>\n                  <block type=\"maze_turn\">\n                    <title name=\"DIR\">turnRight</title>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </statement>\n    </block></xml>"
         },
         "courseF_bee_fwp_challenge2": {
-          "courseF_bee_fwp_challenge2_a": "どのような関数を作ればいいか考えることことから始めよう。関数は農夫が横道に入って、トウモロコシだけをとるようになっています。三種類の作物のうち、どれがなっているか調べて、しゅうかくするには、どのようにすればいいですか？\n\nトウモロコシ、カボチャ、レタス、どれがなっているか調べる条件判定文を関数に追加しましょう。",
-          "courseF_bee_fwp_challenge2_b": "`前に すすむ` から始めますか？\n2つ目の`まで`を追加しましょう。",
+          "courseF_bee_fwp_challenge2_a": "どのような関数を作ればいいか考えることことから始めよう。関数は農夫が横道に入って、トウモロコシだけをとるようになっています。三種類の作物のうち、どれがなっているか調べて、収かくするには、どのようにすればいいですか？\n\nトウモロコシ、カボチャ、レタス、どれがなっているか調べる条件判定文を関数に追加しましょう。",
+          "courseF_bee_fwp_challenge2_b": "`前に すすむ` がなくなりそうですか？\n2つ目の`まで`を追加しましょう。",
           "courseF_bee_fwp_challenge2_c": "**関数は、このようになります。**\n\n<xml><block type=\"procedures_defnoreturn\" deletable=\"false\" movable=\"false\" editable=\"false\" usercreated=\"true\">\n    <mutation>\n      <arg name=\"length\"/>\n    </mutation>\n    <title name=\"NAME\">pick row</title>\n    <statement name=\"STACK\">\n      <block type=\"maze_turn\">\n        <title name=\"DIR\">turnLeft</title>\n        <next>\n          <block type=\"controls_for\" inline=\"true\">\n            <title name=\"VAR\">counter</title>\n            <value name=\"FROM\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">1</title>\n              </block>\n            </value>\n            <value name=\"TO\">\n              <block type=\"parameters_get\">\n                <title name=\"VAR\">length</title>\n              </block>\n            </value>\n            <value name=\"BY\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">1</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"maze_move\">\n                <title name=\"DIR\">moveForward</title>\n                <next>\n                  <block type=\"controls_repeat_ext\" inline=\"true\">\n                    <value name=\"TIMES\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                    <statement name=\"DO\">\n                      <block type=\"harvester_ifHasCrop\">\n                        <title name=\"LOC\">Corn</title>\n                        <statement name=\"DO\">\n                          <block type=\"harvester_corn\"/>\n                        </statement>\n                        <next>\n                          <block type=\"harvester_ifHasCrop\">\n                            <title name=\"LOC\">Pumpkin</title>\n                            <statement name=\"DO\">\n                              <block type=\"harvester_pumpkin\"/>\n                            </statement>\n                            <next>\n                              <block type=\"harvester_ifHasCrop\">\n                                <title name=\"LOC\">Lettuce</title>\n                                <statement name=\"DO\">\n                                  <block type=\"harvester_lettuce\"/>\n                                </statement>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </statement>\n                  </block>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"controls_repeat_ext\" inline=\"true\">\n                <value name=\"TIMES\">\n                  <block type=\"parameters_get\">\n                    <title name=\"VAR\">length</title>\n                  </block>\n                </value>\n                <statement name=\"DO\">\n                  <block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n                </statement>\n                <next>\n                  <block type=\"maze_turn\">\n                    <title name=\"DIR\">turnRight</title>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </statement>\n  </block>\n</xml>",
           "courseF_bee_fwp_challenge2_d": "**メインプログラムは、このようになります。**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_for\" inline=\"true\">\n        <title name=\"VAR\">counter2</title>\n        <value name=\"FROM\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <value name=\"TO\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">6</title>\n          </block>\n        </value>\n        <value name=\"BY\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <statement name=\"DO\">\n          <block type=\"maze_move\">\n            <title name=\"DIR\">moveForward</title>\n            <next>\n              <block type=\"procedures_callnoreturn\" inline=\"false\">\n                <mutation name=\"pick row\">\n                  <arg name=\"length\"/>\n                </mutation>\n                <value name=\"ARG0\">\n                  <block type=\"variables_get\">\n                    <title name=\"VAR\">counter2</title>\n                  </block>\n                </value>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n    </block></xml>"
         },
@@ -8512,7 +8512,7 @@
           "courseF_bee_variables_4_2019_1": "`gather`から-1しているところを+1にしよう。変数の最初の値は、いくつにしておけばいいですか？"
         },
         "courseF_playlab_variables1a": {
-          "courseF_playlab_variables1a_a": "緑のブロックの“What should I shout?”を“Goal!”に変更しよう。"
+          "courseF_playlab_variables1a_a": "緑のブロックの“何を叫ぼう？”を“Goal!”に変更しよう。"
         },
         "courseF_playlab_variables2b": {
           "courseF_playlab_variables2b_a": "`実行（じっこう）`をクリックしたら、キキは何としゃべりますか？"
@@ -8545,7 +8545,7 @@
           "courseF_playlab_variables_challenge1_a": "キャラに何か言わせるために つぎのブロックを追加しましょう。\n\n<xml><block type=\"studio_saySpriteParamsTime\" inline=\"true\">\n      <value name=\"SPRITE\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">1</title>\n        </block>\n      </value>\n                      <value name=\"TEXT\">\n                  <block type=\"text\">\n                    <title name=\"TEXT\">Knock knock.</title>\n                  </block>\n                </value>\n      <value name=\"TIME\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">1</title>\n        </block>\n      </value>\n      </block></xml>"
         },
         "courseF_playlab_variables_challenge2": {
-          "courseF_playlab_variables_challenge2_a": "`スコアを設定します。`を使って、キャラがさわったときにポイントを増減させます。",
+          "courseF_playlab_variables_challenge2_a": "`スコア`変数を使って、キャラがさわったときにポイントを増減させます。",
           "courseF_playlab_variables_challenge2_b": "矢印キーが押されたときに 動く距離は 変えることができます。",
           "courseF_playlab_variables_challenge2_c": "**答え**\n\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">up</title>\n    <next>\n      <block type=\"studio_moveDistanceParams\" inline=\"true\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">1</title>\n        <value name=\"DISTANCE\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">25</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">down</title>\n    <next>\n      <block type=\"studio_moveDistanceParams\" inline=\"true\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">4</title>\n        <value name=\"DISTANCE\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">25</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">left</title>\n    <next>\n      <block type=\"studio_moveDistanceParams\" inline=\"true\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">8</title>\n        <value name=\"DISTANCE\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">25</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">right</title>\n    <next>\n      <block type=\"studio_moveDistanceParams\" inline=\"true\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">2</title>\n        <value name=\"DISTANCE\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">25</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n  <block type=\"studio_whenSpriteCollided\">\n    <title name=\"SPRITE1\">0</title>\n    <title name=\"SPRITE2\">1</title>\n    <next>\n      <block type=\"studio_setScore\" inline=\"false\">\n        <value name=\"VALUE\">\n          <block type=\"math_arithmetic\" inline=\"true\">\n            <title name=\"OP\">ADD</title>\n            <value name=\"A\">\n              <block type=\"studio_getScore\"/>\n            </value>\n            <value name=\"B\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">3</title>\n              </block>\n            </value>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n  <block type=\"studio_whenSpriteCollided\">\n    <title name=\"SPRITE1\">0</title>\n    <title name=\"SPRITE2\">2</title>\n    <next>\n      <block type=\"studio_setScore\" inline=\"false\">\n        <value name=\"VALUE\">\n          <block type=\"math_arithmetic\" inline=\"true\">\n            <title name=\"OP\">ADD</title>\n            <value name=\"A\">\n              <block type=\"studio_getScore\"/>\n            </value>\n            <value name=\"B\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">3</title>\n              </block>\n            </value>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n  <block type=\"studio_whenSpriteCollided\">\n    <title name=\"SPRITE1\">1</title>\n    <title name=\"SPRITE2\">2</title>\n    <next>\n      <block type=\"studio_setScore\" inline=\"false\">\n        <value name=\"VALUE\">\n          <block type=\"math_arithmetic\" inline=\"true\">\n            <title name=\"OP\">MINUS</title>\n            <value name=\"A\">\n              <block type=\"studio_getScore\"/>\n            </value>\n            <value name=\"B\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">1</title>\n              </block>\n            </value>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
         },

@@ -234,14 +234,6 @@ te:
   front_watch_regular_video: వీడియో చూడండి
   front_volunteers: టెక్నికల్ వాలెంటీర్లు కావాలి
   front_start_learning: నేర్చుకోవడం ప్రారంభించండి
-  gdpr_dialog_heading: మీరు యునైటెడ్ స్టేట్స్‌లో మూలం ఉన్న ఒక వెబ్ సైట్ ఉపయోగించడానికి
-    అంగీకరిస్తారా?
-  gdpr_dialog_message: ఈ సైట్‌ను మీరు ఉపయోగించడానికి సంబంధించిన డేటా యునైటెడ్ స్టేట్స్‌కు
-    పంపబడవచ్చు లేక అక్క ప్రాసెస్ చేయబడవచ్చు.
-  gdpr_dialog_link_intro: వివరాల కోసం చూడండి మా
-  gdpr_dialog_privacy_policy: గోప్యతా పాలసీ
-  gdpr_dialog_logout: లాగ్‌ఔట్
-  gdpr_dialog_yes: అవును
   header_menu_resources: వనరులు
   header_menu_faq: తరచూ అడిగే ప్రశ్నలు
   header_menu_how_to: హౌ-టు
@@ -6159,7 +6151,7 @@ te:
   tutorial_grokem_string_detail_grades: Grades 6+
   tutorial_kodmaze_string_detail_grades: Pre-reader - Grade 5
   tutorial_codestersa_string_detail_grades: Grades 2-8
-  tutorial_cmdodo_string_detail_grades: Grades 2-5
+  tutorial_cmdodo_string_detail_grades: Grades 3-5
   tutorial_tynkerspace_string_detail_grades: Grades 2-5
   tutorial_gfbloons_string_detail_grades: Grades 9+
   tutorial_raspipong_string_detail_grades: Grades 9+

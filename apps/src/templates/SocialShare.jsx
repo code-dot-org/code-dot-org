@@ -51,6 +51,7 @@ export default class SocialShare extends Component {
           <a
             href={facebookShareUrl}
             target="_blank"
+            rel="noopener noreferrer"
             onClick={dashboard.popupWindow}
           >
             <button
@@ -65,6 +66,7 @@ export default class SocialShare extends Component {
           <a
             href={twitterShareUrl}
             target="_blank"
+            rel="noopener noreferrer"
             onClick={dashboard.popupWindow}
           >
             <button
