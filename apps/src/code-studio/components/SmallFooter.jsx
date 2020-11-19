@@ -26,9 +26,7 @@ export default class SmallFooter extends React.Component {
       art_from_html: PropTypes.string.isRequired,
       code_from_html: PropTypes.string.isRequired,
       powered_by_aws: PropTypes.string.isRequired,
-      trademark: PropTypes.string.isRequired,
-      google_copyright: PropTypes.string.isRequired,
-      built_on_github: PropTypes.string.isRequired
+      trademark: PropTypes.string.isRequired
     }),
     baseCopyrightString: PropTypes.string,
     baseMoreMenuString: PropTypes.string.isRequired,
@@ -173,9 +171,6 @@ export default class SmallFooter extends React.Component {
         display: this.state.menuState === MenuState.EXPANDED ? 'block' : 'none',
         bottom: this.state.baseHeight,
         width: this.state.baseWidth
-      },
-      awsLogo: {
-        width: 190
       }
     };
 
@@ -207,29 +202,16 @@ export default class SmallFooter extends React.Component {
             />
             <p>{this.props.copyrightStrings.help_from_html}</p>
             <SafeMarkdown
-              markdown={
-                decodeURIComponent(this.props.copyrightStrings.art_from_html) +
-                '<br />' +
-                decodeURIComponent(
-                  this.props.copyrightStrings.google_copyright
-                ) +
-                '<br />' +
-                this.props.copyrightStrings.powered_by_aws
-              }
+              markdown={decodeURIComponent(
+                this.props.copyrightStrings.art_from_html
+              )}
             />
             <SafeMarkdown
               markdown={decodeURIComponent(
                 this.props.copyrightStrings.code_from_html
               )}
             />
-            <p>{this.props.copyrightStrings.built_on_github}</p>
-            <a href="https://aws.amazon.com/what-is-cloud-computing">
-              <img
-                src="/shared/images/Powered-By_logo-horiz_RGB.png"
-                alt="Powered by AWS Cloud Computing"
-                style={styles.awsLogo}
-              />
-            </a>
+            <p>{this.props.copyrightStrings.powered_by_aws}</p>
             <SafeMarkdown
               markdown={decodeURIComponent(
                 this.props.copyrightStrings.trademark
