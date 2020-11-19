@@ -19,18 +19,24 @@ const currentDescriptions = [
 
 describe('LessonDescriptions', () => {
   var xhr, requests;
+  let defaultProps, updateLessonDescriptions;
 
   beforeEach(() => {
+    updateLessonDescriptions = sinon.spy();
     xhr = sinon.useFakeXMLHttpRequest();
     requests = [];
     xhr.onCreate = function(xhr) {
       requests.push(xhr);
+    };
+    defaultProps = {
+      updateLessonDescriptions
     };
   });
 
   it('begins collapsed', () => {
     const wrapper = shallow(
       <LessonDescriptions
+        {...defaultProps}
         scriptName="myscript"
         currentDescriptions={currentDescriptions}
       />
@@ -46,6 +52,7 @@ describe('LessonDescriptions', () => {
   it('uncollapses on click', () => {
     const wrapper = shallow(
       <LessonDescriptions
+        {...defaultProps}
         scriptName="myscript"
         currentDescriptions={currentDescriptions}
       />
@@ -78,6 +85,7 @@ describe('LessonDescriptions', () => {
   it('updates button while importing', () => {
     const wrapper = shallow(
       <LessonDescriptions
+        {...defaultProps}
         scriptName="myscript"
         currentDescriptions={currentDescriptions}
       />
@@ -101,6 +109,7 @@ describe('LessonDescriptions', () => {
   it('extracts importedDescriptions/mismatchedLessons from response', () => {
     const wrapper = mount(
       <LessonDescriptions
+        {...defaultProps}
         scriptName="myscript"
         currentDescriptions={currentDescriptions}
       />
@@ -173,6 +182,7 @@ describe('LessonDescriptions', () => {
   it('recovers when there are too few importedDescriptions', () => {
     const wrapper = mount(
       <LessonDescriptions
+        {...defaultProps}
         scriptName="myscript"
         currentDescriptions={currentDescriptions}
       />
