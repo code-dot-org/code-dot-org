@@ -11,6 +11,8 @@ import {
   getLastServerResponse
 } from '@cdo/apps/code-studio/reporting';
 import {TestResults} from '@cdo/apps/constants';
+import {getStore} from '@cdo/apps/redux';
+import {mergeProgress} from '@cdo/apps/code-studio/progressRedux';
 
 /**
  * Make our milestone post with some simple configuration. Note, this assumes
@@ -49,6 +51,13 @@ export function postMilestoneForPageLoad() {
  * In practice, these will be identical.
  */
 export function onContinue() {
+  // Record the progress in redux - this will ensure progress is mirrored in the
+  // session storage if the user is logged out.
+  const store = getStore();
+  store.dispatch(
+    mergeProgress({[appOptions.serverLevelId]: TestResults.ALL_PASS})
+  );
+
   const lastServerResponse = getLastServerResponse();
   let url = lastServerResponse && lastServerResponse.nextRedirect;
   if (!url) {
