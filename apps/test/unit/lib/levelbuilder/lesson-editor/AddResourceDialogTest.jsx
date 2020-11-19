@@ -77,7 +77,7 @@ describe('AddResourceDialog', () => {
       'existing resource'
     );
     expect(wrapper.find('[name="url"]').props().value).to.equal('fake.url');
-    expect(wrapper.find('[name="include_in_pdf"]').props().checked).to.be.true;
+    expect(wrapper.find('[name="includeInPdf"]').props().checked).to.be.true;
     expect(wrapper.find('[name="type"]').props().value).to.equal('Handout');
     expect(wrapper.find('[name="audience"]').props().value).to.equal('Teacher');
   });

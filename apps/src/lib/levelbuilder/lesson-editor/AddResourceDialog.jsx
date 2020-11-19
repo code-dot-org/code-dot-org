@@ -74,10 +74,10 @@ const initialState = {
   name: '',
   type: '',
   audience: '',
-  include_in_pdf: false,
+  includeInPdf: false,
   assessment: false,
   url: '',
-  download_url: '',
+  downloadUrl: '',
   error: ''
 };
 
@@ -98,10 +98,10 @@ export default class AddResourceDialog extends Component {
         name: props.existingResource.name,
         type: props.existingResource.type,
         audience: props.existingResource.audience,
-        include_in_pdf: props.existingResource.includeInPdf,
+        includeInPdf: props.existingResource.includeInPdf,
         assessment: props.existingResource.assessment,
         url: props.existingResource.url,
-        download_url: props.existingResource.downloadUrl,
+        downloadUrl: props.existingResource.downloadUrl,
         error: ''
       };
     } else {
@@ -186,7 +186,7 @@ export default class AddResourceDialog extends Component {
           {this.props.courseVersionId && (
             <input
               type="hidden"
-              name="course_version_id"
+              name="courseVersionId"
               value={this.props.courseVersionId}
             />
           )}
@@ -252,9 +252,9 @@ export default class AddResourceDialog extends Component {
                 <input
                   type="checkbox"
                   style={styles.checkboxInput}
-                  name="include_in_pdf"
-                  value={this.state.include_in_pdf}
-                  checked={this.state.include_in_pdf}
+                  name="includeInPdf"
+                  value={this.state.includeInPdf}
+                  checked={this.state.includeInPdf}
                   onChange={this.handleInputChange}
                 />
               </label>
@@ -274,8 +274,8 @@ export default class AddResourceDialog extends Component {
               <input
                 style={styles.textInput}
                 type="text"
-                name="download_url"
-                value={this.state.download_url}
+                name="downloadUrl"
+                value={this.state.downloadUrl}
                 onChange={this.handleInputChange}
               />
             </label>
