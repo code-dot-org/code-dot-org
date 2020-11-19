@@ -1306,6 +1306,19 @@ ko:
       11:
         text: "할 일을 잊어버리셨다면 화면 위쪽에서 각 레벨의 안내를 보실 수 있어요."
       12:
+    what_is_cs:
+      1:
+        image: 'notes/what_is_cs.png'
+    writing_first_program:
+      1:
+        image: 'notes/writing_first_program_1.png'
+      2:
+        image: 'notes/writing_first_program_2.png'
+      3:
+      4:
+      5:
+      6:
+      7:
     hoc_dance_events_2019:
       1:
       2:
