@@ -691,6 +691,8 @@ Dashboard::Application.routes.draw do
       get 'peer_review_submissions/index', to: 'peer_review_submissions#index'
       get 'peer_review_submissions/report_csv', to: 'peer_review_submissions#report_csv'
 
+      post 'ml_models/save', to: 'ml_models#save'
+
       resources :teacher_feedbacks, only: [:index, :create] do
         collection do
           get 'get_feedback_from_teacher'
@@ -756,4 +758,13 @@ Dashboard::Application.routes.draw do
   get '/form/:misc_form_path/show', to: 'foorm/misc_survey#show'
 
   post '/i18n/track_string_usage', action: :track_string_usage, controller: :i18n
+
+  namespace :foorm do
+    resources :forms, only: [:create] do
+      member do
+        put :update_questions
+        put :publish
+      end
+    end
+  end
 end

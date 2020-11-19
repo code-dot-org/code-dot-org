@@ -32,6 +32,7 @@ experiments.FINISH_DIALOG_METRICS = 'finish-dialog-metrics';
 experiments.I18N_TRACKING = 'i18n-tracking';
 experiments.SPRITELAB_INPUT = 'spritelabInput';
 experiments.TIME_SPENT = 'time-spent';
+experiments.APPLAB_ML = 'applab-ml';
 
 /**
  * Get our query string. Provided as a method so that tests can mock this.
