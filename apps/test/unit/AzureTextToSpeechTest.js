@@ -87,7 +87,6 @@ describe('AzureTextToSpeech', () => {
             `hi ${badWord}`,
             cachedSoundResponse
           );
-
           soundPromise = azureTTS.createSoundPromise({
             text: `hi ${badWord}`,
             gender: 'female',
@@ -120,7 +119,6 @@ describe('AzureTextToSpeech', () => {
             'hi',
             cachedSoundResponse
           );
-
           soundPromise = azureTTS.createSoundPromise({
             text: 'hi',
             gender: 'female',
@@ -238,7 +236,7 @@ describe('AzureTextToSpeech', () => {
             assertSoundResponsesEqual(expectedSoundResponse, actualResponse);
           });
 
-          it('resolves with sound bytes on success', async () => {
+          it('resolves with sound bytes', async () => {
             const actualResponse = await soundPromise;
             assertSoundResponsesEqual(expectedSoundResponse, actualResponse);
           });
@@ -274,7 +272,7 @@ describe('AzureTextToSpeech', () => {
             ).to.be.undefined;
           });
 
-          it('resolves with error on failure', async () => {
+          it('resolves with error', async () => {
             const actualResponse = await soundPromise;
             assertSoundResponsesEqual(expectedSoundResponse, actualResponse);
           });
