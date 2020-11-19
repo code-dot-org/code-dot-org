@@ -11,7 +11,7 @@ class ResourcesControllerTest < ActionController::TestCase
   test 'can create resource from params' do
     sign_in @levelbuilder
     assert_creates(Resource) do
-      post :create, params: {name: 'resource name', url: 'code.org', download_url: 'download.url', type: 'Slides', audience: 'Teacher'}
+      post :create, params: {name: 'resource name', url: 'code.org', downloadUrl: 'download.url', type: 'Slides', audience: 'Teacher'}
       assert_response :success
     end
     assert(@response.body.include?('resource name'))
@@ -24,7 +24,7 @@ class ResourcesControllerTest < ActionController::TestCase
   test 'can update resource from params' do
     sign_in @levelbuilder
     resource = create :resource, name: 'original name', type: 'Slides'
-    post :update, params: {id: resource.id, name: 'new name'}
+    post :update, params: {id: resource.id, name: 'new name', type: 'Slides'}
     assert_response :success
 
     # Assert the response has both the new field with the right value
