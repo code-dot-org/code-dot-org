@@ -691,6 +691,8 @@ Dashboard::Application.routes.draw do
       get 'peer_review_submissions/index', to: 'peer_review_submissions#index'
       get 'peer_review_submissions/report_csv', to: 'peer_review_submissions#report_csv'
 
+      post 'ml_models/save', to: 'ml_models#save'
+
       resources :teacher_feedbacks, only: [:index, :create] do
         collection do
           get 'get_feedback_from_teacher'
