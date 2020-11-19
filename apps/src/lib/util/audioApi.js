@@ -3,8 +3,8 @@
 import * as assetPrefix from '@cdo/apps/assetManagement/assetPrefix';
 import {apiValidateType, OPTIONAL, outputWarning} from './javascriptMode';
 import i18n from '@cdo/locale';
-import Sounds from '../../Sounds';
-import AzureTextToSpeech from '../../AzureTextToSpeech';
+import Sounds from '@cdo/apps/Sounds';
+import AzureTextToSpeech from '@cdo/apps/AzureTextToSpeech';
 
 /**
  * Inject an executeCmd method so this mini-library can be used in both
