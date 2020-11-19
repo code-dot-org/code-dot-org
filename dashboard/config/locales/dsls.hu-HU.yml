@@ -2310,3 +2310,7 @@ hu-HU:
           ## Hogyan juss el biztonságosan valahová online?
       CSD U1 Test:
         title: Számítógépek és problémamegoldás projektzáró teszt
+      outbreak_story:
+        content1: a leírás itt található
+      outbreak_story2:
+        content1: a leírás itt található
