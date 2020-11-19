@@ -1657,7 +1657,7 @@ end
 Then /^I open the send lesson dialog for lesson (\d+)$/ do |lesson_num|
   wait_for_jquery
   wait_short_until {@browser.execute_script("return $('.uitest-sendlesson').length") > lesson_num}
-  @browser.execute_script("$('.uitest-sendlesson').eq(#{lesson_num}-1).children().first().click()")
+  @browser.execute_script("$('.uitest-sendlesson').eq(#{lesson_num - 1}).children().first().click()")
   wait_short_until {jquery_is_element_visible('.modal')}
 end
 
