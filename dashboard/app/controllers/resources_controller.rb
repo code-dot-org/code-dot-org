@@ -43,6 +43,8 @@ class ResourcesController < ApplicationController
     end
   end
 
+  private
+
   def resource_params
     rp = params.transform_keys(&:underscore)
     rp = rp.permit(:id, :name, :url, :download_url, :assessment, :type, :audience, :include_in_pdf, :course_version_id)
