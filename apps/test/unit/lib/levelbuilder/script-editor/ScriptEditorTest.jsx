@@ -68,16 +68,12 @@ describe('ScriptEditor', () => {
   describe('Script Editor', () => {
     describe('Teacher Resources', () => {
       it('adds empty resources if passed none', () => {
-        const wrapper = createWrapper({
-          initialTeacherResources: [
-            {type: ResourceType.curriculum, link: '/foo'}
-          ]
-        });
+        const wrapper = createWrapper({});
 
         assert.deepEqual(
           wrapper.find('ScriptEditor').state('teacherResources'),
           [
-            {type: ResourceType.curriculum, link: '/foo'},
+            {type: '', link: ''},
             {type: '', link: ''},
             {type: '', link: ''},
             {type: '', link: ''},
