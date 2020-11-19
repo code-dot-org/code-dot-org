@@ -33,8 +33,8 @@ module Services::LessonImportHelper
     tip_link_matches = find_tip_links(activity_markdown).map {|m| {index: activity_markdown.index(m[0]), type: 'tiplink', match: m, substring: m[0]}}
     remark_matches = find_remarks(activity_markdown).map {|m| {index: activity_markdown.index(m[0]), type: 'remark', match: m, substring: m[0]}}
     skippable_matches = find_skippable_syntax(activity_markdown).map {|m| {index: activity_markdown.index(m[0]), type: 'skippable', match: m, substring: m[0]}}
-    slide_matches = find_slides(activity_markdown).map {|m| {index: activity_markdown.index(m[0]), type: 'slide', match: m, substring: m[0]}}
-    matches = tip_matches + remark_matches + tip_link_matches + skippable_matches + slide_matches
+    name_matches = find_activity_section_names(activity_markdown).map {|m| {index: activity_markdown.index(m[0]), type: 'name', match: m, substring: m[0]}}
+    matches = tip_matches + remark_matches + tip_link_matches + skippable_matches + name_matches
     sorted_matches = matches.sort_by {|m| m[:index]}
     return [ActivitySection.new(description: activity_markdown.strip, key: SecureRandom.uuid, position: 1)] if matches.empty?
 
@@ -51,28 +51,27 @@ module Services::LessonImportHelper
     end
 
     sections = []
-    slide = false
+    name = ''
     position = 1
     sorted_matches.each do |match|
       activity_section = nil
       if match[:type] == 'skippable' || match[:type] == 'tip'
         next
-      elsif match[:type] == 'slide'
-        # For now, if we find the slide token, apply it to the next match
-        slide = true
+      elsif match[:type] == 'name'
+        name = match[:match][1]
         next
       elsif match[:type] == 'tiplink'
         activity_section = create_activity_section_with_tip(match[:match], tip_match_map)
       elsif match[:type] == 'remark'
-        activity_section = create_activity_section_with_remark(match[:match])
+        activity_section = create_activity_section_with_remark(match[:match], tip_match_map)
       else
         activity_section = create_basic_activity_section(match[:substring].strip)
       end
       next unless activity_section
       activity_section.position = position
       position += 1
-      activity_section.slide = slide
-      slide = false
+      activity_section.name = name
+      name = ''
       activity_section.key ||= SecureRandom.uuid
       sections = sections.push(activity_section)
     end
@@ -187,21 +186,20 @@ module Services::LessonImportHelper
     #  - Captures all content until either:
     #    - there is a line that starts with non-whitespace OR
     #    - it reaches the end of the string
-    regex = /^!!! *say\s+?[\n\r]*([\d\D]+?)(?=(^\S|$))/
+    regex = /^!!! *say\s+?([\d\D]+?)(?=(^\S|\z))/
     markdown.to_enum(:scan, regex).map {Regexp.last_match}
   end
 
-  def self.create_activity_section_with_remark(match)
-    activity_section = ActivitySection.new
-    activity_section.remarks = true
-    description = match[1].strip
-    slide_matches = find_slides(description)
-    if slide_matches.empty? || description.index(slide_matches[0][0]) != 0
-      activity_section.description = description.strip
+  def self.create_activity_section_with_remark(match, tip_match_map)
+    tip_link_matches = find_tip_links(match[1].strip)
+    if tip_link_matches.empty?
+      description = match[1].strip
+      activity_section = ActivitySection.new
+      activity_section.description = unindent_markdown(description).strip
     else
-      activity_section.description = description.delete_prefix(slide_matches[0][0])
-      activity_section.slide = true
+      activity_section = create_activity_section_with_tip(tip_link_matches[0], tip_match_map)
     end
+    activity_section.remarks = true
     activity_section
   end
 
@@ -220,12 +218,12 @@ module Services::LessonImportHelper
     # Example: tip!!!tip-0<!-- place where you'd like the icon --> some text
     # <!-- place where you'd like the icon --> is optional but is written out
     # in this regex in order to be able to correctly the text that should be displayed
-    regex = /^([\w-]+)!!! ?([\w-]+)(?:<!-- place where you'd like the icon -->)?(.+?)$/
+    regex = /^([\w-]+)!!! ?([\w-]+)(?:<!-- place where you'd like the icon -->)?(.*\n?.*)$/
     markdown.to_enum(:scan, regex).map {Regexp.last_match}
   end
 
   # Removes tabs (or 4 spaces) at the beginning of lines
-  def self.format_tip_markdown(markdown)
+  def self.unindent_markdown(markdown)
     markdown = markdown.chomp.reverse.chomp.reverse
     markdown.gsub(/(^\t|^ {4})/, '')
   end
@@ -237,10 +235,25 @@ module Services::LessonImportHelper
       "discussion" => "discussionGoal",
       "assessment" => "assessmentOpportunity"
     }
-    {key: key, type: tip_map[key], markdown: format_tip_markdown(markdown)}
+    {key: key, type: tip_map[key], markdown: unindent_markdown(markdown)}
+  end
+
+  def self.create_slide_activity_section(markdown, tip_match_map)
+    embedded_tip_links = find_tip_links(markdown.strip)
+    if embedded_tip_links.empty?
+      activity_section = create_basic_activity_section(markdown)
+    else
+      puts "found multiple tip links in a slide activity section" if embedded_tip_links.length > 1
+      activity_section = create_activity_section_with_tip(embedded_tip_links[0], tip_match_map)
+    end
+    activity_section.slide = true
+    activity_section
   end
 
   def self.create_activity_section_with_tip(tip_link_match, tip_match_map)
+    if tip_link_match[1] == 'slide'
+      return create_slide_activity_section(tip_link_match[3], tip_match_map)
+    end
     tip = tip_match_map[tip_link_match[2]]&.shift
     unless tip
       return ActivitySection.new(description: tip_link_match[3].strip)
@@ -263,22 +276,16 @@ module Services::LessonImportHelper
     activity_section
   end
 
+  def self.find_activity_section_names(markdown)
+    regex = /^### (.+)$/
+    markdown.to_enum(:scan, regex).map {Regexp.last_match}
+  end
+
   # No levels, no tips, just markdown
   def self.create_basic_activity_section(markdown)
     stripped_markdown = markdown.strip
-    name = ''
-    description = markdown
-    if stripped_markdown.starts_with?('### ')
-      # /^### (.+)$/ looks for a line that begins with ### plus a space then captures the rest of the line
-      header_match = stripped_markdown.match(/^### (.+)$/)
-      # If we're here, we should have found a match and it should be the beginning of the string,
-      # but let's be safe and double check
-      if header_match && stripped_markdown.starts_with?(header_match[0])
-        name = header_match[1]
-        description = stripped_markdown[header_match[0].length...stripped_markdown.length].strip
-      end
-    end
-    ActivitySection.new(name: name, description: description)
+    description = stripped_markdown
+    ActivitySection.new(description: description)
   end
 
   def self.find_markdown_chunks(markdown, existing_matches)
