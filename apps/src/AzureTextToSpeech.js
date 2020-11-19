@@ -4,6 +4,13 @@ import {hashString, findProfanity} from '@cdo/apps/utils';
 // https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/readyState
 const READY_STATE_DONE = 4;
 
+/**
+ * A packaged response for a requested sound. Used for caching and for playing sound bytes.
+ * @param {ArrayBuffer} bytes Sound bytes from Azure Speech Service. For clarity, this should be null if the response contains profaneWords.
+ * @param {Object} playbackOptions Configuration options for a playing sound.
+ * @param {Array<string>} profaneWords Any profanity in the response. Used to determine whether the response should be cached and played.
+ * @param {string} error Any error that occurs while requesting the sound or checking for profanity.
+ */
 export class SoundResponse {
   constructor(bytes, playbackOptions, profaneWords = [], error = null) {
     this.bytes = bytes;
