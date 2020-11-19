@@ -8,7 +8,8 @@ import reducers, {
   updateLessonGroupField,
   removeGroup,
   emptyNonUserFacingGroup,
-  getSerializedLessonGroups
+  getSerializedLessonGroups,
+  mapLessonGroupDataForEditor
 } from '@cdo/apps/lib/levelbuilder/script-editor/scriptEditorRedux';
 import _ from 'lodash';
 
@@ -16,25 +17,27 @@ const getInitialState = () => ({
   levelKeyList: {},
   lessonGroups: [
     {
+      id: 1,
       key: 'lg-key',
       displayName: 'Display Name',
       position: 1,
       userFacing: true,
       lessons: [
-        {id: 100, key: 'a', name: 'A', position: 1},
-        {id: 101, key: 'b', name: 'B', position: 2},
-        {id: 102, key: 'c', name: 'C', position: 3}
+        {id: 100, key: 'a', name: 'A', position: 1, levels: []},
+        {id: 101, key: 'b', name: 'B', position: 2, levels: []},
+        {id: 102, key: 'c', name: 'C', position: 3, levels: []}
       ]
     },
     {
+      id: 2,
       key: 'lg-key-2',
       displayName: 'Display Name 2',
       position: 2,
       userFacing: true,
       lessons: [
-        {id: 104, key: 'd', name: 'D', position: 1},
-        {id: 105, key: 'e', name: 'E', position: 2},
-        {id: 106, key: 'f', name: 'F', position: 3}
+        {id: 104, key: 'd', name: 'D', position: 1, levels: []},
+        {id: 105, key: 'e', name: 'E', position: 2, levels: []},
+        {id: 106, key: 'f', name: 'F', position: 3, levels: []}
       ]
     }
   ]
@@ -63,6 +66,16 @@ describe('scriptEditorRedux reducer tests', () => {
         "lesson 'e', display_name: 'E'\n\n" +
         "lesson 'f', display_name: 'F'\n\n"
     );
+  });
+
+  it('mapLessonGroupDataForEditor', () => {
+    let mappedLessonGroups = mapLessonGroupDataForEditor(
+      initialState.lessonGroups
+    );
+
+    expect(mappedLessonGroups.length).to.equal(2);
+    expect(mappedLessonGroups[0].lessons.length).to.equal(3);
+    expect(mappedLessonGroups[0].lessons[0].levels.length).to.equal(0);
   });
 
   it('add group', () => {
