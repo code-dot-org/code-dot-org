@@ -39,7 +39,6 @@ export default function resources(state = [], action) {
       const resourceToEdit = newState.find(
         resource => resource.key === action.updatedResource.key
       );
-      console.log(resourceToEdit);
       Object.assign(resourceToEdit, action.updatedResource);
       break;
     }
