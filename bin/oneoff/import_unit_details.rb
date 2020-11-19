@@ -99,13 +99,15 @@ def main(options)
     next if options.dry_run
 
     lesson_pairs.each do |lesson, cb_lesson|
-      lesson.update_from_curriculum_builder(cb_lesson)
+      Services::LessonImportHelper.update_lesson(lesson, cb_lesson)
       log("update lesson #{lesson.id} with cb lesson data: #{cb_lesson.to_json[0, 50]}...")
     end
 
     paired_lesson_ids = lesson_pairs.map {|lesson, _| lesson.id}
     lockable_lessons_to_update = script.lessons.select(&:lockable?).reject {|l| paired_lesson_ids.include?(l.id)}
-    lockable_lessons_to_update.each(&:update_from_curriculum_builder)
+    lockable_lessons_to_update.each do |lockable|
+      Services::LessonImportHelper.update_lesson(lockable)
+    end
 
     updated_lesson_group_count = lesson_group_pairs.count do |lesson_group, cb_chapter|
       # Make sure the lesson group update does not also try to update lessons.
