@@ -310,7 +310,7 @@ class Lesson < ActiveRecord::Base
       position: relative_position,
       lockable: lockable,
       key: key,
-      displayName: localized_title,
+      displayName: localized_name,
       overview: overview || '',
       announcements: announcements,
       purpose: purpose || '',
