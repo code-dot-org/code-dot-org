@@ -63,7 +63,7 @@ module Services::LessonImportHelper
       elsif match[:type] == 'tiplink'
         activity_section = create_activity_section_with_tip(match[:match], tip_match_map)
       elsif match[:type] == 'remark'
-        activity_section = create_activity_section_with_remark(match[:match])
+        activity_section = create_activity_section_with_remark(match[:match], tip_match_map)
       else
         activity_section = create_basic_activity_section(match[:substring].strip)
       end
@@ -190,17 +190,16 @@ module Services::LessonImportHelper
     markdown.to_enum(:scan, regex).map {Regexp.last_match}
   end
 
-  def self.create_activity_section_with_remark(match)
-    activity_section = ActivitySection.new
-    activity_section.remarks = true
-    description = match[1].strip
-    slide_matches = find_slides(description)
-    if slide_matches.empty? || description.index(slide_matches[0][0]) != 0
+  def self.create_activity_section_with_remark(match, tip_match_map)
+    tip_link_matches = find_tip_links(match[1].strip)
+    if tip_link_matches.empty?
+      description = match[1].strip
+      activity_section = ActivitySection.new
       activity_section.description = unindent_markdown(description).strip
     else
-      activity_section.description = unindent_markdown(description.delete_prefix(slide_matches[0][0])).strip
-      activity_section.slide = true
+      activity_section = create_activity_section_with_tip(tip_link_matches[0], tip_match_map)
     end
+    activity_section.remarks = true
     activity_section
   end
 
