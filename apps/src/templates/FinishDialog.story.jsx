@@ -59,15 +59,13 @@ for (let i = 0; i < 20; i++) {
 }
 
 const mockProgress = {
-  currentLevelId: '123',
+  currentLevelId: 123,
   professionalLearningCourse: false,
   saveAnswersBeforeNavigation: false,
-  stages: [
-    {
-      id: 40,
-      levels
-    }
-  ],
+  currentLesson: {
+    id: 40,
+    levels
+  },
   peerReviewLessonInfo: false,
   scriptId: 1,
   scriptName: 'test',
@@ -75,7 +73,7 @@ const mockProgress = {
   courseId: null,
   currentStageId: 40,
   hasFullProgress: false,
-  levelProgress: {
+  progressByLevel: {
     1815: 17,
     1818: 100,
     1819: 30,
