@@ -1174,6 +1174,8 @@ he:
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': תת-ימי
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': חורף
             undefined: אף אחד
+      gamelab_setBackgroundImageAs:
+        text: להגדיר רקע ל {IMG}
       gamelab_setProp:
         text: הגדיר {SPRITE} {PROPERTY} כדי {VAL}
         options:
@@ -1707,7 +1709,6 @@ he:
             '"stoneBricks"': לבני אבן
             '"mossyStoneBricks"': לבני אבן אזוביות
             '"crackedStoneBricks"': לבני אבן מפורקות
-            '"decorativeStoneBricks"': לבני אבן דקורטיביות/קישוטיות
             '"blueCoralBlock"': לבנת שונית כחולה
             '"pinkCoralBlock"': לבנת שונית ורודה
             '"magentaCoralBlock"': לבנת שונית בצבע ארגמן

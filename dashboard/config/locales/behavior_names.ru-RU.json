@@ -1074,6 +1074,74 @@
           "moving west": "движение на запад",
           "patrolling": "патрулирование",
           "swimming left and right": "плавание налево и направо"
+        },
+        "outbreak1": {
+          "wandering": "блуждание"
+        },
+        "outbreak2": {
+          "wandering": "блуждание"
+        },
+        "outbreak3": {
+          "wandering": "блуждание"
+        },
+        "outbreak4": {
+          "wandering": "блуждание",
+          "moving east": "движение на восток",
+          "spinning left": "левостороннее вращение",
+          "spinning right": "правостороннее вращение",
+          "shrinking": "уменьшение",
+          "growing": "увеличение",
+          "moving south": "движущийся на юг",
+          "swimming left and right": "плавание налево и направо",
+          "moving north": "движение на север",
+          "jittering": "дрожание",
+          "moving west": "движение на запад",
+          "patrolling": "патрулирование"
+        },
+        "outbreak5": {
+          "wandering": "блуждание"
+        },
+        "outbreak6": {
+          "wandering": "блуждание"
+        },
+        "outbreak7": {
+          "wandering": "блуждание",
+          "moving east": "движение на восток",
+          "spinning left": "левостороннее вращение",
+          "spinning right": "правостороннее вращение",
+          "shrinking": "уменьшение",
+          "growing": "увеличение",
+          "moving south": "движущийся на юг",
+          "moving north": "движение на север",
+          "jittering": "дрожание",
+          "moving west": "движение на запад",
+          "patrolling": "патрулирование"
+        },
+        "outbreak8": {
+          "wandering": "блуждание",
+          "moving east": "движение на восток",
+          "spinning left": "левостороннее вращение",
+          "spinning right": "правостороннее вращение",
+          "shrinking": "уменьшение",
+          "growing": "увеличение",
+          "moving south": "движущийся на юг",
+          "moving north": "движение на север",
+          "jittering": "дрожание",
+          "moving west": "движение на запад",
+          "patrolling": "патрулирование"
+        },
+        "outbreak_freeplay": {
+          "wandering": "блуждание",
+          "moving east": "движение на восток",
+          "spinning left": "левостороннее вращение",
+          "spinning right": "правостороннее вращение",
+          "shrinking": "уменьшение",
+          "growing": "увеличение",
+          "moving south": "движущийся на юг",
+          "moving north": "движение на север",
+          "jittering": "дрожание",
+          "moving west": "движение на запад",
+          "patrolling": "патрулирование"
         }
       }
     }

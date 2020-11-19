@@ -262,6 +262,7 @@ el:
       sections: "Ενότητες"
       help_support: "Βοήθεια και υποστήριξη"
       report_bug: "Αναφορά προβλήματος"
+      report_abuse: "Αναφορά κατάχρησης"
       teacher_community: "Κοινότητα δασκάλων"
       documentation: "Τεκμηρίωση"
       tutorials: "Οδηγοί εκμάθησης"
@@ -280,8 +281,10 @@ el:
       about_contact: "Επικοινωνία"
       about_faqs: "Συχνές ερωτήσεις"
       learn: "Εκμάθηση"
+      stats: "Στατιστικά"
       teach: "Διδασκαλία"
       about: "Σχετικά"
+      legal: "Απόρρητο & Νομικά"
       legal_privacy: "Πολιτική Απορρήτου"
       legal_tos: "Όροι"
     user:
@@ -289,6 +292,7 @@ el:
       district_dashboard: 'Περιοχή Ταμπλό'
       label: 'Γεια σου %{username}'
       stats: 'Στούντιο Κώδικα'
+      my_projects: 'Τα έργα μου'
       settings: 'Ο λογαριασμός μου'
       logout: 'Αποσύνδεση'
       signin: 'Σύνδεση'
@@ -813,6 +817,8 @@ el:
   courses_category: 'Πλήρη μαθήματα'
   cookie_banner:
     accept: 'Συμφωνώ'
+  page_not_found_title: "Η σελίδα δεν βρέθηκε"
+  page_not_found_header: '404: Η σελίδα δεν βρέθηκε'
   copy: 'Αντιγραφή'
   parent_email_banner:
     text: "**Είστε γονέας ή κηδεμόνας;** Συνδέστε την ηλεκτρονική σας διεύθυνση με αυτόν τον λογαριασμό, για να ενημερώνεστε για την πρόοδο και τα έργα του παιδιού σας!"
