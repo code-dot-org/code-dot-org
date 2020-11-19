@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import color from '@cdo/apps/util/color';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {
@@ -7,7 +6,10 @@ import {
   DIAMOND_DOT_SIZE,
   levelProgressStyle
 } from '@cdo/apps/templates/progress/progressStyles';
-import {LevelStatus} from '@cdo/apps/util/sharedConstants';
+import {
+  levelType,
+  studentLevelProgressType
+} from '@cdo/apps/templates/progress/progressTypes';
 
 /**
  * A TeacherPanelProgressBubble represents progress for a specific level in the TeacherPanel. It can be a circle
@@ -53,24 +55,21 @@ const styles = {
 
 export class TeacherPanelProgressBubble extends React.Component {
   static propTypes = {
-    level: PropTypes.object.isRequired
+    level: levelType.isRequired,
+    levelProgress: studentLevelProgressType.isRequired
   };
 
   render() {
-    const {level} = this.props;
-
-    if (level.assessment && level.passed) {
-      level.status = LevelStatus.completed_assessment;
-    }
+    const {level, levelProgress} = this.props;
 
     const number = level.levelNumber;
 
-    const hideNumber = level.paired || level.bonus;
+    const hideNumber = levelProgress.paired || level.bonus;
 
     const style = {
       ...styles.main,
       ...(level.isConceptLevel && styles.diamond),
-      ...levelProgressStyle(level, false)
+      ...levelProgressStyle(levelProgress.status, level.kind, false)
     };
 
     // Outer div here is used to make sure our bubbles all take up equivalent
@@ -87,12 +86,12 @@ export class TeacherPanelProgressBubble extends React.Component {
         <div style={style}>
           <div
             style={{
-              fontSize: level.paired || level.bonus ? 14 : 16,
+              fontSize: levelProgress.paired || level.bonus ? 14 : 16,
               ...styles.contents,
               ...(level.isConceptLevel && styles.diamondContents)
             }}
           >
-            {level.paired && <FontAwesome icon="users" />}
+            {levelProgress.paired && <FontAwesome icon="users" />}
             {level.bonus && <FontAwesome icon="flag-checkered" />}
             {!hideNumber && <span>{number}</span>}
           </div>

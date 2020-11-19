@@ -80,7 +80,7 @@ export function queryLockStatus(store, scriptId, pageType) {
         store.dispatch(setSections(teacherSections));
         const query = queryString.parse(location.search);
         if (query.section_id) {
-          store.dispatch(selectSection(query.section_id));
+          store.dispatch(selectSection(parseInt(query.section_id)));
         }
       }
 

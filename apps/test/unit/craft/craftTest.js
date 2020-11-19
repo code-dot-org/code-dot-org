@@ -1,4 +1,4 @@
-import {assert} from '../../util/deprecatedChai';
+import {assert} from '../../util/reconfiguredChai';
 import sinon from 'sinon';
 import {
   getStore,
@@ -6,6 +6,7 @@ import {
   stubRedux,
   restoreRedux
 } from '@cdo/apps/redux';
+import progress from '@cdo/apps/code-studio/progressRedux';
 import pageConstants from '@cdo/apps/redux/pageConstants';
 import Craft from '@cdo/apps/craft/code-connection/craft';
 
@@ -17,7 +18,7 @@ describe('Craft', () => {
   afterEach(restoreRedux);
 
   it('app init', () => {
-    registerReducers({pageConstants});
+    registerReducers({pageConstants, progress});
     const config = {
       level: {},
       skin: {}

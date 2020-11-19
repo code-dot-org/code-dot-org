@@ -3,21 +3,22 @@ import {shallow} from 'enzyme';
 import {expect} from '../../../../util/reconfiguredChai';
 import {SelectedStudentInfo} from '@cdo/apps/code-studio/components/progress/SelectedStudentInfo';
 import {LevelStatus} from '@cdo/apps/util/sharedConstants';
+import {levelProgressWithStatus} from '@cdo/apps/templates/progress/progressHelpers';
 
 const defaultProps = {
   selectedStudent: {id: 1, name: 'Student 1'},
   level: {
+    id: 123,
     assessment: null,
     contained: false,
     driver: null,
     isConceptLevel: false,
     levelNumber: 4,
     navigator: null,
-    paired: null,
     passed: false,
-    status: LevelStatus.not_tried,
     user_id: 1
   },
+  levelProgress: levelProgressWithStatus(LevelStatus.not_tried),
   students: [{id: 1, name: 'Student 1'}, {id: 2, name: 'Student 2'}],
   onSelectUser: () => {},
   getSelectedUserId: () => {}
@@ -38,7 +39,10 @@ describe('SelectedStudentInfo', () => {
         level={{
           ...defaultProps.level,
           submitLevel: true,
-          submitted: true,
+          submitted: true
+        }}
+        levelProgress={{
+          ...defaultProps.levelProgress,
           status: LevelStatus.submitted
         }}
       />
@@ -54,7 +58,10 @@ describe('SelectedStudentInfo', () => {
         {...defaultProps}
         level={{
           ...defaultProps.level,
-          contained: true,
+          contained: true
+        }}
+        levelProgress={{
+          ...defaultProps.levelProgress,
           status: LevelStatus.perfect
         }}
       />
@@ -69,9 +76,12 @@ describe('SelectedStudentInfo', () => {
         {...defaultProps}
         level={{
           ...defaultProps.level,
-          paired: true,
-          status: LevelStatus.perfect,
           navigator: 'Student 2'
+        }}
+        levelProgress={{
+          ...defaultProps.levelProgress,
+          paired: true,
+          status: LevelStatus.perfect
         }}
       />
     );
@@ -87,9 +97,12 @@ describe('SelectedStudentInfo', () => {
         {...defaultProps}
         level={{
           ...defaultProps.level,
-          paired: true,
-          status: LevelStatus.perfect,
           driver: 'Student 2'
+        }}
+        levelProgress={{
+          ...defaultProps.levelProgress,
+          paired: true,
+          status: LevelStatus.perfect
         }}
       />
     );

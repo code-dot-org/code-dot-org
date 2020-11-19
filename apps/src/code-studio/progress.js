@@ -2,7 +2,6 @@ import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
-import _ from 'lodash';
 import queryString from 'query-string';
 import clientState from './clientState';
 import {convertAssignmentVersionShapeFromServer} from '@cdo/apps/templates/teacherDashboard/shapes';
@@ -13,17 +12,19 @@ import {getStore} from './redux';
 import {registerReducers} from '@cdo/apps/redux';
 import {setViewType, ViewType} from './viewAsRedux';
 import {getHiddenStages, initializeHiddenScripts} from './hiddenStageRedux';
-import {TestResults} from '@cdo/apps/constants';
 import {
   initProgress,
-  mergeProgress,
+  mergeProgressResults,
+  setProgress,
   disablePostMilestone,
   setIsHocScript,
   setIsAge13Required,
   setStudentDefaultsSummaryView,
   setStageExtrasEnabled,
+  setCurrentStageId,
   queryUserProgress as reduxQueryUserProgress
 } from './progressRedux';
+import {processServerStudentProgress} from '@cdo/apps/templates/progress/progressHelpers';
 import {setVerified} from '@cdo/apps/code-studio/verifiedTeacherRedux';
 import {
   selectSection,
@@ -78,6 +79,8 @@ progress.showDisabledBubblesAlert = function() {
  *   user, null otherwise
  * @param {boolean} stageExtrasEnabled Whether this user is in a section with
  *   stageExtras enabled for this script
+ * @param {boolean} onLessonExtras Boolean indicating we are not on a script
+ * level and therefore are on lesson extras
  */
 progress.generateStageProgress = function(
   scriptData,
@@ -87,7 +90,8 @@ progress.generateStageProgress = function(
   currentLevelId,
   saveAnswersBeforeNavigation,
   signedIn,
-  stageExtrasEnabled
+  stageExtrasEnabled,
+  onLessonExtras
 ) {
   const store = getStore();
 
@@ -107,15 +111,12 @@ progress.generateStageProgress = function(
     },
     currentLevelId,
     false,
-    saveAnswersBeforeNavigation
+    saveAnswersBeforeNavigation,
+    onLessonExtras
   );
 
   store.dispatch(
-    mergeProgress(
-      _.mapValues(progressData.levels, level =>
-        level.submitted ? TestResults.SUBMITTED_RESULT : level.result
-      )
-    )
+    setProgress(processServerStudentProgress(progressData.progress))
   );
 
   store.dispatch(setIsHocScript(isHocScript));
@@ -261,13 +262,16 @@ function queryUserProgress(store, scriptData, currentLevelId) {
  * @param {boolean} isFullProgress - True if this contains progress for the entire
  *   script vs. a single stage.
  * @param {boolean} [saveAnswersBeforeNavigation]
+ * @param {boolean} [onLessonExtras] Optional boolean indicating we are not on
+ * a script level and therefore are on lesson extras
  */
 function initializeStoreWithProgress(
   store,
   scriptData,
   currentLevelId,
   isFullProgress,
-  saveAnswersBeforeNavigation = false
+  saveAnswersBeforeNavigation = false,
+  onLessonExtras = false
 ) {
   store.dispatch(
     initProgress({
@@ -283,9 +287,15 @@ function initializeStoreWithProgress(
       scriptDescription: scriptData.description,
       betaTitle: scriptData.beta_title,
       courseId: scriptData.course_id,
-      isFullProgress: isFullProgress
+      isFullProgress: isFullProgress,
+      onLessonExtras: onLessonExtras
     })
   );
+
+  // If we only have one lesson, auto-select it.
+  if (scriptData.lessons.length === 1) {
+    store.dispatch(setCurrentStageId(scriptData.lessons[0].id));
+  }
 
   if (scriptData.disablePostMilestone) {
     store.dispatch(disablePostMilestone());
@@ -310,7 +320,9 @@ function initializeStoreWithProgress(
   // We should use client state XOR database state to track user progress
   if (!store.getState().progress.usingDbProgress) {
     store.dispatch(
-      mergeProgress(clientState.allLevelsProgress()[scriptData.name] || {})
+      mergeProgressResults(
+        clientState.allLevelsProgress()[scriptData.name] || {}
+      )
     );
   }
 
