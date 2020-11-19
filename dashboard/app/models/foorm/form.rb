@@ -22,7 +22,9 @@ class Foorm::Form < ActiveRecord::Base
   class InvalidFoormConfigurationError < StandardError; end
 
   has_many :submissions, foreign_key: [:form_name, :form_version], primary_key: [:name, :version]
-  validate :validate_questions
+  validate :validate_questions, :validate_published
+
+  after_save :write_form_to_file
 
   # We have a uniqueness constraint on form name and version for this table.
   # This key format is used elsewhere in Foorm to uniquely identify a form.
@@ -50,6 +52,31 @@ class Foorm::Form < ActiveRecord::Base
       form.questions = questions
       form.published = published
       form.save! if form.changed?
+    end
+  end
+
+  def validate_questions
+    errors_arr = Foorm::Form.validate_questions(JSON.parse(questions))
+    errors_arr.each {|error| errors[:questions] << error}
+  end
+
+  def validate_published
+    parsed_questions = JSON.parse(questions)
+    unless parsed_questions['published'].nil?
+      if published != parsed_questions['published']
+        errors[:questions] << 'Mismatch between published state in questions and published state in model'
+      end
+    end
+  end
+
+  def write_form_to_file
+    if write_to_file? && saved_changes?
+      file_path = Rails.root.join("config/foorm/forms/#{name}.#{version}.json")
+      file_directory = File.dirname(file_path)
+      unless Dir.exist?(file_directory)
+        FileUtils.mkdir_p(file_directory)
+      end
+      File.write(file_path, questions)
     end
   end
 
@@ -92,13 +119,6 @@ class Foorm::Form < ActiveRecord::Base
       end
     end
     return questions
-  end
-
-  def validate_questions
-    errors_arr = Foorm::Form.validate_questions(JSON.parse(questions))
-    unless errors_arr.empty?
-      errors.add(:questions, errors_arr)
-    end
   end
 
   def self.validate_questions(questions)
@@ -323,5 +343,9 @@ class Foorm::Form < ActiveRecord::Base
         [question_id + "_#{number}", "Facilitator #{number}: " + question_text]
       end
     ]
+  end
+
+  def write_to_file?
+    Rails.application.config.levelbuilder_mode
   end
 end
