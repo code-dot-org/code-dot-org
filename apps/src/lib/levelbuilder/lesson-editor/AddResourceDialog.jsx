@@ -177,7 +177,9 @@ export default class AddResourceDialog extends Component {
         useUpdatedStyles
         style={styles.dialog}
       >
-        <h2>Add Resource</h2>
+        <h2>
+          {this.props.existingResource ? 'Edit Resource' : 'Add Resource'}
+        </h2>
         {this.state.error !== '' && (
           <h3 style={{color: 'red'}}>{this.state.error}</h3>
         )}
