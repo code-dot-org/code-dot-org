@@ -4,14 +4,14 @@ module Foorm
     before_action :authenticate_user!
     load_and_authorize_resource
 
-    # PUT foorm/form/:id/edit_questions
-    def edit_questions
+    # PUT foorm/form/:id/update_questions
+    def update_questions
       questions_json = get_questions
       published_state = questions_json['published']
 
       if published_state.nil_or_empty?
         questions_json['published'] = @form.published
-      elsif !published_state.nil_or_empty? && !published_state.to_bool && @form.published
+      elsif !published_state.to_bool && @form.published
         return render(status: :bad_request, plain: "A previously published form cannot be changed to draft state.")
       else
         @form.published = published_state.to_bool
@@ -39,7 +39,7 @@ module Foorm
         published = published_params || false
         questions_json['published'] = published
       # If questions does contain a published state and a published state was provided as a param, verify they match.
-      elsif !published.nil_or_empty? && !published_params.nil_or_empty? && published.to_bool != published_params
+      elsif !published_params.nil_or_empty? && published.to_bool != published_params
         return render(status: :bad_request, plain: "Published state in questions did not match provided published parameter.")
       else
         published = published.to_bool
