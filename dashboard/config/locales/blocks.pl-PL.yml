@@ -1228,6 +1228,8 @@ pl:
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': podwodny
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': zima
             undefined: żaden
+      gamelab_setBackgroundImageAs:
+        text: ustaw tło na {IMG}
       gamelab_setProp:
         text: ustaw {SPRITE} {PROPERTY} na {VAL}
         options:
@@ -1237,8 +1239,6 @@ pl:
             '"x"': współrzędna x
             '"y"': współrzędna y
             '"direction"': kierunku ruchu
-      gamelab_setQuestion:
-        text: zadaj pytanie {QUESTION} dla zmiennej {VAR}
       gamelab_setSizes:
         text: ustaw {SPRITE} {PROPERTY} na {N}%
         options:
@@ -1780,7 +1780,6 @@ pl:
             '"stoneBricks"': kamienne cegły
             '"mossyStoneBricks"': cegły z omszałego kamienia
             '"crackedStoneBricks"': cegły z popękanego kamienia
-            '"decorativeStoneBricks"': dekoracyjne cegły kamienne
             '"blueCoralBlock"': blok niebieskiego koralu
             '"pinkCoralBlock"': blok różowego koralu
             '"magentaCoralBlock"': blok fioletowego koralu

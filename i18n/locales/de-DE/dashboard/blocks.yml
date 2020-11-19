@@ -1206,6 +1206,8 @@ de:
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': Unterwasser
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': Winter
             undefined: leer
+      gamelab_setBackgroundImageAs:
+        text: setze Hintergund auf {IMG}
       gamelab_setProp:
         text: setze {SPRITE} {PROPERTY} auf {VAL}
         options:
@@ -1738,7 +1740,6 @@ de:
             '"stoneBricks"': Ziegelsteine
             '"mossyStoneBricks"': moosbewachsene Steinziegel
             '"crackedStoneBricks"': zerbrochene Ziegelsteine
-            '"decorativeStoneBricks"': dekorative Ziegelsteine
             '"blueCoralBlock"': blaue Koralle-Baustein
             '"pinkCoralBlock"': rosa Korallen-Baustein
             '"magentaCoralBlock"': magenta Koralle-Baustein

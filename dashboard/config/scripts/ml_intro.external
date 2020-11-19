@@ -1,0 +1,7 @@
+name 'ml-intro'
+title 'Introduction to Machine Learning'
+description ''
+
+markdown <<MARKDOWN
+Here is an introduction to machine learning.
+MARKDOWN
