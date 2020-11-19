@@ -186,7 +186,7 @@ export default class AddResourceDialog extends Component {
           {this.props.courseVersionId && (
             <input
               type="hidden"
-              name="courseVersionId"
+              name="course_version_id"
               value={this.props.courseVersionId}
             />
           )}
