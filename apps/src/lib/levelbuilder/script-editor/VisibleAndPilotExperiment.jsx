@@ -25,7 +25,9 @@ const styles = {
 export default class VisibleAndPilotExperiment extends React.Component {
   static propTypes = {
     visible: PropTypes.bool.isRequired,
+    updateVisible: PropTypes.func.isRequired,
     pilotExperiment: PropTypes.string,
+    updatePilotExperiment: PropTypes.func.isRequired,
     paramName: PropTypes.string
   };
 
@@ -33,27 +35,18 @@ export default class VisibleAndPilotExperiment extends React.Component {
     paramName: 'visible_to_teachers'
   };
 
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      visible: this.props.visible,
-      pilotExperiment: this.props.pilotExperiment
-    };
-  }
-
   render() {
     return (
       <div>
         <VisibleInTeacherDashboard
-          checked={this.state.visible}
-          disabled={!!this.state.pilotExperiment}
-          onChange={e => this.setState({visible: e.target.checked})}
+          checked={this.props.visible}
+          disabled={!!this.props.pilotExperiment}
+          onChange={this.props.updateVisible}
           paramName={this.props.paramName}
         />
         <PilotExperiment
-          value={this.state.pilotExperiment}
-          onChange={e => this.setState({pilotExperiment: e.target.value})}
+          value={this.props.pilotExperiment}
+          onChange={e => this.props.updatePilotExperiment(e.target.value)}
         />
       </div>
     );
