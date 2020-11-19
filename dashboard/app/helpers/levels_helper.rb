@@ -664,7 +664,9 @@ module LevelsHelper
       art_from_html: URI.escape(I18n.t('footer.art_from_html', current_year: Time.now.year)),
       code_from_html: URI.escape(I18n.t('footer.code_from_html')),
       powered_by_aws: I18n.t('footer.powered_by_aws'),
-      trademark: URI.escape(I18n.t('footer.trademark', current_year: Time.now.year))
+      trademark: URI.escape(I18n.t('footer.trademark', current_year: Time.now.year)),
+      built_on_github: I18n.t('footer.built_on_github'),
+      google_copyright: URI.escape(I18n.t('footer.google_copyright'))
     }
   end
 
