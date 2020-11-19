@@ -35,7 +35,7 @@ class SmsController < ApplicationController
     # If the Twilio WebService is unavailable or experiencing latency issues we can no-op this method to avoid
     # tie-ing up all puma worker threads waiting for the Twilio API to respond by switching a Gatekeeper flag.
     return head :ok unless Gatekeeper.allows('twilio', default: true)
-    # set up a client to talk to the Twilio REST API
+
     http_client = Twilio::HTTP::Client.new(timeout: DCDO.get('webpurify_http_read_timeout', 10))
     @client = Twilio::REST::Client.new CDO.twilio_sid, CDO.twilio_auth, nil, nil, http_client
     @client.messages.create(
