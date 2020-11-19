@@ -65,9 +65,9 @@ class Resource < ApplicationRecord
       key: key,
       name: name,
       url: url,
-      downloadUrl: download_url,
-      audience: audience || 'All',
-      type: type,
+      downloadUrl: download_url || '',
+      audience: audience || '',
+      type: type || '',
       assessment: assessment || false,
       includeInPdf: include_in_pdf || false
     }

@@ -27,6 +27,7 @@ class ResourcesController < ApplicationController
   # PATCH /resources/:id
   def update
     resource = Resource.find_by_id(resource_params[:id])
+    puts resource_params
     if resource
       resource.update!(resource_params)
       render json: resource.summarize_for_lesson_edit
@@ -36,6 +37,9 @@ class ResourcesController < ApplicationController
   end
 
   def resource_params
-    params.permit(:id, :name, :url, :download_url, :assessment, :type, :audience, :include_in_pdf)
+    rp = params.permit(:id, :name, :url, :download_url, :assessment, :type, :audience, :include_in_pdf)
+    rp[:include_in_pdf] = rp[:include_in_pdf] == 'true'
+    rp[:assessment] = rp[:assessment] == 'true'
+    rp
   end
 end
