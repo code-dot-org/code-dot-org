@@ -6,7 +6,6 @@ import Sounds from '@cdo/apps/Sounds';
 const assertSoundResponsesEqual = (expected, actual) => {
   assert.deepEqual(expected.bytes, actual.bytes);
   assert.deepEqual(expected.playbackOptions, actual.playbackOptions);
-  console.log(expected, actual);
   assert.deepEqual(expected.profaneWords, actual.profaneWords);
   assert.equal(expected.error, actual.error);
 };
@@ -154,52 +153,49 @@ describe('AzureTextToSpeech', () => {
         server.restore();
       });
 
-      // describe('with profanity', () => {
-      //   let badWord, options, soundPromise, expectedSoundResponse;
+      describe('with profanity', () => {
+        let badWord, options, soundPromise, expectedSoundResponse;
 
-      //   beforeEach(() => {
-      //     badWord = 'badWord';
-      //     server.respondWith('POST', `/profanity/find`, [
-      //       200,
-      //       {'Content-Type': 'application/json'},
-      //       JSON.stringify([badWord])
-      //     ]);
-      //     options = {
-      //       text: badWord,
-      //       gender: 'female',
-      //       languageCode: 'en-US',
-      //       onProfanityFound: onProfanityFoundSpy
-      //     };
-      //     soundPromise = azureTTS.createSoundPromise(options);
-      //     expectedSoundResponse = azureTTS.createSoundResponse_({
-      //       ...options,
-      //       profaneWords: [badWord]
-      //     });
-      //   });
+        beforeEach(() => {
+          badWord = 'badWord';
+          server.respondWith('POST', `/profanity/find`, [
+            200,
+            {'Content-Type': 'application/json'},
+            JSON.stringify([badWord])
+          ]);
+          options = {
+            text: badWord,
+            gender: 'female',
+            languageCode: 'en-US',
+            onProfanityFound: onProfanityFoundSpy
+          };
+          soundPromise = azureTTS.createSoundPromise(options);
+          expectedSoundResponse = azureTTS.createSoundResponse_({
+            ...options,
+            profaneWords: [badWord]
+          });
+        });
 
-      //   it('calls onProfanityFound', async () => {
-      //     await soundPromise;
-      //     expect(onProfanityFoundSpy).to.have.been.calledOnce;
-      //   });
+        it('calls onProfanityFound', async () => {
+          await soundPromise;
+          expect(onProfanityFoundSpy).to.have.been.calledOnce;
+        });
 
-      //   it('caches the response', async () => {
-      //     await soundPromise;
-      //     const actualResponse = azureTTS.getCachedSound_(
-      //       options.languageCode,
-      //       options.gender,
-      //       options.text
-      //     );
-      //     assertSoundResponsesEqual(expectedSoundResponse, actualResponse);
-      //   });
+        it('caches the response', async () => {
+          await soundPromise;
+          const actualResponse = azureTTS.getCachedSound_(
+            options.languageCode,
+            options.gender,
+            options.text
+          );
+          assertSoundResponsesEqual(expectedSoundResponse, actualResponse);
+        });
 
-      //   it('resolves with profaneWords', async () => {
-      //     const actualResponse = await soundPromise;
-      //     assertSoundResponsesEqual(expectedSoundResponse, actualResponse);
-      //   });
-
-      //   // TODO
-      //   it('does not request sound', async () => {});
-      // });
+        it('resolves with profaneWords', async () => {
+          const actualResponse = await soundPromise;
+          assertSoundResponsesEqual(expectedSoundResponse, actualResponse);
+        });
+      });
 
       describe('without profanity', () => {
         let options, soundPromise, expectedSoundResponse;
