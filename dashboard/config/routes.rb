@@ -758,7 +758,7 @@ Dashboard::Application.routes.draw do
   namespace :foorm do
     resources :forms, only: [:create] do
       member do
-        put :edit_questions
+        put :update_questions
         put :publish
       end
     end

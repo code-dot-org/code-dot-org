@@ -9,7 +9,7 @@ module Foorm
     end
 
     test_redirect_to_sign_in_for :create, method: :post
-    test_redirect_to_sign_in_for :edit_questions, method: :put, params: {id: 1}
+    test_redirect_to_sign_in_for :update_questions, method: :put, params: {id: 1}
     test_redirect_to_sign_in_for :publish, method: :put, params: {id: 1}
     test_user_gets_response_for :create, user: :student, method: :post, params: {
       name: 'name',
@@ -21,13 +21,13 @@ module Foorm
       version: 0,
       questions: {pages: [{elements: [{name: "test"}]}]}
     }, response: :success
-    test_user_gets_response_for :edit_questions, user: :student, method: :put, params: {id: 1}, response: :forbidden
+    test_user_gets_response_for :update_questions, user: :student, method: :put, params: {id: 1}, response: :forbidden
     test_user_gets_response_for :publish, user: :student, method: :put, params: {id: 1}, response: :forbidden
 
     test 'update succeeds on existing form' do
       sign_in @levelbuilder
       existing_form = create :foorm_form
-      put :edit_questions, params:  {
+      put :update_questions, params:  {
         id: existing_form.id,
         questions: {pages: [{elements: [{name: "test"}]}]}
       }
@@ -48,7 +48,7 @@ module Foorm
     test 'update fails if published state is changed from true to false' do
       sign_in @levelbuilder
       existing_form = create :foorm_form, published: true
-      put :edit_questions, params:  {
+      put :update_questions, params:  {
         id: existing_form.id,
         questions: {published: false, pages: [{elements: [{name: "test"}]}]}
       }
