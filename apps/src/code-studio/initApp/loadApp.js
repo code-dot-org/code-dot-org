@@ -4,7 +4,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {TestResults} from '@cdo/apps/constants';
 import {getStore} from '../redux';
-import {overwriteProgress, useDbProgress} from '../progressRedux';
+import {overwriteProgressResults, useDbProgress} from '../progressRedux';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import {setVerified} from '@cdo/apps/code-studio/verifiedTeacherRedux';
 import {
@@ -63,7 +63,7 @@ function mergeProgressData(scriptName, serverProgress) {
 
   // Clear any existing redux state.
   store.dispatch(
-    overwriteProgress(
+    overwriteProgressResults(
       _.mapValues(serverProgress, level =>
         level.submitted ? TestResults.SUBMITTED_RESULT : level.result
       )

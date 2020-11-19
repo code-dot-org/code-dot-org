@@ -2,22 +2,23 @@ import React from 'react';
 import {assert} from 'chai';
 import {UnconnectedLessonProgress as LessonProgress} from '@cdo/apps/code-studio/components/progress/LessonProgress';
 import {LevelStatus} from '@cdo/apps/util/sharedConstants';
+import {levelProgressWithStatus} from '@cdo/apps/templates/progress/progressHelpers';
 import {shallow} from 'enzyme';
 
 describe('LessonProgress', () => {
   const defaultProps = {
     levels: [
       {
-        status: LevelStatus.not_tried
+        id: 123
       }
     ],
+    studentProgress: {123: levelProgressWithStatus(LevelStatus.not_tried)},
     stageId: 1,
     onLessonExtras: false
   };
 
   it('uses progress bubbles', () => {
     const wrapper = shallow(<LessonProgress {...defaultProps} />);
-    assert.equal(wrapper.find('Connect(StatusProgressDot)').length, 0);
     assert.equal(wrapper.find('ProgressBubble').length, 1);
   });
 

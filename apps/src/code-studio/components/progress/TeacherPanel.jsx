@@ -7,14 +7,20 @@ import ViewAsToggle from './ViewAsToggle';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {fullyLockedStageMapping} from '../../stageLockRedux';
 import {ViewType} from '../../viewAsRedux';
-import {hasLockableStages} from '../../progressRedux';
+import {hasLockableStages, getLesson} from '../../progressRedux';
 import {pageTypes} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import StudentTable, {studentShape} from './StudentTable';
+import StudentTable from './StudentTable';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import {SelectedStudentInfo} from './SelectedStudentInfo';
 import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import {studentType} from '@cdo/apps/templates/progress/progressTypes';
+import {LevelStatus} from '@cdo/apps/util/sharedConstants';
+import {
+  levelProgressFromServer,
+  levelProgressWithStatus
+} from '@cdo/apps/templates/progress/progressHelpers';
 
 const styles = {
   scrollable: {
@@ -76,10 +82,71 @@ class TeacherPanel extends React.Component {
     }),
     scriptHasLockableStages: PropTypes.bool.isRequired,
     unlockedStageNames: PropTypes.arrayOf(PropTypes.string).isRequired,
-    students: PropTypes.arrayOf(studentShape)
+    students: PropTypes.arrayOf(studentType)
   };
 
-  logToFirehose = (eventName, overrideData = {}) => {
+  constructor(props) {
+    super(props);
+    this.logToFirehose = this.logToFirehose.bind(this);
+    this.onSelectUser = this.onSelectUser.bind(this);
+    this.scriptLevels =
+      props.sectionData && props.sectionData.section_script_levels;
+    this.levelProgressByStudent = this.getLevelProgress(this.scriptLevels);
+    this.currentStudent =
+      props.sectionData && this.getCurrentStudent(props.sectionData);
+    this.currentStudentLevel = this.getCurrentStudentLevel(
+      this.currentStudent,
+      this.scriptLevels,
+      props.sectionData
+    );
+  }
+
+  /**
+   * Whereas our redux stores get progress data and level data from separate
+   * api endpoints, the teacher panel gets level data directly from the rails
+   * methods ScriptLevel.summarize_for_teacher_panel and
+   * ScriptLevel.summarize_as_bonus_for_teacher_panel, both of which return
+   * level data with progress status imbedded. Rather than refactor that
+   * backend code to separate out the progress data, it is simpler to just
+   * separate it out here.
+   */
+  getLevelProgress(levels) {
+    const levelProgress = {};
+    if (levels) {
+      levels.forEach(level => {
+        const studentProgress = levelProgress[level.user_id] || {};
+        studentProgress[level.id] = levelProgressFromServer(level);
+        levelProgress[level.user_id] = studentProgress;
+      });
+    }
+    return levelProgress;
+  }
+
+  getCurrentStudent(sectionData) {
+    if (sectionData.section && sectionData.section.students) {
+      return sectionData.section.students.find(
+        student => this.props.getSelectedUserId() === student.id
+      );
+    } else {
+      return {
+        id: -1,
+        name: i18n.studentTableTeacherDemo()
+      };
+    }
+  }
+
+  getCurrentStudentLevel(student, levels, sectionData) {
+    if (!student) {
+      return null;
+    } else if (!levels) {
+      return sectionData && sectionData.teacher_level;
+    }
+    return levels.find(
+      level => this.props.getSelectedUserId() === level.user_id
+    );
+  }
+
+  logToFirehose(eventName, overrideData = {}) {
     const sectionId =
       this.props.selectedSection && this.props.selectedSection.id;
     let data = {
@@ -93,12 +160,12 @@ class TeacherPanel extends React.Component {
       event: eventName,
       data_json: JSON.stringify(data)
     });
-  };
+  }
 
-  onSelectUser = (id, selectType) => {
+  onSelectUser(id, selectType) {
     this.logToFirehose('select_student', {select_type: selectType});
     this.props.onSelectUser(id);
-  };
+  }
 
   render() {
     const {
@@ -113,34 +180,15 @@ class TeacherPanel extends React.Component {
       scriptName
     } = this.props;
 
-    let currentSectionScriptLevels = null;
-    let currentStudent = null;
-    let currentStudentScriptLevel = null;
-
-    if (sectionData) {
-      currentSectionScriptLevels = sectionData.section_script_levels;
-      if (sectionData.section && sectionData.section.students) {
-        currentStudent = sectionData.section.students.find(
-          student => this.props.getSelectedUserId() === student.id
-        );
-
-        if (currentStudent) {
-          if (currentSectionScriptLevels) {
-            currentStudentScriptLevel = currentSectionScriptLevels.find(
-              level => this.props.getSelectedUserId() === level.user_id
-            );
-          }
-        } else {
-          currentStudent = {
-            id: null,
-            name: i18n.studentTableTeacherDemo()
-          };
-          currentStudentScriptLevel = sectionData.teacher_level;
-        }
-      }
-    }
-
     const sectionId = selectedSection && selectedSection.id;
+    const studentProgress =
+      (this.currentStudent &&
+        this.levelProgressByStudent[this.currentStudent.id]) ||
+      {};
+    const levelProgress =
+      (this.currentStudentLevel &&
+        studentProgress[this.currentStudentLevel.id]) ||
+      levelProgressWithStatus(LevelStatus.not_tried);
 
     return (
       <TeacherPanelContainer logToFirehose={this.logToFirehose}>
@@ -148,12 +196,13 @@ class TeacherPanel extends React.Component {
         <div style={styles.scrollable}>
           <ViewAsToggle logToFirehose={this.logToFirehose} />
           {viewAs === ViewType.Teacher &&
-            currentStudent &&
+            this.currentStudent &&
             (students || []).length > 0 && (
               <SelectedStudentInfo
                 students={students}
-                selectedStudent={currentStudent}
-                level={currentStudentScriptLevel}
+                selectedStudent={this.currentStudent}
+                level={this.currentStudentLevel}
+                levelProgress={levelProgress}
                 onSelectUser={id => this.onSelectUser(id, 'iterator')}
                 getSelectedUserId={this.props.getSelectedUserId}
               />
@@ -229,7 +278,8 @@ class TeacherPanel extends React.Component {
             )}
           {viewAs === ViewType.Teacher && (students || []).length > 0 && (
             <StudentTable
-              levels={currentSectionScriptLevels}
+              levels={this.scriptLevels}
+              levelProgressByStudent={this.levelProgressByStudent}
               students={students}
               onSelectUser={id => this.onSelectUser(id, 'select_specific')}
               getSelectedUserId={this.props.getSelectedUserId}
@@ -256,18 +306,18 @@ export default connect(state => {
   const fullyLocked = fullyLockedStageMapping(
     state.stageLock.stagesBySectionId[selectedSectionId]
   );
+
   const unlockedStageIds = Object.keys(currentSection || {}).filter(
     stageId => !fullyLocked[stageId]
   );
 
-  let stageNames = {};
-  state.progress.stages.forEach(stage => {
-    stageNames[stage.id] = stage.name;
-  });
-
   // Pretend we don't have lockable stages if we're not authorized to see them
   const scriptHasLockableStages =
     lockableAuthorized && hasLockableStages(state.progress);
+
+  const unlockedStageNames = unlockedStageIds.map(
+    id => getLesson(state.progress, parseInt(id)).name
+  );
 
   return {
     viewAs: state.viewAs,
@@ -275,7 +325,7 @@ export default connect(state => {
     sectionsAreLoaded,
     scriptHasLockableStages,
     selectedSection: state.teacherSections.sections[selectedSectionId],
-    unlockedStageNames: unlockedStageIds.map(id => stageNames[id]),
+    unlockedStageNames: unlockedStageNames,
     students: state.teacherSections.selectedStudents
   };
 })(TeacherPanel);

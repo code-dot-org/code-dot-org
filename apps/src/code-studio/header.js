@@ -62,6 +62,9 @@ const PUZZLE_PAGE_NONE = -1;
  *   user, null otherwise
  * @param {boolean} stageExtrasEnabled Whether this user is in a section with
  *   stageExtras enabled for this script
+ * @param {object} scriptNameData
+ * @param {boolean} onLessonExtras Boolean indicating we are not on a script
+ * level and therefore are on lesson extras
  */
 header.build = function(
   scriptData,
@@ -73,7 +76,7 @@ header.build = function(
   signedIn,
   stageExtrasEnabled,
   scriptNameData,
-  hasAppOptions
+  onLessonExtras
 ) {
   const store = getStore();
   if (progressData) {
@@ -98,9 +101,9 @@ header.build = function(
     currentLevelId,
     saveAnswersBeforeNavigation,
     signedIn,
-    stageExtrasEnabled
+    stageExtrasEnabled,
+    onLessonExtras
   );
-
   // Hold off on rendering HeaderMiddle.  This will allow the "app load"
   // to potentially begin before we first render HeaderMiddle, giving HeaderMiddle
   // the opportunity to wait until the app is loaded before rendering.
@@ -113,7 +116,6 @@ header.build = function(
           scriptData={scriptData}
           currentLevelId={currentLevelId}
           linesOfCodeText={linesOfCodeText}
-          hasAppOptions={hasAppOptions}
         />
       </Provider>,
       document.querySelector('.header_level')

@@ -1,10 +1,11 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import {connect} from 'react-redux';
 import color from '@cdo/apps/util/color';
 import ReactTooltip from 'react-tooltip';
 import ProgressBubbleSet from './ProgressBubbleSet';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import {levelType, lessonType} from './progressTypes';
+import {lessonType, studentLevelProgressType} from './progressTypes';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {LevelStatus} from '@cdo/apps/util/sharedConstants';
 import FocusAreaIndicator from './FocusAreaIndicator';
@@ -80,21 +81,23 @@ export const styles = {
   }
 };
 
-export default class SummaryProgressRow extends React.Component {
+class SummaryProgressRow extends React.Component {
   static propTypes = {
     dark: PropTypes.bool.isRequired,
     lesson: lessonType.isRequired,
-    levels: PropTypes.arrayOf(levelType).isRequired,
     lockedForSection: PropTypes.bool.isRequired,
     viewAs: PropTypes.oneOf(Object.keys(ViewType)),
-    lessonIsVisible: PropTypes.func.isRequired
+    lessonIsVisible: PropTypes.func.isRequired,
+
+    // redux provided
+    studentProgress: PropTypes.objectOf(studentLevelProgressType).isRequired
   };
 
   render() {
     const {
       dark,
       lesson,
-      levels,
+      studentProgress,
       lockedForSection,
       lessonIsVisible,
       viewAs
@@ -114,8 +117,12 @@ export default class SummaryProgressRow extends React.Component {
 
     const locked =
       lockedForSection ||
-      levels.every(level => level.status === LevelStatus.locked) ||
-      (lesson.lockable && stageLocked(levels));
+      lesson.levels.every(
+        level =>
+          studentProgress[level.id] &&
+          studentProgress[level.id].status === LevelStatus.locked
+      ) ||
+      (lesson.lockable && stageLocked(lesson.levels, studentProgress));
 
     const titleTooltipId = _.uniqueId();
     const lockedTooltipId = _.uniqueId();
@@ -187,11 +194,12 @@ export default class SummaryProgressRow extends React.Component {
               styles.fadedCol)
           }}
         >
-          {levels.length === 0 ? (
+          {lesson.levels.length === 0 ? (
             i18n.lessonContainsNoLevels()
           ) : (
             <ProgressBubbleSet
-              levels={levels}
+              levels={lesson.levels}
+              studentProgress={studentProgress}
               disabled={locked && viewAs !== ViewType.Teacher}
               style={lesson.isFocusArea ? styles.focusAreaMargin : undefined}
             />
@@ -202,3 +210,9 @@ export default class SummaryProgressRow extends React.Component {
     );
   }
 }
+
+export const UnconnectedSummaryProgressRow = SummaryProgressRow;
+
+export default connect(state => ({
+  studentProgress: state.progress.progressByLevel
+}))(SummaryProgressRow);

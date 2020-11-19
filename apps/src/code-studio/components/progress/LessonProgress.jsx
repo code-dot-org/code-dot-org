@@ -5,12 +5,16 @@ import color from '../../../util/color';
 import LessonExtrasProgressBubble from '@cdo/apps/templates/progress/LessonExtrasProgressBubble';
 import LessonTrophyProgressBubble from '@cdo/apps/templates/progress/LessonTrophyProgressBubble';
 import {
-  levelsForLessonId,
-  lessonExtrasUrl,
-  getPercentPerfect
+  levelsForCurrentLesson,
+  extrasUrlForCurrentLesson
 } from '@cdo/apps/code-studio/progressRedux';
 import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
-import {levelType} from '@cdo/apps/templates/progress/progressTypes';
+import {getPercentPerfect} from '@cdo/apps/templates/progress/progressHelpers';
+import {
+  levelType,
+  studentLevelProgressType
+} from '@cdo/apps/templates/progress/progressTypes';
+import {LevelKind} from '@cdo/apps/util/sharedConstants';
 import $ from 'jquery';
 
 const styles = {
@@ -77,11 +81,13 @@ const styles = {
 class LessonProgress extends Component {
   static propTypes = {
     levels: PropTypes.arrayOf(levelType).isRequired,
+    studentProgress: PropTypes.objectOf(studentLevelProgressType).isRequired,
     lessonExtrasUrl: PropTypes.string,
-    onLessonExtras: PropTypes.bool,
     lessonTrophyEnabled: PropTypes.bool,
     width: PropTypes.number,
-    setDesiredWidth: PropTypes.func
+    setDesiredWidth: PropTypes.func,
+    currentLevelId: PropTypes.number,
+    onLessonExtras: PropTypes.bool
   };
 
   getFullWidth() {
@@ -103,7 +109,7 @@ class LessonProgress extends Component {
     this.setDesiredWidth();
   }
 
-  shouldComponentUpdate(nextProps, nextState) {
+  shouldComponentUpdate(nextProps) {
     for (
       let levelIndex = 0;
       levelIndex < this.props.levels.length;
@@ -160,16 +166,26 @@ class LessonProgress extends Component {
   }
 
   render() {
-    const {lessonExtrasUrl, onLessonExtras, lessonTrophyEnabled} = this.props;
-    let levels = this.props.levels;
-
-    // Only puzzle levels (non-concept levels) should count towards mastery.
-    if (lessonTrophyEnabled) {
-      levels = levels.filter(level => !level.isConceptLevel);
-    }
+    const {
+      lessonExtrasUrl,
+      lessonTrophyEnabled,
+      levels,
+      studentProgress,
+      currentLevelId,
+      onLessonExtras
+    } = this.props;
 
     // Bonus levels should not count towards mastery.
-    levels = levels.filter(level => !level.bonus);
+    let filteredLevels = levels.filter(level => !level.bonus);
+    // Only puzzle levels (non-concept levels) should count towards mastery.
+    if (lessonTrophyEnabled) {
+      filteredLevels = filteredLevels.filter(level => !level.isConceptLevel);
+    }
+
+    const location = window.location.href;
+    const currentPage = parseInt(
+      location.substring(location.lastIndexOf('/') + 1)
+    );
 
     const {
       headerFullProgressOffset,
@@ -194,24 +210,44 @@ class LessonProgress extends Component {
             style={styles.inner}
           >
             {lessonTrophyEnabled && <div style={styles.spacer} />}
-            {levels.map((level, index) => (
-              <div
-                key={index}
-                ref={level.isCurrentLevel ? 'currentLevel' : null}
-                style={{
-                  ...(level.isUnplugged &&
-                    level.isCurrentLevel &&
-                    styles.pillContainer)
-                }}
-              >
-                <ProgressBubble
-                  level={level}
-                  disabled={false}
-                  smallBubble={!level.isCurrentLevel}
-                  lessonTrophyEnabled={lessonTrophyEnabled}
-                />
-              </div>
-            ))}
+            {filteredLevels.map((level, index) => {
+              let isCurrentLevel = level.id === currentLevelId;
+              let progress = studentProgress[level.id];
+
+              // This is a hack to handle multi-page assessments. The pages are
+              // each represented by level objects with the same id, but with
+              // different level numbers. So we use the page number from the
+              // current url to determined the current active level.
+              if (level.kind === LevelKind.assessment) {
+                isCurrentLevel =
+                  isCurrentLevel && level.levelNumber === currentPage;
+
+                // For multi-page assessments we want page-specific progress
+                if (progress && progress.pages) {
+                  progress = progress.pages[level.levelNumber - 1];
+                }
+              }
+
+              return (
+                <div
+                  key={index}
+                  ref={isCurrentLevel ? 'currentLevel' : null}
+                  style={{
+                    ...(level.isUnplugged &&
+                      isCurrentLevel &&
+                      styles.pillContainer)
+                  }}
+                >
+                  <ProgressBubble
+                    level={level}
+                    studentLevelProgress={progress}
+                    disabled={false}
+                    smallBubble={!isCurrentLevel}
+                    lessonTrophyEnabled={lessonTrophyEnabled}
+                  />
+                </div>
+              );
+            })}
             {lessonExtrasUrl && !lessonTrophyEnabled && (
               <div ref={onLessonExtras ? 'currentLevel' : null}>
                 <LessonExtrasProgressBubble
@@ -222,7 +258,10 @@ class LessonProgress extends Component {
             )}
             {lessonTrophyEnabled && (
               <LessonTrophyProgressBubble
-                percentPerfect={getPercentPerfect(levels)}
+                percentPerfect={getPercentPerfect(
+                  filteredLevels,
+                  studentProgress
+                )}
               />
             )}
           </div>
@@ -236,10 +275,9 @@ class LessonProgress extends Component {
 export const UnconnectedLessonProgress = LessonProgress;
 
 export default connect(state => ({
-  levels: levelsForLessonId(state.progress, state.progress.currentStageId),
-  lessonExtrasUrl: lessonExtrasUrl(
-    state.progress,
-    state.progress.currentStageId
-  ),
-  onLessonExtras: state.progress.currentLevelId === 'stage_extras'
+  levels: levelsForCurrentLesson(state.progress),
+  studentProgress: state.progress.progressByLevel,
+  lessonExtrasUrl: extrasUrlForCurrentLesson(state.progress),
+  currentLevelId: state.progress.currentLevelId,
+  onLessonExtras: state.progress.onLessonExtras
 }))(LessonProgress);
