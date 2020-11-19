@@ -176,9 +176,9 @@ export default class ScriptEditor extends React.Component {
 
   presubmit = e => {
     const videoKeysBefore = (
-      this.state.lessonLevelData.match(VIDEO_KEY_REGEX) || []
+      this.props.initialLessonLevelData.match(VIDEO_KEY_REGEX) || []
     ).length;
-    const scriptText = this.props.beta ? '' : this.scriptTextArea.value;
+    const scriptText = this.props.beta ? '' : this.state.lessonLevelData;
     const videoKeysAfter = (scriptText.match(VIDEO_KEY_REGEX) || []).length;
     if (videoKeysBefore !== videoKeysAfter) {
       if (
@@ -749,7 +749,6 @@ export default class ScriptEditor extends React.Component {
                 rows={textAreaRows}
                 style={styles.input}
                 value={this.state.lessonLevelData}
-                ref={textArea => (this.scriptTextArea = textArea)}
                 onChange={e => this.setState({lessonLevelData: e.target.value})}
               />
             </div>
