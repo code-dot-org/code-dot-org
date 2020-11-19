@@ -4143,3 +4143,6 @@ nl:
             lesson group:
               display_name: weergavenaam
           description_audience: Intern
+        2021drafting:
+          description_audience: Intern
+          description_short: Intern

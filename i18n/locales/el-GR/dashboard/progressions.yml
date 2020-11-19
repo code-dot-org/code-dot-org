@@ -3,6 +3,7 @@ el:
     progressions:
       'Artist: Variables': 'Καλλιτέχνης: Μεταβλητές'
       Challenge: Εξάσκηση
+      Debugging: Εντοπισμός σφαλμάτων
       Drawing: Σχεδίαση
       Events: Συμβάντα
       For Loops: Βρόχοι Για

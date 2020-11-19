@@ -443,6 +443,7 @@
   sports_athlete_Chris: "크리스 보쉬, NBA 마이애미 히트 선수, 올림픽 금메달리스트, NBA 챔피언"
   sports_athlete_Harrison: "해리슨 반스, 델러스 메버릭스 선수, NBA 챔피언, 올림픽 금메달리스트"
   watch_inspirational_videos: "시작하기 전에 영감을 불러일으키는 동영상들 중 하나를 시청하세요."
+  video_title_cs_is_everything: "컴퓨터 과학은 모든 것을 바꾸고 있습니다.  "
   video_title_inspire_girl: "여학생들에게 영감 주기"
   video_title_cs_intro: "컴퓨터 공학 소개"
   video_title_schools_dont_teach: "대부분의 학교가 가르쳐주지 않는 것"
@@ -863,7 +864,19 @@
   coursee_name: "과정 E"
   coursef-draft_name: 과정 F
   coursef_name: "과정 F"
+  coursea-2018_name: 과정 A (2018)
+  courseb-2018_name: 과정 B (2018)
+  coursec-2018_name: 과정 C (2018)
+  coursed-2018_name: 과정 D (2018)
+  coursee-2018_name: 과정 E (2018)
+  coursef-2018_name: 과정 F (2018)
+  coursea-2019_name: 과정 A (2019)
+  coursec-2019_name: 과정 C (2019)
+  coursed-2019_name: 과정 D (2019)
+  coursee-2019_name: 과정 E (2019)
+  coursef-2019_name: 과정 F (2019)
   accelerated_name: "빠른 과정"
+  express_name: "익스프레스 과정"
   20-hour_name: 빠른 과정
   algebra_name: "대수학에서의 CS"
   AlgebraA_name: "대수학에서의 CS 코스 A"
@@ -874,6 +887,7 @@
   minecraft_name: "마인크래프트"
   starwarsblocks_name: "스타워즈 (블록)"
   hoc-encryption_name: 간단한 암호화
+  text-compression_name: 텍스트 압축
   applab_name: "앱 연구실"
   gamelab_name: "게임 연구소"
   basketball_name: "농구 게임 만들기"
@@ -1041,6 +1055,10 @@
   course2_shortdescription_congrats: "글을 읽고 이해하는 능력이 있는 학생들을 위해 과정1이 설계되어있습니다. 학생들은 문제 해결 프로그램을 만들거나, 인터랙티브 게임/스토리들을 만들어 다른 친구들과 공유할 수 있습니다. 2-5학년 학생들에게 권장됩니다."
   course3_shortdescription_congrats: "다음 레벨로 넘어갈 준비가 되었나요? 학생들은 좀 더 복잡한 문제들에 대한 유연한 해법을 찾기 위해 이전의 과정에서 소개된 프로그래밍 주제를 깊이 탐구할 것입니다. 이 과정을 완료하고나면 학생들은 상호작용 가능한 스토리와 게임을 만들고 다른 사람들과 공유할 수 있습니다. 4-5학년 학생들에게 권장합니다."
   course4_shortdescription_congrats: "더 나아갈 준비가 되었나요? 학생들은 좀 더 복잡한 문제들에 대한 유연한 해법을 찾기 위해 이전의 과정에서 소개된 프로그래밍 주제를 깊이 탐구할 것입니다. 이 과정을 완료하고나면 학생들은 상호작용 가능한 스토리와 게임을 만들고 다른 사람들과 공유할 수 있습니다. 초등학교 4학년 - 중학교 2학년 학생들에게 권장합니다."
+  coursec_shortdescription_congrats: "컴퓨터 과학의 기초를 배우고 자신의 미술작품과 스토리, 게임을 만드세요."
+  coursec-2017_shortdescription_congrats: 컴퓨터 과학의 기초를 배우고 자신의 미술작품과 스토리, 게임을 만드세요.
+  coursec-2018_shortdescription_congrats: 컴퓨터 과학의 기초를 배우고 자신의 미술작품과 스토리, 게임을 만드세요.
+  coursec-2019_shortdescription_congrats: 컴퓨터 과학의 기초를 배우고 자신의 미술작품과 스토리, 게임을 만드세요.
   codeorg_longdescription: "드래그 앤 드롭 프로그래밍 으로 컴퓨터과학(정보과학)의 기초 개념들을 배워보세요. 마치 게임과 비슷하면서도, 빌게이츠, 마크주커버그, 앵그리버드, 식물과 좀비 등이 나오는 동영상을 보면서 스스로 튜토리얼을 따라가며 배울 수 있습니다. 반복 실행, 조건/선택 실행, 기초 알고리즘과 같은 것들을 배워보세요. 34개의 다양한 언어들로 가능합니다."
   codeintl_longdescription: "드래그 앤 드롭 프로그래밍 으로 컴퓨터과학(정보과학)의 기초 개념들을 배워보세요. 마치 게임과 비슷하면서도, 빌게이츠, 마크주커버그, 앵그리버드, 식물과 좀비 등이 나오는 동영상을 보면서 스스로 튜토리얼을 따라가며 배울 수 있습니다. 반복 실행, 조건/선택 실행, 기초 알고리즘과 같은 것들을 배워보세요. 34개의 다양한 언어들로 가능합니다."
   thinkersmithspanish_longdescription: "Mediante el uso de un \"Vocabulario Robot\" predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n."
@@ -1314,9 +1332,12 @@
   user_header_view_all: "모든 프로젝트 보기..."
   user_header_view_project_gallery: "프로젝트 갤러리 보기"
   user_header_view_my_projects: "나의 프로젝트 보기"
+  view_all_sections: "모든 섹션 보기"
+  hero_name: '마인크래프트: 히어로의 여정'
   applab_tile_start_tutorial: "시작"
   applab_tile_teacher_guide: "선생님 가이드 보기"
   account_sign_up_email_opt_in: "당사의 코스, 현지 기회, 또는 다른 컴퓨터 과학 뉴스 업데이트에 관한 이메일을 귀하께 보내드려도 되겠습니까?"
+  account_sign_up_child_accept_terms: "본인은 부모 또는 법적 보호자로부터 Code.org 서비스 사용을 허락받았음을 확인합니다."
   hoc_overview_dance_title: "댄스 파티"
   hoc_overview_dance_subtitle: "댄스 파티를 코딩해서 친구들과 공유하세요. Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara 등 25팀과 함께합니다!"
   hoc_overview_dance_2019_subtitle: "댄스 파티를 코딩해서 친구들과 공유하세요. Katy Perry, Shawn Mendes, Panic! At The Disco, Lil Nas X, Jonas Brothers, Nicki Minaj 등 34팀이 함께합니다!"
@@ -1347,6 +1368,7 @@
   hoc2018_mc_video_3min: "3분"
   hoc2018_mc_video_5min: "5분"
   hoc2018_mc_video_title_sports: "Hour of Code 스포츠 튜토리얼"
+  hoc2018_mc_video_title_cs_is_everything: "컴퓨터 과학은 모든 것을 바꾸고 있습니다.  "
   hoc2018_mc_video_title_inspire_girl: "여학생들에게 영감 주기"
   hoc2018_mc_video_title_cs_intro: "컴퓨터 공학 소개"
   hoc2018_mc_video_title_schools_dont_teach: "대부분의 학교가 가르쳐주지 않는 것"
@@ -1357,8 +1379,11 @@
   hoc2018_mc_homepage_what_create: "무엇을 만들어 보시겠어요?"
   hoc2018_mc_homepage_join_us: "함께 참여하기"
   hoc2018_mc_homepage_try_it: "해보기"
+  hoc2018_mc_back: "마인크래프트가 아워오브코드를 위해 새로운 활동을 갖고 다시 돌아 왔습니다!"
   hoc2018_mc_back_journey: "마인크래프트가 새로운 활동과 함께 코딩의 시간을 위해 돌아왔습니다! 코딩과 함께 마인크래프트를 여행하세요."
   hoc2018_mc_teacher_guide: "선생님 가이드 보기"
+  hoc2018_mc_minecraft_education: "Minecraft 교육"
+  hoc2018_mc_continue_learning: "Minecraft로 학습 계속"
   hoc2018_mc_go_to_mc_education: "마인크래프트 교육으로 가기"
   hoc2018_mc_short_description_shorter: "창의성, 문제해결 능력, 코드를 사용해 언더워터 월드를 탐험하고 만들어 보세요."
   hoc2018_dance_party_main_heading: "댄스 파티"
@@ -1380,4 +1405,5 @@
   hoc2018_dance_measure: "마디"
   hoc2018_dance_measure_colon: '마디:'
   page_not_found_title: "페이지를 찾을 수 없습니다."
+  hoc2018_mc_thank_microsoft: "모든 어린이들이 컴퓨터 과학을 배우고 21세기에 성공할 기술을 얻을 수 있는 기회를 갖도록 저희의 비전과 미션에 지원하고 있는 Microsoft에 감사드립니다."
   homepage_slot_text_title_at_home: "가정 학습"

@@ -1177,6 +1177,8 @@ uk:
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': підводний
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': зима
             undefined: немає
+      gamelab_setBackgroundImageAs:
+        text: встановити фон {IMG}
       gamelab_setProp:
         text: Встановити {SPRITE} {PROPERTY} до {VAL}
         options:
@@ -1710,7 +1712,6 @@ uk:
             '"stoneBricks"': кам'яні цеглини
             '"mossyStoneBricks"': кам'яні цеглини з мохом
             '"crackedStoneBricks"': тріснуті кам'яні цеглини
-            '"decorativeStoneBricks"': декоративні кам'яні цеглини
             '"blueCoralBlock"': блок синього коралу
             '"pinkCoralBlock"': блок рожевого коралу
             '"magentaCoralBlock"': блок фіолетового коралу

@@ -52,7 +52,8 @@ export default class LessonDescriptions extends React.Component {
         descriptionStudent: PropTypes.string.isRequired,
         descriptionTeacher: PropTypes.string.isRequired
       })
-    ).isRequired
+    ).isRequired,
+    updateLessonDescriptions: PropTypes.func.isRequired
   };
 
   state = {
@@ -93,11 +94,14 @@ export default class LessonDescriptions extends React.Component {
       });
     });
 
-    this.setState({
-      buttonText: 'Imported',
-      importedDescriptions,
-      mismatchedLessons
-    });
+    this.setState(
+      {
+        buttonText: 'Imported',
+        importedDescriptions,
+        mismatchedLessons
+      },
+      this.props.updateLessonDescriptions(this.updatedLessonDescriptions())
+    );
   };
 
   importDescriptions = () => {
