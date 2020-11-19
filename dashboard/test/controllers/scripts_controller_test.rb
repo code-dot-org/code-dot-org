@@ -662,7 +662,7 @@ class ScriptsControllerTest < ActionController::TestCase
       project_widget_types: [],
       background: ''
     }
-    assert_response :redirect
+    assert_response :success
     script.reload
 
     # peer_reviews_to_complete gets converted to an int by general_params in scripts_controller, so it becomes 0

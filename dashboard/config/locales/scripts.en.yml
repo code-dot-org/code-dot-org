@@ -18358,3 +18358,39 @@ en:
           title: Planning script for CI and CSF 2021
           description_audience: Internal
           description_short: Internal
+        dani-test-5:
+          lessons:
+            new lesson:
+              name: lesson display name
+          lesson_groups:
+            lesson group:
+              display_name: lesson group display name
+          name: dani-test-5
+          title: Dani Title
+          description_audience: Audience
+          description_short: Short
+          description: "**Long**"
+        dani-test-6:
+          lessons:
+            new lesson:
+              name: lesson display name
+          lesson_groups:
+            lesson group:
+              display_name: lesson group display name
+          name: dani-test-6
+          title: Dani Test 2
+          description_audience: audience
+          description_short: short
+          description: "**long**"
+        dani-test-7:
+          lessons:
+            lesson-1:
+              name: L1
+            lesson-2:
+              name: L2
+          lesson_groups: {}
+          name: dani-test-7
+          title: Dani Test
+          description_audience: ''
+          description_short: ''
+          description: ''
