@@ -1,4 +1,4 @@
-import {assert} from 'chai';
+import {expect, assert} from '../../util/reconfiguredChai';
 import {combineReducers} from 'redux';
 import reducers, {
   addGroup,
@@ -7,7 +7,8 @@ import reducers, {
   reorderLesson,
   updateLessonGroupField,
   removeGroup,
-  emptyNonUserFacingGroup
+  emptyNonUserFacingGroup,
+  getSerializedLessonGroups
 } from '@cdo/apps/lib/levelbuilder/script-editor/scriptEditorRedux';
 import _ from 'lodash';
 
@@ -44,6 +45,25 @@ const reducer = combineReducers(reducers);
 describe('scriptEditorRedux reducer tests', () => {
   let initialState;
   beforeEach(() => (initialState = getInitialState()));
+
+  it('getSerializedLessonGroups', () => {
+    let serializedLessonGroups = getSerializedLessonGroups(
+      initialState.lessonGroups,
+      initialState.levelKeyList
+    );
+
+    // Verify that the JSON contains serialized lesson groups.
+    expect(serializedLessonGroups).to.equal(
+      "lesson_group 'lg-key', display_name: 'Display Name'\n" +
+        "lesson 'a', display_name: 'A'\n\n" +
+        "lesson 'b', display_name: 'B'\n\n" +
+        "lesson 'c', display_name: 'C'\n\n" +
+        "lesson_group 'lg-key-2', display_name: 'Display Name 2'\n" +
+        "lesson 'd', display_name: 'D'\n\n" +
+        "lesson 'e', display_name: 'E'\n\n" +
+        "lesson 'f', display_name: 'F'\n\n"
+    );
+  });
 
   it('add group', () => {
     const nextState = reducer(initialState, addGroup(2, 'key', 'Display Name'))
