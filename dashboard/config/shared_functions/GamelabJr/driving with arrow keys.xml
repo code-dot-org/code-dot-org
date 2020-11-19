@@ -2,7 +2,7 @@
 <block type="behavior_definition" deletable="false" movable="false" editable="false">
   <mutation>
     <arg name="this sprite" type="Sprite"/>
-    <description/>
+    <description>move a sprite if the user is pressing the arrow keys</description>
   </mutation>
   <title name="NAME">driving with arrow keys</title>
   <statement name="STACK">
