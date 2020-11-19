@@ -1,4 +1,5 @@
 import {hashString, findProfanity} from '@cdo/apps/utils';
+import Sounds from '@cdo/apps/Sounds';
 
 // XMLHttpRequest readyState 4 means the request is done.
 // https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/readyState
@@ -58,12 +59,11 @@ export default class AzureTextToSpeech {
   /**
    *
    * @param {Promise<SoundResponse>} soundPromise A promise that returns a SoundResponse when resolved.
-   * @param {function(ArrayBuffer, Object)} play Function that plays sound bytes. Object parameter accepts
    * playback configuration options.
    */
-  enqueueAndPlay = (soundPromise, play) => {
+  enqueueAndPlay = soundPromise => {
     this.enqueue_(soundPromise);
-    this.asyncPlayFromQueue_(play);
+    this.asyncPlayFromQueue_(this.playBytes_);
   };
 
   /**
@@ -179,12 +179,22 @@ export default class AzureTextToSpeech {
   };
 
   /**
+   * A wrapper for the Sounds.getSingleton().playBytes function to aid in testability.
+   * @param {ArrayBuffer} bytes
+   * @param {Object} playbackOptions
+   * @private
+   */
+  playBytes_ = (bytes, playbackOptions) => {
+    Sounds.getSingleton().playBytes(bytes, playbackOptions);
+  };
+
+  /**
    * Called when a TTS sound is done playing. Set as part of this.playbackOptions_.
    * @private
    */
   onSoundComplete_ = () => {
     this.playing = false;
-    this.asyncPlayFromQueue_();
+    this.asyncPlayFromQueue_(this.playBytes_);
   };
 
   /**
