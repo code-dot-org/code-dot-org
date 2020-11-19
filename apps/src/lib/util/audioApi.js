@@ -168,7 +168,9 @@ export const commands = {
         );
       }
     });
-    azureTTS.enqueueAndPlay(promise);
+    const playBytes = (bytes, opt) =>
+      Sounds.getSingleton().playBytes(bytes, opt);
+    azureTTS.enqueueAndPlay(promise, playBytes);
   }
 };
 

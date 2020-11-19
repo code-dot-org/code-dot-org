@@ -1,7 +1,6 @@
 import {assert, expect} from '../util/reconfiguredChai';
 import sinon from 'sinon';
 import AzureTextToSpeech from '@cdo/apps/AzureTextToSpeech';
-import Sounds from '@cdo/apps/Sounds';
 
 const assertSoundResponsesEqual = (expected, actual) => {
   assert.deepEqual(expected.bytes, actual.bytes);
@@ -18,14 +17,10 @@ describe('AzureTextToSpeech', () => {
   });
 
   describe('enqueueAndPlay', () => {
-    let playBytesStub;
+    let playSpy;
 
     beforeEach(() => {
-      playBytesStub = sinon.stub(Sounds.getSingleton(), 'playBytes');
-    });
-
-    afterEach(() => {
-      playBytesStub.restore();
+      playSpy = sinon.spy();
     });
 
     it('plays given soundPromise', async () => {
@@ -33,9 +28,12 @@ describe('AzureTextToSpeech', () => {
         bytes: new ArrayBuffer()
       });
 
-      await azureTTS.enqueueAndPlay(new Promise(resolve => resolve(response)));
+      await azureTTS.enqueueAndPlay(
+        new Promise(resolve => resolve(response)),
+        playSpy
+      );
 
-      expect(playBytesStub).to.have.been.calledOnce;
+      expect(playSpy).to.have.been.calledOnce;
       expect(azureTTS.queue_.length).to.equal(0);
     });
 
@@ -46,9 +44,12 @@ describe('AzureTextToSpeech', () => {
       });
       response.playbackOptions.onEnded = sinon.spy();
 
-      await azureTTS.enqueueAndPlay(new Promise(resolve => resolve(response)));
+      await azureTTS.enqueueAndPlay(
+        new Promise(resolve => resolve(response)),
+        playSpy
+      );
 
-      expect(playBytesStub).not.to.have.been.called;
+      expect(playSpy).not.to.have.been.called;
       expect(response.playbackOptions.onEnded).not.to.have.been.called;
     });
 
@@ -58,9 +59,12 @@ describe('AzureTextToSpeech', () => {
       });
       response.playbackOptions.onEnded = sinon.spy();
 
-      await azureTTS.enqueueAndPlay(new Promise(resolve => resolve(response)));
+      await azureTTS.enqueueAndPlay(
+        new Promise(resolve => resolve(response)),
+        playSpy
+      );
 
-      expect(playBytesStub).not.to.have.been.called;
+      expect(playSpy).not.to.have.been.called;
       expect(response.playbackOptions.onEnded).to.have.been.calledOnce;
     });
   });

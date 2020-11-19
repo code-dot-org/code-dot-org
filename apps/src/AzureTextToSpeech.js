@@ -1,4 +1,3 @@
-import Sounds from '@cdo/apps/Sounds';
 import {hashString, findProfanity} from '@cdo/apps/utils';
 
 // XMLHttpRequest readyState 4 means the request is done.
@@ -47,10 +46,12 @@ export default class AzureTextToSpeech {
   /**
    *
    * @param {Promise<SoundResponse>} soundPromise A promise that returns a SoundResponse when resolved.
+   * @param {function(ArrayBuffer, Object)} play Function that plays sound bytes. Object parameter accepts
+   * playback configuration options.
    */
-  enqueueAndPlay = soundPromise => {
+  enqueueAndPlay = (soundPromise, play) => {
     this.enqueue_(soundPromise);
-    this.asyncPlayFromQueue_();
+    this.asyncPlayFromQueue_(play);
   };
 
   /**
@@ -143,9 +144,10 @@ export default class AzureTextToSpeech {
 
   /**
    * Plays the next sound in the queue. Automatically ends playback if the SoundResponse was unsuccessful.
+   * @param {function(ArrayBuffer, Object)} play Function that plays sound bytes.
    * @private
    */
-  asyncPlayFromQueue_ = async () => {
+  asyncPlayFromQueue_ = async play => {
     if (this.playing) {
       return;
     }
@@ -158,10 +160,7 @@ export default class AzureTextToSpeech {
     this.playing = true;
     let response = await nextSoundPromise;
     if (response.success()) {
-      Sounds.getSingleton().playBytes(
-        response.bytes.slice(0),
-        response.playbackOptions
-      );
+      play(response.bytes.slice(0), response.playbackOptions);
     } else {
       response.playbackOptions.onEnded();
     }
