@@ -14,6 +14,9 @@ import CollapsibleEditorSection from '@cdo/apps/lib/levelbuilder/CollapsibleEdit
 import ResourceType, {
   resourceShape
 } from '@cdo/apps/templates/courseOverview/resourceType';
+import {connect} from 'react-redux';
+import {init} from '@cdo/apps/lib/levelbuilder/script-editor/scriptEditorRedux';
+import {lessonGroupShape} from '@cdo/apps/lib/levelbuilder/shapes';
 
 const styles = {
   input: {
@@ -62,7 +65,7 @@ const CURRICULUM_UMBRELLAS = ['CSF', 'CSD', 'CSP', ''];
 /**
  * Component for editing course scripts.
  */
-export default class ScriptEditor extends React.Component {
+class ScriptEditor extends React.Component {
   static propTypes = {
     beta: PropTypes.bool,
     betaWarning: PropTypes.string,
@@ -99,7 +102,12 @@ export default class ScriptEditor extends React.Component {
     isLevelbuilder: PropTypes.bool,
     initialTts: PropTypes.bool,
     hasCourse: PropTypes.bool,
-    initialIsCourse: PropTypes.bool
+    initialIsCourse: PropTypes.bool,
+
+    // from redux
+    lessonGroups: PropTypes.arrayOf(lessonGroupShape).isRequired,
+    levelKeyList: PropTypes.object.isRequired,
+    init: PropTypes.func.isRequired
   };
 
   constructor(props) {
@@ -769,3 +777,15 @@ export default class ScriptEditor extends React.Component {
     );
   }
 }
+
+export const UnconnectedScriptEditor = ScriptEditor;
+
+export default connect(
+  state => ({
+    lessonGroups: state.lessonGroups,
+    levelKeyList: state.levelKeyList
+  }),
+  {
+    init
+  }
+)(ScriptEditor);
