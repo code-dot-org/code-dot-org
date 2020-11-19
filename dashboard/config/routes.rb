@@ -758,4 +758,13 @@ Dashboard::Application.routes.draw do
   get '/form/:misc_form_path/show', to: 'foorm/misc_survey#show'
 
   post '/i18n/track_string_usage', action: :track_string_usage, controller: :i18n
+
+  namespace :foorm do
+    resources :forms, only: [:create] do
+      member do
+        put :update_questions
+        put :publish
+      end
+    end
+  end
 end
