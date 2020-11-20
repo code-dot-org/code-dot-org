@@ -54,7 +54,6 @@ export default class SetupChecker {
    */
   detectCorrectFirmware(boardType) {
     if (boardType === BOARD_TYPE.MICROBIT) {
-      console.log('Detecting Correct Firmware for micro:bit board');
       this.boardController = new MicroBitBoard(this.port);
       return this.boardController.checkExpectedFirmware();
     } else {
