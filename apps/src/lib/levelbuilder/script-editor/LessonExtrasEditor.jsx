@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import $ from 'jquery';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 
 const styles = {
@@ -16,21 +15,25 @@ export default class LessonExtrasEditor extends React.Component {
   static propTypes = {
     projectWidgetVisible: PropTypes.bool,
     projectWidgetTypes: PropTypes.arrayOf(PropTypes.string),
-    lessonExtrasAvailable: PropTypes.bool
+    lessonExtrasAvailable: PropTypes.bool,
+    updateLessonExtrasAvailable: PropTypes.func.isRequired,
+    updateProjectWidgetVisible: PropTypes.func.isRequired,
+    updateProjectWidgetTypes: PropTypes.func.isRequired
   };
 
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      lessonExtras: this.props.lessonExtrasAvailable
-    };
-  }
-
   handleClearProjectWidgetSelectClick = () => {
-    $(this.projectWidgetSelect)
-      .children('option')
-      .removeAttr('selected', true);
+    this.props.updateProjectWidgetTypes([]);
+  };
+
+  handleChangeProjectWidgetTypes = e => {
+    var options = e.target.options;
+    var projectWidgetTypes = [];
+    for (var i = 0, l = options.length; i < l; i++) {
+      if (options[i].selected) {
+        projectWidgetTypes.push(options[i].value);
+      }
+    }
+    this.props.updateProjectWidgetTypes(projectWidgetTypes);
   };
 
   render() {
@@ -39,11 +42,10 @@ export default class LessonExtrasEditor extends React.Component {
         <label>
           Allow Teachers to Enable Lesson Extras
           <input
-            name="lesson_extras_available"
             type="checkbox"
-            checked={this.state.lessonExtras}
+            checked={this.props.lessonExtrasAvailable}
             style={styles.checkbox}
-            onChange={e => this.setState({lessonExtras: e.target.checked})}
+            onChange={e => this.props.updateLessonExtrasAvailable(e)}
           />
           <HelpTip>
             <p>
@@ -52,15 +54,15 @@ export default class LessonExtrasEditor extends React.Component {
             </p>
           </HelpTip>
         </label>
-        {this.state.lessonExtras && (
+        {this.props.lessonExtrasAvailable && (
           <div>
             <label>
               Project widget visible
               <input
-                name="project_widget_visible"
                 type="checkbox"
-                defaultChecked={this.props.projectWidgetVisible}
+                checked={this.props.projectWidgetVisible}
                 style={styles.checkbox}
+                onChange={this.props.updateProjectWidgetVisible}
               />
               <HelpTip>
                 <p>
@@ -78,10 +80,9 @@ export default class LessonExtrasEditor extends React.Component {
                 or shift-click or cmd-click to select multiple.
               </p>
               <select
-                name="project_widget_types[]"
                 multiple
-                defaultValue={this.props.projectWidgetTypes}
-                ref={select => (this.projectWidgetSelect = select)}
+                value={this.props.projectWidgetTypes}
+                onChange={this.handleChangeProjectWidgetTypes}
               >
                 <option value="playlab">Play Lab</option>
                 <option value="playlab_k1">Play Lab K1</option>
