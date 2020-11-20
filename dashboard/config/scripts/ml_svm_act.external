@@ -1,0 +1,34 @@
+name 'ml-svm-act'
+title 'Act out model with categorical labels (SVM)'
+description ''
+
+markdown <<MARKDOWN
+# Act Out a model with categorical labels (SVM)
+
+## Lesson Sequence Notes
+- Part of 3-lesson sequence
+- Previously:
+	- Up until now, students have been given columns that are prelabeled as categorical / continuous
+    - Up until now, every column they've been given has been at least somewhat useful in training the model
+    - Up until now, labels have been fixed for students
+- Focus in these 3 lessons: **Selecting Candidates for Machine Learning**. 
+	- Students are now able to add metadata to their columns in terms of categorical / continuous
+    - Students may be given columns that are useless [or not formatted well (lots of blanks)?] and can decide not to include them as candidates for ML
+    - Students are now able to decide labels, which lets them ask questions about what might be predictable given the features we have
+- Opportunities this opens:
+	- Now students can make decisions about what columns are better able to predict other columns
+    - Now students have more ownership over the data process since they are categorizing & selecting data
+
+## Curriculum Lesson Notes
+- Act out an SVM algorithm, trying to separate datapoints into regions
+
+## AI-Lab Notes
+- None
+
+## Dataset / Model Notes:
+- Toy dataset for activity (closely connected w/curriculum)
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN

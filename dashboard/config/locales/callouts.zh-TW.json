@@ -606,16 +606,16 @@
           "courseF_bee_fwp_challenge2_callout1": "這個函式可以很好地完成玉米任務，但對其他蔬菜呢？"
         },
         "courseA_artist_loops4": {
-          "courseA_artist_loops4_1": "這個數字是用來告訴你，這個關卡上你可以使用的最大積木數。"
+          "courseA_artist_loops4_1": "這個數字告訴你在關卡中「可以使用的積木數量」。"
         },
         "courseA_artist_loops4_2018": {
-          "courseA_artist_loops4_1": "這個數字是用來告訴你，這個關卡上你可以使用的最大積木數。"
+          "courseA_artist_loops4_1": "這個數字告訴你在關卡中「可以使用的積木數量」。"
         },
         "courseA_artist_loops4_2019": {
-          "courseA_artist_loops4_1": "這個數字是用來告訴你，這個關卡上你可以使用的最大積木數。"
+          "courseA_artist_loops4_1": "這個數字告訴你在關卡中「可以使用的積木數量」。"
         },
         "courseA_artist_loops4_2020": {
-          "courseA_artist_loops4_1": "這個數字是用來告訴你，這個關卡上你可以使用的最大積木數。"
+          "courseA_artist_loops4_1": "這個數字告訴你在關卡中「可以使用的積木數量」。"
         },
         "courseA_artist_loops7": {
           "courseA_artist_loops7_1": "這個數字指的是解答中只可以使用一個這類型的積木"
@@ -630,10 +630,10 @@
           "courseA_artist_loops7_1": "這個數字指的是解答中只可以使用一個這類型的積木"
         },
         "courseA_artist_loops8": {
-          "courseA_artist_loops8_1": "你知道嗎，只要有需要，你可以隨時畫一條線出來？"
+          "courseA_artist_loops8_1": "你知道嗎？只要有需要，你隨時可以沿著一條線反向的畫回來哦！"
         },
         "courseA_artist_loops8_2018": {
-          "courseA_artist_loops8_1": "你知道嗎，只要有需要，你可以隨時畫一條線出來？"
+          "courseA_artist_loops8_1": "你知道嗎？只要有需要，你隨時可以沿著一條線反向的畫回來哦！"
         },
         "courseA_artist_loops8_2019": {
           "courseA_artist_loops8_1": "你知道嗎，只要有需要，你可以隨時畫一條線出來？"
@@ -642,7 +642,7 @@
           "courseA_artist_loops8_1": "你知道嗎，只要有需要，你可以隨時畫一條線出來？"
         },
         "courseA_collector_loops1": {
-          "courseA_collector_loops1_1": "發現了嗎？在工具箱有些新的積木囉！別擔心，我們在下個階段會告訴你怎麼使用它們的。"
+          "courseA_collector_loops1_1": "發現了嗎？在工具箱有些新的積木囉！別擔心，我們在下個階段會告訴你該如何使用它們。"
         },
         "courseA_collector_loops1_2019": {
           "courseA_collector_loops1_1": "發現了嗎？在工具箱有些新的積木囉！別擔心，我們在下個階段會告訴你怎麼使用它們的。"
@@ -651,34 +651,34 @@
           "courseA_collector_loops1_1": "發現了嗎？在工具箱有些新的積木囉！別擔心，我們在下個階段會告訴你怎麼使用它們的。"
         },
         "courseA_collector_loops3": {
-          "gradek_adventurer_loops2_1": "這個數字是用來告訴你，這個關卡上你可以使用的最大積木數。"
+          "gradek_adventurer_loops2_1": "這個數字告訴你在關卡中「可以使用的積木數量」。"
         },
         "courseA_collector_loops3_2018": {
-          "gradek_adventurer_loops2_1": "這個數字是用來告訴你，這個關卡上你可以使用的最大積木數。"
+          "gradek_adventurer_loops2_1": "這個數字告訴你在關卡中「可以使用的積木數量」。"
         },
         "courseA_collector_loops3_2019": {
-          "gradek_adventurer_loops2_1": "這個數字是用來告訴你，這個關卡上你可以使用的最大積木數。"
+          "gradek_adventurer_loops2_1": "這個數字告訴你在關卡中「可以使用的積木數量」。"
         },
         "courseA_collector_loops3_2020": {
-          "gradek_adventurer_loops2_1": "這個數字是用來告訴你，這個關卡上你可以使用的最大積木數。"
+          "gradek_adventurer_loops2_1": "這個數字告訴你在關卡中「可以使用的積木數量」。"
         },
         "courseA_collector_preLoops1": {
           "courseA_collector_preLoops1_1": "點擊此處觀看程式運行！"
         },
         "courseA_collector_preLoops2": {
-          "courseA_collector_loops1_1": "發現了嗎？在工具箱有些新的積木囉！別擔心，我們在下個階段會告訴你怎麼使用它們的。"
+          "courseA_collector_loops1_1": "發現了嗎？在工具箱有些新的積木囉！別擔心，我們在下個階段會告訴你該如何使用它們。"
         },
         "courseA_collector_preLoops3": {
-          "courseA_collector_loops1_1": "發現了嗎？在工具箱有些新的積木囉！別擔心，我們在下個階段會告訴你怎麼使用它們的。"
+          "courseA_collector_loops1_1": "發現了嗎？在工具箱有些新的積木囉！別擔心，我們在下個階段會告訴你該如何使用它們。"
         },
         "courseA_collector_preLoops4": {
-          "courseA_collector_loops1_1": "發現了嗎？在工具箱有些新的積木囉！別擔心，我們在下個階段會告訴你怎麼使用它們的。"
+          "courseA_collector_loops1_1": "發現了嗎？在工具箱有些新的積木囉！別擔心，我們在下個階段會告訴你該如何使用它們。"
         },
         "courseA_collector_preLoops5": {
-          "courseA_collector_loops1_1": "發現了嗎？在工具箱有些新的積木囉！別擔心，我們在下個階段會告訴你怎麼使用它們的。"
+          "courseA_collector_loops1_1": "發現了嗎？在工具箱有些新的積木囉！別擔心，我們在下個階段會告訴你該如何使用它們。"
         },
         "courseA_collector_preLoops6": {
-          "courseA_collector_loops1_1": "發現了嗎？在工具箱有些新的積木囉！別擔心，我們在下個階段會告訴你怎麼使用它們的。"
+          "courseA_collector_loops1_1": "發現了嗎？在工具箱有些新的積木囉！別擔心，我們在下個階段會告訴你該如何使用它們。"
         },
         "courseA_maze_ramp2_2019": {
           "courseC_maze_programming2_1": "這是工具箱。在這裡您可以找到完成本關的額外模塊。"
@@ -702,7 +702,7 @@
           "courseA_maze_seq1_1": "當您需要提示時，點一下燈泡！"
         },
         "courseA_maze_seq2": {
-          "courseA_maze_seqA_callout1": "使用步進按鈕可以一步一步的運行程式中的指令，這可以讓你更容易找到出錯的地方！"
+          "courseA_maze_seqA_callout1": "使用步進按鈕可以一步一步地執行程式中的指令，這可以讓你更容易找到出錯的地方！"
         },
         "courseA_maze_seq4": {
           "made_of_stone": "這些積木就像石頭一樣，你可以移動它們，但你無法刪除它們！"
@@ -732,10 +732,10 @@
           "courseA_playLab_events5_1": "點擊此處變更方向事件的箭頭方向。"
         },
         "courseA_playLab_events6": {
-          "courseA_playLab_events6_1": "這個是讓你選擇一種「隨機」聲音，這意味著你在聽到聲音之前都不知道會得到什麼！"
+          "courseA_playLab_events6_1": "這個是讓你選擇一種「隨機」聲音，這表示在聲音出現前，你完全不會知道將會聽到什麼！"
         },
         "courseA_playLab_events6_2018": {
-          "courseA_playLab_events6_1": "這個是讓你選擇一種「隨機」聲音，這意味著你在聽到聲音之前都不知道會得到什麼！"
+          "courseA_playLab_events6_1": "這個是讓你選擇一種「隨機」聲音，這表示在聲音出現前，你完全不會知道將會聽到什麼！"
         },
         "courseA_playLab_events6_2019": {
           "courseA_playLab_events6_1": "這個是讓你選擇一種「隨機」聲音，這意味著你在聽到聲音之前都不知道會得到什麼！"
@@ -774,7 +774,7 @@
           "courseB_artist_loops5_1": "這個數字指的是工具箱中已經沒有這個積木。"
         },
         "courseB_collector_loops1": {
-          "courseB_collector_loops1_1": "發現了嗎？在工具箱有些新的積木囉！別擔心，我們在下個階段會告訴你怎麼使用它們的。"
+          "courseB_collector_loops1_1": "發現了嗎？在工具箱有些新的積木囉！別擔心，我們在下個階段會告訴你該如何使用它們。"
         },
         "courseB_collector_loops1_2018": {
           "courseB_collector_loops1_1": "發現了嗎？在工具箱有些新的積木囉！別擔心，我們在下個階段會告訴你怎麼使用它們的。"
@@ -798,7 +798,7 @@
           "courseB_maze_seq1": "當您需要提示時，點一下燈泡！"
         },
         "courseB_maze_seq2": {
-          "courseB_maze_seq2_callout1": "使用步進按鈕可以一步一步的運行程式中的指令，這可以讓你更容易找到出錯的地方！"
+          "courseB_maze_seq2_callout1": "使用步進按鈕可以一步一步地執行程式中的指令，這可以讓你更容易找到出錯的地方！"
         },
         "courseB_maze_seq3": {
           "courseB_maze_seq3_1": "灰色的積木就像石頭一樣，無法被破壞和丟棄。"
@@ -870,7 +870,7 @@
           "courseC_artist_loopsPrePre1a_1": "首先使用此積木將小藝術家帶到畫面中央。"
         },
         "courseC_collector_prog1": {
-          "courseC_collector_prog1_1": "發現了嗎？在工具箱有些新的積木囉！別擔心，我們在下個階段會告訴你怎麼使用它們的。"
+          "courseC_collector_prog1_1": "發現了嗎？在工具箱有些新的積木囉！別擔心，我們在下個階段會告訴你該如何使用它們。"
         },
         "courseC_collector_prog1_2018": {
           "courseC_collector_prog1_1": "發現了嗎？在工具箱有些新的積木囉！別擔心，我們在下個階段會告訴你怎麼使用它們的。"

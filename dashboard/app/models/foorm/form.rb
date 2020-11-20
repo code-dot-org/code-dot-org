@@ -22,7 +22,7 @@ class Foorm::Form < ActiveRecord::Base
   class InvalidFoormConfigurationError < StandardError; end
 
   has_many :submissions, foreign_key: [:form_name, :form_version], primary_key: [:name, :version]
-  validate :validate_questions
+  validate :validate_questions, :validate_published
 
   after_save :write_form_to_file
 
@@ -33,7 +33,7 @@ class Foorm::Form < ActiveRecord::Base
   end
 
   def self.setup
-    forms = Dir.glob('config/foorm/forms/**/*.json').sort.map.with_index(1) do |path, id|
+    Dir.glob('config/foorm/forms/**/*.json').each do |path|
       # Given: "config/foorm/forms/surveys/pd/pre_workshop_survey.0.json"
       # we get full_name: "surveys/pd/pre_workshop_survey"
       #      and version: 0
@@ -48,24 +48,25 @@ class Foorm::Form < ActiveRecord::Base
       # if published is not provided, default to true
       published = questions['published'].nil? ? true : questions['published']
 
-      {
-        id: id,
-        name: full_name,
-        version: version,
-        questions: questions,
-        published: published
-      }
-    end
-
-    transaction do
-      Foorm::Form.delete_all
-      Foorm::Form.import! forms
+      form = Foorm::Form.find_or_initialize_by(name: full_name, version: version)
+      form.questions = questions
+      form.published = published
+      form.save! if form.changed?
     end
   end
 
   def validate_questions
     errors_arr = Foorm::Form.validate_questions(JSON.parse(questions))
     errors_arr.each {|error| errors[:questions] << error}
+  end
+
+  def validate_published
+    parsed_questions = JSON.parse(questions)
+    unless parsed_questions['published'].nil?
+      if published != parsed_questions['published']
+        errors[:questions] << 'Mismatch between published state in questions and published state in model'
+      end
+    end
   end
 
   def write_form_to_file

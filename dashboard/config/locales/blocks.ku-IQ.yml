@@ -988,6 +988,8 @@ ku:
             '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': ئەستێرە
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': ژێرئاو
             undefined: هیچ
+      gamelab_setBackgroundImageAs:
+        text: پاشبنەما دابنێ {IMG}
       gamelab_setProp:
         text: دابنی {SPRITE} {PROPERTY} بە بڕی {VAL}
         options:
@@ -1362,7 +1364,6 @@ ku:
             '"stoneBricks"': بلۆکی بەردین
             '"mossyStoneBricks"': بلۆکی بەردی قەوزەدار
             '"crackedStoneBricks"': بلۆکی بەردی شکاو
-            '"decorativeStoneBricks"': بلۆکی بەردی دیکۆرکراو
             '"blueCoralBlock"': بلۆکی مەرجانی شین
             '"pinkCoralBlock"': بلۆکی مەرجانی پەمەیی
             '"magentaCoralBlock"': بلۆکی مەرجانی ئەرخەوانی

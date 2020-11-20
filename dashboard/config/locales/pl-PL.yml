@@ -212,7 +212,7 @@ pl:
       Zjednoczonych mogą różnić się od przepisów obowiązujących w moim kraju.
 
 '
-    visit_privacy: 'Odwiedź [Politykę prywatności] Code.org (%{privacy_url}), aby
+    visit_privacy: 'Odwiedź [Politykę prywatności](%{privacy_url}) Code.org, aby
       dowiedzieć się więcej.
 
 '
