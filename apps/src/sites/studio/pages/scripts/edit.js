@@ -33,6 +33,7 @@ export default function initPage(scriptEditorData) {
   ReactDOM.render(
     <Provider store={store}>
       <ScriptEditor
+        id={scriptData.id}
         beta={scriptEditorData.beta}
         betaWarning={scriptEditorData.betaWarning}
         name={scriptEditorData.script.name}
