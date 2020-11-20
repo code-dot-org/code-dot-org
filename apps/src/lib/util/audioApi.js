@@ -15,6 +15,9 @@ export function injectExecuteCmd(fn) {
   executeCmd = fn;
 }
 
+// Max text length for the playSpeech block.
+export const MAX_SPEECH_TEXT_LENGTH = 750;
+
 /**
  * Export a set of native code functions that student code can execute via the
  * interpreter.
