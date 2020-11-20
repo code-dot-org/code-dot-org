@@ -112,7 +112,7 @@ class ScriptsController < ApplicationController
       i18n: @script ? @script.summarize_i18n_for_edit : {},
       beta: beta,
       betaWarning: beta_warning,
-      levelKeyList: beta && Level.key_list,
+      levelKeyList: beta ? Level.key_list : {},
       lessonLevelData: @script_file,
       locales: options_for_locale_select,
       script_families: ScriptConstants::FAMILY_NAMES,
@@ -124,9 +124,10 @@ class ScriptsController < ApplicationController
   def update
     script_text = params[:script_text]
     if @script.update_text(script_params, script_text, i18n_params, general_params)
-      redirect_to @script, notice: I18n.t('crud.updated', model: Script.model_name.human)
+      @script.reload
+      render json: @script.summarize_for_script_edit
     else
-      render action: 'edit'
+      render json: @script.errors
     end
   end
 

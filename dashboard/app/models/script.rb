@@ -1296,7 +1296,9 @@ class Script < ActiveRecord::Base
       hasStandards: has_standards_associations?,
       tts: tts?,
       is_course: is_course?,
-      background: background
+      background: background,
+      updatedAt: updated_at,
+      scriptPath: script_path(self)
     }
 
     #TODO: lessons should be summarized through lesson groups in the future
