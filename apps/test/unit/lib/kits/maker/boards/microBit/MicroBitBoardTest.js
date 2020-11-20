@@ -13,6 +13,23 @@ import ExternalLed from '@cdo/apps/lib/kits/maker/boards/microBit/ExternalLed';
 import ExternalButton from '@cdo/apps/lib/kits/maker/boards/microBit/ExternalButton';
 import CapacitiveTouchSensor from '@cdo/apps/lib/kits/maker/boards/microBit/CapacitiveTouchSensor';
 
+function boardSetupAndStub(board) {
+  stubOpenSerialPort(board);
+  sinon.stub(board.boardClient_, 'connectBoard').callsFake(() => {
+    board.boardClient_.myPort = {write: () => {}};
+    sinon.stub(board.boardClient_.myPort, 'write');
+    // Stubbing versions to replicate connection
+    board.boardClient_.firmataVersion = 'Firmata Protocol';
+    board.boardClient_.firmwareVersion = 'micro:bit Firmata';
+  });
+}
+
+function stubOpenSerialPort(board) {
+  sinon.stub(board, 'openSerialPort').callsFake(() => {
+    return Promise.resolve();
+  });
+}
+
 describe('MicroBitBoard', () => {
   let board;
 
@@ -21,9 +38,7 @@ describe('MicroBitBoard', () => {
     window.SerialPort = {};
     board = new MicroBitBoard();
     board.boardClient_ = new MicrobitStubBoard();
-    // Stubbing versions to replicate connection
-    board.boardClient_.firmataVersion = 'Firmata Protocol';
-    board.boardClient_.firmwareVersion = 'micro:bit Firmata';
+    boardSetupAndStub(board);
   });
 
   afterEach(() => {
@@ -32,13 +47,7 @@ describe('MicroBitBoard', () => {
 
   describe('Maker Board Interface', () => {
     itImplementsTheMakerBoardInterface(MicroBitBoard, board => {
-      sinon.stub(board.boardClient_, 'connect').callsFake(() => {
-        board.boardClient_.myPort = {write: () => {}};
-        sinon.stub(board.boardClient_.myPort, 'write');
-        // Stubbing versions to replicate connection
-        board.boardClient_.firmataVersion = 'Firmata Protocol';
-        board.boardClient_.firmwareVersion = 'micro:bit Firmata';
-      });
+      boardSetupAndStub(board);
 
       sinon.stub(board.boardClient_, 'analogRead').callsArgWith(1, 0);
       sinon.stub(board.boardClient_, 'digitalRead').callsArgWith(1, 0);
@@ -54,14 +63,7 @@ describe('MicroBitBoard', () => {
 
       beforeEach(() => {
         board = new MicroBitBoard();
-        sinon.stub(board.boardClient_, 'connect').callsFake(() => {
-          board.boardClient_.myPort = {write: () => {}};
-          sinon.stub(board.boardClient_.myPort, 'write');
-
-          // Stubbing versions to replicate connection
-          board.boardClient_.firmataVersion = 'Firmata Protocol';
-          board.boardClient_.firmwareVersion = 'micro:bit Firmata';
-        });
+        boardSetupAndStub(board);
 
         jsInterpreter = {
           globalProperties: {},
@@ -239,40 +241,6 @@ describe('MicroBitBoard', () => {
         expect(board.prewiredComponents_.buttonB).to.be.a('object');
         expect(board.prewiredComponents_.lightSensor).to.be.a('object');
       });
-    });
-  });
-
-  describe(`checkExpectedFirmware()`, () => {
-    it('rejects when the firmata and firmware version are not as expected', done => {
-      board.boardClient_.firmataVersion = 'unexpected';
-      board.boardClient_.firmwareVersion = 'unexpected';
-      board
-        .connect()
-        .then(() => {
-          done(
-            new Error(
-              'Expected promise to reject based on firmata and firmware version, but it resolved'
-            )
-          );
-        })
-        // We expect to hit this case, due to bad firmware and firmata version
-        .catch(done);
-    });
-
-    it('resolves when the firmata and firmware version are as expected', done => {
-      board
-        .connect()
-        .then(() => {
-          // We expect to hit this case, due to expected firmware and firmata version
-          done();
-        })
-        .catch(() => {
-          done(
-            new Error(
-              'Expected promise to resolve based on firmata and firmware version, but it resolved'
-            )
-          );
-        });
     });
   });
 
@@ -460,6 +428,65 @@ describe('MicroBitBoard', () => {
         board.createButton(1);
         return board.destroy();
       });
+    });
+  });
+
+  describe(`checkExpectedFirmware() with expected versions`, () => {
+    it('resolves when the firmata and firmware version are as expected', done => {
+      board.nodeSerialAvailable = true;
+      board
+        .connect()
+        .then(() => {
+          // We expect to hit this case, due to expected firmware and firmata version
+          done();
+        })
+        .catch(() => {
+          done(
+            new Error(
+              'Expected promise to resolve based on firmata and firmware version, but it resolved'
+            )
+          );
+        });
+    });
+  });
+});
+
+describe(`MicroBitBoard with error set-up`, () => {
+  let board;
+  beforeEach(() => {
+    // Construct a board to test on
+    window.SerialPort = {};
+    board = new MicroBitBoard();
+    board.boardClient_ = new MicrobitStubBoard();
+    stubOpenSerialPort(board);
+    sinon.stub(board.boardClient_, 'connectBoard').callsFake(() => {
+      board.boardClient_.myPort = {write: () => {}};
+      sinon.stub(board.boardClient_.myPort, 'write');
+      // Stubbing versions to replicate connection
+      board.boardClient_.firmataVersion = 'unexpected';
+      board.boardClient_.firmwareVersion = 'micro:bit Firmata';
+    });
+  });
+
+  afterEach(() => {
+    board = undefined;
+  });
+
+  describe(`checkExpectedFirmware() with unexpected versions`, () => {
+    it('rejects when the firmata and firmware version are not as expected', done => {
+      // Only checks this for Maker App, not Chrome App, so setting NodeSerialAvailable to true
+      board.nodeSerialAvailable = true;
+      board
+        .connect()
+        .then(() => {
+          done(
+            new Error(
+              'Expected promise to reject based on firmata and firmware version, but it resolved'
+            )
+          );
+        })
+        // We expect to hit this case, due to bad firmware and firmata version
+        .catch(done);
     });
   });
 });
