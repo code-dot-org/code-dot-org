@@ -100,7 +100,10 @@ export default class LessonDescriptions extends React.Component {
         importedDescriptions,
         mismatchedLessons
       },
-      this.props.updateLessonDescriptions(this.updatedLessonDescriptions())
+      this.props.updateLessonDescriptions(
+        this.updatedLessonDescriptions(),
+        importedDescriptions.length > 0
+      )
     );
   };
 

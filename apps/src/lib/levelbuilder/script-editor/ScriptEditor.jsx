@@ -146,7 +146,8 @@ class ScriptEditor extends React.Component {
       descriptionAudience: this.props.i18nData.descriptionAudience || '',
       descriptionShort: this.props.i18nData.descriptionShort || '',
       lessonDescriptions: this.props.i18nData.stageDescriptions,
-      teacherResources: resources
+      teacherResources: resources,
+      hasImportedLessonDescriptions: false
     };
   }
 
@@ -212,56 +213,57 @@ class ScriptEditor extends React.Component {
       shouldCloseAfterSave = false;
     }
 
+    let dataToSave = {
+      name: this.props.name,
+      family_name: this.state.familyName,
+      is_course: this.state.isCourse,
+      description: this.state.description,
+      announcements: this.state.announcements,
+      visible_to_teachers: !this.state.hidden,
+      is_stable: this.state.isStable,
+      login_required: this.state.loginRequired,
+      hideable_lessons: this.state.hideableLessons,
+      student_detail_progress_view: this.state.studentDetailProgressView,
+      professional_learning_course: this.state.professionalLearningCourse,
+      peer_reviews_to_complete: this.state.peerReviewsRequired,
+      wrapup_video: this.state.wrapupVideo,
+      project_widget_visible: this.state.projectWidgetVisible,
+      project_widget_types: this.state.projectWidgetTypes,
+      lesson_extras_available: this.state.lessonExtrasAvailable,
+      script_text: this.props.beta
+        ? getSerializedLessonGroups(
+            this.props.lessonGroups,
+            this.props.levelKeyList
+          )
+        : this.state.lessonLevelData,
+      has_verified_resources: this.state.hasVerifiedResources,
+      has_lesson_plan: this.state.hasLessonPlan,
+      curriculum_path: this.state.curriculumPath,
+      pilot_experiment: this.state.pilotExperiment,
+      editor_experiment: this.state.editorExperiment,
+      supported_locales: this.state.supportedLocales,
+      locales: this.state.locales,
+      project_sharing: this.state.projectSharing,
+      curriculum_umbrella: this.state.curriculumUmbrella,
+      version_year: this.state.versionYear,
+      tts: this.state.tts,
+      title: this.state.title,
+      description_audience: this.state.descriptionAudience,
+      description_short: this.state.descriptionShort,
+      resourceLinks: this.state.teacherResources.map(resource => resource.link),
+      resourceTypes: this.state.teacherResources.map(resource => resource.type)
+    };
+
+    if (this.state.hasImportedLessonDescriptions) {
+      dataToSave.stage_descriptions = this.state.lessonDescriptions;
+    }
+
     $.ajax({
       url: `/s/${this.props.id}`,
       method: 'PUT',
       dataType: 'json',
       contentType: 'application/json;charset=UTF-8',
-      data: JSON.stringify({
-        name: this.props.name,
-        family_name: this.state.familyName,
-        is_course: this.state.isCourse,
-        description: this.state.description,
-        announcements: this.state.announcements,
-        visible_to_teachers: !this.state.hidden,
-        is_stable: this.state.isStable,
-        login_required: this.state.loginRequired,
-        hideable_lessons: this.state.hideableLessons,
-        student_detail_progress_view: this.state.studentDetailProgressView,
-        professional_learning_course: this.state.professionalLearningCourse,
-        peer_reviews_to_complete: this.state.peerReviewsRequired,
-        wrapup_video: this.state.wrapupVideo,
-        project_widget_visible: this.state.projectWidgetVisible,
-        project_widget_types: this.state.projectWidgetTypes,
-        lesson_extras_available: this.state.lessonExtrasAvailable,
-        script_text: this.props.beta
-          ? getSerializedLessonGroups(
-              this.props.lessonGroups,
-              this.props.levelKeyList
-            )
-          : this.state.lessonLevelData,
-        has_verified_resources: this.state.hasVerifiedResources,
-        has_lesson_plan: this.state.hasLessonPlan,
-        curriculum_path: this.state.curriculumPath,
-        pilot_experiment: this.state.pilotExperiment,
-        editor_experiment: this.state.editorExperiment,
-        supported_locales: this.state.supportedLocales,
-        locales: this.state.locales,
-        project_sharing: this.state.projectSharing,
-        curriculum_umbrella: this.state.curriculumUmbrella,
-        version_year: this.state.versionYear,
-        tts: this.state.tts,
-        title: this.state.title,
-        description_audience: this.state.descriptionAudience,
-        description_short: this.state.descriptionShort,
-        stage_descriptions: this.state.lessonDescriptions,
-        resourceLinks: this.state.teacherResources.map(
-          resource => resource.link
-        ),
-        resourceTypes: this.state.teacherResources.map(
-          resource => resource.type
-        )
-      })
+      data: JSON.stringify(dataToSave)
     })
       .done(data => {
         if (shouldCloseAfterSave) {
@@ -706,8 +708,14 @@ class ScriptEditor extends React.Component {
             <LessonDescriptions
               scriptName={this.props.name}
               currentDescriptions={this.props.i18nData.stageDescriptions}
-              updateLessonDescriptions={lessonDescriptions =>
-                this.setState({lessonDescriptions})
+              updateLessonDescriptions={(
+                lessonDescriptions,
+                hasImportedLessonDescriptions
+              ) =>
+                this.setState({
+                  lessonDescriptions,
+                  hasImportedLessonDescriptions
+                })
               }
             />
           )}
