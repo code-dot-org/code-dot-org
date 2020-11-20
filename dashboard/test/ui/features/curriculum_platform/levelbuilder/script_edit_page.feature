@@ -1,5 +1,5 @@
 @no_mobile
-  
+
 # We need "press keys" to type into the React form's fields, but that doesn't work on IE.
 @no_ie
 Feature: Using the Script Edit Page
