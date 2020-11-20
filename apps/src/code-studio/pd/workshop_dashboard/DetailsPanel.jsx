@@ -17,7 +17,8 @@ export default class DetailsPanel extends React.Component {
       state: PropTypes.string
     }),
     isWorkshopAdmin: PropTypes.bool,
-    onWorkshopSaved: PropTypes.func.isRequired
+    onWorkshopSaved: PropTypes.func.isRequired,
+    mapboxAccessToken: PropTypes.string
   };
 
   static contextTypes = {
@@ -54,14 +55,24 @@ export default class DetailsPanel extends React.Component {
   };
 
   render() {
-    const {view, workshop, isWorkshopAdmin, onWorkshopSaved} = this.props;
+    const {
+      view,
+      workshop,
+      isWorkshopAdmin,
+      onWorkshopSaved,
+      mapboxAccessToken
+    } = this.props;
 
     if (view === 'edit') {
       const header = <EditHeader handleSave={this.handleSaveClick} />;
       return (
         <WorkshopPanel header={header}>
           <div>
-            <WorkshopForm workshop={workshop} onSaved={onWorkshopSaved} />
+            <WorkshopForm
+              workshop={workshop}
+              onSaved={onWorkshopSaved}
+              mapboxAccessToken={mapboxAccessToken}
+            />
           </div>
         </WorkshopPanel>
       );
@@ -76,7 +87,11 @@ export default class DetailsPanel extends React.Component {
     return (
       <WorkshopPanel header={header}>
         <div>
-          <WorkshopForm workshop={workshop} readOnly>
+          <WorkshopForm
+            workshop={workshop}
+            mapboxAccessToken={mapboxAccessToken}
+            readOnly
+          >
             <Row>
               <Col sm={4}>
                 <ButtonToolbar>
