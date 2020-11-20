@@ -56,6 +56,9 @@ export default class MicroBitBoard extends EventEmitter {
     return Promise.resolve()
       .then(() => this.boardClient_.connectBoard())
       .then(() => {
+        console.log('Checking Expected Firmware');
+        console.log(this.boardClient_.firmataVersion);
+        console.log(this.boardClient_.firmwareVersion);
         // Expect this.boardClient_.firmataVersion to equal "Firmata Protocol <version number>"
         // Expect this.boardClient_.firmwareVersion to contain "micro:bit Firmata 1.0"
         if (
