@@ -28,6 +28,8 @@ export default class MicroBitBoard extends EventEmitter {
     /** @private {Object} Map of component controllers */
     this.prewiredComponents_ = null;
 
+    this.nodeSerialAvailable = isNodeSerialAvailable();
+
     let portType = serialPortType(true);
 
     /** @private {MicrobitFirmataClient} serial port controller */
@@ -61,7 +63,7 @@ export default class MicroBitBoard extends EventEmitter {
     const SERIAL_BAUD = 57600;
 
     let serialPort;
-    if (isNodeSerialAvailable()) {
+    if (this.nodeSerialAvailable) {
       serialPort = new SerialPortType(portName, {baudRate: SERIAL_BAUD});
       return Promise.resolve(serialPort);
     } else {
@@ -102,7 +104,7 @@ export default class MicroBitBoard extends EventEmitter {
         if (
           (this.boardClient_.firmataVersion.includes('Firmata Protocol') &&
             this.boardClient_.firmwareVersion.includes('micro:bit Firmata')) ||
-          !isNodeSerialAvailable()
+          !this.nodeSerialAvailable
         ) {
           return Promise.resolve();
         } else {
