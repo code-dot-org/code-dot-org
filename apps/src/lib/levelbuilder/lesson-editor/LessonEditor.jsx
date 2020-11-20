@@ -88,8 +88,6 @@ class LessonEditor extends Component {
 
     this.setState({isSaving: true, lastSaved: null, error: null});
 
-    console.log(this.state.announcements);
-
     $.ajax({
       url: `/lessons/${this.props.id}`,
       method: 'PUT',
