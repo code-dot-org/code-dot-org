@@ -298,7 +298,7 @@ class Lesson < ActiveRecord::Base
       preparation: preparation,
       announcements: announcements,
       activities: lesson_activities.map(&:summarize_for_edit),
-      resources: resources,
+      resources: resources.map(&:summarize_for_lesson_edit),
       objectives: objectives.map(&:summarize_for_edit),
       courseVersionId: lesson_group.script.course_version&.id
     }

@@ -21,6 +21,21 @@ class ResourcesControllerTest < ActionController::TestCase
     assert(@response.body.include?('download.url'))
   end
 
+  test 'can update resource from params' do
+    sign_in @levelbuilder
+    resource = create :resource, name: 'original name', type: 'Slides'
+    post :update, params: {id: resource.id, name: 'new name', type: 'Slides'}
+    assert_response :success
+
+    # Assert the response has both the new field with the right value
+    # and an old unchanged field
+    assert(@response.body.include?('new name'))
+    assert(@response.body.include?('Slides'))
+
+    resource.reload
+    assert_equal 'new name', resource.name
+  end
+
   test 'can create resource with course version' do
     sign_in @levelbuilder
     course_version = create :course_version
