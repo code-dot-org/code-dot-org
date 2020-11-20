@@ -106,10 +106,11 @@ class LessonEditor extends Component {
         objectives: JSON.stringify(this.state.objectives),
         activities: getSerializedActivities(this.props.activities),
         resources: JSON.stringify(this.props.resources.map(r => r.key)),
-        announcements: this.state.announcements
+        announcements: JSON.stringify(this.state.announcements)
       })
     })
       .done(data => {
+        console.log(data);
         if (shouldCloseAfterSave) {
           navigateToHref(`/lessons/${this.props.id}${window.location.search}`);
         } else {
