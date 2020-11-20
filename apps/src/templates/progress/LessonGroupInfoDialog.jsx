@@ -58,7 +58,6 @@ export default class LessonGroupInfoDialog extends Component {
               />
             </div>
           </div>
-
         )}
         {this.props.bigQuestions && (
           <div>
@@ -70,7 +69,6 @@ export default class LessonGroupInfoDialog extends Component {
               />
             </div>
           </div>
-
         )}
         <DialogFooter rightAlign>
           <Button
