@@ -1,17 +1,27 @@
 ---
-title: Artificial Intelligence at Code.org
+title: Learn about Artificial Intelligence (AI)
 video_player: true
 theme: responsive
 style_min: true
+social:
+  "og:title": "Learn about Artificial Intelligence (AI)"
+  "og:description": "Join us to explore AI in a new video series, train AI for Oceans in 25+ languages, discuss ethics, and more!"
+  "og:image": "code.org/images/oceans/oceans-overview.png"
+  "og:image:width": 485
+  "og:image:height": 235
+  "og:video": ""
+  "og:video:width": ""
+  "og:video:height": ""
+  "og:video:type": ""
 ---
 <link href="/css/tools.css" rel="stylesheet">
 <link href="/css/ai-videos.css" rel="stylesheet">
 
 <a id="top"></a>
-<h1 style="margin-top:30px; margin-bottom:20px">Artificial Intelligence (AI) at Code.org</h1>
+<h1 style="margin-top:30px; margin-bottom:20px">Learn about Artificial Intelligence (AI)</h1>
 
-<p>Artificial Intelligence and Machine Learning are impacting our entire world, changing how we live and how we work. That's why it’s critical for all of us to understand this increasingly important tool, including not just how it’s designed and applied, but also the ethical issues it presents, like algorithmic bias.</p>
-<p>Join us to explore AI in a new video series, train AI for Oceans in 25+ languages, discuss ethics and AI, and more!</p> 
+<p>AI and Machine Learning impact our entire world, changing how we live and how we work. That's why it’s critical for all of us to understand this increasingly important technology, including not just how it’s designed and applied, but also its societal and ethical implications.</p>
+<p>Join us to explore AI in a new video series, train AI for Oceans in 25+ languages, discuss ethics, and more!</p> 
 
 <div style="clear: both; margin-bottom: 20px"></div>
 
@@ -26,7 +36,7 @@ style_min: true
       <span>
         <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:2px"><strong>AI for Oceans</strong></h3>
         <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom:10px"><i>Hour of Code activity</i></div>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Help A.I. clean the oceans by training it to recognize fish and trash! Along the way learn about training data and bias, and how AI can be used to address world problems. View <a href="https://curriculum.code.org/hoc/plugged/9/" target="_blank">lesson plan</a>.</div>
+        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Help A.I. clean the oceans! Learn about training data and bias, and how AI can address world problems. View <a href="https://curriculum.code.org/hoc/plugged/9/" target="_blank">lesson plan</a>.</div>
         <a href="https://studio.code.org/s/oceans/stage/1/puzzle/1" target="_blank"><button>Try now</button></a>
     </span>
   </div>
@@ -36,13 +46,13 @@ style_min: true
 <div class="col-33">
   <div class="tutorial-tile" style="padding-right:20px">
       <a href="#ai-videos">
-        <img class="tutorial-tile-img" src="/images/fill-485x235/oceans/oceans-overview.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0">
+        <img class="tutorial-tile-img" src="/images/fill-485x235/ai/ai-intro.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0">
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
         <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 2px"><strong>How AI Works</strong></h3>
         <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px"><i>Video series</i></div>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Learn about how artificial intelligence works and why it matters with this series of eight short videos. Featuring Microsoft CEO Satya Nadella and a diverse cast of AI experts.</div>
+        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Learn about how AI works and why it matters with this series of short videos. Featuring a diverse cast of experts.</div>
         <a href="#ai-videos"><button>Watch the videos</button></a>
     </span>
   </div>
@@ -58,7 +68,7 @@ style_min: true
       <span>
         <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 2px"><strong>AI and Ethics</strong></h3>
         <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px"><i>Lesson plan</i></div>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Students reflect on some of the real-world ethical implications of AI, then work together to create a class-wide “Our AI Code of Ethics” resource for AI creators and legislators everywhere.</div>
+        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Students reflect on the ethical implications of AI, then work together to create an “AI Code of Ethics” resource.</div>
         <button>Coming soon!</button>
     </span>
   </div>
@@ -96,8 +106,8 @@ We thank Microsoft for supporting our vision and mission to ensure every child h
 <a id="ethics-panel"></a>
 <div class="col-100" style="width:100%; background-color:#ebe8f1; color:#696969; padding: 10px 40px 0px 40px; border-radius:15px;">
   <h2 style="margin-bottom: 10px">Exploring the Ethics of AI</h2>
-  <h3 style="margin-top: 0">Join some of our favorite AI experts for a panel discussion on Tuesday, December 8!</h3>
-  <p>Listen to some of our favorite AI experts discuss current and future applications of artificial intelligence, as well as issues like algorithmic bias and who has access to AI, the social and economic impact of artificial intelligence, and the ethics of delegating decision-making to AI. Appropriate for students in grade 8 and up.</p>
+  <h3 style="margin-top: 0; margin-bottom: 20px">Join some of our favorite AI experts for a panel discussion on Tuesday, December 8!</h3>
+  <p>We'll discuss some of the cool ways that AI is used, and touch on important issues like algorithmic bias and the future of work. Appropriate for students in grade 8 and up. Pair it with our <a href="https://studio.code.org/s/oceans/stage/1/puzzle/1" target="_blank">AI for Oceans</a> tutorial and our new AI & Ethics lesson plan (coming soon!) for a great introduction to artificial intelligence!</p>
   <p>Join us <strong>10:30 - 11:15 am PST on December 8</strong>! <a href>Add it to your calendar</a>, then tune in on <a href>Zoom</a> or stream on <a href>YouTube</a>.</p>
   <a href><button>Tune in</button></a>
   <h3 style="margin-bottom:25px">Featuring:</h3>
@@ -160,113 +170,77 @@ We thank Microsoft for supporting our vision and mission to ensure every child h
 <br>
 
 <a id="ai-videos"></a>
+<div class="col-100" style="width:100%; background-color:#d9f3f5; padding: 10px 40px 0px 40px; border-radius:15px;">
+
 <h2>How AI Works</h2>
-<p>With an introduction by Microsoft CEO Satya Nadella, this series of five short videos will introduce you to how artificial intelligence works and why it matters. Learn about neural networks, or how AI learns, and delve into issues like algorithmic bias and the ethics of AI decision-making.</p>
 
-<div class="ai-video-collection">
-
-<div class="col-50" style="float: left; padding: 10px; margin-bottom: 40px">
-
-{{ athome_vid_howcomputers }}
-
-</div>
+<p style="margin-bottom: 25px">With an introduction by Microsoft CEO Satya Nadella, this series of short videos will introduce you to how artificial intelligence works and why it matters. Learn about neural networks, or how AI learns, and delve into issues like algorithmic bias and the ethics of AI decision-making.</p>
 
 <div class="col-50" style="float: left; padding: 10px; margin-bottom: 40px">
 
-{{ athome_vid_howinternet }}
-
-</div>
-
-<div style="clear: both"></div>
-
-<div class="col-50" style="float: left; padding: 10px; margin-bottom: 40px">
-
-{{ athome_vid_howcomputers }}
+{{ ai_vid_intro }}
 
 </div>
 
 <div class="col-50" style="float: left; padding: 10px; margin-bottom: 40px">
-
-{{ athome_vid_howinternet }}
-
-</div>
-
-<div style="clear: both"></div>
-
-<div class="col-50" style="float: left; padding: 10px; margin-bottom: 40px">
-
-{{ athome_vid_howinternet }}
-
-</div>
-
-</div>
-
-<div style="clear: both"></div>
-
-<br>
-
-<div class="ai-video-collection">
-
-<h2>More videos about AI and Machine Learning</h2>
-
-<div class="col-50" style="float: left; padding: 20px; margin-bottom: 40px">
 
 {{ ai_vid_mlintro }}
 
 </div>
 
-<div class="col-50" style="float: left; padding: 20px; margin-bottom: 40px">
+<div style="clear: both"></div>
+
+<div class="col-50" style="float: left; padding: 10px; margin-bottom: 40px">
 
 {{ ai_vid_trainingdata }}
 
 </div>
 
+<div class="col-50" style="float: left; padding: 10px; margin-bottom: 40px">
+
+{{ ai_vid_neuralnetworks }}
+
+</div>
+
 <div style="clear: both"></div>
 
-<div class="col-50" style="float: left; padding: 20px; padding-top: 0px; margin-bottom: 40px">
+<div class="col-50" style="float: left; padding: 10px; margin-bottom: 40px">
+
+{{ ai_vid_computervision }}
+
+</div>
+
+<div class="col-50" style="float: left; padding: 10px; margin-bottom: 40px">
 
 {{ ai_vid_socialimpact }}
 
 </div>
 
-<div class="col-50" style="float: left; padding-right: 0; margin-bottom: 40px">
-  <div class="tutorial-info" style="background-color: #59cad3; border: none; border-radius: 15px; margin-left: 20px; padding: 20px; padding-right: 5px">
-    <h3 style="color: #ffffff; margin-top: 10px; margin-bottom: 7px">Videos from other organizations:</h3>
-    <ul style="margin: 5px">
-      <li><a href="https://youtu.be/DybczED-GKE" target="_blank" style="color: #ffffff">Seeing AI: Making the visual world more accessible</a> (3:27)</li>
-      <li><a href="https://youtu.be/UG_X_7g63rY" target="_blank" style="color: #ffffff">Fighting bias in algorithms</a> (8:44)</li>
-      <li><a href="https://youtu.be/59bMh59JQDo" target="_blank" style="color: #ffffff">Machine Learning and Human Bias</a> (2:33)</li>
-      <li><a href="https://youtu.be/GboOXAjGevA" target="_blank" style="color: #ffffff">The Ethics of AI</a> (8:03)</li>
-      <li><a href="https://youtu.be/_rdINNHLYaQ" target="_blank" style="color: #ffffff">Machine Learning: Solving Problems Big, Small, and Prickly</a> (5:19)</li>
-      <li><a href="https://youtu.be/bHvf7Tagt18" target="_blank" style="color: #ffffff">How does your phone know this is a dog?</a> (5:57)</li>
-      <li><a href="https://youtu.be/mJeNghZXtMo" target="_blank" style="color: #ffffff">What is AI?</a> (6:14)</li>
-    </ul>
-  </div>
-</div>
-
-</div>
-
 <div style="clear: both"></div>
+
+<h3>Videos about AI from other organizations:</h3>
+<ul>
+  <li><a href="https://youtu.be/DybczED-GKE" target="_blank">Seeing AI: Making the visual world more accessible</a> (3:27)</li>
+  <li><a href="https://youtu.be/UG_X_7g63rY" target="_blank">Fighting bias in algorithms</a> (8:44)</li>
+  <li><a href="https://youtu.be/59bMh59JQDo" target="_blank">Machine Learning and Human Bias</a> (2:33)</li>
+  <li><a href="https://youtu.be/GboOXAjGevA" target="_blank">The Ethics of AI</a> (8:03)</li>
+  <li><a href="https://youtu.be/_rdINNHLYaQ" target="_blank">Machine Learning: Solving Problems Big, Small, and Prickly</a> (5:19)</li>
+  <li><a href="https://youtu.be/bHvf7Tagt18" target="_blank">How does your phone know this is a dog?</a> (5:57)</li>
+  <li><a href="https://youtu.be/mJeNghZXtMo" target="_blank">What is AI?</a> (6:14)</li>
+</ul>
+<br>
+<br>
+
+</div>
+
+<br>
+
+<div class="ai-video-collection">
 
 <h2>More resources</h2>
 
 <div class="tile-container-responsive" style="padding-left: 5px">
   <div class="col-50" style="margin-right: 20px">
-    <div class="tutorial-tile">
-      <a href="https://curriculum.code.org/hoc/plugged/9/" target="_blank">
-        <img class="tutorial-tile-img" src="//code.org/images/fill-485x260/mc/minecraft_teacher_small1.jpg">
-      </a>
-    <div class="tutorial-info">
-      <h3 style="margin-top: 0px;">Teacher Resources</h3>
-      <div class="smalltext">Lesson plans and activities to help you teach AI, machine learning, training data, and bias, while exploring ethical issues.</div>
-      <a href="https://curriculum.code.org/hoc/plugged/9/" target="_blank">
-        <button class="tutorial-info-start tutorial-gray">View Resources</button>
-      </a>
-      <div class="clear"></div>
-    </div>
-  </div>
-</div>
-  <div class="col-50">
     <div class="tutorial-tile">
       <a href="/csforgood" target="_blank">
         <img class="tutorial-tile-img" src="//code.org/images/fill-485x260/csforgood-ai.jpg">
@@ -280,12 +254,104 @@ We thank Microsoft for supporting our vision and mission to ensure every child h
       <div class="clear"></div>
     </div>
   </div>
+</div>
+  <div class="col-50">
+    <div class="tutorial-tile">
+      <a href="https://imaginecup.microsoft.com/en-us/junior" target="_blank">
+        <img class="tutorial-tile-img" src="//code.org/images/fill-485x260/mc/minecraft_teacher_small1.jpg">
+      </a>
+    <div class="tutorial-info">
+      <h3 style="margin-top: 0px;">Imagine Cup Junior</h3>
+      <div class="smalltext">A global challenge introducing students to AI and Microsoft’s AI for Good initiatives so they can come up with ideas to solve global challenges.</div>
+      <a href="https://imaginecup.microsoft.com/en-us/junior" target="_blank">
+        <button class="tutorial-info-start tutorial-gray">View Resources</button>
+      </a>
+      <div class="clear"></div>
+    </div>
+  </div>
   </div>
 </div>
 
 <br>
 
-{{ ai_ml_resources_table }}
+<h2>Activities Powered by AI and ML</h2>
+<table style="border: 1; width: 100%">
+<tbody>
+  <tr style="font-size: 16px; font-weight: bold; background: #ececec; color: dark-charcoal">
+    <td>Activity</td>
+    <td>Description</td>
+  </tr>
+  <tr>
+    <td><a href="https://www.microsoft.com/en-us/ai/seeing-ai" target="_blank">Seeing AI</a></td>
+    <td>A free app that narrates the world around you in a variety of languages.</td>
+  </tr>
+  <tr>
+    <td><a href="https://quickdraw.withgoogle.com/" target="_blank">Quick, Draw!</a></td>
+    <td>Can a neural network learn to recognize doodling?</td>
+  </tr>
+  <tr>
+    <td><a href="https://teachablemachine.withgoogle.com/" target="_blank">Teachable Machine</a></td>
+    <td>Train a computer to recognize your own images, sounds, and poses.</td>
+  </tr>
+  <tr>
+    <td><a href="https://experiments.withgoogle.com/collection/ai" target="_blank">AI Experiments with Google</a></td>
+    <td>Start exploring machine learning through pictures, drawings, language, music, and more.</td>
+  </tr>
+  <tr>
+    <td><a href="https://www.zooniverse.org/projects/meredithspalmer/snapshot-mountain-zebra/classify?reload=0&amp;workflow=11445" target="_blank">Zooniverse - Snapshot Mountain Zebra</a></td>
+    <td>Help protect the endangered Cape Mountain Zebra by identifying the different animals in the images.</td>
+  </tr>
+</tbody>
+</table>
+
+<br>
+
+<h2>Teach and Learn about AI</h2>
+<table style="border: 1; width: 100%">
+<tbody>
+  <tr style="font-size: 16px; font-weight: bold; background: #ececec; color: dark-charcoal">
+    <td>Name</td>
+    <td>Description</td>
+    <td>Audience</td>
+  </tr>
+  <tr>
+    <td><a href="https://aka.ms/minecrafthourofcode" target="_blank">Minecraft AI for Good</a></td>
+    <td>Access free resources including a lesson plan, videos, computer science curriculum, and teacher trainings. (Requires Minecraft: Education Edition)</td>
+    <td>K-12 (Reading required)</td>
+  </tr>
+  <tr>
+    <td><a href="https://www.microsoft.com/en-us/store/workshops-training-and-events/students#page=1&pageSize=24&program=201&topic=20042049" target="_blank">Free virtual workshops from Microsoft</a></td>
+    <td>Spark curiosity with free  STEM and coding workshops.</td>
+    <td>K-12</td>
+  </tr>
+  <tr>
+    <td><a href="https://machinelearningforkids.co.uk/" target="_blank">Machine Learning for Kids</a></td>
+    <td>Train a machine learning model with text, numbers, or images, and use it to make games in Scratch.</td>
+    <td>K-12 (Reading required)</td>
+  </tr>
+  <tr>
+    <td><a href="https://www.ibm.com/ibm/responsibility/initiatives/activitykits/machine-learning-for-kids/" target="_blank">IBM: Machine Learning for Kids</a></td>
+    <td>IBM: Machine Learning for Kids</td>
+    <td>K-12 (Reading required)</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.exploringcs.org/for-teachers-districts/artificial-intelligence" target="_blank">ECS: Artificial Intelligence (AI)</a></td>
+    <td>A new alternate curriculum unit for the Exploring Computer Science (ECS) curriculum.</td>
+    <td>High school</td>
+  </tr>
+  <tr>
+    <td><a href="https://course.elementsofai.com/" target="_blank">Elements of AI</a></td>
+    <td>A series of free online courses created by Reaktor and the University of Helsinki.</td>
+    <td>High school</td>
+  </tr>
+  <tr>
+    <td>
+    <a href="http://cognimates.me/home/" target="_blank">Cognimates</a></td>
+    <td>An AI education platform for building games, programming robots and training.</td>
+    <td>K-12 (Reading required)</td>
+  </tr>
+</tbody>
+</table>
 
 <br>
 <br>
@@ -295,3 +361,19 @@ We thank Microsoft for supporting our vision and mission to ensure every child h
 <p>Levels 6-8 use a <a href="https://en.wikipedia.org/wiki/Support-vector_machine" target="_blank">Support-Vector Machine</a> (SVM). We look at each component of the fish (such as eyes, mouth, body) and assemble all of the metadata for the components (such as number of teeth, body shape) into a vector of numbers for each fish. We use these vectors to train the SVM. Based on the training data, the SVM separates the "space" of all possible fish into two parts, which correspond to the classes we are trying to learn (such as "blue" or "not blue").</p>
 
 <p><a href="#top">[Back to top]</a></p>
+
+<!--
+<div class="col-50" style="float: left; padding: 10px; margin-bottom: 40px">
+
+{{ ai_vid_ethics1 }}
+
+</div>
+
+<div style="clear: both"></div>
+
+<div class="col-50" style="float: left; padding: 10px; margin-bottom: 40px">
+
+{{ ai_vid_ethics2 }}
+
+</div>
+-->
