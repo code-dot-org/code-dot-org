@@ -265,12 +265,12 @@ class ScriptEditor extends React.Component {
     })
       .done(data => {
         if (shouldCloseAfterSave) {
-          navigateToHref(`/s/${this.props.name}${window.location.search}`);
+          navigateToHref(`${data.scriptPath}${window.location.search}`);
         } else {
           const lessonGroups = mapLessonGroupDataForEditor(data.lesson_groups);
 
           this.props.init(lessonGroups, this.props.levelKeyList);
-          this.setState({lastSaved: data.updated_at, isSaving: false});
+          this.setState({lastSaved: data.updatedAt, isSaving: false});
         }
       })
       .fail(error => {
