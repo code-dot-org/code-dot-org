@@ -42,7 +42,6 @@ export default class LessonExtrasEditor extends React.Component {
         <label>
           Allow Teachers to Enable Lesson Extras
           <input
-            name="lesson_extras_available"
             type="checkbox"
             checked={this.props.lessonExtrasAvailable}
             style={styles.checkbox}
@@ -60,7 +59,6 @@ export default class LessonExtrasEditor extends React.Component {
             <label>
               Project widget visible
               <input
-                name="project_widget_visible"
                 type="checkbox"
                 checked={this.props.projectWidgetVisible}
                 style={styles.checkbox}
@@ -82,7 +80,6 @@ export default class LessonExtrasEditor extends React.Component {
                 or shift-click or cmd-click to select multiple.
               </p>
               <select
-                name="project_widget_types[]"
                 multiple
                 value={this.props.projectWidgetTypes}
                 onChange={this.handleChangeProjectWidgetTypes}
