@@ -1298,7 +1298,7 @@ class Script < ActiveRecord::Base
       is_course: is_course?,
       background: background,
       updatedAt: updated_at,
-      scriptPath: script_path(id: id)
+      scriptPath: script_path(self)
     }
 
     #TODO: lessons should be summarized through lesson groups in the future
