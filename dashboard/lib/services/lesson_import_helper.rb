@@ -28,7 +28,7 @@ module Services::LessonImportHelper
     raise unless course_version_id
 
     if cb_lesson_data.empty?
-      lesson.lesson_activities = Services::LessonImportHelper.update_lockable_lesson(lesson.script_levels, lesson.id)
+      lesson.lesson_activities = update_lockable_lesson(lesson.script_levels, lesson.id)
       lesson.script_levels = []
     else
       lesson.name = cb_lesson_data['title']
@@ -40,8 +40,8 @@ module Services::LessonImportHelper
       lesson.objectives = cb_lesson_data['objectives'].map do |o|
         Objective.new(description: o["name"])
       end
-      lesson.lesson_activities = Services::LessonImportHelper.create_lesson_activities(cb_lesson_data['activities'], lesson.script_levels, lesson.id)
-      lesson.resources = Services::LessonImportHelper.create_lesson_resources(cb_lesson_data['resources'], course_version_id)
+      lesson.lesson_activities = create_lesson_activities(cb_lesson_data['activities'], lesson.script_levels, lesson.id)
+      lesson.resources = create_lesson_resources(cb_lesson_data['resources'], course_version_id)
       lesson.script_levels = []
     end
     lesson.save!
