@@ -197,7 +197,6 @@ class FoormEditor extends React.Component {
       })
     })
       .done(result => {
-        console.log('done!');
         this.setState({
           lastValidated: moment().format(TIME_FORMAT),
           validationError: false,
@@ -205,7 +204,6 @@ class FoormEditor extends React.Component {
         });
       })
       .fail(result => {
-        console.log('failed!');
         this.setState({
           lastValidated: moment().format(TIME_FORMAT),
           validationError:
@@ -349,45 +347,6 @@ class FoormEditor extends React.Component {
             )}
         </div>
       </div>
-    );
-  }
-
-  renderPreviewTabs() {
-    return (
-      <Tabs style={styles.preview} defaultActiveKey="preview" id="preview-tabs">
-        <Tab eventKey={'preview'} title={'Preview'} id="preview" />
-        <Tab eventKey="variables" title="Survey Variables" id="variables">
-          {this.renderVariables()}
-        </Tab>
-        <Tab eventKey="validation" title="Validation" id="validation">
-          <Button
-            style={styles.validateButton}
-            onClick={this.validateQuestions}
-          >
-            Validate
-          </Button>
-          <br />
-          {this.state.validationStarted ? (
-            <Spinner style={styles.spinner} />
-          ) : (
-            this.state.lastValidated && (
-              <div style={styles.validationInfo}>
-                {this.state.validationError && (
-                  <FontAwesome icon="exclamation-triangle" />
-                )}
-                {` Form was last validated at ${
-                  this.state.lastValidated
-                }. Validation status: ${
-                  this.state.validationError ? 'Invalid.' : 'Valid.'
-                }`}
-                <br />
-                {this.state.validationError &&
-                  `Validation error: ${this.state.validationError}`}
-              </div>
-            )
-          )}
-        </Tab>
-      </Tabs>
     );
   }
 
