@@ -88,6 +88,8 @@ class LessonEditor extends Component {
 
     this.setState({isSaving: true, lastSaved: null, error: null});
 
+    console.log(this.state.announcements);
+
     $.ajax({
       url: `/lessons/${this.props.id}`,
       method: 'PUT',
@@ -106,10 +108,11 @@ class LessonEditor extends Component {
         objectives: JSON.stringify(this.state.objectives),
         activities: getSerializedActivities(this.props.activities),
         resources: JSON.stringify(this.props.resources.map(r => r.key)),
-        announcements: this.state.announcements
+        announcements: JSON.stringify(this.state.announcements)
       })
     })
       .done(data => {
+        console.log(data);
         if (shouldCloseAfterSave) {
           navigateToHref(`/lessons/${this.props.id}${window.location.search}`);
         } else {
