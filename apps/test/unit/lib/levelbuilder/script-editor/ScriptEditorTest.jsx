@@ -161,7 +161,10 @@ describe('ScriptEditor', () => {
       const wrapper = createWrapper({});
       const scriptEditor = wrapper.find('ScriptEditor');
 
-      let returnData = {updated_at: '2020-11-06T21:33:32.000Z'};
+      let returnData = {
+        updatedAt: '2020-11-06T21:33:32.000Z',
+        scriptPath: '/s/test-script'
+      };
       let server = sinon.fakeServer.create();
       server.respondWith('PUT', `/s/1`, [
         200,
@@ -232,7 +235,10 @@ describe('ScriptEditor', () => {
       const wrapper = createWrapper({});
       const scriptEditor = wrapper.find('ScriptEditor');
 
-      let returnData = {updated_at: '2020-11-06T21:33:32.000Z'};
+      let returnData = {
+        updatedAt: '2020-11-06T21:33:32.000Z',
+        scriptPath: '/s/test-script'
+      };
       let server = sinon.fakeServer.create();
       server.respondWith('PUT', `/s/1`, [
         200,
