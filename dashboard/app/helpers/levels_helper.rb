@@ -508,25 +508,26 @@ module LevelsHelper
     # First, get the token and region
     options = {}
     timeout = DCDO.get('azure_speech_service_timeout', 5)
-    options[:token] = get_azure_speech_service_token(CDO.azure_speech_service_region, CDO.azure_speech_service_key, timeout)
+    region = CDO.azure_speech_service_region
+    options[:token] = get_azure_speech_service_token(region, CDO.azure_speech_service_key, timeout)
     return {} unless options[:token].present?
-    options[:region] = CDO.azure_speech_service_region
+    options[:url] = "https://#{region}.tts.speech.microsoft.com/cognitiveservices/v1"
 
-    # Then, get the list of voices and languages
-    voices = get_azure_speech_service_voices(options[:region], options[:token], timeout)
+    # Then, get the list of voices
+    voices = get_azure_speech_service_voices(region, options[:token], timeout)
     return {} unless (voices&.length || 0) > 0
-    language_dictionary = {}
+    voice_dictionary = {}
     voices.each do |voice|
       native_locale_name = Languages.get_native_name_by_locale(voice["Locale"])
       next if native_locale_name.empty?
       native_name_s = native_locale_name[0][:native_name_s]
-      language_dictionary[native_name_s] ||= {}
-      language_dictionary[native_name_s][voice["Gender"].downcase] ||= voice["ShortName"]
-      language_dictionary[native_name_s]["languageCode"] ||= voice["Locale"]
+      voice_dictionary[native_name_s] ||= {}
+      voice_dictionary[native_name_s][voice["Gender"].downcase] ||= voice["ShortName"]
+      voice_dictionary[native_name_s]["languageCode"] ||= voice["Locale"]
     end
 
-    # Only keep languages that contain 2+ genders and a languageCode
-    options[:languages] = language_dictionary.reject {|_, opt| opt.length < 3}
+    # Only keep voices that contain 2+ genders and a languageCode
+    options[:voices] = voice_dictionary.reject {|_, opt| opt.length < 3}
 
     options
   end
