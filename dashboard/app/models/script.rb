@@ -1297,7 +1297,8 @@ class Script < ActiveRecord::Base
       tts: tts?,
       is_course: is_course?,
       background: background,
-      updated_at: updated_at
+      updatedAt: updated_at,
+      scriptPath: script_path(id: id)
     }
 
     #TODO: lessons should be summarized through lesson groups in the future
