@@ -146,8 +146,8 @@ describe('Audio API', function() {
       });
 
       it('truncates text longer than MAX_SPEECH_TEXT_LENGTH', async function() {
-        options.text = Array(MAX_SPEECH_TEXT_LENGTH + 2).join('a');
-        const expectedText = Array(MAX_SPEECH_TEXT_LENGTH + 1).join('a');
+        options.text = 'a'.repeat(MAX_SPEECH_TEXT_LENGTH + 1);
+        const expectedText = 'a'.repeat(MAX_SPEECH_TEXT_LENGTH);
         await commands.playSpeech(options);
 
         expect(outputWarningSpy).to.have.been.calledOnce;
