@@ -288,6 +288,14 @@ export default class SchoolNotFound extends Component {
                 value={this.props.schoolLocation}
                 onChange={this.handleChange.bind(this, 'schoolLocation')}
                 style={inputStyle}
+                locationTypes={[
+                  'country',
+                  'region',
+                  'place',
+                  'postcode',
+                  'locality',
+                  'neighborhood'
+                ]}
               />
             </label>
           </div>
