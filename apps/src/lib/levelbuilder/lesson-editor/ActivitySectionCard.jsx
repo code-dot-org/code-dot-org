@@ -141,6 +141,7 @@ class ActivitySectionCard extends Component {
       );
       window.addEventListener('selectstart', this.preventSelect);
       window.addEventListener('mousemove', this.handleDrag);
+      window.addEventListener('scroll', this.handleScroll);
       window.addEventListener('mouseup', this.handleDragStop);
     });
   };
@@ -171,6 +172,10 @@ class ActivitySectionCard extends Component {
     );
     this.setState({currentPositions, newPosition});
     this.props.updateTargetActivitySection(clientY);
+  };
+
+  handleScroll = () => {
+    this.props.updateActivitySectionMetrics();
   };
 
   handleDragStop = () => {
@@ -214,6 +219,7 @@ class ActivitySectionCard extends Component {
     });
     window.removeEventListener('selectstart', this.preventSelect);
     window.removeEventListener('mousemove', this.handleDrag);
+    window.removeEventListener('scroll', this.handleScroll);
     window.removeEventListener('mouseup', this.handleDragStop);
   };
 
