@@ -69,7 +69,11 @@ class P5LabVisualizationColumn extends React.Component {
   pickerPointerMove = e => {
     if (this.props.pickingLocation) {
       this.props.updatePicker(
-        calculateOffsetCoordinates(this.divGameLab, e.clientX, e.clientY)
+        calculateOffsetCoordinates(
+          this.divGameLab,
+          Math.floor(e.clientX),
+          Math.floor(e.clientY)
+        )
       );
     }
   };

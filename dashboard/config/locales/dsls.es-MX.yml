@@ -6475,22 +6475,36 @@ es-MX:
             detrás de cada nube.
       courseD_multi_bee_conditionals7_predict2_2018_2019:
         answers:
-        - correct: true
+        - text: La abeja recogerá néctar de cada flor y hará miel en cada panal.
+          correct: true
           feedback: "¡Correcto!"
         - text: La abeja tratará de obtener el néctar de las flores y del panal.
+          feedback: Incorrecto. El bloque ´si en una flor´ le permite a la abeja recoger
+            néctar en cada flor y hacer miel en cada panal.
         - text: La abeja tratará de obtener la miel de las flores y del panal.
+          feedback: Incorrecto. Incorrecto. El bloque ´si en una flor´ le permite
+            a la abeja recoger néctar en cada flor y hacer miel en cada panal.
         - text: No lo sé.
+          feedback: El bloque ´si en una flor´ le permite a la abeja recoger néctar
+            en cada flor y hacer miel en cada panal.
         questions:
         - text: Mira el siguiente código con atención. ¿Qué crees que sucederá si
             haces clic en "Ejecutar"? Recuerda que solo habrá *un* panal o *una* flor
             detrás de cada nube.
       courseD_multi_bee_conditionals7_predict2_2018_2019_2020:
         answers:
-        - correct: true
+        - text: La abeja recogerá néctar de cada flor y hará miel en cada panal.
+          correct: true
           feedback: "¡Correcto!"
         - text: La abeja tratará de obtener el néctar de las flores y del panal.
+          feedback: Incorrecto. El bloque ´si en una flor´ le permite a la abeja recoger
+            néctar en cada flor y hacer miel en cada panal.
         - text: La abeja tratará de obtener la miel de las flores y del panal.
+          feedback: Incorrecto. Incorrecto. El bloque ´si en una flor´ le permite
+            a la abeja recoger néctar en cada flor y hacer miel en cada panal.
         - text: No lo sé.
+          feedback: El bloque ´si en una flor´ le permite a la abeja recoger néctar
+            en cada flor y hacer miel en cada panal.
         questions:
         - text: Mira el siguiente código con atención. ¿Qué crees que sucederá si
             haces clic en "Ejecutar"? Recuerda que solo habrá *un* panal o *una* flor
@@ -7896,3 +7910,7 @@ es-MX:
         title: Encuesta Pre-Curso al Estudiante sobre CS Descubrimientos
       csd-pre-survey-levelgroup_2019:
         title: Encuesta Pre-Curso al Estudiante sobre CS Descubrimientos
+      outbreak_story:
+        content1: descripción aquí
+      outbreak_story2:
+        content1: descripción aquí

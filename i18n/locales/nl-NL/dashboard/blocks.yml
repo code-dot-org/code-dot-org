@@ -1178,6 +1178,8 @@ nl:
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': onder water
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': winter
             undefined: Geen
+      gamelab_setBackgroundImageAs:
+        text: set achtergrond naar {IMG}
       gamelab_setProp:
         text: set {SPRITE} {PROPERTY} tot {VAL}
         options:
@@ -1713,7 +1715,6 @@ nl:
             '"stoneBricks"': bakstenen
             '"mossyStoneBricks"': mossige blokstenen
             '"crackedStoneBricks"': gebarsten blokstenen
-            '"decorativeStoneBricks"': decoratieve blokstenen
             '"blueCoralBlock"': blauw koraalblok
             '"pinkCoralBlock"': roze koraalblok
             '"magentaCoralBlock"': magenta koraalblok
