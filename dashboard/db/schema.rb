@@ -1663,7 +1663,6 @@ ActiveRecord::Schema.define(version: 20201117160845) do
     t.index ["user_id", "level_id", "script_id"], name: "index_user_levels_on_user_id_and_level_id_and_script_id", unique: true
   end
 
-<<<<<<< HEAD
   create_table "user_ml_models", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer "user_id"
     t.string "model_id"
@@ -1672,10 +1671,7 @@ ActiveRecord::Schema.define(version: 20201117160845) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "user_module_task_assignments", id: :integer, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-=======
   create_table "user_module_task_assignments", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
->>>>>>> staging
     t.integer "user_enrollment_module_assignment_id"
     t.integer "professional_learning_task_id"
     t.string "status"
