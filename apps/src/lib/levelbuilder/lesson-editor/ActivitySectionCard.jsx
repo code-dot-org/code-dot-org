@@ -183,8 +183,14 @@ class ActivitySectionCard extends Component {
   triggerScroll = clientY => {
     if (clientY < 100) {
       const step = (100 - clientY) / 10;
-      var scrollY = $(window).scrollTop();
+      const scrollY = $(window).scrollTop();
       $(window).scrollTop(scrollY - step);
+    }
+    const bottom = $(window).height() - clientY;
+    if (bottom < 100) {
+      const step = (100 - bottom) / 10;
+      const scrollY = $(window).scrollTop();
+      $(window).scrollTop(scrollY + step);
     }
   };
 
