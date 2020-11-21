@@ -1,5 +1,52 @@
 # Helper module for importing data from curriculumbuilder
-module Services::LessonImportHelper
+module LessonImportHelper
+  # This method takes lesson and activity data exported from curriculum builder
+  # and updates corresponding fields of this lesson to match it. The expected
+  # input format is as follows:
+  # {
+  #   "title": "Lesson Title",
+  #   "number": 1,
+  #   "student_desc": "Student-facing description",
+  #   "teacher_desc": "Teacher-facing description",
+  #   "activities": [
+  #     {
+  #       "name": "Activity name",
+  #       "duration": "5-10 minutes",
+  #       "content": "Activity markdown"
+  #     },
+  #     ...
+  #   ]
+  # }
+  # @param [Lesson] lesson - Code Studio Lesson object to update.
+  # @param [Hash] cb_lesson_data - Lesson and activity data to import.
+  def self.update_lesson(lesson, cb_lesson_data = {})
+    # In the future, only levelbuilder should be added to this list.
+    raise unless [:development, :adhoc].include? rack_env
+
+    # course version id should always be present for CSF/CSD/CSP 2020 courses.
+    course_version_id = lesson.script&.get_course_version&.id
+    raise unless course_version_id
+
+    if cb_lesson_data.empty?
+      lesson.lesson_activities = update_lockable_lesson(lesson.script_levels, lesson.id)
+      lesson.script_levels = []
+    else
+      lesson.name = cb_lesson_data['title']
+      lesson.overview = cb_lesson_data['teacher_desc']
+      lesson.student_overview = cb_lesson_data['student_desc']
+      lesson.purpose = cb_lesson_data['cs_content']
+      lesson.preparation = cb_lesson_data['prep']
+      lesson.creative_commons_license = cb_lesson_data['creative_commons_license']
+      lesson.objectives = cb_lesson_data['objectives'].map do |o|
+        Objective.new(description: o["name"])
+      end
+      lesson.lesson_activities = create_lesson_activities(cb_lesson_data['activities'], lesson.script_levels, lesson.id)
+      lesson.resources = create_lesson_resources(cb_lesson_data['resources'], course_version_id)
+      lesson.script_levels = []
+    end
+    lesson.save!
+  end
+
   # Lockable lessons don't need to be merged with curriculumbuilder, but we do
   # need the levels to be part of an activity section.
   def self.update_lockable_lesson(script_levels, lesson_id)
