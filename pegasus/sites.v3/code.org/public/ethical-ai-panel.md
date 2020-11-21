@@ -4,9 +4,9 @@ video_player: true
 theme: responsive
 style_min: true
 social:
-  "og:title": "#CSforGood in your class"
-  "og:description": "Resources and activities for talking to your students about #CSforGood"
-  "og:image": "http://code.org/images/csforgood.png"
+  "og:title": "Exploring the Ethics of AI panel"
+  "og:description": "Join us to explore the ethics of AI on Tuesday, December 8!"
+  "og:image": "https://code.org/images/ai/ai-ethics-lp.png"
   "og:image:width": 850
   "og:image:height": 502
   "og:video": ""
@@ -23,34 +23,42 @@ social:
 
 <div class="col-60">
     <p>We'll discuss some of the cool ways that AI is used, and touch on important issues like algorithmic bias and the future of work. Appropriate for students in grade 8 and up. Pair it with our <a href="https://studio.code.org/s/oceans/stage/1/puzzle/1" target="_blank">AI for Oceans</a> tutorial and our new AI & Ethics lesson plan (coming soon!) for a great introduction to artificial intelligence!</p>
-    <p>Join us <strong>10:30 - 11:15 am PST on December 8</strong>! <a href>Add it to your calendar</a>, then tune in on <a href>Zoom</a> or stream on <a href>YouTube</a>.</p>
-    <a href><button>Tune in</button></a>
+    <p>Join us <strong>10:30 - 11:15 am PST on December 8</strong>! Tune in on <a href="https://code.zoom.us/j/95111270450?pwd=Mk1OMFlXL0dZQ3gwYzdMdmF4d1I0QT09">Zoom</a> or stream on YouTube (link coming soon!).</p>
+    <a href="https://code.zoom.us/j/95111270450?pwd=Mk1OMFlXL0dZQ3gwYzdMdmF4d1I0QT09"><button>Tune in</button></a>
 </div>
 
 <div style="clear:both"></div>
 
 <h3 style="margin-bottom:25px">Featuring:</h3>
-  <div class="col-20" style="padding-right:20px; margin-bottom:20px; text-align:center">
+  <ul>
+    <li>Dr. Amanda Askell, Research Scientist in Policy, OpenAI</li>
+    <li>Inioluwa Deborah Raji, AI Research Scientist & Mozilla Fellow</li>
+    <li>Mehran Sahami, Professor and Associate Chair for Education in Computer Science, Stanford University</li>
+    <li>Natasha Crampton, Chief Responsible AI Officer, Microsoft</li>
+    <li>Pat Yongpradit, Chief Academic Officer, Code.org</li>
+
+<!--
+
+<div class="col-20" style="padding-right:20px; margin-bottom:20px; text-align:center">
     <img src="/images/avatars/amanda-askell.jpg" style="width:90%; border-radius:50%; border: 7px solid #a69bc1">
     <p style="text-align:center">
     <i>Panelist:</i>
-    <br>
     <strong>Dr. Amanda Askell</strong>
     <br>
     Research Scientist in Policy, OpenAI
     </p>
-  </div>
-  <div class="col-20" style="padding-right:20px; margin-bottom:20px; text-align:center">
+</div>
+<div class="col-20" style="padding-right:20px; margin-bottom:20px; text-align:center">
     <img src="/images/avatars/pat-panel.png" style="width:90%; border-radius:50%; border: 7px solid #a69bc1">
     <p style="text-align:center">
     <i>Panelist:</i>
     <br>
     <strong>Inioluwa Deborah Raji</strong>
     <br>
-    AI researcher & Mozilla Fellow
+    AI Research Scientist & Mozilla Fellow
     </p>
-  </div>
-  <div class="col-20" style="padding-right:20px; margin-bottom:20px; text-align:center">
+</div>
+<div class="col-20" style="padding-right:20px; margin-bottom:20px; text-align:center">
     <img src="/images/avatars/mehran-sahami.jpg" style="width:90%; border-radius:50%; border: 7px solid #a69bc1">
     <p style="text-align:center">
     <i>Panelist:</i>
@@ -59,8 +67,8 @@ social:
     <br>
     Professor and Associate Chair for Education in Computer Science, Stanford University
     </p>
-  </div>
-  <div class="col-20" style="padding-right:20px; margin-bottom:20px; text-align:center">
+</div>
+<div class="col-20" style="padding-right:20px; margin-bottom:20px; text-align:center">
     <img src="/images/avatars/natasha-crampton.jpg" style="width:90%; border-radius:50%; border: 7px solid #a69bc1">
     <p style="text-align:center">
     <i>Panelist:</i>
@@ -69,8 +77,8 @@ social:
     <br>
     Chief Responsible AI Officer, Microsoft
     </p>
-  </div>
-  <div class="col-20" style="padding-right:20px; margin-bottom:20px; text-align:center">
+</div>
+<div class="col-20" style="padding-right:20px; margin-bottom:20px; text-align:center">
     <img src="/images/avatars/pat-panel.png" style="width:90%; border-radius:50%; border: 7px solid #a69bc1">
     <p style="text-align:center">
     <i>Moderator:</i>
@@ -82,3 +90,4 @@ social:
   </div>
   <div style="clear: both; margin-bottom: 20px"></div>
 </div>
+-->
