@@ -19,6 +19,14 @@ import ReactDOM from 'react-dom';
 import color from '@cdo/apps/util/color';
 import {activitySectionShape} from '@cdo/apps/lib/levelbuilder/shapes';
 
+// When dragging within this many pixels of the top or bottom of the screen,
+// start scrolling the page.
+const SCROLL_THRESHOLD = 100;
+
+// WHen the scroll threshold is reached, scroll this many pixels for each pixel
+// the cursor has moved beyond the threshold.
+const SCROLL_RATIO = 0.1;
+
 const styles = {
   checkbox: {
     margin: '0 0 0 7px'
@@ -181,14 +189,14 @@ class ActivitySectionCard extends Component {
   };
 
   triggerScroll = clientY => {
-    if (clientY < 100) {
-      const step = (100 - clientY) / 10;
+    if (clientY < SCROLL_THRESHOLD) {
+      const step = (SCROLL_THRESHOLD - clientY) * SCROLL_RATIO;
       const scrollY = $(window).scrollTop();
       $(window).scrollTop(scrollY - step);
     }
     const bottom = $(window).height() - clientY;
-    if (bottom < 100) {
-      const step = (100 - bottom) / 10;
+    if (bottom < SCROLL_THRESHOLD) {
+      const step = (SCROLL_THRESHOLD - bottom) * SCROLL_RATIO;
       const scrollY = $(window).scrollTop();
       $(window).scrollTop(scrollY + step);
     }
