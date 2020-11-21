@@ -90,6 +90,7 @@ class ActivitySectionCard extends Component {
     activitiesCount: PropTypes.number.isRequired,
     activitySectionMetrics: PropTypes.array.isRequired,
     updateTargetActivitySection: PropTypes.func.isRequired,
+    clearTargetActivitySection: PropTypes.func.isRequired,
     targetActivityPos: PropTypes.number,
     targetActivitySectionPos: PropTypes.number,
     updateActivitySectionMetrics: PropTypes.func.isRequired,
@@ -209,8 +210,7 @@ class ActivitySectionCard extends Component {
       );
     }
 
-    // shortcut to clear target activity section
-    this.props.updateTargetActivitySection(-1);
+    this.props.clearTargetActivitySection();
 
     this.setState({
       draggedLevelPos: null,
