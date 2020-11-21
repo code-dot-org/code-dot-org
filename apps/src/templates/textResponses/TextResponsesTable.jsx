@@ -45,6 +45,7 @@ class TextResponsesTable extends Component {
           style={tableLayoutStyles.link}
           href={studentUrl}
           target="_blank"
+          rel="noopener noreferrer"
         >
           {name}
         </a>
@@ -64,7 +65,12 @@ class TextResponsesTable extends Component {
     return (
       <div>
         {clippedResponse}
-        <a style={tableLayoutStyles.link} href={url} target="_blank">
+        <a
+          style={tableLayoutStyles.link}
+          href={url}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           {i18n.seeFullResponse()}
         </a>
       </div>
