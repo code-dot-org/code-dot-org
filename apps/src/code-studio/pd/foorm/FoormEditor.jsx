@@ -87,6 +87,7 @@ class FoormEditor extends React.Component {
     populateCodeMirror: PropTypes.func.isRequired,
     formName: PropTypes.string,
     formVersion: PropTypes.number,
+    formId: PropTypes.number,
     // populated by redux
     formQuestions: PropTypes.object,
     formHasError: PropTypes.bool,
@@ -233,7 +234,7 @@ class FoormEditor extends React.Component {
 
   save = () => {
     $.ajax({
-      url: `/foorm/form/${this.props.formName}/${this.props.formVersion}`,
+      url: `/foorm/form/${this.props.formId}`,
       type: 'put',
       contentType: 'application/json',
       processData: false,
