@@ -7,8 +7,7 @@ import LessonGroupCard from '@cdo/apps/lib/levelbuilder/script-editor/LessonGrou
 import {
   addGroup,
   convertGroupToUserFacing,
-  convertGroupToNonUserFacing,
-  getSerializedLessonGroups
+  convertGroupToNonUserFacing
 } from '@cdo/apps/lib/levelbuilder/script-editor/scriptEditorRedux';
 import ReactDOM from 'react-dom';
 import {lessonGroupShape} from '@cdo/apps/lib/levelbuilder/shapes';
@@ -52,7 +51,6 @@ class UnitCard extends Component {
     // from redux
     lessonGroups: PropTypes.arrayOf(lessonGroupShape).isRequired,
     addGroup: PropTypes.func.isRequired,
-    levelKeyList: PropTypes.object.isRequired,
     convertGroupToUserFacing: PropTypes.func.isRequired,
     convertGroupToNonUserFacing: PropTypes.func.isRequired
   };
@@ -117,7 +115,7 @@ class UnitCard extends Component {
   };
 
   render() {
-    const {lessonGroups, levelKeyList} = this.props;
+    const {lessonGroups} = this.props;
 
     let lessonKeys = [];
     lessonGroups.forEach(lessonGroup => {
@@ -185,11 +183,6 @@ class UnitCard extends Component {
               )}
           </div>
         </div>
-        <input
-          type="hidden"
-          name="script_text"
-          value={getSerializedLessonGroups(lessonGroups, levelKeyList)}
-        />
       </div>
     );
   }
@@ -199,8 +192,7 @@ export const UnconnectedUnitCard = UnitCard;
 
 export default connect(
   state => ({
-    lessonGroups: state.lessonGroups,
-    levelKeyList: state.levelKeyList
+    lessonGroups: state.lessonGroups
   }),
   {
     addGroup,
