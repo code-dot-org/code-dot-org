@@ -22,7 +22,7 @@ social:
 </div>
 
 <div class="col-60">
-    <p>Listen to some of our favorite AI experts discuss current and future applications of artificial intelligence, as well as issues like algorithmic bias and who has access to AI, the social and economic impact of artificial intelligence, and the ethics of delegating decision-making to AI. Appropriate for students in grade 8 and up.</p>
+    <p>We'll discuss some of the cool ways that AI is used, and touch on important issues like algorithmic bias and the future of work. Appropriate for students in grade 8 and up. Pair it with our <a href="https://studio.code.org/s/oceans/stage/1/puzzle/1" target="_blank">AI for Oceans</a> tutorial and our new AI & Ethics lesson plan (coming soon!) for a great introduction to artificial intelligence!</p>
     <p>Join us <strong>10:30 - 11:15 am PST on December 8</strong>! <a href>Add it to your calendar</a>, then tune in on <a href>Zoom</a> or stream on <a href>YouTube</a>.</p>
     <a href><button>Tune in</button></a>
 </div>

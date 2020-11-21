@@ -163,20 +163,6 @@ describe('LessonDescriptions', () => {
       imported[0]
     );
     assert.deepEqual(currentDescriptions[1], imported[1]);
-
-    assert.deepEqual(
-      wrapper.find('input').prop('defaultValue'),
-      JSON.stringify([
-        {
-          name: currentDescriptions[0].name,
-          descriptionStudent:
-            currentDescriptions[0].descriptionStudent + ' plus edits',
-          descriptionTeacher:
-            currentDescriptions[0].descriptionTeacher + ' plus edits'
-        },
-        currentDescriptions[1]
-      ])
-    );
   });
 
   it('recovers when there are too few importedDescriptions', () => {

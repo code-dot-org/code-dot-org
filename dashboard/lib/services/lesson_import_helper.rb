@@ -194,8 +194,7 @@ module Services::LessonImportHelper
         current_progression = level.progression if current_progression.nil?
         current_progression_levels.push(level)
       else
-        section = create_activity_section_with_levels(current_progression_levels, lesson_activity.id)
-        section.name = current_progression
+        section = create_activity_section_with_levels(current_progression_levels, lesson_activity.id, current_progression)
         section.position = activity_sections.length + 1
         section.save!
         activity_sections.push(section)
@@ -204,7 +203,7 @@ module Services::LessonImportHelper
       end
     end
     unless current_progression_levels.empty?
-      section = create_activity_section_with_levels(current_progression_levels, lesson_activity.id)
+      section = create_activity_section_with_levels(current_progression_levels, lesson_activity.id, current_progression)
       section.name = current_progression
       section.position = activity_sections.length + 1
       section.save!
@@ -214,9 +213,10 @@ module Services::LessonImportHelper
     lesson_activity
   end
 
-  def self.create_activity_section_with_levels(script_levels, lesson_activity_id)
+  def self.create_activity_section_with_levels(script_levels, lesson_activity_id, progression_name="")
     return nil if script_levels.empty?
     activity_section = ActivitySection.new
+    activity_section.name = progression_name
     activity_section.key ||= SecureRandom.uuid
     activity_section.position = 0
     activity_section.lesson_activity_id = lesson_activity_id
