@@ -173,10 +173,19 @@ class ActivitySectionCard extends Component {
     );
     this.setState({currentPositions, newPosition});
     this.props.updateTargetActivitySection(clientY);
+    this.triggerScroll(clientY);
   };
 
   handleScroll = () => {
     this.props.updateActivitySectionMetrics();
+  };
+
+  triggerScroll = clientY => {
+    if (clientY < 100) {
+      const step = (100 - clientY) / 10;
+      var scrollY = $(window).scrollTop();
+      $(window).scrollTop(scrollY - step);
+    }
   };
 
   handleDragStop = () => {
