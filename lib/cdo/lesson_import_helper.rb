@@ -1,5 +1,5 @@
 # Helper module for importing data from curriculumbuilder
-module Services::LessonImportHelper
+module LessonImportHelper
   # This method takes lesson and activity data exported from curriculum builder
   # and updates corresponding fields of this lesson to match it. The expected
   # input format is as follows:
