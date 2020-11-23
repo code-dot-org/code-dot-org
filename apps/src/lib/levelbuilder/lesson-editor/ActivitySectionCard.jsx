@@ -226,6 +226,13 @@ class ActivitySectionCard extends Component {
   };
 
   handleDragStop = () => {
+    // Remove event handlers first, so that a JS error later doesn't prevent you
+    // from dropping the dragged level.
+    window.removeEventListener('selectstart', this.preventSelect);
+    window.removeEventListener('mousemove', this.handleDrag);
+    window.removeEventListener('scroll', this.handleScroll);
+    window.removeEventListener('mouseup', this.handleDragStop);
+
     const {
       activitySection,
       activityPosition,
@@ -263,10 +270,6 @@ class ActivitySectionCard extends Component {
       draggedLevelPos: null,
       currentYPositions: []
     });
-    window.removeEventListener('selectstart', this.preventSelect);
-    window.removeEventListener('mousemove', this.handleDrag);
-    window.removeEventListener('scroll', this.handleScroll);
-    window.removeEventListener('mouseup', this.handleDragStop);
   };
 
   toggleSlides = () => {
