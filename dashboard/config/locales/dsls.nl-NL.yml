@@ -2025,92 +2025,149 @@ nl-NL:
         - {}
       courseD_multi_scrat_predict1:
         answers:
-        - {}
+        - feedback: Fout. Als een 'Beweeg vooruit' binnen in een 'herhaal' blok staat
+            zal Scrat drie keer vooruit bewegen.
         - correct: true
-        - {}
+        - feedback: Fout. Als een 'Beweeg vooruit' binnen in een 'herhaal' blok staat
+            zal Scrat drie keer vooruit bewegen.
         - {}
         questions:
         - {}
       courseE_multi_bee_functions_predict1:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: Hetzelfde programma zal deze puzzle ook oplossen.
+          correct: true
+          feedback: Juist! Het maakt niet uit dat de hoeveelheid honing anders is.
+            De functie is zo geprogrammeerd dat ie dat aan kan,
+        - text: De bij zal niet genoeg honing maken.
+          feedback: Fout! De functie is zo geprogrammeerd dat hij elke hoeveelheid
+            honing aan kan.
+        - text: De bij zal proberen, te veel honing te maken.
+          feedback: Fout! De functie is zo geprogrammeerd dat hij elke hoeveelheid
+            honing aan kan.
+        - feedback: Het programma zal deze puzzle ook kunnen oplossen. De functie
+            is zo geprogrammeerd dat hij elke hoeveelheid honing aan kan.
         questions:
-        - {}
+        - text: Hier staat precies hetzelfde programma uit de vorige puzzle, maar
+            de hoeveelheden honing zijn in deze puzzle anders. Wat zal er gebeuren
+            als je op `Start`drukt?
       courseE_multi_farmer_functions11_predict:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: De oogster zal twee pompoenen plukken.
+          feedback: Fout. De oogster roept `check en pluk` pas aan als ze de mais
+            heeft bereikt.
+        - text: De oogster zal alle pompoenen plukken.
+          feedback: Fout. De oogster roept `check en pluk` pas aan als ze de mais
+            heeft bereikt.
+        - text: De oogster zal de sla plukken
+          feedback: Fout. De oogster maakt maar een keer een draai, en stopt bij de
+            mais.
+        - text: De oogster zal de mais plukken.
+          correct: true
         questions:
-        - {}
+        - text: Kijk naar de functies hieronder. Wat zal de oogster plukken?
       courseE_multi_farmer_functions11_predict_2018:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: De oogster zal twee pompoenen plukken.
+        - text: De oogster zal alle pompoenen plukken.
+        - text: De oogster zal de sla plukken
+          correct: true
+        - text: De oogster zal de mais plukken.
         questions:
-        - {}
+        - text: Kijk naar de functies hieronder. Wat zal de oogster plukken?
       courseE_multi_farmer_functions11_predict_2018_2019:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: De oogster zal twee pompoenen plukken.
+        - text: De oogster zal alle pompoenen plukken.
+        - text: De oogster zal de sla plukken
+          correct: true
+        - text: De oogster zal de mais plukken.
         questions:
-        - {}
+        - text: Kijk naar de functies hieronder. Wat zal de oogster plukken?
       courseE_multi_farmer_functions11_predict_2018_2019_2020:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: De oogster zal twee pompoenen plukken.
+        - text: De oogster zal alle pompoenen plukken.
+        - text: De oogster zal de sla plukken
+          correct: true
+        - text: De oogster zal de mais plukken.
         questions:
-        - {}
+        - text: Kijk naar de functies hieronder. Wat zal de oogster plukken?
       courseE_prediction_artistFunction1:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: Niets. De functie wordt niet aangeroepen in het programma.
+          feedback: Fout. De functie wordt wel degelijk aangeroepen in het programma.
+        - text: De artiest zal een enkel vierkant tekenen.
+          feedback: Fout. De functie wordt wel degelijk aangeroepen in het programma.
+        - text: De artiest zal twee vierkanten tekenen die over elkaar heen vallen.
+          feedback: Fout. De zijde van elk vierkant is maar 100 pixels lang, maar
+            de artiest maakt een sprong van 175 pixels tussen de functie-aanroepen.
+        - text: De artiest zal twee vierkanten tekenen met wat lege ruimte er tussen.
+          correct: true
+          feedback: Goed! De functie wordt twee keer aangeropen in het programma,
+            met een sprong er tussen in.
         questions:
-        - {}
+        - text: Wat zal er gebeuren als je op 'Start' drukt?
       courseE_prediction_artistFunction1_2018:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: Niets. De functie wordt niet aangeroepen in het programma.
+          feedback: Fout. De functie wordt wel degelijk aangeroepen in het programma.
+        - text: De artiest zal een enkel vierkant tekenen.
+          feedback: Fout. De functie wordt wel degelijk aangeroepen in het programma.
+        - text: De artiest zal twee vierkanten tekenen die over elkaar heen vallen.
+          feedback: Fout. De zijde van elk vierkant is maar 100 pixels lang, maar
+            de artiest maakt een sprong van 175 pixels tussen de functie-aanroepen.
+        - text: De artiest zal twee vierkanten tekenen met wat lege ruimte er tussen.
+          correct: true
+          feedback: Goed! De functie wordt twee keer aangeropen in het programma,
+            met een sprong er tussen in.
         questions:
-        - {}
+        - text: Wat zal er gebeuren als je op 'Start' drukt?
       courseE_prediction_artistFunction1_2018_2019:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: Niets. De functie wordt niet aangeroepen in het programma.
+          feedback: Fout. De functie wordt wel degelijk aangeroepen in het programma.
+        - text: De artiest zal een enkel vierkant tekenen.
+          feedback: Fout. De functie wordt wel degelijk aangeroepen in het programma.
+        - text: De artiest zal twee vierkanten tekenen die over elkaar heen vallen.
+          feedback: Fout. De zijde van elk vierkant is maar 100 pixels lang, maar
+            de artiest maakt een sprong van 175 pixels tussen de functie-aanroepen.
+        - text: De artiest zal twee vierkanten tekenen met wat lege ruimte er tussen.
+          correct: true
+          feedback: Goed! De functie wordt twee keer aangeropen in het programma,
+            met een sprong er tussen in.
         questions:
-        - {}
+        - text: Wat zal er gebeuren als je op 'Start' drukt?
       courseE_prediction_artistFunction1_2018_2019_2020:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: Niets. De functie wordt niet aangeroepen in het programma.
+          feedback: Fout. De functie wordt wel degelijk aangeroepen in het programma.
+        - text: De artiest zal een enkel vierkant tekenen.
+          feedback: Fout. De functie wordt wel degelijk aangeroepen in het programma.
+        - text: De artiest zal twee vierkanten tekenen die over elkaar heen vallen.
+          feedback: Fout. De zijde van elk vierkant is maar 100 pixels lang, maar
+            de artiest maakt een sprong van 175 pixels tussen de functie-aanroepen.
+        - text: De artiest zal twee vierkanten tekenen met wat lege ruimte er tussen.
+          correct: true
+          feedback: Goed! De functie wordt twee keer aangeropen in het programma,
+            met een sprong er tussen in.
         questions:
-        - {}
+        - text: Wat zal er gebeuren als je op 'Start' drukt?
       courseE_prediction_artistFunction1_copy:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: Niets. De functie wordt niet aangeroepen in het programma.
+          feedback: Fout. De functie wordt wel degelijk aangeroepen in het programma.
+        - text: De artiest zal een enkel vierkant tekenen.
+          feedback: Fout. De functie wordt wel degelijk aangeroepen in het programma.
+        - text: De artiest zal twee vierkanten tekenen die over elkaar heen vallen.
+          feedback: Fout. De zijde van elk vierkant is maar 100 pixels lang, maar
+            de artiest maakt een sprong van 175 pixels tussen de functie-aanroepen.
+        - text: De artiest zal twee vierkanten tekenen met wat lege ruimte er tussen.
+          correct: true
+          feedback: Goed! De functie wordt twee keer aangeropen in het programma,
+            met een sprong er tussen in.
         questions:
-        - {}
+        - text: Wat zal er gebeuren als je op 'Start' drukt?
       courseF_bee_variables_8a_2018:
         answers:
         - {}
@@ -2273,36 +2330,64 @@ nl-NL:
         - {}
       coursee_prediction_artistfunction2:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: De artiest zal deze functie correct oplossen.
+          feedback: Fout. De lus gebruikt `teken ene veelhoek` in plaats van `teken
+            een rij veelhoeken`.
+        - text: De artiest zal vier vierkanten tekenen in een venster-patroon.
+          correct: true
+        - text: De artiest zal slechts een rij vierkanten tekenen.
+          feedback: Fout. Het programma roept de `teken een rij veelhoeken`-functie
+            niet aan.
+        - text: De artiest zal vier vierkanten boven op elkaar tekenen.
+          feedback: Fout. De lus draait 90 graden tussen de aanroepen van `teken een
+            veelhoek`.
         questions:
-        - {}
+        - text: Wat gebeurt er als je op `Start` drukt?
       coursee_prediction_artistfunction2_2018:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: De artiest zal deze functie correct oplossen.
+          feedback: Fout. De lus gebruikt `teken ene veelhoek` in plaats van `teken
+            een rij veelhoeken`.
+        - text: De artiest zal vier vierkanten tekenen in een venster-patroon.
+          correct: true
+        - text: De artiest zal slechts een rij vierkanten tekenen.
+          feedback: Fout. Het programma roept de `teken een rij veelhoeken`-functie
+            niet aan.
+        - text: De artiest zal vier vierkanten boven op elkaar tekenen.
+          feedback: Fout. De lus draait 90 graden tussen de aanroepen van `teken een
+            veelhoek`.
         questions:
-        - {}
+        - text: Wat gebeurt er als je op `Start` drukt?
       coursee_prediction_artistfunction2_2018_2019:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: De artiest zal deze functie correct oplossen.
+          feedback: Fout. De lus gebruikt `teken ene veelhoek` in plaats van `teken
+            een rij veelhoeken`.
+        - text: De artiest zal vier vierkanten tekenen in een venster-patroon.
+          correct: true
+        - text: De artiest zal slechts een rij vierkanten tekenen.
+          feedback: Fout. Het programma roept de `teken een rij veelhoeken`-functie
+            niet aan.
+        - text: De artiest zal vier vierkanten boven op elkaar tekenen.
+          feedback: Fout. De lus draait 90 graden tussen de aanroepen van `teken een
+            veelhoek`.
         questions:
-        - {}
+        - text: Wat gebeurt er als je op `Start` drukt?
       coursee_prediction_artistfunction2_2018_2019_2020:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: De artiest zal deze functie correct oplossen.
+          feedback: Fout. De lus gebruikt `teken ene veelhoek` in plaats van `teken
+            een rij veelhoeken`.
+        - text: De artiest zal vier vierkanten tekenen in een venster-patroon.
+          correct: true
+        - text: De artiest zal slechts een rij vierkanten tekenen.
+          feedback: Fout. Het programma roept de `teken een rij veelhoeken`-functie
+            niet aan.
+        - text: De artiest zal vier vierkanten boven op elkaar tekenen.
+          feedback: Fout. De lus draait 90 graden tussen de aanroepen van `teken een
+            veelhoek`.
         questions:
-        - {}
+        - text: Wat gebeurt er als je op `Start` drukt?
       csf_be_a_super_digital_citizen:
         content1: beschrijving hier
       csf_password_power-up:
