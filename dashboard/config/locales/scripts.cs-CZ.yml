@@ -3937,3 +3937,9 @@ cs:
               name: Kurz B
             CS Discoveries:
               name: Objevujeme informatiku
+        ml-playground:
+          lessons:
+            AI for Oceans:
+              name: AI pomáhá oceánům
+            intro:
+              name: Úvod
