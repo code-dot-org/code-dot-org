@@ -221,7 +221,7 @@ module LessonImportHelper
     activity_section.position = 0
     activity_section.lesson_activity_id = lesson_activity_id
     activity_section.save!
-    sl_data = script_levels.each_with_index.map {|l, i| JSON.parse({id: l.id, assessment: l.assessment, bonus: l.bonus, challenge: l.challenge, levels: l.levels, activitySectionPosition: i}.to_json)}
+    sl_data = script_levels.map.with_index(1) {|l, pos| JSON.parse({id: l.id, assessment: l.assessment, bonus: l.bonus, challenge: l.challenge, levels: l.levels, activitySectionPosition: pos}.to_json)}
     activity_section.update_script_levels(sl_data) unless sl_data.blank?
     activity_section
   end
