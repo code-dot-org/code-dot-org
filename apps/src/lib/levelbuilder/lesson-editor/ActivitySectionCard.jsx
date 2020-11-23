@@ -148,6 +148,7 @@ class ActivitySectionCard extends Component {
       this.dragState = {
         dragHeight: this.levelTokenMetrics[position].height + tokenMargin,
         initialClientY: clientY,
+        lastClientY: clientY,
         initialScrollTop: $(window).scrollTop(),
         newPosition: position,
         startingYMidpoints
@@ -167,6 +168,12 @@ class ActivitySectionCard extends Component {
   };
 
   handleDrag = ({clientY}) => {
+    this.dragState.lastClientY = clientY;
+    this.handleDragOrScroll();
+  };
+
+  handleDragOrScroll = () => {
+    const clientY = this.dragState.lastClientY;
     const deltaClientY = clientY - this.dragState.initialClientY;
     const scrollTop = $(window).scrollTop();
     const deltaScrollTop = scrollTop - this.dragState.initialScrollTop;
@@ -201,6 +208,7 @@ class ActivitySectionCard extends Component {
 
   handleScroll = () => {
     this.props.updateActivitySectionMetrics();
+    this.handleDragOrScroll();
   };
 
   triggerScroll = clientY => {
