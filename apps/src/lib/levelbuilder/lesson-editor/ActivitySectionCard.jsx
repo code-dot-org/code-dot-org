@@ -120,12 +120,17 @@ class ActivitySectionCard extends Component {
   state = {
     levelPosToRemove: null,
     currentPositions: [],
-    draggedLevelPos: null,
+    draggedLevelPos: null
+  };
+
+  initialDragState = {
     dragHeight: null,
     initialClientY: null,
     newPosition: null,
     startingPositions: null
   };
+
+  dragState = this.initialDragState;
 
   handleDragStart = (position, {clientY}) => {
     // The bounding boxes in this.levelTokenMetrics will be stale if the user scrolled the
@@ -138,13 +143,17 @@ class ActivitySectionCard extends Component {
           return metrics.top + metrics.height / 2;
         }
       );
+
+      this.dragState = {
+        dragHeight: this.levelTokenMetrics[position].height + tokenMargin,
+        initialClientY: clientY,
+        newPosition: position,
+        startingPositions
+      };
+
       this.setState(
         {
-          draggedLevelPos: position,
-          dragHeight: this.levelTokenMetrics[position].height + tokenMargin,
-          initialClientY: clientY,
-          newPosition: position,
-          startingPositions
+          draggedLevelPos: position
         },
         () => this.props.updateActivitySectionMetrics()
       );
@@ -156,10 +165,10 @@ class ActivitySectionCard extends Component {
   };
 
   handleDrag = ({clientY}) => {
-    const delta = clientY - this.state.initialClientY;
+    const delta = clientY - this.dragState.initialClientY;
     const dragPosition = this.levelTokenMetrics[this.state.draggedLevelPos].top;
     let newPosition = this.state.draggedLevelPos;
-    const currentPositions = this.state.startingPositions.map(
+    const currentPositions = this.dragState.startingPositions.map(
       (midpoint, index) => {
         const position = index + 1;
         if (position === this.state.draggedLevelPos) {
@@ -167,19 +176,20 @@ class ActivitySectionCard extends Component {
         }
         if (position < this.state.draggedLevelPos && dragPosition < midpoint) {
           newPosition--;
-          return this.state.dragHeight;
+          return this.dragState.dragHeight;
         }
         if (
           position > this.state.draggedLevelPos &&
-          dragPosition + this.state.dragHeight > midpoint
+          dragPosition + this.dragState.dragHeight > midpoint
         ) {
           newPosition++;
-          return -this.state.dragHeight;
+          return -this.dragState.dragHeight;
         }
         return 0;
       }
     );
-    this.setState({currentPositions, newPosition});
+    this.dragState.newPosition = newPosition;
+    this.setState({currentPositions});
     this.props.updateTargetActivitySection(clientY);
     this.triggerScroll(clientY);
   };
@@ -214,12 +224,12 @@ class ActivitySectionCard extends Component {
       targetActivitySectionPos === activitySection.position
     ) {
       // When dragging within a activitySection, reorder the level within that activitySection.
-      if (this.state.draggedLevelPos !== this.state.newPosition) {
+      if (this.state.draggedLevelPos !== this.dragState.newPosition) {
         this.props.reorderLevel(
           activityPosition,
           activitySection.position,
           this.state.draggedLevelPos,
-          this.state.newPosition
+          this.dragState.newPosition
         );
       }
     } else if (targetActivityPos && targetActivitySectionPos) {
@@ -235,9 +245,9 @@ class ActivitySectionCard extends Component {
 
     this.props.clearTargetActivitySection();
 
+    this.dragState = this.initialDragState;
     this.setState({
       draggedLevelPos: null,
-      newPosition: null,
       currentPositions: []
     });
     window.removeEventListener('selectstart', this.preventSelect);
