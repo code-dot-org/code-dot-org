@@ -25,7 +25,7 @@ const SCROLL_THRESHOLD = 100;
 
 // WHen the scroll threshold is reached, scroll this many pixels for each pixel
 // the cursor has moved beyond the threshold.
-const SCROLL_RATIO = 0.1;
+const SCROLL_RATIO = 0.2;
 
 const styles = {
   checkbox: {
