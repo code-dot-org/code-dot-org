@@ -3705,7 +3705,15 @@
         "courseC_artist_loops6a_2019": "¡Añade una tercera pegatina en cualquier lugar del bucle que quieras! ¿Cómo se ve ahora!\n\\-¡Cambia el patrón en tu pincel para dar más variedad!",
         "courseC_artist_loops6a_2020": "¡Añade una tercera pegatina en cualquier lugar del bucle que quieras! ¿Cómo se ve ahora!\n\\-¡Cambia el patrón en tu pincel para dar más variedad!",
         "courseC_artist_loops7a_2019": "Prueba a cambiar el bucle \"repetir\" para que funcione un número diferente de veces. ¿Cuánto tienes que girar para hacer un círculo completo?\n\\-Prueba a cambiar el número de veces que giras\n\\-Prueba un giro de 60º 6 veces\n\\-Prueba un giro de 20º 18 veces\n\n* * *\n\nLa primera imagen usa un pirata, un ninja y una jirafa. Repiten un bucle con un giro de 20º 18 veces.",
-        "courseC_artist_loops7a_2020": "Prueba a cambiar el bucle \"repetir\" para que funcione un número diferente de veces. ¿Cuánto tienes que girar para hacer un círculo completo?\n\\-Prueba a cambiar el número de veces que giras\n\\-Prueba un giro de 60º 6 veces\n\\-Prueba un giro de 20º 18 veces\n\n* * *\n\nLa primera imagen usa un pirata, un ninja y una jirafa. Repiten un bucle con un giro de 20º 18 veces."
+        "courseC_artist_loops7a_2020": "Prueba a cambiar el bucle \"repetir\" para que funcione un número diferente de veces. ¿Cuánto tienes que girar para hacer un círculo completo?\n\\-Prueba a cambiar el número de veces que giras\n\\-Prueba un giro de 60º 6 veces\n\\-Prueba un giro de 20º 18 veces\n\n* * *\n\nLa primera imagen usa un pirata, un ninja y una jirafa. Repiten un bucle con un giro de 20º 18 veces.",
+        "Fish Tank 1-validated": "**Haz una predicción**: ¿Qué crees que pasará cuando ejecutes este código?",
+        "Fish Tank 7-validated": "Hemos agregado muchos bloques nuevos a la caja de herramientas.\n\n¡Juega con ellos para hacer que tu pecera sea especial!",
+        "Fish Tank 7-validated_2019": "Hemos agregado muchos bloques nuevos a la caja de herramientas.\n\n¡Juega con ellos para hacer que tu pecera sea especial!",
+        "Fish Tank 7-validated_2020": "Hemos agregado muchos bloques nuevos a la caja de herramientas.\n\n¡Juega con ellos para hacer que tu pecera sea especial!",
+        "Fish Tank Predict": "**Haz una predicción**: ¿Qué crees que pasará cuando ejecutes este código?",
+        "Fish Tank Predict_2019": "**Haz una predicción**: ¿Qué crees que pasará cuando ejecutes este código?",
+        "Fish Tank Predict_2020": "**Haz una predicción**: ¿Qué crees que pasará cuando ejecutes este código?",
+        "courseA_playLab_events3_2020": "Ayuda a Jorge el Perro a moverse conectando el <xml><block type=\"studio_move\">\n\n<title name=\"SPRITE\">1</title>\n<title name=\"DIR\">8</title>\n</block></xml> bloque a el <xml><block type=\"studio_whenArrow\">\n<title name=\"VALUE\">izquierda</title>\n</block></xml> bloque de evento que ya está en el área de trabajo.\n\n¡Lleva a Jorge hacia la bandera para terminar este nivel!"
       }
     }
   }
